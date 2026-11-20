@@ -1,758 +1,758 @@
 export const id = 282;
 export const ids = [282, 283];
 export const modules = {
-  40917: (TT, kT, cT) => {
-    cT.r(kT), cT.d(kT, {
-      CharacterCustomisationUI: () => uT
+  41007: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      CharacterCustomisationUI: () => Gq
     });
-    var lT = cT(71),
-      MT = cT(2938),
-      KT = cT(1130),
-      OT = cT(1953),
-      yT = cT(1046),
-      fT = cT.n(yT),
-      xT = cT(1244),
-      IT = cT(602),
-      AT = cT(1195),
-      CT = cT(2260),
-      jT = cT(1578),
-      vT = cT(8855),
-      tT = cT(2268),
-      hT = cT(3022),
-      NT = cT(1996),
-      QT = cT(1470),
-      ST = cT(2305),
-      DT = cT(31),
-      aT = cT(1518),
-      FT = cT(339),
-      rT = cT(40922),
-      PT = cT(1575),
-      wT = cT(2355),
-      mT = cT(2931),
-      bT = cT(2181),
-      zT = cT(2600),
-      JT = cT(1061);
-    cT(9395), cT(3028);
+    var Yq = gq(57),
+      lq = gq(2907),
+      Oq = gq(1101),
+      mq = gq(1904),
+      xq = gq(1018),
+      Aq = gq.n(xq),
+      cq = gq(1226),
+      uq = gq(576),
+      Bq = gq(1183),
+      Wq = gq(2182),
+      Nq = gq(1547),
+      aq = gq(8794),
+      Vq = gq(2189),
+      dq = gq(2994),
+      jq = gq(1942),
+      Hq = gq(1422),
+      oq = gq(2235),
+      Pq = gq(24),
+      Qq = gq(1477),
+      yq = gq(307),
+      tq = gq(41011),
+      rq = gq(1540),
+      vq = gq(2297),
+      hq = gq(2904),
+      nq = gq(2121),
+      bq = gq(2517),
+      iq = gq(1025);
+    gq(9313), gq(3003);
     Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI;
-    var oT = cT(2315),
-      HT = cT(1379),
-      eT = cT(1099);
+    var Zq = gq(2250),
+      fq = gq(1341),
+      Mq = gq(1070);
 
-    function GT(TT, kT, cT) {
-      return (0, CT.m)(TT, kT).purchasable && !(0, wT.n)(TT, kT, cT)
+    function Tq(qq, Eq, gq) {
+      return (0, Wq.p)(qq, Eq).purchasable && !(0, vq.l)(qq, Eq, gq)
     }
 
-    function VT(TT, kT) {
-      return Object.entries(TT).some((TT => {
-        let [cT, lT] = TT;
-        return GT(cT, lT, kT)
+    function zq(qq, Eq) {
+      return Object.entries(qq).some((qq => {
+        let [gq, Yq] = qq;
+        return Tq(gq, Yq, Eq)
       }))
     }
 
-    function ET(TT) {
-      var kT;
+    function Sq(qq) {
+      var Eq;
       let {
-        pack: cT,
-        ownedPacks: lT,
-        showStoreLink: MT = !1,
-        children: KT
-      } = TT;
+        pack: gq,
+        ownedPacks: Yq,
+        showStoreLink: lq = !1,
+        children: Oq
+      } = qq;
       const {
-        t: OT
-      } = (0, AT.B)(), yT = PT.c[cT], xT = yT.purchasable && !lT.includes(cT) && PT.s.includes(cT), IT = mT.p[cT];
-      return (0, eT.jsxs)("div", {
-        className: fT()("CosmeticPackGroup", {
-          CosmeticPackGroupLocked: xT
+        t: mq
+      } = (0, Bq.v)(), xq = rq.d[gq], cq = xq.purchasable && !Yq.includes(gq) && rq.w.includes(gq), uq = hq.l[gq];
+      return (0, Mq.jsxs)("div", {
+        className: Aq()("CosmeticPackGroup", {
+          CosmeticPackGroupLocked: cq
         }),
-        children: [IT && (0, eT.jsx)(IT, {}), (0, eT.jsxs)("div", {
+        children: [uq && (0, Mq.jsx)(uq, {}), (0, Mq.jsxs)("div", {
           className: "CosmeticPackGroupLabel",
-          children: [(0, eT.jsx)("span", {
+          children: [(0, Mq.jsx)("span", {
             className: "CosmeticPackGroupLabelName",
-            children: null !== (kT = yT.displayName) && void 0 !== kT ? kT : cT
-          }), (xT || MT) && (0, eT.jsxs)(QT.C, {
+            children: null !== (Eq = xq.displayName) && void 0 !== Eq ? Eq : gq
+          }), (cq || lq) && (0, Mq.jsxs)(Hq.G, {
             onClick: () => {
-              xT ? (0, mT.m)(cT) : (0, ST.p)({
+              cq ? (0, hq.h)(gq) : (0, oq.n)({
                 mode: "self",
                 source: "characterCustomisation"
               })
             },
-            children: [(0, eT.jsx)(JT.e, {
+            children: [(0, Mq.jsx)(iq.d, {
               name: "store"
-            }), " ", OT("general:viewInShop")]
+            }), " ", mq("general:viewInShop")]
           })]
-        }), xT && "bee" === cT && (0, eT.jsx)(mT.e, {}), KT]
+        }), cq && "bee" === gq && (0, Mq.jsx)(hq.e, {}), Oq]
       })
     }
 
-    function ZT(TT) {
+    function pq(qq) {
       let {
-        equippedEmoteIds: kT,
-        ownedPacks: cT,
-        canBuy: lT,
-        onUpdateLoadout: MT,
-        onEmoteSelected: KT,
-        onEquipPreviewSkin: OT
-      } = TT;
+        equippedEmoteIds: Eq,
+        ownedPacks: gq,
+        canBuy: Yq,
+        onUpdateLoadout: lq,
+        onEmoteSelected: Oq,
+        onEquipPreviewSkin: mq
+      } = qq;
       const {
-        t: yT
-      } = (0, AT.B)(), IT = new Set(kT), jT = new Map, vT = Object.keys(CT.e.emote).sort(((TT, kT) => {
-        var cT, lT, MT, KT;
-        return (null !== (cT = null === (lT = (0, CT.j)("emote", TT)) || void 0 === lT ? void 0 : lT.clientIdx) && void 0 !== cT ? cT : 0) - (null !== (MT = null === (KT = (0, CT.j)("emote", kT)) || void 0 === KT ? void 0 : KT.clientIdx) && void 0 !== MT ? MT : 0)
-      })).filter((TT => {
-        const kT = (0, CT.m)("emote", TT),
-          MT = (0, wT.n)("emote", TT, cT);
-        return !(kT.purchasable && !MT && !lT) && (kT.clientSelectable || MT)
+        t: xq
+      } = (0, Bq.v)(), uq = new Set(Eq), Nq = new Map, aq = Object.keys(Wq.f.emote).sort(((qq, Eq) => {
+        var gq, Yq, lq, Oq;
+        return (null !== (gq = null === (Yq = (0, Wq.l)("emote", qq)) || void 0 === Yq ? void 0 : Yq.clientIdx) && void 0 !== gq ? gq : 0) - (null !== (lq = null === (Oq = (0, Wq.l)("emote", Eq)) || void 0 === Oq ? void 0 : Oq.clientIdx) && void 0 !== lq ? lq : 0)
+      })).filter((qq => {
+        const Eq = (0, Wq.p)("emote", qq),
+          lq = (0, vq.l)("emote", qq, gq);
+        return !(Eq.purchasable && !lq && !Yq) && (Eq.clientSelectable || lq)
       }));
-      for (const fT of vT) {
-        const TT = (0, CT.j)("emote", fT).cosmeticPack;
-        jT.has(TT) || jT.set(TT, []), jT.get(TT).push(fT)
+      for (const Aq of aq) {
+        const qq = (0, Wq.l)("emote", Aq).cosmeticPack;
+        Nq.has(qq) || Nq.set(qq, []), Nq.get(qq).push(Aq)
       }
-      const hT = Array.from(jT.keys());
-      return (0, eT.jsxs)("div", {
+      const dq = Array.from(Nq.keys());
+      return (0, Mq.jsxs)("div", {
         className: "CharCustomisPartSelectorWrapper",
-        children: [!1, (0, eT.jsxs)("div", {
+        children: [!1, (0, Mq.jsxs)("div", {
           className: "EmoteLoadoutSummary",
-          children: [(0, eT.jsx)("span", {
+          children: [(0, Mq.jsx)("span", {
             className: "EmoteLoadoutSummaryText SmallTextBold",
-            children: yT("emotes:equippedCount", {
-              count: kT.length,
-              max: xT.n
+            children: xq("emotes:equippedCount", {
+              count: Eq.length,
+              max: cq.o
             })
-          }), (0, eT.jsx)("span", {
+          }), (0, Mq.jsx)("span", {
             className: "EmoteLoadoutSummaryHint SmallTextLight",
-            children: yT("emotes:loadoutHint")
+            children: xq("emotes:loadoutHint")
           })]
-        }), hT.map((TT => {
-          const lT = jT.get(TT);
-          return (0, eT.jsx)(ET, {
-            pack: TT,
-            ownedPacks: cT,
-            children: (0, eT.jsx)("div", {
+        }), dq.map((qq => {
+          const Yq = Nq.get(qq);
+          return (0, Mq.jsx)(Sq, {
+            pack: qq,
+            ownedPacks: gq,
+            children: (0, Mq.jsx)("div", {
               className: "CosmeticPackGroupItems",
-              children: lT.map((TT => {
-                var lT;
-                const OT = kT.indexOf(TT),
-                  AT = -1 !== OT,
-                  CT = kT.length >= xT.n,
-                  jT = GT("emote", TT, cT),
-                  vT = jT || !AT && CT,
-                  hT = (0, tT.f)(TT);
-                return (0, eT.jsxs)("div", {
-                  className: fT()("CharCustomPartWrapper", "EmoteCustomPartWrapper", {
-                    SelectedCharCustomPartWrapper: AT
+              children: Yq.map((qq => {
+                var Yq;
+                const mq = Eq.indexOf(qq),
+                  Bq = -1 !== mq,
+                  Wq = Eq.length >= cq.o,
+                  Nq = Tq("emote", qq, gq),
+                  aq = Nq || !Bq && Wq,
+                  dq = (0, Vq.i)(qq);
+                return (0, Mq.jsxs)("div", {
+                  className: Aq()("CharCustomPartWrapper", "EmoteCustomPartWrapper", {
+                    SelectedCharCustomPartWrapper: Bq
                   }),
                   onClick: () => {
-                    KT(TT)
+                    Oq(qq)
                   },
-                  children: [(0, eT.jsxs)("div", {
+                  children: [(0, Mq.jsxs)("div", {
                     className: "CharCustomPart EmoteCustomPart",
-                    children: [(0, eT.jsx)("div", {
+                    children: [(0, Mq.jsx)("div", {
                       className: "EmoteCustomPartIcon",
                       style: {
-                        backgroundImage: `url(/textures/charSkins/previews/emote_${TT}_preview.png)`
+                        backgroundImage: `url(/textures/charSkins/previews/emote_${qq}_preview.png)`
                       },
                       "aria-hidden": !0
-                    }), (0, eT.jsx)("span", {
+                    }), (0, Mq.jsx)("span", {
                       className: "EmoteCustomPartLabel SmallTextBold",
-                      children: null !== (lT = null === hT || void 0 === hT ? void 0 : hT.displayName) && void 0 !== lT ? lT : TT
+                      children: null !== (Yq = null === dq || void 0 === dq ? void 0 : dq.displayName) && void 0 !== Yq ? Yq : qq
                     })]
-                  }), (0, eT.jsxs)("div", {
+                  }), (0, Mq.jsxs)("div", {
                     className: "EmoteCustomPartToggleContainer",
-                    children: [AT && (0, eT.jsx)("span", {
+                    children: [Bq && (0, Mq.jsx)("span", {
                       className: "EmoteCustomPartSlotBadge",
-                      children: OT + 1
-                    }), jT && (0, eT.jsx)(JT.e, {
+                      children: mq + 1
+                    }), Nq && (0, Mq.jsx)(iq.d, {
                       name: "lock",
                       className: "LockedCosmeticIcon"
-                    }), (0, eT.jsx)(HT.c, {
-                      tooltipInner: (0, eT.jsx)(eT.Fragment, {
-                        children: yT(AT ? "general:remove" : "general:add")
+                    }), (0, Mq.jsx)(fq.e, {
+                      tooltipInner: (0, Mq.jsx)(Mq.Fragment, {
+                        children: xq(Bq ? "general:remove" : "general:add")
                       }),
                       delayShow: 0,
                       delayHide: 0,
-                      children: (0, eT.jsx)("div", {
-                        className: fT()("EmoteCustomPartToggle", {
-                          EmoteCustomPartToggleDisabled: vT,
-                          EmoteCustomPartToggleEquipped: AT
+                      children: (0, Mq.jsx)("div", {
+                        className: Aq()("EmoteCustomPartToggle", {
+                          EmoteCustomPartToggleDisabled: aq,
+                          EmoteCustomPartToggleEquipped: Bq
                         }),
-                        onClick: cT => {
-                          cT.stopPropagation(), vT || function(TT) {
-                            IT.has(TT) ? MT(kT.filter((kT => kT !== TT))) : kT.length >= xT.n || MT([...kT, TT])
-                          }(TT)
+                        onClick: gq => {
+                          gq.stopPropagation(), aq || function(qq) {
+                            uq.has(qq) ? lq(Eq.filter((Eq => Eq !== qq))) : Eq.length >= cq.o || lq([...Eq, qq])
+                          }(qq)
                         },
-                        children: (0, eT.jsx)(JT.e, {
-                          name: AT ? "minus" : "plus",
+                        children: (0, Mq.jsx)(iq.d, {
+                          name: Bq ? "minus" : "plus",
                           "aria-hidden": !0
                         })
                       })
                     })]
                   })]
-                }, TT)
+                }, qq)
               }))
             })
-          }, TT)
+          }, qq)
         }))]
       })
     }
-    const uT = (0, lT.memo)((function(TT) {
+    const Gq = (0, Yq.memo)((function(qq) {
       let {
-        selectedTab: kT
-      } = TT;
-      const cT = "characters" === kT ? "skin" : kT,
+        selectedTab: Eq
+      } = qq;
+      const gq = "characters" === Eq ? "skin" : Eq,
         {
-          t: yT
-        } = (0, AT.B)(),
+          t: xq
+        } = (0, Bq.v)(),
         {
-          userContext: tT,
-          isUserContextUpdating: mT
-        } = (0, KT.b)(),
-        HT = (0, MT.b)(),
+          userContext: Vq,
+          isUserContextUpdating: hq
+        } = (0, Oq.c)(),
+        fq = (0, lq.c)(),
         {
-          gameState: uT,
-          initSdkSelectorFinished: XT
-        } = (0, DT.n)(["gameState", "initSdkSelectorFinished"]),
-        [dT, LT] = (0, lT.useState)({}),
-        [RT, gT] = (0, lT.useState)({}),
+          gameState: Gq,
+          initSdkSelectorFinished: Lq
+        } = (0, Pq.j)(["gameState", "initSdkSelectorFinished"]),
+        [Jq, kq] = (0, Yq.useState)({}),
+        [Rq, Uq] = (0, Yq.useState)({}),
         {
-          previewEmote: UT,
-          triggerEmote: YT
-        } = (0, hT.c)(),
-        BT = (0, lT.useRef)(xT.u.reduce(((TT, kT) => (TT[kT] = (0, vT.e)(kT), TT)), {})),
-        WT = (0, lT.useRef)(!1),
-        nT = (0, lT.useRef)(null),
-        pT = (0, lT.useRef)(null),
-        iT = (0, lT.useRef)(null);
+          previewEmote: Fq,
+          triggerEmote: sq
+        } = (0, dq.d)(),
+        Xq = (0, Yq.useRef)(cq.w.reduce(((qq, Eq) => (qq[Eq] = (0, aq.e)(Eq), qq)), {})),
+        wq = (0, Yq.useRef)(!1),
+        Kq = (0, Yq.useRef)(null),
+        Cq = (0, Yq.useRef)(null),
+        Iq = (0, Yq.useRef)(null);
 
-      function qT() {
-        null !== pT.current && (clearTimeout(pT.current), pT.current = null);
-        const TT = iT.current;
-        if (null === TT) return;
-        iT.current = null;
-        const kT = {
-          Qc: "emote",
-          Sc: TT
+      function eq() {
+        null !== Cq.current && (clearTimeout(Cq.current), Cq.current = null);
+        const qq = Iq.current;
+        if (null === qq) return;
+        Iq.current = null;
+        const Eq = {
+          tY: "emote",
+          rY: qq
         };
-        null !== OT.gameBridge.latest("connectedGame").websocketUrl ? OT.gameBridge.send("updateMyCosmetic", kT) : aT.d.updateCosmetics(tT, [kT]).catch((TT => {
-          console.error("Failed to update emote loadout", TT)
+        null !== mq.gameBridge.latest("connectedGame").websocketUrl ? mq.gameBridge.send("updateMyCosmetic", Eq) : Qq.e.updateCosmetics(Vq, [Eq]).catch((qq => {
+          console.error("Failed to update emote loadout", qq)
         }))
       }
 
-      function sT(TT, kT, cT) {
-        var lT, MT, KT;
-        if (BT.current = {
-            ...BT.current,
-            [TT]: kT
-          }, HT(), cT) {
-          const cT = {
-            Qc: TT,
-            Sc: kT
+      function Dq(qq, Eq, gq) {
+        var Yq, lq, Oq;
+        if (Xq.current = {
+            ...Xq.current,
+            [qq]: Eq
+          }, fq(), gq) {
+          const gq = {
+            tY: qq,
+            rY: Eq
           };
-          null !== OT.gameBridge.latest("connectedGame").websocketUrl ? OT.gameBridge.send("updateMyCosmetic", cT) : aT.d.updateCosmetics(tT, [cT]).catch((TT => {
-            console.error("Failed to update cosmetic", TT)
-          })), tT.setPlayerCosmetics(TT, kT)
+          null !== mq.gameBridge.latest("connectedGame").websocketUrl ? mq.gameBridge.send("updateMyCosmetic", gq) : Qq.e.updateCosmetics(Vq, [gq]).catch((qq => {
+            console.error("Failed to update cosmetic", qq)
+          })), Vq.setPlayerCosmetics(qq, Eq)
         }
-        const yT = (0, CT.j)(TT, kT);
-        if (null !== yT && void 0 !== yT && yT.colourGroup && null !== (lT = PT.c[yT.cosmeticPack].colourGroups) && void 0 !== lT && null !== (MT = lT[yT.colourGroup]) && void 0 !== MT && MT.showSwatchSelector) {
-          const cT = (0, CT.g)(kT);
-          cT && gT((kT => ({
-            ...kT,
-            [`${yT.cosmeticPack}_${TT}_${yT.colourGroup}`]: parseInt(cT[1])
+        const xq = (0, Wq.l)(qq, Eq);
+        if (null !== xq && void 0 !== xq && xq.colourGroup && null !== (Yq = rq.d[xq.cosmeticPack].colourGroups) && void 0 !== Yq && null !== (lq = Yq[xq.colourGroup]) && void 0 !== lq && lq.showSwatchSelector) {
+          const gq = (0, Wq.j)(Eq);
+          gq && Uq((Eq => ({
+            ...Eq,
+            [`${xq.cosmeticPack}_${qq}_${xq.colourGroup}`]: parseInt(gq[1])
           })))
         }
-        null !== (KT = nT.current) && void 0 !== KT && KT.isReady() && nT.current.updateCosmetic(TT, kT)
+        null !== (Oq = Kq.current) && void 0 !== Oq && Oq.isReady() && Kq.current.updateCosmetic(qq, Eq)
       }
 
-      function Tk(TT) {
-        return Object.entries(TT).every((TT => {
-          let [kT, cT] = TT;
-          return dT[kT] === cT
+      function qE(qq) {
+        return Object.entries(qq).every((qq => {
+          let [Eq, gq] = qq;
+          return Jq[Eq] === gq
         }))
-      }(0, NT.b)("cosmeticsUpdated", (TT => {
-        let kT = !1;
+      }(0, jq.d)("cosmeticsUpdated", (qq => {
+        let Eq = !1;
         for (const {
-            local: cT,
-            Qc: lT,
-            Sc: MT
+            local: gq,
+            tY: Yq,
+            rY: lq
           }
-          of TT) {
-          if (!cT) return;
-          kT = !0, WT.current || sT(lT, MT, !1), HT()
+          of qq) {
+          if (!gq) return;
+          Eq = !0, wq.current || Dq(Yq, lq, !1), fq()
         }
-        kT && (WT.current = !0)
-      })), (0, lT.useEffect)((() => {
-        if (!mT) {
-          for (const [TT, kT] of Object.entries(tT.getPlayerCosmetics())) sT(TT, kT, !1);
-          HT()
+        Eq && (wq.current = !0)
+      })), (0, Yq.useEffect)((() => {
+        if (!hq) {
+          for (const [qq, Eq] of Object.entries(Vq.getPlayerCosmetics())) Dq(qq, Eq, !1);
+          fq()
         }
-      }), [mT]), (0, lT.useEffect)((() => () => {
-        qT()
+      }), [hq]), (0, Yq.useEffect)((() => () => {
+        eq()
       }), []);
-      const kk = tT.getOwnedCosmeticPacks(),
-        ck = (0, oT.purchasesAllowed)(),
-        lk = Object.keys(CT.e[cT]).filter((TT => {
-          const kT = (0, CT.m)(cT, TT),
-            lT = (0, wT.n)(cT, TT, kk);
-          return !(kT.purchasable && !lT && !ck) && (kT.clientSelectable || lT)
-        })).sort(((TT, kT) => {
-          var lT, MT, KT, OT;
-          return (null !== (lT = null === (MT = (0, CT.j)(cT, TT)) || void 0 === MT ? void 0 : MT.clientIdx) && void 0 !== lT ? lT : 0) - (null !== (KT = null === (OT = (0, CT.j)(cT, kT)) || void 0 === OT ? void 0 : OT.clientIdx) && void 0 !== KT ? KT : 0)
+      const EE = Vq.getOwnedCosmeticPacks(),
+        gE = (0, Zq.purchasesAllowed)(),
+        YE = Object.keys(Wq.f[gq]).filter((qq => {
+          const Eq = (0, Wq.p)(gq, qq),
+            Yq = (0, vq.l)(gq, qq, EE);
+          return !(Eq.purchasable && !Yq && !gE) && (Eq.clientSelectable || Yq)
+        })).sort(((qq, Eq) => {
+          var Yq, lq, Oq, mq;
+          return (null !== (Yq = null === (lq = (0, Wq.l)(gq, qq)) || void 0 === lq ? void 0 : lq.clientIdx) && void 0 !== Yq ? Yq : 0) - (null !== (Oq = null === (mq = (0, Wq.l)(gq, Eq)) || void 0 === mq ? void 0 : mq.clientIdx) && void 0 !== Oq ? Oq : 0)
         })),
-        Mk = new Map;
-      for (const lT of lk) {
-        var Kk;
-        const TT = null === (Kk = (0, CT.j)(cT, lT)) || void 0 === Kk ? void 0 : Kk.cosmeticPack;
-        Mk.has(TT) || Mk.set(TT, []), Mk.get(TT).push(lT)
+        lE = new Map;
+      for (const Yq of YE) {
+        var OE;
+        const qq = null === (OE = (0, Wq.l)(gq, Yq)) || void 0 === OE ? void 0 : OE.cosmeticPack;
+        lE.has(qq) || lE.set(qq, []), lE.get(qq).push(Yq)
       }
-      const Ok = function(TT, kT) {
-          const cT = new Set,
-            lT = new Set;
-          for (const [MT, KT] of Object.entries(CT.e[TT])) {
-            if (void 0 === KT.colourGroup) continue;
-            const OT = `${KT.cosmeticPack}_${KT.colourGroup}`;
-            (GT(TT, MT, kT) ? lT : cT).add(OT)
+      const mE = function(qq, Eq) {
+          const gq = new Set,
+            Yq = new Set;
+          for (const [lq, Oq] of Object.entries(Wq.f[qq])) {
+            if (void 0 === Oq.colourGroup) continue;
+            const mq = `${Oq.cosmeticPack}_${Oq.colourGroup}`;
+            (Tq(qq, lq, Eq) ? Yq : gq).add(mq)
           }
-          return new Set([...cT].filter((TT => lT.has(TT))))
-        }(cT, kk),
-        yk = new Map;
-      for (const [lT, MT] of Mk) {
-        const TT = [],
-          kT = new Map;
-        for (const lT of MT) {
-          var fk, xk;
-          const MT = null !== (fk = null === (xk = (0, CT.j)(cT, lT)) || void 0 === xk ? void 0 : xk.colourGroup) && void 0 !== fk ? fk : null;
-          kT.has(MT) || (kT.set(MT, []), TT.push(MT)), kT.get(MT).push(lT)
+          return new Set([...gq].filter((qq => Yq.has(qq))))
+        }(gq, EE),
+        xE = new Map;
+      for (const [Yq, lq] of lE) {
+        const qq = [],
+          Eq = new Map;
+        for (const Yq of lq) {
+          var AE, cE;
+          const lq = null !== (AE = null === (cE = (0, Wq.l)(gq, Yq)) || void 0 === cE ? void 0 : cE.colourGroup) && void 0 !== AE ? AE : null;
+          Eq.has(lq) || (Eq.set(lq, []), qq.push(lq)), Eq.get(lq).push(Yq)
         }
-        const KT = TT.map((TT => {
-          var MT;
-          const KT = kT.get(TT),
-            OT = TT ? null === (MT = PT.c[lT].colourGroups) || void 0 === MT ? void 0 : MT[TT] : void 0,
-            yT = !0 === (null === OT || void 0 === OT ? void 0 : OT.showSwatchSelector) && !Ok.has(`${lT}_${TT}`);
-          if (yT && OT) {
-            var fT;
-            const kT = null !== (fT = RT[`${lT}_${cT}_${TT}`]) && void 0 !== fT ? fT : (0, PT.h)(OT.colours);
+        const Oq = qq.map((qq => {
+          var lq;
+          const Oq = Eq.get(qq),
+            mq = qq ? null === (lq = rq.d[Yq].colourGroups) || void 0 === lq ? void 0 : lq[qq] : void 0,
+            xq = !0 === (null === mq || void 0 === mq ? void 0 : mq.showSwatchSelector) && !mE.has(`${Yq}_${qq}`);
+          if (xq && mq) {
+            var Aq;
+            const Eq = null !== (Aq = Rq[`${Yq}_${gq}_${qq}`]) && void 0 !== Aq ? Aq : (0, rq.k)(mq.colours);
             return {
-              groupName: TT,
-              showSwatch: yT,
-              cosmetics: KT.filter((TT => {
-                const cT = (0, CT.g)(TT);
-                return !cT || kT.toString() === cT[1].toString()
+              groupName: qq,
+              showSwatch: xq,
+              cosmetics: Oq.filter((qq => {
+                const gq = (0, Wq.j)(qq);
+                return !gq || Eq.toString() === gq[1].toString()
               }))
             }
           }
           return {
-            groupName: TT,
-            cosmetics: KT,
-            showSwatch: yT
+            groupName: qq,
+            cosmetics: Oq,
+            showSwatch: xq
           }
         }));
-        yk.set(lT, KT)
+        xE.set(Yq, Oq)
       }
-      const Ik = Array.from(Mk.keys()),
-        Ak = new Map;
-      for (const [lT, MT] of Object.entries(jT.c)) {
-        const TT = PT.c[MT.cosmeticPack],
-          kT = !VT(MT.cosmetics, kk),
-          cT = PT.k.some((TT => (0, PT.e)(TT) === lT));
-        (TT.clientSelectable || cT || kT) && ((!TT.purchasable || kT || ck) && (Ak.has(MT.cosmeticPack) || Ak.set(MT.cosmeticPack, []), Ak.get(MT.cosmeticPack).push([lT, MT])))
+      const uE = Array.from(lE.keys()),
+        BE = new Map;
+      for (const [Yq, lq] of Object.entries(Nq.b)) {
+        const qq = rq.d[lq.cosmeticPack],
+          Eq = !zq(lq.cosmetics, EE),
+          gq = rq.q.some((qq => (0, rq.h)(qq) === Yq));
+        (qq.clientSelectable || gq || Eq) && ((!qq.purchasable || Eq || gE) && (BE.has(lq.cosmeticPack) || BE.set(lq.cosmeticPack, []), BE.get(lq.cosmeticPack).push([Yq, lq])))
       }
-      const Ck = Array.from(Ak.keys());
-      return (0, eT.jsxs)("div", {
+      const WE = Array.from(BE.keys());
+      return (0, Mq.jsxs)("div", {
         className: "CharCustomisationBody",
-        children: [("cape" === cT || "nameColour" === cT) && !tT.playerHasRank("super") && (0, eT.jsxs)("div", {
+        children: [("cape" === gq || "nameColour" === gq) && !Vq.playerHasRank("super") && (0, Mq.jsxs)("div", {
           className: "CharCustomisationBodyHeader",
-          children: [(0, eT.jsx)(JT.e, {
+          children: [(0, Mq.jsx)(iq.d, {
             name: "bolt"
-          }), yT("homePage:unlockWithSuperRank"), ck && (0, eT.jsx)(QT.m, {
+          }), xq("homePage:unlockWithSuperRank"), gE && (0, Mq.jsx)(Hq.p, {
             onClick: () => {
-              (0, ST.p)({
+              (0, oq.n)({
                 mode: "self",
                 source: "characterCustomisation",
                 openItem: "superRank"
               })
             },
-            children: yT("general:getItNow")
+            children: xq("general:getItNow")
           })]
-        }), (0, eT.jsxs)("div", {
+        }), (0, Mq.jsxs)("div", {
           className: "CharCustomisationBodyInner",
-          children: ["characters" === kT && (0, eT.jsxs)("div", {
+          children: ["characters" === Eq && (0, Mq.jsxs)("div", {
             className: "CharCustomisPartSelectorWrapper",
-            children: [!1, Ck.map((TT => {
-              const kT = Ak.get(TT);
-              return (0, eT.jsx)(ET, {
-                pack: TT,
-                ownedPacks: kk,
-                showStoreLink: !PT.o.includes(TT) && kT.some((TT => {
+            children: [!1, WE.map((qq => {
+              const Eq = BE.get(qq);
+              return (0, Mq.jsx)(Sq, {
+                pack: qq,
+                ownedPacks: EE,
+                showStoreLink: !rq.s.includes(qq) && Eq.some((qq => {
                   let [, {
-                    cosmetics: kT
-                  }] = TT;
-                  return VT(kT, kk)
+                    cosmetics: Eq
+                  }] = qq;
+                  return zq(Eq, EE)
                 })),
-                children: (0, eT.jsx)("div", {
+                children: (0, Mq.jsx)("div", {
                   className: "CharacterPresetsGrid",
-                  children: kT.map((TT => {
-                    let [kT, {
-                      cosmetics: cT
-                    }] = TT;
-                    const lT = VT(cT, kk),
-                      MT = Tk(cT),
-                      KT = !MT && Object.entries(cT).every((TT => {
-                        let [kT, cT] = TT;
-                        return BT.current[kT] === cT
+                  children: Eq.map((qq => {
+                    let [Eq, {
+                      cosmetics: gq
+                    }] = qq;
+                    const Yq = zq(gq, EE),
+                      lq = qE(gq),
+                      Oq = !lq && Object.entries(gq).every((qq => {
+                        let [Eq, gq] = qq;
+                        return Xq.current[Eq] === gq
                       }));
-                    return (0, eT.jsxs)("div", {
+                    return (0, Mq.jsxs)("div", {
                       "data-pad-focusable": !0,
-                      className: fT()("CharacterPresetCard", {
-                        CharacterPresetCardActive: KT,
-                        CharacterPresetCardTryingOn: MT
+                      className: Aq()("CharacterPresetCard", {
+                        CharacterPresetCardActive: Oq,
+                        CharacterPresetCardTryingOn: lq
                       }),
                       onClick: () => {
-                        if (lT) ! function(TT) {
-                          Tk(TT) ? LT({}) : LT({
-                            ...TT
+                        if (Yq) ! function(qq) {
+                          qE(qq) ? kq({}) : kq({
+                            ...qq
                           })
-                        }(cT);
+                        }(gq);
                         else {
-                          Object.keys(dT).length > 0 && LT({});
-                          const TT = Object.entries(cT);
-                          for (const [kT, cT] of TT) sT(kT, cT, !1), tT.setPlayerCosmetics(kT, cT);
-                          if (null !== OT.gameBridge.latest("connectedGame").websocketUrl)
-                            for (const [kT, cT] of TT) OT.gameBridge.send("updateMyCosmetic", {
-                              Qc: kT,
-                              Sc: cT
+                          Object.keys(Jq).length > 0 && kq({});
+                          const qq = Object.entries(gq);
+                          for (const [Eq, gq] of qq) Dq(Eq, gq, !1), Vq.setPlayerCosmetics(Eq, gq);
+                          if (null !== mq.gameBridge.latest("connectedGame").websocketUrl)
+                            for (const [Eq, gq] of qq) mq.gameBridge.send("updateMyCosmetic", {
+                              tY: Eq,
+                              rY: gq
                             });
-                          else aT.d.updateCosmetics(tT, TT.map((TT => {
-                            let [kT, cT] = TT;
+                          else Qq.e.updateCosmetics(Vq, qq.map((qq => {
+                            let [Eq, gq] = qq;
                             return {
-                              Qc: kT,
-                              Sc: cT
+                              tY: Eq,
+                              rY: gq
                             }
-                          }))).catch((TT => {
-                            console.error("Failed to update cosmetics", TT)
+                          }))).catch((qq => {
+                            console.error("Failed to update cosmetics", qq)
                           }))
                         }
                       },
-                      children: [(0, eT.jsx)("div", {
+                      children: [(0, Mq.jsx)("div", {
                         className: "CharacterPresetCardPreview",
                         style: {
-                          backgroundImage: `url(/textures/charSkins/previews/character_${kT}_preview.png)`
+                          backgroundImage: `url(/textures/charSkins/previews/character_${Eq}_preview.png)`
                         }
-                      }), lT && (0, eT.jsx)(JT.e, {
+                      }), Yq && (0, Mq.jsx)(iq.d, {
                         name: "lock",
                         className: "LockedCosmeticIcon"
                       })]
-                    }, kT)
+                    }, Eq)
                   }))
                 })
-              }, TT)
+              }, qq)
             }))]
-          }), "emote" === kT && (0, eT.jsx)(ZT, {
-            equippedEmoteIds: (0, vT.f)(BT.current.emote),
-            ownedPacks: kk,
-            canBuy: ck,
-            onUpdateLoadout: TT => {
-              const kT = (0, vT.i)(TT);
-              var cT;
-              BT.current = {
-                ...BT.current,
-                emote: kT
-              }, tT.setPlayerCosmetics("emote", kT), HT(), cT = kT, iT.current = cT, null !== pT.current && clearTimeout(pT.current), pT.current = setTimeout(qT, 350)
+          }), "emote" === Eq && (0, Mq.jsx)(pq, {
+            equippedEmoteIds: (0, aq.g)(Xq.current.emote),
+            ownedPacks: EE,
+            canBuy: gE,
+            onUpdateLoadout: qq => {
+              const Eq = (0, aq.j)(qq);
+              var gq;
+              Xq.current = {
+                ...Xq.current,
+                emote: Eq
+              }, Vq.setPlayerCosmetics("emote", Eq), fq(), gq = Eq, Iq.current = gq, null !== Cq.current && clearTimeout(Cq.current), Cq.current = setTimeout(eq, 350)
             },
-            onEmoteSelected: YT,
+            onEmoteSelected: sq,
             onEquipPreviewSkin: () => {
-              ! function(TT, kT) {
-                for (const cT of xT.u) "cape" !== cT && "nameColour" !== cT && "emote" !== cT && TT(cT, "skin" === cT ? "skin_preview" : `${cT}_none`, !1);
-                kT()
-              }(sT, HT)
+              ! function(qq, Eq) {
+                for (const gq of cq.w) "cape" !== gq && "nameColour" !== gq && "emote" !== gq && qq(gq, "skin" === gq ? "skin_preview" : `${gq}_none`, !1);
+                Eq()
+              }(Dq, fq)
             }
-          }), "characters" !== kT && "emote" !== kT && (0, eT.jsxs)("div", {
+          }), "characters" !== Eq && "emote" !== Eq && (0, Mq.jsxs)("div", {
             className: "CharCustomisPartSelectorWrapper",
-            children: [!1, Ik.map((TT => {
-              const kT = yk.get(TT);
-              return (0, eT.jsx)(ET, {
-                pack: TT,
-                ownedPacks: kk,
-                children: kT.map((kT => {
-                  var lT;
+            children: [!1, uE.map((qq => {
+              const Eq = xE.get(qq);
+              return (0, Mq.jsx)(Sq, {
+                pack: qq,
+                ownedPacks: EE,
+                children: Eq.map((Eq => {
+                  var Yq;
                   let {
-                    groupName: MT,
-                    cosmetics: KT,
-                    showSwatch: OT
-                  } = kT;
-                  const yT = MT ? null === (lT = PT.c[TT].colourGroups) || void 0 === lT ? void 0 : lT[MT] : void 0,
-                    xT = `${TT}_${cT}_${MT}`;
-                  return (0, eT.jsxs)("div", {
+                    groupName: lq,
+                    cosmetics: Oq,
+                    showSwatch: mq
+                  } = Eq;
+                  const xq = lq ? null === (Yq = rq.d[qq].colourGroups) || void 0 === Yq ? void 0 : Yq[lq] : void 0,
+                    cq = `${qq}_${gq}_${lq}`;
+                  return (0, Mq.jsxs)("div", {
                     className: "CosmeticPackGroupItems",
-                    children: [OT && yT && (0, eT.jsx)("div", {
+                    children: [mq && xq && (0, Mq.jsx)("div", {
                       className: "CosmeticColorSwatchCell",
-                      children: [...yT.colours.map(((TT, kT) => ({
-                        color: TT,
-                        index: kT
-                      })))].sort(((TT, kT) => TT.color.order - kT.color.order)).map((kT => {
-                        var lT;
+                      children: [...xq.colours.map(((qq, Eq) => ({
+                        color: qq,
+                        index: Eq
+                      })))].sort(((qq, Eq) => qq.color.order - Eq.color.order)).map((Eq => {
+                        var Yq;
                         let {
-                          color: KT,
-                          index: OT
-                        } = kT;
-                        return (0, eT.jsx)("div", {
-                          className: fT()("CosmeticColorOption", {
-                            CosmeticColorOptionSelected: (null !== (lT = RT[xT]) && void 0 !== lT ? lT : (0, PT.h)(yT.colours)) === OT
+                          color: Oq,
+                          index: mq
+                        } = Eq;
+                        return (0, Mq.jsx)("div", {
+                          className: Aq()("CosmeticColorOption", {
+                            CosmeticColorOptionSelected: (null !== (Yq = Rq[cq]) && void 0 !== Yq ? Yq : (0, rq.k)(xq.colours)) === mq
                           }),
                           style: {
-                            backgroundColor: `rgb(${KT.rbg.join(",")})`
+                            backgroundColor: `rgb(${Oq.rbg.join(",")})`
                           },
                           onClick: () => {
-                            var kT;
-                            gT((TT => ({
-                              ...TT,
-                              [xT]: OT
+                            var Eq;
+                            Uq((qq => ({
+                              ...qq,
+                              [cq]: mq
                             })));
-                            const lT = dT[cT],
-                              KT = lT ? (0, CT.j)(cT, lT) : null,
-                              yT = (null === KT || void 0 === KT ? void 0 : KT.cosmeticPack) === TT,
-                              fT = yT ? lT : BT.current[cT],
-                              IT = yT ? KT : (0, CT.j)(cT, fT);
-                            if ((null === IT || void 0 === IT ? void 0 : IT.cosmeticPack) !== TT) return;
-                            if ((null !== (kT = null === IT || void 0 === IT ? void 0 : IT.colourGroup) && void 0 !== kT ? kT : null) !== MT) return;
-                            const AT = (0, CT.g)(fT);
-                            if (AT) {
-                              const TT = `${cT}_${AT[0]}_${OT}`;
-                              yT ? LT((kT => ({
-                                ...kT,
-                                [cT]: TT
-                              }))) : sT(cT, TT, !0)
+                            const Yq = Jq[gq],
+                              Oq = Yq ? (0, Wq.l)(gq, Yq) : null,
+                              xq = (null === Oq || void 0 === Oq ? void 0 : Oq.cosmeticPack) === qq,
+                              Aq = xq ? Yq : Xq.current[gq],
+                              uq = xq ? Oq : (0, Wq.l)(gq, Aq);
+                            if ((null === uq || void 0 === uq ? void 0 : uq.cosmeticPack) !== qq) return;
+                            if ((null !== (Eq = null === uq || void 0 === uq ? void 0 : uq.colourGroup) && void 0 !== Eq ? Eq : null) !== lq) return;
+                            const Bq = (0, Wq.j)(Aq);
+                            if (Bq) {
+                              const qq = `${gq}_${Bq[0]}_${mq}`;
+                              xq ? kq((Eq => ({
+                                ...Eq,
+                                [gq]: qq
+                              }))) : Dq(gq, qq, !0)
                             }
                           }
-                        }, KT.rbg.join())
+                        }, Oq.rbg.join())
                       }))
-                    }), KT.map((TT => {
-                      const kT = TT === BT.current[cT],
-                        lT = dT[cT] === TT,
-                        MT = GT(cT, TT, kk);
-                      let KT = !0;
-                      return MT || kT || ("cape" !== cT || (0, FT.Nd)(tT.getPlayerRanks(), TT)) && ("nameColour" !== cT || tT.playerHasRank("super")) || (KT = !1), (0, eT.jsxs)("div", {
-                        className: fT()("CharCustomPartWrapper", {
-                          SelectedCharCustomPartWrapper: kT && !lT,
-                          TryingOnCharCustomPartWrapper: lT,
-                          DisabledCharCustomPartWrapper: !KT,
-                          CharCustomPartWrapperProfileEffect: "profileEffect" === cT
+                    }), Oq.map((qq => {
+                      const Eq = qq === Xq.current[gq],
+                        Yq = Jq[gq] === qq,
+                        lq = Tq(gq, qq, EE);
+                      let Oq = !0;
+                      return lq || Eq || ("cape" !== gq || (0, yq.Md)(Vq.getPlayerRanks(), qq)) && ("nameColour" !== gq || Vq.playerHasRank("super")) || (Oq = !1), (0, Mq.jsxs)("div", {
+                        className: Aq()("CharCustomPartWrapper", {
+                          SelectedCharCustomPartWrapper: Eq && !Yq,
+                          TryingOnCharCustomPartWrapper: Yq,
+                          DisabledCharCustomPartWrapper: !Oq,
+                          CharCustomPartWrapperProfileEffect: "profileEffect" === gq
                         }),
                         onClick: () => {
-                          if (KT)
-                            if (MT) LT((kT => {
-                              if (kT[cT] === TT) {
-                                const TT = {
-                                  ...kT
+                          if (Oq)
+                            if (lq) kq((Eq => {
+                              if (Eq[gq] === qq) {
+                                const qq = {
+                                  ...Eq
                                 };
-                                return delete TT[cT], TT
+                                return delete qq[gq], qq
                               }
                               return {
-                                ...kT,
-                                [cT]: TT
+                                ...Eq,
+                                [gq]: qq
                               }
                             }));
                             else {
-                              var kT;
-                              if (dT[cT] && LT((TT => {
-                                  const kT = {
-                                    ...TT
+                              var Eq;
+                              if (Jq[gq] && kq((qq => {
+                                  const Eq = {
+                                    ...qq
                                   };
-                                  return delete kT[cT], kT
-                                })), TT === BT.current[cT]) return;
-                              null !== (kT = nT.current) && void 0 !== kT && kT.isReady() && sT(cT, TT, !0)
+                                  return delete Eq[gq], Eq
+                                })), qq === Xq.current[gq]) return;
+                              null !== (Eq = Kq.current) && void 0 !== Eq && Eq.isReady() && Dq(gq, qq, !0)
                             }
                         },
-                        children: ["profileEffect" === cT ? (0, eT.jsx)("div", {
+                        children: ["profileEffect" === gq ? (0, Mq.jsx)("div", {
                           className: "CharCustomPart CharCustomProfileEffect",
-                          children: (0, eT.jsx)(zT.h, {
-                            playerSocialPreview: (0, bT.c)(TT, {
-                              name: tT.getPlayerName(),
-                              cosmetics: tT.getPlayerCosmetics()
+                          children: (0, Mq.jsx)(bq.h, {
+                            playerSocialPreview: (0, nq.b)(qq, {
+                              name: Vq.getPlayerName(),
+                              cosmetics: Vq.getPlayerCosmetics()
                             }),
                             showLocation: !1,
                             opensProfileCard: !1
                           })
-                        }) : (0, eT.jsx)("div", {
-                          className: fT()("CharCustomPart", {
-                            PixelatedImage: "cape" === cT
+                        }) : (0, Mq.jsx)("div", {
+                          className: Aq()("CharCustomPart", {
+                            PixelatedImage: "cape" === gq
                           }),
-                          style: (0, CT.j)(cT, TT).previewTex ? {
-                            backgroundImage: `url(/textures/charSkins/previews/${(0,CT.j)(cT,TT).previewTex}.png)`
+                          style: (0, Wq.l)(gq, qq).previewTex ? {
+                            backgroundImage: `url(/textures/charSkins/previews/${(0,Wq.l)(gq,qq).previewTex}.png)`
                           } : {
-                            backgroundColor: IT.s[TT]
+                            backgroundColor: uq.s[qq]
                           }
-                        }), MT && (0, eT.jsx)(JT.e, {
+                        }), lq && (0, Mq.jsx)(iq.d, {
                           name: "lock",
                           className: "LockedCosmeticIcon"
                         })]
-                      }, TT)
+                      }, qq)
                     }))]
-                  }, null !== MT && void 0 !== MT ? MT : "ungrouped")
+                  }, null !== lq && void 0 !== lq ? lq : "ungrouped")
                 }))
-              }, TT)
+              }, qq)
             }))]
-          }), (0, eT.jsx)(rT.CharacterPreview, {
-            ref: nT,
-            forcedCosmetics: dT,
-            xy: UT.id,
-            emotePlaySeq: UT.seq,
+          }), (0, Mq.jsx)(tq.CharacterPreview, {
+            ref: Kq,
+            forcedCosmetics: Jq,
+            Dc: Fq.id,
+            emotePlaySeq: Fq.seq,
             onReady: () => {
-              for (const TT of xT.u) sT(TT, BT.current[TT], !1)
+              for (const qq of cq.w) Dq(qq, Xq.current[qq], !1)
             }
           })]
         })]
       })
     }))
   },
-  40922: (TT, kT, cT) => {
-    cT.r(kT), cT.d(kT, {
-      CharacterPreview: () => AT
+  41011: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      CharacterPreview: () => Bq
     });
-    var lT = cT(71),
-      MT = cT(2770),
-      KT = cT(1244),
-      OT = cT(8855),
-      yT = cT(9395),
-      fT = cT(3595),
-      xT = cT(1099);
-    const IT = .6 * Math.PI,
-      AT = (0, lT.memo)((0, lT.forwardRef)((function(TT, kT) {
+    var Yq = gq(57),
+      lq = gq(2660),
+      Oq = gq(1226),
+      mq = gq(8794),
+      xq = gq(9313),
+      Aq = gq(3501),
+      cq = gq(1070);
+    const uq = .6 * Math.PI,
+      Bq = (0, Yq.memo)((0, Yq.forwardRef)((function(qq, Eq) {
         let {
-          onReady: cT,
-          onDrawn: AT,
-          owner: CT = "other",
-          framing: jT = "player",
-          forcedCosmetics: vT,
-          xy: tT,
-          emotePlaySeq: hT,
-          turntableFromYaw: NT = null
-        } = TT;
-        const QT = (0, lT.useRef)(null),
+          onReady: gq,
+          onDrawn: Bq,
+          owner: Wq = "other",
+          framing: Nq = "player",
+          forcedCosmetics: aq,
+          Dc: Vq,
+          emotePlaySeq: dq,
+          turntableFromYaw: jq = null
+        } = qq;
+        const Hq = (0, Yq.useRef)(null),
           {
-            width: ST,
-            height: DT
-          } = (0, MT.e)(QT),
-          aT = (0, lT.useRef)(null),
-          FT = (0, lT.useRef)({}),
-          rT = (0, lT.useRef)({}),
-          [PT, wT] = (0, lT.useState)(!1),
-          mT = (0, lT.useRef)(cT);
-        mT.current = cT;
-        const bT = (0, lT.useRef)(AT);
-        bT.current = AT;
-        const zT = (0, lT.useRef)(null),
-          JT = (0, lT.useRef)(!1),
-          oT = (0, lT.useRef)(!1),
-          HT = (0, lT.useCallback)((() => {
-            const TT = aT.current;
-            if (!TT || !bT.current || JT.current || !oT.current) return;
-            const kT = {};
-            zT.current = kT, queueMicrotask((() => {
-              if (zT.current !== kT) return;
-              const cT = Promise.all(KT.u.map((kT => TT.untilDrawn(kT)))).catch((TT => {
-                  console.error("Failed to draw the character preview", TT)
+            width: oq,
+            height: Pq
+          } = (0, lq.e)(Hq),
+          Qq = (0, Yq.useRef)(null),
+          yq = (0, Yq.useRef)({}),
+          tq = (0, Yq.useRef)({}),
+          [rq, vq] = (0, Yq.useState)(!1),
+          hq = (0, Yq.useRef)(gq);
+        hq.current = gq;
+        const nq = (0, Yq.useRef)(Bq);
+        nq.current = Bq;
+        const bq = (0, Yq.useRef)(null),
+          iq = (0, Yq.useRef)(!1),
+          Zq = (0, Yq.useRef)(!1),
+          fq = (0, Yq.useCallback)((() => {
+            const qq = Qq.current;
+            if (!qq || !nq.current || iq.current || !Zq.current) return;
+            const Eq = {};
+            bq.current = Eq, queueMicrotask((() => {
+              if (bq.current !== Eq) return;
+              const gq = Promise.all(Oq.w.map((Eq => qq.untilDrawn(Eq)))).catch((qq => {
+                  console.error("Failed to draw the character preview", qq)
                 })),
-                lT = new Promise((TT => {
-                  setTimeout(TT, 1e4)
+                Yq = new Promise((qq => {
+                  setTimeout(qq, 1e4)
                 }));
-              Promise.race([cT, lT]).then((() => {
-                var cT;
-                aT.current !== TT || zT.current !== kT || JT.current || (JT.current = !0, null === (cT = bT.current) || void 0 === cT || cT.call(bT))
+              Promise.race([gq, Yq]).then((() => {
+                var gq;
+                Qq.current !== qq || bq.current !== Eq || iq.current || (iq.current = !0, null === (gq = nq.current) || void 0 === gq || gq.call(nq))
               }))
             }))
           }), []);
-        return (0, lT.useImperativeHandle)(kT, (() => {
-          const TT = (TT, kT) => {
-            var cT;
-            (FT.current[TT] = kT, null !== vT && void 0 !== vT && vT[TT]) || (null === (cT = aT.current) || void 0 === cT || cT.setCosmetic(TT, kT), HT())
+        return (0, Yq.useImperativeHandle)(Eq, (() => {
+          const qq = (qq, Eq) => {
+            var gq;
+            (yq.current[qq] = Eq, null !== aq && void 0 !== aq && aq[qq]) || (null === (gq = Qq.current) || void 0 === gq || gq.setCosmetic(qq, Eq), fq())
           };
           return {
-            updateCosmetic: TT,
-            setAllCosmetics(kT) {
-              for (const lT of KT.u) {
-                var cT;
-                TT(lT, null !== (cT = kT[lT]) && void 0 !== cT ? cT : (0, OT.e)(lT))
+            updateCosmetic: qq,
+            setAllCosmetics(Eq) {
+              for (const Yq of Oq.w) {
+                var gq;
+                qq(Yq, null !== (gq = Eq[Yq]) && void 0 !== gq ? gq : (0, mq.e)(Yq))
               }
             },
             isReady() {
-              var TT, kT;
-              return null !== (TT = null === (kT = aT.current) || void 0 === kT ? void 0 : kT.isReady()) && void 0 !== TT && TT
+              var qq, Eq;
+              return null !== (qq = null === (Eq = Qq.current) || void 0 === Eq ? void 0 : Eq.isReady()) && void 0 !== qq && qq
             },
             resetCamera() {
-              var TT;
-              null === (TT = aT.current) || void 0 === TT || TT.resetCamera()
+              var qq;
+              null === (qq = Qq.current) || void 0 === qq || qq.resetCamera()
             },
-            setOrbit(TT) {
-              var kT;
-              null === (kT = aT.current) || void 0 === kT || kT.setOrbit(TT)
+            setOrbit(qq) {
+              var Eq;
+              null === (Eq = Qq.current) || void 0 === Eq || Eq.setOrbit(qq)
             },
-            async ensureReadyForCapture(TT) {
-              var kT;
-              await (null === (kT = aT.current) || void 0 === kT ? void 0 : kT.untilDrawn(TT))
+            async ensureReadyForCapture(qq) {
+              var Eq;
+              await (null === (Eq = Qq.current) || void 0 === Eq ? void 0 : Eq.untilDrawn(qq))
             },
             getDevTools() {
-              var TT;
-              return null !== (TT = aT.current) && void 0 !== TT && TT.isReady() ? aT.current.dev : null
+              var qq;
+              return null !== (qq = Qq.current) && void 0 !== qq && qq.isReady() ? Qq.current.dev : null
             }
           }
-        }), [vT, HT]), (0, lT.useEffect)((() => {
-          const TT = fT.d.register(CT),
-            kT = yT.f.openCharacter(QT.current, jT);
-          aT.current = kT;
-          let cT = !0;
-          return kT.ready.then((() => {
-            cT && (wT(!0), mT.current())
-          })).catch((TT => {
-            console.error("Failed to set up the character preview", TT)
+        }), [aq, fq]), (0, Yq.useEffect)((() => {
+          const qq = Aq.d.register(Wq),
+            Eq = xq.i.openCharacter(Hq.current, Nq);
+          Qq.current = Eq;
+          let gq = !0;
+          return Eq.ready.then((() => {
+            gq && (vq(!0), hq.current())
+          })).catch((qq => {
+            console.error("Failed to set up the character preview", qq)
           })), () => {
-            cT = !1, TT(), kT.resetCamera(), kT.close(), aT.current = null
+            gq = !1, qq(), Eq.resetCamera(), Eq.close(), Qq.current = null
           }
-        }), []), (0, lT.useEffect)((() => {
-          ST <= 0 || DT <= 0 || aT.current.resize(ST, DT)
-        }), [ST, DT]), (0, lT.useEffect)((() => {
-          if (!PT) return;
-          const TT = rT.current;
-          for (const kT of KT.u) {
-            const cT = null === vT || void 0 === vT ? void 0 : vT[kT],
-              lT = TT[kT];
-            cT && cT !== lT ? aT.current.setCosmetic(kT, cT) : !cT && lT && FT.current[kT] && aT.current.setCosmetic(kT, FT.current[kT])
+        }), []), (0, Yq.useEffect)((() => {
+          oq <= 0 || Pq <= 0 || Qq.current.resize(oq, Pq)
+        }), [oq, Pq]), (0, Yq.useEffect)((() => {
+          if (!rq) return;
+          const qq = tq.current;
+          for (const Eq of Oq.w) {
+            const gq = null === aq || void 0 === aq ? void 0 : aq[Eq],
+              Yq = qq[Eq];
+            gq && gq !== Yq ? Qq.current.setCosmetic(Eq, gq) : !gq && Yq && yq.current[Eq] && Qq.current.setCosmetic(Eq, yq.current[Eq])
           }
-          rT.current = {
-            ...vT
-          }, oT.current = !0, HT()
-        }), [vT, PT, HT]), (0, lT.useEffect)((() => {
-          PT && aT.current.playEmote(null !== tT && void 0 !== tT ? tT : null)
-        }), [tT, hT, PT]), (0, lT.useEffect)((() => {
-          if (!PT || null === NT) return;
-          const TT = aT.current,
+          tq.current = {
+            ...aq
+          }, Zq.current = !0, fq()
+        }), [aq, rq, fq]), (0, Yq.useEffect)((() => {
+          rq && Qq.current.playEmote(null !== Vq && void 0 !== Vq ? Vq : null)
+        }), [Vq, dq, rq]), (0, Yq.useEffect)((() => {
+          if (!rq || null === jq) return;
+          const qq = Qq.current,
             {
-              pitch: kT,
-              radius: cT
-            } = yT.c[jT];
-          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return TT.setOrbit({
-            yaw: NT + IT,
-            pitch: kT,
-            radius: cT
+              pitch: Eq,
+              radius: gq
+            } = xq.c[Nq];
+          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return qq.setOrbit({
+            yaw: jq + uq,
+            pitch: Eq,
+            radius: gq
           }), () => {
-            TT.resetCamera()
+            qq.resetCamera()
           };
-          const lT = performance.now();
-          let MT = 0;
-          const KT = OT => {
-            TT.setOrbit({
-              yaw: NT + (OT - lT) / 6e3 * 2 * Math.PI,
-              pitch: kT,
-              radius: cT
-            }), MT = requestAnimationFrame(KT)
+          const Yq = performance.now();
+          let lq = 0;
+          const Oq = mq => {
+            qq.setOrbit({
+              yaw: jq + (mq - Yq) / 6e3 * 2 * Math.PI,
+              pitch: Eq,
+              radius: gq
+            }), lq = requestAnimationFrame(Oq)
           };
-          return MT = requestAnimationFrame(KT), () => {
-            cancelAnimationFrame(MT), TT.resetCamera()
+          return lq = requestAnimationFrame(Oq), () => {
+            cancelAnimationFrame(lq), qq.resetCamera()
           }
-        }), [PT, NT]), (0, xT.jsx)("div", {
+        }), [rq, jq]), (0, cq.jsx)("div", {
           className: "CharCustomisationPreview",
-          ref: QT
+          ref: Hq
         })
       })))
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

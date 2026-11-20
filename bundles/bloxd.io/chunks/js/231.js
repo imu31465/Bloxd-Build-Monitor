@@ -1,559 +1,559 @@
 export const id = 231;
 export const ids = [231];
 export const modules = {
-  40684: (TT, kT, cT) => {
-    cT.d(kT, {
-      noaDevTools: () => AT
+  40806: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      noaDevTools: () => Bq
     });
-    var lT = cT(37400),
-      MT = cT(37381),
-      KT = cT(2790),
-      OT = cT(1741);
+    var Yq = gq(37560),
+      lq = gq(37541),
+      Oq = gq(2668),
+      mq = gq(1710);
 
-    function yT(TT) {
+    function xq(qq) {
       const {
-        gv: kT
-      } = TT, cT = kT.engine, lT = {
-        width: cT.getRenderWidth(),
-        height: cT.getRenderHeight()
+        Ma: Eq
+      } = qq, gq = Eq.engine, Yq = {
+        width: gq.getRenderWidth(),
+        height: gq.getRenderHeight()
       };
       return {
-        canvas: cT.getRenderingCanvas(),
-        maxTextureSize: cT.getCaps().maxTextureSize,
-        drawing: () => !TT.FQ,
-        resize: (TT, kT) => {
-          cT.setSize(TT, kT)
+        canvas: gq.getRenderingCanvas(),
+        maxTextureSize: gq.getCaps().maxTextureSize,
+        drawing: () => !qq.Av,
+        resize: (qq, Eq) => {
+          gq.setSize(qq, Eq)
         },
         restoreSize: () => {
-          cT.setSize(lT.width, lT.height), kT.resize()
+          gq.setSize(Yq.width, Yq.height), Eq.resize()
         },
-        onFrameDrawn: kT => (TT.on("afterRender", kT), () => {
-          TT.off("afterRender", kT)
+        onFrameDrawn: Eq => (qq.on("afterRender", Eq), () => {
+          qq.off("afterRender", Eq)
         })
       }
     }
-    var fT = cT(40665),
-      xT = cT(9233);
+    var Aq = gq(40778),
+      cq = gq(9160);
 
-    function IT(TT, kT) {
+    function uq(qq, Eq) {
       let {
-        width: xT,
-        height: IT,
-        colouring: AT
-      } = kT;
-      const CT = "normals" === AT,
-        jT = "depth" === AT;
-      return new Promise((kT => {
+        width: cq,
+        height: uq,
+        colouring: Bq
+      } = Eq;
+      const Wq = "normals" === Bq,
+        Nq = "depth" === Bq;
+      return new Promise((Eq => {
         try {
-          const vT = (0, KT.f)();
-          if (vT.gv.Uv) return "screenshot" !== TT || null !== AT ? (console.warn("GLB downloads and coloured screenshots need WebGPU off in Graphics settings"), void kT()) : void(0, fT.c)(yT(vT), xT, IT).finally(kT);
-          const tT = vT.gv.engine,
-            hT = vT.gv.NJ(),
-            NT = xT,
-            QT = IT;
-          Promise.all([Promise.all([cT.e(246), cT.e(247), cT.e(228)]).then((() => cT(60548))), Promise.all([cT.e(227), cT.e(226), cT.e(246), cT.e(247), cT.e(244), cT.e(248), cT.e(251), cT.e(302), cT.e(232)]).then((() => cT(60554))), Promise.all([cT.e(227), cT.e(226), cT.e(246), cT.e(247), cT.e(244), cT.e(254), cT.e(248), cT.e(256), cT.e(234)]).then((() => cT(60556))), cT.e(345).then((() => cT(60565))), Promise.all([cT.e(226), cT.e(222)]).then((() => cT(36885))), cT.e(245).then((() => cT(60569))), cT.e(229).then((() => cT(60571)))]).then((KT => {
+          const aq = (0, Oq.e)();
+          if (aq.Ma.Ta) return "screenshot" !== qq || null !== Bq ? (console.warn("GLB downloads and coloured screenshots need WebGPU off in Graphics settings"), void Eq()) : void(0, Aq.e)(xq(aq), cq, uq).finally(Eq);
+          const Vq = aq.Ma.engine,
+            dq = aq.Ma.ZJ(),
+            jq = cq,
+            Hq = uq;
+          Promise.all([Promise.all([gq.e(246), gq.e(247), gq.e(228)]).then((() => gq(61112))), Promise.all([gq.e(227), gq.e(226), gq.e(246), gq.e(247), gq.e(244), gq.e(248), gq.e(251), gq.e(302), gq.e(232)]).then((() => gq(61121))), Promise.all([gq.e(227), gq.e(226), gq.e(246), gq.e(247), gq.e(244), gq.e(254), gq.e(248), gq.e(256), gq.e(234)]).then((() => gq(61127))), gq.e(345).then((() => gq(61130))), Promise.all([gq.e(226), gq.e(222)]).then((() => gq(37131))), gq.e(245).then((() => gq(61138))), gq.e(229).then((() => gq(61144)))]).then((Oq => {
             const {
-              CreateScreenshotUsingRenderTarget: yT
-            } = KT[1], {
-              ShaderMaterial: fT
-            } = KT[2], {
-              ShaderLanguage: xT
-            } = KT[3], {
-              Fv: IT
-            } = KT[4], {
-              registerDevtoolsShader: AT
-            } = KT[6], vT = xT.GLSL, ST = new Map, DT = hT.meshes.filter((TT => TT.material));
-            let aT = !1,
-              FT = null;
+              CreateScreenshotUsingRenderTarget: xq
+            } = Oq[1], {
+              ShaderMaterial: Aq
+            } = Oq[2], {
+              ShaderLanguage: cq
+            } = Oq[3], {
+              Na: uq
+            } = Oq[4], {
+              registerDevtoolsShader: Bq
+            } = Oq[6], aq = cq.GLSL, oq = new Map, Pq = dq.meshes.filter((qq => qq.material));
+            let Qq = !1,
+              yq = null;
 
-            function rT() {
-              var TT;
-              aT && (aT = !1, (0, lT.d)(hT.meshes, !1)), null === (TT = FT) || void 0 === TT || TT(), FT = null, DT.forEach((TT => {
-                const kT = ST.get(TT);
-                kT && (TT.material = kT)
+            function tq() {
+              var qq;
+              Qq && (Qq = !1, (0, Yq.e)(dq.meshes, !1)), null === (qq = yq) || void 0 === qq || qq(), yq = null, Pq.forEach((qq => {
+                const Eq = oq.get(qq);
+                Eq && (qq.material = Eq)
               }))
             }
-            if (CT) {
-              const TT = [],
-                kT = [];
-              DT.forEach((cT => {
-                const lT = cT.name.toLowerCase(),
-                  MT = cT.DH().boundingBox.center,
-                  KT = hT.activeCamera.position.subtract(MT).length();
-                lT.includes("sky") || lT.includes("background") || lT.includes("environment") || KT > 1e3 ? kT.push(cT) : TT.push(cT)
-              })), AT("devtoolsNormal", vT);
-              const cT = new fT("normalMaterial", hT, "devtoolsNormal", {
+            if (Wq) {
+              const qq = [],
+                Eq = [];
+              Pq.forEach((gq => {
+                const Yq = gq.name.toLowerCase(),
+                  lq = gq.yR().boundingBox.center,
+                  Oq = dq.activeCamera.position.subtract(lq).length();
+                Yq.includes("sky") || Yq.includes("background") || Yq.includes("environment") || Oq > 1e3 ? Eq.push(gq) : qq.push(gq)
+              })), Bq("devtoolsNormal", aq);
+              const gq = new Aq("normalMaterial", dq, "devtoolsNormal", {
                 attributes: ["position", "normal"],
                 uniforms: ["worldViewProjection", "world"],
-                shaderLanguage: vT
+                shaderLanguage: aq
               });
-              AT("devtoolsWhite", vT);
-              const lT = new fT("whiteMaterial", hT, "devtoolsWhite", {
+              Bq("devtoolsWhite", aq);
+              const Yq = new Aq("whiteMaterial", dq, "devtoolsWhite", {
                 attributes: ["position"],
                 uniforms: ["worldViewProjection"],
-                shaderLanguage: vT
+                shaderLanguage: aq
               });
-              TT.forEach((TT => {
-                ST.set(TT, TT.material), TT.material = cT
-              })), kT.forEach((TT => {
-                ST.set(TT, TT.material), TT.material = lT
+              qq.forEach((qq => {
+                oq.set(qq, qq.material), qq.material = gq
+              })), Eq.forEach((qq => {
+                oq.set(qq, qq.material), qq.material = Yq
               }))
-            } else if (jT) {
-              AT("devtoolsDepth", vT);
-              const TT = hT.activeCamera.position;
-              let kT = 0,
-                cT = 1 / 0;
-              DT.forEach((lT => {
-                const MT = lT.name.toLowerCase();
-                if (MT.includes("sky") || MT.includes("background") || MT.includes("environment")) return;
-                const KT = lT.DH().boundingBox.center,
-                  OT = IT.TransformCoordinates(KT, lT.getWorldMatrix()),
-                  yT = TT.subtract(OT).length();
-                yT > 1e3 || (kT = Math.max(kT, yT), cT = Math.min(cT, yT))
+            } else if (Nq) {
+              Bq("devtoolsDepth", aq);
+              const qq = dq.activeCamera.position;
+              let Eq = 0,
+                gq = 1 / 0;
+              Pq.forEach((Yq => {
+                const lq = Yq.name.toLowerCase();
+                if (lq.includes("sky") || lq.includes("background") || lq.includes("environment")) return;
+                const Oq = Yq.yR().boundingBox.center,
+                  mq = uq.TransformCoordinates(Oq, Yq.getWorldMatrix()),
+                  xq = qq.subtract(mq).length();
+                xq > 1e3 || (Eq = Math.max(Eq, xq), gq = Math.min(gq, xq))
               }));
-              const lT = kT - cT;
-              kT += .1 * lT, cT = Math.max(0, cT - .1 * lT), console.log(`Depth range: min=${cT.toFixed(2)}, max=${kT.toFixed(2)}, range=${lT.toFixed(2)}`), lT < 1 && (kT = cT + 10);
-              const MT = new fT("depthMaterial", hT, "devtoolsDepth", {
+              const Yq = Eq - gq;
+              Eq += .1 * Yq, gq = Math.max(0, gq - .1 * Yq), console.log(`Depth range: min=${gq.toFixed(2)}, max=${Eq.toFixed(2)}, range=${Yq.toFixed(2)}`), Yq < 1 && (Eq = gq + 10);
+              const lq = new Aq("depthMaterial", dq, "devtoolsDepth", {
                 attributes: ["position"],
                 uniforms: ["worldViewProjection", "world", "cameraPosition", "maxDepth", "minDepth"],
-                shaderLanguage: vT
+                shaderLanguage: aq
               });
-              MT.setVector3("cameraPosition", TT), MT.setFloat("maxDepth", kT), MT.setFloat("minDepth", cT), DT.forEach((TT => {
-                ST.set(TT, TT.material), TT.material = MT
+              lq.setVector3("cameraPosition", qq), lq.setFloat("maxDepth", Eq), lq.setFloat("minDepth", gq), Pq.forEach((qq => {
+                oq.set(qq, qq.material), qq.material = lq
               }))
             }
-            if ((0, lT.d)(hT.meshes, !0), aT = !0, "glb" === TT && (FT = (0, MT.c)(hT.meshes)), "screenshot" === TT) {
-              let TT = `bloxd-screenshot-${NT}x${QT}-${Date.now()}.png`;
-              CT ? TT = `bloxd-screenshot-normals-${NT}x${QT}-${Date.now()}.png` : jT && (TT = `bloxd-screenshot-depth-${NT}x${QT}-${Date.now()}.png`), yT(tT, hT.activeCamera, {
-                width: NT,
-                height: QT
-              }, (function(cT) {
-                rT(), fetch(cT).then((function(TT) {
-                  return TT.blob()
-                })).then((function(cT) {
-                  (0, OT.downloadBlob)(cT, TT), kT()
-                })).catch((function(TT) {
-                  console.error("Error processing screenshot:", TT), kT()
+            if ((0, Yq.e)(dq.meshes, !0), Qq = !0, "glb" === qq && (yq = (0, lq.e)(dq.meshes)), "screenshot" === qq) {
+              let qq = `bloxd-screenshot-${jq}x${Hq}-${Date.now()}.png`;
+              Wq ? qq = `bloxd-screenshot-normals-${jq}x${Hq}-${Date.now()}.png` : Nq && (qq = `bloxd-screenshot-depth-${jq}x${Hq}-${Date.now()}.png`), xq(Vq, dq.activeCamera, {
+                width: jq,
+                height: Hq
+              }, (function(gq) {
+                tq(), fetch(gq).then((function(qq) {
+                  return qq.blob()
+                })).then((function(gq) {
+                  (0, mq.downloadBlob)(gq, qq), Eq()
+                })).catch((function(qq) {
+                  console.error("Error processing screenshot:", qq), Eq()
                 }))
               }), "image/png", void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, (function() {
-                console.error("Screenshot timed out"), rT(), kT()
+                console.error("Screenshot timed out"), tq(), Eq()
               }))
             } else {
-              let TT = "et";
-              CT ? TT = "scene-normals" : jT && (TT = "scene-depth"), CT || jT ? setTimeout((() => {
+              let qq = "PV";
+              Wq ? qq = "scene-normals" : Nq && (qq = "scene-depth"), Wq || Nq ? setTimeout((() => {
                 (async function() {
                   const {
-                    StandardMaterial: TT
-                  } = await Promise.all([cT.e(227), cT.e(226), cT.e(246), cT.e(247), cT.e(244), cT.e(254), cT.e(253), cT.e(233)]).then((() => cT(39889))), {
-                    Color3: kT
-                  } = await Promise.all([cT.e(227), cT.e(230)]).then((() => cT(37086))), lT = [], MT = [];
-                  if (DT.forEach((TT => {
-                      const kT = TT.name.toLowerCase(),
-                        cT = TT.DH().boundingBox.center,
-                        KT = hT.activeCamera.position.subtract(cT).length();
-                      kT.includes("sky") || kT.includes("background") || kT.includes("environment") || KT > 1e3 ? MT.push(TT) : lT.push(TT)
-                    })), CT) lT.forEach(((cT, lT) => {
-                    const MT = cT.getVerticesData("normal");
-                    if (MT) {
-                      const KT = [];
-                      for (let TT = 0; TT < MT.length; TT += 3) {
-                        const kT = Math.abs(MT[TT]),
-                          cT = Math.abs(MT[TT + 1]),
-                          lT = Math.abs(MT[TT + 2]);
-                        KT.push(kT, cT, lT, 1)
+                    StandardMaterial: qq
+                  } = await Promise.all([gq.e(227), gq.e(226), gq.e(246), gq.e(247), gq.e(244), gq.e(254), gq.e(253), gq.e(233)]).then((() => gq(40003))), {
+                    Color3: Eq
+                  } = await Promise.all([gq.e(227), gq.e(230)]).then((() => gq(37286))), Yq = [], lq = [];
+                  if (Pq.forEach((qq => {
+                      const Eq = qq.name.toLowerCase(),
+                        gq = qq.yR().boundingBox.center,
+                        Oq = dq.activeCamera.position.subtract(gq).length();
+                      Eq.includes("sky") || Eq.includes("background") || Eq.includes("environment") || Oq > 1e3 ? lq.push(qq) : Yq.push(qq)
+                    })), Wq) Yq.forEach(((gq, Yq) => {
+                    const lq = gq.getVerticesData("normal");
+                    if (lq) {
+                      const Oq = [];
+                      for (let qq = 0; qq < lq.length; qq += 3) {
+                        const Eq = Math.abs(lq[qq]),
+                          gq = Math.abs(lq[qq + 1]),
+                          Yq = Math.abs(lq[qq + 2]);
+                        Oq.push(Eq, gq, Yq, 1)
                       }
-                      cT.setVerticesData("color", KT);
-                      const OT = new TT(`vertexColorMat_${lT}`, hT);
-                      OT.disableLighting = !0, OT.emissiveColor = new kT(1, 1, 1), OT.specularColor = new kT(0, 0, 0), cT.material = OT
+                      gq.setVerticesData("color", Oq);
+                      const mq = new qq(`vertexColorMat_${Yq}`, dq);
+                      mq.disableLighting = !0, mq.emissiveColor = new Eq(1, 1, 1), mq.specularColor = new Eq(0, 0, 0), gq.material = mq
                     }
-                  })), MT.forEach(((cT, lT) => {
-                    const MT = cT.getVerticesData("position");
-                    if (MT) {
-                      const KT = [],
-                        OT = MT.length / 3;
-                      for (let TT = 0; TT < OT; TT++) KT.push(1, 1, 1, 1);
-                      cT.setVerticesData("color", KT);
-                      const yT = new TT(`whiteMat_${lT}`, hT);
-                      yT.disableLighting = !0, yT.emissiveColor = new kT(1, 1, 1), yT.specularColor = new kT(0, 0, 0), cT.material = yT
+                  })), lq.forEach(((gq, Yq) => {
+                    const lq = gq.getVerticesData("position");
+                    if (lq) {
+                      const Oq = [],
+                        mq = lq.length / 3;
+                      for (let qq = 0; qq < mq; qq++) Oq.push(1, 1, 1, 1);
+                      gq.setVerticesData("color", Oq);
+                      const xq = new qq(`whiteMat_${Yq}`, dq);
+                      xq.disableLighting = !0, xq.emissiveColor = new Eq(1, 1, 1), xq.specularColor = new Eq(0, 0, 0), gq.material = xq
                     }
                   }));
-                  else if (jT) {
-                    const cT = hT.activeCamera.position;
-                    let MT = 0,
-                      KT = 1 / 0;
-                    lT.forEach((TT => {
-                      const kT = TT.DH().boundingBox.center,
-                        lT = IT.TransformCoordinates(kT, TT.getWorldMatrix()),
-                        OT = cT.subtract(lT).length();
-                      MT = Math.max(MT, OT), KT = Math.min(KT, OT)
+                  else if (Nq) {
+                    const gq = dq.activeCamera.position;
+                    let lq = 0,
+                      Oq = 1 / 0;
+                    Yq.forEach((qq => {
+                      const Eq = qq.yR().boundingBox.center,
+                        Yq = uq.TransformCoordinates(Eq, qq.getWorldMatrix()),
+                        mq = gq.subtract(Yq).length();
+                      lq = Math.max(lq, mq), Oq = Math.min(Oq, mq)
                     }));
-                    const OT = MT - KT;
-                    MT += .1 * OT, KT = Math.max(0, KT - .1 * OT), OT < 1 && (MT = KT + 10), DT.forEach(((lT, OT) => {
-                      const yT = lT.name.toLowerCase(),
-                        fT = lT.DH().boundingBox.center,
-                        xT = IT.TransformCoordinates(fT, lT.getWorldMatrix()),
-                        AT = cT.subtract(xT).length();
-                      if (!(yT.includes("sky") || yT.includes("background") || yT.includes("environment") || AT > 1e3)) {
-                        const cT = 1 - Math.min(Math.max((AT - KT) / (MT - KT), 0), 1),
-                          yT = new TT(`depthMat_${OT}`, hT);
-                        yT.diffuseColor = new kT(cT, cT, cT), yT.specularColor = new kT(0, 0, 0), lT.material = yT
+                    const mq = lq - Oq;
+                    lq += .1 * mq, Oq = Math.max(0, Oq - .1 * mq), mq < 1 && (lq = Oq + 10), Pq.forEach(((Yq, mq) => {
+                      const xq = Yq.name.toLowerCase(),
+                        Aq = Yq.yR().boundingBox.center,
+                        cq = uq.TransformCoordinates(Aq, Yq.getWorldMatrix()),
+                        Bq = gq.subtract(cq).length();
+                      if (!(xq.includes("sky") || xq.includes("background") || xq.includes("environment") || Bq > 1e3)) {
+                        const gq = 1 - Math.min(Math.max((Bq - Oq) / (lq - Oq), 0), 1),
+                          xq = new qq(`depthMat_${mq}`, dq);
+                        xq.diffuseColor = new Eq(gq, gq, gq), xq.specularColor = new Eq(0, 0, 0), Yq.material = xq
                       }
                     }))
                   }
-                })().then((() => Promise.all([cT.e(227), cT.e(226), cT.e(246), cT.e(247), cT.e(244), cT.e(254), cT.e(248), cT.e(253), cT.e(251), cT.e(243), cT.e(256), cT.e(265), cT.e(302), cT.e(238), cT.e(255), cT.e(225)]).then((() => cT(60573))))).then((kT => kT.GLTF2Export.GLBAsync(hT, TT))).then((TT => {
-                  rT(), TT.downloadFiles(), kT()
-                })).catch((TT => {
-                  console.error("Error exporting GLB:", TT), rT(), kT()
+                })().then((() => Promise.all([gq.e(227), gq.e(226), gq.e(246), gq.e(247), gq.e(244), gq.e(254), gq.e(248), gq.e(253), gq.e(251), gq.e(243), gq.e(256), gq.e(265), gq.e(302), gq.e(238), gq.e(255), gq.e(225)]).then((() => gq(61146))))).then((Eq => Eq.GLTF2Export.GLBAsync(dq, qq))).then((qq => {
+                  tq(), qq.downloadFiles(), Eq()
+                })).catch((qq => {
+                  console.error("Error exporting GLB:", qq), tq(), Eq()
                 }))
-              }), 100) : Promise.all([cT.e(227), cT.e(226), cT.e(246), cT.e(247), cT.e(244), cT.e(254), cT.e(248), cT.e(253), cT.e(251), cT.e(243), cT.e(256), cT.e(265), cT.e(302), cT.e(238), cT.e(255), cT.e(225)]).then((() => cT(60573))).then((cT => {
-                cT.GLTF2Export.GLBAsync(hT, TT).then((TT => {
-                  rT(), TT.downloadFiles(), kT()
-                })).catch((TT => {
-                  console.error("Error exporting GLB:", TT), rT(), kT()
+              }), 100) : Promise.all([gq.e(227), gq.e(226), gq.e(246), gq.e(247), gq.e(244), gq.e(254), gq.e(248), gq.e(253), gq.e(251), gq.e(243), gq.e(256), gq.e(265), gq.e(302), gq.e(238), gq.e(255), gq.e(225)]).then((() => gq(61146))).then((gq => {
+                gq.GLTF2Export.GLBAsync(dq, qq).then((qq => {
+                  tq(), qq.downloadFiles(), Eq()
+                })).catch((qq => {
+                  console.error("Error exporting GLB:", qq), tq(), Eq()
                 }))
-              })).catch((TT => {
-                console.error("Error importing serializers:", TT), rT(), kT()
+              })).catch((qq => {
+                console.error("Error importing serializers:", qq), tq(), Eq()
               }))
             }
-          })).catch((TT => {
-            console.error("Error downloading the scene:", TT), kT()
+          })).catch((qq => {
+            console.error("Error downloading the scene:", qq), Eq()
           }))
-        } catch (vT) {
-          console.error("Error taking screenshot:", vT), kT()
+        } catch (aq) {
+          console.error("Error taking screenshot:", aq), Eq()
         }
       }))
     }
-    const AT = new class {
+    const Bq = new class {
       constructor() {
-        this.tools = xT.ALL_DEV_TOOLS
+        this.tools = cq.ALL_DEV_TOOLS
       }
-      downloadScene(TT, kT) {
-        return IT(TT, kT)
+      downloadScene(qq, Eq) {
+        return uq(qq, Eq)
       }
-      async setAmbientLightIntensity(TT) {
+      async setAmbientLightIntensity(qq) {
         const {
-          Color3: kT
-        } = await Promise.all([cT.e(227), cT.e(230)]).then((() => cT(37086)));
-        (0, KT.f)().gv.NJ().ambientColor = kT.FromArray([TT, TT, TT])
+          Color3: Eq
+        } = await Promise.all([gq.e(227), gq.e(230)]).then((() => gq(37286)));
+        (0, Oq.e)().Ma.ZJ().ambientColor = Eq.FromArray([qq, qq, qq])
       }
     }
   },
-  40665: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => fT
+  40778: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => Aq
     });
-    var lT = cT(1758);
-    const MT = 33177600,
-      KT = 3e4;
-    let OT = !1;
+    var Yq = gq(1725);
+    const lq = 33177600,
+      Oq = 3e4;
+    let mq = !1;
 
-    function yT(TT, kT, cT) {
-      if (!TT.drawing()) return Promise.reject(new Error("Screenshots need a game to be running"));
-      if (OT) return Promise.reject(new Error("A screenshot is already being taken"));
-      OT = !0;
-      const lT = function(TT, kT, cT) {
-        const lT = Math.max(1, TT),
-          KT = Math.max(1, kT),
-          OT = Math.min(1, cT / Math.max(lT, KT), Math.sqrt(MT / (lT * KT)));
+    function xq(qq, Eq, gq) {
+      if (!qq.drawing()) return Promise.reject(new Error("Screenshots need a game to be running"));
+      if (mq) return Promise.reject(new Error("A screenshot is already being taken"));
+      mq = !0;
+      const Yq = function(qq, Eq, gq) {
+        const Yq = Math.max(1, qq),
+          Oq = Math.max(1, Eq),
+          mq = Math.min(1, gq / Math.max(Yq, Oq), Math.sqrt(lq / (Yq * Oq)));
         return {
-          width: Math.max(1, Math.floor(lT * OT)),
-          height: Math.max(1, Math.floor(KT * OT))
+          width: Math.max(1, Math.floor(Yq * mq)),
+          height: Math.max(1, Math.floor(Oq * mq))
         }
-      }(kT, cT, TT.maxTextureSize);
-      return TT.resize(lT.width, lT.height), new Promise(((kT, cT) => {
-        let lT, MT = 2,
-          yT = null;
-        const fT = () => {
-          var kT;
-          OT = !1, null === (kT = yT) || void 0 === kT || kT(), clearTimeout(lT), TT.restoreSize()
+      }(Eq, gq, qq.maxTextureSize);
+      return qq.resize(Yq.width, Yq.height), new Promise(((Eq, gq) => {
+        let Yq, lq = 2,
+          xq = null;
+        const Aq = () => {
+          var Eq;
+          mq = !1, null === (Eq = xq) || void 0 === Eq || Eq(), clearTimeout(Yq), qq.restoreSize()
         };
-        lT = setTimeout((() => {
-          fT(), cT(new Error("No frame was drawn to capture"))
-        }), KT), yT = TT.onFrameDrawn((() => {
-          if (MT--, MT > 0) return;
+        Yq = setTimeout((() => {
+          Aq(), gq(new Error("No frame was drawn to capture"))
+        }), Oq), xq = qq.onFrameDrawn((() => {
+          if (lq--, lq > 0) return;
           const {
-            canvas: lT
-          } = TT, KT = {
-            width: lT.width,
-            height: lT.height
+            canvas: Yq
+          } = qq, Oq = {
+            width: Yq.width,
+            height: Yq.height
           };
           try {
-            lT.toBlob((TT => {
-              TT ? kT({
-                blob: TT,
-                ...KT
-              }) : cT(new Error("The canvas gave no image"))
+            Yq.toBlob((qq => {
+              qq ? Eq({
+                blob: qq,
+                ...Oq
+              }) : gq(new Error("The canvas gave no image"))
             }), "image/png")
-          } catch (OT) {
-            cT(OT)
+          } catch (mq) {
+            gq(mq)
           } finally {
-            fT()
+            Aq()
           }
         }))
       }))
     }
-    async function fT(TT, kT, cT) {
+    async function Aq(qq, Eq, gq) {
       try {
-        const MT = await yT(TT, kT, cT);
-        (0, lT.b)(MT.blob, `bloxd-screenshot-${MT.width}x${MT.height}-${Date.now()}.png`)
-      } catch (MT) {
-        console.error("Error taking screenshot:", MT)
+        const lq = await xq(qq, Eq, gq);
+        (0, Yq.e)(lq.blob, `bloxd-screenshot-${lq.width}x${lq.height}-${Date.now()}.png`)
+      } catch (lq) {
+        console.error("Error taking screenshot:", lq)
       }
     }
   },
-  37400: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => xT,
-      d: () => yT,
-      h: () => OT
+  37560: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => cq,
+      e: () => xq,
+      f: () => mq
     });
-    var lT = cT(37395),
-      MT = cT(37402);
-    let KT = 0;
+    var Yq = gq(37557),
+      lq = gq(37562);
+    let Oq = 0;
 
-    function OT(TT, kT) {
-      const cT = TT;
-      cT._noaFaceGroups = null !== kT && void 0 !== kT ? kT : null, cT._noaFaceEpoch = -1, cT._noaFaceMask = -1, cT._noaFaceCount = -1, cT._noaFaceMaterial = null;
-      const lT = TT.kF;
-      lT && 1 === lT.length && (lT[0].indexStart = 0, lT[0].indexCount = TT.getTotalIndices())
+    function mq(qq, Eq) {
+      const gq = qq;
+      gq._noaFaceGroups = null !== Eq && void 0 !== Eq ? Eq : null, gq._noaFaceEpoch = -1, gq._noaFaceMask = -1, gq._noaFaceCount = -1, gq._noaFaceMaterial = null;
+      const Yq = qq.fn;
+      Yq && 1 === Yq.length && (Yq[0].indexStart = 0, Yq[0].indexCount = qq.getTotalIndices())
     }
 
-    function yT(TT, kT) {
-      if (kT) {
-        KT++;
-        for (const kT of TT) {
-          const TT = kT._noaFaceGroups;
-          TT && OT(kT, TT)
+    function xq(qq, Eq) {
+      if (Eq) {
+        Oq++;
+        for (const Eq of qq) {
+          const qq = Eq._noaFaceGroups;
+          qq && mq(Eq, qq)
         }
-      } else KT = Math.max(0, KT - 1)
+      } else Oq = Math.max(0, Oq - 1)
     }
 
-    function fT(TT, kT, cT) {
-      let MT = -1,
-        KT = 0;
-      for (let OT = 0; OT < lT.f; OT++) {
-        const cT = TT[OT],
-          yT = TT[OT + 1];
-        yT > cT && kT & 1 << lT.b[OT] && (MT < 0 && (MT = cT), KT = yT)
+    function Aq(qq, Eq, gq) {
+      let lq = -1,
+        Oq = 0;
+      for (let mq = 0; mq < Yq.e; mq++) {
+        const gq = qq[mq],
+          xq = qq[mq + 1];
+        xq > gq && Eq & 1 << Yq.b[mq] && (lq < 0 && (lq = gq), Oq = xq)
       }
-      return MT < 0 ? (cT[0] = 0, cT[1] = 0, 0) : (cT[0] = MT, cT[1] = KT - MT, KT - MT)
+      return lq < 0 ? (gq[0] = 0, gq[1] = 0, 0) : (gq[0] = lq, gq[1] = Oq - lq, Oq - lq)
     }
-    class xT {
-      constructor(TT, kT) {
-        this.vv = TT, this.engine = kT, this.epoch = 0, this.eyeX = NaN, this.eyeY = NaN, this.eyeZ = NaN, this.focalPx = NaN, this.culling = !1, this.range = new Int32Array(2)
+    class cq {
+      constructor(qq, Eq) {
+        this.Oa = qq, this.engine = Eq, this.epoch = 0, this.eyeX = NaN, this.eyeY = NaN, this.eyeZ = NaN, this.focalPx = NaN, this.culling = !1, this.range = new Int32Array(2)
       }
-      apply(TT, kT) {
-        if (!kT) return;
-        const cT = kT.getProjectionMatrix().m,
-          OT = 0 === KT && 0 === cT[15],
-          yT = kT.globalPosition,
+      apply(qq, Eq) {
+        if (!Eq) return;
+        const gq = Eq.getProjectionMatrix().m,
+          mq = 0 === Oq && 0 === gq[15],
+          xq = Eq.globalPosition,
           {
-            engine: xT
+            engine: cq
           } = this,
-          IT = OT ? (0, MT.e)(cT, xT.getRenderWidth(), xT.getRenderHeight()) : 0;
-        yT.x === this.eyeX && yT.y === this.eyeY && yT.z === this.eyeZ && IT === this.focalPx && OT === this.culling || (this.epoch++, this.eyeX = yT.x, this.eyeY = yT.y, this.eyeZ = yT.z, this.focalPx = IT, this.culling = OT);
+          uq = mq ? (0, lq.d)(gq, cq.getRenderWidth(), cq.getRenderHeight()) : 0;
+        xq.x === this.eyeX && xq.y === this.eyeY && xq.z === this.eyeZ && uq === this.focalPx && mq === this.culling || (this.epoch++, this.eyeX = xq.x, this.eyeY = xq.y, this.eyeZ = xq.z, this.focalPx = uq, this.culling = mq);
         const {
-          epoch: AT,
-          range: CT
-        } = this, jT = this.vv / 2, vT = jT * Math.sqrt(3), tT = TT.data, hT = TT.length;
-        let NT = 0;
-        for (let KT = 0; KT < hT; KT++) {
-          const TT = tT[KT],
-            kT = TT._noaFaceGroups;
-          if (kT && (TT._noaFaceEpoch !== AT || TT._noaFaceMaterial !== TT.material)) {
-            TT._noaFaceEpoch = AT, TT._noaFaceMaterial = TT.material;
-            const cT = TT.kF,
-              KT = cT && 1 === cT.length ? cT[0] : null;
-            let xT = -1;
-            if (OT && KT && (0, lT.r)(TT.material)) {
-              const cT = TT.position,
-                lT = yT.x - cT.x,
-                KT = yT.y - cT.y,
-                OT = yT.z - cT.z,
-                fT = lT - jT,
-                AT = KT - jT,
-                CT = OT - jT,
-                tT = Math.sqrt(fT * fT + AT * AT + CT * CT) + vT;
-              xT = (0, MT.q)(kT, lT, KT, OT, (0, MT.i)(tT, IT))
+          epoch: Bq,
+          range: Wq
+        } = this, Nq = this.Oa / 2, aq = Nq * Math.sqrt(3), Vq = qq.data, dq = qq.length;
+        let jq = 0;
+        for (let Oq = 0; Oq < dq; Oq++) {
+          const qq = Vq[Oq],
+            Eq = qq._noaFaceGroups;
+          if (Eq && (qq._noaFaceEpoch !== Bq || qq._noaFaceMaterial !== qq.material)) {
+            qq._noaFaceEpoch = Bq, qq._noaFaceMaterial = qq.material;
+            const gq = qq.fn,
+              Oq = gq && 1 === gq.length ? gq[0] : null;
+            let cq = -1;
+            if (mq && Oq && (0, Yq.v)(qq.material)) {
+              const gq = qq.position,
+                Yq = xq.x - gq.x,
+                Oq = xq.y - gq.y,
+                mq = xq.z - gq.z,
+                Aq = Yq - Nq,
+                Bq = Oq - Nq,
+                Wq = mq - Nq,
+                Vq = Math.sqrt(Aq * Aq + Bq * Bq + Wq * Wq) + aq;
+              cq = (0, lq.h)(Eq, Yq, Oq, mq, (0, lq.e)(Vq, uq))
             }
-            if (KT && xT !== TT._noaFaceMask) {
-              TT._noaFaceMask = xT;
-              let cT = 0,
-                MT = kT[lT.f]; - 1 !== xT && (MT = fT(kT, xT, CT), cT = CT[0]), TT._noaFaceCount = MT, KT.indexStart = 6 * cT, KT.indexCount = 6 * MT, KT.setBoundingInfo(TT.DH())
+            if (Oq && cq !== qq._noaFaceMask) {
+              qq._noaFaceMask = cq;
+              let gq = 0,
+                lq = Eq[Yq.e]; - 1 !== cq && (lq = Aq(Eq, cq, Wq), gq = Wq[0]), qq._noaFaceCount = lq, Oq.indexStart = 6 * gq, Oq.indexCount = 6 * lq, Oq.setBoundingInfo(qq.yR())
             }
           }
-          kT && 0 === TT._noaFaceCount || (tT[NT++] = TT)
+          Eq && 0 === qq._noaFaceCount || (Vq[jq++] = qq)
         }
-        TT.length = NT
+        qq.length = jq
       }
     }
   },
-  37381: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => fT,
-      e: () => yT
+  37541: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => Aq,
+      i: () => xq
     });
-    const lT = new WeakSet;
-    let MT = 0;
-    const KT = new Set;
+    const Yq = new WeakSet;
+    let lq = 0;
+    const Oq = new Set;
 
-    function OT(TT, kT) {
-      TT._data = kT
+    function mq(qq, Eq) {
+      qq._data = Eq
     }
 
-    function yT(TT) {
-      var kT, cT;
-      (null !== (kT = null === (cT = TT.getBuffer()) || void 0 === cT ? void 0 : cT.DA) && void 0 !== kT ? kT : 0) > 0 && (lT.add(TT), 0 === MT ? OT(TT, null) : KT.add(TT))
+    function xq(qq) {
+      var Eq, gq;
+      (null !== (Eq = null === (gq = qq.getBuffer()) || void 0 === gq ? void 0 : gq.WB) && void 0 !== Eq ? Eq : 0) > 0 && (Yq.add(qq), 0 === lq ? mq(qq, null) : Oq.add(qq))
     }
 
-    function fT(TT) {
-      MT++;
-      for (const cT of function(TT) {
-          const kT = new Set;
-          for (const MT of TT) {
-            const TT = MT.geometry;
-            for (const MT of Object.values(null !== (cT = null === TT || void 0 === TT ? void 0 : TT.getVertexBuffers()) && void 0 !== cT ? cT : {})) {
-              var cT;
-              const TT = MT.getWrapperBuffer();
-              lT.has(TT) && kT.add(TT)
+    function Aq(qq) {
+      lq++;
+      for (const gq of function(qq) {
+          const Eq = new Set;
+          for (const lq of qq) {
+            const qq = lq.geometry;
+            for (const lq of Object.values(null !== (gq = null === qq || void 0 === qq ? void 0 : qq.getVertexBuffers()) && void 0 !== gq ? gq : {})) {
+              var gq;
+              const qq = lq.getWrapperBuffer();
+              Yq.has(qq) && Eq.add(qq)
             }
           }
-          return kT
-        }(TT)) cT.getData() || xT(cT), KT.add(cT);
-      let kT = !0;
+          return Eq
+        }(qq)) gq.getData() || cq(gq), Oq.add(gq);
+      let Eq = !0;
       return () => {
-        if (kT && (kT = !1, MT--, 0 === MT)) {
-          for (const TT of KT) OT(TT, null);
-          KT.clear()
+        if (Eq && (Eq = !1, lq--, 0 === lq)) {
+          for (const qq of Oq) mq(qq, null);
+          Oq.clear()
         }
       }
     }
 
-    function xT(TT) {
-      const kT = TT.getBuffer();
-      if (!kT || !(kT.DA > 0)) return;
-      const cT = TT._engine,
-        lT = new Uint8Array(kT.DA);
-      cT.bindArrayBuffer(kT), cT._gl.getBufferSubData(cT._gl.ARRAY_BUFFER, 0, lT), cT._resetVertexBufferBinding(), OT(TT, lT)
+    function cq(qq) {
+      const Eq = qq.getBuffer();
+      if (!Eq || !(Eq.WB > 0)) return;
+      const gq = qq._engine,
+        Yq = new Uint8Array(Eq.WB);
+      gq.bindArrayBuffer(Eq), gq._gl.getBufferSubData(gq._gl.ARRAY_BUFFER, 0, Yq), gq._resetVertexBufferBinding(), mq(qq, Yq)
     }
   },
-  37395: (TT, kT, cT) => {
-    cT.d(kT, {
-      b: () => OT,
-      f: () => KT,
-      i: () => fT,
-      l: () => lT,
-      m: () => yT,
-      n: () => MT,
-      r: () => xT
+  37557: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => mq,
+      e: () => Oq,
+      i: () => Aq,
+      m: () => Yq,
+      p: () => xq,
+      s: () => lq,
+      v: () => cq
     });
-    const lT = 6,
-      MT = [0, 2, 4, 1, 3, 5, 0, 2],
-      KT = 6,
-      OT = [1, 0, 3, 2, 5, 4];
-    for (let IT = KT; IT < MT.length; IT++)
-      if (MT[IT] !== MT[IT - KT]) throw new Error("FACE_LAYOUT must repeat a prefix of its base groups");
-    const yT = MT.length + 1,
-      fT = (() => {
-        const TT = [];
-        for (let kT = 0; kT < KT; kT++) TT[MT[kT]] = kT;
-        return TT
+    const Yq = 6,
+      lq = [0, 2, 4, 1, 3, 5, 0, 2],
+      Oq = 6,
+      mq = [1, 0, 3, 2, 5, 4];
+    for (let uq = Oq; uq < lq.length; uq++)
+      if (lq[uq] !== lq[uq - Oq]) throw new Error("FACE_LAYOUT must repeat a prefix of its base groups");
+    const xq = lq.length + 1,
+      Aq = (() => {
+        const qq = [];
+        for (let Eq = 0; Eq < Oq; Eq++) qq[lq[Eq]] = Eq;
+        return qq
       })();
 
-    function xT(TT) {
-      return !!TT && TT.backFaceCulling && (0 === TT.transparencyMode || 1 === TT.transparencyMode)
+    function cq(qq) {
+      return !!qq && qq.backFaceCulling && (0 === qq.transparencyMode || 1 === qq.transparencyMode)
     }
   },
-  37402: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => yT,
-      i: () => fT,
-      m: () => IT,
-      q: () => xT,
-      u: () => vT
+  37562: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => xq,
+      e: () => Aq,
+      g: () => uq,
+      h: () => cq,
+      k: () => aq
     });
-    var lT = cT(37395);
-    const MT = 1 / 16,
-      KT = 1 / 64,
-      OT = 2048;
-    lT.l;
+    var Yq = gq(37557);
+    const lq = 1 / 16,
+      Oq = 1 / 64,
+      mq = 2048;
+    Yq.m;
 
-    function yT(TT, kT, cT) {
-      return Math.min(Math.abs(TT[0] * kT), Math.abs(TT[5] * cT)) / 2
+    function xq(qq, Eq, gq) {
+      return Math.min(Math.abs(qq[0] * Eq), Math.abs(qq[5] * gq)) / 2
     }
 
-    function fT(TT, kT) {
-      return MT + KT * TT * TT / kT
+    function Aq(qq, Eq) {
+      return lq + Oq * qq * qq / Eq
     }
 
-    function xT(TT, kT, cT, MT, KT) {
-      const OT = lT.m;
-      return IT(TT[OT], TT[OT + 1], TT[OT + 2], TT[OT + 3], TT[OT + 4], TT[OT + 5], kT, cT, MT, KT)
+    function cq(qq, Eq, gq, lq, Oq) {
+      const mq = Yq.p;
+      return uq(qq[mq], qq[mq + 1], qq[mq + 2], qq[mq + 3], qq[mq + 4], qq[mq + 5], Eq, gq, lq, Oq)
     }
 
-    function IT(TT, kT, cT, lT, MT, KT, OT, yT, fT, xT) {
-      return (OT <= TT - xT ? 0 : 1) | (OT >= kT + xT ? 0 : 2) | (yT <= cT - xT ? 0 : 4) | (yT >= lT + xT ? 0 : 8) | (fT <= MT - xT ? 0 : 16) | (fT >= KT + xT ? 0 : 32)
+    function uq(qq, Eq, gq, Yq, lq, Oq, mq, xq, Aq, cq) {
+      return (mq <= qq - cq ? 0 : 1) | (mq >= Eq + cq ? 0 : 2) | (xq <= gq - cq ? 0 : 4) | (xq >= Yq + cq ? 0 : 8) | (Aq <= lq - cq ? 0 : 16) | (Aq >= Oq + cq ? 0 : 32)
     }
-    const AT = (() => {
-        const TT = [];
-        for (let kT = 0; kT < lT.n.length; kT++) {
-          let cT = 0;
-          for (let MT = kT + 1; MT <= lT.n.length; MT++) {
-            const KT = 1 << lT.n[MT - 1];
-            if (cT & KT) break;
-            cT |= KT, TT.push({
-              start: kT,
-              end: MT,
-              Gk: cT
+    const Bq = (() => {
+        const qq = [];
+        for (let Eq = 0; Eq < Yq.s.length; Eq++) {
+          let gq = 0;
+          for (let lq = Eq + 1; lq <= Yq.s.length; lq++) {
+            const Oq = 1 << Yq.s[lq - 1];
+            if (gq & Oq) break;
+            gq |= Oq, qq.push({
+              start: Eq,
+              end: lq,
+              jE: gq
             })
           }
         }
-        return TT
+        return qq
       })(),
-      CT = [];
+      Wq = [];
 
-    function jT(TT, kT) {
-      const cT = lT.i[kT];
-      return TT[cT + 1] - TT[cT]
+    function Nq(qq, Eq) {
+      const gq = Yq.i[Eq];
+      return qq[gq + 1] - qq[gq]
     }
 
-    function vT(TT, kT, cT) {
-      let MT = 0;
-      for (let OT = 0; OT < lT.l; OT++) jT(TT, OT) > 0 && (MT |= 1 << OT);
-      if (0 === (kT &= MT)) return 0;
-      if (kT === MT) return cT[0] = 0, cT[1] = TT[lT.f], 1;
-      let KT = null,
-        yT = 1 / 0;
-      for (const xT of function(TT) {
-          let kT = CT[TT];
-          if (kT) return kT;
-          const cT = new Map,
-            lT = (TT, kT) => {
-              const lT = 4 * TT + kT.length / 2;
-              cT.has(lT) || cT.set(lT, {
-                Gk: TT,
-                windows: kT
+    function aq(qq, Eq, gq) {
+      let lq = 0;
+      for (let mq = 0; mq < Yq.m; mq++) Nq(qq, mq) > 0 && (lq |= 1 << mq);
+      if (0 === (Eq &= lq)) return 0;
+      if (Eq === lq) return gq[0] = 0, gq[1] = qq[Yq.e], 1;
+      let Oq = null,
+        xq = 1 / 0;
+      for (const cq of function(qq) {
+          let Eq = Wq[qq];
+          if (Eq) return Eq;
+          const gq = new Map,
+            Yq = (qq, Eq) => {
+              const Yq = 4 * qq + Eq.length / 2;
+              gq.has(Yq) || gq.set(Yq, {
+                jE: qq,
+                windows: Eq
               })
             };
-          for (const KT of AT)
-            if ((KT.Gk & TT) === TT && lT(KT.Gk, [KT.start, KT.end]), 0 !== (KT.Gk & TT))
-              for (const kT of AT) kT.start < KT.end || 0 !== (KT.Gk & kT.Gk) || 0 === (kT.Gk & TT) || ((KT.Gk | kT.Gk) & TT) !== TT || lT(KT.Gk | kT.Gk, [KT.start, KT.end, kT.start, kT.end]);
-          const MT = [...cT.values()];
-          return kT = MT.filter((TT => !MT.some((kT => kT !== TT && (kT.Gk & TT.Gk) === kT.Gk && kT.windows.length <= TT.windows.length)))), CT[TT] = kT, kT
-        }(kT)) {
-        let cT = (xT.windows.length / 2 - 1) * OT;
-        const fT = xT.Gk & ~kT & MT;
-        for (let kT = 0; kT < lT.l; kT++) fT & 1 << kT && (cT += jT(TT, kT));
-        cT < yT && (KT = xT, yT = cT)
+          for (const Oq of Bq)
+            if ((Oq.jE & qq) === qq && Yq(Oq.jE, [Oq.start, Oq.end]), 0 !== (Oq.jE & qq))
+              for (const Eq of Bq) Eq.start < Oq.end || 0 !== (Oq.jE & Eq.jE) || 0 === (Eq.jE & qq) || ((Oq.jE | Eq.jE) & qq) !== qq || Yq(Oq.jE | Eq.jE, [Oq.start, Oq.end, Eq.start, Eq.end]);
+          const lq = [...gq.values()];
+          return Eq = lq.filter((qq => !lq.some((Eq => Eq !== qq && (Eq.jE & qq.jE) === Eq.jE && Eq.windows.length <= qq.windows.length)))), Wq[qq] = Eq, Eq
+        }(Eq)) {
+        let gq = (cq.windows.length / 2 - 1) * mq;
+        const Aq = cq.jE & ~Eq & lq;
+        for (let Eq = 0; Eq < Yq.m; Eq++) Aq & 1 << Eq && (gq += Nq(qq, Eq));
+        gq < xq && (Oq = cq, xq = gq)
       }
-      const fT = KT.windows;
-      for (let lT = 0; lT < fT.length; lT += 2) {
-        const kT = TT[fT[lT]];
-        cT[lT] = kT, cT[lT + 1] = TT[fT[lT + 1]] - kT
+      const Aq = Oq.windows;
+      for (let Yq = 0; Yq < Aq.length; Yq += 2) {
+        const Eq = qq[Aq[Yq]];
+        gq[Yq] = Eq, gq[Yq + 1] = qq[Aq[Yq + 1]] - Eq
       }
-      return fT.length / 2
+      return Aq.length / 2
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

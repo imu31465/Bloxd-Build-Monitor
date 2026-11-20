@@ -1,24 +1,24 @@
 export const id = 87;
 export const ids = [87];
 export const modules = {
-  38593: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => OT,
-      h: () => xT,
-      k: () => IT,
-      m: () => AT,
-      n: () => fT,
-      o: () => yT
+  38724: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => mq,
+      h: () => cq,
+      k: () => uq,
+      m: () => Bq,
+      p: () => Aq,
+      q: () => xq
     });
-    const lT = "A valid external Instance reference no longer exists.",
-      MT = [
+    const Yq = "A valid external Instance reference no longer exists.",
+      lq = [
         [1e4, "<10s", "lt10s"],
         [6e4, "<1m", "lt1m"],
         [3e5, "<5m", "lt5m"],
         [18e5, "<30m", "lt30m"],
         [1 / 0, "30m+", "ge30m"]
       ],
-      KT = [
+      Oq = [
         [1e3, "lt1s"],
         [2e3, "lt2s"],
         [5e3, "lt5s"],
@@ -26,307 +26,309 @@ export const modules = {
         [3e4, "lt30s"],
         [1 / 0, "ge30s"]
       ];
-    const OT = {
+    const mq = {
       WebGPU: "WebGPU device lost",
       WebGL2: "WebGL2 context lost"
     };
 
-    function yT(TT, kT) {
-      return TT ? "frames_refused" : arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? "browser_destroyed" : function(TT) {
-        var kT;
-        const cT = null !== (kT = /Device removed reason: (?!S_OK)([A-Z][A-Z0-9_]+)/.exec(TT)) && void 0 !== kT ? kT : /failed with ([A-Z][A-Z0-9_]+)/.exec(TT);
-        return cT ? cT[1] : TT.includes(lT) ? "gpu_process_lost" : "other"
-      }(kT)
+    function xq(qq, Eq) {
+      return qq ? "frames_refused" : arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? "browser_destroyed" : function(qq) {
+        var Eq;
+        const gq = null !== (Eq = /Device removed reason: (?!S_OK)([A-Z][A-Z0-9_]+)/.exec(qq)) && void 0 !== Eq ? Eq : /failed with ([A-Z][A-Z0-9_]+)/.exec(qq);
+        return gq ? gq[1] : qq.includes(Yq) ? "gpu_process_lost" : "other"
+      }(Eq)
     }
 
-    function fT(TT) {
-      return `${(null===TT||void 0===TT?void 0:TT.vendor)||"unknown vendor"} ${(null===TT||void 0===TT?void 0:TT.architecture)||"unknown architecture"}`
+    function Aq(qq) {
+      return `${(null===qq||void 0===qq?void 0:qq.vendor)||"unknown vendor"} ${(null===qq||void 0===qq?void 0:qq.architecture)||"unknown architecture"}`
     }
 
-    function xT(TT) {
-      return CT(TT)[1]
+    function cq(qq) {
+      return Wq(qq)[1]
     }
 
-    function IT(TT) {
-      return CT(TT)[2]
+    function uq(qq) {
+      return Wq(qq)[2]
     }
 
-    function AT(TT) {
-      return jT(KT, TT)[1]
+    function Bq(qq) {
+      return Nq(Oq, qq)[1]
     }
 
-    function CT(TT) {
-      return jT(MT, TT)
+    function Wq(qq) {
+      return Nq(lq, qq)
     }
 
-    function jT(TT, kT) {
-      var cT;
-      return null !== (cT = TT.find((TT => {
-        let [cT] = TT;
-        return kT < cT
-      }))) && void 0 !== cT ? cT : TT[TT.length - 1]
+    function Nq(qq, Eq) {
+      var gq;
+      return null !== (gq = qq.find((qq => {
+        let [gq] = qq;
+        return Eq < gq
+      }))) && void 0 !== gq ? gq : qq[qq.length - 1]
     }
   },
-  38879: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => lT,
-      f: () => MT
+  39012: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => Yq,
+      f: () => lq
     });
-    const lT = 45e3;
-    class MT extends Error {
+    const Yq = 45e3;
+    class lq extends Error {
       constructor() {
         super("The game server didn't answer in time"), this.name = "SeatRequestTimedOut"
       }
     }
   },
-  36085: (TT, kT, cT) => {
-    cT.d(kT, {
-      d: () => lT,
-      g: () => MT,
-      j: () => KT,
-      m: () => OT
+  36350: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => Yq,
+      g: () => lq,
+      j: () => Oq,
+      k: () => mq
     });
-    const lT = 1024,
-      MT = 1024 * lT;
+    const Yq = 1024,
+      lq = 1024 * Yq;
 
-    function KT(TT) {
-      return 2 ** Math.floor(Math.log2(Math.max(1, TT / MT)))
+    function Oq(qq) {
+      return 2 ** Math.floor(Math.log2(Math.max(1, qq / lq)))
     }
 
-    function OT(TT) {
-      return (TT / MT).toFixed(1)
+    function mq(qq) {
+      return (qq / lq).toFixed(1)
     }
   },
-  36299: (TT, kT, cT) => {
-    cT.d(kT, {
-      d: () => KT,
-      g: () => yT,
-      k: () => OT,
-      n: () => fT,
-      r: () => xT,
-      t: () => IT
+  36528: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => Oq,
+      f: () => xq,
+      g: () => mq,
+      i: () => Aq,
+      j: () => cq,
+      k: () => uq
     });
-    var lT = cT(218);
-    const MT = 32 * cT(36085).g,
-      KT = 6144,
-      OT = 4608,
-      yT = 512;
+    var Yq = gq(190);
+    const lq = 32 * gq(36350).g,
+      Oq = 6144,
+      mq = 4608,
+      xq = 512;
 
-    function fT(TT) {
-      return Math.floor(MT * TT / KT)
+    function Aq(qq) {
+      return Math.floor(lq * qq / Oq)
     }
 
-    function xT(TT) {
-      const kT = TT - Math.floor(TT / 6);
-      let cT = lT.f.maxChunkHorizAddDistance,
-        MT = lT.f.maxChunkVertAddDistance;
-      if (IT(cT + 1, MT + 1) <= kT) return null;
-      for (; IT(cT + 1, MT + 1) > kT && (cT > 0 || MT > 0);) cT > MT ? cT-- : MT--;
+    function cq(qq) {
+      const Eq = qq - Math.floor(qq / 6);
+      let gq = Yq.c.maxChunkHorizAddDistance,
+        lq = Yq.c.maxChunkVertAddDistance;
+      if (uq(gq + 1, lq + 1) <= Eq) return null;
+      for (; uq(gq + 1, lq + 1) > Eq && (gq > 0 || lq > 0);) gq > lq ? gq-- : lq--;
       return {
-        horizontal: cT,
-        vertical: MT
+        horizontal: gq,
+        vertical: lq
       }
     }
 
-    function IT(TT, kT) {
-      const cT = Math.max(TT, kT);
-      let lT = 0;
-      for (let MT = -cT; MT <= cT; MT++)
-        for (let KT = -cT; KT <= cT; KT++)
-          for (let OT = -cT; OT <= cT; OT++) AT(TT, kT, MT, KT, OT) && lT++;
-      return lT
+    function uq(qq, Eq) {
+      const gq = Math.max(qq, Eq);
+      let Yq = 0;
+      for (let lq = -gq; lq <= gq; lq++)
+        for (let Oq = -gq; Oq <= gq; Oq++)
+          for (let mq = -gq; mq <= gq; mq++) Bq(qq, Eq, lq, Oq, mq) && Yq++;
+      return Yq
     }
 
-    function AT(TT, kT, cT, lT, MT) {
-      const KT = cT * cT + MT * MT;
-      return TT === kT ? KT + lT * lT <= TT * TT : TT > kT ? Math.abs(lT) <= kT && KT + lT * lT <= TT * TT : KT <= TT * TT && KT + lT * lT <= kT * kT
+    function Bq(qq, Eq, gq, Yq, lq) {
+      const Oq = gq * gq + lq * lq;
+      return qq === Eq ? Oq + Yq * Yq <= qq * qq : qq > Eq ? Math.abs(Yq) <= Eq && Oq + Yq * Yq <= qq * qq : Oq <= qq * qq && Oq + Yq * Yq <= Eq * Eq
     }
   },
-  40494: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => MT,
-      f: () => KT,
-      j: () => yT,
-      n: () => IT,
-      r: () => fT,
-      t: () => OT
+  40590: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => lq,
+      f: () => Oq,
+      h: () => xq,
+      j: () => uq,
+      l: () => Aq,
+      n: () => mq
     });
-    var lT = cT(218);
-    const MT = 3e3,
-      KT = 15e3;
+    var Yq = gq(190);
+    const lq = 3e3,
+      Oq = 15e3;
 
-    function OT(TT) {
-      const kT = TT.endsWith(lT.k);
+    function mq(qq) {
+      const Eq = qq.endsWith(Yq.h);
       return {
-        text: (kT ? TT.slice(0, -lT.k.length) : TT) || null,
-        dropsCache: kT
+        text: (Eq ? qq.slice(0, -Yq.h.length) : qq) || null,
+        dropsCache: Eq
       }
     }
-    const yT = "Either your internet isn't working or this is a bug.";
+    const xq = "Either your internet isn't working or this is a bug.";
 
-    function fT(TT, kT) {
-      const cT = IT(TT);
-      return null !== cT.name && "" === lT.c[cT.name].text && null !== kT ? kT : cT.reason
+    function Aq(qq, Eq) {
+      const gq = uq(qq);
+      return null !== gq.name && "" === Yq.b[gq.name].text && null !== Eq ? Eq : gq.reason
     }
-    const xT = "You were removed from the game.";
+    const cq = "You were removed from the game.";
 
-    function IT(TT) {
-      var kT;
-      let cT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const MT = null !== (kT = Object.keys(lT.c).find((kT => lT.c[kT].code === TT))) && void 0 !== kT ? kT : null;
-      if (null === MT) return {
-        code: TT,
-        name: MT,
-        reason: null !== cT && void 0 !== cT ? cT : `${yT}\nCode: ${TT}`,
+    function uq(qq) {
+      var Eq;
+      let gq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const lq = null !== (Eq = Object.keys(Yq.b).find((Eq => Yq.b[Eq].code === qq))) && void 0 !== Eq ? Eq : null;
+      if (null === lq) return {
+        code: qq,
+        name: lq,
+        reason: null !== gq && void 0 !== gq ? gq : `${xq}\nCode: ${qq}`,
         canReconnect: !1,
         automaticallyReconnect: !1,
         requiresRefresh: !1
       };
       const {
-        text: KT,
-        canReconnect: OT = !1
-      } = lT.c[MT], fT = TT === lT.c.outdatedVersion.code || TT === lT.c.loadRecaptchaError.code;
+        text: Oq,
+        canReconnect: mq = !1
+      } = Yq.b[lq], Aq = qq === Yq.b.outdatedVersion.code || qq === Yq.b.loadRecaptchaError.code;
       return {
-        code: TT,
-        name: MT,
-        reason: "" !== KT ? KT : null !== cT && void 0 !== cT ? cT : TT === lT.c.gameOrPluginKick.code ? xT : `Code: ${TT}`,
-        canReconnect: OT,
-        automaticallyReconnect: TT === lT.c.customGameUpdated.code || TT === lT.c.duplicateLobbyNameError.code,
-        requiresRefresh: fT
+        code: qq,
+        name: lq,
+        reason: "" !== Oq ? Oq : null !== gq && void 0 !== gq ? gq : qq === Yq.b.gameOrPluginKick.code ? cq : `Code: ${qq}`,
+        canReconnect: mq,
+        automaticallyReconnect: qq === Yq.b.customGameUpdated.code || qq === Yq.b.duplicateLobbyNameError.code,
+        requiresRefresh: Aq
       }
     }
   },
-  4761: (TT, kT, cT) => {
-    cT.d(kT, {
-      $: () => lT.y,
-      $b: () => ST,
-      $c: () => lT.Ab,
-      B: () => iT,
-      Bb: () => Tk,
-      Dc: () => Ik,
-      Dd: () => LT,
-      E: () => lT.e,
-      Ed: () => uT,
-      Fb: () => ck,
-      Fd: () => UT,
-      Gc: () => Mk,
-      H: () => xT,
-      Hb: () => MT.c,
-      Id: () => RT,
-      Jb: () => PT,
-      Jc: () => lT.kb,
-      K: () => lT.g,
-      Lb: () => ZT,
-      Mb: () => JT,
-      Md: () => BT,
-      Nc: () => lT.ob,
-      O: () => sT,
-      Od: () => YT,
-      Pb: () => bT,
-      Q: () => lT.j,
-      Qb: () => lT.K,
-      Rc: () => lT.sb,
-      Rd: () => yk,
-      U: () => nT,
-      Ub: () => oT,
-      Vc: () => qT,
-      Vd: () => tk,
-      W: () => lT.t,
-      Xb: () => aT,
-      Xc: () => lT.yb,
-      Zb: () => Ok,
-      Zd: () => DT,
-      _: () => lT.x,
-      ac: () => Ak,
-      ae: () => WT,
-      bc: () => MT.j,
-      be: () => VT,
-      cd: () => lT.Bb,
-      d: () => kk,
-      db: () => AT,
-      de: () => GT,
-      e: () => tT,
-      eb: () => QT,
-      ec: () => NT,
-      fc: () => lk,
-      fe: () => eT,
-      gd: () => lT.Hb,
-      hb: () => lT.z,
-      hc: () => lT.R,
-      i: () => vT,
-      id: () => lT.Kb,
-      j: () => xk,
-      je: () => fT,
-      kb: () => lT.B,
-      kd: () => lT.Mb,
-      ke: () => ET,
-      lb: () => dT,
-      lc: () => lT.V,
-      ld: () => mT,
-      m: () => wT,
-      mb: () => Kk,
-      md: () => lT.Ob,
-      n: () => rT,
-      nd: () => lT.Sb,
-      oe: () => hk,
-      p: () => lT.d,
-      pb: () => IT,
-      pc: () => lT.Y,
-      q: () => Ck,
-      qd: () => lT.Vb,
-      qe: () => jT,
-      r: () => zT,
-      rb: () => lT.C,
-      rc: () => lT._,
-      sc: () => lT.$,
-      sd: () => KT,
-      t: () => OT,
-      vb: () => gT,
-      vd: () => hT,
-      w: () => HT,
-      wc: () => lT.gb,
-      x: () => jk,
-      yd: () => fk,
-      zb: () => pT,
-      zc: () => vk,
-      zd: () => XT
+  4622: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      $c: () => eq,
+      Ab: () => qE,
+      Ac: () => Yq.bb,
+      Bd: () => Yq.bc,
+      Be: () => Aq,
+      Ce: () => Sq,
+      D: () => cq,
+      Eb: () => gE,
+      Ec: () => Yq.fb,
+      Fd: () => Oq,
+      Fe: () => dE,
+      Gb: () => Yq.L,
+      H: () => Yq.i,
+      Hb: () => lq.h,
+      Hd: () => dq,
+      He: () => Nq,
+      I: () => Dq,
+      Ic: () => Yq.ib,
+      Kc: () => Yq.pb,
+      Kd: () => AE,
+      Lb: () => rq,
+      Lc: () => aE,
+      M: () => Yq.m,
+      Md: () => Lq,
+      Nd: () => kq,
+      P: () => Kq,
+      Pb: () => pq,
+      Pc: () => uE,
+      Rc: () => lE,
+      Rd: () => Gq,
+      S: () => Yq.u,
+      Sb: () => iq,
+      Tb: () => nq,
+      Ub: () => Yq.Q,
+      Uc: () => Yq.sb,
+      Vd: () => Fq,
+      W: () => Yq.y,
+      Wb: () => Zq,
+      Xc: () => Yq.ub,
+      Y: () => Yq.A,
+      _: () => Bq,
+      _b: () => Qq,
+      _c: () => Yq.wb,
+      ae: () => Rq,
+      bb: () => Hq,
+      bc: () => mE,
+      c: () => EE,
+      ce: () => Xq,
+      d: () => Vq,
+      db: () => Yq.B,
+      dd: () => Yq.Ab,
+      f: () => aq,
+      fc: () => oq,
+      g: () => cE,
+      gd: () => Yq.Eb,
+      ge: () => sq,
+      hb: () => Yq.C,
+      hc: () => BE,
+      i: () => vq,
+      ic: () => lq.l,
+      id: () => Yq.Hb,
+      je: () => xE,
+      kb: () => Jq,
+      l: () => tq,
+      ld: () => Yq.Nb,
+      m: () => Yq.e,
+      mc: () => jq,
+      ne: () => VE,
+      o: () => WE,
+      ob: () => OE,
+      p: () => bq,
+      pd: () => Yq.Qb,
+      q: () => mq,
+      qc: () => YE,
+      r: () => fq,
+      rb: () => uq,
+      rd: () => Yq.Tb,
+      re: () => Pq,
+      sb: () => Yq.E,
+      se: () => wq,
+      u: () => NE,
+      uc: () => Yq.Z,
+      ue: () => zq,
+      vd: () => hq,
+      ve: () => Tq,
+      w: () => Iq,
+      wb: () => Uq,
+      xb: () => Cq,
+      xc: () => Yq._,
+      yd: () => Yq.Vb,
+      z: () => Yq.f,
+      zb: () => Yq.H,
+      zd: () => Yq.Wb,
+      ze: () => Mq
     });
-    var lT = cT(4769),
-      MT = cT(2435);
-    const KT = Math.round(1e3 / lT.Vb),
-      OT = 4,
-      yT = 2;
+    var Yq = gq(4625),
+      lq = gq(2357);
+    const Oq = Math.round(1e3 / Yq.bc),
+      mq = 4,
+      xq = 2;
 
-    function fT() {
-      return crypto.getRandomValues(new Uint32Array(yT))
+    function Aq() {
+      return crypto.getRandomValues(new Uint32Array(xq))
     }
-    const xT = {
+    const cq = {
         Ok: 0,
         Errors: 1,
         Fatal: 2
       },
-      IT = 16,
-      AT = {
+      uq = 16,
+      Bq = {
         Draws: 1,
         NetAll: 2
       },
-      CT = {
+      Wq = {
         ShowFog: 1,
         Lighting: 2,
         ChunkFade: 4
       };
 
-    function jT(TT) {
-      return (TT.nametagsHidden ? FT.NametagsHidden : 0) | (TT.crouchToggle ? FT.CrouchToggle : 0) | (TT.bhopDisabled ? FT.BhopDisabled : 0) | (TT.disableBobbing ? FT.DisableBobbing : 0) | (TT.ezTowering ? FT.EzTowering : 0) | (TT.ezBridging ? FT.EzBridging : 0) | (TT.showChunkBorders ? FT.ShowChunkBorders : 0)
+    function Nq(qq) {
+      return (qq.nametagsHidden ? yq.NametagsHidden : 0) | (qq.crouchToggle ? yq.CrouchToggle : 0) | (qq.bhopDisabled ? yq.BhopDisabled : 0) | (qq.disableBobbing ? yq.DisableBobbing : 0) | (qq.ezTowering ? yq.EzTowering : 0) | (qq.ezBridging ? yq.EzBridging : 0) | (qq.showChunkBorders ? yq.ShowChunkBorders : 0)
     }
-    const vT = {
+    const aq = {
         Flags: 0,
         PhysicsVersion: 1,
         InbuiltOverwritten: 2,
         AltComplete: 3,
         ProbeUsedProp: 4
       },
-      tT = {
+      Vq = {
         Ready: 1,
         SendFnReplaced: 2,
         Butto: 4,
@@ -334,7 +336,7 @@ export const modules = {
         CheckFuncHit: 128,
         OriginStackHit: 256
       },
-      hT = {
+      dq = {
         None: 0,
         Untrusted: 2,
         FewProperties: 3,
@@ -343,7 +345,7 @@ export const modules = {
         En: 6,
         Fr: 7
       },
-      NT = {
+      jq = {
         StackCheck: 0,
         ConfirmMesh: 1,
         IndexPassReplaced: 2,
@@ -352,20 +354,20 @@ export const modules = {
         Held: 6,
         PlayerKilledSubs: 7
       },
-      QT = 5,
-      ST = 4294967295;
+      Hq = 5,
+      oq = 4294967295;
 
-    function DT(TT) {
-      return (TT.showFog ? CT.ShowFog : 0) | (TT.lighting ? CT.Lighting : 0) | (TT.chunkFade ? CT.ChunkFade : 0)
+    function Pq(qq) {
+      return (qq.showFog ? Wq.ShowFog : 0) | (qq.lighting ? Wq.Lighting : 0) | (qq.chunkFade ? Wq.ChunkFade : 0)
     }
-    const aT = {
+    const Qq = {
         ResetFirst: 1,
         AdStart: 2,
         PreventMovement: 4,
         AdEnd: 8,
         PayloadMaxBytes: 1 << 20
       },
-      FT = {
+      yq = {
         NametagsHidden: 1,
         CrouchToggle: 2,
         BhopDisabled: 4,
@@ -375,50 +377,50 @@ export const modules = {
         ShowChunkBorders: 64,
         All: 127
       },
-      rT = {
+      tq = {
         Release: 1,
         KeepTouches: 2
       },
-      PT = {
+      rq = {
         Point: 1,
         Stamped: 2
       },
-      wT = {
+      vq = {
         Add: 1,
         Clear: 2
       },
-      mT = 1,
-      bT = 8,
-      zT = 16777215,
-      JT = 4,
-      oT = {
+      hq = 1,
+      nq = 8,
+      bq = 16777215,
+      iq = 4,
+      Zq = {
         Resume: 1
       },
-      HT = {
+      fq = {
         Held: 1
       };
 
-    function eT(TT, kT) {
-      return (TT | kT << 8) >>> 0
+    function Mq(qq, Eq) {
+      return (qq | Eq << 8) >>> 0
     }
 
-    function GT(TT) {
-      return 255 & TT
+    function Tq(qq) {
+      return 255 & qq
     }
 
-    function VT(TT) {
-      return TT >>> 8
+    function zq(qq) {
+      return qq >>> 8
     }
 
-    function ET(TT) {
-      return TT + 3 & -4
+    function Sq(qq) {
+      return qq + 3 & -4
     }
-    const ZT = 16777216,
-      uT = 20;
-    const XT = 8,
-      dT = 8,
-      LT = 16777216,
-      RT = {
+    const pq = 16777216,
+      Gq = 20;
+    const Lq = 8,
+      Jq = 8,
+      kq = 16777216,
+      Rq = {
         JobResult: 1,
         WorkerStarted: 2,
         WorkerLost: 3,
@@ -426,19 +428,19 @@ export const modules = {
         WorldgenStarted: 5,
         WorldgenLost: 6
       },
-      gT = {
+      Uq = {
         Ok: 0,
         Refused: 1,
         Trapped: 2,
         NotHeld: 3,
         HeapRefused: 4
       },
-      UT = 16,
-      YT = {
+      Fq = 16,
+      sq = {
         Lost: 0,
         Gone: 1
       },
-      BT = {
+      Xq = {
         Init: 1,
         Mesh: 2,
         WorldgenSeed: 3,
@@ -446,18 +448,18 @@ export const modules = {
         Retire: 5
       };
 
-    function WT(TT) {
-      return TT === BT.WorldgenSeed || TT === BT.Generate
+    function wq(qq) {
+      return qq === Xq.WorldgenSeed || qq === Xq.Generate
     }
-    const nT = 4,
-      pT = 99,
-      iT = {
+    const Kq = 4,
+      Cq = 99,
+      Iq = {
         PAIRS_MAX: 16,
         FIXED_WORDS: 2,
         PAIR_WORDS: 2,
         WORDS_MAX: 34
       },
-      qT = {
+      eq = {
         BYTES: 12,
         WEBGPU: 1,
         GL: 2,
@@ -465,45 +467,45 @@ export const modules = {
         LOST: 0,
         PIPELINE_FAILED: 1
       },
-      sT = {
+      Dq = {
         FRAMES: 65535,
         RESTORE_UNHELD: 65536,
         LINKS_RUNNING: 1 << 17
       },
-      Tk = 12,
-      kk = 16,
-      ck = 4,
-      lk = 12,
-      Mk = {
+      qE = 12,
+      EE = 16,
+      gE = 4,
+      YE = 12,
+      lE = {
         SessionBased: 1,
         ReplayOffer: 2
       },
-      Kk = 4,
-      Ok = 8,
-      yk = 8,
-      fk = {
+      OE = 4,
+      mE = 8,
+      xE = 8,
+      AE = {
         HEAD_BYTES: 28,
         UPDATE: 1,
         REMOVE: 2
       },
-      xk = {
+      cE = {
         Crit: 1,
         HitSelf: 2
       },
-      Ik = {
+      uE = {
         BYTES: 16,
         STRING_TYPE_BYTES: 24,
         STRING_TYPE: 65535,
         ERROR: 65534
       },
-      Ak = {
+      BE = {
         None: 0,
         Bytes: 1,
         Msgpack: 2,
         MsgpackBin: 3
       },
-      Ck = 12,
-      jk = {
+      WE = 12,
+      NE = {
         Activated: 1,
         Error: 2,
         Left: 3,
@@ -512,80 +514,80 @@ export const modules = {
         Resumed: 6,
         ResumeRefused: 7
       },
-      vk = 67108864;
+      aE = 67108864;
 
-    function tk(TT) {
-      for (const [kT, cT] of Object.entries(lT.e))
-        if (cT === TT) return kT;
-      return `Unknown${TT}`
+    function VE(qq) {
+      for (const [Eq, gq] of Object.entries(Yq.f))
+        if (gq === qq) return Eq;
+      return `Unknown${qq}`
     }
 
-    function hk(TT) {
+    function dE(qq) {
       return {
-        status: TT[lT.B.Status],
-        lastError: TT[lT.B.LastError],
-        lastErrorDetail: TT[lT.B.LastErrorDetail],
-        errorCount: TT[lT.B.ErrorCount],
-        frameIndex: TT[lT.B.FrameIndex],
-        tickIndex: TT[lT.B.TickIndex],
-        renderPending: TT[lT.B.RenderPending],
-        firstView: TT[lT.B.FirstView],
-        chunksCancelled: TT[lT.B.ChunksCancelled]
+        status: qq[Yq.C.Status],
+        lastError: qq[Yq.C.LastError],
+        lastErrorDetail: qq[Yq.C.LastErrorDetail],
+        errorCount: qq[Yq.C.ErrorCount],
+        frameIndex: qq[Yq.C.FrameIndex],
+        tickIndex: qq[Yq.C.TickIndex],
+        renderPending: qq[Yq.C.RenderPending],
+        firstView: qq[Yq.C.FirstView],
+        chunksCancelled: qq[Yq.C.ChunksCancelled]
       }
     }
   },
-  40273: (TT, kT, cT) => {
-    cT.d(kT, {
-      b: () => lT,
-      c: () => AT,
-      g: () => yT,
-      j: () => KT,
-      l: () => MT,
-      p: () => fT,
-      s: () => IT
+  40369: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => Yq,
+      g: () => Bq,
+      k: () => xq,
+      l: () => Oq,
+      o: () => lq,
+      r: () => Aq,
+      v: () => uq
     });
-    class lT extends Error {
+    class Yq extends Error {
       constructor() {
         super(...arguments), this.name = "CoreCorruption"
       }
     }
 
-    function MT(TT) {
-      return TT instanceof RangeError && /call stack/i.test(TT.message) || TT instanceof Error && "InternalError" === TT.name && /recursion/i.test(TT.message)
+    function lq(qq) {
+      return qq instanceof RangeError && /call stack/i.test(qq.message) || qq instanceof Error && "InternalError" === qq.name && /recursion/i.test(qq.message)
     }
 
-    function KT(TT) {
-      return /out of (executable )?memory|could not allocate memory|array buffer allocation failed/i.test(String(TT))
+    function Oq(qq) {
+      return /out of (executable )?memory|could not allocate memory|array buffer allocation failed/i.test(String(qq))
     }
-    const OT = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
+    const mq = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
 
-    function yT(TT) {
-      var kT;
-      return TT instanceof WebAssembly.RuntimeError || TT instanceof lT || MT(TT) && OT.test(null !== (kT = TT.stack) && void 0 !== kT ? kT : "")
-    }
-
-    function fT(TT, kT) {
-      if (yT(TT)) throw TT;
-      console.error(kT, TT)
+    function xq(qq) {
+      var Eq;
+      return qq instanceof WebAssembly.RuntimeError || qq instanceof Yq || lq(qq) && mq.test(null !== (Eq = qq.stack) && void 0 !== Eq ? Eq : "")
     }
 
-    function xT(TT, kT, cT, MT, KT) {
-      if (kT % MT !== 0 || kT + cT > TT.byteLength) throw new lT(`${KT}: ${cT} bytes at ${kT}, ${MT}-aligned, outside ${TT.byteLength} bytes of memory`)
+    function Aq(qq, Eq) {
+      if (xq(qq)) throw qq;
+      console.error(Eq, qq)
     }
 
-    function IT(TT, kT, cT, lT, MT) {
-      return 0 === cT ? null : (xT(kT, cT, lT * TT.BYTES_PER_ELEMENT, TT.BYTES_PER_ELEMENT, MT), new TT(kT, cT, lT))
+    function cq(qq, Eq, gq, lq, Oq) {
+      if (Eq % lq !== 0 || Eq + gq > qq.byteLength) throw new Yq(`${Oq}: ${gq} bytes at ${Eq}, ${lq}-aligned, outside ${qq.byteLength} bytes of memory`)
     }
 
-    function AT(TT, kT, cT, lT, MT) {
-      return 0 === kT ? null : (xT(TT, kT, cT, lT, MT), new DataView(TT, kT, cT))
+    function uq(qq, Eq, gq, Yq, lq) {
+      return 0 === gq ? null : (cq(Eq, gq, Yq * qq.BYTES_PER_ELEMENT, qq.BYTES_PER_ELEMENT, lq), new qq(Eq, gq, Yq))
+    }
+
+    function Bq(qq, Eq, gq, Yq, lq) {
+      return 0 === Eq ? null : (cq(qq, Eq, gq, Yq, lq), new DataView(qq, Eq, gq))
     }
   },
-  40615: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => lT
+  40735: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => Yq
     });
-    const lT = {
+    const Yq = {
       destroy_stage_0: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAK0lEQVQYlWP8//8/IwMewIRPknQFjIyM/wmaYGdn9w9FE7IjYSagiFHsCwCM7A/Ccc+NjAAAAABJRU5ErkJggg==",
       destroy_stage_1: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAQklEQVQYlYWPMQ4AIAgDOeO7+v9XWScMOGinpjmgYJt4aKQB/ASqKtwASeuGZxrbAEhyRJxe1JJ1debtRIZt6PfmBqYNG36KBWHbAAAAAElFTkSuQmCC",
       destroy_stage_2: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAARUlEQVQYlYWPwQnAMAwDdaVr2ftPVfWVIBJC9DI6LMvYRpIAjzn1rMaq9wQAbwnd/SWUJNkmb1eVkx07zPK5PaLTu37xA3+wH3UI6vmHAAAAAElFTkSuQmCC",
@@ -598,254 +600,254 @@ export const modules = {
       destroy_stage_9: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAUElEQVQYlW2OyQ3AMAgEhyhtQfF2X9m8IKvIvBDMHkgKSQGQmcJGUtBAZsr3hm6Aqnr4zUBOt4vfJh8gIuTPtdZFK1ztXUbtcXvvz/nU3F1eyBpW2eqlL9QAAAAASUVORK5CYII="
     }
   },
-  40562: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => vT,
-      g: () => tT,
-      h: () => CT,
-      l: () => AT
+  40691: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => aq,
+      h: () => Vq,
+      i: () => Wq,
+      k: () => Bq
     });
-    const lT = 2e3,
-      MT = "unavailable";
-    let KT = () => Promise.resolve().then((() => cT(2893))),
-      OT = null,
-      yT = null,
-      fT = xT();
+    const Yq = 2e3,
+      lq = "unavailable";
+    let Oq = () => Promise.resolve().then((() => gq(2859))),
+      mq = null,
+      xq = null,
+      Aq = cq();
 
-    function xT() {
-      let TT = () => {};
+    function cq() {
+      let qq = () => {};
       return {
-        promise: new Promise((kT => {
-          TT = () => {
-            kT(null)
+        promise: new Promise((Eq => {
+          qq = () => {
+            Eq(null)
           }
         })),
-        resolve: TT
+        resolve: qq
       }
     }
 
-    function IT() {
-      if (null === OT) {
-        const TT = KT();
-        OT = TT, TT.then((kT => {
-          OT === TT && (yT = kT)
+    function uq() {
+      if (null === mq) {
+        const qq = Oq();
+        mq = qq, qq.then((Eq => {
+          mq === qq && (xq = Eq)
         }), (() => {
-          OT === TT && (OT = null)
+          mq === qq && (mq = null)
         }))
       }
-      return OT
+      return mq
     }
 
-    function AT() {
-      IT().catch((() => {}))
+    function Bq() {
+      uq().catch((() => {}))
     }
 
-    function CT() {
-      fT.resolve()
+    function Wq() {
+      Aq.resolve()
     }
 
-    function jT(TT, kT, cT, lT) {
-      if (null === TT) return {
-        errorKind: kT,
-        fingerprint: MT,
-        dedupe: `${kT}|${lT}`
+    function Nq(qq, Eq, gq, Yq) {
+      if (null === qq) return {
+        errorKind: Eq,
+        fingerprint: lq,
+        dedupe: `${Eq}|${Yq}`
       };
       const {
-        fingerprint: KT
-      } = TT.clientErrorKey(kT, cT, lT);
+        fingerprint: Oq
+      } = qq.clientErrorKey(Eq, gq, Yq);
       return {
-        errorKind: kT,
-        fingerprint: KT,
-        dedupe: KT
+        errorKind: Eq,
+        fingerprint: Oq,
+        dedupe: Oq
       }
     }
 
-    function vT(TT, kT, cT, lT) {
-      return null === yT ? lT ? (AT(), jT(null, TT, kT, cT)) : null : jT(yT, TT, kT, cT)
+    function aq(qq, Eq, gq, Yq) {
+      return null === xq ? Yq ? (Bq(), Nq(null, qq, Eq, gq)) : null : Nq(xq, qq, Eq, gq)
     }
-    async function tT(TT, kT, cT) {
-      let MT;
-      const KT = new Promise((TT => {
-        MT = setTimeout((() => {
-          TT(null)
-        }), lT)
+    async function Vq(qq, Eq, gq) {
+      let lq;
+      const Oq = new Promise((qq => {
+        lq = setTimeout((() => {
+          qq(null)
+        }), Yq)
       }));
       try {
-        return jT(await Promise.race([IT(), KT, fT.promise]), TT, kT, cT)
+        return Nq(await Promise.race([uq(), Oq, Aq.promise]), qq, Eq, gq)
       } catch {
-        return jT(null, TT, kT, cT)
+        return Nq(null, qq, Eq, gq)
       } finally {
-        clearTimeout(MT)
+        clearTimeout(lq)
       }
     }
   },
-  40557: (TT, kT, cT) => {
-    cT.r(kT), cT.d(kT, {
-      BUILT_IN_ANIMATIONS_SITE: () => UT,
-      CORE_ERRORS_SITE: () => GT,
-      EVENT_OVERFLOW_SITE: () => gT,
-      FIRST_VIEW_SITE: () => BT,
-      JOIN_SITE: () => ET,
-      LEAVE_SITE: () => ZT,
-      MAIN_THREAD_SITE: () => WT,
-      MODEL_FEED_SITE: () => uT,
-      MODEL_POOL_SITE: () => XT,
-      NON_FATAL_LOKI_REPORTS_PER_PAGE: () => pT,
-      NON_FATAL_REPORTS_PER_SESSION: () => Ck,
-      PREVIEW_ANIMATIONS_SITE: () => RT,
-      RENDER_RELOAD_SITE: () => LT,
-      TEXTURE_NAMES_SITE: () => dT,
-      TEXTURE_PACK_FEED_SITE: () => YT,
-      TurnstilePageError: () => gk,
-      WASM_LOAD_SITE: () => VT,
-      crashError: () => Nk,
-      crashReportsSettled: () => rk,
-      flushCrashReports: () => ak,
-      joinFailureCode: () => Uk,
-      lokiTransport: () => sT,
-      modelFailureCode: () => qk,
-      readTrap: () => zk,
-      renderLossDetail: () => Nc,
-      renderReloadMessage: () => tc,
-      reportCoreErrors: () => wk,
-      reportCountedLoadFallback: () => Lk,
-      reportCrash: () => Qk,
-      reportDataLoadFailure: () => Fc,
-      reportDisconnect: () => pk,
-      reportDracoDecoderFailure: () => cc,
-      reportEventOverflow: () => Kc,
-      reportFirstViewNoTerrain: () => Ic,
-      reportGpuFallback: () => Xk,
-      reportGpuWasmPopulation: () => dk,
-      reportLightFault: () => yc,
-      reportMainStall: () => Ac,
-      reportMemoryShed: () => xc,
-      reportModelFailure: () => sk,
-      reportModelPoolFailure: () => Tc,
-      reportModelsModuleRetry: () => kc,
-      reportPageJoinFailure: () => Bk,
-      reportReconnectGaveUp: () => ik,
-      reportRenderReload: () => Sc,
-      reportReplayFault: () => jc,
-      reportStaleBuildReload: () => Pc,
-      reportStoppedCore: () => Gk,
-      reportTerrainTextureFailure: () => Dc,
-      reportTexturePackFeedLoadFailure: () => Mc,
-      reportUnstreamedCoreLoad: () => Rk,
-      reportUnsupportedFallback: () => Zk,
-      reportUnusedSeat: () => nk,
-      reportWorkerLost: () => Oc,
-      reportWorkerStartTimeout: () => Cc,
-      reportWorldgenGaveUp: () => fc,
-      reportWorldgenLoadFailure: () => lc,
-      resetCrashReports: () => Pk,
-      setCrashBackend: () => Ok,
-      setCrashScreen: () => Mk,
-      setCrashTransport: () => ck,
-      showCrash: () => ek,
-      showJoinFailure: () => Yk,
-      showUnsupported: () => Ek
+  40687: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      BUILT_IN_ANIMATIONS_SITE: () => Fq,
+      CORE_ERRORS_SITE: () => Tq,
+      EVENT_OVERFLOW_SITE: () => Uq,
+      FIRST_VIEW_SITE: () => Xq,
+      JOIN_SITE: () => Sq,
+      LEAVE_SITE: () => pq,
+      MAIN_THREAD_SITE: () => wq,
+      MODEL_FEED_SITE: () => Gq,
+      MODEL_POOL_SITE: () => Lq,
+      NON_FATAL_LOKI_REPORTS_PER_PAGE: () => Cq,
+      NON_FATAL_REPORTS_PER_SESSION: () => WE,
+      PREVIEW_ANIMATIONS_SITE: () => Rq,
+      RENDER_RELOAD_SITE: () => kq,
+      TEXTURE_NAMES_SITE: () => Jq,
+      TEXTURE_PACK_FEED_SITE: () => sq,
+      TurnstilePageError: () => RE,
+      WASM_LOAD_SITE: () => zq,
+      crashError: () => jE,
+      crashReportsSettled: () => tE,
+      flushCrashReports: () => QE,
+      joinFailureCode: () => UE,
+      lokiTransport: () => Dq,
+      modelFailureCode: () => IE,
+      readTrap: () => bE,
+      renderLossDetail: () => dg,
+      renderReloadMessage: () => ag,
+      reportCoreErrors: () => vE,
+      reportCountedLoadFallback: () => JE,
+      reportCrash: () => HE,
+      reportDataLoadFailure: () => Qg,
+      reportDisconnect: () => KE,
+      reportDracoDecoderFailure: () => Eg,
+      reportEventOverflow: () => lg,
+      reportFirstViewNoTerrain: () => cg,
+      reportGpuFallback: () => GE,
+      reportGpuWasmPopulation: () => LE,
+      reportLightFault: () => mg,
+      reportMainStall: () => ug,
+      reportMemoryShed: () => Ag,
+      reportModelFailure: () => eE,
+      reportModelPoolFailure: () => DE,
+      reportModelsModuleRetry: () => qg,
+      reportPageJoinFailure: () => sE,
+      reportReconnectGaveUp: () => CE,
+      reportRenderReload: () => Hg,
+      reportReplayFault: () => Wg,
+      reportStaleBuildReload: () => tg,
+      reportStoppedCore: () => ME,
+      reportTerrainTextureFailure: () => og,
+      reportTexturePackFeedLoadFailure: () => Yg,
+      reportUnstreamedCoreLoad: () => kE,
+      reportUnsupportedFallback: () => SE,
+      reportUnusedSeat: () => wE,
+      reportWorkerLost: () => Og,
+      reportWorkerStartTimeout: () => Bg,
+      reportWorldgenGaveUp: () => xg,
+      reportWorldgenLoadFailure: () => gg,
+      resetCrashReports: () => rE,
+      setCrashBackend: () => mE,
+      setCrashScreen: () => lE,
+      setCrashTransport: () => gE,
+      showCrash: () => fE,
+      showJoinFailure: () => FE,
+      showUnsupported: () => zE
     });
-    var lT = cT(1082),
-      MT = cT(298),
-      KT = cT(2898),
-      OT = cT(40562),
-      yT = cT(4761),
-      fT = cT(40569),
-      xT = cT(3402),
-      IT = cT(38593),
-      AT = cT(159),
-      CT = cT(694),
-      jT = cT(150),
-      vT = cT(3407),
-      tT = cT(38879),
-      hT = cT(1792),
-      NT = cT(40542),
-      QT = cT(40215),
-      ST = cT(40497),
-      DT = cT(40503),
-      aT = cT(38928),
-      FT = cT(3679),
-      rT = cT(3684),
-      PT = cT(40577),
-      wT = cT(40599),
-      mT = cT(40603),
-      bT = cT(36674),
-      zT = cT(3179),
-      JT = cT(36077),
-      oT = cT(40440),
-      HT = cT(36089);
-    const eT = "[bloxd-wasm-client]",
-      GT = "coreErrors",
-      VT = "wasmLoad",
-      ET = "join",
-      ZT = "leave",
-      uT = "modelFeed",
-      XT = "modelWorkerPool",
-      dT = "textureNames",
-      LT = "renderReload",
-      RT = "previewAnimations",
-      gT = "eventOverflow",
-      UT = "builtInAnimations",
-      YT = "texturePackFeed",
-      BT = "firstView",
-      WT = "mainThread",
-      nT = 300,
-      pT = 8;
-    let iT = 0;
-    const qT = new Set,
-      sT = (TT, kT) => {
-        const cT = yk[TT.kind];
-        if (null === cT) return void Tk(TT, kT, Kk, null);
-        const lT = (0, OT.e)(cT, TT.message, TT.code, TT.fatal);
-        if (null !== lT) return void Tk(TT, kT, Kk, lT);
-        const MT = Kk;
-        Dk("Loki", (async () => {
-          Tk(TT, kT, MT, await (0, OT.g)(cT, TT.message, TT.code))
+    var Yq = gq(1046),
+      lq = gq(263),
+      Oq = gq(2865),
+      mq = gq(40691),
+      xq = gq(4622),
+      Aq = gq(40697),
+      cq = gq(3341),
+      uq = gq(38724),
+      Bq = gq(136),
+      Wq = gq(660),
+      Nq = gq(128),
+      aq = gq(3347),
+      Vq = gq(39012),
+      dq = gq(1758),
+      jq = gq(40659),
+      Hq = gq(40325),
+      oq = gq(40599),
+      Pq = gq(40607),
+      Qq = gq(39068),
+      yq = gq(2797),
+      tq = gq(2805),
+      rq = gq(40700),
+      vq = gq(40723),
+      hq = gq(40731),
+      nq = gq(36896),
+      bq = gq(3122),
+      iq = gq(36345),
+      Zq = gq(40508),
+      fq = gq(36356);
+    const Mq = "[bloxd-wasm-client]",
+      Tq = "coreErrors",
+      zq = "wasmLoad",
+      Sq = "join",
+      pq = "leave",
+      Gq = "modelFeed",
+      Lq = "modelWorkerPool",
+      Jq = "textureNames",
+      kq = "renderReload",
+      Rq = "previewAnimations",
+      Uq = "eventOverflow",
+      Fq = "builtInAnimations",
+      sq = "texturePackFeed",
+      Xq = "firstView",
+      wq = "mainThread",
+      Kq = 300,
+      Cq = 8;
+    let Iq = 0;
+    const eq = new Set,
+      Dq = (qq, Eq) => {
+        const gq = xE[qq.kind];
+        if (null === gq) return void qE(qq, Eq, OE, null);
+        const Yq = (0, mq.d)(gq, qq.message, qq.code, qq.fatal);
+        if (null !== Yq) return void qE(qq, Eq, OE, Yq);
+        const lq = OE;
+        PE("Loki", (async () => {
+          qE(qq, Eq, lq, await (0, mq.h)(gq, qq.message, qq.code))
         }))
       };
 
-    function Tk(TT, kT, cT, MT) {
+    function qE(qq, Eq, gq, lq) {
       const {
-        kind: OT,
-        code: yT,
-        site: fT,
-        fatal: xT,
-        details: IT
-      } = TT;
-      if (!xT)
-        if (null === MT || (0, KT.d)(MT.errorKind) || qT.has(MT.dedupe)) {
-          if (iT >= pT) return;
-          iT++
-        } else qT.add(MT.dedupe);
-      const AT = {
-        ...IT,
-        kind: OT,
-        code: yT,
-        site: fT,
-        fatal: String(xT),
-        backend: cT
+        kind: mq,
+        code: xq,
+        site: Aq,
+        fatal: cq,
+        details: uq
+      } = qq;
+      if (!cq)
+        if (null === lq || (0, Oq.d)(lq.errorKind) || eq.has(lq.dedupe)) {
+          if (Iq >= Cq) return;
+          Iq++
+        } else eq.add(lq.dedupe);
+      const Bq = {
+        ...uq,
+        kind: mq,
+        code: xq,
+        site: Aq,
+        fatal: String(cq),
+        backend: gq
       };
-      null !== MT && (AT.errorKind = MT.errorKind, AT.fingerprint = MT.fingerprint), kT instanceof Error && "string" === typeof kT.stack && (AT.causeStack = kT.stack.slice(0, 2e3)), (0, lT.vt)(Nk(TT, kT), AT)
+      null !== lq && (Bq.errorKind = lq.errorKind, Bq.fingerprint = lq.fingerprint), Eq instanceof Error && "string" === typeof Eq.stack && (Bq.causeStack = Eq.stack.slice(0, 2e3)), (0, Yq.lV)(jE(qq, Eq), Bq)
     }
-    let kk = sT;
+    let EE = Dq;
 
-    function ck(TT) {
-      const kT = kk;
-      return kk = TT, kT
+    function gE(qq) {
+      const Eq = EE;
+      return EE = qq, Eq
     }
-    let lk = () => {};
+    let YE = () => {};
 
-    function Mk(TT) {
-      const kT = lk;
-      return lk = TT, kT
+    function lE(qq) {
+      const Eq = YE;
+      return YE = qq, Eq
     }
-    let Kk = "unpicked";
+    let OE = "unpicked";
 
-    function Ok(TT) {
-      Kk = TT
+    function mE(qq) {
+      OE = qq
     }
-    const yk = {
+    const xE = {
         crash: "wasm_load",
         unsupported: "wasm_load",
         model: "wasm_load",
@@ -870,7 +872,7 @@ export const modules = {
         disconnect: "disconnect",
         linkCensus: "wasm_load"
       },
-      fk = {
+      AE = {
         coreError: "wasm_load",
         recovered: "wasm_load",
         unstreamedLoad: "wasm_load",
@@ -878,190 +880,190 @@ export const modules = {
         mainStall: "wasm_load",
         gpuFallback: "wasm_load"
       },
-      xk = new Set(["unstreamedLoad"]),
-      Ik = new Set(["linkCensus"]);
-    let Ak = !1;
-    const Ck = 20,
-      jk = new Map;
-    let vk = 0,
-      tk = 0;
-    const hk = new Set;
+      cE = new Set(["unstreamedLoad"]),
+      uE = new Set(["linkCensus"]);
+    let BE = !1;
+    const WE = 20,
+      NE = new Map;
+    let aE = 0,
+      VE = 0;
+    const dE = new Set;
 
-    function Nk(TT, kT) {
-      const cT = Object.assign(new Error(`${TT.code}: ${TT.message}`), {
+    function jE(qq, Eq) {
+      const gq = Object.assign(new Error(`${qq.code}: ${qq.message}`), {
         name: "WasmClientCrash",
-        cause: null !== kT && void 0 !== kT ? kT : void 0
+        cause: null !== Eq && void 0 !== Eq ? Eq : void 0
       });
-      return kT instanceof Error && kT.stack && (cT.stack = kT.stack), cT
+      return Eq instanceof Error && Eq.stack && (gq.stack = Eq.stack), gq
     }
 
-    function Qk(TT) {
-      var kT, lT;
+    function HE(qq) {
+      var Eq, Yq;
       const {
-        kind: MT,
-        code: KT,
-        site: OT,
-        fatal: yT,
-        message: fT,
-        error: xT
-      } = TT, IT = !1 !== TT.toTransport && !xk.has(MT), AT = !yT && IT && !Ik.has(MT), CT = {
-        kind: MT,
-        code: KT,
-        site: OT,
-        fatal: yT,
-        message: fT,
-        details: null !== (kT = TT.details) && void 0 !== kT ? kT : {}
-      }, jT = `${KT}@${OT}${void 0===TT.instance?"":`#${TT.instance}`}${yT?"!":""}`, vT = (null !== (lT = jk.get(jT)) && void 0 !== lT ? lT : 0) + 1;
-      if (jk.set(jT, vT), vT > 1 ? 0 === (vT & vT - 1) && Sk((() => {
-          console.warn(`${eT} ${KT} at ${OT} reported ${vT} times`)
-        })) : AT && vk >= Ck ? Sk((() => {
-          console.warn(`${eT} ${MT} ${KT} at ${OT}: ${fT} (not sent: the session's ${Ck} went)`, CT.details, null !== xT && void 0 !== xT ? xT : "")
-        })) : (AT && vk++, function(TT, kT, lT) {
-          var MT, KT;
+        kind: lq,
+        code: Oq,
+        site: mq,
+        fatal: xq,
+        message: Aq,
+        error: cq
+      } = qq, uq = !1 !== qq.toTransport && !cE.has(lq), Bq = !xq && uq && !uE.has(lq), Wq = {
+        kind: lq,
+        code: Oq,
+        site: mq,
+        fatal: xq,
+        message: Aq,
+        details: null !== (Eq = qq.details) && void 0 !== Eq ? Eq : {}
+      }, Nq = `${Oq}@${mq}${void 0===qq.instance?"":`#${qq.instance}`}${xq?"!":""}`, aq = (null !== (Yq = NE.get(Nq)) && void 0 !== Yq ? Yq : 0) + 1;
+      if (NE.set(Nq, aq), aq > 1 ? 0 === (aq & aq - 1) && oE((() => {
+          console.warn(`${Mq} ${Oq} at ${mq} reported ${aq} times`)
+        })) : Bq && aE >= WE ? oE((() => {
+          console.warn(`${Mq} ${lq} ${Oq} at ${mq}: ${Aq} (not sent: the session's ${WE} went)`, Wq.details, null !== cq && void 0 !== cq ? cq : "")
+        })) : (Bq && aE++, function(qq, Eq, Yq) {
+          var lq, Oq;
           const {
-            kind: OT,
-            code: yT,
-            site: fT,
-            fatal: xT,
-            message: IT,
-            details: AT
-          } = TT;
-          Sk((() => {
-            (xT ? console.error : console.warn)(`${eT} ${OT} ${yT} at ${fT}: ${IT}`, AT, null !== kT && void 0 !== kT ? kT : "")
+            kind: mq,
+            code: xq,
+            site: Aq,
+            fatal: cq,
+            message: uq,
+            details: Bq
+          } = qq;
+          oE((() => {
+            (cq ? console.error : console.warn)(`${Mq} ${mq} ${xq} at ${Aq}: ${uq}`, Bq, null !== Eq && void 0 !== Eq ? Eq : "")
           }));
-          const CT = fk[OT],
-            jT = null !== (MT = null !== (KT = yk[OT]) && void 0 !== KT ? KT : CT) && void 0 !== MT ? MT : null;
-          null !== jT && Dk("counts", (async () => {
+          const Wq = AE[mq],
+            Nq = null !== (lq = null !== (Oq = xE[mq]) && void 0 !== Oq ? Oq : Wq) && void 0 !== lq ? lq : null;
+          null !== Nq && PE("counts", (async () => {
             const {
-              peekVisitSessionId: TT
-            } = await Promise.resolve().then((() => cT(651)));
-            if (null !== TT()) {
+              peekVisitSessionId: qq
+            } = await Promise.resolve().then((() => gq(623)));
+            if (null !== qq()) {
               const {
-                reportCappedWasmFailure: TT,
-                reportUncappedWasmFailure: kT,
-                reportWasmFailure: lT
-              } = await cT.e(207).then((() => cT(36069)));
-              (Ik.has(OT) ? kT : void 0 === CT ? lT : TT)(jT, IT, yT), Ak = !0
+                reportCappedWasmFailure: qq,
+                reportUncappedWasmFailure: Eq,
+                reportWasmFailure: Yq
+              } = await gq.e(208).then((() => gq(36339)));
+              (uE.has(mq) ? Eq : void 0 === Wq ? Yq : qq)(Nq, uq, xq), BE = !0
             }
           }));
-          lT && Sk((() => {
-            kk(TT, kT)
+          Yq && oE((() => {
+            EE(qq, Eq)
           }))
-        }(CT, xT, IT)), yT) {
-        var tT;
-        const kT = null !== (tT = TT.screen) && void 0 !== tT ? tT : {
-          text: (0, bT.f)(CT, !0),
+        }(Wq, cq, uq)), xq) {
+        var Vq;
+        const Eq = null !== (Vq = qq.screen) && void 0 !== Vq ? Vq : {
+          text: (0, nq.d)(Wq, !0),
           reload: !0
         };
-        Sk((() => {
-          lk(kT)
+        oE((() => {
+          YE(Eq)
         }))
       }
-      return CT
+      return Wq
     }
 
-    function Sk(TT) {
+    function oE(qq) {
       try {
-        TT()
-      } catch (kT) {
+        qq()
+      } catch (Eq) {
         try {
-          console.warn(`${eT} could not send a report`, kT)
+          console.warn(`${Mq} could not send a report`, Eq)
         } catch {}
       }
     }
 
-    function Dk(TT, kT) {
+    function PE(qq, Eq) {
       try {
-        const cT = kT().catch((kT => {
-          console.warn(`${eT} could not send the report to ${TT}`, kT)
+        const gq = Eq().catch((Eq => {
+          console.warn(`${Mq} could not send the report to ${qq}`, Eq)
         })).finally((() => {
-          hk.delete(cT)
+          dE.delete(gq)
         }));
-        hk.add(cT)
-      } catch (cT) {
-        console.warn(`${eT} could not send the report to ${TT}`, cT)
+        dE.add(gq)
+      } catch (gq) {
+        console.warn(`${Mq} could not send the report to ${qq}`, gq)
       }
     }
-    async function ak(TT) {
-      let kT;
-      (0, OT.h)();
-      const cT = new Promise((cT => {
-        kT = setTimeout(cT, TT)
+    async function QE(qq) {
+      let Eq;
+      (0, mq.i)();
+      const gq = new Promise((gq => {
+        Eq = setTimeout(gq, qq)
       }));
-      await Promise.race([Fk(), cT]), clearTimeout(kT)
+      await Promise.race([yE(), gq]), clearTimeout(Eq)
     }
-    async function Fk() {
-      if (await Promise.allSettled([...hk]), Ak) try {
+    async function yE() {
+      if (await Promise.allSettled([...dE]), BE) try {
         const {
-          flushClientAnalyticsEvents: TT
-        } = await Promise.resolve().then((() => cT(1514)));
-        await TT()
-      } catch (TT) {
-        console.warn(`${eT} could not send the counts`, TT)
+          flushClientAnalyticsEvents: qq
+        } = await Promise.resolve().then((() => gq(1468)));
+        await qq()
+      } catch (qq) {
+        console.warn(`${Mq} could not send the counts`, qq)
       }
     }
-    async function rk() {
-      for (; hk.size > 0;) await Promise.allSettled([...hk])
+    async function tE() {
+      for (; dE.size > 0;) await Promise.allSettled([...dE])
     }
 
-    function Pk() {
-      jk.clear(), vk = 0, Ak = !1, iT = 0, qT.clear(), tk = 0, (0, fT.r)()
+    function rE() {
+      NE.clear(), aE = 0, BE = !1, Iq = 0, eq.clear(), VE = 0, (0, Aq.m)()
     }
 
-    function wk(TT, kT, cT, lT) {
-      tk += kT;
+    function vE(qq, Eq, gq, Yq) {
+      VE += Eq;
       for (const {
-          code: xT,
-          detail: IT
+          code: cq,
+          detail: uq
         }
-        of TT) {
-        var MT, KT, OT;
-        const TT = (0, yT.Vd)(xT),
-          kT = (0, fT.c)(xT, IT),
-          AT = null === lT || void 0 === lT ? void 0 : lT(xT, IT),
-          CT = void 0 !== (null === kT || void 0 === kT ? void 0 : kT.gpuDetails),
-          vT = CT ? null === (MT = (0, jT.q)()) || void 0 === MT ? void 0 : MT.renderer : void 0,
-          tT = CT ? ` ${(0,fT.k)()}` : "",
-          hT = Array.from([vT && `gpu ${(0,fT.u)(vT)}`, AT].filter(Boolean).join("; ")).slice(0, nT).join(""),
-          NT = `core error ${TT}${null!==(KT=null===kT||void 0===kT?void 0:kT.words)&&void 0!==KT?KT:""}${tT}${hT?`: ${hT}`:""}`,
-          QT = {
-            errorCode: String(xT),
-            detail: String(IT),
-            droppedBefore: String(tk),
-            wasmBuild: cT.wasm,
-            clientVersion: cT.client,
-            ...null === kT || void 0 === kT ? void 0 : kT.gpuDetails
+        of qq) {
+        var lq, Oq, mq;
+        const qq = (0, xq.ne)(cq),
+          Eq = (0, Aq.b)(cq, uq),
+          Bq = null === Yq || void 0 === Yq ? void 0 : Yq(cq, uq),
+          Wq = void 0 !== (null === Eq || void 0 === Eq ? void 0 : Eq.gpuDetails),
+          aq = Wq ? null === (lq = (0, Nq.t)()) || void 0 === lq ? void 0 : lq.renderer : void 0,
+          Vq = Wq ? ` ${(0,Aq.h)()}` : "",
+          dq = Array.from([aq && `gpu ${(0,Aq.p)(aq)}`, Bq].filter(Boolean).join("; ")).slice(0, Kq).join(""),
+          jq = `core error ${qq}${null!==(Oq=null===Eq||void 0===Eq?void 0:Eq.words)&&void 0!==Oq?Oq:""}${Vq}${dq?`: ${dq}`:""}`,
+          Hq = {
+            errorCode: String(cq),
+            detail: String(uq),
+            droppedBefore: String(VE),
+            wasmBuild: gq.wasm,
+            clientVersion: gq.client,
+            ...null === Eq || void 0 === Eq ? void 0 : Eq.gpuDetails
           };
-        null !== kT && (0, fT.q)(kT) ? Sk((() => {
-          console.warn(`${eT} coreError CORE-${TT}: ${NT} (not sent: the session's render warnings of its kind went)`, QT)
-        })) : Qk({
-          kind: bk(xT, IT),
-          code: `CORE-${TT}`,
-          site: GT,
+        null !== Eq && (0, Aq.l)(Eq) ? oE((() => {
+          console.warn(`${Mq} coreError CORE-${qq}: ${jq} (not sent: the session's render warnings of its kind went)`, Hq)
+        })) : HE({
+          kind: nE(cq, uq),
+          code: `CORE-${qq}`,
+          site: Tq,
           fatal: !1,
-          message: NT,
-          details: QT,
-          instance: null !== (OT = null === kT || void 0 === kT ? void 0 : kT.instance) && void 0 !== OT ? OT : mk(xT, IT)
+          message: jq,
+          details: Hq,
+          instance: null !== (mq = null === Eq || void 0 === Eq ? void 0 : Eq.instance) && void 0 !== mq ? mq : hE(cq, uq)
         })
       }
     }
 
-    function mk(TT, kT) {
-      return TT === yT.E.RenderDeviceLost && 0 !== (kT & yT.O.RESTORE_UNHELD) ? "restoreUnheld" : void 0
+    function hE(qq, Eq) {
+      return qq === xq.z.RenderDeviceLost && 0 !== (Eq & xq.I.RESTORE_UNHELD) ? "restoreUnheld" : void 0
     }
 
-    function bk(TT, kT) {
-      return TT === yT.E.JobsHeapGaveUp ? "meshHeap" : (0, fT.g)(TT, kT) ? "linkCensus" : "coreError"
+    function nE(qq, Eq) {
+      return qq === xq.z.JobsHeapGaveUp ? "meshHeap" : (0, Aq.f)(qq, Eq) ? "linkCensus" : "coreError"
     }
 
-    function zk(TT) {
-      return (0, JT.l)(TT instanceof oT.d ? TT.trap : TT, FT.z, FT.V)
+    function bE(qq) {
+      return (0, iq.k)(qq instanceof Zq.c ? qq.trap : qq, yq.G, yq._)
     }
-    const Jk = "declined=js";
+    const iE = "declined=js";
 
-    function Hk(TT) {
-      return TT ? {
-        labels: [Jk],
+    function ZE(qq) {
+      return qq ? {
+        labels: [iE],
         details: {
           declined: "js"
         }
@@ -1071,189 +1073,189 @@ export const modules = {
       }
     }
 
-    function ek(TT, kT, cT) {
-      return Vk(TT, kT, cT, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !0)
+    function fE(qq, Eq, gq) {
+      return TE(qq, Eq, gq, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !0)
     }
 
-    function Gk(TT, kT, cT) {
-      return Vk(TT, kT, cT, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !1)
+    function ME(qq, Eq, gq) {
+      return TE(qq, Eq, gq, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !1)
     }
 
-    function Vk(TT, kT, cT, lT, MT) {
+    function TE(qq, Eq, gq, Yq, lq) {
       let {
-        memoryDetails: KT = {},
-        declined: OT = !1
-      } = lT;
+        memoryDetails: Oq = {},
+        declined: mq = !1
+      } = Yq;
       const {
-        code: yT,
-        details: fT,
-        message: xT
-      } = (0, NT.E)(TT, kT), IT = [];
-      Object.assign(fT, (0, HT.g)(TT.error)), null !== cT && (fT.trapKind = cT.kind, null !== cT.panic && (fT.panic = (0, JT.i)(cT.panic)), cT.refusedBytes > 0 && (fT.refusedAllocation = String(cT.refusedBytes)), IT.push((0, JT.m)(cT.kind, cT.refusedBytes)));
-      const AT = Hk(OT);
-      return Qk({
+        code: xq,
+        details: Aq,
+        message: cq
+      } = (0, jq.L)(qq, Eq), uq = [];
+      Object.assign(Aq, (0, fq.e)(qq.error)), null !== gq && (Aq.trapKind = gq.kind, null !== gq.panic && (Aq.panic = (0, iq.j)(gq.panic)), gq.refusedBytes > 0 && (Aq.refusedAllocation = String(gq.refusedBytes)), uq.push((0, iq.l)(gq.kind, gq.refusedBytes)));
+      const Bq = ZE(mq);
+      return HE({
         kind: "crash",
-        code: yT,
-        site: TT.site,
-        fatal: MT,
-        message: [...IT, ...AT.labels, xT].join("; "),
+        code: xq,
+        site: qq.site,
+        fatal: lq,
+        message: [...uq, ...Bq.labels, cq].join("; "),
         details: {
-          ...fT,
-          ...AT.details,
-          ...KT
+          ...Aq,
+          ...Bq.details,
+          ...Oq
         },
-        error: TT.error
+        error: qq.error
       })
     }
 
-    function Ek(TT, kT, cT) {
-      return Qk({
+    function zE(qq, Eq, gq) {
+      return HE({
         kind: "unsupported",
-        code: kT,
-        site: VT,
+        code: Eq,
+        site: zq,
         fatal: !0,
-        message: cT,
+        message: gq,
         details: {
           ...arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-          cause: TT,
-          status: kT
+          cause: qq,
+          status: Eq
         },
         screen: {
-          text: (0, bT.o)(TT),
-          reload: "download" === TT
+          text: (0, nq.n)(qq),
+          reload: "download" === qq
         }
       })
     }
 
-    function Zk(TT, kT, cT) {
-      return Qk({
+    function SE(qq, Eq, gq) {
+      return HE({
         kind: "unsupportedFallback",
-        code: "blockedAfterLoss" === kT ? "blocked_after_loss" : "unsupported_js_fallback",
-        site: VT,
+        code: "blockedAfterLoss" === Eq ? "blocked_after_loss" : "unsupported_js_fallback",
+        site: zq,
         fatal: !1,
-        message: cT,
+        message: gq,
         details: {
           ...arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-          cause: TT,
+          cause: qq,
           status: "unsupported",
-          decline: kT,
+          decline: Eq,
           fallback: "js"
         }
       })
     }
-    const uk = "misdrawn_gpu_js_fallback";
+    const pE = "misdrawn_gpu_js_fallback";
 
-    function Xk(TT, kT) {
-      return Qk({
+    function GE(qq, Eq) {
+      return HE({
         kind: "gpuFallback",
-        code: uk,
-        site: VT,
+        code: pE,
+        site: zq,
         fatal: !1,
-        message: `the renderer plays ${TT} on ${kT} worse than the JS client`,
+        message: `the renderer plays ${qq} on ${Eq} worse than the JS client`,
         details: {
-          gpuFamily: TT,
-          backend: kT,
+          gpuFamily: qq,
+          backend: Eq,
           fallback: "js"
         }
       })
     }
 
-    function dk(TT) {
-      Dk("counts", (async () => {
-        await (0, CT.c)(TT), Ak = !0
+    function LE(qq) {
+      PE("counts", (async () => {
+        await (0, Wq.e)(qq), BE = !0
       }))
     }
 
-    function Lk(TT, kT, cT, lT) {
-      const MT = Hk(lT);
-      return Qk({
+    function JE(qq, Eq, gq, Yq) {
+      const lq = ZE(Yq);
+      return HE({
         kind: "unsupported",
-        code: kT,
-        site: VT,
+        code: Eq,
+        site: zq,
         fatal: !1,
-        message: [...MT.labels, cT].join("; "),
+        message: [...lq.labels, gq].join("; "),
         details: {
-          cause: TT,
-          status: kT,
+          cause: qq,
+          status: Eq,
           fallback: "js",
-          ...MT.details
+          ...lq.details
         }
       })
     }
 
-    function Rk() {
+    function kE() {
       const {
-        code: TT,
-        message: kT
-      } = zT.d;
-      return Qk({
+        code: qq,
+        message: Eq
+      } = bq.d;
+      return HE({
         kind: "unstreamedLoad",
-        code: TT,
-        site: VT,
+        code: qq,
+        site: zq,
         fatal: !1,
-        message: kT
+        message: Eq
       })
     }
-    class gk extends Error {
+    class RE extends Error {
       constructor() {
         super("the shell's page can't run the Turnstile check: join from /play"), this.name = "TurnstilePageError"
       }
     }
 
-    function Uk(TT) {
-      return TT instanceof ST.l ? 0 === TT.code ? "JOIN-matchmake" : `JOIN-${TT.code}` : TT instanceof ST.d ? 0 === TT.code ? `JOIN-${TT.stage}` : `JOIN-${TT.stage}-${TT.code}` : TT instanceof QT.e ? "JOIN-gameCode" : TT instanceof gk ? "JOIN-turnstilePage" : TT instanceof ST.w ? "JOIN-trafficCheck" : TT instanceof tT.f ? "JOIN-timeout" : "JOIN-network"
+    function UE(qq) {
+      return qq instanceof oq.l ? 0 === qq.code ? "JOIN-matchmake" : `JOIN-${qq.code}` : qq instanceof oq.e ? 0 === qq.code ? `JOIN-${qq.stage}` : `JOIN-${qq.stage}-${qq.code}` : qq instanceof Hq.b ? "JOIN-gameCode" : qq instanceof RE ? "JOIN-turnstilePage" : qq instanceof oq.u ? "JOIN-trafficCheck" : qq instanceof Vq.f ? "JOIN-timeout" : "JOIN-network"
     }
 
-    function Yk(TT, kT) {
-      const cT = (0, HT.k)(TT),
-        lT = {
-          wasmBuild: kT.wasm,
-          clientVersion: kT.client
+    function FE(qq, Eq) {
+      const gq = (0, fq.j)(qq),
+        Yq = {
+          wasmBuild: Eq.wasm,
+          clientVersion: Eq.client
         },
-        MT = TT instanceof gk ? {
-          text: (0, bT.k)(),
+        lq = qq instanceof RE ? {
+          text: (0, nq.j)(),
           reload: !1
         } : void 0,
-        KT = (0, DT.f)(TT),
-        OT = "expected" !== KT;
-      return Qk({
+        Oq = (0, Pq.e)(qq),
+        mq = "expected" !== Oq;
+      return HE({
         kind: "join",
-        code: Uk(TT),
-        site: ET,
+        code: UE(qq),
+        site: Sq,
         fatal: !0,
-        message: cT,
-        details: lT,
-        error: TT,
-        screen: MT,
-        toTransport: OT,
-        instance: KT
+        message: gq,
+        details: Yq,
+        error: qq,
+        screen: lq,
+        toTransport: mq,
+        instance: Oq
       })
     }
 
-    function Bk(TT, kT, cT) {
-      var lT;
-      const MT = (0, DT.f)(TT),
-        KT = {
-          cause: (TT instanceof ST.d || TT instanceof ST.l) && null !== (lT = TT.serverText) && void 0 !== lT ? lT : "",
-          sinceJoinStart: (0, vT.c)(cT.sinceJoinStartMs),
-          game: cT.game,
-          ...(0, vT.l)(),
-          wasmBuild: kT.wasm,
-          clientVersion: kT.client
+    function sE(qq, Eq, gq) {
+      var Yq;
+      const lq = (0, Pq.e)(qq),
+        Oq = {
+          cause: (qq instanceof oq.e || qq instanceof oq.l) && null !== (Yq = qq.serverText) && void 0 !== Yq ? Yq : "",
+          sinceJoinStart: (0, aq.b)(gq.sinceJoinStartMs),
+          game: gq.game,
+          ...(0, aq.h)(),
+          wasmBuild: Eq.wasm,
+          clientVersion: Eq.client
         };
-      return Qk({
+      return HE({
         kind: "pageJoin",
-        code: Uk(TT),
-        site: ET,
+        code: UE(qq),
+        site: Sq,
         fatal: !1,
-        message: (0, HT.k)(TT),
-        details: KT,
-        error: TT,
-        toTransport: "unrecognised" === MT,
-        instance: MT
+        message: (0, fq.j)(qq),
+        details: Oq,
+        error: qq,
+        toTransport: "unrecognised" === lq,
+        instance: lq
       })
     }
-    const Wk = {
+    const XE = {
       renewed: {
         code: "CORE-seatRenewed",
         message: "the early seat outlasted the room's hold, so the join reserved another"
@@ -1272,995 +1274,995 @@ export const modules = {
       }
     };
 
-    function nk(TT, kT) {
+    function wE(qq, Eq) {
       let {
-        unused: cT,
-        answered: lT,
-        heldMs: MT
-      } = TT;
+        unused: gq,
+        answered: Yq,
+        heldMs: lq
+      } = qq;
       const {
-        code: KT,
-        message: OT
-      } = Wk[cT], yT = {
-        unused: cT,
-        answered: String(lT),
-        heldMs: String(MT),
-        wasmBuild: kT.wasm,
-        clientVersion: kT.client
+        code: Oq,
+        message: mq
+      } = XE[gq], xq = {
+        unused: gq,
+        answered: String(Yq),
+        heldMs: String(lq),
+        wasmBuild: Eq.wasm,
+        clientVersion: Eq.client
       };
-      return Qk({
+      return HE({
         kind: "seat",
-        code: KT,
-        site: ET,
+        code: Oq,
+        site: Sq,
         fatal: !1,
-        message: OT,
-        details: yT
+        message: mq,
+        details: xq
       })
     }
 
-    function pk(TT, kT, cT) {
-      var lT;
-      let MT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null !== (lT = TT.name) && void 0 !== lT ? lT : String(TT.code);
-      const KT = {
-          closeCode: String(TT.code),
-          recognised: String(null !== TT.name),
-          closeReason: cT.closeReason,
-          sinceJoined: (0, vT.c)(cT.sinceJoinedMs),
-          game: cT.game,
-          ...(0, vT.l)(),
-          wasmBuild: kT.wasm,
-          clientVersion: kT.client
+    function KE(qq, Eq, gq) {
+      var Yq;
+      let lq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null !== (Yq = qq.name) && void 0 !== Yq ? Yq : String(qq.code);
+      const Oq = {
+          closeCode: String(qq.code),
+          recognised: String(null !== qq.name),
+          closeReason: gq.closeReason,
+          sinceJoined: (0, aq.b)(gq.sinceJoinedMs),
+          game: gq.game,
+          ...(0, aq.h)(),
+          wasmBuild: Eq.wasm,
+          clientVersion: Eq.client
         },
-        OT = null === TT.name && !(0, vT.g)(TT.code);
-      return Qk({
+        mq = null === qq.name && !(0, aq.c)(qq.code);
+      return HE({
         kind: "disconnect",
-        code: MT,
-        site: ZT,
+        code: lq,
+        site: pq,
         fatal: !1,
         message: "Left room",
-        details: KT,
-        toTransport: OT
+        details: Oq,
+        toTransport: mq
       })
     }
 
-    function ik(TT, kT) {
-      const cT = {
-        ...(0, xT.n)(TT),
-        wasmBuild: kT.wasm,
-        clientVersion: kT.client
+    function CE(qq, Eq) {
+      const gq = {
+        ...(0, cq.k)(qq),
+        wasmBuild: Eq.wasm,
+        clientVersion: Eq.client
       };
-      return Qk({
+      return HE({
         kind: "disconnect",
-        code: `reconnect-${TT.reason}`,
-        site: ET,
+        code: `reconnect-${qq.reason}`,
+        site: Sq,
         fatal: !1,
         message: "Reconnect failed",
-        details: cT
+        details: gq
       })
     }
 
-    function qk(TT) {
-      return TT.error instanceof rT.c ? `MODEL-${TT.error.status}` : TT.error instanceof PT.k ? "MODEL-ring" : "MODEL-network"
+    function IE(qq) {
+      return qq.error instanceof tq.g ? `MODEL-${qq.error.status}` : qq.error instanceof rq.g ? "MODEL-ring" : "MODEL-network"
     }
 
-    function sk(TT, kT) {
-      const cT = qk(TT),
-        lT = `model file ${TT.file} ${TT.startup?"(startup) ":""}could not load`,
-        MT = {
-          file: String(TT.file),
-          url: TT.url,
-          wasmBuild: kT.wasm,
-          clientVersion: kT.client
+    function eE(qq, Eq) {
+      const gq = IE(qq),
+        Yq = `model file ${qq.file} ${qq.startup?"(startup) ":""}could not load`,
+        lq = {
+          file: String(qq.file),
+          url: qq.url,
+          wasmBuild: Eq.wasm,
+          clientVersion: Eq.client
         };
-      return Qk({
-        kind: TT.startup ? "model" : "modelLate",
-        code: cT,
-        site: uT,
-        fatal: TT.startup,
-        message: lT,
-        details: MT,
-        error: TT.error
+      return HE({
+        kind: qq.startup ? "model" : "modelLate",
+        code: gq,
+        site: Gq,
+        fatal: qq.startup,
+        message: Yq,
+        details: lq,
+        error: qq.error
       })
     }
 
-    function Tc(TT, kT) {
-      const cT = {
-        wasmBuild: kT.wasm,
-        clientVersion: kT.client
+    function DE(qq, Eq) {
+      const gq = {
+        wasmBuild: Eq.wasm,
+        clientVersion: Eq.client
       };
-      return Qk({
+      return HE({
         kind: "model",
         code: "CORE-modelWorkerPool",
-        site: XT,
+        site: Lq,
         fatal: !1,
         message: "the model workers could not start: no model can build",
-        details: cT,
-        error: TT
+        details: gq,
+        error: qq
       })
     }
 
-    function kc(TT, kT, cT) {
-      const lT = {
-        delayMs: String(kT),
-        wasmBuild: cT.wasm,
-        clientVersion: cT.client
+    function qg(qq, Eq, gq) {
+      const Yq = {
+        delayMs: String(Eq),
+        wasmBuild: gq.wasm,
+        clientVersion: gq.client
       };
-      TT instanceof rT.c && (lT.status = String(TT.status));
-      return Qk({
+      qq instanceof tq.g && (Yq.status = String(qq.status));
+      return HE({
         kind: "recovered",
         code: "CORE-modelsModuleRetry",
-        site: XT,
+        site: Lq,
         fatal: !1,
         message: "the models module didn't download: fetching it again",
-        details: lT,
-        error: TT
+        details: Yq,
+        error: qq
       })
     }
 
-    function cc(TT, kT) {
-      const cT = {
-        wasmBuild: kT.wasm,
-        clientVersion: kT.client
+    function Eg(qq, Eq) {
+      const gq = {
+        wasmBuild: Eq.wasm,
+        clientVersion: Eq.client
       };
-      return Qk({
+      return HE({
         kind: "recovered",
         code: "CORE-dracoDecoder",
-        site: XT,
+        site: Lq,
         fatal: !1,
         message: "the Draco decoder did not load: the Draco files waiting on it failed",
-        details: cT,
-        error: TT
+        details: gq,
+        error: qq
       })
     }
 
-    function lc(TT, kT) {
-      const cT = {
-        wasmBuild: kT.wasm,
-        clientVersion: kT.client
+    function gg(qq, Eq) {
+      const gq = {
+        wasmBuild: Eq.wasm,
+        clientVersion: Eq.client
       };
-      return Qk({
+      return HE({
         kind: "worldgenLoad",
         code: "CORE-worldgenLoad",
-        site: NT.B,
+        site: jq.G,
         fatal: !1,
         message: "world-gen worker code could not load",
-        details: cT,
-        error: TT
+        details: gq,
+        error: qq
       })
     }
 
-    function Mc(TT, kT) {
-      const cT = {
-        wasmBuild: kT.wasm,
-        clientVersion: kT.client
+    function Yg(qq, Eq) {
+      const gq = {
+        wasmBuild: Eq.wasm,
+        clientVersion: Eq.client
       };
-      return Qk({
+      return HE({
         kind: "texturePackLoad",
         code: "CORE-texturePackLoad",
-        site: YT,
+        site: sq,
         fatal: !1,
         message: "texture pack feed code could not load",
-        details: cT,
-        error: TT
+        details: gq,
+        error: qq
       })
     }
 
-    function Kc(TT, kT) {
+    function lg(qq, Eq) {
       const {
-        frames: cT,
-        acks: lT,
-        mask: MT,
-        outcome: KT
-      } = TT, OT = {
-        frames: String(cT),
-        acks: String(lT),
-        mask: String(MT),
-        outcome: null !== KT && void 0 !== KT ? KT : "resynced",
-        wasmBuild: kT.wasm,
-        clientVersion: kT.client
+        frames: gq,
+        acks: Yq,
+        mask: lq,
+        outcome: Oq
+      } = qq, mq = {
+        frames: String(gq),
+        acks: String(Yq),
+        mask: String(lq),
+        outcome: null !== Oq && void 0 !== Oq ? Oq : "resynced",
+        wasmBuild: Eq.wasm,
+        clientVersion: Eq.client
       };
-      return Qk({
+      return HE({
         kind: "recovered",
-        code: "rejoined" === KT ? "CORE-eventOverflowRejoin" : "failed" === KT ? "CORE-eventOverflowFailed" : "CORE-eventOverflow",
-        site: gT,
+        code: "rejoined" === Oq ? "CORE-eventOverflowRejoin" : "failed" === Oq ? "CORE-eventOverflowFailed" : "CORE-eventOverflow",
+        site: Uq,
         fatal: !1,
-        message: `the event buffer refused records in ${cT} frames`,
-        details: OT
+        message: `the event buffer refused records in ${gq} frames`,
+        details: mq
       })
     }
 
-    function Oc(TT, kT, cT) {
-      return Qk({
+    function Og(qq, Eq, gq) {
+      return HE({
         kind: "recovered",
         code: "CORE-workerLost",
-        site: TT,
+        site: qq,
         fatal: !1,
-        message: `a ${TT} worker was lost`,
+        message: `a ${qq} worker was lost`,
         details: {
-          reason: kT,
-          wasmBuild: cT.wasm,
-          clientVersion: cT.client
+          reason: Eq,
+          wasmBuild: gq.wasm,
+          clientVersion: gq.client
         }
       })
     }
 
-    function yc(TT, kT, cT) {
-      const lT = {
-        wasmBuild: cT.wasm,
-        clientVersion: cT.client
+    function mg(qq, Eq, gq) {
+      const Yq = {
+        wasmBuild: gq.wasm,
+        clientVersion: gq.client
       };
-      return Qk({
+      return HE({
         kind: "recovered",
-        code: TT,
-        site: NT.p,
+        code: qq,
+        site: jq.s,
         fatal: !1,
-        message: kT,
-        details: lT
+        message: Eq,
+        details: Yq
       })
     }
 
-    function fc(TT, kT) {
-      const cT = {
-        lastReason: TT,
-        wasmBuild: kT.wasm,
-        clientVersion: kT.client
+    function xg(qq, Eq) {
+      const gq = {
+        lastReason: qq,
+        wasmBuild: Eq.wasm,
+        clientVersion: Eq.client
       };
-      return Qk({
+      return HE({
         kind: "recovered",
         code: "CORE-worldgenGaveUp",
-        site: NT.B,
+        site: jq.G,
         fatal: !1,
         message: "no world-gen worker generated: chunks come whole",
-        details: cT
+        details: gq
       })
     }
 
-    function xc(TT, kT, cT) {
-      return Qk({
+    function Ag(qq, Eq, gq) {
+      return HE({
         kind: "recovered",
         code: "CORE-memoryShed",
-        site: NT.l,
+        site: jq.r,
         fatal: !1,
-        message: (0, aT.m)(TT) ? "wasm memory was refused: the session shed load" : "the tab's footprint reached its budget: the session shed load",
+        message: (0, Qq.k)(qq) ? "wasm memory was refused: the session shed load" : "the tab's footprint reached its budget: the session shed load",
         details: {
-          cause: TT,
-          ...kT,
-          wasmBuild: cT.wasm,
-          clientVersion: cT.client
+          cause: qq,
+          ...Eq,
+          wasmBuild: gq.wasm,
+          clientVersion: gq.client
         }
       })
     }
 
-    function Ic(TT, kT, cT, lT) {
-      var MT, KT;
-      const OT = (0, fT.n)(),
-        yT = {
-          game: TT,
-          cause: kT,
-          census: null === cT ? "none" : JSON.stringify(cT),
-          gpu: null !== (MT = null === (KT = (0, jT.q)()) || void 0 === KT ? void 0 : KT.renderer) && void 0 !== MT ? MT : "",
-          renderWarned: String(OT),
-          browser: (0, fT.k)(),
-          wasmBuild: lT.wasm,
-          clientVersion: lT.client
+    function cg(qq, Eq, gq, Yq) {
+      var lq, Oq;
+      const mq = (0, Aq.j)(),
+        xq = {
+          game: qq,
+          cause: Eq,
+          census: null === gq ? "none" : JSON.stringify(gq),
+          gpu: null !== (lq = null === (Oq = (0, Nq.t)()) || void 0 === Oq ? void 0 : Oq.renderer) && void 0 !== lq ? lq : "",
+          renderWarned: String(mq),
+          browser: (0, Aq.h)(),
+          wasmBuild: Yq.wasm,
+          clientVersion: Yq.client
         },
-        xT = `first view drew no whole terrain in ${wT.f/1e3} s, ${kT}${OT?", render warned":""}`;
-      return Qk({
+        cq = `first view drew no whole terrain in ${vq.d/1e3} s, ${Eq}${mq?", render warned":""}`;
+      return HE({
         kind: "noTerrain",
         code: "CORE-firstViewNoTerrain",
-        site: BT,
+        site: Xq,
         fatal: !1,
-        message: xT,
-        details: yT
+        message: cq,
+        details: xq
       })
     }
 
-    function Ac(TT, kT, cT) {
-      var lT, KT, OT;
-      const yT = null !== (lT = (0, MT.l)(null !== (KT = null === (OT = (0, jT.m)()) || void 0 === OT ? void 0 : OT.renderer) && void 0 !== KT ? KT : null, (0, jT.j)())) && void 0 !== lT ? lT : "unknown",
-        xT = null === kT ? "untimed" : `${Math.round(kT)} ms`,
-        IT = `frames stalled, gpu ${(0,fT.u)(yT)}, blocking ${xT}, drawn ${Math.round(TT)} ms apart`,
-        AT = {
-          gpuModel: yT,
-          wasmBuild: cT.wasm,
-          clientVersion: cT.client
+    function ug(qq, Eq, gq) {
+      var Yq, Oq, mq;
+      const xq = null !== (Yq = (0, lq.f)(null !== (Oq = null === (mq = (0, Nq.n)()) || void 0 === mq ? void 0 : mq.renderer) && void 0 !== Oq ? Oq : null, (0, Nq.j)())) && void 0 !== Yq ? Yq : "unknown",
+        cq = null === Eq ? "untimed" : `${Math.round(Eq)} ms`,
+        uq = `frames stalled, gpu ${(0,Aq.p)(xq)}, blocking ${cq}, drawn ${Math.round(qq)} ms apart`,
+        Bq = {
+          gpuModel: xq,
+          wasmBuild: gq.wasm,
+          clientVersion: gq.client
         };
-      return Qk({
+      return HE({
         kind: "mainStall",
         code: "CORE-mainStall",
-        site: WT,
+        site: wq,
         fatal: !1,
-        message: IT,
-        details: AT
+        message: uq,
+        details: Bq
       })
     }
 
-    function Cc(TT, kT, cT) {
-      return Qk({
+    function Bg(qq, Eq, gq) {
+      return HE({
         kind: "recovered",
         code: "CORE-workerStartTimeout",
-        site: TT,
+        site: qq,
         fatal: !1,
-        message: `a ${TT} worker did not start`,
+        message: `a ${qq} worker did not start`,
         details: {
-          waitedMs: String(Math.round(kT)),
-          wasmBuild: cT.wasm,
-          clientVersion: cT.client
+          waitedMs: String(Math.round(Eq)),
+          wasmBuild: gq.wasm,
+          clientVersion: gq.client
         }
       })
     }
 
-    function jc(TT, kT, cT) {
-      return Qk({
+    function Wg(qq, Eq, gq) {
+      return HE({
         kind: "recovered",
         code: "CORE-replayFault",
-        site: TT,
+        site: qq,
         fatal: !1,
-        message: `the replay's ${TT} failed`,
+        message: `the replay's ${qq} failed`,
         details: {
-          wasmBuild: cT.wasm,
-          clientVersion: cT.client
+          wasmBuild: gq.wasm,
+          clientVersion: gq.client
         },
-        error: kT
+        error: Eq
       })
     }
-    const vc = {
+    const Ng = {
       lost: "render device was lost",
       frames_refused: "render device refused a frame",
       start_failed: "renderer couldn't start",
       pipeline_failed: "renderer's pipeline failed"
     };
 
-    function tc(TT, kT, cT) {
-      const lT = "lost" === kT && void 0 !== cT ? ` (${cT})` : "";
-      return `the ${TT} ${vc[kT]}${lT}`
+    function ag(qq, Eq, gq) {
+      const Yq = "lost" === Eq && void 0 !== gq ? ` (${gq})` : "";
+      return `the ${qq} ${Ng[Eq]}${Yq}`
     }
-    const hc = {
+    const Vg = {
       adapter: null,
       boundAtMs: null,
       indirectHangs: null
     };
 
-    function Nc(TT, kT, cT) {
-      let lT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : performance.now();
-      const MT = null === cT.boundAtMs ? "unbound" : `up${(0,IT.h)(lT-cT.boundAtMs)}`,
-        KT = null === cT.adapter ? "no adapter" : (0, IT.n)(cT.adapter),
-        OT = `${(0,hT.k)()?"hidden":"visible"} ${MT} ${KT}${!0===cT.indirectHangs?" ih":""}`;
-      if ("pipeline_failed" === TT) return `${TT} ${OT}`;
-      const yT = null === kT || void 0 === kT ? void 0 : kT.message;
-      return `${kT instanceof hT.h?"timeout":(0,IT.o)("frames_refused"===TT,"string"===typeof yT?yT:"")} ${OT}`
+    function dg(qq, Eq, gq) {
+      let Yq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : performance.now();
+      const lq = null === gq.boundAtMs ? "unbound" : `up${(0,uq.h)(Yq-gq.boundAtMs)}`,
+        Oq = null === gq.adapter ? "no adapter" : (0, uq.p)(gq.adapter),
+        mq = `${(0,dq.g)()?"hidden":"visible"} ${lq} ${Oq}${!0===gq.indirectHangs?" ih":""}`;
+      if ("pipeline_failed" === qq) return `${qq} ${mq}`;
+      const xq = null === Eq || void 0 === Eq ? void 0 : Eq.message;
+      return `${Eq instanceof dq.f?"timeout":(0,uq.q)("frames_refused"===qq,"string"===typeof xq?xq:"")} ${mq}`
     }
-    const Qc = {
+    const jg = {
       samples: null,
       sunShadows: null,
       renderDistance: null
     };
 
-    function Sc(TT, kT, lT) {
-      var KT, OT, yT, xT, CT;
+    function Hg(qq, Eq, Yq) {
+      var Oq, mq, xq, cq, Wq;
       let {
-        cause: jT = "lost",
-        error: vT,
-        context: tT = hc,
-        session: hT = Qc
+        cause: Nq = "lost",
+        error: aq,
+        context: Vq = Vg,
+        session: dq = jg
       } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const NT = Nc(jT, vT, tT),
-        QT = {
-          losses: String(kT),
-          cause: jT,
-          detail: NT,
-          vendor: null !== (KT = null === (OT = tT.adapter) || void 0 === OT ? void 0 : OT.vendor) && void 0 !== KT ? KT : "",
-          architecture: null !== (yT = null === (xT = tT.adapter) || void 0 === xT ? void 0 : xT.architecture) && void 0 !== yT ? yT : "",
-          indirectHangs: String(tT.indirectHangs),
-          samples: String(hT.samples),
-          sunShadows: String(hT.sunShadows),
-          renderDistance: String(hT.renderDistance),
-          gpuFamily: null !== (CT = (0, MT.e)()) && void 0 !== CT ? CT : "",
-          browser: (0, fT.k)(),
-          siteUsed: AT.u,
-          wasmBuild: lT.wasm,
-          clientVersion: lT.client
+      const jq = dg(Nq, aq, Vq),
+        Hq = {
+          losses: String(Eq),
+          cause: Nq,
+          detail: jq,
+          vendor: null !== (Oq = null === (mq = Vq.adapter) || void 0 === mq ? void 0 : mq.vendor) && void 0 !== Oq ? Oq : "",
+          architecture: null !== (xq = null === (cq = Vq.adapter) || void 0 === cq ? void 0 : cq.architecture) && void 0 !== xq ? xq : "",
+          indirectHangs: String(Vq.indirectHangs),
+          samples: String(dq.samples),
+          sunShadows: String(dq.sunShadows),
+          renderDistance: String(dq.renderDistance),
+          gpuFamily: null !== (Wq = (0, lq.b)()) && void 0 !== Wq ? Wq : "",
+          browser: (0, Aq.h)(),
+          siteUsed: Bq.n,
+          wasmBuild: Yq.wasm,
+          clientVersion: Yq.client
         },
-        ST = tc(TT, jT),
-        DT = Qk({
+        oq = ag(qq, Nq),
+        Pq = HE({
           kind: "recovered",
           code: "CORE-renderLost",
-          site: LT,
+          site: kq,
           fatal: !1,
-          message: ST,
-          details: QT,
-          error: vT
+          message: oq,
+          details: Hq,
+          error: aq
         });
-      return Dk("ga", (async () => {
+      return PE("ga", (async () => {
         const {
-          logError: kT
-        } = await Promise.resolve().then((() => cT(2873))), lT = `${IT.e["webgpu"===TT?"WebGPU":"WebGL2"]}\n Error: ${NT}`;
-        kT("warning", lT), kT("error", lT)
-      })), DT
+          logError: Eq
+        } = await Promise.resolve().then((() => gq(2834))), Yq = `${uq.e["webgpu"===qq?"WebGPU":"WebGL2"]}\n Error: ${jq}`;
+        Eq("warning", Yq), Eq("error", Yq)
+      })), Pq
     }
 
-    function Dc(TT, kT) {
-      var cT, lT;
-      const MT = null === TT.name ? "TEXTURE-sources" : null === TT.url ? "TEXTURE-nourl" : TT.error instanceof mT.c ? `TEXTURE-${TT.error.status}` : "TEXTURE-network",
-        KT = null === TT.name ? "terrain textures could not load" : `terrain texture ${TT.name} could not load`,
-        OT = {
-          texture: null !== (cT = TT.name) && void 0 !== cT ? cT : "",
-          url: null !== (lT = TT.url) && void 0 !== lT ? lT : "",
-          wasmBuild: kT.wasm,
-          clientVersion: kT.client
+    function og(qq, Eq) {
+      var gq, Yq;
+      const lq = null === qq.name ? "TEXTURE-sources" : null === qq.url ? "TEXTURE-nourl" : qq.error instanceof hq.d ? `TEXTURE-${qq.error.status}` : "TEXTURE-network",
+        Oq = null === qq.name ? "terrain textures could not load" : `terrain texture ${qq.name} could not load`,
+        mq = {
+          texture: null !== (gq = qq.name) && void 0 !== gq ? gq : "",
+          url: null !== (Yq = qq.url) && void 0 !== Yq ? Yq : "",
+          wasmBuild: Eq.wasm,
+          clientVersion: Eq.client
         };
-      return Qk({
+      return HE({
         kind: "terrainTexture",
-        code: MT,
-        site: NT.A,
+        code: lq,
+        site: jq.D,
         fatal: !1,
-        message: KT,
-        details: OT,
-        error: TT.error
+        message: Oq,
+        details: mq,
+        error: qq.error
       })
     }
-    const ac = {
+    const Pg = {
       previewAnimations: {
-        site: RT,
+        site: Rq,
         prefix: "ANIMS",
         name: "the previews' animations"
       },
       builtInAnimations: {
-        site: UT,
+        site: Fq,
         prefix: "BUILTIN",
         name: "the built-in animations"
       }
     };
 
-    function Fc(TT, kT, cT, lT) {
+    function Qg(qq, Eq, gq, Yq) {
       const {
-        site: MT,
-        prefix: KT,
-        name: OT
-      } = ac[TT], {
-        stage: yT,
-        error: fT
-      } = cT;
-      return Qk({
-        kind: TT,
-        code: "decode" === yT ? null === fT ? `${KT}-decode` : `${KT}-trap` : fT instanceof rT.c ? `${KT}-${fT.status}` : `${KT}-network`,
-        site: MT,
+        site: lq,
+        prefix: Oq,
+        name: mq
+      } = Pg[qq], {
+        stage: xq,
+        error: Aq
+      } = gq;
+      return HE({
+        kind: qq,
+        code: "decode" === xq ? null === Aq ? `${Oq}-decode` : `${Oq}-trap` : Aq instanceof tq.g ? `${Oq}-${Aq.status}` : `${Oq}-network`,
+        site: lq,
         fatal: !1,
-        message: "decode" === yT ? `${OT} did not decode` : `${OT} could not load`,
+        message: "decode" === xq ? `${mq} did not decode` : `${mq} could not load`,
         details: {
-          url: kT,
-          wasmBuild: lT.wasm,
-          clientVersion: lT.client
+          url: Eq,
+          wasmBuild: Yq.wasm,
+          clientVersion: Yq.client
         },
-        error: fT
+        error: Aq
       })
     }
-    const rc = "staleBuild";
+    const yg = "staleBuild";
 
-    function Pc(TT, kT, cT) {
-      const lT = {
-          failedSite: TT.site,
-          url: TT.url,
-          from: TT.from,
-          sameBuild: String(TT.from === kT),
-          reloadMs: String(Math.max(0, Date.now() - TT.at)),
-          wasmBuild: cT.wasm,
-          clientVersion: cT.client
+    function tg(qq, Eq, gq) {
+      const Yq = {
+          failedSite: qq.site,
+          url: qq.url,
+          from: qq.from,
+          sameBuild: String(qq.from === Eq),
+          reloadMs: String(Math.max(0, Date.now() - qq.at)),
+          wasmBuild: gq.wasm,
+          clientVersion: gq.client
         },
-        MT = `reloaded into a newer build after ${TT.site} failed to load: ${TT.error}`;
-      return Qk({
+        lq = `reloaded into a newer build after ${qq.site} failed to load: ${qq.error}`;
+      return HE({
         kind: "staleBuild",
         code: "CORE-staleBuild",
-        site: rc,
+        site: yg,
         fatal: !1,
-        message: MT,
-        details: lT
+        message: lq,
+        details: Yq
       })
     }
   },
-  40599: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => KT,
-      f: () => MT,
-      i: () => OT
+  40723: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => Oq,
+      d: () => lq,
+      g: () => mq
     });
-    var lT = cT(4769);
-    const MT = 3e4;
-    class KT {
-      constructor(TT) {
-        this.Yj = TT, this.waitedMs = 0, this.lastMs = null
+    var Yq = gq(4625);
+    const lq = 3e4;
+    class Oq {
+      constructor(qq) {
+        this.SN = qq, this.waitedMs = 0, this.lastMs = null
       }
-      frame(TT, kT) {
-        if (kT) return !0;
-        const cT = null === this.lastMs ? 0 : TT - this.lastMs;
-        return this.lastMs = TT, cT <= 900 && (this.waitedMs += cT), !(this.waitedMs < MT) && (this.Yj(), !0)
+      frame(qq, Eq) {
+        if (Eq) return !0;
+        const gq = null === this.lastMs ? 0 : qq - this.lastMs;
+        return this.lastMs = qq, gq <= 900 && (this.waitedMs += gq), !(this.waitedMs < lq) && (this.SN(), !0)
       }
     }
 
-    function OT(TT, kT) {
-      return 0 === (TT & lT.H.ChunkStored) ? "no chunk stored" : null === kT ? "no frame drawn" : 0 === kT.terrainParts ? "no terrain parts" : kT.terrainCompiling > 0 ? "terrain compiling" : "parts not drawn"
+    function mq(qq, Eq) {
+      return 0 === (qq & Yq.O.ChunkRequested) ? "no_chunk_request" : 0 === (qq & Yq.O.ChunkStored) ? "chunk_not_stored" : 0 === (qq & Yq.O.MeshLanded) ? "not_meshed" : null === Eq ? "no_frame_drawn" : 0 === Eq.terrainParts ? "no_terrain_parts" : Eq.terrainCompiling > 0 ? "terrain_compiling" : Eq.terrainOpaque + Eq.terrainTransparent === 0 ? "terrain_not_drawn" : "view_incomplete"
     }
   },
-  4755: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => OT,
-      g: () => KT,
-      k: () => MT
+  4616: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => mq,
+      e: () => Oq,
+      g: () => lq
     });
-    var lT = cT(4761);
+    var Yq = gq(4622);
 
-    function MT(TT) {
-      return "none" !== TT
+    function lq(qq) {
+      return "none" !== qq
     }
 
-    function KT(TT, kT) {
-      if (!TT) return "none";
-      switch (kT) {
-        case lT.$.Drawn:
+    function Oq(qq, Eq) {
+      if (!qq) return "none";
+      switch (Eq) {
+        case Yq.Y.Drawn:
           return "drawn";
-        case lT.$.Paced:
+        case Yq.Y.Paced:
           return "paced";
         default:
           return "skipped"
       }
     }
 
-    function OT(TT) {
-      return "drawn" === TT
+    function mq(qq) {
+      return "drawn" === qq
     }
   },
-  40215: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => lT,
-      f: () => NT,
-      g: () => tT,
-      j: () => hT,
-      m: () => CT,
-      p: () => jT,
-      q: () => IT,
-      u: () => AT,
-      v: () => vT
+  40325: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => Yq,
+      c: () => jq,
+      e: () => Vq,
+      f: () => dq,
+      i: () => Wq,
+      j: () => Nq,
+      k: () => uq,
+      n: () => Bq,
+      q: () => aq
     });
-    class lT extends Error {
-      constructor(TT) {
-        super(`the join's code did not load: ${TT instanceof Error?TT.message:String(TT)}`, {
-          cause: TT
-        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === TT || void 0 === TT ? void 0 : TT.request
+    class Yq extends Error {
+      constructor(qq) {
+        super(`the join's code did not load: ${qq instanceof Error?qq.message:String(qq)}`, {
+          cause: qq
+        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === qq || void 0 === qq ? void 0 : qq.request
       }
     }
-    let MT = null,
-      KT = null,
-      OT = null;
-    const yT = [];
-    let fT = null;
+    let lq = null,
+      Oq = null,
+      mq = null;
+    const xq = [];
+    let Aq = null;
 
-    function xT(TT, kT) {
+    function cq(qq, Eq) {
       try {
-        TT(kT)
-      } catch (cT) {
-        console.error("[bloxd-wasm-client] the game chunk's listener failed", cT)
+        qq(Eq)
+      } catch (gq) {
+        console.error("[bloxd-wasm-client] the game chunk's listener failed", gq)
       }
     }
 
-    function IT() {
-      return fT
+    function uq() {
+      return Aq
     }
 
-    function AT(TT) {
-      yT.push(TT), null !== fT && xT(TT, fT)
+    function Bq(qq) {
+      xq.push(qq), null !== Aq && cq(qq, Aq)
     }
 
-    function CT(TT) {
-      return MT ??= Promise.all([cT.e(70), cT.e(95), cT.e(215), cT.e(75), cT.e(216), cT.e(189), cT.e(94), cT.e(235), cT.e(261), cT.e(187), cT.e(263), cT.e(199), cT.e(186), cT.e(200), cT.e(136), cT.e(86), cT.e(114), cT.e(239), cT.e(54)]).then((() => cT(42124))).then((kT => {
-        kT.loadAudio(TT), fT = kT;
-        for (const TT of yT) xT(TT, kT);
-        return kT
-      })).catch((TT => {
-        throw MT = null, TT
-      })), MT
+    function Wq(qq) {
+      return lq ??= Promise.all([gq.e(70), gq.e(95), gq.e(216), gq.e(75), gq.e(217), gq.e(190), gq.e(94), gq.e(235), gq.e(261), gq.e(188), gq.e(263), gq.e(200), gq.e(187), gq.e(201), gq.e(137), gq.e(86), gq.e(115), gq.e(239), gq.e(54)]).then((() => gq(42335))).then((Eq => {
+        Eq.loadAudio(qq), Aq = Eq;
+        for (const qq of xq) cq(qq, Eq);
+        return Eq
+      })).catch((qq => {
+        throw lq = null, qq
+      })), lq
     }
-    async function jT(TT, kT) {
+    async function Nq(qq, Eq) {
       try {
-        const cT = await CT(TT);
-        await cT.loadClientGame(kT)
-      } catch (cT) {
-        throw new lT(cT)
+        const gq = await Wq(qq);
+        await gq.loadClientGame(Eq)
+      } catch (gq) {
+        throw new Yq(gq)
       }
     }
 
-    function vT(TT, kT) {
-      KT = {
-        running: TT,
-        shell: kT
+    function aq(qq, Eq) {
+      Oq = {
+        running: qq,
+        shell: Eq
       }
     }
 
-    function tT() {
-      return OT
+    function Vq() {
+      return mq
     }
-    async function hT(TT) {
-      const kT = KT;
-      if ((null === kT || void 0 === kT ? void 0 : kT.running) !== TT) throw new Error("the core's session has ended");
-      const cT = await CT(kT.shell.audio).catch((TT => {
-        throw new lT(TT)
+    async function dq(qq) {
+      const Eq = Oq;
+      if ((null === Eq || void 0 === Eq ? void 0 : Eq.running) !== qq) throw new Error("the core's session has ended");
+      const gq = await Wq(Eq.shell.audio).catch((qq => {
+        throw new Yq(qq)
       }));
-      if (null !== OT) return OT;
-      if (KT !== kT || TT.isStopped) throw new Error("the core stopped while the game code loaded");
-      if (OT = cT.startGameHost(TT, kT.shell), null === OT) throw new Error("the core's shared tables didn't read, so the game can't start");
-      return OT
+      if (null !== mq) return mq;
+      if (Oq !== Eq || qq.isStopped) throw new Error("the core stopped while the game code loaded");
+      if (mq = gq.startGameHost(qq, Eq.shell), null === mq) throw new Error("the core's shared tables didn't read, so the game can't start");
+      return mq
     }
 
-    function NT() {
-      null !== OT && (null !== fT ? fT.endGameHost(OT) : OT.closeGame()), OT = null, KT = null
+    function jq() {
+      null !== mq && (null !== Aq ? Aq.endGameHost(mq) : mq.closeGame()), mq = null, Oq = null
     }
   },
-  40497: (TT, kT, cT) => {
-    cT.d(kT, {
-      d: () => xT,
-      e: () => KT,
-      h: () => OT,
-      j: () => MT,
-      l: () => jT,
-      o: () => IT,
-      r: () => fT,
-      t: () => CT,
-      w: () => AT,
-      z: () => yT
+  40599: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => cq,
+      h: () => Oq,
+      j: () => mq,
+      k: () => lq,
+      l: () => Nq,
+      o: () => uq,
+      p: () => Aq,
+      t: () => Wq,
+      u: () => Bq,
+      y: () => xq
     });
-    var lT = cT(1799);
-    const MT = new Uint8Array([12]),
-      KT = 2e3,
-      OT = 257;
+    var Yq = gq(1763);
+    const lq = new Uint8Array([12]),
+      Oq = 2e3,
+      mq = 257;
 
-    function yT(TT) {
-      const kT = new Uint8Array(4);
-      return new DataView(kT.buffer).setUint32(0, TT, !0), kT
+    function xq(qq) {
+      const Eq = new Uint8Array(4);
+      return new DataView(Eq.buffer).setUint32(0, qq, !0), Eq
     }
-    class fT extends Error {
+    class Aq extends Error {
       constructor() {
         super("the game was left while it reconnected"), this.name = "AbortError"
       }
     }
-    class xT extends Error {
-      constructor(TT, kT) {
-        let cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          lT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        super(TT), this.stage = kT, this.code = cT, this.serverText = lT, this.name = "JoinError"
+    class cq extends Error {
+      constructor(qq, Eq) {
+        let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          Yq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        super(qq), this.stage = Eq, this.code = gq, this.serverText = Yq, this.name = "JoinError"
       }
     }
-    class IT extends Error {
-      constructor(TT) {
-        super(TT), this.final = !0, this.name = "ResumeRefusedError"
+    class uq extends Error {
+      constructor(qq) {
+        super(qq), this.final = !0, this.name = "ResumeRefusedError"
       }
     }
-    class AT extends Error {
-      constructor(TT) {
-        super((0, lT.f)(TT), {
-          cause: TT
+    class Bq extends Error {
+      constructor(qq) {
+        super((0, Yq.d)(qq), {
+          cause: qq
         }), this.name = "TrafficCheckError"
       }
     }
-    class CT extends Error {
-      constructor(TT, kT, cT) {
-        super(TT, {
-          cause: cT
-        }), this.networkLost = kT, this.name = "SeatRequestError"
+    class Wq extends Error {
+      constructor(qq, Eq, gq) {
+        super(qq, {
+          cause: gq
+        }), this.networkLost = Eq, this.name = "SeatRequestError"
       }
     }
-    class jT extends Error {
-      constructor(TT, kT) {
-        let cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        super(TT), this.code = kT, this.serverText = cT, this.name = "MatchmakeError"
+    class Nq extends Error {
+      constructor(qq, Eq) {
+        let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        super(qq), this.code = Eq, this.serverText = gq, this.name = "MatchmakeError"
       }
     }
   },
-  40503: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => CT,
-      f: () => AT
+  40607: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => Wq,
+      e: () => Bq
     });
-    var lT = cT(2623),
-      MT = cT(3407),
-      KT = cT(38879),
-      OT = cT(40494),
-      yT = cT(40497),
-      fT = cT(40505);
-    const xT = "seat reservation expired.",
-      IT = "early_leave";
+    var Yq = gq(2538),
+      lq = gq(3347),
+      Oq = gq(39012),
+      mq = gq(40590),
+      xq = gq(40599),
+      Aq = gq(40613);
+    const cq = "seat reservation expired.",
+      uq = "early_leave";
 
-    function AT(TT) {
-      if (TT instanceof KT.f) return "expected";
-      if (TT instanceof yT.t) return TT.networkLost ? "expected" : "unrecognised";
-      if (TT instanceof yT.d) {
-        if ("closed" === TT.stage && (0 === TT.code || (0, MT.g)(TT.code))) return "expected";
-        if ("roomError" === TT.stage && (TT.serverText === xT || TT.serverText === IT)) return "expected"
+    function Bq(qq) {
+      if (qq instanceof Oq.f) return "expected";
+      if (qq instanceof xq.t) return qq.networkLost ? "expected" : "unrecognised";
+      if (qq instanceof xq.e) {
+        if ("closed" === qq.stage && (0 === qq.code || (0, lq.c)(qq.code))) return "expected";
+        if ("roomError" === qq.stage && (qq.serverText === cq || qq.serverText === uq)) return "expected"
       }
-      return TT instanceof yT.d || TT instanceof yT.l ? null === (0, OT.n)(TT.code).name ? "unrecognised" : "known" : (0, lT.f)(TT) ? "expected" : TT instanceof yT.w || TT instanceof fT.e ? "known" : "unrecognised"
+      return qq instanceof xq.e || qq instanceof xq.l ? null === (0, mq.j)(qq.code).name ? "unrecognised" : "known" : (0, Yq.f)(qq) ? "expected" : qq instanceof xq.u || qq instanceof Aq.g ? "known" : "unrecognised"
     }
 
-    function CT(TT) {
-      return TT instanceof KT.f ? "timedOut" : "expected" !== AT(TT) || (0, lT.f)(TT) || TT instanceof yT.d && 1001 === TT.code ? void 0 : "failed"
+    function Wq(qq) {
+      return qq instanceof Oq.f ? "timedOut" : "expected" !== Bq(qq) || (0, Yq.f)(qq) || qq instanceof xq.e && 1001 === qq.code ? void 0 : "failed"
     }
   },
-  38928: (TT, kT, cT) => {
-    cT.d(kT, {
-      A: () => wT,
-      d: () => mT,
-      j: () => aT,
-      m: () => AT,
-      n: () => FT,
-      q: () => NT,
-      u: () => PT
+  39068: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => hq,
+      g: () => Qq,
+      k: () => Bq,
+      l: () => yq,
+      n: () => jq,
+      q: () => rq,
+      w: () => vq
     });
-    var lT = cT(36085),
-      MT = cT(36299);
-    const KT = 64 * lT.d,
-      OT = 40 * lT.g,
-      yT = 36 * lT.g,
-      fT = 20 * lT.g,
-      xT = 2 * lT.g,
-      IT = 5 * lT.g;
+    var Yq = gq(36350),
+      lq = gq(36528);
+    const Oq = 64 * Yq.d,
+      mq = 40 * Yq.g,
+      xq = 36 * Yq.g,
+      Aq = 20 * Yq.g,
+      cq = 2 * Yq.g,
+      uq = 5 * Yq.g;
 
-    function AT(TT) {
-      return "footprint" !== TT
+    function Bq(qq) {
+      return "footprint" !== qq
     }
-    const CT = 2 * lT.g,
-      jT = 4 * lT.g,
-      vT = 35 * lT.g + CT + jT,
-      tT = 6.5 * lT.g,
-      hT = 132.5 * lT.d;
+    const Wq = 2 * Yq.g,
+      Nq = 4 * Yq.g,
+      aq = 35 * Yq.g + Wq + Nq,
+      Vq = 6.5 * Yq.g,
+      dq = 132.5 * Yq.d;
 
-    function NT(TT) {
-      const kT = tT + (0, MT.n)(TT) + TT * hT;
-      return Math.ceil((2 * vT + kT) / KT) * KT
+    function jq(qq) {
+      const Eq = Vq + (0, lq.i)(qq) + qq * dq;
+      return Math.ceil((2 * aq + Eq) / Oq) * Oq
     }
-    const QT = NT(MT.d),
-      ST = (lT.g, lT.g, lT.g, {
-        targetBytes: OT,
-        leastBytes: fT
+    const Hq = jq(lq.c),
+      oq = (Yq.g, Yq.g, Yq.g, {
+        targetBytes: mq,
+        leastBytes: Aq
       }),
-      DT = {
-        targetBytes: yT,
-        leastBytes: fT
+      Pq = {
+        targetBytes: xq,
+        leastBytes: Aq
       };
 
-    function aT(TT) {
+    function Qq(qq) {
       return {
-        targetBytes: TT,
+        targetBytes: qq,
         leastBytes: 0
       }
     }
 
-    function FT(TT) {
-      return TT >= MT.d ? ST : DT
+    function yq(qq) {
+      return qq >= lq.c ? oq : Pq
     }
-    const rT = 2 * KT;
+    const tq = 2 * Oq;
 
-    function PT(TT, kT, cT) {
-      return TT + kT + rT > (null !== cT && void 0 !== cT ? cT : QT)
+    function rq(qq, Eq, gq) {
+      return qq + Eq + tq > (null !== gq && void 0 !== gq ? gq : Hq)
     }
-    const wT = {
+    const vq = {
       now: () => performance.now(),
-      requestIdle: "function" === typeof requestIdleCallback ? TT => {
-        requestIdleCallback(TT)
+      requestIdle: "function" === typeof requestIdleCallback ? qq => {
+        requestIdleCallback(qq)
       } : null
     };
-    class mT {
-      constructor(TT, kT, cT) {
-        let lT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : wT;
-        this.memory = TT, this.readPeakStoredChunks = kT, this.onError = cT, this.clock = lT, this.pendingSince = null, this.stepsRefused = !1, this.stepsHeldUntil = null, this.shedding = null, this.sheds = 0, this.shedCap = null, this.stopped = !1, this.statsAt = -1 / 0, this.main = null, this.peakStoredChunks = 0, this.workers = new Map, this.replacedRefusals = {
+    class hq {
+      constructor(qq, Eq, gq) {
+        let Yq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : vq;
+        this.memory = qq, this.readPeakStoredChunks = Eq, this.onError = gq, this.clock = Yq, this.pendingSince = null, this.stepsRefused = !1, this.stepsHeldUntil = null, this.shedding = null, this.sheds = 0, this.shedCap = null, this.stopped = !1, this.statsAt = -1 / 0, this.main = null, this.peakStoredChunks = 0, this.workers = new Map, this.replacedRefusals = {
           reserves: 0,
           allocations: 0
         }, this.joinReserveTaken = null, this.ceilingBytes = null, this.ballastCheckAt = -1 / 0, this.ballastPeakBytes = 0, this.distanceInUse = null, this.footprint = null
       }
-      setShed(TT, kT, cT) {
+      setShed(qq, Eq, gq) {
         this.shedding = {
-          shed: TT,
-          Yj: kT,
-          readDistanceInUse: cT
+          shed: qq,
+          SN: Eq,
+          readDistanceInUse: gq
         }
       }
       shedDistanceInUse() {
         return this.distanceInUse
       }
-      setFootprint(TT) {
-        this.footprint = TT
+      setFootprint(qq) {
+        this.footprint = qq
       }
-      setCeiling(TT) {
-        this.ceilingBytes = TT, this.call((() => {
-          this.memory.setCeiling(TT)
+      setCeiling(qq) {
+        this.ceilingBytes = qq, this.call((() => {
+          this.memory.setCeiling(qq)
         }), void 0)
       }
-      ceilingMayRefuse(TT) {
-        return PT(this.memory.memoryBytes(), TT, this.ceilingBytes)
+      ceilingMayRefuse(qq) {
+        return rq(this.memory.memoryBytes(), qq, this.ceilingBytes)
       }
-      reserveAtJoin(TT) {
+      reserveAtJoin(qq) {
         let {
-          targetBytes: kT,
-          leastBytes: cT
-        } = TT;
-        const lT = this.memory.memoryBytes(),
-          MT = lT + cT,
-          KT = Math.max(kT + (this.ballastOn() ? IT : 0), MT),
-          OT = this.call((() => this.memory.reserveUpFront(KT) ? "target" : KT > MT && this.memory.reserveUpFront(MT) ? "least" : "none"), "none");
+          targetBytes: Eq,
+          leastBytes: gq
+        } = qq;
+        const Yq = this.memory.memoryBytes(),
+          lq = Yq + gq,
+          Oq = Math.max(Eq + (this.ballastOn() ? uq : 0), lq),
+          mq = this.call((() => this.memory.reserveUpFront(Oq) ? "target" : Oq > lq && this.memory.reserveUpFront(lq) ? "least" : "none"), "none");
         if (this.stopped) return !1;
-        if ("target" !== OT) {
-          const TT = "least" === OT ? `took ${MT} bytes instead` : "frames grow it in steps";
-          console.warn(`[bloxd-wasm-client] wasm memory: the join's reserve to ${KT} bytes was refused at ${lT} bytes; ${TT}`)
+        if ("target" !== mq) {
+          const qq = "least" === mq ? `took ${lq} bytes instead` : "frames grow it in steps";
+          console.warn(`[bloxd-wasm-client] wasm memory: the join's reserve to ${Oq} bytes was refused at ${Yq} bytes; ${qq}`)
         }
-        return this.joinReserveTaken = OT, this.takePressure(), this.takeBallast(this.clock.now()), this.refreshStats(), "target" !== OT && this.shedFor("joinReserve"), "none" !== OT
+        return this.joinReserveTaken = mq, this.takePressure(), this.takeBallast(this.clock.now()), this.refreshStats(), "target" !== mq && this.shedFor("joinReserve"), "none" !== mq
       }
       afterFrame() {
         if (this.stopped) return;
-        const TT = this.clock.now(),
-          kT = null !== this.stepsHeldUntil && TT >= this.stepsHeldUntil;
-        if (kT && (this.stepsHeldUntil = null), this.takePressure() && null === this.stepsHeldUntil && !this.stepsRefused && this.shedFor("allocation"), this.stopped) return;
-        if (null === this.stepsHeldUntil && TT >= this.ballastCheckAt && (this.takeBallast(TT), this.stopped)) return;
-        const cT = this.stepsRefused || null !== this.stepsHeldUntil ? "none" : this.call((() => this.memory.lowWater()), "none"),
-          lT = kT && "now" === cT ? "none" : cT,
+        const qq = this.clock.now(),
+          Eq = null !== this.stepsHeldUntil && qq >= this.stepsHeldUntil;
+        if (Eq && (this.stepsHeldUntil = null), this.takePressure() && null === this.stepsHeldUntil && !this.stepsRefused && this.shedFor("allocation"), this.stopped) return;
+        if (null === this.stepsHeldUntil && qq >= this.ballastCheckAt && (this.takeBallast(qq), this.stopped)) return;
+        const gq = this.stepsRefused || null !== this.stepsHeldUntil ? "none" : this.call((() => this.memory.lowWater()), "none"),
+          Yq = Eq && "now" === gq ? "none" : gq,
           {
-            requestIdle: MT
+            requestIdle: lq
           } = this.clock;
-        "now" === lT || null !== this.pendingSince && TT - this.pendingSince >= 500 ? this.step() : "idle" === lT && null === this.pendingSince && (null === MT ? this.step() : (this.pendingSince = TT, MT((() => {
+        "now" === Yq || null !== this.pendingSince && qq - this.pendingSince >= 500 ? this.step() : "idle" === Yq && null === this.pendingSince && (null === lq ? this.step() : (this.pendingSince = qq, lq((() => {
           null !== this.pendingSince && this.step()
-        })))), TT - this.statsAt >= 1e3 && (this.statsAt = TT, this.refreshStats(), this.checkFootprint())
+        })))), qq - this.statsAt >= 1e3 && (this.statsAt = qq, this.refreshStats(), this.checkFootprint())
       }
       refreshStats() {
         this.call((() => {
-          var TT, kT;
-          (this.main = this.memory.stats(), this.peakStoredChunks = this.readPeakStoredChunks(), this.sheds > 0 && null !== this.shedding) && (this.distanceInUse = null !== (kT = this.shedding.readDistanceInUse()) && void 0 !== kT ? kT : this.distanceInUse);
-          null === (TT = this.footprint) || void 0 === TT || TT.read(this.memory.memoryBytes() + this.workersMemoryBytes())
+          var qq, Eq;
+          (this.main = this.memory.stats(), this.peakStoredChunks = this.readPeakStoredChunks(), this.sheds > 0 && null !== this.shedding) && (this.distanceInUse = null !== (Eq = this.shedding.readDistanceInUse()) && void 0 !== Eq ? Eq : this.distanceInUse);
+          null === (qq = this.footprint) || void 0 === qq || qq.read(this.memory.memoryBytes() + this.workersMemoryBytes())
         }), void 0)
       }
       stop() {
         this.stopped = !0, this.pendingSince = null
       }
-      noteMeshWorker(TT, kT) {
-        this.noteWorker(`Mesh${TT}`, kT)
+      noteMeshWorker(qq, Eq) {
+        this.noteWorker(`Mesh${qq}`, Eq)
       }
-      meshWorkerGone(TT) {
-        this.workerGone(`Mesh${TT}`)
+      meshWorkerGone(qq) {
+        this.workerGone(`Mesh${qq}`)
       }
-      noteWorldgen(TT) {
-        this.noteWorker("Worldgen", TT)
+      noteWorldgen(qq) {
+        this.noteWorker("Worldgen", qq)
       }
       worldgenGone() {
         this.workerGone("Worldgen")
       }
-      noteWorker(TT, kT) {
-        const cT = this.workers.get(TT);
-        null !== cT && void 0 !== cT && cT.gone && (this.replacedRefusals.reserves += cT.stats.reservesRefused, this.replacedRefusals.allocations += cT.stats.allocationsRefused), this.workers.set(TT, {
-          stats: kT,
+      noteWorker(qq, Eq) {
+        const gq = this.workers.get(qq);
+        null !== gq && void 0 !== gq && gq.gone && (this.replacedRefusals.reserves += gq.stats.reservesRefused, this.replacedRefusals.allocations += gq.stats.allocationsRefused), this.workers.set(qq, {
+          stats: Eq,
           gone: !1
         })
       }
-      workerGone(TT) {
-        const kT = this.workers.get(TT);
-        kT && (kT.gone = !0)
+      workerGone(qq) {
+        const Eq = this.workers.get(qq);
+        Eq && (Eq.gone = !0)
       }
       details() {
-        var TT, kT;
-        const cT = {
-          wasmMemoryNow: `${(0,lT.m)(this.memory.memoryBytes())} MiB`
+        var qq, Eq;
+        const gq = {
+          wasmMemoryNow: `${(0,Yq.k)(this.memory.memoryBytes())} MiB`
         };
-        null !== this.joinReserveTaken && (cT.wasmMemoryJoinReserve = this.joinReserveTaken), this.sheds > 0 && (cT.wasmMemoryShed = `${this.sheds}, chunk cap ${this.shedCap}`);
-        const MT = this.main;
-        if (MT) {
-          cT.wasmMemoryMain = bT(MT);
-          const TT = Math.max(0, MT.peakLiveBytes - this.ballastPeakBytes),
-            kT = 0 === this.peakStoredChunks ? "-" : (TT / this.peakStoredChunks / lT.d).toFixed(1);
-          cT.wasmMemoryChunks = `peak stored ${this.peakStoredChunks}, peak live per stored chunk ${kT} KiB`
+        null !== this.joinReserveTaken && (gq.wasmMemoryJoinReserve = this.joinReserveTaken), this.sheds > 0 && (gq.wasmMemoryShed = `${this.sheds}, chunk cap ${this.shedCap}`);
+        const lq = this.main;
+        if (lq) {
+          gq.wasmMemoryMain = nq(lq);
+          const qq = Math.max(0, lq.peakLiveBytes - this.ballastPeakBytes),
+            Eq = 0 === this.peakStoredChunks ? "-" : (qq / this.peakStoredChunks / Yq.d).toFixed(1);
+          gq.wasmMemoryChunks = `peak stored ${this.peakStoredChunks}, peak live per stored chunk ${Eq} KiB`
         }
-        for (const [lT, {
-            stats: OT,
-            gone: yT
-          }] of this.workers) cT[`wasmMemory${lT}`] = bT(OT) + (yT ? " (gone)" : "");
-        const KT = null !== (TT = null === (kT = this.footprint) || void 0 === kT ? void 0 : kT.describe()) && void 0 !== TT ? TT : null;
-        return null !== KT && (cT.wasmMemoryFootprint = KT), cT
+        for (const [Yq, {
+            stats: mq,
+            gone: xq
+          }] of this.workers) gq[`wasmMemory${Yq}`] = nq(mq) + (xq ? " (gone)" : "");
+        const Oq = null !== (qq = null === (Eq = this.footprint) || void 0 === Eq ? void 0 : Eq.describe()) && void 0 !== qq ? qq : null;
+        return null !== Oq && (gq.wasmMemoryFootprint = Oq), gq
       }
       pageKillSnapshot() {
-        var TT, kT, cT, MT, KT;
-        let OT = (null !== (TT = null === (kT = this.main) || void 0 === kT ? void 0 : kT.reservesRefused) && void 0 !== TT ? TT : 0) + this.replacedRefusals.reserves,
-          yT = (null !== (cT = null === (MT = this.main) || void 0 === MT ? void 0 : MT.allocationsRefused) && void 0 !== cT ? cT : 0) + this.replacedRefusals.allocations;
+        var qq, Eq, gq, lq, Oq;
+        let mq = (null !== (qq = null === (Eq = this.main) || void 0 === Eq ? void 0 : Eq.reservesRefused) && void 0 !== qq ? qq : 0) + this.replacedRefusals.reserves,
+          xq = (null !== (gq = null === (lq = this.main) || void 0 === lq ? void 0 : lq.allocationsRefused) && void 0 !== gq ? gq : 0) + this.replacedRefusals.allocations;
         for (const {
-            stats: lT
+            stats: Yq
           }
-          of this.workers.values()) OT += lT.reservesRefused, yT += lT.allocationsRefused;
+          of this.workers.values()) mq += Yq.reservesRefused, xq += Yq.allocationsRefused;
         return {
-          wasmMainMiB: Number((0, lT.m)(this.memory.memoryBytes())),
-          wasmWorkersMiB: Number((0, lT.m)(this.workersMemoryBytes())),
+          wasmMainMiB: Number((0, Yq.k)(this.memory.memoryBytes())),
+          wasmWorkersMiB: Number((0, Yq.k)(this.workersMemoryBytes())),
           peakStoredChunks: this.peakStoredChunks,
-          refusedReserves: OT,
-          refusedAllocations: yT,
+          refusedReserves: mq,
+          refusedAllocations: xq,
           sheds: this.sheds,
-          ...null === (KT = this.footprint) || void 0 === KT ? void 0 : KT.snapshot()
+          ...null === (Oq = this.footprint) || void 0 === Oq ? void 0 : Oq.snapshot()
         }
       }
       workersMemoryBytes() {
-        let TT = 0;
+        let qq = 0;
         for (const {
-            stats: kT,
-            gone: cT
+            stats: Eq,
+            gone: gq
           }
-          of this.workers.values()) TT += cT ? 0 : kT.memoryBytes;
-        return TT
+          of this.workers.values()) qq += gq ? 0 : Eq.memoryBytes;
+        return qq
       }
       checkFootprint() {
         null === this.footprint || null === this.shedding || this.stepsRefused || null !== this.stepsHeldUntil || this.footprint.takeShed() && this.shedFor("footprint")
       }
       step() {
-        this.pendingSince = null, this.call((() => this.memory.reserveAhead(xT)), !0) || (null === this.shedding ? this.stopSteps("a step ahead was refused (the ceiling, or the browser)") : this.shedFor("step"))
+        this.pendingSince = null, this.call((() => this.memory.reserveAhead(cq)), !0) || (null === this.shedding ? this.stopSteps("a step ahead was refused (the ceiling, or the browser)") : this.shedFor("step"))
       }
       ballastOn() {
         return null !== this.shedding
       }
-      takeBallast(TT) {
+      takeBallast(qq) {
         if (!this.ballastOn() || null === this.joinReserveTaken) return;
-        this.ballastCheckAt = TT + 1e3;
-        const kT = this.call((() => this.memory.takeBallast()), 0);
-        this.ballastPeakBytes = Math.max(this.ballastPeakBytes, kT)
+        this.ballastCheckAt = qq + 1e3;
+        const Eq = this.call((() => this.memory.takeBallast()), 0);
+        this.ballastPeakBytes = Math.max(this.ballastPeakBytes, Eq)
       }
       takePressure() {
         return this.ballastOn() && this.call((() => this.memory.takePressure()), !1)
       }
-      stopSteps(TT) {
-        this.stepsRefused = !0, console.warn(`[bloxd-wasm-client] wasm memory: ${TT}: frames grow on demand from here`)
+      stopSteps(qq) {
+        this.stepsRefused = !0, console.warn(`[bloxd-wasm-client] wasm memory: ${qq}: frames grow on demand from here`)
       }
-      shedFor(TT) {
+      shedFor(qq) {
         const {
-          shedding: kT
+          shedding: Eq
         } = this;
-        if (null === kT) return;
+        if (null === Eq) return;
         this.pendingSince = null;
-        const cT = this.call((() => kT.shed(TT)), null);
-        this.stopped || (null !== cT ? (this.sheds++, this.shedCap = cT, this.stepsHeldUntil = this.clock.now() + 5e3, this.refreshStats(), kT.Yj(TT, this.sheds, this.details())) : AT(TT) && this.stopSteps("nothing is left to shed"))
+        const gq = this.call((() => Eq.shed(qq)), null);
+        this.stopped || (null !== gq ? (this.sheds++, this.shedCap = gq, this.stepsHeldUntil = this.clock.now() + 5e3, this.refreshStats(), Eq.SN(qq, this.sheds, this.details())) : Bq(qq) && this.stopSteps("nothing is left to shed"))
       }
-      call(TT, kT) {
-        if (this.stopped) return kT;
+      call(qq, Eq) {
+        if (this.stopped) return Eq;
         try {
-          return TT()
-        } catch (cT) {
-          return this.stop(), this.onError(cT), kT
+          return qq()
+        } catch (gq) {
+          return this.stop(), this.onError(gq), Eq
         }
       }
     }
 
-    function bT(TT) {
-      const kT = (TT, kT) => `${TT}/${(0,lT.m)(kT)}`;
-      return `memory ${(0,lT.m)(TT.memoryBytes)} live ${(0,lT.m)(TT.liveBytes)} peak ${(0,lT.m)(TT.peakLiveBytes)} unused ${(0,lT.m)(TT.unusedBytes)} ceiling ${(0,lT.m)(TT.ceilingBytes)} MiB; grows upFront ${kT(TT.grows.upFront,TT.grownBytes.upFront)} ahead ${kT(TT.grows.ahead,TT.grownBytes.ahead)} inFrame ${kT(TT.grows.onDemandInFrame,TT.grownBytes.onDemandInFrame)} other ${kT(TT.grows.onDemand,TT.grownBytes.onDemand)}; refused reserves ${TT.reservesRefused} allocations ${TT.allocationsRefused}`
+    function nq(qq) {
+      const Eq = (qq, Eq) => `${qq}/${(0,Yq.k)(Eq)}`;
+      return `memory ${(0,Yq.k)(qq.memoryBytes)} live ${(0,Yq.k)(qq.liveBytes)} peak ${(0,Yq.k)(qq.peakLiveBytes)} unused ${(0,Yq.k)(qq.unusedBytes)} ceiling ${(0,Yq.k)(qq.ceilingBytes)} MiB; grows upFront ${Eq(qq.grows.upFront,qq.grownBytes.upFront)} ahead ${Eq(qq.grows.ahead,qq.grownBytes.ahead)} inFrame ${Eq(qq.grows.onDemandInFrame,qq.grownBytes.onDemandInFrame)} other ${Eq(qq.grows.onDemand,qq.grownBytes.onDemand)}; refused reserves ${qq.reservesRefused} allocations ${qq.allocationsRefused}`
     }
   },
-  40577: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => fT,
-      h: () => xT,
-      i: () => jT,
-      k: () => AT
+  40700: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => Aq,
+      c: () => cq,
+      e: () => Nq,
+      g: () => Bq
     });
-    var lT = cT(3684),
-      MT = cT(4761),
-      KT = cT(40583),
-      OT = cT(40590),
-      yT = cT(36089);
-    const fT = 395,
-      xT = 2147483648,
-      IT = new Uint8Array(0);
-    class AT extends Error {
+    var Yq = gq(2805),
+      lq = gq(4622),
+      Oq = gq(40707),
+      mq = gq(40714),
+      xq = gq(36356);
+    const Aq = 395,
+      cq = 2147483648,
+      uq = new Uint8Array(0);
+    class Bq extends Error {
       constructor() {
         super(...arguments), this.name = "ModelRingError"
       }
     }
-    class CT extends Error {
+    class Wq extends Error {
       constructor() {
         super(...arguments), this.name = "ModelPackRefusedError"
       }
     }
-    class jT {
-      constructor(TT, kT, cT) {
-        var lT, MT, OT, yT;
-        let fT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-        this.files = TT, this.build = kT, this.onFailure = cT, this.ready = [], this.pending = new Map, this.written = new Map, this.drawn = new Map, this.undrawn = new Set, this.wj = new Map, this.keptTotal = 0, this.refusedPack = new Map, this.startupLeft = void 0, this.fetchFile = void 0, this.onWritten = void 0, this.onTaken = void 0, this.onPackFileFailed = void 0, this.refreshes = 0, this.nextSeq = 1, this.fetchFile = null !== (lT = fT.fetchFile) && void 0 !== lT ? lT : TT => (0, KT.h)(TT), this.onWritten = null !== (MT = fT.onWritten) && void 0 !== MT ? MT : null, this.onTaken = null !== (OT = fT.onTaken) && void 0 !== OT ? OT : null, this.onPackFileFailed = null !== (yT = fT.onPackFileFailed) && void 0 !== yT ? yT : null, this.startupLeft = new Set(TT.startup);
-        for (const KT of TT.startup) this.request(KT)
+    class Nq {
+      constructor(qq, Eq, gq) {
+        var Yq, lq, mq, xq;
+        let Aq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+        this.files = qq, this.build = Eq, this.onFailure = gq, this.ready = [], this.pending = new Map, this.written = new Map, this.drawn = new Map, this.undrawn = new Set, this.jN = new Map, this.keptTotal = 0, this.refusedPack = new Map, this.startupLeft = void 0, this.fetchFile = void 0, this.onWritten = void 0, this.onTaken = void 0, this.onPackFileFailed = void 0, this.refreshes = 0, this.nextSeq = 1, this.fetchFile = null !== (Yq = Aq.fetchFile) && void 0 !== Yq ? Yq : qq => (0, Oq.i)(qq), this.onWritten = null !== (lq = Aq.onWritten) && void 0 !== lq ? lq : null, this.onTaken = null !== (mq = Aq.onTaken) && void 0 !== mq ? mq : null, this.onPackFileFailed = null !== (xq = Aq.onPackFileFailed) && void 0 !== xq ? xq : null, this.startupLeft = new Set(qq.startup);
+        for (const Oq of qq.startup) this.request(Oq)
       }
       get startupDone() {
         return 0 === this.startupLeft.size
@@ -2280,364 +2282,364 @@ export const modules = {
       get keptBytes() {
         return this.keptTotal
       }
-      drawnUrl(TT) {
-        return this.drawn.get(TT)
+      drawnUrl(qq) {
+        return this.drawn.get(qq)
       }
-      request(TT) {
-        const kT = this.pending.get(TT);
-        if (!0 === (null === kT || void 0 === kT ? void 0 : kT.ask)) return;
-        const cT = this.Ij(TT, !0);
-        cT.recheck = void 0 !== kT;
-        const lT = this.drawn.get(TT);
-        if (void 0 !== lT) return cT.ty = !0, cT.recheck = !0, void this.fetch(TT, cT, lT);
-        this.fetchWanted(TT, cT)
+      request(qq) {
+        const Eq = this.pending.get(qq);
+        if (!0 === (null === Eq || void 0 === Eq ? void 0 : Eq.ask)) return;
+        const gq = this.gN(qq, !0);
+        gq.recheck = void 0 !== Eq;
+        const Yq = this.drawn.get(qq);
+        if (void 0 !== Yq) return gq.Fc = !0, gq.recheck = !0, void this.fetch(qq, gq, Yq);
+        this.fetchWanted(qq, gq)
       }
       async refresh() {
-        const TT = ++this.refreshes,
-          kT = new Set;
-        for (const OT of [this.drawn.keys(), this.written.keys(), this.pending.keys(), this.undrawn.values()])
-          for (const TT of OT) 0 === (TT & KT.e) && kT.add(TT);
-        const cT = [...kT];
-        let lT;
+        const qq = ++this.refreshes,
+          Eq = new Set;
+        for (const mq of [this.drawn.keys(), this.written.keys(), this.pending.keys(), this.undrawn.values()])
+          for (const qq of mq) 0 === (qq & Oq.h) && Eq.add(qq);
+        const gq = [...Eq];
+        let Yq;
         try {
-          lT = await Promise.all(cT.map((TT => this.wanted(TT))))
+          Yq = await Promise.all(gq.map((qq => this.wanted(qq))))
         } catch {
           return null
         }
-        if (TT !== this.refreshes) return null;
-        const MT = {
+        if (qq !== this.refreshes) return null;
+        const lq = {
           resent: 0,
           refetched: 0,
-          delivered: cT.filter((TT => this.drawn.has(TT))).length
+          delivered: gq.filter((qq => this.drawn.has(qq))).length
         };
-        return cT.forEach(((TT, kT) => {
+        return gq.forEach(((qq, Eq) => {
           const {
-            url: cT,
-            inPlaceOf: KT
-          } = lT[kT], OT = this.pending.get(TT);
-          if (void 0 !== OT) {
-            if (OT.ty || void 0 === OT.url) return void(OT.recheck = !0);
-            if (OT.url === cT) return;
-            MT.refetched++;
-            const kT = this.Ij(TT, OT.ask);
-            return kT.recheck = OT.recheck, void this.fetch(TT, kT, cT, KT)
+            url: gq,
+            inPlaceOf: Oq
+          } = Yq[Eq], mq = this.pending.get(qq);
+          if (void 0 !== mq) {
+            if (mq.Fc || void 0 === mq.url) return void(mq.recheck = !0);
+            if (mq.url === gq) return;
+            lq.refetched++;
+            const Eq = this.gN(qq, mq.ask);
+            return Eq.recheck = mq.recheck, void this.fetch(qq, Eq, gq, Oq)
           }
-          const yT = this.written.get(TT);
-          void 0 === yT ? this.drawn.get(TT) !== (null !== cT && void 0 !== cT ? cT : void 0) && (MT.resent++, this.fetch(TT, this.Ij(TT, !1), cT, KT)) : yT.url !== (null !== cT && void 0 !== cT ? cT : "") && (yT.attempt.recheck = !0)
-        })), MT
+          const xq = this.written.get(qq);
+          void 0 === xq ? this.drawn.get(qq) !== (null !== gq && void 0 !== gq ? gq : void 0) && (lq.resent++, this.fetch(qq, this.gN(qq, !1), gq, Oq)) : xq.url !== (null !== gq && void 0 !== gq ? gq : "") && (xq.attempt.recheck = !0)
+        })), lq
       }
-      taken(TT, kT) {
-        const cT = new Set,
-          lT = new Set;
-        for (const MT of Array.from(kT)) 0 === (MT & xT) ? cT.add(MT) : lT.add((MT & ~xT) >>> 0);
-        for (const [MT, KT] of this.written) KT.seq > TT || (this.written.delete(MT), cT.has(KT.seq) ? this.refusedFile(MT, KT) : this.takenFile(MT, KT, !KT.empty && !lT.has(KT.seq)))
+      taken(qq, Eq) {
+        const gq = new Set,
+          Yq = new Set;
+        for (const lq of Array.from(Eq)) 0 === (lq & cq) ? gq.add(lq) : Yq.add((lq & ~cq) >>> 0);
+        for (const [lq, Oq] of this.written) Oq.seq > qq || (this.written.delete(lq), gq.has(Oq.seq) ? this.refusedFile(lq, Oq) : this.takenFile(lq, Oq, !Oq.empty && !Yq.has(Oq.seq)))
       }
-      takenFile(TT, kT, cT) {
+      takenFile(qq, Eq, gq) {
         const {
-          attempt: lT
-        } = kT;
-        if (cT) {
-          var MT;
-          this.drawn.set(TT, kT.url), this.undrawn.delete(TT), void 0 !== lT.inPlaceOf ? this.refusedPack.set(TT, lT.inPlaceOf) : lT.ty || this.refusedPack.delete(TT), null === (MT = this.onTaken) || void 0 === MT || MT.call(this, TT, !0);
-          const cT = this.pending.get(TT);
-          if (!0 === (null === cT || void 0 === cT ? void 0 : cT.ty) && cT.url !== kT.url) {
-            const cT = this.Ij(TT, !0);
-            cT.ty = !0, cT.recheck = !0, this.fetch(TT, cT, kT.url)
+          attempt: Yq
+        } = Eq;
+        if (gq) {
+          var lq;
+          this.drawn.set(qq, Eq.url), this.undrawn.delete(qq), void 0 !== Yq.inPlaceOf ? this.refusedPack.set(qq, Yq.inPlaceOf) : Yq.Fc || this.refusedPack.delete(qq), null === (lq = this.onTaken) || void 0 === lq || lq.call(this, qq, !0);
+          const gq = this.pending.get(qq);
+          if (!0 === (null === gq || void 0 === gq ? void 0 : gq.Fc) && gq.url !== Eq.url) {
+            const gq = this.gN(qq, !0);
+            gq.Fc = !0, gq.recheck = !0, this.fetch(qq, gq, Eq.url)
           }
         } else {
-          var KT;
-          this.drawn.has(TT) || this.undrawn.add(TT), null === (KT = this.onTaken) || void 0 === KT || KT.call(this, TT, !1)
+          var Oq;
+          this.drawn.has(qq) || this.undrawn.add(qq), null === (Oq = this.onTaken) || void 0 === Oq || Oq.call(this, qq, !1)
         }
-        lT.recheck && this.resendIfChanged(TT)
+        Yq.recheck && this.resendIfChanged(qq)
       }
-      refusedFile(TT, kT) {
-        var cT, lT;
-        if (null === (cT = this.onTaken) || void 0 === cT || cT.call(this, TT, !1), this.refusedPack.set(TT, kT.url), this.pending.has(TT)) return void(null === (lT = this.onPackFileFailed) || void 0 === lT || lT.call(this, TT, vT(kT.url)));
-        const MT = this.Ij(TT, kT.attempt.ask);
-        MT.recheck = kT.attempt.recheck, this.afterRefusal(TT, MT, kT.url)
+      refusedFile(qq, Eq) {
+        var gq, Yq;
+        if (null === (gq = this.onTaken) || void 0 === gq || gq.call(this, qq, !1), this.refusedPack.set(qq, Eq.url), this.pending.has(qq)) return void(null === (Yq = this.onPackFileFailed) || void 0 === Yq || Yq.call(this, qq, aq(Eq.url)));
+        const lq = this.gN(qq, Eq.attempt.ask);
+        lq.recheck = Eq.attempt.recheck, this.afterRefusal(qq, lq, Eq.url)
       }
-      async afterRefusal(TT, kT, cT) {
-        var lT;
-        let MT;
+      async afterRefusal(qq, Eq, gq) {
+        var Yq;
+        let lq;
         try {
-          MT = await this.wanted(TT)
-        } catch (KT) {
-          return void(this.pending.get(TT) === kT && this.giveUp(TT, kT, cT, KT))
+          lq = await this.wanted(qq)
+        } catch (Oq) {
+          return void(this.pending.get(qq) === Eq && this.giveUp(qq, Eq, gq, Oq))
         }
-        this.pending.get(TT) === kT && (MT.inPlaceOf !== cT ? kT.ask || (null !== (lT = MT.url) && void 0 !== lT ? lT : void 0) !== this.drawn.get(TT) ? this.fetch(TT, kT, MT.url, MT.inPlaceOf) : this.pending.delete(TT) : this.fallBack(TT, kT, cT, vT(cT)))
+        this.pending.get(qq) === Eq && (lq.inPlaceOf !== gq ? Eq.ask || (null !== (Yq = lq.url) && void 0 !== Yq ? Yq : void 0) !== this.drawn.get(qq) ? this.fetch(qq, Eq, lq.url, lq.inPlaceOf) : this.pending.delete(qq) : this.fallBack(qq, Eq, gq, aq(gq)))
       }
-      Ij(TT, kT) {
-        const cT = {
+      gN(qq, Eq) {
+        const gq = {
           url: void 0,
-          ask: kT,
-          ty: !1,
+          ask: Eq,
+          Fc: !1,
           recheck: !1,
           inPlaceOf: void 0
         };
-        this.pending.set(TT, cT);
-        for (let lT = this.ready.length - 1; lT >= 0; lT--) this.ready[lT].file === TT && this.ready.splice(lT, 1);
-        return cT
+        this.pending.set(qq, gq);
+        for (let Yq = this.ready.length - 1; Yq >= 0; Yq--) this.ready[Yq].file === qq && this.ready.splice(Yq, 1);
+        return gq
       }
-      async wanted(TT) {
-        const kT = await this.files.url(TT);
-        return null !== kT && this.refusedPack.get(TT) === kT ? {
-          url: await this.files.shippedUrl(TT),
-          inPlaceOf: kT
+      async wanted(qq) {
+        const Eq = await this.files.url(qq);
+        return null !== Eq && this.refusedPack.get(qq) === Eq ? {
+          url: await this.files.shippedUrl(qq),
+          inPlaceOf: Eq
         } : {
-          url: kT,
+          url: Eq,
           inPlaceOf: void 0
         }
       }
-      fetchWanted(TT, kT) {
-        const cT = this.files.url(TT);
-        cT instanceof Promise ? cT.then((cT => {
-          this.fetchFound(TT, kT, cT)
-        }), (cT => {
-          this.pending.get(TT) === kT && this.giveUp(TT, kT, "", cT)
-        })) : this.fetchFound(TT, kT, cT)
+      fetchWanted(qq, Eq) {
+        const gq = this.files.url(qq);
+        gq instanceof Promise ? gq.then((gq => {
+          this.fetchFound(qq, Eq, gq)
+        }), (gq => {
+          this.pending.get(qq) === Eq && this.giveUp(qq, Eq, "", gq)
+        })) : this.fetchFound(qq, Eq, gq)
       }
-      fetchFound(TT, kT, cT) {
-        null !== cT && this.refusedPack.get(TT) === cT ? Promise.resolve(this.files.shippedUrl(TT)).then((lT => {
-          this.fetch(TT, kT, lT, cT)
-        }), (lT => {
-          this.pending.get(TT) === kT && this.giveUp(TT, kT, cT, lT)
-        })) : this.fetch(TT, kT, cT)
+      fetchFound(qq, Eq, gq) {
+        null !== gq && this.refusedPack.get(qq) === gq ? Promise.resolve(this.files.shippedUrl(qq)).then((Yq => {
+          this.fetch(qq, Eq, Yq, gq)
+        }), (Yq => {
+          this.pending.get(qq) === Eq && this.giveUp(qq, Eq, gq, Yq)
+        })) : this.fetch(qq, Eq, gq)
       }
-      fetch(TT, kT, cT, lT) {
-        this.pending.get(TT) === kT && (kT.url = cT, kT.inPlaceOf = lT, null !== cT ? this.load(TT, kT, cT) : this.buildFile(TT, kT, "", IT))
+      fetch(qq, Eq, gq, Yq) {
+        this.pending.get(qq) === Eq && (Eq.url = gq, Eq.inPlaceOf = Yq, null !== gq ? this.load(qq, Eq, gq) : this.buildFile(qq, Eq, "", uq))
       }
-      load(TT, kT, cT) {
-        const lT = this.wj.get(TT);
-        (null === lT || void 0 === lT ? void 0 : lT.url) !== cT ? this.fetchFile(cT).then((lT => {
-          var MT, KT;
-          this.pending.get(TT) === kT && (this.keptTotal += lT.byteLength - (null !== (MT = null === (KT = this.wj.get(TT)) || void 0 === KT ? void 0 : KT.glb.byteLength) && void 0 !== MT ? MT : 0), this.wj.set(TT, {
-            url: cT,
-            glb: lT
-          }), this.buildFile(TT, kT, cT, lT))
-        }), (lT => {
-          this.pending.get(TT) === kT && this.fallBack(TT, kT, cT, lT)
-        })) : this.buildFile(TT, kT, cT, lT.glb)
+      load(qq, Eq, gq) {
+        const Yq = this.jN.get(qq);
+        (null === Yq || void 0 === Yq ? void 0 : Yq.url) !== gq ? this.fetchFile(gq).then((Yq => {
+          var lq, Oq;
+          this.pending.get(qq) === Eq && (this.keptTotal += Yq.byteLength - (null !== (lq = null === (Oq = this.jN.get(qq)) || void 0 === Oq ? void 0 : Oq.glb.byteLength) && void 0 !== lq ? lq : 0), this.jN.set(qq, {
+            url: gq,
+            glb: Yq
+          }), this.buildFile(qq, Eq, gq, Yq))
+        }), (Yq => {
+          this.pending.get(qq) === Eq && this.fallBack(qq, Eq, gq, Yq)
+        })) : this.buildFile(qq, Eq, gq, Yq.glb)
       }
-      buildFile(TT, kT, cT, lT) {
-        let MT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const OT = lT.byteLength > 0 && (0, KT.l)(cT) ? (TT | KT.c) >>> 0 : TT;
-        this.queueRecord(TT, kT, cT, lT, this.build(OT, lT), MT)
+      buildFile(qq, Eq, gq, Yq) {
+        let lq = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const mq = Yq.byteLength > 0 && (0, Oq.l)(gq) ? (qq | Oq.d) >>> 0 : qq;
+        this.queueRecord(qq, Eq, gq, Yq, this.build(mq, Yq), lq)
       }
-      queueRecord(TT, kT, cT, lT, KT, yT) {
-        KT.then((KT => {
-          if (this.pending.get(TT) !== kT) return;
-          if (MT.p + (0, MT.ke)(KT.byteLength) > MT.zc) return void this.ringRefused(TT, kT, cT, new AT(`${tT(cT)}'s record is ${KT.byteLength-OT.e} bytes, past the cmd ring's ${MT.zc}`), yT);
-          const fT = {
-            file: TT,
-            url: cT,
-            payload: KT,
-            glb: lT,
-            attempt: kT
+      queueRecord(qq, Eq, gq, Yq, Oq, xq) {
+        Oq.then((Oq => {
+          if (this.pending.get(qq) !== Eq) return;
+          if (lq.m + (0, lq.Ce)(Oq.byteLength) > lq.Lc) return void this.ringRefused(qq, Eq, gq, new Bq(`${Vq(gq)}'s record is ${Oq.byteLength-mq.c} bytes, past the cmd ring's ${lq.Lc}`), xq);
+          const Aq = {
+            file: qq,
+            url: gq,
+            payload: Oq,
+            glb: Yq,
+            attempt: Eq
           };
-          yT ? this.ready.unshift(fT) : this.ready.push(fT)
+          xq ? this.ready.unshift(Aq) : this.ready.push(Aq)
         }))
       }
-      async fallBack(TT, kT, cT, lT) {
-        var MT;
-        let KT = null,
-          OT = lT;
+      async fallBack(qq, Eq, gq, Yq) {
+        var lq;
+        let Oq = null,
+          mq = Yq;
         try {
-          KT = await this.files.shippedUrl(TT)
-        } catch (yT) {
-          OT = yT
+          Oq = await this.files.shippedUrl(qq)
+        } catch (xq) {
+          mq = xq
         }
-        this.pending.get(TT) === kT && (null !== KT && KT !== cT ? (null === (MT = this.onPackFileFailed) || void 0 === MT || MT.call(this, TT, lT), kT.ask || this.drawn.get(TT) !== KT ? (kT.url = KT, kT.inPlaceOf = cT, this.load(TT, kT, KT)) : this.pending.delete(TT)) : this.giveUp(TT, kT, cT, OT))
+        this.pending.get(qq) === Eq && (null !== Oq && Oq !== gq ? (null === (lq = this.onPackFileFailed) || void 0 === lq || lq.call(this, qq, Yq), Eq.ask || this.drawn.get(qq) !== Oq ? (Eq.url = Oq, Eq.inPlaceOf = gq, this.load(qq, Eq, Oq)) : this.pending.delete(qq)) : this.giveUp(qq, Eq, gq, mq))
       }
-      ringRefused(TT, kT, cT, lT) {
-        let MT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        (0, KT.l)(cT) ? this.fallBack(TT, kT, cT, lT): this.giveUp(TT, kT, cT, lT, MT)
+      ringRefused(qq, Eq, gq, Yq) {
+        let lq = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        (0, Oq.l)(gq) ? this.fallBack(qq, Eq, gq, Yq): this.giveUp(qq, Eq, gq, Yq, lq)
       }
-      giveUp(TT, kT, cT, MT) {
-        let KT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+      giveUp(qq, Eq, gq, lq) {
+        let Oq = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
         this.onFailure({
-          file: TT,
-          url: tT(cT),
-          error: MT,
-          startup: this.startupLeft.has(TT)
-        }), kT.ask || !this.drawn.has(TT) ? (0, lT.Z)(MT) ? this.queueRecord(TT, kT, cT, IT, Promise.resolve((0, OT.l)(TT, (0, yT.k)(MT))), KT) : this.buildFile(TT, kT, cT, IT, KT) : this.pending.delete(TT)
+          file: qq,
+          url: Vq(gq),
+          error: lq,
+          startup: this.startupLeft.has(qq)
+        }), Eq.ask || !this.drawn.has(qq) ? (0, Yq.W)(lq) ? this.queueRecord(qq, Eq, gq, uq, Promise.resolve((0, mq.l)(qq, (0, xq.j)(lq))), Oq) : this.buildFile(qq, Eq, gq, uq, Oq) : this.pending.delete(qq)
       }
-      async resendIfChanged(TT) {
-        var kT;
-        if (0 !== (TT & KT.e)) return;
-        let cT;
+      async resendIfChanged(qq) {
+        var Eq;
+        if (0 !== (qq & Oq.h)) return;
+        let gq;
         try {
-          cT = await this.wanted(TT)
+          gq = await this.wanted(qq)
         } catch {
           return
-        }(null !== (kT = cT.url) && void 0 !== kT ? kT : void 0) === this.drawn.get(TT) || this.pending.has(TT) || this.written.has(TT) || this.fetch(TT, this.Ij(TT, !1), cT.url, cT.inPlaceOf)
+        }(null !== (Eq = gq.url) && void 0 !== Eq ? Eq : void 0) === this.drawn.get(qq) || this.pending.has(qq) || this.written.has(qq) || this.fetch(qq, this.gN(qq, !1), gq.url, gq.inPlaceOf)
       }
-      drain(TT) {
-        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        if (null === TT) return;
-        let cT = 0,
-          lT = 0;
-        for (; lT < this.ready.length && cT < 262144;) {
-          const yT = this.ready[lT];
-          if (this.written.has(yT.file)) {
-            lT++;
+      drain(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        if (null === qq) return;
+        let gq = 0,
+          Yq = 0;
+        for (; Yq < this.ready.length && gq < 262144;) {
+          const xq = this.ready[Yq];
+          if (this.written.has(xq.file)) {
+            Yq++;
             continue
           }
-          const IT = this.nextSeq;
-          new DataView(yT.payload.buffer, yT.payload.byteOffset, yT.payload.byteLength).setUint32(OT.h, IT, !0);
-          const CT = yT.attempt.ty && yT.glb.byteLength > 0 && this.drawn.get(yT.file) === yT.url;
-          if (TT(fT, CT ? 1 : 0, yT.payload)) {
-            if (this.nextSeq = IT >= xT - 1 ? 1 : IT + 1, this.ready.splice(lT, 1), cT += yT.payload.byteLength, this.pending.delete(yT.file), this.startupLeft.delete(yT.file), this.written.set(yT.file, {
-                seq: IT,
-                url: yT.url,
-                empty: 0 === yT.glb.byteLength,
-                attempt: yT.attempt
-              }), yT.glb.byteLength > 0) try {
-              var MT;
-              null === (MT = this.onWritten) || void 0 === MT || MT.call(this, yT.file, yT.glb)
-            } catch (KT) {
-              console.warn("ModelFeed: reading the file's images failed", KT)
+          const uq = this.nextSeq;
+          new DataView(xq.payload.buffer, xq.payload.byteOffset, xq.payload.byteLength).setUint32(mq.f, uq, !0);
+          const Wq = xq.attempt.Fc && xq.glb.byteLength > 0 && this.drawn.get(xq.file) === xq.url;
+          if (qq(Aq, Wq ? 1 : 0, xq.payload)) {
+            if (this.nextSeq = uq >= cq - 1 ? 1 : uq + 1, this.ready.splice(Yq, 1), gq += xq.payload.byteLength, this.pending.delete(xq.file), this.startupLeft.delete(xq.file), this.written.set(xq.file, {
+                seq: uq,
+                url: xq.url,
+                empty: 0 === xq.glb.byteLength,
+                attempt: xq.attempt
+              }), xq.glb.byteLength > 0) try {
+              var lq;
+              null === (lq = this.onWritten) || void 0 === lq || lq.call(this, xq.file, xq.glb)
+            } catch (Oq) {
+              console.warn("ModelFeed: reading the file's images failed", Oq)
             }
           } else {
-            if (null === kT || 0 === yT.glb.byteLength || kT(yT.payload.byteLength)) return;
-            this.ready.splice(lT, 1);
-            const TT = new AT(`${tT(yT.url)}'s record is ${yT.payload.byteLength-OT.e} bytes, more than the cmd ring can grow to take`);
-            this.ringRefused(yT.file, yT.attempt, yT.url, TT, !0)
+            if (null === Eq || 0 === xq.glb.byteLength || Eq(xq.payload.byteLength)) return;
+            this.ready.splice(Yq, 1);
+            const qq = new Bq(`${Vq(xq.url)}'s record is ${xq.payload.byteLength-mq.c} bytes, more than the cmd ring can grow to take`);
+            this.ringRefused(xq.file, xq.attempt, xq.url, qq, !0)
           }
         }
       }
     }
 
-    function vT(TT) {
-      return new CT(`presentation refused ${tT(TT)}`)
+    function aq(qq) {
+      return new Wq(`presentation refused ${Vq(qq)}`)
     }
 
-    function tT(TT) {
-      return TT.startsWith("data:") ? `${TT.slice(0,Math.min(Math.max(TT.indexOf(","),5),64))},...` : TT
+    function Vq(qq) {
+      return qq.startsWith("data:") ? `${qq.slice(0,Math.min(Math.max(qq.indexOf(","),5),64))},...` : qq
     }
   },
-  40583: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => OT,
-      e: () => KT,
-      h: () => IT,
-      l: () => yT,
-      p: () => xT,
-      q: () => fT
+  40707: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => mq,
+      h: () => Oq,
+      i: () => uq,
+      l: () => xq,
+      o: () => cq,
+      s: () => Aq
     });
-    var lT = cT(3684),
-      MT = cT(3146);
-    const KT = 2147483648,
-      OT = 1073741824;
+    var Yq = gq(2805),
+      lq = gq(3108);
+    const Oq = 2147483648,
+      mq = 1073741824;
 
-    function yT(TT) {
-      return TT.startsWith("data:")
+    function xq(qq) {
+      return qq.startsWith("data:")
     }
 
-    function fT(TT) {
+    function Aq(qq) {
       let {
-        onTableFailed: kT,
-        packUrl: cT
+        onTableFailed: Eq,
+        packUrl: gq
       } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      const lT = xT();
-      lT.catch((TT => {
-        null === kT || void 0 === kT || kT(TT)
+      const Yq = cq();
+      Yq.catch((qq => {
+        null === Eq || void 0 === Eq || Eq(qq)
       }));
-      const MT = async kT => (await lT).fileUrl((kT & ~KT) >>> 0, TT);
+      const lq = async Eq => (await Yq).fileUrl((Eq & ~Oq) >>> 0, qq);
       return {
         startup: [],
-        url: async TT => {
-          if (cT && 0 === (TT & KT)) {
-            const kT = await lT,
-              MT = kT.filePackName(TT),
-              KT = null === MT || "lifeform" === kT.fileSource(TT) ? null : cT(MT);
-            if (null !== KT) return KT
+        url: async qq => {
+          if (gq && 0 === (qq & Oq)) {
+            const Eq = await Yq,
+              lq = Eq.filePackName(qq),
+              Oq = null === lq || "lifeform" === Eq.fileSource(qq) ? null : gq(lq);
+            if (null !== Oq) return Oq
           }
-          return MT(TT)
+          return lq(qq)
         },
-        shippedUrl: MT
+        shippedUrl: lq
       }
     }
 
-    function xT() {
-      return cT.e(41).then((() => cT(42873)))
+    function cq() {
+      return gq.e(41).then((() => gq(43131)))
     }
-    async function IT(TT) {
-      let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-      return TT.startsWith("data:") ? (0, MT.d)(TT.slice(TT.indexOf(",") + 1), kT) : (0, lT.N)(TT, {
-        spare: kT
+    async function uq(qq) {
+      let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+      return qq.startsWith("data:") ? (0, lq.d)(qq.slice(qq.indexOf(",") + 1), Eq) : (0, Yq.P)(qq, {
+        spare: Eq
       })
     }
   },
-  40590: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => xT,
-      h: () => IT,
-      j: () => jT,
-      k: () => hT,
-      l: () => vT,
-      m: () => CT,
-      o: () => tT
+  40714: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => cq,
+      f: () => uq,
+      g: () => Nq,
+      k: () => dq,
+      l: () => aq,
+      o: () => Wq,
+      s: () => Vq
     });
-    const lT = 826427981,
-      MT = 1,
-      KT = 2,
-      OT = 44,
-      yT = 46,
-      fT = 58,
-      xT = 8,
-      IT = 4;
+    const Yq = 826427981,
+      lq = 1,
+      Oq = 2,
+      mq = 44,
+      xq = 46,
+      Aq = 58,
+      cq = 8,
+      uq = 4;
 
-    function AT(TT, kT, cT) {
-      const MT = (new TextEncoder).encode(cT),
-        KT = xT + 4 * (kT.length + 2),
-        OT = new Uint8Array(KT + (MT.byteLength + 3 & -4)),
-        yT = new DataView(OT.buffer);
-      return yT.setUint32(0, TT, !0), yT.setUint32(xT, lT, !0), kT.forEach(((TT, kT) => {
-        yT.setUint32(xT + 4 * (kT + 1), TT, !0)
-      })), yT.setUint32(KT - 4, MT.byteLength, !0), OT.set(MT, KT), OT
+    function Bq(qq, Eq, gq) {
+      const lq = (new TextEncoder).encode(gq),
+        Oq = cq + 4 * (Eq.length + 2),
+        mq = new Uint8Array(Oq + (lq.byteLength + 3 & -4)),
+        xq = new DataView(mq.buffer);
+      return xq.setUint32(0, qq, !0), xq.setUint32(cq, Yq, !0), Eq.forEach(((qq, Eq) => {
+        xq.setUint32(cq + 4 * (Eq + 1), qq, !0)
+      })), xq.setUint32(Oq - 4, lq.byteLength, !0), mq.set(lq, Oq), mq
     }
 
-    function CT(TT, kT) {
-      return AT(TT, [KT], kT)
+    function Wq(qq, Eq) {
+      return Bq(qq, [Oq], Eq)
     }
 
-    function jT(TT, kT) {
-      return AT(TT, [MT, yT], kT)
+    function Nq(qq, Eq) {
+      return Bq(qq, [lq, xq], Eq)
     }
 
-    function vT(TT, kT) {
-      return AT(TT, [MT, fT], kT)
+    function aq(qq, Eq) {
+      return Bq(qq, [lq, Aq], Eq)
     }
 
-    function tT(TT, kT) {
-      return AT(TT, [MT, OT], kT)
+    function Vq(qq, Eq) {
+      return Bq(qq, [lq, mq], Eq)
     }
 
-    function hT(TT) {
-      const kT = xT;
-      if (TT.byteLength < kT + 12) return !1;
-      const cT = new DataView(TT.buffer, TT.byteOffset, TT.byteLength);
-      return cT.getUint32(kT, !0) === lT && cT.getUint32(kT + 4, !0) === MT && cT.getUint32(kT + 8, !0) === OT
+    function dq(qq) {
+      const Eq = cq;
+      if (qq.byteLength < Eq + 12) return !1;
+      const gq = new DataView(qq.buffer, qq.byteOffset, qq.byteLength);
+      return gq.getUint32(Eq, !0) === Yq && gq.getUint32(Eq + 4, !0) === lq && gq.getUint32(Eq + 8, !0) === mq
     }
   },
-  40569: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => aT,
-      g: () => hT,
-      k: () => DT,
-      n: () => wT,
-      q: () => PT,
-      r: () => mT,
-      u: () => QT
+  40697: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => Qq,
+      f: () => dq,
+      h: () => Pq,
+      j: () => vq,
+      l: () => rq,
+      m: () => hq,
+      p: () => Hq
     });
-    var lT = cT(4769),
-      MT = cT(40473);
-    const KT = 1,
-      OT = 18,
-      yT = 19,
-      fT = 20,
-      xT = {
-        [KT]: "link",
+    var Yq = gq(4625),
+      lq = gq(40551);
+    const Oq = 1,
+      mq = 18,
+      xq = 19,
+      Aq = 20,
+      cq = {
+        [Oq]: "link",
         2: "draw",
         3: "draw base vertex",
         4: "draw no index buffer",
@@ -2650,24 +2652,24 @@ export const modules = {
         13: "draw short constant",
         15: "draw no zero buffer",
         16: "draw feedback loop",
-        [OT]: "retry linked",
-        [yT]: "fallback linked",
-        [fT]: "fallback failed",
+        [mq]: "retry linked",
+        [xq]: "fallback linked",
+        [Aq]: "fallback failed",
         32: "compile validation",
         33: "compile internal",
         34: "compile timeout"
       };
 
-    function IT(TT, kT, cT) {
-      return TT === OT ? "program retry" : TT === KT ? "program link" : TT === yT || TT === fT ? `program ${kT} ${cT}` : "program"
+    function uq(qq, Eq, gq) {
+      return qq === mq ? "program retry" : qq === Oq ? "program link" : qq === xq || qq === Aq ? `program ${Eq} ${gq}` : "program"
     }
-    const AT = {
+    const Bq = {
         1: "renderer",
         2: "sky",
         3: "meshes",
         4: "terrain"
       },
-      CT = {
+      Wq = {
         0: "transform",
         1: "object",
         2: "instance batch",
@@ -2680,14 +2682,14 @@ export const modules = {
         10: "text plane",
         11: "object chunk"
       },
-      jT = {
+      Nq = {
         1: "mesh undecodable",
         2: "part refused",
         3: "terrain ids full",
         4: "unknown terrain id",
         5: "buffer failed"
       },
-      vT = {
+      aq = {
         1: "view waited drained",
         2: "view waited capped",
         3: "none after view",
@@ -2696,16 +2698,16 @@ export const modules = {
         6: "no wait parallel links",
         7: "view shown unheld"
       },
-      tT = {
+      Vq = {
         8: "view",
         9: "minute",
         10: "loss"
       };
 
-    function hT(TT, kT) {
-      return TT === lT.e.RenderSerialLinks && void 0 !== tT[15 & kT]
+    function dq(qq, Eq) {
+      return qq === Yq.f.RenderSerialLinks && void 0 !== Vq[15 & Eq]
     }
-    const NT = {
+    const jq = {
       1280: "invalid enum",
       1281: "invalid value",
       1282: "invalid operation",
@@ -2714,93 +2716,93 @@ export const modules = {
       37442: "context lost"
     };
 
-    function QT(TT) {
-      return String(TT).replace(/\d/g, (TT => String.fromCharCode(97 + Number(TT))))
+    function Hq(qq) {
+      return String(qq).replace(/\d/g, (qq => String.fromCharCode(97 + Number(qq))))
     }
 
-    function ST(TT, kT) {
-      var cT;
-      return null !== (cT = TT[kT]) && void 0 !== cT ? cT : QT(kT)
+    function oq(qq, Eq) {
+      var gq;
+      return null !== (gq = qq[Eq]) && void 0 !== gq ? gq : Hq(Eq)
     }
 
-    function DT() {
-      return QT((0, MT.e)())
+    function Pq() {
+      return Hq((0, lq.c)())
     }
 
-    function aT(TT, kT) {
-      switch (TT) {
-        case lT.e.RenderSceneRowNotDrawn:
+    function Qq(qq, Eq) {
+      switch (qq) {
+        case Yq.f.RenderSceneRowNotDrawn:
           return {
-            words: ` ${ST(CT,kT)}`, instance: String(kT), group: String(TT)
+            words: ` ${oq(Wq,Eq)}`, instance: String(Eq), group: String(qq)
           };
-        case lT.e.RenderChunkMeshNotDrawn: {
-          const cT = 0 === (128 & kT) ? "" : " shortage",
-            lT = kT >>> 8;
+        case Yq.f.RenderChunkMeshNotDrawn: {
+          const gq = 0 === (128 & Eq) ? "" : " shortage",
+            Yq = Eq >>> 8;
           return {
-            words: ` ${ST(jT,127&kT)}${cT}${0===lT?"":` kind ${QT(lT)}`}`,
-            instance: String(kT),
-            group: String(TT)
+            words: ` ${oq(Nq,127&Eq)}${gq}${0===Yq?"":` kind ${Hq(Yq)}`}`,
+            instance: String(Eq),
+            group: String(qq)
           }
         }
-        case lT.e.RenderInternal: {
-          const cT = ST(AT, 255 & kT),
-            lT = kT >>> 8 & 255;
-          if (0 === lT) return {
-            words: ` ${cT}`,
-            instance: String(kT),
-            group: String(TT)
+        case Yq.f.RenderInternal: {
+          const gq = oq(Bq, 255 & Eq),
+            Yq = Eq >>> 8 & 255;
+          if (0 === Yq) return {
+            words: ` ${gq}`,
+            instance: String(Eq),
+            group: String(qq)
           };
-          const MT = ST(xT, lT),
-            KT = kT >>> 16;
+          const lq = oq(cq, Yq),
+            Oq = Eq >>> 16;
           return {
-            words: ` ${cT} ${MT} program ${QT(KT)}`,
-            instance: `${cT} ${MT} ${KT}`,
-            group: IT(lT, MT, cT),
+            words: ` ${gq} ${lq} program ${Hq(Oq)}`,
+            instance: `${gq} ${lq} ${Oq}`,
+            group: uq(Yq, lq, gq),
             gpuDetails: {
-              programFailure: MT,
-              program: String(KT)
+              programFailure: lq,
+              program: String(Oq)
             }
           }
         }
-        case lT.e.RenderSerialLinks: {
-          if (hT(TT, kT)) {
-            const TT = function(TT) {
-              const kT = (kT, cT) => QT(TT >>> kT & (1 << cT) - 1),
-                cT = TT >>> 30 & 1 ? " restored" : "";
-              return `link census ${tT[15&TT]} linked ${kT(22,8)} failed ${kT(4,6)} retried ${kT(10,6)} fallback ${kT(16,6)}${cT}`
-            }(kT);
+        case Yq.f.RenderSerialLinks: {
+          if (dq(qq, Eq)) {
+            const qq = function(qq) {
+              const Eq = (Eq, gq) => Hq(qq >>> Eq & (1 << gq) - 1),
+                gq = qq >>> 30 & 1 ? " restored" : "";
+              return `link census ${Vq[15&qq]} linked ${Eq(22,8)} failed ${Eq(4,6)} retried ${Eq(10,6)} fallback ${Eq(16,6)}${gq}`
+            }(Eq);
             return {
-              words: ` ${TT}`,
-              instance: String(15 & kT),
+              words: ` ${qq}`,
+              instance: String(15 & Eq),
               group: "link census",
               gpuDetails: {
-                linkCensus: TT
+                linkCensus: qq
               }
             }
           }
-          const cT = ST(vT, kT);
+          const gq = oq(aq, Eq);
           return {
-            words: ` ${cT}`,
-            instance: String(kT),
-            group: String(TT),
+            words: ` ${gq}`,
+            instance: String(Eq),
+            group: String(qq),
             gpuDetails: {
-              serialLinks: cT
+              serialLinks: gq
             }
           }
         }
-        case lT.e.RenderGlErrorAfterRestore: {
-          const cT = ST(NT, 65535 & kT),
-            lT = kT >>> 16,
-            MT = 65535 !== lT;
+        case Yq.f.RenderGlErrorAfterRestore: {
+          const gq = oq(jq, 65535 & Eq),
+            Yq = Eq >>> 16,
+            lq = 65535 !== Yq;
           return {
-            words: ` ${cT}${MT?` program ${QT(lT)}`:""}`,
-            instance: String(kT),
-            group: String(TT),
-            gpuDetails: MT ? {
-              glError: cT,
-              program: String(lT)
+            words: ` ${gq}${lq?` program ${Hq(Yq)}`:""}`,
+            instance: String(Eq),
+            group: String(qq),
+            gpuDetails: lq ? {
+              glError: gq,
+              program: String(Yq)
             } : {
-              glError: cT
+              glError: gq
             }
           }
         }
@@ -2808,533 +2810,533 @@ export const modules = {
           return null
       }
     }
-    const FT = 2,
-      rT = new Map;
+    const yq = 2,
+      tq = new Map;
 
-    function PT(TT) {
+    function rq(qq) {
       let {
-        group: kT,
-        instance: cT
-      } = TT, lT = rT.get(kT);
-      return void 0 === lT && (lT = [], rT.set(kT, lT)), !lT.includes(cT) && (lT.length >= FT || (lT.push(cT), !1))
+        group: Eq,
+        instance: gq
+      } = qq, Yq = tq.get(Eq);
+      return void 0 === Yq && (Yq = [], tq.set(Eq, Yq)), !Yq.includes(gq) && (Yq.length >= yq || (Yq.push(gq), !1))
     }
 
-    function wT() {
-      return rT.size > 0
+    function vq() {
+      return tq.size > 0
     }
 
-    function mT() {
-      rT.clear()
+    function hq() {
+      tq.clear()
     }
   },
-  40505: (TT, kT, cT) => {
-    cT.d(kT, {
-      d: () => NT,
-      e: () => QT,
-      f: () => hT,
-      i: () => FT
+  40613: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => jq,
+      g: () => Hq,
+      h: () => dq,
+      k: () => yq
     });
-    var lT = cT(6633),
-      MT = cT(36),
-      KT = cT(4302),
-      OT = cT(4769),
-      yT = cT(6628),
-      fT = cT(40512);
+    var Yq = gq(6521),
+      lq = gq(31),
+      Oq = gq(4155),
+      mq = gq(4625),
+      xq = gq(6517),
+      Aq = gq(40622);
 
-    function xT(TT, kT) {
-      const cT = (0, yT.e)(kT.variants);
-      return TT.setShaderPack(cT.variantFlags, cT.hooks, cT.moduleCodes, (0, fT.G)(kT.layers), fT.r[kT.dO], kT.keepCircleShadows)
+    function cq(qq, Eq) {
+      const gq = (0, xq.b)(Eq.variants);
+      return qq.setShaderPack(gq.variantFlags, gq.hooks, gq.moduleCodes, (0, Aq.x)(Eq.layers), Aq.j[Eq.Oc], Eq.keepCircleShadows)
     }
-    const IT = 0,
-      AT = 1,
-      CT = 2,
-      jT = "shaderPack:failedToCompile",
-      vT = new Set(["no_webgpu_api", "no_adapter", "software_adapter", "adapter_error", "start_no_adapter"]),
-      tT = new Set(["not_requested", "off_after_loss", "gpu_class_webgl"]);
+    const uq = 0,
+      Bq = 1,
+      Wq = 2,
+      Nq = "shaderPack:failedToCompile",
+      aq = new Set(["no_webgpu_api", "no_adapter", "software_adapter", "adapter_error", "start_no_adapter"]),
+      Vq = new Set(["not_requested", "off_after_loss", "gpu_class_webgl"]);
 
-    function hT(TT, kT) {
-      var cT;
-      const lT = null !== (cT = null === TT || void 0 === TT ? void 0 : TT.reason) && void 0 !== cT ? cT : "none";
-      return vT.has(lT) ? {
-        messageKey: kT ? "shaderPack:failedWebGpuDisabledUntilRestart" : "shaderPack:failedNoWebGpu",
+    function dq(qq, Eq) {
+      var gq;
+      const Yq = null !== (gq = null === qq || void 0 === qq ? void 0 : qq.reason) && void 0 !== gq ? gq : "none";
+      return aq.has(Yq) ? {
+        messageKey: Eq ? "shaderPack:failedWebGpuDisabledUntilRestart" : "shaderPack:failedNoWebGpu",
         noAdapter: !0
-      } : "not_requested" === lT && "override" === (null === TT || void 0 === TT ? void 0 : TT.source) ? {
+      } : "not_requested" === Yq && "override" === (null === qq || void 0 === qq ? void 0 : qq.source) ? {
         messageKey: "shaderPack:failedRendererOverride",
         noAdapter: !1
       } : {
-        messageKey: tT.has(lT) ? "shaderPack:failedWebGpuOff" : "shaderPack:failedNoWebGpu",
+        messageKey: Vq.has(Yq) ? "shaderPack:failedWebGpuOff" : "shaderPack:failedNoWebGpu",
         noAdapter: !1
       }
     }
-    const NT = {
+    const jq = {
       messageKey: "shaderPack:failedDeviceGraphics",
       noAdapter: !1
     };
-    class QT extends Error {
-      constructor(TT) {
-        super(`the shader pack can't run in this game: ${TT}`), this.messageKey = TT, this.name = "ShaderPackJoinError"
+    class Hq extends Error {
+      constructor(qq) {
+        super(`the shader pack can't run in this game: ${qq}`), this.messageKey = qq, this.name = "ShaderPackJoinError"
       }
     }
-    const ST = "strict";
-    class DT {
-      constructor(TT) {
-        this.deps = TT, this.pagePack = void 0, this.loaded = null, this.dO = ST, this.failedPolicies = new Set, this.failedModelPolicies = new Set, this.refused = !1, this.joined = !1, this.playing = !1, this.game = 0, this.failedWhileJoining = !1, this.offInThisGame = !1, this.couldntRun = null, this.modelsNotified = !1, this.pagePack = TT.load().catch((kT => (TT.warn("the shader pack could not load: the game draws without it", kT), {
+    const oq = "strict";
+    class Pq {
+      constructor(qq) {
+        this.deps = qq, this.pagePack = void 0, this.loaded = null, this.Oc = oq, this.failedPolicies = new Set, this.failedModelPolicies = new Set, this.refused = !1, this.joined = !1, this.playing = !1, this.game = 0, this.failedWhileJoining = !1, this.offInThisGame = !1, this.couldntRun = null, this.modelsNotified = !1, this.pagePack = qq.load().catch((Eq => (qq.warn("the shader pack could not load: the game draws without it", Eq), {
           status: "none"
-        }))).then((TT => (this.loaded = TT, "active" === TT.status && (this.handOverToPreviews(TT), null !== TT.harnessPolicy && (this.dO = TT.harnessPolicy, this.handOver())), TT)))
+        }))).then((qq => (this.loaded = qq, "active" === qq.status && (this.handOverToPreviews(qq), null !== qq.harnessPolicy && (this.Oc = qq.harnessPolicy, this.handOver())), qq)))
       }
-      async join(TT) {
+      async join(qq) {
         this.leave();
-        const kT = this.game,
-          [cT, MT] = await Promise.all([this.pagePack, this.policyOf(TT)]);
-        if (kT !== this.game || "none" === cT.status) return null;
-        const KT = "active" === cT.status ? cT.pack.variants : cT.variants,
-          OT = (0, lT.j)(KT, MT);
-        if (OT && "active" === cT.status && null === this.deps.core) return this.joined = !0, this.offInThisGame = !0, this.couldntRun = this.deps.noWebGpu.messageKey, null;
-        if (OT) {
-          const TT = this.cantRun(cT, MT);
-          if (null !== TT) return TT
-        } else if ("blocked" === cT.status || null === this.deps.core) return null;
-        return this.dO = MT, this.handOver(), OT && this.refused ? jT : (this.joined = !0, this.offInThisGame = !OT, null)
+        const Eq = this.game,
+          [gq, lq] = await Promise.all([this.pagePack, this.policyOf(qq)]);
+        if (Eq !== this.game || "none" === gq.status) return null;
+        const Oq = "active" === gq.status ? gq.pack.variants : gq.variants,
+          mq = (0, Yq.g)(Oq, lq);
+        if (mq && "active" === gq.status && null === this.deps.core) return this.joined = !0, this.offInThisGame = !0, this.couldntRun = this.deps.noWebGpu.messageKey, null;
+        if (mq) {
+          const qq = this.cantRun(gq, lq);
+          if (null !== qq) return qq
+        } else if ("blocked" === gq.status || null === this.deps.core) return null;
+        return this.Oc = lq, this.handOver(), mq && this.refused ? Nq : (this.joined = !0, this.offInThisGame = !mq, null)
       }
-      async replay(TT) {
-        const kT = await this.join(TT);
-        null === kT ? this.playable() : this.deps.failInGame(kT)
+      async replay(qq) {
+        const Eq = await this.join(qq);
+        null === Eq ? this.playable() : this.deps.failInGame(Eq)
       }
-      cantRun(TT, kT) {
+      cantRun(qq, Eq) {
         const {
-          core: cT,
-          noWebGpu: lT
+          core: gq,
+          noWebGpu: Yq
         } = this.deps;
-        if ("blocked" === TT.status) {
-          return "shaderPack:failedUnchecked" === TT.messageKey && null === cT && lT.noAdapter ? lT.messageKey : TT.messageKey
+        if ("blocked" === qq.status) {
+          return "shaderPack:failedUnchecked" === qq.messageKey && null === gq && Yq.noAdapter ? Yq.messageKey : qq.messageKey
         }
-        return this.refused || this.failedPolicies.has(kT) ? jT : null
+        return this.refused || this.failedPolicies.has(Eq) ? Nq : null
       }
       runsInJoinedGame() {
         return this.joined && !this.offInThisGame
       }
       reachInJoinedGame() {
-        var TT;
-        return this.runsInJoinedGame() && "active" === (null === (TT = this.loaded) || void 0 === TT ? void 0 : TT.status) ? function(TT, kT) {
-          const cT = TT.filter((TT => (0, lT.j)([TT], kT))),
-            MT = TT => cT.some((kT => kT[TT]));
+        var qq;
+        return this.runsInJoinedGame() && "active" === (null === (qq = this.loaded) || void 0 === qq ? void 0 : qq.status) ? function(qq, Eq) {
+          const gq = qq.filter((qq => (0, Yq.g)([qq], Eq))),
+            lq = qq => gq.some((Eq => Eq[qq]));
           return {
-            sceneDepth: MT("sceneDepth"),
-            sunShadow: MT("sunShadow"),
-            airShadow: MT("airShadow")
+            sceneDepth: lq("sceneDepth"),
+            sunShadow: lq("sunShadow"),
+            airShadow: lq("airShadow")
           }
-        }(this.loaded.pack.variants, this.dO) : null
+        }(this.loaded.pack.variants, this.Oc) : null
       }
       couldntRunInJoinedGame() {
         return this.couldntRun
       }
       playable() {
-        this.joined && !this.playing && (this.playing = !0, this.failedWhileJoining ? this.fail(jT) : (null !== this.couldntRun ? this.notify(KT.e, this.couldntRun) : this.offInThisGame && this.notify("shaderPack:offInThisGame"), this.failedModelPolicies.has(this.dO) && this.notifyModelFallback()))
+        this.joined && !this.playing && (this.playing = !0, this.failedWhileJoining ? this.fail(Nq) : (null !== this.couldntRun ? this.notify(Oq.b, this.couldntRun) : this.offInThisGame && this.notify("shaderPack:offInThisGame"), this.failedModelPolicies.has(this.Oc) && this.notifyModelFallback()))
       }
       leave() {
         this.game++, this.joined = !1, this.playing = !1, this.failedWhileJoining = !1, this.offInThisGame = !1, this.couldntRun = null, this.modelsNotified = !1
       }
-      coreErrors(TT) {
+      coreErrors(qq) {
         for (const {
-            code: kT,
-            detail: cT
+            code: Eq,
+            detail: gq
           }
-          of TT)
-          if (kT === OT.e.RenderShaderPackNotRun) switch (255 & cT) {
-            case IT:
+          of qq)
+          if (Eq === mq.f.RenderShaderPackNotRun) switch (255 & gq) {
+            case uq:
               this.refused = !0, this.failed();
               break;
-            case AT:
-              this.failedPolicies.add(this.dO), this.failed();
+            case Bq:
+              this.failedPolicies.add(this.Oc), this.failed();
               break;
-            case CT:
-              this.failedModelPolicies.add(this.dO), this.playing && this.notifyModelFallback()
+            case Wq:
+              this.failedModelPolicies.add(this.Oc), this.playing && this.notifyModelFallback()
           }
       }
       failed() {
-        this.joined && !this.offInThisGame && (this.playing ? this.fail(jT) : this.failedWhileJoining = !0)
+        this.joined && !this.offInThisGame && (this.playing ? this.fail(Nq) : this.failedWhileJoining = !0)
       }
-      fail(TT) {
-        this.leave(), this.deps.failInGame(TT)
+      fail(qq) {
+        this.leave(), this.deps.failInGame(qq)
       }
       notifyModelFallback() {
         this.modelsNotified || (this.modelsNotified = !0, this.notify("shaderPack:modelsWithoutPack"))
       }
-      notify(TT, kT) {
-        const cT = this.game;
-        this.deps.notify(TT, (() => cT === this.game && this.joined), kT)
+      notify(qq, Eq) {
+        const gq = this.game;
+        this.deps.notify(qq, (() => gq === this.game && this.joined), Eq)
       }
       handOver() {
-        var TT;
+        var qq;
         const {
-          core: kT
+          core: Eq
         } = this.deps;
-        null !== kT && "active" === (null === (TT = this.loaded) || void 0 === TT ? void 0 : TT.status) && (xT(kT, {
+        null !== Eq && "active" === (null === (qq = this.loaded) || void 0 === qq ? void 0 : qq.status) && (cq(Eq, {
           ...this.loaded.pack,
-          dO: this.dO
+          Oc: this.Oc
         }) || (this.refused = !0, this.deps.warn("the core refused the shader pack: the games it runs in fail", null)))
       }
-      handOverToPreviews(TT) {
+      handOverToPreviews(qq) {
         let {
-          pack: kT,
-          harnessPolicy: cT
-        } = TT;
+          pack: Eq,
+          harnessPolicy: gq
+        } = qq;
         const {
-          previews: lT
+          previews: Yq
         } = this.deps;
-        null !== lT && xT(lT, {
-          ...kT,
-          dO: null !== cT && void 0 !== cT ? cT : ST
+        null !== Yq && cq(Yq, {
+          ...Eq,
+          Oc: null !== gq && void 0 !== gq ? gq : oq
         })
       }
-      policyOf(TT) {
-        return this.deps.policyOf(TT).catch((TT => (this.deps.warn("the game's shader pack policy could not load: the policy of a game without one", TT), ST)))
+      policyOf(qq) {
+        return this.deps.policyOf(qq).catch((qq => (this.deps.warn("the game's shader pack policy could not load: the policy of a game without one", qq), oq)))
       }
     }
-    const aT = "wasmShaderPackNotice";
+    const Qq = "wasmShaderPackNotice";
 
-    function FT(TT, kT, cT, lT) {
-      return MT.k.subscribe(aT, (TT => {
+    function yq(qq, Eq, gq, Yq) {
+      return lq.i.subscribe(Qq, (qq => {
         let {
-          translationKey: kT,
-          stillCurrent: cT,
-          reasonKey: lT
-        } = TT;
-        cT() && MT.k.nt("chat", (0, KT.h)(kT, lT))
-      })), new DT({
-        load: rT,
-        policyOf: PT,
-        core: TT,
-        previews: kT,
-        noWebGpu: cT,
-        notify: (TT, kT, cT) => {
-          const lT = {
-            translationKey: TT,
-            stillCurrent: kT,
-            reasonKey: cT
+          translationKey: Eq,
+          stillCurrent: gq,
+          reasonKey: Yq
+        } = qq;
+        gq() && lq.i.TV("chat", (0, Oq.h)(Eq, Yq))
+      })), new Pq({
+        load: tq,
+        policyOf: rq,
+        core: qq,
+        previews: Eq,
+        noWebGpu: gq,
+        notify: (qq, Eq, gq) => {
+          const Yq = {
+            translationKey: qq,
+            stillCurrent: Eq,
+            reasonKey: gq
           };
-          MT.k.nt(aT, lT, !0)
+          lq.i.TV(Qq, Yq, !0)
         },
-        failInGame: TT => {
-          MT.k.nt(KT.g, TT)
+        failInGame: qq => {
+          lq.i.TV(Oq.e, qq)
         },
-        warn: lT
+        warn: Yq
       })
     }
-    async function rT() {
+    async function tq() {
       const [{
-        shaderPackPage: TT,
-        harnessShaderPackMode: kT
+        shaderPackPage: qq,
+        harnessShaderPackMode: Eq
       }, {
-        shaderPackTextures: lT
-      }] = await Promise.all([cT.e(129).then((() => cT(39e3))), cT.e(130).then((() => cT(6623)))]), MT = await TT.load();
-      return "active" !== MT.status ? MT : {
+        shaderPackTextures: Yq
+      }] = await Promise.all([gq.e(130).then((() => gq(39158))), gq.e(131).then((() => gq(6514)))]), lq = await qq.load();
+      return "active" !== lq.status ? lq : {
         status: "active",
         pack: {
-          variants: MT.pack.variants,
-          layers: lT().layers,
-          keepCircleShadows: MT.pack.keepCircleShadows
+          variants: lq.pack.variants,
+          layers: Yq().layers,
+          keepCircleShadows: lq.pack.keepCircleShadows
         },
-        harnessPolicy: kT()
+        harnessPolicy: Eq()
       }
     }
-    async function PT(TT) {
-      var kT;
+    async function rq(qq) {
+      var Eq;
       const [{
-        harnessShaderPackMode: lT
+        harnessShaderPackMode: Yq
       }, {
-        getShaderPackPolicy: MT
-      }] = await Promise.all([cT.e(129).then((() => cT(39e3))), cT.e(90).then((() => cT(40906)))]);
-      return null !== (kT = lT()) && void 0 !== kT ? kT : MT(TT)
+        getShaderPackPolicy: lq
+      }] = await Promise.all([gq.e(130).then((() => gq(39158))), gq.e(90).then((() => gq(40997)))]);
+      return null !== (Eq = Yq()) && void 0 !== Eq ? Eq : lq(qq)
     }
   },
-  40603: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => yT,
-      f: () => hT,
-      g: () => fT,
-      j: () => xT,
-      m: () => IT,
-      o: () => CT
+  40731: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => xq,
+      e: () => dq,
+      h: () => Aq,
+      k: () => cq,
+      m: () => uq,
+      n: () => Wq
     });
-    var lT = cT(40610),
-      MT = cT(40615);
-    const KT = "atlas:",
-      OT = 3e4;
-    class yT extends Error {
-      constructor(TT, kT) {
-        super(`fetching ${TT} answered HTTP ${kT}`), this.url = TT, this.status = kT, this.name = "TerrainTextureFetchError"
+    var Yq = gq(40733),
+      lq = gq(40735);
+    const Oq = "atlas:",
+      mq = 3e4;
+    class xq extends Error {
+      constructor(qq, Eq) {
+        super(`fetching ${qq} answered HTTP ${Eq}`), this.url = qq, this.status = Eq, this.name = "TerrainTextureFetchError"
       }
     }
 
-    function fT(TT) {
-      if (!TT.startsWith(KT)) return null;
-      const kT = Number(TT.slice(KT.length));
-      return Number.isInteger(kT) && kT >= 0 ? kT : null
+    function Aq(qq) {
+      if (!qq.startsWith(Oq)) return null;
+      const Eq = Number(qq.slice(Oq.length));
+      return Number.isInteger(Eq) && Eq >= 0 ? Eq : null
     }
-    async function xT() {
-      const TT = await cT.e(201).then((() => cT(34029)));
+    async function cq() {
+      const qq = await gq.e(202).then((() => gq(34302)));
       return {
-        atlasSheets: TT.blockAtlasUrls,
-        texture: kT => {
-          var cT, lT, KT;
-          return null !== (cT = null !== (lT = null !== (KT = TT.animatedBlockTextures[kT]) && void 0 !== KT ? KT : TT.rotatedBlockTextures[kT]) && void 0 !== lT ? lT : MT.c[kT]) && void 0 !== cT ? cT : null
+        atlasSheets: qq.blockAtlasUrls,
+        texture: Eq => {
+          var gq, Yq, Oq;
+          return null !== (gq = null !== (Yq = null !== (Oq = qq.animatedBlockTextures[Eq]) && void 0 !== Oq ? Oq : qq.rotatedBlockTextures[Eq]) && void 0 !== Yq ? Yq : lq.c[Eq]) && void 0 !== gq ? gq : null
         }
       }
     }
-    async function IT(TT) {
-      const kT = new AbortController,
-        cT = setTimeout((() => {
-          kT.abort(new DOMException(`${TT} took over ${OT} ms`, "TimeoutError"))
-        }), OT);
-      let lT;
+    async function uq(qq) {
+      const Eq = new AbortController,
+        gq = setTimeout((() => {
+          Eq.abort(new DOMException(`${qq} took over ${mq} ms`, "TimeoutError"))
+        }), mq);
+      let Yq;
       try {
-        const cT = await fetch(TT, {
-          signal: kT.signal
+        const gq = await fetch(qq, {
+          signal: Eq.signal
         });
-        if (!cT.ok) throw new yT(TT, cT.status);
-        lT = await cT.blob()
+        if (!gq.ok) throw new xq(qq, gq.status);
+        Yq = await gq.blob()
       } finally {
-        clearTimeout(cT)
+        clearTimeout(gq)
       }
-      const MT = await createImageBitmap(lT, {
+      const lq = await createImageBitmap(Yq, {
         premultiplyAlpha: "none",
         colorSpaceConversion: "none"
       });
       try {
-        return CT(MT)
+        return Wq(lq)
       } finally {
-        MT.close()
+        lq.close()
       }
     }
-    const AT = 8192;
+    const Bq = 8192;
 
-    function CT(TT) {
+    function Wq(qq) {
       const {
-        width: kT,
-        height: cT
-      } = TT, MT = Math.max(1, Math.min(cT, AT)), KT = (0, lT.d)(kT, MT, {
+        width: Eq,
+        height: gq
+      } = qq, lq = Math.max(1, Math.min(gq, Bq)), Oq = (0, Yq.f)(Eq, lq, {
         willReadFrequently: !0
       });
-      if (!KT) throw new Error("no 2D context to read the texture back");
-      KT.globalCompositeOperation = "copy";
-      const OT = new Uint8Array(kT * cT * 4);
-      for (let lT = 0; lT < cT; lT += MT) {
-        const yT = Math.min(MT, cT - lT);
-        KT.drawImage(TT, 0, lT, kT, yT, 0, 0, kT, yT), OT.set(KT.getImageData(0, 0, kT, yT).data, lT * kT * 4)
+      if (!Oq) throw new Error("no 2D context to read the texture back");
+      Oq.globalCompositeOperation = "copy";
+      const mq = new Uint8Array(Eq * gq * 4);
+      for (let Yq = 0; Yq < gq; Yq += lq) {
+        const xq = Math.min(lq, gq - Yq);
+        Oq.drawImage(qq, 0, Yq, Eq, xq, 0, 0, Eq, xq), mq.set(Oq.getImageData(0, 0, Eq, xq).data, Yq * Eq * 4)
       }
       return {
-        width: kT,
-        height: cT,
-        pixels: OT
+        width: Eq,
+        height: gq,
+        pixels: mq
       }
     }
-    async function jT(TT, kT) {
-      let cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : IT;
-      const lT = [],
-        MT = await Promise.all(TT.map((async TT => {
-          var MT, OT;
-          const yT = null !== (MT = null === (OT = kT.decoded) || void 0 === OT ? void 0 : OT.call(kT, TT)) && void 0 !== MT ? MT : null,
-            xT = null === yT ? function(TT, kT) {
-              if (TT.startsWith(KT)) {
-                var cT;
-                const lT = fT(TT);
-                return null === lT ? null : null !== (cT = kT.atlasSheets[lT]) && void 0 !== cT ? cT : null
+    async function Nq(qq, Eq) {
+      let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : uq;
+      const Yq = [],
+        lq = await Promise.all(qq.map((async qq => {
+          var lq, mq;
+          const xq = null !== (lq = null === (mq = Eq.decoded) || void 0 === mq ? void 0 : mq.call(Eq, qq)) && void 0 !== lq ? lq : null,
+            cq = null === xq ? function(qq, Eq) {
+              if (qq.startsWith(Oq)) {
+                var gq;
+                const Yq = Aq(qq);
+                return null === Yq ? null : null !== (gq = Eq.atlasSheets[Yq]) && void 0 !== gq ? gq : null
               }
-              return kT.texture(TT)
-            }(TT, kT) : null,
-            IT = null !== yT && void 0 !== yT ? yT : null === xT ? null : cT(xT);
-          if (null === IT) return lT.push({
-            name: TT,
-            url: xT,
-            error: new Error(`no URL for terrain texture ${TT}`)
+              return Eq.texture(qq)
+            }(qq, Eq) : null,
+            uq = null !== xq && void 0 !== xq ? xq : null === cq ? null : gq(cq);
+          if (null === uq) return Yq.push({
+            name: qq,
+            url: cq,
+            error: new Error(`no URL for terrain texture ${qq}`)
           }), null;
           try {
-            const kT = await IT;
-            if (kT.pixels.byteLength !== kT.width * kT.height * 4) throw new Error(`decoded ${kT.pixels.byteLength} bytes for ${kT.width}x${kT.height} texels`);
+            const Eq = await uq;
+            if (Eq.pixels.byteLength !== Eq.width * Eq.height * 4) throw new Error(`decoded ${Eq.pixels.byteLength} bytes for ${Eq.width}x${Eq.height} texels`);
             return {
-              name: TT,
-              texture: kT
+              name: qq,
+              texture: Eq
             }
-          } catch (AT) {
-            return lT.push({
-              name: TT,
-              url: xT,
-              error: AT
+          } catch (Bq) {
+            return Yq.push({
+              name: qq,
+              url: cq,
+              error: Bq
             }), null
           }
         }))),
-        OT = MT.filter((TT => null !== TT)),
-        yT = new Uint32Array(2 * OT.length);
-      OT.forEach(((TT, kT) => {
+        mq = lq.filter((qq => null !== qq)),
+        xq = new Uint32Array(2 * mq.length);
+      mq.forEach(((qq, Eq) => {
         let {
-          texture: cT
-        } = TT;
-        yT[2 * kT] = cT.width, yT[2 * kT + 1] = cT.height
+          texture: gq
+        } = qq;
+        xq[2 * Eq] = gq.width, xq[2 * Eq + 1] = gq.height
       }));
       return {
         handOver: {
-          names: OT.map((TT => {
+          names: mq.map((qq => {
             let {
-              name: kT
-            } = TT;
-            return kT
+              name: Eq
+            } = qq;
+            return Eq
           })),
-          textures: OT.map((TT => {
+          textures: mq.map((qq => {
             let {
-              texture: kT
-            } = TT;
-            return kT.pixels
+              texture: Eq
+            } = qq;
+            return Eq.pixels
           })),
-          sizes: yT
+          sizes: xq
         },
-        failures: lT
+        failures: Yq
       }
     }
-    const vT = [2e3, 1e4, 3e4, 6e4, 12e4];
+    const aq = [2e3, 1e4, 3e4, 6e4, 12e4];
 
-    function tT() {}
-    class hT {
-      constructor(TT) {
-        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : vT,
-          cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1048576;
-        this.core = TT, this.retryMs = kT, this.keepBelow = cT, this.started = 0, this.landed = 0, this.current = null, this.restoring = null
+    function Vq() {}
+    class dq {
+      constructor(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : aq,
+          gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1048576;
+        this.core = qq, this.retryMs = Eq, this.keepBelow = gq, this.started = 0, this.landed = 0, this.current = null, this.restoring = null
       }
-      async swap(TT) {
-        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : xT,
-          cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const lT = ++this.started,
-          MT = {
-            decode: cT.decode,
-            wholeAtlas: cT.wholeAtlas
+      async swap(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : cq,
+          gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const Yq = ++this.started,
+          lq = {
+            decode: gq.decode,
+            wholeAtlas: gq.wholeAtlas
           };
-        return this.loadAndHandOver(kT, MT, TT, (() => {
-          var TT;
-          return lT < this.landed || !1 === (null === (TT = cT.wanted) || void 0 === TT ? void 0 : TT.call(cT))
+        return this.loadAndHandOver(Eq, lq, qq, (() => {
+          var qq;
+          return Yq < this.landed || !1 === (null === (qq = gq.wanted) || void 0 === qq ? void 0 : qq.call(gq))
         }), {
-          onTaken: (TT, cT) => {
-            this.landed = lT, this.current = {
-              mine: lT,
-              sources: kT,
-              load: MT,
-              wj: TT,
-              failed: cT
+          onTaken: (qq, gq) => {
+            this.landed = Yq, this.current = {
+              mine: Yq,
+              sources: Eq,
+              load: lq,
+              jN: qq,
+              failed: gq
             }
           }
         })
       }
-      restore(TT) {
-        var kT;
-        const cT = this.current;
-        if (null === cT) return Promise.resolve(null);
-        if ((null === (kT = this.restoring) || void 0 === kT ? void 0 : kT.mine) === cT.mine) return this.restoring.done;
-        const lT = {
-          mine: cT.mine,
-          done: this.restoreLanded(cT, TT).finally((() => {
-            this.restoring === lT && (this.restoring = null)
+      restore(qq) {
+        var Eq;
+        const gq = this.current;
+        if (null === gq) return Promise.resolve(null);
+        if ((null === (Eq = this.restoring) || void 0 === Eq ? void 0 : Eq.mine) === gq.mine) return this.restoring.done;
+        const Yq = {
+          mine: gq.mine,
+          done: this.restoreLanded(gq, qq).finally((() => {
+            this.restoring === Yq && (this.restoring = null)
           }))
         };
-        return this.restoring = lT, lT.done
+        return this.restoring = Yq, Yq.done
       }
-      async restoreLanded(TT, kT) {
-        const cT = () => this.landed !== TT.mine,
+      async restoreLanded(qq, Eq) {
+        const gq = () => this.landed !== qq.mine,
           {
-            wj: lT
-          } = TT;
-        if (null !== lT) return this.stopped() ? null : this.core.setTerrainTextures(lT.names, lT.textures, lT.sizes);
-        let MT = kT;
-        for (let KT = 0;; KT++) {
-          const kT = this.retryMs.at(KT),
-            lT = {
-              allOrNothingExcept: void 0 === kT ? void 0 : TT.failed
+            jN: Yq
+          } = qq;
+        if (null !== Yq) return this.stopped() ? null : this.core.setTerrainTextures(Yq.names, Yq.textures, Yq.sizes);
+        let lq = Eq;
+        for (let Oq = 0;; Oq++) {
+          const Eq = this.retryMs.at(Oq),
+            Yq = {
+              allOrNothingExcept: void 0 === Eq ? void 0 : qq.failed
             },
-            OT = await this.loadAndHandOver(TT.sources, TT.load, MT, cT, lT);
-          if (!1 !== OT || void 0 === kT || this.stopped()) return OT;
-          if (MT = tT, await new Promise((TT => {
-              setTimeout(TT, kT)
-            })), cT()) return null
+            mq = await this.loadAndHandOver(qq.sources, qq.load, lq, gq, Yq);
+          if (!1 !== mq || void 0 === Eq || this.stopped()) return mq;
+          if (lq = Vq, await new Promise((qq => {
+              setTimeout(qq, Eq)
+            })), gq()) return null
         }
       }
       stopped() {
         return !0 === this.core.isStopped
       }
-      async loadAndHandOver(TT, kT, cT, lT) {
-        let MT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+      async loadAndHandOver(qq, Eq, gq, Yq) {
+        let lq = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
         if (this.stopped()) return null;
-        const KT = this.core.terrainTextureNames();
-        var OT;
-        if (0 === KT.length) return null === (OT = MT.onTaken) || void 0 === OT || OT.call(MT, null, new Set), !0;
-        let yT, xT;
+        const Oq = this.core.terrainTextureNames();
+        var mq;
+        if (0 === Oq.length) return null === (mq = lq.onTaken) || void 0 === mq || mq.call(lq, null, new Set), !0;
+        let xq, cq;
         try {
-          yT = await TT(), xT = await jT(KT, yT, kT.decode)
-        } catch (hT) {
-          return lT() ? null : (cT({
+          xq = await qq(), cq = await Nq(Oq, xq, Eq.decode)
+        } catch (dq) {
+          return Yq() ? null : (gq({
             name: null,
             url: null,
-            error: hT
+            error: dq
           }), !1)
         }
-        if (lT() || this.stopped()) return null;
-        for (const fT of xT.failures) cT(fT);
-        const IT = MT.allOrNothingExcept;
-        if (void 0 !== IT && xT.failures.some((TT => {
+        if (Yq() || this.stopped()) return null;
+        for (const Aq of cq.failures) gq(Aq);
+        const uq = lq.allOrNothingExcept;
+        if (void 0 !== uq && cq.failures.some((qq => {
             let {
-              name: kT
-            } = TT;
-            return null === kT || !IT.has(kT)
-          })) || !0 === kT.wholeAtlas && xT.failures.some((TT => {
+              name: Eq
+            } = qq;
+            return null === Eq || !uq.has(Eq)
+          })) || !0 === Eq.wholeAtlas && cq.failures.some((qq => {
             let {
-              name: kT
-            } = TT;
-            return null === kT || null !== fT(kT)
+              name: Eq
+            } = qq;
+            return null === Eq || null !== Aq(Eq)
           }))) return !1;
         const {
-          handOver: AT
-        } = xT, CT = function(TT) {
-          return TT.textures.reduce(((TT, kT) => TT + kT.byteLength), 0)
-        }(AT) < this.keepBelow, vT = this.core.setTerrainTextures(AT.names, AT.textures, AT.sizes, CT ? void 0 : () => {
-          !async function(TT, kT) {
-            await kT;
+          handOver: Bq
+        } = cq, Wq = function(qq) {
+          return qq.textures.reduce(((qq, Eq) => qq + Eq.byteLength), 0)
+        }(Bq) < this.keepBelow, aq = this.core.setTerrainTextures(Bq.names, Bq.textures, Bq.sizes, Wq ? void 0 : () => {
+          !async function(qq, Eq) {
+            await Eq;
             for (const {
-                buffer: lT
+                buffer: Yq
               }
-              of TT) {
-              const TT = lT;
-              var cT;
-              if (!TT.detached) null === (cT = TT.transfer) || void 0 === cT || cT.call(TT, 0)
+              of qq) {
+              const qq = Yq;
+              var gq;
+              if (!qq.detached) null === (gq = qq.transfer) || void 0 === gq || gq.call(qq, 0)
             }
-          }(AT.textures, yT.heldUntil)
+          }(Bq.textures, xq.heldUntil)
         });
-        if (vT) {
-          var tT;
-          const TT = new Set(xT.failures.flatMap((TT => {
+        if (aq) {
+          var Vq;
+          const qq = new Set(cq.failures.flatMap((qq => {
             let {
-              name: kT
-            } = TT;
-            return null === kT ? [] : [kT]
+              name: Eq
+            } = qq;
+            return null === Eq ? [] : [Eq]
           })));
-          null === (tT = MT.onTaken) || void 0 === tT || tT.call(MT, CT ? AT : null, TT)
+          null === (Vq = lq.onTaken) || void 0 === Vq || Vq.call(lq, Wq ? Bq : null, qq)
         }
-        return vT
+        return aq
       }
     }
   },
-  36674: (TT, kT, cT) => {
-    function lT(TT) {
-      return "fetch" === TT || "timeout" === TT || "integrity" === TT ? "download" : "browser"
+  36896: (qq, Eq, gq) => {
+    function Yq(qq) {
+      return "fetch" === qq || "timeout" === qq || "integrity" === qq ? "download" : "browser"
     }
-    cT.d(kT, {
-      e: () => MT,
-      f: () => OT,
-      g: () => fT,
-      k: () => yT,
-      n: () => lT,
-      o: () => KT
+    gq.d(Eq, {
+      b: () => lq,
+      d: () => mq,
+      h: () => Aq,
+      j: () => xq,
+      m: () => Yq,
+      n: () => Oq
     });
-    const MT = "https://discord.gg/playbloxd";
+    const lq = "https://discord.gg/playbloxd";
 
-    function KT(TT) {
-      return "download" === TT ? {
+    function Oq(qq) {
+      return "download" === qq ? {
         icon: "wifi",
         title: "wasmScreens:downloadFailedTitle",
         help: "wasmScreens:downloadFailedHelp",
@@ -3353,21 +3355,21 @@ export const modules = {
       }
     }
 
-    function OT(TT, kT) {
+    function mq(qq, Eq) {
       return {
         icon: "face-dizzy",
         title: "wasmScreens:crashTitle",
-        help: kT ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
+        help: Eq ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
         helpValues: {
-          code: TT.code
+          code: qq.code
         },
-        discordLink: kT,
+        discordLink: Eq,
         confirm: "general:reload",
         cancel: "general:back"
       }
     }
 
-    function yT() {
+    function xq() {
       return {
         icon: "face-dizzy",
         title: "wasmScreens:turnstilePageTitle",
@@ -3379,146 +3381,146 @@ export const modules = {
       }
     }
 
-    function fT(TT, kT, cT) {
+    function Aq(qq, Eq, gq) {
       return {
         icon: "wifi",
         title: "wasmScreens:disconnectedTitle",
-        help: cT ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
+        help: gq ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
         helpValues: {
-          reason: TT.reason
+          reason: qq.reason
         },
-        discordLink: null === TT.name,
-        confirm: kT ? "general:reconnect" : TT.requiresRefresh ? "general:reload" : "general:ok",
+        discordLink: null === qq.name,
+        confirm: Eq ? "general:reconnect" : qq.requiresRefresh ? "general:reload" : "general:ok",
         cancel: null
       }
     }
   },
-  6628: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => DT,
-      i: () => aT,
-      k: () => QT,
-      o: () => NT
+  6517: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => Pq,
+      f: () => Qq,
+      j: () => Hq,
+      l: () => jq
     });
-    var lT = cT(6633);
-    const MT = 6,
-      KT = 3,
-      OT = 1,
-      yT = 2,
-      fT = 4,
-      xT = 8,
-      IT = 16,
-      AT = 32,
-      CT = 64,
-      jT = 128,
-      vT = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
+    var Yq = gq(6521);
+    const lq = 6,
+      Oq = 3,
+      mq = 1,
+      xq = 2,
+      Aq = 4,
+      cq = 8,
+      uq = 16,
+      Bq = 32,
+      Wq = 64,
+      Nq = 128,
+      aq = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
 
-    function tT(TT) {
-      if (!TT) return 0;
-      const kT = vT.indexOf(TT);
-      if (kT <= 0) throw new Error(`"${TT}" is not a shader pack hook function`);
-      return kT
+    function Vq(qq) {
+      if (!qq) return 0;
+      const Eq = aq.indexOf(qq);
+      if (Eq <= 0) throw new Error(`"${qq}" is not a shader pack hook function`);
+      return Eq
     }
 
-    function hT(TT) {
-      if (0 === TT) return null;
-      const kT = vT[TT];
-      if (void 0 === kT) throw new Error(`${TT} is not a shader pack hook function id`);
-      return kT
+    function dq(qq) {
+      if (0 === qq) return null;
+      const Eq = aq[qq];
+      if (void 0 === Eq) throw new Error(`${qq} is not a shader pack hook function id`);
+      return Eq
     }
 
-    function NT(TT) {
-      const kT = lT.e.length;
+    function jq(qq) {
+      const Eq = Yq.b.length;
       return {
-        strict: TT >= kT,
-        program: lT.e[TT % kT]
+        strict: qq >= Eq,
+        program: Yq.b[qq % Eq]
       }
     }
 
-    function QT(TT) {
-      return Number(TT.strict) * lT.e.length + lT.e.indexOf(TT.program)
+    function Hq(qq) {
+      return Number(qq.strict) * Yq.b.length + Yq.b.indexOf(qq.program)
     }
 
-    function ST(TT) {
-      return "" === TT ? [] : TT.split(" ")
+    function oq(qq) {
+      return "" === qq ? [] : qq.split(" ")
     }
 
-    function DT(TT) {
-      const kT = {
-        variantFlags: new Uint8Array(MT),
-        hooks: new Uint8Array(MT * KT),
-        moduleCodes: Array(MT).fill(""),
-        reads: Array(2 * MT).fill("")
+    function Pq(qq) {
+      const Eq = {
+        variantFlags: new Uint8Array(lq),
+        hooks: new Uint8Array(lq * Oq),
+        moduleCodes: Array(lq).fill(""),
+        reads: Array(2 * lq).fill("")
       };
-      for (const cT of TT) {
-        const TT = QT(cT.key),
-          lT = (TT, kT) => null === cT.hooks.surface || cT.reads.fragment.includes(TT) ? 0 : kT;
-        kT.variantFlags[TT] = (cT.sceneDepth ? OT : 0) | (cT.movesVertices ? yT : 0) | (cT.sunShadow ? fT : 0) | (cT.airShadow ? xT : 0) | (cT.discards ? IT : 0) | lT("localPosition", AT) | lT("enchantSpeed", CT) | lT("enchantTier", jT), kT.hooks[TT * KT] = tT(cT.hooks.vertex), kT.hooks[TT * KT + 1] = tT(cT.hooks.surface), kT.hooks[TT * KT + 2] = tT(cT.hooks.light), kT.moduleCodes[TT] = cT.moduleCode, kT.reads[2 * TT] = cT.reads.vertex.join(" "), kT.reads[2 * TT + 1] = cT.reads.fragment.join(" ")
+      for (const gq of qq) {
+        const qq = Hq(gq.key),
+          Yq = (qq, Eq) => null === gq.hooks.surface || gq.reads.fragment.includes(qq) ? 0 : Eq;
+        Eq.variantFlags[qq] = (gq.sceneDepth ? mq : 0) | (gq.movesVertices ? xq : 0) | (gq.sunShadow ? Aq : 0) | (gq.airShadow ? cq : 0) | (gq.discards ? uq : 0) | Yq("localPosition", Bq) | Yq("enchantSpeed", Wq) | Yq("enchantTier", Nq), Eq.hooks[qq * Oq] = Vq(gq.hooks.vertex), Eq.hooks[qq * Oq + 1] = Vq(gq.hooks.surface), Eq.hooks[qq * Oq + 2] = Vq(gq.hooks.light), Eq.moduleCodes[qq] = gq.moduleCode, Eq.reads[2 * qq] = gq.reads.vertex.join(" "), Eq.reads[2 * qq + 1] = gq.reads.fragment.join(" ")
       }
-      return kT
+      return Eq
     }
 
-    function aT(TT) {
+    function Qq(qq) {
       const {
-        hooks: kT,
-        moduleCodes: cT,
-        reads: lT
-      } = TT;
-      return Array.from(TT.variantFlags, ((TT, MT) => {
-        const AT = MT * KT;
+        hooks: Eq,
+        moduleCodes: gq,
+        reads: Yq
+      } = qq;
+      return Array.from(qq.variantFlags, ((qq, lq) => {
+        const Bq = lq * Oq;
         return {
-          key: NT(MT),
+          key: jq(lq),
           hooks: {
-            vertex: hT(kT[AT]),
-            surface: hT(kT[AT + 1]),
-            light: hT(kT[AT + 2])
+            vertex: dq(Eq[Bq]),
+            surface: dq(Eq[Bq + 1]),
+            light: dq(Eq[Bq + 2])
           },
-          moduleCode: cT[MT],
-          sceneDepth: 0 !== (TT & OT),
-          sunShadow: 0 !== (TT & fT),
-          airShadow: 0 !== (TT & xT),
-          movesVertices: 0 !== (TT & yT),
-          discards: 0 !== (TT & IT),
+          moduleCode: gq[lq],
+          sceneDepth: 0 !== (qq & mq),
+          sunShadow: 0 !== (qq & Aq),
+          airShadow: 0 !== (qq & cq),
+          movesVertices: 0 !== (qq & xq),
+          discards: 0 !== (qq & uq),
           reads: {
-            vertex: ST(lT[2 * MT]),
-            fragment: ST(lT[2 * MT + 1])
+            vertex: oq(Yq[2 * lq]),
+            fragment: oq(Yq[2 * lq + 1])
           }
         }
       }))
     }
   },
-  40512: (TT, kT, cT) => {
-    cT.d(kT, {
-      A: () => fT,
-      D: () => OT,
-      G: () => tT,
-      K: () => jT,
-      L: () => vT,
-      e: () => MT,
-      h: () => lT,
-      l: () => CT,
-      p: () => IT,
-      r: () => hT,
-      u: () => KT,
-      x: () => yT
+  40622: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      B: () => Nq,
+      D: () => aq,
+      b: () => lq,
+      c: () => Yq,
+      e: () => Wq,
+      g: () => uq,
+      j: () => dq,
+      l: () => Oq,
+      n: () => xq,
+      r: () => Aq,
+      v: () => mq,
+      x: () => Vq
     });
-    const lT = 3,
-      MT = 0,
-      KT = 1,
-      OT = 2,
-      yT = {
+    const Yq = 3,
+      lq = 0,
+      Oq = 1,
+      mq = 2,
+      xq = {
         uniform: 3,
-        rC: 4,
+        dW: 4,
         special: 5,
         volume: 6,
         sampler: 7,
         entities: 8,
         entityGrids: 9
       },
-      fT = 10,
-      xT = "BloxdPackInputs",
-      IT = "bloxdPackInputs",
-      AT = [{
+      Aq = 10,
+      cq = "BloxdPackInputs",
+      uq = "bloxdPackInputs",
+      Bq = [{
         name: "seconds",
         type: "f32",
         offset: 0
@@ -3543,74 +3545,74 @@ export const modules = {
         type: "vec3f",
         offset: 64
       }],
-      CT = 80;
+      Wq = 80;
 
-    function jT() {
-      const TT = AT.map((TT => {
+    function Nq() {
+      const qq = Bq.map((qq => {
         let {
-          name: kT,
-          type: cT
-        } = TT;
-        return `    ${kT}: ${cT},\n`
+          name: Eq,
+          type: gq
+        } = qq;
+        return `    ${Eq}: ${gq},\n`
       })).join("");
-      return `struct ${xT} {\n${TT}}\n@group(${lT}) @binding(${MT}) var<uniform> ${IT}: ${xT};\n`
+      return `struct ${cq} {\n${qq}}\n@group(${Yq}) @binding(${lq}) var<uniform> ${uq}: ${cq};\n`
     }
 
-    function vT(TT, kT) {
-      const cT = new DataView(TT, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, CT),
-        [lT, MT, KT, OT, yT, fT] = AT;
-      cT.setFloat32(lT.offset, kT.seconds, !0), cT.setUint32(MT.offset, kT.lit ? 1 : 0, !0);
-      for (let xT = 0; xT < 3; xT++) cT.setInt32(KT.offset + 4 * xT, kT.renderOffset[xT], !0), cT.setFloat32(OT.offset + 4 * xT, kT.M_[xT], !0), cT.setFloat32(yT.offset + 4 * xT, kT.eyePosition[xT], !0), cT.setFloat32(fT.offset + 4 * xT, kT.shadowDirection[xT], !0)
+    function aq(qq, Eq) {
+      const gq = new DataView(qq, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, Wq),
+        [Yq, lq, Oq, mq, xq, Aq] = Bq;
+      gq.setFloat32(Yq.offset, Eq.seconds, !0), gq.setUint32(lq.offset, Eq.lit ? 1 : 0, !0);
+      for (let cq = 0; cq < 3; cq++) gq.setInt32(Oq.offset + 4 * cq, Eq.renderOffset[cq], !0), gq.setFloat32(mq.offset + 4 * cq, Eq.vqq[cq], !0), gq.setFloat32(xq.offset + 4 * cq, Eq.eyePosition[cq], !0), gq.setFloat32(Aq.offset + 4 * cq, Eq.shadowDirection[cq], !0)
     }
 
-    function tT(TT) {
-      const kT = new Uint32Array(Math.max(1, TT.length));
-      return TT.forEach(((TT, cT) => {
+    function Vq(qq) {
+      const Eq = new Uint32Array(Math.max(1, qq.length));
+      return qq.forEach(((qq, gq) => {
         let {
-          id: lT,
-          rotation: MT
-        } = TT;
-        kT[cT] = 65535 & lT | (3 & MT) << 16
-      })), kT
+          id: Yq,
+          rotation: lq
+        } = qq;
+        Eq[gq] = 65535 & Yq | (3 & lq) << 16
+      })), Eq
     }
-    const hT = {
+    const dq = {
       off: 0,
       strict: 1,
       allow: 2
     }
   },
-  6633: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => lT,
-      f: () => OT,
-      j: () => yT,
-      k: () => MT,
-      o: () => KT
+  6521: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => Yq,
+      d: () => mq,
+      g: () => xq,
+      j: () => lq,
+      m: () => Oq
     });
-    const lT = ["terrain", "liquid", "model"];
+    const Yq = ["terrain", "liquid", "model"];
 
-    function MT() {
-      const TT = [];
-      for (const kT of [!1, !0])
-        for (const cT of lT) TT.push({
-          strict: kT,
-          program: cT
+    function lq() {
+      const qq = [];
+      for (const Eq of [!1, !0])
+        for (const gq of Yq) qq.push({
+          strict: Eq,
+          program: gq
         });
-      return TT
+      return qq
     }
 
-    function KT(TT) {
-      return `${TT.strict?"strict":"allow"}.${TT.program}`
+    function Oq(qq) {
+      return `${qq.strict?"strict":"allow"}.${qq.program}`
     }
 
-    function OT(TT) {
-      return !TT.hooks.vertex && !TT.hooks.surface && !TT.hooks.light
+    function mq(qq) {
+      return !qq.hooks.vertex && !qq.hooks.surface && !qq.hooks.light
     }
 
-    function yT(TT, kT) {
-      return "off" !== kT && (null === TT || TT.some((TT => TT.key.strict === ("strict" === kT) && !OT(TT))))
+    function xq(qq, Eq) {
+      return "off" !== Eq && (null === qq || qq.some((qq => qq.key.strict === ("strict" === Eq) && !mq(qq))))
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

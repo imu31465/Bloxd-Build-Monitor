@@ -1,62 +1,62 @@
 export const id = 351;
 export const ids = [351];
 export const modules = {
-  60636: (TT, kT, cT) => {
-    cT.r(kT), cT.d(kT, {
-      applyLightFoOffset: () => OT,
-      getFloatingOriginOffset: () => MT,
-      lightFoVersion: () => KT,
-      wrapRenderableForFO: () => yT
+  61207: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      applyLightFoOffset: () => mq,
+      getFloatingOriginOffset: () => lq,
+      lightFoVersion: () => Oq,
+      wrapRenderableForFO: () => xq
     });
-    var lT = cT(41304);
+    var Yq = gq(41492);
 
-    function MT(TT) {
-      const kT = TT.camera;
-      if (!kT) return {
+    function lq(qq) {
+      const Eq = qq.camera;
+      if (!Eq) return {
         x: 0,
         y: 0,
         z: 0
       };
-      const cT = kT.worldMatrix;
+      const gq = Eq.worldMatrix;
       return {
-        x: cT[12],
-        y: cT[13],
-        z: cT[14]
+        x: gq[12],
+        y: gq[13],
+        z: gq[14]
       }
     }
 
-    function KT(TT) {
-      return TT.camera ? TT.camera.worldMatrixVersion : 0
+    function Oq(qq) {
+      return qq.camera ? qq.camera.worldMatrixVersion : 0
     }
 
-    function OT(TT, kT) {
-      const cT = kT.camera?.worldMatrix;
-      if (!cT) return;
-      const MT = cT[12],
-        KT = cT[13],
-        OT = cT[14];
-      let yT = 0;
-      for (const fT of kT.lights) {
-        if (yT >= lT.c) break;
-        if (!fT._writeLightUbo) continue;
-        const kT = 4 + 16 * yT,
-          cT = TT[kT + 3];
-        if (0 === cT || 2 === cT) {
-          const cT = fT.worldMatrix;
-          TT[kT] = cT[12] - MT, TT[kT + 1] = cT[13] - KT, TT[kT + 2] = cT[14] - OT
+    function mq(qq, Eq) {
+      const gq = Eq.camera?.worldMatrix;
+      if (!gq) return;
+      const lq = gq[12],
+        Oq = gq[13],
+        mq = gq[14];
+      let xq = 0;
+      for (const Aq of Eq.lights) {
+        if (xq >= Yq.e) break;
+        if (!Aq._writeLightUbo) continue;
+        const Eq = 4 + 16 * xq,
+          gq = qq[Eq + 3];
+        if (0 === gq || 2 === gq) {
+          const gq = Aq.worldMatrix;
+          qq[Eq] = gq[12] - lq, qq[Eq + 1] = gq[13] - Oq, qq[Eq + 2] = gq[14] - mq
         }
-        yT++
+        xq++
       }
     }
 
-    function yT(TT, kT, cT) {
-      let lT = -1;
+    function xq(qq, Eq, gq) {
+      let Yq = -1;
       return () => {
-        const MT = kT.camera ? kT.camera.worldMatrixVersion : -1;
-        MT !== lT && (cT(), lT = MT), TT()
+        const lq = Eq.camera ? Eq.camera.worldMatrixVersion : -1;
+        lq !== Yq && (gq(), Yq = lq), qq()
       }
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

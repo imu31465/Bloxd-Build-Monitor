@@ -1,39 +1,39 @@
 export const id = 227;
 export const ids = [227];
 export const modules = {
-  37093: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => AT,
-      g: () => CT,
-      j: () => tT,
-      k: () => jT
+  37289: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => Bq,
+      g: () => Wq,
+      h: () => Vq,
+      k: () => Nq
     });
-    var lT = cT(36910),
-      MT = cT(36901),
-      KT = cT(36937),
-      OT = cT(36949);
+    var Yq = gq(37149),
+      lq = gq(37145),
+      Oq = gq(37158),
+      mq = gq(37171);
 
-    function yT(TT) {
-      return Math.pow(TT, MT.g)
+    function xq(qq) {
+      return Math.pow(qq, lq.h)
     }
 
-    function fT(TT) {
-      return TT <= .04045 ? .0773993808 * TT : Math.pow(.947867299 * (TT + .055), 2.4)
+    function Aq(qq) {
+      return qq <= .04045 ? .0773993808 * qq : Math.pow(.947867299 * (qq + .055), 2.4)
     }
 
-    function xT(TT) {
-      return Math.pow(TT, MT.c)
+    function cq(qq) {
+      return Math.pow(qq, lq.e)
     }
 
-    function IT(TT) {
-      return TT <= .0031308 ? 12.92 * TT : 1.055 * Math.pow(TT, .41666) - .055
+    function uq(qq) {
+      return qq <= .0031308 ? 12.92 * qq : 1.055 * Math.pow(qq, .41666) - .055
     }
-    class AT {
+    class Bq {
       constructor() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        this.r = TT, this.g = kT, this.b = cT
+        let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        this.r = qq, this.g = Eq, this.b = gq
       }
       toString() {
         return "{R: " + this.r + " G:" + this.g + " B:" + this.b + "}"
@@ -42,416 +42,416 @@ export const modules = {
         return "Color3"
       }
       getHashCode() {
-        let TT = 255 * this.r | 0;
-        return TT = 397 * TT ^ 255 * this.g, TT = 397 * TT ^ 255 * this.b, TT
+        let qq = 255 * this.r | 0;
+        return qq = 397 * qq ^ 255 * this.g, qq = 397 * qq ^ 255 * this.b, qq
       }
-      toArray(TT) {
-        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return TT[kT] = this.r, TT[kT + 1] = this.g, TT[kT + 2] = this.b, this
+      toArray(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return qq[Eq] = this.r, qq[Eq + 1] = this.g, qq[Eq + 2] = this.b, this
       }
-      xkT(TT) {
-        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return AT.FromArrayToRef(TT, kT, this), this
+      ogq(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return Bq.FromArrayToRef(qq, Eq, this), this
       }
       toColor4() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
-        return new CT(this.r, this.g, this.b, TT)
+        let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
+        return new Wq(this.r, this.g, this.b, qq)
       }
-      acT() {
+      bYq() {
         return [this.r, this.g, this.b]
       }
       toLuminance() {
         return .3 * this.r + .59 * this.g + .11 * this.b
       }
-      multiply(TT) {
-        return new AT(this.r * TT.r, this.g * TT.g, this.b * TT.b)
+      multiply(qq) {
+        return new Bq(this.r * qq.r, this.g * qq.g, this.b * qq.b)
       }
-      multiplyToRef(TT, kT) {
-        return kT.r = this.r * TT.r, kT.g = this.g * TT.g, kT.b = this.b * TT.b, kT
+      multiplyToRef(qq, Eq) {
+        return Eq.r = this.r * qq.r, Eq.g = this.g * qq.g, Eq.b = this.b * qq.b, Eq
       }
-      multiplyInPlace(TT) {
-        return this.r *= TT.r, this.g *= TT.g, this.b *= TT.b, this
+      multiplyInPlace(qq) {
+        return this.r *= qq.r, this.g *= qq.g, this.b *= qq.b, this
       }
-      multiplyByFloats(TT, kT, cT) {
-        return new AT(this.r * TT, this.g * kT, this.b * cT)
+      multiplyByFloats(qq, Eq, gq) {
+        return new Bq(this.r * qq, this.g * Eq, this.b * gq)
       }
-      divide(TT) {
+      divide(qq) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideToRef(TT, kT) {
+      divideToRef(qq, Eq) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideInPlace(TT) {
+      divideInPlace(qq) {
         throw new ReferenceError("Can not divide a color")
       }
-      minimizeInPlace(TT) {
-        return this.minimizeInPlaceFromFloats(TT.r, TT.g, TT.b)
+      minimizeInPlace(qq) {
+        return this.minimizeInPlaceFromFloats(qq.r, qq.g, qq.b)
       }
-      maximizeInPlace(TT) {
-        return this.maximizeInPlaceFromFloats(TT.r, TT.g, TT.b)
+      maximizeInPlace(qq) {
+        return this.maximizeInPlaceFromFloats(qq.r, qq.g, qq.b)
       }
-      minimizeInPlaceFromFloats(TT, kT, cT) {
-        return this.r = Math.min(TT, this.r), this.g = Math.min(kT, this.g), this.b = Math.min(cT, this.b), this
+      minimizeInPlaceFromFloats(qq, Eq, gq) {
+        return this.r = Math.min(qq, this.r), this.g = Math.min(Eq, this.g), this.b = Math.min(gq, this.b), this
       }
-      maximizeInPlaceFromFloats(TT, kT, cT) {
-        return this.r = Math.max(TT, this.r), this.g = Math.max(kT, this.g), this.b = Math.max(cT, this.b), this
+      maximizeInPlaceFromFloats(qq, Eq, gq) {
+        return this.r = Math.max(qq, this.r), this.g = Math.max(Eq, this.g), this.b = Math.max(gq, this.b), this
       }
-      floorToRef(TT) {
+      floorToRef(qq) {
         throw new ReferenceError("Can not floor a color")
       }
       floor() {
         throw new ReferenceError("Can not floor a color")
       }
-      fractToRef(TT) {
+      fractToRef(qq) {
         throw new ReferenceError("Can not fract a color")
       }
       fract() {
         throw new ReferenceError("Can not fract a color")
       }
-      equals(TT) {
-        return TT && this.r === TT.r && this.g === TT.g && this.b === TT.b
+      equals(qq) {
+        return qq && this.r === qq.r && this.g === qq.g && this.b === qq.b
       }
-      equalsFloats(TT, kT, cT) {
-        return this.qKT(TT, kT, cT)
+      equalsFloats(qq, Eq, gq) {
+        return this.Cmq(qq, Eq, gq)
       }
-      qKT(TT, kT, cT) {
-        return this.r === TT && this.g === kT && this.b === cT
+      Cmq(qq, Eq, gq) {
+        return this.r === qq && this.g === Eq && this.b === gq
       }
-      equalsWithEpsilon(TT) {
-        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : MT.b;
-        return (0, KT.WithinEpsilon)(this.r, TT.r, kT) && (0, KT.WithinEpsilon)(this.g, TT.g, kT) && (0, KT.WithinEpsilon)(this.b, TT.b, kT)
+      equalsWithEpsilon(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : lq.c;
+        return (0, Oq.WithinEpsilon)(this.r, qq.r, Eq) && (0, Oq.WithinEpsilon)(this.g, qq.g, Eq) && (0, Oq.WithinEpsilon)(this.b, qq.b, Eq)
       }
-      rc() {
+      nY() {
         throw new ReferenceError("Can not negate a color")
       }
       negateInPlace() {
         throw new ReferenceError("Can not negate a color")
       }
-      negateToRef(TT) {
+      negateToRef(qq) {
         throw new ReferenceError("Can not negate a color")
       }
-      scale(TT) {
-        return new AT(this.r * TT, this.g * TT, this.b * TT)
+      scale(qq) {
+        return new Bq(this.r * qq, this.g * qq, this.b * qq)
       }
-      scaleInPlace(TT) {
-        return this.r *= TT, this.g *= TT, this.b *= TT, this
+      scaleInPlace(qq) {
+        return this.r *= qq, this.g *= qq, this.b *= qq, this
       }
-      scaleToRef(TT, kT) {
-        return kT.r = this.r * TT, kT.g = this.g * TT, kT.b = this.b * TT, kT
+      scaleToRef(qq, Eq) {
+        return Eq.r = this.r * qq, Eq.g = this.g * qq, Eq.b = this.b * qq, Eq
       }
-      scaleAndAddToRef(TT, kT) {
-        return kT.r += this.r * TT, kT.g += this.g * TT, kT.b += this.b * TT, kT
+      scaleAndAddToRef(qq, Eq) {
+        return Eq.r += this.r * qq, Eq.g += this.g * qq, Eq.b += this.b * qq, Eq
       }
       clampToRef() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          cT = arguments.length > 2 ? arguments[2] : void 0;
-        return cT.r = (0, KT.Clamp)(this.r, TT, kT), cT.g = (0, KT.Clamp)(this.g, TT, kT), cT.b = (0, KT.Clamp)(this.b, TT, kT), cT
+        let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          gq = arguments.length > 2 ? arguments[2] : void 0;
+        return gq.r = (0, Oq.Clamp)(this.r, qq, Eq), gq.g = (0, Oq.Clamp)(this.g, qq, Eq), gq.b = (0, Oq.Clamp)(this.b, qq, Eq), gq
       }
-      add(TT) {
-        return new AT(this.r + TT.r, this.g + TT.g, this.b + TT.b)
+      add(qq) {
+        return new Bq(this.r + qq.r, this.g + qq.g, this.b + qq.b)
       }
-      addInPlace(TT) {
-        return this.r += TT.r, this.g += TT.g, this.b += TT.b, this
+      addInPlace(qq) {
+        return this.r += qq.r, this.g += qq.g, this.b += qq.b, this
       }
-      addInPlaceFromFloats(TT, kT, cT) {
-        return this.r += TT, this.g += kT, this.b += cT, this
+      addInPlaceFromFloats(qq, Eq, gq) {
+        return this.r += qq, this.g += Eq, this.b += gq, this
       }
-      addToRef(TT, kT) {
-        return kT.r = this.r + TT.r, kT.g = this.g + TT.g, kT.b = this.b + TT.b, kT
+      addToRef(qq, Eq) {
+        return Eq.r = this.r + qq.r, Eq.g = this.g + qq.g, Eq.b = this.b + qq.b, Eq
       }
-      subtract(TT) {
-        return new AT(this.r - TT.r, this.g - TT.g, this.b - TT.b)
+      subtract(qq) {
+        return new Bq(this.r - qq.r, this.g - qq.g, this.b - qq.b)
       }
-      subtractToRef(TT, kT) {
-        return kT.r = this.r - TT.r, kT.g = this.g - TT.g, kT.b = this.b - TT.b, kT
+      subtractToRef(qq, Eq) {
+        return Eq.r = this.r - qq.r, Eq.g = this.g - qq.g, Eq.b = this.b - qq.b, Eq
       }
-      gcT(TT) {
-        return this.r -= TT.r, this.g -= TT.g, this.b -= TT.b, this
+      KYq(qq) {
+        return this.r -= qq.r, this.g -= qq.g, this.b -= qq.b, this
       }
-      subtractFromFloats(TT, kT, cT) {
-        return new AT(this.r - TT, this.g - kT, this.b - cT)
+      subtractFromFloats(qq, Eq, gq) {
+        return new Bq(this.r - qq, this.g - Eq, this.b - gq)
       }
-      subtractFromFloatsToRef(TT, kT, cT, lT) {
-        return lT.r = this.r - TT, lT.g = this.g - kT, lT.b = this.b - cT, lT
+      subtractFromFloatsToRef(qq, Eq, gq, Yq) {
+        return Yq.r = this.r - qq, Yq.g = this.g - Eq, Yq.b = this.b - gq, Yq
       }
       clone() {
-        return new AT(this.r, this.g, this.b)
+        return new Bq(this.r, this.g, this.b)
       }
-      UkT(TT) {
-        return this.r = TT.r, this.g = TT.g, this.b = TT.b, this
+      WG(qq) {
+        return this.r = qq.r, this.g = qq.g, this.b = qq.b, this
       }
-      I5(TT, kT, cT) {
-        return this.r = TT, this.g = kT, this.b = cT, this
+      Vqq(qq, Eq, gq) {
+        return this.r = qq, this.g = Eq, this.b = gq, this
       }
-      set(TT, kT, cT) {
-        return this.I5(TT, kT, cT)
+      set(qq, Eq, gq) {
+        return this.Vqq(qq, Eq, gq)
       }
-      Xs(TT) {
-        return this.r = this.g = this.b = TT, this
+      A4(qq) {
+        return this.r = this.g = this.b = qq, this
       }
       toHexString() {
-        const TT = Math.round(255 * this.r),
-          kT = Math.round(255 * this.g),
-          cT = Math.round(255 * this.b);
-        return "#" + (0, KT.ToHex)(TT) + (0, KT.ToHex)(kT) + (0, KT.ToHex)(cT)
+        const qq = Math.round(255 * this.r),
+          Eq = Math.round(255 * this.g),
+          gq = Math.round(255 * this.b);
+        return "#" + (0, Oq.ToHex)(qq) + (0, Oq.ToHex)(Eq) + (0, Oq.ToHex)(gq)
       }
-      fromHexString(TT) {
-        return "#" !== TT.substring(0, 1) || 7 !== TT.length || (this.r = parseInt(TT.substring(1, 3), 16) / 255, this.g = parseInt(TT.substring(3, 5), 16) / 255, this.b = parseInt(TT.substring(5, 7), 16) / 255), this
+      fromHexString(qq) {
+        return "#" !== qq.substring(0, 1) || 7 !== qq.length || (this.r = parseInt(qq.substring(1, 3), 16) / 255, this.g = parseInt(qq.substring(3, 5), 16) / 255, this.b = parseInt(qq.substring(5, 7), 16) / 255), this
       }
       toHSV() {
-        return this.toHSVToRef(new AT)
+        return this.toHSVToRef(new Bq)
       }
-      toHSVToRef(TT) {
-        const kT = this.r,
-          cT = this.g,
-          lT = this.b,
-          MT = Math.max(kT, cT, lT),
-          KT = Math.min(kT, cT, lT);
-        let OT = 0,
-          yT = 0;
-        const fT = MT,
-          xT = MT - KT;
-        return 0 !== MT && (yT = xT / MT), MT != KT && (MT == kT ? (OT = (cT - lT) / xT, cT < lT && (OT += 6)) : MT == cT ? OT = (lT - kT) / xT + 2 : MT == lT && (OT = (kT - cT) / xT + 4), OT *= 60), TT.r = OT, TT.g = yT, TT.b = fT, TT
+      toHSVToRef(qq) {
+        const Eq = this.r,
+          gq = this.g,
+          Yq = this.b,
+          lq = Math.max(Eq, gq, Yq),
+          Oq = Math.min(Eq, gq, Yq);
+        let mq = 0,
+          xq = 0;
+        const Aq = lq,
+          cq = lq - Oq;
+        return 0 !== lq && (xq = cq / lq), lq != Oq && (lq == Eq ? (mq = (gq - Yq) / cq, gq < Yq && (mq += 6)) : lq == gq ? mq = (Yq - Eq) / cq + 2 : lq == Yq && (mq = (Eq - gq) / cq + 4), mq *= 60), qq.r = mq, qq.g = xq, qq.b = Aq, qq
       }
       toLinearSpace() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const kT = new AT;
-        return this.toLinearSpaceToRef(kT, TT), kT
+        let qq = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const Eq = new Bq;
+        return this.toLinearSpaceToRef(Eq, qq), Eq
       }
-      toLinearSpaceToRef(TT) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (TT.r = fT(this.r), TT.g = fT(this.g), TT.b = fT(this.b)) : (TT.r = yT(this.r), TT.g = yT(this.g), TT.b = yT(this.b)), this
+      toLinearSpaceToRef(qq) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (qq.r = Aq(this.r), qq.g = Aq(this.g), qq.b = Aq(this.b)) : (qq.r = xq(this.r), qq.g = xq(this.g), qq.b = xq(this.b)), this
       }
       toGammaSpace() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const kT = new AT;
-        return this.toGammaSpaceToRef(kT, TT), kT
+        let qq = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const Eq = new Bq;
+        return this.toGammaSpaceToRef(Eq, qq), Eq
       }
-      toGammaSpaceToRef(TT) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (TT.r = IT(this.r), TT.g = IT(this.g), TT.b = IT(this.b)) : (TT.r = xT(this.r), TT.g = xT(this.g), TT.b = xT(this.b)), this
+      toGammaSpaceToRef(qq) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (qq.r = uq(this.r), qq.g = uq(this.g), qq.b = uq(this.b)) : (qq.r = cq(this.r), qq.g = cq(this.g), qq.b = cq(this.b)), this
       }
-      static HSVtoRGBToRef(TT, kT, cT, lT) {
-        const MT = cT * kT,
-          KT = TT / 60,
-          OT = MT * (1 - Math.abs(KT % 2 - 1));
-        let yT = 0,
-          fT = 0,
-          xT = 0;
-        KT >= 0 && KT <= 1 ? (yT = MT, fT = OT) : KT >= 1 && KT <= 2 ? (yT = OT, fT = MT) : KT >= 2 && KT <= 3 ? (fT = MT, xT = OT) : KT >= 3 && KT <= 4 ? (fT = OT, xT = MT) : KT >= 4 && KT <= 5 ? (yT = OT, xT = MT) : KT >= 5 && KT <= 6 && (yT = MT, xT = OT);
-        const IT = cT - MT;
-        return lT.r = yT + IT, lT.g = fT + IT, lT.b = xT + IT, lT
+      static HSVtoRGBToRef(qq, Eq, gq, Yq) {
+        const lq = gq * Eq,
+          Oq = qq / 60,
+          mq = lq * (1 - Math.abs(Oq % 2 - 1));
+        let xq = 0,
+          Aq = 0,
+          cq = 0;
+        Oq >= 0 && Oq <= 1 ? (xq = lq, Aq = mq) : Oq >= 1 && Oq <= 2 ? (xq = mq, Aq = lq) : Oq >= 2 && Oq <= 3 ? (Aq = lq, cq = mq) : Oq >= 3 && Oq <= 4 ? (Aq = mq, cq = lq) : Oq >= 4 && Oq <= 5 ? (xq = mq, cq = lq) : Oq >= 5 && Oq <= 6 && (xq = lq, cq = mq);
+        const uq = gq - lq;
+        return Yq.r = xq + uq, Yq.g = Aq + uq, Yq.b = cq + uq, Yq
       }
-      static FromHSV(TT, kT, cT) {
-        const lT = new AT(0, 0, 0);
-        return AT.HSVtoRGBToRef(TT, kT, cT, lT), lT
+      static FromHSV(qq, Eq, gq) {
+        const Yq = new Bq(0, 0, 0);
+        return Bq.HSVtoRGBToRef(qq, Eq, gq, Yq), Yq
       }
-      static FromHexString(TT) {
-        return new AT(0, 0, 0).fromHexString(TT)
+      static FromHexString(qq) {
+        return new Bq(0, 0, 0).fromHexString(qq)
       }
-      static FromArray(TT) {
-        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new AT(TT[kT], TT[kT + 1], TT[kT + 2])
+      static FromArray(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new Bq(qq[Eq], qq[Eq + 1], qq[Eq + 2])
       }
-      static FromArrayToRef(TT) {
-        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          cT = arguments.length > 2 ? arguments[2] : void 0;
-        cT.r = TT[kT], cT.g = TT[kT + 1], cT.b = TT[kT + 2]
+      static FromArrayToRef(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          gq = arguments.length > 2 ? arguments[2] : void 0;
+        gq.r = qq[Eq], gq.g = qq[Eq + 1], gq.b = qq[Eq + 2]
       }
-      static FromInts(TT, kT, cT) {
-        return new AT(TT / 255, kT / 255, cT / 255)
+      static FromInts(qq, Eq, gq) {
+        return new Bq(qq / 255, Eq / 255, gq / 255)
       }
-      static Lerp(TT, kT, cT) {
-        const lT = new AT(0, 0, 0);
-        return AT.LerpToRef(TT, kT, cT, lT), lT
+      static Lerp(qq, Eq, gq) {
+        const Yq = new Bq(0, 0, 0);
+        return Bq.LerpToRef(qq, Eq, gq, Yq), Yq
       }
-      static LerpToRef(TT, kT, cT, lT) {
-        lT.r = TT.r + (kT.r - TT.r) * cT, lT.g = TT.g + (kT.g - TT.g) * cT, lT.b = TT.b + (kT.b - TT.b) * cT
+      static LerpToRef(qq, Eq, gq, Yq) {
+        Yq.r = qq.r + (Eq.r - qq.r) * gq, Yq.g = qq.g + (Eq.g - qq.g) * gq, Yq.b = qq.b + (Eq.b - qq.b) * gq
       }
-      static Hermite(TT, kT, cT, lT, MT) {
-        const KT = MT * MT,
-          OT = MT * KT,
-          yT = 2 * OT - 3 * KT + 1,
-          fT = -2 * OT + 3 * KT,
-          xT = OT - 2 * KT + MT,
-          IT = OT - KT,
-          CT = TT.r * yT + cT.r * fT + kT.r * xT + lT.r * IT,
-          jT = TT.g * yT + cT.g * fT + kT.g * xT + lT.g * IT,
-          vT = TT.b * yT + cT.b * fT + kT.b * xT + lT.b * IT;
-        return new AT(CT, jT, vT)
+      static Hermite(qq, Eq, gq, Yq, lq) {
+        const Oq = lq * lq,
+          mq = lq * Oq,
+          xq = 2 * mq - 3 * Oq + 1,
+          Aq = -2 * mq + 3 * Oq,
+          cq = mq - 2 * Oq + lq,
+          uq = mq - Oq,
+          Wq = qq.r * xq + gq.r * Aq + Eq.r * cq + Yq.r * uq,
+          Nq = qq.g * xq + gq.g * Aq + Eq.g * cq + Yq.g * uq,
+          aq = qq.b * xq + gq.b * Aq + Eq.b * cq + Yq.b * uq;
+        return new Bq(Wq, Nq, aq)
       }
-      static Hermite1stDerivative(TT, kT, cT, lT, MT) {
-        const KT = AT.Black();
-        return this.Hermite1stDerivativeToRef(TT, kT, cT, lT, MT, KT), KT
+      static Hermite1stDerivative(qq, Eq, gq, Yq, lq) {
+        const Oq = Bq.Black();
+        return this.Hermite1stDerivativeToRef(qq, Eq, gq, Yq, lq, Oq), Oq
       }
-      static Hermite1stDerivativeToRef(TT, kT, cT, lT, MT, KT) {
-        const OT = MT * MT;
-        KT.r = 6 * (OT - MT) * TT.r + (3 * OT - 4 * MT + 1) * kT.r + 6 * (-OT + MT) * cT.r + (3 * OT - 2 * MT) * lT.r, KT.g = 6 * (OT - MT) * TT.g + (3 * OT - 4 * MT + 1) * kT.g + 6 * (-OT + MT) * cT.g + (3 * OT - 2 * MT) * lT.g, KT.b = 6 * (OT - MT) * TT.b + (3 * OT - 4 * MT + 1) * kT.b + 6 * (-OT + MT) * cT.b + (3 * OT - 2 * MT) * lT.b
+      static Hermite1stDerivativeToRef(qq, Eq, gq, Yq, lq, Oq) {
+        const mq = lq * lq;
+        Oq.r = 6 * (mq - lq) * qq.r + (3 * mq - 4 * lq + 1) * Eq.r + 6 * (-mq + lq) * gq.r + (3 * mq - 2 * lq) * Yq.r, Oq.g = 6 * (mq - lq) * qq.g + (3 * mq - 4 * lq + 1) * Eq.g + 6 * (-mq + lq) * gq.g + (3 * mq - 2 * lq) * Yq.g, Oq.b = 6 * (mq - lq) * qq.b + (3 * mq - 4 * lq + 1) * Eq.b + 6 * (-mq + lq) * gq.b + (3 * mq - 2 * lq) * Yq.b
       }
       static Red() {
-        return new AT(1, 0, 0)
+        return new Bq(1, 0, 0)
       }
       static Green() {
-        return new AT(0, 1, 0)
+        return new Bq(0, 1, 0)
       }
       static Blue() {
-        return new AT(0, 0, 1)
+        return new Bq(0, 0, 1)
       }
       static Black() {
-        return new AT(0, 0, 0)
+        return new Bq(0, 0, 0)
       }
       static get BlackReadOnly() {
-        return AT._BlackReadOnly
+        return Bq._BlackReadOnly
       }
       static White() {
-        return new AT(1, 1, 1)
+        return new Bq(1, 1, 1)
       }
       static Purple() {
-        return new AT(.5, 0, .5)
+        return new Bq(.5, 0, .5)
       }
       static Magenta() {
-        return new AT(1, 0, 1)
+        return new Bq(1, 0, 1)
       }
       static Yellow() {
-        return new AT(1, 1, 0)
+        return new Bq(1, 1, 0)
       }
       static Gray() {
-        return new AT(.5, .5, .5)
+        return new Bq(.5, .5, .5)
       }
       static Teal() {
-        return new AT(0, 1, 1)
+        return new Bq(0, 1, 1)
       }
       static Random() {
-        return new AT(Math.random(), Math.random(), Math.random())
+        return new Bq(Math.random(), Math.random(), Math.random())
       }
     }
-    AT._V8PerformanceHack = new AT(.5, .5, .5), AT._BlackReadOnly = AT.Black();
-    class CT {
+    Bq._V8PerformanceHack = new Bq(.5, .5, .5), Bq._BlackReadOnly = Bq.Black();
+    class Wq {
       constructor() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          lT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
-        this.r = TT, this.g = kT, this.b = cT, this.a = lT
+        let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          Yq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
+        this.r = qq, this.g = Eq, this.b = gq, this.a = Yq
       }
-      acT() {
+      bYq() {
         return [this.r, this.g, this.b, this.a]
       }
-      toArray(TT) {
-        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return TT[kT] = this.r, TT[kT + 1] = this.g, TT[kT + 2] = this.b, TT[kT + 3] = this.a, this
+      toArray(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return qq[Eq] = this.r, qq[Eq + 1] = this.g, qq[Eq + 2] = this.b, qq[Eq + 3] = this.a, this
       }
-      xkT(TT) {
-        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return this.r = TT[kT], this.g = TT[kT + 1], this.b = TT[kT + 2], this.a = TT[kT + 3], this
+      ogq(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return this.r = qq[Eq], this.g = qq[Eq + 1], this.b = qq[Eq + 2], this.a = qq[Eq + 3], this
       }
-      equals(TT) {
-        return TT && this.r === TT.r && this.g === TT.g && this.b === TT.b && this.a === TT.a
+      equals(qq) {
+        return qq && this.r === qq.r && this.g === qq.g && this.b === qq.b && this.a === qq.a
       }
-      add(TT) {
-        return new CT(this.r + TT.r, this.g + TT.g, this.b + TT.b, this.a + TT.a)
+      add(qq) {
+        return new Wq(this.r + qq.r, this.g + qq.g, this.b + qq.b, this.a + qq.a)
       }
-      addToRef(TT, kT) {
-        return kT.r = this.r + TT.r, kT.g = this.g + TT.g, kT.b = this.b + TT.b, kT.a = this.a + TT.a, kT
+      addToRef(qq, Eq) {
+        return Eq.r = this.r + qq.r, Eq.g = this.g + qq.g, Eq.b = this.b + qq.b, Eq.a = this.a + qq.a, Eq
       }
-      addInPlace(TT) {
-        return this.r += TT.r, this.g += TT.g, this.b += TT.b, this.a += TT.a, this
+      addInPlace(qq) {
+        return this.r += qq.r, this.g += qq.g, this.b += qq.b, this.a += qq.a, this
       }
-      addInPlaceFromFloats(TT, kT, cT, lT) {
-        return this.r += TT, this.g += kT, this.b += cT, this.a += lT, this
+      addInPlaceFromFloats(qq, Eq, gq, Yq) {
+        return this.r += qq, this.g += Eq, this.b += gq, this.a += Yq, this
       }
-      subtract(TT) {
-        return new CT(this.r - TT.r, this.g - TT.g, this.b - TT.b, this.a - TT.a)
+      subtract(qq) {
+        return new Wq(this.r - qq.r, this.g - qq.g, this.b - qq.b, this.a - qq.a)
       }
-      subtractToRef(TT, kT) {
-        return kT.r = this.r - TT.r, kT.g = this.g - TT.g, kT.b = this.b - TT.b, kT.a = this.a - TT.a, kT
+      subtractToRef(qq, Eq) {
+        return Eq.r = this.r - qq.r, Eq.g = this.g - qq.g, Eq.b = this.b - qq.b, Eq.a = this.a - qq.a, Eq
       }
-      gcT(TT) {
-        return this.r -= TT.r, this.g -= TT.g, this.b -= TT.b, this.a -= TT.a, this
+      KYq(qq) {
+        return this.r -= qq.r, this.g -= qq.g, this.b -= qq.b, this.a -= qq.a, this
       }
-      subtractFromFloats(TT, kT, cT, lT) {
-        return new CT(this.r - TT, this.g - kT, this.b - cT, this.a - lT)
+      subtractFromFloats(qq, Eq, gq, Yq) {
+        return new Wq(this.r - qq, this.g - Eq, this.b - gq, this.a - Yq)
       }
-      subtractFromFloatsToRef(TT, kT, cT, lT, MT) {
-        return MT.r = this.r - TT, MT.g = this.g - kT, MT.b = this.b - cT, MT.a = this.a - lT, MT
+      subtractFromFloatsToRef(qq, Eq, gq, Yq, lq) {
+        return lq.r = this.r - qq, lq.g = this.g - Eq, lq.b = this.b - gq, lq.a = this.a - Yq, lq
       }
-      scale(TT) {
-        return new CT(this.r * TT, this.g * TT, this.b * TT, this.a * TT)
+      scale(qq) {
+        return new Wq(this.r * qq, this.g * qq, this.b * qq, this.a * qq)
       }
-      scaleInPlace(TT) {
-        return this.r *= TT, this.g *= TT, this.b *= TT, this.a *= TT, this
+      scaleInPlace(qq) {
+        return this.r *= qq, this.g *= qq, this.b *= qq, this.a *= qq, this
       }
-      scaleToRef(TT, kT) {
-        return kT.r = this.r * TT, kT.g = this.g * TT, kT.b = this.b * TT, kT.a = this.a * TT, kT
+      scaleToRef(qq, Eq) {
+        return Eq.r = this.r * qq, Eq.g = this.g * qq, Eq.b = this.b * qq, Eq.a = this.a * qq, Eq
       }
-      scaleAndAddToRef(TT, kT) {
-        return kT.r += this.r * TT, kT.g += this.g * TT, kT.b += this.b * TT, kT.a += this.a * TT, kT
+      scaleAndAddToRef(qq, Eq) {
+        return Eq.r += this.r * qq, Eq.g += this.g * qq, Eq.b += this.b * qq, Eq.a += this.a * qq, Eq
       }
       clampToRef() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          cT = arguments.length > 2 ? arguments[2] : void 0;
-        return cT.r = (0, KT.Clamp)(this.r, TT, kT), cT.g = (0, KT.Clamp)(this.g, TT, kT), cT.b = (0, KT.Clamp)(this.b, TT, kT), cT.a = (0, KT.Clamp)(this.a, TT, kT), cT
+        let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          gq = arguments.length > 2 ? arguments[2] : void 0;
+        return gq.r = (0, Oq.Clamp)(this.r, qq, Eq), gq.g = (0, Oq.Clamp)(this.g, qq, Eq), gq.b = (0, Oq.Clamp)(this.b, qq, Eq), gq.a = (0, Oq.Clamp)(this.a, qq, Eq), gq
       }
-      multiply(TT) {
-        return new CT(this.r * TT.r, this.g * TT.g, this.b * TT.b, this.a * TT.a)
+      multiply(qq) {
+        return new Wq(this.r * qq.r, this.g * qq.g, this.b * qq.b, this.a * qq.a)
       }
-      multiplyToRef(TT, kT) {
-        return kT.r = this.r * TT.r, kT.g = this.g * TT.g, kT.b = this.b * TT.b, kT.a = this.a * TT.a, kT
+      multiplyToRef(qq, Eq) {
+        return Eq.r = this.r * qq.r, Eq.g = this.g * qq.g, Eq.b = this.b * qq.b, Eq.a = this.a * qq.a, Eq
       }
-      multiplyInPlace(TT) {
-        return this.r *= TT.r, this.g *= TT.g, this.b *= TT.b, this.a *= TT.a, this
+      multiplyInPlace(qq) {
+        return this.r *= qq.r, this.g *= qq.g, this.b *= qq.b, this.a *= qq.a, this
       }
-      multiplyByFloats(TT, kT, cT, lT) {
-        return new CT(this.r * TT, this.g * kT, this.b * cT, this.a * lT)
+      multiplyByFloats(qq, Eq, gq, Yq) {
+        return new Wq(this.r * qq, this.g * Eq, this.b * gq, this.a * Yq)
       }
-      divide(TT) {
+      divide(qq) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideToRef(TT, kT) {
+      divideToRef(qq, Eq) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideInPlace(TT) {
+      divideInPlace(qq) {
         throw new ReferenceError("Can not divide a color")
       }
-      minimizeInPlace(TT) {
-        return this.r = Math.min(this.r, TT.r), this.g = Math.min(this.g, TT.g), this.b = Math.min(this.b, TT.b), this.a = Math.min(this.a, TT.a), this
+      minimizeInPlace(qq) {
+        return this.r = Math.min(this.r, qq.r), this.g = Math.min(this.g, qq.g), this.b = Math.min(this.b, qq.b), this.a = Math.min(this.a, qq.a), this
       }
-      maximizeInPlace(TT) {
-        return this.r = Math.max(this.r, TT.r), this.g = Math.max(this.g, TT.g), this.b = Math.max(this.b, TT.b), this.a = Math.max(this.a, TT.a), this
+      maximizeInPlace(qq) {
+        return this.r = Math.max(this.r, qq.r), this.g = Math.max(this.g, qq.g), this.b = Math.max(this.b, qq.b), this.a = Math.max(this.a, qq.a), this
       }
-      minimizeInPlaceFromFloats(TT, kT, cT, lT) {
-        return this.r = Math.min(TT, this.r), this.g = Math.min(kT, this.g), this.b = Math.min(cT, this.b), this.a = Math.min(lT, this.a), this
+      minimizeInPlaceFromFloats(qq, Eq, gq, Yq) {
+        return this.r = Math.min(qq, this.r), this.g = Math.min(Eq, this.g), this.b = Math.min(gq, this.b), this.a = Math.min(Yq, this.a), this
       }
-      maximizeInPlaceFromFloats(TT, kT, cT, lT) {
-        return this.r = Math.max(TT, this.r), this.g = Math.max(kT, this.g), this.b = Math.max(cT, this.b), this.a = Math.max(lT, this.a), this
+      maximizeInPlaceFromFloats(qq, Eq, gq, Yq) {
+        return this.r = Math.max(qq, this.r), this.g = Math.max(Eq, this.g), this.b = Math.max(gq, this.b), this.a = Math.max(Yq, this.a), this
       }
-      floorToRef(TT) {
+      floorToRef(qq) {
         throw new ReferenceError("Can not floor a color")
       }
       floor() {
         throw new ReferenceError("Can not floor a color")
       }
-      fractToRef(TT) {
+      fractToRef(qq) {
         throw new ReferenceError("Can not fract a color")
       }
       fract() {
         throw new ReferenceError("Can not fract a color")
       }
-      rc() {
+      nY() {
         throw new ReferenceError("Can not negate a color")
       }
       negateInPlace() {
         throw new ReferenceError("Can not negate a color")
       }
-      negateToRef(TT) {
+      negateToRef(qq) {
         throw new ReferenceError("Can not negate a color")
       }
-      equalsWithEpsilon(TT) {
-        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : MT.b;
-        return (0, KT.WithinEpsilon)(this.r, TT.r, kT) && (0, KT.WithinEpsilon)(this.g, TT.g, kT) && (0, KT.WithinEpsilon)(this.b, TT.b, kT) && (0, KT.WithinEpsilon)(this.a, TT.a, kT)
+      equalsWithEpsilon(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : lq.c;
+        return (0, Oq.WithinEpsilon)(this.r, qq.r, Eq) && (0, Oq.WithinEpsilon)(this.g, qq.g, Eq) && (0, Oq.WithinEpsilon)(this.b, qq.b, Eq) && (0, Oq.WithinEpsilon)(this.a, qq.a, Eq)
       }
-      qKT(TT, kT, cT, lT) {
-        return this.r === TT && this.g === kT && this.b === cT && this.a === lT
+      Cmq(qq, Eq, gq, Yq) {
+        return this.r === qq && this.g === Eq && this.b === gq && this.a === Yq
       }
       toString() {
         return "{R: " + this.r + " G:" + this.g + " B:" + this.b + " A:" + this.a + "}"
@@ -460,346 +460,346 @@ export const modules = {
         return "Color4"
       }
       getHashCode() {
-        let TT = 255 * this.r | 0;
-        return TT = 397 * TT ^ 255 * this.g, TT = 397 * TT ^ 255 * this.b, TT = 397 * TT ^ 255 * this.a, TT
+        let qq = 255 * this.r | 0;
+        return qq = 397 * qq ^ 255 * this.g, qq = 397 * qq ^ 255 * this.b, qq = 397 * qq ^ 255 * this.a, qq
       }
       clone() {
-        return (new CT).UkT(this)
+        return (new Wq).WG(this)
       }
-      UkT(TT) {
-        return this.r = TT.r, this.g = TT.g, this.b = TT.b, this.a = TT.a, this
+      WG(qq) {
+        return this.r = qq.r, this.g = qq.g, this.b = qq.b, this.a = qq.a, this
       }
-      I5(TT, kT, cT, lT) {
-        return this.r = TT, this.g = kT, this.b = cT, this.a = lT, this
+      Vqq(qq, Eq, gq, Yq) {
+        return this.r = qq, this.g = Eq, this.b = gq, this.a = Yq, this
       }
-      set(TT, kT, cT, lT) {
-        return this.I5(TT, kT, cT, lT)
+      set(qq, Eq, gq, Yq) {
+        return this.Vqq(qq, Eq, gq, Yq)
       }
-      Xs(TT) {
-        return this.r = this.g = this.b = this.a = TT, this
+      A4(qq) {
+        return this.r = this.g = this.b = this.a = qq, this
       }
       toHexString() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const kT = Math.round(255 * this.r),
-          cT = Math.round(255 * this.g),
-          lT = Math.round(255 * this.b);
-        if (TT) return "#" + (0, KT.ToHex)(kT) + (0, KT.ToHex)(cT) + (0, KT.ToHex)(lT);
-        const MT = Math.round(255 * this.a);
-        return "#" + (0, KT.ToHex)(kT) + (0, KT.ToHex)(cT) + (0, KT.ToHex)(lT) + (0, KT.ToHex)(MT)
+        let qq = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const Eq = Math.round(255 * this.r),
+          gq = Math.round(255 * this.g),
+          Yq = Math.round(255 * this.b);
+        if (qq) return "#" + (0, Oq.ToHex)(Eq) + (0, Oq.ToHex)(gq) + (0, Oq.ToHex)(Yq);
+        const lq = Math.round(255 * this.a);
+        return "#" + (0, Oq.ToHex)(Eq) + (0, Oq.ToHex)(gq) + (0, Oq.ToHex)(Yq) + (0, Oq.ToHex)(lq)
       }
-      fromHexString(TT) {
-        return "#" !== TT.substring(0, 1) || 9 !== TT.length && 7 !== TT.length || (this.r = parseInt(TT.substring(1, 3), 16) / 255, this.g = parseInt(TT.substring(3, 5), 16) / 255, this.b = parseInt(TT.substring(5, 7), 16) / 255, 9 === TT.length && (this.a = parseInt(TT.substring(7, 9), 16) / 255)), this
+      fromHexString(qq) {
+        return "#" !== qq.substring(0, 1) || 9 !== qq.length && 7 !== qq.length || (this.r = parseInt(qq.substring(1, 3), 16) / 255, this.g = parseInt(qq.substring(3, 5), 16) / 255, this.b = parseInt(qq.substring(5, 7), 16) / 255, 9 === qq.length && (this.a = parseInt(qq.substring(7, 9), 16) / 255)), this
       }
       toLinearSpace() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const kT = new CT;
-        return this.toLinearSpaceToRef(kT, TT), kT
+        let qq = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const Eq = new Wq;
+        return this.toLinearSpaceToRef(Eq, qq), Eq
       }
-      toLinearSpaceToRef(TT) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (TT.r = fT(this.r), TT.g = fT(this.g), TT.b = fT(this.b)) : (TT.r = yT(this.r), TT.g = yT(this.g), TT.b = yT(this.b)), TT.a = this.a, this
+      toLinearSpaceToRef(qq) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (qq.r = Aq(this.r), qq.g = Aq(this.g), qq.b = Aq(this.b)) : (qq.r = xq(this.r), qq.g = xq(this.g), qq.b = xq(this.b)), qq.a = this.a, this
       }
       toGammaSpace() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const kT = new CT;
-        return this.toGammaSpaceToRef(kT, TT), kT
+        let qq = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const Eq = new Wq;
+        return this.toGammaSpaceToRef(Eq, qq), Eq
       }
-      toGammaSpaceToRef(TT) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (TT.r = IT(this.r), TT.g = IT(this.g), TT.b = IT(this.b)) : (TT.r = xT(this.r), TT.g = xT(this.g), TT.b = xT(this.b)), TT.a = this.a, this
+      toGammaSpaceToRef(qq) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (qq.r = uq(this.r), qq.g = uq(this.g), qq.b = uq(this.b)) : (qq.r = cq(this.r), qq.g = cq(this.g), qq.b = cq(this.b)), qq.a = this.a, this
       }
-      static FromHexString(TT) {
-        return "#" !== TT.substring(0, 1) || 9 !== TT.length && 7 !== TT.length ? new CT(0, 0, 0, 0) : new CT(0, 0, 0, 1).fromHexString(TT)
+      static FromHexString(qq) {
+        return "#" !== qq.substring(0, 1) || 9 !== qq.length && 7 !== qq.length ? new Wq(0, 0, 0, 0) : new Wq(0, 0, 0, 1).fromHexString(qq)
       }
-      static Lerp(TT, kT, cT) {
-        return CT.LerpToRef(TT, kT, cT, new CT)
+      static Lerp(qq, Eq, gq) {
+        return Wq.LerpToRef(qq, Eq, gq, new Wq)
       }
-      static LerpToRef(TT, kT, cT, lT) {
-        return lT.r = TT.r + (kT.r - TT.r) * cT, lT.g = TT.g + (kT.g - TT.g) * cT, lT.b = TT.b + (kT.b - TT.b) * cT, lT.a = TT.a + (kT.a - TT.a) * cT, lT
+      static LerpToRef(qq, Eq, gq, Yq) {
+        return Yq.r = qq.r + (Eq.r - qq.r) * gq, Yq.g = qq.g + (Eq.g - qq.g) * gq, Yq.b = qq.b + (Eq.b - qq.b) * gq, Yq.a = qq.a + (Eq.a - qq.a) * gq, Yq
       }
-      static Hermite(TT, kT, cT, lT, MT) {
-        const KT = MT * MT,
-          OT = MT * KT,
-          yT = 2 * OT - 3 * KT + 1,
-          fT = -2 * OT + 3 * KT,
-          xT = OT - 2 * KT + MT,
-          IT = OT - KT,
-          AT = TT.r * yT + cT.r * fT + kT.r * xT + lT.r * IT,
-          jT = TT.g * yT + cT.g * fT + kT.g * xT + lT.g * IT,
-          vT = TT.b * yT + cT.b * fT + kT.b * xT + lT.b * IT,
-          tT = TT.a * yT + cT.a * fT + kT.a * xT + lT.a * IT;
-        return new CT(AT, jT, vT, tT)
+      static Hermite(qq, Eq, gq, Yq, lq) {
+        const Oq = lq * lq,
+          mq = lq * Oq,
+          xq = 2 * mq - 3 * Oq + 1,
+          Aq = -2 * mq + 3 * Oq,
+          cq = mq - 2 * Oq + lq,
+          uq = mq - Oq,
+          Bq = qq.r * xq + gq.r * Aq + Eq.r * cq + Yq.r * uq,
+          Nq = qq.g * xq + gq.g * Aq + Eq.g * cq + Yq.g * uq,
+          aq = qq.b * xq + gq.b * Aq + Eq.b * cq + Yq.b * uq,
+          Vq = qq.a * xq + gq.a * Aq + Eq.a * cq + Yq.a * uq;
+        return new Wq(Bq, Nq, aq, Vq)
       }
-      static Hermite1stDerivative(TT, kT, cT, lT, MT) {
-        const KT = new CT;
-        return this.Hermite1stDerivativeToRef(TT, kT, cT, lT, MT, KT), KT
+      static Hermite1stDerivative(qq, Eq, gq, Yq, lq) {
+        const Oq = new Wq;
+        return this.Hermite1stDerivativeToRef(qq, Eq, gq, Yq, lq, Oq), Oq
       }
-      static Hermite1stDerivativeToRef(TT, kT, cT, lT, MT, KT) {
-        const OT = MT * MT;
-        KT.r = 6 * (OT - MT) * TT.r + (3 * OT - 4 * MT + 1) * kT.r + 6 * (-OT + MT) * cT.r + (3 * OT - 2 * MT) * lT.r, KT.g = 6 * (OT - MT) * TT.g + (3 * OT - 4 * MT + 1) * kT.g + 6 * (-OT + MT) * cT.g + (3 * OT - 2 * MT) * lT.g, KT.b = 6 * (OT - MT) * TT.b + (3 * OT - 4 * MT + 1) * kT.b + 6 * (-OT + MT) * cT.b + (3 * OT - 2 * MT) * lT.b, KT.a = 6 * (OT - MT) * TT.a + (3 * OT - 4 * MT + 1) * kT.a + 6 * (-OT + MT) * cT.a + (3 * OT - 2 * MT) * lT.a
+      static Hermite1stDerivativeToRef(qq, Eq, gq, Yq, lq, Oq) {
+        const mq = lq * lq;
+        Oq.r = 6 * (mq - lq) * qq.r + (3 * mq - 4 * lq + 1) * Eq.r + 6 * (-mq + lq) * gq.r + (3 * mq - 2 * lq) * Yq.r, Oq.g = 6 * (mq - lq) * qq.g + (3 * mq - 4 * lq + 1) * Eq.g + 6 * (-mq + lq) * gq.g + (3 * mq - 2 * lq) * Yq.g, Oq.b = 6 * (mq - lq) * qq.b + (3 * mq - 4 * lq + 1) * Eq.b + 6 * (-mq + lq) * gq.b + (3 * mq - 2 * lq) * Yq.b, Oq.a = 6 * (mq - lq) * qq.a + (3 * mq - 4 * lq + 1) * Eq.a + 6 * (-mq + lq) * gq.a + (3 * mq - 2 * lq) * Yq.a
       }
-      static FromColor3(TT) {
-        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return new CT(TT.r, TT.g, TT.b, kT)
+      static FromColor3(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return new Wq(qq.r, qq.g, qq.b, Eq)
       }
-      static FromArray(TT) {
-        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new CT(TT[kT], TT[kT + 1], TT[kT + 2], TT[kT + 3])
+      static FromArray(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new Wq(qq[Eq], qq[Eq + 1], qq[Eq + 2], qq[Eq + 3])
       }
-      static FromArrayToRef(TT) {
-        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          cT = arguments.length > 2 ? arguments[2] : void 0;
-        cT.r = TT[kT], cT.g = TT[kT + 1], cT.b = TT[kT + 2], cT.a = TT[kT + 3]
+      static FromArrayToRef(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          gq = arguments.length > 2 ? arguments[2] : void 0;
+        gq.r = qq[Eq], gq.g = qq[Eq + 1], gq.b = qq[Eq + 2], gq.a = qq[Eq + 3]
       }
-      static FromInts(TT, kT, cT, lT) {
-        return new CT(TT / 255, kT / 255, cT / 255, lT / 255)
+      static FromInts(qq, Eq, gq, Yq) {
+        return new Wq(qq / 255, Eq / 255, gq / 255, Yq / 255)
       }
-      static CheckColors4(TT, kT) {
-        if (TT.length === 3 * kT) {
-          const kT = [];
-          for (let cT = 0; cT < TT.length; cT += 3) {
-            const lT = cT / 3 * 4;
-            kT[lT] = TT[cT], kT[lT + 1] = TT[cT + 1], kT[lT + 2] = TT[cT + 2], kT[lT + 3] = 1
+      static CheckColors4(qq, Eq) {
+        if (qq.length === 3 * Eq) {
+          const Eq = [];
+          for (let gq = 0; gq < qq.length; gq += 3) {
+            const Yq = gq / 3 * 4;
+            Eq[Yq] = qq[gq], Eq[Yq + 1] = qq[gq + 1], Eq[Yq + 2] = qq[gq + 2], Eq[Yq + 3] = 1
           }
-          return kT
+          return Eq
         }
-        return TT
+        return qq
       }
     }
-    CT._V8PerformanceHack = new CT(.5, .5, .5, .5);
-    class jT {}
-    jT.Color3 = (0, lT.e)(3, AT.Black), jT.Color4 = (0, lT.e)(3, (() => new CT(0, 0, 0, 0)));
-    let vT = !1;
+    Wq._V8PerformanceHack = new Wq(.5, .5, .5, .5);
+    class Nq {}
+    Nq.Color3 = (0, Yq.e)(3, Bq.Black), Nq.Color4 = (0, Yq.e)(3, (() => new Wq(0, 0, 0, 0)));
+    let aq = !1;
 
-    function tT() {
-      vT || (vT = !0, Object.defineProperties(AT.prototype, {
+    function Vq() {
+      aq || (aq = !0, Object.defineProperties(Bq.prototype, {
         dimension: {
           value: [3]
         },
         rank: {
           value: 1
         }
-      }), Object.defineProperties(CT.prototype, {
+      }), Object.defineProperties(Wq.prototype, {
         dimension: {
           value: [4]
         },
         rank: {
           value: 1
         }
-      }), (0, OT.g)("BABYLON.Color3", AT), (0, OT.g)("BABYLON.Color4", CT))
+      }), (0, mq.g)("BABYLON.Color3", Bq), (0, mq.g)("BABYLON.Color4", Wq))
     }
   },
-  36901: (TT, kT, cT) => {
-    cT.d(kT, {
-      b: () => KT,
-      c: () => lT,
-      g: () => MT
+  37145: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => Oq,
+      e: () => Yq,
+      h: () => lq
     });
-    const lT = 1 / 2.2,
-      MT = 2.2;
+    const Yq = 1 / 2.2,
+      lq = 2.2;
     Math.sqrt(5);
-    let KT = .001
+    let Oq = .001
   },
-  36937: (TT, kT, cT) => {
-    function lT(TT) {
-      return parseInt(TT.toString().replace(/\W/g, ""))
+  37158: (qq, Eq, gq) => {
+    function Yq(qq) {
+      return parseInt(qq.toString().replace(/\W/g, ""))
     }
 
-    function MT(TT, kT) {
-      let cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1401298e-51;
-      return Math.abs(TT - kT) <= cT
+    function lq(qq, Eq) {
+      let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1401298e-51;
+      return Math.abs(qq - Eq) <= gq
     }
 
-    function KT(TT, kT, cT) {
-      let lT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1401298e-51;
-      return TT < kT - lT || TT > cT + lT
+    function Oq(qq, Eq, gq) {
+      let Yq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1401298e-51;
+      return qq < Eq - Yq || qq > gq + Yq
     }
 
-    function OT(TT, kT) {
-      return TT === kT ? TT : Math.random() * (kT - TT) + TT
+    function mq(qq, Eq) {
+      return qq === Eq ? qq : Math.random() * (Eq - qq) + qq
     }
 
-    function yT(TT, kT, cT) {
-      return TT + (kT - TT) * cT
+    function xq(qq, Eq, gq) {
+      return qq + (Eq - qq) * gq
     }
 
-    function fT(TT, kT, cT) {
-      let lT = hT(kT - TT, 360);
-      return lT > 180 && (lT -= 360), TT + lT * CT(cT)
+    function Aq(qq, Eq, gq) {
+      let Yq = dq(Eq - qq, 360);
+      return Yq > 180 && (Yq -= 360), qq + Yq * Wq(gq)
     }
 
-    function xT(TT, kT, cT) {
-      let lT;
-      return lT = TT != kT ? CT((cT - TT) / (kT - TT)) : 0, lT
+    function cq(qq, Eq, gq) {
+      let Yq;
+      return Yq = qq != Eq ? Wq((gq - qq) / (Eq - qq)) : 0, Yq
     }
 
-    function IT(TT, kT, cT, lT, MT) {
-      const KT = MT * MT,
-        OT = MT * KT;
-      return TT * (2 * OT - 3 * KT + 1) + cT * (-2 * OT + 3 * KT) + kT * (OT - 2 * KT + MT) + lT * (OT - KT)
+    function uq(qq, Eq, gq, Yq, lq) {
+      const Oq = lq * lq,
+        mq = lq * Oq;
+      return qq * (2 * mq - 3 * Oq + 1) + gq * (-2 * mq + 3 * Oq) + Eq * (mq - 2 * Oq + lq) + Yq * (mq - Oq)
     }
 
-    function AT(TT, kT, cT, lT, MT) {
-      const KT = MT * MT;
-      return 6 * (KT - MT) * TT + (3 * KT - 4 * MT + 1) * kT + 6 * (-KT + MT) * cT + (3 * KT - 2 * MT) * lT
+    function Bq(qq, Eq, gq, Yq, lq) {
+      const Oq = lq * lq;
+      return 6 * (Oq - lq) * qq + (3 * Oq - 4 * lq + 1) * Eq + 6 * (-Oq + lq) * gq + (3 * Oq - 2 * lq) * Yq
     }
 
-    function CT(TT) {
-      let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      return Math.min(cT, Math.max(kT, TT))
+    function Wq(qq) {
+      let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      return Math.min(gq, Math.max(Eq, qq))
     }
 
-    function jT(TT) {
-      return TT -= 2 * Math.PI * Math.floor((TT + Math.PI) / (2 * Math.PI))
+    function Nq(qq) {
+      return qq -= 2 * Math.PI * Math.floor((qq + Math.PI) / (2 * Math.PI))
     }
 
-    function vT(TT) {
-      const kT = TT.toString(16);
-      return TT <= 15 ? ("0" + kT).toUpperCase() : kT.toUpperCase()
+    function aq(qq) {
+      const Eq = qq.toString(16);
+      return qq <= 15 ? ("0" + Eq).toUpperCase() : Eq.toUpperCase()
     }
 
-    function tT(TT) {
-      if (Math.log2) return Math.floor(Math.log2(TT));
-      if (TT < 0) return NaN;
-      if (0 === TT) return -1 / 0;
-      let kT = 0;
-      if (TT < 1) {
-        for (; TT < 1;) kT++, TT *= 2;
-        kT = -kT
-      } else if (TT > 1)
-        for (; TT > 1;) kT++, TT = Math.floor(TT / 2);
-      return kT
+    function Vq(qq) {
+      if (Math.log2) return Math.floor(Math.log2(qq));
+      if (qq < 0) return NaN;
+      if (0 === qq) return -1 / 0;
+      let Eq = 0;
+      if (qq < 1) {
+        for (; qq < 1;) Eq++, qq *= 2;
+        Eq = -Eq
+      } else if (qq > 1)
+        for (; qq > 1;) Eq++, qq = Math.floor(qq / 2);
+      return Eq
     }
 
-    function hT(TT, kT) {
-      return TT - Math.floor(TT / kT) * kT
+    function dq(qq, Eq) {
+      return qq - Math.floor(qq / Eq) * Eq
     }
 
-    function NT(TT, kT, cT) {
-      return (TT - kT) / (cT - kT)
+    function jq(qq, Eq, gq) {
+      return (qq - Eq) / (gq - Eq)
     }
 
-    function QT(TT, kT, cT) {
-      return TT * (cT - kT) + kT
+    function Hq(qq, Eq, gq) {
+      return qq * (gq - Eq) + Eq
     }
 
-    function ST(TT, kT) {
-      let cT = hT(kT - TT, 360);
-      return cT > 180 && (cT -= 360), cT
+    function oq(qq, Eq) {
+      let gq = dq(Eq - qq, 360);
+      return gq > 180 && (gq -= 360), gq
     }
 
-    function DT(TT, kT) {
-      const cT = hT(TT, 2 * kT);
-      return kT - Math.abs(cT - kT)
+    function Pq(qq, Eq) {
+      const gq = dq(qq, 2 * Eq);
+      return Eq - Math.abs(gq - Eq)
     }
 
-    function aT(TT, kT, cT) {
-      let lT = CT(cT);
-      return lT = -2 * lT * lT * lT + 3 * lT * lT, kT * lT + TT * (1 - lT)
+    function Qq(qq, Eq, gq) {
+      let Yq = Wq(gq);
+      return Yq = -2 * Yq * Yq * Yq + 3 * Yq * Yq, Eq * Yq + qq * (1 - Yq)
     }
 
-    function FT(TT, kT, cT) {
-      let lT;
-      return lT = Math.abs(kT - TT) <= cT ? kT : TT + Math.sign(kT - TT) * cT, lT
+    function yq(qq, Eq, gq) {
+      let Yq;
+      return Yq = Math.abs(Eq - qq) <= gq ? Eq : qq + Math.sign(Eq - qq) * gq, Yq
     }
 
-    function rT(TT, kT, cT) {
-      const lT = ST(TT, kT);
-      let MT;
-      return MT = -cT < lT && lT < cT ? kT : FT(TT, kT = TT + lT, cT), MT
+    function tq(qq, Eq, gq) {
+      const Yq = oq(qq, Eq);
+      let lq;
+      return lq = -gq < Yq && Yq < gq ? Eq : yq(qq, Eq = qq + Yq, gq), lq
     }
 
-    function PT(TT, kT, cT) {
-      return (TT - kT) / (cT - kT)
+    function rq(qq, Eq, gq) {
+      return (qq - Eq) / (gq - Eq)
     }
 
-    function wT(TT, kT, cT) {
-      return (cT - kT) * TT + kT
+    function vq(qq, Eq, gq) {
+      return (gq - Eq) * qq + Eq
     }
 
-    function mT(TT, kT) {
-      const cT = TT % kT;
-      return 0 === cT ? kT : mT(kT, cT)
+    function hq(qq, Eq) {
+      const gq = qq % Eq;
+      return 0 === gq ? Eq : hq(Eq, gq)
     }
-    cT.r(kT), cT.d(kT, {
-      Clamp: () => CT,
-      DeltaAngle: () => ST,
-      Denormalize: () => QT,
-      ExtractAsInt: () => lT,
-      Hermite: () => IT,
-      Hermite1stDerivative: () => AT,
-      HighestCommonFactor: () => mT,
-      ILog2: () => tT,
-      InverseLerp: () => xT,
-      Lerp: () => yT,
-      LerpAngle: () => fT,
-      MoveTowards: () => FT,
-      MoveTowardsAngle: () => rT,
-      Normalize: () => NT,
-      NormalizeRadians: () => jT,
-      OutsideRange: () => KT,
-      PercentToRange: () => wT,
-      PingPong: () => DT,
-      RandomRange: () => OT,
-      RangeToPercent: () => PT,
-      Repeat: () => hT,
-      SmoothStep: () => aT,
-      ToHex: () => vT,
-      WithinEpsilon: () => MT
+    gq.r(Eq), gq.d(Eq, {
+      Clamp: () => Wq,
+      DeltaAngle: () => oq,
+      Denormalize: () => Hq,
+      ExtractAsInt: () => Yq,
+      Hermite: () => uq,
+      Hermite1stDerivative: () => Bq,
+      HighestCommonFactor: () => hq,
+      ILog2: () => Vq,
+      InverseLerp: () => cq,
+      Lerp: () => xq,
+      LerpAngle: () => Aq,
+      MoveTowards: () => yq,
+      MoveTowardsAngle: () => tq,
+      Normalize: () => jq,
+      NormalizeRadians: () => Nq,
+      OutsideRange: () => Oq,
+      PercentToRange: () => vq,
+      PingPong: () => Pq,
+      RandomRange: () => mq,
+      RangeToPercent: () => rq,
+      Repeat: () => dq,
+      SmoothStep: () => Qq,
+      ToHex: () => aq,
+      WithinEpsilon: () => lq
     })
   },
-  36910: (TT, kT, cT) => {
-    function lT(TT, kT) {
-      const cT = [];
-      for (let lT = 0; lT < TT; ++lT) cT.push(kT());
-      return cT
+  37149: (qq, Eq, gq) => {
+    function Yq(qq, Eq) {
+      const gq = [];
+      for (let Yq = 0; Yq < qq; ++Yq) gq.push(Eq());
+      return gq
     }
 
-    function MT(TT, kT) {
-      return lT(TT, kT)
+    function lq(qq, Eq) {
+      return Yq(qq, Eq)
     }
-    cT.d(kT, {
-      e: () => lT,
-      f: () => MT,
-      g: () => OT
+    gq.d(Eq, {
+      e: () => Yq,
+      h: () => lq,
+      k: () => mq
     });
-    const KT = ["push", "splice", "pop", "shift", "unshift"];
+    const Oq = ["push", "splice", "pop", "shift", "unshift"];
 
-    function OT(TT, kT) {
-      const cT = KT.map((cT => function(TT, kT, cT) {
-        const lT = TT[kT];
-        if ("function" !== typeof lT) return null;
-        const MT = function() {
-          const lT = TT.length,
-            KT = MT.previous.apply(TT, arguments);
-          return cT(kT, lT), KT
+    function mq(qq, Eq) {
+      const gq = Oq.map((gq => function(qq, Eq, gq) {
+        const Yq = qq[Eq];
+        if ("function" !== typeof Yq) return null;
+        const lq = function() {
+          const Yq = qq.length,
+            Oq = lq.previous.apply(qq, arguments);
+          return gq(Eq, Yq), Oq
         };
-        return lT.next = MT, MT.previous = lT, TT[kT] = MT, () => {
-          const cT = MT.previous;
-          if (!cT) return;
-          const lT = MT.next;
-          lT ? (cT.next = lT, lT.previous = cT) : (cT.next = void 0, TT[kT] = cT), MT.next = void 0, MT.previous = void 0
+        return Yq.next = lq, lq.previous = Yq, qq[Eq] = lq, () => {
+          const gq = lq.previous;
+          if (!gq) return;
+          const Yq = lq.next;
+          Yq ? (gq.next = Yq, Yq.previous = gq) : (gq.next = void 0, qq[Eq] = gq), lq.next = void 0, lq.previous = void 0
         }
-      }(TT, cT, kT)));
+      }(qq, gq, Eq)));
       return () => {
-        for (const TT of cT) TT?.()
+        for (const qq of gq) qq?.()
       }
     }
   },
-  36949: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => KT,
-      g: () => MT
+  37171: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => Oq,
+      g: () => lq
     });
-    const lT = {};
+    const Yq = {};
 
-    function MT(TT, kT) {
-      lT[TT] = kT
+    function lq(qq, Eq) {
+      Yq[qq] = Eq
     }
 
-    function KT(TT) {
-      return lT[TT]
+    function Oq(qq) {
+      return Yq[qq]
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

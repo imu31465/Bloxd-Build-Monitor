@@ -1,321 +1,352 @@
 export const id = 4;
 export const ids = [4];
 export const modules = {
-  36214: (TT, kT, cT) => {
-    cT.r(kT), cT.d(kT, {
-      getBlockModelIconUrl: () => CT,
-      hasBlockModelIcon: () => xT
+  36475: (qq, Eq, gq) => {
+    var Yq = {
+      "./Artisan Bench.json": [40921, 266],
+      "./Aspen Item Pedestal.json": [40927, 267],
+      "./Cedar Item Pedestal.json": [40929, 268],
+      "./Cherry Item Pedestal.json": [40935, 269],
+      "./Furnace.json": [40940, 270],
+      "./Jungle Item Pedestal.json": [40947, 271],
+      "./Mango Item Pedestal.json": [40952, 272],
+      "./Palm Item Pedestal.json": [40956, 273],
+      "./Pear Item Pedestal.json": [40963, 274],
+      "./Pine Item Pedestal.json": [40965, 275],
+      "./Plum Item Pedestal.json": [40973, 276],
+      "./Potion Table.json": [40975, 277],
+      "./Salvaging Table.json": [40977, 278],
+      "./Showcase.json": [40980, 279],
+      "./Spectral Item Pedestal.json": [40983, 280],
+      "./Workbench.json": [40988, 281]
+    };
+
+    function lq(qq) {
+      if (!gq.o(Yq, qq)) return Promise.resolve().then((() => {
+        var Eq = new Error("Cannot find module '" + qq + "'");
+        throw Eq.code = "MODULE_NOT_FOUND", Eq
+      }));
+      var Eq = Yq[qq],
+        lq = Eq[0];
+      return gq.e(Eq[1]).then((() => gq(lq)))
+    }
+    lq.keys = () => Object.keys(Yq), lq.id = 36475, qq.exports = lq
+  },
+  36467: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      getBlockModelIconUrl: () => Wq,
+      hasBlockModelIcon: () => cq
     });
-    var lT = cT(36200),
-      MT = cT(36193);
-    const KT = cT(36222),
-      OT = new Map(KT.keys().filter((TT => TT.startsWith("./"))).map((TT => [TT.slice(2, -5), TT]))),
-      yT = new Map,
-      fT = new Map;
+    var Yq = gq(36454),
+      lq = gq(36448);
+    const Oq = gq(36475),
+      mq = new Map(Oq.keys().filter((qq => qq.startsWith("./"))).map((qq => [qq.slice(2, -5), qq]))),
+      xq = new Map,
+      Aq = new Map;
 
-    function xT(TT) {
-      return OT.has(TT)
+    function cq(qq) {
+      return mq.has(qq)
     }
 
-    function IT(TT) {
-      return KT(OT.get(TT))
+    function uq(qq) {
+      return Oq(mq.get(qq))
     }
-    async function AT(TT, kT, cT) {
+    async function Bq(qq, Eq, gq) {
       const {
-        data: lT,
-        texture: KT
+        data: Yq,
+        texture: Oq
       } = await
-      function(TT) {
-        let kT = yT.get(TT);
-        return kT || (kT = IT(TT).then((async TT => {
-          const kT = new Image;
-          kT.src = TT.texture, await kT.decode();
-          const cT = document.createElement("canvas");
-          cT.width = kT.width, cT.height = kT.height;
-          const lT = cT.getContext("2d");
-          return lT.drawImage(kT, 0, 0), {
-            data: TT,
+      function(qq) {
+        let Eq = xq.get(qq);
+        return Eq || (Eq = uq(qq).then((async qq => {
+          const Eq = new Image;
+          Eq.src = qq.texture, await Eq.decode();
+          const gq = document.createElement("canvas");
+          gq.width = Eq.width, gq.height = Eq.height;
+          const Yq = gq.getContext("2d");
+          return Yq.drawImage(Eq, 0, 0), {
+            data: qq,
             texture: {
-              width: kT.width,
-              height: kT.height,
-              pixels: lT.getImageData(0, 0, kT.width, kT.height).data
+              width: Eq.width,
+              height: Eq.height,
+              pixels: Yq.getImageData(0, 0, Eq.width, Eq.height).data
             }
           }
-        })), kT.catch((() => {
-          yT.delete(TT)
-        })), yT.set(TT, kT)), kT
-      }(TT), OT = document.createElement("canvas");
-      return OT.width = kT, OT.height = kT, OT.getContext("2d").putImageData(new ImageData((0, MT.g)(lT, KT, kT, cT), kT, kT), 0, 0), OT.toDataURL()
+        })), Eq.catch((() => {
+          xq.delete(qq)
+        })), xq.set(qq, Eq)), Eq
+      }(qq), mq = document.createElement("canvas");
+      return mq.width = Eq, mq.height = Eq, mq.getContext("2d").putImageData(new ImageData((0, lq.h)(Yq, Oq, Eq, gq), Eq, Eq), 0, 0), mq.toDataURL()
     }
 
-    function CT(TT, kT, cT) {
-      const MT = `${kT}|${cT}|${TT}`;
-      let KT = fT.get(MT);
-      return KT || (KT = (0, lT.f)(TT, (() => IT(TT)), kT, cT).then((lT => null !== lT && void 0 !== lT ? lT : AT(TT, kT, cT))), KT.catch((() => {
-        fT.delete(MT)
-      })), fT.set(MT, KT)), KT
+    function Wq(qq, Eq, gq) {
+      const lq = `${Eq}|${gq}|${qq}`;
+      let Oq = Aq.get(lq);
+      return Oq || (Oq = (0, Yq.e)(qq, (() => uq(qq)), Eq, gq).then((Yq => null !== Yq && void 0 !== Yq ? Yq : Bq(qq, Eq, gq))), Oq.catch((() => {
+        Aq.delete(lq)
+      })), Aq.set(lq, Oq)), Oq
     }
   },
-  36200: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => mT,
-      f: () => bT,
-      i: () => ST
+  36454: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => hq,
+      e: () => nq,
+      h: () => oq
     });
-    var lT = cT(314),
-      MT = cT(118);
-    const KT = new(cT(36209).c)(new URL(cT.p + cT.u(3), cT.b), {
+    var Yq = gq(278),
+      lq = gq(96);
+    const Oq = new(gq(36461).d)(new URL(gq.p + gq.u(3), gq.b), {
       name: "blockIconWorker",
       type: "module"
     });
-    var OT = cT(1792),
-      yT = cT(3133);
-    const fT = 1e4,
-      xT = 3e4;
-    let IT = null,
-      AT = null,
-      CT = null,
-      jT = !1,
-      vT = 0;
-    const tT = new Map;
-    let hT = null;
-    const NT = new Map,
-      QT = new Map;
+    var mq = gq(1758),
+      xq = gq(3094);
+    const Aq = 1e4,
+      cq = 3e4;
+    let uq = null,
+      Bq = null,
+      Wq = null,
+      Nq = !1,
+      aq = 0;
+    const Vq = new Map;
+    let dq = null;
+    const jq = new Map,
+      Hq = new Map;
 
-    function ST(TT) {
-      const kT = new Promise(((kT, cT) => {
-        const lT = new Image;
-        lT.crossOrigin = "anonymous", lT.fetchPriority = "high", lT.onload = () => {
-          kT(lT)
-        }, lT.onerror = () => {
-          cT(new Error(`A block icon's texture did not load: ${TT.slice(0,100)}`))
-        }, lT.src = TT
+    function oq(qq) {
+      const Eq = new Promise(((Eq, gq) => {
+        const Yq = new Image;
+        Yq.crossOrigin = "anonymous", Yq.fetchPriority = "high", Yq.onload = () => {
+          Eq(Yq)
+        }, Yq.onerror = () => {
+          gq(new Error(`A block icon's texture did not load: ${qq.slice(0,100)}`))
+        }, Yq.src = qq
       }));
-      return (0, yT.f)(kT)
+      return (0, xq.g)(Eq)
     }
 
-    function DT(TT) {
-      var kT, cT;
-      jT || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${TT}`), jT = !0, null === (kT = IT) || void 0 === kT || kT.terminate(), IT = null, AT = null, NT.clear(), QT.clear();
-      for (const lT of tT.values()) lT(null);
-      tT.clear(), null === (cT = hT) || void 0 === cT || cT()
+    function Pq(qq) {
+      var Eq, gq;
+      Nq || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${qq}`), Nq = !0, null === (Eq = uq) || void 0 === Eq || Eq.terminate(), uq = null, Bq = null, jq.clear(), Hq.clear();
+      for (const Yq of Vq.values()) Yq(null);
+      Vq.clear(), null === (gq = dq) || void 0 === gq || gq()
     }
 
-    function aT() {
-      return CT ??= async function() {
+    function Qq() {
+      return Wq ??= async function() {
         if ("undefined" === typeof Worker || "undefined" === typeof OffscreenCanvas || "undefined" === typeof createImageBitmap) return;
-        if ("page" === lT.d.ios_icon_worker_v1 && (0, MT.isWebKit)()) return;
+        if ("page" === Yq.c.ios_icon_worker_v1 && (0, lq.isWebKit)()) return;
         try {
-          IT = await async function() {
-            return await KT.ready(), KT.start()
+          uq = await async function() {
+            return await Oq.ready(), Oq.start()
           }()
-        } catch (yT) {
-          return void DT(`did not start (${String(yT)})`)
+        } catch (xq) {
+          return void Pq(`did not start (${String(xq)})`)
         }
-        let TT = () => {};
-        const kT = new Promise((kT => {
-          TT = kT
+        let qq = () => {};
+        const Eq = new Promise((Eq => {
+          qq = Eq
         }));
-        IT.onmessage = kT => {
+        uq.onmessage = Eq => {
           let {
-            data: cT
-          } = kT;
-          if ("started" === cT.type) AT = IT, TT();
-          else if ("failed" === cT.type) DT(`failed a draw (${cT.message})`);
+            data: gq
+          } = Eq;
+          if ("started" === gq.type) Bq = uq, qq();
+          else if ("failed" === gq.type) Pq(`failed a draw (${gq.message})`);
           else {
-            var lT, MT;
-            null === (lT = tT.get(cT.id)) || void 0 === lT || lT(cT.url), tT.delete(cT.id), null === (MT = hT) || void 0 === MT || MT()
+            var Yq, lq;
+            null === (Yq = Vq.get(gq.id)) || void 0 === Yq || Yq(gq.url), Vq.delete(gq.id), null === (lq = dq) || void 0 === lq || lq()
           }
-        }, IT.onerror = kT => {
-          kT.preventDefault(), DT(`stopped (${kT.message||"its script did not load or run"})`), TT()
+        }, uq.onerror = Eq => {
+          Eq.preventDefault(), Pq(`stopped (${Eq.message||"its script did not load or run"})`), qq()
         };
-        const cT = `did not start in ${xT/1e3} s`;
-        await (0, OT.m)(kT, xT, cT).catch((() => {
-          DT(cT)
+        const gq = `did not start in ${cq/1e3} s`;
+        await (0, mq.k)(Eq, cq, gq).catch((() => {
+          Pq(gq)
         }))
-      }(), CT
+      }(), Wq
     }
 
-    function FT() {
-      if (null !== hT || 0 === tT.size) return;
-      const TT = new Promise((TT => {
-          hT = TT
+    function yq() {
+      if (null !== dq || 0 === Vq.size) return;
+      const qq = new Promise((qq => {
+          dq = qq
         })),
-        kT = `did not answer in ${fT/1e3} s`;
-      (0, OT.m)(TT, fT, kT).then((() => {
-        hT = null, FT()
+        Eq = `did not answer in ${Aq/1e3} s`;
+      (0, mq.k)(qq, Aq, Eq).then((() => {
+        dq = null, yq()
       }), (() => {
-        hT = null, DT(kT)
+        dq = null, Pq(Eq)
       }))
     }
 
-    function rT(TT, kT) {
-      let cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      TT.postMessage(kT, cT)
+    function tq(qq, Eq) {
+      let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      qq.postMessage(Eq, gq)
     }
 
-    function PT(TT, kT, cT, lT) {
-      let MT = kT.get(cT);
-      return void 0 === MT && (MT = lT().then((async kT => {
+    function rq(qq, Eq, gq, Yq) {
+      let lq = Eq.get(gq);
+      return void 0 === lq && (lq = Yq().then((async Eq => {
         let {
-          image: cT,
-          request: lT
-        } = kT;
+          image: gq,
+          request: Yq
+        } = Eq;
         try {
-          const kT = await createImageBitmap(cT);
-          rT(TT, lT(kT), [kT])
-        } catch (MT) {
-          DT(`could not take an image (${String(MT)})`)
+          const Eq = await createImageBitmap(gq);
+          tq(qq, Yq(Eq), [Eq])
+        } catch (lq) {
+          Pq(`could not take an image (${String(lq)})`)
         }
-      })), MT.catch((() => {
-        kT.get(cT) === MT && kT.delete(cT)
-      })), kT.set(cT, MT)), MT
+      })), lq.catch((() => {
+        Eq.get(gq) === lq && Eq.delete(gq)
+      })), Eq.set(gq, lq)), lq
     }
-    async function wT(TT, kT) {
-      aT();
-      const cT = AT;
-      if (null === cT) return null;
-      if (await TT(cT), AT !== cT) return null;
-      const lT = ++vT;
-      return new Promise((TT => {
-        tT.set(lT, TT), rT(cT, kT(lT)), FT()
+    async function vq(qq, Eq) {
+      Qq();
+      const gq = Bq;
+      if (null === gq) return null;
+      if (await qq(gq), Bq !== gq) return null;
+      const Yq = ++aq;
+      return new Promise((qq => {
+        Vq.set(Yq, qq), tq(gq, Eq(Yq)), yq()
       }))
     }
 
-    function mT(TT, kT, cT) {
-      return wT((kT => Promise.all([TT.top, TT.left, TT.right].map((TT => function(TT, kT) {
-        return PT(TT, NT, kT, (async () => ({
-          image: await ST(kT),
-          request: TT => ({
+    function hq(qq, Eq, gq) {
+      return vq((Eq => Promise.all([qq.top, qq.left, qq.right].map((qq => function(qq, Eq) {
+        return rq(qq, jq, Eq, (async () => ({
+          image: await oq(Eq),
+          request: qq => ({
             type: "texture",
-            url: kT,
-            bitmap: TT
+            url: Eq,
+            bitmap: qq
           })
         })))
-      }(kT, TT))))), (lT => ({
+      }(Eq, qq))))), (Yq => ({
         type: "draw",
-        id: lT,
-        ...TT,
-        size: kT,
-        outlineWidth: cT
+        id: Yq,
+        ...qq,
+        size: Eq,
+        outlineWidth: gq
       })))
     }
 
-    function bT(TT, kT, cT, lT) {
-      return wT((cT => function(TT, kT, cT) {
-        return PT(TT, QT, kT, (async () => {
+    function nq(qq, Eq, gq, Yq) {
+      return vq((gq => function(qq, Eq, gq) {
+        return rq(qq, Hq, Eq, (async () => {
           const {
-            texture: TT,
-            ...lT
-          } = await cT();
+            texture: qq,
+            ...Yq
+          } = await gq();
           return {
-            image: await ST(TT),
-            request: TT => ({
+            image: await oq(qq),
+            request: qq => ({
               type: "model",
-              name: kT,
-              bitmap: TT,
-              geometry: lT
+              name: Eq,
+              bitmap: qq,
+              geometry: Yq
             })
           }
         }))
-      }(cT, TT, kT)), (kT => ({
+      }(gq, qq, Eq)), (Eq => ({
         type: "drawModel",
-        id: kT,
-        name: TT,
-        size: cT,
-        outlineWidth: lT
+        id: Eq,
+        name: qq,
+        size: gq,
+        outlineWidth: Yq
       })))
     }
   },
-  36193: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => KT,
-      f: () => yT,
-      g: () => OT
+  36448: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => Oq,
+      e: () => xq,
+      h: () => mq
     });
-    const lT = 1 / 32,
-      MT = [15, 15, 15],
-      KT = {
+    const Yq = 1 / 32,
+      lq = [15, 15, 15],
+      Oq = {
         top: 1,
         left: .85,
         right: .7
       };
 
-    function OT(TT, kT, cT, MT) {
+    function mq(qq, Eq, gq, lq) {
       const {
-        vertices: KT,
-        uvs: OT,
-        indices: fT,
-        shades: xT
-      } = TT, IT = cT * lT, AT = cT - 2 * IT, CT = new Float32Array(KT.length);
-      for (let lT = 0; lT < KT.length; lT += 3) CT[lT] = IT + KT[lT] * AT, CT[lT + 1] = IT + KT[lT + 1] * AT, CT[lT + 2] = KT[lT + 2];
-      const jT = new Float32Array(cT * cT).fill(-1 / 0),
-        vT = new Uint8ClampedArray(cT * cT * 4),
-        tT = 255 * TT.alphaCutoff;
-      for (let lT = 0; lT < fT.length; lT += 3) {
-        const [TT, MT, KT] = [fT[lT], fT[lT + 1], fT[lT + 2]], [yT, IT, AT] = [3 * TT, 3 * MT, 3 * KT], [hT, NT, QT, ST, DT, aT] = [CT[yT], CT[yT + 1], CT[IT], CT[IT + 1], CT[AT], CT[AT + 1]], FT = (QT - hT) * (aT - NT) - (DT - hT) * (ST - NT);
-        if (Math.abs(FT) < 1e-9) continue;
-        const rT = xT[lT / 3],
-          [PT, wT, mT, bT, zT, JT] = [OT[2 * TT], OT[2 * TT + 1], OT[2 * MT], OT[2 * MT + 1], OT[2 * KT], OT[2 * KT + 1]],
-          oT = Math.max(0, Math.floor(Math.min(hT, QT, DT))),
-          HT = Math.min(cT - 1, Math.ceil(Math.max(hT, QT, DT))),
-          eT = Math.max(0, Math.floor(Math.min(NT, ST, aT))),
-          GT = Math.min(cT - 1, Math.ceil(Math.max(NT, ST, aT)));
-        for (let lT = eT; lT <= GT; lT++)
-          for (let TT = oT; TT <= HT; TT++) {
-            const [MT, KT] = [TT + .5, lT + .5], OT = ((MT - hT) * (aT - NT) - (DT - hT) * (KT - NT)) / FT, fT = ((QT - hT) * (KT - NT) - (MT - hT) * (ST - NT)) / FT, xT = 1 - OT - fT;
-            if (xT < 0 || OT < 0 || fT < 0) continue;
-            const oT = xT * CT[yT + 2] + OT * CT[IT + 2] + fT * CT[AT + 2],
-              HT = lT * cT + TT;
-            if (oT <= jT[HT]) continue;
-            const eT = Math.max(0, Math.min(kT.width - 1, Math.floor((xT * PT + OT * mT + fT * zT) * kT.width))),
-              GT = 4 * (Math.max(0, Math.min(kT.height - 1, Math.floor((xT * wT + OT * bT + fT * JT) * kT.height))) * kT.width + eT);
-            kT.pixels[GT + 3] < tT || (jT[HT] = oT, vT[4 * HT] = kT.pixels[GT] * rT, vT[4 * HT + 1] = kT.pixels[GT + 1] * rT, vT[4 * HT + 2] = kT.pixels[GT + 2] * rT, vT[4 * HT + 3] = 255)
+        vertices: Oq,
+        uvs: mq,
+        indices: Aq,
+        shades: cq
+      } = qq, uq = gq * Yq, Bq = gq - 2 * uq, Wq = new Float32Array(Oq.length);
+      for (let Yq = 0; Yq < Oq.length; Yq += 3) Wq[Yq] = uq + Oq[Yq] * Bq, Wq[Yq + 1] = uq + Oq[Yq + 1] * Bq, Wq[Yq + 2] = Oq[Yq + 2];
+      const Nq = new Float32Array(gq * gq).fill(-1 / 0),
+        aq = new Uint8ClampedArray(gq * gq * 4),
+        Vq = 255 * qq.alphaCutoff;
+      for (let Yq = 0; Yq < Aq.length; Yq += 3) {
+        const [qq, lq, Oq] = [Aq[Yq], Aq[Yq + 1], Aq[Yq + 2]], [xq, uq, Bq] = [3 * qq, 3 * lq, 3 * Oq], [dq, jq, Hq, oq, Pq, Qq] = [Wq[xq], Wq[xq + 1], Wq[uq], Wq[uq + 1], Wq[Bq], Wq[Bq + 1]], yq = (Hq - dq) * (Qq - jq) - (Pq - dq) * (oq - jq);
+        if (Math.abs(yq) < 1e-9) continue;
+        const tq = cq[Yq / 3],
+          [rq, vq, hq, nq, bq, iq] = [mq[2 * qq], mq[2 * qq + 1], mq[2 * lq], mq[2 * lq + 1], mq[2 * Oq], mq[2 * Oq + 1]],
+          Zq = Math.max(0, Math.floor(Math.min(dq, Hq, Pq))),
+          fq = Math.min(gq - 1, Math.ceil(Math.max(dq, Hq, Pq))),
+          Mq = Math.max(0, Math.floor(Math.min(jq, oq, Qq))),
+          Tq = Math.min(gq - 1, Math.ceil(Math.max(jq, oq, Qq)));
+        for (let Yq = Mq; Yq <= Tq; Yq++)
+          for (let qq = Zq; qq <= fq; qq++) {
+            const [lq, Oq] = [qq + .5, Yq + .5], mq = ((lq - dq) * (Qq - jq) - (Pq - dq) * (Oq - jq)) / yq, Aq = ((Hq - dq) * (Oq - jq) - (lq - dq) * (oq - jq)) / yq, cq = 1 - mq - Aq;
+            if (cq < 0 || mq < 0 || Aq < 0) continue;
+            const Zq = cq * Wq[xq + 2] + mq * Wq[uq + 2] + Aq * Wq[Bq + 2],
+              fq = Yq * gq + qq;
+            if (Zq <= Nq[fq]) continue;
+            const Mq = Math.max(0, Math.min(Eq.width - 1, Math.floor((cq * rq + mq * hq + Aq * bq) * Eq.width))),
+              Tq = 4 * (Math.max(0, Math.min(Eq.height - 1, Math.floor((cq * vq + mq * nq + Aq * iq) * Eq.height))) * Eq.width + Mq);
+            Eq.pixels[Tq + 3] < Vq || (Nq[fq] = Zq, aq[4 * fq] = Eq.pixels[Tq] * tq, aq[4 * fq + 1] = Eq.pixels[Tq + 1] * tq, aq[4 * fq + 2] = Eq.pixels[Tq + 2] * tq, aq[4 * fq + 3] = 255)
           }
       }
-      return yT(vT, cT, MT), vT
+      return xq(aq, gq, lq), aq
     }
 
-    function yT(TT, kT, cT) {
-      let lT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : kT => 0 !== TT[4 * kT + 3];
-      const KT = (TT, cT) => TT < 0 || cT < 0 || TT >= kT || cT >= kT || !lT(cT * kT + TT),
-        OT = [];
-      for (let MT = 0; MT < kT; MT++)
-        for (let TT = 0; TT < kT; TT++)
-          if (!KT(TT, MT)) TT: for (let lT = -cT; lT <= cT; lT++) {
-            const yT = cT - Math.abs(lT);
-            for (let cT = -yT; cT <= yT; cT++)
-              if (KT(TT + cT, MT + lT)) {
-                OT.push(MT * kT + TT);
-                break TT
+    function xq(qq, Eq, gq) {
+      let Yq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Eq => 0 !== qq[4 * Eq + 3];
+      const Oq = (qq, gq) => qq < 0 || gq < 0 || qq >= Eq || gq >= Eq || !Yq(gq * Eq + qq),
+        mq = [];
+      for (let lq = 0; lq < Eq; lq++)
+        for (let qq = 0; qq < Eq; qq++)
+          if (!Oq(qq, lq)) qq: for (let Yq = -gq; Yq <= gq; Yq++) {
+            const xq = gq - Math.abs(Yq);
+            for (let gq = -xq; gq <= xq; gq++)
+              if (Oq(qq + gq, lq + Yq)) {
+                mq.push(lq * Eq + qq);
+                break qq
               }
           }
-      for (const yT of OT) TT.set(MT, 4 * yT), TT[4 * yT + 3] = 255
+      for (const xq of mq) qq.set(lq, 4 * xq), qq[4 * xq + 3] = 255
     }
   },
-  36209: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => MT
+  36461: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => lq
     });
-    const lT = {
-      wait: function(TT) {
-        return new Promise((kT => {
-          setTimeout(kT, TT)
+    const Yq = {
+      wait: function(qq) {
+        return new Promise((Eq => {
+          setTimeout(Eq, qq)
         }))
       },
       stallMs: 2e4
     };
-    class MT {
-      constructor(TT) {
-        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : lT;
-        this.url = TT, this.options = kT, this.timing = cT, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = TT
+    class lq {
+      constructor(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Yq;
+        this.url = qq, this.options = Eq, this.timing = gq, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = qq
       }
       ready() {
         if (null === this.fetched) {
-          const TT = new AbortController;
-          this.fetchAbort = TT, this.fetched = this.fetchWithRetries(TT.signal).finally((() => {
-            this.fetchAbort === TT && (this.fetchAbort = null)
+          const qq = new AbortController;
+          this.fetchAbort = qq, this.fetched = this.fetchWithRetries(qq.signal).finally((() => {
+            this.fetchAbort === qq && (this.fetchAbort = null)
           }))
         }
         return this.fetched
@@ -326,82 +357,51 @@ export const modules = {
       start() {
         return new Worker(this.scriptUrl, this.options)
       }
-      async fetchWithRetries(TT) {
-        for (let kT = 0;; kT++) {
-          const cT = new URL(this.url);
-          if (kT > 0 && cT.searchParams.set("cache-bust", `${Date.now()}-${kT}`), await this.fetchWhole(cT, TT)) return void(this.scriptUrl = cT);
-          if (kT >= 3 || TT.aborted) return;
-          if (await this.timing.wait(500 * 2 ** kT), TT.aborted) return
+      async fetchWithRetries(qq) {
+        for (let Eq = 0;; Eq++) {
+          const gq = new URL(this.url);
+          if (Eq > 0 && gq.searchParams.set("cache-bust", `${Date.now()}-${Eq}`), await this.fetchWhole(gq, qq)) return void(this.scriptUrl = gq);
+          if (Eq >= 3 || qq.aborted) return;
+          if (await this.timing.wait(500 * 2 ** Eq), qq.aborted) return
         }
       }
-      async fetchWhole(TT, kT) {
-        const cT = new AbortController;
-        let lT;
-        const MT = () => {
-            clearTimeout(lT), lT = setTimeout((() => {
-              cT.abort()
+      async fetchWhole(qq, Eq) {
+        const gq = new AbortController;
+        let Yq;
+        const lq = () => {
+            clearTimeout(Yq), Yq = setTimeout((() => {
+              gq.abort()
             }), this.timing.stallMs)
           },
-          KT = () => {
-            cT.abort()
+          Oq = () => {
+            gq.abort()
           };
-        kT.addEventListener("abort", KT, {
+        Eq.addEventListener("abort", Oq, {
           once: !0
-        }), MT();
+        }), lq();
         try {
-          var OT;
-          const kT = await fetch(TT, {
-            signal: cT.signal
+          var mq;
+          const Eq = await fetch(qq, {
+            signal: gq.signal
           });
-          if (!kT.ok) return !1;
-          const lT = null === (OT = kT.body) || void 0 === OT ? void 0 : OT.getReader();
-          if (!lT) return !1;
+          if (!Eq.ok) return !1;
+          const Yq = null === (mq = Eq.body) || void 0 === mq ? void 0 : mq.getReader();
+          if (!Yq) return !1;
           for (;;) {
             const {
-              done: TT
-            } = await lT.read();
-            if (TT) return !0;
-            MT()
+              done: qq
+            } = await Yq.read();
+            if (qq) return !0;
+            lq()
           }
         } catch {
           return !1
         } finally {
-          clearTimeout(lT), kT.removeEventListener("abort", KT)
+          clearTimeout(Yq), Eq.removeEventListener("abort", Oq)
         }
       }
     }
-  },
-  36222: (TT, kT, cT) => {
-    var lT = {
-      "./Artisan Bench.json": [40803, 266],
-      "./Aspen Item Pedestal.json": [40805, 267],
-      "./Cedar Item Pedestal.json": [40814, 268],
-      "./Cherry Item Pedestal.json": [40816, 269],
-      "./Furnace.json": [40823, 270],
-      "./Jungle Item Pedestal.json": [40828, 271],
-      "./Mango Item Pedestal.json": [40835, 272],
-      "./Palm Item Pedestal.json": [40841, 273],
-      "./Pear Item Pedestal.json": [40848, 274],
-      "./Pine Item Pedestal.json": [40853, 275],
-      "./Plum Item Pedestal.json": [40862, 276],
-      "./Potion Table.json": [40865, 277],
-      "./Salvaging Table.json": [40871, 278],
-      "./Showcase.json": [40880, 279],
-      "./Spectral Item Pedestal.json": [40889, 280],
-      "./Workbench.json": [40898, 281]
-    };
-
-    function MT(TT) {
-      if (!cT.o(lT, TT)) return Promise.resolve().then((() => {
-        var kT = new Error("Cannot find module '" + TT + "'");
-        throw kT.code = "MODULE_NOT_FOUND", kT
-      }));
-      var kT = lT[TT],
-        MT = kT[0];
-      return cT.e(kT[1]).then((() => cT(MT)))
-    }
-    MT.keys = () => Object.keys(lT), MT.id = 36222, TT.exports = MT
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

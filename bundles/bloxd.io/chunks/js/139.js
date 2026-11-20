@@ -1,160 +1,146 @@
 export const id = 139;
 export const ids = [139];
 export const modules = {
-  8111: (TT, kT, cT) => {
-    cT.r(kT), cT.d(kT, {
-      BloxdFirebaseSdk: () => IT
+  7983: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      BloxdDiscordSDK: () => Vq,
+      DiscordLoginCancelledError: () => aq,
+      discordPopupTimeoutMs: () => Nq
     });
-    var lT = cT(1853),
-      MT = cT(2873),
-      KT = cT(127),
-      OT = cT(118),
-      yT = cT(1710),
-      fT = cT(2080);
-    const xT = {
-      apiKey: "AIzaSyCJ-G6m_NyA3P021v-ugDmMmkcKysUebSE",
-      authDomain: "bloxd-ee1aa.firebaseapp.com",
-      projectId: "bloxd-ee1aa",
-      storageBucket: "bloxd-ee1aa.appspot.com",
-      messagingSenderId: "758847442742",
-      appId: "1:758847442742:web:7bb74eb261641e30f02d97"
-    };
-    class IT {
-      constructor() {}
-      static async setup() {
-        try {
-          return await IT.setupInternal()
-        } catch (TT) {
-          return console.error("Failed to setup Firebase SDK:", TT), null
-        }
+    var Yq = gq(163),
+      lq = gq(1216),
+      Oq = gq(1109),
+      mq = gq(1131),
+      xq = gq.n(mq),
+      Aq = gq(1195),
+      cq = gq(38),
+      uq = gq(598),
+      Bq = gq(1336),
+      Wq = gq(1201);
+    const Nq = 6e5;
+    class aq extends Error {
+      constructor() {
+        super(...arguments), this.name = Oq.discordLoginCancelledErrorName
       }
-      static async setupInternal() {
-        const TT = await Promise.all([cT.e(258), cT.e(257)]).then((() => cT(40133))),
-          kT = await Promise.all([cT.e(258), cT.e(259)]).then((() => cT(40157))),
-          AT = await Promise.all([cT.e(258), cT.e(260)]).then((() => cT(40160))),
-          CT = TT.initializeApp({
-            ...xT,
-            measurementId: MT.e
-          });
-        (0, MT.H)(), window.gtag("config", MT.e), (0, MT.C)(), window.gtag("config", "AW-16469618203");
-        const jT = kT.getAnalytics(CT),
-          vT = {
-            portal: KT.currentUrl.getSearchParam("portal") || "root",
-            loggedIn: !1
-          };
-        kT.setUserProperties(jT, vT);
-        const tT = AT.getAuth();
-        AT.useDeviceLanguage(tT);
-        const hT = new AT.GoogleAuthProvider;
-        hT.setCustomParameters({
-          prompt: "select_account"
-        });
-        const NT = new AT.OAuthProvider(lT.g[lT.e.APPLE]),
-          QT = new AT.OAuthProvider(lT.g[lT.e.MICROSOFT]);
-        QT.setCustomParameters({
-          prompt: "select_account",
-          tenant: "consumers"
-        });
-        const ST = {
-          [lT.e.GOOGLE]: hT,
-          [lT.e.APPLE]: NT,
-          [lT.e.MICROSOFT]: QT
-        };
-        window.gtag("set", {
-          cookie_flags: "SameSite=None;Secure"
-        }), await new Promise((TT => {
-          const kT = AT.onIdTokenChanged(tT, (cT => {
-            kT(), TT()
-          }))
+    }
+    class Vq {
+      constructor() {
+        this.popupWindowPromise = null, this.popupWindowPromiseResolve = null, this.popupWindowPromiseReject = null, this.popupWindow = null, this.popupWindowCheckInterval = null, this.popupWindowTimeout = null, this.bloxdDiscordRefreshTokenKey = "4PSIDTCPM", this.discordRedirectUrl = lq.k[Wq.d.clientEnvironment];
+        const qq = new URL(this.discordRedirectUrl).origin;
+        window.addEventListener("message", (Eq => {
+          var gq;
+          if (Eq.origin !== qq || "oauth_authentication_discord" !== (null === (gq = Eq.data) || void 0 === gq ? void 0 : gq.type)) return;
+          if ("string" !== typeof Eq.data.code || !Eq.data.code) return void this.failPopup(new aq("Discord authentication was cancelled on Discord"));
+          const Yq = this.popupWindowPromiseResolve;
+          this.resetPopupState(), null === Yq || void 0 === Yq || Yq(Eq.data.code)
+        }))
+      }
+      resetPopupState() {
+        null !== this.popupWindowCheckInterval && window.clearInterval(this.popupWindowCheckInterval), null !== this.popupWindowTimeout && window.clearTimeout(this.popupWindowTimeout), this.popupWindowCheckInterval = null, this.popupWindowTimeout = null, this.popupWindowPromiseResolve = null, this.popupWindowPromiseReject = null, this.popupWindowPromise = null, this.popupWindow = null
+      }
+      failPopup(qq) {
+        var Eq;
+        const gq = this.popupWindowPromiseReject;
+        null === (Eq = this.popupWindow) || void 0 === Eq || Eq.close(), this.resetPopupState(), null === gq || void 0 === gq || gq(qq)
+      }
+      openDiscordOAuthWindow() {
+        const qq = Wq.d.discordClientID;
+        return window.open(`https://discord.com/oauth2/authorize?response_type=code&client_id=${qq}&scope=identify%20guilds&redirect_uri=${this.discordRedirectUrl}&integration_type=0`, "oauth_authentication", `popup,width=480,height=720,top=${window.screen.height/2-360},left=${window.screen.width/2-240}`)
+      }
+      async showDiscordAuthPrompt() {
+        return new Promise(((qq, Eq) => {
+          Bq.NotificationProvider.showPromptPopup({
+            title: "Discord Login Required",
+            confirmText: "Continue",
+            confirmTooltip: "Open Discord login window",
+            cancelText: "Cancel",
+            cancelTooltip: "Cancel Discord login"
+          }).getResult().then((gq => {
+            !0 === gq ? qq() : Eq(new aq("Discord login was cancelled"))
+          })).catch(Eq)
+        }))
+      }
+      signInWithPopup() {
+        if (null !== this.popupWindowPromise) return this.popupWindowPromise;
+        const qq = new Promise(((qq, Eq) => {
+          this.popupWindowPromiseResolve = qq, this.popupWindowPromiseReject = Eq
         }));
-        class DT extends IT {
-          setUserProperties(TT) {
-            kT.setUserProperties(jT, TT)
-          }
-          onIdTokenChanged(TT) {
-            AT.onIdTokenChanged(tT, TT)
-          }
-          canSignIn() {
-            return !0
-          }
-          async signInWithPopup(TT) {
-            var kT;
-            const cT = await AT.signInWithPopup(tT, ST[TT]);
-            return null !== (kT = null === cT || void 0 === cT ? void 0 : cT.user) && void 0 !== kT ? kT : null
-          }
-          async getCurrentUser(TT) {
-            const kT = tT.currentUser;
-            if (!kT) return null;
-            const {
-              signInProvider: cT
-            } = await kT.getIdTokenResult(!1);
-            return cT === lT.g[TT] ? kT : null
-          }
-          async signOut(TT) {
-            null !== await this.getCurrentUser(TT) && await AT.signOut(tT)
-          }
-        }
-        async function aT(TT, kT) {
-          const cT = await yT.c.request(`${TT}.${kT}`, {});
-          if (null === cT) return null;
-          const lT = "google" === TT ? AT.GoogleAuthProvider.credential(cT.idToken) : NT.credential({
-            idToken: cT.idToken
-          });
-          return (await AT.signInWithCredential(tT, lT)).user
-        }
-        class FT extends IT {
-          setUserProperties(TT) {
-            kT.setUserProperties(jT, TT)
-          }
-          onIdTokenChanged(TT) {
-            AT.onIdTokenChanged(tT, TT)
-          }
-          canSignIn(TT) {
-            return null !== (0, fT.c)(TT)
-          }
-          async signInWithPopup(TT) {
-            const kT = (0, fT.c)(TT);
-            if (null === kT) return console.warn(`The app can't sign in with ${TT}; check canSignIn first`), null;
-            try {
-              return await aT(kT, "signIn")
-            } catch (cT) {
-              return console.error(`Failed to sign in with ${TT} in the app:`, cT), null
-            }
-          }
-          async getCurrentUser(TT) {
-            const kT = tT.currentUser;
-            if (kT) {
-              const {
-                signInProvider: cT
-              } = await kT.getIdTokenResult(!1);
-              if (cT === lT.g[TT]) return kT
-            }
-            const cT = (0, fT.c)(TT);
-            if (null === cT) return null;
-            try {
-              return await aT(cT, "getCurrentUser")
-            } catch (MT) {
-              return console.error(`Failed to get the current ${TT} user from the app:`, MT), null
-            }
-          }
-          async signOut(TT) {
-            const kT = (0, fT.c)(TT);
-            null !== kT && yT.c.request(`${kT}.signOut`, {}).catch((kT => {
-              console.error(`Failed to sign out of ${TT} in the app:`, kT)
-            }));
-            const cT = tT.currentUser;
-            if (cT) {
-              const {
-                signInProvider: kT
-              } = await cT.getIdTokenResult(!1);
-              kT === lT.g[TT] && await AT.signOut(tT)
-            }
-          }
-        }
-        return (0, OT.isMobileApp)() ? (await yT.c.ready, new FT) : new DT
+        return this.popupWindowPromise = qq, cq.c.removeItem(this.bloxdDiscordRefreshTokenKey), this.popupWindowTimeout = window.setTimeout((() => {
+          this.failPopup(new Error("Discord authentication timed out"))
+        }), Nq), this.openPopup(qq).catch((Eq => {
+          this.popupWindowPromise === qq && this.failPopup(Eq instanceof Error ? Eq : new Error(String(Eq)))
+        })), qq
       }
+      async openPopup(qq) {
+        let Eq = this.openDiscordOAuthWindow();
+        if (!Eq) {
+          if (await this.showDiscordAuthPrompt(), this.popupWindowPromise !== qq) return;
+          Eq = this.openDiscordOAuthWindow()
+        }
+        if (console.log("Discord OAuth window opened:", Eq), !Eq) throw new Error("Failed to open Discord authentication popup - popup may have been blocked");
+        this.popupWindow = Eq;
+        const gq = window.setInterval((() => {
+          Eq.closed && this.popupWindowPromise === qq && (window.clearInterval(gq), this.popupWindowCheckInterval = null, window.setTimeout((() => {
+            this.popupWindowPromise === qq && this.failPopup(new aq("Discord authentication was cancelled - popup window was closed"))
+          }), 1e3))
+        }), 200);
+        this.popupWindowCheckInterval = gq
+      }
+      async exchangeAuthorizationCodeForAccessToken(qq, Eq) {
+        const {
+          accessToken: gq,
+          refreshToken: Yq
+        } = await xq()((async () => await (0, Oq.postJsonWithMetricsCookiesAndJsonResponse)(`${Aq.clientSideServerUrls.indexUrl}/index/discord/log-event`, {
+          authorizationCode: qq,
+          bloxdClientEnvironment: Wq.d.clientEnvironment,
+          instanceId: null
+        }, {
+          retries: 0
+        }, Eq.getMetricsCookies())), {
+          retries: 3
+        });
+        return console.log("Discord access token received:", Yq, this.bloxdDiscordRefreshTokenKey), cq.c.setItem(this.bloxdDiscordRefreshTokenKey, Yq), gq
+      }
+      hasCurrentUser() {
+        const qq = cq.c.getItem(this.bloxdDiscordRefreshTokenKey);
+        return !(0, uq.H)(qq)
+      }
+      async getCurrentUser(qq) {
+        const Eq = cq.c.getItem(this.bloxdDiscordRefreshTokenKey);
+        if (!Eq) return null;
+        let gq;
+        try {
+          const Yq = await xq()((async () => {
+            try {
+              return await (0, Oq.postJsonWithMetricsCookiesAndJsonResponse)(`${Aq.clientSideServerUrls.indexUrl}/index/discord/collect-event`, {
+                refreshToken: Eq
+              }, {
+                retries: 0
+              }, qq.getMetricsCookies())
+            } catch (gq) {
+              if (dq(gq)) throw new(xq().AbortError)(gq);
+              throw gq
+            }
+          }), {
+            retries: 3
+          });
+          gq = Yq.accessToken, cq.c.setItem(this.bloxdDiscordRefreshTokenKey, Yq.refreshToken)
+        } catch (Yq) {
+          return dq(Yq) ? (cq.c.removeItem(this.bloxdDiscordRefreshTokenKey), null) : (console.error("Failed to refresh Discord access token:", Yq), null)
+        }
+        return {
+          accessToken: gq
+        }
+      }
+      signOut() {
+        this.failPopup(new aq("Signed out of Discord during login")), cq.c.removeItem(this.bloxdDiscordRefreshTokenKey)
+      }
+    }
+
+    function dq(qq) {
+      return qq instanceof Yq.b && 435 === qq.httpCode
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

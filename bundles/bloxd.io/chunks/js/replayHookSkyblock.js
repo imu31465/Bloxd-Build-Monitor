@@ -1,52 +1,52 @@
 export const id = 50;
 export const ids = [50];
 export const modules = {
-  38486: (TT, kT, cT) => {
-    cT.r(kT), cT.d(kT, {
-      SkyblockEntityFacing: () => yT,
-      needsSkyblockEntityFacing: () => OT
+  38619: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      SkyblockEntityFacing: () => xq,
+      needsSkyblockEntityFacing: () => mq
     });
-    var lT = cT(608),
-      MT = cT(4235),
-      KT = cT(38489);
+    var Yq = gq(590),
+      lq = gq(4096),
+      Oq = gq(38625);
 
-    function OT(TT, kT) {
-      if (TT.metaInfo === lT.c || "Iron Guardian" === TT.type || "Gold Guardian" === TT.type) return !0;
-      if ("Pig" === TT.type) return "sitting" === TT.pose;
-      if ("Person" !== TT.meshKind || void 0 === TT.meshOpts) return !1;
-      let cT = null === kT || void 0 === kT ? void 0 : kT.get(TT.meshOpts);
-      if (void 0 === cT) {
-        var KT, OT;
-        const lT = (0, MT.g)(TT);
-        cT = !1, "pig_napoleon" === (null === lT || void 0 === lT || null === (KT = lT.opts.textures) || void 0 === KT ? void 0 : KT.head) ? cT = !0 : "npc_pig_head" === (null === lT || void 0 === lT || null === (OT = lT.opts.textures) || void 0 === OT ? void 0 : OT.head) && (cT = "sitting" === lT.opts.pose || "sitting"), kT && (kT.size >= 256 && kT.clear(), kT.set(TT.meshOpts, cT))
+    function mq(qq, Eq) {
+      if (qq.metaInfo === Yq.c || "Iron Guardian" === qq.type || "Gold Guardian" === qq.type) return !0;
+      if ("Pig" === qq.type) return "sitting" === qq.pose;
+      if ("Person" !== qq.meshKind || void 0 === qq.meshOpts) return !1;
+      let gq = null === Eq || void 0 === Eq ? void 0 : Eq.get(qq.meshOpts);
+      if (void 0 === gq) {
+        var Oq, mq;
+        const Yq = (0, lq.i)(qq);
+        gq = !1, "pig_napoleon" === (null === Yq || void 0 === Yq || null === (Oq = Yq.opts.textures) || void 0 === Oq ? void 0 : Oq.head) ? gq = !0 : "npc_pig_head" === (null === Yq || void 0 === Yq || null === (mq = Yq.opts.textures) || void 0 === mq ? void 0 : mq.head) && (gq = "sitting" === Yq.opts.pose || "sitting"), Eq && (Eq.size >= 256 && Eq.clear(), Eq.set(qq.meshOpts, gq))
       }
-      return "sitting" === cT ? "sitting" === TT.pose : cT
-    }(0, KT.h)("skyblock", ((TT, kT) => {
-      kT.setFacingTolerance(OT(TT) ? 0 : null)
+      return "sitting" === gq ? "sitting" === qq.pose : gq
+    }(0, Oq.g)("skyblock", ((qq, Eq) => {
+      Eq.setFacingTolerance(mq(qq) ? 0 : null)
     }));
-    class yT {
-      constructor(TT) {
-        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        this.api = TT, this.alsoVisit = kT, this.facing = new Set, this.nextFacing = new Set, this.meshFacingCache = new Map, this.visit = TT => {
-          var kT;
-          const cT = this.api.getEntityInfo(TT);
-          cT && (OT(cT, this.meshFacingCache) && (this.api.setFacingTolerance(TT, 0), this.nextFacing.add(TT)), null === (kT = this.alsoVisit) || void 0 === kT || kT.call(this, TT, cT))
+    class xq {
+      constructor(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        this.api = qq, this.alsoVisit = Eq, this.facing = new Set, this.nextFacing = new Set, this.meshFacingCache = new Map, this.visit = qq => {
+          var Eq;
+          const gq = this.api.getEntityInfo(qq);
+          gq && (mq(gq, this.meshFacingCache) && (this.api.setFacingTolerance(qq, 0), this.nextFacing.add(qq)), null === (Eq = this.alsoVisit) || void 0 === Eq || Eq.call(this, qq, gq))
         }
       }
-      UA() {
+      SB() {
         const {
-          api: TT
-        } = this, kT = this.nextFacing;
-        TT.forEachEntity(this.visit);
-        for (const cT of this.facing) kT.has(cT) || TT.setFacingTolerance(cT, null);
-        this.facing.clear(), this.nextFacing = this.facing, this.facing = kT
+          api: qq
+        } = this, Eq = this.nextFacing;
+        qq.forEachEntity(this.visit);
+        for (const gq of this.facing) Eq.has(gq) || qq.setFacingTolerance(gq, null);
+        this.facing.clear(), this.nextFacing = this.facing, this.facing = Eq
       }
       dispose() {
-        for (const TT of this.facing) this.api.setFacingTolerance(TT, null);
+        for (const qq of this.facing) this.api.setFacingTolerance(qq, null);
         this.facing.clear(), this.meshFacingCache.clear()
       }
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

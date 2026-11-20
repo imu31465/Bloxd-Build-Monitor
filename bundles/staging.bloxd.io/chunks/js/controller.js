@@ -1,334 +1,430 @@
 export const id = 28;
 export const ids = [28];
 export const modules = {
-  4945: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => vT,
-      h: () => ST,
-      l: () => tT,
-      m: () => QT
-    });
-    var lT = cT(71),
-      MT = cT(4948),
-      KT = cT(4355),
-      OT = cT(1379),
-      yT = cT(4968),
-      fT = cT(1046),
-      xT = cT.n(fT),
-      IT = cT(1363),
-      AT = cT(1741),
-      CT = cT(4975),
-      jT = cT(1099);
+  8133: (qq, Eq, gq) => {
+    var Yq = {
+      "./nintendo/A.svg": 8138,
+      "./nintendo/B.svg": 8146,
+      "./nintendo/Down.svg": 8152,
+      "./nintendo/Home.svg": 8154,
+      "./nintendo/LB.svg": 8156,
+      "./nintendo/LS.svg": 8161,
+      "./nintendo/LT.svg": 8163,
+      "./nintendo/Left.svg": 8169,
+      "./nintendo/LeftStick.svg": 8174,
+      "./nintendo/Menu.svg": 8179,
+      "./nintendo/RB.svg": 8183,
+      "./nintendo/RS.svg": 8189,
+      "./nintendo/RT.svg": 8198,
+      "./nintendo/Right.svg": 8202,
+      "./nintendo/RightStick.svg": 8206,
+      "./nintendo/Up.svg": 8212,
+      "./nintendo/View.svg": 8221,
+      "./nintendo/X.svg": 8227,
+      "./nintendo/Y.svg": 8229,
+      "./playstation/A.svg": 8238,
+      "./playstation/B.svg": 8246,
+      "./playstation/Down.svg": 8251,
+      "./playstation/Home.svg": 8258,
+      "./playstation/LB.svg": 8267,
+      "./playstation/LS.svg": 8274,
+      "./playstation/LT.svg": 8282,
+      "./playstation/Left.svg": 8286,
+      "./playstation/LeftStick.svg": 8293,
+      "./playstation/Menu.svg": 8297,
+      "./playstation/RB.svg": 8305,
+      "./playstation/RS.svg": 8312,
+      "./playstation/RT.svg": 8320,
+      "./playstation/Right.svg": 8325,
+      "./playstation/RightStick.svg": 8329,
+      "./playstation/Up.svg": 8333,
+      "./playstation/View.svg": 8339,
+      "./playstation/X.svg": 8348,
+      "./playstation/Y.svg": 8354,
+      "./steamdeck/A.svg": 8362,
+      "./steamdeck/B.svg": 8370,
+      "./steamdeck/Down.svg": 8377,
+      "./steamdeck/Home.svg": 8386,
+      "./steamdeck/LB.svg": 8392,
+      "./steamdeck/LS.svg": 8399,
+      "./steamdeck/LT.svg": 8401,
+      "./steamdeck/Left.svg": 8408,
+      "./steamdeck/LeftStick.svg": 8414,
+      "./steamdeck/Menu.svg": 8423,
+      "./steamdeck/RB.svg": 8426,
+      "./steamdeck/RS.svg": 8432,
+      "./steamdeck/RT.svg": 8436,
+      "./steamdeck/Right.svg": 8444,
+      "./steamdeck/RightStick.svg": 8451,
+      "./steamdeck/Up.svg": 8460,
+      "./steamdeck/View.svg": 8463,
+      "./steamdeck/X.svg": 8471,
+      "./steamdeck/Y.svg": 8475,
+      "./xbox/A.svg": 8481,
+      "./xbox/B.svg": 8484,
+      "./xbox/Down.svg": 8490,
+      "./xbox/Home.svg": 8497,
+      "./xbox/LB.svg": 8499,
+      "./xbox/LS.svg": 8502,
+      "./xbox/LT.svg": 8505,
+      "./xbox/Left.svg": 8511,
+      "./xbox/LeftStick.svg": 8516,
+      "./xbox/Menu.svg": 8525,
+      "./xbox/RB.svg": 8532,
+      "./xbox/RS.svg": 8540,
+      "./xbox/RT.svg": 8544,
+      "./xbox/Right.svg": 8551,
+      "./xbox/RightStick.svg": 8557,
+      "./xbox/Up.svg": 8564,
+      "./xbox/View.svg": 8572,
+      "./xbox/X.svg": 8576,
+      "./xbox/Y.svg": 8581
+    };
 
-    function vT(TT) {
+    function lq(qq) {
+      var Eq = Oq(qq);
+      return gq(Eq)
+    }
+
+    function Oq(qq) {
+      if (!gq.o(Yq, qq)) {
+        var Eq = new Error("Cannot find module '" + qq + "'");
+        throw Eq.code = "MODULE_NOT_FOUND", Eq
+      }
+      return Yq[qq]
+    }
+    lq.keys = function() {
+      return Object.keys(Yq)
+    }, lq.resolve = Oq, qq.exports = lq, lq.id = 8133
+  },
+  4828: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => aq,
+      f: () => oq,
+      h: () => Vq,
+      l: () => Hq
+    });
+    var Yq = gq(57),
+      lq = gq(4837),
+      Oq = gq(4195),
+      mq = gq(1341),
+      xq = gq(4858),
+      Aq = gq(1018),
+      cq = gq.n(Aq),
+      uq = gq(1336),
+      Bq = gq(1710),
+      Wq = gq(4866),
+      Nq = gq(1070);
+
+    function aq(qq) {
       let {
-        label: kT,
-        onClick: cT,
-        checked: lT,
-        circleInfoText: MT,
-        className: yT,
-        disabled: fT,
-        note: IT
-      } = TT;
-      return (0, jT.jsxs)("div", {
-        "aria-disabled": fT || void 0,
+        label: Eq,
+        onClick: gq,
+        checked: Yq,
+        circleInfoText: lq,
+        className: xq,
+        disabled: Aq,
+        note: uq
+      } = qq;
+      return (0, Nq.jsxs)("div", {
+        "aria-disabled": Aq || void 0,
         "data-pad-focusable": !0,
-        className: xT()("SettingBox CheckboxContainer", {
-          [yT]: yT,
-          SettingBoxDisabled: fT
+        className: cq()("SettingBox CheckboxContainer", {
+          [xq]: xq,
+          SettingBoxDisabled: Aq
         }),
         onClick: () => {
-          fT || cT(!lT)
+          Aq || gq(!Yq)
         },
-        children: [(0, jT.jsxs)("div", {
+        children: [(0, Nq.jsxs)("div", {
           className: "CheckboxInputAndText",
-          children: [(0, jT.jsx)("label", {
+          children: [(0, Nq.jsx)("label", {
             className: "CheckboxClickableLabel",
-            children: (0, jT.jsx)(KT.d, {
+            children: (0, Nq.jsx)(Oq.b, {
               className: "SettingsCheckbox",
-              checked: lT,
-              disabled: fT,
+              checked: Yq,
+              disabled: Aq,
               onChange: () => {}
             })
-          }), (0, jT.jsxs)("div", {
+          }), (0, Nq.jsxs)("div", {
             className: "CheckboxText",
-            children: [kT, MT && (0, jT.jsx)("span", {
-              onClick: TT => TT.stopPropagation(),
-              children: (0, jT.jsx)(OT.b, {
+            children: [Eq, lq && (0, Nq.jsx)("span", {
+              onClick: qq => qq.stopPropagation(),
+              children: (0, Nq.jsx)(mq.c, {
                 className: "SettingsTextInputCircleInfo",
-                hoverInfo: MT
+                hoverInfo: lq
               })
             })]
           })]
-        }), IT && (0, jT.jsx)("div", {
+        }), uq && (0, Nq.jsx)("div", {
           className: "SettingNote",
-          children: IT
+          children: uq
         })]
       })
     }
 
-    function tT(TT) {
+    function Vq(qq) {
       let {
-        name: kT,
-        onChange: cT,
-        min: MT,
-        max: KT,
-        step: yT,
-        initValue: fT,
-        circleInfoText: IT,
-        format: AT,
-        className: CT,
-        padStep: vT,
-        disabled: tT = !1,
-        selectableMax: hT,
-        cappedNote: QT,
-        onChangeComplete: ST
-      } = TT;
-      const [DT, aT] = (0, lT.useState)(fT), FT = (0, lT.useRef)(fT);
-      (0, lT.useEffect)((() => {
-        FT.current = fT, aT(fT)
-      }), [fT]);
-      const rT = void 0 !== hT && hT < KT,
-        PT = rT ? {
-          "--slider-selectable": (hT - MT) / (KT - MT)
+        name: Eq,
+        onChange: gq,
+        min: lq,
+        max: Oq,
+        step: xq,
+        initValue: Aq,
+        circleInfoText: uq,
+        format: Bq,
+        className: Wq,
+        padStep: aq,
+        disabled: Vq = !1,
+        selectableMax: dq,
+        cappedNote: Hq,
+        onChangeComplete: oq
+      } = qq;
+      const [Pq, Qq] = (0, Yq.useState)(Aq), yq = (0, Yq.useRef)(Aq);
+      (0, Yq.useEffect)((() => {
+        yq.current = Aq, Qq(Aq)
+      }), [Aq]);
+      const tq = void 0 !== dq && dq < Oq,
+        rq = tq ? {
+          "--slider-selectable": (dq - lq) / (Oq - lq)
         } : void 0;
-      return (0, jT.jsxs)("div", {
-        className: xT()("SettingBox SettingsSliderDiv", {
-          [CT]: CT,
-          SettingBoxDisabled: tT,
-          SliderCapped: rT
+      return (0, Nq.jsxs)("div", {
+        className: cq()("SettingBox SettingsSliderDiv", {
+          [Wq]: Wq,
+          SettingBoxDisabled: Vq,
+          SliderCapped: tq
         }),
-        style: PT,
-        children: [(0, jT.jsxs)("div", {
+        style: rq,
+        children: [(0, Nq.jsxs)("div", {
           className: "SliderText",
-          children: [`${kT}: ${AT?AT(DT):DT}`, IT && (0, jT.jsx)(OT.b, {
+          children: [`${Eq}: ${Bq?Bq(Pq):Pq}`, uq && (0, Nq.jsx)(mq.c, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: IT
+            hoverInfo: uq
           })]
-        }), (0, jT.jsx)("div", {
+        }), (0, Nq.jsx)("div", {
           className: "SliderDiv",
-          children: (0, jT.jsx)(NT, {
-            value: DT,
-            min: MT,
-            max: KT,
-            step: yT,
-            onChange: TT => {
-              if (rT && TT >= hT && DT === hT) return;
-              const kT = rT ? Math.min(TT, hT) : TT;
-              FT.current = kT, aT(kT), cT(kT)
+          children: (0, Nq.jsx)(jq, {
+            value: Pq,
+            min: lq,
+            max: Oq,
+            step: xq,
+            onChange: qq => {
+              if (tq && qq >= dq && Pq === dq) return;
+              const Eq = tq ? Math.min(qq, dq) : qq;
+              yq.current = Eq, Qq(Eq), gq(Eq)
             },
-            onChangeComplete: ST && (() => {
-              ST(FT.current)
+            onChangeComplete: oq && (() => {
+              oq(yq.current)
             }),
-            format: AT,
-            padStep: vT,
-            disabled: tT
+            format: Bq,
+            padStep: aq,
+            disabled: Vq
           })
-        }), rT && QT && (0, jT.jsx)("div", {
+        }), tq && Hq && (0, Nq.jsx)("div", {
           className: "SettingNote",
-          children: QT
+          children: Hq
         })]
       })
     }
-    const hT = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
+    const dq = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
 
-    function NT(TT) {
-      var kT;
+    function jq(qq) {
+      var Eq;
       let {
-        value: cT,
-        min: KT,
-        max: OT,
-        step: yT,
-        onChange: fT,
-        orientation: xT,
-        reverse: IT,
-        setIsChanging: AT,
-        tooltip: vT,
-        labels: tT,
-        handleLabel: NT,
-        format: QT,
-        onChangeStart: ST,
-        onChangeComplete: DT,
-        padStep: aT,
-        disabled: FT = !1
-      } = TT;
-      const rT = (0, lT.useRef)(null),
-        PT = (0, lT.useRef)(null);
-      (0, lT.useLayoutEffect)((() => {
-        var TT, kT, cT;
-        const lT = null !== (TT = null === (kT = rT.current) || void 0 === kT ? void 0 : kT.querySelector(".rangeslider")) && void 0 !== TT ? TT : null;
-        null === lT || void 0 === lT || lT.setAttribute("data-pad-slider", ""), null === lT || void 0 === lT || lT.setAttribute("data-pad-focusable", ""), null === lT || void 0 === lT || null === (cT = lT.querySelector(".rangeslider__handle")) || void 0 === cT || cT.setAttribute("data-pad-slider-handle", ""), PT.current = lT
-      }), []), (0, lT.useLayoutEffect)((() => {
-        var TT, kT;
-        FT ? null === (TT = PT.current) || void 0 === TT || TT.setAttribute("aria-disabled", "true") : null === (kT = PT.current) || void 0 === kT || kT.removeAttribute("aria-disabled")
-      }), [FT]);
-      const wT = (null !== (kT = String(yT).split(".")[1]) && void 0 !== kT ? kT : "").length,
-        mT = TT => {
-          const kT = Number((Math.round((TT - KT) / yT) * yT + KT).toFixed(wT));
-          return Math.min(OT, Math.max(KT, kT))
+        value: gq,
+        min: Oq,
+        max: mq,
+        step: xq,
+        onChange: Aq,
+        orientation: cq,
+        reverse: uq,
+        setIsChanging: Bq,
+        tooltip: aq,
+        labels: Vq,
+        handleLabel: jq,
+        format: Hq,
+        onChangeStart: oq,
+        onChangeComplete: Pq,
+        padStep: Qq,
+        disabled: yq = !1
+      } = qq;
+      const tq = (0, Yq.useRef)(null),
+        rq = (0, Yq.useRef)(null);
+      (0, Yq.useLayoutEffect)((() => {
+        var qq, Eq, gq;
+        const Yq = null !== (qq = null === (Eq = tq.current) || void 0 === Eq ? void 0 : Eq.querySelector(".rangeslider")) && void 0 !== qq ? qq : null;
+        null === Yq || void 0 === Yq || Yq.setAttribute("data-pad-slider", ""), null === Yq || void 0 === Yq || Yq.setAttribute("data-pad-focusable", ""), null === Yq || void 0 === Yq || null === (gq = Yq.querySelector(".rangeslider__handle")) || void 0 === gq || gq.setAttribute("data-pad-slider-handle", ""), rq.current = Yq
+      }), []), (0, Yq.useLayoutEffect)((() => {
+        var qq, Eq;
+        yq ? null === (qq = rq.current) || void 0 === qq || qq.setAttribute("aria-disabled", "true") : null === (Eq = rq.current) || void 0 === Eq || Eq.removeAttribute("aria-disabled")
+      }), [yq]);
+      const vq = (null !== (Eq = String(xq).split(".")[1]) && void 0 !== Eq ? Eq : "").length,
+        hq = qq => {
+          const Eq = Number((Math.round((qq - Oq) / xq) * xq + Oq).toFixed(vq));
+          return Math.min(mq, Math.max(Oq, Eq))
         },
-        bT = (0, lT.useRef)(DT);
-      bT.current = DT, (0, lT.useEffect)((() => {
-        const TT = rT.current;
-        if (!TT) return;
-        const kT = TT => {
-          var kT;
-          hT.has(TT.key) && (null === (kT = bT.current) || void 0 === kT || kT.call(bT))
+        nq = (0, Yq.useRef)(Pq);
+      nq.current = Pq, (0, Yq.useEffect)((() => {
+        const qq = tq.current;
+        if (!qq) return;
+        const Eq = qq => {
+          var Eq;
+          dq.has(qq.key) && (null === (Eq = nq.current) || void 0 === Eq || Eq.call(nq))
         };
-        return TT.addEventListener("keyup", kT), () => {
-          TT.removeEventListener("keyup", kT)
+        return qq.addEventListener("keyup", Eq), () => {
+          qq.removeEventListener("keyup", Eq)
         }
       }), []);
-      const zT = (0, lT.useRef)(!1);
-      return (0, CT.d)(PT, {
-        adjust: TT => {
-          if (FT) return;
-          const kT = null !== aT && void 0 !== aT ? aT : Math.max(yT, Math.round((OT - KT) / 20 / yT) * yT),
-            lT = mT(cT + TT * kT * (IT ? -1 : 1));
-          lT !== cT && (null === ST || void 0 === ST || ST(), fT(lT), null === DT || void 0 === DT || DT())
+      const bq = (0, Yq.useRef)(!1);
+      return (0, Wq.i)(rq, {
+        adjust: qq => {
+          if (yq) return;
+          const Eq = null !== Qq && void 0 !== Qq ? Qq : Math.max(xq, Math.round((mq - Oq) / 20 / xq) * xq),
+            Yq = hq(gq + qq * Eq * (uq ? -1 : 1));
+          Yq !== gq && (null === oq || void 0 === oq || oq(), Aq(Yq), null === Pq || void 0 === Pq || Pq())
         },
-        setFraction: TT => {
-          if (FT) return;
-          const kT = mT(KT + (IT ? 1 - TT : TT) * (OT - KT));
-          kT !== cT && (zT.current || (zT.current = !0, null === ST || void 0 === ST || ST()), fT(kT))
+        setFraction: qq => {
+          if (yq) return;
+          const Eq = hq(Oq + (uq ? 1 - qq : qq) * (mq - Oq));
+          Eq !== gq && (bq.current || (bq.current = !0, null === oq || void 0 === oq || oq()), Aq(Eq))
         },
         endDrag: () => {
-          zT.current && (zT.current = !1, null === DT || void 0 === DT || DT())
+          bq.current && (bq.current = !1, null === Pq || void 0 === Pq || Pq())
         }
-      }), (0, jT.jsx)("div", {
-        ref: rT,
+      }), (0, Nq.jsx)("div", {
+        ref: tq,
         style: {
           display: "contents"
         },
-        children: (0, jT.jsx)(MT.b, {
-          value: cT,
-          min: KT,
-          max: OT,
-          step: yT,
-          onChange: fT,
-          orientation: xT,
-          reverse: IT,
-          tooltip: vT,
-          labels: tT,
-          handleLabel: NT,
-          format: QT,
+        children: (0, Nq.jsx)(lq.d, {
+          value: gq,
+          min: Oq,
+          max: mq,
+          step: xq,
+          onChange: Aq,
+          orientation: cq,
+          reverse: uq,
+          tooltip: aq,
+          labels: Vq,
+          handleLabel: jq,
+          format: Hq,
           onChangeStart: () => {
-            null === ST || void 0 === ST || ST(), null === AT || void 0 === AT || AT(!0)
+            null === oq || void 0 === oq || oq(), null === Bq || void 0 === Bq || Bq(!0)
           },
           onChangeComplete: () => {
-            null === AT || void 0 === AT || AT(!1), null === DT || void 0 === DT || DT()
+            null === Bq || void 0 === Bq || Bq(!1), null === Pq || void 0 === Pq || Pq()
           }
         })
       })
     }
-    async function QT() {
-      let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-      const kT = IT.NotificationProvider.showPromptPopup({
+    async function Hq() {
+      let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+      const Eq = uq.NotificationProvider.showPromptPopup({
         title: "settingsMenu:reloadPagePopupTitle",
         subtitle: "settingsMenu:reloadPagePopupSubtitle",
         confirmText: "settingsMenu:reloadPagePopupConfirm",
         confirmTooltip: "",
         cancelText: "general:cancel",
         cancelTooltip: "",
-        unlockPointerKey: TT
+        unlockPointerKey: qq
       });
-      !0 === await kT.getResult() && (0, AT.reloadBloxd)()
+      !0 === await Eq.getResult() && (0, Bq.reloadBloxd)()
     }
 
-    function ST(TT) {
+    function oq(qq) {
       let {
-        label: kT,
-        options: cT,
-        value: lT,
-        onChange: MT,
-        circleInfoText: KT
-      } = TT;
-      return (0, jT.jsxs)("div", {
+        label: Eq,
+        options: gq,
+        value: Yq,
+        onChange: lq,
+        circleInfoText: Oq
+      } = qq;
+      return (0, Nq.jsxs)("div", {
         className: "SettingBox SegmentedSettingRow",
-        children: [(0, jT.jsxs)("div", {
+        children: [(0, Nq.jsxs)("div", {
           className: "SliderText",
-          children: [kT, KT && (0, jT.jsx)(OT.b, {
+          children: [Eq, Oq && (0, Nq.jsx)(mq.c, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: KT
+            hoverInfo: Oq
           })]
-        }), (0, jT.jsx)(yT.d, {
-          ariaLabel: kT,
-          options: cT,
-          value: lT,
-          onChange: MT
+        }), (0, Nq.jsx)(xq.c, {
+          ariaLabel: Eq,
+          options: gq,
+          value: Yq,
+          onChange: lq
         })]
       })
     }
   },
-  4968: (TT, kT, cT) => {
-    cT.d(kT, {
-      d: () => OT
+  4858: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => mq
     });
-    var lT = cT(1046),
-      MT = cT.n(lT),
-      KT = cT(1099);
+    var Yq = gq(1018),
+      lq = gq.n(Yq),
+      Oq = gq(1070);
 
-    function OT(TT) {
+    function mq(qq) {
       let {
-        options: kT,
-        value: cT,
-        onChange: lT,
-        ariaLabel: OT,
-        className: yT,
-        reselectable: fT = !1,
-        keepsFocus: xT = !1,
-        padTabs: IT
-      } = TT;
-      const AT = void 0 !== IT;
-      return (0, KT.jsx)("div", {
-        className: MT()("SegmentedToggle", yT),
+        options: Eq,
+        value: gq,
+        onChange: Yq,
+        ariaLabel: mq,
+        className: xq,
+        reselectable: Aq = !1,
+        keepsFocus: cq = !1,
+        padTabs: uq
+      } = qq;
+      const Bq = void 0 !== uq;
+      return (0, Oq.jsx)("div", {
+        className: lq()("SegmentedToggle", xq),
         role: "group",
-        "aria-label": OT,
-        "data-pad-tabs": IT,
-        children: kT.map((TT => {
-          const kT = TT.value === cT;
-          return (0, KT.jsx)("button", {
+        "aria-label": mq,
+        "data-pad-tabs": uq,
+        children: Eq.map((qq => {
+          const Eq = qq.value === gq;
+          return (0, Oq.jsx)("button", {
             type: "button",
-            "aria-pressed": kT,
-            "data-pad-tab": AT || void 0,
-            "data-pad-selected": AT && kT ? "true" : void 0,
-            "data-pad-default-focus": AT && kT || void 0,
-            "aria-label": TT.ariaLabel,
-            title: TT.ariaLabel,
-            className: MT()("SegmentedToggleOption SmallTextLight", {
-              SegmentedToggleOptionSelected: kT
+            "aria-pressed": Eq,
+            "data-pad-tab": Bq || void 0,
+            "data-pad-selected": Bq && Eq ? "true" : void 0,
+            "data-pad-default-focus": Bq && Eq || void 0,
+            "aria-label": qq.ariaLabel,
+            title: qq.ariaLabel,
+            className: lq()("SegmentedToggleOption SmallTextLight", {
+              SegmentedToggleOptionSelected: Eq
             }),
-            onMouseDown: xT ? TT => {
-              TT.preventDefault()
+            onMouseDown: cq ? qq => {
+              qq.preventDefault()
             } : void 0,
             onClick: () => {
-              kT && !fT || lT(TT.value)
+              Eq && !Aq || Yq(qq.value)
             },
-            children: TT.label
-          }, TT.value)
+            children: qq.label
+          }, qq.value)
         }))
       })
     }
   },
-  8202: (TT, kT, cT) => {
-    cT.d(kT, {
-      d: () => MT,
-      g: () => KT,
-      k: () => CT,
-      o: () => AT,
-      s: () => xT,
-      u: () => yT,
-      v: () => lT,
-      x: () => jT,
-      y: () => vT
+  8081: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => lq,
+      f: () => Oq,
+      g: () => Wq,
+      i: () => Bq,
+      m: () => cq,
+      o: () => xq,
+      p: () => Yq,
+      t: () => Nq,
+      u: () => aq
     });
-    const lT = ["menuConfirm", "menuBack", "menuTabPrevious", "menuTabNext", "menuPageUp", "menuPageDown", "menuSecondary", "menuToggleCursor"],
-      MT = [{
+    const Yq = ["menuConfirm", "menuBack", "menuTabPrevious", "menuTabNext", "menuPageUp", "menuPageDown", "menuSecondary", "menuToggleCursor"],
+      lq = [{
         group: "gameplay",
         actions: ["jump", "sneak", "sneakToggle", "sprint", "attack", "use", "hotbarPrevious", "hotbarNext", "inventory", "actionButton", "perspective", "pickBlock", "drop", "emoteWheel", "chat", "pause", "leaderboard"]
       }, {
         group: "menu",
-        actions: lT
+        actions: Yq
       }, {
         group: "inventory",
         actions: ["inventoryPrimary", "inventorySecondary", "inventoryQuickMove", "inventoryClose", "inventoryPanelPrevious", "inventoryPanelNext", "inventoryDrop", "inventoryHotbarSwap"]
@@ -336,7 +432,7 @@ export const modules = {
         group: "keyboard",
         actions: ["keyboardType", "keyboardBackspace", "keyboardSpace", "keyboardCaretLeft", "keyboardCaretRight", "keyboardShift", "keyboardSymbols", "keyboardSubmit", "keyboardClose", "keyboardChannel"]
       }],
-      KT = {
+      Oq = {
         jump: "A",
         sneak: "B",
         sneakToggle: "RS",
@@ -381,29 +477,29 @@ export const modules = {
         keyboardClose: "B",
         keyboardChannel: "View"
       },
-      OT = ["pickBlock", "perspective"],
-      yT = TT => OT.includes(TT) ? OT : [TT],
-      fT = Object.fromEntries(MT.flatMap((TT => {
+      mq = ["pickBlock", "perspective"],
+      xq = qq => mq.includes(qq) ? mq : [qq],
+      Aq = Object.fromEntries(lq.flatMap((qq => {
         let {
-          group: kT,
-          actions: cT
-        } = TT;
-        return cT.map((TT => [TT, kT]))
+          group: Eq,
+          actions: gq
+        } = qq;
+        return gq.map((qq => [qq, Eq]))
       }))),
-      xT = TT => fT[TT],
-      IT = {
+      cq = qq => Aq[qq],
+      uq = {
         pause: ["menu"],
         leaderboard: ["menu"],
         inventory: ["menu"],
         menuPageUp: ["inventory"],
         menuPageDown: ["inventory"]
       },
-      AT = TT => {
-        var kT;
-        return [xT(TT), ...null !== (kT = IT[TT]) && void 0 !== kT ? kT : []]
+      Bq = qq => {
+        var Eq;
+        return [cq(qq), ...null !== (Eq = uq[qq]) && void 0 !== Eq ? Eq : []]
       },
-      CT = new Set(["menu", "inventory", "keyboard"]),
-      jT = {
+      Wq = new Set(["menu", "inventory", "keyboard"]),
+      Nq = {
         jump: "jump",
         crouch: "sneak",
         sprint: "sprint",
@@ -421,92 +517,92 @@ export const modules = {
         OpenShop: "leaderboard",
         OpenEmoteWheel: "emoteWheel"
       },
-      vT = new Set(["forward", "backward", "left", "right"])
+      aq = new Set(["forward", "backward", "left", "right"])
   },
-  8199: (TT, kT, cT) => {
-    cT.d(kT, {
-      A: () => IT,
-      E: () => wT,
-      F: () => JT,
-      e: () => QT,
-      g: () => aT,
-      j: () => CT,
-      k: () => jT,
-      l: () => HT,
-      n: () => zT,
-      q: () => bT,
-      s: () => DT,
-      t: () => oT,
-      v: () => PT,
-      w: () => ST,
-      z: () => mT
+  8073: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      C: () => hq,
+      D: () => uq,
+      F: () => vq,
+      G: () => iq,
+      d: () => Hq,
+      e: () => Qq,
+      i: () => Wq,
+      j: () => Nq,
+      m: () => fq,
+      p: () => bq,
+      t: () => nq,
+      u: () => Pq,
+      v: () => Zq,
+      w: () => rq,
+      z: () => oq
     });
-    var lT = cT(8202),
-      MT = cT(8206),
-      KT = cT(8190),
-      OT = cT(8219);
-    const yT = TT => "pickBlock" === TT ? "perspective" : TT,
-      fT = (TT, kT) => {
-        var cT;
-        const MT = yT(kT);
-        return null !== (cT = TT[MT]) && void 0 !== cT ? cT : lT.g[MT]
+    var Yq = gq(8081),
+      lq = gq(8090),
+      Oq = gq(8061),
+      mq = gq(8110);
+    const xq = qq => "pickBlock" === qq ? "perspective" : qq,
+      Aq = (qq, Eq) => {
+        var gq;
+        const lq = xq(Eq);
+        return null !== (gq = qq[lq]) && void 0 !== gq ? gq : Yq.f[lq]
       },
-      xT = new Map([
+      cq = new Map([
         ["menuConfirm", "menuBack"],
         ["inventoryPrimary", "inventoryClose"],
         ["keyboardType", "keyboardClose"]
-      ].flatMap((TT => {
-        let [kT, cT] = TT;
+      ].flatMap((qq => {
+        let [Eq, gq] = qq;
         return [
-          [kT, cT],
-          [cT, kT]
+          [Eq, gq],
+          [gq, Eq]
         ]
       }))),
-      IT = (TT, kT) => null !== TT && void 0 !== TT ? TT : "nintendo" === kT,
-      AT = TT => IT((0, MT.g)().swapConfirmBack, (0, MT.j)()) && xT.get(TT) || TT,
-      CT = TT => fT((0, MT.g)().bindings, AT(TT)),
-      jT = TT => lT.g[AT(TT)],
-      vT = Object.keys(lT.g),
-      tT = TT => "gameplay" === (0, lT.s)(TT) ? ["gameplay"] : (0, lT.o)(TT),
-      hT = (TT, kT) => {
-        const cT = tT(kT);
-        return tT(TT).some((TT => cT.includes(TT)))
+      uq = (qq, Eq) => null !== qq && void 0 !== qq ? qq : "nintendo" === Eq,
+      Bq = qq => uq((0, lq.i)().swapConfirmBack, (0, lq.k)()) && cq.get(qq) || qq,
+      Wq = qq => Aq((0, lq.i)().bindings, Bq(qq)),
+      Nq = qq => Yq.f[Bq(qq)],
+      aq = Object.keys(Yq.f),
+      Vq = qq => "gameplay" === (0, Yq.m)(qq) ? ["gameplay"] : (0, Yq.i)(qq),
+      dq = (qq, Eq) => {
+        const gq = Vq(Eq);
+        return Vq(qq).some((qq => gq.includes(qq)))
       },
-      NT = (TT, kT, cT) => {
-        const MT = fT(TT, kT),
-          OT = new Set((0, lT.u)(kT)),
-          xT = [...OT];
-        for (let lT = xT.pop(); lT; lT = xT.pop())
-          for (const kT of vT) {
-            const KT = fT(TT, kT);
-            OT.has(kT) || KT !== cT && KT !== MT || !hT(lT, kT) || (OT.add(kT), xT.push(kT))
+      jq = (qq, Eq, gq) => {
+        const lq = Aq(qq, Eq),
+          mq = new Set((0, Yq.o)(Eq)),
+          cq = [...mq];
+        for (let Yq = cq.pop(); Yq; Yq = cq.pop())
+          for (const Eq of aq) {
+            const Oq = Aq(qq, Eq);
+            mq.has(Eq) || Oq !== gq && Oq !== lq || !dq(Yq, Eq) || (mq.add(Eq), cq.push(Eq))
           }
-        const IT = {
-          ...TT
+        const uq = {
+          ...qq
         };
-        for (const AT of OT) {
-          const kT = fT(TT, AT) === MT ? cT : MT,
-            OT = (0, lT.o)(AT).some((TT => lT.k.has(TT)));
-          if ((0, KT.I)(kT) && OT) return null;
-          IT[yT(AT)] = kT
+        for (const Bq of mq) {
+          const Eq = Aq(qq, Bq) === lq ? gq : lq,
+            mq = (0, Yq.i)(Bq).some((qq => Yq.g.has(qq)));
+          if ((0, Oq.H)(Eq) && mq) return null;
+          uq[xq(Bq)] = Eq
         }
-        for (const KT of Object.keys(IT)) IT[KT] === lT.g[KT] && delete IT[KT];
-        return IT
+        for (const Oq of Object.keys(uq)) uq[Oq] === Yq.f[Oq] && delete uq[Oq];
+        return uq
       },
-      QT = (TT, kT) => null !== NT((0, MT.g)().bindings, AT(TT), kT),
-      ST = (TT, kT) => {
-        if (CT(TT) === kT) return !0;
-        const cT = NT((0, MT.g)().bindings, AT(TT), kT);
-        return !!cT && ((0, MT.n)({
-          bindings: cT
+      Hq = (qq, Eq) => null !== jq((0, lq.i)().bindings, Bq(qq), Eq),
+      oq = (qq, Eq) => {
+        if (Wq(qq) === Eq) return !0;
+        const gq = jq((0, lq.i)().bindings, Bq(qq), Eq);
+        return !!gq && ((0, lq.n)({
+          bindings: gq
         }), !0)
       },
-      DT = (TT, kT) => {
-        const cT = (0, lT.u)(kT);
-        return vT.filter((kT => yT(kT) === kT && !cT.includes(kT) && fT(TT, AT(kT)) !== CT(kT)))
+      Pq = (qq, Eq) => {
+        const gq = (0, Yq.o)(Eq);
+        return aq.filter((Eq => xq(Eq) === Eq && !gq.includes(Eq) && Aq(qq, Bq(Eq)) !== Wq(Eq)))
       },
-      aT = ["southpaw", "triggersSwapped"],
-      FT = {
+      Qq = ["southpaw", "triggersSwapped"],
+      yq = {
         southpaw: {
           sprint: "RS",
           sneakToggle: "LS"
@@ -516,580 +612,580 @@ export const modules = {
           use: "RT"
         }
       },
-      rT = TT => Object.keys(FT[TT]),
-      PT = (TT, kT) => "southpaw" === TT ? kT.swapSticks : rT(TT).every((cT => fT(kT.bindings, cT) === FT[TT][cT])),
-      wT = (TT, kT) => {
-        const cT = (0, MT.g)();
-        let KT = cT.bindings;
-        for (const MT of rT(TT)) {
-          const cT = kT ? FT[TT][MT] : lT.g[MT];
-          if (KT = NT(KT, MT, cT), !KT) return !1
+      tq = qq => Object.keys(yq[qq]),
+      rq = (qq, Eq) => "southpaw" === qq ? Eq.swapSticks : tq(qq).every((gq => Aq(Eq.bindings, gq) === yq[qq][gq])),
+      vq = (qq, Eq) => {
+        const gq = (0, lq.i)();
+        let Oq = gq.bindings;
+        for (const lq of tq(qq)) {
+          const gq = Eq ? yq[qq][lq] : Yq.f[lq];
+          if (Oq = jq(Oq, lq, gq), !Oq) return !1
         }
-        return (0, MT.n)({
-          swapSticks: "southpaw" === TT ? kT : cT.swapSticks,
-          bindings: KT
+        return (0, lq.n)({
+          swapSticks: "southpaw" === qq ? Eq : gq.swapSticks,
+          bindings: Oq
         }), !0
       },
-      mT = () => {
-        (0, MT.n)({
+      hq = () => {
+        (0, lq.n)({
           swapSticks: !1,
           bindings: {}
         })
       },
-      bT = () => (0, MT.g)().swapSticks ? "RightStick" : "LeftStick",
-      zT = () => (0, MT.g)().swapSticks ? "LeftStick" : "RightStick",
-      JT = TT => (0, MT.g)().swapSticks && (0, KT.I)(TT),
-      oT = TT => JT(TT) ? bT() : zT(),
-      HT = TT => {
-        if (lT.y.has(TT)) return bT();
-        const kT = lT.x[TT];
-        return kT && ("leaderboard" !== kT || (0, OT.f)(TT, (0, OT.d)())) ? CT(kT) : null
+      nq = () => (0, lq.i)().swapSticks ? "RightStick" : "LeftStick",
+      bq = () => (0, lq.i)().swapSticks ? "LeftStick" : "RightStick",
+      iq = qq => (0, lq.i)().swapSticks && (0, Oq.H)(qq),
+      Zq = qq => iq(qq) ? nq() : bq(),
+      fq = qq => {
+        if (Yq.u.has(qq)) return nq();
+        const Eq = Yq.t[qq];
+        return Eq && ("leaderboard" !== Eq || (0, mq.d)(qq, (0, mq.c)())) ? Wq(Eq) : null
       }
   },
-  8180: (TT, kT, cT) => {
-    cT.r(kT), cT.d(kT, {
-      ControllerCategory: () => Sy,
-      ControllerGlyph: () => FM,
-      ControllerRoot: () => SO,
-      PadLobbyShortcuts: () => EO,
-      PadSneakChip: () => mO,
-      PadTooltip: () => zO,
-      attachPressToContinue: () => UO,
-      getBoundButton: () => IT.j,
-      getControllerSettings: () => CT.g,
-      getGlyphForNoaAction: () => IT.l,
-      getInventoryCursorState: () => ay,
-      getMenuShortcutButton: () => Uc,
-      getPadGlyphIconName: () => rO,
-      getPadGlyphIconUrl: () => PO,
-      getPadRepeatTiming: () => tT.g,
-      handOverPadFocus: () => ry,
-      hasActivePad: () => Dy,
-      isPadSteppingSlots: () => Fy
+  8052: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      ControllerCategory: () => ox,
+      ControllerGlyph: () => Ql,
+      ControllerRoot: () => Hm,
+      PadLobbyShortcuts: () => Sm,
+      PadSneakChip: () => hm,
+      PadTooltip: () => bm,
+      attachPressToContinue: () => Fm,
+      getBoundButton: () => uq.i,
+      getControllerSettings: () => Wq.i,
+      getGlyphForNoaAction: () => uq.m,
+      getInventoryCursorState: () => Qx,
+      getMenuShortcutButton: () => Ug,
+      getPadGlyphIconName: () => ym,
+      getPadGlyphIconUrl: () => tm,
+      getPadRepeatTiming: () => Vq.e,
+      handOverPadFocus: () => tx,
+      hasActivePad: () => Px,
+      isPadSteppingSlots: () => yx
     });
-    const lT = JSON.parse('{"controller":{"inventoryTake":"Take","inventoryTakeHalf":"Take half","inventoryPlace":"Place","inventoryPlaceOne":"Place one","inventoryQuickMove":"Quick move","inventoryToHotbar":"To hotbar","inventoryPutBack":"Put back","inventoryHotbarSwap":"Swap with hotbar","inventorySwapHere":"Swap here","inventoryCancel":"Cancel","inventoryClose":"Close","inventoryDrop":"Drop (hold: stack)","inventorySelect":"Select","inventoryCraft":"Craft (hold to repeat)","inventoryCraftAll":"Craft all","inventoryChooseRecipe":"Choose","inventoryBackToRecipes":"Back to recipes","inventoryType":"Type","inventoryPanels":"Switch panel","inventoryCategory":"Category","inventoryPage":"Page","disconnected":"Controller disconnected","gameplayReload":"Reload","gameplayActionWheelHint":"(hold for more)","gameplaySneaking":"Sneaking","gameplayLoadFailedTitle":"Controller unavailable","gameplayLoadFailedSubtitle":"Reload the page to play with your controller.","gameplayDropStack":"Keep holding to drop the stack","gameplayAttackLatched":"Attacking","gameplayPickBlock":"Pick block","padButtonView":"View","padButtonMenu":"Menu","padButtonHome":"Home","padButtonCreate":"Create","padButtonOptions":"Options","padButtonDpadUp":"D-pad \u2191","padButtonDpadDown":"D-pad \u2193","padButtonDpadLeft":"D-pad \u2190","padButtonDpadRight":"D-pad \u2192","padButtonLeftStick":"L Stick","padButtonRightStick":"R Stick","settingsLook":"Look","settingsLookSensitivityX":"Look sensitivity (horizontal)","settingsLookSensitivityY":"Look sensitivity (vertical)","settingsAimLookSensitivity":"Look sensitivity while aiming (use held)","settingsInvertLookX":"Invert horizontal look","settingsInvertLookY":"Invert vertical look","settingsLookCurve":"Look curve","settingsLookCurveHint":"Steep gives finer aim near the centre, Linear turns at an even rate, and Boost turns faster when you hold the stick all the way.","settingsCurveExponential":"Steep","settingsCurveLinear":"Linear","settingsCurveBoost":"Boost","settingsLookDeadzone":"Look deadzone","settingsGyro":"Gyro aiming","settingsGyroToggle":"Aim by moving the controller","settingsGyroToggleInfo":"Turn and tilt the controller to aim, on top of the right stick.","settingsGyroTogglePhone":"Aim by moving your phone or tablet","settingsGyroToggleInfoPhone":"Turn and tilt your phone or tablet to aim, on top of the right stick.","settingsGyroUnsupported":"Gyro aiming needs Chrome or Edge.","settingsGyroBlocked":"Gyro aiming isn\'t available on this site.","settingsGyroPhoneNeedsController":"Connect a controller to aim by moving your phone or tablet.","settingsGyroSteamHint":"If Steam already turns your gyro into mouse movement, leave this off.","settingsGyroConnect":"Connect motion controller","settingsGyroConnectHint":"Works with DualSense, DualShock 4 and Switch controllers.","settingsGyroConnectNeedsClick":"Click Connect with your mouse: the browser asks before sharing a controller.","settingsGyroOpenFailed":"Another app is using the controller. Close apps such as Steam or DS4Windows, then try again.","settingsGyroConnected":"Aiming with {{name}}.","settingsGyroAllowMotion":"Allow motion sensor","settingsGyroAllowNeedsTap":"Tap Allow motion sensor on your screen to turn it on.","settingsGyroPhoneOn":"Aiming with this device\'s motion sensor.","settingsGyroPhoneWaiting":"Waiting for this device\'s motion sensor\u2026","settingsGyroPhoneNoSensor":"No motion sensor found on this device.","settingsGyroPhoneDenied":"Motion access is blocked. Allow it in your browser settings.","settingsGyroSensitivity":"Gyro sensitivity","settingsGyroActivation":"Gyro turns on","settingsGyroAlways":"Always","settingsGyroWhileAiming":"While aiming","settingsGyroWhileButton":"While holding a button","settingsGyroAimingHint":"Hold {{button}} to aim with motion.","settingsGyroButton":"Gyro button","settingsGyroButtonHint":"While gyro aiming is on, this button only turns the gyro on in game, so pick one you rarely use.","settingsMovement":"Movement","settingsMoveDeadzone":"Move deadzone","settingsAutoSprint":"Sprint at full tilt","settingsAutoSprintInfo":"Push the movement stick all the way to sprint.","settingsSneak":"Sneak","settingsSneakHold":"Hold","settingsSneakToggle":"Toggle","settingsButtons":"Buttons","settingsPromptFamily":"Button prompts","settingsPromptAuto":"Match my controller","settingsPromptXbox":"Xbox","settingsPromptPlayStation":"PlayStation","settingsPromptNintendo":"Nintendo","settingsPromptSteamDeck":"Steam Deck","settingsPromptGeneric":"Generic","settingsHideButtonHints":"Hide button hints","settingsVibration":"Vibration","settingsCursorSpeed":"Virtual cursor speed","settingsCursorMagnetism":"Cursor snaps onto buttons","settingsMenuBackToCategories":"Back returns to the category list first","settingsAccessibility":"Accessibility","settingsSwapConfirmBack":"Swap confirm and back","settingsSwapToast":"Select and Back have swapped buttons.","settingsLayoutRefusedToast":"This layout doesn\'t fit your current buttons. Reset them to use it.","settingsSwapConfirmBackInfo":"Select with the right face button and go back with the bottom one, in menus, the inventory and the on-screen keyboard. On by default for Nintendo controllers.","settingsButtonRepeat":"Button repeat","settingsButtonRepeatHint":"How a held button repeats in menus, sliders, the on-screen keyboard and crafting. Off acts once per press, and holding drop in game drops just one item.","settingsButtonRepeatDefault":"Default","settingsButtonRepeatSlow":"Slow (0.8 s, then 4 a second)","settingsButtonRepeatOff":"Off (once per press)","settingsTapHoldTime":"Tap/hold time","settingsTapHoldTimeHint":"How long to hold the chat, emote or action button to open its wheel, or the view button to change view where a tap picks a block. Dropping a whole stack takes 0.8, 1 or 1.3 s.","settingsTapHoldShort":"Short (0.25 s)","settingsTapHoldMedium":"Medium (0.5 s)","settingsTapHoldLong":"Long (0.8 s)","settingsEmoteButton":"Emote button","settingsEmoteButtonTapHoldHint":"Tap to repeat your last emote, or hold to open the emote wheel.","settingsEmoteButtonWheelHint":"Any press opens the emote wheel, with no hold to time. Pick with the stick, then select.","settingsEmoteButtonTapHold":"Tap repeats, hold opens wheel","settingsEmoteButtonWheel":"Opens the wheel","settingsAttackMode":"Attack / mine","settingsAttackHoldHint":"Hold attack to keep attacking or mining.","settingsAttackToggleHint":"Press attack once to keep attacking or mining, and again to stop.","settingsAttackHold":"Hold","settingsAttackToggle":"Toggle","settingsLargePointer":"Large pointer and focus","settingsLargePointerInfo":"A bigger menu cursor, thicker selection brackets and bigger button hints.","settingsRemap":"Remap buttons","settingsRemapHint":"Select an action, then press a button. If that button is taken, the two swap.","settingsLayoutSouthpaw":"Southpaw (move with the right stick)","settingsLayoutTriggersSwapped":"Triggers swapped (attack with the left trigger)","settingsCapturePrompt":"Press a button","settingsCaptureCancelHint":"Press {{button}} to cancel","settingsCaptureCancelOrBindHint":"Tap {{button}} to cancel, or hold it to choose it","settingsReset":"Reset","settingsSwapNotice":"{{action}} moved to {{button}}","settingsResetAll":"Reset all buttons and sticks","settingsGroupGameplay":"Movement & gameplay","settingsGroupMenus":"Menus","settingsGroupInventory":"Inventory","settingsGroupKeyboard":"On-screen keyboard","settingsActionMove":"Move","settingsActionLook":"Look around","settingsActionJump":"Jump","settingsActionSneak":"Sneak","settingsActionSneakToggle":"Toggle sneak","settingsActionSprint":"Sprint","settingsActionAttack":"Attack / mine","settingsActionUse":"Use / place","settingsActionHotbarPrevious":"Previous hotbar slot","settingsActionHotbarNext":"Next hotbar slot","settingsActionInventory":"Inventory","settingsActionActionButton":"Game action","settingsActionPerspective":"Change view","settingsActionPickBlock":"Pick block (creative)","settingsActionDrop":"Drop item","settingsActionEmoteWheel":"Emotes","settingsActionChat":"Chat","settingsActionPause":"Pause menu","settingsActionLeaderboard":"Shop / leaderboard","settingsActionMenuConfirm":"Select","settingsActionMenuBack":"Back","settingsActionMenuTabPrevious":"Previous tab","settingsActionMenuTabNext":"Next tab","settingsActionMenuPageUp":"Page up","settingsActionMenuPageDown":"Page down","settingsActionMenuSecondary":"Secondary action","settingsActionMenuToggleCursor":"Switch to virtual cursor","settingsActionInventoryPrimary":"Pick up / place","settingsActionInventorySecondary":"Pick up half / place one","settingsActionInventoryQuickMove":"Quick move","settingsActionInventoryHotbarSwap":"Swap with hotbar slot","settingsActionInventoryClose":"Close","settingsActionInventoryPanelPrevious":"Previous panel","settingsActionInventoryPanelNext":"Next panel","settingsActionInventoryDrop":"Drop item","settingsActionKeyboardType":"Type key","settingsActionKeyboardBackspace":"Backspace","settingsActionKeyboardSpace":"Space","settingsActionKeyboardCaretLeft":"Move cursor left","settingsActionKeyboardCaretRight":"Move cursor right","settingsActionKeyboardShift":"Shift","settingsActionKeyboardSymbols":"Accents and symbols","settingsActionKeyboardSubmit":"Send","settingsActionKeyboardClose":"Close keyboard","settingsActionKeyboardChannel":"Chat channel","settingsAlternatives":"Try alternatives","settingsAlternativesHint":"Try each way of playing and keep the one that feels best.","settingsMenuNavigation":"Menu navigation","settingsMenuNavigationHint":"Steer a cursor with the stick and jump between buttons with the D-pad, or use just one.","settingsNavHybrid":"Cursor and D-pad","settingsMenuNavFocus":"Jump between buttons","settingsVirtualCursor":"Virtual cursor","settingsInventoryNavigation":"Inventory","settingsInventoryNavigationHint":"Steer a cursor with the stick and step slot by slot with the D-pad, or use just one.","settingsInventoryNavSlot":"Slot by slot","settingsQuickChat":"Hold chat button","settingsQuickChatHint":"Hold the chat button to pick a quick phrase. Tapping it still opens chat.","settingsQuickChatWheel":"Quick chat wheel","settingsQuickChatOff":"Off","settingsLeaderboardButton":"Shop / leaderboard button","settingsLeaderboardButtonHint":"Open the shop in one press in games that have one. The lobby leaderboard is still in the pause menu.","settingsLeaderboardButtonShop":"Shop, in games with one","settingsLeaderboardButtonLeaderboard":"Always the leaderboard","settingsTester":"Gamepad tester","settingsTesterNoPad":"Connect a gamepad and press any button to test it.","settingsTesterFamily":"Detected: {{family}}","settingsTesterHint":"Start a test to try every button and stick without moving through the menu.","settingsTesterStart":"Start test","settingsTesterStop":"Stop test","settingsTesterTesting":"Press anything to see it light up. To stop, hold {{button}} or press it three times.","settingsControlsNote":"Playing with a gamepad? Change its buttons and feel in Gamepad settings.","settingsOpenController":"Gamepad settings","keyboardSpace":"Space","keyboardSend":"Send","keyboardDone":"Done","keyboardTargetChat":"Chat","keyboardTargetSign":"Sign","keyboardTargetNameTag":"Name tag","keyboardTargetBook":"Book page","keyboardTargetBookTitle":"Book title","keyboardTargetText":"Text","keyboardPhraseGg":"gg","keyboardPhraseHi":"hi","keyboardPhraseThanks":"thanks","keyboardPhraseGl":"gl","keyboardPhraseBrb":"brb","keyboardPhraseYes":"yes","keyboardPhraseNo":"no","keyboardPhraseHelp":"help!","quickChatPick":"Pick a phrase","actionWheelPick":"Pick an action","wheelReleaseToPick":"Release to pick","wheelClose":"Close","wheelChoose":"Choose","menusSelect":"Select","menusBack":"Back","menusClose":"Close","menusQuickChat":"Quick chat (hold)","menusSkipTutorial":"Skip tutorial","menusTabs":"Tabs","menusRows":"Rows","menusCursorMode":"Cursor","menusFocusMode":"Focus","menusClick":"Click","menusRightClick":"Right-click","menusScroll":"Scroll","menusFriends":"Friends","menusSearch":"Search","menusSettings":"Settings","menusLeaveGameTitle":"Leave the game?","menusLeaveGameLeave":"Leave","menusLeaveGameStay":"Stay","menusNotifications":"Notifications","menusLobby":"Lobby","menusShop":"Shop","menusTasks":"Tasks & leaderboards","menusInvite":"Invite friends","menusAdjust":"Adjust","menusFavourite":"Favourite","screensPressToContinue":"Press {{button}} to continue","screensPressToEnterGame":"Press {{button}} to enter game","screensEnterGame":"Enter game","screensBackToGames":"Back to games","tutorialMine":"Mine","tutorialPlace":"Place / Use","tutorialInventory":"Inventory","tutorialPause":"Pause","menusUseMouse":"Use a mouse or touch here"}}');
-    var MT = cT(1195),
-      KT = cT(1420),
-      OT = cT(8188),
-      yT = cT(94),
-      fT = cT(31),
-      xT = cT(36),
-      IT = cT(8199),
-      AT = cT(8227),
-      CT = cT(8206),
-      jT = cT(8229),
-      vT = cT(8190),
-      tT = cT(8680),
-      hT = cT(8685),
-      NT = cT(1685);
-    const QT = (TT, kT, cT) => Math.max(kT, Math.min(cT, TT)),
-      ST = TT => Math.min(TT.width, TT.height) / 720,
-      DT = TT => Math.max(.15, TT);
-    class aT {
+    const Yq = JSON.parse('{"controller":{"inventoryTake":"Take","inventoryTakeHalf":"Take half","inventoryPlace":"Place","inventoryPlaceOne":"Place one","inventoryQuickMove":"Quick move","inventoryToHotbar":"To hotbar","inventoryPutBack":"Put back","inventoryHotbarSwap":"Swap with hotbar","inventorySwapHere":"Swap here","inventoryCancel":"Cancel","inventoryClose":"Close","inventoryDrop":"Drop (hold: stack)","inventorySelect":"Select","inventoryCraft":"Craft (hold to repeat)","inventoryCraftAll":"Craft all","inventoryChooseRecipe":"Choose","inventoryBackToRecipes":"Back to recipes","inventoryType":"Type","inventoryPanels":"Switch panel","inventoryCategory":"Category","inventoryPage":"Page","disconnected":"Controller disconnected","gameplayReload":"Reload","gameplayActionWheelHint":"(hold for more)","gameplaySneaking":"Sneaking","gameplayLoadFailedTitle":"Controller unavailable","gameplayLoadFailedSubtitle":"Reload the page to play with your controller.","gameplayDropStack":"Keep holding to drop the stack","gameplayAttackLatched":"Attacking","gameplayPickBlock":"Pick block","padButtonView":"View","padButtonMenu":"Menu","padButtonHome":"Home","padButtonCreate":"Create","padButtonOptions":"Options","padButtonDpadUp":"D-pad \u2191","padButtonDpadDown":"D-pad \u2193","padButtonDpadLeft":"D-pad \u2190","padButtonDpadRight":"D-pad \u2192","padButtonLeftStick":"L Stick","padButtonRightStick":"R Stick","settingsLook":"Look","settingsLookSensitivityX":"Look sensitivity (horizontal)","settingsLookSensitivityY":"Look sensitivity (vertical)","settingsAimLookSensitivity":"Look sensitivity while aiming (use held)","settingsInvertLookX":"Invert horizontal look","settingsInvertLookY":"Invert vertical look","settingsLookCurve":"Look curve","settingsLookCurveHint":"Steep gives finer aim near the centre, Linear turns at an even rate, and Boost turns faster when you hold the stick all the way.","settingsCurveExponential":"Steep","settingsCurveLinear":"Linear","settingsCurveBoost":"Boost","settingsLookDeadzone":"Look deadzone","settingsGyro":"Gyro aiming","settingsGyroToggle":"Aim by moving the controller","settingsGyroToggleInfo":"Turn and tilt the controller to aim, on top of the right stick.","settingsGyroTogglePhone":"Aim by moving your phone or tablet","settingsGyroToggleInfoPhone":"Turn and tilt your phone or tablet to aim, on top of the right stick.","settingsGyroUnsupported":"Gyro aiming needs Chrome or Edge.","settingsGyroBlocked":"Gyro aiming isn\'t available on this site.","settingsGyroPhoneNeedsController":"Connect a controller to aim by moving your phone or tablet.","settingsGyroSteamHint":"If Steam already turns your gyro into mouse movement, leave this off.","settingsGyroConnect":"Connect motion controller","settingsGyroConnectHint":"Works with DualSense, DualShock 4 and Switch controllers.","settingsGyroConnectNeedsClick":"Click Connect with your mouse: the browser asks before sharing a controller.","settingsGyroOpenFailed":"Another app is using the controller. Close apps such as Steam or DS4Windows, then try again.","settingsGyroConnected":"Aiming with {{name}}.","settingsGyroAllowMotion":"Allow motion sensor","settingsGyroAllowNeedsTap":"Tap Allow motion sensor on your screen to turn it on.","settingsGyroPhoneOn":"Aiming with this device\'s motion sensor.","settingsGyroPhoneWaiting":"Waiting for this device\'s motion sensor\u2026","settingsGyroPhoneNoSensor":"No motion sensor found on this device.","settingsGyroPhoneDenied":"Motion access is blocked. Allow it in your browser settings.","settingsGyroSensitivity":"Gyro sensitivity","settingsGyroActivation":"Gyro turns on","settingsGyroAlways":"Always","settingsGyroWhileAiming":"While aiming","settingsGyroWhileButton":"While holding a button","settingsGyroAimingHint":"Hold {{button}} to aim with motion.","settingsGyroButton":"Gyro button","settingsGyroButtonHint":"While gyro aiming is on, this button only turns the gyro on in game, so pick one you rarely use.","settingsMovement":"Movement","settingsMoveDeadzone":"Move deadzone","settingsAutoSprint":"Sprint at full tilt","settingsAutoSprintInfo":"Push the movement stick all the way to sprint.","settingsSneak":"Sneak","settingsSneakHold":"Hold","settingsSneakToggle":"Toggle","settingsButtons":"Buttons","settingsPromptFamily":"Button prompts","settingsPromptAuto":"Match my controller","settingsPromptXbox":"Xbox","settingsPromptPlayStation":"PlayStation","settingsPromptNintendo":"Nintendo","settingsPromptSteamDeck":"Steam Deck","settingsPromptGeneric":"Generic","settingsHideButtonHints":"Hide button hints","settingsVibration":"Vibration","settingsCursorSpeed":"Virtual cursor speed","settingsCursorMagnetism":"Cursor snaps onto buttons","settingsMenuBackToCategories":"Back returns to the category list first","settingsAccessibility":"Accessibility","settingsSwapConfirmBack":"Swap confirm and back","settingsSwapToast":"Select and Back have swapped buttons.","settingsLayoutRefusedToast":"This layout doesn\'t fit your current buttons. Reset them to use it.","settingsSwapConfirmBackInfo":"Select with the right face button and go back with the bottom one, in menus, the inventory and the on-screen keyboard. On by default for Nintendo controllers.","settingsButtonRepeat":"Button repeat","settingsButtonRepeatHint":"How a held button repeats in menus, sliders, the on-screen keyboard and crafting. Off acts once per press, and holding drop in game drops just one item.","settingsButtonRepeatDefault":"Default","settingsButtonRepeatSlow":"Slow (0.8 s, then 4 a second)","settingsButtonRepeatOff":"Off (once per press)","settingsTapHoldTime":"Tap/hold time","settingsTapHoldTimeHint":"How long to hold the chat, emote or action button to open its wheel, or the view button to change view where a tap picks a block. Dropping a whole stack takes 0.8, 1 or 1.3 s.","settingsTapHoldShort":"Short (0.25 s)","settingsTapHoldMedium":"Medium (0.5 s)","settingsTapHoldLong":"Long (0.8 s)","settingsEmoteButton":"Emote button","settingsEmoteButtonTapHoldHint":"Tap to repeat your last emote, or hold to open the emote wheel.","settingsEmoteButtonWheelHint":"Any press opens the emote wheel, with no hold to time. Pick with the stick, then select.","settingsEmoteButtonTapHold":"Tap repeats, hold opens wheel","settingsEmoteButtonWheel":"Opens the wheel","settingsAttackMode":"Attack / mine","settingsAttackHoldHint":"Hold attack to keep attacking or mining.","settingsAttackToggleHint":"Press attack once to keep attacking or mining, and again to stop.","settingsAttackHold":"Hold","settingsAttackToggle":"Toggle","settingsLargePointer":"Large pointer and focus","settingsLargePointerInfo":"A bigger menu cursor, thicker selection brackets and bigger button hints.","settingsRemap":"Remap buttons","settingsRemapHint":"Select an action, then press a button. If that button is taken, the two swap.","settingsLayoutSouthpaw":"Southpaw (move with the right stick)","settingsLayoutTriggersSwapped":"Triggers swapped (attack with the left trigger)","settingsCapturePrompt":"Press a button","settingsCaptureCancelHint":"Press {{button}} to cancel","settingsCaptureCancelOrBindHint":"Tap {{button}} to cancel, or hold it to choose it","settingsReset":"Reset","settingsSwapNotice":"{{action}} moved to {{button}}","settingsResetAll":"Reset all buttons and sticks","settingsGroupGameplay":"Movement & gameplay","settingsGroupMenus":"Menus","settingsGroupInventory":"Inventory","settingsGroupKeyboard":"On-screen keyboard","settingsActionMove":"Move","settingsActionLook":"Look around","settingsActionJump":"Jump","settingsActionSneak":"Sneak","settingsActionSneakToggle":"Toggle sneak","settingsActionSprint":"Sprint","settingsActionAttack":"Attack / mine","settingsActionUse":"Use / place","settingsActionHotbarPrevious":"Previous hotbar slot","settingsActionHotbarNext":"Next hotbar slot","settingsActionInventory":"Inventory","settingsActionActionButton":"Game action","settingsActionPerspective":"Change view","settingsActionPickBlock":"Pick block (creative)","settingsActionDrop":"Drop item","settingsActionEmoteWheel":"Emotes","settingsActionChat":"Chat","settingsActionPause":"Pause menu","settingsActionLeaderboard":"Shop / leaderboard","settingsActionMenuConfirm":"Select","settingsActionMenuBack":"Back","settingsActionMenuTabPrevious":"Previous tab","settingsActionMenuTabNext":"Next tab","settingsActionMenuPageUp":"Page up","settingsActionMenuPageDown":"Page down","settingsActionMenuSecondary":"Secondary action","settingsActionMenuToggleCursor":"Switch to virtual cursor","settingsActionInventoryPrimary":"Pick up / place","settingsActionInventorySecondary":"Pick up half / place one","settingsActionInventoryQuickMove":"Quick move","settingsActionInventoryHotbarSwap":"Swap with hotbar slot","settingsActionInventoryClose":"Close","settingsActionInventoryPanelPrevious":"Previous panel","settingsActionInventoryPanelNext":"Next panel","settingsActionInventoryDrop":"Drop item","settingsActionKeyboardType":"Type key","settingsActionKeyboardBackspace":"Backspace","settingsActionKeyboardSpace":"Space","settingsActionKeyboardCaretLeft":"Move cursor left","settingsActionKeyboardCaretRight":"Move cursor right","settingsActionKeyboardShift":"Shift","settingsActionKeyboardSymbols":"Accents and symbols","settingsActionKeyboardSubmit":"Send","settingsActionKeyboardClose":"Close keyboard","settingsActionKeyboardChannel":"Chat channel","settingsAlternatives":"Try alternatives","settingsAlternativesHint":"Try each way of playing and keep the one that feels best.","settingsMenuNavigation":"Menu navigation","settingsMenuNavigationHint":"Steer a cursor with the stick and jump between buttons with the D-pad, or use just one.","settingsNavHybrid":"Cursor and D-pad","settingsMenuNavFocus":"Jump between buttons","settingsVirtualCursor":"Virtual cursor","settingsInventoryNavigation":"Inventory","settingsInventoryNavigationHint":"Steer a cursor with the stick and step slot by slot with the D-pad, or use just one.","settingsInventoryNavSlot":"Slot by slot","settingsQuickChat":"Hold chat button","settingsQuickChatHint":"Hold the chat button to pick a quick phrase. Tapping it still opens chat.","settingsQuickChatWheel":"Quick chat wheel","settingsQuickChatOff":"Off","settingsLeaderboardButton":"Shop / leaderboard button","settingsLeaderboardButtonHint":"Open the shop in one press in games that have one. The lobby leaderboard is still in the pause menu.","settingsLeaderboardButtonShop":"Shop, in games with one","settingsLeaderboardButtonLeaderboard":"Always the leaderboard","settingsTester":"Gamepad tester","settingsTesterNoPad":"Connect a gamepad and press any button to test it.","settingsTesterFamily":"Detected: {{family}}","settingsTesterHint":"Start a test to try every button and stick without moving through the menu.","settingsTesterStart":"Start test","settingsTesterStop":"Stop test","settingsTesterTesting":"Press anything to see it light up. To stop, hold {{button}} or press it three times.","settingsControlsNote":"Playing with a gamepad? Change its buttons and feel in Gamepad settings.","settingsOpenController":"Gamepad settings","keyboardSpace":"Space","keyboardSend":"Send","keyboardDone":"Done","keyboardTargetChat":"Chat","keyboardTargetSign":"Sign","keyboardTargetNameTag":"Name tag","keyboardTargetBook":"Book page","keyboardTargetBookTitle":"Book title","keyboardTargetText":"Text","keyboardPhraseGg":"gg","keyboardPhraseHi":"hi","keyboardPhraseThanks":"thanks","keyboardPhraseGl":"gl","keyboardPhraseBrb":"brb","keyboardPhraseYes":"yes","keyboardPhraseNo":"no","keyboardPhraseHelp":"help!","quickChatPick":"Pick a phrase","actionWheelPick":"Pick an action","wheelReleaseToPick":"Release to pick","wheelClose":"Close","wheelChoose":"Choose","menusSelect":"Select","menusBack":"Back","menusClose":"Close","menusQuickChat":"Quick chat (hold)","menusSkipTutorial":"Skip tutorial","menusTabs":"Tabs","menusRows":"Rows","menusCursorMode":"Cursor","menusFocusMode":"Focus","menusClick":"Click","menusRightClick":"Right-click","menusScroll":"Scroll","menusFriends":"Friends","menusSearch":"Search","menusSettings":"Settings","menusLeaveGameTitle":"Leave the game?","menusLeaveGameLeave":"Leave","menusLeaveGameStay":"Stay","menusNotifications":"Notifications","menusLobby":"Lobby","menusShop":"Shop","menusTasks":"Tasks & leaderboards","menusInvite":"Invite friends","menusAdjust":"Adjust","menusFavourite":"Favourite","screensPressToContinue":"Press {{button}} to continue","screensPressToEnterGame":"Press {{button}} to enter game","screensEnterGame":"Enter game","screensBackToGames":"Back to games","tutorialMine":"Mine","tutorialPlace":"Place / Use","tutorialInventory":"Inventory","tutorialPause":"Pause","menusUseMouse":"Use a mouse or touch here"}}');
+    var lq = gq(1183),
+      Oq = gq(1380),
+      mq = gq(8057),
+      xq = gq(71),
+      Aq = gq(24),
+      cq = gq(31),
+      uq = gq(8073),
+      Bq = gq(8118),
+      Wq = gq(8090),
+      Nq = gq(8120),
+      aq = gq(8061),
+      Vq = gq(8594),
+      dq = gq(8599),
+      jq = gq(1646);
+    const Hq = (qq, Eq, gq) => Math.max(Eq, Math.min(gq, qq)),
+      oq = qq => Math.min(qq.width, qq.height) / 720,
+      Pq = qq => Math.max(.15, qq);
+    class Qq {
       constructor() {
         this.locked = !1
       }
       lock() {
         this.locked = !0
       }
-      update(TT, kT) {
-        const cT = Math.hypot(TT.x, TT.y) >= (TT => Math.max(.3, TT))(kT);
-        return this.locked ? (this.locked = cT, !1) : cT
+      update(qq, Eq) {
+        const gq = Math.hypot(qq.x, qq.y) >= (qq => Math.max(.3, qq))(Eq);
+        return this.locked ? (this.locked = gq, !1) : gq
       }
     }
-    const FT = (TT, kT) => {
-        const cT = QT(kT.dtMs, 0, 100),
-          lT = cT / 1e3,
-          MT = ST(kT.viewport) * (kT.cursorSpeedPercent / 100),
-          KT = (0, vT.m)(kT.stick, DT(kT.moveDeadzone)),
-          OT = Math.hypot(KT.x, KT.y),
-          yT = ((TT, kT, cT) => {
-            if (kT < .3) return 0;
-            const lT = cT / 350;
-            return kT >= .85 ? Math.min(1, TT + lT) : Math.max(0, TT - lT)
-          })(TT.speedRamp, OT, cT);
-        let fT = TT.x,
-          xT = TT.y;
-        if (OT > 0) {
-          const TT = .45 + .55 * yT,
-            cT = kT.context.overInteractive ? .45 : 1,
-            IT = 1400 * (TT => {
-              const kT = QT(TT, 0, 1);
-              return .3 * kT + .7 * kT * kT
-            })(OT) * MT * TT * cT;
-          fT += KT.x / OT * IT * lT, xT += KT.y / OT * IT * lT
+    const yq = (qq, Eq) => {
+        const gq = Hq(Eq.dtMs, 0, 100),
+          Yq = gq / 1e3,
+          lq = oq(Eq.viewport) * (Eq.cursorSpeedPercent / 100),
+          Oq = (0, aq.j)(Eq.stick, Pq(Eq.moveDeadzone)),
+          mq = Math.hypot(Oq.x, Oq.y),
+          xq = ((qq, Eq, gq) => {
+            if (Eq < .3) return 0;
+            const Yq = gq / 350;
+            return Eq >= .85 ? Math.min(1, qq + Yq) : Math.max(0, qq - Yq)
+          })(qq.speedRamp, mq, gq);
+        let Aq = qq.x,
+          cq = qq.y;
+        if (mq > 0) {
+          const qq = .45 + .55 * xq,
+            gq = Eq.context.overInteractive ? .45 : 1,
+            uq = 1400 * (qq => {
+              const Eq = Hq(qq, 0, 1);
+              return .3 * Eq + .7 * Eq * Eq
+            })(mq) * lq * qq * gq;
+          Aq += Oq.x / mq * uq * Yq, cq += Oq.y / mq * uq * Yq
         }
-        const IT = Math.hypot(kT.dpad.x, kT.dpad.y);
-        if (IT > 0) {
-          const TT = 500 * MT;
-          fT += kT.dpad.x / IT * TT * lT, xT += kT.dpad.y / IT * TT * lT
+        const uq = Math.hypot(Eq.dpad.x, Eq.dpad.y);
+        if (uq > 0) {
+          const qq = 500 * lq;
+          Aq += Eq.dpad.x / uq * qq * Yq, cq += Eq.dpad.y / uq * qq * Yq
         }
-        const AT = kT.context.magnetTarget;
-        if (AT && OT < .3 && 0 === IT) {
-          const TT = ((TT, kT, cT, lT, MT) => {
-            const KT = kT.x - TT.x,
-              OT = kT.y - TT.y,
-              yT = Math.hypot(KT, OT);
-            if (0 === yT) return {
+        const Bq = Eq.context.magnetTarget;
+        if (Bq && mq < .3 && 0 === uq) {
+          const qq = ((qq, Eq, gq, Yq, lq) => {
+            const Oq = Eq.x - qq.x,
+              mq = Eq.y - qq.y,
+              xq = Math.hypot(Oq, mq);
+            if (0 === xq) return {
               x: 0,
               y: 0
             };
-            const fT = Math.min(yT, MT * (1 - lT / .3));
-            let xT = KT / yT * fT,
-              IT = OT / yT * fT;
-            if (lT > 0) {
-              const TT = cT.x / lT,
-                kT = cT.y / lT,
-                MT = xT * TT + IT * kT;
-              MT < 0 && (xT -= MT * TT, IT -= MT * kT)
+            const Aq = Math.min(xq, lq * (1 - Yq / .3));
+            let cq = Oq / xq * Aq,
+              uq = mq / xq * Aq;
+            if (Yq > 0) {
+              const qq = gq.x / Yq,
+                Eq = gq.y / Yq,
+                lq = cq * qq + uq * Eq;
+              lq < 0 && (cq -= lq * qq, uq -= lq * Eq)
             }
             return {
-              x: xT,
-              y: IT
+              x: cq,
+              y: uq
             }
           })({
-            x: fT,
-            y: xT
-          }, AT, KT, OT, 120 * ST(kT.viewport) * lT);
-          fT += TT.x, xT += TT.y
+            x: Aq,
+            y: cq
+          }, Bq, Oq, mq, 120 * oq(Eq.viewport) * Yq);
+          Aq += qq.x, cq += qq.y
         }
         return {
-          x: QT(fT, 0, Math.max(0, kT.viewport.width - 1)),
-          y: QT(xT, 0, Math.max(0, kT.viewport.height - 1)),
-          speedRamp: yT
+          x: Hq(Aq, 0, Math.max(0, Eq.viewport.width - 1)),
+          y: Hq(cq, 0, Math.max(0, Eq.viewport.height - 1)),
+          speedRamp: xq
         }
       },
-      rT = TT => {
-        const kT = (0, vT.m)(TT, .2);
-        return 0 !== kT.x || 0 !== kT.y
+      tq = qq => {
+        const Eq = (0, aq.j)(qq, .2);
+        return 0 !== Eq.x || 0 !== Eq.y
       },
-      PT = (TT, kT) => {
-        const cT = (0, vT.m)(TT, .2),
-          lT = Math.hypot(cT.x, cT.y);
-        if (0 === lT) return {
+      rq = (qq, Eq) => {
+        const gq = (0, aq.j)(qq, .2),
+          Yq = Math.hypot(gq.x, gq.y);
+        if (0 === Yq) return {
           x: 0,
           y: 0
         };
-        const MT = lT * lT * 1600,
-          KT = QT(kT, 0, 100) / 1e3;
+        const lq = Yq * Yq * 1600,
+          Oq = Hq(Eq, 0, 100) / 1e3;
         return {
-          x: cT.x / lT * MT * KT,
-          y: cT.y / lT * MT * KT
+          x: gq.x / Yq * lq * Oq,
+          y: gq.y / Yq * lq * Oq
         }
       },
-      wT = (TT, kT) => "y" === kT ? TT.scrollHeight > TT.clientHeight + 1 : TT.scrollWidth > TT.clientWidth + 1,
-      mT = (TT, kT) => {
-        if (!wT(TT, kT)) return !1;
-        const cT = getComputedStyle(TT),
-          lT = "y" === kT ? cT.overflowY : cT.overflowX;
-        return "auto" === lT || "scroll" === lT
+      vq = (qq, Eq) => "y" === Eq ? qq.scrollHeight > qq.clientHeight + 1 : qq.scrollWidth > qq.clientWidth + 1,
+      hq = (qq, Eq) => {
+        if (!vq(qq, Eq)) return !1;
+        const gq = getComputedStyle(qq),
+          Yq = "y" === Eq ? gq.overflowY : gq.overflowX;
+        return "auto" === Yq || "scroll" === Yq
       },
-      bT = (TT, kT, cT) => {
-        for (let KT = TT instanceof HTMLElement ? TT : null !== (lT = null === TT || void 0 === TT ? void 0 : TT.parentElement) && void 0 !== lT ? lT : null; KT; KT = KT.parentElement) {
-          var lT;
-          if (mT(KT, kT)) return KT;
-          if (KT === cT) return null
+      nq = (qq, Eq, gq) => {
+        for (let Oq = qq instanceof HTMLElement ? qq : null !== (Yq = null === qq || void 0 === qq ? void 0 : qq.parentElement) && void 0 !== Yq ? Yq : null; Oq; Oq = Oq.parentElement) {
+          var Yq;
+          if (hq(Oq, Eq)) return Oq;
+          if (Oq === gq) return null
         }
-        if (cT) return null;
-        const MT = document.scrollingElement;
-        return MT instanceof HTMLElement && wT(MT, kT) ? MT : null
+        if (gq) return null;
+        const lq = document.scrollingElement;
+        return lq instanceof HTMLElement && vq(lq, Eq) ? lq : null
       },
-      zT = new WeakMap,
-      JT = (TT, kT) => {
-        const cT = performance.now(),
-          lT = zT.get(TT);
-        if (lT && lT.axis === kT && cT - lT.atMs < 500 && (!lT.container || lT.container.isConnected)) return lT.container;
-        const MT = oT(TT, kT);
-        return zT.set(TT, {
-          axis: kT,
-          atMs: cT,
-          container: MT
-        }), MT
+      bq = new WeakMap,
+      iq = (qq, Eq) => {
+        const gq = performance.now(),
+          Yq = bq.get(qq);
+        if (Yq && Yq.axis === Eq && gq - Yq.atMs < 500 && (!Yq.container || Yq.container.isConnected)) return Yq.container;
+        const lq = Zq(qq, Eq);
+        return bq.set(qq, {
+          axis: Eq,
+          atMs: gq,
+          container: lq
+        }), lq
       },
-      oT = (TT, kT) => {
-        let cT = mT(TT, kT) ? TT : null,
-          lT = cT ? cT.clientWidth * cT.clientHeight : 0;
-        for (const MT of TT.querySelectorAll("*")) {
-          const TT = MT.clientWidth * MT.clientHeight;
-          TT > lT && mT(MT, kT) && (cT = MT, lT = TT)
+      Zq = (qq, Eq) => {
+        let gq = hq(qq, Eq) ? qq : null,
+          Yq = gq ? gq.clientWidth * gq.clientHeight : 0;
+        for (const lq of qq.querySelectorAll("*")) {
+          const qq = lq.clientWidth * lq.clientHeight;
+          qq > Yq && hq(lq, Eq) && (gq = lq, Yq = qq)
         }
-        return cT
+        return gq
       },
-      HT = (TT, kT, cT) => "y" === kT ? cT < 0 ? TT.scrollTop > 0 : TT.scrollTop + TT.clientHeight < TT.scrollHeight - 1 : cT < 0 ? TT.scrollLeft > 0 : TT.scrollLeft + TT.clientWidth < TT.scrollWidth - 1,
-      eT = (TT, kT, cT) => {
-        "y" === kT ? TT.scrollBy({
-          top: cT,
+      fq = (qq, Eq, gq) => "y" === Eq ? gq < 0 ? qq.scrollTop > 0 : qq.scrollTop + qq.clientHeight < qq.scrollHeight - 1 : gq < 0 ? qq.scrollLeft > 0 : qq.scrollLeft + qq.clientWidth < qq.scrollWidth - 1,
+      Mq = (qq, Eq, gq) => {
+        "y" === Eq ? qq.scrollBy({
+          top: gq,
           behavior: "instant"
-        }) : TT.scrollBy({
-          left: cT,
+        }) : qq.scrollBy({
+          left: gq,
           behavior: "instant"
         })
       },
-      GT = TT => {
-        if (!TT || TT === document.scrollingElement) return new DOMRect(0, 0, window.innerWidth, window.innerHeight);
-        const kT = TT.getBoundingClientRect(),
-          cT = Math.max(0, kT.left),
-          lT = Math.max(0, kT.top);
-        return new DOMRect(cT, lT, Math.min(window.innerWidth, kT.right) - cT, Math.min(window.innerHeight, kT.bottom) - lT)
+      Tq = qq => {
+        if (!qq || qq === document.scrollingElement) return new DOMRect(0, 0, window.innerWidth, window.innerHeight);
+        const Eq = qq.getBoundingClientRect(),
+          gq = Math.max(0, Eq.left),
+          Yq = Math.max(0, Eq.top);
+        return new DOMRect(gq, Yq, Math.min(window.innerWidth, Eq.right) - gq, Math.min(window.innerHeight, Eq.bottom) - Yq)
       },
-      VT = (TT, kT) => TT.left < kT.right && kT.left < TT.right && TT.top < kT.bottom && kT.top < TT.bottom;
-    var ET = cT(71),
-      ZT = cT(1046),
-      uT = cT.n(ZT),
-      XT = cT(1099);
-    let dT = 0,
-      LT = !1;
-    class RT {
+      zq = (qq, Eq) => qq.left < Eq.right && Eq.left < qq.right && qq.top < Eq.bottom && Eq.top < qq.bottom;
+    var Sq = gq(57),
+      pq = gq(1018),
+      Gq = gq.n(pq),
+      Lq = gq(1070);
+    let Jq = 0,
+      kq = !1;
+    class Rq {
       constructor() {
         this.element = null, this.shownKey = "", this.gap = null
       }
-      setElement(TT) {
-        this.element = TT, this.shownKey = "", this.gap = null
+      setElement(qq) {
+        this.element = qq, this.shownKey = "", this.gap = null
       }
-      show(TT) {
-        const kT = this.element;
-        if (!kT) return;
-        const cT = TT ? this.keepOnScreen(kT, TT) : null,
-          lT = cT ? `${cT.left},${cT.top},${cT.width},${cT.height}` : "";
-        if (lT === this.shownKey) return;
-        const MT = "" === this.shownKey;
-        this.shownKey = lT, kT.classList.toggle("Visible", null !== cT), cT && (kT.classList.toggle("Snap", MT), kT.style.width = `${cT.width}px`, kT.style.height = `${cT.height}px`, kT.style.transform = `translate(${cT.left}px, ${cT.top}px)`, MT && (kT.offsetWidth, kT.classList.remove("Snap")))
+      show(qq) {
+        const Eq = this.element;
+        if (!Eq) return;
+        const gq = qq ? this.keepOnScreen(Eq, qq) : null,
+          Yq = gq ? `${gq.left},${gq.top},${gq.width},${gq.height}` : "";
+        if (Yq === this.shownKey) return;
+        const lq = "" === this.shownKey;
+        this.shownKey = Yq, Eq.classList.toggle("Visible", null !== gq), gq && (Eq.classList.toggle("Snap", lq), Eq.style.width = `${gq.width}px`, Eq.style.height = `${gq.height}px`, Eq.style.transform = `translate(${gq.left}px, ${gq.top}px)`, lq && (Eq.offsetWidth, Eq.classList.remove("Snap")))
       }
       hide() {
         this.show(null)
       }
-      keepOnScreen(TT, kT) {
-        var cT;
-        const lT = `${window.innerWidth}x${window.innerHeight}@${(()=>{if("undefined"===typeof ResizeObserver)return getComputedStyle(document.documentElement).fontSize;if(!LT){LT=!0;const TT=document.createElement("div");TT.setAttribute("aria-hidden","true"),TT.style.cssText="position: fixed; top: 0; left: 0; width: 1rem; height: 0; visibility: hidden; pointer-events: none",document.body.appendChild(TT),new ResizeObserver((()=>{dT++})).observe(TT)}return String(dT)})()}`;
-        (null === (cT = this.gap) || void 0 === cT ? void 0 : cT.key) !== lT && (this.gap = {
-          px: parseFloat(getComputedStyle(TT).paddingLeft) || 0,
-          key: lT
+      keepOnScreen(qq, Eq) {
+        var gq;
+        const Yq = `${window.innerWidth}x${window.innerHeight}@${(()=>{if("undefined"===typeof ResizeObserver)return getComputedStyle(document.documentElement).fontSize;if(!kq){kq=!0;const qq=document.createElement("div");qq.setAttribute("aria-hidden","true"),qq.style.cssText="position: fixed; top: 0; left: 0; width: 1rem; height: 0; visibility: hidden; pointer-events: none",document.body.appendChild(qq),new ResizeObserver((()=>{Jq++})).observe(qq)}return String(Jq)})()}`;
+        (null === (gq = this.gap) || void 0 === gq ? void 0 : gq.key) !== Yq && (this.gap = {
+          px: parseFloat(getComputedStyle(qq).paddingLeft) || 0,
+          key: Yq
         });
-        const MT = this.gap.px + 2,
-          KT = Math.max(kT.left, MT),
-          OT = Math.max(kT.top, MT),
-          yT = Math.min(kT.left + kT.width, window.innerWidth - MT),
-          fT = Math.min(kT.top + kT.height, window.innerHeight - MT);
-        return yT <= KT || fT <= OT ? kT : {
-          left: KT,
-          top: OT,
-          width: yT - KT,
-          height: fT - OT
+        const lq = this.gap.px + 2,
+          Oq = Math.max(Eq.left, lq),
+          mq = Math.max(Eq.top, lq),
+          xq = Math.min(Eq.left + Eq.width, window.innerWidth - lq),
+          Aq = Math.min(Eq.top + Eq.height, window.innerHeight - lq);
+        return xq <= Oq || Aq <= mq ? Eq : {
+          left: Oq,
+          top: mq,
+          width: xq - Oq,
+          height: Aq - mq
         }
       }
     }
-    const gT = TT => {
+    const Uq = qq => {
       let {
-        placer: kT,
-        className: cT
-      } = TT;
-      const lT = (0, ET.useCallback)((TT => {
-        kT.setElement(TT)
-      }), [kT]);
-      return (0, XT.jsx)("div", {
-        ref: lT,
-        className: uT()("PadReticle", cT),
+        placer: Eq,
+        className: gq
+      } = qq;
+      const Yq = (0, Sq.useCallback)((qq => {
+        Eq.setElement(qq)
+      }), [Eq]);
+      return (0, Lq.jsx)("div", {
+        ref: Yq,
+        className: Gq()("PadReticle", gq),
         "aria-hidden": !0
       })
     };
-    var UT = cT(8688);
-    const YT = {
+    var Fq = gq(8601);
+    const sq = {
       x: 0,
       y: 0,
       visible: !1,
       pressed: !1
     };
-    const BT = new class {
+    const Xq = new class {
       constructor() {
-        this.state = YT, this.listeners = new Set
+        this.state = sq, this.listeners = new Set
       }
       get() {
         return this.state
       }
-      set(TT) {
-        if (kT = this.state, cT = TT, (kT.visible || cT.visible) && (kT.visible !== cT.visible || kT.x !== cT.x || kT.y !== cT.y || kT.pressed !== cT.pressed)) {
-          var kT, cT;
-          this.state = TT;
-          for (const kT of this.listeners) kT(TT)
+      set(qq) {
+        if (Eq = this.state, gq = qq, (Eq.visible || gq.visible) && (Eq.visible !== gq.visible || Eq.x !== gq.x || Eq.y !== gq.y || Eq.pressed !== gq.pressed)) {
+          var Eq, gq;
+          this.state = qq;
+          for (const Eq of this.listeners) Eq(qq)
         }
       }
       hide() {
-        this.set(YT)
+        this.set(sq)
       }
-      subscribe(TT) {
-        return this.listeners.add(TT), () => {
-          this.listeners.delete(TT)
+      subscribe(qq) {
+        return this.listeners.add(qq), () => {
+          this.listeners.delete(qq)
         }
       }
     };
-    var WT = cT(8700);
-    const nT = (TT, kT) => {
+    var wq = gq(8609);
+    const Kq = (qq, Eq) => {
         let {
-          kind: cT,
-          holding: lT,
-          hasPress: MT,
-          hasBack: KT,
-          slotHasItem: OT
-        } = kT;
-        switch (TT) {
+          kind: gq,
+          holding: Yq,
+          hasPress: lq,
+          hasBack: Oq,
+          slotHasItem: mq
+        } = Eq;
+        switch (qq) {
           case "primary":
-            return "slot" === cT ? "slotPrimary" : "recipe" === cT || "button" === cT ? MT ? "pressPrimary" : "click" : "textField" === cT ? "openKeyboard" : null;
+            return "slot" === gq ? "slotPrimary" : "recipe" === gq || "button" === gq ? lq ? "pressPrimary" : "click" : "textField" === gq ? "openKeyboard" : null;
           case "secondary":
-            return "slot" === cT ? "slotSecondary" : "button" !== cT && "recipe" !== cT || !MT ? null : "pressSecondary";
+            return "slot" === gq ? "slotSecondary" : "button" !== gq && "recipe" !== gq || !lq ? null : "pressSecondary";
           case "quickMove":
-            return "slot" === cT && OT ? "slotQuickMove" : null;
+            return "slot" === gq && mq ? "slotQuickMove" : null;
           case "hotbarSwap":
-            return "slot" === cT && OT && !lT ? "hotbarPick" : null;
+            return "slot" === gq && mq && !Yq ? "hotbarPick" : null;
           case "openButton":
             return "close";
           case "back":
-            return lT ? "cancel" : KT ? "pressBack" : "close"
+            return Yq ? "cancel" : Oq ? "pressBack" : "close"
         }
       },
-      pT = TT => {
-        const kT = [];
-        if (TT.hotbarPicking) return kT.push({
+      Cq = qq => {
+        const Eq = [];
+        if (qq.hotbarPicking) return Eq.push({
           actions: ["inventoryPrimary", "inventoryHotbarSwap"],
           labelKey: "inventorySwapHere"
-        }), kT.push({
+        }), Eq.push({
           actions: ["inventoryClose"],
           labelKey: "inventoryCancel"
-        }), kT;
-        if (TT.holding) "slot" === TT.kind ? (kT.push({
+        }), Eq;
+        if (qq.holding) "slot" === qq.kind ? (Eq.push({
           actions: ["inventoryPrimary"],
           labelKey: "inventoryPlace"
-        }), kT.push({
+        }), Eq.push({
           actions: ["inventorySecondary"],
           labelKey: "inventoryPlaceOne"
-        })) : "textField" === TT.kind && kT.push({
+        })) : "textField" === qq.kind && Eq.push({
           actions: ["inventoryPrimary"],
           labelKey: "inventoryType"
-        }), kT.push({
+        }), Eq.push({
           actions: ["inventoryClose"],
           labelKey: "inventoryPutBack"
-        }), kT.push({
+        }), Eq.push({
           actions: ["inventoryDrop"],
           labelKey: "inventoryDrop"
-        }), TT.openButtonCloses && kT.push({
+        }), qq.openButtonCloses && Eq.push({
           actions: ["inventory"],
           labelKey: "inventoryClose"
         });
         else {
-          var cT;
-          "slot" === TT.kind && TT.slotHasItem ? (kT.push({
+          var gq;
+          "slot" === qq.kind && qq.slotHasItem ? (Eq.push({
             actions: ["inventoryPrimary"],
             labelKey: "inventoryTake"
-          }), kT.push({
+          }), Eq.push({
             actions: ["inventorySecondary"],
             labelKey: "inventoryTakeHalf"
-          }), kT.push({
+          }), Eq.push({
             actions: ["inventoryQuickMove"],
-            labelKey: TT.quickMoveToHotbar ? "inventoryToHotbar" : "inventoryQuickMove"
-          }), kT.push({
+            labelKey: qq.quickMoveToHotbar ? "inventoryToHotbar" : "inventoryQuickMove"
+          }), Eq.push({
             actions: ["inventoryHotbarSwap"],
             labelKey: "inventoryHotbarSwap"
-          }), kT.push({
+          }), Eq.push({
             actions: ["inventoryDrop"],
             labelKey: "inventoryDrop"
-          })) : "button" !== TT.kind && "recipe" !== TT.kind || !TT.pressHints ? "button" === TT.kind || "recipe" === TT.kind ? kT.push({
+          })) : "button" !== qq.kind && "recipe" !== qq.kind || !qq.pressHints ? "button" === qq.kind || "recipe" === qq.kind ? Eq.push({
             actions: ["inventoryPrimary"],
             labelKey: "inventorySelect"
-          }) : "textField" === TT.kind && kT.push({
+          }) : "textField" === qq.kind && Eq.push({
             actions: ["inventoryPrimary"],
             labelKey: "inventoryType"
-          }) : (TT.pressHints.primary && kT.push({
+          }) : (qq.pressHints.primary && Eq.push({
             actions: ["inventoryPrimary"],
-            labelKey: TT.pressHints.primary
-          }), TT.pressHints.secondary && kT.push({
+            labelKey: qq.pressHints.primary
+          }), qq.pressHints.secondary && Eq.push({
             actions: ["inventorySecondary"],
-            labelKey: TT.pressHints.secondary
+            labelKey: qq.pressHints.secondary
           }));
-          const lT = null === (cT = TT.pressHints) || void 0 === cT ? void 0 : cT.back;
-          lT && kT.push({
+          const Yq = null === (gq = qq.pressHints) || void 0 === gq ? void 0 : gq.back;
+          Yq && Eq.push({
             actions: ["inventoryClose"],
-            labelKey: lT
+            labelKey: Yq
           });
-          const MT = [];
-          TT.openButtonCloses && MT.push("inventory"), lT || MT.push("inventoryClose"), MT.length > 0 && kT.push({
-            actions: MT,
+          const lq = [];
+          qq.openButtonCloses && lq.push("inventory"), Yq || lq.push("inventoryClose"), lq.length > 0 && Eq.push({
+            actions: lq,
             labelKey: "inventoryClose"
           })
         }
-        return kT.push({
+        return Eq.push({
           actions: ["inventoryPanelPrevious", "inventoryPanelNext"],
           labelKey: "inventoryPanels"
-        }), TT.hasCategories ? kT.push({
+        }), qq.hasCategories ? Eq.push({
           actions: ["menuPageUp", "menuPageDown"],
           labelKey: "inventoryCategory"
-        }) : TT.hasList && kT.push({
+        }) : qq.hasList && Eq.push({
           actions: ["menuPageUp", "menuPageDown"],
           labelKey: "inventoryPage"
-        }), kT
+        }), Eq
       };
-    var iT = cT(8716),
-      qT = cT(8707);
-    class sT {
-      constructor(TT) {
-        this.probes = TT, this.byContainer = new Map, this.byParent = new Map
+    var Iq = gq(8624),
+      eq = gq(8618);
+    class Dq {
+      constructor(qq) {
+        this.probes = qq, this.byContainer = new Map, this.byParent = new Map
       }
-      find(TT, kT) {
-        const cT = bT(TT, "y", kT);
-        if (!cT) return null;
-        let lT = this.byContainer.get(cT);
-        return lT || (this.probes.push({
-          element: cT,
-          rect: lk(cT.getBoundingClientRect())
-        }), lT = {
-          container: cT,
-          box: GT(cT),
-          group: ck(cT)
-        }, this.byContainer.set(cT, lT)), lT
+      find(qq, Eq) {
+        const gq = nq(qq, "y", Eq);
+        if (!gq) return null;
+        let Yq = this.byContainer.get(gq);
+        return Yq || (this.probes.push({
+          element: gq,
+          rect: YE(gq.getBoundingClientRect())
+        }), Yq = {
+          container: gq,
+          box: Tq(gq),
+          group: gE(gq)
+        }, this.byContainer.set(gq, Yq)), Yq
       }
-      findForParent(TT, kT) {
-        let cT = this.byParent.get(TT);
-        return void 0 === cT && (cT = this.find(TT, kT), this.byParent.set(TT, cT)), cT
+      findForParent(qq, Eq) {
+        let gq = this.byParent.get(qq);
+        return void 0 === gq && (gq = this.find(qq, Eq), this.byParent.set(qq, gq)), gq
       }
     }
-    const Tk = new WeakMap;
-    let kk = 0;
-    const ck = TT => {
-        let kT = Tk.get(TT);
-        return kT || (kT = "el:" + kk++, Tk.set(TT, kT)), kT
+    const qE = new WeakMap;
+    let EE = 0;
+    const gE = qq => {
+        let Eq = qE.get(qq);
+        return Eq || (Eq = "el:" + EE++, qE.set(qq, Eq)), Eq
       },
-      lk = TT => ({
-        left: TT.left,
-        top: TT.top,
-        width: TT.width,
-        height: TT.height
+      YE = qq => ({
+        left: qq.left,
+        top: qq.top,
+        width: qq.width,
+        height: qq.height
       }),
-      Mk = TT => TT.width > 0 && TT.height > 0,
-      Kk = (TT, kT) => Mk(TT) && TT.left + TT.width > 0 && TT.top + TT.height > 0 && TT.left < kT.width && TT.top < kT.height,
-      Ok = (TT, kT, cT) => {
-        const lT = TT.top + TT.height / 2;
-        return Kk(TT, kT) && (!cT || lT >= cT.top && lT <= cT.bottom)
+      lE = qq => qq.width > 0 && qq.height > 0,
+      OE = (qq, Eq) => lE(qq) && qq.left + qq.width > 0 && qq.top + qq.height > 0 && qq.left < Eq.width && qq.top < Eq.height,
+      mE = (qq, Eq, gq) => {
+        const Yq = qq.top + qq.height / 2;
+        return OE(qq, Eq) && (!gq || Yq >= gq.top && Yq <= gq.bottom)
       },
-      yk = TT => ({
-        x: TT.left + TT.width / 2,
-        y: TT.top + TT.height / 2
+      xE = qq => ({
+        x: qq.left + qq.width / 2,
+        y: qq.top + qq.height / 2
       }),
-      fk = (TT, kT, cT) => TT < 0 ? cT >= 0 ? 0 : kT - 1 : ((TT + cT) % kT + kT) % kT,
-      xk = TT => "Left" === TT || "Right" === TT,
-      Ik = (TT, kT, cT) => {
-        const lT = xk(cT),
-          MT = lT ? TT.top : TT.left,
-          KT = lT ? TT.height : TT.width,
-          OT = lT ? kT.top : kT.left,
-          yT = lT ? kT.height : kT.width,
-          fT = Math.max(0, Math.max(OT - (MT + KT), MT - (OT + yT)));
-        return KT > 1.5 * yT ? {
-          gap: fT,
-          offset: Math.max(0, OT - MT) + .1 * Math.max(0, MT - OT)
+      AE = (qq, Eq, gq) => qq < 0 ? gq >= 0 ? 0 : Eq - 1 : ((qq + gq) % Eq + Eq) % Eq,
+      cE = qq => "Left" === qq || "Right" === qq,
+      uE = (qq, Eq, gq) => {
+        const Yq = cE(gq),
+          lq = Yq ? qq.top : qq.left,
+          Oq = Yq ? qq.height : qq.width,
+          mq = Yq ? Eq.top : Eq.left,
+          xq = Yq ? Eq.height : Eq.width,
+          Aq = Math.max(0, Math.max(mq - (lq + Oq), lq - (mq + xq)));
+        return Oq > 1.5 * xq ? {
+          gap: Aq,
+          offset: Math.max(0, mq - lq) + .1 * Math.max(0, lq - mq)
         } : {
-          gap: fT,
-          offset: Math.abs(OT + yT / 2 - (MT + KT / 2))
+          gap: Aq,
+          offset: Math.abs(mq + xq / 2 - (lq + Oq / 2))
         }
       },
-      Ak = (TT, kT, cT) => {
-        const lT = ((TT, kT, cT) => {
-          const lT = yk(TT),
-            MT = yk(kT),
-            KT = xk(cT) ? Math.min(TT.width, kT.width) / 4 : Math.min(TT.height, kT.height) / 4;
-          switch (cT) {
+      BE = (qq, Eq, gq) => {
+        const Yq = ((qq, Eq, gq) => {
+          const Yq = xE(qq),
+            lq = xE(Eq),
+            Oq = cE(gq) ? Math.min(qq.width, Eq.width) / 4 : Math.min(qq.height, Eq.height) / 4;
+          switch (gq) {
             case "Right":
-              return MT.x - lT.x >= KT ? Math.max(0, kT.left - (TT.left + TT.width)) : null;
+              return lq.x - Yq.x >= Oq ? Math.max(0, Eq.left - (qq.left + qq.width)) : null;
             case "Left":
-              return lT.x - MT.x >= KT ? Math.max(0, TT.left - (kT.left + kT.width)) : null;
+              return Yq.x - lq.x >= Oq ? Math.max(0, qq.left - (Eq.left + Eq.width)) : null;
             case "Down":
-              return MT.y - lT.y >= KT ? Math.max(0, kT.top - (TT.top + TT.height)) : null;
+              return lq.y - Yq.y >= Oq ? Math.max(0, Eq.top - (qq.top + qq.height)) : null;
             case "Up":
-              return lT.y - MT.y >= KT ? Math.max(0, TT.top - (kT.top + kT.height)) : null
+              return Yq.y - lq.y >= Oq ? Math.max(0, qq.top - (Eq.top + Eq.height)) : null
           }
-        })(TT, kT, cT);
-        if (null === lT) return null;
-        const MT = Ik(TT, kT, cT);
-        return lT + 3 * MT.gap + .5 * MT.offset
+        })(qq, Eq, gq);
+        if (null === Yq) return null;
+        const lq = uE(qq, Eq, gq);
+        return Yq + 3 * lq.gap + .5 * lq.offset
       },
-      Ck = (TT, kT) => kT.visible || null !== kT.scrollGroup && kT.scrollGroup === TT.scrollGroup,
-      jk = (TT, kT, cT, lT) => {
-        let MT = null,
-          KT = 1 / 0;
-        for (const OT of kT) {
-          if (OT.key === TT.key || !Ck(TT, OT) || !lT(OT)) continue;
-          const kT = Ak(TT.rect, OT.rect, cT);
-          null !== kT && kT < KT && (MT = OT, KT = kT)
+      WE = (qq, Eq) => Eq.visible || null !== Eq.scrollGroup && Eq.scrollGroup === qq.scrollGroup,
+      NE = (qq, Eq, gq, Yq) => {
+        let lq = null,
+          Oq = 1 / 0;
+        for (const mq of Eq) {
+          if (mq.key === qq.key || !WE(qq, mq) || !Yq(mq)) continue;
+          const Eq = BE(qq.rect, mq.rect, gq);
+          null !== Eq && Eq < Oq && (lq = mq, Oq = Eq)
         }
-        return MT
+        return lq
       },
-      vk = (TT, kT, cT) => {
-        const lT = jk(TT, kT, cT, (() => !0));
-        if (!lT || xk(cT) || null === TT.scrollGroup || lT.scrollGroup === TT.scrollGroup) return lT;
-        const MT = jk(TT, kT, cT, (kT => 0 === Ik(TT.rect, kT.rect, cT).gap));
-        return null !== MT && void 0 !== MT ? MT : lT
+      aE = (qq, Eq, gq) => {
+        const Yq = NE(qq, Eq, gq, (() => !0));
+        if (!Yq || cE(gq) || null === qq.scrollGroup || Yq.scrollGroup === qq.scrollGroup) return Yq;
+        const lq = NE(qq, Eq, gq, (Eq => 0 === uE(qq.rect, Eq.rect, gq).gap));
+        return null !== lq && void 0 !== lq ? lq : Yq
       },
-      tk = (TT, kT, cT) => {
-        let lT = null,
-          MT = 1 / 0;
-        for (const KT of kT) {
-          if (!KT.visible || cT && !cT(KT)) continue;
-          const kT = yk(KT.rect),
-            OT = Math.hypot(kT.x - TT.x, kT.y - TT.y);
-          OT < MT && (lT = KT, MT = OT)
+      VE = (qq, Eq, gq) => {
+        let Yq = null,
+          lq = 1 / 0;
+        for (const Oq of Eq) {
+          if (!Oq.visible || gq && !gq(Oq)) continue;
+          const Eq = xE(Oq.rect),
+            mq = Math.hypot(Eq.x - qq.x, Eq.y - qq.y);
+          mq < lq && (Yq = Oq, lq = mq)
         }
-        return lT
+        return Yq
       },
-      hk = TT => {
+      dE = qq => {
         const {
-          rect: kT,
-          clip: cT
-        } = TT;
-        if (!cT) return kT;
-        const lT = Math.max(kT.left, cT.left),
-          MT = Math.max(kT.top, cT.top);
+          rect: Eq,
+          clip: gq
+        } = qq;
+        if (!gq) return Eq;
+        const Yq = Math.max(Eq.left, gq.left),
+          lq = Math.max(Eq.top, gq.top);
         return {
-          left: lT,
-          top: MT,
-          width: Math.min(kT.left + kT.width, cT.left + cT.width) - lT,
-          height: Math.min(kT.top + kT.height, cT.top + cT.height) - MT
+          left: Yq,
+          top: lq,
+          width: Math.min(Eq.left + Eq.width, gq.left + gq.width) - Yq,
+          height: Math.min(Eq.top + Eq.height, gq.top + gq.height) - lq
         }
       },
-      Nk = (TT, kT) => kT.x >= TT.left && kT.x < TT.left + TT.width && kT.y >= TT.top && kT.y < TT.top + TT.height,
-      Qk = (TT, kT) => {
-        let cT = null,
-          lT = 1 / 0;
-        for (const MT of kT) {
-          const kT = hk(MT);
-          (MT.visible || MT.clip) && Nk(kT, TT) && (kT.width * kT.height < lT && (cT = MT, lT = kT.width * kT.height))
+      jE = (qq, Eq) => Eq.x >= qq.left && Eq.x < qq.left + qq.width && Eq.y >= qq.top && Eq.y < qq.top + qq.height,
+      HE = (qq, Eq) => {
+        let gq = null,
+          Yq = 1 / 0;
+        for (const lq of Eq) {
+          const Eq = dE(lq);
+          (lq.visible || lq.clip) && jE(Eq, qq) && (Eq.width * Eq.height < Yq && (gq = lq, Yq = Eq.width * Eq.height))
         }
-        return cT
+        return gq
       },
-      Sk = TT => {
-        let kT = null;
-        for (const cT of TT) {
-          if (!cT.visible) continue;
-          if (!kT) {
-            kT = cT;
+      oE = qq => {
+        let Eq = null;
+        for (const gq of qq) {
+          if (!gq.visible) continue;
+          if (!Eq) {
+            Eq = gq;
             continue
           }
-          const TT = Math.min(kT.rect.height, cT.rect.height) / 2,
-            lT = cT.rect.top - kT.rect.top;
-          (lT < -TT || Math.abs(lT) <= TT && cT.rect.left < kT.rect.left) && (kT = cT)
+          const qq = Math.min(Eq.rect.height, gq.rect.height) / 2,
+            Yq = gq.rect.top - Eq.rect.top;
+          (Yq < -qq || Math.abs(Yq) <= qq && gq.rect.left < Eq.rect.left) && (Eq = gq)
         }
-        return kT
+        return Eq
       },
-      Dk = (TT, kT, cT, lT, MT) => {
-        const KT = MT % kT,
-          OT = Math.floor(MT / kT);
+      PE = (qq, Eq, gq, Yq, lq) => {
+        const Oq = lq % Eq,
+          mq = Math.floor(lq / Eq);
         return {
-          left: TT.left + KT * cT,
-          top: TT.top + OT * lT,
-          width: TT.width,
-          height: TT.height
+          left: qq.left + Oq * gq,
+          top: qq.top + mq * Yq,
+          width: qq.width,
+          height: qq.height
         }
       },
-      ak = ".EntireInventoryWrapper .Inventory, .HotBarGameItemsContainer",
-      Fk = ".LazyLoadedItemWrapper",
-      rk = ["[data-inven-idx]", "[data-recipe-key]", "[role=button]", "button", "input:not([type=hidden])", "textarea", ".CreativeCategoryTab", ".CreativeCategoryDropdownButton", ".CreativeCategoryDropdownOption", "[data-craft-ingredient]"].join(","),
-      Pk = [
+      QE = ".EntireInventoryWrapper .Inventory, .HotBarGameItemsContainer",
+      yE = ".LazyLoadedItemWrapper",
+      tE = ["[data-inven-idx]", "[data-recipe-key]", "[role=button]", "button", "input:not([type=hidden])", "textarea", ".CreativeCategoryTab", ".CreativeCategoryDropdownButton", ".CreativeCategoryDropdownOption", "[data-craft-ingredient]"].join(","),
+      rE = [
         ["hotbar", ".HotBarGameItemsContainer"],
         ["gameButtons", ".ClientGameInventoryButtons"],
         ["categories", ".CreativeCategoryRail"],
@@ -1098,219 +1194,219 @@ export const modules = {
         ["main", ".InvenBodyRight"],
         ["left", ".InvenLeftSide"]
       ],
-      wk = ["gameButtons", "categories", "left", "recipe", "armour", "main", "hotbar"],
-      mk = TT => TT.hasAttribute("data-inven-idx") ? "slot" : TT.hasAttribute("data-recipe-key") ? "recipe" : TT.hasAttribute("data-craft-ingredient") || (0, qT.n)(TT) ? "info" : (0, UT.I)(TT) ? "textField" : "button",
-      bk = (TT, kT) => "slot" === kT ? Number(TT.getAttribute("data-inven-idx")) : null,
-      zk = TT => TT.matches(Fk) ? TT.querySelector(rk) : TT,
-      Jk = TT => {
-        var kT, cT;
+      vE = ["gameButtons", "categories", "left", "recipe", "armour", "main", "hotbar"],
+      hE = qq => qq.hasAttribute("data-inven-idx") ? "slot" : qq.hasAttribute("data-recipe-key") ? "recipe" : qq.hasAttribute("data-craft-ingredient") || (0, eq.w)(qq) ? "info" : (0, Fq.P)(qq) ? "textField" : "button",
+      nE = (qq, Eq) => "slot" === Eq ? Number(qq.getAttribute("data-inven-idx")) : null,
+      bE = qq => qq.matches(yE) ? qq.querySelector(tE) : qq,
+      iE = qq => {
+        var Eq, gq;
         return {
-          element: TT,
-          recipe: null !== (kT = TT && (null === (cT = zk(TT)) || void 0 === cT ? void 0 : cT.getAttribute("data-recipe-key"))) && void 0 !== kT ? kT : null
+          element: qq,
+          recipe: null !== (Eq = qq && (null === (gq = bE(qq)) || void 0 === gq ? void 0 : gq.getAttribute("data-recipe-key"))) && void 0 !== Eq ? Eq : null
         }
       },
-      Hk = TT => {
-        const kT = zk(TT);
-        if (!kT) return {
+      ZE = qq => {
+        const Eq = bE(qq);
+        if (!Eq) return {
           kind: "pending",
           idx: null
         };
-        const cT = mk(kT);
+        const gq = hE(Eq);
         return {
-          kind: cT,
-          idx: bk(kT, cT)
+          kind: gq,
+          idx: nE(Eq, gq)
         }
       },
-      ek = TT => {
-        const kT = [];
-        for (const [cT, lT] of Pk) {
-          TT.matches(lT) && kT.push([cT, TT]);
-          for (const MT of TT.querySelectorAll(lT)) kT.push([cT, MT])
+      fE = qq => {
+        const Eq = [];
+        for (const [gq, Yq] of rE) {
+          qq.matches(Yq) && Eq.push([gq, qq]);
+          for (const lq of qq.querySelectorAll(Yq)) Eq.push([gq, lq])
         }
-        return kT
+        return Eq
       },
-      Gk = (TT, kT) => {
-        for (const [cT, lT] of TT)
-          if (lT.contains(kT)) return cT;
+      ME = (qq, Eq) => {
+        for (const [gq, Yq] of qq)
+          if (Yq.contains(Eq)) return gq;
         return "other"
       },
-      Vk = (TT, kT, cT, lT, MT, KT, OT, yT) => {
-        var fT;
-        const xT = TT.children,
-          IT = lk(xT[0].getBoundingClientRect()),
-          AT = [{
-            element: xT[0],
-            rect: IT
+      TE = (qq, Eq, gq, Yq, lq, Oq, mq, xq) => {
+        var Aq;
+        const cq = qq.children,
+          uq = YE(cq[0].getBoundingClientRect()),
+          Bq = [{
+            element: cq[0],
+            rect: uq
           }];
-        if (KT.push(AT[0]), 0 === IT.width || 0 === IT.height) return;
-        let CT = 1;
-        for (; CT < xT.length && Math.abs(xT[CT].getBoundingClientRect().top - IT.top) < 1;) CT++;
-        const jT = TT => {
-            const kT = {
-              element: xT[TT],
-              rect: lk(xT[TT].getBoundingClientRect())
+        if (Oq.push(Bq[0]), 0 === uq.width || 0 === uq.height) return;
+        let Wq = 1;
+        for (; Wq < cq.length && Math.abs(cq[Wq].getBoundingClientRect().top - uq.top) < 1;) Wq++;
+        const Nq = qq => {
+            const Eq = {
+              element: cq[qq],
+              rect: YE(cq[qq].getBoundingClientRect())
             };
-            return KT.push(kT), AT.push(kT), kT.rect
+            return Oq.push(Eq), Bq.push(Eq), Eq.rect
           },
-          vT = CT > 1 ? jT(1).left - IT.left : IT.width,
-          tT = xT.length > CT ? jT(CT).top - IT.top : IT.height,
-          hT = OT.find(TT, kT);
-        let NT = null;
-        if (hT) {
-          var QT;
+          aq = Wq > 1 ? Nq(1).left - uq.left : uq.width,
+          Vq = cq.length > Wq ? Nq(Wq).top - uq.top : uq.height,
+          dq = mq.find(qq, Eq);
+        let jq = null;
+        if (dq) {
+          var Hq;
           const {
-            container: TT,
-            box: kT
-          } = hT;
-          NT = null !== (QT = yT.get(TT)) && void 0 !== QT ? QT : null, NT || (NT = {
-            top: TT.scrollTop,
-            left: TT.scrollLeft,
-            box: kT,
-            viewport: lT,
+            container: qq,
+            box: Eq
+          } = dq;
+          jq = null !== (Hq = xq.get(qq)) && void 0 !== Hq ? Hq : null, jq || (jq = {
+            top: qq.scrollTop,
+            left: qq.scrollLeft,
+            box: Eq,
+            viewport: Yq,
             targets: [],
             probes: [],
             holdsOthers: !1
-          }, yT.set(TT, NT)), NT.probes.push(...AT)
+          }, xq.set(qq, jq)), jq.probes.push(...Bq)
         }
-        const ST = MT.length;
-        for (let rT = 0; rT < xT.length; rT++) {
-          var DT, aT, FT;
-          const TT = xT[rT],
-            kT = Dk(IT, CT, vT, tT, rT),
-            KT = TT.firstElementChild ? TT.querySelector(rk) : null,
-            OT = KT ? mk(KT) : "pending";
-          MT.push({
-            key: ck(TT),
-            rect: kT,
-            panel: cT,
-            scrollGroup: null !== (DT = null === hT || void 0 === hT ? void 0 : hT.group) && void 0 !== DT ? DT : null,
-            visible: Ok(kT, lT, null === hT || void 0 === hT ? void 0 : hT.box),
-            clip: null !== (aT = null === hT || void 0 === hT ? void 0 : hT.box) && void 0 !== aT ? aT : null,
-            element: TT,
-            kind: OT,
-            idx: KT ? bk(KT, OT) : null,
-            scrollContainer: null !== (FT = null === hT || void 0 === hT ? void 0 : hT.container) && void 0 !== FT ? FT : null
+        const oq = lq.length;
+        for (let tq = 0; tq < cq.length; tq++) {
+          var Pq, Qq, yq;
+          const qq = cq[tq],
+            Eq = PE(uq, Wq, aq, Vq, tq),
+            Oq = qq.firstElementChild ? qq.querySelector(tE) : null,
+            mq = Oq ? hE(Oq) : "pending";
+          lq.push({
+            key: gE(qq),
+            rect: Eq,
+            panel: gq,
+            scrollGroup: null !== (Pq = null === dq || void 0 === dq ? void 0 : dq.group) && void 0 !== Pq ? Pq : null,
+            visible: mE(Eq, Yq, null === dq || void 0 === dq ? void 0 : dq.box),
+            clip: null !== (Qq = null === dq || void 0 === dq ? void 0 : dq.box) && void 0 !== Qq ? Qq : null,
+            element: qq,
+            kind: mq,
+            idx: Oq ? nE(Oq, mq) : null,
+            scrollContainer: null !== (yq = null === dq || void 0 === dq ? void 0 : dq.container) && void 0 !== yq ? yq : null
           })
         }
-        null === (fT = NT) || void 0 === fT || fT.targets.push(...MT.slice(ST))
+        null === (Aq = jq) || void 0 === Aq || Aq.targets.push(...lq.slice(oq))
       },
-      Ek = TT => TT instanceof Element && null !== TT.closest(Fk),
-      Zk = TT => null !== TT.scrollContainer && Ek(TT.element);
-    class uk {
+      zE = qq => qq instanceof Element && null !== qq.closest(yE),
+      SE = qq => null !== qq.scrollContainer && zE(qq.element);
+    class pE {
       constructor() {
         this.latched = null, this.presses = 0
       }
-      press(TT, kT, cT, lT) {
+      press(qq, Eq, gq, Yq) {
         this.latched = {
-          source: TT,
-          focusKey: kT,
-          sinceMs: cT,
+          source: qq,
+          focusKey: Eq,
+          sinceMs: gq,
           hold: {
             id: ++this.presses,
-            holdMs: lT
+            holdMs: Yq
           }
         }
       }
-      update(TT, kT, cT) {
-        const lT = this.latched;
-        return lT ? TT && kT === lT.focusKey ? cT - lT.sinceMs < lT.hold.holdMs ? null : (this.latched = null, lT.source) : (this.latched = null, null) : null
+      update(qq, Eq, gq) {
+        const Yq = this.latched;
+        return Yq ? qq && Eq === Yq.focusKey ? gq - Yq.sinceMs < Yq.hold.holdMs ? null : (this.latched = null, Yq.source) : (this.latched = null, null) : null
       }
       getHold() {
-        var TT, kT;
-        return null !== (TT = null === (kT = this.latched) || void 0 === kT ? void 0 : kT.hold) && void 0 !== TT ? TT : null
+        var qq, Eq;
+        return null !== (qq = null === (Eq = this.latched) || void 0 === Eq ? void 0 : Eq.hold) && void 0 !== qq ? qq : null
       }
       reset() {
         this.latched = null
       }
     }
-    var Xk = cT(8719);
-    const dk = {
+    var GE = gq(8629);
+    const LE = {
         kind: "none"
       },
-      Lk = TT => ({
-        x: TT.clientX,
-        y: TT.clientY
+      JE = qq => ({
+        x: qq.clientX,
+        y: qq.clientY
       }),
-      Rk = () => 2 * (parseFloat(getComputedStyle(document.documentElement).fontSize) || 16);
-    class gk {
+      kE = () => 2 * (parseFloat(getComputedStyle(document.documentElement).fontSize) || 16);
+    class RE {
       constructor() {
-        this.hovered = dk, this.signature = "", this.holding = !1, this.lastPoint = {
+        this.hovered = LE, this.signature = "", this.holding = !1, this.lastPoint = {
           clientX: 0,
           clientY: 0
         }
       }
-      sync(TT, kT, cT, lT, MT) {
-        const KT = null !== kT ? {
+      sync(qq, Eq, gq, Yq, lq) {
+        const Oq = null !== Eq ? {
             kind: "slot",
-            idx: kT
-          } : cT ? {
+            idx: Eq
+          } : gq ? {
             kind: "element",
-            element: cT
-          } : dk,
-          OT = `${MT}|${Math.round(lT.clientX)},${Math.round(lT.clientY)}`,
-          yT = (fT = this.hovered, xT = KT, "slot" === fT.kind && "slot" === xT.kind ? fT.idx === xT.idx : "element" === fT.kind && "element" === xT.kind ? fT.element === xT.element : fT.kind === xT.kind);
-        var fT, xT;
-        if (yT && OT === this.signature) return;
-        const IT = !yT || MT !== this.holding || "" === this.signature;
-        this.signature = OT, this.holding = MT, this.lastPoint = lT;
-        const AT = this.hovered;
-        if (this.hovered = KT, "slot" === KT.kind) return this.leaveElement(AT, null, lT), void(IT ? TT.hover(KT.idx, lT) : TT.moveTo(lT));
-        if (yT) return void("element" === KT.kind ? (0, UT.k)(KT.element, KT.element, Lk(lT)) : TT.hover(null, lT));
-        TT.hover(null, lT);
-        const CT = "element" === KT.kind ? KT.element : null;
-        "element" === AT.kind ? (0, UT.k)(AT.element, CT, Lk(lT)) : CT && (0, UT.k)(null, CT, Lk(lT))
+            element: gq
+          } : LE,
+          mq = `${lq}|${Math.round(Yq.clientX)},${Math.round(Yq.clientY)}`,
+          xq = (Aq = this.hovered, cq = Oq, "slot" === Aq.kind && "slot" === cq.kind ? Aq.idx === cq.idx : "element" === Aq.kind && "element" === cq.kind ? Aq.element === cq.element : Aq.kind === cq.kind);
+        var Aq, cq;
+        if (xq && mq === this.signature) return;
+        const uq = !xq || lq !== this.holding || "" === this.signature;
+        this.signature = mq, this.holding = lq, this.lastPoint = Yq;
+        const Bq = this.hovered;
+        if (this.hovered = Oq, "slot" === Oq.kind) return this.leaveElement(Bq, null, Yq), void(uq ? qq.hover(Oq.idx, Yq) : qq.moveTo(Yq));
+        if (xq) return void("element" === Oq.kind ? (0, Fq.s)(Oq.element, Oq.element, JE(Yq)) : qq.hover(null, Yq));
+        qq.hover(null, Yq);
+        const Wq = "element" === Oq.kind ? Oq.element : null;
+        "element" === Bq.kind ? (0, Fq.s)(Bq.element, Wq, JE(Yq)) : Wq && (0, Fq.s)(null, Wq, JE(Yq))
       }
       invalidate() {
         this.signature = ""
       }
-      clear(TT) {
-        const kT = this.hovered;
-        this.hovered = dk, this.signature = "", "none" !== kT.kind && (this.leaveElement(kT, null, this.lastPoint), TT && "slot" === kT.kind && TT.hover(null, this.lastPoint))
+      clear(qq) {
+        const Eq = this.hovered;
+        this.hovered = LE, this.signature = "", "none" !== Eq.kind && (this.leaveElement(Eq, null, this.lastPoint), qq && "slot" === Eq.kind && qq.hover(null, this.lastPoint))
       }
-      leaveElement(TT, kT, cT) {
-        "element" === TT.kind && (0, UT.k)(TT.element, kT, Lk(cT))
+      leaveElement(qq, Eq, gq) {
+        "element" === qq.kind && (0, Fq.s)(qq.element, Eq, JE(gq))
       }
     }
-    class Uk {
+    class UE {
       constructor() {
         this.lastTiltedMs = -1 / 0
       }
-      update(TT, kT) {
-        rT(TT) && (this.lastTiltedMs = kT)
+      update(qq, Eq) {
+        tq(qq) && (this.lastTiltedMs = Eq)
       }
-      allowsClick(TT) {
-        return TT - this.lastTiltedMs > 150
+      allowsClick(qq) {
+        return qq - this.lastTiltedMs > 150
       }
     }
-    class Yk {
+    class FE {
       constructor() {
         this.remainder = 0, this.container = null
       }
-      isScrolling(TT) {
-        return 0 !== (0, vT.m)(TT, .2).y
+      isScrolling(qq) {
+        return 0 !== (0, aq.j)(qq, .2).y
       }
-      step(TT, kT, cT) {
-        TT !== this.container && (this.container = TT, this.remainder = 0);
-        const lT = PT(kT, cT).y;
-        if (0 === lT) return this.remainder = 0, !1;
-        const MT = this.remainder + lT,
-          KT = Math.trunc(MT);
-        if (this.remainder = MT - KT, 0 === KT) return !1;
-        const OT = TT.scrollTop;
-        return TT.scrollTop = OT + KT, TT.scrollTop !== OT
+      step(qq, Eq, gq) {
+        qq !== this.container && (this.container = qq, this.remainder = 0);
+        const Yq = rq(Eq, gq).y;
+        if (0 === Yq) return this.remainder = 0, !1;
+        const lq = this.remainder + Yq,
+          Oq = Math.trunc(lq);
+        if (this.remainder = lq - Oq, 0 === Oq) return !1;
+        const mq = qq.scrollTop;
+        return qq.scrollTop = mq + Oq, qq.scrollTop !== mq
       }
       current() {
-        var TT;
-        return null !== (TT = this.container) && void 0 !== TT && TT.isConnected ? this.container : null
+        var qq;
+        return null !== (qq = this.container) && void 0 !== qq && qq.isConnected ? this.container : null
       }
       reset() {
         this.remainder = 0, this.container = null
       }
     }
-    var Bk = cT(8725);
-    const Wk = "[data-pad-inventory-default]",
-      nk = ".HotBarGameItemsContainer .InvenItem.Selected",
-      pk = {
+    var sE = gq(8638);
+    const XE = "[data-pad-inventory-default]",
+      wE = ".HotBarGameItemsContainer .InvenItem.Selected",
+      KE = {
         Up: {
           x: 0,
           y: -1
@@ -1328,7 +1424,7 @@ export const modules = {
           y: 0
         }
       },
-      ik = [
+      CE = [
         ["primary", "inventoryPrimary"],
         ["secondary", "inventorySecondary"],
         ["quickMove", "inventoryQuickMove"],
@@ -1336,102 +1432,102 @@ export const modules = {
         ["back", "inventoryClose"],
         ["openButton", "inventory"]
       ],
-      qk = ["inventoryPrimary", "inventorySecondary", "inventoryQuickMove", "inventoryHotbarSwap", "inventoryClose", "inventoryDrop"],
-      sk = ["inventoryPanelPrevious", "inventoryPanelNext", "menuPageUp", "menuPageDown"],
-      Tc = [...qk, ...sk],
-      kc = () => {
-        return TT = (0, IT.j)("inventory"), !Tc.map(IT.j).includes(TT) && !(0, vT.I)(TT);
-        var TT
+      IE = ["inventoryPrimary", "inventorySecondary", "inventoryQuickMove", "inventoryHotbarSwap", "inventoryClose", "inventoryDrop"],
+      eE = ["inventoryPanelPrevious", "inventoryPanelNext", "menuPageUp", "menuPageDown"],
+      DE = [...IE, ...eE],
+      qg = () => {
+        return qq = (0, uq.i)("inventory"), !DE.map(uq.i).includes(qq) && !(0, aq.H)(qq);
+        var qq
       },
-      cc = new Set(["slotPrimary", "slotSecondary", "slotQuickMove", "pressPrimary", "pressSecondary", "openKeyboard"]),
-      lc = (TT, kT) => {
-        const cT = !(null === kT || void 0 === kT || !kT.isHolding());
-        return function(TT, kT) {
-          const cT = TT.find((TT => TT.visible && kT(TT)));
-          if (cT) return cT;
-          for (var lT = arguments.length, MT = new Array(lT > 2 ? lT - 2 : 0), KT = 2; KT < lT; KT++) MT[KT - 2] = arguments[KT];
-          for (const OT of MT) {
-            const kT = Sk(TT.filter(OT));
-            if (kT) return kT
+      Eg = new Set(["slotPrimary", "slotSecondary", "slotQuickMove", "pressPrimary", "pressSecondary", "openKeyboard"]),
+      gg = (qq, Eq) => {
+        const gq = !(null === Eq || void 0 === Eq || !Eq.isHolding());
+        return function(qq, Eq) {
+          const gq = qq.find((qq => qq.visible && Eq(qq)));
+          if (gq) return gq;
+          for (var Yq = arguments.length, lq = new Array(Yq > 2 ? Yq - 2 : 0), Oq = 2; Oq < Yq; Oq++) lq[Oq - 2] = arguments[Oq];
+          for (const mq of lq) {
+            const Eq = oE(qq.filter(mq));
+            if (Eq) return Eq
           }
-          return Sk(TT)
-        }(TT, (TT => {
+          return oE(qq)
+        }(qq, (qq => {
           const {
-            element: kT
-          } = TT;
-          return kT.matches(Wk) || null !== kT.querySelector(Wk) || kT.matches(nk)
-        }), (TT => "slot" === TT.kind ? cT || null !== TT.idx && !(null === kT || void 0 === kT || !kT.hasItemAt(TT.idx)) : "recipe" === TT.kind || "pending" === TT.kind), (TT => "slot" === TT.kind || "button" === TT.kind))
+            element: Eq
+          } = qq;
+          return Eq.matches(XE) || null !== Eq.querySelector(XE) || Eq.matches(wE)
+        }), (qq => "slot" === qq.kind ? gq || null !== qq.idx && !(null === Eq || void 0 === Eq || !Eq.hasItemAt(qq.idx)) : "recipe" === qq.kind || "pending" === qq.kind), (qq => "slot" === qq.kind || "button" === qq.kind))
       };
-    class Mc {
+    class Yg {
       constructor() {
-        this.set = null, this.observer = new MutationObserver((TT => {
-          TT.some((TT => !Ek(TT.target))) && (this.set = null)
+        this.set = null, this.observer = new MutationObserver((qq => {
+          qq.some((qq => !zE(qq.target))) && (this.set = null)
         })), this.invalidate = () => {
           this.set = null
-        }, this.onScroll = TT => {
-          this.scrolled(TT.target)
+        }, this.onScroll = qq => {
+          this.scrolled(qq.target)
         }
       }
       get() {
         if (!this.set) {
           this.set = (() => {
-            const TT = [],
-              kT = [];
-            let cT = !1;
-            const lT = {
+            const qq = [],
+              Eq = [];
+            let gq = !1;
+            const Yq = {
                 width: window.innerWidth,
                 height: window.innerHeight
               },
-              MT = new Map,
-              KT = new sT(kT);
-            for (const AT of document.querySelectorAll(ak)) {
-              const IT = ek(AT);
-              cT ||= null !== AT.querySelector(".CreativeCategoryTab");
-              for (const cT of AT.querySelectorAll(`${Fk}:first-child`)) {
-                const OT = cT.parentElement;
-                Vk(OT, AT, Gk(IT, OT), lT, TT, kT, KT, MT)
+              lq = new Map,
+              Oq = new Dq(Eq);
+            for (const Bq of document.querySelectorAll(QE)) {
+              const uq = fE(Bq);
+              gq ||= null !== Bq.querySelector(".CreativeCategoryTab");
+              for (const gq of Bq.querySelectorAll(`${yE}:first-child`)) {
+                const mq = gq.parentElement;
+                TE(mq, Bq, ME(uq, mq), Yq, qq, Eq, Oq, lq)
               }
-              for (const cT of AT.querySelectorAll(rk)) {
-                var OT, yT, fT, xT;
-                if (cT.closest(Fk) || cT.closest("[data-pad-ignore]")) continue;
-                const CT = null === (OT = cT.parentElement) || void 0 === OT ? void 0 : OT.closest(rk);
-                if (CT && AT.contains(CT)) continue;
-                const jT = mk(cT),
-                  vT = bk(cT, jT);
-                if (-1 === vT) continue;
-                const tT = lk(cT.getBoundingClientRect());
-                kT.push({
-                  element: cT,
-                  rect: tT
+              for (const gq of Bq.querySelectorAll(tE)) {
+                var mq, xq, Aq, cq;
+                if (gq.closest(yE) || gq.closest("[data-pad-ignore]")) continue;
+                const Wq = null === (mq = gq.parentElement) || void 0 === mq ? void 0 : mq.closest(tE);
+                if (Wq && Bq.contains(Wq)) continue;
+                const Nq = hE(gq),
+                  aq = nE(gq, Nq);
+                if (-1 === aq) continue;
+                const Vq = YE(gq.getBoundingClientRect());
+                Eq.push({
+                  element: gq,
+                  rect: Vq
                 });
-                const hT = KT.findForParent(cT.parentElement, AT),
-                  NT = hT && !MT.has(hT.container) ? hT : null;
-                (NT ? Mk(tT) : Kk(tT, lT)) && TT.push({
-                  key: ck(cT),
-                  rect: tT,
-                  panel: Gk(IT, cT),
-                  scrollGroup: null !== (yT = null === NT || void 0 === NT ? void 0 : NT.group) && void 0 !== yT ? yT : null,
-                  visible: Ok(tT, lT, null === NT || void 0 === NT ? void 0 : NT.box),
-                  clip: null !== (fT = null === NT || void 0 === NT ? void 0 : NT.box) && void 0 !== fT ? fT : null,
-                  element: cT,
-                  kind: jT,
-                  idx: vT,
-                  scrollContainer: null !== (xT = null === NT || void 0 === NT ? void 0 : NT.container) && void 0 !== xT ? xT : null
+                const dq = Oq.findForParent(gq.parentElement, Bq),
+                  jq = dq && !lq.has(dq.container) ? dq : null;
+                (jq ? lE(Vq) : OE(Vq, Yq)) && qq.push({
+                  key: gE(gq),
+                  rect: Vq,
+                  panel: ME(uq, gq),
+                  scrollGroup: null !== (xq = null === jq || void 0 === jq ? void 0 : jq.group) && void 0 !== xq ? xq : null,
+                  visible: mE(Vq, Yq, null === jq || void 0 === jq ? void 0 : jq.box),
+                  clip: null !== (Aq = null === jq || void 0 === jq ? void 0 : jq.box) && void 0 !== Aq ? Aq : null,
+                  element: gq,
+                  kind: Nq,
+                  idx: aq,
+                  scrollContainer: null !== (cq = null === jq || void 0 === jq ? void 0 : jq.container) && void 0 !== cq ? cq : null
                 })
               }
             }
-            for (const [AT, CT] of MT) CT.holdsOthers = kT.some((TT => TT.element !== AT && AT.contains(TT.element) && !TT.element.closest(Fk)));
-            const IT = new Map;
-            for (const AT of TT) IT.set(AT.element, AT);
+            for (const [Bq, Wq] of lq) Wq.holdsOthers = Eq.some((qq => qq.element !== Bq && Bq.contains(qq.element) && !qq.element.closest(yE)));
+            const uq = new Map;
+            for (const Bq of qq) uq.set(Bq.element, Bq);
             return {
-              targets: TT,
-              byElement: IT,
-              hasCategories: cT,
-              probes: kT,
-              scrollers: MT
+              targets: qq,
+              byElement: uq,
+              hasCategories: gq,
+              probes: Eq,
+              scrollers: lq
             }
           })(), this.observer.disconnect();
-          for (const TT of document.querySelectorAll(ak)) this.observer.observe(TT, {
+          for (const qq of document.querySelectorAll(QE)) this.observer.observe(qq, {
             childList: !0,
             subtree: !0,
             attributes: !0,
@@ -1440,242 +1536,242 @@ export const modules = {
         }
         return this.set
       }
-      scrolled(TT) {
-        !this.set || TT instanceof Element && ((TT, kT) => {
-          const cT = TT.scrollers.get(kT);
-          if (!cT || cT.holdsOthers || kT.scrollLeft !== cT.left) return !1;
-          const lT = kT.scrollTop - cT.top;
-          if (0 === lT) return !0;
-          cT.top = kT.scrollTop;
-          for (const MT of cT.probes) MT.rect.top -= lT;
-          for (const MT of cT.targets) MT.rect.top -= lT, MT.visible = Ok(MT.rect, cT.viewport, cT.box);
+      scrolled(qq) {
+        !this.set || qq instanceof Element && ((qq, Eq) => {
+          const gq = qq.scrollers.get(Eq);
+          if (!gq || gq.holdsOthers || Eq.scrollLeft !== gq.left) return !1;
+          const Yq = Eq.scrollTop - gq.top;
+          if (0 === Yq) return !0;
+          gq.top = Eq.scrollTop;
+          for (const lq of gq.probes) lq.rect.top -= Yq;
+          for (const lq of gq.targets) lq.rect.top -= Yq, lq.visible = mE(lq.rect, gq.viewport, gq.box);
           return !0
-        })(this.set, TT) || (this.set = null)
+        })(this.set, qq) || (this.set = null)
       }
       revalidate() {
-        this.set && this.set.probes.some((TT => {
-          return kT = TT.rect, cT = TT.element.getBoundingClientRect(), !(kT.left === cT.left && kT.top === cT.top && kT.width === cT.width && kT.height === cT.height);
-          var kT, cT
+        this.set && this.set.probes.some((qq => {
+          return Eq = qq.rect, gq = qq.element.getBoundingClientRect(), !(Eq.left === gq.left && Eq.top === gq.top && Eq.width === gq.width && Eq.height === gq.height);
+          var Eq, gq
         })) && (this.set = null)
       }
       disconnect() {
         this.observer.disconnect(), this.set = null
       }
     }
-    const Kc = new class {
+    const lg = new class {
         constructor() {
-          this.focused = null, this.focusTarget = null, this.lastRect = null, this.panelMemory = new Map, this.reopenSlotIdx = null, this.dpadTimers = new Map(vT.D.map((TT => [TT, (0, tT.e)(vT.E)]))), this.stickRepeat = new vT.c((0, tT.e)(vT.hb)), this.pageUpTimer = (0, tT.e)(vT.cb), this.pageDownTimer = (0, tT.e)(vT.cb), this.stickGate = new aT, this.pointer = null, this.activePress = null, this.dropLatch = new uk, this.scroller = new Yk, this.scrollStickClick = new Uk, this.hover = new gk, this.lastRealPointer = null, this.placeAfterCategory = null, this.hotbarPick = null, this.ring = new RT, this.targets = new Mc, this.hasCategories = !1, this.wasShowing = !1, this.state = Xk.e, this.isActive = () => (0, iT.h)(), this.isShowing = () => "inventory" === AT.d.getActiveConsumerName() && (0, jT.i)(), this.getState = () => this.state, this.isSteppingSlots = () => this.isShowing() && null === this.pointer, this.onDeactivate = () => {
-            this.endInteraction((0, iT.f)()), (0, iT.h)() || this.forgetSurface()
+          this.focused = null, this.focusTarget = null, this.lastRect = null, this.panelMemory = new Map, this.reopenSlotIdx = null, this.dpadTimers = new Map(aq.C.map((qq => [qq, (0, Vq.b)(aq.F)]))), this.stickRepeat = new aq.c((0, Vq.b)(aq.ib)), this.pageUpTimer = (0, Vq.b)(aq.ab), this.pageDownTimer = (0, Vq.b)(aq.ab), this.stickGate = new Qq, this.pointer = null, this.activePress = null, this.dropLatch = new pE, this.scroller = new FE, this.scrollStickClick = new UE, this.hover = new RE, this.lastRealPointer = null, this.placeAfterCategory = null, this.hotbarPick = null, this.ring = new Rq, this.targets = new Yg, this.hasCategories = !1, this.wasShowing = !1, this.state = GE.c, this.isActive = () => (0, Iq.e)(), this.isShowing = () => "inventory" === Bq.c.getActiveConsumerName() && (0, Nq.k)(), this.getState = () => this.state, this.isSteppingSlots = () => this.isShowing() && null === this.pointer, this.onDeactivate = () => {
+            this.endInteraction((0, Iq.d)()), (0, Iq.e)() || this.forgetSurface()
           }, this.forgetSurface = () => {
-            var TT;
-            this.reopenSlotIdx = null !== (TT = this.focused ? Hk(this.focused).idx : null) && void 0 !== TT ? TT : this.reopenSlotIdx, this.focused = null, this.focusTarget = null, this.lastRect = null, this.placeAfterCategory = null, (0, iT.s)(), this.panelMemory.clear(), this.targets.disconnect()
-          }, this.onFrame = TT => {
-            (0, yT.unstable_batchedUpdates)((() => {
-              this.frame(TT)
+            var qq;
+            this.reopenSlotIdx = null !== (qq = this.focused ? ZE(this.focused).idx : null) && void 0 !== qq ? qq : this.reopenSlotIdx, this.focused = null, this.focusTarget = null, this.lastRect = null, this.placeAfterCategory = null, (0, Iq.l)(), this.panelMemory.clear(), this.targets.disconnect()
+          }, this.onFrame = qq => {
+            (0, xq.unstable_batchedUpdates)((() => {
+              this.frame(qq)
             }))
-          }, this.shouldBlockRealPointer = TT => TT.isTrusted && !(0, NT.s)(TT) && this.isShowing(), this.noteRealPointer = TT => {
-            TT instanceof MouseEvent && TT.isTrusted && !(0, NT.s)(TT) && (this.lastRealPointer ??= {
+          }, this.shouldBlockRealPointer = qq => qq.isTrusted && !(0, jq.s)(qq) && this.isShowing(), this.noteRealPointer = qq => {
+            qq instanceof MouseEvent && qq.isTrusted && !(0, jq.s)(qq) && (this.lastRealPointer ??= {
               x: 0,
               y: 0
-            }, this.lastRealPointer.x = TT.clientX, this.lastRealPointer.y = TT.clientY)
-          }, this.wakePressActs = TT => {
-            var kT;
-            return TT === (0, IT.j)("inventoryClose") ? !(null !== (kT = (0, iT.f)()) && void 0 !== kT && kT.isHolding()) : !(TT !== (0, IT.j)("inventory") || !kc()) || ((0, vT.I)(TT) ? this.isNavButton(TT) : sk.some((kT => (0, IT.j)(kT) === TT)))
+            }, this.lastRealPointer.x = qq.clientX, this.lastRealPointer.y = qq.clientY)
+          }, this.wakePressActs = qq => {
+            var Eq;
+            return qq === (0, uq.i)("inventoryClose") ? !(null !== (Eq = (0, Iq.d)()) && void 0 !== Eq && Eq.isHolding()) : !(qq !== (0, uq.i)("inventory") || !qg()) || ((0, aq.H)(qq) ? this.isNavButton(qq) : eE.some((Eq => (0, uq.i)(Eq) === qq)))
           }
         }
-        frame(TT) {
-          var kT, cT, lT, MT, KT;
-          const OT = (0, iT.f)();
-          if (!(0, jT.i)()) return void(this.wasShowing && (this.endInteraction(OT), this.rehoverRealPointer()));
-          this.wasShowing = !0, this.applyFocusRequest(), TT.wokeDevice && this.focusWakePointer(!(null === OT || void 0 === OT || !OT.isHolding())), this.applyCategoryPlace(), this.ensureFocus(), "cursor" !== (0, CT.g)().inventoryNavigation || this.pointer || this.engagePointer();
-          const yT = performance.now();
-          this.handleNavigation(TT, yT), this.handlePanels(TT), this.handlePaging(TT, yT), this.handleScroll(TT), this.handleButtons(TT, yT, OT), this.applyFocusRequest(), this.pointer && this.hoverAtPointer();
-          const fT = this.ensureFocus(),
-            xT = this.focusContext(OT);
-          this.ring.show(fT);
-          const AT = "slot" === xT.kind ? xT.idx : null,
-            vT = null !== (kT = null === (cT = xT.actionElement) || void 0 === cT ? void 0 : cT.querySelector(".DoCraftItem")) && void 0 !== kT ? kT : xT.actionElement;
-          this.pointer ? (this.hover.sync(OT, AT, vT, ((TT, kT) => {
-            const cT = kT ? Rk() : 0;
+        frame(qq) {
+          var Eq, gq, Yq, lq, Oq;
+          const mq = (0, Iq.d)();
+          if (!(0, Nq.k)()) return void(this.wasShowing && (this.endInteraction(mq), this.rehoverRealPointer()));
+          this.wasShowing = !0, this.applyFocusRequest(), qq.wokeDevice && this.focusWakePointer(!(null === mq || void 0 === mq || !mq.isHolding())), this.applyCategoryPlace(), this.ensureFocus(), "cursor" !== (0, Wq.i)().inventoryNavigation || this.pointer || this.engagePointer();
+          const xq = performance.now();
+          this.handleNavigation(qq, xq), this.handlePanels(qq), this.handlePaging(qq, xq), this.handleScroll(qq), this.handleButtons(qq, xq, mq), this.applyFocusRequest(), this.pointer && this.hoverAtPointer();
+          const Aq = this.ensureFocus(),
+            cq = this.focusContext(mq);
+          this.ring.show(Aq);
+          const Bq = "slot" === cq.kind ? cq.idx : null,
+            aq = null !== (Eq = null === (gq = cq.actionElement) || void 0 === gq ? void 0 : gq.querySelector(".DoCraftItem")) && void 0 !== Eq ? Eq : cq.actionElement;
+          this.pointer ? (this.hover.sync(mq, Bq, aq, ((qq, Eq) => {
+            const gq = Eq ? kE() : 0;
             return {
-              clientX: TT.x - cT,
-              clientY: TT.y - cT
+              clientX: qq.x - gq,
+              clientY: qq.y - gq
             }
-          })(this.pointer, xT.holding), xT.holding), BT.set({
+          })(this.pointer, cq.holding), cq.holding), Xq.set({
             x: this.pointer.x,
             y: this.pointer.y,
             visible: !0,
-            pressed: TT.isHeld((0, IT.j)("inventoryPrimary"))
-          })) : fT && this.focused && this.hover.sync(OT, AT, vT, ((TT, kT) => {
-            if (!kT) return {
-              clientX: TT.left + TT.width - 10,
-              clientY: TT.top + TT.height / 2 - 10
+            pressed: qq.isHeld((0, uq.i)("inventoryPrimary"))
+          })) : Aq && this.focused && this.hover.sync(mq, Bq, aq, ((qq, Eq) => {
+            if (!Eq) return {
+              clientX: qq.left + qq.width - 10,
+              clientY: qq.top + qq.height / 2 - 10
             };
-            const cT = Rk();
+            const gq = kE();
             return {
-              clientX: TT.left + TT.width / 2 - cT,
-              clientY: TT.top + TT.height / 2 - cT
+              clientX: qq.left + qq.width / 2 - gq,
+              clientY: qq.top + qq.height / 2 - gq
             }
-          })(fT, xT.holding), xT.holding), this.publishState({
+          })(Aq, cq.holding), cq.holding), this.publishState({
             showing: !0,
-            kind: xT.kind,
-            holding: xT.holding,
-            slotHasItem: xT.slotHasItem,
-            pressHints: null !== (lT = null === (MT = xT.press) || void 0 === MT ? void 0 : MT.hints) && void 0 !== lT ? lT : null,
+            kind: cq.kind,
+            holding: cq.holding,
+            slotHasItem: cq.slotHasItem,
+            pressHints: null !== (Yq = null === (lq = cq.press) || void 0 === lq ? void 0 : lq.hints) && void 0 !== Yq ? Yq : null,
             hasCategories: this.hasCategories,
-            hasList: !!this.focusTarget && Zk(this.focusTarget),
-            openButtonCloses: kc(),
+            hasList: !!this.focusTarget && SE(this.focusTarget),
+            openButtonCloses: qg(),
             steppingSlots: null === this.pointer,
-            quickMoveToHotbar: "slot" === xT.kind && !(null === (KT = xT.actionElement) || void 0 === KT || !KT.closest(".CreativeItemSlots")),
+            quickMoveToHotbar: "slot" === cq.kind && !(null === (Oq = cq.actionElement) || void 0 === Oq || !Oq.closest(".CreativeItemSlots")),
             dropStackHold: this.dropLatch.getHold(),
             hotbarPicking: null !== this.hotbarPick
           })
         }
-        focusWakePointer(TT) {
-          var kT;
-          const cT = (0, jT.b)();
-          if (!cT) return;
+        focusWakePointer(qq) {
+          var Eq;
+          const gq = (0, Nq.e)();
+          if (!gq) return;
           this.targets.revalidate();
-          const lT = this.getTargets().targets;
-          this.setFocus(null !== (kT = Qk(cT, lT)) && void 0 !== kT ? kT : TT ? tk(cT, lT, (TT => {
+          const Yq = this.getTargets().targets;
+          this.setFocus(null !== (Eq = HE(gq, Yq)) && void 0 !== Eq ? Eq : qq ? VE(gq, Yq, (qq => {
             let {
-              rect: kT
-            } = TT;
-            const lT = Math.max(kT.left - cT.x, 0, cT.x - (kT.left + kT.width)),
-              MT = Math.max(kT.top - cT.y, 0, cT.y - (kT.top + kT.height));
-            return Math.hypot(lT, MT) <= Math.min(kT.width, kT.height) / 2
-          })) : null, !1), "cursor" === (0, CT.g)().inventoryNavigation && (this.pointer = {
-            x: cT.x,
-            y: cT.y,
+              rect: Eq
+            } = qq;
+            const Yq = Math.max(Eq.left - gq.x, 0, gq.x - (Eq.left + Eq.width)),
+              lq = Math.max(Eq.top - gq.y, 0, gq.y - (Eq.top + Eq.height));
+            return Math.hypot(Yq, lq) <= Math.min(Eq.width, Eq.height) / 2
+          })) : null, !1), "cursor" === (0, Wq.i)().inventoryNavigation && (this.pointer = {
+            x: gq.x,
+            y: gq.y,
             speedRamp: 0
           })
         }
         rehoverRealPointer() {
-          const TT = this.lastRealPointer;
-          if (!TT || "keyboardMouse" !== fT.e.get("activeInputDevice")) return;
-          const kT = document.elementFromPoint(TT.x, TT.y);
-          kT && (0, UT.k)(null, kT, TT)
+          const qq = this.lastRealPointer;
+          if (!qq || "keyboardMouse" !== Aq.b.get("activeInputDevice")) return;
+          const Eq = document.elementFromPoint(qq.x, qq.y);
+          Eq && (0, Fq.s)(null, Eq, qq)
         }
-        endInteraction(TT) {
+        endInteraction(qq) {
           this.wasShowing = !1, this.hotbarPick = null, this.releasePress(), this.dropLatch.reset(), this.scroller.reset();
-          for (const kT of this.dpadTimers.values()) kT.reset();
-          this.stickRepeat.reset(), this.pageUpTimer.reset(), this.pageDownTimer.reset(), this.hover.clear(TT), this.ring.hide(), this.releasePointer(), this.publishState(Xk.e)
+          for (const Eq of this.dpadTimers.values()) Eq.reset();
+          this.stickRepeat.reset(), this.pageUpTimer.reset(), this.pageDownTimer.reset(), this.hover.clear(qq), this.ring.hide(), this.releasePointer(), this.publishState(GE.c)
         }
         getTargets() {
-          const TT = this.targets.get();
-          return this.hasCategories = TT.hasCategories, TT
+          const qq = this.targets.get();
+          return this.hasCategories = qq.hasCategories, qq
         }
         currentTarget() {
-          var TT;
-          return this.focused && null !== (TT = this.getTargets().byElement.get(this.focused)) && void 0 !== TT ? TT : null
+          var qq;
+          return this.focused && null !== (qq = this.getTargets().byElement.get(this.focused)) && void 0 !== qq ? qq : null
         }
         readFocusRect() {
-          const TT = this.focused;
-          if (null === TT || void 0 === TT || !TT.isConnected || !TT.closest(ak)) return null;
-          const kT = TT.getBoundingClientRect();
-          return kT.width > 0 && kT.height > 0 ? {
-            left: kT.left,
-            top: kT.top,
-            width: kT.width,
-            height: kT.height
+          const qq = this.focused;
+          if (null === qq || void 0 === qq || !qq.isConnected || !qq.closest(QE)) return null;
+          const Eq = qq.getBoundingClientRect();
+          return Eq.width > 0 && Eq.height > 0 ? {
+            left: Eq.left,
+            top: Eq.top,
+            width: Eq.width,
+            height: Eq.height
           } : null
         }
         ensureFocus() {
-          const TT = this.readFocusRect();
-          if (TT || this.pointer) return TT;
+          const qq = this.readFocusRect();
+          if (qq || this.pointer) return qq;
           const {
-            targets: kT,
-            byElement: cT
+            targets: Eq,
+            byElement: gq
           } = this.getTargets();
-          let lT = null,
-            MT = !1;
-          if (this.lastRect) lT = tk(yk(this.lastRect), kT);
+          let Yq = null,
+            lq = !1;
+          if (this.lastRect) Yq = VE(xE(this.lastRect), Eq);
           else {
-            var KT, OT;
-            const TT = ((TT, kT) => {
-                const cT = document.querySelector(".EntireInventoryWrapper [data-pad-inventory-start]");
-                return cT ? lc(TT.filter((TT => cT.contains(TT.element))), kT) : null
-              })(kT, (0, iT.f)()),
-              yT = kT.find((TT => null !== TT.idx && TT.idx === this.reopenSlotIdx)),
-              fT = document.querySelector(nk);
-            MT = null !== TT || void 0 !== yT, lT = null !== (KT = null !== (OT = null !== TT && void 0 !== TT ? TT : yT) && void 0 !== OT ? OT : fT && cT.get(fT)) && void 0 !== KT ? KT : Sk(kT)
+            var Oq, mq;
+            const qq = ((qq, Eq) => {
+                const gq = document.querySelector(".EntireInventoryWrapper [data-pad-inventory-start]");
+                return gq ? gg(qq.filter((qq => gq.contains(qq.element))), Eq) : null
+              })(Eq, (0, Iq.d)()),
+              xq = Eq.find((qq => null !== qq.idx && qq.idx === this.reopenSlotIdx)),
+              Aq = document.querySelector(wE);
+            lq = null !== qq || void 0 !== xq, Yq = null !== (Oq = null !== (mq = null !== qq && void 0 !== qq ? qq : xq) && void 0 !== mq ? mq : Aq && gq.get(Aq)) && void 0 !== Oq ? Oq : oE(Eq)
           }
-          return this.setFocus(lT, MT), this.lastRect
+          return this.setFocus(Yq, lq), this.lastRect
         }
-        setFocus(TT) {
-          let kT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-          TT && (this.focused = TT.element, this.focusTarget = TT, this.panelMemory.set(TT.panel, TT.element), kT && TT.scrollContainer && ((TT, kT) => {
-            const cT = TT.getBoundingClientRect(),
-              lT = GT(kT),
-              MT = kT.scrollTop;
-            return cT.top < lT.top ? kT.scrollTop -= lT.top - cT.top : cT.bottom > lT.bottom && (kT.scrollTop += cT.bottom - lT.bottom), kT.scrollTop !== MT
-          })(TT.element, TT.scrollContainer) && this.targets.invalidate(), this.lastRect = this.readFocusRect(), this.followFocusJump())
+        setFocus(qq) {
+          let Eq = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+          qq && (this.focused = qq.element, this.focusTarget = qq, this.panelMemory.set(qq.panel, qq.element), Eq && qq.scrollContainer && ((qq, Eq) => {
+            const gq = qq.getBoundingClientRect(),
+              Yq = Tq(Eq),
+              lq = Eq.scrollTop;
+            return gq.top < Yq.top ? Eq.scrollTop -= Yq.top - gq.top : gq.bottom > Yq.bottom && (Eq.scrollTop += gq.bottom - Yq.bottom), Eq.scrollTop !== lq
+          })(qq.element, qq.scrollContainer) && this.targets.invalidate(), this.lastRect = this.readFocusRect(), this.followFocusJump())
         }
         followFocusJump() {
           if (this.pointer)
-            if ("cursor" === (0, CT.g)().inventoryNavigation) {
+            if ("cursor" === (0, Wq.i)().inventoryNavigation) {
               if (this.lastRect) {
-                const TT = yk(this.lastRect);
+                const qq = xE(this.lastRect);
                 this.pointer = {
-                  x: TT.x,
-                  y: TT.y,
+                  x: qq.x,
+                  y: qq.y,
                   speedRamp: 0
                 }
               }
             } else this.releasePointer()
         }
         engagePointer() {
-          const TT = this.lastRect ? yk(this.lastRect) : {
+          const qq = this.lastRect ? xE(this.lastRect) : {
             x: window.innerWidth / 2,
             y: window.innerHeight / 2
           };
           this.pointer = {
-            x: TT.x,
-            y: TT.y,
+            x: qq.x,
+            y: qq.y,
             speedRamp: 0
           }
         }
         releasePointer() {
-          this.pointer = null, BT.hide()
+          this.pointer = null, Xq.hide()
         }
         hoverAtPointer() {
-          var TT;
-          const kT = Qk(this.pointer, this.getTargets().targets);
-          this.focusTarget = kT, (null === kT || void 0 === kT ? void 0 : kT.element) !== this.focused && (this.focused = null !== (TT = null === kT || void 0 === kT ? void 0 : kT.element) && void 0 !== TT ? TT : null, kT && (this.panelMemory.set(kT.panel, kT.element), this.lastRect = this.readFocusRect()))
+          var qq;
+          const Eq = HE(this.pointer, this.getTargets().targets);
+          this.focusTarget = Eq, (null === Eq || void 0 === Eq ? void 0 : Eq.element) !== this.focused && (this.focused = null !== (qq = null === Eq || void 0 === Eq ? void 0 : Eq.element) && void 0 !== qq ? qq : null, Eq && (this.panelMemory.set(Eq.panel, Eq.element), this.lastRect = this.readFocusRect()))
         }
-        moveCursor(TT, kT) {
-          const cT = this.focusTarget,
-            lT = cT && (0, CT.g)().cursorMagnetism ? yk(hk(cT)) : null;
-          this.pointer = FT(this.pointer, {
-            stick: TT.leftStick,
-            moveDeadzone: (0, CT.g)().moveDeadzone,
-            dpad: kT,
-            dtMs: TT.dtMs,
-            cursorSpeedPercent: (0, CT.g)().cursorSpeed,
+        moveCursor(qq, Eq) {
+          const gq = this.focusTarget,
+            Yq = gq && (0, Wq.i)().cursorMagnetism ? xE(dE(gq)) : null;
+          this.pointer = yq(this.pointer, {
+            stick: qq.leftStick,
+            moveDeadzone: (0, Wq.i)().moveDeadzone,
+            dpad: Eq,
+            dtMs: qq.dtMs,
+            cursorSpeedPercent: (0, Wq.i)().cursorSpeed,
             viewport: {
               width: window.innerWidth,
               height: window.innerHeight
             },
             context: {
               overInteractive: !1,
-              magnetTarget: lT
+              magnetTarget: Yq
             }
           })
         }
-        move(TT) {
+        move(qq) {
           this.targets.revalidate();
-          const kT = this.currentTarget();
-          kT && this.setFocus(vk(kT, this.getTargets().targets, TT))
+          const Eq = this.currentTarget();
+          Eq && this.setFocus(aE(Eq, this.getTargets().targets, qq))
         }
-        step(TT) {
-          const kT = this.pointer;
-          if (kT && (this.releasePointer(), !this.focused)) return this.targets.revalidate(), void this.setFocus(((TT, kT, cT) => {
-            var lT;
-            const MT = {
+        step(qq) {
+          const Eq = this.pointer;
+          if (Eq && (this.releasePointer(), !this.focused)) return this.targets.revalidate(), void this.setFocus(((qq, Eq, gq) => {
+            var Yq;
+            const lq = {
               key: "",
               rect: {
-                left: TT.x,
-                top: TT.y,
+                left: qq.x,
+                top: qq.y,
                 width: 0,
                 height: 0
               },
@@ -1684,981 +1780,981 @@ export const modules = {
               visible: !0,
               clip: null
             };
-            return null !== (lT = vk(MT, kT, cT)) && void 0 !== lT ? lT : tk(TT, kT)
-          })(kT, this.getTargets().targets, TT));
-          this.move(TT)
+            return null !== (Yq = aE(lq, Eq, gq)) && void 0 !== Yq ? Yq : VE(qq, Eq)
+          })(Eq, this.getTargets().targets, qq));
+          this.move(qq)
         }
-        isNavButton(TT) {
-          return !qk.some((kT => (0, IT.j)(kT) === TT)) && !(TT === (0, IT.j)("inventory") && kc())
+        isNavButton(qq) {
+          return !IE.some((Eq => (0, uq.i)(Eq) === qq)) && !(qq === (0, uq.i)("inventory") && qg())
         }
-        handleNavigation(TT, kT) {
-          const cT = (0, CT.g)().inventoryNavigation,
-            lT = {
+        handleNavigation(qq, Eq) {
+          const gq = (0, Wq.i)().inventoryNavigation,
+            Yq = {
               x: 0,
               y: 0
             };
-          let MT = null;
-          for (const fT of vT.D) {
-            const KT = this.isNavButton(fT) && TT.isHeld(fT);
-            KT && (lT.x += pk[fT].x, lT.y += pk[fT].y), this.dpadTimers.get(fT).update(KT, kT) && "cursor" !== cT && (MT ??= fT)
+          let lq = null;
+          for (const Aq of aq.C) {
+            const Oq = this.isNavButton(Aq) && qq.isHeld(Aq);
+            Oq && (Yq.x += KE[Aq].x, Yq.y += KE[Aq].y), this.dpadTimers.get(Aq).update(Oq, Eq) && "cursor" !== gq && (lq ??= Aq)
           }
-          const KT = this.stickGate.update(TT.leftStick, (0, CT.g)().moveDeadzone);
-          if (MT && (this.step(MT), this.stickGate.lock()), "slot" !== cT) {
-            const kT = ((TT, kT, cT, lT) => "hybrid" !== TT ? "cursor" === TT : !lT && (kT || cT))(cT, null !== this.pointer, KT, null !== MT);
-            return kT && !this.pointer && this.engagePointer(), void(this.pointer && this.moveCursor(TT, "cursor" === cT ? lT : {
+          const Oq = this.stickGate.update(qq.leftStick, (0, Wq.i)().moveDeadzone);
+          if (lq && (this.step(lq), this.stickGate.lock()), "slot" !== gq) {
+            const Eq = ((qq, Eq, gq, Yq) => "hybrid" !== qq ? "cursor" === qq : !Yq && (Eq || gq))(gq, null !== this.pointer, Oq, null !== lq);
+            return Eq && !this.pointer && this.engagePointer(), void(this.pointer && this.moveCursor(qq, "cursor" === gq ? Yq : {
               x: 0,
               y: 0
             }))
           }
-          const OT = (0, vT.m)(TT.leftStick, (0, CT.g)().moveDeadzone),
-            yT = this.stickRepeat.update(KT ? (0, vT.jb)(OT) : null, kT);
-          yT && this.move(yT)
+          const mq = (0, aq.j)(qq.leftStick, (0, Wq.i)().moveDeadzone),
+            xq = this.stickRepeat.update(Oq ? (0, aq.kb)(mq) : null, Eq);
+          xq && this.move(xq)
         }
         applyCategoryPlace() {
-          const TT = this.placeAfterCategory;
-          if (!TT) return;
+          const qq = this.placeAfterCategory;
+          if (!qq) return;
           this.placeAfterCategory = null, this.targets.invalidate();
-          const kT = tk(yk(TT.rect), this.getTargets().targets, (kT => kT.scrollGroup === TT.scrollGroup));
-          this.setFocus(kT, !1)
+          const Eq = VE(xE(qq.rect), this.getTargets().targets, (Eq => Eq.scrollGroup === qq.scrollGroup));
+          this.setFocus(Eq, !1)
         }
         applyFocusRequest() {
-          const TT = (0, iT.s)();
-          TT && (this.targets.invalidate(), this.setFocus((0, iT.c)(this.getTargets().targets, TT)))
+          const qq = (0, Iq.l)();
+          qq && (this.targets.invalidate(), this.setFocus((0, Iq.c)(this.getTargets().targets, qq)))
         }
-        handlePanels(TT) {
-          var kT, cT, lT;
-          const MT = TT.wasPressed((0, IT.j)("inventoryPanelPrevious")),
-            KT = TT.wasPressed((0, IT.j)("inventoryPanelNext"));
-          if (!MT && !KT) return;
+        handlePanels(qq) {
+          var Eq, gq, Yq;
+          const lq = qq.wasPressed((0, uq.i)("inventoryPanelPrevious")),
+            Oq = qq.wasPressed((0, uq.i)("inventoryPanelNext"));
+          if (!lq && !Oq) return;
           const {
-            targets: OT
-          } = this.getTargets(), yT = (fT = ((TT, kT) => {
-            const cT = [];
-            for (const MT of TT) MT.visible && !cT.includes(MT.panel) && cT.push(MT.panel);
-            const lT = TT => {
-              const lT = kT.indexOf(TT);
-              return -1 === lT ? kT.length + cT.indexOf(TT) : lT
+            targets: mq
+          } = this.getTargets(), xq = (Aq = ((qq, Eq) => {
+            const gq = [];
+            for (const lq of qq) lq.visible && !gq.includes(lq.panel) && gq.push(lq.panel);
+            const Yq = qq => {
+              const Yq = Eq.indexOf(qq);
+              return -1 === Yq ? Eq.length + gq.indexOf(qq) : Yq
             };
-            return cT.sort(((TT, kT) => lT(TT) - lT(kT)))
-          })(OT, wk), xT = null !== (kT = null === (cT = this.focusTarget) || void 0 === cT ? void 0 : cT.panel) && void 0 !== kT ? kT : null, AT = KT ? 1 : -1, 0 === fT.length ? null : fT[fk(null === xT ? -1 : fT.indexOf(xT), fT.length, AT)]);
-          var fT, xT, AT;
-          if (null === yT) return;
-          const CT = this.panelMemory.get(yT),
-            jT = OT.filter((TT => TT.panel === yT)),
-            vT = null !== (lT = jT.find((TT => TT.element === CT && TT.visible))) && void 0 !== lT ? lT : lc(jT, (0, iT.f)());
-          this.setFocus(vT)
+            return gq.sort(((qq, Eq) => Yq(qq) - Yq(Eq)))
+          })(mq, vE), cq = null !== (Eq = null === (gq = this.focusTarget) || void 0 === gq ? void 0 : gq.panel) && void 0 !== Eq ? Eq : null, Bq = Oq ? 1 : -1, 0 === Aq.length ? null : Aq[AE(null === cq ? -1 : Aq.indexOf(cq), Aq.length, Bq)]);
+          var Aq, cq, Bq;
+          if (null === xq) return;
+          const Wq = this.panelMemory.get(xq),
+            Nq = mq.filter((qq => qq.panel === xq)),
+            aq = null !== (Yq = Nq.find((qq => qq.element === Wq && qq.visible))) && void 0 !== Yq ? Yq : gg(Nq, (0, Iq.d)());
+          this.setFocus(aq)
         }
-        handlePaging(TT, kT) {
-          const cT = (0, IT.j)("menuPageUp"),
-            lT = (0, IT.j)("menuPageDown"),
-            MT = this.pageUpTimer.update(TT.isHeld(cT), kT),
-            KT = this.pageDownTimer.update(TT.isHeld(lT), kT);
-          if (!MT && !KT) return;
-          const OT = KT ? 1 : -1;
-          if (!TT.wasPressed(KT ? lT : cT) && this.hasCategories) return;
-          if ((TT => {
-              const kT = Array.from(document.querySelectorAll(".EntireInventoryWrapper .CreativeCategoryTab"));
-              if (0 === kT.length) return !1;
-              const cT = kT.findIndex((TT => TT.classList.contains("Selected"))),
-                lT = kT[fk(cT, kT.length, TT)];
-              return (0, UT.j)(lT, (0, UT.w)(lT)), !0
-            })(OT)) {
-            var yT, fT;
+        handlePaging(qq, Eq) {
+          const gq = (0, uq.i)("menuPageUp"),
+            Yq = (0, uq.i)("menuPageDown"),
+            lq = this.pageUpTimer.update(qq.isHeld(gq), Eq),
+            Oq = this.pageDownTimer.update(qq.isHeld(Yq), Eq);
+          if (!lq && !Oq) return;
+          const mq = Oq ? 1 : -1;
+          if (!qq.wasPressed(Oq ? Yq : gq) && this.hasCategories) return;
+          if ((qq => {
+              const Eq = Array.from(document.querySelectorAll(".EntireInventoryWrapper .CreativeCategoryTab"));
+              if (0 === Eq.length) return !1;
+              const gq = Eq.findIndex((qq => qq.classList.contains("Selected"))),
+                Yq = Eq[AE(gq, Eq.length, qq)];
+              return (0, Fq.p)(Yq, (0, Fq.D)(Yq)), !0
+            })(mq)) {
+            var xq, Aq;
             this.targets.invalidate();
-            const TT = null !== (yT = null === (fT = this.focusTarget) || void 0 === fT ? void 0 : fT.scrollGroup) && void 0 !== yT ? yT : null,
-              kT = this.readFocusRect();
-            return void(this.placeAfterCategory = null !== TT && kT && !this.pointer ? {
-              rect: kT,
-              scrollGroup: TT
+            const qq = null !== (xq = null === (Aq = this.focusTarget) || void 0 === Aq ? void 0 : Aq.scrollGroup) && void 0 !== xq ? xq : null,
+              Eq = this.readFocusRect();
+            return void(this.placeAfterCategory = null !== qq && Eq && !this.pointer ? {
+              rect: Eq,
+              scrollGroup: qq
             } : null)
           }
           const {
-            targets: xT
-          } = this.getTargets(), AT = this.currentTarget(), CT = AT && Zk(AT) ? AT : xT.find((TT => Zk(TT) && TT.visible));
-          if (!CT) return;
-          const jT = ((TT, kT, cT, lT) => {
-            if (null === TT.scrollGroup) return null;
-            const MT = yk(TT.rect),
-              KT = MT.x,
-              OT = MT.y + ("Down" === cT ? lT : -lT);
-            let yT = null,
-              fT = 1 / 0;
-            for (const xT of kT) {
-              if (xT.scrollGroup !== TT.scrollGroup || xT.key === TT.key) continue;
-              const kT = yk(xT.rect);
-              if ("Down" === cT ? kT.y <= MT.y : kT.y >= MT.y) continue;
-              const lT = Math.hypot(kT.x - KT, kT.y - OT);
-              lT < fT && (yT = xT, fT = lT)
+            targets: cq
+          } = this.getTargets(), Bq = this.currentTarget(), Wq = Bq && SE(Bq) ? Bq : cq.find((qq => SE(qq) && qq.visible));
+          if (!Wq) return;
+          const Nq = ((qq, Eq, gq, Yq) => {
+            if (null === qq.scrollGroup) return null;
+            const lq = xE(qq.rect),
+              Oq = lq.x,
+              mq = lq.y + ("Down" === gq ? Yq : -Yq);
+            let xq = null,
+              Aq = 1 / 0;
+            for (const cq of Eq) {
+              if (cq.scrollGroup !== qq.scrollGroup || cq.key === qq.key) continue;
+              const Eq = xE(cq.rect);
+              if ("Down" === gq ? Eq.y <= lq.y : Eq.y >= lq.y) continue;
+              const Yq = Math.hypot(Eq.x - Oq, Eq.y - mq);
+              Yq < Aq && (xq = cq, Aq = Yq)
             }
-            return yT
-          })(CT, xT, OT > 0 ? "Down" : "Up", CT.scrollContainer.clientHeight);
-          this.setFocus(null !== jT && void 0 !== jT ? jT : CT)
+            return xq
+          })(Wq, cq, mq > 0 ? "Down" : "Up", Wq.scrollContainer.clientHeight);
+          this.setFocus(null !== Nq && void 0 !== Nq ? Nq : Wq)
         }
-        handleScroll(TT) {
-          var kT, cT, lT, MT, KT, OT;
-          if (!this.scroller.isScrolling(TT.rightStick)) return void this.scroller.reset();
+        handleScroll(qq) {
+          var Eq, gq, Yq, lq, Oq, mq;
+          if (!this.scroller.isScrolling(qq.rightStick)) return void this.scroller.reset();
           const {
-            targets: yT
-          } = this.getTargets(), fT = this.pointer, xT = !fT && this.focusTarget && Zk(this.focusTarget) ? this.focusTarget.scrollContainer : null, IT = fT && (null === (kT = yT.find((TT => TT.clip && Nk(TT.clip, fT)))) || void 0 === kT ? void 0 : kT.scrollContainer), AT = null !== (cT = null !== (lT = null !== (MT = this.scroller.current()) && void 0 !== MT ? MT : IT) && void 0 !== lT ? lT : xT) && void 0 !== cT ? cT : null === (KT = yT.find(Zk)) || void 0 === KT ? void 0 : KT.scrollContainer;
-          if (!AT || !this.scroller.step(AT, TT.rightStick, TT.dtMs)) return;
-          this.targets.scrolled(AT);
-          const CT = fT || (null === (OT = this.focusTarget) || void 0 === OT ? void 0 : OT.scrollContainer) !== AT ? null : this.readFocusRect();
-          if (!CT) return;
-          const jT = GT(AT),
-            vT = yk(CT);
-          if (vT.y < jT.top || vT.y > jT.bottom) {
-            const TT = this.focusTarget.scrollGroup,
-              kT = tk(vT, this.getTargets().targets, (kT => kT.scrollGroup === TT));
-            this.setFocus(kT, !1)
+            targets: xq
+          } = this.getTargets(), Aq = this.pointer, cq = !Aq && this.focusTarget && SE(this.focusTarget) ? this.focusTarget.scrollContainer : null, uq = Aq && (null === (Eq = xq.find((qq => qq.clip && jE(qq.clip, Aq)))) || void 0 === Eq ? void 0 : Eq.scrollContainer), Bq = null !== (gq = null !== (Yq = null !== (lq = this.scroller.current()) && void 0 !== lq ? lq : uq) && void 0 !== Yq ? Yq : cq) && void 0 !== gq ? gq : null === (Oq = xq.find(SE)) || void 0 === Oq ? void 0 : Oq.scrollContainer;
+          if (!Bq || !this.scroller.step(Bq, qq.rightStick, qq.dtMs)) return;
+          this.targets.scrolled(Bq);
+          const Wq = Aq || (null === (mq = this.focusTarget) || void 0 === mq ? void 0 : mq.scrollContainer) !== Bq ? null : this.readFocusRect();
+          if (!Wq) return;
+          const Nq = Tq(Bq),
+            aq = xE(Wq);
+          if (aq.y < Nq.top || aq.y > Nq.bottom) {
+            const qq = this.focusTarget.scrollGroup,
+              Eq = VE(aq, this.getTargets().targets, (Eq => Eq.scrollGroup === qq));
+            this.setFocus(Eq, !1)
           }
         }
-        focusContext(TT) {
+        focusContext(qq) {
           const {
-            kind: kT,
-            idx: cT
-          } = this.focused ? Hk(this.focused) : {
+            kind: Eq,
+            idx: gq
+          } = this.focused ? ZE(this.focused) : {
             kind: null,
             idx: null
-          }, lT = this.focused ? zk(this.focused) : null, MT = lT ? (0, Bk.c)(lT) : null;
+          }, Yq = this.focused ? bE(this.focused) : null, lq = Yq ? (0, sE.d)(Yq) : null;
           return {
-            kind: kT,
-            idx: cT,
-            actionElement: lT,
-            press: MT,
-            hasPress: null !== MT,
-            hasBack: !(null === MT || void 0 === MT || !MT.back),
-            holding: TT.isHolding(),
-            slotHasItem: null !== cT && TT.hasItemAt(cT)
+            kind: Eq,
+            idx: gq,
+            actionElement: Yq,
+            press: lq,
+            hasPress: null !== lq,
+            hasBack: !(null === lq || void 0 === lq || !lq.back),
+            holding: qq.isHolding(),
+            slotHasItem: null !== gq && qq.hasItemAt(gq)
           }
         }
-        handleButtons(TT, kT, cT) {
-          var lT, MT;
-          if (!this.activePress || TT.isHeld(this.activePress.button) && (lT = this.activePress.target, MT = this.focused, null !== lT.recipe ? Jk(MT).recipe === lT.recipe : MT === lT.element) || this.releasePress(), this.scrollStickClick.update(TT.rightStick, kT), !this.handleHotbarPick(TT, cT)) {
-            for (const [lT, MT] of ik) {
-              const KT = (0, IT.j)(MT);
-              if (!TT.wasPressed(KT) || "openButton" === lT && !kc()) continue;
-              if ("RS" === KT && !this.scrollStickClick.allowsClick(kT)) continue;
-              const OT = this.focusContext(cT),
-                yT = nT(lT, OT);
-              yT && this.runIntent(yT, OT, KT, cT)
+        handleButtons(qq, Eq, gq) {
+          var Yq, lq;
+          if (!this.activePress || qq.isHeld(this.activePress.button) && (Yq = this.activePress.target, lq = this.focused, null !== Yq.recipe ? iE(lq).recipe === Yq.recipe : lq === Yq.element) || this.releasePress(), this.scrollStickClick.update(qq.rightStick, Eq), !this.handleHotbarPick(qq, gq)) {
+            for (const [Yq, lq] of CE) {
+              const Oq = (0, uq.i)(lq);
+              if (!qq.wasPressed(Oq) || "openButton" === Yq && !qg()) continue;
+              if ("RS" === Oq && !this.scrollStickClick.allowsClick(Eq)) continue;
+              const mq = this.focusContext(gq),
+                xq = Kq(Yq, mq);
+              xq && this.runIntent(xq, mq, Oq, gq)
             }
-            this.handleDrop(TT, kT, cT)
+            this.handleDrop(qq, Eq, gq)
           }
         }
-        handleHotbarPick(TT, kT) {
-          const cT = this.hotbarPick;
-          if (!cT) return !1;
-          const lT = TT.wasPressed((0, IT.j)("inventoryPrimary")) || TT.wasPressed((0, IT.j)("inventoryHotbarSwap"));
-          if (!lT && !TT.wasPressed((0, IT.j)("inventoryClose")) && !kT.isHolding()) return !(TT.wasPressed((0, IT.j)("inventory")) && kc());
-          const MT = this.focusTarget;
-          lT && "hotbar" === (null === MT || void 0 === MT ? void 0 : MT.panel) && null !== MT.idx && MT.idx !== cT.idx && (kT.swapWithHotbar(MT.idx, cT.idx), this.afterAction()), this.hotbarPick = null;
-          const KT = cT.element.isConnected ? this.getTargets().byElement.get(cT.element) : void 0;
-          return KT && this.setFocus(KT), !0
+        handleHotbarPick(qq, Eq) {
+          const gq = this.hotbarPick;
+          if (!gq) return !1;
+          const Yq = qq.wasPressed((0, uq.i)("inventoryPrimary")) || qq.wasPressed((0, uq.i)("inventoryHotbarSwap"));
+          if (!Yq && !qq.wasPressed((0, uq.i)("inventoryClose")) && !Eq.isHolding()) return !(qq.wasPressed((0, uq.i)("inventory")) && qg());
+          const lq = this.focusTarget;
+          Yq && "hotbar" === (null === lq || void 0 === lq ? void 0 : lq.panel) && null !== lq.idx && lq.idx !== gq.idx && (Eq.swapWithHotbar(lq.idx, gq.idx), this.afterAction()), this.hotbarPick = null;
+          const Oq = gq.element.isConnected ? this.getTargets().byElement.get(gq.element) : void 0;
+          return Oq && this.setFocus(Oq), !0
         }
-        startHotbarPick(TT) {
-          var kT;
+        startHotbarPick(qq) {
+          var Eq;
           const {
-            targets: cT,
-            byElement: lT
-          } = this.getTargets(), MT = document.querySelector(nk), KT = null !== (kT = MT && lT.get(MT)) && void 0 !== kT ? kT : cT.find((TT => "hotbar" === TT.panel));
-          KT && this.focused && (this.hotbarPick = {
-            idx: TT,
+            targets: gq,
+            byElement: Yq
+          } = this.getTargets(), lq = document.querySelector(wE), Oq = null !== (Eq = lq && Yq.get(lq)) && void 0 !== Eq ? Eq : gq.find((qq => "hotbar" === qq.panel));
+          Oq && this.focused && (this.hotbarPick = {
+            idx: qq,
             element: this.focused
-          }, this.setFocus(KT))
+          }, this.setFocus(Oq))
         }
         focusKey() {
-          return this.focused ? ck(this.focused) : null
+          return this.focused ? gE(this.focused) : null
         }
-        handleDrop(TT, kT, cT) {
-          const lT = (0, IT.j)("inventoryDrop");
-          if (TT.wasPressed(lT)) {
-            const TT = (MT = this.focusContext(cT)).holding ? {
-              kind: "ty"
-            } : "slot" === MT.kind && MT.slotHasItem && null !== MT.idx ? {
+        handleDrop(qq, Eq, gq) {
+          const Yq = (0, uq.i)("inventoryDrop");
+          if (qq.wasPressed(Yq)) {
+            const qq = (lq = this.focusContext(gq)).holding ? {
+              kind: "Fc"
+            } : "slot" === lq.kind && lq.slotHasItem && null !== lq.idx ? {
               kind: "slot",
-              idx: MT.idx
+              idx: lq.idx
             } : null;
-            return void(TT && (this.dropFrom(TT, !1, cT), this.dropLatch.press(TT, this.focusKey(), kT, hT.c[(0, CT.g)().tapHoldTime].dropStackMs), this.afterAction()))
+            return void(qq && (this.dropFrom(qq, !1, gq), this.dropLatch.press(qq, this.focusKey(), Eq, dq.d[(0, Wq.i)().tapHoldTime].dropStackMs), this.afterAction()))
           }
-          var MT;
-          const KT = this.dropLatch.update(TT.isHeld(lT), this.focusKey(), kT);
-          KT && ((TT, kT, cT) => "ty" === TT.kind ? kT : !kT && cT(TT.idx))(KT, cT.isHolding(), cT.hasItemAt) && (this.dropFrom(KT, !0, cT), this.afterAction())
+          var lq;
+          const Oq = this.dropLatch.update(qq.isHeld(Yq), this.focusKey(), Eq);
+          Oq && ((qq, Eq, gq) => "Fc" === qq.kind ? Eq : !Eq && gq(qq.idx))(Oq, gq.isHolding(), gq.hasItemAt) && (this.dropFrom(Oq, !0, gq), this.afterAction())
         }
-        dropFrom(TT, kT, cT) {
-          "ty" === TT.kind ? cT.dropHeld(kT, this.slotPoint()) : cT.dropSlot(TT.idx, kT)
+        dropFrom(qq, Eq, gq) {
+          "Fc" === qq.kind ? gq.dropHeld(Eq, this.slotPoint()) : gq.dropSlot(qq.idx, Eq)
         }
         slotPoint() {
           return this.pointer ? {
             clientX: this.pointer.x,
             clientY: this.pointer.y
-          } : this.lastRect ? (TT => {
-            const kT = yk(TT);
+          } : this.lastRect ? (qq => {
+            const Eq = xE(qq);
             return {
-              clientX: kT.x,
-              clientY: kT.y
+              clientX: Eq.x,
+              clientY: Eq.y
             }
           })(this.lastRect) : {
             clientX: 0,
             clientY: 0
           }
         }
-        runIntent(TT, kT, cT, lT) {
-          const MT = kT.idx,
-            KT = kT.actionElement;
-          switch (KT && cc.has(TT) && (0, NT.z)(KT), TT) {
+        runIntent(qq, Eq, gq, Yq) {
+          const lq = Eq.idx,
+            Oq = Eq.actionElement;
+          switch (Oq && Eg.has(qq) && (0, jq.w)(Oq), qq) {
             case "slotPrimary":
-              lT.primary(MT, this.slotPoint());
+              Yq.primary(lq, this.slotPoint());
               break;
             case "slotSecondary":
-              lT.secondary(MT, this.slotPoint());
+              Yq.secondary(lq, this.slotPoint());
               break;
             case "slotQuickMove":
-              lT.quickMove(MT, this.slotPoint());
+              Yq.quickMove(lq, this.slotPoint());
               break;
             case "hotbarPick":
-              this.startHotbarPick(MT);
+              this.startHotbarPick(lq);
               break;
             case "pressPrimary":
             case "pressSecondary":
-              this.startPress(kT.press, "pressPrimary" === TT ? "primary" : "secondary", cT);
+              this.startPress(Eq.press, "pressPrimary" === qq ? "primary" : "secondary", gq);
               break;
             case "click":
-              (0, UT.j)(KT, (0, UT.w)(KT));
+              (0, Fq.p)(Oq, (0, Fq.D)(Oq));
               break;
             case "openKeyboard":
-              (0, UT.I)(KT) && (0, UT.G)(KT);
+              (0, Fq.P)(Oq) && (0, Fq.L)(Oq);
               break;
             case "pressBack":
-              kT.press.back();
+              Eq.press.back();
               break;
             case "cancel":
-              lT.cancel();
+              Yq.cancel();
               break;
             case "close":
-              return this.releasePress(), void lT.close()
+              return this.releasePress(), void Yq.close()
           }
           this.afterAction()
         }
-        startPress(TT, kT, cT) {
-          this.releasePress(), TT.press(kT) && (this.activePress = {
-            handlers: TT,
-            button: cT,
-            target: Jk(this.focused)
+        startPress(qq, Eq, gq) {
+          this.releasePress(), qq.press(Eq) && (this.activePress = {
+            handlers: qq,
+            button: gq,
+            target: iE(this.focused)
           })
         }
         releasePress() {
-          var TT, kT, cT;
-          null === (TT = this.activePress) || void 0 === TT || null === (kT = (cT = TT.handlers).release) || void 0 === kT || kT.call(cT), this.activePress = null
+          var qq, Eq, gq;
+          null === (qq = this.activePress) || void 0 === qq || null === (Eq = (gq = qq.handlers).release) || void 0 === Eq || Eq.call(gq), this.activePress = null
         }
         afterAction() {
           this.targets.invalidate(), this.hover.invalidate()
         }
-        publishState(TT) {
-          ((TT, kT) => {
-            var cT, lT, MT, KT, OT, yT;
-            return TT.showing === kT.showing && TT.kind === kT.kind && TT.holding === kT.holding && TT.slotHasItem === kT.slotHasItem && (null === (cT = TT.pressHints) || void 0 === cT ? void 0 : cT.primary) === (null === (lT = kT.pressHints) || void 0 === lT ? void 0 : lT.primary) && (null === (MT = TT.pressHints) || void 0 === MT ? void 0 : MT.secondary) === (null === (KT = kT.pressHints) || void 0 === KT ? void 0 : KT.secondary) && (null === (OT = TT.pressHints) || void 0 === OT ? void 0 : OT.back) === (null === (yT = kT.pressHints) || void 0 === yT ? void 0 : yT.back) && TT.hasCategories === kT.hasCategories && TT.hasList === kT.hasList && TT.openButtonCloses === kT.openButtonCloses && TT.steppingSlots === kT.steppingSlots && TT.hotbarPicking === kT.hotbarPicking && TT.quickMoveToHotbar === kT.quickMoveToHotbar && TT.dropStackHold === kT.dropStackHold
-          })(TT, this.state) || (this.state = TT, xT.k.nt(Xk.h, TT))
+        publishState(qq) {
+          ((qq, Eq) => {
+            var gq, Yq, lq, Oq, mq, xq;
+            return qq.showing === Eq.showing && qq.kind === Eq.kind && qq.holding === Eq.holding && qq.slotHasItem === Eq.slotHasItem && (null === (gq = qq.pressHints) || void 0 === gq ? void 0 : gq.primary) === (null === (Yq = Eq.pressHints) || void 0 === Yq ? void 0 : Yq.primary) && (null === (lq = qq.pressHints) || void 0 === lq ? void 0 : lq.secondary) === (null === (Oq = Eq.pressHints) || void 0 === Oq ? void 0 : Oq.secondary) && (null === (mq = qq.pressHints) || void 0 === mq ? void 0 : mq.back) === (null === (xq = Eq.pressHints) || void 0 === xq ? void 0 : xq.back) && qq.hasCategories === Eq.hasCategories && qq.hasList === Eq.hasList && qq.openButtonCloses === Eq.openButtonCloses && qq.steppingSlots === Eq.steppingSlots && qq.hotbarPicking === Eq.hotbarPicking && qq.quickMoveToHotbar === Eq.quickMoveToHotbar && qq.dropStackHold === Eq.dropStackHold
+          })(qq, this.state) || (this.state = qq, cq.i.TV(GE.e, qq))
         }
       },
-      Oc = ["pointermove", "pointerover", "pointerout", "mouseover", "mouseout"];
-    var yc = cT(8727),
-      fc = cT(328),
-      xc = cT(1654),
-      Ic = cT(8202);
-    const Ac = "[data-pad-secondary]",
-      Cc = TT => TT instanceof HTMLElement && (0, qT.l)(TT) && !(0, qT.n)(TT),
-      jc = TT => {
-        const kT = TT.querySelector(Ac);
-        if (kT && Cc(kT)) return kT;
-        for (const MT of null !== (cT = null === (lT = TT.parentElement) || void 0 === lT ? void 0 : lT.children) && void 0 !== cT ? cT : []) {
-          var cT, lT;
-          if (MT !== TT && MT.matches(Ac) && Cc(MT)) return MT
+      Og = ["pointermove", "pointerover", "pointerout", "mouseover", "mouseout"];
+    var mg = gq(8646),
+      xg = gq(296),
+      Ag = gq(1622),
+      cg = gq(8081);
+    const ug = "[data-pad-secondary]",
+      Bg = qq => qq instanceof HTMLElement && (0, eq.p)(qq) && !(0, eq.w)(qq),
+      Wg = qq => {
+        const Eq = qq.querySelector(ug);
+        if (Eq && Bg(Eq)) return Eq;
+        for (const lq of null !== (gq = null === (Yq = qq.parentElement) || void 0 === Yq ? void 0 : Yq.children) && void 0 !== gq ? gq : []) {
+          var gq, Yq;
+          if (lq !== qq && lq.matches(ug) && Bg(lq)) return lq
         }
         return null
       },
-      vc = (TT, kT, cT, lT) => Math.max(0, Math.max(TT, cT) - Math.min(kT, lT)),
-      tc = (TT, kT, cT, lT) => Math.max(0, Math.min(kT, lT) - Math.max(TT, cT)),
-      hc = (TT, kT, cT) => {
-        const lT = (TT.left + TT.right) / 2,
-          MT = (TT.top + TT.bottom) / 2,
-          KT = (kT.left + kT.right) / 2,
-          OT = (kT.top + kT.bottom) / 2;
-        if ("Left" === cT || "Right" === cT) {
-          const yT = "Right" === cT ? 1 : -1;
+      Ng = (qq, Eq, gq, Yq) => Math.max(0, Math.max(qq, gq) - Math.min(Eq, Yq)),
+      ag = (qq, Eq, gq, Yq) => Math.max(0, Math.min(Eq, Yq) - Math.max(qq, gq)),
+      Vg = (qq, Eq, gq) => {
+        const Yq = (qq.left + qq.right) / 2,
+          lq = (qq.top + qq.bottom) / 2,
+          Oq = (Eq.left + Eq.right) / 2,
+          mq = (Eq.top + Eq.bottom) / 2;
+        if ("Left" === gq || "Right" === gq) {
+          const xq = "Right" === gq ? 1 : -1;
           return {
-            forwardGap: "Right" === cT ? kT.left - TT.right : TT.left - kT.right,
-            centreForward: (KT - lT) * yT,
-            sidewaysGap: vc(TT.top, TT.bottom, kT.top, kT.bottom),
-            sidewaysOverlap: tc(TT.top, TT.bottom, kT.top, kT.bottom),
-            centreSideways: Math.abs(OT - MT),
-            startSideways: Math.abs(kT.top - TT.top),
-            fromSidewaysSize: TT.bottom - TT.top,
-            toSidewaysSize: kT.bottom - kT.top,
-            toLength: kT.right - kT.left
+            forwardGap: "Right" === gq ? Eq.left - qq.right : qq.left - Eq.right,
+            centreForward: (Oq - Yq) * xq,
+            sidewaysGap: Ng(qq.top, qq.bottom, Eq.top, Eq.bottom),
+            sidewaysOverlap: ag(qq.top, qq.bottom, Eq.top, Eq.bottom),
+            centreSideways: Math.abs(mq - lq),
+            startSideways: Math.abs(Eq.top - qq.top),
+            fromSidewaysSize: qq.bottom - qq.top,
+            toSidewaysSize: Eq.bottom - Eq.top,
+            toLength: Eq.right - Eq.left
           }
         }
-        const yT = "Down" === cT ? 1 : -1;
+        const xq = "Down" === gq ? 1 : -1;
         return {
-          forwardGap: "Down" === cT ? kT.top - TT.bottom : TT.top - kT.bottom,
-          centreForward: (OT - MT) * yT,
-          sidewaysGap: vc(TT.left, TT.right, kT.left, kT.right),
-          sidewaysOverlap: tc(TT.left, TT.right, kT.left, kT.right),
-          centreSideways: Math.abs(KT - lT),
-          startSideways: Math.abs(kT.left - TT.left),
-          fromSidewaysSize: TT.right - TT.left,
-          toSidewaysSize: kT.right - kT.left,
-          toLength: kT.bottom - kT.top
+          forwardGap: "Down" === gq ? Eq.top - qq.bottom : qq.top - Eq.bottom,
+          centreForward: (mq - lq) * xq,
+          sidewaysGap: Ng(qq.left, qq.right, Eq.left, Eq.right),
+          sidewaysOverlap: ag(qq.left, qq.right, Eq.left, Eq.right),
+          centreSideways: Math.abs(Oq - Yq),
+          startSideways: Math.abs(Eq.left - qq.left),
+          fromSidewaysSize: qq.right - qq.left,
+          toSidewaysSize: Eq.right - Eq.left,
+          toLength: Eq.bottom - Eq.top
         }
       },
-      Nc = TT => TT.centreForward > .5 && TT.forwardGap >= -TT.toLength / 2,
-      Qc = TT => {
-        const kT = TT.sidewaysOverlap > 0 ? 0 : 2 * TT.fromSidewaysSize,
-          cT = TT.fromSidewaysSize > 1.5 * TT.toSidewaysSize ? TT.startSideways : TT.centreSideways;
-        return Math.max(0, TT.forwardGap) + 3 * TT.sidewaysGap + kT + .1 * cT
+      dg = qq => qq.centreForward > .5 && qq.forwardGap >= -qq.toLength / 2,
+      jg = qq => {
+        const Eq = qq.sidewaysOverlap > 0 ? 0 : 2 * qq.fromSidewaysSize,
+          gq = qq.fromSidewaysSize > 1.5 * qq.toSidewaysSize ? qq.startSideways : qq.centreSideways;
+        return Math.max(0, qq.forwardGap) + 3 * qq.sidewaysGap + Eq + .1 * gq
       },
-      Sc = (TT, kT) => tc(TT.top, TT.bottom, kT.top, kT.bottom) > 0 || kT.bottom - kT.top > kT.right - kT.left,
-      Dc = (TT, kT, cT, lT, MT, KT) => {
-        const OT = MT ? Fc(TT, kT, cT, MT) : new Set,
-          yT = Pc(TT, kT, cT, OT);
-        return yT < 0 && OT.size > 0 && KT ? ac(TT, kT, cT, KT) : lT && yT >= 0 ? rc(TT, kT, cT, lT, yT, OT) : yT
+      Hg = (qq, Eq) => ag(qq.top, qq.bottom, Eq.top, Eq.bottom) > 0 || Eq.bottom - Eq.top > Eq.right - Eq.left,
+      og = (qq, Eq, gq, Yq, lq, Oq) => {
+        const mq = lq ? Qg(qq, Eq, gq, lq) : new Set,
+          xq = tg(qq, Eq, gq, mq);
+        return xq < 0 && mq.size > 0 && Oq ? Pg(qq, Eq, gq, Oq) : Yq && xq >= 0 ? yg(qq, Eq, gq, Yq, xq, mq) : xq
       },
-      ac = (TT, kT, cT, lT) => {
-        const MT = new Set,
-          KT = Pc(TT, kT, "Up", MT) >= 0,
-          OT = Pc(TT, kT, "Down", MT) >= 0,
-          yT = new Set;
-        return kT.forEach(((kT, cT) => {
-          const MT = kT.top + kT.bottom < TT.top + TT.bottom;
-          lT[cT] && !(MT ? KT : OT) || yT.add(cT)
-        })), Pc(TT, kT, cT, yT)
+      Pg = (qq, Eq, gq, Yq) => {
+        const lq = new Set,
+          Oq = tg(qq, Eq, "Up", lq) >= 0,
+          mq = tg(qq, Eq, "Down", lq) >= 0,
+          xq = new Set;
+        return Eq.forEach(((Eq, gq) => {
+          const lq = Eq.top + Eq.bottom < qq.top + qq.bottom;
+          Yq[gq] && !(lq ? Oq : mq) || xq.add(gq)
+        })), tg(qq, Eq, gq, xq)
       },
-      Fc = (TT, kT, cT, lT) => {
-        const MT = new Set;
-        return "Left" !== cT && "Right" !== cT || kT.forEach(((kT, cT) => {
-          lT[cT] && tc(TT.top, TT.bottom, kT.top, kT.bottom) <= 0 && MT.add(cT)
-        })), MT
+      Qg = (qq, Eq, gq, Yq) => {
+        const lq = new Set;
+        return "Left" !== gq && "Right" !== gq || Eq.forEach(((Eq, gq) => {
+          Yq[gq] && ag(qq.top, qq.bottom, Eq.top, Eq.bottom) <= 0 && lq.add(gq)
+        })), lq
       },
-      rc = (TT, kT, cT, lT, MT, KT) => {
-        const OT = hc(TT, kT[MT], cT).forwardGap;
-        let yT = MT,
-          fT = lT[MT],
-          xT = 1 / 0;
-        return kT.forEach(((kT, IT) => {
-          const AT = lT[IT];
-          if (KT.has(IT) || AT < fT || AT === fT && yT === MT) return;
-          const CT = hc(TT, kT, cT);
-          if (!Nc(CT) || CT.forwardGap < 0 || CT.forwardGap >= OT) return;
-          const jT = Qc(CT);
-          (AT > fT || jT < xT) && (yT = IT, fT = AT, xT = jT)
-        })), yT
+      yg = (qq, Eq, gq, Yq, lq, Oq) => {
+        const mq = Vg(qq, Eq[lq], gq).forwardGap;
+        let xq = lq,
+          Aq = Yq[lq],
+          cq = 1 / 0;
+        return Eq.forEach(((Eq, uq) => {
+          const Bq = Yq[uq];
+          if (Oq.has(uq) || Bq < Aq || Bq === Aq && xq === lq) return;
+          const Wq = Vg(qq, Eq, gq);
+          if (!dg(Wq) || Wq.forwardGap < 0 || Wq.forwardGap >= mq) return;
+          const Nq = jg(Wq);
+          (Bq > Aq || Nq < cq) && (xq = uq, Aq = Bq, cq = Nq)
+        })), xq
       },
-      Pc = (TT, kT, cT, lT) => {
-        let MT = -1,
-          KT = 1 / 0;
-        if (kT.forEach(((kT, OT) => {
-            const yT = ((TT, kT, cT) => {
-              const lT = hc(TT, kT, cT);
-              if (!Nc(lT)) return null;
-              const MT = Math.max(0, lT.forwardGap);
-              return lT.sidewaysOverlap <= 0 && lT.sidewaysGap > 2 * (MT + 1) ? null : Qc(lT)
-            })(TT, kT, cT);
-            null !== yT && yT < KT && !lT.has(OT) && (KT = yT, MT = OT)
-          })), MT < 0) return -1;
-        const OT = kT[MT],
-          yT = hc(TT, OT, cT).forwardGap;
-        let fT = yT,
-          xT = MT;
-        return kT.forEach(((kT, KT) => {
-          if (KT === MT || lT.has(KT) || !((TT, kT, cT) => {
-              const lT = "Left" === cT || "Right" === cT,
-                MT = lT ? tc(TT.top, TT.bottom, kT.top, kT.bottom) : tc(TT.left, TT.right, kT.left, kT.right),
-                KT = lT ? Math.min(TT.bottom - TT.top, kT.bottom - kT.top) : Math.min(TT.right - TT.left, kT.right - kT.left);
-              return MT > 0 && MT >= KT / 2
-            })(kT, OT, cT)) return;
-          const IT = hc(TT, kT, cT);
-          Nc(IT) && IT.forwardGap + IT.toLength <= yT + 1 && IT.forwardGap < fT && (fT = IT.forwardGap, xT = KT)
-        })), xT
+      tg = (qq, Eq, gq, Yq) => {
+        let lq = -1,
+          Oq = 1 / 0;
+        if (Eq.forEach(((Eq, mq) => {
+            const xq = ((qq, Eq, gq) => {
+              const Yq = Vg(qq, Eq, gq);
+              if (!dg(Yq)) return null;
+              const lq = Math.max(0, Yq.forwardGap);
+              return Yq.sidewaysOverlap <= 0 && Yq.sidewaysGap > 2 * (lq + 1) ? null : jg(Yq)
+            })(qq, Eq, gq);
+            null !== xq && xq < Oq && !Yq.has(mq) && (Oq = xq, lq = mq)
+          })), lq < 0) return -1;
+        const mq = Eq[lq],
+          xq = Vg(qq, mq, gq).forwardGap;
+        let Aq = xq,
+          cq = lq;
+        return Eq.forEach(((Eq, Oq) => {
+          if (Oq === lq || Yq.has(Oq) || !((qq, Eq, gq) => {
+              const Yq = "Left" === gq || "Right" === gq,
+                lq = Yq ? ag(qq.top, qq.bottom, Eq.top, Eq.bottom) : ag(qq.left, qq.right, Eq.left, Eq.right),
+                Oq = Yq ? Math.min(qq.bottom - qq.top, Eq.bottom - Eq.top) : Math.min(qq.right - qq.left, Eq.right - Eq.left);
+              return lq > 0 && lq >= Oq / 2
+            })(Eq, mq, gq)) return;
+          const uq = Vg(qq, Eq, gq);
+          dg(uq) && uq.forwardGap + uq.toLength <= xq + 1 && uq.forwardGap < Aq && (Aq = uq.forwardGap, cq = Oq)
+        })), cq
       },
-      wc = (TT, kT) => {
-        let cT = -1,
-          lT = 1 / 0;
-        return kT.forEach(((kT, MT) => {
-          const KT = Math.max(kT.left - TT.x, 0, TT.x - kT.right),
-            OT = Math.max(kT.top - TT.y, 0, TT.y - kT.bottom),
-            yT = Math.hypot(KT, OT);
-          yT < lT && (lT = yT, cT = MT)
-        })), cT
+      rg = (qq, Eq) => {
+        let gq = -1,
+          Yq = 1 / 0;
+        return Eq.forEach(((Eq, lq) => {
+          const Oq = Math.max(Eq.left - qq.x, 0, qq.x - Eq.right),
+            mq = Math.max(Eq.top - qq.y, 0, qq.y - Eq.bottom),
+            xq = Math.hypot(Oq, mq);
+          xq < Yq && (Yq = xq, gq = lq)
+        })), gq
       },
-      mc = (TT, kT) => {
-        const cT = Math.min(TT.bottom - TT.top, kT.bottom - kT.top) / 2;
-        return Math.abs(TT.top - kT.top) > cT ? TT.top - kT.top : TT.left - kT.left
+      vg = (qq, Eq) => {
+        const gq = Math.min(qq.bottom - qq.top, Eq.bottom - Eq.top) / 2;
+        return Math.abs(qq.top - Eq.top) > gq ? qq.top - Eq.top : qq.left - Eq.left
       },
-      bc = TT => {
-        let kT = -1;
-        for (let cT = 0; cT < TT.length; cT++)(kT < 0 || mc(TT[cT], TT[kT]) < 0) && (kT = cT);
-        return kT
+      hg = qq => {
+        let Eq = -1;
+        for (let gq = 0; gq < qq.length; gq++)(Eq < 0 || vg(qq[gq], qq[Eq]) < 0) && (Eq = gq);
+        return Eq
       };
-    var zc = cT(1701),
-      Jc = cT(8734),
-      oc = cT(8737);
-    const Hc = TT => {
-        if ("death" !== TT || "inGame" !== fT.e.get("gameState") || "off" === (0, CT.g)().quickChat || null === (0, zc.c)()) return !1;
-        const kT = (0, IT.j)("chat");
-        return kT !== (0, IT.j)("menuConfirm") && kT !== (0, IT.j)("menuBack")
+    var ng = gq(1668),
+      bg = gq(8655),
+      ig = gq(8662);
+    const Zg = qq => {
+        if ("death" !== qq || "inGame" !== Aq.b.get("gameState") || "off" === (0, Wq.i)().quickChat || null === (0, ng.b)()) return !1;
+        const Eq = (0, uq.i)("chat");
+        return Eq !== (0, uq.i)("menuConfirm") && Eq !== (0, uq.i)("menuBack")
       },
-      ec = new Jc.c;
-    var Gc = cT(4284),
-      Vc = cT(8746);
-    const Ec = TT => {
-        let kT = null;
-        for (const cT of TT.querySelectorAll("[data-pad-tabs]"))(0, qT.l)(cT) && (!kT || Number(cT.dataset.padTabs) < Number(kT.dataset.padTabs)) && (kT = cT);
-        return kT
+      fg = new bg.d;
+    var Mg = gq(4144),
+      Tg = gq(8669);
+    const zg = qq => {
+        let Eq = null;
+        for (const gq of qq.querySelectorAll("[data-pad-tabs]"))(0, eq.p)(gq) && (!Eq || Number(gq.dataset.padTabs) < Number(Eq.dataset.padTabs)) && (Eq = gq);
+        return Eq
       },
-      Zc = (TT, kT, cT, lT) => {
-        TT.focusWhenFound((() => {
-          const MT = TT.pickInitial(kT);
-          if (MT && !cT.has(MT) && (null === lT || void 0 === lT || !lT.contains(MT))) return MT;
-          const KT = ((TT, kT) => {
-              const cT = kT => TT.getEnabledCandidates(kT).filter((TT => !TT.closest("[data-pad-tabs]")));
-              for (const lT of (0, qT.f)(kT)) {
-                const TT = cT(lT);
-                if (TT.length > 0) return TT
+      Sg = (qq, Eq, gq, Yq) => {
+        qq.focusWhenFound((() => {
+          const lq = qq.pickInitial(Eq);
+          if (lq && !gq.has(lq) && (null === Yq || void 0 === Yq || !Yq.contains(lq))) return lq;
+          const Oq = ((qq, Eq) => {
+              const gq = Eq => qq.getEnabledCandidates(Eq).filter((qq => !qq.closest("[data-pad-tabs]")));
+              for (const Yq of (0, eq.h)(Eq)) {
+                const qq = gq(Yq);
+                if (qq.length > 0) return qq
               }
-              return cT(kT)
-            })(TT, kT).filter((TT => !cT.has(TT))),
-            OT = bc(KT.map((TT => TT.getBoundingClientRect())));
-          return OT >= 0 ? KT[OT] : null
+              return gq(Eq)
+            })(qq, Eq).filter((qq => !gq.has(qq))),
+            mq = hg(Oq.map((qq => qq.getBoundingClientRect())));
+          return mq >= 0 ? Oq[mq] : null
         }), 3e3)
       },
-      uc = (TT, kT, cT, lT) => {
-        var MT;
-        const KT = ((TT, kT) => {
-          if (0 === TT.length) return null;
-          const cT = TT.findIndex((TT => "true" === TT.dataset.padSelected));
-          return cT < 0 ? kT > 0 ? TT[0] : TT[TT.length - 1] : TT[(cT + kT + TT.length) % TT.length]
-        })([...cT.querySelectorAll("[data-pad-tab]")].filter((TT => (0, qT.l)(TT) && !(0, qT.n)(TT))), lT);
-        if (!KT) return;
-        const OT = null !== (MT = null === TT || void 0 === TT ? void 0 : TT.getFocused()) && void 0 !== MT ? MT : null,
-          yT = !(null === OT || void 0 === OT || !OT.isConnected) && cT.contains(OT),
-          fT = TT && !yT ? new Set(TT.getEnabledCandidates(kT)) : null;
-        (0, UT.b)(KT), TT && (fT ? Zc(TT, kT, fT, cT) : TT.setFocus(KT, {
+      pg = (qq, Eq, gq, Yq) => {
+        var lq;
+        const Oq = ((qq, Eq) => {
+          if (0 === qq.length) return null;
+          const gq = qq.findIndex((qq => "true" === qq.dataset.padSelected));
+          return gq < 0 ? Eq > 0 ? qq[0] : qq[qq.length - 1] : qq[(gq + Eq + qq.length) % qq.length]
+        })([...gq.querySelectorAll("[data-pad-tab]")].filter((qq => (0, eq.p)(qq) && !(0, eq.w)(qq))), Yq);
+        if (!Oq) return;
+        const mq = null !== (lq = null === qq || void 0 === qq ? void 0 : qq.getFocused()) && void 0 !== lq ? lq : null,
+          xq = !(null === mq || void 0 === mq || !mq.isConnected) && gq.contains(mq),
+          Aq = qq && !xq ? new Set(qq.getEnabledCandidates(Eq)) : null;
+        (0, Fq.b)(Oq), qq && (Aq ? Sg(qq, Eq, Aq, gq) : qq.setFocus(Oq, {
           byUser: !0
         }))
       },
-      Xc = TT => {
-        var kT;
-        const cT = GT(null !== (kT = bT(TT, "x")) && void 0 !== kT ? kT : TT),
-          lT = (0, qT.e)(TT).filter((TT => !(0, qT.n)(TT))),
-          MT = lT.filter((TT => VT(TT.getBoundingClientRect(), cT)));
-        return (MT.length > 0 ? MT : lT).sort(((TT, kT) => mc(TT.getBoundingClientRect(), kT.getBoundingClientRect())))
+      Gg = qq => {
+        var Eq;
+        const gq = Tq(null !== (Eq = nq(qq, "x")) && void 0 !== Eq ? Eq : qq),
+          Yq = (0, eq.f)(qq).filter((qq => !(0, eq.w)(qq))),
+          lq = Yq.filter((qq => zq(qq.getBoundingClientRect(), gq)));
+        return (lq.length > 0 ? lq : Yq).sort(((qq, Eq) => vg(qq.getBoundingClientRect(), Eq.getBoundingClientRect())))
       },
-      dc = (TT, kT, cT) => {
-        const lT = [...kT.querySelectorAll("[data-pad-row]")].filter(qT.l),
-          MT = TT.getFocused(),
-          KT = MT ? lT.findIndex((TT => TT.contains(MT))) : -1;
-        let OT = 0,
-          yT = cT > 0 ? 0 : lT.length - 1;
-        if (KT >= 0 && MT) OT = Math.max(0, Xc(lT[KT]).indexOf(MT)), yT = KT + cT;
-        else if (MT) {
-          const TT = MT.getBoundingClientRect(),
-            kT = lT.map((kT => {
-              const lT = kT.getBoundingClientRect();
-              return cT > 0 ? lT.top >= TT.top : lT.bottom <= TT.bottom
+      Lg = (qq, Eq, gq) => {
+        const Yq = [...Eq.querySelectorAll("[data-pad-row]")].filter(eq.p),
+          lq = qq.getFocused(),
+          Oq = lq ? Yq.findIndex((qq => qq.contains(lq))) : -1;
+        let mq = 0,
+          xq = gq > 0 ? 0 : Yq.length - 1;
+        if (Oq >= 0 && lq) mq = Math.max(0, Gg(Yq[Oq]).indexOf(lq)), xq = Oq + gq;
+        else if (lq) {
+          const qq = lq.getBoundingClientRect(),
+            Eq = Yq.map((Eq => {
+              const Yq = Eq.getBoundingClientRect();
+              return gq > 0 ? Yq.top >= qq.top : Yq.bottom <= qq.bottom
             }));
-          yT = cT > 0 ? kT.indexOf(!0) : kT.lastIndexOf(!0)
+          xq = gq > 0 ? Eq.indexOf(!0) : Eq.lastIndexOf(!0)
         }
-        for (let fT = yT; fT >= 0 && fT < lT.length; fT += cT) {
-          const kT = Xc(lT[fT]);
-          if (kT.length > 0) return void TT.setFocus(kT[Math.min(OT, kT.length - 1)], {
+        for (let Aq = xq; Aq >= 0 && Aq < Yq.length; Aq += gq) {
+          const Eq = Gg(Yq[Aq]);
+          if (Eq.length > 0) return void qq.setFocus(Eq[Math.min(mq, Eq.length - 1)], {
             byUser: !0
           })
         }
       },
-      Lc = (TT, kT, cT) => {
-        var lT, MT;
-        const KT = null !== (lT = null === TT || void 0 === TT ? void 0 : TT.getFocused()) && void 0 !== lT ? lT : null,
-          OT = null !== KT && void 0 !== KT && KT.closest("[data-pad-row]") ? "x" : "y",
-          yT = null !== (MT = KT ? bT(KT, OT, kT) : null) && void 0 !== MT ? MT : JT(kT, OT);
-        if (!yT) return;
-        const fT = KT ? (0, UT.w)(KT) : null;
-        if (eT(yT, OT, cT * ("y" === OT ? yT.clientHeight : yT.clientWidth) * .85), !TT || !fT) return;
-        const xT = GT(yT),
-          IT = TT.getEnabledCandidates(kT).filter((TT => yT.contains(TT) && VT(TT.getBoundingClientRect(), xT))),
-          AT = wc(fT, IT.map((TT => TT.getBoundingClientRect())));
-        AT >= 0 && TT.setFocus(IT[AT], {
+      Jg = (qq, Eq, gq) => {
+        var Yq, lq;
+        const Oq = null !== (Yq = null === qq || void 0 === qq ? void 0 : qq.getFocused()) && void 0 !== Yq ? Yq : null,
+          mq = null !== Oq && void 0 !== Oq && Oq.closest("[data-pad-row]") ? "x" : "y",
+          xq = null !== (lq = Oq ? nq(Oq, mq, Eq) : null) && void 0 !== lq ? lq : iq(Eq, mq);
+        if (!xq) return;
+        const Aq = Oq ? (0, Fq.D)(Oq) : null;
+        if (Mq(xq, mq, gq * ("y" === mq ? xq.clientHeight : xq.clientWidth) * .85), !qq || !Aq) return;
+        const cq = Tq(xq),
+          uq = qq.getEnabledCandidates(Eq).filter((qq => xq.contains(qq) && zq(qq.getBoundingClientRect(), cq))),
+          Bq = rg(Aq, uq.map((qq => qq.getBoundingClientRect())));
+        Bq >= 0 && qq.setFocus(uq[Bq], {
           scroll: !1,
           byUser: !0
         })
       };
-    let Rc = null;
-    const gc = (TT, kT) => {
-        var cT, lT;
-        const MT = kT.querySelector("[data-pad-friends-column]"),
-          KT = TT.getFocused();
-        if (!MT || !KT || !MT.contains(KT)) return !1;
-        const OT = TT.getEnabledCandidates(kT).filter((TT => !MT.contains(TT))),
-          yT = wc((0, UT.w)(KT), OT.map((TT => TT.getBoundingClientRect()))),
-          fT = null === (cT = Rc) || void 0 === cT ? void 0 : cT.deref();
-        return TT.setFocus(null !== fT && void 0 !== fT && fT.isConnected ? fT : null !== (lT = OT[yT]) && void 0 !== lT ? lT : null, {
+    let kg = null;
+    const Rg = (qq, Eq) => {
+        var gq, Yq;
+        const lq = Eq.querySelector("[data-pad-friends-column]"),
+          Oq = qq.getFocused();
+        if (!lq || !Oq || !lq.contains(Oq)) return !1;
+        const mq = qq.getEnabledCandidates(Eq).filter((qq => !lq.contains(qq))),
+          xq = rg((0, Fq.D)(Oq), mq.map((qq => qq.getBoundingClientRect()))),
+          Aq = null === (gq = kg) || void 0 === gq ? void 0 : gq.deref();
+        return qq.setFocus(null !== Aq && void 0 !== Aq && Aq.isConnected ? Aq : null !== (Yq = mq[xq]) && void 0 !== Yq ? Yq : null, {
           byUser: !0
         }), !0
       },
-      Uc = TT => {
-        const kT = (0, IT.j)(TT);
-        return (0, vT.I)(kT) || Ic.v.some((TT => (0, IT.j)(TT) === kT)) ? null : kT
+      Ug = qq => {
+        const Eq = (0, uq.i)(qq);
+        return (0, aq.H)(Eq) || cg.p.some((qq => (0, uq.i)(qq) === Eq)) ? null : Eq
       },
-      Yc = (TT, kT) => {
-        const cT = Uc(kT);
-        return null !== cT && TT.wasPressed(cT)
+      Fg = (qq, Eq) => {
+        const gq = Ug(Eq);
+        return null !== gq && qq.wasPressed(gq)
       },
-      Bc = function(TT, kT, cT) {
-        let lT = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        const MT = (TT => {
-            var kT, cT;
-            return null !== (kT = null === (cT = Ec(TT)) || void 0 === cT ? void 0 : cT.querySelector("[data-pad-tab][data-pad-selected='true']")) && void 0 !== kT ? kT : null
-          })(kT),
-          KT = TT && MT ? new Set(TT.getEnabledCandidates(kT)) : null;
-        (0, yc.c)(), cT === fc.o.SETTINGS && (0, xc.n)(fT.e.get("openEverythingMenuName")) ? fT.e.set({
-          openEverythingMenuName: cT
-        }) : (0, xc.z)(new Event("padMenuShortcut"), cT, lT), TT && KT && MT && Zc(TT, kT, KT, MT.closest("[data-pad-tabs]"))
+      sg = function(qq, Eq, gq) {
+        let Yq = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        const lq = (qq => {
+            var Eq, gq;
+            return null !== (Eq = null === (gq = zg(qq)) || void 0 === gq ? void 0 : gq.querySelector("[data-pad-tab][data-pad-selected='true']")) && void 0 !== Eq ? Eq : null
+          })(Eq),
+          Oq = qq && lq ? new Set(qq.getEnabledCandidates(Eq)) : null;
+        (0, mg.c)(), gq === xg.p.SETTINGS && (0, Ag.l)(Aq.b.get("openEverythingMenuName")) ? Aq.b.set({
+          openEverythingMenuName: gq
+        }) : (0, Ag.u)(new Event("padMenuShortcut"), gq, Yq), qq && Oq && lq && Sg(qq, Eq, Oq, lq.closest("[data-pad-tabs]"))
       },
-      Wc = TT => null !== TT.closest(".Dropdown-root") || null !== TT.querySelector(".Dropdown-root.is-open"),
-      nc = TT => null !== (0, Vc.c)() && "popup" !== TT.layer.kind && !Ec(TT.root) && !Wc(TT.root),
-      pc = (0, tT.e)(vT.cb),
-      ic = (0, tT.e)(vT.cb),
-      qc = (TT, kT, cT) => {
-        if (((TT, kT) => {
-            const cT = (0, IT.j)("chat");
-            return Hc(kT) && TT.isHeld(cT) ? "hold" === ec.update(TT.wasPressed(cT), TT.isHeld(cT), performance.now(), hT.c[(0, CT.g)().tapHoldTime].wheelMs) && (AT.d.consumeButton(cT), xT.k.nt(oc.n), !0) : (ec.release(), !1)
-          })(kT, cT.layer.kind)) return !0;
-        const lT = cT.root;
-        for (const [OT, yT] of [
+      Xg = qq => null !== qq.closest(".Dropdown-root") || null !== qq.querySelector(".Dropdown-root.is-open"),
+      wg = qq => null !== (0, Tg.e)() && "popup" !== qq.layer.kind && !zg(qq.root) && !Xg(qq.root),
+      Kg = (0, Vq.b)(aq.ab),
+      Cg = (0, Vq.b)(aq.ab),
+      Ig = (qq, Eq, gq) => {
+        if (((qq, Eq) => {
+            const gq = (0, uq.i)("chat");
+            return Zg(Eq) && qq.isHeld(gq) ? "hold" === fg.update(qq.wasPressed(gq), qq.isHeld(gq), performance.now(), dq.d[(0, Wq.i)().tapHoldTime].wheelMs) && (Bq.c.consumeButton(gq), cq.i.TV(ig.k), !0) : (fg.release(), !1)
+          })(Eq, gq.layer.kind)) return !0;
+        const Yq = gq.root;
+        for (const [mq, xq] of [
             ["menuTabPrevious", -1],
             ["menuTabNext", 1]
           ])
-          if (kT.wasPressed((0, IT.j)(OT))) {
-            const kT = Wc(lT) ? null : Ec(lT);
-            if (kT) uc(TT, lT, kT, yT);
-            else if (nc(cT)) {
-              var MT;
-              const kT = TT ? new Set(TT.getEnabledCandidates(lT)) : null;
-              null !== (MT = (0, Vc.c)()) && void 0 !== MT && MT(yT) && TT && kT && Zc(TT, lT, kT, null)
-            } else TT && dc(TT, lT, yT);
+          if (Eq.wasPressed((0, uq.i)(mq))) {
+            const Eq = Xg(Yq) ? null : zg(Yq);
+            if (Eq) pg(qq, Yq, Eq, xq);
+            else if (wg(gq)) {
+              var lq;
+              const Eq = qq ? new Set(qq.getEnabledCandidates(Yq)) : null;
+              null !== (lq = (0, Tg.e)()) && void 0 !== lq && lq(xq) && qq && Eq && Sg(qq, Yq, Eq, null)
+            } else qq && Lg(qq, Yq, xq);
             return !0
-          } for (const [OT, yT, fT] of [
-            ["menuPageUp", -1, pc],
-            ["menuPageDown", 1, ic]
+          } for (const [mq, xq, Aq] of [
+            ["menuPageUp", -1, Kg],
+            ["menuPageDown", 1, Cg]
           ]) {
-          const cT = (0, IT.j)(OT);
-          if (kT.wasPressed(cT) && fT.reset(), fT.update(kT.isHeld(cT), performance.now())) return Lc(TT, lT, yT), !0
+          const gq = (0, uq.i)(mq);
+          if (Eq.wasPressed(gq) && Aq.reset(), Aq.update(Eq.isHeld(gq), performance.now())) return Jg(qq, Yq, xq), !0
         }
-        const KT = "popup" === cT.layer.kind;
-        return Yc(kT, "pause") ? (KT || (0, xc.u)() && "menu" !== cT.layer.kind || Bc(TT, lT, (0, xc.u)() ? fc.o.SETTINGS : (0, Gc.e)()), !0) : !!Yc(kT, "leaderboard") && ("home" === cT.layer.kind ? (TT => {
-          const kT = [...TT.querySelectorAll("[data-pad-notifications]")].find(qT.l);
-          kT && (0, UT.b)(kT)
-        })(lT) : KT || Bc(TT, lT, fc.o.LOBBY_LEADERBOARD, "inGame" === fT.e.get("gameState")), !0)
+        const Oq = "popup" === gq.layer.kind;
+        return Fg(Eq, "pause") ? (Oq || (0, Ag.r)() && "menu" !== gq.layer.kind || sg(qq, Yq, (0, Ag.r)() ? xg.p.SETTINGS : (0, Mg.b)()), !0) : !!Fg(Eq, "leaderboard") && ("home" === gq.layer.kind ? (qq => {
+          const Eq = [...qq.querySelectorAll("[data-pad-notifications]")].find(eq.p);
+          Eq && (0, Fq.b)(Eq)
+        })(Yq) : Oq || sg(qq, Yq, xg.p.LOBBY_LEADERBOARD, "inGame" === Aq.b.get("gameState")), !0)
       },
-      sc = (TT, kT, cT) => {
-        if (qc(TT, kT, cT)) return !0;
-        const lT = "home" === cT.layer.kind;
-        if (kT.wasPressed((0, IT.j)("menuSecondary"))) {
-          const kT = TT.getFocused(),
-            MT = kT ? jc(kT) : null;
-          if (MT) return (0, UT.b)(MT), !0;
-          if (lT) {
-            const kT = cT.root.querySelector("[data-pad-search] input");
-            return kT && (0, qT.m)(kT, cT.root) ? (TT.setFocus(kT, {
+      eg = (qq, Eq, gq) => {
+        if (Ig(qq, Eq, gq)) return !0;
+        const Yq = "home" === gq.layer.kind;
+        if (Eq.wasPressed((0, uq.i)("menuSecondary"))) {
+          const Eq = qq.getFocused(),
+            lq = Eq ? Wg(Eq) : null;
+          if (lq) return (0, Fq.b)(lq), !0;
+          if (Yq) {
+            const Eq = gq.root.querySelector("[data-pad-search] input");
+            return Eq && (0, eq.t)(Eq, gq.root) ? (qq.setFocus(Eq, {
               byUser: !0
-            }), (0, UT.b)(kT)) : fT.e.set({
+            }), (0, Fq.b)(Eq)) : Aq.b.set({
               searchOpen: !0
             }), !0
           }
         }
-        return !(!lT || !Yc(kT, "inventory")) && (((TT, kT) => {
-          var cT, lT;
-          const MT = kT.querySelector("[data-pad-friends-column]");
-          if (!MT || !(0, qT.l)(MT)) return void(0, xc.z)(new Event("padMenuShortcut"), fc.o.SOCIAL);
-          if (gc(TT, kT)) return;
-          const KT = null !== (cT = null === (lT = MT.querySelector("[data-pad-friends-start]")) || void 0 === lT ? void 0 : lT.getBoundingClientRect().top) && void 0 !== cT ? cT : -1 / 0,
-            OT = TT.getEnabledCandidates(MT),
-            yT = OT.filter((TT => TT.getBoundingClientRect().top >= KT)),
-            fT = yT.length > 0 ? yT : OT,
-            xT = bc(fT.map((TT => TT.getBoundingClientRect())));
-          TT.setFocus(xT >= 0 ? fT[xT] : null, {
+        return !(!Yq || !Fg(Eq, "inventory")) && (((qq, Eq) => {
+          var gq, Yq;
+          const lq = Eq.querySelector("[data-pad-friends-column]");
+          if (!lq || !(0, eq.p)(lq)) return void(0, Ag.u)(new Event("padMenuShortcut"), xg.p.SOCIAL);
+          if (Rg(qq, Eq)) return;
+          const Oq = null !== (gq = null === (Yq = lq.querySelector("[data-pad-friends-start]")) || void 0 === Yq ? void 0 : Yq.getBoundingClientRect().top) && void 0 !== gq ? gq : -1 / 0,
+            mq = qq.getEnabledCandidates(lq),
+            xq = mq.filter((qq => qq.getBoundingClientRect().top >= Oq)),
+            Aq = xq.length > 0 ? xq : mq,
+            cq = hg(Aq.map((qq => qq.getBoundingClientRect())));
+          qq.setFocus(cq >= 0 ? Aq[cq] : null, {
             byUser: !0
           })
-        })(TT, cT.root), !0)
+        })(qq, gq.root), !0)
       },
-      Tl = TT => {
-        var kT, cT, lT;
-        const MT = (0, UT.y)(TT);
-        if (null !== MT) return MT;
-        const KT = (null !== (kT = null !== (cT = null !== (lT = TT.getAttribute("aria-label")) && void 0 !== lT ? lT : TT.getAttribute("title")) && void 0 !== cT ? cT : TT.textContent) && void 0 !== kT ? kT : "").replace(/\s+/g, " ").trim();
-        return KT ? `${TT.tagName}:${KT.slice(0,100)}` : null
+      Dg = qq => {
+        var Eq, gq, Yq;
+        const lq = (0, Fq.F)(qq);
+        if (null !== lq) return lq;
+        const Oq = (null !== (Eq = null !== (gq = null !== (Yq = qq.getAttribute("aria-label")) && void 0 !== Yq ? Yq : qq.getAttribute("title")) && void 0 !== gq ? gq : qq.textContent) && void 0 !== Eq ? Eq : "").replace(/\s+/g, " ").trim();
+        return Oq ? `${qq.tagName}:${Oq.slice(0,100)}` : null
       };
-    class kl {
+    class qY {
       constructor() {
         this.remembered = new Map, this.history = []
       }
-      enter(TT) {
-        const kT = this.history.indexOf(TT);
-        if (kT >= 0) {
-          for (const TT of this.history.splice(kT + 1)) this.remembered.delete(TT);
+      enter(qq) {
+        const Eq = this.history.indexOf(qq);
+        if (Eq >= 0) {
+          for (const qq of this.history.splice(Eq + 1)) this.remembered.delete(qq);
           return !0
         }
-        return this.remembered.delete(TT), this.history.push(TT), this.history.length > 32 && this.forget(this.history[0]), !1
+        return this.remembered.delete(qq), this.history.push(qq), this.history.length > 32 && this.forget(this.history[0]), !1
       }
-      forget(TT) {
-        this.remembered.delete(TT);
-        const kT = this.history.indexOf(TT);
-        kT >= 0 && this.history.splice(kT, 1)
+      forget(qq) {
+        this.remembered.delete(qq);
+        const Eq = this.history.indexOf(qq);
+        Eq >= 0 && this.history.splice(Eq, 1)
       }
-      remember(TT, kT, cT, lT) {
-        const MT = Tl(kT),
-          KT = (0, UT.y)(kT),
-          OT = null !== KT && ((TT, kT) => {
-            let cT = 0;
-            for (const lT of TT.querySelectorAll("[data-pad-key], [href]"))
-              if ((lT.getAttribute("data-pad-key") === kT || lT.getAttribute("href") === kT) && (cT++, cT > 1)) return !0;
+      remember(qq, Eq, gq, Yq) {
+        const lq = Dg(Eq),
+          Oq = (0, Fq.F)(Eq),
+          mq = null !== Oq && ((qq, Eq) => {
+            let gq = 0;
+            for (const Yq of qq.querySelectorAll("[data-pad-key], [href]"))
+              if ((Yq.getAttribute("data-pad-key") === Eq || Yq.getAttribute("href") === Eq) && (gq++, gq > 1)) return !0;
             return !1
-          })(cT, KT) ? Math.max(0, this.twins(lT(), KT).indexOf(kT)) : 0;
-        this.remembered.set(TT, {
-          element: new WeakRef(kT),
-          identity: MT,
-          ordinal: OT
+          })(gq, Oq) ? Math.max(0, this.twins(Yq(), Oq).indexOf(Eq)) : 0;
+        this.remembered.set(qq, {
+          element: new WeakRef(Eq),
+          identity: lq,
+          ordinal: mq
         })
       }
-      has(TT) {
-        return this.remembered.has(TT)
+      has(qq) {
+        return this.remembered.has(qq)
       }
-      recall(TT, kT) {
-        var cT, lT;
-        const MT = this.remembered.get(TT);
-        if (!MT) return null;
-        const KT = MT.element.deref();
-        if (KT && kT.includes(KT)) return KT;
-        if (null === MT.identity) return null;
-        const OT = this.twins(kT, MT.identity);
-        return null !== (cT = null !== (lT = OT[MT.ordinal]) && void 0 !== lT ? lT : OT[0]) && void 0 !== cT ? cT : null
+      recall(qq, Eq) {
+        var gq, Yq;
+        const lq = this.remembered.get(qq);
+        if (!lq) return null;
+        const Oq = lq.element.deref();
+        if (Oq && Eq.includes(Oq)) return Oq;
+        if (null === lq.identity) return null;
+        const mq = this.twins(Eq, lq.identity);
+        return null !== (gq = null !== (Yq = mq[lq.ordinal]) && void 0 !== Yq ? Yq : mq[0]) && void 0 !== gq ? gq : null
       }
-      twins(TT, kT) {
-        return TT.filter((TT => Tl(TT) === kT))
+      twins(qq, Eq) {
+        return qq.filter((qq => Dg(qq) === Eq))
       }
     }
-    var cl = cT(1289);
-    const ll = TT => {
-        const kT = [];
-        let cT = TT;
-        for (; cT && cT !== document.body;) {
-          const TT = getComputedStyle(cT).zIndex;
-          "auto" !== TT && kT.push(Number(TT) || 0), cT = cT.parentElement
+    var EY = gq(1267);
+    const gY = qq => {
+        const Eq = [];
+        let gq = qq;
+        for (; gq && gq !== document.body;) {
+          const qq = getComputedStyle(gq).zIndex;
+          "auto" !== qq && Eq.push(Number(qq) || 0), gq = gq.parentElement
         }
-        return kT.reverse()
+        return Eq.reverse()
       },
-      Ml = (TT, kT) => {
-        const cT = ((TT, kT) => {
-          const cT = Math.max(TT.length, kT.length);
-          for (let KT = 0; KT < cT; KT++) {
-            var lT, MT;
-            const cT = (null !== (lT = TT[KT]) && void 0 !== lT ? lT : 0) - (null !== (MT = kT[KT]) && void 0 !== MT ? MT : 0);
-            if (0 !== cT) return cT
+      YY = (qq, Eq) => {
+        const gq = ((qq, Eq) => {
+          const gq = Math.max(qq.length, Eq.length);
+          for (let Oq = 0; Oq < gq; Oq++) {
+            var Yq, lq;
+            const gq = (null !== (Yq = qq[Oq]) && void 0 !== Yq ? Yq : 0) - (null !== (lq = Eq[Oq]) && void 0 !== lq ? lq : 0);
+            if (0 !== gq) return gq
           }
           return 0
-        })(ll(TT), ll(kT));
-        if (0 !== cT) return cT > 0;
-        if (TT.contains(kT)) return !1;
-        if (kT.contains(TT)) return !0;
-        const lT = TT.compareDocumentPosition(kT);
-        return !!(lT & Node.DOCUMENT_POSITION_PRECEDING) || !(lT & Node.DOCUMENT_POSITION_FOLLOWING) && null
+        })(gY(qq), gY(Eq));
+        if (0 !== gq) return gq > 0;
+        if (qq.contains(Eq)) return !1;
+        if (Eq.contains(qq)) return !0;
+        const Yq = qq.compareDocumentPosition(Eq);
+        return !!(Yq & Node.DOCUMENT_POSITION_PRECEDING) || !(Yq & Node.DOCUMENT_POSITION_FOLLOWING) && null
       },
-      Kl = (TT, kT) => {
-        var cT;
-        return null !== (cT = Ml(TT.root, kT.root)) && void 0 !== cT ? cT : TT.order > kT.order
+      lY = (qq, Eq) => {
+        var gq;
+        return null !== (gq = YY(qq.root, Eq.root)) && void 0 !== gq ? gq : qq.order > Eq.order
       },
-      Ol = (TT, kT) => kT.some((kT => !kT.contains(TT) && !TT.contains(kT) && !0 === Ml(kT, TT)));
-    let yl = null,
-      fl = null,
-      xl = -1;
-    const Il = () => {
-        var TT;
-        const kT = null === (TT = document.timeline) || void 0 === TT ? void 0 : TT.currentTime,
-          cT = "number" === typeof kT ? kT : null;
-        if (null !== cT && cT === fl && xl === (0, cl.b)()) return yl;
-        let lT = null;
-        const MT = [],
-          KT = [...document.querySelectorAll("[data-pad-covers]")].filter(qT.l);
-        for (const OT of (0, cl.d)()) {
-          const TT = OT.getRoot(),
-            kT = !!TT && (0, qT.l)(TT) && !Ol(TT, KT);
-          if (OT.shown && !kT && MT.push(OT), OT.shown = kT, !TT || !kT) continue;
-          const cT = {
-            layer: OT,
-            root: TT,
-            order: OT.order
+      OY = (qq, Eq) => Eq.some((Eq => !Eq.contains(qq) && !qq.contains(Eq) && !0 === YY(Eq, qq)));
+    let mY = null,
+      xY = null,
+      AY = -1;
+    const cY = () => {
+        var qq;
+        const Eq = null === (qq = document.timeline) || void 0 === qq ? void 0 : qq.currentTime,
+          gq = "number" === typeof Eq ? Eq : null;
+        if (null !== gq && gq === xY && AY === (0, EY.e)()) return mY;
+        let Yq = null;
+        const lq = [],
+          Oq = [...document.querySelectorAll("[data-pad-covers]")].filter(eq.p);
+        for (const mq of (0, EY.g)()) {
+          const qq = mq.getRoot(),
+            Eq = !!qq && (0, eq.p)(qq) && !OY(qq, Oq);
+          if (mq.shown && !Eq && lq.push(mq), mq.shown = Eq, !qq || !Eq) continue;
+          const gq = {
+            layer: mq,
+            root: qq,
+            order: mq.order
           };
-          lT && !Kl(cT, lT) || (lT = cT)
+          Yq && !lY(gq, Yq) || (Yq = gq)
         }
-        yl = lT, fl = cT, xl = (0, cl.b)();
-        for (const OT of MT)(0, cl.g)(OT);
-        return yl
+        mY = Yq, xY = gq, AY = (0, EY.e)();
+        for (const mq of lq)(0, EY.i)(mq);
+        return mY
       },
-      Al = () => {
-        const TT = Il();
-        return !(null === TT || void 0 === TT || !TT.layer.close) && (TT.layer.close(), fl = null, !0)
+      uY = () => {
+        const qq = cY();
+        return !(null === qq || void 0 === qq || !qq.layer.close) && (qq.layer.close(), xY = null, !0)
       },
-      Cl = () => {
-        var TT, kT;
-        return null !== (TT = null === (kT = Il()) || void 0 === kT ? void 0 : kT.root) && void 0 !== TT ? TT : null
+      BY = () => {
+        var qq, Eq;
+        return null !== (qq = null === (Eq = cY()) || void 0 === Eq ? void 0 : Eq.root) && void 0 !== qq ? qq : null
       },
-      jl = TT => TT ? {
-        ...TT,
-        root: Cl()
+      WY = qq => qq ? {
+        ...qq,
+        root: BY()
       } : null;
-    let vl = null,
-      tl = null,
-      hl = (0, CT.g)().menuNavigation,
-      Nl = null;
-    const Ql = new aT;
-    let Sl = null;
-    xT.k.subscribe(CT.f, (() => {
-      const TT = (0, CT.g)().menuNavigation;
-      TT !== hl && (hl = TT, vl = null, tl = null)
+    let NY = null,
+      aY = null,
+      VY = (0, Wq.i)().menuNavigation,
+      dY = null;
+    const jY = new Qq;
+    let HY = null;
+    cq.i.subscribe(Wq.f, (() => {
+      const qq = (0, Wq.i)().menuNavigation;
+      qq !== VY && (VY = qq, NY = null, aY = null)
     }));
-    const Dl = () => {
-        var TT;
-        return null !== (TT = vl) && void 0 !== TT ? TT : (0, CT.g)().menuNavigation
+    const oY = () => {
+        var qq;
+        return null !== (qq = NY) && void 0 !== qq ? qq : (0, Wq.i)().menuNavigation
       },
-      al = TT => {
-        if (wl()) {
-          if (Nl = jl(TT), "hybrid" === Dl()) return Ql.lock(), void(tl = tl ? null : Cl());
-          vl = "focus" === Dl() ? "cursor" : "focus"
+      PY = qq => {
+        if (rY()) {
+          if (dY = WY(qq), "hybrid" === oY()) return jY.lock(), void(aY = aY ? null : BY());
+          NY = "focus" === oY() ? "cursor" : "focus"
         }
       },
-      Fl = () => {
-        const TT = Nl;
-        return Nl = null, TT
+      QY = () => {
+        const qq = dY;
+        return dY = null, qq
       };
-    let rl = {
+    let yY = {
       root: null,
       firstSeenMs: -1 / 0,
       atMs: -1 / 0,
       has: !1
     };
-    const Pl = function(TT) {
-        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
-        const cT = rl.root === TT,
-          lT = cT ? rl.firstSeenMs : kT,
-          MT = rl.has || kT - lT > 1e3;
-        return (!cT || !MT || kT - rl.atMs > 250) && (rl = {
-          root: TT,
-          firstSeenMs: lT,
-          atMs: kT,
-          has: (0, qT.i)(TT)
-        }), rl.has
+    const tY = function(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
+        const gq = yY.root === qq,
+          Yq = gq ? yY.firstSeenMs : Eq,
+          lq = yY.has || Eq - Yq > 1e3;
+        return (!gq || !lq || Eq - yY.atMs > 250) && (yY = {
+          root: qq,
+          firstSeenMs: Yq,
+          atMs: Eq,
+          has: (0, eq.k)(qq)
+        }), yY.has
       },
-      wl = () => {
-        const TT = Cl();
-        return null !== TT && Pl(TT)
+      rY = () => {
+        const qq = BY();
+        return null !== qq && tY(qq)
       },
-      ml = () => {
-        const TT = Il();
-        return tl && (null === TT || void 0 === TT ? void 0 : TT.root) !== tl && (tl = null), (TT => {
+      vY = () => {
+        const qq = cY();
+        return aY && (null === qq || void 0 === qq ? void 0 : qq.root) !== aY && (aY = null), (qq => {
           let {
-            mode: kT,
-            hasLayer: cT,
-            hasCandidates: lT,
-            hybridCursorEngaged: MT
-          } = TT;
-          return cT ? "cursor" !== kT && lT() ? "hybrid" === kT && MT ? "cursor" : "focus" : "cursor" : null
+            mode: Eq,
+            hasLayer: gq,
+            hasCandidates: Yq,
+            hybridCursorEngaged: lq
+          } = qq;
+          return gq ? "cursor" !== Eq && Yq() ? "hybrid" === Eq && lq ? "cursor" : "focus" : "cursor" : null
         })({
-          mode: Dl(),
-          hasLayer: null !== TT,
-          hasCandidates: () => null !== TT && Pl(TT.root),
-          hybridCursorEngaged: null !== tl
+          mode: oY(),
+          hasLayer: null !== qq,
+          hasCandidates: () => null !== qq && tY(qq.root),
+          hybridCursorEngaged: null !== aY
         })
       },
-      bl = () => "hybrid" === Dl() && wl(),
-      zl = "pad-focused";
-    var Jl = cT(4535),
-      ol = cT(4975);
-    const Hl = "[data-pad-destructive]",
-      el = `${Hl}, [data-pad-back]`,
-      Gl = TT => ({
-        rect: TT.getBoundingClientRect(),
-        destructive: TT.matches(Hl),
-        closes: null !== TT.closest("[data-pad-close-button]"),
-        unavailable: TT.matches("[data-pad-unavailable]")
+      hY = () => "hybrid" === oY() && rY(),
+      nY = "pad-focused";
+    var bY = gq(4372),
+      iY = gq(4866);
+    const ZY = "[data-pad-destructive]",
+      fY = `${ZY}, [data-pad-back]`,
+      MY = qq => ({
+        rect: qq.getBoundingClientRect(),
+        destructive: qq.matches(ZY),
+        closes: null !== qq.closest("[data-pad-close-button]"),
+        unavailable: qq.matches("[data-pad-unavailable]")
       }),
-      Vl = TT => {
+      TY = qq => {
         let {
-          destructive: kT,
-          closes: cT,
-          unavailable: lT
-        } = TT;
-        return kT ? cT ? 2 : 3 : lT ? 1 : 0
+          destructive: Eq,
+          closes: gq,
+          unavailable: Yq
+        } = qq;
+        return Eq ? gq ? 2 : 3 : Yq ? 1 : 0
       },
-      El = TT => {
-        let kT = -1;
-        for (let cT = 0; cT < TT.length; cT++) {
-          if (kT < 0) {
-            kT = cT;
+      zY = qq => {
+        let Eq = -1;
+        for (let gq = 0; gq < qq.length; gq++) {
+          if (Eq < 0) {
+            Eq = gq;
             continue
           }
-          const lT = TT[cT],
-            MT = TT[kT];
-          Vl(lT) === Vl(MT) ? mc(lT.rect, MT.rect) < 0 && (kT = cT) : Vl(lT) < Vl(MT) && (kT = cT)
+          const Yq = qq[gq],
+            lq = qq[Eq];
+          TY(Yq) === TY(lq) ? vg(Yq.rect, lq.rect) < 0 && (Eq = gq) : TY(Yq) < TY(lq) && (Eq = gq)
         }
-        return kT
+        return Eq
       },
-      Zl = "[data-pad-tabs]",
-      ul = "[data-pad-tab]",
-      Xl = (TT, kT) => {
-        const cT = TT.querySelector(`${ul}[data-pad-selected='true']`);
-        return cT && kT.includes(cT) ? cT : null
+      SY = "[data-pad-tabs]",
+      pY = "[data-pad-tab]",
+      GY = (qq, Eq) => {
+        const gq = qq.querySelector(`${pY}[data-pad-selected='true']`);
+        return gq && Eq.includes(gq) ? gq : null
       },
-      dl = (TT, kT) => {
-        let cT = kT;
-        for (let lT = kT.parentElement; lT && !lT.contains(TT); lT = lT.parentElement) cT = lT;
-        return cT
+      LY = (qq, Eq) => {
+        let gq = Eq;
+        for (let Yq = Eq.parentElement; Yq && !Yq.contains(qq); Yq = Yq.parentElement) gq = Yq;
+        return gq
       };
-    class Ll {
+    class JY {
       constructor() {
         this.contentReturn = null
       }
-      redirect(TT, kT, cT, lT) {
-        var MT, KT;
-        const OT = TT.closest(Zl),
-          yT = kT.closest(Zl);
-        var fT;
-        if (yT && yT !== OT) return OT || (this.contentReturn = new WeakRef(TT)), null !== (fT = Xl(yT, cT)) && void 0 !== fT ? fT : kT;
-        if (!OT || yT) return kT;
-        const xT = dl(TT, kT),
-          IT = null === (MT = this.contentReturn) || void 0 === MT ? void 0 : MT.deref();
-        return IT && xT.contains(IT) && cT.includes(IT) ? IT : null !== (KT = this.pickRegionStart(xT, bT(kT, "y", lT), cT)) && void 0 !== KT ? KT : kT
+      redirect(qq, Eq, gq, Yq) {
+        var lq, Oq;
+        const mq = qq.closest(SY),
+          xq = Eq.closest(SY);
+        var Aq;
+        if (xq && xq !== mq) return mq || (this.contentReturn = new WeakRef(qq)), null !== (Aq = GY(xq, gq)) && void 0 !== Aq ? Aq : Eq;
+        if (!mq || xq) return Eq;
+        const cq = LY(qq, Eq),
+          uq = null === (lq = this.contentReturn) || void 0 === lq ? void 0 : lq.deref();
+        return uq && cq.contains(uq) && gq.includes(uq) ? uq : null !== (Oq = this.pickRegionStart(cq, nq(Eq, "y", Yq), gq)) && void 0 !== Oq ? Oq : Eq
       }
-      findTabContent(TT, kT, cT) {
-        const lT = TT.closest(Zl);
-        if (!lT || !TT.matches(ul) || lT.contains(kT)) return null;
-        const MT = kT.closest(Zl);
-        if (MT && Number(MT.dataset.padTabs) <= Number(lT.dataset.padTabs)) return null;
-        const KT = dl(TT, kT);
-        return cT.some((TT => KT.contains(TT) && !TT.closest(el))) || !kT.closest(el) ? KT : null
+      findTabContent(qq, Eq, gq) {
+        const Yq = qq.closest(SY);
+        if (!Yq || !qq.matches(pY) || Yq.contains(Eq)) return null;
+        const lq = Eq.closest(SY);
+        if (lq && Number(lq.dataset.padTabs) <= Number(Yq.dataset.padTabs)) return null;
+        const Oq = LY(qq, Eq);
+        return gq.some((qq => Oq.contains(qq) && !qq.closest(fY))) || !Eq.closest(fY) ? Oq : null
       }
-      pickContentStart(TT, kT, cT) {
-        return this.contentReturn = null, this.pickRegionStart(TT, bT(TT, "y", cT), kT)
+      pickContentStart(qq, Eq, gq) {
+        return this.contentReturn = null, this.pickRegionStart(qq, nq(qq, "y", gq), Eq)
       }
-      pickReplacedContentStart(TT, kT, cT, lT) {
-        if (!kT.contains(TT)) return null;
-        const MT = dl(kT, TT),
-          KT = cT.filter((TT => kT.contains(TT) && !MT.contains(TT) && !TT.closest(el)));
-        return 0 === KT.length ? null : (this.contentReturn = null, this.pickRegionStart(kT, bT(KT[0], "y", lT), KT))
+      pickReplacedContentStart(qq, Eq, gq, Yq) {
+        if (!Eq.contains(qq)) return null;
+        const lq = LY(Eq, qq),
+          Oq = gq.filter((qq => Eq.contains(qq) && !lq.contains(qq) && !qq.closest(fY)));
+        return 0 === Oq.length ? null : (this.contentReturn = null, this.pickRegionStart(Eq, nq(Oq[0], "y", Yq), Oq))
       }
-      backToStrip(TT, kT, cT) {
-        if (TT.closest(Zl)) return null;
-        const lT = Ec(cT);
-        for (const MT of cT.querySelectorAll(Zl)) {
-          if (Number(MT.dataset.padTabs) <= 1 || MT === lT) continue;
-          const KT = Xl(MT, kT),
-            OT = KT ? dl(TT, MT).parentElement : null;
-          if (KT && OT && OT !== cT && cT.contains(OT)) return this.contentReturn = new WeakRef(TT), KT
+      backToStrip(qq, Eq, gq) {
+        if (qq.closest(SY)) return null;
+        const Yq = zg(gq);
+        for (const lq of gq.querySelectorAll(SY)) {
+          if (Number(lq.dataset.padTabs) <= 1 || lq === Yq) continue;
+          const Oq = GY(lq, Eq),
+            mq = Oq ? LY(qq, lq).parentElement : null;
+          if (Oq && mq && mq !== gq && gq.contains(mq)) return this.contentReturn = new WeakRef(qq), Oq
         }
         return null
       }
-      pickRegionStart(TT, kT, cT) {
-        const lT = GT(kT),
-          MT = TT => {
-            const kT = cT.filter((kT => TT.contains(kT) && !kT.closest(Zl) && VT(kT.getBoundingClientRect(), lT))),
-              MT = El(kT.map(Gl));
-            return MT >= 0 ? kT[MT] : null
+      pickRegionStart(qq, Eq, gq) {
+        const Yq = Tq(Eq),
+          lq = qq => {
+            const Eq = gq.filter((Eq => qq.contains(Eq) && !Eq.closest(SY) && zq(Eq.getBoundingClientRect(), Yq))),
+              lq = zY(Eq.map(MY));
+            return lq >= 0 ? Eq[lq] : null
           };
-        for (const KT of (0, qT.f)(TT)) {
-          const TT = MT(KT);
-          if (TT) return TT
+        for (const Oq of (0, eq.h)(qq)) {
+          const qq = lq(Oq);
+          if (qq) return qq
         }
-        for (const KT of TT.querySelectorAll(Zl)) {
-          const TT = Xl(KT, cT);
-          if (TT) return TT
+        for (const Oq of qq.querySelectorAll(SY)) {
+          const qq = GY(Oq, gq);
+          if (qq) return qq
         }
-        return MT(TT)
+        return lq(qq)
       }
     }
-    const Rl = "[data-pad-default-focus], .Dropdown-option.is-selected",
-      gl = ".Dropdown-root.is-open > .Dropdown-menu",
-      Ul = "[data-pad-no-step-in]",
-      Yl = "[data-pad-tabs]",
-      Bl = "[data-pad-press-area]",
-      Wl = TT => {
-        let kT = TT;
-        for (let cT = 0; kT && cT <= 4; cT++, kT = kT.parentElement) {
-          const cT = kT.querySelector(".CircleInfo");
-          if (cT) return kT === TT || kT.querySelectorAll(qT.d).length <= 1 ? cT : null;
-          if (kT !== TT && kT.querySelectorAll(qT.d).length > 1) return null
+    const kY = "[data-pad-default-focus], .Dropdown-option.is-selected",
+      RY = ".Dropdown-root.is-open > .Dropdown-menu",
+      UY = "[data-pad-no-step-in]",
+      FY = "[data-pad-tabs]",
+      sY = "[data-pad-press-area]",
+      XY = qq => {
+        let Eq = qq;
+        for (let gq = 0; Eq && gq <= 4; gq++, Eq = Eq.parentElement) {
+          const gq = Eq.querySelector(".CircleInfo");
+          if (gq) return Eq === qq || Eq.querySelectorAll(eq.e).length <= 1 ? gq : null;
+          if (Eq !== qq && Eq.querySelectorAll(eq.e).length > 1) return null
         }
         return null
       },
-      nl = (TT, kT, cT) => {
-        (0, UT.k)(TT, kT, cT);
-        const lT = null !== TT && void 0 !== TT && TT.isConnected ? Wl(TT) : null,
-          MT = Wl(kT);
-        lT !== MT && (0, UT.k)(lT, MT, MT ? (0, UT.w)(MT) : cT, {
-          leaveBelow: TT,
-          enterBelow: kT
+      wY = (qq, Eq, gq) => {
+        (0, Fq.s)(qq, Eq, gq);
+        const Yq = null !== qq && void 0 !== qq && qq.isConnected ? XY(qq) : null,
+          lq = XY(Eq);
+        Yq !== lq && (0, Fq.s)(Yq, lq, lq ? (0, Fq.D)(lq) : gq, {
+          leaveBelow: qq,
+          enterBelow: Eq
         })
       },
-      pl = TT => TT.getBoundingClientRect(),
-      il = (TT, kT, cT) => {
-        const lT = new Set(cT);
-        for (let MT = TT; MT; MT = MT === kT ? null : MT.parentElement)
-          if (lT.has(MT)) return MT;
+      KY = qq => qq.getBoundingClientRect(),
+      CY = (qq, Eq, gq) => {
+        const Yq = new Set(gq);
+        for (let lq = qq; lq; lq = lq === Eq ? null : lq.parentElement)
+          if (Yq.has(lq)) return lq;
         return null
       },
-      ql = (TT, kT) => !TT.root || TT.root === kT || kT.matches(gl) && TT.root.contains(kT);
-    const sl = new class {
+      IY = (qq, Eq) => !qq.root || qq.root === Eq || Eq.matches(RY) && qq.root.contains(Eq);
+    const eY = new class {
       constructor() {
-        this.focused = null, this.layerKey = null, this.layerRoot = null, this.memory = new kl, this.tabStripNav = new Ll, this.movedInLayer = !1, this.scrolledInLayer = !1, this.restoredFromMemory = !1, this.restoreOnFocusLoss = !1, this.confirmPressedOn = null, this.confirmRepeatKey = null, this.confirmRepeated = !1, this.confirmRepeat = (0, tT.e)(vT.t), this.dpadRepeats = new Map(vT.D.map((TT => [TT, (0, tT.e)(vT.E)]))), this.stickRepeat = new vT.c((0, tT.e)(vT.hb)), this.lastRefocusCheckMs = -1 / 0, this.enteredLayerAtMs = 0, this.lastFocusedCentre = null, this.lastActivatedKey = null, this.lastActivated = null, this.lastActivatedAtMs = -1 / 0, this.pendingFocus = null, this.tabOpenWait = null, this.retryMove = null, this.scrollRemainder = {
+        this.focused = null, this.layerKey = null, this.layerRoot = null, this.memory = new qY, this.tabStripNav = new JY, this.movedInLayer = !1, this.scrolledInLayer = !1, this.restoredFromMemory = !1, this.restoreOnFocusLoss = !1, this.confirmPressedOn = null, this.confirmRepeatKey = null, this.confirmRepeated = !1, this.confirmRepeat = (0, Vq.b)(aq.x), this.dpadRepeats = new Map(aq.C.map((qq => [qq, (0, Vq.b)(aq.F)]))), this.stickRepeat = new aq.c((0, Vq.b)(aq.ib)), this.lastRefocusCheckMs = -1 / 0, this.enteredLayerAtMs = 0, this.lastFocusedCentre = null, this.lastActivatedKey = null, this.lastActivated = null, this.lastActivatedAtMs = -1 / 0, this.pendingFocus = null, this.tabOpenWait = null, this.retryMove = null, this.scrollRemainder = {
           x: 0,
           y: 0
         }, this.wasActive = !1, this.layerKind = null, this.pressGuardUntilMs = -1 / 0, this.pressGuardExtends = !1, this.listeners = new Set, this.dropdownLayers = new WeakMap, this.dropdownLayerCounter = 0
       }
       install() {
-        const TT = AT.d.register({
+        const qq = Bq.c.register({
             name: "focus",
-            isActive: () => (0, jT.i)() && "focus" === ml(),
-            onFrame: TT => {
-              this.onFrame(TT)
+            isActive: () => (0, Nq.k)() && "focus" === vY(),
+            onFrame: qq => {
+              this.onFrame(qq)
             },
             onDeactivate: () => {
               this.deactivate()
             },
-            wakePressActs: TT => (0, AT.f)(TT) || TT === (0, IT.j)("menuConfirm") && (0, UT.E)((0, jT.b)())
+            wakePressActs: qq => (0, Bq.g)(qq) || qq === (0, uq.i)("menuConfirm") && (0, Fq.H)((0, Nq.e)())
           }),
-          kT = (0, cl.j)((TT => {
-            const kT = (0, cl.o)(TT);
-            null === TT.memoryKey && this.memory.forget(kT), kT === this.layerKey && (this.layerKey = null)
+          Eq = (0, EY.m)((qq => {
+            const Eq = (0, EY.t)(qq);
+            null === qq.memoryKey && this.memory.forget(Eq), Eq === this.layerKey && (this.layerKey = null)
           }));
-        let cT = -1 / 0;
-        const lT = OT.e.onFrame((TT => {
-            (0, jT.i)() || TT.timestampMs - cT < 100 || (cT = TT.timestampMs, Il())
+        let gq = -1 / 0;
+        const Yq = mq.h.onFrame((qq => {
+            (0, Nq.k)() || qq.timestampMs - gq < 100 || (gq = qq.timestampMs, cY())
           })),
-          MT = TT => {
-            TT.isTrusted && TT.target instanceof Element && OT.e.getActivePad() && this.noteChosenStop(TT.target)
+          lq = qq => {
+            qq.isTrusted && qq.target instanceof Element && mq.h.getActivePad() && this.noteChosenStop(qq.target)
           };
-        return document.addEventListener("click", MT, !0), () => {
-          TT(), kT(), lT(), document.removeEventListener("click", MT, !0), this.deactivate()
+        return document.addEventListener("click", lq, !0), () => {
+          qq(), Eq(), Yq(), document.removeEventListener("click", lq, !0), this.deactivate()
         }
       }
-      noteChosenStop(TT) {
-        var kT, cT;
-        const lT = Il();
-        if (!lT || !lT.root.contains(TT)) return;
-        const MT = null !== (kT = null === (cT = TT.closest(".Dropdown-root")) || void 0 === cT ? void 0 : cT.querySelector(".Dropdown-control")) && void 0 !== kT ? kT : TT,
-          KT = il(MT, lT.root, this.getEnabledCandidates(lT.root));
-        if (!KT) return;
-        const OT = (0, cl.o)(lT.layer);
-        OT === this.layerKey && lT.root === this.layerRoot || this.beginLayer(lT, OT), this.wasActive ? this.setFocus(KT, {
+      noteChosenStop(qq) {
+        var Eq, gq;
+        const Yq = cY();
+        if (!Yq || !Yq.root.contains(qq)) return;
+        const lq = null !== (Eq = null === (gq = qq.closest(".Dropdown-root")) || void 0 === gq ? void 0 : gq.querySelector(".Dropdown-control")) && void 0 !== Eq ? Eq : qq,
+          Oq = CY(lq, Yq.root, this.getEnabledCandidates(Yq.root));
+        if (!Oq) return;
+        const mq = (0, EY.t)(Yq.layer);
+        mq === this.layerKey && Yq.root === this.layerRoot || this.beginLayer(Yq, mq), this.wasActive ? this.setFocus(Oq, {
           scroll: !1,
           byUser: !0
-        }) : (this.pendingFocus = null, this.movedInLayer = !0, this.restoredFromMemory = !1, this.restoreOnFocusLoss = !1, this.focused = KT, this.lastFocusedCentre = (0, UT.w)(KT), this.rememberFocus(KT), this.notify())
+        }) : (this.pendingFocus = null, this.movedInLayer = !0, this.restoredFromMemory = !1, this.restoreOnFocusLoss = !1, this.focused = Oq, this.lastFocusedCentre = (0, Fq.D)(Oq), this.rememberFocus(Oq), this.notify())
       }
       getFocused() {
         return this.focused
@@ -2666,513 +2762,513 @@ export const modules = {
       isActive() {
         return this.wasActive
       }
-      onChange(TT) {
-        return this.listeners.add(TT), () => {
-          this.listeners.delete(TT)
+      onChange(qq) {
+        return this.listeners.add(qq), () => {
+          this.listeners.delete(qq)
         }
       }
       notify() {
-        for (const TT of this.listeners) TT()
+        for (const qq of this.listeners) qq()
       }
       deactivate() {
-        var TT;
+        var qq;
         if (this.wasActive) {
           this.wasActive = !1, this.layerKind = null, this.confirmPressedOn = null, this.retryMove = null, this.pendingFocus = null;
-          for (const TT of this.dpadRepeats.values()) TT.reset();
-          this.stickRepeat.reset(), null !== (TT = this.focused) && void 0 !== TT && TT.isConnected && nl(this.focused, null, (0, UT.w)(this.focused)), this.notify()
+          for (const qq of this.dpadRepeats.values()) qq.reset();
+          this.stickRepeat.reset(), null !== (qq = this.focused) && void 0 !== qq && qq.isConnected && wY(this.focused, null, (0, Fq.D)(this.focused)), this.notify()
         }
       }
-      setFocus(TT) {
-        var kT;
+      setFocus(qq) {
+        var Eq;
         let {
-          scroll: cT = !0,
-          byUser: lT = !1
+          scroll: gq = !0,
+          byUser: Yq = !1
         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (lT && (this.pendingFocus = null, this.movedInLayer = !0, this.restoredFromMemory = !1, this.restoreOnFocusLoss = !1), TT === this.focused) return;
-        const MT = null !== (kT = this.focused) && void 0 !== kT && kT.isConnected ? this.focused : null;
-        if (this.focused = TT, TT) {
-          cT && (TT.classList.add(zl), TT.scrollIntoView({
+        if (Yq && (this.pendingFocus = null, this.movedInLayer = !0, this.restoredFromMemory = !1, this.restoreOnFocusLoss = !1), qq === this.focused) return;
+        const lq = null !== (Eq = this.focused) && void 0 !== Eq && Eq.isConnected ? this.focused : null;
+        if (this.focused = qq, qq) {
+          gq && (qq.classList.add(nY), qq.scrollIntoView({
             block: "nearest",
             inline: "nearest",
             behavior: "instant"
-          })), lT && ((TT, kT) => {
-            const cT = kT.closest("[data-pad-friends-column]");
-            cT && TT && !cT.contains(TT) && (Rc = new WeakRef(TT))
-          })(MT, TT);
-          const kT = (0, UT.w)(TT);
-          this.lastFocusedCentre = kT, this.movedInLayer && this.rememberFocus(TT), nl(MT, TT, kT), "false" === TT.getAttribute("aria-pressed") && TT.closest("[data-pad-select-on-focus]") && (0, UT.b)(TT)
-        } else MT && nl(MT, null, (0, UT.w)(MT));
+          })), Yq && ((qq, Eq) => {
+            const gq = Eq.closest("[data-pad-friends-column]");
+            gq && qq && !gq.contains(qq) && (kg = new WeakRef(qq))
+          })(lq, qq);
+          const Eq = (0, Fq.D)(qq);
+          this.lastFocusedCentre = Eq, this.movedInLayer && this.rememberFocus(qq), wY(lq, qq, Eq), "false" === qq.getAttribute("aria-pressed") && qq.closest("[data-pad-select-on-focus]") && (0, Fq.b)(qq)
+        } else lq && wY(lq, null, (0, Fq.D)(lq));
         this.notify()
       }
-      rememberFocus(TT) {
-        const kT = this.layerRoot;
-        this.layerKey && kT && this.memory.remember(this.layerKey, TT, kT, (() => this.getEnabledCandidates(kT)))
+      rememberFocus(qq) {
+        const Eq = this.layerRoot;
+        this.layerKey && Eq && this.memory.remember(this.layerKey, qq, Eq, (() => this.getEnabledCandidates(Eq)))
       }
-      noteCursorActivation(TT) {
-        const kT = Il();
-        if (!kT || !kT.root.contains(TT)) return;
-        const cT = this.getEnabledCandidates(kT.root),
-          lT = new Set(cT);
-        let MT = TT;
-        for (; MT && !lT.has(MT);) MT = MT === kT.root ? null : MT.parentElement;
-        if (!(MT instanceof HTMLElement)) return;
-        const KT = (0, cl.o)(kT.layer);
-        this.memory.enter(KT), this.memory.remember(KT, MT, kT.root, (() => cT))
+      noteCursorActivation(qq) {
+        const Eq = cY();
+        if (!Eq || !Eq.root.contains(qq)) return;
+        const gq = this.getEnabledCandidates(Eq.root),
+          Yq = new Set(gq);
+        let lq = qq;
+        for (; lq && !Yq.has(lq);) lq = lq === Eq.root ? null : lq.parentElement;
+        if (!(lq instanceof HTMLElement)) return;
+        const Oq = (0, EY.t)(Eq.layer);
+        this.memory.enter(Oq), this.memory.remember(Oq, lq, Eq.root, (() => gq))
       }
-      notePageEnteredByCursor(TT) {
-        return this.memory.enter(TT)
+      notePageEnteredByCursor(qq) {
+        return this.memory.enter(qq)
       }
-      recallStop(TT, kT) {
-        return this.findRemembered(TT, kT)
+      recallStop(qq, Eq) {
+        return this.findRemembered(qq, Eq)
       }
-      focusWhenFound(TT) {
-        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500,
-          cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      focusWhenFound(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500,
+          gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
         this.pendingFocus = {
-          find: TT,
-          untilMs: performance.now() + kT,
-          holdWhile: cT
+          find: qq,
+          untilMs: performance.now() + Eq,
+          holdWhile: gq
         }
       }
-      getEnabledCandidates(TT) {
-        return (0, qT.e)(TT).filter((TT => !(0, qT.n)(TT)))
+      getEnabledCandidates(qq) {
+        return (0, eq.f)(qq).filter((qq => !(0, eq.w)(qq)))
       }
-      onFrame(TT) {
-        var kT;
-        const cT = Il();
-        if (!cT) return;
-        const lT = null !== (kT = this.findOpenDropdown(cT)) && void 0 !== kT ? kT : cT,
-          MT = performance.now(),
-          KT = (0, cl.o)(lT.layer);
-        if (KT !== this.layerKey || lT.root !== this.layerRoot) {
-          const kT = this.focused;
-          if (null !== this.layerKey && lT.root === this.layerRoot && kT && (0, qT.m)(kT, lT.root)) this.continueLayer(KT, kT), this.wasActive || this.resume(lT.root, MT);
+      onFrame(qq) {
+        var Eq;
+        const gq = cY();
+        if (!gq) return;
+        const Yq = null !== (Eq = this.findOpenDropdown(gq)) && void 0 !== Eq ? Eq : gq,
+          lq = performance.now(),
+          Oq = (0, EY.t)(Yq.layer);
+        if (Oq !== this.layerKey || Yq.root !== this.layerRoot) {
+          const Eq = this.focused;
+          if (null !== this.layerKey && Yq.root === this.layerRoot && Eq && (0, eq.t)(Eq, Yq.root)) this.continueLayer(Oq, Eq), this.wasActive || this.resume(Yq.root, lq);
           else {
-            const kT = !this.wasActive && !TT.wokeDevice,
-              OT = "death" === this.layerKind || kT,
-              yT = this.enterLayer(lT, KT);
-            "popup" !== lT.layer.kind || lT !== cT || yT ? "menu" === lT.layer.kind && OT && "inGame" === fT.e.get("gameState") && !(0, yc.f)(3e3) && (this.pressGuardExtends = !0, this.pressGuardUntilMs = MT + Jl.b) : (this.pressGuardExtends = kT, this.pressGuardUntilMs = MT + (kT ? Jl.b : OT ? 500 : 250))
+            const Eq = !this.wasActive && !qq.wokeDevice,
+              mq = "death" === this.layerKind || Eq,
+              xq = this.enterLayer(Yq, Oq);
+            "popup" !== Yq.layer.kind || Yq !== gq || xq ? "menu" === Yq.layer.kind && mq && "inGame" === Aq.b.get("gameState") && !(0, mg.g)(3e3) && (this.pressGuardExtends = !0, this.pressGuardUntilMs = lq + bY.b) : (this.pressGuardExtends = Eq, this.pressGuardUntilMs = lq + (Eq ? bY.b : mq ? 500 : 250))
           }
-        } else this.wasActive || this.resume(lT.root, MT);
-        if (this.layerKind = lT.layer.kind, this.wasActive || (this.wasActive = !0, this.notify()), TT.wokeDevice && this.focusPointedStop(lT.root), this.validateFocus(lT, MT), MT < this.pressGuardUntilMs && this.pressGuardExtends && (TT.wasPressed((0, IT.j)("menuConfirm")) || TT.wasPressed((0, IT.j)("menuBack"))) && (this.pressGuardUntilMs = MT + Jl.b), MT >= this.pressGuardUntilMs && this.handleButtons(TT, lT)) return;
-        const OT = "hybrid" === Dl();
-        if (OT && (TT => {
-            const kT = Cl();
-            return kT !== Sl && (Sl = kT, Ql.lock()), Ql.update(TT, (0, CT.g)().moveDeadzone)
-          })(TT.leftStick)) return yT = this.getHandoff(), Nl = jl(yT), tl = Cl(), void AT.d.handOffHeldInput();
-        var yT;
-        this.handleDirections(TT, lT, MT, !OT), this.handleScroll(TT, lT)
+        } else this.wasActive || this.resume(Yq.root, lq);
+        if (this.layerKind = Yq.layer.kind, this.wasActive || (this.wasActive = !0, this.notify()), qq.wokeDevice && this.focusPointedStop(Yq.root), this.validateFocus(Yq, lq), lq < this.pressGuardUntilMs && this.pressGuardExtends && (qq.wasPressed((0, uq.i)("menuConfirm")) || qq.wasPressed((0, uq.i)("menuBack"))) && (this.pressGuardUntilMs = lq + bY.b), lq >= this.pressGuardUntilMs && this.handleButtons(qq, Yq)) return;
+        const mq = "hybrid" === oY();
+        if (mq && (qq => {
+            const Eq = BY();
+            return Eq !== HY && (HY = Eq, jY.lock()), jY.update(qq, (0, Wq.i)().moveDeadzone)
+          })(qq.leftStick)) return xq = this.getHandoff(), dY = WY(xq), aY = BY(), void Bq.c.handOffHeldInput();
+        var xq;
+        this.handleDirections(qq, Yq, lq, !mq), this.handleScroll(qq, Yq)
       }
-      findOpenDropdown(TT) {
-        const kT = TT.root.querySelector(gl);
-        if (!kT || !(0, qT.l)(kT)) return null;
-        let cT = this.dropdownLayers.get(kT);
-        return cT || (this.dropdownLayerCounter++, cT = {
+      findOpenDropdown(qq) {
+        const Eq = qq.root.querySelector(RY);
+        if (!Eq || !(0, eq.p)(Eq)) return null;
+        let gq = this.dropdownLayers.get(Eq);
+        return gq || (this.dropdownLayerCounter++, gq = {
           id: `dropdown-${this.dropdownLayerCounter}`,
-          kind: TT.layer.kind,
-          getRoot: () => kT,
+          kind: qq.layer.kind,
+          getRoot: () => Eq,
           close: () => {
-            (0, UT.i)(kT)
+            (0, Fq.l)(Eq)
           },
           memoryKey: null
-        }, this.dropdownLayers.set(kT, cT)), {
-          layer: cT,
-          root: kT,
-          order: TT.order
+        }, this.dropdownLayers.set(Eq, gq)), {
+          layer: gq,
+          root: Eq,
+          order: qq.order
         }
       }
-      focusPointedStop(TT) {
-        const kT = (0, jT.b)(),
-          cT = kT ? document.elementFromPoint(kT.x, kT.y) : null;
-        if (!cT || !TT.contains(cT)) return;
-        const lT = il(cT, TT, this.getEnabledCandidates(TT));
-        lT && this.setFocus(lT, {
+      focusPointedStop(qq) {
+        const Eq = (0, Nq.e)(),
+          gq = Eq ? document.elementFromPoint(Eq.x, Eq.y) : null;
+        if (!gq || !qq.contains(gq)) return;
+        const Yq = CY(gq, qq, this.getEnabledCandidates(qq));
+        Yq && this.setFocus(Yq, {
           scroll: !1,
           byUser: !0
         })
       }
-      enterLayer(TT, kT) {
-        const cT = this.beginLayer(TT, kT),
-          lT = Fl();
-        return lT && ql(lT, TT.root) ? (this.takeOver(TT.root, lT, this.enteredLayerAtMs), cT) : (this.restoreLayerFocus(TT.root, cT), cT)
+      enterLayer(qq, Eq) {
+        const gq = this.beginLayer(qq, Eq),
+          Yq = QY();
+        return Yq && IY(Yq, qq.root) ? (this.takeOver(qq.root, Yq, this.enteredLayerAtMs), gq) : (this.restoreLayerFocus(qq.root, gq), gq)
       }
-      beginLayer(TT, kT) {
-        return this.layerKey = kT, this.layerRoot = TT.root, this.lastActivatedKey = null, this.movedInLayer = !1, this.scrolledInLayer = !1, this.restoreOnFocusLoss = !1, this.retryMove = null, this.pendingFocus = null, this.confirmPressedOn = null, this.lastRefocusCheckMs = -1 / 0, this.pressGuardUntilMs = -1 / 0, this.pressGuardExtends = !1, this.enteredLayerAtMs = performance.now(), this.lastFocusedCentre = null, this.memory.enter(kT)
+      beginLayer(qq, Eq) {
+        return this.layerKey = Eq, this.layerRoot = qq.root, this.lastActivatedKey = null, this.movedInLayer = !1, this.scrolledInLayer = !1, this.restoreOnFocusLoss = !1, this.retryMove = null, this.pendingFocus = null, this.confirmPressedOn = null, this.lastRefocusCheckMs = -1 / 0, this.pressGuardUntilMs = -1 / 0, this.pressGuardExtends = !1, this.enteredLayerAtMs = performance.now(), this.lastFocusedCentre = null, this.memory.enter(Eq)
       }
-      restoreLayerFocus(TT, kT) {
-        const cT = kT && this.layerKey ? this.findRemembered(TT, this.layerKey) : null;
-        this.restoredFromMemory = null !== cT, this.setFocus(null !== cT && void 0 !== cT ? cT : this.pickInitial(TT, {
+      restoreLayerFocus(qq, Eq) {
+        const gq = Eq && this.layerKey ? this.findRemembered(qq, this.layerKey) : null;
+        this.restoredFromMemory = null !== gq, this.setFocus(null !== gq && void 0 !== gq ? gq : this.pickInitial(qq, {
           waitForContent: !0
         }))
       }
-      continueLayer(TT, kT) {
-        this.layerKey = TT;
-        const cT = this.memory.enter(TT);
-        this.restoreOnFocusLoss = cT, this.movedInLayer && !cT && this.rememberFocus(kT)
+      continueLayer(qq, Eq) {
+        this.layerKey = qq;
+        const gq = this.memory.enter(qq);
+        this.restoreOnFocusLoss = gq, this.movedInLayer && !gq && this.rememberFocus(Eq)
       }
-      resume(TT, kT) {
-        var cT;
-        const lT = Fl();
-        lT && ql(lT, TT) ? this.takeOver(TT, lT, kT) : null !== (cT = this.focused) && void 0 !== cT && cT.isConnected && nl(null, this.focused, (0, UT.w)(this.focused))
+      resume(qq, Eq) {
+        var gq;
+        const Yq = QY();
+        Yq && IY(Yq, qq) ? this.takeOver(qq, Yq, Eq) : null !== (gq = this.focused) && void 0 !== gq && gq.isConnected && wY(null, this.focused, (0, Fq.D)(this.focused))
       }
-      pickPreferred(TT) {
-        var kT;
-        return null !== (kT = this.layerKey ? this.findRemembered(TT, this.layerKey) : null) && void 0 !== kT ? kT : this.pickInitial(TT, {
+      pickPreferred(qq) {
+        var Eq;
+        return null !== (Eq = this.layerKey ? this.findRemembered(qq, this.layerKey) : null) && void 0 !== Eq ? Eq : this.pickInitial(qq, {
           waitForContent: !0
         })
       }
-      findRemembered(TT, kT) {
-        return this.memory.has(kT) ? this.memory.recall(kT, this.getEnabledCandidates(TT)) : null
+      findRemembered(qq, Eq) {
+        return this.memory.has(Eq) ? this.memory.recall(Eq, this.getEnabledCandidates(qq)) : null
       }
       getHandoff() {
-        var TT, kT, cT;
-        const lT = null !== (TT = this.focused) && void 0 !== TT && TT.isConnected ? this.focused : null,
-          MT = null !== (kT = this.layerRoot) && void 0 !== kT && kT.isConnected ? this.layerRoot : null;
+        var qq, Eq, gq;
+        const Yq = null !== (qq = this.focused) && void 0 !== qq && qq.isConnected ? this.focused : null,
+          lq = null !== (Eq = this.layerRoot) && void 0 !== Eq && Eq.isConnected ? this.layerRoot : null;
         return {
-          point: lT ? (0, UT.w)(lT) : null !== (cT = this.lastFocusedCentre) && void 0 !== cT ? cT : this.getLayerStartPoint(MT),
-          element: lT,
+          point: Yq ? (0, Fq.D)(Yq) : null !== (gq = this.lastFocusedCentre) && void 0 !== gq ? gq : this.getLayerStartPoint(lq),
+          element: Yq,
           direction: null
         }
       }
-      getLayerStartPoint(TT) {
-        if (!TT) return {
+      getLayerStartPoint(qq) {
+        if (!qq) return {
           x: window.innerWidth / 2,
           y: window.innerHeight / 2
         };
-        const kT = this.pickInitial(TT, {
+        const Eq = this.pickInitial(qq, {
           includeDisabled: !0
         });
-        return (0, UT.w)(null !== kT && void 0 !== kT ? kT : TT)
+        return (0, Fq.D)(null !== Eq && void 0 !== Eq ? Eq : qq)
       }
-      takeOver(TT, kT, cT) {
+      takeOver(qq, Eq, gq) {
         const {
-          element: lT,
-          direction: MT,
-          point: KT
-        } = kT, OT = lT instanceof HTMLElement && (0, qT.m)(lT, TT) ? lT : null;
-        if (!MT) {
-          const kT = this.focused;
-          return OT ? this.setFocus(OT, {
+          element: Yq,
+          direction: lq,
+          point: Oq
+        } = Eq, mq = Yq instanceof HTMLElement && (0, eq.t)(Yq, qq) ? Yq : null;
+        if (!lq) {
+          const Eq = this.focused;
+          return mq ? this.setFocus(mq, {
             scroll: !1,
             byUser: !0
-          }) : this.focusNearest(TT, KT), void(this.focused && this.focused === kT && this.focused.isConnected && nl(null, this.focused, (0, UT.w)(this.focused)))
+          }) : this.focusNearest(qq, Oq), void(this.focused && this.focused === Eq && this.focused.isConnected && wY(null, this.focused, (0, Fq.D)(this.focused)))
         }
-        if (this.dpadRepeats.get(MT).update(!0, cT), OT) return this.setFocus(OT, {
+        if (this.dpadRepeats.get(lq).update(!0, gq), mq) return this.setFocus(mq, {
           scroll: !1,
           byUser: !0
-        }), void this.move(TT, MT, cT, !0);
-        const yT = this.getEnabledCandidates(TT),
-          fT = yT.map(pl),
-          xT = Dc(new DOMRect(KT.x, KT.y, 0, 0), fT, MT),
-          IT = xT >= 0 ? xT : wc(KT, fT);
-        this.setFocus(IT >= 0 ? yT[IT] : this.pickInitial(TT), {
+        }), void this.move(qq, lq, gq, !0);
+        const xq = this.getEnabledCandidates(qq),
+          Aq = xq.map(KY),
+          cq = og(new DOMRect(Oq.x, Oq.y, 0, 0), Aq, lq),
+          uq = cq >= 0 ? cq : rg(Oq, Aq);
+        this.setFocus(uq >= 0 ? xq[uq] : this.pickInitial(qq), {
           byUser: !0
         })
       }
-      focusNearest(TT, kT) {
-        const cT = this.getEnabledCandidates(TT),
-          lT = wc(kT, cT.map(pl));
-        this.setFocus(lT >= 0 ? cT[lT] : this.pickInitial(TT), {
+      focusNearest(qq, Eq) {
+        const gq = this.getEnabledCandidates(qq),
+          Yq = rg(Eq, gq.map(KY));
+        this.setFocus(Yq >= 0 ? gq[Yq] : this.pickInitial(qq), {
           byUser: !0
         })
       }
-      pickDefault(TT) {
+      pickDefault(qq) {
         let {
-          includeDisabled: kT = !1,
-          exclude: cT = null
+          includeDisabled: Eq = !1,
+          exclude: gq = null
         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const lT = [...TT.querySelectorAll(Rl)].filter((lT => (null === cT || void 0 === cT || !cT.has(lT)) && (kT ? (0, qT.p)(lT, TT) : (0, qT.m)(lT, TT)))),
-          MT = El(lT.map(Gl));
-        return MT >= 0 ? lT[MT] : null
+        const Yq = [...qq.querySelectorAll(kY)].filter((Yq => (null === gq || void 0 === gq || !gq.has(Yq)) && (Eq ? (0, eq.y)(Yq, qq) : (0, eq.t)(Yq, qq)))),
+          lq = zY(Yq.map(MY));
+        return lq >= 0 ? Yq[lq] : null
       }
-      pickNewAreaStart(TT, kT) {
-        const cT = [...TT.querySelectorAll(Bl)].filter(qT.l);
-        for (const lT of [...(0, qT.f)(TT), ...cT]) {
-          if (kT.has(lT)) continue;
-          const TT = this.getEnabledCandidates(lT),
-            cT = El(TT.map(Gl));
-          if (cT >= 0) return TT[cT]
+      pickNewAreaStart(qq, Eq) {
+        const gq = [...qq.querySelectorAll(sY)].filter(eq.p);
+        for (const Yq of [...(0, eq.h)(qq), ...gq]) {
+          if (Eq.has(Yq)) continue;
+          const qq = this.getEnabledCandidates(Yq),
+            gq = zY(qq.map(MY));
+          if (gq >= 0) return qq[gq]
         }
         return null
       }
-      pickInitial(TT) {
+      pickInitial(qq) {
         let {
-          includeDisabled: kT = !1,
-          waitForContent: cT = !1,
-          enteredAtMs: lT = this.enteredLayerAtMs
+          includeDisabled: Eq = !1,
+          waitForContent: gq = !1,
+          enteredAtMs: Yq = this.enteredLayerAtMs
         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const MT = this.pickDefault(TT, {
-          includeDisabled: kT
+        const lq = this.pickDefault(qq, {
+          includeDisabled: Eq
         });
-        if (MT) return MT;
-        const KT = TT => kT ? (0, qT.e)(TT) : this.getEnabledCandidates(TT);
-        let OT = [];
-        for (const CT of (0, qT.f)(TT))
-          if (OT = KT(CT), OT.length > 0) break;
-        if (0 === OT.length) {
-          if (cT && performance.now() - lT < 1e4 && (0, qT.k)(TT)) return null;
-          OT = KT(TT)
+        if (lq) return lq;
+        const Oq = qq => Eq ? (0, eq.f)(qq) : this.getEnabledCandidates(qq);
+        let mq = [];
+        for (const Wq of (0, eq.h)(qq))
+          if (mq = Oq(Wq), mq.length > 0) break;
+        if (0 === mq.length) {
+          if (gq && performance.now() - Yq < 1e4 && (0, eq.l)(qq)) return null;
+          mq = Oq(qq)
         }
-        const yT = OT.map(pl),
-          fT = GT(null),
-          xT = OT.filter(((TT, kT) => VT(yT[kT], fT))),
-          IT = xT.length > 0 ? xT : OT,
-          AT = El(IT.map(Gl));
-        return AT >= 0 ? IT[AT] : null
+        const xq = mq.map(KY),
+          Aq = Tq(null),
+          cq = mq.filter(((qq, Eq) => zq(xq[Eq], Aq))),
+          uq = cq.length > 0 ? cq : mq,
+          Bq = zY(uq.map(MY));
+        return Bq >= 0 ? uq[Bq] : null
       }
-      validateFocus(TT, kT) {
+      validateFocus(qq, Eq) {
         if (this.pendingFocus) {
-          var cT, lT;
-          const MT = this.pendingFocus.find();
-          if (MT && (0, qT.m)(MT, TT.root)) return this.pendingFocus = null, void this.setFocus(MT, {
+          var gq, Yq;
+          const lq = this.pendingFocus.find();
+          if (lq && (0, eq.t)(lq, qq.root)) return this.pendingFocus = null, void this.setFocus(lq, {
             byUser: !0
           });
-          kT > this.pendingFocus.untilMs && (null === (cT = (lT = this.pendingFocus).holdWhile) || void 0 === cT || !cT.call(lT)) && (this.pendingFocus = null)
+          Eq > this.pendingFocus.untilMs && (null === (gq = (Yq = this.pendingFocus).holdWhile) || void 0 === gq || !gq.call(Yq)) && (this.pendingFocus = null)
         }
-        const MT = this.focused,
-          KT = !!MT && (0, qT.m)(MT, TT.root);
-        if (!(!KT && MT && MT === this.lastActivated && kT - this.lastActivatedAtMs < 5e3 && TT.root.contains(MT) && (0, qT.l)(MT) && (0, qT.n)(MT))) {
-          if (!KT && this.restoreOnFocusLoss && this.layerKey) return this.restoreOnFocusLoss = !1, this.movedInLayer = !1, this.scrolledInLayer = !1, this.enteredLayerAtMs = kT, void this.restoreLayerFocus(TT.root, !0);
-          if ((!KT || !this.movedInLayer && !this.scrolledInLayer) && !(kT - this.lastRefocusCheckMs < (KT ? 200 : 50)))
-            if (this.lastRefocusCheckMs = kT, KT) {
-              const cT = kT - this.enteredLayerAtMs < 15e3 ? this.pickPreferred(TT.root) : null,
-                lT = null !== cT && void 0 !== cT ? cT : this.restoredFromMemory ? null : this.pickDefault(TT.root);
-              lT && lT !== MT && this.setFocus(lT)
+        const lq = this.focused,
+          Oq = !!lq && (0, eq.t)(lq, qq.root);
+        if (!(!Oq && lq && lq === this.lastActivated && Eq - this.lastActivatedAtMs < 5e3 && qq.root.contains(lq) && (0, eq.p)(lq) && (0, eq.w)(lq))) {
+          if (!Oq && this.restoreOnFocusLoss && this.layerKey) return this.restoreOnFocusLoss = !1, this.movedInLayer = !1, this.scrolledInLayer = !1, this.enteredLayerAtMs = Eq, void this.restoreLayerFocus(qq.root, !0);
+          if ((!Oq || !this.movedInLayer && !this.scrolledInLayer) && !(Eq - this.lastRefocusCheckMs < (Oq ? 200 : 50)))
+            if (this.lastRefocusCheckMs = Eq, Oq) {
+              const gq = Eq - this.enteredLayerAtMs < 15e3 ? this.pickPreferred(qq.root) : null,
+                Yq = null !== gq && void 0 !== gq ? gq : this.restoredFromMemory ? null : this.pickDefault(qq.root);
+              Yq && Yq !== lq && this.setFocus(Yq)
             } else {
               if (this.lastFocusedCentre && this.movedInLayer) {
-                const kT = this.pendingFocus;
-                return this.focusNearest(TT.root, this.lastFocusedCentre), void(this.pendingFocus = kT)
+                const Eq = this.pendingFocus;
+                return this.focusNearest(qq.root, this.lastFocusedCentre), void(this.pendingFocus = Eq)
               }
-              this.setFocus(this.pickPreferred(TT.root))
+              this.setFocus(this.pickPreferred(qq.root))
             }
         }
       }
-      handleButtons(TT, kT) {
-        if (TT.wasPressed((0, IT.j)("menuToggleCursor"))) return al(this.getHandoff()), !0;
-        if (TT.wasPressed((0, IT.j)("menuBack"))) {
-          const TT = (0, UT.i)(kT.root);
-          return TT ? this.setFocus(TT, {
+      handleButtons(qq, Eq) {
+        if (qq.wasPressed((0, uq.i)("menuToggleCursor"))) return PY(this.getHandoff()), !0;
+        if (qq.wasPressed((0, uq.i)("menuBack"))) {
+          const qq = (0, Fq.l)(Eq.root);
+          return qq ? this.setFocus(qq, {
             byUser: !0
-          }) : gc(this, kT.root) || ((0, UT.c)(kT.root) ? this.returnToOpener(kT.root) : this.backToStrip(kT.root) || Al()), !0
+          }) : Rg(this, Eq.root) || ((0, Fq.f)(Eq.root) ? this.returnToOpener(Eq.root) : this.backToStrip(Eq.root) || uY()), !0
         }
-        const cT = (0, IT.j)("menuConfirm");
-        var lT, MT;
-        TT.wasPressed(cT) && (this.confirmPressedOn = this.focused, this.confirmRepeatKey = null !== (lT = null === (MT = this.focused) || void 0 === MT ? void 0 : MT.getAttribute("data-pad-repeat")) && void 0 !== lT ? lT : null, this.confirmRepeated = TT.wokeDevice, this.confirmRepeat.reset(), this.confirmRepeat.update(!0, performance.now()));
-        if (TT.wasReleased(cT)) {
-          const TT = this.confirmPressedOn;
-          if (this.confirmPressedOn = null, TT && !this.confirmRepeated && TT === this.focused && TT.isConnected && !(0, qT.n)(TT)) {
-            const cT = TT.matches("[data-pad-tab]") ? TT.closest(Yl) : null;
-            cT ? this.enterTab(TT, cT, kT.root, performance.now()) : this.activate(TT)
+        const gq = (0, uq.i)("menuConfirm");
+        var Yq, lq;
+        qq.wasPressed(gq) && (this.confirmPressedOn = this.focused, this.confirmRepeatKey = null !== (Yq = null === (lq = this.focused) || void 0 === lq ? void 0 : lq.getAttribute("data-pad-repeat")) && void 0 !== Yq ? Yq : null, this.confirmRepeated = qq.wokeDevice, this.confirmRepeat.reset(), this.confirmRepeat.update(!0, performance.now()));
+        if (qq.wasReleased(gq)) {
+          const qq = this.confirmPressedOn;
+          if (this.confirmPressedOn = null, qq && !this.confirmRepeated && qq === this.focused && qq.isConnected && !(0, eq.w)(qq)) {
+            const gq = qq.matches("[data-pad-tab]") ? qq.closest(FY) : null;
+            gq ? this.enterTab(qq, gq, Eq.root, performance.now()) : this.activate(qq)
           }
           return !0
         }
-        return this.repeatConfirm(TT, cT), sc(this, TT, kT)
+        return this.repeatConfirm(qq, gq), eg(this, qq, Eq)
       }
-      repeatConfirm(TT, kT) {
-        const cT = this.confirmPressedOn;
-        cT && null !== this.confirmRepeatKey && TT.isHeld(kT) && (cT === this.focused && cT.isConnected && !(0, qT.n)(cT) && cT.getAttribute("data-pad-repeat") === this.confirmRepeatKey ? cT.hasAttribute("data-pad-repeat-wait") || this.confirmRepeat.update(!0, performance.now()) && (this.confirmRepeated = !0, this.activate(cT)) : this.confirmRepeatKey = null)
+      repeatConfirm(qq, Eq) {
+        const gq = this.confirmPressedOn;
+        gq && null !== this.confirmRepeatKey && qq.isHeld(Eq) && (gq === this.focused && gq.isConnected && !(0, eq.w)(gq) && gq.getAttribute("data-pad-repeat") === this.confirmRepeatKey ? gq.hasAttribute("data-pad-repeat-wait") || this.confirmRepeat.update(!0, performance.now()) && (this.confirmRepeated = !0, this.activate(gq)) : this.confirmRepeatKey = null)
       }
-      backToStrip(TT) {
-        const kT = this.focused;
-        if (!(0, CT.g)().menuBackToCategories) return !1;
-        const cT = null !== kT && void 0 !== kT && kT.isConnected ? this.tabStripNav.backToStrip(kT, this.getEnabledCandidates(TT), TT) : null;
-        return cT && this.setFocus(cT, {
+      backToStrip(qq) {
+        const Eq = this.focused;
+        if (!(0, Wq.i)().menuBackToCategories) return !1;
+        const gq = null !== Eq && void 0 !== Eq && Eq.isConnected ? this.tabStripNav.backToStrip(Eq, this.getEnabledCandidates(qq), qq) : null;
+        return gq && this.setFocus(gq, {
           byUser: !0
-        }), null !== cT
+        }), null !== gq
       }
-      returnToOpener(TT) {
-        const kT = this.lastActivatedKey;
-        kT && (this.lastActivatedKey = null, this.focusWhenFound((() => {
-          var cT;
-          return null !== (cT = this.getEnabledCandidates(TT).find((TT => (0, UT.y)(TT) === kT))) && void 0 !== cT ? cT : null
+      returnToOpener(qq) {
+        const Eq = this.lastActivatedKey;
+        Eq && (this.lastActivatedKey = null, this.focusWhenFound((() => {
+          var gq;
+          return null !== (gq = this.getEnabledCandidates(qq).find((qq => (0, Fq.F)(qq) === Eq))) && void 0 !== gq ? gq : null
         })))
       }
-      activate(TT) {
-        var kT;
-        if ((0, ol.c)(TT) || (0, UT.C)(TT)) return;
-        this.lastActivatedKey = null !== (kT = (0, UT.y)(TT)) && void 0 !== kT ? kT : this.lastActivatedKey, this.lastActivated = TT, this.lastActivatedAtMs = performance.now(), this.rememberFocus(TT);
-        const cT = this.layerRoot;
-        if (cT) {
-          const kT = new Set(cT.querySelectorAll(Rl)),
-            lT = new Set(cT.querySelectorAll(`[data-pad-initial-area], ${Bl}`)),
-            MT = this.lastActivatedAtMs;
+      activate(qq) {
+        var Eq;
+        if ((0, iY.e)(qq) || (0, Fq.G)(qq)) return;
+        this.lastActivatedKey = null !== (Eq = (0, Fq.F)(qq)) && void 0 !== Eq ? Eq : this.lastActivatedKey, this.lastActivated = qq, this.lastActivatedAtMs = performance.now(), this.rememberFocus(qq);
+        const gq = this.layerRoot;
+        if (gq) {
+          const Eq = new Set(gq.querySelectorAll(kY)),
+            Yq = new Set(gq.querySelectorAll(`[data-pad-initial-area], ${sY}`)),
+            lq = this.lastActivatedAtMs;
           this.focusWhenFound((() => {
-            var MT;
-            return (0, qT.m)(TT, cT) ? null : null !== (MT = this.pickDefault(cT, {
-              exclude: kT
-            })) && void 0 !== MT ? MT : this.pickNewAreaStart(cT, lT)
-          }), 5e3, (() => TT.isConnected && (0, qT.n)(TT) && performance.now() - MT < 6e4))
-        }(0, UT.b)(TT), (0, UT.f)(TT)
+            var lq;
+            return (0, eq.t)(qq, gq) ? null : null !== (lq = this.pickDefault(gq, {
+              exclude: Eq
+            })) && void 0 !== lq ? lq : this.pickNewAreaStart(gq, Yq)
+          }), 5e3, (() => qq.isConnected && (0, eq.w)(qq) && performance.now() - lq < 6e4))
+        }(0, Fq.b)(qq), (0, Fq.i)(qq)
       }
-      handleDirections(TT, kT, cT, lT) {
-        const MT = Hc(kT.layer.kind) ? (0, IT.j)("chat") : null;
-        for (const yT of vT.D) {
-          this.dpadRepeats.get(yT).update(TT.isHeld(yT), cT) && (yT !== MT || TT.wasPressed(yT)) && this.move(kT.root, yT, cT, !0)
+      handleDirections(qq, Eq, gq, Yq) {
+        const lq = Zg(Eq.layer.kind) ? (0, uq.i)("chat") : null;
+        for (const xq of aq.C) {
+          this.dpadRepeats.get(xq).update(qq.isHeld(xq), gq) && (xq !== lq || qq.wasPressed(xq)) && this.move(Eq.root, xq, gq, !0)
         }
-        const KT = lT ? (0, vT.m)(TT.leftStick, (0, CT.g)().moveDeadzone) : {
+        const Oq = Yq ? (0, aq.j)(qq.leftStick, (0, Wq.i)().moveDeadzone) : {
             x: 0,
             y: 0
           },
-          OT = this.stickRepeat.update((0, vT.jb)(KT), cT);
-        if (OT && this.move(kT.root, OT, cT, !0), this.retryMove && cT >= this.retryMove.atMs) {
+          mq = this.stickRepeat.update((0, aq.kb)(Oq), gq);
+        if (mq && this.move(Eq.root, mq, gq, !0), this.retryMove && gq >= this.retryMove.atMs) {
           const {
-            direction: TT
+            direction: qq
           } = this.retryMove;
-          this.retryMove = null, this.move(kT.root, TT, cT, !1)
+          this.retryMove = null, this.move(Eq.root, qq, gq, !1)
         }
       }
-      move(TT, kT, cT, lT) {
-        var MT;
-        let KT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        if (this.pendingFocus && this.pendingFocus === (null === (MT = this.tabOpenWait) || void 0 === MT ? void 0 : MT.wait) && kT === this.tabOpenWait.direction) return;
+      move(qq, Eq, gq, Yq) {
+        var lq;
+        let Oq = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        if (this.pendingFocus && this.pendingFocus === (null === (lq = this.tabOpenWait) || void 0 === lq ? void 0 : lq.wait) && Eq === this.tabOpenWait.direction) return;
         this.pendingFocus = null;
-        const OT = this.focused;
-        if (!OT || !OT.isConnected) {
-          const kT = this.pickInitial(TT);
-          return void(kT && this.setFocus(kT, {
+        const mq = this.focused;
+        if (!mq || !mq.isConnected) {
+          const Eq = this.pickInitial(qq);
+          return void(Eq && this.setFocus(Eq, {
             byUser: !0
           }))
         }
-        const yT = "Left" === kT || "Right" === kT,
-          fT = yT ? (0, ol.c)(OT) : null;
-        if (fT) return void fT.adjust("Left" === kT ? -1 : 1);
-        const xT = TT => null !== TT.closest("[data-pad-friends-column]"),
-          IT = xT(OT),
-          AT = pl(OT),
-          CT = yT || OT.closest(Yl) ? null : (TT => {
-            const kT = new Map;
-            return cT => {
-              const lT = cT.closest(Yl);
-              if (!lT) return !1;
-              let MT = kT.get(lT);
-              if (void 0 === MT) {
-                const cT = pl(lT);
-                MT = Sc(TT, cT) && (cT.right <= TT.left || cT.left >= TT.right), kT.set(lT, MT)
+        const xq = "Left" === Eq || "Right" === Eq,
+          Aq = xq ? (0, iY.e)(mq) : null;
+        if (Aq) return void Aq.adjust("Left" === Eq ? -1 : 1);
+        const cq = qq => null !== qq.closest("[data-pad-friends-column]"),
+          uq = cq(mq),
+          Bq = KY(mq),
+          Wq = xq || mq.closest(FY) ? null : (qq => {
+            const Eq = new Map;
+            return gq => {
+              const Yq = gq.closest(FY);
+              if (!Yq) return !1;
+              let lq = Eq.get(Yq);
+              if (void 0 === lq) {
+                const gq = KY(Yq);
+                lq = Hg(qq, gq) && (gq.right <= qq.left || gq.left >= qq.right), Eq.set(Yq, lq)
               }
-              return MT
+              return lq
             }
-          })(AT),
-          jT = null !== OT.closest(Ul),
-          vT = this.getEnabledCandidates(TT).filter((TT => TT !== OT && (yT || xT(TT) === IT) && !(null !== CT && void 0 !== CT && CT(TT)) && (jT || !TT.closest(Ul)))),
-          tT = vT.map(pl),
-          hT = bT(OT, "y", TT),
-          NT = GT(hT);
-        if (!KT && !VT(AT, NT)) {
-          const TT = vT.filter(((TT, kT) => VT(tT[kT], NT)));
-          if (TT.length > 0) {
-            const kT = {
-              x: NT.left + NT.width / 2,
-              y: NT.top + NT.height / 2
+          })(Bq),
+          Nq = null !== mq.closest(UY),
+          aq = this.getEnabledCandidates(qq).filter((qq => qq !== mq && (xq || cq(qq) === uq) && !(null !== Wq && void 0 !== Wq && Wq(qq)) && (Nq || !qq.closest(UY)))),
+          Vq = aq.map(KY),
+          dq = nq(mq, "y", qq),
+          jq = Tq(dq);
+        if (!Oq && !zq(Bq, jq)) {
+          const qq = aq.filter(((qq, Eq) => zq(Vq[Eq], jq)));
+          if (qq.length > 0) {
+            const Eq = {
+              x: jq.left + jq.width / 2,
+              y: jq.top + jq.height / 2
             };
-            return void this.setFocus(TT[wc(kT, TT.map(pl))], {
+            return void this.setFocus(qq[rg(Eq, qq.map(KY))], {
               byUser: !0
             })
           }
         }
-        const QT = yT ? ((TT, kT, cT) => {
-            const lT = pl(TT),
-              MT = TT.closest(Yl),
-              KT = MT ? pl(MT) : null;
-            return kT.map(((kT, OT) => {
-              const yT = cT[OT];
-              if (yT.bottom > lT.top && yT.top < lT.bottom) return !0;
-              const fT = kT.closest(Yl);
-              if (MT && KT) return fT !== MT && (null !== fT || yT.bottom <= KT.top || yT.top >= KT.bottom);
-              if (fT) return !Sc(lT, pl(fT));
-              let xT = TT;
-              for (let cT = TT.parentElement; cT && !cT.contains(kT); cT = cT.parentElement) xT = cT;
-              const IT = pl(xT);
-              return yT.right > IT.left && yT.left < IT.right
+        const Hq = xq ? ((qq, Eq, gq) => {
+            const Yq = KY(qq),
+              lq = qq.closest(FY),
+              Oq = lq ? KY(lq) : null;
+            return Eq.map(((Eq, mq) => {
+              const xq = gq[mq];
+              if (xq.bottom > Yq.top && xq.top < Yq.bottom) return !0;
+              const Aq = Eq.closest(FY);
+              if (lq && Oq) return Aq !== lq && (null !== Aq || xq.bottom <= Oq.top || xq.top >= Oq.bottom);
+              if (Aq) return !Hg(Yq, KY(Aq));
+              let cq = qq;
+              for (let gq = qq.parentElement; gq && !gq.contains(Eq); gq = gq.parentElement) cq = gq;
+              const uq = KY(cq);
+              return xq.right > uq.left && xq.left < uq.right
             }))
-          })(OT, vT, tT) : void 0,
-          ST = yT && !OT.closest(Yl) ? (TT => TT.map((TT => !TT.closest(el))))(vT) : void 0,
-          DT = ((TT, kT) => {
-            const cT = [];
-            for (let MT = TT; MT; MT = MT.parentElement) cT.push(MT);
-            const lT = new Map;
-            return cT.forEach(((TT, kT) => {
-              lT.set(TT, cT.length - 1 - kT)
-            })), kT.map((TT => {
-              for (let kT = TT; kT; kT = kT.parentElement) {
-                const TT = lT.get(kT);
-                if (void 0 !== TT) return TT
+          })(mq, aq, Vq) : void 0,
+          oq = xq && !mq.closest(FY) ? (qq => qq.map((qq => !qq.closest(fY))))(aq) : void 0,
+          Pq = ((qq, Eq) => {
+            const gq = [];
+            for (let lq = qq; lq; lq = lq.parentElement) gq.push(lq);
+            const Yq = new Map;
+            return gq.forEach(((qq, Eq) => {
+              Yq.set(qq, gq.length - 1 - Eq)
+            })), Eq.map((qq => {
+              for (let Eq = qq; Eq; Eq = Eq.parentElement) {
+                const qq = Yq.get(Eq);
+                if (void 0 !== qq) return qq
               }
               return -1
             }))
-          })(OT, vT),
-          aT = yT ? "x" : "y",
-          FT = bT(OT, aT, TT);
-        let rT = Dc(AT, tT, kT, DT, QT, ST);
-        if (rT >= 0 && FT && !FT.contains(vT[rT])) {
-          const TT = vT.flatMap(((TT, kT) => FT.contains(TT) ? [kT] : [])),
-            cT = kT => kT && TT.map((TT => kT[TT])),
-            lT = Dc(AT, TT.map((TT => tT[TT])), kT, TT.map((TT => DT[TT])), cT(QT), cT(ST));
-          rT = lT >= 0 ? TT[lT] : rT
+          })(mq, aq),
+          Qq = xq ? "x" : "y",
+          yq = nq(mq, Qq, qq);
+        let tq = og(Bq, Vq, Eq, Pq, Hq, oq);
+        if (tq >= 0 && yq && !yq.contains(aq[tq])) {
+          const qq = aq.flatMap(((qq, Eq) => yq.contains(qq) ? [Eq] : [])),
+            gq = Eq => Eq && qq.map((qq => Eq[qq])),
+            Yq = og(Bq, qq.map((qq => Vq[qq])), Eq, qq.map((qq => Pq[qq])), gq(Hq), gq(oq));
+          tq = Yq >= 0 ? qq[Yq] : tq
         }
-        if (rT >= 0) return void this.moveTo(OT, vT[rT], vT, TT, kT, KT);
-        if (!lT) return;
-        const PT = "Right" === kT || "Down" === kT ? 1 : -1;
-        if (FT && HT(FT, aT, PT)) {
-          const TT = "y" === aT ? FT.clientHeight : FT.clientWidth;
-          eT(FT, aT, PT * TT * .5), this.retryMove = {
-            direction: kT,
-            atMs: cT + 80
+        if (tq >= 0) return void this.moveTo(mq, aq[tq], aq, qq, Eq, Oq);
+        if (!Yq) return;
+        const rq = "Right" === Eq || "Down" === Eq ? 1 : -1;
+        if (yq && fq(yq, Qq, rq)) {
+          const qq = "y" === Qq ? yq.clientHeight : yq.clientWidth;
+          Mq(yq, Qq, rq * qq * .5), this.retryMove = {
+            direction: Eq,
+            atMs: gq + 80
           }
         }
       }
-      moveTo(TT, kT, cT, lT, MT, KT) {
-        const OT = this.tabStripNav.findTabContent(TT, kT, cT);
-        OT && "true" !== TT.dataset.padSelected ? this.openTab(TT, OT, lT, MT) : KT && !OT || this.setFocus(this.tabStripNav.redirect(TT, kT, cT, lT), {
+      moveTo(qq, Eq, gq, Yq, lq, Oq) {
+        const mq = this.tabStripNav.findTabContent(qq, Eq, gq);
+        mq && "true" !== qq.dataset.padSelected ? this.openTab(qq, mq, Yq, lq) : Oq && !mq || this.setFocus(this.tabStripNav.redirect(qq, Eq, gq, Yq), {
           byUser: !0
         })
       }
-      openTab(TT, kT, cT, lT) {
-        const MT = kT.parentElement;
-        (0, UT.b)(TT), this.focusWhenFound((() => "true" !== TT.dataset.padSelected ? null : kT.isConnected ? this.tabStripNav.pickContentStart(kT, this.getEnabledCandidates(cT), cT) : MT ? this.tabStripNav.pickReplacedContentStart(TT, MT, this.getEnabledCandidates(cT), cT) : null), 3e3), this.tabOpenWait = {
+      openTab(qq, Eq, gq, Yq) {
+        const lq = Eq.parentElement;
+        (0, Fq.b)(qq), this.focusWhenFound((() => "true" !== qq.dataset.padSelected ? null : Eq.isConnected ? this.tabStripNav.pickContentStart(Eq, this.getEnabledCandidates(gq), gq) : lq ? this.tabStripNav.pickReplacedContentStart(qq, lq, this.getEnabledCandidates(gq), gq) : null), 3e3), this.tabOpenWait = {
           wait: this.pendingFocus,
-          direction: lT
+          direction: Yq
         }
       }
-      enterTab(TT, kT, cT, lT) {
-        this.move(cT, (TT => {
-          const kT = [...TT.querySelectorAll(ul)].filter((kT => kT.closest(Zl) === TT));
-          if (kT.length >= 2) {
-            const TT = kT[0].getBoundingClientRect(),
-              cT = kT[1].getBoundingClientRect();
-            return Math.abs(cT.top - TT.top) > Math.abs(cT.left - TT.left) ? "Right" : "Down"
+      enterTab(qq, Eq, gq, Yq) {
+        this.move(gq, (qq => {
+          const Eq = [...qq.querySelectorAll(pY)].filter((Eq => Eq.closest(SY) === qq));
+          if (Eq.length >= 2) {
+            const qq = Eq[0].getBoundingClientRect(),
+              gq = Eq[1].getBoundingClientRect();
+            return Math.abs(gq.top - qq.top) > Math.abs(gq.left - qq.left) ? "Right" : "Down"
           }
-          const cT = TT.getBoundingClientRect();
-          return cT.height > cT.width ? "Right" : "Down"
-        })(kT), lT, !1, !0), this.focused !== TT || this.pendingFocus || this.activate(TT)
+          const gq = qq.getBoundingClientRect();
+          return gq.height > gq.width ? "Right" : "Down"
+        })(Eq), Yq, !1, !0), this.focused !== qq || this.pendingFocus || this.activate(qq)
       }
-      handleScroll(TT, kT) {
-        const cT = (0, vT.m)(TT.rightStick, .2);
-        if (0 === cT.x && 0 === cT.y) return void(this.scrollRemainder = {
+      handleScroll(qq, Eq) {
+        const gq = (0, aq.j)(qq.rightStick, .2);
+        if (0 === gq.x && 0 === gq.y) return void(this.scrollRemainder = {
           x: 0,
           y: 0
         });
-        const lT = TT.dtMs / 1e3;
-        for (const KT of ["x", "y"]) {
-          var MT;
-          const TT = cT[KT];
-          if (0 === TT) continue;
-          const OT = null !== (MT = bT(this.focused, KT, kT.root)) && void 0 !== MT ? MT : JT(kT.root, KT);
-          if (!OT) continue;
-          const yT = Math.sign(TT) * TT * TT * 1500 * lT + this.scrollRemainder[KT],
-            fT = Math.trunc(yT);
-          this.scrollRemainder[KT] = yT - fT, 0 !== fT && (eT(OT, KT, fT), this.scrolledInLayer = !0)
+        const Yq = qq.dtMs / 1e3;
+        for (const Oq of ["x", "y"]) {
+          var lq;
+          const qq = gq[Oq];
+          if (0 === qq) continue;
+          const mq = null !== (lq = nq(this.focused, Oq, Eq.root)) && void 0 !== lq ? lq : iq(Eq.root, Oq);
+          if (!mq) continue;
+          const xq = Math.sign(qq) * qq * qq * 1500 * Yq + this.scrollRemainder[Oq],
+            Aq = Math.trunc(xq);
+          this.scrollRemainder[Oq] = xq - Aq, 0 !== Aq && (Mq(mq, Oq, Aq), this.scrolledInLayer = !0)
         }
       }
     };
-    var TM = cT(8236);
-    var kM = cT(8754);
-    const cM = {
+    var DY = gq(8123);
+    var ql = gq(8678);
+    const El = {
         duration: 80,
         strongMagnitude: .2,
         weakMagnitude: .2,
         needsPadInUse: !1
       },
-      lM = {
+      gl = {
         damage: {
           duration: 120,
           strongMagnitude: .45,
@@ -3195,82 +3291,82 @@ export const modules = {
           needsPadInUse: !0
         },
         connect: {
-          ...cM,
+          ...El,
           minIntervalMs: 1e3
         },
         preview: {
-          ...cM,
+          ...El,
           minIntervalMs: 0
         }
       };
-    const MM = new class {
-        constructor(TT) {
-          this.deps = TT, this.lastPlayedMs = {}, this.loggedFailure = !1, this.logFailure = TT => {
-            this.loggedFailure || (this.loggedFailure = !0, console.warn("Controller vibration failed; further failures are not logged.", TT))
+    const Yl = new class {
+        constructor(qq) {
+          this.deps = qq, this.lastPlayedMs = {}, this.loggedFailure = !1, this.logFailure = qq => {
+            this.loggedFailure || (this.loggedFailure = !0, console.warn("Controller vibration failed; further failures are not logged.", qq))
           }
         }
-        play(TT, kT) {
-          const cT = lM[TT];
-          if (!this.deps.isVibrationOn() || cT.needsPadInUse && !this.deps.isPadInUse()) return !1;
-          const lT = this.lastPlayedMs[TT];
-          if (void 0 !== lT && kT - lT < cT.minIntervalMs) return !1;
-          const MT = this.deps.getActuator();
-          if (!MT) return !1;
-          this.lastPlayedMs[TT] = kT;
+        play(qq, Eq) {
+          const gq = gl[qq];
+          if (!this.deps.isVibrationOn() || gq.needsPadInUse && !this.deps.isPadInUse()) return !1;
+          const Yq = this.lastPlayedMs[qq];
+          if (void 0 !== Yq && Eq - Yq < gq.minIntervalMs) return !1;
+          const lq = this.deps.getActuator();
+          if (!lq) return !1;
+          this.lastPlayedMs[qq] = Eq;
           const {
-            duration: KT,
-            strongMagnitude: OT,
-            weakMagnitude: yT
-          } = cT;
+            duration: Oq,
+            strongMagnitude: mq,
+            weakMagnitude: xq
+          } = gq;
           try {
-            MT.playEffect("dual-rumble", {
-              duration: KT,
-              strongMagnitude: OT,
-              weakMagnitude: yT
+            lq.playEffect("dual-rumble", {
+              duration: Oq,
+              strongMagnitude: mq,
+              weakMagnitude: xq
             }).catch(this.logFailure)
-          } catch (fT) {
-            this.logFailure(fT)
+          } catch (Aq) {
+            this.logFailure(Aq)
           }
           return !0
         }
       }({
-        getActuator: () => (TT => {
-          const kT = null === TT || void 0 === TT ? void 0 : TT.vibrationActuator;
-          return "function" === typeof(null === kT || void 0 === kT ? void 0 : kT.playEffect) ? kT : null
-        })(OT.e.getActiveGamepad()),
-        isVibrationOn: () => (0, CT.g)().vibration,
-        isPadInUse: jT.i
+        getActuator: () => (qq => {
+          const Eq = null === qq || void 0 === qq ? void 0 : qq.vibrationActuator;
+          return "function" === typeof(null === Eq || void 0 === Eq ? void 0 : Eq.playEffect) ? Eq : null
+        })(mq.h.getActiveGamepad()),
+        isVibrationOn: () => (0, Wq.i)().vibration,
+        isPadInUse: Nq.k
       }),
-      KM = TT => {
-        MM.play(TT, performance.now())
+      ll = qq => {
+        Yl.play(qq, performance.now())
       };
-    var OM = cT(8240),
-      yM = cT(2873),
-      fM = cT(133),
-      xM = cT(47),
-      IM = cT(651);
-    class AM {
-      constructor(TT) {
-        this.deps = TT
+    var Ol = gq(8130),
+      ml = gq(2834),
+      xl = gq(114),
+      Al = gq(38),
+      cl = gq(623);
+    class ul {
+      constructor(qq) {
+        this.deps = qq
       }
       check() {
-        let TT = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        const kT = this.deps.isPadActive() ? this.deps.getPadFamily() : null;
-        if (!kT) return "skipped";
-        const cT = TT ? this.deps.getVisitId() : this.deps.peekVisitId();
-        return null === cT || this.deps.readReportedVisitId() === cT ? "skipped" : this.deps.canReport() ? (this.deps.writeReportedVisitId(cT), this.deps.Yj(kT, this.deps.getInputType()), "reported") : "notReady"
+        let qq = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        const Eq = this.deps.isPadActive() ? this.deps.getPadFamily() : null;
+        if (!Eq) return "skipped";
+        const gq = qq ? this.deps.getVisitId() : this.deps.peekVisitId();
+        return null === gq || this.deps.readReportedVisitId() === gq ? "skipped" : this.deps.canReport() ? (this.deps.writeReportedVisitId(gq), this.deps.SN(Eq, this.deps.getInputType()), "reported") : "notReady"
       }
     }
-    const CM = "controllerUsageReportedVisit";
-    var jM = cT(1363),
-      vM = cT(1741),
-      tM = cT(636),
-      hM = cT(1461),
-      NM = cT(1261);
-    const QM = TT => ({
-        translationKey: `controller:${TT}`
+    const Bl = "controllerUsageReportedVisit";
+    var Wl = gq(1336),
+      Nl = gq(1710),
+      al = gq(611),
+      Vl = gq(1416),
+      dl = gq(1241);
+    const jl = qq => ({
+        translationKey: `controller:${qq}`
       }),
-      SM = {
+      Hl = {
         A: "A",
         B: "B",
         X: "X",
@@ -3279,19 +3375,19 @@ export const modules = {
         RB: "RB",
         LT: "LT",
         RT: "RT",
-        View: QM("padButtonView"),
-        Menu: QM("padButtonMenu"),
+        View: jl("padButtonView"),
+        Menu: jl("padButtonMenu"),
         LS: "L3",
         RS: "R3",
-        Up: QM("padButtonDpadUp"),
-        Down: QM("padButtonDpadDown"),
-        Left: QM("padButtonDpadLeft"),
-        Right: QM("padButtonDpadRight"),
-        Home: QM("padButtonHome"),
-        LeftStick: QM("padButtonLeftStick"),
-        RightStick: QM("padButtonRightStick")
+        Up: jl("padButtonDpadUp"),
+        Down: jl("padButtonDpadDown"),
+        Left: jl("padButtonDpadLeft"),
+        Right: jl("padButtonDpadRight"),
+        Home: jl("padButtonHome"),
+        LeftStick: jl("padButtonLeftStick"),
+        RightStick: jl("padButtonRightStick")
       },
-      DM = {
+      ol = {
         xbox: {
           LS: "LS",
           RS: "RS"
@@ -3312,8 +3408,8 @@ export const modules = {
           RB: "R1",
           LT: "L2",
           RT: "R2",
-          View: QM("padButtonCreate"),
-          Menu: QM("padButtonOptions")
+          View: jl("padButtonCreate"),
+          Menu: jl("padButtonOptions")
         },
         nintendo: {
           A: "B",
@@ -3328,252 +3424,252 @@ export const modules = {
           Menu: "+"
         }
       },
-      aM = (TT, kT) => {
-        var cT;
-        const lT = null !== (cT = DM[TT][kT]) && void 0 !== cT ? cT : SM[kT];
-        return "string" === typeof lT ? lT : (0, MT.w)(NM.f.get().getCurrentLanguageCode(), lT.translationKey)
+      Pl = (qq, Eq) => {
+        var gq;
+        const Yq = null !== (gq = ol[qq][Eq]) && void 0 !== gq ? gq : Hl[Eq];
+        return "string" === typeof Yq ? Yq : (0, lq.s)(dl.h.get().getCurrentLanguageCode(), Yq.translationKey)
       },
-      FM = TT => {
+      Ql = qq => {
         let {
-          glyph: kT,
-          family: cT,
-          className: lT
-        } = TT;
-        const MT = (0, jT.x)(),
-          KT = null !== cT && void 0 !== cT ? cT : MT,
-          OT = (0, OM.f)(KT, kT);
-        return (0, XT.jsx)("span", {
-          className: uT()("ControllerGlyph", lT),
+          glyph: Eq,
+          family: gq,
+          className: Yq
+        } = qq;
+        const lq = (0, Nq.B)(),
+          Oq = null !== gq && void 0 !== gq ? gq : lq,
+          mq = (0, Ol.i)(Oq, Eq);
+        return (0, Lq.jsx)("span", {
+          className: Gq()("ControllerGlyph", Yq),
           role: "img",
-          "aria-label": aM(KT, kT),
+          "aria-label": Pl(Oq, Eq),
           style: {
-            "--pad-glyph-mask": `url(${OT})`,
-            "--pad-glyph-aspect": (0, OM.c)(KT, kT)
+            "--pad-glyph-mask": `url(${mq})`,
+            "--pad-glyph-aspect": (0, Ol.e)(Oq, Eq)
           }
         })
       };
-    var rM = cT(1921);
-    const PM = TT => {
+    var yl = gq(1876);
+    const tl = qq => {
       let {
-        action: kT
-      } = TT;
+        action: Eq
+      } = qq;
       const {
-        t: cT
-      } = (0, MT.B)();
-      switch (kT.kind) {
+        t: gq
+      } = (0, lq.v)();
+      switch (Eq.kind) {
         case "reload":
-          return (0, XT.jsx)("span", {
-            children: cT("controller:gameplayReload")
+          return (0, Lq.jsx)("span", {
+            children: gq("controller:gameplayReload")
           });
         case "specialAction":
           return null;
         case "customButton":
-          return (0, XT.jsx)(rM.b, {
-            text: kT.description ? [{
-              icon: kT.icon
-            }, ` ${kT.description}`] : [{
-              icon: kT.icon
+          return (0, Lq.jsx)(yl.c, {
+            text: Eq.description ? [{
+              icon: Eq.icon
+            }, ` ${Eq.description}`] : [{
+              icon: Eq.icon
             }]
           });
         case "touchButton":
-          return (0, XT.jsx)(rM.b, {
-            text: kT.label
+          return (0, Lq.jsx)(yl.c, {
+            text: Eq.label
           })
       }
     };
-    var wM = cT(8762);
-    const mM = TT => {
+    var rl = gq(8686);
+    const vl = qq => {
       let {
-        hold: kT
-      } = TT;
-      return (0, XT.jsx)("div", {
+        hold: Eq
+      } = qq;
+      return (0, Lq.jsx)("div", {
         className: "DropStackFillTrack",
         style: {
-          "--pad-drop-stack-hold": `${kT.holdMs}ms`
+          "--pad-drop-stack-hold": `${Eq.holdMs}ms`
         },
-        children: (0, XT.jsx)("div", {
+        children: (0, Lq.jsx)("div", {
           className: "DropStackFillBar"
         })
-      }, kT.id)
+      }, Eq.id)
     };
-    var bM = cT(8784),
-      zM = cT(8791),
-      JM = cT(8796),
-      oM = cT(8777);
-    const HM = () => {
+    var hl = gq(8709),
+      nl = gq(8712),
+      bl = gq(8718),
+      il = gq(8704);
+    const Zl = () => {
         const {
-          gameState: TT
-        } = (0, fT.n)(["gameState"]), kT = (0, jT.v)(), [lT, MT] = (0, ET.useState)(!1), [KT, OT] = (0, ET.useState)(!1);
-        return (0, ET.useEffect)((() => {
-          "inGame" === TT && MT(!0)
-        }), [TT]), (0, ET.useEffect)((() => {
-          if (!lT) return;
-          let TT = null,
-            kT = !1;
-          return (tM.x ? Promise.all([cT.e(70), cT.e(261), cT.e(199), cT.e(218), cT.e(217), cT.e(85)]).then((() => cT(40167))).then((TT => TT.startWasmPadGameplay)) : Promise.all([cT.e(70), cT.e(227), cT.e(226), cT.e(95), cT.e(73), cT.e(72), cT.e(71), cT.e(219), cT.e(182), cT.e(223), cT.e(75), cT.e(196), cT.e(216), cT.e(94), cT.e(220), cT.e(84), cT.e(235), cT.e(113), cT.e(236), cT.e(74), cT.e(155), cT.e(218), cT.e(188)]).then((() => cT(40304))).then((TT => TT.startPadGameplay))).then((cT => {
-            kT || (TT = cT())
-          })).catch((TT => {
-            console.error("Pad gameplay failed to load", TT), kT || OT(!0)
+          gameState: qq
+        } = (0, Aq.j)(["gameState"]), Eq = (0, Nq.y)(), [Yq, lq] = (0, Sq.useState)(!1), [Oq, mq] = (0, Sq.useState)(!1);
+        return (0, Sq.useEffect)((() => {
+          "inGame" === qq && lq(!0)
+        }), [qq]), (0, Sq.useEffect)((() => {
+          if (!Yq) return;
+          let qq = null,
+            Eq = !1;
+          return (al.v ? Promise.all([gq.e(70), gq.e(261), gq.e(200), gq.e(219), gq.e(218), gq.e(85)]).then((() => gq(40287))).then((qq => qq.startWasmPadGameplay)) : Promise.all([gq.e(70), gq.e(227), gq.e(226), gq.e(95), gq.e(73), gq.e(72), gq.e(71), gq.e(183), gq.e(223), gq.e(75), gq.e(197), gq.e(217), gq.e(94), gq.e(220), gq.e(84), gq.e(235), gq.e(114), gq.e(236), gq.e(74), gq.e(113), gq.e(156), gq.e(219), gq.e(189)]).then((() => gq(40400))).then((qq => qq.startPadGameplay))).then((gq => {
+            Eq || (qq = gq())
+          })).catch((qq => {
+            console.error("Pad gameplay failed to load", qq), Eq || mq(!0)
           })), () => {
-            var cT;
-            kT = !0, null === (cT = TT) || void 0 === cT || cT()
+            var gq;
+            Eq = !0, null === (gq = qq) || void 0 === gq || gq()
           }
-        }), [lT]), (0, ET.useEffect)((() => {
-          KT && kT && (OT(!1), jM.NotificationProvider.showPromptPopup({
+        }), [Yq]), (0, Sq.useEffect)((() => {
+          Oq && Eq && (mq(!1), Wl.NotificationProvider.showPromptPopup({
             title: "controller:gameplayLoadFailedTitle",
             subtitle: "controller:gameplayLoadFailedSubtitle",
             confirmText: "settingsMenu:reloadPagePopupConfirm",
             confirmTooltip: "",
             cancelText: "general:cancel",
             cancelTooltip: ""
-          }).getResult().then((TT => {
-            !0 === TT && (0, vM.reloadBloxd)()
+          }).getResult().then((qq => {
+            !0 === qq && (0, Nl.reloadBloxd)()
           })))
-        }), [KT, kT]), (0, XT.jsxs)(XT.Fragment, {
-          children: [(0, XT.jsx)(eM, {}), (0, XT.jsx)(GM, {}), (0, XT.jsx)(VM, {})]
+        }), [Oq, Eq]), (0, Lq.jsxs)(Lq.Fragment, {
+          children: [(0, Lq.jsx)(fl, {}), (0, Lq.jsx)(Ml, {}), (0, Lq.jsx)(Tl, {})]
         })
       },
-      eM = () => {
+      fl = () => {
         const {
-          t: TT
-        } = (0, MT.B)(), kT = (0, jT.v)(), {
-          gameState: cT,
-          isUiHidden: lT
-        } = (0, fT.n)(["gameState", "isUiHidden"]), {
-          hideButtonHints: KT
-        } = (0, CT.o)(), OT = (0, wM.f)(), yT = (0, wM.i)(), [xT, AT] = (0, ET.useState)(JM.b);
-        return (0, hM.g)(oM.q, AT), !kT || KT || lT || "inGame" !== cT || !OT && !xT ? null : (0, XT.jsxs)("div", {
+          t: qq
+        } = (0, lq.v)(), Eq = (0, Nq.y)(), {
+          gameState: gq,
+          isUiHidden: Yq
+        } = (0, Aq.j)(["gameState", "isUiHidden"]), {
+          hideButtonHints: Oq
+        } = (0, Wq.r)(), mq = (0, rl.h)(), xq = (0, rl.i)(), [cq, Bq] = (0, Sq.useState)(bl.c);
+        return (0, Vl.f)(il.n, Bq), !Eq || Oq || Yq || "inGame" !== gq || !mq && !cq ? null : (0, Lq.jsxs)("div", {
           className: "PadActionHint SmallTextBold",
-          children: [OT && (0, XT.jsxs)("span", {
+          children: [mq && (0, Lq.jsxs)("span", {
             className: "PadActionHintEntry",
-            children: [(0, XT.jsx)(FM, {
-              glyph: (0, IT.j)("actionButton")
-            }), (0, XT.jsx)(PM, {
-              action: OT
-            }), yT && (0, XT.jsx)("span", {
+            children: [(0, Lq.jsx)(Ql, {
+              glyph: (0, uq.i)("actionButton")
+            }), (0, Lq.jsx)(tl, {
+              action: mq
+            }), xq && (0, Lq.jsx)("span", {
               className: "PadActionHintMore",
-              children: TT("controller:gameplayActionWheelHint")
+              children: qq("controller:gameplayActionWheelHint")
             })]
-          }), xT && (0, XT.jsxs)("span", {
+          }), cq && (0, Lq.jsxs)("span", {
             className: "PadActionHintEntry",
-            children: [(0, XT.jsx)(FM, {
-              glyph: (0, IT.j)("pickBlock")
-            }), (0, XT.jsx)("span", {
-              children: TT("controller:gameplayPickBlock")
+            children: [(0, Lq.jsx)(Ql, {
+              glyph: (0, uq.i)("pickBlock")
+            }), (0, Lq.jsx)("span", {
+              children: qq("controller:gameplayPickBlock")
             })]
           })]
         })
       },
-      GM = () => {
+      Ml = () => {
         const {
-          t: TT
-        } = (0, MT.B)(), kT = (0, jT.v)(), {
-          gameState: cT,
-          isUiHidden: lT
-        } = (0, fT.n)(["gameState", "isUiHidden"]), [KT, OT] = (0, ET.useState)(bM.b);
-        return (0, hM.g)(oM.n, OT), kT && !lT && "inGame" === cT && KT ? (0, XT.jsxs)("div", {
+          t: qq
+        } = (0, lq.v)(), Eq = (0, Nq.y)(), {
+          gameState: gq,
+          isUiHidden: Yq
+        } = (0, Aq.j)(["gameState", "isUiHidden"]), [Oq, mq] = (0, Sq.useState)(hl.d);
+        return (0, Vl.f)(il.j, mq), Eq && !Yq && "inGame" === gq && Oq ? (0, Lq.jsxs)("div", {
           className: "PadDropStackFill SmallTextBold",
-          children: [(0, XT.jsx)("span", {
-            children: TT("controller:gameplayDropStack")
-          }), (0, XT.jsx)(mM, {
-            hold: KT
+          children: [(0, Lq.jsx)("span", {
+            children: qq("controller:gameplayDropStack")
+          }), (0, Lq.jsx)(vl, {
+            hold: Oq
           })]
         }) : null
       },
-      VM = () => {
+      Tl = () => {
         const {
-          t: TT
-        } = (0, MT.B)(), kT = (0, jT.v)(), {
-          gameState: cT,
-          isUiHidden: lT
-        } = (0, fT.n)(["gameState", "isUiHidden"]), {
-          hideButtonHints: KT
-        } = (0, CT.o)(), [OT, yT] = (0, ET.useState)(zM.b);
-        return (0, hM.g)(oM.j, yT), kT && !lT && "inGame" === cT && OT ? (0, XT.jsxs)("div", {
+          t: qq
+        } = (0, lq.v)(), Eq = (0, Nq.y)(), {
+          gameState: gq,
+          isUiHidden: Yq
+        } = (0, Aq.j)(["gameState", "isUiHidden"]), {
+          hideButtonHints: Oq
+        } = (0, Wq.r)(), [mq, xq] = (0, Sq.useState)(nl.b);
+        return (0, Vl.f)(il.i, xq), Eq && !Yq && "inGame" === gq && mq ? (0, Lq.jsxs)("div", {
           className: "PadAttackLatchedHint SmallTextBold",
-          children: [!KT && (0, XT.jsx)(FM, {
-            glyph: (0, IT.j)("attack")
-          }), (0, XT.jsx)("span", {
-            children: TT("controller:gameplayAttackLatched")
+          children: [!Oq && (0, Lq.jsx)(Ql, {
+            glyph: (0, uq.i)("attack")
+          }), (0, Lq.jsx)("span", {
+            children: qq("controller:gameplayAttackLatched")
           })]
         }) : null
       };
-    var EM = cT(8802),
-      ZM = cT(1974),
-      uM = cT(2462),
-      XM = cT(8219);
-    const dM = TT => TT && !(0, EM.b)(ZM.b.get("shopInfo")),
-      LM = () => {
-        const TT = "inGame" === (0, fT.n)(["gameState"]).gameState;
-        return (0, uM.e)("shopInfo", (() => {
-          (0, XM.h)(dM(TT))
-        })), (0, ET.useEffect)((() => {
-          (0, XM.h)(dM(TT))
-        }), [TT]), null
+    var zl = gq(8723),
+      Sl = gq(1926),
+      pl = gq(2383),
+      Gl = gq(8110);
+    const Ll = qq => qq && !(0, zl.d)(Sl.c.get("shopInfo")),
+      Jl = () => {
+        const qq = "inGame" === (0, Aq.j)(["gameState"]).gameState;
+        return (0, pl.g)("shopInfo", (() => {
+          (0, Gl.f)(Ll(qq))
+        })), (0, Sq.useEffect)((() => {
+          (0, Gl.f)(Ll(qq))
+        }), [qq]), null
       },
-      RM = () => {
+      kl = () => {
         const {
-          t: TT
-        } = (0, MT.B)(), {
-          hideButtonHints: kT
-        } = (0, CT.o)();
-        (0, jT.x)();
-        const cT = (0, Xk.l)();
-        return (0, ET.useEffect)((() => (() => {
-          const TT = AT.d.register({
+          t: qq
+        } = (0, lq.v)(), {
+          hideButtonHints: Eq
+        } = (0, Wq.r)();
+        (0, Nq.B)();
+        const gq = (0, GE.j)();
+        return (0, Sq.useEffect)((() => (() => {
+          const qq = Bq.c.register({
               name: "inventory",
-              isActive: Kc.isActive,
-              onFrame: Kc.onFrame,
-              onDeactivate: Kc.onDeactivate,
-              wakePressActs: Kc.wakePressActs
+              isActive: lg.isActive,
+              onFrame: lg.onFrame,
+              onDeactivate: lg.onDeactivate,
+              wakePressActs: lg.wakePressActs
             }),
-            kT = TT => {
-              Kc.noteRealPointer(TT), Kc.shouldBlockRealPointer(TT) && TT.stopPropagation()
+            Eq = qq => {
+              lg.noteRealPointer(qq), lg.shouldBlockRealPointer(qq) && qq.stopPropagation()
             };
-          for (const OT of Oc) window.addEventListener(OT, kT, !0);
-          const cT = (0, iT.l)((() => {
-              "inventory" !== AT.d.getActiveConsumerName() && Kc.forgetSurface()
+          for (const mq of Og) window.addEventListener(mq, Eq, !0);
+          const gq = (0, Iq.g)((() => {
+              "inventory" !== Bq.c.getActiveConsumerName() && lg.forgetSurface()
             })),
-            lT = TT => {
-              const kT = TT.target;
-              (0, jT.i)() && (0, WT.d)(kT) && kT.closest(ak) && (0, iT.h)() && (0, iT.q)(kT)
+            Yq = qq => {
+              const Eq = qq.target;
+              (0, Nq.k)() && (0, wq.k)(Eq) && Eq.closest(QE) && (0, Iq.e)() && (0, Iq.j)(Eq)
             };
-          document.addEventListener("focusout", lT, !0);
+          document.addEventListener("focusout", Yq, !0);
           const {
-            invalidate: MT,
-            onScroll: KT
-          } = Kc.targets;
-          return document.addEventListener("scroll", KT, !0), window.addEventListener("resize", MT), () => {
-            TT(), cT();
-            for (const TT of Oc) window.removeEventListener(TT, kT, !0);
-            document.removeEventListener("scroll", KT, !0), document.removeEventListener("focusout", lT, !0), window.removeEventListener("resize", MT), Kc.targets.disconnect()
+            invalidate: lq,
+            onScroll: Oq
+          } = lg.targets;
+          return document.addEventListener("scroll", Oq, !0), window.addEventListener("resize", lq), () => {
+            qq(), gq();
+            for (const qq of Og) window.removeEventListener(qq, Eq, !0);
+            document.removeEventListener("scroll", Oq, !0), document.removeEventListener("focusout", Yq, !0), window.removeEventListener("resize", lq), lg.targets.disconnect()
           }
-        })()), []), (0, XT.jsxs)(XT.Fragment, {
-          children: [(0, XT.jsx)(gT, {
-            placer: Kc.ring,
+        })()), []), (0, Lq.jsxs)(Lq.Fragment, {
+          children: [(0, Lq.jsx)(Uq, {
+            placer: lg.ring,
             className: "InventorySlotCursorRing"
-          }), cT.showing && !kT && (0, XT.jsx)("div", {
+          }), gq.showing && !Eq && (0, Lq.jsx)("div", {
             className: "InventorySlotCursorHints SmallTextBold",
-            children: pT(cT).map((kT => {
+            children: Cq(gq).map((Eq => {
               let {
-                actions: lT,
-                labelKey: MT
-              } = kT;
-              return (0, XT.jsxs)("div", {
+                actions: Yq,
+                labelKey: lq
+              } = Eq;
+              return (0, Lq.jsxs)("div", {
                 className: "InventorySlotCursorHint",
-                children: [lT.map((TT => (0, XT.jsx)(FM, {
-                  glyph: (0, IT.j)(TT)
-                }, TT))), (0, XT.jsx)("span", {
-                  children: TT(`controller:${MT}`)
-                }), "inventoryDrop" === MT && cT.dropStackHold && (0, XT.jsx)(mM, {
-                  hold: cT.dropStackHold
+                children: [Yq.map((qq => (0, Lq.jsx)(Ql, {
+                  glyph: (0, uq.i)(qq)
+                }, qq))), (0, Lq.jsx)("span", {
+                  children: qq(`controller:${lq}`)
+                }), "inventoryDrop" === lq && gq.dropStackHold && (0, Lq.jsx)(vl, {
+                  hold: gq.dropStackHold
                 })]
-              }, MT)
+              }, lq)
             }))
           })]
         })
       },
-      gM = [{
+      Rl = [{
         command: "close",
         action: "keyboardClose",
         repeats: !1
@@ -3610,35 +3706,35 @@ export const modules = {
         action: "keyboardChannel",
         repeats: !1
       }],
-      UM = TT => Array.from(TT).map((TT => ({
+      Ul = qq => Array.from(qq).map((qq => ({
         type: "char",
-        char: TT,
+        char: qq,
         width: 1
       }))),
-      YM = function(TT) {
+      Fl = function(qq) {
         return {
           type: "command",
-          command: TT,
+          command: qq,
           width: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1
         }
       },
-      BM = [YM("page", 2), YM("otherPage"), YM("caretLeft"), YM("space", 3), YM("caretRight"), YM("close", 1.5), YM("submit", 1.5)],
-      WM = [YM("page", 2), YM("otherPage"), YM("caretLeft"), YM("space", 2), YM("caretRight"), YM("newline"), YM("close", 1.5), YM("submit", 1.5)],
-      nM = [
-        [...UM("1234567890"), YM("backspace")], UM("qwertyuiop/"), UM("asdfghjkl'?"), [YM("shift", 2), ...UM("zxcvbnm,.")]
+      sl = [Fl("page", 2), Fl("otherPage"), Fl("caretLeft"), Fl("space", 3), Fl("caretRight"), Fl("close", 1.5), Fl("submit", 1.5)],
+      Xl = [Fl("page", 2), Fl("otherPage"), Fl("caretLeft"), Fl("space", 2), Fl("caretRight"), Fl("newline"), Fl("close", 1.5), Fl("submit", 1.5)],
+      wl = [
+        [...Ul("1234567890"), Fl("backspace")], Ul("qwertyuiop/"), Ul("asdfghjkl'?"), [Fl("shift", 2), ...Ul("zxcvbnm,.")]
       ],
-      pM = [
-        [...UM("1234567890"), YM("backspace")], UM("!@#$%^&*()/"), UM('-_=+[]{};:"'), UM("~`|\\<>'\u20ac\xa3,.")
+      Kl = [
+        [...Ul("1234567890"), Fl("backspace")], Ul("!@#$%^&*()/"), Ul('-_=+[]{};:"'), Ul("~`|\\<>'\u20ac\xa3,.")
       ],
-      iM = {
-        letters: nM,
+      Cl = {
+        letters: wl,
         accents: [
-          [...UM("1234567890"), YM("backspace")], UM("\xe1\xe9\xed\xf3\xfa\xe0\xe8\xec\xf2\xf9\xf1"), UM("\xe2\xea\xee\xf4\xfb\xe4\xeb\xef\xf6\xfc\xe7"), [YM("shift", 2), ...UM("\xe3\xf5\xdf\u0153\u011f\u015f\u0131\xbf\xa1")]
+          [...Ul("1234567890"), Fl("backspace")], Ul("\xe1\xe9\xed\xf3\xfa\xe0\xe8\xec\xf2\xf9\xf1"), Ul("\xe2\xea\xee\xf4\xfb\xe4\xeb\xef\xf6\xfc\xe7"), [Fl("shift", 2), ...Ul("\xe3\xf5\xdf\u0153\u011f\u015f\u0131\xbf\xa1")]
         ],
-        symbols: pM
+        symbols: Kl
       },
-      qM = new Set(["de", "es", "fr", "it", "nl", "pt", "pt-BR", "tr", "vi"]),
-      sM = (TT, kT) => "letters" === TT ? kT ? {
+      Il = new Set(["de", "es", "fr", "it", "nl", "pt", "pt-BR", "tr", "vi"]),
+      el = (qq, Eq) => "letters" === qq ? Eq ? {
         page: "accents",
         otherPage: "symbols"
       } : {
@@ -3646,65 +3742,65 @@ export const modules = {
         otherPage: "accents"
       } : {
         page: "letters",
-        otherPage: "accents" === TT ? "symbols" : "accents"
+        otherPage: "accents" === qq ? "symbols" : "accents"
       },
-      TK = function(TT, kT) {
-        const cT = ((TT, kT) => [...iM[TT], kT ? WM : BM])(TT, arguments.length > 2 && void 0 !== arguments[2] && arguments[2]);
-        if (0 === kT) return cT;
-        const lT = Math.min(2, kK(cT[0]) / kT);
+      Dl = function(qq, Eq) {
+        const gq = ((qq, Eq) => [...Cl[qq], Eq ? Xl : sl])(qq, arguments.length > 2 && void 0 !== arguments[2] && arguments[2]);
+        if (0 === Eq) return gq;
+        const Yq = Math.min(2, qO(gq[0]) / Eq);
         return [Array.from({
-          length: kT
-        }, ((TT, kT) => ({
+          length: Eq
+        }, ((qq, Eq) => ({
           type: "phrase",
-          phraseIndex: kT,
-          width: lT
-        }))), ...cT]
+          phraseIndex: Eq,
+          width: Yq
+        }))), ...gq]
       },
-      kK = TT => TT.reduce(((TT, kT) => TT + kT.width), 0),
-      cK = TT => Math.max(...TT.map(kK)),
-      lK = (TT, kT) => {
-        const cT = TT[kT.row];
-        let lT = (cK(TT) - kK(cT)) / 2;
-        for (let MT = 0; MT < kT.col; MT++) lT += cT[MT].width;
-        return lT + cT[kT.col].width / 2
+      qO = qq => qq.reduce(((qq, Eq) => qq + Eq.width), 0),
+      EO = qq => Math.max(...qq.map(qO)),
+      gO = (qq, Eq) => {
+        const gq = qq[Eq.row];
+        let Yq = (EO(qq) - qO(gq)) / 2;
+        for (let lq = 0; lq < Eq.col; lq++) Yq += gq[lq].width;
+        return Yq + gq[Eq.col].width / 2
       },
-      MK = (TT, kT, cT) => {
-        let lT = 0,
-          MT = 1 / 0;
-        for (let KT = 0; KT < TT[kT].length; KT++) {
-          const OT = Math.abs(lK(TT, {
-            row: kT,
-            col: KT
-          }) - cT);
-          OT < MT - 1e-9 && (lT = KT, MT = OT)
+      YO = (qq, Eq, gq) => {
+        let Yq = 0,
+          lq = 1 / 0;
+        for (let Oq = 0; Oq < qq[Eq].length; Oq++) {
+          const mq = Math.abs(gO(qq, {
+            row: Eq,
+            col: Oq
+          }) - gq);
+          mq < lq - 1e-9 && (Yq = Oq, lq = mq)
         }
-        return lT
+        return Yq
       },
-      KK = (TT, kT) => {
-        const cT = Math.max(0, Math.min(TT.length - 1, kT.row));
+      lO = (qq, Eq) => {
+        const gq = Math.max(0, Math.min(qq.length - 1, Eq.row));
         return {
-          row: cT,
-          col: Math.max(0, Math.min(TT[cT].length - 1, kT.col))
+          row: gq,
+          col: Math.max(0, Math.min(qq[gq].length - 1, Eq.col))
         }
       },
-      OK = (TT, kT, cT) => "once" === TT && kT - cT <= 400 ? "caps" : "off" === TT ? "once" : "off",
-      yK = (TT, kT) => "once" === TT && (TT => TT.toLowerCase() !== TT.toUpperCase())(kT) ? "off" : TT,
-      fK = (TT, kT, cT) => {
-        if ("symbols" === kT || "off" === cT) return TT;
-        const lT = TT.toUpperCase();
-        return 1 === lT.length ? lT : TT
+      OO = (qq, Eq, gq) => "once" === qq && Eq - gq <= 400 ? "caps" : "off" === qq ? "once" : "off",
+      mO = (qq, Eq) => "once" === qq && (qq => qq.toLowerCase() !== qq.toUpperCase())(Eq) ? "off" : qq,
+      xO = (qq, Eq, gq) => {
+        if ("symbols" === Eq || "off" === gq) return qq;
+        const Yq = qq.toUpperCase();
+        return 1 === Yq.length ? Yq : qq
       };
-    var xK = cT(8677);
-    const IK = ["controller:keyboardPhraseGg", "controller:keyboardPhraseHi", "controller:keyboardPhraseThanks", "controller:keyboardPhraseGl", "controller:keyboardPhraseBrb", "controller:keyboardPhraseYes", "controller:keyboardPhraseNo", "controller:keyboardPhraseHelp"];
-    const AK = new class {
+    var AO = gq(8586);
+    const cO = ["controller:keyboardPhraseGg", "controller:keyboardPhraseHi", "controller:keyboardPhraseThanks", "controller:keyboardPhraseGl", "controller:keyboardPhraseBrb", "controller:keyboardPhraseYes", "controller:keyboardPhraseNo", "controller:keyboardPhraseHelp"];
+    const uO = new class {
         constructor() {
           this.lastSendMs = -1 / 0
         }
-        claim(TT) {
-          return !(TT - this.lastSendMs < 2e3) && (this.lastSendMs = TT, !0)
+        claim(qq) {
+          return !(qq - this.lastSendMs < 2e3) && (this.lastSendMs = qq, !0)
         }
       },
-      CK = {
+      BO = {
         visible: !1,
         target: null,
         kind: null,
@@ -3719,77 +3815,77 @@ export const modules = {
         placement: "bottom",
         maxHeightPx: 0
       },
-      jK = ["KI", "nameTag"],
-      vK = TT => {
-        const kT = TT.target instanceof HTMLTextAreaElement && !jK.includes(TT.kind);
-        return TK(TT.page, "chat" === TT.kind ? IK.length : 0, kT)
+      WO = ["vc", "nameTag"],
+      NO = qq => {
+        const Eq = qq.target instanceof HTMLTextAreaElement && !WO.includes(qq.kind);
+        return Dl(qq.page, "chat" === qq.kind ? cO.length : 0, Eq)
       },
-      tK = TT => {
-        const kT = TT.getBoundingClientRect(),
-          cT = window.innerHeight,
-          lT = kT.top + kT.height / 2 < cT / 2 ? "bottom" : "top",
-          MT = "bottom" === lT ? cT - kT.bottom - 6 : kT.top - 6;
+      aO = qq => {
+        const Eq = qq.getBoundingClientRect(),
+          gq = window.innerHeight,
+          Yq = Eq.top + Eq.height / 2 < gq / 2 ? "bottom" : "top",
+          lq = "bottom" === Yq ? gq - Eq.bottom - 6 : Eq.top - 6;
         return {
-          placement: lT,
-          maxHeightPx: Math.min(.46 * cT, Math.max(.3 * cT, MT))
+          placement: Yq,
+          maxHeightPx: Math.min(.46 * gq, Math.max(.3 * gq, lq))
         }
       },
-      hK = TT => {
-        (0, zc.e)(TT) ? (0, zc.c)().close(): (sl.noteChosenStop(TT), TT.blur())
+      VO = qq => {
+        (0, ng.h)(qq) ? (0, ng.b)().close(): (eY.noteChosenStop(qq), qq.blur())
       };
-    class NK {
-      constructor(TT) {
-        this.host = TT, this.lastShiftPressMs = -1 / 0, this.phraseTexts = [], this.phrasesFill = !1
+    class dO {
+      constructor(qq) {
+        this.host = qq, this.lastShiftPressMs = -1 / 0, this.phraseTexts = [], this.phrasesFill = !1
       }
-      setPhraseRow(TT, kT) {
-        this.phraseTexts = TT, this.phrasesFill = kT
+      setPhraseRow(qq, Eq) {
+        this.phraseTexts = qq, this.phrasesFill = Eq
       }
-      pressKey(TT) {
-        const kT = this.host.getState(),
-          cT = vK(kT),
-          lT = cT[TT.row][TT.col];
+      pressKey(qq) {
+        const Eq = this.host.getState(),
+          gq = NO(Eq),
+          Yq = gq[qq.row][qq.col];
         this.host.setState({
-          ...kT,
-          focus: TT,
-          preferredX: lK(cT, TT)
-        }), "char" === lT.type ? this.typeChar(lT.char) : "command" === lT.type ? this.runCommand(lT.command) : this.sendPhrase(lT.phraseIndex)
+          ...Eq,
+          focus: qq,
+          preferredX: gO(gq, qq)
+        }), "char" === Yq.type ? this.typeChar(Yq.char) : "command" === Yq.type ? this.runCommand(Yq.command) : this.sendPhrase(Yq.phraseIndex)
       }
-      runCommand(TT) {
-        const kT = this.host.getState();
-        switch (TT) {
+      runCommand(qq) {
+        const Eq = this.host.getState();
+        switch (qq) {
           case "backspace":
-            (0, WT.b)(kT.target);
+            (0, wq.e)(Eq.target);
             break;
           case "space":
-            (0, WT.c)(kT.target, " ");
+            (0, wq.i)(Eq.target, " ");
             break;
           case "newline":
-            (0, WT.c)(kT.target, "\n");
+            (0, wq.i)(Eq.target, "\n");
             break;
           case "caretLeft":
-            (0, WT.h)(kT.target, -1);
+            (0, wq.m)(Eq.target, -1);
             break;
           case "caretRight":
-            (0, WT.h)(kT.target, 1);
+            (0, wq.m)(Eq.target, 1);
             break;
           case "shift": {
-            const TT = performance.now();
+            const qq = performance.now();
             this.host.setState({
-              ...kT,
-              shift: OK(kT.shift, TT, this.lastShiftPressMs)
-            }), this.lastShiftPressMs = TT;
+              ...Eq,
+              shift: OO(Eq.shift, qq, this.lastShiftPressMs)
+            }), this.lastShiftPressMs = qq;
             break
           }
           case "page":
           case "otherPage": {
-            const cT = sM(kT.page, kT.accentsFirst)[TT];
+            const gq = el(Eq.page, Eq.accentsFirst)[qq];
             this.host.setState({
-              ...kT,
-              page: cT,
-              focus: KK(vK({
-                ...kT,
-                page: cT
-              }), kT.focus)
+              ...Eq,
+              page: gq,
+              focus: lO(NO({
+                ...Eq,
+                page: gq
+              }), Eq.focus)
             });
             break
           }
@@ -3800,362 +3896,362 @@ export const modules = {
             this.close();
             break;
           case "channel":
-            (0, zc.e)(kT.target) && (0, zc.c)().selectNextChannel()
+            (0, ng.h)(Eq.target) && (0, ng.b)().selectNextChannel()
         }
       }
       submit() {
-        var TT, kT;
+        var qq, Eq;
         const {
-          target: cT
+          target: gq
         } = this.host.getState();
-        this.host.hide(), (0, zc.e)(cT) ? (0, zc.c)().submit() : (sl.noteChosenStop(cT), null === (TT = (kT = (0, zc.d)(cT)).submit) || void 0 === TT || TT.call(kT), document.activeElement === cT && cT.blur())
+        this.host.hide(), (0, ng.h)(gq) ? (0, ng.b)().submit() : (eY.noteChosenStop(gq), null === (qq = (Eq = (0, ng.e)(gq)).submit) || void 0 === qq || qq.call(Eq), document.activeElement === gq && gq.blur())
       }
       close() {
         const {
-          target: TT
+          target: qq
         } = this.host.getState();
-        this.host.hide(), hK(TT)
+        this.host.hide(), VO(qq)
       }
-      typeChar(TT) {
+      typeChar(qq) {
         const {
-          target: kT,
-          page: cT,
-          shift: lT
+          target: Eq,
+          page: gq,
+          shift: Yq
         } = this.host.getState();
-        (0, WT.c)(kT, fK(TT, cT, lT)), this.host.setState({
+        (0, wq.i)(Eq, xO(qq, gq, Yq)), this.host.setState({
           ...this.host.getState(),
-          shift: yK(lT, TT)
+          shift: mO(Yq, qq)
         })
       }
-      sendPhrase(TT) {
+      sendPhrase(qq) {
         if (this.phrasesFill) {
           const {
-            target: kT
-          } = this.host.getState(), cT = this.phraseTexts[TT];
-          cT && (kT.setSelectionRange(0, kT.value.length), (0, WT.c)(kT, cT))
-        } else AK.claim(performance.now()) && (this.host.hide(), (0, zc.c)().sendLine(this.phraseTexts[TT]))
+            target: Eq
+          } = this.host.getState(), gq = this.phraseTexts[qq];
+          gq && (Eq.setSelectionRange(0, Eq.value.length), (0, wq.i)(Eq, gq))
+        } else uO.claim(performance.now()) && (this.host.hide(), (0, ng.b)().sendLine(this.phraseTexts[qq]))
       }
     }
-    var QK = cT(8691);
-    const SK = {
+    var jO = gq(8604);
+    const HO = {
         initialDelayMs: 380,
         intervalMs: 85
       },
-      DK = {
+      oO = {
         initialDelayMs: 400,
         intervalMs: 55
       };
-    class aK {
-      constructor(TT, kT) {
-        this.host = TT, this.editor = kT, this.lastDirection = null, this.navRepeat = new vT.c((0, tT.e)(SK)), this.commandRepeats = new Map(gM.filter((TT => {
+    class PO {
+      constructor(qq, Eq) {
+        this.host = qq, this.editor = Eq, this.lastDirection = null, this.navRepeat = new aq.c((0, Vq.b)(HO)), this.commandRepeats = new Map(Rl.filter((qq => {
           let {
-            repeats: kT
-          } = TT;
-          return kT
-        })).map((TT => {
+            repeats: Eq
+          } = qq;
+          return Eq
+        })).map((qq => {
           let {
-            command: kT
-          } = TT;
-          return [kT, (0, tT.e)(DK)]
+            command: Eq
+          } = qq;
+          return [Eq, (0, Vq.b)(oO)]
         })))
       }
       reset() {
         this.navRepeat.reset();
-        for (const TT of this.commandRepeats.values()) TT.reset()
+        for (const qq of this.commandRepeats.values()) qq.reset()
       }
-      onVisibleFrame(TT) {
-        const kT = performance.now();
+      onVisibleFrame(qq) {
+        const Eq = performance.now();
         for (const {
-            command: MT,
-            action: KT
+            command: lq,
+            action: Oq
           }
-          of gM) {
-          const cT = (0, IT.j)(KT),
-            lT = this.commandRepeats.get(MT);
-          if ((lT ? lT.update(TT.isHeld(cT), kT) : TT.wasPressed(cT)) && (this.editor.runCommand(MT), !this.host.getState().visible)) return
+          of Rl) {
+          const gq = (0, uq.i)(Oq),
+            Yq = this.commandRepeats.get(lq);
+          if ((Yq ? Yq.update(qq.isHeld(gq), Eq) : qq.wasPressed(gq)) && (this.editor.runCommand(lq), !this.host.getState().visible)) return
         }
-        if (TT.wasPressed((0, IT.j)("keyboardType")) && (this.editor.pressKey(this.host.getState().focus), !this.host.getState().visible)) return;
-        const cT = this.readNavDirection(TT);
-        this.lastDirection = cT;
-        const lT = this.navRepeat.update(cT, kT);
-        lT && this.navigate(lT)
+        if (qq.wasPressed((0, uq.i)("keyboardType")) && (this.editor.pressKey(this.host.getState().focus), !this.host.getState().visible)) return;
+        const gq = this.readNavDirection(qq);
+        this.lastDirection = gq;
+        const Yq = this.navRepeat.update(gq, Eq);
+        Yq && this.navigate(Yq)
       }
-      onHiddenFrame(TT, kT) {
-        var cT;
-        if (TT.wasPressed((0, IT.j)("keyboardClose"))) return void hK(kT);
-        const lT = (0, IT.j)("keyboardType");
-        if (TT.wasPressed(lT)) return AT.d.consumeButton(lT), void this.host.open(kT);
-        const MT = this.readNavDirection(TT),
-          KT = null !== MT && MT !== this.lastDirection;
-        if (this.lastDirection = MT, !KT || (0, zc.e)(kT)) return;
-        const OT = (null === (cT = Il()) || void 0 === cT ? void 0 : cT.root.contains(kT)) || null !== kT.closest(".EntireInventoryWrapper");
-        hK(kT), OT && AT.d.handOffHeldInput()
+      onHiddenFrame(qq, Eq) {
+        var gq;
+        if (qq.wasPressed((0, uq.i)("keyboardClose"))) return void VO(Eq);
+        const Yq = (0, uq.i)("keyboardType");
+        if (qq.wasPressed(Yq)) return Bq.c.consumeButton(Yq), void this.host.open(Eq);
+        const lq = this.readNavDirection(qq),
+          Oq = null !== lq && lq !== this.lastDirection;
+        if (this.lastDirection = lq, !Oq || (0, ng.h)(Eq)) return;
+        const mq = (null === (gq = cY()) || void 0 === gq ? void 0 : gq.root.contains(Eq)) || null !== Eq.closest(".EntireInventoryWrapper");
+        VO(Eq), mq && Bq.c.handOffHeldInput()
       }
-      navigate(TT) {
-        const kT = this.host.getState();
-        if ("Up" === TT && 0 === kT.focus.row && "chat" === kT.kind) return (0, zc.c)().stepHistory(), void this.host.setState({
-          ...kT
+      navigate(qq) {
+        const Eq = this.host.getState();
+        if ("Up" === qq && 0 === Eq.focus.row && "chat" === Eq.kind) return (0, ng.b)().stepHistory(), void this.host.setState({
+          ...Eq
         });
-        const cT = ((TT, kT, cT, lT) => {
-          if ("Left" === cT || "Right" === cT) {
-            const lT = TT[kT.row].length,
-              MT = (kT.col + ("Right" === cT ? 1 : -1) + lT) % lT,
-              KT = {
-                row: kT.row,
-                col: MT
+        const gq = ((qq, Eq, gq, Yq) => {
+          if ("Left" === gq || "Right" === gq) {
+            const Yq = qq[Eq.row].length,
+              lq = (Eq.col + ("Right" === gq ? 1 : -1) + Yq) % Yq,
+              Oq = {
+                row: Eq.row,
+                col: lq
               };
             return {
-              pos: KT,
-              preferredX: lK(TT, KT)
+              pos: Oq,
+              preferredX: gO(qq, Oq)
             }
           }
-          const MT = (kT.row + ("Down" === cT ? 1 : -1) + TT.length) % TT.length;
+          const lq = (Eq.row + ("Down" === gq ? 1 : -1) + qq.length) % qq.length;
           return {
             pos: {
-              row: MT,
-              col: MK(TT, MT, lT)
+              row: lq,
+              col: YO(qq, lq, Yq)
             },
-            preferredX: lT
+            preferredX: Yq
           }
-        })(vK(kT), kT.focus, TT, kT.preferredX);
+        })(NO(Eq), Eq.focus, qq, Eq.preferredX);
         this.host.setState({
-          ...kT,
-          focus: cT.pos,
-          preferredX: cT.preferredX
+          ...Eq,
+          focus: gq.pos,
+          preferredX: gq.preferredX
         })
       }
-      readNavDirection(TT) {
-        for (const kT of vT.D)
-          if (TT.isHeld(kT)) return kT;
-        return (0, vT.jb)((0, vT.m)(TT.leftStick, (0, CT.g)().moveDeadzone))
+      readNavDirection(qq) {
+        for (const Eq of aq.C)
+          if (qq.isHeld(Eq)) return Eq;
+        return (0, aq.kb)((0, aq.j)(qq.leftStick, (0, Wq.i)().moveDeadzone))
       }
     }
-    const FK = ["Up", "Down", "Left", "Right"],
-      rK = new Set(["CapsLock", "Control", "Fn", "FnLock", "Hyper", "NumLock", "ScrollLock", "Shift", "Super"]);
-    const PK = new class {
+    const QO = ["Up", "Down", "Left", "Right"],
+      yO = new Set(["CapsLock", "Control", "Fn", "FnLock", "Hyper", "NumLock", "ScrollLock", "Shift", "Super"]);
+    const tO = new class {
       constructor() {
-        this.state = CK, this.listeners = new Set, this.ownedField = null, this.pendingChatInput = null, this.pendingChatTimeout = 0, this.savedInputMode = null, this.editor = new NK(this), this.padInput = new aK(this, this.editor)
+        this.state = BO, this.listeners = new Set, this.ownedField = null, this.pendingChatInput = null, this.pendingChatTimeout = 0, this.savedInputMode = null, this.editor = new dO(this), this.padInput = new PO(this, this.editor)
       }
       getState() {
         return this.state
       }
-      setState(TT) {
-        const kT = TT.visible !== this.state.visible;
-        this.state = TT;
-        for (const cT of this.listeners) cT();
-        kT && xT.k.nt(QK.e, TT.visible)
+      setState(qq) {
+        const Eq = qq.visible !== this.state.visible;
+        this.state = qq;
+        for (const gq of this.listeners) gq();
+        Eq && cq.i.TV(jO.d, qq.visible)
       }
-      subscribe(TT) {
-        return this.listeners.add(TT), () => {
-          this.listeners.delete(TT)
+      subscribe(qq) {
+        return this.listeners.add(qq), () => {
+          this.listeners.delete(qq)
         }
       }
       install() {
-        const TT = AT.d.register({
+        const qq = Bq.c.register({
             name: "keyboard",
-            isActive: () => this.state.visible || (0, WT.d)(document.activeElement),
-            onFrame: TT => {
-              this.onFrame(TT)
+            isActive: () => this.state.visible || (0, wq.k)(document.activeElement),
+            onFrame: qq => {
+              this.onFrame(qq)
             },
             onDeactivate: () => {
               this.padInput.reset()
             },
-            wakePressActs: TT => FK.includes(TT) || !this.state.visible && TT === (0, IT.j)("keyboardType")
+            wakePressActs: qq => QO.includes(qq) || !this.state.visible && qq === (0, uq.i)("keyboardType")
           }),
-          kT = TT => {
-            const kT = TT.target;
-            (0, WT.d)(kT) && (kT === this.pendingChatInput || (0, jT.i)() ? this.open(kT) : this.state.visible && kT !== this.state.target && (this.ownedField = null, this.hide()))
+          Eq = qq => {
+            const Eq = qq.target;
+            (0, wq.k)(Eq) && (Eq === this.pendingChatInput || (0, Nq.k)() ? this.open(Eq) : this.state.visible && Eq !== this.state.target && (this.ownedField = null, this.hide()))
           },
-          cT = () => {
+          gq = () => {
             setTimeout((() => {
               this.releaseLostField()
             }), 0)
           },
-          lT = TT => {
-            TT.isTrusted && this.state.visible && (TT => !TT.repeat && !rK.has(TT.key) && !(0, xK.d)(TT.key) && !/^(Audio|Media|Browser|Launch|Gamepad)/.test(TT.key))(TT) && this.hide()
+          Yq = qq => {
+            qq.isTrusted && this.state.visible && (qq => !qq.repeat && !yO.has(qq.key) && !(0, AO.b)(qq.key) && !/^(Audio|Media|Browser|Launch|Gamepad)/.test(qq.key))(qq) && this.hide()
           },
-          MT = () => {
+          lq = () => {
             this.state.visible && this.setState({
               ...this.state,
-              ...tK(this.state.target)
+              ...aO(this.state.target)
             })
           };
-        document.addEventListener("focusin", kT, !0), document.addEventListener("focusout", cT, !0), window.addEventListener("keydown", lT, !0), window.addEventListener("resize", MT);
-        const KT = xT.k.subscribe(oM.b, (() => {
+        document.addEventListener("focusin", Eq, !0), document.addEventListener("focusout", gq, !0), window.addEventListener("keydown", Yq, !0), window.addEventListener("resize", lq);
+        const Oq = cq.i.subscribe(il.b, (() => {
             this.openChat()
           })),
-          OT = xT.k.subscribe(QK.g, (TT => {
-            this.openForField(TT)
+          mq = cq.i.subscribe(jO.e, (qq => {
+            this.openForField(qq)
           }));
         return () => {
-          TT(), document.removeEventListener("focusin", kT, !0), document.removeEventListener("focusout", cT, !0), window.removeEventListener("keydown", lT, !0), window.removeEventListener("resize", MT), xT.k.unsubscribe(KT), xT.k.unsubscribe(OT), this.clearPendingChat(), this.hide(), this.ownedField = null
+          qq(), document.removeEventListener("focusin", Eq, !0), document.removeEventListener("focusout", gq, !0), window.removeEventListener("keydown", Yq, !0), window.removeEventListener("resize", lq), cq.i.unsubscribe(Oq), cq.i.unsubscribe(mq), this.clearPendingChat(), this.hide(), this.ownedField = null
         }
       }
       openChat() {
-        const TT = (0, zc.c)();
-        TT ? document.activeElement !== TT.input ? (this.clearPendingChat(), this.pendingChatInput = TT.input, this.pendingChatTimeout = window.setTimeout((() => {
+        const qq = (0, ng.b)();
+        qq ? document.activeElement !== qq.input ? (this.clearPendingChat(), this.pendingChatInput = qq.input, this.pendingChatTimeout = window.setTimeout((() => {
           this.pendingChatInput = null
-        }), 250), TT.open()) : this.open(TT.input) : console.warn("controllerOpenChat with no chat mounted")
+        }), 250), qq.open()) : this.open(qq.input) : console.warn("controllerOpenChat with no chat mounted")
       }
-      openForField(TT) {
-        (0, WT.d)(TT) ? (document.activeElement !== TT && TT.focus(), document.activeElement === TT && this.open(TT)) : console.warn("controllerOpenKeyboard needs an editable input or textarea", TT)
+      openForField(qq) {
+        (0, wq.k)(qq) ? (document.activeElement !== qq && qq.focus(), document.activeElement === qq && this.open(qq)) : console.warn("controllerOpenKeyboard needs an editable input or textarea", qq)
       }
-      open(TT) {
-        var kT;
-        if (this.clearPendingChat(), this.ownedField = TT, this.state.visible && this.state.target === TT) return;
-        this.restoreInputMode(), (0, WT.j)(TT), this.savedInputMode = TT.getAttribute("inputmode"), TT.setAttribute("inputmode", "none");
-        const cT = {
-          ...CK,
+      open(qq) {
+        var Eq;
+        if (this.clearPendingChat(), this.ownedField = qq, this.state.visible && this.state.target === qq) return;
+        this.restoreInputMode(), (0, wq.p)(qq), this.savedInputMode = qq.getAttribute("inputmode"), qq.setAttribute("inputmode", "none");
+        const gq = {
+          ...BO,
           visible: !0,
-          target: TT,
-          kind: (0, zc.e)(TT) ? "chat" : null !== (kT = (0, zc.d)(TT).kind) && void 0 !== kT ? kT : null,
-          accentsFirst: (lT = NM.f.get().getCurrentLanguageCode(), qM.has(lT)),
-          ...tK(TT)
+          target: qq,
+          kind: (0, ng.h)(qq) ? "chat" : null !== (Eq = (0, ng.e)(qq).kind) && void 0 !== Eq ? Eq : null,
+          accentsFirst: (Yq = dl.h.get().getCurrentLanguageCode(), Il.has(Yq)),
+          ...aO(qq)
         };
-        var lT;
-        const MT = vK(cT),
-          KT = ((TT, kT) => {
-            for (let cT = 0; cT < TT.length; cT++) {
-              const lT = TT[cT].findIndex((TT => "char" === TT.type && TT.char === kT));
-              if (-1 !== lT) return {
-                row: cT,
-                col: lT
+        var Yq;
+        const lq = NO(gq),
+          Oq = ((qq, Eq) => {
+            for (let gq = 0; gq < qq.length; gq++) {
+              const Yq = qq[gq].findIndex((qq => "char" === qq.type && qq.char === Eq));
+              if (-1 !== Yq) return {
+                row: gq,
+                col: Yq
               }
             }
             return null
-          })(MT, "q");
+          })(lq, "q");
         this.padInput.reset(), this.setState({
-          ...cT,
-          focus: KT,
-          preferredX: lK(MT, KT)
+          ...gq,
+          focus: Oq,
+          preferredX: gO(lq, Oq)
         })
       }
       hide() {
-        this.state.visible && (this.restoreInputMode(), this.padInput.reset(), this.setState(CK))
+        this.state.visible && (this.restoreInputMode(), this.padInput.reset(), this.setState(BO))
       }
-      onFrame(TT) {
+      onFrame(qq) {
         if (this.releaseLostField()) return;
-        const kT = document.activeElement;
-        this.state.visible ? this.padInput.onVisibleFrame(TT) : (0, WT.d)(kT) && this.padInput.onHiddenFrame(TT, kT)
+        const Eq = document.activeElement;
+        this.state.visible ? this.padInput.onVisibleFrame(qq) : (0, wq.k)(Eq) && this.padInput.onHiddenFrame(qq, Eq)
       }
       releaseLostField() {
-        const TT = this.ownedField;
-        return !(null === TT || TT.isConnected && document.activeElement === TT) && (this.ownedField = null, this.hide(), !0)
+        const qq = this.ownedField;
+        return !(null === qq || qq.isConnected && document.activeElement === qq) && (this.ownedField = null, this.hide(), !0)
       }
       clearPendingChat() {
         window.clearTimeout(this.pendingChatTimeout), this.pendingChatInput = null
       }
       restoreInputMode() {
         const {
-          target: TT
+          target: qq
         } = this.state;
-        TT && (null === this.savedInputMode ? TT.removeAttribute("inputmode") : TT.setAttribute("inputmode", this.savedInputMode), this.savedInputMode = null)
+        qq && (null === this.savedInputMode ? qq.removeAttribute("inputmode") : qq.setAttribute("inputmode", this.savedInputMode), this.savedInputMode = null)
       }
     };
-    var wK = cT(8813);
-    const mK = new Map(gM.map((TT => {
+    var rO = gq(8734);
+    const vO = new Map(Rl.map((qq => {
         let {
-          command: kT,
-          action: cT
-        } = TT;
-        return [kT, cT]
+          command: Eq,
+          action: gq
+        } = qq;
+        return [Eq, gq]
       }))),
-      bK = {
+      hO = {
         letters: "ABC",
         accents: "\xe0\xe9",
         symbols: "&123"
       },
-      zK = {
+      nO = {
         chat: "controller:keyboardTargetChat",
         sign: "controller:keyboardTargetSign",
         nameTag: "controller:keyboardTargetNameTag",
         book: "controller:keyboardTargetBook",
-        KI: "controller:keyboardTargetBookTitle"
+        vc: "controller:keyboardTargetBookTitle"
       },
-      JK = TT => {
-        const kT = (() => {
-          const [, TT] = (0, ET.useReducer)((TT => TT + 1), 0);
-          return TT
+      bO = qq => {
+        const Eq = (() => {
+          const [, qq] = (0, Sq.useReducer)((qq => qq + 1), 0);
+          return qq
         })();
-        (0, ET.useEffect)((() => {
-          if (!TT) return;
-          const cT = ["input", "select", "selectionchange", "keyup", "pointerup"];
-          for (const MT of cT) TT.addEventListener(MT, kT);
-          document.addEventListener("selectionchange", kT);
-          const lT = new MutationObserver(kT);
-          return lT.observe(TT, {
+        (0, Sq.useEffect)((() => {
+          if (!qq) return;
+          const gq = ["input", "select", "selectionchange", "keyup", "pointerup"];
+          for (const lq of gq) qq.addEventListener(lq, Eq);
+          document.addEventListener("selectionchange", Eq);
+          const Yq = new MutationObserver(Eq);
+          return Yq.observe(qq, {
             attributeFilter: ["placeholder"]
           }), () => {
-            lT.disconnect();
-            for (const lT of cT) TT.removeEventListener(lT, kT);
-            document.removeEventListener("selectionchange", kT)
+            Yq.disconnect();
+            for (const Yq of gq) qq.removeEventListener(Yq, Eq);
+            document.removeEventListener("selectionchange", Eq)
           }
-        }), [TT, kT])
+        }), [qq, Eq])
       },
-      oK = TT => {
-        TT.preventDefault()
+      iO = qq => {
+        qq.preventDefault()
       },
-      HK = TT => {
-        "mouse" !== TT.pointerType && TT.preventDefault()
+      ZO = qq => {
+        "mouse" !== qq.pointerType && qq.preventDefault()
       },
-      eK = () => {
-        var TT;
+      fO = () => {
+        var qq;
         const {
-          t: kT
-        } = (0, MT.B)(), cT = (() => {
-          const [TT, kT] = (0, ET.useState)(PK.getState());
-          return (0, ET.useEffect)((() => PK.subscribe((() => {
-            kT(PK.getState())
-          }))), []), TT
-        })(), lT = (0, jT.v)(), KT = (0, ET.useRef)(null);
-        (0, CT.o)(), (0, jT.x)(), (0, ET.useEffect)((() => {
-          const TT = PK.install(),
-            kT = null;
+          t: Eq
+        } = (0, lq.v)(), gq = (() => {
+          const [qq, Eq] = (0, Sq.useState)(tO.getState());
+          return (0, Sq.useEffect)((() => tO.subscribe((() => {
+            Eq(tO.getState())
+          }))), []), qq
+        })(), Yq = (0, Nq.y)(), Oq = (0, Sq.useRef)(null);
+        (0, Wq.r)(), (0, Nq.B)(), (0, Sq.useEffect)((() => {
+          const qq = tO.install(),
+            Eq = null;
           return () => {
-            TT(), null === kT || void 0 === kT || kT()
+            qq(), null === Eq || void 0 === Eq || Eq()
           }
         }), []);
-        const OT = (0, ET.useMemo)((() => IK.map((TT => kT(TT)))), [kT]),
-          yT = cT.visible && "chat" === cT.kind ? cT.target : null;
-        JK(yT);
-        const fT = null !== (TT = null === yT || void 0 === yT ? void 0 : yT.value) && void 0 !== TT ? TT : "",
-          xT = ((TT, kT, cT) => {
-            if (!TT.startsWith("/")) return [];
-            const lT = [];
-            for (let MT = kT.length - 1; MT >= 0 && lT.length < cT; MT--) {
-              const cT = kT[MT].trim();
-              cT.startsWith(TT) && cT !== TT && !lT.includes(cT) && lT.push(cT)
+        const mq = (0, Sq.useMemo)((() => cO.map((qq => Eq(qq)))), [Eq]),
+          xq = gq.visible && "chat" === gq.kind ? gq.target : null;
+        bO(xq);
+        const Aq = null !== (qq = null === xq || void 0 === xq ? void 0 : xq.value) && void 0 !== qq ? qq : "",
+          cq = ((qq, Eq, gq) => {
+            if (!qq.startsWith("/")) return [];
+            const Yq = [];
+            for (let lq = Eq.length - 1; lq >= 0 && Yq.length < gq; lq--) {
+              const gq = Eq[lq].trim();
+              gq.startsWith(qq) && gq !== qq && !Yq.includes(gq) && Yq.push(gq)
             }
-            return lT
-          })(fT, fT.startsWith("/") ? (0, wK.e)() : [], IK.length),
-          AT = fT.startsWith("/"),
-          vT = AT ? IK.map(((TT, kT) => {
-            var cT;
-            return null !== (cT = xT[kT]) && void 0 !== cT ? cT : ""
-          })) : OT;
-        if ((0, ET.useEffect)((() => {
-            PK.editor.setPhraseRow(vT, AT)
-          })), (0, ET.useEffect)((() => {
-            const TT = KT.current;
-            if (TT) return TT.addEventListener("touchstart", oK, {
+            return Yq
+          })(Aq, Aq.startsWith("/") ? (0, rO.f)() : [], cO.length),
+          Bq = Aq.startsWith("/"),
+          aq = Bq ? cO.map(((qq, Eq) => {
+            var gq;
+            return null !== (gq = cq[Eq]) && void 0 !== gq ? gq : ""
+          })) : mq;
+        if ((0, Sq.useEffect)((() => {
+            tO.editor.setPhraseRow(aq, Bq)
+          })), (0, Sq.useEffect)((() => {
+            const qq = Oq.current;
+            if (qq) return qq.addEventListener("touchstart", iO, {
               passive: !1
             }), () => {
-              TT.removeEventListener("touchstart", oK)
+              qq.removeEventListener("touchstart", iO)
             }
-          }), [cT.visible]), !cT.visible) return null;
-        const tT = vK(cT),
-          hT = cK(tT),
-          NT = TT => "char" === TT.type ? fK(TT.char, cT.page, cT.shift) : "phrase" === TT.type ? vT[TT.phraseIndex] : (TT => {
-            switch (TT) {
+          }), [gq.visible]), !gq.visible) return null;
+        const Vq = NO(gq),
+          dq = EO(Vq),
+          jq = qq => "char" === qq.type ? xO(qq.char, gq.page, gq.shift) : "phrase" === qq.type ? aq[qq.phraseIndex] : (qq => {
+            switch (qq) {
               case "backspace":
                 return "\u232b";
               case "shift":
-                return "caps" === cT.shift ? "\u21ea" : "\u21e7";
+                return "caps" === gq.shift ? "\u21ea" : "\u21e7";
               case "page":
               case "otherPage":
-                return bK[sM(cT.page, cT.accentsFirst)[TT]];
+                return hO[el(gq.page, gq.accentsFirst)[qq]];
               case "space":
-                return kT("controller:keyboardSpace");
+                return Eq("controller:keyboardSpace");
               case "caretLeft":
                 return "\u2190";
               case "caretRight":
@@ -4163,385 +4259,385 @@ export const modules = {
               case "newline":
                 return "\u21b5";
               case "submit":
-                return kT("chat" === cT.kind ? "controller:keyboardSend" : "controller:keyboardDone");
+                return Eq("chat" === gq.kind ? "controller:keyboardSend" : "controller:keyboardDone");
               case "close":
                 return "\u2715";
               case "channel":
                 return "\u21c4"
             }
-          })(TT.command),
-          QT = TT => {
-            PK.editor.pressKey(TT)
+          })(qq.command),
+          Hq = qq => {
+            tO.editor.pressKey(qq)
           };
-        return (0, XT.jsxs)("div", {
-          ref: KT,
-          className: uT()(zc.g, "top" === cT.placement ? "PadKeyboardTop" : "PadKeyboardBottom", {
-            PadKeyboardMultiline: cT.target instanceof HTMLTextAreaElement
+        return (0, Lq.jsxs)("div", {
+          ref: Oq,
+          className: Gq()(ng.m, "top" === gq.placement ? "PadKeyboardTop" : "PadKeyboardBottom", {
+            PadKeyboardMultiline: gq.target instanceof HTMLTextAreaElement
           }),
           style: {
-            "--pad-keyboard-rows": tT.length,
-            "--pad-keyboard-height": `${cT.maxHeightPx}px`
+            "--pad-keyboard-rows": Vq.length,
+            "--pad-keyboard-height": `${gq.maxHeightPx}px`
           },
-          onPointerDown: HK,
-          onMouseDown: oK,
-          children: [(0, XT.jsx)(GK, {
-            target: cT.target,
-            label: cT.kind ? kT(zK[cT.kind]) : cT.target.placeholder || kT("controller:keyboardTargetText")
-          }), (0, XT.jsx)("div", {
+          onPointerDown: ZO,
+          onMouseDown: iO,
+          children: [(0, Lq.jsx)(MO, {
+            target: gq.target,
+            label: gq.kind ? Eq(nO[gq.kind]) : gq.target.placeholder || Eq("controller:keyboardTargetText")
+          }), (0, Lq.jsx)("div", {
             className: "PadKeyboardRows",
-            children: tT.map(((TT, kT) => (0, XT.jsx)("div", {
-              className: uT()("PadKeyboardRow", {
-                PadKeyboardPhraseRow: "phrase" === TT[0].type
+            children: Vq.map(((qq, Eq) => (0, Lq.jsx)("div", {
+              className: Gq()("PadKeyboardRow", {
+                PadKeyboardPhraseRow: "phrase" === qq[0].type
               }),
-              children: TT.map(((TT, MT) => {
-                const KT = lT && cT.focus.row === kT && cT.focus.col === MT,
-                  OT = "command" === TT.type ? mK.get(TT.command) : void 0;
-                return (0, XT.jsx)("div", {
+              children: qq.map(((qq, lq) => {
+                const Oq = Yq && gq.focus.row === Eq && gq.focus.col === lq,
+                  mq = "command" === qq.type ? vO.get(qq.command) : void 0;
+                return (0, Lq.jsx)("div", {
                   className: "PadKeyboardKeySlot",
                   style: {
-                    width: TT.width / hT * 100 + "%"
+                    width: qq.width / dq * 100 + "%"
                   },
-                  children: (0, XT.jsxs)("div", {
-                    className: uT()("PadKeyboardKey", {
-                      PadKeyboardKeyFocused: KT,
-                      PadKeyboardKeyCommand: "command" === TT.type,
-                      PadKeyboardKeyPhrase: "phrase" === TT.type,
-                      PadKeyboardKeyActive: "command" === TT.type && "shift" === TT.command && "off" !== cT.shift,
-                      PadKeyboardKeySubmit: "command" === TT.type && "submit" === TT.command
+                  children: (0, Lq.jsxs)("div", {
+                    className: Gq()("PadKeyboardKey", {
+                      PadKeyboardKeyFocused: Oq,
+                      PadKeyboardKeyCommand: "command" === qq.type,
+                      PadKeyboardKeyPhrase: "phrase" === qq.type,
+                      PadKeyboardKeyActive: "command" === qq.type && "shift" === qq.command && "off" !== gq.shift,
+                      PadKeyboardKeySubmit: "command" === qq.type && "submit" === qq.command
                     }),
                     role: "button",
                     onClick: () => {
-                      QT({
-                        row: kT,
-                        col: MT
+                      Hq({
+                        row: Eq,
+                        col: lq
                       })
                     },
-                    onTouchEnd: TT => {
-                      var cT, lT;
-                      TT.preventDefault(), cT = TT.changedTouches[0], lT = TT.currentTarget.getBoundingClientRect(), cT && cT.clientX >= lT.left && cT.clientX <= lT.right && cT.clientY >= lT.top && cT.clientY <= lT.bottom && QT({
-                        row: kT,
-                        col: MT
+                    onTouchEnd: qq => {
+                      var gq, Yq;
+                      qq.preventDefault(), gq = qq.changedTouches[0], Yq = qq.currentTarget.getBoundingClientRect(), gq && gq.clientX >= Yq.left && gq.clientX <= Yq.right && gq.clientY >= Yq.top && gq.clientY <= Yq.bottom && Hq({
+                        row: Eq,
+                        col: lq
                       })
                     },
-                    children: [(0, XT.jsx)("span", {
+                    children: [(0, Lq.jsx)("span", {
                       className: "PadKeyboardKeyLabel",
-                      children: NT(TT)
-                    }), lT && OT && (0, XT.jsx)(FM, {
+                      children: jq(qq)
+                    }), Yq && mq && (0, Lq.jsx)(Ql, {
                       className: "PadKeyboardKeyGlyph",
-                      glyph: (0, IT.j)(OT)
+                      glyph: (0, uq.i)(mq)
                     })]
                   })
-                }, MT)
+                }, lq)
               }))
-            }, kT)))
+            }, Eq)))
           })]
         })
       },
-      GK = TT => {
+      MO = qq => {
         let {
-          target: kT,
-          label: cT
-        } = TT;
-        JK(kT);
-        const lT = (0, ET.useRef)(null),
-          MT = (0, ET.useRef)(null),
-          KT = kT instanceof HTMLTextAreaElement;
-        (0, ET.useLayoutEffect)((() => {
-          const TT = lT.current,
-            kT = MT.current;
-          KT ? TT.scrollTop = kT.offsetTop - TT.clientHeight / 2 : TT.scrollLeft = kT.offsetLeft - TT.clientWidth / 2
+          target: Eq,
+          label: gq
+        } = qq;
+        bO(Eq);
+        const Yq = (0, Sq.useRef)(null),
+          lq = (0, Sq.useRef)(null),
+          Oq = Eq instanceof HTMLTextAreaElement;
+        (0, Sq.useLayoutEffect)((() => {
+          const qq = Yq.current,
+            Eq = lq.current;
+          Oq ? qq.scrollTop = Eq.offsetTop - qq.clientHeight / 2 : qq.scrollLeft = Eq.offsetLeft - qq.clientWidth / 2
         }));
         const {
-          value: OT,
-          start: yT,
-          end: fT
-        } = (0, WT.k)(kT), xT = "password" === kT.type ? "\u2022".repeat(OT.length) : OT;
-        return (0, XT.jsxs)("div", {
+          value: mq,
+          start: xq,
+          end: Aq
+        } = (0, wq.t)(Eq), cq = "password" === Eq.type ? "\u2022".repeat(mq.length) : mq;
+        return (0, Lq.jsxs)("div", {
           className: "PadKeyboardPreview",
-          children: [(0, XT.jsx)("div", {
+          children: [(0, Lq.jsx)("div", {
             className: "PadKeyboardPreviewLabel SmallTextBold",
-            children: cT
-          }), (0, XT.jsxs)("div", {
-            ref: lT,
-            className: uT()("PadKeyboardPreviewText", {
-              PadKeyboardPreviewMultiline: KT
+            children: gq
+          }), (0, Lq.jsxs)("div", {
+            ref: Yq,
+            className: Gq()("PadKeyboardPreviewText", {
+              PadKeyboardPreviewMultiline: Oq
             }),
-            children: [(0, XT.jsx)("span", {
-              children: xT.slice(0, yT)
-            }), (0, XT.jsx)("span", {
-              ref: MT,
+            children: [(0, Lq.jsx)("span", {
+              children: cq.slice(0, xq)
+            }), (0, Lq.jsx)("span", {
+              ref: lq,
               className: "PadKeyboardCaret"
-            }), yT !== fT && (0, XT.jsx)("span", {
+            }), xq !== Aq && (0, Lq.jsx)("span", {
               className: "PadKeyboardPreviewSelection",
-              children: xT.slice(yT, fT)
-            }), (0, XT.jsx)("span", {
-              children: xT.slice(fT)
-            }), 0 === xT.length && kT.placeholder && kT.placeholder !== cT && (0, XT.jsx)("span", {
+              children: cq.slice(xq, Aq)
+            }), (0, Lq.jsx)("span", {
+              children: cq.slice(Aq)
+            }), 0 === cq.length && Eq.placeholder && Eq.placeholder !== gq && (0, Lq.jsx)("span", {
               className: "PadKeyboardPreviewPlaceholder",
-              children: kT.placeholder
+              children: Eq.placeholder
             })]
           })]
         })
       };
-    var VK = cT(1409),
-      EK = cT(3358);
-    const ZK = function() {
-        for (var TT = arguments.length, kT = new Array(TT), cT = 0; cT < TT; cT++) kT[cT] = arguments[cT];
-        return kT.map(IT.j)
+    var TO = gq(1367),
+      zO = gq(3294);
+    const SO = function() {
+        for (var qq = arguments.length, Eq = new Array(qq), gq = 0; gq < qq; gq++) Eq[gq] = arguments[gq];
+        return Eq.map(uq.i)
       },
-      uK = (TT, kT) => {
-        const cT = Uc(TT);
-        return cT ? [{
-          glyphs: [cT],
-          labelKey: kT
+      pO = (qq, Eq) => {
+        const gq = Ug(qq);
+        return gq ? [{
+          glyphs: [gq],
+          labelKey: Eq
         }] : []
       },
-      XK = [".BottomMiddleElements", ".BottomLeftElements > *", ".BottomRightElements > *", ".MiddleTextBottom .MiddleText"],
-      dK = "--pad-hint-bar-clearance",
-      LK = "[data-pad-hint-bar-avoid]",
-      RK = TT => {
-        const kT = [];
-        for (const cT of TT)(0, qT.l)(cT) && kT.push(cT.getBoundingClientRect());
-        return kT
+      GO = [".BottomMiddleElements", ".BottomLeftElements > *", ".BottomRightElements > *", ".MiddleTextBottom .MiddleText"],
+      LO = "--pad-hint-bar-clearance",
+      JO = "[data-pad-hint-bar-avoid]",
+      kO = qq => {
+        const Eq = [];
+        for (const gq of qq)(0, eq.p)(gq) && Eq.push(gq.getBoundingClientRect());
+        return Eq
       },
-      gK = TT => {
-        if (!TT) return null;
-        const kT = Il(),
-          cT = kT ? RK(((TT, kT) => {
-            const cT = TT.closest(LK);
-            return cT ? [cT] : ("popup" === kT ? document : TT).querySelectorAll(LK)
-          })(kT.root, kT.layer.kind)) : [],
-          lT = !kT || kT.root.hasAttribute("data-pad-shows-hud");
-        if (((0, EK.i)(null === kT || void 0 === kT ? void 0 : kT.layer.kind, (0, EK.l)()) || lT) && cT.push(...RK(document.querySelectorAll(XK.join(",")))), 0 === cT.length) return null;
+      RO = qq => {
+        if (!qq) return null;
+        const Eq = cY(),
+          gq = Eq ? kO(((qq, Eq) => {
+            const gq = qq.closest(JO);
+            return gq ? [gq] : ("popup" === Eq ? document : qq).querySelectorAll(JO)
+          })(Eq.root, Eq.layer.kind)) : [],
+          Yq = !Eq || Eq.root.hasAttribute("data-pad-shows-hud");
+        if (((0, zO.g)(null === Eq || void 0 === Eq ? void 0 : Eq.layer.kind, (0, zO.h)()) || Yq) && gq.push(...kO(document.querySelectorAll(GO.join(",")))), 0 === gq.length) return null;
         const {
-          width: MT,
-          height: KT
-        } = TT.getBoundingClientRect(), OT = window.innerHeight - 8, yT = (0, EK.r)(OT, {
-          width: MT,
-          height: KT
-        }, window.innerWidth / 2, cT, 8);
-        return yT === OT ? null : Math.round(window.innerHeight - yT)
+          width: lq,
+          height: Oq
+        } = qq.getBoundingClientRect(), mq = window.innerHeight - 8, xq = (0, zO.l)(mq, {
+          width: lq,
+          height: Oq
+        }, window.innerWidth / 2, gq, 8);
+        return xq === mq ? null : Math.round(window.innerHeight - xq)
       },
-      UK = TT => {
-        const kT = document.documentElement.style,
-          cT = TT ? `${Math.round(window.innerHeight-TT.getBoundingClientRect().top)}px` : "";
-        kT.getPropertyValue(dK) !== cT && (cT ? kT.setProperty(dK, cT) : kT.removeProperty(dK))
+      UO = qq => {
+        const Eq = document.documentElement.style,
+          gq = qq ? `${Math.round(window.innerHeight-qq.getBoundingClientRect().top)}px` : "";
+        Eq.getPropertyValue(LO) !== gq && (gq ? Eq.setProperty(LO, gq) : Eq.removeProperty(LO))
       },
-      YK = () => {
+      FO = () => {
         const {
-          t: TT
-        } = (0, MT.B)(), {
-          hideButtonHints: kT
-        } = (0, CT.o)(), cT = (0, jT.v)(), [lT, KT] = (0, ET.useState)(!1), [OT, xT] = (0, ET.useState)([]), [tT, hT] = (0, ET.useState)(null), NT = (0, ET.useRef)(null), QT = (0, ET.useRef)(null);
-        (0, hM.g)(QK.e, (TT => {
-          KT(TT)
-        })), (0, hM.g)(EK.n, (() => {
-          var TT;
-          null === (TT = QT.current) || void 0 === TT || TT.call(QT)
+          t: qq
+        } = (0, lq.v)(), {
+          hideButtonHints: Eq
+        } = (0, Wq.r)(), gq = (0, Nq.y)(), [Yq, Oq] = (0, Sq.useState)(!1), [mq, cq] = (0, Sq.useState)([]), [Vq, dq] = (0, Sq.useState)(null), jq = (0, Sq.useRef)(null), Hq = (0, Sq.useRef)(null);
+        (0, Vl.f)(jO.d, (qq => {
+          Oq(qq)
+        })), (0, Vl.f)(zO.j, (() => {
+          var qq;
+          null === (qq = Hq.current) || void 0 === qq || qq.call(Hq)
         }));
-        const ST = cT && !kT && !lT;
-        return (0, ET.useEffect)((() => {
-          if (!ST) return;
-          let TT = null;
-          const kT = () => {
-            const kT = (() => {
-                var TT;
-                const kT = AT.d.getActiveConsumerName(),
-                  cT = (0, EK.g)();
-                if (cT) {
-                  const TT = (0, IT.j)(cT),
-                    kT = "emoteWheel" === cT && "wheel" === (0, CT.g)().emoteButton || !(0, vT.J)(AT.d.getLastFrame().values, TT) ? {
-                      glyphs: ZK("menuConfirm"),
+        const oq = gq && !Eq && !Yq;
+        return (0, Sq.useEffect)((() => {
+          if (!oq) return;
+          let qq = null;
+          const Eq = () => {
+            const Eq = (() => {
+                var qq;
+                const Eq = Bq.c.getActiveConsumerName(),
+                  gq = (0, zO.d)();
+                if (gq) {
+                  const qq = (0, uq.i)(gq),
+                    Eq = "emoteWheel" === gq && "wheel" === (0, Wq.i)().emoteButton || !(0, aq.J)(Bq.c.getLastFrame().values, qq) ? {
+                      glyphs: SO("menuConfirm"),
                       labelKey: "controller:menusSelect"
                     } : {
-                      glyphs: [TT],
+                      glyphs: [qq],
                       labelKey: "controller:wheelReleaseToPick"
                     };
                   return [{
-                    glyphs: [(0, IT.t)(TT)],
+                    glyphs: [(0, uq.v)(qq)],
                     labelKey: "controller:wheelChoose"
-                  }, kT, {
-                    glyphs: ZK("menuBack"),
+                  }, Eq, {
+                    glyphs: SO("menuBack"),
                     labelKey: "controller:wheelClose"
                   }]
                 }
-                const lT = Il();
-                if (!lT || "focus" !== kT && "cursor" !== kT) return (0, EK.e)(IT.j);
-                const MT = [],
-                  KT = {
-                    glyphs: ZK("menuBack"),
+                const Yq = cY();
+                if (!Yq || "focus" !== Eq && "cursor" !== Eq) return (0, zO.b)(uq.i);
+                const lq = [],
+                  Oq = {
+                    glyphs: SO("menuBack"),
                     labelKey: "controller:menusBack"
                   },
-                  OT = (0, UT.s)(lT.root),
-                  yT = OT ? !(0, qT.n)(OT) : Boolean(lT.layer.close),
-                  xT = !OT && lT.layer.closeLabelKey ? lT.layer.closeLabelKey : KT.labelKey,
-                  jT = yT ? [{
-                    ...KT,
-                    labelKey: xT
+                  mq = (0, Fq.B)(Yq.root),
+                  xq = mq ? !(0, eq.w)(mq) : Boolean(Yq.layer.close),
+                  cq = !mq && Yq.layer.closeLabelKey ? Yq.layer.closeLabelKey : Oq.labelKey,
+                  Nq = xq ? [{
+                    ...Oq,
+                    labelKey: cq
                   }] : [],
-                  tT = Hc(lT.layer.kind) ? [{
-                    glyphs: ZK("chat"),
+                  Vq = Zg(Yq.layer.kind) ? [{
+                    glyphs: SO("chat"),
                     labelKey: "controller:menusQuickChat"
                   }] : [];
-                if ("cursor" === kT) return MT.push({
-                  glyphs: ZK("menuConfirm"),
+                if ("cursor" === Eq) return lq.push({
+                  glyphs: SO("menuConfirm"),
                   labelKey: "controller:menusClick"
-                }), MT.push({
-                  glyphs: ZK("menuSecondary"),
+                }), lq.push({
+                  glyphs: SO("menuSecondary"),
                   labelKey: "controller:menusRightClick"
-                }), MT.push(...jT), MT.push(...tT), MT.push({
+                }), lq.push(...Nq), lq.push(...Vq), lq.push({
                   glyphs: ["RightStick"],
                   labelKey: "controller:menusScroll"
-                }), wl() && MT.push({
-                  glyphs: ZK("menuToggleCursor"),
+                }), rY() && lq.push({
+                  glyphs: SO("menuToggleCursor"),
                   labelKey: "controller:menusFocusMode"
-                }), MT;
-                const hT = sl.getFocused();
-                hT && (0, ol.c)(hT) ? MT.push({
+                }), lq;
+                const dq = eY.getFocused();
+                dq && (0, iY.e)(dq) ? lq.push({
                   glyphs: ["Left", "Right"],
                   labelKey: "controller:menusAdjust"
-                }) : hT && (0, UT.C)(hT) ? MT.push({
+                }) : dq && (0, Fq.G)(dq) ? lq.push({
                   glyphs: [],
                   labelKey: "controller:menusUseMouse"
-                }) : MT.push({
-                  glyphs: ZK("menuConfirm"),
+                }) : lq.push({
+                  glyphs: SO("menuConfirm"),
                   labelKey: "controller:menusSelect"
                 });
-                const NT = hT ? null === (TT = jc(hT)) || void 0 === TT ? void 0 : TT.dataset.padSecondary : void 0;
-                NT && MT.push({
-                  glyphs: ZK("menuSecondary"),
-                  labelKey: NT
-                }), MT.push(...null !== hT && void 0 !== hT && hT.closest("[data-pad-friends-column]") ? [KT] : jT), MT.push(...tT);
-                const QT = "home" === lT.layer.kind;
-                Wc(lT.root) || !Ec(lT.root) && !nc(lT) ? QT && MT.push({
-                  glyphs: ZK("menuTabPrevious", "menuTabNext"),
+                const jq = dq ? null === (qq = Wg(dq)) || void 0 === qq ? void 0 : qq.dataset.padSecondary : void 0;
+                jq && lq.push({
+                  glyphs: SO("menuSecondary"),
+                  labelKey: jq
+                }), lq.push(...null !== dq && void 0 !== dq && dq.closest("[data-pad-friends-column]") ? [Oq] : Nq), lq.push(...Vq);
+                const Hq = "home" === Yq.layer.kind;
+                Xg(Yq.root) || !zg(Yq.root) && !wg(Yq) ? Hq && lq.push({
+                  glyphs: SO("menuTabPrevious", "menuTabNext"),
                   labelKey: "controller:menusRows"
-                }) : MT.push({
-                  glyphs: ZK("menuTabPrevious", "menuTabNext"),
+                }) : lq.push({
+                  glyphs: SO("menuTabPrevious", "menuTabNext"),
                   labelKey: "controller:menusTabs"
-                }), QT && (MT.push(...uK("inventory", "controller:menusFriends")), NT || MT.push({
-                  glyphs: ZK("menuSecondary"),
+                }), Hq && (lq.push(...pO("inventory", "controller:menusFriends")), jq || lq.push({
+                  glyphs: SO("menuSecondary"),
                   labelKey: "controller:menusSearch"
-                }), MT.push(...uK("pause", "controller:menusSettings")), MT.push(...uK("leaderboard", "controller:menusNotifications")));
-                const ST = fT.e.get("openEverythingMenuName");
-                return "inGame" === fT.e.get("gameState") && "popup" !== lT.layer.kind && null !== ST && ((0, xc.n)(ST) ? MT.push(...uK("leaderboard", "controller:menusClose")) : ST !== fc.o.LOBBY_LEADERBOARD && MT.push(...uK("leaderboard", "controller:menusLobby"))), MT.push({
-                  glyphs: ZK("menuToggleCursor"),
+                }), lq.push(...pO("pause", "controller:menusSettings")), lq.push(...pO("leaderboard", "controller:menusNotifications")));
+                const oq = Aq.b.get("openEverythingMenuName");
+                return "inGame" === Aq.b.get("gameState") && "popup" !== Yq.layer.kind && null !== oq && ((0, Ag.l)(oq) ? lq.push(...pO("leaderboard", "controller:menusClose")) : oq !== xg.p.LOBBY_LEADERBOARD && lq.push(...pO("leaderboard", "controller:menusLobby"))), lq.push({
+                  glyphs: SO("menuToggleCursor"),
                   labelKey: "controller:menusCursorMode"
-                }), MT
+                }), lq
               })(),
-              cT = gK(NT.current),
-              lT = ((TT, kT) => `${TT.map((TT=>`${TT.glyphs.join("+")}:${TT.labelKey}`)).join("|")}@${kT}`)(kT, cT);
-            lT !== TT && (TT = lT, (0, yT.unstable_batchedUpdates)((() => {
-              xT(kT), hT(cT)
-            }))), UK(NT.current)
+              gq = RO(jq.current),
+              Yq = ((qq, Eq) => `${qq.map((qq=>`${qq.glyphs.join("+")}:${qq.labelKey}`)).join("|")}@${Eq}`)(Eq, gq);
+            Yq !== qq && (qq = Yq, (0, xq.unstable_batchedUpdates)((() => {
+              cq(Eq), dq(gq)
+            }))), UO(jq.current)
           };
-          kT(), QT.current = kT;
-          const cT = requestAnimationFrame(kT),
-            lT = setInterval(kT, 150);
+          Eq(), Hq.current = Eq;
+          const gq = requestAnimationFrame(Eq),
+            Yq = setInterval(Eq, 150);
           return () => {
-            QT.current = null, cancelAnimationFrame(cT), clearInterval(lT), UK(null)
+            Hq.current = null, cancelAnimationFrame(gq), clearInterval(Yq), UO(null)
           }
-        }), [ST]), (0, ET.useLayoutEffect)((() => {
-          if (!ST) return;
-          if (0 === OT.length) return void UK(null);
-          const TT = gK(NT.current);
-          TT === tT ? UK(NT.current) : hT(TT)
-        }), [ST, OT, tT]), ST && 0 !== OT.length ? (0, XT.jsx)("div", {
-          ref: NT,
+        }), [oq]), (0, Sq.useLayoutEffect)((() => {
+          if (!oq) return;
+          if (0 === mq.length) return void UO(null);
+          const qq = RO(jq.current);
+          qq === Vq ? UO(jq.current) : dq(qq)
+        }), [oq, mq, Vq]), oq && 0 !== mq.length ? (0, Lq.jsx)("div", {
+          ref: jq,
           className: "PadButtonHintBar SmallTextBold",
-          style: null === tT ? void 0 : {
-            bottom: tT
+          style: null === Vq ? void 0 : {
+            bottom: Vq
           },
           "aria-hidden": !0,
-          children: OT.map((kT => (0, XT.jsxs)("div", {
+          children: mq.map((Eq => (0, Lq.jsxs)("div", {
             className: "PadButtonHint",
-            children: [kT.glyphs.map((TT => (0, XT.jsx)(FM, {
-              glyph: TT,
+            children: [Eq.glyphs.map((qq => (0, Lq.jsx)(Ql, {
+              glyph: qq,
               className: "PadButtonHintGlyph"
-            }, TT))), (0, XT.jsx)("span", {
-              children: TT(kT.labelKey)
+            }, qq))), (0, Lq.jsx)("span", {
+              children: qq(Eq.labelKey)
             })]
-          }, kT.labelKey)))
+          }, Eq.labelKey)))
         }) : null
       };
-    var BK = cT(1745);
-    const WK = [qT.d, "label", "[data-pad-slider]"].join(","),
-      nK = "data-pad-cursor-probe",
-      pK = TT => {
-        var kT;
-        const cT = (TT => {
-          const kT = [];
-          for (let lT = TT; lT && lT !== document.body && lT !== document.documentElement && (kT.push(lT), !(kT.length > 8)); lT = lT.parentElement);
-          const cT = document.documentElement.classList.contains(jT.r) ? kT[kT.length - 1] : void 0;
-          null === cT || void 0 === cT || cT.setAttribute(nK, "");
+    var sO = gq(1716);
+    const XO = [eq.e, "label", "[data-pad-slider]"].join(","),
+      wO = "data-pad-cursor-probe",
+      KO = qq => {
+        var Eq;
+        const gq = (qq => {
+          const Eq = [];
+          for (let Yq = qq; Yq && Yq !== document.body && Yq !== document.documentElement && (Eq.push(Yq), !(Eq.length > 8)); Yq = Yq.parentElement);
+          const gq = document.documentElement.classList.contains(Nq.r) ? Eq[Eq.length - 1] : void 0;
+          null === gq || void 0 === gq || gq.setAttribute(wO, "");
           try {
-            return kT.map((TT => ({
-              element: TT,
-              cursor: getComputedStyle(TT).cursor
+            return Eq.map((qq => ({
+              element: qq,
+              cursor: getComputedStyle(qq).cursor
             })))
           } finally {
-            null === cT || void 0 === cT || cT.removeAttribute(nK)
+            null === gq || void 0 === gq || gq.removeAttribute(wO)
           }
-        })(TT);
-        if ("pointer" !== (null === (kT = cT[0]) || void 0 === kT ? void 0 : kT.cursor)) return null;
-        let lT = 0;
-        for (; lT + 1 < cT.length && "pointer" === cT[lT + 1].cursor;) lT++;
-        return cT[lT].element
+        })(qq);
+        if ("pointer" !== (null === (Eq = gq[0]) || void 0 === Eq ? void 0 : Eq.cursor)) return null;
+        let Yq = 0;
+        for (; Yq + 1 < gq.length && "pointer" === gq[Yq + 1].cursor;) Yq++;
+        return gq[Yq].element
       },
-      iK = (TT, kT, cT, lT) => {
-        const MT = lT.root.contains(TT) ? lT.root : null;
-        for (let KT = TT; KT && KT !== document.body && KT !== document.documentElement; KT = KT.parentElement) {
-          if (KT instanceof HTMLElement && mT(KT, kT) && HT(KT, kT, cT)) return KT;
-          if (KT === MT) break
+      CO = (qq, Eq, gq, Yq) => {
+        const lq = Yq.root.contains(qq) ? Yq.root : null;
+        for (let Oq = qq; Oq && Oq !== document.body && Oq !== document.documentElement; Oq = Oq.parentElement) {
+          if (Oq instanceof HTMLElement && hq(Oq, Eq) && fq(Oq, Eq, gq)) return Oq;
+          if (Oq === lq) break
         }
-        return "home" === lT.layer.kind || "gamePage" === lT.layer.kind ? ((TT, kT) => {
-          const cT = document.scrollingElement;
-          return cT instanceof HTMLElement && ![document.documentElement, document.body].some((kT => {
-            const cT = getComputedStyle(kT),
-              lT = "y" === TT ? cT.overflowY : cT.overflowX;
-            return "hidden" === lT || "clip" === lT
-          })) && HT(cT, TT, kT) ? cT : null
-        })(kT, cT) : null
+        return "home" === Yq.layer.kind || "gamePage" === Yq.layer.kind ? ((qq, Eq) => {
+          const gq = document.scrollingElement;
+          return gq instanceof HTMLElement && ![document.documentElement, document.body].some((Eq => {
+            const gq = getComputedStyle(Eq),
+              Yq = "y" === qq ? gq.overflowY : gq.overflowX;
+            return "hidden" === Yq || "clip" === Yq
+          })) && fq(gq, qq, Eq) ? gq : null
+        })(Eq, gq) : null
       };
-    const qK = new class {
+    const IO = new class {
         constructor() {
           this.state = {
             x: 0,
             y: 0,
             speedRamp: 0
-          }, this.hasPosition = !1, this.active = !1, this.hidden = !1, this.hit = null, this.interactive = null, this.magnet = null, this.lastHitTestMs = -1 / 0, this.press = null, this.draggedSlider = null, this.repeatStop = null, this.repeatKey = null, this.repeated = !1, this.confirmRepeat = (0, tT.e)(vT.t), this.secondaryArmed = !1, this.scrollRemainder = {
+          }, this.hasPosition = !1, this.active = !1, this.hidden = !1, this.hit = null, this.interactive = null, this.magnet = null, this.lastHitTestMs = -1 / 0, this.press = null, this.draggedSlider = null, this.repeatStop = null, this.repeatKey = null, this.repeated = !1, this.confirmRepeat = (0, Vq.b)(aq.x), this.secondaryArmed = !1, this.scrollRemainder = {
             x: 0,
             y: 0
           }, this.layerRoot = null, this.layerOrder = 0, this.layerPoints = new WeakMap, this.page = null, this.pendingPageStart = null
         }
         install() {
-          const TT = AT.d.register({
+          const qq = Bq.c.register({
               name: "cursor",
-              isActive: () => "cursor" === ml(),
-              onFrame: TT => {
-                this.onFrame(TT)
+              isActive: () => "cursor" === vY(),
+              onFrame: qq => {
+                this.onFrame(qq)
               },
               onDeactivate: () => {
                 this.deactivate()
               },
-              wakePressActs: TT => (0, AT.f)(TT) || TT === (0, IT.j)("menuConfirm") && (0, UT.E)((0, jT.b)())
+              wakePressActs: qq => (0, Bq.g)(qq) || qq === (0, uq.i)("menuConfirm") && (0, Fq.H)((0, Nq.e)())
             }),
-            kT = (0, cl.j)((TT => {
-              const kT = TT.getRoot();
-              kT && this.layerPoints.delete(kT), kT === this.layerRoot && (this.layerRoot = null)
+            Eq = (0, EY.m)((qq => {
+              const Eq = qq.getRoot();
+              Eq && this.layerPoints.delete(Eq), Eq === this.layerRoot && (this.layerRoot = null)
             })),
-            cT = xT.k.subscribe("appManagerUpdated|activeInputDevice", (TT => {
-              "gamepad" !== TT && this.active && !this.hidden && this.hide()
+            gq = cq.i.subscribe("appManagerUpdated|activeInputDevice", (qq => {
+              "gamepad" !== qq && this.active && !this.hidden && this.hide()
             }));
           return () => {
-            TT(), kT(), xT.k.unsubscribe(cT), this.deactivate()
+            qq(), Eq(), cq.i.unsubscribe(gq), this.deactivate()
           }
         }
         getHighlighted() {
           return this.isVisible() ? this.interactive : null
         }
         isVisible() {
-          return this.active && !this.hidden && (0, jT.i)()
+          return this.active && !this.hidden && (0, Nq.k)()
         }
         getPoint() {
           return {
@@ -4550,20 +4646,20 @@ export const modules = {
           }
         }
         hide() {
-          this.hidden = !0, this.cancelPress(), this.secondaryArmed = !1, this.clearHover(), this.nt()
+          this.hidden = !0, this.cancelPress(), this.secondaryArmed = !1, this.clearHover(), this.TV()
         }
-        activate(TT) {
+        activate(qq) {
           this.active = !0, this.hidden = !1;
-          const kT = Fl();
-          !kT || kT.root && kT.root !== TT.root ? this.jumpTo(this.hasPosition ? this.getPoint() : {
+          const Eq = QY();
+          !Eq || Eq.root && Eq.root !== qq.root ? this.jumpTo(this.hasPosition ? this.getPoint() : {
             x: window.innerWidth / 2,
             y: window.innerHeight / 2
-          }) : (this.setLayer(TT), this.jumpTo(kT.point))
+          }) : (this.setLayer(qq), this.jumpTo(Eq.point))
         }
-        jumpTo(TT) {
+        jumpTo(qq) {
           this.state = {
-            x: TT.x,
-            y: TT.y,
+            x: qq.x,
+            y: qq.y,
             speedRamp: 0
           }, this.hasPosition = !0, this.lastHitTestMs = -1 / 0
         }
@@ -4571,306 +4667,306 @@ export const modules = {
           this.active && (this.active = !1, this.page = null, this.pendingPageStart = null, this.cancelPress(), this.clearHover(), this.draggedSlider = null, this.secondaryArmed = !1, this.scrollRemainder = {
             x: 0,
             y: 0
-          }, this.nt())
+          }, this.TV())
         }
-        onFrame(TT) {
-          const kT = Il();
-          if (!kT) return;
-          if (this.active || this.activate(kT), this.followPage(kT)) return;
-          this.followLayer(kT);
-          const cT = TT.wokeDevice ? (0, jT.b)() : null;
-          if (cT && this.jumpTo(cT), !(0, jT.i)()) return void this.hide();
-          const lT = (0, IT.j)("menuToggleCursor");
-          if (TT.wasPressed(lT)) return AT.d.consumeButton(lT), void al(this.getHandoff(null));
-          if (this.handBackToFocus(TT)) return;
-          const MT = (0, IT.j)("menuConfirm"),
-            KT = (0, IT.j)("menuSecondary");
-          if (TT.wasPressed((0, IT.j)("menuBack"))) return (0, UT.i)(kT.root) || (0, UT.c)(kT.root) || Al(), void this.nt();
-          if (qc(null, TT, kT)) return TT.wasReleased(MT) && this.press && (this.updateHit(!1), this.updateConfirm(TT, MT)), void this.nt();
+        onFrame(qq) {
+          const Eq = cY();
+          if (!Eq) return;
+          if (this.active || this.activate(Eq), this.followPage(Eq)) return;
+          this.followLayer(Eq);
+          const gq = qq.wokeDevice ? (0, Nq.e)() : null;
+          if (gq && this.jumpTo(gq), !(0, Nq.k)()) return void this.hide();
+          const Yq = (0, uq.i)("menuToggleCursor");
+          if (qq.wasPressed(Yq)) return Bq.c.consumeButton(Yq), void PY(this.getHandoff(null));
+          if (this.handBackToFocus(qq)) return;
+          const lq = (0, uq.i)("menuConfirm"),
+            Oq = (0, uq.i)("menuSecondary");
+          if (qq.wasPressed((0, uq.i)("menuBack"))) return (0, Fq.l)(Eq.root) || (0, Fq.f)(Eq.root) || uY(), void this.TV();
+          if (Ig(null, qq, Eq)) return qq.wasReleased(lq) && this.press && (this.updateHit(!1), this.updateConfirm(qq, lq)), void this.TV();
           if (document.pointerLockElement) return void this.hide();
-          const OT = bl() ? {
+          const mq = hY() ? {
               x: 0,
               y: 0
-            } : (TT => {
-              const kT = (TT, kT) => (TT ? 1 : 0) - (kT ? 1 : 0);
+            } : (qq => {
+              const Eq = (qq, Eq) => (qq ? 1 : 0) - (Eq ? 1 : 0);
               return {
-                x: kT(TT.isHeld("Right"), TT.isHeld("Left")),
-                y: kT(TT.isHeld("Down"), TT.isHeld("Up"))
+                x: Eq(qq.isHeld("Right"), qq.isHeld("Left")),
+                y: Eq(qq.isHeld("Down"), qq.isHeld("Up"))
               }
-            })(TT),
-            yT = (0, CT.g)().moveDeadzone,
-            fT = ((TT, kT) => {
-              const cT = (0, vT.m)(TT, DT(kT));
-              return Math.hypot(cT.x, cT.y)
-            })(TT.leftStick, yT) > 0 || 0 !== OT.x || 0 !== OT.y;
+            })(qq),
+            xq = (0, Wq.i)().moveDeadzone,
+            Aq = ((qq, Eq) => {
+              const gq = (0, aq.j)(qq, Pq(Eq));
+              return Math.hypot(gq.x, gq.y)
+            })(qq.leftStick, xq) > 0 || 0 !== mq.x || 0 !== mq.y;
           if (this.hidden) {
-            const kT = TT.wasPressed(MT),
-              cT = TT.wasPressed(KT);
-            if (!fT && !rT(TT.rightStick) && !kT && !cT && !TT.wokeDevice) return void this.nt();
-            if (this.hidden = !1, this.updateHit(!1), kT || cT) return kT && (this.press = {
+            const Eq = qq.wasPressed(lq),
+              gq = qq.wasPressed(Oq);
+            if (!Aq && !tq(qq.rightStick) && !Eq && !gq && !qq.wokeDevice) return void this.TV();
+            if (this.hidden = !1, this.updateHit(!1), Eq || gq) return Eq && (this.press = {
               kind: "ignored"
-            }, TT.wokeDevice && this.beginRepeat()), this.secondaryArmed = !1, void this.nt()
+            }, qq.wokeDevice && this.beginRepeat()), this.secondaryArmed = !1, void this.TV()
           }
-          this.movePendingPageStart(fT);
-          const xT = this.getPoint();
-          this.state = FT(this.state, {
-            stick: TT.leftStick,
-            moveDeadzone: yT,
-            dpad: OT,
-            dtMs: TT.dtMs,
-            cursorSpeedPercent: (0, CT.g)().cursorSpeed,
+          this.movePendingPageStart(Aq);
+          const cq = this.getPoint();
+          this.state = yq(this.state, {
+            stick: qq.leftStick,
+            moveDeadzone: xq,
+            dpad: mq,
+            dtMs: qq.dtMs,
+            cursorSpeedPercent: (0, Wq.i)().cursorSpeed,
             viewport: {
               width: window.innerWidth,
               height: window.innerHeight
             },
             context: this.getAssistContext()
           });
-          const tT = this.state.x !== xT.x || this.state.y !== xT.y,
-            hT = [MT, KT].some((kT => TT.wasPressed(kT) || TT.wasReleased(kT)));
-          (tT || hT || performance.now() - this.lastHitTestMs >= 100) && this.updateHit(tT), this.updateConfirm(TT, MT), this.updateSecondary(TT, KT), this.updateScroll(TT, kT), this.nt()
+          const Vq = this.state.x !== cq.x || this.state.y !== cq.y,
+            dq = [lq, Oq].some((Eq => qq.wasPressed(Eq) || qq.wasReleased(Eq)));
+          (Vq || dq || performance.now() - this.lastHitTestMs >= 100) && this.updateHit(Vq), this.updateConfirm(qq, lq), this.updateSecondary(qq, Oq), this.updateScroll(qq, Eq), this.TV()
         }
-        followPage(TT) {
-          const kT = "home" === TT.layer.kind || "gamePage" === TT.layer.kind,
-            cT = this.page;
-          if (this.page = kT ? {
-              key: (0, cl.o)(TT.layer),
-              root: TT.root
-            } : null, !this.page || !cT || cT.root !== TT.root || cT.key === this.page.key) return !1;
-          if (this.cancelPress(), this.secondaryArmed = !1, this.setLayer(TT), "hybrid" === Dl()) return Nl = null, tl = null, Ql.lock(), !0;
+        followPage(qq) {
+          const Eq = "home" === qq.layer.kind || "gamePage" === qq.layer.kind,
+            gq = this.page;
+          if (this.page = Eq ? {
+              key: (0, EY.t)(qq.layer),
+              root: qq.root
+            } : null, !this.page || !gq || gq.root !== qq.root || gq.key === this.page.key) return !1;
+          if (this.cancelPress(), this.secondaryArmed = !1, this.setLayer(qq), "hybrid" === oY()) return dY = null, aY = null, jY.lock(), !0;
           const {
-            key: lT
+            key: Yq
           } = this.page;
           return this.pendingPageStart = {
-            root: TT.root,
-            key: lT,
-            returning: sl.notePageEnteredByCursor(lT),
+            root: qq.root,
+            key: Yq,
+            returning: eY.notePageEnteredByCursor(Yq),
             enteredAtMs: performance.now()
           }, !1
         }
-        movePendingPageStart(TT) {
-          const kT = this.pendingPageStart;
-          if (!kT) return;
-          if (TT || kT.root !== this.layerRoot) return void(this.pendingPageStart = null);
-          const cT = kT.returning ? sl.recallStop(kT.root, kT.key) : null;
-          if (!cT && kT.returning && performance.now() - kT.enteredAtMs < 1e3) return;
-          const lT = null !== cT && void 0 !== cT ? cT : sl.pickInitial(kT.root, {
+        movePendingPageStart(qq) {
+          const Eq = this.pendingPageStart;
+          if (!Eq) return;
+          if (qq || Eq.root !== this.layerRoot) return void(this.pendingPageStart = null);
+          const gq = Eq.returning ? eY.recallStop(Eq.root, Eq.key) : null;
+          if (!gq && Eq.returning && performance.now() - Eq.enteredAtMs < 1e3) return;
+          const Yq = null !== gq && void 0 !== gq ? gq : eY.pickInitial(Eq.root, {
             includeDisabled: !0,
             waitForContent: !0,
-            enteredAtMs: kT.enteredAtMs
+            enteredAtMs: Eq.enteredAtMs
           });
-          lT && (this.pendingPageStart = null, this.jumpTo((0, UT.w)(lT)))
+          Yq && (this.pendingPageStart = null, this.jumpTo((0, Fq.D)(Yq)))
         }
-        setLayer(TT) {
-          this.layerRoot = TT.root, this.layerOrder = TT.order
+        setLayer(qq) {
+          this.layerRoot = qq.root, this.layerOrder = qq.order
         }
-        followLayer(TT) {
-          var kT;
-          if (TT.root === this.layerRoot) return;
-          null !== (kT = this.layerRoot) && void 0 !== kT && kT.isConnected && this.layerPoints.set(this.layerRoot, this.getPoint()), this.cancelPress(), this.draggedSlider = null, this.secondaryArmed = !1;
-          const cT = this.layerPoints.get(TT.root),
-            lT = cT && TT.order <= this.layerOrder ? cT : sl.getLayerStartPoint(TT.root);
-          this.setLayer(TT), this.jumpTo(lT)
+        followLayer(qq) {
+          var Eq;
+          if (qq.root === this.layerRoot) return;
+          null !== (Eq = this.layerRoot) && void 0 !== Eq && Eq.isConnected && this.layerPoints.set(this.layerRoot, this.getPoint()), this.cancelPress(), this.draggedSlider = null, this.secondaryArmed = !1;
+          const gq = this.layerPoints.get(qq.root),
+            Yq = gq && qq.order <= this.layerOrder ? gq : eY.getLayerStartPoint(qq.root);
+          this.setLayer(qq), this.jumpTo(Yq)
         }
-        getHandoff(TT) {
-          var kT;
+        getHandoff(qq) {
+          var Eq;
           return {
             point: this.getPoint(),
-            element: null !== (kT = this.interactive) && void 0 !== kT ? kT : this.findDraggedSliderNearby(),
-            direction: TT
+            element: null !== (Eq = this.interactive) && void 0 !== Eq ? Eq : this.findDraggedSliderNearby(),
+            direction: qq
           }
         }
         findDraggedSliderNearby() {
-          const TT = this.draggedSlider;
-          if (null === TT || void 0 === TT || !TT.isConnected) return null;
-          const kT = TT.getBoundingClientRect(),
+          const qq = this.draggedSlider;
+          if (null === qq || void 0 === qq || !qq.isConnected) return null;
+          const Eq = qq.getBoundingClientRect(),
             {
-              y: cT
+              y: gq
             } = this.getPoint();
-          return cT >= kT.top - 40 && cT <= kT.bottom + 40 ? TT : null
+          return gq >= Eq.top - 40 && gq <= Eq.bottom + 40 ? qq : null
         }
-        handBackToFocus(TT) {
-          if (!bl()) return !1;
-          const kT = vT.D.find((kT => TT.wasPressed(kT)));
-          return !!kT && (cT = this.getHandoff(kT), Nl = jl(cT), tl = null, Ql.lock(), AT.d.handOffHeldInput(), !0);
-          var cT
+        handBackToFocus(qq) {
+          if (!hY()) return !1;
+          const Eq = aq.C.find((Eq => qq.wasPressed(Eq)));
+          return !!Eq && (gq = this.getHandoff(Eq), dY = WY(gq), aY = null, jY.lock(), Bq.c.handOffHeldInput(), !0);
+          var gq
         }
         getAssistContext() {
-          const TT = this.interactive;
-          if (null === TT || void 0 === TT || !TT.isConnected) return {
+          const qq = this.interactive;
+          if (null === qq || void 0 === qq || !qq.isConnected) return {
             overInteractive: !1,
             magnetTarget: null
           };
-          const kT = TT.getBoundingClientRect();
-          if (kT.width > .4 * window.innerWidth || kT.height > .4 * window.innerHeight) return {
+          const Eq = qq.getBoundingClientRect();
+          if (Eq.width > .4 * window.innerWidth || Eq.height > .4 * window.innerHeight) return {
             overInteractive: !1,
             magnetTarget: null
           };
-          const cT = (0, CT.g)().cursorMagnetism && !(0, BK.e)(TT) && !TT.closest("[data-pad-slider]"),
-            lT = this.magnet && this.magnet !== TT && this.magnet.isConnected ? this.magnet.getBoundingClientRect() : kT;
+          const gq = (0, Wq.i)().cursorMagnetism && !(0, sO.b)(qq) && !qq.closest("[data-pad-slider]"),
+            Yq = this.magnet && this.magnet !== qq && this.magnet.isConnected ? this.magnet.getBoundingClientRect() : Eq;
           return {
             overInteractive: !0,
-            magnetTarget: cT ? {
-              x: lT.left + lT.width / 2,
-              y: lT.top + lT.height / 2
+            magnetTarget: gq ? {
+              x: Yq.left + Yq.width / 2,
+              y: Yq.top + Yq.height / 2
             } : null
           }
         }
-        updateHit(TT) {
+        updateHit(qq) {
           this.lastHitTestMs = performance.now();
-          const kT = this.getPoint(),
-            cT = document.elementFromPoint(kT.x, kT.y),
-            lT = cT && !(0, NT.r)(cT) && (TT => {
-              var kT;
-              const cT = Il();
-              return !(cT && !cT.root.contains(TT) && !TT.closest(".tooltip-container")) || !(null !== (kT = document.getElementById("root")) && void 0 !== kT && kT.contains(TT))
-            })(cT) ? cT : null;
-          if (lT !== this.hit) return (0, UT.k)(this.hit, lT, kT), this.hit = lT, void this.setInteractive(lT ? (TT => {
-            const kT = TT.closest(WK);
-            if (kT) {
-              var cT, lT;
-              const TT = null !== (cT = null === (lT = kT.parentElement) || void 0 === lT ? void 0 : lT.closest("[data-pad-focusable]")) && void 0 !== cT ? cT : kT;
-              return (0, qT.n)(TT) ? {
+          const Eq = this.getPoint(),
+            gq = document.elementFromPoint(Eq.x, Eq.y),
+            Yq = gq && !(0, jq.q)(gq) && (qq => {
+              var Eq;
+              const gq = cY();
+              return !(gq && !gq.root.contains(qq) && !qq.closest(".tooltip-container")) || !(null !== (Eq = document.getElementById("root")) && void 0 !== Eq && Eq.contains(qq))
+            })(gq) ? gq : null;
+          if (Yq !== this.hit) return (0, Fq.s)(this.hit, Yq, Eq), this.hit = Yq, void this.setInteractive(Yq ? (qq => {
+            const Eq = qq.closest(XO);
+            if (Eq) {
+              var gq, Yq;
+              const qq = null !== (gq = null === (Yq = Eq.parentElement) || void 0 === Yq ? void 0 : Yq.closest("[data-pad-focusable]")) && void 0 !== gq ? gq : Eq;
+              return (0, eq.w)(qq) ? {
                 element: null,
                 magnet: null
               } : {
-                element: TT,
-                magnet: kT
+                element: qq,
+                magnet: Eq
               }
             }
-            const MT = pK(TT);
+            const lq = KO(qq);
             return {
-              element: MT,
-              magnet: MT
+              element: lq,
+              magnet: lq
             }
-          })(lT) : {
+          })(Yq) : {
             element: null,
             magnet: null
           });
-          TT && lT && (0, UT.k)(lT, lT, kT)
+          qq && Yq && (0, Fq.s)(Yq, Yq, Eq)
         }
-        setInteractive(TT) {
+        setInteractive(qq) {
           let {
-            element: kT,
-            magnet: cT
-          } = TT;
-          this.interactive = kT, this.magnet = cT
+            element: Eq,
+            magnet: gq
+          } = qq;
+          this.interactive = Eq, this.magnet = gq
         }
         clearHover() {
-          this.hit && (0, UT.k)(this.hit, null, this.getPoint()), this.hit = null, this.setInteractive({
+          this.hit && (0, Fq.s)(this.hit, null, this.getPoint()), this.hit = null, this.setInteractive({
             element: null,
             magnet: null
           })
         }
         beginPress() {
-          const TT = this.hit;
-          if (!TT || (0, UT.C)(TT)) return {
+          const qq = this.hit;
+          if (!qq || (0, Fq.G)(qq)) return {
             kind: "ignored"
           };
-          const kT = (0, ol.c)(TT),
-            cT = TT.closest("[data-pad-slider]");
-          return kT && cT ? {
+          const Eq = (0, iY.e)(qq),
+            gq = qq.closest("[data-pad-slider]");
+          return Eq && gq ? {
             kind: "slider",
-            slider: cT,
-            adjuster: kT
-          } : ((0, UT.o)(TT, this.getPoint()), {
+            slider: gq,
+            adjuster: Eq
+          } : ((0, Fq.v)(qq, this.getPoint()), {
             kind: "pointer",
-            target: TT
+            target: qq
           })
         }
-        applySliderFraction(TT) {
-          var kT;
-          const cT = TT.slider.getBoundingClientRect(),
-            lT = cT.height > cT.width,
-            MT = null === (kT = TT.slider.querySelector("[data-pad-slider-handle]")) || void 0 === kT ? void 0 : kT.getBoundingClientRect(),
-            KT = MT ? lT ? MT.height : MT.width : 0,
-            OT = (lT ? cT.height : cT.width) - KT;
-          if (OT <= 0) return;
-          const yT = lT ? cT.bottom - KT / 2 - this.state.y : this.state.x - cT.left - KT / 2;
-          TT.adjuster.setFraction(Math.max(0, Math.min(1, yT / OT)))
+        applySliderFraction(qq) {
+          var Eq;
+          const gq = qq.slider.getBoundingClientRect(),
+            Yq = gq.height > gq.width,
+            lq = null === (Eq = qq.slider.querySelector("[data-pad-slider-handle]")) || void 0 === Eq ? void 0 : Eq.getBoundingClientRect(),
+            Oq = lq ? Yq ? lq.height : lq.width : 0,
+            mq = (Yq ? gq.height : gq.width) - Oq;
+          if (mq <= 0) return;
+          const xq = Yq ? gq.bottom - Oq / 2 - this.state.y : this.state.x - gq.left - Oq / 2;
+          qq.adjuster.setFraction(Math.max(0, Math.min(1, xq / mq)))
         }
-        updateConfirm(TT, kT) {
-          TT.wasPressed(kT) && (this.press = TT.wokeDevice ? {
+        updateConfirm(qq, Eq) {
+          qq.wasPressed(Eq) && (this.press = qq.wokeDevice ? {
             kind: "ignored"
           } : this.beginPress(), this.draggedSlider = "slider" === this.press.kind ? this.press.slider : null, this.beginRepeat());
-          const cT = this.press;
-          if (!cT) return;
-          if (TT.isHeld(kT)) return "slider" === cT.kind && this.applySliderFraction(cT), void this.updateRepeat();
+          const gq = this.press;
+          if (!gq) return;
+          if (qq.isHeld(Eq)) return "slider" === gq.kind && this.applySliderFraction(gq), void this.updateRepeat();
           this.press = null;
-          const lT = this.repeated;
-          if (this.endRepeat(), !TT.wasReleased(kT)) return void this.endPressWithoutClick(cT);
-          const MT = this.getPoint(),
-            KT = this.hit;
-          if ("slider" === cT.kind && cT.adjuster.endDrag(), "pointer" === cT.kind) {
-            const TT = null !== KT && void 0 !== KT ? KT : cT.target.isConnected ? cT.target : null;
-            TT && (0, UT.p)(TT, MT);
-            const kT = KT && cT.target.isConnected && !lT ? ((TT, kT) => {
-              for (let cT = TT; cT; cT = cT.parentElement)
-                if (cT.contains(kT)) return cT;
+          const Yq = this.repeated;
+          if (this.endRepeat(), !qq.wasReleased(Eq)) return void this.endPressWithoutClick(gq);
+          const lq = this.getPoint(),
+            Oq = this.hit;
+          if ("slider" === gq.kind && gq.adjuster.endDrag(), "pointer" === gq.kind) {
+            const qq = null !== Oq && void 0 !== Oq ? Oq : gq.target.isConnected ? gq.target : null;
+            qq && (0, Fq.y)(qq, lq);
+            const Eq = Oq && gq.target.isConnected && !Yq ? ((qq, Eq) => {
+              for (let gq = qq; gq; gq = gq.parentElement)
+                if (gq.contains(Eq)) return gq;
               return null
-            })(cT.target, KT) : null;
-            kT && (sl.noteCursorActivation(kT), (0, NT.i)(kT, new MouseEvent("click", (0, UT.M)(MT, 0, 0))), (0, UT.f)(kT), (0, UT.I)(kT) && (0, UT.G)(kT))
+            })(gq.target, Oq) : null;
+            Eq && (eY.noteCursorActivation(Eq), (0, jq.h)(Eq, new MouseEvent("click", (0, Fq.S)(lq, 0, 0))), (0, Fq.i)(Eq), (0, Fq.P)(Eq) && (0, Fq.L)(Eq))
           }
         }
         beginRepeat() {
-          var TT, kT, cT;
-          const lT = null !== (TT = null === (kT = this.hit) || void 0 === kT ? void 0 : kT.closest("[data-pad-repeat]")) && void 0 !== TT ? TT : null;
-          this.repeatStop = lT, this.repeatKey = null !== (cT = null === lT || void 0 === lT ? void 0 : lT.getAttribute("data-pad-repeat")) && void 0 !== cT ? cT : null, this.repeated = !1, this.confirmRepeat.reset(), this.confirmRepeat.update(!0, performance.now())
+          var qq, Eq, gq;
+          const Yq = null !== (qq = null === (Eq = this.hit) || void 0 === Eq ? void 0 : Eq.closest("[data-pad-repeat]")) && void 0 !== qq ? qq : null;
+          this.repeatStop = Yq, this.repeatKey = null !== (gq = null === Yq || void 0 === Yq ? void 0 : Yq.getAttribute("data-pad-repeat")) && void 0 !== gq ? gq : null, this.repeated = !1, this.confirmRepeat.reset(), this.confirmRepeat.update(!0, performance.now())
         }
         updateRepeat() {
-          const TT = this.repeatStop;
-          if (!TT) return;
-          const kT = this.hit;
-          TT.isConnected && !(0, qT.n)(TT) && TT.getAttribute("data-pad-repeat") === this.repeatKey && kT && TT.contains(kT) ? TT.hasAttribute("data-pad-repeat-wait") || this.confirmRepeat.update(!0, performance.now()) && (this.repeated = !0, sl.noteCursorActivation(TT), (0, NT.i)(TT, new MouseEvent("click", (0, UT.M)(this.getPoint(), 0, 0)))) : this.repeatStop = null
+          const qq = this.repeatStop;
+          if (!qq) return;
+          const Eq = this.hit;
+          qq.isConnected && !(0, eq.w)(qq) && qq.getAttribute("data-pad-repeat") === this.repeatKey && Eq && qq.contains(Eq) ? qq.hasAttribute("data-pad-repeat-wait") || this.confirmRepeat.update(!0, performance.now()) && (this.repeated = !0, eY.noteCursorActivation(qq), (0, jq.h)(qq, new MouseEvent("click", (0, Fq.S)(this.getPoint(), 0, 0)))) : this.repeatStop = null
         }
         endRepeat() {
           this.repeatStop = null, this.repeated = !1
         }
-        endPressWithoutClick(TT) {
-          "slider" === TT.kind && TT.adjuster.endDrag(), "pointer" === TT.kind && TT.target.isConnected && (0, UT.p)(TT.target, this.getPoint())
+        endPressWithoutClick(qq) {
+          "slider" === qq.kind && qq.adjuster.endDrag(), "pointer" === qq.kind && qq.target.isConnected && (0, Fq.y)(qq.target, this.getPoint())
         }
         cancelPress() {
           this.endRepeat(), this.press && (this.endPressWithoutClick(this.press), this.press = null)
         }
-        updateSecondary(TT, kT) {
-          TT.wasPressed(kT) && (this.secondaryArmed = null !== this.hit), this.secondaryArmed && !TT.isHeld(kT) && (this.secondaryArmed = !1, TT.wasReleased(kT) && this.hit && (0, UT.j)(this.hit, this.getPoint(), 2))
+        updateSecondary(qq, Eq) {
+          qq.wasPressed(Eq) && (this.secondaryArmed = null !== this.hit), this.secondaryArmed && !qq.isHeld(Eq) && (this.secondaryArmed = !1, qq.wasReleased(Eq) && this.hit && (0, Fq.p)(this.hit, this.getPoint(), 2))
         }
-        updateScroll(TT, kT) {
-          const cT = PT(TT.rightStick, TT.dtMs);
-          if (0 === cT.x && 0 === cT.y) return void(this.scrollRemainder = {
+        updateScroll(qq, Eq) {
+          const gq = rq(qq.rightStick, qq.dtMs);
+          if (0 === gq.x && 0 === gq.y) return void(this.scrollRemainder = {
             x: 0,
             y: 0
           });
           this.scrollRemainder = {
-            x: this.scrollRemainder.x + cT.x,
-            y: this.scrollRemainder.y + cT.y
+            x: this.scrollRemainder.x + gq.x,
+            y: this.scrollRemainder.y + gq.y
           };
-          const lT = Math.trunc(this.scrollRemainder.x),
-            MT = Math.trunc(this.scrollRemainder.y);
+          const Yq = Math.trunc(this.scrollRemainder.x),
+            lq = Math.trunc(this.scrollRemainder.y);
           this.scrollRemainder = {
-            x: this.scrollRemainder.x - lT,
-            y: this.scrollRemainder.y - MT
+            x: this.scrollRemainder.x - Yq,
+            y: this.scrollRemainder.y - lq
           };
-          const KT = this.hit;
-          if (!KT) return;
-          let OT = !1;
-          if (0 !== MT) {
-            const TT = iK(KT, "y", MT > 0 ? 1 : -1, kT);
-            TT && (TT.scrollBy({
-              top: MT,
+          const Oq = this.hit;
+          if (!Oq) return;
+          let mq = !1;
+          if (0 !== lq) {
+            const qq = CO(Oq, "y", lq > 0 ? 1 : -1, Eq);
+            qq && (qq.scrollBy({
+              top: lq,
               behavior: "instant"
-            }), OT = !0)
+            }), mq = !0)
           }
-          if (0 !== lT) {
-            const TT = iK(KT, "x", lT > 0 ? 1 : -1, kT);
-            TT && (TT.scrollBy({
-              left: lT,
+          if (0 !== Yq) {
+            const qq = CO(Oq, "x", Yq > 0 ? 1 : -1, Eq);
+            qq && (qq.scrollBy({
+              left: Yq,
               behavior: "instant"
-            }), OT = !0)
+            }), mq = !0)
           }
-          OT && (this.lastHitTestMs = -1 / 0)
+          mq && (this.lastHitTestMs = -1 / 0)
         }
-        nt() {
-          BT.set({
+        TV() {
+          Xq.set({
             x: this.state.x,
             y: this.state.y,
             visible: this.isVisible(),
@@ -4878,502 +4974,502 @@ export const modules = {
           })
         }
       },
-      sK = () => {
-        const TT = (0, ET.useMemo)((() => new RT), []),
-          kT = (0, jT.v)();
-        return (0, ET.useEffect)((() => {
-          if (!kT) return;
-          let cT = 0,
-            lT = {
+      eO = () => {
+        const qq = (0, Sq.useMemo)((() => new Rq), []),
+          Eq = (0, Nq.y)();
+        return (0, Sq.useEffect)((() => {
+          if (!Eq) return;
+          let gq = 0,
+            Yq = {
               of: null,
               atMs: 0,
               list: []
             };
-          const MT = document.getElementsByClassName(zl),
-            KT = TT => {
-              for (const kT of [...MT]) kT !== TT && kT.classList.remove(zl)
+          const lq = document.getElementsByClassName(nY),
+            Oq = qq => {
+              for (const Eq of [...lq]) Eq !== qq && Eq.classList.remove(nY)
             },
-            OT = () => {
-              var kT;
-              cT = requestAnimationFrame(OT);
-              const MT = (() => {
-                const TT = sl.getFocused();
-                if (sl.isActive() && null !== TT && void 0 !== TT && TT.isConnected) return TT;
-                const kT = qK.getHighlighted();
-                return null !== kT && void 0 !== kT && kT.isConnected ? kT : null
+            mq = () => {
+              var Eq;
+              gq = requestAnimationFrame(mq);
+              const lq = (() => {
+                const qq = eY.getFocused();
+                if (eY.isActive() && null !== qq && void 0 !== qq && qq.isConnected) return qq;
+                const Eq = IO.getHighlighted();
+                return null !== Eq && void 0 !== Eq && Eq.isConnected ? Eq : null
               })();
-              KT(MT), MT && !MT.classList.contains(zl) && MT.classList.add(zl);
-              const yT = null !== (kT = null === MT || void 0 === MT ? void 0 : MT.closest("[data-pad-reticle-box]")) && void 0 !== kT ? kT : MT;
-              TT.show(yT ? ((TT, kT) => {
-                let cT = TT.left,
-                  lT = TT.top,
-                  MT = TT.right,
-                  KT = TT.bottom;
-                for (const OT of kT) {
-                  if (!OT) continue;
-                  const TT = GT(OT);
-                  cT = Math.max(cT, TT.left), lT = Math.max(lT, TT.top), MT = Math.min(MT, TT.right), KT = Math.min(KT, TT.bottom)
+              Oq(lq), lq && !lq.classList.contains(nY) && lq.classList.add(nY);
+              const xq = null !== (Eq = null === lq || void 0 === lq ? void 0 : lq.closest("[data-pad-reticle-box]")) && void 0 !== Eq ? Eq : lq;
+              qq.show(xq ? ((qq, Eq) => {
+                let gq = qq.left,
+                  Yq = qq.top,
+                  lq = qq.right,
+                  Oq = qq.bottom;
+                for (const mq of Eq) {
+                  if (!mq) continue;
+                  const qq = Tq(mq);
+                  gq = Math.max(gq, qq.left), Yq = Math.max(Yq, qq.top), lq = Math.min(lq, qq.right), Oq = Math.min(Oq, qq.bottom)
                 }
-                return MT <= cT || KT <= lT ? null : {
-                  left: cT,
-                  top: lT,
-                  width: MT - cT,
-                  height: KT - lT
+                return lq <= gq || Oq <= Yq ? null : {
+                  left: gq,
+                  top: Yq,
+                  width: lq - gq,
+                  height: Oq - Yq
                 }
-              })(yT.getBoundingClientRect(), (TT => {
-                const kT = performance.now();
-                return (lT.of !== TT || kT - lT.atMs > 500) && (lT = {
-                  of: TT,
-                  atMs: kT,
-                  list: [bT(TT, "y"), bT(TT, "x")]
-                }), lT.list
-              })(yT)) : null)
+              })(xq.getBoundingClientRect(), (qq => {
+                const Eq = performance.now();
+                return (Yq.of !== qq || Eq - Yq.atMs > 500) && (Yq = {
+                  of: qq,
+                  atMs: Eq,
+                  list: [nq(qq, "y"), nq(qq, "x")]
+                }), Yq.list
+              })(xq)) : null)
             };
-          return cT = requestAnimationFrame(OT), () => {
-            cancelAnimationFrame(cT), KT(null), TT.hide()
+          return gq = requestAnimationFrame(mq), () => {
+            cancelAnimationFrame(gq), Oq(null), qq.hide()
           }
-        }), [kT, TT]), (0, XT.jsx)(gT, {
-          placer: TT,
+        }), [Eq, qq]), (0, Lq.jsx)(Uq, {
+          placer: qq,
           className: "PadFocusRing"
         })
       },
-      TO = (TT, kT) => {
-        TT.style.transform = `translate3d(${kT.x}px, ${kT.y}px, 0)`, TT.classList.toggle("Visible", kT.visible), TT.classList.toggle("Pressed", kT.pressed)
+      DO = (qq, Eq) => {
+        qq.style.transform = `translate3d(${Eq.x}px, ${Eq.y}px, 0)`, qq.classList.toggle("Visible", Eq.visible), qq.classList.toggle("Pressed", Eq.pressed)
       },
-      kO = () => {
-        const TT = (0, ET.useRef)(null);
-        return (0, ET.useEffect)((() => {
-          const kT = BT.subscribe((kT => {
-            TT.current && TO(TT.current, kT)
+      qm = () => {
+        const qq = (0, Sq.useRef)(null);
+        return (0, Sq.useEffect)((() => {
+          const Eq = Xq.subscribe((Eq => {
+            qq.current && DO(qq.current, Eq)
           }));
-          return TT.current && TO(TT.current, BT.get()), kT
-        }), []), (0, XT.jsx)("div", {
-          ref: TT,
+          return qq.current && DO(qq.current, Xq.get()), Eq
+        }), []), (0, Lq.jsx)("div", {
+          ref: qq,
           className: "PadCursorView",
           "aria-hidden": "true",
-          children: (0, XT.jsx)("div", {
+          children: (0, Lq.jsx)("div", {
             className: "PadCursorGlyph",
             children: "+"
           })
         })
       },
-      cO = "#ncmp__modal.ncmp__active",
-      lO = [{
+      Em = "#ncmp__modal.ncmp__active",
+      gm = [{
         id: "nitro-consent-banner",
-        find: () => document.querySelector(cO) ? null : document.querySelector("#ncmp__tool > .ncmp__banner.ncmp__active"),
+        find: () => document.querySelector(Em) ? null : document.querySelector("#ncmp__tool > .ncmp__banner.ncmp__active"),
         startSelectors: ["[data-ncmp-cmd='reject']", "[data-ncmp-cmd='showModal']"]
       }, {
         id: "nitro-consent-modal",
-        find: () => document.querySelector(cO),
+        find: () => document.querySelector(Em),
         startSelectors: ["[data-ncmp-cmd='reject']"]
       }, {
         id: "google-consent",
         find: () => document.querySelector(".fc-consent-root"),
         startSelectors: [".fc-cta-do-not-consent", ".fc-cta-manage-options"]
       }],
-      MO = "PadOverThirdParty",
-      KO = new Set(lO.map((TT => TT.id))),
-      OO = () => {
-        const TT = lO.map((TT => {
+      Ym = "PadOverThirdParty",
+      lm = new Set(gm.map((qq => qq.id))),
+      Om = () => {
+        const qq = gm.map((qq => {
             let {
-              id: kT,
-              find: cT,
-              startSelectors: lT
-            } = TT;
-            return (0, cl.n)({
-              id: kT,
+              id: Eq,
+              find: gq,
+              startSelectors: Yq
+            } = qq;
+            return (0, EY.q)({
+              id: Eq,
               kind: "popup",
               getRoot: () => {
-                const TT = cT(),
-                  kT = TT ? ((TT, kT) => {
-                    var cT;
-                    for (const lT of kT) {
-                      const kT = TT.querySelector(lT);
-                      if (kT) return kT
+                const qq = gq(),
+                  Eq = qq ? ((qq, Eq) => {
+                    var gq;
+                    for (const Yq of Eq) {
+                      const Eq = qq.querySelector(Yq);
+                      if (Eq) return Eq
                     }
-                    return null !== (cT = [...TT.querySelectorAll("button")].find((TT => !TT.matches(".fc-cta-consent, [data-ncmp-cmd='save']")))) && void 0 !== cT ? cT : null
-                  })(TT, lT) : null;
-                if (TT && kT && !kT.hasAttribute("data-pad-default-focus")) {
-                  for (const kT of TT.querySelectorAll("[data-pad-default-focus]")) kT.removeAttribute("data-pad-default-focus");
-                  for (const kT of TT.querySelectorAll("[data-pad-hint-bar-avoid]")) kT.removeAttribute("data-pad-hint-bar-avoid");
-                  kT.setAttribute("data-pad-default-focus", ""), ((TT, kT) => {
-                    let cT = TT;
-                    for (let lT = TT.parentElement; lT && kT.contains(lT) && !(lT.getBoundingClientRect().height >= window.innerHeight / 2); lT = lT.parentElement) cT = lT;
-                    return cT
-                  })(kT, TT).setAttribute("data-pad-hint-bar-avoid", "")
+                    return null !== (gq = [...qq.querySelectorAll("button")].find((qq => !qq.matches(".fc-cta-consent, [data-ncmp-cmd='save']")))) && void 0 !== gq ? gq : null
+                  })(qq, Yq) : null;
+                if (qq && Eq && !Eq.hasAttribute("data-pad-default-focus")) {
+                  for (const Eq of qq.querySelectorAll("[data-pad-default-focus]")) Eq.removeAttribute("data-pad-default-focus");
+                  for (const Eq of qq.querySelectorAll("[data-pad-hint-bar-avoid]")) Eq.removeAttribute("data-pad-hint-bar-avoid");
+                  Eq.setAttribute("data-pad-default-focus", ""), ((qq, Eq) => {
+                    let gq = qq;
+                    for (let Yq = qq.parentElement; Yq && Eq.contains(Yq) && !(Yq.getBoundingClientRect().height >= window.innerHeight / 2); Yq = Yq.parentElement) gq = Yq;
+                    return gq
+                  })(Eq, qq).setAttribute("data-pad-hint-bar-avoid", "")
                 }
-                return TT
+                return qq
               },
               close: null,
               memoryKey: null
             })
           })),
-          kT = document.documentElement,
-          cT = OT.e.onFrame((() => {
-            const TT = (0, jT.i)() ? Il() : null,
-              cT = !!TT && (lT = TT.layer, KO.has(lT.id));
-            var lT;
-            kT.classList.contains(MO) !== cT && kT.classList.toggle(MO, cT)
+          Eq = document.documentElement,
+          gq = mq.h.onFrame((() => {
+            const qq = (0, Nq.k)() ? cY() : null,
+              gq = !!qq && (Yq = qq.layer, lm.has(Yq.id));
+            var Yq;
+            Eq.classList.contains(Ym) !== gq && Eq.classList.toggle(Ym, gq)
           }));
         return () => {
-          for (const kT of TT) kT();
-          cT(), kT.classList.remove(MO)
+          for (const Eq of qq) Eq();
+          gq(), Eq.classList.remove(Ym)
         }
       },
-      yO = "PadLargePointer",
-      fO = () => {
-        (0, ET.useEffect)((() => {
-          const TT = (0, NT.n)(document.body),
-            kT = sl.install(),
-            cT = qK.install(),
-            lT = OO();
+      mm = "PadLargePointer",
+      xm = () => {
+        (0, Sq.useEffect)((() => {
+          const qq = (0, jq.m)(document.body),
+            Eq = eY.install(),
+            gq = IO.install(),
+            Yq = Om();
           return () => {
-            TT(), kT(), cT(), lT()
+            qq(), Eq(), gq(), Yq()
           }
         }), []);
         const {
-          largePointer: TT
-        } = (0, CT.o)(), kT = (0, VK.s)() && TT;
-        return (0, ET.useEffect)((() => {
-          if (kT) return document.documentElement.classList.add(yO), () => {
-            document.documentElement.classList.remove(yO)
+          largePointer: qq
+        } = (0, Wq.r)(), Eq = (0, TO.q)() && qq;
+        return (0, Sq.useEffect)((() => {
+          if (Eq) return document.documentElement.classList.add(mm), () => {
+            document.documentElement.classList.remove(mm)
           }
-        }), [kT]), (0, yT.createPortal)((0, XT.jsxs)(XT.Fragment, {
-          children: [(0, XT.jsx)(YK, {}), (0, XT.jsx)(sK, {}), (0, XT.jsx)(kO, {})]
+        }), [Eq]), (0, xq.createPortal)((0, Lq.jsxs)(Lq.Fragment, {
+          children: [(0, Lq.jsx)(FO, {}), (0, Lq.jsx)(eO, {}), (0, Lq.jsx)(qm, {})]
         }), document.body)
       };
-    var xO = cT(8818),
-      IO = cT(8840),
-      AO = cT(8827);
-    cT(8849);
-    const CO = (TT, kT) => {
-        const [cT, lT] = (0, ET.useState)(!1), [MT, KT] = (0, ET.useState)(null), OT = (0, ET.useRef)(null), yT = (0, ET.useCallback)((TT => {
-          OT.current = TT, KT(TT)
-        }), []), fT = (0, ET.useCallback)((() => {
-          lT(!1), yT(null)
-        }), [yT]), IT = (0, ET.useCallback)((() => {
-          lT(!0)
-        }), []), AT = (0, ET.useCallback)(((TT, kT) => {
-          yT((0, AO.L)(TT, kT, OT.current))
-        }), [yT]);
-        (0, ET.useLayoutEffect)((() => (kT(cT), (0, EK.u)(TT, cT), xT.k.nt(EK.n), () => {
-          kT(!1), (0, EK.u)(TT, !1), xT.k.nt(EK.n)
-        })), [cT, TT, kT]), (0, hM.g)("appManagerUpdated|activeInputDevice", (TT => {
-          "gamepad" !== TT && fT()
-        })), (0, hM.g)("appManagerUpdated|gameState", (TT => {
-          "inGame" !== TT && fT()
+    var Am = gq(8750),
+      cm = gq(8780),
+      um = gq(8764);
+    gq(8787);
+    const Bm = (qq, Eq) => {
+        const [gq, Yq] = (0, Sq.useState)(!1), [lq, Oq] = (0, Sq.useState)(null), mq = (0, Sq.useRef)(null), xq = (0, Sq.useCallback)((qq => {
+          mq.current = qq, Oq(qq)
+        }), []), Aq = (0, Sq.useCallback)((() => {
+          Yq(!1), xq(null)
+        }), [xq]), uq = (0, Sq.useCallback)((() => {
+          Yq(!0)
+        }), []), Bq = (0, Sq.useCallback)(((qq, Eq) => {
+          xq((0, um.C)(qq, Eq, mq.current))
+        }), [xq]);
+        (0, Sq.useLayoutEffect)((() => (Eq(gq), (0, zO.s)(qq, gq), cq.i.TV(zO.j), () => {
+          Eq(!1), (0, zO.s)(qq, !1), cq.i.TV(zO.j)
+        })), [gq, qq, Eq]), (0, Vl.f)("appManagerUpdated|activeInputDevice", (qq => {
+          "gamepad" !== qq && Aq()
+        })), (0, Vl.f)("appManagerUpdated|gameState", (qq => {
+          "inGame" !== qq && Aq()
         }));
-        const CT = () => {
-          (0, xc.s)() && fT()
+        const Wq = () => {
+          (0, Ag.p)() && Aq()
         };
-        return (0, hM.g)("appManagerUpdated|openEverythingMenuName", CT), (0, hM.g)("appManagerUpdated|openInGameMenuName", CT), {
-          open: cT,
-          picked: MT,
-          pickedRef: OT,
-          show: IT,
-          aim: AT,
-          close: fT
+        return (0, Vl.f)("appManagerUpdated|openEverythingMenuName", Wq), (0, Vl.f)("appManagerUpdated|openInGameMenuName", Wq), {
+          open: gq,
+          picked: lq,
+          pickedRef: mq,
+          show: uq,
+          aim: Bq,
+          close: Aq
         }
       },
-      jO = TT => {
+      Wm = qq => {
         let {
-          className: kT,
-          slotCount: cT,
-          picked: lT,
-          slotLabel: MT,
-          renderSlot: KT,
-          centre: OT
-        } = TT;
-        const yT = Array.from({
-          length: cT
-        }, ((TT, kT) => kT));
-        return (0, XT.jsx)("div", {
-          className: uT()("EmoteWheelOverlay PadRadialWheel", kT),
-          children: (0, XT.jsxs)("div", {
+          className: Eq,
+          slotCount: gq,
+          picked: Yq,
+          slotLabel: lq,
+          renderSlot: Oq,
+          centre: mq
+        } = qq;
+        const xq = Array.from({
+          length: gq
+        }, ((qq, Eq) => Eq));
+        return (0, Lq.jsx)("div", {
+          className: Gq()("EmoteWheelOverlay PadRadialWheel", Eq),
+          children: (0, Lq.jsxs)("div", {
             className: "EmoteWheel",
             style: {
-              width: 2 * AO.w + "rem",
-              height: 2 * AO.w + "rem"
+              width: 2 * um.r + "rem",
+              height: 2 * um.r + "rem"
             },
-            children: [(0, XT.jsxs)("svg", {
+            children: [(0, Lq.jsxs)("svg", {
               className: "EmoteWheelSvg",
-              viewBox: `0 0 ${AO.r} ${AO.r}`,
-              children: [yT.map((TT => (0, XT.jsx)("path", {
-                d: (0, AO.A)(TT, cT, AO.g, AO.k, AO.o),
-                className: uT()("EmoteWheelWedge", {
-                  EmoteWheelWedgeHighlighted: TT === lT
+              viewBox: `0 0 ${um.l} ${um.l}`,
+              children: [xq.map((qq => (0, Lq.jsx)("path", {
+                d: (0, um.s)(qq, gq, um.d, um.g, um.j),
+                className: Gq()("EmoteWheelWedge", {
+                  EmoteWheelWedgeHighlighted: qq === Yq
                 }),
-                "aria-label": MT(TT)
-              }, TT))), (0, XT.jsx)("circle", {
+                "aria-label": lq(qq)
+              }, qq))), (0, Lq.jsx)("circle", {
                 className: "EmoteWheelOuterRing",
-                cx: AO.g,
-                cy: AO.g,
-                r: AO.o
-              }), (0, XT.jsx)("circle", {
+                cx: um.d,
+                cy: um.d,
+                r: um.j
+              }), (0, Lq.jsx)("circle", {
                 className: "EmoteWheelInnerRing",
-                cx: AO.g,
-                cy: AO.g,
-                r: AO.k
-              }), null !== lT && (0, XT.jsx)("path", {
+                cx: um.d,
+                cy: um.d,
+                r: um.g
+              }), null !== Yq && (0, Lq.jsx)("path", {
                 className: "EmoteWheelWedgeOutline",
-                d: (0, AO.A)(lT, cT, AO.g, AO.k, AO.o)
+                d: (0, um.s)(Yq, gq, um.d, um.g, um.j)
               })]
-            }), yT.map((TT => {
-              const kT = (0, AO.H)(TT, cT);
-              return (0, XT.jsx)("div", {
-                className: uT()("PadRadialWheelSlot SmallTextBold", {
-                  PadRadialWheelSlotPicked: TT === lT
+            }), xq.map((qq => {
+              const Eq = (0, um.w)(qq, gq);
+              return (0, Lq.jsx)("div", {
+                className: Gq()("PadRadialWheelSlot SmallTextBold", {
+                  PadRadialWheelSlotPicked: qq === Yq
                 }),
                 style: {
-                  left: `calc(50% + ${AO.d*Math.cos(kT)}rem)`,
-                  top: `calc(50% + ${AO.d*Math.sin(kT)}rem)`
+                  left: `calc(50% + ${um.c*Math.cos(Eq)}rem)`,
+                  top: `calc(50% + ${um.c*Math.sin(Eq)}rem)`
                 },
                 "aria-hidden": !0,
-                children: KT(TT)
-              }, TT)
-            })), (0, XT.jsx)("div", {
+                children: Oq(qq)
+              }, qq)
+            })), (0, Lq.jsx)("div", {
               className: "EmoteWheelHint SmallTextBold",
-              children: OT
+              children: mq
             })]
           })
         })
       },
-      vO = IK.length,
-      tO = () => {
+      Nm = cO.length,
+      am = () => {
         const {
-          t: TT
-        } = (0, MT.B)(), kT = CO("chat", oc.q), cT = (0, ET.useMemo)((() => IK.map((kT => TT(kT)))), [TT]);
-        return (0, hM.g)(oc.n, (() => {
-          kT.open || (0, xO.g)() || (0, IO.s)() || "inGame" !== fT.e.get("gameState") || (0, xc.s)() || !(0, zc.c)() || kT.show()
-        })), (0, hM.g)(oc.g, (TT => {
-          kT.open && kT.aim(TT, vO)
-        })), (0, hM.g)(oc.l, (() => {
-          var TT;
-          if (!kT.open) return;
-          const lT = kT.pickedRef.current;
-          null !== lT ? AK.claim(performance.now()) && (kT.close(), null === (TT = (0, zc.c)()) || void 0 === TT || TT.sendLine(cT[lT])) : kT.close()
-        })), (0, hM.g)(oc.i, kT.close), kT.open ? (0, XT.jsx)(jO, {
+          t: qq
+        } = (0, lq.v)(), Eq = Bm("chat", ig.m), gq = (0, Sq.useMemo)((() => cO.map((Eq => qq(Eq)))), [qq]);
+        return (0, Vl.f)(ig.k, (() => {
+          Eq.open || (0, Am.e)() || (0, cm.r)() || "inGame" !== Aq.b.get("gameState") || (0, Ag.p)() || !(0, ng.b)() || Eq.show()
+        })), (0, Vl.f)(ig.g, (qq => {
+          Eq.open && Eq.aim(qq, Nm)
+        })), (0, Vl.f)(ig.i, (() => {
+          var qq;
+          if (!Eq.open) return;
+          const Yq = Eq.pickedRef.current;
+          null !== Yq ? uO.claim(performance.now()) && (Eq.close(), null === (qq = (0, ng.b)()) || void 0 === qq || qq.sendLine(gq[Yq])) : Eq.close()
+        })), (0, Vl.f)(ig.h, Eq.close), Eq.open ? (0, Lq.jsx)(Wm, {
           className: "QuickChatWheel",
-          slotCount: vO,
-          picked: kT.picked,
-          slotLabel: TT => cT[TT],
-          renderSlot: TT => cT[TT],
-          centre: null !== kT.picked ? cT[kT.picked] : TT("controller:quickChatPick")
+          slotCount: Nm,
+          picked: Eq.picked,
+          slotLabel: qq => gq[qq],
+          renderSlot: qq => gq[qq],
+          centre: null !== Eq.picked ? gq[Eq.picked] : qq("controller:quickChatPick")
         }) : null
       },
-      hO = () => {
+      Vm = () => {
         const {
-          t: TT
-        } = (0, MT.B)(), kT = CO("actionButton", IO.u), [cT, lT] = (0, ET.useState)([]);
-        if ((0, hM.g)(IO.p, (TT => {
-            kT.open || (0, xO.g)() || (0, oc.c)() || "inGame" !== fT.e.get("gameState") || (0, xc.s)() || (lT(TT), kT.show())
-          })), (0, hM.g)(IO.e, (TT => {
-            kT.open && kT.aim(TT, cT.length)
-          })), (0, hM.g)(IO.l, (() => {
-            if (!kT.open) return;
-            const TT = kT.pickedRef.current;
-            kT.close(), null !== TT && xT.k.nt(IO.r, cT[TT])
-          })), (0, hM.g)(IO.i, kT.close), !kT.open) return null;
-        const KT = null !== kT.picked ? cT[kT.picked] : null;
-        return (0, XT.jsx)(jO, {
+          t: qq
+        } = (0, lq.v)(), Eq = Bm("actionButton", cm.u), [gq, Yq] = (0, Sq.useState)([]);
+        if ((0, Vl.f)(cm.m, (qq => {
+            Eq.open || (0, Am.e)() || (0, ig.d)() || "inGame" !== Aq.b.get("gameState") || (0, Ag.p)() || (Yq(qq), Eq.show())
+          })), (0, Vl.f)(cm.c, (qq => {
+            Eq.open && Eq.aim(qq, gq.length)
+          })), (0, Vl.f)(cm.i, (() => {
+            if (!Eq.open) return;
+            const qq = Eq.pickedRef.current;
+            Eq.close(), null !== qq && cq.i.TV(cm.p, gq[qq])
+          })), (0, Vl.f)(cm.g, Eq.close), !Eq.open) return null;
+        const Oq = null !== Eq.picked ? gq[Eq.picked] : null;
+        return (0, Lq.jsx)(Wm, {
           className: "ActionWheel",
-          slotCount: cT.length,
-          picked: kT.picked,
-          slotLabel: kT => {
-            const lT = cT[kT];
-            return "reload" === lT.kind ? TT("controller:gameplayReload") : "customButton" === lT.kind ? lT.description || lT.icon : "touchButton" === lT.kind && "string" === typeof lT.label ? lT.label : ""
+          slotCount: gq.length,
+          picked: Eq.picked,
+          slotLabel: Eq => {
+            const Yq = gq[Eq];
+            return "reload" === Yq.kind ? qq("controller:gameplayReload") : "customButton" === Yq.kind ? Yq.description || Yq.icon : "touchButton" === Yq.kind && "string" === typeof Yq.label ? Yq.label : ""
           },
-          renderSlot: TT => (0, XT.jsx)(PM, {
-            action: cT[TT]
+          renderSlot: qq => (0, Lq.jsx)(tl, {
+            action: gq[qq]
           }),
-          centre: KT ? (0, XT.jsx)(PM, {
-            action: KT
-          }) : TT("controller:actionWheelPick")
+          centre: Oq ? (0, Lq.jsx)(tl, {
+            action: Oq
+          }) : qq("controller:actionWheelPick")
         })
       };
-    var NO = cT(118);
-    const QO = () => ((0, ET.useEffect)((() => {
-        var TT, kT;
-        const cT = (0, NT.n)(document.getElementById("root")),
-          lT = (0, jT.f)(),
-          MT = (() => {
-            const TT = [xT.k.subscribe(kM.e, (() => {
-                KM("blockBreak")
-              })), xT.k.subscribe("damagedByOtherPlayer", (() => {
-                KM("damage")
-              })), xT.k.subscribe("yourAttackHit", (TT => {
+    var dm = gq(96);
+    const jm = () => ((0, Sq.useEffect)((() => {
+        var qq, Eq;
+        const gq = (0, jq.m)(document.getElementById("root")),
+          Yq = (0, Nq.h)(),
+          lq = (() => {
+            const qq = [cq.i.subscribe(ql.f, (() => {
+                ll("blockBreak")
+              })), cq.i.subscribe("damagedByOtherPlayer", (() => {
+                ll("damage")
+              })), cq.i.subscribe("yourAttackHit", (qq => {
                 let {
-                  hitSelf: kT
-                } = TT;
-                kT || KM("hit")
+                  hitSelf: Eq
+                } = qq;
+                Eq || ll("hit")
               }))],
-              kT = OT.e.onActivePadChanged((TT => {
-                TT && KM("connect")
+              Eq = mq.h.onActivePadChanged((qq => {
+                qq && ll("connect")
               }));
             return () => {
-              for (const kT of TT) xT.k.unsubscribe(kT);
-              kT()
+              for (const Eq of qq) cq.i.unsubscribe(Eq);
+              Eq()
             }
           })(),
-          KT = (() => {
-            const TT = new AM({
-              getVisitId: IM.d,
-              peekVisitId: IM.peekVisitSessionId,
+          Oq = (() => {
+            const qq = new ul({
+              getVisitId: cl.e,
+              peekVisitId: cl.peekVisitSessionId,
               readReportedVisitId: () => {
-                const TT = xM.g.getItem(CM);
-                return "string" === typeof TT ? TT : null
+                const qq = Al.k.getItem(Bl);
+                return "string" === typeof qq ? qq : null
               },
-              writeReportedVisitId: TT => {
-                xM.g.setItem(CM, TT)
+              writeReportedVisitId: qq => {
+                Al.k.setItem(Bl, qq)
               },
-              isPadActive: jT.i,
+              isPadActive: Nq.k,
               getPadFamily: () => {
-                var TT, kT;
-                return null !== (TT = null === (kT = OT.e.getActivePad()) || void 0 === kT ? void 0 : kT.family) && void 0 !== TT ? TT : null
+                var qq, Eq;
+                return null !== (qq = null === (Eq = mq.h.getActivePad()) || void 0 === Eq ? void 0 : Eq.family) && void 0 !== qq ? qq : null
               },
-              canReport: yM.h,
-              getInputType: fM.b,
-              Yj: yM.k
+              canReport: ml.h,
+              getInputType: xl.d,
+              SN: ml.o
             });
-            let kT = 0,
-              cT = null;
-            const lT = MT => {
-                null === cT && ("notReady" !== TT.check(MT) || null !== cT || kT >= 20 || (kT++, cT = setTimeout((() => {
-                  cT = null, lT(!1)
+            let Eq = 0,
+              gq = null;
+            const Yq = lq => {
+                null === gq && ("notReady" !== qq.check(lq) || null !== gq || Eq >= 20 || (Eq++, gq = setTimeout((() => {
+                  gq = null, Yq(!1)
                 }), 3e3)))
               },
-              MT = xT.k.subscribe("appManagerUpdated|activeInputDevice", (() => {
-                lT(!0)
+              lq = cq.i.subscribe("appManagerUpdated|activeInputDevice", (() => {
+                Yq(!0)
               })),
-              KT = (0, IM.h)((() => {
-                kT = 0, lT(!0)
+              Oq = (0, cl.l)((() => {
+                Eq = 0, Yq(!0)
               }));
             return () => {
-              xT.k.unsubscribe(MT), KT(), null !== cT && clearTimeout(cT)
+              cq.i.unsubscribe(lq), Oq(), null !== gq && clearTimeout(gq)
             }
           })(),
-          yT = OT.e.onFrame(((TT, kT) => {
-            const cT = (0, jT.n)(TT);
-            AT.d.dispatch(TT, kT, cT)
+          xq = mq.h.onFrame(((qq, Eq) => {
+            const gq = (0, Nq.q)(qq);
+            Bq.c.dispatch(qq, Eq, gq)
           }));
-        let IT = null !== (TT = null === (kT = OT.e.getActivePad()) || void 0 === kT ? void 0 : kT.family) && void 0 !== TT ? TT : null;
-        const vT = OT.e.onActivePadChanged((TT => {
-            var kT, cT;
-            (AT.d.reset(), (0, jT.t)(), xT.k.nt(OT.c, TT), (null !== (kT = null === TT || void 0 === TT ? void 0 : TT.family) && void 0 !== kT ? kT : null) !== IT) && (IT = null !== (cT = null === TT || void 0 === TT ? void 0 : TT.family) && void 0 !== cT ? cT : null, xT.k.nt(CT.e, (0, CT.g)()));
-            !TT && (0, jT.i)() && (0, jT.u)(fT.e.get("isTouchScreen") ? "touch" : "keyboardMouse")
+        let uq = null !== (qq = null === (Eq = mq.h.getActivePad()) || void 0 === Eq ? void 0 : Eq.family) && void 0 !== qq ? qq : null;
+        const aq = mq.h.onActivePadChanged((qq => {
+            var Eq, gq;
+            (Bq.c.reset(), (0, Nq.t)(), cq.i.TV(mq.d, qq), (null !== (Eq = null === qq || void 0 === qq ? void 0 : qq.family) && void 0 !== Eq ? Eq : null) !== uq) && (uq = null !== (gq = null === qq || void 0 === qq ? void 0 : qq.family) && void 0 !== gq ? gq : null, cq.i.TV(Wq.c, (0, Wq.i)()));
+            !qq && (0, Nq.k)() && (0, Nq.w)(Aq.b.get("isTouchScreen") ? "touch" : "keyboardMouse")
           })),
-          tT = () => {
-            "visible" !== document.visibilityState && AT.d.clear()
+          Vq = () => {
+            "visible" !== document.visibilityState && Bq.c.clear()
           },
-          hT = () => {
-            AT.d.clear()
+          dq = () => {
+            Bq.c.clear()
           };
-        document.addEventListener("visibilitychange", tT), window.addEventListener("blur", hT), OT.e.start(), (0, OM.n)();
-        const QT = null;
+        document.addEventListener("visibilitychange", Vq), window.addEventListener("blur", dq), mq.h.start(), (0, Ol.o)();
+        const Hq = null;
         return () => {
-          cT(), lT(), MT(), KT(), yT(), vT(), document.removeEventListener("visibilitychange", tT), window.removeEventListener("blur", hT), OT.e.stop(), null === QT || void 0 === QT || QT()
+          gq(), Yq(), lq(), Oq(), xq(), aq(), document.removeEventListener("visibilitychange", Vq), window.removeEventListener("blur", dq), mq.h.stop(), null === Hq || void 0 === Hq || Hq()
         }
-      }), []), (0, XT.jsxs)("div", {
+      }), []), (0, Lq.jsxs)("div", {
         className: "ControllerRoot",
-        children: [(0, XT.jsx)(HM, {}), (0, XT.jsx)(LM, {}), (0, XT.jsx)(RM, {}), (0, XT.jsx)(eK, {}), (0, XT.jsx)(fO, {}), (0, XT.jsx)(tO, {}), (0, XT.jsx)(hO, {})]
+        children: [(0, Lq.jsx)(Zl, {}), (0, Lq.jsx)(Jl, {}), (0, Lq.jsx)(kl, {}), (0, Lq.jsx)(fO, {}), (0, Lq.jsx)(xm, {}), (0, Lq.jsx)(am, {}), (0, Lq.jsx)(Vm, {})]
       })),
-      SO = () => NO.featureFlags.useControllerSupport ? (0, XT.jsx)(QO, {}) : null;
-    var DO = cT(8209),
-      aO = cT(8857);
-    const FO = new Set(OM.j),
-      rO = TT => `${aO.q}${(0,CT.j)()}/${TT}`,
-      PO = TT => {
-        if (!(0, aO.m)(TT)) return null;
-        const [kT, cT] = TT.slice(aO.q.length).split("/");
-        return (0, DO.h)(kT) && FO.has(cT) ? (0, OM.f)(kT, cT) : null
+      Hm = () => dm.featureFlags.useControllerSupport ? (0, Lq.jsx)(jm, {}) : null;
+    var om = gq(8095),
+      Pm = gq(8800);
+    const Qm = new Set(Ol.k),
+      ym = qq => `${Pm.n}${(0,Wq.k)()}/${qq}`,
+      tm = qq => {
+        if (!(0, Pm.j)(qq)) return null;
+        const [Eq, gq] = qq.slice(Pm.n.length).split("/");
+        return (0, om.f)(Eq) && Qm.has(gq) ? (0, Ol.i)(Eq, gq) : null
       };
-    var wO = cT(8860);
-    const mO = () => {
+    var rm = gq(8803);
+    const hm = () => {
         const {
-          t: TT
-        } = (0, MT.B)(), kT = (0, jT.v)(), {
-          gameState: cT,
-          isUiHidden: lT
-        } = (0, fT.n)(["gameState", "isUiHidden"]), {
-          hideButtonHints: KT,
-          sneakMode: OT
-        } = (0, CT.o)(), [yT, xT] = (0, ET.useState)(wO.b);
-        return (0, hM.g)(oM.u, xT), kT && !lT && "inGame" === cT && yT ? (0, XT.jsxs)("div", {
+          t: qq
+        } = (0, lq.v)(), Eq = (0, Nq.y)(), {
+          gameState: gq,
+          isUiHidden: Yq
+        } = (0, Aq.j)(["gameState", "isUiHidden"]), {
+          hideButtonHints: Oq,
+          sneakMode: mq
+        } = (0, Wq.r)(), [xq, cq] = (0, Sq.useState)(rm.c);
+        return (0, Vl.f)(il.o, cq), Eq && !Yq && "inGame" === gq && xq ? (0, Lq.jsxs)("div", {
           className: "PadSneakChip SmallTextBold",
-          children: [!KT && (0, XT.jsx)(FM, {
-            glyph: (0, IT.j)("toggle" === OT ? "sneak" : "sneakToggle")
-          }), (0, XT.jsx)("span", {
-            children: TT("controller:gameplaySneaking")
+          children: [!Oq && (0, Lq.jsx)(Ql, {
+            glyph: (0, uq.i)("toggle" === mq ? "sneak" : "sneakToggle")
+          }), (0, Lq.jsx)("span", {
+            children: qq("controller:gameplaySneaking")
           })]
         }) : null
       },
-      bO = 12,
-      zO = TT => {
+      nm = 12,
+      bm = qq => {
         let {
-          trigger: kT,
-          className: cT,
-          children: lT
-        } = TT;
-        const MT = (0, ET.useRef)(null);
-        return (0, ET.useEffect)((() => {
-          let TT = 0;
-          const cT = bT(kT, "y"),
-            lT = () => {
-              TT = requestAnimationFrame(lT);
-              const KT = MT.current;
-              if (!KT || null === kT || void 0 === kT || !kT.isConnected) return;
+          trigger: Eq,
+          className: gq,
+          children: Yq
+        } = qq;
+        const lq = (0, Sq.useRef)(null);
+        return (0, Sq.useEffect)((() => {
+          let qq = 0;
+          const gq = nq(Eq, "y"),
+            Yq = () => {
+              qq = requestAnimationFrame(Yq);
+              const Oq = lq.current;
+              if (!Oq || null === Eq || void 0 === Eq || !Eq.isConnected) return;
               const {
-                left: OT,
-                top: yT
-              } = function(TT, kT, cT) {
-                let lT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-                  MT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
-                const KT = TT.left + TT.width / 2,
-                  OT = Math.max(bO, cT.width - bO - kT.width),
-                  yT = Math.min(Math.max(KT - kT.width / 2, bO), OT),
-                  fT = cT.height - lT;
-                let xT = 0,
-                  IT = fT;
-                if (MT) {
-                  const TT = Math.max(0, MT.top),
-                    lT = Math.min(fT, MT.bottom);
-                  lT - TT >= Math.max(cT.height / 2, kT.height + 24) && (xT = TT, IT = lT)
+                left: mq,
+                top: xq
+              } = function(qq, Eq, gq) {
+                let Yq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+                  lq = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
+                const Oq = qq.left + qq.width / 2,
+                  mq = Math.max(nm, gq.width - nm - Eq.width),
+                  xq = Math.min(Math.max(Oq - Eq.width / 2, nm), mq),
+                  Aq = gq.height - Yq;
+                let cq = 0,
+                  uq = Aq;
+                if (lq) {
+                  const qq = Math.max(0, lq.top),
+                    Yq = Math.min(Aq, lq.bottom);
+                  Yq - qq >= Math.max(gq.height / 2, Eq.height + 24) && (cq = qq, uq = Yq)
                 }
-                const AT = TT.top + TT.height / 2 < (xT + IT) / 2 ? IT - bO - kT.height : xT + bO;
+                const Bq = qq.top + qq.height / 2 < (cq + uq) / 2 ? uq - nm - Eq.height : cq + nm;
                 return {
-                  left: yT,
-                  top: Math.max(bO, AT)
+                  left: xq,
+                  top: Math.max(nm, Bq)
                 }
-              }(kT.getBoundingClientRect(), {
-                width: KT.offsetWidth,
-                height: KT.offsetHeight
+              }(Eq.getBoundingClientRect(), {
+                width: Oq.offsetWidth,
+                height: Oq.offsetHeight
               }, {
                 width: window.innerWidth,
                 height: window.innerHeight
-              }, parseFloat(document.documentElement.style.getPropertyValue(dK)) || 0, null !== cT && void 0 !== cT && cT.isConnected ? cT.getBoundingClientRect() : null);
-              KT.style.transform = `translate3d(${Math.round(OT)}px, ${Math.round(yT)}px, 0)`, KT.style.visibility = "visible"
+              }, parseFloat(document.documentElement.style.getPropertyValue(LO)) || 0, null !== gq && void 0 !== gq && gq.isConnected ? gq.getBoundingClientRect() : null);
+              Oq.style.transform = `translate3d(${Math.round(mq)}px, ${Math.round(xq)}px, 0)`, Oq.style.visibility = "visible"
             };
-          return lT(), () => {
-            cancelAnimationFrame(TT)
+          return Yq(), () => {
+            cancelAnimationFrame(qq)
           }
-        }), [kT]), (0, XT.jsx)("div", {
-          ref: MT,
-          className: cT,
+        }), [Eq]), (0, Lq.jsx)("div", {
+          ref: lq,
+          className: gq,
           style: {
             position: "fixed",
             left: 0,
             top: 0,
             visibility: "hidden"
           },
-          children: lT
+          children: Yq
         })
       };
-    var JO = cT(1061),
-      oO = cT(8867),
-      HO = cT(1470),
-      eO = cT(8874),
-      GO = cT(8877);
-    const VO = {
+    var im = gq(1025),
+      Zm = gq(8812),
+      fm = gq(1422),
+      Mm = gq(8814),
+      Tm = gq(8823);
+    const zm = {
         shop: {
           icon: "cart-shopping",
           labelKey: "controller:menusShop"
@@ -5391,539 +5487,539 @@ export const modules = {
           labelKey: "settingsMenu:exitGame"
         }
       },
-      EO = () => {
+      Sm = () => {
         const {
-          t: TT
-        } = (0, MT.B)(), kT = (0, jT.v)(), cT = (0, oO.c)(), lT = (0, uM.f)("_tasks"), KT = (0, uM.f)("_availableLeaderboards");
-        if (!kT) return null;
-        const OT = (TT => {
+          t: qq
+        } = (0, lq.v)(), Eq = (0, Nq.y)(), gq = (0, Zm.e)(), Yq = (0, pl.h)("_tasks"), Oq = (0, pl.h)("_availableLeaderboards");
+        if (!Eq) return null;
+        const mq = (qq => {
           let {
-            hasShop: kT,
-            hasTasksOrLeaderboards: cT,
-            canInvite: lT
-          } = TT;
-          const MT = [];
-          return kT && MT.push("shop"), cT && MT.push("tasks"), lT && MT.push("invite"), MT.push("leave"), MT
+            hasShop: Eq,
+            hasTasksOrLeaderboards: gq,
+            canInvite: Yq
+          } = qq;
+          const lq = [];
+          return Eq && lq.push("shop"), gq && lq.push("tasks"), Yq && lq.push("invite"), lq.push("leave"), lq
         })({
-          hasShop: cT,
-          hasTasksOrLeaderboards: !(!lT && !KT),
-          canInvite: !!NO.featureFlags.canUseInviteLinks
+          hasShop: gq,
+          hasTasksOrLeaderboards: !(!Yq && !Oq),
+          canInvite: !!dm.featureFlags.canUseInviteLinks
         });
-        return (0, XT.jsx)("div", {
+        return (0, Lq.jsx)("div", {
           className: "PadLobbyShortcuts",
-          children: OT.map((kT => {
+          children: mq.map((Eq => {
             const {
-              icon: cT,
-              labelKey: lT
-            } = VO[kT], MT = "leave" === kT ? HO.I : HO.e;
-            return (0, XT.jsx)(MT, {
+              icon: gq,
+              labelKey: Yq
+            } = zm[Eq], lq = "leave" === Eq ? fm.K : fm.g;
+            return (0, Lq.jsx)(lq, {
               className: "PadLobbyShortcut",
               onClick: () => {
-                (TT => {
-                  switch (TT) {
+                (qq => {
+                  switch (qq) {
                     case "shop":
-                      return xT.k.nt(GO.n), void fT.e.set({
-                        openEverythingMenuName: fc.o.SHOP
+                      return cq.i.TV(Tm.m), void Aq.b.set({
+                        openEverythingMenuName: xg.p.SHOP
                       });
                     case "tasks":
-                      return void xT.k.nt("toggleMenu", "retentionFeatures");
+                      return void cq.i.TV("toggleMenu", "retentionFeatures");
                     case "invite":
-                      return void xT.k.nt("toggleMenu", "inviteLink");
+                      return void cq.i.TV("toggleMenu", "inviteLink");
                     case "leave":
-                      (0, eO.c)()
+                      (0, Mm.b)()
                   }
-                })(kT)
+                })(Eq)
               },
-              children: (0, XT.jsxs)("div", {
+              children: (0, Lq.jsxs)("div", {
                 className: "PadLobbyShortcutInner",
-                children: [(0, XT.jsx)(JO.e, {
-                  name: cT
-                }), (0, XT.jsx)("span", {
-                  children: TT(lT)
+                children: [(0, Lq.jsx)(im.d, {
+                  name: gq
+                }), (0, Lq.jsx)("span", {
+                  children: qq(Yq)
                 })]
               })
-            }, kT)
+            }, Eq)
           }))
         })
       };
-    var ZO = cT(2009);
-    const uO = vT.z,
-      XO = ["forward", "backward", "left", "right", "sprint"],
-      dO = TT => TT.ctrlKey || TT.altKey || "Alt" === TT.key || "ArrowUp" === TT.key || "ArrowDown" === TT.key || "Tab" === TT.code || "/" === TT.key || "Slash" === TT.code;
-    class LO {
+    var pm = gq(1952);
+    const Gm = aq.A,
+      Lm = ["forward", "backward", "left", "right", "sprint"],
+      Jm = qq => qq.ctrlKey || qq.altKey || "Alt" === qq.key || "ArrowUp" === qq.key || "ArrowDown" === qq.key || "Tab" === qq.code || "/" === qq.key || "Slash" === qq.code;
+    class km {
       constructor() {
-        this.armed = !1, this.swallowedKeys = new Set, this.previousHeld = new Array(vT.Y).fill(!1), this.leftStickWasPressed = !1, this.rightStickWasPressed = !1, this.consumeNextFrame = !1, this.consumeAfterContinue = !1
+        this.armed = !1, this.swallowedKeys = new Set, this.previousHeld = new Array(aq.X).fill(!1), this.leftStickWasPressed = !1, this.rightStickWasPressed = !1, this.consumeNextFrame = !1, this.consumeAfterContinue = !1
       }
-      setArmed(TT) {
-        this.armed = TT
+      setArmed(qq) {
+        this.armed = qq
       }
       blocksGameplay() {
         return this.armed || this.consumeNextFrame
       }
-      onKeyDown(TT) {
-        let kT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          cT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        return !this.armed || kT ? !TT.repeat && this.swallowedKeys.delete(TT.code) ? {
+      onKeyDown(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          gq = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        return !this.armed || Eq ? !qq.repeat && this.swallowedKeys.delete(qq.code) ? {
           swallow: !1,
           continues: !1
         } : {
-          swallow: this.swallowedKeys.has(TT.code),
+          swallow: this.swallowedKeys.has(qq.code),
           continues: !1
-        } : "Escape" === TT.key || TT.repeat && !this.swallowedKeys.has(TT.code) ? {
+        } : "Escape" === qq.key || qq.repeat && !this.swallowedKeys.has(qq.code) ? {
           swallow: !1,
           continues: !1
-        } : cT ? {
+        } : gq ? {
           swallow: !1,
           continues: !0
-        } : (this.swallowedKeys.add(TT.code), {
+        } : (this.swallowedKeys.add(qq.code), {
           swallow: !0,
-          continues: (0, jT.h)(TT)
+          continues: (0, Nq.i)(qq)
         })
       }
-      onKeyUp(TT) {
-        return this.swallowedKeys.delete(TT.code)
+      onKeyUp(qq) {
+        return this.swallowedKeys.delete(qq.code)
       }
       forgetKeys() {
         this.swallowedKeys.clear()
       }
-      onPadFrame(TT) {
-        let kT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-          lT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        const MT = (0, vT.r)(TT.values, this.previousHeld),
-          KT = null === cT ? -1 : (0, vT.o)(cT),
-          OT = KT >= 0 && MT[KT] && !this.previousHeld[KT],
-          yT = MT.some(((TT, kT) => TT && !this.previousHeld[kT] && kT !== KT)),
-          fT = Math.hypot(TT.leftStick.x, TT.leftStick.y) >= uO,
-          xT = Math.hypot(TT.rightStick.x, TT.rightStick.y) >= uO,
-          IT = fT && !this.leftStickWasPressed || xT && !this.rightStickWasPressed;
-        this.previousHeld = MT, this.leftStickWasPressed = fT, this.rightStickWasPressed = xT;
-        let AT = !1;
-        this.consumeNextFrame && (this.consumeNextFrame = !1, AT = !0);
-        const CT = !kT && OT && !lT,
-          jT = !CT && this.armed && !kT && (yT || IT);
-        return (CT || jT) && (this.consumeNextFrame = !0, this.consumeAfterContinue = jT, AT = !0), {
-          continues: jT,
-          back: CT,
-          consumeHeld: AT
+      onPadFrame(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+          Yq = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        const lq = (0, aq.t)(qq.values, this.previousHeld),
+          Oq = null === gq ? -1 : (0, aq.m)(gq),
+          mq = Oq >= 0 && lq[Oq] && !this.previousHeld[Oq],
+          xq = lq.some(((qq, Eq) => qq && !this.previousHeld[Eq] && Eq !== Oq)),
+          Aq = Math.hypot(qq.leftStick.x, qq.leftStick.y) >= Gm,
+          cq = Math.hypot(qq.rightStick.x, qq.rightStick.y) >= Gm,
+          uq = Aq && !this.leftStickWasPressed || cq && !this.rightStickWasPressed;
+        this.previousHeld = lq, this.leftStickWasPressed = Aq, this.rightStickWasPressed = cq;
+        let Bq = !1;
+        this.consumeNextFrame && (this.consumeNextFrame = !1, Bq = !0);
+        const Wq = !Eq && mq && !Yq,
+          Nq = !Wq && this.armed && !Eq && (xq || uq);
+        return (Wq || Nq) && (this.consumeNextFrame = !0, this.consumeAfterContinue = Nq, Bq = !0), {
+          continues: Nq,
+          back: Wq,
+          consumeHeld: Bq
         }
       }
       consumeLeavesMoveStick() {
         return this.consumeAfterContinue
       }
     }
-    const RO = new Set([...ZO.n, ...ZO.G]),
-      gO = TT => ((TT, kT, cT) => {
-        const lT = Object.keys(kT).filter((lT => !cT.has(lT) && kT[lT].includes(TT)));
-        return lT.length > 0 && lT.every((TT => XO.includes(TT)))
-      })(TT, ZO.y, RO),
-      UO = (TT, kT, cT) => {
-        const lT = new LO,
-          MT = TT => {
-            if (!TT.isTrusted) return;
+    const Rm = new Set([...pm.k, ...pm.A]),
+      Um = qq => ((qq, Eq, gq) => {
+        const Yq = Object.keys(Eq).filter((Yq => !gq.has(Yq) && Eq[Yq].includes(qq)));
+        return Yq.length > 0 && Yq.every((qq => Lm.includes(qq)))
+      })(qq, pm.u, Rm),
+      Fm = (qq, Eq, gq) => {
+        const Yq = new km,
+          lq = qq => {
+            if (!qq.isTrusted) return;
             const {
-              swallow: cT,
-              continues: MT
-            } = lT.onKeyDown(TT, !(0, jT.z)(TT) || (0, TM.g)() || (0, xc.s)(), gO(TT.code));
-            cT && (TT.stopImmediatePropagation(), dO(TT) && TT.preventDefault()), MT && ((0, jT.u)("keyboardMouse"), kT())
+              swallow: gq,
+              continues: lq
+            } = Yq.onKeyDown(qq, !(0, Nq.D)(qq) || (0, DY.g)() || (0, Ag.p)(), Um(qq.code));
+            gq && (qq.stopImmediatePropagation(), Jm(qq) && qq.preventDefault()), lq && ((0, Nq.w)("keyboardMouse"), Eq())
           },
-          KT = TT => {
-            TT.isTrusted && lT.onKeyUp(TT) && (TT.stopImmediatePropagation(), dO(TT) && TT.preventDefault())
+          Oq = qq => {
+            qq.isTrusted && Yq.onKeyUp(qq) && (qq.stopImmediatePropagation(), Jm(qq) && qq.preventDefault())
           },
-          yT = () => {
-            lT.forgetKeys()
+          xq = () => {
+            Yq.forgetKeys()
           };
-        window.addEventListener("keydown", MT, !0), window.addEventListener("keyup", KT, !0), window.addEventListener("blur", yT);
-        const fT = OT.e.onFrame((TT => {
-            const MT = AT.d.getActiveConsumerName(),
-              KT = cT(),
-              OT = KT ? (0, IT.j)("menuBack") : null,
-              yT = null !== MT && "gameplay" !== MT,
+        window.addEventListener("keydown", lq, !0), window.addEventListener("keyup", Oq, !0), window.addEventListener("blur", xq);
+        const Aq = mq.h.onFrame((qq => {
+            const lq = Bq.c.getActiveConsumerName(),
+              Oq = gq(),
+              mq = Oq ? (0, uq.i)("menuBack") : null,
+              xq = null !== lq && "gameplay" !== lq,
               {
-                continues: fT,
-                back: xT,
-                consumeHeld: vT
-              } = lT.onPadFrame(TT, yT, OT, (0, jT.m)(TT));
-            if (vT) {
-              const TT = (0, CT.g)().swapSticks ? "right" : "left";
-              AT.d.consumeAllHeld(lT.consumeLeavesMoveStick() ? TT : null)
+                continues: Aq,
+                back: cq,
+                consumeHeld: aq
+              } = Yq.onPadFrame(qq, xq, mq, (0, Nq.n)(qq));
+            if (aq) {
+              const qq = (0, Wq.i)().swapSticks ? "right" : "left";
+              Bq.c.consumeAllHeld(Yq.consumeLeavesMoveStick() ? qq : null)
             }
-            xT ? null === KT || void 0 === KT || KT() : fT && kT()
+            cq ? null === Oq || void 0 === Oq || Oq() : Aq && Eq()
           })),
-          xT = (0, TM.j)(`pressToContinue:${TT}`, (() => lT.blocksGameplay()));
+          cq = (0, DY.i)(`pressToContinue:${qq}`, (() => Yq.blocksGameplay()));
         return {
-          setArmed: TT => {
-            lT.setArmed(TT)
+          setArmed: qq => {
+            Yq.setArmed(qq)
           },
           dispose: () => {
-            window.removeEventListener("keydown", MT, !0), window.removeEventListener("keyup", KT, !0), window.removeEventListener("blur", yT), fT(), xT()
+            window.removeEventListener("keydown", lq, !0), window.removeEventListener("keyup", Oq, !0), window.removeEventListener("blur", xq), Aq(), cq()
           }
         }
       };
-    var YO = cT(4945),
-      BO = cT(3365),
-      WO = cT(3059),
-      nO = cT(8215);
-    const pO = TT => {
+    var sm = gq(4828),
+      Xm = gq(3296),
+      wm = gq(3040),
+      Km = gq(8104);
+    const Cm = qq => {
         let {
-          text: kT
-        } = TT;
-        return (0, XT.jsx)("div", {
+          text: Eq
+        } = qq;
+        return (0, Lq.jsx)("div", {
           className: "ControllerSettingsHeading",
-          children: kT
+          children: Eq
         })
       },
-      iO = TT => {
+      Im = qq => {
         let {
-          label: kT,
-          hint: cT,
-          options: lT,
-          value: KT,
-          onChange: OT
-        } = TT;
+          label: Eq,
+          hint: gq,
+          options: Yq,
+          value: Oq,
+          onChange: mq
+        } = qq;
         const {
-          t: yT
-        } = (0, MT.B)();
-        return (0, XT.jsx)("div", {
+          t: xq
+        } = (0, lq.v)();
+        return (0, Lq.jsx)("div", {
           className: "SettingBox ControllerChoiceSetting",
-          children: (0, XT.jsxs)("div", {
+          children: (0, Lq.jsxs)("div", {
             className: "ControllerChoiceRow",
-            children: [(0, XT.jsxs)("div", {
+            children: [(0, Lq.jsxs)("div", {
               className: "ControllerChoiceText",
-              children: [(0, XT.jsx)("div", {
+              children: [(0, Lq.jsx)("div", {
                 className: "SliderText",
-                children: kT
-              }), cT && (0, XT.jsx)("div", {
+                children: Eq
+              }), gq && (0, Lq.jsx)("div", {
                 className: "ControllerSettingsHint",
-                children: cT
+                children: gq
               })]
-            }), (0, XT.jsx)(WO.d, {
-              options: lT.map((TT => ({
-                label: "label" in TT ? TT.label : yT(TT.labelKey),
-                value: TT.value
+            }), (0, Lq.jsx)(wm.d, {
+              options: Yq.map((qq => ({
+                label: "label" in qq ? qq.label : xq(qq.labelKey),
+                value: qq.value
               }))),
-              value: KT,
-              onChange: TT => {
-                OT(TT.value)
+              value: Oq,
+              onChange: qq => {
+                mq(qq.value)
               }
             })]
           })
         })
       },
-      qO = TT => {
+      em = qq => {
         let {
-          settingKey: kT,
-          label: cT,
-          range: lT,
-          format: MT
-        } = TT;
-        const KT = (0, CT.o)();
-        return (0, XT.jsx)(YO.l, {
-          name: cT,
-          min: lT.min,
-          max: lT.max,
-          step: lT.step,
-          padStep: lT.step,
-          initValue: KT[kT],
-          format: MT,
-          onChange: TT => {
-            (0, CT.n)({
-              [kT]: (0, nO.v)(TT, lT)
+          settingKey: Eq,
+          label: gq,
+          range: Yq,
+          format: lq
+        } = qq;
+        const Oq = (0, Wq.r)();
+        return (0, Lq.jsx)(sm.h, {
+          name: gq,
+          min: Yq.min,
+          max: Yq.max,
+          step: Yq.step,
+          padStep: Yq.step,
+          initValue: Oq[Eq],
+          format: lq,
+          onChange: qq => {
+            (0, Wq.n)({
+              [Eq]: (0, Km.z)(qq, Yq)
             })
           }
         })
       };
-    var sO = cT(8886),
-      Ty = cT(8895);
-    const ky = TT => TT instanceof DOMException && ("SecurityError" === TT.name || "NotAllowedError" === TT.name),
-      cy = TT => {
-        const [kT] = [...TT.controllers].sort(((TT, kT) => Ty.i[TT] - Ty.i[kT]));
-        return Ty.g[kT]
+    var Dm = gq(8826),
+      qx = gq(8829);
+    const Ex = qq => qq instanceof DOMException && ("SecurityError" === qq.name || "NotAllowedError" === qq.name),
+      gx = qq => {
+        const [Eq] = [...qq.controllers].sort(((qq, Eq) => qx.o[qq] - qx.o[Eq]));
+        return qx.n[Eq]
       },
-      ly = TT => {
-        (0, sO.d)().allowPhoneMotion().catch((kT => {
-          TT && ky(kT) ? TT() : console.warn("Could not enable the motion sensor", kT)
+      Yx = qq => {
+        (0, Dm.b)().allowPhoneMotion().catch((Eq => {
+          qq && Ex(Eq) ? qq() : console.warn("Could not enable the motion sensor", Eq)
         }))
       },
-      My = {
+      lx = {
         waiting: "controller:settingsGyroPhoneWaiting",
         noSensor: "controller:settingsGyroPhoneNoSensor",
         on: "controller:settingsGyroPhoneOn",
         denied: "controller:settingsGyroPhoneDenied"
       },
-      Ky = TT => {
+      Ox = qq => {
         let {
-          status: kT
-        } = TT;
+          status: Eq
+        } = qq;
         const {
-          t: cT
-        } = (0, MT.B)(), [lT, KT] = (0, ET.useState)(null), OT = `${kT.controllers.join(",")}|${kT.phoneMotion}`;
-        (0, ET.useEffect)((() => {
-          KT(null)
-        }), [OT]);
-        const yT = () => {
-          (0, sO.d)().connectController().then((TT => {
-            KT(TT > 0 ? "openFailed" : null)
-          })).catch((TT => {
-            ky(TT) ? KT("needsClick") : console.warn("Could not connect motion controller", TT)
+          t: gq
+        } = (0, lq.v)(), [Yq, Oq] = (0, Sq.useState)(null), mq = `${Eq.controllers.join(",")}|${Eq.phoneMotion}`;
+        (0, Sq.useEffect)((() => {
+          Oq(null)
+        }), [mq]);
+        const xq = () => {
+          (0, Dm.b)().connectController().then((qq => {
+            Oq(qq > 0 ? "openFailed" : null)
+          })).catch((qq => {
+            Ex(qq) ? Oq("needsClick") : console.warn("Could not connect motion controller", qq)
           }))
         };
-        if (kT.hidSupported) {
-          let TT = cT("controller:settingsGyroConnectHint");
-          return "needsClick" === lT ? TT = cT("controller:settingsGyroConnectNeedsClick") : "openFailed" === lT ? TT = cT("controller:settingsGyroOpenFailed") : kT.controllers.length > 0 && (TT = cT("controller:settingsGyroConnected", {
-            name: cy(kT)
-          })), (0, XT.jsx)("div", {
+        if (Eq.hidSupported) {
+          let qq = gq("controller:settingsGyroConnectHint");
+          return "needsClick" === Yq ? qq = gq("controller:settingsGyroConnectNeedsClick") : "openFailed" === Yq ? qq = gq("controller:settingsGyroOpenFailed") : Eq.controllers.length > 0 && (qq = gq("controller:settingsGyroConnected", {
+            name: gx(Eq)
+          })), (0, Lq.jsx)("div", {
             className: "SettingBox ControllerChoiceSetting",
-            children: (0, XT.jsxs)("div", {
+            children: (0, Lq.jsxs)("div", {
               className: "ControllerChoiceRow",
-              children: [(0, XT.jsx)("div", {
+              children: [(0, Lq.jsx)("div", {
                 className: "ControllerSettingsHint",
-                children: TT
-              }), (0, XT.jsx)(HO.e, {
-                onClick: yT,
-                children: cT("controller:settingsGyroConnect")
+                children: qq
+              }), (0, Lq.jsx)(fm.g, {
+                onClick: xq,
+                children: gq("controller:settingsGyroConnect")
               })]
             })
           })
         }
-        if ("needsPermission" === kT.phoneMotion) return (0, XT.jsx)("div", {
+        if ("needsPermission" === Eq.phoneMotion) return (0, Lq.jsx)("div", {
           className: "SettingBox ControllerChoiceSetting",
-          children: (0, XT.jsxs)("div", {
+          children: (0, Lq.jsxs)("div", {
             className: "ControllerChoiceRow",
-            children: ["needsTap" === lT && (0, XT.jsx)("div", {
+            children: ["needsTap" === Yq && (0, Lq.jsx)("div", {
               className: "ControllerSettingsHint",
-              children: cT("controller:settingsGyroAllowNeedsTap")
-            }), (0, XT.jsx)(HO.e, {
+              children: gq("controller:settingsGyroAllowNeedsTap")
+            }), (0, Lq.jsx)(fm.g, {
               onClick: () => {
-                ly((() => {
-                  KT("needsTap")
+                Yx((() => {
+                  Oq("needsTap")
                 }))
               },
-              children: cT("controller:settingsGyroAllowMotion")
+              children: gq("controller:settingsGyroAllowMotion")
             })]
           })
         });
-        const fT = My[kT.phoneMotion];
-        return fT ? (0, XT.jsx)("div", {
+        const Aq = lx[Eq.phoneMotion];
+        return Aq ? (0, Lq.jsx)("div", {
           className: "ControllerSettingsHint",
-          children: cT(fT)
+          children: gq(Aq)
         }) : null
       },
-      Oy = () => {
+      mx = () => {
         const {
-          t: TT
-        } = (0, MT.B)(), kT = (0, CT.o)(), cT = (0, sO.f)(), lT = (0, jT.x)(), KT = !cT.hidSupported && cT.phoneSupported && !cT.padConnected, OT = (cT.hidSupported || cT.phoneSupported) && !KT, yT = (0, IT.j)("pause");
-        return (0, XT.jsxs)(XT.Fragment, {
-          children: [(0, XT.jsx)(pO, {
-            text: TT("controller:settingsGyro")
-          }), KT && (0, XT.jsx)("div", {
+          t: qq
+        } = (0, lq.v)(), Eq = (0, Wq.r)(), gq = (0, Dm.c)(), Yq = (0, Nq.B)(), Oq = !gq.hidSupported && gq.phoneSupported && !gq.padConnected, mq = (gq.hidSupported || gq.phoneSupported) && !Oq, xq = (0, uq.i)("pause");
+        return (0, Lq.jsxs)(Lq.Fragment, {
+          children: [(0, Lq.jsx)(Cm, {
+            text: qq("controller:settingsGyro")
+          }), Oq && (0, Lq.jsx)("div", {
             className: "ControllerSettingsHint",
-            children: TT("controller:settingsGyroPhoneNeedsController")
-          }), !OT && !KT && (0, XT.jsx)("div", {
+            children: qq("controller:settingsGyroPhoneNeedsController")
+          }), !mq && !Oq && (0, Lq.jsx)("div", {
             className: "ControllerSettingsHint",
-            children: TT(cT.hidBlocked || cT.phoneBlocked ? "controller:settingsGyroBlocked" : "controller:settingsGyroUnsupported")
-          }), OT && (0, XT.jsx)(YO.e, {
-            label: TT(cT.hidSupported ? "controller:settingsGyroToggle" : "controller:settingsGyroTogglePhone"),
-            checked: kT.gyroAiming,
-            onClick: TT => {
-              var kT, cT;
-              (0, CT.n)({
-                gyroAiming: TT
+            children: qq(gq.hidBlocked || gq.phoneBlocked ? "controller:settingsGyroBlocked" : "controller:settingsGyroUnsupported")
+          }), mq && (0, Lq.jsx)(sm.d, {
+            label: qq(gq.hidSupported ? "controller:settingsGyroToggle" : "controller:settingsGyroTogglePhone"),
+            checked: Eq.gyroAiming,
+            onClick: qq => {
+              var Eq, gq;
+              (0, Wq.n)({
+                gyroAiming: qq
               });
-              const lT = null === (kT = null === (cT = navigator.userActivation) || void 0 === cT ? void 0 : cT.isActive) || void 0 === kT || kT;
-              if (!TT || !lT) return;
-              const MT = (0, sO.d)(),
-                KT = MT.getStatus();
-              KT.hidSupported ? MT.connectControllerIfNoneGranted().catch((TT => {
-                console.warn("Motion controller picker unavailable", TT)
-              })) : "needsPermission" === KT.phoneMotion && ly()
+              const Yq = null === (Eq = null === (gq = navigator.userActivation) || void 0 === gq ? void 0 : gq.isActive) || void 0 === Eq || Eq;
+              if (!qq || !Yq) return;
+              const lq = (0, Dm.b)(),
+                Oq = lq.getStatus();
+              Oq.hidSupported ? lq.connectControllerIfNoneGranted().catch((qq => {
+                console.warn("Motion controller picker unavailable", qq)
+              })) : "needsPermission" === Oq.phoneMotion && Yx()
             },
-            circleInfoText: TT(cT.hidSupported ? "controller:settingsGyroToggleInfo" : "controller:settingsGyroToggleInfoPhone")
-          }), OT && cT.hidSupported && (0, XT.jsx)("div", {
+            circleInfoText: qq(gq.hidSupported ? "controller:settingsGyroToggleInfo" : "controller:settingsGyroToggleInfoPhone")
+          }), mq && gq.hidSupported && (0, Lq.jsx)("div", {
             className: "ControllerSettingsHint",
-            children: TT("controller:settingsGyroSteamHint")
-          }), OT && kT.gyroAiming && (0, XT.jsxs)(XT.Fragment, {
-            children: [(0, XT.jsx)(Ky, {
-              status: cT
-            }), (0, XT.jsx)(qO, {
+            children: qq("controller:settingsGyroSteamHint")
+          }), mq && Eq.gyroAiming && (0, Lq.jsxs)(Lq.Fragment, {
+            children: [(0, Lq.jsx)(Ox, {
+              status: gq
+            }), (0, Lq.jsx)(em, {
               settingKey: "gyroSensitivity",
-              label: TT("controller:settingsGyroSensitivity"),
-              range: nO.N,
-              format: nO.E
-            }), (0, XT.jsx)(iO, {
-              label: TT("controller:settingsGyroActivation"),
-              hint: "aiming" === kT.gyroActivation && (0, XT.jsx)(BO.b, {
-                text: TT("controller:settingsGyroAimingHint", {
-                  button: BO.f
+              label: qq("controller:settingsGyroSensitivity"),
+              range: Km.T,
+              format: Km.O
+            }), (0, Lq.jsx)(Im, {
+              label: qq("controller:settingsGyroActivation"),
+              hint: "aiming" === Eq.gyroActivation && (0, Lq.jsx)(Xm.c, {
+                text: qq("controller:settingsGyroAimingHint", {
+                  button: Xm.e
                 }),
-                glyph: (0, IT.j)("use")
+                glyph: (0, uq.i)("use")
               }),
-              options: nO.L,
-              value: kT.gyroActivation,
-              onChange: TT => {
-                (0, CT.n)({
-                  gyroActivation: TT
+              options: Km.S,
+              value: Eq.gyroActivation,
+              onChange: qq => {
+                (0, Wq.n)({
+                  gyroActivation: qq
                 })
               }
-            }), "button" === kT.gyroActivation && (0, XT.jsx)(iO, {
-              label: TT("controller:settingsGyroButton"),
-              hint: TT("controller:settingsGyroButtonHint"),
-              options: nO.t.filter((TT => TT !== yT || TT === kT.gyroButton)).map((TT => ({
-                label: aM(lT, TT),
-                value: TT
+            }), "button" === Eq.gyroActivation && (0, Lq.jsx)(Im, {
+              label: qq("controller:settingsGyroButton"),
+              hint: qq("controller:settingsGyroButtonHint"),
+              options: Km.w.filter((qq => qq !== xq || qq === Eq.gyroButton)).map((qq => ({
+                label: Pl(Yq, qq),
+                value: qq
               }))),
-              value: kT.gyroButton,
-              onChange: TT => {
-                (0, CT.n)({
-                  gyroButton: TT
+              value: Eq.gyroButton,
+              onChange: qq => {
+                (0, Wq.n)({
+                  gyroButton: qq
                 })
               }
             })]
           })]
         })
       };
-    var yy = cT(1875);
-    const fy = () => {
+    var xx = gq(1824);
+    const Ax = () => {
       const {
-        t: TT
-      } = (0, MT.B)(), kT = (0, CT.o)(), cT = (0, jT.x)();
-      return (0, XT.jsxs)(XT.Fragment, {
-        children: [(0, XT.jsx)(pO, {
-          text: TT("controller:settingsAccessibility")
-        }), (0, XT.jsx)(YO.e, {
-          label: TT("controller:settingsSwapConfirmBack"),
-          checked: (0, IT.A)(kT.swapConfirmBack, cT),
-          onClick: TT => {
-            (0, CT.n)({
-              swapConfirmBack: TT === (0, IT.A)(null, cT) ? null : TT
-            }), yy.g.showMessage({
+        t: qq
+      } = (0, lq.v)(), Eq = (0, Wq.r)(), gq = (0, Nq.B)();
+      return (0, Lq.jsxs)(Lq.Fragment, {
+        children: [(0, Lq.jsx)(Cm, {
+          text: qq("controller:settingsAccessibility")
+        }), (0, Lq.jsx)(sm.d, {
+          label: qq("controller:settingsSwapConfirmBack"),
+          checked: (0, uq.D)(Eq.swapConfirmBack, gq),
+          onClick: qq => {
+            (0, Wq.n)({
+              swapConfirmBack: qq === (0, uq.D)(null, gq) ? null : qq
+            }), xx.g.showMessage({
               translationKey: "controller:settingsSwapToast"
             })
           },
-          circleInfoText: TT("controller:settingsSwapConfirmBackInfo")
-        }), (0, XT.jsx)(iO, {
-          label: TT("controller:settingsButtonRepeat"),
-          hint: TT("controller:settingsButtonRepeatHint"),
-          options: nO.r,
-          value: kT.buttonRepeat,
-          onChange: TT => {
-            (0, CT.n)({
-              buttonRepeat: TT
+          circleInfoText: qq("controller:settingsSwapConfirmBackInfo")
+        }), (0, Lq.jsx)(Im, {
+          label: qq("controller:settingsButtonRepeat"),
+          hint: qq("controller:settingsButtonRepeatHint"),
+          options: Km.t,
+          value: Eq.buttonRepeat,
+          onChange: qq => {
+            (0, Wq.n)({
+              buttonRepeat: qq
             })
           }
-        }), (0, XT.jsx)(iO, {
-          label: TT("controller:settingsTapHoldTime"),
-          hint: TT("controller:settingsTapHoldTimeHint"),
-          options: nO.pb,
-          value: kT.tapHoldTime,
-          onChange: TT => {
-            (0, CT.n)({
-              tapHoldTime: TT
+        }), (0, Lq.jsx)(Im, {
+          label: qq("controller:settingsTapHoldTime"),
+          hint: qq("controller:settingsTapHoldTimeHint"),
+          options: Km.Cb,
+          value: Eq.tapHoldTime,
+          onChange: qq => {
+            (0, Wq.n)({
+              tapHoldTime: qq
             })
           }
-        }), (0, XT.jsx)(iO, {
-          label: TT("controller:settingsEmoteButton"),
-          hint: TT("wheel" === kT.emoteButton ? "controller:settingsEmoteButtonWheelHint" : "controller:settingsEmoteButtonTapHoldHint"),
-          options: nO.B,
-          value: kT.emoteButton,
-          onChange: TT => {
-            (0, CT.n)({
-              emoteButton: TT
+        }), (0, Lq.jsx)(Im, {
+          label: qq("controller:settingsEmoteButton"),
+          hint: qq("wheel" === Eq.emoteButton ? "controller:settingsEmoteButtonWheelHint" : "controller:settingsEmoteButtonTapHoldHint"),
+          options: Km.J,
+          value: Eq.emoteButton,
+          onChange: qq => {
+            (0, Wq.n)({
+              emoteButton: qq
             })
           }
-        }), (0, XT.jsx)(iO, {
-          label: TT("controller:settingsAttackMode"),
-          hint: TT("toggle" === kT.attackMode ? "controller:settingsAttackToggleHint" : "controller:settingsAttackHoldHint"),
-          options: nO.o,
-          value: kT.attackMode,
-          onChange: TT => {
-            (0, CT.n)({
-              attackMode: TT
+        }), (0, Lq.jsx)(Im, {
+          label: qq("controller:settingsAttackMode"),
+          hint: qq("toggle" === Eq.attackMode ? "controller:settingsAttackToggleHint" : "controller:settingsAttackHoldHint"),
+          options: Km.r,
+          value: Eq.attackMode,
+          onChange: qq => {
+            (0, Wq.n)({
+              attackMode: qq
             })
           }
-        }), (0, XT.jsx)(YO.e, {
-          label: TT("controller:settingsLargePointer"),
-          checked: kT.largePointer,
-          onClick: TT => {
-            (0, CT.n)({
-              largePointer: TT
+        }), (0, Lq.jsx)(sm.d, {
+          label: qq("controller:settingsLargePointer"),
+          checked: Eq.largePointer,
+          onClick: qq => {
+            (0, Wq.n)({
+              largePointer: qq
             })
           },
-          circleInfoText: TT("controller:settingsLargePointerInfo")
+          circleInfoText: qq("controller:settingsLargePointerInfo")
         })]
       })
     };
-    var xy = cT(8897);
-    const Iy = new class {
-        constructor(TT) {
-          this.router = TT, this.current = null
+    var cx = gq(8834);
+    const ux = new class {
+        constructor(qq) {
+          this.router = qq, this.current = null
         }
-        claim(TT, kT) {
-          const cT = this.current;
-          cT && (this.current = null, cT.release(), cT.onTakenOver());
-          const lT = this.router.register({
-              ...TT,
+        claim(qq, Eq) {
+          const gq = this.current;
+          gq && (this.current = null, gq.release(), gq.onTakenOver());
+          const Yq = this.router.register({
+              ...qq,
               name: "capture"
             }),
-            MT = {
-              release: lT,
-              onTakenOver: kT
+            lq = {
+              release: Yq,
+              onTakenOver: Eq
             };
-          return this.current = MT, () => {
-            this.current === MT && (this.current = null), lT()
+          return this.current = lq, () => {
+            this.current === lq && (this.current = null), Yq()
           }
         }
-      }(AT.d),
-      Ay = TT => {
-        (0, ET.useEffect)((() => {
-          if (!TT) return;
-          const kT = TT();
-          let cT = !1;
-          const lT = () => {
-              cT || (cT = !0, kT.onEnd())
+      }(Bq.c),
+      Bx = qq => {
+        (0, Sq.useEffect)((() => {
+          if (!qq) return;
+          const Eq = qq();
+          let gq = !1;
+          const Yq = () => {
+              gq || (gq = !0, Eq.onEnd())
             },
-            MT = Iy.claim({
-              isActive: () => !cT,
-              onFrame: TT => {
-                kT.onFrame(TT, lT)
+            lq = ux.claim({
+              isActive: () => !gq,
+              onFrame: qq => {
+                Eq.onFrame(qq, Yq)
               }
-            }, lT),
-            KT = void 0 === kT.timeoutMs ? void 0 : window.setTimeout(lT, kT.timeoutMs),
-            OT = TT => {
-              "Escape" === TT.key && (TT.preventDefault(), TT.stopPropagation(), lT())
+            }, Yq),
+            Oq = void 0 === Eq.timeoutMs ? void 0 : window.setTimeout(Yq, Eq.timeoutMs),
+            mq = qq => {
+              "Escape" === qq.key && (qq.preventDefault(), qq.stopPropagation(), Yq())
             };
-          return window.addEventListener("keydown", OT, !0), () => {
-            cT = !0, MT(), window.clearTimeout(KT), window.removeEventListener("keydown", OT, !0)
+          return window.addEventListener("keydown", mq, !0), () => {
+            gq = !0, lq(), window.clearTimeout(Oq), window.removeEventListener("keydown", mq, !0)
           }
-        }), [TT])
+        }), [qq])
       },
-      Cy = TT => {
+      Wx = qq => {
         let {
-          row: kT,
-          capturing: cT,
-          onCapture: lT,
-          holdFillRef: KT,
-          onRebind: OT,
-          swapped: yT
-        } = TT;
+          row: Eq,
+          capturing: gq,
+          onCapture: Yq,
+          holdFillRef: Oq,
+          onRebind: mq,
+          swapped: xq
+        } = qq;
         const {
-          t: fT
-        } = (0, MT.B)();
-        if ("fixed" === kT.kind) return (0, XT.jsx)("div", {
+          t: Aq
+        } = (0, lq.v)();
+        if ("fixed" === Eq.kind) return (0, Lq.jsx)("div", {
           className: "ControlRow PadControlRow PadControlRowFixed",
-          children: (0, XT.jsxs)("div", {
+          children: (0, Lq.jsxs)("div", {
             className: "ControlRowInner",
-            children: [(0, XT.jsx)("div", {
+            children: [(0, Lq.jsx)("div", {
               className: "ControlName",
-              children: fT(kT.labelKey)
-            }), (0, XT.jsx)("div", {
+              children: Aq(Eq.labelKey)
+            }), (0, Lq.jsx)("div", {
               className: "ControlBindingsContainer",
-              children: (0, XT.jsx)("div", {
+              children: (0, Lq.jsx)("div", {
                 className: "ControlBindingsList",
-                children: (0, XT.jsx)("div", {
+                children: (0, Lq.jsx)("div", {
                   className: "ControlBinding PadBinding",
-                  children: (0, XT.jsx)(FM, {
-                    glyph: "move" === kT.stick ? (0, IT.q)() : (0, IT.n)()
+                  children: (0, Lq.jsx)(Ql, {
+                    glyph: "move" === Eq.stick ? (0, uq.t)() : (0, uq.p)()
                   })
                 })
               })
@@ -5931,602 +6027,602 @@ export const modules = {
           })
         });
         const {
-          action: xT
-        } = kT, AT = (0, IT.j)(xT), CT = (0, IT.k)(xT), jT = AT !== CT && (0, IT.e)(xT, CT);
-        return (0, XT.jsxs)("div", {
-          className: uT()("ControlRow PadControlRow", {
-            Capturing: cT
+          action: cq
+        } = Eq, Bq = (0, uq.i)(cq), Wq = (0, uq.j)(cq), Nq = Bq !== Wq && (0, uq.d)(cq, Wq);
+        return (0, Lq.jsxs)("div", {
+          className: Gq()("ControlRow PadControlRow", {
+            Capturing: gq
           }),
-          children: [(0, XT.jsxs)("div", {
+          children: [(0, Lq.jsxs)("div", {
             className: "ControlRowInner",
-            children: [(0, XT.jsx)("div", {
+            children: [(0, Lq.jsx)("div", {
               className: "ControlName",
-              children: fT(nO.h[xT])
-            }), (0, XT.jsxs)("div", {
+              children: Aq(Km.l[cq])
+            }), (0, Lq.jsxs)("div", {
               className: "ControlBindingsContainer",
-              children: [!cT && (0, XT.jsxs)("div", {
+              children: [!gq && (0, Lq.jsxs)("div", {
                 className: "ControlBindingsList",
-                children: [(0, XT.jsx)("div", {
+                children: [(0, Lq.jsx)("div", {
                   className: "ControlBinding PadBinding",
                   "data-pad-focusable": !0,
                   onClick: () => {
-                    lT(xT)
+                    Yq(cq)
                   },
-                  children: (0, XT.jsx)(FM, {
-                    glyph: AT
+                  children: (0, Lq.jsx)(Ql, {
+                    glyph: Bq
                   })
-                }), jT && (0, XT.jsx)("div", {
+                }), Nq && (0, Lq.jsx)("div", {
                   className: "ControlBinding PadBindingReset",
-                  title: fT("controller:settingsReset"),
+                  title: Aq("controller:settingsReset"),
                   "data-pad-focusable": !0,
                   onClick: () => {
-                    OT(xT, CT)
+                    mq(cq, Wq)
                   },
-                  children: (0, XT.jsx)(JO.e, {
+                  children: (0, Lq.jsx)(im.d, {
                     name: "arrows-rotate"
                   })
                 })]
-              }), cT && (0, XT.jsxs)("div", {
+              }), gq && (0, Lq.jsxs)("div", {
                 className: "ControlBindingAddInput",
-                children: [(0, XT.jsxs)("div", {
+                children: [(0, Lq.jsxs)("div", {
                   className: "PadCaptureBox",
-                  children: [(0, XT.jsx)("span", {
-                    children: fT("controller:settingsCapturePrompt")
-                  }), (0, XT.jsx)("div", {
-                    ref: KT,
+                  children: [(0, Lq.jsx)("span", {
+                    children: Aq("controller:settingsCapturePrompt")
+                  }), (0, Lq.jsx)("div", {
+                    ref: Oq,
                     className: "PadCaptureHoldFill"
                   })]
-                }), (0, XT.jsx)("div", {
+                }), (0, Lq.jsx)("div", {
                   className: "ControlBindingAddCancel",
                   "data-pad-focusable": !0,
                   onClick: () => {
-                    lT(null)
+                    Yq(null)
                   },
                   children: "\xd7"
                 })]
-              }), cT && (0, XT.jsx)("div", {
+              }), gq && (0, Lq.jsx)("div", {
                 className: "PadCaptureHint",
-                children: (0, XT.jsx)(BO.b, {
-                  text: fT((0, IT.e)(xT, (0, IT.j)("menuBack")) ? "controller:settingsCaptureCancelOrBindHint" : "controller:settingsCaptureCancelHint", {
-                    button: BO.f
+                children: (0, Lq.jsx)(Xm.c, {
+                  text: Aq((0, uq.d)(cq, (0, uq.i)("menuBack")) ? "controller:settingsCaptureCancelOrBindHint" : "controller:settingsCaptureCancelHint", {
+                    button: Xm.e
                   }),
-                  glyph: (0, IT.j)("menuBack")
+                  glyph: (0, uq.i)("menuBack")
                 })
               })]
             })]
-          }), yT.map((TT => (0, XT.jsx)("div", {
+          }), xq.map((qq => (0, Lq.jsx)("div", {
             className: "ControlRowWarning PadSwapNotice",
-            children: (0, XT.jsx)(BO.b, {
-              text: fT("controller:settingsSwapNotice", {
-                action: fT(nO.h[TT]),
-                button: BO.f
+            children: (0, Lq.jsx)(Xm.c, {
+              text: Aq("controller:settingsSwapNotice", {
+                action: Aq(Km.l[qq]),
+                button: Xm.e
               }),
-              glyph: (0, IT.j)(TT)
+              glyph: (0, uq.i)(qq)
             })
-          }, TT))), cT && (0, XT.jsx)("div", {
+          }, qq))), gq && (0, Lq.jsx)("div", {
             className: "PadCaptureTimer",
             style: {
-              animationDuration: `${nO.u}ms`
+              animationDuration: `${Km.x}ms`
             }
           })]
         })
       },
-      jy = [],
-      vy = TT => {
+      Nx = [],
+      ax = qq => {
         let {
-          layoutSetting: kT
-        } = TT;
+          layoutSetting: Eq
+        } = qq;
         const {
-          t: cT
-        } = (0, MT.B)(), lT = (0, CT.o)();
-        (0, jT.x)();
-        const KT = (0, ET.useRef)(null),
-          [OT, yT] = (0, ET.useState)(null),
-          fT = (0, ET.useCallback)(((TT, kT) => {
-            const cT = (0, CT.g)().bindings;
-            (0, IT.w)(TT, kT);
-            const lT = (0, IT.s)(cT, TT);
-            yT(lT.length > 0 ? {
-              action: TT,
-              swapped: lT
+          t: gq
+        } = (0, lq.v)(), Yq = (0, Wq.r)();
+        (0, Nq.B)();
+        const Oq = (0, Sq.useRef)(null),
+          [mq, xq] = (0, Sq.useState)(null),
+          Aq = (0, Sq.useCallback)(((qq, Eq) => {
+            const gq = (0, Wq.i)().bindings;
+            (0, uq.z)(qq, Eq);
+            const Yq = (0, uq.u)(gq, qq);
+            xq(Yq.length > 0 ? {
+              action: qq,
+              swapped: Yq
             } : null)
           }), []),
-          [xT, tT] = ((TT, kT) => {
-            const [cT, lT] = (0, ET.useState)(null), MT = (0, ET.useMemo)((() => cT ? () => {
-              const MT = (0, IT.j)("menuBack"),
-                KT = new nO.b(MT, (0, IT.j)("menuConfirm"), (TT => (0, IT.e)(cT, TT)));
+          [cq, Vq] = ((qq, Eq) => {
+            const [gq, Yq] = (0, Sq.useState)(null), lq = (0, Sq.useMemo)((() => gq ? () => {
+              const lq = (0, uq.i)("menuBack"),
+                Oq = new Km.d(lq, (0, uq.i)("menuConfirm"), (qq => (0, uq.d)(gq, qq)));
               return {
-                onFrame: (lT, OT) => {
-                  var yT;
-                  const fT = lT.frame.timestampMs,
-                    xT = KT.update({
-                      ...lT,
-                      isDown: TT => (0, vT.J)(lT.frame.values, TT)
-                    }, fT);
-                  null === (yT = TT.current) || void 0 === yT || yT.style.setProperty("width", 100 * KT.getBindHoldProgress(fT) + "%"), xT && ("bind" === xT.kind ? (AT.d.consumeButton(xT.button), kT(cT, xT.button)) : AT.d.consumeButton(MT), OT())
+                onFrame: (Yq, mq) => {
+                  var xq;
+                  const Aq = Yq.frame.timestampMs,
+                    cq = Oq.update({
+                      ...Yq,
+                      isDown: qq => (0, aq.J)(Yq.frame.values, qq)
+                    }, Aq);
+                  null === (xq = qq.current) || void 0 === xq || xq.style.setProperty("width", 100 * Oq.getBindHoldProgress(Aq) + "%"), cq && ("bind" === cq.kind ? (Bq.c.consumeButton(cq.button), Eq(gq, cq.button)) : Bq.c.consumeButton(lq), mq())
                 },
                 onEnd: () => {
-                  lT(null)
+                  Yq(null)
                 },
-                timeoutMs: nO.u
+                timeoutMs: Km.x
               }
-            } : null), [cT, TT, kT]);
-            return Ay(MT), [cT, lT]
-          })(KT, fT),
-          hT = TT => {
-            TT && yT(null), tT(TT)
+            } : null), [gq, qq, Eq]);
+            return Bx(lq), [gq, Yq]
+          })(Oq, Aq),
+          dq = qq => {
+            qq && xq(null), Vq(qq)
           };
-        (0, ET.useEffect)((() => {
-          if (!OT) return;
-          const TT = window.setTimeout((() => {
-            yT(null)
-          }), nO.nb);
+        (0, Sq.useEffect)((() => {
+          if (!mq) return;
+          const qq = window.setTimeout((() => {
+            xq(null)
+          }), Km.Bb);
           return () => {
-            window.clearTimeout(TT)
+            window.clearTimeout(qq)
           }
-        }), [OT]);
-        const NT = !lT.swapSticks && 0 === Object.keys(lT.bindings).length;
-        return (0, XT.jsxs)("div", {
+        }), [mq]);
+        const jq = !Yq.swapSticks && 0 === Object.keys(Yq.bindings).length;
+        return (0, Lq.jsxs)("div", {
           className: "ControlsContainer PadControlsContainer",
-          children: [(0, XT.jsx)("div", {
+          children: [(0, Lq.jsx)("div", {
             className: "SliderText",
-            children: cT("controller:settingsRemap")
-          }), (0, XT.jsx)("div", {
+            children: gq("controller:settingsRemap")
+          }), (0, Lq.jsx)("div", {
             className: "ControllerSettingsHint",
-            children: cT("controller:settingsRemapHint")
-          }), (0, XT.jsx)(HO.I, {
+            children: gq("controller:settingsRemapHint")
+          }), (0, Lq.jsx)(fm.K, {
             className: "ResetBindingsButton PadResetAllButton",
-            disabled: NT,
+            disabled: jq,
             onClick: () => {
-              hT(null), yT(null), (0, IT.z)()
+              dq(null), xq(null), (0, uq.C)()
             },
-            children: cT("controller:settingsResetAll")
-          }), kT, nO.gb.map(((TT, kT) => (0, XT.jsx)(xy.c, {
-            title: cT(TT.titleKey),
-            defaultOpen: 0 === kT,
-            children: TT.rows.map((TT => (0, XT.jsx)(Cy, {
-              row: TT,
-              capturing: "action" === TT.kind && TT.action === xT,
-              onCapture: hT,
-              holdFillRef: KT,
-              onRebind: fT,
-              swapped: "action" === TT.kind && (null === OT || void 0 === OT ? void 0 : OT.action) === TT.action ? OT.swapped : jy
-            }, "action" === TT.kind ? TT.action : TT.labelKey)))
-          }, TT.titleKey)))]
+            children: gq("controller:settingsResetAll")
+          }), Eq, Km.rb.map(((qq, Eq) => (0, Lq.jsx)(cx.b, {
+            title: gq(qq.titleKey),
+            defaultOpen: 0 === Eq,
+            children: qq.rows.map((qq => (0, Lq.jsx)(Wx, {
+              row: qq,
+              capturing: "action" === qq.kind && qq.action === cq,
+              onCapture: dq,
+              holdFillRef: Oq,
+              onRebind: Aq,
+              swapped: "action" === qq.kind && (null === mq || void 0 === mq ? void 0 : mq.action) === qq.action ? mq.swapped : Nx
+            }, "action" === qq.kind ? qq.action : qq.labelKey)))
+          }, qq.titleKey)))]
         })
       },
-      ty = TT => {
+      Vx = qq => {
         let {
-          deadzone: kT,
-          dotRef: cT,
-          labelKey: lT
-        } = TT;
+          deadzone: Eq,
+          dotRef: gq,
+          labelKey: Yq
+        } = qq;
         const {
-          t: KT
-        } = (0, MT.B)();
-        return (0, XT.jsxs)("div", {
+          t: Oq
+        } = (0, lq.v)();
+        return (0, Lq.jsxs)("div", {
           className: "ControllerTesterStick",
-          children: [(0, XT.jsxs)("div", {
+          children: [(0, Lq.jsxs)("div", {
             className: "ControllerTesterStickCircle",
-            children: [(0, XT.jsx)("div", {
+            children: [(0, Lq.jsx)("div", {
               className: "ControllerTesterDeadzone",
               style: {
-                width: 100 * kT + "%",
-                height: 100 * kT + "%"
+                width: 100 * Eq + "%",
+                height: 100 * Eq + "%"
               }
-            }), (0, XT.jsx)("div", {
-              ref: cT,
+            }), (0, Lq.jsx)("div", {
+              ref: gq,
               className: "ControllerTesterDot"
             })]
-          }), (0, XT.jsx)("div", {
+          }), (0, Lq.jsx)("div", {
             className: "ControllerTesterStickLabel",
-            children: KT(lT)
+            children: Oq(Yq)
           })]
         })
       },
-      hy = (TT, kT, cT, lT) => {
-        var MT;
-        TT && (TT.style.left = 50 + 50 * Math.max(-1, Math.min(1, kT.x)) + "%", TT.style.top = 50 + 50 * Math.max(-1, Math.min(1, kT.y)) + "%", null === (MT = TT.parentElement) || void 0 === MT || MT.classList.toggle("Active", lT || Math.hypot(kT.x, kT.y) > cT))
+      dx = (qq, Eq, gq, Yq) => {
+        var lq;
+        qq && (qq.style.left = 50 + 50 * Math.max(-1, Math.min(1, Eq.x)) + "%", qq.style.top = 50 + 50 * Math.max(-1, Math.min(1, Eq.y)) + "%", null === (lq = qq.parentElement) || void 0 === lq || lq.classList.toggle("Active", Yq || Math.hypot(Eq.x, Eq.y) > gq))
       },
-      Ny = TT => {
-        const kT = {
-            deadzone: TT.moveDeadzone,
+      jx = qq => {
+        const Eq = {
+            deadzone: qq.moveDeadzone,
             labelKey: "controller:settingsActionMove"
           },
-          cT = {
-            deadzone: TT.lookDeadzone,
+          gq = {
+            deadzone: qq.lookDeadzone,
             labelKey: "controller:settingsActionLook"
           };
-        return TT.swapSticks ? {
-          left: cT,
-          right: kT
+        return qq.swapSticks ? {
+          left: gq,
+          right: Eq
         } : {
-          left: kT,
-          right: cT
+          left: Eq,
+          right: gq
         }
       },
-      Qy = () => {
+      Hx = () => {
         const {
-          t: TT
-        } = (0, MT.B)(), kT = (() => {
-          const [TT, kT] = (0, ET.useState)((() => OT.e.getActivePad()));
-          return (0, hM.g)(OT.c, (() => {
-            kT(OT.e.getActivePad())
-          })), TT
-        })(), cT = Ny((0, CT.o)()), lT = (0, ET.useRef)(null), KT = (0, ET.useRef)(null), yT = (0, ET.useRef)([]), fT = (0, ET.useRef)(null), xT = (0, ET.useRef)(null), [jT, tT] = (TT => {
-          const [kT, cT] = (0, ET.useState)(!1), lT = (0, ET.useMemo)((() => kT ? () => {
-            const kT = (0, IT.j)("menuBack"),
-              lT = new nO.f;
+          t: qq
+        } = (0, lq.v)(), Eq = (() => {
+          const [qq, Eq] = (0, Sq.useState)((() => mq.h.getActivePad()));
+          return (0, Vl.f)(mq.d, (() => {
+            Eq(mq.h.getActivePad())
+          })), qq
+        })(), gq = jx((0, Wq.r)()), Yq = (0, Sq.useRef)(null), Oq = (0, Sq.useRef)(null), xq = (0, Sq.useRef)([]), Aq = (0, Sq.useRef)(null), cq = (0, Sq.useRef)(null), [Nq, Vq] = (qq => {
+          const [Eq, gq] = (0, Sq.useState)(!1), Yq = (0, Sq.useMemo)((() => Eq ? () => {
+            const Eq = (0, uq.i)("menuBack"),
+              Yq = new Km.h;
             return {
-              onFrame: (cT, MT) => {
-                var KT;
-                const OT = lT.update({
-                  pressed: cT.wasPressed(kT),
-                  ty: cT.isHeld(kT)
-                }, cT.frame.timestampMs);
-                null === (KT = TT.current) || void 0 === KT || KT.style.setProperty("width", 100 * OT + "%"), OT >= 1 && (AT.d.consumeButton(kT), MT())
+              onFrame: (gq, lq) => {
+                var Oq;
+                const mq = Yq.update({
+                  pressed: gq.wasPressed(Eq),
+                  Fc: gq.isHeld(Eq)
+                }, gq.frame.timestampMs);
+                null === (Oq = qq.current) || void 0 === Oq || Oq.style.setProperty("width", 100 * mq + "%"), mq >= 1 && (Bq.c.consumeButton(Eq), lq())
               },
               onEnd: () => {
-                cT(!1)
+                gq(!1)
               }
             }
-          } : null), [kT, TT]);
-          return Ay(lT), [kT, cT]
-        })(KT);
-        (0, ET.useEffect)((() => {
-          const TT = TT => {
-            for (const cT of vT.ab) {
-              const kT = (0, vT.o)(cT),
-                lT = yT.current[kT];
-              if (!lT) continue;
-              const MT = TT.values[kT];
-              lT.classList.toggle("Pressed", MT >= vT.z), (0, vT.N)(kT) && lT.style.setProperty("--trigger-fill", `${Math.round(100*MT)}%`)
+          } : null), [Eq, qq]);
+          return Bx(Yq), [Eq, gq]
+        })(Oq);
+        (0, Sq.useEffect)((() => {
+          const qq = qq => {
+            for (const gq of aq.$) {
+              const Eq = (0, aq.m)(gq),
+                Yq = xq.current[Eq];
+              if (!Yq) continue;
+              const lq = qq.values[Eq];
+              Yq.classList.toggle("Pressed", lq >= aq.A), (0, aq.K)(Eq) && Yq.style.setProperty("--trigger-fill", `${Math.round(100*lq)}%`)
             }
-            const kT = Ny((0, CT.g)());
-            hy(fT.current, TT.leftStick, kT.left.deadzone, TT.values[(0, vT.o)("LS")] >= vT.z), hy(xT.current, TT.rightStick, kT.right.deadzone, TT.values[(0, vT.o)("RS")] >= vT.z)
+            const Eq = jx((0, Wq.i)());
+            dx(Aq.current, qq.leftStick, Eq.left.deadzone, qq.values[(0, aq.m)("LS")] >= aq.A), dx(cq.current, qq.rightStick, Eq.right.deadzone, qq.values[(0, aq.m)("RS")] >= aq.A)
           };
-          return kT || TT((0, vT.x)()), OT.e.onFrame(TT)
-        }), [kT]), (0, ET.useEffect)((() => {
-          kT || tT(!1)
-        }), [kT, tT]), (0, ET.useEffect)((() => {
-          var TT;
-          jT && (null === (TT = lT.current) || void 0 === TT || TT.scrollIntoView({
+          return Eq || qq((0, aq.y)()), mq.h.onFrame(qq)
+        }), [Eq]), (0, Sq.useEffect)((() => {
+          Eq || Vq(!1)
+        }), [Eq, Vq]), (0, Sq.useEffect)((() => {
+          var qq;
+          Nq && (null === (qq = Yq.current) || void 0 === qq || qq.scrollIntoView({
             block: "nearest"
           }))
-        }), [jT]);
-        const hT = nO.$.find((TT => TT.value === (null === kT || void 0 === kT ? void 0 : kT.family)));
-        return (0, XT.jsxs)("div", {
-          ref: lT,
-          className: uT()("SettingBox ControllerTester", {
-            Testing: jT
+        }), [Nq]);
+        const dq = Km.nb.find((qq => qq.value === (null === Eq || void 0 === Eq ? void 0 : Eq.family)));
+        return (0, Lq.jsxs)("div", {
+          ref: Yq,
+          className: Gq()("SettingBox ControllerTester", {
+            Testing: Nq
           }),
-          children: [(0, XT.jsxs)("div", {
+          children: [(0, Lq.jsxs)("div", {
             className: "ControllerTesterHeader",
-            children: [(0, XT.jsxs)("div", {
+            children: [(0, Lq.jsxs)("div", {
               className: "ControllerTesterInfo",
-              children: [kT && (0, XT.jsx)("div", {
-                children: TT("controller:settingsTesterFamily", {
-                  family: hT ? TT(hT.labelKey) : kT.family
+              children: [Eq && (0, Lq.jsx)("div", {
+                children: qq("controller:settingsTesterFamily", {
+                  family: dq ? qq(dq.labelKey) : Eq.family
                 })
-              }), kT && (0, XT.jsx)("div", {
+              }), Eq && (0, Lq.jsx)("div", {
                 className: "ControllerTesterPadId",
-                children: kT.id
-              }), !kT && (0, XT.jsx)("div", {
-                children: TT("controller:settingsTesterNoPad")
+                children: Eq.id
+              }), !Eq && (0, Lq.jsx)("div", {
+                children: qq("controller:settingsTesterNoPad")
               })]
-            }), (kT || jT) && (0, XT.jsx)(HO.e, {
+            }), (Eq || Nq) && (0, Lq.jsx)(fm.g, {
               className: "ControllerTesterToggle",
               onClick: () => {
-                tT(!jT)
+                Vq(!Nq)
               },
-              children: TT(jT ? "controller:settingsTesterStop" : "controller:settingsTesterStart")
+              children: qq(Nq ? "controller:settingsTesterStop" : "controller:settingsTesterStart")
             })]
-          }), kT && !jT && (0, XT.jsx)("div", {
+          }), Eq && !Nq && (0, Lq.jsx)("div", {
             className: "ControllerSettingsHint",
-            children: TT("controller:settingsTesterHint")
-          }), jT && (0, XT.jsxs)("div", {
+            children: qq("controller:settingsTesterHint")
+          }), Nq && (0, Lq.jsxs)("div", {
             className: "ControllerTesterBanner",
-            children: [(0, XT.jsx)(BO.b, {
-              text: TT("controller:settingsTesterTesting", {
-                button: BO.f
+            children: [(0, Lq.jsx)(Xm.c, {
+              text: qq("controller:settingsTesterTesting", {
+                button: Xm.e
               }),
-              glyph: (0, IT.j)("menuBack")
-            }), (0, XT.jsx)("div", {
-              ref: KT,
+              glyph: (0, uq.i)("menuBack")
+            }), (0, Lq.jsx)("div", {
+              ref: Oq,
               className: "ControllerTesterExitFill"
             })]
-          }), (0, XT.jsxs)("div", {
+          }), (0, Lq.jsxs)("div", {
             className: "ControllerTesterBody",
-            children: [(0, XT.jsx)(ty, {
-              deadzone: cT.left.deadzone,
-              dotRef: fT,
-              labelKey: cT.left.labelKey
-            }), (0, XT.jsx)("div", {
+            children: [(0, Lq.jsx)(Vx, {
+              deadzone: gq.left.deadzone,
+              dotRef: Aq,
+              labelKey: gq.left.labelKey
+            }), (0, Lq.jsx)("div", {
               className: "ControllerTesterButtons",
-              children: vT.ab.map((TT => {
-                const cT = (0, vT.o)(TT);
-                return (0, XT.jsx)("div", {
-                  ref: TT => {
-                    yT.current[cT] = TT
+              children: aq.$.map((qq => {
+                const gq = (0, aq.m)(qq);
+                return (0, Lq.jsx)("div", {
+                  ref: qq => {
+                    xq.current[gq] = qq
                   },
-                  className: (0, vT.N)(cT) ? "ControllerTesterButton ControllerTesterTrigger" : "ControllerTesterButton",
-                  children: (0, XT.jsx)(FM, {
-                    glyph: TT,
-                    family: null === kT || void 0 === kT ? void 0 : kT.family
+                  className: (0, aq.K)(gq) ? "ControllerTesterButton ControllerTesterTrigger" : "ControllerTesterButton",
+                  children: (0, Lq.jsx)(Ql, {
+                    glyph: qq,
+                    family: null === Eq || void 0 === Eq ? void 0 : Eq.family
                   })
-                }, TT)
+                }, qq)
               }))
-            }), (0, XT.jsx)(ty, {
-              deadzone: cT.right.deadzone,
-              dotRef: xT,
-              labelKey: cT.right.labelKey
+            }), (0, Lq.jsx)(Vx, {
+              deadzone: gq.right.deadzone,
+              dotRef: cq,
+              labelKey: gq.right.labelKey
             })]
           })]
         })
       },
-      Sy = (0, ET.memo)((function() {
+      ox = (0, Sq.memo)((function() {
         const {
-          t: TT
-        } = (0, MT.B)(), kT = (0, CT.o)(), [cT, lT] = (0, ET.useState)(!1);
-        return (0, ET.useEffect)((() => {
-          if (!cT) return;
-          const TT = window.setTimeout((() => {
-            lT(!1)
-          }), nO.nb);
+          t: qq
+        } = (0, lq.v)(), Eq = (0, Wq.r)(), [gq, Yq] = (0, Sq.useState)(!1);
+        return (0, Sq.useEffect)((() => {
+          if (!gq) return;
+          const qq = window.setTimeout((() => {
+            Yq(!1)
+          }), Km.Bb);
           return () => {
-            window.clearTimeout(TT)
+            window.clearTimeout(qq)
           }
-        }), [cT]), (0, XT.jsxs)("div", {
+        }), [gq]), (0, Lq.jsxs)("div", {
           className: "SettingsMenuRightInner ControllerCategory",
-          children: [(0, XT.jsx)(pO, {
-            text: TT("controller:settingsLook")
-          }), (0, XT.jsx)(qO, {
+          children: [(0, Lq.jsx)(Cm, {
+            text: qq("controller:settingsLook")
+          }), (0, Lq.jsx)(em, {
             settingKey: "lookSensitivityX",
-            label: TT("controller:settingsLookSensitivityX"),
-            range: nO.ib,
-            format: nO.I
-          }), (0, XT.jsx)(qO, {
+            label: qq("controller:settingsLookSensitivityX"),
+            range: Km.vb,
+            format: Km.P
+          }), (0, Lq.jsx)(em, {
             settingKey: "lookSensitivityY",
-            label: TT("controller:settingsLookSensitivityY"),
-            range: nO.ib,
-            format: nO.I
-          }), (0, XT.jsx)(qO, {
+            label: qq("controller:settingsLookSensitivityY"),
+            range: Km.vb,
+            format: Km.P
+          }), (0, Lq.jsx)(em, {
             settingKey: "aimLookSensitivity",
-            label: TT("controller:settingsAimLookSensitivity"),
-            range: nO.k,
-            format: nO.I
-          }), (0, XT.jsx)(iO, {
-            label: TT("controller:settingsLookCurve"),
-            hint: TT("controller:settingsLookCurveHint"),
-            options: nO.V,
-            value: kT.lookCurve,
-            onChange: TT => {
-              (0, CT.n)({
-                lookCurve: TT
+            label: qq("controller:settingsAimLookSensitivity"),
+            range: Km.n,
+            format: Km.P
+          }), (0, Lq.jsx)(Im, {
+            label: qq("controller:settingsLookCurve"),
+            hint: qq("controller:settingsLookCurveHint"),
+            options: Km.hb,
+            value: Eq.lookCurve,
+            onChange: qq => {
+              (0, Wq.n)({
+                lookCurve: qq
               })
             }
-          }), (0, XT.jsx)(YO.e, {
-            label: TT("controller:settingsInvertLookX"),
-            checked: kT.invertLookX,
-            onClick: TT => {
-              (0, CT.n)({
-                invertLookX: TT
+          }), (0, Lq.jsx)(sm.d, {
+            label: qq("controller:settingsInvertLookX"),
+            checked: Eq.invertLookX,
+            onClick: qq => {
+              (0, Wq.n)({
+                invertLookX: qq
               })
             }
-          }), (0, XT.jsx)(YO.e, {
-            label: TT("controller:settingsInvertLookY"),
-            checked: kT.invertLookY,
-            onClick: TT => {
-              (0, CT.n)({
-                invertLookY: TT
+          }), (0, Lq.jsx)(sm.d, {
+            label: qq("controller:settingsInvertLookY"),
+            checked: Eq.invertLookY,
+            onClick: qq => {
+              (0, Wq.n)({
+                invertLookY: qq
               })
             }
-          }), (0, XT.jsx)(qO, {
+          }), (0, Lq.jsx)(em, {
             settingKey: "lookDeadzone",
-            label: TT("controller:settingsLookDeadzone"),
-            range: nO.y,
-            format: nO.D
-          }), (0, XT.jsx)(Oy, {}), (0, XT.jsx)(pO, {
-            text: TT("controller:settingsMovement")
-          }), (0, XT.jsx)(qO, {
+            label: qq("controller:settingsLookDeadzone"),
+            range: Km.F,
+            format: Km.K
+          }), (0, Lq.jsx)(mx, {}), (0, Lq.jsx)(Cm, {
+            text: qq("controller:settingsMovement")
+          }), (0, Lq.jsx)(em, {
             settingKey: "moveDeadzone",
-            label: TT("controller:settingsMoveDeadzone"),
-            range: nO.y,
-            format: nO.D
-          }), (0, XT.jsx)(YO.e, {
-            label: TT("controller:settingsAutoSprint"),
-            checked: kT.autoSprint,
-            onClick: TT => {
-              (0, CT.n)({
-                autoSprint: TT
+            label: qq("controller:settingsMoveDeadzone"),
+            range: Km.F,
+            format: Km.K
+          }), (0, Lq.jsx)(sm.d, {
+            label: qq("controller:settingsAutoSprint"),
+            checked: Eq.autoSprint,
+            onClick: qq => {
+              (0, Wq.n)({
+                autoSprint: qq
               })
             },
-            circleInfoText: TT("controller:settingsAutoSprintInfo")
-          }), (0, XT.jsx)(iO, {
-            label: TT("controller:settingsSneak"),
-            options: nO.mb,
-            value: kT.sneakMode,
-            onChange: TT => {
-              (0, CT.n)({
-                sneakMode: TT
+            circleInfoText: qq("controller:settingsAutoSprintInfo")
+          }), (0, Lq.jsx)(Im, {
+            label: qq("controller:settingsSneak"),
+            options: Km.yb,
+            value: Eq.sneakMode,
+            onChange: qq => {
+              (0, Wq.n)({
+                sneakMode: qq
               })
             }
-          }), (0, XT.jsx)(pO, {
-            text: TT("controller:settingsButtons")
-          }), (0, XT.jsx)(iO, {
-            label: TT("controller:settingsPromptFamily"),
-            options: nO.$,
-            value: kT.promptFamily,
-            onChange: TT => {
-              (0, CT.n)({
-                promptFamily: TT
+          }), (0, Lq.jsx)(Cm, {
+            text: qq("controller:settingsButtons")
+          }), (0, Lq.jsx)(Im, {
+            label: qq("controller:settingsPromptFamily"),
+            options: Km.nb,
+            value: Eq.promptFamily,
+            onChange: qq => {
+              (0, Wq.n)({
+                promptFamily: qq
               })
             }
-          }), (0, XT.jsx)(YO.e, {
-            label: TT("controller:settingsHideButtonHints"),
-            checked: kT.hideButtonHints,
-            onClick: TT => {
-              (0, CT.n)({
-                hideButtonHints: TT
+          }), (0, Lq.jsx)(sm.d, {
+            label: qq("controller:settingsHideButtonHints"),
+            checked: Eq.hideButtonHints,
+            onClick: qq => {
+              (0, Wq.n)({
+                hideButtonHints: qq
               })
             }
-          }), (0, XT.jsx)(YO.e, {
-            label: TT("controller:settingsVibration"),
-            checked: kT.vibration,
-            onClick: TT => {
-              (0, CT.n)({
-                vibration: TT
-              }), TT && KM("preview")
+          }), (0, Lq.jsx)(sm.d, {
+            label: qq("controller:settingsVibration"),
+            checked: Eq.vibration,
+            onClick: qq => {
+              (0, Wq.n)({
+                vibration: qq
+              }), qq && ll("preview")
             }
-          }), (0, XT.jsx)(qO, {
+          }), (0, Lq.jsx)(em, {
             settingKey: "cursorSpeed",
-            label: TT("controller:settingsCursorSpeed"),
-            range: nO.w,
-            format: nO.I
-          }), (0, XT.jsx)(YO.e, {
-            label: TT("controller:settingsCursorMagnetism"),
-            checked: kT.cursorMagnetism,
-            onClick: TT => {
-              (0, CT.n)({
-                cursorMagnetism: TT
+            label: qq("controller:settingsCursorSpeed"),
+            range: Km.C,
+            format: Km.P
+          }), (0, Lq.jsx)(sm.d, {
+            label: qq("controller:settingsCursorMagnetism"),
+            checked: Eq.cursorMagnetism,
+            onClick: qq => {
+              (0, Wq.n)({
+                cursorMagnetism: qq
               })
             }
-          }), (0, XT.jsx)(YO.e, {
-            label: TT("controller:settingsMenuBackToCategories"),
-            checked: kT.menuBackToCategories,
-            onClick: TT => {
-              (0, CT.n)({
-                menuBackToCategories: TT
+          }), (0, Lq.jsx)(sm.d, {
+            label: qq("controller:settingsMenuBackToCategories"),
+            checked: Eq.menuBackToCategories,
+            onClick: qq => {
+              (0, Wq.n)({
+                menuBackToCategories: qq
               })
             }
-          }), (0, XT.jsx)(vy, {
-            layoutSetting: (0, XT.jsxs)(XT.Fragment, {
-              children: [IT.g.map((cT => (0, XT.jsx)(YO.e, {
-                label: TT(nO.T[cT]),
-                checked: (0, IT.v)(cT, kT),
-                onClick: TT => {
-                  lT(!(0, IT.E)(cT, TT))
+          }), (0, Lq.jsx)(ax, {
+            layoutSetting: (0, Lq.jsxs)(Lq.Fragment, {
+              children: [uq.e.map((gq => (0, Lq.jsx)(sm.d, {
+                label: qq(Km.$[gq]),
+                checked: (0, uq.w)(gq, Eq),
+                onClick: qq => {
+                  Yq(!(0, uq.F)(gq, qq))
                 }
-              }, cT))), cT && (0, XT.jsx)("div", {
+              }, gq))), gq && (0, Lq.jsx)("div", {
                 className: "PadLayoutRefusedNotice",
                 role: "status",
-                children: TT("controller:settingsLayoutRefusedToast")
+                children: qq("controller:settingsLayoutRefusedToast")
               })]
             })
-          }), (0, XT.jsx)(fy, {}), (0, XT.jsx)(pO, {
-            text: TT("controller:settingsAlternatives")
-          }), (0, XT.jsx)("div", {
+          }), (0, Lq.jsx)(Ax, {}), (0, Lq.jsx)(Cm, {
+            text: qq("controller:settingsAlternatives")
+          }), (0, Lq.jsx)("div", {
             className: "ControllerSettingsHint",
-            children: TT("controller:settingsAlternativesHint")
-          }), (0, XT.jsx)(iO, {
-            label: TT("controller:settingsMenuNavigation"),
-            hint: TT("controller:settingsMenuNavigationHint"),
-            options: nO.Y,
-            value: kT.menuNavigation,
-            onChange: TT => {
-              (0, CT.n)({
-                menuNavigation: TT
+            children: qq("controller:settingsAlternativesHint")
+          }), (0, Lq.jsx)(Im, {
+            label: qq("controller:settingsMenuNavigation"),
+            hint: qq("controller:settingsMenuNavigationHint"),
+            options: Km.kb,
+            value: Eq.menuNavigation,
+            onChange: qq => {
+              (0, Wq.n)({
+                menuNavigation: qq
               })
             }
-          }), (0, XT.jsx)(iO, {
-            label: TT("controller:settingsInventoryNavigation"),
-            hint: TT("controller:settingsInventoryNavigationHint"),
-            options: nO.R,
-            value: kT.inventoryNavigation,
-            onChange: TT => {
-              (0, CT.n)({
-                inventoryNavigation: TT
+          }), (0, Lq.jsx)(Im, {
+            label: qq("controller:settingsInventoryNavigation"),
+            hint: qq("controller:settingsInventoryNavigationHint"),
+            options: Km.X,
+            value: Eq.inventoryNavigation,
+            onChange: qq => {
+              (0, Wq.n)({
+                inventoryNavigation: qq
               })
             }
-          }), (0, XT.jsx)(iO, {
-            label: TT("controller:settingsQuickChat"),
-            hint: TT("controller:settingsQuickChatHint"),
-            options: nO.cb,
-            value: kT.quickChat,
-            onChange: TT => {
-              (0, CT.n)({
-                quickChat: TT
+          }), (0, Lq.jsx)(Im, {
+            label: qq("controller:settingsQuickChat"),
+            hint: qq("controller:settingsQuickChatHint"),
+            options: Km.ob,
+            value: Eq.quickChat,
+            onChange: qq => {
+              (0, Wq.n)({
+                quickChat: qq
               })
             }
-          }), (0, XT.jsx)(iO, {
-            label: TT("controller:settingsLeaderboardButton"),
-            hint: TT("controller:settingsLeaderboardButtonHint"),
-            options: nO.U,
-            value: kT.leaderboardButton,
-            onChange: TT => {
-              (0, CT.n)({
-                leaderboardButton: TT
+          }), (0, Lq.jsx)(Im, {
+            label: qq("controller:settingsLeaderboardButton"),
+            hint: qq("controller:settingsLeaderboardButtonHint"),
+            options: Km.db,
+            value: Eq.leaderboardButton,
+            onChange: qq => {
+              (0, Wq.n)({
+                leaderboardButton: qq
               })
             }
-          }), (0, XT.jsx)(pO, {
-            text: TT("controller:settingsTester")
-          }), (0, XT.jsx)(Qy, {})]
+          }), (0, Lq.jsx)(Cm, {
+            text: qq("controller:settingsTester")
+          }), (0, Lq.jsx)(Hx, {})]
         })
       }));
-    (0, MT.c)(lT);
-    for (const Py of (0, KT.q)()) Py.connected ? OT.e.handleConnectionEvent(Py) : OT.e.handleDisconnectionEvent(Py);
-    const Dy = () => null !== OT.e.getActivePad(),
-      ay = () => Kc.getState(),
-      Fy = () => Kc.isSteppingSlots(),
-      ry = (TT, kT) => {
-        const cT = sl.getFocused();
-        sl.isActive() && cT && TT.contains(cT) && sl.setFocus(kT, {
+    (0, lq.b)(Yq);
+    for (const rx of (0, Oq.q)()) rx.connected ? mq.h.handleConnectionEvent(rx) : mq.h.handleDisconnectionEvent(rx);
+    const Px = () => null !== mq.h.getActivePad(),
+      Qx = () => lg.getState(),
+      yx = () => lg.isSteppingSlots(),
+      tx = (qq, Eq) => {
+        const gq = eY.getFocused();
+        eY.isActive() && gq && qq.contains(gq) && eY.setFocus(Eq, {
           scroll: !1
         })
       }
   },
-  8194: (TT, kT, cT) => {
-    cT.d(kT, {
-      d: () => fT,
-      e: () => xT
+  8064: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => Aq,
+      e: () => cq
     });
-    var lT = cT(1436),
-      MT = cT(1428);
-    const KT = {
+    var Yq = gq(1397),
+      lq = gq(1388);
+    const Oq = {
         "054c": "playstation",
         "057e": "nintendo"
       },
-      OT = "28de",
-      yT = new Set(["1205"]),
-      fT = (TT, kT) => {
-        const cT = (0, lT.c)(TT);
-        if ((null === cT || void 0 === cT ? void 0 : cT.vendor) === OT) return yT.has(cT.product) ? "steamdeck" : "xbox";
-        if (cT && KT[cT.vendor]) return KT[cT.vendor];
-        if ((0, MT.b)(TT)) return "nintendo";
-        const fT = `${TT} ${null!==kT&&void 0!==kT?kT:""}`.toLowerCase();
-        return /dualsense|dualshock|playstation|sony/.test(fT) ? "playstation" : /nintendo|switch|joy-con|pro controller/.test(fT) ? "nintendo" : /steam deck/.test(fT) ? "steamdeck" : "xbox"
+      mq = "28de",
+      xq = new Set(["1205"]),
+      Aq = (qq, Eq) => {
+        const gq = (0, Yq.d)(qq);
+        if ((null === gq || void 0 === gq ? void 0 : gq.vendor) === mq) return xq.has(gq.product) ? "steamdeck" : "xbox";
+        if (gq && Oq[gq.vendor]) return Oq[gq.vendor];
+        if ((0, lq.d)(qq)) return "nintendo";
+        const Aq = `${qq} ${null!==Eq&&void 0!==Eq?Eq:""}`.toLowerCase();
+        return /dualsense|dualshock|playstation|sony/.test(Aq) ? "playstation" : /nintendo|switch|joy-con|pro controller/.test(Aq) ? "nintendo" : /steam deck/.test(Aq) ? "steamdeck" : "xbox"
       },
-      xT = TT => {
-        var kT;
-        return (null === (kT = (0, lT.c)(TT)) || void 0 === kT ? void 0 : kT.vendor) === OT
+      cq = qq => {
+        var Eq;
+        return (null === (Eq = (0, Yq.d)(qq)) || void 0 === Eq ? void 0 : Eq.vendor) === mq
       }
   },
-  8227: (TT, kT, cT) => {
-    cT.d(kT, {
-      d: () => xT,
-      f: () => yT
+  8118: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => cq,
+      g: () => xq
     });
-    var lT = cT(8190);
-    const MT = ["capture", "keyboard", "wheel", "inventory", "cursor", "focus", "gameplay"],
-      KT = new Set(["capture", "gameplay"]),
-      OT = ["Up", "Down", "Left", "Right"],
-      yT = TT => OT.includes(TT),
-      fT = .25;
-    const xT = new class {
+    var Yq = gq(8061);
+    const lq = ["capture", "keyboard", "wheel", "inventory", "cursor", "focus", "gameplay"],
+      Oq = new Set(["capture", "gameplay"]),
+      mq = ["Up", "Down", "Left", "Right"],
+      xq = qq => mq.includes(qq),
+      Aq = .25;
+    const cq = new class {
       constructor() {
-        this.consumers = new Map, this.activeName = null, this.ty = new Array(lT.Y).fill(!1), this.previousHeld = new Array(lT.Y).fill(!1), this.consumedButtons = new Array(lT.Y).fill(!1), this.suppressedReleases = new Array(lT.Y).fill(!1), this.wakeOwned = new Array(lT.Y).fill(!1), this.leftStickConsumed = !1, this.rightStickConsumed = !1, this.handOffPending = !1, this.idleResume = null, this.peek = null, this.lastFrame = (0, lT.x)()
+        this.consumers = new Map, this.activeName = null, this.Fc = new Array(Yq.X).fill(!1), this.previousHeld = new Array(Yq.X).fill(!1), this.consumedButtons = new Array(Yq.X).fill(!1), this.suppressedReleases = new Array(Yq.X).fill(!1), this.wakeOwned = new Array(Yq.X).fill(!1), this.leftStickConsumed = !1, this.rightStickConsumed = !1, this.handOffPending = !1, this.idleResume = null, this.peek = null, this.lastFrame = (0, Yq.y)()
       }
-      register(TT) {
-        return this.consumers.has(TT.name) && console.warn(`Controller consumer "${TT.name}" registered twice; the newer one replaces it.`), this.consumers.set(TT.name, TT), () => {
-          var kT;
-          this.consumers.get(TT.name) === TT && (this.activeName === TT.name ? (this.deactivateCurrent(), this.activeName = null, this.consumeAllHeld()) : (null === (kT = this.peek) || void 0 === kT ? void 0 : kT.over) === TT.name && (this.peek = null), this.consumers.delete(TT.name))
+      register(qq) {
+        return this.consumers.has(qq.name) && console.warn(`Controller consumer "${qq.name}" registered twice; the newer one replaces it.`), this.consumers.set(qq.name, qq), () => {
+          var Eq;
+          this.consumers.get(qq.name) === qq && (this.activeName === qq.name ? (this.deactivateCurrent(), this.activeName = null, this.consumeAllHeld()) : (null === (Eq = this.peek) || void 0 === Eq ? void 0 : Eq.over) === qq.name && (this.peek = null), this.consumers.delete(qq.name))
         }
       }
       getActiveConsumerName() {
         return this.activeName
       }
-      isButtonHeld(TT) {
-        return this.ty[(0, lT.o)(TT)]
+      isButtonHeld(qq) {
+        return this.Fc[(0, Yq.m)(qq)]
       }
       getLastFrame() {
         return this.lastFrame
@@ -6535,135 +6631,135 @@ export const modules = {
         this.deactivateCurrent(), this.activeName = null, this.consumeAllHeld()
       }
       reset() {
-        this.deactivateCurrent(), this.activeName = null, this.ty = new Array(lT.Y).fill(!1), this.previousHeld = new Array(lT.Y).fill(!1), this.consumedButtons.fill(!1), this.suppressedReleases.fill(!1), this.wakeOwned.fill(!1), this.leftStickConsumed = !1, this.rightStickConsumed = !1, this.handOffPending = !1, this.idleResume = null, this.lastFrame = (0, lT.x)()
+        this.deactivateCurrent(), this.activeName = null, this.Fc = new Array(Yq.X).fill(!1), this.previousHeld = new Array(Yq.X).fill(!1), this.consumedButtons.fill(!1), this.suppressedReleases.fill(!1), this.wakeOwned.fill(!1), this.leftStickConsumed = !1, this.rightStickConsumed = !1, this.handOffPending = !1, this.idleResume = null, this.lastFrame = (0, Yq.y)()
       }
-      dispatch(TT, kT) {
-        let cT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        this.lastFrame = TT, this.previousHeld = this.ty, this.ty = (0, lT.r)(TT.values, this.previousHeld);
-        for (let KT = 0; KT < lT.Y; KT++) this.suppressedReleases[KT] = !this.ty[KT] && this.consumedButtons[KT], this.ty[KT] || (this.consumedButtons[KT] = !1), this.wakeOwned[KT] && (this.ty[KT] ? (this.consumedButtons[KT] = !0, this.wakeOwned[KT] = !1) : TT.values[KT] < lT.U && (this.wakeOwned[KT] = !1));
-        Math.hypot(TT.leftStick.x, TT.leftStick.y) < fT && (this.leftStickConsumed = !1), Math.hypot(TT.rightStick.x, TT.rightStick.y) < fT && (this.rightStickConsumed = !1);
-        const MT = this.pickActive();
-        if ((null === MT || void 0 === MT ? void 0 : MT.name) !== this.activeName) {
-          var OT, yT, xT, IT, AT, CT;
-          const TT = this.activeName,
-            kT = {
+      dispatch(qq, Eq) {
+        let gq = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        this.lastFrame = qq, this.previousHeld = this.Fc, this.Fc = (0, Yq.t)(qq.values, this.previousHeld);
+        for (let Oq = 0; Oq < Yq.X; Oq++) this.suppressedReleases[Oq] = !this.Fc[Oq] && this.consumedButtons[Oq], this.Fc[Oq] || (this.consumedButtons[Oq] = !1), this.wakeOwned[Oq] && (this.Fc[Oq] ? (this.consumedButtons[Oq] = !0, this.wakeOwned[Oq] = !1) : qq.values[Oq] < Yq.U && (this.wakeOwned[Oq] = !1));
+        Math.hypot(qq.leftStick.x, qq.leftStick.y) < Aq && (this.leftStickConsumed = !1), Math.hypot(qq.rightStick.x, qq.rightStick.y) < Aq && (this.rightStickConsumed = !1);
+        const lq = this.pickActive();
+        if ((null === lq || void 0 === lq ? void 0 : lq.name) !== this.activeName) {
+          var mq, xq, cq, uq, Bq, Wq;
+          const qq = this.activeName,
+            Eq = {
               left: !this.leftStickConsumed,
               right: !this.rightStickConsumed
             },
-            cT = null !== (OT = null === MT || void 0 === MT || null === (yT = MT.peek) || void 0 === yT ? void 0 : yT.call(MT)) && void 0 !== OT ? OT : null,
-            KT = null === TT && !!cT && !(null === (xT = this.consumers.get(cT.over)) || void 0 === xT || !xT.onPeekFrame),
-            fT = cT && (cT.over === TT || KT) ? cT : null,
-            jT = null !== this.peek && this.peek.over === (null === MT || void 0 === MT ? void 0 : MT.name) ? this.peek : null;
-          this.deactivateCurrent(null !== fT, null !== jT), this.activeName = null !== (IT = null === MT || void 0 === MT ? void 0 : MT.name) && void 0 !== IT ? IT : null, null === TT || this.handOffPending || this.consumeAllHeld();
-          const vT = null === (AT = null !== fT && void 0 !== fT ? fT : jT) || void 0 === AT ? void 0 : AT.stick;
-          "left" === vT && kT.left ? this.leftStickConsumed = !1 : "right" === vT && kT.right && (this.rightStickConsumed = !1), this.peek = fT, MT || null === TT ? MT && (null === (CT = this.idleResume) || void 0 === CT ? void 0 : CT.name) === MT.name && (this.idleResume.left && (this.leftStickConsumed = !1), this.idleResume.right && (this.rightStickConsumed = !1)) : this.idleResume = {
-            name: TT,
-            left: kT.left && this.leftStickConsumed,
-            right: kT.right && this.rightStickConsumed
-          }, MT && (this.idleResume = null);
-          for (let MT = 0; MT < lT.Y; MT++) this.previousHeld[MT] && !this.ty[MT] && (this.suppressedReleases[MT] = !0)
+            gq = null !== (mq = null === lq || void 0 === lq || null === (xq = lq.peek) || void 0 === xq ? void 0 : xq.call(lq)) && void 0 !== mq ? mq : null,
+            Oq = null === qq && !!gq && !(null === (cq = this.consumers.get(gq.over)) || void 0 === cq || !cq.onPeekFrame),
+            Aq = gq && (gq.over === qq || Oq) ? gq : null,
+            Nq = null !== this.peek && this.peek.over === (null === lq || void 0 === lq ? void 0 : lq.name) ? this.peek : null;
+          this.deactivateCurrent(null !== Aq, null !== Nq), this.activeName = null !== (uq = null === lq || void 0 === lq ? void 0 : lq.name) && void 0 !== uq ? uq : null, null === qq || this.handOffPending || this.consumeAllHeld();
+          const aq = null === (Bq = null !== Aq && void 0 !== Aq ? Aq : Nq) || void 0 === Bq ? void 0 : Bq.stick;
+          "left" === aq && Eq.left ? this.leftStickConsumed = !1 : "right" === aq && Eq.right && (this.rightStickConsumed = !1), this.peek = Aq, lq || null === qq ? lq && (null === (Wq = this.idleResume) || void 0 === Wq ? void 0 : Wq.name) === lq.name && (this.idleResume.left && (this.leftStickConsumed = !1), this.idleResume.right && (this.rightStickConsumed = !1)) : this.idleResume = {
+            name: qq,
+            left: Eq.left && this.leftStickConsumed,
+            right: Eq.right && this.rightStickConsumed
+          }, lq && (this.idleResume = null);
+          for (let lq = 0; lq < Yq.X; lq++) this.previousHeld[lq] && !this.Fc[lq] && (this.suppressedReleases[lq] = !0)
         }
-        var jT, vT;
-        (this.handOffPending = !1, MT) && (cT && !KT.has(MT.name) && this.consumeWakePress(MT), MT.onFrame(this.buildInput(TT, kT, cT)), this.peek && (null === (jT = this.consumers.get(this.peek.over)) || void 0 === jT || null === (vT = jT.onPeekFrame) || void 0 === vT || vT.call(jT, this.buildInput(TT, kT, !1, this.peek.stick))))
+        var Nq, aq;
+        (this.handOffPending = !1, lq) && (gq && !Oq.has(lq.name) && this.consumeWakePress(lq), lq.onFrame(this.buildInput(qq, Eq, gq)), this.peek && (null === (Nq = this.consumers.get(this.peek.over)) || void 0 === Nq || null === (aq = Nq.onPeekFrame) || void 0 === aq || aq.call(Nq, this.buildInput(qq, Eq, !1, this.peek.stick))))
       }
-      consumeWakePress(TT) {
-        for (let MT = 0; MT < lT.Y; MT++) {
-          var kT, cT;
-          const KT = lT.ab[MT];
-          (null !== (kT = null === (cT = TT.wakePressActs) || void 0 === cT ? void 0 : cT.call(TT, KT)) && void 0 !== kT ? kT : OT.includes(KT)) || (this.ty[MT] ? this.consumedButtons[MT] = !0 : this.lastFrame.values[MT] >= lT.S && (this.wakeOwned[MT] = !0))
+      consumeWakePress(qq) {
+        for (let lq = 0; lq < Yq.X; lq++) {
+          var Eq, gq;
+          const Oq = Yq.$[lq];
+          (null !== (Eq = null === (gq = qq.wakePressActs) || void 0 === gq ? void 0 : gq.call(qq, Oq)) && void 0 !== Eq ? Eq : mq.includes(Oq)) || (this.Fc[lq] ? this.consumedButtons[lq] = !0 : this.lastFrame.values[lq] >= Yq.R && (this.wakeOwned[lq] = !0))
         }
       }
       pickActive() {
-        for (const TT of MT) {
-          const kT = this.consumers.get(TT);
-          if (kT && kT.isActive()) return kT
+        for (const qq of lq) {
+          const Eq = this.consumers.get(qq);
+          if (Eq && Eq.isActive()) return Eq
         }
         return null
       }
       deactivateCurrent() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-          kT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        var cT, lT, MT, KT;
-        this.activeName && (null === (cT = this.consumers.get(this.activeName)) || void 0 === cT || null === (lT = cT.onDeactivate) || void 0 === lT || lT.call(cT, TT));
-        this.peek && !kT && (null === (MT = this.consumers.get(this.peek.over)) || void 0 === MT || null === (KT = MT.onDeactivate) || void 0 === KT || KT.call(MT, !1));
+        let qq = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+          Eq = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        var gq, Yq, lq, Oq;
+        this.activeName && (null === (gq = this.consumers.get(this.activeName)) || void 0 === gq || null === (Yq = gq.onDeactivate) || void 0 === Yq || Yq.call(gq, qq));
+        this.peek && !Eq && (null === (lq = this.consumers.get(this.peek.over)) || void 0 === lq || null === (Oq = lq.onDeactivate) || void 0 === Oq || Oq.call(lq, !1));
         this.peek = null
       }
       consumeAllHeld() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
         this.idleResume = null;
-        for (let MT = 0; MT < lT.Y; MT++) this.ty[MT] && (this.consumedButtons[MT] = !0);
+        for (let lq = 0; lq < Yq.X; lq++) this.Fc[lq] && (this.consumedButtons[lq] = !0);
         const {
-          leftStick: kT,
-          rightStick: cT
+          leftStick: Eq,
+          rightStick: gq
         } = this.lastFrame;
-        this.leftStickConsumed = "left" !== TT && (this.leftStickConsumed || Math.hypot(kT.x, kT.y) >= fT), this.rightStickConsumed = "right" !== TT && (this.rightStickConsumed || Math.hypot(cT.x, cT.y) >= fT)
+        this.leftStickConsumed = "left" !== qq && (this.leftStickConsumed || Math.hypot(Eq.x, Eq.y) >= Aq), this.rightStickConsumed = "right" !== qq && (this.rightStickConsumed || Math.hypot(gq.x, gq.y) >= Aq)
       }
       handOffHeldInput() {
         this.handOffPending = !0
       }
-      consumeButton(TT) {
-        const kT = (0, lT.o)(TT);
-        this.ty[kT] && (this.consumedButtons[kT] = !0)
+      consumeButton(qq) {
+        const Eq = (0, Yq.m)(qq);
+        this.Fc[Eq] && (this.consumedButtons[Eq] = !0)
       }
-      buildInput(TT, kT, cT, MT) {
-        const KT = this.ty,
-          OT = this.previousHeld,
-          yT = MT ? new Array(lT.Y).fill(!0) : [...this.consumedButtons],
-          fT = MT ? yT : [...this.suppressedReleases],
-          xT = !this.leftStickConsumed && (!MT || "left" === MT),
-          IT = !this.rightStickConsumed && (!MT || "right" === MT);
+      buildInput(qq, Eq, gq, lq) {
+        const Oq = this.Fc,
+          mq = this.previousHeld,
+          xq = lq ? new Array(Yq.X).fill(!0) : [...this.consumedButtons],
+          Aq = lq ? xq : [...this.suppressedReleases],
+          cq = !this.leftStickConsumed && (!lq || "left" === lq),
+          uq = !this.rightStickConsumed && (!lq || "right" === lq);
         return {
-          frame: TT,
-          dtMs: kT,
-          isHeld: TT => {
-            const kT = (0, lT.o)(TT);
-            return KT[kT] && !yT[kT]
+          frame: qq,
+          dtMs: Eq,
+          isHeld: qq => {
+            const Eq = (0, Yq.m)(qq);
+            return Oq[Eq] && !xq[Eq]
           },
-          wasPressed: TT => {
-            const kT = (0, lT.o)(TT);
-            return KT[kT] && !OT[kT] && !yT[kT]
+          wasPressed: qq => {
+            const Eq = (0, Yq.m)(qq);
+            return Oq[Eq] && !mq[Eq] && !xq[Eq]
           },
-          wasReleased: TT => {
-            const kT = (0, lT.o)(TT);
-            return !KT[kT] && OT[kT] && !fT[kT]
+          wasReleased: qq => {
+            const Eq = (0, Yq.m)(qq);
+            return !Oq[Eq] && mq[Eq] && !Aq[Eq]
           },
-          value: kT => {
-            const cT = (0, lT.o)(kT);
-            return yT[cT] ? 0 : TT.values[cT]
+          value: Eq => {
+            const gq = (0, Yq.m)(Eq);
+            return xq[gq] ? 0 : qq.values[gq]
           },
-          leftStick: xT ? TT.leftStick : {
+          leftStick: cq ? qq.leftStick : {
             x: 0,
             y: 0
           },
-          rightStick: IT ? TT.rightStick : {
+          rightStick: uq ? qq.rightStick : {
             x: 0,
             y: 0
           },
-          wokeDevice: cT
+          wokeDevice: gq
         }
       }
     }
   },
-  8206: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => AT.d,
-      f: () => AT.h,
-      g: () => bT,
-      j: () => zT,
-      n: () => JT,
-      o: () => oT
+  8090: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => Bq.c,
+      f: () => Bq.f,
+      i: () => nq,
+      k: () => bq,
+      n: () => iq,
+      r: () => Zq
     });
-    var lT = cT(71),
-      MT = cT(36),
-      KT = cT(1461),
-      OT = cT(47),
-      yT = cT(8209),
-      fT = cT(8190),
-      xT = cT(8202),
-      IT = cT(8188),
-      AT = cT(2040),
-      CT = cT(8215);
-    const jT = {
+    var Yq = gq(57),
+      lq = gq(31),
+      Oq = gq(1416),
+      mq = gq(38),
+      xq = gq(8095),
+      Aq = gq(8061),
+      cq = gq(8081),
+      uq = gq(8057),
+      Bq = gq(1985),
+      Wq = gq(8104);
+    const Nq = {
         lookSensitivityX: 100,
         lookSensitivityY: 100,
         aimLookSensitivity: 100,
@@ -6697,47 +6793,47 @@ export const modules = {
         emoteButton: "tapHold",
         bindings: {}
       },
-      vT = "controllerSettings",
-      tT = ["bindings", "promptFamily", "hideButtonHints", "swapSticks", "swapConfirmBack", "leaderboardButton"],
-      hT = ["auto", ...yT.e],
-      NT = (TT, kT) => "string" === typeof kT && TT.includes(kT),
-      QT = TT => kT => "number" === typeof kT && Number.isFinite(kT) ? (0, CT.v)(kT, TT) : void 0,
-      ST = TT => "boolean" === typeof TT ? TT : void 0,
-      DT = TT => kT => NT(TT, kT) ? kT : void 0,
-      aT = {
-        lookSensitivityX: QT(CT.ib),
-        lookSensitivityY: QT(CT.ib),
-        aimLookSensitivity: QT(CT.k),
-        invertLookX: ST,
-        invertLookY: ST,
-        lookCurve: DT(fT.Q),
-        lookDeadzone: QT(CT.y),
-        moveDeadzone: QT(CT.y),
-        swapSticks: ST,
-        autoSprint: ST,
-        sneakMode: DT(["toggle", "hold"]),
-        tapHoldTime: DT(["short", "medium", "long"]),
-        attackMode: DT(["hold", "toggle"]),
-        promptFamily: DT(hT),
-        hideButtonHints: ST,
-        vibration: ST,
-        cursorSpeed: QT(CT.w),
-        cursorMagnetism: ST,
-        buttonRepeat: DT(fT.p),
-        largePointer: ST,
-        menuBackToCategories: ST,
-        swapConfirmBack: ST,
-        menuNavigation: DT(["hybrid", "focus", "cursor"]),
-        inventoryNavigation: DT(["hybrid", "slot", "cursor"]),
-        quickChat: DT(["wheel", "off"]),
-        leaderboardButton: DT(["shop", "leaderboard"]),
-        gyroAiming: ST,
-        gyroSensitivity: QT(CT.N),
-        gyroActivation: DT(["always", "aiming", "button"]),
-        gyroButton: DT(fT.ab),
-        emoteButton: DT(["tapHold", "wheel"])
+      aq = "controllerSettings",
+      Vq = ["bindings", "promptFamily", "hideButtonHints", "swapSticks", "swapConfirmBack", "leaderboardButton"],
+      dq = ["auto", ...xq.d],
+      jq = (qq, Eq) => "string" === typeof Eq && qq.includes(Eq),
+      Hq = qq => Eq => "number" === typeof Eq && Number.isFinite(Eq) ? (0, Wq.z)(Eq, qq) : void 0,
+      oq = qq => "boolean" === typeof qq ? qq : void 0,
+      Pq = qq => Eq => jq(qq, Eq) ? Eq : void 0,
+      Qq = {
+        lookSensitivityX: Hq(Wq.vb),
+        lookSensitivityY: Hq(Wq.vb),
+        aimLookSensitivity: Hq(Wq.n),
+        invertLookX: oq,
+        invertLookY: oq,
+        lookCurve: Pq(Aq.N),
+        lookDeadzone: Hq(Wq.F),
+        moveDeadzone: Hq(Wq.F),
+        swapSticks: oq,
+        autoSprint: oq,
+        sneakMode: Pq(["toggle", "hold"]),
+        tapHoldTime: Pq(["short", "medium", "long"]),
+        attackMode: Pq(["hold", "toggle"]),
+        promptFamily: Pq(dq),
+        hideButtonHints: oq,
+        vibration: oq,
+        cursorSpeed: Hq(Wq.C),
+        cursorMagnetism: oq,
+        buttonRepeat: Pq(Aq.p),
+        largePointer: oq,
+        menuBackToCategories: oq,
+        swapConfirmBack: oq,
+        menuNavigation: Pq(["hybrid", "focus", "cursor"]),
+        inventoryNavigation: Pq(["hybrid", "slot", "cursor"]),
+        quickChat: Pq(["wheel", "off"]),
+        leaderboardButton: Pq(["shop", "leaderboard"]),
+        gyroAiming: oq,
+        gyroSensitivity: Hq(Wq.T),
+        gyroActivation: Pq(["always", "aiming", "button"]),
+        gyroButton: Pq(Aq.$),
+        emoteButton: Pq(["tapHold", "wheel"])
       },
-      FT = [{
+      yq = [{
         param: "padMenuNav",
         key: "menuNavigation"
       }, {
@@ -6756,195 +6852,195 @@ export const modules = {
         param: "padLeaderboardButton",
         key: "leaderboardButton"
       }],
-      rT = TT => {
-        const kT = {};
-        if ("object" !== typeof TT || null === TT) return kT;
-        for (const [cT, lT] of Object.entries(TT)) Object.prototype.hasOwnProperty.call(xT.g, cT) && NT(fT.ab, lT) && (kT[cT] = lT);
-        return kT
+      tq = qq => {
+        const Eq = {};
+        if ("object" !== typeof qq || null === qq) return Eq;
+        for (const [gq, Yq] of Object.entries(qq)) Object.prototype.hasOwnProperty.call(cq.f, gq) && jq(Aq.$, Yq) && (Eq[gq] = Yq);
+        return Eq
       },
-      PT = TT => {
-        const kT = {};
-        for (const cT of Object.keys(jT))("bindings" === cT ? Object.keys(TT.bindings).length > 0 : TT[cT] !== jT[cT]) && (kT[cT] = TT[cT]);
-        0 !== Object.keys(kT).length ? OT.e.setItem(vT, kT) : OT.e.removeItem(vT)
+      rq = qq => {
+        const Eq = {};
+        for (const gq of Object.keys(Nq))("bindings" === gq ? Object.keys(qq.bindings).length > 0 : qq[gq] !== Nq[gq]) && (Eq[gq] = qq[gq]);
+        0 !== Object.keys(Eq).length ? mq.i.setItem(aq, Eq) : mq.i.removeItem(aq)
       };
-    let wT = (() => {
-        const TT = OT.e.getItem(vT),
-          kT = (TT => {
-            const kT = "object" === typeof TT && null !== TT ? TT : {},
-              cT = {
-                ...jT,
-                bindings: rT(kT.bindings)
+    let vq = (() => {
+        const qq = mq.i.getItem(aq),
+          Eq = (qq => {
+            const Eq = "object" === typeof qq && null !== qq ? qq : {},
+              gq = {
+                ...Nq,
+                bindings: tq(Eq.bindings)
               };
-            for (const MT of Object.keys(aT)) {
-              const TT = aT[MT](kT[MT]);
-              void 0 !== TT && (cT[MT] = TT)
+            for (const lq of Object.keys(Qq)) {
+              const qq = Qq[lq](Eq[lq]);
+              void 0 !== qq && (gq[lq] = qq)
             }
-            const lT = Object.keys(kT).filter((TT => !!Object.prototype.hasOwnProperty.call(jT, TT) && ("bindings" === TT ? "object" !== typeof kT.bindings || null === kT.bindings || Object.keys(kT.bindings).length !== Object.keys(cT.bindings).length : cT[TT] !== kT[TT])));
-            return lT.length > 0 && console.warn(`Stored controller settings had invalid values, replaced with defaults: ${lT.join(", ")}`), cT
-          })(TT);
-        return null !== TT && void 0 !== TT && PT(kT), kT
+            const Yq = Object.keys(Eq).filter((qq => !!Object.prototype.hasOwnProperty.call(Nq, qq) && ("bindings" === qq ? "object" !== typeof Eq.bindings || null === Eq.bindings || Object.keys(Eq.bindings).length !== Object.keys(gq.bindings).length : gq[qq] !== Eq[qq])));
+            return Yq.length > 0 && console.warn(`Stored controller settings had invalid values, replaced with defaults: ${Yq.join(", ")}`), gq
+          })(qq);
+        return null !== qq && void 0 !== qq && rq(Eq), Eq
       })(),
-      mT = {
-        ...wT,
+      hq = {
+        ...vq,
         ...(() => {
           if ("undefined" === typeof window) return {};
-          const TT = {},
-            kT = new URLSearchParams(window.location.search);
+          const qq = {},
+            Eq = new URLSearchParams(window.location.search);
           for (const {
-              param: cT,
-              key: lT
+              param: gq,
+              key: Yq
             }
-            of FT) {
-            const MT = aT[lT](kT.get(cT));
-            void 0 !== MT && (TT[lT] = MT)
+            of yq) {
+            const lq = Qq[Yq](Eq.get(gq));
+            void 0 !== lq && (qq[Yq] = lq)
           }
-          return TT
+          return qq
         })()
       };
-    const bT = () => mT,
-      zT = () => {
-        var TT, kT;
-        const cT = bT().promptFamily;
-        return "auto" !== cT ? cT : null !== (TT = null === (kT = IT.e.getActivePad()) || void 0 === kT ? void 0 : kT.family) && void 0 !== TT ? TT : "xbox"
+    const nq = () => hq,
+      bq = () => {
+        var qq, Eq;
+        const gq = nq().promptFamily;
+        return "auto" !== gq ? gq : null !== (qq = null === (Eq = uq.h.getActivePad()) || void 0 === Eq ? void 0 : Eq.family) && void 0 !== qq ? qq : "xbox"
       },
-      JT = TT => {
-        const kT = mT;
-        wT = {
-          ...wT,
-          ...TT
-        }, PT(wT), mT = {
-          ...mT,
-          ...TT
-        }, (TT => {
-          MT.k.nt(AT.h, mT), tT.some((kT => TT[kT] !== mT[kT])) && MT.k.nt(AT.d, mT)
-        })(kT)
+      iq = qq => {
+        const Eq = hq;
+        vq = {
+          ...vq,
+          ...qq
+        }, rq(vq), hq = {
+          ...hq,
+          ...qq
+        }, (qq => {
+          lq.i.TV(Bq.f, hq), Vq.some((Eq => qq[Eq] !== hq[Eq])) && lq.i.TV(Bq.c, hq)
+        })(Eq)
       },
-      oT = () => {
-        const [TT, kT] = (0, lT.useState)(mT);
-        return (0, KT.g)(AT.h, kT), TT
+      Zq = () => {
+        const [qq, Eq] = (0, Yq.useState)(hq);
+        return (0, Oq.f)(Bq.f, Eq), qq
       }
   },
-  8677: (TT, kT, cT) => {
-    cT.d(kT, {
-      d: () => MT
+  8586: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => lq
     });
-    const lT = new Set(["Alt", "AltGraph", "Meta", "OS", "AudioVolumeUp", "AudioVolumeDown", "AudioVolumeMute", "MediaPlayPause", "MediaPlay", "MediaPause", "MediaStop", "MediaTrackNext", "MediaTrackPrevious", "BrowserBack", "BrowserForward", "BrowserHome", "GoBack", "LaunchApplication1", "LaunchApplication2", "LaunchMail", "PrintScreen", "Unidentified"]),
-      MT = TT => lT.has(TT)
+    const Yq = new Set(["Alt", "AltGraph", "Meta", "OS", "AudioVolumeUp", "AudioVolumeDown", "AudioVolumeMute", "MediaPlayPause", "MediaPlay", "MediaPause", "MediaStop", "MediaTrackNext", "MediaTrackPrevious", "BrowserBack", "BrowserForward", "BrowserHome", "GoBack", "LaunchApplication1", "LaunchApplication2", "LaunchMail", "PrintScreen", "Unidentified"]),
+      lq = qq => Yq.has(qq)
   },
-  8188: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => tT.b,
-      e: () => ST
+  8057: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => Vq.b,
+      h: () => oq
     });
-    var lT = cT(8190),
-      MT = cT(8194);
-    const KT = .1,
-      OT = .3;
-    class yT {
+    var Yq = gq(8061),
+      lq = gq(8064);
+    const Oq = .1,
+      mq = .3;
+    class xq {
       constructor() {
         this.deadzone = 0, this.anchor = null, this.steadyMs = 0, this.lastMs = null, this.returning = !0, this.anchorLearned = !1
       }
-      observe(TT, kT) {
-        const cT = null === this.lastMs ? 0 : Math.min(Math.max(0, kT - this.lastMs), 100);
-        this.lastMs = kT;
-        const lT = Math.hypot(TT.x, TT.y);
-        if (lT >= OT) return this.anchor = null, void(this.returning = !0);
-        lT >= KT || (this.returning = !1);
-        const MT = this.anchor;
-        if (!MT || Math.hypot(TT.x - MT.x, TT.y - MT.y) > .03) return this.anchorLearned && (this.returning = !1), this.anchor = {
-          x: TT.x,
-          y: TT.y
+      observe(qq, Eq) {
+        const gq = null === this.lastMs ? 0 : Math.min(Math.max(0, Eq - this.lastMs), 100);
+        this.lastMs = Eq;
+        const Yq = Math.hypot(qq.x, qq.y);
+        if (Yq >= mq) return this.anchor = null, void(this.returning = !0);
+        Yq >= Oq || (this.returning = !1);
+        const lq = this.anchor;
+        if (!lq || Math.hypot(qq.x - lq.x, qq.y - lq.y) > .03) return this.anchorLearned && (this.returning = !1), this.anchor = {
+          x: qq.x,
+          y: qq.y
         }, this.steadyMs = 0, void(this.anchorLearned = !1);
-        if (this.steadyMs += cT, this.steadyMs < 1e3) return;
-        const yT = Math.max(lT, Math.hypot(MT.x, MT.y));
-        yT < KT ? this.deadzone = 0 : this.returning && (this.deadzone = yT + .05, this.anchorLearned = !0)
+        if (this.steadyMs += gq, this.steadyMs < 1e3) return;
+        const xq = Math.max(Yq, Math.hypot(lq.x, lq.y));
+        xq < Oq ? this.deadzone = 0 : this.returning && (this.deadzone = xq + .05, this.anchorLearned = !0)
       }
       getDeadzone() {
         return this.deadzone
       }
-      apply(TT) {
-        return Math.hypot(TT.x, TT.y) < this.deadzone ? {
+      apply(qq) {
+        return Math.hypot(qq.x, qq.y) < this.deadzone ? {
           x: 0,
           y: 0
-        } : TT
+        } : qq
       }
     }
-    const fT = (TT, kT) => {
-        var cT, lT;
-        return null !== (cT = TT && (null === (lT = Object.getOwnPropertyDescriptor(TT, kT)) || void 0 === lT ? void 0 : lT.get)) && void 0 !== cT ? cT : null
+    const Aq = (qq, Eq) => {
+        var gq, Yq;
+        return null !== (gq = qq && (null === (Yq = Object.getOwnPropertyDescriptor(qq, Eq)) || void 0 === Yq ? void 0 : Yq.get)) && void 0 !== gq ? gq : null
       },
-      xT = TT => {
-        const kT = TT.vendorName;
-        return "string" === typeof kT ? kT : void 0
+      cq = qq => {
+        const Eq = qq.vendorName;
+        return "string" === typeof Eq ? Eq : void 0
       },
-      IT = ((TT, kT) => {
-        const cT = fT(TT, "index"),
-          lT = fT(TT, "id"),
-          MT = fT(TT, "connected"),
-          KT = fT(TT, "mapping"),
-          OT = fT(TT, "buttons"),
-          yT = fT(TT, "axes"),
-          IT = fT(kT, "pressed"),
-          AT = fT(kT, "value");
-        return cT && lT && MT && KT && OT && yT && IT && AT ? TT => {
-          const kT = OT.call(TT),
-            fT = yT.call(TT),
-            CT = {
-              index: Number(cT.call(TT)),
-              id: String(lT.call(TT)),
-              connected: !0 === MT.call(TT),
-              mapping: String(KT.call(TT)),
+      uq = ((qq, Eq) => {
+        const gq = Aq(qq, "index"),
+          Yq = Aq(qq, "id"),
+          lq = Aq(qq, "connected"),
+          Oq = Aq(qq, "mapping"),
+          mq = Aq(qq, "buttons"),
+          xq = Aq(qq, "axes"),
+          uq = Aq(Eq, "pressed"),
+          Bq = Aq(Eq, "value");
+        return gq && Yq && lq && Oq && mq && xq && uq && Bq ? qq => {
+          const Eq = mq.call(qq),
+            Aq = xq.call(qq),
+            Wq = {
+              index: Number(gq.call(qq)),
+              id: String(Yq.call(qq)),
+              connected: !0 === lq.call(qq),
+              mapping: String(Oq.call(qq)),
               buttons: [],
               axes: [],
-              vendorName: xT(TT)
+              vendorName: cq(qq)
             };
-          for (let cT = 0; cT < kT.length; cT++) CT.buttons.push({
-            pressed: !0 === IT.call(kT[cT]),
-            value: Number(AT.call(kT[cT]))
+          for (let gq = 0; gq < Eq.length; gq++) Wq.buttons.push({
+            pressed: !0 === uq.call(Eq[gq]),
+            value: Number(Bq.call(Eq[gq]))
           });
-          for (let cT = 0; cT < fT.length; cT++) CT.axes.push(Number(fT[cT]));
-          return CT
+          for (let gq = 0; gq < Aq.length; gq++) Wq.axes.push(Number(Aq[gq]));
+          return Wq
         } : null
       })("undefined" === typeof Gamepad ? null : Gamepad.prototype, "undefined" === typeof GamepadButton ? null : GamepadButton.prototype),
-      AT = "undefined" === typeof Navigator ? null : Navigator.prototype.getGamepads;
-    var CT = cT(1423),
-      jT = cT(1428);
-    const vT = TT => ({
-      pressed: TT,
-      value: TT ? 1 : 0
+      Bq = "undefined" === typeof Navigator ? null : Navigator.prototype.getGamepads;
+    var Wq = gq(1384),
+      Nq = gq(1388);
+    const aq = qq => ({
+      pressed: qq,
+      value: qq ? 1 : 0
     });
-    var tT = cT(2040);
-    const hT = OT,
-      NT = TT => {
-        const kT = new Array(lT.Y).fill(0);
-        for (let cT = 0; cT < lT.Y && cT < TT.buttons.length; cT++) {
-          const MT = TT.buttons[cT];
-          kT[cT] = MT.pressed && !(0, lT.N)(cT) ? Math.max(MT.value, lT.z) : MT.value
+    var Vq = gq(1985);
+    const dq = mq,
+      jq = qq => {
+        const Eq = new Array(Yq.X).fill(0);
+        for (let gq = 0; gq < Yq.X && gq < qq.buttons.length; gq++) {
+          const lq = qq.buttons[gq];
+          Eq[gq] = lq.pressed && !(0, Yq.K)(gq) ? Math.max(lq.value, Yq.A) : lq.value
         }
-        return kT
+        return Eq
       },
-      QT = (TT, kT) => {
-        var cT, lT;
+      Hq = (qq, Eq) => {
+        var gq, Yq;
         return {
-          x: null !== (cT = TT.axes[kT]) && void 0 !== cT ? cT : 0,
-          y: null !== (lT = TT.axes[kT + 1]) && void 0 !== lT ? lT : 0
+          x: null !== (gq = qq.axes[Eq]) && void 0 !== gq ? gq : 0,
+          y: null !== (Yq = qq.axes[Eq + 1]) && void 0 !== Yq ? Yq : 0
         }
       };
-    const ST = new class {
-      constructor(TT, kT) {
-        let cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : IT;
-        this.readGamepads = TT, this.requireTrustedPads = kT, this.nativeReader = cT, this.running = !1, this.listening = !1, this.rafId = 0, this.lastTimestampMs = 0, this.activeInfo = null, this.slots = [], this.trustedIndices = new Set, this.warnedNonStandardIds = new Set, this.loggedReadError = !1, this.frameListeners = new Set, this.connectionListeners = new Set, this.anyPadConnected = !1, this.connectedListeners = new Set, this.handleConnectionEvent = TT => {
-          TT.isTrusted && this.trustedIndices.add(TT.gamepad.index), this.wake()
-        }, this.handleDisconnectionEvent = TT => {
-          this.trustedIndices.delete(TT.gamepad.index)
-        }, this.UA = TT => {
+    const oq = new class {
+      constructor(qq, Eq) {
+        let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : uq;
+        this.readGamepads = qq, this.requireTrustedPads = Eq, this.nativeReader = gq, this.running = !1, this.listening = !1, this.rafId = 0, this.lastTimestampMs = 0, this.activeInfo = null, this.slots = [], this.trustedIndices = new Set, this.warnedNonStandardIds = new Set, this.loggedReadError = !1, this.frameListeners = new Set, this.connectionListeners = new Set, this.anyPadConnected = !1, this.connectedListeners = new Set, this.handleConnectionEvent = qq => {
+          qq.isTrusted && this.trustedIndices.add(qq.gamepad.index), this.wake()
+        }, this.handleDisconnectionEvent = qq => {
+          this.trustedIndices.delete(qq.gamepad.index)
+        }, this.SB = qq => {
           if (this.rafId = 0, !this.running) return;
-          const kT = 0 === this.lastTimestampMs ? 16 : Math.min(100, TT - this.lastTimestampMs);
-          this.lastTimestampMs = TT;
+          const Eq = 0 === this.lastTimestampMs ? 16 : Math.min(100, qq - this.lastTimestampMs);
+          this.lastTimestampMs = qq;
           try {
-            this.poll(TT, kT)
+            this.poll(qq, Eq)
           } finally {
-            this.anyPadConnected && (this.rafId = requestAnimationFrame(this.UA))
+            this.anyPadConnected && (this.rafId = requestAnimationFrame(this.SB))
           }
         }
       }
@@ -6957,14 +7053,14 @@ export const modules = {
       listenForConnections() {
         this.listening || "undefined" === typeof window || (this.listening = !0, window.addEventListener("gamepadconnected", this.handleConnectionEvent), window.addEventListener("gamepaddisconnected", this.handleDisconnectionEvent))
       }
-      onFrame(TT) {
-        return this.frameListeners.add(TT), () => {
-          this.frameListeners.delete(TT)
+      onFrame(qq) {
+        return this.frameListeners.add(qq), () => {
+          this.frameListeners.delete(qq)
         }
       }
-      onActivePadChanged(TT) {
-        return this.connectionListeners.add(TT), () => {
-          this.connectionListeners.delete(TT)
+      onActivePadChanged(qq) {
+        return this.connectionListeners.add(qq), () => {
+          this.connectionListeners.delete(qq)
         }
       }
       getActivePad() {
@@ -6973,168 +7069,168 @@ export const modules = {
       hasConnectedPad() {
         return this.anyPadConnected
       }
-      onConnectedPadsChanged(TT) {
-        return this.connectedListeners.add(TT), () => {
-          this.connectedListeners.delete(TT)
+      onConnectedPadsChanged(qq) {
+        return this.connectedListeners.add(qq), () => {
+          this.connectedListeners.delete(qq)
         }
       }
       getActiveGamepad() {
         if (!this.activeInfo) return null;
-        const TT = this.readPads()[this.activeInfo.index],
-          kT = TT ? this.readPad(TT) : null;
-        return kT && kT.id === this.activeInfo.id ? TT : null
+        const qq = this.readPads()[this.activeInfo.index],
+          Eq = qq ? this.readPad(qq) : null;
+        return Eq && Eq.id === this.activeInfo.id ? qq : null
       }
-      poll(TT, kT) {
-        var cT, MT;
-        const KT = this.readPads();
-        let OT = null,
-          fT = !1;
-        const xT = [],
-          IT = Math.max(KT.length, this.slots.length);
-        for (let ST = 0; ST < IT; ST++) {
-          var AT;
-          const kT = ST < KT.length ? KT[ST] : null,
-            cT = kT ? this.readPad(kT) : null;
-          if (!cT || !cT.connected || !this.isUsable(cT)) {
-            this.slots[ST] = null;
+      poll(qq, Eq) {
+        var gq, lq;
+        const Oq = this.readPads();
+        let mq = null,
+          Aq = !1;
+        const cq = [],
+          uq = Math.max(Oq.length, this.slots.length);
+        for (let oq = 0; oq < uq; oq++) {
+          var Bq;
+          const Eq = oq < Oq.length ? Oq[oq] : null,
+            gq = Eq ? this.readPad(Eq) : null;
+          if (!gq || !gq.connected || !this.isUsable(gq)) {
+            this.slots[oq] = null;
             continue
           }
-          let MT = this.slots[ST];
-          MT && MT.id === cT.id || (MT = {
-            id: cT.id,
-            ty: [],
+          let lq = this.slots[oq];
+          lq && lq.id === gq.id || (lq = {
+            id: gq.id,
+            Fc: [],
             leftSettled: !1,
             rightSettled: !1,
-            leftRest: new yT,
-            rightRest: new yT
-          }, this.slots[ST] = MT);
-          const IT = QT(cT, 0),
-            CT = QT(cT, 2);
-          !MT.leftSettled && Math.hypot(IT.x, IT.y) < hT && (MT.leftSettled = !0), !MT.rightSettled && Math.hypot(CT.x, CT.y) < hT && (MT.rightSettled = !0), MT.leftRest.observe(IT, TT), MT.rightRest.observe(CT, TT);
-          const jT = NT(cT),
-            vT = (0, lT.r)(jT, MT.ty),
-            tT = MT.ty,
-            DT = vT.map(((TT, kT) => TT && !tT[kT]));
-          MT.ty = vT;
-          const aT = {
-            pad: cT,
-            slot: MT,
-            values: jT
+            leftRest: new xq,
+            rightRest: new xq
+          }, this.slots[oq] = lq);
+          const uq = Hq(gq, 0),
+            Wq = Hq(gq, 2);
+          !lq.leftSettled && Math.hypot(uq.x, uq.y) < dq && (lq.leftSettled = !0), !lq.rightSettled && Math.hypot(Wq.x, Wq.y) < dq && (lq.rightSettled = !0), lq.leftRest.observe(uq, qq), lq.rightRest.observe(Wq, qq);
+          const Nq = jq(gq),
+            aq = (0, Yq.t)(Nq, lq.Fc),
+            Vq = lq.Fc,
+            Pq = aq.map(((qq, Eq) => qq && !Vq[Eq]));
+          lq.Fc = aq;
+          const Qq = {
+            pad: gq,
+            slot: lq,
+            values: Nq
           };
-          ST === (null === (AT = this.activeInfo) || void 0 === AT ? void 0 : AT.index) && cT.id === this.activeInfo.id ? (OT = aT, fT = DT.includes(!0)) : DT.includes(!0) && xT.push({
-            polled: aT,
-            rose: DT
+          oq === (null === (Bq = this.activeInfo) || void 0 === Bq ? void 0 : Bq.index) && gq.id === this.activeInfo.id ? (mq = Qq, Aq = Pq.includes(!0)) : Pq.includes(!0) && cq.push({
+            polled: Qq,
+            rose: Pq
           })
         }
-        const CT = this.slots.some((TT => null !== TT));
-        if (CT !== this.anyPadConnected) {
-          this.anyPadConnected = CT;
-          for (const TT of this.connectedListeners) TT()
+        const Wq = this.slots.some((qq => null !== qq));
+        if (Wq !== this.anyPadConnected) {
+          this.anyPadConnected = Wq;
+          for (const qq of this.connectedListeners) qq()
         }
-        const jT = null !== (cT = null === (MT = OT) || void 0 === MT ? void 0 : MT.slot.ty) && void 0 !== cT ? cT : [],
-          vT = fT ? void 0 : xT.find((TT => {
+        const Nq = null !== (gq = null === (lq = mq) || void 0 === lq ? void 0 : lq.slot.Fc) && void 0 !== gq ? gq : [],
+          aq = Aq ? void 0 : cq.find((qq => {
             let {
-              rose: kT
-            } = TT;
-            return kT.some(((TT, kT) => TT && !jT[kT]))
+              rose: Eq
+            } = qq;
+            return Eq.some(((qq, Eq) => qq && !Nq[Eq]))
           }));
-        if (vT ? (OT = vT.polled, this.setActive(vT.polled.pad)) : this.activeInfo && !OT && this.setActive(null), !OT || !this.activeInfo) return;
-        const tT = ((TT, kT) => {
+        if (aq ? (mq = aq.polled, this.setActive(aq.polled.pad)) : this.activeInfo && !mq && this.setActive(null), !mq || !this.activeInfo) return;
+        const Vq = ((qq, Eq) => {
           let {
-            pad: cT,
-            slot: MT,
-            values: KT
-          } = TT;
-          const OT = (0, lT.x)(kT);
-          return OT.values = KT, MT.leftSettled && (OT.leftStick = MT.leftRest.apply(QT(cT, 0))), MT.rightSettled && (OT.rightStick = MT.rightRest.apply(QT(cT, 2))), OT
-        })(OT, TT);
-        for (const lT of this.frameListeners) lT(tT, kT, this.activeInfo)
+            pad: gq,
+            slot: lq,
+            values: Oq
+          } = qq;
+          const mq = (0, Yq.y)(Eq);
+          return mq.values = Oq, lq.leftSettled && (mq.leftStick = lq.leftRest.apply(Hq(gq, 0))), lq.rightSettled && (mq.rightStick = lq.rightRest.apply(Hq(gq, 2))), mq
+        })(mq, qq);
+        for (const Yq of this.frameListeners) Yq(Vq, Eq, this.activeInfo)
       }
-      readPad(TT) {
-        const kT = this.readSnapshot(TT);
-        return kT && (0, jT.d)(kT) ? (TT => {
-          const kT = kT => {
-              var cT;
-              return null !== (cT = TT.buttons[kT]) && void 0 !== cT ? cT : vT(!1)
+      readPad(qq) {
+        const Eq = this.readSnapshot(qq);
+        return Eq && (0, Nq.h)(Eq) ? (qq => {
+          const Eq = Eq => {
+              var gq;
+              return null !== (gq = qq.buttons[Eq]) && void 0 !== gq ? gq : aq(!1)
             },
-            cT = kT => {
-              var cT;
-              return null !== (cT = TT.axes[kT]) && void 0 !== cT ? cT : 0
+            gq = Eq => {
+              var gq;
+              return null !== (gq = qq.axes[Eq]) && void 0 !== gq ? gq : 0
             },
-            lT = TT.axes.length > 9,
-            MT = lT ? (TT => {
-              const kT = 0 !== TT;
+            Yq = qq.axes.length > 9,
+            lq = Yq ? (qq => {
+              const Eq = 0 !== qq;
               return {
-                up: kT && (TT >= -1 && TT < -.7 || TT >= .95 && TT <= 1),
-                right: kT && TT >= -.75 && TT < -.1,
-                down: kT && TT >= -.2 && TT < .45,
-                left: kT && TT >= .4 && TT <= 1
+                up: Eq && (qq >= -1 && qq < -.7 || qq >= .95 && qq <= 1),
+                right: Eq && qq >= -.75 && qq < -.1,
+                down: Eq && qq >= -.2 && qq < .45,
+                left: Eq && qq >= .4 && qq <= 1
               }
-            })(cT(9)) : {
-              up: cT(5) < -.5,
-              down: cT(5) > .5,
-              left: cT(4) < -.5,
-              right: cT(4) > .5
+            })(gq(9)) : {
+              up: gq(5) < -.5,
+              down: gq(5) > .5,
+              left: gq(4) < -.5,
+              right: gq(4) > .5
             };
           return {
-            ...TT,
+            ...qq,
             mapping: "standard",
-            buttons: [kT(1), kT(2), kT(0), kT(3), kT(4), kT(5), kT(6), kT(7), kT(8), kT(9), kT(10), kT(11), vT(MT.up), vT(MT.down), vT(MT.left), vT(MT.right), kT(12)],
-            axes: [cT(0), cT(1), cT(2), cT(lT ? 5 : 3)]
+            buttons: [Eq(1), Eq(2), Eq(0), Eq(3), Eq(4), Eq(5), Eq(6), Eq(7), Eq(8), Eq(9), Eq(10), Eq(11), aq(lq.up), aq(lq.down), aq(lq.left), aq(lq.right), Eq(12)],
+            axes: [gq(0), gq(1), gq(2), gq(Yq ? 5 : 3)]
           }
-        })(kT) : kT
+        })(Eq) : Eq
       }
-      readSnapshot(TT) {
+      readSnapshot(qq) {
         if (this.nativeReader) try {
-          return this.nativeReader(TT)
+          return this.nativeReader(qq)
         } catch {
           if (this.requireTrustedPads) return null
         }
-        return this.requireTrustedPads ? null : (TT => {
-          const kT = TT;
+        return this.requireTrustedPads ? null : (qq => {
+          const Eq = qq;
           return {
-            index: kT.index,
-            id: kT.id,
-            connected: kT.connected,
-            mapping: kT.mapping,
-            buttons: Array.from(kT.buttons, (TT => ({
-              pressed: TT.pressed,
-              value: TT.value
+            index: Eq.index,
+            id: Eq.id,
+            connected: Eq.connected,
+            mapping: Eq.mapping,
+            buttons: Array.from(Eq.buttons, (qq => ({
+              pressed: qq.pressed,
+              value: qq.value
             }))),
-            axes: Array.from(kT.axes),
-            vendorName: xT(TT)
+            axes: Array.from(Eq.axes),
+            vendorName: cq(qq)
           }
-        })(TT)
+        })(qq)
       }
-      isUsable(TT) {
-        return !(0, CT.f)(TT.id) && ("standard" !== TT.mapping ? (this.warnedNonStandardIds.has(TT.id) || (this.warnedNonStandardIds.add(TT.id), console.warn(`Controller "${TT.id}" has no standard button mapping, so it is ignored.`)), !1) : !this.requireTrustedPads || this.trustedIndices.has(TT.index))
+      isUsable(qq) {
+        return !(0, Wq.e)(qq.id) && ("standard" !== qq.mapping ? (this.warnedNonStandardIds.has(qq.id) || (this.warnedNonStandardIds.add(qq.id), console.warn(`Controller "${qq.id}" has no standard button mapping, so it is ignored.`)), !1) : !this.requireTrustedPads || this.trustedIndices.has(qq.index))
       }
-      setActive(TT) {
-        this.activeInfo = TT ? {
-          index: TT.index,
-          id: TT.id,
-          family: (0, MT.d)(TT.id, TT.vendorName)
+      setActive(qq) {
+        this.activeInfo = qq ? {
+          index: qq.index,
+          id: qq.id,
+          family: (0, lq.b)(qq.id, qq.vendorName)
         } : null;
-        for (const kT of this.connectionListeners) kT(this.activeInfo)
+        for (const Eq of this.connectionListeners) Eq(this.activeInfo)
       }
       readPads() {
         try {
           return this.readGamepads()
-        } catch (TT) {
-          return this.loggedReadError || (this.loggedReadError = !0, console.warn("Reading gamepads failed; controller input is unavailable.", TT)), []
+        } catch (qq) {
+          return this.loggedReadError || (this.loggedReadError = !0, console.warn("Reading gamepads failed; controller input is unavailable.", qq)), []
         }
       }
       wake() {
-        this.running && 0 === this.rafId && (this.lastTimestampMs = 0, this.rafId = requestAnimationFrame(this.UA))
+        this.running && 0 === this.rafId && (this.lastTimestampMs = 0, this.rafId = requestAnimationFrame(this.SB))
       }
-    }((() => AT ? AT.call(navigator) : []), !0);
-    ST.listenForConnections()
+    }((() => Bq ? Bq.call(navigator) : []), !0);
+    oq.listenForConnections()
   },
-  8685: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => lT
+  8599: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => Yq
     });
-    const lT = {
+    const Yq = {
       short: {
         wheelMs: 250,
         dropStackMs: 800
@@ -7149,109 +7245,109 @@ export const modules = {
       }
     }
   },
-  8791: (TT, kT, cT) => {
-    cT.d(kT, {
-      b: () => OT,
-      c: () => yT
+  8712: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => mq,
+      d: () => xq
     });
-    var lT = cT(36),
-      MT = cT(8777);
-    let KT = !1;
-    const OT = () => KT,
-      yT = TT => {
-        TT !== KT && (KT = TT, lT.k.nt(MT.j, KT))
+    var Yq = gq(31),
+      lq = gq(8704);
+    let Oq = !1;
+    const mq = () => Oq,
+      xq = qq => {
+        qq !== Oq && (Oq = qq, Yq.i.TV(lq.i, Oq))
       }
   },
-  8784: (TT, kT, cT) => {
-    cT.d(kT, {
-      b: () => yT,
-      d: () => fT
+  8709: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => xq,
+      h: () => Aq
     });
-    var lT = cT(36),
-      MT = cT(8777);
-    let KT = null,
-      OT = 0;
-    const yT = () => KT,
-      fT = TT => {
-        null === TT && null === KT || (KT = null === TT ? null : {
-          id: ++OT,
-          holdMs: TT
-        }, lT.k.nt(MT.n, KT))
+    var Yq = gq(31),
+      lq = gq(8704);
+    let Oq = null,
+      mq = 0;
+    const xq = () => Oq,
+      Aq = qq => {
+        null === qq && null === Oq || (Oq = null === qq ? null : {
+          id: ++mq,
+          holdMs: qq
+        }, Yq.i.TV(lq.j, Oq))
       }
   },
-  8796: (TT, kT, cT) => {
-    cT.d(kT, {
-      b: () => OT,
-      f: () => yT
+  8718: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => mq,
+      g: () => xq
     });
-    var lT = cT(36),
-      MT = cT(8777);
-    let KT = !1;
-    const OT = () => KT,
-      yT = TT => {
-        TT !== KT && (KT = TT, lT.k.nt(MT.q, KT))
+    var Yq = gq(31),
+      lq = gq(8704);
+    let Oq = !1;
+    const mq = () => Oq,
+      xq = qq => {
+        qq !== Oq && (Oq = qq, Yq.i.TV(lq.n, Oq))
       }
   },
-  8860: (TT, kT, cT) => {
-    cT.d(kT, {
-      b: () => OT,
-      e: () => yT
+  8803: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => mq,
+      f: () => xq
     });
-    var lT = cT(36),
-      MT = cT(8777);
-    let KT = !1;
-    const OT = () => KT,
-      yT = TT => {
-        TT !== KT && (KT = TT, lT.k.nt(MT.u, KT))
+    var Yq = gq(31),
+      lq = gq(8704);
+    let Oq = !1;
+    const mq = () => Oq,
+      xq = qq => {
+        qq !== Oq && (Oq = qq, Yq.i.TV(lq.o, Oq))
       }
   },
-  8734: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => lT
+  8655: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => Yq
     });
-    class lT {
+    class Yq {
       constructor() {
         this.downAtMs = null
       }
-      update(TT, kT, cT, lT) {
-        if (TT) return this.downAtMs = cT, null;
+      update(qq, Eq, gq, Yq) {
+        if (qq) return this.downAtMs = gq, null;
         if (null === this.downAtMs) return null;
-        const MT = cT - this.downAtMs >= lT;
-        return kT ? MT ? (this.downAtMs = null, "hold") : null : (this.downAtMs = null, MT ? "hold" : "tap")
+        const lq = gq - this.downAtMs >= Yq;
+        return Eq ? lq ? (this.downAtMs = null, "hold") : null : (this.downAtMs = null, lq ? "hold" : "tap")
       }
       release() {
         this.downAtMs = null
       }
     }
   },
-  8240: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => AT,
-      f: () => CT,
-      j: () => yT,
-      n: () => ST,
-      p: () => QT
+  8130: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => Bq,
+      i: () => Wq,
+      k: () => xq,
+      o: () => oq,
+      r: () => Hq
     });
-    var lT = cT(47),
-      MT = cT(8209),
-      KT = cT(8190);
-    const OT = (() => {
+    var Yq = gq(38),
+      lq = gq(8095),
+      Oq = gq(8061);
+    const mq = (() => {
         try {
-          return cT(8243)
+          return gq(8133)
         } catch {
           return null
         }
       })(),
-      yT = [...KT.ab, "LeftStick", "RightStick"],
-      fT = new Map,
-      xT = {
+      xq = [...Oq.$, "LeftStick", "RightStick"],
+      Aq = new Map,
+      cq = {
         xbox: "xbox",
         playstation: "playstation",
         nintendo: "nintendo",
         steamdeck: "steamdeck",
         generic: "xbox"
       },
-      IT = (new Set(Object.values(xT)), {
+      uq = (new Set(Object.values(cq)), {
         xbox: {
           LB: 1.5,
           RB: 1.5
@@ -7262,115 +7358,115 @@ export const modules = {
           View: 2
         }
       }),
-      AT = (TT, kT) => {
-        var cT, lT;
-        return null !== (cT = null === (lT = IT[xT[TT]]) || void 0 === lT ? void 0 : lT[kT]) && void 0 !== cT ? cT : 1
+      Bq = (qq, Eq) => {
+        var gq, Yq;
+        return null !== (gq = null === (Yq = uq[cq[qq]]) || void 0 === Yq ? void 0 : Yq[Eq]) && void 0 !== gq ? gq : 1
       },
-      CT = (TT, kT) => {
-        const cT = `./${xT[TT]}/${kT}.svg`;
-        let lT = fT.get(cT);
-        return void 0 === lT && (lT = OT ? OT(cT) : "", fT.set(cT, lT)), lT
+      Wq = (qq, Eq) => {
+        const gq = `./${cq[qq]}/${Eq}.svg`;
+        let Yq = Aq.get(gq);
+        return void 0 === Yq && (Yq = mq ? mq(gq) : "", Aq.set(gq, Yq)), Yq
       },
-      jT = new Set,
-      vT = [],
-      tT = TT => {
-        if (!jT.has(TT)) {
-          jT.add(TT);
-          for (const kT of yT) {
-            const cT = CT(TT, kT);
-            if (cT) {
-              const TT = new Image;
-              TT.crossOrigin = "anonymous", TT.src = cT, vT.push(TT)
+      Nq = new Set,
+      aq = [],
+      Vq = qq => {
+        if (!Nq.has(qq)) {
+          Nq.add(qq);
+          for (const Eq of xq) {
+            const gq = Wq(qq, Eq);
+            if (gq) {
+              const qq = new Image;
+              qq.crossOrigin = "anonymous", qq.src = gq, aq.push(qq)
             }
           }
         }
       },
-      hT = "controllerGlyphFamily";
-    let NT = null;
-    const QT = TT => {
-        TT !== NT && (NT = TT, lT.e.setItem(hT, TT), tT(TT))
+      dq = "controllerGlyphFamily";
+    let jq = null;
+    const Hq = qq => {
+        qq !== jq && (jq = qq, Yq.i.setItem(dq, qq), Vq(qq))
       },
-      ST = () => {
-        const TT = lT.e.getItem(hT);
-        (0, MT.h)(TT) && TT !== NT && (NT = TT, tT(TT))
+      oq = () => {
+        const qq = Yq.i.getItem(dq);
+        (0, lq.f)(qq) && qq !== jq && (jq = qq, Vq(qq))
       }
   },
-  8886: (TT, kT, cT) => {
-    cT.d(kT, {
-      d: () => uT,
-      f: () => XT
+  8826: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => Gq,
+      c: () => Lq
     });
-    var lT = cT(71),
-      MT = cT(36),
-      KT = cT(1461),
-      OT = cT(8199),
-      yT = cT(8188),
-      fT = cT(8227),
-      xT = cT(8206);
-    const IT = {
+    var Yq = gq(57),
+      lq = gq(31),
+      Oq = gq(1416),
+      mq = gq(8073),
+      xq = gq(8057),
+      Aq = gq(8118),
+      cq = gq(8090);
+    const uq = {
         x: 0,
         y: 0,
         z: 0
       },
-      AT = Math.PI / 180,
-      CT = TT => Math.hypot(TT.x, TT.y, TT.z),
-      jT = (TT, kT) => ({
-        x: TT.x * kT,
-        y: TT.y * kT,
-        z: TT.z * kT
+      Bq = Math.PI / 180,
+      Wq = qq => Math.hypot(qq.x, qq.y, qq.z),
+      Nq = (qq, Eq) => ({
+        x: qq.x * Eq,
+        y: qq.y * Eq,
+        z: qq.z * Eq
       }),
-      vT = (TT, kT) => ({
-        x: TT.x + kT.x,
-        y: TT.y + kT.y,
-        z: TT.z + kT.z
+      aq = (qq, Eq) => ({
+        x: qq.x + Eq.x,
+        y: qq.y + Eq.y,
+        z: qq.z + Eq.z
       }),
-      tT = (TT, kT) => ({
-        x: TT.x - kT.x,
-        y: TT.y - kT.y,
-        z: TT.z - kT.z
+      Vq = (qq, Eq) => ({
+        x: qq.x - Eq.x,
+        y: qq.y - Eq.y,
+        z: qq.z - Eq.z
       }),
-      hT = TT => {
-        const kT = CT(TT);
-        return 0 === kT ? IT : jT(TT, 1 / kT)
+      dq = qq => {
+        const Eq = Wq(qq);
+        return 0 === Eq ? uq : Nq(qq, 1 / Eq)
       },
-      NT = TT => ({
+      jq = qq => ({
         min: {
-          ...TT
+          ...qq
         },
         max: {
-          ...TT
+          ...qq
         }
       }),
-      QT = (TT, kT) => ({
+      Hq = (qq, Eq) => ({
         min: {
-          x: Math.min(TT.min.x, kT.x),
-          y: Math.min(TT.min.y, kT.y),
-          z: Math.min(TT.min.z, kT.z)
+          x: Math.min(qq.min.x, Eq.x),
+          y: Math.min(qq.min.y, Eq.y),
+          z: Math.min(qq.min.z, Eq.z)
         },
         max: {
-          x: Math.max(TT.max.x, kT.x),
-          y: Math.max(TT.max.y, kT.y),
-          z: Math.max(TT.max.z, kT.z)
+          x: Math.max(qq.max.x, Eq.x),
+          y: Math.max(qq.max.y, Eq.y),
+          z: Math.max(qq.max.z, Eq.z)
         }
       }),
-      ST = (TT, kT) => TT.max.x - TT.min.x <= kT && TT.max.y - TT.min.y <= kT && TT.max.z - TT.min.z <= kT;
-    class DT {
+      oq = (qq, Eq) => qq.max.x - qq.min.x <= Eq && qq.max.y - qq.min.y <= Eq && qq.max.z - qq.min.z <= Eq;
+    class Pq {
       constructor() {
-        this.bias = IT, this.calibrated = !1, this.gyroRange = null, this.accelRange = null, this.sum = IT, this.windowSec = 0
+        this.bias = uq, this.calibrated = !1, this.gyroRange = null, this.accelRange = null, this.sum = uq, this.windowSec = 0
       }
-      update(TT) {
-        const kT = this.gyroRange ? QT(this.gyroRange, TT.gyro) : NT(TT.gyro),
-          cT = TT.accel ? this.accelRange ? QT(this.accelRange, TT.accel) : NT(TT.accel) : null;
-        if (!ST(kT, 1) || cT && !ST(cT, .01)) return void this.restartWindow(TT);
-        if (this.gyroRange = kT, this.accelRange = cT, this.sum = vT(this.sum, jT(TT.gyro, TT.dtSec)), this.windowSec += TT.dtSec, this.windowSec < 1) return;
-        const lT = jT(this.sum, 1 / this.windowSec);
-        if (CT(lT) > 5) return;
-        const MT = tT(lT, this.bias);
-        let KT = 0;
-        !this.calibrated || this.windowSec >= 3 ? KT = 1 : CT(MT) <= 1 && (KT = Math.min(1, TT.dtSec / 1)), this.bias = vT(this.bias, jT(MT, KT)), this.calibrated = this.calibrated || KT > 0
+      update(qq) {
+        const Eq = this.gyroRange ? Hq(this.gyroRange, qq.gyro) : jq(qq.gyro),
+          gq = qq.accel ? this.accelRange ? Hq(this.accelRange, qq.accel) : jq(qq.accel) : null;
+        if (!oq(Eq, 1) || gq && !oq(gq, .01)) return void this.restartWindow(qq);
+        if (this.gyroRange = Eq, this.accelRange = gq, this.sum = aq(this.sum, Nq(qq.gyro, qq.dtSec)), this.windowSec += qq.dtSec, this.windowSec < 1) return;
+        const Yq = Nq(this.sum, 1 / this.windowSec);
+        if (Wq(Yq) > 5) return;
+        const lq = Vq(Yq, this.bias);
+        let Oq = 0;
+        !this.calibrated || this.windowSec >= 3 ? Oq = 1 : Wq(lq) <= 1 && (Oq = Math.min(1, qq.dtSec / 1)), this.bias = aq(this.bias, Nq(lq, Oq)), this.calibrated = this.calibrated || Oq > 0
       }
-      correct(TT) {
-        return tT(TT, this.bias)
+      correct(qq) {
+        return Vq(qq, this.bias)
       }
       getBias() {
         return this.bias
@@ -7379,98 +7475,98 @@ export const modules = {
         return this.calibrated
       }
       reset() {
-        this.bias = IT, this.calibrated = !1, this.gyroRange = null, this.accelRange = null, this.sum = IT, this.windowSec = 0
+        this.bias = uq, this.calibrated = !1, this.gyroRange = null, this.accelRange = null, this.sum = uq, this.windowSec = 0
       }
-      restartWindow(TT) {
-        this.gyroRange = NT(TT.gyro), this.accelRange = TT.accel ? NT(TT.accel) : null, this.sum = IT, this.windowSec = 0
+      restartWindow(qq) {
+        this.gyroRange = jq(qq.gyro), this.accelRange = qq.accel ? jq(qq.accel) : null, this.sum = uq, this.windowSec = 0
       }
     }
-    class aT {
+    class Qq {
       constructor() {
         this.down = null
       }
-      update(TT, kT, cT) {
-        const lT = hT(jT(kT, -1));
-        if (!this.down) return this.down = lT, lT;
-        const MT = jT(TT, AT * cT),
-          KT = this.down,
-          OT = {
-            x: KT.x - (MT.y * KT.z - MT.z * KT.y),
-            y: KT.y - (MT.z * KT.x - MT.x * KT.z),
-            z: KT.z - (MT.x * KT.y - MT.y * KT.x)
+      update(qq, Eq, gq) {
+        const Yq = dq(Nq(Eq, -1));
+        if (!this.down) return this.down = Yq, Yq;
+        const lq = Nq(qq, Bq * gq),
+          Oq = this.down,
+          mq = {
+            x: Oq.x - (lq.y * Oq.z - lq.z * Oq.y),
+            y: Oq.y - (lq.z * Oq.x - lq.x * Oq.z),
+            z: Oq.z - (lq.x * Oq.y - lq.y * Oq.x)
           },
-          yT = 0 === CT(lT) ? 0 : Math.min(1, cT / .25);
-        var fT, xT;
-        return this.down = hT((xT = yT, vT(fT = OT, jT(tT(lT, fT), xT)))), this.down
+          xq = 0 === Wq(Yq) ? 0 : Math.min(1, gq / .25);
+        var Aq, cq;
+        return this.down = dq((cq = xq, aq(Aq = mq, Nq(Vq(Yq, Aq), cq)))), this.down
       }
       reset() {
         this.down = null
       }
     }
-    class FT {
+    class yq {
       constructor() {
         this.entries = [], this.windowSec = 0
       }
-      apply(TT, kT, cT) {
-        const lT = Math.hypot(TT, kT),
-          MT = Math.max(0, Math.min(1, (lT - 2) / 2)),
-          KT = {
-            yaw: TT * (1 - MT),
-            pitch: kT * (1 - MT),
-            dtSec: cT
+      apply(qq, Eq, gq) {
+        const Yq = Math.hypot(qq, Eq),
+          lq = Math.max(0, Math.min(1, (Yq - 2) / 2)),
+          Oq = {
+            yaw: qq * (1 - lq),
+            pitch: Eq * (1 - lq),
+            dtSec: gq
           };
-        for (this.entries.push(KT), this.windowSec += cT; this.entries.length > 1 && this.windowSec - this.entries[0].dtSec >= .125;) this.windowSec -= this.entries[0].dtSec, this.entries.shift();
-        let OT = 0,
-          yT = 0;
-        for (const xT of this.entries) OT += xT.yaw * xT.dtSec, yT += xT.pitch * xT.dtSec;
-        const fT = this.windowSec > 0 ? {
-          yaw: OT / this.windowSec,
-          pitch: yT / this.windowSec
+        for (this.entries.push(Oq), this.windowSec += gq; this.entries.length > 1 && this.windowSec - this.entries[0].dtSec >= .125;) this.windowSec -= this.entries[0].dtSec, this.entries.shift();
+        let mq = 0,
+          xq = 0;
+        for (const cq of this.entries) mq += cq.yaw * cq.dtSec, xq += cq.pitch * cq.dtSec;
+        const Aq = this.windowSec > 0 ? {
+          yaw: mq / this.windowSec,
+          pitch: xq / this.windowSec
         } : {
-          yaw: KT.yaw,
-          pitch: KT.pitch
+          yaw: Oq.yaw,
+          pitch: Oq.pitch
         };
         return {
-          yaw: TT * MT + fT.yaw,
-          pitch: kT * MT + fT.pitch
+          yaw: qq * lq + Aq.yaw,
+          pitch: Eq * lq + Aq.pitch
         }
       }
       reset() {
         this.entries = [], this.windowSec = 0
       }
     }
-    class rT {
+    class tq {
       constructor() {
-        this.calibrator = new DT, this.gravity = new aT, this.smoother = new FT
+        this.calibrator = new Pq, this.gravity = new Qq, this.smoother = new yq
       }
-      process(TT, kT, cT) {
-        const lT = Math.max(0, Math.min(.05, kT));
+      process(qq, Eq, gq) {
+        const Yq = Math.max(0, Math.min(.05, Eq));
         this.calibrator.update({
-          ...TT,
-          dtSec: lT
+          ...qq,
+          dtSec: Yq
         });
-        const MT = this.calibrator.correct(TT.gyro);
-        let KT = MT.y;
-        "player" === cT && TT.accel && (KT = ((TT, kT) => {
-          const cT = TT.y * kT.y + TT.z * kT.z;
-          return -Math.sign(cT) * Math.min(1.41 * Math.abs(cT), Math.hypot(TT.y, TT.z))
-        })(MT, this.gravity.update(MT, TT.accel, lT)));
-        const OT = this.smoother.apply(KT, MT.x, lT),
-          yT = ((TT, kT) => {
-            const cT = Math.hypot(TT, kT);
-            if (cT >= 1) return {
-              yaw: TT,
-              pitch: kT
+        const lq = this.calibrator.correct(qq.gyro);
+        let Oq = lq.y;
+        "player" === gq && qq.accel && (Oq = ((qq, Eq) => {
+          const gq = qq.y * Eq.y + qq.z * Eq.z;
+          return -Math.sign(gq) * Math.min(1.41 * Math.abs(gq), Math.hypot(qq.y, qq.z))
+        })(lq, this.gravity.update(lq, qq.accel, Yq)));
+        const mq = this.smoother.apply(Oq, lq.x, Yq),
+          xq = ((qq, Eq) => {
+            const gq = Math.hypot(qq, Eq);
+            if (gq >= 1) return {
+              yaw: qq,
+              pitch: Eq
             };
-            const lT = cT / 1;
+            const Yq = gq / 1;
             return {
-              yaw: TT * lT,
-              pitch: kT * lT
+              yaw: qq * Yq,
+              pitch: Eq * Yq
             }
-          })(OT.yaw, OT.pitch);
+          })(mq.yaw, mq.pitch);
         return {
-          yawDeg: yT.yaw * lT,
-          pitchDeg: yT.pitch * lT
+          yawDeg: xq.yaw * Yq,
+          pitchDeg: xq.pitch * Yq
         }
       }
       getCalibration() {
@@ -7483,165 +7579,165 @@ export const modules = {
         this.calibrator.reset(), this.gravity.reset(), this.smoother.reset()
       }
     }
-    const PT = (TT, kT) => {
-      var cT, lT, MT;
-      const KT = kT * AT,
-        OT = null !== (cT = TT.beta) && void 0 !== cT ? cT : 0,
-        yT = null !== (lT = TT.gamma) && void 0 !== lT ? lT : 0;
+    const rq = (qq, Eq) => {
+      var gq, Yq, lq;
+      const Oq = Eq * Bq,
+        mq = null !== (gq = qq.beta) && void 0 !== gq ? gq : 0,
+        xq = null !== (Yq = qq.gamma) && void 0 !== Yq ? Yq : 0;
       return {
-        x: OT * Math.cos(KT) - yT * Math.sin(KT),
-        y: OT * Math.sin(KT) + yT * Math.cos(KT),
-        z: null !== (MT = TT.alpha) && void 0 !== MT ? MT : 0
+        x: mq * Math.cos(Oq) - xq * Math.sin(Oq),
+        y: mq * Math.sin(Oq) + xq * Math.cos(Oq),
+        z: null !== (lq = qq.alpha) && void 0 !== lq ? lq : 0
       }
     };
-    var wT = cT(8895);
-    class mT {
-      constructor(TT, kT, cT) {
-        this.hid = TT, this.sink = kT, this.onControllersChanged = cT, this.controllers = new Map, this.running = !1, this.openedCount = 0, this.opening = new Set, this.disconnectedWhileOpening = new Set, this.switchPacketCounter = 0, this.onConnect = TT => {
-          this.openController(TT.device).catch((TT => {
-            console.warn("Could not open motion controller", TT)
+    var vq = gq(8829);
+    class hq {
+      constructor(qq, Eq, gq) {
+        this.hid = qq, this.sink = Eq, this.onControllersChanged = gq, this.controllers = new Map, this.running = !1, this.openedCount = 0, this.opening = new Set, this.disconnectedWhileOpening = new Set, this.switchPacketCounter = 0, this.onConnect = qq => {
+          this.openController(qq.device).catch((qq => {
+            console.warn("Could not open motion controller", qq)
           }))
-        }, this.onDisconnect = TT => {
-          this.opening.has(TT.device) && this.disconnectedWhileOpening.add(TT.device);
-          const kT = this.controllers.get(TT.device);
-          kT && (this.forget(kT), this.onControllersChanged())
+        }, this.onDisconnect = qq => {
+          this.opening.has(qq.device) && this.disconnectedWhileOpening.add(qq.device);
+          const Eq = this.controllers.get(qq.device);
+          Eq && (this.forget(Eq), this.onControllersChanged())
         }
       }
       async start() {
         if (this.running) return;
         this.running = !0, this.hid.addEventListener("connect", this.onConnect), this.hid.addEventListener("disconnect", this.onDisconnect);
-        const TT = await this.hid.getDevices();
-        for (const kT of TT) await this.openController(kT).catch((TT => {
-          console.warn("Could not open motion controller", TT)
+        const qq = await this.hid.getDevices();
+        for (const Eq of qq) await this.openController(Eq).catch((qq => {
+          console.warn("Could not open motion controller", qq)
         }))
       }
       stop() {
         this.running = !1, this.hid.removeEventListener("connect", this.onConnect), this.hid.removeEventListener("disconnect", this.onDisconnect);
-        for (const TT of [...this.controllers.values()]) this.forget(TT);
+        for (const qq of [...this.controllers.values()]) this.forget(qq);
         this.onControllersChanged()
       }
       async request() {
-        const TT = await this.hid.requestDevice({
-          filters: wT.f
+        const qq = await this.hid.requestDevice({
+          filters: vq.m
         });
-        let kT = 0;
-        for (const cT of TT) await this.openController(cT).catch((TT => {
-          console.warn("Could not open motion controller", TT), kT++
+        let Eq = 0;
+        for (const gq of qq) await this.openController(gq).catch((qq => {
+          console.warn("Could not open motion controller", qq), Eq++
         }));
-        return kT
+        return Eq
       }
       async hasGrantedController() {
-        return (await this.hid.getDevices()).some((TT => null !== (0, wT.d)(TT.vendorId, TT.productId)))
+        return (await this.hid.getDevices()).some((qq => null !== (0, vq.f)(qq.vendorId, qq.productId)))
       }
       getConnectedKinds() {
-        return [...this.controllers.values()].map((TT => TT.kind))
+        return [...this.controllers.values()].map((qq => qq.kind))
       }
-      forget(TT) {
-        TT.device.removeEventListener("inputreport", TT.onReport), this.controllers.get(TT.device) === TT && this.controllers.delete(TT.device)
+      forget(qq) {
+        qq.device.removeEventListener("inputreport", qq.onReport), this.controllers.get(qq.device) === qq && this.controllers.delete(qq.device)
       }
-      async openController(TT) {
-        const kT = (0, wT.d)(TT.vendorId, TT.productId);
-        if (!kT || !this.running || this.controllers.has(TT) || this.opening.has(TT)) return;
-        this.opening.add(TT);
-        let cT = !1;
+      async openController(qq) {
+        const Eq = (0, vq.f)(qq.vendorId, qq.productId);
+        if (!Eq || !this.running || this.controllers.has(qq) || this.opening.has(qq)) return;
+        this.opening.add(qq);
+        let gq = !1;
         try {
-          TT.opened || await TT.open()
+          qq.opened || await qq.open()
         } finally {
-          this.opening.delete(TT), cT = this.disconnectedWhileOpening.delete(TT)
+          this.opening.delete(qq), gq = this.disconnectedWhileOpening.delete(qq)
         }
-        if (cT) return void TT.close().catch((TT => {
-          console.debug("Could not close an unplugged motion controller", TT)
+        if (gq) return void qq.close().catch((qq => {
+          console.debug("Could not close an unplugged motion controller", qq)
         }));
         if (!this.running) return;
-        const lT = {
-          device: TT,
-          kind: kT,
+        const Yq = {
+          device: qq,
+          kind: Eq,
           lastClock: null,
           lastEventMs: null,
           lastReadingMs: -1 / 0,
           openedOrder: this.openedCount++,
-          onReport: TT => {
-            this.onReport(lT, TT)
+          onReport: qq => {
+            this.onReport(Yq, qq)
           }
         };
-        this.controllers.set(TT, lT), TT.addEventListener("inputreport", lT.onReport), this.onControllersChanged();
+        this.controllers.set(qq, Yq), qq.addEventListener("inputreport", Yq.onReport), this.onControllersChanged();
         try {
-          await this.enableMotion(lT)
-        } catch (MT) {
-          console.warn(`Could not turn on motion for ${kT}`, MT), this.controllers.get(TT) === lT && (this.forget(lT), this.onControllersChanged())
+          await this.enableMotion(Yq)
+        } catch (lq) {
+          console.warn(`Could not turn on motion for ${Eq}`, lq), this.controllers.get(qq) === Yq && (this.forget(Yq), this.onControllersChanged())
         }
       }
-      async enableMotion(TT) {
+      async enableMotion(qq) {
         let {
-          device: kT,
-          kind: cT
-        } = TT;
-        if ((0, wT.e)(cT))
-          for (const lT of wT.q[cT]) await kT.receiveFeatureReport(lT).catch((TT => {
-            console.debug(`Motion controller feature report ${lT} unavailable`, TT)
+          device: Eq,
+          kind: gq
+        } = qq;
+        if ((0, vq.i)(gq))
+          for (const Yq of vq.w[gq]) await Eq.receiveFeatureReport(Yq).catch((qq => {
+            console.debug(`Motion controller feature report ${Yq} unavailable`, qq)
           }));
         else
-          for (let lT = 0; lT < 2; lT++)
+          for (let Yq = 0; Yq < 2; Yq++)
             for (const {
-                subcommand: TT,
-                args: cT
+                subcommand: qq,
+                args: gq
               }
-              of wT.t) await kT.sendReport(wT.x, (0, wT.b)(this.switchPacketCounter++, TT, cT)), await new Promise((TT => {
-              setTimeout(TT, 60)
+              of vq.A) await Eq.sendReport(vq.C, (0, vq.c)(this.switchPacketCounter++, qq, gq)), await new Promise((qq => {
+              setTimeout(qq, 60)
             }))
       }
-      onReport(TT, kT) {
-        const cT = (0, wT.m)(TT.kind, kT.reportId, kT.data, TT.device.productId);
-        if (!cT) return;
-        const lT = null === TT.lastEventMs ? 0 : (kT.timeStamp - TT.lastEventMs) / 1e3;
-        TT.lastEventMs = kT.timeStamp;
-        let MT = cT.dtSec;
-        if (null !== MT && lT > 0 && (MT = Math.max(.001, Math.min(.017, lT / cT.readings.length))), null === MT && null !== cT.sensorClock && (0, wT.e)(TT.kind)) {
-          const kT = (0, wT.p)(TT.kind, TT.lastClock, cT.sensorClock);
-          TT.lastClock = cT.sensorClock, MT = 0 === kT ? null : kT
+      onReport(qq, Eq) {
+        const gq = (0, vq.q)(qq.kind, Eq.reportId, Eq.data, qq.device.productId);
+        if (!gq) return;
+        const Yq = null === qq.lastEventMs ? 0 : (Eq.timeStamp - qq.lastEventMs) / 1e3;
+        qq.lastEventMs = Eq.timeStamp;
+        let lq = gq.dtSec;
+        if (null !== lq && Yq > 0 && (lq = Math.max(.001, Math.min(.017, Yq / gq.readings.length))), null === lq && null !== gq.sensorClock && (0, vq.i)(qq.kind)) {
+          const Eq = (0, vq.u)(qq.kind, qq.lastClock, gq.sensorClock);
+          qq.lastClock = gq.sensorClock, lq = 0 === Eq ? null : Eq
         }
-        if (TT.lastReadingMs = kT.timeStamp, this.isPreferred(TT, kT.timeStamp))
-          for (const OT of cT.readings) {
-            var KT;
-            this.sink(OT, null !== (KT = MT) && void 0 !== KT ? KT : lT, `hid${TT.openedOrder}`)
+        if (qq.lastReadingMs = Eq.timeStamp, this.isPreferred(qq, Eq.timeStamp))
+          for (const mq of gq.readings) {
+            var Oq;
+            this.sink(mq, null !== (Oq = lq) && void 0 !== Oq ? Oq : Yq, `hid${qq.openedOrder}`)
           }
       }
-      isPreferred(TT, kT) {
-        const cT = TT => 1e6 * wT.i[TT.kind] + TT.openedOrder;
-        for (const lT of this.controllers.values())
-          if (lT !== TT && kT - lT.lastReadingMs < 500 && cT(lT) < cT(TT)) return !1;
+      isPreferred(qq, Eq) {
+        const gq = qq => 1e6 * vq.o[qq.kind] + qq.openedOrder;
+        for (const Yq of this.controllers.values())
+          if (Yq !== qq && Eq - Yq.lastReadingMs < 500 && gq(Yq) < gq(qq)) return !1;
         return !0
       }
     }
-    var bT = cT(118);
-    const zT = () => DeviceMotionEvent,
-      JT = () => "undefined" !== typeof window && "undefined" !== typeof DeviceMotionEvent && window.isSecureContext && (0, bT.isMobile)(),
-      oT = () => {
-        var TT;
-        const kT = null === (TT = window.screen.orientation) || void 0 === TT ? void 0 : TT.angle;
-        return "number" === typeof kT ? kT : "number" === typeof window.orientation ? window.orientation : 0
+    var nq = gq(96);
+    const bq = () => DeviceMotionEvent,
+      iq = () => "undefined" !== typeof window && "undefined" !== typeof DeviceMotionEvent && window.isSecureContext && (0, nq.isMobile)(),
+      Zq = () => {
+        var qq;
+        const Eq = null === (qq = window.screen.orientation) || void 0 === qq ? void 0 : qq.angle;
+        return "number" === typeof Eq ? Eq : "number" === typeof window.orientation ? window.orientation : 0
       };
-    class HT {
-      constructor(TT, kT) {
-        this.sink = TT, this.onStateChanged = kT, this.state = "off", this.lastEventMs = null, this.noSensorTimer = null, this.wanted = !1, this.permissionRequest = null, this.granted = !1, this.onGesture = () => {
-          this.requestPermission().catch((TT => {
-            console.warn("Could not enable the motion sensor", TT)
+    class fq {
+      constructor(qq, Eq) {
+        this.sink = qq, this.onStateChanged = Eq, this.state = "off", this.lastEventMs = null, this.noSensorTimer = null, this.wanted = !1, this.permissionRequest = null, this.granted = !1, this.onGesture = () => {
+          this.requestPermission().catch((qq => {
+            console.warn("Could not enable the motion sensor", qq)
           }))
-        }, this.onMotion = TT => {
-          const kT = TT.rotationRate;
-          if (!kT || null === kT.alpha && null === kT.beta && null === kT.gamma) return;
-          const cT = null === this.lastEventMs ? 0 : (TT.timeStamp - this.lastEventMs) / 1e3;
-          this.lastEventMs = TT.timeStamp, this.clearNoSensorTimer(), this.setState("on"), this.sink({
-            gyro: PT(kT, oT()),
+        }, this.onMotion = qq => {
+          const Eq = qq.rotationRate;
+          if (!Eq || null === Eq.alpha && null === Eq.beta && null === Eq.gamma) return;
+          const gq = null === this.lastEventMs ? 0 : (qq.timeStamp - this.lastEventMs) / 1e3;
+          this.lastEventMs = qq.timeStamp, this.clearNoSensorTimer(), this.setState("on"), this.sink({
+            gyro: rq(Eq, Zq()),
             accel: null
-          }, cT, "phone")
+          }, gq, "phone")
         }
       }
       getState() {
         return this.state
       }
       start() {
-        if (this.wanted = !0, "off" === this.state) return "function" !== typeof zT().requestPermission || this.granted ? void this.listen() : (this.setState("needsPermission"), void this.armGestureRequest())
+        if (this.wanted = !0, "off" === this.state) return "function" !== typeof bq().requestPermission || this.granted ? void this.listen() : (this.setState("needsPermission"), void this.armGestureRequest())
       }
       requestPermission() {
         return this.permissionRequest || (this.permissionRequest = this.askPermission().finally((() => {
@@ -7649,17 +7745,17 @@ export const modules = {
         }))), this.permissionRequest
       }
       async askPermission() {
-        const TT = zT().requestPermission;
+        const qq = bq().requestPermission;
         if (!this.wanted) return;
-        if ("function" !== typeof TT) return void this.listen();
-        let kT;
+        if ("function" !== typeof qq) return void this.listen();
+        let Eq;
         this.disarmGestureRequest();
         try {
-          kT = await TT.call(DeviceMotionEvent)
-        } catch (cT) {
-          throw this.wanted && "needsPermission" === this.state && this.armGestureRequest(), cT
+          Eq = await qq.call(DeviceMotionEvent)
+        } catch (gq) {
+          throw this.wanted && "needsPermission" === this.state && this.armGestureRequest(), gq
         }
-        this.wanted && ("granted" === kT ? (this.granted = !0, this.listen()) : this.setState("denied"))
+        this.wanted && ("granted" === Eq ? (this.granted = !0, this.listen()) : this.setState("denied"))
       }
       stop() {
         this.wanted = !1, this.disarmGestureRequest(), window.removeEventListener("devicemotion", this.onMotion), this.clearNoSensorTimer(), this.lastEventMs = null, this.setState("off")
@@ -7678,64 +7774,64 @@ export const modules = {
       clearNoSensorTimer() {
         null !== this.noSensorTimer && (clearTimeout(this.noSensorTimer), this.noSensorTimer = null)
       }
-      setState(TT) {
-        this.state !== TT && (this.state = TT, this.onStateChanged())
+      setState(qq) {
+        this.state !== qq && (this.state = qq, this.onStateChanged())
       }
     }
-    const eT = "controllerGyroStatusChanged",
-      GT = {
-        Rm: 0,
-        Wm: 0
+    const Mq = "controllerGyroStatusChanged",
+      Tq = {
+        VJ: 0,
+        dJ: 0
       },
-      VT = TT => {
-        var kT, cT;
-        return "undefined" === typeof document || (null === (kT = null === (cT = document.featurePolicy) || void 0 === cT ? void 0 : cT.allowsFeature(TT)) || void 0 === kT || kT)
+      zq = qq => {
+        var Eq, gq;
+        return "undefined" === typeof document || (null === (Eq = null === (gq = document.featurePolicy) || void 0 === gq ? void 0 : gq.allowsFeature(qq)) || void 0 === Eq || Eq)
       };
-    class ET {
+    class Sq {
       constructor() {
-        this.processor = new rT, this.hid = void 0, this.hidBlocked = void 0, this.phone = void 0, this.phoneBlocked = void 0, this.source = null, this.pendingYawDeg = 0, this.pendingPitchDeg = 0, this.lastDrainMs = -1 / 0, this.lastHidReadingMs = -1 / 0, this.running = !1, this.phoneRunning = !1, this.syncWithSettings = TT => {
-          const kT = TT.gyroAiming && yT.e.hasConnectedPad();
-          var cT, lT;
-          kT !== this.phoneRunning && (this.phoneRunning = kT, kT ? null === (cT = this.phone) || void 0 === cT || cT.start() : null === (lT = this.phone) || void 0 === lT || lT.stop());
-          if (TT.gyroAiming !== this.running) {
-            var MT, KT;
-            if (this.running = TT.gyroAiming, this.running) null === (MT = this.hid) || void 0 === MT || MT.start().catch((TT => {
-              console.warn("Could not open motion controllers", TT)
+        this.processor = new tq, this.hid = void 0, this.hidBlocked = void 0, this.phone = void 0, this.phoneBlocked = void 0, this.source = null, this.pendingYawDeg = 0, this.pendingPitchDeg = 0, this.lastDrainMs = -1 / 0, this.lastHidReadingMs = -1 / 0, this.running = !1, this.phoneRunning = !1, this.syncWithSettings = qq => {
+          const Eq = qq.gyroAiming && xq.h.hasConnectedPad();
+          var gq, Yq;
+          Eq !== this.phoneRunning && (this.phoneRunning = Eq, Eq ? null === (gq = this.phone) || void 0 === gq || gq.start() : null === (Yq = this.phone) || void 0 === Yq || Yq.stop());
+          if (qq.gyroAiming !== this.running) {
+            var lq, Oq;
+            if (this.running = qq.gyroAiming, this.running) null === (lq = this.hid) || void 0 === lq || lq.start().catch((qq => {
+              console.warn("Could not open motion controllers", qq)
             }));
-            else null === (KT = this.hid) || void 0 === KT || KT.stop(), this.processor.reset(), this.source = null, this.discardPending();
+            else null === (Oq = this.hid) || void 0 === Oq || Oq.stop(), this.processor.reset(), this.source = null, this.discardPending();
             this.publishStatus()
           }
         }, this.publishStatus = () => {
-          MT.k.nt(eT, this.getStatus())
+          lq.i.TV(Mq, this.getStatus())
         };
-        const TT = (() => {
-            var TT;
-            return "undefined" !== typeof navigator && window.isSecureContext && null !== (TT = navigator.hid) && void 0 !== TT ? TT : null
+        const qq = (() => {
+            var qq;
+            return "undefined" !== typeof navigator && window.isSecureContext && null !== (qq = navigator.hid) && void 0 !== qq ? qq : null
           })(),
-          kT = VT("hid");
-        this.hidBlocked = null !== TT && !kT, this.hid = TT && kT ? new mT(TT, ((TT, kT, cT) => {
-          this.lastHidReadingMs = performance.now(), this.feed(TT, kT, "player", cT)
+          Eq = zq("hid");
+        this.hidBlocked = null !== qq && !Eq, this.hid = qq && Eq ? new hq(qq, ((qq, Eq, gq) => {
+          this.lastHidReadingMs = performance.now(), this.feed(qq, Eq, "player", gq)
         }), this.publishStatus) : null;
-        const cT = VT("accelerometer") && VT("gyroscope");
-        this.phoneBlocked = JT() && !cT, this.phone = JT() && cT ? new HT(((TT, kT, cT) => {
-          performance.now() - this.lastHidReadingMs >= 500 && this.feed(TT, kT, "local", cT)
-        }), this.publishStatus) : null, MT.k.subscribe(xT.f, this.syncWithSettings), yT.e.onConnectedPadsChanged((() => {
-          this.syncWithSettings((0, xT.g)()), this.publishStatus()
-        })), this.syncWithSettings((0, xT.g)())
+        const gq = zq("accelerometer") && zq("gyroscope");
+        this.phoneBlocked = iq() && !gq, this.phone = iq() && gq ? new fq(((qq, Eq, gq) => {
+          performance.now() - this.lastHidReadingMs >= 500 && this.feed(qq, Eq, "local", gq)
+        }), this.publishStatus) : null, lq.i.subscribe(cq.f, this.syncWithSettings), xq.h.onConnectedPadsChanged((() => {
+          this.syncWithSettings((0, cq.i)()), this.publishStatus()
+        })), this.syncWithSettings((0, cq.i)())
       }
       isSupported() {
         return null !== this.hid || null !== this.phone
       }
       getStatus() {
-        var TT, kT, cT, lT;
+        var qq, Eq, gq, Yq;
         return {
           hidSupported: null !== this.hid,
           hidBlocked: this.hidBlocked,
           phoneSupported: null !== this.phone,
           phoneBlocked: this.phoneBlocked,
-          controllers: null !== (TT = null === (kT = this.hid) || void 0 === kT ? void 0 : kT.getConnectedKinds()) && void 0 !== TT ? TT : [],
-          phoneMotion: null !== (cT = null === (lT = this.phone) || void 0 === lT ? void 0 : lT.getState()) && void 0 !== cT ? cT : "off",
-          padConnected: yT.e.hasConnectedPad()
+          controllers: null !== (qq = null === (Eq = this.hid) || void 0 === Eq ? void 0 : Eq.getConnectedKinds()) && void 0 !== qq ? qq : [],
+          phoneMotion: null !== (gq = null === (Yq = this.phone) || void 0 === Yq ? void 0 : Yq.getState()) && void 0 !== gq ? gq : "off",
+          padConnected: xq.h.hasConnectedPad()
         }
       }
       async connectController() {
@@ -7745,450 +7841,450 @@ export const modules = {
         this.hid && !await this.hid.hasGrantedController() && await this.hid.request()
       }
       async allowPhoneMotion() {
-        var TT;
-        await (null === (TT = this.phone) || void 0 === TT ? void 0 : TT.requestPermission())
+        var qq;
+        await (null === (qq = this.phone) || void 0 === qq ? void 0 : qq.requestPermission())
       }
       drainLookDelta() {
-        const TT = performance.now();
-        TT - this.lastDrainMs > 500 && this.discardPending(), this.lastDrainMs = TT;
-        const kT = {
+        const qq = performance.now();
+        qq - this.lastDrainMs > 500 && this.discardPending(), this.lastDrainMs = qq;
+        const Eq = {
           yawDeg: this.pendingYawDeg,
           pitchDeg: this.pendingPitchDeg
         };
         this.pendingYawDeg = 0, this.pendingPitchDeg = 0;
-        const cT = (0, xT.g)();
-        return cT.gyroAiming && (TT => {
+        const gq = (0, cq.i)();
+        return gq.gyroAiming && (qq => {
           let {
-            activation: kT,
-            isHeld: cT,
-            useButton: lT,
-            gyroButton: MT
-          } = TT;
-          return "always" === kT || cT("aiming" === kT ? lT : MT)
+            activation: Eq,
+            isHeld: gq,
+            useButton: Yq,
+            gyroButton: lq
+          } = qq;
+          return "always" === Eq || gq("aiming" === Eq ? Yq : lq)
         })({
-          activation: cT.gyroActivation,
-          isHeld: TT => fT.d.isButtonHeld(TT),
-          useButton: (0, OT.j)("use"),
-          gyroButton: cT.gyroButton
-        }) ? ((TT, kT) => ({
-          Rm: -TT.yawDeg * kT * AT,
-          Wm: -TT.pitchDeg * kT * AT
-        }))(kT, cT.gyroSensitivity) : GT
+          activation: gq.gyroActivation,
+          isHeld: qq => Aq.c.isButtonHeld(qq),
+          useButton: (0, mq.i)("use"),
+          gyroButton: gq.gyroButton
+        }) ? ((qq, Eq) => ({
+          VJ: -qq.yawDeg * Eq * Bq,
+          dJ: -qq.pitchDeg * Eq * Bq
+        }))(Eq, gq.gyroSensitivity) : Tq
       }
       discardPending() {
         this.pendingYawDeg = 0, this.pendingPitchDeg = 0
       }
-      injectMotion(TT, kT) {
-        this.feed(TT, kT, "local", "injected")
+      injectMotion(qq, Eq) {
+        this.feed(qq, Eq, "local", "injected")
       }
       getCalibration() {
         return this.processor.getCalibration()
       }
-      feed(TT, kT, cT, lT) {
-        this.source !== lT && (this.processor.reset(), this.source = lT);
-        const MT = this.processor.process(TT, kT, cT);
-        this.pendingYawDeg += MT.yawDeg, this.pendingPitchDeg += MT.pitchDeg
+      feed(qq, Eq, gq, Yq) {
+        this.source !== Yq && (this.processor.reset(), this.source = Yq);
+        const lq = this.processor.process(qq, Eq, gq);
+        this.pendingYawDeg += lq.yawDeg, this.pendingPitchDeg += lq.pitchDeg
       }
     }
-    let ZT = null;
-    const uT = () => (ZT || (ZT = new ET), ZT),
-      XT = () => {
-        const [TT, kT] = (0, lT.useState)((() => uT().getStatus()));
-        return (0, KT.g)(eT, kT), (0, lT.useEffect)((() => {
-          kT(uT().getStatus())
-        }), []), TT
+    let pq = null;
+    const Gq = () => (pq || (pq = new Sq), pq),
+      Lq = () => {
+        const [qq, Eq] = (0, Yq.useState)((() => Gq().getStatus()));
+        return (0, Oq.f)(Mq, Eq), (0, Yq.useEffect)((() => {
+          Eq(Gq().getStatus())
+        }), []), qq
       }
   },
-  8895: (TT, kT, cT) => {
-    cT.d(kT, {
-      b: () => aT,
-      d: () => fT,
-      e: () => lT,
-      f: () => yT,
-      g: () => xT,
-      i: () => IT,
-      m: () => QT,
-      p: () => hT,
-      q: () => rT,
-      t: () => FT,
-      x: () => ST
+  8829: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      A: () => yq,
+      C: () => oq,
+      c: () => Qq,
+      f: () => Aq,
+      i: () => Yq,
+      m: () => xq,
+      n: () => cq,
+      o: () => uq,
+      q: () => Hq,
+      u: () => dq,
+      w: () => tq
     });
-    const lT = TT => "dualShock4" === TT || "dualSense" === TT,
-      MT = 1356,
-      KT = 1406,
-      OT = [{
-        vendorId: MT,
+    const Yq = qq => "dualShock4" === qq || "dualSense" === qq,
+      lq = 1356,
+      Oq = 1406,
+      mq = [{
+        vendorId: lq,
         productId: 1476,
         kind: "dualShock4"
       }, {
-        vendorId: MT,
+        vendorId: lq,
         productId: 2508,
         kind: "dualShock4"
       }, {
-        vendorId: MT,
+        vendorId: lq,
         productId: 2976,
         kind: "dualShock4"
       }, {
-        vendorId: MT,
+        vendorId: lq,
         productId: 3302,
         kind: "dualSense"
       }, {
-        vendorId: MT,
+        vendorId: lq,
         productId: 3570,
         kind: "dualSense"
       }, {
-        vendorId: KT,
+        vendorId: Oq,
         productId: 8201,
         kind: "switchPro"
       }, {
-        vendorId: KT,
+        vendorId: Oq,
         productId: 8198,
         kind: "joyConLeft"
       }, {
-        vendorId: KT,
+        vendorId: Oq,
         productId: 8199,
         kind: "joyConRight"
       }],
-      yT = OT.map((TT => {
+      xq = mq.map((qq => {
         let {
-          vendorId: kT,
-          productId: cT
-        } = TT;
+          vendorId: Eq,
+          productId: gq
+        } = qq;
         return {
-          vendorId: kT,
-          productId: cT
+          vendorId: Eq,
+          productId: gq
         }
       })),
-      fT = (TT, kT) => {
-        var cT, lT;
-        return null !== (cT = null === (lT = OT.find((cT => cT.vendorId === TT && cT.productId === kT))) || void 0 === lT ? void 0 : lT.kind) && void 0 !== cT ? cT : null
+      Aq = (qq, Eq) => {
+        var gq, Yq;
+        return null !== (gq = null === (Yq = mq.find((gq => gq.vendorId === qq && gq.productId === Eq))) || void 0 === Yq ? void 0 : Yq.kind) && void 0 !== gq ? gq : null
       },
-      xT = {
+      cq = {
         dualShock4: "DualShock 4",
         dualSense: "DualSense",
         switchPro: "Switch Pro Controller",
         joyConLeft: "Joy-Con (L)",
         joyConRight: "Joy-Con (R)"
       },
-      IT = {
+      uq = {
         dualSense: 0,
         dualShock4: 0,
         switchPro: 0,
         joyConRight: 1,
         joyConLeft: 2
       },
-      AT = 2e3 / 32767,
-      CT = 1 / 8192,
-      jT = 936 / 13371,
-      vT = (TT, kT, cT) => ({
-        x: TT.getInt16(kT, !0) * cT,
-        y: TT.getInt16(kT + 2, !0) * cT,
-        z: TT.getInt16(kT + 4, !0) * cT
+      Bq = 2e3 / 32767,
+      Wq = 1 / 8192,
+      Nq = 936 / 13371,
+      aq = (qq, Eq, gq) => ({
+        x: qq.getInt16(Eq, !0) * gq,
+        y: qq.getInt16(Eq + 2, !0) * gq,
+        z: qq.getInt16(Eq + 4, !0) * gq
       }),
-      tT = TT => 0 === TT.x && 0 === TT.y && 0 === TT.z,
-      hT = (TT, kT, cT) => null === kT ? null : "dualShock4" === TT ? 16 * (cT - kT & 65535) / 3 / 1e6 : (cT - kT >>> 0) / 3 / 1e6,
-      NT = (TT, kT) => "joyConRight" === kT ? {
-        x: TT.y,
-        y: -TT.z,
-        z: -TT.x
+      Vq = qq => 0 === qq.x && 0 === qq.y && 0 === qq.z,
+      dq = (qq, Eq, gq) => null === Eq ? null : "dualShock4" === qq ? 16 * (gq - Eq & 65535) / 3 / 1e6 : (gq - Eq >>> 0) / 3 / 1e6,
+      jq = (qq, Eq) => "joyConRight" === Eq ? {
+        x: qq.y,
+        y: -qq.z,
+        z: -qq.x
       } : {
-        x: -TT.y,
-        y: TT.z,
-        z: -TT.x
+        x: -qq.y,
+        y: qq.z,
+        z: -qq.x
       },
-      QT = (TT, kT, cT, MT) => lT(TT) ? ((TT, kT, cT, lT) => {
-        const MT = ((TT, kT, cT) => "dualShock4" === TT ? 1 === kT && cT >= 63 ? 0 : 17 === kT && cT >= 65 ? 2 : null : 1 === kT && cT >= 62 ? 0 : 49 === kT && cT >= 63 ? 1 : null)(TT, kT, cT.byteLength);
-        if (null === MT) return null;
-        if (2976 === lT && 1 === kT && 0 !== (4 & cT.getUint8(30))) return null;
-        const KT = MT + ("dualShock4" === TT ? 12 : 15),
-          OT = vT(cT, KT, AT),
-          yT = vT(cT, KT + 6, CT);
-        return tT(OT) && tT(yT) ? null : {
+      Hq = (qq, Eq, gq, lq) => Yq(qq) ? ((qq, Eq, gq, Yq) => {
+        const lq = ((qq, Eq, gq) => "dualShock4" === qq ? 1 === Eq && gq >= 63 ? 0 : 17 === Eq && gq >= 65 ? 2 : null : 1 === Eq && gq >= 62 ? 0 : 49 === Eq && gq >= 63 ? 1 : null)(qq, Eq, gq.byteLength);
+        if (null === lq) return null;
+        if (2976 === Yq && 1 === Eq && 0 !== (4 & gq.getUint8(30))) return null;
+        const Oq = lq + ("dualShock4" === qq ? 12 : 15),
+          mq = aq(gq, Oq, Bq),
+          xq = aq(gq, Oq + 6, Wq);
+        return Vq(mq) && Vq(xq) ? null : {
           readings: [{
-            gyro: OT,
-            accel: yT
+            gyro: mq,
+            accel: xq
           }],
           dtSec: null,
-          sensorClock: "dualShock4" === TT ? cT.getUint16(MT + 9, !0) : cT.getUint32(MT + 27, !0)
+          sensorClock: "dualShock4" === qq ? gq.getUint16(lq + 9, !0) : gq.getUint32(lq + 27, !0)
         }
-      })(TT, kT, cT, MT) : ((TT, kT, cT) => {
-        if (48 !== kT && 49 !== kT || cT.byteLength < 48) return null;
-        const lT = [];
-        for (let MT = 0; MT < 3; MT++) {
-          const kT = vT(cT, 12 + 12 * MT, 244e-6),
-            KT = vT(cT, 18 + 12 * MT, jT);
-          if (tT(KT) && tT(kT)) return null;
-          lT.push({
-            gyro: NT(KT, TT),
-            accel: NT(kT, TT)
+      })(qq, Eq, gq, lq) : ((qq, Eq, gq) => {
+        if (48 !== Eq && 49 !== Eq || gq.byteLength < 48) return null;
+        const Yq = [];
+        for (let lq = 0; lq < 3; lq++) {
+          const Eq = aq(gq, 12 + 12 * lq, 244e-6),
+            Oq = aq(gq, 18 + 12 * lq, Nq);
+          if (Vq(Oq) && Vq(Eq)) return null;
+          Yq.push({
+            gyro: jq(Oq, qq),
+            accel: jq(Eq, qq)
           })
         }
         return {
-          readings: lT,
+          readings: Yq,
           dtSec: .005,
           sensorClock: null
         }
-      })(TT, kT, cT),
-      ST = 1,
-      DT = [0, 1, 64, 64, 0, 1, 64, 64],
-      aT = (TT, kT, cT) => new Uint8Array([15 & TT, ...DT, kT, ...cT]),
-      FT = [{
+      })(qq, Eq, gq),
+      oq = 1,
+      Pq = [0, 1, 64, 64, 0, 1, 64, 64],
+      Qq = (qq, Eq, gq) => new Uint8Array([15 & qq, ...Pq, Eq, ...gq]),
+      yq = [{
         subcommand: 64,
         args: [1]
       }, {
         subcommand: 3,
         args: [48]
       }],
-      rT = {
+      tq = {
         dualShock4: [2, 5],
         dualSense: [5]
       }
   },
-  8229: (TT, kT, cT) => {
-    cT.d(kT, {
-      b: () => zT,
-      f: () => ET,
-      h: () => NT,
-      i: () => jT.h,
-      m: () => HT,
-      n: () => oT,
-      r: () => QT,
-      t: () => eT,
-      u: () => jT.r,
-      v: () => jT.s,
-      x: () => ZT,
-      z: () => jT.w,
-      A: () => PT
+  8120: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => bq,
+      h: () => Sq,
+      i: () => jq,
+      k: () => Nq.c,
+      n: () => fq,
+      q: () => Zq,
+      r: () => Hq,
+      t: () => Mq,
+      w: () => Nq.m,
+      y: () => Nq.q,
+      B: () => pq,
+      D: () => Nq.r,
+      E: () => rq
     });
-    var lT = cT(71),
-      MT = cT(31),
-      KT = cT(36),
-      OT = cT(1461),
-      yT = cT(1292),
-      fT = cT(8206),
-      xT = cT(8236),
-      IT = cT(8194),
-      AT = cT(8188),
-      CT = cT(8240),
-      jT = cT(1409),
-      vT = cT(8190),
-      tT = cT(8677),
-      hT = cT(4368);
-    const NT = TT => !TT.repeat && !(0, tT.d)(TT.key),
-      QT = "PadHidesCursor";
-    let ST = !1;
-    const DT = TT => {
-        TT !== ST && (ST = TT, document.documentElement.classList.toggle(QT, TT))
+    var Yq = gq(57),
+      lq = gq(24),
+      Oq = gq(31),
+      mq = gq(1416),
+      xq = gq(1274),
+      Aq = gq(8090),
+      cq = gq(8123),
+      uq = gq(8064),
+      Bq = gq(8057),
+      Wq = gq(8130),
+      Nq = gq(1367),
+      aq = gq(8061),
+      Vq = gq(8586),
+      dq = gq(4207);
+    const jq = qq => !qq.repeat && !(0, Vq.b)(qq.key),
+      Hq = "PadHidesCursor";
+    let oq = !1;
+    const Pq = qq => {
+        qq !== oq && (oq = qq, document.documentElement.classList.toggle(Hq, qq))
       },
-      aT = new class {
+      Qq = new class {
         constructor() {
           this.buttonsDown = [], this.stickAnchors = [null, null], this.lastActivityMs = -1 / 0, this.onlyMovedOn = !1
         }
-        observe(TT) {
-          let kT = !1,
-            cT = !1;
-          TT.values.forEach(((TT, lT) => {
-            const MT = TT >= (this.buttonsDown[lT] ? vT.U : vT.S);
-            MT && !this.buttonsDown[lT] && (kT = !0, cT = !0), this.buttonsDown[lT] = MT
+        observe(qq) {
+          let Eq = !1,
+            gq = !1;
+          qq.values.forEach(((qq, Yq) => {
+            const lq = qq >= (this.buttonsDown[Yq] ? aq.U : aq.R);
+            lq && !this.buttonsDown[Yq] && (Eq = !0, gq = !0), this.buttonsDown[Yq] = lq
           }));
-          return [TT.leftStick, TT.rightStick].forEach(((TT, lT) => {
-            const MT = this.stickAnchors[lT];
-            Math.hypot(TT.x, TT.y) < (MT ? vT.U : .3) ? this.stickAnchors[lT] = null : (!MT || Math.hypot(TT.x - MT.x, TT.y - MT.y) >= .3) && (this.stickAnchors[lT] = {
-              x: TT.x,
-              y: TT.y
-            }, kT = !0, cT ||= !MT)
-          })), kT && (this.lastActivityMs = TT.timestampMs), this.onlyMovedOn = kT && !cT, kT
+          return [qq.leftStick, qq.rightStick].forEach(((qq, Yq) => {
+            const lq = this.stickAnchors[Yq];
+            Math.hypot(qq.x, qq.y) < (lq ? aq.U : .3) ? this.stickAnchors[Yq] = null : (!lq || Math.hypot(qq.x - lq.x, qq.y - lq.y) >= .3) && (this.stickAnchors[Yq] = {
+              x: qq.x,
+              y: qq.y
+            }, Eq = !0, gq ||= !lq)
+          })), Eq && (this.lastActivityMs = qq.timestampMs), this.onlyMovedOn = Eq && !gq, Eq
         }
         wasOnlyMoveOn() {
           return this.onlyMovedOn
         }
-        isHolding(TT) {
-          return !(TT - this.lastActivityMs >= 1e3) && (this.buttonsDown.some((TT => TT)) || this.stickAnchors.some((TT => null !== TT)))
+        isHolding(qq) {
+          return !(qq - this.lastActivityMs >= 1e3) && (this.buttonsDown.some((qq => qq)) || this.stickAnchors.some((qq => null !== qq)))
         }
         isStickOffRest() {
-          return this.stickAnchors.some((TT => null !== TT))
+          return this.stickAnchors.some((qq => null !== qq))
         }
         reset() {
           this.buttonsDown = [], this.stickAnchors = [null, null], this.lastActivityMs = -1 / 0, this.onlyMovedOn = !1
         }
       };
-    let FT = null,
-      rT = !1;
-    const PT = () => rT;
-    let wT = null,
-      mT = !1,
-      bT = null;
-    const zT = () => bT;
-    let JT = !1;
-    const oT = TT => {
-        if (!aT.observe(TT)) return !1;
-        if (JT && aT.wasOnlyMoveOn() && !(0, jT.h)()) return !1;
-        JT = !1, rT = !1;
-        const kT = !(0, jT.h)();
-        return kT && (FT = TT, bT = !ST && mT && wT ? {
-          ...wT
-        } : null), mT = !1, (0, jT.r)("gamepad"), DT(!0), (0, CT.p)((0, fT.j)()), kT
+    let yq = null,
+      tq = !1;
+    const rq = () => tq;
+    let vq = null,
+      hq = !1,
+      nq = null;
+    const bq = () => nq;
+    let iq = !1;
+    const Zq = qq => {
+        if (!Qq.observe(qq)) return !1;
+        if (iq && Qq.wasOnlyMoveOn() && !(0, Nq.c)()) return !1;
+        iq = !1, tq = !1;
+        const Eq = !(0, Nq.c)();
+        return Eq && (yq = qq, nq = !oq && hq && vq ? {
+          ...vq
+        } : null), hq = !1, (0, Nq.m)("gamepad"), Pq(!0), (0, Wq.r)((0, Aq.k)()), Eq
       },
-      HT = TT => !(0, jT.h)() || TT === FT,
-      eT = () => {
-        aT.reset()
+      fq = qq => !(0, Nq.c)() || qq === yq,
+      Mq = () => {
+        Qq.reset()
       },
-      GT = () => {
-        const TT = MT.e.get("activeInputDevice"),
-          kT = "gamepad" === TT ? AT.e.getActivePad() : null;
+      Tq = () => {
+        const qq = lq.b.get("activeInputDevice"),
+          Eq = "gamepad" === qq ? Bq.h.getActivePad() : null;
         return {
-          device: TT,
-          inGame: (0, yT.q)(),
-          padMovesMouse: null !== kT && (0, IT.e)(kT.id)
+          device: qq,
+          inGame: (0, xq.p)(),
+          padMovesMouse: null !== Eq && (0, uq.e)(Eq.id)
         }
       },
-      VT = TT => {
-        document.pointerLockElement ? wT = null : (wT ??= {
+      zq = qq => {
+        document.pointerLockElement ? vq = null : (vq ??= {
           x: 0,
           y: 0
-        }, wT.x = TT.clientX, wT.y = TT.clientY)
+        }, vq.x = qq.clientX, vq.y = qq.clientY)
       },
-      ET = () => {
-        const TT = new hT.d,
-          kT = kT => {
-            TT.reset(), JT = !1, (0, jT.r)(kT)
+      Sq = () => {
+        const qq = new dq.c,
+          Eq = Eq => {
+            qq.reset(), iq = !1, (0, Nq.m)(Eq)
           },
-          cT = TT => {
-            if (TT.isTrusted) {
-              if (TT instanceof KeyboardEvent) {
-                if ((0, jT.p)(TT), !NT(TT)) return;
-                rT = !0
+          gq = qq => {
+            if (qq.isTrusted) {
+              if (qq instanceof KeyboardEvent) {
+                if ((0, Nq.i)(qq), !jq(qq)) return;
+                tq = !0
               }
-              if (TT instanceof PointerEvent && "touch" === TT.pointerType) return wT = null, void kT("touch");
-              TT instanceof PointerEvent && (VT(TT), mT = !0), ("pointerdown" !== TT.type || (TT => {
+              if (qq instanceof PointerEvent && "touch" === qq.pointerType) return vq = null, void Eq("touch");
+              qq instanceof PointerEvent && (zq(qq), hq = !0), ("pointerdown" !== qq.type || (qq => {
                 let {
-                  device: kT,
-                  inGame: cT,
-                  padMovesMouse: lT
-                } = TT;
-                return !("gamepad" === kT && lT && cT)
-              })(GT())) && kT("keyboardMouse")
+                  device: Eq,
+                  inGame: gq,
+                  padMovesMouse: Yq
+                } = qq;
+                return !("gamepad" === Eq && Yq && gq)
+              })(Tq())) && Eq("keyboardMouse")
             }
           },
-          lT = TT => {
-            TT.isTrusted && (wT = null, kT("touch"))
+          Yq = qq => {
+            qq.isTrusted && (vq = null, Eq("touch"))
           },
-          OT = TT => {
-            TT.isTrusted && "touch" !== TT.pointerType && !TT.relatedTarget && (wT = null)
+          mq = qq => {
+            qq.isTrusted && "touch" !== qq.pointerType && !qq.relatedTarget && (vq = null)
           },
-          yT = cT => {
-            if (!cT.isTrusted || "touch" === cT.pointerType) return;
-            VT(cT);
-            const lT = cT.movementX || 0,
-              KT = cT.movementY || 0;
-            if (0 === lT && 0 === KT) return;
-            if (mT = !0, DT(!1), "keyboardMouse" === MT.e.get("activeInputDevice")) return;
-            const OT = aT.isHolding(cT.timeStamp),
-              yT = GT(),
-              fT = (TT => {
+          xq = gq => {
+            if (!gq.isTrusted || "touch" === gq.pointerType) return;
+            zq(gq);
+            const Yq = gq.movementX || 0,
+              Oq = gq.movementY || 0;
+            if (0 === Yq && 0 === Oq) return;
+            if (hq = !0, Pq(!1), "keyboardMouse" === lq.b.get("activeInputDevice")) return;
+            const mq = Qq.isHolding(gq.timeStamp),
+              xq = Tq(),
+              Aq = (qq => {
                 let {
-                  device: kT,
-                  inGame: cT,
-                  padMovesMouse: lT,
-                  padHolding: MT
-                } = TT;
-                return ("gamepad" !== kT || !lT) && "keyboardMouse" !== kT && (cT || !MT)
+                  device: Eq,
+                  inGame: gq,
+                  padMovesMouse: Yq,
+                  padHolding: lq
+                } = qq;
+                return ("gamepad" !== Eq || !Yq) && "keyboardMouse" !== Eq && (gq || !lq)
               })({
-                ...yT,
-                inGame: yT.inGame && (0, xT.e)(),
-                padHolding: OT
+                ...xq,
+                inGame: xq.inGame && (0, cq.d)(),
+                padHolding: mq
               });
-            fT && TT.add(lT, KT, cT.timeStamp) && (kT("keyboardMouse"), JT = aT.isStickOffRest())
+            Aq && qq.add(Yq, Oq, gq.timeStamp) && (Eq("keyboardMouse"), iq = Qq.isStickOffRest())
           },
-          fT = TT => {
-            DT("gamepad" === TT)
+          Aq = qq => {
+            Pq("gamepad" === qq)
           },
-          IT = {
+          uq = {
             capture: !0,
             passive: !0
           };
-        window.addEventListener("keydown", cT, IT), window.addEventListener("pointerdown", cT, IT), window.addEventListener("wheel", cT, IT), window.addEventListener("touchstart", lT, IT), window.addEventListener("pointermove", yT, IT), window.addEventListener("pointerout", OT, IT);
-        const AT = KT.k.subscribe("appManagerUpdated|activeInputDevice", fT);
-        return fT(MT.e.get("activeInputDevice")), () => {
-          window.removeEventListener("keydown", cT, IT), window.removeEventListener("pointerdown", cT, IT), window.removeEventListener("wheel", cT, IT), window.removeEventListener("touchstart", lT, IT), window.removeEventListener("pointermove", yT, IT), window.removeEventListener("pointerout", OT, IT), wT = null, KT.k.unsubscribe(AT), DT(!1)
+        window.addEventListener("keydown", gq, uq), window.addEventListener("pointerdown", gq, uq), window.addEventListener("wheel", gq, uq), window.addEventListener("touchstart", Yq, uq), window.addEventListener("pointermove", xq, uq), window.addEventListener("pointerout", mq, uq);
+        const Bq = Oq.i.subscribe("appManagerUpdated|activeInputDevice", Aq);
+        return Aq(lq.b.get("activeInputDevice")), () => {
+          window.removeEventListener("keydown", gq, uq), window.removeEventListener("pointerdown", gq, uq), window.removeEventListener("wheel", gq, uq), window.removeEventListener("touchstart", Yq, uq), window.removeEventListener("pointermove", xq, uq), window.removeEventListener("pointerout", mq, uq), vq = null, Oq.i.unsubscribe(Bq), Pq(!1)
         }
       },
-      ZT = () => {
-        const [TT, kT] = (0, lT.useState)(fT.j);
-        return (0, OT.g)(fT.e, (() => {
-          kT((0, fT.j)())
-        })), (0, OT.g)(AT.c, (() => {
-          kT((0, fT.j)())
-        })), TT
+      pq = () => {
+        const [qq, Eq] = (0, Yq.useState)(Aq.k);
+        return (0, mq.f)(Aq.c, (() => {
+          Eq((0, Aq.k)())
+        })), (0, mq.f)(Bq.d, (() => {
+          Eq((0, Aq.k)())
+        })), qq
       }
   },
-  8209: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => lT,
-      h: () => MT
+  8095: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => Yq,
+      f: () => lq
     });
-    const lT = ["xbox", "playstation", "nintendo", "steamdeck", "generic"],
-      MT = TT => lT.includes(TT)
+    const Yq = ["xbox", "playstation", "nintendo", "steamdeck", "generic"],
+      lq = qq => Yq.includes(qq)
   },
-  8236: (TT, kT, cT) => {
-    cT.d(kT, {
-      d: () => xT,
-      e: () => IT,
-      g: () => fT,
-      j: () => yT
+  8123: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => cq,
+      d: () => uq,
+      g: () => Aq,
+      i: () => xq
     });
-    var lT = cT(31),
-      MT = cT(1654),
-      KT = cT(1745);
-    const OT = new Map,
-      yT = (TT, kT) => (OT.has(TT) && console.warn(`Gameplay blocker "${TT}" registered twice; the newer one replaces it.`), OT.set(TT, kT), () => {
-        OT.get(TT) === kT && OT.delete(TT)
+    var Yq = gq(24),
+      lq = gq(1622),
+      Oq = gq(1716);
+    const mq = new Map,
+      xq = (qq, Eq) => (mq.has(qq) && console.warn(`Gameplay blocker "${qq}" registered twice; the newer one replaces it.`), mq.set(qq, Eq), () => {
+        mq.get(qq) === Eq && mq.delete(qq)
       }),
-      fT = () => (0, KT.e)(document.activeElement),
-      xT = function() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-        for (const [kT, cT] of OT)
-          if (!TT.includes(kT) && cT()) return kT;
+      Aq = () => (0, Oq.b)(document.activeElement),
+      cq = function() {
+        let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+        for (const [Eq, gq] of mq)
+          if (!qq.includes(Eq) && gq()) return Eq;
         return null
       },
-      IT = function() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-        return "inGame" === lT.e.get("gameState") && (!(0, MT.s)() && (!fT() && null === xT(TT)))
+      uq = function() {
+        let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+        return "inGame" === Yq.b.get("gameState") && (!(0, lq.p)() && (!Aq() && null === cq(qq)))
       }
   },
-  8190: (TT, kT, cT) => {
-    cT.d(kT, {
-      D: () => ST,
-      E: () => JT,
-      I: () => DT,
-      J: () => NT,
-      N: () => hT,
-      Q: () => xT,
-      S: () => CT,
-      U: () => jT,
-      Y: () => MT,
-      ab: () => lT,
-      c: () => HT,
-      cb: () => FT,
-      e: () => zT,
-      fb: () => bT,
-      hb: () => oT,
-      i: () => IT,
-      jb: () => aT,
-      m: () => fT,
-      o: () => yT,
-      p: () => PT,
-      r: () => QT,
-      t: () => rT,
-      x: () => KT,
-      z: () => AT
+  8061: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      $: () => Yq,
+      A: () => Bq,
+      C: () => oq,
+      F: () => iq,
+      H: () => Pq,
+      J: () => jq,
+      K: () => dq,
+      N: () => cq,
+      R: () => Wq,
+      U: () => Nq,
+      X: () => lq,
+      ab: () => yq,
+      c: () => fq,
+      d: () => bq,
+      eb: () => nq,
+      f: () => uq,
+      ib: () => Zq,
+      j: () => Aq,
+      kb: () => Qq,
+      m: () => xq,
+      p: () => rq,
+      t: () => Hq,
+      x: () => tq,
+      y: () => Oq
     });
-    const lT = ["A", "B", "X", "Y", "LB", "RB", "LT", "RT", "View", "Menu", "LS", "RS", "Up", "Down", "Left", "Right", "Home"],
-      MT = lT.length,
-      KT = function() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+    const Yq = ["A", "B", "X", "Y", "LB", "RB", "LT", "RT", "View", "Menu", "LS", "RS", "Up", "Down", "Left", "Right", "Home"],
+      lq = Yq.length,
+      Oq = function() {
+        let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
         return {
-          values: new Array(MT).fill(0),
+          values: new Array(lq).fill(0),
           leftStick: {
             x: 0,
             y: 0
@@ -8197,209 +8293,209 @@ export const modules = {
             x: 0,
             y: 0
           },
-          timestampMs: TT
+          timestampMs: qq
         }
       },
-      OT = Object.fromEntries(lT.map(((TT, kT) => [TT, kT]))),
-      yT = TT => OT[TT],
-      fT = function(TT, kT) {
-        let cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : .95;
-        const lT = Math.hypot(TT.x, TT.y);
-        if (lT <= kT) return {
+      mq = Object.fromEntries(Yq.map(((qq, Eq) => [qq, Eq]))),
+      xq = qq => mq[qq],
+      Aq = function(qq, Eq) {
+        let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : .95;
+        const Yq = Math.hypot(qq.x, qq.y);
+        if (Yq <= Eq) return {
           x: 0,
           y: 0
         };
-        const MT = Math.min(1, (lT - kT) / Math.max(1e-4, cT - kT));
+        const lq = Math.min(1, (Yq - Eq) / Math.max(1e-4, gq - Eq));
         return {
-          x: TT.x / lT * MT,
-          y: TT.y / lT * MT
+          x: qq.x / Yq * lq,
+          y: qq.y / Yq * lq
         }
       },
-      xT = ["exponential", "linear", "boost"],
-      IT = (TT, kT) => {
-        const cT = Math.hypot(TT.x, TT.y);
-        if (0 === cT) return {
+      cq = ["exponential", "linear", "boost"],
+      uq = (qq, Eq) => {
+        const gq = Math.hypot(qq.x, qq.y);
+        if (0 === gq) return {
           x: 0,
           y: 0
         };
-        const lT = ((TT, kT) => {
-          const cT = Math.max(0, Math.min(1, TT));
-          return "linear" === kT ? cT : cT * cT
-        })(cT, kT);
+        const Yq = ((qq, Eq) => {
+          const gq = Math.max(0, Math.min(1, qq));
+          return "linear" === Eq ? gq : gq * gq
+        })(gq, Eq);
         return {
-          x: TT.x / cT * lT,
-          y: TT.y / cT * lT
+          x: qq.x / gq * Yq,
+          y: qq.y / gq * Yq
         }
       },
-      AT = .5,
-      CT = .3,
-      jT = .2,
-      vT = yT("LT"),
-      tT = yT("RT"),
-      hT = TT => TT === vT || TT === tT,
-      NT = (TT, kT) => {
-        const cT = yT(kT);
-        return hT(cT) ? TT[cT] > .35 : TT[cT] >= AT
+      Bq = .5,
+      Wq = .3,
+      Nq = .2,
+      aq = xq("LT"),
+      Vq = xq("RT"),
+      dq = qq => qq === aq || qq === Vq,
+      jq = (qq, Eq) => {
+        const gq = xq(Eq);
+        return dq(gq) ? qq[gq] > .35 : qq[gq] >= Bq
       },
-      QT = (TT, kT) => TT.map(((TT, cT) => hT(cT) ? kT[cT] ? TT > .35 : TT >= .55 : TT >= AT)),
-      ST = ["Up", "Down", "Left", "Right"],
-      DT = TT => ST.includes(TT),
-      aT = function(TT) {
-        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : .5;
-        return Math.hypot(TT.x, TT.y) < kT ? null : Math.abs(TT.x) > Math.abs(TT.y) ? TT.x > 0 ? "Right" : "Left" : TT.y > 0 ? "Down" : "Up"
+      Hq = (qq, Eq) => qq.map(((qq, gq) => dq(gq) ? Eq[gq] ? qq > .35 : qq >= .55 : qq >= Bq)),
+      oq = ["Up", "Down", "Left", "Right"],
+      Pq = qq => oq.includes(qq),
+      Qq = function(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : .5;
+        return Math.hypot(qq.x, qq.y) < Eq ? null : Math.abs(qq.x) > Math.abs(qq.y) ? qq.x > 0 ? "Right" : "Left" : qq.y > 0 ? "Down" : "Up"
       },
-      FT = {
+      yq = {
         initialDelayMs: 350,
         intervalMs: 120
       },
-      rT = {
+      tq = {
         initialDelayMs: 350,
         intervalMs: 150
       },
-      PT = ["default", "slow", "off"],
-      wT = 800,
-      mT = 250,
-      bT = (TT, kT) => "off" === kT ? null : "slow" === kT ? {
-        initialDelayMs: Math.max(TT.initialDelayMs, wT),
-        intervalMs: Math.max(TT.intervalMs, mT)
-      } : TT;
-    class zT {
-      constructor(TT) {
-        this.readTiming = TT, this.ty = !1, this.timing = null, this.nextFireMs = 0
+      rq = ["default", "slow", "off"],
+      vq = 800,
+      hq = 250,
+      nq = (qq, Eq) => "off" === Eq ? null : "slow" === Eq ? {
+        initialDelayMs: Math.max(qq.initialDelayMs, vq),
+        intervalMs: Math.max(qq.intervalMs, hq)
+      } : qq;
+    class bq {
+      constructor(qq) {
+        this.readTiming = qq, this.Fc = !1, this.timing = null, this.nextFireMs = 0
       }
-      update(TT, kT) {
-        return TT ? this.ty ? !!(this.timing && kT >= this.nextFireMs) && (this.nextFireMs = kT + this.timing.intervalMs, !0) : (this.ty = !0, this.timing = this.readTiming(), this.nextFireMs = kT + (null !== (cT = null === (lT = this.timing) || void 0 === lT ? void 0 : lT.initialDelayMs) && void 0 !== cT ? cT : 0), !0) : (this.ty = !1, !1);
-        var cT, lT
+      update(qq, Eq) {
+        return qq ? this.Fc ? !!(this.timing && Eq >= this.nextFireMs) && (this.nextFireMs = Eq + this.timing.intervalMs, !0) : (this.Fc = !0, this.timing = this.readTiming(), this.nextFireMs = Eq + (null !== (gq = null === (Yq = this.timing) || void 0 === Yq ? void 0 : Yq.initialDelayMs) && void 0 !== gq ? gq : 0), !0) : (this.Fc = !1, !1);
+        var gq, Yq
       }
       reset() {
-        this.ty = !1
+        this.Fc = !1
       }
     }
-    const JT = {
+    const iq = {
         initialDelayMs: 350,
         intervalMs: 80
       },
-      oT = {
+      Zq = {
         initialDelayMs: 400,
         intervalMs: 90
       };
-    class HT {
-      constructor(TT) {
-        this.timer = TT, this.direction = null
+    class fq {
+      constructor(qq) {
+        this.timer = qq, this.direction = null
       }
-      update(TT, kT) {
-        return TT !== this.direction && (this.timer.reset(), this.direction = TT), this.timer.update(null !== TT, kT) ? TT : null
+      update(qq, Eq) {
+        return qq !== this.direction && (this.timer.reset(), this.direction = qq), this.timer.update(null !== qq, Eq) ? qq : null
       }
       reset() {
         this.timer.reset(), this.direction = null
       }
     }
   },
-  8727: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => MT,
-      f: () => KT
+  8646: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => lq,
+      g: () => Oq
     });
-    let lT = -1 / 0;
-    const MT = () => {
-        lT = performance.now()
+    let Yq = -1 / 0;
+    const lq = () => {
+        Yq = performance.now()
       },
-      KT = TT => performance.now() - lT < TT
+      Oq = qq => performance.now() - Yq < qq
   },
-  8680: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => OT,
-      g: () => KT
+  8594: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => mq,
+      e: () => Oq
     });
-    var lT = cT(8206),
-      MT = cT(8190);
-    const KT = TT => (0, MT.fb)(TT, (0, lT.g)().buttonRepeat),
-      OT = TT => new MT.e((() => KT(TT)))
+    var Yq = gq(8090),
+      lq = gq(8061);
+    const Oq = qq => (0, lq.eb)(qq, (0, Yq.i)().buttonRepeat),
+      mq = qq => new lq.d((() => Oq(qq)))
   },
-  8219: (TT, kT, cT) => {
-    cT.d(kT, {
-      d: () => fT,
-      f: () => KT,
-      h: () => yT
+  8110: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => Aq,
+      d: () => Oq,
+      f: () => xq
     });
-    var lT = cT(36),
-      MT = cT(8206);
-    const KT = (TT, kT) => "OpenShop" === TT ? "shop" === kT : "OpenLobbyLeaderboard" !== TT || "leaderboard" === kT;
-    let OT = !1;
-    const yT = TT => {
-        TT !== OT && (OT = TT, lT.k.nt(MT.e, (0, MT.g)()))
+    var Yq = gq(31),
+      lq = gq(8090);
+    const Oq = (qq, Eq) => "OpenShop" === qq ? "shop" === Eq : "OpenLobbyLeaderboard" !== qq || "leaderboard" === Eq;
+    let mq = !1;
+    const xq = qq => {
+        qq !== mq && (mq = qq, Yq.i.TV(lq.c, (0, lq.i)()))
       },
-      fT = () => ((TT, kT) => "shop" === TT && kT ? "shop" : "leaderboard")((0, MT.g)().leaderboardButton, OT)
+      Aq = () => ((qq, Eq) => "shop" === qq && Eq ? "shop" : "leaderboard")((0, lq.i)().leaderboardButton, mq)
   },
-  8215: (TT, kT, cT) => {
-    cT.d(kT, {
-      $: () => vT,
-      B: () => aT,
-      D: () => CT,
-      E: () => jT,
-      I: () => AT,
-      L: () => DT,
-      N: () => xT,
-      R: () => NT,
-      T: () => mT,
-      U: () => ST,
-      V: () => tT,
-      Y: () => hT,
-      b: () => GT,
-      cb: () => QT,
-      f: () => ET,
-      gb: () => oT,
-      h: () => bT,
-      ib: () => KT,
-      k: () => OT,
-      mb: () => FT,
-      nb: () => VT,
-      o: () => wT,
-      pb: () => PT,
-      r: () => rT,
-      t: () => HT,
-      u: () => eT,
-      v: () => IT,
-      w: () => fT,
-      y: () => yT
+  8104: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      $: () => hq,
+      Bb: () => zq,
+      C: () => Aq,
+      Cb: () => rq,
+      F: () => xq,
+      J: () => Qq,
+      K: () => Wq,
+      O: () => Nq,
+      P: () => Bq,
+      S: () => Pq,
+      T: () => cq,
+      X: () => jq,
+      d: () => Tq,
+      db: () => oq,
+      h: () => Sq,
+      hb: () => Vq,
+      kb: () => dq,
+      l: () => nq,
+      n: () => mq,
+      nb: () => aq,
+      ob: () => Hq,
+      r: () => vq,
+      rb: () => Zq,
+      t: () => tq,
+      vb: () => Oq,
+      w: () => fq,
+      x: () => Mq,
+      yb: () => yq,
+      z: () => uq
     });
-    var lT = cT(8202),
-      MT = cT(8190);
-    const KT = {
+    var Yq = gq(8081),
+      lq = gq(8061);
+    const Oq = {
         min: 25,
         max: 500,
         step: 5
       },
-      OT = {
+      mq = {
         min: 25,
         max: 100,
         step: 5
       },
-      yT = {
+      xq = {
         min: 0,
         max: .4,
         step: .01
       },
-      fT = {
+      Aq = {
         min: 25,
         max: 300,
         step: 5
       },
-      xT = {
+      cq = {
         min: .5,
         max: 6,
         step: .1
       },
-      IT = (TT, kT) => {
-        if (!Number.isFinite(TT)) return kT.min;
-        const cT = kT.min + Math.round((TT - kT.min) / kT.step) * kT.step,
-          lT = Math.min(kT.max, Math.max(kT.min, cT));
-        return Math.round(1e3 * lT) / 1e3
+      uq = (qq, Eq) => {
+        if (!Number.isFinite(qq)) return Eq.min;
+        const gq = Eq.min + Math.round((qq - Eq.min) / Eq.step) * Eq.step,
+          Yq = Math.min(Eq.max, Math.max(Eq.min, gq));
+        return Math.round(1e3 * Yq) / 1e3
       },
-      AT = TT => `${Math.round(TT)}%`,
-      CT = TT => AT(100 * TT),
-      jT = TT => `${TT.toFixed(1)}\xd7`,
-      vT = [{
+      Bq = qq => `${Math.round(qq)}%`,
+      Wq = qq => Bq(100 * qq),
+      Nq = qq => `${qq.toFixed(1)}\xd7`,
+      aq = [{
         value: "auto",
         labelKey: "controller:settingsPromptAuto"
       }, {
@@ -8418,7 +8514,7 @@ export const modules = {
         value: "generic",
         labelKey: "controller:settingsPromptGeneric"
       }],
-      tT = [{
+      Vq = [{
         value: "exponential",
         labelKey: "controller:settingsCurveExponential"
       }, {
@@ -8428,7 +8524,7 @@ export const modules = {
         value: "boost",
         labelKey: "controller:settingsCurveBoost"
       }],
-      hT = [{
+      dq = [{
         value: "hybrid",
         labelKey: "controller:settingsNavHybrid"
       }, {
@@ -8438,7 +8534,7 @@ export const modules = {
         value: "cursor",
         labelKey: "controller:settingsVirtualCursor"
       }],
-      NT = [{
+      jq = [{
         value: "hybrid",
         labelKey: "controller:settingsNavHybrid"
       }, {
@@ -8448,21 +8544,21 @@ export const modules = {
         value: "cursor",
         labelKey: "controller:settingsVirtualCursor"
       }],
-      QT = [{
+      Hq = [{
         value: "wheel",
         labelKey: "controller:settingsQuickChatWheel"
       }, {
         value: "off",
         labelKey: "controller:settingsQuickChatOff"
       }],
-      ST = [{
+      oq = [{
         value: "shop",
         labelKey: "controller:settingsLeaderboardButtonShop"
       }, {
         value: "leaderboard",
         labelKey: "controller:settingsLeaderboardButtonLeaderboard"
       }],
-      DT = [{
+      Pq = [{
         value: "always",
         labelKey: "controller:settingsGyroAlways"
       }, {
@@ -8472,21 +8568,21 @@ export const modules = {
         value: "button",
         labelKey: "controller:settingsGyroWhileButton"
       }],
-      aT = [{
+      Qq = [{
         value: "tapHold",
         labelKey: "controller:settingsEmoteButtonTapHold"
       }, {
         value: "wheel",
         labelKey: "controller:settingsEmoteButtonWheel"
       }],
-      FT = [{
+      yq = [{
         value: "toggle",
         labelKey: "controller:settingsSneakToggle"
       }, {
         value: "hold",
         labelKey: "controller:settingsSneakHold"
       }],
-      rT = [{
+      tq = [{
         value: "default",
         labelKey: "controller:settingsButtonRepeatDefault"
       }, {
@@ -8496,7 +8592,7 @@ export const modules = {
         value: "off",
         labelKey: "controller:settingsButtonRepeatOff"
       }],
-      PT = [{
+      rq = [{
         value: "short",
         labelKey: "controller:settingsTapHoldShort"
       }, {
@@ -8506,18 +8602,18 @@ export const modules = {
         value: "long",
         labelKey: "controller:settingsTapHoldLong"
       }],
-      wT = [{
+      vq = [{
         value: "hold",
         labelKey: "controller:settingsAttackHold"
       }, {
         value: "toggle",
         labelKey: "controller:settingsAttackToggle"
       }],
-      mT = {
+      hq = {
         southpaw: "controller:settingsLayoutSouthpaw",
         triggersSwapped: "controller:settingsLayoutTriggersSwapped"
       },
-      bT = {
+      nq = {
         jump: "controller:settingsActionJump",
         sneak: "controller:settingsActionSneak",
         sneakToggle: "controller:settingsActionSneakToggle",
@@ -8562,13 +8658,13 @@ export const modules = {
         keyboardClose: "controller:settingsActionKeyboardClose",
         keyboardChannel: "controller:settingsActionKeyboardChannel"
       },
-      zT = {
+      bq = {
         gameplay: "controller:settingsGroupGameplay",
         menu: "controller:settingsGroupMenus",
         inventory: "controller:settingsGroupInventory",
         keyboard: "controller:settingsGroupKeyboard"
       },
-      JT = [{
+      iq = [{
         kind: "fixed",
         stick: "move",
         labelKey: "controller:settingsActionMove"
@@ -8577,455 +8673,359 @@ export const modules = {
         stick: "look",
         labelKey: "controller:settingsActionLook"
       }],
-      oT = lT.d.map((TT => {
+      Zq = Yq.b.map((qq => {
         let {
-          group: kT,
-          actions: cT
-        } = TT;
-        const lT = cT.map((TT => ({
+          group: Eq,
+          actions: gq
+        } = qq;
+        const Yq = gq.map((qq => ({
           kind: "action",
-          action: TT
+          action: qq
         })));
         return {
-          titleKey: zT[kT],
-          rows: "gameplay" === kT ? [...JT, ...lT] : lT
+          titleKey: bq[Eq],
+          rows: "gameplay" === Eq ? [...iq, ...Yq] : Yq
         }
       })),
-      HT = MT.ab.filter((TT => "Home" !== TT)),
-      eT = 1e4;
-    class GT {
-      constructor(TT) {
-        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => !0;
-        this.cancelButton = TT, this.openButton = kT, this.accepts = cT, this.startMs = null, this.ignoredUntilMs = new Map, this.cancelDownAtMs = null
+      fq = lq.$.filter((qq => "Home" !== qq)),
+      Mq = 1e4;
+    class Tq {
+      constructor(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => !0;
+        this.cancelButton = qq, this.openButton = Eq, this.accepts = gq, this.startMs = null, this.ignoredUntilMs = new Map, this.cancelDownAtMs = null
       }
-      update(TT, kT) {
-        var cT;
-        this.updateIgnored(TT, kT);
-        const lT = kT - (null !== (cT = this.startMs) && void 0 !== cT ? cT : kT) >= 250;
-        for (const MT of HT)
-          if (MT !== this.cancelButton && lT && !this.ignoredUntilMs.has(MT) && TT.wasPressed(MT) && this.accepts(MT)) return {
+      update(qq, Eq) {
+        var gq;
+        this.updateIgnored(qq, Eq);
+        const Yq = Eq - (null !== (gq = this.startMs) && void 0 !== gq ? gq : Eq) >= 250;
+        for (const lq of fq)
+          if (lq !== this.cancelButton && Yq && !this.ignoredUntilMs.has(lq) && qq.wasPressed(lq) && this.accepts(lq)) return {
             kind: "bind",
-            button: MT
+            button: lq
           };
         if (this.ignoredUntilMs.has(this.cancelButton)) return null;
-        if (TT.wasPressed(this.cancelButton)) {
+        if (qq.wasPressed(this.cancelButton)) {
           if (!this.accepts(this.cancelButton)) return {
             kind: "cancel"
           };
-          this.cancelDownAtMs = kT
+          this.cancelDownAtMs = Eq
         }
-        return null === this.cancelDownAtMs ? null : TT.isHeld(this.cancelButton) && kT - this.cancelDownAtMs >= 700 ? (this.cancelDownAtMs = null, {
+        return null === this.cancelDownAtMs ? null : qq.isHeld(this.cancelButton) && Eq - this.cancelDownAtMs >= 700 ? (this.cancelDownAtMs = null, {
           kind: "bind",
           button: this.cancelButton
-        }) : TT.wasReleased(this.cancelButton) ? (this.cancelDownAtMs = null, {
+        }) : qq.wasReleased(this.cancelButton) ? (this.cancelDownAtMs = null, {
           kind: "cancel"
         }) : null
       }
-      getBindHoldProgress(TT) {
-        return null === this.cancelDownAtMs ? 0 : Math.min(1, (TT - this.cancelDownAtMs) / 700)
+      getBindHoldProgress(qq) {
+        return null === this.cancelDownAtMs ? 0 : Math.min(1, (qq - this.cancelDownAtMs) / 700)
       }
-      updateIgnored(TT, kT) {
+      updateIgnored(qq, Eq) {
         if (null === this.startMs) {
-          this.startMs = kT;
-          for (const kT of HT) TT.isDown(kT) && this.ignoredUntilMs.set(kT, 1 / 0);
-          this.openButton && !this.ignoredUntilMs.has(this.openButton) && this.ignoredUntilMs.set(this.openButton, kT + 250)
+          this.startMs = Eq;
+          for (const Eq of fq) qq.isDown(Eq) && this.ignoredUntilMs.set(Eq, 1 / 0);
+          this.openButton && !this.ignoredUntilMs.has(this.openButton) && this.ignoredUntilMs.set(this.openButton, Eq + 250)
         }
-        for (const [cT, lT] of this.ignoredUntilMs) {
-          const MT = TT.isDown(cT);
-          lT === 1 / 0 ? MT || cT !== this.openButton ? MT || this.ignoredUntilMs.delete(cT) : this.ignoredUntilMs.set(cT, kT + 250) : kT >= lT ? this.ignoredUntilMs.delete(cT) : MT && this.ignoredUntilMs.set(cT, 1 / 0)
+        for (const [gq, Yq] of this.ignoredUntilMs) {
+          const lq = qq.isDown(gq);
+          Yq === 1 / 0 ? lq || gq !== this.openButton ? lq || this.ignoredUntilMs.delete(gq) : this.ignoredUntilMs.set(gq, Eq + 250) : Eq >= Yq ? this.ignoredUntilMs.delete(gq) : lq && this.ignoredUntilMs.set(gq, 1 / 0)
         }
       }
     }
-    const VT = 6e3;
-    class ET {
+    const zq = 6e3;
+    class Sq {
       constructor() {
         this.downAtMs = null, this.pressesAtMs = []
       }
-      update(TT, kT) {
+      update(qq, Eq) {
         let {
-          pressed: cT,
-          ty: lT
-        } = TT;
-        if (cT) {
-          const TT = this.pressesAtMs.at(-1);
-          if (this.pressesAtMs = void 0 !== TT && kT - TT < 1500 ? [...this.pressesAtMs, kT] : [kT], this.pressesAtMs.length >= 3) return 1
+          pressed: gq,
+          Fc: Yq
+        } = qq;
+        if (gq) {
+          const qq = this.pressesAtMs.at(-1);
+          if (this.pressesAtMs = void 0 !== qq && Eq - qq < 1500 ? [...this.pressesAtMs, Eq] : [Eq], this.pressesAtMs.length >= 3) return 1
         }
-        return lT ? (this.downAtMs ??= kT, Math.min(1, (kT - this.downAtMs) / 1500)) : (this.downAtMs = null, 0)
+        return Yq ? (this.downAtMs ??= Eq, Math.min(1, (Eq - this.downAtMs) / 1500)) : (this.downAtMs = null, 0)
       }
     }
   },
-  4975: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => KT,
-      d: () => OT
+  4866: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => Oq,
+      i: () => mq
     });
-    var lT = cT(71);
-    const MT = new WeakMap,
-      KT = TT => {
-        var kT;
-        const cT = TT.closest("[data-pad-slider]");
-        return cT && null !== (kT = MT.get(cT)) && void 0 !== kT ? kT : null
+    var Yq = gq(57);
+    const lq = new WeakMap,
+      Oq = qq => {
+        var Eq;
+        const gq = qq.closest("[data-pad-slider]");
+        return gq && null !== (Eq = lq.get(gq)) && void 0 !== Eq ? Eq : null
       },
-      OT = (TT, kT) => {
-        const cT = (0, lT.useRef)(kT);
-        cT.current = kT, (0, lT.useEffect)((() => {
-          if (TT.current) return ((TT, kT) => (MT.set(TT, kT), () => {
-            MT.get(TT) === kT && MT.delete(TT)
-          }))(TT.current, {
-            adjust: TT => {
-              cT.current.adjust(TT)
+      mq = (qq, Eq) => {
+        const gq = (0, Yq.useRef)(Eq);
+        gq.current = Eq, (0, Yq.useEffect)((() => {
+          if (qq.current) return ((qq, Eq) => (lq.set(qq, Eq), () => {
+            lq.get(qq) === Eq && lq.delete(qq)
+          }))(qq.current, {
+            adjust: qq => {
+              gq.current.adjust(qq)
             },
-            setFraction: TT => {
-              cT.current.setFraction(TT)
+            setFraction: qq => {
+              gq.current.setFraction(qq)
             },
             endDrag: () => {
-              cT.current.endDrag()
+              gq.current.endDrag()
             }
           })
-        }), [TT])
+        }), [qq])
       }
   },
-  8754: (TT, kT, cT) => {
-    cT.d(kT, {
-      b: () => KT,
-      e: () => MT
+  8678: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => Oq,
+      f: () => lq
     });
-    var lT = cT(36);
-    const MT = "localBlockBroken";
+    var Yq = gq(31);
+    const lq = "localBlockBroken";
 
-    function KT() {
+    function Oq() {
       return {
-        onPlayerChangeBlock(TT, kT, cT, KT, OT, yT) {
-          "Air" === yT && lT.k.nt(MT)
+        onPlayerChangeBlock(qq, Eq, gq, Oq, mq, xq) {
+          "Air" === xq && Yq.i.TV(lq)
         }
       }
     }
   },
-  8243: (TT, kT, cT) => {
-    var lT = {
-      "./nintendo/A.svg": 8246,
-      "./nintendo/B.svg": 8251,
-      "./nintendo/Down.svg": 8256,
-      "./nintendo/Home.svg": 8263,
-      "./nintendo/LB.svg": 8265,
-      "./nintendo/LS.svg": 8269,
-      "./nintendo/LT.svg": 8277,
-      "./nintendo/Left.svg": 8284,
-      "./nintendo/LeftStick.svg": 8292,
-      "./nintendo/Menu.svg": 8299,
-      "./nintendo/RB.svg": 8305,
-      "./nintendo/RS.svg": 8307,
-      "./nintendo/RT.svg": 8312,
-      "./nintendo/Right.svg": 8320,
-      "./nintendo/RightStick.svg": 8323,
-      "./nintendo/Up.svg": 8332,
-      "./nintendo/View.svg": 8337,
-      "./nintendo/X.svg": 8342,
-      "./nintendo/Y.svg": 8346,
-      "./playstation/A.svg": 8355,
-      "./playstation/B.svg": 8357,
-      "./playstation/Down.svg": 8364,
-      "./playstation/Home.svg": 8366,
-      "./playstation/LB.svg": 8368,
-      "./playstation/LS.svg": 8370,
-      "./playstation/LT.svg": 8373,
-      "./playstation/Left.svg": 8380,
-      "./playstation/LeftStick.svg": 8382,
-      "./playstation/Menu.svg": 8388,
-      "./playstation/RB.svg": 8397,
-      "./playstation/RS.svg": 8402,
-      "./playstation/RT.svg": 8410,
-      "./playstation/Right.svg": 8417,
-      "./playstation/RightStick.svg": 8426,
-      "./playstation/Up.svg": 8435,
-      "./playstation/View.svg": 8442,
-      "./playstation/X.svg": 8444,
-      "./playstation/Y.svg": 8452,
-      "./steamdeck/A.svg": 8454,
-      "./steamdeck/B.svg": 8456,
-      "./steamdeck/Down.svg": 8463,
-      "./steamdeck/Home.svg": 8469,
-      "./steamdeck/LB.svg": 8471,
-      "./steamdeck/LS.svg": 8475,
-      "./steamdeck/LT.svg": 8478,
-      "./steamdeck/Left.svg": 8484,
-      "./steamdeck/LeftStick.svg": 8488,
-      "./steamdeck/Menu.svg": 8494,
-      "./steamdeck/RB.svg": 8502,
-      "./steamdeck/RS.svg": 8510,
-      "./steamdeck/RT.svg": 8518,
-      "./steamdeck/Right.svg": 8523,
-      "./steamdeck/RightStick.svg": 8529,
-      "./steamdeck/Up.svg": 8536,
-      "./steamdeck/View.svg": 8545,
-      "./steamdeck/X.svg": 8547,
-      "./steamdeck/Y.svg": 8550,
-      "./xbox/A.svg": 8555,
-      "./xbox/B.svg": 8557,
-      "./xbox/Down.svg": 8561,
-      "./xbox/Home.svg": 8564,
-      "./xbox/LB.svg": 8573,
-      "./xbox/LS.svg": 8582,
-      "./xbox/LT.svg": 8590,
-      "./xbox/Left.svg": 8597,
-      "./xbox/LeftStick.svg": 8606,
-      "./xbox/Menu.svg": 8611,
-      "./xbox/RB.svg": 8615,
-      "./xbox/RS.svg": 8618,
-      "./xbox/RT.svg": 8625,
-      "./xbox/Right.svg": 8632,
-      "./xbox/RightStick.svg": 8639,
-      "./xbox/Up.svg": 8648,
-      "./xbox/View.svg": 8652,
-      "./xbox/X.svg": 8659,
-      "./xbox/Y.svg": 8668
-    };
-
-    function MT(TT) {
-      var kT = KT(TT);
-      return cT(kT)
-    }
-
-    function KT(TT) {
-      if (!cT.o(lT, TT)) {
-        var kT = new Error("Cannot find module '" + TT + "'");
-        throw kT.code = "MODULE_NOT_FOUND", kT
-      }
-      return lT[TT]
-    }
-    MT.keys = function() {
-      return Object.keys(lT)
-    }, MT.resolve = KT, TT.exports = MT, MT.id = 8243
-  },
-  8246: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/A.926fb88933484dfbde14.svg"
-  },
-  8251: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/B.9f5ec099f78f84e44427.svg"
+  8138: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/A.926fb88933484dfbde14.svg"
   },
-  8256: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/Down.b1852f687e6dd088dc83.svg"
+  8146: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/B.9f5ec099f78f84e44427.svg"
   },
-  8263: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/Home.4f2ce08049843c0d68cc.svg"
+  8152: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/Down.b1852f687e6dd088dc83.svg"
   },
-  8265: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/LB.3a20b15927b55d5d8b60.svg"
+  8154: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/Home.4f2ce08049843c0d68cc.svg"
   },
-  8269: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/LS.30b6b373c0d6b7ee1753.svg"
+  8156: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/LB.3a20b15927b55d5d8b60.svg"
   },
-  8277: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/LT.9fdc5e69011b9d41f50a.svg"
+  8161: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/LS.30b6b373c0d6b7ee1753.svg"
   },
-  8284: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/Left.c380211d278e5ad37395.svg"
+  8163: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/LT.9fdc5e69011b9d41f50a.svg"
   },
-  8292: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/LeftStick.572ef7fe851cd5c7c48d.svg"
+  8169: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/Left.c380211d278e5ad37395.svg"
   },
-  8299: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/Menu.c903a662eb685211e52e.svg"
+  8174: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/LeftStick.572ef7fe851cd5c7c48d.svg"
   },
-  8305: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/RB.bba470ddb76ceec5d168.svg"
+  8179: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/Menu.c903a662eb685211e52e.svg"
   },
-  8307: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/RS.faed29b08b9895ac7291.svg"
+  8183: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/RB.bba470ddb76ceec5d168.svg"
   },
-  8312: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/RT.e5a9fbcc3c79550111ca.svg"
+  8189: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/RS.faed29b08b9895ac7291.svg"
   },
-  8320: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/Right.01eea634de7e4fea174f.svg"
+  8198: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/RT.e5a9fbcc3c79550111ca.svg"
   },
-  8323: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/RightStick.8c455f35f82d8f40b0dc.svg"
+  8202: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/Right.01eea634de7e4fea174f.svg"
   },
-  8332: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/Up.0c878a914746e22612b1.svg"
+  8206: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/RightStick.8c455f35f82d8f40b0dc.svg"
   },
-  8337: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/View.0c9378b5d720a636d50d.svg"
+  8212: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/Up.0c878a914746e22612b1.svg"
   },
-  8342: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/X.c9377519af94e6dce1d7.svg"
+  8221: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/View.0c9378b5d720a636d50d.svg"
   },
-  8346: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/Y.62d8c17731dd2e172426.svg"
+  8227: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/X.c9377519af94e6dce1d7.svg"
   },
-  8355: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/A.958a6de9474f8d0c9caf.svg"
+  8229: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/Y.62d8c17731dd2e172426.svg"
   },
-  8357: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/B.d05958bfa88a1162b47a.svg"
+  8238: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/A.958a6de9474f8d0c9caf.svg"
   },
-  8364: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/Down.db68fb3980768eb54671.svg"
+  8246: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/B.d05958bfa88a1162b47a.svg"
   },
-  8366: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/Home.4f2ce08049843c0d68cc.svg"
+  8251: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/Down.db68fb3980768eb54671.svg"
   },
-  8368: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/LB.37a3c5128c958ec2a0c2.svg"
+  8258: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/Home.4f2ce08049843c0d68cc.svg"
   },
-  8370: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/LS.15b0cc5bf3f2fe7bbd8b.svg"
+  8267: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/LB.37a3c5128c958ec2a0c2.svg"
   },
-  8373: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/LT.5412ae5222c69f8c833f.svg"
+  8274: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/LS.15b0cc5bf3f2fe7bbd8b.svg"
   },
-  8380: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/Left.4457b2895ce94a5df32e.svg"
+  8282: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/LT.5412ae5222c69f8c833f.svg"
   },
-  8382: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/LeftStick.572ef7fe851cd5c7c48d.svg"
+  8286: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/Left.4457b2895ce94a5df32e.svg"
   },
-  8388: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/Menu.1e8427f8133c9d456c53.svg"
+  8293: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/LeftStick.572ef7fe851cd5c7c48d.svg"
   },
-  8397: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/RB.c96c4aa2590209e930c7.svg"
+  8297: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/Menu.1e8427f8133c9d456c53.svg"
   },
-  8402: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/RS.8d70d147cf1ab136e845.svg"
+  8305: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/RB.c96c4aa2590209e930c7.svg"
   },
-  8410: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/RT.1e4691bb5a7c049693df.svg"
+  8312: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/RS.8d70d147cf1ab136e845.svg"
   },
-  8417: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/Right.a1e101413040c540b879.svg"
+  8320: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/RT.1e4691bb5a7c049693df.svg"
   },
-  8426: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/RightStick.8c455f35f82d8f40b0dc.svg"
+  8325: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/Right.a1e101413040c540b879.svg"
   },
-  8435: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/Up.7544a65ad4f611a55775.svg"
+  8329: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/RightStick.8c455f35f82d8f40b0dc.svg"
   },
-  8442: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/View.003cae39de89cae0b9d8.svg"
+  8333: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/Up.7544a65ad4f611a55775.svg"
   },
-  8444: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/X.d88b6e62dd8fb4bda32a.svg"
+  8339: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/View.003cae39de89cae0b9d8.svg"
   },
-  8452: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/Y.428d3e70775877892f82.svg"
+  8348: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/X.d88b6e62dd8fb4bda32a.svg"
   },
-  8454: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/A.9f5ec099f78f84e44427.svg"
+  8354: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/Y.428d3e70775877892f82.svg"
   },
-  8456: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/B.926fb88933484dfbde14.svg"
+  8362: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/A.9f5ec099f78f84e44427.svg"
   },
-  8463: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/Down.b1852f687e6dd088dc83.svg"
+  8370: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/B.926fb88933484dfbde14.svg"
   },
-  8469: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/Home.ea8b009cfa9562aa644e.svg"
+  8377: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/Down.b1852f687e6dd088dc83.svg"
   },
-  8471: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/LB.f283d355d22fc107d6d6.svg"
+  8386: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/Home.ea8b009cfa9562aa644e.svg"
   },
-  8475: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/LS.30b6b373c0d6b7ee1753.svg"
+  8392: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/LB.f283d355d22fc107d6d6.svg"
   },
-  8478: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/LT.13e66c122e7ee04bb876.svg"
+  8399: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/LS.30b6b373c0d6b7ee1753.svg"
   },
-  8484: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/Left.c380211d278e5ad37395.svg"
+  8401: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/LT.13e66c122e7ee04bb876.svg"
   },
-  8488: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/LeftStick.572ef7fe851cd5c7c48d.svg"
+  8408: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/Left.c380211d278e5ad37395.svg"
   },
-  8494: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/Menu.90fc4e918900eb5062a0.svg"
+  8414: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/LeftStick.572ef7fe851cd5c7c48d.svg"
   },
-  8502: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/RB.918a7f16dc054d96b6f3.svg"
+  8423: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/Menu.90fc4e918900eb5062a0.svg"
   },
-  8510: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/RS.faed29b08b9895ac7291.svg"
+  8426: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/RB.918a7f16dc054d96b6f3.svg"
   },
-  8518: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/RT.a0523211130959598bed.svg"
+  8432: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/RS.faed29b08b9895ac7291.svg"
   },
-  8523: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/Right.01eea634de7e4fea174f.svg"
+  8436: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/RT.a0523211130959598bed.svg"
   },
-  8529: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/RightStick.8c455f35f82d8f40b0dc.svg"
+  8444: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/Right.01eea634de7e4fea174f.svg"
   },
-  8536: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/Up.0c878a914746e22612b1.svg"
+  8451: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/RightStick.8c455f35f82d8f40b0dc.svg"
   },
-  8545: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/View.0bc952e292c28c3baac2.svg"
+  8460: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/Up.0c878a914746e22612b1.svg"
   },
-  8547: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/X.62d8c17731dd2e172426.svg"
+  8463: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/View.0bc952e292c28c3baac2.svg"
   },
-  8550: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/Y.c9377519af94e6dce1d7.svg"
+  8471: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/X.62d8c17731dd2e172426.svg"
   },
-  8555: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/A.9f5ec099f78f84e44427.svg"
+  8475: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/Y.c9377519af94e6dce1d7.svg"
   },
-  8557: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/B.926fb88933484dfbde14.svg"
+  8481: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/A.9f5ec099f78f84e44427.svg"
   },
-  8561: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/Down.b1852f687e6dd088dc83.svg"
+  8484: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/B.926fb88933484dfbde14.svg"
   },
-  8564: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/Home.8898f76b20962fe52ab7.svg"
+  8490: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/Down.b1852f687e6dd088dc83.svg"
   },
-  8573: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/LB.689ba3703ae248f2e4cc.svg"
+  8497: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/Home.8898f76b20962fe52ab7.svg"
   },
-  8582: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/LS.30b6b373c0d6b7ee1753.svg"
+  8499: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/LB.689ba3703ae248f2e4cc.svg"
   },
-  8590: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/LT.9c2d10d335ab5c590525.svg"
+  8502: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/LS.30b6b373c0d6b7ee1753.svg"
   },
-  8597: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/Left.c380211d278e5ad37395.svg"
+  8505: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/LT.9c2d10d335ab5c590525.svg"
   },
-  8606: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/LeftStick.572ef7fe851cd5c7c48d.svg"
+  8511: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/Left.c380211d278e5ad37395.svg"
   },
-  8611: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/Menu.9e485791ea97009871ca.svg"
+  8516: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/LeftStick.572ef7fe851cd5c7c48d.svg"
   },
-  8615: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/RB.7ee5ce48dd551f993f80.svg"
+  8525: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/Menu.9e485791ea97009871ca.svg"
   },
-  8618: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/RS.faed29b08b9895ac7291.svg"
+  8532: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/RB.7ee5ce48dd551f993f80.svg"
   },
-  8625: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/RT.903ecadc55a9e9e00f07.svg"
+  8540: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/RS.faed29b08b9895ac7291.svg"
   },
-  8632: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/Right.01eea634de7e4fea174f.svg"
+  8544: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/RT.903ecadc55a9e9e00f07.svg"
   },
-  8639: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/RightStick.8c455f35f82d8f40b0dc.svg"
+  8551: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/Right.01eea634de7e4fea174f.svg"
   },
-  8648: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/Up.0c878a914746e22612b1.svg"
+  8557: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/RightStick.8c455f35f82d8f40b0dc.svg"
   },
-  8652: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/View.3c5eeb34f0413bde4a65.svg"
+  8564: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/Up.0c878a914746e22612b1.svg"
   },
-  8659: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/X.62d8c17731dd2e172426.svg"
+  8572: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/View.3c5eeb34f0413bde4a65.svg"
   },
-  8668: (TT, kT, cT) => {
-    TT.exports = cT.p + "static/media/Y.c9377519af94e6dce1d7.svg"
+  8576: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/X.62d8c17731dd2e172426.svg"
+  },
+  8581: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/Y.c9377519af94e6dce1d7.svg"
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

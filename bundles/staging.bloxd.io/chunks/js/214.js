@@ -1,2284 +1,1196 @@
+/*! For license information please see bbb6l5.214.c1cedf39.chunk.js.LICENSE.txt */
 export const id = 214;
 export const ids = [214];
 export const modules = {
-  40697: (TT, kT, cT) => {
-    cT.r(kT), cT.d(kT, {
-      LobbyManageView: () => Dk
+  39476: (qq, Eq, gq) => {
+    qq.exports = lq;
+    var Yq = gq(317);
+
+    function lq(qq, Eq) {
+      if (!(this instanceof lq)) return new lq(qq, Eq);
+      var gq = Yq.create();
+      Yq.add(gq, qq, Eq), this.base = Yq.min(Yq.create(), qq, gq), this.vec = Yq.clone(Eq), this.max = Yq.max(Yq.create(), qq, gq), this.mag = Yq.length(this.vec)
+    }
+    var Oq = lq.prototype;
+    Oq.width = function() {
+      return this.vec[0]
+    }, Oq.height = function() {
+      return this.vec[1]
+    }, Oq.depth = function() {
+      return this.vec[2]
+    }, Oq.x0 = function() {
+      return this.base[0]
+    }, Oq.y0 = function() {
+      return this.base[1]
+    }, Oq.z0 = function() {
+      return this.base[2]
+    }, Oq.x1 = function() {
+      return this.max[0]
+    }, Oq.y1 = function() {
+      return this.max[1]
+    }, Oq.z1 = function() {
+      return this.max[2]
+    }, Oq.translate = function(qq) {
+      return Yq.add(this.max, this.max, qq), Yq.add(this.base, this.base, qq), this
+    }, Oq.setPosition = function(qq) {
+      return Yq.add(this.max, qq, this.vec), Yq.copy(this.base, qq), this
+    }, Oq.expand = function(qq) {
+      var Eq = Yq.create(),
+        gq = Yq.create();
+      return Yq.max(Eq, qq.max, this.max), Yq.min(gq, qq.base, this.base), Yq.subtract(Eq, Eq, gq), new lq(gq, Eq)
+    }, Oq.intersects = function(qq) {
+      return !(qq.base[0] > this.max[0]) && (!(qq.base[1] > this.max[1]) && (!(qq.base[2] > this.max[2]) && (!(qq.max[0] < this.base[0]) && (!(qq.max[1] < this.base[1]) && !(qq.max[2] < this.base[2])))))
+    }, Oq.touches = function(qq) {
+      var Eq = this.union(qq);
+      return null !== Eq && (0 == Eq.width() || 0 == Eq.height() || 0 == Eq.depth())
+    }, Oq.union = function(qq) {
+      if (!this.intersects(qq)) return null;
+      var Eq = Math.max(qq.base[0], this.base[0]),
+        gq = Math.max(qq.base[1], this.base[1]),
+        Yq = Math.max(qq.base[2], this.base[2]);
+      return new lq([Eq, gq, Yq], [Math.min(qq.max[0], this.max[0]) - Eq, Math.min(qq.max[1], this.max[1]) - gq, Math.min(qq.max[2], this.max[2]) - Yq])
+    }
+  },
+  39468: qq => {
+    qq.exports = function(qq, Eq, gq, Yq, lq, Oq) {
+      var mq = +Eq[0],
+        xq = +Eq[1],
+        Aq = +Eq[2],
+        cq = +gq[0],
+        uq = +gq[1],
+        Bq = +gq[2],
+        Wq = Math.sqrt(cq * cq + uq * uq + Bq * Bq);
+      if (0 === Wq) throw new Error("Can't raycast along a zero vector");
+      return function(qq, Eq, gq, Yq, lq, Oq, mq, xq, Aq, cq) {
+        for (var uq = 0, Bq = Math.floor, Wq = 0 | Bq(Eq), Nq = 0 | Bq(gq), aq = 0 | Bq(Yq), Vq = lq > 0 ? 1 : -1, dq = Oq > 0 ? 1 : -1, jq = mq > 0 ? 1 : -1, Hq = Math.abs(1 / lq), oq = Math.abs(1 / Oq), Pq = Math.abs(1 / mq), Qq = Hq < 1 / 0 ? Hq * (Vq > 0 ? Wq + 1 - Eq : Eq - Wq) : 1 / 0, yq = oq < 1 / 0 ? oq * (dq > 0 ? Nq + 1 - gq : gq - Nq) : 1 / 0, tq = Pq < 1 / 0 ? Pq * (jq > 0 ? aq + 1 - Yq : Yq - aq) : 1 / 0, rq = -1; uq <= xq;) {
+          var vq = qq(Wq, Nq, aq);
+          if (vq) return Aq && (Aq[0] = Eq + uq * lq, Aq[1] = gq + uq * Oq, Aq[2] = Yq + uq * mq), cq && (cq[0] = cq[1] = cq[2] = 0, 0 === rq && (cq[0] = -Vq), 1 === rq && (cq[1] = -dq), 2 === rq && (cq[2] = -jq)), vq;
+          Qq < yq ? Qq < tq ? (Wq += Vq, uq = Qq, Qq += Hq, rq = 0) : (aq += jq, uq = tq, tq += Pq, rq = 2) : yq < tq ? (Nq += dq, uq = yq, yq += oq, rq = 1) : (aq += jq, uq = tq, tq += Pq, rq = 2)
+        }
+        return Aq && (Aq[0] = Eq + uq * lq, Aq[1] = gq + uq * Oq, Aq[2] = Yq + uq * mq), cq && (cq[0] = cq[1] = cq[2] = 0), 0
+      }(qq, mq, xq, Aq, cq /= Wq, uq /= Wq, Bq /= Wq, Yq = "undefined" === typeof Yq ? 64 : +Yq, lq, Oq)
+    }
+  },
+  39064: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => xq,
+      g: () => Oq
     });
-    var lT = cT(71),
-      MT = cT(1497),
-      KT = cT(2462),
-      OT = cT(2485),
-      yT = cT(2487),
-      fT = cT(36383);
+    var Yq = gq(3933);
+    let lq = null;
 
-    function xT() {
-      const [TT, kT] = (0, lT.useState)(new Map);
-      return {
-        get: kT => TT.get(kT),
-        hold: (0, lT.useCallback)(((TT, cT, lT) => {
-          kT((kT => new Map(kT).set(TT, cT))), lT.then((() => {
-            kT((kT => {
-              const cT = new Map(kT);
-              return cT.delete(TT), cT
-            }))
+    function Oq(qq) {
+      return null !== lq && qq === lq
+    }
+
+    function mq() {
+      this.IK = !1, this.stopPropagation = !1, this.gC = !1, this.disabled = !1
+    }
+    class xq {
+      constructor(qq, Eq) {
+        this.version = "0.7.0";
+        var gq = Object.assign({}, new mq, Eq || {});
+        this.element = qq || document, this.IK = !!gq.IK, this.stopPropagation = !!gq.stopPropagation, this.gC = !!gq.gC, this.disabled = !!gq.disabled, this.filterEvents = (qq, Eq) => !0, this.ignoreEvent = qq => !1, this.down = new Yq.EventEmitter, this.up = new Yq.EventEmitter, this.state = {}, this.lC = {
+          dx: 0,
+          dy: 0,
+          hEq: 0,
+          nEq: 0,
+          bEq: 0
+        }, this.pressCount = {}, this.releaseCount = {}, this._keyBindmap = {}, this._keyStates = {}, this._bindPressCount = {}, this._touches = {
+          lastX: 0,
+          lastY: 0,
+          currID: null
+        }, "loading" !== document.readyState ? cq(this) : document.addEventListener("DOMContentLoaded", (qq => {
+          cq(this)
+        }), {
+          once: !0
+        })
+      }
+      bind(qq) {
+        for (var Eq = arguments.length, gq = new Array(Eq > 1 ? Eq - 1 : 0), Yq = 1; Yq < Eq; Yq++) gq[Yq - 1] = arguments[Yq];
+        gq.forEach((Eq => {
+          var gq = this._keyBindmap[Eq] || [];
+          gq.includes(qq) || (gq.push(qq), this._keyBindmap[Eq] = gq)
+        })), this.state[qq] = !!this.state[qq], this.pressCount[qq] = this.pressCount[qq] || 0, this.releaseCount[qq] = this.releaseCount[qq] || 0
+      }
+      unbind(qq) {
+        for (var Eq in this._keyBindmap) {
+          var gq = this._keyBindmap[Eq],
+            Yq = gq.indexOf(qq);
+          Yq > -1 && gq.splice(Yq, 1)
+        }
+      }
+      getBindings() {
+        var qq = {};
+        for (var Eq in this._keyBindmap) {
+          this._keyBindmap[Eq].forEach((gq => {
+            qq[gq] = qq[gq] || [], qq[gq].push(Eq)
           }))
-        }), [])
+        }
+        return qq
       }
-    }
-    var IT = cT(1046),
-      AT = cT.n(IT),
-      CT = cT(1195),
-      jT = cT(1061),
-      vT = cT(1348),
-      tT = cT(2665),
-      hT = cT(4968),
-      NT = cT(3536);
-    var QT = cT(1996),
-      ST = cT(1470);
-
-    function DT(TT, kT, cT) {
-      const lT = TT.filter((TT => TT.name !== kT)),
-        MT = lT.filter((TT => "none" === TT.role)).sort(((TT, kT) => kT.at - TT.at)),
-        KT = lT.filter((TT => "none" !== TT.role)).sort(((TT, kT) => cT.indexOf(TT.role) - cT.indexOf(kT.role) || kT.at - TT.at));
-      return [...TT.some((TT => TT.name === kT)) && null !== kT ? [kT] : [], ...[...MT, ...KT].map((TT => TT.name))]
-    }
-
-    function aT(TT, kT) {
-      const cT = TT.banned.map((TT => TT.name)),
-        lT = new Set(cT);
-      return {
-        here: DT(TT.here, kT, TT.roles.map((TT => TT.role))),
-        away: TT.away.filter((TT => !lT.has(TT.name))).map((TT => TT.name)),
-        banned: cT
+      SB() {
+        Aq(this.lC), Aq(this.pressCount), Aq(this.releaseCount)
       }
     }
 
-    function FT(TT, kT) {
-      const cT = TT.here.find((TT => TT.name === kT));
-      if (cT) return {
-        section: "here",
-        player: cT
+    function Aq(qq) {
+      for (var Eq in qq) qq[Eq] = 0
+    }
+
+    function cq(qq) {
+      window.addEventListener("keydown", dq.bind(null, qq, !0), !1), window.addEventListener("keyup", dq.bind(null, qq, !1), !1);
+      var Eq = {
+        passive: !0
       };
-      const lT = TT.banned.find((TT => TT.name === kT));
-      if (lT) return {
-        section: "banned",
-        bannedAt: lT.at
-      };
-      const MT = TT.away.find((TT => TT.name === kT));
-      return MT ? {
-        section: "away",
-        player: MT
-      } : {
-        section: "gone"
+      qq.element.addEventListener("touchstart", Nq.bind(void 0, qq), {
+        passive: !1
+      }), qq.element.addEventListener("touchend", Vq.bind(void 0, qq), Eq), qq.element.addEventListener("mousedown", jq.bind(null, qq, !0), Eq), window.document.addEventListener("mouseup", jq.bind(null, qq, !1), Eq), qq.element.addEventListener("touchmove", Hq.bind(null, qq), Eq), qq.element.addEventListener("mousemove", Hq.bind(null, qq), Eq), window.PointerEvent, qq.element.addEventListener("wheel", oq.bind(null, qq), Eq), qq.element.addEventListener("contextmenu", Pq.bind(null, qq), !1), window.addEventListener("blur", tq.bind(null, qq), !1)
+    }
+    var uq = 0,
+      Bq = 0,
+      Wq = null;
+
+    function Nq(qq, Eq) {
+      Eq.preventDefault(), aq(Eq)
+    }
+
+    function aq(qq) {
+      let Eq = !1;
+      for (let gq = 0; gq < qq.touches.length; ++gq)
+        if (qq.touches[gq].identifier === Wq) {
+          Eq = !0;
+          break
+        } if (!Eq) {
+        const Eq = qq.changedTouches[0];
+        uq = Eq.clientX, Bq = Eq.clientY, Wq = Eq.identifier
       }
     }
-    const rT = {
-      gamemode: !1,
-      roles: [],
-      fixedRole: null,
-      kick: !1,
-      ban: !1,
-      unban: !1
+
+    function Vq(qq, Eq) {
+      for (var gq = Eq.changedTouches, Yq = 0; Yq < gq.length; ++Yq) gq[Yq].identifier === Wq && (Wq = null)
+    }
+
+    function dq(qq, Eq, gq) {
+      if (!qq.ignoreEvent(gq)) try {
+        rq(qq, gq), Eq && gq.isTrusted && !gq.repeat && qq._keyStates[gq.code] && vq(qq, gq.code)
+      } finally {
+        hq(gq.code, Eq, qq, gq)
+      }
+    }
+
+    function jq(qq, Eq, gq) {
+      if (!qq.ignoreEvent(gq)) try {
+        rq(qq, gq)
+      } finally {
+        ! function(qq, Eq, gq) {
+          if ("pointerId" in gq)
+            if (Eq) {
+              if (null !== qq._touches.currID) return;
+              qq._touches.currID = gq.pointerId
+            } else {
+              if (qq._touches.currID !== gq.pointerId) return;
+              qq._touches.currID = null
+            } var Yq = "button" in gq ? gq.button + 1 : 1;
+          hq("Mouse" + Yq, Eq, qq, gq)
+        }(qq, Eq, gq)
+      }
+    }
+
+    function Hq(qq, Eq) {
+      var gq = Eq.movementX || Eq.mozMovementX || 0,
+        Yq = Eq.movementY || Eq.mozMovementY || 0;
+      if (Eq.touches && 0 === (gq | Yq)) {
+        var lq = function(qq) {
+          aq(qq);
+          for (let Eq = 0; Eq < qq.changedTouches.length; ++Eq)
+            if (qq.changedTouches[Eq].identifier == Wq) {
+              const gq = qq.changedTouches[Eq],
+                Yq = [gq.clientX - uq, gq.clientY - Bq];
+              return uq = gq.clientX, Bq = gq.clientY, Yq
+            } return console.error(`Did not find touch id ${Wq}`), [0, 0]
+        }(Eq);
+        gq = lq[0], Yq = lq[1]
+      }
+      qq.lC.dx += gq, qq.lC.dy += Yq
+    }
+
+    function oq(qq, Eq) {
+      rq(qq, Eq);
+      var gq = 1;
+      switch (Eq.deltaMode) {
+        case 0:
+          gq = 1;
+          break;
+        case 1:
+          gq = 12;
+          break;
+        case 2:
+          gq = qq.element.clientHeight || window.innerHeight
+      }
+      qq.lC.hEq += (Eq.deltaX || 0) * gq, qq.lC.nEq += (Eq.deltaY || 0) * gq, qq.lC.bEq += (Eq.deltaZ || 0) * gq
+    }
+
+    function Pq(qq, Eq) {
+      if (!qq.gC) return Eq.preventDefault(), !1
+    }
+    var Qq = {
+      AltLeft: "altKey",
+      AltRight: "altKey",
+      ControlLeft: "ctrlKey",
+      ControlRight: "ctrlKey",
+      ShiftLeft: "shiftKey",
+      ShiftRight: "shiftKey",
+      MetaLeft: "metaKey",
+      MetaRight: "metaKey"
     };
-    var PT = cT(2660),
-      wT = cT(36369),
-      mT = cT(36541),
-      bT = cT(3059),
-      zT = cT(339);
 
-    function JT(TT, kT, cT) {
-      return kT.map((kT => {
-        if ("string" === typeof kT) return kT;
-        const lT = "str" in kT ? kT.str : kT;
-        return "string" === typeof lT ? lT : "entityName" in lT ? lT.entityName : "translationKey" in lT ? TT(lT.translationKey, (0, CT.m)(lT.params, cT)) : ""
-      })).join("")
+    function yq(qq, Eq) {
+      return !!qq[Qq[Eq]] || ("AltRight" === Eq || "ControlLeft" === Eq) && "function" === typeof qq.getModifierState && !0 === qq.getModifierState("AltGraph")
     }
 
-    function oT(TT, kT, cT, lT, MT) {
-      return MT - lT < 6e4 ? TT(`${cT}JustNow`) : TT(cT, {
-        time: (0, zT._)((0, CT.k)(kT, cT), lT, MT)
-      })
-    }
-    var HT = cT(1921),
-      eT = cT(1692),
-      GT = cT(1099);
-
-    function VT(TT) {
-      let {
-        status: kT
-      } = TT;
-      return (0, GT.jsx)("span", {
-        className: AT()("LobbyManageStatus", {
-          LobbyManageStatusRefused: !kT.ok
-        }),
-        children: (0, GT.jsx)(HT.b, {
-          text: kT.text
-        })
-      })
-    }
-
-    function ET(TT) {
-      let {
-        names: kT,
-        cap: cT,
-        filterFrom: MT,
-        moreLabel: KT,
-        reveal: OT = null,
-        renderRow: yT
-      } = TT;
-      const {
-        t: fT
-      } = (0, CT.B)(), [xT, IT] = (0, lT.useState)(!1), [AT, vT] = (0, lT.useState)(""), hT = xT || null !== OT && kT.indexOf(OT) >= cT, NT = (hT || kT.length <= cT) && null !== MT && kT.length > MT, QT = AT.trim().toLowerCase();
-      let ST = hT ? kT : kT.slice(0, cT);
-      return NT && "" !== QT && (ST = ST.filter((TT => TT.toLowerCase().includes(QT)))), (0, GT.jsxs)(GT.Fragment, {
-        children: [NT && (0, GT.jsx)(eT.b, {
-          className: "LobbyManageFilter",
-          placeholderText: fT("lobbyManage:findName"),
-          ariaLabel: fT("lobbyManage:findName"),
-          onValueChange: TT => {
-            vT(TT)
-          }
-        }), ST.length > 0 && (0, GT.jsx)("div", {
-          className: "PlayerRows",
-          children: ST.map(((TT, kT) => yT(TT, ST.length - kT)))
-        }), !hT && kT.length > cT && (0, GT.jsx)("div", {
-          className: "LobbyManageMore",
-          children: (0, GT.jsx)(tT.c, {
-            label: (0, GT.jsxs)(GT.Fragment, {
-              children: [KT, " ", (0, GT.jsx)(jT.e, {
-                name: "angle-down"
-              })]
-            }),
-            onClick: () => {
-              IT(!0)
-            }
-          })
-        })]
-      })
-    }
-
-    function ZT(TT) {
-      let {
-        value: kT,
-        placeholder: cT,
-        ariaLabel: MT,
-        maxLength: KT,
-        wide: OT = !1,
-        onSave: yT
-      } = TT;
-      const fT = (0, lT.useRef)(null),
-        [xT, IT] = (0, lT.useState)(0),
-        CT = (0, lT.useRef)(!0),
-        jT = (0, lT.useRef)(null),
-        vT = (0, lT.useRef)({
-          value: kT,
-          onSave: yT
-        });
-      vT.current = {
-        value: kT,
-        onSave: yT
-      };
-      const tT = () => {
-        const TT = jT.current;
-        jT.current = null, null !== TT && TT !== vT.current.value && vT.current.onSave(TT).then((() => {
-          CT.current && IT((TT => TT + 1))
-        }))
-      };
-      return (0, lT.useEffect)((() => {
-        null === jT.current && fT.current && (fT.current.value = kT)
-      }), [kT, xT]), (0, lT.useEffect)((() => () => {
-        CT.current = !1, tT()
-      }), []), (0, GT.jsx)("div", {
-        className: AT()("LobbyManageRuleInput", {
-          LobbyManageRuleInputWide: OT
-        }),
-        onBlur: tT,
-        children: (0, GT.jsx)(eT.b, {
-          domRef: fT,
-          defaultValue: kT,
-          placeholderText: cT,
-          ariaLabel: MT,
-          maxLength: KT,
-          onValueChange: TT => {
-            jT.current = TT
-          },
-          onEnter: tT
-        })
-      })
-    }
-    const uT = ["mod", "coOwner"],
-      XT = {
-        coOwner: "lobbyManage:roleCanCoOwner",
-        mod: "lobbyManage:roleCanMod",
-        coder: "lobbyManage:roleCanCoder",
-        builder: "lobbyManage:roleCanBuilder"
-      };
-
-    function dT(TT) {
-      var kT, cT, KT;
-      let {
-        name: OT,
-        place: yT,
-        openedIn: fT,
-        isYou: IT,
-        manage: AT,
-        hiddenNames: vT,
-        zIndex: tT
-      } = TT;
-      const {
-        t: hT,
-        selectedLanguage: NT
-      } = (0, CT.B)(), [QT, DT] = (0, lT.useState)(null), {
-        state: aT
-      } = AT, FT = `player:${OT}`, zT = function(TT, kT) {
-        if ("banned" === TT.section) return {
-          ...rT,
-          unban: !0
-        };
-        if ("gone" === TT.section) return rT;
-        const {
-          player: cT
-        } = TT, lT = "here" === TT.section, MT = lT || "none" !== cT.role ? cT.can.roles : [];
-        return {
-          gamemode: lT && kT && null !== cT.gamemode && cT.can.gamemode,
-          roles: MT,
-          fixedRole: 0 === MT.length && "none" !== cT.role ? cT.role : null,
-          kick: lT && cT.can.kick,
-          ban: cT.can.ban,
-          unban: !1
-        }
-      }(yT, null !== aT.gamemodes), HT = AT.statusOf(FT), eT = AT.isPending(FT), ET = xT(), ZT = Date.now(), dT = TT => {
-        var kT, cT;
-        return null !== (kT = null === (cT = (TT => aT.roles.find((kT => kT.role === TT)))(TT)) || void 0 === cT ? void 0 : cT.label) && void 0 !== kT ? kT : TT
-      }, LT = TT => {
-        const kT = XT[TT];
-        return void 0 === kT ? void 0 : hT(kT)
-      }, RT = "here" === yT.section || "away" === yT.section ? yT.player : null, gT = "here" === yT.section ? yT.player.id : null, {
-        playerSocialPreview: UT,
-        isFriend: YT
-      } = null === gT ? {
-        playerSocialPreview: (0, mT.g)(OT, null),
-        isFriend: !1
-      } : (0, wT.c)(gT, OT), BT = function() {
-        AT.send(...arguments)
-      }, WT = (TT, kT) => {
-        ET.hold("role", TT, AT.send({
-          type: "setRole",
-          name: OT,
-          role: TT
-        }, FT, kT))
-      };
-      let nT = null;
-      if ("ban" === (null === QT || void 0 === QT ? void 0 : QT.kind)) nT = hT("lobbyManageEntry:banConfirm", {
-        playerName: OT
-      });
-      else if ("role" === (null === QT || void 0 === QT ? void 0 : QT.kind)) {
-        var pT;
-        nT = `${hT("lobbyManage:roleConfirm",{playerName:OT,role:dT(QT.role)})} ${null!==(pT=LT(QT.role))&&void 0!==pT?pT:""}`
-      } else if (HT) nT = (0, GT.jsx)(VT, {
-        status: HT
-      });
-      else if (IT) nT = hT("lobbyManage:you");
-      else if ("here" === yT.section) "none" === yT.player.role && ZT - yT.player.at < 6e5 && (nT = oT(hT, NT.code, "lobbyManage:joinedAgo", yT.player.at, ZT));
-      else if ("away" === yT.section) {
-        if (yT.player.at > 0) {
-          const TT = "kicked" === yT.player.why ? "lobbyManage:kickedAgo" : "lobbyManage:leftAgo";
-          nT = oT(hT, NT.code, TT, yT.player.at, ZT)
-        }
-      } else "banned" === yT.section ? null !== yT.bannedAt && (nT = oT(hT, NT.code, "lobbyManage:bannedAgo", yT.bannedAt, ZT)) : "banned" === fT && (nT = hT("lobbyManageEntry:unbanned"));
-      return (0, GT.jsx)("div", {
-        className: "LobbyManagePlayerRow",
-        "data-lobby-manage-row": OT,
-        children: (0, GT.jsxs)(PT.h, {
-          playerSocialPreview: UT,
-          isFriend: YT,
-          status: nT,
-          opensProfileCard: !IT && (0, wT.g)(!0, OT, vT),
-          zIndex: tT,
-          children: [null !== QT && (0, GT.jsxs)("div", {
-            className: "LobbyManageButtons",
-            children: ["ban" === QT.kind && (0, GT.jsxs)(ST.I, {
-              className: "LobbyManageIconButton SmallTextLight",
-              analyticsClick: {
-                id: "lobby_manage.ban",
-                value: "row"
-              },
-              onClick: () => {
-                DT(null), BT({
-                  type: "ban",
-                  name: OT
-                }, FT)
-              },
-              children: [(0, GT.jsx)(jT.e, {
-                name: "gavel"
-              }), (0, GT.jsx)("span", {
-                className: "LobbyManageButtonLabel",
-                children: hT("lobbyManageEntry:ban")
-              })]
-            }), "role" === QT.kind && (0, GT.jsx)(ST.e, {
-              className: "LobbyManageIconButton SmallTextLight",
-              analyticsClick: {
-                id: "lobby_manage.set_role",
-                value: QT.role
-              },
-              onClick: () => {
-                DT(null), WT(QT.role)
-              },
-              children: hT("lobbyManage:makeRole", {
-                role: dT(QT.role)
-              })
-            }), (0, GT.jsx)(ST.i, {
-              className: "LobbyManageIconButton SmallTextLight",
-              onClick: () => {
-                DT(null)
-              },
-              children: hT("general:cancel")
-            })]
-          }), null === QT && (0, GT.jsxs)(GT.Fragment, {
-            children: [(0, GT.jsxs)("div", {
-              className: "LobbyManageChoices",
-              children: [zT.gamemode && null !== RT && (0, GT.jsx)(bT.d, {
-                options: (null !== (kT = aT.gamemodes) && void 0 !== kT ? kT : []).map((TT => ({
-                  value: TT.value,
-                  label: JT(hT, TT.label, vT)
-                }))),
-                value: null !== (cT = ET.get("gamemode")) && void 0 !== cT ? cT : RT.gamemode,
-                disabled: eT,
-                onChange: TT => {
-                  (0, MT.reportAnalyticsClick)({
-                    id: "lobby_manage.set_gamemode",
-                    value: TT.value
-                  }), ET.hold("gamemode", TT.value, AT.send({
-                    type: "setGamemode",
-                    name: OT,
-                    gamemode: TT.value
-                  }, FT))
-                }
-              }), zT.roles.length > 0 && null !== RT && (0, GT.jsx)(bT.d, {
-                options: [...aT.roles].reverse().filter((TT => zT.roles.includes(TT.role))).map((TT => ({
-                  value: TT.role,
-                  label: TT.label
-                }))),
-                value: null !== (KT = ET.get("role")) && void 0 !== KT ? KT : RT.role,
-                disabled: eT,
-                onChange: TT => {
-                  var kT;
-                  (kT = TT.value) !== (null === RT || void 0 === RT ? void 0 : RT.role) && (uT.includes(kT) ? DT({
-                    kind: "role",
-                    role: kT
-                  }) : ((0, MT.reportAnalyticsClick)({
-                    id: "lobby_manage.set_role",
-                    value: kT
-                  }), WT(kT, LT(kT))))
-                }
-              }), null !== zT.fixedRole && (0, GT.jsx)("div", {
-                className: "LobbyManageChoiceFixed",
-                children: dT(zT.fixedRole)
-              })]
-            }), (0, GT.jsxs)("div", {
-              className: "LobbyManageButtons",
-              children: [zT.kick && (0, GT.jsxs)(ST.i, {
-                className: "LobbyManageIconButton SmallTextLight",
-                ariaLabel: `${hT("lobbyManageEntry:kick")} ${OT}`,
-                disabled: eT,
-                analyticsClick: {
-                  id: "lobby_manage.kick",
-                  value: "row"
-                },
-                onClick: () => {
-                  BT({
-                    type: "kick",
-                    name: OT
-                  }, FT)
-                },
-                children: [(0, GT.jsx)(jT.e, {
-                  name: "person-falling-burst"
-                }), (0, GT.jsx)("span", {
-                  className: "LobbyManageButtonLabel",
-                  children: hT("lobbyManageEntry:kick")
-                })]
-              }), zT.ban && (0, GT.jsxs)(ST.L, {
-                className: "LobbyManageOutlineButton SmallTextLight",
-                ariaLabel: `${hT("lobbyManageEntry:ban")} ${OT}`,
-                disabled: eT,
-                padDestructive: !0,
-                onClick: () => {
-                  DT({
-                    kind: "ban"
-                  })
-                },
-                children: [(0, GT.jsx)(jT.e, {
-                  name: "gavel"
-                }), (0, GT.jsx)("span", {
-                  className: "LobbyManageButtonLabel",
-                  children: hT("lobbyManageEntry:ban")
-                })]
-              }), zT.unban && (0, GT.jsxs)(ST.i, {
-                className: "LobbyManageIconButton SmallTextLight",
-                ariaLabel: `${hT("lobbyManageEntry:unban")} ${OT}`,
-                disabled: eT,
-                analyticsClick: {
-                  id: "lobby_manage.unban"
-                },
-                onClick: () => {
-                  BT({
-                    type: "unban",
-                    name: OT
-                  }, FT)
-                },
-                children: [(0, GT.jsx)(jT.e, {
-                  name: "user-unlock"
-                }), (0, GT.jsx)("span", {
-                  className: "LobbyManageButtonLabel",
-                  children: hT("lobbyManageEntry:unban")
-                })]
-              })]
-            })]
-          })]
-        })
-      })
-    }
-
-    function LT(TT) {
-      var kT, cT, MT, KT;
-      let {
-        manage: OT,
-        focusRequest: yT,
-        onFocused: fT
-      } = TT;
-      const {
-        t: xT
-      } = (0, CT.B)(), IT = (0, QT.h)("players"), AT = (0, QT.h)("hiddenPlayerNames"), vT = (0, lT.useRef)(null), {
-        state: hT
-      } = OT, NT = null === IT.localId ? null : null !== (kT = null === (cT = IT.byId[IT.localId]) || void 0 === cT ? void 0 : cT.name) && void 0 !== kT ? kT : null, [DT] = (0, lT.useState)((() => aT(hT, NT))), rT = function(TT, kT, cT) {
-        const lT = new Set([...TT.here, ...TT.away, ...TT.banned]),
-          MT = aT(kT, cT),
-          KT = kT => {
-            const cT = MT[kT].filter((TT => !lT.has(TT)));
-            for (const TT of cT) lT.add(TT);
-            return [...TT[kT], ...cT]
-          };
-        return {
-          here: KT("here"),
-          away: KT("away"),
-          banned: KT("banned")
-        }
-      }(DT, hT, NT), [PT, wT] = (0, lT.useState)(!1), mT = function(TT, kT) {
-        return TT.here.filter((TT => TT.name !== kT && "none" === TT.role && TT.can.kick)).length
-      }(hT, NT), bT = OT.statusOf("kickAll");
-      (0, lT.useEffect)((() => {
-        var TT, kT;
-        if (null === yT) return;
-        const cT = null === (TT = vT.current) || void 0 === TT ? void 0 : TT.querySelector(`[data-lobby-manage-row="${CSS.escape(yT.name)}"]`);
-        null === cT || void 0 === cT || cT.scrollIntoView({
-          block: "center"
-        }), null === cT || void 0 === cT || null === (kT = cT.querySelector(".ProfilePreview")) || void 0 === kT || kT.focus({
-          preventScroll: !0
-        }), fT(yT.seq)
-      }), [null === yT || void 0 === yT ? void 0 : yT.seq]);
-      const zT = TT => (kT, cT) => (0, GT.jsx)(dT, {
-        name: kT,
-        place: FT(hT, kT),
-        openedIn: TT,
-        isYou: kT === NT,
-        manage: OT,
-        hiddenNames: AT,
-        zIndex: cT
-      }, kT);
-      return (0, GT.jsxs)("div", {
-        ref: vT,
-        className: "LobbyManagePage",
-        children: [rT.here.length > 0 && (0, GT.jsxs)("div", {
-          className: "LobbyManageBox",
-          children: [(0, GT.jsxs)("div", {
-            className: "LobbyManageBoxHeading",
-            children: [(0, GT.jsx)(tT.c, {
-              label: xT("lobbyManage:here"),
-              meta: hT.here.length
-            }), mT >= 2 && !PT && (0, GT.jsxs)(ST.L, {
-              className: "LobbyManageTitleAction SmallTextLight",
-              padDestructive: !0,
-              disabled: OT.isPending("kickAll"),
-              onClick: () => {
-                wT(!0)
-              },
-              children: [(0, GT.jsx)(jT.e, {
-                name: "person-falling-burst"
-              }), " ", xT("lobbyManage:kickAll")]
-            })]
-          }), PT && mT >= 2 && (0, GT.jsxs)("div", {
-            className: "LobbyManageConfirm",
-            children: [(0, GT.jsx)("span", {
-              className: "LobbyManageConfirmText",
-              children: xT("lobbyManage:kickAllConfirm", {
-                count: mT
-              })
-            }), (0, GT.jsxs)("div", {
-              className: "LobbyManageButtons",
-              children: [(0, GT.jsx)(ST.I, {
-                className: "LobbyManageIconButton SmallTextLight",
-                analyticsClick: {
-                  id: "lobby_manage.kick_all"
-                },
-                onClick: () => {
-                  wT(!1), OT.send({
-                    type: "kickAll"
-                  }, "kickAll")
-                },
-                children: xT("lobbyManage:kickAll")
-              }), (0, GT.jsx)(ST.i, {
-                className: "LobbyManageIconButton SmallTextLight",
-                onClick: () => {
-                  wT(!1)
-                },
-                children: xT("general:cancel")
-              })]
-            })]
-          }), bT && (0, GT.jsx)("div", {
-            className: "LobbyManageBoxStatus",
-            children: (0, GT.jsx)(VT, {
-              status: bT
-            })
-          }), (0, GT.jsx)(ET, {
-            names: rT.here,
-            cap: rT.here.length,
-            filterFrom: 20,
-            moreLabel: "",
-            renderRow: zT("here")
-          })]
-        }), rT.away.length > 0 && (0, GT.jsxs)("div", {
-          className: "LobbyManageBox",
-          children: [(0, GT.jsx)(tT.c, {
-            label: xT("lobbyManage:notHere"),
-            meta: rT.away.length
-          }), (0, GT.jsx)(ET, {
-            names: rT.away,
-            cap: 5,
-            filterFrom: null,
-            moreLabel: xT("lobbyManage:allCount", {
-              count: rT.away.length
-            }),
-            reveal: null !== (MT = null === yT || void 0 === yT ? void 0 : yT.name) && void 0 !== MT ? MT : null,
-            renderRow: zT("away")
-          })]
-        }), rT.banned.length > 0 && (0, GT.jsxs)("div", {
-          className: "LobbyManageBox",
-          children: [(0, GT.jsx)(tT.c, {
-            label: xT("lobbyManage:banned"),
-            meta: rT.banned.length
-          }), (0, GT.jsx)(ET, {
-            names: rT.banned,
-            cap: 5,
-            filterFrom: 20,
-            moreLabel: xT("lobbyManage:allCount", {
-              count: rT.banned.length
-            }),
-            reveal: null !== (KT = null === yT || void 0 === yT ? void 0 : yT.name) && void 0 !== KT ? KT : null,
-            renderRow: zT("banned")
-          })]
-        })]
-      })
-    }
-    var RT = cT(4611),
-      gT = cT(1663),
-      UT = cT(36523),
-      YT = cT(36533),
-      BT = cT(36531),
-      WT = cT(36528),
-      nT = cT(36567),
-      pT = cT(36550),
-      iT = cT(36559);
-
-    function qT(TT) {
-      const kT = new Set;
-      for (const cT of TT) kT.add(cT.toLowerCase());
-      return kT
-    }
-
-    function sT(TT) {
-      var kT, cT;
-      let {
-        state: MT,
-        lobbyName: KT,
-        listed: OT,
-        isListed: yT,
-        pN: fT,
-        uF: xT,
-        statusOf: IT
-      } = TT;
-      const {
-        t: AT,
-        selectedLanguage: jT
-      } = (0, CT.B)(), vT = (0, gT.n)(), hT = (0, QT.h)("players"), NT = null === hT.localId ? null : null !== (kT = null === (cT = hT.byId[hT.localId]) || void 0 === cT ? void 0 : cT.name) && void 0 !== kT ? kT : null, ST = (0, lT.useMemo)((() => (0, WT.i)(vT.friends, KT, MT.here.map((TT => TT.name)))), [vT.friends, KT, MT.here]), DT = new Map(ST.map((TT => [TT.friend.name.toLowerCase(), TT]))), aT = function(TT) {
-        let {
-          refused: kT,
-          listed: cT,
-          here: lT,
-          friends: MT,
-          excluded: KT
-        } = TT;
-        const OT = qT(KT),
-          yT = TT => TT.filter((TT => {
-            const kT = TT.toLowerCase();
-            return !OT.has(kT) && (OT.add(kT), !0)
-          }));
-        return {
-          added: [],
-          refused: yT(kT),
-          listed: yT(cT),
-          suggested: yT([...lT, ...MT])
-        }
-      }({
-        refused: MT.refused.map((TT => TT.name)),
-        listed: OT,
-        here: MT.here.map((TT => TT.name)),
-        friends: ST.flatMap((TT => "here" === TT.place ? [] : [TT.friend.name])),
-        excluded: [...null === NT ? [] : [NT], ...[...MT.here, ...MT.away].flatMap((TT => "none" === TT.role || (0, WT.j)(OT, TT.name) ? [] : [TT.name]))]
-      }), [FT] = (0, lT.useState)(aT), [rT, PT] = (0, lT.useState)([]), bT = function(TT, kT, cT) {
-        const lT = qT(cT),
-          MT = qT([...cT, ...TT.refused, ...TT.listed, ...TT.suggested]),
-          KT = cT => [...TT[cT].filter((TT => !lT.has(TT.toLowerCase()))), ...kT[cT].filter((TT => {
-            const kT = TT.toLowerCase();
-            return !MT.has(kT) && (MT.add(kT), !0)
-          }))];
-        return {
-          added: [...cT],
-          refused: KT("refused"),
-          listed: KT("listed"),
-          suggested: KT("suggested")
-        }
-      }(FT, aT, rT), zT = (TT, kT) => {
-        var cT, lT;
-        const KT = TT.toLowerCase(),
-          OT = DT.get(KT),
-          xT = MT.here.find((TT => TT.name.toLowerCase() === KT)),
-          CT = MT.refused.find((TT => TT.name.toLowerCase() === KT)),
-          vT = null !== (cT = null === IT || void 0 === IT ? void 0 : IT(TT)) && void 0 !== cT ? cT : null;
-        let tT = null;
-        vT ? tT = (0, GT.jsx)(VT, {
-          status: vT
-        }) : CT ? tT = oT(AT, jT.code, "lobbyManage:triedToJoinAgo", CT.at, Date.now()) : OT && xT ? tT = AT("lobbyManage:friendHere") : OT ? tT = "online" === OT.place ? AT("lobbyManage:friendOnline") : AT("lobbyManage:friend") : xT && (tT = AT("lobbyManage:hereStatus"));
-        let hT = null !== (lT = null === OT || void 0 === OT ? void 0 : OT.friend) && void 0 !== lT ? lT : (0, mT.g)(TT, null);
-        return !OT && null !== xT && void 0 !== xT && xT.id && (hT = (0, wT.c)(xT.id, xT.name).playerSocialPreview), (0, GT.jsx)(pT.c, {
-          playerSocialPreview: hT,
-          isFriend: void 0 !== OT,
-          hideFriendBadge: !0,
-          status: tT,
-          zIndex: kT,
-          UA: {
-            on: yT(TT),
-            onChange: kT => {
-              fT(TT, kT)
-            }
-          }
-        }, KT)
-      }, JT = [...bT.added, ...bT.refused];
-      return (0, GT.jsxs)("div", {
-        className: "LobbyManageBox",
-        children: [(0, GT.jsx)(tT.c, {
-          label: AT("worldSocial:whitelist"),
-          meta: OT.length
-        }), (0, GT.jsx)(iT.d, {
-          label: AT("lobbyManage:add"),
-          icon: "user-check",
-          placeholder: AT("socialBar:enterPlayerName"),
-          onSubmit: async TT => {
-            const kT = await xT(TT);
-            return kT.ok && PT((kT => [TT, ...kT])), kT
-          }
-        }), JT.length > 0 && (0, GT.jsx)("div", {
-          className: "PlayerRows",
-          children: JT.map(((TT, kT) => zT(TT, JT.length - kT)))
-        }), (0, GT.jsx)(ET, {
-          names: bT.listed,
-          cap: 8,
-          filterFrom: 8,
-          moreLabel: AT("lobbyManage:allOnWhitelist", {
-            count: bT.listed.length
-          }),
-          renderRow: zT
-        }), (0, GT.jsx)(ET, {
-          names: bT.suggested,
-          cap: 8,
-          filterFrom: null,
-          moreLabel: AT("lobbyManage:allCount", {
-            count: bT.suggested.length
-          }),
-          renderRow: zT
-        })]
-      })
-    }
-
-    function Tk(TT) {
-      let {
-        manage: kT,
-        listing: cT
-      } = TT;
-      const {
-        t: lT
-      } = (0, CT.B)(), KT = (TT, cT) => ((0, MT.reportAnalyticsClick)({
-        id: "lobby_manage.set_listing",
-        value: TT
-      }), kT.send({
-        type: "setListing",
-        field: TT,
-        value: cT
-      }, `listing:${TT}`)), OT = TT => {
-        const cT = kT.statusOf(`listing:${TT}`);
-        return cT && !cT.ok && (0, GT.jsx)("div", {
-          className: "LobbyManageFieldError",
-          children: (0, GT.jsx)(VT, {
-            status: cT
-          })
-        })
-      };
-      return (0, GT.jsxs)("div", {
-        className: "LobbyManageBox LobbyManageListing",
-        children: [(0, GT.jsx)(tT.c, {
-          label: lT("lobbyManage:inWorldsList")
-        }), (0, GT.jsxs)("div", {
-          className: "LobbyManageRuleRow",
-          children: [(0, GT.jsx)("div", {
-            className: "SliderText",
-            children: lT("lobbyManage:description")
-          }), (0, GT.jsx)(ZT, {
-            value: cT.description,
-            ariaLabel: lT("lobbyManage:description"),
-            wide: !0,
-            onSave: TT => KT("description", TT)
-          })]
-        }), OT("description"), (0, GT.jsxs)("div", {
-          className: "LobbyManageRuleRow",
-          children: [(0, GT.jsx)("div", {
-            className: "SliderText",
-            children: lT("lobbyManage:emojis")
-          }), (0, GT.jsx)(ZT, {
-            value: cT.emojis,
-            ariaLabel: lT("lobbyManage:emojis"),
-            onSave: TT => KT("emojis", TT)
-          })]
-        }), OT("emojis"), (0, GT.jsxs)("div", {
-          className: "LobbyManageRuleRow",
-          children: [(0, GT.jsx)("div", {
-            className: "SliderText",
-            children: lT("lobbyManage:colour")
-          }), (0, GT.jsx)(kk, {
-            value: cT.colour,
-            ariaLabel: lT("lobbyManage:colour"),
-            onSave: TT => {
-              KT("colour", TT)
-            }
-          })]
-        }), OT("colour")]
-      })
-    }
-
-    function kk(TT) {
-      let {
-        value: kT,
-        ariaLabel: cT,
-        onSave: MT
-      } = TT;
-      const KT = (0, lT.useRef)(null),
-        OT = (0, lT.useRef)({
-          value: kT,
-          onSave: MT
-        });
-      OT.current = {
-        value: kT,
-        onSave: MT
-      };
-      const yT = (0, lT.useRef)(null),
-        fT = (0, lT.useRef)(!1),
-        xT = TT => {
-          fT.current && TT.value !== OT.current.value && TT.value !== yT.current && (yT.current = TT.value, OT.current.onSave(TT.value))
-        };
-      return (0, lT.useEffect)((() => {
-        KT.current && document.activeElement !== KT.current && (KT.current.value = kT)
-      }), [kT]), (0, lT.useEffect)((() => {
-        const TT = KT.current,
-          kT = () => {
-            xT(TT)
-          };
-        return TT.addEventListener("change", kT), () => {
-          TT.removeEventListener("change", kT), xT(TT)
-        }
-      }), []), (0, GT.jsx)("input", {
-        ref: KT,
-        type: "color",
-        className: "LobbyManageColour",
-        defaultValue: kT,
-        "aria-label": cT,
-        onInput: () => {
-          fT.current = !0
-        },
-        onBlur: TT => {
-          xT(TT.currentTarget)
-        }
-      })
-    }
-
-    function ck(TT) {
-      let {
-        manage: kT
-      } = TT;
-      const {
-        lobbyName: cT,
-        shownLobbyName: lT
-      } = (0, QT.h)("connectedGame");
-      return kT.state.you.canSetVisibility && null !== cT ? (0, GT.jsx)(Mk, {
-        manage: kT,
-        lobbyName: cT,
-        worldCode: null !== lT && void 0 !== lT ? lT : cT
-      }, cT) : (0, GT.jsx)(Kk, {
-        manage: kT,
-        lobbyName: null !== cT && void 0 !== cT ? cT : ""
-      })
-    }
-
-    function lk(TT) {
-      return TT.map((TT => TT.toLowerCase())).sort().join(",")
-    }
-
-    function Mk(TT) {
-      var kT;
-      let {
-        manage: cT,
-        lobbyName: KT,
-        worldCode: OT
-      } = TT;
-      const {
-        t: yT
-      } = (0, CT.B)(), {
-        settings: fT,
-        loading: xT,
-        change: IT,
-        retry: AT,
-        refresh: jT
-      } = (0, UT.i)(KT), hT = (0, gT.n)(), {
-        state: NT
-      } = cT, QT = (0, lT.useRef)(fT);
-      QT.current = fT;
-      const DT = lk(null !== (kT = NT.whitelist) && void 0 !== kT ? kT : []),
-        aT = null !== NT.whitelist;
-      (0, lT.useEffect)((() => {
-        const TT = QT.current;
-        null !== TT && (TT.visibility !== NT.visibility || aT && lk(TT.whitelist) !== DT) && jT()
-      }), [NT.visibility, DT, aT, jT]);
-      const FT = async (TT, kT) => {
-        let cT = null;
-        return await IT(TT, kT, {
-          quiet: !0,
-          onAnswer: TT => {
-            cT = TT
-          }
-        }), cT
-      }, rT = (TT, kT) => {
-        null !== kT && "error" in kT && cT.showStatus(TT, {
-          ok: !1,
-          text: [yT(kT.error)]
-        })
-      }, PT = async TT => {
-        if (null === fT || TT === fT.visibility) return;
-        (0, MT.reportAnalyticsClick)({
-          id: "lobby_manage.set_mode",
-          value: TT
-        });
-        const kT = "whitelist" === TT ? (0, WT.e)((0, WT.i)(hT.friends, KT, NT.here.map((TT => TT.name))), (0, nT.d)(KT), fT.whitelist) : [],
-          cT = await FT({
-            setVisibility: TT
-          }, (kT => ({
-            ...kT,
-            visibility: TT
-          })));
-        rT("mode", cT), null === cT || "error" in cT || await (async TT => {
-          for (const kT of (0, WT.n)(TT, RT.D))
-            if (!await IT({
-                whitelistAdd: kT
-              }, (TT => (0, WT.t)(TT, kT, !0)))) return !1;
+    function tq(qq, Eq) {
+      for (var gq in qq._modifiersHeldThroughBlur = {}, Qq) qq._keyStates[gq] && (qq._modifiersHeldThroughBlur[gq] = !0);
+      Eq && Eq.isTrusted && function() {
+        try {
+          return window.self !== window.top
+        } catch (qq) {
           return !0
-        })(kT)
-      }, wT = (0, lT.useMemo)((() => {
-        var TT;
-        if (null === fT) return [];
-        const kT = null !== (TT = NT.whitelist) && void 0 !== TT ? TT : [];
-        return [...kT.filter((TT => (0, WT.j)(fT.whitelist, TT))), ...fT.whitelist.filter((TT => !(0, WT.j)(kT, TT)))]
-      }), [fT, NT.whitelist]), mT = cT.statusOf("mode");
-      return (0, GT.jsxs)("div", {
-        className: "LobbyManagePage",
-        children: [(0, GT.jsxs)("div", {
-          className: "LobbyManageBox",
-          children: [(0, GT.jsx)(tT.c, {
-            label: yT("worldSocial:whoCanJoin")
-          }), null === fT && xT && (0, GT.jsx)("div", {
-            className: "LobbyManageLoading",
-            children: (0, GT.jsx)(vT.d, {})
-          }), null === fT && !xT && (0, GT.jsx)(ST.i, {
-            className: "SmallTextLight",
-            onClick: AT,
-            children: yT("worldSocial:loadFailed")
-          }), null !== fT && (0, GT.jsx)(YT.b, {
-            visibility: fT.visibility,
-            onPick: TT => {
-              PT(TT)
-            }
-          }), mT && (0, GT.jsx)("div", {
-            className: "LobbyManageFieldError",
-            children: (0, GT.jsx)(VT, {
-              status: mT
-            })
-          }), null !== fT && "private" !== fT.visibility && (0, GT.jsx)(BT.d, {
-            worldCode: OT,
-            message: null
-          })]
-        }), "whitelist" === (null === fT || void 0 === fT ? void 0 : fT.visibility) && (0, GT.jsx)(sT, {
-          state: NT,
-          lobbyName: KT,
-          listed: wT,
-          isListed: TT => (0, WT.j)(fT.whitelist, TT),
-          pN: (TT, kT) => {
-            (0, MT.reportAnalyticsClick)(kT ? {
-              id: "lobby_manage.whitelist_add",
-              value: "UA"
-            } : {
-              id: "lobby_manage.whitelist_remove"
-            }), FT(kT ? {
-              whitelistAdd: [TT]
-            } : {
-              whitelistRemove: TT
-            }, (cT => (0, WT.t)(cT, [TT], kT))).then((kT => {
-              rT(`whitelist:${TT.toLowerCase()}`, kT)
-            }))
-          },
-          uF: async TT => {
-            (0, MT.reportAnalyticsClick)({
-              id: "lobby_manage.whitelist_add",
-              value: "field"
-            });
-            const kT = await FT({
-              whitelistAdd: [TT]
-            }, (kT => (0, WT.t)(kT, [TT], !0)));
-            return null === kT ? {
-              ok: !1,
-              error: yT("worldSocial:changeFailed")
-            } : "error" in kT ? {
-              ok: !1,
-              error: yT(kT.error)
-            } : (0, WT.j)(kT.notFound, TT) ? {
-              ok: !1,
-              error: yT("lobbyManage:noPlayerCalled", {
-                playerName: TT
-              })
-            } : {
-              ok: !0
-            }
-          },
-          statusOf: TT => cT.statusOf(`whitelist:${TT.toLowerCase()}`)
-        }), "public" === (null === fT || void 0 === fT ? void 0 : fT.visibility) && null !== NT.listing && (0, GT.jsx)(Tk, {
-          manage: cT,
-          listing: NT.listing
-        })]
-      })
-    }
-
-    function Kk(TT) {
-      var kT;
-      let {
-        manage: cT,
-        lobbyName: lT
-      } = TT;
-      const {
-        t: KT
-      } = (0, CT.B)(), {
-        state: OT
-      } = cT, yT = xT(), fT = null !== (kT = OT.whitelist) && void 0 !== kT ? kT : [];
-      return (0, GT.jsxs)("div", {
-        className: "LobbyManagePage",
-        children: [(0, GT.jsxs)("div", {
-          className: "LobbyManageBox",
-          children: [(0, GT.jsx)(tT.c, {
-            label: KT("worldSocial:whoCanJoin")
-          }), (0, GT.jsx)("div", {
-            className: "LobbyManageModeText",
-            children: KT(`worldSocial:${OT.visibility}`)
-          })]
-        }), "whitelist" === OT.visibility && OT.you.canEditWhitelist && (0, GT.jsx)(sT, {
-          state: OT,
-          lobbyName: lT,
-          listed: fT,
-          isListed: TT => {
-            var kT;
-            return null !== (kT = yT.get(TT.toLowerCase())) && void 0 !== kT ? kT : (0, WT.j)(fT, TT)
-          },
-          pN: (TT, kT) => {
-            (0, MT.reportAnalyticsClick)(kT ? {
-              id: "lobby_manage.whitelist_add",
-              value: "UA"
-            } : {
-              id: "lobby_manage.whitelist_remove"
-            });
-            const lT = TT.toLowerCase();
-            yT.hold(lT, kT, cT.send(kT ? {
-              type: "whitelistAdd",
-              names: [TT]
-            } : {
-              type: "whitelistRemove",
-              name: TT
-            }, `whitelist:${lT}`))
-          },
-          uF: async TT => {
-            (0, MT.reportAnalyticsClick)({
-              id: "lobby_manage.whitelist_add",
-              value: "field"
-            });
-            const kT = await cT.send({
-              type: "whitelistAdd",
-              names: [TT]
-            }, "whitelist-field");
-            return kT.ok ? {
-              ok: !0
-            } : {
-              ok: !1,
-              error: (0, GT.jsx)(HT.b, {
-                text: kT.message
-              })
-            }
-          },
-          statusOf: TT => cT.statusOf(`whitelist:${TT.toLowerCase()}`)
-        }), "public" === OT.visibility && null !== OT.listing && (0, GT.jsx)(Tk, {
-          manage: cT,
-          listing: OT.listing
-        })]
-      })
-    }
-    var Ok = cT(4945),
-      yk = cT(1379);
-    const fk = /[\p{Script_Extensions=Han}\p{Script_Extensions=Hiragana}\p{Script_Extensions=Katakana}\p{Script_Extensions=Hangul}\u{3000}-\u{303F}\u{FF01}-\u{FF60}\u{FFE0}-\u{FFE6}]/u;
-    const xk = (0, lT.memo)((function(TT) {
-      var kT;
-      let {
-        rule: cT,
-        value: lT,
-        status: MT,
-        pending: KT,
-        hiddenNames: OT,
-        jW: yT,
-        onAction: fT
-      } = TT;
-      const {
-        t: xT
-      } = (0, CT.B)(), IT = TT => yT(cT, TT), AT = (TT, kT) => {
-        fT(cT, TT, kT)
-      }, jT = JT(xT, cT.label, OT), vT = cT.info ? JT(xT, cT.info, OT) : void 0, tT = cT.placeholder ? JT(xT, cT.placeholder, OT) : void 0, hT = (null !== (kT = cT.options) && void 0 !== kT ? kT : []).map((TT => ({
-        value: TT.value,
-        label: JT(xT, TT.label, OT)
-      }))), NT = Math.max(0, ...hT.map((TT => function(TT) {
-        let kT = 0;
-        for (const cT of TT) kT += fk.test(cT) ? 2 : 1;
-        return kT
-      }(TT.label)))), QT = MT && (0, GT.jsx)("div", {
-        className: "LobbyManageRuleStatus",
-        children: (0, GT.jsx)(VT, {
-          status: MT
-        })
-      }), DT = (0, GT.jsxs)("div", {
-        className: "SliderText",
-        children: [jT, void 0 !== vT && (0, GT.jsx)(yk.b, {
-          className: "SettingsTextInputCircleInfo",
-          hoverInfo: vT
-        })]
-      });
-      return "toggle" === cT.kind ? (0, GT.jsxs)(GT.Fragment, {
-        children: [(0, GT.jsx)(Ok.e, {
-          label: jT,
-          checked: !0 === lT,
-          circleInfoText: vT,
-          disabled: KT,
-          onClick: IT
-        }), QT]
-      }) : "choice" === cT.kind && hT.length <= 3 ? (0, GT.jsxs)(GT.Fragment, {
-        children: [(0, GT.jsx)(Ok.h, {
-          label: jT,
-          options: hT,
-          value: String(lT),
-          circleInfoText: vT,
-          onChange: IT
-        }), QT]
-      }) : (0, GT.jsxs)("div", {
-        className: "SettingBox LobbyManageRuleRow",
-        children: [DT, "choice" === cT.kind && (0, GT.jsx)("span", {
-          className: "LobbyManageRuleChoice",
-          style: {
-            "--lobby-choice-chars": NT
-          },
-          children: (0, GT.jsx)(bT.d, {
-            options: hT,
-            value: String(lT),
-            disabled: KT,
-            onChange: TT => {
-              IT(TT.value)
-            }
-          })
-        }), ("number" === cT.kind || "text" === cT.kind) && (0, GT.jsx)(ZT, {
-          value: null === lT ? "" : String(lT),
-          placeholder: tT,
-          ariaLabel: jT,
-          onSave: TT => {
-            const kT = TT.trim(),
-              lT = Number(kT);
-            return IT("number" === cT.kind && "" !== kT && Number.isFinite(lT) ? lT : kT)
-          }
-        }), "action" === cT.kind && (0, GT.jsxs)("div", {
-          className: "LobbyManageRuleInput",
-          children: [hT.length > 3 && (0, GT.jsx)(bT.d, {
-            options: hT,
-            value: {
-              value: "",
-              label: null !== tT && void 0 !== tT ? tT : jT
-            },
-            disabled: KT,
-            onChange: TT => {
-              AT(TT.value)
-            }
-          }), hT.length > 0 && hT.length <= 3 && hT.map((TT => (0, GT.jsx)(ST.i, {
-            className: "SmallTextLight",
-            disabled: KT,
-            onClick: () => {
-              AT(TT.value)
-            },
-            children: TT.label
-          }, TT.value))), 0 === hT.length && (0, GT.jsx)(ST.i, {
-            className: "SmallTextLight",
-            disabled: KT,
-            onClick: () => {
-              AT()
-            },
-            children: null !== tT && void 0 !== tT ? tT : jT
-          })]
-        }), "names" === cT.kind && (0, GT.jsx)(Ik, {
-          names: Array.isArray(lT) ? lT : [],
-          pending: KT,
-          onAction: AT
-        }), QT]
-      })
-    }));
-
-    function Ik(TT) {
-      let {
-        names: kT,
-        pending: cT,
-        onAction: MT
-      } = TT;
-      const {
-        t: KT
-      } = (0, CT.B)(), OT = (0, lT.useRef)(null), [yT, fT] = (0, lT.useState)(""), xT = () => {
-        const TT = yT.trim();
-        "" !== TT && (MT(TT, "add"), OT.current && (OT.current.value = ""), fT(""))
-      };
-      return (0, GT.jsxs)("div", {
-        className: "LobbyManageNames",
-        children: [kT.map((TT => (0, GT.jsxs)("div", {
-          className: "LobbyManageName",
-          children: [(0, GT.jsx)("span", {
-            className: "LobbyManageNameText",
-            children: TT
-          }), (0, GT.jsx)(ST.i, {
-            className: "LobbyManageIconButton SmallTextLight",
-            ariaLabel: KT("lobbyManage:removeName", {
-              name: TT
-            }),
-            disabled: cT,
-            onClick: () => {
-              MT(TT, "remove")
-            },
-            children: (0, GT.jsx)(jT.e, {
-              name: "xmark"
-            })
-          })]
-        }, TT))), (0, GT.jsxs)("div", {
-          className: "LobbyManageRuleInput",
-          children: [(0, GT.jsx)(eT.b, {
-            domRef: OT,
-            placeholderText: KT("lobbyManage:namePlaceholder"),
-            ariaLabel: KT("lobbyManage:namePlaceholder"),
-            maxLength: 32,
-            onValueChange: TT => {
-              fT(TT)
-            },
-            onEnter: xT
-          }), (0, GT.jsx)(ST.i, {
-            className: "SmallTextLight",
-            disabled: cT || "" === yT.trim(),
-            onClick: xT,
-            children: KT("lobbyManage:addHere")
-          })]
-        })]
-      })
-    }
-    const Ak = [{
-      group: "gameplay",
-      title: "lobbyManage:gameplay"
-    }, {
-      group: "world",
-      title: "lobbyManage:world"
-    }];
-
-    function Ck(TT) {
-      return Ak.flatMap((kT => {
-        let {
-          group: cT
-        } = kT;
-        return TT.filter((TT => TT.group === cT && void 0 === TT.parent))
-      }))
-    }
-
-    function jk(TT) {
-      let {
-        manage: kT,
-        rowsShown: cT
-      } = TT;
-      const {
-        t: KT
-      } = (0, CT.B)(), OT = (0, QT.h)("hiddenPlayerNames"), {
-        rules: yT
-      } = kT.state, fT = xT(), IT = new Set(Ck(yT).slice(0, cT)), AT = TT => {
-        const kT = fT.get(TT.key);
-        return void 0 === kT ? TT.value : kT
-      }, {
-        hold: jT
-      } = fT, vT = (0, lT.useCallback)(((TT, cT) => {
-        (0, MT.reportAnalyticsClick)({
-          id: "lobby_manage.set_rule",
-          value: TT.key
-        });
-        const lT = kT.send({
-          type: "setRule",
-          key: TT.key,
-          value: cT
-        }, `rule:${TT.key}`);
-        return jT(TT.key, cT, lT), lT
-      }), [kT, jT]), hT = (0, lT.useCallback)(((TT, cT, lT) => {
-        (0, MT.reportAnalyticsClick)({
-          id: "lobby_manage.set_rule",
-          value: TT.key
-        }), kT.send({
-          type: "ruleAction",
-          key: TT.key,
-          ...void 0 === cT ? {} : {
-            arg: cT
-          },
-          ...void 0 === lT ? {} : {
-            op: lT
-          }
-        }, `rule:${TT.key}`, void 0 === lT ? KT("lobbyManage:setJustNow") : void 0)
-      }), [kT, KT]), NT = TT => {
-        const cT = `rule:${TT.key}`;
-        return (0, GT.jsx)(xk, {
-          rule: TT,
-          value: AT(TT),
-          status: kT.statusOf(cT),
-          pending: kT.isPending(cT),
-          hiddenNames: OT,
-          jW: vT,
-          onAction: hT
-        }, TT.key)
-      };
-      return (0, GT.jsx)("div", {
-        className: "LobbyManagePage LobbyManageRules",
-        children: Ak.map((TT => {
-          let {
-            group: kT,
-            title: cT
-          } = TT;
-          const MT = yT.filter((TT => TT.group === kT && IT.has(TT)));
-          return 0 === MT.length ? null : (0, GT.jsxs)(lT.Fragment, {
-            children: [(0, GT.jsx)(tT.c, {
-              label: KT(cT)
-            }), MT.map((TT => {
-              const kT = yT.filter((kT => kT.parent === TT.key));
-              return 0 === kT.length || !0 !== AT(TT) ? NT(TT) : (0, GT.jsxs)("div", {
-                className: "SettingBoxGroup",
-                children: [NT(TT), kT.map(NT)]
-              }, TT.key)
-            }))]
-          }, kT)
-        }))
-      })
-    }
-    const vk = {
-        players: {
-          icon: "user-group",
-          title: "lobbyManage:players"
-        },
-        joining: {
-          icon: "door-open",
-          title: "lobbyManage:joining"
-        },
-        rules: {
-          icon: "list",
-          title: "lobbyManage:rules"
-        },
-        leaderboard: {
-          icon: "trophy",
-          title: "lobbyManage:leaderboard"
         }
+      }() && (clearTimeout(qq._blurRelease), qq._blurRelease = setTimeout((function() {
+        if (!document.hasFocus())
+          for (var Eq in qq._modifiersHeldThroughBlur = {}, qq._keyStates) qq._keyStates[Eq] && !/^Mouse\d/.test(Eq) && vq(qq, Eq)
+      }), 0))
+    }
+
+    function rq(qq, Eq) {
+      var gq = qq._modifiersHeldThroughBlur;
+      if (gq && Eq.isTrusted && document.hasFocus())
+        for (var Yq in gq) delete gq[Yq], qq._keyStates[Yq] && Yq !== Eq.code && (yq(Eq, Yq) || vq(qq, Yq))
+    }
+
+    function vq(qq, Eq) {
+      const gq = {
+          code: Eq,
+          preventDefault: () => {},
+          stopPropagation: () => {}
+        },
+        Yq = lq;
+      lq = gq;
+      try {
+        hq(Eq, !1, qq, gq)
+      } finally {
+        lq = Yq
+      }
+    }
+
+    function hq(qq, Eq, gq, Yq) {
+      var lq = gq._keyBindmap[qq];
+      lq && (nq(gq._keyStates[qq], Eq) && (gq._keyStates[qq] = Eq, lq.forEach((qq => {
+        (!gq.filterEvents || gq.filterEvents(Yq, qq)) && function(qq, Eq, gq, Yq) {
+          var lq = Eq ? gq.pressCount : gq.releaseCount;
+          lq[qq] = (lq[qq] || 0) + 1;
+          var Oq = gq._bindPressCount[qq] || 0;
+          (Oq += Eq ? 1 : -1) < 0 && (Oq = 0);
+          gq._bindPressCount[qq] = Oq;
+          var mq = gq.state[qq];
+          if (nq(mq, Oq)) {
+            gq.state[qq] = Oq > 0;
+            var xq = Eq ? gq.down : gq.up;
+            gq.disabled || xq.emit(qq, Yq)
+          }
+        }(qq, Eq, gq, Yq)
+      }))), "button" in Yq || (gq.IK && !Yq.defaultPrevented && Yq.preventDefault(), gq.stopPropagation && Yq.stopPropagation()))
+    }
+
+    function nq(qq, Eq) {
+      return qq ? !Eq : Eq
+    }
+  },
+  36586: (qq, Eq) => {
+    function gq(qq) {
+      if (qq && "object" === typeof qq) {
+        var Eq = qq.which || qq.keyCode || qq.charCode;
+        Eq && (qq = Eq)
+      }
+      if ("number" === typeof qq) return mq[qq];
+      var gq, Oq = String(qq);
+      return (gq = Yq[Oq.toLowerCase()]) ? gq : (gq = lq[Oq.toLowerCase()]) || (1 === Oq.length ? Oq.charCodeAt(0) : void 0)
+    }
+    gq.isEventKey = function(qq, Eq) {
+      if (qq && "object" === typeof qq) {
+        var gq = qq.which || qq.keyCode || qq.charCode;
+        if (null === gq || void 0 === gq) return !1;
+        if ("string" === typeof Eq) {
+          var Oq;
+          if (Oq = Yq[Eq.toLowerCase()]) return Oq === gq;
+          if (Oq = lq[Eq.toLowerCase()]) return Oq === gq
+        } else if ("number" === typeof Eq) return Eq === gq;
+        return !1
+      }
+    };
+    var Yq = (Eq = qq.exports = gq).code = Eq.codes = {
+        backspace: 8,
+        tab: 9,
+        enter: 13,
+        shift: 16,
+        ctrl: 17,
+        alt: 18,
+        "pause/break": 19,
+        "caps lock": 20,
+        esc: 27,
+        space: 32,
+        "page up": 33,
+        "page down": 34,
+        end: 35,
+        home: 36,
+        left: 37,
+        up: 38,
+        right: 39,
+        down: 40,
+        insert: 45,
+        delete: 46,
+        command: 91,
+        "left command": 91,
+        "right command": 93,
+        "numpad *": 106,
+        "numpad +": 107,
+        "numpad -": 109,
+        "numpad .": 110,
+        "numpad /": 111,
+        "num lock": 144,
+        "scroll lock": 145,
+        "my computer": 182,
+        "my calculator": 183,
+        ";": 186,
+        "=": 187,
+        ",": 188,
+        "-": 189,
+        ".": 190,
+        "/": 191,
+        "`": 192,
+        "[": 219,
+        "\\": 220,
+        "]": 221,
+        "'": 222
       },
-      tk = 5,
-      hk = (0, lT.memo)((function(TT) {
-        let {
-          page: kT,
-          manage: cT,
-          leaderboard: MT,
-          focusRequest: KT,
-          onFocused: OT,
-          ruleRowsShown: yT
-        } = TT;
-        return "leaderboard" === kT ? (0, GT.jsx)(lT.Suspense, {
-          fallback: (0, GT.jsx)("div", {
-            className: "LobbyManageLoading",
-            children: (0, GT.jsx)(vT.d, {})
-          }),
-          children: MT
-        }) : "joining" === kT ? (0, GT.jsx)(ck, {
-          manage: cT
-        }) : "rules" === kT ? (0, GT.jsx)(jk, {
-          manage: cT,
-          rowsShown: yT
-        }) : (0, GT.jsx)(LT, {
-          manage: cT,
-          focusRequest: KT,
-          onFocused: OT
-        })
-      }));
-
-    function Nk(TT) {
-      let {
-        page: kT
-      } = TT;
-      const {
-        t: cT
-      } = (0, CT.B)(), lT = vk[kT];
-      return (0, GT.jsxs)(GT.Fragment, {
-        children: [(0, GT.jsx)(jT.e, {
-          name: lT.icon
-        }), " ", (0, GT.jsx)("span", {
-          className: "LobbyManagePageTitle",
-          children: cT(lT.title)
-        })]
-      })
-    }
-
-    function Qk(TT) {
-      var kT;
-      const {
-        t: cT
-      } = (0, CT.B)(), {
-        pages: KT,
-        landing: OT
-      } = TT, fT = (0, lT.useRef)(null), xT = (0, lT.useRef)(null), IT = (0, lT.useRef)(null), jT = (0, lT.useRef)(new Map), [vT, QT] = (0, lT.useState)(null), ST = (0, lT.useRef)(vT), DT = (0, lT.useRef)(0), [aT, FT] = (0, lT.useState)(KT[0]), rT = null !== vT && void 0 !== vT ? vT : KT.includes(aT) ? aT : KT[0], [PT] = (0, lT.useState)(null !== (kT = null === OT || void 0 === OT ? void 0 : OT.page) && void 0 !== kT ? kT : null), wT = null !== PT && KT.includes(PT) ? [PT, ...KT.filter((TT => TT !== PT))] : KT, mT = Math.max(1, Math.ceil(Ck(TT.manage.state.rules).length / tk)), bT = wT.flatMap((TT => "rules" === TT ? Array(mT).fill(TT) : [TT])), zT = function(TT, kT) {
-        const [cT, MT] = (0, lT.useState)(TT), KT = cT >= kT;
-        return KT && cT !== 1 / 0 && MT(1 / 0), (0, lT.useLayoutEffect)((() => {
-          if (KT) return;
-          let TT = !0;
-          return (0, NT.e)().then((() => {
-            TT && MT((TT => TT + 1))
-          })), () => {
-            TT = !1
-          }
-        }), [cT, KT]), KT ? 1 / 0 : cT
-      }(1, bT.length), JT = bT.slice(0, zT), oT = new Set(JT), HT = zT < bT.length, eT = HT ? JT.filter((TT => "rules" === TT)).length * tk : 1 / 0, VT = (0, lT.useRef)(TT.focusRequest);
-      VT.current = TT.focusRequest;
-      const ET = TT => {
-          ST.current = TT, QT(TT)
-        },
-        ZT = () => {
-          var TT, kT;
-          fT.current.style.scrollPaddingTop = `${null!==(TT=null===(kT=IT.current)||void 0===kT?void 0:kT.offsetHeight)&&void 0!==TT?TT:0}px`
-        },
-        uT = TT => {
-          const kT = fT.current,
-            cT = jT.current.get(TT);
-          if (void 0 === cT) return;
-          const lT = document.activeElement,
-            MT = VT.current,
-            KT = null === MT ? null : cT.querySelector(`[data-lobby-manage-row="${CSS.escape(MT.name)}"]`);
-          ZT(), lT instanceof HTMLElement && null !== KT && void 0 !== KT && KT.contains(lT) ? lT.scrollIntoView({
-            block: "center"
-          }) : null === cT.previousElementSibling ? kT.scrollTop = 0 : cT.scrollIntoView({
-            block: "start"
-          }), DT.current = kT.scrollTop
-        },
-        XT = TT => {
-          (0, MT.reportAnalyticsClick)({
-            id: "lobby_manage.page",
-            value: TT
-          }), ET(TT), uT(TT)
-        },
-        dT = () => {
-          var TT, kT;
-          const cT = fT.current,
-            lT = cT.getBoundingClientRect().top + (null !== (TT = null === (kT = IT.current) || void 0 === kT ? void 0 : kT.offsetHeight) && void 0 !== TT ? TT : 0),
-            MT = KT.map((TT => {
-              var kT, cT;
-              return (null !== (kT = null === (cT = jT.current.get(TT)) || void 0 === cT ? void 0 : cT.getBoundingClientRect().top) && void 0 !== kT ? kT : 1 / 0) - lT
-            })),
-            OT = !HT && cT.scrollTop + cT.clientHeight >= cT.scrollHeight - 1;
-          FT(KT[(0, yT.j)(MT, OT)])
-        },
-        LT = () => {
-          null !== ST.current && (ET(null), dT())
-        };
-      (0, lT.useLayoutEffect)((() => {
-        null !== OT && KT.includes(OT.page) && XT(OT.page)
-      }), [null === OT || void 0 === OT ? void 0 : OT.seq]), (0, lT.useLayoutEffect)((() => {
-        null === ST.current || KT.includes(ST.current) || LT()
-      }));
-      const {
-        onFocused: RT
-      } = TT, gT = (0, lT.useCallback)((TT => {
-        null !== ST.current && uT(ST.current), RT(TT)
-      }), [RT]);
-      (0, lT.useLayoutEffect)((() => {
-        const TT = ST.current;
-        null !== TT && (!HT || KT.indexOf(bT[zT - 1]) < KT.indexOf(TT)) && uT(TT)
-      }), [zT]), (0, lT.useEffect)((() => {
-        const TT = new ResizeObserver((() => {
-          null !== ST.current ? uT(ST.current) : ZT()
-        }));
-        return TT.observe(fT.current), TT.observe(xT.current), () => {
-          TT.disconnect()
-        }
-      }), []), (0, lT.useLayoutEffect)((() => {
-        const TT = IT.current,
-          kT = null === TT || void 0 === TT ? void 0 : TT.querySelector(".SegmentedToggleOptionSelected");
-        kT && (TT.scrollLeft = Math.min(kT.offsetLeft, Math.max(TT.scrollLeft, kT.offsetLeft + kT.offsetWidth - TT.clientWidth)))
-      }), [rT]);
-      return (0, GT.jsxs)("div", {
-        ref: fT,
-        className: "MenuBody LobbyManageBody",
-        onScroll: () => {
-          null === ST.current ? dT() : Math.abs(fT.current.scrollTop - DT.current) > 1 && LT()
-        },
-        onClick: TT => {
-          var kT;
-          null !== (kT = IT.current) && void 0 !== kT && kT.contains(TT.target) || LT()
-        },
-        onFocus: TT => {
-          var kT;
-          const cT = null === ST.current ? null : jT.current.get(ST.current);
-          !cT || cT.contains(TT.target) || null !== (kT = IT.current) && void 0 !== kT && kT.contains(TT.target) || LT()
-        },
-        children: [KT.length > 1 && (0, GT.jsx)("div", {
-          ref: IT,
-          className: "LobbyManageChips",
-          children: (0, GT.jsx)(hT.d, {
-            options: KT.map((TT => ({
-              value: TT,
-              label: (0, GT.jsx)(Nk, {
-                page: TT
-              }),
-              ariaLabel: cT(vk[TT].title)
-            }))),
-            value: rT,
-            padTabs: "2",
-            ariaLabel: cT("lobbyManageEntry:manageLobby"),
-            reselectable: !0,
-            onChange: XT
-          })
-        }), (0, GT.jsx)("div", {
-          ref: xT,
-          className: AT()("LobbyManageInner", {
-            Staging: HT
-          }),
-          children: KT.filter((TT => oT.has(TT))).map((kT => {
-            const cT = kT === vT;
-            return (0, GT.jsxs)("section", {
-              ref: TT => {
-                TT ? jT.current.set(kT, TT) : jT.current.delete(kT)
-              },
-              className: "LobbyManageSection",
-              "data-pad-initial-area": cT || void 0,
-              children: [KT.length > 1 && (0, GT.jsx)("div", {
-                className: "LobbyManageSectionHeading",
-                "data-pad-focusable": cT || void 0,
-                "data-pad-unavailable": cT || void 0,
-                children: (0, GT.jsx)(tT.c, {
-                  label: (0, GT.jsx)(Nk, {
-                    page: kT
-                  })
-                })
-              }), (0, GT.jsx)(hk, {
-                page: kT,
-                manage: TT.manage,
-                leaderboard: TT.leaderboard,
-                focusRequest: TT.focusRequest,
-                onFocused: gT,
-                ruleRowsShown: "rules" === kT ? eT : 1 / 0
-              })]
-            }, kT)
+      lq = Eq.aliases = {
+        windows: 91,
+        "\u21e7": 16,
+        "\u2325": 18,
+        "\u2303": 17,
+        "\u2318": 91,
+        ctl: 17,
+        control: 17,
+        option: 18,
+        pause: 19,
+        break: 19,
+        caps: 20,
+        return: 13,
+        escape: 27,
+        spc: 32,
+        spacebar: 32,
+        pgup: 33,
+        pgdn: 34,
+        ins: 45,
+        del: 46,
+        cmd: 91
+      };
+    for (Oq = 97; Oq < 123; Oq++) Yq[String.fromCharCode(Oq)] = Oq - 32;
+    for (var Oq = 48; Oq < 58; Oq++) Yq[Oq - 48] = Oq;
+    for (Oq = 1; Oq < 13; Oq++) Yq["f" + Oq] = Oq + 111;
+    for (Oq = 0; Oq < 10; Oq++) Yq["numpad " + Oq] = Oq + 96;
+    var mq = Eq.names = Eq.title = {};
+    for (Oq in Yq) mq[Yq[Oq]] = Oq;
+    for (var xq in lq) Yq[xq] = lq[xq]
+  },
+  39461: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => Yq
+    });
+    class Yq {
+      constructor() {
+        let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+          Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
+        this.vU = !1, this.hU = !1, this.bJ = 30, this.aU = 0, this.pU = 100, this.rd = !1, this.fullscreen = !1, this.Wy = function(qq) {}, this.kU = function(qq, Eq, gq) {}, this.YF = function() {}, this.EQ = function() {}, this.KU = function() {}, this.onFullscreenChanged = function() {}, this.onPointerLockError = function(qq) {}, this._data = new lq(Eq),
+          function(qq) {
+            if ("loading" === document.readyState) {
+              var Eq = () => {
+                document.removeEventListener("readystatechange", Eq), qq()
+              };
+              document.addEventListener("readystatechange", Eq)
+            } else setTimeout(qq, 0)
+          }((() => {
+            ! function(qq) {
+              var Eq = qq._data,
+                gq = Eq.nowObject.now();
+              Eq.lastTickStarted = gq, Eq.lastFrameStarted = gq, Eq.lastRenderStarted = gq, Eq.frameCB = () => function(qq) {
+                var Eq = qq._data;
+                requestAnimationFrame(Eq.frameCB), xq(qq);
+                var gq = Eq.nowObject.now(),
+                  Yq = gq - Eq.lastFrameStarted;
+                if (Eq.lastFrameStarted = gq, qq.aU > 0) {
+                  Eq.renderAccum += Yq;
+                  var lq = 1e3 / qq.aU;
+                  if (Eq.renderAccum < lq) return;
+                  Eq.renderAccum -= lq, Eq.renderAccum > lq && (Eq.renderAccum = lq)
+                }
+                var Oq = gq - Eq.lastRenderStarted;
+                Eq.lastRenderStarted = gq;
+                var mq = 1e3 / qq.bJ,
+                  Aq = (gq - Eq.lastTickStarted) / mq;
+                Aq < 0 && (Aq = 0);
+                qq.kU(Oq, Aq, mq), setTimeout(xq, 0, qq, !0)
+              }(qq), Eq.intervalCB = () => xq(qq), requestAnimationFrame(Eq.frameCB), Eq.pollTime > 0 && (Eq.intervalID = setInterval(Eq.intervalCB, Math.max(Eq.pollTime, 1e3 / qq.bJ / 2)))
+            }(this),
+            function(qq, Eq) {
+              if (!Eq) return;
+              var gq = !1,
+                Yq = !1,
+                lq = qq => {
+                  if (!!qq !== (gq = Eq === document.pointerLockElement))
+                    if (qq) {
+                      var Yq = Eq.requestPointerLock();
+                      Yq && Yq.catch && Yq.catch((qq => {}))
+                    } else document.exitPointerLock()
+                },
+                Oq = qq => {
+                  !!qq !== (Yq = Eq === document.fullscreenElement) && (qq ? Eq.requestFullscreen ? Eq.requestFullscreen() : Eq.webkitRequestFullscreen && Eq.webkitRequestFullscreen() : document.exitFullscreen ? document.exitFullscreen() : document.webkitExitFullscreen && document.webkitExitFullscreen())
+                };
+              document.addEventListener("pointerlockchange", (Yq => {
+                gq = Eq === document.pointerLockElement, qq.KU(gq)
+              })), document.addEventListener("fullscreenchange", (gq => {
+                Yq = Eq === document.fullscreenElement, qq.onFullscreenChanged(Yq)
+              })), document.addEventListener("pointerlockerror", (Yq => {
+                gq = Eq === document.pointerLockElement, qq.onPointerLockError(Yq)
+              })), Object.defineProperty(qq, "rd", {
+                get: () => gq,
+                set: lq
+              }), Object.defineProperty(qq, "fullscreen", {
+                get: () => Yq,
+                set: Oq
+              }), Eq.addEventListener("click", (Eq => {
+                qq.vU && lq(!0), qq.hU && Oq(!0)
+              }));
+              var mq = () => qq.EQ();
+              if (window.ResizeObserver) {
+                new ResizeObserver(mq).observe(Eq)
+              } else window.addEventListener("resize", mq)
+            }(this, qq), this.YF()
           }))
-        })]
-      })
-    }
-
-    function Sk(TT) {
-      return void 0 === (null === TT || void 0 === TT ? void 0 : TT.page) ? null : {
-        page: TT.page,
-        seq: TT.seq
       }
     }
 
-    function Dk(TT) {
-      let {
-        leaderboard: kT
-      } = TT;
-      const cT = function() {
-          const TT = (0, KT.f)("lobbyManage"),
-            [kT, cT] = (0, lT.useReducer)((TT => TT + 1), 0),
-            [MT] = (0, lT.useState)((() => new fT.b(cT)));
-          return (0, lT.useEffect)((() => {
-            const TT = MT.nextDeadline();
-            if (null === TT) return;
-            const kT = setTimeout((() => {
-              MT.expire(Date.now()), cT()
-            }), Math.max(0, TT - Date.now()));
-            return () => {
-              clearTimeout(kT)
-            }
-          })), (0, lT.useMemo)((() => null === TT ? null : {
-            state: TT,
-            send: (TT, kT, lT) => {
-              const KT = MT.send(TT, kT, null !== lT && void 0 !== lT ? lT : null);
-              return cT(), KT
-            },
-            statusOf: TT => MT.statusOf(TT, Date.now()),
-            showStatus: (TT, kT) => {
-              MT.show(TT, kT)
-            },
-            isPending: TT => MT.isPending(TT)
-          }), [TT, kT, MT])
-        }(),
-        xT = (0, yT.m)((0, KT.f)("lobbyLeaderboardInfo")),
-        IT = (0, OT.l)(),
-        [AT, CT] = (0, lT.useState)((() => Sk(IT))),
-        [jT, vT] = (0, lT.useState)(null);
-      return (0, lT.useEffect)((() => {
-        null === IT && (0, MT.reportAnalyticsClick)({
-          id: "lobby_manage.open",
-          value: "menu_tab"
-        })
-      }), []), (0, lT.useEffect)((() => {
-        null !== IT && (CT((TT => (null === TT || void 0 === TT ? void 0 : TT.seq) === IT.seq ? TT : Sk(IT))), void 0 !== IT.focusName && "players" === IT.page ? vT({
-          name: IT.focusName,
-          seq: IT.seq
-        }) : (0, OT.k)(IT.seq))
-      }), [null === IT || void 0 === IT ? void 0 : IT.seq]), null === cT ? null : (0, GT.jsx)("div", {
-        className: "LobbyManage Menu",
-        children: (0, GT.jsx)(Qk, {
-          pages: (0, yT.f)(cT.state, xT),
-          manage: cT,
-          leaderboard: kT,
-          focusRequest: jT,
-          onFocused: OT.k,
-          landing: AT
-        })
-      })
+    function lq() {
+      let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
+      this.nowObject = performance || Date, this.pollTime = qq, this.renderAccum = 0, this.lastTickStarted = 0, this.lastFrameStarted = 0, this.lastRenderStarted = 0, this.avgTickTime = 2, this.frameCB = null, this.intervalCB = null, this.intervalID = -1
+    }
+    var Oq = 3,
+      mq = 20;
+
+    function xq(qq) {
+      for (var Eq = qq._data, gq = 1e3 / qq.bJ, Yq = Eq.nowObject.now() + mq, lq = 0; Eq.nowObject.now() >= Eq.lastTickStarted + gq && Eq.nowObject.now() < Yq && ++lq <= Oq;) qq.Wy(gq), Eq.lastTickStarted += gq;
+      var xq = 5 * (gq + 5),
+        Aq = Eq.nowObject.now();
+      if (Aq - Eq.lastTickStarted > xq)
+        for (; Aq >= Eq.lastTickStarted + gq;) Eq.lastTickStarted += gq
     }
   },
-  36383: (TT, kT, cT) => {
-    cT.d(kT, {
-      b: () => IT,
-      e: () => fT
+  36744: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => mq
     });
-    var lT = cT(1497),
-      MT = cT(1974),
-      KT = cT(1953);
-    const OT = 1e4;
-    let yT = 0;
-
-    function fT(TT) {
-      const kT = ++yT;
-      return new Promise((cT => {
-        const yT = kT => {
-            fT(), clearTimeout(xT), !1 === (null === kT || void 0 === kT ? void 0 : kT.ok) && (0, lT.reportAnalyticsClick)({
-              id: "lobby_manage.refused",
-              value: TT.type
-            }), cT(kT)
-          },
-          fT = MT.b.subscribe("lobbyManage", (TT => {
-            const cT = function(TT, kT) {
-              var cT;
-              return null !== (cT = null === TT || void 0 === TT ? void 0 : TT.results.find((TT => TT.requestId === kT))) && void 0 !== cT ? cT : null
-            }(TT, kT);
-            null !== cT && yT(cT)
-          })),
-          xT = setTimeout((() => {
-            yT(null)
-          }), OT);
-        KT.gameBridge.send("lobbyManage", {
-          ...TT,
-          requestId: kT
-        })
-      }))
-    }
-    const xT = [{
-      translationKey: "lobbyManageEntry:noAnswer"
-    }];
-    class IT {
-      constructor(TT) {
-        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : fT;
-        this.onChange = TT, this.sendAction = kT, this.pending = new Map, this.statuses = new Map
-      }
-      send(TT, kT, cT) {
-        var lT;
-        return this.statuses.delete(kT), this.pending.set(kT, (null !== (lT = this.pending.get(kT)) && void 0 !== lT ? lT : 0) + 1), this.sendAction(TT).then((TT => {
-          var lT;
-          const MT = null !== TT && void 0 !== TT ? TT : {
-              requestId: -1,
-              ok: !1,
-              message: xT
-            },
-            KT = (null !== (lT = this.pending.get(kT)) && void 0 !== lT ? lT : 1) - 1;
-          KT > 0 ? this.pending.set(kT, KT) : this.pending.delete(kT);
-          const OT = !MT.ok || MT.message.length > 0 ? MT.message : null === cT ? null : [cT];
-          return null !== OT && this.statuses.set(kT, {
-            ok: MT.ok,
-            text: OT,
-            until: Date.now() + 4e3
-          }), this.onChange(), MT
-        }))
-      }
-      show(TT, kT) {
-        this.statuses.set(TT, {
-          ...kT,
-          until: Date.now() + 4e3
-        }), this.onChange()
-      }
-      expire(TT) {
-        for (const [kT, cT] of this.statuses) cT.until <= TT && this.statuses.delete(kT)
-      }
-      nextDeadline() {
-        let TT = null;
-        for (const cT of this.statuses.values()) {
-          var kT;
-          TT = Math.min(null !== (kT = TT) && void 0 !== kT ? kT : 1 / 0, cT.until)
-        }
-        return TT
-      }
-      statusOf(TT, kT) {
-        const cT = this.statuses.get(TT);
-        return !cT || cT.until <= kT ? null : {
-          ok: cT.ok,
-          text: cT.text
-        }
-      }
-      isPending(TT) {
-        return this.pending.has(TT)
-      }
-    }
-  },
-  36369: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => xT,
-      g: () => fT
-    });
-    var lT = cT(602),
-      MT = cT(1953),
-      KT = cT(1663),
-      OT = cT(118),
-      yT = cT(1274);
-
-    function fT(TT, kT, cT) {
-      return OT.featureFlags.useSocialFeatures && TT && null === (0, yT.e)(kT, cT)
-    }
-
-    function xT(TT, kT) {
-      var cT, OT;
-      const yT = KT.b.getSocialState().friends.find((TT => TT.name.toLowerCase() === kT.toLowerCase())),
-        fT = MT.gameBridge.latest("players").byId[TT],
-        xT = void 0 !== fT && fT.name === kT,
-        IT = xT && null !== (cT = fT.cosmetics) && void 0 !== cT ? cT : void 0,
-        AT = yT && IT ? {
-          ...yT,
-          cosmetics: IT
-        } : yT;
-      return {
-        playerSocialPreview: null !== AT && void 0 !== AT ? AT : {
-          isError: !1,
-          name: kT,
-          ranks: xT ? [...fT.ranks] : [],
-          cosmetics: null !== IT && void 0 !== IT ? IT : {},
-          nameColour: null !== (OT = null === IT || void 0 === IT ? void 0 : IT.nameColour) && void 0 !== OT ? OT : lT.e,
-          location: {
-            status: "inGame"
+    var Yq = gq(57);
+    const lq = Yq.useLayoutEffect;
+    const Oq = function(qq) {
+      var Eq = (0, Yq.useRef)(qq);
+      return lq((function() {
+        Eq.current = qq
+      })), Eq
+    };
+    var mq = function(qq) {
+      var Eq = Oq(qq);
+      (0, Yq.useEffect)((function() {
+        var qq = function(qq) {
+          var gq;
+          if (null != Eq.current && (gq = Eq.current(qq)), qq.defaultPrevented && (qq.returnValue = ""), "string" === typeof gq) return qq.returnValue = gq, gq
+        };
+        return window.addEventListener("beforeunload", qq),
+          function() {
+            window.removeEventListener("beforeunload", qq)
           }
-        },
-        isFriend: void 0 !== yT
-      }
+      }), [])
     }
   },
-  36559: (TT, kT, cT) => {
-    cT.d(kT, {
-      d: () => AT
-    });
-    var lT = cT(71),
-      MT = cT(1046),
-      KT = cT.n(MT),
-      OT = cT(1692),
-      yT = cT(1470),
-      fT = cT(1348),
-      xT = cT(1061),
-      IT = cT(1099);
-
-    function AT(TT) {
-      let {
-        label: kT,
-        icon: cT,
-        placeholder: MT,
-        onSubmit: AT
-      } = TT;
-      const CT = (0, lT.useRef)(null),
-        [jT, vT] = (0, lT.useState)(""),
-        [tT, hT] = (0, lT.useState)("Enter"),
-        [NT, QT] = (0, lT.useState)(null);
-      (0, lT.useEffect)((() => {
-        if ("Success" !== tT && "Error" !== tT) return;
-        const TT = setTimeout((() => {
-          "Success" === tT && CT.current && (CT.current.value = "", vT("")), hT("Enter")
-        }), "Success" === tT ? 1e3 : 4e3);
-        return () => {
-          clearTimeout(TT)
-        }
-      }), [tT]);
-      const ST = () => {
-        const TT = jT.trim();
-        "" !== TT && "Enter" === tT && (hT("Loading"), AT(TT).then((TT => {
-          CT.current && ("error" in TT ? null === TT.error ? hT("Enter") : (QT(TT.error), hT("Error")) : hT("Success"))
-        })))
+  36640: qq => {
+    var Eq, gq = "undefined" !== typeof window ? window.navigator.userAgent : "",
+      Yq = /OS X/.test(gq),
+      lq = /Opera/.test(gq),
+      Oq = !/like Gecko/.test(gq) && !lq,
+      mq = qq.exports = {
+        0: Yq ? "<menu>" : "<UNK>",
+        1: "<mouse 1>",
+        2: "<mouse 2>",
+        3: "<break>",
+        4: "<mouse 3>",
+        5: "<mouse 4>",
+        6: "<mouse 5>",
+        8: "<backspace>",
+        9: "<tab>",
+        12: "<clear>",
+        13: "<enter>",
+        16: "<shift>",
+        17: "<control>",
+        18: "<alt>",
+        19: "<pause>",
+        20: "<caps-lock>",
+        21: "<ime-hangul>",
+        23: "<ime-junja>",
+        24: "<ime-final>",
+        25: "<ime-kanji>",
+        27: "<escape>",
+        28: "<ime-convert>",
+        29: "<ime-nonconvert>",
+        30: "<ime-accept>",
+        31: "<ime-mode-change>",
+        32: "<space>",
+        33: "<page-up>",
+        34: "<page-down>",
+        35: "<end>",
+        36: "<home>",
+        37: "<left>",
+        38: "<up>",
+        39: "<right>",
+        40: "<down>",
+        41: "<select>",
+        42: "<print>",
+        43: "<execute>",
+        44: "<snapshot>",
+        45: "<insert>",
+        46: "<delete>",
+        47: "<help>",
+        91: "<meta>",
+        92: "<meta>",
+        93: Yq ? "<meta>" : "<menu>",
+        95: "<sleep>",
+        106: "<num-*>",
+        107: "<num-+>",
+        108: "<num-enter>",
+        109: "<num--\x3e",
+        110: "<num-.>",
+        111: "<num-/>",
+        144: "<num-lock>",
+        145: "<scroll-lock>",
+        160: "<shift-left>",
+        161: "<shift-right>",
+        162: "<control-left>",
+        163: "<control-right>",
+        164: "<alt-left>",
+        165: "<alt-right>",
+        166: "<browser-back>",
+        167: "<browser-forward>",
+        168: "<browser-refresh>",
+        169: "<browser-stop>",
+        170: "<browser-search>",
+        171: "<browser-favorites>",
+        172: "<browser-home>",
+        173: Yq && Oq ? "-" : "<volume-mute>",
+        174: "<volume-down>",
+        175: "<volume-up>",
+        176: "<next-track>",
+        177: "<prev-track>",
+        178: "<stop>",
+        179: "<play-pause>",
+        180: "<launch-mail>",
+        181: "<launch-media-select>",
+        182: "<launch-app 1>",
+        183: "<launch-app 2>",
+        186: ";",
+        187: "=",
+        188: ",",
+        189: "-",
+        190: ".",
+        191: "/",
+        192: "`",
+        219: "[",
+        220: "\\",
+        221: "]",
+        222: "'",
+        223: "<meta>",
+        224: "<meta>",
+        226: "<alt-gr>",
+        229: "<ime-process>",
+        231: lq ? "`" : "<unicode>",
+        246: "<attention>",
+        247: "<crsel>",
+        248: "<exsel>",
+        249: "<erase-eof>",
+        250: "<play>",
+        251: "<zoom>",
+        252: "<no-name>",
+        253: "<pa-1>",
+        254: "<clear>"
       };
-      return (0, IT.jsxs)("div", {
-        className: "PlayerNameField",
-        onKeyDown: TT => {
-          TT.target === CT.current && "Escape" !== TT.key && TT.stopPropagation()
-        },
-        children: [(0, IT.jsxs)("div", {
-          className: KT()("AddFriendBodyOverlay", `AddFriendBodyOverlay${tT}`),
-          children: ["Loading" === tT && (0, IT.jsx)(fT.d, {}), "Success" === tT && (0, IT.jsx)(xT.e, {
-            name: "check"
-          }), "Error" === tT && NT]
-        }), (0, IT.jsxs)("div", {
-          className: "PlayerSearch",
-          children: [(0, IT.jsx)(OT.b, {
-            className: "PlayerSearchInput",
-            domRef: CT,
-            maxLength: 32,
-            placeholderText: MT,
-            ariaLabel: MT,
-            stopPropagation: !1,
-            onValueChange: TT => {
-              vT(TT)
-            },
-            onEnter: ST
-          }), (0, IT.jsxs)(yT.e, {
-            className: "PlayerSearchInputButton SmallTextLight",
-            disabled: "Enter" !== tT || "" === jT.trim(),
-            onClick: ST,
-            children: [(0, IT.jsx)(xT.e, {
-              name: cT
-            }), " ", kT]
-          })]
-        })]
-      })
-    }
+    for (Eq = 58; Eq < 65; ++Eq) mq[Eq] = String.fromCharCode(Eq);
+    for (Eq = 48; Eq < 58; ++Eq) mq[Eq] = Eq - 48 + "";
+    for (Eq = 65; Eq < 91; ++Eq) mq[Eq] = String.fromCharCode(Eq);
+    for (Eq = 96; Eq < 106; ++Eq) mq[Eq] = "<num-" + (Eq - 96) + ">";
+    for (Eq = 112; Eq < 136; ++Eq) mq[Eq] = "F" + (Eq - 111)
   },
-  36533: (TT, kT, cT) => {
-    cT.d(kT, {
-      b: () => AT
-    });
-    var lT = cT(71),
-      MT = cT(1046),
-      KT = cT.n(MT),
-      OT = cT(1195),
-      yT = cT(1061),
-      fT = cT(1099);
-    const xT = {
-        unlisted: "link",
-        public: "globe",
-        whitelist: "user-check",
-        private: "lock"
-      },
-      IT = ["unlisted", "public", "whitelist", "private"];
-
-    function AT(TT) {
-      let {
-        visibility: kT,
-        onPick: cT
-      } = TT;
-      const {
-        t: MT
-      } = (0, OT.B)(), AT = (0, lT.useRef)([]);
-      return (0, fT.jsx)("div", {
-        className: "WorldSocialTiles",
-        role: "group",
-        "aria-label": MT("worldSocial:whoCanJoin"),
-        children: IT.map(((TT, lT) => {
-          const OT = TT === kT;
-          return (0, fT.jsxs)("button", {
-            ref: TT => {
-              AT.current[lT] = TT
-            },
-            type: "button",
-            className: KT()("WorldSocialTile", {
-              WorldSocialTileSelected: OT
-            }),
-            "aria-pressed": OT,
-            tabIndex: OT ? 0 : -1,
-            onKeyDown: TT => {
-              ((TT, kT) => {
-                const cT = "ArrowRight" === TT.key || "ArrowDown" === TT.key ? 1 : "ArrowLeft" === TT.key || "ArrowUp" === TT.key ? -1 : 0;
-                var lT;
-                0 !== cT && (TT.preventDefault(), null === (lT = AT.current[(kT + cT + IT.length) % IT.length]) || void 0 === lT || lT.focus())
-              })(TT, lT)
-            },
-            onClick: () => {
-              cT(TT)
-            },
-            children: [(0, fT.jsx)("span", {
-              className: "WorldSocialTileIcon",
-              children: (0, fT.jsx)(yT.e, {
-                name: xT[TT]
-              })
-            }), (0, fT.jsxs)("span", {
-              className: "WorldSocialTileText",
-              children: [(0, fT.jsx)("span", {
-                className: "WorldSocialTileTitle",
-                children: MT(`worldSocial:${TT}`)
-              }), (0, fT.jsx)("span", {
-                className: "WorldSocialTileDescription",
-                children: MT(`worldSocial:${TT}Description`)
-              })]
-            })]
-          }, TT)
-        }))
-      })
+  38974: (qq, Eq, gq) => {
+    function Yq(qq, Eq, gq, Yq, lq) {
+      var Oq = {};
+      return Object.keys(Yq).forEach((function(qq) {
+        Oq[qq] = Yq[qq]
+      })), Oq.enumerable = !!Oq.enumerable, Oq.configurable = !!Oq.configurable, ("value" in Oq || Oq.initializer) && (Oq.writable = !0), Oq = gq.slice().reverse().reduce((function(gq, Yq) {
+        return Yq(qq, Eq, gq) || gq
+      }), Oq), lq && void 0 !== Oq.initializer && (Oq.value = Oq.initializer ? Oq.initializer.call(lq) : void 0, Oq.initializer = void 0), void 0 === Oq.initializer && (Object.defineProperty(qq, Eq, Oq), Oq = null), Oq
     }
-  },
-  36550: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => yT
-    });
-    var lT = cT(1195),
-      MT = cT(2660),
-      KT = cT(4355),
-      OT = cT(1099);
-
-    function yT(TT) {
-      let {
-        UA: kT,
-        children: cT,
-        ...yT
-      } = TT;
-      const {
-        t: fT
-      } = (0, lT.B)();
-      return (0, OT.jsx)("div", {
-        className: "WhitelistTickRow",
-        onClick: () => {
-          kT.onChange(!kT.on)
-        },
-        children: (0, OT.jsx)(MT.h, {
-          ...yT,
-          opensProfileCard: !1,
-          children: (0, OT.jsxs)("div", {
-            className: "WhitelistTickRowActions",
-            onClick: TT => {
-              TT.stopPropagation()
-            },
-            children: [cT, (0, OT.jsx)("label", {
-              className: "WhitelistTickRowTick",
-              children: (0, OT.jsx)(KT.d, {
-                checked: kT.on,
-                disabled: !1,
-                ariaLabel: fT("worldSocial:letJoin", {
-                  playerName: yT.playerSocialPreview.name
-                }),
-                onChange: TT => {
-                  kT.onChange(TT.target.checked)
-                }
-              })
-            })]
-          })
-        })
-      })
-    }
-  },
-  36531: (TT, kT, cT) => {
-    cT.d(kT, {
-      d: () => vT
-    });
-    var lT = cT(71),
-      MT = cT(1195),
-      KT = cT(1875),
-      OT = cT(118),
-      yT = cT(31),
-      fT = cT(1497),
-      xT = cT(2678),
-      IT = cT(9250),
-      AT = cT(1470),
-      CT = cT(1061),
-      jT = cT(1099);
-
-    function vT(TT) {
-      let {
-        worldCode: kT,
-        message: cT
-      } = TT;
-      const {
-        t: vT
-      } = (0, MT.B)(), {
-        isTouchScreen: tT
-      } = (0, yT.n)(["isTouchScreen"]), hT = OT.featureFlags.canUseInviteLinks, NT = (0, IT.i)(hT && null === cT), [QT, ST] = (0, xT.h)(), DT = (0, lT.useRef)(null);
-      if (null !== cT) return (0, jT.jsxs)("div", {
-        className: "WorldSocialLinkRow WorldSocialLinkRowMessage",
-        children: [(0, jT.jsx)(CT.e, {
-          name: "lock"
-        }), (0, jT.jsx)("span", {
-          children: cT
-        })]
-      });
-      const aT = hT ? NT : kT,
-        FT = tT && hT && (0, xT.c)();
-      return (0, jT.jsxs)("div", {
-        className: "WorldSocialLinkRow",
-        children: [!hT && (0, jT.jsx)("span", {
-          className: "WorldSocialCodeLabel",
-          children: vT("worldSocial:worldCode")
-        }), (0, jT.jsx)("input", {
-          ref: DT,
-          className: "WorldSocialLink",
-          readOnly: !0,
-          value: null !== aT && void 0 !== aT ? aT : "",
-          "aria-label": vT(hT ? "worldSocial:worldLink" : "worldSocial:worldCode"),
-          onFocus: TT => {
-            TT.currentTarget.select()
-          }
-        }), (0, jT.jsxs)(AT.e, {
-          className: "WorldSocialCopy",
-          disabled: null === aT,
-          onClick: () => {
-            null !== aT && (0, xT.d)(aT, {
-              useShareSheet: FT,
-              onOutcome: TT => {
-                if ((0, fT.reportAnalyticsClick)({
-                    id: "world_social.copy_link",
-                    value: "copied" !== TT || hT ? TT : "code"
-                  }), "copied" === TT) ST();
-                else if ("failed" === TT) {
-                  var kT;
-                  null === (kT = DT.current) || void 0 === kT || kT.focus(), KT.g.showMessage({
-                    translationKey: "partyBar:copyFailed"
-                  })
-                }
-              }
-            })
-          },
-          children: [(0, jT.jsx)(CT.e, {
-            name: QT ? "check" : FT ? "up-from-bracket" : "copy"
-          }), " ", vT(QT ? "general:copied" : FT ? "worldSocial:share" : "general:copy")]
-        })]
-      })
-    }
-  },
-  36541: (TT, kT, cT) => {
-    cT.d(kT, {
-      b: () => jT,
-      c: () => CT,
-      g: () => AT
-    });
-    var lT = cT(602),
-      MT = cT(1195),
-      KT = cT(1663),
-      OT = cT(2660),
-      yT = cT(2600),
-      fT = cT(1470),
-      xT = cT(36550),
-      IT = cT(1099);
-
-    function AT(TT, kT) {
-      var cT;
-      return {
-        isError: !1,
-        name: TT,
-        ranks: [...arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : []],
-        cosmetics: null !== kT && void 0 !== kT ? kT : {},
-        nameColour: null !== (cT = null === kT || void 0 === kT ? void 0 : kT.nameColour) && void 0 !== cT ? cT : lT.e,
-        location: {
-          status: "offline"
-        }
-      }
-    }
-
-    function CT(TT) {
-      let {
-        player: kT,
-        isFriend: cT = !1,
-        status: lT,
-        showLocation: fT = void 0 === lT,
-        UA: AT,
-        onSendFriendRequest: CT,
-        actions: jT,
-        zIndex: vT
-      } = TT;
-      const {
-        t: tT
-      } = (0, MT.B)();
-      let hT = lT;
-      null !== AT && void 0 !== AT && AT.on && (hT = (0, IT.jsxs)(IT.Fragment, {
-        children: [null !== lT && void 0 !== lT ? lT : (0, IT.jsx)(yT.d, {
-          socialPreview: kT
-        }), (0, IT.jsxs)("span", {
-          className: "WorldSocialCanJoin",
-          children: [" \xb7 ", tT("worldSocial:canJoin")]
-        })]
-      }));
-      const NT = {
-        playerSocialPreview: kT,
-        isFriend: cT,
-        hideFriendBadge: !0,
-        onFriendRemoved: cT ? TT => {
-          KT.b.removeFriendFromState(TT)
-        } : void 0,
-        status: hT,
-        showLocation: fT,
-        onSendFriendRequest: CT,
-        zIndex: vT
-      };
-      return AT ? (0, IT.jsx)(xT.c, {
-        ...NT,
-        UA: AT,
-        children: jT
-      }) : (0, IT.jsx)(OT.h, {
-        ...NT,
-        opensProfileCard: !1,
-        children: jT || void 0
-      })
-    }
-
-    function jT(TT) {
-      let {
-        row: kT,
-        UA: cT,
-        canInvite: lT,
-        invited: KT,
-        onInvite: OT,
-        zIndex: yT
-      } = TT;
-      const {
-        t: xT
-      } = (0, MT.B)(), AT = "online" === kT.place ? fT.e : fT.i;
-      return (0, IT.jsx)(CT, {
-        player: kT.friend,
-        isFriend: !0,
-        status: "here" === kT.place ? xT("worldSocial:inThisWorld") : void 0,
-        showLocation: !0,
-        UA: cT,
-        zIndex: yT,
-        actions: lT && (0, IT.jsx)(AT, {
-          className: "WorldSocialInvite SmallTextLight",
-          disabled: KT,
-          onClick: OT,
-          ariaLabel: `${xT("worldSocial:invite")} ${kT.friend.name}`,
-          children: xT(KT ? "worldSocial:invited" : "worldSocial:invite")
-        })
-      })
-    }
-  },
-  36523: (TT, kT, cT) => {
-    cT.d(kT, {
-      d: () => fT,
-      h: () => OT,
-      i: () => xT
-    });
-    var lT = cT(71),
-      MT = cT(4566),
-      KT = cT(1875);
-
-    function OT(TT) {
-      const kT = {
-        lobbyName: TT,
-        answer: null,
-        response: MT.c.getSocialSettings(TT)
-      };
-      return kT.response.then((TT => {
-        kT.answer = TT
-      })), kT
-    }
-    const yT = new Map;
-
-    function fT(TT) {
-      yT.set(TT.lobbyName, TT)
-    }
-
-    function xT(TT) {
-      const [kT] = (0, lT.useState)((() => function(TT) {
-        var kT;
-        const cT = null !== (kT = yT.get(TT)) && void 0 !== kT ? kT : null;
-        return null !== cT && void 0 !== cT && cT.answer && "error" in cT.answer ? null : cT
-      }(TT))), [cT, OT] = (0, lT.useState)((() => null !== kT && void 0 !== kT && kT.answer && "settings" in kT.answer ? kT.answer.settings : null)), [fT, xT] = (0, lT.useState)(!0), [IT, AT] = (0, lT.useState)(null !== cT), CT = (0, lT.useRef)(cT);
-      CT.current = cT;
-      const jT = (0, lT.useRef)(0),
-        vT = (0, lT.useRef)(0),
-        tT = (0, lT.useRef)(!1),
-        hT = (0, lT.useRef)(!0),
-        NT = (0, lT.useCallback)((async kT => {
-          const cT = ++jT.current,
-            lT = await (null !== kT && void 0 !== kT ? kT : MT.c.getSocialSettings(TT));
-          hT.current && cT === jT.current && (AT(!0), xT(!1), "error" in lT || OT(lT.settings))
-        }), [TT]),
-        QT = (0, lT.useCallback)((() => {
-          xT(!0), NT()
-        }), [NT]),
-        ST = (0, lT.useCallback)((() => {
-          vT.current > 0 ? tT.current = !0 : NT()
-        }), [NT]);
-      (0, lT.useEffect)((() => (hT.current = !0, yT.delete(TT), xT(!0), NT(null === kT || void 0 === kT ? void 0 : kT.response), () => {
-        hT.current = !1
-      })), [NT, TT, kT]);
-      const DT = TT => {
-        jT.current++, xT(!1), CT.current = TT, OT(TT)
-      };
-      return {
-        settings: cT,
-        loading: fT,
-        answered: IT,
-        retry: QT,
-        refresh: ST,
-        change: async function(kT, cT) {
-          let {
-            quiet: lT = !1,
-            onAnswer: OT
-          } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-          const yT = CT.current;
-          if (null === yT) return !1;
-          DT(cT(yT)), vT.current > 0 && (tT.current = !0), vT.current++;
-          const fT = await MT.c.setSocialSettings(TT, kT);
-          vT.current--;
-          const xT = !("error" in fT);
-          if (!hT.current) return xT;
-          if (null === OT || void 0 === OT || OT(fT), lT);
-          else if ("error" in fT) KT.g.showMessage({
-            translationKey: fT.error
-          });
-          else
-            for (const TT of fT.notFound) KT.g.showMessage({
-              translationKey: "worldSocial:notFound",
-              params: {
-                playerName: TT
-              }
-            });
-          if (vT.current > 0) return xT;
-          const IT = tT.current;
-          return tT.current = !1, !IT && "settings" in fT ? DT(fT.settings) : (IT || DT(yT), NT()), xT
-        }
-      }
-    }
-  },
-  36567: (TT, kT, cT) => {
-    cT.d(kT, {
-      d: () => OT,
-      f: () => KT
-    });
-    var lT = cT(184);
-    const MT = new Map;
-
-    function KT(TT, kT) {
-      var cT;
-      const lT = null !== (cT = MT.get(TT)) && void 0 !== cT ? cT : new Map;
-      lT.set(kT, Date.now()), MT.set(TT, lT)
-    }
-
-    function OT(TT) {
-      const kT = MT.get(TT);
-      if (!kT) return [];
-      const cT = Date.now();
-      for (const [MT, KT] of kT) cT - KT >= lT.i && kT.delete(MT);
-      return [...kT.keys()]
-    }
-  },
-  36528: (TT, kT, cT) => {
-    function lT(TT, kT) {
-      const cT = kT.toLowerCase();
-      for (const lT of TT)
-        if (lT.toLowerCase() === cT) return !0;
-      return !1
-    }
-
-    function MT(TT, kT, cT) {
-      const MT = [],
-        KT = [],
-        OT = [];
-      for (const yT of TT) !yT.isError && yT.name && ("inGame" === yT.location.status && yT.location.inLobbyName === kT || lT(cT, yT.name) ? KT.push({
-        friend: yT,
-        place: "here"
-      }) : "offline" === yT.location.status ? OT.push({
-        friend: yT,
-        place: "offline"
-      }) : MT.push({
-        friend: yT,
-        place: "online"
-      }));
-      return [...MT, ...KT, ...OT]
-    }
-
-    function KT(TT, kT, cT) {
-      const MT = [],
-        KT = TT.flatMap((TT => "here" === TT.place ? [TT.friend.name] : []));
-      for (const OT of [...KT, ...kT]) lT(MT, OT) || lT(cT, OT) || MT.push(OT);
-      return MT
-    }
-
-    function OT(TT, kT) {
-      return null === TT || void 0 === TT || !TT.canManage || lT(TT.whitelist, kT) ? "none" : "whitelist" === TT.visibility ? "required" : "quiet"
-    }
-
-    function yT(TT) {
-      if (null === TT) return !0;
-      const {
-        visibility: kT
-      } = TT;
-      return "public" === kT || "unlisted" === kT || "whitelist" === kT && TT.canManage
-    }
-
-    function fT(TT, kT, cT) {
-      if (cT) {
-        const cT = kT.filter((kT => !lT(TT.whitelist, kT)));
-        return {
-          ...TT,
-          whitelist: [...TT.whitelist, ...cT]
-        }
-      }
-      return {
-        ...TT,
-        whitelist: TT.whitelist.filter((TT => !lT(kT, TT)))
-      }
-    }
-
-    function xT(TT, kT) {
-      const cT = [];
-      for (let lT = 0; lT < TT.length; lT += kT) cT.push(TT.slice(lT, lT + kT));
-      return cT
-    }
-    cT.d(kT, {
-      d: () => yT,
-      e: () => KT,
-      i: () => MT,
-      j: () => lT,
-      n: () => xT,
-      q: () => OT,
-      t: () => fT
+    gq.d(Eq, {
+      c: () => Yq
     })
+  },
+  38968: (qq, Eq, gq) => {
+    function Yq(qq, Eq, gq, Yq) {
+      gq && Object.defineProperty(qq, Eq, {
+        enumerable: gq.enumerable,
+        configurable: gq.configurable,
+        writable: gq.writable,
+        value: gq.initializer ? gq.initializer.call(Yq) : void 0
+      })
+    }
+    gq.d(Eq, {
+      d: () => Yq
+    })
+  },
+  38649: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => Oq
+    });
+    var Yq = gq(38653);
+    const lq = (qq, Eq, gq) => qq ? qq.getClassName && "Mesh" === qq.getClassName() ? null : !qq.getClassName || "SubMesh" !== qq.getClassName() && "PhysicsBody" !== qq.getClassName() ? qq.clone ? qq.clone() : Array.isArray(qq) ? qq.slice() : gq && "object" === typeof qq ? {
+      ...qq
+    } : null : qq.clone(Eq) : null;
+    class Oq {
+      static DeepCopy(qq, Eq, gq, Oq) {
+        let mq = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const xq = function(qq) {
+          const Eq = [];
+          do {
+            const gq = Object.getOwnPropertyNames(qq);
+            for (const qq of gq) - 1 === Eq.indexOf(qq) && Eq.push(qq)
+          } while (qq = Object.getPrototypeOf(qq));
+          return Eq
+        }(qq);
+        for (const cq of xq) {
+          if ("_" === cq[0] && (!Oq || -1 === Oq.indexOf(cq))) continue;
+          if (cq.endsWith("Observable")) continue;
+          if (gq && -1 !== gq.indexOf(cq)) continue;
+          const xq = qq[cq],
+            uq = typeof xq;
+          if ("function" !== uq) try {
+            if ("object" === uq)
+              if (xq instanceof Uint8Array) Eq[cq] = Uint8Array.from(xq);
+              else if (xq instanceof Array) {
+              if (Eq[cq] = [], xq.length > 0)
+                if ("object" == typeof xq[0])
+                  for (let qq = 0; qq < xq.length; qq++) {
+                    const gq = lq(xq[qq], Eq, mq); - 1 === Eq[cq].indexOf(gq) && Eq[cq].push(gq)
+                  } else Eq[cq] = xq.slice(0)
+            } else Eq[cq] = lq(xq, Eq, mq);
+            else Eq[cq] = xq
+          } catch (Aq) {
+            Yq.b.Warn(Aq.message)
+          }
+        }
+      }
+    }
+  },
+  38677: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => lq,
+      h: () => Oq,
+      i: () => mq,
+      k: () => xq
+    });
+    var Yq = gq(37289);
+    class lq {
+      constructor(qq, Eq, gq) {
+        this.gradient = qq, this.color1 = Eq, this.color2 = gq
+      }
+      getColorToRef(qq) {
+        this.color2 ? Yq.g.LerpToRef(this.color1, this.color2, Math.random(), qq) : qq.WG(this.color1)
+      }
+    }
+    class Oq {
+      constructor(qq, Eq) {
+        this.gradient = qq, this.color = Eq
+      }
+    }
+    class mq {
+      constructor(qq, Eq, gq) {
+        this.gradient = qq, this.factor1 = Eq, this.factor2 = gq
+      }
+      getFactor() {
+        return void 0 === this.factor2 || this.factor2 === this.factor1 ? this.factor1 : this.factor1 + (this.factor2 - this.factor1) * Math.random()
+      }
+    }
+    class xq {
+      static GetCurrentGradient(qq, Eq, gq) {
+        if (Eq[0].gradient > qq) return void gq(Eq[0], Eq[0], 1);
+        for (let lq = 0; lq < Eq.length - 1; lq++) {
+          const Yq = Eq[lq],
+            Oq = Eq[lq + 1];
+          if (qq >= Yq.gradient && qq <= Oq.gradient) {
+            return void gq(Yq, Oq, (qq - Yq.gradient) / (Oq.gradient - Yq.gradient))
+          }
+        }
+        const Yq = Eq.length - 1;
+        gq(Eq[Yq], Eq[Yq], 1)
+      }
+    }
+  },
+  38653: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => Yq
+    });
+    class Yq {
+      static _CheckLimit(qq, Eq) {
+        let gq = Yq._LogLimitOutputs[qq];
+        return gq ? gq.current++ : (gq = {
+          limit: Eq,
+          current: 1
+        }, Yq._LogLimitOutputs[qq] = gq), gq.current <= gq.limit
+      }
+      static _GenerateLimitMessage(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const gq = Yq._LogLimitOutputs[qq];
+        if (!gq || !Yq.MessageLimitReached) return;
+        const lq = this._Levels[Eq];
+        gq.current === gq.limit && Yq[lq.name](Yq.MessageLimitReached.replace(/%LIMIT%/g, "" + gq.limit).replace(/%TYPE%/g, lq.name ?? ""))
+      }
+      static _AddLogEntry(qq) {
+        Yq._LogCache = qq + Yq._LogCache, Yq.OnNewCacheEntry && Yq.OnNewCacheEntry(qq)
+      }
+      static _FormatMessage(qq) {
+        const Eq = qq => qq < 10 ? "0" + qq : "" + qq,
+          gq = new Date;
+        return "[" + Eq(gq.getHours()) + ":" + Eq(gq.getMinutes()) + ":" + Eq(gq.getSeconds()) + "]: " + qq
+      }
+      static _LogDisabled(qq, Eq) {}
+      static _LogEnabled() {
+        let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          Eq = arguments.length > 1 ? arguments[1] : void 0,
+          gq = arguments.length > 2 ? arguments[2] : void 0;
+        const lq = Array.isArray(Eq) ? Eq[0] : Eq;
+        if (void 0 !== gq && !Yq._CheckLimit(lq, gq)) return;
+        const Oq = Yq._FormatMessage(lq),
+          mq = this._Levels[qq],
+          xq = Array.isArray(Eq) ? Eq.slice(1) : [];
+        mq.logFunc && mq.logFunc("BJS - " + Oq, ...xq);
+        const Aq = `<div style='color:${mq.color}'>${Oq}</div><br>`;
+        Yq._AddLogEntry(Aq), Yq._GenerateLimitMessage(lq, qq)
+      }
+      static get LogCache() {
+        return Yq._LogCache
+      }
+      static ClearLogCache() {
+        Yq._LogCache = "", Yq._LogLimitOutputs = {}, Yq.errorsCount = 0
+      }
+      static set LogLevels(qq) {
+        Yq.Log = Yq._LogDisabled, Yq.Warn = Yq._LogDisabled, Yq.Error = Yq._LogDisabled;
+        const Eq = [Yq.MessageLogLevel, Yq.WarningLogLevel, Yq.ErrorLogLevel];
+        for (const gq of Eq)
+          if ((qq & gq) === gq) {
+            const qq = this._Levels[gq];
+            Yq[qq.name] = Yq._LogEnabled.bind(Yq, gq)
+          }
+      }
+    }
+    Yq.NoneLogLevel = 0, Yq.MessageLogLevel = 1, Yq.WarningLogLevel = 2, Yq.ErrorLogLevel = 4, Yq.AllLogLevel = 7, Yq.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Yq._LogCache = "", Yq._LogLimitOutputs = {}, Yq._Levels = [{}, {
+      color: "white",
+      logFunc: console.log,
+      name: "Log"
+    }, {
+      color: "orange",
+      logFunc: console.warn,
+      name: "Warn"
+    }, {}, {
+      color: "red",
+      logFunc: console.error,
+      name: "Error"
+    }], Yq.errorsCount = 0, Yq.Log = Yq._LogEnabled.bind(Yq, Yq.MessageLogLevel), Yq.Warn = Yq._LogEnabled.bind(Yq, Yq.WarningLogLevel), Yq.Error = Yq._LogEnabled.bind(Yq, Yq.ErrorLogLevel)
+  },
+  38679: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => mq
+    });
+    var Yq = gq(37139),
+      lq = gq(37158),
+      Oq = gq(38649);
+    class mq {
+      constructor() {
+        this.direction1 = new Yq.q(0, 1, 0), this.direction2 = new Yq.q(0, 1, 0), this.minEmitBox = new Yq.q(-.5, -.5, -.5), this.maxEmitBox = new Yq.q(.5, .5, .5)
+      }
+      startDirectionFunction(qq, Eq, gq, Oq) {
+        const mq = (0, lq.RandomRange)(this.direction1.x, this.direction2.x),
+          xq = (0, lq.RandomRange)(this.direction1.y, this.direction2.y),
+          Aq = (0, lq.RandomRange)(this.direction1.z, this.direction2.z);
+        if (Oq) return Eq.x = mq, Eq.y = xq, void(Eq.z = Aq);
+        Yq.q.TransformNormalFromFloatsToRef(mq, xq, Aq, qq, Eq)
+      }
+      startPositionFunction(qq, Eq, gq, Oq) {
+        const mq = (0, lq.RandomRange)(this.minEmitBox.x, this.maxEmitBox.x),
+          xq = (0, lq.RandomRange)(this.minEmitBox.y, this.maxEmitBox.y),
+          Aq = (0, lq.RandomRange)(this.minEmitBox.z, this.maxEmitBox.z);
+        if (Oq) return Eq.x = mq, Eq.y = xq, void(Eq.z = Aq);
+        Yq.q.TransformCoordinatesFromFloatsToRef(mq, xq, Aq, qq, Eq)
+      }
+      clone() {
+        const qq = new mq;
+        return Oq.b.DeepCopy(this, qq), qq
+      }
+      applyToShader(qq) {
+        qq.setVector3("direction1", this.direction1), qq.setVector3("direction2", this.direction2), qq.setVector3("minEmitBox", this.minEmitBox), qq.setVector3("maxEmitBox", this.maxEmitBox)
+      }
+      buildUniformLayout(qq) {
+        qq.addUniform("direction1", 3), qq.addUniform("direction2", 3), qq.addUniform("minEmitBox", 3), qq.addUniform("maxEmitBox", 3)
+      }
+      getEffectDefines() {
+        return "#define BOXEMITTER"
+      }
+      getClassName() {
+        return "BoxParticleEmitter"
+      }
+      serialize() {
+        const qq = {};
+        return qq.type = this.getClassName(), qq.direction1 = this.direction1.bYq(), qq.direction2 = this.direction2.bYq(), qq.minEmitBox = this.minEmitBox.bYq(), qq.maxEmitBox = this.maxEmitBox.bYq(), qq
+      }
+      parse(qq) {
+        Yq.q.FromArrayToRef(qq.direction1, 0, this.direction1), Yq.q.FromArrayToRef(qq.direction2, 0, this.direction2), Yq.q.FromArrayToRef(qq.minEmitBox, 0, this.minEmitBox), Yq.q.FromArrayToRef(qq.maxEmitBox, 0, this.maxEmitBox)
+      }
+    }
+  },
+  38646: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => xq,
+      e: () => mq
+    });
+    var Yq = gq(37139),
+      lq = gq(37158),
+      Oq = gq(38649);
+    class mq {
+      constructor() {
+        let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+          lq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this.radius = qq, this.height = Eq, this.radiusRange = gq, this.directionRandomizer = lq, this._tempVector = Yq.q.Zero()
+      }
+      startDirectionFunction(qq, Eq, gq, Oq, mq) {
+        gq.position.subtractToRef(qq.getTranslation(), this._tempVector), this._tempVector.normalize(), Yq.q.TransformNormalToRef(this._tempVector, mq, this._tempVector);
+        const xq = (0, lq.RandomRange)(-this.directionRandomizer / 2, this.directionRandomizer / 2);
+        let Aq = Math.atan2(this._tempVector.x, this._tempVector.z);
+        Aq += (0, lq.RandomRange)(-Math.PI / 2, Math.PI / 2) * this.directionRandomizer, this._tempVector.y = xq, this._tempVector.x = Math.sin(Aq), this._tempVector.z = Math.cos(Aq), this._tempVector.normalize(), Oq ? Eq.WG(this._tempVector) : Yq.q.TransformNormalFromFloatsToRef(this._tempVector.x, this._tempVector.y, this._tempVector.z, qq, Eq)
+      }
+      startPositionFunction(qq, Eq, gq, Oq) {
+        const mq = (0, lq.RandomRange)(-this.height / 2, this.height / 2),
+          xq = (0, lq.RandomRange)(0, 2 * Math.PI),
+          Aq = (0, lq.RandomRange)((1 - this.radiusRange) * (1 - this.radiusRange), 1),
+          cq = Math.sqrt(Aq) * this.radius,
+          uq = cq * Math.cos(xq),
+          Bq = cq * Math.sin(xq);
+        Oq ? Eq.Vqq(uq, mq, Bq) : Yq.q.TransformCoordinatesFromFloatsToRef(uq, mq, Bq, qq, Eq)
+      }
+      clone() {
+        const qq = new mq(this.radius, this.directionRandomizer);
+        return Oq.b.DeepCopy(this, qq), qq
+      }
+      applyToShader(qq) {
+        qq.setFloat("radius", this.radius), qq.setFloat("height", this.height), qq.setFloat("radiusRange", this.radiusRange), qq.setFloat("directionRandomizer", this.directionRandomizer)
+      }
+      buildUniformLayout(qq) {
+        qq.addUniform("radius", 1), qq.addUniform("height", 1), qq.addUniform("radiusRange", 1), qq.addUniform("directionRandomizer", 1)
+      }
+      getEffectDefines() {
+        return "#define CYLINDEREMITTER"
+      }
+      getClassName() {
+        return "CylinderParticleEmitter"
+      }
+      serialize() {
+        const qq = {};
+        return qq.type = this.getClassName(), qq.radius = this.radius, qq.height = this.height, qq.radiusRange = this.radiusRange, qq.directionRandomizer = this.directionRandomizer, qq
+      }
+      parse(qq) {
+        this.radius = qq.radius, this.height = qq.height, this.radiusRange = qq.radiusRange, this.directionRandomizer = qq.directionRandomizer
+      }
+    }
+    class xq extends mq {
+      constructor() {
+        let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+          lq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new Yq.q(0, 1, 0),
+          Oq = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new Yq.q(0, 1, 0);
+        super(qq, Eq, gq), this.direction1 = lq, this.direction2 = Oq
+      }
+      startDirectionFunction(qq, Eq, gq, Oq) {
+        const mq = (0, lq.RandomRange)(this.direction1.x, this.direction2.x),
+          xq = (0, lq.RandomRange)(this.direction1.y, this.direction2.y),
+          Aq = (0, lq.RandomRange)(this.direction1.z, this.direction2.z);
+        Oq ? Eq.Vqq(mq, xq, Aq) : Yq.q.TransformNormalFromFloatsToRef(mq, xq, Aq, qq, Eq)
+      }
+      clone() {
+        const qq = new xq(this.radius, this.height, this.radiusRange, this.direction1, this.direction2);
+        return Oq.b.DeepCopy(this, qq), qq
+      }
+      applyToShader(qq) {
+        qq.setFloat("radius", this.radius), qq.setFloat("height", this.height), qq.setFloat("radiusRange", this.radiusRange), qq.setVector3("direction1", this.direction1), qq.setVector3("direction2", this.direction2)
+      }
+      buildUniformLayout(qq) {
+        qq.addUniform("radius", 1), qq.addUniform("height", 1), qq.addUniform("radiusRange", 1), qq.addUniform("direction1", 3), qq.addUniform("direction2", 3)
+      }
+      getEffectDefines() {
+        return "#define CYLINDEREMITTER\n#define DIRECTEDCYLINDEREMITTER"
+      }
+      getClassName() {
+        return "CylinderDirectedParticleEmitter"
+      }
+      serialize() {
+        const qq = super.serialize();
+        return qq.direction1 = this.direction1.bYq(), qq.direction2 = this.direction2.bYq(), qq
+      }
+      parse(qq) {
+        super.parse(qq), Yq.q.FromArrayToRef(qq.direction1, 0, this.direction1), Yq.q.FromArrayToRef(qq.direction2, 0, this.direction2)
+      }
+    }
+  },
+  38746: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => Bq
+    });
+    const Yq = .5 * (Math.sqrt(3) - 1),
+      lq = (3 - Math.sqrt(3)) / 6,
+      Oq = 1 / 3,
+      mq = 1 / 6,
+      xq = (Math.sqrt(5) - 1) / 4,
+      Aq = (5 - Math.sqrt(5)) / 20,
+      cq = new Float32Array([1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1, 0, 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1, 0, 1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1]),
+      uq = new Float32Array([0, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 1, 0, 1, 1, 1, 0, 1, -1, 1, 0, -1, 1, 1, 0, -1, -1, -1, 0, 1, 1, -1, 0, 1, -1, -1, 0, -1, 1, -1, 0, -1, -1, 1, 1, 0, 1, 1, 1, 0, -1, 1, -1, 0, 1, 1, -1, 0, -1, -1, 1, 0, 1, -1, 1, 0, -1, -1, -1, 0, 1, -1, -1, 0, -1, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 0]);
+    const Bq = class {
+      constructor() {
+        let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Math.random;
+        const Eq = "function" == typeof qq ? qq : function(qq) {
+          let Eq = 0,
+            gq = 0,
+            Yq = 0,
+            lq = 1;
+          const Oq = function() {
+            let qq = 4022871197;
+            return function(Eq) {
+              Eq = Eq.toString();
+              for (let gq = 0; gq < Eq.length; gq++) {
+                qq += Eq.charCodeAt(gq);
+                let Yq = .02519603282416938 * qq;
+                qq = Yq >>> 0, Yq -= qq, Yq *= qq, qq = Yq >>> 0, Yq -= qq, qq += 4294967296 * Yq
+              }
+              return 2.3283064365386963e-10 * (qq >>> 0)
+            }
+          }();
+          Eq = Oq(" "), gq = Oq(" "), Yq = Oq(" "), Eq -= Oq(qq), Eq < 0 && (Eq += 1);
+          gq -= Oq(qq), gq < 0 && (gq += 1);
+          Yq -= Oq(qq), Yq < 0 && (Yq += 1);
+          return function() {
+            const qq = 2091639 * Eq + 2.3283064365386963e-10 * lq;
+            return Eq = gq, gq = Yq, Yq = qq - (lq = 0 | qq)
+          }
+        }(qq);
+        this.p = function(qq) {
+          const Eq = new Uint8Array(256);
+          for (let gq = 0; gq < 256; gq++) Eq[gq] = gq;
+          for (let gq = 0; gq < 255; gq++) {
+            const Yq = gq + ~~(qq() * (256 - gq)),
+              lq = Eq[gq];
+            Eq[gq] = Eq[Yq], Eq[Yq] = lq
+          }
+          return Eq
+        }(Eq), this.perm = new Uint8Array(512), this.permMod12 = new Uint8Array(512);
+        for (let gq = 0; gq < 512; gq++) this.perm[gq] = this.p[255 & gq], this.permMod12[gq] = this.perm[gq] % 12
+      }
+      noise2D(qq, Eq) {
+        const gq = this.permMod12,
+          Oq = this.perm;
+        let mq = 0,
+          xq = 0,
+          Aq = 0;
+        const uq = (qq + Eq) * Yq,
+          Bq = Math.floor(qq + uq),
+          Wq = Math.floor(Eq + uq),
+          Nq = (Bq + Wq) * lq,
+          aq = qq - (Bq - Nq),
+          Vq = Eq - (Wq - Nq);
+        let dq, jq;
+        aq > Vq ? (dq = 1, jq = 0) : (dq = 0, jq = 1);
+        const Hq = aq - dq + lq,
+          oq = Vq - jq + lq,
+          Pq = aq - 1 + 2 * lq,
+          Qq = Vq - 1 + 2 * lq,
+          yq = 255 & Bq,
+          tq = 255 & Wq;
+        let rq = .5 - aq * aq - Vq * Vq;
+        if (rq >= 0) {
+          const qq = 3 * gq[yq + Oq[tq]];
+          rq *= rq, mq = rq * rq * (cq[qq] * aq + cq[qq + 1] * Vq)
+        }
+        let vq = .5 - Hq * Hq - oq * oq;
+        if (vq >= 0) {
+          const qq = 3 * gq[yq + dq + Oq[tq + jq]];
+          vq *= vq, xq = vq * vq * (cq[qq] * Hq + cq[qq + 1] * oq)
+        }
+        let hq = .5 - Pq * Pq - Qq * Qq;
+        if (hq >= 0) {
+          const qq = 3 * gq[yq + 1 + Oq[tq + 1]];
+          hq *= hq, Aq = hq * hq * (cq[qq] * Pq + cq[qq + 1] * Qq)
+        }
+        return 70 * (mq + xq + Aq)
+      }
+      noise3D(qq, Eq, gq) {
+        const Yq = this.permMod12,
+          lq = this.perm;
+        let xq, Aq, uq, Bq;
+        const Wq = (qq + Eq + gq) * Oq,
+          Nq = Math.floor(qq + Wq),
+          aq = Math.floor(Eq + Wq),
+          Vq = Math.floor(gq + Wq),
+          dq = (Nq + aq + Vq) * mq,
+          jq = qq - (Nq - dq),
+          Hq = Eq - (aq - dq),
+          oq = gq - (Vq - dq);
+        let Pq, Qq, yq, tq, rq, vq;
+        jq >= Hq ? Hq >= oq ? (Pq = 1, Qq = 0, yq = 0, tq = 1, rq = 1, vq = 0) : jq >= oq ? (Pq = 1, Qq = 0, yq = 0, tq = 1, rq = 0, vq = 1) : (Pq = 0, Qq = 0, yq = 1, tq = 1, rq = 0, vq = 1) : Hq < oq ? (Pq = 0, Qq = 0, yq = 1, tq = 0, rq = 1, vq = 1) : jq < oq ? (Pq = 0, Qq = 1, yq = 0, tq = 0, rq = 1, vq = 1) : (Pq = 0, Qq = 1, yq = 0, tq = 1, rq = 1, vq = 0);
+        const hq = jq - Pq + mq,
+          nq = Hq - Qq + mq,
+          bq = oq - yq + mq,
+          iq = jq - tq + 2 * mq,
+          Zq = Hq - rq + 2 * mq,
+          fq = oq - vq + 2 * mq,
+          Mq = jq - 1 + .5,
+          Tq = Hq - 1 + .5,
+          zq = oq - 1 + .5,
+          Sq = 255 & Nq,
+          pq = 255 & aq,
+          Gq = 255 & Vq;
+        let Lq = .6 - jq * jq - Hq * Hq - oq * oq;
+        if (Lq < 0) xq = 0;
+        else {
+          const qq = 3 * Yq[Sq + lq[pq + lq[Gq]]];
+          Lq *= Lq, xq = Lq * Lq * (cq[qq] * jq + cq[qq + 1] * Hq + cq[qq + 2] * oq)
+        }
+        let Jq = .6 - hq * hq - nq * nq - bq * bq;
+        if (Jq < 0) Aq = 0;
+        else {
+          const qq = 3 * Yq[Sq + Pq + lq[pq + Qq + lq[Gq + yq]]];
+          Jq *= Jq, Aq = Jq * Jq * (cq[qq] * hq + cq[qq + 1] * nq + cq[qq + 2] * bq)
+        }
+        let kq = .6 - iq * iq - Zq * Zq - fq * fq;
+        if (kq < 0) uq = 0;
+        else {
+          const qq = 3 * Yq[Sq + tq + lq[pq + rq + lq[Gq + vq]]];
+          kq *= kq, uq = kq * kq * (cq[qq] * iq + cq[qq + 1] * Zq + cq[qq + 2] * fq)
+        }
+        let Rq = .6 - Mq * Mq - Tq * Tq - zq * zq;
+        if (Rq < 0) Bq = 0;
+        else {
+          const qq = 3 * Yq[Sq + 1 + lq[pq + 1 + lq[Gq + 1]]];
+          Rq *= Rq, Bq = Rq * Rq * (cq[qq] * Mq + cq[qq + 1] * Tq + cq[qq + 2] * zq)
+        }
+        return 32 * (xq + Aq + uq + Bq)
+      }
+      noise4D(qq, Eq, gq, Yq) {
+        const lq = this.perm;
+        let Oq, mq, cq, Bq, Wq;
+        const Nq = (qq + Eq + gq + Yq) * xq,
+          aq = Math.floor(qq + Nq),
+          Vq = Math.floor(Eq + Nq),
+          dq = Math.floor(gq + Nq),
+          jq = Math.floor(Yq + Nq),
+          Hq = (aq + Vq + dq + jq) * Aq,
+          oq = qq - (aq - Hq),
+          Pq = Eq - (Vq - Hq),
+          Qq = gq - (dq - Hq),
+          yq = Yq - (jq - Hq);
+        let tq = 0,
+          rq = 0,
+          vq = 0,
+          hq = 0;
+        oq > Pq ? tq++ : rq++, oq > Qq ? tq++ : vq++, oq > yq ? tq++ : hq++, Pq > Qq ? rq++ : vq++, Pq > yq ? rq++ : hq++, Qq > yq ? vq++ : hq++;
+        const nq = tq >= 3 ? 1 : 0,
+          bq = rq >= 3 ? 1 : 0,
+          iq = vq >= 3 ? 1 : 0,
+          Zq = hq >= 3 ? 1 : 0,
+          fq = tq >= 2 ? 1 : 0,
+          Mq = rq >= 2 ? 1 : 0,
+          Tq = vq >= 2 ? 1 : 0,
+          zq = hq >= 2 ? 1 : 0,
+          Sq = tq >= 1 ? 1 : 0,
+          pq = rq >= 1 ? 1 : 0,
+          Gq = vq >= 1 ? 1 : 0,
+          Lq = hq >= 1 ? 1 : 0,
+          Jq = oq - nq + Aq,
+          kq = Pq - bq + Aq,
+          Rq = Qq - iq + Aq,
+          Uq = yq - Zq + Aq,
+          Fq = oq - fq + 2 * Aq,
+          sq = Pq - Mq + 2 * Aq,
+          Xq = Qq - Tq + 2 * Aq,
+          wq = yq - zq + 2 * Aq,
+          Kq = oq - Sq + 3 * Aq,
+          Cq = Pq - pq + 3 * Aq,
+          Iq = Qq - Gq + 3 * Aq,
+          eq = yq - Lq + 3 * Aq,
+          Dq = oq - 1 + 4 * Aq,
+          qE = Pq - 1 + 4 * Aq,
+          EE = Qq - 1 + 4 * Aq,
+          gE = yq - 1 + 4 * Aq,
+          YE = 255 & aq,
+          lE = 255 & Vq,
+          OE = 255 & dq,
+          mE = 255 & jq;
+        let xE = .6 - oq * oq - Pq * Pq - Qq * Qq - yq * yq;
+        if (xE < 0) Oq = 0;
+        else {
+          const qq = lq[YE + lq[lE + lq[OE + lq[mE]]]] % 32 * 4;
+          xE *= xE, Oq = xE * xE * (uq[qq] * oq + uq[qq + 1] * Pq + uq[qq + 2] * Qq + uq[qq + 3] * yq)
+        }
+        let AE = .6 - Jq * Jq - kq * kq - Rq * Rq - Uq * Uq;
+        if (AE < 0) mq = 0;
+        else {
+          const qq = lq[YE + nq + lq[lE + bq + lq[OE + iq + lq[mE + Zq]]]] % 32 * 4;
+          AE *= AE, mq = AE * AE * (uq[qq] * Jq + uq[qq + 1] * kq + uq[qq + 2] * Rq + uq[qq + 3] * Uq)
+        }
+        let cE = .6 - Fq * Fq - sq * sq - Xq * Xq - wq * wq;
+        if (cE < 0) cq = 0;
+        else {
+          const qq = lq[YE + fq + lq[lE + Mq + lq[OE + Tq + lq[mE + zq]]]] % 32 * 4;
+          cE *= cE, cq = cE * cE * (uq[qq] * Fq + uq[qq + 1] * sq + uq[qq + 2] * Xq + uq[qq + 3] * wq)
+        }
+        let uE = .6 - Kq * Kq - Cq * Cq - Iq * Iq - eq * eq;
+        if (uE < 0) Bq = 0;
+        else {
+          const qq = lq[YE + Sq + lq[lE + pq + lq[OE + Gq + lq[mE + Lq]]]] % 32 * 4;
+          uE *= uE, Bq = uE * uE * (uq[qq] * Kq + uq[qq + 1] * Cq + uq[qq + 2] * Iq + uq[qq + 3] * eq)
+        }
+        let BE = .6 - Dq * Dq - qE * qE - EE * EE - gE * gE;
+        if (BE < 0) Wq = 0;
+        else {
+          const qq = lq[YE + 1 + lq[lE + 1 + lq[OE + 1 + lq[mE + 1]]]] % 32 * 4;
+          BE *= BE, Wq = BE * BE * (uq[qq] * Dq + uq[qq + 1] * qE + uq[qq + 2] * EE + uq[qq + 3] * gE)
+        }
+        return 27 * (Oq + mq + cq + Bq + Wq)
+      }
+    }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

@@ -1,194 +1,314 @@
 export const id = 33;
 export const ids = [33];
 export const modules = {
-  9210: (TT, kT, cT) => {
-    function lT(TT, kT) {
-      return 0 === TT.length ? 0 : TT[Math.min(TT.length - 1, Math.floor(kT * TT.length))]
+  9145: (qq, Eq, gq) => {
+    function Yq(qq, Eq) {
+      return 0 === qq.length ? 0 : qq[Math.min(qq.length - 1, Math.floor(Eq * qq.length))]
     }
-    cT.d(kT, {
-      b: () => lT
+
+    function lq(qq) {
+      return qq.toFixed(1)
+    }
+    gq.d(Eq, {
+      b: () => lq,
+      e: () => Yq
     })
   },
-  9202: (TT, kT, cT) => {
-    cT.r(kT), cT.d(kT, {
-      FrameDebugLog: () => QT,
-      OUTLIER_BURST: () => AT,
-      OUTLIER_MS: () => IT,
-      OUTLIER_REFILL_MS: () => CT,
-      SUMMARY_MS: () => xT,
-      startFrameDebug: () => DT
+  9141: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      FIRST_SUMMARIES_FOR_MS: () => Vq,
+      FIRST_SUMMARY_MS: () => aq,
+      FrameDebugLog: () => tq,
+      OUTLIER_BURST: () => jq,
+      OUTLIER_MS: () => dq,
+      OUTLIER_REFILL_MS: () => Hq,
+      SUMMARY_MS: () => Nq,
+      startFrameDebug: () => vq
     });
-    var lT = cT(4769),
-      MT = cT(9210),
-      KT = cT(2853),
-      OT = cT(1089),
-      yT = cT(2916);
-    class fT {
+    var Yq = gq(4625),
+      lq = gq(4616),
+      Oq = gq(9145),
+      mq = gq(2733),
+      xq = gq(1060),
+      Aq = gq(2886);
+    class cq {
       constructor() {
-        this.kind = void 0, this.entries = new Float64Array(256), this.next = 0, this.size = 0, this.onLongFrame = TT => {
-          const kT = TT;
-          this.add(kT.startTime, kT.duration, kT.blockingDuration, (0, OT.k)(kT))
-        }, this.onLongTask = TT => {
-          this.add(TT.startTime, TT.duration, 0, 0)
-        }, null !== (0, yT.c)("long-animation-frame", this.onLongFrame) ? this.kind = "loaf" : this.kind = null !== (0, yT.c)("longtask", this.onLongTask) ? "longtask" : null
+        this.kind = void 0, this.entries = new Float64Array(256), this.next = 0, this.size = 0, this.onLongFrame = qq => {
+          const Eq = qq;
+          this.add(Eq.startTime, Eq.duration, Eq.blockingDuration, (0, xq.l)(Eq))
+        }, this.onLongTask = qq => {
+          this.add(qq.startTime, qq.duration, 0, 0)
+        }, null !== (0, Aq.c)("long-animation-frame", this.onLongFrame) ? this.kind = "loaf" : this.kind = null !== (0, Aq.c)("longtask", this.onLongTask) ? "longtask" : null
       }
-      add(TT, kT, cT, lT) {
-        this.entries.set([TT, kT, cT, lT], 4 * this.next), this.next = (this.next + 1) % 64, this.size = Math.min(this.size + 1, 64)
+      add(qq, Eq, gq, Yq) {
+        this.entries.set([qq, Eq, gq, Yq], 4 * this.next), this.next = (this.next + 1) % 64, this.size = Math.min(this.size + 1, 64)
       }
-      describe(TT, kT) {
+      describe(qq, Eq) {
         if (null === this.kind) return "long tasks n/a";
-        let cT = 0,
-          lT = 0,
-          MT = 0,
-          KT = 0;
-        for (let yT = 0; yT < this.size; yT++) {
-          const OT = 4 * yT,
-            fT = this.entries[OT] + this.entries[OT + 1];
-          fT > TT && fT <= kT + 2 && (cT++, lT += this.entries[OT + 1], MT += this.entries[OT + 2], KT += this.entries[OT + 3])
+        let gq = 0,
+          Yq = 0,
+          lq = 0,
+          Oq = 0;
+        for (let xq = 0; xq < this.size; xq++) {
+          const mq = 4 * xq,
+            Aq = this.entries[mq] + this.entries[mq + 1];
+          Aq > qq && Aq <= Eq + 2 && (gq++, Yq += this.entries[mq + 1], lq += this.entries[mq + 2], Oq += this.entries[mq + 3])
         }
-        const OT = "loaf" === this.kind && cT > 0 ? ` (blocking ${MT.toFixed(0)}, script ${KT.toFixed(0)})` : "";
-        return `${cT} ${this.kind} ${lT.toFixed(0)} ms${OT}`
+        const mq = "loaf" === this.kind && gq > 0 ? ` (blocking ${lq.toFixed(0)}, script ${Oq.toFixed(0)})` : "";
+        return `${gq} ${this.kind} ${Yq.toFixed(0)} ms${mq}`
       }
     }
-    const xT = 2e4,
-      IT = 250,
-      AT = 10,
-      CT = 6e4,
-      jT = 8192;
 
-    function vT(TT) {
-      return TT.toFixed(1)
+    function uq(qq, Eq) {
+      return Eq < 0 || qq < Eq ? qq : qq - Eq
     }
-
-    function tT(TT) {
-      return TT.mainMs = 0, TT.renderMs = 0, TT.ticks = 0, TT.tickMs = 0, TT.rafs = 0, TT.pendingBefore = -1, TT.pendingMax = -1, TT.pendingAfter = -1, TT.meshes = -1, TT
-    }
-
-    function hT() {
-      return tT({})
-    }
-    class NT {
+    class Bq {
       constructor() {
-        this.intervals = new Float64Array(jT), this.totals = hT(), this.frames = 0, this.slow = 0, this.maxMs = 0, this.undrawn = 0, this.shown = 0, this.dropped = 0
+        this.source = null, this.now = {
+          chunksReceived: -1,
+          chunksCancelled: -1,
+          chunksStored: -1,
+          jobsSent: -1,
+          jobsDone: -1,
+          jobsInFlight: -1,
+          workersLive: -1,
+          workersRetired: -1
+        }, this.before = {
+          chunksReceived: -1,
+          chunksCancelled: -1,
+          chunksStored: -1,
+          jobsSent: -1,
+          jobsDone: -1,
+          jobsInFlight: -1,
+          workersLive: -1,
+          workersRetired: -1
+        }, this.lastMs = 0, this.visibilityChanges = 0, this.hiddenMs = 0, this.hiddenSinceMs = document.hidden ? performance.now() : -1
+      }
+      setSource(qq) {
+        this.source = qq
+      }
+      start(qq) {
+        this.before = {
+          chunksReceived: -1,
+          chunksCancelled: -1,
+          chunksStored: -1,
+          jobsSent: -1,
+          jobsDone: -1,
+          jobsInFlight: -1,
+          workersLive: -1,
+          workersRetired: -1
+        }, this.lastMs = qq
+      }
+      visibilityChanged(qq) {
+        this.visibilityChanges++, document.hidden ? this.hiddenSinceMs = qq : this.hiddenSinceMs >= 0 && (this.hiddenMs += qq - this.hiddenSinceMs, this.hiddenSinceMs = -1)
+      }
+      take(qq) {
+        var Eq;
+        const gq = [];
+        if (!0 === (null === (Eq = this.source) || void 0 === Eq ? void 0 : Eq.call(this, this.now)) && (Yq = this.now, lq = this.before, Yq.chunksReceived !== lq.chunksReceived || Yq.chunksCancelled !== lq.chunksCancelled || Yq.chunksStored !== lq.chunksStored || Yq.jobsSent !== lq.jobsSent || Yq.jobsDone !== lq.jobsDone || Yq.jobsInFlight !== lq.jobsInFlight || Yq.workersLive !== lq.workersLive || Yq.workersRetired !== lq.workersRetired)) {
+          gq.push(function(qq, Eq) {
+            const gq = [`chunks +${uq(qq.chunksReceived,Eq.chunksReceived)} got`, `+${uq(qq.chunksCancelled,Eq.chunksCancelled)} cancelled`];
+            qq.chunksStored >= 0 && gq.push(`${qq.chunksStored} stored`);
+            const Yq = `jobs +${uq(qq.jobsSent,Eq.jobsSent)} sent, +${uq(qq.jobsDone,Eq.jobsDone)} done, ${qq.jobsInFlight} in flight`;
+            return `${gq.join(", ")}; ${Yq}; workers ${qq.workersLive} live, ${qq.workersRetired} retired`
+          }(this.now, this.before));
+          const qq = this.before;
+          this.before = this.now, this.now = qq
+        }
+        var Yq, lq;
+        if (this.hiddenSinceMs >= 0 && (this.hiddenMs += qq - this.hiddenSinceMs, this.hiddenSinceMs = qq), (this.visibilityChanges > 0 || this.hiddenMs > 0) && (gq.push(`hidden ${this.visibilityChanges} changes, ${Math.round(this.hiddenMs)} ms`), this.visibilityChanges = 0, this.hiddenMs = 0), 0 === gq.length) return null;
+        const Oq = `load ${Math.round((qq-this.lastMs)/1e3)}s: ${gq.join("; ")}`;
+        return this.lastMs = qq, Oq
+      }
+    }
+    class Wq {
+      constructor() {
+        this.count = 0, this.paced = 0, this.skipped = 0, this.run = 0, this.longest = 0, this.longestMs = 0, this.longestAhead = -1
+      }
+      drawn() {
+        this.run = 0
+      }
+      add(qq, Eq, gq) {
+        this.count++, "paced" === qq ? this.paced++ : "skipped" === qq && this.skipped++, this.run++, this.run > this.longest && (this.longest = this.run, this.longestMs = Eq, this.longestAhead = gq)
+      }
+      describe() {
+        if (0 === this.count) return "0 undrawn";
+        const qq = this.count - this.paced - this.skipped;
+        return `${this.count} undrawn: ${this.paced} paced, ${this.skipped} skipped, ${qq} other, longest ${this.longest} in ${(0,Oq.b)(this.longestMs)} ms at ${this.longestAhead} ahead`
       }
       reset() {
-        tT(this.totals), this.frames = 0, this.slow = 0, this.maxMs = 0, this.undrawn = 0, this.shown = 0, this.dropped = 0
+        this.count = 0, this.paced = 0, this.skipped = 0, this.longest = 0, this.longestMs = 0, this.longestAhead = -1
       }
     }
-    class QT {
+    const Nq = 2e4,
+      aq = 5e3,
+      Vq = 6e4,
+      dq = 250,
+      jq = 10,
+      Hq = 6e4,
+      oq = 8192;
+
+    function Pq(qq) {
+      return qq.mainMs = 0, qq.renderMs = 0, qq.ticks = 0, qq.tickMs = 0, qq.rafs = 0, qq.pendingBefore = -1, qq.pendingMax = -1, qq.pendingAfter = -1, qq
+    }
+
+    function Qq() {
+      return Pq({})
+    }
+    class yq {
       constructor() {
-        this.longTasks = new fT, this.summary = new NT, this.current = hT(), this.lastDrawnStartMs = -1, this.lastPending = -1, this.lastMeshes = -1, this.ahead = -1, this.tokens = AT, this.lastRefillMs = performance.now(), this.waiting = [], this.outlierTimer = null, this.restart = () => {
+        this.intervals = new Float64Array(oq), this.totals = Qq(), this.frames = 0, this.slow = 0, this.maxMs = 0, this.undrawn = new Wq, this.shown = 0, this.dropped = 0
+      }
+      reset() {
+        Pq(this.totals), this.frames = 0, this.slow = 0, this.maxMs = 0, this.undrawn.reset(), this.shown = 0, this.dropped = 0
+      }
+    }
+    class tq {
+      constructor() {
+        this.longTasks = new cq, this.summary = new yq, this.current = Qq(), this.lastDrawnStartMs = -1, this.lastPending = -1, this.ahead = -1, this.tokens = jq, this.lastRefillMs = performance.now(), this.waiting = [], this.outlierTimer = null, this.flushTimer = null, this.startedMs = 0, this.lastFlushMs = 0, this.loadLine = new Bq, this.inGameSinceFlush = !1, this.visibilityChanged = () => {
+          this.restart(), this.loadLine.visibilityChanged(performance.now())
+        }, this.restart = () => {
           this.lastDrawnStartMs = -1
         }, this.animationFrame = () => {
           this.current.rafs++
-        }, this.wasmFrame = (TT, kT, cT, MT, KT, OT, yT) => {
-          this.ahead = TT.headerWord(lT.B.Pacing) & lT.L.AheadMask, this.frame(kT, cT, MT, KT, TT.headerWord(lT.B.RenderUs) / 1e3, TT.headerWord(lT.B.TicksRun), OT, TT.headerWord(lT.B.RenderPending), yT)
-        }, this.jsFrame = (TT, kT, cT) => {
-          this.frame(TT, kT, !0, cT, kT - TT, 0, 0, -1, -1)
-        }, this.jsTick = TT => {
-          this.current.mainMs += TT, this.current.ticks++, this.current.tickMs += TT
+        }, this.wasmFrame = (qq, Eq, gq, lq, Oq, mq) => {
+          this.ahead = qq.headerWord(Yq.C.Pacing) & Yq.T.AheadMask, this.frame(Eq, gq, lq, Oq, qq.headerWord(Yq.C.RenderUs) / 1e3, qq.headerWord(Yq.C.TicksRun), mq, qq.headerWord(Yq.C.RenderPending))
+        }, this.wasmPeekPaced = qq => {
+          const Eq = performance.now();
+          this.frame(Eq, Eq, "paced", qq, 0, 0, 0, this.lastPending)
+        }, this.jsFrame = (qq, Eq, gq) => {
+          this.frame(qq, Eq, "drawn", gq, Eq - qq, 0, 0, -1)
+        }, this.jsTick = qq => {
+          this.current.mainMs += qq, this.current.ticks++, this.current.tickMs += qq
         }, this.logOutliers = () => {
           this.outlierTimer = null;
-          const TT = performance.now();
-          let kT = 0;
-          for (const cT of this.waiting) {
-            if (cT.dueMs > TT) {
-              this.waiting[kT++] = cT;
+          const qq = performance.now();
+          let Eq = 0;
+          for (const gq of this.waiting) {
+            if (gq.dueMs > qq) {
+              this.waiting[Eq++] = gq;
               continue
             }
-            const lT = [`long frame ${vT(cT.intervalMs)} ms ending at ${vT(cT.endMs)} ms: main ${vT(cT.mainMs)} (render ${vT(cT.renderMs)}, ${cT.ticks} ticks ${vT(cT.tickMs)}), outside ${vT(cT.intervalMs-cT.mainMs)}`, `${cT.rafs} rafs`];
-            cT.pendingBefore >= 0 && lT.push(`pending ${cT.pendingBefore} -> ${cT.pendingAfter} (max ${cT.pendingMax})`), cT.meshes >= 0 && lT.push(`${cT.meshes} meshes landed`), lT.push(this.longTasks.describe(cT.endMs - cT.intervalMs, cT.endMs)), (0, KT.k)("frame", lT.join("; "))
+            const Yq = [`long frame ${(0,Oq.b)(gq.intervalMs)} ms ending at ${(0,Oq.b)(gq.endMs)} ms: main ${(0,Oq.b)(gq.mainMs)} (render ${(0,Oq.b)(gq.renderMs)}, ${gq.ticks} ticks ${(0,Oq.b)(gq.tickMs)}), outside ${(0,Oq.b)(gq.intervalMs-gq.mainMs)}`, `${gq.rafs} rafs`];
+            gq.pendingBefore >= 0 && Yq.push(`pending ${gq.pendingBefore} -> ${gq.pendingAfter} (max ${gq.pendingMax})`), Yq.push(this.longTasks.describe(gq.endMs - gq.intervalMs, gq.endMs)), (0, mq.m)("frame", Yq.join("; "))
           }
-          this.waiting.length = kT, kT > 0 && (this.outlierTimer = setTimeout(this.logOutliers, this.waiting[0].dueMs - TT))
+          this.waiting.length = Eq, Eq > 0 && (this.outlierTimer = setTimeout(this.logOutliers, this.waiting[0].dueMs - qq))
         }, this.flush = () => {
-          const TT = this.summary,
-            kT = TT.totals;
-          if (0 === TT.frames) return TT.undrawn > 0 && (0, KT.k)("frame", `${xT/1e3}s: no frames drawn, ${TT.undrawn} undrawn, pending max ${kT.pendingMax}`), void TT.reset();
-          const cT = TT.intervals.subarray(0, Math.min(TT.frames, jT)).sort(),
-            lT = [`${TT.frames} frames, median ${vT((0,MT.b)(cT,.5))} p95 ${vT((0,MT.b)(cT,.95))} max ${vT(TT.maxMs)} ms, ${TT.slow} over 50, ${TT.shown+TT.dropped} over ${IT}`, `${kT.rafs} rafs, ${TT.undrawn} undrawn`, `main ${vT(kT.mainMs)} ms (render ${vT(kT.renderMs)}, ${kT.ticks} ticks ${vT(kT.tickMs)})`];
-          kT.pendingMax >= 0 && lT.push(`pending max ${kT.pendingMax}`), kT.meshes >= 0 && lT.push(`${kT.meshes} meshes landed`), this.ahead >= 0 && lT.push(`${this.ahead} frames ahead`), lT.push(`outliers ${TT.shown} logged, ${TT.dropped} dropped`), (0, KT.k)("frame", `${xT/1e3}s: ${lT.join("; ")}`), TT.reset()
-        }, setInterval(this.flush, xT), document.addEventListener("visibilitychange", this.restart)
+          this.flushTimer = null;
+          const qq = performance.now(),
+            Eq = Math.round((qq - this.lastFlushMs) / 1e3);
+          this.lastFlushMs = qq, this.scheduleFlush();
+          if (this.logSummary(Eq) || this.inGameSinceFlush) {
+            const Eq = this.loadLine.take(qq);
+            null !== Eq && (0, mq.m)("frame", Eq)
+          }
+          this.inGameSinceFlush = !1, this.summary.reset()
+        }, document.addEventListener("visibilitychange", this.visibilityChanged)
       }
-      start(TT, kT) {
-        var cT;
-        this.restart(), (0, KT.k)("frame", `start: ${TT} client, ${kT}, dpr ${window.devicePixelRatio}, long tasks ${null!==(cT=this.longTasks.kind)&&void 0!==cT?cT:"n/a"}; a summary each ${xT/1e3} s in game, outliers over ${IT} ms`)
+      start(qq, Eq) {
+        var gq;
+        this.restart(), this.startedMs = performance.now(), this.lastFlushMs = this.startedMs, this.loadLine.start(this.startedMs), this.scheduleFlush(), (0, mq.m)("frame", `start: ${qq} client, ${Eq}, dpr ${window.devicePixelRatio}, long tasks ${null!==(gq=this.longTasks.kind)&&void 0!==gq?gq:"n/a"}; a summary each ${Nq/1e3} s in game (${aq/1e3} s for the first ${Vq/1e3} s), outliers over ${dq} ms`)
       }
-      frame(TT, kT, cT, lT, MT, KT, OT, yT, fT) {
-        if (!lT) return this.restart(), void(this.lastPending = yT);
-        const xT = this.current;
-        cT ? (this.lastDrawnStartMs >= 0 && (xT.pendingAfter = this.lastPending, xT.meshes = fT < 0 ? -1 : fT - this.lastMeshes, this.closeInterval(TT - this.lastDrawnStartMs, TT)), this.lastDrawnStartMs = TT, tT(xT).pendingBefore = this.lastPending, this.lastMeshes = fT) : this.lastDrawnStartMs >= 0 && this.summary.undrawn++, xT.mainMs += kT - TT, xT.renderMs += MT, xT.ticks += KT, xT.tickMs += OT, xT.pendingMax = Math.max(xT.pendingMax, yT), this.lastPending = yT, this.summary.totals.pendingMax = Math.max(this.summary.totals.pendingMax, yT)
+      setLoadCounts(qq) {
+        this.loadLine.setSource(qq)
       }
-      closeInterval(TT, kT) {
-        const cT = this.summary,
-          lT = this.current;
-        cT.frames < jT && (cT.intervals[cT.frames] = TT), cT.frames++, cT.maxMs = Math.max(cT.maxMs, TT);
-        const MT = cT.totals;
-        MT.mainMs += lT.mainMs, MT.renderMs += lT.renderMs, MT.ticks += lT.ticks, MT.tickMs += lT.tickMs, MT.rafs += lT.rafs, MT.meshes = lT.meshes < 0 ? -1 : Math.max(0, MT.meshes) + lT.meshes, TT > 50 && cT.slow++, TT > IT && this.outlier(TT, kT)
+      joined() {
+        this.startedMs = performance.now(), this.scheduleFlush()
       }
-      outlier(TT, kT) {
-        const cT = Math.floor((kT - this.lastRefillMs) / CT);
-        cT > 0 && (this.tokens = Math.min(AT, this.tokens + cT), this.lastRefillMs += cT * CT), 0 !== this.tokens ? (this.tokens--, this.summary.shown++, this.waiting.push({
+      inGame() {
+        this.inGameSinceFlush = !0
+      }
+      scheduleFlush() {
+        null !== this.flushTimer && clearTimeout(this.flushTimer);
+        const qq = performance.now() - this.startedMs < Vq;
+        this.flushTimer = setTimeout(this.flush, qq ? aq : Nq)
+      }
+      frame(qq, Eq, gq, Yq, Oq, mq, xq, Aq) {
+        if (!Yq) return this.restart(), void(this.lastPending = Aq);
+        const cq = this.current;
+        (0, lq.c)(gq) ? (this.lastDrawnStartMs >= 0 && (cq.pendingAfter = this.lastPending, this.closeInterval(qq - this.lastDrawnStartMs, qq)), this.lastDrawnStartMs = qq, Pq(cq).pendingBefore = this.lastPending, this.summary.undrawn.drawn()) : this.lastDrawnStartMs >= 0 && this.summary.undrawn.add(gq, Eq - this.lastDrawnStartMs, this.ahead), cq.mainMs += Eq - qq, cq.renderMs += Oq, cq.ticks += mq, cq.tickMs += xq, cq.pendingMax = Math.max(cq.pendingMax, Aq), this.lastPending = Aq, this.summary.totals.pendingMax = Math.max(this.summary.totals.pendingMax, Aq)
+      }
+      closeInterval(qq, Eq) {
+        const gq = this.summary,
+          Yq = this.current;
+        gq.frames < oq && (gq.intervals[gq.frames] = qq), gq.frames++, gq.maxMs = Math.max(gq.maxMs, qq);
+        const lq = gq.totals;
+        lq.mainMs += Yq.mainMs, lq.renderMs += Yq.renderMs, lq.ticks += Yq.ticks, lq.tickMs += Yq.tickMs, lq.rafs += Yq.rafs, qq > 50 && gq.slow++, qq > dq && this.outlier(qq, Eq)
+      }
+      outlier(qq, Eq) {
+        const gq = Math.floor((Eq - this.lastRefillMs) / Hq);
+        gq > 0 && (this.tokens = Math.min(jq, this.tokens + gq), this.lastRefillMs += gq * Hq), 0 !== this.tokens ? (this.tokens--, this.summary.shown++, this.waiting.push({
           ...this.current,
-          endMs: kT,
-          intervalMs: TT,
+          endMs: Eq,
+          intervalMs: qq,
           dueMs: performance.now() + 1e3
         }), this.outlierTimer ??= setTimeout(this.logOutliers, 1e3)) : this.summary.dropped++
       }
+      logSummary(qq) {
+        const Eq = this.summary,
+          gq = Eq.totals;
+        if (0 === Eq.frames) return Eq.undrawn.count > 0 && (0, mq.m)("frame", `${qq}s: no frames drawn, ${Eq.undrawn.describe()}; pending max ${gq.pendingMax}`), Eq.undrawn.count > 0;
+        const Yq = Eq.intervals.subarray(0, Math.min(Eq.frames, oq)).sort(),
+          lq = [`${Eq.frames} frames, median ${(0,Oq.b)((0,Oq.e)(Yq,.5))} p95 ${(0,Oq.b)((0,Oq.e)(Yq,.95))} max ${(0,Oq.b)(Eq.maxMs)} ms, ${Eq.slow} over 50, ${Eq.shown+Eq.dropped} over ${dq}`, `${gq.rafs} rafs, ${Eq.undrawn.describe()}`, `main ${(0,Oq.b)(gq.mainMs)} ms (render ${(0,Oq.b)(gq.renderMs)}, ${gq.ticks} ticks ${(0,Oq.b)(gq.tickMs)})`];
+        return gq.pendingMax >= 0 && lq.push(`pending max ${gq.pendingMax}`), this.ahead >= 0 && lq.push(`${this.ahead} frames ahead`), lq.push(`outliers ${Eq.shown} logged, ${Eq.dropped} dropped`), (0, mq.m)("frame", `${qq}s: ${lq.join("; ")}`), !0
+      }
     }
-    let ST = null;
+    let rq = null;
 
-    function DT(TT, kT) {
-      return ST ??= new QT, ST.start(TT, kT), ST
+    function vq(qq, Eq) {
+      return rq ??= new tq, rq.start(qq, Eq), rq
     }
   },
-  4769: (TT, kT, cT) => {
-    cT.d(kT, {
-      $: () => bT,
-      Ab: () => aT,
-      B: () => KT,
-      Bb: () => oT,
-      C: () => vT,
-      D: () => YT,
-      Fb: () => uT,
-      H: () => xT,
-      Hb: () => eT,
-      K: () => tT,
-      Kb: () => VT,
-      L: () => fT,
-      Mb: () => ET,
-      O: () => CT,
-      Ob: () => ST,
-      P: () => AT,
-      R: () => rT,
-      Sb: () => DT,
-      Tb: () => dT,
-      V: () => wT,
-      Vb: () => MT,
-      Xb: () => UT,
-      Y: () => mT,
-      _: () => PT,
-      ab: () => XT,
-      cb: () => ZT,
-      d: () => gT,
-      e: () => RT,
-      g: () => IT,
-      gb: () => GT,
-      j: () => QT,
-      kb: () => zT,
-      n: () => LT,
-      ob: () => HT,
-      q: () => NT,
-      sb: () => JT,
-      t: () => hT,
-      vb: () => jT,
-      x: () => OT,
-      y: () => yT,
-      yb: () => FT,
-      z: () => lT
+  4625: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      A: () => xq,
+      Ab: () => rq,
+      B: () => Yq,
+      C: () => Oq,
+      E: () => dq,
+      Eb: () => tq,
+      G: () => wq,
+      H: () => uq,
+      Hb: () => Mq,
+      L: () => Bq,
+      Lb: () => Jq,
+      Nb: () => zq,
+      O: () => cq,
+      Q: () => jq,
+      Qb: () => pq,
+      T: () => Aq,
+      Tb: () => Gq,
+      V: () => aq,
+      Vb: () => Qq,
+      Wb: () => yq,
+      X: () => Nq,
+      Z: () => vq,
+      _: () => nq,
+      _b: () => Rq,
+      bb: () => bq,
+      bc: () => lq,
+      e: () => sq,
+      ec: () => Xq,
+      f: () => Fq,
+      fb: () => hq,
+      i: () => Wq,
+      ib: () => iq,
+      kb: () => kq,
+      m: () => Pq,
+      mb: () => Lq,
+      pb: () => Sq,
+      q: () => Uq,
+      sb: () => Zq,
+      t: () => oq,
+      u: () => Hq,
+      ub: () => Tq,
+      wb: () => fq,
+      y: () => mq,
+      zb: () => Vq
     });
-    const lT = 32,
-      MT = 33.333333333333336,
-      KT = {
+    const Yq = 32,
+      lq = 33.333333333333336,
+      Oq = {
         AbiVersion: 0,
         Status: 1,
         LastError: 2,
@@ -222,18 +342,18 @@ export const modules = {
         PacingLagUs: 30,
         LoadSteps: 31
       },
-      OT = {
+      mq = {
         NotYet: 0,
         Drawn: 1,
         Backstop: 2,
         HeldBackstop: 3
       },
-      yT = {
+      xq = {
         NotDrawn: 0,
         Drawn: 1,
         Paced: 2
       },
-      fT = {
+      Aq = {
         AheadMask: 15,
         Joining: 64,
         Tiered: 128,
@@ -241,20 +361,30 @@ export const modules = {
         SwitchesShift: 20,
         CountMask: 4095
       },
-      xT = {
+      cq = {
         TerrainDrawn: 1,
         ChunkRequested: 2,
         ChunkStored: 4,
         MeshLanded: 8,
         PlayerChunk: 16
       },
-      IT = {
+      uq = 7,
+      Bq = {
+        ChunksReceived: 0,
+        ChunksStored: 1,
+        JobsSent: 2,
+        JobsDone: 3,
+        JobsInFlight: 4,
+        WorkersLive: 5,
+        WorkersRetired: 6
+      },
+      Wq = {
         Look: 0,
         Remesh: 1
       },
-      AT = 8,
-      CT = 1,
-      jT = {
+      Nq = 8,
+      aq = 1,
+      Vq = {
         Edit: 0,
         Sent: 1,
         Done: 2,
@@ -263,7 +393,7 @@ export const modules = {
         Replaced: 5,
         Emptied: 6
       },
-      vT = {
+      dq = {
         KeyDown: 1,
         KeyUp: 2,
         MouseMove: 3,
@@ -291,12 +421,12 @@ export const modules = {
         PadLook: 25,
         EnvPrefs: 32
       },
-      tT = {
+      jq = {
         Frame: 1,
         Open: 2,
         Close: 3
       },
-      hT = {
+      Hq = {
         RawMessage: 1,
         CoreErrors: 2,
         LocalHurt: 16,
@@ -348,7 +478,7 @@ export const modules = {
         RenderReload: 3,
         TerrainTexturesWanted: 4
       },
-      NT = {
+      oq = {
         EntityInfo: 1,
         EntityTable: 2,
         CoreErrors: 4,
@@ -358,10 +488,10 @@ export const modules = {
         PlayerHud: 64,
         GameCalls: 128
       },
-      QT = 4,
-      ST = 4,
-      DT = 65535,
-      aT = {
+      Pq = 4,
+      Qq = 4,
+      yq = 65535,
+      tq = {
         Open: 1,
         TooLarge: 2,
         NothingStaged: 3,
@@ -374,7 +504,7 @@ export const modules = {
         ModuleTrap: 10,
         Port: 11
       },
-      FT = {
+      rq = {
         Busy: 0,
         Range: 1,
         OtherBody: 2,
@@ -382,12 +512,12 @@ export const modules = {
         Corrupt: 4,
         Ended: 5
       },
-      rT = 88,
-      PT = 0,
-      wT = 24,
-      mT = 48,
-      bT = 80,
-      zT = {
+      vq = 88,
+      hq = 0,
+      nq = 24,
+      bq = 48,
+      iq = 80,
+      Zq = {
         FilePartDone: 526,
         FileDone: 527,
         Control: 528,
@@ -398,18 +528,18 @@ export const modules = {
         Killfeed: 533,
         Session: 534
       },
-      JT = {
+      fq = {
         ToggleRecording: 0,
         SaveClip: 1,
         ViewerOpened: 2,
         ViewerClosed: 3
       },
-      oT = {
+      Mq = {
         Clip: 0,
         Recording: 1,
         Edited: 2
       },
-      HT = {
+      Tq = {
         RecordingStarted: 0,
         RecordingStopped: 1,
         RecordingDiscarded: 2,
@@ -427,34 +557,34 @@ export const modules = {
         SaveFailed: 14,
         RecordingTurnedOff: 15
       },
-      eT = {
+      zq = {
         Cleared: 0,
         Text: 1,
         Int: 2,
         Double: 3
       },
-      GT = 65535,
-      VT = {
+      Sq = 65535,
+      pq = {
         FlyingText: 1,
         PlayerKilled: 2,
         Killfeed: 3
       },
-      ET = {
+      Gq = {
         None: 0,
         Paused: 1,
         Playing: 2,
         Cropping: 3,
         Loading: 4
       },
-      ZT = 2,
-      uT = {
+      Lq = 2,
+      Jq = {
         UiText: 0,
         Environment: 6,
         Hud: 12,
         Count: 19
       },
-      XT = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
-      dT = {
+      kq = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
+      Rq = {
         SkyTable: 600,
         SkyImagesReady: 601,
         SkyTableHeaderBytes: 8,
@@ -466,7 +596,7 @@ export const modules = {
         CubeFaces: 6,
         Failed: 0
       },
-      LT = {
+      Uq = {
         Bytes: 88,
         Inclination: 0,
         Turbidity: 1,
@@ -493,7 +623,7 @@ export const modules = {
         PresentAt: 80,
         FlagsAt: 84
       },
-      RT = {
+      Fq = {
         None: 0,
         InputOverCapacity: 1,
         InputTruncated: 2,
@@ -651,8 +781,8 @@ export const modules = {
         ReplayDrops: 87,
         ReplayRecorderDrops: 304
       },
-      gT = 8,
-      UT = {
+      sq = 8,
+      Xq = {
         GameCodeMessage: 4,
         NewOtherEntitySettings: 23,
         NewClientOptions: 37,
@@ -677,8 +807,376 @@ export const modules = {
         WorldVariation: 5,
         EditItemCraftingRecipes: 78
       },
-      YT = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
+      wq = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
+  },
+  4622: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      $c: () => eq,
+      Ab: () => qE,
+      Ac: () => Yq.bb,
+      Bd: () => Yq.bc,
+      Be: () => Aq,
+      Ce: () => Sq,
+      D: () => cq,
+      Eb: () => gE,
+      Ec: () => Yq.fb,
+      Fd: () => Oq,
+      Fe: () => dE,
+      Gb: () => Yq.L,
+      H: () => Yq.i,
+      Hb: () => lq.h,
+      Hd: () => dq,
+      He: () => Nq,
+      I: () => Dq,
+      Ic: () => Yq.ib,
+      Kc: () => Yq.pb,
+      Kd: () => AE,
+      Lb: () => rq,
+      Lc: () => aE,
+      M: () => Yq.m,
+      Md: () => Lq,
+      Nd: () => kq,
+      P: () => Kq,
+      Pb: () => pq,
+      Pc: () => uE,
+      Rc: () => lE,
+      Rd: () => Gq,
+      S: () => Yq.u,
+      Sb: () => iq,
+      Tb: () => nq,
+      Ub: () => Yq.Q,
+      Uc: () => Yq.sb,
+      Vd: () => Fq,
+      W: () => Yq.y,
+      Wb: () => Zq,
+      Xc: () => Yq.ub,
+      Y: () => Yq.A,
+      _: () => Bq,
+      _b: () => Qq,
+      _c: () => Yq.wb,
+      ae: () => Rq,
+      bb: () => Hq,
+      bc: () => mE,
+      c: () => EE,
+      ce: () => Xq,
+      d: () => Vq,
+      db: () => Yq.B,
+      dd: () => Yq.Ab,
+      f: () => aq,
+      fc: () => oq,
+      g: () => cE,
+      gd: () => Yq.Eb,
+      ge: () => sq,
+      hb: () => Yq.C,
+      hc: () => BE,
+      i: () => vq,
+      ic: () => lq.l,
+      id: () => Yq.Hb,
+      je: () => xE,
+      kb: () => Jq,
+      l: () => tq,
+      ld: () => Yq.Nb,
+      m: () => Yq.e,
+      mc: () => jq,
+      ne: () => VE,
+      o: () => WE,
+      ob: () => OE,
+      p: () => bq,
+      pd: () => Yq.Qb,
+      q: () => mq,
+      qc: () => YE,
+      r: () => fq,
+      rb: () => uq,
+      rd: () => Yq.Tb,
+      re: () => Pq,
+      sb: () => Yq.E,
+      se: () => wq,
+      u: () => NE,
+      uc: () => Yq.Z,
+      ue: () => zq,
+      vd: () => hq,
+      ve: () => Tq,
+      w: () => Iq,
+      wb: () => Uq,
+      xb: () => Cq,
+      xc: () => Yq._,
+      yd: () => Yq.Vb,
+      z: () => Yq.f,
+      zb: () => Yq.H,
+      zd: () => Yq.Wb,
+      ze: () => Mq
+    });
+    var Yq = gq(4625),
+      lq = gq(2357);
+    const Oq = Math.round(1e3 / Yq.bc),
+      mq = 4,
+      xq = 2;
+
+    function Aq() {
+      return crypto.getRandomValues(new Uint32Array(xq))
+    }
+    const cq = {
+        Ok: 0,
+        Errors: 1,
+        Fatal: 2
+      },
+      uq = 16,
+      Bq = {
+        Draws: 1,
+        NetAll: 2
+      },
+      Wq = {
+        ShowFog: 1,
+        Lighting: 2,
+        ChunkFade: 4
+      };
+
+    function Nq(qq) {
+      return (qq.nametagsHidden ? yq.NametagsHidden : 0) | (qq.crouchToggle ? yq.CrouchToggle : 0) | (qq.bhopDisabled ? yq.BhopDisabled : 0) | (qq.disableBobbing ? yq.DisableBobbing : 0) | (qq.ezTowering ? yq.EzTowering : 0) | (qq.ezBridging ? yq.EzBridging : 0) | (qq.showChunkBorders ? yq.ShowChunkBorders : 0)
+    }
+    const aq = {
+        Flags: 0,
+        PhysicsVersion: 1,
+        InbuiltOverwritten: 2,
+        AltComplete: 3,
+        ProbeUsedProp: 4
+      },
+      Vq = {
+        Ready: 1,
+        SendFnReplaced: 2,
+        Butto: 4,
+        IdentityChanged: 32,
+        CheckFuncHit: 128,
+        OriginStackHit: 256
+      },
+      dq = {
+        None: 0,
+        Untrusted: 2,
+        FewProperties: 3,
+        CheckFunc: 4,
+        NotEvent: 5,
+        En: 6,
+        Fr: 7
+      },
+      jq = {
+        StackCheck: 0,
+        ConfirmMesh: 1,
+        IndexPassReplaced: 2,
+        ProductSubChanged: 3,
+        RenderStatus: 4,
+        Held: 6,
+        PlayerKilledSubs: 7
+      },
+      Hq = 5,
+      oq = 4294967295;
+
+    function Pq(qq) {
+      return (qq.showFog ? Wq.ShowFog : 0) | (qq.lighting ? Wq.Lighting : 0) | (qq.chunkFade ? Wq.ChunkFade : 0)
+    }
+    const Qq = {
+        ResetFirst: 1,
+        AdStart: 2,
+        PreventMovement: 4,
+        AdEnd: 8,
+        PayloadMaxBytes: 1 << 20
+      },
+      yq = {
+        NametagsHidden: 1,
+        CrouchToggle: 2,
+        BhopDisabled: 4,
+        DisableBobbing: 8,
+        EzTowering: 16,
+        EzBridging: 32,
+        ShowChunkBorders: 64,
+        All: 127
+      },
+      tq = {
+        Release: 1,
+        KeepTouches: 2
+      },
+      rq = {
+        Point: 1,
+        Stamped: 2
+      },
+      vq = {
+        Add: 1,
+        Clear: 2
+      },
+      hq = 1,
+      nq = 8,
+      bq = 16777215,
+      iq = 4,
+      Zq = {
+        Resume: 1
+      },
+      fq = {
+        Held: 1
+      };
+
+    function Mq(qq, Eq) {
+      return (qq | Eq << 8) >>> 0
+    }
+
+    function Tq(qq) {
+      return 255 & qq
+    }
+
+    function zq(qq) {
+      return qq >>> 8
+    }
+
+    function Sq(qq) {
+      return qq + 3 & -4
+    }
+    const pq = 16777216,
+      Gq = 20;
+    const Lq = 8,
+      Jq = 8,
+      kq = 16777216,
+      Rq = {
+        JobResult: 1,
+        WorkerStarted: 2,
+        WorkerLost: 3,
+        WorldgenResult: 4,
+        WorldgenStarted: 5,
+        WorldgenLost: 6
+      },
+      Uq = {
+        Ok: 0,
+        Refused: 1,
+        Trapped: 2,
+        NotHeld: 3,
+        HeapRefused: 4
+      },
+      Fq = 16,
+      sq = {
+        Lost: 0,
+        Gone: 1
+      },
+      Xq = {
+        Init: 1,
+        Mesh: 2,
+        WorldgenSeed: 3,
+        Generate: 4,
+        Retire: 5
+      };
+
+    function wq(qq) {
+      return qq === Xq.WorldgenSeed || qq === Xq.Generate
+    }
+    const Kq = 4,
+      Cq = 99,
+      Iq = {
+        PAIRS_MAX: 16,
+        FIXED_WORDS: 2,
+        PAIR_WORDS: 2,
+        WORDS_MAX: 34
+      },
+      eq = {
+        BYTES: 12,
+        WEBGPU: 1,
+        GL: 2,
+        WEBGPU_LOSSES_MAX: 1,
+        LOST: 0,
+        PIPELINE_FAILED: 1
+      },
+      Dq = {
+        FRAMES: 65535,
+        RESTORE_UNHELD: 65536,
+        LINKS_RUNNING: 1 << 17
+      },
+      qE = 12,
+      EE = 16,
+      gE = 4,
+      YE = 12,
+      lE = {
+        SessionBased: 1,
+        ReplayOffer: 2
+      },
+      OE = 4,
+      mE = 8,
+      xE = 8,
+      AE = {
+        HEAD_BYTES: 28,
+        UPDATE: 1,
+        REMOVE: 2
+      },
+      cE = {
+        Crit: 1,
+        HitSelf: 2
+      },
+      uE = {
+        BYTES: 16,
+        STRING_TYPE_BYTES: 24,
+        STRING_TYPE: 65535,
+        ERROR: 65534
+      },
+      BE = {
+        None: 0,
+        Bytes: 1,
+        Msgpack: 2,
+        MsgpackBin: 3
+      },
+      WE = 12,
+      NE = {
+        Activated: 1,
+        Error: 2,
+        Left: 3,
+        Closed: 4,
+        Held: 5,
+        Resumed: 6,
+        ResumeRefused: 7
+      },
+      aE = 67108864;
+
+    function VE(qq) {
+      for (const [Eq, gq] of Object.entries(Yq.f))
+        if (gq === qq) return Eq;
+      return `Unknown${qq}`
+    }
+
+    function dE(qq) {
+      return {
+        status: qq[Yq.C.Status],
+        lastError: qq[Yq.C.LastError],
+        lastErrorDetail: qq[Yq.C.LastErrorDetail],
+        errorCount: qq[Yq.C.ErrorCount],
+        frameIndex: qq[Yq.C.FrameIndex],
+        tickIndex: qq[Yq.C.TickIndex],
+        renderPending: qq[Yq.C.RenderPending],
+        firstView: qq[Yq.C.FirstView],
+        chunksCancelled: qq[Yq.C.ChunksCancelled]
+      }
+    }
+  },
+  4616: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => mq,
+      e: () => Oq,
+      g: () => lq
+    });
+    var Yq = gq(4622);
+
+    function lq(qq) {
+      return "none" !== qq
+    }
+
+    function Oq(qq, Eq) {
+      if (!qq) return "none";
+      switch (Eq) {
+        case Yq.Y.Drawn:
+          return "drawn";
+        case Yq.Y.Paced:
+          return "paced";
+        default:
+          return "skipped"
+      }
+    }
+
+    function mq(qq) {
+      return "drawn" === qq
+    }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

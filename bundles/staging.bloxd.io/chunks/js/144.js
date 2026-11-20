@@ -1,58 +1,67 @@
 export const id = 144;
 export const ids = [144];
 export const modules = {
-  8147: (TT, kT, cT) => {
-    cT.r(kT), cT.d(kT, {
-      CoolMathGamesSdkAdaptor: () => KT
+  8014: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      GameDistributionSdkAdaptor: () => Oq
     });
-    var lT = cT(1321),
-      MT = cT(1190);
-    class KT extends lT.b {
-      constructor() {
-        super(), this.name = "coolmathgames", this.adBreakStartCallback = () => {
-          console.error("adBreakStartCallback not set")
-        }, this.adBreakCompleteCallback = () => {
-          console.error("adBreakCompleteCallback not set")
-        }, document.addEventListener("adBreakStart", this.doAdBreakStart.bind(this)), document.addEventListener("adBreakComplete", this.doAdBreakComplete.bind(this))
-      }
-      doAdBreakStart() {
-        this.adBreakStartCallback();
-        const TT = document.getElementsByClassName("ads-popup");
-        for (const kT of TT) kT instanceof HTMLElement && (kT.style.position = "fixed")
-      }
-      doAdBreakComplete() {
-        this.adBreakCompleteCallback()
+    var Yq = gq(1304),
+      lq = gq(1171);
+    class Oq extends Yq.e {
+      constructor(qq) {
+        super(), this.setOnEndCb = qq, this.name = "gamedistribution"
       }
       static async setup() {
-        return await (0, MT.e)("https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"), await (0, MT.e)("https://www.coolmathgames.com/sites/default/files/cmg-ads.js"), new KT
+        let qq;
+        let Eq;
+        return window.GD_OPTIONS = {
+          gameId: "b35b336d21654aa5a378480d13ed7225",
+          onEvent: gq => {
+            const Yq = () => {
+              Eq && (window.adCompleteSoResume(), Eq = !1), qq && (qq(), qq = null)
+            };
+            switch (gq.name) {
+              case "SDK_GAME_START":
+                console.log("Gamedis SDK_GAME_START"), Eq = !1, qq ? (qq(), qq = null, window.adCompleteSoResume()) : console.error("onEndCb is not defined during SDK_GAME_START for gamedis sdk. Probably means error happened before.");
+                break;
+              case "SDK_GAME_PAUSE":
+                console.log("Gamedis SDK_GAME_PAUSE"), window.adStartSoPause(null, {
+                  preventMovement: !0
+                }), Eq = !0;
+                break;
+              case "SDK_ERROR":
+                console.error("Gamedis SDK_ERROR fired"), Yq();
+                break;
+              case "SDK_GDPR_TRACKING":
+              case "SDK_GDPR_TARGETING":
+              default:
+                break;
+              case "AD_ERROR":
+                console.error("Gamedis AD_ERROR fired"), Yq();
+                break;
+              case "AD_IS_ALREADY_RUNNING":
+                console.error("Gamedis AD_IS_ALREADY_RUNNING fired"), Yq();
+                break;
+              case "DISPLAYAD_ERROR":
+                console.error("Gamedis DISPLAYAD_ERROR fired"), console.error(gq)
+            }
+          }
+        }, await (0, lq.b)("https://html5.api.gamedistribution.com/main.min.js", {
+          id: "gamedistribution-jssdk"
+        }), new Oq((Eq => {
+          qq = Eq
+        }))
       }
-      playVideoAd(TT, kT) {
-        this.adBreakStartCallback = () => {
-          console.log("CoolMathGames adBreak Started"), window.adStartSoPause(null, {
-            preventMovement: !0
-          })
-        }, this.adBreakCompleteCallback = () => {
-          console.log("CoolMathGames adBreak Complete"), window.adCompleteSoResume(), TT()
-        }, window.hasOwnProperty("cmgAdBreak") && window.cmgAdBreak()
+      playVideoAd(qq, Eq) {
+        this.setOnEndCb(qq), console.log("Requesting gamedis preroll"), window.gdsdk.showAd()
       }
-      onGameplayStart() {
-        try {
-          window.parent.cmgGameEvent("start")
-        } catch {
-          console.log("Couldn't access cmgGameEvent on parent")
-        }
+      renderBanner(qq) {
+        console.log("Getting new gamedis banners"), void 0 !== window.gdsdk.AdType.Display ? (console.log("requesting gamedis banner into", document.getElementById(qq.divId)), console.log("Params to window.gdsdk.showAd", window.gdsdk.AdType.Display, qq.divId), window.gdsdk.showAd(window.gdsdk.AdType.Display, {
+          containerId: qq.divId
+        }).then((() => console.info("showAd(window.gdsdk.AdType.Display) resolved."))).catch((qq => console.info(qq)))) : console.error("window.gdsdk.AdType.Display is undefined")
       }
-      onGameplayStop() {}
-      onGameEntered() {
-        try {
-          window.parent.cmgGameEvent("start")
-        } catch {
-          console.log("Couldn't access cmgGameEvent on parent")
-        }
-      }
-      onGameExited() {}
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

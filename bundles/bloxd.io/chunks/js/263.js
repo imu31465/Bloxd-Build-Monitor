@@ -1,255 +1,255 @@
 export const id = 263;
 export const ids = [263];
 export const modules = {
-  40610: (TT, kT, cT) => {
-    function lT(TT, kT, cT) {
-      if ("undefined" !== typeof OffscreenCanvas) return new OffscreenCanvas(TT, kT).getContext("2d", cT);
-      const lT = document.createElement("canvas");
-      return lT.width = TT, lT.height = kT, lT.getContext("2d", cT)
+  40733: (qq, Eq, gq) => {
+    function Yq(qq, Eq, gq) {
+      if ("undefined" !== typeof OffscreenCanvas) return new OffscreenCanvas(qq, Eq).getContext("2d", gq);
+      const Yq = document.createElement("canvas");
+      return Yq.width = qq, Yq.height = Eq, Yq.getContext("2d", gq)
     }
 
-    function MT(TT, kT) {
-      return TT.getContext("2d", kT)
+    function lq(qq, Eq) {
+      return qq.getContext("2d", Eq)
     }
-    cT.d(kT, {
-      c: () => MT,
-      d: () => lT
+    gq.d(Eq, {
+      d: () => lq,
+      f: () => Yq
     })
   },
-  40542: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => ST,
-      d: () => vT,
-      g: () => UT,
-      h: () => bT,
-      l: () => JT,
-      p: () => oT,
-      q: () => QT,
-      t: () => hT,
-      x: () => NT,
-      z: () => mT,
-      A: () => dT,
-      B: () => FT,
-      D: () => ET,
-      E: () => gT,
-      G: () => HT,
-      I: () => GT
+  40659: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => oq,
+      i: () => aq,
+      l: () => Fq,
+      p: () => nq,
+      r: () => iq,
+      s: () => Zq,
+      w: () => Hq,
+      x: () => dq,
+      z: () => jq,
+      B: () => hq,
+      D: () => Jq,
+      G: () => yq,
+      K: () => Sq,
+      L: () => Uq,
+      O: () => fq,
+      S: () => Tq
     });
-    var lT = cT(4761),
-      MT = cT(40273),
-      KT = (cT(40443), cT(15));
-    class OT {
-      constructor(TT, kT) {
-        this.memory = TT, this.access = kT, this.cursor = 0, this.dropped = 0, this.buffer = null, this.ptr = 0, this.DA = 0, this.u32 = new KT.j(0), this.f32 = new KT.e(0), this.u8 = new KT.d(0), this.dataView = new KT.h(new ArrayBuffer(0)), this.refresh()
+    var Yq = gq(4622),
+      lq = gq(40369),
+      Oq = (gq(40515), gq(15));
+    class mq {
+      constructor(qq, Eq) {
+        this.memory = qq, this.access = Eq, this.cursor = 0, this.dropped = 0, this.buffer = null, this.ptr = 0, this.WB = 0, this.u32 = new Oq.l(0), this.f32 = new Oq.g(0), this.u8 = new Oq.c(0), this.dataView = new Oq.i(new ArrayBuffer(0)), this.refresh()
       }
       refresh() {
-        this.ptr = this.access.ptr(), this.DA = this.access.DA(), this.buffer = (0, KT.L)(this.memory()), this.u32 = new KT.j(this.buffer, this.ptr, this.DA >>> 2), this.f32 = new KT.e(this.buffer, this.ptr, this.DA >>> 2), this.u8 = new KT.d(this.buffer, this.ptr, this.DA), this.dataView = new KT.h(this.buffer, this.ptr, this.DA)
+        this.ptr = this.access.ptr(), this.WB = this.access.WB(), this.buffer = (0, Oq.K)(this.memory()), this.u32 = new Oq.l(this.buffer, this.ptr, this.WB >>> 2), this.f32 = new Oq.g(this.buffer, this.ptr, this.WB >>> 2), this.u8 = new Oq.c(this.buffer, this.ptr, this.WB), this.dataView = new Oq.i(this.buffer, this.ptr, this.WB)
       }
       ensureViews() {
-        (0, KT.L)(this.memory()) !== this.buffer && this.refresh()
+        (0, Oq.K)(this.memory()) !== this.buffer && this.refresh()
       }
       get view() {
         return this.ensureViews(), this.dataView
       }
-      room(TT) {
-        return !!this.fits(TT) || (this.dropped++, !1)
+      room(qq) {
+        return !!this.fits(qq) || (this.dropped++, !1)
       }
-      fits(TT) {
-        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.cursor;
+      fits(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.cursor;
         this.ensureViews();
-        const cT = kT + TT;
-        return cT <= this.DA || cT <= lT.zc && 0 !== this.access.reserve(cT) && (this.refresh(), cT <= this.DA)
+        const gq = Eq + qq;
+        return gq <= this.WB || gq <= Yq.Lc && 0 !== this.access.reserve(gq) && (this.refresh(), gq <= this.WB)
       }
-      consume(TT) {
-        const kT = this.cursor - TT;
-        kT > 0 && TT > 0 && (this.ensureViews(), this.u8.copyWithin(0, TT, this.cursor)), this.cursor = kT > 0 ? kT : 0
+      consume(qq) {
+        const Eq = this.cursor - qq;
+        Eq > 0 && qq > 0 && (this.ensureViews(), this.u8.copyWithin(0, qq, this.cursor)), this.cursor = Eq > 0 ? Eq : 0
       }
-      writeRecord(TT, kT, cT, MT, KT) {
-        if (!this.room(lT.pb)) return !1;
-        const OT = this.cursor >>> 2;
-        return this.u32[OT] = 65535 & TT | (65535 & kT) << 16, this.f32[OT + 1] = cT, this.f32[OT + 2] = MT, this.u32[OT + 3] = KT >>> 0, this.cursor += lT.pb, !0
+      writeRecord(qq, Eq, gq, lq, Oq) {
+        if (!this.room(Yq.rb)) return !1;
+        const mq = this.cursor >>> 2;
+        return this.u32[mq] = 65535 & qq | (65535 & Eq) << 16, this.f32[mq + 1] = gq, this.f32[mq + 2] = lq, this.u32[mq + 3] = Oq >>> 0, this.cursor += Yq.rb, !0
       }
-      writeOptions(TT, kT) {
-        const cT = kT.byteLength,
-          MT = lT.pb + (0, lT.ke)(cT);
-        if (!this.fits(MT)) return !1;
-        const KT = this.cursor,
-          OT = KT >>> 2;
-        this.u32[OT] = lT.rb.Options, this.u32[OT + 1] = cT, this.u32[OT + 2] = 0, this.u32[OT + 3] = TT >>> 0;
-        const yT = KT + lT.pb;
-        return this.u8.set(kT, yT), this.u8.fill(0, yT + cT, KT + MT), this.cursor += MT, !0
+      writeOptions(qq, Eq) {
+        const gq = Eq.byteLength,
+          lq = Yq.rb + (0, Yq.Ce)(gq);
+        if (!this.fits(lq)) return !1;
+        const Oq = this.cursor,
+          mq = Oq >>> 2;
+        this.u32[mq] = Yq.sb.Options, this.u32[mq + 1] = gq, this.u32[mq + 2] = 0, this.u32[mq + 3] = qq >>> 0;
+        const xq = Oq + Yq.rb;
+        return this.u8.set(Eq, xq), this.u8.fill(0, xq + gq, Oq + lq), this.cursor += lq, !0
       }
-      writeWorkerRecord(TT, kT, cT, MT, KT, OT) {
-        const yT = OT.byteLength,
-          fT = lT.Ed + (0, lT.ke)(yT);
-        if (yT > lT.Dd) return this.dropped++, !1;
-        if (!this.room(fT)) return !1;
-        const xT = this.cursor,
-          IT = xT >>> 2;
-        this.u32[IT] = TT >>> 0, this.u32[IT + 1] = 65535 & kT | (65535 & cT) << 16, this.u32[IT + 2] = MT >>> 0, this.u32[IT + 3] = KT >>> 0, this.u32[IT + 4] = yT;
-        const AT = xT + lT.Ed;
-        return this.u8.set(OT, AT), this.u8.fill(0, AT + yT, xT + fT), this.cursor += fT, !0
+      writeWorkerRecord(qq, Eq, gq, lq, Oq, mq) {
+        const xq = mq.byteLength,
+          Aq = Yq.Rd + (0, Yq.Ce)(xq);
+        if (xq > Yq.Nd) return this.dropped++, !1;
+        if (!this.room(Aq)) return !1;
+        const cq = this.cursor,
+          uq = cq >>> 2;
+        this.u32[uq] = qq >>> 0, this.u32[uq + 1] = 65535 & Eq | (65535 & gq) << 16, this.u32[uq + 2] = lq >>> 0, this.u32[uq + 3] = Oq >>> 0, this.u32[uq + 4] = xq;
+        const Bq = cq + Yq.Rd;
+        return this.u8.set(mq, Bq), this.u8.fill(0, Bq + xq, cq + Aq), this.cursor += Aq, !0
       }
       written() {
         return this.ensureViews(), this.u8.subarray(0, this.cursor)
       }
-      writeFrame(TT, kT) {
-        return this.writeNet(lT.Qb.Frame, TT, kT)
+      writeFrame(qq, Eq) {
+        return this.writeNet(Yq.Ub.Frame, qq, Eq)
       }
-      writeOpen(TT) {
-        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return this.writeNet(lT.Qb.Open, TT, fT(kT))
+      writeOpen(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return this.writeNet(Yq.Ub.Open, qq, Aq(Eq))
       }
-      writeClose(TT) {
-        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return this.writeNet(lT.Qb.Close, TT, fT(kT))
+      writeClose(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return this.writeNet(Yq.Ub.Close, qq, Aq(Eq))
       }
-      writeNet(TT, kT, cT) {
-        const MT = cT.byteLength,
-          KT = lT.Pb + (0, lT.ke)(MT);
-        if (MT > lT.Lb) return this.dropped++, !1;
-        if (!this.room(KT)) return !1;
-        const OT = this.cursor;
-        this.u32[OT >>> 2] = MT, this.u32[1 + (OT >>> 2)] = (0, lT.fe)(TT, kT);
-        const yT = OT + lT.Pb;
-        return this.u8.set(cT, yT), this.u8.fill(0, yT + MT, OT + KT), this.cursor += KT, !0
+      writeNet(qq, Eq, gq) {
+        const lq = gq.byteLength,
+          Oq = Yq.Tb + (0, Yq.Ce)(lq);
+        if (lq > Yq.Pb) return this.dropped++, !1;
+        if (!this.room(Oq)) return !1;
+        const mq = this.cursor;
+        this.u32[mq >>> 2] = lq, this.u32[1 + (mq >>> 2)] = (0, Yq.ze)(qq, Eq);
+        const xq = mq + Yq.Tb;
+        return this.u8.set(gq, xq), this.u8.fill(0, xq + lq, mq + Oq), this.cursor += Oq, !0
       }
-      Ij(TT, kT, cT) {
-        const MT = lT.p + (0, lT.ke)(cT);
-        if (!this.room(MT)) return -1;
-        const KT = this.cursor;
-        this.u32[KT >>> 2] = 65535 & TT | (65535 & kT) << 16, this.u32[1 + (KT >>> 2)] = cT;
-        const OT = KT + lT.p;
-        return this.u8.fill(0, OT, KT + MT), this.cursor += MT, OT
+      gN(qq, Eq, gq) {
+        const lq = Yq.m + (0, Yq.Ce)(gq);
+        if (!this.room(lq)) return -1;
+        const Oq = this.cursor;
+        this.u32[Oq >>> 2] = 65535 & qq | (65535 & Eq) << 16, this.u32[1 + (Oq >>> 2)] = gq;
+        const mq = Oq + Yq.m;
+        return this.u8.fill(0, mq, Oq + lq), this.cursor += lq, mq
       }
-      growForCmd(TT) {
-        return this.fits(lT.p + (0, lT.ke)(TT), 0)
+      growForCmd(qq) {
+        return this.fits(Yq.m + (0, Yq.Ce)(qq), 0)
       }
-      writeCmd(TT, kT, cT) {
-        const lT = this.Ij(TT, kT, cT.byteLength);
-        return !(lT < 0) && (this.u8.set(cT, lT), !0)
+      writeCmd(qq, Eq, gq) {
+        const Yq = this.gN(qq, Eq, gq.byteLength);
+        return !(Yq < 0) && (this.u8.set(gq, Yq), !0)
       }
-      copyWritten(TT, kT) {
-        return this.ensureViews(), this.u8.slice(TT, TT + kT)
+      copyWritten(qq, Eq) {
+        return this.ensureViews(), this.u8.slice(qq, qq + Eq)
       }
     }
-    const yT = new KT.d(0);
+    const xq = new Oq.c(0);
 
-    function fT(TT) {
-      if (0 === TT) return yT;
-      const kT = new KT.d(lT.Mb);
-      for (let cT = 0; cT < lT.Mb; cT++) kT[cT] = TT >>> 8 * cT & 255;
-      return kT
+    function Aq(qq) {
+      if (0 === qq) return xq;
+      const Eq = new Oq.c(Yq.Sb);
+      for (let gq = 0; gq < Yq.Sb; gq++) Eq[gq] = qq >>> 8 * gq & 255;
+      return Eq
     }
-    class xT {
-      constructor(TT, kT) {
-        this.input = void 0, this.net = void 0, this.worker = void 0, this.cmd = void 0, this.input = new OT(kT, {
-          ptr: () => TT.VA(),
-          DA: () => TT.iMT(),
-          reserve: kT => TT.xKT(kT)
-        }), this.net = new OT(kT, {
-          ptr: () => TT.OKT(),
-          DA: () => TT.KKT(),
-          reserve: kT => TT.IKT(kT)
-        }), this.worker = new OT(kT, {
-          ptr: () => TT.HKT(),
-          DA: () => TT.oKT(),
-          reserve: kT => TT.AKT(kT)
-        }), this.cmd = new OT(kT, {
-          ptr: () => TT.LMT(),
-          DA: () => TT.XMT(),
-          reserve: kT => TT.dMT(kT)
+    class cq {
+      constructor(qq, Eq) {
+        this.input = void 0, this.net = void 0, this.worker = void 0, this.cmd = void 0, this.input = new mq(Eq, {
+          ptr: () => qq.vB(),
+          WB: () => qq.COq(),
+          reserve: Eq => qq.xmq(Eq)
+        }), this.net = new mq(Eq, {
+          ptr: () => qq.lmq(),
+          WB: () => qq.Ymq(),
+          reserve: Eq => qq.Amq(Eq)
+        }), this.worker = new mq(Eq, {
+          ptr: () => qq.imq(),
+          WB: () => qq.bmq(),
+          reserve: Eq => qq.cmq(Eq)
+        }), this.cmd = new mq(Eq, {
+          ptr: () => qq.JOq(),
+          WB: () => qq.GOq(),
+          reserve: Eq => qq.LOq(Eq)
         })
       }
-      reset(TT) {
-        this.input.cursor = 0, this.worker.cursor = 0, this.cmd.consume(TT)
+      reset(qq) {
+        this.input.cursor = 0, this.worker.cursor = 0, this.cmd.consume(qq)
       }
     }
-    var IT = cT(36089),
-      AT = cT(2443),
-      CT = cT(4755),
-      jT = cT(40547);
-    const vT = "coreFrame",
-      tT = "fatalStatus",
-      hT = "otherCall",
-      NT = "coreRings",
-      QT = "netIn",
-      ST = "abi",
-      DT = "netOut",
-      aT = "workerOut",
-      FT = "worldgenHost",
-      rT = "eventWalker",
-      PT = "netEvent",
-      wT = "envEvent",
-      mT = "sharedTables",
-      bT = "inputAction",
-      zT = new Set([rT, PT, wT, bT, mT]),
-      JT = "wasmMemory",
-      oT = "meshHost";
+    var uq = gq(36356),
+      Bq = gq(2364),
+      Wq = gq(4616),
+      Nq = gq(40663);
+    const aq = "coreFrame",
+      Vq = "fatalStatus",
+      dq = "otherCall",
+      jq = "coreRings",
+      Hq = "netIn",
+      oq = "abi",
+      Pq = "netOut",
+      Qq = "workerOut",
+      yq = "worldgenHost",
+      tq = "eventWalker",
+      rq = "netEvent",
+      vq = "envEvent",
+      hq = "sharedTables",
+      nq = "inputAction",
+      bq = new Set([tq, rq, vq, nq, hq]),
+      iq = "wasmMemory",
+      Zq = "meshHost";
 
-    function HT(TT, kT) {
-      TT.forEachWorkerOut(((cT, MT, KT) => {
-        if ((0, lT.ae)(cT)) try {
-          var OT;
-          null === (OT = kT.worldgen) || void 0 === OT || OT.take(cT, KT)
-        } catch (fT) {
-          TT.crash(FT, fT)
+    function fq(qq, Eq) {
+      qq.forEachWorkerOut(((gq, lq, Oq) => {
+        if ((0, Yq.se)(gq)) try {
+          var mq;
+          null === (mq = Eq.worldgen) || void 0 === mq || mq.take(gq, Oq)
+        } catch (Aq) {
+          qq.crash(yq, Aq)
         } else try {
-          var yT;
-          null === (yT = kT.mesh) || void 0 === yT || yT.take(cT, MT, KT)
-        } catch (fT) {
-          TT.crash(oT, fT)
+          var xq;
+          null === (xq = Eq.mesh) || void 0 === xq || xq.take(gq, lq, Oq)
+        } catch (Aq) {
+          qq.crash(Zq, Aq)
         }
       }))
     }
-    const eT = 1048576;
+    const Mq = 1048576;
 
-    function GT(TT, kT) {
-      let cT = !1;
-      const lT = () => {
-        cT = !1, kT()
+    function Tq(qq, Eq) {
+      let gq = !1;
+      const Yq = () => {
+        gq = !1, Eq()
       };
       return () => {
-        !cT && TT.cursor >= eT && (cT = !0, queueMicrotask(lT))
+        !gq && qq.cursor >= Mq && (gq = !0, queueMicrotask(Yq))
       }
     }
-    const VT = new Set([tT, hT, FT, oT]);
+    const zq = new Set([Vq, dq, yq, Zq]);
 
-    function ET(TT) {
-      return zT.has(TT.site) ? TT.error instanceof WebAssembly.RuntimeError || (0, MT.l)(TT.error) : !VT.has(TT.site) && TT.error instanceof Error
+    function Sq(qq) {
+      return bq.has(qq.site) ? qq.error instanceof WebAssembly.RuntimeError || (0, lq.o)(qq.error) : !zq.has(qq.site) && qq.error instanceof Error
     }
-    const ZT = "events",
-      uT = [],
-      XT = "debugLog",
-      dT = "terrainTextures",
-      LT = "sunShadowTextures",
-      RT = new TextDecoder;
+    const pq = "events",
+      Gq = [],
+      Lq = "debugLog",
+      Jq = "terrainTextures",
+      kq = "sunShadowTextures",
+      Rq = new TextDecoder;
 
-    function gT(TT, kT) {
+    function Uq(qq, Eq) {
       const {
-        site: cT,
-        error: MT,
-        header: KT
-      } = TT, OT = KT ? (0, lT.Vd)(KT.lastError) : "noFrame", yT = `CORE-${cT===tT?OT:cT}`, fT = null === MT || void 0 === MT ? "" : ` ${(0,IT.k)(MT)}`, xT = {
-        site: cT,
-        wasmBuild: kT.wasm,
-        clientVersion: kT.client
+        site: gq,
+        error: lq,
+        header: Oq
+      } = qq, mq = Oq ? (0, Yq.ne)(Oq.lastError) : "noFrame", xq = `CORE-${gq===Vq?mq:gq}`, Aq = null === lq || void 0 === lq ? "" : ` ${(0,uq.j)(lq)}`, cq = {
+        site: gq,
+        wasmBuild: Eq.wasm,
+        clientVersion: Eq.client
       };
-      return KT && (xT.status = String(KT.status), xT.lastError = OT, xT.lastErrorCode = String(KT.lastError), xT.lastErrorDetail = String(KT.lastErrorDetail), xT.errorCount = String(KT.errorCount), xT.frameIndex = String(KT.frameIndex), xT.tickIndex = String(KT.tickIndex)), {
-        code: yT,
-        message: `core ${cT}, last error ${OT};${fT}`,
-        details: xT
+      return Oq && (cq.status = String(Oq.status), cq.lastError = mq, cq.lastErrorCode = String(Oq.lastError), cq.lastErrorDetail = String(Oq.lastErrorDetail), cq.errorCount = String(Oq.errorCount), cq.frameIndex = String(Oq.frameIndex), cq.tickIndex = String(Oq.tickIndex)), {
+        code: xq,
+        message: `core ${gq}, last error ${mq};${Aq}`,
+        details: cq
       }
     }
-    class UT {
-      constructor(TT, kT, cT) {
-        this.core = TT, this.memory = kT, this.handlers = cT, this.rings = void 0, this.lastHeader = null, this.lastFrameKind = "none", this.stopped = !1, this.netKept = 0, this.keptFrames = 0, this.headerBuffer = null, this.header = new Uint32Array(0), this.unsentUiPrefs = null, this.eventWalker = null, this.netOffsets = [], this.frameEvents = {
+    class Fq {
+      constructor(qq, Eq, gq) {
+        this.core = qq, this.memory = Eq, this.handlers = gq, this.rings = void 0, this.lastHeader = null, this.lastFrameKind = "none", this.stopped = !1, this.netKept = 0, this.keptFrames = 0, this.headerBuffer = null, this.header = new Uint32Array(0), this.loadCountsBuffer = null, this.loadCounts = new Uint32Array(0), this.unsentUiPrefs = null, this.eventWalker = null, this.netOffsets = [], this.frameEvents = {
           ptr: 0,
           len: 0,
-          net: uT,
+          net: Gq,
           netOffsets: this.netOffsets,
           kind: "none"
-        }, this.unsentEnvPrefs = null, this.unsentLookPrefs = null, this.envEvents = [], this.graceEvents = [], this.unsentOptions = [], this.optionsDropped = 0, this.drawsHeld = !1, this.gameHost = null, this.rings = new xT(TT, kT)
+        }, this.unsentEnvPrefs = null, this.unsentLookPrefs = null, this.envEvents = [], this.graceEvents = [], this.unsentOptions = [], this.optionsDropped = 0, this.drawsHeld = !1, this.gameHost = null, this.rings = new cq(qq, Eq)
       }
       get netKeptFrames() {
         return this.keptFrames
@@ -260,448 +260,457 @@ export const modules = {
       hasPendingCommands() {
         return this.rings.cmd.cursor > 0
       }
-      framePaces(TT) {
+      framePaces(qq) {
         if (this.stopped || this.drawsHeld) return !1;
         try {
-          return this.core.WMT(TT)
-        } catch (kT) {
-          return this.crash(vT, kT), !1
+          return this.core.XOq(qq)
+        } catch (Eq) {
+          return this.crash(aq, Eq), !1
         }
       }
       get isStopped() {
         return this.stopped
       }
-      frame(TT, kT) {
-        var cT;
-        let KT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      frame(qq, Eq) {
+        var gq;
+        let Oq = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         if (this.stopped) return !1;
         if (!this.writePendingInput()) return !1;
         const {
-          input: OT,
-          net: yT,
-          worker: fT,
-          cmd: xT
-        } = this.rings, IT = yT.cursor, AT = kT && !this.drawsHeld;
-        let hT = lT.H.Fatal;
-        const NT = xT.cursor;
-        let ST = null;
+          input: mq,
+          net: xq,
+          worker: Aq,
+          cmd: cq
+        } = this.rings, uq = xq.cursor, Bq = Eq && !this.drawsHeld;
+        let dq = Yq.D.Fatal;
+        const jq = cq.cursor;
+        let oq = null;
         try {
-          const kT = (AT ? lT.db.Draws : 0) | (KT ? lT.db.NetAll : 0);
-          hT = (0, jT.g)((() => this.core.frame(TT, OT.cursor, yT.cursor, fT.cursor, kT, NT)))
-        } catch (VT) {
-          ST = {
-            error: VT
+          const Eq = (Bq ? Yq._.Draws : 0) | (Oq ? Yq._.NetAll : 0);
+          dq = (0, Nq.c)((() => this.core.frame(qq, mq.cursor, xq.cursor, Aq.cursor, Eq, jq)))
+        } catch (zq) {
+          oq = {
+            error: zq
           }
         }
-        const DT = null === (cT = this.gameHost) || void 0 === cT ? void 0 : cT.takeFault();
-        this.rings.reset(this.stopped || null !== ST || void 0 !== DT ? xT.cursor : NT);
-        const aT = null === ST && void 0 === DT ? this.headerView() : null,
-          FT = null === aT ? null : (0, lT.oe)(aT);
-        null !== FT && (this.lastHeader = FT);
-        const wT = null !== FT && hT !== lT.H.Fatal,
-          mT = wT && null !== aT ? aT[lT.kb.NetInKept] : 0,
-          bT = wT && mT <= IT && mT % 4 === 0 ? mT : null;
-        var zT, JT;
-        null !== FT && null !== bT && hT === lT.H.Errors && (null === (zT = (JT = this.handlers).onErrors) || void 0 === zT || zT.call(JT, FT));
-        const oT = null === bT ? uT : this.readEvents(IT);
-        if (yT.consume(IT - (null !== bT && void 0 !== bT ? bT : 0)), this.netKept = null !== bT && void 0 !== bT ? bT : 0, this.keptFrames = this.netKept > 0 ? this.keptFrames + 1 : 0, null !== ST) return this.crash(vT, void 0 === DT || DT instanceof MT.b ? ST.error : DT), !1;
-        if (void 0 !== DT || null === FT) return this.crashOn(vT, DT), !1;
-        const HT = this.headerView()[lT.kb.FrameDraw];
-        if (this.lastFrameKind = (0, CT.g)(AT, HT), hT === lT.H.Fatal) return this.crash(tT, null), !1;
-        if (null === bT) return this.crash(QT, `the core kept ${mT} of ${IT} net-in bytes`), !1;
+        const Pq = null === (gq = this.gameHost) || void 0 === gq ? void 0 : gq.takeFault();
+        this.rings.reset(this.stopped || null !== oq || void 0 !== Pq ? cq.cursor : jq);
+        const Qq = null === oq && void 0 === Pq ? this.headerView() : null,
+          yq = null === Qq ? null : (0, Yq.Fe)(Qq);
+        null !== yq && (this.lastHeader = yq);
+        const vq = null !== yq && dq !== Yq.D.Fatal,
+          hq = vq && null !== Qq ? Qq[Yq.hb.NetInKept] : 0,
+          nq = vq && hq <= uq && hq % 4 === 0 ? hq : null;
+        var bq, iq;
+        null !== yq && null !== nq && dq === Yq.D.Errors && (null === (bq = (iq = this.handlers).onErrors) || void 0 === bq || bq.call(iq, yq));
+        const Zq = null === nq ? Gq : this.readEvents(uq);
+        if (xq.consume(uq - (null !== nq && void 0 !== nq ? nq : 0)), this.netKept = null !== nq && void 0 !== nq ? nq : 0, this.keptFrames = this.netKept > 0 ? this.keptFrames + 1 : 0, null !== oq) return this.crash(aq, void 0 === Pq || Pq instanceof lq.d ? oq.error : Pq), !1;
+        if (void 0 !== Pq || null === yq) return this.crashOn(aq, Pq), !1;
+        const fq = this.headerView()[Yq.hb.FrameDraw];
+        if (this.lastFrameKind = (0, Wq.e)(Bq, fq), dq === Yq.D.Fatal) return this.crash(Vq, null), !1;
+        if (null === nq) return this.crash(Hq, `the core kept ${hq} of ${uq} net-in bytes`), !1;
         if (this.eventWalker) {
           if (this.stopped) return !1;
-          const TT = this.frameEvents,
-            kT = this.headerView();
-          TT.ptr = kT[lT.kb.EventsPtr], TT.len = kT[lT.kb.EventsLen], TT.net = oT, TT.kind = this.lastFrameKind;
+          const qq = this.frameEvents,
+            Eq = this.headerView();
+          qq.ptr = Eq[Yq.hb.EventsPtr], qq.len = Eq[Yq.hb.EventsLen], qq.net = Zq, qq.kind = this.lastFrameKind;
           try {
-            this.eventWalker(TT)
-          } catch (VT) {
-            return this.crashOn(rT, VT), !1
+            this.eventWalker(qq)
+          } catch (zq) {
+            return this.crashOn(tq, zq), !1
           }
           return this.handEnvEvents()
         }
-        for (const lT of oT) {
+        for (const Yq of Zq) {
           if (this.stopped) return !1;
           try {
-            var eT, GT;
-            null === (eT = (GT = this.handlers).onNetEvent) || void 0 === eT || eT.call(GT, lT)
-          } catch (VT) {
-            return this.crashOn(PT, VT), !1
+            var Mq, Tq;
+            null === (Mq = (Tq = this.handlers).onNetEvent) || void 0 === Mq || Mq.call(Tq, Yq)
+          } catch (zq) {
+            return this.crashOn(rq, zq), !1
           }
         }
         return this.handEnvEvents()
       }
       handEnvEvents() {
-        for (const KT of this.graceEvents) {
+        for (const Oq of this.graceEvents) {
           if (this.stopped) return !1;
           try {
-            var TT, kT;
-            null === (TT = (kT = this.handlers).onReconnectGrace) || void 0 === TT || TT.call(kT, KT)
-          } catch (MT) {
-            return this.crashOn(PT, MT), !1
+            var qq, Eq;
+            null === (qq = (Eq = this.handlers).onReconnectGrace) || void 0 === qq || qq.call(Eq, Oq)
+          } catch (lq) {
+            return this.crashOn(rq, lq), !1
           }
         }
-        for (const KT of this.envEvents) {
+        for (const Oq of this.envEvents) {
           if (this.stopped) return !1;
           try {
-            var cT, lT;
-            null === (cT = (lT = this.handlers).onEnvEvent) || void 0 === cT || cT.call(lT, KT)
-          } catch (MT) {
-            return this.crashOn(wT, MT), !1
+            var gq, Yq;
+            null === (gq = (Yq = this.handlers).onEnvEvent) || void 0 === gq || gq.call(Yq, Oq)
+          } catch (lq) {
+            return this.crashOn(vq, lq), !1
           }
         }
         return !this.stopped
       }
-      setEventWalker(TT) {
-        this.eventWalker = TT
+      setEventWalker(qq) {
+        this.eventWalker = qq
       }
       writePendingInput() {
         if (this.stopped) return !1;
         const {
-          input: TT
+          input: qq
         } = this.rings;
         try {
-          const kT = this.unsentUiPrefs;
-          kT && TT.writeRecord(lT.rb.UiPrefs, 0, kT.nametagCutDistance, 0, (0, lT.qe)(kT)) && (this.unsentUiPrefs = null);
-          const cT = this.unsentEnvPrefs;
-          cT && TT.writeRecord(lT.rb.EnvPrefs, (0, lT.Zd)(cT), cT.fogChunks, 0, 0) && (this.unsentEnvPrefs = null);
-          const MT = this.unsentLookPrefs;
-          MT && TT.writeRecord(lT.rb.Sensitivity, 0, MT.mouse, MT.touch, (0, AT.k)(MT.fovPercent)) && (this.unsentLookPrefs = null);
-          let KT = 0;
+          const Eq = this.unsentUiPrefs;
+          Eq && qq.writeRecord(Yq.sb.UiPrefs, 0, Eq.nametagCutDistance, 0, (0, Yq.He)(Eq)) && (this.unsentUiPrefs = null);
+          const gq = this.unsentEnvPrefs;
+          gq && qq.writeRecord(Yq.sb.EnvPrefs, (0, Yq.re)(gq), gq.fogChunks, 0, 0) && (this.unsentEnvPrefs = null);
+          const lq = this.unsentLookPrefs;
+          lq && qq.writeRecord(Yq.sb.Sensitivity, 0, lq.mouse, lq.touch, (0, Bq.k)(lq.fovPercent)) && (this.unsentLookPrefs = null);
+          let Oq = 0;
           for (const {
-              aux: lT,
-              payload: OT
+              aux: Yq,
+              payload: mq
             }
             of this.unsentOptions) {
-            if (!TT.writeOptions(lT, OT)) {
-              if (TT.cursor > 0) break;
+            if (!qq.writeOptions(Yq, mq)) {
+              if (qq.cursor > 0) break;
               this.optionsDropped++
             }
-            KT++
+            Oq++
           }
-          KT > 0 && this.unsentOptions.splice(0, KT)
-        } catch (kT) {
-          return this.crash(NT, kT), !1
+          Oq > 0 && this.unsentOptions.splice(0, Oq)
+        } catch (Eq) {
+          return this.crash(jq, Eq), !1
         }
         return !0
       }
-      setHoldDraws(TT) {
-        this.drawsHeld = TT
+      setHoldDraws(qq) {
+        this.drawsHeld = qq
       }
-      setUiPrefs(TT) {
+      setUiPrefs(qq) {
         this.unsentUiPrefs = {
-          ...TT
+          ...qq
         }
       }
-      setEnvPrefs(TT) {
+      setEnvPrefs(qq) {
         this.unsentEnvPrefs = {
-          ...TT
+          ...qq
         }
       }
-      setLookPrefs(TT) {
+      setLookPrefs(qq) {
         this.unsentLookPrefs = {
-          ...TT
+          ...qq
         }
       }
-      queueOptions(TT, kT) {
-        return !this.isStopped && (kT.byteLength > lT.Xb.PayloadMaxBytes ? (this.optionsDropped++, !1) : (this.unsentOptions.push({
-          aux: TT,
-          payload: kT
+      queueOptions(qq, Eq) {
+        return !this.isStopped && (Eq.byteLength > Yq._b.PayloadMaxBytes ? (this.optionsDropped++, !1) : (this.unsentOptions.push({
+          aux: qq,
+          payload: Eq
         }), !0))
       }
-      setChunkCap(TT) {
-        return this.callCore("setChunkCap", null, (kT => kT.NKT(TT)))
+      setChunkCap(qq) {
+        return this.callCore("setChunkCap", null, (Eq => Eq.Vmq(qq)))
       }
-      shedMemory(TT) {
-        const kT = this.callCore("shedMemory", null, (kT => kT.PKT(TT)));
-        return 0 === kT ? null : kT
+      shedMemory(qq) {
+        const Eq = this.callCore("shedMemory", null, (Eq => Eq.ymq(qq)));
+        return 0 === Eq ? null : Eq
       }
       addDistanceInUse() {
-        const TT = this.callCore("addDistanceInUse", null, (TT => TT.eMT()));
-        return 0 === TT ? null : TT
+        const qq = this.callCore("addDistanceInUse", null, (qq => qq.MOq()));
+        return 0 === qq ? null : qq
       }
-      setChunkAddDistance(TT, kT) {
-        return this.callCore("setChunkAddDistance", !1, (cT => cT.hKT(TT, kT)))
+      setChunkAddDistance(qq, Eq) {
+        return this.callCore("setChunkAddDistance", !1, (gq => gq.amq(qq, Eq)))
       }
-      setGameHost(TT) {
-        return this.callCore("setGameHost", !1, (kT => (kT.BMT(TT), this.gameHost = TT, !0)))
+      setGameHost(qq) {
+        return this.callCore("setGameHost", !1, (Eq => (Eq.sOq(qq), this.gameHost = qq, !0)))
       }
-      setAntiCheatProbes(TT) {
-        return this.callCore("setAntiCheatProbes", !1, (kT => kT.vKT(TT)))
+      setAntiCheatProbes(qq) {
+        return this.callCore("setAntiCheatProbes", !1, (Eq => Eq.Wmq(qq)))
       }
-      setAmbientOcclusion(TT) {
-        this.callCore("setAmbientOcclusion", void 0, (kT => {
-          kT.jKT(TT)
+      setAmbientOcclusion(qq) {
+        this.callCore("setAmbientOcclusion", void 0, (Eq => {
+          Eq.Bmq(qq)
         }))
       }
-      setPoseLod(TT) {
-        this.callCore("setPoseLod", void 0, (kT => {
-          kT.SKT(TT)
+      setPoseLod(qq) {
+        this.callCore("setPoseLod", void 0, (Eq => {
+          Eq.jmq(qq)
         }))
       }
-      setDebugLog(TT, kT) {
-        this.callCore(XT, void 0, (cT => {
-          cT.eh(TT, kT)
+      setDebugLog(qq, Eq) {
+        this.callCore(Lq, void 0, (gq => {
+          gq.Pd(qq, Eq)
         }))
       }
-      takeDebugLog(TT) {
-        return this.callCore(XT, [], (kT => kT.Gh(TT)))
+      takeDebugLog(qq) {
+        return this.callCore(Lq, [], (Eq => Eq.Qd(qq)))
       }
-      setTextureLayers(TT) {
-        return this.callCore("setTextureLayers", !1, (kT => kT.rKT(TT)))
+      setTextureLayers(qq) {
+        return this.callCore("setTextureLayers", !1, (Eq => Eq.Qmq(qq)))
       }
-      setBlockColours(TT) {
+      setBlockColours(qq) {
         let {
-          blocks: kT,
-          counts: cT,
-          values: lT
-        } = TT;
-        return this.callCore("setBlockColours", !1, (TT => TT.AcT(kT, cT, lT)))
+          blocks: Eq,
+          counts: gq,
+          values: Yq
+        } = qq;
+        return this.callCore("setBlockColours", !1, (qq => qq.HYq(Eq, gq, Yq)))
       }
       terrainTextureNames() {
-        return this.callCore(dT, [], (TT => TT.JKT()))
+        return this.callCore(Jq, [], (qq => qq.nmq()))
       }
-      setTerrainTextures(TT, kT, cT, lT) {
-        return this.callCore(dT, !1, (MT => MT.FKT(TT, cT, kT, lT)))
+      setTerrainTextures(qq, Eq, gq, Yq) {
+        return this.callCore(Jq, !1, (lq => lq.Pmq(qq, gq, Eq, Yq)))
       }
-      setShaderPack(TT, kT, cT, lT, MT, KT) {
-        return this.callCore("setShaderPack", !1, (OT => {
-          var yT, fT;
-          return null !== (yT = null === (fT = OT.PcT) || void 0 === fT ? void 0 : fT.call(OT, TT, kT, cT, lT, MT, KT)) && void 0 !== yT && yT
+      setShaderPack(qq, Eq, gq, Yq, lq, Oq) {
+        return this.callCore("setShaderPack", !1, (mq => {
+          var xq, Aq;
+          return null !== (xq = null === (Aq = mq.fYq) || void 0 === Aq ? void 0 : Aq.call(mq, qq, Eq, gq, Yq, lq, Oq)) && void 0 !== xq && xq
         }))
       }
       sunShadowWantedTextures() {
-        return this.callCore(LT, null, (TT => {
-          var kT, cT;
-          return null !== (kT = null === (cT = TT.wKT) || void 0 === cT ? void 0 : cT.call(TT)) && void 0 !== kT ? kT : null
+        return this.callCore(kq, null, (qq => {
+          var Eq, gq;
+          return null !== (Eq = null === (gq = qq.tmq) || void 0 === gq ? void 0 : gq.call(qq)) && void 0 !== Eq ? Eq : null
         }))
       }
-      setSunShadowTexture(TT, kT, cT, lT, MT) {
-        this.callCore(LT, void 0, (KT => {
-          var OT;
-          null === (OT = KT.aKT) || void 0 === OT || OT.call(KT, TT, kT, cT, lT, MT)
+      setSunShadowTexture(qq, Eq, gq, Yq, lq) {
+        this.callCore(kq, void 0, (Oq => {
+          var mq;
+          null === (mq = Oq.omq) || void 0 === mq || mq.call(Oq, qq, Eq, gq, Yq, lq)
         }))
       }
       takeSunShadowWarnings() {
-        return this.callCore(LT, [], (TT => {
-          var kT, cT;
-          return null !== (kT = null === (cT = TT.bKT) || void 0 === cT ? void 0 : cT.call(TT)) && void 0 !== kT ? kT : []
+        return this.callCore(kq, [], (qq => {
+          var Eq, gq;
+          return null !== (Eq = null === (gq = qq.vmq) || void 0 === gq ? void 0 : gq.call(qq)) && void 0 !== Eq ? Eq : []
         }))
       }
       sunShadowsHeld() {
-        return this.callCore(LT, null, (TT => {
-          var kT, cT;
-          return null !== (kT = null === (cT = TT.mKT) || void 0 === cT ? void 0 : cT.call(TT)) && void 0 !== kT ? kT : null
+        return this.callCore(kq, null, (qq => {
+          var Eq, gq;
+          return null !== (Eq = null === (gq = qq.rmq) || void 0 === gq ? void 0 : gq.call(qq)) && void 0 !== Eq ? Eq : null
         }))
       }
-      callCore(TT, kT, cT) {
-        if (this.stopped) return kT;
+      callCore(qq, Eq, gq) {
+        if (this.stopped) return Eq;
         try {
-          return cT(this.core)
-        } catch (lT) {
-          return this.crash(TT, lT), kT
+          return gq(this.core)
+        } catch (Yq) {
+          return this.crash(qq, Yq), Eq
         }
       }
-      readEvents(TT) {
+      readEvents(qq) {
         this.netOffsets.length = 0;
-        const kT = this.headerView(),
-          cT = kT[lT.kb.EventsPtr],
-          MT = kT[lT.kb.EventsLen];
-        if (this.envEvents.length = 0, this.graceEvents.length = 0, 0 === MT) return uT;
-        const KT = [],
-          OT = this.memory().buffer;
-        if (cT % 4 !== 0 || cT + MT > OT.byteLength) return this.crash(ZT, `events of ${MT} bytes at ${cT} outside ${OT.byteLength} bytes of memory`), uT;
-        const yT = new DataView(OT, cT, MT),
-          fT = this.rings.net,
-          xT = (kT, cT) => kT + cT <= TT ? fT.copyWritten(kT, cT) : null;
-        let IT = 0;
-        for (; IT < MT;) {
-          const TT = IT + lT.U,
-            kT = TT <= MT ? yT.getUint32(IT, !0) : -1,
-            fT = kT >>> 16;
-          if (kT < 0 || fT > MT - TT) return this.crash(ZT, `event record at ${IT} overruns its ${MT} bytes`), uT;
-          const wT = 65535 & kT,
-            mT = kT => yT.getUint32(TT + 4 * kT, !0);
-          if (wT === lT.W.RawMessage) {
-            const TT = fT >= lT.Dc.BYTES ? 65535 & mT(1) : -1,
-              kT = TT === lT.Dc.STRING_TYPE,
-              cT = fT === (kT ? lT.Dc.STRING_TYPE_BYTES : lT.Dc.BYTES) ? xT(mT(2), mT(3)) : null,
-              MT = kT && cT ? xT(mT(4), mT(5)) : null;
-            if (!cT || kT && !MT) return this.crash(ZT, `RawMessage at ${IT} of ${fT} bytes names bytes outside net-in`), uT;
-            this.netOffsets.push(IT), KT.push({
+        const Eq = this.headerView(),
+          gq = Eq[Yq.hb.EventsPtr],
+          lq = Eq[Yq.hb.EventsLen];
+        if (this.envEvents.length = 0, this.graceEvents.length = 0, 0 === lq) return Gq;
+        const Oq = [],
+          mq = this.memory().buffer;
+        if (gq % 4 !== 0 || gq + lq > mq.byteLength) return this.crash(pq, `events of ${lq} bytes at ${gq} outside ${mq.byteLength} bytes of memory`), Gq;
+        const xq = new DataView(mq, gq, lq),
+          Aq = this.rings.net,
+          cq = (Eq, gq) => Eq + gq <= qq ? Aq.copyWritten(Eq, gq) : null;
+        let uq = 0;
+        for (; uq < lq;) {
+          const qq = uq + Yq.P,
+            Eq = qq <= lq ? xq.getUint32(uq, !0) : -1,
+            Aq = Eq >>> 16;
+          if (Eq < 0 || Aq > lq - qq) return this.crash(pq, `event record at ${uq} overruns its ${lq} bytes`), Gq;
+          const vq = 65535 & Eq,
+            hq = Eq => xq.getUint32(qq + 4 * Eq, !0);
+          if (vq === Yq.S.RawMessage) {
+            const qq = Aq >= Yq.Pc.BYTES ? 65535 & hq(1) : -1,
+              Eq = qq === Yq.Pc.STRING_TYPE,
+              gq = Aq === (Eq ? Yq.Pc.STRING_TYPE_BYTES : Yq.Pc.BYTES) ? cq(hq(2), hq(3)) : null,
+              lq = Eq && gq ? cq(hq(4), hq(5)) : null;
+            if (!gq || Eq && !lq) return this.crash(pq, `RawMessage at ${uq} of ${Aq} bytes names bytes outside net-in`), Gq;
+            this.netOffsets.push(uq), Oq.push({
               type: "message",
-              conn: mT(0),
-              vI: TT,
-              payloadKind: mT(1) >>> 16,
-              payload: cT,
-              stringType: MT ? RT.decode(MT) : null
+              conn: hq(0),
+              Hc: qq,
+              payloadKind: hq(1) >>> 16,
+              payload: gq,
+              stringType: lq ? Rq.decode(lq) : null
             })
-          } else if (wT === lT.W.CoreErrors) {
-            var AT, CT;
-            const TT = fT >= 4 ? mT(0) : -1;
-            if (TT < 0 || TT > lT.B.PAIRS_MAX || fT !== 4 * (lT.B.FIXED_WORDS + lT.B.PAIR_WORDS * TT)) return this.crash(ZT, `CoreErrors at ${IT} of ${fT} bytes`), uT;
-            const kT = [];
-            for (let cT = 0; cT < TT; cT++) kT.push({
-              code: mT(1 + 2 * cT),
-              detail: mT(2 + 2 * cT)
+          } else if (vq === Yq.S.CoreErrors) {
+            var Bq, Wq;
+            const qq = Aq >= 4 ? hq(0) : -1;
+            if (qq < 0 || qq > Yq.w.PAIRS_MAX || Aq !== 4 * (Yq.w.FIXED_WORDS + Yq.w.PAIR_WORDS * qq)) return this.crash(pq, `CoreErrors at ${uq} of ${Aq} bytes`), Gq;
+            const Eq = [];
+            for (let gq = 0; gq < qq; gq++) Eq.push({
+              code: hq(1 + 2 * gq),
+              detail: hq(2 + 2 * gq)
             });
-            null === (AT = (CT = this.handlers).onCoreErrors) || void 0 === AT || AT.call(CT, kT, mT(1 + 2 * TT))
-          } else if (wT === lT.W.RenderReload) {
-            var jT, vT;
-            if (fT !== lT.Vc.BYTES) return this.crash(ZT, `RenderReload at ${IT} of ${fT} bytes`), uT;
-            null === (jT = (vT = this.handlers).onRenderReload) || void 0 === jT || jT.call(vT, mT(0), mT(1), mT(2))
-          } else if (wT === lT.W.Images) {
-            var tT, hT;
-            null === (tT = (hT = this.handlers).onImages) || void 0 === tT || tT.call(hT, new Uint8Array(OT.slice(cT + TT, cT + TT + fT)))
-          } else if (wT === lT.W.ModelRequests)
-            for (let cT = 0; cT < fT >>> 2; cT++) {
-              var NT, QT;
-              null === (NT = (QT = this.handlers).onModelRequest) || void 0 === NT || NT.call(QT, mT(cT))
-            } else if (wT === lT.W.ModelTaken) {
-              var ST, DT;
-              if (fT < 4) return this.crash(ZT, `ModelTaken at ${IT} of ${fT} bytes`), uT;
-              const TT = new Uint32Array((fT >>> 2) - 1);
-              for (let kT = 0; kT < TT.length; kT++) TT[kT] = mT(1 + kT);
-              null === (ST = (DT = this.handlers).onModelTaken) || void 0 === ST || ST.call(DT, mT(0), TT)
-            } else if (wT === lT.W.TerrainTexturesWanted) {
-            var aT, FT;
-            if (0 !== fT) return this.crash(ZT, `TerrainTexturesWanted at ${IT} of ${fT} bytes`), uT;
-            null === (aT = (FT = this.handlers).onTerrainTexturesWanted) || void 0 === aT || aT.call(FT)
-          } else if (wT === lT.W.KeepAliveDue) {
-            var rT, PT;
-            if (fT > lT.zb) return this.crash(ZT, `KeepAliveDue at ${IT} of ${fT} bytes`), uT;
-            null === (rT = (PT = this.handlers).onKeepAlive) || void 0 === rT || rT.call(PT, new Uint8Array(OT, cT + TT, fT).slice())
-          } else if (wT === lT.W.ConnectionState) {
-            if (fT !== lT.q) return this.crash(ZT, `ConnectionState at ${IT} of ${fT} bytes`), uT;
-            this.netOffsets.push(IT), KT.push({
+            null === (Bq = (Wq = this.handlers).onCoreErrors) || void 0 === Bq || Bq.call(Wq, Eq, hq(1 + 2 * qq))
+          } else if (vq === Yq.S.RenderReload) {
+            var Nq, aq;
+            if (Aq !== Yq.$c.BYTES) return this.crash(pq, `RenderReload at ${uq} of ${Aq} bytes`), Gq;
+            null === (Nq = (aq = this.handlers).onRenderReload) || void 0 === Nq || Nq.call(aq, hq(0), hq(1), hq(2))
+          } else if (vq === Yq.S.Images) {
+            var Vq, dq;
+            null === (Vq = (dq = this.handlers).onImages) || void 0 === Vq || Vq.call(dq, new Uint8Array(mq.slice(gq + qq, gq + qq + Aq)))
+          } else if (vq === Yq.S.ModelRequests)
+            for (let gq = 0; gq < Aq >>> 2; gq++) {
+              var jq, Hq;
+              null === (jq = (Hq = this.handlers).onModelRequest) || void 0 === jq || jq.call(Hq, hq(gq))
+            } else if (vq === Yq.S.ModelTaken) {
+              var oq, Pq;
+              if (Aq < 4) return this.crash(pq, `ModelTaken at ${uq} of ${Aq} bytes`), Gq;
+              const qq = new Uint32Array((Aq >>> 2) - 1);
+              for (let Eq = 0; Eq < qq.length; Eq++) qq[Eq] = hq(1 + Eq);
+              null === (oq = (Pq = this.handlers).onModelTaken) || void 0 === oq || oq.call(Pq, hq(0), qq)
+            } else if (vq === Yq.S.TerrainTexturesWanted) {
+            var Qq, yq;
+            if (0 !== Aq) return this.crash(pq, `TerrainTexturesWanted at ${uq} of ${Aq} bytes`), Gq;
+            null === (Qq = (yq = this.handlers).onTerrainTexturesWanted) || void 0 === Qq || Qq.call(yq)
+          } else if (vq === Yq.S.KeepAliveDue) {
+            var tq, rq;
+            if (Aq > Yq.xb) return this.crash(pq, `KeepAliveDue at ${uq} of ${Aq} bytes`), Gq;
+            null === (tq = (rq = this.handlers).onKeepAlive) || void 0 === tq || tq.call(rq, new Uint8Array(mq, gq + qq, Aq).slice())
+          } else if (vq === Yq.S.ConnectionState) {
+            if (Aq !== Yq.o) return this.crash(pq, `ConnectionState at ${uq} of ${Aq} bytes`), Gq;
+            this.netOffsets.push(uq), Oq.push({
               type: "connection",
-              conn: mT(0),
-              phase: mT(1),
-              code: 0 | mT(2)
+              conn: hq(0),
+              phase: hq(1),
+              code: 0 | hq(2)
             })
-          } else if (wT === lT.W.EnvLighting || wT === lT.W.SkyImages) {
-            if (fT !== (wT === lT.W.EnvLighting ? lT.Q : lT.md)) return this.crash(ZT, `event ${wT} at ${IT} of ${fT} bytes`), uT;
+          } else if (vq === Yq.S.EnvLighting || vq === Yq.S.SkyImages) {
+            if (Aq !== (vq === Yq.S.EnvLighting ? Yq.M : Yq.yd)) return this.crash(pq, `event ${vq} at ${uq} of ${Aq} bytes`), Gq;
             this.envEvents.push({
-              kind: wT,
-              payload: new Uint8Array(OT.slice(cT + TT, cT + TT + fT))
+              kind: vq,
+              payload: new Uint8Array(mq.slice(gq + qq, gq + qq + Aq))
             })
-          } else if (wT === lT.W.ReconnectGrace) {
-            if (fT !== lT.fc) return this.crash(ZT, `ReconnectGrace at ${IT} of ${fT} bytes`), uT;
-            const TT = mT(2);
+          } else if (vq === Yq.S.ReconnectGrace) {
+            if (Aq !== Yq.qc) return this.crash(pq, `ReconnectGrace at ${uq} of ${Aq} bytes`), Gq;
+            const qq = hq(2);
             this.graceEvents.push({
-              conn: mT(0),
-              graceMs: mT(1),
-              sessionBased: 0 !== (TT & lT.Gc.SessionBased),
-              replayOffer: 0 !== (TT & lT.Gc.ReplayOffer)
+              conn: hq(0),
+              graceMs: hq(1),
+              sessionBased: 0 !== (qq & Yq.Rc.SessionBased),
+              replayOffer: 0 !== (qq & Yq.Rc.ReplayOffer)
             })
           }
-          IT = TT + (0, lT.ke)(fT)
+          uq = qq + (0, Yq.Ce)(Aq)
         }
-        return KT
+        return Oq
       }
-      forEachNetOut(TT) {
-        this.forEachOut(DT, "net-out", lT.kb.NetOutPtr, lT.kb.NetOutLen, lT.Pb, 0, ((kT, cT, MT, KT) => {
-          const OT = (0, lT.de)(cT);
-          OT === lT.Qb.Frame ? TT((0, lT.be)(cT), MT) : this.crash(DT, `net-out record at ${KT} is kind ${OT}, not a frame`)
+      forEachNetOut(qq) {
+        this.forEachOut(Pq, "net-out", Yq.hb.NetOutPtr, Yq.hb.NetOutLen, Yq.Tb, 0, ((Eq, gq, lq, Oq) => {
+          const mq = (0, Yq.ve)(gq);
+          mq === Yq.Ub.Frame ? qq((0, Yq.ue)(gq), lq) : this.crash(Pq, `net-out record at ${Oq} is kind ${mq}, not a frame`)
         }))
       }
-      forEachWorkerOut(TT) {
-        this.forEachOut(aT, "worker-out", lT.kb.WorkerOutPtr, lT.kb.WorkerOutLen, lT.zd, 4, ((kT, cT, MT, KT) => {
-          const OT = 255 & kT,
-            yT = OT === lT.Md.Init ? this.initOf(MT, KT) : MT;
-          null !== yT && TT(OT, kT >>> 8 & 16777215, yT)
+      forEachWorkerOut(qq) {
+        this.forEachOut(Qq, "worker-out", Yq.hb.WorkerOutPtr, Yq.hb.WorkerOutLen, Yq.Md, 4, ((Eq, gq, lq, Oq) => {
+          const mq = 255 & Eq,
+            xq = mq === Yq.ce.Init ? this.initOf(lq, Oq) : lq;
+          null !== xq && qq(mq, Eq >>> 8 & 16777215, xq)
         }))
       }
-      initOf(TT, kT) {
-        const cT = this.memory().buffer;
-        if (TT.byteLength !== lT.lb) return this.crash(aT, `worker-out Init record at ${kT} is ${TT.byteLength} bytes, not a view`), null;
-        const MT = new DataView(TT.buffer, TT.byteOffset, lT.lb),
-          KT = MT.getUint32(0, !0),
-          OT = MT.getUint32(4, !0);
-        return KT + OT > cT.byteLength ? (this.crash(aT, `worker-out Init record at ${kT} names ${OT} bytes at ${KT} outside ${cT.byteLength} bytes of memory`), null) : new Uint8Array(cT, KT, OT)
+      initOf(qq, Eq) {
+        const gq = this.memory().buffer;
+        if (qq.byteLength !== Yq.kb) return this.crash(Qq, `worker-out Init record at ${Eq} is ${qq.byteLength} bytes, not a view`), null;
+        const lq = new DataView(qq.buffer, qq.byteOffset, Yq.kb),
+          Oq = lq.getUint32(0, !0),
+          mq = lq.getUint32(4, !0);
+        return Oq + mq > gq.byteLength ? (this.crash(Qq, `worker-out Init record at ${Eq} names ${mq} bytes at ${Oq} outside ${gq.byteLength} bytes of memory`), null) : new Uint8Array(gq, Oq, mq)
       }
-      forEachOut(TT, kT, cT, MT, KT, OT, yT) {
+      forEachOut(qq, Eq, gq, lq, Oq, mq, xq) {
         if (this.stopped || null === this.lastHeader) return;
-        const fT = this.headerView(),
-          xT = fT[cT],
-          IT = fT[MT];
-        if (0 === IT) return;
-        const AT = this.memory().buffer;
-        if (xT % 4 !== 0 || xT + IT > AT.byteLength) return void this.crash(TT, `${kT} of ${IT} bytes at ${xT} outside ${AT.byteLength} bytes of memory`);
-        const CT = new DataView(AT, xT, IT);
-        let jT = 0;
-        for (; jT < IT;) {
-          const cT = jT + KT,
-            MT = cT <= IT ? CT.getUint32(jT + OT, !0) : -1;
-          if (MT < 0 || MT > IT - cT) return void this.crash(TT, `${kT} record at ${jT} overruns its ${IT} bytes`);
-          if (yT(CT.getUint32(jT, !0), CT.getUint32(jT + 4, !0), new Uint8Array(AT, xT + cT, MT), jT), this.stopped) return;
-          jT = cT + (0, lT.ke)(MT)
+        const Aq = this.headerView(),
+          cq = Aq[gq],
+          uq = Aq[lq];
+        if (0 === uq) return;
+        const Bq = this.memory().buffer;
+        if (cq % 4 !== 0 || cq + uq > Bq.byteLength) return void this.crash(qq, `${Eq} of ${uq} bytes at ${cq} outside ${Bq.byteLength} bytes of memory`);
+        const Wq = new DataView(Bq, cq, uq);
+        let Nq = 0;
+        for (; Nq < uq;) {
+          const gq = Nq + Oq,
+            lq = gq <= uq ? Wq.getUint32(Nq + mq, !0) : -1;
+          if (lq < 0 || lq > uq - gq) return void this.crash(qq, `${Eq} record at ${Nq} overruns its ${uq} bytes`);
+          if (xq(Wq.getUint32(Nq, !0), Wq.getUint32(Nq + 4, !0), new Uint8Array(Bq, cq + gq, lq), Nq), this.stopped) return;
+          Nq = gq + (0, Yq.Ce)(lq)
         }
       }
-      forEachEvent(TT) {
+      forEachEvent(qq) {
         if (this.stopped || null === this.lastHeader) return;
-        const kT = this.headerView(),
-          cT = kT[lT.kb.EventsPtr],
-          MT = kT[lT.kb.EventsLen];
-        if (0 === MT) return;
-        const KT = this.memory().buffer;
-        if (cT % 4 !== 0 || cT + MT > KT.byteLength) return void this.crash(ZT, `events of ${MT} bytes at ${cT} outside ${KT.byteLength} bytes of memory`);
-        const OT = new DataView(KT, cT, MT);
-        let yT = 0;
-        for (; yT < MT;) {
-          const kT = yT + lT.U,
-            cT = kT <= MT ? OT.getUint32(yT, !0) : -1,
-            KT = cT >>> 16;
-          if (cT < 0 || KT > MT - kT) return void this.crash(ZT, `event record at ${yT} overruns its ${MT} bytes`);
-          TT(65535 & cT, OT, kT, KT), yT = kT + (0, lT.ke)(KT)
+        const Eq = this.headerView(),
+          gq = Eq[Yq.hb.EventsPtr],
+          lq = Eq[Yq.hb.EventsLen];
+        if (0 === lq) return;
+        const Oq = this.memory().buffer;
+        if (gq % 4 !== 0 || gq + lq > Oq.byteLength) return void this.crash(pq, `events of ${lq} bytes at ${gq} outside ${Oq.byteLength} bytes of memory`);
+        const mq = new DataView(Oq, gq, lq);
+        let xq = 0;
+        for (; xq < lq;) {
+          const Eq = xq + Yq.P,
+            gq = Eq <= lq ? mq.getUint32(xq, !0) : -1,
+            Oq = gq >>> 16;
+          if (gq < 0 || Oq > lq - Eq) return void this.crash(pq, `event record at ${xq} overruns its ${lq} bytes`);
+          qq(65535 & gq, mq, Eq, Oq), xq = Eq + (0, Yq.Ce)(Oq)
         }
       }
-      crashOn(TT, kT) {
-        kT instanceof MT.b ? this.crash(ZT, kT.message) : this.crash(TT, kT)
+      crashOn(qq, Eq) {
+        Eq instanceof lq.d ? this.crash(pq, Eq.message) : this.crash(qq, Eq)
       }
-      crash(TT, kT) {
+      crash(qq, Eq) {
         this.stopped || (this.stopped = !0, this.handlers.onCrash({
-          site: TT,
-          error: kT,
+          site: qq,
+          error: Eq,
           header: this.lastHeader
         }))
       }
-      headerWord(TT) {
-        return this.stopped || null === this.lastHeader ? 0 : this.headerView()[TT]
+      headerWord(qq) {
+        return this.stopped || null === this.lastHeader ? 0 : this.headerView()[qq]
+      }
+      readLoadCounts(qq) {
+        if (this.stopped || null === this.lastHeader) return !1;
+        const Eq = this.core.od();
+        if (0 === Eq) return !1;
+        const gq = this.memory().buffer;
+        gq !== this.loadCountsBuffer && (this.loadCountsBuffer = gq, this.loadCounts = new Uint32Array(gq, Eq, Yq.zb));
+        const lq = this.loadCounts;
+        return qq.chunksReceived = lq[Yq.Gb.ChunksReceived], qq.chunksCancelled = this.headerView()[Yq.hb.ChunksCancelled], qq.chunksStored = lq[Yq.Gb.ChunksStored], qq.jobsSent = lq[Yq.Gb.JobsSent], qq.jobsDone = lq[Yq.Gb.JobsDone], qq.jobsInFlight = lq[Yq.Gb.JobsInFlight], qq.workersLive = lq[Yq.Gb.WorkersLive], qq.workersRetired = lq[Yq.Gb.WorkersRetired], !0
       }
       headerView() {
-        const TT = this.memory().buffer;
-        return TT !== this.headerBuffer && (this.headerBuffer = TT, this.header = new Uint32Array(TT, this.core.Aj(), lT.hb)), this.header
+        const qq = this.memory().buffer;
+        return qq !== this.headerBuffer && (this.headerBuffer = qq, this.header = new Uint32Array(qq, this.core.YN(), Yq.db)), this.header
       }
     }
   },
-  40547: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => OT,
-      g: () => KT
+  40663: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => mq,
+      c: () => Oq
     });
-    var lT = cT(4681);
-    let MT = null;
+    var Yq = gq(4524);
+    let lq = null;
 
-    function KT(TT) {
-      MT = {
+    function Oq(qq) {
+      lq = {
         scanned: !1
       };
       try {
-        return TT()
+        return qq()
       } finally {
-        MT = null
+        lq = null
       }
     }
 
-    function OT() {
-      const TT = MT;
-      if (null === TT) return (0, lT.e)();
-      const kT = (0, lT.e)(!TT.scanned);
-      return TT.scanned = !0, kT
+    function mq() {
+      const qq = lq;
+      if (null === qq) return (0, Yq.h)();
+      const Eq = (0, Yq.h)(!qq.scanned);
+      return qq.scanned = !0, Eq
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

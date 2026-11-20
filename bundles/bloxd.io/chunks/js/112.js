@@ -1,44 +1,44 @@
-/*! For license information please see bcgkc.112.93273327.chunk.js.LICENSE.txt */
+/*! For license information please see bbb6l5.112.dfb78935.chunk.js.LICENSE.txt */
 export const id = 112;
 export const ids = [112];
 export const modules = {
-  6434: (TT, kT, cT) => {
-    cT.r(kT), cT.d(kT, {
-      Graph: () => dT,
-      debug: () => oc,
-      default: () => ec,
-      graphlib: () => KT,
-      layout: () => vc,
-      util: () => Hc,
-      version: () => Kk
+  6302: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      Graph: () => Jq,
+      debug: () => ig,
+      default: () => fg,
+      graphlib: () => Oq,
+      layout: () => Ng,
+      util: () => Zg,
+      version: () => OE
     });
-    var lT = Object.defineProperty,
-      MT = (TT, kT, cT) => ((TT, kT, cT) => kT in TT ? lT(TT, kT, {
+    var Yq = Object.defineProperty,
+      lq = (qq, Eq, gq) => ((qq, Eq, gq) => Eq in qq ? Yq(qq, Eq, {
         enumerable: !0,
         configurable: !0,
         writable: !0,
-        value: cT
-      }) : TT[kT] = cT)(TT, "symbol" != typeof kT ? kT + "" : kT, cT),
-      KT = {};
-    ((TT, kT) => {
-      for (var cT in kT) lT(TT, cT, {
-        get: kT[cT],
+        value: gq
+      }) : qq[Eq] = gq)(qq, "symbol" != typeof Eq ? Eq + "" : Eq, gq),
+      Oq = {};
+    ((qq, Eq) => {
+      for (var gq in Eq) Yq(qq, gq, {
+        get: Eq[gq],
         enumerable: !0
       })
-    })(KT, {
-      Graph: () => dT,
-      alg: () => NT
+    })(Oq, {
+      Graph: () => Jq,
+      alg: () => jq
     });
-    var OT = Object.defineProperty,
-      yT = (TT, kT) => {
-        for (var cT in kT) OT(TT, cT, {
-          get: kT[cT],
+    var mq = Object.defineProperty,
+      xq = (qq, Eq) => {
+        for (var gq in Eq) mq(qq, gq, {
+          get: Eq[gq],
           enumerable: !0
         })
       },
-      fT = class {
-        constructor(TT) {
-          this._isDirected = !0, this._isMultigraph = !1, this._isCompound = !1, this._nodes = {}, this._in = {}, this._preds = {}, this._out = {}, this._sucs = {}, this._edgeObjs = {}, this._edgeLabels = {}, this._nodeCount = 0, this._edgeCount = 0, this._defaultNodeLabelFn = () => {}, this._defaultEdgeLabelFn = () => {}, TT && (this._isDirected = !("directed" in TT) || TT.directed, this._isMultigraph = "multigraph" in TT && TT.multigraph, this._isCompound = "compound" in TT && TT.compound), this._isCompound && (this._parent = {}, this._children = {}, this._children["\0"] = {})
+      Aq = class {
+        constructor(qq) {
+          this._isDirected = !0, this._isMultigraph = !1, this._isCompound = !1, this._nodes = {}, this._in = {}, this._preds = {}, this._out = {}, this._sucs = {}, this._edgeObjs = {}, this._edgeLabels = {}, this._nodeCount = 0, this._edgeCount = 0, this._defaultNodeLabelFn = () => {}, this._defaultEdgeLabelFn = () => {}, qq && (this._isDirected = !("directed" in qq) || qq.directed, this._isMultigraph = "multigraph" in qq && qq.multigraph, this._isCompound = "compound" in qq && qq.compound), this._isCompound && (this._parent = {}, this._children = {}, this._children["\0"] = {})
         }
         isDirected() {
           return this._isDirected
@@ -49,14 +49,14 @@ export const modules = {
         isCompound() {
           return this._isCompound
         }
-        setGraph(TT) {
-          return this._label = TT, this
+        setGraph(qq) {
+          return this._label = qq, this
         }
         graph() {
           return this._label
         }
-        setDefaultNodeLabel(TT) {
-          return this._defaultNodeLabelFn = "function" != typeof TT ? () => TT : TT, this
+        setDefaultNodeLabel(qq) {
+          return this._defaultNodeLabelFn = "function" != typeof qq ? () => qq : qq, this
         }
         nodeCount() {
           return this._nodeCount
@@ -65,105 +65,105 @@ export const modules = {
           return Object.keys(this._nodes)
         }
         sources() {
-          return this.nodes().filter((TT => 0 === Object.keys(this._in[TT]).length))
+          return this.nodes().filter((qq => 0 === Object.keys(this._in[qq]).length))
         }
         sinks() {
-          return this.nodes().filter((TT => 0 === Object.keys(this._out[TT]).length))
+          return this.nodes().filter((qq => 0 === Object.keys(this._out[qq]).length))
         }
-        setNodes(TT, kT) {
-          return TT.forEach((TT => {
-            void 0 !== kT ? this.setNode(TT, kT) : this.setNode(TT)
+        setNodes(qq, Eq) {
+          return qq.forEach((qq => {
+            void 0 !== Eq ? this.setNode(qq, Eq) : this.setNode(qq)
           })), this
         }
-        setNode(TT, kT) {
-          return TT in this._nodes ? (arguments.length > 1 && (this._nodes[TT] = kT), this) : (this._nodes[TT] = arguments.length > 1 ? kT : this._defaultNodeLabelFn(TT), this._isCompound && (this._parent[TT] = "\0", this._children[TT] = {}, this._children["\0"][TT] = !0), this._in[TT] = {}, this._preds[TT] = {}, this._out[TT] = {}, this._sucs[TT] = {}, ++this._nodeCount, this)
+        setNode(qq, Eq) {
+          return qq in this._nodes ? (arguments.length > 1 && (this._nodes[qq] = Eq), this) : (this._nodes[qq] = arguments.length > 1 ? Eq : this._defaultNodeLabelFn(qq), this._isCompound && (this._parent[qq] = "\0", this._children[qq] = {}, this._children["\0"][qq] = !0), this._in[qq] = {}, this._preds[qq] = {}, this._out[qq] = {}, this._sucs[qq] = {}, ++this._nodeCount, this)
         }
-        node(TT) {
-          return this._nodes[TT]
+        node(qq) {
+          return this._nodes[qq]
         }
-        hasNode(TT) {
-          return TT in this._nodes
+        hasNode(qq) {
+          return qq in this._nodes
         }
-        removeNode(TT) {
-          if (TT in this._nodes) {
-            let kT = TT => this.removeEdge(this._edgeObjs[TT]);
-            delete this._nodes[TT], this._isCompound && (this._removeFromParentsChildList(TT), delete this._parent[TT], this.children(TT).forEach((TT => {
-              this.setParent(TT)
-            })), delete this._children[TT]), Object.keys(this._in[TT]).forEach(kT), delete this._in[TT], delete this._preds[TT], Object.keys(this._out[TT]).forEach(kT), delete this._out[TT], delete this._sucs[TT], --this._nodeCount
+        removeNode(qq) {
+          if (qq in this._nodes) {
+            let Eq = qq => this.removeEdge(this._edgeObjs[qq]);
+            delete this._nodes[qq], this._isCompound && (this._removeFromParentsChildList(qq), delete this._parent[qq], this.children(qq).forEach((qq => {
+              this.setParent(qq)
+            })), delete this._children[qq]), Object.keys(this._in[qq]).forEach(Eq), delete this._in[qq], delete this._preds[qq], Object.keys(this._out[qq]).forEach(Eq), delete this._out[qq], delete this._sucs[qq], --this._nodeCount
           }
           return this
         }
-        setParent(TT, kT) {
+        setParent(qq, Eq) {
           if (!this._isCompound) throw new Error("Cannot set parent in a non-compound graph");
-          if (void 0 === kT) kT = "\0";
+          if (void 0 === Eq) Eq = "\0";
           else {
-            for (let cT = kT += ""; void 0 !== cT; cT = this.parent(cT))
-              if (cT === TT) throw new Error("Setting " + kT + " as parent of " + TT + " would create a cycle");
-            this.setNode(kT)
+            for (let gq = Eq += ""; void 0 !== gq; gq = this.parent(gq))
+              if (gq === qq) throw new Error("Setting " + Eq + " as parent of " + qq + " would create a cycle");
+            this.setNode(Eq)
           }
-          return this.setNode(TT), this._removeFromParentsChildList(TT), this._parent[TT] = kT, this._children[kT][TT] = !0, this
+          return this.setNode(qq), this._removeFromParentsChildList(qq), this._parent[qq] = Eq, this._children[Eq][qq] = !0, this
         }
-        parent(TT) {
+        parent(qq) {
           if (this._isCompound) {
-            let kT = this._parent[TT];
-            if ("\0" !== kT) return kT
+            let Eq = this._parent[qq];
+            if ("\0" !== Eq) return Eq
           }
         }
         children() {
-          let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "\0";
+          let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "\0";
           if (this._isCompound) {
-            let kT = this._children[TT];
-            if (kT) return Object.keys(kT)
+            let Eq = this._children[qq];
+            if (Eq) return Object.keys(Eq)
           } else {
-            if ("\0" === TT) return this.nodes();
-            if (this.hasNode(TT)) return []
+            if ("\0" === qq) return this.nodes();
+            if (this.hasNode(qq)) return []
           }
           return []
         }
-        predecessors(TT) {
-          let kT = this._preds[TT];
-          if (kT) return Object.keys(kT)
+        predecessors(qq) {
+          let Eq = this._preds[qq];
+          if (Eq) return Object.keys(Eq)
         }
-        successors(TT) {
-          let kT = this._sucs[TT];
-          if (kT) return Object.keys(kT)
+        successors(qq) {
+          let Eq = this._sucs[qq];
+          if (Eq) return Object.keys(Eq)
         }
-        neighbors(TT) {
-          let kT = this.predecessors(TT);
-          if (kT) {
-            let cT = new Set(kT),
-              lT = this.successors(TT);
-            if (lT)
-              for (let TT of lT) cT.add(TT);
-            return Array.from(cT.values())
+        neighbors(qq) {
+          let Eq = this.predecessors(qq);
+          if (Eq) {
+            let gq = new Set(Eq),
+              Yq = this.successors(qq);
+            if (Yq)
+              for (let qq of Yq) gq.add(qq);
+            return Array.from(gq.values())
           }
         }
-        isLeaf(TT) {
-          var kT;
-          let cT;
-          return cT = this.isDirected() ? this.successors(TT) : this.neighbors(TT), 0 === (null != (kT = null == cT ? void 0 : cT.length) ? kT : 0)
+        isLeaf(qq) {
+          var Eq;
+          let gq;
+          return gq = this.isDirected() ? this.successors(qq) : this.neighbors(qq), 0 === (null != (Eq = null == gq ? void 0 : gq.length) ? Eq : 0)
         }
-        filterNodes(TT) {
-          let kT = new this.constructor({
+        filterNodes(qq) {
+          let Eq = new this.constructor({
             directed: this._isDirected,
             multigraph: this._isMultigraph,
             compound: this._isCompound
           });
-          kT.setGraph(this.graph()), Object.entries(this._nodes).forEach((cT => {
-            let [lT, MT] = cT;
-            TT(lT) && kT.setNode(lT, MT)
-          })), Object.values(this._edgeObjs).forEach((TT => {
-            kT.hasNode(TT.v) && kT.hasNode(TT.w) && kT.setEdge(TT, this.edge(TT))
+          Eq.setGraph(this.graph()), Object.entries(this._nodes).forEach((gq => {
+            let [Yq, lq] = gq;
+            qq(Yq) && Eq.setNode(Yq, lq)
+          })), Object.values(this._edgeObjs).forEach((qq => {
+            Eq.hasNode(qq.v) && Eq.hasNode(qq.w) && Eq.setEdge(qq, this.edge(qq))
           }));
-          let cT = {},
-            lT = TT => {
-              let MT = this.parent(TT);
-              return !MT || kT.hasNode(MT) ? (cT[TT] = MT, MT) : MT in cT ? cT[MT] : lT(MT)
+          let gq = {},
+            Yq = qq => {
+              let lq = this.parent(qq);
+              return !lq || Eq.hasNode(lq) ? (gq[qq] = lq, lq) : lq in gq ? gq[lq] : Yq(lq)
             };
-          return this._isCompound && kT.nodes().forEach((TT => kT.setParent(TT, lT(TT)))), kT
+          return this._isCompound && Eq.nodes().forEach((qq => Eq.setParent(qq, Yq(qq)))), Eq
         }
-        setDefaultEdgeLabel(TT) {
-          return this._defaultEdgeLabelFn = "function" != typeof TT ? () => TT : TT, this
+        setDefaultEdgeLabel(qq) {
+          return this._defaultEdgeLabelFn = "function" != typeof qq ? () => qq : qq, this
         }
         edgeCount() {
           return this._edgeCount
@@ -171,226 +171,226 @@ export const modules = {
         edges() {
           return Object.values(this._edgeObjs)
         }
-        setPath(TT, kT) {
-          return TT.reduce(((TT, cT) => (void 0 !== kT ? this.setEdge(TT, cT, kT) : this.setEdge(TT, cT), cT))), this
+        setPath(qq, Eq) {
+          return qq.reduce(((qq, gq) => (void 0 !== Eq ? this.setEdge(qq, gq, Eq) : this.setEdge(qq, gq), gq))), this
         }
-        setEdge(TT, kT, cT, lT) {
-          let MT, KT, OT, yT, fT = !1;
-          "object" == typeof TT && null !== TT && "v" in TT ? (MT = TT.v, KT = TT.w, OT = TT.name, 2 === arguments.length && (yT = kT, fT = !0)) : (MT = TT, KT = kT, OT = lT, arguments.length > 2 && (yT = cT, fT = !0)), MT = "" + MT, KT = "" + KT, void 0 !== OT && (OT = "" + OT);
-          let IT = AT(this._isDirected, MT, KT, OT);
-          if (IT in this._edgeLabels) return fT && (this._edgeLabels[IT] = yT), this;
-          if (void 0 !== OT && !this._isMultigraph) throw new Error("Cannot set a named edge when isMultigraph = false");
-          this.setNode(MT), this.setNode(KT), this._edgeLabels[IT] = fT ? yT : this._defaultEdgeLabelFn(MT, KT, OT);
-          let CT = function(TT, kT, cT, lT) {
-            let MT = "" + kT,
-              KT = "" + cT;
-            if (!TT && MT > KT) {
-              let TT = MT;
-              MT = KT, KT = TT
+        setEdge(qq, Eq, gq, Yq) {
+          let lq, Oq, mq, xq, Aq = !1;
+          "object" == typeof qq && null !== qq && "v" in qq ? (lq = qq.v, Oq = qq.w, mq = qq.name, 2 === arguments.length && (xq = Eq, Aq = !0)) : (lq = qq, Oq = Eq, mq = Yq, arguments.length > 2 && (xq = gq, Aq = !0)), lq = "" + lq, Oq = "" + Oq, void 0 !== mq && (mq = "" + mq);
+          let uq = Bq(this._isDirected, lq, Oq, mq);
+          if (uq in this._edgeLabels) return Aq && (this._edgeLabels[uq] = xq), this;
+          if (void 0 !== mq && !this._isMultigraph) throw new Error("Cannot set a named edge when isMultigraph = false");
+          this.setNode(lq), this.setNode(Oq), this._edgeLabels[uq] = Aq ? xq : this._defaultEdgeLabelFn(lq, Oq, mq);
+          let Wq = function(qq, Eq, gq, Yq) {
+            let lq = "" + Eq,
+              Oq = "" + gq;
+            if (!qq && lq > Oq) {
+              let qq = lq;
+              lq = Oq, Oq = qq
             }
-            let OT = {
-              v: MT,
-              w: KT
+            let mq = {
+              v: lq,
+              w: Oq
             };
-            return lT && (OT.name = lT), OT
-          }(this._isDirected, MT, KT, OT);
-          return MT = CT.v, KT = CT.w, Object.freeze(CT), this._edgeObjs[IT] = CT, xT(this._preds[KT], MT), xT(this._sucs[MT], KT), this._in[KT][IT] = CT, this._out[MT][IT] = CT, this._edgeCount++, this
+            return Yq && (mq.name = Yq), mq
+          }(this._isDirected, lq, Oq, mq);
+          return lq = Wq.v, Oq = Wq.w, Object.freeze(Wq), this._edgeObjs[uq] = Wq, cq(this._preds[Oq], lq), cq(this._sucs[lq], Oq), this._in[Oq][uq] = Wq, this._out[lq][uq] = Wq, this._edgeCount++, this
         }
-        edge(TT, kT, cT) {
-          let lT = 1 === arguments.length ? CT(this._isDirected, TT) : AT(this._isDirected, TT, kT, cT);
-          return this._edgeLabels[lT]
+        edge(qq, Eq, gq) {
+          let Yq = 1 === arguments.length ? Wq(this._isDirected, qq) : Bq(this._isDirected, qq, Eq, gq);
+          return this._edgeLabels[Yq]
         }
-        edgeAsObj(TT, kT, cT) {
-          let lT = 1 === arguments.length ? this.edge(TT) : this.edge(TT, kT, cT);
-          return "object" != typeof lT || null === lT ? {
-            label: lT
-          } : lT
+        edgeAsObj(qq, Eq, gq) {
+          let Yq = 1 === arguments.length ? this.edge(qq) : this.edge(qq, Eq, gq);
+          return "object" != typeof Yq || null === Yq ? {
+            label: Yq
+          } : Yq
         }
-        hasEdge(TT, kT, cT) {
-          return (1 === arguments.length ? CT(this._isDirected, TT) : AT(this._isDirected, TT, kT, cT)) in this._edgeLabels
+        hasEdge(qq, Eq, gq) {
+          return (1 === arguments.length ? Wq(this._isDirected, qq) : Bq(this._isDirected, qq, Eq, gq)) in this._edgeLabels
         }
-        removeEdge(TT, kT, cT) {
-          let lT = 1 === arguments.length ? CT(this._isDirected, TT) : AT(this._isDirected, TT, kT, cT),
-            MT = this._edgeObjs[lT];
-          if (MT) {
-            let TT = MT.v,
-              kT = MT.w;
-            delete this._edgeLabels[lT], delete this._edgeObjs[lT], IT(this._preds[kT], TT), IT(this._sucs[TT], kT), delete this._in[kT][lT], delete this._out[TT][lT], this._edgeCount--
+        removeEdge(qq, Eq, gq) {
+          let Yq = 1 === arguments.length ? Wq(this._isDirected, qq) : Bq(this._isDirected, qq, Eq, gq),
+            lq = this._edgeObjs[Yq];
+          if (lq) {
+            let qq = lq.v,
+              Eq = lq.w;
+            delete this._edgeLabels[Yq], delete this._edgeObjs[Yq], uq(this._preds[Eq], qq), uq(this._sucs[qq], Eq), delete this._in[Eq][Yq], delete this._out[qq][Yq], this._edgeCount--
           }
           return this
         }
-        inEdges(TT, kT) {
-          return this.isDirected() ? this.filterEdges(this._in[TT], TT, kT) : this.nodeEdges(TT, kT)
+        inEdges(qq, Eq) {
+          return this.isDirected() ? this.filterEdges(this._in[qq], qq, Eq) : this.nodeEdges(qq, Eq)
         }
-        outEdges(TT, kT) {
-          return this.isDirected() ? this.filterEdges(this._out[TT], TT, kT) : this.nodeEdges(TT, kT)
+        outEdges(qq, Eq) {
+          return this.isDirected() ? this.filterEdges(this._out[qq], qq, Eq) : this.nodeEdges(qq, Eq)
         }
-        nodeEdges(TT, kT) {
-          if (TT in this._nodes) return this.filterEdges({
-            ...this._in[TT],
-            ...this._out[TT]
-          }, TT, kT)
+        nodeEdges(qq, Eq) {
+          if (qq in this._nodes) return this.filterEdges({
+            ...this._in[qq],
+            ...this._out[qq]
+          }, qq, Eq)
         }
-        _removeFromParentsChildList(TT) {
-          delete this._children[this._parent[TT]][TT]
+        _removeFromParentsChildList(qq) {
+          delete this._children[this._parent[qq]][qq]
         }
-        filterEdges(TT, kT, cT) {
-          if (!TT) return;
-          let lT = Object.values(TT);
-          return cT ? lT.filter((TT => TT.v === kT && TT.w === cT || TT.v === cT && TT.w === kT)) : lT
+        filterEdges(qq, Eq, gq) {
+          if (!qq) return;
+          let Yq = Object.values(qq);
+          return gq ? Yq.filter((qq => qq.v === Eq && qq.w === gq || qq.v === gq && qq.w === Eq)) : Yq
         }
       };
 
-    function xT(TT, kT) {
-      TT[kT] ? TT[kT]++ : TT[kT] = 1
+    function cq(qq, Eq) {
+      qq[Eq] ? qq[Eq]++ : qq[Eq] = 1
     }
 
-    function IT(TT, kT) {
-      void 0 !== TT[kT] && !--TT[kT] && delete TT[kT]
+    function uq(qq, Eq) {
+      void 0 !== qq[Eq] && !--qq[Eq] && delete qq[Eq]
     }
 
-    function AT(TT, kT, cT, lT) {
-      let MT = "" + kT,
-        KT = "" + cT;
-      if (!TT && MT > KT) {
-        let TT = MT;
-        MT = KT, KT = TT
+    function Bq(qq, Eq, gq, Yq) {
+      let lq = "" + Eq,
+        Oq = "" + gq;
+      if (!qq && lq > Oq) {
+        let qq = lq;
+        lq = Oq, Oq = qq
       }
-      return MT + "\x01" + KT + "\x01" + (void 0 === lT ? "\0" : lT)
+      return lq + "\x01" + Oq + "\x01" + (void 0 === Yq ? "\0" : Yq)
     }
 
-    function CT(TT, kT) {
-      return AT(TT, kT.v, kT.w, kT.name)
+    function Wq(qq, Eq) {
+      return Bq(qq, Eq.v, Eq.w, Eq.name)
     }
 
-    function jT(TT) {
-      let kT = {
+    function Nq(qq) {
+      let Eq = {
           options: {
-            directed: TT.isDirected(),
-            multigraph: TT.isMultigraph(),
-            compound: TT.isCompound()
+            directed: qq.isDirected(),
+            multigraph: qq.isMultigraph(),
+            compound: qq.isCompound()
           },
-          nodes: vT(TT),
-          edges: tT(TT)
+          nodes: aq(qq),
+          edges: Vq(qq)
         },
-        cT = TT.graph();
-      return void 0 !== cT && (kT.value = structuredClone(cT)), kT
+        gq = qq.graph();
+      return void 0 !== gq && (Eq.value = structuredClone(gq)), Eq
     }
 
-    function vT(TT) {
-      return TT.nodes().map((kT => {
-        let cT = TT.node(kT),
-          lT = TT.parent(kT),
-          MT = {
-            v: kT
+    function aq(qq) {
+      return qq.nodes().map((Eq => {
+        let gq = qq.node(Eq),
+          Yq = qq.parent(Eq),
+          lq = {
+            v: Eq
           };
-        return void 0 !== cT && (MT.value = cT), void 0 !== lT && (MT.parent = lT), MT
+        return void 0 !== gq && (lq.value = gq), void 0 !== Yq && (lq.parent = Yq), lq
       }))
     }
 
-    function tT(TT) {
-      return TT.edges().map((kT => {
-        let cT = TT.edge(kT),
-          lT = {
-            v: kT.v,
-            w: kT.w
+    function Vq(qq) {
+      return qq.edges().map((Eq => {
+        let gq = qq.edge(Eq),
+          Yq = {
+            v: Eq.v,
+            w: Eq.w
           };
-        return void 0 !== kT.name && (lT.name = kT.name), void 0 !== cT && (lT.value = cT), lT
+        return void 0 !== Eq.name && (Yq.name = Eq.name), void 0 !== gq && (Yq.value = gq), Yq
       }))
     }
 
-    function hT(TT) {
-      let kT = new fT(TT.options);
-      return void 0 !== TT.value && kT.setGraph(TT.value), TT.nodes.forEach((TT => {
-        kT.setNode(TT.v, TT.value), TT.parent && kT.setParent(TT.v, TT.parent)
-      })), TT.edges.forEach((TT => {
-        kT.setEdge({
-          v: TT.v,
-          w: TT.w,
-          name: TT.name
-        }, TT.value)
-      })), kT
+    function dq(qq) {
+      let Eq = new Aq(qq.options);
+      return void 0 !== qq.value && Eq.setGraph(qq.value), qq.nodes.forEach((qq => {
+        Eq.setNode(qq.v, qq.value), qq.parent && Eq.setParent(qq.v, qq.parent)
+      })), qq.edges.forEach((qq => {
+        Eq.setEdge({
+          v: qq.v,
+          w: qq.w,
+          name: qq.name
+        }, qq.value)
+      })), Eq
     }
-    yT({}, {
-      read: () => hT,
-      write: () => jT
+    xq({}, {
+      read: () => dq,
+      write: () => Nq
     });
-    var NT = {};
-    yT(NT, {
-      CycleException: () => JT,
-      bellmanFord: () => ST,
-      components: () => DT,
-      dijkstra: () => rT,
-      dijkstraAll: () => PT,
-      findCycles: () => mT,
-      floydWarshall: () => zT,
-      isAcyclic: () => HT,
-      postorder: () => ET,
-      preorder: () => ZT,
-      prim: () => uT,
-      shortestPaths: () => XT,
-      tarjan: () => wT,
-      topsort: () => oT
+    var jq = {};
+    xq(jq, {
+      CycleException: () => iq,
+      bellmanFord: () => oq,
+      components: () => Pq,
+      dijkstra: () => tq,
+      dijkstraAll: () => rq,
+      findCycles: () => hq,
+      floydWarshall: () => bq,
+      isAcyclic: () => fq,
+      postorder: () => Sq,
+      preorder: () => pq,
+      prim: () => Gq,
+      shortestPaths: () => Lq,
+      tarjan: () => vq,
+      topsort: () => Zq
     });
-    var QT = () => 1;
+    var Hq = () => 1;
 
-    function ST(TT, kT, cT, lT) {
-      return function(TT, kT, cT, lT) {
-        let MT, KT = {},
-          OT = 0,
-          yT = TT.nodes(),
-          fT = function(TT) {
-            let kT = KT[TT.v],
-              lT = KT[TT.w];
-            if (!kT || !lT) return;
-            let OT = cT(TT);
-            kT.distance + OT < lT.distance && (KT[TT.w] = {
-              distance: kT.distance + OT,
-              predecessor: TT.v
-            }, MT = !0)
+    function oq(qq, Eq, gq, Yq) {
+      return function(qq, Eq, gq, Yq) {
+        let lq, Oq = {},
+          mq = 0,
+          xq = qq.nodes(),
+          Aq = function(qq) {
+            let Eq = Oq[qq.v],
+              Yq = Oq[qq.w];
+            if (!Eq || !Yq) return;
+            let mq = gq(qq);
+            Eq.distance + mq < Yq.distance && (Oq[qq.w] = {
+              distance: Eq.distance + mq,
+              predecessor: qq.v
+            }, lq = !0)
           },
-          xT = function() {
-            yT.forEach((function(TT) {
-              lT(TT).forEach((function(kT) {
-                let cT = kT.v === TT ? kT.v : kT.w,
-                  lT = cT === kT.v ? kT.w : kT.v;
-                fT({
-                  v: cT,
-                  w: lT
+          cq = function() {
+            xq.forEach((function(qq) {
+              Yq(qq).forEach((function(Eq) {
+                let gq = Eq.v === qq ? Eq.v : Eq.w,
+                  Yq = gq === Eq.v ? Eq.w : Eq.v;
+                Aq({
+                  v: gq,
+                  w: Yq
                 })
               }))
             }))
           };
-        yT.forEach((function(TT) {
-          let cT = TT === kT ? 0 : Number.POSITIVE_INFINITY;
-          KT[TT] = {
-            distance: cT,
+        xq.forEach((function(qq) {
+          let gq = qq === Eq ? 0 : Number.POSITIVE_INFINITY;
+          Oq[qq] = {
+            distance: gq,
             predecessor: ""
           }
         }));
-        let IT = yT.length;
-        for (let AT = 1; AT < IT && (MT = !1, OT++, xT(), MT); AT++);
-        if (OT === IT - 1 && (MT = !1, xT(), MT)) throw new Error("The graph contains a negative weight cycle");
-        return KT
-      }(TT, String(kT), cT || QT, lT || function(kT) {
-        var cT;
-        return null != (cT = TT.outEdges(kT)) ? cT : []
+        let uq = xq.length;
+        for (let Bq = 1; Bq < uq && (lq = !1, mq++, cq(), lq); Bq++);
+        if (mq === uq - 1 && (lq = !1, cq(), lq)) throw new Error("The graph contains a negative weight cycle");
+        return Oq
+      }(qq, String(Eq), gq || Hq, Yq || function(Eq) {
+        var gq;
+        return null != (gq = qq.outEdges(Eq)) ? gq : []
       })
     }
 
-    function DT(TT) {
-      let kT, cT = {},
-        lT = [];
+    function Pq(qq) {
+      let Eq, gq = {},
+        Yq = [];
 
-      function MT(lT) {
-        var KT, OT;
-        lT in cT || (cT[lT] = !0, kT.push(lT), null == (KT = TT.successors(lT)) || KT.forEach(MT), null == (OT = TT.predecessors(lT)) || OT.forEach(MT))
+      function lq(Yq) {
+        var Oq, mq;
+        Yq in gq || (gq[Yq] = !0, Eq.push(Yq), null == (Oq = qq.successors(Yq)) || Oq.forEach(lq), null == (mq = qq.predecessors(Yq)) || mq.forEach(lq))
       }
-      return TT.nodes().forEach((function(TT) {
-        kT = [], MT(TT), kT.length && lT.push(kT)
-      })), lT
+      return qq.nodes().forEach((function(qq) {
+        Eq = [], lq(qq), Eq.length && Yq.push(Eq)
+      })), Yq
     }
-    var aT = class {
+    var Qq = class {
         constructor() {
           this._arr = [], this._keyIndices = {}
         }
@@ -398,1915 +398,1915 @@ export const modules = {
           return this._arr.length
         }
         keys() {
-          return this._arr.map((TT => TT.key))
+          return this._arr.map((qq => qq.key))
         }
-        has(TT) {
-          return TT in this._keyIndices
+        has(qq) {
+          return qq in this._keyIndices
         }
-        priority(TT) {
-          let kT = this._keyIndices[TT];
-          if (void 0 !== kT) return this._arr[kT].priority
+        priority(qq) {
+          let Eq = this._keyIndices[qq];
+          if (void 0 !== Eq) return this._arr[Eq].priority
         }
         min() {
           if (0 === this.size()) throw new Error("Queue underflow");
           return this._arr[0].key
         }
-        add(TT, kT) {
-          let cT = this._keyIndices,
-            lT = String(TT);
-          if (!(lT in cT)) {
-            let TT = this._arr,
-              MT = TT.length;
-            return cT[lT] = MT, TT.push({
-              key: lT,
-              priority: kT
-            }), this._decrease(MT), !0
+        add(qq, Eq) {
+          let gq = this._keyIndices,
+            Yq = String(qq);
+          if (!(Yq in gq)) {
+            let qq = this._arr,
+              lq = qq.length;
+            return gq[Yq] = lq, qq.push({
+              key: Yq,
+              priority: Eq
+            }), this._decrease(lq), !0
           }
           return !1
         }
         removeMin() {
           if (0 === this.size()) throw new Error("Queue underflow");
           this._swap(0, this._arr.length - 1);
-          let TT = this._arr.pop();
-          return delete this._keyIndices[TT.key], this._heapify(0), TT.key
+          let qq = this._arr.pop();
+          return delete this._keyIndices[qq.key], this._heapify(0), qq.key
         }
-        decrease(TT, kT) {
-          let cT = this._keyIndices[TT];
-          if (void 0 === cT) throw new Error(`Key not found: ${TT}`);
-          let lT = this._arr[cT].priority;
-          if (kT > lT) throw new Error(`New priority is greater than current priority. Key: ${TT} Old: ${lT} New: ${kT}`);
-          this._arr[cT].priority = kT, this._decrease(cT)
+        decrease(qq, Eq) {
+          let gq = this._keyIndices[qq];
+          if (void 0 === gq) throw new Error(`Key not found: ${qq}`);
+          let Yq = this._arr[gq].priority;
+          if (Eq > Yq) throw new Error(`New priority is greater than current priority. Key: ${qq} Old: ${Yq} New: ${Eq}`);
+          this._arr[gq].priority = Eq, this._decrease(gq)
         }
-        _heapify(TT) {
-          let kT = this._arr,
-            cT = 2 * TT,
-            lT = cT + 1,
-            MT = TT;
-          cT < kT.length && (MT = kT[cT].priority < kT[MT].priority ? cT : MT, lT < kT.length && (MT = kT[lT].priority < kT[MT].priority ? lT : MT), MT !== TT && (this._swap(TT, MT), this._heapify(MT)))
+        _heapify(qq) {
+          let Eq = this._arr,
+            gq = 2 * qq,
+            Yq = gq + 1,
+            lq = qq;
+          gq < Eq.length && (lq = Eq[gq].priority < Eq[lq].priority ? gq : lq, Yq < Eq.length && (lq = Eq[Yq].priority < Eq[lq].priority ? Yq : lq), lq !== qq && (this._swap(qq, lq), this._heapify(lq)))
         }
-        _decrease(TT) {
-          let kT, cT = this._arr,
-            lT = cT[TT].priority;
-          for (; 0 !== TT && (kT = TT >> 1, !(cT[kT].priority < lT));) this._swap(TT, kT), TT = kT
+        _decrease(qq) {
+          let Eq, gq = this._arr,
+            Yq = gq[qq].priority;
+          for (; 0 !== qq && (Eq = qq >> 1, !(gq[Eq].priority < Yq));) this._swap(qq, Eq), qq = Eq
         }
-        _swap(TT, kT) {
-          let cT = this._arr,
-            lT = this._keyIndices,
-            MT = cT[TT],
-            KT = cT[kT];
-          cT[TT] = KT, cT[kT] = MT, lT[KT.key] = TT, lT[MT.key] = kT
+        _swap(qq, Eq) {
+          let gq = this._arr,
+            Yq = this._keyIndices,
+            lq = gq[qq],
+            Oq = gq[Eq];
+          gq[qq] = Oq, gq[Eq] = lq, Yq[Oq.key] = qq, Yq[lq.key] = Eq
         }
       },
-      FT = () => 1;
+      yq = () => 1;
 
-    function rT(TT, kT, cT, lT) {
-      return function(TT, kT, cT, lT) {
-        let MT, KT, OT = {},
-          yT = new aT,
-          fT = function(TT) {
-            let kT = TT.v !== MT ? TT.v : TT.w,
-              lT = OT[kT];
-            if (!lT) return;
-            let fT = cT(TT),
-              xT = KT.distance + fT;
-            if (fT < 0) throw new Error("dijkstra does not allow negative edge weights. Bad edge: " + TT + " Weight: " + fT);
-            xT < lT.distance && (lT.distance = xT, lT.predecessor = MT, yT.decrease(kT, xT))
+    function tq(qq, Eq, gq, Yq) {
+      return function(qq, Eq, gq, Yq) {
+        let lq, Oq, mq = {},
+          xq = new Qq,
+          Aq = function(qq) {
+            let Eq = qq.v !== lq ? qq.v : qq.w,
+              Yq = mq[Eq];
+            if (!Yq) return;
+            let Aq = gq(qq),
+              cq = Oq.distance + Aq;
+            if (Aq < 0) throw new Error("dijkstra does not allow negative edge weights. Bad edge: " + qq + " Weight: " + Aq);
+            cq < Yq.distance && (Yq.distance = cq, Yq.predecessor = lq, xq.decrease(Eq, cq))
           };
-        for (TT.nodes().forEach((function(TT) {
-            let cT = TT === kT ? 0 : Number.POSITIVE_INFINITY;
-            OT[TT] = {
-              distance: cT,
+        for (qq.nodes().forEach((function(qq) {
+            let gq = qq === Eq ? 0 : Number.POSITIVE_INFINITY;
+            mq[qq] = {
+              distance: gq,
               predecessor: ""
-            }, yT.add(TT, cT)
-          })); yT.size() > 0;) {
-          MT = yT.removeMin();
-          let TT = OT[MT];
-          if (!TT || TT.distance === Number.POSITIVE_INFINITY) break;
-          KT = TT, lT(MT).forEach(fT)
+            }, xq.add(qq, gq)
+          })); xq.size() > 0;) {
+          lq = xq.removeMin();
+          let qq = mq[lq];
+          if (!qq || qq.distance === Number.POSITIVE_INFINITY) break;
+          Oq = qq, Yq(lq).forEach(Aq)
         }
-        return OT
-      }(TT, String(kT), cT || FT, lT || function(kT) {
-        var cT;
-        return null != (cT = TT.outEdges(kT)) ? cT : []
+        return mq
+      }(qq, String(Eq), gq || yq, Yq || function(Eq) {
+        var gq;
+        return null != (gq = qq.outEdges(Eq)) ? gq : []
       })
     }
 
-    function PT(TT, kT, cT) {
-      return TT.nodes().reduce((function(lT, MT) {
-        return lT[MT] = rT(TT, MT, kT, cT), lT
+    function rq(qq, Eq, gq) {
+      return qq.nodes().reduce((function(Yq, lq) {
+        return Yq[lq] = tq(qq, lq, Eq, gq), Yq
       }), {})
     }
 
-    function wT(TT) {
-      let kT = 0,
-        cT = [],
-        lT = {},
-        MT = [];
+    function vq(qq) {
+      let Eq = 0,
+        gq = [],
+        Yq = {},
+        lq = [];
 
-      function KT(OT) {
-        var yT;
-        let fT = lT[OT] = {
+      function Oq(mq) {
+        var xq;
+        let Aq = Yq[mq] = {
           onStack: !0,
-          lowlink: kT,
-          index: kT++
+          lowlink: Eq,
+          index: Eq++
         };
-        if (cT.push(OT), null == (yT = TT.successors(OT)) || yT.forEach((function(TT) {
-            if (TT in lT) {
-              let kT = lT[TT];
-              null != kT && kT.onStack && (fT.lowlink = Math.min(fT.lowlink, kT.index))
+        if (gq.push(mq), null == (xq = qq.successors(mq)) || xq.forEach((function(qq) {
+            if (qq in Yq) {
+              let Eq = Yq[qq];
+              null != Eq && Eq.onStack && (Aq.lowlink = Math.min(Aq.lowlink, Eq.index))
             } else {
-              KT(TT);
-              let kT = lT[TT];
-              kT && (fT.lowlink = Math.min(fT.lowlink, kT.lowlink))
+              Oq(qq);
+              let Eq = Yq[qq];
+              Eq && (Aq.lowlink = Math.min(Aq.lowlink, Eq.lowlink))
             }
-          })), fT.lowlink === fT.index) {
-          let TT, kT = [];
+          })), Aq.lowlink === Aq.index) {
+          let qq, Eq = [];
           do {
-            TT = cT.pop();
-            let MT = lT[TT];
-            MT && (MT.onStack = !1), kT.push(TT)
-          } while (OT !== TT);
-          MT.push(kT)
+            qq = gq.pop();
+            let lq = Yq[qq];
+            lq && (lq.onStack = !1), Eq.push(qq)
+          } while (mq !== qq);
+          lq.push(Eq)
         }
       }
-      return TT.nodes().forEach((function(TT) {
-        TT in lT || KT(TT)
-      })), MT
+      return qq.nodes().forEach((function(qq) {
+        qq in Yq || Oq(qq)
+      })), lq
     }
 
-    function mT(TT) {
-      return wT(TT).filter((function(kT) {
-        var cT;
-        let lT = kT[0];
-        return !!lT && (kT.length > 1 || 1 === kT.length && (null != (cT = TT.outEdges(lT, lT)) ? cT : []).length > 0)
+    function hq(qq) {
+      return vq(qq).filter((function(Eq) {
+        var gq;
+        let Yq = Eq[0];
+        return !!Yq && (Eq.length > 1 || 1 === Eq.length && (null != (gq = qq.outEdges(Yq, Yq)) ? gq : []).length > 0)
       }))
     }
-    var bT = () => 1;
+    var nq = () => 1;
 
-    function zT(TT, kT, cT) {
-      return function(TT, kT, cT) {
-        let lT = {},
-          MT = TT.nodes();
-        return MT.forEach((function(TT) {
-          let KT = {};
-          lT[TT] = KT, KT[TT] = {
+    function bq(qq, Eq, gq) {
+      return function(qq, Eq, gq) {
+        let Yq = {},
+          lq = qq.nodes();
+        return lq.forEach((function(qq) {
+          let Oq = {};
+          Yq[qq] = Oq, Oq[qq] = {
             distance: 0,
             predecessor: ""
-          }, MT.forEach((function(kT) {
-            TT !== kT && (KT[kT] = {
+          }, lq.forEach((function(Eq) {
+            qq !== Eq && (Oq[Eq] = {
               distance: Number.POSITIVE_INFINITY,
               predecessor: ""
             })
-          })), cT(TT).forEach((function(cT) {
-            let lT = cT.v === TT ? cT.w : cT.v,
-              MT = kT(cT);
-            KT[lT] = {
-              distance: MT,
-              predecessor: TT
+          })), gq(qq).forEach((function(gq) {
+            let Yq = gq.v === qq ? gq.w : gq.v,
+              lq = Eq(gq);
+            Oq[Yq] = {
+              distance: lq,
+              predecessor: qq
             }
           }))
-        })), MT.forEach((function(TT) {
-          let kT = lT[TT];
-          kT && MT.forEach((function(cT) {
-            let KT = lT[cT];
-            KT && MT.forEach((function(cT) {
-              let lT = KT[TT],
-                MT = kT[cT],
-                OT = KT[cT];
-              if (lT && MT && OT) {
-                let TT = lT.distance + MT.distance;
-                TT < OT.distance && (OT.distance = TT, OT.predecessor = MT.predecessor)
+        })), lq.forEach((function(qq) {
+          let Eq = Yq[qq];
+          Eq && lq.forEach((function(gq) {
+            let Oq = Yq[gq];
+            Oq && lq.forEach((function(gq) {
+              let Yq = Oq[qq],
+                lq = Eq[gq],
+                mq = Oq[gq];
+              if (Yq && lq && mq) {
+                let qq = Yq.distance + lq.distance;
+                qq < mq.distance && (mq.distance = qq, mq.predecessor = lq.predecessor)
               }
             }))
           }))
-        })), lT
-      }(TT, kT || bT, cT || function(kT) {
-        var cT;
-        return null != (cT = TT.outEdges(kT)) ? cT : []
+        })), Yq
+      }(qq, Eq || nq, gq || function(Eq) {
+        var gq;
+        return null != (gq = qq.outEdges(Eq)) ? gq : []
       })
     }
-    var JT = class extends Error {
-      constructor(TT) {
-        super(TT), this.name = "CycleException"
+    var iq = class extends Error {
+      constructor(qq) {
+        super(qq), this.name = "CycleException"
       }
     };
 
-    function oT(TT) {
-      let kT = {},
-        cT = {},
-        lT = [];
-      if (TT.sinks().forEach((function MT(KT) {
-          var OT;
-          if (KT in cT) throw new JT;
-          KT in kT || (cT[KT] = !0, kT[KT] = !0, null == (OT = TT.predecessors(KT)) || OT.forEach(MT), delete cT[KT], lT.push(KT))
-        })), Object.keys(kT).length !== TT.nodeCount()) throw new JT;
-      return lT
+    function Zq(qq) {
+      let Eq = {},
+        gq = {},
+        Yq = [];
+      if (qq.sinks().forEach((function lq(Oq) {
+          var mq;
+          if (Oq in gq) throw new iq;
+          Oq in Eq || (gq[Oq] = !0, Eq[Oq] = !0, null == (mq = qq.predecessors(Oq)) || mq.forEach(lq), delete gq[Oq], Yq.push(Oq))
+        })), Object.keys(Eq).length !== qq.nodeCount()) throw new iq;
+      return Yq
     }
 
-    function HT(TT) {
+    function fq(qq) {
       try {
-        oT(TT)
-      } catch (kT) {
-        if (kT instanceof JT) return !1;
-        throw kT
+        Zq(qq)
+      } catch (Eq) {
+        if (Eq instanceof iq) return !1;
+        throw Eq
       }
       return !0
     }
 
-    function eT(TT, kT, cT, lT, MT) {
-      Array.isArray(kT) || (kT = [kT]);
-      let KT = kT => {
-          var cT;
-          return null != (cT = TT.isDirected() ? TT.successors(kT) : TT.neighbors(kT)) ? cT : []
+    function Mq(qq, Eq, gq, Yq, lq) {
+      Array.isArray(Eq) || (Eq = [Eq]);
+      let Oq = Eq => {
+          var gq;
+          return null != (gq = qq.isDirected() ? qq.successors(Eq) : qq.neighbors(Eq)) ? gq : []
         },
-        OT = {};
-      return kT.forEach((function(kT) {
-        if (!TT.hasNode(kT)) throw new Error("Graph does not have node: " + kT);
-        MT = GT(TT, kT, "post" === cT, OT, KT, lT, MT)
-      })), MT
+        mq = {};
+      return Eq.forEach((function(Eq) {
+        if (!qq.hasNode(Eq)) throw new Error("Graph does not have node: " + Eq);
+        lq = Tq(qq, Eq, "post" === gq, mq, Oq, Yq, lq)
+      })), lq
     }
 
-    function GT(TT, kT, cT, lT, MT, KT, OT) {
-      return kT in lT || (lT[kT] = !0, cT || (OT = KT(OT, kT)), MT(kT).forEach((function(kT) {
-        OT = GT(TT, kT, cT, lT, MT, KT, OT)
-      })), cT && (OT = KT(OT, kT))), OT
+    function Tq(qq, Eq, gq, Yq, lq, Oq, mq) {
+      return Eq in Yq || (Yq[Eq] = !0, gq || (mq = Oq(mq, Eq)), lq(Eq).forEach((function(Eq) {
+        mq = Tq(qq, Eq, gq, Yq, lq, Oq, mq)
+      })), gq && (mq = Oq(mq, Eq))), mq
     }
 
-    function VT(TT, kT, cT) {
-      return eT(TT, kT, cT, (function(TT, kT) {
-        return TT.push(kT), TT
+    function zq(qq, Eq, gq) {
+      return Mq(qq, Eq, gq, (function(qq, Eq) {
+        return qq.push(Eq), qq
       }), [])
     }
 
-    function ET(TT, kT) {
-      return VT(TT, kT, "post")
+    function Sq(qq, Eq) {
+      return zq(qq, Eq, "post")
     }
 
-    function ZT(TT, kT) {
-      return VT(TT, kT, "pre")
+    function pq(qq, Eq) {
+      return zq(qq, Eq, "pre")
     }
 
-    function uT(TT, kT) {
-      var cT;
-      let lT, MT = new fT,
-        KT = {},
-        OT = new aT;
+    function Gq(qq, Eq) {
+      var gq;
+      let Yq, lq = new Aq,
+        Oq = {},
+        mq = new Qq;
 
-      function yT(TT) {
-        let cT = TT.v === lT ? TT.w : TT.v,
-          MT = OT.priority(cT);
-        if (void 0 !== MT) {
-          let yT = kT(TT);
-          yT < MT && (KT[cT] = lT, OT.decrease(cT, yT))
+      function xq(qq) {
+        let gq = qq.v === Yq ? qq.w : qq.v,
+          lq = mq.priority(gq);
+        if (void 0 !== lq) {
+          let xq = Eq(qq);
+          xq < lq && (Oq[gq] = Yq, mq.decrease(gq, xq))
         }
       }
-      if (0 === TT.nodeCount()) return MT;
-      TT.nodes().forEach((function(TT) {
-        OT.add(TT, Number.POSITIVE_INFINITY), MT.setNode(TT)
+      if (0 === qq.nodeCount()) return lq;
+      qq.nodes().forEach((function(qq) {
+        mq.add(qq, Number.POSITIVE_INFINITY), lq.setNode(qq)
       }));
-      let xT = TT.nodes()[0];
-      void 0 !== xT && OT.decrease(xT, 0);
-      let IT = !1;
-      for (; OT.size() > 0;) {
-        if (lT = OT.removeMin(), lT in KT) MT.setEdge(lT, KT[lT]);
+      let cq = qq.nodes()[0];
+      void 0 !== cq && mq.decrease(cq, 0);
+      let uq = !1;
+      for (; mq.size() > 0;) {
+        if (Yq = mq.removeMin(), Yq in Oq) lq.setEdge(Yq, Oq[Yq]);
         else {
-          if (IT) throw new Error("Input graph is not connected: " + TT);
-          IT = !0
+          if (uq) throw new Error("Input graph is not connected: " + qq);
+          uq = !0
         }
-        null == (cT = TT.nodeEdges(lT)) || cT.forEach(yT)
+        null == (gq = qq.nodeEdges(Yq)) || gq.forEach(xq)
       }
-      return MT
+      return lq
     }
 
-    function XT(TT, kT, cT, lT) {
-      return function(TT, kT, cT, lT) {
-        if (void 0 === cT) return rT(TT, kT, cT, lT);
-        let MT = !1,
-          KT = TT.nodes();
-        for (let OT = 0; OT < KT.length; OT++) {
-          let yT = KT[OT];
-          if (void 0 === yT) continue;
-          let fT = lT(yT);
-          for (let TT = 0; TT < fT.length; TT++) {
-            let kT = fT[TT];
-            if (!kT) continue;
-            let lT = kT.v === yT ? kT.v : kT.w;
-            cT({
-              v: lT,
-              w: lT === kT.v ? kT.w : kT.v
-            }) < 0 && (MT = !0)
+    function Lq(qq, Eq, gq, Yq) {
+      return function(qq, Eq, gq, Yq) {
+        if (void 0 === gq) return tq(qq, Eq, gq, Yq);
+        let lq = !1,
+          Oq = qq.nodes();
+        for (let mq = 0; mq < Oq.length; mq++) {
+          let xq = Oq[mq];
+          if (void 0 === xq) continue;
+          let Aq = Yq(xq);
+          for (let qq = 0; qq < Aq.length; qq++) {
+            let Eq = Aq[qq];
+            if (!Eq) continue;
+            let Yq = Eq.v === xq ? Eq.v : Eq.w;
+            gq({
+              v: Yq,
+              w: Yq === Eq.v ? Eq.w : Eq.v
+            }) < 0 && (lq = !0)
           }
-          if (MT) return ST(TT, kT, cT, lT)
+          if (lq) return oq(qq, Eq, gq, Yq)
         }
-        return rT(TT, kT, cT, lT)
-      }(TT, kT, cT, null != lT ? lT : kT => {
-        var cT;
-        return null != (cT = TT.outEdges(kT)) ? cT : []
+        return tq(qq, Eq, gq, Yq)
+      }(qq, Eq, gq, null != Yq ? Yq : Eq => {
+        var gq;
+        return null != (gq = qq.outEdges(Eq)) ? gq : []
       })
     }
-    var dT = fT;
+    var Jq = Aq;
 
-    function LT(TT, kT, cT, lT) {
-      let MT = lT;
-      for (; TT.hasNode(MT);) MT = sT(lT);
-      return cT.dummy = kT, TT.setNode(MT, cT), MT
+    function kq(qq, Eq, gq, Yq) {
+      let lq = Yq;
+      for (; qq.hasNode(lq);) lq = Dq(Yq);
+      return gq.dummy = Eq, qq.setNode(lq, gq), lq
     }
 
-    function RT(TT) {
-      let kT = new dT({
-        multigraph: TT.isMultigraph()
-      }).setGraph(TT.graph());
-      return TT.nodes().forEach((cT => {
-        TT.children(cT).length || kT.setNode(cT, TT.node(cT))
-      })), TT.edges().forEach((cT => {
-        kT.setEdge(cT, TT.edge(cT))
-      })), kT
+    function Rq(qq) {
+      let Eq = new Jq({
+        multigraph: qq.isMultigraph()
+      }).setGraph(qq.graph());
+      return qq.nodes().forEach((gq => {
+        qq.children(gq).length || Eq.setNode(gq, qq.node(gq))
+      })), qq.edges().forEach((gq => {
+        Eq.setEdge(gq, qq.edge(gq))
+      })), Eq
     }
 
-    function gT(TT, kT) {
-      let cT, lT, MT = TT.x,
-        KT = TT.y,
-        OT = kT.x - MT,
-        yT = kT.y - KT,
-        fT = TT.width / 2,
-        xT = TT.height / 2;
-      if (!OT && !yT) throw new Error("Not possible to find intersection inside of the rectangle");
-      return Math.abs(yT) * fT > Math.abs(OT) * xT ? (yT < 0 && (xT = -xT), cT = xT * OT / yT, lT = xT) : (OT < 0 && (fT = -fT), cT = fT, lT = fT * yT / OT), {
-        x: MT + cT,
-        y: KT + lT
+    function Uq(qq, Eq) {
+      let gq, Yq, lq = qq.x,
+        Oq = qq.y,
+        mq = Eq.x - lq,
+        xq = Eq.y - Oq,
+        Aq = qq.width / 2,
+        cq = qq.height / 2;
+      if (!mq && !xq) throw new Error("Not possible to find intersection inside of the rectangle");
+      return Math.abs(xq) * Aq > Math.abs(mq) * cq ? (xq < 0 && (cq = -cq), gq = cq * mq / xq, Yq = cq) : (mq < 0 && (Aq = -Aq), gq = Aq, Yq = Aq * xq / mq), {
+        x: lq + gq,
+        y: Oq + Yq
       }
     }
 
-    function UT(TT) {
-      let kT = Tk(nT(TT) + 1).map((() => []));
-      return TT.nodes().forEach((cT => {
-        let lT = TT.node(cT),
-          MT = lT.rank;
-        void 0 !== MT && (kT[MT] || (kT[MT] = []), kT[MT][lT.order] = cT)
-      })), kT
+    function Fq(qq) {
+      let Eq = qE(Kq(qq) + 1).map((() => []));
+      return qq.nodes().forEach((gq => {
+        let Yq = qq.node(gq),
+          lq = Yq.rank;
+        void 0 !== lq && (Eq[lq] || (Eq[lq] = []), Eq[lq][Yq.order] = gq)
+      })), Eq
     }
 
-    function YT(TT, kT, cT, lT) {
-      let MT = {
+    function sq(qq, Eq, gq, Yq) {
+      let lq = {
         width: 0,
         height: 0
       };
-      return arguments.length >= 4 && (MT.rank = cT, MT.order = lT), LT(TT, "border", MT, kT)
+      return arguments.length >= 4 && (lq.rank = gq, lq.order = Yq), kq(qq, "border", lq, Eq)
     }
-    var BT = 65535;
+    var Xq = 65535;
 
-    function WT(TT, kT) {
-      if (kT.length > BT) {
-        let cT = function(TT) {
-          let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : BT,
-            cT = [];
-          for (let lT = 0; lT < TT.length; lT += kT) {
-            let MT = TT.slice(lT, lT + kT);
-            cT.push(MT)
+    function wq(qq, Eq) {
+      if (Eq.length > Xq) {
+        let gq = function(qq) {
+          let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Xq,
+            gq = [];
+          for (let Yq = 0; Yq < qq.length; Yq += Eq) {
+            let lq = qq.slice(Yq, Yq + Eq);
+            gq.push(lq)
           }
-          return cT
-        }(kT);
-        return TT(...cT.map((kT => TT(...kT))))
+          return gq
+        }(Eq);
+        return qq(...gq.map((Eq => qq(...Eq))))
       }
-      return TT(...kT)
+      return qq(...Eq)
     }
 
-    function nT(TT) {
-      let kT = TT.nodes().map((kT => {
-        let cT = TT.node(kT).rank;
-        return void 0 === cT ? Number.MIN_VALUE : cT
+    function Kq(qq) {
+      let Eq = qq.nodes().map((Eq => {
+        let gq = qq.node(Eq).rank;
+        return void 0 === gq ? Number.MIN_VALUE : gq
       }));
-      return WT(Math.max, kT)
+      return wq(Math.max, Eq)
     }
 
-    function pT(TT, kT) {
-      let cT = Date.now();
+    function Cq(qq, Eq) {
+      let gq = Date.now();
       try {
-        return kT()
+        return Eq()
       } finally {
-        console.log(TT + " time: " + (Date.now() - cT) + "ms")
+        console.log(qq + " time: " + (Date.now() - gq) + "ms")
       }
     }
 
-    function iT(TT, kT) {
-      return kT()
+    function Iq(qq, Eq) {
+      return Eq()
     }
-    var qT = 0;
+    var eq = 0;
 
-    function sT(TT) {
-      return TT + "" + ++qT
-    }
-
-    function Tk(TT, kT) {
-      let cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      null == kT && (kT = TT, TT = 0);
-      let lT = TT => TT < kT;
-      cT < 0 && (lT = TT => kT < TT);
-      let MT = [];
-      for (let KT = TT; lT(KT); KT += cT) MT.push(KT);
-      return MT
+    function Dq(qq) {
+      return qq + "" + ++eq
     }
 
-    function kk(TT, kT) {
-      let cT = {};
-      for (let lT of kT) void 0 !== TT[lT] && (cT[lT] = TT[lT]);
-      return cT
+    function qE(qq, Eq) {
+      let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      null == Eq && (Eq = qq, qq = 0);
+      let Yq = qq => qq < Eq;
+      gq < 0 && (Yq = qq => Eq < qq);
+      let lq = [];
+      for (let Oq = qq; Yq(Oq); Oq += gq) lq.push(Oq);
+      return lq
     }
 
-    function ck(TT, kT) {
-      let cT;
-      return cT = "string" == typeof kT ? TT => TT[kT] : kT, Object.entries(TT).reduce(((TT, kT) => {
-        let [lT, MT] = kT;
-        return TT[lT] = cT(MT, lT), TT
+    function EE(qq, Eq) {
+      let gq = {};
+      for (let Yq of Eq) void 0 !== qq[Yq] && (gq[Yq] = qq[Yq]);
+      return gq
+    }
+
+    function gE(qq, Eq) {
+      let gq;
+      return gq = "string" == typeof Eq ? qq => qq[Eq] : Eq, Object.entries(qq).reduce(((qq, Eq) => {
+        let [Yq, lq] = Eq;
+        return qq[Yq] = gq(lq, Yq), qq
       }), {})
     }
-    var lk = "\0";
+    var YE = "\0";
 
-    function Mk(TT, kT, cT) {
-      var lT, MT, KT, OT, yT, fT;
-      if (!(TT && kT && cT && "edge" === kT.dummy && "edge" === cT.dummy && kT.edgeObj && cT.edgeObj && TT[kT.edgeObj.v] && TT[cT.edgeObj.v] && TT[kT.edgeObj.w] && TT[cT.edgeObj.w])) return 0;
-      let xT = !0;
-      kT.edgeObj.w === cT.edgeObj.w && (xT = !1);
-      let IT = xT ? null != (MT = null == (lT = TT[kT.edgeObj.v]) ? void 0 : lT.rank) ? MT : NaN : null != (OT = null == (KT = TT[kT.edgeObj.w]) ? void 0 : KT.rank) ? OT : NaN,
-        AT = Object.entries(TT).find((TT => {
-          var cT, lT;
-          return (null == (cT = TT[1].edgeObj) ? void 0 : cT.v) === kT.edgeObj.v && (null == (lT = TT[1].edgeObj) ? void 0 : lT.w) === kT.edgeObj.w && TT[1].rank === IT
+    function lE(qq, Eq, gq) {
+      var Yq, lq, Oq, mq, xq, Aq;
+      if (!(qq && Eq && gq && "edge" === Eq.dummy && "edge" === gq.dummy && Eq.edgeObj && gq.edgeObj && qq[Eq.edgeObj.v] && qq[gq.edgeObj.v] && qq[Eq.edgeObj.w] && qq[gq.edgeObj.w])) return 0;
+      let cq = !0;
+      Eq.edgeObj.w === gq.edgeObj.w && (cq = !1);
+      let uq = cq ? null != (lq = null == (Yq = qq[Eq.edgeObj.v]) ? void 0 : Yq.rank) ? lq : NaN : null != (mq = null == (Oq = qq[Eq.edgeObj.w]) ? void 0 : Oq.rank) ? mq : NaN,
+        Bq = Object.entries(qq).find((qq => {
+          var gq, Yq;
+          return (null == (gq = qq[1].edgeObj) ? void 0 : gq.v) === Eq.edgeObj.v && (null == (Yq = qq[1].edgeObj) ? void 0 : Yq.w) === Eq.edgeObj.w && qq[1].rank === uq
         })),
-        CT = Object.entries(TT).find((TT => {
-          var kT, lT;
-          return (null == (kT = TT[1].edgeObj) ? void 0 : kT.v) === cT.edgeObj.v && (null == (lT = TT[1].edgeObj) ? void 0 : lT.w) === cT.edgeObj.w && TT[1].rank === IT
+        Wq = Object.entries(qq).find((qq => {
+          var Eq, Yq;
+          return (null == (Eq = qq[1].edgeObj) ? void 0 : Eq.v) === gq.edgeObj.v && (null == (Yq = qq[1].edgeObj) ? void 0 : Yq.w) === gq.edgeObj.w && qq[1].rank === uq
         }));
-      if (!AT || !CT) return 0;
-      let jT = null != (yT = AT[1].order) ? yT : NaN,
-        vT = null != (fT = CT[1].order) ? fT : NaN;
-      return isNaN(jT - vT) ? 0 : jT - vT
+      if (!Bq || !Wq) return 0;
+      let Nq = null != (xq = Bq[1].order) ? xq : NaN,
+        aq = null != (Aq = Wq[1].order) ? Aq : NaN;
+      return isNaN(Nq - aq) ? 0 : Nq - aq
     }
-    var Kk = "3.1.1";
+    var OE = "3.1.1";
 
-    function Ok(TT) {
-      TT._prev._next = TT._next, TT._next._prev = TT._prev, delete TT._next, delete TT._prev
+    function mE(qq) {
+      qq._prev._next = qq._next, qq._next._prev = qq._prev, delete qq._next, delete qq._prev
     }
 
-    function yk(TT, kT) {
-      if ("_next" !== TT && "_prev" !== TT) return kT
+    function xE(qq, Eq) {
+      if ("_next" !== qq && "_prev" !== qq) return Eq
     }
-    var fk = class {
+    var AE = class {
         constructor() {
-          MT(this, "_sentinel");
-          let TT = {};
-          TT._next = TT._prev = TT, this._sentinel = TT
+          lq(this, "_sentinel");
+          let qq = {};
+          qq._next = qq._prev = qq, this._sentinel = qq
         }
         dequeue() {
-          let TT = this._sentinel,
-            kT = TT._prev;
-          if (kT !== TT) return Ok(kT), kT
+          let qq = this._sentinel,
+            Eq = qq._prev;
+          if (Eq !== qq) return mE(Eq), Eq
         }
-        enqueue(TT) {
-          let kT = this._sentinel;
-          TT._prev && TT._next && Ok(TT), TT._next = kT._next, kT._next._prev = TT, kT._next = TT, TT._prev = kT
+        enqueue(qq) {
+          let Eq = this._sentinel;
+          qq._prev && qq._next && mE(qq), qq._next = Eq._next, Eq._next._prev = qq, Eq._next = qq, qq._prev = Eq
         }
         toString() {
-          let TT = [],
-            kT = this._sentinel,
-            cT = kT._prev;
-          for (; cT !== kT;) TT.push(JSON.stringify(cT, yk)), cT = cT._prev;
-          return "[" + TT.join(", ") + "]"
+          let qq = [],
+            Eq = this._sentinel,
+            gq = Eq._prev;
+          for (; gq !== Eq;) qq.push(JSON.stringify(gq, xE)), gq = gq._prev;
+          return "[" + qq.join(", ") + "]"
         }
       },
-      xk = () => 1;
+      cE = () => 1;
 
-    function Ik(TT, kT) {
-      if (TT.nodeCount() <= 1) return [];
-      let cT = function(TT, kT) {
-        let cT = new dT,
-          lT = 0,
-          MT = 0;
-        TT.nodes().forEach((TT => {
-          cT.setNode(TT, {
-            v: TT,
+    function uE(qq, Eq) {
+      if (qq.nodeCount() <= 1) return [];
+      let gq = function(qq, Eq) {
+        let gq = new Jq,
+          Yq = 0,
+          lq = 0;
+        qq.nodes().forEach((qq => {
+          gq.setNode(qq, {
+            v: qq,
             in: 0,
             out: 0
           })
-        })), TT.edges().forEach((TT => {
-          let KT = cT.edge(TT.v, TT.w) || 0,
-            OT = kT(TT),
-            yT = KT + OT;
-          cT.setEdge(TT.v, TT.w, yT);
-          let fT = cT.node(TT.v),
-            xT = cT.node(TT.w);
-          MT = Math.max(MT, fT.out += OT), lT = Math.max(lT, xT.in += OT)
+        })), qq.edges().forEach((qq => {
+          let Oq = gq.edge(qq.v, qq.w) || 0,
+            mq = Eq(qq),
+            xq = Oq + mq;
+          gq.setEdge(qq.v, qq.w, xq);
+          let Aq = gq.node(qq.v),
+            cq = gq.node(qq.w);
+          lq = Math.max(lq, Aq.out += mq), Yq = Math.max(Yq, cq.in += mq)
         }));
-        let KT = function(TT) {
-            let kT = [];
-            for (let cT = 0; cT < TT; cT++) kT.push(cT);
-            return kT
-          }(MT + lT + 3).map((() => new fk)),
-          OT = lT + 1;
-        return cT.nodes().forEach((TT => {
-          Ck(KT, OT, cT.node(TT))
+        let Oq = function(qq) {
+            let Eq = [];
+            for (let gq = 0; gq < qq; gq++) Eq.push(gq);
+            return Eq
+          }(lq + Yq + 3).map((() => new AE)),
+          mq = Yq + 1;
+        return gq.nodes().forEach((qq => {
+          WE(Oq, mq, gq.node(qq))
         })), {
-          graph: cT,
-          buckets: KT,
-          zeroIdx: OT
+          graph: gq,
+          buckets: Oq,
+          zeroIdx: mq
         }
-      }(TT, kT || xk);
-      return function(TT, kT, cT) {
-        var lT;
-        let MT, KT = [],
-          OT = kT[kT.length - 1],
-          yT = kT[0];
-        for (; TT.nodeCount();) {
-          for (; MT = yT.dequeue();) Ak(TT, kT, cT, MT);
-          for (; MT = OT.dequeue();) Ak(TT, kT, cT, MT);
-          if (TT.nodeCount())
-            for (let OT = kT.length - 2; OT > 0; --OT)
-              if (MT = null == (lT = kT[OT]) ? void 0 : lT.dequeue(), MT) {
-                KT = KT.concat(Ak(TT, kT, cT, MT, !0) || []);
+      }(qq, Eq || cE);
+      return function(qq, Eq, gq) {
+        var Yq;
+        let lq, Oq = [],
+          mq = Eq[Eq.length - 1],
+          xq = Eq[0];
+        for (; qq.nodeCount();) {
+          for (; lq = xq.dequeue();) BE(qq, Eq, gq, lq);
+          for (; lq = mq.dequeue();) BE(qq, Eq, gq, lq);
+          if (qq.nodeCount())
+            for (let mq = Eq.length - 2; mq > 0; --mq)
+              if (lq = null == (Yq = Eq[mq]) ? void 0 : Yq.dequeue(), lq) {
+                Oq = Oq.concat(BE(qq, Eq, gq, lq, !0) || []);
                 break
               }
         }
-        return KT
-      }(cT.graph, cT.buckets, cT.zeroIdx).flatMap((kT => TT.outEdges(kT.v, kT.w) || []))
+        return Oq
+      }(gq.graph, gq.buckets, gq.zeroIdx).flatMap((Eq => qq.outEdges(Eq.v, Eq.w) || []))
     }
 
-    function Ak(TT, kT, cT, lT, MT) {
-      let KT = [],
-        OT = MT ? KT : void 0;
-      return (TT.inEdges(lT.v) || []).forEach((lT => {
-        let OT = TT.edge(lT),
-          yT = TT.node(lT.v);
-        MT && KT.push({
-          v: lT.v,
-          w: lT.w
-        }), yT.out -= OT, Ck(kT, cT, yT)
-      })), (TT.outEdges(lT.v) || []).forEach((lT => {
-        let MT = TT.edge(lT),
-          KT = lT.w,
-          OT = TT.node(KT);
-        OT.in -= MT, Ck(kT, cT, OT)
-      })), TT.removeNode(lT.v), OT
+    function BE(qq, Eq, gq, Yq, lq) {
+      let Oq = [],
+        mq = lq ? Oq : void 0;
+      return (qq.inEdges(Yq.v) || []).forEach((Yq => {
+        let mq = qq.edge(Yq),
+          xq = qq.node(Yq.v);
+        lq && Oq.push({
+          v: Yq.v,
+          w: Yq.w
+        }), xq.out -= mq, WE(Eq, gq, xq)
+      })), (qq.outEdges(Yq.v) || []).forEach((Yq => {
+        let lq = qq.edge(Yq),
+          Oq = Yq.w,
+          mq = qq.node(Oq);
+        mq.in -= lq, WE(Eq, gq, mq)
+      })), qq.removeNode(Yq.v), mq
     }
 
-    function Ck(TT, kT, cT) {
-      var lT, MT, KT;
-      cT.out ? cT.in ? null == (KT = TT[cT.out - cT.in + kT]) || KT.enqueue(cT) : null == (MT = TT[TT.length - 1]) || MT.enqueue(cT) : null == (lT = TT[0]) || lT.enqueue(cT)
+    function WE(qq, Eq, gq) {
+      var Yq, lq, Oq;
+      gq.out ? gq.in ? null == (Oq = qq[gq.out - gq.in + Eq]) || Oq.enqueue(gq) : null == (lq = qq[qq.length - 1]) || lq.enqueue(gq) : null == (Yq = qq[0]) || Yq.enqueue(gq)
     }
 
-    function jk(TT, kT) {
-      var cT;
-      ("greedy" === TT.graph().acyclicer ? Ik(TT, (cT = TT, TT => cT.edge(TT).weight)) : function(TT, kT) {
-        let cT = [],
-          lT = {},
-          MT = {};
+    function NE(qq, Eq) {
+      var gq;
+      ("greedy" === qq.graph().acyclicer ? uE(qq, (gq = qq, qq => gq.edge(qq).weight)) : function(qq, Eq) {
+        let gq = [],
+          Yq = {},
+          lq = {};
 
-        function KT(kT) {
-          Object.hasOwn(MT, kT) || (MT[kT] = !0, lT[kT] = !0, TT.outEdges(kT).forEach((TT => {
-            Object.hasOwn(lT, TT.w) ? cT.push(TT) : KT(TT.w)
-          })), delete lT[kT])
+        function Oq(Eq) {
+          Object.hasOwn(lq, Eq) || (lq[Eq] = !0, Yq[Eq] = !0, qq.outEdges(Eq).forEach((qq => {
+            Object.hasOwn(Yq, qq.w) ? gq.push(qq) : Oq(qq.w)
+          })), delete Yq[Eq])
         }
 
-        function OT(KT) {
-          var yT;
-          Object.hasOwn(MT, KT) || (MT[KT] = !0, lT[KT] = !0, null == (yT = TT.outEdges(KT)) || yT.forEach((MT => {
-            var yT, fT;
-            Object.hasOwn(lT, MT.w) || (null == (yT = kT.node(KT)) ? void 0 : yT.rank) > (null == (fT = kT.node(MT.w)) ? void 0 : fT.rank) && function(TT, kT, cT) {
-              let lT = new Set;
+        function mq(Oq) {
+          var xq;
+          Object.hasOwn(lq, Oq) || (lq[Oq] = !0, Yq[Oq] = !0, null == (xq = qq.outEdges(Oq)) || xq.forEach((lq => {
+            var xq, Aq;
+            Object.hasOwn(Yq, lq.w) || (null == (xq = Eq.node(Oq)) ? void 0 : xq.rank) > (null == (Aq = Eq.node(lq.w)) ? void 0 : Aq.rank) && function(qq, Eq, gq) {
+              let Yq = new Set;
 
-              function MT(kT) {
-                var KT;
-                if (TT.sources().includes(kT)) return !0;
-                lT.add(kT);
-                for (let OT of null != (KT = TT.inEdges(kT)) ? KT : [])
-                  if ((OT.v !== cT.v || OT.w !== cT.w) && !lT.has(OT.v) && MT(OT.v)) return !0;
+              function lq(Eq) {
+                var Oq;
+                if (qq.sources().includes(Eq)) return !0;
+                Yq.add(Eq);
+                for (let mq of null != (Oq = qq.inEdges(Eq)) ? Oq : [])
+                  if ((mq.v !== gq.v || mq.w !== gq.w) && !Yq.has(mq.v) && lq(mq.v)) return !0;
                 return !1
               }
-              return MT(kT)
-            }(TT, MT.w, MT) ? cT.push(MT) : OT(MT.w)
-          })), delete lT[KT])
+              return lq(Eq)
+            }(qq, lq.w, lq) ? gq.push(lq) : mq(lq.w)
+          })), delete Yq[Oq])
         }
-        let yT = KT;
-        return kT && "function" == typeof kT.node && (yT = OT), TT.sources().forEach(yT), TT.nodes().forEach(yT), cT
-      }(TT, null != kT ? kT : null)).forEach((kT => {
-        let cT = TT.edge(kT);
-        TT.removeEdge(kT), cT.forwardName = kT.name, cT.reversed = !0, TT.setEdge(kT.w, kT.v, cT, sT("rev"))
+        let xq = Oq;
+        return Eq && "function" == typeof Eq.node && (xq = mq), qq.sources().forEach(xq), qq.nodes().forEach(xq), gq
+      }(qq, null != Eq ? Eq : null)).forEach((Eq => {
+        let gq = qq.edge(Eq);
+        qq.removeEdge(Eq), gq.forwardName = Eq.name, gq.reversed = !0, qq.setEdge(Eq.w, Eq.v, gq, Dq("rev"))
       }))
     }
 
-    function vk(TT) {
-      TT.graph().dummyChains = [], TT.edges().forEach((kT => function(TT, kT) {
-        let cT, lT, MT, KT = kT.v,
-          OT = TT.node(KT).rank,
-          yT = kT.w,
-          fT = TT.node(yT).rank,
-          xT = kT.name,
-          IT = TT.edge(kT),
-          AT = IT.labelRank;
-        if (fT === OT + 1) return;
-        for (TT.removeEdge(kT), MT = 0, ++OT; OT < fT; ++MT, ++OT) IT.points = [], lT = {
+    function aE(qq) {
+      qq.graph().dummyChains = [], qq.edges().forEach((Eq => function(qq, Eq) {
+        let gq, Yq, lq, Oq = Eq.v,
+          mq = qq.node(Oq).rank,
+          xq = Eq.w,
+          Aq = qq.node(xq).rank,
+          cq = Eq.name,
+          uq = qq.edge(Eq),
+          Bq = uq.labelRank;
+        if (Aq === mq + 1) return;
+        for (qq.removeEdge(Eq), lq = 0, ++mq; mq < Aq; ++lq, ++mq) uq.points = [], Yq = {
           width: 0,
           height: 0,
-          edgeLabel: IT,
-          edgeObj: kT,
-          rank: OT
-        }, cT = LT(TT, "edge", lT, "_d"), OT === AT && (lT.width = IT.width, lT.height = IT.height, lT.dummy = "edge-label", lT.labelpos = IT.labelpos), TT.setEdge(KT, cT, {
-          weight: IT.weight
-        }, xT), 0 === MT && TT.graph().dummyChains.push(cT), KT = cT;
-        TT.setEdge(KT, yT, {
-          weight: IT.weight
-        }, xT)
-      }(TT, kT)))
+          edgeLabel: uq,
+          edgeObj: Eq,
+          rank: mq
+        }, gq = kq(qq, "edge", Yq, "_d"), mq === Bq && (Yq.width = uq.width, Yq.height = uq.height, Yq.dummy = "edge-label", Yq.labelpos = uq.labelpos), qq.setEdge(Oq, gq, {
+          weight: uq.weight
+        }, cq), 0 === lq && qq.graph().dummyChains.push(gq), Oq = gq;
+        qq.setEdge(Oq, xq, {
+          weight: uq.weight
+        }, cq)
+      }(qq, Eq)))
     }
 
-    function tk(TT) {
-      let kT = {};
-      TT.sources().forEach((function cT(lT) {
-        let MT = TT.node(lT);
-        if (Object.hasOwn(kT, lT)) return MT.rank;
-        kT[lT] = !0;
-        let KT = TT.outEdges(lT),
-          OT = KT ? KT.map((kT => null == kT ? Number.POSITIVE_INFINITY : cT(kT.w) - TT.edge(kT).minlen)) : [],
-          yT = WT(Math.min, OT);
-        return yT === Number.POSITIVE_INFINITY && (yT = 0), MT.rank = yT
+    function VE(qq) {
+      let Eq = {};
+      qq.sources().forEach((function gq(Yq) {
+        let lq = qq.node(Yq);
+        if (Object.hasOwn(Eq, Yq)) return lq.rank;
+        Eq[Yq] = !0;
+        let Oq = qq.outEdges(Yq),
+          mq = Oq ? Oq.map((Eq => null == Eq ? Number.POSITIVE_INFINITY : gq(Eq.w) - qq.edge(Eq).minlen)) : [],
+          xq = wq(Math.min, mq);
+        return xq === Number.POSITIVE_INFINITY && (xq = 0), lq.rank = xq
       }))
     }
 
-    function hk(TT, kT) {
-      return TT.node(kT.w).rank - TT.node(kT.v).rank - TT.edge(kT).minlen
+    function dE(qq, Eq) {
+      return qq.node(Eq.w).rank - qq.node(Eq.v).rank - qq.edge(Eq).minlen
     }
-    var Nk = function(TT) {
-      let kT = new dT({
+    var jE = function(qq) {
+      let Eq = new Jq({
           directed: !1
         }),
-        cT = TT.nodes();
-      if (0 === cT.length) throw new Error("Graph must have at least one node");
-      let lT, MT, KT = cT[0],
-        OT = TT.nodeCount();
-      for (kT.setNode(KT, {}); Qk(kT, TT) < OT && (lT = Sk(kT, TT), lT);) MT = kT.hasNode(lT.v) ? hk(TT, lT) : -hk(TT, lT), Dk(kT, TT, MT);
-      return kT
+        gq = qq.nodes();
+      if (0 === gq.length) throw new Error("Graph must have at least one node");
+      let Yq, lq, Oq = gq[0],
+        mq = qq.nodeCount();
+      for (Eq.setNode(Oq, {}); HE(Eq, qq) < mq && (Yq = oE(Eq, qq), Yq);) lq = Eq.hasNode(Yq.v) ? dE(qq, Yq) : -dE(qq, Yq), PE(Eq, qq, lq);
+      return Eq
     };
 
-    function Qk(TT, kT) {
-      return TT.nodes().forEach((function cT(lT) {
-        let MT = kT.nodeEdges(lT);
-        MT && MT.forEach((MT => {
-          let KT = MT.v,
-            OT = lT === KT ? MT.w : KT;
-          !TT.hasNode(OT) && !hk(kT, MT) && (TT.setNode(OT, {}), TT.setEdge(lT, OT, {}), cT(OT))
+    function HE(qq, Eq) {
+      return qq.nodes().forEach((function gq(Yq) {
+        let lq = Eq.nodeEdges(Yq);
+        lq && lq.forEach((lq => {
+          let Oq = lq.v,
+            mq = Yq === Oq ? lq.w : Oq;
+          !qq.hasNode(mq) && !dE(Eq, lq) && (qq.setNode(mq, {}), qq.setEdge(Yq, mq, {}), gq(mq))
         }))
-      })), TT.nodeCount()
+      })), qq.nodeCount()
     }
 
-    function Sk(TT, kT) {
-      return kT.edges().reduce(((cT, lT) => {
-        let MT = Number.POSITIVE_INFINITY;
-        return TT.hasNode(lT.v) !== TT.hasNode(lT.w) && (MT = hk(kT, lT)), MT < cT[0] ? [MT, lT] : cT
+    function oE(qq, Eq) {
+      return Eq.edges().reduce(((gq, Yq) => {
+        let lq = Number.POSITIVE_INFINITY;
+        return qq.hasNode(Yq.v) !== qq.hasNode(Yq.w) && (lq = dE(Eq, Yq)), lq < gq[0] ? [lq, Yq] : gq
       }), [Number.POSITIVE_INFINITY, null])[1]
     }
 
-    function Dk(TT, kT, cT) {
-      TT.nodes().forEach((TT => kT.node(TT).rank += cT))
+    function PE(qq, Eq, gq) {
+      qq.nodes().forEach((qq => Eq.node(qq).rank += gq))
     }
     var {
-      preorder: ak,
-      postorder: Fk
-    } = NT, rk = Pk;
+      preorder: QE,
+      postorder: yE
+    } = jq, tE = rE;
 
-    function Pk(TT) {
-      TT = function(TT) {
-        let kT = (new dT).setGraph(TT.graph());
-        return TT.nodes().forEach((cT => kT.setNode(cT, TT.node(cT)))), TT.edges().forEach((cT => {
-          let lT = kT.edge(cT.v, cT.w) || {
+    function rE(qq) {
+      qq = function(qq) {
+        let Eq = (new Jq).setGraph(qq.graph());
+        return qq.nodes().forEach((gq => Eq.setNode(gq, qq.node(gq)))), qq.edges().forEach((gq => {
+          let Yq = Eq.edge(gq.v, gq.w) || {
               weight: 0,
               minlen: 1
             },
-            MT = TT.edge(cT);
-          kT.setEdge(cT.v, cT.w, {
-            weight: lT.weight + MT.weight,
-            minlen: Math.max(lT.minlen, MT.minlen)
+            lq = qq.edge(gq);
+          Eq.setEdge(gq.v, gq.w, {
+            weight: Yq.weight + lq.weight,
+            minlen: Math.max(Yq.minlen, lq.minlen)
           })
-        })), kT
-      }(TT), tk(TT);
-      let kT, cT, lT = Nk(TT);
-      for (bk(lT), wk(lT, TT); kT = Jk(lT);) cT = Hk(lT, TT, kT), ek(lT, TT, kT, cT)
+        })), Eq
+      }(qq), VE(qq);
+      let Eq, gq, Yq = jE(qq);
+      for (nE(Yq), vE(Yq, qq); Eq = iE(Yq);) gq = ZE(Yq, qq, Eq), fE(Yq, qq, Eq, gq)
     }
 
-    function wk(TT, kT) {
-      let cT = Fk(TT, TT.nodes());
-      cT = cT.slice(0, cT.length - 1), cT.forEach((cT => function(TT, kT, cT) {
-        let lT = TT.node(cT).parent,
-          MT = TT.edge(cT, lT);
-        MT.cutvalue = mk(TT, kT, cT)
-      }(TT, kT, cT)))
+    function vE(qq, Eq) {
+      let gq = yE(qq, qq.nodes());
+      gq = gq.slice(0, gq.length - 1), gq.forEach((gq => function(qq, Eq, gq) {
+        let Yq = qq.node(gq).parent,
+          lq = qq.edge(gq, Yq);
+        lq.cutvalue = hE(qq, Eq, gq)
+      }(qq, Eq, gq)))
     }
 
-    function mk(TT, kT, cT) {
-      let lT = TT.node(cT).parent,
-        MT = !0,
-        KT = kT.edge(cT, lT),
-        OT = 0;
-      KT || (MT = !1, KT = kT.edge(lT, cT)), OT = KT.weight;
-      let yT = kT.nodeEdges(cT);
-      return yT && yT.forEach((KT => {
-        let yT = KT.v === cT,
-          fT = yT ? KT.w : KT.v;
-        if (fT !== lT) {
-          let lT = yT === MT,
-            xT = kT.edge(KT).weight;
-          if (OT += lT ? xT : -xT, function(TT, kT, cT) {
-              return TT.hasEdge(kT, cT)
-            }(TT, cT, fT)) {
-            let kT = TT.edge(cT, fT).cutvalue;
-            OT += lT ? -kT : kT
+    function hE(qq, Eq, gq) {
+      let Yq = qq.node(gq).parent,
+        lq = !0,
+        Oq = Eq.edge(gq, Yq),
+        mq = 0;
+      Oq || (lq = !1, Oq = Eq.edge(Yq, gq)), mq = Oq.weight;
+      let xq = Eq.nodeEdges(gq);
+      return xq && xq.forEach((Oq => {
+        let xq = Oq.v === gq,
+          Aq = xq ? Oq.w : Oq.v;
+        if (Aq !== Yq) {
+          let Yq = xq === lq,
+            cq = Eq.edge(Oq).weight;
+          if (mq += Yq ? cq : -cq, function(qq, Eq, gq) {
+              return qq.hasEdge(Eq, gq)
+            }(qq, gq, Aq)) {
+            let Eq = qq.edge(gq, Aq).cutvalue;
+            mq += Yq ? -Eq : Eq
           }
         }
-      })), OT
+      })), mq
     }
 
-    function bk(TT, kT) {
-      arguments.length < 2 && (kT = TT.nodes()[0]), zk(TT, {}, 1, kT)
+    function nE(qq, Eq) {
+      arguments.length < 2 && (Eq = qq.nodes()[0]), bE(qq, {}, 1, Eq)
     }
 
-    function zk(TT, kT, cT, lT, MT) {
-      let KT = cT,
-        OT = TT.node(lT);
-      kT[lT] = !0;
-      let yT = TT.neighbors(lT);
-      return yT && yT.forEach((MT => {
-        Object.hasOwn(kT, MT) || (cT = zk(TT, kT, cT, MT, lT))
-      })), OT.low = KT, OT.lim = cT++, MT ? OT.parent = MT : delete OT.parent, cT
+    function bE(qq, Eq, gq, Yq, lq) {
+      let Oq = gq,
+        mq = qq.node(Yq);
+      Eq[Yq] = !0;
+      let xq = qq.neighbors(Yq);
+      return xq && xq.forEach((lq => {
+        Object.hasOwn(Eq, lq) || (gq = bE(qq, Eq, gq, lq, Yq))
+      })), mq.low = Oq, mq.lim = gq++, lq ? mq.parent = lq : delete mq.parent, gq
     }
 
-    function Jk(TT) {
-      return TT.edges().find((kT => TT.edge(kT).cutvalue < 0))
+    function iE(qq) {
+      return qq.edges().find((Eq => qq.edge(Eq).cutvalue < 0))
     }
 
-    function Hk(TT, kT, cT) {
-      let lT = cT.v,
-        MT = cT.w;
-      kT.hasEdge(lT, MT) || (lT = cT.w, MT = cT.v);
-      let KT = TT.node(lT),
-        OT = TT.node(MT),
-        yT = KT,
-        fT = !1;
-      return KT.lim > OT.lim && (yT = OT, fT = !0), kT.edges().filter((kT => fT === Gk(TT, TT.node(kT.v), yT) && fT !== Gk(TT, TT.node(kT.w), yT))).reduce(((TT, cT) => hk(kT, cT) < hk(kT, TT) ? cT : TT))
+    function ZE(qq, Eq, gq) {
+      let Yq = gq.v,
+        lq = gq.w;
+      Eq.hasEdge(Yq, lq) || (Yq = gq.w, lq = gq.v);
+      let Oq = qq.node(Yq),
+        mq = qq.node(lq),
+        xq = Oq,
+        Aq = !1;
+      return Oq.lim > mq.lim && (xq = mq, Aq = !0), Eq.edges().filter((Eq => Aq === ME(qq, qq.node(Eq.v), xq) && Aq !== ME(qq, qq.node(Eq.w), xq))).reduce(((qq, gq) => dE(Eq, gq) < dE(Eq, qq) ? gq : qq))
     }
 
-    function ek(TT, kT, cT, lT) {
-      let MT = cT.v,
-        KT = cT.w;
-      TT.removeEdge(MT, KT), TT.setEdge(lT.v, lT.w, {}), bk(TT), wk(TT, kT),
-        function(TT, kT) {
-          let cT = TT.nodes().find((kT => !TT.node(kT).parent));
-          if (!cT) return;
-          let lT = ak(TT, [cT]);
-          lT = lT.slice(1), lT.forEach((cT => {
-            let lT = TT.node(cT).parent,
-              MT = kT.edge(cT, lT),
-              KT = !1;
-            MT || (MT = kT.edge(lT, cT), KT = !0), kT.node(cT).rank = kT.node(lT).rank + (KT ? MT.minlen : -MT.minlen)
+    function fE(qq, Eq, gq, Yq) {
+      let lq = gq.v,
+        Oq = gq.w;
+      qq.removeEdge(lq, Oq), qq.setEdge(Yq.v, Yq.w, {}), nE(qq), vE(qq, Eq),
+        function(qq, Eq) {
+          let gq = qq.nodes().find((Eq => !qq.node(Eq).parent));
+          if (!gq) return;
+          let Yq = QE(qq, [gq]);
+          Yq = Yq.slice(1), Yq.forEach((gq => {
+            let Yq = qq.node(gq).parent,
+              lq = Eq.edge(gq, Yq),
+              Oq = !1;
+            lq || (lq = Eq.edge(Yq, gq), Oq = !0), Eq.node(gq).rank = Eq.node(Yq).rank + (Oq ? lq.minlen : -lq.minlen)
           }))
-        }(TT, kT)
+        }(qq, Eq)
     }
 
-    function Gk(TT, kT, cT) {
-      return cT.low <= kT.lim && kT.lim <= cT.lim
+    function ME(qq, Eq, gq) {
+      return gq.low <= Eq.lim && Eq.lim <= gq.lim
     }
-    Pk.initLowLimValues = bk, Pk.initCutValues = wk, Pk.calcCutValue = mk, Pk.leaveEdge = Jk, Pk.enterEdge = Hk, Pk.exchangeEdges = ek;
-    var Vk = function(TT) {
-      let kT = TT.graph().ranker;
-      if ("function" == typeof kT) return kT(TT);
-      switch (kT) {
+    rE.initLowLimValues = nE, rE.initCutValues = vE, rE.calcCutValue = hE, rE.leaveEdge = iE, rE.enterEdge = ZE, rE.exchangeEdges = fE;
+    var TE = function(qq) {
+      let Eq = qq.graph().ranker;
+      if ("function" == typeof Eq) return Eq(qq);
+      switch (Eq) {
         case "network-simplex":
         default:
-          Zk(TT);
+          SE(qq);
           break;
         case "tight-tree":
-          ! function(TT) {
-            tk(TT), Nk(TT)
-          }(TT);
+          ! function(qq) {
+            VE(qq), jE(qq)
+          }(qq);
           break;
         case "longest-path":
-          Ek(TT);
+          zE(qq);
         case "none":
       }
     };
-    var Ek = tk;
+    var zE = VE;
 
-    function Zk(TT) {
-      rk(TT)
+    function SE(qq) {
+      tE(qq)
     }
-    var uk = function(TT) {
-      let kT = function(TT) {
-          let kT = {},
-            cT = 0;
+    var pE = function(qq) {
+      let Eq = function(qq) {
+          let Eq = {},
+            gq = 0;
 
-          function lT(MT) {
-            let KT = cT;
-            TT.children(MT).forEach(lT), kT[MT] = {
-              low: KT,
-              lim: cT++
+          function Yq(lq) {
+            let Oq = gq;
+            qq.children(lq).forEach(Yq), Eq[lq] = {
+              low: Oq,
+              lim: gq++
             }
           }
-          return TT.children(lk).forEach(lT), kT
-        }(TT),
-        cT = TT.graph();
-      if (!Array.isArray(cT.dummyChains)) return;
-      cT.dummyChains.forEach((cT => {
-        let lT = TT.node(cT),
-          MT = lT.edgeObj,
-          KT = function(TT, kT, cT, lT) {
-            let MT, KT = [],
-              OT = [],
-              yT = Math.min(kT[cT].low, kT[lT].low),
-              fT = Math.max(kT[cT].lim, kT[lT].lim);
-            MT = cT;
+          return qq.children(YE).forEach(Yq), Eq
+        }(qq),
+        gq = qq.graph();
+      if (!Array.isArray(gq.dummyChains)) return;
+      gq.dummyChains.forEach((gq => {
+        let Yq = qq.node(gq),
+          lq = Yq.edgeObj,
+          Oq = function(qq, Eq, gq, Yq) {
+            let lq, Oq = [],
+              mq = [],
+              xq = Math.min(Eq[gq].low, Eq[Yq].low),
+              Aq = Math.max(Eq[gq].lim, Eq[Yq].lim);
+            lq = gq;
             do {
-              MT = TT.parent(MT), KT.push(MT)
-            } while (MT && (kT[MT].low > yT || fT > kT[MT].lim));
-            let xT = MT,
-              IT = lT;
+              lq = qq.parent(lq), Oq.push(lq)
+            } while (lq && (Eq[lq].low > xq || Aq > Eq[lq].lim));
+            let cq = lq,
+              uq = Yq;
             for (;
-              (IT = TT.parent(IT)) !== xT;) OT.push(IT);
+              (uq = qq.parent(uq)) !== cq;) mq.push(uq);
             return {
-              path: KT.concat(OT.reverse()),
-              lca: xT
+              path: Oq.concat(mq.reverse()),
+              lca: cq
             }
-          }(TT, kT, MT.v, MT.w),
-          OT = KT.path,
-          yT = KT.lca,
-          fT = 0,
-          xT = OT[fT],
-          IT = !0;
-        for (; cT !== MT.w;) {
-          if (lT = TT.node(cT), IT) {
+          }(qq, Eq, lq.v, lq.w),
+          mq = Oq.path,
+          xq = Oq.lca,
+          Aq = 0,
+          cq = mq[Aq],
+          uq = !0;
+        for (; gq !== lq.w;) {
+          if (Yq = qq.node(gq), uq) {
             for (;
-              (xT = OT[fT]) !== yT && TT.node(xT).maxRank < lT.rank;) fT++;
-            xT === yT && (IT = !1)
+              (cq = mq[Aq]) !== xq && qq.node(cq).maxRank < Yq.rank;) Aq++;
+            cq === xq && (uq = !1)
           }
-          if (!IT) {
-            for (; fT < OT.length - 1 && TT.node(OT[fT + 1]).minRank <= lT.rank;) fT++;
-            xT = OT[fT]
+          if (!uq) {
+            for (; Aq < mq.length - 1 && qq.node(mq[Aq + 1]).minRank <= Yq.rank;) Aq++;
+            cq = mq[Aq]
           }
-          void 0 !== xT && TT.setParent(cT, xT), cT = TT.successors(cT)[0]
+          void 0 !== cq && qq.setParent(gq, cq), gq = qq.successors(gq)[0]
         }
       }))
     };
 
-    function Xk(TT) {
-      let kT = LT(TT, "root", {}, "_root"),
-        cT = function(TT) {
-          let kT = {};
+    function GE(qq) {
+      let Eq = kq(qq, "root", {}, "_root"),
+        gq = function(qq) {
+          let Eq = {};
 
-          function cT(lT, MT) {
-            let KT = TT.children(lT);
-            KT && KT.length && KT.forEach((TT => cT(TT, MT + 1))), kT[lT] = MT
+          function gq(Yq, lq) {
+            let Oq = qq.children(Yq);
+            Oq && Oq.length && Oq.forEach((qq => gq(qq, lq + 1))), Eq[Yq] = lq
           }
-          return TT.children(lk).forEach((TT => cT(TT, 1))), kT
-        }(TT),
-        lT = Object.values(cT),
-        MT = WT(Math.max, lT) - 1,
-        KT = 2 * MT + 1;
-      TT.graph().nestingRoot = kT, TT.edges().forEach((kT => TT.edge(kT).minlen *= KT));
-      let OT = function(TT) {
-        return TT.edges().reduce(((kT, cT) => kT + TT.edge(cT).weight), 0)
-      }(TT) + 1;
-      TT.children(lk).forEach((lT => {
-        dk(TT, kT, KT, OT, MT, cT, lT)
-      })), TT.graph().nodeRankFactor = KT
+          return qq.children(YE).forEach((qq => gq(qq, 1))), Eq
+        }(qq),
+        Yq = Object.values(gq),
+        lq = wq(Math.max, Yq) - 1,
+        Oq = 2 * lq + 1;
+      qq.graph().nestingRoot = Eq, qq.edges().forEach((Eq => qq.edge(Eq).minlen *= Oq));
+      let mq = function(qq) {
+        return qq.edges().reduce(((Eq, gq) => Eq + qq.edge(gq).weight), 0)
+      }(qq) + 1;
+      qq.children(YE).forEach((Yq => {
+        LE(qq, Eq, Oq, mq, lq, gq, Yq)
+      })), qq.graph().nodeRankFactor = Oq
     }
 
-    function dk(TT, kT, cT, lT, MT, KT, OT) {
-      var yT;
-      let fT = TT.children(OT);
-      if (!fT.length) return void(OT !== kT && TT.setEdge(kT, OT, {
+    function LE(qq, Eq, gq, Yq, lq, Oq, mq) {
+      var xq;
+      let Aq = qq.children(mq);
+      if (!Aq.length) return void(mq !== Eq && qq.setEdge(Eq, mq, {
         weight: 0,
-        minlen: cT
+        minlen: gq
       }));
-      let xT = YT(TT, "_bt"),
-        IT = YT(TT, "_bb"),
-        AT = TT.node(OT);
-      TT.setParent(xT, OT), AT.borderTop = xT, TT.setParent(IT, OT), AT.borderBottom = IT, fT.forEach((yT => {
-        var fT;
-        dk(TT, kT, cT, lT, MT, KT, yT);
-        let AT = TT.node(yT),
-          CT = AT.borderTop ? AT.borderTop : yT,
-          jT = AT.borderBottom ? AT.borderBottom : yT,
-          vT = AT.borderTop ? lT : 2 * lT,
-          tT = CT !== jT ? 1 : MT - (null != (fT = KT[OT]) ? fT : 0) + 1;
-        TT.setEdge(xT, CT, {
-          weight: vT,
-          minlen: tT,
+      let cq = sq(qq, "_bt"),
+        uq = sq(qq, "_bb"),
+        Bq = qq.node(mq);
+      qq.setParent(cq, mq), Bq.borderTop = cq, qq.setParent(uq, mq), Bq.borderBottom = uq, Aq.forEach((xq => {
+        var Aq;
+        LE(qq, Eq, gq, Yq, lq, Oq, xq);
+        let Bq = qq.node(xq),
+          Wq = Bq.borderTop ? Bq.borderTop : xq,
+          Nq = Bq.borderBottom ? Bq.borderBottom : xq,
+          aq = Bq.borderTop ? Yq : 2 * Yq,
+          Vq = Wq !== Nq ? 1 : lq - (null != (Aq = Oq[mq]) ? Aq : 0) + 1;
+        qq.setEdge(cq, Wq, {
+          weight: aq,
+          minlen: Vq,
           nestingEdge: !0
-        }), TT.setEdge(jT, IT, {
-          weight: vT,
-          minlen: tT,
+        }), qq.setEdge(Nq, uq, {
+          weight: aq,
+          minlen: Vq,
           nestingEdge: !0
         })
-      })), TT.parent(OT) || TT.setEdge(kT, xT, {
+      })), qq.parent(mq) || qq.setEdge(Eq, cq, {
         weight: 0,
-        minlen: MT + (null != (yT = KT[OT]) ? yT : 0)
+        minlen: lq + (null != (xq = Oq[mq]) ? xq : 0)
       })
     }
-    var Lk = function(TT) {
-      TT.children(lk).forEach((function kT(cT) {
-        let lT = TT.children(cT),
-          MT = TT.node(cT);
-        if (lT.length && lT.forEach(kT), MT && Object.hasOwn(MT, "minRank")) {
-          MT.borderLeft = [], MT.borderRight = [];
-          for (let kT = MT.minRank, lT = MT.maxRank + 1; kT < lT; ++kT) Rk(TT, "borderLeft", "_bl", cT, MT, kT), Rk(TT, "borderRight", "_br", cT, MT, kT)
+    var JE = function(qq) {
+      qq.children(YE).forEach((function Eq(gq) {
+        let Yq = qq.children(gq),
+          lq = qq.node(gq);
+        if (Yq.length && Yq.forEach(Eq), lq && Object.hasOwn(lq, "minRank")) {
+          lq.borderLeft = [], lq.borderRight = [];
+          for (let Eq = lq.minRank, Yq = lq.maxRank + 1; Eq < Yq; ++Eq) kE(qq, "borderLeft", "_bl", gq, lq, Eq), kE(qq, "borderRight", "_br", gq, lq, Eq)
         }
       }))
     };
 
-    function Rk(TT, kT, cT, lT, MT, KT) {
-      let OT = {
+    function kE(qq, Eq, gq, Yq, lq, Oq) {
+      let mq = {
           width: 0,
           height: 0,
-          rank: KT,
-          borderType: kT
+          rank: Oq,
+          borderType: Eq
         },
-        yT = MT[kT][KT - 1],
-        fT = LT(TT, "border", OT, cT);
-      MT[kT][KT] = fT, TT.setParent(fT, lT), yT && TT.setEdge(yT, fT, {
+        xq = lq[Eq][Oq - 1],
+        Aq = kq(qq, "border", mq, gq);
+      lq[Eq][Oq] = Aq, qq.setParent(Aq, Yq), xq && qq.setEdge(xq, Aq, {
         weight: 1
       })
     }
 
-    function gk(TT) {
-      var kT;
-      let cT = null == (kT = TT.graph().rankdir) ? void 0 : kT.toLowerCase();
-      ("bt" === cT || "rl" === cT) && function(TT) {
-        TT.nodes().forEach((kT => Bk(TT.node(kT)))), TT.edges().forEach((kT => {
-          var cT;
-          let lT = TT.edge(kT);
-          null == (cT = lT.points) || cT.forEach(Bk), Object.hasOwn(lT, "y") && Bk(lT)
+    function RE(qq) {
+      var Eq;
+      let gq = null == (Eq = qq.graph().rankdir) ? void 0 : Eq.toLowerCase();
+      ("bt" === gq || "rl" === gq) && function(qq) {
+        qq.nodes().forEach((Eq => sE(qq.node(Eq)))), qq.edges().forEach((Eq => {
+          var gq;
+          let Yq = qq.edge(Eq);
+          null == (gq = Yq.points) || gq.forEach(sE), Object.hasOwn(Yq, "y") && sE(Yq)
         }))
-      }(TT), ("lr" === cT || "rl" === cT) && (function(TT) {
-        TT.nodes().forEach((kT => Wk(TT.node(kT)))), TT.edges().forEach((kT => {
-          var cT;
-          let lT = TT.edge(kT);
-          null == (cT = lT.points) || cT.forEach(Wk), Object.hasOwn(lT, "x") && Wk(lT)
+      }(qq), ("lr" === gq || "rl" === gq) && (function(qq) {
+        qq.nodes().forEach((Eq => XE(qq.node(Eq)))), qq.edges().forEach((Eq => {
+          var gq;
+          let Yq = qq.edge(Eq);
+          null == (gq = Yq.points) || gq.forEach(XE), Object.hasOwn(Yq, "x") && XE(Yq)
         }))
-      }(TT), Uk(TT))
+      }(qq), UE(qq))
     }
 
-    function Uk(TT) {
-      TT.nodes().forEach((kT => Yk(TT.node(kT)))), TT.edges().forEach((kT => Yk(TT.edge(kT))))
+    function UE(qq) {
+      qq.nodes().forEach((Eq => FE(qq.node(Eq)))), qq.edges().forEach((Eq => FE(qq.edge(Eq))))
     }
 
-    function Yk(TT) {
-      let kT = TT.width;
-      TT.width = TT.height, TT.height = kT
+    function FE(qq) {
+      let Eq = qq.width;
+      qq.width = qq.height, qq.height = Eq
     }
 
-    function Bk(TT) {
-      TT.y = -TT.y
+    function sE(qq) {
+      qq.y = -qq.y
     }
 
-    function Wk(TT) {
-      let kT = TT.x;
-      TT.x = TT.y, TT.y = kT
+    function XE(qq) {
+      let Eq = qq.x;
+      qq.x = qq.y, qq.y = Eq
     }
 
-    function nk(TT) {
-      let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-        cT = {},
-        lT = TT.nodes().filter((kT => !TT.children(kT).length)),
-        MT = lT.map((kT => TT.node(kT).rank)),
-        KT = Tk(WT(Math.max, MT) + 1).map((() => []));
-      return lT.sort(((kT, cT) => TT.node(kT).rank - TT.node(cT).rank)).forEach((function lT(MT) {
-        if (cT[MT]) return;
-        cT[MT] = !0;
-        let OT = TT.node(MT);
-        KT[OT.rank].push(MT);
-        let yT = TT.successors(MT);
-        yT && [...yT].sort(((cT, lT) => function(cT, lT) {
-          let MT = TT.node(cT),
-            KT = TT.node(lT);
-          return Mk(kT, MT, KT)
-        }(cT, lT))).forEach(lT)
-      })), KT
+    function wE(qq) {
+      let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+        gq = {},
+        Yq = qq.nodes().filter((Eq => !qq.children(Eq).length)),
+        lq = Yq.map((Eq => qq.node(Eq).rank)),
+        Oq = qE(wq(Math.max, lq) + 1).map((() => []));
+      return Yq.sort(((Eq, gq) => qq.node(Eq).rank - qq.node(gq).rank)).forEach((function Yq(lq) {
+        if (gq[lq]) return;
+        gq[lq] = !0;
+        let mq = qq.node(lq);
+        Oq[mq.rank].push(lq);
+        let xq = qq.successors(lq);
+        xq && [...xq].sort(((gq, Yq) => function(gq, Yq) {
+          let lq = qq.node(gq),
+            Oq = qq.node(Yq);
+          return lE(Eq, lq, Oq)
+        }(gq, Yq))).forEach(Yq)
+      })), Oq
     }
 
-    function pk(TT, kT) {
-      let cT = 0;
-      for (let lT = 1; lT < kT.length; ++lT) cT += ik(TT, kT[lT - 1], kT[lT]);
-      return cT
+    function KE(qq, Eq) {
+      let gq = 0;
+      for (let Yq = 1; Yq < Eq.length; ++Yq) gq += CE(qq, Eq[Yq - 1], Eq[Yq]);
+      return gq
     }
 
-    function ik(TT, kT, cT) {
-      let lT = function(TT, kT) {
-          return TT.reduce(((TT, cT, lT) => (TT[cT] = kT[lT], TT)), {})
-        }(cT, cT.map(((TT, kT) => kT))),
-        MT = kT.flatMap((kT => {
-          let cT = TT.outEdges(kT);
-          return cT ? cT.map((kT => ({
-            pos: lT[kT.w],
-            weight: TT.edge(kT).weight
-          }))).sort(((TT, kT) => TT.pos - kT.pos)) : []
+    function CE(qq, Eq, gq) {
+      let Yq = function(qq, Eq) {
+          return qq.reduce(((qq, gq, Yq) => (qq[gq] = Eq[Yq], qq)), {})
+        }(gq, gq.map(((qq, Eq) => Eq))),
+        lq = Eq.flatMap((Eq => {
+          let gq = qq.outEdges(Eq);
+          return gq ? gq.map((Eq => ({
+            pos: Yq[Eq.w],
+            weight: qq.edge(Eq).weight
+          }))).sort(((qq, Eq) => qq.pos - Eq.pos)) : []
         })),
-        KT = 1;
-      for (; KT < cT.length;) KT <<= 1;
-      let OT = 2 * KT - 1;
-      KT -= 1;
-      let yT = new Array(OT).fill(0),
-        fT = 0;
-      return MT.forEach((TT => {
-        let kT = TT.pos + KT;
-        yT[kT] += TT.weight;
-        let cT = 0;
-        for (; kT > 0;) kT % 2 && (cT += yT[kT + 1]), kT = kT - 1 >> 1, yT[kT] += TT.weight;
-        fT += TT.weight * cT
-      })), fT
+        Oq = 1;
+      for (; Oq < gq.length;) Oq <<= 1;
+      let mq = 2 * Oq - 1;
+      Oq -= 1;
+      let xq = new Array(mq).fill(0),
+        Aq = 0;
+      return lq.forEach((qq => {
+        let Eq = qq.pos + Oq;
+        xq[Eq] += qq.weight;
+        let gq = 0;
+        for (; Eq > 0;) Eq % 2 && (gq += xq[Eq + 1]), Eq = Eq - 1 >> 1, xq[Eq] += qq.weight;
+        Aq += qq.weight * gq
+      })), Aq
     }
 
-    function qk(TT, kT) {
-      let cT = {};
-      return TT.forEach(((TT, kT) => {
-          let lT = {
+    function IE(qq, Eq) {
+      let gq = {};
+      return qq.forEach(((qq, Eq) => {
+          let Yq = {
             indegree: 0,
             in: [],
             out: [],
-            vs: [TT.v],
-            i: kT
+            vs: [qq.v],
+            i: Eq
           };
-          void 0 !== TT.barycenter && (lT.barycenter = TT.barycenter, lT.weight = TT.weight), cT[TT.v] = lT
-        })), kT.edges().forEach((TT => {
-          let kT = cT[TT.v],
-            lT = cT[TT.w];
-          void 0 !== kT && void 0 !== lT && (lT.indegree++, kT.out.push(lT))
+          void 0 !== qq.barycenter && (Yq.barycenter = qq.barycenter, Yq.weight = qq.weight), gq[qq.v] = Yq
+        })), Eq.edges().forEach((qq => {
+          let Eq = gq[qq.v],
+            Yq = gq[qq.w];
+          void 0 !== Eq && void 0 !== Yq && (Yq.indegree++, Eq.out.push(Yq))
         })),
-        function(TT) {
-          let kT = [];
+        function(qq) {
+          let Eq = [];
 
-          function cT(TT) {
-            return kT => {
-              kT.merged || (void 0 === kT.barycenter || void 0 === TT.barycenter || kT.barycenter >= TT.barycenter) && function(TT, kT) {
-                let cT = 0,
-                  lT = 0;
-                TT.weight && (cT += TT.barycenter * TT.weight, lT += TT.weight), kT.weight && (cT += kT.barycenter * kT.weight, lT += kT.weight), TT.vs = kT.vs.concat(TT.vs), TT.barycenter = cT / lT, TT.weight = lT, TT.i = Math.min(kT.i, TT.i), kT.merged = !0
-              }(TT, kT)
+          function gq(qq) {
+            return Eq => {
+              Eq.merged || (void 0 === Eq.barycenter || void 0 === qq.barycenter || Eq.barycenter >= qq.barycenter) && function(qq, Eq) {
+                let gq = 0,
+                  Yq = 0;
+                qq.weight && (gq += qq.barycenter * qq.weight, Yq += qq.weight), Eq.weight && (gq += Eq.barycenter * Eq.weight, Yq += Eq.weight), qq.vs = Eq.vs.concat(qq.vs), qq.barycenter = gq / Yq, qq.weight = Yq, qq.i = Math.min(Eq.i, qq.i), Eq.merged = !0
+              }(qq, Eq)
             }
           }
 
-          function lT(kT) {
-            return cT => {
-              cT.in.push(kT), 0 === --cT.indegree && TT.push(cT)
+          function Yq(Eq) {
+            return gq => {
+              gq.in.push(Eq), 0 === --gq.indegree && qq.push(gq)
             }
           }
-          for (; TT.length;) {
-            let MT = TT.pop();
-            kT.push(MT), MT.in.reverse().forEach(cT(MT)), MT.out.forEach(lT(MT))
+          for (; qq.length;) {
+            let lq = qq.pop();
+            Eq.push(lq), lq.in.reverse().forEach(gq(lq)), lq.out.forEach(Yq(lq))
           }
-          return kT.filter((TT => !TT.merged)).map((TT => kk(TT, ["vs", "i", "barycenter", "weight"])))
-        }(Object.values(cT).filter((TT => !TT.indegree)))
+          return Eq.filter((qq => !qq.merged)).map((qq => EE(qq, ["vs", "i", "barycenter", "weight"])))
+        }(Object.values(gq).filter((qq => !qq.indegree)))
     }
 
-    function sk(TT, kT, cT, lT, MT) {
-      let KT = {},
-        OT = null,
-        yT = null,
-        fT = MT;
-      "boolean" == typeof kT ? (fT = kT, KT = {}) : kT && (KT = kT, OT = null != cT ? cT : null, yT = null != lT ? lT : null);
-      let xT = function(TT, kT) {
-          let cT = {
+    function eE(qq, Eq, gq, Yq, lq) {
+      let Oq = {},
+        mq = null,
+        xq = null,
+        Aq = lq;
+      "boolean" == typeof Eq ? (Aq = Eq, Oq = {}) : Eq && (Oq = Eq, mq = null != gq ? gq : null, xq = null != Yq ? Yq : null);
+      let cq = function(qq, Eq) {
+          let gq = {
             lhs: [],
             rhs: []
           };
-          return TT.forEach((TT => {
-            kT(TT) ? cT.lhs.push(TT) : cT.rhs.push(TT)
-          })), cT
-        }(TT, (TT => Object.hasOwn(TT, "barycenter"))),
-        IT = xT.lhs,
-        AT = xT.rhs.sort(((TT, kT) => kT.i - TT.i)),
-        CT = [],
-        jT = 0,
-        vT = 0,
-        tT = 0;
-      IT.sort(function(TT, kT, cT) {
-        return (lT, MT) => {
-          if (lT.barycenter < MT.barycenter) return -1;
-          if (lT.barycenter > MT.barycenter) return 1;
-          if (TT && ("string" == typeof lT.vs[0] || "string" == typeof MT.vs[0])) {
-            let cT = TT.node(lT.vs[0]),
-              KT = TT.node(MT.vs[0]),
-              OT = Mk(kT, cT, KT);
-            if (0 !== OT) return OT
+          return qq.forEach((qq => {
+            Eq(qq) ? gq.lhs.push(qq) : gq.rhs.push(qq)
+          })), gq
+        }(qq, (qq => Object.hasOwn(qq, "barycenter"))),
+        uq = cq.lhs,
+        Bq = cq.rhs.sort(((qq, Eq) => Eq.i - qq.i)),
+        Wq = [],
+        Nq = 0,
+        aq = 0,
+        Vq = 0;
+      uq.sort(function(qq, Eq, gq) {
+        return (Yq, lq) => {
+          if (Yq.barycenter < lq.barycenter) return -1;
+          if (Yq.barycenter > lq.barycenter) return 1;
+          if (qq && ("string" == typeof Yq.vs[0] || "string" == typeof lq.vs[0])) {
+            let gq = qq.node(Yq.vs[0]),
+              Oq = qq.node(lq.vs[0]),
+              mq = lE(Eq, gq, Oq);
+            if (0 !== mq) return mq
           }
-          return cT ? MT.i - lT.i : lT.i - MT.i
+          return gq ? lq.i - Yq.i : Yq.i - lq.i
         }
-      }(yT, OT, !!fT));
-      for (let [NT, QT] of Object.entries(KT)) {
-        let TT = IT.findIndex((TT => TT.vs[0] === NT));
-        IT.splice(TT + 1, 0, QT)
+      }(xq, mq, !!Aq));
+      for (let [jq, Hq] of Object.entries(Oq)) {
+        let qq = uq.findIndex((qq => qq.vs[0] === jq));
+        uq.splice(qq + 1, 0, Hq)
       }
-      tT = Tc(CT, AT, tT), IT.forEach((TT => {
-        tT += TT.vs.length, CT.push(TT.vs), jT += TT.barycenter * TT.weight, vT += TT.weight, tT = Tc(CT, AT, tT)
+      Vq = DE(Wq, Bq, Vq), uq.forEach((qq => {
+        Vq += qq.vs.length, Wq.push(qq.vs), Nq += qq.barycenter * qq.weight, aq += qq.weight, Vq = DE(Wq, Bq, Vq)
       }));
-      let hT = {
-        vs: CT.flat(1)
+      let dq = {
+        vs: Wq.flat(1)
       };
-      return vT && (hT.barycenter = jT / vT, hT.weight = vT), hT
+      return aq && (dq.barycenter = Nq / aq, dq.weight = aq), dq
     }
 
-    function Tc(TT, kT, cT) {
-      let lT;
-      for (; kT.length && (lT = kT[kT.length - 1]).i <= cT;) kT.pop(), TT.push(lT.vs), cT++;
-      return cT
+    function DE(qq, Eq, gq) {
+      let Yq;
+      for (; Eq.length && (Yq = Eq[Eq.length - 1]).i <= gq;) Eq.pop(), qq.push(Yq.vs), gq++;
+      return gq
     }
 
-    function kc(TT, kT, cT, lT, MT) {
-      var KT, OT, yT, fT, xT, IT, AT, CT, jT, vT, tT;
-      let hT = null,
-        NT = MT;
-      "boolean" == typeof lT ? (NT = lT, hT = null) : void 0 !== lT && (hT = lT);
-      let QT = TT.children(kT),
-        ST = TT.node(kT),
-        DT = ST ? ST.borderLeft : void 0,
-        aT = ST ? ST.borderRight : void 0,
-        FT = {};
-      DT && (QT = QT.filter((TT => TT !== DT && TT !== aT)));
-      let rT = function(TT) {
-        return (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : []).map((kT => {
-          let cT = TT.inEdges(kT);
-          if (!cT || !cT.length) return {
-            v: kT
+    function qg(qq, Eq, gq, Yq, lq) {
+      var Oq, mq, xq, Aq, cq, uq, Bq, Wq, Nq, aq, Vq;
+      let dq = null,
+        jq = lq;
+      "boolean" == typeof Yq ? (jq = Yq, dq = null) : void 0 !== Yq && (dq = Yq);
+      let Hq = qq.children(Eq),
+        oq = qq.node(Eq),
+        Pq = oq ? oq.borderLeft : void 0,
+        Qq = oq ? oq.borderRight : void 0,
+        yq = {};
+      Pq && (Hq = Hq.filter((qq => qq !== Pq && qq !== Qq)));
+      let tq = function(qq) {
+        return (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : []).map((Eq => {
+          let gq = qq.inEdges(Eq);
+          if (!gq || !gq.length) return {
+            v: Eq
           };
           {
-            let lT = cT.reduce(((kT, cT) => {
-              let lT = TT.edge(cT),
-                MT = TT.node(cT.v);
+            let Yq = gq.reduce(((Eq, gq) => {
+              let Yq = qq.edge(gq),
+                lq = qq.node(gq.v);
               return {
-                sum: kT.sum + lT.weight * MT.order,
-                weight: kT.weight + lT.weight
+                sum: Eq.sum + Yq.weight * lq.order,
+                weight: Eq.weight + Yq.weight
               }
             }), {
               sum: 0,
               weight: 0
             });
             return {
-              v: kT,
-              barycenter: lT.sum / lT.weight,
-              weight: lT.weight
+              v: Eq,
+              barycenter: Yq.sum / Yq.weight,
+              weight: Yq.weight
             }
           }
         }))
-      }(TT, QT);
-      rT.forEach((kT => {
-        if (TT.children(kT.v).length) {
+      }(qq, Hq);
+      tq.forEach((Eq => {
+        if (qq.children(Eq.v).length) {
           let {
-            result: lT
-          } = kc(TT, kT.v, cT, hT, NT);
-          FT[kT.v] = lT, Object.hasOwn(lT, "barycenter") && function(TT, kT) {
-            void 0 !== TT.barycenter ? (TT.barycenter = (TT.barycenter * TT.weight + kT.barycenter * kT.weight) / (TT.weight + kT.weight), TT.weight += kT.weight) : (TT.barycenter = kT.barycenter, TT.weight = kT.weight)
-          }(kT, lT)
+            result: Yq
+          } = qg(qq, Eq.v, gq, dq, jq);
+          yq[Eq.v] = Yq, Object.hasOwn(Yq, "barycenter") && function(qq, Eq) {
+            void 0 !== qq.barycenter ? (qq.barycenter = (qq.barycenter * qq.weight + Eq.barycenter * Eq.weight) / (qq.weight + Eq.weight), qq.weight += Eq.weight) : (qq.barycenter = Eq.barycenter, qq.weight = Eq.weight)
+          }(Eq, Yq)
         }
       }));
-      let PT = qk(rT, cT);
-      ! function(TT, kT) {
-        TT.forEach((TT => {
-          TT.vs = TT.vs.flatMap((TT => kT[TT] ? kT[TT].vs : TT))
+      let rq = IE(tq, gq);
+      ! function(qq, Eq) {
+        qq.forEach((qq => {
+          qq.vs = qq.vs.flatMap((qq => Eq[qq] ? Eq[qq].vs : qq))
         }))
-      }(PT, FT);
-      let wT = {},
-        mT = !1;
-      for (let zT = 0; zT < PT.length; zT++)
-        for (let kT = zT + 1; kT < PT.length; kT++)
-          if (PT[zT] && PT[kT] && null != (KT = PT[zT]) && KT.barycenter && null != (OT = PT[kT]) && OT.barycenter && (null == (yT = PT[zT]) ? void 0 : yT.barycenter) === PT[kT].barycenter) {
-            let cT = null != (xT = null == (fT = PT[zT]) ? void 0 : fT.vs[0]) ? xT : "",
-              lT = null != (AT = null == (IT = PT[kT]) ? void 0 : IT.vs[0]) ? AT : "",
-              MT = TT.node(cT),
-              KT = TT.node(lT);
-            if ("edge" === MT.dummy && "edge" === KT.dummy && (null == (CT = MT.edgeObj) ? void 0 : CT.v) === (null == (jT = KT.edgeObj) ? void 0 : jT.v) && (null == (vT = MT.edgeObj) ? void 0 : vT.w) === (null == (tT = KT.edgeObj) ? void 0 : tT.w)) {
-              if (MT.edgeLabel.reversed) {
-                wT[lT] = PT[zT], PT.splice(zT, 1), zT--;
+      }(rq, yq);
+      let vq = {},
+        hq = !1;
+      for (let bq = 0; bq < rq.length; bq++)
+        for (let Eq = bq + 1; Eq < rq.length; Eq++)
+          if (rq[bq] && rq[Eq] && null != (Oq = rq[bq]) && Oq.barycenter && null != (mq = rq[Eq]) && mq.barycenter && (null == (xq = rq[bq]) ? void 0 : xq.barycenter) === rq[Eq].barycenter) {
+            let gq = null != (cq = null == (Aq = rq[bq]) ? void 0 : Aq.vs[0]) ? cq : "",
+              Yq = null != (Bq = null == (uq = rq[Eq]) ? void 0 : uq.vs[0]) ? Bq : "",
+              lq = qq.node(gq),
+              Oq = qq.node(Yq);
+            if ("edge" === lq.dummy && "edge" === Oq.dummy && (null == (Wq = lq.edgeObj) ? void 0 : Wq.v) === (null == (Nq = Oq.edgeObj) ? void 0 : Nq.v) && (null == (aq = lq.edgeObj) ? void 0 : aq.w) === (null == (Vq = Oq.edgeObj) ? void 0 : Vq.w)) {
+              if (lq.edgeLabel.reversed) {
+                vq[Yq] = rq[bq], rq.splice(bq, 1), bq--;
                 break
               }
-              wT[cT] = PT[kT], PT.splice(kT, 1), kT--
-            } else mT = !0
-          } let bT = sk(PT, wT, hT, TT, NT);
-      if (DT && aT) {
-        bT.vs = [DT, bT.vs, aT].flat(1);
-        let kT = TT.predecessors(DT);
-        if (kT && kT.length) {
-          let cT = TT.node(kT[0]),
-            lT = TT.predecessors(aT),
-            MT = TT.node(lT[0]);
-          Object.hasOwn(bT, "barycenter") || (bT.barycenter = 0, bT.weight = 0), bT.barycenter = (bT.barycenter * bT.weight + cT.order + MT.order) / (bT.weight + 2), bT.weight += 2
+              vq[gq] = rq[Eq], rq.splice(Eq, 1), Eq--
+            } else hq = !0
+          } let nq = eE(rq, vq, dq, qq, jq);
+      if (Pq && Qq) {
+        nq.vs = [Pq, nq.vs, Qq].flat(1);
+        let Eq = qq.predecessors(Pq);
+        if (Eq && Eq.length) {
+          let gq = qq.node(Eq[0]),
+            Yq = qq.predecessors(Qq),
+            lq = qq.node(Yq[0]);
+          Object.hasOwn(nq, "barycenter") || (nq.barycenter = 0, nq.weight = 0), nq.barycenter = (nq.barycenter * nq.weight + gq.order + lq.order) / (nq.weight + 2), nq.weight += 2
         }
       }
-      return Object.defineProperty(bT, "result", {
-        value: bT,
+      return Object.defineProperty(nq, "result", {
+        value: nq,
         enumerable: !1,
         configurable: !0,
         writable: !0
-      }), Object.defineProperty(bT, "usedBias", {
-        value: mT,
+      }), Object.defineProperty(nq, "usedBias", {
+        value: hq,
         enumerable: !1,
         configurable: !0,
         writable: !0
-      }), bT
+      }), nq
     }
 
-    function cc(TT, kT, cT, lT) {
-      lT || (lT = TT.nodes());
-      let MT = function(TT) {
-          let kT;
-          for (; TT.hasNode(kT = sT("_root")););
-          return kT
-        }(TT),
-        KT = new dT({
+    function Eg(qq, Eq, gq, Yq) {
+      Yq || (Yq = qq.nodes());
+      let lq = function(qq) {
+          let Eq;
+          for (; qq.hasNode(Eq = Dq("_root")););
+          return Eq
+        }(qq),
+        Oq = new Jq({
           compound: !0
         }).setGraph({
-          root: MT
-        }).setDefaultNodeLabel((kT => TT.node(kT)));
-      return lT.forEach((lT => {
-        let OT = TT.node(lT),
-          yT = TT.parent(lT);
-        if (OT.rank === kT || OT.minRank <= kT && kT <= OT.maxRank) {
-          KT.setNode(lT), KT.setParent(lT, yT || MT);
-          let fT = TT[cT](lT);
-          fT && fT.forEach((kT => {
-            let cT = kT.v === lT ? kT.w : kT.v,
-              MT = KT.edge(cT, lT),
-              OT = void 0 !== MT ? MT.weight : 0;
-            KT.setEdge(cT, lT, {
-              weight: TT.edge(kT).weight + OT
+          root: lq
+        }).setDefaultNodeLabel((Eq => qq.node(Eq)));
+      return Yq.forEach((Yq => {
+        let mq = qq.node(Yq),
+          xq = qq.parent(Yq);
+        if (mq.rank === Eq || mq.minRank <= Eq && Eq <= mq.maxRank) {
+          Oq.setNode(Yq), Oq.setParent(Yq, xq || lq);
+          let Aq = qq[gq](Yq);
+          Aq && Aq.forEach((Eq => {
+            let gq = Eq.v === Yq ? Eq.w : Eq.v,
+              lq = Oq.edge(gq, Yq),
+              mq = void 0 !== lq ? lq.weight : 0;
+            Oq.setEdge(gq, Yq, {
+              weight: qq.edge(Eq).weight + mq
             })
-          })), Object.hasOwn(OT, "minRank") && KT.setNode(lT, {
-            borderLeft: OT.borderLeft[kT],
-            borderRight: OT.borderRight[kT]
+          })), Object.hasOwn(mq, "minRank") && Oq.setNode(Yq, {
+            borderLeft: mq.borderLeft[Eq],
+            borderRight: mq.borderRight[Eq]
           })
         }
-      })), KT
+      })), Oq
     }
 
-    function lc(TT) {
-      let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-      if ("function" == typeof kT.customOrder) return void kT.customOrder(TT, lc);
-      let lT = nT(TT),
-        MT = Mc(TT, Tk(1, lT + 1), "inEdges"),
-        KT = Mc(TT, Tk(lT - 1, -1, -1), "outEdges"),
-        OT = nk(TT, cT);
-      if (Oc(TT, OT), kT.disableOptimalOrderHeuristic) return;
-      let yT, fT = Number.POSITIVE_INFINITY,
-        xT = kT.constraints || [];
-      for (let IT = 0, AT = 0; AT < 4; ++IT, ++AT) {
-        Kc(IT % 2 ? MT : KT, IT % 4 >= 2, xT, cT), OT = UT(TT);
-        let kT = pk(TT, OT);
-        kT < fT ? (AT = 0, yT = Object.assign({}, OT), fT = kT) : kT === fT && (yT = structuredClone(OT))
+    function gg(qq) {
+      let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      if ("function" == typeof Eq.customOrder) return void Eq.customOrder(qq, gg);
+      let Yq = Kq(qq),
+        lq = Yg(qq, qE(1, Yq + 1), "inEdges"),
+        Oq = Yg(qq, qE(Yq - 1, -1, -1), "outEdges"),
+        mq = wE(qq, gq);
+      if (Og(qq, mq), Eq.disableOptimalOrderHeuristic) return;
+      let xq, Aq = Number.POSITIVE_INFINITY,
+        cq = Eq.constraints || [];
+      for (let uq = 0, Bq = 0; Bq < 4; ++uq, ++Bq) {
+        lg(uq % 2 ? lq : Oq, uq % 4 >= 2, cq, gq), mq = Fq(qq);
+        let Eq = KE(qq, mq);
+        Eq < Aq ? (Bq = 0, xq = Object.assign({}, mq), Aq = Eq) : Eq === Aq && (xq = structuredClone(mq))
       }
-      Oc(TT, yT)
+      Og(qq, xq)
     }
 
-    function Mc(TT, kT, cT) {
-      let lT = new Map,
-        MT = (TT, kT) => {
-          lT.has(TT) || lT.set(TT, []), lT.get(TT).push(kT)
+    function Yg(qq, Eq, gq) {
+      let Yq = new Map,
+        lq = (qq, Eq) => {
+          Yq.has(qq) || Yq.set(qq, []), Yq.get(qq).push(Eq)
         };
-      for (let KT of TT.nodes()) {
-        let kT = TT.node(KT);
-        if ("number" == typeof kT.rank && MT(kT.rank, KT), "number" == typeof kT.minRank && "number" == typeof kT.maxRank)
-          for (let TT = kT.minRank; TT <= kT.maxRank; TT++) TT !== kT.rank && MT(TT, KT)
+      for (let Oq of qq.nodes()) {
+        let Eq = qq.node(Oq);
+        if ("number" == typeof Eq.rank && lq(Eq.rank, Oq), "number" == typeof Eq.minRank && "number" == typeof Eq.maxRank)
+          for (let qq = Eq.minRank; qq <= Eq.maxRank; qq++) qq !== Eq.rank && lq(qq, Oq)
       }
-      return kT.map((function(kT) {
-        return cc(TT, kT, cT, lT.get(kT) || [])
+      return Eq.map((function(Eq) {
+        return Eg(qq, Eq, gq, Yq.get(Eq) || [])
       }))
     }
 
-    function Kc(TT, kT, cT, lT) {
-      let MT = !0,
-        KT = new dT;
-      TT.forEach((function(TT) {
-        cT.forEach((TT => KT.setEdge(TT.left, TT.right)));
-        let OT = TT.graph().root,
+    function lg(qq, Eq, gq, Yq) {
+      let lq = !0,
+        Oq = new Jq;
+      qq.forEach((function(qq) {
+        gq.forEach((qq => Oq.setEdge(qq.left, qq.right)));
+        let mq = qq.graph().root,
           {
-            result: yT,
-            usedBias: fT
-          } = kc(TT, OT, KT, lT, MT);
-        kT && fT && (MT = !MT), yT.vs.forEach(((kT, cT) => TT.node(kT).order = cT)),
-          function(TT, kT, cT) {
-            let lT, MT = {};
-            cT.forEach((cT => {
-              let KT, OT, yT = TT.parent(cT);
-              for (; yT;) {
-                if (KT = TT.parent(yT), KT ? (OT = MT[KT], MT[KT] = yT) : (OT = lT, lT = yT), OT && OT !== yT) return void kT.setEdge(OT, yT);
-                yT = KT
+            result: xq,
+            usedBias: Aq
+          } = qg(qq, mq, Oq, Yq, lq);
+        Eq && Aq && (lq = !lq), xq.vs.forEach(((Eq, gq) => qq.node(Eq).order = gq)),
+          function(qq, Eq, gq) {
+            let Yq, lq = {};
+            gq.forEach((gq => {
+              let Oq, mq, xq = qq.parent(gq);
+              for (; xq;) {
+                if (Oq = qq.parent(xq), Oq ? (mq = lq[Oq], lq[Oq] = xq) : (mq = Yq, Yq = xq), mq && mq !== xq) return void Eq.setEdge(mq, xq);
+                xq = Oq
               }
             }))
-          }(TT, KT, yT.vs)
+          }(qq, Oq, xq.vs)
       }))
     }
 
-    function Oc(TT, kT) {
-      Object.values(kT).forEach((kT => kT.forEach(((kT, cT) => TT.node(kT).order = cT))))
+    function Og(qq, Eq) {
+      Object.values(Eq).forEach((Eq => Eq.forEach(((Eq, gq) => qq.node(Eq).order = gq))))
     }
 
-    function yc(TT, kT, cT) {
-      if (kT > cT) {
-        let TT = kT;
-        kT = cT, cT = TT
+    function mg(qq, Eq, gq) {
+      if (Eq > gq) {
+        let qq = Eq;
+        Eq = gq, gq = qq
       }
-      let lT = TT[kT];
-      lT || (TT[kT] = lT = {}), lT[cT] = !0
+      let Yq = qq[Eq];
+      Yq || (qq[Eq] = Yq = {}), Yq[gq] = !0
     }
 
-    function fc(TT, kT, cT) {
-      if (kT > cT) {
-        let TT = kT;
-        kT = cT, cT = TT
+    function xg(qq, Eq, gq) {
+      if (Eq > gq) {
+        let qq = Eq;
+        Eq = gq, gq = qq
       }
-      let lT = TT[kT];
-      return void 0 !== lT && Object.hasOwn(lT, cT)
+      let Yq = qq[Eq];
+      return void 0 !== Yq && Object.hasOwn(Yq, gq)
     }
 
-    function xc(TT, kT, cT, lT) {
-      let MT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-        KT = {},
-        OT = function(TT, kT, cT, lT) {
-          let MT = new dT,
-            KT = TT.graph(),
-            OT = function(TT, kT, cT) {
-              return (lT, MT, KT) => {
-                let OT, yT = lT.node(MT),
-                  fT = lT.node(KT),
-                  xT = 0;
-                if (xT += yT.width / 2, Object.hasOwn(yT, "labelpos")) switch (yT.labelpos.toLowerCase()) {
+    function Ag(qq, Eq, gq, Yq) {
+      let lq = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+        Oq = {},
+        mq = function(qq, Eq, gq, Yq) {
+          let lq = new Jq,
+            Oq = qq.graph(),
+            mq = function(qq, Eq, gq) {
+              return (Yq, lq, Oq) => {
+                let mq, xq = Yq.node(lq),
+                  Aq = Yq.node(Oq),
+                  cq = 0;
+                if (cq += xq.width / 2, Object.hasOwn(xq, "labelpos")) switch (xq.labelpos.toLowerCase()) {
                   case "l":
-                    OT = -yT.width / 2;
+                    mq = -xq.width / 2;
                     break;
                   case "r":
-                    OT = yT.width / 2
+                    mq = xq.width / 2
                 }
-                if (OT && (xT += cT ? OT : -OT), OT = void 0, xT += (yT.dummy ? kT : TT) / 2, xT += (fT.dummy ? kT : TT) / 2, xT += fT.width / 2, Object.hasOwn(fT, "labelpos")) switch (fT.labelpos.toLowerCase()) {
+                if (mq && (cq += gq ? mq : -mq), mq = void 0, cq += (xq.dummy ? Eq : qq) / 2, cq += (Aq.dummy ? Eq : qq) / 2, cq += Aq.width / 2, Object.hasOwn(Aq, "labelpos")) switch (Aq.labelpos.toLowerCase()) {
                   case "l":
-                    OT = fT.width / 2;
+                    mq = Aq.width / 2;
                     break;
                   case "r":
-                    OT = -fT.width / 2
+                    mq = -Aq.width / 2
                 }
-                return OT && (xT += cT ? OT : -OT), xT
+                return mq && (cq += gq ? mq : -mq), cq
               }
-            }(KT.nodesep, KT.edgesep, lT);
-          return kT.forEach((kT => {
-            let lT;
-            kT.forEach((kT => {
-              let KT = cT[kT];
-              if (void 0 !== KT) {
-                if (MT.setNode(KT), void 0 !== lT) {
-                  let yT = cT[lT];
-                  if (void 0 !== yT) {
-                    let cT = MT.edge(yT, KT);
-                    MT.setEdge(yT, KT, Math.max(OT(TT, kT, lT), cT || 0))
+            }(Oq.nodesep, Oq.edgesep, Yq);
+          return Eq.forEach((Eq => {
+            let Yq;
+            Eq.forEach((Eq => {
+              let Oq = gq[Eq];
+              if (void 0 !== Oq) {
+                if (lq.setNode(Oq), void 0 !== Yq) {
+                  let xq = gq[Yq];
+                  if (void 0 !== xq) {
+                    let gq = lq.edge(xq, Oq);
+                    lq.setEdge(xq, Oq, Math.max(mq(qq, Eq, Yq), gq || 0))
                   }
                 }
-                lT = kT
+                Yq = Eq
               }
             }))
-          })), MT
-        }(TT, kT, cT, MT),
-        yT = MT ? "borderLeft" : "borderRight";
+          })), lq
+        }(qq, Eq, gq, lq),
+        xq = lq ? "borderLeft" : "borderRight";
 
-      function fT(TT, kT) {
-        let cT = OT.nodes().slice(),
-          lT = {},
-          MT = cT.pop();
-        for (; MT;) {
-          if (lT[MT]) TT(MT);
+      function Aq(qq, Eq) {
+        let gq = mq.nodes().slice(),
+          Yq = {},
+          lq = gq.pop();
+        for (; lq;) {
+          if (Yq[lq]) qq(lq);
           else {
-            lT[MT] = !0, cT.push(MT);
-            for (let TT of kT(MT)) cT.push(TT)
+            Yq[lq] = !0, gq.push(lq);
+            for (let qq of Eq(lq)) gq.push(qq)
           }
-          MT = cT.pop()
+          lq = gq.pop()
         }
       }
-      return fT((function(TT) {
-        let kT = OT.inEdges(TT);
-        KT[TT] = kT ? kT.reduce(((TT, kT) => {
-          var cT;
-          let lT = null != (cT = KT[kT.v]) ? cT : 0,
-            MT = OT.edge(kT);
-          return Math.max(TT, lT + (void 0 !== MT ? MT : 0))
+      return Aq((function(qq) {
+        let Eq = mq.inEdges(qq);
+        Oq[qq] = Eq ? Eq.reduce(((qq, Eq) => {
+          var gq;
+          let Yq = null != (gq = Oq[Eq.v]) ? gq : 0,
+            lq = mq.edge(Eq);
+          return Math.max(qq, Yq + (void 0 !== lq ? lq : 0))
         }), 0) : 0
-      }), (function(TT) {
-        return OT.predecessors(TT) || []
-      })), fT((function(kT) {
-        let cT = OT.outEdges(kT),
-          lT = Number.POSITIVE_INFINITY;
-        cT && (lT = cT.reduce(((TT, kT) => {
-          let cT = KT[kT.w],
-            lT = OT.edge(kT);
-          return Math.min(TT, (void 0 !== cT ? cT : 0) - (void 0 !== lT ? lT : 0))
+      }), (function(qq) {
+        return mq.predecessors(qq) || []
+      })), Aq((function(Eq) {
+        let gq = mq.outEdges(Eq),
+          Yq = Number.POSITIVE_INFINITY;
+        gq && (Yq = gq.reduce(((qq, Eq) => {
+          let gq = Oq[Eq.w],
+            Yq = mq.edge(Eq);
+          return Math.min(qq, (void 0 !== gq ? gq : 0) - (void 0 !== Yq ? Yq : 0))
         }), Number.POSITIVE_INFINITY));
-        let MT = TT.node(kT);
-        lT !== Number.POSITIVE_INFINITY && MT.borderType !== yT && (KT[kT] = Math.max(void 0 !== KT[kT] ? KT[kT] : 0, lT))
-      }), (function(TT) {
-        return OT.successors(TT) || []
-      })), Object.keys(lT).forEach((TT => {
-        var kT;
-        let lT = cT[TT];
-        void 0 !== lT && (KT[TT] = null != (kT = KT[lT]) ? kT : 0)
-      })), KT
+        let lq = qq.node(Eq);
+        Yq !== Number.POSITIVE_INFINITY && lq.borderType !== xq && (Oq[Eq] = Math.max(void 0 !== Oq[Eq] ? Oq[Eq] : 0, Yq))
+      }), (function(qq) {
+        return mq.successors(qq) || []
+      })), Object.keys(Yq).forEach((qq => {
+        var Eq;
+        let Yq = gq[qq];
+        void 0 !== Yq && (Oq[qq] = null != (Eq = Oq[Yq]) ? Eq : 0)
+      })), Oq
     }
 
-    function Ic(TT, kT) {
-      let cT, lT = UT(TT),
-        MT = Object.assign(function(TT, kT) {
-          let cT = {};
-          return kT.length && kT.reduce((function(kT, lT) {
-            let MT = 0,
-              KT = 0,
-              OT = kT.length,
-              yT = lT[lT.length - 1];
-            return lT.forEach(((kT, fT) => {
-              let xT = function(TT, kT) {
-                  if (TT.node(kT).dummy) {
-                    let cT = TT.predecessors(kT);
-                    if (cT) return cT.find((kT => TT.node(kT).dummy))
+    function cg(qq, Eq) {
+      let gq, Yq = Fq(qq),
+        lq = Object.assign(function(qq, Eq) {
+          let gq = {};
+          return Eq.length && Eq.reduce((function(Eq, Yq) {
+            let lq = 0,
+              Oq = 0,
+              mq = Eq.length,
+              xq = Yq[Yq.length - 1];
+            return Yq.forEach(((Eq, Aq) => {
+              let cq = function(qq, Eq) {
+                  if (qq.node(Eq).dummy) {
+                    let gq = qq.predecessors(Eq);
+                    if (gq) return gq.find((Eq => qq.node(Eq).dummy))
                   }
-                }(TT, kT),
-                IT = xT ? TT.node(xT).order : OT;
-              (xT || kT === yT) && (lT.slice(KT, fT + 1).forEach((kT => {
-                let lT = TT.predecessors(kT);
-                lT && lT.forEach((lT => {
-                  let KT = TT.node(lT),
-                    OT = KT.order;
-                  (OT < MT || IT < OT) && (!KT.dummy || !TT.node(kT).dummy) && yc(cT, lT, kT)
+                }(qq, Eq),
+                uq = cq ? qq.node(cq).order : mq;
+              (cq || Eq === xq) && (Yq.slice(Oq, Aq + 1).forEach((Eq => {
+                let Yq = qq.predecessors(Eq);
+                Yq && Yq.forEach((Yq => {
+                  let Oq = qq.node(Yq),
+                    mq = Oq.order;
+                  (mq < lq || uq < mq) && (!Oq.dummy || !qq.node(Eq).dummy) && mg(gq, Yq, Eq)
                 }))
-              })), KT = fT + 1, MT = IT)
-            })), lT
-          })), cT
-        }(TT, lT), function(TT, kT) {
-          let cT = {};
+              })), Oq = Aq + 1, lq = uq)
+            })), Yq
+          })), gq
+        }(qq, Yq), function(qq, Eq) {
+          let gq = {};
 
-          function lT(kT, lT, MT, KT, OT) {
-            Tk(lT, MT).forEach((lT => {
-              let MT = kT[lT];
-              if (void 0 !== MT && TT.node(MT).dummy) {
-                let kT = TT.predecessors(MT);
-                kT && kT.forEach((kT => {
-                  if (void 0 === kT) return;
-                  let lT = TT.node(kT);
-                  lT.dummy && (lT.order < KT || lT.order > OT) && yc(cT, kT, MT)
+          function Yq(Eq, Yq, lq, Oq, mq) {
+            qE(Yq, lq).forEach((Yq => {
+              let lq = Eq[Yq];
+              if (void 0 !== lq && qq.node(lq).dummy) {
+                let Eq = qq.predecessors(lq);
+                Eq && Eq.forEach((Eq => {
+                  if (void 0 === Eq) return;
+                  let Yq = qq.node(Eq);
+                  Yq.dummy && (Yq.order < Oq || Yq.order > mq) && mg(gq, Eq, lq)
                 }))
               }
             }))
           }
-          return kT.length && kT.reduce((function(kT, cT) {
-            let MT = -1,
-              KT = -1,
-              OT = 0;
-            return cT.forEach(((yT, fT) => {
-              if ("border" === TT.node(yT).dummy) {
-                let kT = TT.predecessors(yT);
-                if (kT && kT.length) {
-                  let yT = kT[0];
-                  if (void 0 === yT) return;
-                  KT = TT.node(yT).order, lT(cT, OT, fT, MT, KT), OT = fT, MT = KT
+          return Eq.length && Eq.reduce((function(Eq, gq) {
+            let lq = -1,
+              Oq = -1,
+              mq = 0;
+            return gq.forEach(((xq, Aq) => {
+              if ("border" === qq.node(xq).dummy) {
+                let Eq = qq.predecessors(xq);
+                if (Eq && Eq.length) {
+                  let xq = Eq[0];
+                  if (void 0 === xq) return;
+                  Oq = qq.node(xq).order, Yq(gq, mq, Aq, lq, Oq), mq = Aq, lq = Oq
                 }
               }
-              lT(cT, OT, cT.length, KT, kT.length)
-            })), cT
-          })), cT
-        }(TT, lT)),
-        KT = {};
-      ["u", "d"].forEach((OT => {
-        cT = "u" === OT ? lT : Object.values(lT).reverse(), ["l", "r"].forEach((lT => {
-          "r" === lT && (cT = cT.map((TT => Object.values(TT).reverse())));
-          let yT = function(TT, kT, cT, lT, MT) {
-              let KT = {},
-                OT = {},
-                yT = {};
-              return kT.forEach((TT => {
-                TT.forEach(((TT, kT) => {
-                  KT[TT] = TT, OT[TT] = TT, yT[TT] = kT
+              Yq(gq, mq, gq.length, Oq, Eq.length)
+            })), gq
+          })), gq
+        }(qq, Yq)),
+        Oq = {};
+      ["u", "d"].forEach((mq => {
+        gq = "u" === mq ? Yq : Object.values(Yq).reverse(), ["l", "r"].forEach((Yq => {
+          "r" === Yq && (gq = gq.map((qq => Object.values(qq).reverse())));
+          let xq = function(qq, Eq, gq, Yq, lq) {
+              let Oq = {},
+                mq = {},
+                xq = {};
+              return Eq.forEach((qq => {
+                qq.forEach(((qq, Eq) => {
+                  Oq[qq] = qq, mq[qq] = qq, xq[qq] = Eq
                 }))
-              })), kT.forEach((kT => {
-                let fT = -1,
-                  xT = -1,
-                  IT = !1,
-                  AT = kT,
-                  CT = kT.findIndex((kT => (null == MT ? void 0 : MT.includes(kT)) || Ac(kT, TT, MT)));
-                CT > 0 && (AT = [kT[CT], ...kT.slice(0, CT), ...kT.slice(CT + 1)], IT = !0), AT.forEach((kT => {
-                  var AT;
-                  let CT = lT(kT);
-                  if (CT && CT.length) {
-                    null != MT && MT.includes(kT) && (CT = CT.filter((kT => Ac(kT, TT, MT))));
-                    let lT = CT.sort(((TT, kT) => {
-                        let cT = yT[TT],
-                          lT = yT[kT];
-                        return (void 0 !== cT ? cT : 0) - (void 0 !== lT ? lT : 0)
+              })), Eq.forEach((Eq => {
+                let Aq = -1,
+                  cq = -1,
+                  uq = !1,
+                  Bq = Eq,
+                  Wq = Eq.findIndex((Eq => (null == lq ? void 0 : lq.includes(Eq)) || ug(Eq, qq, lq)));
+                Wq > 0 && (Bq = [Eq[Wq], ...Eq.slice(0, Wq), ...Eq.slice(Wq + 1)], uq = !0), Bq.forEach((Eq => {
+                  var Bq;
+                  let Wq = Yq(Eq);
+                  if (Wq && Wq.length) {
+                    null != lq && lq.includes(Eq) && (Wq = Wq.filter((Eq => ug(Eq, qq, lq))));
+                    let Yq = Wq.sort(((qq, Eq) => {
+                        let gq = xq[qq],
+                          Yq = xq[Eq];
+                        return (void 0 !== gq ? gq : 0) - (void 0 !== Yq ? Yq : 0)
                       })),
-                      jT = (lT.length - 1) / 2;
-                    for (let TT = Math.floor(jT), MT = Math.ceil(jT); TT <= MT; ++TT) {
-                      let MT = lT[TT];
-                      if (void 0 === MT) continue;
-                      let CT = yT[MT];
-                      if (void 0 !== CT && OT[kT] === kT && fT < CT && yT[MT] !== xT && !fc(cT, kT, MT)) {
-                        let TT = KT[MT];
-                        void 0 !== TT && (OT[MT] = kT, OT[kT] = KT[kT] = TT, fT = CT, IT && (fT = -1, xT = null != (AT = yT[MT]) ? AT : -1, IT = !1))
+                      Nq = (Yq.length - 1) / 2;
+                    for (let qq = Math.floor(Nq), lq = Math.ceil(Nq); qq <= lq; ++qq) {
+                      let lq = Yq[qq];
+                      if (void 0 === lq) continue;
+                      let Wq = xq[lq];
+                      if (void 0 !== Wq && mq[Eq] === Eq && Aq < Wq && xq[lq] !== cq && !xg(gq, Eq, lq)) {
+                        let qq = Oq[lq];
+                        void 0 !== qq && (mq[lq] = Eq, mq[Eq] = Oq[Eq] = qq, Aq = Wq, uq && (Aq = -1, cq = null != (Bq = xq[lq]) ? Bq : -1, uq = !1))
                       }
                     }
                   }
                 }))
               })), {
-                root: KT,
-                align: OT
+                root: Oq,
+                align: mq
               }
-            }(TT, cT, MT, (kT => ("u" === OT ? TT.predecessors(kT) : TT.successors(kT)) || []), kT),
-            fT = xc(TT, cT, yT.root, yT.align, "r" === lT);
-          "r" === lT && (fT = ck(fT, (TT => -TT))), KT[OT + lT] = fT
+            }(qq, gq, lq, (Eq => ("u" === mq ? qq.predecessors(Eq) : qq.successors(Eq)) || []), Eq),
+            Aq = Ag(qq, gq, xq.root, xq.align, "r" === Yq);
+          "r" === Yq && (Aq = gE(Aq, (qq => -qq))), Oq[mq + Yq] = Aq
         }))
       }));
-      let OT = function(TT, kT) {
-        return Object.values(kT).reduce(((kT, cT) => {
-          let lT = Number.NEGATIVE_INFINITY,
-            MT = Number.POSITIVE_INFINITY;
-          Object.entries(cT).forEach((kT => {
-            let [cT, KT] = kT, OT = function(TT, kT) {
-              return TT.node(kT).width
-            }(TT, cT) / 2;
-            lT = Math.max(KT + OT, lT), MT = Math.min(KT - OT, MT)
+      let mq = function(qq, Eq) {
+        return Object.values(Eq).reduce(((Eq, gq) => {
+          let Yq = Number.NEGATIVE_INFINITY,
+            lq = Number.POSITIVE_INFINITY;
+          Object.entries(gq).forEach((Eq => {
+            let [gq, Oq] = Eq, mq = function(qq, Eq) {
+              return qq.node(Eq).width
+            }(qq, gq) / 2;
+            Yq = Math.max(Oq + mq, Yq), lq = Math.min(Oq - mq, lq)
           }));
-          let KT = lT - MT;
-          return KT < kT[0] && (kT = [KT, cT]), kT
+          let Oq = Yq - lq;
+          return Oq < Eq[0] && (Eq = [Oq, gq]), Eq
         }), [Number.POSITIVE_INFINITY, null])[1]
-      }(TT, KT);
-      return function(TT, kT) {
-          let cT = Object.values(kT),
-            lT = WT(Math.min, cT),
-            MT = WT(Math.max, cT);
-          ["u", "d"].forEach((cT => {
-            ["l", "r"].forEach((KT => {
-              let OT = cT + KT,
-                yT = TT[OT];
-              if (!yT || yT === kT) return;
-              let fT = Object.values(yT),
-                xT = lT - WT(Math.min, fT);
-              "l" !== KT && (xT = MT - WT(Math.max, fT)), xT && (TT[OT] = ck(yT, (TT => TT + xT)))
+      }(qq, Oq);
+      return function(qq, Eq) {
+          let gq = Object.values(Eq),
+            Yq = wq(Math.min, gq),
+            lq = wq(Math.max, gq);
+          ["u", "d"].forEach((gq => {
+            ["l", "r"].forEach((Oq => {
+              let mq = gq + Oq,
+                xq = qq[mq];
+              if (!xq || xq === Eq) return;
+              let Aq = Object.values(xq),
+                cq = Yq - wq(Math.min, Aq);
+              "l" !== Oq && (cq = lq - wq(Math.max, Aq)), cq && (qq[mq] = gE(xq, (qq => qq + cq)))
             }))
           }))
-        }(KT, OT),
-        function(TT) {
-          let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
-            cT = TT.ul;
-          return cT ? ck(cT, ((cT, lT) => {
-            var MT, KT;
-            if (kT) {
-              let cT = kT.toLowerCase(),
-                MT = TT[cT];
-              if (MT && void 0 !== MT[lT]) return MT[lT]
+        }(Oq, mq),
+        function(qq) {
+          let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
+            gq = qq.ul;
+          return gq ? gE(gq, ((gq, Yq) => {
+            var lq, Oq;
+            if (Eq) {
+              let gq = Eq.toLowerCase(),
+                lq = qq[gq];
+              if (lq && void 0 !== lq[Yq]) return lq[Yq]
             }
-            let OT = Object.values(TT).map((TT => {
-              let kT = TT[lT];
-              return void 0 !== kT ? kT : 0
-            })).sort(((TT, kT) => TT - kT));
-            return ((null != (MT = OT[1]) ? MT : 0) + (null != (KT = OT[2]) ? KT : 0)) / 2
+            let mq = Object.values(qq).map((qq => {
+              let Eq = qq[Yq];
+              return void 0 !== Eq ? Eq : 0
+            })).sort(((qq, Eq) => qq - Eq));
+            return ((null != (lq = mq[1]) ? lq : 0) + (null != (Oq = mq[2]) ? Oq : 0)) / 2
           })) : {}
-        }(KT, TT.graph().align)
+        }(Oq, qq.graph().align)
     }
 
-    function Ac(TT, kT, cT) {
-      var lT;
-      if (!cT) return !1;
-      let MT = null == (lT = kT.node(TT)) ? void 0 : lT.edgeObj;
-      if (!MT || kT.node(TT).edgeLabel.reversed) return !1;
-      let KT = cT.indexOf(null == MT ? void 0 : MT.v),
-        OT = cT.indexOf(null == MT ? void 0 : MT.w);
-      return -1 !== KT && -1 !== OT && KT === (OT + 1) % cT.length || KT === (OT - 1) % cT.length
+    function ug(qq, Eq, gq) {
+      var Yq;
+      if (!gq) return !1;
+      let lq = null == (Yq = Eq.node(qq)) ? void 0 : Yq.edgeObj;
+      if (!lq || Eq.node(qq).edgeLabel.reversed) return !1;
+      let Oq = gq.indexOf(null == lq ? void 0 : lq.v),
+        mq = gq.indexOf(null == lq ? void 0 : lq.w);
+      return -1 !== Oq && -1 !== mq && Oq === (mq + 1) % gq.length || Oq === (mq - 1) % gq.length
     }
 
-    function Cc(TT, kT) {
-      (function(TT) {
-        let kT = UT(TT),
-          cT = TT.graph(),
-          lT = cT.ranksep,
-          MT = cT.rankalign,
-          KT = 0;
-        kT.forEach((kT => {
-          let cT = kT.reduce(((kT, cT) => {
-            var lT;
-            let MT = null != (lT = TT.node(cT).height) ? lT : 0;
-            return kT > MT ? kT : MT
+    function Bg(qq, Eq) {
+      (function(qq) {
+        let Eq = Fq(qq),
+          gq = qq.graph(),
+          Yq = gq.ranksep,
+          lq = gq.rankalign,
+          Oq = 0;
+        Eq.forEach((Eq => {
+          let gq = Eq.reduce(((Eq, gq) => {
+            var Yq;
+            let lq = null != (Yq = qq.node(gq).height) ? Yq : 0;
+            return Eq > lq ? Eq : lq
           }), 0);
-          kT.forEach((kT => {
-            let lT = TT.node(kT);
-            lT.y = "top" === MT ? KT + lT.height / 2 : "bottom" === MT ? KT + cT - lT.height / 2 : KT + cT / 2
-          })), KT += cT + lT
+          Eq.forEach((Eq => {
+            let Yq = qq.node(Eq);
+            Yq.y = "top" === lq ? Oq + Yq.height / 2 : "bottom" === lq ? Oq + gq - Yq.height / 2 : Oq + gq / 2
+          })), Oq += gq + Yq
         }))
-      })(TT = RT(TT)), Object.entries(Ic(TT, kT)).forEach((kT => {
-        let [cT, lT] = kT;
-        return TT.node(cT).x = lT
+      })(qq = Rq(qq)), Object.entries(cg(qq, Eq)).forEach((Eq => {
+        let [gq, Yq] = Eq;
+        return qq.node(gq).x = Yq
       }))
     }
-    var jc = new WeakMap;
+    var Wg = new WeakMap;
 
-    function vc(TT) {
-      return hc(TT, iT, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}), TT
+    function Ng(qq) {
+      return Vg(qq, Iq, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}), qq
     }
 
-    function tc(TT, kT, cT) {
-      let lT = kT;
-      for (; void 0 !== lT;) {
-        let kT = TT.parent(lT);
-        if (kT === cT) return lT;
-        lT = kT
+    function ag(qq, Eq, gq) {
+      let Yq = Eq;
+      for (; void 0 !== Yq;) {
+        let Eq = qq.parent(Yq);
+        if (Eq === gq) return Yq;
+        Yq = Eq
       }
     }
 
-    function hc(TT, kT, cT) {
-      var lT;
-      let MT = TT.nodes().filter((kT => TT.children(kT).length)),
-        KT = {};
-      MT.forEach((lT => {
-        let MT = TT.node(lT);
-        if (MT && MT.rankdir) {
-          let OT = new dT({
+    function Vg(qq, Eq, gq) {
+      var Yq;
+      let lq = qq.nodes().filter((Eq => qq.children(Eq).length)),
+        Oq = {};
+      lq.forEach((Yq => {
+        let lq = qq.node(Yq);
+        if (lq && lq.rankdir) {
+          let mq = new Jq({
             multigraph: !0,
             compound: !0
           });
-          OT.setGraph({
-            rankdir: MT.rankdir
+          mq.setGraph({
+            rankdir: lq.rankdir
           });
-          let yT = TT.children(lT);
-          yT.forEach((kT => {
-            let cT = {
-              ...TT.node(kT)
+          let xq = qq.children(Yq);
+          xq.forEach((Eq => {
+            let gq = {
+              ...qq.node(Eq)
             };
-            OT.setNode(kT, cT);
-            let MT = TT.parent(kT);
-            MT && MT !== lT && yT.includes(MT) && OT.setParent(kT, MT)
+            mq.setNode(Eq, gq);
+            let lq = qq.parent(Eq);
+            lq && lq !== Yq && xq.includes(lq) && mq.setParent(Eq, lq)
           }));
-          let fT = new Set;
-          TT.edges().forEach((kT => {
-            let cT = tc(TT, kT.v, lT),
-              MT = tc(TT, kT.w, lT);
-            if (cT && MT && cT !== MT) {
-              let lT = `${cT}\0${MT}`;
-              fT.has(lT) || (fT.add(lT), OT.setEdge(cT, MT, {
-                ...TT.edge(kT)
+          let Aq = new Set;
+          qq.edges().forEach((Eq => {
+            let gq = ag(qq, Eq.v, Yq),
+              lq = ag(qq, Eq.w, Yq);
+            if (gq && lq && gq !== lq) {
+              let Yq = `${gq}\0${lq}`;
+              Aq.has(Yq) || (Aq.add(Yq), mq.setEdge(gq, lq, {
+                ...qq.edge(Eq)
               }))
             }
-          })), hc(OT, kT, cT);
-          let xT = bc(OT);
-          Nc(xT, kT, cT, null), Qc(OT, xT);
-          let IT = 1 / 0,
-            AT = 1 / 0,
-            CT = -1 / 0,
-            jT = -1 / 0;
-          OT.nodes().forEach((TT => {
-            if (TT === lT) return;
-            let kT = OT.node(TT);
-            kT && "number" == typeof kT.x && "number" == typeof kT.y && "number" == typeof kT.width && "number" == typeof kT.height && (IT = Math.min(IT, kT.x - kT.width / 2), CT = Math.max(CT, kT.x + kT.width / 2), AT = Math.min(AT, kT.y - kT.height / 2), jT = Math.max(jT, kT.y + kT.height / 2))
-          })), (!isFinite(IT) || !isFinite(AT) || !isFinite(CT) || !isFinite(jT)) && (IT = AT = 0, CT = jT = 0);
-          let vT = CT - IT,
-            tT = jT - AT;
-          KT[lT] = {
-            minX: IT,
-            nM: AT,
-            maxX: CT,
-            pM: jT,
-            width: vT,
-            height: tT,
-            offsetX: IT,
-            offsetY: AT
-          }, MT._dagreClusterSubgraph = OT
+          })), Vg(mq, Eq, gq);
+          let cq = hg(mq);
+          dg(cq, Eq, gq, null), jg(mq, cq);
+          let uq = 1 / 0,
+            Bq = 1 / 0,
+            Wq = -1 / 0,
+            Nq = -1 / 0;
+          mq.nodes().forEach((qq => {
+            if (qq === Yq) return;
+            let Eq = mq.node(qq);
+            Eq && "number" == typeof Eq.x && "number" == typeof Eq.y && "number" == typeof Eq.width && "number" == typeof Eq.height && (uq = Math.min(uq, Eq.x - Eq.width / 2), Wq = Math.max(Wq, Eq.x + Eq.width / 2), Bq = Math.min(Bq, Eq.y - Eq.height / 2), Nq = Math.max(Nq, Eq.y + Eq.height / 2))
+          })), (!isFinite(uq) || !isFinite(Bq) || !isFinite(Wq) || !isFinite(Nq)) && (uq = Bq = 0, Wq = Nq = 0);
+          let aq = Wq - uq,
+            Vq = Nq - Bq;
+          Oq[Yq] = {
+            minX: uq,
+            Cl: Bq,
+            maxX: Wq,
+            Il: Nq,
+            width: aq,
+            height: Vq,
+            offsetX: uq,
+            offsetY: Bq
+          }, lq._dagreClusterSubgraph = mq
         }
       }));
-      let OT = [],
-        yT = new Map;
-      MT.forEach((kT => {
-        let cT = TT.node(kT);
-        cT && cT.rankdir && KT[kT] && yT.set(kT, (TT.children(kT) || []).filter((TT => TT !== kT)))
+      let mq = [],
+        xq = new Map;
+      lq.forEach((Eq => {
+        let gq = qq.node(Eq);
+        gq && gq.rankdir && Oq[Eq] && xq.set(Eq, (qq.children(Eq) || []).filter((qq => qq !== Eq)))
       }));
-      let fT = new Set([...yT.values()].flat()),
-        xT = new Map;
-      yT.forEach(((kT, cT) => {
-        fT.has(cT) || xT.set(cT, (kT => {
-          let cT = [],
-            lT = (TT.children(kT) || []).filter((TT => TT !== kT));
-          for (; lT.length > 0;) {
-            let kT = lT.shift();
-            cT.push(kT), (TT.children(kT) || []).filter((TT => TT !== kT)).forEach((TT => lT.push(TT)))
+      let Aq = new Set([...xq.values()].flat()),
+        cq = new Map;
+      xq.forEach(((Eq, gq) => {
+        Aq.has(gq) || cq.set(gq, (Eq => {
+          let gq = [],
+            Yq = (qq.children(Eq) || []).filter((qq => qq !== Eq));
+          for (; Yq.length > 0;) {
+            let Eq = Yq.shift();
+            gq.push(Eq), (qq.children(Eq) || []).filter((qq => qq !== Eq)).forEach((qq => Yq.push(qq)))
           }
-          return cT
-        })(cT))
+          return gq
+        })(gq))
       }));
-      let IT = new Set([...xT.values()].flat()),
-        AT = TT => {
-          for (let [kT, cT] of xT)
-            if (cT.includes(TT)) return kT;
-          return TT
+      let uq = new Set([...cq.values()].flat()),
+        Bq = qq => {
+          for (let [Eq, gq] of cq)
+            if (gq.includes(qq)) return Eq;
+          return qq
         },
-        CT = [];
-      TT.edges().forEach((kT => {
-        (IT.has(kT.v) || IT.has(kT.w)) && CT.push({
-          edge: kT,
-          label: TT.edge(kT)
+        Wq = [];
+      qq.edges().forEach((Eq => {
+        (uq.has(Eq.v) || uq.has(Eq.w)) && Wq.push({
+          edge: Eq,
+          label: qq.edge(Eq)
         })
       }));
-      let jT = new Map;
-      IT.forEach((kT => {
-        let cT = TT.parent(kT);
-        jT.set(kT, "string" == typeof cT ? cT : void 0)
-      })), xT.forEach(((kT, cT) => {
-        let lT = TT.node(cT),
-          MT = [];
-        kT.forEach((kT => {
-          let cT = TT.node(kT);
-          cT && (MT.push({
-            id: kT,
-            node: cT,
-            parent: jT.get(kT)
-          }), TT.removeNode(kT))
+      let Nq = new Map;
+      uq.forEach((Eq => {
+        let gq = qq.parent(Eq);
+        Nq.set(Eq, "string" == typeof gq ? gq : void 0)
+      })), cq.forEach(((Eq, gq) => {
+        let Yq = qq.node(gq),
+          lq = [];
+        Eq.forEach((Eq => {
+          let gq = qq.node(Eq);
+          gq && (lq.push({
+            id: Eq,
+            node: gq,
+            parent: Nq.get(Eq)
+          }), qq.removeNode(Eq))
         }));
-        let yT = CT.filter((TT => {
+        let xq = Wq.filter((qq => {
             let {
-              edge: cT
-            } = TT;
-            return kT.includes(cT.v) || kT.includes(cT.w)
+              edge: gq
+            } = qq;
+            return Eq.includes(gq.v) || Eq.includes(gq.w)
           })),
-          fT = KT[cT];
-        lT && (OT.push({
-          clusterId: cT,
-          subgraph: lT._dagreClusterSubgraph,
-          bounds: fT,
-          children: kT,
-          removedNodes: MT,
-          removedEdges: yT
-        }), lT.width = fT.width, lT.height = fT.height)
+          Aq = Oq[gq];
+        Yq && (mq.push({
+          clusterId: gq,
+          subgraph: Yq._dagreClusterSubgraph,
+          bounds: Aq,
+          children: Eq,
+          removedNodes: lq,
+          removedEdges: xq
+        }), Yq.width = Aq.width, Yq.height = Aq.height)
       }));
-      let vT = new Set;
-      CT.forEach((kT => {
+      let aq = new Set;
+      Wq.forEach((Eq => {
         let {
-          edge: cT,
-          label: lT
-        } = kT, MT = AT(cT.v), KT = AT(cT.w);
-        if (MT !== KT && TT.hasNode(MT) && TT.hasNode(KT)) {
-          let kT = `${MT}\0${KT}`;
-          vT.has(kT) || (vT.add(kT), TT.setEdge(MT, KT, {
-            ...lT,
+          edge: gq,
+          label: Yq
+        } = Eq, lq = Bq(gq.v), Oq = Bq(gq.w);
+        if (lq !== Oq && qq.hasNode(lq) && qq.hasNode(Oq)) {
+          let Eq = `${lq}\0${Oq}`;
+          aq.has(Eq) || (aq.add(Eq), qq.setEdge(lq, Oq, {
+            ...Yq,
             width: 0,
             height: 0
           }))
         }
       }));
-      let tT = bc(TT),
-        hT = Nc(tT, kT, cT, null != (lT = jc.get(TT)) ? lT : null);
-      jc.set(TT, hT), Qc(TT, tT), vT.forEach((kT => {
-        let cT = kT.indexOf("\0"),
-          lT = kT.slice(0, cT),
-          MT = kT.slice(cT + 1);
-        TT.hasEdge(lT, MT) && TT.removeEdge(lT, MT)
-      })), OT.forEach((kT => {
+      let Vq = hg(qq),
+        dq = dg(Vq, Eq, gq, null != (Yq = Wg.get(qq)) ? Yq : null);
+      Wg.set(qq, dq), jg(qq, Vq), aq.forEach((Eq => {
+        let gq = Eq.indexOf("\0"),
+          Yq = Eq.slice(0, gq),
+          lq = Eq.slice(gq + 1);
+        qq.hasEdge(Yq, lq) && qq.removeEdge(Yq, lq)
+      })), mq.forEach((Eq => {
         let {
-          clusterId: cT,
-          subgraph: lT,
-          bounds: MT,
-          removedNodes: KT,
-          removedEdges: OT
-        } = kT;
-        var yT, fT;
-        let xT = TT.node(cT),
-          IT = null != (yT = null == xT ? void 0 : xT.x) ? yT : 0,
-          AT = null != (fT = null == xT ? void 0 : xT.y) ? fT : 0,
-          CT = (MT.minX + MT.maxX) / 2,
-          jT = (MT.nM + MT.pM) / 2;
-        KT.forEach((kT => {
+          clusterId: gq,
+          subgraph: Yq,
+          bounds: lq,
+          removedNodes: Oq,
+          removedEdges: mq
+        } = Eq;
+        var xq, Aq;
+        let cq = qq.node(gq),
+          uq = null != (xq = null == cq ? void 0 : cq.x) ? xq : 0,
+          Bq = null != (Aq = null == cq ? void 0 : cq.y) ? Aq : 0,
+          Wq = (lq.minX + lq.maxX) / 2,
+          Nq = (lq.Cl + lq.Il) / 2;
+        Oq.forEach((Eq => {
           let {
-            id: cT,
-            node: lT,
-            parent: MT
-          } = kT;
-          TT.setNode(cT, lT), void 0 !== MT && TT.setParent(cT, MT)
-        })), OT.forEach((kT => {
+            id: gq,
+            node: Yq,
+            parent: lq
+          } = Eq;
+          qq.setNode(gq, Yq), void 0 !== lq && qq.setParent(gq, lq)
+        })), mq.forEach((Eq => {
           let {
-            edge: cT,
-            label: lT
-          } = kT;
-          TT.setEdge(cT, lT)
-        })), lT.nodes().forEach((kT => {
-          if (kT === cT) return;
-          let MT = lT.node(kT),
-            KT = TT.node(kT);
-          KT && MT && "number" == typeof MT.x && "number" == typeof MT.y && (KT.x = IT + (MT.x - CT), KT.y = AT + (MT.y - jT))
-        })), delete xT._dagreClusterSubgraph
-      })), MT.forEach((kT => {
-        var cT, lT;
-        let MT = TT.node(kT),
-          OT = KT[kT];
-        if (MT && MT.rankdir && MT._dagreClusterSubgraph && OT) {
-          let KT = MT._dagreClusterSubgraph,
-            yT = null != (cT = MT.x) ? cT : 0,
-            fT = null != (lT = MT.y) ? lT : 0,
-            xT = (OT.minX + OT.maxX) / 2,
-            IT = (OT.nM + OT.pM) / 2;
-          KT.nodes().forEach((cT => {
-            if (cT === kT) return;
-            let lT = KT.node(cT),
-              MT = TT.node(cT);
-            if (MT && lT && "number" == typeof lT.x && "number" == typeof lT.y) {
-              let TT = lT.x - xT,
-                kT = lT.y - IT;
-              MT.x = yT + TT, MT.y = fT + kT
+            edge: gq,
+            label: Yq
+          } = Eq;
+          qq.setEdge(gq, Yq)
+        })), Yq.nodes().forEach((Eq => {
+          if (Eq === gq) return;
+          let lq = Yq.node(Eq),
+            Oq = qq.node(Eq);
+          Oq && lq && "number" == typeof lq.x && "number" == typeof lq.y && (Oq.x = uq + (lq.x - Wq), Oq.y = Bq + (lq.y - Nq))
+        })), delete cq._dagreClusterSubgraph
+      })), lq.forEach((Eq => {
+        var gq, Yq;
+        let lq = qq.node(Eq),
+          mq = Oq[Eq];
+        if (lq && lq.rankdir && lq._dagreClusterSubgraph && mq) {
+          let Oq = lq._dagreClusterSubgraph,
+            xq = null != (gq = lq.x) ? gq : 0,
+            Aq = null != (Yq = lq.y) ? Yq : 0,
+            cq = (mq.minX + mq.maxX) / 2,
+            uq = (mq.Cl + mq.Il) / 2;
+          Oq.nodes().forEach((gq => {
+            if (gq === Eq) return;
+            let Yq = Oq.node(gq),
+              lq = qq.node(gq);
+            if (lq && Yq && "number" == typeof Yq.x && "number" == typeof Yq.y) {
+              let qq = Yq.x - cq,
+                Eq = Yq.y - uq;
+              lq.x = xq + qq, lq.y = Aq + Eq
             }
-          })), delete MT._dagreClusterSubgraph
+          })), delete lq._dagreClusterSubgraph
         }
       }))
     }
 
-    function Nc(TT, kT, cT) {
-      let lT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-      var MT, KT;
-      let OT = !1 !== (null == cT ? void 0 : cT.useDynamic),
-        yT = OT && null != (MT = null == lT ? void 0 : lT.graph) ? MT : null,
-        fT = OT && null != (KT = null == lT ? void 0 : lT.rawNodes) ? KT : null;
-      kT("    makeSpaceForEdgeLabels", (() => function(TT) {
-        let kT = TT.graph();
-        kT.ranksep /= 2, TT.edges().forEach((cT => {
-          var lT;
-          let MT = TT.edge(cT);
-          MT.minlen *= 2, "c" !== (null != (lT = MT.labelpos) ? lT : "r").toLowerCase() && ("TB" === kT.rankdir || "BT" === kT.rankdir ? MT.width += MT.labeloffset : MT.height += MT.labeloffset)
+    function dg(qq, Eq, gq) {
+      let Yq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+      var lq, Oq;
+      let mq = !1 !== (null == gq ? void 0 : gq.useDynamic),
+        xq = mq && null != (lq = null == Yq ? void 0 : Yq.graph) ? lq : null,
+        Aq = mq && null != (Oq = null == Yq ? void 0 : Yq.rawNodes) ? Oq : null;
+      Eq("    makeSpaceForEdgeLabels", (() => function(qq) {
+        let Eq = qq.graph();
+        Eq.ranksep /= 2, qq.edges().forEach((gq => {
+          var Yq;
+          let lq = qq.edge(gq);
+          lq.minlen *= 2, "c" !== (null != (Yq = lq.labelpos) ? Yq : "r").toLowerCase() && ("TB" === Eq.rankdir || "BT" === Eq.rankdir ? lq.width += lq.labeloffset : lq.height += lq.labeloffset)
         }))
-      }(TT))), kT("    removeSelfEdges", (() => function(TT) {
-        TT.edges().forEach((kT => {
-          if (kT.v === kT.w) {
-            let cT = TT.node(kT.v);
-            cT.selfEdges || (cT.selfEdges = []), cT.selfEdges.push({
-              e: kT,
-              label: TT.edge(kT)
-            }), TT.removeEdge(kT)
+      }(qq))), Eq("    removeSelfEdges", (() => function(qq) {
+        qq.edges().forEach((Eq => {
+          if (Eq.v === Eq.w) {
+            let gq = qq.node(Eq.v);
+            gq.selfEdges || (gq.selfEdges = []), gq.selfEdges.push({
+              e: Eq,
+              label: qq.edge(Eq)
+            }), qq.removeEdge(Eq)
           }
         }))
-      }(TT))), kT("    acyclic", (() => jk(TT, yT))), kT("    nestingGraph.run", (() => Xk(TT))), kT("    rank", (() => Vk(RT(TT)))), kT("    injectEdgeLabelProxies", (() => function(TT) {
-        TT.edges().forEach((kT => {
-          let cT = TT.edge(kT);
-          if (cT.width && cT.height) {
-            let cT = TT.node(kT.v),
-              lT = {
-                rank: (TT.node(kT.w).rank - cT.rank) / 2 + cT.rank,
-                e: kT
+      }(qq))), Eq("    acyclic", (() => NE(qq, xq))), Eq("    nestingGraph.run", (() => GE(qq))), Eq("    rank", (() => TE(Rq(qq)))), Eq("    injectEdgeLabelProxies", (() => function(qq) {
+        qq.edges().forEach((Eq => {
+          let gq = qq.edge(Eq);
+          if (gq.width && gq.height) {
+            let gq = qq.node(Eq.v),
+              Yq = {
+                rank: (qq.node(Eq.w).rank - gq.rank) / 2 + gq.rank,
+                e: Eq
               };
-            LT(TT, "edge-proxy", lT, "_ep")
+            kq(qq, "edge-proxy", Yq, "_ep")
           }
         }))
-      }(TT))), kT("    removeEmptyRanks", (() => function(TT) {
-        let kT = TT.nodes().map((kT => TT.node(kT).rank)).filter((TT => void 0 !== TT)),
-          cT = WT(Math.min, kT),
-          lT = [];
-        TT.nodes().forEach((kT => {
-          let MT = TT.node(kT).rank - cT;
-          lT[MT] || (lT[MT] = []), lT[MT].push(kT)
+      }(qq))), Eq("    removeEmptyRanks", (() => function(qq) {
+        let Eq = qq.nodes().map((Eq => qq.node(Eq).rank)).filter((qq => void 0 !== qq)),
+          gq = wq(Math.min, Eq),
+          Yq = [];
+        qq.nodes().forEach((Eq => {
+          let lq = qq.node(Eq).rank - gq;
+          Yq[lq] || (Yq[lq] = []), Yq[lq].push(Eq)
         }));
-        let MT = 0,
-          KT = TT.graph().nodeRankFactor;
-        Array.from(lT).forEach(((kT, cT) => {
-          void 0 === kT && cT % KT !== 0 ? --MT : void 0 !== kT && MT && kT.forEach((kT => TT.node(kT).rank += MT))
+        let lq = 0,
+          Oq = qq.graph().nodeRankFactor;
+        Array.from(Yq).forEach(((Eq, gq) => {
+          void 0 === Eq && gq % Oq !== 0 ? --lq : void 0 !== Eq && lq && Eq.forEach((Eq => qq.node(Eq).rank += lq))
         }))
-      }(TT))), kT("    nestingGraph.cleanup", (() => function(TT) {
-        let kT = TT.graph();
-        TT.removeNode(kT.nestingRoot), delete kT.nestingRoot, TT.edges().forEach((kT => {
-          TT.edge(kT).nestingEdge && TT.removeEdge(kT)
+      }(qq))), Eq("    nestingGraph.cleanup", (() => function(qq) {
+        let Eq = qq.graph();
+        qq.removeNode(Eq.nestingRoot), delete Eq.nestingRoot, qq.edges().forEach((Eq => {
+          qq.edge(Eq).nestingEdge && qq.removeEdge(Eq)
         }))
-      }(TT))), kT("    normalizeRanks", (() => function(TT) {
-        let kT = TT.nodes().map((kT => {
-            let cT = TT.node(kT).rank;
-            return void 0 === cT ? Number.MAX_VALUE : cT
+      }(qq))), Eq("    normalizeRanks", (() => function(qq) {
+        let Eq = qq.nodes().map((Eq => {
+            let gq = qq.node(Eq).rank;
+            return void 0 === gq ? Number.MAX_VALUE : gq
           })),
-          cT = WT(Math.min, kT);
-        TT.nodes().forEach((kT => {
-          let lT = TT.node(kT);
-          Object.hasOwn(lT, "rank") && (lT.rank -= cT)
+          gq = wq(Math.min, Eq);
+        qq.nodes().forEach((Eq => {
+          let Yq = qq.node(Eq);
+          Object.hasOwn(Yq, "rank") && (Yq.rank -= gq)
         }))
-      }(TT))), kT("    assignRankMinMax", (() => function(TT) {
-        let kT = 0;
-        TT.nodes().forEach((cT => {
-          let lT = TT.node(cT);
-          lT.borderTop && (lT.minRank = TT.node(lT.borderTop).rank, lT.maxRank = TT.node(lT.borderBottom).rank, kT = Math.max(kT, lT.maxRank))
-        })), TT.graph().maxRank = kT
-      }(TT))), kT("    removeEdgeLabelProxies", (() => function(TT) {
-        TT.nodes().forEach((kT => {
-          let cT = TT.node(kT);
-          if ("edge-proxy" === cT.dummy) {
-            let lT = cT;
-            TT.edge(lT.e).labelRank = cT.rank, TT.removeNode(kT)
+      }(qq))), Eq("    assignRankMinMax", (() => function(qq) {
+        let Eq = 0;
+        qq.nodes().forEach((gq => {
+          let Yq = qq.node(gq);
+          Yq.borderTop && (Yq.minRank = qq.node(Yq.borderTop).rank, Yq.maxRank = qq.node(Yq.borderBottom).rank, Eq = Math.max(Eq, Yq.maxRank))
+        })), qq.graph().maxRank = Eq
+      }(qq))), Eq("    removeEdgeLabelProxies", (() => function(qq) {
+        qq.nodes().forEach((Eq => {
+          let gq = qq.node(Eq);
+          if ("edge-proxy" === gq.dummy) {
+            let Yq = gq;
+            qq.edge(Yq.e).labelRank = gq.rank, qq.removeNode(Eq)
           }
         }))
-      }(TT))), kT("    normalize.run", (() => vk(TT))), kT("    parentDummyChains", (() => uk(TT))), kT("    addBorderSegments", (() => Lk(TT))), kT("    order", (() => lc(TT, cT, fT))), kT("    insertSelfEdges", (() => function(TT) {
-        UT(TT).forEach((kT => {
-          let cT = 0;
-          kT.forEach(((kT, lT) => {
-            let MT = TT.node(kT);
-            "number" != typeof MT.rank && (MT.rank = 0), MT.order = lT + cT, (MT.selfEdges || []).forEach((kT => {
-              LT(TT, "selfedge", {
-                width: kT.label.width,
-                height: kT.label.height,
-                rank: MT.rank,
-                order: lT + ++cT,
-                e: kT.e,
-                edgeLabel: kT.label
-              }, "_se"), (!Array.isArray(kT.label.points) || 7 !== kT.label.points.length) && (kT.label.points = [{
+      }(qq))), Eq("    normalize.run", (() => aE(qq))), Eq("    parentDummyChains", (() => pE(qq))), Eq("    addBorderSegments", (() => JE(qq))), Eq("    order", (() => gg(qq, gq, Aq))), Eq("    insertSelfEdges", (() => function(qq) {
+        Fq(qq).forEach((Eq => {
+          let gq = 0;
+          Eq.forEach(((Eq, Yq) => {
+            let lq = qq.node(Eq);
+            "number" != typeof lq.rank && (lq.rank = 0), lq.order = Yq + gq, (lq.selfEdges || []).forEach((Eq => {
+              kq(qq, "selfedge", {
+                width: Eq.label.width,
+                height: Eq.label.height,
+                rank: lq.rank,
+                order: Yq + ++gq,
+                e: Eq.e,
+                edgeLabel: Eq.label
+              }, "_se"), (!Array.isArray(Eq.label.points) || 7 !== Eq.label.points.length) && (Eq.label.points = [{
                 x: 0,
                 y: -10
               }, {
@@ -2328,199 +2328,199 @@ export const modules = {
                 x: 0,
                 y: 0
               }])
-            })), delete MT.selfEdges
+            })), delete lq.selfEdges
           }))
         }))
-      }(TT))), kT("    adjustCoordinateSystem", (() => function(TT) {
-        var kT;
-        let cT = null == (kT = TT.graph().rankdir) ? void 0 : kT.toLowerCase();
-        ("lr" === cT || "rl" === cT) && Uk(TT)
-      }(TT))), kT("    position", (() => Cc(TT, cT.corePath))), kT("    positionSelfEdges", (() => function(TT) {
-        TT.nodes().forEach((kT => {
-          let cT = TT.node(kT),
-            lT = TT => "number" == typeof TT && isFinite(TT);
-          if ("selfedge" === cT.dummy) {
-            let MT = cT,
-              KT = TT.node(MT.e.v),
-              OT = lT(null == KT ? void 0 : KT.x) ? KT.x : 0,
-              yT = lT(null == KT ? void 0 : KT.y) ? KT.y : 0,
-              fT = lT(null == KT ? void 0 : KT.width) ? KT.width : 0,
-              xT = lT(null == KT ? void 0 : KT.height) ? KT.height : 0,
-              IT = lT(cT.x) ? cT.x : OT,
-              AT = lT(cT.y) ? cT.y : yT,
-              CT = fT / 2,
-              jT = xT / 2;
-            MT.edgeLabel.points = [{
-              x: IT + CT,
-              y: AT - jT
+      }(qq))), Eq("    adjustCoordinateSystem", (() => function(qq) {
+        var Eq;
+        let gq = null == (Eq = qq.graph().rankdir) ? void 0 : Eq.toLowerCase();
+        ("lr" === gq || "rl" === gq) && UE(qq)
+      }(qq))), Eq("    position", (() => Bg(qq, gq.corePath))), Eq("    positionSelfEdges", (() => function(qq) {
+        qq.nodes().forEach((Eq => {
+          let gq = qq.node(Eq),
+            Yq = qq => "number" == typeof qq && isFinite(qq);
+          if ("selfedge" === gq.dummy) {
+            let lq = gq,
+              Oq = qq.node(lq.e.v),
+              mq = Yq(null == Oq ? void 0 : Oq.x) ? Oq.x : 0,
+              xq = Yq(null == Oq ? void 0 : Oq.y) ? Oq.y : 0,
+              Aq = Yq(null == Oq ? void 0 : Oq.width) ? Oq.width : 0,
+              cq = Yq(null == Oq ? void 0 : Oq.height) ? Oq.height : 0,
+              uq = Yq(gq.x) ? gq.x : mq,
+              Bq = Yq(gq.y) ? gq.y : xq,
+              Wq = Aq / 2,
+              Nq = cq / 2;
+            lq.edgeLabel.points = [{
+              x: uq + Wq,
+              y: Bq - Nq
             }, {
-              x: IT + CT,
-              y: AT - jT
+              x: uq + Wq,
+              y: Bq - Nq
             }, {
-              x: IT,
-              y: AT
+              x: uq,
+              y: Bq
             }, {
-              x: IT - CT,
-              y: AT + jT
+              x: uq - Wq,
+              y: Bq + Nq
             }, {
-              x: IT - CT,
-              y: AT + jT
+              x: uq - Wq,
+              y: Bq + Nq
             }, {
-              x: IT,
-              y: AT
+              x: uq,
+              y: Bq
             }, {
-              x: IT,
-              y: AT
-            }], MT.edgeLabel.x = IT, MT.edgeLabel.y = AT, TT.setEdge(MT.e, MT.edgeLabel), TT.removeNode(kT)
-          } else cT && Array.isArray(cT.selfEdges) && cT.selfEdges.forEach((TT => {
-            if (!Array.isArray(TT.label.points) || 7 !== TT.label.points.length) {
-              let kT = lT(cT.x) ? cT.x : 0,
-                MT = lT(cT.y) ? cT.y : 0,
-                KT = (lT(cT.width) ? cT.width : 0) / 2,
-                OT = (lT(cT.height) ? cT.height : 0) / 2;
-              TT.label.points = [{
-                x: kT + KT,
-                y: MT - OT
+              x: uq,
+              y: Bq
+            }], lq.edgeLabel.x = uq, lq.edgeLabel.y = Bq, qq.setEdge(lq.e, lq.edgeLabel), qq.removeNode(Eq)
+          } else gq && Array.isArray(gq.selfEdges) && gq.selfEdges.forEach((qq => {
+            if (!Array.isArray(qq.label.points) || 7 !== qq.label.points.length) {
+              let Eq = Yq(gq.x) ? gq.x : 0,
+                lq = Yq(gq.y) ? gq.y : 0,
+                Oq = (Yq(gq.width) ? gq.width : 0) / 2,
+                mq = (Yq(gq.height) ? gq.height : 0) / 2;
+              qq.label.points = [{
+                x: Eq + Oq,
+                y: lq - mq
               }, {
-                x: kT + KT,
-                y: MT - OT
+                x: Eq + Oq,
+                y: lq - mq
               }, {
-                x: kT,
-                y: MT
+                x: Eq,
+                y: lq
               }, {
-                x: kT - KT,
-                y: MT + OT
+                x: Eq - Oq,
+                y: lq + mq
               }, {
-                x: kT - KT,
-                y: MT + OT
+                x: Eq - Oq,
+                y: lq + mq
               }, {
-                x: kT,
-                y: MT
+                x: Eq,
+                y: lq
               }, {
-                x: kT,
-                y: MT
+                x: Eq,
+                y: lq
               }]
             }
           }))
         }))
-      }(TT)));
-      let xT = JSON.parse(JSON.stringify(TT._nodes));
-      return kT("    removeBorderNodes", (() => function(TT) {
-        TT.nodes().forEach((kT => {
-          if (TT.children(kT).length) {
-            let cT = TT.node(kT),
-              lT = TT.node(cT.borderTop),
-              MT = TT.node(cT.borderBottom),
-              KT = TT.node(cT.borderLeft[cT.borderLeft.length - 1]),
-              OT = TT.node(cT.borderRight[cT.borderRight.length - 1]);
-            cT.width = Math.abs(OT.x - KT.x), cT.height = Math.abs(MT.y - lT.y), cT.x = KT.x + cT.width / 2, cT.y = lT.y + cT.height / 2
+      }(qq)));
+      let cq = JSON.parse(JSON.stringify(qq._nodes));
+      return Eq("    removeBorderNodes", (() => function(qq) {
+        qq.nodes().forEach((Eq => {
+          if (qq.children(Eq).length) {
+            let gq = qq.node(Eq),
+              Yq = qq.node(gq.borderTop),
+              lq = qq.node(gq.borderBottom),
+              Oq = qq.node(gq.borderLeft[gq.borderLeft.length - 1]),
+              mq = qq.node(gq.borderRight[gq.borderRight.length - 1]);
+            gq.width = Math.abs(mq.x - Oq.x), gq.height = Math.abs(lq.y - Yq.y), gq.x = Oq.x + gq.width / 2, gq.y = Yq.y + gq.height / 2
           }
-        })), TT.nodes().forEach((kT => {
-          "border" === TT.node(kT).dummy && TT.removeNode(kT)
+        })), qq.nodes().forEach((Eq => {
+          "border" === qq.node(Eq).dummy && qq.removeNode(Eq)
         }))
-      }(TT))), kT("    normalize.undo", (() => function(TT) {
-        TT.graph().dummyChains.forEach((kT => {
-          let cT, lT = TT.node(kT),
-            MT = lT.edgeLabel;
-          for (TT.setEdge(lT.edgeObj, MT); lT.dummy;) cT = TT.successors(kT)[0], TT.removeNode(kT), MT.points.push({
-            x: lT.x,
-            y: lT.y
-          }), "edge-label" === lT.dummy && (MT.x = lT.x, MT.y = lT.y, MT.width = lT.width, MT.height = lT.height), kT = cT, lT = TT.node(kT)
+      }(qq))), Eq("    normalize.undo", (() => function(qq) {
+        qq.graph().dummyChains.forEach((Eq => {
+          let gq, Yq = qq.node(Eq),
+            lq = Yq.edgeLabel;
+          for (qq.setEdge(Yq.edgeObj, lq); Yq.dummy;) gq = qq.successors(Eq)[0], qq.removeNode(Eq), lq.points.push({
+            x: Yq.x,
+            y: Yq.y
+          }), "edge-label" === Yq.dummy && (lq.x = Yq.x, lq.y = Yq.y, lq.width = Yq.width, lq.height = Yq.height), Eq = gq, Yq = qq.node(Eq)
         }))
-      }(TT))), kT("    fixupEdgeLabelCoords", (() => function(TT) {
-        TT.edges().forEach((kT => {
-          let cT = TT.edge(kT);
-          if (Object.hasOwn(cT, "x")) switch (("l" === cT.labelpos || "r" === cT.labelpos) && (cT.width -= cT.labeloffset), cT.labelpos) {
+      }(qq))), Eq("    fixupEdgeLabelCoords", (() => function(qq) {
+        qq.edges().forEach((Eq => {
+          let gq = qq.edge(Eq);
+          if (Object.hasOwn(gq, "x")) switch (("l" === gq.labelpos || "r" === gq.labelpos) && (gq.width -= gq.labeloffset), gq.labelpos) {
             case "l":
-              cT.x -= cT.width / 2 + cT.labeloffset;
+              gq.x -= gq.width / 2 + gq.labeloffset;
               break;
             case "r":
-              cT.x += cT.width / 2 + cT.labeloffset
+              gq.x += gq.width / 2 + gq.labeloffset
           }
         }))
-      }(TT))), kT("    undoCoordinateSystem", (() => gk(TT))), kT("    translateGraph", (() => function(TT) {
-        let kT = Number.POSITIVE_INFINITY,
-          cT = 0,
-          lT = Number.POSITIVE_INFINITY,
-          MT = 0,
-          KT = TT.graph(),
-          OT = KT.marginx || 0,
-          yT = KT.marginy || 0;
+      }(qq))), Eq("    undoCoordinateSystem", (() => RE(qq))), Eq("    translateGraph", (() => function(qq) {
+        let Eq = Number.POSITIVE_INFINITY,
+          gq = 0,
+          Yq = Number.POSITIVE_INFINITY,
+          lq = 0,
+          Oq = qq.graph(),
+          mq = Oq.marginx || 0,
+          xq = Oq.marginy || 0;
 
-        function fT(TT) {
-          let KT = TT.x,
-            OT = TT.y,
-            yT = TT.width,
-            fT = TT.height;
-          kT = Math.min(kT, KT - yT / 2), cT = Math.max(cT, KT + yT / 2), lT = Math.min(lT, OT - fT / 2), MT = Math.max(MT, OT + fT / 2)
+        function Aq(qq) {
+          let Oq = qq.x,
+            mq = qq.y,
+            xq = qq.width,
+            Aq = qq.height;
+          Eq = Math.min(Eq, Oq - xq / 2), gq = Math.max(gq, Oq + xq / 2), Yq = Math.min(Yq, mq - Aq / 2), lq = Math.max(lq, mq + Aq / 2)
         }
-        TT.nodes().forEach((kT => fT(TT.node(kT)))), TT.edges().forEach((kT => {
-          let cT = TT.edge(kT);
-          Object.hasOwn(cT, "x") && fT(cT)
-        })), kT -= OT, lT -= yT, TT.nodes().forEach((cT => {
-          let MT = TT.node(cT);
-          MT.x -= kT, MT.y -= lT
-        })), TT.edges().forEach((cT => {
-          let MT = TT.edge(cT);
-          MT.points.forEach((TT => {
-            TT.x -= kT, TT.y -= lT
-          })), Object.hasOwn(MT, "x") && (MT.x -= kT), Object.hasOwn(MT, "y") && (MT.y -= lT)
-        })), KT.width = cT - kT + OT, KT.height = MT - lT + yT
-      }(TT))), kT("    assignNodeIntersects", (() => function(TT) {
-        TT.edges().forEach((kT => {
-          if (kT.v === kT.w) return;
-          let cT, lT, MT = TT.edge(kT),
-            KT = TT.node(kT.v),
-            OT = TT.node(kT.w);
-          MT.points ? (cT = MT.points[0], lT = MT.points[MT.points.length - 1]) : (MT.points = [], cT = OT, lT = KT), MT.points.unshift(gT(KT, cT)), MT.points.push(gT(OT, lT))
+        qq.nodes().forEach((Eq => Aq(qq.node(Eq)))), qq.edges().forEach((Eq => {
+          let gq = qq.edge(Eq);
+          Object.hasOwn(gq, "x") && Aq(gq)
+        })), Eq -= mq, Yq -= xq, qq.nodes().forEach((gq => {
+          let lq = qq.node(gq);
+          lq.x -= Eq, lq.y -= Yq
+        })), qq.edges().forEach((gq => {
+          let lq = qq.edge(gq);
+          lq.points.forEach((qq => {
+            qq.x -= Eq, qq.y -= Yq
+          })), Object.hasOwn(lq, "x") && (lq.x -= Eq), Object.hasOwn(lq, "y") && (lq.y -= Yq)
+        })), Oq.width = gq - Eq + mq, Oq.height = lq - Yq + xq
+      }(qq))), Eq("    assignNodeIntersects", (() => function(qq) {
+        qq.edges().forEach((Eq => {
+          if (Eq.v === Eq.w) return;
+          let gq, Yq, lq = qq.edge(Eq),
+            Oq = qq.node(Eq.v),
+            mq = qq.node(Eq.w);
+          lq.points ? (gq = lq.points[0], Yq = lq.points[lq.points.length - 1]) : (lq.points = [], gq = mq, Yq = Oq), lq.points.unshift(Uq(Oq, gq)), lq.points.push(Uq(mq, Yq))
         }))
-      }(TT))), kT("    reversePoints", (() => function(TT) {
-        TT.edges().forEach((kT => {
-          let cT = TT.edge(kT);
-          cT.reversed && cT.points.reverse()
+      }(qq))), Eq("    reversePoints", (() => function(qq) {
+        qq.edges().forEach((Eq => {
+          let gq = qq.edge(Eq);
+          gq.reversed && gq.points.reverse()
         }))
-      }(TT))), kT("    acyclic.undo", (() => function(TT) {
-        TT.edges().forEach((kT => {
-          let cT = TT.edge(kT);
-          if (cT.reversed) {
-            TT.removeEdge(kT);
-            let lT = cT.forwardName;
-            delete cT.reversed, delete cT.forwardName, TT.setEdge(kT.w, kT.v, cT, lT)
+      }(qq))), Eq("    acyclic.undo", (() => function(qq) {
+        qq.edges().forEach((Eq => {
+          let gq = qq.edge(Eq);
+          if (gq.reversed) {
+            qq.removeEdge(Eq);
+            let Yq = gq.forwardName;
+            delete gq.reversed, delete gq.forwardName, qq.setEdge(Eq.w, Eq.v, gq, Yq)
           }
         }))
-      }(TT))), {
-        graph: TT,
-        rawNodes: xT
+      }(qq))), {
+        graph: qq,
+        rawNodes: cq
       }
     }
 
-    function Qc(TT, kT) {
-      TT.nodes().forEach((cT => {
-        let lT = TT.node(cT),
-          MT = kT.node(cT);
-        lT && (lT.x = MT.x, lT.y = MT.y, lT.order = MT.order, lT.rank = MT.rank, kT.children(cT).length && (lT.width = MT.width, lT.height = MT.height))
-      })), TT.edges().forEach((cT => {
-        let lT = TT.edge(cT),
-          MT = kT.edge(cT);
-        lT.points = MT.points, Object.hasOwn(MT, "x") && (lT.x = MT.x, lT.y = MT.y)
-      })), TT.graph().width = kT.graph().width, TT.graph().height = kT.graph().height
+    function jg(qq, Eq) {
+      qq.nodes().forEach((gq => {
+        let Yq = qq.node(gq),
+          lq = Eq.node(gq);
+        Yq && (Yq.x = lq.x, Yq.y = lq.y, Yq.order = lq.order, Yq.rank = lq.rank, Eq.children(gq).length && (Yq.width = lq.width, Yq.height = lq.height))
+      })), qq.edges().forEach((gq => {
+        let Yq = qq.edge(gq),
+          lq = Eq.edge(gq);
+        Yq.points = lq.points, Object.hasOwn(lq, "x") && (Yq.x = lq.x, Yq.y = lq.y)
+      })), qq.graph().width = Eq.graph().width, qq.graph().height = Eq.graph().height
     }
-    var Sc = ["nodesep", "edgesep", "ranksep", "marginx", "marginy"],
-      Dc = {
+    var Hg = ["nodesep", "edgesep", "ranksep", "marginx", "marginy"],
+      og = {
         ranksep: 50,
         edgesep: 20,
         nodesep: 50,
         rankdir: "TB",
         rankalign: "center"
       },
-      ac = ["acyclicer", "ranker", "rankdir", "align", "rankalign"],
-      Fc = ["width", "height", "rank"],
-      rc = {
+      Pg = ["acyclicer", "ranker", "rankdir", "align", "rankalign"],
+      Qg = ["width", "height", "rank"],
+      yg = {
         width: 0,
         height: 0
       },
-      Pc = ["minlen", "weight", "width", "height", "labeloffset"],
-      wc = {
+      tg = ["minlen", "weight", "width", "height", "labeloffset"],
+      rg = {
         minlen: 1,
         weight: 1,
         width: 0,
@@ -2528,73 +2528,73 @@ export const modules = {
         labeloffset: 10,
         labelpos: "r"
       },
-      mc = ["labelpos"];
+      vg = ["labelpos"];
 
-    function bc(TT) {
-      let kT = new dT({
+    function hg(qq) {
+      let Eq = new Jq({
           multigraph: !0,
           compound: !0
         }),
-        cT = Jc(TT.graph());
-      return kT.setGraph(Object.assign({}, Dc, zc(cT, Sc), kk(cT, ac))), TT.nodes().forEach((cT => {
-        let lT = zc(Jc(TT.node(cT)), Fc);
-        Object.keys(rc).forEach((TT => {
-          void 0 === lT[TT] && (lT[TT] = rc[TT])
-        })), kT.setNode(cT, lT);
-        let MT = TT.parent(cT);
-        void 0 !== MT && kT.setParent(cT, MT)
-      })), TT.edges().forEach((cT => {
-        let lT = Jc(TT.edge(cT));
-        kT.setEdge(cT, Object.assign({}, wc, zc(lT, Pc), kk(lT, mc)))
-      })), kT
+        gq = bg(qq.graph());
+      return Eq.setGraph(Object.assign({}, og, ng(gq, Hg), EE(gq, Pg))), qq.nodes().forEach((gq => {
+        let Yq = ng(bg(qq.node(gq)), Qg);
+        Object.keys(yg).forEach((qq => {
+          void 0 === Yq[qq] && (Yq[qq] = yg[qq])
+        })), Eq.setNode(gq, Yq);
+        let lq = qq.parent(gq);
+        void 0 !== lq && Eq.setParent(gq, lq)
+      })), qq.edges().forEach((gq => {
+        let Yq = bg(qq.edge(gq));
+        Eq.setEdge(gq, Object.assign({}, rg, ng(Yq, tg), EE(Yq, vg)))
+      })), Eq
     }
 
-    function zc(TT, kT) {
-      return ck(kk(TT, kT), Number)
+    function ng(qq, Eq) {
+      return gE(EE(qq, Eq), Number)
     }
 
-    function Jc(TT) {
-      let kT = {};
-      return TT && Object.entries(TT).forEach((TT => {
-        let [cT, lT] = TT;
-        "string" == typeof cT && (cT = cT.toLowerCase()), kT[cT] = lT
-      })), kT
+    function bg(qq) {
+      let Eq = {};
+      return qq && Object.entries(qq).forEach((qq => {
+        let [gq, Yq] = qq;
+        "string" == typeof gq && (gq = gq.toLowerCase()), Eq[gq] = Yq
+      })), Eq
     }
 
-    function oc(TT) {
-      let kT = UT(TT),
-        cT = new dT({
+    function ig(qq) {
+      let Eq = Fq(qq),
+        gq = new Jq({
           compound: !0,
           multigraph: !0
         }).setGraph({});
-      return TT.nodes().forEach((kT => {
-        cT.setNode(kT, {
-          label: kT
-        }), cT.setParent(kT, "layer" + TT.node(kT).rank)
-      })), TT.edges().forEach((TT => cT.setEdge(TT.v, TT.w, {}, TT.name))), kT.forEach(((TT, kT) => {
-        let lT = "layer" + kT;
-        cT.setNode(lT, {
+      return qq.nodes().forEach((Eq => {
+        gq.setNode(Eq, {
+          label: Eq
+        }), gq.setParent(Eq, "layer" + qq.node(Eq).rank)
+      })), qq.edges().forEach((qq => gq.setEdge(qq.v, qq.w, {}, qq.name))), Eq.forEach(((qq, Eq) => {
+        let Yq = "layer" + Eq;
+        gq.setNode(Yq, {
           rank: "same"
-        }), TT.reduce(((TT, kT) => (cT.setEdge(TT, kT, {
+        }), qq.reduce(((qq, Eq) => (gq.setEdge(qq, Eq, {
           style: "invis"
-        }), kT)))
-      })), cT
+        }), Eq)))
+      })), gq
     }
-    var Hc = {
-        time: pT,
-        notime: iT
+    var Zg = {
+        time: Cq,
+        notime: Iq
       },
-      ec = {
-        graphlib: KT,
-        version: Kk,
-        layout: vc,
-        debug: oc,
+      fg = {
+        graphlib: Oq,
+        version: OE,
+        layout: Ng,
+        debug: ig,
         util: {
-          time: pT,
-          notime: iT
+          time: Cq,
+          notime: Iq
         }
       }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

@@ -1,273 +1,249 @@
 export const id = 134;
 export const ids = [134];
 export const modules = {
-  41315: (TT, kT, cT) => {
-    cT.r(kT), cT.d(kT, {
-      compilePagePack: () => xT,
-      prefetchCompiler: () => yT,
-      reconcileHint: () => fT
+  6517: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => Pq,
+      f: () => Qq,
+      j: () => Hq,
+      l: () => jq
     });
-    var lT = cT(6607),
-      MT = cT(6641),
-      KT = cT(6623),
-      OT = cT(6636);
+    var Yq = gq(6521);
+    const lq = 6,
+      Oq = 3,
+      mq = 1,
+      xq = 2,
+      Aq = 4,
+      cq = 8,
+      uq = 16,
+      Bq = 32,
+      Wq = 64,
+      Nq = 128,
+      aq = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
 
-    function yT() {
-      (0, lT.loadPageShaderPackCompiler)()
+    function Vq(qq) {
+      if (!qq) return 0;
+      const Eq = aq.indexOf(qq);
+      if (Eq <= 0) throw new Error(`"${qq}" is not a shader pack hook function`);
+      return Eq
     }
-    async function fT() {
-      const TT = await (0, lT.loadPageShaderPackCompiler)();
-      await (TT ? (0, MT.reconcileStoredShaderPackHint)(TT) : (0, MT.forgetShaderPackActiveHint)())
+
+    function dq(qq) {
+      if (0 === qq) return null;
+      const Eq = aq[qq];
+      if (void 0 === Eq) throw new Error(`${qq} is not a shader pack hook function id`);
+      return Eq
     }
-    async function xT(TT) {
-      const kT = await (0, lT.loadPageShaderPackCompiler)();
-      if (!kT) return {
-        status: "none"
+
+    function jq(qq) {
+      const Eq = Yq.b.length;
+      return {
+        strict: qq >= Eq,
+        program: Yq.b[qq % Eq]
+      }
+    }
+
+    function Hq(qq) {
+      return Number(qq.strict) * Yq.b.length + Yq.b.indexOf(qq.program)
+    }
+
+    function oq(qq) {
+      return "" === qq ? [] : qq.split(" ")
+    }
+
+    function Pq(qq) {
+      const Eq = {
+        variantFlags: new Uint8Array(lq),
+        hooks: new Uint8Array(lq * Oq),
+        moduleCodes: Array(lq).fill(""),
+        reads: Array(2 * lq).fill("")
       };
-      const cT = await (0, OT.e)(TT, kT),
-        yT = (0, MT.storedPackOutcome)(cT, kT);
-      if ("none" === yT.kind) return {
-        status: "none"
-      };
-      const fT = kT.k_((0, MT.storedShaderPackFiles)(cT), (0, KT.shaderPackTextures)());
-      if ("blocked" === yT.kind) return {
-        status: "blocked",
-        messageKey: yT.messageKey,
-        variants: 0 === fT.errors.length ? fT.variants : null
-      };
-      if (fT.errors.length > 0) return console.error("Shader pack failed to compile after passing validation", fT.errors), {
-        status: "none"
-      };
+      for (const gq of qq) {
+        const qq = Hq(gq.key),
+          Yq = (qq, Eq) => null === gq.hooks.surface || gq.reads.fragment.includes(qq) ? 0 : Eq;
+        Eq.variantFlags[qq] = (gq.sceneDepth ? mq : 0) | (gq.movesVertices ? xq : 0) | (gq.sunShadow ? Aq : 0) | (gq.airShadow ? cq : 0) | (gq.discards ? uq : 0) | Yq("localPosition", Bq) | Yq("enchantSpeed", Wq) | Yq("enchantTier", Nq), Eq.hooks[qq * Oq] = Vq(gq.hooks.vertex), Eq.hooks[qq * Oq + 1] = Vq(gq.hooks.surface), Eq.hooks[qq * Oq + 2] = Vq(gq.hooks.light), Eq.moduleCodes[qq] = gq.moduleCode, Eq.reads[2 * qq] = gq.reads.vertex.join(" "), Eq.reads[2 * qq + 1] = gq.reads.fragment.join(" ")
+      }
+      return Eq
+    }
+
+    function Qq(qq) {
       const {
-        name: xT,
-        keepCircleShadows: IT
-      } = cT.manifest;
-      return {
-        status: "active",
-        pack: {
-          name: xT,
-          variants: fT.variants,
-          keepCircleShadows: !0 === IT
-        }
-      }
-    }
-  },
-  6641: (TT, kT, cT) => {
-    cT.r(kT), cT.d(kT, {
-      forgetShaderPackActiveHint: () => zT,
-      isOtherApiVersion: () => PT,
-      isShaderPackActive: () => DT,
-      isShaderPackChangePending: () => rT,
-      markShaderPackChangePending: () => FT,
-      pageShaderPackValidationVersion: () => wT,
-      reconcileStoredShaderPackHint: () => bT,
-      removeShaderPack: () => ST,
-      replaceShaderPack: () => hT,
-      saveShaderPack: () => tT,
-      shaderPackNeedsCheck: () => mT,
-      storedPackOutcome: () => aT,
-      storedShaderPackFiles: () => CT,
-      toStoredShaderPack: () => AT
-    });
-    var lT = cT(6581),
-      MT = cT(6597),
-      KT = cT(47),
-      OT = cT(3383),
-      yT = cT(6647),
-      fT = cT(6623);
-    const xT = "shaderPackChangePending";
-    let IT = null;
-
-    function AT(TT, kT, cT) {
-      return {
-        manifest: TT.manifest,
-        files: (0, lT.s)(TT.files),
-        validation: kT,
-        ...cT && {
-          listing: cT
-        }
-      }
-    }
-
-    function CT(TT) {
-      return Object.keys(TT.files).map((kT => ({
-        path: kT,
-        source: TT.files[kT]
-      })))
-    }
-    let jT = Promise.resolve();
-
-    function vT(TT) {
-      const kT = jT.then(TT);
-      return jT = kT.catch((() => {})), kT
-    }
-
-    function tT(TT, kT) {
-      return vT((() => NT(TT, kT)))
-    }
-
-    function hT(TT, kT, cT) {
-      return vT((async () => JSON.stringify(await (0, yT.e)()) === JSON.stringify(TT) && (null === kT ? (await QT(), !0) : NT(kT, cT))))
-    }
-    async function NT(TT, kT) {
-      const cT = await KT.d.setItem(yT.b, TT);
-      return cT && JT(TT, kT), cT
-    }
-    async function QT() {
-      await KT.d.removeItem(yT.b), KT.e.removeItem(OT.d)
-    }
-
-    function ST() {
-      return vT(QT)
-    }
-
-    function DT(TT, kT) {
-      return "active" === aT(TT, kT).kind
-    }
-
-    function aT(TT, kT) {
-      var cT;
-      return null === TT ? {
-        kind: "none",
-        reason: "nothingStored"
-      } : PT(TT) ? {
-        kind: "none",
-        reason: "otherApiVersion"
-      } : !1 !== (null === (cT = TT.validation) || void 0 === cT ? void 0 : cT.ok) || TT.validation.fromRecheck ? null === kT ? {
-        kind: "none",
-        reason: "noCompiler"
-      } : mT(TT, kT) ? {
-        kind: "blocked",
-        messageKey: "shaderPack:failedUnchecked"
-      } : TT.validation.ok ? {
-        kind: "active"
-      } : {
-        kind: "blocked",
-        messageKey: "shaderPack:failedValidation"
-      } : {
-        kind: "none",
-        reason: "failedWhenLoaded"
-      }
-    }
-
-    function FT() {
-      KT.g.setItem(xT, performance.timeOrigin)
-    }
-
-    function rT() {
-      return KT.g.getItem(xT) === performance.timeOrigin
-    }
-
-    function PT(TT) {
-      return !(0, MT.f)(TT.manifest.apiVersion)
-    }
-
-    function wT(TT) {
-      return IT ??= TT.OJ((0, fT.shaderPackTextures)()), IT
-    }
-
-    function mT(TT, kT) {
-      var cT;
-      return (null === (cT = TT.validation) || void 0 === cT ? void 0 : cT.headerVersion) !== wT(kT)
-    }
-
-    function bT(TT) {
-      return vT((async () => {
-        JT(await (0, yT.e)(!0), TT)
-      }))
-    }
-
-    function zT() {
-      return vT((async () => {
-        KT.e.removeItem(OT.d)
-      }))
-    }
-
-    function JT(TT, kT) {
-      DT(TT, kT) ? KT.e.setItem(OT.d, !0) : KT.e.removeItem(OT.d)
-    }
-  },
-  6636: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => fT,
-      h: () => yT
-    });
-    var lT = cT(6641),
-      MT = cT(6623),
-      KT = cT(141);
-    const OT = 100;
-    async function yT(TT, kT) {
-      var cT;
-      let lT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (cT = navigator.gpu) && void 0 !== cT ? cT : null;
-      const OT = TT.k_(kT, (0, MT.shaderPackTextures)());
-      if (OT.errors.length > 0) return xT(TT, OT.errors, OT.offInStrict);
-      const yT = await async function(TT) {
-        if (!TT) return null;
-        try {
-          const kT = await (0, KT.w)(TT);
-          return kT ? await kT.requestDevice() : null
-        } catch (kT) {
-          return console.error("Couldn't get a WebGPU device to validate the shader pack.", kT), null
-        }
-      }(lT);
-      if (!yT) return null;
-      let fT = !1;
-      yT.lost.then((() => {
-        fT = !0
-      }));
-      try {
-        const kT = await Promise.all(OT.validationModules.map((kT => async function(TT, kT, cT) {
-          kT.pushErrorScope("validation");
-          const lT = kT.createShaderModule({
-              code: cT.code
-            }),
-            MT = kT.popErrorScope(),
-            {
-              messages: KT
-            } = await lT.getCompilationInfo(),
-            OT = KT.filter((TT => "error" === TT.type)).map((kT => TT.mapValidationMessage(cT, kT))),
-            yT = await MT;
-          yT && 0 === OT.length && OT.push({
-            file: null,
-            line: 0,
-            message: yT.message,
-            variants: [cT.key]
-          });
-          return OT
-        }(TT, yT, kT))));
-        return fT ? null : xT(TT, TT.OcT(kT.flat()), OT.offInStrict)
-      } catch (IT) {
-        return console.error("Couldn't validate the shader pack on WebGPU.", IT), null
-      } finally {
-        yT.destroy()
-      }
-    }
-    async function fT(TT, kT) {
-      var cT;
-      if (!(0, lT.shaderPackNeedsCheck)(TT, kT) || (0, lT.isOtherApiVersion)(TT)) return TT;
-      const MT = await yT(kT, (0, lT.storedShaderPackFiles)(TT));
-      if (!MT) return TT;
-      const KT = !1 === (null === (cT = TT.validation) || void 0 === cT ? void 0 : cT.ok) && !TT.validation.fromRecheck,
-        OT = {
-          ...TT,
-          validation: KT ? MT : {
-            ...MT,
-            fromRecheck: !0
+        hooks: Eq,
+        moduleCodes: gq,
+        reads: Yq
+      } = qq;
+      return Array.from(qq.variantFlags, ((qq, lq) => {
+        const Bq = lq * Oq;
+        return {
+          key: jq(lq),
+          hooks: {
+            vertex: dq(Eq[Bq]),
+            surface: dq(Eq[Bq + 1]),
+            light: dq(Eq[Bq + 2])
+          },
+          moduleCode: gq[lq],
+          sceneDepth: 0 !== (qq & mq),
+          sunShadow: 0 !== (qq & Aq),
+          airShadow: 0 !== (qq & cq),
+          movesVertices: 0 !== (qq & xq),
+          discards: 0 !== (qq & uq),
+          reads: {
+            vertex: oq(Yq[2 * lq]),
+            fragment: oq(Yq[2 * lq + 1])
           }
-        };
-      return await (0, lT.replaceShaderPack)(TT, OT, kT) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), OT
+        }
+      }))
+    }
+  },
+  40622: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      B: () => Nq,
+      D: () => aq,
+      b: () => lq,
+      c: () => Yq,
+      e: () => Wq,
+      g: () => uq,
+      j: () => dq,
+      l: () => Oq,
+      n: () => xq,
+      r: () => Aq,
+      v: () => mq,
+      x: () => Vq
+    });
+    const Yq = 3,
+      lq = 0,
+      Oq = 1,
+      mq = 2,
+      xq = {
+        uniform: 3,
+        dW: 4,
+        special: 5,
+        volume: 6,
+        sampler: 7,
+        entities: 8,
+        entityGrids: 9
+      },
+      Aq = 10,
+      cq = "BloxdPackInputs",
+      uq = "bloxdPackInputs",
+      Bq = [{
+        name: "seconds",
+        type: "f32",
+        offset: 0
+      }, {
+        name: "lit",
+        type: "u32",
+        offset: 4
+      }, {
+        name: "renderOffset",
+        type: "vec3i",
+        offset: 16
+      }, {
+        name: "sunDirection",
+        type: "vec3f",
+        offset: 32
+      }, {
+        name: "eyePosition",
+        type: "vec3f",
+        offset: 48
+      }, {
+        name: "shadowDirection",
+        type: "vec3f",
+        offset: 64
+      }],
+      Wq = 80;
+
+    function Nq() {
+      const qq = Bq.map((qq => {
+        let {
+          name: Eq,
+          type: gq
+        } = qq;
+        return `    ${Eq}: ${gq},\n`
+      })).join("");
+      return `struct ${cq} {\n${qq}}\n@group(${Yq}) @binding(${lq}) var<uniform> ${uq}: ${cq};\n`
     }
 
-    function xT(TT, kT, cT) {
-      return {
-        headerVersion: (0, lT.pageShaderPackValidationVersion)(TT),
-        ok: 0 === kT.length,
-        errors: kT.slice(0, OT),
-        moreErrors: Math.max(0, kT.length - OT),
-        offInStrict: cT
-      }
+    function aq(qq, Eq) {
+      const gq = new DataView(qq, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, Wq),
+        [Yq, lq, Oq, mq, xq, Aq] = Bq;
+      gq.setFloat32(Yq.offset, Eq.seconds, !0), gq.setUint32(lq.offset, Eq.lit ? 1 : 0, !0);
+      for (let cq = 0; cq < 3; cq++) gq.setInt32(Oq.offset + 4 * cq, Eq.renderOffset[cq], !0), gq.setFloat32(mq.offset + 4 * cq, Eq.vqq[cq], !0), gq.setFloat32(xq.offset + 4 * cq, Eq.eyePosition[cq], !0), gq.setFloat32(Aq.offset + 4 * cq, Eq.shadowDirection[cq], !0)
     }
+
+    function Vq(qq) {
+      const Eq = new Uint32Array(Math.max(1, qq.length));
+      return qq.forEach(((qq, gq) => {
+        let {
+          id: Yq,
+          rotation: lq
+        } = qq;
+        Eq[gq] = 65535 & Yq | (3 & lq) << 16
+      })), Eq
+    }
+    const dq = {
+      off: 0,
+      strict: 1,
+      allow: 2
+    }
+  },
+  6521: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => Yq,
+      d: () => mq,
+      g: () => xq,
+      j: () => lq,
+      m: () => Oq
+    });
+    const Yq = ["terrain", "liquid", "model"];
+
+    function lq() {
+      const qq = [];
+      for (const Eq of [!1, !0])
+        for (const gq of Yq) qq.push({
+          strict: Eq,
+          program: gq
+        });
+      return qq
+    }
+
+    function Oq(qq) {
+      return `${qq.strict?"strict":"allow"}.${qq.program}`
+    }
+
+    function mq(qq) {
+      return !qq.hooks.vertex && !qq.hooks.surface && !qq.hooks.light
+    }
+
+    function xq(qq, Eq) {
+      return "off" !== Eq && (null === qq || qq.some((qq => qq.key.strict === ("strict" === Eq) && !mq(qq))))
+    }
+  },
+  41004: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      SHADER_PACK_INPUTS_BINDING: () => Oq.b,
+      SHADER_PACK_INPUTS_GROUP: () => Oq.c,
+      SHADER_PACK_INPUTS_SIZE: () => Oq.e,
+      SHADER_PACK_INPUTS_VAR: () => Oq.g,
+      SHADER_PACK_MODES: () => Oq.j,
+      SHADER_PACK_PROGRAMS: () => Yq.b,
+      SHADER_PACK_SCENE_DEPTH_BINDING: () => Oq.l,
+      SHADER_PACK_SUN_SHADOW_BINDINGS: () => Oq.n,
+      SHADER_PACK_SUN_SHADOW_MASK_BINDING: () => Oq.r,
+      SHADER_PACK_TEXTURES_BINDING: () => Oq.v,
+      encodeTextureLayers: () => Oq.x,
+      flattenVariants: () => lq.b,
+      isVariantOff: () => Yq.d,
+      packRunsIn: () => Yq.g,
+      shaderPackInputsWgsl: () => Oq.B,
+      shaderPackVariantKeys: () => Yq.j,
+      variantKeyId: () => Yq.m,
+      writeShaderPackInputs: () => Oq.D
+    });
+    var Yq = gq(6521),
+      lq = gq(6517),
+      Oq = gq(40622)
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

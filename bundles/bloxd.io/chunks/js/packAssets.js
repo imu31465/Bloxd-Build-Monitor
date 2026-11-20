@@ -1,286 +1,286 @@
 export const id = 44;
-export const ids = [44, 194];
+export const ids = [44, 195];
 export const modules = {
-  9423: (TT, kT, cT) => {
-    cT.r(kT), cT.d(kT, {
-      packDisplayName: () => vT,
-      packModelMessage: () => tT,
-      packModelSummary: () => NT,
-      refusedPackModels: () => hT
+  9348: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      packDisplayName: () => aq,
+      packModelMessage: () => Vq,
+      packModelSummary: () => jq,
+      refusedPackModels: () => dq
     });
-    var lT = cT(9429),
-      MT = cT(9438);
-    const KT = "DRACO",
-      OT = 0,
-      yT = 1,
-      fT = 0,
-      xT = 1,
-      IT = 32768;
+    var Yq = gq(9351),
+      lq = gq(9358);
+    const Oq = "DRACO",
+      mq = 0,
+      xq = 1,
+      Aq = 0,
+      cq = 1,
+      uq = 32768;
 
-    function AT(TT) {
-      const kT = new DataView(TT.buffer, TT.byteOffset, TT.byteLength);
-      let cT = 0;
-      const lT = () => {
-          if (cT >= TT.byteLength) throw new RangeError("past the stream");
-          return TT[cT++]
+    function Bq(qq) {
+      const Eq = new DataView(qq.buffer, qq.byteOffset, qq.byteLength);
+      let gq = 0;
+      const Yq = () => {
+          if (gq >= qq.byteLength) throw new RangeError("past the stream");
+          return qq[gq++]
         },
-        MT = () => {
-          if (cT + 4 > TT.byteLength) throw new RangeError("past the stream");
-          const lT = kT.getUint32(cT, !0);
-          return cT += 4, lT
+        lq = () => {
+          if (gq + 4 > qq.byteLength) throw new RangeError("past the stream");
+          const Yq = Eq.getUint32(gq, !0);
+          return gq += 4, Yq
         },
-        AT = () => {
-          let TT = 0;
-          for (let kT = 0; kT < 35; kT += 7) {
-            const cT = lT();
-            if (TT += (127 & cT) * 2 ** kT, 0 === (128 & cT)) return TT
+        Bq = () => {
+          let qq = 0;
+          for (let Eq = 0; Eq < 35; Eq += 7) {
+            const gq = Yq();
+            if (qq += (127 & gq) * 2 ** Eq, 0 === (128 & gq)) return qq
           }
           throw new RangeError("varint too long")
         };
       try {
-        for (let TT = 0; TT < KT.length; TT++)
-          if (lT() !== KT.charCodeAt(TT)) return null;
-        const kT = lT(),
-          CT = lT(),
-          jT = lT(),
-          vT = lT(),
-          tT = lT() | lT() << 8;
-        if (2 !== kT) return null;
-        0 !== (tT & IT) && function(TT, kT, cT) {
-          const lT = () => {
-              kT(cT())
+        for (let qq = 0; qq < Oq.length; qq++)
+          if (Yq() !== Oq.charCodeAt(qq)) return null;
+        const Eq = Yq(),
+          Wq = Yq(),
+          Nq = Yq(),
+          aq = Yq(),
+          Vq = Yq() | Yq() << 8;
+        if (2 !== Eq) return null;
+        0 !== (Vq & uq) && function(qq, Eq, gq) {
+          const Yq = () => {
+              Eq(gq())
             },
-            MT = () => {
-              let cT = 1,
-                MT = !0;
-              for (; cT > 0;) {
-                cT--, MT || lT(), MT = !1;
-                const KT = TT();
-                for (let cT = 0; cT < KT; cT++) lT(), kT(TT());
-                cT += TT()
+            lq = () => {
+              let gq = 1,
+                lq = !0;
+              for (; gq > 0;) {
+                gq--, lq || Yq(), lq = !1;
+                const Oq = qq();
+                for (let gq = 0; gq < Oq; gq++) Yq(), Eq(qq());
+                gq += qq()
               }
             },
-            KT = TT();
-          for (let OT = 0; OT < KT; OT++) TT(), MT();
-          MT()
-        }(AT, (kT => {
-          if (cT + kT > TT.byteLength) throw new RangeError("past the stream");
-          cT += kT
-        }), lT);
-        const hT = CT < 2 ? MT : AT;
-        if (jT === OT) return {
+            Oq = qq();
+          for (let mq = 0; mq < Oq; mq++) qq(), lq();
+          lq()
+        }(Bq, (Eq => {
+          if (gq + Eq > qq.byteLength) throw new RangeError("past the stream");
+          gq += Eq
+        }), Yq);
+        const dq = Wq < 2 ? lq : Bq;
+        if (Nq === mq) return {
           faces: 0,
-          vertices: MT()
+          vertices: lq()
         };
-        if (jT !== yT) return null;
-        if (vT === fT) {
+        if (Nq !== xq) return null;
+        if (aq === Aq) {
           return {
-            faces: hT(),
-            vertices: hT()
+            faces: dq(),
+            vertices: dq()
           }
         }
-        if (vT !== xT) return null;
-        lT(), CT < 2 && AT();
-        const NT = AT();
+        if (aq !== cq) return null;
+        Yq(), Wq < 2 && Bq();
+        const jq = Bq();
         return {
-          faces: AT(),
-          vertices: NT
+          faces: Bq(),
+          vertices: jq
         }
       } catch {
         return null
       }
     }
 
-    function CT(TT, kT, cT) {
-      var lT, MT;
-      if (null === (lT = null === (MT = TT.extensionsUsed) || void 0 === MT ? void 0 : MT.includes("KHR_draco_mesh_compression")) || void 0 === lT || !lT) return null;
-      for (const vT of null !== (KT = TT.meshes) && void 0 !== KT ? KT : []) {
-        var KT;
-        for (const lT of vT.primitives) {
-          var OT, yT, fT, xT, IT, CT;
-          const MT = null === (OT = lT.extensions) || void 0 === OT ? void 0 : OT.KHR_draco_mesh_compression;
-          if ("object" !== typeof MT || null === MT) continue;
-          const KT = null === (yT = TT.bufferViews) || void 0 === yT ? void 0 : yT[MT.bufferView];
-          if (null === kT || void 0 === KT) return jT;
-          const vT = null !== (fT = KT.byteOffset) && void 0 !== fT ? fT : 0,
-            tT = AT(kT.subarray(vT, vT + KT.byteLength));
-          if (null === tT && !cT) continue;
-          const hT = null !== (xT = TT.accessors) && void 0 !== xT ? xT : [],
-            NT = null === (IT = hT[lT.attributes.POSITION]) || void 0 === IT ? void 0 : IT.count,
-            QT = void 0 === lT.indices ? 0 : null === (CT = hT[lT.indices]) || void 0 === CT ? void 0 : CT.count;
-          if (null === tT || void 0 === NT || void 0 === QT || 3 * tT.faces !== QT || tT.vertices > NT) return jT
+    function Wq(qq, Eq, gq) {
+      var Yq, lq;
+      if (null === (Yq = null === (lq = qq.extensionsUsed) || void 0 === lq ? void 0 : lq.includes("KHR_draco_mesh_compression")) || void 0 === Yq || !Yq) return null;
+      for (const aq of null !== (Oq = qq.meshes) && void 0 !== Oq ? Oq : []) {
+        var Oq;
+        for (const Yq of aq.primitives) {
+          var mq, xq, Aq, cq, uq, Wq;
+          const lq = null === (mq = Yq.extensions) || void 0 === mq ? void 0 : mq.KHR_draco_mesh_compression;
+          if ("object" !== typeof lq || null === lq) continue;
+          const Oq = null === (xq = qq.bufferViews) || void 0 === xq ? void 0 : xq[lq.bufferView];
+          if (null === Eq || void 0 === Oq) return Nq;
+          const aq = null !== (Aq = Oq.byteOffset) && void 0 !== Aq ? Aq : 0,
+            Vq = Bq(Eq.subarray(aq, aq + Oq.byteLength));
+          if (null === Vq && !gq) continue;
+          const dq = null !== (cq = qq.accessors) && void 0 !== cq ? cq : [],
+            jq = null === (uq = dq[Yq.attributes.POSITION]) || void 0 === uq ? void 0 : uq.count,
+            Hq = void 0 === Yq.indices ? 0 : null === (Wq = dq[Yq.indices]) || void 0 === Wq ? void 0 : Wq.count;
+          if (null === Vq || void 0 === jq || void 0 === Hq || 3 * Vq.faces !== Hq || Vq.vertices > jq) return Nq
         }
       }
       return null
     }
-    const jT = "has a Draco stream whose counts don't match its accessors";
+    const Nq = "has a Draco stream whose counts don't match its accessors";
 
-    function vT(TT) {
-      var kT;
-      return null !== (kT = TT.name) && void 0 !== kT ? kT : TT.fromFolderName || TT.id
+    function aq(qq) {
+      var Eq;
+      return null !== (Eq = qq.name) && void 0 !== Eq ? Eq : qq.fromFolderName || qq.id
     }
 
-    function tT(TT, kT, cT) {
-      return `Texture pack "${TT}": model "${kT}" was not loaded because it ${cT}. The default model is used instead.`
+    function Vq(qq, Eq, gq) {
+      return `Texture pack "${qq}": model "${Eq}" was not loaded because it ${gq}. The default model is used instead.`
     }
 
-    function hT(TT, kT, cT) {
+    function dq(qq, Eq, gq) {
       let {
-        strictDraco: KT = !1
+        strictDraco: Oq = !1
       } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const OT = {};
-      for (const [yT, fT] of Object.entries(kT)) {
-        let kT;
-        if (fT.startsWith("data:")) try {
-          const TT = new Uint8Array((0, MT.t)(fT));
-          if (kT = (0, lT.b)(TT), null === kT) {
+      const mq = {};
+      for (const [xq, Aq] of Object.entries(Eq)) {
+        let Eq;
+        if (Aq.startsWith("data:")) try {
+          const qq = new Uint8Array((0, lq.p)(Aq));
+          if (Eq = (0, Yq.d)(qq), null === Eq) {
             const {
-              json: cT,
-              bin: lT
-            } = (0, MT.D)(TT);
-            kT = CT(cT, lT, KT)
+              json: gq,
+              bin: Yq
+            } = (0, lq.y)(qq);
+            Eq = Wq(gq, Yq, Oq)
           }
         } catch {
-          kT = "is not a binary glTF 2.0 file"
-        } else kT = "loads data from outside the file";
-        kT && (OT[yT] = kT, cT && console.warn(tT(TT, yT, kT)))
+          Eq = "is not a binary glTF 2.0 file"
+        } else Eq = "loads data from outside the file";
+        Eq && (mq[xq] = Eq, gq && console.warn(Vq(qq, xq, Eq)))
       }
-      return OT
+      return mq
     }
 
-    function NT(TT, kT) {
-      const cT = Object.keys(kT);
-      if (0 === cT.length) return null;
-      if (1 === cT.length) return tT(TT, cT[0], kT[cT[0]]);
-      const lT = cT.map((TT => `"${TT}" ${kT[TT]}`)).join("; ");
-      return `Texture pack "${TT}": ${cT.length} models were not loaded (${lT}). The default models are used instead.`
+    function jq(qq, Eq) {
+      const gq = Object.keys(Eq);
+      if (0 === gq.length) return null;
+      if (1 === gq.length) return Vq(qq, gq[0], Eq[gq[0]]);
+      const Yq = gq.map((qq => `"${qq}" ${Eq[qq]}`)).join("; ");
+      return `Texture pack "${qq}": ${gq.length} models were not loaded (${Yq}). The default models are used instead.`
     }
   },
-  60885: (TT, kT, cT) => {
-    cT.d(kT, {
-      packAssets: () => NT
+  61465: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      packAssets: () => jq
     });
-    var lT = cT(3092),
-      MT = cT(3125),
-      KT = cT(9423),
-      OT = cT(3155),
-      yT = cT(3189);
+    var Yq = gq(3067),
+      lq = gq(3090),
+      Oq = gq(9348),
+      mq = gq(3110),
+      xq = gq(3135);
 
-    function fT(TT, kT, cT, lT) {
-      const MT = `${(0,OT.c)(TT,kT)}|sheets${cT}`;
-      return lT === yT.d ? MT : `${MT}|layers${lT}`
+    function Aq(qq, Eq, gq, Yq) {
+      const lq = `${(0,mq.e)(qq,Eq)}|sheets${gq}`;
+      return Yq === xq.d ? lq : `${lq}|layers${Yq}`
     }
-    var xT = cT(3191),
-      IT = cT(3108),
-      AT = cT(3099),
-      CT = cT(3163);
-    var jT = cT(42833);
-    const vT = 256;
-    let tT = null,
-      hT = null;
+    var cq = gq(3143),
+      uq = gq(3076),
+      Bq = gq(3072),
+      Wq = gq(3118);
+    var Nq = gq(43087);
+    const aq = 256;
+    let Vq = null,
+      dq = null;
 
-    function NT(TT) {
-      var kT;
-      let cT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : yT.d;
-      if ((null === (kT = tT) || void 0 === kT ? void 0 : kT.pack) === TT.pack && tT.maxLayerWidth === cT) return tT.assets;
-      const NT = (0, jT.f)(TT.pack, (0, jT.k)(TT));
-      if (null === NT || !(0, MT.g)(NT)) return Promise.resolve(null);
-      const ST = async function(TT, kT, cT) {
-        var jT;
-        const tT = null !== (jT = TT.textureOverrides) && void 0 !== jT ? jT : {},
+    function jq(qq) {
+      var Eq;
+      let gq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : xq.d;
+      if ((null === (Eq = Vq) || void 0 === Eq ? void 0 : Eq.pack) === qq.pack && Vq.maxLayerWidth === gq) return Vq.assets;
+      const jq = (0, Nq.f)(qq.pack, (0, Nq.k)(qq));
+      if (null === jq || !(0, lq.c)(jq)) return Promise.resolve(null);
+      const oq = async function(qq, Eq, gq) {
+        var Nq;
+        const Vq = null !== (Nq = qq.textureOverrides) && void 0 !== Nq ? Nq : {},
           {
-            id: NT,
-            version: ST
-          } = TT.metaData,
-          DT = kT && NT !== lT.r.CUSTOM,
-          aT = {};
-        DT && (hT = aT);
-        let FT, rT, PT = DT ? await async function(TT, kT, cT, lT) {
-          const MT = fT(TT, kT, cT, yT.d),
-            KT = fT(TT, kT, cT, lT),
-            xT = await (0, OT.g)((TT => TT === MT || TT === KT));
-          return null !== xT && (lT === yT.d || xT.blockAtlasWidth <= lT) ? xT : null
-        }(NT, ST, vT, cT): null;
-        if (null === PT) {
+            id: jq,
+            version: oq
+          } = qq.metaData,
+          Pq = Eq && jq !== Yq.n.CUSTOM,
+          Qq = {};
+        Pq && (dq = Qq);
+        let yq, tq, rq = Pq ? await async function(qq, Eq, gq, Yq) {
+          const lq = Aq(qq, Eq, gq, xq.d),
+            Oq = Aq(qq, Eq, gq, Yq),
+            cq = await (0, mq.k)((qq => qq === lq || qq === Oq));
+          return null !== cq && (Yq === xq.d || cq.blockAtlasWidth <= Yq) ? cq : null
+        }(jq, oq, aq, gq): null;
+        if (null === rq) {
           const {
-            blockMetadata: TT,
-            getDefaultTexture: kT,
-            textureNameToIndex: KT
-          } = await (0, MT.k)(), yT = (0, IT.b)(TT, ((TT, cT) => ({
-            url: QT(tT, kT, TT, "block" === cT ? AT.f.BLOCK : AT.f.ITEM)
-          }))), xT = await
-          function(TT, kT, cT, lT, MT, KT) {
-            return (0, CT.d)((OT => OT.WasmTextureWorker.generateRequired(TT, kT, cT, lT, MT, KT)))
-          }(TT, KT, yT, NT === lT.d, cT, vT), jT = xT.assets;
-          PT = {
-            ...jT,
+            blockMetadata: qq,
+            getDefaultTexture: Eq,
+            textureNameToIndex: Oq
+          } = await (0, lq.f)(), xq = (0, uq.d)(qq, ((qq, gq) => ({
+            url: Hq(Vq, Eq, qq, "block" === gq ? Bq.g.BLOCK : Bq.g.ITEM)
+          }))), cq = await
+          function(qq, Eq, gq, Yq, lq, Oq) {
+            return (0, Wq.b)((mq => mq.WasmTextureWorker.generateRequired(qq, Eq, gq, Yq, lq, Oq)))
+          }(qq, Oq, xq, jq === Yq.c, gq, aq), Nq = cq.assets;
+          rq = {
+            ...Nq,
             averageColors: {}
-          }, FT = xT.averageColors(), DT && (rT = FT.then((async TT => {
-            null !== TT && hT === aT && await
-            function(TT, kT, cT, lT, MT) {
-              return (0, OT.i)(fT(TT, kT, lT, MT), cT)
-            }(NT, ST, {
-              ...jT,
-              averageColors: TT
-            }, vT, xT.layerCap)
+          }, yq = cq.averageColors(), Pq && (tq = yq.then((async qq => {
+            null !== qq && dq === Qq && await
+            function(qq, Eq, gq, Yq, lq) {
+              return (0, mq.p)(Aq(qq, Eq, Yq, lq), gq)
+            }(jq, oq, {
+              ...Nq,
+              averageColors: qq
+            }, aq, cq.layerCap)
           })))
         }
-        return function(TT, kT) {
-          var cT, lT;
-          let MT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Promise.resolve((yT = TT.averageColors, 0 === Object.keys(null !== yT && void 0 !== yT ? yT : {}).length ? null : TT.averageColors)),
-            OT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Promise.resolve();
-          var yT;
-          const fT = null !== (cT = kT.textureOverrides) && void 0 !== cT ? cT : {},
-            IT = null !== (lT = kT.modelOverrides) && void 0 !== lT ? lT : {},
-            AT = 0 === Object.keys(IT).length ? {} : (0, KT.refusedPackModels)((0, KT.packDisplayName)(kT.metaData), IT, !0, {
+        return function(qq, Eq) {
+          var gq, Yq;
+          let lq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Promise.resolve((xq = qq.averageColors, 0 === Object.keys(null !== xq && void 0 !== xq ? xq : {}).length ? null : qq.averageColors)),
+            mq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Promise.resolve();
+          var xq;
+          const Aq = null !== (gq = Eq.textureOverrides) && void 0 !== gq ? gq : {},
+            uq = null !== (Yq = Eq.modelOverrides) && void 0 !== Yq ? Yq : {},
+            Bq = 0 === Object.keys(uq).length ? {} : (0, Oq.refusedPackModels)((0, Oq.packDisplayName)(Eq.metaData), uq, !0, {
               strictDraco: !0
             }),
             {
-              animatedBlockTextures: CT,
-              rotatedBlockTextures: jT
-            } = TT,
-            vT = TT => {
-              var kT, cT;
-              return null !== (kT = null !== (cT = CT[TT]) && void 0 !== cT ? cT : jT[TT]) && void 0 !== kT ? kT : null
+              animatedBlockTextures: Wq,
+              rotatedBlockTextures: Nq
+            } = qq,
+            aq = qq => {
+              var Eq, gq;
+              return null !== (Eq = null !== (gq = Wq[qq]) && void 0 !== gq ? gq : Nq[qq]) && void 0 !== Eq ? Eq : null
             };
           return {
             terrain: {
-              atlasSheets: TT.blockAtlasArr,
-              texture: vT
+              atlasSheets: qq.blockAtlasArr,
+              texture: aq
             },
-            sheetPixels: [...TT.blockAtlasPixels],
-            heldUntil: OT,
-            sheetLayout: TT.imagesPerAtlas,
-            sheetWidth: TT.blockAtlasWidth,
-            armourAtlasUrl: TT.armourAtlas,
-            texture: TT => {
-              var kT, cT;
-              return null !== (kT = null !== (cT = vT(TT)) && void 0 !== cT ? cT : (0, xT.c)(fT, TT)) && void 0 !== kT ? kT : null
+            sheetPixels: [...qq.blockAtlasPixels],
+            heldUntil: mq,
+            sheetLayout: qq.imagesPerAtlas,
+            sheetWidth: qq.blockAtlasWidth,
+            armourAtlasUrl: qq.armourAtlas,
+            texture: qq => {
+              var Eq, gq;
+              return null !== (Eq = null !== (gq = aq(qq)) && void 0 !== gq ? gq : (0, cq.d)(Aq, qq)) && void 0 !== Eq ? Eq : null
             },
-            model: TT => void 0 === AT[TT] && IT[TT] || null,
-            averageColours: MT
+            model: qq => void 0 === Bq[qq] && uq[qq] || null,
+            averageColours: lq
           }
-        }(PT, TT, FT, rT)
-      }(NT, null === TT.gameSource, cT), DT = {
-        pack: TT.pack,
-        maxLayerWidth: cT,
-        assets: ST
+        }(rq, qq, yq, tq)
+      }(jq, null === qq.gameSource, gq), Pq = {
+        pack: qq.pack,
+        maxLayerWidth: gq,
+        assets: oq
       };
-      return tT = DT, ST.catch((() => {
-        tT === DT && (tT = null)
-      })), ST
+      return Vq = Pq, oq.catch((() => {
+        Vq === Pq && (Vq = null)
+      })), oq
     }
 
-    function QT(TT, kT, lT, MT) {
-      const KT = (0, xT.c)(TT, lT);
-      if (KT) return KT;
+    function Hq(qq, Eq, Yq, lq) {
+      const Oq = (0, cq.d)(qq, Yq);
+      if (Oq) return Oq;
       try {
-        return kT(lT, MT).url
+        return Eq(Yq, lq).url
       } catch {
-        return cT(3237)
+        return gq(3185)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

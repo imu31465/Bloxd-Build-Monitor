@@ -1,174 +1,174 @@
 export const id = 251;
 export const ids = [251];
 export const modules = {
-  39883: (TT, kT, cT) => {
-    cT.d(kT, {
-      d: () => CT
+  39995: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => Wq
     });
-    var lT = cT(39620),
-      MT = cT(39624),
-      KT = cT(36892),
-      OT = cT(37093),
-      yT = cT(39846),
-      fT = cT(39770),
-      xT = cT(36949),
-      IT = cT(39829),
-      AT = cT(39645);
-    let CT = (() => {
-      var TT, kT;
-      let cT, CT, jT, vT, tT, hT, NT, QT, ST, DT, aT, FT, rT, PT = yT.b,
-        wT = [],
-        mT = [],
-        bT = [],
-        zT = [],
-        JT = [],
-        oT = [],
-        HT = [],
-        eT = [],
-        GT = [],
-        VT = [],
-        ET = [],
-        ZT = [],
-        uT = [],
-        XT = [],
-        dT = [],
-        LT = [],
-        RT = [],
-        gT = [],
-        UT = [],
-        YT = [],
-        BT = [];
-      return TT = class extends PT {
+    var Yq = gq(39757),
+      lq = gq(39759),
+      Oq = gq(37139),
+      mq = gq(37289),
+      xq = gq(39960),
+      Aq = gq(39870),
+      cq = gq(37171),
+      uq = gq(39938),
+      Bq = gq(39779);
+    let Wq = (() => {
+      var qq, Eq;
+      let gq, Wq, Nq, aq, Vq, dq, jq, Hq, oq, Pq, Qq, yq, tq, rq = xq.c,
+        vq = [],
+        hq = [],
+        nq = [],
+        bq = [],
+        iq = [],
+        Zq = [],
+        fq = [],
+        Mq = [],
+        Tq = [],
+        zq = [],
+        Sq = [],
+        pq = [],
+        Gq = [],
+        Lq = [],
+        Jq = [],
+        kq = [],
+        Rq = [],
+        Uq = [],
+        Fq = [],
+        sq = [],
+        Xq = [];
+      return qq = class extends rq {
         get range() {
           return this._range
         }
-        set range(TT) {
-          this._range = TT, this._inverseSquaredRange = 1 / (this.range * this.range)
+        set range(qq) {
+          this._range = qq, this._inverseSquaredRange = 1 / (this.range * this.range)
         }
         get intensityMode() {
           return this._intensityMode
         }
-        set intensityMode(TT) {
-          this._intensityMode = TT, this._computePhotometricScale()
+        set intensityMode(qq) {
+          this._intensityMode = qq, this._computePhotometricScale()
         }
         get radius() {
           return this._radius
         }
-        set radius(TT) {
-          this._radius = TT, this._computePhotometricScale()
+        set radius(qq) {
+          this._radius = qq, this._computePhotometricScale()
         }
         get renderPriority() {
-          return (0, lT.b)(this, kT, "f")
+          return (0, Yq.b)(this, Eq, "f")
         }
-        set renderPriority(TT) {
-          (0, lT.d)(this, kT, TT, "f")
+        set renderPriority(qq) {
+          (0, Yq.e)(this, Eq, qq, "f")
         }
         get shadowEnabled() {
           return this._shadowEnabled
         }
-        set shadowEnabled(TT) {
-          this._shadowEnabled !== TT && (this._shadowEnabled = TT, this._markMeshesAsLightDirty())
+        set shadowEnabled(qq) {
+          this._shadowEnabled !== qq && (this._shadowEnabled = qq, this._markMeshesAsLightDirty())
         }
         get includedOnlyMeshes() {
           return this._includedOnlyMeshes
         }
-        set includedOnlyMeshes(TT) {
-          this._includedOnlyMeshes = TT, this._hookArrayForIncludedOnly(TT)
+        set includedOnlyMeshes(qq) {
+          this._includedOnlyMeshes = qq, this._hookArrayForIncludedOnly(qq)
         }
         get excludedMeshes() {
           return this._excludedMeshes
         }
-        set excludedMeshes(TT) {
-          this._excludedMeshes = TT, this._hookArrayForExcluded(TT)
+        set excludedMeshes(qq) {
+          this._excludedMeshes = qq, this._hookArrayForExcluded(qq)
         }
         get excludeWithLayerMask() {
           return this._excludeWithLayerMask
         }
-        set excludeWithLayerMask(TT) {
-          this._excludeWithLayerMask = TT, this._resyncMeshes()
+        set excludeWithLayerMask(qq) {
+          this._excludeWithLayerMask = qq, this._resyncMeshes()
         }
         get includeOnlyWithLayerMask() {
           return this._includeOnlyWithLayerMask
         }
-        set includeOnlyWithLayerMask(TT) {
-          this._includeOnlyWithLayerMask = TT, this._resyncMeshes()
+        set includeOnlyWithLayerMask(qq) {
+          this._includeOnlyWithLayerMask = qq, this._resyncMeshes()
         }
         get lightmapMode() {
           return this._lightmapMode
         }
-        set lightmapMode(TT) {
-          this._lightmapMode !== TT && (this._lightmapMode = TT, this._markMeshesAsLightDirty())
+        set lightmapMode(qq) {
+          this._lightmapMode !== qq && (this._lightmapMode = qq, this._markMeshesAsLightDirty())
         }
-        getViewMatrix(TT) {
+        getViewMatrix(qq) {
           return null
         }
-        getProjectionMatrix(TT, kT) {
+        getProjectionMatrix(qq, Eq) {
           return null
         }
-        constructor(cT, MT, KT) {
-          super(cT, MT, !1), this.diffuse = ((0, lT.h)(this, wT), (0, lT.h)(this, mT, new OT.c(1, 1, 1))), this.specular = ((0, lT.h)(this, bT), (0, lT.h)(this, zT, new OT.c(1, 1, 1))), this.falloffType = ((0, lT.h)(this, JT), (0, lT.h)(this, oT, TT.FALLOFF_DEFAULT)), this.intensity = ((0, lT.h)(this, HT), (0, lT.h)(this, eT, 1)), this._range = ((0, lT.h)(this, GT), Number.MAX_VALUE), this._inverseSquaredRange = 0, this._photometricScale = 1, this._intensityMode = TT.INTENSITYMODE_AUTOMATIC, this._radius = 1e-5, this._renderPriority = (0, lT.h)(this, VT, void 0), kT.set(this, ((0, lT.h)(this, ET), (0, lT.h)(this, ZT, 0))), this._shadowEnabled = ((0, lT.h)(this, uT), (0, lT.h)(this, XT, !0)), this._includedOnlyMeshes = (0, lT.h)(this, dT), this._excludeWithLayerMask = (0, lT.h)(this, LT, 0), this._includeOnlyWithLayerMask = ((0, lT.h)(this, RT), (0, lT.h)(this, gT, 0)), this._lightmapMode = ((0, lT.h)(this, UT), (0, lT.h)(this, YT, 0)), this._shadowGenerators = ((0, lT.h)(this, BT), null), this._excludedMeshesIds = new Array, this._includedOnlyMeshesIds = new Array, this._currentViewDepth = 0, this._clusteredContainer = null, this._isLight = !0, KT || this.NJ().addLight(this), this._uniformBuffer = new fT.b(this.NJ().Dv(), void 0, void 0, cT), this._buildUniformLayout(), this.includedOnlyMeshes = [], this.excludedMeshes = [], KT || this._resyncMeshes()
+        constructor(gq, lq, Oq) {
+          super(gq, lq, !1), this.diffuse = ((0, Yq.i)(this, vq), (0, Yq.i)(this, hq, new mq.d(1, 1, 1))), this.specular = ((0, Yq.i)(this, nq), (0, Yq.i)(this, bq, new mq.d(1, 1, 1))), this.falloffType = ((0, Yq.i)(this, iq), (0, Yq.i)(this, Zq, qq.FALLOFF_DEFAULT)), this.intensity = ((0, Yq.i)(this, fq), (0, Yq.i)(this, Mq, 1)), this._range = ((0, Yq.i)(this, Tq), Number.MAX_VALUE), this._inverseSquaredRange = 0, this._photometricScale = 1, this._intensityMode = qq.INTENSITYMODE_AUTOMATIC, this._radius = 1e-5, this._renderPriority = (0, Yq.i)(this, zq, void 0), Eq.set(this, ((0, Yq.i)(this, Sq), (0, Yq.i)(this, pq, 0))), this._shadowEnabled = ((0, Yq.i)(this, Gq), (0, Yq.i)(this, Lq, !0)), this._includedOnlyMeshes = (0, Yq.i)(this, Jq), this._excludeWithLayerMask = (0, Yq.i)(this, kq, 0), this._includeOnlyWithLayerMask = ((0, Yq.i)(this, Rq), (0, Yq.i)(this, Uq, 0)), this._lightmapMode = ((0, Yq.i)(this, Fq), (0, Yq.i)(this, sq, 0)), this._shadowGenerators = ((0, Yq.i)(this, Xq), null), this._excludedMeshesIds = new Array, this._includedOnlyMeshesIds = new Array, this._currentViewDepth = 0, this._clusteredContainer = null, this._isLight = !0, Oq || this.ZJ().addLight(this), this._uniformBuffer = new Aq.b(this.ZJ().Ba(), void 0, void 0, gq), this._buildUniformLayout(), this.includedOnlyMeshes = [], this.excludedMeshes = [], Oq || this._resyncMeshes()
         }
-        transferTexturesToEffect(TT, kT) {
+        transferTexturesToEffect(qq, Eq) {
           return this
         }
-        _bindLight(TT, kT, cT, lT) {
-          let MT = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
-          const KT = TT.toString();
-          let yT = !1;
-          if (this._uniformBuffer.bindToEffect(cT, "Light" + KT), this._renderId !== kT.getRenderId() || this._lastUseSpecular !== lT || !this._uniformBuffer.useUbo) {
-            this._renderId = kT.getRenderId(), this._lastUseSpecular = lT;
-            const TT = this.getScaledIntensity();
-            this.transferToEffect(cT, KT), this.diffuse.scaleToRef(TT, OT.k.Color3[0]), this._uniformBuffer.updateColor4("vLightDiffuse", OT.k.Color3[0], this.range, KT), lT && (this.specular.scaleToRef(TT, OT.k.Color3[1]), this._uniformBuffer.updateColor4("vLightSpecular", OT.k.Color3[1], this.radius, KT)), yT = !0
+        _bindLight(qq, Eq, gq, Yq) {
+          let lq = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
+          const Oq = qq.toString();
+          let xq = !1;
+          if (this._uniformBuffer.bindToEffect(gq, "Light" + Oq), this._renderId !== Eq.getRenderId() || this._lastUseSpecular !== Yq || !this._uniformBuffer.useUbo) {
+            this._renderId = Eq.getRenderId(), this._lastUseSpecular = Yq;
+            const qq = this.getScaledIntensity();
+            this.transferToEffect(gq, Oq), this.diffuse.scaleToRef(qq, mq.k.Color3[0]), this._uniformBuffer.updateColor4("vLightDiffuse", mq.k.Color3[0], this.range, Oq), Yq && (this.specular.scaleToRef(qq, mq.k.Color3[1]), this._uniformBuffer.updateColor4("vLightSpecular", mq.k.Color3[1], this.radius, Oq)), xq = !0
           }
-          if (this.transferTexturesToEffect(cT, KT), kT.shadowsEnabled && this.shadowEnabled && MT) {
-            const TT = this.getShadowGenerator(kT.activeCamera) ?? this.getShadowGenerator();
-            TT && (TT.bindShadowLight(KT, cT), yT = !0)
+          if (this.transferTexturesToEffect(gq, Oq), Eq.shadowsEnabled && this.shadowEnabled && lq) {
+            const qq = this.getShadowGenerator(Eq.activeCamera) ?? this.getShadowGenerator();
+            qq && (qq.bindShadowLight(Oq, gq), xq = !0)
           }
-          yT ? this._uniformBuffer.update() : this._uniformBuffer.bindUniformBuffer()
+          xq ? this._uniformBuffer.update() : this._uniformBuffer.bindUniformBuffer()
         }
         getClassName() {
           return "Light"
         }
-        toString(TT) {
-          let kT = "Name: " + this.name;
-          if (kT += ", type: " + ["Point", "Directional", "Spot", "Hemispheric", "Clustered"][this.getTypeID()], this.animations)
-            for (let cT = 0; cT < this.animations.length; cT++) kT += ", animation[0]: " + this.animations[cT].toString(TT);
-          return kT
+        toString(qq) {
+          let Eq = "Name: " + this.name;
+          if (Eq += ", type: " + ["Point", "Directional", "Spot", "Hemispheric", "Clustered"][this.getTypeID()], this.animations)
+            for (let gq = 0; gq < this.animations.length; gq++) Eq += ", animation[0]: " + this.animations[gq].toString(qq);
+          return Eq
         }
         _syncParentEnabledState() {
-          super._syncParentEnabledState(), this.VkT() || this._resyncMeshes()
+          super._syncParentEnabledState(), this.bM() || this._resyncMeshes()
         }
-        PD(TT) {
-          super.PD(TT), this._resyncMeshes()
+        hG(qq) {
+          super.hG(qq), this._resyncMeshes()
         }
         getShadowGenerator() {
-          let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-          return null === this._shadowGenerators ? null : this._shadowGenerators.get(TT) ?? null
+          let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+          return null === this._shadowGenerators ? null : this._shadowGenerators.get(qq) ?? null
         }
         getShadowGenerators() {
           return this._shadowGenerators
         }
         getAbsolutePosition() {
-          return KT.m.Zero()
+          return Oq.q.Zero()
         }
-        canAffectMesh(TT) {
-          return !TT || !(this.includedOnlyMeshes && this.includedOnlyMeshes.length > 0 && -1 === this.includedOnlyMeshes.indexOf(TT)) && (!(this.excludedMeshes && this.excludedMeshes.length > 0 && -1 !== this.excludedMeshes.indexOf(TT)) && ((0 === this.includeOnlyWithLayerMask || 0 !== (this.includeOnlyWithLayerMask & TT.layerMask)) && !(0 !== this.excludeWithLayerMask && this.excludeWithLayerMask & TT.layerMask)))
+        canAffectMesh(qq) {
+          return !qq || !(this.includedOnlyMeshes && this.includedOnlyMeshes.length > 0 && -1 === this.includedOnlyMeshes.indexOf(qq)) && (!(this.excludedMeshes && this.excludedMeshes.length > 0 && -1 !== this.excludedMeshes.indexOf(qq)) && ((0 === this.includeOnlyWithLayerMask || 0 !== (this.includeOnlyWithLayerMask & qq.layerMask)) && !(0 !== this.excludeWithLayerMask && this.excludeWithLayerMask & qq.layerMask)))
         }
-        dispose(TT) {
-          let kT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        dispose(qq) {
+          let Eq = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
           if (this._shadowGenerators) {
-            const TT = this._shadowGenerators.values();
-            for (let kT = TT.next(); !0 !== kT.done; kT = TT.next()) {
-              kT.value.dispose()
+            const qq = this._shadowGenerators.values();
+            for (let Eq = qq.next(); !0 !== Eq.done; Eq = qq.next()) {
+              Eq.value.dispose()
             }
             this._shadowGenerators = null
           }
-          if (this.NJ().stopAnimation(this), this._parentContainer) {
-            const TT = this._parentContainer.lights.indexOf(this);
-            TT > -1 && this._parentContainer.lights.splice(TT, 1), this._parentContainer = null
+          if (this.ZJ().stopAnimation(this), this._parentContainer) {
+            const qq = this._parentContainer.lights.indexOf(this);
+            qq > -1 && this._parentContainer.lights.splice(qq, 1), this._parentContainer = null
           }
-          for (const cT of this.NJ().meshes) cT._removeLightSource(this, !0);
-          this._uniformBuffer.dispose(), this.NJ().removeLight(this), super.dispose(TT, kT)
+          for (const gq of this.ZJ().meshes) gq._removeLightSource(this, !0);
+          this._uniformBuffer.dispose(), this.ZJ().removeLight(this), super.dispose(qq, Eq)
         }
         getTypeID() {
           return 0
@@ -176,127 +176,127 @@ export const modules = {
         getScaledIntensity() {
           return this._photometricScale * this.intensity
         }
-        clone(kT) {
-          let cT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-          const lT = TT.GetConstructorFromName(this.getTypeID(), kT, this.NJ());
-          if (!lT) return null;
-          const MT = AT.d.Clone(lT, this);
-          return kT && (MT.name = kT), cT && (MT.parent = cT), MT.PD(this.isEnabled()), this.onClonedObservable.notifyObservers(MT), MT
+        clone(Eq) {
+          let gq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+          const Yq = qq.GetConstructorFromName(this.getTypeID(), Eq, this.ZJ());
+          if (!Yq) return null;
+          const lq = Bq.d.Clone(Yq, this);
+          return Eq && (lq.name = Eq), gq && (lq.parent = gq), lq.hG(this.isEnabled()), this.onClonedObservable.notifyObservers(lq), lq
         }
         serialize() {
-          const TT = AT.d.Serialize(this);
-          if (TT.uniqueId = this.uniqueId, TT.type = this.getTypeID(), this.parent && this.parent._serializeAsParent(TT), this.excludedMeshes.length > 0) {
-            TT.excludedMeshesIds = [];
-            for (const kT of this.excludedMeshes) TT.excludedMeshesIds.push(kT.id)
+          const qq = Bq.d.Serialize(this);
+          if (qq.uniqueId = this.uniqueId, qq.type = this.getTypeID(), this.parent && this.parent._serializeAsParent(qq), this.excludedMeshes.length > 0) {
+            qq.excludedMeshesIds = [];
+            for (const Eq of this.excludedMeshes) qq.excludedMeshesIds.push(Eq.id)
           }
           if (this.includedOnlyMeshes.length > 0) {
-            TT.includedOnlyMeshesIds = [];
-            for (const kT of this.includedOnlyMeshes) TT.includedOnlyMeshesIds.push(kT.id)
+            qq.includedOnlyMeshesIds = [];
+            for (const Eq of this.includedOnlyMeshes) qq.includedOnlyMeshesIds.push(Eq.id)
           }
-          return AT.d.AppendSerializedAnimations(this, TT), TT.qt = this.serializeAnimationRanges(), TT.isEnabled = this.isEnabled(), TT
+          return Bq.d.AppendSerializedAnimations(this, qq), qq.zV = this.serializeAnimationRanges(), qq.isEnabled = this.isEnabled(), qq
         }
-        static GetConstructorFromName(TT, kT, cT) {
-          const lT = yT.b.Construct("Light_Type_" + TT, kT, cT);
-          return lT || null
+        static GetConstructorFromName(qq, Eq, gq) {
+          const Yq = xq.c.Construct("Light_Type_" + qq, Eq, gq);
+          return Yq || null
         }
-        static Parse(kT, cT) {
-          let lT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-          const MT = TT.GetConstructorFromName(kT.type, kT.name, cT);
-          if (!MT) return null;
-          const KT = AT.d.Parse(MT, kT, cT, lT);
-          if (kT.excludedMeshesIds && (KT._excludedMeshesIds = kT.excludedMeshesIds), kT.includedOnlyMeshesIds && (KT._includedOnlyMeshesIds = kT.includedOnlyMeshesIds), void 0 !== kT.parentId && (KT._waitingParentId = kT.parentId), void 0 !== kT.parentInstanceIndex && (KT._waitingParentInstanceIndex = kT.parentInstanceIndex), void 0 !== kT.falloffType && (KT.falloffType = kT.falloffType), void 0 !== kT.lightmapMode && (KT.lightmapMode = kT.lightmapMode), kT.animations) {
-            for (let TT = 0; TT < kT.animations.length; TT++) {
-              const cT = kT.animations[TT],
-                lT = (0, xT.e)("BABYLON.Animation");
-              lT && KT.animations.push(lT.Parse(cT))
+        static Parse(Eq, gq) {
+          let Yq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+          const lq = qq.GetConstructorFromName(Eq.type, Eq.name, gq);
+          if (!lq) return null;
+          const Oq = Bq.d.Parse(lq, Eq, gq, Yq);
+          if (Eq.excludedMeshesIds && (Oq._excludedMeshesIds = Eq.excludedMeshesIds), Eq.includedOnlyMeshesIds && (Oq._includedOnlyMeshesIds = Eq.includedOnlyMeshesIds), void 0 !== Eq.parentId && (Oq._waitingParentId = Eq.parentId), void 0 !== Eq.parentInstanceIndex && (Oq._waitingParentInstanceIndex = Eq.parentInstanceIndex), void 0 !== Eq.falloffType && (Oq.falloffType = Eq.falloffType), void 0 !== Eq.lightmapMode && (Oq.lightmapMode = Eq.lightmapMode), Eq.animations) {
+            for (let qq = 0; qq < Eq.animations.length; qq++) {
+              const gq = Eq.animations[qq],
+                Yq = (0, cq.e)("BABYLON.Animation");
+              Yq && Oq.animations.push(Yq.Parse(gq))
             }
-            yT.b.ParseAnimationRanges(KT, kT, cT)
+            xq.c.ParseAnimationRanges(Oq, Eq, gq)
           }
-          return kT.autoAnimate && cT.beginAnimation(KT, kT.autoAnimateFrom, kT.autoAnimateTo, kT.autoAnimateLoop, kT.autoAnimateSpeed || 1), void 0 !== kT.isEnabled && KT.PD(kT.isEnabled), KT._onParsed(kT, cT, lT), KT
+          return Eq.autoAnimate && gq.beginAnimation(Oq, Eq.autoAnimateFrom, Eq.autoAnimateTo, Eq.autoAnimateLoop, Eq.autoAnimateSpeed || 1), void 0 !== Eq.isEnabled && Oq.hG(Eq.isEnabled), Oq._onParsed(Eq, gq, Yq), Oq
         }
-        _onParsed(TT, kT) {}
-        _hookArrayForExcluded(TT) {
-          var kT = this;
-          const cT = TT.push;
-          TT.push = function() {
-            for (var lT = arguments.length, MT = new Array(lT), KT = 0; KT < lT; KT++) MT[KT] = arguments[KT];
-            const OT = cT.apply(TT, MT);
-            if (kT._clusteredContainer) return OT;
-            for (const TT of MT) TT._resyncLightSource(kT);
-            return OT
+        _onParsed(qq, Eq) {}
+        _hookArrayForExcluded(qq) {
+          var Eq = this;
+          const gq = qq.push;
+          qq.push = function() {
+            for (var Yq = arguments.length, lq = new Array(Yq), Oq = 0; Oq < Yq; Oq++) lq[Oq] = arguments[Oq];
+            const mq = gq.apply(qq, lq);
+            if (Eq._clusteredContainer) return mq;
+            for (const qq of lq) qq._resyncLightSource(Eq);
+            return mq
           };
-          const lT = TT.splice;
-          TT.splice = (kT, cT) => {
-            const MT = lT.call(TT, kT, cT ?? TT.length);
-            if (this._clusteredContainer) return MT;
-            for (const TT of MT) TT._resyncLightSource(this);
-            return MT
+          const Yq = qq.splice;
+          qq.splice = (Eq, gq) => {
+            const lq = Yq.call(qq, Eq, gq ?? qq.length);
+            if (this._clusteredContainer) return lq;
+            for (const qq of lq) qq._resyncLightSource(this);
+            return lq
           }, this._resyncMeshes()
         }
-        _hookArrayForIncludedOnly(TT) {
-          var kT = this;
-          const cT = TT.push;
-          TT.push = function() {
-            for (var lT = arguments.length, MT = new Array(lT), KT = 0; KT < lT; KT++) MT[KT] = arguments[KT];
-            const OT = cT.apply(TT, MT);
-            return kT._resyncMeshes(), OT
+        _hookArrayForIncludedOnly(qq) {
+          var Eq = this;
+          const gq = qq.push;
+          qq.push = function() {
+            for (var Yq = arguments.length, lq = new Array(Yq), Oq = 0; Oq < Yq; Oq++) lq[Oq] = arguments[Oq];
+            const mq = gq.apply(qq, lq);
+            return Eq._resyncMeshes(), mq
           };
-          const lT = TT.splice;
-          TT.splice = (kT, cT) => {
-            const MT = lT.call(TT, kT, cT ?? TT.length);
-            return this._resyncMeshes(), MT
+          const Yq = qq.splice;
+          qq.splice = (Eq, gq) => {
+            const lq = Yq.call(qq, Eq, gq ?? qq.length);
+            return this._resyncMeshes(), lq
           }, this._resyncMeshes()
         }
         _resyncMeshes() {
           if (!this._clusteredContainer)
-            for (const TT of this.NJ().meshes) TT._resyncLightSource(this)
+            for (const qq of this.ZJ().meshes) qq._resyncLightSource(this)
         }
         _markMeshesAsLightDirty() {
-          for (const TT of this.NJ().meshes) - 1 !== TT.lightSources.indexOf(this) && TT._markSubMeshesAsLightDirty()
+          for (const qq of this.ZJ().meshes) - 1 !== qq.lightSources.indexOf(this) && qq._markSubMeshesAsLightDirty()
         }
         _computePhotometricScale() {
-          this._photometricScale = this._getPhotometricScale(), this.NJ().resetCachedMaterial()
+          this._photometricScale = this._getPhotometricScale(), this.ZJ().resetCachedMaterial()
         }
         _getPhotometricScale() {
-          let kT = 0;
-          const cT = this.getTypeID();
-          let lT = this.intensityMode;
-          switch (lT === TT.INTENSITYMODE_AUTOMATIC && (lT = cT === TT.LIGHTTYPEID_DIRECTIONALLIGHT ? TT.INTENSITYMODE_ILLUMINANCE : TT.INTENSITYMODE_LUMINOUSINTENSITY), cT) {
-            case TT.LIGHTTYPEID_POINTLIGHT:
-            case TT.LIGHTTYPEID_SPOTLIGHT:
-              switch (lT) {
-                case TT.INTENSITYMODE_LUMINOUSPOWER:
-                  kT = 1 / (4 * Math.PI);
+          let Eq = 0;
+          const gq = this.getTypeID();
+          let Yq = this.intensityMode;
+          switch (Yq === qq.INTENSITYMODE_AUTOMATIC && (Yq = gq === qq.LIGHTTYPEID_DIRECTIONALLIGHT ? qq.INTENSITYMODE_ILLUMINANCE : qq.INTENSITYMODE_LUMINOUSINTENSITY), gq) {
+            case qq.LIGHTTYPEID_POINTLIGHT:
+            case qq.LIGHTTYPEID_SPOTLIGHT:
+              switch (Yq) {
+                case qq.INTENSITYMODE_LUMINOUSPOWER:
+                  Eq = 1 / (4 * Math.PI);
                   break;
-                case TT.INTENSITYMODE_LUMINOUSINTENSITY:
-                  kT = 1;
+                case qq.INTENSITYMODE_LUMINOUSINTENSITY:
+                  Eq = 1;
                   break;
-                case TT.INTENSITYMODE_LUMINANCE:
-                  kT = this.radius * this.radius
+                case qq.INTENSITYMODE_LUMINANCE:
+                  Eq = this.radius * this.radius
               }
               break;
-            case TT.LIGHTTYPEID_DIRECTIONALLIGHT:
-              switch (lT) {
-                case TT.INTENSITYMODE_ILLUMINANCE:
-                  kT = 1;
+            case qq.LIGHTTYPEID_DIRECTIONALLIGHT:
+              switch (Yq) {
+                case qq.INTENSITYMODE_ILLUMINANCE:
+                  Eq = 1;
                   break;
-                case TT.INTENSITYMODE_LUMINANCE: {
-                  let TT = this.radius;
-                  TT = Math.max(TT, .001);
-                  kT = 2 * Math.PI * (1 - Math.cos(TT));
+                case qq.INTENSITYMODE_LUMINANCE: {
+                  let qq = this.radius;
+                  qq = Math.max(qq, .001);
+                  Eq = 2 * Math.PI * (1 - Math.cos(qq));
                   break
                 }
               }
               break;
-            case TT.LIGHTTYPEID_HEMISPHERICLIGHT:
-            case TT.LIGHTTYPEID_RECT_AREALIGHT:
-              kT = 1
+            case qq.LIGHTTYPEID_HEMISPHERICLIGHT:
+            case qq.LIGHTTYPEID_RECT_AREALIGHT:
+              Eq = 1
           }
-          return kT
+          return Eq
         }
         _reorderLightsInScene() {
-          const TT = this.NJ();
-          0 != this._renderPriority && (TT.requireLightSorting = !0), this.NJ().sortLightsByPriority()
+          const qq = this.ZJ();
+          0 != this._renderPriority && (qq.requireLightSorting = !0), this.ZJ().sortLightsByPriority()
         }
         areLightTexturesReady() {
           return !0
@@ -304,215 +304,215 @@ export const modules = {
         _isReady() {
           return !0
         }
-      }, kT = new WeakMap, (() => {
-        const kT = "function" === typeof Symbol && Symbol.metadata ? Object.create(PT[Symbol.metadata] ?? null) : void 0;
-        cT = [(0, MT.m)()], CT = [(0, MT.m)()], jT = [(0, MT.J)()], vT = [(0, MT.J)()], tT = [(0, MT.J)()], hT = [(0, MT.J)()], NT = [(0, MT.J)()], QT = [(0, MT.J)()], ST = [(0, MT.c)("_reorderLightsInScene")], DT = [(0, MT.J)("shadowEnabled")], aT = [(0, MT.J)("excludeWithLayerMask")], FT = [(0, MT.J)("includeOnlyWithLayerMask")], rT = [(0, MT.J)("lightmapMode")], (0, lT.e)(TT, null, tT, {
+      }, Eq = new WeakMap, (() => {
+        const Eq = "function" === typeof Symbol && Symbol.metadata ? Object.create(rq[Symbol.metadata] ?? null) : void 0;
+        gq = [(0, lq.o)()], Wq = [(0, lq.o)()], Nq = [(0, lq.M)()], aq = [(0, lq.M)()], Vq = [(0, lq.M)()], dq = [(0, lq.M)()], jq = [(0, lq.M)()], Hq = [(0, lq.M)()], oq = [(0, lq.f)("_reorderLightsInScene")], Pq = [(0, lq.M)("shadowEnabled")], Qq = [(0, lq.M)("excludeWithLayerMask")], yq = [(0, lq.M)("includeOnlyWithLayerMask")], tq = [(0, lq.M)("lightmapMode")], (0, Yq.f)(qq, null, Vq, {
           kind: "getter",
           name: "range",
           static: !1,
           private: !1,
           access: {
-            has: TT => "range" in TT,
-            get: TT => TT.range
+            has: qq => "range" in qq,
+            get: qq => qq.range
           },
-          metadata: kT
-        }, null, wT), (0, lT.e)(TT, null, hT, {
+          metadata: Eq
+        }, null, vq), (0, Yq.f)(qq, null, dq, {
           kind: "getter",
           name: "intensityMode",
           static: !1,
           private: !1,
           access: {
-            has: TT => "intensityMode" in TT,
-            get: TT => TT.intensityMode
+            has: qq => "intensityMode" in qq,
+            get: qq => qq.intensityMode
           },
-          metadata: kT
-        }, null, wT), (0, lT.e)(TT, null, NT, {
+          metadata: Eq
+        }, null, vq), (0, Yq.f)(qq, null, jq, {
           kind: "getter",
           name: "radius",
           static: !1,
           private: !1,
           access: {
-            has: TT => "radius" in TT,
-            get: TT => TT.radius
+            has: qq => "radius" in qq,
+            get: qq => qq.radius
           },
-          metadata: kT
-        }, null, wT), (0, lT.e)(TT, null, ST, {
+          metadata: Eq
+        }, null, vq), (0, Yq.f)(qq, null, oq, {
           kind: "accessor",
           name: "renderPriority",
           static: !1,
           private: !1,
           access: {
-            has: TT => "renderPriority" in TT,
-            get: TT => TT.renderPriority,
-            set: (TT, kT) => {
-              TT.renderPriority = kT
+            has: qq => "renderPriority" in qq,
+            get: qq => qq.renderPriority,
+            set: (qq, Eq) => {
+              qq.renderPriority = Eq
             }
           },
-          metadata: kT
-        }, ZT, uT), (0, lT.e)(null, null, cT, {
+          metadata: Eq
+        }, pq, Gq), (0, Yq.f)(null, null, gq, {
           kind: "field",
           name: "diffuse",
           static: !1,
           private: !1,
           access: {
-            has: TT => "diffuse" in TT,
-            get: TT => TT.diffuse,
-            set: (TT, kT) => {
-              TT.diffuse = kT
+            has: qq => "diffuse" in qq,
+            get: qq => qq.diffuse,
+            set: (qq, Eq) => {
+              qq.diffuse = Eq
             }
           },
-          metadata: kT
-        }, mT, bT), (0, lT.e)(null, null, CT, {
+          metadata: Eq
+        }, hq, nq), (0, Yq.f)(null, null, Wq, {
           kind: "field",
           name: "specular",
           static: !1,
           private: !1,
           access: {
-            has: TT => "specular" in TT,
-            get: TT => TT.specular,
-            set: (TT, kT) => {
-              TT.specular = kT
+            has: qq => "specular" in qq,
+            get: qq => qq.specular,
+            set: (qq, Eq) => {
+              qq.specular = Eq
             }
           },
-          metadata: kT
-        }, zT, JT), (0, lT.e)(null, null, jT, {
+          metadata: Eq
+        }, bq, iq), (0, Yq.f)(null, null, Nq, {
           kind: "field",
           name: "falloffType",
           static: !1,
           private: !1,
           access: {
-            has: TT => "falloffType" in TT,
-            get: TT => TT.falloffType,
-            set: (TT, kT) => {
-              TT.falloffType = kT
+            has: qq => "falloffType" in qq,
+            get: qq => qq.falloffType,
+            set: (qq, Eq) => {
+              qq.falloffType = Eq
             }
           },
-          metadata: kT
-        }, oT, HT), (0, lT.e)(null, null, vT, {
+          metadata: Eq
+        }, Zq, fq), (0, Yq.f)(null, null, aq, {
           kind: "field",
           name: "intensity",
           static: !1,
           private: !1,
           access: {
-            has: TT => "intensity" in TT,
-            get: TT => TT.intensity,
-            set: (TT, kT) => {
-              TT.intensity = kT
+            has: qq => "intensity" in qq,
+            get: qq => qq.intensity,
+            set: (qq, Eq) => {
+              qq.intensity = Eq
             }
           },
-          metadata: kT
-        }, eT, GT), (0, lT.e)(null, null, QT, {
+          metadata: Eq
+        }, Mq, Tq), (0, Yq.f)(null, null, Hq, {
           kind: "field",
           name: "_renderPriority",
           static: !1,
           private: !1,
           access: {
-            has: TT => "_renderPriority" in TT,
-            get: TT => TT._renderPriority,
-            set: (TT, kT) => {
-              TT._renderPriority = kT
+            has: qq => "_renderPriority" in qq,
+            get: qq => qq._renderPriority,
+            set: (qq, Eq) => {
+              qq._renderPriority = Eq
             }
           },
-          metadata: kT
-        }, VT, ET), (0, lT.e)(null, null, DT, {
+          metadata: Eq
+        }, zq, Sq), (0, Yq.f)(null, null, Pq, {
           kind: "field",
           name: "_shadowEnabled",
           static: !1,
           private: !1,
           access: {
-            has: TT => "_shadowEnabled" in TT,
-            get: TT => TT._shadowEnabled,
-            set: (TT, kT) => {
-              TT._shadowEnabled = kT
+            has: qq => "_shadowEnabled" in qq,
+            get: qq => qq._shadowEnabled,
+            set: (qq, Eq) => {
+              qq._shadowEnabled = Eq
             }
           },
-          metadata: kT
-        }, XT, dT), (0, lT.e)(null, null, aT, {
+          metadata: Eq
+        }, Lq, Jq), (0, Yq.f)(null, null, Qq, {
           kind: "field",
           name: "_excludeWithLayerMask",
           static: !1,
           private: !1,
           access: {
-            has: TT => "_excludeWithLayerMask" in TT,
-            get: TT => TT._excludeWithLayerMask,
-            set: (TT, kT) => {
-              TT._excludeWithLayerMask = kT
+            has: qq => "_excludeWithLayerMask" in qq,
+            get: qq => qq._excludeWithLayerMask,
+            set: (qq, Eq) => {
+              qq._excludeWithLayerMask = Eq
             }
           },
-          metadata: kT
-        }, LT, RT), (0, lT.e)(null, null, FT, {
+          metadata: Eq
+        }, kq, Rq), (0, Yq.f)(null, null, yq, {
           kind: "field",
           name: "_includeOnlyWithLayerMask",
           static: !1,
           private: !1,
           access: {
-            has: TT => "_includeOnlyWithLayerMask" in TT,
-            get: TT => TT._includeOnlyWithLayerMask,
-            set: (TT, kT) => {
-              TT._includeOnlyWithLayerMask = kT
+            has: qq => "_includeOnlyWithLayerMask" in qq,
+            get: qq => qq._includeOnlyWithLayerMask,
+            set: (qq, Eq) => {
+              qq._includeOnlyWithLayerMask = Eq
             }
           },
-          metadata: kT
-        }, gT, UT), (0, lT.e)(null, null, rT, {
+          metadata: Eq
+        }, Uq, Fq), (0, Yq.f)(null, null, tq, {
           kind: "field",
           name: "_lightmapMode",
           static: !1,
           private: !1,
           access: {
-            has: TT => "_lightmapMode" in TT,
-            get: TT => TT._lightmapMode,
-            set: (TT, kT) => {
-              TT._lightmapMode = kT
+            has: qq => "_lightmapMode" in qq,
+            get: qq => qq._lightmapMode,
+            set: (qq, Eq) => {
+              qq._lightmapMode = Eq
             }
           },
-          metadata: kT
-        }, YT, BT), kT && Object.defineProperty(TT, Symbol.metadata, {
+          metadata: Eq
+        }, sq, Xq), Eq && Object.defineProperty(qq, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: kT
+          value: Eq
         })
-      })(), TT.FALLOFF_DEFAULT = IT.b.FALLOFF_DEFAULT, TT.FALLOFF_PHYSICAL = IT.b.FALLOFF_PHYSICAL, TT.FALLOFF_GLTF = IT.b.FALLOFF_GLTF, TT.FALLOFF_STANDARD = IT.b.FALLOFF_STANDARD, TT.LIGHTMAP_DEFAULT = IT.b.LIGHTMAP_DEFAULT, TT.LIGHTMAP_SPECULAR = IT.b.LIGHTMAP_SPECULAR, TT.LIGHTMAP_SHADOWSONLY = IT.b.LIGHTMAP_SHADOWSONLY, TT.INTENSITYMODE_AUTOMATIC = IT.b.INTENSITYMODE_AUTOMATIC, TT.INTENSITYMODE_LUMINOUSPOWER = IT.b.INTENSITYMODE_LUMINOUSPOWER, TT.INTENSITYMODE_LUMINOUSINTENSITY = IT.b.INTENSITYMODE_LUMINOUSINTENSITY, TT.INTENSITYMODE_ILLUMINANCE = IT.b.INTENSITYMODE_ILLUMINANCE, TT.INTENSITYMODE_LUMINANCE = IT.b.INTENSITYMODE_LUMINANCE, TT.LIGHTTYPEID_POINTLIGHT = IT.b.LIGHTTYPEID_POINTLIGHT, TT.LIGHTTYPEID_DIRECTIONALLIGHT = IT.b.LIGHTTYPEID_DIRECTIONALLIGHT, TT.LIGHTTYPEID_SPOTLIGHT = IT.b.LIGHTTYPEID_SPOTLIGHT, TT.LIGHTTYPEID_HEMISPHERICLIGHT = IT.b.LIGHTTYPEID_HEMISPHERICLIGHT, TT.LIGHTTYPEID_RECT_AREALIGHT = IT.b.LIGHTTYPEID_RECT_AREALIGHT, TT
+      })(), qq.FALLOFF_DEFAULT = uq.c.FALLOFF_DEFAULT, qq.FALLOFF_PHYSICAL = uq.c.FALLOFF_PHYSICAL, qq.FALLOFF_GLTF = uq.c.FALLOFF_GLTF, qq.FALLOFF_STANDARD = uq.c.FALLOFF_STANDARD, qq.LIGHTMAP_DEFAULT = uq.c.LIGHTMAP_DEFAULT, qq.LIGHTMAP_SPECULAR = uq.c.LIGHTMAP_SPECULAR, qq.LIGHTMAP_SHADOWSONLY = uq.c.LIGHTMAP_SHADOWSONLY, qq.INTENSITYMODE_AUTOMATIC = uq.c.INTENSITYMODE_AUTOMATIC, qq.INTENSITYMODE_LUMINOUSPOWER = uq.c.INTENSITYMODE_LUMINOUSPOWER, qq.INTENSITYMODE_LUMINOUSINTENSITY = uq.c.INTENSITYMODE_LUMINOUSINTENSITY, qq.INTENSITYMODE_ILLUMINANCE = uq.c.INTENSITYMODE_ILLUMINANCE, qq.INTENSITYMODE_LUMINANCE = uq.c.INTENSITYMODE_LUMINANCE, qq.LIGHTTYPEID_POINTLIGHT = uq.c.LIGHTTYPEID_POINTLIGHT, qq.LIGHTTYPEID_DIRECTIONALLIGHT = uq.c.LIGHTTYPEID_DIRECTIONALLIGHT, qq.LIGHTTYPEID_SPOTLIGHT = uq.c.LIGHTTYPEID_SPOTLIGHT, qq.LIGHTTYPEID_HEMISPHERICLIGHT = uq.c.LIGHTTYPEID_HEMISPHERICLIGHT, qq.LIGHTTYPEID_RECT_AREALIGHT = uq.c.LIGHTTYPEID_RECT_AREALIGHT, qq
     })()
   },
-  39846: (TT, kT, cT) => {
-    cT.d(kT, {
-      b: () => AT
+  39960: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => Bq
     });
-    var lT = cT(39620),
-      MT = cT(36892),
-      KT = cT(39624),
-      OT = cT(36932),
-      yT = cT(36925),
-      fT = cT(39500),
-      xT = cT(39645);
-    class IT {
+    var Yq = gq(39757),
+      lq = gq(37139),
+      Oq = gq(39759),
+      mq = gq(37156),
+      xq = gq(37153),
+      Aq = gq(39636),
+      cq = gq(39779);
+    class uq {
       constructor() {
-        this._doNotSerialize = !1, this._isDisposed = !1, this._sceneRootNodesIndex = -1, this._isEnabled = !0, this._isParentEnabled = !0, this._isReady = !0, this._onEnabledStateChangedObservable = new OT.b, this._onEffectiveEnabledStateChangedObservable = null, this._onClonedObservable = new OT.b, this._inheritVisibility = !1, this._isVisible = !0
+        this._doNotSerialize = !1, this._isDisposed = !1, this._sceneRootNodesIndex = -1, this._isEnabled = !0, this._isParentEnabled = !0, this._isReady = !0, this._onEnabledStateChangedObservable = new mq.d, this._onEffectiveEnabledStateChangedObservable = null, this._onClonedObservable = new mq.d, this._inheritVisibility = !1, this._isVisible = !0
       }
     }
-    let AT = (() => {
-      var TT;
-      let kT, cT, AT, CT, jT, vT = [],
-        tT = [],
-        hT = [],
-        NT = [],
-        QT = [],
-        ST = [],
-        DT = [],
-        aT = [],
-        FT = [],
-        rT = [];
-      return TT = class {
-        static AddNodeConstructor(TT, kT) {
-          this._NodeConstructors[TT] = kT
+    let Bq = (() => {
+      var qq;
+      let Eq, gq, Bq, Wq, Nq, aq = [],
+        Vq = [],
+        dq = [],
+        jq = [],
+        Hq = [],
+        oq = [],
+        Pq = [],
+        Qq = [],
+        yq = [],
+        tq = [];
+      return qq = class {
+        static AddNodeConstructor(qq, Eq) {
+          this._NodeConstructors[qq] = Eq
         }
-        static Construct(TT, kT, cT, lT) {
-          const MT = this._NodeConstructors[TT];
-          return MT ? MT(kT, cT, lT) : null
+        static Construct(qq, Eq, gq, Yq) {
+          const lq = this._NodeConstructors[qq];
+          return lq ? lq(Eq, gq, Yq) : null
         }
-        set accessibilityTag(TT) {
-          this._accessibilityTag = TT, this.onAccessibilityTagChangedObservable.notifyObservers(TT)
+        set accessibilityTag(qq) {
+          this._accessibilityTag = qq, this.onAccessibilityTagChangedObservable.notifyObservers(qq)
         }
         get accessibilityTag() {
           return this._accessibilityTag
@@ -520,19 +520,19 @@ export const modules = {
         get doNotSerialize() {
           return !!this._nodeDataStorage._doNotSerialize || !!this._parentNode && this._parentNode.doNotSerialize
         }
-        set doNotSerialize(TT) {
-          this._nodeDataStorage._doNotSerialize = TT
+        set doNotSerialize(qq) {
+          this._nodeDataStorage._doNotSerialize = qq
         }
-        VkT() {
+        bM() {
           return this._nodeDataStorage._isDisposed
         }
-        set parent(TT) {
-          if (this._parentNode === TT) return;
-          const kT = this._parentNode;
+        set parent(qq) {
+          if (this._parentNode === qq) return;
+          const Eq = this._parentNode;
           if (this._parentNode && void 0 !== this._parentNode._children && null !== this._parentNode._children) {
-            const kT = this._parentNode._children.indexOf(this); - 1 !== kT && this._parentNode._children.splice(kT, 1), TT || this._nodeDataStorage._isDisposed || this._addToSceneRootNodes()
+            const Eq = this._parentNode._children.indexOf(this); - 1 !== Eq && this._parentNode._children.splice(Eq, 1), qq || this._nodeDataStorage._isDisposed || this._addToSceneRootNodes()
           }
-          this._parentNode = TT, this._isDirty = !0, this._parentNode && (void 0 !== this._parentNode._children && null !== this._parentNode._children || (this._parentNode._children = new Array), this._parentNode._children.push(this), kT || this._removeFromSceneRootNodes()), this._syncParentEnabledState()
+          this._parentNode = qq, this._isDirty = !0, this._parentNode && (void 0 !== this._parentNode._children && null !== this._parentNode._children || (this._parentNode._children = new Array), this._parentNode._children.push(this), Eq || this._removeFromSceneRootNodes()), this._syncParentEnabledState()
         }
         get parent() {
           return this._parentNode
@@ -540,77 +540,77 @@ export const modules = {
         get inheritVisibility() {
           return this._nodeDataStorage._inheritVisibility
         }
-        set inheritVisibility(TT) {
-          this._nodeDataStorage._inheritVisibility = TT
+        set inheritVisibility(qq) {
+          this._nodeDataStorage._inheritVisibility = qq
         }
         get isVisible() {
           return !(this.inheritVisibility && this._parentNode && !this._parentNode.isVisible) && this._nodeDataStorage._isVisible
         }
-        set isVisible(TT) {
-          this._nodeDataStorage._isVisible = TT
+        set isVisible(qq) {
+          this._nodeDataStorage._isVisible = qq
         }
-        _serializeAsParent(TT) {
-          TT.parentId = this.uniqueId
+        _serializeAsParent(qq) {
+          qq.parentId = this.uniqueId
         }
         _addToSceneRootNodes() {
           -1 === this._nodeDataStorage._sceneRootNodesIndex && (this._nodeDataStorage._sceneRootNodesIndex = this._scene.rootNodes.length, this._scene.rootNodes.push(this))
         }
         _removeFromSceneRootNodes() {
           if (-1 !== this._nodeDataStorage._sceneRootNodesIndex) {
-            const TT = this._scene.rootNodes,
-              kT = TT.length - 1;
-            TT[this._nodeDataStorage._sceneRootNodesIndex] = TT[kT], TT[this._nodeDataStorage._sceneRootNodesIndex]._nodeDataStorage._sceneRootNodesIndex = this._nodeDataStorage._sceneRootNodesIndex, this._scene.rootNodes.pop(), this._nodeDataStorage._sceneRootNodesIndex = -1
+            const qq = this._scene.rootNodes,
+              Eq = qq.length - 1;
+            qq[this._nodeDataStorage._sceneRootNodesIndex] = qq[Eq], qq[this._nodeDataStorage._sceneRootNodesIndex]._nodeDataStorage._sceneRootNodesIndex = this._nodeDataStorage._sceneRootNodesIndex, this._scene.rootNodes.pop(), this._nodeDataStorage._sceneRootNodesIndex = -1
           }
         }
         get animationPropertiesOverride() {
           return this._animationPropertiesOverride ? this._animationPropertiesOverride : this._scene.animationPropertiesOverride
         }
-        set animationPropertiesOverride(TT) {
-          this._animationPropertiesOverride = TT
+        set animationPropertiesOverride(qq) {
+          this._animationPropertiesOverride = qq
         }
         getClassName() {
           return "Node"
         }
-        set onDispose(TT) {
-          this._onDisposeObserver && this.QJ.remove(this._onDisposeObserver), this._onDisposeObserver = this.QJ.add(TT)
+        set onDispose(qq) {
+          this._onDisposeObserver && this.MJ.remove(this._onDisposeObserver), this._onDisposeObserver = this.MJ.add(qq)
         }
         get onEnabledStateChangedObservable() {
           return this._nodeDataStorage._onEnabledStateChangedObservable
         }
         get onEffectiveEnabledStateChangedObservable() {
-          var TT;
-          return (TT = this._nodeDataStorage)._onEffectiveEnabledStateChangedObservable ?? (TT._onEffectiveEnabledStateChangedObservable = new OT.b)
+          var qq;
+          return (qq = this._nodeDataStorage)._onEffectiveEnabledStateChangedObservable ?? (qq._onEffectiveEnabledStateChangedObservable = new mq.d)
         }
         get onClonedObservable() {
           return this._nodeDataStorage._onClonedObservable
         }
-        constructor(TT) {
-          let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-            cT = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-          this._isDirty = !1, this._nodeDataStorage = new IT, this.name = (0, lT.h)(this, vT, void 0), this.id = ((0, lT.h)(this, tT), (0, lT.h)(this, hT, void 0)), this.uniqueId = ((0, lT.h)(this, NT), (0, lT.h)(this, QT, void 0)), this.state = ((0, lT.h)(this, ST), (0, lT.h)(this, DT, "")), this.metadata = ((0, lT.h)(this, aT), (0, lT.h)(this, FT, null)), this._internalMetadata = (0, lT.h)(this, rT), this.reservedDataStore = null, this._accessibilityTag = null, this.onAccessibilityTagChangedObservable = new OT.b, this._parentContainer = null, this.animations = [], this._ranges = {}, this.onReady = null, this._currentRenderId = -1, this._parentUpdateId = -1, this._childUpdateId = -1, this._waitingParentId = null, this._waitingParentInstanceIndex = null, this._waitingParsedUniqueId = null, this._cache = {}, this._parentNode = null, this._children = null, this._worldMatrix = MT.d.Identity(), this._worldMatrixDeterminant = 0, this._worldMatrixDeterminantIsDirty = !0, this._animationPropertiesOverride = null, this._isNode = !0, this.QJ = new OT.b, this._onDisposeObserver = null, this._behaviors = new Array, this.name = TT, this.id = TT, this._scene = kT || yT.d.LastCreatedScene, this.uniqueId = this._scene.getUniqueId(), this._initCache(), cT && this._addToSceneRootNodes()
+        constructor(qq) {
+          let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+            gq = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+          this._isDirty = !1, this._nodeDataStorage = new uq, this.name = (0, Yq.i)(this, aq, void 0), this.id = ((0, Yq.i)(this, Vq), (0, Yq.i)(this, dq, void 0)), this.uniqueId = ((0, Yq.i)(this, jq), (0, Yq.i)(this, Hq, void 0)), this.state = ((0, Yq.i)(this, oq), (0, Yq.i)(this, Pq, "")), this.metadata = ((0, Yq.i)(this, Qq), (0, Yq.i)(this, yq, null)), this._internalMetadata = (0, Yq.i)(this, tq), this.reservedDataStore = null, this._accessibilityTag = null, this.onAccessibilityTagChangedObservable = new mq.d, this._parentContainer = null, this.animations = [], this._ranges = {}, this.onReady = null, this._currentRenderId = -1, this._parentUpdateId = -1, this._childUpdateId = -1, this._waitingParentId = null, this._waitingParentInstanceIndex = null, this._waitingParsedUniqueId = null, this._cache = {}, this._parentNode = null, this._children = null, this._worldMatrix = lq.e.Identity(), this._worldMatrixDeterminant = 0, this._worldMatrixDeterminantIsDirty = !0, this._animationPropertiesOverride = null, this._isNode = !0, this.MJ = new mq.d, this._onDisposeObserver = null, this._behaviors = new Array, this.name = qq, this.id = qq, this._scene = Eq || xq.b.LastCreatedScene, this.uniqueId = this._scene.getUniqueId(), this._initCache(), gq && this._addToSceneRootNodes()
         }
-        NJ() {
+        ZJ() {
           return this._scene
         }
-        Dv() {
-          return this._scene.Dv()
+        Ba() {
+          return this._scene.Ba()
         }
-        addBehavior(TT) {
-          let kT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          return -1 !== this._behaviors.indexOf(TT) || (TT.init(), this._scene.isLoading && !kT ? this._scene.onDataLoadedObservable.addOnce((() => {
-            this._behaviors.includes(TT) && TT.attach(this)
-          })) : TT.attach(this), this._behaviors.push(TT)), this
+        addBehavior(qq) {
+          let Eq = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          return -1 !== this._behaviors.indexOf(qq) || (qq.init(), this._scene.isLoading && !Eq ? this._scene.onDataLoadedObservable.addOnce((() => {
+            this._behaviors.includes(qq) && qq.attach(this)
+          })) : qq.attach(this), this._behaviors.push(qq)), this
         }
-        removeBehavior(TT) {
-          const kT = this._behaviors.indexOf(TT);
-          return -1 === kT || (this._behaviors.splice(kT, 1), TT.detach()), this
+        removeBehavior(qq) {
+          const Eq = this._behaviors.indexOf(qq);
+          return -1 === Eq || (this._behaviors.splice(Eq, 1), qq.detach()), this
         }
         get behaviors() {
           return this._behaviors
         }
-        getBehaviorByName(TT) {
-          for (const kT of this._behaviors)
-            if (kT.name === TT) return kT;
+        getBehaviorByName(qq) {
+          for (const Eq of this._behaviors)
+            if (Eq.name === qq) return Eq;
           return null
         }
         getWorldMatrix() {
@@ -625,13 +625,13 @@ export const modules = {
         _initCache() {
           this._cache = {}
         }
-        updateCache(TT) {
-          !TT && this.isSynchronized() || this._updateCache()
+        updateCache(qq) {
+          !qq && this.isSynchronized() || this._updateCache()
         }
-        _getActionManagerForTrigger(TT) {
-          return this.parent ? this.parent._getActionManagerForTrigger(TT, !1) : null
+        _getActionManagerForTrigger(qq) {
+          return this.parent ? this.parent._getActionManagerForTrigger(qq, !1) : null
         }
-        _updateCache(TT) {}
+        _updateCache(qq) {}
         _isSynchronized() {
           return !0
         }
@@ -647,238 +647,238 @@ export const modules = {
         isReady() {
           return this._nodeDataStorage._isReady
         }
-        pTT(TT) {
+        xgq(qq) {
           return this._currentRenderId = Number.MAX_VALUE, this._isDirty = !0, this
         }
         isEnabled() {
           return !1 === (!(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0]) ? this._nodeDataStorage._isEnabled : !!this._nodeDataStorage._isEnabled && this._nodeDataStorage._isParentEnabled
         }
         _hasEffectiveEnabledStateObservers() {
-          const TT = this._nodeDataStorage._onEffectiveEnabledStateChangedObservable;
-          return !!TT && TT.hasObservers()
+          const qq = this._nodeDataStorage._onEffectiveEnabledStateChangedObservable;
+          return !!qq && qq.hasObservers()
         }
         _syncParentEnabledState() {
-          const TT = this._hasEffectiveEnabledStateObservers(),
-            kT = TT ? this.isEnabled() : null;
+          const qq = this._hasEffectiveEnabledStateObservers(),
+            Eq = qq ? this.isEnabled() : null;
           if (this._nodeDataStorage._isParentEnabled = !this._parentNode || this._parentNode.isEnabled(), this._children)
-            for (const cT of this._children) cT._syncParentEnabledState();
-          if (TT) {
-            const TT = this.isEnabled();
-            TT !== kT && this._nodeDataStorage._onEffectiveEnabledStateChangedObservable.notifyObservers(TT)
+            for (const gq of this._children) gq._syncParentEnabledState();
+          if (qq) {
+            const qq = this.isEnabled();
+            qq !== Eq && this._nodeDataStorage._onEffectiveEnabledStateChangedObservable.notifyObservers(qq)
           }
         }
-        PD(TT) {
-          if (this._nodeDataStorage._isEnabled === TT) return;
-          const kT = this._hasEffectiveEnabledStateObservers(),
-            cT = kT ? this.isEnabled() : null;
-          if (this._nodeDataStorage._isEnabled = TT, this._syncParentEnabledState(), this._nodeDataStorage._onEnabledStateChangedObservable.notifyObservers(TT), kT) {
-            const TT = this.isEnabled();
-            TT !== cT && this._nodeDataStorage._onEffectiveEnabledStateChangedObservable.notifyObservers(TT)
+        hG(qq) {
+          if (this._nodeDataStorage._isEnabled === qq) return;
+          const Eq = this._hasEffectiveEnabledStateObservers(),
+            gq = Eq ? this.isEnabled() : null;
+          if (this._nodeDataStorage._isEnabled = qq, this._syncParentEnabledState(), this._nodeDataStorage._onEnabledStateChangedObservable.notifyObservers(qq), Eq) {
+            const qq = this.isEnabled();
+            qq !== gq && this._nodeDataStorage._onEffectiveEnabledStateChangedObservable.notifyObservers(qq)
           }
         }
-        isDescendantOf(TT) {
-          return !!this.parent && (this.parent === TT || this.parent.isDescendantOf(TT))
+        isDescendantOf(qq) {
+          return !!this.parent && (this.parent === qq || this.parent.isDescendantOf(qq))
         }
-        _getDescendants(TT) {
-          let kT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            cT = arguments.length > 2 ? arguments[2] : void 0;
+        _getDescendants(qq) {
+          let Eq = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            gq = arguments.length > 2 ? arguments[2] : void 0;
           if (this._children)
-            for (let lT = 0; lT < this._children.length; lT++) {
-              const MT = this._children[lT];
-              cT && !cT(MT) || TT.push(MT), kT || MT._getDescendants(TT, !1, cT)
+            for (let Yq = 0; Yq < this._children.length; Yq++) {
+              const lq = this._children[Yq];
+              gq && !gq(lq) || qq.push(lq), Eq || lq._getDescendants(qq, !1, gq)
             }
         }
-        getDescendants(TT, kT) {
-          const cT = [];
-          return this._getDescendants(cT, TT, kT), cT
+        getDescendants(qq, Eq) {
+          const gq = [];
+          return this._getDescendants(gq, qq, Eq), gq
         }
-        getChildMeshes(TT, kT) {
-          const cT = [];
-          return this._getDescendants(cT, TT, (TT => (!kT || kT(TT)) && void 0 !== TT.cullingStrategy)), cT
+        getChildMeshes(qq, Eq) {
+          const gq = [];
+          return this._getDescendants(gq, qq, (qq => (!Eq || Eq(qq)) && void 0 !== qq.cullingStrategy)), gq
         }
-        getChildren(TT) {
-          let kT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-          return this.getDescendants(kT, TT)
+        getChildren(qq) {
+          let Eq = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+          return this.getDescendants(Eq, qq)
         }
-        _setReady(TT) {
-          TT !== this._nodeDataStorage._isReady && (TT ? (this.onReady && this.onReady(this), this._nodeDataStorage._isReady = !0) : this._nodeDataStorage._isReady = !1)
+        _setReady(qq) {
+          qq !== this._nodeDataStorage._isReady && (qq ? (this.onReady && this.onReady(this), this._nodeDataStorage._isReady = !0) : this._nodeDataStorage._isReady = !1)
         }
-        getAnimationByName(TT) {
-          for (let kT = 0; kT < this.animations.length; kT++) {
-            const cT = this.animations[kT];
-            if (cT.name === TT) return cT
+        getAnimationByName(qq) {
+          for (let Eq = 0; Eq < this.animations.length; Eq++) {
+            const gq = this.animations[Eq];
+            if (gq.name === qq) return gq
           }
           return null
         }
-        createAnimationRange(kT, cT, lT) {
-          if (!this._ranges[kT]) {
-            this._ranges[kT] = TT._AnimationRangeFactory(kT, cT, lT);
-            for (let TT = 0, MT = this.animations.length; TT < MT; TT++) this.animations[TT] && this.animations[TT].createRange(kT, cT, lT)
+        createAnimationRange(Eq, gq, Yq) {
+          if (!this._ranges[Eq]) {
+            this._ranges[Eq] = qq._AnimationRangeFactory(Eq, gq, Yq);
+            for (let qq = 0, lq = this.animations.length; qq < lq; qq++) this.animations[qq] && this.animations[qq].createRange(Eq, gq, Yq)
           }
         }
-        deleteAnimationRange(TT) {
-          let kT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-          for (let cT = 0, lT = this.animations.length; cT < lT; cT++) this.animations[cT] && this.animations[cT].deleteRange(TT, kT);
-          this._ranges[TT] = null
+        deleteAnimationRange(qq) {
+          let Eq = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+          for (let gq = 0, Yq = this.animations.length; gq < Yq; gq++) this.animations[gq] && this.animations[gq].deleteRange(qq, Eq);
+          this._ranges[qq] = null
         }
-        getAnimationRange(TT) {
-          return this._ranges[TT] || null
+        getAnimationRange(qq) {
+          return this._ranges[qq] || null
         }
-        clone(kT, cT, lT) {
-          const MT = xT.d.Clone((() => new TT(kT, this.NJ())), this);
-          if (cT && (MT.parent = cT), !lT) {
-            const TT = this.getDescendants(!0);
-            for (let cT = 0; cT < TT.length; cT++) {
-              const lT = TT[cT];
-              lT.clone(kT + "." + lT.name, MT)
+        clone(Eq, gq, Yq) {
+          const lq = cq.d.Clone((() => new qq(Eq, this.ZJ())), this);
+          if (gq && (lq.parent = gq), !Yq) {
+            const qq = this.getDescendants(!0);
+            for (let gq = 0; gq < qq.length; gq++) {
+              const Yq = qq[gq];
+              Yq.clone(Eq + "." + Yq.name, lq)
             }
           }
-          return MT
+          return lq
         }
         getAnimationRanges() {
-          const TT = [];
-          let kT;
-          for (kT in this._ranges) TT.push(this._ranges[kT]);
-          return TT
+          const qq = [];
+          let Eq;
+          for (Eq in this._ranges) qq.push(this._ranges[Eq]);
+          return qq
         }
-        beginAnimation(TT, kT, cT, lT) {
-          const MT = this.getAnimationRange(TT);
-          return MT ? this._scene.beginAnimation(this, MT.from, MT.to, kT, cT, lT) : null
+        beginAnimation(qq, Eq, gq, Yq) {
+          const lq = this.getAnimationRange(qq);
+          return lq ? this._scene.beginAnimation(this, lq.from, lq.to, Eq, gq, Yq) : null
         }
         serializeAnimationRanges() {
-          const TT = [];
-          for (const kT in this._ranges) {
-            const cT = this._ranges[kT];
-            if (!cT) continue;
-            const lT = {};
-            lT.name = kT, lT.from = cT.from, lT.to = cT.to, TT.push(lT)
+          const qq = [];
+          for (const Eq in this._ranges) {
+            const gq = this._ranges[Eq];
+            if (!gq) continue;
+            const Yq = {};
+            Yq.name = Eq, Yq.from = gq.from, Yq.to = gq.to, qq.push(Yq)
           }
-          return TT
+          return qq
         }
-        computeWorldMatrix(TT) {
-          return this._worldMatrix || (this._worldMatrix = MT.d.Identity()), this._worldMatrix
+        computeWorldMatrix(qq) {
+          return this._worldMatrix || (this._worldMatrix = lq.e.Identity()), this._worldMatrix
         }
-        dispose(TT) {
-          let kT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          if (this._nodeDataStorage._isDisposed = !0, !TT) {
-            const cT = this.getDescendants(!0);
-            for (const lT of cT) lT.dispose(TT, kT)
+        dispose(qq) {
+          let Eq = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          if (this._nodeDataStorage._isDisposed = !0, !qq) {
+            const gq = this.getDescendants(!0);
+            for (const Yq of gq) Yq.dispose(qq, Eq)
           }
-          this.parent ? this.parent = null : this._removeFromSceneRootNodes(), this.QJ.notifyObservers(this), this.QJ.clear(), this.onEnabledStateChangedObservable.clear(), this._nodeDataStorage._onEffectiveEnabledStateChangedObservable?.clear(), this.onClonedObservable.clear();
-          for (const cT of this._behaviors) cT.detach();
+          this.parent ? this.parent = null : this._removeFromSceneRootNodes(), this.MJ.notifyObservers(this), this.MJ.clear(), this.onEnabledStateChangedObservable.clear(), this._nodeDataStorage._onEffectiveEnabledStateChangedObservable?.clear(), this.onClonedObservable.clear();
+          for (const gq of this._behaviors) gq.detach();
           this._behaviors.length = 0, this.metadata = null
         }
-        static ParseAnimationRanges(TT, kT, cT) {
-          if (kT.qt)
-            for (let lT = 0; lT < kT.qt.length; lT++) {
-              const cT = kT.qt[lT];
-              TT.createAnimationRange(cT.name, cT.from, cT.to)
+        static ParseAnimationRanges(qq, Eq, gq) {
+          if (Eq.zV)
+            for (let Yq = 0; Yq < Eq.zV.length; Yq++) {
+              const gq = Eq.zV[Yq];
+              qq.createAnimationRange(gq.name, gq.from, gq.to)
             }
         }
         getHierarchyBoundingVectors() {
-          let TT, kT, cT = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
-            lT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-          this.NJ().incrementRenderId(), this.computeWorldMatrix(!0);
-          const KT = this;
-          if (KT.DH && KT.kF) {
-            const cT = KT.DH();
-            TT = cT.boundingBox.minimumWorld.clone(), kT = cT.boundingBox.maximumWorld.clone()
-          } else TT = new MT.m(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), kT = new MT.m(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE);
-          if (cT) {
-            const cT = this.getDescendants(!1);
-            for (const KT of cT) {
-              const cT = KT;
-              if (cT.computeWorldMatrix(!0), lT && !lT(cT)) continue;
-              if (!cT.DH || 0 === cT.getTotalVertices()) continue;
-              const OT = cT.DH().boundingBox,
-                yT = OT.minimumWorld,
-                fT = OT.maximumWorld;
-              MT.m.CheckExtends(yT, TT, kT), MT.m.CheckExtends(fT, TT, kT)
+          let qq, Eq, gq = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
+            Yq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+          this.ZJ().incrementRenderId(), this.computeWorldMatrix(!0);
+          const Oq = this;
+          if (Oq.yR && Oq.fn) {
+            const gq = Oq.yR();
+            qq = gq.boundingBox.minimumWorld.clone(), Eq = gq.boundingBox.maximumWorld.clone()
+          } else qq = new lq.q(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), Eq = new lq.q(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE);
+          if (gq) {
+            const gq = this.getDescendants(!1);
+            for (const Oq of gq) {
+              const gq = Oq;
+              if (gq.computeWorldMatrix(!0), Yq && !Yq(gq)) continue;
+              if (!gq.yR || 0 === gq.getTotalVertices()) continue;
+              const mq = gq.yR().boundingBox,
+                xq = mq.minimumWorld,
+                Aq = mq.maximumWorld;
+              lq.q.CheckExtends(xq, qq, Eq), lq.q.CheckExtends(Aq, qq, Eq)
             }
           }
           return {
-            min: TT,
-            max: kT
+            min: qq,
+            max: Eq
           }
         }
       }, (() => {
-        const MT = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        kT = [(0, KT.J)()], cT = [(0, KT.J)()], AT = [(0, KT.J)()], CT = [(0, KT.J)()], jT = [(0, KT.J)()], (0, lT.e)(null, null, kT, {
+        const lq = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        Eq = [(0, Oq.M)()], gq = [(0, Oq.M)()], Bq = [(0, Oq.M)()], Wq = [(0, Oq.M)()], Nq = [(0, Oq.M)()], (0, Yq.f)(null, null, Eq, {
           kind: "field",
           name: "name",
           static: !1,
           private: !1,
           access: {
-            has: TT => "name" in TT,
-            get: TT => TT.name,
-            set: (TT, kT) => {
-              TT.name = kT
+            has: qq => "name" in qq,
+            get: qq => qq.name,
+            set: (qq, Eq) => {
+              qq.name = Eq
             }
           },
-          metadata: MT
-        }, vT, tT), (0, lT.e)(null, null, cT, {
+          metadata: lq
+        }, aq, Vq), (0, Yq.f)(null, null, gq, {
           kind: "field",
           name: "id",
           static: !1,
           private: !1,
           access: {
-            has: TT => "id" in TT,
-            get: TT => TT.id,
-            set: (TT, kT) => {
-              TT.id = kT
+            has: qq => "id" in qq,
+            get: qq => qq.id,
+            set: (qq, Eq) => {
+              qq.id = Eq
             }
           },
-          metadata: MT
-        }, hT, NT), (0, lT.e)(null, null, AT, {
+          metadata: lq
+        }, dq, jq), (0, Yq.f)(null, null, Bq, {
           kind: "field",
           name: "uniqueId",
           static: !1,
           private: !1,
           access: {
-            has: TT => "uniqueId" in TT,
-            get: TT => TT.uniqueId,
-            set: (TT, kT) => {
-              TT.uniqueId = kT
+            has: qq => "uniqueId" in qq,
+            get: qq => qq.uniqueId,
+            set: (qq, Eq) => {
+              qq.uniqueId = Eq
             }
           },
-          metadata: MT
-        }, QT, ST), (0, lT.e)(null, null, CT, {
+          metadata: lq
+        }, Hq, oq), (0, Yq.f)(null, null, Wq, {
           kind: "field",
           name: "state",
           static: !1,
           private: !1,
           access: {
-            has: TT => "state" in TT,
-            get: TT => TT.state,
-            set: (TT, kT) => {
-              TT.state = kT
+            has: qq => "state" in qq,
+            get: qq => qq.state,
+            set: (qq, Eq) => {
+              qq.state = Eq
             }
           },
-          metadata: MT
-        }, DT, aT), (0, lT.e)(null, null, jT, {
+          metadata: lq
+        }, Pq, Qq), (0, Yq.f)(null, null, Nq, {
           kind: "field",
           name: "metadata",
           static: !1,
           private: !1,
           access: {
-            has: TT => "metadata" in TT,
-            get: TT => TT.metadata,
-            set: (TT, kT) => {
-              TT.metadata = kT
+            has: qq => "metadata" in qq,
+            get: qq => qq.metadata,
+            set: (qq, Eq) => {
+              qq.metadata = Eq
             }
           },
-          metadata: MT
-        }, FT, rT), MT && Object.defineProperty(TT, Symbol.metadata, {
+          metadata: lq
+        }, yq, tq), lq && Object.defineProperty(qq, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: MT
+          value: lq
         })
-      })(), TT._AnimationRangeFactory = (TT, kT, cT) => {
-        throw (0, fT.i)("AnimationRange")
-      }, TT._NodeConstructors = {}, TT
+      })(), qq._AnimationRangeFactory = (qq, Eq, gq) => {
+        throw (0, Aq.m)("AnimationRange")
+      }, qq._NodeConstructors = {}, qq
     })()
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

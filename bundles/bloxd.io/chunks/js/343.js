@@ -1,97 +1,97 @@
 export const id = 343;
 export const ids = [343, 344];
 export const modules = {
-  42804: (TT, kT, cT) => {
-    cT.d(kT, {
-      gamePackSource: () => KT
+  43063: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      gamePackSource: () => Oq
     });
-    var lT = cT(4939),
-      MT = cT(1518);
+    var Yq = gq(4821),
+      lq = gq(1477);
 
-    function KT(TT) {
+    function Oq(qq) {
       return {
-        packKey: async kT => (await MT.d.getGame(TT, kT, !0)).customTexturePackKey,
-        fetchPack: lT.b
+        packKey: async Eq => (await lq.e.getGame(qq, Eq, !0)).customTexturePackKey,
+        fetchPack: Yq.e
       }
     }
   },
-  42796: (TT, kT, cT) => {
-    cT.r(kT), cT.d(kT, {
-      fetchGuestContext: () => CT,
-      guestJoinTarget: () => ST,
-      guestJoinWithPack: () => vT,
-      guestPackForGame: () => jT,
-      invalidateGuestTrafficCode: () => QT
+  43055: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      fetchGuestContext: () => Wq,
+      guestJoinTarget: () => oq,
+      guestJoinWithPack: () => aq,
+      guestPackForGame: () => Nq,
+      invalidateGuestTrafficCode: () => Hq
     });
-    var lT = cT(1202),
-      MT = cT(1518),
-      KT = cT(118),
-      OT = cT(36278),
-      yT = cT(1136),
-      fT = cT(40557),
-      xT = cT(42804),
-      IT = cT(40515);
+    var Yq = gq(1195),
+      lq = gq(1477),
+      Oq = gq(96),
+      mq = gq(36515),
+      xq = gq(1109),
+      Aq = gq(40687),
+      cq = gq(43063),
+      uq = gq(40628);
 
-    function AT() {
-      if (KT.featureFlags.useTurnstile) throw new fT.TurnstilePageError
+    function Bq() {
+      if (Oq.featureFlags.useTurnstile) throw new Aq.TurnstilePageError
     }
 
-    function CT() {
-      return (0, yT.fetchAnonymousUserContext)().catch((TT => (console.warn("the guest context didn't load", TT), null)))
+    function Wq() {
+      return (0, xq.fetchAnonymousUserContext)().catch((qq => (console.warn("the guest context didn't load", qq), null)))
     }
-    async function jT(TT, kT, cT, lT) {
+    async function Nq(qq, Eq, gq, Yq) {
       try {
-        const MT = await cT;
-        if (null === MT) return void console.warn(`the texture pack step for ${TT} has no guest context: the pack in play stays`);
-        await kT.packForGame(TT, (0, xT.gamePackSource)(MT), lT)
-      } catch (MT) {
-        console.warn(`the texture pack step for ${TT} failed: the pack in play stays`, MT)
+        const lq = await gq;
+        if (null === lq) return void console.warn(`the texture pack step for ${qq} has no guest context: the pack in play stays`);
+        await Eq.packForGame(qq, (0, cq.gamePackSource)(lq), Yq)
+      } catch (lq) {
+        console.warn(`the texture pack step for ${qq} failed: the pack in play stays`, lq)
       }
     }
-    async function vT(TT, kT, cT, lT) {
-      AT();
-      const MT = CT();
-      return await cT(((kT, cT) => jT(TT, kT, MT, cT))), ST(TT, kT, lT(), await MT)
+    async function aq(qq, Eq, gq, Yq) {
+      Bq();
+      const lq = Wq();
+      return await gq(((Eq, gq) => Nq(qq, Eq, lq, gq))), oq(qq, Eq, Yq(), await lq)
     }
-    let tT = null,
-      hT = null;
-    async function NT() {
-      if ((null === tT || tT.hasExpired()) && (hT ??= (0, yT.fetchAnonymousUserContext)().then((TT => {
-          tT = TT
+    let Vq = null,
+      dq = null;
+    async function jq() {
+      if ((null === Vq || Vq.hasExpired()) && (dq ??= (0, xq.fetchAnonymousUserContext)().then((qq => {
+          Vq = qq
         })).finally((() => {
-          hT = null
-        })), await hT), null === tT) throw new Error("no guest context to post as");
-      return tT.getMetricsCookies()
+          dq = null
+        })), await dq), null === Vq) throw new Error("no guest context to post as");
+      return Vq.getMetricsCookies()
     }
-    async function QT() {
-      var TT;
-      await (null === (TT = tT) || void 0 === TT ? void 0 : TT.invalidateTrafficCode())
+    async function Hq() {
+      var qq;
+      await (null === (qq = Vq) || void 0 === qq ? void 0 : qq.invalidateTrafficCode())
     }
-    async function ST(TT, kT, cT) {
-      let KT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-      AT();
-      const fT = null !== KT && void 0 !== KT ? KT : await (0, yT.fetchAnonymousUserContext)();
-      if (tT = fT, fT.isLoggedIn()) throw new Error("the shell's page joins as a guest only");
-      const xT = await MT.d.matchmakePlayer(fT, kT, TT, (0, OT.e)()),
-        CT = performance.now();
-      if (!("gameServerHost" in xT)) throw new Error(`matchmaking refused: ${xT.failReason}`);
-      const jT = lT.clientSideServerUrls.getServerWebSocketUrlFromServerUrl(xT.gameServerHost);
-      if (jT.isError()) throw new Error(`no socket URL for ${xT.gameServerHost}: ${jT.asError().message}`);
-      const vT = {
-        endpoint: jT.getValue(),
-        gameNameWithVariation: xT.gameNameWithVariation,
-        lobbyName: xT.lobbyName
+    async function oq(qq, Eq, gq) {
+      let Oq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+      Bq();
+      const Aq = null !== Oq && void 0 !== Oq ? Oq : await (0, xq.fetchAnonymousUserContext)();
+      if (Vq = Aq, Aq.isLoggedIn()) throw new Error("the shell's page joins as a guest only");
+      const cq = await lq.e.matchmakePlayer(Aq, Eq, qq, (0, mq.b)()),
+        Wq = performance.now();
+      if (!("gameServerHost" in cq)) throw new Error(`matchmaking refused: ${cq.failReason}`);
+      const Nq = Yq.clientSideServerUrls.getServerWebSocketUrlFromServerUrl(cq.gameServerHost);
+      if (Nq.isError()) throw new Error(`no socket URL for ${cq.gameServerHost}: ${Nq.asError().message}`);
+      const aq = {
+        endpoint: Nq.getValue(),
+        gameNameWithVariation: cq.gameNameWithVariation,
+        lobbyName: cq.lobbyName
       };
       return {
         target: {
-          ...await (0, IT.d)(fT, vT, cT, !1),
-          postCookies: NT
+          ...await (0, uq.h)(Aq, aq, gq, !1),
+          postCookies: jq
         },
-        matchedAt: CT,
-        freshMs: IT.c
+        matchedAt: Wq,
+        freshMs: uq.d
       }
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

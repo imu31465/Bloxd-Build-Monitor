@@ -1,35 +1,35 @@
 export const id = 248;
 export const ids = [248];
 export const modules = {
-  40057: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => lT
+  40190: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => Yq
     });
-    let lT = !1
+    let Yq = !1
   },
-  39615: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => vT
+  39748: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => aq
     });
-    var lT = cT(39620),
-      MT = cT(39624),
-      KT = cT(36932),
-      OT = cT(36892),
-      yT = cT(36925),
-      fT = cT(37760),
-      xT = cT(39638);
-    class IT {
+    var Yq = gq(39757),
+      lq = gq(39759),
+      Oq = gq(37156),
+      mq = gq(37139),
+      xq = gq(37153),
+      Aq = gq(37872),
+      cq = gq(39774);
+    class uq {
       get wrapU() {
         return this._wrapU
       }
-      set wrapU(TT) {
-        this._wrapU = TT
+      set wrapU(qq) {
+        this._wrapU = qq
       }
       get wrapV() {
         return this._wrapV
       }
-      set wrapV(TT) {
-        this._wrapV = TT
+      set wrapV(qq) {
+        this._wrapV = qq
       }
       get coordinatesMode() {
         return 0
@@ -37,29 +37,29 @@ export const modules = {
       get isCube() {
         return !!this._texture && this._texture.isCube
       }
-      set isCube(TT) {
-        this._texture && (this._texture.isCube = TT)
+      set isCube(qq) {
+        this._texture && (this._texture.isCube = qq)
       }
       get is3D() {
         return !!this._texture && this._texture.is3D
       }
-      set is3D(TT) {
-        this._texture && (this._texture.is3D = TT)
+      set is3D(qq) {
+        this._texture && (this._texture.is3D = qq)
       }
       get is2DArray() {
         return !!this._texture && this._texture.is2DArray
       }
-      set is2DArray(TT) {
-        this._texture && (this._texture.is2DArray = TT)
+      set is2DArray(qq) {
+        this._texture && (this._texture.is2DArray = qq)
       }
       getClassName() {
         return "ThinTexture"
       }
-      static _IsRenderTargetWrapper(TT) {
-        return void 0 !== TT?.shareDepth
+      static _IsRenderTargetWrapper(qq) {
+        return void 0 !== qq?.shareDepth
       }
-      constructor(TT) {
-        this._wrapU = 1, this._wrapV = 1, this.wrapR = 1, this.anisotropicFilteringLevel = 4, this.delayLoadState = 0, this._texture = null, this._engine = null, this._cachedSize = xT.e.Zero(), this._cachedBaseSize = xT.e.Zero(), this._initialSamplingMode = 2, this._texture = IT._IsRenderTargetWrapper(TT) ? TT.texture : TT, this._texture && (this._engine = this._texture.Dv(), this.wrapU = this._texture._cachedWrapU ?? this.wrapU, this.wrapV = this._texture._cachedWrapV ?? this.wrapV, this.wrapR = this._texture._cachedWrapR ?? this.wrapR)
+      constructor(qq) {
+        this._wrapU = 1, this._wrapV = 1, this.wrapR = 1, this.anisotropicFilteringLevel = 4, this.delayLoadState = 0, this._texture = null, this._engine = null, this._cachedSize = cq.b.Zero(), this._cachedBaseSize = cq.b.Zero(), this._initialSamplingMode = 2, this._texture = uq._IsRenderTargetWrapper(qq) ? qq.texture : qq, this._texture && (this._engine = this._texture.Ba(), this.wrapU = this._texture._cachedWrapU ?? this.wrapU, this.wrapV = this._texture._cachedWrapV ?? this.wrapV, this.wrapR = this._texture._cachedWrapR ?? this.wrapR)
       }
       isReady() {
         return 4 === this.delayLoadState ? (this.delayLoad(), !1) : !!this._texture && this._texture.isReady
@@ -81,9 +81,9 @@ export const modules = {
       get samplingMode() {
         return this._texture ? this._texture.samplingMode : this._initialSamplingMode
       }
-      updateSamplingMode(TT) {
-        let kT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        this._texture && this._engine && this._engine.updateTextureSamplingMode(TT, this._texture, this._texture.generateMipMaps && kT)
+      updateSamplingMode(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        this._texture && this._engine && this._engine.updateTextureSamplingMode(qq, this._texture, this._texture.generateMipMaps && Eq)
       }
       releaseInternalTexture() {
         this._texture && (this._texture.dispose(), this._texture = null)
@@ -92,63 +92,63 @@ export const modules = {
         this._texture && (this.releaseInternalTexture(), this._engine = null)
       }
     }
-    var AT, CT = cT(39645),
-      jT = cT(39500);
-    let vT = (() => {
-      var TT;
-      let kT, cT, xT, AT, jT, vT, tT, hT, NT, QT, ST, DT, aT, FT, rT, PT, wT, mT, bT, zT, JT, oT, HT, eT, GT, VT = IT,
-        ET = [],
-        ZT = [],
-        uT = [],
-        XT = [],
-        dT = [],
-        LT = [],
-        RT = [],
-        gT = [],
-        UT = [],
-        YT = [],
-        BT = [],
-        WT = [],
-        nT = [],
-        pT = [],
-        iT = [],
-        qT = [],
-        sT = [],
-        Tk = [],
-        kk = [],
-        ck = [],
-        lk = [],
-        Mk = [],
-        Kk = [],
-        Ok = [],
-        yk = [],
-        fk = [],
-        xk = [],
-        Ik = [],
-        Ak = [],
-        Ck = [],
-        jk = [];
-      return TT = class extends VT {
-        set hasAlpha(TT) {
-          this._hasAlpha = TT
+    var Bq, Wq = gq(39779),
+      Nq = gq(39636);
+    let aq = (() => {
+      var qq;
+      let Eq, gq, cq, Bq, Nq, aq, Vq, dq, jq, Hq, oq, Pq, Qq, yq, tq, rq, vq, hq, nq, bq, iq, Zq, fq, Mq, Tq, zq = uq,
+        Sq = [],
+        pq = [],
+        Gq = [],
+        Lq = [],
+        Jq = [],
+        kq = [],
+        Rq = [],
+        Uq = [],
+        Fq = [],
+        sq = [],
+        Xq = [],
+        wq = [],
+        Kq = [],
+        Cq = [],
+        Iq = [],
+        eq = [],
+        Dq = [],
+        qE = [],
+        EE = [],
+        gE = [],
+        YE = [],
+        lE = [],
+        OE = [],
+        mE = [],
+        xE = [],
+        AE = [],
+        cE = [],
+        uE = [],
+        BE = [],
+        WE = [],
+        NE = [];
+      return qq = class extends zq {
+        set hasAlpha(qq) {
+          this._hasAlpha = qq
         }
         get hasAlpha() {
           return this._hasAlpha
         }
-        set getAlphaFromRGB(TT) {
-          this._getAlphaFromRGB !== TT && (this._getAlphaFromRGB = TT, this._scene && this._scene.markAllMaterialsAsDirty(1, (TT => TT.hasTexture(this))))
+        set getAlphaFromRGB(qq) {
+          this._getAlphaFromRGB !== qq && (this._getAlphaFromRGB = qq, this._scene && this._scene.markAllMaterialsAsDirty(1, (qq => qq.hasTexture(this))))
         }
         get getAlphaFromRGB() {
           return this._getAlphaFromRGB
         }
-        set coordinatesIndex(TT) {
-          this._coordinatesIndex !== TT && (this._coordinatesIndex = TT, this._scene && this._scene.markAllMaterialsAsDirty(1, (TT => TT.hasTexture(this))))
+        set coordinatesIndex(qq) {
+          this._coordinatesIndex !== qq && (this._coordinatesIndex = qq, this._scene && this._scene.markAllMaterialsAsDirty(1, (qq => qq.hasTexture(this))))
         }
         get coordinatesIndex() {
           return this._coordinatesIndex
         }
-        set coordinatesMode(TT) {
-          this._coordinatesMode !== TT && (this._coordinatesMode = TT, this._scene && this._scene.markAllMaterialsAsDirty(1, (TT => TT.hasTexture(this))))
+        set coordinatesMode(qq) {
+          this._coordinatesMode !== qq && (this._coordinatesMode = qq, this._scene && this._scene.markAllMaterialsAsDirty(1, (qq => qq.hasTexture(this))))
         }
         get coordinatesMode() {
           return this._coordinatesMode
@@ -156,51 +156,51 @@ export const modules = {
         get wrapU() {
           return this._wrapU
         }
-        set wrapU(TT) {
-          this._wrapU = TT
+        set wrapU(qq) {
+          this._wrapU = qq
         }
         get wrapV() {
           return this._wrapV
         }
-        set wrapV(TT) {
-          this._wrapV = TT
+        set wrapV(qq) {
+          this._wrapV = qq
         }
         get isCube() {
           return this._texture ? this._texture.isCube : this._isCube
         }
-        set isCube(TT) {
-          this._texture ? this._texture.isCube = TT : this._isCube = TT
+        set isCube(qq) {
+          this._texture ? this._texture.isCube = qq : this._isCube = qq
         }
         get is3D() {
           return !!this._texture && this._texture.is3D
         }
-        set is3D(TT) {
-          this._texture && (this._texture.is3D = TT)
+        set is3D(qq) {
+          this._texture && (this._texture.is3D = qq)
         }
         get is2DArray() {
           return !!this._texture && this._texture.is2DArray
         }
-        set is2DArray(TT) {
-          this._texture && (this._texture.is2DArray = TT)
+        set is2DArray(qq) {
+          this._texture && (this._texture.is2DArray = qq)
         }
         get gammaSpace() {
           return this._texture ? (null === this._texture._gammaSpace && (this._texture._gammaSpace = this._gammaSpace), this._texture._gammaSpace && !this._texture._useSRGBBuffer) : this._gammaSpace
         }
-        set gammaSpace(TT) {
+        set gammaSpace(qq) {
           if (this._texture) {
-            if (this._texture._gammaSpace === TT) return;
-            this._texture._gammaSpace = TT
+            if (this._texture._gammaSpace === qq) return;
+            this._texture._gammaSpace = qq
           } else {
-            if (this._gammaSpace === TT) return;
-            this._gammaSpace = TT
+            if (this._gammaSpace === qq) return;
+            this._gammaSpace = qq
           }
-          this.NJ()?.markAllMaterialsAsDirty(1, (TT => TT.hasTexture(this)))
+          this.ZJ()?.markAllMaterialsAsDirty(1, (qq => qq.hasTexture(this)))
         }
         get isRGBD() {
           return null != this._texture && this._texture._isRGBD
         }
-        set isRGBD(TT) {
-          TT !== this.isRGBD && (this._texture && (this._texture._isRGBD = TT), this.NJ()?.markAllMaterialsAsDirty(1, (TT => TT.hasTexture(this))))
+        set isRGBD(qq) {
+          qq !== this.isRGBD && (this._texture && (this._texture._isRGBD = qq), this.ZJ()?.markAllMaterialsAsDirty(1, (qq => qq.hasTexture(this))))
         }
         get noMipmap() {
           return !1
@@ -208,29 +208,29 @@ export const modules = {
         get lodGenerationOffset() {
           return this._texture ? this._texture._lodGenerationOffset : 0
         }
-        set lodGenerationOffset(TT) {
-          this._texture && (this._texture._lodGenerationOffset = TT)
+        set lodGenerationOffset(qq) {
+          this._texture && (this._texture._lodGenerationOffset = qq)
         }
         get lodGenerationScale() {
           return this._texture ? this._texture._lodGenerationScale : 0
         }
-        set lodGenerationScale(TT) {
-          this._texture && (this._texture._lodGenerationScale = TT)
+        set lodGenerationScale(qq) {
+          this._texture && (this._texture._lodGenerationScale = qq)
         }
         get linearSpecularLOD() {
           return !!this._texture && this._texture._linearSpecularLOD
         }
-        set linearSpecularLOD(TT) {
-          this._texture && (this._texture._linearSpecularLOD = TT)
+        set linearSpecularLOD(qq) {
+          this._texture && (this._texture._linearSpecularLOD = qq)
         }
         get irradianceTexture() {
           return this._texture ? this._texture._irradianceTexture : null
         }
-        set irradianceTexture(TT) {
-          this._texture && (this._texture._irradianceTexture = TT)
+        set irradianceTexture(qq) {
+          this._texture && (this._texture._irradianceTexture = qq)
         }
         get uid() {
-          return this._uid || (this._uid = (0, fT.c)()), this._uid
+          return this._uid || (this._uid = (0, Aq.d)()), this._uid
         }
         toString() {
           return this.name
@@ -238,8 +238,8 @@ export const modules = {
         getClassName() {
           return "BaseTexture"
         }
-        set onDispose(TT) {
-          this._onDisposeObserver && this.QJ.remove(this._onDisposeObserver), this._onDisposeObserver = this.QJ.add(TT)
+        set onDispose(qq) {
+          this._onDisposeObserver && this.MJ.remove(this._onDisposeObserver), this._onDisposeObserver = this.MJ.add(qq)
         }
         get isBlocking() {
           return !0
@@ -250,21 +250,21 @@ export const modules = {
         get errorObject() {
           return this._errorObject
         }
-        constructor(kT) {
-          let cT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-          super(null), this.uniqueId = ((0, lT.h)(this, ET), (0, lT.h)(this, ZT, void 0)), this.name = ((0, lT.h)(this, uT), (0, lT.h)(this, XT, void 0)), this.displayName = ((0, lT.h)(this, dT), (0, lT.h)(this, LT, void 0)), this.metadata = ((0, lT.h)(this, RT), (0, lT.h)(this, gT, null)), this._internalMetadata = (0, lT.h)(this, UT), this.reservedDataStore = null, this._hasAlpha = (0, lT.h)(this, YT, !1), this._getAlphaFromRGB = ((0, lT.h)(this, BT), (0, lT.h)(this, WT, !1)), this.level = ((0, lT.h)(this, nT), (0, lT.h)(this, pT, 1)), this._coordinatesIndex = ((0, lT.h)(this, iT), (0, lT.h)(this, qT, 0)), this.optimizeUVAllocation = ((0, lT.h)(this, sT), (0, lT.h)(this, Tk, !0)), this._coordinatesMode = ((0, lT.h)(this, kk), (0, lT.h)(this, ck, 0)), this.wrapR = ((0, lT.h)(this, lk), (0, lT.h)(this, Mk, 1)), this.anisotropicFilteringLevel = ((0, lT.h)(this, Kk), (0, lT.h)(this, Ok, TT.DEFAULT_ANISOTROPIC_FILTERING_LEVEL)), this._isCube = ((0, lT.h)(this, yk), !1), this._gammaSpace = !0, this.invertZ = (0, lT.h)(this, fk, !1), this.lodLevelInAlpha = ((0, lT.h)(this, xk), (0, lT.h)(this, Ik, !1)), this._dominantDirection = ((0, lT.h)(this, Ak), null), this.isRenderTarget = (0, lT.h)(this, Ck, !1), this._prefiltered = ((0, lT.h)(this, jk), !1), this._forceSerialize = !1, this.animations = [], this.QJ = new KT.b, this._onDisposeObserver = null, this._scene = null, this._uid = null, this._parentContainer = null, this._loadingError = !1, kT ? TT._IsScene(kT) ? this._scene = kT : this._engine = kT : this._scene = yT.d.LastCreatedScene, this._scene && (this.uniqueId = this._scene.getUniqueId(), this._scene.addTexture(this), this._engine = this._scene.Dv()), this._texture = cT, this._uid = null
+        constructor(Eq) {
+          let gq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+          super(null), this.uniqueId = ((0, Yq.i)(this, Sq), (0, Yq.i)(this, pq, void 0)), this.name = ((0, Yq.i)(this, Gq), (0, Yq.i)(this, Lq, void 0)), this.displayName = ((0, Yq.i)(this, Jq), (0, Yq.i)(this, kq, void 0)), this.metadata = ((0, Yq.i)(this, Rq), (0, Yq.i)(this, Uq, null)), this._internalMetadata = (0, Yq.i)(this, Fq), this.reservedDataStore = null, this._hasAlpha = (0, Yq.i)(this, sq, !1), this._getAlphaFromRGB = ((0, Yq.i)(this, Xq), (0, Yq.i)(this, wq, !1)), this.level = ((0, Yq.i)(this, Kq), (0, Yq.i)(this, Cq, 1)), this._coordinatesIndex = ((0, Yq.i)(this, Iq), (0, Yq.i)(this, eq, 0)), this.optimizeUVAllocation = ((0, Yq.i)(this, Dq), (0, Yq.i)(this, qE, !0)), this._coordinatesMode = ((0, Yq.i)(this, EE), (0, Yq.i)(this, gE, 0)), this.wrapR = ((0, Yq.i)(this, YE), (0, Yq.i)(this, lE, 1)), this.anisotropicFilteringLevel = ((0, Yq.i)(this, OE), (0, Yq.i)(this, mE, qq.DEFAULT_ANISOTROPIC_FILTERING_LEVEL)), this._isCube = ((0, Yq.i)(this, xE), !1), this._gammaSpace = !0, this.invertZ = (0, Yq.i)(this, AE, !1), this.lodLevelInAlpha = ((0, Yq.i)(this, cE), (0, Yq.i)(this, uE, !1)), this._dominantDirection = ((0, Yq.i)(this, BE), null), this.isRenderTarget = (0, Yq.i)(this, WE, !1), this._prefiltered = ((0, Yq.i)(this, NE), !1), this._forceSerialize = !1, this.animations = [], this.MJ = new Oq.d, this._onDisposeObserver = null, this._scene = null, this._uid = null, this._parentContainer = null, this._loadingError = !1, Eq ? qq._IsScene(Eq) ? this._scene = Eq : this._engine = Eq : this._scene = xq.b.LastCreatedScene, this._scene && (this.uniqueId = this._scene.getUniqueId(), this._scene.addTexture(this), this._engine = this._scene.Ba()), this._texture = gq, this._uid = null
         }
-        NJ() {
+        ZJ() {
           return this._scene
         }
         _getEngine() {
           return this._engine
         }
         getTextureMatrix() {
-          return OT.d.IdentityReadOnly
+          return mq.e.IdentityReadOnly
         }
         getReflectionTextureMatrix() {
-          return OT.d.IdentityReadOnly
+          return mq.e.IdentityReadOnly
         }
         getRefractionTextureMatrix() {
           return this.getReflectionTextureMatrix()
@@ -272,18 +272,18 @@ export const modules = {
         isReadyOrNotBlocking() {
           return !this.isBlocking || this.isReady() || this.loadingError
         }
-        scale(TT) {}
+        scale(qq) {}
         get canRescale() {
           return !1
         }
-        _getFromCache(TT, kT, cT, lT, MT, KT) {
-          const OT = this._getEngine();
-          if (!OT) return null;
-          const yT = OT._getUseSRGBBuffer(!!MT, kT),
-            fT = OT.getLoadedTexturesCache();
-          for (let xT = 0; xT < fT.length; xT++) {
-            const OT = fT[xT];
-            if ((void 0 === MT || yT === OT._useSRGBBuffer) && (void 0 === lT || lT === OT.invertY) && OT.url === TT && OT.generateMipMaps === !kT && (!cT || cT === OT.samplingMode) && (void 0 === KT || KT === OT.isCube)) return OT.incrementReferences(), OT
+        _getFromCache(qq, Eq, gq, Yq, lq, Oq) {
+          const mq = this._getEngine();
+          if (!mq) return null;
+          const xq = mq._getUseSRGBBuffer(!!lq, Eq),
+            Aq = mq.getLoadedTexturesCache();
+          for (let cq = 0; cq < Aq.length; cq++) {
+            const mq = Aq[cq];
+            if ((void 0 === lq || xq === mq._useSRGBBuffer) && (void 0 === Yq || Yq === mq.invertY) && mq.url === qq && mq.generateMipMaps === !Eq && (!gq || gq === mq.samplingMode) && (void 0 === Oq || Oq === mq.isCube)) return mq.incrementReferences(), mq
           }
           return null
         }
@@ -298,48 +298,48 @@ export const modules = {
           return this._texture && void 0 !== this._texture.format ? this._texture.format : 5
         }
         _markAllSubMeshesAsTexturesDirty() {
-          const TT = this.NJ();
-          TT && TT.markAllMaterialsAsDirty(1)
+          const qq = this.ZJ();
+          qq && qq.markAllMaterialsAsDirty(1)
         }
         readPixels() {
-          let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-            kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-            cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-            lT = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
-            MT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-            KT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
-            OT = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0,
-            yT = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : Number.MAX_VALUE,
-            fT = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : Number.MAX_VALUE;
+          let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+            Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+            gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+            Yq = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
+            lq = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+            Oq = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
+            mq = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0,
+            xq = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : Number.MAX_VALUE,
+            Aq = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : Number.MAX_VALUE;
           if (!this._texture) return null;
-          const xT = this._getEngine();
-          if (!xT) return null;
-          const IT = this.getSize();
-          let AT = IT.width,
-            CT = IT.height;
-          0 !== kT && (AT /= Math.pow(2, kT), CT /= Math.pow(2, kT), AT = Math.round(AT), CT = Math.round(CT)), yT = Math.min(AT, yT), fT = Math.min(CT, fT);
+          const cq = this._getEngine();
+          if (!cq) return null;
+          const uq = this.getSize();
+          let Bq = uq.width,
+            Wq = uq.height;
+          0 !== Eq && (Bq /= Math.pow(2, Eq), Wq /= Math.pow(2, Eq), Bq = Math.round(Bq), Wq = Math.round(Wq)), xq = Math.min(Bq, xq), Aq = Math.min(Wq, Aq);
           try {
-            return this._texture.isCube || this._texture.is2DArray ? xT._readTexturePixels(this._texture, yT, fT, TT, kT, cT, lT, MT, KT, OT) : xT._readTexturePixels(this._texture, yT, fT, -1, kT, cT, lT, MT, KT, OT)
-          } catch (jT) {
+            return this._texture.isCube || this._texture.is2DArray ? cq._readTexturePixels(this._texture, xq, Aq, qq, Eq, gq, Yq, lq, Oq, mq) : cq._readTexturePixels(this._texture, xq, Aq, -1, Eq, gq, Yq, lq, Oq, mq)
+          } catch (Nq) {
             return null
           }
         }
         _readPixelsSync() {
-          let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-            kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-            cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-            lT = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
-            MT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+          let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+            Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+            gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+            Yq = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
+            lq = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
           if (!this._texture) return null;
-          const KT = this.getSize();
-          let OT = KT.width,
-            yT = KT.height;
-          const fT = this._getEngine();
-          if (!fT) return null;
-          0 != kT && (OT /= Math.pow(2, kT), yT /= Math.pow(2, kT), OT = Math.round(OT), yT = Math.round(yT));
+          const Oq = this.getSize();
+          let mq = Oq.width,
+            xq = Oq.height;
+          const Aq = this._getEngine();
+          if (!Aq) return null;
+          0 != Eq && (mq /= Math.pow(2, Eq), xq /= Math.pow(2, Eq), mq = Math.round(mq), xq = Math.round(xq));
           try {
-            return this._texture.isCube ? fT._readTexturePixelsSync(this._texture, OT, yT, TT, kT, cT, lT, MT) : fT._readTexturePixelsSync(this._texture, OT, yT, -1, kT, cT, lT, MT)
-          } catch (xT) {
+            return this._texture.isCube ? Aq._readTexturePixelsSync(this._texture, mq, xq, qq, Eq, gq, Yq, lq) : Aq._readTexturePixelsSync(this._texture, mq, xq, -1, Eq, gq, Yq, lq)
+          } catch (cq) {
             return null
           }
         }
@@ -355,438 +355,438 @@ export const modules = {
         dispose() {
           if (this._scene) {
             this._scene.stopAnimation && this._scene.stopAnimation(this), this._scene.removePendingData(this);
-            const TT = this._scene.textures.indexOf(this);
-            if (TT >= 0 && this._scene.textures.splice(TT, 1), this._scene.onTextureRemovedObservable.notifyObservers(this), this._scene = null, this._parentContainer) {
-              const TT = this._parentContainer.textures.indexOf(this);
-              TT > -1 && this._parentContainer.textures.splice(TT, 1), this._parentContainer = null
+            const qq = this._scene.textures.indexOf(this);
+            if (qq >= 0 && this._scene.textures.splice(qq, 1), this._scene.onTextureRemovedObservable.notifyObservers(this), this._scene = null, this._parentContainer) {
+              const qq = this._parentContainer.textures.indexOf(this);
+              qq > -1 && this._parentContainer.textures.splice(qq, 1), this._parentContainer = null
             }
           }
-          this.QJ.notifyObservers(this), this.QJ.clear(), this.metadata = null, super.dispose()
+          this.MJ.notifyObservers(this), this.MJ.clear(), this.metadata = null, super.dispose()
         }
         serialize() {
-          let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-          if (!this.name && !TT) return null;
-          const kT = CT.d.Serialize(this);
-          return CT.d.AppendSerializedAnimations(this, kT), kT
+          let qq = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          if (!this.name && !qq) return null;
+          const Eq = Wq.d.Serialize(this);
+          return Wq.d.AppendSerializedAnimations(this, Eq), Eq
         }
-        static WhenAllReady(TT, kT) {
-          let cT = TT.length;
-          if (0 !== cT)
-            for (let lT = 0; lT < TT.length; lT++) {
-              const MT = TT[lT];
-              if (MT.isReady()) 0 === --cT && kT();
+        static WhenAllReady(qq, Eq) {
+          let gq = qq.length;
+          if (0 !== gq)
+            for (let Yq = 0; Yq < qq.length; Yq++) {
+              const lq = qq[Yq];
+              if (lq.isReady()) 0 === --gq && Eq();
               else {
-                const TT = MT.onLoadObservable;
-                TT ? TT.addOnce((() => {
-                  0 === --cT && kT()
-                })) : 0 === --cT && kT()
+                const qq = lq.onLoadObservable;
+                qq ? qq.addOnce((() => {
+                  0 === --gq && Eq()
+                })) : 0 === --gq && Eq()
               }
-            } else kT()
+            } else Eq()
         }
-        static _IsScene(TT) {
-          return "Scene" === TT.getClassName()
+        static _IsScene(qq) {
+          return "Scene" === qq.getClassName()
         }
       }, (() => {
-        const KT = "function" === typeof Symbol && Symbol.metadata ? Object.create(VT[Symbol.metadata] ?? null) : void 0;
-        kT = [(0, MT.J)()], cT = [(0, MT.J)()], xT = [(0, MT.J)()], AT = [(0, MT.J)()], jT = [(0, MT.J)("hasAlpha")], vT = [(0, MT.J)("getAlphaFromRGB")], tT = [(0, MT.J)()], hT = [(0, MT.J)("coordinatesIndex")], NT = [(0, MT.J)()], QT = [(0, MT.J)("coordinatesMode")], ST = [(0, MT.J)()], DT = [(0, MT.J)()], aT = [(0, MT.J)()], FT = [(0, MT.J)()], rT = [(0, MT.J)()], PT = [(0, MT.J)()], wT = [(0, MT.J)()], mT = [(0, MT.J)()], bT = [(0, MT.J)()], zT = [(0, MT.J)()], JT = [(0, MT.J)()], oT = [(0, MT.J)()], HT = [(0, MT.J)()], eT = [(0, MT.A)()], GT = [(0, MT.J)()], (0, lT.e)(TT, null, ST, {
+        const Oq = "function" === typeof Symbol && Symbol.metadata ? Object.create(zq[Symbol.metadata] ?? null) : void 0;
+        Eq = [(0, lq.M)()], gq = [(0, lq.M)()], cq = [(0, lq.M)()], Bq = [(0, lq.M)()], Nq = [(0, lq.M)("hasAlpha")], aq = [(0, lq.M)("getAlphaFromRGB")], Vq = [(0, lq.M)()], dq = [(0, lq.M)("coordinatesIndex")], jq = [(0, lq.M)()], Hq = [(0, lq.M)("coordinatesMode")], oq = [(0, lq.M)()], Pq = [(0, lq.M)()], Qq = [(0, lq.M)()], yq = [(0, lq.M)()], tq = [(0, lq.M)()], rq = [(0, lq.M)()], vq = [(0, lq.M)()], hq = [(0, lq.M)()], nq = [(0, lq.M)()], bq = [(0, lq.M)()], iq = [(0, lq.M)()], Zq = [(0, lq.M)()], fq = [(0, lq.M)()], Mq = [(0, lq.E)()], Tq = [(0, lq.M)()], (0, Yq.f)(qq, null, oq, {
           kind: "getter",
           name: "wrapU",
           static: !1,
           private: !1,
           access: {
-            has: TT => "wrapU" in TT,
-            get: TT => TT.wrapU
+            has: qq => "wrapU" in qq,
+            get: qq => qq.wrapU
           },
-          metadata: KT
-        }, null, ET), (0, lT.e)(TT, null, DT, {
+          metadata: Oq
+        }, null, Sq), (0, Yq.f)(qq, null, Pq, {
           kind: "getter",
           name: "wrapV",
           static: !1,
           private: !1,
           access: {
-            has: TT => "wrapV" in TT,
-            get: TT => TT.wrapV
+            has: qq => "wrapV" in qq,
+            get: qq => qq.wrapV
           },
-          metadata: KT
-        }, null, ET), (0, lT.e)(TT, null, rT, {
+          metadata: Oq
+        }, null, Sq), (0, Yq.f)(qq, null, tq, {
           kind: "getter",
           name: "isCube",
           static: !1,
           private: !1,
           access: {
-            has: TT => "isCube" in TT,
-            get: TT => TT.isCube
+            has: qq => "isCube" in qq,
+            get: qq => qq.isCube
           },
-          metadata: KT
-        }, null, ET), (0, lT.e)(TT, null, PT, {
+          metadata: Oq
+        }, null, Sq), (0, Yq.f)(qq, null, rq, {
           kind: "getter",
           name: "is3D",
           static: !1,
           private: !1,
           access: {
-            has: TT => "is3D" in TT,
-            get: TT => TT.is3D
+            has: qq => "is3D" in qq,
+            get: qq => qq.is3D
           },
-          metadata: KT
-        }, null, ET), (0, lT.e)(TT, null, wT, {
+          metadata: Oq
+        }, null, Sq), (0, Yq.f)(qq, null, vq, {
           kind: "getter",
           name: "is2DArray",
           static: !1,
           private: !1,
           access: {
-            has: TT => "is2DArray" in TT,
-            get: TT => TT.is2DArray
+            has: qq => "is2DArray" in qq,
+            get: qq => qq.is2DArray
           },
-          metadata: KT
-        }, null, ET), (0, lT.e)(TT, null, mT, {
+          metadata: Oq
+        }, null, Sq), (0, Yq.f)(qq, null, hq, {
           kind: "getter",
           name: "gammaSpace",
           static: !1,
           private: !1,
           access: {
-            has: TT => "gammaSpace" in TT,
-            get: TT => TT.gammaSpace
+            has: qq => "gammaSpace" in qq,
+            get: qq => qq.gammaSpace
           },
-          metadata: KT
-        }, null, ET), (0, lT.e)(TT, null, JT, {
+          metadata: Oq
+        }, null, Sq), (0, Yq.f)(qq, null, iq, {
           kind: "getter",
           name: "lodGenerationOffset",
           static: !1,
           private: !1,
           access: {
-            has: TT => "lodGenerationOffset" in TT,
-            get: TT => TT.lodGenerationOffset
+            has: qq => "lodGenerationOffset" in qq,
+            get: qq => qq.lodGenerationOffset
           },
-          metadata: KT
-        }, null, ET), (0, lT.e)(TT, null, oT, {
+          metadata: Oq
+        }, null, Sq), (0, Yq.f)(qq, null, Zq, {
           kind: "getter",
           name: "lodGenerationScale",
           static: !1,
           private: !1,
           access: {
-            has: TT => "lodGenerationScale" in TT,
-            get: TT => TT.lodGenerationScale
+            has: qq => "lodGenerationScale" in qq,
+            get: qq => qq.lodGenerationScale
           },
-          metadata: KT
-        }, null, ET), (0, lT.e)(TT, null, HT, {
+          metadata: Oq
+        }, null, Sq), (0, Yq.f)(qq, null, fq, {
           kind: "getter",
           name: "linearSpecularLOD",
           static: !1,
           private: !1,
           access: {
-            has: TT => "linearSpecularLOD" in TT,
-            get: TT => TT.linearSpecularLOD
+            has: qq => "linearSpecularLOD" in qq,
+            get: qq => qq.linearSpecularLOD
           },
-          metadata: KT
-        }, null, ET), (0, lT.e)(TT, null, eT, {
+          metadata: Oq
+        }, null, Sq), (0, Yq.f)(qq, null, Mq, {
           kind: "getter",
           name: "irradianceTexture",
           static: !1,
           private: !1,
           access: {
-            has: TT => "irradianceTexture" in TT,
-            get: TT => TT.irradianceTexture
+            has: qq => "irradianceTexture" in qq,
+            get: qq => qq.irradianceTexture
           },
-          metadata: KT
-        }, null, ET), (0, lT.e)(null, null, kT, {
+          metadata: Oq
+        }, null, Sq), (0, Yq.f)(null, null, Eq, {
           kind: "field",
           name: "uniqueId",
           static: !1,
           private: !1,
           access: {
-            has: TT => "uniqueId" in TT,
-            get: TT => TT.uniqueId,
-            set: (TT, kT) => {
-              TT.uniqueId = kT
+            has: qq => "uniqueId" in qq,
+            get: qq => qq.uniqueId,
+            set: (qq, Eq) => {
+              qq.uniqueId = Eq
             }
           },
-          metadata: KT
-        }, ZT, uT), (0, lT.e)(null, null, cT, {
+          metadata: Oq
+        }, pq, Gq), (0, Yq.f)(null, null, gq, {
           kind: "field",
           name: "name",
           static: !1,
           private: !1,
           access: {
-            has: TT => "name" in TT,
-            get: TT => TT.name,
-            set: (TT, kT) => {
-              TT.name = kT
+            has: qq => "name" in qq,
+            get: qq => qq.name,
+            set: (qq, Eq) => {
+              qq.name = Eq
             }
           },
-          metadata: KT
-        }, XT, dT), (0, lT.e)(null, null, xT, {
+          metadata: Oq
+        }, Lq, Jq), (0, Yq.f)(null, null, cq, {
           kind: "field",
           name: "displayName",
           static: !1,
           private: !1,
           access: {
-            has: TT => "displayName" in TT,
-            get: TT => TT.displayName,
-            set: (TT, kT) => {
-              TT.displayName = kT
+            has: qq => "displayName" in qq,
+            get: qq => qq.displayName,
+            set: (qq, Eq) => {
+              qq.displayName = Eq
             }
           },
-          metadata: KT
-        }, LT, RT), (0, lT.e)(null, null, AT, {
+          metadata: Oq
+        }, kq, Rq), (0, Yq.f)(null, null, Bq, {
           kind: "field",
           name: "metadata",
           static: !1,
           private: !1,
           access: {
-            has: TT => "metadata" in TT,
-            get: TT => TT.metadata,
-            set: (TT, kT) => {
-              TT.metadata = kT
+            has: qq => "metadata" in qq,
+            get: qq => qq.metadata,
+            set: (qq, Eq) => {
+              qq.metadata = Eq
             }
           },
-          metadata: KT
-        }, gT, UT), (0, lT.e)(null, null, jT, {
+          metadata: Oq
+        }, Uq, Fq), (0, Yq.f)(null, null, Nq, {
           kind: "field",
           name: "_hasAlpha",
           static: !1,
           private: !1,
           access: {
-            has: TT => "_hasAlpha" in TT,
-            get: TT => TT._hasAlpha,
-            set: (TT, kT) => {
-              TT._hasAlpha = kT
+            has: qq => "_hasAlpha" in qq,
+            get: qq => qq._hasAlpha,
+            set: (qq, Eq) => {
+              qq._hasAlpha = Eq
             }
           },
-          metadata: KT
-        }, YT, BT), (0, lT.e)(null, null, vT, {
+          metadata: Oq
+        }, sq, Xq), (0, Yq.f)(null, null, aq, {
           kind: "field",
           name: "_getAlphaFromRGB",
           static: !1,
           private: !1,
           access: {
-            has: TT => "_getAlphaFromRGB" in TT,
-            get: TT => TT._getAlphaFromRGB,
-            set: (TT, kT) => {
-              TT._getAlphaFromRGB = kT
+            has: qq => "_getAlphaFromRGB" in qq,
+            get: qq => qq._getAlphaFromRGB,
+            set: (qq, Eq) => {
+              qq._getAlphaFromRGB = Eq
             }
           },
-          metadata: KT
-        }, WT, nT), (0, lT.e)(null, null, tT, {
+          metadata: Oq
+        }, wq, Kq), (0, Yq.f)(null, null, Vq, {
           kind: "field",
           name: "level",
           static: !1,
           private: !1,
           access: {
-            has: TT => "level" in TT,
-            get: TT => TT.level,
-            set: (TT, kT) => {
-              TT.level = kT
+            has: qq => "level" in qq,
+            get: qq => qq.level,
+            set: (qq, Eq) => {
+              qq.level = Eq
             }
           },
-          metadata: KT
-        }, pT, iT), (0, lT.e)(null, null, hT, {
+          metadata: Oq
+        }, Cq, Iq), (0, Yq.f)(null, null, dq, {
           kind: "field",
           name: "_coordinatesIndex",
           static: !1,
           private: !1,
           access: {
-            has: TT => "_coordinatesIndex" in TT,
-            get: TT => TT._coordinatesIndex,
-            set: (TT, kT) => {
-              TT._coordinatesIndex = kT
+            has: qq => "_coordinatesIndex" in qq,
+            get: qq => qq._coordinatesIndex,
+            set: (qq, Eq) => {
+              qq._coordinatesIndex = Eq
             }
           },
-          metadata: KT
-        }, qT, sT), (0, lT.e)(null, null, NT, {
+          metadata: Oq
+        }, eq, Dq), (0, Yq.f)(null, null, jq, {
           kind: "field",
           name: "optimizeUVAllocation",
           static: !1,
           private: !1,
           access: {
-            has: TT => "optimizeUVAllocation" in TT,
-            get: TT => TT.optimizeUVAllocation,
-            set: (TT, kT) => {
-              TT.optimizeUVAllocation = kT
+            has: qq => "optimizeUVAllocation" in qq,
+            get: qq => qq.optimizeUVAllocation,
+            set: (qq, Eq) => {
+              qq.optimizeUVAllocation = Eq
             }
           },
-          metadata: KT
-        }, Tk, kk), (0, lT.e)(null, null, QT, {
+          metadata: Oq
+        }, qE, EE), (0, Yq.f)(null, null, Hq, {
           kind: "field",
           name: "_coordinatesMode",
           static: !1,
           private: !1,
           access: {
-            has: TT => "_coordinatesMode" in TT,
-            get: TT => TT._coordinatesMode,
-            set: (TT, kT) => {
-              TT._coordinatesMode = kT
+            has: qq => "_coordinatesMode" in qq,
+            get: qq => qq._coordinatesMode,
+            set: (qq, Eq) => {
+              qq._coordinatesMode = Eq
             }
           },
-          metadata: KT
-        }, ck, lk), (0, lT.e)(null, null, aT, {
+          metadata: Oq
+        }, gE, YE), (0, Yq.f)(null, null, Qq, {
           kind: "field",
           name: "wrapR",
           static: !1,
           private: !1,
           access: {
-            has: TT => "wrapR" in TT,
-            get: TT => TT.wrapR,
-            set: (TT, kT) => {
-              TT.wrapR = kT
+            has: qq => "wrapR" in qq,
+            get: qq => qq.wrapR,
+            set: (qq, Eq) => {
+              qq.wrapR = Eq
             }
           },
-          metadata: KT
-        }, Mk, Kk), (0, lT.e)(null, null, FT, {
+          metadata: Oq
+        }, lE, OE), (0, Yq.f)(null, null, yq, {
           kind: "field",
           name: "anisotropicFilteringLevel",
           static: !1,
           private: !1,
           access: {
-            has: TT => "anisotropicFilteringLevel" in TT,
-            get: TT => TT.anisotropicFilteringLevel,
-            set: (TT, kT) => {
-              TT.anisotropicFilteringLevel = kT
+            has: qq => "anisotropicFilteringLevel" in qq,
+            get: qq => qq.anisotropicFilteringLevel,
+            set: (qq, Eq) => {
+              qq.anisotropicFilteringLevel = Eq
             }
           },
-          metadata: KT
-        }, Ok, yk), (0, lT.e)(null, null, bT, {
+          metadata: Oq
+        }, mE, xE), (0, Yq.f)(null, null, nq, {
           kind: "field",
           name: "invertZ",
           static: !1,
           private: !1,
           access: {
-            has: TT => "invertZ" in TT,
-            get: TT => TT.invertZ,
-            set: (TT, kT) => {
-              TT.invertZ = kT
+            has: qq => "invertZ" in qq,
+            get: qq => qq.invertZ,
+            set: (qq, Eq) => {
+              qq.invertZ = Eq
             }
           },
-          metadata: KT
-        }, fk, xk), (0, lT.e)(null, null, zT, {
+          metadata: Oq
+        }, AE, cE), (0, Yq.f)(null, null, bq, {
           kind: "field",
           name: "lodLevelInAlpha",
           static: !1,
           private: !1,
           access: {
-            has: TT => "lodLevelInAlpha" in TT,
-            get: TT => TT.lodLevelInAlpha,
-            set: (TT, kT) => {
-              TT.lodLevelInAlpha = kT
+            has: qq => "lodLevelInAlpha" in qq,
+            get: qq => qq.lodLevelInAlpha,
+            set: (qq, Eq) => {
+              qq.lodLevelInAlpha = Eq
             }
           },
-          metadata: KT
-        }, Ik, Ak), (0, lT.e)(null, null, GT, {
+          metadata: Oq
+        }, uE, BE), (0, Yq.f)(null, null, Tq, {
           kind: "field",
           name: "isRenderTarget",
           static: !1,
           private: !1,
           access: {
-            has: TT => "isRenderTarget" in TT,
-            get: TT => TT.isRenderTarget,
-            set: (TT, kT) => {
-              TT.isRenderTarget = kT
+            has: qq => "isRenderTarget" in qq,
+            get: qq => qq.isRenderTarget,
+            set: (qq, Eq) => {
+              qq.isRenderTarget = Eq
             }
           },
-          metadata: KT
-        }, Ck, jk), KT && Object.defineProperty(TT, Symbol.metadata, {
+          metadata: Oq
+        }, WE, NE), Oq && Object.defineProperty(qq, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: KT
+          value: Oq
         })
-      })(), TT.DEFAULT_ANISOTROPIC_FILTERING_LEVEL = 4, TT
+      })(), qq.DEFAULT_ANISOTROPIC_FILTERING_LEVEL = 4, qq
     })();
-    (AT = vT.prototype).forceSphericalPolynomialsRecompute ?? (AT.forceSphericalPolynomialsRecompute = (0, jT.f)("BaseTexture", "forceSphericalPolynomialsRecompute")), Object.getOwnPropertyDescriptor(vT.prototype, "sphericalPolynomial") || Object.defineProperty(vT.prototype, "sphericalPolynomial", (0, jT.d)("BaseTexture", "sphericalPolynomial"))
+    (Bq = aq.prototype).forceSphericalPolynomialsRecompute ?? (Bq.forceSphericalPolynomialsRecompute = (0, Nq.i)("BaseTexture", "forceSphericalPolynomialsRecompute")), Object.getOwnPropertyDescriptor(aq.prototype, "sphericalPolynomial") || Object.defineProperty(aq.prototype, "sphericalPolynomial", (0, Nq.e)("BaseTexture", "sphericalPolynomial"))
   },
-  40111: (TT, kT, cT) => {
-    cT.d(kT, {
-      b: () => aT,
-      f: () => ST
+  40233: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => Qq,
+      d: () => oq
     });
-    var lT = cT(39620),
-      MT = cT(39624),
-      KT = cT(36932),
-      OT = cT(36892),
-      yT = cT(39615),
-      fT = cT(36949),
-      xT = cT(39500),
-      IT = cT(39514),
-      AT = cT(39732),
-      CT = cT(37637),
-      jT = cT(39687);
+    var Yq = gq(39757),
+      lq = gq(39759),
+      Oq = gq(37156),
+      mq = gq(37139),
+      xq = gq(39748),
+      Aq = gq(37171),
+      cq = gq(39636),
+      uq = gq(39644),
+      Bq = gq(39853),
+      Wq = gq(37767),
+      Nq = gq(39810);
 
-    function vT(TT, kT) {
-      let cT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      const lT = kT.width,
-        MT = kT.height;
-      if (TT instanceof Float32Array) {
-        let kT = TT.byteLength / TT.BYTES_PER_ELEMENT;
-        const cT = new Uint8Array(kT);
-        for (; --kT >= 0;) {
-          let lT = TT[kT];
-          lT < 0 ? lT = 0 : lT > 1 && (lT = 1), cT[kT] = 255 * lT
+    function aq(qq, Eq) {
+      let gq = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const Yq = Eq.width,
+        lq = Eq.height;
+      if (qq instanceof Float32Array) {
+        let Eq = qq.byteLength / qq.BYTES_PER_ELEMENT;
+        const gq = new Uint8Array(Eq);
+        for (; --Eq >= 0;) {
+          let Yq = qq[Eq];
+          Yq < 0 ? Yq = 0 : Yq > 1 && (Yq = 1), gq[Eq] = 255 * Yq
         }
-        TT = cT
+        qq = gq
       }
-      const KT = document.createElement("canvas");
-      KT.width = lT, KT.height = MT;
-      const OT = KT.getContext("2d");
-      if (!OT) return null;
-      const yT = OT.createImageData(lT, MT);
-      if (yT.data.set(TT), OT.putImageData(yT, 0, 0), cT) {
-        const TT = document.createElement("canvas");
-        TT.width = lT, TT.height = MT;
-        const kT = TT.getContext("2d");
-        return kT ? (kT.translate(0, MT), kT.scale(1, -1), kT.drawImage(KT, 0, 0), TT.toDataURL("image/png")) : null
+      const Oq = document.createElement("canvas");
+      Oq.width = Yq, Oq.height = lq;
+      const mq = Oq.getContext("2d");
+      if (!mq) return null;
+      const xq = mq.createImageData(Yq, lq);
+      if (xq.data.set(qq), mq.putImageData(xq, 0, 0), gq) {
+        const qq = document.createElement("canvas");
+        qq.width = Yq, qq.height = lq;
+        const Eq = qq.getContext("2d");
+        return Eq ? (Eq.translate(0, lq), Eq.scale(1, -1), Eq.drawImage(Oq, 0, 0), qq.toDataURL("image/png")) : null
       }
-      return KT.toDataURL("image/png")
+      return Oq.toDataURL("image/png")
     }
 
-    function tT(TT) {
-      let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-      const lT = TT.getInternalTexture();
-      if (!lT) return null;
-      const MT = TT._readPixelsSync(kT, cT);
-      return MT ? vT(MT, TT.getSize(), lT.invertY) : null
+    function Vq(qq) {
+      let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      const Yq = qq.getInternalTexture();
+      if (!Yq) return null;
+      const lq = qq._readPixelsSync(Eq, gq);
+      return lq ? aq(lq, qq.getSize(), Yq.invertY) : null
     }
-    async function hT(TT) {
-      let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-      const lT = TT.getInternalTexture();
-      if (!lT) return null;
-      const MT = await TT.readPixels(kT, cT);
-      return MT ? vT(MT, TT.getSize(), lT.invertY) : null
+    async function dq(qq) {
+      let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      const Yq = qq.getInternalTexture();
+      if (!Yq) return null;
+      const lq = await qq.readPixels(Eq, gq);
+      return lq ? aq(lq, qq.getSize(), Yq.invertY) : null
     }
-    var NT = cT(40057),
-      QT = cT(39645);
-    let ST = (() => {
-        var TT;
-        let kT, cT, vT, ST, DT, aT, FT, rT, PT, wT, mT, bT, zT, JT = yT.c,
-          oT = [],
-          HT = [],
-          eT = [],
-          GT = [],
-          VT = [],
-          ET = [],
-          ZT = [],
-          uT = [],
-          XT = [],
-          dT = [],
-          LT = [],
-          RT = [],
-          gT = [],
-          UT = [],
-          YT = [],
-          BT = [],
-          WT = [],
-          nT = [],
-          pT = [],
-          iT = [],
-          qT = [],
-          sT = [],
-          Tk = [],
-          kk = [],
-          ck = [];
-        return TT = class extends JT {
-          static _CreateVideoTexture(kT, cT, lT) {
-            arguments.length > 5 && void 0 !== arguments[5] || TT.TRILINEAR_SAMPLINGMODE;
-            throw (0, xT.i)("VideoTexture")
+    var jq = gq(40190),
+      Hq = gq(39779);
+    let oq = (() => {
+        var qq;
+        let Eq, gq, aq, oq, Pq, Qq, yq, tq, rq, vq, hq, nq, bq, iq = xq.d,
+          Zq = [],
+          fq = [],
+          Mq = [],
+          Tq = [],
+          zq = [],
+          Sq = [],
+          pq = [],
+          Gq = [],
+          Lq = [],
+          Jq = [],
+          kq = [],
+          Rq = [],
+          Uq = [],
+          Fq = [],
+          sq = [],
+          Xq = [],
+          wq = [],
+          Kq = [],
+          Cq = [],
+          Iq = [],
+          eq = [],
+          Dq = [],
+          qE = [],
+          EE = [],
+          gE = [];
+        return qq = class extends iq {
+          static _CreateVideoTexture(Eq, gq, Yq) {
+            arguments.length > 5 && void 0 !== arguments[5] || qq.TRILINEAR_SAMPLINGMODE;
+            throw (0, cq.m)("VideoTexture")
           }
           get noMipmap() {
             return this._noMipmap
@@ -794,8 +794,8 @@ export const modules = {
           get mimeType() {
             return this._mimeType
           }
-          set isBlocking(TT) {
-            this._isBlocking = TT
+          set isBlocking(qq) {
+            this._isBlocking = qq
           }
           get isBlocking() {
             return this._isBlocking
@@ -803,109 +803,109 @@ export const modules = {
           get invertY() {
             return this._invertY
           }
-          constructor(kT, cT, MT, OT) {
-            let yT, fT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : TT.TRILINEAR_SAMPLINGMODE,
-              xT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-              AT = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null,
-              CT = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
-              jT = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
-              vT = arguments.length > 9 ? arguments[9] : void 0,
-              tT = arguments.length > 10 ? arguments[10] : void 0,
-              hT = arguments.length > 11 ? arguments[11] : void 0,
-              QT = arguments.length > 12 ? arguments[12] : void 0,
-              ST = arguments.length > 13 ? arguments[13] : void 0;
-            super(cT), this.url = ((0, lT.h)(this, oT), (0, lT.h)(this, HT, null)), this.uOffset = ((0, lT.h)(this, eT), (0, lT.h)(this, GT, 0)), this.vOffset = ((0, lT.h)(this, VT), (0, lT.h)(this, ET, 0)), this.uScale = ((0, lT.h)(this, ZT), (0, lT.h)(this, uT, 1)), this.vScale = ((0, lT.h)(this, XT), (0, lT.h)(this, dT, 1)), this.uAng = ((0, lT.h)(this, LT), (0, lT.h)(this, RT, 0)), this.vAng = ((0, lT.h)(this, gT), (0, lT.h)(this, UT, 0)), this.wAng = ((0, lT.h)(this, YT), (0, lT.h)(this, BT, 0)), this.uRotationCenter = ((0, lT.h)(this, WT), (0, lT.h)(this, nT, .5)), this.vRotationCenter = ((0, lT.h)(this, pT), (0, lT.h)(this, iT, .5)), this.wRotationCenter = ((0, lT.h)(this, qT), (0, lT.h)(this, sT, .5)), this.homogeneousRotationInUVTransform = ((0, lT.h)(this, Tk), (0, lT.h)(this, kk, !1)), this.inspectableCustomProperties = ((0, lT.h)(this, ck), null), this._noMipmap = !1, this._invertY = !1, this._rowGenerationMatrix = null, this._cachedTextureMatrix = null, this._projectionModeMatrix = null, this._t0 = null, this._t1 = null, this._t2 = null, this._cachedUOffset = -1, this._cachedVOffset = -1, this._cachedUScale = 0, this._cachedVScale = 0, this._cachedUAng = -1, this._cachedVAng = -1, this._cachedWAng = -1, this._cachedReflectionProjectionMatrixId = -1, this._cachedURotationCenter = -1, this._cachedVRotationCenter = -1, this._cachedWRotationCenter = -1, this._cachedHomogeneousRotationInUVTransform = !1, this._cachedIdentity3x2 = !0, this._cachedReflectionTextureMatrix = null, this._cachedReflectionUOffset = -1, this._cachedReflectionVOffset = -1, this._cachedReflectionUScale = 0, this._cachedReflectionVScale = 0, this._cachedReflectionCoordinatesMode = -1, this._buffer = null, this._deleteBuffer = !1, this._format = null, this._delayedOnLoad = null, this._delayedOnError = null, this.onLoadObservable = new KT.b, this._isBlocking = !0, this.name = kT || "", this.url = kT;
-            let DT = !1,
-              aT = null,
-              FT = !0;
-            "object" === typeof MT && null !== MT ? (yT = MT.noMipmap ?? !1, OT = MT.invertY ?? !NT.c, fT = MT.samplingMode ?? TT.TRILINEAR_SAMPLINGMODE, xT = MT.onLoad ?? null, AT = MT.onError ?? null, CT = MT.buffer ?? null, jT = MT.deleteBuffer ?? !1, vT = MT.format, tT = MT.mimeType, hT = MT.loaderOptions, QT = MT.creationFlags, DT = MT.useSRGBBuffer ?? !1, aT = MT.internalTexture ?? null, FT = MT.gammaSpace ?? FT, ST = MT.forcedExtension ?? ST) : yT = !!MT, this._gammaSpace = FT, this._noMipmap = yT, this._invertY = void 0 === OT ? !NT.c : OT, this._initialSamplingMode = fT, this._buffer = CT, this._deleteBuffer = jT, this._mimeType = tT, this._loaderOptions = hT, this._creationFlags = QT, this._useSRGBBuffer = DT, this._forcedExtension = ST, void 0 !== vT && (this._format = vT);
-            const rT = this.NJ(),
-              PT = this._getEngine();
-            if (!PT) return;
-            PT.onBeforeTextureInitObservable.notifyObservers(this);
-            const wT = () => {
-                this._texture && (this._texture._invertVScale && (this.vScale *= -1, this.vOffset += 1), null !== this._texture._cachedWrapU && (this.wrapU = this._texture._cachedWrapU, this._texture._cachedWrapU = null), null !== this._texture._cachedWrapV && (this.wrapV = this._texture._cachedWrapV, this._texture._cachedWrapV = null), null !== this._texture._cachedWrapR && (this.wrapR = this._texture._cachedWrapR, this._texture._cachedWrapR = null)), this.onLoadObservable.hasObservers() && this.onLoadObservable.notifyObservers(this), xT && xT(), !this.isBlocking && rT && rT.resetCachedMaterial()
+          constructor(Eq, gq, lq, mq) {
+            let xq, Aq = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : qq.TRILINEAR_SAMPLINGMODE,
+              cq = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+              Bq = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null,
+              Wq = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+              Nq = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
+              aq = arguments.length > 9 ? arguments[9] : void 0,
+              Vq = arguments.length > 10 ? arguments[10] : void 0,
+              dq = arguments.length > 11 ? arguments[11] : void 0,
+              Hq = arguments.length > 12 ? arguments[12] : void 0,
+              oq = arguments.length > 13 ? arguments[13] : void 0;
+            super(gq), this.url = ((0, Yq.i)(this, Zq), (0, Yq.i)(this, fq, null)), this.uOffset = ((0, Yq.i)(this, Mq), (0, Yq.i)(this, Tq, 0)), this.vOffset = ((0, Yq.i)(this, zq), (0, Yq.i)(this, Sq, 0)), this.uScale = ((0, Yq.i)(this, pq), (0, Yq.i)(this, Gq, 1)), this.vScale = ((0, Yq.i)(this, Lq), (0, Yq.i)(this, Jq, 1)), this.uAng = ((0, Yq.i)(this, kq), (0, Yq.i)(this, Rq, 0)), this.vAng = ((0, Yq.i)(this, Uq), (0, Yq.i)(this, Fq, 0)), this.wAng = ((0, Yq.i)(this, sq), (0, Yq.i)(this, Xq, 0)), this.uRotationCenter = ((0, Yq.i)(this, wq), (0, Yq.i)(this, Kq, .5)), this.vRotationCenter = ((0, Yq.i)(this, Cq), (0, Yq.i)(this, Iq, .5)), this.wRotationCenter = ((0, Yq.i)(this, eq), (0, Yq.i)(this, Dq, .5)), this.homogeneousRotationInUVTransform = ((0, Yq.i)(this, qE), (0, Yq.i)(this, EE, !1)), this.inspectableCustomProperties = ((0, Yq.i)(this, gE), null), this._noMipmap = !1, this._invertY = !1, this._rowGenerationMatrix = null, this._cachedTextureMatrix = null, this._projectionModeMatrix = null, this._t0 = null, this._t1 = null, this._t2 = null, this._cachedUOffset = -1, this._cachedVOffset = -1, this._cachedUScale = 0, this._cachedVScale = 0, this._cachedUAng = -1, this._cachedVAng = -1, this._cachedWAng = -1, this._cachedReflectionProjectionMatrixId = -1, this._cachedURotationCenter = -1, this._cachedVRotationCenter = -1, this._cachedWRotationCenter = -1, this._cachedHomogeneousRotationInUVTransform = !1, this._cachedIdentity3x2 = !0, this._cachedReflectionTextureMatrix = null, this._cachedReflectionUOffset = -1, this._cachedReflectionVOffset = -1, this._cachedReflectionUScale = 0, this._cachedReflectionVScale = 0, this._cachedReflectionCoordinatesMode = -1, this._buffer = null, this._deleteBuffer = !1, this._format = null, this._delayedOnLoad = null, this._delayedOnError = null, this.onLoadObservable = new Oq.d, this._isBlocking = !0, this.name = Eq || "", this.url = Eq;
+            let Pq = !1,
+              Qq = null,
+              yq = !0;
+            "object" === typeof lq && null !== lq ? (xq = lq.noMipmap ?? !1, mq = lq.invertY ?? !jq.b, Aq = lq.samplingMode ?? qq.TRILINEAR_SAMPLINGMODE, cq = lq.onLoad ?? null, Bq = lq.onError ?? null, Wq = lq.buffer ?? null, Nq = lq.deleteBuffer ?? !1, aq = lq.format, Vq = lq.mimeType, dq = lq.loaderOptions, Hq = lq.creationFlags, Pq = lq.useSRGBBuffer ?? !1, Qq = lq.internalTexture ?? null, yq = lq.gammaSpace ?? yq, oq = lq.forcedExtension ?? oq) : xq = !!lq, this._gammaSpace = yq, this._noMipmap = xq, this._invertY = void 0 === mq ? !jq.b : mq, this._initialSamplingMode = Aq, this._buffer = Wq, this._deleteBuffer = Nq, this._mimeType = Vq, this._loaderOptions = dq, this._creationFlags = Hq, this._useSRGBBuffer = Pq, this._forcedExtension = oq, void 0 !== aq && (this._format = aq);
+            const tq = this.ZJ(),
+              rq = this._getEngine();
+            if (!rq) return;
+            rq.onBeforeTextureInitObservable.notifyObservers(this);
+            const vq = () => {
+                this._texture && (this._texture._invertVScale && (this.vScale *= -1, this.vOffset += 1), null !== this._texture._cachedWrapU && (this.wrapU = this._texture._cachedWrapU, this._texture._cachedWrapU = null), null !== this._texture._cachedWrapV && (this.wrapV = this._texture._cachedWrapV, this._texture._cachedWrapV = null), null !== this._texture._cachedWrapR && (this.wrapR = this._texture._cachedWrapR, this._texture._cachedWrapR = null)), this.onLoadObservable.hasObservers() && this.onLoadObservable.notifyObservers(this), cq && cq(), !this.isBlocking && tq && tq.resetCachedMaterial()
               },
-              mT = (kT, cT) => {
+              hq = (Eq, gq) => {
                 this._loadingError = !0, this._errorObject = {
-                  message: kT,
-                  exception: cT
-                }, AT && AT(kT, cT), TT.OnTextureLoadErrorObservable.notifyObservers(this)
+                  message: Eq,
+                  exception: gq
+                }, Bq && Bq(Eq, gq), qq.OnTextureLoadErrorObservable.notifyObservers(this)
               };
-            if (!this.url && !aT) return this._delayedOnLoad = wT, void(this._delayedOnError = mT);
-            if (this._texture = aT ?? this._getFromCache(this.url, yT, fT, this._invertY, DT, this.isCube), this._texture)
-              if (this._texture.isReady) IT.e.SetImmediate((() => wT()));
+            if (!this.url && !Qq) return this._delayedOnLoad = vq, void(this._delayedOnError = hq);
+            if (this._texture = Qq ?? this._getFromCache(this.url, xq, Aq, this._invertY, Pq, this.isCube), this._texture)
+              if (this._texture.isReady) uq.c.SetImmediate((() => vq()));
               else {
-                const TT = this._texture.onLoadedObservable.add(wT);
-                this._texture.onErrorObservable.add((kT => {
-                  mT(kT.message, kT.exception), this._texture?.onLoadedObservable.remove(TT)
+                const qq = this._texture.onLoadedObservable.add(vq);
+                this._texture.onErrorObservable.add((Eq => {
+                  hq(Eq.message, Eq.exception), this._texture?.onLoadedObservable.remove(qq)
                 }))
               }
-            else if (rT && rT.useDelayedTextureLoading) this.delayLoadState = 4, this._delayedOnLoad = wT, this._delayedOnError = mT;
+            else if (tq && tq.useDelayedTextureLoading) this.delayLoadState = 4, this._delayedOnLoad = vq, this._delayedOnError = hq;
             else {
               try {
-                this._texture = PT.createTexture(this.url, yT, this._invertY, rT, fT, wT, mT, this._buffer, void 0, this._format, this._forcedExtension, tT, hT, QT, DT)
-              } catch (bT) {
-                throw mT("error loading", bT), bT
+                this._texture = rq.createTexture(this.url, xq, this._invertY, tq, Aq, vq, hq, this._buffer, void 0, this._format, this._forcedExtension, Vq, dq, Hq, Pq)
+              } catch (nq) {
+                throw hq("error loading", nq), nq
               }
-              jT && (this._buffer = null)
+              Nq && (this._buffer = null)
             }
           }
-          updateURL(TT) {
-            let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-              cT = arguments.length > 2 ? arguments[2] : void 0,
-              lT = arguments.length > 3 ? arguments[3] : void 0;
-            this.url && (this.releaseInternalTexture(), this.NJ().markAllMaterialsAsDirty(1, (TT => TT.hasTexture(this)))), this.name && !this.name.startsWith("data:") || (this.name = TT), this.url = TT, this._buffer = kT, this._forcedExtension = lT, this.delayLoadState = 4;
-            const MT = this._delayedOnLoad;
+          updateURL(qq) {
+            let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+              gq = arguments.length > 2 ? arguments[2] : void 0,
+              Yq = arguments.length > 3 ? arguments[3] : void 0;
+            this.url && (this.releaseInternalTexture(), this.ZJ().markAllMaterialsAsDirty(1, (qq => qq.hasTexture(this)))), this.name && !this.name.startsWith("data:") || (this.name = qq), this.url = qq, this._buffer = Eq, this._forcedExtension = Yq, this.delayLoadState = 4;
+            const lq = this._delayedOnLoad;
             this._delayedOnLoad = () => {
-              MT ? MT() : this.onLoadObservable.hasObservers() && this.onLoadObservable.notifyObservers(this), cT && cT()
+              lq ? lq() : this.onLoadObservable.hasObservers() && this.onLoadObservable.notifyObservers(this), gq && gq()
             }, this.delayLoad()
           }
           delayLoad() {
             if (4 !== this.delayLoadState) return;
-            const TT = this.NJ();
-            if (!TT) return;
-            let kT = this.url;
-            !kT && (this.name.indexOf("://") > 0 || this.name.startsWith("data:")) && (kT = this.name), this.delayLoadState = 1, this._texture = this._getFromCache(kT, this._noMipmap, this.samplingMode, this._invertY, this._useSRGBBuffer, this.isCube), this._texture ? this._delayedOnLoad && (this._texture.isReady ? IT.e.SetImmediate(this._delayedOnLoad) : this._texture.onLoadedObservable.add(this._delayedOnLoad)) : (this._texture = TT.Dv().createTexture(kT, this._noMipmap, this._invertY, TT, this.samplingMode, this._delayedOnLoad, this._delayedOnError, this._buffer, null, this._format, this._forcedExtension, this._mimeType, this._loaderOptions, this._creationFlags, this._useSRGBBuffer), this._deleteBuffer && (this._buffer = null)), this._delayedOnLoad = null, this._delayedOnError = null
+            const qq = this.ZJ();
+            if (!qq) return;
+            let Eq = this.url;
+            !Eq && (this.name.indexOf("://") > 0 || this.name.startsWith("data:")) && (Eq = this.name), this.delayLoadState = 1, this._texture = this._getFromCache(Eq, this._noMipmap, this.samplingMode, this._invertY, this._useSRGBBuffer, this.isCube), this._texture ? this._delayedOnLoad && (this._texture.isReady ? uq.c.SetImmediate(this._delayedOnLoad) : this._texture.onLoadedObservable.add(this._delayedOnLoad)) : (this._texture = qq.Ba().createTexture(Eq, this._noMipmap, this._invertY, qq, this.samplingMode, this._delayedOnLoad, this._delayedOnError, this._buffer, null, this._format, this._forcedExtension, this._mimeType, this._loaderOptions, this._creationFlags, this._useSRGBBuffer), this._deleteBuffer && (this._buffer = null)), this._delayedOnLoad = null, this._delayedOnError = null
           }
-          _prepareRowForTextureGeneration(TT, kT, cT, lT) {
-            TT *= this._cachedUScale, kT *= this._cachedVScale, TT -= this.uRotationCenter * this._cachedUScale, kT -= this.vRotationCenter * this._cachedVScale, cT -= this.wRotationCenter, OT.m.TransformCoordinatesFromFloatsToRef(TT, kT, cT, this._rowGenerationMatrix, lT), lT.x += this.uRotationCenter * this._cachedUScale + this._cachedUOffset, lT.y += this.vRotationCenter * this._cachedVScale + this._cachedVOffset, lT.z += this.wRotationCenter
+          _prepareRowForTextureGeneration(qq, Eq, gq, Yq) {
+            qq *= this._cachedUScale, Eq *= this._cachedVScale, qq -= this.uRotationCenter * this._cachedUScale, Eq -= this.vRotationCenter * this._cachedVScale, gq -= this.wRotationCenter, mq.q.TransformCoordinatesFromFloatsToRef(qq, Eq, gq, this._rowGenerationMatrix, Yq), Yq.x += this.uRotationCenter * this._cachedUScale + this._cachedUOffset, Yq.y += this.vRotationCenter * this._cachedVScale + this._cachedVOffset, Yq.z += this.wRotationCenter
           }
           getTextureMatrix() {
-            let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
-            if (this.uOffset === this._cachedUOffset && this.vOffset === this._cachedVOffset && this.uScale * TT === this._cachedUScale && this.vScale === this._cachedVScale && this.uAng === this._cachedUAng && this.vAng === this._cachedVAng && this.wAng === this._cachedWAng && this.uRotationCenter === this._cachedURotationCenter && this.vRotationCenter === this._cachedVRotationCenter && this.wRotationCenter === this._cachedWRotationCenter && this.homogeneousRotationInUVTransform === this._cachedHomogeneousRotationInUVTransform) return this._cachedTextureMatrix;
-            this._cachedUOffset = this.uOffset, this._cachedVOffset = this.vOffset, this._cachedUScale = this.uScale * TT, this._cachedVScale = this.vScale, this._cachedUAng = this.uAng, this._cachedVAng = this.vAng, this._cachedWAng = this.wAng, this._cachedURotationCenter = this.uRotationCenter, this._cachedVRotationCenter = this.vRotationCenter, this._cachedWRotationCenter = this.wRotationCenter, this._cachedHomogeneousRotationInUVTransform = this.homogeneousRotationInUVTransform, this._cachedTextureMatrix && this._rowGenerationMatrix || (this._cachedTextureMatrix = OT.d.Zero(), this._rowGenerationMatrix = new OT.d, this._t0 = OT.m.Zero(), this._t1 = OT.m.Zero(), this._t2 = OT.m.Zero()), OT.d.RotationYawPitchRollToRef(this.vAng, this.uAng, this.wAng, this._rowGenerationMatrix), this.homogeneousRotationInUVTransform ? (OT.d.TranslationToRef(-this._cachedURotationCenter, -this._cachedVRotationCenter, -this._cachedWRotationCenter, OT.h.Matrix[0]), OT.d.TranslationToRef(this._cachedURotationCenter, this._cachedVRotationCenter, this._cachedWRotationCenter, OT.h.Matrix[1]), OT.d.ScalingToRef(this._cachedUScale, this._cachedVScale, 0, OT.h.Matrix[2]), OT.d.TranslationToRef(this._cachedUOffset, this._cachedVOffset, 0, OT.h.Matrix[3]), OT.h.Matrix[0].multiplyToRef(this._rowGenerationMatrix, this._cachedTextureMatrix), this._cachedTextureMatrix.multiplyToRef(OT.h.Matrix[1], this._cachedTextureMatrix), this._cachedTextureMatrix.multiplyToRef(OT.h.Matrix[2], this._cachedTextureMatrix), this._cachedTextureMatrix.multiplyToRef(OT.h.Matrix[3], this._cachedTextureMatrix), this._cachedTextureMatrix.setRowFromFloats(2, this._cachedTextureMatrix.m[12], this._cachedTextureMatrix.m[13], this._cachedTextureMatrix.m[14], 1)) : (this._prepareRowForTextureGeneration(0, 0, 0, this._t0), this._prepareRowForTextureGeneration(1, 0, 0, this._t1), this._prepareRowForTextureGeneration(0, 1, 0, this._t2), this._t1.gcT(this._t0), this._t2.gcT(this._t0), OT.d.FromValuesToRef(this._t1.x, this._t1.y, this._t1.z, 0, this._t2.x, this._t2.y, this._t2.z, 0, this._t0.x, this._t0.y, this._t0.z, 0, 0, 0, 0, 1, this._cachedTextureMatrix));
-            const kT = this.NJ();
-            if (!kT) return this._cachedTextureMatrix;
-            const cT = this._cachedIdentity3x2;
-            return this._cachedIdentity3x2 = this._cachedTextureMatrix.isIdentityAs3x2(), this.optimizeUVAllocation && cT !== this._cachedIdentity3x2 && kT.markAllMaterialsAsDirty(1, (TT => TT.hasTexture(this))), this._cachedTextureMatrix
+            let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
+            if (this.uOffset === this._cachedUOffset && this.vOffset === this._cachedVOffset && this.uScale * qq === this._cachedUScale && this.vScale === this._cachedVScale && this.uAng === this._cachedUAng && this.vAng === this._cachedVAng && this.wAng === this._cachedWAng && this.uRotationCenter === this._cachedURotationCenter && this.vRotationCenter === this._cachedVRotationCenter && this.wRotationCenter === this._cachedWRotationCenter && this.homogeneousRotationInUVTransform === this._cachedHomogeneousRotationInUVTransform) return this._cachedTextureMatrix;
+            this._cachedUOffset = this.uOffset, this._cachedVOffset = this.vOffset, this._cachedUScale = this.uScale * qq, this._cachedVScale = this.vScale, this._cachedUAng = this.uAng, this._cachedVAng = this.vAng, this._cachedWAng = this.wAng, this._cachedURotationCenter = this.uRotationCenter, this._cachedVRotationCenter = this.vRotationCenter, this._cachedWRotationCenter = this.wRotationCenter, this._cachedHomogeneousRotationInUVTransform = this.homogeneousRotationInUVTransform, this._cachedTextureMatrix && this._rowGenerationMatrix || (this._cachedTextureMatrix = mq.e.Zero(), this._rowGenerationMatrix = new mq.e, this._t0 = mq.q.Zero(), this._t1 = mq.q.Zero(), this._t2 = mq.q.Zero()), mq.e.RotationYawPitchRollToRef(this.vAng, this.uAng, this.wAng, this._rowGenerationMatrix), this.homogeneousRotationInUVTransform ? (mq.e.TranslationToRef(-this._cachedURotationCenter, -this._cachedVRotationCenter, -this._cachedWRotationCenter, mq.o.Matrix[0]), mq.e.TranslationToRef(this._cachedURotationCenter, this._cachedVRotationCenter, this._cachedWRotationCenter, mq.o.Matrix[1]), mq.e.ScalingToRef(this._cachedUScale, this._cachedVScale, 0, mq.o.Matrix[2]), mq.e.TranslationToRef(this._cachedUOffset, this._cachedVOffset, 0, mq.o.Matrix[3]), mq.o.Matrix[0].multiplyToRef(this._rowGenerationMatrix, this._cachedTextureMatrix), this._cachedTextureMatrix.multiplyToRef(mq.o.Matrix[1], this._cachedTextureMatrix), this._cachedTextureMatrix.multiplyToRef(mq.o.Matrix[2], this._cachedTextureMatrix), this._cachedTextureMatrix.multiplyToRef(mq.o.Matrix[3], this._cachedTextureMatrix), this._cachedTextureMatrix.setRowFromFloats(2, this._cachedTextureMatrix.m[12], this._cachedTextureMatrix.m[13], this._cachedTextureMatrix.m[14], 1)) : (this._prepareRowForTextureGeneration(0, 0, 0, this._t0), this._prepareRowForTextureGeneration(1, 0, 0, this._t1), this._prepareRowForTextureGeneration(0, 1, 0, this._t2), this._t1.KYq(this._t0), this._t2.KYq(this._t0), mq.e.FromValuesToRef(this._t1.x, this._t1.y, this._t1.z, 0, this._t2.x, this._t2.y, this._t2.z, 0, this._t0.x, this._t0.y, this._t0.z, 0, 0, 0, 0, 1, this._cachedTextureMatrix));
+            const Eq = this.ZJ();
+            if (!Eq) return this._cachedTextureMatrix;
+            const gq = this._cachedIdentity3x2;
+            return this._cachedIdentity3x2 = this._cachedTextureMatrix.isIdentityAs3x2(), this.optimizeUVAllocation && gq !== this._cachedIdentity3x2 && Eq.markAllMaterialsAsDirty(1, (qq => qq.hasTexture(this))), this._cachedTextureMatrix
           }
           getReflectionTextureMatrix() {
-            const kT = this.NJ();
-            if (!kT) return this._cachedReflectionTextureMatrix;
+            const Eq = this.ZJ();
+            if (!Eq) return this._cachedReflectionTextureMatrix;
             if (this.uOffset === this._cachedReflectionUOffset && this.vOffset === this._cachedReflectionVOffset && this.uScale === this._cachedReflectionUScale && this.vScale === this._cachedReflectionVScale && this.coordinatesMode === this._cachedReflectionCoordinatesMode) {
-              if (this.coordinatesMode !== TT.PROJECTION_MODE) return this._cachedReflectionTextureMatrix;
-              if (this._cachedReflectionProjectionMatrixId === kT.getProjectionMatrix().updateFlag) return this._cachedReflectionTextureMatrix
+              if (this.coordinatesMode !== qq.PROJECTION_MODE) return this._cachedReflectionTextureMatrix;
+              if (this._cachedReflectionProjectionMatrixId === Eq.getProjectionMatrix().updateFlag) return this._cachedReflectionTextureMatrix
             }
-            this._cachedReflectionTextureMatrix || (this._cachedReflectionTextureMatrix = OT.d.Zero()), this._projectionModeMatrix || (this._projectionModeMatrix = OT.d.Zero());
-            const cT = this._cachedReflectionCoordinatesMode !== this.coordinatesMode;
+            this._cachedReflectionTextureMatrix || (this._cachedReflectionTextureMatrix = mq.e.Zero()), this._projectionModeMatrix || (this._projectionModeMatrix = mq.e.Zero());
+            const gq = this._cachedReflectionCoordinatesMode !== this.coordinatesMode;
             switch (this._cachedReflectionUOffset = this.uOffset, this._cachedReflectionVOffset = this.vOffset, this._cachedReflectionUScale = this.uScale, this._cachedReflectionVScale = this.vScale, this._cachedReflectionCoordinatesMode = this.coordinatesMode, this.coordinatesMode) {
-              case TT.PLANAR_MODE:
-                OT.d.IdentityToRef(this._cachedReflectionTextureMatrix), this._cachedReflectionTextureMatrix[0] = this.uScale, this._cachedReflectionTextureMatrix[5] = this.vScale, this._cachedReflectionTextureMatrix[12] = this.uOffset, this._cachedReflectionTextureMatrix[13] = this.vOffset;
+              case qq.PLANAR_MODE:
+                mq.e.IdentityToRef(this._cachedReflectionTextureMatrix), this._cachedReflectionTextureMatrix[0] = this.uScale, this._cachedReflectionTextureMatrix[5] = this.vScale, this._cachedReflectionTextureMatrix[12] = this.uOffset, this._cachedReflectionTextureMatrix[13] = this.vOffset;
                 break;
-              case TT.PROJECTION_MODE: {
-                OT.d.FromValuesToRef(.5, 0, 0, 0, 0, -.5, 0, 0, 0, 0, 0, 0, .5, .5, 1, 1, this._projectionModeMatrix);
-                const TT = kT.getProjectionMatrix();
-                this._cachedReflectionProjectionMatrixId = TT.updateFlag, TT.multiplyToRef(this._projectionModeMatrix, this._cachedReflectionTextureMatrix);
+              case qq.PROJECTION_MODE: {
+                mq.e.FromValuesToRef(.5, 0, 0, 0, 0, -.5, 0, 0, 0, 0, 0, 0, .5, .5, 1, 1, this._projectionModeMatrix);
+                const qq = Eq.getProjectionMatrix();
+                this._cachedReflectionProjectionMatrixId = qq.updateFlag, qq.multiplyToRef(this._projectionModeMatrix, this._cachedReflectionTextureMatrix);
                 break
               }
               default:
-                OT.d.IdentityToRef(this._cachedReflectionTextureMatrix)
+                mq.e.IdentityToRef(this._cachedReflectionTextureMatrix)
             }
-            return cT && kT.markAllMaterialsAsDirty(1, (TT => TT.hasTexture(this))), this._cachedReflectionTextureMatrix
+            return gq && Eq.markAllMaterialsAsDirty(1, (qq => qq.hasTexture(this))), this._cachedReflectionTextureMatrix
           }
           clone() {
-            const kT = {
+            const Eq = {
               noMipmap: this._noMipmap,
               invertY: this._invertY,
               samplingMode: this.samplingMode,
@@ -919,20 +919,20 @@ export const modules = {
               creationFlags: this._creationFlags,
               useSRGBBuffer: this._useSRGBBuffer
             };
-            return QT.d.Clone((() => new TT(this._texture ? this._texture.url : null, this.NJ(), kT)), this)
+            return Hq.d.Clone((() => new qq(this._texture ? this._texture.url : null, this.ZJ(), Eq)), this)
           }
           serialize() {
-            const kT = this.name;
-            TT.SerializeBuffers || this.name.startsWith("data:") && (this.name = ""), this.name.startsWith("data:") && this.url === this.name && (this.url = "");
-            const cT = super.serialize(TT._SerializeInternalTextureUniqueId);
-            if (!cT) return null;
-            if (TT.SerializeBuffers || TT.ForceSerializeBuffers)
-              if ("string" === typeof this._buffer && this._buffer.startsWith("data:")) cT.base64String = this._buffer, cT.name = cT.name.replace("data:", "");
+            const Eq = this.name;
+            qq.SerializeBuffers || this.name.startsWith("data:") && (this.name = ""), this.name.startsWith("data:") && this.url === this.name && (this.url = "");
+            const gq = super.serialize(qq._SerializeInternalTextureUniqueId);
+            if (!gq) return null;
+            if (qq.SerializeBuffers || qq.ForceSerializeBuffers)
+              if ("string" === typeof this._buffer && this._buffer.startsWith("data:")) gq.base64String = this._buffer, gq.name = gq.name.replace("data:", "");
               else if (this.url && this.url.startsWith("data:") && this._buffer instanceof Uint8Array) {
-              const TT = this.mimeType || "image/png";
-              cT.base64String = `data:${TT};base64,${(0,jT.k)(this._buffer)}`
-            } else(TT.ForceSerializeBuffers || this.url && this.url.startsWith("blob:") || this._forceSerialize) && (cT.base64String = !this._engine || this._engine._features.supportSyncTextureRead ? tT(this) : hT(this));
-            return cT.invertY = this._invertY, cT.samplingMode = this.samplingMode, cT._creationFlags = this._creationFlags, cT._useSRGBBuffer = this._useSRGBBuffer, TT._SerializeInternalTextureUniqueId && (cT.internalTextureUniqueId = this._texture?.uniqueId), cT.internalTextureLabel = this._texture?.label, cT.noMipmap = this._noMipmap, this.name = kT, cT
+              const qq = this.mimeType || "image/png";
+              gq.base64String = `data:${qq};base64,${(0,Nq.f)(this._buffer)}`
+            } else(qq.ForceSerializeBuffers || this.url && this.url.startsWith("blob:") || this._forceSerialize) && (gq.base64String = !this._engine || this._engine._features.supportSyncTextureRead ? Vq(this) : dq(this));
+            return gq.invertY = this._invertY, gq.samplingMode = this.samplingMode, gq._creationFlags = this._creationFlags, gq._useSRGBBuffer = this._useSRGBBuffer, qq._SerializeInternalTextureUniqueId && (gq.internalTextureUniqueId = this._texture?.uniqueId), gq.internalTextureLabel = this._texture?.label, gq.noMipmap = this._noMipmap, this.name = Eq, gq
           }
           getClassName() {
             return "Texture"
@@ -940,304 +940,304 @@ export const modules = {
           dispose() {
             super.dispose(), this.onLoadObservable.clear(), this._delayedOnLoad = null, this._delayedOnError = null, this._buffer = null
           }
-          static Parse(kT, cT, lT) {
-            if (kT.customType) {
-              const TT = AT.d.Instantiate(kT.customType).Parse(kT, cT, lT);
-              return kT.samplingMode && TT.updateSamplingMode && TT._samplingMode && TT._samplingMode !== kT.samplingMode && TT.updateSamplingMode(kT.samplingMode), TT
+          static Parse(Eq, gq, Yq) {
+            if (Eq.customType) {
+              const qq = Bq.d.Instantiate(Eq.customType).Parse(Eq, gq, Yq);
+              return Eq.samplingMode && qq.updateSamplingMode && qq._samplingMode && qq._samplingMode !== Eq.samplingMode && qq.updateSamplingMode(Eq.samplingMode), qq
             }
-            if (kT.isCube && !kT.isRenderTarget) return TT._CubeTextureParser(kT, cT, lT);
-            const MT = void 0 !== kT.internalTextureUniqueId;
-            if (!kT.name && !kT.isRenderTarget && !MT) return null;
-            let KT;
-            if (MT) {
-              const TT = cT.Dv().getLoadedTexturesCache();
-              for (const cT of TT)
-                if (cT.uniqueId === kT.internalTextureUniqueId) {
-                  KT = cT;
+            if (Eq.isCube && !Eq.isRenderTarget) return qq._CubeTextureParser(Eq, gq, Yq);
+            const lq = void 0 !== Eq.internalTextureUniqueId;
+            if (!Eq.name && !Eq.isRenderTarget && !lq) return null;
+            let Oq;
+            if (lq) {
+              const qq = gq.Ba().getLoadedTexturesCache();
+              for (const gq of qq)
+                if (gq.uniqueId === Eq.internalTextureUniqueId) {
+                  Oq = gq;
                   break
                 }
             }
-            const OT = TT => {
-              if (TT && TT._texture && (TT._texture._cachedWrapU = null, TT._texture._cachedWrapV = null, TT._texture._cachedWrapR = null), kT.samplingMode) {
-                const cT = kT.samplingMode;
-                TT && TT.samplingMode !== cT && TT.updateSamplingMode(cT)
+            const mq = qq => {
+              if (qq && qq._texture && (qq._texture._cachedWrapU = null, qq._texture._cachedWrapV = null, qq._texture._cachedWrapR = null), Eq.samplingMode) {
+                const gq = Eq.samplingMode;
+                qq && qq.samplingMode !== gq && qq.updateSamplingMode(gq)
               }
-              if (TT && kT.animations)
-                for (let cT = 0; cT < kT.animations.length; cT++) {
-                  const lT = kT.animations[cT],
-                    MT = (0, fT.e)("BABYLON.Animation");
-                  MT && TT.animations.push(MT.Parse(lT))
+              if (qq && Eq.animations)
+                for (let gq = 0; gq < Eq.animations.length; gq++) {
+                  const Yq = Eq.animations[gq],
+                    lq = (0, Aq.e)("BABYLON.Animation");
+                  lq && qq.animations.push(lq.Parse(Yq))
                 }
-              TT && TT._texture && (MT && !KT && TT._texture._setUniqueId(kT.internalTextureUniqueId), TT._texture.label = kT.internalTextureLabel)
+              qq && qq._texture && (lq && !Oq && qq._texture._setUniqueId(Eq.internalTextureUniqueId), qq._texture.label = Eq.internalTextureLabel)
             };
-            return QT.d.Parse((() => {
-              let MT = !0;
-              if (kT.noMipmap && (MT = !1), kT.mirrorPlane) {
-                const lT = TT._CreateMirror(kT.name, kT.renderTargetSize, cT, MT);
-                return lT._waitingRenderList = kT.renderList, lT.mirrorPlane = CT.e.FromArray(kT.mirrorPlane), OT(lT), lT
+            return Hq.d.Parse((() => {
+              let lq = !0;
+              if (Eq.noMipmap && (lq = !1), Eq.mirrorPlane) {
+                const Yq = qq._CreateMirror(Eq.name, Eq.renderTargetSize, gq, lq);
+                return Yq._waitingRenderList = Eq.renderList, Yq.mirrorPlane = Wq.d.FromArray(Eq.mirrorPlane), mq(Yq), Yq
               }
-              if (kT.isRenderTarget && !kT.base64String) {
-                let lT = null;
-                if (kT.isCube) {
-                  if (cT.reflectionProbes)
-                    for (let TT = 0; TT < cT.reflectionProbes.length; TT++) {
-                      const lT = cT.reflectionProbes[TT];
-                      if (lT.name === kT.name) return lT.cubeTexture
+              if (Eq.isRenderTarget && !Eq.base64String) {
+                let Yq = null;
+                if (Eq.isCube) {
+                  if (gq.reflectionProbes)
+                    for (let qq = 0; qq < gq.reflectionProbes.length; qq++) {
+                      const Yq = gq.reflectionProbes[qq];
+                      if (Yq.name === Eq.name) return Yq.cubeTexture
                     }
-                } else lT = TT._CreateRenderTargetTexture(kT.name, kT.renderTargetSize, cT, MT, kT._creationFlags ?? 0), lT._waitingRenderList = kT.renderList;
-                return OT(lT), lT
+                } else Yq = qq._CreateRenderTargetTexture(Eq.name, Eq.renderTargetSize, gq, lq, Eq._creationFlags ?? 0), Yq._waitingRenderList = Eq.renderList;
+                return mq(Yq), Yq
               }
-              if (kT.isVideo) {
-                const KT = TT._CreateVideoTexture(lT + (kT.url || kT.name), lT + (kT.src || kT.url), cT, MT, kT.invertY, kT.samplingMode, kT.settings || {});
-                return OT(KT), KT
+              if (Eq.isVideo) {
+                const Oq = qq._CreateVideoTexture(Yq + (Eq.url || Eq.name), Yq + (Eq.src || Eq.url), gq, lq, Eq.invertY, Eq.samplingMode, Eq.settings || {});
+                return mq(Oq), Oq
               } {
-                let yT;
-                if ("string" === typeof kT.base64String && kT.base64String && !KT) {
-                  const lT = {
-                      buffer: kT.base64String,
-                      noMipmap: !MT,
-                      invertY: kT.invertY,
-                      samplingMode: kT.samplingMode,
-                      useSRGBBuffer: kT._useSRGBBuffer ?? !1,
-                      creationFlags: kT._creationFlags ?? 0,
+                let xq;
+                if ("string" === typeof Eq.base64String && Eq.base64String && !Oq) {
+                  const Yq = {
+                      buffer: Eq.base64String,
+                      noMipmap: !lq,
+                      invertY: Eq.invertY,
+                      samplingMode: Eq.samplingMode,
+                      useSRGBBuffer: Eq._useSRGBBuffer ?? !1,
+                      creationFlags: Eq._creationFlags ?? 0,
                       onLoad: () => {
-                        OT(yT)
+                        mq(xq)
                       }
                     },
-                    KT = kT.base64String,
-                    fT = KT.startsWith("data:") ? KT.substring(5) : KT;
-                  yT = TT.CreateFromBase64String("", fT, cT, lT), yT.name = kT.name
+                    Oq = Eq.base64String,
+                    Aq = Oq.startsWith("data:") ? Oq.substring(5) : Oq;
+                  xq = qq.CreateFromBase64String("", Aq, gq, Yq), xq.name = Eq.name
                 } else {
-                  let fT;
-                  fT = kT.name && (kT.name.indexOf("://") > 0 || kT.name.startsWith("data:")) ? kT.name : lT + kT.name, kT.url && (kT.url.startsWith("data:") || TT.UseSerializedUrlIfAny) && (fT = kT.url);
-                  const xT = {
-                    noMipmap: !MT,
-                    invertY: kT.invertY,
-                    samplingMode: kT.samplingMode,
-                    useSRGBBuffer: kT._useSRGBBuffer ?? !1,
-                    creationFlags: kT._creationFlags ?? 0,
+                  let Aq;
+                  Aq = Eq.name && (Eq.name.indexOf("://") > 0 || Eq.name.startsWith("data:")) ? Eq.name : Yq + Eq.name, Eq.url && (Eq.url.startsWith("data:") || qq.UseSerializedUrlIfAny) && (Aq = Eq.url);
+                  const cq = {
+                    noMipmap: !lq,
+                    invertY: Eq.invertY,
+                    samplingMode: Eq.samplingMode,
+                    useSRGBBuffer: Eq._useSRGBBuffer ?? !1,
+                    creationFlags: Eq._creationFlags ?? 0,
                     onLoad: () => {
-                      OT(yT)
+                      mq(xq)
                     },
-                    internalTexture: KT
+                    internalTexture: Oq
                   };
-                  yT = new TT(fT, cT, xT)
+                  xq = new qq(Aq, gq, cq)
                 }
-                return yT
+                return xq
               }
-            }), kT, cT)
+            }), Eq, gq)
           }
-          static CreateFromBase64String(kT, cT, lT, MT, KT) {
-            let OT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : TT.TRILINEAR_SAMPLINGMODE;
-            return new TT("data:" + cT, lT, MT, KT, OT, arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null, kT, !1, arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 5, void 0, void 0, arguments.length > 9 ? arguments[9] : void 0, arguments.length > 10 ? arguments[10] : void 0)
+          static CreateFromBase64String(Eq, gq, Yq, lq, Oq) {
+            let mq = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : qq.TRILINEAR_SAMPLINGMODE;
+            return new qq("data:" + gq, Yq, lq, Oq, mq, arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null, Eq, !1, arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 5, void 0, void 0, arguments.length > 9 ? arguments[9] : void 0, arguments.length > 10 ? arguments[10] : void 0)
           }
-          static LoadFromDataString(kT, cT, lT) {
-            let MT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-              KT = arguments.length > 4 ? arguments[4] : void 0,
-              OT = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-              yT = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : TT.TRILINEAR_SAMPLINGMODE,
-              fT = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
-              xT = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : null,
-              IT = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 5,
-              AT = arguments.length > 10 ? arguments[10] : void 0,
-              CT = arguments.length > 11 ? arguments[11] : void 0;
-            return "data:" !== kT.substring(0, 5) && (kT = "data:" + kT), new TT(kT, lT, KT, OT, yT, fT, xT, cT, MT, IT, void 0, void 0, AT, CT)
+          static LoadFromDataString(Eq, gq, Yq) {
+            let lq = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+              Oq = arguments.length > 4 ? arguments[4] : void 0,
+              mq = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+              xq = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : qq.TRILINEAR_SAMPLINGMODE,
+              Aq = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+              cq = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : null,
+              uq = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 5,
+              Bq = arguments.length > 10 ? arguments[10] : void 0,
+              Wq = arguments.length > 11 ? arguments[11] : void 0;
+            return "data:" !== Eq.substring(0, 5) && (Eq = "data:" + Eq), new qq(Eq, Yq, Oq, mq, xq, Aq, cq, gq, lq, uq, void 0, void 0, Bq, Wq)
           }
         }, (() => {
-          const KT = "function" === typeof Symbol && Symbol.metadata ? Object.create(JT[Symbol.metadata] ?? null) : void 0;
-          kT = [(0, MT.J)()], cT = [(0, MT.J)()], vT = [(0, MT.J)()], ST = [(0, MT.J)()], DT = [(0, MT.J)()], aT = [(0, MT.J)()], FT = [(0, MT.J)()], rT = [(0, MT.J)()], PT = [(0, MT.J)()], wT = [(0, MT.J)()], mT = [(0, MT.J)()], bT = [(0, MT.J)()], zT = [(0, MT.J)()], (0, lT.e)(TT, null, zT, {
+          const Oq = "function" === typeof Symbol && Symbol.metadata ? Object.create(iq[Symbol.metadata] ?? null) : void 0;
+          Eq = [(0, lq.M)()], gq = [(0, lq.M)()], aq = [(0, lq.M)()], oq = [(0, lq.M)()], Pq = [(0, lq.M)()], Qq = [(0, lq.M)()], yq = [(0, lq.M)()], tq = [(0, lq.M)()], rq = [(0, lq.M)()], vq = [(0, lq.M)()], hq = [(0, lq.M)()], nq = [(0, lq.M)()], bq = [(0, lq.M)()], (0, Yq.f)(qq, null, bq, {
             kind: "getter",
             name: "isBlocking",
             static: !1,
             private: !1,
             access: {
-              has: TT => "isBlocking" in TT,
-              get: TT => TT.isBlocking
+              has: qq => "isBlocking" in qq,
+              get: qq => qq.isBlocking
             },
-            metadata: KT
-          }, null, oT), (0, lT.e)(null, null, kT, {
+            metadata: Oq
+          }, null, Zq), (0, Yq.f)(null, null, Eq, {
             kind: "field",
             name: "url",
             static: !1,
             private: !1,
             access: {
-              has: TT => "url" in TT,
-              get: TT => TT.url,
-              set: (TT, kT) => {
-                TT.url = kT
+              has: qq => "url" in qq,
+              get: qq => qq.url,
+              set: (qq, Eq) => {
+                qq.url = Eq
               }
             },
-            metadata: KT
-          }, HT, eT), (0, lT.e)(null, null, cT, {
+            metadata: Oq
+          }, fq, Mq), (0, Yq.f)(null, null, gq, {
             kind: "field",
             name: "uOffset",
             static: !1,
             private: !1,
             access: {
-              has: TT => "uOffset" in TT,
-              get: TT => TT.uOffset,
-              set: (TT, kT) => {
-                TT.uOffset = kT
+              has: qq => "uOffset" in qq,
+              get: qq => qq.uOffset,
+              set: (qq, Eq) => {
+                qq.uOffset = Eq
               }
             },
-            metadata: KT
-          }, GT, VT), (0, lT.e)(null, null, vT, {
+            metadata: Oq
+          }, Tq, zq), (0, Yq.f)(null, null, aq, {
             kind: "field",
             name: "vOffset",
             static: !1,
             private: !1,
             access: {
-              has: TT => "vOffset" in TT,
-              get: TT => TT.vOffset,
-              set: (TT, kT) => {
-                TT.vOffset = kT
+              has: qq => "vOffset" in qq,
+              get: qq => qq.vOffset,
+              set: (qq, Eq) => {
+                qq.vOffset = Eq
               }
             },
-            metadata: KT
-          }, ET, ZT), (0, lT.e)(null, null, ST, {
+            metadata: Oq
+          }, Sq, pq), (0, Yq.f)(null, null, oq, {
             kind: "field",
             name: "uScale",
             static: !1,
             private: !1,
             access: {
-              has: TT => "uScale" in TT,
-              get: TT => TT.uScale,
-              set: (TT, kT) => {
-                TT.uScale = kT
+              has: qq => "uScale" in qq,
+              get: qq => qq.uScale,
+              set: (qq, Eq) => {
+                qq.uScale = Eq
               }
             },
-            metadata: KT
-          }, uT, XT), (0, lT.e)(null, null, DT, {
+            metadata: Oq
+          }, Gq, Lq), (0, Yq.f)(null, null, Pq, {
             kind: "field",
             name: "vScale",
             static: !1,
             private: !1,
             access: {
-              has: TT => "vScale" in TT,
-              get: TT => TT.vScale,
-              set: (TT, kT) => {
-                TT.vScale = kT
+              has: qq => "vScale" in qq,
+              get: qq => qq.vScale,
+              set: (qq, Eq) => {
+                qq.vScale = Eq
               }
             },
-            metadata: KT
-          }, dT, LT), (0, lT.e)(null, null, aT, {
+            metadata: Oq
+          }, Jq, kq), (0, Yq.f)(null, null, Qq, {
             kind: "field",
             name: "uAng",
             static: !1,
             private: !1,
             access: {
-              has: TT => "uAng" in TT,
-              get: TT => TT.uAng,
-              set: (TT, kT) => {
-                TT.uAng = kT
+              has: qq => "uAng" in qq,
+              get: qq => qq.uAng,
+              set: (qq, Eq) => {
+                qq.uAng = Eq
               }
             },
-            metadata: KT
-          }, RT, gT), (0, lT.e)(null, null, FT, {
+            metadata: Oq
+          }, Rq, Uq), (0, Yq.f)(null, null, yq, {
             kind: "field",
             name: "vAng",
             static: !1,
             private: !1,
             access: {
-              has: TT => "vAng" in TT,
-              get: TT => TT.vAng,
-              set: (TT, kT) => {
-                TT.vAng = kT
+              has: qq => "vAng" in qq,
+              get: qq => qq.vAng,
+              set: (qq, Eq) => {
+                qq.vAng = Eq
               }
             },
-            metadata: KT
-          }, UT, YT), (0, lT.e)(null, null, rT, {
+            metadata: Oq
+          }, Fq, sq), (0, Yq.f)(null, null, tq, {
             kind: "field",
             name: "wAng",
             static: !1,
             private: !1,
             access: {
-              has: TT => "wAng" in TT,
-              get: TT => TT.wAng,
-              set: (TT, kT) => {
-                TT.wAng = kT
+              has: qq => "wAng" in qq,
+              get: qq => qq.wAng,
+              set: (qq, Eq) => {
+                qq.wAng = Eq
               }
             },
-            metadata: KT
-          }, BT, WT), (0, lT.e)(null, null, PT, {
+            metadata: Oq
+          }, Xq, wq), (0, Yq.f)(null, null, rq, {
             kind: "field",
             name: "uRotationCenter",
             static: !1,
             private: !1,
             access: {
-              has: TT => "uRotationCenter" in TT,
-              get: TT => TT.uRotationCenter,
-              set: (TT, kT) => {
-                TT.uRotationCenter = kT
+              has: qq => "uRotationCenter" in qq,
+              get: qq => qq.uRotationCenter,
+              set: (qq, Eq) => {
+                qq.uRotationCenter = Eq
               }
             },
-            metadata: KT
-          }, nT, pT), (0, lT.e)(null, null, wT, {
+            metadata: Oq
+          }, Kq, Cq), (0, Yq.f)(null, null, vq, {
             kind: "field",
             name: "vRotationCenter",
             static: !1,
             private: !1,
             access: {
-              has: TT => "vRotationCenter" in TT,
-              get: TT => TT.vRotationCenter,
-              set: (TT, kT) => {
-                TT.vRotationCenter = kT
+              has: qq => "vRotationCenter" in qq,
+              get: qq => qq.vRotationCenter,
+              set: (qq, Eq) => {
+                qq.vRotationCenter = Eq
               }
             },
-            metadata: KT
-          }, iT, qT), (0, lT.e)(null, null, mT, {
+            metadata: Oq
+          }, Iq, eq), (0, Yq.f)(null, null, hq, {
             kind: "field",
             name: "wRotationCenter",
             static: !1,
             private: !1,
             access: {
-              has: TT => "wRotationCenter" in TT,
-              get: TT => TT.wRotationCenter,
-              set: (TT, kT) => {
-                TT.wRotationCenter = kT
+              has: qq => "wRotationCenter" in qq,
+              get: qq => qq.wRotationCenter,
+              set: (qq, Eq) => {
+                qq.wRotationCenter = Eq
               }
             },
-            metadata: KT
-          }, sT, Tk), (0, lT.e)(null, null, bT, {
+            metadata: Oq
+          }, Dq, qE), (0, Yq.f)(null, null, nq, {
             kind: "field",
             name: "homogeneousRotationInUVTransform",
             static: !1,
             private: !1,
             access: {
-              has: TT => "homogeneousRotationInUVTransform" in TT,
-              get: TT => TT.homogeneousRotationInUVTransform,
-              set: (TT, kT) => {
-                TT.homogeneousRotationInUVTransform = kT
+              has: qq => "homogeneousRotationInUVTransform" in qq,
+              get: qq => qq.homogeneousRotationInUVTransform,
+              set: (qq, Eq) => {
+                qq.homogeneousRotationInUVTransform = Eq
               }
             },
-            metadata: KT
-          }, kk, ck), KT && Object.defineProperty(TT, Symbol.metadata, {
+            metadata: Oq
+          }, EE, gE), Oq && Object.defineProperty(qq, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: KT
+            value: Oq
           })
-        })(), TT.SerializeBuffers = !0, TT.ForceSerializeBuffers = !1, TT.OnTextureLoadErrorObservable = new KT.b, TT._SerializeInternalTextureUniqueId = !1, TT._CubeTextureParser = (TT, kT, cT) => {
-          throw (0, xT.i)("CubeTexture")
-        }, TT._CreateMirror = (TT, kT, cT, lT) => {
-          throw (0, xT.i)("MirrorTexture")
-        }, TT._CreateRenderTargetTexture = (TT, kT, cT, lT, MT) => {
-          throw (0, xT.i)("RenderTargetTexture")
-        }, TT.NEAREST_SAMPLINGMODE = 1, TT.NEAREST_NEAREST_MIPLINEAR = 8, TT.BILINEAR_SAMPLINGMODE = 2, TT.LINEAR_LINEAR_MIPNEAREST = 11, TT.TRILINEAR_SAMPLINGMODE = 3, TT.LINEAR_LINEAR_MIPLINEAR = 3, TT.NEAREST_NEAREST_MIPNEAREST = 4, TT.NEAREST_LINEAR_MIPNEAREST = 5, TT.NEAREST_LINEAR_MIPLINEAR = 6, TT.NEAREST_LINEAR = 7, TT.NEAREST_NEAREST = 1, TT.LINEAR_NEAREST_MIPNEAREST = 9, TT.LINEAR_NEAREST_MIPLINEAR = 10, TT.LINEAR_LINEAR = 2, TT.LINEAR_NEAREST = 12, TT.EXPLICIT_MODE = 0, TT.SPHERICAL_MODE = 1, TT.PLANAR_MODE = 2, TT.CUBIC_MODE = 3, TT.PROJECTION_MODE = 4, TT.SKYBOX_MODE = 5, TT.INVCUBIC_MODE = 6, TT.EQUIRECTANGULAR_MODE = 7, TT.FIXED_EQUIRECTANGULAR_MODE = 8, TT.FIXED_EQUIRECTANGULAR_MIRRORED_MODE = 9, TT.CLAMP_ADDRESSMODE = 0, TT.WRAP_ADDRESSMODE = 1, TT.MIRROR_ADDRESSMODE = 2, TT.UseSerializedUrlIfAny = !1, TT
+        })(), qq.SerializeBuffers = !0, qq.ForceSerializeBuffers = !1, qq.OnTextureLoadErrorObservable = new Oq.d, qq._SerializeInternalTextureUniqueId = !1, qq._CubeTextureParser = (qq, Eq, gq) => {
+          throw (0, cq.m)("CubeTexture")
+        }, qq._CreateMirror = (qq, Eq, gq, Yq) => {
+          throw (0, cq.m)("MirrorTexture")
+        }, qq._CreateRenderTargetTexture = (qq, Eq, gq, Yq, lq) => {
+          throw (0, cq.m)("RenderTargetTexture")
+        }, qq.NEAREST_SAMPLINGMODE = 1, qq.NEAREST_NEAREST_MIPLINEAR = 8, qq.BILINEAR_SAMPLINGMODE = 2, qq.LINEAR_LINEAR_MIPNEAREST = 11, qq.TRILINEAR_SAMPLINGMODE = 3, qq.LINEAR_LINEAR_MIPLINEAR = 3, qq.NEAREST_NEAREST_MIPNEAREST = 4, qq.NEAREST_LINEAR_MIPNEAREST = 5, qq.NEAREST_LINEAR_MIPLINEAR = 6, qq.NEAREST_LINEAR = 7, qq.NEAREST_NEAREST = 1, qq.LINEAR_NEAREST_MIPNEAREST = 9, qq.LINEAR_NEAREST_MIPLINEAR = 10, qq.LINEAR_LINEAR = 2, qq.LINEAR_NEAREST = 12, qq.EXPLICIT_MODE = 0, qq.SPHERICAL_MODE = 1, qq.PLANAR_MODE = 2, qq.CUBIC_MODE = 3, qq.PROJECTION_MODE = 4, qq.SKYBOX_MODE = 5, qq.INVCUBIC_MODE = 6, qq.EQUIRECTANGULAR_MODE = 7, qq.FIXED_EQUIRECTANGULAR_MODE = 8, qq.FIXED_EQUIRECTANGULAR_MIRRORED_MODE = 9, qq.CLAMP_ADDRESSMODE = 0, qq.WRAP_ADDRESSMODE = 1, qq.MIRROR_ADDRESSMODE = 2, qq.UseSerializedUrlIfAny = !1, qq
       })(),
-      DT = !1;
+      Pq = !1;
 
-    function aT() {
-      DT || (DT = !0, (0, fT.g)("BABYLON.Texture", ST), QT.d._TextureParser = ST.Parse)
+    function Qq() {
+      Pq || (Pq = !0, (0, Aq.g)("BABYLON.Texture", oq), Hq.d._TextureParser = oq.Parse)
     }
   },
-  39638: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => lT
+  39774: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => Yq
     });
-    class lT {
-      constructor(TT, kT) {
-        this.width = TT, this.height = kT
+    class Yq {
+      constructor(qq, Eq) {
+        this.width = qq, this.height = Eq
       }
       toString() {
         return `{W: ${this.width}, H: ${this.height}}`
@@ -1246,49 +1246,49 @@ export const modules = {
         return "Size"
       }
       getHashCode() {
-        let TT = 0 | this.width;
-        return TT = 397 * TT ^ this.height, TT
+        let qq = 0 | this.width;
+        return qq = 397 * qq ^ this.height, qq
       }
-      UkT(TT) {
-        this.width = TT.width, this.height = TT.height
+      WG(qq) {
+        this.width = qq.width, this.height = qq.height
       }
-      I5(TT, kT) {
-        return this.width = TT, this.height = kT, this
+      Vqq(qq, Eq) {
+        return this.width = qq, this.height = Eq, this
       }
-      set(TT, kT) {
-        return this.I5(TT, kT)
+      set(qq, Eq) {
+        return this.Vqq(qq, Eq)
       }
-      multiplyByFloats(TT, kT) {
-        return new lT(this.width * TT, this.height * kT)
+      multiplyByFloats(qq, Eq) {
+        return new Yq(this.width * qq, this.height * Eq)
       }
       clone() {
-        return new lT(this.width, this.height)
+        return new Yq(this.width, this.height)
       }
-      equals(TT) {
-        return !!TT && (this.width === TT.width && this.height === TT.height)
+      equals(qq) {
+        return !!qq && (this.width === qq.width && this.height === qq.height)
       }
       get surface() {
         return this.width * this.height
       }
       static Zero() {
-        return new lT(0, 0)
+        return new Yq(0, 0)
       }
-      add(TT) {
-        return new lT(this.width + TT.width, this.height + TT.height)
+      add(qq) {
+        return new Yq(this.width + qq.width, this.height + qq.height)
       }
-      subtract(TT) {
-        return new lT(this.width - TT.width, this.height - TT.height)
+      subtract(qq) {
+        return new Yq(this.width - qq.width, this.height - qq.height)
       }
-      scale(TT) {
-        return new lT(this.width * TT, this.height * TT)
+      scale(qq) {
+        return new Yq(this.width * qq, this.height * qq)
       }
-      static Lerp(TT, kT, cT) {
-        const MT = TT.width + (kT.width - TT.width) * cT,
-          KT = TT.height + (kT.height - TT.height) * cT;
-        return new lT(MT, KT)
+      static Lerp(qq, Eq, gq) {
+        const lq = qq.width + (Eq.width - qq.width) * gq,
+          Oq = qq.height + (Eq.height - qq.height) * gq;
+        return new Yq(lq, Oq)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

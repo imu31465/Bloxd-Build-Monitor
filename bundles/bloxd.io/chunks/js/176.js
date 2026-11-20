@@ -1,37 +1,40 @@
 export const id = 176;
 export const ids = [176];
 export const modules = {
-  9040: (TT, kT, cT) => {
-    cT.r(kT), cT.d(kT, {
-      pageBody: () => lT
+  8977: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      pageBody: () => Yq
     });
-    const lT = {
-      whatIs: ["Set sail for messy sea fights where good timing and teamwork decide who rules the waves. In Bloxd Pirates your crew fires cannons, grabs loot and races to destroy the other team's spawn blocks. It doesn't cost a thing and it loads straight in your browser."],
-      howToPlay: ["You'll join a team, usually Red or Blue, though Classic (4 Teams) and Treasure Island have 4. Each team has spawn blocks to protect. Break the enemy's spawn blocks and they can't respawn any more, then use your Compass to hunt down the rest of their crew. Last team standing wins.", "To fire the cannons, click your team's coloured glass. After that you'll have to wait 15 seconds for them to reload. Before the match you pick a kit in the lobby. The Cannoneer fires two cannonballs at once, the Medic heals teammates and the Admiral can call in artillery strikes. Loot refills during the match, so keep grabbing new gear. Wins, final kills and broken spawn blocks all earn Gold, which you spend on new kits."],
-      features: ["Team Cannon Battles on the High Seas", "Destroy Spawn Blocks to Stop the Enemy Respawning", "26 Kits, from Swashbuckler and Pegleg to Ghost and Portalmaster", "Perks like Bridger, Leech and Inferno", "11 Maps, Including 4-Team Classic and Treasure Island", "Loot That Refills During the Match", "Track Your Games Played and Wins"],
-      tips: ["Fire your cannons early, then get moving while they reload", "Break the enemy's cannons and they can't fire back for a while", "Guard your spawn blocks. Once they're all gone, you can't respawn", "Switch your Compass between Nearest Player and Nearest Spawn", "Don't hide from the fight, or you'll be cursed as a coward and won't be able to heal", "Stick with your crew. A Captain or Medic makes the whole team stronger", "Pick your kit carefully, because you're stuck with it untill the match ends"],
-      similarGames: ["bedwars", "skywars", "shooting", "luckyBedwars"],
+    const Yq = {
+      whatIs: ["Capture the points, hold the line, win the fight. Bloxd Frontline is a 12v12 FPS where Red and Blue go head to head in fast domination rounds. It's free to play online and there's nothing to install. Gear up at the Armorer, pick one of 17 kits, jump in a vehicle and push the line with your team. You can hop in on your own, but it's better with a full squad."],
+      howToPlay: ["You'll join Red or Blue and spawn at your base. Head to the Armorer to choose a kit, then get out there and capture the lettered points on the map. Every point you hold earns your team tickets. First team to 100 tickets takes the round. There's a timer as well, so don't let up. If you go down, you're back in the fight after 5 seconds.", "Kills, captures and wins all earn gold. You can spend it on a mystery kit draw, or at the Quartermaster next to your Armorer for Frag Grenades, healing potions and buffs that last the whole round. Vehicles spawn at each base and around the map. They're great for pushing forward fast, but enemy guns and explosives can wreck them. Your base has a shield over it that pushes enemies out, so there's always somewhere safe to regroup."],
+      features: ["Domination Rounds: Capture Points and Race to 100 Tickets", "17 Unique Kits, Including Combat Medic, Ninja, Juggernaut, Wrecker and Marksman", "Vehicles to Drive into Battle", "Quartermaster Buffs: Fleet Footed, Rapid Deploy, Fast Hands and Sure Grip", "Shielded Team Bases and Auto-Balanced Teams", "Ranks from Bronze to Moonstone, Plus Tracked Stats", "Party Up and Play with a Full Squad"],
+      tips: ["Capture points together and hold them so your tickets keep climbing", "Try a few kits at the Armorer until you find one that fits how you play", "Play Combat Medic to keep your team in the fight", "Buy buffs early. They stop selling in the last minute of a round", "Captures trigger Rally windows that cut your team's respawn time", "Use the Ninja's smoke grenades to cover a push onto a point", "Grab a vehicle when you need to reach a point on the other side of the map"],
+      similarGames: ["shooting", "pirates", "bedwars", "skywars"],
       faq: [{
-        question: "What is Bloxd Pirates?",
-        answer: "A team battle mode where pirate crews clash in chaotic sea fights, with cannons, kits and loot."
+        question: "What is Bloxd Frontline?",
+        answer: "A 12v12 team shooter on Bloxd.io. You capture points, pick kits and drive vehicles to win domination rounds."
       }, {
-        question: "How do you win in Bloxd Pirates?",
-        answer: "Destroy every one of the enemy team's spawn blocks so they can't respawn, then take down whoever's left. The last team standing wins."
+        question: "How does a team win in Bloxd Frontline?",
+        answer: "By holding points to earn tickets. The first team to reach 100 tickets wins the round."
       }, {
-        question: "How do cannons work in Bloxd Pirates?",
-        answer: "Click your team's coloured glass to fire. Each cannon takes 15 seconds to reload, and you can break enemy cannons to knock them out for a while."
+        question: "What do kits do in Bloxd Frontline?",
+        answer: "They decide your weapons and abilities. Combat Medic brings strong healing, the Ninja has smoke grenades and the Juggernaut carries a belt-fed GPMG."
       }, {
-        question: "Which kits can I pick in Bloxd Pirates?",
-        answer: "There are 26, each with its own items or powers. The Scout can double jump, the Scoundrel can go invisible and the Portalmaster makes portals. You pick one in the lobby and unlock more with Gold or gems."
+        question: "How do I unlock new kits?",
+        answer: "Spend gold on a mystery kit draw. Draw one you already own and you'll get gems instead, which you can use to buy a specific locked kit."
       }, {
-        question: "How do I get Gold in Bloxd Pirates?",
-        answer: "A win is worth 25 Gold. You also get 5 Gold for every spawn block you break and every final kill."
+        question: "Does Bloxd Frontline have vehicles?",
+        answer: "Yep. They spawn at each base and around the map. Guns and explosives can destroy them, so drive carefully."
       }, {
-        question: "What maps are in Bloxd Pirates?",
-        answer: "There are 11: Classic, Classic (4 Teams), Scurvy Shore, Cutthroat Cliffs, Treasure Island, Double Trouble, Stowaway Seas, Woesome Waters, Cannon Storm, Scorched Sails and Dynasty Docks."
+        question: "How is Frontline different from Cube Warfare?",
+        answer: "Frontline is 12v12 objective play with points, kits and vehicles. Cube Warfare is quicker Free-For-All, Team Deathmatch and Gun Game fights where killstreaks matter most."
+      }, {
+        question: "Can I squad up with friends in Bloxd Frontline?",
+        answer: "Yes. Party up with your friends and you'll play together as a squad."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

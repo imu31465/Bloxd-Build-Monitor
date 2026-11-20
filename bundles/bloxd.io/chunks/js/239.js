@@ -1,500 +1,500 @@
 export const id = 239;
 export const ids = [239];
 export const modules = {
-  40375: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => KT,
-      f: () => OT
+  40466: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => Oq,
+      f: () => mq
     });
-    var lT = cT(1964);
-    let MT = !1;
+    var Yq = gq(1914);
+    let lq = !1;
 
-    function KT() {
-      MT = !0
+    function Oq() {
+      lq = !0
     }
 
-    function OT() {
-      MT && (MT = !1, (0, lT.b)())
+    function mq() {
+      lq && (lq = !1, (0, Yq.d)())
     }
   },
-  40369: (TT, kT, cT) => {
-    cT.d(kT, {
-      d: () => OT,
-      g: () => KT,
-      k: () => yT
+  40462: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => mq,
+      f: () => Oq,
+      h: () => xq
     });
-    var lT = cT(40204),
-      MT = cT(40215);
+    var Yq = gq(40318),
+      lq = gq(40325);
 
-    function KT(TT) {
-      if (TT.queries.drawCensus() < lT.Kb.BYTES) return null;
-      const kT = TT.memoryData(TT.scratch(), lT.Kb.BYTES, 4, "the draw census");
-      return null === kT ? null : {
-        terrainOpaque: lT.Kb.terrainOpaque(kT, 0),
-        terrainTransparent: lT.Kb.terrainTransparent(kT, 0),
-        terrainPack: lT.Kb.terrainPack(kT, 0),
-        earthSky: lT.Kb.earthSky(kT, 0),
-        skyMeshes: lT.Kb.skyMeshes(kT, 0),
-        regular: lT.Kb.regular(kT, 0),
-        thin: lT.Kb.thin(kT, 0),
-        line: lT.Kb.line(kT, 0),
-        text: lT.Kb.text(kT, 0),
-        particles: lT.Kb.particles(kT, 0),
-        terrainParts: lT.Kb.terrainParts(kT, 0),
-        terrainCompiling: lT.Kb.terrainCompiling(kT, 0)
+    function Oq(qq) {
+      if (qq.queries.drawCensus() < Yq.zb.BYTES) return null;
+      const Eq = qq.memoryData(qq.scratch(), Yq.zb.BYTES, 4, "the draw census");
+      return null === Eq ? null : {
+        terrainOpaque: Yq.zb.terrainOpaque(Eq, 0),
+        terrainTransparent: Yq.zb.terrainTransparent(Eq, 0),
+        terrainPack: Yq.zb.terrainPack(Eq, 0),
+        earthSky: Yq.zb.earthSky(Eq, 0),
+        skyMeshes: Yq.zb.skyMeshes(Eq, 0),
+        regular: Yq.zb.regular(Eq, 0),
+        thin: Yq.zb.thin(Eq, 0),
+        line: Yq.zb.line(Eq, 0),
+        text: Yq.zb.text(Eq, 0),
+        particles: Yq.zb.particles(Eq, 0),
+        terrainParts: Yq.zb.terrainParts(Eq, 0),
+        terrainCompiling: Yq.zb.terrainCompiling(Eq, 0)
       }
     }
 
-    function OT(TT) {
+    function mq(qq) {
       const {
-        terrainOpaque: kT,
-        terrainTransparent: cT,
-        earthSky: lT,
-        skyMeshes: MT,
-        regular: KT,
-        thin: OT,
-        line: yT,
-        text: fT,
-        particles: xT
-      } = TT;
-      return kT + cT + lT + MT + KT + OT + yT + fT + xT
+        terrainOpaque: Eq,
+        terrainTransparent: gq,
+        earthSky: Yq,
+        skyMeshes: lq,
+        regular: Oq,
+        thin: mq,
+        line: xq,
+        text: Aq,
+        particles: cq
+      } = qq;
+      return Eq + gq + Yq + lq + Oq + mq + xq + Aq + cq
     }
 
-    function yT() {
-      const TT = (0, MT.g)();
-      return !0 === (null === TT || void 0 === TT ? void 0 : TT.isCoreRunning) ? function(TT) {
-        const kT = KT(TT);
-        if (null === kT) return [];
+    function xq() {
+      const qq = (0, lq.e)();
+      return !0 === (null === qq || void 0 === qq ? void 0 : qq.isCoreRunning) ? function(qq) {
+        const Eq = Oq(qq);
+        if (null === Eq) return [];
         const {
-          terrainOpaque: cT,
-          terrainTransparent: lT,
-          terrainPack: MT,
-          earthSky: yT,
-          skyMeshes: fT,
-          regular: xT,
-          thin: IT,
-          line: AT,
-          text: CT,
-          particles: jT
-        } = kT;
+          terrainOpaque: gq,
+          terrainTransparent: Yq,
+          terrainPack: lq,
+          earthSky: xq,
+          skyMeshes: Aq,
+          regular: cq,
+          thin: uq,
+          line: Bq,
+          text: Wq,
+          particles: Nq
+        } = Eq;
         return [{
           label: "Drawn",
-          value: `${OT(kT)}`
+          value: `${mq(Eq)}`
         }, {
           label: "Terrain",
-          value: `${cT} opaque / ${lT} transparent (${MT} shader pack)`
+          value: `${gq} opaque / ${Yq} transparent (${lq} shader pack)`
         }, {
           label: "Meshes / Thin bases",
-          value: `${xT} / ${IT}`
+          value: `${cq} / ${uq}`
         }, {
           label: "Text / Lines",
-          value: `${CT} / ${AT}`
+          value: `${Wq} / ${Bq}`
         }, {
           label: "Sky / Particles",
-          value: `${yT+fT} / ${jT}`
+          value: `${xq+Aq} / ${Nq}`
         }]
-      }(TT.api) : []
+      }(qq.api) : []
     }
   },
-  40329: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => vT,
-      f: () => CT,
-      h: () => jT
+  40428: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => aq,
+      e: () => Wq,
+      h: () => Nq
     });
-    var lT = cT(1967),
-      MT = cT(1298),
-      KT = cT(40215),
-      OT = cT(40239),
-      yT = cT(40246),
-      fT = cT(40264);
-    const xT = new MT.e;
-    let IT = !1;
+    var Yq = gq(1921),
+      lq = gq(1276),
+      Oq = gq(40325),
+      mq = gq(40343),
+      xq = gq(40350),
+      Aq = gq(40366);
+    const cq = new lq.b;
+    let uq = !1;
 
-    function AT(TT) {
-      const kT = (0, KT.g)();
-      return null !== kT && +TT === kT.api.localId
+    function Bq(qq) {
+      const Eq = (0, Oq.e)();
+      return null !== Eq && +qq === Eq.api.localId
     }
 
-    function CT() {
-      IT || (IT = !0, (0, fT.m)(OT.n, (TT => {
-        var kT, cT;
-        const lT = (0, yT.e)(OT.n, TT);
-        if (!(0, yT.b)(lT)) return;
-        const MT = lT;
-        AT(MT.tT) && jT(MT.hT, {
-          icon: MT.QT,
-          level: MT.DT,
-          displayName: null !== (kT = MT.NT) && void 0 !== kT ? kT : null,
-          durationMs: null !== (cT = MT.ST) && void 0 !== cT ? cT : null
+    function Wq() {
+      uq || (uq = !0, (0, Aq.l)(mq.m, (qq => {
+        var Eq, gq;
+        const Yq = (0, xq.d)(mq.m, qq);
+        if (!(0, xq.b)(Yq)) return;
+        const lq = Yq;
+        Bq(lq.RE) && Nq(lq.UE, {
+          icon: lq.sE,
+          level: lq.wE,
+          displayName: null !== (Eq = lq.FE) && void 0 !== Eq ? Eq : null,
+          durationMs: null !== (gq = lq.XE) && void 0 !== gq ? gq : null
         })
-      })), (0, fT.m)(OT.U, (TT => {
-        const kT = (0, yT.e)(OT.U, TT);
-        if (!(0, yT.b)(kT)) return;
-        const cT = kT;
-        AT(cT.tT) && lT.c.remove(cT.hT)
-      })), (0, fT.h)((() => {
-        lT.c.clear()
+      })), (0, Aq.l)(mq.H, (qq => {
+        const Eq = (0, xq.d)(mq.H, qq);
+        if (!(0, xq.b)(Eq)) return;
+        const gq = Eq;
+        Bq(gq.RE) && Yq.b.remove(gq.UE)
+      })), (0, Aq.d)((() => {
+        Yq.b.clear()
       })))
     }
 
-    function jT(TT, kT) {
-      lT.c.update(TT, kT), xT.forEach((kT => {
-        kT(TT)
+    function Nq(qq, Eq) {
+      Yq.b.update(qq, Eq), cq.forEach((Eq => {
+        Eq(qq)
       }))
     }
-    const vT = {
+    const aq = {
       localEffectUpdated: {
-        watch: TT => xT.add(TT)
+        watch: qq => cq.add(qq)
       }
     }
   },
-  40335: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => IT
+  40432: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => uq
     });
-    var lT = cT(4769),
-      MT = cT(4761),
-      KT = cT(40254),
-      OT = cT(40264);
-    const yT = new Set(lT.D),
-      fT = lT.D.map((TT => (new TextEncoder).encode(TT))),
-      xT = new Map;
+    var Yq = gq(4625),
+      lq = gq(4622),
+      Oq = gq(40353),
+      mq = gq(40366);
+    const xq = new Set(Yq.G),
+      Aq = Yq.G.map((qq => (new TextEncoder).encode(qq))),
+      cq = new Map;
 
-    function IT(TT, kT) {
-      var cT;
-      return null === (cT = xT.get(TT)) || void 0 === cT ? void 0 : cT[kT]
-    }(0, OT.m)(lT.Xb.NewOtherEntitySettings, (TT => {
-      TT.payloadKind === MT.ac.Msgpack && fT.some((kT => function(TT, kT) {
-        const cT = kT[0];
-        for (let lT = TT.indexOf(cT); - 1 !== lT && lT + kT.length <= TT.length; lT = TT.indexOf(cT, lT + 1)) {
-          let cT = 1;
-          for (; cT < kT.length && TT[lT + cT] === kT[cT];) cT++;
-          if (cT === kT.length) return !0
+    function uq(qq, Eq) {
+      var gq;
+      return null === (gq = cq.get(qq)) || void 0 === gq ? void 0 : gq[Eq]
+    }(0, mq.l)(Yq.ec.NewOtherEntitySettings, (qq => {
+      qq.payloadKind === lq.hc.Msgpack && Aq.some((Eq => function(qq, Eq) {
+        const gq = Eq[0];
+        for (let Yq = qq.indexOf(gq); - 1 !== Yq && Yq + Eq.length <= qq.length; Yq = qq.indexOf(gq, Yq + 1)) {
+          let gq = 1;
+          for (; gq < Eq.length && qq[Yq + gq] === Eq[gq];) gq++;
+          if (gq === Eq.length) return !0
         }
         return !1
-      }(TT.payload, kT))) && function(TT) {
-        if (null === TT || "object" !== typeof TT || null === TT.settings || "object" !== typeof TT.settings) return;
-        const kT = String(TT.eId),
-          cT = TT.settings;
-        let lT = xT.get(kT);
-        for (const MT in cT) {
-          if (!yT.has(MT)) continue;
-          const TT = cT[MT];
-          null === TT || void 0 === TT ? lT && delete lT[MT] : (lT ??= {}, lT[MT] = TT)
+      }(qq.payload, Eq))) && function(qq) {
+        if (null === qq || "object" !== typeof qq || null === qq.settings || "object" !== typeof qq.settings) return;
+        const Eq = String(qq.eId),
+          gq = qq.settings;
+        let Yq = cq.get(Eq);
+        for (const lq in gq) {
+          if (!xq.has(lq)) continue;
+          const qq = gq[lq];
+          null === qq || void 0 === qq ? Yq && delete Yq[lq] : (Yq ??= {}, Yq[lq] = qq)
         }
-        lT && xT.set(kT, lT)
-      }((0, KT.c)(TT.payload))
-    })), (0, OT.h)((() => {
-      xT.clear()
+        Yq && cq.set(Eq, Yq)
+      }((0, Oq.e)(qq.payload))
+    })), (0, mq.d)((() => {
+      cq.clear()
     }))
   },
-  40325: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => jT,
-      h: () => xT,
-      j: () => AT
+  40421: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => Nq,
+      e: () => cq,
+      h: () => Bq
     });
-    var lT = cT(38832),
-      MT = cT(1960),
-      KT = cT(1298),
-      OT = cT(40239),
-      yT = cT(40246),
-      fT = cT(40264);
-    const xT = new lT.d;
-    let IT = {};
+    var Yq = gq(38954),
+      lq = gq(1906),
+      Oq = gq(1276),
+      mq = gq(40343),
+      xq = gq(40350),
+      Aq = gq(40366);
+    const cq = new Yq.d;
+    let uq = {};
 
-    function AT(TT) {
-      return IT[TT]
+    function Bq(qq) {
+      return uq[qq]
     }
-    const CT = new KT.e;
+    const Wq = new Oq.b;
 
-    function jT(TT) {
-      return CT.add(TT)
+    function Nq(qq) {
+      return Wq.add(qq)
     }
 
-    function vT(TT) {
-      CT.callEach(TT, "a roster listener")
-    }(0, fT.m)(OT.ib, (TT => {
-      const kT = (0, yT.e)(OT.ib, TT);
-      if (void 0 === kT) return;
-      const cT = kT.yk.some((TT => {
+    function aq(qq) {
+      Wq.callEach(qq, "a roster listener")
+    }(0, Aq.l)(mq.T, (qq => {
+      const Eq = (0, xq.d)(mq.T, qq);
+      if (void 0 === Eq) return;
+      const gq = Eq.xg.some((qq => {
           let {
-            fk: kT,
-            xk: cT
-          } = TT;
-          return null !== cT && xT.has(kT) && xT.getName(kT) !== cT
+            Ag: Eq,
+            cg: gq
+          } = qq;
+          return null !== gq && cq.has(Eq) && cq.getName(Eq) !== gq
         })),
         {
-          added: lT,
-          removed: KT,
-          settingChanges: fT
-        } = xT.apply(kT),
-        IT = new Set;
-      for (const MT of fT)
-        for (const TT in MT.settings) IT.add(TT);
-      const AT = cT || lT.length > 0 || KT.length > 0;
-      (AT || IT.has("hideNameSeed")) && function() {
-        const TT = new Map;
-        for (const kT of xT.ids()) {
-          const cT = xT.getName(kT),
-            lT = xT.getSetting(kT, "hideNameSeed");
-          void 0 !== cT && void 0 !== lT && null !== lT && TT.set(cT, lT)
+          added: Yq,
+          removed: Oq,
+          settingChanges: Aq
+        } = cq.apply(Eq),
+        uq = new Set;
+      for (const lq of Aq)
+        for (const qq in lq.settings) uq.add(qq);
+      const Bq = gq || Yq.length > 0 || Oq.length > 0;
+      (Bq || uq.has("hideNameSeed")) && function() {
+        const qq = new Map;
+        for (const Eq of cq.ids()) {
+          const gq = cq.getName(Eq),
+            Yq = cq.getSetting(Eq, "hideNameSeed");
+          void 0 !== gq && void 0 !== Yq && null !== Yq && qq.set(gq, Yq)
         }
-        MT.c.replaceAll(TT)
-      }(), vT({
+        lq.d.replaceAll(qq)
+      }(), aq({
         kind: "roster",
-        members: AT,
-        settings: IT
+        members: Bq,
+        settings: uq
       })
-    })), (0, fT.m)(OT.Q, (TT => {
-      const kT = (0, yT.e)(OT.Q, TT);
-      if (void 0 !== kT) {
+    })), (0, Aq.l)(mq.F, (qq => {
+      const Eq = (0, xq.d)(mq.F, qq);
+      if (void 0 !== Eq) {
         for (const {
-            Nc: TT,
-            Qc: cT,
-            Sc: lT
+            yY: qq,
+            tY: gq,
+            rY: Yq
           }
-          of kT) IT[TT] = {
-          ...IT[TT],
-          [cT]: lT
+          of Eq) uq[qq] = {
+          ...uq[qq],
+          [gq]: Yq
         };
-        vT({
+        aq({
           kind: "cosmetics",
-          updates: kT
+          updates: Eq
         })
       }
-    })), (0, fT.h)((() => {
-      xT.clear(), IT = {}, MT.c.clear(), vT({
+    })), (0, Aq.d)((() => {
+      cq.clear(), uq = {}, lq.d.clear(), aq({
         kind: "reset"
       })
-    })), (0, fT.l)((() => {
-      xT.clear(), vT({
+    })), (0, Aq.h)((() => {
+      cq.clear(), aq({
         kind: "reset"
       })
     }))
   },
-  40356: (TT, kT, cT) => {
-    cT.d(kT, {
-      d: () => bT,
-      h: () => hT,
-      i: () => HT,
-      j: () => eT
+  40448: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => nq,
+      g: () => dq,
+      i: () => fq,
+      m: () => Mq
     });
-    var lT = cT(1279),
-      MT = cT(606),
-      KT = cT(118),
-      OT = cT(4769),
-      yT = cT(40204),
-      fT = cT(40230),
-      xT = cT(40215),
-      IT = cT(40335),
-      AT = cT(40325),
-      CT = cT(40246),
-      jT = cT(40264);
+    var Yq = gq(1261),
+      lq = gq(583),
+      Oq = gq(96),
+      mq = gq(4625),
+      xq = gq(40318),
+      Aq = gq(40334),
+      cq = gq(40325),
+      uq = gq(40432),
+      Bq = gq(40421),
+      Wq = gq(40350),
+      Nq = gq(40366);
 
-    function vT(TT) {
+    function aq(qq) {
       let {
-        deadEId: kT,
-        killerEId: cT,
-        killerLifeformType: lT,
-        withItem: MT,
-        killstreak: KT
-      } = TT;
+        deadEId: Eq,
+        killerEId: gq,
+        killerLifeformType: Yq,
+        withItem: lq,
+        killstreak: Oq
+      } = qq;
       return {
-        killer: DT({
-          eId: cT,
-          lifeformType: lT
+        killer: Pq({
+          eId: gq,
+          lifeformType: Yq
         }),
-        victim: DT({
-          eId: kT
+        victim: Pq({
+          eId: Eq
         }),
-        withItem: MT,
-        killstreak: KT
+        withItem: lq,
+        killstreak: Oq
       }
     }
 
-    function tT(TT) {
+    function Vq(qq) {
       let {
-        killer: kT,
-        victim: cT,
-        withItem: lT
-      } = TT;
+        killer: Eq,
+        victim: gq,
+        withItem: Yq
+      } = qq;
       return {
-        killer: DT(kT),
-        victim: DT(cT),
-        withItem: lT,
+        killer: Pq(Eq),
+        victim: Pq(gq),
+        withItem: Yq,
         killstreak: 0
       }
     }
 
-    function hT(TT) {
-      PT && mT((() => "killed" === TT.kind ? vT(TT.body) : tT(TT.body)))
+    function dq(qq) {
+      rq && hq((() => "killed" === qq.kind ? aq(qq.body) : Vq(qq.body)))
     }
-    const NT = "#2727f1",
-      QT = "#912c2c";
+    const jq = "#2727f1",
+      Hq = "#912c2c";
 
-    function ST(TT, kT) {
-      var cT;
-      return AT.h.has(TT) ? null === (cT = AT.h.getSettings(TT)) || void 0 === cT ? void 0 : cT[kT] : (0, IT.e)(TT, kT)
+    function oq(qq, Eq) {
+      var gq;
+      return Bq.e.has(qq) ? null === (gq = Bq.e.getSettings(qq)) || void 0 === gq ? void 0 : gq[Eq] : (0, uq.d)(qq, Eq)
     }
 
-    function DT(TT) {
-      var kT, cT, OT, yT, IT;
+    function Pq(qq) {
+      var Eq, gq, mq, xq, uq;
       let {
-        eId: CT,
-        name: jT,
-        colour: vT,
-        lifeformType: tT
-      } = TT;
-      if (void 0 === CT || null === CT || "" === CT) {
-        const TT = jT || null;
+        eId: Wq,
+        name: Nq,
+        colour: aq,
+        lifeformType: Vq
+      } = qq;
+      if (void 0 === Wq || null === Wq || "" === Wq) {
+        const qq = Nq || null;
         return {
           id: null,
-          shownName: TT,
-          lifeformType: null === TT && null !== tT && void 0 !== tT ? tT : null,
-          colour: vT || null,
+          shownName: qq,
+          lifeformType: null === qq && null !== Vq && void 0 !== Vq ? Vq : null,
+          colour: aq || null,
           local: !1,
           realName: null
         }
       }
-      const hT = String(CT),
-        DT = null === (kT = (0, xT.g)()) || void 0 === kT ? void 0 : kT.api,
-        aT = void 0 !== DT && String(DT.localId) === hT,
-        FT = null !== (cT = AT.h.getName(hT)) && void 0 !== cT ? cT : null,
-        rT = null !== (OT = ST(hT, "hideNameSeed")) && void 0 !== OT ? OT : null;
-      let PT = null === FT ? null : (0, lT.c)(FT, !KT.featureFlags.canSeeRealPlayerNames, rT) || null,
-        wT = null;
-      if (null === PT && void 0 !== DT) {
-        const TT = DT.getEntityType(hT);
-        "Player" !== TT && (PT = (0, fT.j)(DT, +hT) || null), wT = MT.i.includes(TT) ? TT : null
+      const dq = String(Wq),
+        Pq = null === (Eq = (0, cq.e)()) || void 0 === Eq ? void 0 : Eq.api,
+        Qq = void 0 !== Pq && String(Pq.localId) === dq,
+        yq = null !== (gq = Bq.e.getName(dq)) && void 0 !== gq ? gq : null,
+        tq = null !== (mq = oq(dq, "hideNameSeed")) && void 0 !== mq ? mq : null;
+      let rq = null === yq ? null : (0, Yq.e)(yq, !Oq.featureFlags.canSeeRealPlayerNames, tq) || null,
+        vq = null;
+      if (null === rq && void 0 !== Pq) {
+        const qq = Pq.getEntityType(dq);
+        "Player" !== qq && (rq = (0, Aq.f)(Pq, +dq) || null), vq = lq.m.includes(qq) ? qq : null
       }
       return {
-        id: hT,
-        shownName: PT,
-        lifeformType: null === PT && null !== (yT = null !== (IT = wT) && void 0 !== IT ? IT : tT) && void 0 !== yT ? yT : null,
-        colour: vT || ST(hT, "killfeedColour") || (aT ? NT : QT),
-        local: aT,
-        realName: FT
+        id: dq,
+        shownName: rq,
+        lifeformType: null === rq && null !== (xq = null !== (uq = vq) && void 0 !== uq ? uq : Vq) && void 0 !== xq ? xq : null,
+        colour: aq || oq(dq, "killfeedColour") || (Qq ? jq : Hq),
+        local: Qq,
+        realName: yq
       }
     }
-    const aT = 32;
-    let FT = [],
-      rT = null,
-      PT = !1,
-      wT = !1;
+    const Qq = 32;
+    let yq = [],
+      tq = null,
+      rq = !1,
+      vq = !1;
 
-    function mT(TT) {
-      null === rT ? (FT.length === aT && FT.shift(), FT.push(TT)) : rT(TT())
+    function hq(qq) {
+      null === tq ? (yq.length === Qq && yq.shift(), yq.push(qq)) : tq(qq())
     }
 
-    function bT() {
-      wT || (wT = !0, (0, jT.m)(OT.Xb.PlayerKilled, (TT => {
-        const kT = (0, CT.g)(TT);
-        (0, CT.b)(kT) && mT((() => vT(kT)))
-      })), (0, jT.m)(OT.Xb.CustomKillfeed, (TT => {
-        const kT = (0, CT.g)(TT);
-        (0, CT.b)(kT) && (0, CT.b)(kT.killer) && (0, CT.b)(kT.victim) && mT((() => tT(kT)))
-      })), (0, jT.h)((() => {
-        FT = []
+    function nq() {
+      vq || (vq = !0, (0, Nq.l)(mq.ec.PlayerKilled, (qq => {
+        const Eq = (0, Wq.e)(qq);
+        (0, Wq.b)(Eq) && hq((() => aq(Eq)))
+      })), (0, Nq.l)(mq.ec.CustomKillfeed, (qq => {
+        const Eq = (0, Wq.e)(qq);
+        (0, Wq.b)(Eq) && (0, Wq.b)(Eq.killer) && (0, Wq.b)(Eq.victim) && hq((() => Vq(Eq)))
+      })), (0, Nq.d)((() => {
+        yq = []
       })))
     }
-    const zT = Object.freeze([0, 0, 0]),
-      JT = [0, 0, 0],
-      oT = [0, 0, 0],
-      HT = {
+    const bq = Object.freeze([0, 0, 0]),
+      iq = [0, 0, 0],
+      Zq = [0, 0, 0],
+      fq = {
         kill: {
-          watch(TT) {
-            if (PT = !0, 0 === FT.length) return rT = TT, () => {
-              PT = !1, rT = null
+          watch(qq) {
+            if (rq = !0, 0 === yq.length) return tq = qq, () => {
+              rq = !1, tq = null
             };
-            const kT = setTimeout((() => {
-              const kT = FT;
-              FT = [], rT = TT;
-              for (const lT of kT) try {
-                TT(lT())
-              } catch (cT) {
-                console.error("[bloxd-wasm-client] a kept kill couldn't be handed on", cT)
+            const Eq = setTimeout((() => {
+              const Eq = yq;
+              yq = [], tq = qq;
+              for (const Yq of Eq) try {
+                qq(Yq())
+              } catch (gq) {
+                console.error("[bloxd-wasm-client] a kept kill couldn't be handed on", gq)
               }
             }), 0);
             return () => {
-              clearTimeout(kT), PT = !1, rT = null
+              clearTimeout(Eq), rq = !1, tq = null
             }
           }
         }
       },
-      eT = {
+      Mq = {
         localPos() {
-          const TT = (0, xT.g)();
-          if (null === TT) return zT;
-          const kT = TT.api.apiView;
-          for (let cT = 0; cT < 3; cT++) JT[cT] = yT.A.localPos(kT, 0, cT);
-          return JT
+          const qq = (0, cq.e)();
+          if (null === qq) return bq;
+          const Eq = qq.api.apiView;
+          for (let gq = 0; gq < 3; gq++) iq[gq] = xq.t.localPos(Eq, 0, gq);
+          return iq
         },
         targetedBlockPos() {
-          const TT = (0, xT.g)();
-          if (null === TT || yT.A.targetBlockId(TT.api.apiView, 0) === yT.dd) return null;
-          for (let kT = 0; kT < 3; kT++) oT[kT] = yT.A.targetBlock(TT.api.apiView, 0, kT);
-          return oT
+          const qq = (0, cq.e)();
+          if (null === qq || xq.t.targetBlockId(qq.api.apiView, 0) === xq.id) return null;
+          for (let Eq = 0; Eq < 3; Eq++) Zq[Eq] = xq.t.targetBlock(qq.api.apiView, 0, Eq);
+          return Zq
         }
       }
   },
-  38832: (TT, kT, cT) => {
-    cT.d(kT, {
-      d: () => lT
+  38954: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => Yq
     });
-    class lT {
+    class Yq {
       constructor() {
         this.members = new Map
       }
-      apply(TT) {
-        const kT = {
+      apply(qq) {
+        const Eq = {
           added: [],
           removed: [],
           settingChanges: []
         };
-        for (const lT of TT.yk) {
-          let TT = this.members.get(lT.fk);
-          if (TT || (TT = {
+        for (const Yq of qq.xg) {
+          let qq = this.members.get(Yq.Ag);
+          if (qq || (qq = {
               name: null,
               settings: {}
-            }, this.members.set(lT.fk, TT), kT.added.push(lT.fk)), null !== lT.xk && (TT.name = lT.xk), null !== lT.Ik || lT.Ak.length > 0) {
-            const cT = null === lT.Ik ? {} : JSON.parse(lT.Ik);
-            Object.assign(TT.settings, cT);
-            for (const kT of lT.Ak) delete TT.settings[kT], cT[kT] = void 0;
-            kT.settingChanges.push({
-              playerId: lT.fk,
-              settings: cT
+            }, this.members.set(Yq.Ag, qq), Eq.added.push(Yq.Ag)), null !== Yq.cg && (qq.name = Yq.cg), null !== Yq.ug || Yq.Bg.length > 0) {
+            const gq = null === Yq.ug ? {} : JSON.parse(Yq.ug);
+            Object.assign(qq.settings, gq);
+            for (const Eq of Yq.Bg) delete qq.settings[Eq], gq[Eq] = void 0;
+            Eq.settingChanges.push({
+              playerId: Yq.Ag,
+              settings: gq
             })
           }
         }
-        for (const lT of TT.Ck) {
-          const TT = this.members.get(lT);
-          var cT;
-          if (TT) this.members.delete(lT), kT.removed.push({
-            playerId: lT,
-            name: null !== (cT = TT.name) && void 0 !== cT ? cT : void 0
+        for (const Yq of qq.Wg) {
+          const qq = this.members.get(Yq);
+          var gq;
+          if (qq) this.members.delete(Yq), Eq.removed.push({
+            playerId: Yq,
+            name: null !== (gq = qq.name) && void 0 !== gq ? gq : void 0
           })
         }
-        return kT
+        return Eq
       }
-      has(TT) {
-        return this.members.has(TT)
+      has(qq) {
+        return this.members.has(qq)
       }
       ids() {
         return [...this.members.keys()]
       }
-      getName(TT) {
-        var kT, cT;
-        return null !== (kT = null === (cT = this.members.get(TT)) || void 0 === cT ? void 0 : cT.name) && void 0 !== kT ? kT : void 0
+      getName(qq) {
+        var Eq, gq;
+        return null !== (Eq = null === (gq = this.members.get(qq)) || void 0 === gq ? void 0 : gq.name) && void 0 !== Eq ? Eq : void 0
       }
-      getSettings(TT) {
-        var kT;
-        return null === (kT = this.members.get(TT)) || void 0 === kT ? void 0 : kT.settings
+      getSettings(qq) {
+        var Eq;
+        return null === (Eq = this.members.get(qq)) || void 0 === Eq ? void 0 : Eq.settings
       }
-      getSetting(TT, kT) {
-        var cT;
-        return null === (cT = this.members.get(TT)) || void 0 === cT ? void 0 : cT.settings[kT]
+      getSetting(qq, Eq) {
+        var gq;
+        return null === (gq = this.members.get(qq)) || void 0 === gq ? void 0 : gq.settings[Eq]
       }
       clear() {
         this.members.clear()
@@ -503,4 +503,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

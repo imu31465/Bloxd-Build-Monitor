@@ -1,272 +1,272 @@
 export const id = 76;
 export const ids = [76, 92];
 export const modules = {
-    4798: (TT, kT, cT) => {
-      cT.d(kT, {
-        e: () => hT,
-        i: () => NT
+    4648: (qq, Eq, gq) => {
+      gq.d(Eq, {
+        e: () => dq,
+        g: () => jq
       });
-      var lT = cT(1046),
-        MT = cT.n(lT),
-        KT = cT(71),
-        OT = cT(1195),
-        yT = cT(4800),
-        fT = cT(1921),
-        xT = cT(2462),
-        IT = cT(4806),
-        AT = cT(1099);
-      const CT = new WeakMap;
-      let jT = 0;
+      var Yq = gq(1018),
+        lq = gq.n(Yq),
+        Oq = gq(57),
+        mq = gq(1183),
+        xq = gq(4656),
+        Aq = gq(1876),
+        cq = gq(2383),
+        uq = gq(4662),
+        Bq = gq(1070);
+      const Wq = new WeakMap;
+      let Nq = 0;
 
-      function vT(TT) {
-        let kT = CT.get(TT);
-        return void 0 === kT && (kT = jT++, CT.set(TT, kT)), kT
+      function aq(qq) {
+        let Eq = Wq.get(qq);
+        return void 0 === Eq && (Eq = Nq++, Wq.set(qq, Eq)), Eq
       }
 
-      function tT(TT) {
+      function Vq(qq) {
         let {
-          piece: kT
-        } = TT;
-        return "space" === kT.kind ? (0, AT.jsx)(AT.Fragment, {
-          children: kT.text
-        }) : (0, AT.jsx)("span", {
+          piece: Eq
+        } = qq;
+        return "space" === Eq.kind ? (0, Bq.jsx)(Bq.Fragment, {
+          children: Eq.text
+        }) : (0, Bq.jsx)("span", {
           className: "DialogueWord",
           style: {
-            "--word-delay": `${kT.delayMs}ms`
+            "--word-delay": `${Eq.delayMs}ms`
           },
-          children: (0, AT.jsx)(yT.e, {
-            text: "icon" === kT.kind ? `[[${kT.icon}]]` : kT.text
+          children: (0, Bq.jsx)(xq.e, {
+            text: "icon" === Eq.kind ? `[[${Eq.icon}]]` : Eq.text
           })
         })
       }
 
-      function hT(TT) {
+      function dq(qq) {
         let {
-          display: kT
-        } = TT;
+          display: Eq
+        } = qq;
         const {
-          selectedLanguage: cT
-        } = (0, OT.B)(), lT = (0, KT.useMemo)((() => (0, IT.b)((0, IT.e)(kT).plan.pieces)), [kT, cT.code]);
-        return (0, AT.jsxs)("div", {
-          className: MT()("Dialogue", {
-            DialogueAnimateIn: !1 !== kT.animateIn
+          selectedLanguage: gq
+        } = (0, mq.v)(), Yq = (0, Oq.useMemo)((() => (0, uq.b)((0, uq.f)(Eq).plan.pieces)), [Eq, gq.code]);
+        return (0, Bq.jsxs)("div", {
+          className: lq()("Dialogue", {
+            DialogueAnimateIn: !1 !== Eq.animateIn
           }),
-          children: [kT.speakerName && (0, AT.jsx)(fT.b, {
-            text: kT.speakerName,
+          children: [Eq.speakerName && (0, Bq.jsx)(Aq.c, {
+            text: Eq.speakerName,
             className: "DialogueSpeaker"
-          }), (0, AT.jsx)("p", {
+          }), (0, Bq.jsx)("p", {
             className: "DialogueLine",
-            children: lT.map(((TT, kT) => 1 === TT.length && "space" === TT[0].kind ? TT[0].text : (0, AT.jsx)("span", {
+            children: Yq.map(((qq, Eq) => 1 === qq.length && "space" === qq[0].kind ? qq[0].text : (0, Bq.jsx)("span", {
               className: "DialogueGlue",
-              children: TT.map(((TT, kT) => (0, AT.jsx)(tT, {
-                piece: TT
-              }, kT)))
-            }, kT)))
+              children: qq.map(((qq, Eq) => (0, Bq.jsx)(Vq, {
+                piece: qq
+              }, Eq)))
+            }, Eq)))
           })]
         })
       }
-      const NT = (0, KT.memo)((function() {
-        const TT = (0, xT.f)("dialogue");
-        return (0, AT.jsx)("div", {
+      const jq = (0, Oq.memo)((function() {
+        const qq = (0, cq.h)("dialogue");
+        return (0, Bq.jsx)("div", {
           className: "DialogueAnchor",
           "data-camera-keeper": "",
           role: "status",
           "aria-live": "polite",
           "aria-atomic": "true",
-          children: TT && (0, AT.jsx)(hT, {
-            display: TT
-          }, vT(TT))
+          children: qq && (0, Bq.jsx)(dq, {
+            display: qq
+          }, aq(qq))
         })
       }))
     },
-    4690: (TT, kT, cT) => {
-        cT.r(kT), cT.d(kT, {
-          default: () => sK
+    4535: (qq, Eq, gq) => {
+        gq.r(Eq), gq.d(Eq, {
+          default: () => eO
         });
-        var lT = cT(71),
-          MT = cT(1046),
-          KT = cT.n(MT),
-          OT = cT(1532),
-          yT = cT(1535),
-          fT = cT(31),
-          xT = cT(94),
-          IT = cT(4698),
-          AT = cT(4702),
-          CT = cT(4705),
-          jT = cT(4347),
-          vT = cT(1099);
-        const tT = "/textures/docs/icons";
+        var Yq = gq(57),
+          lq = gq(1018),
+          Oq = gq.n(lq),
+          mq = gq(1505),
+          xq = gq(1512),
+          Aq = gq(24),
+          cq = gq(71),
+          uq = gq(4540),
+          Bq = gq(4553),
+          Wq = gq(4562),
+          Nq = gq(4191),
+          aq = gq(1070);
+        const Vq = "/textures/docs/icons";
 
-        function hT(TT) {
+        function dq(qq) {
           let {
-            name: kT,
-            isTinted: cT,
-            className: lT,
-            style: MT
-          } = TT;
-          const OT = `${tT}/${kT}.png`;
-          return cT ? (0, vT.jsxs)("span", {
-            className: KT()("DocsPixelIcon", "Tinted", lT),
+            name: Eq,
+            isTinted: gq,
+            className: Yq,
+            style: lq
+          } = qq;
+          const mq = `${Vq}/${Eq}.png`;
+          return gq ? (0, aq.jsxs)("span", {
+            className: Oq()("DocsPixelIcon", "Tinted", Yq),
             "aria-hidden": "true",
-            style: MT,
-            children: [(0, vT.jsx)("span", {
+            style: lq,
+            children: [(0, aq.jsx)("span", {
               className: "DocsPixelIconTint",
               style: {
-                maskImage: `url("${OT}")`,
-                WebkitMaskImage: `url("${OT}")`
+                maskImage: `url("${mq}")`,
+                WebkitMaskImage: `url("${mq}")`
               }
-            }), (0, vT.jsx)("img", {
-              src: OT,
+            }), (0, aq.jsx)("img", {
+              src: mq,
               alt: ""
             })]
-          }) : (0, vT.jsx)("img", {
-            className: KT()("DocsPixelIcon", lT),
-            src: OT,
+          }) : (0, aq.jsx)("img", {
+            className: Oq()("DocsPixelIcon", Yq),
+            src: mq,
             alt: "",
             "aria-hidden": "true",
-            style: MT
+            style: lq
           })
         }
-        const NT = 1500;
+        const jq = 1500;
 
-        function QT() {
-          const [TT, kT] = (0, lT.useState)(null);
-          (0, lT.useEffect)((() => {
-            if (null === TT) return;
-            const cT = setTimeout((() => {
-              kT(null)
-            }), NT);
+        function Hq() {
+          const [qq, Eq] = (0, Yq.useState)(null);
+          (0, Yq.useEffect)((() => {
+            if (null === qq) return;
+            const gq = setTimeout((() => {
+              Eq(null)
+            }), jq);
             return () => {
-              clearTimeout(cT)
+              clearTimeout(gq)
             }
-          }), [TT]);
-          return [TT, TT => {
-            (0, jT.e)(TT).then((() => {
-              kT({
-                text: TT,
+          }), [qq]);
+          return [qq, qq => {
+            (0, Nq.d)(qq).then((() => {
+              Eq({
+                text: qq,
                 failed: !1
               })
-            }), (cT => {
-              console.error("Could not copy to the clipboard", cT), kT({
-                text: TT,
+            }), (gq => {
+              console.error("Could not copy to the clipboard", gq), Eq({
+                text: qq,
                 failed: !0
               })
             }))
           }]
         }
 
-        function ST(TT) {
+        function oq(qq) {
           let {
-            text: kT,
-            label: cT,
-            className: lT
-          } = TT;
-          const [MT, OT] = QT(), yT = !1 === (null === MT || void 0 === MT ? void 0 : MT.failed);
-          return (0, vT.jsxs)("button", {
+            text: Eq,
+            label: gq,
+            className: Yq
+          } = qq;
+          const [lq, mq] = Hq(), xq = !1 === (null === lq || void 0 === lq ? void 0 : lq.failed);
+          return (0, aq.jsxs)("button", {
             type: "button",
-            className: KT()("DocsCopyButton", lT, {
-              Copied: yT
+            className: Oq()("DocsCopyButton", Yq, {
+              Copied: xq
             }),
-            title: `Copy ${kT.length>40?"to clipboard":kT}`,
-            "aria-label": cT ? void 0 : `Copy ${kT}`,
-            onClick: TT => {
-              TT.stopPropagation(), OT(kT)
+            title: `Copy ${Eq.length>40?"to clipboard":Eq}`,
+            "aria-label": gq ? void 0 : `Copy ${Eq}`,
+            onClick: qq => {
+              qq.stopPropagation(), mq(Eq)
             },
-            children: [(0, vT.jsx)(hT, {
-              name: yT ? "check" : "copy"
-            }), cT && (0, vT.jsx)("span", {
-              children: yT ? "Copied" : null !== MT && void 0 !== MT && MT.failed ? "Copy failed" : cT
+            children: [(0, aq.jsx)(dq, {
+              name: xq ? "check" : "copy"
+            }), gq && (0, aq.jsx)("span", {
+              children: xq ? "Copied" : null !== lq && void 0 !== lq && lq.failed ? "Copy failed" : gq
             })]
           })
         }
-        IT.d.registerLanguage("javascript", AT.b), IT.d.registerLanguage("typescript", CT.d);
-        const DT = {
+        uq.b.registerLanguage("javascript", Bq.e), uq.b.registerLanguage("typescript", Wq.b);
+        const Pq = {
             js: "javascript",
             ts: "typescript",
             javascript: "javascript",
             typescript: "typescript"
           },
-          aT = {
+          Qq = {
             javascript: "JavaScript",
             typescript: "TypeScript"
           },
-          FT = 24;
+          yq = 24;
 
-        function rT(TT) {
+        function tq(qq) {
           let {
-            code: kT,
-            lang: cT,
-            compact: MT = !1
-          } = TT;
-          const OT = (0, lT.useMemo)((() => function(TT, kT) {
-              const cT = DT[kT];
-              return cT ? IT.d.highlight(TT, {
-                language: cT
-              }).value : TT.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-            }(kT, cT)), [kT, cT]),
-            yT = kT.split("\n").length,
-            fT = !MT && yT > FT + 6,
-            [xT, AT] = (0, lT.useState)(!1),
-            CT = DT[cT];
-          return (0, vT.jsxs)("div", {
-            className: KT()("DocsCodeBlock", {
-              Compact: MT,
-              Collapsed: fT && !xT
+            code: Eq,
+            lang: gq,
+            compact: lq = !1
+          } = qq;
+          const mq = (0, Yq.useMemo)((() => function(qq, Eq) {
+              const gq = Pq[Eq];
+              return gq ? uq.b.highlight(qq, {
+                language: gq
+              }).value : qq.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+            }(Eq, gq)), [Eq, gq]),
+            xq = Eq.split("\n").length,
+            Aq = !lq && xq > yq + 6,
+            [cq, Bq] = (0, Yq.useState)(!1),
+            Wq = Pq[gq];
+          return (0, aq.jsxs)("div", {
+            className: Oq()("DocsCodeBlock", {
+              Compact: lq,
+              Collapsed: Aq && !cq
             }),
-            children: [!MT && (0, vT.jsxs)("div", {
+            children: [!lq && (0, aq.jsxs)("div", {
               className: "DocsCodeBlockHeader",
-              children: [(0, vT.jsx)("span", {
+              children: [(0, aq.jsx)("span", {
                 className: "DocsCodeBlockLanguage",
-                children: CT ? aT[CT] : "Text"
-              }), (0, vT.jsx)(ST, {
-                text: kT,
+                children: Wq ? Qq[Wq] : "Text"
+              }), (0, aq.jsx)(oq, {
+                text: Eq,
                 label: "Copy"
               })]
-            }), (0, vT.jsx)("pre", {
-              children: (0, vT.jsx)("code", {
+            }), (0, aq.jsx)("pre", {
+              children: (0, aq.jsx)("code", {
                 className: "hljs",
                 dangerouslySetInnerHTML: {
-                  __html: OT
+                  __html: mq
                 }
               })
-            }), fT && (0, vT.jsxs)("button", {
+            }), Aq && (0, aq.jsxs)("button", {
               type: "button",
               className: "DocsCodeBlockExpand",
-              "aria-expanded": xT,
+              "aria-expanded": cq,
               onClick: () => {
-                AT(!xT)
+                Bq(!cq)
               },
-              children: [(0, vT.jsx)(hT, {
-                name: xT ? "chevron-up" : "chevron-down"
-              }), xT ? "Show less" : `Show all ${yT} lines`]
+              children: [(0, aq.jsx)(dq, {
+                name: cq ? "chevron-up" : "chevron-down"
+              }), cq ? "Show less" : `Show all ${xq} lines`]
             })]
           })
         }
-        var PT = cT(4707);
-        var wT = cT(4711);
-        const mT = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
+        var rq = gq(4565);
+        var vq = gq(4572);
+        const hq = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
 
-        function bT(TT) {
-          const kT = new Map;
-          let cT, lT = [],
-            MT = !1;
-          const KT = () => {
-            cT && kT.set(cT.name, cT.lines.join("\n").trimEnd())
+        function nq(qq) {
+          const Eq = new Map;
+          let gq, Yq = [],
+            lq = !1;
+          const Oq = () => {
+            gq && Eq.set(gq.name, gq.lines.join("\n").trimEnd())
           };
-          for (const OT of TT.split("\n")) {
-            const TT = OT.match(mT);
-            MT || OT.startsWith("/*") ? (MT || (KT(), cT = void 0), lT.push(OT), MT = !OT.includes("*/")) : TT ? (KT(), cT = {
-              name: TT[1],
-              lines: [...lT, OT]
-            }, lT = []) : cT && (OT.startsWith(" ") || OT.startsWith("\t") || /^[}\])|]/.test(OT)) ? cT.lines.push(OT) : cT && "" !== OT.trim() && (KT(), cT = void 0)
+          for (const mq of qq.split("\n")) {
+            const qq = mq.match(hq);
+            lq || mq.startsWith("/*") ? (lq || (Oq(), gq = void 0), Yq.push(mq), lq = !mq.includes("*/")) : qq ? (Oq(), gq = {
+              name: qq[1],
+              lines: [...Yq, mq]
+            }, Yq = []) : gq && (mq.startsWith(" ") || mq.startsWith("\t") || /^[}\])|]/.test(mq)) ? gq.lines.push(mq) : gq && "" !== mq.trim() && (Oq(), gq = void 0)
           }
-          return KT(), kT
+          return Oq(), Eq
         }
 
-        function zT(TT) {
-          return "methods" === TT || "callbacks" === TT || "settings" === TT
+        function bq(qq) {
+          return "methods" === qq || "callbacks" === qq || "settings" === qq
         }
-        const JT = {
+        const iq = {
             readme: {
               icon: "code-block",
               summary: "Code blocks, boards and World Code, and the globals your code can use.",
@@ -302,25 +302,25 @@ export const modules = {
               icon: "player",
               summary: "Per-player options such as speed, health and camera.",
               layout: "settings",
-              setterSnippet: (TT, kT) => `api.setClientOption(playerId, "${TT}", ${kT})`
+              setterSnippet: (qq, Eq) => `api.setClientOption(playerId, "${qq}", ${Eq})`
             },
             entitySettings: {
               icon: "eye",
               summary: "How one player sees and interacts with another entity.",
               layout: "settings",
-              setterSnippet: (TT, kT) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${TT}", ${kT})`
+              setterSnippet: (qq, Eq) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${qq}", ${Eq})`
             },
             mobSettings: {
               icon: "mob",
               summary: "Health, movement, combat and AI settings for mobs.",
               layout: "settings",
-              setterSnippet: (TT, kT) => `api.setMobSetting(mobId, "${TT}", ${kT})`
+              setterSnippet: (qq, Eq) => `api.setMobSetting(mobId, "${qq}", ${Eq})`
             },
             vehicleSettings: {
               icon: "car",
               summary: "Movement, physics and camera settings for vehicles.",
               layout: "settings",
-              setterSnippet: (TT, kT) => `api.setVehicleSetting(vehicleId, "${TT}", ${kT})`
+              setterSnippet: (qq, Eq) => `api.setVehicleSetting(vehicleId, "${qq}", ${Eq})`
             },
             meshEntities: {
               icon: "mesh",
@@ -377,7 +377,7 @@ export const modules = {
               gallery: "items"
             }
           },
-          oT = {
+          Zq = {
             Variations: {
               icon: "layers",
               summary: "Alternate versions of a custom game, and matchmaking players between them."
@@ -404,20 +404,20 @@ export const modules = {
             }
           };
 
-        function HT(TT) {
-          return TT.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
+        function fq(qq) {
+          return qq.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
         }
 
-        function eT(TT) {
-          let kT = !1;
-          return TT.split("\n").map((TT => (TT.startsWith("```") && (kT = !kT), !kT && /^#{3,} /.test(TT) ? TT.slice(1) : TT))).join("\n")
+        function Mq(qq) {
+          let Eq = !1;
+          return qq.split("\n").map((qq => (qq.startsWith("```") && (Eq = !Eq), !Eq && /^#{3,} /.test(qq) ? qq.slice(1) : qq))).join("\n")
         }
 
-        function GT(TT) {
-          return "readme" === TT ? "getting-started" : HT(TT)
+        function Tq(qq) {
+          return "readme" === qq ? "getting-started" : fq(qq)
         }
-        const VT = "## Glossary of Referenced Types";
-        const ET = [{
+        const zq = "## Glossary of Referenced Types";
+        const Sq = [{
             id: "welcome",
             slug: "",
             title: "Welcome",
@@ -425,28 +425,28 @@ export const modules = {
             summary: "Run JavaScript in Bloxd, from a single block to a whole custom game.",
             layout: "article",
             markdown: "# Welcome to the Bloxd Code API\n\nWrite JavaScript that runs inside Bloxd: make a block launch players into the sky, give your world its own shop, or build a whole custom game with rounds, teams and a winner.\n\n## New to coding in Bloxd?\n\nStart with [Getting started](#readme), which explains code blocks, boards and World Code, and where each one runs. Then copy something from [Snippets](#snippets) into a code block and change it to see what happens.\n\n## Building a game\n\n[Callbacks](#callbacks) let your World Code react to players joining, chatting, breaking blocks and more. The [How-Tos](#howTo) walk through bigger features step by step, from plugins to a complete team game.\n\n## Looking something up\n\nThe [API Reference](#apiReference) lists every method on `api`. Settings for players, entities, mobs and vehicles each have their own page, and the Assets pages list every block, item, sound, particle, icon and skin name you can use. Press Ctrl K, or \u2318 K on a Mac, to search all of it.\n\n## What's new\n\nThe [Changelog](#changelog) lists what has changed in the Code API, newest first.\n\n## Get help\n\nAsk questions, report problems and suggest features on [our Discord](https://discord.gg/playbloxd)."
-          }, ...wT.b.flatMap((TT => {
-            const kT = {
-              id: TT.id,
-              slug: GT(TT.id),
-              title: TT.title,
-              markdown: TT.content,
-              ...JT[TT.id]
+          }, ...vq.e.flatMap((qq => {
+            const Eq = {
+              id: qq.id,
+              slug: Tq(qq.id),
+              title: qq.title,
+              markdown: qq.content,
+              ...iq[qq.id]
             };
-            if ("readme" === TT.id) return function(TT) {
-              const kT = TT.markdown.indexOf(VT),
-                cT = TT.markdown.indexOf("\n```", kT),
-                lT = TT.markdown.indexOf("\n```", cT + 1);
-              if (-1 === kT || -1 === cT || -1 === lT) throw new Error(`Getting started has no "${VT}" section with a code block`);
-              const MT = TT.markdown.slice(kT + 31, cT).trim(),
-                KT = [...bT(TT.markdown.slice(TT.markdown.indexOf("\n", cT + 1) + 1, lT))].map((TT => {
-                  let [kT, cT] = TT;
-                  return `## ${kT}\n\n\`\`\`ts\n${cT}\n\`\`\`\n`
+            if ("readme" === qq.id) return function(qq) {
+              const Eq = qq.markdown.indexOf(zq),
+                gq = qq.markdown.indexOf("\n```", Eq),
+                Yq = qq.markdown.indexOf("\n```", gq + 1);
+              if (-1 === Eq || -1 === gq || -1 === Yq) throw new Error(`Getting started has no "${zq}" section with a code block`);
+              const lq = qq.markdown.slice(Eq + 31, gq).trim(),
+                Oq = [...nq(qq.markdown.slice(qq.markdown.indexOf("\n", gq + 1) + 1, Yq))].map((qq => {
+                  let [Eq, gq] = qq;
+                  return `## ${Eq}\n\n\`\`\`ts\n${gq}\n\`\`\`\n`
                 })),
-                OT = TT.markdown.slice(TT.markdown.indexOf("\n", lT + 1) + 1);
+                mq = qq.markdown.slice(qq.markdown.indexOf("\n", Yq + 1) + 1);
               return [{
-                ...TT,
-                markdown: `${TT.markdown.slice(0,kT)}${OT}`
+                ...qq,
+                markdown: `${qq.markdown.slice(0,Eq)}${mq}`
               }, {
                 id: "types",
                 slug: "types",
@@ -454,57 +454,57 @@ export const modules = {
                 icon: "tag",
                 summary: "The types the API Reference's parameters and return values refer to.",
                 layout: "article",
-                markdown: `# Types\n\n${MT}\n\n${KT.join("\n")}`
+                markdown: `# Types\n\n${lq}\n\n${Oq.join("\n")}`
               }]
-            }(kT);
-            if ("howTo" === TT.id) {
+            }(Eq);
+            if ("howTo" === qq.id) {
               const {
-                parent: TT,
-                guides: cT
-              } = function(TT) {
-                const [kT, ...cT] = TT.markdown.split(/^(?=## )/m), lT = [kT], MT = [];
-                for (const OT of cT) {
-                  var KT;
-                  const kT = OT.indexOf("\n"),
-                    cT = OT.slice(3, kT).trim(),
-                    yT = OT.slice(kT + 1);
-                  if (!yT.includes("```")) {
-                    lT.push(OT);
+                parent: qq,
+                guides: gq
+              } = function(qq) {
+                const [Eq, ...gq] = qq.markdown.split(/^(?=## )/m), Yq = [Eq], lq = [];
+                for (const mq of gq) {
+                  var Oq;
+                  const Eq = mq.indexOf("\n"),
+                    gq = mq.slice(3, Eq).trim(),
+                    xq = mq.slice(Eq + 1);
+                  if (!xq.includes("```")) {
+                    Yq.push(mq);
                     continue
                   }
-                  const fT = null !== (KT = oT[cT]) && void 0 !== KT ? KT : {
+                  const Aq = null !== (Oq = Zq[gq]) && void 0 !== Oq ? Oq : {
                     icon: "lightbulb",
-                    summary: `How to use ${cT.toLowerCase()} in World Code.`
+                    summary: `How to use ${gq.toLowerCase()} in World Code.`
                   };
-                  MT.push({
-                    id: `${TT.id}${cT.split(/[^A-Za-z0-9]+/).map((TT=>TT.charAt(0).toUpperCase()+TT.slice(1))).join("")}`,
-                    slug: `${TT.slug}-${HT(cT)}`,
-                    title: cT,
+                  lq.push({
+                    id: `${qq.id}${gq.split(/[^A-Za-z0-9]+/).map((qq=>qq.charAt(0).toUpperCase()+qq.slice(1))).join("")}`,
+                    slug: `${qq.slug}-${fq(gq)}`,
+                    title: gq,
                     layout: "article",
-                    sourceAnchor: (0, PT.p)(cT),
-                    markdown: `# ${cT}\n\n${eT(yT)}`,
-                    ...fT
+                    sourceAnchor: (0, rq.t)(gq),
+                    markdown: `# ${gq}\n\n${Mq(xq)}`,
+                    ...Aq
                   })
                 }
                 return {
                   parent: {
-                    ...TT,
-                    markdown: lT.join(""),
-                    childPageIds: MT.map((TT => TT.id))
+                    ...qq,
+                    markdown: Yq.join(""),
+                    childPageIds: lq.map((qq => qq.id))
                   },
-                  guides: MT
+                  guides: lq
                 }
-              }(kT);
-              return [TT, ...cT]
+              }(Eq);
+              return [qq, ...gq]
             }
-            return [kT]
+            return [Eq]
           }))],
-          ZT = [{
+          pq = [{
             title: "Get started",
             pageIds: ["welcome", "readme", "snippets", "changelog"]
           }, {
             title: "How-Tos",
-            pageIds: ["howTo", ...ET.filter((TT => void 0 !== TT.sourceAnchor)).map((TT => TT.id))]
+            pageIds: ["howTo", ...Sq.filter((qq => void 0 !== qq.sourceAnchor)).map((qq => qq.id))]
           }, {
             title: "Reference",
             pageIds: ["apiReference", "callbacks", "clientOptions", "types"]
@@ -519,42 +519,42 @@ export const modules = {
             pageIds: ["particles", "sounds", "icons", "skins", "blockNames", "itemNames"]
           }];
 
-        function uT(TT) {
-          return ET.find((kT => kT.id === TT))
+        function Gq(qq) {
+          return Sq.find((Eq => Eq.id === qq))
         }
-        const XT = new Map;
+        const Lq = new Map;
 
-        function dT(TT) {
-          let kT = XT.get(TT.id);
-          return kT || (kT = (0, PT.s)(TT.markdown, "changelog" === TT.layout ? 3 : 2), XT.set(TT.id, kT)), kT
-        }
-
-        function LT(TT, kT) {
-          return dT(TT).sections.some((TT => TT.heading.anchor === kT || TT.blocks.some((TT => "heading" === TT.kind && TT.anchor === kT))))
+        function Jq(qq) {
+          let Eq = Lq.get(qq.id);
+          return Eq || (Eq = (0, rq.w)(qq.markdown, "changelog" === qq.layout ? 3 : 2), Lq.set(qq.id, Eq)), Eq
         }
 
-        function RT(TT) {
-          const [kT, ...cT] = TT.replace(/^#/, "").split("-"), lT = ET.find((TT => TT.id === kT));
-          if (!lT) return null;
-          const MT = cT.length > 0 ? (0, PT.p)(cT.join("-")) : "";
-          for (const OT of null !== (KT = lT.childPageIds) && void 0 !== KT ? KT : []) {
-            var KT;
-            const TT = uT(OT);
-            if (TT.sourceAnchor === MT) return {
-              page: TT,
+        function kq(qq, Eq) {
+          return Jq(qq).sections.some((qq => qq.heading.anchor === Eq || qq.blocks.some((qq => "heading" === qq.kind && qq.anchor === Eq))))
+        }
+
+        function Rq(qq) {
+          const [Eq, ...gq] = qq.replace(/^#/, "").split("-"), Yq = Sq.find((qq => qq.id === Eq));
+          if (!Yq) return null;
+          const lq = gq.length > 0 ? (0, rq.t)(gq.join("-")) : "";
+          for (const mq of null !== (Oq = Yq.childPageIds) && void 0 !== Oq ? Oq : []) {
+            var Oq;
+            const qq = Gq(mq);
+            if (qq.sourceAnchor === lq) return {
+              page: qq,
               anchor: ""
             };
-            if (LT(TT, MT)) return {
-              page: TT,
-              anchor: MT
+            if (kq(qq, lq)) return {
+              page: qq,
+              anchor: lq
             }
           }
           return {
-            page: lT,
-            anchor: MT
+            page: Yq,
+            anchor: lq
           }
         }
-        const gT = {
+        const Uq = {
           Examples: {
             pageId: "snippets",
             anchor: ""
@@ -569,182 +569,182 @@ export const modules = {
           }
         };
 
-        function UT(TT, kT) {
-          let cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-          const lT = kT.slug ? `${TT}/${kT.slug}` : TT;
-          return cT ? `${lT}#${cT}` : lT
+        function Fq(qq, Eq) {
+          let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+          const Yq = Eq.slug ? `${qq}/${Eq.slug}` : qq;
+          return gq ? `${Yq}#${gq}` : Yq
         }
-        var YT = cT(4725);
-        const BT = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
-          WT = new Set(["GameApi", "Console", "_TypeOf"]),
-          nT = 4;
+        var sq = gq(4583);
+        const Xq = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
+          wq = new Set(["GameApi", "Console", "_TypeOf"]),
+          Kq = 4;
 
-        function pT(TT) {
-          let kT = TT.length;
-          for (; kT > 0 && "" === TT[kT - 1].trim();) kT--;
-          return TT.slice(0, kT)
+        function Cq(qq) {
+          let Eq = qq.length;
+          for (; Eq > 0 && "" === qq[Eq - 1].trim();) Eq--;
+          return qq.slice(0, Eq)
         }
 
-        function iT(TT) {
-          var kT;
-          const cT = pT(TT);
-          if (null === (kT = cT.at(-1)) || void 0 === kT || !kT.trimEnd().endsWith("*/")) return {
-            lines: cT,
+        function Iq(qq) {
+          var Eq;
+          const gq = Cq(qq);
+          if (null === (Eq = gq.at(-1)) || void 0 === Eq || !Eq.trimEnd().endsWith("*/")) return {
+            lines: gq,
             doc: ""
           };
-          const lT = cT.findLastIndex((TT => TT.startsWith("/**")));
-          return -1 === lT ? {
-            lines: cT,
+          const Yq = gq.findLastIndex((qq => qq.startsWith("/**")));
+          return -1 === Yq ? {
+            lines: gq,
             doc: ""
           } : {
-            lines: pT(cT.slice(0, lT)),
-            doc: cT.slice(lT).join("\n")
+            lines: Cq(gq.slice(0, Yq)),
+            doc: gq.slice(Yq).join("\n")
           }
         }
 
-        function qT(TT) {
-          var kT;
-          const cT = TT.split("\n"),
-            lT = cT.flatMap(((TT, kT) => BT.test(TT) ? [kT] : []));
-          let MT = iT(cT.slice(0, null !== (kT = lT[0]) && void 0 !== kT ? kT : cT.length)).doc;
-          return lT.map(((TT, kT) => {
-            var KT;
-            const OT = iT(cT.slice(TT, null !== (KT = lT[kT + 1]) && void 0 !== KT ? KT : cT.length)),
-              yT = {
-                name: cT[TT].match(BT)[1],
-                doc: MT,
-                lines: OT.lines
+        function eq(qq) {
+          var Eq;
+          const gq = qq.split("\n"),
+            Yq = gq.flatMap(((qq, Eq) => Xq.test(qq) ? [Eq] : []));
+          let lq = Iq(gq.slice(0, null !== (Eq = Yq[0]) && void 0 !== Eq ? Eq : gq.length)).doc;
+          return Yq.map(((qq, Eq) => {
+            var Oq;
+            const mq = Iq(gq.slice(qq, null !== (Oq = Yq[Eq + 1]) && void 0 !== Oq ? Oq : gq.length)),
+              xq = {
+                name: gq[qq].match(Xq)[1],
+                doc: lq,
+                lines: mq.lines
               };
-            return MT = OT.doc, yT
+            return lq = mq.doc, xq
           }))
         }
 
-        function sT(TT) {
-          var kT;
-          const cT = TT.match(/^readonly \[([\s\S]*)\]$/);
-          return cT ? null !== (kT = cT[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== kT ? kT : [] : null
+        function Dq(qq) {
+          var Eq;
+          const gq = qq.match(/^readonly \[([\s\S]*)\]$/);
+          return gq ? null !== (Eq = gq[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== Eq ? Eq : [] : null
         }
 
-        function Tk(TT) {
-          if (!TT.startsWith("{") || !TT.endsWith("}")) return null;
-          const kT = {
+        function qE(qq) {
+          if (!qq.startsWith("{") || !qq.endsWith("}")) return null;
+          const Eq = {
               keys: [],
               values: []
             },
-            cT = TT => {
-              const cT = TT.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
-              cT && (kT.keys.push(cT[1].startsWith('"') ? cT[1] : `"${cT[1]}"`), kT.values.push(cT[2].trim()))
+            gq = qq => {
+              const gq = qq.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
+              gq && (Eq.keys.push(gq[1].startsWith('"') ? gq[1] : `"${gq[1]}"`), Eq.values.push(gq[2].trim()))
             };
-          let lT = 0,
-            MT = "";
-          for (const KT of TT.slice(1, -1)) "{[(".includes(KT) ? lT++ : "}])".includes(KT) && lT--, ";" === KT && 0 === lT ? (cT(MT), MT = "") : MT += KT;
-          return cT(MT), kT
+          let Yq = 0,
+            lq = "";
+          for (const Oq of qq.slice(1, -1)) "{[(".includes(Oq) ? Yq++ : "}])".includes(Oq) && Yq--, ";" === Oq && 0 === Yq ? (gq(lq), lq = "") : lq += Oq;
+          return gq(lq), Eq
         }
 
-        function kk(TT) {
-          return TT.length > nT ? `\n\t| ${TT.join("\n\t| ")}` : TT.join(" | ")
+        function EE(qq) {
+          return qq.length > Kq ? `\n\t| ${qq.join("\n\t| ")}` : qq.join(" | ")
         }
 
-        function ck(TT, kT) {
-          const cT = function(TT, kT) {
-            return TT.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((TT, cT) => {
-              var lT;
-              const MT = null === (lT = kT.get(cT)) || void 0 === lT ? void 0 : lT.object;
-              return MT ? kk(MT.values) : TT
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((TT, cT) => {
-              var lT, MT;
-              const KT = null === (lT = kT.get(cT)) || void 0 === lT || null === (MT = lT.object) || void 0 === MT ? void 0 : MT.values.map(sT);
-              return null !== KT && void 0 !== KT && KT.every((TT => null !== TT)) ? kk([...new Set(KT.flat())]) : TT
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((TT, cT) => {
-              var lT;
-              const MT = null === (lT = kT.get(cT)) || void 0 === lT ? void 0 : lT.members;
-              return MT ? kk(MT) : TT
-            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((TT, cT) => {
-              var lT;
-              const MT = null === (lT = kT.get(cT)) || void 0 === lT ? void 0 : lT.object;
-              return MT ? kk(MT.keys) : TT
-            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((TT, cT) => {
-              var lT, MT;
-              return null !== (lT = null === (MT = kT.get(cT)) || void 0 === MT ? void 0 : MT.text) && void 0 !== lT ? lT : TT
+        function gE(qq, Eq) {
+          const gq = function(qq, Eq) {
+            return qq.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((qq, gq) => {
+              var Yq;
+              const lq = null === (Yq = Eq.get(gq)) || void 0 === Yq ? void 0 : Yq.object;
+              return lq ? EE(lq.values) : qq
+            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((qq, gq) => {
+              var Yq, lq;
+              const Oq = null === (Yq = Eq.get(gq)) || void 0 === Yq || null === (lq = Yq.object) || void 0 === lq ? void 0 : lq.values.map(Dq);
+              return null !== Oq && void 0 !== Oq && Oq.every((qq => null !== qq)) ? EE([...new Set(Oq.flat())]) : qq
+            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((qq, gq) => {
+              var Yq;
+              const lq = null === (Yq = Eq.get(gq)) || void 0 === Yq ? void 0 : Yq.members;
+              return lq ? EE(lq) : qq
+            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((qq, gq) => {
+              var Yq;
+              const lq = null === (Yq = Eq.get(gq)) || void 0 === Yq ? void 0 : Yq.object;
+              return lq ? EE(lq.keys) : qq
+            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((qq, gq) => {
+              var Yq, lq;
+              return null !== (Yq = null === (lq = Eq.get(gq)) || void 0 === lq ? void 0 : lq.text) && void 0 !== Yq ? Yq : qq
             }))
-          }(TT.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), kT);
-          return [TT.doc, cT].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
+          }(qq.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), Eq);
+          return [qq.doc, gq].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
         }
 
-        function lk(TT) {
-          const kT = qT(TT),
-            cT = function(TT) {
-              const kT = new Map,
-                cT = TT.find((TT => "_TypeOf" === TT.name));
-              let lT = null;
-              const MT = () => {
-                if (lT) {
-                  const TT = lT.lines.join("\n");
-                  kT.set(lT.name, {
-                    text: TT,
-                    members: sT(TT),
-                    object: Tk(TT)
+        function YE(qq) {
+          const Eq = eq(qq),
+            gq = function(qq) {
+              const Eq = new Map,
+                gq = qq.find((qq => "_TypeOf" === qq.name));
+              let Yq = null;
+              const lq = () => {
+                if (Yq) {
+                  const qq = Yq.lines.join("\n");
+                  Eq.set(Yq.name, {
+                    text: qq,
+                    members: Dq(qq),
+                    object: qE(qq)
                   })
                 }
               };
-              for (const KT of cT.lines.slice(1, -1)) {
-                const TT = KT.match(/^\t([\w$]+): (.+)$/);
-                TT ? (MT(), lT = {
-                  name: TT[1],
-                  lines: [TT[2]]
-                }) : lT && lT.lines.push(KT.replace(/^\t/, ""))
+              for (const Oq of gq.lines.slice(1, -1)) {
+                const qq = Oq.match(/^\t([\w$]+): (.+)$/);
+                qq ? (lq(), Yq = {
+                  name: qq[1],
+                  lines: [qq[2]]
+                }) : Yq && Yq.lines.push(Oq.replace(/^\t/, ""))
               }
-              return MT(), kT
-            }(kT),
-            lT = new Map;
-          for (const MT of kT) WT.has(MT.name) || lT.has(MT.name) || lT.set(MT.name, ck(MT, cT));
-          return lT
+              return lq(), Eq
+            }(Eq),
+            Yq = new Map;
+          for (const lq of Eq) wq.has(lq.name) || Yq.has(lq.name) || Yq.set(lq.name, gE(lq, gq));
+          return Yq
         }
-        let Mk, Kk, Ok;
+        let lE, OE, mE;
 
-        function yk() {
-          return Kk ??= function(TT) {
-            const kT = qT(TT).find((TT => "GameApi" === TT.name)),
-              cT = new Map,
-              lT = kT.lines;
-            for (let KT = 0; KT < lT.length; KT++) {
-              var MT;
-              if (!lT[KT].trimStart().startsWith("/**")) continue;
-              const TT = KT;
-              for (; KT < lT.length && !lT[KT].includes("*/");) KT++;
-              const kT = null === (MT = lT[KT + 1]) || void 0 === MT ? void 0 : MT.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
-              if (!kT) continue;
-              let OT = null;
-              const yT = [];
-              let fT = "description",
-                xT = !1;
-              for (const cT of lT.slice(TT, KT + 1).join("\n").split("\n").map((TT => TT.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
-                const TT = cT.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
-                TT ? (OT = TT[1].trim(), fT = "deprecation") : cT.startsWith("@") ? (fT = "otherTag", xT = !0) : "" === cT.trim() ? xT || (fT = "description", yT.push(cT)) : "deprecation" !== fT || /^[A-Z]/.test(cT.trim()) ? "otherTag" !== fT && (fT = "description", yT.push(cT)) : OT = `${OT} ${cT.trim()}`.trim()
+        function xE() {
+          return OE ??= function(qq) {
+            const Eq = eq(qq).find((qq => "GameApi" === qq.name)),
+              gq = new Map,
+              Yq = Eq.lines;
+            for (let Oq = 0; Oq < Yq.length; Oq++) {
+              var lq;
+              if (!Yq[Oq].trimStart().startsWith("/**")) continue;
+              const qq = Oq;
+              for (; Oq < Yq.length && !Yq[Oq].includes("*/");) Oq++;
+              const Eq = null === (lq = Yq[Oq + 1]) || void 0 === lq ? void 0 : lq.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
+              if (!Eq) continue;
+              let mq = null;
+              const xq = [];
+              let Aq = "description",
+                cq = !1;
+              for (const gq of Yq.slice(qq, Oq + 1).join("\n").split("\n").map((qq => qq.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
+                const qq = gq.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
+                qq ? (mq = qq[1].trim(), Aq = "deprecation") : gq.startsWith("@") ? (Aq = "otherTag", cq = !0) : "" === gq.trim() ? cq || (Aq = "description", xq.push(gq)) : "deprecation" !== Aq || /^[A-Z]/.test(gq.trim()) ? "otherTag" !== Aq && (Aq = "description", xq.push(gq)) : mq = `${mq} ${gq.trim()}`.trim()
               }
-              cT.set(kT[1], {
-                deprecation: OT,
-                description: yT.join("\n").trim()
+              gq.set(Eq[1], {
+                deprecation: mq,
+                description: xq.join("\n").trim()
               })
             }
-            return cT
-          }(YT.default), Kk
+            return gq
+          }(sq.default), OE
         }
 
-        function fk() {
-          if (!Ok) {
-            Ok = new Map;
-            for (const TT of ET) {
-              const kT = (0, PT.q)(dT(TT)).flatMap((TT => TT.blocks));
-              for (const TT of (0, PT.k)(kT))
-                if ("ts" === TT.lang || "typescript" === TT.lang)
-                  for (const [kT, cT] of bT(TT.code)) Ok.set(kT, cT)
+        function AE() {
+          if (!mE) {
+            mE = new Map;
+            for (const qq of Sq) {
+              const Eq = (0, rq.u)(Jq(qq)).flatMap((qq => qq.blocks));
+              for (const qq of (0, rq.n)(Eq))
+                if ("ts" === qq.lang || "typescript" === qq.lang)
+                  for (const [Eq, gq] of nq(qq.code)) mE.set(Eq, gq)
             }
-            for (const [TT, kT] of(Mk ??= lk(YT.default), Mk)) Ok.has(TT) || Ok.set(TT, kT)
+            for (const [qq, Eq] of(lE ??= YE(sq.default), lE)) mE.has(qq) || mE.set(qq, Eq)
           }
-          return Ok
+          return mE
         }
-        const xk = {
+        const cE = {
           BlockName: "blockNames",
           BlockNameOrId: "blockNames",
           ItemName: "itemNames",
@@ -761,332 +761,332 @@ export const modules = {
           VehicleSetting: "vehicleSettings",
           SettableVehicleSetting: "vehicleSettings"
         };
-        let Ik;
+        let uE;
 
-        function Ak() {
-          if (!Ik) {
-            Ik = new Map;
-            for (const TT of ET)
-              if (zT(TT.layout))
-                for (const kT of dT(TT).sections) Ik.has(kT.heading.text) || Ik.set(kT.heading.text, {
-                  pageId: TT.id,
-                  anchor: kT.heading.anchor
+        function BE() {
+          if (!uE) {
+            uE = new Map;
+            for (const qq of Sq)
+              if (bq(qq.layout))
+                for (const Eq of Jq(qq).sections) uE.has(Eq.heading.text) || uE.set(Eq.heading.text, {
+                  pageId: qq.id,
+                  anchor: Eq.heading.anchor
                 })
           }
-          return Ik
+          return uE
         }
 
-        function Ck(TT) {
-          const kT = TT.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
-          return kT ? Ak().get(kT[1]) : void 0
+        function WE(qq) {
+          const Eq = qq.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
+          return Eq ? BE().get(Eq[1]) : void 0
         }
-        const jk = (0, lT.createContext)("/docs"),
-          vk = (0, lT.createContext)(null),
-          tk = (0, lT.createContext)(!1),
-          hk = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
+        const NE = (0, Yq.createContext)("/docs"),
+          aE = (0, Yq.createContext)(null),
+          VE = (0, Yq.createContext)(!1),
+          dE = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
 
-        function Nk(TT) {
-          const kT = TT.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
-          return kT ? kT[1] : null
+        function jE(qq) {
+          const Eq = qq.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
+          return Eq ? Eq[1] : null
         }
 
-        function Qk(TT) {
+        function HE(qq) {
           let {
-            colour: kT
-          } = TT;
-          return (0, vT.jsx)("span", {
+            colour: Eq
+          } = qq;
+          return (0, aq.jsx)("span", {
             className: "DocsColourSwatch",
             style: {
-              background: kT
+              background: Eq
             },
             "aria-hidden": "true"
           })
         }
 
-        function Sk(TT) {
-          const kT = [];
-          let cT = 0;
-          for (const lT of TT.matchAll(hk)) kT.push(TT.slice(cT, lT.index), (0, vT.jsx)(Qk, {
-            colour: lT[0]
-          }), lT[0]), cT = lT.index + lT[0].length;
-          return kT.push(TT.slice(cT)), kT
+        function oE(qq) {
+          const Eq = [];
+          let gq = 0;
+          for (const Yq of qq.matchAll(dE)) Eq.push(qq.slice(gq, Yq.index), (0, aq.jsx)(HE, {
+            colour: Yq[0]
+          }), Yq[0]), gq = Yq.index + Yq[0].length;
+          return Eq.push(qq.slice(gq)), Eq
         }
 
-        function Dk(TT) {
+        function PE(qq) {
           let {
-            href: kT,
-            children: cT
-          } = TT;
-          const MT = (0, lT.useContext)(jk);
-          if (kT.startsWith("#")) {
-            const TT = RT(kT);
-            if (TT) return (0, vT.jsx)(OT.e, {
-              to: UT(MT, TT.page, TT.anchor),
-              children: (0, vT.jsx)(tk.Provider, {
+            href: Eq,
+            children: gq
+          } = qq;
+          const lq = (0, Yq.useContext)(NE);
+          if (Eq.startsWith("#")) {
+            const qq = Rq(Eq);
+            if (qq) return (0, aq.jsx)(mq.c, {
+              to: Fq(lq, qq.page, qq.anchor),
+              children: (0, aq.jsx)(VE.Provider, {
                 value: !0,
-                children: cT
+                children: gq
               })
             })
           }
-          return (0, vT.jsx)("a", {
-            href: kT,
+          return (0, aq.jsx)("a", {
+            href: Eq,
             target: "_blank",
             rel: "noopener noreferrer",
-            children: (0, vT.jsx)(tk.Provider, {
+            children: (0, aq.jsx)(VE.Provider, {
               value: !0,
-              children: cT
+              children: gq
             })
           })
         }
 
-        function ak(TT) {
+        function QE(qq) {
           let {
-            code: kT
-          } = TT;
-          const cT = (0, lT.useContext)(jk);
-          if ((0, lT.useContext)(tk)) return (0, vT.jsx)("code", {
+            code: Eq
+          } = qq;
+          const gq = (0, Yq.useContext)(NE);
+          if ((0, Yq.useContext)(VE)) return (0, aq.jsx)("code", {
             className: "DocsInlineCode",
-            children: kT
+            children: Eq
           });
-          if (fk().has(kT)) return (0, vT.jsx)(wk, {
-            type: kT
+          if (AE().has(Eq)) return (0, aq.jsx)(vE, {
+            type: Eq
           });
-          const MT = Ck(kT);
-          if (MT) return (0, vT.jsx)(OT.e, {
+          const lq = WE(Eq);
+          if (lq) return (0, aq.jsx)(mq.c, {
             className: "DocsInlineCode DocsSymbolLink",
-            to: UT(cT, uT(MT.pageId), MT.anchor),
-            children: kT
+            to: Fq(gq, Gq(lq.pageId), lq.anchor),
+            children: Eq
           });
-          const KT = Nk(kT);
-          return (0, vT.jsxs)("code", {
+          const Oq = jE(Eq);
+          return (0, aq.jsxs)("code", {
             className: "DocsInlineCode",
-            children: [KT && (0, vT.jsx)(Qk, {
-              colour: KT
-            }), kT]
+            children: [Oq && (0, aq.jsx)(HE, {
+              colour: Oq
+            }), Eq]
           })
         }
 
-        function Fk(TT) {
+        function yE(qq) {
           let {
-            text: kT
-          } = TT;
-          const cT = [];
-          let MT = 0;
-          for (const lT of kT.matchAll(PT.g)) {
-            lT.index > MT && cT.push(...Sk(kT.slice(MT, lT.index)));
-            const [, TT, KT, OT, yT, fT] = lT;
-            TT ? cT.push((0, vT.jsx)(ak, {
-              code: (0, PT.l)(TT, KT)
-            })) : OT ? cT.push((0, vT.jsx)("strong", {
-              children: (0, vT.jsx)(Fk, {
-                text: OT
+            text: Eq
+          } = qq;
+          const gq = [];
+          let lq = 0;
+          for (const Yq of Eq.matchAll(rq.g)) {
+            Yq.index > lq && gq.push(...oE(Eq.slice(lq, Yq.index)));
+            const [, qq, Oq, mq, xq, Aq] = Yq;
+            qq ? gq.push((0, aq.jsx)(QE, {
+              code: (0, rq.p)(qq, Oq)
+            })) : mq ? gq.push((0, aq.jsx)("strong", {
+              children: (0, aq.jsx)(yE, {
+                text: mq
               })
-            })) : cT.push((0, vT.jsx)(Dk, {
-              href: fT,
-              children: (0, vT.jsx)(Fk, {
-                text: yT
+            })) : gq.push((0, aq.jsx)(PE, {
+              href: Aq,
+              children: (0, aq.jsx)(yE, {
+                text: xq
               })
-            })), MT = lT.index + lT[0].length
+            })), lq = Yq.index + Yq[0].length
           }
-          return MT < kT.length && cT.push(...Sk(kT.slice(MT))), (0, vT.jsx)(vT.Fragment, {
-            children: cT.map(((TT, kT) => (0, vT.jsx)(lT.Fragment, {
-              children: TT
-            }, kT)))
+          return lq < Eq.length && gq.push(...oE(Eq.slice(lq))), (0, aq.jsx)(aq.Fragment, {
+            children: gq.map(((qq, Eq) => (0, aq.jsx)(Yq.Fragment, {
+              children: qq
+            }, Eq)))
           })
         }
-        const rk = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
-          Pk = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
+        const tE = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
+          rE = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
 
-        function wk(TT) {
+        function vE(qq) {
           let {
-            type: kT
-          } = TT;
-          const cT = fk(),
-            MT = [];
-          for (const lT of kT.trim().matchAll(rk)) {
-            const [TT, kT, KT, OT, yT] = lT;
-            kT ? MT.push((0, vT.jsx)("span", {
+            type: Eq
+          } = qq;
+          const gq = AE(),
+            lq = [];
+          for (const Yq of Eq.trim().matchAll(tE)) {
+            const [qq, Eq, Oq, mq, xq] = Yq;
+            Eq ? lq.push((0, aq.jsx)("span", {
               className: "DocsTypeString",
-              children: TT
-            })) : KT && cT.has(KT) ? MT.push((0, vT.jsx)(Hk, {
-              name: KT,
-              definition: cT.get(KT)
-            })) : KT ? MT.push((0, vT.jsx)("span", {
-              className: Pk.has(KT) ? "DocsTypeKeyword" : "DocsTypeName",
-              children: TT
-            })) : OT ? MT.push((0, vT.jsx)("span", {
+              children: qq
+            })) : Oq && gq.has(Oq) ? lq.push((0, aq.jsx)(ZE, {
+              name: Oq,
+              definition: gq.get(Oq)
+            })) : Oq ? lq.push((0, aq.jsx)("span", {
+              className: rE.has(Oq) ? "DocsTypeKeyword" : "DocsTypeName",
+              children: qq
+            })) : mq ? lq.push((0, aq.jsx)("span", {
               className: "DocsTypeNumber",
-              children: TT
-            })) : yT ? MT.push(" ") : MT.push((0, vT.jsx)("span", {
+              children: qq
+            })) : xq ? lq.push(" ") : lq.push((0, aq.jsx)("span", {
               className: "DocsTypePunctuation",
-              children: TT
+              children: qq
             }))
           }
-          return (0, vT.jsx)("code", {
+          return (0, aq.jsx)("code", {
             className: "DocsInlineCode DocsTypeText",
-            children: MT.map(((TT, kT) => (0, vT.jsx)(lT.Fragment, {
-              children: TT
-            }, kT)))
+            children: lq.map(((qq, Eq) => (0, aq.jsx)(Yq.Fragment, {
+              children: qq
+            }, Eq)))
           })
         }
-        const mk = 480,
-          bk = 6,
-          zk = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
-        let Jk = 0;
+        const hE = 480,
+          nE = 6,
+          bE = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
+        let iE = 0;
 
-        function Hk(TT) {
+        function ZE(qq) {
           let {
-            name: kT,
-            definition: cT
-          } = TT;
-          const MT = (0, lT.useContext)(jk),
-            KT = xk[kT],
-            yT = (0, lT.useRef)(null),
-            fT = (0, lT.useRef)(null),
-            IT = (0, lT.useRef)(null),
-            [AT, CT] = (0, lT.useState)(!1),
-            [jT, tT] = (0, lT.useState)(null),
-            NT = (0, lT.useRef)(),
-            QT = (0, lT.useContext)(vk),
-            [ST] = (0, lT.useState)((() => "DocsTypePopover-" + Jk++)),
-            DT = () => {
-              clearTimeout(NT.current), CT(!0)
+            name: Eq,
+            definition: gq
+          } = qq;
+          const lq = (0, Yq.useContext)(NE),
+            Oq = cE[Eq],
+            xq = (0, Yq.useRef)(null),
+            Aq = (0, Yq.useRef)(null),
+            uq = (0, Yq.useRef)(null),
+            [Bq, Wq] = (0, Yq.useState)(!1),
+            [Nq, Vq] = (0, Yq.useState)(null),
+            jq = (0, Yq.useRef)(),
+            Hq = (0, Yq.useContext)(aE),
+            [oq] = (0, Yq.useState)((() => "DocsTypePopover-" + iE++)),
+            Pq = () => {
+              clearTimeout(jq.current), Wq(!0)
             },
-            aT = () => {
-              clearTimeout(NT.current), NT.current = setTimeout((() => {
-                CT(!1)
+            Qq = () => {
+              clearTimeout(jq.current), jq.current = setTimeout((() => {
+                Wq(!1)
               }), 120)
             };
-          return (0, lT.useEffect)((() => {
-            if (!AT) return;
-            const TT = TT => {
-              if ("Escape" === TT.key) {
-                var kT, cT;
-                if (null !== (kT = fT.current) && void 0 !== kT && kT.contains(document.activeElement)) null === (cT = yT.current) || void 0 === cT || cT.focus();
-                CT(!1)
+          return (0, Yq.useEffect)((() => {
+            if (!Bq) return;
+            const qq = qq => {
+              if ("Escape" === qq.key) {
+                var Eq, gq;
+                if (null !== (Eq = Aq.current) && void 0 !== Eq && Eq.contains(document.activeElement)) null === (gq = xq.current) || void 0 === gq || gq.focus();
+                Wq(!1)
               }
             };
-            return document.addEventListener("keydown", TT), () => {
-              document.removeEventListener("keydown", TT)
+            return document.addEventListener("keydown", qq), () => {
+              document.removeEventListener("keydown", qq)
             }
-          }), [AT]), (0, lT.useEffect)((() => () => {
-            clearTimeout(NT.current)
-          }), []), (0, lT.useLayoutEffect)((() => {
-            if (!AT || !yT.current || !fT.current) return void tT(null);
-            const TT = yT.current.getBoundingClientRect(),
-              kT = fT.current.offsetHeight,
-              cT = Math.min(mk, window.innerWidth - 32),
-              lT = Math.min(Math.max(16, TT.left), window.innerWidth - cT - 16),
-              MT = TT.bottom + bk + kT < window.innerHeight;
-            tT({
-              left: lT,
-              top: MT ? TT.bottom + bk : Math.max(16, TT.top - bk - kT)
+          }), [Bq]), (0, Yq.useEffect)((() => () => {
+            clearTimeout(jq.current)
+          }), []), (0, Yq.useLayoutEffect)((() => {
+            if (!Bq || !xq.current || !Aq.current) return void Vq(null);
+            const qq = xq.current.getBoundingClientRect(),
+              Eq = Aq.current.offsetHeight,
+              gq = Math.min(hE, window.innerWidth - 32),
+              Yq = Math.min(Math.max(16, qq.left), window.innerWidth - gq - 16),
+              lq = qq.bottom + nE + Eq < window.innerHeight;
+            Vq({
+              left: Yq,
+              top: lq ? qq.bottom + nE : Math.max(16, qq.top - nE - Eq)
             })
-          }), [AT]), (0, vT.jsxs)(vT.Fragment, {
-            children: [(0, vT.jsx)("button", {
+          }), [Bq]), (0, aq.jsxs)(aq.Fragment, {
+            children: [(0, aq.jsx)("button", {
               type: "button",
-              ref: yT,
+              ref: xq,
               className: "DocsTypeLink",
-              "aria-expanded": AT,
-              "aria-describedby": AT ? ST : void 0,
-              onMouseEnter: DT,
-              onMouseLeave: aT,
-              onFocus: DT,
-              onBlur: aT,
-              onKeyDown: TT => {
-                "Tab" === TT.key && !TT.shiftKey && IT.current && (TT.preventDefault(), IT.current.focus())
+              "aria-expanded": Bq,
+              "aria-describedby": Bq ? oq : void 0,
+              onMouseEnter: Pq,
+              onMouseLeave: Qq,
+              onFocus: Pq,
+              onBlur: Qq,
+              onKeyDown: qq => {
+                "Tab" === qq.key && !qq.shiftKey && uq.current && (qq.preventDefault(), uq.current.focus())
               },
-              onClick: DT,
-              children: kT
-            }), AT && (0, xT.createPortal)((0, vT.jsxs)("span", {
-              ref: fT,
-              id: ST,
+              onClick: Pq,
+              children: Eq
+            }), Bq && (0, cq.createPortal)((0, aq.jsxs)("span", {
+              ref: Aq,
+              id: oq,
               className: "DocsTypePopover",
               role: "tooltip",
-              style: jT ? {
-                left: jT.left,
-                top: jT.top,
-                maxWidth: mk
+              style: Nq ? {
+                left: Nq.left,
+                top: Nq.top,
+                maxWidth: hE
               } : {
                 visibility: "hidden"
               },
-              onMouseEnter: DT,
-              onMouseLeave: aT,
-              onFocus: DT,
-              onBlur: aT,
-              children: [(0, vT.jsxs)("span", {
+              onMouseEnter: Pq,
+              onMouseLeave: Qq,
+              onFocus: Pq,
+              onBlur: Qq,
+              children: [(0, aq.jsxs)("span", {
                 className: "DocsTypePopoverHeader",
-                children: [(0, vT.jsx)("span", {
+                children: [(0, aq.jsx)("span", {
                   className: "DocsTypePopoverTitle",
-                  children: kT
-                }), KT && (0, vT.jsxs)(OT.e, {
-                  ref: IT,
+                  children: Eq
+                }), Oq && (0, aq.jsxs)(mq.c, {
+                  ref: uq,
                   className: "DocsTypePopoverLink",
-                  to: UT(MT, uT(KT)),
+                  to: Fq(lq, Gq(Oq)),
                   onClick: () => {
-                    CT(!1)
+                    Wq(!1)
                   },
-                  onKeyDown: TT => {
-                    if ("Tab" === TT.key) {
-                      var kT;
-                      if (TT.preventDefault(), TT.shiftKey || !yT.current || ! function(TT, kT) {
-                          const cT = [...document.querySelectorAll(zk)],
-                            lT = cT.slice(cT.indexOf(TT) + 1).find((TT => TT.getClientRects().length > 0 && !(null !== kT && void 0 !== kT && kT.contains(TT))));
-                          return null === lT || void 0 === lT || lT.focus(), void 0 !== lT
-                        }(yT.current, fT.current)) null === (kT = yT.current) || void 0 === kT || kT.focus();
-                      TT.shiftKey || CT(!1)
+                  onKeyDown: qq => {
+                    if ("Tab" === qq.key) {
+                      var Eq;
+                      if (qq.preventDefault(), qq.shiftKey || !xq.current || ! function(qq, Eq) {
+                          const gq = [...document.querySelectorAll(bE)],
+                            Yq = gq.slice(gq.indexOf(qq) + 1).find((qq => qq.getClientRects().length > 0 && !(null !== Eq && void 0 !== Eq && Eq.contains(qq))));
+                          return null === Yq || void 0 === Yq || Yq.focus(), void 0 !== Yq
+                        }(xq.current, Aq.current)) null === (Eq = xq.current) || void 0 === Eq || Eq.focus();
+                      qq.shiftKey || Wq(!1)
                     }
                   },
-                  children: [uT(KT).title, (0, vT.jsx)(hT, {
+                  children: [Gq(Oq).title, (0, aq.jsx)(dq, {
                     name: "arrow-right"
                   })]
                 })]
-              }), (0, vT.jsx)(rT, {
+              }), (0, aq.jsx)(tq, {
                 lang: "ts",
-                code: cT,
+                code: gq,
                 compact: !0
               })]
-            }), null !== QT && void 0 !== QT ? QT : document.body)]
+            }), null !== Hq && void 0 !== Hq ? Hq : document.body)]
           })
         }
-        var ek = cT(218),
-          Gk = cT(4730),
-          Vk = cT(4739),
-          Ek = cT(4745);
-        const Zk = {
+        var fE = gq(190),
+          ME = gq(4588),
+          TE = gq(4597),
+          zE = gq(4606);
+        const SE = {
           progressBar: {
-            Xk: 30,
-            Lk: .075,
-            Rk: 5,
-            gk: !1,
+            ZY: 30,
+            fY: .075,
+            MY: 5,
+            TY: !1,
             description: [{
               str: "Click repeatedly to complete!"
             }],
-            Uk: "fa-solid fa-computer-mouse",
+            zY: "fa-solid fa-computer-mouse",
             scale: 3,
             rotation: 15
           },
           timedClick: {
-            Bk: 3e3,
+            pY: 3e3,
             icon: "fa-solid fa-computer-mouse",
             label: [{
               str: "Click to complete the QTE!"
             }],
-            Wk: !0,
+            GY: !0,
             scale: 3,
             rotation: 15,
-            nk: !1
+            LY: !1
           },
           gravityBar: {
-            Xk: 30,
-            qk: .25,
-            sk: 3,
-            Tc: .8,
+            ZY: 30,
+            kY: .25,
+            RY: 3,
+            UY: .8,
             gravity: 1,
-            kc: 1.5,
-            cc: 8,
-            lc: 4,
-            gk: !1,
+            FY: 1.5,
+            sY: 8,
+            XY: 4,
+            TY: !1,
             description: [{
               str: "Hold to catch!"
             }],
@@ -1094,7 +1094,7 @@ export const modules = {
           },
           precisionBar: {
             speed: .5,
-            Kc: .15,
+            KY: .15,
             label: [{
               str: "Click when the marker is within the green zone."
             }],
@@ -1103,30 +1103,30 @@ export const modules = {
             rotation: 0
           },
           rhythmClick: {
-            yc: 5,
-            fc: 1200,
-            xc: .15,
-            Ic: 3,
+            IY: 5,
+            eY: 1200,
+            DY: .15,
+            ql: 3,
             label: [{
               str: "Click when the circles align!"
             }],
             icon: ""
           }
         };
-        var uk = cT(328),
-          Xk = cT(2022);
+        var pE = gq(296),
+          GE = gq(1968);
 
-        function dk(TT) {
-          return TT.startsWith("fa-")
+        function LE(qq) {
+          return qq.startsWith("fa-")
         }
-        const Lk = {
+        const JE = {
             text: "Text",
             icon: "Icon",
             progressBar: "Progress bar",
             keyBinding: "Key binding",
             other: "Other"
           },
-          Rk = {
+          kE = {
             text: "Text",
             icon: {
               icon: "Pixelated Heart"
@@ -1141,10 +1141,10 @@ export const modules = {
             }
           };
 
-        function gk(TT) {
-          return "string" === typeof TT ? "text" : "entityName" in TT || "translationKey" in TT ? "other" : (0, uk.gb)(TT) ? "progressBar" : (0, uk.eb)(TT) ? "keyBinding" : "icon" in TT ? "icon" : "str" in TT && "string" === typeof TT.str ? "text" : "other"
+        function RE(qq) {
+          return "string" === typeof qq ? "text" : "entityName" in qq || "translationKey" in qq ? "other" : (0, pE.wb)(qq) ? "progressBar" : (0, pE.sb)(qq) ? "keyBinding" : "icon" in qq ? "icon" : "str" in qq && "string" === typeof qq.str ? "text" : "other"
         }
-        const Uk = [{
+        const UE = [{
             path: ["style", "color"],
             label: "Colour",
             field: {
@@ -1182,7 +1182,7 @@ export const modules = {
             },
             defaultText: "1"
           }],
-          Yk = {
+          FE = {
             text: [{
               path: ["str"],
               label: "Text",
@@ -1191,7 +1191,7 @@ export const modules = {
                 multiline: !0
               },
               isRequired: !0
-            }, ...Uk],
+            }, ...UE],
             icon: [{
               path: ["icon"],
               label: "Icon",
@@ -1262,360 +1262,360 @@ export const modules = {
               label: "Action",
               field: {
                 kind: "choice",
-                options: Xk.m
+                options: GE.j
               },
               isRequired: !0
-            }, ...Uk],
+            }, ...UE],
             other: []
           };
 
-        function Bk(TT) {
-          return "string" === typeof TT ? {
-            str: TT
-          } : TT
+        function sE(qq) {
+          return "string" === typeof qq ? {
+            str: qq
+          } : qq
         }
 
-        function Wk(TT, kT) {
-          let cT = Bk(TT);
-          for (const lT of kT) cT = cT && "object" === typeof cT ? cT[lT] : void 0;
-          return cT
+        function XE(qq, Eq) {
+          let gq = sE(qq);
+          for (const Yq of Eq) gq = gq && "object" === typeof gq ? gq[Yq] : void 0;
+          return gq
         }
 
-        function nk(TT, kT, cT) {
-          const lT = (TT, MT) => {
-            var KT;
-            const OT = kT[MT],
-              yT = {
-                ...TT
+        function wE(qq, Eq, gq) {
+          const Yq = (qq, lq) => {
+            var Oq;
+            const mq = Eq[lq],
+              xq = {
+                ...qq
               };
-            if (MT === kT.length - 1) return void 0 === cT ? delete yT[OT] : yT[OT] = cT, yT;
-            const fT = lT(null !== (KT = TT[OT]) && void 0 !== KT ? KT : {}, MT + 1);
-            return 0 === Object.keys(fT).length ? delete yT[OT] : yT[OT] = fT, yT
+            if (lq === Eq.length - 1) return void 0 === gq ? delete xq[mq] : xq[mq] = gq, xq;
+            const Aq = Yq(null !== (Oq = qq[mq]) && void 0 !== Oq ? Oq : {}, lq + 1);
+            return 0 === Object.keys(Aq).length ? delete xq[mq] : xq[mq] = Aq, xq
           };
-          return function(TT) {
-            const kT = Object.keys(TT);
-            return "string" === typeof TT.str && 1 === kT.length ? TT.str : TT
-          }(lT(Bk(TT), 0))
+          return function(qq) {
+            const Eq = Object.keys(qq);
+            return "string" === typeof qq.str && 1 === Eq.length ? qq.str : qq
+          }(Yq(sE(qq), 0))
         }
 
-        function pk(TT, kT) {
-          const cT = gk(TT),
-            lT = Yk[cT].find((TT => TT.path.join(".") === kT.join("."))),
-            MT = null !== lT && void 0 !== lT && lT.isRequired && "other" !== cT ? Wk(Rk[cT], kT) : void 0;
-          return nk(TT, kT, MT)
+        function KE(qq, Eq) {
+          const gq = RE(qq),
+            Yq = FE[gq].find((qq => qq.path.join(".") === Eq.join("."))),
+            lq = null !== Yq && void 0 !== Yq && Yq.isRequired && "other" !== gq ? XE(kE[gq], Eq) : void 0;
+          return wE(qq, Eq, lq)
         }
 
-        function ik(TT) {
-          switch (gk(TT)) {
+        function CE(qq) {
+          switch (RE(qq)) {
             case "text":
-              return String(Wk(TT, ["str"]));
+              return String(XE(qq, ["str"]));
             case "icon":
-              return String(Wk(TT, ["icon"]));
+              return String(XE(qq, ["icon"]));
             case "progressBar":
-              return `${Math.round(100*Number(Wk(TT,["progress"])))}%`;
+              return `${Math.round(100*Number(XE(qq,["progress"])))}%`;
             case "keyBinding":
-              return String(Wk(TT, ["action"]));
+              return String(XE(qq, ["action"]));
             case "other":
-              return JSON.stringify(TT)
+              return JSON.stringify(qq)
           }
         }
-        const qk = /^[A-Za-z_$][\w$]*$/;
+        const IE = /^[A-Za-z_$][\w$]*$/;
 
-        function sk(TT) {
-          if (Array.isArray(TT)) return `[${TT.map(sk).join(", ")}]`;
-          if (TT && "object" === typeof TT) {
-            const kT = Object.entries(TT).map((TT => {
-              let [kT, cT] = TT;
-              return `${qk.test(kT)?kT:JSON.stringify(kT)}: ${sk(cT)}`
+        function eE(qq) {
+          if (Array.isArray(qq)) return `[${qq.map(eE).join(", ")}]`;
+          if (qq && "object" === typeof qq) {
+            const Eq = Object.entries(qq).map((qq => {
+              let [Eq, gq] = qq;
+              return `${IE.test(Eq)?Eq:JSON.stringify(Eq)}: ${eE(gq)}`
             }));
-            return 0 === kT.length ? "{}" : `{ ${kT.join(", ")} }`
+            return 0 === Eq.length ? "{}" : `{ ${Eq.join(", ")} }`
           }
-          return JSON.stringify(TT)
+          return JSON.stringify(qq)
         }
 
-        function Tc(TT) {
-          const kT = TT.map(sk),
-            cT = `[${kT.join(", ")}]`;
-          return cT.length <= 60 ? cT : `[\n${kT.map((TT=>`    ${TT},`)).join("\n")}\n]`
+        function DE(qq) {
+          const Eq = qq.map(eE),
+            gq = `[${Eq.join(", ")}]`;
+          return gq.length <= 60 ? gq : `[\n${Eq.map((qq=>`    ${qq},`)).join("\n")}\n]`
         }
-        const kc = {
+        const qg = {
           "\n": "\\n",
           "\r": "\\r",
           "\t": "\\t"
         };
 
-        function cc(TT) {
-          let kT = "";
-          for (let MT = 0; MT < TT.length; MT++) {
-            const KT = TT[MT];
-            if ("\\" === KT) {
-              var cT;
-              const lT = null !== (cT = TT[MT + 1]) && void 0 !== cT ? cT : "";
-              kT += "'" === lT ? "'" : KT + lT, MT++
-            } else if ('"' === KT) kT += '\\"';
+        function Eg(qq) {
+          let Eq = "";
+          for (let lq = 0; lq < qq.length; lq++) {
+            const Oq = qq[lq];
+            if ("\\" === Oq) {
+              var gq;
+              const Yq = null !== (gq = qq[lq + 1]) && void 0 !== gq ? gq : "";
+              Eq += "'" === Yq ? "'" : Oq + Yq, lq++
+            } else if ('"' === Oq) Eq += '\\"';
             else {
-              var lT;
-              kT += null !== (lT = kc[KT]) && void 0 !== lT ? lT : KT
+              var Yq;
+              Eq += null !== (Yq = qg[Oq]) && void 0 !== Yq ? Yq : Oq
             }
           }
-          return `"${kT}"`
+          return `"${Eq}"`
         }
 
-        function lc(TT) {
-          if ("string" === typeof TT) return !0;
-          if (!TT || "object" !== typeof TT || Array.isArray(TT)) return !1;
-          const kT = TT;
-          return "ProgressBar" === kT.type ? "number" === typeof kT.progress : "StyledKeyBinding" === kT.type ? Xk.m.includes(kT.action) : "string" === typeof kT.icon || "string" === typeof kT.str || "string" === typeof kT.entityName || "string" === typeof kT.translationKey
+        function gg(qq) {
+          if ("string" === typeof qq) return !0;
+          if (!qq || "object" !== typeof qq || Array.isArray(qq)) return !1;
+          const Eq = qq;
+          return "ProgressBar" === Eq.type ? "number" === typeof Eq.progress : "StyledKeyBinding" === Eq.type ? GE.j.includes(Eq.action) : "string" === typeof Eq.icon || "string" === typeof Eq.str || "string" === typeof Eq.entityName || "string" === typeof Eq.translationKey
         }
 
-        function Mc(TT) {
-          let kT;
+        function Yg(qq) {
+          let Eq;
           try {
-            kT = function(TT) {
-              let kT = "",
-                cT = "",
-                lT = 0;
-              const MT = () => {
-                kT += cT.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), cT = ""
+            Eq = function(qq) {
+              let Eq = "",
+                gq = "",
+                Yq = 0;
+              const lq = () => {
+                Eq += gq.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), gq = ""
               };
-              for (; lT < TT.length;) {
-                const KT = TT.slice(lT).search(/["'`]|\/\//);
-                if (-1 === KT) {
-                  cT += TT.slice(lT);
+              for (; Yq < qq.length;) {
+                const Oq = qq.slice(Yq).search(/["'`]|\/\//);
+                if (-1 === Oq) {
+                  gq += qq.slice(Yq);
                   break
                 }
-                cT += TT.slice(lT, lT + KT);
-                const OT = lT + KT,
-                  yT = TT[OT];
-                if ("/" === yT) {
-                  const kT = TT.indexOf("\n", OT);
-                  lT = -1 === kT ? TT.length : kT;
+                gq += qq.slice(Yq, Yq + Oq);
+                const mq = Yq + Oq,
+                  xq = qq[mq];
+                if ("/" === xq) {
+                  const Eq = qq.indexOf("\n", mq);
+                  Yq = -1 === Eq ? qq.length : Eq;
                   continue
                 }
-                if (MT(), "`" === yT) throw new Error("Use quotes rather than template strings.");
-                let fT = OT + 1;
-                for (; fT < TT.length && TT[fT] !== yT;) fT += "\\" === TT[fT] ? 2 : 1;
-                if (fT >= TT.length) throw new Error("A string is missing its closing quote.");
-                const xT = TT.slice(OT + 1, fT);
-                kT += cc(xT), lT = fT + 1
+                if (lq(), "`" === xq) throw new Error("Use quotes rather than template strings.");
+                let Aq = mq + 1;
+                for (; Aq < qq.length && qq[Aq] !== xq;) Aq += "\\" === qq[Aq] ? 2 : 1;
+                if (Aq >= qq.length) throw new Error("A string is missing its closing quote.");
+                const cq = qq.slice(mq + 1, Aq);
+                Eq += Eg(cq), Yq = Aq + 1
               }
-              return MT(), JSON.parse(kT)
-            }(TT.trim())
-          } catch (lT) {
+              return lq(), JSON.parse(Eq)
+            }(qq.trim())
+          } catch (Yq) {
             return {
               parts: null,
-              error: lT instanceof SyntaxError ? "This isn't a valid array yet." : lT.message
+              error: Yq instanceof SyntaxError ? "This isn't a valid array yet." : Yq.message
             }
           }
-          if (!Array.isArray(kT)) return {
+          if (!Array.isArray(Eq)) return {
             parts: null,
             error: 'Styled text is an array, e.g. ["Hello ", { str: "world" }]'
           };
-          const cT = kT.findIndex((TT => !lc(TT)));
-          return -1 !== cT ? {
+          const gq = Eq.findIndex((qq => !gg(qq)));
+          return -1 !== gq ? {
             parts: null,
-            error: `Part ${cT+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
+            error: `Part ${gq+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
           } : {
-            parts: kT,
+            parts: Eq,
             error: null
           }
         }
-        const Kc = 1 / ek.f.clientTicksPerSecond,
-          Oc = 700,
-          yc = {
+        const lg = 1 / fE.c.clientTicksPerSecond,
+          Og = 700,
+          mg = {
             type: null,
             parameters: null,
             state: null,
             isActive: !1
           },
-          fc = {
-            progressBar: Zk.progressBar.Uk,
-            timedClick: Zk.timedClick.icon,
-            gravityBar: Zk.gravityBar.icon,
-            precisionBar: Zk.precisionBar.icon,
-            rhythmClick: Zk.rhythmClick.icon
+          xg = {
+            progressBar: SE.progressBar.zY,
+            timedClick: SE.timedClick.icon,
+            gravityBar: SE.gravityBar.icon,
+            precisionBar: SE.precisionBar.icon,
+            rhythmClick: SE.rhythmClick.icon
           };
 
-        function xc(TT) {
+        function Ag(qq) {
           let {
-            type: kT
-          } = TT;
-          const [cT, MT] = (0, lT.useState)("ready"), [OT, yT] = (0, lT.useState)(1), [fT, xT] = (0, lT.useState)(!0), IT = (0, lT.useRef)(null), AT = (0, lT.useRef)(null), CT = (0, lT.useRef)(null), jT = (0, lT.useRef)(new Set), tT = (0, lT.useRef)(!1), NT = fc[kT], QT = (0, lT.useMemo)((() => ({
+            type: Eq
+          } = qq;
+          const [gq, lq] = (0, Yq.useState)("ready"), [mq, xq] = (0, Yq.useState)(1), [Aq, cq] = (0, Yq.useState)(!0), uq = (0, Yq.useRef)(null), Bq = (0, Yq.useRef)(null), Wq = (0, Yq.useRef)(null), Nq = (0, Yq.useRef)(new Set), Vq = (0, Yq.useRef)(!1), jq = xg[Eq], Hq = (0, Yq.useMemo)((() => ({
             getState: () => {
-              var TT, kT;
-              return null !== (TT = null === (kT = CT.current) || void 0 === kT ? void 0 : kT.getState()) && void 0 !== TT ? TT : yc
+              var qq, Eq;
+              return null !== (qq = null === (Eq = Wq.current) || void 0 === Eq ? void 0 : Eq.getState()) && void 0 !== qq ? qq : mg
             },
-            onFrame: TT => (jT.current.add(TT), () => {
-              jT.current.delete(TT)
+            onFrame: qq => (Nq.current.add(qq), () => {
+              Nq.current.delete(qq)
             })
           })), []);
-          (0, lT.useEffect)((() => {
-            const TT = IT.current,
-              kT = AT.current;
-            if (!TT || !kT) return;
-            const cT = new ResizeObserver((() => {
-              yT(TT.clientWidth / Math.max(1, kT.offsetWidth))
+          (0, Yq.useEffect)((() => {
+            const qq = uq.current,
+              Eq = Bq.current;
+            if (!qq || !Eq) return;
+            const gq = new ResizeObserver((() => {
+              xq(qq.clientWidth / Math.max(1, Eq.offsetWidth))
             }));
-            return cT.observe(TT), () => {
-              cT.disconnect()
+            return gq.observe(qq), () => {
+              gq.disconnect()
             }
-          }), []), (0, lT.useEffect)((() => {
-            var TT;
-            if ("playing" !== cT) return;
-            let lT = !1;
-            const KT = new Ek.g[kT](Zk[kT], (TT => {
-              lT = !0, xT(!1), MT(TT ? "succeeded" : "failed")
+          }), []), (0, Yq.useEffect)((() => {
+            var qq;
+            if ("playing" !== gq) return;
+            let Yq = !1;
+            const Oq = new zE.d[Eq](SE[Eq], (qq => {
+              Yq = !0, cq(!1), lq(qq ? "succeeded" : "failed")
             }), (() => {}));
-            CT.current = KT;
-            let OT = 0,
-              yT = performance.now(),
-              fT = requestAnimationFrame((function TT(kT) {
-                for (OT += Math.min(.25, (kT - yT) / 1e3), yT = kT; OT >= Kc && !lT;) OT -= Kc, KT.handleTick(Kc);
-                for (const cT of jT.current) cT();
-                lT || (fT = requestAnimationFrame(TT))
+            Wq.current = Oq;
+            let mq = 0,
+              xq = performance.now(),
+              Aq = requestAnimationFrame((function qq(Eq) {
+                for (mq += Math.min(.25, (Eq - xq) / 1e3), xq = Eq; mq >= lg && !Yq;) mq -= lg, Oq.handleTick(lg);
+                for (const gq of Nq.current) gq();
+                Yq || (Aq = requestAnimationFrame(qq))
               }));
-            return null === (TT = IT.current) || void 0 === TT || TT.focus({
+            return null === (qq = uq.current) || void 0 === qq || qq.focus({
               preventScroll: !0
             }), () => {
-              cancelAnimationFrame(fT), KT.tearDown(), CT.current = null, tT.current = !1
+              cancelAnimationFrame(Aq), Oq.tearDown(), Wq.current = null, Vq.current = !1
             }
-          }), [cT, kT]), (0, lT.useEffect)((() => {
-            if (fT) return;
-            const TT = setTimeout((() => {
-              xT(!0)
-            }), Oc);
+          }), [gq, Eq]), (0, Yq.useEffect)((() => {
+            if (Aq) return;
+            const qq = setTimeout((() => {
+              cq(!0)
+            }), Og);
             return () => {
-              clearTimeout(TT)
+              clearTimeout(qq)
             }
-          }), [fT]);
-          const ST = TT => {
-            var kT;
-            "playing" === cT && tT.current !== TT && (tT.current = TT, null === (kT = CT.current) || void 0 === kT || kT.handleMouseInput(TT))
+          }), [Aq]);
+          const oq = qq => {
+            var Eq;
+            "playing" === gq && Vq.current !== qq && (Vq.current = qq, null === (Eq = Wq.current) || void 0 === Eq || Eq.handleMouseInput(qq))
           };
-          return (0, vT.jsxs)("div", {
+          return (0, aq.jsxs)("div", {
             className: "DocsQteDemo",
-            children: [(0, vT.jsxs)("div", {
-              ref: IT,
-              className: KT()("DocsQteStage", {
-                Playing: "playing" === cT
+            children: [(0, aq.jsxs)("div", {
+              ref: uq,
+              className: Oq()("DocsQteStage", {
+                Playing: "playing" === gq
               }),
-              tabIndex: "playing" === cT ? 0 : -1,
-              role: "playing" === cT ? "button" : void 0,
-              "aria-label": "playing" === cT ? `${kT} quick time event: click or press Space` : void 0,
-              onPointerDown: TT => {
-                0 === TT.button && ST(!0)
+              tabIndex: "playing" === gq ? 0 : -1,
+              role: "playing" === gq ? "button" : void 0,
+              "aria-label": "playing" === gq ? `${Eq} quick time event: click or press Space` : void 0,
+              onPointerDown: qq => {
+                0 === qq.button && oq(!0)
               },
               onPointerUp: () => {
-                ST(!1)
+                oq(!1)
               },
               onPointerLeave: () => {
-                ST(!1)
+                oq(!1)
               },
               onPointerCancel: () => {
-                ST(!1)
+                oq(!1)
               },
-              onKeyDown: TT => {
-                "playing" !== cT || " " !== TT.key && "Enter" !== TT.key || (TT.preventDefault(), ST(!0))
+              onKeyDown: qq => {
+                "playing" !== gq || " " !== qq.key && "Enter" !== qq.key || (qq.preventDefault(), oq(!0))
               },
-              onKeyUp: TT => {
-                "playing" !== cT || " " !== TT.key && "Enter" !== TT.key || ST(!1)
+              onKeyUp: qq => {
+                "playing" !== gq || " " !== qq.key && "Enter" !== qq.key || oq(!1)
               },
-              children: [(0, vT.jsx)("div", {
-                ref: AT,
+              children: [(0, aq.jsx)("div", {
+                ref: Bq,
                 className: "DocsQteScreen",
                 style: {
-                  transform: `scale(${OT})`
+                  transform: `scale(${mq})`
                 },
-                children: "playing" === cT && (0, vT.jsx)(Vk.d.Provider, {
-                  value: QT,
-                  children: (0, vT.jsx)(Gk.e, {
+                children: "playing" === gq && (0, aq.jsx)(TE.b.Provider, {
+                  value: Hq,
+                  children: (0, aq.jsx)(ME.d, {
                     qte: {
-                      type: kT,
-                      parameters: Zk[kT]
+                      type: Eq,
+                      parameters: SE[Eq]
                     }
                   })
                 })
-              }), "playing" !== cT && (0, vT.jsxs)("div", {
+              }), "playing" !== gq && (0, aq.jsxs)("div", {
                 className: "DocsQteOverlay",
-                children: ["ready" !== cT && (0, vT.jsxs)("div", {
-                  className: KT()("DocsQteResult", "succeeded" === cT ? "Succeeded" : "Failed"),
-                  children: [(0, vT.jsx)(hT, {
-                    name: "succeeded" === cT ? "check" : "cross",
+                children: ["ready" !== gq && (0, aq.jsxs)("div", {
+                  className: Oq()("DocsQteResult", "succeeded" === gq ? "Succeeded" : "Failed"),
+                  children: [(0, aq.jsx)(dq, {
+                    name: "succeeded" === gq ? "check" : "cross",
                     isTinted: !0
-                  }), (0, vT.jsx)("span", {
-                    children: "succeeded" === cT ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
+                  }), (0, aq.jsx)("span", {
+                    children: "succeeded" === gq ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
                   })]
-                }), (0, vT.jsxs)("button", {
+                }), (0, aq.jsxs)("button", {
                   type: "button",
                   className: "DocsQtePlay",
-                  disabled: !fT,
+                  disabled: !Aq,
                   onClick: () => {
-                    MT("playing")
+                    lq("playing")
                   },
-                  children: [(0, vT.jsx)(hT, {
-                    name: "ready" === cT ? "play" : "replay"
-                  }), (0, vT.jsx)("span", {
-                    children: "ready" === cT ? `Try ${kT}` : "Play again"
+                  children: [(0, aq.jsx)(dq, {
+                    name: "ready" === gq ? "play" : "replay"
+                  }), (0, aq.jsx)("span", {
+                    children: "ready" === gq ? `Try ${Eq}` : "Play again"
                   })]
                 })]
               })]
-            }), NT && !dk(NT) && (0, vT.jsxs)("p", {
+            }), jq && !LE(jq) && (0, aq.jsxs)("p", {
               className: "DocsQteCaption",
-              children: ["The ", (0, vT.jsx)("code", {
-                children: NT
+              children: ["The ", (0, aq.jsx)("code", {
+                children: jq
               }), " icon is a Bloxd item, so it shows in game only."]
             })]
           })
         }
 
-        function Ic(TT) {
+        function cg(qq) {
           let {
-            level: kT,
-            text: cT,
-            anchor: lT,
-            className: MT
-          } = TT;
-          const OT = `h${Math.min(kT,6)}`;
-          return (0, vT.jsxs)(OT, {
-                id: lT,
-                className: KT()("DocsHeading", MT),
-                children: [(0, vT.jsx)(Fk, {
-                      text: cT
-                    }), (0, vT.jsx)("a", {
+            level: Eq,
+            text: gq,
+            anchor: Yq,
+            className: lq
+          } = qq;
+          const mq = `h${Math.min(Eq,6)}`;
+          return (0, aq.jsxs)(mq, {
+                id: Yq,
+                className: Oq()("DocsHeading", lq),
+                children: [(0, aq.jsx)(yE, {
+                      text: gq
+                    }), (0, aq.jsx)("a", {
                         className: "DocsHeadingAnchor",
-                        href: `#${lT}`,
-                        "aria-label": `Link to ${cT.replace(/`/g,"")}`,children:"#"})]})}function Ac(TT){let{items:kT,ordered:cT}=TT;const lT=cT?"ol":"ul";return(0,vT.jsx)(lT,{className:"DocsList",children:kT.map(((TT,kT)=>(0,vT.jsxs)("li",{children:[(0,vT.jsx)(Fk,{text:TT.text}),TT.children.length>0&&(0,vT.jsx)(Ac,{items:TT.children,ordered:cT})]},kT)))})}function Cc(TT){const kT=TT[0],cT="paragraph"===(null===kT||void 0===kT?void 0:kT.kind)?kT.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(cT)?"warning":/^\*\*(tip|prefer)/.test(cT)?"tip":"note"}function jc(TT){let{block:kT}=TT;switch(kT.kind){case"heading":return(0,vT.jsx)(Ic,{level:kT.level,text:kT.text,anchor:kT.anchor});case"paragraph":return(0,vT.jsx)("p",{children:(0,vT.jsx)(Fk,{text:kT.text})});case"code":{const TT="ts"===kT.lang?function(TT){const kT=TT.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return kT&&Object.hasOwn(Zk,kT[1])?kT[1]:null}(kT.code):null;return(0,vT.jsxs)(vT.Fragment,{children:[(0,vT.jsx)(rT,{code:kT.code,lang:kT.lang}),TT&&(0,vT.jsx)(xc,{type:TT})]})}case"table":return(0,vT.jsx)("div",{className:"DocsTableScroll",children:(0,vT.jsxs)("table",{className:"DocsTable",children:[(0,vT.jsx)("thead",{children:(0,vT.jsx)("tr",{children:kT.header.map(((TT,kT)=>(0,vT.jsx)("th",{children:(0,vT.jsx)(Fk,{text:TT})},kT)))})}),(0,vT.jsx)("tbody",{children:kT.rows.map(((TT,kT)=>(0,vT.jsx)("tr",{children:TT.map(((TT,kT)=>(0,vT.jsx)("td",{children:(0,vT.jsx)(Fk,{text:TT})},kT)))},kT)))})]})});case"list":return(0,vT.jsx)(Ac,{items:kT.items,ordered:kT.ordered});case"quote":return(0,vT.jsx)("aside",{className:KT()("DocsCallout",Cc(kT.blocks)),children:(0,vT.jsx)(vc,{blocks:kT.blocks})});case"rule":return(0,vT.jsx)("hr",{className:"DocsRule"})}}function vc(TT){let{blocks:kT}=TT;return(0,vT.jsx)(vT.Fragment,{children:kT.map(((TT,kT)=>(0,vT.jsx)(jc,{block:TT},kT)))})}var tc=cT(4717),hc=cT(4720);function Nc(TT){return"blocks"===TT||"items"===TT}const Qc=new Map;function Sc(TT){let kT=Qc.get(TT);return kT||(kT=function(TT){const kT={entries:[],legend:[],notes:[],examples:[]};let cT=!1;for(const KT of TT.split(/\r?\n/).slice(1)){if(KT.startsWith("#")){const TT=KT.replace(/^# ?/,""),lT=TT.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);lT?kT.legend.push({code:lT[1],meaning:lT[2],usage:lT[3].trim()}):/^Examples:/.test(TT.trim())?cT=!0:cT&&TT.trim()?kT.examples.push(TT.trim()):TT.trim()&&!/^\s/.test(TT)&&kT.notes.push(TT.trim());continue}const TT=KT.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var lT,MT;TT&&kT.entries.push({name:TT[1],variants:null!==(lT=null===(MT=TT[2])||void 0===MT?void 0:MT.split(","))&&void 0!==lT?lT:[]})}return kT}("blocks"===TT?tc:hc),Qc.set(TT,kT)),kT}function Dc(TT){let{className:kT,value:cT,placeholder:lT,label:MT,onChange:KT,count:OT,children:yT}=TT;return(0,vT.jsxs)("div",{className:kT,children:[(0,vT.jsx)(hT,{name:"magnifying-glass"}),(0,vT.jsx)("input",{type:"search",value:cT,placeholder:lT,"aria-label":MT,onChange:TT=>{KT(TT.target.value)}}),yT,OT&&(0,vT.jsxs)("span",{className:"DocsFilterCount",children:[OT.visible," of ",OT.total]})]})}var ac=cT(1061);function Fc(TT){const kT=TT.trim().match(/^(` {
+                        href: `#${Yq}`,
+                        "aria-label": `Link to ${gq.replace(/`/g,"")}`,children:"#"})]})}function ug(qq){let{items:Eq,ordered:gq}=qq;const Yq=gq?"ol":"ul";return(0,aq.jsx)(Yq,{className:"DocsList",children:Eq.map(((qq,Eq)=>(0,aq.jsxs)("li",{children:[(0,aq.jsx)(yE,{text:qq.text}),qq.children.length>0&&(0,aq.jsx)(ug,{items:qq.children,ordered:gq})]},Eq)))})}function Bg(qq){const Eq=qq[0],gq="paragraph"===(null===Eq||void 0===Eq?void 0:Eq.kind)?Eq.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(gq)?"warning":/^\*\*(tip|prefer)/.test(gq)?"tip":"note"}function Wg(qq){let{block:Eq}=qq;switch(Eq.kind){case"heading":return(0,aq.jsx)(cg,{level:Eq.level,text:Eq.text,anchor:Eq.anchor});case"paragraph":return(0,aq.jsx)("p",{children:(0,aq.jsx)(yE,{text:Eq.text})});case"code":{const qq="ts"===Eq.lang?function(qq){const Eq=qq.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return Eq&&Object.hasOwn(SE,Eq[1])?Eq[1]:null}(Eq.code):null;return(0,aq.jsxs)(aq.Fragment,{children:[(0,aq.jsx)(tq,{code:Eq.code,lang:Eq.lang}),qq&&(0,aq.jsx)(Ag,{type:qq})]})}case"table":return(0,aq.jsx)("div",{className:"DocsTableScroll",children:(0,aq.jsxs)("table",{className:"DocsTable",children:[(0,aq.jsx)("thead",{children:(0,aq.jsx)("tr",{children:Eq.header.map(((qq,Eq)=>(0,aq.jsx)("th",{children:(0,aq.jsx)(yE,{text:qq})},Eq)))})}),(0,aq.jsx)("tbody",{children:Eq.rows.map(((qq,Eq)=>(0,aq.jsx)("tr",{children:qq.map(((qq,Eq)=>(0,aq.jsx)("td",{children:(0,aq.jsx)(yE,{text:qq})},Eq)))},Eq)))})]})});case"list":return(0,aq.jsx)(ug,{items:Eq.items,ordered:Eq.ordered});case"quote":return(0,aq.jsx)("aside",{className:Oq()("DocsCallout",Bg(Eq.blocks)),children:(0,aq.jsx)(Ng,{blocks:Eq.blocks})});case"rule":return(0,aq.jsx)("hr",{className:"DocsRule"})}}function Ng(qq){let{blocks:Eq}=qq;return(0,aq.jsx)(aq.Fragment,{children:Eq.map(((qq,Eq)=>(0,aq.jsx)(Wg,{block:qq},Eq)))})}var ag=gq(4579),Vg=gq(4581);function dg(qq){return"blocks"===qq||"items"===qq}const jg=new Map;function Hg(qq){let Eq=jg.get(qq);return Eq||(Eq=function(qq){const Eq={entries:[],legend:[],notes:[],examples:[]};let gq=!1;for(const Oq of qq.split(/\r?\n/).slice(1)){if(Oq.startsWith("#")){const qq=Oq.replace(/^# ?/,""),Yq=qq.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);Yq?Eq.legend.push({code:Yq[1],meaning:Yq[2],usage:Yq[3].trim()}):/^Examples:/.test(qq.trim())?gq=!0:gq&&qq.trim()?Eq.examples.push(qq.trim()):qq.trim()&&!/^\s/.test(qq)&&Eq.notes.push(qq.trim());continue}const qq=Oq.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var Yq,lq;qq&&Eq.entries.push({name:qq[1],variants:null!==(Yq=null===(lq=qq[2])||void 0===lq?void 0:lq.split(","))&&void 0!==Yq?Yq:[]})}return Eq}("blocks"===qq?ag:Vg),jg.set(qq,Eq)),Eq}function og(qq){let{className:Eq,value:gq,placeholder:Yq,label:lq,onChange:Oq,count:mq,children:xq}=qq;return(0,aq.jsxs)("div",{className:Eq,children:[(0,aq.jsx)(dq,{name:"magnifying-glass"}),(0,aq.jsx)("input",{type:"search",value:gq,placeholder:Yq,"aria-label":lq,onChange:qq=>{Oq(qq.target.value)}}),xq,mq&&(0,aq.jsxs)("span",{className:"DocsFilterCount",children:[mq.visible," of ",mq.total]})]})}var Pg=gq(1025);function Qg(qq){const Eq=qq.trim().match(/^(` {
                           1,
                           2
-                        })\ s * ([ ^ `]+?)\s*\1$/);return kT?kT[2]:null}function rc(TT){return"paragraph"===TT.kind&&""===TT.text.trim()}function Pc(TT){const kT={name:TT.heading.text,description:[],params:[],returns:null};let cT="description";for(const MT of TT.blocks)if(!rc(MT))if("heading"===MT.kind&&/^Parameters:?$/.test(MT.text))cT="params";else if("heading"===MT.kind&&/^Returns:?$/.test(MT.text))cT="returns",kT.returns={type:"",description:[]};else if("params"!==cT||"table"!==MT.kind){if("returns"===cT&&"paragraph"===MT.kind&&""===kT.returns.type){const TT=Fc(MT.text);if(null!==TT){kT.returns.type=TT.replaceAll("\\|","|");continue}}"returns"===cT?kT.returns.description.push(MT):kT.description.push(MT)}else for(const[TT,cT,KT]of MT.rows){var lT;kT.params.push({name:TT,type:null!==(lT=Fc(cT))&&void 0!==lT?lT:cT,description:null!==KT&&void 0!==KT?KT:""})}return kT}const wc=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function mc(TT){return TT.filter((TT=>!rc(TT)))}const bc=/^[\w][\w .'&!:()-]*$/,zc=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function Jc(TT){var kT;if("code"===TT.kind&&"text"===TT.lang){const kT=TT.code.split("\n").map((TT=>TT.trim())).filter(Boolean);return kT.length>0&&kT.every((TT=>bc.test(TT)))?kT.map((TT=>({name:TT}))):null}return"paragraph"===TT.kind&&zc.test(TT.text.trim())?[...TT.text.matchAll(/`([ ^ `]+)` / g)].flatMap((TT => TT[1].split(/,\s*/).map((TT => ({
-                              name: TT.trim()
-                            }))))): "table" === TT.kind && null !== (kT = TT.header[0]) && void 0 !== kT && kT.startsWith("Song") ? TT.rows.map((TT => {
-                              let [kT, cT] = TT;
+                        })\ s * ([ ^ `]+?)\s*\1$/);return Eq?Eq[2]:null}function yg(qq){return"paragraph"===qq.kind&&""===qq.text.trim()}function tg(qq){const Eq={name:qq.heading.text,description:[],params:[],returns:null};let gq="description";for(const lq of qq.blocks)if(!yg(lq))if("heading"===lq.kind&&/^Parameters:?$/.test(lq.text))gq="params";else if("heading"===lq.kind&&/^Returns:?$/.test(lq.text))gq="returns",Eq.returns={type:"",description:[]};else if("params"!==gq||"table"!==lq.kind){if("returns"===gq&&"paragraph"===lq.kind&&""===Eq.returns.type){const qq=Qg(lq.text);if(null!==qq){Eq.returns.type=qq.replaceAll("\\|","|");continue}}"returns"===gq?Eq.returns.description.push(lq):Eq.description.push(lq)}else for(const[qq,gq,Oq]of lq.rows){var Yq;Eq.params.push({name:qq,type:null!==(Yq=Qg(gq))&&void 0!==Yq?Yq:gq,description:null!==Oq&&void 0!==Oq?Oq:""})}return Eq}const rg=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function vg(qq){return qq.filter((qq=>!yg(qq)))}const hg=/^[\w][\w .'&!:()-]*$/,ng=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function bg(qq){var Eq;if("code"===qq.kind&&"text"===qq.lang){const Eq=qq.code.split("\n").map((qq=>qq.trim())).filter(Boolean);return Eq.length>0&&Eq.every((qq=>hg.test(qq)))?Eq.map((qq=>({name:qq}))):null}return"paragraph"===qq.kind&&ng.test(qq.text.trim())?[...qq.text.matchAll(/`([ ^ `]+)` / g)].flatMap((qq => qq[1].split(/,\s*/).map((qq => ({
+                              name: qq.trim()
+                            }))))): "table" === qq.kind && null !== (Eq = qq.header[0]) && void 0 !== Eq && Eq.startsWith("Song") ? qq.rows.map((qq => {
+                              let [Eq, gq] = qq;
                               return {
-                                name: kT.replace(/`/g, ""),
-                                caption: cT
+                                name: Eq.replace(/`/g, ""),
+                                caption: gq
                               }
                             })) : null
                           }
 
-                          function oc(TT) {
-                            const kT = [];
-                            for (const cT of TT) {
-                              const TT = Jc(cT),
-                                lT = kT.at(-1),
-                                MT = "table" === cT.kind;
-                              TT ? "names" === (null === lT || void 0 === lT ? void 0 : lT.kind) && lT.isSongs === MT ? lT.names.push(...TT) : kT.push({
+                          function ig(qq) {
+                            const Eq = [];
+                            for (const gq of qq) {
+                              const qq = bg(gq),
+                                Yq = Eq.at(-1),
+                                lq = "table" === gq.kind;
+                              qq ? "names" === (null === Yq || void 0 === Yq ? void 0 : Yq.kind) && Yq.isSongs === lq ? Yq.names.push(...qq) : Eq.push({
                                 kind: "names",
-                                names: TT,
-                                isSongs: MT
-                              }) : kT.push({
+                                names: qq,
+                                isSongs: lq
+                              }) : Eq.push({
                                 kind: "block",
-                                block: cT
+                                block: gq
                               })
                             }
-                            return kT
+                            return Eq
                           }
-                          const Hc = {
+                          const Zg = {
                             icons: "icon",
                             particles: "particle",
                             sounds: "sound",
@@ -1624,58 +1624,58 @@ export const modules = {
                             items: "item"
                           };
 
-                          function ec(TT, kT) {
-                            return `${Hc[TT]}-${(0,PT.p)(kT)}`
+                          function fg(qq, Eq) {
+                            return `${Zg[qq]}-${(0,rq.t)(Eq)}`
                           }
-                          const Gc = new WeakMap;
+                          const Mg = new WeakMap;
 
-                          function Vc(TT, kT, cT) {
-                            let lT = Gc.get(kT);
-                            if (!lT) {
-                              lT = new Map;
-                              const cT = new Set;
-                              for (const MT of (0, PT.q)(kT)) {
-                                const kT = oc(mc(MT.blocks)).map((kT => {
-                                  if ("block" === kT.kind) return kT;
+                          function Tg(qq, Eq, gq) {
+                            let Yq = Mg.get(Eq);
+                            if (!Yq) {
+                              Yq = new Map;
+                              const gq = new Set;
+                              for (const lq of (0, rq.u)(Eq)) {
+                                const Eq = ig(vg(lq.blocks)).map((Eq => {
+                                  if ("block" === Eq.kind) return Eq;
                                   return {
                                     kind: "names",
-                                    names: kT.names.map((kT => {
-                                      var lT, KT;
-                                      const OT = ec(TT, kT.name);
-                                      let yT = OT;
-                                      for (let TT = 2; cT.has(yT); TT++) yT = `${OT}-${TT}`;
-                                      return cT.add(yT), {
-                                        ...kT,
-                                        anchor: yT,
-                                        heading: null !== (lT = null === (KT = MT.heading) || void 0 === KT ? void 0 : KT.text) && void 0 !== lT ? lT : ""
+                                    names: Eq.names.map((Eq => {
+                                      var Yq, Oq;
+                                      const mq = fg(qq, Eq.name);
+                                      let xq = mq;
+                                      for (let qq = 2; gq.has(xq); qq++) xq = `${mq}-${qq}`;
+                                      return gq.add(xq), {
+                                        ...Eq,
+                                        anchor: xq,
+                                        heading: null !== (Yq = null === (Oq = lq.heading) || void 0 === Oq ? void 0 : Oq.text) && void 0 !== Yq ? Yq : ""
                                       }
                                     })),
-                                    isSongs: kT.isSongs
+                                    isSongs: Eq.isSongs
                                   }
                                 }));
-                                lT.set(MT.blocks, kT)
+                                Yq.set(lq.blocks, Eq)
                               }
-                              Gc.set(kT, lT)
+                              Mg.set(Eq, Yq)
                             }
-                            const MT = lT.get(cT);
-                            if (!MT) throw new Error("Gallery blocks must be the page's intro or one of its sections");
-                            return MT
+                            const lq = Yq.get(gq);
+                            if (!lq) throw new Error("Gallery blocks must be the page's intro or one of its sections");
+                            return lq
                           }
-                          const Ec = "/textures/docs/skinPreviews",
-                            Zc = [{
+                          const zg = "/textures/docs/skinPreviews",
+                            Sg = [{
                               heading: "NPC Skins",
                               prefix: "npc"
                             }, {
                               heading: "Poses",
                               prefix: "pose"
                             }];
-                          var uc = cT(4220),
-                            Xc = cT(4235);
+                          var pg = gq(4076),
+                            Gg = gq(4096);
 
-                          function dc(TT) {
-                            return Object.hasOwn(uc.d, TT) ? uc.d[TT] : null
+                          function Lg(qq) {
+                            return Object.hasOwn(pg.g, qq) ? pg.g[qq] : null
                           }
-                          const Lc = {
+                          const Jg = {
                             dir1: [-1, -1, -1],
                             dir2: [1, 1, 1],
                             texture: "bubble",
@@ -1697,453 +1697,453 @@ export const modules = {
                               factor: 1,
                               factor2: 1
                             }],
-                            blendMode: Xc.f.Standard
+                            blendMode: Gg.h.Standard
                           };
 
-                          function Rc(TT, kT, cT) {
-                            return kT + (cT - kT) * TT()
+                          function kg(qq, Eq, gq) {
+                            return Eq + (gq - Eq) * qq()
                           }
 
-                          function gc(TT, kT, cT) {
-                            return TT + (kT - TT) * cT
+                          function Rg(qq, Eq, gq) {
+                            return qq + (Eq - qq) * gq
                           }
 
-                          function Uc(TT) {
-                            return TT.length > 0 && "timeFraction" in TT[0]
+                          function Ug(qq) {
+                            return qq.length > 0 && "timeFraction" in qq[0]
                           }
 
-                          function Yc(TT, kT) {
-                            if (0 === TT.colorGradients.length) return [{
+                          function Fg(qq, Eq) {
+                            if (0 === qq.colorGradients.length) return [{
                               at: 0,
                               colour: [1, 1, 1, 1]
                             }];
-                            if (!Uc(TT.colorGradients)) {
-                              const cT = TT.colorGradients,
+                            if (!Ug(qq.colorGradients)) {
+                              const gq = qq.colorGradients,
                                 {
-                                  color: lT
-                                } = cT[Math.floor(kT() * cT.length) % cT.length];
+                                  color: Yq
+                                } = gq[Math.floor(Eq() * gq.length) % gq.length];
                               return [{
                                 at: 0,
-                                colour: [lT[0] / 255, lT[1] / 255, lT[2] / 255, 1]
+                                colour: [Yq[0] / 255, Yq[1] / 255, Yq[2] / 255, 1]
                               }]
                             }
-                            return [...TT.colorGradients].sort(((TT, kT) => TT.timeFraction - kT.timeFraction)).map((TT => {
-                              var cT, lT, MT;
-                              const KT = TT.minColor,
-                                OT = null !== (cT = TT.maxColor) && void 0 !== cT ? cT : KT,
-                                yT = kT(),
-                                fT = [gc(KT[0], OT[0], yT) / 255, gc(KT[1], OT[1], yT) / 255, gc(KT[2], OT[2], yT) / 255, gc(null !== (lT = KT[3]) && void 0 !== lT ? lT : 1, null !== (MT = OT[3]) && void 0 !== MT ? MT : 1, yT)];
+                            return [...qq.colorGradients].sort(((qq, Eq) => qq.timeFraction - Eq.timeFraction)).map((qq => {
+                              var gq, Yq, lq;
+                              const Oq = qq.minColor,
+                                mq = null !== (gq = qq.maxColor) && void 0 !== gq ? gq : Oq,
+                                xq = Eq(),
+                                Aq = [Rg(Oq[0], mq[0], xq) / 255, Rg(Oq[1], mq[1], xq) / 255, Rg(Oq[2], mq[2], xq) / 255, Rg(null !== (Yq = Oq[3]) && void 0 !== Yq ? Yq : 1, null !== (lq = mq[3]) && void 0 !== lq ? lq : 1, xq)];
                               return {
-                                at: TT.timeFraction,
-                                colour: fT
+                                at: qq.timeFraction,
+                                colour: Aq
                               }
                             }))
                           }
 
-                          function Bc(TT, kT, cT, lT) {
-                            const MT = Rc(lT, TT.minEmitPower, TT.maxEmitPower),
-                              KT = kT => Rc(lT, Math.min(TT.dir1[kT], TT.dir2[kT]), Math.max(TT.dir1[kT], TT.dir2[kT])) * MT,
-                              OT = [...TT.velocityGradients].sort(((TT, kT) => TT.timeFraction - kT.timeFraction)).map((TT => ({
-                                at: TT.timeFraction,
-                                factor: Rc(lT, TT.factor, TT.factor2)
+                          function sg(qq, Eq, gq, Yq) {
+                            const lq = kg(Yq, qq.minEmitPower, qq.maxEmitPower),
+                              Oq = Eq => kg(Yq, Math.min(qq.dir1[Eq], qq.dir2[Eq]), Math.max(qq.dir1[Eq], qq.dir2[Eq])) * lq,
+                              mq = [...qq.velocityGradients].sort(((qq, Eq) => qq.timeFraction - Eq.timeFraction)).map((qq => ({
+                                at: qq.timeFraction,
+                                factor: kg(Yq, qq.factor, qq.factor2)
                               })));
                             return {
-                              pos: [Rc(lT, kT[0], cT[0]), Rc(lT, kT[1], cT[1]), Rc(lT, kT[2], cT[2])],
-                              dir: [KT(0), KT(1), KT(2)],
+                              pos: [kg(Yq, Eq[0], gq[0]), kg(Yq, Eq[1], gq[1]), kg(Yq, Eq[2], gq[2])],
+                              dir: [Oq(0), Oq(1), Oq(2)],
                               age: 0,
-                              life: Rc(lT, TT.minLifeTime, TT.maxLifeTime),
-                              size: Rc(lT, TT.minSize, TT.maxSize),
-                              colours: Yc(TT, lT),
-                              velocityFactors: OT
+                              life: kg(Yq, qq.minLifeTime, qq.maxLifeTime),
+                              size: kg(Yq, qq.minSize, qq.maxSize),
+                              colours: Fg(qq, Yq),
+                              velocityFactors: mq
                             }
                           }
 
-                          function Wc(TT, kT, cT, lT) {
-                            if (kT < TT[0].at) return cT(Math.min(1, TT.length - 1));
-                            for (let MT = 0; MT < TT.length - 1; MT++)
-                              if (kT <= TT[MT + 1].at) {
-                                const KT = TT[MT + 1].at - TT[MT].at;
-                                return lT(cT(MT), cT(MT + 1), KT > 0 ? (kT - TT[MT].at) / KT : 1)
-                              } return cT(TT.length - 1)
+                          function Xg(qq, Eq, gq, Yq) {
+                            if (Eq < qq[0].at) return gq(Math.min(1, qq.length - 1));
+                            for (let lq = 0; lq < qq.length - 1; lq++)
+                              if (Eq <= qq[lq + 1].at) {
+                                const Oq = qq[lq + 1].at - qq[lq].at;
+                                return Yq(gq(lq), gq(lq + 1), Oq > 0 ? (Eq - qq[lq].at) / Oq : 1)
+                              } return gq(qq.length - 1)
                           }
 
-                          function nc(TT) {
-                            return Wc(TT.colours, TT.age / TT.life, (kT => TT.colours[kT].colour), ((TT, kT, cT) => [gc(TT[0], kT[0], cT), gc(TT[1], kT[1], cT), gc(TT[2], kT[2], cT), gc(TT[3], kT[3], cT)]))
+                          function wg(qq) {
+                            return Xg(qq.colours, qq.age / qq.life, (Eq => qq.colours[Eq].colour), ((qq, Eq, gq) => [Rg(qq[0], Eq[0], gq), Rg(qq[1], Eq[1], gq), Rg(qq[2], Eq[2], gq), Rg(qq[3], Eq[3], gq)]))
                           }
 
-                          function pc(TT, kT, cT) {
-                            if (TT.age += cT, TT.age >= TT.life) return !1;
-                            const lT = function(TT) {
-                              return 0 === TT.velocityFactors.length ? 1 : Wc(TT.velocityFactors, TT.age / TT.life, (kT => TT.velocityFactors[kT].factor), gc)
-                            }(TT) * cT;
-                            for (let KT = 0; KT < 3; KT++) {
-                              var MT;
-                              TT.pos[KT] += TT.dir[KT] * lT, TT.dir[KT] += (null !== (MT = kT[KT]) && void 0 !== MT ? MT : 0) * cT
+                          function Kg(qq, Eq, gq) {
+                            if (qq.age += gq, qq.age >= qq.life) return !1;
+                            const Yq = function(qq) {
+                              return 0 === qq.velocityFactors.length ? 1 : Xg(qq.velocityFactors, qq.age / qq.life, (Eq => qq.velocityFactors[Eq].factor), Rg)
+                            }(qq) * gq;
+                            for (let Oq = 0; Oq < 3; Oq++) {
+                              var lq;
+                              qq.pos[Oq] += qq.dir[Oq] * Yq, qq.dir[Oq] += (null !== (lq = Eq[Oq]) && void 0 !== lq ? lq : 0) * gq
                             }
                             return !0
                           }
 
-                          function ic(TT) {
-                            return String(Math.round(1e6 * TT) / 1e6)
+                          function Cg(qq) {
+                            return String(Math.round(1e6 * qq) / 1e6)
                           }
 
-                          function qc(TT) {
-                            return `[${TT.map(ic).join(", ")}]`
+                          function Ig(qq) {
+                            return `[${qq.map(Cg).join(", ")}]`
                           }
 
-                          function sc(TT, kT) {
-                            const cT = `${kT}    `;
-                            return `[\n${(Uc(TT)?TT.map((TT=>{const kT=[`${cT}    timeFraction: ${ic(TT.timeFraction)},`,`${cT}    minColor: ${qc(TT.minColor)},`];return TT.maxColor&&kT.push(`${cT}    maxColor: ${qc(TT.maxColor)},`),`${cT}{\n${kT.join("\n")}\n${cT}},`})):TT.map((TT=>`
+                          function eg(qq, Eq) {
+                            const gq = `${Eq}    `;
+                            return `[\n${(Ug(qq)?qq.map((qq=>{const Eq=[`${gq}    timeFraction: ${Cg(qq.timeFraction)},`,`${gq}    minColor: ${Ig(qq.minColor)},`];return qq.maxColor&&Eq.push(`${gq}    maxColor: ${Ig(qq.maxColor)},`),`${gq}{\n${Eq.join("\n")}\n${gq}},`})):qq.map((qq=>`
                             $ {
-                              cT
+                              gq
                             } {
                               color: $ {
-                                qc(TT.color)
+                                Ig(qq.color)
                               }
-                            }, `))).join("\n")}\n${kT}]`
+                            }, `))).join("\n")}\n${Eq}]`
                           }
-                          const Tl = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
-                            kl = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
-                          const cl = .6;
+                          const Dg = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
+                            qY = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
+                          const EY = .6;
 
-                          function ll(TT, kT) {
-                            return `${kT?"song":"sound"}:${TT}`
+                          function gY(qq, Eq) {
+                            return `${Eq?"song":"sound"}:${qq}`
                           }
-                          let Ml = {
+                          let YY = {
                               track: null,
-                              volume: cl
+                              volume: EY
                             },
-                            Kl = null,
-                            Ol = 0,
-                            yl = 0;
-                          const fl = new Set;
+                            lY = null,
+                            OY = 0,
+                            mY = 0;
+                          const xY = new Set;
 
-                          function xl(TT) {
-                            Ml = {
-                              ...Ml,
-                              ...TT
-                            }, fl.forEach((TT => {
-                              TT()
+                          function AY(qq) {
+                            YY = {
+                              ...YY,
+                              ...qq
+                            }, xY.forEach((qq => {
+                              qq()
                             }))
                           }
 
-                          function Il(TT) {
-                            Ml.track && xl({
+                          function cY(qq) {
+                            YY.track && AY({
                               track: {
-                                ...Ml.track,
-                                ...TT
+                                ...YY.track,
+                                ...qq
                               }
                             })
                           }
 
-                          function Al(TT) {
-                            const [kT, cT] = (0, lT.useState)((() => TT(Ml))), MT = (0, lT.useRef)(TT);
-                            return MT.current = TT, (0, lT.useEffect)((() => {
-                              const TT = () => {
-                                cT((() => MT.current(Ml)))
+                          function uY(qq) {
+                            const [Eq, gq] = (0, Yq.useState)((() => qq(YY))), lq = (0, Yq.useRef)(qq);
+                            return lq.current = qq, (0, Yq.useEffect)((() => {
+                              const qq = () => {
+                                gq((() => lq.current(YY)))
                               };
-                              return fl.add(TT), TT(), () => {
-                                fl.delete(TT)
+                              return xY.add(qq), qq(), () => {
+                                xY.delete(qq)
                               }
-                            }), []), kT
+                            }), []), Eq
                           }
 
-                          function Cl() {
-                            Ol++;
-                            const TT = Kl;
-                            Kl = null, null === TT || void 0 === TT || TT.stop()
+                          function BY() {
+                            OY++;
+                            const qq = lY;
+                            lY = null, null === qq || void 0 === qq || qq.stop()
                           }
 
-                          function jl(TT, kT) {
-                            let lT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-                            Cl();
-                            const MT = Ol,
+                          function WY(qq, Eq) {
+                            let Yq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+                            BY();
+                            const lq = OY,
                               {
-                                track: KT
-                              } = Ml,
-                              OT = KT && KT.name === TT && KT.isSong === kT ? KT.duration : 0;
-                            yl = lT, xl({
+                                track: Oq
+                              } = YY,
+                              mq = Oq && Oq.name === qq && Oq.isSong === Eq ? Oq.duration : 0;
+                            mY = Yq, AY({
                               track: {
-                                name: TT,
-                                isSong: kT,
+                                name: qq,
+                                isSong: Eq,
                                 status: "loading",
-                                duration: OT
+                                duration: mq
                               }
-                            }), Promise.all([cT.e(216), cT.e(241)]).then((() => cT(39432))).then((cT => {
+                            }), Promise.all([gq.e(217), gq.e(241)]).then((() => gq(39569))).then((gq => {
                               let {
-                                playDocsSound: KT
-                              } = cT;
-                              MT === Ol && (Kl = KT(TT, kT, Ml.volume, lT, {
-                                onPlay: TT => {
-                                  MT === Ol && Il({
+                                playDocsSound: Oq
+                              } = gq;
+                              lq === OY && (lY = Oq(qq, Eq, YY.volume, Yq, {
+                                onPlay: qq => {
+                                  lq === OY && cY({
                                     status: "playing",
-                                    duration: TT
+                                    duration: qq
                                   })
                                 },
-                                onEnd: TT => {
-                                  var kT, cT;
-                                  MT === Ol && (Kl = null, TT ? xl({
+                                onEnd: qq => {
+                                  var Eq, gq;
+                                  lq === OY && (lY = null, qq ? AY({
                                     track: null
-                                  }) : (yl = null !== (kT = null === (cT = Ml.track) || void 0 === cT ? void 0 : cT.duration) && void 0 !== kT ? kT : 0, Il({
+                                  }) : (mY = null !== (Eq = null === (gq = YY.track) || void 0 === gq ? void 0 : gq.duration) && void 0 !== Eq ? Eq : 0, cY({
                                     status: "paused"
                                   })))
                                 }
                               }))
-                            })).catch((kT => {
-                              console.error(`Could not play docs sound ${TT}`, kT), MT === Ol && xl({
+                            })).catch((Eq => {
+                              console.error(`Could not play docs sound ${qq}`, Eq), lq === OY && AY({
                                 track: null
                               })
                             }))
                           }
 
-                          function vl() {
+                          function NY() {
                             const {
-                              track: TT
-                            } = Ml;
-                            if (!TT) return;
-                            if ("playing" === TT.status && Kl) return yl = Kl.kN(), Kl.pause(), void Il({
+                              track: qq
+                            } = YY;
+                            if (!qq) return;
+                            if ("playing" === qq.status && lY) return mY = lY.Py(), lY.pause(), void cY({
                               status: "paused"
                             });
-                            if ("loading" === TT.status) return Cl(), void Il({
+                            if ("loading" === qq.status) return BY(), void cY({
                               status: "paused"
                             });
-                            if (Kl) return void Kl.resume();
-                            const kT = TT.duration > 0 && yl >= TT.duration - .05;
-                            jl(TT.name, TT.isSong, kT ? 0 : yl)
+                            if (lY) return void lY.resume();
+                            const Eq = qq.duration > 0 && mY >= qq.duration - .05;
+                            WY(qq.name, qq.isSong, Eq ? 0 : mY)
                           }
 
-                          function tl() {
-                            var TT;
-                            return Kl && "playing" === (null === (TT = Ml.track) || void 0 === TT ? void 0 : TT.status) ? Kl.kN() : yl
+                          function aY() {
+                            var qq;
+                            return lY && "playing" === (null === (qq = YY.track) || void 0 === qq ? void 0 : qq.status) ? lY.Py() : mY
                           }
 
-                          function hl(TT) {
-                            var kT;
-                            null === (kT = Kl) || void 0 === kT || kT.setVolume(TT), xl({
-                              volume: TT
+                          function VY(qq) {
+                            var Eq;
+                            null === (Eq = lY) || void 0 === Eq || Eq.setVolume(qq), AY({
+                              volume: qq
                             })
                           }
 
-                          function Nl() {
-                            Cl(), yl = 0, xl({
+                          function dY() {
+                            BY(), mY = 0, AY({
                               track: null
                             })
                           }
-                          const Ql = (0, lT.createContext)(null);
-                          let Sl = null;
+                          const jY = (0, Yq.createContext)(null);
+                          let HY = null;
 
-                          function Dl() {
-                            const [TT, kT] = (0, lT.useState)(null);
-                            return (0, lT.useEffect)((() => {
-                              let TT = !1;
-                              return Sl ??= Promise.all([cT.e(70), cT.e(73), cT.e(72), cT.e(71), cT.e(196), cT.e(97), cT.e(221)]).then((() => cT(39426))), Sl.then((cT => {
-                                TT || kT(cT)
-                              }), (TT => {
-                                console.error("Could not load the docs gallery's textures", TT), Sl = null
+                          function oY() {
+                            const [qq, Eq] = (0, Yq.useState)(null);
+                            return (0, Yq.useEffect)((() => {
+                              let qq = !1;
+                              return HY ??= Promise.all([gq.e(70), gq.e(73), gq.e(72), gq.e(71), gq.e(197), gq.e(97), gq.e(221)]).then((() => gq(39563))), HY.then((gq => {
+                                qq || Eq(gq)
+                              }), (qq => {
+                                console.error("Could not load the docs gallery's textures", qq), HY = null
                               })), () => {
-                                TT = !0
+                                qq = !0
                               }
-                            }), []), TT
+                            }), []), qq
                           }
-                          const al = 24,
-                            Fl = /^[a-z]+_(\d+(_\d+)?|none)$/;
+                          const PY = 24,
+                            QY = /^[a-z]+_(\d+(_\d+)?|none)$/;
 
-                          function rl(TT, kT) {
-                            const cT = "skins" === TT ? function(TT, kT) {
-                              const cT = Zc.find((kT => TT.startsWith(kT.heading)));
-                              return cT ? function(TT, kT) {
-                                return `${TT}-${kT}`
-                              }(cT.prefix, kT) : null
-                            }(kT.heading, kT.name) : null;
-                            return null === cT ? null : `${Ec}/${cT}.webp`
+                          function yY(qq, Eq) {
+                            const gq = "skins" === qq ? function(qq, Eq) {
+                              const gq = Sg.find((Eq => qq.startsWith(Eq.heading)));
+                              return gq ? function(qq, Eq) {
+                                return `${qq}-${Eq}`
+                              }(gq.prefix, Eq) : null
+                            }(Eq.heading, Eq.name) : null;
+                            return null === gq ? null : `${zg}/${gq}.webp`
                           }
 
-                          function Pl(TT) {
+                          function tY(qq) {
                             let {
-                              kind: kT,
-                              entry: cT,
-                              assets: MT,
-                              renderedUrl: OT
-                            } = TT;
+                              kind: Eq,
+                              entry: gq,
+                              assets: lq,
+                              renderedUrl: mq
+                            } = qq;
                             const {
-                              name: yT
-                            } = cT, [fT, xT] = (0, lT.useState)(!1);
-                            if ("icons" === kT && dk(yT)) return (0, vT.jsx)(ac.e, {
+                              name: xq
+                            } = gq, [Aq, cq] = (0, Yq.useState)(!1);
+                            if ("icons" === Eq && LE(xq)) return (0, aq.jsx)(Pg.d, {
                               className: "DocsTileIcon",
-                              name: yT
+                              name: xq
                             });
-                            let IT = null;
-                            var AT;
-                            if ("icons" === kT) IT = null !== (AT = null === MT || void 0 === MT ? void 0 : MT.getIngameIconUrl(yT)) && void 0 !== AT ? AT : null;
-                            else if ("particles" === kT) {
-                              var CT, jT, tT;
-                              IT = null !== (CT = null === MT || void 0 === MT ? void 0 : MT.getParticleTextureUrl(null !== (jT = null === (tT = dc(yT)) || void 0 === tT ? void 0 : tT.texture) && void 0 !== jT ? jT : yT)) && void 0 !== CT ? CT : null
-                            } else "skins" === kT && (IT = null !== OT && void 0 !== OT ? OT : Fl.test(yT) ? `/textures/charSkins/previews/${yT}_preview.png` : null);
-                            return !IT || fT ? (0, vT.jsx)(hT, {
+                            let uq = null;
+                            var Bq;
+                            if ("icons" === Eq) uq = null !== (Bq = null === lq || void 0 === lq ? void 0 : lq.getIngameIconUrl(xq)) && void 0 !== Bq ? Bq : null;
+                            else if ("particles" === Eq) {
+                              var Wq, Nq, Vq;
+                              uq = null !== (Wq = null === lq || void 0 === lq ? void 0 : lq.getParticleTextureUrl(null !== (Nq = null === (Vq = Lg(xq)) || void 0 === Vq ? void 0 : Vq.texture) && void 0 !== Nq ? Nq : xq)) && void 0 !== Wq ? Wq : null
+                            } else "skins" === Eq && (uq = null !== mq && void 0 !== mq ? mq : QY.test(xq) ? `/textures/charSkins/previews/${xq}_preview.png` : null);
+                            return !uq || Aq ? (0, aq.jsx)(dq, {
                               className: "DocsTileIcon Placeholder",
-                              name: "skins" === kT ? "person" : "image"
-                            }) : (0, vT.jsx)("img", {
-                              className: KT()("DocsTileImage", {
-                                Pixelated: "skins" !== kT
+                              name: "skins" === Eq ? "person" : "image"
+                            }) : (0, aq.jsx)("img", {
+                              className: Oq()("DocsTileImage", {
+                                Pixelated: "skins" !== Eq
                               }),
-                              src: IT,
-                              srcSet: IT === OT ? `${IT} 2x` : void 0,
+                              src: uq,
+                              srcSet: uq === mq ? `${uq} 2x` : void 0,
                               alt: "",
                               loading: "lazy",
                               onError: () => {
-                                console.warn(`Docs gallery: could not load ${IT}`), xT(!0)
+                                console.warn(`Docs gallery: could not load ${uq}`), cq(!0)
                               }
                             })
                           }
 
-                          function wl(TT) {
+                          function rY(qq) {
                             let {
-                              entry: kT,
-                              isSong: cT
-                            } = TT;
-                            const lT = Al((TT => {
+                              entry: Eq,
+                              isSong: gq
+                            } = qq;
+                            const Yq = uY((qq => {
                                 let {
-                                  track: lT
-                                } = TT;
-                                return (null === lT || void 0 === lT ? void 0 : lT.name) === kT.name && lT.isSong === cT ? lT.status : null
+                                  track: Yq
+                                } = qq;
+                                return (null === Yq || void 0 === Yq ? void 0 : Yq.name) === Eq.name && Yq.isSong === gq ? Yq.status : null
                               })),
-                              MT = null !== lT && "paused" !== lT;
-                            return (0, vT.jsxs)("button", {
+                              lq = null !== Yq && "paused" !== Yq;
+                            return (0, aq.jsxs)("button", {
                               type: "button",
-                              id: kT.anchor,
-                              className: KT()("DocsSoundTile", {
-                                Playing: MT
+                              id: Eq.anchor,
+                              className: Oq()("DocsSoundTile", {
+                                Playing: lq
                               }),
-                              "data-docs-track": ll(kT.name, cT),
-                              "aria-label": MT ? `Pause ${kT.name}` : `Play ${kT.name}`,
+                              "data-docs-track": gY(Eq.name, gq),
+                              "aria-label": lq ? `Pause ${Eq.name}` : `Play ${Eq.name}`,
                               onClick: () => {
-                                null !== lT ? vl() : jl(kT.name, cT)
+                                null !== Yq ? NY() : WY(Eq.name, gq)
                               },
-                              children: [(0, vT.jsx)("span", {
+                              children: [(0, aq.jsx)("span", {
                                 className: "DocsSoundPlay",
-                                children: (0, vT.jsx)(hT, {
-                                  name: MT ? "pause" : "play"
+                                children: (0, aq.jsx)(dq, {
+                                  name: lq ? "pause" : "play"
                                 })
-                              }), (0, vT.jsx)("code", {
+                              }), (0, aq.jsx)("code", {
                                 className: "DocsSoundName",
-                                children: kT.name
-                              }), kT.caption && (0, vT.jsx)("span", {
+                                children: Eq.name
+                              }), Eq.caption && (0, aq.jsx)("span", {
                                 className: "DocsSoundCaption",
-                                children: kT.caption
+                                children: Eq.caption
                               })]
                             })
                           }
 
-                          function ml(TT) {
+                          function vY(qq) {
                             let {
-                              kind: kT,
-                              names: cT,
-                              isSongs: MT
-                            } = TT;
-                            const OT = Dl(),
-                              [yT, fT] = QT(),
-                              xT = !1 === (null === yT || void 0 === yT ? void 0 : yT.failed) ? yT.text : null,
-                              IT = (0, lT.useContext)(Ql),
-                              [AT, CT] = (0, lT.useState)(""),
-                              jT = AT.trim().toLowerCase(),
-                              tT = jT ? cT.filter((TT => TT.name.toLowerCase().includes(jT))) : cT;
-                            return (0, vT.jsxs)("div", {
+                              kind: Eq,
+                              names: gq,
+                              isSongs: lq
+                            } = qq;
+                            const mq = oY(),
+                              [xq, Aq] = Hq(),
+                              cq = !1 === (null === xq || void 0 === xq ? void 0 : xq.failed) ? xq.text : null,
+                              uq = (0, Yq.useContext)(jY),
+                              [Bq, Wq] = (0, Yq.useState)(""),
+                              Nq = Bq.trim().toLowerCase(),
+                              Vq = Nq ? gq.filter((qq => qq.name.toLowerCase().includes(Nq))) : gq;
+                            return (0, aq.jsxs)("div", {
                               className: "DocsGallery",
-                              children: [cT.length > al && (0, vT.jsx)(Dc, {
+                              children: [gq.length > PY && (0, aq.jsx)(og, {
                                 className: "DocsGalleryFilter",
-                                value: AT,
-                                placeholder: `Filter ${cT.length} names\u2026`,
+                                value: Bq,
+                                placeholder: `Filter ${gq.length} names\u2026`,
                                 label: "Filter names",
-                                onChange: CT,
-                                count: jT ? {
-                                  visible: tT.length,
-                                  total: cT.length
+                                onChange: Wq,
+                                count: Nq ? {
+                                  visible: Vq.length,
+                                  total: gq.length
                                 } : null
-                              }), (0, vT.jsx)("div", {
-                                className: KT()("DocsGalleryGrid", `Kind-${kT}`, {
-                                  Songs: MT
+                              }), (0, aq.jsx)("div", {
+                                className: Oq()("DocsGalleryGrid", `Kind-${Eq}`, {
+                                  Songs: lq
                                 }),
-                                children: tT.map((TT => {
-                                  if ("sounds" === kT) return (0, vT.jsx)(wl, {
-                                    entry: TT,
-                                    isSong: MT
-                                  }, TT.anchor);
-                                  if (IT && "particles" === kT && dc(TT.name)) return (0, vT.jsxs)("button", {
+                                children: Vq.map((qq => {
+                                  if ("sounds" === Eq) return (0, aq.jsx)(rY, {
+                                    entry: qq,
+                                    isSong: lq
+                                  }, qq.anchor);
+                                  if (uq && "particles" === Eq && Lg(qq.name)) return (0, aq.jsxs)("button", {
                                     type: "button",
-                                    id: TT.anchor,
-                                    className: KT()("DocsTile Previewable", {
-                                      Copied: xT === TT.name
+                                    id: qq.anchor,
+                                    className: Oq()("DocsTile Previewable", {
+                                      Copied: cq === qq.name
                                     }),
-                                    title: `Play "${TT.name}" in the playground and copy its name`,
+                                    title: `Play "${qq.name}" in the playground and copy its name`,
                                     onClick: () => {
-                                      IT(TT.name), fT(TT.name)
+                                      uq(qq.name), Aq(qq.name)
                                     },
-                                    children: [(0, vT.jsxs)("span", {
+                                    children: [(0, aq.jsxs)("span", {
                                       className: "DocsTilePreview",
-                                      children: [(0, vT.jsx)(Pl, {
-                                        kind: kT,
-                                        entry: TT,
-                                        assets: OT,
+                                      children: [(0, aq.jsx)(tY, {
+                                        kind: Eq,
+                                        entry: qq,
+                                        assets: mq,
                                         renderedUrl: null
-                                      }), (0, vT.jsx)("span", {
+                                      }), (0, aq.jsx)("span", {
                                         className: "DocsTilePlayBadge",
-                                        children: (0, vT.jsx)(hT, {
+                                        children: (0, aq.jsx)(dq, {
                                           name: "play"
                                         })
                                       })]
-                                    }), (0, vT.jsx)("span", {
+                                    }), (0, aq.jsx)("span", {
                                       className: "DocsTileName",
-                                      children: xT === TT.name ? "Copied!" : TT.name
+                                      children: cq === qq.name ? "Copied!" : qq.name
                                     })]
-                                  }, TT.anchor);
-                                  const cT = rl(kT, TT);
-                                  return (0, vT.jsxs)("button", {
+                                  }, qq.anchor);
+                                  const gq = yY(Eq, qq);
+                                  return (0, aq.jsxs)("button", {
                                     type: "button",
-                                    id: TT.anchor,
-                                    className: KT()("DocsTile", {
-                                      Copied: xT === TT.name
+                                    id: qq.anchor,
+                                    className: Oq()("DocsTile", {
+                                      Copied: cq === qq.name
                                     }),
-                                    title: `Copy "${TT.name}"`,
+                                    title: `Copy "${qq.name}"`,
                                     onClick: () => {
-                                      fT(TT.name)
+                                      Aq(qq.name)
                                     },
-                                    children: [(0, vT.jsx)("span", {
-                                      className: KT()("DocsTilePreview", {
-                                        Rendered: null !== cT
+                                    children: [(0, aq.jsx)("span", {
+                                      className: Oq()("DocsTilePreview", {
+                                        Rendered: null !== gq
                                       }),
-                                      children: (0, vT.jsx)(Pl, {
-                                        kind: kT,
-                                        entry: TT,
-                                        assets: OT,
-                                        renderedUrl: cT
+                                      children: (0, aq.jsx)(tY, {
+                                        kind: Eq,
+                                        entry: qq,
+                                        assets: mq,
+                                        renderedUrl: gq
                                       })
-                                    }), (0, vT.jsx)("span", {
+                                    }), (0, aq.jsx)("span", {
                                       className: "DocsTileName",
-                                      children: xT === TT.name ? "Copied!" : TT.name
+                                      children: cq === qq.name ? "Copied!" : qq.name
                                     })]
-                                  }, TT.anchor)
+                                  }, qq.anchor)
                                 }))
                               })]
                             })
                           }
 
-                          function bl(TT) {
+                          function hY(qq) {
                             let {
-                              kind: kT,
-                              content: cT,
-                              blocks: lT
-                            } = TT;
-                            return (0, vT.jsx)(vT.Fragment, {
-                              children: Vc(kT, cT, lT).map(((TT, cT) => "block" === TT.kind ? (0, vT.jsx)(jc, {
-                                block: TT.block
-                              }, cT) : (0, vT.jsx)(ml, {
-                                kind: kT,
-                                names: TT.names,
-                                isSongs: TT.isSongs
-                              }, cT)))
+                              kind: Eq,
+                              content: gq,
+                              blocks: Yq
+                            } = qq;
+                            return (0, aq.jsx)(aq.Fragment, {
+                              children: Tg(Eq, gq, Yq).map(((qq, gq) => "block" === qq.kind ? (0, aq.jsx)(Wg, {
+                                block: qq.block
+                              }, gq) : (0, aq.jsx)(vY, {
+                                kind: Eq,
+                                names: qq.names,
+                                isSongs: qq.isSongs
+                              }, gq)))
                             })
                           }
-                          const zl = [{
+                          const nY = [{
                             pageId: "readme"
                           }, {
                             pageId: "snippets",
@@ -2161,420 +2161,420 @@ export const modules = {
                             countNoun: "options"
                           }];
 
-                          function Jl(TT) {
+                          function bY(qq) {
                             let {
-                              cards: kT = zl,
-                              label: cT = "Start here"
-                            } = TT;
-                            const MT = (0, lT.useContext)(jk);
-                            return (0, vT.jsx)("nav", {
+                              cards: Eq = nY,
+                              label: gq = "Start here"
+                            } = qq;
+                            const lq = (0, Yq.useContext)(NE);
+                            return (0, aq.jsx)("nav", {
                               className: "DocsLandingCards",
-                              "aria-label": cT,
-                              children: kT.map((TT => {
+                              "aria-label": gq,
+                              children: Eq.map((qq => {
                                 let {
-                                  pageId: kT,
-                                  countNoun: cT
-                                } = TT;
-                                const lT = uT(kT);
-                                return (0, vT.jsxs)(OT.e, {
-                                  to: UT(MT, lT),
+                                  pageId: Eq,
+                                  countNoun: gq
+                                } = qq;
+                                const Yq = Gq(Eq);
+                                return (0, aq.jsxs)(mq.c, {
+                                  to: Fq(lq, Yq),
                                   className: "DocsLandingCard",
-                                  children: [(0, vT.jsx)("span", {
+                                  children: [(0, aq.jsx)("span", {
                                     className: "DocsLandingCardIcon",
-                                    children: (0, vT.jsx)(hT, {
-                                      name: lT.icon
+                                    children: (0, aq.jsx)(dq, {
+                                      name: Yq.icon
                                     })
-                                  }), (0, vT.jsx)("span", {
+                                  }), (0, aq.jsx)("span", {
                                     className: "DocsLandingCardTitle",
-                                    children: lT.title
-                                  }), (0, vT.jsx)("span", {
+                                    children: Yq.title
+                                  }), (0, aq.jsx)("span", {
                                     className: "DocsLandingCardSummary",
-                                    children: lT.summary
-                                  }), cT && (0, vT.jsxs)("span", {
+                                    children: Yq.summary
+                                  }), gq && (0, aq.jsxs)("span", {
                                     className: "DocsLandingCardCount",
-                                    children: [dT(lT).sections.length, " ", cT]
+                                    children: [Jq(Yq).sections.length, " ", gq]
                                   })]
-                                }, kT)
+                                }, Eq)
                               }))
                             })
                           }
-                          const ol = 240;
+                          const iY = 240;
 
-                          function Hl(TT) {
+                          function ZY(qq) {
                             let {
-                              faces: kT
-                            } = TT;
-                            return (0, vT.jsxs)("span", {
+                              faces: Eq
+                            } = qq;
+                            return (0, aq.jsxs)("span", {
                               className: "DocsCube",
                               "aria-hidden": "true",
-                              children: [(0, vT.jsx)("span", {
+                              children: [(0, aq.jsx)("span", {
                                 className: "DocsCubeFace Top",
                                 style: {
-                                  backgroundImage: `url("${kT.top}")`
+                                  backgroundImage: `url("${Eq.top}")`
                                 }
-                              }), (0, vT.jsx)("span", {
+                              }), (0, aq.jsx)("span", {
                                 className: "DocsCubeFace Left",
                                 style: {
-                                  backgroundImage: `url("${kT.left}")`
+                                  backgroundImage: `url("${Eq.left}")`
                                 }
-                              }), (0, vT.jsx)("span", {
+                              }), (0, aq.jsx)("span", {
                                 className: "DocsCubeFace Right",
                                 style: {
-                                  backgroundImage: `url("${kT.right}")`
+                                  backgroundImage: `url("${Eq.right}")`
                                 }
                               })]
                             })
                           }
 
-                          function el(TT) {
+                          function fY(qq) {
                             let {
-                              src: kT
-                            } = TT;
-                            const [cT, MT] = (0, lT.useState)(!1);
-                            return cT ? null : (0, vT.jsx)("img", {
-                              src: kT,
+                              src: Eq
+                            } = qq;
+                            const [gq, lq] = (0, Yq.useState)(!1);
+                            return gq ? null : (0, aq.jsx)("img", {
+                              src: Eq,
                               alt: "",
                               loading: "lazy",
                               onError: () => {
-                                console.warn(`Docs catalogue: could not load ${kT}`), MT(!0)
+                                console.warn(`Docs catalogue: could not load ${Eq}`), lq(!0)
                               }
                             })
                           }
 
-                          function Gl(TT) {
+                          function MY(qq) {
                             let {
-                              kind: kT
-                            } = TT;
-                            const cT = Sc(kT),
-                              MT = Dl(),
-                              OT = (0, yT.s)(),
-                              [fT, xT] = (0, lT.useState)(""),
-                              [IT, AT] = (0, lT.useState)(null),
-                              [CT, jT] = (0, lT.useState)(ol),
-                              [tT, NT] = (0, lT.useState)(null),
-                              QT = (0, lT.useRef)(null),
-                              DT = fT.trim().toLowerCase();
-                            (0, lT.useEffect)((() => {
-                              const TT = (0, PT.o)(OT.hash),
-                                lT = cT.entries.find((cT => ec(kT, cT.name) === TT));
-                              if (lT) QT.current = lT.name, xT(lT.name), AT(null), NT(lT.name);
-                              else if (null !== QT.current) {
-                                const TT = QT.current;
-                                QT.current = null, xT((kT => kT === TT ? "" : kT)), NT(null)
+                              kind: Eq
+                            } = qq;
+                            const gq = Hg(Eq),
+                              lq = oY(),
+                              mq = (0, xq.q)(),
+                              [Aq, cq] = (0, Yq.useState)(""),
+                              [uq, Bq] = (0, Yq.useState)(null),
+                              [Wq, Nq] = (0, Yq.useState)(iY),
+                              [Vq, jq] = (0, Yq.useState)(null),
+                              Hq = (0, Yq.useRef)(null),
+                              Pq = Aq.trim().toLowerCase();
+                            (0, Yq.useEffect)((() => {
+                              const qq = (0, rq.s)(mq.hash),
+                                Yq = gq.entries.find((gq => fg(Eq, gq.name) === qq));
+                              if (Yq) Hq.current = Yq.name, cq(Yq.name), Bq(null), jq(Yq.name);
+                              else if (null !== Hq.current) {
+                                const qq = Hq.current;
+                                Hq.current = null, cq((Eq => Eq === qq ? "" : Eq)), jq(null)
                               }
-                            }), [cT, kT, OT.hash, OT.key]), (0, lT.useEffect)((() => {
-                              var TT;
-                              null !== tT && (null === (TT = document.getElementById(ec(kT, tT))) || void 0 === TT || TT.scrollIntoView({
+                            }), [gq, Eq, mq.hash, mq.key]), (0, Yq.useEffect)((() => {
+                              var qq;
+                              null !== Vq && (null === (qq = document.getElementById(fg(Eq, Vq))) || void 0 === qq || qq.scrollIntoView({
                                 block: "center"
                               }))
-                            }), [kT, tT]);
-                            const aT = cT.entries.filter((TT => (!DT || TT.name.toLowerCase().includes(DT)) && (!IT || TT.variants.includes(IT))));
-                            return (0, vT.jsxs)("div", {
+                            }), [Eq, Vq]);
+                            const Qq = gq.entries.filter((qq => (!Pq || qq.name.toLowerCase().includes(Pq)) && (!uq || qq.variants.includes(uq))));
+                            return (0, aq.jsxs)("div", {
                               className: "DocsCatalogue",
-                              children: [cT.notes.length > 0 && (0, vT.jsx)("div", {
+                              children: [gq.notes.length > 0 && (0, aq.jsx)("div", {
                                 className: "DocsProse",
-                                children: cT.notes.map((TT => (0, vT.jsx)("p", {
-                                  children: TT
-                                }, TT)))
-                              }), cT.legend.length > 0 && (0, vT.jsx)("div", {
+                                children: gq.notes.map((qq => (0, aq.jsx)("p", {
+                                  children: qq
+                                }, qq)))
+                              }), gq.legend.length > 0 && (0, aq.jsx)("div", {
                                 className: "DocsTableScroll",
-                                children: (0, vT.jsxs)("table", {
+                                children: (0, aq.jsxs)("table", {
                                   className: "DocsTable DocsVariantLegend",
-                                  children: [(0, vT.jsx)("thead", {
-                                    children: (0, vT.jsxs)("tr", {
-                                      children: [(0, vT.jsx)("th", {
+                                  children: [(0, aq.jsx)("thead", {
+                                    children: (0, aq.jsxs)("tr", {
+                                      children: [(0, aq.jsx)("th", {
                                         children: "Code"
-                                      }), (0, vT.jsx)("th", {
+                                      }), (0, aq.jsx)("th", {
                                         children: "Variant"
-                                      }), (0, vT.jsx)("th", {
+                                      }), (0, aq.jsx)("th", {
                                         children: "Name to use"
                                       })]
                                     })
-                                  }), (0, vT.jsx)("tbody", {
-                                    children: cT.legend.map((TT => (0, vT.jsxs)("tr", {
-                                      children: [(0, vT.jsx)("td", {
-                                        children: (0, vT.jsx)("button", {
+                                  }), (0, aq.jsx)("tbody", {
+                                    children: gq.legend.map((qq => (0, aq.jsxs)("tr", {
+                                      children: [(0, aq.jsx)("td", {
+                                        children: (0, aq.jsx)("button", {
                                           type: "button",
-                                          className: KT()("DocsVariantChip", {
-                                            Active: IT === TT.code
+                                          className: Oq()("DocsVariantChip", {
+                                            Active: uq === qq.code
                                           }),
-                                          "aria-pressed": IT === TT.code,
-                                          title: `Show only ${kT} with ${TT.meaning} variants`,
+                                          "aria-pressed": uq === qq.code,
+                                          title: `Show only ${Eq} with ${qq.meaning} variants`,
                                           onClick: () => {
-                                            AT(IT === TT.code ? null : TT.code)
+                                            Bq(uq === qq.code ? null : qq.code)
                                           },
-                                          children: TT.code
+                                          children: qq.code
                                         })
-                                      }), (0, vT.jsx)("td", {
-                                        children: TT.meaning
-                                      }), (0, vT.jsx)("td", {
-                                        children: (0, vT.jsx)("code", {
+                                      }), (0, aq.jsx)("td", {
+                                        children: qq.meaning
+                                      }), (0, aq.jsx)("td", {
+                                        children: (0, aq.jsx)("code", {
                                           className: "DocsInlineCode",
-                                          children: TT.usage
+                                          children: qq.usage
                                         })
                                       })]
-                                    }, TT.code)))
+                                    }, qq.code)))
                                   })]
                                 })
-                              }), cT.examples.length > 0 && (0, vT.jsx)(rT, {
+                              }), gq.examples.length > 0 && (0, aq.jsx)(tq, {
                                 lang: "text",
-                                code: cT.examples.join("\n")
-                              }), (0, vT.jsx)(Dc, {
+                                code: gq.examples.join("\n")
+                              }), (0, aq.jsx)(og, {
                                 className: "DocsFilterBar",
-                                value: fT,
-                                placeholder: `Search ${cT.entries.length} ${kT}\u2026`,
-                                label: `Search ${kT}`,
-                                onChange: TT => {
-                                  xT(TT), jT(ol)
+                                value: Aq,
+                                placeholder: `Search ${gq.entries.length} ${Eq}\u2026`,
+                                label: `Search ${Eq}`,
+                                onChange: qq => {
+                                  cq(qq), Nq(iY)
                                 },
-                                count: DT || IT ? {
-                                  visible: aT.length,
-                                  total: cT.entries.length
+                                count: Pq || uq ? {
+                                  visible: Qq.length,
+                                  total: gq.entries.length
                                 } : null,
-                                children: IT && (0, vT.jsxs)("button", {
+                                children: uq && (0, aq.jsxs)("button", {
                                   type: "button",
                                   className: "DocsVariantChip Active",
                                   onClick: () => {
-                                    AT(null)
+                                    Bq(null)
                                   },
-                                  children: [IT, " ", (0, vT.jsx)(hT, {
+                                  children: [uq, " ", (0, aq.jsx)(dq, {
                                     name: "cross"
                                   })]
                                 })
-                              }), (0, vT.jsx)("div", {
+                              }), (0, aq.jsx)("div", {
                                 className: "DocsCatalogueGrid",
-                                children: aT.slice(0, CT).map((TT => {
-                                  const cT = "blocks" === kT ? null === MT || void 0 === MT ? void 0 : MT.getBlockFaces(TT.name) : null,
-                                    lT = MT && !cT ? MT.getItemTextureUrl(TT.name) : null;
-                                  return (0, vT.jsxs)("div", {
-                                    id: ec(kT, TT.name),
-                                    className: KT()("DocsCatalogueTile", {
-                                      Linked: TT.name === tT
+                                children: Qq.slice(0, Wq).map((qq => {
+                                  const gq = "blocks" === Eq ? null === lq || void 0 === lq ? void 0 : lq.getBlockFaces(qq.name) : null,
+                                    Yq = lq && !gq ? lq.getItemTextureUrl(qq.name) : null;
+                                  return (0, aq.jsxs)("div", {
+                                    id: fg(Eq, qq.name),
+                                    className: Oq()("DocsCatalogueTile", {
+                                      Linked: qq.name === Vq
                                     }),
-                                    children: [(0, vT.jsxs)("span", {
+                                    children: [(0, aq.jsxs)("span", {
                                       className: "DocsCatalogueTexture",
-                                      children: [cT && (0, vT.jsx)(Hl, {
-                                        faces: cT
-                                      }), lT && (0, vT.jsx)(el, {
-                                        src: lT
+                                      children: [gq && (0, aq.jsx)(ZY, {
+                                        faces: gq
+                                      }), Yq && (0, aq.jsx)(fY, {
+                                        src: Yq
                                       })]
-                                    }), (0, vT.jsx)("span", {
+                                    }), (0, aq.jsx)("span", {
                                       className: "DocsCatalogueName",
-                                      children: TT.name
-                                    }), TT.variants.length > 0 && (0, vT.jsx)("span", {
+                                      children: qq.name
+                                    }), qq.variants.length > 0 && (0, aq.jsx)("span", {
                                       className: "DocsCatalogueVariants",
-                                      children: TT.variants.map((TT => (0, vT.jsx)("span", {
-                                        children: TT
-                                      }, TT)))
-                                    }), (0, vT.jsx)(ST, {
-                                      text: TT.name,
+                                      children: qq.variants.map((qq => (0, aq.jsx)("span", {
+                                        children: qq
+                                      }, qq)))
+                                    }), (0, aq.jsx)(oq, {
+                                      text: qq.name,
                                       className: "DocsCatalogueCopy"
                                     })]
-                                  }, TT.name)
+                                  }, qq.name)
                                 }))
-                              }), aT.length > CT && (0, vT.jsxs)("button", {
+                              }), Qq.length > Wq && (0, aq.jsxs)("button", {
                                 type: "button",
                                 className: "DocsShowMore",
                                 onClick: () => {
-                                  jT(aT.length)
+                                  Nq(Qq.length)
                                 },
-                                children: ["Show all ", aT.length]
-                              }), 0 === aT.length && (0, vT.jsxs)("p", {
+                                children: ["Show all ", Qq.length]
+                              }), 0 === Qq.length && (0, aq.jsxs)("p", {
                                 className: "DocsEmpty",
-                                children: ["No ", kT, " match."]
+                                children: ["No ", Eq, " match."]
                               })]
                             })
                           }
-                          var Vl = cT(4789),
-                            El = cT(1602);
-                          const Zl = .95 * Vl.b;
+                          var TY = gq(4643),
+                            zY = gq(1566);
+                          const SY = .95 * TY.e;
 
-                          function ul(TT) {
-                            return /^\s*```/.test(TT)
+                          function pY(qq) {
+                            return /^\s*```/.test(qq)
                           }
 
-                          function Xl(TT, kT) {
-                            const cT = [
+                          function GY(qq, Eq) {
+                            const gq = [
                               []
                             ];
-                            let lT = !1;
-                            for (const MT of TT.split("\n")) !lT && kT(MT) && cT.at(-1).length > 0 && cT.push([]), ul(MT) && (lT = !lT), cT.at(-1).push(MT);
-                            return cT.map((TT => TT.join("\n").trim())).filter(Boolean)
+                            let Yq = !1;
+                            for (const lq of qq.split("\n")) !Yq && Eq(lq) && gq.at(-1).length > 0 && gq.push([]), pY(lq) && (Yq = !Yq), gq.at(-1).push(lq);
+                            return gq.map((qq => qq.join("\n").trim())).filter(Boolean)
                           }
 
-                          function dl(TT, kT) {
-                            const cT = `${"#".repeat(kT)} `,
-                              lT = [];
-                            let MT = !1;
-                            for (const KT of TT.split("\n")) ul(KT) ? MT = !MT : !MT && KT.startsWith(cT) && lT.push(KT.slice(cT.length).trim());
-                            return lT
+                          function LY(qq, Eq) {
+                            const gq = `${"#".repeat(Eq)} `,
+                              Yq = [];
+                            let lq = !1;
+                            for (const Oq of qq.split("\n")) pY(Oq) ? lq = !lq : !lq && Oq.startsWith(gq) && Yq.push(Oq.slice(gq.length).trim());
+                            return Yq
                           }
 
-                          function Ll(TT) {
-                            return TT.markdown.replace(/^\s*# .*\n/, "").trim()
+                          function JY(qq) {
+                            return qq.markdown.replace(/^\s*# .*\n/, "").trim()
                           }
-                          class Rl {
-                            constructor(TT, kT) {
-                              this.origin = kT, this.pages = void 0, this.partPaths = new Map;
-                              const cT = TT.map((TT => {
-                                const kT = kT => this.resolveLinks(TT, kT).length,
-                                  cT = function(TT, kT) {
-                                    const cT = TT.map((TT => kT(TT.markdown) + 2)),
-                                      lT = cT.reduce(((TT, kT) => TT + kT), 0),
-                                      MT = lT / Math.ceil(lT / Zl),
-                                      KT = [];
-                                    let OT = 0;
-                                    return TT.forEach(((TT, kT) => {
-                                      const lT = cT[kT];
-                                      (0 === KT.length || OT + lT > Zl || OT + lT / 2 > MT) && (KT.push([]), OT = 0), KT.at(-1).push(TT), OT += lT
-                                    })), KT
-                                  }(function(TT, kT) {
-                                    return Xl(TT, (TT => TT.startsWith("## "))).flatMap((TT => {
-                                      var cT;
-                                      const lT = null !== (cT = dl(TT, 2)[0]) && void 0 !== cT ? cT : "";
-                                      if (kT(TT) <= Zl) return [{
-                                        markdown: TT,
-                                        section: lT
+                          class kY {
+                            constructor(qq, Eq) {
+                              this.origin = Eq, this.pages = void 0, this.partPaths = new Map;
+                              const gq = qq.map((qq => {
+                                const Eq = Eq => this.resolveLinks(qq, Eq).length,
+                                  gq = function(qq, Eq) {
+                                    const gq = qq.map((qq => Eq(qq.markdown) + 2)),
+                                      Yq = gq.reduce(((qq, Eq) => qq + Eq), 0),
+                                      lq = Yq / Math.ceil(Yq / SY),
+                                      Oq = [];
+                                    let mq = 0;
+                                    return qq.forEach(((qq, Eq) => {
+                                      const Yq = gq[Eq];
+                                      (0 === Oq.length || mq + Yq > SY || mq + Yq / 2 > lq) && (Oq.push([]), mq = 0), Oq.at(-1).push(qq), mq += Yq
+                                    })), Oq
+                                  }(function(qq, Eq) {
+                                    return GY(qq, (qq => qq.startsWith("## "))).flatMap((qq => {
+                                      var gq;
+                                      const Yq = null !== (gq = LY(qq, 2)[0]) && void 0 !== gq ? gq : "";
+                                      if (Eq(qq) <= SY) return [{
+                                        markdown: qq,
+                                        section: Yq
                                       }];
-                                      let MT = !1,
-                                        KT = "";
-                                      return Xl(TT, (TT => {
-                                        const kT = MT && "" !== TT.trim();
-                                        return MT = "" === TT.trim(), kT
-                                      })).map((TT => {
-                                        var kT;
-                                        const cT = dl(TT, 3),
-                                          MT = TT.startsWith("### ") ? cT[0] : KT;
-                                        return KT = null !== (kT = cT.at(-1)) && void 0 !== kT ? kT : KT, {
-                                          markdown: TT,
-                                          section: lT || MT
+                                      let lq = !1,
+                                        Oq = "";
+                                      return GY(qq, (qq => {
+                                        const Eq = lq && "" !== qq.trim();
+                                        return lq = "" === qq.trim(), Eq
+                                      })).map((qq => {
+                                        var Eq;
+                                        const gq = LY(qq, 3),
+                                          lq = qq.startsWith("### ") ? gq[0] : Oq;
+                                        return Oq = null !== (Eq = gq.at(-1)) && void 0 !== Eq ? Eq : Oq, {
+                                          markdown: qq,
+                                          section: Yq || lq
                                         }
                                       }))
                                     }))
-                                  }(Ll(TT), kT), kT);
+                                  }(JY(qq), Eq), Eq);
                                 return {
-                                  page: TT,
-                                  groups: cT.length > 1 ? cT : []
+                                  page: qq,
+                                  groups: gq.length > 1 ? gq : []
                                 }
                               }));
                               for (const {
-                                  page: lT,
-                                  groups: MT
+                                  page: Yq,
+                                  groups: lq
                                 }
-                                of cT) MT.forEach(((TT, kT) => {
-                                const cT = (0, Vl.t)(lT.slug, kT);
-                                for (const MT of TT.flatMap((TT => [...dl(TT.markdown, 2), ...dl(TT.markdown, 3)]))) {
-                                  const TT = `${lT.id}#${(0,PT.p)(MT)}`;
-                                  this.partPaths.has(TT) || this.partPaths.set(TT, cT)
+                                of gq) lq.forEach(((qq, Eq) => {
+                                const gq = (0, TY.u)(Yq.slug, Eq);
+                                for (const lq of qq.flatMap((qq => [...LY(qq.markdown, 2), ...LY(qq.markdown, 3)]))) {
+                                  const qq = `${Yq.id}#${(0,rq.t)(lq)}`;
+                                  this.partPaths.has(qq) || this.partPaths.set(qq, gq)
                                 }
                               }));
-                              this.pages = cT.map((TT => {
+                              this.pages = gq.map((qq => {
                                 let {
-                                  page: kT,
-                                  groups: cT
-                                } = TT;
+                                  page: Eq,
+                                  groups: gq
+                                } = qq;
                                 return {
-                                  page: kT,
-                                  path: (0, Vl.p)(kT.slug),
-                                  markdown: `# ${kT.title}\n\n${this.resolveLinks(kT,Ll(kT))}\n`,
-                                  parts: cT.map(((TT, lT) => this.renderPart(kT, TT, lT, cT.length)))
+                                  page: Eq,
+                                  path: (0, TY.s)(Eq.slug),
+                                  markdown: `# ${Eq.title}\n\n${this.resolveLinks(Eq,JY(Eq))}\n`,
+                                  parts: gq.map(((qq, Yq) => this.renderPart(Eq, qq, Yq, gq.length)))
                                 }
                               }))
                             }
-                            url(TT) {
-                              return `${this.origin}${TT}`
+                            url(qq) {
+                              return `${this.origin}${qq}`
                             }
-                            getPage(TT) {
-                              return this.pages.find((kT => kT.page.id === TT))
+                            getPage(qq) {
+                              return this.pages.find((Eq => Eq.page.id === qq))
                             }
                             oversizedFiles() {
-                              return this.pages.flatMap((TT => (TT.parts.length > 0 ? TT.parts : [{
-                                path: TT.path,
+                              return this.pages.flatMap((qq => (qq.parts.length > 0 ? qq.parts : [{
+                                path: qq.path,
                                 label: "",
-                                markdown: TT.markdown
-                              }]).filter((TT => TT.markdown.length > Vl.b))))
+                                markdown: qq.markdown
+                              }]).filter((qq => qq.markdown.length > TY.e))))
                             }
-                            markdownUrl(TT, kT) {
-                              const cT = kT && this.partPaths.get(`${TT.id}#${kT}`) || (0, Vl.p)(TT.slug);
-                              return this.url(kT ? `${cT}#${kT}` : cT)
+                            markdownUrl(qq, Eq) {
+                              const gq = Eq && this.partPaths.get(`${qq.id}#${Eq}`) || (0, TY.s)(qq.slug);
+                              return this.url(Eq ? `${gq}#${Eq}` : gq)
                             }
-                            resolveLinks(TT, kT) {
-                              return kT.replace(/\]\((#[^)]+)\)/g, ((kT, cT) => {
-                                var lT;
-                                const MT = null !== (lT = RT(cT)) && void 0 !== lT ? lT : this.samePageTarget(TT, cT);
-                                return MT ? `](${this.markdownUrl(MT.page,MT.anchor)})` : kT
+                            resolveLinks(qq, Eq) {
+                              return Eq.replace(/\]\((#[^)]+)\)/g, ((Eq, gq) => {
+                                var Yq;
+                                const lq = null !== (Yq = Rq(gq)) && void 0 !== Yq ? Yq : this.samePageTarget(qq, gq);
+                                return lq ? `](${this.markdownUrl(lq.page,lq.anchor)})` : Eq
                               }))
                             }
-                            samePageTarget(TT, kT) {
-                              const cT = (0, PT.p)(kT.slice(1));
-                              return LT(TT, cT) ? {
-                                page: TT,
-                                anchor: cT
+                            samePageTarget(qq, Eq) {
+                              const gq = (0, rq.t)(Eq.slice(1));
+                              return kq(qq, gq) ? {
+                                page: qq,
+                                anchor: gq
                               } : null
                             }
-                            renderPart(TT, kT, cT, lT) {
-                              const MT = function(TT) {
-                                  const kT = TT.map((TT => TT.section)).filter(Boolean);
-                                  if (0 === kT.length) return "";
-                                  const cT = kT[0],
-                                    lT = kT.at(-1);
-                                  return cT === lT ? cT : `${cT} to ${lT}`
-                                }(kT),
-                                KT = kT.map((TT => TT.markdown)).join("\n\n"),
-                                OT = MT ? `It covers ${MT}. ` : "",
-                                yT = `Part ${cT+1} of ${lT} of [${TT.title}](${this.url((0,Vl.p)(TT.slug))}). ${OT}[llms.txt](${this.url(Vl.e)}) lists every part.`;
+                            renderPart(qq, Eq, gq, Yq) {
+                              const lq = function(qq) {
+                                  const Eq = qq.map((qq => qq.section)).filter(Boolean);
+                                  if (0 === Eq.length) return "";
+                                  const gq = Eq[0],
+                                    Yq = Eq.at(-1);
+                                  return gq === Yq ? gq : `${gq} to ${Yq}`
+                                }(Eq),
+                                Oq = Eq.map((qq => qq.markdown)).join("\n\n"),
+                                mq = lq ? `It covers ${lq}. ` : "",
+                                xq = `Part ${gq+1} of ${Yq} of [${qq.title}](${this.url((0,TY.s)(qq.slug))}). ${mq}[llms.txt](${this.url(TY.i)}) lists every part.`;
                               return {
-                                path: (0, Vl.t)(TT.slug, cT),
-                                label: MT,
-                                markdown: `# ${TT.title}, part ${cT+1} of ${lT}\n\n${yT}\n\n${this.resolveLinks(TT,KT)}\n`
+                                path: (0, TY.u)(qq.slug, gq),
+                                label: lq,
+                                markdown: `# ${qq.title}, part ${gq+1} of ${Yq}\n\n${xq}\n\n${this.resolveLinks(qq,Oq)}\n`
                               }
                             }
-                            llmsTxt(TT) {
-                              const kT = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${gl(Vl.b)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
-                              for (const cT of ZT) {
-                                kT.push("", `## ${cT.title}`, "");
-                                for (const TT of cT.pageIds) {
-                                  const cT = this.getPage(TT),
+                            llmsTxt(qq) {
+                              const Eq = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${RY(TY.e)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
+                              for (const gq of pq) {
+                                Eq.push("", `## ${gq.title}`, "");
+                                for (const qq of gq.pageIds) {
+                                  const gq = this.getPage(qq),
                                     {
-                                      page: lT,
-                                      parts: MT
-                                    } = cT,
-                                    KT = `About ${gl(cT.markdown.length)} tokens${MT.length>0?`, in ${MT.length} parts:`:"."}`;
-                                  kT.push(`- [${lT.title}](${this.url(cT.path)}): ${lT.summary} ${KT}`), MT.forEach(((TT, cT) => {
-                                    kT.push(`  - [Part ${cT+1}${TT.label?`: ${TT.label}`:""}](${this.url(TT.path)})`)
+                                      page: Yq,
+                                      parts: lq
+                                    } = gq,
+                                    Oq = `About ${RY(gq.markdown.length)} tokens${lq.length>0?`, in ${lq.length} parts:`:"."}`;
+                                  Eq.push(`- [${Yq.title}](${this.url(gq.path)}): ${Yq.summary} ${Oq}`), lq.forEach(((qq, gq) => {
+                                    Eq.push(`  - [Part ${gq+1}${qq.label?`: ${qq.label}`:""}](${this.url(qq.path)})`)
                                   }))
                                 }
                               }
-                              return kT.push("", "## Optional", "", `- [Every page in one file](${this.url(Vl.c)}): About ${gl(TT.length)} tokens, for a model with a large context window.`, ""), kT.join("\n")
+                              return Eq.push("", "## Optional", "", `- [Every page in one file](${this.url(TY.g)}): About ${RY(qq.length)} tokens, for a model with a large context window.`, ""), Eq.join("\n")
                             }
                             llmsFullTxt() {
-                              return ZT.flatMap((TT => TT.pageIds.map((TT => this.getPage(TT).markdown)))).join("\n---\n\n")
+                              return pq.flatMap((qq => qq.pageIds.map((qq => this.getPage(qq).markdown)))).join("\n---\n\n")
                             }
                             files() {
-                              const TT = this.llmsFullTxt(),
-                                kT = this.llmsTxt(TT),
-                                cT = new Map([
-                                  [Vl.i, kT],
-                                  [Vl.e, kT],
-                                  [Vl.c, TT]
+                              const qq = this.llmsFullTxt(),
+                                Eq = this.llmsTxt(qq),
+                                gq = new Map([
+                                  [TY.o, Eq],
+                                  [TY.i, Eq],
+                                  [TY.g, qq]
                                 ]);
-                              for (const lT of this.pages) {
-                                cT.set(lT.path, lT.markdown);
-                                for (const TT of lT.parts) cT.set(TT.path, TT.markdown)
+                              for (const Yq of this.pages) {
+                                gq.set(Yq.path, Yq.markdown);
+                                for (const qq of Yq.parts) gq.set(qq.path, qq.markdown)
                               }
-                              return cT
+                              return gq
                             }
                           }
 
-                          function gl(TT) {
-                            return `${Math.max(1,Math.round(TT/4e3))}K`
+                          function RY(qq) {
+                            return `${Math.max(1,Math.round(qq/4e3))}K`
                           }
-                          let Ul = null;
+                          let UY = null;
 
-                          function Yl() {
-                            return Ul ??= new Rl(ET, El.b), Ul
+                          function FY() {
+                            return UY ??= new kY(Sq, zY.c), UY
                           }
-                          const Bl = [{
+                          const sY = [{
                             name: "ChatGPT",
                             url: "https://chatgpt.com/?hints=search&q="
                           }, {
@@ -2582,373 +2582,373 @@ export const modules = {
                             url: "https://claude.ai/new?q="
                           }];
 
-                          function Wl(TT) {
-                            return Yl().getPage(TT.id).parts.length > 0 ? `Read ${Vl.g}, then the parts of the Bloxd Code API's ${TT.title} page it lists, so I can ask questions about it.` : `Read ${El.b}${(0,Vl.p)(TT.slug)} so I can ask questions about it. ${Vl.g} lists every page of the Bloxd Code API docs.`
+                          function XY(qq) {
+                            return FY().getPage(qq.id).parts.length > 0 ? `Read ${TY.l}, then the parts of the Bloxd Code API's ${qq.title} page it lists, so I can ask questions about it.` : `Read ${zY.c}${(0,TY.s)(qq.slug)} so I can ask questions about it. ${TY.l} lists every page of the Bloxd Code API docs.`
                           }
 
-                          function nl(TT) {
+                          function wY(qq) {
                             let {
-                              page: kT
-                            } = TT;
-                            const [cT, lT] = QT();
-                            return (0, vT.jsxs)("div", {
+                              page: Eq
+                            } = qq;
+                            const [gq, Yq] = Hq();
+                            return (0, aq.jsxs)("div", {
                               className: "DocsPageAgentActions",
-                              children: [(0, vT.jsxs)("button", {
+                              children: [(0, aq.jsxs)("button", {
                                 type: "button",
                                 className: "DocsPageAgentAction",
                                 onClick: () => {
-                                  lT(Yl().getPage(kT.id).markdown)
+                                  Yq(FY().getPage(Eq.id).markdown)
                                 },
-                                children: [(0, vT.jsx)(hT, {
-                                  name: !1 === (null === cT || void 0 === cT ? void 0 : cT.failed) ? "check" : "copy"
-                                }), (0, vT.jsx)("span", {
-                                  children: cT ? cT.failed ? "Copy failed" : "Copied" : "Copy page"
+                                children: [(0, aq.jsx)(dq, {
+                                  name: !1 === (null === gq || void 0 === gq ? void 0 : gq.failed) ? "check" : "copy"
+                                }), (0, aq.jsx)("span", {
+                                  children: gq ? gq.failed ? "Copy failed" : "Copied" : "Copy page"
                                 })]
-                              }), Bl.map((TT => (0, vT.jsxs)("a", {
+                              }), sY.map((qq => (0, aq.jsxs)("a", {
                                 className: "DocsPageAgentAction",
-                                href: `${TT.url}${encodeURIComponent(Wl(kT))}`,
+                                href: `${qq.url}${encodeURIComponent(XY(Eq))}`,
                                 target: "_blank",
                                 rel: "noreferrer",
-                                children: [(0, vT.jsx)(hT, {
+                                children: [(0, aq.jsx)(dq, {
                                   name: "external-link"
-                                }), (0, vT.jsxs)("span", {
-                                  children: ["Open in ", TT.name]
+                                }), (0, aq.jsxs)("span", {
+                                  children: ["Open in ", qq.name]
                                 })]
-                              }, TT.name)))]
+                              }, qq.name)))]
                             })
                           }
 
-                          function pl(TT) {
-                            return `#${[0,1,2].map((kT=>Math.round(Math.min(255,Math.max(0,TT[kT]))).toString(16).padStart(2,"0"))).join("")}`
+                          function KY(qq) {
+                            return `#${[0,1,2].map((Eq=>Math.round(Math.min(255,Math.max(0,qq[Eq]))).toString(16).padStart(2,"0"))).join("")}`
                           }
 
-                          function il(TT) {
-                            return [parseInt(TT.slice(1, 3), 16), parseInt(TT.slice(3, 5), 16), parseInt(TT.slice(5, 7), 16)]
+                          function CY(qq) {
+                            return [parseInt(qq.slice(1, 3), 16), parseInt(qq.slice(3, 5), 16), parseInt(qq.slice(5, 7), 16)]
                           }
 
-                          function ql(TT) {
+                          function IY(qq) {
                             let {
-                              label: kT,
-                              min: cT,
-                              max: lT,
-                              step: MT,
-                              low: KT,
-                              high: OT,
-                              onChange: yT
-                            } = TT;
-                            return (0, vT.jsxs)("div", {
+                              label: Eq,
+                              min: gq,
+                              max: Yq,
+                              step: lq,
+                              low: Oq,
+                              high: mq,
+                              onChange: xq
+                            } = qq;
+                            return (0, aq.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, vT.jsxs)("div", {
+                              children: [(0, aq.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, vT.jsx)("span", {
-                                  children: kT
-                                }), (0, vT.jsx)("span", {
+                                children: [(0, aq.jsx)("span", {
+                                  children: Eq
+                                }), (0, aq.jsx)("span", {
                                   className: "DocsControlValue",
-                                  children: KT === OT ? KT : `${KT}\u2013${OT}`
+                                  children: Oq === mq ? Oq : `${Oq}\u2013${mq}`
                                 })]
-                              }), (0, vT.jsxs)("div", {
+                              }), (0, aq.jsxs)("div", {
                                 className: "DocsParticleRange",
-                                children: [(0, vT.jsx)("input", {
+                                children: [(0, aq.jsx)("input", {
                                   type: "range",
-                                  min: cT,
-                                  max: lT,
-                                  step: MT,
-                                  value: Math.min(lT, KT),
-                                  "aria-label": `Minimum ${kT.toLowerCase()}`,
-                                  onChange: TT => {
-                                    const kT = Number(TT.target.value);
-                                    yT(kT, Math.max(kT, OT))
+                                  min: gq,
+                                  max: Yq,
+                                  step: lq,
+                                  value: Math.min(Yq, Oq),
+                                  "aria-label": `Minimum ${Eq.toLowerCase()}`,
+                                  onChange: qq => {
+                                    const Eq = Number(qq.target.value);
+                                    xq(Eq, Math.max(Eq, mq))
                                   }
-                                }), (0, vT.jsx)("input", {
+                                }), (0, aq.jsx)("input", {
                                   type: "range",
-                                  min: cT,
-                                  max: lT,
-                                  step: MT,
-                                  value: Math.min(lT, OT),
-                                  "aria-label": `Maximum ${kT.toLowerCase()}`,
-                                  onChange: TT => {
-                                    const kT = Number(TT.target.value);
-                                    yT(Math.min(kT, KT), kT)
+                                  min: gq,
+                                  max: Yq,
+                                  step: lq,
+                                  value: Math.min(Yq, mq),
+                                  "aria-label": `Maximum ${Eq.toLowerCase()}`,
+                                  onChange: qq => {
+                                    const Eq = Number(qq.target.value);
+                                    xq(Math.min(Eq, Oq), Eq)
                                   }
                                 })]
                               })]
                             })
                           }
 
-                          function sl(TT) {
+                          function eY(qq) {
                             let {
-                              label: kT,
-                              min: cT,
-                              max: lT,
-                              step: MT,
-                              value: KT,
-                              onChange: OT,
-                              format: yT = String
-                            } = TT;
-                            return (0, vT.jsxs)("div", {
+                              label: Eq,
+                              min: gq,
+                              max: Yq,
+                              step: lq,
+                              value: Oq,
+                              onChange: mq,
+                              format: xq = String
+                            } = qq;
+                            return (0, aq.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, vT.jsxs)("div", {
+                              children: [(0, aq.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, vT.jsx)("span", {
-                                  children: kT
-                                }), (0, vT.jsx)("span", {
+                                children: [(0, aq.jsx)("span", {
+                                  children: Eq
+                                }), (0, aq.jsx)("span", {
                                   className: "DocsControlValue",
-                                  children: yT(KT)
+                                  children: xq(Oq)
                                 })]
-                              }), (0, vT.jsx)("input", {
+                              }), (0, aq.jsx)("input", {
                                 type: "range",
-                                min: cT,
-                                max: lT,
-                                step: MT,
-                                value: Math.min(lT, Math.max(cT, KT)),
-                                "aria-label": kT,
-                                onChange: TT => {
-                                  OT(Number(TT.target.value))
+                                min: gq,
+                                max: Yq,
+                                step: lq,
+                                value: Math.min(Yq, Math.max(gq, Oq)),
+                                "aria-label": Eq,
+                                onChange: qq => {
+                                  mq(Number(qq.target.value))
                                 }
                               })]
                             })
                           }
 
-                          function TM(TT) {
+                          function DY(qq) {
                             let {
-                              opts: kT,
-                              onChange: cT
-                            } = TT;
-                            const lT = kT.colorGradients;
-                            if (!Uc(lT)) return (0, vT.jsxs)("div", {
+                              opts: Eq,
+                              onChange: gq
+                            } = qq;
+                            const Yq = Eq.colorGradients;
+                            if (!Ug(Yq)) return (0, aq.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, vT.jsx)("div", {
+                              children: [(0, aq.jsx)("div", {
                                 className: "DocsControlLabel",
-                                children: (0, vT.jsx)("span", {
+                                children: (0, aq.jsx)("span", {
                                   children: "Colours, one per particle"
                                 })
-                              }), (0, vT.jsx)("div", {
+                              }), (0, aq.jsx)("div", {
                                 className: "DocsParticleSwatches",
-                                children: lT.map(((TT, kT) => (0, vT.jsx)("input", {
+                                children: Yq.map(((qq, Eq) => (0, aq.jsx)("input", {
                                   type: "color",
-                                  value: pl(TT.color),
-                                  "aria-label": `Colour ${kT+1}`,
-                                  onChange: TT => {
-                                    const MT = [...lT];
-                                    MT[kT] = {
-                                      color: il(TT.target.value)
-                                    }, cT(MT)
+                                  value: KY(qq.color),
+                                  "aria-label": `Colour ${Eq+1}`,
+                                  onChange: qq => {
+                                    const lq = [...Yq];
+                                    lq[Eq] = {
+                                      color: CY(qq.target.value)
+                                    }, gq(lq)
                                   }
-                                }, kT)))
+                                }, Eq)))
                               })]
                             });
-                            const MT = (TT, kT) => {
-                              const MT = [...lT];
-                              MT[TT] = kT, cT(MT)
+                            const lq = (qq, Eq) => {
+                              const lq = [...Yq];
+                              lq[qq] = Eq, gq(lq)
                             };
-                            return (0, vT.jsxs)("div", {
+                            return (0, aq.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, vT.jsxs)("div", {
+                              children: [(0, aq.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, vT.jsx)("span", {
+                                children: [(0, aq.jsx)("span", {
                                   children: "Colour over lifetime"
-                                }), (0, vT.jsx)("span", {
+                                }), (0, aq.jsx)("span", {
                                   className: "DocsControlValue",
                                   children: "min \xb7 max"
                                 })]
-                              }), lT.map(((TT, kT) => {
-                                var cT;
-                                const lT = null !== (cT = TT.maxColor) && void 0 !== cT ? cT : TT.minColor;
-                                return (0, vT.jsxs)("div", {
+                              }), Yq.map(((qq, Eq) => {
+                                var gq;
+                                const Yq = null !== (gq = qq.maxColor) && void 0 !== gq ? gq : qq.minColor;
+                                return (0, aq.jsxs)("div", {
                                   className: "DocsParticleStop",
-                                  children: [(0, vT.jsxs)("span", {
+                                  children: [(0, aq.jsxs)("span", {
                                     className: "DocsParticleStopTime",
-                                    children: [Math.round(100 * TT.timeFraction), "%"]
-                                  }), (0, vT.jsx)("span", {
+                                    children: [Math.round(100 * qq.timeFraction), "%"]
+                                  }), (0, aq.jsx)("span", {
                                     className: "DocsParticleStopBar",
                                     style: {
-                                      background: `linear-gradient(90deg, ${pl(TT.minColor)}, ${pl(lT)})`
+                                      background: `linear-gradient(90deg, ${KY(qq.minColor)}, ${KY(Yq)})`
                                     }
-                                  }), (0, vT.jsx)("input", {
+                                  }), (0, aq.jsx)("input", {
                                     type: "color",
-                                    value: pl(TT.minColor),
-                                    "aria-label": `Minimum colour at ${Math.round(100*TT.timeFraction)}%`,
-                                    onChange: cT => {
-                                      MT(kT, {
-                                        ...TT,
-                                        minColor: [...il(cT.target.value), TT.minColor[3]]
+                                    value: KY(qq.minColor),
+                                    "aria-label": `Minimum colour at ${Math.round(100*qq.timeFraction)}%`,
+                                    onChange: gq => {
+                                      lq(Eq, {
+                                        ...qq,
+                                        minColor: [...CY(gq.target.value), qq.minColor[3]]
                                       })
                                     }
-                                  }), (0, vT.jsx)("input", {
+                                  }), (0, aq.jsx)("input", {
                                     type: "color",
-                                    value: pl(lT),
-                                    "aria-label": `Maximum colour at ${Math.round(100*TT.timeFraction)}%`,
-                                    onChange: cT => {
-                                      MT(kT, {
-                                        ...TT,
-                                        maxColor: [...il(cT.target.value), lT[3]]
+                                    value: KY(Yq),
+                                    "aria-label": `Maximum colour at ${Math.round(100*qq.timeFraction)}%`,
+                                    onChange: gq => {
+                                      lq(Eq, {
+                                        ...qq,
+                                        maxColor: [...CY(gq.target.value), Yq[3]]
                                       })
                                     }
                                   })]
-                                }, kT)
+                                }, Eq)
                               }))]
                             })
                           }
-                          const kM = [-.5, -.5, -.5],
-                            cM = [.5, .5, .5],
-                            lM = [0, 1, 2, 3, 4, 5, 6, 7].map((TT => [1 & TT ? cM[0] : kM[0], 2 & TT ? cM[1] : kM[1], 4 & TT ? cM[2] : kM[2]]));class MM {
+                          const ql = [-.5, -.5, -.5],
+                            El = [.5, .5, .5],
+                            gl = [0, 1, 2, 3, 4, 5, 6, 7].map((qq => [1 & qq ? El[0] : ql[0], 2 & qq ? El[1] : ql[1], 4 & qq ? El[2] : ql[2]]));class Yl {
                             constructor() {
                               this.tints = new WeakMap
                             }
-                            get(TT, kT, cT, lT) {
-                              const MT = Math.round(31 * kT),
-                                KT = Math.round(31 * cT),
-                                OT = Math.round(31 * lT),
-                                yT = `${MT}|${KT}|${OT}`;
-                              let fT = this.tints.get(TT);
-                              (!fT || fT.size > 2e3) && (fT = new Map, this.tints.set(TT, fT));
-                              let xT = fT.get(yT);
-                              if (xT) return xT;
-                              xT = document.createElement("canvas"), xT.width = TT.naturalWidth || 16, xT.height = TT.naturalHeight || 16;
-                              const IT = xT.getContext("2d");
-                              return IT ? (IT.imageSmoothingEnabled = !1, IT.drawImage(TT, 0, 0, xT.width, xT.height), IT.globalCompositeOperation = "multiply", IT.fillStyle = `rgb(${MT/31*255}, ${KT/31*255}, ${OT/31*255})`, IT.fillRect(0, 0, xT.width, xT.height), IT.globalCompositeOperation = "destination-in", IT.drawImage(TT, 0, 0, xT.width, xT.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), fT.set(yT, xT), xT
+                            get(qq, Eq, gq, Yq) {
+                              const lq = Math.round(31 * Eq),
+                                Oq = Math.round(31 * gq),
+                                mq = Math.round(31 * Yq),
+                                xq = `${lq}|${Oq}|${mq}`;
+                              let Aq = this.tints.get(qq);
+                              (!Aq || Aq.size > 2e3) && (Aq = new Map, this.tints.set(qq, Aq));
+                              let cq = Aq.get(xq);
+                              if (cq) return cq;
+                              cq = document.createElement("canvas"), cq.width = qq.naturalWidth || 16, cq.height = qq.naturalHeight || 16;
+                              const uq = cq.getContext("2d");
+                              return uq ? (uq.imageSmoothingEnabled = !1, uq.drawImage(qq, 0, 0, cq.width, cq.height), uq.globalCompositeOperation = "multiply", uq.fillStyle = `rgb(${lq/31*255}, ${Oq/31*255}, ${mq/31*255})`, uq.fillRect(0, 0, cq.width, cq.height), uq.globalCompositeOperation = "destination-in", uq.drawImage(qq, 0, 0, cq.width, cq.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), Aq.set(xq, cq), cq
                             }
                           }
 
-                          function KM(TT) {
+                          function ll(qq) {
                             let {
-                              opts: kT,
-                              textureUrl: cT,
-                              burst: MT,
-                              paused: KT
-                            } = TT;
-                            const OT = (0, lT.useRef)(null),
-                              yT = (0, lT.useRef)(kT);
-                            yT.current = kT;
-                            const fT = (0, lT.useRef)(KT);
-                            fT.current = KT;
-                            const xT = (0, lT.useRef)(null),
-                              IT = (0, lT.useRef)(null),
-                              AT = (0, lT.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(TT) {
-                                let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
-                                const cT = [-.5, -.5, -.5],
-                                  lT = [.5, .5, .5];
-                                let MT = .5;
-                                for (let KT = 0; KT < 40; KT++) {
-                                  const KT = Bc(TT, cT, lT, kT),
-                                    OT = Math.max(KT.life / 30, .001);
-                                  for (; pc(KT, TT.gravity, OT);) MT = Math.max(MT, Math.hypot(KT.pos[0], KT.pos[1], KT.pos[2]) + KT.size / 2)
+                              opts: Eq,
+                              textureUrl: gq,
+                              burst: lq,
+                              paused: Oq
+                            } = qq;
+                            const mq = (0, Yq.useRef)(null),
+                              xq = (0, Yq.useRef)(Eq);
+                            xq.current = Eq;
+                            const Aq = (0, Yq.useRef)(Oq);
+                            Aq.current = Oq;
+                            const cq = (0, Yq.useRef)(null),
+                              uq = (0, Yq.useRef)(null),
+                              Bq = (0, Yq.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(qq) {
+                                let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
+                                const gq = [-.5, -.5, -.5],
+                                  Yq = [.5, .5, .5];
+                                let lq = .5;
+                                for (let Oq = 0; Oq < 40; Oq++) {
+                                  const Oq = sg(qq, gq, Yq, Eq),
+                                    mq = Math.max(Oq.life / 30, .001);
+                                  for (; Kg(Oq, qq.gravity, mq);) lq = Math.max(lq, Math.hypot(Oq.pos[0], Oq.pos[1], Oq.pos[2]) + Oq.size / 2)
                                 }
-                                return MT
-                              }(kT)))), [kT]),
-                              CT = (0, lT.useRef)(AT);
-                            return CT.current = AT, (0, lT.useEffect)((() => {
-                              if (xT.current = null, !cT) return;
-                              const TT = new Image;
-                              let kT = !1;
-                              return TT.onload = () => {
-                                kT || (xT.current = TT)
-                              }, TT.onerror = () => {
-                                console.warn(`Particle preview: could not load the texture ${cT}`)
-                              }, TT.src = cT, () => {
-                                kT = !0
+                                return lq
+                              }(Eq)))), [Eq]),
+                              Wq = (0, Yq.useRef)(Bq);
+                            return Wq.current = Bq, (0, Yq.useEffect)((() => {
+                              if (cq.current = null, !gq) return;
+                              const qq = new Image;
+                              let Eq = !1;
+                              return qq.onload = () => {
+                                Eq || (cq.current = qq)
+                              }, qq.onerror = () => {
+                                console.warn(`Particle preview: could not load the texture ${gq}`)
+                              }, qq.src = gq, () => {
+                                Eq = !0
                               }
-                            }), [cT]), (0, lT.useEffect)((() => {
-                              var TT;
-                              null === (TT = IT.current) || void 0 === TT || TT.call(IT)
-                            }), [kT, MT]), (0, lT.useEffect)((() => {
-                              const TT = OT.current,
-                                kT = null === TT || void 0 === TT ? void 0 : TT.getContext("2d");
-                              if (!TT || !kT) return void console.warn("Particle preview: no 2D canvas context to draw on");
-                              const cT = new MM;
-                              let lT = [],
-                                MT = 0,
-                                KT = -.7,
-                                AT = CT.current,
-                                jT = performance.now(),
-                                vT = 0,
-                                tT = !0,
-                                hT = null;
-                              const NT = () => {
-                                const TT = yT.current,
-                                  kT = Math.min(400, Math.max(0, Math.ceil(TT.manualEmitCount)));
-                                lT = [];
-                                for (let cT = 0; cT < kT; cT++) lT.push(Bc(TT, kM, cM, Math.random));
-                                MT = 0
+                            }), [gq]), (0, Yq.useEffect)((() => {
+                              var qq;
+                              null === (qq = uq.current) || void 0 === qq || qq.call(uq)
+                            }), [Eq, lq]), (0, Yq.useEffect)((() => {
+                              const qq = mq.current,
+                                Eq = null === qq || void 0 === qq ? void 0 : qq.getContext("2d");
+                              if (!qq || !Eq) return void console.warn("Particle preview: no 2D canvas context to draw on");
+                              const gq = new Yl;
+                              let Yq = [],
+                                lq = 0,
+                                Oq = -.7,
+                                Bq = Wq.current,
+                                Nq = performance.now(),
+                                aq = 0,
+                                Vq = !0,
+                                dq = null;
+                              const jq = () => {
+                                const qq = xq.current,
+                                  Eq = Math.min(400, Math.max(0, Math.ceil(qq.manualEmitCount)));
+                                Yq = [];
+                                for (let gq = 0; gq < Eq; gq++) Yq.push(sg(qq, ql, El, Math.random));
+                                lq = 0
                               };
-                              IT.current = NT, NT();
-                              const QT = OT => {
-                                vT = requestAnimationFrame(QT);
-                                const IT = Math.min(.05, (OT - jT) / 1e3);
-                                if (jT = OT, !tT) return;
-                                const ST = window.devicePixelRatio || 1,
-                                  DT = Math.round(TT.clientWidth * ST),
-                                  aT = Math.round(TT.clientHeight * ST);
-                                if (0 === DT || 0 === aT) return;
-                                TT.width === DT && TT.height === aT || (TT.width = DT, TT.height = aT);
-                                const FT = yT.current;
-                                null === hT && (KT += .18 * IT), AT += (CT.current - AT) * Math.min(1, 4 * IT);
-                                const rT = .6 * IT;
-                                lT = lT.filter((TT => pc(TT, FT.gravity, rT))), 0 !== lT.length || fT.current || (MT += IT, MT > .6 && NT());
-                                const PT = function(TT, kT, cT, lT) {
-                                  const MT = 3.2 * lT,
-                                    KT = .44 * Math.min(TT, kT) * MT / lT,
-                                    OT = Math.cos(cT),
-                                    yT = Math.sin(cT),
-                                    fT = Math.cos(.42),
-                                    xT = Math.sin(.42);
-                                  return (cT, lT, IT) => {
-                                    const AT = cT * yT + IT * OT,
-                                      CT = MT - (lT * xT + AT * fT);
-                                    if (CT < .05) return null;
-                                    const jT = KT / CT;
+                              uq.current = jq, jq();
+                              const Hq = mq => {
+                                aq = requestAnimationFrame(Hq);
+                                const uq = Math.min(.05, (mq - Nq) / 1e3);
+                                if (Nq = mq, !Vq) return;
+                                const oq = window.devicePixelRatio || 1,
+                                  Pq = Math.round(qq.clientWidth * oq),
+                                  Qq = Math.round(qq.clientHeight * oq);
+                                if (0 === Pq || 0 === Qq) return;
+                                qq.width === Pq && qq.height === Qq || (qq.width = Pq, qq.height = Qq);
+                                const yq = xq.current;
+                                null === dq && (Oq += .18 * uq), Bq += (Wq.current - Bq) * Math.min(1, 4 * uq);
+                                const tq = .6 * uq;
+                                Yq = Yq.filter((qq => Kg(qq, yq.gravity, tq))), 0 !== Yq.length || Aq.current || (lq += uq, lq > .6 && jq());
+                                const rq = function(qq, Eq, gq, Yq) {
+                                  const lq = 3.2 * Yq,
+                                    Oq = .44 * Math.min(qq, Eq) * lq / Yq,
+                                    mq = Math.cos(gq),
+                                    xq = Math.sin(gq),
+                                    Aq = Math.cos(.42),
+                                    cq = Math.sin(.42);
+                                  return (gq, Yq, uq) => {
+                                    const Bq = gq * xq + uq * mq,
+                                      Wq = lq - (Yq * cq + Bq * Aq);
+                                    if (Wq < .05) return null;
+                                    const Nq = Oq / Wq;
                                     return {
-                                      x: TT / 2 + (cT * OT - IT * yT) * jT,
-                                      y: kT / 2 - (lT * fT - AT * xT) * jT,
-                                      scale: jT,
-                                      depth: CT
+                                      x: qq / 2 + (gq * mq - uq * xq) * Nq,
+                                      y: Eq / 2 - (Yq * Aq - Bq * cq) * Nq,
+                                      scale: Nq,
+                                      depth: Wq
                                     }
                                   }
-                                }(DT, aT, KT, AT);
-                                ! function(TT, kT, cT, lT, MT) {
-                                  const KT = TT.createLinearGradient(0, 0, 0, cT);
-                                  KT.addColorStop(0, "#23262d"), KT.addColorStop(1, "#16181c"), TT.globalCompositeOperation = "source-over", TT.globalAlpha = 1, TT.fillStyle = KT, TT.fillRect(0, 0, kT, cT);
-                                  const OT = (kT, cT) => {
-                                      const MT = lT(kT[0], kT[1], kT[2]),
-                                        KT = lT(cT[0], cT[1], cT[2]);
-                                      MT && KT && (TT.beginPath(), TT.moveTo(MT.x, MT.y), TT.lineTo(KT.x, KT.y), TT.stroke())
+                                }(Pq, Qq, Oq, Bq);
+                                ! function(qq, Eq, gq, Yq, lq) {
+                                  const Oq = qq.createLinearGradient(0, 0, 0, gq);
+                                  Oq.addColorStop(0, "#23262d"), Oq.addColorStop(1, "#16181c"), qq.globalCompositeOperation = "source-over", qq.globalAlpha = 1, qq.fillStyle = Oq, qq.fillRect(0, 0, Eq, gq);
+                                  const mq = (Eq, gq) => {
+                                      const lq = Yq(Eq[0], Eq[1], Eq[2]),
+                                        Oq = Yq(gq[0], gq[1], gq[2]);
+                                      lq && Oq && (qq.beginPath(), qq.moveTo(lq.x, lq.y), qq.lineTo(Oq.x, Oq.y), qq.stroke())
                                     },
-                                    yT = Math.ceil(MT) + 1,
-                                    fT = kM[1];
-                                  TT.lineWidth = 1, TT.strokeStyle = "rgba(255, 255, 255, 0.07)";
-                                  for (let xT = -yT; xT <= yT; xT++) OT([xT + .5, fT, .5 - yT], [xT + .5, fT, yT + .5]), OT([.5 - yT, fT, xT + .5], [yT + .5, fT, xT + .5]);
-                                  TT.strokeStyle = "rgba(255, 255, 255, 0.28)", TT.setLineDash([4, 4]);
-                                  for (const xT of lM)
-                                    for (const TT of lM) {
-                                      const kT = [0, 1, 2].filter((kT => xT[kT] !== TT[kT]));
-                                      1 === kT.length && xT[kT[0]] < TT[kT[0]] && OT(xT, TT)
+                                    xq = Math.ceil(lq) + 1,
+                                    Aq = ql[1];
+                                  qq.lineWidth = 1, qq.strokeStyle = "rgba(255, 255, 255, 0.07)";
+                                  for (let cq = -xq; cq <= xq; cq++) mq([cq + .5, Aq, .5 - xq], [cq + .5, Aq, xq + .5]), mq([.5 - xq, Aq, cq + .5], [xq + .5, Aq, cq + .5]);
+                                  qq.strokeStyle = "rgba(255, 255, 255, 0.28)", qq.setLineDash([4, 4]);
+                                  for (const cq of gl)
+                                    for (const qq of gl) {
+                                      const Eq = [0, 1, 2].filter((Eq => cq[Eq] !== qq[Eq]));
+                                      1 === Eq.length && cq[Eq[0]] < qq[Eq[0]] && mq(cq, qq)
                                     }
-                                  TT.setLineDash([])
-                                }(kT, DT, aT, PT, AT);
-                                const wT = xT.current,
-                                  mT = lT.map((TT => ({
-                                    particle: TT,
-                                    at: PT(TT.pos[0], TT.pos[1], TT.pos[2])
-                                  }))).filter((TT => null !== TT.at)).sort(((TT, kT) => kT.at.depth - TT.at.depth));
-                                kT.imageSmoothingEnabled = !1;
-                                for (const TT of function(TT) {
-                                    switch (TT) {
-                                      case Xc.f.OneOne:
+                                  qq.setLineDash([])
+                                }(Eq, Pq, Qq, rq, Bq);
+                                const vq = cq.current,
+                                  hq = Yq.map((qq => ({
+                                    particle: qq,
+                                    at: rq(qq.pos[0], qq.pos[1], qq.pos[2])
+                                  }))).filter((qq => null !== qq.at)).sort(((qq, Eq) => Eq.at.depth - qq.at.depth));
+                                Eq.imageSmoothingEnabled = !1;
+                                for (const qq of function(qq) {
+                                    switch (qq) {
+                                      case Gg.h.OneOne:
                                         return [{
                                           operation: "lighter",
                                           usesAlpha: !1
                                         }];
-                                      case Xc.f.Add:
+                                      case Gg.h.Add:
                                         return [{
                                           operation: "lighter",
                                           usesAlpha: !0
                                         }];
-                                      case Xc.f.Multiply:
+                                      case Gg.h.Multiply:
                                         return [{
                                           operation: "multiply",
                                           usesAlpha: !0
                                         }];
-                                      case Xc.f.MultiplyAdd:
+                                      case Gg.h.MultiplyAdd:
                                         return [{
                                           operation: "multiply",
                                           usesAlpha: !0
@@ -2962,665 +2962,665 @@ export const modules = {
                                           usesAlpha: !0
                                         }]
                                     }
-                                  }(FT.blendMode)) {
-                                  kT.globalCompositeOperation = TT.operation;
+                                  }(yq.blendMode)) {
+                                  Eq.globalCompositeOperation = qq.operation;
                                   for (const {
-                                      particle: lT,
-                                      at: MT
+                                      particle: Yq,
+                                      at: lq
                                     }
-                                    of mT) {
-                                    const [KT, OT, yT, fT] = nc(lT), xT = Math.max(1, lT.size * MT.scale);
-                                    kT.globalAlpha = TT.usesAlpha ? Math.min(1, Math.max(0, fT)) : 1, wT ? kT.drawImage(cT.get(wT, KT, OT, yT), MT.x - xT / 2, MT.y - xT / 2, xT, xT) : (kT.fillStyle = `rgb(${255*KT}, ${255*OT}, ${255*yT})`, kT.fillRect(MT.x - xT / 2, MT.y - xT / 2, xT, xT))
+                                    of hq) {
+                                    const [Oq, mq, xq, Aq] = wg(Yq), cq = Math.max(1, Yq.size * lq.scale);
+                                    Eq.globalAlpha = qq.usesAlpha ? Math.min(1, Math.max(0, Aq)) : 1, vq ? Eq.drawImage(gq.get(vq, Oq, mq, xq), lq.x - cq / 2, lq.y - cq / 2, cq, cq) : (Eq.fillStyle = `rgb(${255*Oq}, ${255*mq}, ${255*xq})`, Eq.fillRect(lq.x - cq / 2, lq.y - cq / 2, cq, cq))
                                   }
                                 }
-                                kT.globalCompositeOperation = "source-over", kT.globalAlpha = 1
+                                Eq.globalCompositeOperation = "source-over", Eq.globalAlpha = 1
                               };
-                              vT = requestAnimationFrame(QT);
-                              const ST = new IntersectionObserver((TT => {
-                                let [kT] = TT;
-                                tT = kT.isIntersecting
+                              aq = requestAnimationFrame(Hq);
+                              const oq = new IntersectionObserver((qq => {
+                                let [Eq] = qq;
+                                Vq = Eq.isIntersecting
                               }));
-                              ST.observe(TT);
-                              const DT = kT => {
-                                  hT = kT.clientX, TT.setPointerCapture(kT.pointerId)
+                              oq.observe(qq);
+                              const Pq = Eq => {
+                                  dq = Eq.clientX, qq.setPointerCapture(Eq.pointerId)
                                 },
-                                aT = TT => {
-                                  null !== hT && (KT += .01 * (TT.clientX - hT), hT = TT.clientX)
+                                Qq = qq => {
+                                  null !== dq && (Oq += .01 * (qq.clientX - dq), dq = qq.clientX)
                                 },
-                                FT = () => {
-                                  hT = null
+                                yq = () => {
+                                  dq = null
                                 };
-                              return TT.addEventListener("pointerdown", DT), TT.addEventListener("pointermove", aT), TT.addEventListener("pointerup", FT), TT.addEventListener("pointercancel", FT), () => {
-                                cancelAnimationFrame(vT), ST.disconnect(), IT.current = null, TT.removeEventListener("pointerdown", DT), TT.removeEventListener("pointermove", aT), TT.removeEventListener("pointerup", FT), TT.removeEventListener("pointercancel", FT)
+                              return qq.addEventListener("pointerdown", Pq), qq.addEventListener("pointermove", Qq), qq.addEventListener("pointerup", yq), qq.addEventListener("pointercancel", yq), () => {
+                                cancelAnimationFrame(aq), oq.disconnect(), uq.current = null, qq.removeEventListener("pointerdown", Pq), qq.removeEventListener("pointermove", Qq), qq.removeEventListener("pointerup", yq), qq.removeEventListener("pointercancel", yq)
                               }
-                            }), []), (0, vT.jsx)("canvas", {
-                              ref: OT,
+                            }), []), (0, aq.jsx)("canvas", {
+                              ref: mq,
                               className: "DocsParticleCanvas",
                               role: "img",
-                              "aria-label": `Preview of a ${kT.texture} particle effect. Drag to turn the view.`
+                              "aria-label": `Preview of a ${Eq.texture} particle effect. Drag to turn the view.`
                             })
                           }
-                          const OM = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
-                            yM = [{
-                              mode: Xc.f.OneOne,
+                          const Ol = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
+                            ml = [{
+                              mode: Gg.h.OneOne,
                               label: "0 \xb7 OneOne (glow)"
                             }, {
-                              mode: Xc.f.Standard,
+                              mode: Gg.h.Standard,
                               label: "1 \xb7 Standard"
                             }, {
-                              mode: Xc.f.Add,
+                              mode: Gg.h.Add,
                               label: "2 \xb7 Add"
                             }, {
-                              mode: Xc.f.Multiply,
+                              mode: Gg.h.Multiply,
                               label: "3 \xb7 Multiply"
                             }, {
-                              mode: Xc.f.MultiplyAdd,
+                              mode: Gg.h.MultiplyAdd,
                               label: "4 \xb7 MultiplyAdd"
                             }],
-                            fM = (0, lT.forwardRef)((function(TT, kT) {
-                              var cT, MT;
+                            xl = (0, Yq.forwardRef)((function(qq, Eq) {
+                              var gq, lq;
                               let {
-                                textures: OT
-                              } = TT;
-                              const yT = Dl(),
-                                fT = (0, lT.useRef)(null),
-                                [xT, IT] = (0, lT.useState)(Lc),
-                                [AT, CT] = (0, lT.useState)("example"),
-                                [jT, tT] = (0, lT.useState)(0),
-                                [NT, QT] = (0, lT.useState)(!1),
-                                DT = TT => {
-                                  const kT = "example" === TT ? Lc : dc(TT);
-                                  kT && (IT(kT), CT(TT))
+                                textures: mq
+                              } = qq;
+                              const xq = oY(),
+                                Aq = (0, Yq.useRef)(null),
+                                [cq, uq] = (0, Yq.useState)(Jg),
+                                [Bq, Wq] = (0, Yq.useState)("example"),
+                                [Nq, Vq] = (0, Yq.useState)(0),
+                                [jq, Hq] = (0, Yq.useState)(!1),
+                                Pq = qq => {
+                                  const Eq = "example" === qq ? Jg : Lg(qq);
+                                  Eq && (uq(Eq), Wq(qq))
                                 };
-                              (0, lT.useImperativeHandle)(kT, (() => ({
-                                preview: TT => {
-                                  var kT;
-                                  DT(TT), null === (kT = fT.current) || void 0 === kT || kT.scrollIntoView({
+                              (0, Yq.useImperativeHandle)(Eq, (() => ({
+                                preview: qq => {
+                                  var Eq;
+                                  Pq(qq), null === (Eq = Aq.current) || void 0 === Eq || Eq.scrollIntoView({
                                     behavior: "smooth",
                                     block: "start"
                                   })
                                 }
                               })));
-                              const aT = TT => {
-                                  IT({
-                                    ...xT,
-                                    ...TT
-                                  }), CT(null)
+                              const Qq = qq => {
+                                  uq({
+                                    ...cq,
+                                    ...qq
+                                  }), Wq(null)
                                 },
-                                FT = function(TT, kT) {
-                                  if (null !== kT) return `${Tl}    presetId: "${kT}",\n${kl}\n})`;
-                                  const cT = TT.velocityGradients.map((TT => `        {\n            timeFraction: ${ic(TT.timeFraction)},\n            factor: ${ic(TT.factor)},\n            factor2: ${ic(TT.factor2)},\n        },`)),
-                                    lT = [`    dir1: ${qc(TT.dir1)},`, `    dir2: ${qc(TT.dir2)},`, kl, `    texture: "${TT.texture}",`, `    minLifeTime: ${ic(TT.minLifeTime)},`, `    maxLifeTime: ${ic(TT.maxLifeTime)},`, `    minEmitPower: ${ic(TT.minEmitPower)},`, `    maxEmitPower: ${ic(TT.maxEmitPower)},`, `    minSize: ${ic(TT.minSize)},`, `    maxSize: ${ic(TT.maxSize)},`, `    manualEmitCount: ${ic(TT.manualEmitCount)},`, `    gravity: ${qc(TT.gravity)},`, `    colorGradients: ${sc(TT.colorGradients,"    ")},`, `    velocityGradients: ${cT.length>0?`[\n${cT.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${ic(TT.blendMode)},`];
-                                  return void 0 !== TT.hideDist && lT.push(`    hideDist: ${ic(TT.hideDist)},`), `${Tl}${lT.join("\n")}\n})`
-                                }(xT, null === AT || "example" === AT ? null : AT),
-                                PT = OT.includes(xT.texture) ? OT : [...OT, xT.texture];
-                              return (0, vT.jsxs)("section", {
-                                ref: fT,
+                                yq = function(qq, Eq) {
+                                  if (null !== Eq) return `${Dg}    presetId: "${Eq}",\n${qY}\n})`;
+                                  const gq = qq.velocityGradients.map((qq => `        {\n            timeFraction: ${Cg(qq.timeFraction)},\n            factor: ${Cg(qq.factor)},\n            factor2: ${Cg(qq.factor2)},\n        },`)),
+                                    Yq = [`    dir1: ${Ig(qq.dir1)},`, `    dir2: ${Ig(qq.dir2)},`, qY, `    texture: "${qq.texture}",`, `    minLifeTime: ${Cg(qq.minLifeTime)},`, `    maxLifeTime: ${Cg(qq.maxLifeTime)},`, `    minEmitPower: ${Cg(qq.minEmitPower)},`, `    maxEmitPower: ${Cg(qq.maxEmitPower)},`, `    minSize: ${Cg(qq.minSize)},`, `    maxSize: ${Cg(qq.maxSize)},`, `    manualEmitCount: ${Cg(qq.manualEmitCount)},`, `    gravity: ${Ig(qq.gravity)},`, `    colorGradients: ${eg(qq.colorGradients,"    ")},`, `    velocityGradients: ${gq.length>0?`[\n${gq.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${Cg(qq.blendMode)},`];
+                                  return void 0 !== qq.hideDist && Yq.push(`    hideDist: ${Cg(qq.hideDist)},`), `${Dg}${Yq.join("\n")}\n})`
+                                }(cq, null === Bq || "example" === Bq ? null : Bq),
+                                rq = mq.includes(cq.texture) ? mq : [...mq, cq.texture];
+                              return (0, aq.jsxs)("section", {
+                                ref: Aq,
                                 className: "DocsPlayground DocsParticlePlayground",
                                 "aria-label": "Particle effect playground",
-                                children: [(0, vT.jsxs)("header", {
+                                children: [(0, aq.jsxs)("header", {
                                   className: "DocsPlaygroundHeader",
-                                  children: [(0, vT.jsxs)("div", {
-                                    children: [(0, vT.jsx)("div", {
+                                  children: [(0, aq.jsxs)("div", {
+                                    children: [(0, aq.jsx)("div", {
                                       className: "DocsPlaygroundTitle",
                                       children: "Try it: particle effects"
-                                    }), (0, vT.jsx)("div", {
+                                    }), (0, aq.jsx)("div", {
                                       className: "DocsPlaygroundHint",
                                       children: "Pick a preset or change the settings, and the burst replays. Drag the preview to turn it."
                                     })]
-                                  }), (0, vT.jsx)(ST, {
-                                    text: FT,
+                                  }), (0, aq.jsx)(oq, {
+                                    text: yq,
                                     label: "Copy code"
                                   })]
-                                }), (0, vT.jsxs)("div", {
+                                }), (0, aq.jsxs)("div", {
                                   className: "DocsPlaygroundPresets",
-                                  children: [(0, vT.jsx)("button", {
+                                  children: [(0, aq.jsx)("button", {
                                     type: "button",
-                                    className: KT()("DocsVariantChip", {
-                                      Active: "example" === AT
+                                    className: Oq()("DocsVariantChip", {
+                                      Active: "example" === Bq
                                     }),
                                     onClick: () => {
-                                      DT("example")
+                                      Pq("example")
                                     },
                                     children: "Example"
-                                  }), OM.filter((TT => null !== dc(TT))).map((TT => (0, vT.jsx)("button", {
+                                  }), Ol.filter((qq => null !== Lg(qq))).map((qq => (0, aq.jsx)("button", {
                                     type: "button",
-                                    className: KT()("DocsVariantChip", {
-                                      Active: AT === TT
+                                    className: Oq()("DocsVariantChip", {
+                                      Active: Bq === qq
                                     }),
                                     onClick: () => {
-                                      DT(TT)
+                                      Pq(qq)
                                     },
-                                    children: TT
-                                  }, TT))), (0, vT.jsxs)("select", {
+                                    children: qq
+                                  }, qq))), (0, aq.jsxs)("select", {
                                     className: "DocsParticleSelect",
-                                    value: null !== AT && void 0 !== AT ? AT : "custom",
+                                    value: null !== Bq && void 0 !== Bq ? Bq : "custom",
                                     "aria-label": "Preset",
-                                    onChange: TT => {
-                                      DT(TT.target.value)
+                                    onChange: qq => {
+                                      Pq(qq.target.value)
                                     },
-                                    children: [(0, vT.jsx)("option", {
+                                    children: [(0, aq.jsx)("option", {
                                       value: "example",
                                       children: "Example effect"
-                                    }), null === AT && (0, vT.jsx)("option", {
+                                    }), null === Bq && (0, aq.jsx)("option", {
                                       value: "custom",
                                       children: "Custom"
-                                    }), uc.c.map((TT => (0, vT.jsx)("option", {
-                                      value: TT,
-                                      children: TT
-                                    }, TT)))]
+                                    }), pg.d.map((qq => (0, aq.jsx)("option", {
+                                      value: qq,
+                                      children: qq
+                                    }, qq)))]
                                   })]
-                                }), (0, vT.jsxs)("div", {
+                                }), (0, aq.jsxs)("div", {
                                   className: "DocsParticleBody",
-                                  children: [(0, vT.jsxs)("div", {
+                                  children: [(0, aq.jsxs)("div", {
                                     className: "DocsParticleStageWrap",
-                                    children: [(0, vT.jsx)(KM, {
-                                      opts: xT,
-                                      textureUrl: null !== (cT = null === yT || void 0 === yT ? void 0 : yT.getParticleTextureUrl(xT.texture)) && void 0 !== cT ? cT : null,
-                                      burst: jT,
-                                      paused: NT
-                                    }), (0, vT.jsxs)("div", {
+                                    children: [(0, aq.jsx)(ll, {
+                                      opts: cq,
+                                      textureUrl: null !== (gq = null === xq || void 0 === xq ? void 0 : xq.getParticleTextureUrl(cq.texture)) && void 0 !== gq ? gq : null,
+                                      burst: Nq,
+                                      paused: jq
+                                    }), (0, aq.jsxs)("div", {
                                       className: "DocsParticleStageButtons",
-                                      children: [(0, vT.jsxs)("button", {
+                                      children: [(0, aq.jsxs)("button", {
                                         type: "button",
                                         className: "DocsParticleStageButton",
                                         onClick: () => {
-                                          tT(jT + 1)
+                                          Vq(Nq + 1)
                                         },
-                                        children: [(0, vT.jsx)(hT, {
+                                        children: [(0, aq.jsx)(dq, {
                                           name: "replay"
-                                        }), (0, vT.jsx)("span", {
+                                        }), (0, aq.jsx)("span", {
                                           children: "Replay"
                                         })]
-                                      }), (0, vT.jsxs)("button", {
+                                      }), (0, aq.jsxs)("button", {
                                         type: "button",
                                         className: "DocsParticleStageButton",
-                                        "aria-pressed": NT,
+                                        "aria-pressed": jq,
                                         onClick: () => {
-                                          QT(!NT)
+                                          Hq(!jq)
                                         },
-                                        children: [(0, vT.jsx)(hT, {
-                                          name: NT ? "play" : "pause"
-                                        }), (0, vT.jsx)("span", {
-                                          children: NT ? "Loop" : "Stop looping"
+                                        children: [(0, aq.jsx)(dq, {
+                                          name: jq ? "play" : "pause"
+                                        }), (0, aq.jsx)("span", {
+                                          children: jq ? "Loop" : "Stop looping"
                                         })]
                                       })]
                                     })]
-                                  }), (0, vT.jsxs)("div", {
+                                  }), (0, aq.jsxs)("div", {
                                     className: "DocsParticleControls",
-                                    children: [(0, vT.jsxs)("div", {
+                                    children: [(0, aq.jsxs)("div", {
                                       className: "DocsControl",
-                                      children: [(0, vT.jsxs)("div", {
+                                      children: [(0, aq.jsxs)("div", {
                                         className: "DocsControlLabel",
-                                        children: [(0, vT.jsx)("span", {
+                                        children: [(0, aq.jsx)("span", {
                                           children: "Texture"
-                                        }), (0, vT.jsx)("code", {
+                                        }), (0, aq.jsx)("code", {
                                           className: "DocsControlValue",
-                                          children: xT.texture
+                                          children: cq.texture
                                         })]
-                                      }), (0, vT.jsx)("div", {
+                                      }), (0, aq.jsx)("div", {
                                         className: "DocsParticleTextures",
-                                        children: PT.map((TT => {
-                                          var kT;
-                                          const cT = null !== (kT = null === yT || void 0 === yT ? void 0 : yT.getParticleTextureUrl(TT)) && void 0 !== kT ? kT : null;
-                                          return (0, vT.jsx)("button", {
+                                        children: rq.map((qq => {
+                                          var Eq;
+                                          const gq = null !== (Eq = null === xq || void 0 === xq ? void 0 : xq.getParticleTextureUrl(qq)) && void 0 !== Eq ? Eq : null;
+                                          return (0, aq.jsx)("button", {
                                             type: "button",
-                                            className: KT()("DocsParticleTexture", {
-                                              Active: xT.texture === TT
+                                            className: Oq()("DocsParticleTexture", {
+                                              Active: cq.texture === qq
                                             }),
-                                            title: TT,
-                                            "aria-label": TT,
-                                            "aria-pressed": xT.texture === TT,
+                                            title: qq,
+                                            "aria-label": qq,
+                                            "aria-pressed": cq.texture === qq,
                                             onClick: () => {
-                                              aT({
-                                                texture: TT
+                                              Qq({
+                                                texture: qq
                                               })
                                             },
-                                            children: cT ? (0, vT.jsx)("img", {
-                                              src: cT,
+                                            children: gq ? (0, aq.jsx)("img", {
+                                              src: gq,
                                               alt: ""
-                                            }) : (0, vT.jsx)(hT, {
+                                            }) : (0, aq.jsx)(dq, {
                                               name: "image"
                                             })
-                                          }, TT)
+                                          }, qq)
                                         }))
                                       })]
-                                    }), (0, vT.jsx)(sl, {
+                                    }), (0, aq.jsx)(eY, {
                                       label: "Particles",
                                       min: 1,
                                       max: 400,
                                       step: 1,
-                                      value: xT.manualEmitCount,
-                                      onChange: TT => {
-                                        aT({
-                                          manualEmitCount: TT
+                                      value: cq.manualEmitCount,
+                                      onChange: qq => {
+                                        Qq({
+                                          manualEmitCount: qq
                                         })
                                       }
-                                    }), (0, vT.jsx)(ql, {
+                                    }), (0, aq.jsx)(IY, {
                                       label: "Lifetime",
                                       min: .05,
                                       max: 3,
                                       step: .05,
-                                      low: xT.minLifeTime,
-                                      high: xT.maxLifeTime,
-                                      onChange: (TT, kT) => {
-                                        aT({
-                                          minLifeTime: TT,
-                                          maxLifeTime: kT
+                                      low: cq.minLifeTime,
+                                      high: cq.maxLifeTime,
+                                      onChange: (qq, Eq) => {
+                                        Qq({
+                                          minLifeTime: qq,
+                                          maxLifeTime: Eq
                                         })
                                       }
-                                    }), (0, vT.jsx)(ql, {
+                                    }), (0, aq.jsx)(IY, {
                                       label: "Emit power",
                                       min: 0,
                                       max: 40,
                                       step: .5,
-                                      low: xT.minEmitPower,
-                                      high: xT.maxEmitPower,
-                                      onChange: (TT, kT) => {
-                                        aT({
-                                          minEmitPower: TT,
-                                          maxEmitPower: kT
+                                      low: cq.minEmitPower,
+                                      high: cq.maxEmitPower,
+                                      onChange: (qq, Eq) => {
+                                        Qq({
+                                          minEmitPower: qq,
+                                          maxEmitPower: Eq
                                         })
                                       }
-                                    }), (0, vT.jsx)(ql, {
+                                    }), (0, aq.jsx)(IY, {
                                       label: "Size",
                                       min: .05,
                                       max: 2,
                                       step: .05,
-                                      low: xT.minSize,
-                                      high: xT.maxSize,
-                                      onChange: (TT, kT) => {
-                                        aT({
-                                          minSize: TT,
-                                          maxSize: kT
+                                      low: cq.minSize,
+                                      high: cq.maxSize,
+                                      onChange: (qq, Eq) => {
+                                        Qq({
+                                          minSize: qq,
+                                          maxSize: Eq
                                         })
                                       }
-                                    }), (0, vT.jsx)(sl, {
+                                    }), (0, aq.jsx)(eY, {
                                       label: "Gravity (up)",
                                       min: -40,
                                       max: 40,
                                       step: 1,
-                                      value: null !== (MT = xT.gravity[1]) && void 0 !== MT ? MT : 0,
-                                      onChange: TT => {
-                                        var kT, cT;
-                                        aT({
-                                          gravity: [null !== (kT = xT.gravity[0]) && void 0 !== kT ? kT : 0, TT, null !== (cT = xT.gravity[2]) && void 0 !== cT ? cT : 0]
+                                      value: null !== (lq = cq.gravity[1]) && void 0 !== lq ? lq : 0,
+                                      onChange: qq => {
+                                        var Eq, gq;
+                                        Qq({
+                                          gravity: [null !== (Eq = cq.gravity[0]) && void 0 !== Eq ? Eq : 0, qq, null !== (gq = cq.gravity[2]) && void 0 !== gq ? gq : 0]
                                         })
                                       }
-                                    }), (0, vT.jsxs)("div", {
+                                    }), (0, aq.jsxs)("div", {
                                       className: "DocsControl",
-                                      children: [(0, vT.jsx)("div", {
+                                      children: [(0, aq.jsx)("div", {
                                         className: "DocsControlLabel",
-                                        children: (0, vT.jsx)("span", {
+                                        children: (0, aq.jsx)("span", {
                                           children: "Blend mode"
                                         })
-                                      }), (0, vT.jsx)("select", {
+                                      }), (0, aq.jsx)("select", {
                                         className: "DocsParticleSelect",
-                                        value: xT.blendMode,
+                                        value: cq.blendMode,
                                         "aria-label": "Blend mode",
-                                        onChange: TT => {
-                                          aT({
-                                            blendMode: Number(TT.target.value)
+                                        onChange: qq => {
+                                          Qq({
+                                            blendMode: Number(qq.target.value)
                                           })
                                         },
-                                        children: yM.map((TT => {
+                                        children: ml.map((qq => {
                                           let {
-                                            mode: kT,
-                                            label: cT
-                                          } = TT;
-                                          return (0, vT.jsx)("option", {
-                                            value: kT,
-                                            children: cT
-                                          }, kT)
+                                            mode: Eq,
+                                            label: gq
+                                          } = qq;
+                                          return (0, aq.jsx)("option", {
+                                            value: Eq,
+                                            children: gq
+                                          }, Eq)
                                         }))
                                       })]
-                                    }), (0, vT.jsx)(TM, {
-                                      opts: xT,
-                                      onChange: TT => {
-                                        aT({
-                                          colorGradients: TT
+                                    }), (0, aq.jsx)(DY, {
+                                      opts: cq,
+                                      onChange: qq => {
+                                        Qq({
+                                          colorGradients: qq
                                         })
                                       }
                                     })]
                                   })]
-                                }), (0, vT.jsx)(rT, {
-                                  code: FT,
+                                }), (0, aq.jsx)(tq, {
+                                  code: yq,
                                   lang: "ts"
                                 })]
                               })
                             }));
-                          var xM = cT(4450),
-                            IM = cT(1921);
+                          var Al = gq(4294),
+                            cl = gq(1876);
 
-                          function AM(TT, kT) {
-                            return TT ? xM.e.includes(kT) ? TT.getIngameIconUrl(kT) : TT.getItemIconUrl(kT) : null
+                          function ul(qq, Eq) {
+                            return qq ? Al.e.includes(Eq) ? qq.getIngameIconUrl(Eq) : qq.getItemIconUrl(Eq) : null
                           }
 
-                          function CM(TT) {
-                            var kT, cT, lT;
+                          function Bl(qq) {
+                            var Eq, gq, Yq;
                             let {
-                              part: MT,
-                              assets: OT
-                            } = TT;
-                            const yT = AM(OT, MT.icon),
-                              fT = null !== (kT = null === (cT = MT.style) || void 0 === cT ? void 0 : cT.fontSize) && void 0 !== kT ? kT : "1.8em",
-                              xT = (0, uk.Jb)(MT.style);
-                            return (0, vT.jsxs)("span", {
-                              className: KT()("DocsBloxdTextIcon", {
-                                Missing: !yT
+                              part: lq,
+                              assets: mq
+                            } = qq;
+                            const xq = ul(mq, lq.icon),
+                              Aq = null !== (Eq = null === (gq = lq.style) || void 0 === gq ? void 0 : gq.fontSize) && void 0 !== Eq ? Eq : "1.8em",
+                              cq = (0, pE.Tb)(lq.style);
+                            return (0, aq.jsxs)("span", {
+                              className: Oq()("DocsBloxdTextIcon", {
+                                Missing: !xq
                               }),
                               style: {
-                                width: fT,
-                                height: fT,
-                                opacity: null === (lT = MT.style) || void 0 === lT ? void 0 : lT.opacity
+                                width: Aq,
+                                height: Aq,
+                                opacity: null === (Yq = lq.style) || void 0 === Yq ? void 0 : Yq.opacity
                               },
-                              title: yT ? void 0 : `No Bloxd icon, item or block is called "${MT.icon}"`,
-                              children: [yT && xT && (0, vT.jsx)("span", {
+                              title: xq ? void 0 : `No Bloxd icon, item or block is called "${lq.icon}"`,
+                              children: [xq && cq && (0, aq.jsx)("span", {
                                 className: "DocsBloxdTextIconTint",
                                 style: {
-                                  background: xT,
-                                  maskImage: `url("${yT}")`,
-                                  WebkitMaskImage: `url("${yT}")`
+                                  background: cq,
+                                  maskImage: `url("${xq}")`,
+                                  WebkitMaskImage: `url("${xq}")`
                                 }
-                              }), yT ? (0, vT.jsx)("img", {
-                                src: yT,
+                              }), xq ? (0, aq.jsx)("img", {
+                                src: xq,
                                 alt: "",
-                                className: KT()({
-                                  Tinted: xT
+                                className: Oq()({
+                                  Tinted: cq
                                 })
-                              }) : (0, vT.jsx)(hT, {
+                              }) : (0, aq.jsx)(dq, {
                                 name: "image"
                               })]
                             })
                           }
 
-                          function jM(TT) {
+                          function Wl(qq) {
                             let {
-                              parts: kT,
-                              className: cT
-                            } = TT;
-                            const lT = Dl(),
-                              MT = [];
-                            let OT = [];
-                            const yT = TT => {
-                              OT.length > 0 && (MT.push((0, vT.jsx)(IM.b, {
-                                text: OT
-                              }, `run-${TT}`)), OT = [])
+                              parts: Eq,
+                              className: gq
+                            } = qq;
+                            const Yq = oY(),
+                              lq = [];
+                            let mq = [];
+                            const xq = qq => {
+                              mq.length > 0 && (lq.push((0, aq.jsx)(cl.c, {
+                                text: mq
+                              }, `run-${qq}`)), mq = [])
                             };
-                            return kT.forEach(((TT, kT) => {
-                              "icon" !== gk(TT) || dk(TT.icon) ? OT.push(TT) : (yT(kT), MT.push((0, vT.jsx)(CM, {
-                                part: TT,
-                                assets: lT
-                              }, `icon-${kT}`)))
-                            })), yT(kT.length), (0, vT.jsx)("div", {
-                              className: KT()("DocsStyledTextPreview", cT),
-                              children: MT
+                            return Eq.forEach(((qq, Eq) => {
+                              "icon" !== RE(qq) || LE(qq.icon) ? mq.push(qq) : (xq(Eq), lq.push((0, aq.jsx)(Bl, {
+                                part: qq,
+                                assets: Yq
+                              }, `icon-${Eq}`)))
+                            })), xq(Eq.length), (0, aq.jsx)("div", {
+                              className: Oq()("DocsStyledTextPreview", gq),
+                              children: lq
                             })
                           }
-                          const vM = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
-                          let tM = null;
+                          const Nl = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
+                          let al = null;
 
-                          function hM(TT) {
-                            if (tM ??= document.createElement("canvas").getContext("2d"), !tM) return "#000000";
-                            tM.fillStyle = "#000000", tM.fillStyle = TT;
-                            const kT = tM.fillStyle;
-                            return kT.startsWith("#") ? kT : "#000000"
+                          function Vl(qq) {
+                            if (al ??= document.createElement("canvas").getContext("2d"), !al) return "#000000";
+                            al.fillStyle = "#000000", al.fillStyle = qq;
+                            const Eq = al.fillStyle;
+                            return Eq.startsWith("#") ? Eq : "#000000"
                           }
 
-                          function NM(TT) {
+                          function dl(qq) {
                             let {
-                              value: kT,
-                              label: cT,
-                              onChange: lT
-                            } = TT;
-                            return (0, vT.jsxs)("span", {
+                              value: Eq,
+                              label: gq,
+                              onChange: Yq
+                            } = qq;
+                            return (0, aq.jsxs)("span", {
                               className: "DocsColourInput",
-                              children: [(0, vT.jsx)("input", {
+                              children: [(0, aq.jsx)("input", {
                                 type: "color",
-                                value: hM(kT),
-                                "aria-label": `${cT} picker`,
-                                onChange: TT => {
-                                  lT(TT.target.value)
+                                value: Vl(Eq),
+                                "aria-label": `${gq} picker`,
+                                onChange: qq => {
+                                  Yq(qq.target.value)
                                 }
-                              }), (0, vT.jsx)("input", {
+                              }), (0, aq.jsx)("input", {
                                 type: "text",
-                                value: kT,
+                                value: Eq,
                                 placeholder: "#ffb914 or gold",
-                                "aria-label": cT,
+                                "aria-label": gq,
                                 spellCheck: !1,
-                                onChange: TT => {
-                                  lT(TT.target.value)
+                                onChange: qq => {
+                                  Yq(qq.target.value)
                                 }
                               })]
                             })
                           }
 
-                          function QM(TT) {
+                          function jl(qq) {
                             let {
-                              value: kT,
-                              fontAwesomeIcons: cT,
-                              onChange: MT
-                            } = TT;
-                            const OT = Dl(),
-                              [yT, fT] = (0, lT.useState)(dk(kT) ? "fontAwesome" : "bloxd"),
-                              [xT, IT] = (0, lT.useState)(""),
-                              AT = xT.trim().toLowerCase(),
-                              CT = "bloxd" === yT ? xM.e : cT,
-                              jT = AT ? CT.filter((TT => TT.toLowerCase().includes(AT))) : CT;
-                            return (0, vT.jsxs)("div", {
+                              value: Eq,
+                              fontAwesomeIcons: gq,
+                              onChange: lq
+                            } = qq;
+                            const mq = oY(),
+                              [xq, Aq] = (0, Yq.useState)(LE(Eq) ? "fontAwesome" : "bloxd"),
+                              [cq, uq] = (0, Yq.useState)(""),
+                              Bq = cq.trim().toLowerCase(),
+                              Wq = "bloxd" === xq ? Al.e : gq,
+                              Nq = Bq ? Wq.filter((qq => qq.toLowerCase().includes(Bq))) : Wq;
+                            return (0, aq.jsxs)("div", {
                               className: "DocsIconPicker",
-                              children: [(0, vT.jsx)("input", {
+                              children: [(0, aq.jsx)("input", {
                                 type: "text",
-                                value: kT,
+                                value: Eq,
                                 "aria-label": "Icon name",
                                 spellCheck: !1,
-                                onChange: TT => {
-                                  MT(TT.target.value)
+                                onChange: qq => {
+                                  lq(qq.target.value)
                                 }
-                              }), (0, vT.jsx)("p", {
+                              }), (0, aq.jsx)("p", {
                                 className: "DocsTextFieldHint",
                                 children: "Pick one below, or type any item or block name."
-                              }), (0, vT.jsxs)("div", {
+                              }), (0, aq.jsxs)("div", {
                                 className: "DocsIconPickerTabs",
                                 role: "tablist",
                                 children: [
-                                  ["bloxd", "fontAwesome"].map((TT => (0, vT.jsx)("button", {
+                                  ["bloxd", "fontAwesome"].map((qq => (0, aq.jsx)("button", {
                                     type: "button",
                                     role: "tab",
-                                    "aria-selected": yT === TT,
-                                    className: KT()("DocsVariantChip", {
-                                      Active: yT === TT
+                                    "aria-selected": xq === qq,
+                                    className: Oq()("DocsVariantChip", {
+                                      Active: xq === qq
                                     }),
                                     onClick: () => {
-                                      fT(TT)
+                                      Aq(qq)
                                     },
-                                    children: "bloxd" === TT ? `Bloxd icons (${xM.e.length})` : `Font Awesome (${cT.length})`
-                                  }, TT))), (0, vT.jsx)("input", {
+                                    children: "bloxd" === qq ? `Bloxd icons (${Al.e.length})` : `Font Awesome (${gq.length})`
+                                  }, qq))), (0, aq.jsx)("input", {
                                     type: "search",
-                                    value: xT,
+                                    value: cq,
                                     placeholder: "Filter\u2026",
                                     "aria-label": "Filter icons",
-                                    onChange: TT => {
-                                      IT(TT.target.value)
+                                    onChange: qq => {
+                                      uq(qq.target.value)
                                     }
                                   })
                                 ]
-                              }), (0, vT.jsxs)("div", {
+                              }), (0, aq.jsxs)("div", {
                                 className: "DocsIconPickerGrid",
                                 role: "tabpanel",
-                                children: [jT.map((TT => {
-                                  const cT = "bloxd" === yT ? AM(OT, TT) : null;
-                                  return (0, vT.jsx)("button", {
+                                children: [Nq.map((qq => {
+                                  const gq = "bloxd" === xq ? ul(mq, qq) : null;
+                                  return (0, aq.jsx)("button", {
                                     type: "button",
-                                    title: TT,
-                                    "aria-label": TT,
-                                    "aria-pressed": TT === kT,
-                                    className: KT()("DocsIconPickerOption", {
-                                      Active: TT === kT
+                                    title: qq,
+                                    "aria-label": qq,
+                                    "aria-pressed": qq === Eq,
+                                    className: Oq()("DocsIconPickerOption", {
+                                      Active: qq === Eq
                                     }),
                                     onClick: () => {
-                                      MT(TT)
+                                      lq(qq)
                                     },
-                                    children: "fontAwesome" === yT ? (0, vT.jsx)(ac.e, {
-                                      name: TT
-                                    }) : cT ? (0, vT.jsx)("img", {
-                                      src: cT,
+                                    children: "fontAwesome" === xq ? (0, aq.jsx)(Pg.d, {
+                                      name: qq
+                                    }) : gq ? (0, aq.jsx)("img", {
+                                      src: gq,
                                       alt: ""
-                                    }) : (0, vT.jsx)(hT, {
+                                    }) : (0, aq.jsx)(dq, {
                                       name: "image"
                                     })
-                                  }, TT)
-                                })), 0 === jT.length && (0, vT.jsxs)("p", {
+                                  }, qq)
+                                })), 0 === Nq.length && (0, aq.jsxs)("p", {
                                   className: "DocsTextFieldHint",
-                                  children: ["No icons match \u201c", xT, "\u201d."]
+                                  children: ["No icons match \u201c", cq, "\u201d."]
                                 })]
                               })]
                             })
                           }
 
-                          function SM(TT) {
+                          function Hl(qq) {
                             let {
-                              property: kT,
-                              value: cT,
-                              fontAwesomeIcons: lT,
-                              onChange: MT
-                            } = TT;
+                              property: Eq,
+                              value: gq,
+                              fontAwesomeIcons: Yq,
+                              onChange: lq
+                            } = qq;
                             const {
-                              field: KT,
-                              label: OT
-                            } = kT, yT = TT => "" !== TT || kT.isRequired ? TT : void 0;
-                            switch (KT.kind) {
+                              field: Oq,
+                              label: mq
+                            } = Eq, xq = qq => "" !== qq || Eq.isRequired ? qq : void 0;
+                            switch (Oq.kind) {
                               case "text":
-                                return KT.multiline ? (0, vT.jsx)("textarea", {
-                                  value: String(null !== cT && void 0 !== cT ? cT : ""),
+                                return Oq.multiline ? (0, aq.jsx)("textarea", {
+                                  value: String(null !== gq && void 0 !== gq ? gq : ""),
                                   rows: 2,
-                                  "aria-label": OT,
-                                  onChange: TT => {
-                                    MT(TT.target.value)
+                                  "aria-label": mq,
+                                  onChange: qq => {
+                                    lq(qq.target.value)
                                   }
-                                }) : (0, vT.jsx)("input", {
+                                }) : (0, aq.jsx)("input", {
                                   type: "text",
-                                  value: String(null !== cT && void 0 !== cT ? cT : ""),
-                                  "aria-label": OT,
-                                  onChange: TT => {
-                                    MT(yT(TT.target.value))
+                                  value: String(null !== gq && void 0 !== gq ? gq : ""),
+                                  "aria-label": mq,
+                                  onChange: qq => {
+                                    lq(xq(qq.target.value))
                                   }
                                 });
                               case "size":
-                                return (0, vT.jsx)("input", {
+                                return (0, aq.jsx)("input", {
                                   type: "text",
-                                  value: String(null !== cT && void 0 !== cT ? cT : ""),
-                                  placeholder: kT.defaultText,
+                                  value: String(null !== gq && void 0 !== gq ? gq : ""),
+                                  placeholder: Eq.defaultText,
                                   list: "DocsTextSizeSuggestions",
-                                  "aria-label": OT,
+                                  "aria-label": mq,
                                   spellCheck: !1,
-                                  onChange: TT => {
-                                    MT(yT(TT.target.value.trim()))
+                                  onChange: qq => {
+                                    lq(xq(qq.target.value.trim()))
                                   }
                                 });
                               case "colour":
-                                return (0, vT.jsx)(NM, {
-                                  value: String(null !== cT && void 0 !== cT ? cT : ""),
-                                  label: OT,
-                                  onChange: TT => {
-                                    MT(yT(TT))
+                                return (0, aq.jsx)(dl, {
+                                  value: String(null !== gq && void 0 !== gq ? gq : ""),
+                                  label: mq,
+                                  onChange: qq => {
+                                    lq(xq(qq))
                                   }
                                 });
                               case "colours": {
-                                const TT = Array.isArray(cT) ? cT : [],
-                                  kT = TT => {
-                                    MT(TT.length > 0 ? TT : void 0)
+                                const qq = Array.isArray(gq) ? gq : [],
+                                  Eq = qq => {
+                                    lq(qq.length > 0 ? qq : void 0)
                                   };
-                                return (0, vT.jsxs)("div", {
+                                return (0, aq.jsxs)("div", {
                                   className: "DocsColourList",
-                                  children: [TT.map(((cT, lT) => (0, vT.jsxs)("span", {
+                                  children: [qq.map(((gq, Yq) => (0, aq.jsxs)("span", {
                                     className: "DocsColourListRow",
-                                    children: [(0, vT.jsx)(NM, {
-                                      value: cT,
-                                      label: `${OT} ${lT+1}`,
-                                      onChange: cT => {
-                                        kT(TT.map(((TT, kT) => kT === lT ? cT : TT)))
+                                    children: [(0, aq.jsx)(dl, {
+                                      value: gq,
+                                      label: `${mq} ${Yq+1}`,
+                                      onChange: gq => {
+                                        Eq(qq.map(((qq, Eq) => Eq === Yq ? gq : qq)))
                                       }
-                                    }), (0, vT.jsx)("button", {
+                                    }), (0, aq.jsx)("button", {
                                       type: "button",
                                       className: "DocsTextIconButton",
-                                      "aria-label": `Remove colour ${lT+1}`,
+                                      "aria-label": `Remove colour ${Yq+1}`,
                                       onClick: () => {
-                                        kT(TT.filter(((TT, kT) => kT !== lT)))
+                                        Eq(qq.filter(((qq, Eq) => Eq !== Yq)))
                                       },
-                                      children: (0, vT.jsx)(hT, {
+                                      children: (0, aq.jsx)(dq, {
                                         name: "cross"
                                       })
                                     })]
-                                  }, lT))), (0, vT.jsxs)("button", {
+                                  }, Yq))), (0, aq.jsxs)("button", {
                                     type: "button",
                                     className: "DocsTextAddButton",
                                     onClick: () => {
-                                      var cT;
-                                      kT([...TT, null !== (cT = TT.at(-1)) && void 0 !== cT ? cT : "#ffffff"])
+                                      var gq;
+                                      Eq([...qq, null !== (gq = qq.at(-1)) && void 0 !== gq ? gq : "#ffffff"])
                                     },
-                                    children: [(0, vT.jsx)(hT, {
+                                    children: [(0, aq.jsx)(dq, {
                                       name: "plus"
-                                    }), 0 === TT.length ? "Add a colour" : "Add a colour to the gradient"]
+                                    }), 0 === qq.length ? "Add a colour" : "Add a colour to the gradient"]
                                   })]
                                 })
                               }
                               case "fraction": {
-                                var fT;
-                                const TT = "number" === typeof cT ? cT : Number(null !== (fT = kT.defaultText) && void 0 !== fT ? fT : 0);
-                                return (0, vT.jsxs)("span", {
+                                var Aq;
+                                const qq = "number" === typeof gq ? gq : Number(null !== (Aq = Eq.defaultText) && void 0 !== Aq ? Aq : 0);
+                                return (0, aq.jsxs)("span", {
                                   className: "DocsFractionInput",
-                                  children: [(0, vT.jsx)("input", {
+                                  children: [(0, aq.jsx)("input", {
                                     type: "range",
                                     min: 0,
                                     max: 1,
                                     step: .01,
-                                    value: TT,
-                                    "aria-label": OT,
-                                    onChange: TT => {
-                                      MT(Number(TT.target.value))
+                                    value: qq,
+                                    "aria-label": mq,
+                                    onChange: qq => {
+                                      lq(Number(qq.target.value))
                                     }
-                                  }), (0, vT.jsx)("output", {
-                                    children: TT.toFixed(2)
+                                  }), (0, aq.jsx)("output", {
+                                    children: qq.toFixed(2)
                                   })]
                                 })
                               }
                               case "choice":
-                                return (0, vT.jsxs)("select", {
-                                  value: String(null !== cT && void 0 !== cT ? cT : ""),
-                                  "aria-label": OT,
-                                  onChange: TT => {
-                                    MT(yT(TT.target.value))
+                                return (0, aq.jsxs)("select", {
+                                  value: String(null !== gq && void 0 !== gq ? gq : ""),
+                                  "aria-label": mq,
+                                  onChange: qq => {
+                                    lq(xq(qq.target.value))
                                   },
-                                  children: [!kT.isRequired && (0, vT.jsxs)("option", {
+                                  children: [!Eq.isRequired && (0, aq.jsxs)("option", {
                                     value: "",
-                                    children: ["Default (", kT.defaultText, ")"]
-                                  }), KT.options.map((TT => (0, vT.jsx)("option", {
-                                    value: TT,
-                                    children: TT
-                                  }, TT)))]
+                                    children: ["Default (", Eq.defaultText, ")"]
+                                  }), Oq.options.map((qq => (0, aq.jsx)("option", {
+                                    value: qq,
+                                    children: qq
+                                  }, qq)))]
                                 });
                               case "icon":
-                                return (0, vT.jsx)(QM, {
-                                  value: String(null !== cT && void 0 !== cT ? cT : ""),
-                                  fontAwesomeIcons: lT,
-                                  onChange: MT
+                                return (0, aq.jsx)(jl, {
+                                  value: String(null !== gq && void 0 !== gq ? gq : ""),
+                                  fontAwesomeIcons: Yq,
+                                  onChange: lq
                                 })
                             }
                           }
 
-                          function DM(TT) {
-                            let kT;
+                          function ol(qq) {
+                            let Eq;
                             try {
-                              kT = JSON.parse(TT)
-                            } catch (cT) {
+                              Eq = JSON.parse(qq)
+                            } catch (gq) {
                               return {
                                 part: null,
-                                error: `Not valid JSON yet: ${cT.message}`
+                                error: `Not valid JSON yet: ${gq.message}`
                               }
                             }
-                            return lc(kT) ? {
-                              part: kT,
+                            return gg(Eq) ? {
+                              part: Eq,
                               error: null
                             } : {
                               part: null,
@@ -3628,150 +3628,150 @@ export const modules = {
                             }
                           }
 
-                          function aM(TT) {
+                          function Pl(qq) {
                             let {
-                              parts: kT,
-                              index: cT,
-                              fontAwesomeIcons: MT,
-                              onChange: KT,
-                              Om: OT,
-                              onClose: yT
-                            } = TT;
-                            const fT = (0, lT.useContext)(vk),
-                              IT = (0, lT.useRef)(null),
-                              AT = kT[cT],
-                              CT = gk(AT),
-                              [jT, tT] = (0, lT.useState)((() => JSON.stringify(AT, null, 2))),
-                              NT = (0, lT.useMemo)((() => "other" === CT ? DM(jT).error : null), [CT, jT]);
-                            (0, lT.useEffect)((() => {
-                              var TT;
-                              null === (TT = IT.current) || void 0 === TT || TT.focus()
+                              parts: Eq,
+                              index: gq,
+                              fontAwesomeIcons: lq,
+                              onChange: Oq,
+                              OJ: mq,
+                              onClose: xq
+                            } = qq;
+                            const Aq = (0, Yq.useContext)(aE),
+                              uq = (0, Yq.useRef)(null),
+                              Bq = Eq[gq],
+                              Wq = RE(Bq),
+                              [Nq, Vq] = (0, Yq.useState)((() => JSON.stringify(Bq, null, 2))),
+                              jq = (0, Yq.useMemo)((() => "other" === Wq ? ol(Nq).error : null), [Wq, Nq]);
+                            (0, Yq.useEffect)((() => {
+                              var qq;
+                              null === (qq = uq.current) || void 0 === qq || qq.focus()
                             }), []);
-                            const QT = (0, vT.jsx)("div", {
+                            const Hq = (0, aq.jsx)("div", {
                               className: "DocsTextDialogOverlay",
-                              onMouseDown: TT => {
-                                TT.target === TT.currentTarget && yT()
+                              onMouseDown: qq => {
+                                qq.target === qq.currentTarget && xq()
                               },
-                              children: (0, vT.jsxs)("div", {
-                                ref: IT,
+                              children: (0, aq.jsxs)("div", {
+                                ref: uq,
                                 className: "DocsTextDialog",
                                 role: "dialog",
                                 "aria-modal": "true",
-                                "aria-label": `Edit part ${cT+1}: ${Lk[CT]}`,
+                                "aria-label": `Edit part ${gq+1}: ${JE[Wq]}`,
                                 tabIndex: -1,
-                                onKeyDown: TT => {
-                                  "Escape" === TT.key ? (TT.stopPropagation(), yT()) : "Tab" === TT.key && IT.current && function(TT, kT) {
-                                    const cT = Array.from(TT.querySelectorAll(zk)),
-                                      lT = cT[0],
-                                      MT = cT.at(-1);
-                                    if (!lT || !MT) return;
-                                    const KT = document.activeElement;
-                                    !kT.shiftKey || KT !== lT && KT !== TT ? kT.shiftKey || KT !== MT || (kT.preventDefault(), lT.focus()) : (kT.preventDefault(), MT.focus())
-                                  }(IT.current, TT)
+                                onKeyDown: qq => {
+                                  "Escape" === qq.key ? (qq.stopPropagation(), xq()) : "Tab" === qq.key && uq.current && function(qq, Eq) {
+                                    const gq = Array.from(qq.querySelectorAll(bE)),
+                                      Yq = gq[0],
+                                      lq = gq.at(-1);
+                                    if (!Yq || !lq) return;
+                                    const Oq = document.activeElement;
+                                    !Eq.shiftKey || Oq !== Yq && Oq !== qq ? Eq.shiftKey || Oq !== lq || (Eq.preventDefault(), Yq.focus()) : (Eq.preventDefault(), lq.focus())
+                                  }(uq.current, qq)
                                 },
-                                children: [(0, vT.jsxs)("header", {
+                                children: [(0, aq.jsxs)("header", {
                                   className: "DocsTextDialogHeader",
-                                  children: [(0, vT.jsxs)("div", {
-                                    children: [(0, vT.jsxs)("div", {
+                                  children: [(0, aq.jsxs)("div", {
+                                    children: [(0, aq.jsxs)("div", {
                                       className: "DocsTextDialogKind",
-                                      children: ["Part ", cT + 1]
-                                    }), (0, vT.jsx)("div", {
+                                      children: ["Part ", gq + 1]
+                                    }), (0, aq.jsx)("div", {
                                       className: "DocsTextDialogTitle",
-                                      children: Lk[CT]
+                                      children: JE[Wq]
                                     })]
-                                  }), (0, vT.jsx)("button", {
+                                  }), (0, aq.jsx)("button", {
                                     type: "button",
                                     className: "DocsTextIconButton",
                                     "aria-label": "Close",
-                                    onClick: yT,
-                                    children: (0, vT.jsx)(hT, {
+                                    onClick: xq,
+                                    children: (0, aq.jsx)(dq, {
                                       name: "cross"
                                     })
                                   })]
-                                }), (0, vT.jsx)(jM, {
-                                  parts: kT,
+                                }), (0, aq.jsx)(Wl, {
+                                  parts: Eq,
                                   className: "DocsTextDialogPreview"
-                                }), (0, vT.jsx)("div", {
+                                }), (0, aq.jsx)("div", {
                                   className: "DocsTextDialogFields",
-                                  children: "other" === CT ? (0, vT.jsxs)("label", {
+                                  children: "other" === Wq ? (0, aq.jsxs)("label", {
                                     className: "DocsTextField",
-                                    children: [(0, vT.jsx)("span", {
+                                    children: [(0, aq.jsx)("span", {
                                       className: "DocsTextFieldLabel",
                                       children: "JSON"
-                                    }), (0, vT.jsx)("textarea", {
+                                    }), (0, aq.jsx)("textarea", {
                                       className: "DocsTextJson",
-                                      value: jT,
+                                      value: Nq,
                                       rows: 6,
                                       spellCheck: !1,
-                                      onChange: TT => {
-                                        tT(TT.target.value);
-                                        const kT = DM(TT.target.value);
-                                        null !== kT.part && KT(kT.part)
+                                      onChange: qq => {
+                                        Vq(qq.target.value);
+                                        const Eq = ol(qq.target.value);
+                                        null !== Eq.part && Oq(Eq.part)
                                       }
-                                    }), NT && (0, vT.jsx)("span", {
+                                    }), jq && (0, aq.jsx)("span", {
                                       className: "DocsTextFieldError",
-                                      children: NT
+                                      children: jq
                                     })]
-                                  }) : Yk[CT].map((TT => {
-                                    const kT = Wk(AT, TT.path),
-                                      cT = TT.isRequired ? JSON.stringify(pk(AT, TT.path)) === JSON.stringify(AT) : void 0 === kT;
-                                    return (0, vT.jsxs)("div", {
+                                  }) : FE[Wq].map((qq => {
+                                    const Eq = XE(Bq, qq.path),
+                                      gq = qq.isRequired ? JSON.stringify(KE(Bq, qq.path)) === JSON.stringify(Bq) : void 0 === Eq;
+                                    return (0, aq.jsxs)("div", {
                                       className: "DocsTextField",
-                                      children: [(0, vT.jsxs)("div", {
+                                      children: [(0, aq.jsxs)("div", {
                                         className: "DocsTextFieldLabel",
-                                        children: [(0, vT.jsx)("span", {
-                                          children: TT.label
-                                        }), (0, vT.jsxs)("button", {
+                                        children: [(0, aq.jsx)("span", {
+                                          children: qq.label
+                                        }), (0, aq.jsxs)("button", {
                                           type: "button",
                                           className: "DocsTextResetButton",
-                                          disabled: cT,
-                                          "aria-label": `Reset ${TT.label.toLowerCase()} to default`,
+                                          disabled: gq,
+                                          "aria-label": `Reset ${qq.label.toLowerCase()} to default`,
                                           onClick: () => {
-                                            KT(pk(AT, TT.path))
+                                            Oq(KE(Bq, qq.path))
                                           },
-                                          children: [(0, vT.jsx)(hT, {
+                                          children: [(0, aq.jsx)(dq, {
                                             name: "replay"
                                           }), "Reset"]
                                         })]
-                                      }), (0, vT.jsx)(SM, {
-                                        property: TT,
-                                        value: kT,
-                                        fontAwesomeIcons: MT,
-                                        onChange: kT => {
-                                          KT(nk(AT, TT.path, kT))
+                                      }), (0, aq.jsx)(Hl, {
+                                        property: qq,
+                                        value: Eq,
+                                        fontAwesomeIcons: lq,
+                                        onChange: Eq => {
+                                          Oq(wE(Bq, qq.path, Eq))
                                         }
-                                      }), !TT.isRequired && (0, vT.jsxs)("span", {
+                                      }), !qq.isRequired && (0, aq.jsxs)("span", {
                                         className: "DocsTextFieldHint",
-                                        children: ["Default: ", TT.defaultText]
+                                        children: ["Default: ", qq.defaultText]
                                       })]
-                                    }, TT.path.join("."))
+                                    }, qq.path.join("."))
                                   }))
-                                }), (0, vT.jsxs)("footer", {
+                                }), (0, aq.jsxs)("footer", {
                                   className: "DocsTextDialogFooter",
-                                  children: [(0, vT.jsxs)("button", {
+                                  children: [(0, aq.jsxs)("button", {
                                     type: "button",
                                     className: "DocsTextRemoveButton",
-                                    onClick: OT,
-                                    children: [(0, vT.jsx)(hT, {
+                                    onClick: mq,
+                                    children: [(0, aq.jsx)(dq, {
                                       name: "trash"
                                     }), "Remove part"]
-                                  }), (0, vT.jsx)("button", {
+                                  }), (0, aq.jsx)("button", {
                                     type: "button",
                                     className: "DocsTextDoneButton",
-                                    onClick: yT,
+                                    onClick: xq,
                                     children: "Done"
                                   })]
-                                }), (0, vT.jsx)("datalist", {
+                                }), (0, aq.jsx)("datalist", {
                                   id: "DocsTextSizeSuggestions",
-                                  children: vM.map((TT => (0, vT.jsx)("option", {
-                                    value: TT
-                                  }, TT)))
+                                  children: Nl.map((qq => (0, aq.jsx)("option", {
+                                    value: qq
+                                  }, qq)))
                                 })]
                               })
                             });
-                            return fT ? (0, xT.createPortal)(QT, fT) : QT
+                            return Aq ? (0, cq.createPortal)(Hq, Aq) : Hq
                           }
-                          const FM = [{
+                          const Ql = [{
                               label: "Icon and text",
                               parts: [{
                                 icon: "Pixelated Heart"
@@ -3815,265 +3815,265 @@ export const modules = {
                                 action: "jump"
                               }]
                             }],
-                            rM = Object.keys(Rk);
+                            yl = Object.keys(kE);
 
-                          function PM(TT) {
+                          function tl(qq) {
                             let {
-                              fontAwesomeIcons: kT
-                            } = TT;
-                            const [cT, MT] = (0, lT.useState)(FM[0].parts), [OT, yT] = (0, lT.useState)((() => Tc(FM[0].parts))), [fT, xT] = (0, lT.useState)(null), [IT, AT] = (0, lT.useState)(!1), [CT, jT] = (0, lT.useState)(null), [tT, NT] = (0, lT.useState)(!1), [QT, ST] = (0, lT.useState)(null), DT = (0, lT.useRef)(null), aT = Tc(cT);
-                            (0, lT.useLayoutEffect)((() => {
-                              var TT;
-                              if (!QT) return;
-                              const kT = TT => {
-                                  var kT;
-                                  return null === (kT = DT.current) || void 0 === kT ? void 0 : kT.querySelector(`[data-focus-key="${TT}"]`)
+                              fontAwesomeIcons: Eq
+                            } = qq;
+                            const [gq, lq] = (0, Yq.useState)(Ql[0].parts), [mq, xq] = (0, Yq.useState)((() => DE(Ql[0].parts))), [Aq, cq] = (0, Yq.useState)(null), [uq, Bq] = (0, Yq.useState)(!1), [Wq, Nq] = (0, Yq.useState)(null), [Vq, jq] = (0, Yq.useState)(!1), [Hq, oq] = (0, Yq.useState)(null), Pq = (0, Yq.useRef)(null), Qq = DE(gq);
+                            (0, Yq.useLayoutEffect)((() => {
+                              var qq;
+                              if (!Hq) return;
+                              const Eq = qq => {
+                                  var Eq;
+                                  return null === (Eq = Pq.current) || void 0 === Eq ? void 0 : Eq.querySelector(`[data-focus-key="${qq}"]`)
                                 },
-                                cT = kT(QT.key);
-                              null === (TT = cT && !cT.disabled ? cT : kT(QT.fallback)) || void 0 === TT || TT.focus(), ST(null)
-                            }), [QT]);
-                            const FT = TT => {
-                                MT(TT), yT(Tc(TT)), xT(null)
+                                gq = Eq(Hq.key);
+                              null === (qq = gq && !gq.disabled ? gq : Eq(Hq.fallback)) || void 0 === qq || qq.focus(), oq(null)
+                            }), [Hq]);
+                            const yq = qq => {
+                                lq(qq), xq(DE(qq)), cq(null)
                               },
-                              PT = TT => {
-                                FT(cT.filter(((kT, cT) => cT !== TT))), ST({
-                                  key: `edit-${Math.min(TT,cT.length-2)}`,
+                              rq = qq => {
+                                yq(gq.filter(((Eq, gq) => gq !== qq))), oq({
+                                  key: `edit-${Math.min(qq,gq.length-2)}`,
                                   fallback: "add"
                                 })
                               },
-                              wT = (TT, kT) => {
-                                const lT = [...cT],
-                                  [MT] = lT.splice(TT, 1);
-                                lT.splice(TT + kT, 0, MT), FT(lT);
-                                ST({
-                                  key: `${kT<0?"up":"down"}-${TT+kT}`,
-                                  fallback: `edit-${TT+kT}`
+                              vq = (qq, Eq) => {
+                                const Yq = [...gq],
+                                  [lq] = Yq.splice(qq, 1);
+                                Yq.splice(qq + Eq, 0, lq), yq(Yq);
+                                oq({
+                                  key: `${Eq<0?"up":"down"}-${qq+Eq}`,
+                                  fallback: `edit-${qq+Eq}`
                                 })
                               };
-                            return (0, vT.jsxs)("section", {
-                              ref: DT,
+                            return (0, aq.jsxs)("section", {
+                              ref: Pq,
                               className: "DocsPlayground DocsTextEditor",
                               "aria-label": "Styled text editor",
-                              children: [(0, vT.jsx)("header", {
+                              children: [(0, aq.jsx)("header", {
                                 className: "DocsPlaygroundHeader",
-                                children: (0, vT.jsxs)("div", {
-                                  children: [(0, vT.jsx)("div", {
+                                children: (0, aq.jsxs)("div", {
+                                  children: [(0, aq.jsx)("div", {
                                     className: "DocsPlaygroundTitle",
                                     children: "Styled text editor"
-                                  }), (0, vT.jsx)("div", {
+                                  }), (0, aq.jsx)("div", {
                                     className: "DocsPlaygroundHint",
                                     children: "Add parts, click one to style it, and copy the code. The preview draws it as the game does."
                                   })]
                                 })
-                              }), (0, vT.jsx)("div", {
+                              }), (0, aq.jsx)("div", {
                                 className: "DocsPlaygroundPresets",
-                                children: FM.map((TT => (0, vT.jsx)("button", {
+                                children: Ql.map((qq => (0, aq.jsx)("button", {
                                   type: "button",
-                                  className: KT()("DocsVariantChip", {
-                                    Active: aT === Tc(TT.parts)
+                                  className: Oq()("DocsVariantChip", {
+                                    Active: Qq === DE(qq.parts)
                                   }),
                                   onClick: () => {
-                                    FT(TT.parts)
+                                    yq(qq.parts)
                                   },
-                                  children: TT.label
-                                }, TT.label)))
-                              }), (0, vT.jsx)(jM, {
-                                parts: cT,
+                                  children: qq.label
+                                }, qq.label)))
+                              }), (0, aq.jsx)(Wl, {
+                                parts: gq,
                                 className: "DocsTextEditorPreview"
-                              }), (0, vT.jsxs)("div", {
+                              }), (0, aq.jsxs)("div", {
                                 className: "DocsTextEditorBody",
-                                children: [(0, vT.jsxs)("div", {
+                                children: [(0, aq.jsxs)("div", {
                                   className: "DocsTextEditorPanel",
-                                  children: [(0, vT.jsx)("div", {
+                                  children: [(0, aq.jsx)("div", {
                                     className: "DocsTextEditorPanelTitle",
                                     children: "Parts"
-                                  }), (0, vT.jsxs)("ol", {
+                                  }), (0, aq.jsxs)("ol", {
                                     className: "DocsTextParts",
-                                    children: [cT.map(((TT, kT) => {
-                                      const lT = gk(TT);
-                                      return (0, vT.jsxs)("li", {
+                                    children: [gq.map(((qq, Eq) => {
+                                      const Yq = RE(qq);
+                                      return (0, aq.jsxs)("li", {
                                         className: "DocsTextPart",
-                                        children: [(0, vT.jsxs)("button", {
+                                        children: [(0, aq.jsxs)("button", {
                                           type: "button",
                                           className: "DocsTextPartMain",
-                                          "data-focus-key": `edit-${kT}`,
-                                          "aria-label": `Edit part ${kT+1}, ${Lk[lT]}`,
+                                          "data-focus-key": `edit-${Eq}`,
+                                          "aria-label": `Edit part ${Eq+1}, ${JE[Yq]}`,
                                           onClick: () => {
-                                            jT(kT)
+                                            Nq(Eq)
                                           },
-                                          children: [(0, vT.jsx)("span", {
+                                          children: [(0, aq.jsx)("span", {
                                             className: "DocsTextPartKind",
-                                            children: Lk[lT]
-                                          }), (0, vT.jsx)(jM, {
-                                            parts: [TT],
+                                            children: JE[Yq]
+                                          }), (0, aq.jsx)(Wl, {
+                                            parts: [qq],
                                             className: "DocsTextPartPreview"
-                                          }), "text" !== lT && (0, vT.jsx)("code", {
+                                          }), "text" !== Yq && (0, aq.jsx)("code", {
                                             className: "DocsTextPartName",
-                                            children: ik(TT)
+                                            children: CE(qq)
                                           })]
-                                        }), (0, vT.jsxs)("span", {
+                                        }), (0, aq.jsxs)("span", {
                                           className: "DocsTextPartActions",
-                                          children: [(0, vT.jsx)("button", {
+                                          children: [(0, aq.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${kT+1} up`,
-                                            "data-focus-key": `up-${kT}`,
-                                            disabled: 0 === kT,
+                                            "aria-label": `Move part ${Eq+1} up`,
+                                            "data-focus-key": `up-${Eq}`,
+                                            disabled: 0 === Eq,
                                             onClick: () => {
-                                              wT(kT, -1)
+                                              vq(Eq, -1)
                                             },
-                                            children: (0, vT.jsx)(hT, {
+                                            children: (0, aq.jsx)(dq, {
                                               name: "chevron-up"
                                             })
-                                          }), (0, vT.jsx)("button", {
+                                          }), (0, aq.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${kT+1} down`,
-                                            "data-focus-key": `down-${kT}`,
-                                            disabled: kT === cT.length - 1,
+                                            "aria-label": `Move part ${Eq+1} down`,
+                                            "data-focus-key": `down-${Eq}`,
+                                            disabled: Eq === gq.length - 1,
                                             onClick: () => {
-                                              wT(kT, 1)
+                                              vq(Eq, 1)
                                             },
-                                            children: (0, vT.jsx)(hT, {
+                                            children: (0, aq.jsx)(dq, {
                                               name: "chevron-down"
                                             })
-                                          }), (0, vT.jsx)("button", {
+                                          }), (0, aq.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Remove part ${kT+1}`,
+                                            "aria-label": `Remove part ${Eq+1}`,
                                             onClick: () => {
-                                              PT(kT)
+                                              rq(Eq)
                                             },
-                                            children: (0, vT.jsx)(hT, {
+                                            children: (0, aq.jsx)(dq, {
                                               name: "cross"
                                             })
                                           })]
                                         })]
-                                      }, kT)
-                                    })), 0 === cT.length && (0, vT.jsx)("li", {
+                                      }, Eq)
+                                    })), 0 === gq.length && (0, aq.jsx)("li", {
                                       className: "DocsTextPartsEmpty",
                                       children: "No parts yet. Add one below."
                                     })]
-                                  }), (0, vT.jsxs)("div", {
+                                  }), (0, aq.jsxs)("div", {
                                     className: "DocsTextAddPart",
-                                    onKeyDown: TT => {
-                                      "Escape" === TT.key && tT && (TT.stopPropagation(), NT(!1), ST({
+                                    onKeyDown: qq => {
+                                      "Escape" === qq.key && Vq && (qq.stopPropagation(), jq(!1), oq({
                                         key: "add",
                                         fallback: "add"
                                       }))
                                     },
-                                    children: [(0, vT.jsxs)("button", {
+                                    children: [(0, aq.jsxs)("button", {
                                       type: "button",
                                       className: "DocsTextAddPartButton",
                                       "data-focus-key": "add",
-                                      "aria-expanded": tT,
+                                      "aria-expanded": Vq,
                                       "aria-controls": "DocsTextAddPartMenu",
                                       onClick: () => {
-                                        NT(!tT)
+                                        jq(!Vq)
                                       },
-                                      children: [(0, vT.jsx)(hT, {
+                                      children: [(0, aq.jsx)(dq, {
                                         name: "plus"
-                                      }), "Add a part", (0, vT.jsx)(hT, {
-                                        name: tT ? "chevron-up" : "chevron-down"
+                                      }), "Add a part", (0, aq.jsx)(dq, {
+                                        name: Vq ? "chevron-up" : "chevron-down"
                                       })]
-                                    }), tT && (0, vT.jsx)("ul", {
+                                    }), Vq && (0, aq.jsx)("ul", {
                                       id: "DocsTextAddPartMenu",
                                       className: "DocsTextAddPartMenu",
-                                      children: rM.map((TT => (0, vT.jsx)("li", {
-                                        children: (0, vT.jsx)("button", {
+                                      children: yl.map((qq => (0, aq.jsx)("li", {
+                                        children: (0, aq.jsx)("button", {
                                           type: "button",
                                           onClick: () => {
-                                            (TT => {
-                                              FT([...cT, Rk[TT]]), NT(!1), jT(cT.length)
-                                            })(TT)
+                                            (qq => {
+                                              yq([...gq, kE[qq]]), jq(!1), Nq(gq.length)
+                                            })(qq)
                                           },
-                                          children: Lk[TT]
+                                          children: JE[qq]
                                         })
-                                      }, TT)))
+                                      }, qq)))
                                     })]
                                   })]
-                                }), (0, vT.jsxs)("div", {
+                                }), (0, aq.jsxs)("div", {
                                   className: "DocsTextEditorPanel",
-                                  children: [(0, vT.jsxs)("div", {
+                                  children: [(0, aq.jsxs)("div", {
                                     className: "DocsTextEditorPanelTitle",
-                                    children: ["Code", (0, vT.jsxs)("button", {
+                                    children: ["Code", (0, aq.jsxs)("button", {
                                       type: "button",
                                       className: "DocsTextEditCodeButton",
-                                      "aria-pressed": IT,
+                                      "aria-pressed": uq,
                                       onClick: () => {
-                                        AT(!IT)
+                                        Bq(!uq)
                                       },
-                                      children: [(0, vT.jsx)(hT, {
-                                        name: IT ? "check" : "pencil"
-                                      }), IT ? "Done" : "Edit"]
+                                      children: [(0, aq.jsx)(dq, {
+                                        name: uq ? "check" : "pencil"
+                                      }), uq ? "Done" : "Edit"]
                                     })]
-                                  }), IT ? (0, vT.jsxs)(vT.Fragment, {
-                                    children: [(0, vT.jsx)("textarea", {
+                                  }), uq ? (0, aq.jsxs)(aq.Fragment, {
+                                    children: [(0, aq.jsx)("textarea", {
                                       className: "DocsPlaygroundInput",
-                                      value: OT,
+                                      value: mq,
                                       spellCheck: !1,
                                       "aria-label": "Styled text as code",
-                                      onChange: TT => {
-                                        yT(TT.target.value);
-                                        const kT = Mc(TT.target.value);
-                                        xT(kT.error), kT.parts && MT(kT.parts)
+                                      onChange: qq => {
+                                        xq(qq.target.value);
+                                        const Eq = Yg(qq.target.value);
+                                        cq(Eq.error), Eq.parts && lq(Eq.parts)
                                       }
-                                    }), fT && (0, vT.jsx)("p", {
+                                    }), Aq && (0, aq.jsx)("p", {
                                       className: "DocsPlaygroundError",
-                                      children: fT
+                                      children: Aq
                                     })]
-                                  }) : (0, vT.jsx)(rT, {
+                                  }) : (0, aq.jsx)(tq, {
                                     lang: "js",
-                                    code: `api.sendMessage(playerId, ${aT})`
+                                    code: `api.sendMessage(playerId, ${Qq})`
                                   })]
                                 })]
-                              }), null !== CT && CT < cT.length && (0, vT.jsx)(aM, {
-                                parts: cT,
-                                index: CT,
-                                fontAwesomeIcons: kT,
-                                onChange: TT => {
-                                  ((TT, kT) => {
-                                    FT(cT.map(((cT, lT) => lT === TT ? kT : cT)))
-                                  })(CT, TT)
+                              }), null !== Wq && Wq < gq.length && (0, aq.jsx)(Pl, {
+                                parts: gq,
+                                index: Wq,
+                                fontAwesomeIcons: Eq,
+                                onChange: qq => {
+                                  ((qq, Eq) => {
+                                    yq(gq.map(((gq, Yq) => Yq === qq ? Eq : gq)))
+                                  })(Wq, qq)
                                 },
-                                Om: () => {
-                                  PT(CT), jT(null)
+                                OJ: () => {
+                                  rq(Wq), Nq(null)
                                 },
                                 onClose: () => {
-                                  jT(null), ST({
-                                    key: `edit-${CT}`,
+                                  Nq(null), oq({
+                                    key: `edit-${Wq}`,
                                     fallback: "add"
                                   })
                                 }
                               })]
                             })
                           }
-                          var wM = cT(4813),
-                            mM = cT(4798),
-                            bM = cT(4806),
-                            zM = cT(4815);
-                          const JM = 40,
-                            oM = 800,
-                            HM = 150,
-                            eM = 8e3,
-                            GM = 2e3;
+                          var rl = gq(4671),
+                            vl = gq(4648),
+                            hl = gq(4662),
+                            nl = gq(4679);
+                          const bl = 40,
+                            il = 800,
+                            Zl = 150,
+                            fl = 8e3,
+                            Ml = 2e3;
 
-                          function VM(TT, kT) {
-                            return 12 * Math.log2(kT / TT)
+                          function Tl(qq, Eq) {
+                            return 12 * Math.log2(Eq / qq)
                           }
 
-                          function EM(TT, kT) {
-                            return Math.round(TT * 2 ** (kT / 12) * 10) / 10
+                          function zl(qq, Eq) {
+                            return Math.round(qq * 2 ** (Eq / 12) * 10) / 10
                           }
 
-                          function ZM(TT) {
-                            return `${TT} ms`
+                          function Sl(qq) {
+                            return `${qq} ms`
                           }
 
-                          function uM(TT) {
-                            return `${TT} st`
+                          function pl(qq) {
+                            return `${qq} st`
                           }
-                          const XM = [{
+                          const Gl = [{
                             key: "variationSemitones",
                             label: "Word variation",
                             max: 6
@@ -4091,769 +4091,769 @@ export const modules = {
                             max: 12
                           }];
 
-                          function dM(TT) {
+                          function Ll(qq) {
                             let {
-                              synth: kT,
-                              onChange: cT
-                            } = TT;
-                            const lT = (0, wM.j)(kT);
-                            return (0, vT.jsxs)("div", {
+                              synth: Eq,
+                              onChange: gq
+                            } = qq;
+                            const Yq = (0, rl.i)(Eq);
+                            return (0, aq.jsxs)("div", {
                               className: "DocsVoiceControls",
-                              children: [(0, vT.jsxs)("div", {
+                              children: [(0, aq.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, vT.jsx)("div", {
+                                children: [(0, aq.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Voice"
-                                }), (0, vT.jsxs)("div", {
+                                }), (0, aq.jsxs)("div", {
                                   className: "DocsControl",
-                                  children: [(0, vT.jsx)("div", {
+                                  children: [(0, aq.jsx)("div", {
                                     className: "DocsControlLabel",
-                                    children: (0, vT.jsx)("span", {
+                                    children: (0, aq.jsx)("span", {
                                       children: "Tone"
                                     })
-                                  }), (0, vT.jsx)("div", {
+                                  }), (0, aq.jsx)("div", {
                                     className: "DocsVoiceWaveforms",
-                                    children: wM.f.map((TT => (0, vT.jsx)("button", {
+                                    children: rl.d.map((qq => (0, aq.jsx)("button", {
                                       type: "button",
-                                      className: KT()("DocsVariantChip", {
-                                        Active: kT.waveform === TT
+                                      className: Oq()("DocsVariantChip", {
+                                        Active: Eq.waveform === qq
                                       }),
-                                      "aria-pressed": kT.waveform === TT,
+                                      "aria-pressed": Eq.waveform === qq,
                                       onClick: () => {
-                                        cT({
-                                          waveform: TT
+                                        gq({
+                                          waveform: qq
                                         })
                                       },
-                                      children: TT
-                                    }, TT)))
+                                      children: qq
+                                    }, qq)))
                                   })]
-                                }), (0, vT.jsx)(sl, {
+                                }), (0, aq.jsx)(eY, {
                                   label: "Pitch",
                                   min: 0,
-                                  max: VM(JM, oM),
+                                  max: Tl(bl, il),
                                   step: .1,
-                                  value: VM(JM, kT.pitchHz),
-                                  format: () => `${kT.pitchHz} Hz`,
-                                  onChange: TT => {
-                                    cT({
-                                      pitchHz: EM(JM, TT)
+                                  value: Tl(bl, Eq.pitchHz),
+                                  format: () => `${Eq.pitchHz} Hz`,
+                                  onChange: qq => {
+                                    gq({
+                                      pitchHz: zl(bl, qq)
                                     })
                                   }
-                                }), (0, vT.jsx)(sl, {
+                                }), (0, aq.jsx)(eY, {
                                   label: "Time per syllable",
                                   min: 25,
                                   max: 200,
                                   step: 1,
-                                  value: kT.syllableMs,
-                                  format: ZM,
-                                  onChange: TT => {
-                                    cT({
-                                      syllableMs: TT
+                                  value: Eq.syllableMs,
+                                  format: Sl,
+                                  onChange: qq => {
+                                    gq({
+                                      syllableMs: qq
                                     })
                                   }
-                                }), (0, vT.jsx)(sl, {
+                                }), (0, aq.jsx)(eY, {
                                   label: "Volume",
                                   min: 0,
                                   max: 2,
                                   step: .05,
-                                  value: kT.volume,
-                                  onChange: TT => {
-                                    cT({
-                                      volume: TT
+                                  value: Eq.volume,
+                                  onChange: qq => {
+                                    gq({
+                                      volume: qq
                                     })
                                   }
                                 })]
-                              }), (0, vT.jsxs)("div", {
+                              }), (0, aq.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, vT.jsx)("div", {
+                                children: [(0, aq.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Each blip"
-                                }), (0, vT.jsx)(sl, {
+                                }), (0, aq.jsx)(eY, {
                                   label: "Length",
                                   min: 10,
                                   max: 300,
                                   step: 1,
-                                  value: kT.durationMs,
-                                  format: ZM,
-                                  onChange: TT => {
-                                    cT({
-                                      durationMs: TT
+                                  value: Eq.durationMs,
+                                  format: Sl,
+                                  onChange: qq => {
+                                    gq({
+                                      durationMs: qq
                                     })
                                   }
-                                }), (0, vT.jsx)(sl, {
+                                }), (0, aq.jsx)(eY, {
                                   label: "Fade in",
                                   min: 0,
-                                  max: lT.durationMs,
+                                  max: Yq.durationMs,
                                   step: 1,
-                                  value: lT.attackMs,
-                                  format: ZM,
-                                  onChange: TT => {
-                                    cT({
-                                      attackMs: TT
+                                  value: Yq.attackMs,
+                                  format: Sl,
+                                  onChange: qq => {
+                                    gq({
+                                      attackMs: qq
                                     })
                                   }
-                                }), (0, vT.jsx)(sl, {
+                                }), (0, aq.jsx)(eY, {
                                   label: "Fade out",
                                   min: 0,
-                                  max: lT.durationMs - lT.attackMs,
+                                  max: Yq.durationMs - Yq.attackMs,
                                   step: 1,
-                                  value: lT.releaseMs,
-                                  format: ZM,
-                                  onChange: TT => {
-                                    cT({
-                                      releaseMs: TT
+                                  value: Yq.releaseMs,
+                                  format: Sl,
+                                  onChange: qq => {
+                                    gq({
+                                      releaseMs: qq
                                     })
                                   }
-                                }), (0, vT.jsx)(sl, {
+                                }), (0, aq.jsx)(eY, {
                                   label: "Glide",
                                   min: -12,
                                   max: 12,
                                   step: .1,
-                                  value: kT.glideSemitones,
-                                  format: uM,
-                                  onChange: TT => {
-                                    cT({
-                                      glideSemitones: TT
+                                  value: Eq.glideSemitones,
+                                  format: pl,
+                                  onChange: qq => {
+                                    gq({
+                                      glideSemitones: qq
                                     })
                                   }
-                                }), (0, vT.jsxs)("label", {
+                                }), (0, aq.jsxs)("label", {
                                   className: "DocsVoiceToggle",
-                                  children: [(0, vT.jsx)("input", {
+                                  children: [(0, aq.jsx)("input", {
                                     type: "checkbox",
-                                    checked: null !== kT.lowpassHz,
-                                    onChange: TT => {
-                                      cT({
-                                        lowpassHz: TT.target.checked ? GM : null
+                                    checked: null !== Eq.lowpassHz,
+                                    onChange: qq => {
+                                      gq({
+                                        lowpassHz: qq.target.checked ? Ml : null
                                       })
                                     }
-                                  }), (0, vT.jsx)("span", {
+                                  }), (0, aq.jsx)("span", {
                                     children: "Muffle with a filter"
                                   })]
-                                }), null !== kT.lowpassHz && (0, vT.jsx)(sl, {
+                                }), null !== Eq.lowpassHz && (0, aq.jsx)(eY, {
                                   label: "Filter",
                                   min: 0,
-                                  max: VM(HM, eM),
+                                  max: Tl(Zl, fl),
                                   step: .1,
-                                  value: VM(HM, kT.lowpassHz),
-                                  format: () => `${kT.lowpassHz} Hz`,
-                                  onChange: TT => {
-                                    cT({
-                                      lowpassHz: EM(HM, TT)
+                                  value: Tl(Zl, Eq.lowpassHz),
+                                  format: () => `${Eq.lowpassHz} Hz`,
+                                  onChange: qq => {
+                                    gq({
+                                      lowpassHz: zl(Zl, qq)
                                     })
                                   }
                                 })]
-                              }), (0, vT.jsxs)("div", {
+                              }), (0, aq.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, vT.jsx)("div", {
+                                children: [(0, aq.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Intonation"
-                                }), XM.map((TT => {
+                                }), Gl.map((qq => {
                                   let {
-                                    key: lT,
-                                    label: MT,
-                                    max: KT
-                                  } = TT;
-                                  return (0, vT.jsx)(sl, {
-                                    label: MT,
+                                    key: Yq,
+                                    label: lq,
+                                    max: Oq
+                                  } = qq;
+                                  return (0, aq.jsx)(eY, {
+                                    label: lq,
                                     min: 0,
-                                    max: KT,
+                                    max: Oq,
                                     step: .1,
-                                    value: kT.intonation[lT],
-                                    format: uM,
-                                    onChange: TT => {
-                                      cT({
+                                    value: Eq.intonation[Yq],
+                                    format: pl,
+                                    onChange: qq => {
+                                      gq({
                                         intonation: {
-                                          ...kT.intonation,
-                                          [lT]: TT
+                                          ...Eq.intonation,
+                                          [Yq]: qq
                                         }
                                       })
                                     }
-                                  }, lT)
+                                  }, Yq)
                                 }))]
                               })]
                             })
                           }
-                          const LM = Object.keys(wM.h),
-                            RM = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
+                          const Jl = Object.keys(rl.f),
+                            kl = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
 
-                          function gM(TT) {
-                            var kT;
-                            const cT = JSON.stringify((0, wM.j)(TT));
-                            return null !== (kT = LM.find((TT => JSON.stringify((0, wM.j)(wM.h[TT])) === cT))) && void 0 !== kT ? kT : null
+                          function Rl(qq) {
+                            var Eq;
+                            const gq = JSON.stringify((0, rl.i)(qq));
+                            return null !== (Eq = Jl.find((qq => JSON.stringify((0, rl.i)(rl.f[qq])) === gq))) && void 0 !== Eq ? Eq : null
                           }
 
-                          function UM(TT) {
-                            let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-                            if ("object" !== typeof TT || null === TT) return JSON.stringify(TT);
-                            return `{\n${Object.entries(TT).map((TT=>{let[cT,lT]=TT;return`${kT}    ${cT}: ${UM(lT,`${kT}    `)},`})).join("\n")}\n${kT}}`
+                          function Ul(qq) {
+                            let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+                            if ("object" !== typeof qq || null === qq) return JSON.stringify(qq);
+                            return `{\n${Object.entries(qq).map((qq=>{let[gq,Yq]=qq;return`${Eq}    ${gq}: ${Ul(Yq,`${Eq}    `)},`})).join("\n")}\n${Eq}}`
                           }
 
-                          function YM(TT, kT, cT) {
-                            const lT = gM(TT),
-                              MT = [`    line: ${JSON.stringify(kT)},`];
-                            return cT && MT.push(`    speakerName: ${JSON.stringify(cT)},`), MT.push("    voice,"), `const voice = ${lT?JSON.stringify(lT):UM((0,wM.j)(TT))}\n\napi.setClientOption(playerId, "dialogue", {\n${MT.join("\n")}\n})`
+                          function Fl(qq, Eq, gq) {
+                            const Yq = Rl(qq),
+                              lq = [`    line: ${JSON.stringify(Eq)},`];
+                            return gq && lq.push(`    speakerName: ${JSON.stringify(gq)},`), lq.push("    voice,"), `const voice = ${Yq?JSON.stringify(Yq):Ul((0,rl.i)(qq))}\n\napi.setClientOption(playerId, "dialogue", {\n${lq.join("\n")}\n})`
                           }
-                          const BM = 400,
-                            WM = 90;
-                          let nM = null;
+                          const sl = 400,
+                            Xl = 90;
+                          let wl = null;
 
-                          function pM(TT, kT, cT) {
-                            return nM ??= new AudioContext, nM.resume(), (0, zM.e)(nM, nM.destination, TT, kT, cT, (() => {}))
+                          function Kl(qq, Eq, gq) {
+                            return wl ??= new AudioContext, wl.resume(), (0, nl.e)(wl, wl.destination, qq, Eq, gq, (() => {}))
                           }
 
-                          function iM() {
-                            const [TT, kT] = (0, lT.useState)(wM.h.regular), [cT, MT] = (0, lT.useState)(RM[0]), [OT, yT] = (0, lT.useState)("Innkeeper"), [fT, xT] = (0, lT.useState)(0), IT = Al((TT => TT.volume)), AT = (0, lT.useRef)(null), CT = (0, lT.useRef)(0), jT = (0, lT.useRef)(0), tT = () => {
-                              var TT;
-                              null === (TT = AT.current) || void 0 === TT || TT.call(AT), AT.current = null
+                          function Cl() {
+                            const [qq, Eq] = (0, Yq.useState)(rl.f.regular), [gq, lq] = (0, Yq.useState)(kl[0]), [mq, xq] = (0, Yq.useState)("Innkeeper"), [Aq, cq] = (0, Yq.useState)(0), uq = uY((qq => qq.volume)), Bq = (0, Yq.useRef)(null), Wq = (0, Yq.useRef)(0), Nq = (0, Yq.useRef)(0), Vq = () => {
+                              var qq;
+                              null === (qq = Bq.current) || void 0 === qq || qq.call(Bq), Bq.current = null
                             };
-                            (0, lT.useEffect)((() => () => {
-                              var TT;
-                              null === (TT = AT.current) || void 0 === TT || TT.call(AT), window.clearTimeout(CT.current)
+                            (0, Yq.useEffect)((() => () => {
+                              var qq;
+                              null === (qq = Bq.current) || void 0 === qq || qq.call(Bq), window.clearTimeout(Wq.current)
                             }), []);
-                            const NT = (0, lT.useMemo)((() => ({
-                                line: cT,
-                                speakerName: OT || void 0,
-                                voice: TT
-                              })), [cT, OT, TT]),
-                              QT = (0, lT.useRef)(NT);
-                            QT.current = NT;
-                            const DT = gM(TT),
-                              aT = TT => {
-                                window.clearTimeout(CT.current), tT();
+                            const jq = (0, Yq.useMemo)((() => ({
+                                line: gq,
+                                speakerName: mq || void 0,
+                                voice: qq
+                              })), [gq, mq, qq]),
+                              Hq = (0, Yq.useRef)(jq);
+                            Hq.current = jq;
+                            const Pq = Rl(qq),
+                              Qq = qq => {
+                                window.clearTimeout(Wq.current), Vq();
                                 const {
-                                  plan: kT,
-                                  synth: cT
-                                } = (0, bM.e)(TT);
-                                cT && (AT.current = pM(cT, kT.blips, IT)), xT((TT => TT + 1))
+                                  plan: Eq,
+                                  synth: gq
+                                } = (0, hl.f)(qq);
+                                gq && (Bq.current = Kl(gq, Eq.blips, uq)), cq((qq => qq + 1))
                               },
-                              FT = YM(TT, cT, OT);
-                            return (0, vT.jsxs)("section", {
+                              yq = Fl(qq, gq, mq);
+                            return (0, aq.jsxs)("section", {
                               className: "DocsPlayground DocsVoicePlayground",
                               "aria-label": "Voice playground",
-                              children: [(0, vT.jsxs)("header", {
+                              children: [(0, aq.jsxs)("header", {
                                 className: "DocsPlaygroundHeader",
-                                children: [(0, vT.jsxs)("div", {
-                                  children: [(0, vT.jsx)("div", {
+                                children: [(0, aq.jsxs)("div", {
+                                  children: [(0, aq.jsx)("div", {
                                     className: "DocsPlaygroundTitle",
                                     children: "Try it: voices"
-                                  }), (0, vT.jsx)("div", {
+                                  }), (0, aq.jsx)("div", {
                                     className: "DocsPlaygroundHint",
                                     children: "Start from a preset and change it to suit your character. The line replays as you go."
                                   })]
-                                }), (0, vT.jsx)(ST, {
-                                  text: FT,
+                                }), (0, aq.jsx)(oq, {
+                                  text: yq,
                                   label: "Copy code"
                                 })]
-                              }), (0, vT.jsxs)("div", {
+                              }), (0, aq.jsxs)("div", {
                                 className: "DocsPlaygroundPresets",
-                                children: [LM.map((TT => (0, vT.jsx)("button", {
+                                children: [Jl.map((qq => (0, aq.jsx)("button", {
                                   type: "button",
-                                  className: KT()("DocsVariantChip", {
-                                    Active: DT === TT
+                                  className: Oq()("DocsVariantChip", {
+                                    Active: Pq === qq
                                   }),
-                                  "aria-pressed": DT === TT,
+                                  "aria-pressed": Pq === qq,
                                   onClick: () => {
-                                    (TT => {
-                                      const cT = wM.h[TT];
-                                      kT(cT), aT({
-                                        ...NT,
-                                        voice: cT
+                                    (qq => {
+                                      const gq = rl.f[qq];
+                                      Eq(gq), Qq({
+                                        ...jq,
+                                        voice: gq
                                       })
-                                    })(TT)
+                                    })(qq)
                                   },
-                                  children: TT
-                                }, TT))), !DT && (0, vT.jsx)("span", {
+                                  children: qq
+                                }, qq))), !Pq && (0, aq.jsx)("span", {
                                   className: "DocsVariantChip Active DocsVoiceCustomChip",
                                   children: "custom"
                                 })]
-                              }), (0, vT.jsxs)("div", {
+                              }), (0, aq.jsxs)("div", {
                                 className: "DocsVoiceBody",
-                                children: [(0, vT.jsxs)("div", {
+                                children: [(0, aq.jsxs)("div", {
                                   className: "DocsVoiceScene",
-                                  children: [(0, vT.jsx)("div", {
+                                  children: [(0, aq.jsx)("div", {
                                     className: "DocsVoiceStage",
-                                    children: (0, vT.jsx)(mM.e, {
-                                      display: NT
-                                    }, fT)
-                                  }), (0, vT.jsxs)("form", {
+                                    children: (0, aq.jsx)(vl.e, {
+                                      display: jq
+                                    }, Aq)
+                                  }), (0, aq.jsxs)("form", {
                                     className: "DocsVoiceLineRow",
-                                    onSubmit: TT => {
-                                      TT.preventDefault(), aT(NT)
+                                    onSubmit: qq => {
+                                      qq.preventDefault(), Qq(jq)
                                     },
-                                    children: [(0, vT.jsx)("input", {
-                                      value: cT,
+                                    children: [(0, aq.jsx)("input", {
+                                      value: gq,
                                       "aria-label": "Line",
                                       placeholder: "Type a line to hear it",
-                                      onChange: TT => {
-                                        MT(TT.target.value)
+                                      onChange: qq => {
+                                        lq(qq.target.value)
                                       }
-                                    }), (0, vT.jsxs)("button", {
+                                    }), (0, aq.jsxs)("button", {
                                       type: "submit",
                                       className: "DocsVoiceSpeakButton",
-                                      children: [(0, vT.jsx)(hT, {
+                                      children: [(0, aq.jsx)(dq, {
                                         name: "play"
-                                      }), (0, vT.jsx)("span", {
+                                      }), (0, aq.jsx)("span", {
                                         children: "Speak"
                                       })]
                                     })]
-                                  }), (0, vT.jsx)("div", {
+                                  }), (0, aq.jsx)("div", {
                                     className: "DocsVoiceSamples",
-                                    children: RM.map((TT => (0, vT.jsx)("button", {
+                                    children: kl.map((qq => (0, aq.jsx)("button", {
                                       type: "button",
-                                      className: KT()("DocsVariantChip", {
-                                        Active: cT === TT
+                                      className: Oq()("DocsVariantChip", {
+                                        Active: gq === qq
                                       }),
                                       onClick: () => {
-                                        var kT;
-                                        MT(kT = TT), aT({
-                                          ...NT,
-                                          line: kT
+                                        var Eq;
+                                        lq(Eq = qq), Qq({
+                                          ...jq,
+                                          line: Eq
                                         })
                                       },
-                                      children: TT
-                                    }, TT)))
-                                  }), (0, vT.jsxs)("label", {
+                                      children: qq
+                                    }, qq)))
+                                  }), (0, aq.jsxs)("label", {
                                     className: "DocsVoiceSpeaker",
-                                    children: [(0, vT.jsx)("span", {
+                                    children: [(0, aq.jsx)("span", {
                                       children: "Speaker"
-                                    }), (0, vT.jsx)("input", {
-                                      value: OT,
+                                    }), (0, aq.jsx)("input", {
+                                      value: mq,
                                       placeholder: "No name",
-                                      onChange: TT => {
-                                        yT(TT.target.value)
+                                      onChange: qq => {
+                                        xq(qq.target.value)
                                       }
                                     })]
                                   })]
-                                }), (0, vT.jsx)(dM, {
-                                  synth: TT,
-                                  onChange: cT => {
-                                    const lT = {
-                                      ...TT,
-                                      ...cT
+                                }), (0, aq.jsx)(Ll, {
+                                  synth: qq,
+                                  onChange: gq => {
+                                    const Yq = {
+                                      ...qq,
+                                      ...gq
                                     };
-                                    kT(lT);
-                                    const MT = {
-                                        ...NT,
-                                        voice: lT
+                                    Eq(Yq);
+                                    const lq = {
+                                        ...jq,
+                                        voice: Yq
                                       },
-                                      KT = performance.now();
-                                    if (KT - jT.current >= WM) {
-                                      jT.current = KT, tT();
-                                      const TT = (0, bM.e)(MT).plan.blips[0];
-                                      TT && (AT.current = pM((0, wM.j)(lT), [{
-                                        ...TT,
+                                      Oq = performance.now();
+                                    if (Oq - Nq.current >= Xl) {
+                                      Nq.current = Oq, Vq();
+                                      const qq = (0, hl.f)(lq).plan.blips[0];
+                                      qq && (Bq.current = Kl((0, rl.i)(Yq), [{
+                                        ...qq,
                                         atMs: 0
-                                      }], IT))
+                                      }], uq))
                                     }
-                                    window.clearTimeout(CT.current), CT.current = window.setTimeout((() => {
-                                      aT(QT.current)
-                                    }), BM)
+                                    window.clearTimeout(Wq.current), Wq.current = window.setTimeout((() => {
+                                      Qq(Hq.current)
+                                    }), sl)
                                   }
                                 })]
-                              }), (0, vT.jsx)(rT, {
-                                code: FT,
+                              }), (0, aq.jsx)(tq, {
+                                code: yq,
                                 lang: "ts"
                               })]
                             })
                           }
-                          var qM = cT(4831);
-                          const sM = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
-                            TK = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
-                            kK = [
-                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${TK}`, "g"), qM.p],
+                          var Il = gq(4701);
+                          const el = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
+                            Dl = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
+                            qO = [
+                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${Dl}`, "g"), Il.l],
                               [/\bfunction\s+([A-Za-z_$][\w$]*)\s*\(/g],
-                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, qM.p]
+                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, Il.l]
                             ];
 
-                          function cK(TT) {
-                            return `${TT.pageId}#${TT.anchor}`
+                          function EO(qq) {
+                            return `${qq.pageId}#${qq.anchor}`
                           }
-                          let lK, MK, KK;
+                          let gO, YO, lO;
 
-                          function OK(TT) {
-                            const kT = (0, PT.j)(TT),
-                              cT = new Set;
-                            for (const [, , lT] of kT.matchAll(PT.e)) {
-                              const TT = lT.startsWith("#") ? RT(lT) : null,
-                                kT = TT ? cK({
-                                  pageId: TT.page.id,
-                                  anchor: TT.anchor
+                          function OO(qq) {
+                            const Eq = (0, rq.j)(qq),
+                              gq = new Set;
+                            for (const [, , Yq] of Eq.matchAll(rq.d)) {
+                              const qq = Yq.startsWith("#") ? Rq(Yq) : null,
+                                Eq = qq ? EO({
+                                  pageId: qq.page.id,
+                                  anchor: qq.anchor
                                 }) : null;
-                              null !== kT && (lK || (lK = new Set(ET.flatMap((TT => zT(TT.layout) ? dT(TT).sections.map((kT => cK({
-                                pageId: TT.id,
-                                anchor: kT.heading.anchor
-                              }))) : [])))), lK).has(kT) && cT.add(kT)
+                              null !== Eq && (gO || (gO = new Set(Sq.flatMap((qq => bq(qq.layout) ? Jq(qq).sections.map((Eq => EO({
+                                pageId: qq.id,
+                                anchor: Eq.heading.anchor
+                              }))) : [])))), gO).has(Eq) && gq.add(Eq)
                             }
-                            for (const [, , lT] of kT.matchAll(sM)) {
-                              const TT = Ck(lT);
-                              TT && cT.add(cK(TT))
+                            for (const [, , Yq] of Eq.matchAll(el)) {
+                              const qq = WE(Yq);
+                              qq && gq.add(EO(qq))
                             }
-                            return cT
+                            return gq
                           }
 
-                          function yK(TT, kT) {
-                            const cT = new Set,
-                              lT = function(TT) {
-                                return TT.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "").replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, '""')
-                              }(TT);
-                            for (const [, MT] of lT.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) cT.add(MT);
-                            for (const [MT, KT] of kK)
-                              for (const [, TT] of(0, qM.h)(lT, MT, KT)) kT.has(TT) && cT.add(TT);
-                            return cT
+                          function mO(qq, Eq) {
+                            const gq = new Set,
+                              Yq = function(qq) {
+                                return qq.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "").replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, '""')
+                              }(qq);
+                            for (const [, lq] of Yq.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) gq.add(lq);
+                            for (const [lq, Oq] of qO)
+                              for (const [, qq] of(0, Il.d)(Yq, lq, Oq)) Eq.has(qq) && gq.add(qq);
+                            return gq
                           }
 
-                          function fK(TT, kT, cT, lT) {
-                            const MT = TT.get(kT);
-                            MT ? !lT && MT.some((TT => TT.pageId === cT.pageId)) || MT.push(cT) : TT.set(kT, [cT])
+                          function xO(qq, Eq, gq, Yq) {
+                            const lq = qq.get(Eq);
+                            lq ? !Yq && lq.some((qq => qq.pageId === gq.pageId)) || lq.push(gq) : qq.set(Eq, [gq])
                           }
-                          const xK = /^[A-Za-z_$][\w$]*$/;
+                          const AO = /^[A-Za-z_$][\w$]*$/;
 
-                          function IK(TT) {
-                            return xK.test(TT.name) ? TT.name : "options"
-                          }
-
-                          function AK(TT, kT) {
-                            const cT = TT.params.map(IK).join(", ");
-                            return kT ? `${TT.name} = (${cT}) => {\n\t\n}` : `api.${TT.name}(${cT})`
+                          function cO(qq) {
+                            return AO.test(qq.name) ? qq.name : "options"
                           }
 
-                          function CK(TT) {
+                          function uO(qq, Eq) {
+                            const gq = qq.params.map(cO).join(", ");
+                            return Eq ? `${qq.name} = (${gq}) => {\n\t\n}` : `api.${qq.name}(${gq})`
+                          }
+
+                          function BO(qq) {
                             let {
-                              method: kT,
-                              isCallback: cT
-                            } = TT;
-                            return (0, vT.jsxs)("div", {
+                              method: Eq,
+                              isCallback: gq
+                            } = qq;
+                            return (0, aq.jsxs)("div", {
                               className: "DocsSignature",
-                              children: [(0, vT.jsxs)("span", {
+                              children: [(0, aq.jsxs)("span", {
                                 className: "DocsSignatureCode",
-                                children: [cT ? (0, vT.jsxs)(vT.Fragment, {
-                                  children: [(0, vT.jsx)("span", {
+                                children: [gq ? (0, aq.jsxs)(aq.Fragment, {
+                                  children: [(0, aq.jsx)("span", {
                                     className: "DocsSignatureName",
-                                    children: kT.name
-                                  }), (0, vT.jsx)("span", {
+                                    children: Eq.name
+                                  }), (0, aq.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: " = ("
                                   })]
-                                }) : (0, vT.jsxs)(vT.Fragment, {
-                                  children: [(0, vT.jsx)("span", {
+                                }) : (0, aq.jsxs)(aq.Fragment, {
+                                  children: [(0, aq.jsx)("span", {
                                     className: "DocsSignatureObject",
                                     children: "api."
-                                  }), (0, vT.jsx)("span", {
+                                  }), (0, aq.jsx)("span", {
                                     className: "DocsSignatureName",
-                                    children: kT.name
-                                  }), (0, vT.jsx)("span", {
+                                    children: Eq.name
+                                  }), (0, aq.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: "("
                                   })]
-                                }), kT.params.map(((TT, cT) => (0, vT.jsxs)(lT.Fragment, {
-                                  children: [cT > 0 && (0, vT.jsx)("span", {
+                                }), Eq.params.map(((qq, gq) => (0, aq.jsxs)(Yq.Fragment, {
+                                  children: [gq > 0 && (0, aq.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: ", "
-                                  }), (0, vT.jsx)("a", {
+                                  }), (0, aq.jsx)("a", {
                                     className: "DocsSignatureParam",
-                                    href: `#${kT.name}-${IK(TT)}`,
-                                    children: TT.name
+                                    href: `#${Eq.name}-${cO(qq)}`,
+                                    children: qq.name
                                   })]
-                                }, TT.name))), (0, vT.jsx)("span", {
+                                }, qq.name))), (0, aq.jsx)("span", {
                                   className: "DocsTypePunctuation",
-                                  children: cT ? ") => " : ")"
-                                }), cT && !kT.returns && (0, vT.jsx)("span", {
+                                  children: gq ? ") => " : ")"
+                                }), gq && !Eq.returns && (0, aq.jsx)("span", {
                                   className: "DocsTypeKeyword",
                                   children: "void"
                                 })]
-                              }), kT.returns && kT.returns.type && (0, vT.jsxs)("span", {
+                              }), Eq.returns && Eq.returns.type && (0, aq.jsxs)("span", {
                                 className: "DocsSignatureReturns",
-                                children: [!cT && (0, vT.jsx)("span", {
+                                children: [!gq && (0, aq.jsx)("span", {
                                   className: "DocsSignatureArrow",
                                   children: "\u2192"
-                                }), (0, vT.jsx)(wk, {
-                                  type: kT.returns.type
+                                }), (0, aq.jsx)(vE, {
+                                  type: Eq.returns.type
                                 })]
                               })]
                             })
                           }
 
-                          function jK(TT) {
+                          function WO(qq) {
                             let {
-                              title: kT,
-                              references: cT
-                            } = TT;
-                            const MT = (0, lT.useContext)(jk);
-                            return (0, vT.jsxs)("div", {
+                              title: Eq,
+                              references: gq
+                            } = qq;
+                            const lq = (0, Yq.useContext)(NE);
+                            return (0, aq.jsxs)("div", {
                               className: "DocsCardReferences",
-                              children: [(0, vT.jsx)("span", {
+                              children: [(0, aq.jsx)("span", {
                                 className: "DocsCardReferencesTitle",
-                                children: kT
-                              }), cT.map((TT => (0, vT.jsx)(OT.e, {
-                                to: UT(MT, uT(TT.pageId), TT.anchor),
-                                children: TT.label
-                              }, `${TT.pageId}#${TT.anchor}`)))]
+                                children: Eq
+                              }), gq.map((qq => (0, aq.jsx)(mq.c, {
+                                to: Fq(lq, Gq(qq.pageId), qq.anchor),
+                                children: qq.label
+                              }, `${qq.pageId}#${qq.anchor}`)))]
                             })
                           }
 
-                          function vK(TT) {
-                            var kT, cT;
+                          function NO(qq) {
+                            var Eq, gq;
                             let {
-                              pageId: lT,
-                              anchor: MT
-                            } = TT;
-                            const KT = cK({
-                                pageId: lT,
-                                anchor: MT
+                              pageId: Yq,
+                              anchor: lq
+                            } = qq;
+                            const Oq = EO({
+                                pageId: Yq,
+                                anchor: lq
                               }),
-                              OT = null !== (kT = function() {
-                                if (!KK) {
-                                  KK = new Map;
-                                  const lT = new Set(ET.filter((TT => "callbacks" === TT.layout)).flatMap((TT => dT(TT).sections.map((TT => TT.heading.text)))));
-                                  for (const MT of ET)
-                                    if ("article" === MT.layout || "snippets" === MT.layout)
-                                      for (const KT of (0, PT.q)(dT(MT)))
+                              mq = null !== (Eq = function() {
+                                if (!lO) {
+                                  lO = new Map;
+                                  const Yq = new Set(Sq.filter((qq => "callbacks" === qq.layout)).flatMap((qq => Jq(qq).sections.map((qq => qq.heading.text)))));
+                                  for (const lq of Sq)
+                                    if ("article" === lq.layout || "snippets" === lq.layout)
+                                      for (const Oq of (0, rq.u)(Jq(lq)))
                                         for (const {
-                                            code: OT
+                                            code: mq
                                           }
-                                          of(0, PT.k)(KT.blocks))
-                                          for (const yT of yK(OT, lT)) {
-                                            const lT = Ak().get(yT);
-                                            if (lT) {
-                                              var TT, kT, cT;
-                                              const OT = {
-                                                pageId: MT.id,
-                                                anchor: null !== (TT = null === (kT = KT.heading) || void 0 === kT ? void 0 : kT.anchor) && void 0 !== TT ? TT : "",
-                                                label: null !== (cT = MT.navTitle) && void 0 !== cT ? cT : MT.title
+                                          of(0, rq.n)(Oq.blocks))
+                                          for (const xq of mO(mq, Yq)) {
+                                            const Yq = BE().get(xq);
+                                            if (Yq) {
+                                              var qq, Eq, gq;
+                                              const mq = {
+                                                pageId: lq.id,
+                                                anchor: null !== (qq = null === (Eq = Oq.heading) || void 0 === Eq ? void 0 : Eq.anchor) && void 0 !== qq ? qq : "",
+                                                label: null !== (gq = lq.navTitle) && void 0 !== gq ? gq : lq.title
                                               };
-                                              fK(KK, cK(lT), OT, !1)
+                                              xO(lO, EO(Yq), mq, !1)
                                             }
                                           }
                                 }
-                                return KK
-                              }().get(KT)) && void 0 !== kT ? kT : [],
-                              yT = null !== (cT = function() {
-                                if (!MK) {
-                                  MK = new Map;
-                                  const TT = uT("changelog");
-                                  for (const kT of dT(TT).sections) {
-                                    const cT = new Set(kT.blocks.flatMap((TT => [...OK(TT)])));
-                                    for (const lT of cT) {
-                                      const cT = {
-                                        pageId: TT.id,
-                                        anchor: kT.heading.anchor,
-                                        label: kT.heading.text
+                                return lO
+                              }().get(Oq)) && void 0 !== Eq ? Eq : [],
+                              xq = null !== (gq = function() {
+                                if (!YO) {
+                                  YO = new Map;
+                                  const qq = Gq("changelog");
+                                  for (const Eq of Jq(qq).sections) {
+                                    const gq = new Set(Eq.blocks.flatMap((qq => [...OO(qq)])));
+                                    for (const Yq of gq) {
+                                      const gq = {
+                                        pageId: qq.id,
+                                        anchor: Eq.heading.anchor,
+                                        label: Eq.heading.text
                                       };
-                                      fK(MK, lT, cT, !0)
+                                      xO(YO, Yq, gq, !0)
                                     }
                                   }
                                 }
-                                return MK
-                              }().get(KT)) && void 0 !== cT ? cT : [];
-                            return 0 === OT.length && 0 === yT.length ? null : (0, vT.jsxs)("footer", {
+                                return YO
+                              }().get(Oq)) && void 0 !== gq ? gq : [];
+                            return 0 === mq.length && 0 === xq.length ? null : (0, aq.jsxs)("footer", {
                               className: "DocsCardFooter",
-                              children: [OT.length > 0 && (0, vT.jsx)(jK, {
+                              children: [mq.length > 0 && (0, aq.jsx)(WO, {
                                 title: "Used in",
-                                references: OT
-                              }), yT.length > 0 && (0, vT.jsx)(jK, {
+                                references: mq
+                              }), xq.length > 0 && (0, aq.jsx)(WO, {
                                 title: "Changelog",
-                                references: yT
+                                references: xq
                               })]
                             })
                           }
 
-                          function tK(TT) {
+                          function aO(qq) {
                             let {
-                              method: kT,
-                              pageId: cT,
-                              anchor: lT,
-                              isCallback: MT
-                            } = TT;
-                            const KT = MT ? void 0 : yk().get(kT.name),
-                              OT = kT.description.length > 0 || null === KT || void 0 === KT || !KT.description ? kT.description : (0, PT.v)(KT.description);
-                            return (0, vT.jsxs)("article", {
+                              method: Eq,
+                              pageId: gq,
+                              anchor: Yq,
+                              isCallback: lq
+                            } = qq;
+                            const Oq = lq ? void 0 : xE().get(Eq.name),
+                              mq = Eq.description.length > 0 || null === Oq || void 0 === Oq || !Oq.description ? Eq.description : (0, rq.A)(Oq.description);
+                            return (0, aq.jsxs)("article", {
                               className: "DocsCard DocsMethodCard",
-                              children: [(0, vT.jsxs)("header", {
+                              children: [(0, aq.jsxs)("header", {
                                 className: "DocsCardHeader",
-                                children: [(0, vT.jsx)(Ic, {
+                                children: [(0, aq.jsx)(cg, {
                                   level: 2,
-                                  text: kT.name,
-                                  anchor: lT,
+                                  text: Eq.name,
+                                  anchor: Yq,
                                   className: "DocsCardTitle"
-                                }), (0, vT.jsx)(ST, {
-                                  text: AK(kT, MT),
-                                  label: MT ? "Copy handler" : "Copy call",
+                                }), (0, aq.jsx)(oq, {
+                                  text: uO(Eq, lq),
+                                  label: lq ? "Copy handler" : "Copy call",
                                   className: "DocsCardCopy"
                                 })]
-                              }), (0, vT.jsx)(CK, {
-                                method: kT,
-                                isCallback: MT
-                              }), KT && null !== KT.deprecation && (0, vT.jsxs)("aside", {
+                              }), (0, aq.jsx)(BO, {
+                                method: Eq,
+                                isCallback: lq
+                              }), Oq && null !== Oq.deprecation && (0, aq.jsxs)("aside", {
                                 className: "DocsCallout warning DocsDeprecation",
-                                children: [(0, vT.jsx)("strong", {
+                                children: [(0, aq.jsx)("strong", {
                                   children: "Deprecated"
-                                }), KT.deprecation && (0, vT.jsxs)(vT.Fragment, {
-                                  children: [": ", (0, vT.jsx)(Fk, {
-                                    text: (yT = KT.deprecation, (0, qM.v)(yT, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, qM.m)("`\\w"), (TT => {
-                                      let [kT] = TT;
-                                      return Ak().has(kT) ? `\`${kT}\`` : kT
+                                }), Oq.deprecation && (0, aq.jsxs)(aq.Fragment, {
+                                  children: [": ", (0, aq.jsx)(yE, {
+                                    text: (xq = Oq.deprecation, (0, Il.t)(xq, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, Il.i)("`\\w"), (qq => {
+                                      let [Eq] = qq;
+                                      return BE().has(Eq) ? `\`${Eq}\`` : Eq
                                     })))
                                   })]
                                 })]
-                              }), OT.length > 0 && (0, vT.jsx)("div", {
+                              }), mq.length > 0 && (0, aq.jsx)("div", {
                                 className: "DocsProse DocsCardBody",
-                                children: (0, vT.jsx)(vc, {
-                                  blocks: OT
+                                children: (0, aq.jsx)(Ng, {
+                                  blocks: mq
                                 })
-                              }), kT.params.length > 0 && (0, vT.jsxs)("section", {
+                              }), Eq.params.length > 0 && (0, aq.jsxs)("section", {
                                 className: "DocsCardPart",
-                                children: [(0, vT.jsx)("h3", {
+                                children: [(0, aq.jsx)("h3", {
                                   className: "DocsCardPartTitle",
                                   children: "Parameters"
-                                }), (0, vT.jsx)("dl", {
+                                }), (0, aq.jsx)("dl", {
                                   className: "DocsParamList",
-                                  children: kT.params.map((TT => (0, vT.jsxs)("div", {
-                                    id: `${kT.name}-${IK(TT)}`,
+                                  children: Eq.params.map((qq => (0, aq.jsxs)("div", {
+                                    id: `${Eq.name}-${cO(qq)}`,
                                     className: "DocsParam",
-                                    children: [(0, vT.jsxs)("dt", {
-                                      children: [(0, vT.jsx)("code", {
+                                    children: [(0, aq.jsxs)("dt", {
+                                      children: [(0, aq.jsx)("code", {
                                         className: "DocsParamName",
-                                        children: TT.name
-                                      }), (0, vT.jsx)(wk, {
-                                        type: TT.type
+                                        children: qq.name
+                                      }), (0, aq.jsx)(vE, {
+                                        type: qq.type
                                       })]
-                                    }), TT.description && (0, vT.jsx)("dd", {
-                                      children: (0, vT.jsx)(Fk, {
-                                        text: TT.description
+                                    }), qq.description && (0, aq.jsx)("dd", {
+                                      children: (0, aq.jsx)(yE, {
+                                        text: qq.description
                                       })
                                     })]
-                                  }, TT.name)))
+                                  }, qq.name)))
                                 })]
-                              }), kT.returns && (kT.returns.type || kT.returns.description.length > 0) && (0, vT.jsxs)("section", {
+                              }), Eq.returns && (Eq.returns.type || Eq.returns.description.length > 0) && (0, aq.jsxs)("section", {
                                 className: "DocsCardPart",
-                                children: [(0, vT.jsx)("h3", {
+                                children: [(0, aq.jsx)("h3", {
                                   className: "DocsCardPartTitle",
                                   children: "Returns"
-                                }), (0, vT.jsxs)("div", {
+                                }), (0, aq.jsxs)("div", {
                                   className: "DocsReturns",
-                                  children: [kT.returns.type && (0, vT.jsx)(wk, {
-                                    type: kT.returns.type
-                                  }), kT.returns.description.length > 0 && (0, vT.jsx)("div", {
+                                  children: [Eq.returns.type && (0, aq.jsx)(vE, {
+                                    type: Eq.returns.type
+                                  }), Eq.returns.description.length > 0 && (0, aq.jsx)("div", {
                                     className: "DocsProse",
-                                    children: (0, vT.jsx)(vc, {
-                                      blocks: kT.returns.description
+                                    children: (0, aq.jsx)(Ng, {
+                                      blocks: Eq.returns.description
                                     })
                                   })]
                                 })]
-                              }), (0, vT.jsx)(vK, {
-                                pageId: cT,
-                                anchor: lT
+                              }), (0, aq.jsx)(NO, {
+                                pageId: gq,
+                                anchor: Yq
                               })]
                             });
-                            var yT
+                            var xq
                           }
 
-                          function hK(TT) {
-                            var kT;
-                            return null !== TT.defaultValue && "undefined" !== TT.defaultValue ? TT.defaultValue : null !== (kT = TT.example) && void 0 !== kT ? kT : "value"
+                          function VO(qq) {
+                            var Eq;
+                            return null !== qq.defaultValue && "undefined" !== qq.defaultValue ? qq.defaultValue : null !== (Eq = qq.example) && void 0 !== Eq ? Eq : "value"
                           }
 
-                          function NK(TT) {
+                          function dO(qq) {
                             let {
-                              setting: kT,
-                              pageId: cT,
-                              anchor: lT,
-                              setterSnippet: MT
-                            } = TT;
-                            const KT = null === kT.defaultValue ? null : Nk(kT.defaultValue);
-                            return (0, vT.jsxs)("article", {
+                              setting: Eq,
+                              pageId: gq,
+                              anchor: Yq,
+                              setterSnippet: lq
+                            } = qq;
+                            const Oq = null === Eq.defaultValue ? null : jE(Eq.defaultValue);
+                            return (0, aq.jsxs)("article", {
                               className: "DocsCard DocsSettingCard",
-                              children: [(0, vT.jsxs)("header", {
+                              children: [(0, aq.jsxs)("header", {
                                 className: "DocsCardHeader",
-                                children: [(0, vT.jsx)(Ic, {
+                                children: [(0, aq.jsx)(cg, {
                                   level: 2,
-                                  text: kT.name,
-                                  anchor: lT,
+                                  text: Eq.name,
+                                  anchor: Yq,
                                   className: "DocsCardTitle"
-                                }), (0, vT.jsx)(ST, {
-                                  text: MT(kT.name, hK(kT)),
+                                }), (0, aq.jsx)(oq, {
+                                  text: lq(Eq.name, VO(Eq)),
                                   label: "Copy setter",
                                   className: "DocsCardCopy"
                                 })]
-                              }), (0, vT.jsxs)("dl", {
+                              }), (0, aq.jsxs)("dl", {
                                 className: "DocsSettingFacts",
-                                children: [(0, vT.jsxs)("div", {
-                                  children: [(0, vT.jsx)("dt", {
+                                children: [(0, aq.jsxs)("div", {
+                                  children: [(0, aq.jsx)("dt", {
                                     children: "Type"
-                                  }), (0, vT.jsx)("dd", {
-                                    children: (0, vT.jsx)(wk, {
-                                      type: kT.type
+                                  }), (0, aq.jsx)("dd", {
+                                    children: (0, aq.jsx)(vE, {
+                                      type: Eq.type
                                     })
                                   })]
-                                }), null !== kT.defaultValue && (0, vT.jsxs)("div", {
-                                  children: [(0, vT.jsx)("dt", {
+                                }), null !== Eq.defaultValue && (0, aq.jsxs)("div", {
+                                  children: [(0, aq.jsx)("dt", {
                                     children: "Default"
-                                  }), (0, vT.jsx)("dd", {
-                                    children: (0, vT.jsxs)("code", {
+                                  }), (0, aq.jsx)("dd", {
+                                    children: (0, aq.jsxs)("code", {
                                       className: "DocsInlineCode DocsDefaultValue",
-                                      children: [KT && (0, vT.jsx)(Qk, {
-                                        colour: KT
-                                      }), kT.defaultValue]
+                                      children: [Oq && (0, aq.jsx)(HE, {
+                                        colour: Oq
+                                      }), Eq.defaultValue]
                                     })
                                   })]
-                                }), null !== kT.example && (0, vT.jsxs)("div", {
-                                  children: [(0, vT.jsx)("dt", {
+                                }), null !== Eq.example && (0, aq.jsxs)("div", {
+                                  children: [(0, aq.jsx)("dt", {
                                     children: "Example"
-                                  }), (0, vT.jsx)("dd", {
-                                    children: (0, vT.jsx)("code", {
+                                  }), (0, aq.jsx)("dd", {
+                                    children: (0, aq.jsx)("code", {
                                       className: "DocsInlineCode",
-                                      children: kT.example
+                                      children: Eq.example
                                     })
                                   })]
                                 })]
-                              }), kT.description.length > 0 && (0, vT.jsx)("div", {
+                              }), Eq.description.length > 0 && (0, aq.jsx)("div", {
                                 className: "DocsProse DocsCardBody",
-                                children: (0, vT.jsx)(vc, {
-                                  blocks: kT.description
+                                children: (0, aq.jsx)(Ng, {
+                                  blocks: Eq.description
                                 })
-                              }), (0, vT.jsx)(vK, {
-                                pageId: cT,
-                                anchor: lT
+                              }), (0, aq.jsx)(NO, {
+                                pageId: gq,
+                                anchor: Yq
                               })]
                             })
                           }
 
-                          function QK(TT) {
+                          function jO(qq) {
                             let {
-                              section: kT
-                            } = TT;
-                            return (0, vT.jsxs)("article", {
+                              section: Eq
+                            } = qq;
+                            return (0, aq.jsxs)("article", {
                               className: "DocsCard DocsSnippetCard",
-                              children: [(0, vT.jsx)(Ic, {
+                              children: [(0, aq.jsx)(cg, {
                                 level: 2,
-                                text: kT.heading.text,
-                                anchor: kT.heading.anchor,
+                                text: Eq.heading.text,
+                                anchor: Eq.heading.anchor,
                                 className: "DocsCardTitle"
-                              }), (0, vT.jsx)("div", {
+                              }), (0, aq.jsx)("div", {
                                 className: "DocsProse",
-                                children: (0, vT.jsx)(vc, {
-                                  blocks: kT.blocks
+                                children: (0, aq.jsx)(Ng, {
+                                  blocks: Eq.blocks
                                 })
                               })]
                             })
                           }
 
-                          function SK(TT) {
+                          function HO(qq) {
                             let {
-                              section: kT
-                            } = TT;
-                            return (0, vT.jsxs)("section", {
+                              section: Eq
+                            } = qq;
+                            return (0, aq.jsxs)("section", {
                               className: "DocsProse DocsArticleSection",
-                              children: [(0, vT.jsx)(Ic, {
-                                level: kT.heading.level,
-                                text: kT.heading.text,
-                                anchor: kT.heading.anchor
-                              }), (0, vT.jsx)(vc, {
-                                blocks: kT.blocks
+                              children: [(0, aq.jsx)(cg, {
+                                level: Eq.heading.level,
+                                text: Eq.heading.text,
+                                anchor: Eq.heading.anchor
+                              }), (0, aq.jsx)(Ng, {
+                                blocks: Eq.blocks
                               })]
                             })
                           }
-                          const DK = {
+                          const oO = {
                             methods: "methods",
                             callbacks: "callbacks",
                             settings: "settings",
@@ -4862,337 +4862,337 @@ export const modules = {
                             article: "sections"
                           };
 
-                          function aK(TT) {
+                          function PO(qq) {
                             let {
-                              page: kT,
-                              section: cT
-                            } = TT;
-                            if ("methods" === kT.layout || "callbacks" === kT.layout) return (0, vT.jsx)(tK, {
-                              method: Pc(cT),
-                              pageId: kT.id,
-                              anchor: cT.heading.anchor,
-                              isCallback: "callbacks" === kT.layout
+                              page: Eq,
+                              section: gq
+                            } = qq;
+                            if ("methods" === Eq.layout || "callbacks" === Eq.layout) return (0, aq.jsx)(aO, {
+                              method: tg(gq),
+                              pageId: Eq.id,
+                              anchor: gq.heading.anchor,
+                              isCallback: "callbacks" === Eq.layout
                             });
-                            if ("settings" === kT.layout) {
-                              const TT = function(TT) {
-                                const kT = {
-                                  name: TT.heading.text,
+                            if ("settings" === Eq.layout) {
+                              const qq = function(qq) {
+                                const Eq = {
+                                  name: qq.heading.text,
                                   type: "",
                                   defaultValue: null,
                                   example: null,
                                   description: []
                                 };
-                                for (const lT of TT.blocks) {
-                                  var cT;
-                                  if (rc(lT)) continue;
-                                  const TT = "paragraph" === lT.kind ? lT.text.match(wc) : null;
-                                  if (!TT) {
-                                    kT.description.push(lT);
+                                for (const Yq of qq.blocks) {
+                                  var gq;
+                                  if (yg(Yq)) continue;
+                                  const qq = "paragraph" === Yq.kind ? Yq.text.match(rg) : null;
+                                  if (!qq) {
+                                    Eq.description.push(Yq);
                                     continue
                                   }
-                                  const MT = null !== (cT = Fc(TT[2])) && void 0 !== cT ? cT : TT[2];
-                                  "Type" === TT[1] ? kT.type = MT : "Default" === TT[1] ? kT.defaultValue = MT : "" !== MT && (kT.example = MT)
+                                  const lq = null !== (gq = Qg(qq[2])) && void 0 !== gq ? gq : qq[2];
+                                  "Type" === qq[1] ? Eq.type = lq : "Default" === qq[1] ? Eq.defaultValue = lq : "" !== lq && (Eq.example = lq)
                                 }
-                                return kT.type ? kT : null
-                              }(cT);
-                              if (TT) return (0, vT.jsx)(NK, {
-                                setting: TT,
-                                pageId: kT.id,
-                                anchor: cT.heading.anchor,
-                                setterSnippet: kT.setterSnippet
+                                return Eq.type ? Eq : null
+                              }(gq);
+                              if (qq) return (0, aq.jsx)(dO, {
+                                setting: qq,
+                                pageId: Eq.id,
+                                anchor: gq.heading.anchor,
+                                setterSnippet: Eq.setterSnippet
                               })
                             }
-                            return "snippets" === kT.layout ? (0, vT.jsx)(QK, {
-                              section: cT
-                            }) : "changelog" === kT.layout ? (0, vT.jsxs)("section", {
+                            return "snippets" === Eq.layout ? (0, aq.jsx)(jO, {
+                              section: gq
+                            }) : "changelog" === Eq.layout ? (0, aq.jsxs)("section", {
                               className: "DocsChangelogEntry",
-                              children: [(0, vT.jsx)("div", {
+                              children: [(0, aq.jsx)("div", {
                                 className: "DocsChangelogDate",
-                                children: (0, vT.jsx)(Ic, {
+                                children: (0, aq.jsx)(cg, {
                                   level: 2,
-                                  text: cT.heading.text,
-                                  anchor: cT.heading.anchor
+                                  text: gq.heading.text,
+                                  anchor: gq.heading.anchor
                                 })
-                              }), (0, vT.jsx)("div", {
+                              }), (0, aq.jsx)("div", {
                                 className: "DocsProse DocsChangelogBody",
-                                children: (0, vT.jsx)(vc, {
-                                  blocks: mc(cT.blocks)
+                                children: (0, aq.jsx)(Ng, {
+                                  blocks: vg(gq.blocks)
                                 })
                               })]
-                            }) : kT.gallery ? (0, vT.jsxs)("section", {
+                            }) : Eq.gallery ? (0, aq.jsxs)("section", {
                               className: "DocsProse DocsArticleSection",
-                              children: [(0, vT.jsx)(Ic, {
-                                level: cT.heading.level,
-                                text: cT.heading.text,
-                                anchor: cT.heading.anchor
-                              }), (0, vT.jsx)(bl, {
-                                kind: kT.gallery,
-                                content: dT(kT),
-                                blocks: cT.blocks
+                              children: [(0, aq.jsx)(cg, {
+                                level: gq.heading.level,
+                                text: gq.heading.text,
+                                anchor: gq.heading.anchor
+                              }), (0, aq.jsx)(hY, {
+                                kind: Eq.gallery,
+                                content: Jq(Eq),
+                                blocks: gq.blocks
                               })]
-                            }) : (0, vT.jsx)(SK, {
-                              section: cT
+                            }) : (0, aq.jsx)(HO, {
+                              section: gq
                             })
                           }
 
-                          function FK(TT) {
+                          function QO(qq) {
                             let {
-                              page: kT,
-                              onTocChange: cT
-                            } = TT;
-                            const MT = dT(kT),
-                              [KT, OT] = (0, lT.useState)(""),
-                              yT = "article" !== kT.layout,
-                              fT = Nc(kT.gallery) ? kT.gallery : null,
-                              xT = null !== fT,
-                              IT = KT.trim().toLowerCase(),
-                              AT = (0, lT.useRef)(null),
-                              CT = (0, lT.useCallback)((TT => {
-                                var kT;
-                                null === (kT = AT.current) || void 0 === kT || kT.preview(TT)
+                              page: Eq,
+                              onTocChange: gq
+                            } = qq;
+                            const lq = Jq(Eq),
+                              [Oq, mq] = (0, Yq.useState)(""),
+                              xq = "article" !== Eq.layout,
+                              Aq = dg(Eq.gallery) ? Eq.gallery : null,
+                              cq = null !== Aq,
+                              uq = Oq.trim().toLowerCase(),
+                              Bq = (0, Yq.useRef)(null),
+                              Wq = (0, Yq.useCallback)((qq => {
+                                var Eq;
+                                null === (Eq = Bq.current) || void 0 === Eq || Eq.preview(qq)
                               }), []),
-                              jT = (0, lT.useMemo)((() => {
-                                if (!kT.hasParticlePlayground) return [];
-                                const TT = oc(MT.intro).find((TT => "names" === TT.kind && !TT.names.some((TT => null !== dc(TT.name)))));
-                                return "names" === (null === TT || void 0 === TT ? void 0 : TT.kind) ? TT.names.map((TT => TT.name)) : []
-                              }), [kT, MT]),
-                              tT = (0, lT.useMemo)((() => {
-                                if (!kT.hasTextPlayground) return [];
-                                const TT = MT.sections.flatMap((TT => TT.blocks.flatMap((TT => {
-                                  var kT;
-                                  return (null !== (kT = Jc(TT)) && void 0 !== kT ? kT : []).flatMap((TT => dk(TT.name) ? [TT.name] : []))
+                              Nq = (0, Yq.useMemo)((() => {
+                                if (!Eq.hasParticlePlayground) return [];
+                                const qq = ig(lq.intro).find((qq => "names" === qq.kind && !qq.names.some((qq => null !== Lg(qq.name)))));
+                                return "names" === (null === qq || void 0 === qq ? void 0 : qq.kind) ? qq.names.map((qq => qq.name)) : []
+                              }), [Eq, lq]),
+                              Vq = (0, Yq.useMemo)((() => {
+                                if (!Eq.hasTextPlayground) return [];
+                                const qq = lq.sections.flatMap((qq => qq.blocks.flatMap((qq => {
+                                  var Eq;
+                                  return (null !== (Eq = bg(qq)) && void 0 !== Eq ? Eq : []).flatMap((qq => LE(qq.name) ? [qq.name] : []))
                                 }))));
-                                return [...new Set(TT)]
-                              }), [kT, MT]),
-                              hT = (0, lT.useMemo)((() => IT ? MT.sections.filter((TT => function(TT, kT) {
-                                return !!TT.heading.text.toLowerCase().includes(kT) || TT.blocks.some((TT => (0, PT.j)(TT).toLowerCase().includes(kT)))
-                              }(TT, IT))) : MT.sections), [MT, IT]),
-                              NT = (0, lT.useMemo)((() => function(TT, kT) {
-                                return "article" !== TT.layout ? kT.map((TT => ({
-                                  anchor: TT.heading.anchor,
-                                  text: TT.heading.text,
+                                return [...new Set(qq)]
+                              }), [Eq, lq]),
+                              dq = (0, Yq.useMemo)((() => uq ? lq.sections.filter((qq => function(qq, Eq) {
+                                return !!qq.heading.text.toLowerCase().includes(Eq) || qq.blocks.some((qq => (0, rq.j)(qq).toLowerCase().includes(Eq)))
+                              }(qq, uq))) : lq.sections), [lq, uq]),
+                              jq = (0, Yq.useMemo)((() => function(qq, Eq) {
+                                return "article" !== qq.layout ? Eq.map((qq => ({
+                                  anchor: qq.heading.anchor,
+                                  text: qq.heading.text,
                                   level: 2
-                                }))) : kT.flatMap((TT => {
-                                  const kT = TT.blocks.flatMap((TT => "heading" === TT.kind && 3 === TT.level ? [{
-                                    anchor: TT.anchor,
-                                    text: TT.text,
+                                }))) : Eq.flatMap((qq => {
+                                  const Eq = qq.blocks.flatMap((qq => "heading" === qq.kind && 3 === qq.level ? [{
+                                    anchor: qq.anchor,
+                                    text: qq.text,
                                     level: 3
                                   }] : []));
                                   return [{
-                                    anchor: TT.heading.anchor,
-                                    text: TT.heading.text,
+                                    anchor: qq.heading.anchor,
+                                    text: qq.heading.text,
                                     level: 2
-                                  }, ...kT]
+                                  }, ...Eq]
                                 }))
-                              }(kT, hT)), [kT, hT]);
-                            return (0, lT.useEffect)((() => {
-                              cT(NT)
-                            }), [NT, cT]), (0, vT.jsxs)("article", {
+                              }(Eq, dq)), [Eq, dq]);
+                            return (0, Yq.useEffect)((() => {
+                              gq(jq)
+                            }), [jq, gq]), (0, aq.jsxs)("article", {
                               className: "DocsPage",
-                              children: [(0, vT.jsxs)("header", {
+                              children: [(0, aq.jsxs)("header", {
                                 className: "DocsPageHeader",
-                                children: [(0, vT.jsx)("h1", {
+                                children: [(0, aq.jsx)("h1", {
                                   className: "DocsPageTitle",
-                                  children: MT.title || kT.title
-                                }), (0, vT.jsx)("p", {
+                                  children: lq.title || Eq.title
+                                }), (0, aq.jsx)("p", {
                                   className: "DocsPageSummary",
-                                  children: kT.summary
-                                }), (0, vT.jsx)(nl, {
-                                  page: kT
-                                }), yT && (0, vT.jsx)("div", {
+                                  children: Eq.summary
+                                }), (0, aq.jsx)(wY, {
+                                  page: Eq
+                                }), xq && (0, aq.jsx)("div", {
                                   className: "DocsPageStats",
-                                  children: (0, vT.jsxs)("span", {
-                                    children: [(0, vT.jsx)("strong", {
-                                      children: MT.sections.length
-                                    }), " ", DK[kT.layout]]
+                                  children: (0, aq.jsxs)("span", {
+                                    children: [(0, aq.jsx)("strong", {
+                                      children: lq.sections.length
+                                    }), " ", oO[Eq.layout]]
                                   })
                                 })]
-                              }), "" === kT.slug && (0, vT.jsx)(Jl, {}), fT && (0, vT.jsx)(Gl, {
-                                kind: fT
-                              }, fT), kT.hasParticlePlayground && (0, vT.jsx)(fM, {
-                                ref: AT,
-                                textures: jT
-                              }), !xT && MT.intro.length > 0 && (0, vT.jsx)("div", {
+                              }), "" === Eq.slug && (0, aq.jsx)(bY, {}), Aq && (0, aq.jsx)(MY, {
+                                kind: Aq
+                              }, Aq), Eq.hasParticlePlayground && (0, aq.jsx)(xl, {
+                                ref: Bq,
+                                textures: Nq
+                              }), !cq && lq.intro.length > 0 && (0, aq.jsx)("div", {
                                 className: "DocsProse DocsPageIntro",
-                                children: kT.gallery ? (0, vT.jsx)(Ql.Provider, {
-                                  value: kT.hasParticlePlayground ? CT : null,
-                                  children: (0, vT.jsx)(bl, {
-                                    kind: kT.gallery,
-                                    content: MT,
-                                    blocks: MT.intro
+                                children: Eq.gallery ? (0, aq.jsx)(jY.Provider, {
+                                  value: Eq.hasParticlePlayground ? Wq : null,
+                                  children: (0, aq.jsx)(hY, {
+                                    kind: Eq.gallery,
+                                    content: lq,
+                                    blocks: lq.intro
                                   })
-                                }) : (0, vT.jsx)(vc, {
-                                  blocks: mc(MT.intro)
+                                }) : (0, aq.jsx)(Ng, {
+                                  blocks: vg(lq.intro)
                                 })
-                              }), kT.hasTextPlayground && (0, vT.jsx)(PM, {
-                                fontAwesomeIcons: tT
-                              }), kT.hasVoicePlayground && (0, vT.jsx)(iM, {}), kT.childPageIds && (0, vT.jsx)(Jl, {
-                                cards: kT.childPageIds.map((TT => ({
-                                  pageId: TT
+                              }), Eq.hasTextPlayground && (0, aq.jsx)(tl, {
+                                fontAwesomeIcons: Vq
+                              }), Eq.hasVoicePlayground && (0, aq.jsx)(Cl, {}), Eq.childPageIds && (0, aq.jsx)(bY, {
+                                cards: Eq.childPageIds.map((qq => ({
+                                  pageId: qq
                                 }))),
-                                label: kT.title
-                              }), yT && (0, vT.jsx)(Dc, {
+                                label: Eq.title
+                              }), xq && (0, aq.jsx)(og, {
                                 className: "DocsFilterBar",
-                                value: KT,
-                                placeholder: `Filter ${MT.sections.length} ${DK[kT.layout]}\u2026`,
-                                label: `Filter ${DK[kT.layout]}`,
-                                onChange: OT,
-                                count: IT ? {
-                                  visible: hT.length,
-                                  total: MT.sections.length
+                                value: Oq,
+                                placeholder: `Filter ${lq.sections.length} ${oO[Eq.layout]}\u2026`,
+                                label: `Filter ${oO[Eq.layout]}`,
+                                onChange: mq,
+                                count: uq ? {
+                                  visible: dq.length,
+                                  total: lq.sections.length
                                 } : null
-                              }), !xT && (0, vT.jsxs)("div", {
-                                className: `DocsSections Layout-${kT.layout}`,
-                                children: [hT.map((TT => (0, vT.jsx)(aK, {
-                                  page: kT,
-                                  section: TT
-                                }, TT.heading.anchor))), 0 === hT.length && (0, vT.jsxs)("p", {
+                              }), !cq && (0, aq.jsxs)("div", {
+                                className: `DocsSections Layout-${Eq.layout}`,
+                                children: [dq.map((qq => (0, aq.jsx)(PO, {
+                                  page: Eq,
+                                  section: qq
+                                }, qq.heading.anchor))), 0 === dq.length && (0, aq.jsxs)("p", {
                                   className: "DocsEmpty",
-                                  children: ["No ", DK[kT.layout], " match \u201c", KT, "\u201d."]
+                                  children: ["No ", oO[Eq.layout], " match \u201c", Oq, "\u201d."]
                                 })]
                               })]
                             })
                           }
-                          const rK = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
+                          const yO = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
 
-                          function PK(TT) {
+                          function tO(qq) {
                             let {
-                              entry: kT,
-                              isActive: cT,
-                              onNavigate: lT,
-                              label: MT,
-                              children: OT
-                            } = TT;
-                            return (0, vT.jsx)("a", {
-                              href: `#${kT.anchor}`,
-                              "aria-label": MT,
-                              className: KT()(`Level${kT.level}`, {
-                                Active: cT
+                              entry: Eq,
+                              isActive: gq,
+                              onNavigate: Yq,
+                              label: lq,
+                              children: mq
+                            } = qq;
+                            return (0, aq.jsx)("a", {
+                              href: `#${Eq.anchor}`,
+                              "aria-label": lq,
+                              className: Oq()(`Level${Eq.level}`, {
+                                Active: gq
                               }),
-                              "aria-current": cT ? "location" : void 0,
-                              onClick: TT => {
-                                TT.preventDefault(), lT(kT.anchor)
+                              "aria-current": gq ? "location" : void 0,
+                              onClick: qq => {
+                                qq.preventDefault(), Yq(Eq.anchor)
                               },
-                              children: OT
+                              children: mq
                             })
                           }
 
-                          function wK(TT) {
+                          function rO(qq) {
                             let {
-                              toc: kT,
-                              activeAnchor: cT,
-                              onNavigate: MT
-                            } = TT;
-                            const OT = Math.max(0, kT.findIndex((TT => TT.anchor === cT))),
-                              yT = (0, lT.useRef)(null),
-                              fT = (0, lT.useRef)(!1);
-                            (0, lT.useEffect)((() => {
-                              var TT, cT;
-                              const lT = null === (TT = yT.current) || void 0 === TT ? void 0 : TT.closest(".DocsToc"),
-                                MT = null === (cT = yT.current) || void 0 === cT ? void 0 : cT.querySelector(".DocsTimelineNotch.Active");
-                              if (!lT || !MT) return;
-                              let KT = 0;
-                              if (OT === kT.length - 1) KT = lT.scrollHeight;
-                              else if (OT > 0) {
-                                const TT = lT.getBoundingClientRect(),
-                                  kT = MT.getBoundingClientRect();
-                                KT = lT.scrollTop + kT.top + kT.height / 2 - (TT.top + lT.clientHeight / 2)
+                              toc: Eq,
+                              activeAnchor: gq,
+                              onNavigate: lq
+                            } = qq;
+                            const mq = Math.max(0, Eq.findIndex((qq => qq.anchor === gq))),
+                              xq = (0, Yq.useRef)(null),
+                              Aq = (0, Yq.useRef)(!1);
+                            (0, Yq.useEffect)((() => {
+                              var qq, gq;
+                              const Yq = null === (qq = xq.current) || void 0 === qq ? void 0 : qq.closest(".DocsToc"),
+                                lq = null === (gq = xq.current) || void 0 === gq ? void 0 : gq.querySelector(".DocsTimelineNotch.Active");
+                              if (!Yq || !lq) return;
+                              let Oq = 0;
+                              if (mq === Eq.length - 1) Oq = Yq.scrollHeight;
+                              else if (mq > 0) {
+                                const qq = Yq.getBoundingClientRect(),
+                                  Eq = lq.getBoundingClientRect();
+                                Oq = Yq.scrollTop + Eq.top + Eq.height / 2 - (qq.top + Yq.clientHeight / 2)
                               }
-                              lT.scrollTo({
-                                top: KT,
-                                behavior: fT.current ? "smooth" : "auto"
-                              }), fT.current = !0
-                            }), [OT, kT.length]);
-                            const xT = [];
-                            return kT.forEach(((TT, kT) => {
-                              var cT, lT, MT;
-                              const KT = function(TT) {
-                                  const kT = TT.trim().match(rK);
-                                  return kT ? {
-                                    day: kT[1],
-                                    month: `${kT[2]} ${kT[3]}`
+                              Yq.scrollTo({
+                                top: Oq,
+                                behavior: Aq.current ? "smooth" : "auto"
+                              }), Aq.current = !0
+                            }), [mq, Eq.length]);
+                            const cq = [];
+                            return Eq.forEach(((qq, Eq) => {
+                              var gq, Yq, lq;
+                              const Oq = function(qq) {
+                                  const Eq = qq.trim().match(yO);
+                                  return Eq ? {
+                                    day: Eq[1],
+                                    month: `${Eq[2]} ${Eq[3]}`
                                   } : null
-                                }(TT.text),
-                                OT = null !== (cT = null === KT || void 0 === KT ? void 0 : KT.month) && void 0 !== cT ? cT : null;
-                              null !== OT && (null === (lT = xT.at(-1)) || void 0 === lT ? void 0 : lT.month) === OT || xT.push({
-                                month: OT,
+                                }(qq.text),
+                                mq = null !== (gq = null === Oq || void 0 === Oq ? void 0 : Oq.month) && void 0 !== gq ? gq : null;
+                              null !== mq && (null === (Yq = cq.at(-1)) || void 0 === Yq ? void 0 : Yq.month) === mq || cq.push({
+                                month: mq,
                                 entries: []
-                              }), xT.at(-1).entries.push({
-                                entry: TT,
-                                day: null !== (MT = null === KT || void 0 === KT ? void 0 : KT.day) && void 0 !== MT ? MT : null,
-                                index: kT
+                              }), cq.at(-1).entries.push({
+                                entry: qq,
+                                day: null !== (lq = null === Oq || void 0 === Oq ? void 0 : Oq.day) && void 0 !== lq ? lq : null,
+                                index: Eq
                               })
-                            })), (0, vT.jsx)("ol", {
-                              ref: yT,
+                            })), (0, aq.jsx)("ol", {
+                              ref: xq,
                               className: "DocsTimeline",
-                              children: xT.map((TT => {
+                              children: cq.map((qq => {
                                 let {
-                                  month: kT,
-                                  entries: cT
-                                } = TT;
-                                return (0, vT.jsxs)("li", {
+                                  month: Eq,
+                                  entries: gq
+                                } = qq;
+                                return (0, aq.jsxs)("li", {
                                   className: "DocsTimelineMonth",
-                                  children: [kT && (0, vT.jsx)("span", {
+                                  children: [Eq && (0, aq.jsx)("span", {
                                     className: "DocsTimelineMonthName",
-                                    children: kT
-                                  }), (0, vT.jsx)("ol", {
-                                    children: cT.map((TT => {
+                                    children: Eq
+                                  }), (0, aq.jsx)("ol", {
+                                    children: gq.map((qq => {
                                       let {
-                                        entry: kT,
-                                        day: cT,
-                                        index: lT
-                                      } = TT;
-                                      return (0, vT.jsx)("li", {
-                                        className: KT()("DocsTimelineNotch", {
-                                          Passed: lT < OT,
-                                          Active: lT === OT
+                                        entry: Eq,
+                                        day: gq,
+                                        index: Yq
+                                      } = qq;
+                                      return (0, aq.jsx)("li", {
+                                        className: Oq()("DocsTimelineNotch", {
+                                          Passed: Yq < mq,
+                                          Active: Yq === mq
                                         }),
-                                        children: (0, vT.jsx)(PK, {
-                                          entry: kT,
-                                          isActive: lT === OT,
-                                          onNavigate: MT,
-                                          label: kT.text,
-                                          children: (0, vT.jsx)("span", {
+                                        children: (0, aq.jsx)(tO, {
+                                          entry: Eq,
+                                          isActive: Yq === mq,
+                                          onNavigate: lq,
+                                          label: Eq.text,
+                                          children: (0, aq.jsx)("span", {
                                             className: "DocsTimelineDay",
-                                            children: null !== cT && void 0 !== cT ? cT : kT.text
+                                            children: null !== gq && void 0 !== gq ? gq : Eq.text
                                           })
                                         })
-                                      }, kT.anchor)
+                                      }, Eq.anchor)
                                     }))
                                   })]
-                                }, cT[0].entry.anchor)
+                                }, gq[0].entry.anchor)
                               }))
                             })
                           }
 
-                          function mK(TT) {
+                          function vO(qq) {
                             let {
-                              isChangelog: kT,
-                              toc: cT,
-                              activeAnchor: lT,
-                              onNavigate: MT
-                            } = TT;
-                            return 0 === cT.length ? null : (0, vT.jsxs)(vT.Fragment, {
-                              children: [(0, vT.jsx)("div", {
+                              isChangelog: Eq,
+                              toc: gq,
+                              activeAnchor: Yq,
+                              onNavigate: lq
+                            } = qq;
+                            return 0 === gq.length ? null : (0, aq.jsxs)(aq.Fragment, {
+                              children: [(0, aq.jsx)("div", {
                                 className: "DocsTocTitle",
-                                children: kT ? "Updates" : "On this page"
-                              }), kT ? (0, vT.jsx)(wK, {
-                                toc: cT,
-                                activeAnchor: lT,
-                                onNavigate: MT
-                              }) : (0, vT.jsx)("ul", {
-                                children: cT.map((TT => (0, vT.jsx)("li", {
-                                  children: (0, vT.jsx)(PK, {
-                                    entry: TT,
-                                    isActive: TT.anchor === lT,
-                                    onNavigate: MT,
-                                    children: TT.text.replace(/`/g, "")
+                                children: Eq ? "Updates" : "On this page"
+                              }), Eq ? (0, aq.jsx)(rO, {
+                                toc: gq,
+                                activeAnchor: Yq,
+                                onNavigate: lq
+                              }) : (0, aq.jsx)("ul", {
+                                children: gq.map((qq => (0, aq.jsx)("li", {
+                                  children: (0, aq.jsx)(tO, {
+                                    entry: qq,
+                                    isActive: qq.anchor === Yq,
+                                    onNavigate: lq,
+                                    children: qq.text.replace(/`/g, "")
                                   })
-                                }, TT.anchor)))
+                                }, qq.anchor)))
                               })]
                             })
                           }
-                          const bK = {
+                          const hO = {
                               methods: "Method",
                               callbacks: "Callback",
                               settings: "Setting",
@@ -5200,7 +5200,7 @@ export const modules = {
                               snippets: "Snippet",
                               article: "Section"
                             },
-                            zK = {
+                            nO = {
                               icons: "Icon",
                               particles: "Particle",
                               sounds: "Sound",
@@ -5208,1086 +5208,1086 @@ export const modules = {
                               blocks: "Block",
                               items: "Item"
                             },
-                            JK = 20,
-                            oK = 10,
-                            HK = 40,
-                            eK = 120;
-                          let GK;
+                            bO = 20,
+                            iO = 10,
+                            ZO = 40,
+                            fO = 120;
+                          let MO;
 
-                          function VK(TT) {
-                            const kT = TT.gallery;
-                            if (!kT) return [];
-                            if (Nc(kT)) return function(TT) {
-                              return Sc(TT).entries.map((TT => TT.name))
-                            }(kT).map((cT => ({
-                              page: TT,
-                              anchor: ec(kT, cT),
-                              title: cT,
-                              kind: zK[kT],
+                          function TO(qq) {
+                            const Eq = qq.gallery;
+                            if (!Eq) return [];
+                            if (dg(Eq)) return function(qq) {
+                              return Hg(qq).entries.map((qq => qq.name))
+                            }(Eq).map((gq => ({
+                              page: qq,
+                              anchor: fg(Eq, gq),
+                              title: gq,
+                              kind: nO[Eq],
                               text: "",
-                              listedUnder: TT.title
+                              listedUnder: qq.title
                             })));
-                            const cT = dT(TT);
-                            return (0, PT.q)(cT).flatMap((lT => {
-                              const MT = lT.heading ? `${TT.title} \u203a ${lT.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : TT.title;
-                              return Vc(kT, cT, lT.blocks).flatMap((cT => "names" !== cT.kind ? [] : cT.names.map((lT => {
-                                const KT = cT.isSongs ? "Song" : zK[kT];
+                            const gq = Jq(qq);
+                            return (0, rq.u)(gq).flatMap((Yq => {
+                              const lq = Yq.heading ? `${qq.title} \u203a ${Yq.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : qq.title;
+                              return Tg(Eq, gq, Yq.blocks).flatMap((gq => "names" !== gq.kind ? [] : gq.names.map((Yq => {
+                                const Oq = gq.isSongs ? "Song" : nO[Eq];
                                 return {
-                                  page: TT,
-                                  anchor: lT.anchor,
-                                  title: lT.name,
-                                  kind: KT,
+                                  page: qq,
+                                  anchor: Yq.anchor,
+                                  title: Yq.name,
+                                  kind: Oq,
                                   text: "",
-                                  listedUnder: MT
+                                  listedUnder: lq
                                 }
                               }))))
                             }))
                           }
 
-                          function EK(TT, kT, cT) {
-                            const lT = TT.title.toLowerCase();
-                            let MT = 0;
-                            if (lT === kT) MT = 100;
-                            else if (lT.startsWith(kT)) MT = 80;
-                            else if (lT.includes(kT)) MT = 60;
-                            else if (cT.every((TT => lT.includes(TT)))) MT = 45;
+                          function zO(qq, Eq, gq) {
+                            const Yq = qq.title.toLowerCase();
+                            let lq = 0;
+                            if (Yq === Eq) lq = 100;
+                            else if (Yq.startsWith(Eq)) lq = 80;
+                            else if (Yq.includes(Eq)) lq = 60;
+                            else if (gq.every((qq => Yq.includes(qq)))) lq = 45;
                             else {
-                              if (!TT.text.toLowerCase().includes(kT)) return 0;
-                              MT = 20
+                              if (!qq.text.toLowerCase().includes(Eq)) return 0;
+                              lq = 20
                             }
-                            return MT - Math.min(lT.length / 10, 9) + ("Page" === TT.kind ? 8 : "Method" === TT.kind ? 3 : 0) - (TT.listedUnder ? JK : 0)
+                            return lq - Math.min(Yq.length / 10, 9) + ("Page" === qq.kind ? 8 : "Method" === qq.kind ? 3 : 0) - (qq.listedUnder ? bO : 0)
                           }
 
-                          function ZK(TT, kT) {
-                            const cT = TT.toLowerCase().indexOf(kT),
-                              lT = Math.max(0, cT - eK / 3);
-                            return `${lT>0?"\u2026":""}${TT.slice(lT,lT+eK)}${lT+eK<TT.length?"\u2026":""}`
+                          function SO(qq, Eq) {
+                            const gq = qq.toLowerCase().indexOf(Eq),
+                              Yq = Math.max(0, gq - fO / 3);
+                            return `${Yq>0?"\u2026":""}${qq.slice(Yq,Yq+fO)}${Yq+fO<qq.length?"\u2026":""}`
                           }
 
-                          function uK(TT) {
+                          function pO(qq) {
                             let {
-                              text: kT,
-                              query: cT
-                            } = TT;
-                            const lT = cT ? kT.toLowerCase().indexOf(cT) : -1;
-                            return -1 === lT ? (0, vT.jsx)(vT.Fragment, {
-                              children: kT
-                            }) : (0, vT.jsxs)(vT.Fragment, {
-                              children: [kT.slice(0, lT), (0, vT.jsx)("mark", {
-                                children: kT.slice(lT, lT + cT.length)
-                              }), kT.slice(lT + cT.length)]
+                              text: Eq,
+                              query: gq
+                            } = qq;
+                            const Yq = gq ? Eq.toLowerCase().indexOf(gq) : -1;
+                            return -1 === Yq ? (0, aq.jsx)(aq.Fragment, {
+                              children: Eq
+                            }) : (0, aq.jsxs)(aq.Fragment, {
+                              children: [Eq.slice(0, Yq), (0, aq.jsx)("mark", {
+                                children: Eq.slice(Yq, Yq + gq.length)
+                              }), Eq.slice(Yq + gq.length)]
                             })
                           }
 
-                          function XK(TT) {
+                          function GO(qq) {
                             let {
-                              basePath: kT,
-                              onClose: cT
-                            } = TT;
-                            const MT = (0, yT.t)(),
-                              [OT, fT] = (0, lT.useState)(""),
-                              [xT, IT] = (0, lT.useState)(0),
-                              AT = (0, lT.useRef)(null),
-                              CT = (0, lT.useRef)(null),
-                              jT = OT.trim().toLowerCase(),
-                              tT = (0, lT.useMemo)((() => {
-                                const TT = (GK || (GK = ET.flatMap((TT => {
-                                  const kT = dT(TT);
+                              basePath: Eq,
+                              onClose: gq
+                            } = qq;
+                            const lq = (0, xq.r)(),
+                              [mq, Aq] = (0, Yq.useState)(""),
+                              [cq, uq] = (0, Yq.useState)(0),
+                              Bq = (0, Yq.useRef)(null),
+                              Wq = (0, Yq.useRef)(null),
+                              Nq = mq.trim().toLowerCase(),
+                              Vq = (0, Yq.useMemo)((() => {
+                                const qq = (MO || (MO = Sq.flatMap((qq => {
+                                  const Eq = Jq(qq);
                                   return [{
-                                    page: TT,
+                                    page: qq,
                                     anchor: "",
-                                    title: TT.title,
+                                    title: qq.title,
                                     kind: "Page",
-                                    text: TT.summary
-                                  }, ...kT.sections.flatMap((kT => {
-                                    const cT = kT.blocks.filter((TT => "paragraph" === TT.kind)).map(PT.j).join(" ").replace(/[`*]/g, ""),
-                                      lT = {
-                                        page: TT,
-                                        anchor: kT.heading.anchor,
-                                        title: kT.heading.text.replace(/`/g, ""),
-                                        kind: bK[TT.layout],
-                                        text: cT
+                                    text: qq.summary
+                                  }, ...Eq.sections.flatMap((Eq => {
+                                    const gq = Eq.blocks.filter((qq => "paragraph" === qq.kind)).map(rq.j).join(" ").replace(/[`*]/g, ""),
+                                      Yq = {
+                                        page: qq,
+                                        anchor: Eq.heading.anchor,
+                                        title: Eq.heading.text.replace(/`/g, ""),
+                                        kind: hO[qq.layout],
+                                        text: gq
                                       },
-                                      MT = kT.blocks.flatMap((kT => "article" === TT.layout && "heading" === kT.kind && 3 === kT.level ? [{
-                                        page: TT,
-                                        anchor: kT.anchor,
-                                        title: kT.text.replace(/`/g, ""),
+                                      lq = Eq.blocks.flatMap((Eq => "article" === qq.layout && "heading" === Eq.kind && 3 === Eq.level ? [{
+                                        page: qq,
+                                        anchor: Eq.anchor,
+                                        title: Eq.text.replace(/`/g, ""),
                                         kind: "Section",
-                                        text: lT.title
+                                        text: Yq.title
                                       }] : []));
-                                    return [lT, ...MT]
-                                  })), ...VK(TT)]
-                                }))), GK);
-                                if (!jT) return TT.filter((TT => "Page" === TT.kind));
-                                const kT = jT.split(/\s+/);
-                                let cT = 0;
-                                return TT.map((TT => ({
-                                  entry: TT,
-                                  score: EK(TT, jT, kT)
-                                }))).filter((TT => TT.score > 0)).sort(((TT, kT) => kT.score - TT.score)).filter((TT => !TT.entry.listedUnder || (cT++, cT <= oK))).slice(0, HK).map((TT => TT.entry))
-                              }), [jT]);
-                            (0, lT.useEffect)((() => {
-                              IT(0)
-                            }), [jT]), (0, lT.useEffect)((() => {
-                              const TT = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+                                    return [Yq, ...lq]
+                                  })), ...TO(qq)]
+                                }))), MO);
+                                if (!Nq) return qq.filter((qq => "Page" === qq.kind));
+                                const Eq = Nq.split(/\s+/);
+                                let gq = 0;
+                                return qq.map((qq => ({
+                                  entry: qq,
+                                  score: zO(qq, Nq, Eq)
+                                }))).filter((qq => qq.score > 0)).sort(((qq, Eq) => Eq.score - qq.score)).filter((qq => !qq.entry.listedUnder || (gq++, gq <= iO))).slice(0, ZO).map((qq => qq.entry))
+                              }), [Nq]);
+                            (0, Yq.useEffect)((() => {
+                              uq(0)
+                            }), [Nq]), (0, Yq.useEffect)((() => {
+                              const qq = document.activeElement instanceof HTMLElement ? document.activeElement : null;
                               return () => {
-                                null === TT || void 0 === TT || TT.focus()
+                                null === qq || void 0 === qq || qq.focus()
                               }
-                            }), []), (0, lT.useEffect)((() => {
-                              var TT, kT;
-                              null === (TT = AT.current) || void 0 === TT || null === (kT = TT.querySelector(".Active")) || void 0 === kT || kT.scrollIntoView({
+                            }), []), (0, Yq.useEffect)((() => {
+                              var qq, Eq;
+                              null === (qq = Bq.current) || void 0 === qq || null === (Eq = qq.querySelector(".Active")) || void 0 === Eq || Eq.scrollIntoView({
                                 block: "nearest"
                               })
-                            }), [xT]);
-                            const NT = TT => {
-                              MT(UT(kT, TT.page, TT.anchor)), cT()
+                            }), [cq]);
+                            const jq = qq => {
+                              lq(Fq(Eq, qq.page, qq.anchor)), gq()
                             };
-                            return (0, vT.jsx)("div", {
+                            return (0, aq.jsx)("div", {
                               className: "DocsSearchOverlay",
-                              onMouseDown: TT => {
-                                TT.target === TT.currentTarget && cT()
+                              onMouseDown: qq => {
+                                qq.target === qq.currentTarget && gq()
                               },
-                              children: (0, vT.jsxs)("div", {
+                              children: (0, aq.jsxs)("div", {
                                 className: "DocsSearchDialog",
                                 role: "dialog",
                                 "aria-modal": "true",
                                 "aria-label": "Search the docs",
-                                onMouseDown: TT => {
-                                  TT.target !== CT.current && TT.preventDefault()
+                                onMouseDown: qq => {
+                                  qq.target !== Wq.current && qq.preventDefault()
                                 },
-                                onKeyDown: TT => {
-                                  if ("Escape" === TT.key) cT();
-                                  else if ("Tab" === TT.key) {
-                                    var kT;
-                                    TT.preventDefault(), null === (kT = CT.current) || void 0 === kT || kT.focus()
+                                onKeyDown: qq => {
+                                  if ("Escape" === qq.key) gq();
+                                  else if ("Tab" === qq.key) {
+                                    var Eq;
+                                    qq.preventDefault(), null === (Eq = Wq.current) || void 0 === Eq || Eq.focus()
                                   }
                                 },
-                                children: [(0, vT.jsxs)("div", {
+                                children: [(0, aq.jsxs)("div", {
                                   className: "DocsSearchInputRow",
-                                  children: [(0, vT.jsx)(hT, {
+                                  children: [(0, aq.jsx)(dq, {
                                     name: "magnifying-glass"
-                                  }), (0, vT.jsx)("input", {
-                                    ref: CT,
+                                  }), (0, aq.jsx)("input", {
+                                    ref: Wq,
                                     autoFocus: !0,
-                                    value: OT,
+                                    value: mq,
                                     placeholder: "Search methods, callbacks, settings and guides\u2026",
                                     "aria-label": "Search the docs",
                                     "aria-controls": "DocsSearchResults",
-                                    "aria-activedescendant": tT.length > 0 ? `DocsSearchResult-${xT}` : void 0,
-                                    onChange: TT => {
-                                      fT(TT.target.value)
+                                    "aria-activedescendant": Vq.length > 0 ? `DocsSearchResult-${cq}` : void 0,
+                                    onChange: qq => {
+                                      Aq(qq.target.value)
                                     },
-                                    onKeyDown: TT => {
-                                      if ("ArrowDown" === TT.key || "ArrowUp" === TT.key) {
-                                        TT.preventDefault();
-                                        const kT = "ArrowDown" === TT.key ? 1 : -1;
-                                        IT((xT + kT + tT.length) % Math.max(tT.length, 1))
-                                      } else "Enter" === TT.key && tT[xT] && NT(tT[xT])
+                                    onKeyDown: qq => {
+                                      if ("ArrowDown" === qq.key || "ArrowUp" === qq.key) {
+                                        qq.preventDefault();
+                                        const Eq = "ArrowDown" === qq.key ? 1 : -1;
+                                        uq((cq + Eq + Vq.length) % Math.max(Vq.length, 1))
+                                      } else "Enter" === qq.key && Vq[cq] && jq(Vq[cq])
                                     }
-                                  }), (0, vT.jsx)("kbd", {
+                                  }), (0, aq.jsx)("kbd", {
                                     children: "Esc"
                                   })]
-                                }), (0, vT.jsxs)("ul", {
+                                }), (0, aq.jsxs)("ul", {
                                   id: "DocsSearchResults",
-                                  ref: AT,
+                                  ref: Bq,
                                   className: "DocsSearchResults",
                                   role: "listbox",
-                                  children: [!jT && (0, vT.jsx)("li", {
+                                  children: [!Nq && (0, aq.jsx)("li", {
                                     className: "DocsSearchHint",
                                     children: "Jump to a page"
-                                  }), tT.map(((TT, kT) => {
-                                    var cT;
-                                    return (0, vT.jsxs)("li", {
-                                      id: `DocsSearchResult-${kT}`,
+                                  }), Vq.map(((qq, Eq) => {
+                                    var gq;
+                                    return (0, aq.jsxs)("li", {
+                                      id: `DocsSearchResult-${Eq}`,
                                       role: "option",
-                                      "aria-selected": kT === xT,
-                                      className: KT()("DocsSearchResult", {
-                                        Active: kT === xT
+                                      "aria-selected": Eq === cq,
+                                      className: Oq()("DocsSearchResult", {
+                                        Active: Eq === cq
                                       }),
                                       onMouseMove: () => {
-                                        IT(kT)
+                                        uq(Eq)
                                       },
                                       onClick: () => {
-                                        NT(TT)
+                                        jq(qq)
                                       },
-                                      children: [(0, vT.jsx)(hT, {
-                                        name: TT.page.icon
-                                      }), (0, vT.jsxs)("div", {
+                                      children: [(0, aq.jsx)(dq, {
+                                        name: qq.page.icon
+                                      }), (0, aq.jsxs)("div", {
                                         className: "DocsSearchResultText",
-                                        children: [(0, vT.jsx)("div", {
+                                        children: [(0, aq.jsx)("div", {
                                           className: "DocsSearchResultTitle",
-                                          children: (0, vT.jsx)(uK, {
-                                            text: TT.title,
-                                            query: jT
+                                          children: (0, aq.jsx)(pO, {
+                                            text: qq.title,
+                                            query: Nq
                                           })
-                                        }), TT.text && (0, vT.jsx)("div", {
+                                        }), qq.text && (0, aq.jsx)("div", {
                                           className: "DocsSearchResultSnippet",
-                                          children: (0, vT.jsx)(uK, {
-                                            text: ZK(TT.text, jT),
-                                            query: jT
+                                          children: (0, aq.jsx)(pO, {
+                                            text: SO(qq.text, Nq),
+                                            query: Nq
                                           })
                                         })]
-                                      }), (0, vT.jsx)("span", {
+                                      }), (0, aq.jsx)("span", {
                                         className: "DocsSearchResultMeta",
-                                        children: "Page" === TT.kind ? "Page" : null !== (cT = TT.listedUnder) && void 0 !== cT ? cT : `${TT.kind} \xb7 ${TT.page.title}`
+                                        children: "Page" === qq.kind ? "Page" : null !== (gq = qq.listedUnder) && void 0 !== gq ? gq : `${qq.kind} \xb7 ${qq.page.title}`
                                       })]
-                                    }, `${TT.page.id}#${TT.anchor}`)
-                                  })), jT && 0 === tT.length && (0, vT.jsxs)("li", {
+                                    }, `${qq.page.id}#${qq.anchor}`)
+                                  })), Nq && 0 === Vq.length && (0, aq.jsxs)("li", {
                                     className: "DocsSearchHint",
-                                    children: ["Nothing matches \u201c", OT, "\u201d."]
+                                    children: ["Nothing matches \u201c", mq, "\u201d."]
                                   })]
                                 })]
                               })
                             })
                           }
 
-                          function dK(TT, kT) {
-                            if (kT < 10) return `${TT.toFixed(1)}s`;
-                            const cT = Math.floor(TT);
-                            return `${Math.floor(cT/60)}:${String(cT%60).padStart(2,"0")}`
+                          function LO(qq, Eq) {
+                            if (Eq < 10) return `${qq.toFixed(1)}s`;
+                            const gq = Math.floor(qq);
+                            return `${Math.floor(gq/60)}:${String(gq%60).padStart(2,"0")}`
                           }
 
-                          function LK() {
-                            const TT = Al((TT => TT.track)),
-                              kT = Al((TT => TT.volume)),
-                              [cT, MT] = (0, lT.useState)(0),
-                              OT = (0, lT.useRef)(cl);
-                            if ((0, lT.useEffect)((() => {
-                                if (!TT) return;
-                                if (MT(tl()), "playing" !== TT.status) return;
-                                let kT = 0;
-                                const cT = () => {
-                                  MT(tl()), kT = requestAnimationFrame(cT)
+                          function JO() {
+                            const qq = uY((qq => qq.track)),
+                              Eq = uY((qq => qq.volume)),
+                              [gq, lq] = (0, Yq.useState)(0),
+                              mq = (0, Yq.useRef)(EY);
+                            if ((0, Yq.useEffect)((() => {
+                                if (!qq) return;
+                                if (lq(aY()), "playing" !== qq.status) return;
+                                let Eq = 0;
+                                const gq = () => {
+                                  lq(aY()), Eq = requestAnimationFrame(gq)
                                 };
-                                return kT = requestAnimationFrame(cT), () => {
-                                  cancelAnimationFrame(kT)
+                                return Eq = requestAnimationFrame(gq), () => {
+                                  cancelAnimationFrame(Eq)
                                 }
-                              }), [TT]), !TT) return null;
-                            const yT = "paused" !== TT.status,
-                              fT = Math.min(cT, TT.duration);
-                            return (0, vT.jsx)("div", {
+                              }), [qq]), !qq) return null;
+                            const xq = "paused" !== qq.status,
+                              Aq = Math.min(gq, qq.duration);
+                            return (0, aq.jsx)("div", {
                               className: "DocsSoundPlayerDock",
-                              children: (0, vT.jsxs)("section", {
+                              children: (0, aq.jsxs)("section", {
                                 className: "DocsSoundPlayer",
                                 "aria-label": "Sound player",
-                                children: [(0, vT.jsx)("button", {
+                                children: [(0, aq.jsx)("button", {
                                   type: "button",
                                   className: "DocsSoundPlayerToggle",
-                                  "aria-label": yT ? `Pause ${TT.name}` : `Play ${TT.name}`,
-                                  onClick: vl,
-                                  children: (0, vT.jsx)(hT, {
-                                    name: yT ? "pause" : "play"
+                                  "aria-label": xq ? `Pause ${qq.name}` : `Play ${qq.name}`,
+                                  onClick: NY,
+                                  children: (0, aq.jsx)(dq, {
+                                    name: xq ? "pause" : "play"
                                   })
-                                }), (0, vT.jsxs)("div", {
+                                }), (0, aq.jsxs)("div", {
                                   className: "DocsSoundPlayerTrack",
-                                  children: [(0, vT.jsxs)("div", {
+                                  children: [(0, aq.jsxs)("div", {
                                     className: "DocsSoundPlayerTitle",
-                                    children: [(0, vT.jsx)("code", {
-                                      children: TT.name
-                                    }), (0, vT.jsx)("span", {
-                                      children: TT.isSong ? "Song" : "Sound"
+                                    children: [(0, aq.jsx)("code", {
+                                      children: qq.name
+                                    }), (0, aq.jsx)("span", {
+                                      children: qq.isSong ? "Song" : "Sound"
                                     })]
-                                  }), (0, vT.jsxs)("div", {
+                                  }), (0, aq.jsxs)("div", {
                                     className: "DocsSoundPlayerScrubber",
-                                    children: [(0, vT.jsx)("span", {
-                                      children: dK(fT, TT.duration)
-                                    }), (0, vT.jsx)("input", {
+                                    children: [(0, aq.jsx)("span", {
+                                      children: LO(Aq, qq.duration)
+                                    }), (0, aq.jsx)("input", {
                                       type: "range",
                                       min: 0,
-                                      max: TT.duration || 1,
+                                      max: qq.duration || 1,
                                       step: .01,
-                                      value: fT,
-                                      disabled: 0 === TT.duration,
+                                      value: Aq,
+                                      disabled: 0 === qq.duration,
                                       "aria-label": "Position",
-                                      "aria-valuetext": `${dK(fT,TT.duration)} of ${dK(TT.duration,TT.duration)}`,
-                                      onChange: TT => {
-                                        const kT = Number(TT.target.value);
-                                        ! function(TT) {
-                                          var kT;
-                                          yl = TT, null === (kT = Kl) || void 0 === kT || kT.seek(TT)
-                                        }(kT), MT(kT)
+                                      "aria-valuetext": `${LO(Aq,qq.duration)} of ${LO(qq.duration,qq.duration)}`,
+                                      onChange: qq => {
+                                        const Eq = Number(qq.target.value);
+                                        ! function(qq) {
+                                          var Eq;
+                                          mY = qq, null === (Eq = lY) || void 0 === Eq || Eq.seek(qq)
+                                        }(Eq), lq(Eq)
                                       }
-                                    }), (0, vT.jsx)("span", {
-                                      children: TT.duration > 0 ? dK(TT.duration, TT.duration) : "\u2013"
+                                    }), (0, aq.jsx)("span", {
+                                      children: qq.duration > 0 ? LO(qq.duration, qq.duration) : "\u2013"
                                     })]
                                   })]
-                                }), (0, vT.jsxs)("div", {
+                                }), (0, aq.jsxs)("div", {
                                   className: "DocsSoundPlayerVolume",
-                                  children: [(0, vT.jsx)("button", {
+                                  children: [(0, aq.jsx)("button", {
                                     type: "button",
-                                    "aria-label": 0 === kT ? "Unmute" : "Mute",
+                                    "aria-label": 0 === Eq ? "Unmute" : "Mute",
                                     onClick: () => {
-                                      0 === kT ? hl(OT.current) : (OT.current = kT, hl(0))
+                                      0 === Eq ? VY(mq.current) : (mq.current = Eq, VY(0))
                                     },
-                                    children: (0, vT.jsx)(hT, {
+                                    children: (0, aq.jsx)(dq, {
                                       name: "volume",
-                                      className: KT()({
-                                        Muted: 0 === kT
+                                      className: Oq()({
+                                        Muted: 0 === Eq
                                       })
                                     })
-                                  }), (0, vT.jsx)("input", {
+                                  }), (0, aq.jsx)("input", {
                                     type: "range",
                                     min: 0,
                                     max: 1,
                                     step: .01,
-                                    value: kT,
+                                    value: Eq,
                                     "aria-label": "Volume",
-                                    onChange: TT => {
-                                      hl(Number(TT.target.value))
+                                    onChange: qq => {
+                                      VY(Number(qq.target.value))
                                     }
                                   })]
-                                }), (0, vT.jsx)("button", {
+                                }), (0, aq.jsx)("button", {
                                   type: "button",
                                   className: "DocsSoundPlayerClose",
                                   "aria-label": "Close the player",
                                   onClick: () => {
-                                    var kT;
-                                    null === (kT = document.querySelector(`[data-docs-track="${CSS.escape(ll(TT.name,TT.isSong))}"]`)) || void 0 === kT || kT.focus(), Nl()
+                                    var Eq;
+                                    null === (Eq = document.querySelector(`[data-docs-track="${CSS.escape(gY(qq.name,qq.isSong))}"]`)) || void 0 === Eq || Eq.focus(), dY()
                                   },
-                                  children: (0, vT.jsx)(hT, {
+                                  children: (0, aq.jsx)(dq, {
                                     name: "cross"
                                   })
                                 })]
                               })
                             })
                           }
-                          var RK = cT(47);
-                          const gK = "docsTheme",
-                            UK = window.matchMedia("(prefers-color-scheme: light)");
+                          var kO = gq(38);
+                          const RO = "docsTheme",
+                            UO = window.matchMedia("(prefers-color-scheme: light)");
 
-                          function YK(TT) {
+                          function FO(qq) {
                             let {
-                              theme: kT,
-                              onChange: cT
-                            } = TT;
-                            const lT = "dark" === kT ? "light" : "dark";
-                            return (0, vT.jsx)("button", {
+                              theme: Eq,
+                              onChange: gq
+                            } = qq;
+                            const Yq = "dark" === Eq ? "light" : "dark";
+                            return (0, aq.jsx)("button", {
                               type: "button",
                               className: "DocsIconButton DocsThemeToggle",
-                              "aria-label": `Switch to ${lT} theme`,
-                              title: `Switch to ${lT} theme`,
+                              "aria-label": `Switch to ${Yq} theme`,
+                              title: `Switch to ${Yq} theme`,
                               onClick: () => {
-                                cT(lT)
+                                gq(Yq)
                               },
-                              children: (0, vT.jsx)(hT, {
-                                name: "dark" === kT ? "moon" : "sun"
+                              children: (0, aq.jsx)(dq, {
+                                name: "dark" === Eq ? "moon" : "sun"
                               })
                             })
                           }
-                          const BK = "https://github.com/Bloxdy/code-api",
-                            WK = "https://discord.gg/playbloxd",
-                            nK = 180,
-                            pK = /Mac|iPhone|iPad/.test(navigator.userAgent);
+                          const sO = "https://github.com/Bloxdy/code-api",
+                            XO = "https://discord.gg/playbloxd",
+                            wO = 180,
+                            KO = /Mac|iPhone|iPad/.test(navigator.userAgent);
 
-                          function iK(TT) {
+                          function CO(qq) {
                             let {
-                              basePath: kT,
-                              activePageId: cT,
-                              onNavigate: lT
-                            } = TT;
-                            return (0, vT.jsx)("nav", {
+                              basePath: Eq,
+                              activePageId: gq,
+                              onNavigate: Yq
+                            } = qq;
+                            return (0, aq.jsx)("nav", {
                               className: "DocsNav",
                               "aria-label": "Documentation",
-                              children: ZT.map((TT => (0, vT.jsxs)("div", {
+                              children: pq.map((qq => (0, aq.jsxs)("div", {
                                 className: "DocsNavGroup",
-                                children: [(0, vT.jsx)("div", {
+                                children: [(0, aq.jsx)("div", {
                                   className: "DocsNavGroupTitle",
-                                  children: TT.title
-                                }), TT.pageIds.map((TT => {
-                                  var MT;
-                                  const yT = uT(TT);
-                                  return (0, vT.jsxs)(OT.e, {
-                                    to: UT(kT, yT),
-                                    className: KT()("DocsNavLink", {
-                                      Active: yT.id === cT
+                                  children: qq.title
+                                }), qq.pageIds.map((qq => {
+                                  var lq;
+                                  const xq = Gq(qq);
+                                  return (0, aq.jsxs)(mq.c, {
+                                    to: Fq(Eq, xq),
+                                    className: Oq()("DocsNavLink", {
+                                      Active: xq.id === gq
                                     }),
-                                    "aria-current": yT.id === cT ? "page" : void 0,
-                                    onClick: lT,
-                                    children: [(0, vT.jsx)(hT, {
-                                      name: yT.icon
-                                    }), (0, vT.jsx)("span", {
-                                      children: null !== (MT = yT.navTitle) && void 0 !== MT ? MT : yT.title
+                                    "aria-current": xq.id === gq ? "page" : void 0,
+                                    onClick: Yq,
+                                    children: [(0, aq.jsx)(dq, {
+                                      name: xq.icon
+                                    }), (0, aq.jsx)("span", {
+                                      children: null !== (lq = xq.navTitle) && void 0 !== lq ? lq : xq.title
                                     })]
-                                  }, yT.id)
+                                  }, xq.id)
                                 }))]
-                              }, TT.title)))
+                              }, qq.title)))
                             })
                           }
 
-                          function qK(TT) {
+                          function IO(qq) {
                             let {
-                              basePath: kT,
-                              pageId: cT
-                            } = TT;
-                            const lT = ZT.flatMap((TT => TT.pageIds)),
-                              MT = lT.indexOf(cT),
-                              KT = MT > 0 ? uT(lT[MT - 1]) : null,
-                              yT = MT < lT.length - 1 ? uT(lT[MT + 1]) : null;
-                            return (0, vT.jsxs)("nav", {
+                              basePath: Eq,
+                              pageId: gq
+                            } = qq;
+                            const Yq = pq.flatMap((qq => qq.pageIds)),
+                              lq = Yq.indexOf(gq),
+                              Oq = lq > 0 ? Gq(Yq[lq - 1]) : null,
+                              xq = lq < Yq.length - 1 ? Gq(Yq[lq + 1]) : null;
+                            return (0, aq.jsxs)("nav", {
                               className: "DocsPager",
                               "aria-label": "Pages",
-                              children: [KT ? (0, vT.jsxs)(OT.e, {
+                              children: [Oq ? (0, aq.jsxs)(mq.c, {
                                 className: "DocsPagerLink Previous",
-                                to: UT(kT, KT),
-                                children: [(0, vT.jsx)("span", {
+                                to: Fq(Eq, Oq),
+                                children: [(0, aq.jsx)("span", {
                                   className: "DocsPagerLabel",
                                   children: "Previous"
-                                }), (0, vT.jsx)("span", {
+                                }), (0, aq.jsx)("span", {
                                   className: "DocsPagerTitle",
-                                  children: KT.title
+                                  children: Oq.title
                                 })]
-                              }) : (0, vT.jsx)("span", {}), yT && (0, vT.jsxs)(OT.e, {
+                              }) : (0, aq.jsx)("span", {}), xq && (0, aq.jsxs)(mq.c, {
                                 className: "DocsPagerLink Next",
-                                to: UT(kT, yT),
-                                children: [(0, vT.jsx)("span", {
+                                to: Fq(Eq, xq),
+                                children: [(0, aq.jsx)("span", {
                                   className: "DocsPagerLabel",
                                   children: "Next"
-                                }), (0, vT.jsx)("span", {
+                                }), (0, aq.jsx)("span", {
                                   className: "DocsPagerTitle",
-                                  children: yT.title
+                                  children: xq.title
                                 })]
                               })]
                             })
                           }
 
-                          function sK(TT) {
+                          function eO(qq) {
                             let {
-                              basePath: kT,
-                              embedded: cT = !1
-                            } = TT;
+                              basePath: Eq,
+                              embedded: gq = !1
+                            } = qq;
                             const {
-                              pageSlug: MT = ""
-                            } = (0, yT.v)(), xT = (0, yT.s)(), IT = (0, yT.t)(), AT = (CT = MT, ET.find((TT => TT.slug === CT)));
-                            var CT;
-                            const [jT, tT] = function() {
-                              const [TT, kT] = (0, lT.useState)((() => {
-                                const TT = RK.e.getItem(gK);
-                                return "dark" === TT || "light" === TT ? TT : null
-                              })), [cT, MT] = (0, lT.useState)(UK.matches ? "light" : "dark");
-                              return (0, lT.useEffect)((() => {
-                                const TT = () => {
-                                  MT(UK.matches ? "light" : "dark")
+                              pageSlug: lq = ""
+                            } = (0, xq.v)(), cq = (0, xq.q)(), uq = (0, xq.r)(), Bq = (Wq = lq, Sq.find((qq => qq.slug === Wq)));
+                            var Wq;
+                            const [Nq, Vq] = function() {
+                              const [qq, Eq] = (0, Yq.useState)((() => {
+                                const qq = kO.i.getItem(RO);
+                                return "dark" === qq || "light" === qq ? qq : null
+                              })), [gq, lq] = (0, Yq.useState)(UO.matches ? "light" : "dark");
+                              return (0, Yq.useEffect)((() => {
+                                const qq = () => {
+                                  lq(UO.matches ? "light" : "dark")
                                 };
-                                return UK.addEventListener("change", TT), () => {
-                                  UK.removeEventListener("change", TT)
+                                return UO.addEventListener("change", qq), () => {
+                                  UO.removeEventListener("change", qq)
                                 }
-                              }), []), [null !== TT && void 0 !== TT ? TT : cT, TT => {
-                                RK.e.setItem(gK, TT), kT(TT)
+                              }), []), [null !== qq && void 0 !== qq ? qq : gq, qq => {
+                                kO.i.setItem(RO, qq), Eq(qq)
                               }]
-                            }(), [NT, QT] = (0, lT.useState)(null), [ST, DT] = (0, lT.useState)(!1), [aT, FT] = (0, lT.useState)(!1), [rT, wT] = (0, lT.useState)([]), mT = function(TT, kT) {
-                              const [cT, MT] = (0, lT.useState)("");
-                              return (0, lT.useEffect)((() => {
-                                if (!kT) return;
-                                let cT = 0;
-                                const lT = () => {
-                                    var lT, KT;
-                                    cT = 0;
-                                    const OT = kT.getBoundingClientRect().top + nK;
-                                    let yT = null !== (lT = null === (KT = TT[0]) || void 0 === KT ? void 0 : KT.anchor) && void 0 !== lT ? lT : "";
-                                    for (const kT of TT) {
-                                      const TT = document.getElementById(kT.anchor);
-                                      TT && TT.getBoundingClientRect().top <= OT && (yT = kT.anchor)
+                            }(), [jq, Hq] = (0, Yq.useState)(null), [oq, Pq] = (0, Yq.useState)(!1), [Qq, yq] = (0, Yq.useState)(!1), [tq, vq] = (0, Yq.useState)([]), hq = function(qq, Eq) {
+                              const [gq, lq] = (0, Yq.useState)("");
+                              return (0, Yq.useEffect)((() => {
+                                if (!Eq) return;
+                                let gq = 0;
+                                const Yq = () => {
+                                    var Yq, Oq;
+                                    gq = 0;
+                                    const mq = Eq.getBoundingClientRect().top + wO;
+                                    let xq = null !== (Yq = null === (Oq = qq[0]) || void 0 === Oq ? void 0 : Oq.anchor) && void 0 !== Yq ? Yq : "";
+                                    for (const Eq of qq) {
+                                      const qq = document.getElementById(Eq.anchor);
+                                      qq && qq.getBoundingClientRect().top <= mq && (xq = Eq.anchor)
                                     }
-                                    kT.scrollTop + kT.clientHeight >= kT.scrollHeight - 2 && kT.scrollTop > 0 && TT.length > 0 && (yT = TT[TT.length - 1].anchor), MT(yT)
+                                    Eq.scrollTop + Eq.clientHeight >= Eq.scrollHeight - 2 && Eq.scrollTop > 0 && qq.length > 0 && (xq = qq[qq.length - 1].anchor), lq(xq)
                                   },
-                                  KT = () => {
-                                    cT || (cT = requestAnimationFrame(lT))
+                                  Oq = () => {
+                                    gq || (gq = requestAnimationFrame(Yq))
                                   };
-                                return lT(), kT.addEventListener("scroll", KT, {
+                                return Yq(), Eq.addEventListener("scroll", Oq, {
                                   passive: !0
                                 }), () => {
-                                  cancelAnimationFrame(cT), kT.removeEventListener("scroll", KT)
+                                  cancelAnimationFrame(gq), Eq.removeEventListener("scroll", Oq)
                                 }
-                              }), [TT, kT]), cT
-                            }(rT, NT), bT = "" === MT && xT.hash ? function(TT) {
-                              const kT = (0, PT.o)(TT);
-                              if (LT(uT("welcome"), kT)) return null;
-                              const cT = Object.hasOwn(gT, kT) ? gT[kT] : null;
-                              if (cT) return {
-                                page: uT(cT.pageId),
-                                anchor: cT.anchor
+                              }), [qq, Eq]), gq
+                            }(tq, jq), nq = "" === lq && cq.hash ? function(qq) {
+                              const Eq = (0, rq.s)(qq);
+                              if (kq(Gq("welcome"), Eq)) return null;
+                              const gq = Object.hasOwn(Uq, Eq) ? Uq[Eq] : null;
+                              if (gq) return {
+                                page: Gq(gq.pageId),
+                                anchor: gq.anchor
                               };
-                              const lT = uT("readme");
-                              return LT(lT, kT) ? {
-                                page: lT,
-                                anchor: kT
-                              } : RT(`#${kT}`)
-                            }(xT.hash) : null;
-                            (0, lT.useEffect)((() => (fT.e.set({
+                              const Yq = Gq("readme");
+                              return kq(Yq, Eq) ? {
+                                page: Yq,
+                                anchor: Eq
+                              } : Rq(`#${Eq}`)
+                            }(cq.hash) : null;
+                            (0, Yq.useEffect)((() => (Aq.b.set({
                               musicOnFromPage: !1
                             }), () => {
-                              fT.e.set({
+                              Aq.b.set({
                                 musicOnFromPage: !0
-                              }), Nl()
-                            })), []), (0, lT.useEffect)((() => {
-                              const TT = TT => {
-                                const kT = TT.target;
-                                if (kT.closest(".DocsTextDialog")) return;
-                                const cT = kT.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(kT.tagName);
-                                "k" === TT.key && (TT.metaKey || TT.ctrlKey) || "/" === TT.key && !cT ? (TT.preventDefault(), FT(!0)) : "Escape" === TT.key && DT(!1)
+                              }), dY()
+                            })), []), (0, Yq.useEffect)((() => {
+                              const qq = qq => {
+                                const Eq = qq.target;
+                                if (Eq.closest(".DocsTextDialog")) return;
+                                const gq = Eq.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(Eq.tagName);
+                                "k" === qq.key && (qq.metaKey || qq.ctrlKey) || "/" === qq.key && !gq ? (qq.preventDefault(), yq(!0)) : "Escape" === qq.key && Pq(!1)
                               };
-                              return window.addEventListener("keydown", TT), () => {
-                                window.removeEventListener("keydown", TT)
+                              return window.addEventListener("keydown", qq), () => {
+                                window.removeEventListener("keydown", qq)
                               }
                             }), []);
-                            const zT = (0, lT.useRef)(null);
-                            (0, lT.useLayoutEffect)((() => {
-                              var TT, kT;
-                              if (!NT) return;
-                              const cT = zT.current === xT.pathname;
-                              zT.current = xT.pathname;
-                              const lT = (0, PT.o)(xT.hash),
-                                MT = lT ? document.getElementById(lT) : null;
-                              if (null === (TT = NT.querySelector(".DocsTargeted")) || void 0 === TT || TT.classList.remove("DocsTargeted"), null === MT || void 0 === MT || null === (kT = MT.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === kT || kT.classList.add("DocsTargeted"), MT) {
-                                var KT;
-                                const TT = MT.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
-                                (null !== (KT = MT.closest(".DocsChangelogEntry")) && void 0 !== KT ? KT : MT).scrollIntoView({
-                                  block: TT ? "center" : "start",
-                                  behavior: cT ? "smooth" : "auto"
+                            const bq = (0, Yq.useRef)(null);
+                            (0, Yq.useLayoutEffect)((() => {
+                              var qq, Eq;
+                              if (!jq) return;
+                              const gq = bq.current === cq.pathname;
+                              bq.current = cq.pathname;
+                              const Yq = (0, rq.s)(cq.hash),
+                                lq = Yq ? document.getElementById(Yq) : null;
+                              if (null === (qq = jq.querySelector(".DocsTargeted")) || void 0 === qq || qq.classList.remove("DocsTargeted"), null === lq || void 0 === lq || null === (Eq = lq.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === Eq || Eq.classList.add("DocsTargeted"), lq) {
+                                var Oq;
+                                const qq = lq.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
+                                (null !== (Oq = lq.closest(".DocsChangelogEntry")) && void 0 !== Oq ? Oq : lq).scrollIntoView({
+                                  block: qq ? "center" : "start",
+                                  behavior: gq ? "smooth" : "auto"
                                 })
-                              } else cT || NT.scrollTo({
+                              } else gq || jq.scrollTo({
                                 top: 0
                               })
-                            }), [NT, xT.pathname, xT.hash, xT.key]);
-                            const JT = (0, lT.useCallback)((() => {
-                                DT(!1)
+                            }), [jq, cq.pathname, cq.hash, cq.key]);
+                            const iq = (0, Yq.useCallback)((() => {
+                                Pq(!1)
                               }), []),
-                              oT = (0, lT.useCallback)((TT => {
-                                IT({
-                                  hash: TT
+                              Zq = (0, Yq.useCallback)((qq => {
+                                uq({
+                                  hash: qq
                                 })
-                              }), [IT]);
-                            if (bT) return (0, vT.jsx)(yT.e, {
+                              }), [uq]);
+                            if (nq) return (0, aq.jsx)(xq.c, {
                               replace: !0,
-                              to: UT(kT, bT.page, bT.anchor)
+                              to: Fq(Eq, nq.page, nq.anchor)
                             });
-                            if (!AT) return (0, vT.jsx)(yT.e, {
+                            if (!Bq) return (0, aq.jsx)(xq.c, {
                               replace: !0,
-                              to: kT
+                              to: Eq
                             });
-                            const HT = cT ? "div" : "main";
-                            return (0, vT.jsx)(jk.Provider, {
-                              value: kT,
-                              children: (0, vT.jsx)(vk.Provider, {
-                                value: NT,
-                                children: (0, vT.jsxs)("div", {
-                                  ref: QT,
-                                  className: KT()("DocsSite", {
-                                    Embedded: cT,
-                                    NavOpen: ST
+                            const fq = gq ? "div" : "main";
+                            return (0, aq.jsx)(NE.Provider, {
+                              value: Eq,
+                              children: (0, aq.jsx)(aE.Provider, {
+                                value: jq,
+                                children: (0, aq.jsxs)("div", {
+                                  ref: Hq,
+                                  className: Oq()("DocsSite", {
+                                    Embedded: gq,
+                                    NavOpen: oq
                                   }),
-                                  "data-theme": jT,
-                                  children: [(0, vT.jsxs)("header", {
+                                  "data-theme": Nq,
+                                  children: [(0, aq.jsxs)("header", {
                                     className: "DocsTopBar",
-                                    children: [(0, vT.jsx)("button", {
+                                    children: [(0, aq.jsx)("button", {
                                       type: "button",
                                       className: "DocsIconButton DocsMenuButton",
-                                      "aria-label": ST ? "Close menu" : "Open menu",
-                                      "aria-expanded": ST,
+                                      "aria-label": oq ? "Close menu" : "Open menu",
+                                      "aria-expanded": oq,
                                       onClick: () => {
-                                        DT(!ST)
+                                        Pq(!oq)
                                       },
-                                      children: (0, vT.jsx)(hT, {
-                                        name: ST ? "cross" : "menu"
+                                      children: (0, aq.jsx)(dq, {
+                                        name: oq ? "cross" : "menu"
                                       })
-                                    }), (0, vT.jsxs)(OT.e, {
-                                      to: kT,
+                                    }), (0, aq.jsxs)(mq.c, {
+                                      to: Eq,
                                       className: "DocsBrand",
-                                      children: [(0, vT.jsx)("img", {
+                                      children: [(0, aq.jsx)("img", {
                                         src: "/favicon.svg",
                                         alt: "",
                                         width: 28,
                                         height: 28
-                                      }), (0, vT.jsx)("span", {
+                                      }), (0, aq.jsx)("span", {
                                         className: "DocsBrandName",
                                         children: "Bloxd"
-                                      }), (0, vT.jsx)("span", {
+                                      }), (0, aq.jsx)("span", {
                                         className: "DocsBrandTag",
                                         children: "Code API"
                                       })]
-                                    }), (0, vT.jsxs)("button", {
+                                    }), (0, aq.jsxs)("button", {
                                       type: "button",
                                       className: "DocsSearchTrigger",
                                       onClick: () => {
-                                        FT(!0)
+                                        yq(!0)
                                       },
-                                      children: [(0, vT.jsx)(hT, {
+                                      children: [(0, aq.jsx)(dq, {
                                         name: "magnifying-glass"
-                                      }), (0, vT.jsx)("span", {
+                                      }), (0, aq.jsx)("span", {
                                         className: "DocsSearchTriggerLabel",
                                         children: "Search docs"
-                                      }), (0, vT.jsxs)("kbd", {
-                                        children: [pK ? "\u2318" : "Ctrl", " K"]
+                                      }), (0, aq.jsxs)("kbd", {
+                                        children: [KO ? "\u2318" : "Ctrl", " K"]
                                       })]
-                                    }), (0, vT.jsxs)("div", {
+                                    }), (0, aq.jsxs)("div", {
                                       className: "DocsTopBarLinks",
-                                      children: [(0, vT.jsxs)("a", {
-                                        href: WK,
+                                      children: [(0, aq.jsxs)("a", {
+                                        href: XO,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "DocsTopBarLink",
-                                        children: [(0, vT.jsx)(hT, {
+                                        children: [(0, aq.jsx)(dq, {
                                           name: "discord"
-                                        }), (0, vT.jsx)("span", {
+                                        }), (0, aq.jsx)("span", {
                                           children: "Discord"
                                         })]
-                                      }), (0, vT.jsxs)("a", {
-                                        href: BK,
+                                      }), (0, aq.jsxs)("a", {
+                                        href: sO,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "DocsTopBarLink",
-                                        children: [(0, vT.jsx)(hT, {
+                                        children: [(0, aq.jsx)(dq, {
                                           name: "external-link"
-                                        }), (0, vT.jsx)("span", {
+                                        }), (0, aq.jsx)("span", {
                                           children: "GitHub"
                                         })]
-                                      }), !cT && (0, vT.jsxs)(OT.e, {
+                                      }), !gq && (0, aq.jsxs)(mq.c, {
                                         to: "/",
                                         className: "DocsTopBarLink DocsPlayLink",
-                                        children: [(0, vT.jsx)(hT, {
+                                        children: [(0, aq.jsx)(dq, {
                                           name: "play"
-                                        }), (0, vT.jsx)("span", {
+                                        }), (0, aq.jsx)("span", {
                                           children: "Play Bloxd"
                                         })]
-                                      }), (0, vT.jsx)(YK, {
-                                        theme: jT,
-                                        onChange: tT
+                                      }), (0, aq.jsx)(FO, {
+                                        theme: Nq,
+                                        onChange: Vq
                                       })]
                                     })]
-                                  }), (0, vT.jsxs)("div", {
+                                  }), (0, aq.jsxs)("div", {
                                     className: "DocsSiteBody",
-                                    children: [(0, vT.jsx)("aside", {
+                                    children: [(0, aq.jsx)("aside", {
                                       className: "DocsSidebar",
-                                      children: (0, vT.jsx)(iK, {
-                                        basePath: kT,
-                                        activePageId: AT.id,
-                                        onNavigate: JT
+                                      children: (0, aq.jsx)(CO, {
+                                        basePath: Eq,
+                                        activePageId: Bq.id,
+                                        onNavigate: iq
                                       })
-                                    }), (0, vT.jsx)("div", {
+                                    }), (0, aq.jsx)("div", {
                                       className: "DocsNavScrim",
-                                      onClick: JT
-                                    }), (0, vT.jsxs)(HT, {
+                                      onClick: iq
+                                    }), (0, aq.jsxs)(fq, {
                                       className: "DocsMain",
-                                      children: [(0, vT.jsx)(FK, {
-                                        page: AT,
-                                        onTocChange: wT
-                                      }, AT.id), (0, vT.jsx)(qK, {
-                                        basePath: kT,
-                                        pageId: AT.id
+                                      children: [(0, aq.jsx)(QO, {
+                                        page: Bq,
+                                        onTocChange: vq
+                                      }, Bq.id), (0, aq.jsx)(IO, {
+                                        basePath: Eq,
+                                        pageId: Bq.id
                                       })]
-                                    }), (0, vT.jsx)("aside", {
-                                      className: KT()("DocsToc", {
-                                        Timeline: "changelog" === AT.layout
+                                    }), (0, aq.jsx)("aside", {
+                                      className: Oq()("DocsToc", {
+                                        Timeline: "changelog" === Bq.layout
                                       }),
                                       "aria-label": "On this page",
-                                      children: (0, vT.jsx)(mK, {
-                                        isChangelog: "changelog" === AT.layout,
-                                        toc: rT,
-                                        activeAnchor: mT,
-                                        onNavigate: oT
+                                      children: (0, aq.jsx)(vO, {
+                                        isChangelog: "changelog" === Bq.layout,
+                                        toc: tq,
+                                        activeAnchor: hq,
+                                        onNavigate: Zq
                                       })
                                     })]
-                                  }), (0, vT.jsx)(LK, {}), aT && (0, vT.jsx)(XK, {
-                                    basePath: kT,
+                                  }), (0, aq.jsx)(JO, {}), Qq && (0, aq.jsx)(GO, {
+                                    basePath: Eq,
                                     onClose: () => {
-                                      FT(!1)
+                                      yq(!1)
                                     }
                                   })]
                                 })
                               })
                             })
                           }
-                        }, 4707: (TT, kT, cT) => {
-                          cT.d(kT, {
-                            e: () => lT,
-                            g: () => OT,
-                            j: () => hT,
-                            k: () => tT,
-                            l: () => yT,
-                            o: () => MT,
-                            p: () => KT,
-                            q: () => vT,
-                            s: () => jT,
-                            v: () => CT
+                        }, 4565: (qq, Eq, gq) => {
+                          gq.d(Eq, {
+                            A: () => Wq,
+                            d: () => Yq,
+                            g: () => mq,
+                            j: () => dq,
+                            n: () => Vq,
+                            p: () => xq,
+                            s: () => lq,
+                            t: () => Oq,
+                            u: () => aq,
+                            w: () => Nq
                           });
-                          const lT = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
+                          const Yq = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
 
-                          function MT(TT) {
+                          function lq(qq) {
                             try {
-                              return decodeURIComponent(TT.slice(1))
+                              return decodeURIComponent(qq.slice(1))
                             } catch {
-                              return TT.slice(1)
+                              return qq.slice(1)
                             }
                           }
 
-                          function KT(TT) {
-                            return TT.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
+                          function Oq(qq) {
+                            return qq.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
                           }
-                          const OT = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${lT.source}`, "g");
+                          const mq = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${Yq.source}`, "g");
 
-                          function yT(TT, kT) {
-                            return 2 === TT.length ? kT.replace(/^ (.*) $/, "$1") : kT
-                          }
-
-                          function fT(TT) {
-                            return "" === TT.trim()
+                          function xq(qq, Eq) {
+                            return 2 === qq.length ? Eq.replace(/^ (.*) $/, "$1") : Eq
                           }
 
-                          function xT(TT) {
-                            const kT = [];
-                            for (const cT of TT.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) kT.length > 0 && kT[kT.length - 1].endsWith("\\") ? kT[kT.length - 1] += `|${cT}` : kT.push(cT);
-                            return kT.map((TT => TT.trim().replaceAll("\\|", "|")))
+                          function Aq(qq) {
+                            return "" === qq.trim()
                           }
-                          const IT = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
 
-                          function AT(TT) {
-                            const kT = [],
-                              cT = [{
+                          function cq(qq) {
+                            const Eq = [];
+                            for (const gq of qq.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) Eq.length > 0 && Eq[Eq.length - 1].endsWith("\\") ? Eq[Eq.length - 1] += `|${gq}` : Eq.push(gq);
+                            return Eq.map((qq => qq.trim().replaceAll("\\|", "|")))
+                          }
+                          const uq = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
+
+                          function Bq(qq) {
+                            const Eq = [],
+                              gq = [{
                                 indent: -1,
-                                items: kT
+                                items: Eq
                               }];
-                            let lT = null;
-                            for (const MT of TT) {
-                              const TT = MT.match(IT);
-                              if (!TT) {
-                                lT && (lT.text += ` ${MT.trim()}`);
+                            let Yq = null;
+                            for (const lq of qq) {
+                              const qq = lq.match(uq);
+                              if (!qq) {
+                                Yq && (Yq.text += ` ${lq.trim()}`);
                                 continue
                               }
-                              const kT = TT[1].replace(/\t/g, "  ").length;
-                              for (; kT <= cT[cT.length - 1].indent;) cT.pop();
-                              lT = {
-                                text: TT[3].trim(),
+                              const Eq = qq[1].replace(/\t/g, "  ").length;
+                              for (; Eq <= gq[gq.length - 1].indent;) gq.pop();
+                              Yq = {
+                                text: qq[3].trim(),
                                 children: []
-                              }, cT[cT.length - 1].items.push(lT), cT.push({
-                                indent: kT,
-                                items: lT.children
+                              }, gq[gq.length - 1].items.push(Yq), gq.push({
+                                indent: Eq,
+                                items: Yq.children
                               })
                             }
-                            return kT
+                            return Eq
                           }
 
-                          function CT(TT) {
-                            const kT = TT.replace(/\r\n/g, "\n").split("\n"),
-                              cT = [];
-                            let lT = 0;
-                            for (; lT < kT.length;) {
-                              const TT = kT[lT];
-                              if (fT(TT)) {
-                                lT++;
+                          function Wq(qq) {
+                            const Eq = qq.replace(/\r\n/g, "\n").split("\n"),
+                              gq = [];
+                            let Yq = 0;
+                            for (; Yq < Eq.length;) {
+                              const qq = Eq[Yq];
+                              if (Aq(qq)) {
+                                Yq++;
                                 continue
                               }
-                              const MT = TT.match(/^\s*```\s*(\w*)\s*$/);
-                              if (MT) {
-                                const TT = [];
-                                for (lT++; lT < kT.length && !/^\s*```\s*$/.test(kT[lT]);) TT.push(kT[lT]), lT++;
-                                lT++, cT.push({
+                              const lq = qq.match(/^\s*```\s*(\w*)\s*$/);
+                              if (lq) {
+                                const qq = [];
+                                for (Yq++; Yq < Eq.length && !/^\s*```\s*$/.test(Eq[Yq]);) qq.push(Eq[Yq]), Yq++;
+                                Yq++, gq.push({
                                   kind: "code",
-                                  lang: MT[1] || "text",
-                                  code: TT.join("\n").replace(/\s+$/, "")
+                                  lang: lq[1] || "text",
+                                  code: qq.join("\n").replace(/\s+$/, "")
                                 });
                                 continue
                               }
-                              const OT = TT.match(/^(#{1,6})\s+(.+?)\s*#*$/);
-                              if (OT) {
-                                const TT = OT[2].trim();
-                                cT.push({
+                              const mq = qq.match(/^(#{1,6})\s+(.+?)\s*#*$/);
+                              if (mq) {
+                                const qq = mq[2].trim();
+                                gq.push({
                                   kind: "heading",
-                                  level: OT[1].length,
-                                  text: TT,
-                                  anchor: KT(TT)
-                                }), lT++;
+                                  level: mq[1].length,
+                                  text: qq,
+                                  anchor: Oq(qq)
+                                }), Yq++;
                                 continue
                               }
-                              if (/^\s*(-{3,}|\*{3,})\s*$/.test(TT)) {
-                                cT.push({
+                              if (/^\s*(-{3,}|\*{3,})\s*$/.test(qq)) {
+                                gq.push({
                                   kind: "rule"
-                                }), lT++;
+                                }), Yq++;
                                 continue
                               }
-                              if (TT.trim().startsWith("|") && lT + 1 < kT.length && /^\s*\|[\s:|-]+\|\s*$/.test(kT[lT + 1])) {
-                                const MT = xT(TT),
-                                  KT = [];
-                                for (lT += 2; lT < kT.length && kT[lT].trim().startsWith("|");) KT.push(xT(kT[lT])), lT++;
-                                cT.push({
+                              if (qq.trim().startsWith("|") && Yq + 1 < Eq.length && /^\s*\|[\s:|-]+\|\s*$/.test(Eq[Yq + 1])) {
+                                const lq = cq(qq),
+                                  Oq = [];
+                                for (Yq += 2; Yq < Eq.length && Eq[Yq].trim().startsWith("|");) Oq.push(cq(Eq[Yq])), Yq++;
+                                gq.push({
                                   kind: "table",
-                                  header: MT,
-                                  rows: KT
+                                  header: lq,
+                                  rows: Oq
                                 });
                                 continue
                               }
-                              if (TT.startsWith(">")) {
-                                const TT = [];
-                                for (; lT < kT.length && kT[lT].startsWith(">");) TT.push(kT[lT].replace(/^>\s?/, "")), lT++;
-                                cT.push({
+                              if (qq.startsWith(">")) {
+                                const qq = [];
+                                for (; Yq < Eq.length && Eq[Yq].startsWith(">");) qq.push(Eq[Yq].replace(/^>\s?/, "")), Yq++;
+                                gq.push({
                                   kind: "quote",
-                                  blocks: CT(TT.join("\n"))
+                                  blocks: Wq(qq.join("\n"))
                                 });
                                 continue
                               }
-                              if (IT.test(TT)) {
-                                const MT = [],
-                                  KT = /^\s*\d+\./.test(TT);
-                                for (; lT < kT.length && !fT(kT[lT]) && (IT.test(kT[lT]) || /^\s+\S/.test(kT[lT]));) MT.push(kT[lT]), lT++;
-                                cT.push({
+                              if (uq.test(qq)) {
+                                const lq = [],
+                                  Oq = /^\s*\d+\./.test(qq);
+                                for (; Yq < Eq.length && !Aq(Eq[Yq]) && (uq.test(Eq[Yq]) || /^\s+\S/.test(Eq[Yq]));) lq.push(Eq[Yq]), Yq++;
+                                gq.push({
                                   kind: "list",
-                                  ordered: KT,
-                                  items: AT(MT)
+                                  ordered: Oq,
+                                  items: Bq(lq)
                                 });
                                 continue
                               }
-                              const yT = [];
-                              for (; lT < kT.length && !fT(kT[lT]) && !/^\s*```/.test(kT[lT]) && !/^#{1,6}\s/.test(kT[lT]) && !kT[lT].startsWith(">") && !IT.test(kT[lT]) && (!kT[lT].trim().startsWith("|") || 0 !== yT.length);) yT.push(kT[lT].trim()), lT++;
-                              0 === yT.length && (yT.push(kT[lT].trim()), lT++), cT.push({
+                              const xq = [];
+                              for (; Yq < Eq.length && !Aq(Eq[Yq]) && !/^\s*```/.test(Eq[Yq]) && !/^#{1,6}\s/.test(Eq[Yq]) && !Eq[Yq].startsWith(">") && !uq.test(Eq[Yq]) && (!Eq[Yq].trim().startsWith("|") || 0 !== xq.length);) xq.push(Eq[Yq].trim()), Yq++;
+                              0 === xq.length && (xq.push(Eq[Yq].trim()), Yq++), gq.push({
                                 kind: "paragraph",
-                                text: yT.join(" ")
+                                text: xq.join(" ")
                               })
                             }
-                            return cT
+                            return gq
                           }
 
-                          function jT(TT) {
-                            let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-                            const cT = CT(TT);
-                            let lT = "";
-                            const MT = [],
-                              KT = [],
-                              OT = new Map;
-                            for (const xT of cT) {
-                              if ("heading" === xT.kind) {
-                                var yT;
-                                const TT = (null !== (yT = OT.get(xT.anchor)) && void 0 !== yT ? yT : 0) + 1;
-                                OT.set(xT.anchor, TT), TT > 1 && (xT.anchor = `${xT.anchor}-${TT}`)
+                          function Nq(qq) {
+                            let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+                            const gq = Wq(qq);
+                            let Yq = "";
+                            const lq = [],
+                              Oq = [],
+                              mq = new Map;
+                            for (const cq of gq) {
+                              if ("heading" === cq.kind) {
+                                var xq;
+                                const qq = (null !== (xq = mq.get(cq.anchor)) && void 0 !== xq ? xq : 0) + 1;
+                                mq.set(cq.anchor, qq), qq > 1 && (cq.anchor = `${cq.anchor}-${qq}`)
                               }
-                              if ("heading" === xT.kind && 1 === xT.level && !lT) {
-                                lT = xT.text;
+                              if ("heading" === cq.kind && 1 === cq.level && !Yq) {
+                                Yq = cq.text;
                                 continue
                               }
-                              if ("heading" === xT.kind && xT.level <= kT) {
-                                KT.push({
-                                  heading: xT,
+                              if ("heading" === cq.kind && cq.level <= Eq) {
+                                Oq.push({
+                                  heading: cq,
                                   blocks: []
                                 });
                                 continue
                               }
-                              const TT = KT.at(-1);
-                              TT ? TT.blocks.push(xT) : MT.push(xT)
+                              const qq = Oq.at(-1);
+                              qq ? qq.blocks.push(cq) : lq.push(cq)
                             }
-                            const fT = TT => {
+                            const Aq = qq => {
                               for (;
-                                "rule" === (null === (kT = TT.at(-1)) || void 0 === kT ? void 0 : kT.kind);) {
-                                var kT;
-                                TT.pop()
+                                "rule" === (null === (Eq = qq.at(-1)) || void 0 === Eq ? void 0 : Eq.kind);) {
+                                var Eq;
+                                qq.pop()
                               }
                             };
-                            fT(MT);
-                            for (const xT of KT) fT(xT.blocks);
+                            Aq(lq);
+                            for (const cq of Oq) Aq(cq.blocks);
                             return {
-                              title: lT,
-                              intro: MT,
-                              sections: KT
+                              title: Yq,
+                              intro: lq,
+                              sections: Oq
                             }
                           }
 
-                          function vT(TT) {
+                          function aq(qq) {
                             return [{
                               heading: null,
-                              blocks: TT.intro
-                            }, ...TT.sections.map((TT => ({
-                              heading: TT.heading,
-                              blocks: TT.blocks
+                              blocks: qq.intro
+                            }, ...qq.sections.map((qq => ({
+                              heading: qq.heading,
+                              blocks: qq.blocks
                             })))]
                           }
 
-                          function tT(TT) {
-                            return TT.flatMap((TT => "code" === TT.kind ? [TT] : "quote" === TT.kind ? tT(TT.blocks) : []))
+                          function Vq(qq) {
+                            return qq.flatMap((qq => "code" === qq.kind ? [qq] : "quote" === qq.kind ? Vq(qq.blocks) : []))
                           }
 
-                          function hT(TT) {
-                            switch (TT.kind) {
+                          function dq(qq) {
+                            switch (qq.kind) {
                               case "heading":
                               case "paragraph":
-                                return TT.text;
+                                return qq.text;
                               case "code":
-                                return TT.code;
+                                return qq.code;
                               case "table":
-                                return [TT.header, ...TT.rows].map((TT => TT.join(" "))).join(" ");
+                                return [qq.header, ...qq.rows].map((qq => qq.join(" "))).join(" ");
                               case "list": {
-                                const kT = TT => TT.map((TT => `${TT.text} ${kT(TT.children)}`)).join(" ");
-                                return kT(TT.items)
+                                const Eq = qq => qq.map((qq => `${qq.text} ${Eq(qq.children)}`)).join(" ");
+                                return Eq(qq.items)
                               }
                               case "quote":
-                                return TT.blocks.map(hT).join(" ");
+                                return qq.blocks.map(dq).join(" ");
                               case "rule":
                                 return ""
                             }
                           }
-                        }, 4800: (TT, kT, cT) => {
-                          cT.d(kT, {
-                            e: () => yT
+                        }, 4656: (qq, Eq, gq) => {
+                          gq.d(Eq, {
+                            e: () => xq
                           });
-                          var lT = cT(71),
-                            MT = cT(328),
-                            KT = cT(1943),
-                            OT = cT(1099);
+                          var Yq = gq(57),
+                            lq = gq(296),
+                            Oq = gq(1895),
+                            mq = gq(1070);
 
-                          function yT(TT) {
+                          function xq(qq) {
                             let {
-                              text: kT
-                            } = TT;
-                            const cT = [];
-                            let yT = "";
-                            return (0, MT.Pb)(kT).forEach(((TT, kT) => {
-                              if ("string" === typeof TT || !(0, KT.e)(TT.icon)) return void(yT += "string" === typeof TT ? TT : TT.icon);
-                              const MT = Math.max(0, yT.trimEnd().search(/\S{1,12}$/));
-                              cT.push((0, OT.jsxs)(lT.Fragment, {
-                                children: [yT.slice(0, MT), (0, OT.jsxs)("span", {
+                              text: Eq
+                            } = qq;
+                            const gq = [];
+                            let xq = "";
+                            return (0, lq.Zb)(Eq).forEach(((qq, Eq) => {
+                              if ("string" === typeof qq || !(0, Oq.i)(qq.icon)) return void(xq += "string" === typeof qq ? qq : qq.icon);
+                              const lq = Math.max(0, xq.trimEnd().search(/\S{1,12}$/));
+                              gq.push((0, mq.jsxs)(Yq.Fragment, {
+                                children: [xq.slice(0, lq), (0, mq.jsxs)("span", {
                                   className: "InlineIconTextGlue",
-                                  children: [yT.slice(MT), (0, OT.jsx)("span", {
+                                  children: [xq.slice(lq), (0, mq.jsx)("span", {
                                     className: "InlineIconTextIcon",
                                     role: "img",
-                                    "aria-label": TT.icon,
-                                    children: (0, OT.jsx)(KT.d, {
-                                      itemName: TT.icon,
+                                    "aria-label": qq.icon,
+                                    children: (0, mq.jsx)(Oq.e, {
+                                      itemName: qq.icon,
                                       amount: 0
                                     })
                                   })]
                                 })]
-                              }, kT)), yT = ""
-                            })), cT.push(yT), (0, OT.jsx)(OT.Fragment, {
-                              children: cT
+                              }, Eq)), xq = ""
+                            })), gq.push(xq), (0, mq.jsx)(mq.Fragment, {
+                              children: gq
                             })
                           }
-                        }, 4730: (TT, kT, cT) => {
-                          cT.d(kT, {
-                            g: () => QT,
-                            e: () => NT
+                        }, 4588: (qq, Eq, gq) => {
+                          gq.d(Eq, {
+                            f: () => Hq,
+                            d: () => jq
                           });
-                          var lT = cT(71),
-                            MT = cT(1461),
-                            KT = cT(1921),
-                            OT = cT(4739),
-                            yT = cT(1099);
-                          const fT = (0, lT.memo)((function(TT) {
+                          var Yq = gq(57),
+                            lq = gq(1416),
+                            Oq = gq(1876),
+                            mq = gq(4597),
+                            xq = gq(1070);
+                          const Aq = (0, Yq.memo)((function(qq) {
                             let {
-                              initialParameters: kT
-                            } = TT;
-                            const cT = (0, lT.useRef)(null),
-                              MT = (0, lT.useRef)(null),
-                              fT = (0, lT.useRef)(0),
-                              xT = (0, lT.useRef)(null),
-                              IT = kT.description,
-                              AT = kT.Uk,
+                              initialParameters: Eq
+                            } = qq;
+                            const gq = (0, Yq.useRef)(null),
+                              lq = (0, Yq.useRef)(null),
+                              Aq = (0, Yq.useRef)(0),
+                              cq = (0, Yq.useRef)(null),
+                              uq = Eq.description,
+                              Bq = Eq.zY,
                               {
-                                scale: CT,
-                                rotation: jT
-                              } = null !== kT && void 0 !== kT ? kT : {},
-                              vT = (0, OT.g)();
-                            return (0, lT.useEffect)((() => {
-                              const TT = vT.onFrame((() => {
-                                const TT = vT.getState();
-                                if (!TT.isActive || !cT.current || !MT.current) return;
-                                const kT = TT.state;
-                                if (cT.current.value = kT.progress, kT.clickCount > fT.current) {
-                                  fT.current = kT.clickCount;
-                                  const TT = MT.current;
-                                  TT.classList.add("pulse"), xT.current = setTimeout((() => {
-                                    TT.classList.remove("pulse")
+                                scale: Wq,
+                                rotation: Nq
+                              } = null !== Eq && void 0 !== Eq ? Eq : {},
+                              aq = (0, mq.f)();
+                            return (0, Yq.useEffect)((() => {
+                              const qq = aq.onFrame((() => {
+                                const qq = aq.getState();
+                                if (!qq.isActive || !gq.current || !lq.current) return;
+                                const Eq = qq.state;
+                                if (gq.current.value = Eq.progress, Eq.clickCount > Aq.current) {
+                                  Aq.current = Eq.clickCount;
+                                  const qq = lq.current;
+                                  qq.classList.add("pulse"), cq.current = setTimeout((() => {
+                                    qq.classList.remove("pulse")
                                   }), 100)
                                 }
                               }));
                               return () => {
-                                clearTimeout(xT.current), TT()
+                                clearTimeout(cq.current), qq()
                               }
-                            }), [vT]), (0, yT.jsx)(yT.Fragment, {
-                              children: (0, yT.jsxs)("div", {
+                            }), [aq]), (0, xq.jsx)(xq.Fragment, {
+                              children: (0, xq.jsxs)("div", {
                                 className: "QTEProgressBarWrapper",
                                 style: {
-                                  ...null !== CT && {
-                                    "--scale": CT
+                                  ...null !== Wq && {
+                                    "--scale": Wq
                                   },
-                                  ...null !== jT && {
-                                    "--rotation": `${jT}deg`
+                                  ...null !== Nq && {
+                                    "--rotation": `${Nq}deg`
                                   }
                                 },
-                                children: [(0, yT.jsx)("progress", {
+                                children: [(0, xq.jsx)("progress", {
                                   id: "catch",
                                   max: 100,
                                   className: "QTEProgressBar",
-                                  ref: cT
-                                }), (0, yT.jsx)("span", {
+                                  ref: gq
+                                }), (0, xq.jsx)("span", {
                                   className: "QTEProgressBarInteractionIndicator",
-                                  ref: MT,
-                                  children: (0, yT.jsx)(KT.b, {
+                                  ref: lq,
+                                  children: (0, xq.jsx)(Oq.c, {
                                     text: [{
-                                      icon: AT
+                                      icon: Bq
                                     }]
                                   })
-                                }), (0, yT.jsx)("div", {
+                                }), (0, xq.jsx)("div", {
                                   className: "QTEProgressBarDescription",
-                                  children: (0, yT.jsx)(KT.b, {
-                                    text: IT
+                                  children: (0, xq.jsx)(Oq.c, {
+                                    text: uq
                                   })
                                 })]
                               })
                             })
                           }));
-                          var xT = cT(1046),
-                            IT = cT.n(xT);
-                          const AT = 2 * Math.PI * 90,
-                            CT = (0, lT.memo)((function(TT) {
+                          var cq = gq(1018),
+                            uq = gq.n(cq);
+                          const Bq = 2 * Math.PI * 90,
+                            Wq = (0, Yq.memo)((function(qq) {
                               let {
-                                initialParameters: kT
-                              } = TT;
-                              const cT = (0, lT.useRef)(null),
-                                MT = (0, lT.useRef)(null),
-                                fT = (0, lT.useRef)(null),
-                                xT = kT.label,
-                                CT = kT.icon,
-                                jT = kT.Wk,
+                                initialParameters: Eq
+                              } = qq;
+                              const gq = (0, Yq.useRef)(null),
+                                lq = (0, Yq.useRef)(null),
+                                Aq = (0, Yq.useRef)(null),
+                                cq = Eq.label,
+                                Wq = Eq.icon,
+                                Nq = Eq.GY,
                                 {
-                                  scale: vT,
-                                  rotation: tT,
-                                  nk: hT
-                                } = null !== kT && void 0 !== kT ? kT : {},
-                                NT = (0, OT.g)();
-                              return (0, lT.useEffect)((() => {
-                                const TT = NT.onFrame((() => {
-                                  var TT, kT;
-                                  const lT = NT.getState();
-                                  if (!lT.isActive || !MT.current) return;
-                                  const KT = lT.state,
-                                    OT = null !== (TT = KT.timeRemaining) && void 0 !== TT ? TT : 0,
-                                    yT = null !== (kT = KT.Bk) && void 0 !== kT ? kT : 1,
-                                    xT = AT * (1 - OT / yT);
-                                  MT.current.style.strokeDashoffset = `${xT}`, cT.current && (cT.current.style.opacity = OT > 0 ? "1" : "0"), fT.current && jT && (fT.current.textContent = `${(OT/1e3).toFixed(1)}s`)
+                                  scale: aq,
+                                  rotation: Vq,
+                                  LY: dq
+                                } = null !== Eq && void 0 !== Eq ? Eq : {},
+                                jq = (0, mq.f)();
+                              return (0, Yq.useEffect)((() => {
+                                const qq = jq.onFrame((() => {
+                                  var qq, Eq;
+                                  const Yq = jq.getState();
+                                  if (!Yq.isActive || !lq.current) return;
+                                  const Oq = Yq.state,
+                                    mq = null !== (qq = Oq.timeRemaining) && void 0 !== qq ? qq : 0,
+                                    xq = null !== (Eq = Oq.pY) && void 0 !== Eq ? Eq : 1,
+                                    cq = Bq * (1 - mq / xq);
+                                  lq.current.style.strokeDashoffset = `${cq}`, gq.current && (gq.current.style.opacity = mq > 0 ? "1" : "0"), Aq.current && Nq && (Aq.current.textContent = `${(mq/1e3).toFixed(1)}s`)
                                 }));
                                 return () => {
-                                  TT()
+                                  qq()
                                 }
-                              }), [NT, jT]), (0, yT.jsxs)("div", {
+                              }), [jq, Nq]), (0, xq.jsxs)("div", {
                                 className: "QTETimedClick",
-                                ref: cT,
+                                ref: gq,
                                 style: {
-                                  ...null !== vT && {
-                                    "--scale": vT
+                                  ...null !== aq && {
+                                    "--scale": aq
                                   },
-                                  ...null !== tT && {
-                                    "--rotation": `${tT}deg`
+                                  ...null !== Vq && {
+                                    "--rotation": `${Vq}deg`
                                   }
                                 },
-                                children: [(0, yT.jsxs)("div", {
+                                children: [(0, xq.jsxs)("div", {
                                   className: "QTETimedClickCircleContainer",
-                                  children: [(0, yT.jsxs)("svg", {
+                                  children: [(0, xq.jsxs)("svg", {
                                     className: "QTETimedClickCircularProgress",
                                     viewBox: "0 0 200 200",
-                                    children: [(0, yT.jsx)("circle", {
+                                    children: [(0, xq.jsx)("circle", {
                                       className: "QTETimedClickProgressTrack",
                                       cx: "100",
                                       cy: "100",
                                       r: 90,
                                       fill: "none",
                                       strokeWidth: "12"
-                                    }), (0, yT.jsx)("circle", {
+                                    }), (0, xq.jsx)("circle", {
                                       className: "QTETimedClickProgressArc",
                                       cx: "100",
                                       cy: "100",
@@ -6295,80 +6295,80 @@ export const modules = {
                                       fill: "none",
                                       strokeWidth: "12",
                                       strokeLinecap: "square",
-                                      strokeDasharray: AT,
-                                      ref: MT
+                                      strokeDasharray: Bq,
+                                      ref: lq
                                     })]
-                                  }), (0, yT.jsx)("div", {
+                                  }), (0, xq.jsx)("div", {
                                     className: "QTETimedClickCenterContent",
-                                    children: (0, yT.jsx)(KT.b, {
+                                    children: (0, xq.jsx)(Oq.c, {
                                       text: [{
-                                        icon: CT
+                                        icon: Wq
                                       }],
-                                      className: IT()("QTETimedClickInnerText", {
-                                        QTETimedClickBreathe: hT
+                                      className: uq()("QTETimedClickInnerText", {
+                                        QTETimedClickBreathe: dq
                                       })
                                     })
                                   })]
-                                }), (0, yT.jsxs)("div", {
+                                }), (0, xq.jsxs)("div", {
                                   className: "QTETimedClickRightTextContainer",
-                                  children: [(0, yT.jsx)(KT.b, {
-                                    text: xT,
+                                  children: [(0, xq.jsx)(Oq.c, {
+                                    text: cq,
                                     className: "QTETimedClickLabelText"
-                                  }), jT && (0, yT.jsx)("span", {
+                                  }), Nq && (0, xq.jsx)("span", {
                                     className: "QTETimedClickTimeText",
-                                    ref: fT
+                                    ref: Aq
                                   })]
                                 })]
                               })
                             })),
-                            jT = (0, lT.memo)((function(TT) {
+                            Nq = (0, Yq.memo)((function(qq) {
                               let {
-                                initialParameters: kT
-                              } = TT;
-                              const cT = (0, lT.useRef)(null),
-                                MT = (0, lT.useRef)(null),
-                                fT = (0, lT.useRef)(null),
-                                xT = (0, lT.useRef)(!1),
-                                IT = kT.description,
-                                AT = null === kT || void 0 === kT ? void 0 : kT.icon,
-                                CT = (0, OT.g)();
-                              return (0, lT.useEffect)((() => {
-                                const TT = CT.onFrame((() => {
-                                  const TT = CT.getState();
-                                  if (!TT.isActive) return;
-                                  const kT = TT.state;
-                                  if (cT.current) {
-                                    const TT = 100 * (kT.catchZonePosition - kT.qk / 2);
-                                    cT.current.style.left = `${TT}%`, cT.current.style.width = 100 * kT.qk + "%", kT.isCatching !== xT.current && (xT.current = kT.isCatching, kT.isCatching ? cT.current.classList.add("catching") : cT.current.classList.remove("catching"))
+                                initialParameters: Eq
+                              } = qq;
+                              const gq = (0, Yq.useRef)(null),
+                                lq = (0, Yq.useRef)(null),
+                                Aq = (0, Yq.useRef)(null),
+                                cq = (0, Yq.useRef)(!1),
+                                uq = Eq.description,
+                                Bq = null === Eq || void 0 === Eq ? void 0 : Eq.icon,
+                                Wq = (0, mq.f)();
+                              return (0, Yq.useEffect)((() => {
+                                const qq = Wq.onFrame((() => {
+                                  const qq = Wq.getState();
+                                  if (!qq.isActive) return;
+                                  const Eq = qq.state;
+                                  if (gq.current) {
+                                    const qq = 100 * (Eq.catchZonePosition - Eq.kY / 2);
+                                    gq.current.style.left = `${qq}%`, gq.current.style.width = 100 * Eq.kY + "%", Eq.isCatching !== cq.current && (cq.current = Eq.isCatching, Eq.isCatching ? gq.current.classList.add("catching") : gq.current.classList.remove("catching"))
                                   }
-                                  MT.current && (MT.current.style.left = 100 * kT.moverPosition + "%"), fT.current && (fT.current.value = kT.progress)
+                                  lq.current && (lq.current.style.left = 100 * Eq.moverPosition + "%"), Aq.current && (Aq.current.value = Eq.progress)
                                 }));
                                 return () => {
-                                  TT()
+                                  qq()
                                 }
-                              }), [CT]), (0, yT.jsxs)("div", {
+                              }), [Wq]), (0, xq.jsxs)("div", {
                                 className: "QTEGravityBar",
-                                children: [(0, yT.jsx)("div", {
+                                children: [(0, xq.jsx)("div", {
                                   className: "QTEGravityBarDescription",
-                                  children: (0, yT.jsx)(KT.b, {
-                                    text: IT
+                                  children: (0, xq.jsx)(Oq.c, {
+                                    text: uq
                                   })
-                                }), (0, yT.jsx)("progress", {
+                                }), (0, xq.jsx)("progress", {
                                   max: 100,
                                   className: "QTEGravityBarProgress",
-                                  ref: fT
-                                }), (0, yT.jsxs)("div", {
+                                  ref: Aq
+                                }), (0, xq.jsxs)("div", {
                                   className: "QTEGravityBarTrack",
-                                  children: [(0, yT.jsx)("div", {
+                                  children: [(0, xq.jsx)("div", {
                                     className: "QTEGravityBarCatchZone",
-                                    ref: cT
-                                  }), (0, yT.jsx)("div", {
+                                    ref: gq
+                                  }), (0, xq.jsx)("div", {
                                     className: "QTEGravityBarMover",
-                                    ref: MT,
-                                    children: (0, yT.jsx)("span", {
-                                      children: AT && (0, yT.jsx)(KT.b, {
+                                    ref: lq,
+                                    children: (0, xq.jsx)("span", {
+                                      children: Bq && (0, xq.jsx)(Oq.c, {
                                         text: [{
-                                          icon: AT,
+                                          icon: Bq,
                                           style: {
                                             fontSize: "4rem"
                                           }
@@ -6379,697 +6379,697 @@ export const modules = {
                                 })]
                               })
                             }));
-                          var vT = cT(617);
-                          const tT = (0, lT.memo)((function(TT) {
+                          var aq = gq(598);
+                          const Vq = (0, Yq.memo)((function(qq) {
                               let {
-                                initialParameters: kT
-                              } = TT;
-                              const cT = (0, lT.useRef)(null),
-                                MT = kT.label,
-                                fT = kT.Kc,
+                                initialParameters: Eq
+                              } = qq;
+                              const gq = (0, Yq.useRef)(null),
+                                lq = Eq.label,
+                                Aq = Eq.KY,
                                 {
-                                  icon: xT,
-                                  scale: IT,
-                                  rotation: AT
-                                } = null !== kT && void 0 !== kT ? kT : {},
-                                CT = 100 * (.5 - fT / 2),
-                                jT = 100 * fT,
-                                tT = (0, OT.g)();
-                              return (0, lT.useEffect)((() => {
-                                const TT = tT.onFrame((() => {
-                                  const TT = tT.getState();
-                                  if (!TT.isActive || !cT.current) return;
-                                  const kT = TT.state;
-                                  cT.current.style.left = 100 * kT.markerPosition + "%"
+                                  icon: cq,
+                                  scale: uq,
+                                  rotation: Bq
+                                } = null !== Eq && void 0 !== Eq ? Eq : {},
+                                Wq = 100 * (.5 - Aq / 2),
+                                Nq = 100 * Aq,
+                                Vq = (0, mq.f)();
+                              return (0, Yq.useEffect)((() => {
+                                const qq = Vq.onFrame((() => {
+                                  const qq = Vq.getState();
+                                  if (!qq.isActive || !gq.current) return;
+                                  const Eq = qq.state;
+                                  gq.current.style.left = 100 * Eq.markerPosition + "%"
                                 }));
                                 return () => {
-                                  TT()
+                                  qq()
                                 }
-                              }), [tT]), (0, yT.jsxs)("div", {
+                              }), [Vq]), (0, xq.jsxs)("div", {
                                 className: "QTEPrecisionBarWrapper",
                                 style: {
-                                  ...!(0, vT.R)(IT) && {
-                                    "--scale": IT
+                                  ...!(0, aq.H)(uq) && {
+                                    "--scale": uq
                                   },
-                                  ...!(0, vT.R)(AT) && {
-                                    "--rotation": `${AT}deg`
+                                  ...!(0, aq.H)(Bq) && {
+                                    "--rotation": `${Bq}deg`
                                   }
                                 },
-                                children: [xT && (0, yT.jsx)(KT.b, {
+                                children: [cq && (0, xq.jsx)(Oq.c, {
                                   text: [{
-                                    icon: xT
+                                    icon: cq
                                   }],
                                   className: "QTEPrecisionBarIcon"
-                                }), (0, yT.jsxs)("div", {
+                                }), (0, xq.jsxs)("div", {
                                   className: "QTEPrecisionBarTrack",
-                                  children: [(0, yT.jsx)("div", {
+                                  children: [(0, xq.jsx)("div", {
                                     className: "QTEPrecisionBarSuccessZone",
                                     style: {
-                                      left: `${CT}%`,
-                                      width: `${jT}%`
+                                      left: `${Wq}%`,
+                                      width: `${Nq}%`
                                     }
-                                  }), (0, yT.jsx)("div", {
+                                  }), (0, xq.jsx)("div", {
                                     className: "QTEPrecisionBarMarker",
-                                    ref: cT
+                                    ref: gq
                                   })]
-                                }), (0, yT.jsx)("div", {
+                                }), (0, xq.jsx)("div", {
                                   className: "QTEPrecisionBarLabel",
-                                  children: (0, yT.jsx)(KT.b, {
-                                    text: MT
+                                  children: (0, xq.jsx)(Oq.c, {
+                                    text: lq
                                   })
                                 })]
                               })
                             })),
-                            hT = (0, lT.memo)((function(TT) {
+                            dq = (0, Yq.memo)((function(qq) {
                               let {
-                                initialParameters: kT
-                              } = TT;
-                              const cT = (0, lT.useRef)(null),
-                                [MT, fT] = (0, lT.useState)((() => new Array(kT.yc).fill("pending"))),
-                                [xT, IT] = (0, lT.useState)((() => {
-                                  const TT = kT.Ic;
-                                  return (0, vT.R)(TT) || TT <= 0 ? [] : new Array(TT).fill("pending")
+                                initialParameters: Eq
+                              } = qq;
+                              const gq = (0, Yq.useRef)(null),
+                                [lq, Aq] = (0, Yq.useState)((() => new Array(Eq.IY).fill("pending"))),
+                                [cq, uq] = (0, Yq.useState)((() => {
+                                  const qq = Eq.ql;
+                                  return (0, aq.H)(qq) || qq <= 0 ? [] : new Array(qq).fill("pending")
                                 })),
-                                AT = kT.label,
+                                Bq = Eq.label,
                                 {
-                                  icon: CT
-                                } = kT,
-                                jT = (0, lT.useRef)(0),
-                                tT = (0, lT.useRef)(0),
-                                hT = (0, lT.useRef)([]),
-                                NT = (0, OT.g)();
-                              return (0, lT.useEffect)((() => {
-                                const TT = NT.onFrame((() => {
-                                  const TT = NT.getState();
-                                  if (!TT.isActive || !cT.current) return;
-                                  const kT = TT.state,
-                                    lT = 30 + 60 * kT.outerCircleProgress;
-                                  if (cT.current.setAttribute("r", String(lT)), !0 === kT.lastClickResult && kT.successes > jT.current) {
-                                    cT.current.classList.remove("QTERhythmClickOuterCircle--miss"), cT.current.classList.add("QTERhythmClickOuterCircle--hit");
-                                    const TT = setTimeout((() => {
-                                      var TT;
-                                      null === (TT = cT.current) || void 0 === TT || TT.classList.remove("QTERhythmClickOuterCircle--hit")
+                                  icon: Wq
+                                } = Eq,
+                                Nq = (0, Yq.useRef)(0),
+                                Vq = (0, Yq.useRef)(0),
+                                dq = (0, Yq.useRef)([]),
+                                jq = (0, mq.f)();
+                              return (0, Yq.useEffect)((() => {
+                                const qq = jq.onFrame((() => {
+                                  const qq = jq.getState();
+                                  if (!qq.isActive || !gq.current) return;
+                                  const Eq = qq.state,
+                                    Yq = 30 + 60 * Eq.outerCircleProgress;
+                                  if (gq.current.setAttribute("r", String(Yq)), !0 === Eq.lastClickResult && Eq.successes > Nq.current) {
+                                    gq.current.classList.remove("QTERhythmClickOuterCircle--miss"), gq.current.classList.add("QTERhythmClickOuterCircle--hit");
+                                    const qq = setTimeout((() => {
+                                      var qq;
+                                      null === (qq = gq.current) || void 0 === qq || qq.classList.remove("QTERhythmClickOuterCircle--hit")
                                     }), 200);
-                                    hT.current.push(TT)
-                                  } else if (!1 === kT.lastClickResult && kT.misses > tT.current) {
-                                    cT.current.classList.remove("QTERhythmClickOuterCircle--hit"), cT.current.classList.add("QTERhythmClickOuterCircle--miss");
-                                    const TT = setTimeout((() => {
-                                      var TT;
-                                      null === (TT = cT.current) || void 0 === TT || TT.classList.remove("QTERhythmClickOuterCircle--miss")
+                                    dq.current.push(qq)
+                                  } else if (!1 === Eq.lastClickResult && Eq.misses > Vq.current) {
+                                    gq.current.classList.remove("QTERhythmClickOuterCircle--hit"), gq.current.classList.add("QTERhythmClickOuterCircle--miss");
+                                    const qq = setTimeout((() => {
+                                      var qq;
+                                      null === (qq = gq.current) || void 0 === qq || qq.classList.remove("QTERhythmClickOuterCircle--miss")
                                     }), 200);
-                                    hT.current.push(TT)
+                                    dq.current.push(qq)
                                   }
-                                  kT.successes === jT.current && kT.misses === tT.current || (jT.current = kT.successes, tT.current = kT.misses, fT((TT => {
-                                    const cT = [...TT];
-                                    for (let lT = 0; lT < kT.yc; lT++) cT[lT] = lT < kT.successes ? "success" : "pending";
-                                    return cT
-                                  })), IT((TT => {
-                                    if (0 === TT.length) return TT;
-                                    const cT = [...TT];
-                                    for (let lT = 0; lT < cT.length; lT++) cT[lT] = lT < kT.misses ? "miss" : "pending";
-                                    return cT
+                                  Eq.successes === Nq.current && Eq.misses === Vq.current || (Nq.current = Eq.successes, Vq.current = Eq.misses, Aq((qq => {
+                                    const gq = [...qq];
+                                    for (let Yq = 0; Yq < Eq.IY; Yq++) gq[Yq] = Yq < Eq.successes ? "success" : "pending";
+                                    return gq
+                                  })), uq((qq => {
+                                    if (0 === qq.length) return qq;
+                                    const gq = [...qq];
+                                    for (let Yq = 0; Yq < gq.length; Yq++) gq[Yq] = Yq < Eq.misses ? "miss" : "pending";
+                                    return gq
                                   })))
                                 }));
                                 return () => {
-                                  TT();
-                                  for (const TT of hT.current) clearTimeout(TT);
-                                  hT.current = []
+                                  qq();
+                                  for (const qq of dq.current) clearTimeout(qq);
+                                  dq.current = []
                                 }
-                              }), [NT]), (0, yT.jsxs)("div", {
+                              }), [jq]), (0, xq.jsxs)("div", {
                                 className: "QTERhythmClickWrapper",
-                                children: [(0, yT.jsx)("div", {
+                                children: [(0, xq.jsx)("div", {
                                   className: "QTERhythmClickProgress",
-                                  children: MT.map(((TT, kT) => (0, yT.jsx)("div", {
-                                    className: "QTERhythmClickDot" + ("success" === TT ? " QTERhythmClickDot--success" : " QTERhythmClickDot--pendingSuccess")
-                                  }, kT)))
-                                }), (0, yT.jsxs)("div", {
+                                  children: lq.map(((qq, Eq) => (0, xq.jsx)("div", {
+                                    className: "QTERhythmClickDot" + ("success" === qq ? " QTERhythmClickDot--success" : " QTERhythmClickDot--pendingSuccess")
+                                  }, Eq)))
+                                }), (0, xq.jsxs)("div", {
                                   className: "QTERhythmClickCircleContainer",
-                                  children: [(0, yT.jsxs)("svg", {
+                                  children: [(0, xq.jsxs)("svg", {
                                     className: "QTERhythmClickSvg",
                                     viewBox: "0 0 200 200",
-                                    children: [(0, yT.jsx)("circle", {
+                                    children: [(0, xq.jsx)("circle", {
                                       className: "QTERhythmClickInnerCircle",
                                       cx: "100",
                                       cy: "100",
                                       r: 30
-                                    }), (0, yT.jsx)("circle", {
+                                    }), (0, xq.jsx)("circle", {
                                       className: "QTERhythmClickOuterCircle",
                                       cx: "100",
                                       cy: "100",
                                       r: 90,
-                                      ref: cT
+                                      ref: gq
                                     })]
-                                  }), CT && (0, yT.jsx)("div", {
+                                  }), Wq && (0, xq.jsx)("div", {
                                     className: "QTERhythmClickCenterContent",
-                                    children: (0, yT.jsx)(KT.b, {
+                                    children: (0, xq.jsx)(Oq.c, {
                                       text: [{
-                                        icon: CT
+                                        icon: Wq
                                       }],
                                       className: "QTERhythmClickIcon"
                                     })
                                   })]
-                                }), xT.length > 0 && (0, yT.jsx)("div", {
+                                }), cq.length > 0 && (0, xq.jsx)("div", {
                                   className: "QTERhythmClickProgress",
-                                  children: xT.map(((TT, kT) => (0, yT.jsx)("div", {
-                                    className: "QTERhythmClickDot" + ("miss" === TT ? " QTERhythmClickDot--miss" : " QTERhythmClickDot--pendingMiss")
-                                  }, kT)))
-                                }), (0, yT.jsx)("div", {
+                                  children: cq.map(((qq, Eq) => (0, xq.jsx)("div", {
+                                    className: "QTERhythmClickDot" + ("miss" === qq ? " QTERhythmClickDot--miss" : " QTERhythmClickDot--pendingMiss")
+                                  }, Eq)))
+                                }), (0, xq.jsx)("div", {
                                   className: "QTERhythmClickLabel",
-                                  children: (0, yT.jsx)(KT.b, {
-                                    text: AT
+                                  children: (0, xq.jsx)(Oq.c, {
+                                    text: Bq
                                   })
                                 })]
                               })
                             }));
 
-                          function NT(TT) {
+                          function jq(qq) {
                             let {
-                              qte: kT
-                            } = TT;
-                            switch (kT.type) {
+                              qte: Eq
+                            } = qq;
+                            switch (Eq.type) {
                               case "progressBar":
-                                return (0, yT.jsx)(fT, {
-                                  initialParameters: kT.parameters
+                                return (0, xq.jsx)(Aq, {
+                                  initialParameters: Eq.parameters
                                 });
                               case "timedClick":
-                                return (0, yT.jsx)(CT, {
-                                  initialParameters: kT.parameters
+                                return (0, xq.jsx)(Wq, {
+                                  initialParameters: Eq.parameters
                                 });
                               case "gravityBar":
-                                return (0, yT.jsx)(jT, {
-                                  initialParameters: kT.parameters
+                                return (0, xq.jsx)(Nq, {
+                                  initialParameters: Eq.parameters
                                 });
                               case "precisionBar":
-                                return (0, yT.jsx)(tT, {
-                                  initialParameters: kT.parameters
+                                return (0, xq.jsx)(Vq, {
+                                  initialParameters: Eq.parameters
                                 });
                               case "rhythmClick":
-                                return (0, yT.jsx)(hT, {
-                                  initialParameters: kT.parameters
+                                return (0, xq.jsx)(dq, {
+                                  initialParameters: Eq.parameters
                                 });
                               default:
                                 return console.warn("Unknown QTE type"), null
                             }
                           }
-                          const QT = (0, lT.memo)((function() {
-                            const [TT, kT] = (0, lT.useState)({
+                          const Hq = (0, Yq.memo)((function() {
+                            const [qq, Eq] = (0, Yq.useState)({
                               type: null,
                               parameters: null,
                               state: null,
                               isActive: !1
                             });
-                            return (0, MT.g)("qteStateUpdated", (TT => {
-                              kT(TT)
-                            })), TT.isActive && TT.type ? (0, yT.jsx)("div", {
+                            return (0, lq.f)("qteStateUpdated", (qq => {
+                              Eq(qq)
+                            })), qq.isActive && qq.type ? (0, xq.jsx)("div", {
                               className: "QTE",
                               "data-camera-keeper": "",
-                              children: (0, yT.jsx)(NT, {
-                                qte: TT
+                              children: (0, xq.jsx)(jq, {
+                                qte: qq
                               })
                             }) : null
                           }))
-                        }, 4739: (TT, kT, cT) => {
-                          cT.d(kT, {
-                            d: () => yT,
-                            g: () => fT
+                        }, 4597: (qq, Eq, gq) => {
+                          gq.d(Eq, {
+                            b: () => xq,
+                            f: () => Aq
                           });
-                          var lT = cT(71),
-                            MT = cT(1303),
-                            KT = cT(4745);
-                          const OT = {
-                              getState: () => KT.d.getCurrentState(),
-                              onFrame: MT.o
+                          var Yq = gq(57),
+                            lq = gq(1283),
+                            Oq = gq(4606);
+                          const mq = {
+                              getState: () => Oq.b.getCurrentState(),
+                              onFrame: lq.s
                             },
-                            yT = (0, lT.createContext)(OT);
+                            xq = (0, Yq.createContext)(mq);
 
-                          function fT() {
-                            return (0, lT.useContext)(yT)
+                          function Aq() {
+                            return (0, Yq.useContext)(xq)
                           }
-                        }, 4806: (TT, kT, cT) => {
-                          cT.d(kT, {
-                            b: () => GT,
-                            e: () => eT
+                        }, 4662: (qq, Eq, gq) => {
+                          gq.d(Eq, {
+                            b: () => Tq,
+                            f: () => Mq
                           });
-                          var lT = cT(4813),
-                            MT = cT(328);
-                          const KT = 120,
-                            OT = 260,
-                            yT = 1.15,
-                            fT = 1.2,
-                            xT = 2,
-                            IT = 1.08,
-                            AT = .8,
-                            CT = .95,
-                            jT = 8,
-                            vT = "[\"')\\]\u300d\u300f\uff09]*",
-                            tT = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${vT}$`),
-                            hT = new RegExp(`[?\uff1f]${vT}$`),
-                            NT = new RegExp(`[!\uff01]${vT}$`),
-                            QT = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-                            ST = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-                            DT = new RegExp(`[${ST}]`),
-                            aT = new RegExp(`[${ST}]|[^${ST}]+`, "g"),
-                            FT = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+                          var Yq = gq(4671),
+                            lq = gq(296);
+                          const Oq = 120,
+                            mq = 260,
+                            xq = 1.15,
+                            Aq = 1.2,
+                            cq = 2,
+                            uq = 1.08,
+                            Bq = .8,
+                            Wq = .95,
+                            Nq = 8,
+                            aq = "[\"')\\]\u300d\u300f\uff09]*",
+                            Vq = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${aq}$`),
+                            dq = new RegExp(`[?\uff1f]${aq}$`),
+                            jq = new RegExp(`[!\uff01]${aq}$`),
+                            Hq = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+                            oq = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+                            Pq = new RegExp(`[${oq}]`),
+                            Qq = new RegExp(`[${oq}]|[^${oq}]+`, "g"),
+                            yq = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-                          function rT(TT) {
-                            let kT = 2166136261;
-                            for (let cT = 0; cT < TT.length; cT++) kT ^= TT.charCodeAt(cT), kT = Math.imul(kT, 16777619);
-                            return (kT >>> 0) / 4294967295 * 2 - 1
+                          function tq(qq) {
+                            let Eq = 2166136261;
+                            for (let gq = 0; gq < qq.length; gq++) Eq ^= qq.charCodeAt(gq), Eq = Math.imul(Eq, 16777619);
+                            return (Eq >>> 0) / 4294967295 * 2 - 1
                           }
 
-                          function PT(TT) {
-                            var kT;
-                            if (DT.test(TT)) return 1;
-                            const cT = TT.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-                              lT = cT.replace(/[^0-9]/g, "");
-                            if (lT.length > 0 && !/\p{L}/u.test(cT)) return Math.min(lT.length, 4);
-                            const MT = null !== (kT = cT.match(FT)) && void 0 !== kT ? kT : [];
-                            if (0 === MT.length) {
-                              var KT, OT;
-                              const TT = null !== (KT = null === (OT = cT.match(/\p{L}/gu)) || void 0 === OT ? void 0 : OT.length) && void 0 !== KT ? KT : 0;
-                              return 0 === TT ? 0 : Math.min(Math.max(1, Math.round(TT / 2.5)), jT)
+                          function rq(qq) {
+                            var Eq;
+                            if (Pq.test(qq)) return 1;
+                            const gq = qq.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+                              Yq = gq.replace(/[^0-9]/g, "");
+                            if (Yq.length > 0 && !/\p{L}/u.test(gq)) return Math.min(Yq.length, 4);
+                            const lq = null !== (Eq = gq.match(yq)) && void 0 !== Eq ? Eq : [];
+                            if (0 === lq.length) {
+                              var Oq, mq;
+                              const qq = null !== (Oq = null === (mq = gq.match(/\p{L}/gu)) || void 0 === mq ? void 0 : mq.length) && void 0 !== Oq ? Oq : 0;
+                              return 0 === qq ? 0 : Math.min(Math.max(1, Math.round(qq / 2.5)), Nq)
                             }
-                            const yT = cT.replace(/[^\p{L}]/gu, ""),
-                              fT = MT.length > 1 && "e" === MT.at(-1) && yT.endsWith("e") && !yT.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(TT.replace(/[^\p{L}]/gu, ""));
-                            return Math.min(MT.length - (fT ? 1 : 0), jT)
+                            const xq = gq.replace(/[^\p{L}]/gu, ""),
+                              Aq = lq.length > 1 && "e" === lq.at(-1) && xq.endsWith("e") && !xq.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(qq.replace(/[^\p{L}]/gu, ""));
+                            return Math.min(lq.length - (Aq ? 1 : 0), Nq)
                           }
 
-                          function wT(TT) {
-                            return TT.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+                          function vq(qq) {
+                            return qq.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
                           }
 
-                          function mT(TT) {
-                            const kT = TT.replace(/[^\p{L}]/gu, "");
-                            return kT.length >= 2 && kT === kT.toUpperCase() && kT !== kT.toLowerCase()
+                          function hq(qq) {
+                            const Eq = qq.replace(/[^\p{L}]/gu, "");
+                            return Eq.length >= 2 && Eq === Eq.toUpperCase() && Eq !== Eq.toLowerCase()
                           }
 
-                          function bT(TT, kT) {
-                            var cT;
-                            const jT = kT && (0, lT.j)(kT),
-                              vT = null !== (cT = null === jT || void 0 === jT ? void 0 : jT.syllableMs) && void 0 !== cT ? cT : lT.b,
-                              ST = function(TT) {
-                                const kT = [];
-                                for (const lT of (0, MT.Pb)(TT))
-                                  if ("string" === typeof lT)
-                                    for (const TT of lT.split(/(\s+)/)) {
-                                      if ("" === TT) continue;
-                                      if (/^\s+$/.test(TT)) {
-                                        kT.push({
+                          function nq(qq, Eq) {
+                            var gq;
+                            const Nq = Eq && (0, Yq.i)(Eq),
+                              aq = null !== (gq = null === Nq || void 0 === Nq ? void 0 : Nq.syllableMs) && void 0 !== gq ? gq : Yq.b,
+                              oq = function(qq) {
+                                const Eq = [];
+                                for (const Yq of (0, lq.Zb)(qq))
+                                  if ("string" === typeof Yq)
+                                    for (const qq of Yq.split(/(\s+)/)) {
+                                      if ("" === qq) continue;
+                                      if (/^\s+$/.test(qq)) {
+                                        Eq.push({
                                           kind: "space",
-                                          text: TT
+                                          text: qq
                                         });
                                         continue
                                       }
-                                      if (!DT.test(TT)) {
-                                        kT.push({
+                                      if (!Pq.test(qq)) {
+                                        Eq.push({
                                           kind: "word",
-                                          text: TT,
+                                          text: qq,
                                           delayMs: 0
                                         });
                                         continue
                                       }
-                                      let lT = !0;
-                                      for (const MT of null !== (cT = TT.match(aT)) && void 0 !== cT ? cT : []) {
-                                        var cT;
-                                        const TT = kT.at(-1);
-                                        lT || "word" !== (null === TT || void 0 === TT ? void 0 : TT.kind) || DT.test(MT) || /[\p{L}\p{N}]/u.test(MT) ? (lT || kT.push({
+                                      let Yq = !0;
+                                      for (const lq of null !== (gq = qq.match(Qq)) && void 0 !== gq ? gq : []) {
+                                        var gq;
+                                        const qq = Eq.at(-1);
+                                        Yq || "word" !== (null === qq || void 0 === qq ? void 0 : qq.kind) || Pq.test(lq) || /[\p{L}\p{N}]/u.test(lq) ? (Yq || Eq.push({
                                           kind: "space",
                                           text: "\u200b"
-                                        }), kT.push({
+                                        }), Eq.push({
                                           kind: "word",
-                                          text: MT,
+                                          text: lq,
                                           delayMs: 0
-                                        }), lT = !1) : TT.text += MT
+                                        }), Yq = !1) : qq.text += lq
                                       }
-                                    } else kT.push({
+                                    } else Eq.push({
                                       kind: "icon",
-                                      text: lT.icon,
+                                      text: Yq.icon,
                                       delayMs: 0
                                     });
-                                return kT
-                              }(TT),
-                              FT = [];
-                            let bT = [];
-                            for (const lT of ST) "space" !== lT.kind && (bT.push(lT), tT.test(lT.text) && (FT.push(bT), bT = []));
-                            FT.push(bT);
-                            const zT = [];
-                            let JT = 0;
-                            for (const lT of FT) {
-                              var oT, HT;
-                              const TT = null !== (oT = null === (HT = lT.at(-1)) || void 0 === HT ? void 0 : HT.text) && void 0 !== oT ? oT : "",
-                                kT = hT.test(TT),
-                                cT = NT.test(TT),
-                                MT = lT.map((TT => "word" === TT.kind ? PT(TT.text) : 1)),
-                                ST = MT.findLastIndex((TT => TT > 0));
-                              for (const [hT, NT] of lT.entries()) {
-                                const TT = "word" === NT.kind,
-                                  lT = MT[hT];
-                                NT.delayMs = JT;
-                                for (let MT = 0; jT && MT < lT; MT++) {
+                                return Eq
+                              }(qq),
+                              yq = [];
+                            let nq = [];
+                            for (const Yq of oq) "space" !== Yq.kind && (nq.push(Yq), Vq.test(Yq.text) && (yq.push(nq), nq = []));
+                            yq.push(nq);
+                            const bq = [];
+                            let iq = 0;
+                            for (const Yq of yq) {
+                              var Zq, fq;
+                              const qq = null !== (Zq = null === (fq = Yq.at(-1)) || void 0 === fq ? void 0 : fq.text) && void 0 !== Zq ? Zq : "",
+                                Eq = dq.test(qq),
+                                gq = jq.test(qq),
+                                lq = Yq.map((qq => "word" === qq.kind ? rq(qq.text) : 1)),
+                                oq = lq.findLastIndex((qq => qq > 0));
+                              for (const [dq, jq] of Yq.entries()) {
+                                const qq = "word" === jq.kind,
+                                  Yq = lq[dq];
+                                jq.delayMs = iq;
+                                for (let lq = 0; Nq && lq < Yq; lq++) {
                                   const {
-                                    intonation: KT
-                                  } = jT;
-                                  let OT = ST > 0 ? -KT.declineSemitones * (hT / ST) : 0;
-                                  OT += rT(`${wT(NT.text)}|${MT}`) * KT.variationSemitones;
-                                  const tT = Math.min(1, KT.variationSemitones);
-                                  let QT = jT.glideSemitones,
-                                    DT = 1;
-                                  cT && (OT += KT.exclaimLiftSemitones, DT *= yT), kT && hT === ST && (OT += KT.questionRiseSemitones * (lT > 1 ? .5 + .5 * MT / (lT - 1) : 1), MT === lT - 1 && (QT = Math.abs(QT) + KT.questionRiseSemitones / 2)), TT && mT(NT.text) && (OT += xT * tT, DT *= fT), lT > 1 && 0 === MT && (OT += AT * tT, DT *= IT), zT.push({
-                                    atMs: JT + MT * vT,
-                                    semitones: OT,
-                                    glideSemitones: QT,
-                                    durationMs: MT < lT - 1 ? Math.min(jT.durationMs, vT * CT) : jT.durationMs,
-                                    level: DT
+                                    intonation: Oq
+                                  } = Nq;
+                                  let mq = oq > 0 ? -Oq.declineSemitones * (dq / oq) : 0;
+                                  mq += tq(`${vq(jq.text)}|${lq}`) * Oq.variationSemitones;
+                                  const Vq = Math.min(1, Oq.variationSemitones);
+                                  let Hq = Nq.glideSemitones,
+                                    Pq = 1;
+                                  gq && (mq += Oq.exclaimLiftSemitones, Pq *= xq), Eq && dq === oq && (mq += Oq.questionRiseSemitones * (Yq > 1 ? .5 + .5 * lq / (Yq - 1) : 1), lq === Yq - 1 && (Hq = Math.abs(Hq) + Oq.questionRiseSemitones / 2)), qq && hq(jq.text) && (mq += cq * Vq, Pq *= Aq), Yq > 1 && 0 === lq && (mq += Bq * Vq, Pq *= uq), bq.push({
+                                    atMs: iq + lq * aq,
+                                    semitones: mq,
+                                    glideSemitones: Hq,
+                                    durationMs: lq < Yq - 1 ? Math.min(Nq.durationMs, aq * Wq) : Nq.durationMs,
+                                    level: Pq
                                   })
                                 }
-                                JT += lT * vT + (tT.test(NT.text) ? OT : QT.test(NT.text) ? KT : 0)
+                                iq += Yq * aq + (Vq.test(jq.text) ? mq : Hq.test(jq.text) ? Oq : 0)
                               }
                             }
                             return {
-                              pieces: ST.map((TT => "space" === TT.kind ? TT : "icon" === TT.kind ? {
+                              pieces: oq.map((qq => "space" === qq.kind ? qq : "icon" === qq.kind ? {
                                 kind: "icon",
-                                icon: TT.text,
-                                delayMs: TT.delayMs
+                                icon: qq.text,
+                                delayMs: qq.delayMs
                               } : {
                                 kind: "word",
-                                text: TT.text,
-                                delayMs: TT.delayMs
+                                text: qq.text,
+                                delayMs: qq.delayMs
                               })),
-                              blips: zT
+                              blips: bq
                             }
                           }
-                          var zT = cT(1195),
-                            JT = cT(1261),
-                            oT = cT(1960);
+                          var bq = gq(1183),
+                            iq = gq(1241),
+                            Zq = gq(1906);
 
-                          function HT(TT) {
-                            if ("string" === typeof TT) return TT;
-                            const kT = JT.f.get().getCurrentLanguageCode();
-                            return (0, zT.p)(kT, TT.translationKey, (0, zT.m)(TT.params, oT.c.shown))
+                          function fq(qq) {
+                            if ("string" === typeof qq) return qq;
+                            const Eq = iq.h.get().getCurrentLanguageCode();
+                            return (0, bq.n)(Eq, qq.translationKey, (0, bq.j)(qq.params, Zq.d.shown))
                           }
 
-                          function eT(TT) {
-                            const kT = void 0 === TT.voice ? null : (0, lT.m)(TT.voice),
-                              cT = kT && (0, lT.j)(kT);
+                          function Mq(qq) {
+                            const Eq = void 0 === qq.voice ? null : (0, Yq.m)(qq.voice),
+                              gq = Eq && (0, Yq.i)(Eq);
                             return {
-                              plan: bT(HT(TT.line), cT),
-                              synth: cT
+                              plan: nq(fq(qq.line), gq),
+                              synth: gq
                             }
                           }
 
-                          function GT(TT) {
-                            const kT = [];
-                            let cT = [];
-                            for (const [MT, KT] of TT.entries()) {
-                              var lT;
-                              "space" === KT.kind && (" " !== KT.text || "icon" !== (null === (lT = TT[MT + 1]) || void 0 === lT ? void 0 : lT.kind)) ? (cT.length > 0 && kT.push(cT), kT.push([KT]), cT = []) : cT.push(KT)
+                          function Tq(qq) {
+                            const Eq = [];
+                            let gq = [];
+                            for (const [lq, Oq] of qq.entries()) {
+                              var Yq;
+                              "space" === Oq.kind && (" " !== Oq.text || "icon" !== (null === (Yq = qq[lq + 1]) || void 0 === Yq ? void 0 : Yq.kind)) ? (gq.length > 0 && Eq.push(gq), Eq.push([Oq]), gq = []) : gq.push(Oq)
                             }
-                            return cT.length > 0 && kT.push(cT), kT
+                            return gq.length > 0 && Eq.push(gq), Eq
                           }
-                        }, 4815: (TT, kT, cT) => {
-                          cT.d(kT, {
-                            e: () => IT,
-                            g: () => AT
+                        }, 4679: (qq, Eq, gq) => {
+                          gq.d(Eq, {
+                            e: () => uq,
+                            g: () => Bq
                           });
-                          var lT = cT(4820),
-                            MT = cT(31);
-                          const KT = .25,
-                            OT = .85,
-                            yT = .02,
-                            fT = .01;
+                          var Yq = gq(4684),
+                            lq = gq(24);
+                          const Oq = .25,
+                            mq = .85,
+                            xq = .02,
+                            Aq = .01;
 
-                          function xT(TT, kT, cT, lT, MT, KT, yT) {
+                          function cq(qq, Eq, gq, Yq, lq, Oq, xq) {
                             const {
-                              waveform: fT,
-                              pitchHz: xT,
-                              attackMs: IT,
-                              releaseMs: AT,
-                              lowpassHz: CT
-                            } = cT, jT = MT + lT.durationMs / 1e3, vT = xT * 2 ** (lT.semitones / 12), tT = TT.createOscillator();
-                            tT.type = fT, tT.frequency.setValueAtTime(vT, MT), tT.frequency.exponentialRampToValueAtTime(vT * 2 ** (lT.glideSemitones / 12), jT);
-                            const hT = MT + Math.min(IT, lT.durationMs) / 1e3,
-                              NT = TT.createGain();
-                            NT.gain.setValueAtTime(0, MT), NT.gain.linearRampToValueAtTime(KT, hT), NT.gain.linearRampToValueAtTime(KT * OT, Math.max(hT, jT - AT / 1e3)), NT.gain.linearRampToValueAtTime(0, jT);
-                            const QT = [tT];
-                            if (null !== CT) {
-                              const kT = TT.createBiquadFilter();
-                              kT.type = "lowpass", kT.frequency.value = CT, QT.push(kT)
+                              waveform: Aq,
+                              pitchHz: cq,
+                              attackMs: uq,
+                              releaseMs: Bq,
+                              lowpassHz: Wq
+                            } = gq, Nq = lq + Yq.durationMs / 1e3, aq = cq * 2 ** (Yq.semitones / 12), Vq = qq.createOscillator();
+                            Vq.type = Aq, Vq.frequency.setValueAtTime(aq, lq), Vq.frequency.exponentialRampToValueAtTime(aq * 2 ** (Yq.glideSemitones / 12), Nq);
+                            const dq = lq + Math.min(uq, Yq.durationMs) / 1e3,
+                              jq = qq.createGain();
+                            jq.gain.setValueAtTime(0, lq), jq.gain.linearRampToValueAtTime(Oq, dq), jq.gain.linearRampToValueAtTime(Oq * mq, Math.max(dq, Nq - Bq / 1e3)), jq.gain.linearRampToValueAtTime(0, Nq);
+                            const Hq = [Vq];
+                            if (null !== Wq) {
+                              const Eq = qq.createBiquadFilter();
+                              Eq.type = "lowpass", Eq.frequency.value = Wq, Hq.push(Eq)
                             }
-                            QT.push(NT, kT);
-                            for (let OT = 1; OT < QT.length; OT++) QT[OT - 1].connect(QT[OT]);
-                            return tT.onended = () => {
-                              for (const TT of QT.slice(0, -1)) TT.disconnect();
-                              yT()
-                            }, tT.start(MT), tT.stop(jT), tT
+                            Hq.push(jq, Eq);
+                            for (let mq = 1; mq < Hq.length; mq++) Hq[mq - 1].connect(Hq[mq]);
+                            return Vq.onended = () => {
+                              for (const qq of Hq.slice(0, -1)) qq.disconnect();
+                              xq()
+                            }, Vq.start(lq), Vq.stop(Nq), Vq
                           }
 
-                          function IT(TT, kT, cT, lT, MT, OT) {
-                            if (0 === lT.length) return OT(), () => {};
-                            const IT = KT * cT.volume * MT,
-                              AT = TT.createGain();
-                            AT.connect(kT);
-                            const CT = TT.currentTime + yT,
-                              jT = new Set;
-                            for (const KT of lT) {
-                              const kT = xT(TT, AT, cT, KT, CT + KT.atMs / 1e3, IT * KT.level, (() => {
-                                jT.delete(kT), 0 === jT.size && (AT.disconnect(), OT())
+                          function uq(qq, Eq, gq, Yq, lq, mq) {
+                            if (0 === Yq.length) return mq(), () => {};
+                            const uq = Oq * gq.volume * lq,
+                              Bq = qq.createGain();
+                            Bq.connect(Eq);
+                            const Wq = qq.currentTime + xq,
+                              Nq = new Set;
+                            for (const Oq of Yq) {
+                              const Eq = cq(qq, Bq, gq, Oq, Wq + Oq.atMs / 1e3, uq * Oq.level, (() => {
+                                Nq.delete(Eq), 0 === Nq.size && (Bq.disconnect(), mq())
                               }));
-                              jT.add(kT)
+                              Nq.add(Eq)
                             }
                             return () => {
-                              const kT = TT.currentTime;
-                              AT.gain.setTargetAtTime(0, kT, fT);
-                              for (const TT of jT) try {
-                                TT.stop(kT + 5 * fT)
+                              const Eq = qq.currentTime;
+                              Bq.gain.setTargetAtTime(0, Eq, Aq);
+                              for (const qq of Nq) try {
+                                qq.stop(Eq + 5 * Aq)
                               } catch {}
                             }
                           }
 
-                          function AT(TT, kT) {
-                            var cT;
-                            const KT = lT.Howler.ctx,
-                              OT = lT.Howler.masterGain;
-                            if (!KT || !OT || !MT.e.get("soundOnFromAd")) return () => {};
-                            const yT = lT.Howler;
-                            return null === (cT = yT._autoResume) || void 0 === cT || cT.call(yT), IT(KT, OT, TT, kT, MT.e.get("soundVolume"), (() => {
-                              var TT;
-                              null === (TT = yT._autoSuspend) || void 0 === TT || TT.call(yT)
+                          function Bq(qq, Eq) {
+                            var gq;
+                            const Oq = Yq.Howler.ctx,
+                              mq = Yq.Howler.masterGain;
+                            if (!Oq || !mq || !lq.b.get("soundOnFromAd")) return () => {};
+                            const xq = Yq.Howler;
+                            return null === (gq = xq._autoResume) || void 0 === gq || gq.call(xq), uq(Oq, mq, qq, Eq, lq.b.get("soundVolume"), (() => {
+                              var qq;
+                              null === (qq = xq._autoSuspend) || void 0 === qq || qq.call(xq)
                             }))
                           }
-                        }, 4820: (TT, kT, cT) => {
-                          cT.r(kT), cT.d(kT, {
-                            Howl: () => MT.Howl,
-                            Howler: () => MT.Howler,
-                            musicOutput: () => vT,
-                            readyAudioContext: () => tT
+                        }, 4684: (qq, Eq, gq) => {
+                          gq.r(Eq), gq.d(Eq, {
+                            Howl: () => lq.Howl,
+                            Howler: () => lq.Howler,
+                            musicOutput: () => aq,
+                            readyAudioContext: () => Vq
                           });
-                          var lT, MT = cT(4825),
-                            KT = cT(4641);
-                          const OT = MT.Howler;
+                          var Yq, lq = gq(4692),
+                            Oq = gq(4477);
+                          const mq = lq.Howler;
 
-                          function yT() {
-                            var TT, kT;
-                            if (OT.ctx || !OT.usingWebAudio || "undefined" === typeof AudioContext || !(0, KT.f)()) return;
-                            const cT = navigator.audioSession;
-                            let lT;
-                            "auto" === (null === cT || void 0 === cT ? void 0 : cT.type) && (cT.type = "ambient");
+                          function xq() {
+                            var qq, Eq;
+                            if (mq.ctx || !mq.usingWebAudio || "undefined" === typeof AudioContext || !(0, Oq.f)()) return;
+                            const gq = navigator.audioSession;
+                            let Yq;
+                            "auto" === (null === gq || void 0 === gq ? void 0 : gq.type) && (gq.type = "ambient");
                             try {
-                              lT = new AudioContext({
+                              Yq = new AudioContext({
                                 sampleRate: 44100
                               })
                             } catch {
                               return
                             }
-                            const MT = lT.createGain();
-                            MT.gain.setValueAtTime(OT._muted ? 0 : null !== (TT = OT._volume) && void 0 !== TT ? TT : 1, lT.currentTime), MT.connect(lT.destination), OT.ctx = lT, OT.masterGain = MT, null === (kT = OT._setup) || void 0 === kT || kT.call(OT)
+                            const lq = Yq.createGain();
+                            lq.gain.setValueAtTime(mq._muted ? 0 : null !== (qq = mq._volume) && void 0 !== qq ? qq : 1, Yq.currentTime), lq.connect(Yq.destination), mq.ctx = Yq, mq.masterGain = lq, null === (Eq = mq._setup) || void 0 === Eq || Eq.call(mq)
                           }
-                          OT._mobileUnloaded = !0;
-                          const fT = OT.volume.bind(MT.Howler);
-                          OT.volume = function() {
-                            return yT(), fT(...arguments)
+                          mq._mobileUnloaded = !0;
+                          const Aq = mq.volume.bind(lq.Howler);
+                          mq.volume = function() {
+                            return xq(), Aq(...arguments)
                           };
-                          const xT = OT.mute.bind(MT.Howler);
-                          OT.mute = TT => (yT(), xT(TT));
-                          const IT = MT.Howl.prototype,
-                            AT = IT.init;
-                          IT.init = function(TT) {
-                            return yT(), AT.call(this, TT)
+                          const cq = mq.mute.bind(lq.Howler);
+                          mq.mute = qq => (xq(), cq(qq));
+                          const uq = lq.Howl.prototype,
+                            Bq = uq.init;
+                          uq.init = function(qq) {
+                            return xq(), Bq.call(this, qq)
                           };
-                          let CT = 0;
-                          const jT = null === (lT = OT._autoSuspend) || void 0 === lT ? void 0 : lT.bind(MT.Howler);
+                          let Wq = 0;
+                          const Nq = null === (Yq = mq._autoSuspend) || void 0 === Yq ? void 0 : Yq.bind(lq.Howler);
 
-                          function vT() {
-                            tT();
+                          function aq() {
+                            Vq();
                             const {
-                              ctx: TT,
-                              masterGain: kT
-                            } = OT;
-                            return TT && kT ? {
-                              ctx: TT,
-                              destination: kT,
-                              holdAwake: TT => {
-                                var kT, cT;
-                                (CT += TT ? 1 : -1, TT) ? null === (kT = OT._autoResume) || void 0 === kT || kT.call(OT): null === (cT = OT._autoSuspend) || void 0 === cT || cT.call(OT)
+                              ctx: qq,
+                              masterGain: Eq
+                            } = mq;
+                            return qq && Eq ? {
+                              ctx: qq,
+                              destination: Eq,
+                              holdAwake: qq => {
+                                var Eq, gq;
+                                (Wq += qq ? 1 : -1, qq) ? null === (Eq = mq._autoResume) || void 0 === Eq || Eq.call(mq): null === (gq = mq._autoSuspend) || void 0 === gq || gq.call(mq)
                               },
                               wake: () => {
-                                var kT;
-                                "running" !== TT.state && (null === (kT = OT._autoResume) || void 0 === kT || kT.call(OT), TT.resume().catch((() => {})))
+                                var Eq;
+                                "running" !== qq.state && (null === (Eq = mq._autoResume) || void 0 === Eq || Eq.call(mq), qq.resume().catch((() => {})))
                               }
                             } : null
                           }
 
-                          function tT() {
-                            var TT;
-                            (OT.volume(), OT.ctx && OT.autoUnlock) && (null === (TT = OT._unlockAudio) || void 0 === TT || TT.call(OT))
+                          function Vq() {
+                            var qq;
+                            (mq.volume(), mq.ctx && mq.autoUnlock) && (null === (qq = mq._unlockAudio) || void 0 === qq || qq.call(mq))
                           }
-                          jT && (OT._autoSuspend = () => CT > 0 ? MT.Howler : jT())
-                        }, 4831: (TT, kT, cT) => {
-                          function lT(TT) {
+                          Nq && (mq._autoSuspend = () => Wq > 0 ? lq.Howler : Nq())
+                        }, 4701: (qq, Eq, gq) => {
+                          function Yq(qq) {
                             return {
-                              notAfter: TT
+                              notAfter: qq
                             }
                           }
-                          cT.d(kT, {
-                            d: () => fT,
-                            h: () => xT,
-                            k: () => yT,
-                            m: () => lT,
-                            p: () => MT,
-                            q: () => KT,
-                            r: () => OT,
-                            v: () => IT,
-                            x: () => AT
+                          gq.d(Eq, {
+                            b: () => Aq,
+                            d: () => cq,
+                            f: () => xq,
+                            i: () => Yq,
+                            l: () => lq,
+                            p: () => Oq,
+                            s: () => mq,
+                            t: () => uq,
+                            x: () => Bq
                           });
-                          const MT = lT("\\w$."),
-                            KT = lT("\\w.,");
+                          const lq = Yq("\\w$."),
+                            Oq = Yq("\\w.,");
 
-                          function OT(TT) {
-                            return kT => fT(kT, TT)
+                          function mq(qq) {
+                            return Eq => Aq(Eq, qq)
                           }
 
-                          function yT(TT) {
-                            return kT => !TT.test(kT.input.slice(0, kT.index))
+                          function xq(qq) {
+                            return Eq => !qq.test(Eq.input.slice(0, Eq.index))
                           }
 
-                          function fT(TT, kT) {
-                            return TT.index > 0 && new RegExp(`[${kT}]`).test(TT.input[TT.index - 1])
+                          function Aq(qq, Eq) {
+                            return qq.index > 0 && new RegExp(`[${Eq}]`).test(qq.input[qq.index - 1])
                           }
 
-                          function xT(TT, kT, cT) {
-                            return function(TT) {
-                              return void 0 !== TT && "function" !== typeof TT
-                            }(cT) ? function(TT, kT, cT) {
-                              const lT = kT.flags.replace(/[gy]/g, ""),
-                                MT = new RegExp(`[^${cT}](?:${kT.source})`, `${lT}g`),
-                                KT = [],
-                                OT = cT => {
-                                  const lT = cT.index + cT[0].length;
-                                  return ("" === cT[0] ? CT(TT, kT, lT) : lT) - 1
+                          function cq(qq, Eq, gq) {
+                            return function(qq) {
+                              return void 0 !== qq && "function" !== typeof qq
+                            }(gq) ? function(qq, Eq, gq) {
+                              const Yq = Eq.flags.replace(/[gy]/g, ""),
+                                lq = new RegExp(`[^${gq}](?:${Eq.source})`, `${Yq}g`),
+                                Oq = [],
+                                mq = gq => {
+                                  const Yq = gq.index + gq[0].length;
+                                  return ("" === gq[0] ? Wq(qq, Eq, Yq) : Yq) - 1
                                 },
-                                yT = new RegExp(`(?:${kT.source})`, `${lT}y`).exec(TT);
-                              if (yT) {
-                                if (KT.push(yT), !kT.global) return KT;
-                                MT.lastIndex = OT(yT)
+                                xq = new RegExp(`(?:${Eq.source})`, `${Yq}y`).exec(qq);
+                              if (xq) {
+                                if (Oq.push(xq), !Eq.global) return Oq;
+                                lq.lastIndex = mq(xq)
                               }
-                              for (let fT = MT.exec(TT); fT; fT = MT.exec(TT)) {
-                                const cT = CT(TT, kT, fT.index) - fT.index;
-                                if (fT[0] = fT[0].slice(cT), fT.index += cT, KT.push(fT), !kT.global) break;
-                                MT.lastIndex = OT(fT)
+                              for (let Aq = lq.exec(qq); Aq; Aq = lq.exec(qq)) {
+                                const gq = Wq(qq, Eq, Aq.index) - Aq.index;
+                                if (Aq[0] = Aq[0].slice(gq), Aq.index += gq, Oq.push(Aq), !Eq.global) break;
+                                lq.lastIndex = mq(Aq)
                               }
-                              return KT
-                            }(TT, kT, cT.notAfter) : function(TT, kT, cT) {
-                              const lT = new RegExp(kT.source, `${kT.flags.replace(/[gy]/g,"")}g`),
-                                MT = [];
-                              for (let KT = lT.exec(TT); KT; KT = lT.exec(TT))
-                                if (!cT || cT(KT)) {
-                                  if (MT.push(KT), !kT.global) break;
-                                  "" === KT[0] && (lT.lastIndex = CT(TT, kT, lT.lastIndex))
-                                } else lT.lastIndex = CT(TT, kT, KT.index);
-                              return MT
-                            }(TT, kT, cT)
+                              return Oq
+                            }(qq, Eq, gq.notAfter) : function(qq, Eq, gq) {
+                              const Yq = new RegExp(Eq.source, `${Eq.flags.replace(/[gy]/g,"")}g`),
+                                lq = [];
+                              for (let Oq = Yq.exec(qq); Oq; Oq = Yq.exec(qq))
+                                if (!gq || gq(Oq)) {
+                                  if (lq.push(Oq), !Eq.global) break;
+                                  "" === Oq[0] && (Yq.lastIndex = Wq(qq, Eq, Yq.lastIndex))
+                                } else Yq.lastIndex = Wq(qq, Eq, Oq.index);
+                              return lq
+                            }(qq, Eq, gq)
                           }
 
-                          function IT(TT, kT, cT, lT) {
-                            let MT = "",
-                              KT = 0;
-                            for (const OT of xT(TT, kT, cT)) MT += TT.slice(KT, OT.index) + lT(OT), KT = OT.index + OT[0].length;
-                            return MT + TT.slice(KT)
+                          function uq(qq, Eq, gq, Yq) {
+                            let lq = "",
+                              Oq = 0;
+                            for (const mq of cq(qq, Eq, gq)) lq += qq.slice(Oq, mq.index) + Yq(mq), Oq = mq.index + mq[0].length;
+                            return lq + qq.slice(Oq)
                           }
 
-                          function AT(TT, kT, cT) {
-                            const lT = [];
-                            let MT = 0;
-                            for (const KT of xT(TT, kT, cT)) lT.push(TT.slice(MT, KT.index)), MT = KT.index + KT[0].length;
-                            return [...lT, TT.slice(MT)]
+                          function Bq(qq, Eq, gq) {
+                            const Yq = [];
+                            let lq = 0;
+                            for (const Oq of cq(qq, Eq, gq)) Yq.push(qq.slice(lq, Oq.index)), lq = Oq.index + Oq[0].length;
+                            return [...Yq, qq.slice(lq)]
                           }
 
-                          function CT(TT, kT, cT) {
-                            var lT;
-                            return cT + (kT.unicode && (null !== (lT = TT.codePointAt(cT)) && void 0 !== lT ? lT : 0) > 65535 ? 2 : 1)
+                          function Wq(qq, Eq, gq) {
+                            var Yq;
+                            return gq + (Eq.unicode && (null !== (Yq = qq.codePointAt(gq)) && void 0 !== Yq ? Yq : 0) > 65535 ? 2 : 1)
                           }
-                        }, 4789: (TT, kT, cT) => {
-                          cT.d(kT, {
-                            b: () => MT,
-                            c: () => fT,
-                            e: () => KT,
-                            g: () => OT,
-                            i: () => yT,
-                            m: () => hT,
-                            p: () => IT,
-                            t: () => AT,
-                            u: () => tT,
-                            x: () => jT
+                        }, 4643: (qq, Eq, gq) => {
+                          gq.d(Eq, {
+                            B: () => Nq,
+                            e: () => lq,
+                            g: () => Aq,
+                            i: () => Oq,
+                            l: () => mq,
+                            o: () => xq,
+                            q: () => dq,
+                            s: () => uq,
+                            u: () => Bq,
+                            y: () => Vq
                           });
-                          var lT = cT(1602);
-                          const MT = 24e3,
-                            KT = "/docs/llms.txt",
-                            OT = `${lT.b}${KT}`,
-                            yT = "/llms.txt",
-                            fT = "/docs/llms-full.txt";
+                          var Yq = gq(1566);
+                          const lq = 24e3,
+                            Oq = "/docs/llms.txt",
+                            mq = `${Yq.c}${Oq}`,
+                            xq = "/llms.txt",
+                            Aq = "/docs/llms-full.txt";
 
-                          function xT(TT) {
-                            return TT || "index"
+                          function cq(qq) {
+                            return qq || "index"
                           }
 
-                          function IT(TT) {
-                            return `/docs/${xT(TT)}.md`
+                          function uq(qq) {
+                            return `/docs/${cq(qq)}.md`
                           }
 
-                          function AT(TT, kT) {
-                            return `/docs/${xT(TT)}/${kT+1}.md`
+                          function Bq(qq, Eq) {
+                            return `/docs/${cq(qq)}/${Eq+1}.md`
                           }
-                          const CT = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
+                          const Wq = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
 
-                          function jT(TT) {
-                            const kT = CT.exec(TT);
-                            return null === kT ? null : {
-                              name: kT[1],
-                              part: void 0 === kT[2] ? null : Number(kT[2])
+                          function Nq(qq) {
+                            const Eq = Wq.exec(qq);
+                            return null === Eq ? null : {
+                              name: Eq[1],
+                              part: void 0 === Eq[2] ? null : Number(Eq[2])
                             }
                           }
-                          const vT = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
+                          const aq = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
 
-                          function tT(TT) {
-                            const kT = vT.exec(TT);
-                            if (null === kT) return null;
-                            const [, cT = "", lT] = kT;
-                            return void 0 === lT ? IT(cT) : AT(cT, Number(lT) - 1)
+                          function Vq(qq) {
+                            const Eq = aq.exec(qq);
+                            if (null === Eq) return null;
+                            const [, gq = "", Yq] = Eq;
+                            return void 0 === Yq ? uq(gq) : Bq(gq, Number(Yq) - 1)
                           }
 
-                          function hT(TT) {
-                            return `/docsHtml/${xT(TT)}.html`
+                          function dq(qq) {
+                            return `/docsHtml/${cq(qq)}.html`
                           }
-                        }, 4813: (TT, kT, cT) => {
-                          cT.d(kT, {
-                            b: () => MT,
-                            f: () => lT,
-                            h: () => KT,
-                            j: () => fT,
-                            m: () => OT
+                        }, 4671: (qq, Eq, gq) => {
+                          gq.d(Eq, {
+                            b: () => lq,
+                            d: () => Yq,
+                            f: () => Oq,
+                            i: () => Aq,
+                            m: () => mq
                           });
-                          const lT = ["sine", "triangle", "square", "sawtooth"],
-                            MT = 55,
-                            KT = {
+                          const Yq = ["sine", "triangle", "square", "sawtooth"],
+                            lq = 55,
+                            Oq = {
                               soft: {
                                 waveform: "sine",
                                 pitchHz: 300,
@@ -7208,38 +7208,38 @@ export const modules = {
                               }
                             };
 
-                          function OT(TT) {
-                            return "string" !== typeof TT ? TT : Object.hasOwn(KT, TT) ? KT[TT] : null
+                          function mq(qq) {
+                            return "string" !== typeof qq ? qq : Object.hasOwn(Oq, qq) ? Oq[qq] : null
                           }
 
-                          function yT(TT, kT, cT) {
-                            return Math.min(cT, Math.max(kT, TT))
+                          function xq(qq, Eq, gq) {
+                            return Math.min(gq, Math.max(Eq, qq))
                           }
 
-                          function fT(TT) {
-                            const kT = yT(TT.durationMs, 10, 500),
-                              cT = yT(TT.attackMs, 0, kT),
+                          function Aq(qq) {
+                            const Eq = xq(qq.durationMs, 10, 500),
+                              gq = xq(qq.attackMs, 0, Eq),
                               {
-                                intonation: MT
-                              } = TT;
+                                intonation: lq
+                              } = qq;
                             return {
-                              waveform: lT.includes(TT.waveform) ? TT.waveform : "sine",
-                              pitchHz: yT(TT.pitchHz, 20, 4e3),
-                              glideSemitones: yT(TT.glideSemitones, -24, 24),
-                              durationMs: kT,
-                              attackMs: cT,
-                              releaseMs: yT(TT.releaseMs, 0, kT - cT),
-                              lowpassHz: null === TT.lowpassHz ? null : yT(TT.lowpassHz, 20, 2e4),
-                              volume: yT(TT.volume, 0, 2),
+                              waveform: Yq.includes(qq.waveform) ? qq.waveform : "sine",
+                              pitchHz: xq(qq.pitchHz, 20, 4e3),
+                              glideSemitones: xq(qq.glideSemitones, -24, 24),
+                              durationMs: Eq,
+                              attackMs: gq,
+                              releaseMs: xq(qq.releaseMs, 0, Eq - gq),
+                              lowpassHz: null === qq.lowpassHz ? null : xq(qq.lowpassHz, 20, 2e4),
+                              volume: xq(qq.volume, 0, 2),
                               intonation: {
-                                variationSemitones: yT(MT.variationSemitones, 0, 6),
-                                declineSemitones: yT(MT.declineSemitones, 0, 12),
-                                questionRiseSemitones: yT(MT.questionRiseSemitones, 0, 12),
-                                exclaimLiftSemitones: yT(MT.exclaimLiftSemitones, 0, 12)
+                                variationSemitones: xq(lq.variationSemitones, 0, 6),
+                                declineSemitones: xq(lq.declineSemitones, 0, 12),
+                                questionRiseSemitones: xq(lq.questionRiseSemitones, 0, 12),
+                                exclaimLiftSemitones: xq(lq.exclaimLiftSemitones, 0, 12)
                               },
-                              syllableMs: yT(TT.syllableMs, 25, 200)
+                              syllableMs: xq(qq.syllableMs, 25, 200)
                             }
                           }
                         }
                       }; Object.freeze(modules);
-                      for (const TT in modules) Object.freeze(modules[TT]);
+                      for (const qq in modules) Object.freeze(modules[qq]);

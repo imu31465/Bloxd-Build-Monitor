@@ -1,257 +1,257 @@
 export const id = 19;
 export const ids = [19];
 export const modules = {
-  36416: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => jT,
-      g: () => vT,
-      j: () => CT,
-      k: () => AT
+  36648: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => Nq,
+      g: () => aq,
+      h: () => Wq,
+      j: () => Bq
     });
-    var lT = cT(9359),
-      MT = cT(36423),
-      KT = cT(36432),
-      OT = cT(8746),
-      yT = cT(1461),
-      fT = cT(71),
-      xT = cT(94),
-      IT = cT(1099);
+    var Yq = gq(9277),
+      lq = gq(36657),
+      Oq = gq(36662),
+      mq = gq(8669),
+      xq = gq(1416),
+      Aq = gq(57),
+      cq = gq(71),
+      uq = gq(1070);
 
-    function AT() {
-      var TT;
-      return (0, yT.i)(MT.b, (0, MT.j)()), (0, IT.jsx)(IT.Fragment, {
-        children: null === (TT = (0, MT.j)()) || void 0 === TT ? void 0 : TT.content
+    function Bq() {
+      var qq;
+      return (0, xq.h)(lq.c, (0, lq.l)()), (0, uq.jsx)(uq.Fragment, {
+        children: null === (qq = (0, lq.l)()) || void 0 === qq ? void 0 : qq.content
       })
     }
 
-    function CT(TT) {
-      var kT;
+    function Wq(qq) {
+      var Eq;
       let {
-        show: cT
-      } = TT;
-      (0, yT.i)(MT.b, (0, MT.j)());
-      const xT = null === (kT = (0, MT.j)()) || void 0 === kT ? void 0 : kT.menu;
-      return (0, fT.useEffect)((() => {
-        var TT;
-        cT || (null === xT || void 0 === xT || null === (TT = xT.onClose) || void 0 === TT || TT.call(xT), (0, KT.q)())
-      }), [cT, xT]), (0, fT.useEffect)((() => cT ? (0, OT.e)(KT.A, KT.h) : void 0), [cT]), (0, IT.jsx)(lT.b, {
-        showing: cT,
+        show: gq
+      } = qq;
+      (0, xq.h)(lq.c, (0, lq.l)());
+      const cq = null === (Eq = (0, lq.l)()) || void 0 === Eq ? void 0 : Eq.menu;
+      return (0, Aq.useEffect)((() => {
+        var qq;
+        gq || (null === cq || void 0 === cq || null === (qq = cq.onClose) || void 0 === qq || qq.call(cq), (0, Oq.m)())
+      }), [gq, cq]), (0, Aq.useEffect)((() => gq ? (0, mq.i)(Oq.r, Oq.d) : void 0), [gq]), (0, uq.jsx)(Yq.b, {
+        showing: gq,
         globallyUniqueKey: "clientGameMenu",
-        children: null === xT || void 0 === xT ? void 0 : xT.content
+        children: null === cq || void 0 === cq ? void 0 : cq.content
       })
     }
 
-    function jT(TT) {
+    function Nq(qq) {
       let {
-        placement: kT = "bottom"
-      } = TT;
-      return (0, IT.jsx)("div", {
-        id: `clientGameHud-${kT}`,
+        placement: Eq = "bottom"
+      } = qq;
+      return (0, uq.jsx)("div", {
+        id: `clientGameHud-${Eq}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function vT(TT) {
+    function aq(qq) {
       let {
-        children: kT,
-        placement: cT = "bottom"
-      } = TT;
-      const [lT, MT] = (0, fT.useState)(null);
-      return (0, fT.useEffect)((() => {
-        MT(document.getElementById(`clientGameHud-${cT}`))
-      }), [cT]), lT ? (0, xT.createPortal)(kT, lT) : null
+        children: Eq,
+        placement: gq = "bottom"
+      } = qq;
+      const [Yq, lq] = (0, Aq.useState)(null);
+      return (0, Aq.useEffect)((() => {
+        lq(document.getElementById(`clientGameHud-${gq}`))
+      }), [gq]), Yq ? (0, cq.createPortal)(Eq, Yq) : null
     }
   },
-  9359: (TT, kT, cT) => {
-    cT.d(kT, {
-      b: () => KT
+  9277: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => Oq
     });
-    var lT = cT(4521),
-      MT = cT(4528);
+    var Yq = gq(4364),
+      lq = gq(4367);
 
-    function KT(TT) {
+    function Oq(qq) {
       let {
-        children: kT,
-        showing: cT,
-        globallyUniqueKey: KT,
-        alwaysMountChildren: OT = !1,
-        doGameplayStartStopOnShow: yT = !0,
-        keepsMovement: fT = !1
-      } = TT;
-      return (0, MT.c)(!0, cT, KT, fT), (0, lT.e)(yT, cT), cT || OT ? kT : null
+        children: Eq,
+        showing: gq,
+        globallyUniqueKey: Oq,
+        alwaysMountChildren: mq = !1,
+        doGameplayStartStopOnShow: xq = !0,
+        keepsMovement: Aq = !1
+      } = qq;
+      return (0, lq.e)(!0, gq, Oq, Aq), (0, Yq.d)(xq, gq), gq || mq ? Eq : null
     }
   },
-  8746: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => KT,
-      e: () => MT
+  8669: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => Oq,
+      i: () => lq
     });
-    let lT = null;
-    const MT = function(TT) {
-        const kT = {
-          cycle: TT,
+    let Yq = null;
+    const lq = function(qq) {
+        const Eq = {
+          cycle: qq,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return lT = kT, () => {
-          lT === kT && (lT = null)
+        return Yq = Eq, () => {
+          Yq === Eq && (Yq = null)
         }
       },
-      KT = () => {
-        var TT;
-        return null !== (TT = lT) && void 0 !== TT && TT.canCycle() ? lT.cycle : null
+      Oq = () => {
+        var qq;
+        return null !== (qq = Yq) && void 0 !== qq && qq.canCycle() ? Yq.cycle : null
       }
   },
-  36432: (TT, kT, cT) => {
-    cT.d(kT, {
-      A: () => vT,
-      B: () => QT,
-      d: () => KT,
-      h: () => tT,
-      k: () => hT,
-      l: () => yT,
-      p: () => CT,
-      q: () => NT,
-      s: () => AT,
-      w: () => ST
+  36662: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => Oq,
+      d: () => Vq,
+      g: () => dq,
+      h: () => xq,
+      l: () => Wq,
+      m: () => jq,
+      o: () => Bq,
+      p: () => oq,
+      r: () => aq,
+      v: () => Hq
     });
-    var lT = cT(31),
-      MT = cT(36);
-    const KT = "clientGameInventoryButtonsChanged",
-      OT = new Map;
+    var Yq = gq(24),
+      lq = gq(31);
+    const Oq = "clientGameInventoryButtonsChanged",
+      mq = new Map;
 
-    function yT() {
-      return [...OT.values()].sort(((TT, kT) => {
-        var cT, lT;
-        return (null !== (cT = TT.order) && void 0 !== cT ? cT : 0) - (null !== (lT = kT.order) && void 0 !== lT ? lT : 0)
+    function xq() {
+      return [...mq.values()].sort(((qq, Eq) => {
+        var gq, Yq;
+        return (null !== (gq = qq.order) && void 0 !== gq ? gq : 0) - (null !== (Yq = Eq.order) && void 0 !== Yq ? Yq : 0)
       }))
     }
-    let fT = null;
+    let Aq = null;
 
-    function xT(TT) {
-      fT = TT
+    function cq(qq) {
+      Aq = qq
     }
-    let IT = !1;
+    let uq = !1;
 
-    function AT(TT) {
-      IT = !0;
+    function Bq(qq) {
+      uq = !0;
       try {
-        TT.onClick()
+        qq.onClick()
       } finally {
-        IT = !1
+        uq = !1
       }
-      TT.panel && "clientGame" === lT.e.get("openInGameMenuName") && xT(TT.id)
+      qq.panel && "clientGame" === Yq.b.get("openInGameMenuName") && cq(qq.id)
     }
 
-    function CT() {
-      return IT
+    function Wq() {
+      return uq
     }
 
-    function jT() {
-      return yT().filter((TT => TT.panel && !TT.disabled))
+    function Nq() {
+      return xq().filter((qq => qq.panel && !qq.disabled))
     }
 
-    function vT(TT) {
-      const kT = jT(),
-        cT = kT.findIndex((TT => TT.id === fT));
-      return !(cT < 0 || kT.length < 2) && (AT(kT[(cT + TT + kT.length) % kT.length]), !0)
+    function aq(qq) {
+      const Eq = Nq(),
+        gq = Eq.findIndex((qq => qq.id === Aq));
+      return !(gq < 0 || Eq.length < 2) && (Bq(Eq[(gq + qq + Eq.length) % Eq.length]), !0)
     }
 
-    function tT() {
-      return null !== fT && jT().length > 1
+    function Vq() {
+      return null !== Aq && Nq().length > 1
     }
 
-    function hT() {
-      xT(null)
+    function dq() {
+      cq(null)
     }
 
-    function NT() {
-      "inventory" !== lT.e.get("openInGameMenuName") && xT(null)
+    function jq() {
+      "inventory" !== Yq.b.get("openInGameMenuName") && cq(null)
     }
 
-    function QT() {
-      const TT = fT;
-      return xT(null), TT
+    function Hq() {
+      const qq = Aq;
+      return cq(null), qq
     }
 
-    function ST(TT) {
-      return OT.set(TT.id, TT), MT.k.nt(KT, yT(), !0), () => {
-        OT.get(TT.id) === TT && (OT.delete(TT.id), MT.k.nt(KT, yT()))
+    function oq(qq) {
+      return mq.set(qq.id, qq), lq.i.TV(Oq, xq(), !0), () => {
+        mq.get(qq.id) === qq && (mq.delete(qq.id), lq.i.TV(Oq, xq()))
       }
     }
   },
-  36423: (TT, kT, cT) => {
-    cT.d(kT, {
-      b: () => yT,
-      d: () => hT,
-      f: () => NT,
-      h: () => CT,
-      j: () => xT,
-      m: () => tT,
-      p: () => jT,
-      q: () => IT
+  36657: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => xq,
+      e: () => dq,
+      h: () => jq,
+      j: () => Wq,
+      l: () => cq,
+      m: () => Vq,
+      n: () => Nq,
+      r: () => uq
     });
-    var lT = cT(31),
-      MT = cT(36),
-      KT = cT(1292),
-      OT = cT(36432);
-    const yT = "clientGameUiChanged";
-    let fT = null;
+    var Yq = gq(24),
+      lq = gq(31),
+      Oq = gq(1274),
+      mq = gq(36662);
+    const xq = "clientGameUiChanged";
+    let Aq = null;
 
-    function xT() {
-      return fT
+    function cq() {
+      return Aq
     }
 
-    function IT(TT, kT) {
-      const cT = {
-        content: TT,
-        menu: kT
+    function uq(qq, Eq) {
+      const gq = {
+        content: qq,
+        menu: Eq
       };
-      return fT = cT, MT.k.nt(yT, fT, !0), () => {
-        fT === cT && (fT = null, vT = !1, hT(), MT.k.nt(yT, null))
+      return Aq = gq, lq.i.TV(xq, Aq, !0), () => {
+        Aq === gq && (Aq = null, aq = !1, dq(), lq.i.TV(xq, null))
       }
     }
-    let AT = null;
+    let Bq = null;
 
-    function CT() {
-      return AT
+    function Wq() {
+      return Bq
     }
 
-    function jT(TT) {
-      return AT = TT, () => {
-        AT === TT && (AT = null)
+    function Nq(qq) {
+      return Bq = qq, () => {
+        Bq === qq && (Bq = null)
       }
     }
-    let vT = !1;
+    let aq = !1;
 
-    function tT() {
-      const TT = lT.e.get("openInGameMenuName");
-      "clientGame" !== TT && (vT = "inventory" === TT), (0, OT.p)() || (0, OT.k)(), (0, KT.p)(KT.c), lT.e.set({
+    function Vq() {
+      const qq = Yq.b.get("openInGameMenuName");
+      "clientGame" !== qq && (aq = "inventory" === qq), (0, mq.l)() || (0, mq.g)(), (0, Oq.m)(Oq.d), Yq.b.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function hT() {
-      QT(!1)
+    function dq() {
+      Hq(!1)
     }
 
-    function NT() {
-      QT(vT)
+    function jq() {
+      Hq(aq)
     }
 
-    function QT(TT) {
-      "clientGame" === lT.e.get("openInGameMenuName") && lT.e.set({
-        openInGameMenuName: TT ? "inventory" : null
-      }), TT || (0, OT.k)(), vT = !1
+    function Hq(qq) {
+      "clientGame" === Yq.b.get("openInGameMenuName") && Yq.b.set({
+        openInGameMenuName: qq ? "inventory" : null
+      }), qq || (0, mq.g)(), aq = !1
     }
   },
-  39209: (TT, kT, cT) => {
-    cT.r(kT), cT.d(kT, {
-      default: () => sT
+  39359: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      default: () => Dq
     });
-    const lT = {
+    const Yq = {
       trader: {
         name: "Lucky Trader",
         shopTab: "Basic Blocks"
@@ -261,270 +261,270 @@ export const modules = {
         shopTab: "Team Upgrades"
       }
     };
-    var MT = cT(71),
-      KT = cT(37879),
-      OT = cT(339);
-    const yT = ["Basic", "Rare", "Super"];
+    var lq = gq(57),
+      Oq = gq(38011),
+      mq = gq(307);
+    const xq = ["Basic", "Rare", "Super"];
 
-    function fT(TT, kT) {
-      return `${"Basic"===kT?"":`${kT} `}${"Simple"===TT?"":`${TT} `}Lucky Block`
+    function Aq(qq, Eq) {
+      return `${"Basic"===Eq?"":`${Eq} `}${"Simple"===qq?"":`${qq} `}Lucky Block`
     }
-    const xT = new Map(["Simple", "Building", "Weapon", "Armour", "Tools", "Food", "Potion"].flatMap((TT => yT.map((kT => [fT(TT, kT), {
-      category: TT,
-      rarity: kT
+    const cq = new Map(["Simple", "Building", "Weapon", "Armour", "Tools", "Food", "Potion"].flatMap((qq => xq.map((Eq => [Aq(qq, Eq), {
+      category: qq,
+      rarity: Eq
     }])))));
-    xT.keys();
+    cq.keys();
 
-    function IT(TT) {
-      return xT.get(TT)
+    function uq(qq) {
+      return cq.get(qq)
     }
-    const AT = "Obsidian",
-      CT = ["Cobweb"],
-      jT = [...["Red", "Blue", "Green", "Yellow"].map((TT => `${(0,OT.U)(TT)} Wool`)), "Maple Wood Planks", "Cracked Stone Bricks", "Baked Clay", AT, ...CT];
+    const Bq = "Obsidian",
+      Wq = ["Cobweb"],
+      Nq = [...["Red", "Blue", "Green", "Yellow"].map((qq => `${(0,mq.eb)(qq)} Wool`)), "Maple Wood Planks", "Cracked Stone Bricks", "Baked Clay", Bq, ...Wq];
 
-    function vT(TT) {
-      return jT.includes(TT)
+    function aq(qq) {
+      return Nq.includes(qq)
     }
-    var tT = cT(617);
+    var Vq = gq(598);
 
-    function hT(TT, kT) {
-      const cT = IT(TT);
-      if (cT) {
-        const TT = IT(kT);
-        if (!TT) return;
-        const lT = yT.length - 1 - yT.indexOf(TT.rarity);
-        return (TT.category === cT.category ? 0 : 1) * yT.length + lT
+    function dq(qq, Eq) {
+      const gq = uq(qq);
+      if (gq) {
+        const qq = uq(Eq);
+        if (!qq) return;
+        const Yq = xq.length - 1 - xq.indexOf(qq.rarity);
+        return (qq.category === gq.category ? 0 : 1) * xq.length + Yq
       }
-      if (!vT(TT)) return;
-      if (kT === TT) return 0;
-      const lT = TT => vT(TT) && !CT.includes(TT) && TT !== AT;
-      return lT(TT) && lT(kT) ? 1 : void 0
+      if (!aq(qq)) return;
+      if (Eq === qq) return 0;
+      const Yq = qq => aq(qq) && !Wq.includes(qq) && qq !== Bq;
+      return Yq(qq) && Yq(Eq) ? 1 : void 0
     }
-    const NT = [...Array.from({
-      length: tT.v - tT.u
-    }, ((TT, kT) => tT.u + kT)), ...Array.from({
-      length: tT.u
-    }, ((TT, kT) => kT))];
-    class QT {
-      constructor(TT) {
-        this.inventory = TT, this.pending = new Map
+    const jq = [...Array.from({
+      length: Vq.s - Vq.o
+    }, ((qq, Eq) => Vq.o + Eq)), ...Array.from({
+      length: Vq.o
+    }, ((qq, Eq) => Eq))];
+    class Hq {
+      constructor(qq) {
+        this.inventory = qq, this.pending = new Map
       }
-      onPlace(TT) {
-        var kT;
-        const cT = this.inventory.selectedSlot(),
-          lT = this.inventory.itemAt(cT);
-        (null === lT || void 0 === lT ? void 0 : lT.name) === TT && (null !== (kT = lT.amount) && void 0 !== kT ? kT : 1) <= 1 && ST(TT) && this.pending.set(cT, TT)
+      onPlace(qq) {
+        var Eq;
+        const gq = this.inventory.selectedSlot(),
+          Yq = this.inventory.itemAt(gq);
+        (null === Yq || void 0 === Yq ? void 0 : Yq.name) === qq && (null !== (Eq = Yq.amount) && void 0 !== Eq ? Eq : 1) <= 1 && oq(qq) && this.pending.set(gq, qq)
       }
-      onDrop(TT, kT) {
-        kT < tT.u && null === this.inventory.itemAt(kT) && ST(TT) && this.refill(kT, TT)
+      onDrop(qq, Eq) {
+        Eq < Vq.o && null === this.inventory.itemAt(Eq) && oq(qq) && this.refill(Eq, qq)
       }
-      UA() {
-        const TT = [...this.pending];
+      SB() {
+        const qq = [...this.pending];
         this.pending.clear();
-        for (const [kT, cT] of TT) null === this.inventory.itemAt(kT) && this.refill(kT, cT)
+        for (const [Eq, gq] of qq) null === this.inventory.itemAt(Eq) && this.refill(Eq, gq)
       }
-      refill(TT, kT) {
-        const cT = function(TT, kT, cT, lT) {
-          let MT, KT = 1 / 0;
-          for (const OT of NT) {
-            if (OT === kT) continue;
-            const yT = lT(OT);
-            if (!yT || OT < tT.u && kT !== cT) continue;
-            const fT = hT(TT, yT.name);
-            void 0 !== fT && fT < KT && (MT = OT, KT = fT)
+      refill(qq, Eq) {
+        const gq = function(qq, Eq, gq, Yq) {
+          let lq, Oq = 1 / 0;
+          for (const mq of jq) {
+            if (mq === Eq) continue;
+            const xq = Yq(mq);
+            if (!xq || mq < Vq.o && Eq !== gq) continue;
+            const Aq = dq(qq, xq.name);
+            void 0 !== Aq && Aq < Oq && (lq = mq, Oq = Aq)
           }
-          return MT
-        }(kT, TT, this.inventory.selectedSlot(), this.inventory.itemAt);
-        void 0 !== cT && this.inventory.swap(TT, cT)
+          return lq
+        }(Eq, qq, this.inventory.selectedSlot(), this.inventory.itemAt);
+        void 0 !== gq && this.inventory.swap(qq, gq)
       }
     }
 
-    function ST(TT) {
-      return !!IT(TT) || vT(TT)
+    function oq(qq) {
+      return !!uq(qq) || aq(qq)
     }
-    var DT = cT(36423),
-      aT = cT(94),
-      FT = cT(1046),
-      rT = cT.n(FT);
-    const PT = "Lucky Clover",
-      wT = {
+    var Pq = gq(36657),
+      Qq = gq(71),
+      yq = gq(1018),
+      tq = gq.n(yq);
+    const rq = "Lucky Clover",
+      vq = {
         Basic: [35, 45],
         Rare: [100, 130],
         Super: [250, 330]
       };
 
-    function mT(TT) {
-      return wT[TT][0]
+    function hq(qq) {
+      return vq[qq][0]
     }
 
-    function bT(TT) {
-      return yT.filter((kT => TT >= mT(kT)))
+    function nq(qq) {
+      return xq.filter((Eq => qq >= hq(Eq)))
     }
-    var zT = cT(328),
-      JT = cT(2462),
-      oT = cT(31),
-      HT = cT(2582),
-      eT = cT(1943),
-      GT = cT(36416),
-      VT = cT(1061);
-    var ET = cT(1099);
-    const ZT = {
-      Basic: OT.H.whiteUiText,
-      Rare: OT.H.goldUiText,
-      Super: OT.H.cyanUiText
+    var bq = gq(296),
+      iq = gq(2383),
+      Zq = gq(24),
+      fq = gq(2501),
+      Mq = gq(1895),
+      Tq = gq(36648),
+      zq = gq(1025);
+    var Sq = gq(1070);
+    const pq = {
+      Basic: mq.M.whiteUiText,
+      Rare: mq.M.goldUiText,
+      Super: mq.M.cyanUiText
     };
-    let uT = 1;
+    let Gq = 1;
 
-    function XT() {
-      const TT = (0, JT.f)("currencyAmounts"),
-        kT = null === TT || void 0 === TT ? void 0 : TT.Clovers;
-      return !kT || kT.hidden ? null : (0, ET.jsx)(GT.g, {
-        children: (0, ET.jsx)(dT, {
-          amount: kT.amount
+    function Lq() {
+      const qq = (0, iq.h)("currencyAmounts"),
+        Eq = null === qq || void 0 === qq ? void 0 : qq.Clovers;
+      return !Eq || Eq.hidden ? null : (0, Sq.jsx)(Tq.g, {
+        children: (0, Sq.jsx)(Jq, {
+          amount: Eq.amount
         })
       })
     }
 
-    function dT(TT) {
-      var kT, cT, lT;
+    function Jq(qq) {
+      var Eq, gq, Yq;
       let {
-        amount: KT
-      } = TT;
+        amount: Oq
+      } = qq;
       const {
-        openEverythingMenuName: fT
-      } = (0, oT.n)(["openEverythingMenuName"]), xT = (0, HT.e)(), [IT, AT] = (0, MT.useState)(KT), [CT, jT] = (0, MT.useState)(null), [vT, tT] = (0, MT.useState)(0), [hT, NT] = (0, MT.useState)([]), QT = (0, MT.useRef)(KT), ST = (0, MT.useRef)(!1), DT = (0, MT.useRef)(null), FT = fT === zT.o.SHOP;
-      (0, MT.useEffect)((() => {
-        const TT = QT.current;
-        if (QT.current = KT, KT <= TT || FT) return void AT(KT);
-        const kT = xT || hT.length > 0 || window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : (cT = KT - TT, lT = !ST.current, cT <= 0 || !lT && cT < 40 ? 0 : Math.min(4, Math.ceil(cT / 30)));
-        var cT, lT;
-        if (ST.current = !0, bT(KT).length > bT(TT).length && tT(uT++), kT > 0) {
-          const TT = [];
-          for (let cT = 0; cT < kT; cT++) TT.push({
-            id: uT++,
+        openEverythingMenuName: Aq
+      } = (0, Zq.j)(["openEverythingMenuName"]), cq = (0, fq.d)(), [uq, Bq] = (0, lq.useState)(Oq), [Wq, Nq] = (0, lq.useState)(null), [aq, Vq] = (0, lq.useState)(0), [dq, jq] = (0, lq.useState)([]), Hq = (0, lq.useRef)(Oq), oq = (0, lq.useRef)(!1), Pq = (0, lq.useRef)(null), yq = Aq === bq.p.SHOP;
+      (0, lq.useEffect)((() => {
+        const qq = Hq.current;
+        if (Hq.current = Oq, Oq <= qq || yq) return void Bq(Oq);
+        const Eq = cq || dq.length > 0 || window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : (gq = Oq - qq, Yq = !oq.current, gq <= 0 || !Yq && gq < 40 ? 0 : Math.min(4, Math.ceil(gq / 30)));
+        var gq, Yq;
+        if (oq.current = !0, nq(Oq).length > nq(qq).length && Vq(Gq++), Eq > 0) {
+          const qq = [];
+          for (let gq = 0; gq < Eq; gq++) qq.push({
+            id: Gq++,
             x: window.innerWidth / 2 + 60 * (Math.random() - .5),
             y: .58 * window.innerHeight + 30 * (Math.random() - .5),
-            delayMs: 70 * cT
+            delayMs: 70 * gq
           });
-          NT((kT => [...kT, ...TT]))
+          jq((Eq => [...Eq, ...qq]))
         }
-        const MT = kT > 0 ? 600 : 0;
-        jT({
-          id: uT++,
-          delayMs: MT
+        const lq = Eq > 0 ? 600 : 0;
+        Nq({
+          id: Gq++,
+          delayMs: lq
         });
-        const yT = performance.now() + MT;
-        let fT = 0;
-        const IT = kT => {
-          const cT = OT.d.clamp((kT - yT) / 600, 0, 1);
-          AT(Math.round(TT + (KT - TT) * cT)), cT < 1 && (fT = requestAnimationFrame(IT))
+        const xq = performance.now() + lq;
+        let Aq = 0;
+        const uq = Eq => {
+          const gq = mq.c.clamp((Eq - xq) / 600, 0, 1);
+          Bq(Math.round(qq + (Oq - qq) * gq)), gq < 1 && (Aq = requestAnimationFrame(uq))
         };
-        return fT = requestAnimationFrame(IT), () => {
-          cancelAnimationFrame(fT)
+        return Aq = requestAnimationFrame(uq), () => {
+          cancelAnimationFrame(Aq)
         }
-      }), [KT, FT]);
-      const wT = function(TT) {
-          var kT;
-          const cT = null !== (kT = yT.find((kT => TT < mT(kT)))) && void 0 !== kT ? kT : "Super";
+      }), [Oq, yq]);
+      const vq = function(qq) {
+          var Eq;
+          const gq = null !== (Eq = xq.find((Eq => qq < hq(Eq)))) && void 0 !== Eq ? Eq : "Super";
           return {
-            rarity: cT,
-            progress: OT.d.clamp(TT / mT(cT), 0, 1)
+            rarity: gq,
+            progress: mq.c.clamp(qq / hq(gq), 0, 1)
           }
-        }(IT),
-        JT = bT(IT).at(-1);
-      return (0, ET.jsxs)(ET.Fragment, {
-        children: [(0, ET.jsx)("div", {
+        }(uq),
+        iq = nq(uq).at(-1);
+      return (0, Sq.jsxs)(Sq.Fragment, {
+        children: [(0, Sq.jsx)("div", {
           className: "LuckyCloverWalletAnchor",
-          children: (0, ET.jsxs)("div", {
-            className: rT()("LuckyCloverWallet", {
-              Capped: JT && "Basic" !== JT
+          children: (0, Sq.jsxs)("div", {
+            className: tq()("LuckyCloverWallet", {
+              Capped: iq && "Basic" !== iq
             }),
-            style: JT && {
-              "--luckyTierColour": ZT[JT]
+            style: iq && {
+              "--luckyTierColour": pq[iq]
             },
-            children: [(0, ET.jsx)("div", {
+            children: [(0, Sq.jsx)("div", {
               className: "LuckyCloverWalletFill",
               style: {
-                transform: `scaleX(${wT.progress})`
+                transform: `scaleX(${vq.progress})`
               }
-            }), vT > 0 && (0, ET.jsx)("div", {
+            }), aq > 0 && (0, Sq.jsx)("div", {
               className: "LuckyCloverWalletReached",
               style: {
-                animationDelay: `${null!==(kT=null===CT||void 0===CT?void 0:CT.delayMs)&&void 0!==kT?kT:0}ms`
+                animationDelay: `${null!==(Eq=null===Wq||void 0===Wq?void 0:Wq.delayMs)&&void 0!==Eq?Eq:0}ms`
               }
-            }, vT), (0, ET.jsx)("div", {
-              ref: DT,
-              className: rT()("LuckyCloverWalletIcon", CT && "Bounce"),
+            }, aq), (0, Sq.jsx)("div", {
+              ref: Pq,
+              className: tq()("LuckyCloverWalletIcon", Wq && "Bounce"),
               style: {
-                animationDelay: `${null!==(lT=null===CT||void 0===CT?void 0:CT.delayMs)&&void 0!==lT?lT:0}ms`
+                animationDelay: `${null!==(Yq=null===Wq||void 0===Wq?void 0:Wq.delayMs)&&void 0!==Yq?Yq:0}ms`
               },
-              children: (0, ET.jsx)(eT.d, {
-                itemName: PT,
+              children: (0, Sq.jsx)(Mq.e, {
+                itemName: rq,
                 amount: 0
               })
-            }, null !== (cT = null === CT || void 0 === CT ? void 0 : CT.id) && void 0 !== cT ? cT : 0), (0, ET.jsx)("span", {
+            }, null !== (gq = null === Wq || void 0 === Wq ? void 0 : Wq.id) && void 0 !== gq ? gq : 0), (0, Sq.jsx)("span", {
               className: "LuckyCloverWalletAmount SmallTextBold",
-              children: IT
-            }), JT && (0, ET.jsx)(VT.e, {
+              children: uq
+            }), iq && (0, Sq.jsx)(zq.d, {
               className: "LuckyCloverWalletShop",
               name: "cart-shopping"
             })]
           })
-        }), (0, aT.createPortal)(hT.map((TT => (0, ET.jsx)(LT, {
-          flyer: TT,
-          target: DT,
+        }), (0, Qq.createPortal)(dq.map((qq => (0, Sq.jsx)(kq, {
+          flyer: qq,
+          target: Pq,
           onDone: () => {
-            NT((kT => kT.filter((kT => kT.id !== TT.id))))
+            jq((Eq => Eq.filter((Eq => Eq.id !== qq.id))))
           }
-        }, TT.id))), document.body)]
+        }, qq.id))), document.body)]
       })
     }
 
-    function LT(TT) {
+    function kq(qq) {
       let {
-        flyer: kT,
-        target: cT,
-        onDone: lT
-      } = TT;
-      const KT = (0, MT.useRef)(null);
-      return (0, MT.useEffect)((() => {
-        var TT;
-        const MT = null === (TT = cT.current) || void 0 === TT ? void 0 : TT.getBoundingClientRect();
-        if (!KT.current || !MT) return void lT();
+        flyer: Eq,
+        target: gq,
+        onDone: Yq
+      } = qq;
+      const Oq = (0, lq.useRef)(null);
+      return (0, lq.useEffect)((() => {
+        var qq;
+        const lq = null === (qq = gq.current) || void 0 === qq ? void 0 : qq.getBoundingClientRect();
+        if (!Oq.current || !lq) return void Yq();
         const {
-          x: OT,
-          y: yT
-        } = kT, fT = OT + 140 * (Math.random() - .5), xT = yT - 30 - 40 * Math.random(), IT = KT.current.animate([{
-          transform: `translate(${OT}px, ${yT}px) scale(0.3)`,
+          x: mq,
+          y: xq
+        } = Eq, Aq = mq + 140 * (Math.random() - .5), cq = xq - 30 - 40 * Math.random(), uq = Oq.current.animate([{
+          transform: `translate(${mq}px, ${xq}px) scale(0.3)`,
           opacity: 0
         }, {
-          transform: `translate(${fT}px, ${xT}px) scale(1.3)`,
+          transform: `translate(${Aq}px, ${cq}px) scale(1.3)`,
           opacity: 1,
           offset: .3
         }, {
-          transform: `translate(${MT.left}px, ${MT.top}px) scale(0.8)`,
+          transform: `translate(${lq.left}px, ${lq.top}px) scale(0.8)`,
           opacity: .9
         }], {
           duration: 750,
           easing: "ease-in",
-          delay: kT.delayMs,
+          delay: Eq.delayMs,
           fill: "backwards"
         });
-        return IT.onfinish = lT, () => {
-          IT.cancel()
+        return uq.onfinish = Yq, () => {
+          uq.cancel()
         }
-      }), []), (0, ET.jsx)("div", {
-        ref: KT,
+      }), []), (0, Sq.jsx)("div", {
+        ref: Oq,
         className: "LuckyCloverFlying",
-        children: (0, ET.jsx)(eT.d, {
-          itemName: PT,
+        children: (0, Sq.jsx)(Mq.e, {
+          itemName: rq,
           amount: 0
         })
       })
     }
-    var RT = cT(36);
-    const gT = "luckyGearUpgradeView",
-      UT = {
+    var Rq = gq(31);
+    const Uq = "luckyGearUpgradeView",
+      Fq = {
         Wood: "#c8964f",
         Stone: "#b4b4b4",
         Iron: "#f2f2f2",
@@ -532,13 +532,13 @@ export const modules = {
         Diamond: "#5cf2ea"
       };
 
-    function YT(TT) {
-      var kT;
-      return null !== (kT = UT[TT.split(" ")[0]]) && void 0 !== kT ? kT : "#e07bff"
+    function sq(qq) {
+      var Eq;
+      return null !== (Eq = Fq[qq.split(" ")[0]]) && void 0 !== Eq ? Eq : "#e07bff"
     }
-    class BT {
-      constructor(TT, kT) {
-        this.selectedSlot = TT, this.itemAt = kT, this.rings = [], this.unseen = new Map, this.view = {
+    class Xq {
+      constructor(qq, Eq) {
+        this.selectedSlot = qq, this.itemAt = Eq, this.rings = [], this.unseen = new Map, this.view = {
           rings: [],
           unseenSlots: []
         }, this.nextId = 0
@@ -546,200 +546,200 @@ export const modules = {
       getView() {
         return this.view
       }
-      Av(TT) {
-        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
-        for (const [cT, lT, MT] of TT) this.rings.push({
+      ga(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
+        for (const [gq, Yq, lq] of qq) this.rings.push({
           id: this.nextId++,
-          slot: cT,
-          colour: YT(MT),
-          until: kT + 1200
-        }), cT !== this.selectedSlot() && this.unseen.set(cT, {
-          from: lT,
-          to: MT
+          slot: gq,
+          colour: sq(lq),
+          until: Eq + 1200
+        }), gq !== this.selectedSlot() && this.unseen.set(gq, {
+          from: Yq,
+          to: lq
         });
-        this.nt()
+        this.TV()
       }
-      UA() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : performance.now();
+      SB() {
+        let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : performance.now();
         if (!this.rings.length && !this.unseen.size) return;
-        const kT = this.rings.filter((kT => kT.until > TT));
-        let cT = kT.length !== this.rings.length;
-        this.rings = kT;
-        for (const [lT, {
-            from: MT,
-            to: KT
+        const Eq = this.rings.filter((Eq => Eq.until > qq));
+        let gq = Eq.length !== this.rings.length;
+        this.rings = Eq;
+        for (const [Yq, {
+            from: lq,
+            to: Oq
           }] of this.unseen) {
-          const TT = this.itemAt(lT);
-          (lT === this.selectedSlot() || TT !== KT && TT !== MT) && (this.unseen.delete(lT), cT = !0)
+          const qq = this.itemAt(Yq);
+          (Yq === this.selectedSlot() || qq !== Oq && qq !== lq) && (this.unseen.delete(Yq), gq = !0)
         }
-        cT && this.nt()
+        gq && this.TV()
       }
-      nt() {
+      TV() {
         this.view = {
           rings: [...this.rings],
           unseenSlots: [...this.unseen.keys()]
-        }, RT.k.nt(gT, this.view)
+        }, Rq.i.TV(Uq, this.view)
       }
     }
-    var WT = cT(1461);
+    var wq = gq(1416);
 
-    function nT(TT) {
-      return document.querySelector(`.HotBar [data-inven-idx="${TT}"]`)
+    function Kq(qq) {
+      return document.querySelector(`.HotBar [data-inven-idx="${qq}"]`)
     }
 
-    function pT(TT) {
+    function Cq(qq) {
       let {
-        ring: kT
-      } = TT;
-      const [cT, lT] = (0, MT.useState)(null);
-      return (0, MT.useLayoutEffect)((() => {
-        var TT, cT;
-        lT(null !== (TT = null === (cT = nT(kT.slot)) || void 0 === cT ? void 0 : cT.getBoundingClientRect()) && void 0 !== TT ? TT : null)
-      }), [kT]), cT ? (0, ET.jsx)("div", {
+        ring: Eq
+      } = qq;
+      const [gq, Yq] = (0, lq.useState)(null);
+      return (0, lq.useLayoutEffect)((() => {
+        var qq, gq;
+        Yq(null !== (qq = null === (gq = Kq(Eq.slot)) || void 0 === gq ? void 0 : gq.getBoundingClientRect()) && void 0 !== qq ? qq : null)
+      }), [Eq]), gq ? (0, Sq.jsx)("div", {
         className: "LuckyGearRing",
         style: {
-          left: cT.left,
-          top: cT.top,
-          width: cT.width,
-          height: cT.height,
-          "--ringColour": kT.colour,
+          left: gq.left,
+          top: gq.top,
+          width: gq.width,
+          height: gq.height,
+          "--ringColour": Eq.colour,
           "--ringMs": "1200ms"
         }
       }) : null
     }
 
-    function iT(TT) {
+    function Iq(qq) {
       let {
-        slot: kT
-      } = TT;
-      const [cT, lT] = (0, MT.useState)(null);
-      return (0, MT.useLayoutEffect)((() => {
-        const TT = () => {
-          lT(nT(kT))
+        slot: Eq
+      } = qq;
+      const [gq, Yq] = (0, lq.useState)(null);
+      return (0, lq.useLayoutEffect)((() => {
+        const qq = () => {
+          Yq(Kq(Eq))
         };
-        TT();
-        const cT = new MutationObserver(TT),
-          MT = document.querySelector(".BottomMiddleElements");
-        return MT && cT.observe(MT, {
+        qq();
+        const gq = new MutationObserver(qq),
+          lq = document.querySelector(".BottomMiddleElements");
+        return lq && gq.observe(lq, {
           childList: !0,
           subtree: !0
         }), () => {
-          cT.disconnect()
+          gq.disconnect()
         }
-      }), [kT]), cT ? (0, aT.createPortal)((0, ET.jsx)("div", {
+      }), [Eq]), gq ? (0, Qq.createPortal)((0, Sq.jsx)("div", {
         className: "LuckyGearUnseen"
-      }), cT) : null
+      }), gq) : null
     }
 
-    function qT(TT) {
+    function eq(qq) {
       let {
-        controller: kT
-      } = TT;
-      const cT = (0, WT.i)(gT, kT.getView());
-      return (0, ET.jsxs)(ET.Fragment, {
-        children: [cT.rings.map((TT => (0, ET.jsx)(pT, {
-          ring: TT
-        }, TT.id))), cT.unseenSlots.map((TT => (0, ET.jsx)(iT, {
-          slot: TT
-        }, TT)))]
+        controller: Eq
+      } = qq;
+      const gq = (0, wq.h)(Uq, Eq.getView());
+      return (0, Sq.jsxs)(Sq.Fragment, {
+        children: [gq.rings.map((qq => (0, Sq.jsx)(Cq, {
+          ring: qq
+        }, qq.id))), gq.unseenSlots.map((qq => (0, Sq.jsx)(Iq, {
+          slot: qq
+        }, qq)))]
       })
     }
-    const sT = function(TT, kT, cT, OT) {
-      let yT, {
-          localPlayerId: fT
-        } = OT,
-        xT = null;
-      const IT = new QT({
-          itemAt: TT => yT.getItemSlot(fT, TT),
-          selectedSlot: () => yT.getSelectedInventorySlotI(fT),
-          swap: (TT, kT) => {
-            yT.swapInventorySlots(TT, kT)
+    const Dq = function(qq, Eq, gq, mq) {
+      let xq, {
+          localPlayerId: Aq
+        } = mq,
+        cq = null;
+      const uq = new Hq({
+          itemAt: qq => xq.getItemSlot(Aq, qq),
+          selectedSlot: () => xq.getSelectedInventorySlotI(Aq),
+          swap: (qq, Eq) => {
+            xq.swapInventorySlots(qq, Eq)
           }
         }),
-        AT = new BT((() => yT.getSelectedInventorySlotI(fT)), (TT => {
-          var kT;
-          return null === (kT = yT.getItemSlot(fT, TT)) || void 0 === kT ? void 0 : kT.name
+        Bq = new Xq((() => xq.getSelectedInventorySlotI(Aq)), (qq => {
+          var Eq;
+          return null === (Eq = xq.getItemSlot(Aq, qq)) || void 0 === Eq ? void 0 : Eq.name
         }));
       return {
         plugins: {
-          placeAgainstBeds: (0, KT.d)()
+          placeAgainstBeds: (0, Oq.b)()
         },
-        onCreate: TT => {
-          yT = TT, xT = (0, DT.q)((0, MT.createElement)(MT.Fragment, null, (0, MT.createElement)(XT), (0, MT.createElement)(qT, {
-            controller: AT
+        onCreate: qq => {
+          xq = qq, cq = (0, Pq.r)((0, lq.createElement)(lq.Fragment, null, (0, lq.createElement)(Lq), (0, lq.createElement)(eq, {
+            controller: Bq
           })))
         },
         onClose: () => {
-          var TT;
-          null === (TT = xT) || void 0 === TT || TT()
+          var qq;
+          null === (qq = cq) || void 0 === qq || qq()
         },
-        UA: () => {
-          IT.UA(), AT.UA()
+        SB: () => {
+          uq.SB(), Bq.SB()
         },
-        onReceivedMessageFromServer: (TT, kT) => {
-          "luckyGearUpgrade" === TT && AT.Av(kT)
+        onReceivedMessageFromServer: (qq, Eq) => {
+          "luckyGearUpgrade" === qq && Bq.ga(Eq)
         },
-        onPlayerChangeBlock: (TT, kT, cT, lT, MT, KT) => {
-          "Air" !== KT && IT.onPlace(KT)
+        onPlayerChangeBlock: (qq, Eq, gq, Yq, lq, Oq) => {
+          "Air" !== Oq && uq.onPlace(Oq)
         },
-        onPlayerDropItem: (TT, kT, cT, lT) => {
-          IT.onDrop(kT, lT)
+        onPlayerDropItem: (qq, Eq, gq, Yq) => {
+          uq.onDrop(Eq, Yq)
         },
-        onPlayerAltAction: (TT, kT, cT, MT, KT, OT) => {
-          if (!OT || "Mesh" !== yT.getEntityType(OT)) return;
-          const fT = yT.getEntityName(OT),
-            xT = Object.values(lT).find((TT => TT.name === fT));
-          xT && yT.openShop(TT, !1, xT.shopTab)
+        onPlayerAltAction: (qq, Eq, gq, lq, Oq, mq) => {
+          if (!mq || "Mesh" !== xq.getEntityType(mq)) return;
+          const Aq = xq.getEntityName(mq),
+            cq = Object.values(Yq).find((qq => qq.name === Aq));
+          cq && xq.openShop(qq, !1, cq.shopTab)
         }
       }
     }
   },
-  37879: (TT, kT, cT) => {
-    cT.d(kT, {
-      d: () => yT
+  38011: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => xq
     });
-    var lT = cT(339),
-      MT = cT(36761),
-      KT = cT(4454);
-    const OT = ["Leaf Bed", "_Leaf Bed Head", ...lT.Bc.flatMap((TT => [`${TT} Bed`, `_${TT} Bed Head`, `${TT} Strongbed`, `_${TT} Strongbed Head`]))];
+    var Yq = gq(307),
+      lq = gq(36985),
+      Oq = gq(4299);
+    const mq = ["Leaf Bed", "_Leaf Bed Head", ...Yq.Tc.flatMap((qq => [`${qq} Bed`, `_${qq} Bed Head`, `${qq} Strongbed`, `_${qq} Strongbed Head`]))];
 
-    function yT() {
-      let TT;
+    function xq() {
+      let qq;
       return {
-        onCreate(kT) {
-          TT = kT
+        onCreate(Eq) {
+          qq = Eq
         },
-        altVetoBlocks: OT,
-        onPlayerAttemptAltAction(kT, cT, lT, OT, yT, fT) {
-          var xT;
-          if ((0, MT.c)(TT.getMetaInfo(yT).rootName) && !TT.isEntityInteractable(fT) && (0, KT.i)(null === (xT = TT.ckT(kT)) || void 0 === xT ? void 0 : xT.typeObj.type)) return "preventAction"
+        altVetoBlocks: mq,
+        onPlayerAttemptAltAction(Eq, gq, Yq, mq, xq, Aq) {
+          var cq;
+          if ((0, lq.b)(qq.getMetaInfo(xq).rootName) && !qq.isEntityInteractable(Aq) && (0, Oq.g)(null === (cq = qq.Ngq(Eq)) || void 0 === cq ? void 0 : cq.typeObj.type)) return "preventAction"
         }
       }
     }
   },
-  36761: (TT, kT, cT) => {
-    function lT(TT) {
-      return TT.includes("Leaf Bed")
+  36985: (qq, Eq, gq) => {
+    function Yq(qq) {
+      return qq.includes("Leaf Bed")
     }
 
-    function MT(TT) {
-      return / Bed(?: Head)?(?:\||$)/.test(TT) && !lT(TT)
+    function lq(qq) {
+      return / Bed(?: Head)?(?:\||$)/.test(qq) && !Yq(qq)
     }
 
-    function KT(TT) {
-      return TT.includes(" Strongbed")
+    function Oq(qq) {
+      return qq.includes(" Strongbed")
     }
 
-    function OT(TT) {
-      return lT(TT) || MT(TT) || KT(TT)
+    function mq(qq) {
+      return Yq(qq) || lq(qq) || Oq(qq)
     }
-    cT.d(kT, {
-      c: () => OT,
-      d: () => lT,
-      e: () => KT,
-      g: () => MT
+    gq.d(Eq, {
+      b: () => mq,
+      c: () => Yq,
+      d: () => Oq,
+      f: () => lq
     })
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

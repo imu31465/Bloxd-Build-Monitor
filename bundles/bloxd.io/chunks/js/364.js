@@ -1,19 +1,19 @@
 export const id = 364;
 export const ids = [364];
 export const modules = {
-  60836: (TT, kT, cT) => {
-    cT.r(kT), cT.d(kT, {
-      passPixelShaderWGSL: () => OT
+  61421: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      passPixelShaderWGSL: () => mq
     });
-    var lT = cT(39474);
-    const MT = "passPixelShader",
-      KT = "varying vUV: vec2f;var textureSamplerSampler: sampler;var textureSampler: texture_2d<f32>;\n#define CUSTOM_FRAGMENT_DEFINITIONS\n@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {fragmentOutputs.color=textureSample(textureSampler,textureSamplerSampler,input.vUV);}";
-    lT.d.ShadersStoreWGSL[MT] || (lT.d.ShadersStoreWGSL[MT] = KT);
-    const OT = {
-      name: MT,
-      shader: KT
+    var Yq = gq(39617);
+    const lq = "passPixelShader",
+      Oq = "varying vUV: vec2f;var textureSamplerSampler: sampler;var textureSampler: texture_2d<f32>;\n#define CUSTOM_FRAGMENT_DEFINITIONS\n@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {fragmentOutputs.color=textureSample(textureSampler,textureSamplerSampler,input.vUV);}";
+    Yq.d.ShadersStoreWGSL[lq] || (Yq.d.ShadersStoreWGSL[lq] = Oq);
+    const mq = {
+      name: lq,
+      shader: Oq
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

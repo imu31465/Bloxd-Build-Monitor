@@ -1,34 +1,34 @@
 export const id = 238;
 export const ids = [238];
 export const modules = {
-  40706: (TT, kT, cT) => {
-    cT.d(kT, {
-      b: () => OT,
-      d: () => IT,
-      e: () => xT
+  40835: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => mq,
+      e: () => uq,
+      h: () => cq
     });
-    var lT, MT = cT(36937),
-      KT = cT(36892);
-    ! function(TT) {
-      TT[TT.CW = 0] = "CW", TT[TT.CCW = 1] = "CCW"
-    }(lT || (lT = {}));
-    class OT {
-      static Interpolate(TT, kT, cT, lT, MT) {
-        if (0 === TT) return 0;
-        const KT = 1 - 3 * lT + 3 * kT,
-          OT = 3 * lT - 6 * kT,
-          yT = 3 * kT;
-        let fT = TT;
-        for (let xT = 0; xT < 5; xT++) {
-          const kT = fT * fT;
-          fT -= (KT * (kT * fT) + OT * kT + yT * fT - TT) * (1 / (3 * KT * kT + 2 * OT * fT + yT)), fT = Math.min(1, Math.max(0, fT))
+    var Yq, lq = gq(37158),
+      Oq = gq(37139);
+    ! function(qq) {
+      qq[qq.CW = 0] = "CW", qq[qq.CCW = 1] = "CCW"
+    }(Yq || (Yq = {}));
+    class mq {
+      static Interpolate(qq, Eq, gq, Yq, lq) {
+        if (0 === qq) return 0;
+        const Oq = 1 - 3 * Yq + 3 * Eq,
+          mq = 3 * Yq - 6 * Eq,
+          xq = 3 * Eq;
+        let Aq = qq;
+        for (let cq = 0; cq < 5; cq++) {
+          const Eq = Aq * Aq;
+          Aq -= (Oq * (Eq * Aq) + mq * Eq + xq * Aq - qq) * (1 / (3 * Oq * Eq + 2 * mq * Aq + xq)), Aq = Math.min(1, Math.max(0, Aq))
         }
-        return 3 * Math.pow(1 - fT, 2) * fT * cT + 3 * (1 - fT) * Math.pow(fT, 2) * MT + Math.pow(fT, 3)
+        return 3 * Math.pow(1 - Aq, 2) * Aq * gq + 3 * (1 - Aq) * Math.pow(Aq, 2) * lq + Math.pow(Aq, 3)
       }
     }
-    class yT {
-      constructor(TT) {
-        this._radians = TT, this._radians < 0 && (this._radians += 2 * Math.PI)
+    class xq {
+      constructor(qq) {
+        this._radians = qq, this._radians < 0 && (this._radians += 2 * Math.PI)
       }
       degrees() {
         return 180 * this._radians / Math.PI
@@ -36,242 +36,242 @@ export const modules = {
       radians() {
         return this._radians
       }
-      static BetweenTwoPoints(TT, kT) {
-        const cT = kT.subtract(TT),
-          lT = Math.atan2(cT.y, cT.x);
-        return new yT(lT)
+      static BetweenTwoPoints(qq, Eq) {
+        const gq = Eq.subtract(qq),
+          Yq = Math.atan2(gq.y, gq.x);
+        return new xq(Yq)
       }
-      static BetweenTwoVectors(TT, kT) {
-        let cT = TT.lengthSquared() * kT.lengthSquared();
-        if (0 === cT) return new yT(Math.PI / 2);
-        cT = Math.sqrt(cT);
-        let lT = TT.dot(kT) / cT;
-        lT = (0, MT.Clamp)(lT, -1, 1);
-        const KT = Math.acos(lT);
-        return new yT(KT)
+      static BetweenTwoVectors(qq, Eq) {
+        let gq = qq.lengthSquared() * Eq.lengthSquared();
+        if (0 === gq) return new xq(Math.PI / 2);
+        gq = Math.sqrt(gq);
+        let Yq = qq.dot(Eq) / gq;
+        Yq = (0, lq.Clamp)(Yq, -1, 1);
+        const Oq = Math.acos(Yq);
+        return new xq(Oq)
       }
-      static FromRadians(TT) {
-        return new yT(TT)
+      static FromRadians(qq) {
+        return new xq(qq)
       }
-      static FromDegrees(TT) {
-        return new yT(TT * Math.PI / 180)
-      }
-    }
-    class fT {
-      constructor(TT, kT, cT) {
-        this.startPoint = TT, this.midPoint = kT, this.endPoint = cT;
-        const lT = Math.pow(kT.x, 2) + Math.pow(kT.y, 2),
-          MT = (Math.pow(TT.x, 2) + Math.pow(TT.y, 2) - lT) / 2,
-          OT = (lT - Math.pow(cT.x, 2) - Math.pow(cT.y, 2)) / 2,
-          fT = (TT.x - kT.x) * (kT.y - cT.y) - (kT.x - cT.x) * (TT.y - kT.y);
-        this.centerPoint = new KT.i((MT * (kT.y - cT.y) - OT * (TT.y - kT.y)) / fT, ((TT.x - kT.x) * OT - (kT.x - cT.x) * MT) / fT), this.radius = this.centerPoint.subtract(this.startPoint).length(), this.startAngle = yT.BetweenTwoPoints(this.centerPoint, this.startPoint);
-        const xT = this.startAngle.degrees();
-        let IT = yT.BetweenTwoPoints(this.centerPoint, this.midPoint).degrees(),
-          AT = yT.BetweenTwoPoints(this.centerPoint, this.endPoint).degrees();
-        IT - xT > 180 && (IT -= 360), IT - xT < -180 && (IT += 360), AT - IT > 180 && (AT -= 360), AT - IT < -180 && (AT += 360), this.orientation = IT - xT < 0 ? 0 : 1, this.angle = yT.FromDegrees(0 === this.orientation ? xT - AT : AT - xT)
+      static FromDegrees(qq) {
+        return new xq(qq * Math.PI / 180)
       }
     }
-    class xT {
-      constructor(TT, kT) {
-        this._points = new Array, this._length = 0, this.closed = !1, this._points.push(new KT.i(TT, kT))
+    class Aq {
+      constructor(qq, Eq, gq) {
+        this.startPoint = qq, this.midPoint = Eq, this.endPoint = gq;
+        const Yq = Math.pow(Eq.x, 2) + Math.pow(Eq.y, 2),
+          lq = (Math.pow(qq.x, 2) + Math.pow(qq.y, 2) - Yq) / 2,
+          mq = (Yq - Math.pow(gq.x, 2) - Math.pow(gq.y, 2)) / 2,
+          Aq = (qq.x - Eq.x) * (Eq.y - gq.y) - (Eq.x - gq.x) * (qq.y - Eq.y);
+        this.centerPoint = new Oq.p((lq * (Eq.y - gq.y) - mq * (qq.y - Eq.y)) / Aq, ((qq.x - Eq.x) * mq - (Eq.x - gq.x) * lq) / Aq), this.radius = this.centerPoint.subtract(this.startPoint).length(), this.startAngle = xq.BetweenTwoPoints(this.centerPoint, this.startPoint);
+        const cq = this.startAngle.degrees();
+        let uq = xq.BetweenTwoPoints(this.centerPoint, this.midPoint).degrees(),
+          Bq = xq.BetweenTwoPoints(this.centerPoint, this.endPoint).degrees();
+        uq - cq > 180 && (uq -= 360), uq - cq < -180 && (uq += 360), Bq - uq > 180 && (Bq -= 360), Bq - uq < -180 && (Bq += 360), this.orientation = uq - cq < 0 ? 0 : 1, this.angle = xq.FromDegrees(0 === this.orientation ? cq - Bq : Bq - cq)
       }
-      addLineTo(TT, kT) {
-        if (this.closed) return this;
-        const cT = new KT.i(TT, kT),
-          lT = this._points[this._points.length - 1];
-        return this._points.push(cT), this._length += cT.subtract(lT).length(), this
+    }
+    class cq {
+      constructor(qq, Eq) {
+        this._points = new Array, this._length = 0, this.closed = !1, this._points.push(new Oq.p(qq, Eq))
       }
-      addArcTo(TT, kT, cT, lT) {
-        let MT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 36;
+      addLineTo(qq, Eq) {
         if (this.closed) return this;
-        const OT = this._points[this._points.length - 1],
-          yT = new KT.i(TT, kT),
-          xT = new KT.i(cT, lT),
-          IT = new fT(OT, yT, xT);
-        let AT = IT.angle.radians() / MT;
-        0 === IT.orientation && (AT *= -1);
-        let CT = IT.startAngle.radians() + AT;
-        for (let KT = 0; KT < MT; KT++) {
-          const TT = Math.cos(CT) * IT.radius + IT.centerPoint.x,
-            kT = Math.sin(CT) * IT.radius + IT.centerPoint.y;
-          this.addLineTo(TT, kT), CT += AT
+        const gq = new Oq.p(qq, Eq),
+          Yq = this._points[this._points.length - 1];
+        return this._points.push(gq), this._length += gq.subtract(Yq).length(), this
+      }
+      addArcTo(qq, Eq, gq, Yq) {
+        let lq = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 36;
+        if (this.closed) return this;
+        const mq = this._points[this._points.length - 1],
+          xq = new Oq.p(qq, Eq),
+          cq = new Oq.p(gq, Yq),
+          uq = new Aq(mq, xq, cq);
+        let Bq = uq.angle.radians() / lq;
+        0 === uq.orientation && (Bq *= -1);
+        let Wq = uq.startAngle.radians() + Bq;
+        for (let Oq = 0; Oq < lq; Oq++) {
+          const qq = Math.cos(Wq) * uq.radius + uq.centerPoint.x,
+            Eq = Math.sin(Wq) * uq.radius + uq.centerPoint.y;
+          this.addLineTo(qq, Eq), Wq += Bq
         }
         return this
       }
-      addQuadraticCurveTo(TT, kT, cT, lT) {
-        let MT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 36;
+      addQuadraticCurveTo(qq, Eq, gq, Yq) {
+        let lq = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 36;
         if (this.closed) return this;
-        const KT = (TT, kT, cT, lT) => (1 - TT) * (1 - TT) * kT + 2 * TT * (1 - TT) * cT + TT * TT * lT,
-          OT = this._points[this._points.length - 1];
-        for (let yT = 0; yT <= MT; yT++) {
-          const fT = yT / MT,
-            xT = KT(fT, OT.x, TT, cT),
-            IT = KT(fT, OT.y, kT, lT);
-          this.addLineTo(xT, IT)
+        const Oq = (qq, Eq, gq, Yq) => (1 - qq) * (1 - qq) * Eq + 2 * qq * (1 - qq) * gq + qq * qq * Yq,
+          mq = this._points[this._points.length - 1];
+        for (let xq = 0; xq <= lq; xq++) {
+          const Aq = xq / lq,
+            cq = Oq(Aq, mq.x, qq, gq),
+            uq = Oq(Aq, mq.y, Eq, Yq);
+          this.addLineTo(cq, uq)
         }
         return this
       }
-      addBezierCurveTo(TT, kT, cT, lT, MT, KT) {
-        let OT = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 36;
+      addBezierCurveTo(qq, Eq, gq, Yq, lq, Oq) {
+        let mq = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 36;
         if (this.closed) return this;
-        const yT = (TT, kT, cT, lT, MT) => (1 - TT) * (1 - TT) * (1 - TT) * kT + 3 * TT * (1 - TT) * (1 - TT) * cT + 3 * TT * TT * (1 - TT) * lT + TT * TT * TT * MT,
-          fT = this._points[this._points.length - 1];
-        for (let xT = 0; xT <= OT; xT++) {
-          const IT = xT / OT,
-            AT = yT(IT, fT.x, TT, cT, MT),
-            CT = yT(IT, fT.y, kT, lT, KT);
-          this.addLineTo(AT, CT)
+        const xq = (qq, Eq, gq, Yq, lq) => (1 - qq) * (1 - qq) * (1 - qq) * Eq + 3 * qq * (1 - qq) * (1 - qq) * gq + 3 * qq * qq * (1 - qq) * Yq + qq * qq * qq * lq,
+          Aq = this._points[this._points.length - 1];
+        for (let cq = 0; cq <= mq; cq++) {
+          const uq = cq / mq,
+            Bq = xq(uq, Aq.x, qq, gq, lq),
+            Wq = xq(uq, Aq.y, Eq, Yq, Oq);
+          this.addLineTo(Bq, Wq)
         }
         return this
       }
-      isPointInside(TT) {
-        let kT = !1;
-        const cT = this._points.length;
-        for (let lT = cT - 1, MT = 0; MT < cT; lT = MT++) {
-          let cT = this._points[lT],
-            KT = this._points[MT],
-            OT = KT.x - cT.x,
-            yT = KT.y - cT.y;
-          if (Math.abs(yT) > Number.EPSILON) {
-            if (yT < 0 && (cT = this._points[MT], OT = -OT, KT = this._points[lT], yT = -yT), TT.y < cT.y || TT.y > KT.y) continue;
-            if (TT.y === cT.y && TT.x === cT.x) return !0;
+      isPointInside(qq) {
+        let Eq = !1;
+        const gq = this._points.length;
+        for (let Yq = gq - 1, lq = 0; lq < gq; Yq = lq++) {
+          let gq = this._points[Yq],
+            Oq = this._points[lq],
+            mq = Oq.x - gq.x,
+            xq = Oq.y - gq.y;
+          if (Math.abs(xq) > Number.EPSILON) {
+            if (xq < 0 && (gq = this._points[lq], mq = -mq, Oq = this._points[Yq], xq = -xq), qq.y < gq.y || qq.y > Oq.y) continue;
+            if (qq.y === gq.y && qq.x === gq.x) return !0;
             {
-              const lT = yT * (TT.x - cT.x) - OT * (TT.y - cT.y);
-              if (0 === lT) return !0;
-              if (lT < 0) continue;
-              kT = !kT
+              const Yq = xq * (qq.x - gq.x) - mq * (qq.y - gq.y);
+              if (0 === Yq) return !0;
+              if (Yq < 0) continue;
+              Eq = !Eq
             }
           } else {
-            if (TT.y !== cT.y) continue;
-            if (KT.x <= TT.x && TT.x <= cT.x || cT.x <= TT.x && TT.x <= KT.x) return !0
+            if (qq.y !== gq.y) continue;
+            if (Oq.x <= qq.x && qq.x <= gq.x || gq.x <= qq.x && qq.x <= Oq.x) return !0
           }
         }
-        return kT
+        return Eq
       }
       close() {
         return this.closed = !0, this
       }
       length() {
-        let TT = this._length;
+        let qq = this._length;
         if (this.closed) {
-          const kT = this._points[this._points.length - 1];
-          TT += this._points[0].subtract(kT).length()
+          const Eq = this._points[this._points.length - 1];
+          qq += this._points[0].subtract(Eq).length()
         }
-        return TT
+        return qq
       }
       area() {
-        const TT = this._points.length;
-        let kT = 0;
-        for (let cT = TT - 1, lT = 0; lT < TT; cT = lT++) kT += this._points[cT].x * this._points[lT].y - this._points[lT].x * this._points[cT].y;
-        return .5 * kT
+        const qq = this._points.length;
+        let Eq = 0;
+        for (let gq = qq - 1, Yq = 0; Yq < qq; gq = Yq++) Eq += this._points[gq].x * this._points[Yq].y - this._points[Yq].x * this._points[gq].y;
+        return .5 * Eq
       }
       getPoints() {
         return this._points
       }
-      getPointAtLengthPosition(TT) {
-        if (TT < 0 || TT > 1) return KT.i.Zero();
-        const kT = TT * this.length();
-        let cT = 0;
-        for (let lT = 0; lT < this._points.length; lT++) {
-          const TT = (lT + 1) % this._points.length,
-            MT = this._points[lT],
-            OT = this._points[TT].subtract(MT),
-            yT = OT.length() + cT;
-          if (kT >= cT && kT <= yT) {
-            const TT = OT.normalize(),
-              lT = kT - cT;
-            return new KT.i(MT.x + TT.x * lT, MT.y + TT.y * lT)
+      getPointAtLengthPosition(qq) {
+        if (qq < 0 || qq > 1) return Oq.p.Zero();
+        const Eq = qq * this.length();
+        let gq = 0;
+        for (let Yq = 0; Yq < this._points.length; Yq++) {
+          const qq = (Yq + 1) % this._points.length,
+            lq = this._points[Yq],
+            mq = this._points[qq].subtract(lq),
+            xq = mq.length() + gq;
+          if (Eq >= gq && Eq <= xq) {
+            const qq = mq.normalize(),
+              Yq = Eq - gq;
+            return new Oq.p(lq.x + qq.x * Yq, lq.y + qq.y * Yq)
           }
-          cT = yT
+          gq = xq
         }
-        return KT.i.Zero()
+        return Oq.p.Zero()
       }
-      static StartingAt(TT, kT) {
-        return new xT(TT, kT)
+      static StartingAt(qq, Eq) {
+        return new cq(qq, Eq)
       }
     }
-    class IT {
-      static CreateQuadraticBezier(TT, kT, cT, lT) {
-        lT = lT > 2 ? lT : 3;
-        const MT = [],
-          OT = (TT, kT, cT, lT) => (1 - TT) * (1 - TT) * kT + 2 * TT * (1 - TT) * cT + TT * TT * lT;
-        for (let yT = 0; yT <= lT; yT++) MT.push(new KT.m(OT(yT / lT, TT.x, kT.x, cT.x), OT(yT / lT, TT.y, kT.y, cT.y), OT(yT / lT, TT.z, kT.z, cT.z)));
-        return new IT(MT)
+    class uq {
+      static CreateQuadraticBezier(qq, Eq, gq, Yq) {
+        Yq = Yq > 2 ? Yq : 3;
+        const lq = [],
+          mq = (qq, Eq, gq, Yq) => (1 - qq) * (1 - qq) * Eq + 2 * qq * (1 - qq) * gq + qq * qq * Yq;
+        for (let xq = 0; xq <= Yq; xq++) lq.push(new Oq.q(mq(xq / Yq, qq.x, Eq.x, gq.x), mq(xq / Yq, qq.y, Eq.y, gq.y), mq(xq / Yq, qq.z, Eq.z, gq.z)));
+        return new uq(lq)
       }
-      static CreateCubicBezier(TT, kT, cT, lT, MT) {
-        MT = MT > 3 ? MT : 4;
-        const OT = [],
-          yT = (TT, kT, cT, lT, MT) => (1 - TT) * (1 - TT) * (1 - TT) * kT + 3 * TT * (1 - TT) * (1 - TT) * cT + 3 * TT * TT * (1 - TT) * lT + TT * TT * TT * MT;
-        for (let fT = 0; fT <= MT; fT++) OT.push(new KT.m(yT(fT / MT, TT.x, kT.x, cT.x, lT.x), yT(fT / MT, TT.y, kT.y, cT.y, lT.y), yT(fT / MT, TT.z, kT.z, cT.z, lT.z)));
-        return new IT(OT)
+      static CreateCubicBezier(qq, Eq, gq, Yq, lq) {
+        lq = lq > 3 ? lq : 4;
+        const mq = [],
+          xq = (qq, Eq, gq, Yq, lq) => (1 - qq) * (1 - qq) * (1 - qq) * Eq + 3 * qq * (1 - qq) * (1 - qq) * gq + 3 * qq * qq * (1 - qq) * Yq + qq * qq * qq * lq;
+        for (let Aq = 0; Aq <= lq; Aq++) mq.push(new Oq.q(xq(Aq / lq, qq.x, Eq.x, gq.x, Yq.x), xq(Aq / lq, qq.y, Eq.y, gq.y, Yq.y), xq(Aq / lq, qq.z, Eq.z, gq.z, Yq.z)));
+        return new uq(mq)
       }
-      static CreateHermiteSpline(TT, kT, cT, lT, MT) {
-        const OT = [],
-          yT = 1 / MT;
-        for (let fT = 0; fT <= MT; fT++) OT.push(KT.m.Hermite(TT, kT, cT, lT, fT * yT));
-        return new IT(OT)
+      static CreateHermiteSpline(qq, Eq, gq, Yq, lq) {
+        const mq = [],
+          xq = 1 / lq;
+        for (let Aq = 0; Aq <= lq; Aq++) mq.push(Oq.q.Hermite(qq, Eq, gq, Yq, Aq * xq));
+        return new uq(mq)
       }
-      static CreateCatmullRomSpline(TT, kT, cT) {
-        const lT = [],
-          MT = 1 / kT;
-        let OT = 0;
-        if (cT) {
-          const cT = TT.length;
-          for (let yT = 0; yT < cT; yT++) {
-            OT = 0;
-            for (let fT = 0; fT < kT; fT++) lT.push(KT.m.CatmullRom(TT[yT % cT], TT[(yT + 1) % cT], TT[(yT + 2) % cT], TT[(yT + 3) % cT], OT)), OT += MT
+      static CreateCatmullRomSpline(qq, Eq, gq) {
+        const Yq = [],
+          lq = 1 / Eq;
+        let mq = 0;
+        if (gq) {
+          const gq = qq.length;
+          for (let xq = 0; xq < gq; xq++) {
+            mq = 0;
+            for (let Aq = 0; Aq < Eq; Aq++) Yq.push(Oq.q.CatmullRom(qq[xq % gq], qq[(xq + 1) % gq], qq[(xq + 2) % gq], qq[(xq + 3) % gq], mq)), mq += lq
           }
-          lT.push(lT[0])
+          Yq.push(Yq[0])
         } else {
-          const cT = [];
-          cT.push(TT[0].clone()), cT.push(...TT), cT.push(TT[TT.length - 1].clone());
-          let yT = 0;
-          for (; yT < cT.length - 3; yT++) {
-            OT = 0;
-            for (let TT = 0; TT < kT; TT++) lT.push(KT.m.CatmullRom(cT[yT], cT[yT + 1], cT[yT + 2], cT[yT + 3], OT)), OT += MT
+          const gq = [];
+          gq.push(qq[0].clone()), gq.push(...qq), gq.push(qq[qq.length - 1].clone());
+          let xq = 0;
+          for (; xq < gq.length - 3; xq++) {
+            mq = 0;
+            for (let qq = 0; qq < Eq; qq++) Yq.push(Oq.q.CatmullRom(gq[xq], gq[xq + 1], gq[xq + 2], gq[xq + 3], mq)), mq += lq
           }
-          yT--, lT.push(KT.m.CatmullRom(cT[yT], cT[yT + 1], cT[yT + 2], cT[yT + 3], OT))
+          xq--, Yq.push(Oq.q.CatmullRom(gq[xq], gq[xq + 1], gq[xq + 2], gq[xq + 3], mq))
         }
-        return new IT(lT)
+        return new uq(Yq)
       }
-      static ArcThru3Points(TT, kT, cT) {
-        let lT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 32,
-          MT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-          OT = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-        const yT = [],
-          fT = kT.subtract(TT),
-          xT = cT.subtract(kT),
-          AT = TT.subtract(cT),
-          CT = KT.m.Cross(fT, xT),
-          jT = CT.length();
-        if (jT < Math.pow(10, -8)) return new IT(yT);
-        const vT = fT.lengthSquared(),
-          tT = xT.lengthSquared(),
-          hT = AT.lengthSquared(),
-          NT = CT.lengthSquared(),
-          QT = .5 * fT.length() * xT.length() * AT.length() / jT,
-          ST = -.5 * tT * KT.m.Dot(fT, AT) / NT,
-          DT = -.5 * hT * KT.m.Dot(fT, xT) / NT,
-          aT = -.5 * vT * KT.m.Dot(xT, AT) / NT,
-          FT = TT.scale(ST).add(kT.scale(DT)).add(cT.scale(aT)),
-          rT = TT.subtract(FT).normalize(),
-          PT = KT.m.Cross(CT, rT).normalize();
-        if (OT) {
-          const kT = 2 * Math.PI / lT;
-          for (let TT = 0; TT <= 2 * Math.PI; TT += kT) yT.push(FT.add(rT.scale(QT * Math.cos(TT)).add(PT.scale(QT * Math.sin(TT)))));
-          yT.push(TT)
+      static ArcThru3Points(qq, Eq, gq) {
+        let Yq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 32,
+          lq = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+          mq = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+        const xq = [],
+          Aq = Eq.subtract(qq),
+          cq = gq.subtract(Eq),
+          Bq = qq.subtract(gq),
+          Wq = Oq.q.Cross(Aq, cq),
+          Nq = Wq.length();
+        if (Nq < Math.pow(10, -8)) return new uq(xq);
+        const aq = Aq.lengthSquared(),
+          Vq = cq.lengthSquared(),
+          dq = Bq.lengthSquared(),
+          jq = Wq.lengthSquared(),
+          Hq = .5 * Aq.length() * cq.length() * Bq.length() / Nq,
+          oq = -.5 * Vq * Oq.q.Dot(Aq, Bq) / jq,
+          Pq = -.5 * dq * Oq.q.Dot(Aq, cq) / jq,
+          Qq = -.5 * aq * Oq.q.Dot(cq, Bq) / jq,
+          yq = qq.scale(oq).add(Eq.scale(Pq)).add(gq.scale(Qq)),
+          tq = qq.subtract(yq).normalize(),
+          rq = Oq.q.Cross(Wq, tq).normalize();
+        if (mq) {
+          const Eq = 2 * Math.PI / Yq;
+          for (let qq = 0; qq <= 2 * Math.PI; qq += Eq) xq.push(yq.add(tq.scale(Hq * Math.cos(qq)).add(rq.scale(Hq * Math.sin(qq)))));
+          xq.push(qq)
         } else {
-          const kT = 1 / lT;
-          let KT, OT = 0;
+          const Eq = 1 / Yq;
+          let Oq, mq = 0;
           do {
-            KT = FT.add(rT.scale(QT * Math.cos(OT)).add(PT.scale(QT * Math.sin(OT)))), yT.push(KT), OT += kT
-          } while (!KT.equalsWithEpsilon(cT, QT * kT * 1.1));
-          yT.push(cT), MT && yT.push(TT)
+            Oq = yq.add(tq.scale(Hq * Math.cos(mq)).add(rq.scale(Hq * Math.sin(mq)))), xq.push(Oq), mq += Eq
+          } while (!Oq.equalsWithEpsilon(gq, Hq * Eq * 1.1));
+          xq.push(gq), lq && xq.push(qq)
         }
-        return new IT(yT)
+        return new uq(xq)
       }
-      constructor(TT) {
-        this._length = 0, this._points = TT, this._length = this._computeLength(TT)
+      constructor(qq) {
+        this._length = 0, this._points = qq, this._length = this._computeLength(qq)
       }
       getPoints() {
         return this._points
@@ -279,121 +279,121 @@ export const modules = {
       length() {
         return this._length
       }
-      continue (TT) {
-        const kT = this._points[this._points.length - 1],
-          cT = this._points.slice(),
-          lT = TT.getPoints();
-        for (let MT = 1; MT < lT.length; MT++) cT.push(lT[MT].subtract(lT[0]).add(kT));
-        return new IT(cT)
+      continue (qq) {
+        const Eq = this._points[this._points.length - 1],
+          gq = this._points.slice(),
+          Yq = qq.getPoints();
+        for (let lq = 1; lq < Yq.length; lq++) gq.push(Yq[lq].subtract(Yq[0]).add(Eq));
+        return new uq(gq)
       }
-      _computeLength(TT) {
-        let kT = 0;
-        for (let cT = 1; cT < TT.length; cT++) kT += TT[cT].subtract(TT[cT - 1]).length();
-        return kT
+      _computeLength(qq) {
+        let Eq = 0;
+        for (let gq = 1; gq < qq.length; gq++) Eq += qq[gq].subtract(qq[gq - 1]).length();
+        return Eq
       }
     }
   },
-  38507: (TT, kT, cT) => {
-    cT.d(kT, {
-      d: () => KT
+  38649: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => Oq
     });
-    var lT = cT(38512);
-    const MT = (TT, kT, cT) => TT ? TT.getClassName && "Mesh" === TT.getClassName() ? null : !TT.getClassName || "SubMesh" !== TT.getClassName() && "PhysicsBody" !== TT.getClassName() ? TT.clone ? TT.clone() : Array.isArray(TT) ? TT.slice() : cT && "object" === typeof TT ? {
-      ...TT
-    } : null : TT.clone(kT) : null;
-    class KT {
-      static DeepCopy(TT, kT, cT, KT) {
-        let OT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const yT = function(TT) {
-          const kT = [];
+    var Yq = gq(38653);
+    const lq = (qq, Eq, gq) => qq ? qq.getClassName && "Mesh" === qq.getClassName() ? null : !qq.getClassName || "SubMesh" !== qq.getClassName() && "PhysicsBody" !== qq.getClassName() ? qq.clone ? qq.clone() : Array.isArray(qq) ? qq.slice() : gq && "object" === typeof qq ? {
+      ...qq
+    } : null : qq.clone(Eq) : null;
+    class Oq {
+      static DeepCopy(qq, Eq, gq, Oq) {
+        let mq = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const xq = function(qq) {
+          const Eq = [];
           do {
-            const cT = Object.getOwnPropertyNames(TT);
-            for (const TT of cT) - 1 === kT.indexOf(TT) && kT.push(TT)
-          } while (TT = Object.getPrototypeOf(TT));
-          return kT
-        }(TT);
-        for (const xT of yT) {
-          if ("_" === xT[0] && (!KT || -1 === KT.indexOf(xT))) continue;
-          if (xT.endsWith("Observable")) continue;
-          if (cT && -1 !== cT.indexOf(xT)) continue;
-          const yT = TT[xT],
-            IT = typeof yT;
-          if ("function" !== IT) try {
-            if ("object" === IT)
-              if (yT instanceof Uint8Array) kT[xT] = Uint8Array.from(yT);
-              else if (yT instanceof Array) {
-              if (kT[xT] = [], yT.length > 0)
-                if ("object" == typeof yT[0])
-                  for (let TT = 0; TT < yT.length; TT++) {
-                    const cT = MT(yT[TT], kT, OT); - 1 === kT[xT].indexOf(cT) && kT[xT].push(cT)
-                  } else kT[xT] = yT.slice(0)
-            } else kT[xT] = MT(yT, kT, OT);
-            else kT[xT] = yT
-          } catch (fT) {
-            lT.e.Warn(fT.message)
+            const gq = Object.getOwnPropertyNames(qq);
+            for (const qq of gq) - 1 === Eq.indexOf(qq) && Eq.push(qq)
+          } while (qq = Object.getPrototypeOf(qq));
+          return Eq
+        }(qq);
+        for (const cq of xq) {
+          if ("_" === cq[0] && (!Oq || -1 === Oq.indexOf(cq))) continue;
+          if (cq.endsWith("Observable")) continue;
+          if (gq && -1 !== gq.indexOf(cq)) continue;
+          const xq = qq[cq],
+            uq = typeof xq;
+          if ("function" !== uq) try {
+            if ("object" === uq)
+              if (xq instanceof Uint8Array) Eq[cq] = Uint8Array.from(xq);
+              else if (xq instanceof Array) {
+              if (Eq[cq] = [], xq.length > 0)
+                if ("object" == typeof xq[0])
+                  for (let qq = 0; qq < xq.length; qq++) {
+                    const gq = lq(xq[qq], Eq, mq); - 1 === Eq[cq].indexOf(gq) && Eq[cq].push(gq)
+                  } else Eq[cq] = xq.slice(0)
+            } else Eq[cq] = lq(xq, Eq, mq);
+            else Eq[cq] = xq
+          } catch (Aq) {
+            Yq.b.Warn(Aq.message)
           }
         }
       }
     }
   },
-  38512: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => lT
+  38653: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => Yq
     });
-    class lT {
-      static _CheckLimit(TT, kT) {
-        let cT = lT._LogLimitOutputs[TT];
-        return cT ? cT.current++ : (cT = {
-          limit: kT,
+    class Yq {
+      static _CheckLimit(qq, Eq) {
+        let gq = Yq._LogLimitOutputs[qq];
+        return gq ? gq.current++ : (gq = {
+          limit: Eq,
           current: 1
-        }, lT._LogLimitOutputs[TT] = cT), cT.current <= cT.limit
+        }, Yq._LogLimitOutputs[qq] = gq), gq.current <= gq.limit
       }
-      static _GenerateLimitMessage(TT) {
-        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const cT = lT._LogLimitOutputs[TT];
-        if (!cT || !lT.MessageLimitReached) return;
-        const MT = this._Levels[kT];
-        cT.current === cT.limit && lT[MT.name](lT.MessageLimitReached.replace(/%LIMIT%/g, "" + cT.limit).replace(/%TYPE%/g, MT.name ?? ""))
+      static _GenerateLimitMessage(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const gq = Yq._LogLimitOutputs[qq];
+        if (!gq || !Yq.MessageLimitReached) return;
+        const lq = this._Levels[Eq];
+        gq.current === gq.limit && Yq[lq.name](Yq.MessageLimitReached.replace(/%LIMIT%/g, "" + gq.limit).replace(/%TYPE%/g, lq.name ?? ""))
       }
-      static _AddLogEntry(TT) {
-        lT._LogCache = TT + lT._LogCache, lT.OnNewCacheEntry && lT.OnNewCacheEntry(TT)
+      static _AddLogEntry(qq) {
+        Yq._LogCache = qq + Yq._LogCache, Yq.OnNewCacheEntry && Yq.OnNewCacheEntry(qq)
       }
-      static _FormatMessage(TT) {
-        const kT = TT => TT < 10 ? "0" + TT : "" + TT,
-          cT = new Date;
-        return "[" + kT(cT.getHours()) + ":" + kT(cT.getMinutes()) + ":" + kT(cT.getSeconds()) + "]: " + TT
+      static _FormatMessage(qq) {
+        const Eq = qq => qq < 10 ? "0" + qq : "" + qq,
+          gq = new Date;
+        return "[" + Eq(gq.getHours()) + ":" + Eq(gq.getMinutes()) + ":" + Eq(gq.getSeconds()) + "]: " + qq
       }
-      static _LogDisabled(TT, kT) {}
+      static _LogDisabled(qq, Eq) {}
       static _LogEnabled() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          kT = arguments.length > 1 ? arguments[1] : void 0,
-          cT = arguments.length > 2 ? arguments[2] : void 0;
-        const MT = Array.isArray(kT) ? kT[0] : kT;
-        if (void 0 !== cT && !lT._CheckLimit(MT, cT)) return;
-        const KT = lT._FormatMessage(MT),
-          OT = this._Levels[TT],
-          yT = Array.isArray(kT) ? kT.slice(1) : [];
-        OT.logFunc && OT.logFunc("BJS - " + KT, ...yT);
-        const fT = `<div style='color:${OT.color}'>${KT}</div><br>`;
-        lT._AddLogEntry(fT), lT._GenerateLimitMessage(MT, TT)
+        let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          Eq = arguments.length > 1 ? arguments[1] : void 0,
+          gq = arguments.length > 2 ? arguments[2] : void 0;
+        const lq = Array.isArray(Eq) ? Eq[0] : Eq;
+        if (void 0 !== gq && !Yq._CheckLimit(lq, gq)) return;
+        const Oq = Yq._FormatMessage(lq),
+          mq = this._Levels[qq],
+          xq = Array.isArray(Eq) ? Eq.slice(1) : [];
+        mq.logFunc && mq.logFunc("BJS - " + Oq, ...xq);
+        const Aq = `<div style='color:${mq.color}'>${Oq}</div><br>`;
+        Yq._AddLogEntry(Aq), Yq._GenerateLimitMessage(lq, qq)
       }
       static get LogCache() {
-        return lT._LogCache
+        return Yq._LogCache
       }
       static ClearLogCache() {
-        lT._LogCache = "", lT._LogLimitOutputs = {}, lT.errorsCount = 0
+        Yq._LogCache = "", Yq._LogLimitOutputs = {}, Yq.errorsCount = 0
       }
-      static set LogLevels(TT) {
-        lT.Log = lT._LogDisabled, lT.Warn = lT._LogDisabled, lT.Error = lT._LogDisabled;
-        const kT = [lT.MessageLogLevel, lT.WarningLogLevel, lT.ErrorLogLevel];
-        for (const cT of kT)
-          if ((TT & cT) === cT) {
-            const TT = this._Levels[cT];
-            lT[TT.name] = lT._LogEnabled.bind(lT, cT)
+      static set LogLevels(qq) {
+        Yq.Log = Yq._LogDisabled, Yq.Warn = Yq._LogDisabled, Yq.Error = Yq._LogDisabled;
+        const Eq = [Yq.MessageLogLevel, Yq.WarningLogLevel, Yq.ErrorLogLevel];
+        for (const gq of Eq)
+          if ((qq & gq) === gq) {
+            const qq = this._Levels[gq];
+            Yq[qq.name] = Yq._LogEnabled.bind(Yq, gq)
           }
       }
     }
-    lT.NoneLogLevel = 0, lT.MessageLogLevel = 1, lT.WarningLogLevel = 2, lT.ErrorLogLevel = 4, lT.AllLogLevel = 7, lT.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", lT._LogCache = "", lT._LogLimitOutputs = {}, lT._Levels = [{}, {
+    Yq.NoneLogLevel = 0, Yq.MessageLogLevel = 1, Yq.WarningLogLevel = 2, Yq.ErrorLogLevel = 4, Yq.AllLogLevel = 7, Yq.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Yq._LogCache = "", Yq._LogLimitOutputs = {}, Yq._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -405,8 +405,8 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], lT.errorsCount = 0, lT.Log = lT._LogEnabled.bind(lT, lT.MessageLogLevel), lT.Warn = lT._LogEnabled.bind(lT, lT.WarningLogLevel), lT.Error = lT._LogEnabled.bind(lT, lT.ErrorLogLevel)
+    }], Yq.errorsCount = 0, Yq.Log = Yq._LogEnabled.bind(Yq, Yq.MessageLogLevel), Yq.Warn = Yq._LogEnabled.bind(Yq, Yq.WarningLogLevel), Yq.Error = Yq._LogEnabled.bind(Yq, Yq.ErrorLogLevel)
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

@@ -1,227 +1,227 @@
 export const id = 45;
 export const ids = [45];
 export const modules = {
-  42825: (TT, kT, cT) => {
-    cT.r(kT), cT.d(kT, {
-      MAX_LAYER_WIDTH: () => xT,
-      PackTextures: () => QT,
-      deviceMaxLayerWidth: () => IT,
-      layerWidthFor: () => jT,
-      packFileUrl: () => vT,
-      packFilesOf: () => NT,
-      packTerrainSources: () => tT,
-      webgl1GridColumns: () => AT,
-      webgl1LayerWidth: () => CT
+  43081: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      MAX_LAYER_WIDTH: () => cq,
+      PackTextures: () => Hq,
+      deviceMaxLayerWidth: () => uq,
+      layerWidthFor: () => Nq,
+      packFileUrl: () => aq,
+      packFilesOf: () => jq,
+      packTerrainSources: () => Vq,
+      webgl1GridColumns: () => Bq,
+      webgl1LayerWidth: () => Wq
     });
-    var lT = cT(3045),
-      MT = cT(40434),
-      KT = cT(40615),
-      OT = cT(42833),
-      yT = cT(40603),
-      fT = cT(42840);
-    const xT = {
+    var Yq = gq(3027),
+      lq = gq(40503),
+      Oq = gq(40735),
+      mq = gq(43087),
+      xq = gq(40731),
+      Aq = gq(43092);
+    const cq = {
       webgpu: 128,
       webgl: 128,
       webgl1: 64
     };
 
-    function IT(TT) {
-      return (0, lT.b)() ? Math.min(xT[TT], 64) : xT[TT]
+    function uq(qq) {
+      return (0, Yq.e)() ? Math.min(cq[qq], 64) : cq[qq]
     }
 
-    function AT(TT) {
-      const kT = Math.ceil(Math.log2(Math.max(1, TT)));
-      return 2 ** Math.ceil(kT / 2)
+    function Bq(qq) {
+      const Eq = Math.ceil(Math.log2(Math.max(1, qq)));
+      return 2 ** Math.ceil(Eq / 2)
     }
 
-    function CT(TT, kT, cT) {
-      const lT = null !== cT && cT > 0 ? cT : MT.b.limits.MAX_TEXTURE_SIZE;
-      return jT(Math.max(1, Math.floor(lT / AT(kT))), TT)
+    function Wq(qq, Eq, gq) {
+      const Yq = null !== gq && gq > 0 ? gq : lq.c.limits.MAX_TEXTURE_SIZE;
+      return Nq(Math.max(1, Math.floor(Yq / Bq(Eq))), qq)
     }
 
-    function jT(TT, kT) {
-      let cT = 1;
-      for (; 2 * cT <= Math.min(TT, kT);) cT *= 2;
-      return cT
+    function Nq(qq, Eq) {
+      let gq = 1;
+      for (; 2 * gq <= Math.min(qq, Eq);) gq *= 2;
+      return gq
     }
 
-    function vT(TT, kT) {
-      return "string" !== typeof TT || "" === TT ? null : "player" === kT || (0, OT.c)(TT) ? TT : null
+    function aq(qq, Eq) {
+      return "string" !== typeof qq || "" === qq ? null : "player" === Eq || (0, mq.d)(qq) ? qq : null
     }
-    async function tT(TT, kT, lT) {
-      const MT = await cT.e(201).then((() => cT(34029))),
+    async function Vq(qq, Eq, Yq) {
+      const lq = await gq.e(202).then((() => gq(34302))),
         {
-          sheetLayout: OT,
-          sheetWidth: fT
-        } = TT;
-      if (fT > kT) throw new Error(`the pack's atlas is ${fT} px wide, not within ${kT} px`);
-      if (!(OT.length === MT.imagesPerAtlas.length && OT.every(((TT, kT) => TT === MT.imagesPerAtlas[kT])))) {
-        const TT = `the pack's atlas is sheets of ${OT.join(", ")} layers, the built atlas's ${MT.imagesPerAtlas.join(", ")}: run npm run buildAtlas`;
-        if (OT.length < MT.imagesPerAtlas.length) throw new Error(TT);
-        console.warn(TT)
+          sheetLayout: mq,
+          sheetWidth: Aq
+        } = qq;
+      if (Aq > Eq) throw new Error(`the pack's atlas is ${Aq} px wide, not within ${Eq} px`);
+      if (!(mq.length === lq.imagesPerAtlas.length && mq.every(((qq, Eq) => qq === lq.imagesPerAtlas[Eq])))) {
+        const qq = `the pack's atlas is sheets of ${mq.join(", ")} layers, the built atlas's ${lq.imagesPerAtlas.join(", ")}: run npm run buildAtlas`;
+        if (mq.length < lq.imagesPerAtlas.length) throw new Error(qq);
+        console.warn(qq)
       }
       return {
         atlasSheets: [],
-        heldUntil: TT.heldUntil,
-        texture: kT => {
-          var cT, OT, yT;
-          return null !== (cT = null !== (OT = null !== (yT = vT(TT.terrain.texture(kT), lT)) && void 0 !== yT ? yT : MT.animatedBlockTextures[kT]) && void 0 !== OT ? OT : MT.rotatedBlockTextures[kT]) && void 0 !== cT ? cT : function(TT, kT, cT) {
-            var lT, MT;
-            const OT = null !== (lT = KT.c[TT]) && void 0 !== lT ? lT : null;
-            return null === OT ? null : null !== (MT = vT(kT.texture(TT), cT)) && void 0 !== MT ? MT : OT
-          }(kT, TT, lT)
+        heldUntil: qq.heldUntil,
+        texture: Eq => {
+          var gq, mq, xq;
+          return null !== (gq = null !== (mq = null !== (xq = aq(qq.terrain.texture(Eq), Yq)) && void 0 !== xq ? xq : lq.animatedBlockTextures[Eq]) && void 0 !== mq ? mq : lq.rotatedBlockTextures[Eq]) && void 0 !== gq ? gq : function(qq, Eq, gq) {
+            var Yq, lq;
+            const mq = null !== (Yq = Oq.c[qq]) && void 0 !== Yq ? Yq : null;
+            return null === mq ? null : null !== (lq = aq(Eq.texture(qq), gq)) && void 0 !== lq ? lq : mq
+          }(Eq, qq, Yq)
         },
-        decoded: kT => {
-          const cT = (0, yT.g)(kT);
-          return null === cT ? null : (async kT => {
-            const cT = TT.sheetPixels.at(kT);
-            if (cT) {
-              TT.sheetPixels[kT] = null;
-              const lT = fT > 0 ? cT.byteLength / (4 * fT) : 0;
+        decoded: Eq => {
+          const gq = (0, xq.h)(Eq);
+          return null === gq ? null : (async Eq => {
+            const gq = qq.sheetPixels.at(Eq);
+            if (gq) {
+              qq.sheetPixels[Eq] = null;
+              const Yq = Aq > 0 ? gq.byteLength / (4 * Aq) : 0;
               return {
-                width: fT,
-                height: lT,
-                pixels: new Uint8Array(cT.buffer, cT.byteOffset, cT.byteLength)
+                width: Aq,
+                height: Yq,
+                pixels: new Uint8Array(gq.buffer, gq.byteOffset, gq.byteLength)
               }
             }
-            const MT = TT.terrain.atlasSheets.at(kT);
-            if (void 0 === MT) throw new Error(`the pack has no atlas sheet ${kT}`);
-            const KT = vT(MT, lT);
-            if (null === KT) throw new Error(`the pack's atlas sheet ${kT} isn't a pack file`);
-            return (0, yT.m)(KT)
-          })(cT)
+            const lq = qq.terrain.atlasSheets.at(Eq);
+            if (void 0 === lq) throw new Error(`the pack has no atlas sheet ${Eq}`);
+            const Oq = aq(lq, Yq);
+            if (null === Oq) throw new Error(`the pack's atlas sheet ${Eq} isn't a pack file`);
+            return (0, xq.m)(Oq)
+          })(gq)
         }
       }
     }
-    const hT = new WeakMap;
+    const dq = new WeakMap;
 
-    function NT(TT, kT) {
-      if (null === TT) return null;
-      let cT = hT.get(TT);
-      void 0 === cT && (cT = {}, hT.set(TT, cT));
-      const lT = cT[kT];
-      if (void 0 !== lT) return lT;
+    function jq(qq, Eq) {
+      if (null === qq) return null;
+      let gq = dq.get(qq);
+      void 0 === gq && (gq = {}, dq.set(qq, gq));
+      const Yq = gq[Eq];
+      if (void 0 !== Yq) return Yq;
       const {
-        armourAtlasUrl: MT,
-        texture: KT,
-        model: OT
-      } = TT, yT = {
-        armourAtlasUrl: () => vT(MT, kT),
-        textureUrl: TT => vT(KT(TT), kT),
-        modelUrl: TT => vT(OT(TT), kT)
+        armourAtlasUrl: lq,
+        texture: Oq,
+        model: mq
+      } = qq, xq = {
+        armourAtlasUrl: () => aq(lq, Eq),
+        textureUrl: qq => aq(Oq(qq), Eq),
+        modelUrl: qq => aq(mq(qq), Eq)
       };
-      return cT[kT] = yT, yT
+      return gq[Eq] = xq, xq
     }
-    class QT {
-      constructor(TT) {
-        this.host = TT, this.assets = null, this.owner = "player", this.latest = 0, this.swapping = 0, this.ended = !1, this.maxWidth = null
+    class Hq {
+      constructor(qq) {
+        this.host = qq, this.assets = null, this.owner = "player", this.latest = 0, this.swapping = 0, this.ended = !1, this.maxWidth = null
       }
       maxLayerWidth() {
-        return this.maxWidth ??= (async (TT, kT, lT) => {
+        return this.maxWidth ??= (async (qq, Eq, Yq) => {
           const {
-            backend: MT
-          } = this.host, KT = IT(MT);
-          if ("webgl1" !== MT) return KT;
-          const [OT, yT] = await Promise.all([cT.e(201).then((() => cT(34029))), null !== (TT = null === (kT = (lT = this.host).maxTextureSize) || void 0 === kT ? void 0 : kT.call(lT)) && void 0 !== TT ? TT : null]);
-          return CT(KT, OT.imagesPerAtlas.length * Math.max(0, ...OT.imagesPerAtlas), yT)
-        })().catch((TT => {
-          throw this.maxWidth = null, TT
+            backend: lq
+          } = this.host, Oq = uq(lq);
+          if ("webgl1" !== lq) return Oq;
+          const [mq, xq] = await Promise.all([gq.e(202).then((() => gq(34302))), null !== (qq = null === (Eq = (Yq = this.host).maxTextureSize) || void 0 === Eq ? void 0 : Eq.call(Yq)) && void 0 !== qq ? qq : null]);
+          return Wq(Oq, mq.imagesPerAtlas.length * Math.max(0, ...mq.imagesPerAtlas), xq)
+        })().catch((qq => {
+          throw this.maxWidth = null, qq
         })), this.maxWidth
       }
       files() {
-        return NT(this.assets, this.owner)
+        return jq(this.assets, this.owner)
       }
       start() {
-        const TT = this.host.feed.subscribe((TT => {
-          const kT = ++this.latest;
-          this.host.settling(), this.assetsFor(TT).then((cT => this.apply(kT, cT, TT).catch((TT => {
-            this.host.warn("the texture pack landed, but reloading what it overrides failed", TT)
-          }))), (cT => {
-            this.host.warn("the texture pack's atlas couldn't be generated: the textures in stay", cT), this.settled(kT, TT, null, !0)
+        const qq = this.host.feed.subscribe((qq => {
+          const Eq = ++this.latest;
+          this.host.settling(), this.assetsFor(qq).then((gq => this.apply(Eq, gq, qq).catch((qq => {
+            this.host.warn("the texture pack landed, but reloading what it overrides failed", qq)
+          }))), (gq => {
+            this.host.warn("the texture pack's atlas couldn't be generated: the textures in stay", gq), this.settled(Eq, qq, null, !0)
           }))
         }));
         return () => {
-          TT(), this.latest++, this.ended = !0
+          qq(), this.latest++, this.ended = !0
         }
       }
-      async apply(TT, kT, cT) {
+      async apply(qq, Eq, gq) {
         const {
-          host: lT
+          host: Yq
         } = this;
-        if (TT !== this.latest || lT.stopped()) return;
-        const MT = (0, OT.k)(cT);
-        if (this.texturesIn(kT, MT) && 0 === this.swapping) return void this.settled(TT, cT, NT(kT, MT));
-        let KT;
+        if (qq !== this.latest || Yq.stopped()) return;
+        const lq = (0, mq.k)(gq);
+        if (this.texturesIn(Eq, lq) && 0 === this.swapping) return void this.settled(qq, gq, jq(Eq, lq));
+        let Oq;
         this.swapping++;
         try {
-          KT = await lT.terrain.swap((TT => {
-            var kT;
-            lT.warn(`texture pack texture ${null!==(kT=TT.name)&&void 0!==kT?kT:"(all)"} failed`, TT.error)
-          }), (async () => lT.sourcesOf ? lT.sourcesOf(kT) : null === kT ? (0, yT.j)() : tT(kT, await this.maxLayerWidth(), MT)), {
-            wholeAtlas: null !== kT,
-            wanted: () => TT === this.latest
+          Oq = await Yq.terrain.swap((qq => {
+            var Eq;
+            Yq.warn(`texture pack texture ${null!==(Eq=qq.name)&&void 0!==Eq?Eq:"(all)"} failed`, qq.error)
+          }), (async () => Yq.sourcesOf ? Yq.sourcesOf(Eq) : null === Eq ? (0, xq.k)() : Vq(Eq, await this.maxLayerWidth(), lq)), {
+            wholeAtlas: null !== Eq,
+            wanted: () => qq === this.latest
           })
-        } catch (fT) {
-          return lT.warn("the texture pack's swap failed: the textures in stay", fT), void this.settled(TT, cT, null, !0)
+        } catch (Aq) {
+          return Yq.warn("the texture pack's swap failed: the textures in stay", Aq), void this.settled(qq, gq, null, !0)
         } finally {
           this.swapping--
         }
-        if (!0 !== KT || this.ended) this.settled(TT, cT, null, !0);
+        if (!0 !== Oq || this.ended) this.settled(qq, gq, null, !0);
         else {
-          lT.landed(), this.assets = kT, this.owner = MT;
+          Yq.landed(), this.assets = Eq, this.owner = lq;
           try {
-            lT.packSwapped()
+            Yq.packSwapped()
           } finally {
-            this.settled(TT, cT, this.files())
+            this.settled(qq, gq, this.files())
           }
         }
       }
-      async assetsFor(TT) {
-        var kT;
-        return (null !== (kT = this.host.assetsOf) && void 0 !== kT ? kT : fT.g)(TT, await this.maxLayerWidth())
+      async assetsFor(qq) {
+        var Eq;
+        return (null !== (Eq = this.host.assetsOf) && void 0 !== Eq ? Eq : Aq.h)(qq, await this.maxLayerWidth())
       }
-      texturesIn(TT, kT) {
-        return TT === this.assets && (null === TT || kT === this.owner)
+      texturesIn(qq, Eq) {
+        return qq === this.assets && (null === qq || Eq === this.owner)
       }
-      settled(TT, kT, cT) {
-        let lT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        TT !== this.latest || this.ended || this.host.stopped() || this.host.settled(kT, cT, lT)
+      settled(qq, Eq, gq) {
+        let Yq = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        qq !== this.latest || this.ended || this.host.stopped() || this.host.settled(Eq, gq, Yq)
       }
     }
   },
-  42847: (TT, kT, cT) => {
-    cT.r(kT), cT.d(kT, {
-      followPagePackFiles: () => KT
+  43094: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      followPagePackFiles: () => Oq
     });
-    var lT = cT(42825),
-      MT = cT(42840);
+    var Yq = gq(43081),
+      lq = gq(43092);
 
-    function KT(TT, kT, cT, KT, OT) {
-      let yT, fT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : TT => (0, MT.g)(TT, (0, lT.deviceMaxLayerWidth)(cT)),
-        xT = 0,
-        IT = null;
-      const AT = () => {
-          if (null === IT || null !== IT.gameSource && !kT.showsPage()) return;
-          const cT = null === IT.gameSource ? IT : TT.playerState();
-          if (cT.pack === yT) return;
-          yT = cT.pack;
-          const MT = ++xT;
-          fT(cT).then((TT => {
-            MT === xT && KT((0, lT.packFilesOf)(TT, "player"))
-          }), (TT => {
-            MT === xT && (yT = void 0), OT("the texture pack's files couldn't be had for the previews: the files in stay", TT)
+    function Oq(qq, Eq, gq, Oq, mq) {
+      let xq, Aq = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : qq => (0, lq.h)(qq, (0, Yq.deviceMaxLayerWidth)(gq)),
+        cq = 0,
+        uq = null;
+      const Bq = () => {
+          if (null === uq || null !== uq.gameSource && !Eq.showsPage()) return;
+          const gq = null === uq.gameSource ? uq : qq.playerState();
+          if (gq.pack === xq) return;
+          xq = gq.pack;
+          const lq = ++cq;
+          Aq(gq).then((qq => {
+            lq === cq && Oq((0, Yq.packFilesOf)(qq, "player"))
+          }), (qq => {
+            lq === cq && (xq = void 0), mq("the texture pack's files couldn't be had for the previews: the files in stay", qq)
           }))
         },
-        CT = TT.subscribe((TT => {
-          IT = TT, AT()
+        Wq = qq.subscribe((qq => {
+          uq = qq, Bq()
         })),
-        jT = TT.onPlayerPackChange(AT),
-        vT = kT.onPageShown(AT);
+        Nq = qq.onPlayerPackChange(Bq),
+        aq = Eq.onPageShown(Bq);
       return () => {
-        CT(), jT(), vT(), xT++
+        Wq(), Nq(), aq(), cq++
       }
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

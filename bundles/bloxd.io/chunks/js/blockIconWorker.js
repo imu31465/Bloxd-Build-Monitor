@@ -1,285 +1,285 @@
 (() => {
   (() => {
     if ("undefined" !== typeof __webpack_require__) {
-      var TT = __webpack_require__.u,
-        kT = __webpack_require__.e,
-        cT = {},
-        lT = {};
-      __webpack_require__.u = function(kT) {
-        return TT(kT) + (cT.hasOwnProperty(kT) ? "?" + cT[kT] : "")
-      }, __webpack_require__.e = function(MT) {
-        return kT(MT).catch((function(kT) {
-          var KT = lT.hasOwnProperty(MT) ? lT[MT] : 4;
-          if (KT < 1) {
-            var OT = TT(MT);
-            throw kT.message = "Loading chunk " + MT + " failed after 4 retries.\n(" + OT + ")", kT.request = OT, cT[MT] = "cache-bust=" + Date.now(), setTimeout((function() {
-              delete lT[MT]
-            }), 0), kT
+      var qq = __webpack_require__.u,
+        Eq = __webpack_require__.e,
+        gq = {},
+        Yq = {};
+      __webpack_require__.u = function(Eq) {
+        return qq(Eq) + (gq.hasOwnProperty(Eq) ? "?" + gq[Eq] : "")
+      }, __webpack_require__.e = function(lq) {
+        return Eq(lq).catch((function(Eq) {
+          var Oq = Yq.hasOwnProperty(lq) ? Yq[lq] : 4;
+          if (Oq < 1) {
+            var mq = qq(lq);
+            throw Eq.message = "Loading chunk " + lq + " failed after 4 retries.\n(" + mq + ")", Eq.request = mq, gq[lq] = "cache-bust=" + Date.now(), setTimeout((function() {
+              delete Yq[lq]
+            }), 0), Eq
           }
-          return new Promise((function(TT) {
-            var kT = 4 - KT + 1;
+          return new Promise((function(qq) {
+            var Eq = 4 - Oq + 1;
             setTimeout((function() {
-              var kT = "cache-bust=" + Date.now();
-              cT[MT] = kT, lT[MT] = KT - 1, TT(__webpack_require__.e(MT))
-            }), function(TT) {
-              return 500 * Math.pow(2, TT)
-            }(kT))
+              var Eq = "cache-bust=" + Date.now();
+              gq[lq] = Eq, Yq[lq] = Oq - 1, qq(__webpack_require__.e(lq))
+            }), function(qq) {
+              return 500 * Math.pow(2, qq)
+            }(Eq))
           }))
         }))
       }
     }
   })();
-  const TT = [15, 15, 15],
-    kT = {
+  const qq = [15, 15, 15],
+    Eq = {
       top: 1,
       left: .85,
       right: .7
     };
 
-  function cT(kT, cT, lT) {
-    let MT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : TT => 0 !== kT[4 * TT + 3];
-    const KT = (TT, kT) => TT < 0 || kT < 0 || TT >= cT || kT >= cT || !MT(kT * cT + TT),
-      OT = [];
-    for (let TT = 0; TT < cT; TT++)
-      for (let kT = 0; kT < cT; kT++)
-        if (!KT(kT, TT)) TT: for (let MT = -lT; MT <= lT; MT++) {
-          const yT = lT - Math.abs(MT);
-          for (let lT = -yT; lT <= yT; lT++)
-            if (KT(kT + lT, TT + MT)) {
-              OT.push(TT * cT + kT);
-              break TT
+  function gq(Eq, gq, Yq) {
+    let lq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : qq => 0 !== Eq[4 * qq + 3];
+    const Oq = (qq, Eq) => qq < 0 || Eq < 0 || qq >= gq || Eq >= gq || !lq(Eq * gq + qq),
+      mq = [];
+    for (let qq = 0; qq < gq; qq++)
+      for (let Eq = 0; Eq < gq; Eq++)
+        if (!Oq(Eq, qq)) qq: for (let lq = -Yq; lq <= Yq; lq++) {
+          const xq = Yq - Math.abs(lq);
+          for (let Yq = -xq; Yq <= xq; Yq++)
+            if (Oq(Eq + Yq, qq + lq)) {
+              mq.push(qq * gq + Eq);
+              break qq
             }
         }
-    for (const yT of OT) kT.set(TT, 4 * yT), kT[4 * yT + 3] = 255
+    for (const xq of mq) Eq.set(qq, 4 * xq), Eq[4 * xq + 3] = 255
   }
-  const lT = Math.SQRT1_2,
-    MT = Math.sqrt(3) / 2,
-    KT = {
+  const Yq = Math.SQRT1_2,
+    lq = Math.sqrt(3) / 2,
+    Oq = {
       boxes: [
         [0, 0, 0, 1, 1, 1]
       ],
       cropFaces: !1
     },
-    OT = {
+    mq = {
       boxes: [
         [0, 0, 0, 1, .5, 1]
       ],
       cropFaces: !1
     },
-    yT = {
+    xq = {
       boxes: [
         [0, 0, 0, 1, .5, 1],
         [0, .5, 0, .5, 1, 1]
       ],
       cropFaces: !0
     };
-  const fT = 1e-6;
+  const Aq = 1e-6;
 
-  function xT(TT, kT, cT, lT) {
+  function cq(qq, Eq, gq, Yq) {
     let {
-      origin: MT,
-      across: KT,
-      down: OT,
-      texture: yT,
-      rect: [xT, IT, AT, CT],
-      shade: jT
-    } = lT;
-    const vT = KT.x * OT.y - KT.y * OT.x;
-    if (Math.abs(vT) < 1e-9) return;
-    const tT = [MT.x, MT.x + KT.x, MT.x + OT.x, MT.x + KT.x + OT.x],
-      hT = [MT.y, MT.y + KT.y, MT.y + OT.y, MT.y + KT.y + OT.y],
-      NT = Math.max(0, Math.floor(Math.min(...tT))),
-      QT = Math.min(cT - 1, Math.ceil(Math.max(...tT))),
-      ST = Math.max(0, Math.floor(Math.min(...hT))),
-      DT = Math.min(cT - 1, Math.ceil(Math.max(...hT)));
-    for (let aT = ST; aT <= DT; aT++)
-      for (let lT = NT; lT <= QT; lT++) {
-        const tT = lT + .5 - MT.x,
-          hT = aT + .5 - MT.y,
-          NT = (tT * OT.y - hT * OT.x) / vT,
-          QT = (KT.x * hT - KT.y * tT) / vT;
-        if (NT < -fT || NT > 1 + fT || QT < -fT || QT > 1 + fT) continue;
-        const ST = aT * cT + lT;
-        kT[ST] = 1;
-        const DT = xT + Math.min(Math.max(NT, 0), 1) * (AT - xT),
-          FT = IT + Math.min(Math.max(QT, 0), 1) * (CT - IT),
-          rT = Math.min(yT.width - 1, Math.floor(DT * yT.width)),
-          PT = 4 * (Math.min(yT.height - 1, Math.floor(FT * yT.height)) * yT.width + rT),
-          wT = yT.pixels[PT + 3] / 255;
-        if (0 === wT) continue;
-        const mT = 4 * ST,
-          bT = TT[mT + 3] / 255 * (1 - wT),
-          zT = wT + bT;
-        for (let kT = 0; kT < 3; kT++) TT[mT + kT] = (yT.pixels[PT + kT] * jT * wT + TT[mT + kT] * bT) / zT;
-        TT[mT + 3] = 255 * zT
+      origin: lq,
+      across: Oq,
+      down: mq,
+      texture: xq,
+      rect: [cq, uq, Bq, Wq],
+      shade: Nq
+    } = Yq;
+    const aq = Oq.x * mq.y - Oq.y * mq.x;
+    if (Math.abs(aq) < 1e-9) return;
+    const Vq = [lq.x, lq.x + Oq.x, lq.x + mq.x, lq.x + Oq.x + mq.x],
+      dq = [lq.y, lq.y + Oq.y, lq.y + mq.y, lq.y + Oq.y + mq.y],
+      jq = Math.max(0, Math.floor(Math.min(...Vq))),
+      Hq = Math.min(gq - 1, Math.ceil(Math.max(...Vq))),
+      oq = Math.max(0, Math.floor(Math.min(...dq))),
+      Pq = Math.min(gq - 1, Math.ceil(Math.max(...dq)));
+    for (let Qq = oq; Qq <= Pq; Qq++)
+      for (let Yq = jq; Yq <= Hq; Yq++) {
+        const Vq = Yq + .5 - lq.x,
+          dq = Qq + .5 - lq.y,
+          jq = (Vq * mq.y - dq * mq.x) / aq,
+          Hq = (Oq.x * dq - Oq.y * Vq) / aq;
+        if (jq < -Aq || jq > 1 + Aq || Hq < -Aq || Hq > 1 + Aq) continue;
+        const oq = Qq * gq + Yq;
+        Eq[oq] = 1;
+        const Pq = cq + Math.min(Math.max(jq, 0), 1) * (Bq - cq),
+          yq = uq + Math.min(Math.max(Hq, 0), 1) * (Wq - uq),
+          tq = Math.min(xq.width - 1, Math.floor(Pq * xq.width)),
+          rq = 4 * (Math.min(xq.height - 1, Math.floor(yq * xq.height)) * xq.width + tq),
+          vq = xq.pixels[rq + 3] / 255;
+        if (0 === vq) continue;
+        const hq = 4 * oq,
+          nq = qq[hq + 3] / 255 * (1 - vq),
+          bq = vq + nq;
+        for (let Eq = 0; Eq < 3; Eq++) qq[hq + Eq] = (xq.pixels[rq + Eq] * Nq * vq + qq[hq + Eq] * nq) / bq;
+        qq[hq + 3] = 255 * bq
       }
   }
 
-  function IT(TT, kT, cT) {
-    const lT = TT.get(kT);
-    if (void 0 === lT) throw new Error(`no ${cT} was sent for ${kT.slice(0,100)}`);
-    return lT
+  function uq(qq, Eq, gq) {
+    const Yq = qq.get(Eq);
+    if (void 0 === Yq) throw new Error(`no ${gq} was sent for ${Eq.slice(0,100)}`);
+    return Yq
   }
-  const AT = {
-      pixelsOf(TT) {
-        const kT = new OffscreenCanvas(TT.width, TT.height),
-          cT = kT.getContext("2d");
-        if (!cT) throw new Error("no 2D context");
-        return cT.drawImage(TT, 0, 0), TT.close(), {
-          width: kT.width,
-          height: kT.height,
-          pixels: cT.getImageData(0, 0, kT.width, kT.height).data
+  const Bq = {
+      pixelsOf(qq) {
+        const Eq = new OffscreenCanvas(qq.width, qq.height),
+          gq = Eq.getContext("2d");
+        if (!gq) throw new Error("no 2D context");
+        return gq.drawImage(qq, 0, 0), qq.close(), {
+          width: Eq.width,
+          height: Eq.height,
+          pixels: gq.getImageData(0, 0, Eq.width, Eq.height).data
         }
       },
-      async encode(TT, kT) {
-        const cT = new OffscreenCanvas(kT, kT),
-          lT = cT.getContext("2d");
-        if (!lT) throw new Error("no 2D context");
-        lT.putImageData(new ImageData(TT, kT, kT), 0, 0);
-        const MT = await cT.convertToBlob();
-        return new Promise(((TT, kT) => {
-          const cT = new FileReader;
-          cT.onload = () => {
-            TT(cT.result)
-          }, cT.onerror = () => {
-            var TT;
-            kT(null !== (TT = cT.error) && void 0 !== TT ? TT : new Error("the icon did not encode"))
-          }, cT.readAsDataURL(MT)
+      async encode(qq, Eq) {
+        const gq = new OffscreenCanvas(Eq, Eq),
+          Yq = gq.getContext("2d");
+        if (!Yq) throw new Error("no 2D context");
+        Yq.putImageData(new ImageData(qq, Eq, Eq), 0, 0);
+        const lq = await gq.convertToBlob();
+        return new Promise(((qq, Eq) => {
+          const gq = new FileReader;
+          gq.onload = () => {
+            qq(gq.result)
+          }, gq.onerror = () => {
+            var qq;
+            Eq(null !== (qq = gq.error) && void 0 !== qq ? qq : new Error("the icon did not encode"))
+          }, gq.readAsDataURL(lq)
         }))
       }
     },
-    CT = globalThis.WorkerGlobalScope;
-  void 0 !== CT && globalThis instanceof CT && function(TT, fT) {
-    const AT = new Map,
-      CT = new Map,
-      jT = (kT, cT, lT) => {
+    Wq = globalThis.WorkerGlobalScope;
+  void 0 !== Wq && globalThis instanceof Wq && function(qq, Aq) {
+    const Bq = new Map,
+      Wq = new Map,
+      Nq = (Eq, gq, Yq) => {
         (async () => {
           try {
-            TT.postMessage({
+            qq.postMessage({
               type: "drawn",
-              id: kT,
-              url: await fT.encode(lT(), cT)
+              id: Eq,
+              url: await Aq.encode(Yq(), gq)
             })
-          } catch (MT) {
-            TT.postMessage({
+          } catch (lq) {
+            qq.postMessage({
               type: "failed",
-              message: String(MT)
+              message: String(lq)
             })
           }
         })()
       };
-    TT.onmessage = TT => {
+    qq.onmessage = qq => {
       let {
-        data: vT
-      } = TT;
-      if ("texture" === vT.type) AT.set(vT.url, fT.pixelsOf(vT.bitmap));
-      else if ("model" === vT.type) CT.set(vT.name, {
-        geometry: vT.geometry,
-        texture: fT.pixelsOf(vT.bitmap)
+        data: aq
+      } = qq;
+      if ("texture" === aq.type) Bq.set(aq.url, Aq.pixelsOf(aq.bitmap));
+      else if ("model" === aq.type) Wq.set(aq.name, {
+        geometry: aq.geometry,
+        texture: Aq.pixelsOf(aq.bitmap)
       });
-      else if ("draw" === vT.type) {
+      else if ("draw" === aq.type) {
         const {
-          id: TT,
-          top: fT,
-          left: CT,
-          right: tT,
-          itemType: hT,
-          size: NT,
-          outlineWidth: QT
-        } = vT;
-        jT(TT, NT, (() => function(TT, KT, OT, yT) {
-          const fT = .6 * OT,
-            IT = fT * lT,
-            AT = fT * lT * .5,
-            CT = fT * MT,
-            jT = Math.max(...KT.boxes.map((TT => TT[4]))),
-            vT = IT / 2 + (OT - IT) / 2,
-            tT = AT + (OT - AT - AT - jT * CT) / 2,
-            hT = (TT, kT, cT) => ({
-              x: vT + (TT - cT) * IT,
-              y: tT - AT + (TT + cT) * AT + (jT - kT) * CT
+          id: qq,
+          top: Aq,
+          left: Wq,
+          right: Vq,
+          itemType: dq,
+          size: jq,
+          outlineWidth: Hq
+        } = aq;
+        Nq(qq, jq, (() => function(qq, Oq, mq, xq) {
+          const Aq = .6 * mq,
+            uq = Aq * Yq,
+            Bq = Aq * Yq * .5,
+            Wq = Aq * lq,
+            Nq = Math.max(...Oq.boxes.map((qq => qq[4]))),
+            aq = uq / 2 + (mq - uq) / 2,
+            Vq = Bq + (mq - Bq - Bq - Nq * Wq) / 2,
+            dq = (qq, Eq, gq) => ({
+              x: aq + (qq - gq) * uq,
+              y: Vq - Bq + (qq + gq) * Bq + (Nq - Eq) * Wq
             }),
-            NT = (TT, kT, cT, lT, MT, OT) => ({
-              origin: TT,
+            jq = (qq, Eq, gq, Yq, lq, mq) => ({
+              origin: qq,
               across: {
-                x: kT.x - TT.x,
-                y: kT.y - TT.y
+                x: Eq.x - qq.x,
+                y: Eq.y - qq.y
               },
               down: {
-                x: cT.x - TT.x,
-                y: cT.y - TT.y
+                x: gq.x - qq.x,
+                y: gq.y - qq.y
               },
-              texture: lT,
-              rect: KT.cropFaces ? MT : [0, 0, 1, 1],
-              shade: OT
+              texture: Yq,
+              rect: Oq.cropFaces ? lq : [0, 0, 1, 1],
+              shade: mq
             }),
-            QT = new Uint8ClampedArray(OT * OT * 4),
-            ST = new Uint8Array(OT * OT),
-            DT = kT;
-          for (const [kT, cT, lT, MT, aT, FT] of KT.boxes) {
-            const KT = NT(hT(MT, aT, FT), hT(MT, aT, lT), hT(MT, cT, FT), TT.right, [1 - FT, 1 - aT, 1 - lT, 1 - cT], DT.right),
-              yT = NT(hT(kT, aT, FT), hT(MT, aT, FT), hT(kT, cT, FT), TT.left, [kT, 1 - aT, MT, 1 - cT], DT.left),
-              fT = NT(hT(kT, aT, lT), hT(MT, aT, lT), hT(kT, aT, FT), TT.top, [kT, lT, MT, FT], DT.top);
-            for (const TT of [KT, yT, fT]) xT(QT, ST, OT, TT)
+            Hq = new Uint8ClampedArray(mq * mq * 4),
+            oq = new Uint8Array(mq * mq),
+            Pq = Eq;
+          for (const [Eq, gq, Yq, lq, Qq, yq] of Oq.boxes) {
+            const Oq = jq(dq(lq, Qq, yq), dq(lq, Qq, Yq), dq(lq, gq, yq), qq.right, [1 - yq, 1 - Qq, 1 - Yq, 1 - gq], Pq.right),
+              xq = jq(dq(Eq, Qq, yq), dq(lq, Qq, yq), dq(Eq, gq, yq), qq.left, [Eq, 1 - Qq, lq, 1 - gq], Pq.left),
+              Aq = jq(dq(Eq, Qq, Yq), dq(lq, Qq, Yq), dq(Eq, Qq, yq), qq.top, [Eq, Yq, lq, yq], Pq.top);
+            for (const qq of [Oq, xq, Aq]) cq(Hq, oq, mq, qq)
           }
-          return cT(QT, OT, yT, (TT => 1 === ST[TT])), QT
+          return gq(Hq, mq, xq, (qq => 1 === oq[qq])), Hq
         }({
-          top: IT(AT, fT, "texture"),
-          left: IT(AT, CT, "texture"),
-          right: IT(AT, tT, "texture")
-        }, function(TT) {
-          return "SlabBlock" === TT ? OT : "StairsBlock" === TT ? yT : KT
-        }(hT), NT, QT)))
+          top: uq(Bq, Aq, "texture"),
+          left: uq(Bq, Wq, "texture"),
+          right: uq(Bq, Vq, "texture")
+        }, function(qq) {
+          return "SlabBlock" === qq ? mq : "StairsBlock" === qq ? xq : Oq
+        }(dq), jq, Hq)))
       } else {
         const {
-          id: TT,
-          name: kT,
-          size: lT,
-          outlineWidth: MT
-        } = vT;
-        jT(TT, lT, (() => {
+          id: qq,
+          name: Eq,
+          size: Yq,
+          outlineWidth: lq
+        } = aq;
+        Nq(qq, Yq, (() => {
           const {
-            geometry: TT,
-            texture: KT
-          } = IT(CT, kT, "model");
-          return function(TT, kT, lT, MT) {
+            geometry: qq,
+            texture: Oq
+          } = uq(Wq, Eq, "model");
+          return function(qq, Eq, Yq, lq) {
             const {
-              vertices: KT,
-              uvs: OT,
-              indices: yT,
-              shades: fT
-            } = TT, xT = .03125 * lT, IT = lT - 2 * xT, AT = new Float32Array(KT.length);
-            for (let cT = 0; cT < KT.length; cT += 3) AT[cT] = xT + KT[cT] * IT, AT[cT + 1] = xT + KT[cT + 1] * IT, AT[cT + 2] = KT[cT + 2];
-            const CT = new Float32Array(lT * lT).fill(-1 / 0),
-              jT = new Uint8ClampedArray(lT * lT * 4),
-              vT = 255 * TT.alphaCutoff;
-            for (let cT = 0; cT < yT.length; cT += 3) {
-              const [TT, MT, KT] = [yT[cT], yT[cT + 1], yT[cT + 2]], [xT, IT, tT] = [3 * TT, 3 * MT, 3 * KT], [hT, NT, QT, ST, DT, aT] = [AT[xT], AT[xT + 1], AT[IT], AT[IT + 1], AT[tT], AT[tT + 1]], FT = (QT - hT) * (aT - NT) - (DT - hT) * (ST - NT);
-              if (Math.abs(FT) < 1e-9) continue;
-              const rT = fT[cT / 3],
-                [PT, wT, mT, bT, zT, JT] = [OT[2 * TT], OT[2 * TT + 1], OT[2 * MT], OT[2 * MT + 1], OT[2 * KT], OT[2 * KT + 1]],
-                oT = Math.max(0, Math.floor(Math.min(hT, QT, DT))),
-                HT = Math.min(lT - 1, Math.ceil(Math.max(hT, QT, DT))),
-                eT = Math.max(0, Math.floor(Math.min(NT, ST, aT))),
-                GT = Math.min(lT - 1, Math.ceil(Math.max(NT, ST, aT)));
-              for (let cT = eT; cT <= GT; cT++)
-                for (let TT = oT; TT <= HT; TT++) {
-                  const [MT, KT] = [TT + .5, cT + .5], OT = ((MT - hT) * (aT - NT) - (DT - hT) * (KT - NT)) / FT, yT = ((QT - hT) * (KT - NT) - (MT - hT) * (ST - NT)) / FT, fT = 1 - OT - yT;
-                  if (fT < 0 || OT < 0 || yT < 0) continue;
-                  const oT = fT * AT[xT + 2] + OT * AT[IT + 2] + yT * AT[tT + 2],
-                    HT = cT * lT + TT;
-                  if (oT <= CT[HT]) continue;
-                  const eT = Math.max(0, Math.min(kT.width - 1, Math.floor((fT * PT + OT * mT + yT * zT) * kT.width))),
-                    GT = 4 * (Math.max(0, Math.min(kT.height - 1, Math.floor((fT * wT + OT * bT + yT * JT) * kT.height))) * kT.width + eT);
-                  kT.pixels[GT + 3] < vT || (CT[HT] = oT, jT[4 * HT] = kT.pixels[GT] * rT, jT[4 * HT + 1] = kT.pixels[GT + 1] * rT, jT[4 * HT + 2] = kT.pixels[GT + 2] * rT, jT[4 * HT + 3] = 255)
+              vertices: Oq,
+              uvs: mq,
+              indices: xq,
+              shades: Aq
+            } = qq, cq = .03125 * Yq, uq = Yq - 2 * cq, Bq = new Float32Array(Oq.length);
+            for (let gq = 0; gq < Oq.length; gq += 3) Bq[gq] = cq + Oq[gq] * uq, Bq[gq + 1] = cq + Oq[gq + 1] * uq, Bq[gq + 2] = Oq[gq + 2];
+            const Wq = new Float32Array(Yq * Yq).fill(-1 / 0),
+              Nq = new Uint8ClampedArray(Yq * Yq * 4),
+              aq = 255 * qq.alphaCutoff;
+            for (let gq = 0; gq < xq.length; gq += 3) {
+              const [qq, lq, Oq] = [xq[gq], xq[gq + 1], xq[gq + 2]], [cq, uq, Vq] = [3 * qq, 3 * lq, 3 * Oq], [dq, jq, Hq, oq, Pq, Qq] = [Bq[cq], Bq[cq + 1], Bq[uq], Bq[uq + 1], Bq[Vq], Bq[Vq + 1]], yq = (Hq - dq) * (Qq - jq) - (Pq - dq) * (oq - jq);
+              if (Math.abs(yq) < 1e-9) continue;
+              const tq = Aq[gq / 3],
+                [rq, vq, hq, nq, bq, iq] = [mq[2 * qq], mq[2 * qq + 1], mq[2 * lq], mq[2 * lq + 1], mq[2 * Oq], mq[2 * Oq + 1]],
+                Zq = Math.max(0, Math.floor(Math.min(dq, Hq, Pq))),
+                fq = Math.min(Yq - 1, Math.ceil(Math.max(dq, Hq, Pq))),
+                Mq = Math.max(0, Math.floor(Math.min(jq, oq, Qq))),
+                Tq = Math.min(Yq - 1, Math.ceil(Math.max(jq, oq, Qq)));
+              for (let gq = Mq; gq <= Tq; gq++)
+                for (let qq = Zq; qq <= fq; qq++) {
+                  const [lq, Oq] = [qq + .5, gq + .5], mq = ((lq - dq) * (Qq - jq) - (Pq - dq) * (Oq - jq)) / yq, xq = ((Hq - dq) * (Oq - jq) - (lq - dq) * (oq - jq)) / yq, Aq = 1 - mq - xq;
+                  if (Aq < 0 || mq < 0 || xq < 0) continue;
+                  const Zq = Aq * Bq[cq + 2] + mq * Bq[uq + 2] + xq * Bq[Vq + 2],
+                    fq = gq * Yq + qq;
+                  if (Zq <= Wq[fq]) continue;
+                  const Mq = Math.max(0, Math.min(Eq.width - 1, Math.floor((Aq * rq + mq * hq + xq * bq) * Eq.width))),
+                    Tq = 4 * (Math.max(0, Math.min(Eq.height - 1, Math.floor((Aq * vq + mq * nq + xq * iq) * Eq.height))) * Eq.width + Mq);
+                  Eq.pixels[Tq + 3] < aq || (Wq[fq] = Zq, Nq[4 * fq] = Eq.pixels[Tq] * tq, Nq[4 * fq + 1] = Eq.pixels[Tq + 1] * tq, Nq[4 * fq + 2] = Eq.pixels[Tq + 2] * tq, Nq[4 * fq + 3] = 255)
                 }
             }
-            return cT(jT, lT, MT), jT
-          }(TT, KT, lT, MT)
+            return gq(Nq, Yq, lq), Nq
+          }(qq, Oq, Yq, lq)
         }))
       }
-    }, TT.postMessage({
+    }, qq.postMessage({
       type: "started"
     })
-  }(globalThis, AT)
+  }(globalThis, Bq)
 })();

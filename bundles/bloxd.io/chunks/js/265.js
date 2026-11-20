@@ -1,632 +1,632 @@
 export const id = 265;
 export const ids = [265];
 export const modules = {
-  40709: (TT, kT, cT) => {
-    cT.d(kT, {
-      b: () => ST,
-      d: () => eT,
-      e: () => hT,
-      i: () => NT,
-      k: () => CT,
-      m: () => tT,
-      q: () => vT,
-      u: () => jT
+  40844: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => oq,
+      e: () => Mq,
+      f: () => dq,
+      g: () => jq,
+      h: () => Wq,
+      j: () => Vq,
+      m: () => aq,
+      q: () => Nq
     });
-    var lT = cT(36892),
-      MT = cT(37093),
-      KT = cT(36937),
-      OT = cT(40718),
-      yT = cT(39846),
-      fT = cT(39638),
-      xT = cT(39675),
-      IT = cT(39645),
-      AT = cT(36949);
-    const CT = Object.freeze(new lT.f(0, 0, 0, 0)),
-      jT = Object.freeze(lT.m.Zero()),
-      vT = Object.freeze(lT.i.Zero()),
-      tT = Object.freeze(fT.e.Zero()),
-      hT = Object.freeze(MT.c.Black()),
-      NT = Object.freeze(new MT.g(0, 0, 0, 0)),
-      QT = {
+    var Yq = gq(37139),
+      lq = gq(37289),
+      Oq = gq(37158),
+      mq = gq(40851),
+      xq = gq(39960),
+      Aq = gq(39774),
+      cq = gq(39801),
+      uq = gq(39779),
+      Bq = gq(37171);
+    const Wq = Object.freeze(new Yq.h(0, 0, 0, 0)),
+      Nq = Object.freeze(Yq.q.Zero()),
+      aq = Object.freeze(Yq.p.Zero()),
+      Vq = Object.freeze(Aq.b.Zero()),
+      dq = Object.freeze(lq.d.Black()),
+      jq = Object.freeze(new lq.g(0, 0, 0, 0)),
+      Hq = {
         key: 0,
         repeatCount: 0,
-        tM: 2
+        Vq: 2
       };
-    class ST {
-      static _PrepareAnimation(TT, kT, cT, KT, OT, yT, xT, IT) {
-        let AT;
-        if (!isNaN(parseFloat(OT)) && isFinite(OT) ? AT = ST.ANIMATIONTYPE_FLOAT : OT instanceof lT.f ? AT = ST.ANIMATIONTYPE_QUATERNION : OT instanceof lT.m ? AT = ST.ANIMATIONTYPE_VECTOR3 : OT instanceof lT.i ? AT = ST.ANIMATIONTYPE_VECTOR2 : OT instanceof MT.c ? AT = ST.ANIMATIONTYPE_COLOR3 : OT instanceof MT.g ? AT = ST.ANIMATIONTYPE_COLOR4 : OT instanceof fT.e && (AT = ST.ANIMATIONTYPE_SIZE), void 0 == AT) return null;
-        const CT = new ST(TT, kT, cT, AT, xT),
-          jT = [{
+    class oq {
+      static _PrepareAnimation(qq, Eq, gq, Oq, mq, xq, cq, uq) {
+        let Bq;
+        if (!isNaN(parseFloat(mq)) && isFinite(mq) ? Bq = oq.ANIMATIONTYPE_FLOAT : mq instanceof Yq.h ? Bq = oq.ANIMATIONTYPE_QUATERNION : mq instanceof Yq.q ? Bq = oq.ANIMATIONTYPE_VECTOR3 : mq instanceof Yq.p ? Bq = oq.ANIMATIONTYPE_VECTOR2 : mq instanceof lq.d ? Bq = oq.ANIMATIONTYPE_COLOR3 : mq instanceof lq.g ? Bq = oq.ANIMATIONTYPE_COLOR4 : mq instanceof Aq.b && (Bq = oq.ANIMATIONTYPE_SIZE), void 0 == Bq) return null;
+        const Wq = new oq(qq, Eq, gq, Bq, cq),
+          Nq = [{
             frame: 0,
-            value: OT
+            value: mq
           }, {
-            frame: KT,
-            value: yT
+            frame: Oq,
+            value: xq
           }];
-        return CT.setKeys(jT), void 0 !== IT && CT.setEasingFunction(IT), CT
+        return Wq.setKeys(Nq), void 0 !== uq && Wq.setEasingFunction(uq), Wq
       }
       get runtimeAnimations() {
         return this._runtimeAnimations
       }
       get hasRunningRuntimeAnimations() {
-        for (const TT of this._runtimeAnimations)
-          if (!TT.isStopped()) return !0;
+        for (const qq of this._runtimeAnimations)
+          if (!qq.isStopped()) return !0;
         return !1
       }
-      constructor(TT, kT, cT, lT, MT, KT) {
-        this.name = TT, this.targetProperty = kT, this.framePerSecond = cT, this.dataType = lT, this.tM = MT, this.enableBlending = KT, this._easingFunction = null, this._runtimeAnimations = new Array, this._events = new Array, this.blendingSpeed = .01, this._ranges = {}, this._coreAnimation = null, this.targetPropertyPath = kT.split("."), this.dataType = lT, this.tM = void 0 === MT ? ST.ANIMATIONLOOPMODE_CYCLE : MT, this.uniqueId = ST._UniqueIdGenerator++
+      constructor(qq, Eq, gq, Yq, lq, Oq) {
+        this.name = qq, this.targetProperty = Eq, this.framePerSecond = gq, this.dataType = Yq, this.Vq = lq, this.enableBlending = Oq, this._easingFunction = null, this._runtimeAnimations = new Array, this._events = new Array, this.blendingSpeed = .01, this._ranges = {}, this._coreAnimation = null, this.targetPropertyPath = Eq.split("."), this.dataType = Yq, this.Vq = void 0 === lq ? oq.ANIMATIONLOOPMODE_CYCLE : lq, this.uniqueId = oq._UniqueIdGenerator++
       }
-      toString(TT) {
-        let kT = "Name: " + this.name + ", property: " + this.targetProperty;
-        if (kT += ", datatype: " + ["Float", "Fv", "Quaternion", "Matrix", "Color3", "Vector2"][this.dataType], kT += ", nKeys: " + (this._keys ? this._keys.length : "none"), kT += ", nRanges: " + (this._ranges ? Object.keys(this._ranges).length : "none"), TT) {
-          kT += ", Ranges: {";
-          let TT = !0;
-          for (const cT in this._ranges) TT || (kT += ", "), TT = !1, kT += cT;
-          kT += "}"
+      toString(qq) {
+        let Eq = "Name: " + this.name + ", property: " + this.targetProperty;
+        if (Eq += ", datatype: " + ["Float", "Na", "Quaternion", "Matrix", "Color3", "Vector2"][this.dataType], Eq += ", nKeys: " + (this._keys ? this._keys.length : "none"), Eq += ", nRanges: " + (this._ranges ? Object.keys(this._ranges).length : "none"), qq) {
+          Eq += ", Ranges: {";
+          let qq = !0;
+          for (const gq in this._ranges) qq || (Eq += ", "), qq = !1, Eq += gq;
+          Eq += "}"
         }
-        return kT
+        return Eq
       }
-      addEvent(TT) {
-        this._events.push(TT), this._events.sort(((TT, kT) => TT.frame - kT.frame))
+      addEvent(qq) {
+        this._events.push(qq), this._events.sort(((qq, Eq) => qq.frame - Eq.frame))
       }
-      removeEvents(TT) {
-        for (let kT = 0; kT < this._events.length; kT++) this._events[kT].frame === TT && (this._events.splice(kT, 1), kT--)
+      removeEvents(qq) {
+        for (let Eq = 0; Eq < this._events.length; Eq++) this._events[Eq].frame === qq && (this._events.splice(Eq, 1), Eq--)
       }
       getEvents() {
         return this._events
       }
-      createRange(TT, kT, cT) {
-        this._ranges[TT] || (this._ranges[TT] = new OT.d(TT, kT, cT))
+      createRange(qq, Eq, gq) {
+        this._ranges[qq] || (this._ranges[qq] = new mq.d(qq, Eq, gq))
       }
-      deleteRange(TT) {
-        let kT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        const cT = this._ranges[TT];
-        if (cT) {
-          if (kT) {
-            const TT = cT.from,
-              kT = cT.to;
-            for (let cT = this._keys.length - 1; cT >= 0; cT--) this._keys[cT].frame >= TT && this._keys[cT].frame <= kT && this._keys.splice(cT, 1)
+      deleteRange(qq) {
+        let Eq = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        const gq = this._ranges[qq];
+        if (gq) {
+          if (Eq) {
+            const qq = gq.from,
+              Eq = gq.to;
+            for (let gq = this._keys.length - 1; gq >= 0; gq--) this._keys[gq].frame >= qq && this._keys[gq].frame <= Eq && this._keys.splice(gq, 1)
           }
-          this._ranges[TT] = null
+          this._ranges[qq] = null
         }
       }
-      getRange(TT) {
-        return this._ranges[TT]
+      getRange(qq) {
+        return this._ranges[qq]
       }
       getKeys() {
         return this._keys
       }
       getHighestFrame() {
-        let TT = 0;
-        for (let kT = 0, cT = this._keys.length; kT < cT; kT++) TT < this._keys[kT].frame && (TT = this._keys[kT].frame);
-        return TT
+        let qq = 0;
+        for (let Eq = 0, gq = this._keys.length; Eq < gq; Eq++) qq < this._keys[Eq].frame && (qq = this._keys[Eq].frame);
+        return qq
       }
       getEasingFunction() {
         return this._easingFunction
       }
-      setEasingFunction(TT) {
-        this._easingFunction = TT
+      setEasingFunction(qq) {
+        this._easingFunction = qq
       }
-      floatInterpolateFunction(TT, kT, cT) {
-        return (0, KT.Lerp)(TT, kT, cT)
+      floatInterpolateFunction(qq, Eq, gq) {
+        return (0, Oq.Lerp)(qq, Eq, gq)
       }
-      floatInterpolateFunctionWithTangents(TT, kT, cT, lT, MT) {
-        return (0, KT.Hermite)(TT, kT, cT, lT, MT)
+      floatInterpolateFunctionWithTangents(qq, Eq, gq, Yq, lq) {
+        return (0, Oq.Hermite)(qq, Eq, gq, Yq, lq)
       }
-      quaternionInterpolateFunction(TT, kT, cT) {
-        return lT.f.Slerp(TT, kT, cT)
+      quaternionInterpolateFunction(qq, Eq, gq) {
+        return Yq.h.Slerp(qq, Eq, gq)
       }
-      quaternionInterpolateFunctionWithTangents(TT, kT, cT, MT, KT) {
-        return lT.f.Hermite(TT, kT, cT, MT, KT).normalize()
+      quaternionInterpolateFunctionWithTangents(qq, Eq, gq, lq, Oq) {
+        return Yq.h.Hermite(qq, Eq, gq, lq, Oq).normalize()
       }
-      vector3InterpolateFunction(TT, kT, cT) {
-        return lT.m.Lerp(TT, kT, cT)
+      vector3InterpolateFunction(qq, Eq, gq) {
+        return Yq.q.Lerp(qq, Eq, gq)
       }
-      vector3InterpolateFunctionWithTangents(TT, kT, cT, MT, KT) {
-        return lT.m.Hermite(TT, kT, cT, MT, KT)
+      vector3InterpolateFunctionWithTangents(qq, Eq, gq, lq, Oq) {
+        return Yq.q.Hermite(qq, Eq, gq, lq, Oq)
       }
-      vector2InterpolateFunction(TT, kT, cT) {
-        return lT.i.Lerp(TT, kT, cT)
+      vector2InterpolateFunction(qq, Eq, gq) {
+        return Yq.p.Lerp(qq, Eq, gq)
       }
-      vector2InterpolateFunctionWithTangents(TT, kT, cT, MT, KT) {
-        return lT.i.Hermite(TT, kT, cT, MT, KT)
+      vector2InterpolateFunctionWithTangents(qq, Eq, gq, lq, Oq) {
+        return Yq.p.Hermite(qq, Eq, gq, lq, Oq)
       }
-      sizeInterpolateFunction(TT, kT, cT) {
-        return fT.e.Lerp(TT, kT, cT)
+      sizeInterpolateFunction(qq, Eq, gq) {
+        return Aq.b.Lerp(qq, Eq, gq)
       }
-      color3InterpolateFunction(TT, kT, cT) {
-        return MT.c.Lerp(TT, kT, cT)
+      color3InterpolateFunction(qq, Eq, gq) {
+        return lq.d.Lerp(qq, Eq, gq)
       }
-      color3InterpolateFunctionWithTangents(TT, kT, cT, lT, KT) {
-        return MT.c.Hermite(TT, kT, cT, lT, KT)
+      color3InterpolateFunctionWithTangents(qq, Eq, gq, Yq, Oq) {
+        return lq.d.Hermite(qq, Eq, gq, Yq, Oq)
       }
-      color4InterpolateFunction(TT, kT, cT) {
-        return MT.g.Lerp(TT, kT, cT)
+      color4InterpolateFunction(qq, Eq, gq) {
+        return lq.g.Lerp(qq, Eq, gq)
       }
-      color4InterpolateFunctionWithTangents(TT, kT, cT, lT, KT) {
-        return MT.g.Hermite(TT, kT, cT, lT, KT)
+      color4InterpolateFunctionWithTangents(qq, Eq, gq, Yq, Oq) {
+        return lq.g.Hermite(qq, Eq, gq, Yq, Oq)
       }
-      _getKeyValue(TT) {
-        return "function" === typeof TT ? TT() : TT
+      _getKeyValue(qq) {
+        return "function" === typeof qq ? qq() : qq
       }
-      evaluate(TT) {
-        return QT.key = 0, this._interpolate(TT, QT)
+      evaluate(qq) {
+        return Hq.key = 0, this._interpolate(qq, Hq)
       }
-      _interpolate(TT, kT) {
-        let cT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if (kT.tM === ST.ANIMATIONLOOPMODE_CONSTANT && kT.repeatCount > 0) return kT.highLimitValue.clone ? kT.highLimitValue.clone() : kT.highLimitValue;
-        const lT = this._keys;
-        let MT;
-        if (this._coreAnimation) MT = this._coreAnimation._key;
+      _interpolate(qq, Eq) {
+        let gq = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        if (Eq.Vq === oq.ANIMATIONLOOPMODE_CONSTANT && Eq.repeatCount > 0) return Eq.highLimitValue.clone ? Eq.highLimitValue.clone() : Eq.highLimitValue;
+        const Yq = this._keys;
+        let lq;
+        if (this._coreAnimation) lq = this._coreAnimation._key;
         else {
-          const KT = lT.length;
-          for (MT = kT.key; MT >= 0 && TT < lT[MT].frame;) --MT;
-          for (; MT + 1 <= KT - 1 && TT >= lT[MT + 1].frame;) ++MT;
-          if (kT.key = MT, MT < 0) return cT ? void 0 : this._getKeyValue(lT[0].value);
-          if (MT + 1 > KT - 1) return cT ? void 0 : this._getKeyValue(lT[KT - 1].value);
-          this._key = MT
+          const Oq = Yq.length;
+          for (lq = Eq.key; lq >= 0 && qq < Yq[lq].frame;) --lq;
+          for (; lq + 1 <= Oq - 1 && qq >= Yq[lq + 1].frame;) ++lq;
+          if (Eq.key = lq, lq < 0) return gq ? void 0 : this._getKeyValue(Yq[0].value);
+          if (lq + 1 > Oq - 1) return gq ? void 0 : this._getKeyValue(Yq[Oq - 1].value);
+          this._key = lq
         }
-        const KT = lT[MT],
-          OT = lT[MT + 1];
-        if (cT && (TT === KT.frame || TT === OT.frame)) return;
-        const yT = this._getKeyValue(KT.value),
-          fT = this._getKeyValue(OT.value);
-        if (1 === KT.interpolation) return OT.frame > TT ? yT : fT;
-        const xT = void 0 !== KT.outTangent && void 0 !== OT.inTangent,
-          IT = OT.frame - KT.frame;
-        let AT = (TT - KT.frame) / IT;
-        const QT = KT.easingFunction || this.getEasingFunction();
-        switch (QT && (AT = QT.ease(AT)), this.dataType) {
-          case ST.ANIMATIONTYPE_FLOAT: {
-            const TT = xT ? this.floatInterpolateFunctionWithTangents(yT, KT.outTangent * IT, fT, OT.inTangent * IT, AT) : this.floatInterpolateFunction(yT, fT, AT);
-            switch (kT.tM) {
-              case ST.ANIMATIONLOOPMODE_CYCLE:
-              case ST.ANIMATIONLOOPMODE_CONSTANT:
-              case ST.ANIMATIONLOOPMODE_YOYO:
-                return TT;
-              case ST.ANIMATIONLOOPMODE_RELATIVE:
-              case ST.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return (kT.offsetValue ?? 0) * kT.repeatCount + TT
+        const Oq = Yq[lq],
+          mq = Yq[lq + 1];
+        if (gq && (qq === Oq.frame || qq === mq.frame)) return;
+        const xq = this._getKeyValue(Oq.value),
+          Aq = this._getKeyValue(mq.value);
+        if (1 === Oq.interpolation) return mq.frame > qq ? xq : Aq;
+        const cq = void 0 !== Oq.outTangent && void 0 !== mq.inTangent,
+          uq = mq.frame - Oq.frame;
+        let Bq = (qq - Oq.frame) / uq;
+        const Hq = Oq.easingFunction || this.getEasingFunction();
+        switch (Hq && (Bq = Hq.ease(Bq)), this.dataType) {
+          case oq.ANIMATIONTYPE_FLOAT: {
+            const qq = cq ? this.floatInterpolateFunctionWithTangents(xq, Oq.outTangent * uq, Aq, mq.inTangent * uq, Bq) : this.floatInterpolateFunction(xq, Aq, Bq);
+            switch (Eq.Vq) {
+              case oq.ANIMATIONLOOPMODE_CYCLE:
+              case oq.ANIMATIONLOOPMODE_CONSTANT:
+              case oq.ANIMATIONLOOPMODE_YOYO:
+                return qq;
+              case oq.ANIMATIONLOOPMODE_RELATIVE:
+              case oq.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return (Eq.offsetValue ?? 0) * Eq.repeatCount + qq
             }
             break
           }
-          case ST.ANIMATIONTYPE_QUATERNION: {
-            const TT = xT ? this.quaternionInterpolateFunctionWithTangents(yT, KT.outTangent.scale(IT), fT, OT.inTangent.scale(IT), AT) : this.quaternionInterpolateFunction(yT, fT, AT);
-            switch (kT.tM) {
-              case ST.ANIMATIONLOOPMODE_CYCLE:
-              case ST.ANIMATIONLOOPMODE_CONSTANT:
-              case ST.ANIMATIONLOOPMODE_YOYO:
-                return TT;
-              case ST.ANIMATIONLOOPMODE_RELATIVE:
-              case ST.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return TT.addInPlace((kT.offsetValue || CT).scale(kT.repeatCount))
+          case oq.ANIMATIONTYPE_QUATERNION: {
+            const qq = cq ? this.quaternionInterpolateFunctionWithTangents(xq, Oq.outTangent.scale(uq), Aq, mq.inTangent.scale(uq), Bq) : this.quaternionInterpolateFunction(xq, Aq, Bq);
+            switch (Eq.Vq) {
+              case oq.ANIMATIONLOOPMODE_CYCLE:
+              case oq.ANIMATIONLOOPMODE_CONSTANT:
+              case oq.ANIMATIONLOOPMODE_YOYO:
+                return qq;
+              case oq.ANIMATIONLOOPMODE_RELATIVE:
+              case oq.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return qq.addInPlace((Eq.offsetValue || Wq).scale(Eq.repeatCount))
             }
-            return TT
+            return qq
           }
-          case ST.ANIMATIONTYPE_VECTOR3: {
-            const TT = xT ? this.vector3InterpolateFunctionWithTangents(yT, KT.outTangent.scale(IT), fT, OT.inTangent.scale(IT), AT) : this.vector3InterpolateFunction(yT, fT, AT);
-            switch (kT.tM) {
-              case ST.ANIMATIONLOOPMODE_CYCLE:
-              case ST.ANIMATIONLOOPMODE_CONSTANT:
-              case ST.ANIMATIONLOOPMODE_YOYO:
-                return TT;
-              case ST.ANIMATIONLOOPMODE_RELATIVE:
-              case ST.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return TT.add((kT.offsetValue || jT).scale(kT.repeatCount))
-            }
-            break
-          }
-          case ST.ANIMATIONTYPE_VECTOR2: {
-            const TT = xT ? this.vector2InterpolateFunctionWithTangents(yT, KT.outTangent.scale(IT), fT, OT.inTangent.scale(IT), AT) : this.vector2InterpolateFunction(yT, fT, AT);
-            switch (kT.tM) {
-              case ST.ANIMATIONLOOPMODE_CYCLE:
-              case ST.ANIMATIONLOOPMODE_CONSTANT:
-              case ST.ANIMATIONLOOPMODE_YOYO:
-                return TT;
-              case ST.ANIMATIONLOOPMODE_RELATIVE:
-              case ST.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return TT.add((kT.offsetValue || vT).scale(kT.repeatCount))
+          case oq.ANIMATIONTYPE_VECTOR3: {
+            const qq = cq ? this.vector3InterpolateFunctionWithTangents(xq, Oq.outTangent.scale(uq), Aq, mq.inTangent.scale(uq), Bq) : this.vector3InterpolateFunction(xq, Aq, Bq);
+            switch (Eq.Vq) {
+              case oq.ANIMATIONLOOPMODE_CYCLE:
+              case oq.ANIMATIONLOOPMODE_CONSTANT:
+              case oq.ANIMATIONLOOPMODE_YOYO:
+                return qq;
+              case oq.ANIMATIONLOOPMODE_RELATIVE:
+              case oq.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return qq.add((Eq.offsetValue || Nq).scale(Eq.repeatCount))
             }
             break
           }
-          case ST.ANIMATIONTYPE_SIZE:
-            switch (kT.tM) {
-              case ST.ANIMATIONLOOPMODE_CYCLE:
-              case ST.ANIMATIONLOOPMODE_CONSTANT:
-              case ST.ANIMATIONLOOPMODE_YOYO:
-                return this.sizeInterpolateFunction(yT, fT, AT);
-              case ST.ANIMATIONLOOPMODE_RELATIVE:
-              case ST.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return this.sizeInterpolateFunction(yT, fT, AT).add((kT.offsetValue || tT).scale(kT.repeatCount))
+          case oq.ANIMATIONTYPE_VECTOR2: {
+            const qq = cq ? this.vector2InterpolateFunctionWithTangents(xq, Oq.outTangent.scale(uq), Aq, mq.inTangent.scale(uq), Bq) : this.vector2InterpolateFunction(xq, Aq, Bq);
+            switch (Eq.Vq) {
+              case oq.ANIMATIONLOOPMODE_CYCLE:
+              case oq.ANIMATIONLOOPMODE_CONSTANT:
+              case oq.ANIMATIONLOOPMODE_YOYO:
+                return qq;
+              case oq.ANIMATIONLOOPMODE_RELATIVE:
+              case oq.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return qq.add((Eq.offsetValue || aq).scale(Eq.repeatCount))
+            }
+            break
+          }
+          case oq.ANIMATIONTYPE_SIZE:
+            switch (Eq.Vq) {
+              case oq.ANIMATIONLOOPMODE_CYCLE:
+              case oq.ANIMATIONLOOPMODE_CONSTANT:
+              case oq.ANIMATIONLOOPMODE_YOYO:
+                return this.sizeInterpolateFunction(xq, Aq, Bq);
+              case oq.ANIMATIONLOOPMODE_RELATIVE:
+              case oq.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return this.sizeInterpolateFunction(xq, Aq, Bq).add((Eq.offsetValue || Vq).scale(Eq.repeatCount))
             }
             break;
-          case ST.ANIMATIONTYPE_COLOR3: {
-            const TT = xT ? this.color3InterpolateFunctionWithTangents(yT, KT.outTangent.scale(IT), fT, OT.inTangent.scale(IT), AT) : this.color3InterpolateFunction(yT, fT, AT);
-            switch (kT.tM) {
-              case ST.ANIMATIONLOOPMODE_CYCLE:
-              case ST.ANIMATIONLOOPMODE_CONSTANT:
-              case ST.ANIMATIONLOOPMODE_YOYO:
-                return TT;
-              case ST.ANIMATIONLOOPMODE_RELATIVE:
-              case ST.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return TT.add((kT.offsetValue || hT).scale(kT.repeatCount))
+          case oq.ANIMATIONTYPE_COLOR3: {
+            const qq = cq ? this.color3InterpolateFunctionWithTangents(xq, Oq.outTangent.scale(uq), Aq, mq.inTangent.scale(uq), Bq) : this.color3InterpolateFunction(xq, Aq, Bq);
+            switch (Eq.Vq) {
+              case oq.ANIMATIONLOOPMODE_CYCLE:
+              case oq.ANIMATIONLOOPMODE_CONSTANT:
+              case oq.ANIMATIONLOOPMODE_YOYO:
+                return qq;
+              case oq.ANIMATIONLOOPMODE_RELATIVE:
+              case oq.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return qq.add((Eq.offsetValue || dq).scale(Eq.repeatCount))
             }
             break
           }
-          case ST.ANIMATIONTYPE_COLOR4: {
-            const TT = xT ? this.color4InterpolateFunctionWithTangents(yT, KT.outTangent.scale(IT), fT, OT.inTangent.scale(IT), AT) : this.color4InterpolateFunction(yT, fT, AT);
-            switch (kT.tM) {
-              case ST.ANIMATIONLOOPMODE_CYCLE:
-              case ST.ANIMATIONLOOPMODE_CONSTANT:
-              case ST.ANIMATIONLOOPMODE_YOYO:
-                return TT;
-              case ST.ANIMATIONLOOPMODE_RELATIVE:
-              case ST.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return TT.add((kT.offsetValue || NT).scale(kT.repeatCount))
+          case oq.ANIMATIONTYPE_COLOR4: {
+            const qq = cq ? this.color4InterpolateFunctionWithTangents(xq, Oq.outTangent.scale(uq), Aq, mq.inTangent.scale(uq), Bq) : this.color4InterpolateFunction(xq, Aq, Bq);
+            switch (Eq.Vq) {
+              case oq.ANIMATIONLOOPMODE_CYCLE:
+              case oq.ANIMATIONLOOPMODE_CONSTANT:
+              case oq.ANIMATIONLOOPMODE_YOYO:
+                return qq;
+              case oq.ANIMATIONLOOPMODE_RELATIVE:
+              case oq.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return qq.add((Eq.offsetValue || jq).scale(Eq.repeatCount))
             }
             break
           }
-          case ST.ANIMATIONTYPE_MATRIX:
-            switch (kT.tM) {
-              case ST.ANIMATIONLOOPMODE_CYCLE:
-              case ST.ANIMATIONLOOPMODE_CONSTANT:
-              case ST.ANIMATIONLOOPMODE_YOYO:
-                return ST.AllowMatricesInterpolation ? this.matrixInterpolateFunction(yT, fT, AT, kT.workValue) : yT;
-              case ST.ANIMATIONLOOPMODE_RELATIVE:
-              case ST.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return yT
+          case oq.ANIMATIONTYPE_MATRIX:
+            switch (Eq.Vq) {
+              case oq.ANIMATIONLOOPMODE_CYCLE:
+              case oq.ANIMATIONLOOPMODE_CONSTANT:
+              case oq.ANIMATIONLOOPMODE_YOYO:
+                return oq.AllowMatricesInterpolation ? this.matrixInterpolateFunction(xq, Aq, Bq, Eq.workValue) : xq;
+              case oq.ANIMATIONLOOPMODE_RELATIVE:
+              case oq.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return xq
             }
         }
         return 0
       }
-      matrixInterpolateFunction(TT, kT, cT, MT) {
-        return ST.AllowMatrixDecomposeForInterpolation ? MT ? (lT.d.DecomposeLerpToRef(TT, kT, cT, MT), MT) : lT.d.DecomposeLerp(TT, kT, cT) : MT ? (lT.d.LerpToRef(TT, kT, cT, MT), MT) : lT.d.Lerp(TT, kT, cT)
+      matrixInterpolateFunction(qq, Eq, gq, lq) {
+        return oq.AllowMatrixDecomposeForInterpolation ? lq ? (Yq.e.DecomposeLerpToRef(qq, Eq, gq, lq), lq) : Yq.e.DecomposeLerp(qq, Eq, gq) : lq ? (Yq.e.LerpToRef(qq, Eq, gq, lq), lq) : Yq.e.Lerp(qq, Eq, gq)
       }
       clone() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const kT = new ST(this.name, this.targetPropertyPath.join("."), this.framePerSecond, this.dataType, this.tM);
-        if (kT.enableBlending = this.enableBlending, kT.blendingSpeed = this.blendingSpeed, this._keys && kT.setKeys(this._keys, !1, TT), this._ranges) {
-          kT._ranges = {};
-          for (const TT in this._ranges) {
-            const cT = this._ranges[TT];
-            cT && (kT._ranges[TT] = cT.clone())
+        let qq = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const Eq = new oq(this.name, this.targetPropertyPath.join("."), this.framePerSecond, this.dataType, this.Vq);
+        if (Eq.enableBlending = this.enableBlending, Eq.blendingSpeed = this.blendingSpeed, this._keys && Eq.setKeys(this._keys, !1, qq), this._ranges) {
+          Eq._ranges = {};
+          for (const qq in this._ranges) {
+            const gq = this._ranges[qq];
+            gq && (Eq._ranges[qq] = gq.clone())
           }
         }
-        return kT
+        return Eq
       }
-      setKeys(TT) {
-        let kT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if (arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) this._keys = TT;
-        else if (this._keys = TT.slice(0), kT)
-          for (let cT = 0; cT < this._keys.length; cT++) {
-            const TT = this._keys[cT];
-            this._keys[cT] = {
-              frame: TT.frame,
-              value: TT.value.clone ? TT.value.clone() : TT.value,
-              inTangent: TT.inTangent && TT.inTangent.clone ? TT.inTangent.clone() : TT.inTangent,
-              outTangent: TT.outTangent && TT.outTangent.clone ? TT.outTangent.clone() : TT.outTangent,
-              interpolation: TT.interpolation,
-              lockedTangent: TT.lockedTangent,
-              easingFunction: TT.easingFunction
+      setKeys(qq) {
+        let Eq = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        if (arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) this._keys = qq;
+        else if (this._keys = qq.slice(0), Eq)
+          for (let gq = 0; gq < this._keys.length; gq++) {
+            const qq = this._keys[gq];
+            this._keys[gq] = {
+              frame: qq.frame,
+              value: qq.value.clone ? qq.value.clone() : qq.value,
+              inTangent: qq.inTangent && qq.inTangent.clone ? qq.inTangent.clone() : qq.inTangent,
+              outTangent: qq.outTangent && qq.outTangent.clone ? qq.outTangent.clone() : qq.outTangent,
+              interpolation: qq.interpolation,
+              lockedTangent: qq.lockedTangent,
+              easingFunction: qq.easingFunction
             }
           }
       }
-      createKeyForFrame(TT) {
-        QT.key = 0;
-        const kT = this._interpolate(TT, QT, !0);
-        if (!kT) return this._keys[QT.key].frame === TT ? QT.key : QT.key + 1;
-        const cT = {
-          frame: TT,
-          value: kT.clone ? kT.clone() : kT
+      createKeyForFrame(qq) {
+        Hq.key = 0;
+        const Eq = this._interpolate(qq, Hq, !0);
+        if (!Eq) return this._keys[Hq.key].frame === qq ? Hq.key : Hq.key + 1;
+        const gq = {
+          frame: qq,
+          value: Eq.clone ? Eq.clone() : Eq
         };
-        return this._keys.splice(QT.key + 1, 0, cT), QT.key + 1
+        return this._keys.splice(Hq.key + 1, 0, gq), Hq.key + 1
       }
       serialize() {
-        const TT = {};
-        TT.name = this.name, TT.property = this.targetProperty, TT.framePerSecond = this.framePerSecond, TT.dataType = this.dataType, TT.loopBehavior = this.tM, TT.enableBlending = this.enableBlending, TT.blendingSpeed = this.blendingSpeed;
-        const kT = this.dataType;
-        TT.keys = [];
-        const cT = this.getKeys();
-        for (let lT = 0; lT < cT.length; lT++) {
-          const MT = cT[lT],
-            KT = {};
-          switch (KT.frame = MT.frame, kT) {
-            case ST.ANIMATIONTYPE_FLOAT:
-              KT.values = [MT.value], void 0 !== MT.inTangent && KT.values.push(MT.inTangent), void 0 !== MT.outTangent && (void 0 === MT.inTangent && KT.values.push(void 0), KT.values.push(MT.outTangent)), void 0 !== MT.interpolation && (void 0 === MT.inTangent && KT.values.push(void 0), void 0 === MT.outTangent && KT.values.push(void 0), KT.values.push(MT.interpolation));
+        const qq = {};
+        qq.name = this.name, qq.property = this.targetProperty, qq.framePerSecond = this.framePerSecond, qq.dataType = this.dataType, qq.loopBehavior = this.Vq, qq.enableBlending = this.enableBlending, qq.blendingSpeed = this.blendingSpeed;
+        const Eq = this.dataType;
+        qq.keys = [];
+        const gq = this.getKeys();
+        for (let Yq = 0; Yq < gq.length; Yq++) {
+          const lq = gq[Yq],
+            Oq = {};
+          switch (Oq.frame = lq.frame, Eq) {
+            case oq.ANIMATIONTYPE_FLOAT:
+              Oq.values = [lq.value], void 0 !== lq.inTangent && Oq.values.push(lq.inTangent), void 0 !== lq.outTangent && (void 0 === lq.inTangent && Oq.values.push(void 0), Oq.values.push(lq.outTangent)), void 0 !== lq.interpolation && (void 0 === lq.inTangent && Oq.values.push(void 0), void 0 === lq.outTangent && Oq.values.push(void 0), Oq.values.push(lq.interpolation));
               break;
-            case ST.ANIMATIONTYPE_QUATERNION:
-            case ST.ANIMATIONTYPE_MATRIX:
-            case ST.ANIMATIONTYPE_VECTOR3:
-            case ST.ANIMATIONTYPE_COLOR3:
-            case ST.ANIMATIONTYPE_COLOR4:
-              KT.values = MT.value.acT(), void 0 != MT.inTangent && KT.values.push(MT.inTangent.acT()), void 0 != MT.outTangent && (void 0 === MT.inTangent && KT.values.push(void 0), KT.values.push(MT.outTangent.acT())), void 0 !== MT.interpolation && (void 0 === MT.inTangent && KT.values.push(void 0), void 0 === MT.outTangent && KT.values.push(void 0), KT.values.push(MT.interpolation))
+            case oq.ANIMATIONTYPE_QUATERNION:
+            case oq.ANIMATIONTYPE_MATRIX:
+            case oq.ANIMATIONTYPE_VECTOR3:
+            case oq.ANIMATIONTYPE_COLOR3:
+            case oq.ANIMATIONTYPE_COLOR4:
+              Oq.values = lq.value.bYq(), void 0 != lq.inTangent && Oq.values.push(lq.inTangent.bYq()), void 0 != lq.outTangent && (void 0 === lq.inTangent && Oq.values.push(void 0), Oq.values.push(lq.outTangent.bYq())), void 0 !== lq.interpolation && (void 0 === lq.inTangent && Oq.values.push(void 0), void 0 === lq.outTangent && Oq.values.push(void 0), Oq.values.push(lq.interpolation))
           }
-          TT.keys.push(KT)
+          qq.keys.push(Oq)
         }
-        TT.qt = [];
-        for (const lT in this._ranges) {
-          const kT = this._ranges[lT];
-          if (!kT) continue;
-          const cT = {};
-          cT.name = lT, cT.from = kT.from, cT.to = kT.to, TT.qt.push(cT)
+        qq.zV = [];
+        for (const Yq in this._ranges) {
+          const Eq = this._ranges[Yq];
+          if (!Eq) continue;
+          const gq = {};
+          gq.name = Yq, gq.from = Eq.from, gq.to = Eq.to, qq.zV.push(gq)
         }
-        return TT
+        return qq
       }
-      static _UniversalLerp(TT, kT, cT) {
-        const lT = TT.constructor;
-        return lT.Lerp ? lT.Lerp(TT, kT, cT) : lT.Slerp ? lT.Slerp(TT, kT, cT) : TT.toFixed ? TT * (1 - cT) + cT * kT : kT
+      static _UniversalLerp(qq, Eq, gq) {
+        const Yq = qq.constructor;
+        return Yq.Lerp ? Yq.Lerp(qq, Eq, gq) : Yq.Slerp ? Yq.Slerp(qq, Eq, gq) : qq.toFixed ? qq * (1 - gq) + gq * Eq : Eq
       }
     }
 
-    function DT(TT, kT, cT) {
-      let MT;
-      MT = "object" === typeof kT ? kT : {
-        referenceFrame: kT ?? 0,
-        range: cT,
+    function Pq(qq, Eq, gq) {
+      let lq;
+      lq = "object" === typeof Eq ? Eq : {
+        referenceFrame: Eq ?? 0,
+        range: gq,
         cloneOriginalAnimation: arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         clonedAnimationName: arguments.length > 4 ? arguments[4] : void 0
       };
-      let KT = TT;
-      MT.cloneOriginalAnimation && (KT = TT.clone(), KT.name = MT.clonedAnimationName || KT.name);
-      const OT = KT.getKeys();
-      if (!OT.length) return KT;
-      const yT = MT.referenceFrame && MT.referenceFrame >= 0 ? MT.referenceFrame : 0;
-      let fT = 0;
-      const xT = OT[0];
-      let IT = OT.length - 1;
-      const AT = OT[IT],
-        CT = {
-          referenceValue: xT.value,
-          referencePosition: lT.h.Fv[0],
-          referenceQuaternion: lT.h.Quaternion[0],
-          referenceScaling: lT.h.Fv[1],
-          keyPosition: lT.h.Fv[2],
-          keyQuaternion: lT.h.Quaternion[1],
-          keyScaling: lT.h.Fv[3]
+      let Oq = qq;
+      lq.cloneOriginalAnimation && (Oq = qq.clone(), Oq.name = lq.clonedAnimationName || Oq.name);
+      const mq = Oq.getKeys();
+      if (!mq.length) return Oq;
+      const xq = lq.referenceFrame && lq.referenceFrame >= 0 ? lq.referenceFrame : 0;
+      let Aq = 0;
+      const cq = mq[0];
+      let uq = mq.length - 1;
+      const Bq = mq[uq],
+        Wq = {
+          referenceValue: cq.value,
+          referencePosition: Yq.o.Na[0],
+          referenceQuaternion: Yq.o.Quaternion[0],
+          referenceScaling: Yq.o.Na[1],
+          keyPosition: Yq.o.Na[2],
+          keyQuaternion: Yq.o.Quaternion[1],
+          keyScaling: Yq.o.Na[3]
         };
-      let jT = xT.frame,
-        vT = AT.frame;
-      if (MT.range) {
-        const TT = KT.getRange(MT.range);
-        TT && (jT = TT.from, vT = TT.to)
-      } else jT = MT.fromFrame ?? jT, vT = MT.toFrame ?? vT;
-      jT !== xT.frame && (fT = KT.createKeyForFrame(jT)), vT !== AT.frame && (IT = KT.createKeyForFrame(vT));
-      const tT = KT.getKeys();
-      if (1 === tT.length) {
-        const TT = KT._getKeyValue(tT[0].value);
-        CT.referenceValue = TT.clone ? TT.clone() : TT
-      } else if (yT <= xT.frame) {
-        const TT = KT._getKeyValue(xT.value);
-        CT.referenceValue = TT.clone ? TT.clone() : TT
-      } else if (yT >= AT.frame) {
-        const TT = KT._getKeyValue(AT.value);
-        CT.referenceValue = TT.clone ? TT.clone() : TT
+      let Nq = cq.frame,
+        aq = Bq.frame;
+      if (lq.range) {
+        const qq = Oq.getRange(lq.range);
+        qq && (Nq = qq.from, aq = qq.to)
+      } else Nq = lq.fromFrame ?? Nq, aq = lq.toFrame ?? aq;
+      Nq !== cq.frame && (Aq = Oq.createKeyForFrame(Nq)), aq !== Bq.frame && (uq = Oq.createKeyForFrame(aq));
+      const Vq = Oq.getKeys();
+      if (1 === Vq.length) {
+        const qq = Oq._getKeyValue(Vq[0].value);
+        Wq.referenceValue = qq.clone ? qq.clone() : qq
+      } else if (xq <= cq.frame) {
+        const qq = Oq._getKeyValue(cq.value);
+        Wq.referenceValue = qq.clone ? qq.clone() : qq
+      } else if (xq >= Bq.frame) {
+        const qq = Oq._getKeyValue(Bq.value);
+        Wq.referenceValue = qq.clone ? qq.clone() : qq
       } else {
-        QT.key = 0;
-        const TT = KT._interpolate(yT, QT);
-        CT.referenceValue = TT.clone ? TT.clone() : TT
+        Hq.key = 0;
+        const qq = Oq._interpolate(xq, Hq);
+        Wq.referenceValue = qq.clone ? qq.clone() : qq
       }
-      KT.dataType === ST.ANIMATIONTYPE_QUATERNION ? CT.referenceValue.normalize().conjugateInPlace() : KT.dataType === ST.ANIMATIONTYPE_MATRIX && (CT.referenceValue.decompose(CT.referenceScaling, CT.referenceQuaternion, CT.referencePosition), CT.referenceQuaternion.normalize().conjugateInPlace());
-      let hT = Number.MAX_VALUE;
-      const NT = MT.clipKeys ? [] : null;
-      for (let QT = fT; QT <= IT; QT++) {
-        let TT = tT[QT];
-        if ((NT || MT.cloneOriginalAnimation) && (TT = {
-            frame: TT.frame,
-            value: TT.value.clone ? TT.value.clone() : TT.value,
-            inTangent: TT.inTangent,
-            outTangent: TT.outTangent,
-            interpolation: TT.interpolation,
-            lockedTangent: TT.lockedTangent,
-            easingFunction: TT.easingFunction
-          }, NT && (hT === Number.MAX_VALUE && (hT = TT.frame), TT.frame -= hT, NT.push(TT))), !QT || KT.dataType === ST.ANIMATIONTYPE_FLOAT || TT.value !== xT.value) switch (KT.dataType) {
-          case ST.ANIMATIONTYPE_MATRIX:
-            TT.value.decompose(CT.keyScaling, CT.keyQuaternion, CT.keyPosition), CT.keyPosition.gcT(CT.referencePosition), CT.keyScaling.divideInPlace(CT.referenceScaling), CT.referenceQuaternion.multiplyToRef(CT.keyQuaternion, CT.keyQuaternion), lT.d.ComposeToRef(CT.keyScaling, CT.keyQuaternion, CT.keyPosition, TT.value);
+      Oq.dataType === oq.ANIMATIONTYPE_QUATERNION ? Wq.referenceValue.normalize().conjugateInPlace() : Oq.dataType === oq.ANIMATIONTYPE_MATRIX && (Wq.referenceValue.decompose(Wq.referenceScaling, Wq.referenceQuaternion, Wq.referencePosition), Wq.referenceQuaternion.normalize().conjugateInPlace());
+      let dq = Number.MAX_VALUE;
+      const jq = lq.clipKeys ? [] : null;
+      for (let Hq = Aq; Hq <= uq; Hq++) {
+        let qq = Vq[Hq];
+        if ((jq || lq.cloneOriginalAnimation) && (qq = {
+            frame: qq.frame,
+            value: qq.value.clone ? qq.value.clone() : qq.value,
+            inTangent: qq.inTangent,
+            outTangent: qq.outTangent,
+            interpolation: qq.interpolation,
+            lockedTangent: qq.lockedTangent,
+            easingFunction: qq.easingFunction
+          }, jq && (dq === Number.MAX_VALUE && (dq = qq.frame), qq.frame -= dq, jq.push(qq))), !Hq || Oq.dataType === oq.ANIMATIONTYPE_FLOAT || qq.value !== cq.value) switch (Oq.dataType) {
+          case oq.ANIMATIONTYPE_MATRIX:
+            qq.value.decompose(Wq.keyScaling, Wq.keyQuaternion, Wq.keyPosition), Wq.keyPosition.KYq(Wq.referencePosition), Wq.keyScaling.divideInPlace(Wq.referenceScaling), Wq.referenceQuaternion.multiplyToRef(Wq.keyQuaternion, Wq.keyQuaternion), Yq.e.ComposeToRef(Wq.keyScaling, Wq.keyQuaternion, Wq.keyPosition, qq.value);
             break;
-          case ST.ANIMATIONTYPE_QUATERNION:
-            CT.referenceValue.multiplyToRef(TT.value, TT.value);
+          case oq.ANIMATIONTYPE_QUATERNION:
+            Wq.referenceValue.multiplyToRef(qq.value, qq.value);
             break;
-          case ST.ANIMATIONTYPE_VECTOR2:
-          case ST.ANIMATIONTYPE_VECTOR3:
-          case ST.ANIMATIONTYPE_COLOR3:
-          case ST.ANIMATIONTYPE_COLOR4:
-            TT.value.subtractToRef(CT.referenceValue, TT.value);
+          case oq.ANIMATIONTYPE_VECTOR2:
+          case oq.ANIMATIONTYPE_VECTOR3:
+          case oq.ANIMATIONTYPE_COLOR3:
+          case oq.ANIMATIONTYPE_COLOR4:
+            qq.value.subtractToRef(Wq.referenceValue, qq.value);
             break;
-          case ST.ANIMATIONTYPE_SIZE:
-            TT.value.width -= CT.referenceValue.width, TT.value.height -= CT.referenceValue.height;
+          case oq.ANIMATIONTYPE_SIZE:
+            qq.value.width -= Wq.referenceValue.width, qq.value.height -= Wq.referenceValue.height;
             break;
           default:
-            TT.value -= CT.referenceValue
+            qq.value -= Wq.referenceValue
         }
       }
-      return NT && KT.setKeys(NT, !0), KT
+      return jq && Oq.setKeys(jq, !0), Oq
     }
 
-    function aT(TT, kT, cT, lT) {
-      const MT = new ST(TT + "Animation", TT, cT, kT, ST.ANIMATIONLOOPMODE_CONSTANT);
-      return MT.setEasingFunction(lT), MT
+    function Qq(qq, Eq, gq, Yq) {
+      const lq = new oq(qq + "Animation", qq, gq, Eq, oq.ANIMATIONLOOPMODE_CONSTANT);
+      return lq.setEasingFunction(Yq), lq
     }
 
-    function FT(TT, kT, cT, lT, MT, KT, OT, yT, fT, xT, IT) {
-      const AT = ST._PrepareAnimation(TT, cT, lT, MT, KT, OT, yT, fT);
-      return AT ? (kT.NJ && (IT = kT.NJ()), IT ? IT.beginDirectAnimation(kT, [AT], 0, MT, AT.tM !== ST.ANIMATIONLOOPMODE_CONSTANT, 1, xT) : null) : null
+    function yq(qq, Eq, gq, Yq, lq, Oq, mq, xq, Aq, cq, uq) {
+      const Bq = oq._PrepareAnimation(qq, gq, Yq, lq, Oq, mq, xq, Aq);
+      return Bq ? (Eq.ZJ && (uq = Eq.ZJ()), uq ? uq.beginDirectAnimation(Eq, [Bq], 0, lq, Bq.Vq !== oq.ANIMATIONLOOPMODE_CONSTANT, 1, cq) : null) : null
     }
 
-    function rT(TT, kT, cT, lT, MT, KT, OT, yT, fT, xT, IT) {
-      const AT = ST._PrepareAnimation(TT, lT, MT, KT, OT, yT, fT, xT);
-      if (!AT) return null;
-      return kT.NJ().beginDirectHierarchyAnimation(kT, cT, [AT], 0, KT, 1 === AT.tM, 1, IT)
+    function tq(qq, Eq, gq, Yq, lq, Oq, mq, xq, Aq, cq, uq) {
+      const Bq = oq._PrepareAnimation(qq, Yq, lq, Oq, mq, xq, Aq, cq);
+      if (!Bq) return null;
+      return Eq.ZJ().beginDirectHierarchyAnimation(Eq, gq, [Bq], 0, Oq, 1 === Bq.Vq, 1, uq)
     }
 
-    function PT(TT, kT, cT, lT, MT, KT, OT, yT, fT, xT) {
-      const IT = ST._PrepareAnimation(TT, cT, lT, MT, KT, OT, yT, fT);
-      return IT ? (kT.animations.push(IT), kT.NJ().beginAnimation(kT, 0, MT, 1 === IT.tM, 1, xT)) : null
+    function rq(qq, Eq, gq, Yq, lq, Oq, mq, xq, Aq, cq) {
+      const uq = oq._PrepareAnimation(qq, gq, Yq, lq, Oq, mq, xq, Aq);
+      return uq ? (Eq.animations.push(uq), Eq.ZJ().beginAnimation(Eq, 0, lq, 1 === uq.Vq, 1, cq)) : null
     }
 
-    function wT(TT, kT, cT, lT, MT, KT, OT) {
-      let yT = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
-        fT = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
-        xT = arguments.length > 9 ? arguments[9] : void 0;
-      if (OT <= 0) return cT[TT] = kT, yT && yT(), null;
-      const IT = MT * (OT / 1e3);
-      KT.setKeys(xT ?? [{
+    function vq(qq, Eq, gq, Yq, lq, Oq, mq) {
+      let xq = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+        Aq = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
+        cq = arguments.length > 9 ? arguments[9] : void 0;
+      if (mq <= 0) return gq[qq] = Eq, xq && xq(), null;
+      const uq = lq * (mq / 1e3);
+      Oq.setKeys(cq ?? [{
         frame: 0,
-        value: cT[TT].clone ? cT[TT].clone() : cT[TT]
+        value: gq[qq].clone ? gq[qq].clone() : gq[qq]
       }, {
-        frame: IT,
-        value: kT
-      }]), cT.animations || (cT.animations = []), cT.animations.push(KT);
-      return lT.beginAnimation(cT, 0, IT, !1, 1, yT ?? void 0, void 0, fT)
+        frame: uq,
+        value: Eq
+      }]), gq.animations || (gq.animations = []), gq.animations.push(Oq);
+      return Yq.beginAnimation(gq, 0, uq, !1, 1, xq ?? void 0, void 0, Aq)
     }
 
-    function mT(TT, kT) {
-      IT.d.AppendSerializedAnimations(TT, kT)
+    function hq(qq, Eq) {
+      uq.d.AppendSerializedAnimations(qq, Eq)
     }
 
-    function bT(TT) {
-      const kT = new ST(TT.name, TT.property, TT.framePerSecond, TT.dataType, TT.loopBehavior),
-        cT = TT.dataType,
-        KT = [];
-      let OT, yT;
-      for (TT.enableBlending && (kT.enableBlending = TT.enableBlending), TT.blendingSpeed && (kT.blendingSpeed = TT.blendingSpeed), yT = 0; yT < TT.keys.length; yT++) {
-        const kT = TT.keys[yT];
-        let fT, xT, IT;
-        switch (cT) {
-          case ST.ANIMATIONTYPE_FLOAT:
-            OT = kT.values[0], kT.values.length >= 2 && (fT = kT.values[1]), kT.values.length >= 3 && (xT = kT.values[2]), kT.values.length >= 4 && (IT = kT.values[3]);
+    function nq(qq) {
+      const Eq = new oq(qq.name, qq.property, qq.framePerSecond, qq.dataType, qq.loopBehavior),
+        gq = qq.dataType,
+        Oq = [];
+      let mq, xq;
+      for (qq.enableBlending && (Eq.enableBlending = qq.enableBlending), qq.blendingSpeed && (Eq.blendingSpeed = qq.blendingSpeed), xq = 0; xq < qq.keys.length; xq++) {
+        const Eq = qq.keys[xq];
+        let Aq, cq, uq;
+        switch (gq) {
+          case oq.ANIMATIONTYPE_FLOAT:
+            mq = Eq.values[0], Eq.values.length >= 2 && (Aq = Eq.values[1]), Eq.values.length >= 3 && (cq = Eq.values[2]), Eq.values.length >= 4 && (uq = Eq.values[3]);
             break;
-          case ST.ANIMATIONTYPE_QUATERNION:
-            if (OT = lT.f.FromArray(kT.values), kT.values.length >= 8) {
-              const TT = lT.f.FromArray(kT.values.slice(4, 8));
-              TT.equals(lT.f.Zero()) || (fT = TT)
+          case oq.ANIMATIONTYPE_QUATERNION:
+            if (mq = Yq.h.FromArray(Eq.values), Eq.values.length >= 8) {
+              const qq = Yq.h.FromArray(Eq.values.slice(4, 8));
+              qq.equals(Yq.h.Zero()) || (Aq = qq)
             }
-            if (kT.values.length >= 12) {
-              const TT = lT.f.FromArray(kT.values.slice(8, 12));
-              TT.equals(lT.f.Zero()) || (xT = TT)
+            if (Eq.values.length >= 12) {
+              const qq = Yq.h.FromArray(Eq.values.slice(8, 12));
+              qq.equals(Yq.h.Zero()) || (cq = qq)
             }
-            kT.values.length >= 13 && (IT = kT.values[12]);
+            Eq.values.length >= 13 && (uq = Eq.values[12]);
             break;
-          case ST.ANIMATIONTYPE_MATRIX:
-            OT = lT.d.FromArray(kT.values), kT.values.length >= 17 && (IT = kT.values[16]);
+          case oq.ANIMATIONTYPE_MATRIX:
+            mq = Yq.e.FromArray(Eq.values), Eq.values.length >= 17 && (uq = Eq.values[16]);
             break;
-          case ST.ANIMATIONTYPE_COLOR3:
-            OT = MT.c.FromArray(kT.values), kT.values[3] && (fT = MT.c.FromArray(kT.values[3])), kT.values[4] && (xT = MT.c.FromArray(kT.values[4])), kT.values[5] && (IT = kT.values[5]);
+          case oq.ANIMATIONTYPE_COLOR3:
+            mq = lq.d.FromArray(Eq.values), Eq.values[3] && (Aq = lq.d.FromArray(Eq.values[3])), Eq.values[4] && (cq = lq.d.FromArray(Eq.values[4])), Eq.values[5] && (uq = Eq.values[5]);
             break;
-          case ST.ANIMATIONTYPE_COLOR4:
-            OT = MT.g.FromArray(kT.values), kT.values[4] && (fT = MT.g.FromArray(kT.values[4])), kT.values[5] && (xT = MT.g.FromArray(kT.values[5])), kT.values[6] && (IT = kT.values[6]);
+          case oq.ANIMATIONTYPE_COLOR4:
+            mq = lq.g.FromArray(Eq.values), Eq.values[4] && (Aq = lq.g.FromArray(Eq.values[4])), Eq.values[5] && (cq = lq.g.FromArray(Eq.values[5])), Eq.values[6] && (uq = Eq.values[6]);
             break;
-          case ST.ANIMATIONTYPE_VECTOR3:
+          case oq.ANIMATIONTYPE_VECTOR3:
           default:
-            OT = lT.m.FromArray(kT.values), kT.values[3] && (fT = lT.m.FromArray(kT.values[3])), kT.values[4] && (xT = lT.m.FromArray(kT.values[4])), kT.values[5] && (IT = kT.values[5])
+            mq = Yq.q.FromArray(Eq.values), Eq.values[3] && (Aq = Yq.q.FromArray(Eq.values[3])), Eq.values[4] && (cq = Yq.q.FromArray(Eq.values[4])), Eq.values[5] && (uq = Eq.values[5])
         }
-        const AT = {};
-        AT.frame = kT.frame, AT.value = OT, void 0 != fT && (AT.inTangent = fT), void 0 != xT && (AT.outTangent = xT), void 0 != IT && (AT.interpolation = IT), KT.push(AT)
+        const Bq = {};
+        Bq.frame = Eq.frame, Bq.value = mq, void 0 != Aq && (Bq.inTangent = Aq), void 0 != cq && (Bq.outTangent = cq), void 0 != uq && (Bq.interpolation = uq), Oq.push(Bq)
       }
-      if (kT.setKeys(KT), TT.qt)
-        for (yT = 0; yT < TT.qt.length; yT++) OT = TT.qt[yT], kT.createRange(OT.name, OT.from, OT.to);
-      return kT
+      if (Eq.setKeys(Oq), qq.zV)
+        for (xq = 0; xq < qq.zV.length; xq++) mq = qq.zV[xq], Eq.createRange(mq.name, mq.from, mq.to);
+      return Eq
     }
-    async function zT(TT, kT) {
-      return await new Promise(((cT, lT) => {
-        const MT = new xT.b;
-        MT.addEventListener("readystatechange", (() => {
-          if (4 == MT.readyState)
-            if (200 == MT.status) {
-              let kT = JSON.parse(MT.responseText);
-              if (kT.animations && (kT = kT.animations), kT.length) {
-                const TT = [];
-                for (const cT of kT) TT.push(bT(cT));
-                cT(TT)
+    async function bq(qq, Eq) {
+      return await new Promise(((gq, Yq) => {
+        const lq = new cq.e;
+        lq.addEventListener("readystatechange", (() => {
+          if (4 == lq.readyState)
+            if (200 == lq.status) {
+              let Eq = JSON.parse(lq.responseText);
+              if (Eq.animations && (Eq = Eq.animations), Eq.length) {
+                const qq = [];
+                for (const gq of Eq) qq.push(nq(gq));
+                gq(qq)
               } else {
-                const lT = bT(kT);
-                TT && (lT.name = TT), cT(lT)
+                const Yq = nq(Eq);
+                qq && (Yq.name = qq), gq(Yq)
               }
-            } else lT("Unable to load the animation")
-        })), MT.open("GET", kT), MT.send()
+            } else Yq("Unable to load the animation")
+        })), lq.open("GET", Eq), lq.send()
       }))
     }
-    async function JT(TT) {
-      const kT = this?.SnippetUrl ?? ST.SnippetUrl;
-      return await new Promise(((cT, lT) => {
-        const MT = new xT.b;
-        MT.addEventListener("readystatechange", (() => {
-          if (4 == MT.readyState)
-            if (200 == MT.status) {
-              const kT = JSON.parse(JSON.parse(MT.responseText).jsonPayload);
-              if (kT.animations) {
-                const lT = JSON.parse(kT.animations),
-                  MT = [];
-                for (const kT of lT.animations) {
-                  const cT = bT(kT);
-                  cT.snippetId = TT, MT.push(cT)
+    async function iq(qq) {
+      const Eq = this?.SnippetUrl ?? oq.SnippetUrl;
+      return await new Promise(((gq, Yq) => {
+        const lq = new cq.e;
+        lq.addEventListener("readystatechange", (() => {
+          if (4 == lq.readyState)
+            if (200 == lq.status) {
+              const Eq = JSON.parse(JSON.parse(lq.responseText).jsonPayload);
+              if (Eq.animations) {
+                const Yq = JSON.parse(Eq.animations),
+                  lq = [];
+                for (const Eq of Yq.animations) {
+                  const gq = nq(Eq);
+                  gq.snippetId = qq, lq.push(gq)
                 }
-                cT(MT)
+                gq(lq)
               } else {
-                const lT = bT(JSON.parse(kT.animation));
-                lT.snippetId = TT, cT(lT)
+                const Yq = nq(JSON.parse(Eq.animation));
+                Yq.snippetId = qq, gq(Yq)
               }
-            } else lT("Unable to load the snippet " + TT)
-        })), MT.open("GET", kT + "/" + TT.replace(/#/g, "/")), MT.send()
+            } else Yq("Unable to load the snippet " + qq)
+        })), lq.open("GET", Eq + "/" + qq.replace(/#/g, "/")), lq.send()
       }))
     }
-    ST._UniqueIdGenerator = 0, ST.AllowMatricesInterpolation = !1, ST.AllowMatrixDecomposeForInterpolation = !0, ST.InheritOriginalValueFromActiveAnimations = !1, ST.SnippetUrl = "https://snippet.babylonjs.com", ST.ANIMATIONTYPE_FLOAT = 0, ST.ANIMATIONTYPE_VECTOR3 = 1, ST.ANIMATIONTYPE_QUATERNION = 2, ST.ANIMATIONTYPE_MATRIX = 3, ST.ANIMATIONTYPE_COLOR3 = 4, ST.ANIMATIONTYPE_COLOR4 = 7, ST.ANIMATIONTYPE_VECTOR2 = 5, ST.ANIMATIONTYPE_SIZE = 6, ST.ANIMATIONLOOPMODE_RELATIVE = 0, ST.ANIMATIONLOOPMODE_CYCLE = 1, ST.ANIMATIONLOOPMODE_CONSTANT = 2, ST.ANIMATIONLOOPMODE_YOYO = 4, ST.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT = 5;
-    const oT = JT;
-    let HT = !1;
+    oq._UniqueIdGenerator = 0, oq.AllowMatricesInterpolation = !1, oq.AllowMatrixDecomposeForInterpolation = !0, oq.InheritOriginalValueFromActiveAnimations = !1, oq.SnippetUrl = "https://snippet.babylonjs.com", oq.ANIMATIONTYPE_FLOAT = 0, oq.ANIMATIONTYPE_VECTOR3 = 1, oq.ANIMATIONTYPE_QUATERNION = 2, oq.ANIMATIONTYPE_MATRIX = 3, oq.ANIMATIONTYPE_COLOR3 = 4, oq.ANIMATIONTYPE_COLOR4 = 7, oq.ANIMATIONTYPE_VECTOR2 = 5, oq.ANIMATIONTYPE_SIZE = 6, oq.ANIMATIONLOOPMODE_RELATIVE = 0, oq.ANIMATIONLOOPMODE_CYCLE = 1, oq.ANIMATIONLOOPMODE_CONSTANT = 2, oq.ANIMATIONLOOPMODE_YOYO = 4, oq.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT = 5;
+    const Zq = iq;
+    let fq = !1;
 
-    function eT() {
-      HT || (HT = !0, ST.Parse = bT, ST.ParseFromFileAsync = zT, ST.ParseFromSnippetAsync = JT, ST.CreateFromSnippetAsync = oT, ST.CreateAnimation = aT, ST.CreateAndStartAnimation = FT, ST.CreateAndStartHierarchyAnimation = rT, ST.CreateMergeAndStartAnimation = PT, ST.MakeAnimationAdditive = DT, ST.TransitionTo = wT, ST.AppendSerializedAnimations = mT, (0, AT.g)("BABYLON.Animation", ST), yT.b._AnimationRangeFactory = (TT, kT, cT) => new OT.d(TT, kT, cT))
+    function Mq() {
+      fq || (fq = !0, oq.Parse = nq, oq.ParseFromFileAsync = bq, oq.ParseFromSnippetAsync = iq, oq.CreateFromSnippetAsync = Zq, oq.CreateAnimation = Qq, oq.CreateAndStartAnimation = yq, oq.CreateAndStartHierarchyAnimation = tq, oq.CreateMergeAndStartAnimation = rq, oq.MakeAnimationAdditive = Pq, oq.TransitionTo = vq, oq.AppendSerializedAnimations = hq, (0, Bq.g)("BABYLON.Animation", oq), xq.c._AnimationRangeFactory = (qq, Eq, gq) => new mq.d(qq, Eq, gq))
     }
   },
-  40718: (TT, kT, cT) => {
-    cT.d(kT, {
-      d: () => lT
+  40851: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => Yq
     });
-    class lT {
-      constructor(TT, kT, cT) {
-        this.name = TT, this.from = kT, this.to = cT
+    class Yq {
+      constructor(qq, Eq, gq) {
+        this.name = qq, this.from = Eq, this.to = gq
       }
       clone() {
-        return new lT(this.name, this.from, this.to)
+        return new Yq(this.name, this.from, this.to)
       }
     }
   },
-  40774: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => lT.d,
-      i: () => lT.l
+  40901: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => Yq.b,
+      f: () => Yq.g
     });
-    var lT = cT(39782);
-    (0, lT.h)()
+    var Yq = gq(39879);
+    (0, Yq.d)()
   },
-  40752: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => lT.f
+  40883: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => Yq.d
     });
-    var lT = cT(40111);
-    (0, lT.b)()
+    var Yq = gq(40233);
+    (0, Yq.c)()
   },
-  40734: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => lT.c
+  40860: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => Yq.b
     });
-    var lT = cT(40095);
-    (0, lT.f)()
+    var Yq = gq(40221);
+    (0, Yq.c)()
   },
-  40778: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => lT.e
+  40905: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => Yq.e
     });
-    var lT = cT(40025);
-    (0, lT.i)()
+    var Yq = gq(40163);
+    (0, Yq.i)()
   },
-  40726: (TT, kT, cT) => {
-    cT.d(kT, {
-      b: () => lT.f
+  40857: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => Yq.g
     });
-    var lT = cT(40071);
-    (0, lT.b)()
+    var Yq = gq(40199);
+    (0, Yq.e)()
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

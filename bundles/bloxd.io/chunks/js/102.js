@@ -1,162 +1,162 @@
 export const id = 102;
 export const ids = [102];
 export const modules = {
-  4861: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => CT
+  4739: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => Wq
     });
-    var lT = cT(1046),
-      MT = cT.n(lT),
-      KT = cT(1061),
-      OT = cT(1348),
-      yT = cT(3449),
-      fT = cT(159),
-      xT = cT(3491),
-      IT = cT(3482),
-      AT = cT(1099);
+    var Yq = gq(1018),
+      lq = gq.n(Yq),
+      Oq = gq(1025),
+      mq = gq(1326),
+      xq = gq(3383),
+      Aq = gq(136),
+      cq = gq(3428),
+      uq = gq(3416),
+      Bq = gq(1070);
 
-    function CT(TT) {
+    function Wq(qq) {
       let {
-        game: kT
-      } = TT;
-      const cT = (0, fT.m)() ? "large" : "small",
-        lT = (0, xT.i)(kT, cT),
-        CT = (0, yT.f)(lT),
-        jT = void 0 !== CT.blurhash;
-      return (0, AT.jsxs)("div", {
+        game: Eq
+      } = qq;
+      const gq = (0, Aq.i)() ? "large" : "small",
+        Yq = (0, cq.e)(Eq, gq),
+        Wq = (0, xq.e)(Yq),
+        Nq = void 0 !== Wq.blurhash;
+      return (0, Bq.jsxs)("div", {
         className: "SchematicImageContainer",
-        children: [CT.isLoading && !jT && (0, AT.jsx)(OT.d, {
+        children: [Wq.isLoading && !Nq && (0, Bq.jsx)(mq.e, {
           loaderType: "Secondary"
-        }), !CT.failed && (null !== CT.src || jT) && (0, AT.jsx)("div", {
-          className: MT()("SchematicImage", IT.g, {
-            SchematicImageFadeIn: CT.fadeIn && !jT
+        }), !Wq.failed && (null !== Wq.src || Nq) && (0, Bq.jsx)("div", {
+          className: lq()("SchematicImage", uq.i, {
+            SchematicImageFadeIn: Wq.fadeIn && !Nq
           }),
-          style: (0, IT.f)(CT),
-          children: (0, AT.jsx)(IT.d, {
-            image: CT
+          style: (0, uq.e)(Wq),
+          children: (0, Bq.jsx)(uq.d, {
+            image: Wq
           })
-        }), CT.failed && (0, AT.jsx)("div", {
+        }), Wq.failed && (0, Bq.jsx)("div", {
           className: "SchematicImageError",
-          children: (0, AT.jsx)(KT.e, {
+          children: (0, Bq.jsx)(Oq.d, {
             name: "face-dizzy"
           })
         })]
       })
     }
   },
-  4979: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => jT
+  4875: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => Nq
     });
-    var lT = cT(71),
-      MT = cT(1046),
-      KT = cT.n(MT),
-      OT = cT(4909),
-      yT = cT(1348),
-      fT = cT(1195),
-      xT = cT(3089),
-      IT = cT(3226),
-      AT = cT(1061),
-      CT = cT(1099);
+    var Yq = gq(57),
+      lq = gq(1018),
+      Oq = gq.n(lq),
+      mq = gq(4792),
+      xq = gq(1326),
+      Aq = gq(1183),
+      cq = gq(3059),
+      uq = gq(3174),
+      Bq = gq(1025),
+      Wq = gq(1070);
 
-    function jT(TT) {
+    function Nq(qq) {
       let {
-        folderName: kT,
-        onTexturePackUpdated: MT,
-        disabled: jT = !1,
-        maxFileSizeMb: vT,
-        packOwner: tT
-      } = TT;
+        folderName: Eq,
+        onTexturePackUpdated: lq,
+        disabled: Nq = !1,
+        maxFileSizeMb: aq,
+        packOwner: Vq
+      } = qq;
       const {
-        t: hT
-      } = (0, fT.B)(), [NT, QT] = (0, lT.useState)(!1), [ST, DT] = (0, lT.useState)(null), [aT, FT] = (0, lT.useState)(null), rT = (0, lT.useRef)(null);
+        t: dq
+      } = (0, Aq.v)(), [jq, Hq] = (0, Yq.useState)(!1), [oq, Pq] = (0, Yq.useState)(null), [Qq, yq] = (0, Yq.useState)(null), tq = (0, Yq.useRef)(null);
       const {
-        getRootProps: PT,
-        getInputProps: wT,
-        isDragActive: mT
-      } = (0, OT.c)({
-        onDrop: async function(TT) {
-          QT(!0);
+        getRootProps: rq,
+        getInputProps: vq,
+        isDragActive: hq
+      } = (0, mq.e)({
+        onDrop: async function(qq) {
+          Hq(!0);
           try {
-            const kT = await (0, xT.q)(TT);
-            if ("customGame" === tT && (0, IT.i)(kT)) return void DT(hT(IT.b));
-            if (void 0 !== vT) {
-              const TT = JSON.stringify(kT).length / 1048576;
-              if (TT > vT) return void DT(`File size is too large. Max size is ${vT}MB. Current size is ${TT}MB.`)
+            const Eq = await (0, cq.o)(qq);
+            if ("customGame" === Vq && (0, uq.k)(Eq)) return void Pq(dq(uq.b));
+            if (void 0 !== aq) {
+              const qq = JSON.stringify(Eq).length / 1048576;
+              if (qq > aq) return void Pq(`File size is too large. Max size is ${aq}MB. Current size is ${qq}MB.`)
             }
-            DT(null), FT(null), MT(kT), rT.current = kT,
-              function(TT, kT) {
-                const lT = TT.modelOverrides;
-                lT && Promise.all([cT.e(195), cT.e(194)]).then((() => cT(9423))).then((cT => {
+            Pq(null), yq(null), lq(Eq), tq.current = Eq,
+              function(qq, Eq) {
+                const Yq = qq.modelOverrides;
+                Yq && Promise.all([gq.e(196), gq.e(195)]).then((() => gq(9348))).then((gq => {
                   let {
-                    packDisplayName: MT,
-                    refusedPackModels: KT,
-                    packModelSummary: OT
-                  } = cT;
-                  const yT = MT(TT.metaData);
-                  kT(OT(yT, KT(yT, lT, !1)))
-                })).catch((TT => {
-                  console.error("Checking the texture pack's models failed:", TT)
+                    packDisplayName: lq,
+                    refusedPackModels: Oq,
+                    packModelSummary: mq
+                  } = gq;
+                  const xq = lq(qq.metaData);
+                  Eq(mq(xq, Oq(xq, Yq, !1)))
+                })).catch((qq => {
+                  console.error("Checking the texture pack's models failed:", qq)
                 }))
-              }(kT, (TT => {
-                rT.current === kT && FT(TT)
+              }(Eq, (qq => {
+                tq.current === Eq && yq(qq)
               }))
           } catch {
-            DT("Invalid Texture Pack Folder")
+            Pq("Invalid Texture Pack Folder")
           } finally {
-            QT(!1)
+            Hq(!1)
           }
         },
         useFsAccessApi: !1,
-        disabled: jT
+        disabled: Nq
       });
-      return (0, CT.jsxs)("div", {
+      return (0, Wq.jsxs)("div", {
         className: "CustomTexturePackContainer",
-        children: [(0, CT.jsxs)("div", {
+        children: [(0, Wq.jsxs)("div", {
           className: "CustomTextureWarning",
-          children: [hT("settingsMenu:customTextureWarning"), ".", (0, CT.jsx)("br", {}), hT("settingsMenu:viewDocumentation"), ":", " ", (0, CT.jsx)("a", {
+          children: [dq("settingsMenu:customTextureWarning"), ".", (0, Wq.jsx)("br", {}), dq("settingsMenu:viewDocumentation"), ":", " ", (0, Wq.jsx)("a", {
             href: "https://github.com/Bloxdy/texturePacks",
             target: "_blank",
             rel: "noreferrer",
             children: "github.com/Bloxdy/texturePacks"
           })]
-        }), ST && (0, CT.jsxs)("div", {
+        }), oq && (0, Wq.jsxs)("div", {
           className: "CustomTextureError",
-          children: [hT("general:error"), ": ", ST]
-        }), aT && (0, CT.jsx)("div", {
+          children: [dq("general:error"), ": ", oq]
+        }), Qq && (0, Wq.jsx)("div", {
           className: "CustomTextureError",
-          children: aT
-        }), (0, CT.jsxs)("div", {
-          ...PT({
-            className: KT()("CustomTextureFolderUpload", {
-              ActiveDrag: mT,
-              Disabled: jT
+          children: Qq
+        }), (0, Wq.jsxs)("div", {
+          ...rq({
+            className: Oq()("CustomTextureFolderUpload", {
+              ActiveDrag: hq,
+              Disabled: Nq
             })
           }),
-          children: [(0, CT.jsx)("input", {
-            ...wT({
+          children: [(0, Wq.jsx)("input", {
+            ...vq({
               webkitdirectory: "true"
             })
-          }), NT && (0, CT.jsx)("div", {
+          }), jq && (0, Wq.jsx)("div", {
             className: "CustomTextureFolderUploadLoading",
-            children: (0, CT.jsx)(yT.d, {})
-          }), !NT && !mT && kT && (0, CT.jsxs)(CT.Fragment, {
-            children: [(0, CT.jsx)("div", {
+            children: (0, Wq.jsx)(xq.e, {})
+          }), !jq && !hq && Eq && (0, Wq.jsxs)(Wq.Fragment, {
+            children: [(0, Wq.jsx)("div", {
               className: "CustomTextureFolderUploadIcon Active",
-              children: (0, CT.jsx)(AT.e, {
+              children: (0, Wq.jsx)(Bq.d, {
                 name: "folder-image"
               })
-            }), (0, CT.jsx)("div", {
+            }), (0, Wq.jsx)("div", {
               className: "CustomTextureFolderUploadInstructions Active",
-              children: kT
+              children: Eq
             })]
-          }), !NT && (mT || !kT) && (0, CT.jsxs)(CT.Fragment, {
-            children: [(0, CT.jsx)("div", {
+          }), !jq && (hq || !Eq) && (0, Wq.jsxs)(Wq.Fragment, {
+            children: [(0, Wq.jsx)("div", {
               className: "CustomTextureFolderUploadIcon",
-              children: (0, CT.jsx)(AT.e, {
+              children: (0, Wq.jsx)(Bq.d, {
                 name: "up-from-bracket"
               })
-            }), (0, CT.jsx)("div", {
+            }), (0, Wq.jsx)("div", {
               className: "CustomTextureFolderUploadInstructions",
               children: "Drag and drop a Texture Pack folder here"
             })]
@@ -165,310 +165,310 @@ export const modules = {
       })
     }
   },
-  4945: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => vT,
-      h: () => ST,
-      l: () => tT,
-      m: () => QT
+  4828: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => aq,
+      f: () => oq,
+      h: () => Vq,
+      l: () => Hq
     });
-    var lT = cT(71),
-      MT = cT(4948),
-      KT = cT(4355),
-      OT = cT(1379),
-      yT = cT(4968),
-      fT = cT(1046),
-      xT = cT.n(fT),
-      IT = cT(1363),
-      AT = cT(1741),
-      CT = cT(4975),
-      jT = cT(1099);
+    var Yq = gq(57),
+      lq = gq(4837),
+      Oq = gq(4195),
+      mq = gq(1341),
+      xq = gq(4858),
+      Aq = gq(1018),
+      cq = gq.n(Aq),
+      uq = gq(1336),
+      Bq = gq(1710),
+      Wq = gq(4866),
+      Nq = gq(1070);
 
-    function vT(TT) {
+    function aq(qq) {
       let {
-        label: kT,
-        onClick: cT,
-        checked: lT,
-        circleInfoText: MT,
-        className: yT,
-        disabled: fT,
-        note: IT
-      } = TT;
-      return (0, jT.jsxs)("div", {
-        "aria-disabled": fT || void 0,
+        label: Eq,
+        onClick: gq,
+        checked: Yq,
+        circleInfoText: lq,
+        className: xq,
+        disabled: Aq,
+        note: uq
+      } = qq;
+      return (0, Nq.jsxs)("div", {
+        "aria-disabled": Aq || void 0,
         "data-pad-focusable": !0,
-        className: xT()("SettingBox CheckboxContainer", {
-          [yT]: yT,
-          SettingBoxDisabled: fT
+        className: cq()("SettingBox CheckboxContainer", {
+          [xq]: xq,
+          SettingBoxDisabled: Aq
         }),
         onClick: () => {
-          fT || cT(!lT)
+          Aq || gq(!Yq)
         },
-        children: [(0, jT.jsxs)("div", {
+        children: [(0, Nq.jsxs)("div", {
           className: "CheckboxInputAndText",
-          children: [(0, jT.jsx)("label", {
+          children: [(0, Nq.jsx)("label", {
             className: "CheckboxClickableLabel",
-            children: (0, jT.jsx)(KT.d, {
+            children: (0, Nq.jsx)(Oq.b, {
               className: "SettingsCheckbox",
-              checked: lT,
-              disabled: fT,
+              checked: Yq,
+              disabled: Aq,
               onChange: () => {}
             })
-          }), (0, jT.jsxs)("div", {
+          }), (0, Nq.jsxs)("div", {
             className: "CheckboxText",
-            children: [kT, MT && (0, jT.jsx)("span", {
-              onClick: TT => TT.stopPropagation(),
-              children: (0, jT.jsx)(OT.b, {
+            children: [Eq, lq && (0, Nq.jsx)("span", {
+              onClick: qq => qq.stopPropagation(),
+              children: (0, Nq.jsx)(mq.c, {
                 className: "SettingsTextInputCircleInfo",
-                hoverInfo: MT
+                hoverInfo: lq
               })
             })]
           })]
-        }), IT && (0, jT.jsx)("div", {
+        }), uq && (0, Nq.jsx)("div", {
           className: "SettingNote",
-          children: IT
+          children: uq
         })]
       })
     }
 
-    function tT(TT) {
+    function Vq(qq) {
       let {
-        name: kT,
-        onChange: cT,
-        min: MT,
-        max: KT,
-        step: yT,
-        initValue: fT,
-        circleInfoText: IT,
-        format: AT,
-        className: CT,
-        padStep: vT,
-        disabled: tT = !1,
-        selectableMax: hT,
-        cappedNote: QT,
-        onChangeComplete: ST
-      } = TT;
-      const [DT, aT] = (0, lT.useState)(fT), FT = (0, lT.useRef)(fT);
-      (0, lT.useEffect)((() => {
-        FT.current = fT, aT(fT)
-      }), [fT]);
-      const rT = void 0 !== hT && hT < KT,
-        PT = rT ? {
-          "--slider-selectable": (hT - MT) / (KT - MT)
+        name: Eq,
+        onChange: gq,
+        min: lq,
+        max: Oq,
+        step: xq,
+        initValue: Aq,
+        circleInfoText: uq,
+        format: Bq,
+        className: Wq,
+        padStep: aq,
+        disabled: Vq = !1,
+        selectableMax: dq,
+        cappedNote: Hq,
+        onChangeComplete: oq
+      } = qq;
+      const [Pq, Qq] = (0, Yq.useState)(Aq), yq = (0, Yq.useRef)(Aq);
+      (0, Yq.useEffect)((() => {
+        yq.current = Aq, Qq(Aq)
+      }), [Aq]);
+      const tq = void 0 !== dq && dq < Oq,
+        rq = tq ? {
+          "--slider-selectable": (dq - lq) / (Oq - lq)
         } : void 0;
-      return (0, jT.jsxs)("div", {
-        className: xT()("SettingBox SettingsSliderDiv", {
-          [CT]: CT,
-          SettingBoxDisabled: tT,
-          SliderCapped: rT
+      return (0, Nq.jsxs)("div", {
+        className: cq()("SettingBox SettingsSliderDiv", {
+          [Wq]: Wq,
+          SettingBoxDisabled: Vq,
+          SliderCapped: tq
         }),
-        style: PT,
-        children: [(0, jT.jsxs)("div", {
+        style: rq,
+        children: [(0, Nq.jsxs)("div", {
           className: "SliderText",
-          children: [`${kT}: ${AT?AT(DT):DT}`, IT && (0, jT.jsx)(OT.b, {
+          children: [`${Eq}: ${Bq?Bq(Pq):Pq}`, uq && (0, Nq.jsx)(mq.c, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: IT
+            hoverInfo: uq
           })]
-        }), (0, jT.jsx)("div", {
+        }), (0, Nq.jsx)("div", {
           className: "SliderDiv",
-          children: (0, jT.jsx)(NT, {
-            value: DT,
-            min: MT,
-            max: KT,
-            step: yT,
-            onChange: TT => {
-              if (rT && TT >= hT && DT === hT) return;
-              const kT = rT ? Math.min(TT, hT) : TT;
-              FT.current = kT, aT(kT), cT(kT)
+          children: (0, Nq.jsx)(jq, {
+            value: Pq,
+            min: lq,
+            max: Oq,
+            step: xq,
+            onChange: qq => {
+              if (tq && qq >= dq && Pq === dq) return;
+              const Eq = tq ? Math.min(qq, dq) : qq;
+              yq.current = Eq, Qq(Eq), gq(Eq)
             },
-            onChangeComplete: ST && (() => {
-              ST(FT.current)
+            onChangeComplete: oq && (() => {
+              oq(yq.current)
             }),
-            format: AT,
-            padStep: vT,
-            disabled: tT
+            format: Bq,
+            padStep: aq,
+            disabled: Vq
           })
-        }), rT && QT && (0, jT.jsx)("div", {
+        }), tq && Hq && (0, Nq.jsx)("div", {
           className: "SettingNote",
-          children: QT
+          children: Hq
         })]
       })
     }
-    const hT = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
+    const dq = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
 
-    function NT(TT) {
-      var kT;
+    function jq(qq) {
+      var Eq;
       let {
-        value: cT,
-        min: KT,
-        max: OT,
-        step: yT,
-        onChange: fT,
-        orientation: xT,
-        reverse: IT,
-        setIsChanging: AT,
-        tooltip: vT,
-        labels: tT,
-        handleLabel: NT,
-        format: QT,
-        onChangeStart: ST,
-        onChangeComplete: DT,
-        padStep: aT,
-        disabled: FT = !1
-      } = TT;
-      const rT = (0, lT.useRef)(null),
-        PT = (0, lT.useRef)(null);
-      (0, lT.useLayoutEffect)((() => {
-        var TT, kT, cT;
-        const lT = null !== (TT = null === (kT = rT.current) || void 0 === kT ? void 0 : kT.querySelector(".rangeslider")) && void 0 !== TT ? TT : null;
-        null === lT || void 0 === lT || lT.setAttribute("data-pad-slider", ""), null === lT || void 0 === lT || lT.setAttribute("data-pad-focusable", ""), null === lT || void 0 === lT || null === (cT = lT.querySelector(".rangeslider__handle")) || void 0 === cT || cT.setAttribute("data-pad-slider-handle", ""), PT.current = lT
-      }), []), (0, lT.useLayoutEffect)((() => {
-        var TT, kT;
-        FT ? null === (TT = PT.current) || void 0 === TT || TT.setAttribute("aria-disabled", "true") : null === (kT = PT.current) || void 0 === kT || kT.removeAttribute("aria-disabled")
-      }), [FT]);
-      const wT = (null !== (kT = String(yT).split(".")[1]) && void 0 !== kT ? kT : "").length,
-        mT = TT => {
-          const kT = Number((Math.round((TT - KT) / yT) * yT + KT).toFixed(wT));
-          return Math.min(OT, Math.max(KT, kT))
+        value: gq,
+        min: Oq,
+        max: mq,
+        step: xq,
+        onChange: Aq,
+        orientation: cq,
+        reverse: uq,
+        setIsChanging: Bq,
+        tooltip: aq,
+        labels: Vq,
+        handleLabel: jq,
+        format: Hq,
+        onChangeStart: oq,
+        onChangeComplete: Pq,
+        padStep: Qq,
+        disabled: yq = !1
+      } = qq;
+      const tq = (0, Yq.useRef)(null),
+        rq = (0, Yq.useRef)(null);
+      (0, Yq.useLayoutEffect)((() => {
+        var qq, Eq, gq;
+        const Yq = null !== (qq = null === (Eq = tq.current) || void 0 === Eq ? void 0 : Eq.querySelector(".rangeslider")) && void 0 !== qq ? qq : null;
+        null === Yq || void 0 === Yq || Yq.setAttribute("data-pad-slider", ""), null === Yq || void 0 === Yq || Yq.setAttribute("data-pad-focusable", ""), null === Yq || void 0 === Yq || null === (gq = Yq.querySelector(".rangeslider__handle")) || void 0 === gq || gq.setAttribute("data-pad-slider-handle", ""), rq.current = Yq
+      }), []), (0, Yq.useLayoutEffect)((() => {
+        var qq, Eq;
+        yq ? null === (qq = rq.current) || void 0 === qq || qq.setAttribute("aria-disabled", "true") : null === (Eq = rq.current) || void 0 === Eq || Eq.removeAttribute("aria-disabled")
+      }), [yq]);
+      const vq = (null !== (Eq = String(xq).split(".")[1]) && void 0 !== Eq ? Eq : "").length,
+        hq = qq => {
+          const Eq = Number((Math.round((qq - Oq) / xq) * xq + Oq).toFixed(vq));
+          return Math.min(mq, Math.max(Oq, Eq))
         },
-        bT = (0, lT.useRef)(DT);
-      bT.current = DT, (0, lT.useEffect)((() => {
-        const TT = rT.current;
-        if (!TT) return;
-        const kT = TT => {
-          var kT;
-          hT.has(TT.key) && (null === (kT = bT.current) || void 0 === kT || kT.call(bT))
+        nq = (0, Yq.useRef)(Pq);
+      nq.current = Pq, (0, Yq.useEffect)((() => {
+        const qq = tq.current;
+        if (!qq) return;
+        const Eq = qq => {
+          var Eq;
+          dq.has(qq.key) && (null === (Eq = nq.current) || void 0 === Eq || Eq.call(nq))
         };
-        return TT.addEventListener("keyup", kT), () => {
-          TT.removeEventListener("keyup", kT)
+        return qq.addEventListener("keyup", Eq), () => {
+          qq.removeEventListener("keyup", Eq)
         }
       }), []);
-      const zT = (0, lT.useRef)(!1);
-      return (0, CT.d)(PT, {
-        adjust: TT => {
-          if (FT) return;
-          const kT = null !== aT && void 0 !== aT ? aT : Math.max(yT, Math.round((OT - KT) / 20 / yT) * yT),
-            lT = mT(cT + TT * kT * (IT ? -1 : 1));
-          lT !== cT && (null === ST || void 0 === ST || ST(), fT(lT), null === DT || void 0 === DT || DT())
+      const bq = (0, Yq.useRef)(!1);
+      return (0, Wq.i)(rq, {
+        adjust: qq => {
+          if (yq) return;
+          const Eq = null !== Qq && void 0 !== Qq ? Qq : Math.max(xq, Math.round((mq - Oq) / 20 / xq) * xq),
+            Yq = hq(gq + qq * Eq * (uq ? -1 : 1));
+          Yq !== gq && (null === oq || void 0 === oq || oq(), Aq(Yq), null === Pq || void 0 === Pq || Pq())
         },
-        setFraction: TT => {
-          if (FT) return;
-          const kT = mT(KT + (IT ? 1 - TT : TT) * (OT - KT));
-          kT !== cT && (zT.current || (zT.current = !0, null === ST || void 0 === ST || ST()), fT(kT))
+        setFraction: qq => {
+          if (yq) return;
+          const Eq = hq(Oq + (uq ? 1 - qq : qq) * (mq - Oq));
+          Eq !== gq && (bq.current || (bq.current = !0, null === oq || void 0 === oq || oq()), Aq(Eq))
         },
         endDrag: () => {
-          zT.current && (zT.current = !1, null === DT || void 0 === DT || DT())
+          bq.current && (bq.current = !1, null === Pq || void 0 === Pq || Pq())
         }
-      }), (0, jT.jsx)("div", {
-        ref: rT,
+      }), (0, Nq.jsx)("div", {
+        ref: tq,
         style: {
           display: "contents"
         },
-        children: (0, jT.jsx)(MT.b, {
-          value: cT,
-          min: KT,
-          max: OT,
-          step: yT,
-          onChange: fT,
-          orientation: xT,
-          reverse: IT,
-          tooltip: vT,
-          labels: tT,
-          handleLabel: NT,
-          format: QT,
+        children: (0, Nq.jsx)(lq.d, {
+          value: gq,
+          min: Oq,
+          max: mq,
+          step: xq,
+          onChange: Aq,
+          orientation: cq,
+          reverse: uq,
+          tooltip: aq,
+          labels: Vq,
+          handleLabel: jq,
+          format: Hq,
           onChangeStart: () => {
-            null === ST || void 0 === ST || ST(), null === AT || void 0 === AT || AT(!0)
+            null === oq || void 0 === oq || oq(), null === Bq || void 0 === Bq || Bq(!0)
           },
           onChangeComplete: () => {
-            null === AT || void 0 === AT || AT(!1), null === DT || void 0 === DT || DT()
+            null === Bq || void 0 === Bq || Bq(!1), null === Pq || void 0 === Pq || Pq()
           }
         })
       })
     }
-    async function QT() {
-      let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-      const kT = IT.NotificationProvider.showPromptPopup({
+    async function Hq() {
+      let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+      const Eq = uq.NotificationProvider.showPromptPopup({
         title: "settingsMenu:reloadPagePopupTitle",
         subtitle: "settingsMenu:reloadPagePopupSubtitle",
         confirmText: "settingsMenu:reloadPagePopupConfirm",
         confirmTooltip: "",
         cancelText: "general:cancel",
         cancelTooltip: "",
-        unlockPointerKey: TT
+        unlockPointerKey: qq
       });
-      !0 === await kT.getResult() && (0, AT.reloadBloxd)()
+      !0 === await Eq.getResult() && (0, Bq.reloadBloxd)()
     }
 
-    function ST(TT) {
+    function oq(qq) {
       let {
-        label: kT,
-        options: cT,
-        value: lT,
-        onChange: MT,
-        circleInfoText: KT
-      } = TT;
-      return (0, jT.jsxs)("div", {
+        label: Eq,
+        options: gq,
+        value: Yq,
+        onChange: lq,
+        circleInfoText: Oq
+      } = qq;
+      return (0, Nq.jsxs)("div", {
         className: "SettingBox SegmentedSettingRow",
-        children: [(0, jT.jsxs)("div", {
+        children: [(0, Nq.jsxs)("div", {
           className: "SliderText",
-          children: [kT, KT && (0, jT.jsx)(OT.b, {
+          children: [Eq, Oq && (0, Nq.jsx)(mq.c, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: KT
+            hoverInfo: Oq
           })]
-        }), (0, jT.jsx)(yT.d, {
-          ariaLabel: kT,
-          options: cT,
-          value: lT,
-          onChange: MT
+        }), (0, Nq.jsx)(xq.c, {
+          ariaLabel: Eq,
+          options: gq,
+          value: Yq,
+          onChange: lq
         })]
       })
     }
   },
-  4943: (TT, kT, cT) => {
-    cT.d(kT, {
-      d: () => NT,
-      f: () => QT
+  4826: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => jq,
+      d: () => Hq
     });
-    var lT = cT(3089),
-      MT = cT(3092),
-      KT = cT(71),
-      OT = cT(1046),
-      yT = cT.n(OT),
-      fT = cT(1348),
-      xT = cT(3081),
-      IT = cT(1363),
-      AT = cT(4945),
-      CT = cT(4979),
-      jT = cT(636),
-      vT = cT(4988),
-      tT = cT(1099);
+    var Yq = gq(3059),
+      lq = gq(3067),
+      Oq = gq(57),
+      mq = gq(1018),
+      xq = gq.n(mq),
+      Aq = gq(1326),
+      cq = gq(3056),
+      uq = gq(1336),
+      Bq = gq(4828),
+      Wq = gq(4875),
+      Nq = gq(611),
+      aq = gq(4883),
+      Vq = gq(1070);
 
-    function hT() {
-      (0, AT.m)("texturePackPickReload")
+    function dq() {
+      (0, Bq.l)("texturePackPickReload")
     }
 
-    function NT(TT) {
-      var kT;
+    function jq(qq) {
+      var Eq;
       let {
-        setApplySettingsCallback: cT
-      } = TT;
-      const [, OT] = (0, KT.useReducer)((TT => TT + 1), 0), yT = (0, KT.useRef)(!1), fT = (0, KT.useRef)(null);
+        setApplySettingsCallback: gq
+      } = qq;
+      const [, mq] = (0, Oq.useReducer)((qq => qq + 1), 0), xq = (0, Oq.useRef)(!1), Aq = (0, Oq.useRef)(null);
 
-      function NT(TT, kT) {
-        xT.e.setFromJson(TT, "player");
-        const lT = xT.e.saveTexturePack();
-        if (jT.x) {
-          const TT = xT.e.toJson();
-          lT.then((kT => {
-            kT && (0, vT.f)(TT, hT)
+      function jq(qq, Eq) {
+        cq.c.setFromJson(qq, "player");
+        const Yq = cq.c.saveTexturePack();
+        if (Nq.v) {
+          const qq = cq.c.toJson();
+          Yq.then((Eq => {
+            Eq && (0, aq.f)(qq, dq)
           }))
-        } else yT.current ||= kT, fT.current !== xT.e.getId() || xT.e.getId() === MT.r.CUSTOM && yT.current ? cT((() => AT.m)) : cT(null);
-        OT()
+        } else xq.current ||= Eq, Aq.current !== cq.c.getId() || cq.c.getId() === lq.n.CUSTOM && xq.current ? gq((() => Bq.l)) : gq(null);
+        mq()
       }
-      async function ST(TT) {
-        if (xT.e.getId() !== TT.metaData.id) {
-          if (xT.e.getId() === MT.r.CUSTOM && xT.e.getFromFolderName()) {
-            const TT = IT.NotificationProvider.showPromptPopup({
+      async function oq(qq) {
+        if (cq.c.getId() !== qq.metaData.id) {
+          if (cq.c.getId() === lq.n.CUSTOM && cq.c.getFromFolderName()) {
+            const qq = uq.NotificationProvider.showPromptPopup({
               title: "settingsMenu:loseChangesTitle",
               subtitle: "settingsMenu:loseChangesSubtitle",
               confirmText: "general:continue",
@@ -477,29 +477,29 @@ export const modules = {
               cancelText: "general:cancel",
               cancelTooltip: ""
             });
-            if (!0 !== await TT.getResult()) return
+            if (!0 !== await qq.getResult()) return
           }
-          NT(TT, !1)
+          jq(qq, !1)
         }
-      }(0, KT.useEffect)((() => {
-        fT.current = xT.e.getId()
+      }(0, Oq.useEffect)((() => {
+        Aq.current = cq.c.getId()
       }), []);
-      const DT = lT.c,
-        aT = [DT, ...Object.values(MT.r).filter((TT => TT !== DT))];
-      return (0, tT.jsx)(tT.Fragment, {
-        children: (0, tT.jsxs)("div", {
+      const Pq = Yq.c,
+        Qq = [Pq, ...Object.values(lq.n).filter((qq => qq !== Pq))];
+      return (0, Vq.jsx)(Vq.Fragment, {
+        children: (0, Vq.jsxs)("div", {
           className: "TexturePackCategory SettingsMenuRightInner",
-          children: [(0, tT.jsx)("div", {
+          children: [(0, Vq.jsx)("div", {
             className: "TexturePackList",
-            children: aT.map((TT => (0, tT.jsx)(QT, {
-              id: TT,
-              isSelected: TT === xT.e.getId(),
-              setSelected: ST
-            }, TT)))
-          }), xT.e.getId() === MT.r.CUSTOM && (0, tT.jsx)(CT.e, {
-            folderName: null !== (kT = xT.e.getFromFolderName()) && void 0 !== kT ? kT : null,
-            onTexturePackUpdated: function(TT) {
-              NT(TT, !0)
+            children: Qq.map((qq => (0, Vq.jsx)(Hq, {
+              id: qq,
+              isSelected: qq === cq.c.getId(),
+              setSelected: oq
+            }, qq)))
+          }), cq.c.getId() === lq.n.CUSTOM && (0, Vq.jsx)(Wq.e, {
+            folderName: null !== (Eq = cq.c.getFromFolderName()) && void 0 !== Eq ? Eq : null,
+            onTexturePackUpdated: function(qq) {
+              jq(qq, !0)
             },
             packOwner: "player"
           })]
@@ -507,169 +507,169 @@ export const modules = {
       })
     }
 
-    function QT(TT) {
+    function Hq(qq) {
       let {
-        id: kT,
-        isSelected: cT,
-        setSelected: OT,
-        disabled: xT = !1
-      } = TT;
-      const [IT, AT] = (0, KT.useState)(!0), [CT, jT] = (0, KT.useState)(""), [vT, hT] = (0, KT.useState)(""), [NT, QT] = (0, KT.useState)(""), ST = (0, KT.useRef)({});
-      return (0, KT.useEffect)((() => {
-        (0, lT.m)(kT).then((TT => {
-          var kT;
-          TT && (ST.current = TT, AT(!1), jT(ST.current.metaData.name), hT(ST.current.metaData.author), QT(null !== (kT = ST.current.metaData.previewImage) && void 0 !== kT ? kT : ""))
-        })).catch((TT => {
-          console.warn(`Failed to fetch texture pack ${kT}`, TT)
+        id: Eq,
+        isSelected: gq,
+        setSelected: mq,
+        disabled: cq = !1
+      } = qq;
+      const [uq, Bq] = (0, Oq.useState)(!0), [Wq, Nq] = (0, Oq.useState)(""), [aq, dq] = (0, Oq.useState)(""), [jq, Hq] = (0, Oq.useState)(""), oq = (0, Oq.useRef)({});
+      return (0, Oq.useEffect)((() => {
+        (0, Yq.m)(Eq).then((qq => {
+          var Eq;
+          qq && (oq.current = qq, Bq(!1), Nq(oq.current.metaData.name), dq(oq.current.metaData.author), Hq(null !== (Eq = oq.current.metaData.previewImage) && void 0 !== Eq ? Eq : ""))
+        })).catch((qq => {
+          console.warn(`Failed to fetch texture pack ${Eq}`, qq)
         }))
-      }), [kT]), (0, tT.jsxs)("div", {
+      }), [Eq]), (0, Vq.jsxs)("div", {
         "data-pad-focusable": !0,
-        "aria-disabled": xT || void 0,
-        className: yT()("TexturePack", {
-          Selected: cT,
-          Custom: kT === MT.r.CUSTOM,
-          Disabled: xT
+        "aria-disabled": cq || void 0,
+        className: xq()("TexturePack", {
+          Selected: gq,
+          Custom: Eq === lq.n.CUSTOM,
+          Disabled: cq
         }),
         onClick: () => {
-          IT || xT || OT(ST.current)
+          uq || cq || mq(oq.current)
         },
-        children: [(0, tT.jsx)("div", {
+        children: [(0, Vq.jsx)("div", {
           className: "TexturePackBg",
           style: {
-            backgroundImage: NT ? `url(${NT})` : void 0
+            backgroundImage: jq ? `url(${jq})` : void 0
           }
-        }), IT && (0, tT.jsx)("div", {
+        }), uq && (0, Vq.jsx)("div", {
           className: "TexturePackName",
-          children: (0, tT.jsx)(fT.d, {})
-        }), !IT && CT && (0, tT.jsx)("div", {
+          children: (0, Vq.jsx)(Aq.e, {})
+        }), !uq && Wq && (0, Vq.jsx)("div", {
           className: "TexturePackName",
-          children: CT
-        }), !IT && vT && (0, tT.jsx)("div", {
+          children: Wq
+        }), !uq && aq && (0, Vq.jsx)("div", {
           className: "TexturePackAuthor",
-          children: vT
+          children: aq
         })]
       })
     }
   },
-  4968: (TT, kT, cT) => {
-    cT.d(kT, {
-      d: () => OT
+  4858: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => mq
     });
-    var lT = cT(1046),
-      MT = cT.n(lT),
-      KT = cT(1099);
+    var Yq = gq(1018),
+      lq = gq.n(Yq),
+      Oq = gq(1070);
 
-    function OT(TT) {
+    function mq(qq) {
       let {
-        options: kT,
-        value: cT,
-        onChange: lT,
-        ariaLabel: OT,
-        className: yT,
-        reselectable: fT = !1,
-        keepsFocus: xT = !1,
-        padTabs: IT
-      } = TT;
-      const AT = void 0 !== IT;
-      return (0, KT.jsx)("div", {
-        className: MT()("SegmentedToggle", yT),
+        options: Eq,
+        value: gq,
+        onChange: Yq,
+        ariaLabel: mq,
+        className: xq,
+        reselectable: Aq = !1,
+        keepsFocus: cq = !1,
+        padTabs: uq
+      } = qq;
+      const Bq = void 0 !== uq;
+      return (0, Oq.jsx)("div", {
+        className: lq()("SegmentedToggle", xq),
         role: "group",
-        "aria-label": OT,
-        "data-pad-tabs": IT,
-        children: kT.map((TT => {
-          const kT = TT.value === cT;
-          return (0, KT.jsx)("button", {
+        "aria-label": mq,
+        "data-pad-tabs": uq,
+        children: Eq.map((qq => {
+          const Eq = qq.value === gq;
+          return (0, Oq.jsx)("button", {
             type: "button",
-            "aria-pressed": kT,
-            "data-pad-tab": AT || void 0,
-            "data-pad-selected": AT && kT ? "true" : void 0,
-            "data-pad-default-focus": AT && kT || void 0,
-            "aria-label": TT.ariaLabel,
-            title: TT.ariaLabel,
-            className: MT()("SegmentedToggleOption SmallTextLight", {
-              SegmentedToggleOptionSelected: kT
+            "aria-pressed": Eq,
+            "data-pad-tab": Bq || void 0,
+            "data-pad-selected": Bq && Eq ? "true" : void 0,
+            "data-pad-default-focus": Bq && Eq || void 0,
+            "aria-label": qq.ariaLabel,
+            title: qq.ariaLabel,
+            className: lq()("SegmentedToggleOption SmallTextLight", {
+              SegmentedToggleOptionSelected: Eq
             }),
-            onMouseDown: xT ? TT => {
-              TT.preventDefault()
+            onMouseDown: cq ? qq => {
+              qq.preventDefault()
             } : void 0,
             onClick: () => {
-              kT && !fT || lT(TT.value)
+              Eq && !Aq || Yq(qq.value)
             },
-            children: TT.label
-          }, TT.value)
+            children: qq.label
+          }, qq.value)
         }))
       })
     }
   },
-  4975: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => KT,
-      d: () => OT
+  4866: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => Oq,
+      i: () => mq
     });
-    var lT = cT(71);
-    const MT = new WeakMap,
-      KT = TT => {
-        var kT;
-        const cT = TT.closest("[data-pad-slider]");
-        return cT && null !== (kT = MT.get(cT)) && void 0 !== kT ? kT : null
+    var Yq = gq(57);
+    const lq = new WeakMap,
+      Oq = qq => {
+        var Eq;
+        const gq = qq.closest("[data-pad-slider]");
+        return gq && null !== (Eq = lq.get(gq)) && void 0 !== Eq ? Eq : null
       },
-      OT = (TT, kT) => {
-        const cT = (0, lT.useRef)(kT);
-        cT.current = kT, (0, lT.useEffect)((() => {
-          if (TT.current) return ((TT, kT) => (MT.set(TT, kT), () => {
-            MT.get(TT) === kT && MT.delete(TT)
-          }))(TT.current, {
-            adjust: TT => {
-              cT.current.adjust(TT)
+      mq = (qq, Eq) => {
+        const gq = (0, Yq.useRef)(Eq);
+        gq.current = Eq, (0, Yq.useEffect)((() => {
+          if (qq.current) return ((qq, Eq) => (lq.set(qq, Eq), () => {
+            lq.get(qq) === Eq && lq.delete(qq)
+          }))(qq.current, {
+            adjust: qq => {
+              gq.current.adjust(qq)
             },
-            setFraction: TT => {
-              cT.current.setFraction(TT)
+            setFraction: qq => {
+              gq.current.setFraction(qq)
             },
             endDrag: () => {
-              cT.current.endDrag()
+              gq.current.endDrag()
             }
           })
-        }), [TT])
+        }), [qq])
       }
   },
-  4988: (TT, kT, cT) => {
-    cT.d(kT, {
-      d: () => yT,
-      f: () => OT
+  4883: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => xq,
+      f: () => mq
     });
-    var lT = cT(3092),
-      MT = cT(4991);
-    let KT = null;
+    var Yq = gq(3067),
+      lq = gq(4890);
+    let Oq = null;
 
-    function OT(TT, kT) {
-      KT = {
-        pack: TT.metaData.id === lT.d ? null : TT,
-        prompt: kT
+    function mq(qq, Eq) {
+      Oq = {
+        pack: qq.metaData.id === Yq.c ? null : qq,
+        prompt: Eq
       }
     }
 
-    function yT(TT, kT) {
-      const cT = KT;
-      null !== cT && (0, MT.d)(cT.pack, TT) && (KT = null, kT && cT.prompt())
+    function xq(qq, Eq) {
+      const gq = Oq;
+      null !== gq && (0, lq.c)(gq.pack, qq) && (Oq = null, Eq && gq.prompt())
     }
   },
-  4991: (TT, kT, cT) => {
-    function lT(TT, kT) {
-      return MT(TT, kT)
+  4890: (qq, Eq, gq) => {
+    function Yq(qq, Eq) {
+      return lq(qq, Eq)
     }
 
-    function MT(TT, kT) {
-      if (TT === kT) return !0;
-      if ("object" !== typeof TT || "object" !== typeof kT || null === TT || null === kT || Array.isArray(TT) !== Array.isArray(kT)) return !1;
-      const cT = TT,
-        lT = kT,
-        KT = Object.keys(cT);
-      return KT.length === Object.keys(lT).length && KT.every((TT => Object.prototype.hasOwnProperty.call(lT, TT) && MT(cT[TT], lT[TT])))
+    function lq(qq, Eq) {
+      if (qq === Eq) return !0;
+      if ("object" !== typeof qq || "object" !== typeof Eq || null === qq || null === Eq || Array.isArray(qq) !== Array.isArray(Eq)) return !1;
+      const gq = qq,
+        Yq = Eq,
+        Oq = Object.keys(gq);
+      return Oq.length === Object.keys(Yq).length && Oq.every((qq => Object.prototype.hasOwnProperty.call(Yq, qq) && lq(gq[qq], Yq[qq])))
     }
-    cT.d(kT, {
-      d: () => lT
+    gq.d(Eq, {
+      c: () => Yq
     })
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

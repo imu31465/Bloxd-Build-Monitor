@@ -1,55 +1,55 @@
 export const id = 292;
 export const ids = [292];
 export const modules = {
-  41070: (TT, kT, cT) => {
-    cT.r(kT), cT.d(kT, {
-      default: () => FT
+  41216: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      default: () => yq
     });
-    var lT = cT(71),
-      MT = cT(4711),
-      KT = cT(1692),
-      OT = cT(1046),
-      yT = cT.n(OT),
-      fT = cT(1470),
-      xT = cT(1195),
-      IT = cT(4698),
-      AT = cT(4702),
-      CT = cT(4705),
-      jT = cT(1099);
+    var Yq = gq(57),
+      lq = gq(4572),
+      Oq = gq(1659),
+      mq = gq(1018),
+      xq = gq.n(mq),
+      Aq = gq(1422),
+      cq = gq(1183),
+      uq = gq(4540),
+      Bq = gq(4553),
+      Wq = gq(4562),
+      Nq = gq(1070);
 
-    function vT(TT) {
-      return TT.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+    function aq(qq) {
+      return qq.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
     }
-    IT.d.registerLanguage("javascript", AT.b), IT.d.registerLanguage("typescript", CT.d);
+    uq.b.registerLanguage("javascript", Bq.e), uq.b.registerLanguage("typescript", Wq.b);
 
-    function tT(TT, kT) {
-      const cT = vT(TT).replace(/"/g, "&quot;");
-      return `<button type="button" class="DocsCopyButton ${kT}" title="${cT}" aria-label="${cT}"><svg class="DocsCopyIcon" viewBox="0 0 16 16" aria-hidden="true"><rect x="5.5" y="5.5" width="8.5" height="8.5"/><path d="M10.5 3.5V1.5H1.5v9h2"/></svg><svg class="DocsCopiedIcon" viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-7.5"/></svg></button>`
+    function Vq(qq, Eq) {
+      const gq = aq(qq).replace(/"/g, "&quot;");
+      return `<button type="button" class="DocsCopyButton ${Eq}" title="${gq}" aria-label="${gq}"><svg class="DocsCopyIcon" viewBox="0 0 16 16" aria-hidden="true"><rect x="5.5" y="5.5" width="8.5" height="8.5"/><path d="M10.5 3.5V1.5H1.5v9h2"/></svg><svg class="DocsCopiedIcon" viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-7.5"/></svg></button>`
     }
 
-    function hT(TT, kT) {
-      const cT = [],
-        lT = TT.toLowerCase(),
-        MT = kT.toLowerCase();
-      let KT = 0;
-      for (; KT < TT.length;) {
-        const OT = lT.indexOf(MT, KT);
-        if (-1 === OT) {
-          cT.push(TT.slice(KT));
+    function dq(qq, Eq) {
+      const gq = [],
+        Yq = qq.toLowerCase(),
+        lq = Eq.toLowerCase();
+      let Oq = 0;
+      for (; Oq < qq.length;) {
+        const mq = Yq.indexOf(lq, Oq);
+        if (-1 === mq) {
+          gq.push(qq.slice(Oq));
           break
         }
-        OT > KT && cT.push(TT.slice(KT, OT)), cT.push((0, jT.jsx)("mark", {
+        mq > Oq && gq.push(qq.slice(Oq, mq)), gq.push((0, Nq.jsx)("mark", {
           className: "DocsHighlight",
-          children: TT.slice(OT, OT + kT.length)
-        }, OT)), KT = OT + kT.length
+          children: qq.slice(mq, mq + Eq.length)
+        }, mq)), Oq = mq + Eq.length
       }
-      return cT
+      return gq
     }
-    var NT = cT(1061),
-      QT = cT(1379),
-      ST = cT(36712),
-      DT = cT(36717);
-    const aT = {
+    var jq = gq(1025),
+      Hq = gq(1341),
+      oq = gq(36931),
+      Pq = gq(36935);
+    const Qq = {
         clientOptions: {
           tabStep: "docsClientOptionsTab",
           tabText: "codeEditor:tutorialClientOptionsTab",
@@ -69,342 +69,342 @@ export const modules = {
           pageText: "codeEditor:tutorialCallbacks"
         }
       },
-      FT = (0, lT.memo)((function(TT) {
-        var kT, cT, OT, AT, CT, FT, rT;
+      yq = (0, Yq.memo)((function(qq) {
+        var Eq, gq, mq, Bq, Wq, yq, tq;
         let {
-          popOutDocs: PT,
-          hideDocs: wT,
-          tutorialEnabled: mT
-        } = TT;
-        const [bT, zT] = (0, lT.useState)(MT.b[0].id), JT = (0, lT.useRef)(null), oT = (0, lT.useRef)(null), [HT, eT] = (0, lT.useState)(""), [GT, VT] = (0, lT.useState)(0), [ET, ZT] = (0, lT.useState)(null), [uT, XT] = (0, lT.useState)(!1), [dT, LT] = (0, lT.useState)(160), RT = (0, lT.useRef)(!1), gT = (0, lT.useRef)(null), UT = (0, ST.l)("docsOverview"), [YT, BT] = (0, lT.useState)(0), WT = Object.values(aT).some((TT => (null === TT || void 0 === TT ? void 0 : TT.tabStep) === UT));
-        (0, lT.useEffect)((() => {
-          WT && HT.length > 0 && (eT(""), BT((TT => TT + 1)))
-        }), [WT, HT]);
-        const nT = HT.length > 0,
-          pT = (0, lT.useMemo)((() => function(TT) {
-            if (!TT) return [];
-            const kT = TT.toLowerCase(),
-              cT = [];
-            for (const lT of MT.b) {
-              const TT = lT.content.toLowerCase();
-              let MT = 0,
-                KT = -1,
-                OT = 0,
-                yT = TT.indexOf(kT, OT);
-              for (; - 1 !== yT;) - 1 === KT && (KT = yT), MT++, OT = yT + kT.length, yT = TT.indexOf(kT, OT);
-              if (0 === MT) continue;
-              const fT = Math.max(0, KT - 40),
-                xT = Math.min(lT.content.length, KT + kT.length + 40),
-                IT = (fT > 0 ? "..." : "") + lT.content.slice(fT, xT).replace(/\n/g, " ") + (xT < lT.content.length ? "..." : "");
-              cT.push({
-                doc: lT,
-                matchCount: MT,
-                snippet: IT
+          popOutDocs: rq,
+          hideDocs: vq,
+          tutorialEnabled: hq
+        } = qq;
+        const [nq, bq] = (0, Yq.useState)(lq.e[0].id), iq = (0, Yq.useRef)(null), Zq = (0, Yq.useRef)(null), [fq, Mq] = (0, Yq.useState)(""), [Tq, zq] = (0, Yq.useState)(0), [Sq, pq] = (0, Yq.useState)(null), [Gq, Lq] = (0, Yq.useState)(!1), [Jq, kq] = (0, Yq.useState)(160), Rq = (0, Yq.useRef)(!1), Uq = (0, Yq.useRef)(null), Fq = (0, oq.l)("docsOverview"), [sq, Xq] = (0, Yq.useState)(0), wq = Object.values(Qq).some((qq => (null === qq || void 0 === qq ? void 0 : qq.tabStep) === Fq));
+        (0, Yq.useEffect)((() => {
+          wq && fq.length > 0 && (Mq(""), Xq((qq => qq + 1)))
+        }), [wq, fq]);
+        const Kq = fq.length > 0,
+          Cq = (0, Yq.useMemo)((() => function(qq) {
+            if (!qq) return [];
+            const Eq = qq.toLowerCase(),
+              gq = [];
+            for (const Yq of lq.e) {
+              const qq = Yq.content.toLowerCase();
+              let lq = 0,
+                Oq = -1,
+                mq = 0,
+                xq = qq.indexOf(Eq, mq);
+              for (; - 1 !== xq;) - 1 === Oq && (Oq = xq), lq++, mq = xq + Eq.length, xq = qq.indexOf(Eq, mq);
+              if (0 === lq) continue;
+              const Aq = Math.max(0, Oq - 40),
+                cq = Math.min(Yq.content.length, Oq + Eq.length + 40),
+                uq = (Aq > 0 ? "..." : "") + Yq.content.slice(Aq, cq).replace(/\n/g, " ") + (cq < Yq.content.length ? "..." : "");
+              gq.push({
+                doc: Yq,
+                matchCount: lq,
+                snippet: uq
               })
             }
-            return cT.sort(((TT, kT) => kT.matchCount - TT.matchCount)), cT
-          }(HT)), [HT]),
-          iT = nT ? null !== (kT = null !== (cT = null === (OT = pT.find((TT => TT.doc.id === bT))) || void 0 === OT ? void 0 : OT.doc) && void 0 !== cT ? cT : null === (AT = pT[0]) || void 0 === AT ? void 0 : AT.doc) && void 0 !== kT ? kT : null : null !== (CT = MT.b.find((TT => TT.id === bT))) && void 0 !== CT ? CT : MT.b[0],
+            return gq.sort(((qq, Eq) => Eq.matchCount - qq.matchCount)), gq
+          }(fq)), [fq]),
+          Iq = Kq ? null !== (Eq = null !== (gq = null === (mq = Cq.find((qq => qq.doc.id === nq))) || void 0 === mq ? void 0 : mq.doc) && void 0 !== gq ? gq : null === (Bq = Cq[0]) || void 0 === Bq ? void 0 : Bq.doc) && void 0 !== Eq ? Eq : null : null !== (Wq = lq.e.find((qq => qq.id === nq))) && void 0 !== Wq ? Wq : lq.e[0],
           {
-            t: qT
-          } = (0, xT.B)(),
-          sT = qT("codeEditor:copySnippet"),
-          Tk = (0, lT.useMemo)((() => iT ? function(TT, kT, cT, lT) {
-            let MT = kT;
-            MT = MT.replace(/\r\n/g, "\n");
-            const KT = [];
-            MT = MT.replace(/```(\w*)\n([\s\S]*?)```/g, ((TT, kT, lT) => {
-              const MT = KT.length;
-              let OT = vT(lT);
+            t: eq
+          } = (0, cq.v)(),
+          Dq = eq("codeEditor:copySnippet"),
+          qE = (0, Yq.useMemo)((() => Iq ? function(qq, Eq, gq, Yq) {
+            let lq = Eq;
+            lq = lq.replace(/\r\n/g, "\n");
+            const Oq = [];
+            lq = lq.replace(/```(\w*)\n([\s\S]*?)```/g, ((qq, Eq, Yq) => {
+              const lq = Oq.length;
+              let mq = aq(Yq);
               try {
-                OT = IT.d.highlight(lT.trimEnd(), {
-                  language: kT
+                mq = uq.b.highlight(Yq.trimEnd(), {
+                  language: Eq
                 }).value
-              } catch (yT) {
-                console.warn("Could not highlight documentation code block", yT)
+              } catch (xq) {
+                console.warn("Could not highlight documentation code block", xq)
               }
-              return KT.push(`<div class="DocsCodeBlockRow"><pre class="DocsCodeBlock" data-lang="${kT}"><code>${OT}</code></pre>${tT(cT,"DocsCopyBlock")}</div>`), `\0PLACEHOLDER_${MT}\0`
-            })), MT = MT.replace(/(`{1,2})([^\n]+?)\1(?!`)/g, ((kT, lT, MT) => {
-              const OT = KT.length,
-                yT = 2 === lT.length ? MT.replace(/^ (.*) $/, "$1") : MT;
-              let fT = vT(yT);
+              return Oq.push(`<div class="DocsCodeBlockRow"><pre class="DocsCodeBlock" data-lang="${Eq}"><code>${mq}</code></pre>${Vq(gq,"DocsCopyBlock")}</div>`), `\0PLACEHOLDER_${lq}\0`
+            })), lq = lq.replace(/(`{1,2})([^\n]+?)\1(?!`)/g, ((Eq, Yq, lq) => {
+              const mq = Oq.length,
+                xq = 2 === Yq.length ? lq.replace(/^ (.*) $/, "$1") : lq;
+              let Aq = aq(xq);
               try {
-                "apiReference" !== TT && "callbacks" !== TT || (fT = IT.d.highlight(yT.trimEnd().replaceAll("\\|", "|"), {
+                "apiReference" !== qq && "callbacks" !== qq || (Aq = uq.b.highlight(xq.trimEnd().replaceAll("\\|", "|"), {
                   language: "typescript"
                 }).value)
-              } catch (xT) {
-                console.warn("Could not highlight documentation snippet", xT)
+              } catch (cq) {
+                console.warn("Could not highlight documentation snippet", cq)
               }
-              return KT.push(`<span class="DocsInlineCodeRow"><code class="DocsInlineCode">${fT}</code>${tT(cT,"DocsCopyInline")}</span>`), `\0PLACEHOLDER_${OT}\0`
-            })), MT = vT(MT), MT = MT.replace(/^#### (.+)$/gm, '<h4 class="DocsH4">$1</h4>'), MT = MT.replace(/^### (.+)$/gm, '<h3 class="DocsH3">$1</h3>'), MT = MT.replace(/^## (.+)$/gm, '<h2 class="DocsH2">$1</h2>'), MT = MT.replace(/^# (.+)$/gm, '<h1 class="DocsH1">$1</h1>'), MT = MT.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>"), MT = MT.replace(/\[([^\]]+)\]\(([^)]+)\)/g, ((TT, kT, cT) => cT.startsWith("#") ? `<a class="DocsAnchor" data-id="${cT}">${kT}</a>` : `<a href="${cT}" target="_blank" rel="noopener noreferrer">${kT}</a>`)), MT = MT.replace(/^(\|.+\|)\n(\|[\s:\-|]+\|)\n((?:\|.+\|\s*\r?\n?)*)/gm, ((TT, kT, cT, lT) => `<table class="DocsTable"><thead><tr>${kT.split("|").slice(1,-1).map((TT=>`<th>${TT.trim()}</th>`)).join("")}</tr></thead><tbody>${lT.trim().split("\n").map((TT=>`<tr>${TT.split("|").slice(1,-1).map((TT=>`<td>${TT.trim()}</td>`)).join("")}</tr>`)).join("")}</tbody></table>`)), MT = MT.replace(/(?:^[ \t]*([*-])[ \t]+.+(?:\n|$))+/gm, ((TT, kT) => function(TT, kT) {
-              const cT = "*" === kT,
-                lT = [];
-              for (const yT of TT.split("\n")) {
-                const TT = yT.match(/^([ \t]*)(?:[*-])[ \t]+(.+)$/);
-                TT && lT.push({
-                  indent: TT[1].replace(/\t/g, "  ").length,
-                  content: TT[2]
+              return Oq.push(`<span class="DocsInlineCodeRow"><code class="DocsInlineCode">${Aq}</code>${Vq(gq,"DocsCopyInline")}</span>`), `\0PLACEHOLDER_${mq}\0`
+            })), lq = aq(lq), lq = lq.replace(/^#### (.+)$/gm, '<h4 class="DocsH4">$1</h4>'), lq = lq.replace(/^### (.+)$/gm, '<h3 class="DocsH3">$1</h3>'), lq = lq.replace(/^## (.+)$/gm, '<h2 class="DocsH2">$1</h2>'), lq = lq.replace(/^# (.+)$/gm, '<h1 class="DocsH1">$1</h1>'), lq = lq.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>"), lq = lq.replace(/\[([^\]]+)\]\(([^)]+)\)/g, ((qq, Eq, gq) => gq.startsWith("#") ? `<a class="DocsAnchor" data-id="${gq}">${Eq}</a>` : `<a href="${gq}" target="_blank" rel="noopener noreferrer">${Eq}</a>`)), lq = lq.replace(/^(\|.+\|)\n(\|[\s:\-|]+\|)\n((?:\|.+\|\s*\r?\n?)*)/gm, ((qq, Eq, gq, Yq) => `<table class="DocsTable"><thead><tr>${Eq.split("|").slice(1,-1).map((qq=>`<th>${qq.trim()}</th>`)).join("")}</tr></thead><tbody>${Yq.trim().split("\n").map((qq=>`<tr>${qq.split("|").slice(1,-1).map((qq=>`<td>${qq.trim()}</td>`)).join("")}</tr>`)).join("")}</tbody></table>`)), lq = lq.replace(/(?:^[ \t]*([*-])[ \t]+.+(?:\n|$))+/gm, ((qq, Eq) => function(qq, Eq) {
+              const gq = "*" === Eq,
+                Yq = [];
+              for (const xq of qq.split("\n")) {
+                const qq = xq.match(/^([ \t]*)(?:[*-])[ \t]+(.+)$/);
+                qq && Yq.push({
+                  indent: qq[1].replace(/\t/g, "  ").length,
+                  content: qq[2]
                 })
               }
-              let MT = "";
-              const KT = [],
-                OT = cT ? "ol" : "ul";
+              let lq = "";
+              const Oq = [],
+                mq = gq ? "ol" : "ul";
               for (const {
-                  indent: yT,
-                  content: fT
+                  indent: xq,
+                  content: Aq
                 }
-                of lT) {
-                for (; KT.length > 0 && yT < KT[KT.length - 1];) MT += `</${OT}></li>`, KT.pop();
-                (0 === KT.length || yT > KT[KT.length - 1]) && (KT.length > 0 && (MT = MT.replace(/<\/li>$/, "")), MT += `<${OT} class="DocsList">`, KT.push(yT)), MT += `<li class="DocsListItem">${fT}</li>`
+                of Yq) {
+                for (; Oq.length > 0 && xq < Oq[Oq.length - 1];) lq += `</${mq}></li>`, Oq.pop();
+                (0 === Oq.length || xq > Oq[Oq.length - 1]) && (Oq.length > 0 && (lq = lq.replace(/<\/li>$/, "")), lq += `<${mq} class="DocsList">`, Oq.push(xq)), lq += `<li class="DocsListItem">${Aq}</li>`
               }
-              for (; KT.length > 0;) MT += `</${OT}>`, KT.pop(), KT.length > 0 && (MT += "</li>");
-              return MT
-            }(TT, kT))), MT = MT.replace(/\n{2,}/g, "\n<br/>\n");
-            for (let OT = 0; OT < KT.length; OT++) MT = MT.replace(`\0PLACEHOLDER_${OT}\0`, KT[OT]);
-            if (lT) {
-              const TT = vT(lT).replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
-                kT = new RegExp(TT, "gi");
-              MT = MT.replace(/([^<>]+)(?=<|$)/g, (TT => TT.replace(kT, (TT => `<mark class="DocsHighlight">${TT}</mark>`))))
+              for (; Oq.length > 0;) lq += `</${mq}>`, Oq.pop(), Oq.length > 0 && (lq += "</li>");
+              return lq
+            }(qq, Eq))), lq = lq.replace(/\n{2,}/g, "\n<br/>\n");
+            for (let mq = 0; mq < Oq.length; mq++) lq = lq.replace(`\0PLACEHOLDER_${mq}\0`, Oq[mq]);
+            if (Yq) {
+              const qq = aq(Yq).replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
+                Eq = new RegExp(qq, "gi");
+              lq = lq.replace(/([^<>]+)(?=<|$)/g, (qq => qq.replace(Eq, (qq => `<mark class="DocsHighlight">${qq}</mark>`))))
             }
-            return MT
-          }(iT.id, iT.content, sT, nT ? HT : void 0) : ""), [iT, sT, nT, HT]);
-        (0, lT.useEffect)((() => {
-          const TT = oT.current;
-          if (!TT) return;
-          const kT = TT => {
-            var kT, cT, lT, MT, KT;
-            const OT = null === (kT = (cT = TT.target).closest) || void 0 === kT ? void 0 : kT.call(cT, ".DocsCopyButton");
-            if (!OT) return;
-            TT.preventDefault(), TT.stopPropagation();
-            const yT = null !== (lT = null === (MT = OT.parentElement) || void 0 === MT || null === (KT = MT.querySelector("code")) || void 0 === KT ? void 0 : KT.textContent) && void 0 !== lT ? lT : "";
-            navigator.clipboard.writeText(yT.trimEnd()).then((() => {
-              OT.classList.add("Copied"), setTimeout((() => {
-                OT.classList.remove("Copied")
+            return lq
+          }(Iq.id, Iq.content, Dq, Kq ? fq : void 0) : ""), [Iq, Dq, Kq, fq]);
+        (0, Yq.useEffect)((() => {
+          const qq = Zq.current;
+          if (!qq) return;
+          const Eq = qq => {
+            var Eq, gq, Yq, lq, Oq;
+            const mq = null === (Eq = (gq = qq.target).closest) || void 0 === Eq ? void 0 : Eq.call(gq, ".DocsCopyButton");
+            if (!mq) return;
+            qq.preventDefault(), qq.stopPropagation();
+            const xq = null !== (Yq = null === (lq = mq.parentElement) || void 0 === lq || null === (Oq = lq.querySelector("code")) || void 0 === Oq ? void 0 : Oq.textContent) && void 0 !== Yq ? Yq : "";
+            navigator.clipboard.writeText(xq.trimEnd()).then((() => {
+              mq.classList.add("Copied"), setTimeout((() => {
+                mq.classList.remove("Copied")
               }), 1500)
-            })).catch((TT => {
-              console.warn("Could not copy documentation code", TT)
+            })).catch((qq => {
+              console.warn("Could not copy documentation code", qq)
             }))
           };
-          return TT.addEventListener("click", kT, !0), () => {
-            TT.removeEventListener("click", kT, !0)
+          return qq.addEventListener("click", Eq, !0), () => {
+            qq.removeEventListener("click", Eq, !0)
           }
         }), []);
-        const [kk, ck] = (0, lT.useState)(0);
-        (0, lT.useEffect)((() => {
-          if (!nT || !oT.current) return void ck(0);
-          const TT = oT.current.querySelectorAll(".DocsHighlight").length;
-          ck(TT)
-        }), [nT, Tk]), (0, lT.useEffect)((() => {
-          if (null === ET || !oT.current) return;
-          ZT(null);
-          const TT = oT.current.querySelectorAll(".DocsHighlight");
-          if (0 === TT.length) return;
-          const kT = Math.min(ET, TT.length - 1);
-          VT(kT), TT.forEach((TT => {
-            TT.classList.remove("DocsHighlightActive")
-          })), TT[kT].classList.add("DocsHighlightActive"), TT[kT].scrollIntoView({
+        const [EE, gE] = (0, Yq.useState)(0);
+        (0, Yq.useEffect)((() => {
+          if (!Kq || !Zq.current) return void gE(0);
+          const qq = Zq.current.querySelectorAll(".DocsHighlight").length;
+          gE(qq)
+        }), [Kq, qE]), (0, Yq.useEffect)((() => {
+          if (null === Sq || !Zq.current) return;
+          pq(null);
+          const qq = Zq.current.querySelectorAll(".DocsHighlight");
+          if (0 === qq.length) return;
+          const Eq = Math.min(Sq, qq.length - 1);
+          zq(Eq), qq.forEach((qq => {
+            qq.classList.remove("DocsHighlightActive")
+          })), qq[Eq].classList.add("DocsHighlightActive"), qq[Eq].scrollIntoView({
             block: "center",
             behavior: "smooth"
           })
-        }), [ET, Tk]);
-        const lk = (0, lT.useCallback)((TT => {
-            if (!oT.current) return;
-            const kT = oT.current.querySelectorAll(".DocsHighlight");
-            if (0 === kT.length) return;
-            const cT = (GT + TT + kT.length) % kT.length;
-            VT(cT), ZT(cT)
-          }), [GT]),
-          Mk = (0, lT.useCallback)((TT => {
-            var kT;
-            const cT = null === (kT = aT[TT]) || void 0 === kT ? void 0 : kT.tabStep;
-            cT && cT === UT && (0, DT.f)(cT), TT !== bT ? (XT(!0), zT(TT), VT(0), oT.current && (oT.current.scrollTop = 0), nT && ZT(0)) : XT(!uT)
-          }), [nT, bT, uT, UT]),
-          Kk = (0, lT.useCallback)((TT => {
-            var kT;
-            const cT = Array.from((null === (kT = oT.current) || void 0 === kT ? void 0 : kT.querySelectorAll(".DocsH2, .DocsH3")) || []).find((kT => {
-              var cT;
-              return null === (cT = kT.textContent) || void 0 === cT ? void 0 : cT.includes(TT)
+        }), [Sq, qE]);
+        const YE = (0, Yq.useCallback)((qq => {
+            if (!Zq.current) return;
+            const Eq = Zq.current.querySelectorAll(".DocsHighlight");
+            if (0 === Eq.length) return;
+            const gq = (Tq + qq + Eq.length) % Eq.length;
+            zq(gq), pq(gq)
+          }), [Tq]),
+          lE = (0, Yq.useCallback)((qq => {
+            var Eq;
+            const gq = null === (Eq = Qq[qq]) || void 0 === Eq ? void 0 : Eq.tabStep;
+            gq && gq === Fq && (0, Pq.e)(gq), qq !== nq ? (Lq(!0), bq(qq), zq(0), Zq.current && (Zq.current.scrollTop = 0), Kq && pq(0)) : Lq(!Gq)
+          }), [Kq, nq, Gq, Fq]),
+          OE = (0, Yq.useCallback)((qq => {
+            var Eq;
+            const gq = Array.from((null === (Eq = Zq.current) || void 0 === Eq ? void 0 : Eq.querySelectorAll(".DocsH2, .DocsH3")) || []).find((Eq => {
+              var gq;
+              return null === (gq = Eq.textContent) || void 0 === gq ? void 0 : gq.includes(qq)
             }));
-            cT && cT.scrollIntoView({
+            gq && gq.scrollIntoView({
               block: "start",
               behavior: "smooth"
             })
-          }), [oT]),
-          Ok = (0, lT.useCallback)((TT => {
-            var kT, cT;
-            const lT = null !== (kT = null === (cT = JT.current) || void 0 === cT ? void 0 : cT.clientWidth) && void 0 !== kT ? kT : window.innerWidth,
-              MT = Math.max(120, lT - 200);
-            return Math.min(Math.max(TT, 120), MT)
+          }), [Zq]),
+          mE = (0, Yq.useCallback)((qq => {
+            var Eq, gq;
+            const Yq = null !== (Eq = null === (gq = iq.current) || void 0 === gq ? void 0 : gq.clientWidth) && void 0 !== Eq ? Eq : window.innerWidth,
+              lq = Math.max(120, Yq - 200);
+            return Math.min(Math.max(qq, 120), lq)
           }), []),
-          yk = (0, lT.useCallback)((() => {
-            var TT;
-            RT.current && (RT.current = !1, null === (TT = JT.current) || void 0 === TT || TT.classList.remove("DocsSidebarResizing"))
+          xE = (0, Yq.useCallback)((() => {
+            var qq;
+            Rq.current && (Rq.current = !1, null === (qq = iq.current) || void 0 === qq || qq.classList.remove("DocsSidebarResizing"))
           }), []),
-          fk = (0, lT.useCallback)((TT => {
-            var kT;
-            TT.preventDefault(), RT.current = !0, null === (kT = JT.current) || void 0 === kT || kT.classList.add("DocsSidebarResizing")
+          AE = (0, Yq.useCallback)((qq => {
+            var Eq;
+            qq.preventDefault(), Rq.current = !0, null === (Eq = iq.current) || void 0 === Eq || Eq.classList.add("DocsSidebarResizing")
           }), []);
-        (0, lT.useEffect)((() => {
-          const TT = JT.current,
-            kT = TT => {
-              if (!RT.current || !JT.current) return;
-              const kT = JT.current.getBoundingClientRect().left;
-              LT(Ok(TT.clientX - kT))
+        (0, Yq.useEffect)((() => {
+          const qq = iq.current,
+            Eq = qq => {
+              if (!Rq.current || !iq.current) return;
+              const Eq = iq.current.getBoundingClientRect().left;
+              kq(mE(qq.clientX - Eq))
             };
-          return window.addEventListener("mousemove", kT), window.addEventListener("mouseup", yk), () => {
-            window.removeEventListener("mousemove", kT), window.removeEventListener("mouseup", yk), null === TT || void 0 === TT || TT.classList.remove("DocsSidebarResizing")
+          return window.addEventListener("mousemove", Eq), window.addEventListener("mouseup", xE), () => {
+            window.removeEventListener("mousemove", Eq), window.removeEventListener("mouseup", xE), null === qq || void 0 === qq || qq.classList.remove("DocsSidebarResizing")
           }
-        }), [Ok, yk]);
-        const xk = (0, lT.useCallback)((TT => {
-          if (TT) {
-            const [kT, cT] = TT.slice(1).split("-");
-            cT && (gT.current = {
-              docId: kT,
-              subsection: cT
-            }), kT && Mk(kT)
+        }), [mE, xE]);
+        const cE = (0, Yq.useCallback)((qq => {
+          if (qq) {
+            const [Eq, gq] = qq.slice(1).split("-");
+            gq && (Uq.current = {
+              docId: Eq,
+              subsection: gq
+            }), Eq && lE(Eq)
           }
-        }), [Mk]);
-        (0, lT.useEffect)((() => {
-          const TT = gT.current;
-          TT && bT === TT.docId && (setTimeout((() => {
-            Kk(TT.subsection)
-          }), 0), gT.current = null)
-        })), (0, lT.useEffect)((() => {
-          if (!oT.current) return;
-          oT.current.querySelectorAll("a.DocsAnchor").forEach((TT => {
-            TT.addEventListener("click", (kT => {
-              kT.preventDefault(), xk(TT.dataset.id)
+        }), [lE]);
+        (0, Yq.useEffect)((() => {
+          const qq = Uq.current;
+          qq && nq === qq.docId && (setTimeout((() => {
+            OE(qq.subsection)
+          }), 0), Uq.current = null)
+        })), (0, Yq.useEffect)((() => {
+          if (!Zq.current) return;
+          Zq.current.querySelectorAll("a.DocsAnchor").forEach((qq => {
+            qq.addEventListener("click", (Eq => {
+              Eq.preventDefault(), cE(qq.dataset.id)
             }))
           }))
-        }), [bT, xk]);
-        const Ik = Object.values(aT).find((TT => (null === TT || void 0 === TT ? void 0 : TT.pageStep) === UT));
-        return (0, jT.jsx)(ST.i, {
+        }), [nq, cE]);
+        const uE = Object.values(Qq).find((qq => (null === qq || void 0 === qq ? void 0 : qq.pageStep) === Fq));
+        return (0, Nq.jsx)(oq.h, {
           tutorial: "docsOverview",
-          step: null !== (FT = null === Ik || void 0 === Ik ? void 0 : Ik.pageStep) && void 0 !== FT ? FT : "docsPanel",
-          text: qT(null !== (rT = null === Ik || void 0 === Ik ? void 0 : Ik.pageText) && void 0 !== rT ? rT : "codeEditor:tutorialDocsPanel"),
-          enabled: mT,
+          step: null !== (yq = null === uE || void 0 === uE ? void 0 : uE.pageStep) && void 0 !== yq ? yq : "docsPanel",
+          text: eq(null !== (tq = null === uE || void 0 === uE ? void 0 : uE.pageText) && void 0 !== tq ? tq : "codeEditor:tutorialDocsPanel"),
+          enabled: hq,
           placement: "left",
-          onPrevious: Ik ? void 0 : wT,
-          children: (0, jT.jsxs)("div", {
+          onPrevious: uE ? void 0 : vq,
+          children: (0, Nq.jsxs)("div", {
             className: "DocsPanel",
-            ref: JT,
-            children: [(0, jT.jsxs)("div", {
+            ref: iq,
+            children: [(0, Nq.jsxs)("div", {
               className: "DocsSidebar",
               style: {
-                width: dT,
-                minWidth: dT,
-                maxWidth: dT
+                width: Jq,
+                minWidth: Jq,
+                maxWidth: Jq
               },
-              children: [(0, jT.jsx)(KT.b, {
+              children: [(0, Nq.jsx)(Oq.b, {
                 className: "DocsSearch",
                 placeholderText: "\ud83d\udd0e Search docs...",
-                onValueChange: TT => {
-                  eT(TT), VT(0), ZT(0)
+                onValueChange: qq => {
+                  Mq(qq), zq(0), pq(0)
                 }
-              }, YT), (0, jT.jsx)("div", {
+              }, sq), (0, Nq.jsx)("div", {
                 className: "DocsNavList",
-                children: nT ? pT.map((TT => (0, jT.jsxs)("div", {
-                  className: yT()("DocsNavItem", "SearchResult", {
-                    Active: TT.doc.id === (null === iT || void 0 === iT ? void 0 : iT.id)
+                children: Kq ? Cq.map((qq => (0, Nq.jsxs)("div", {
+                  className: xq()("DocsNavItem", "SearchResult", {
+                    Active: qq.doc.id === (null === Iq || void 0 === Iq ? void 0 : Iq.id)
                   }),
                   "data-pad-focusable": !0,
                   onClick: () => {
-                    Mk(TT.doc.id)
+                    lE(qq.doc.id)
                   },
-                  children: [(0, jT.jsxs)("div", {
+                  children: [(0, Nq.jsxs)("div", {
                     className: "SearchResultTitle",
-                    children: [TT.doc.title, (0, jT.jsx)("span", {
+                    children: [qq.doc.title, (0, Nq.jsx)("span", {
                       className: "SearchResultCount",
-                      children: TT.matchCount
+                      children: qq.matchCount
                     })]
-                  }), (0, jT.jsx)("div", {
+                  }), (0, Nq.jsx)("div", {
                     className: "SearchResultSnippet",
-                    children: hT(TT.snippet, HT)
+                    children: dq(qq.snippet, fq)
                   })]
-                }, TT.doc.id))) : MT.b.map((TT => {
-                  const kT = (0, jT.jsxs)("div", {
-                      className: yT()("DocsNavItem", {
-                        Active: TT.id === (null === iT || void 0 === iT ? void 0 : iT.id)
+                }, qq.doc.id))) : lq.e.map((qq => {
+                  const Eq = (0, Nq.jsxs)("div", {
+                      className: xq()("DocsNavItem", {
+                        Active: qq.id === (null === Iq || void 0 === Iq ? void 0 : Iq.id)
                       }),
                       "data-pad-focusable": !0,
                       onClick: () => {
-                        Mk(TT.id)
+                        lE(qq.id)
                       },
-                      children: [(0, jT.jsx)("span", {
+                      children: [(0, Nq.jsx)("span", {
                         className: "DocsNavItemTitle",
-                        children: TT.title
-                      }), TT.subsections && TT.id === (null === iT || void 0 === iT ? void 0 : iT.id) && uT && (0, jT.jsx)("span", {
+                        children: qq.title
+                      }), qq.subsections && qq.id === (null === Iq || void 0 === Iq ? void 0 : Iq.id) && Gq && (0, Nq.jsx)("span", {
                         className: "DocsNavItemSubsectionArrow",
-                        children: (0, jT.jsx)(NT.e, {
+                        children: (0, Nq.jsx)(jq.d, {
                           name: "angle-down"
                         })
-                      }), TT.subsections && (TT.id !== (null === iT || void 0 === iT ? void 0 : iT.id) || !uT) && (0, jT.jsx)("span", {
+                      }), qq.subsections && (qq.id !== (null === Iq || void 0 === Iq ? void 0 : Iq.id) || !Gq) && (0, Nq.jsx)("span", {
                         className: "DocsNavItemSubsectionArrow",
-                        children: (0, jT.jsx)(NT.e, {
+                        children: (0, Nq.jsx)(jq.d, {
                           name: "angle-up"
                         })
                       })]
                     }),
-                    cT = aT[TT.id];
-                  return (0, jT.jsxs)(lT.Fragment, {
-                    children: [cT && (0, jT.jsx)(ST.i, {
+                    gq = Qq[qq.id];
+                  return (0, Nq.jsxs)(Yq.Fragment, {
+                    children: [gq && (0, Nq.jsx)(oq.h, {
                       tutorial: "docsOverview",
-                      step: cT.tabStep,
-                      text: qT(cT.tabText),
-                      enabled: mT,
+                      step: gq.tabStep,
+                      text: eq(gq.tabText),
+                      enabled: hq,
                       placement: "left",
                       waitForClick: !0,
-                      children: kT
-                    }), !cT && kT, uT && TT.subsections && TT.id === (null === iT || void 0 === iT ? void 0 : iT.id) && TT.subsections.map((TT => (0, jT.jsx)("div", {
+                      children: Eq
+                    }), !gq && Eq, Gq && qq.subsections && qq.id === (null === Iq || void 0 === Iq ? void 0 : Iq.id) && qq.subsections.map((qq => (0, Nq.jsx)("div", {
                       className: "DocsNavItem DocsSubsection",
                       "data-pad-focusable": !0,
                       onClick: () => {
-                        Kk(TT)
+                        OE(qq)
                       },
-                      children: TT
-                    }, TT)))]
-                  }, TT.id)
+                      children: qq
+                    }, qq)))]
+                  }, qq.id)
                 }))
-              }), (0, jT.jsx)("div", {
+              }), (0, Nq.jsx)("div", {
                 className: "DocsSidebarButtonContainer",
-                children: (0, jT.jsx)(QT.c, {
-                  tooltipInner: qT("codeEditor:popOutDocsTooltip"),
+                children: (0, Nq.jsx)(Hq.e, {
+                  tooltipInner: eq("codeEditor:popOutDocsTooltip"),
                   placement: "top",
-                  children: (0, jT.jsx)(fT.e, {
+                  children: (0, Nq.jsx)(Aq.g, {
                     className: "DocsSidebarButton",
-                    onClick: PT,
-                    children: qT("codeEditor:popOutDocs")
+                    onClick: rq,
+                    children: eq("codeEditor:popOutDocs")
                   })
                 })
               })]
-            }), (0, jT.jsx)("div", {
+            }), (0, Nq.jsx)("div", {
               className: "DocsSidebarResizeHandle",
-              onMouseDown: fk
-            }), (0, jT.jsxs)("div", {
+              onMouseDown: AE
+            }), (0, Nq.jsxs)("div", {
               className: "DocsContentWrapper",
-              children: [nT && kk > 0 && (0, jT.jsxs)("div", {
+              children: [Kq && EE > 0 && (0, Nq.jsxs)("div", {
                 className: "DocsMatchNav",
-                children: [(0, jT.jsxs)("span", {
+                children: [(0, Nq.jsxs)("span", {
                   className: "DocsMatchNavLabel",
-                  children: [GT + 1, " / ", kk]
-                }), (0, jT.jsx)("button", {
+                  children: [Tq + 1, " / ", EE]
+                }), (0, Nq.jsx)("button", {
                   className: "DocsMatchNavButton",
                   onClick: () => {
-                    lk(-1)
+                    YE(-1)
                   },
                   children: "\u25b2"
-                }), (0, jT.jsx)("button", {
+                }), (0, Nq.jsx)("button", {
                   className: "DocsMatchNavButton",
                   onClick: () => {
-                    lk(1)
+                    YE(1)
                   },
                   children: "\u25bc"
                 })]
-              }), (0, jT.jsx)("div", {
+              }), (0, Nq.jsx)("div", {
                 className: "DocsContent",
-                ref: oT,
+                ref: Zq,
                 dangerouslySetInnerHTML: {
-                  __html: Tk
+                  __html: qE
                 }
               })]
             })]
@@ -414,4 +414,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

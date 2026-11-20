@@ -1,62 +1,62 @@
 export const id = 48;
 export const ids = [48];
 export const modules = {
-  42812: (TT, kT, cT) => {
-    cT.d(kT, {
-      startRenderLite: () => rT
+  43069: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      startRenderLite: () => tq
     });
-    var lT = cT(3679),
-      MT = cT(636),
-      KT = cT(150),
-      OT = cT(4769),
-      yT = cT(40369),
-      fT = cT(4761),
-      xT = cT(40426),
-      IT = cT(40215),
-      AT = cT(40569),
-      CT = cT(2853),
-      jT = cT(4491);
-    const vT = new Map([
+    var Yq = gq(2797),
+      lq = gq(611),
+      Oq = gq(128),
+      mq = gq(4625),
+      xq = gq(40462),
+      Aq = gq(4622),
+      cq = gq(40498),
+      uq = gq(40325),
+      Bq = gq(40697),
+      Wq = gq(2733),
+      Nq = gq(4340);
+    const aq = new Map([
       ["r", " retry"],
       ["f", " fallback"]
     ]);
-    class tT {
+    class Vq {
       constructor() {
         this.failuresLogged = 0, this.summary = void 0, this.summaries = 0, this.summaryAtMs = -1 / 0
       }
-      failures(TT) {
-        const kT = TT ? TT.split(" ") : [],
-          cT = kT.slice(this.failuresLogged).map((TT => {
-            var kT;
-            const [cT, lT] = TT.split(":"), MT = null !== (kT = vT.get(cT.slice(-1))) && void 0 !== kT ? kT : "";
-            return `gl link failed: program row ${parseInt(cT)}${MT}, read ${lT} ms after issue`
+      failures(qq) {
+        const Eq = qq ? qq.split(" ") : [],
+          gq = Eq.slice(this.failuresLogged).map((qq => {
+            var Eq;
+            const [gq, Yq] = qq.split(":"), lq = null !== (Eq = aq.get(gq.slice(-1))) && void 0 !== Eq ? Eq : "";
+            return `gl link failed: program row ${parseInt(gq)}${lq}, read ${Yq} ms after issue`
           }));
-        return this.failuresLogged = kT.length, cT
+        return this.failuresLogged = Eq.length, gq
       }
-      summaryLine(TT, kT) {
-        const cT = this.summaries < 10 ? 6e4 : 6e5;
-        return void 0 === TT || TT === this.summary || kT - this.summaryAtMs < cT ? null : (this.summary = TT, this.summaries++, this.summaryAtMs = kT, `gl links: ${TT}`)
+      summaryLine(qq, Eq) {
+        const gq = this.summaries < 10 ? 6e4 : 6e5;
+        return void 0 === qq || qq === this.summary || Eq - this.summaryAtMs < gq ? null : (this.summary = qq, this.summaries++, this.summaryAtMs = Eq, `gl links: ${qq}`)
       }
     }
-    var hT = cT(4688);
-    class NT {
+    var dq = gq(4527);
+    class jq {
       constructor() {
         this.frames = 0, this.drawn = 0, this.paced = 0, this.gapMaxMs = 0, this.longGaps = 0, this.renderUs = 0, this.renderUsMax = 0, this.lastDrawnMs = null
       }
-      frame(TT, kT, cT) {
-        if ("none" !== kT && (this.frames++, "paced" === kT && this.paced++, "drawn" === kT)) {
-          if (this.drawn++, this.renderUs += cT, this.renderUsMax = Math.max(this.renderUsMax, cT), null !== this.lastDrawnMs) {
-            const kT = TT - this.lastDrawnMs;
-            this.gapMaxMs = Math.max(this.gapMaxMs, kT), kT >= 50 && this.longGaps++
+      frame(qq, Eq, gq) {
+        if ("none" !== Eq && (this.frames++, "paced" === Eq && this.paced++, "drawn" === Eq)) {
+          if (this.drawn++, this.renderUs += gq, this.renderUsMax = Math.max(this.renderUsMax, gq), null !== this.lastDrawnMs) {
+            const Eq = qq - this.lastDrawnMs;
+            this.gapMaxMs = Math.max(this.gapMaxMs, Eq), Eq >= 50 && this.longGaps++
           }
-          this.lastDrawnMs = TT
+          this.lastDrawnMs = qq
         }
       }
       restart() {
         this.take(), this.lastDrawnMs = null
       }
       take() {
-        const TT = {
+        const qq = {
           frames: this.frames,
           drawn: this.drawn,
           paced: this.paced,
@@ -65,224 +65,224 @@ export const modules = {
           renderUs: this.renderUs,
           renderUsMax: this.renderUsMax
         };
-        return this.frames = 0, this.drawn = 0, this.paced = 0, this.gapMaxMs = 0, this.longGaps = 0, this.renderUs = 0, this.renderUsMax = 0, TT
+        return this.frames = 0, this.drawn = 0, this.paced = 0, this.gapMaxMs = 0, this.longGaps = 0, this.renderUs = 0, this.renderUsMax = 0, qq
       }
     }
 
-    function QT(TT) {
-      return (TT / 1048576).toFixed(1)
+    function Hq(qq) {
+      return (qq / 1048576).toFixed(1)
     }
-    class ST {
+    class oq {
       constructor() {
         this.logged = 0, this.seen = new Set, this.unlogged = 0
       }
-      admit(TT) {
-        return this.logged >= 20 || this.seen.has(TT) ? (this.unlogged++, null) : (this.seen.add(TT), this.logged++, 20 === this.logged ? `(the last event line: later ones are counted in the summaries) ${TT}` : TT)
+      admit(qq) {
+        return this.logged >= 20 || this.seen.has(qq) ? (this.unlogged++, null) : (this.seen.add(qq), this.logged++, 20 === this.logged ? `(the last event line: later ones are counted in the summaries) ${qq}` : qq)
       }
       takeUnlogged() {
-        const TT = this.unlogged;
-        return this.unlogged = 0, TT
+        const qq = this.unlogged;
+        return this.unlogged = 0, qq
       }
     }
 
-    function DT(TT) {
-      (0, CT.k)("renderlite", TT)
+    function Pq(qq) {
+      (0, Wq.m)("renderlite", qq)
     }
-    class aT {
-      constructor(TT) {
-        this.frames = new NT, this.events = new ST, this.links = new tT, this.session = null, this.sampled = null, this.gpuTimed = 0, this.gpuUs = 0, this.gpuBytes = null, this.windowStart = performance.now(), this.windows = 0, this.rendererLogged = !1, this.gridLogged = !1, this.visibilityChanged = () => {
+    class Qq {
+      constructor(qq) {
+        this.frames = new jq, this.events = new oq, this.links = new Vq, this.session = null, this.sampled = null, this.gpuTimed = 0, this.gpuUs = 0, this.gpuBytes = null, this.windowStart = performance.now(), this.windows = 0, this.rendererLogged = !1, this.gridLogged = !1, this.visibilityChanged = () => {
           this.restartWindow(performance.now())
-        }, this.UA = () => {
-          var TT, kT;
-          const cT = this.session,
-            MT = (0, IT.g)(),
-            KT = performance.now();
-          if (this.logLinks(KT), this.logGrid(), null === cT || cT.isStopped || !0 !== (null === MT || void 0 === MT ? void 0 : MT.isCoreRunning)) return void this.restartWindow(KT);
+        }, this.SB = () => {
+          var qq, Eq;
+          const gq = this.session,
+            lq = (0, uq.e)(),
+            Oq = performance.now();
+          if (this.logLinks(Oq), this.logGrid(), null === gq || gq.isStopped || !0 !== (null === lq || void 0 === lq ? void 0 : lq.isCoreRunning)) return void this.restartWindow(Oq);
           if (document.hidden) return;
-          if (KT - this.windowStart < 2500) return;
-          if (! function(TT) {
-              return TT < 12 || (TT - 12) % 3 === 2
+          if (Oq - this.windowStart < 2500) return;
+          if (! function(qq) {
+              return qq < 12 || (qq - 12) % 3 === 2
             }(this.windows++)) return;
           this.logRenderer();
-          const fT = cT.headerWord(OT.B.GpuTimed),
-            AT = cT.headerWord(OT.B.GpuFrameUs),
-            CT = this.sampled === cT ? {
-              timed: fT - this.gpuTimed >>> 0,
-              us: AT - this.gpuUs >>> 0
+          const Aq = gq.headerWord(mq.C.GpuTimed),
+            Bq = gq.headerWord(mq.C.GpuFrameUs),
+            Wq = this.sampled === gq ? {
+              timed: Aq - this.gpuTimed >>> 0,
+              us: Bq - this.gpuUs >>> 0
             } : null;
-          this.sampled = cT, this.gpuTimed = fT, this.gpuUs = AT;
-          const jT = null !== (TT = null === (kT = (0, xT.D)((0, lT.x)())) || void 0 === kT ? void 0 : kT.hcT()) && void 0 !== TT ? TT : 0;
-          DT(function(TT, kT) {
-            const cT = kT.windowMs / 1e3,
-              lT = [`${Math.round(cT)}s: ${TT.drawn} drawn (${(TT.drawn/cT).toFixed(1)}/s), ${TT.paced} paced, ${TT.frames-TT.drawn-TT.paced} skipped`, `gap max ${Math.round(TT.gapMaxMs)} ms, ${TT.longGaps} over 50 ms`, `render cpu ${TT.drawn?(TT.renderUs/TT.drawn/1e3).toFixed(2):"-"} ms mean, ${(TT.renderUsMax/1e3).toFixed(1)} max`];
-            null !== kT.gpu && lT.push(`gpu ${kT.gpu.timed?(kT.gpu.us/kT.gpu.timed/1e3).toFixed(2):"-"} ms mean of ${kT.gpu.timed} timed`);
-            const MT = kT.census;
-            lT.push(null === MT ? "draws none yet" : `draws ${(0,yT.d)(MT)} (terrain ${MT.terrainOpaque}+${MT.terrainTransparent}, pack ${MT.terrainPack}, meshes ${MT.regular+MT.thin+MT.line+MT.text}, sky ${MT.earthSky+MT.skyMeshes}, particles ${MT.particles})`);
-            const KT = null === kT.gpuBytesBefore ? "" : ` (${kT.gpuBytes>=kT.gpuBytesBefore?"+":"-"}${QT(Math.abs(kT.gpuBytes-kT.gpuBytesBefore))})`;
-            return lT.push(`gpu mem ${QT(kT.gpuBytes)} MiB${KT}`), lT.push(`pending ${kT.pending}`, "terrain " + (kT.terrainDrawn ? "drawn" : "not drawn yet")), kT.eventsUnlogged > 0 && lT.push(`${kT.eventsUnlogged} events unlogged`), lT.join("; ")
+          this.sampled = gq, this.gpuTimed = Aq, this.gpuUs = Bq;
+          const Nq = null !== (qq = null === (Eq = (0, cq.B)((0, Yq.C)())) || void 0 === Eq ? void 0 : Eq.tYq()) && void 0 !== qq ? qq : 0;
+          Pq(function(qq, Eq) {
+            const gq = Eq.windowMs / 1e3,
+              Yq = [`${Math.round(gq)}s: ${qq.drawn} drawn (${(qq.drawn/gq).toFixed(1)}/s), ${qq.paced} paced, ${qq.frames-qq.drawn-qq.paced} skipped`, `gap max ${Math.round(qq.gapMaxMs)} ms, ${qq.longGaps} over 50 ms`, `render cpu ${qq.drawn?(qq.renderUs/qq.drawn/1e3).toFixed(2):"-"} ms mean, ${(qq.renderUsMax/1e3).toFixed(1)} max`];
+            null !== Eq.gpu && Yq.push(`gpu ${Eq.gpu.timed?(Eq.gpu.us/Eq.gpu.timed/1e3).toFixed(2):"-"} ms mean of ${Eq.gpu.timed} timed`);
+            const lq = Eq.census;
+            Yq.push(null === lq ? "draws none yet" : `draws ${(0,xq.e)(lq)} (terrain ${lq.terrainOpaque}+${lq.terrainTransparent}, pack ${lq.terrainPack}, meshes ${lq.regular+lq.thin+lq.line+lq.text}, sky ${lq.earthSky+lq.skyMeshes}, particles ${lq.particles})`);
+            const Oq = null === Eq.gpuBytesBefore ? "" : ` (${Eq.gpuBytes>=Eq.gpuBytesBefore?"+":"-"}${Hq(Math.abs(Eq.gpuBytes-Eq.gpuBytesBefore))})`;
+            return Yq.push(`gpu mem ${Hq(Eq.gpuBytes)} MiB${Oq}`), Yq.push(`pending ${Eq.pending}`, "terrain " + (Eq.terrainDrawn ? "drawn" : "not drawn yet")), Eq.eventsUnlogged > 0 && Yq.push(`${Eq.eventsUnlogged} events unlogged`), Yq.join("; ")
           }(this.frames.take(), {
-            windowMs: KT - this.windowStart,
-            gpu: CT,
-            census: (0, yT.g)(MT.api),
-            gpuBytes: jT,
+            windowMs: Oq - this.windowStart,
+            gpu: Wq,
+            census: (0, xq.f)(lq.api),
+            gpuBytes: Nq,
             gpuBytesBefore: this.gpuBytes,
-            pending: cT.headerWord(OT.B.RenderPending),
-            terrainDrawn: 0 !== (cT.headerWord(OT.B.LoadSteps) & OT.H.TerrainDrawn),
+            pending: gq.headerWord(mq.C.RenderPending),
+            terrainDrawn: 0 !== (gq.headerWord(mq.C.LoadSteps) & mq.O.TerrainDrawn),
             eventsUnlogged: this.events.takeUnlogged()
-          })), this.gpuBytes = jT, this.windowStart = KT
-        }, DT(`${(0,hT.e)(TT)}; client ${MT.k.client} (${MT.k.reason})`), setInterval(this.UA, 5e3), document.addEventListener("visibilitychange", this.visibilityChanged)
+          })), this.gpuBytes = Nq, this.windowStart = Oq
+        }, Pq(`${(0,dq.e)(qq)}; client ${lq.k.client} (${lq.k.reason})`), setInterval(this.SB, 5e3), document.addEventListener("visibilitychange", this.visibilityChanged)
       }
-      frame(TT, kT, cT) {
-        this.session = TT, this.frames.frame(kT, cT, "drawn" === cT ? TT.headerWord(OT.B.RenderUs) : 0)
+      frame(qq, Eq, gq) {
+        this.session = qq, this.frames.frame(Eq, gq, "drawn" === gq ? qq.headerWord(mq.C.RenderUs) : 0)
       }
-      coreErrors(TT) {
+      coreErrors(qq) {
         for (const {
-            code: lT,
-            detail: MT
+            code: Yq,
+            detail: lq
           }
-          of TT) {
-          var kT, cT;
-          if (lT >= OT.e.RenderDeviceLost && lT <= OT.e.RenderSerialLinks) this.event(`render error ${(0,fT.Vd)(lT)}${null!==(kT=null===(cT=(0,AT.c)(lT,MT))||void 0===cT?void 0:cT.words)&&void 0!==kT?kT:""} (detail ${MT})`)
+          of qq) {
+          var Eq, gq;
+          if (Yq >= mq.f.RenderDeviceLost && Yq <= mq.f.RenderSerialLinks) this.event(`render error ${(0,Aq.ne)(Yq)}${null!==(Eq=null===(gq=(0,Bq.b)(Yq,lq))||void 0===gq?void 0:gq.words)&&void 0!==Eq?Eq:""} (detail ${lq})`)
         }
       }
-      reload(TT, kT, cT, lT) {
-        this.event(`render reload: ${TT?"webgpu":"gl"} ${cT}, losses ${kT}${void 0===lT?"":`: ${lT}`}`)
+      reload(qq, Eq, gq, Yq) {
+        this.event(`render reload: ${qq?"webgpu":"gl"} ${gq}, losses ${Eq}${void 0===Yq?"":`: ${Yq}`}`)
       }
-      crashed(TT) {
+      crashed(qq) {
         let {
-          site: kT,
-          error: cT,
-          header: lT
-        } = TT;
-        const MT = null !== lT && 0 !== lT.lastError ? `, last error ${(0,fT.Vd)(lT.lastError)} (detail ${lT.lastErrorDetail})` : "",
-          KT = cT instanceof Error ? `${cT.name}: ${cT.message}` : null === cT || void 0 === cT ? "" : String(cT);
-        this.event(`core stopped at ${kT}${MT}${KT&&`: ${KT}`}`)
+          site: Eq,
+          error: gq,
+          header: Yq
+        } = qq;
+        const lq = null !== Yq && 0 !== Yq.lastError ? `, last error ${(0,Aq.ne)(Yq.lastError)} (detail ${Yq.lastErrorDetail})` : "",
+          Oq = gq instanceof Error ? `${gq.name}: ${gq.message}` : null === gq || void 0 === gq ? "" : String(gq);
+        this.event(`core stopped at ${Eq}${lq}${Oq&&`: ${Oq}`}`)
       }
-      event(TT) {
-        const kT = this.events.admit(TT);
-        null !== kT && DT(kT)
+      event(qq) {
+        const Eq = this.events.admit(qq);
+        null !== Eq && Pq(Eq)
       }
-      restartWindow(TT) {
-        this.frames.restart(), this.windowStart = TT;
-        const kT = this.session;
-        null === kT || kT.isStopped ? this.sampled = null : (this.sampled = kT, this.gpuTimed = kT.headerWord(OT.B.GpuTimed), this.gpuUs = kT.headerWord(OT.B.GpuFrameUs))
+      restartWindow(qq) {
+        this.frames.restart(), this.windowStart = qq;
+        const Eq = this.session;
+        null === Eq || Eq.isStopped ? this.sampled = null : (this.sampled = Eq, this.gpuTimed = Eq.headerWord(mq.C.GpuTimed), this.gpuUs = Eq.headerWord(mq.C.GpuFrameUs))
       }
-      logLinks(TT) {
-        const kT = window.bloxdRenderDebug;
-        for (const lT of this.links.failures(null === kT || void 0 === kT ? void 0 : kT.linkFailures)) this.event(lT);
-        const cT = this.links.summaryLine(null === kT || void 0 === kT ? void 0 : kT.links, TT);
-        null !== cT && DT(cT)
+      logLinks(qq) {
+        const Eq = window.bloxdRenderDebug;
+        for (const Yq of this.links.failures(null === Eq || void 0 === Eq ? void 0 : Eq.linkFailures)) this.event(Yq);
+        const gq = this.links.summaryLine(null === Eq || void 0 === Eq ? void 0 : Eq.links, qq);
+        null !== gq && Pq(gq)
       }
       logGrid() {
-        var TT;
-        const kT = null === (TT = window.bloxdRenderDebug) || void 0 === TT ? void 0 : TT.gridFaces;
-        this.gridLogged || void 0 === kT || (this.gridLogged = !0, DT(`gl1 grid ${kT}`))
+        var qq;
+        const Eq = null === (qq = window.bloxdRenderDebug) || void 0 === qq ? void 0 : qq.gridFaces;
+        this.gridLogged || void 0 === Eq || (this.gridLogged = !0, Pq(`gl1 grid ${Eq}`))
       }
       logRenderer() {
-        var TT, kT;
+        var qq, Eq;
         if (this.rendererLogged) return;
         this.rendererLogged = !0;
-        const cT = window.bloxdRenderDebug,
-          lT = (0, KT.q)(),
-          MT = void 0 === (null === cT || void 0 === cT ? void 0 : cT.parallelCompile) ? "" : `; parallel compile ${cT.parallelCompile}`;
-        DT(`renderer gl ${lT?`${lT.vendor} / ${lT.renderer}`:"(not read)"}; terrain fetch ${null!==(TT=null===cT||void 0===cT?void 0:cT.fetch)&&void 0!==TT?TT:"(not noted)"}${MT}`), DT(`renderer caps ${null!==(kT=null===cT||void 0===cT?void 0:cT.caps)&&void 0!==kT?kT:"(not noted)"}`)
+        const gq = window.bloxdRenderDebug,
+          Yq = (0, Oq.t)(),
+          lq = void 0 === (null === gq || void 0 === gq ? void 0 : gq.parallelCompile) ? "" : `; parallel compile ${gq.parallelCompile}`;
+        Pq(`renderer gl ${Yq?`${Yq.vendor} / ${Yq.renderer}`:"(not read)"}; terrain fetch ${null!==(qq=null===gq||void 0===gq?void 0:gq.fetch)&&void 0!==qq?qq:"(not noted)"}${lq}`), Pq(`renderer caps ${null!==(Eq=null===gq||void 0===gq?void 0:gq.caps)&&void 0!==Eq?Eq:"(not noted)"}`)
       }
     }
-    let FT = null;
+    let yq = null;
 
-    function rT(TT) {
-      return (0, jT.g)(), FT ??= new aT(TT), FT
+    function tq(qq) {
+      return (0, Nq.c)(), yq ??= new Qq(qq), yq
     }
   },
-  4688: (TT, kT, cT) => {
-    function lT(TT) {
-      if (null === TT) return "backend: none picked (no renderer build)";
-      const kT = TT.adapter ? `${TT.adapter.vendor}/${TT.adapter.architecture}` : "none";
-      return `backend ${TT.backend}: reason ${TT.reason}, source ${TT.source}, adapter ${kT}`
+  4527: (qq, Eq, gq) => {
+    function Yq(qq) {
+      if (null === qq) return "backend: none picked (no renderer build)";
+      const Eq = qq.adapter ? `${qq.adapter.vendor}/${qq.adapter.architecture}` : "none";
+      return `backend ${qq.backend}: reason ${qq.reason}, source ${qq.source}, adapter ${Eq}`
     }
-    cT.d(kT, {
-      e: () => lT
+    gq.d(Eq, {
+      e: () => Yq
     })
   },
-  40369: (TT, kT, cT) => {
-    cT.d(kT, {
-      d: () => OT,
-      g: () => KT,
-      k: () => yT
+  40462: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => mq,
+      f: () => Oq,
+      h: () => xq
     });
-    var lT = cT(40204),
-      MT = cT(40215);
+    var Yq = gq(40318),
+      lq = gq(40325);
 
-    function KT(TT) {
-      if (TT.queries.drawCensus() < lT.Kb.BYTES) return null;
-      const kT = TT.memoryData(TT.scratch(), lT.Kb.BYTES, 4, "the draw census");
-      return null === kT ? null : {
-        terrainOpaque: lT.Kb.terrainOpaque(kT, 0),
-        terrainTransparent: lT.Kb.terrainTransparent(kT, 0),
-        terrainPack: lT.Kb.terrainPack(kT, 0),
-        earthSky: lT.Kb.earthSky(kT, 0),
-        skyMeshes: lT.Kb.skyMeshes(kT, 0),
-        regular: lT.Kb.regular(kT, 0),
-        thin: lT.Kb.thin(kT, 0),
-        line: lT.Kb.line(kT, 0),
-        text: lT.Kb.text(kT, 0),
-        particles: lT.Kb.particles(kT, 0),
-        terrainParts: lT.Kb.terrainParts(kT, 0),
-        terrainCompiling: lT.Kb.terrainCompiling(kT, 0)
+    function Oq(qq) {
+      if (qq.queries.drawCensus() < Yq.zb.BYTES) return null;
+      const Eq = qq.memoryData(qq.scratch(), Yq.zb.BYTES, 4, "the draw census");
+      return null === Eq ? null : {
+        terrainOpaque: Yq.zb.terrainOpaque(Eq, 0),
+        terrainTransparent: Yq.zb.terrainTransparent(Eq, 0),
+        terrainPack: Yq.zb.terrainPack(Eq, 0),
+        earthSky: Yq.zb.earthSky(Eq, 0),
+        skyMeshes: Yq.zb.skyMeshes(Eq, 0),
+        regular: Yq.zb.regular(Eq, 0),
+        thin: Yq.zb.thin(Eq, 0),
+        line: Yq.zb.line(Eq, 0),
+        text: Yq.zb.text(Eq, 0),
+        particles: Yq.zb.particles(Eq, 0),
+        terrainParts: Yq.zb.terrainParts(Eq, 0),
+        terrainCompiling: Yq.zb.terrainCompiling(Eq, 0)
       }
     }
 
-    function OT(TT) {
+    function mq(qq) {
       const {
-        terrainOpaque: kT,
-        terrainTransparent: cT,
-        earthSky: lT,
-        skyMeshes: MT,
-        regular: KT,
-        thin: OT,
-        line: yT,
-        text: fT,
-        particles: xT
-      } = TT;
-      return kT + cT + lT + MT + KT + OT + yT + fT + xT
+        terrainOpaque: Eq,
+        terrainTransparent: gq,
+        earthSky: Yq,
+        skyMeshes: lq,
+        regular: Oq,
+        thin: mq,
+        line: xq,
+        text: Aq,
+        particles: cq
+      } = qq;
+      return Eq + gq + Yq + lq + Oq + mq + xq + Aq + cq
     }
 
-    function yT() {
-      const TT = (0, MT.g)();
-      return !0 === (null === TT || void 0 === TT ? void 0 : TT.isCoreRunning) ? function(TT) {
-        const kT = KT(TT);
-        if (null === kT) return [];
+    function xq() {
+      const qq = (0, lq.e)();
+      return !0 === (null === qq || void 0 === qq ? void 0 : qq.isCoreRunning) ? function(qq) {
+        const Eq = Oq(qq);
+        if (null === Eq) return [];
         const {
-          terrainOpaque: cT,
-          terrainTransparent: lT,
-          terrainPack: MT,
-          earthSky: yT,
-          skyMeshes: fT,
-          regular: xT,
-          thin: IT,
-          line: AT,
-          text: CT,
-          particles: jT
-        } = kT;
+          terrainOpaque: gq,
+          terrainTransparent: Yq,
+          terrainPack: lq,
+          earthSky: xq,
+          skyMeshes: Aq,
+          regular: cq,
+          thin: uq,
+          line: Bq,
+          text: Wq,
+          particles: Nq
+        } = Eq;
         return [{
           label: "Drawn",
-          value: `${OT(kT)}`
+          value: `${mq(Eq)}`
         }, {
           label: "Terrain",
-          value: `${cT} opaque / ${lT} transparent (${MT} shader pack)`
+          value: `${gq} opaque / ${Yq} transparent (${lq} shader pack)`
         }, {
           label: "Meshes / Thin bases",
-          value: `${xT} / ${IT}`
+          value: `${cq} / ${uq}`
         }, {
           label: "Text / Lines",
-          value: `${CT} / ${AT}`
+          value: `${Wq} / ${Bq}`
         }, {
           label: "Sky / Particles",
-          value: `${yT+fT} / ${jT}`
+          value: `${xq+Aq} / ${Nq}`
         }]
-      }(TT.api) : []
+      }(qq.api) : []
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

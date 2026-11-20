@@ -1,255 +1,255 @@
 export const id = 105;
 export const ids = [105];
 export const modules = {
-  36166: (TT, kT, cT) => {
-    cT.d(kT, {
-      b: () => fT
+  36428: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => Aq
     });
-    var lT = cT(1046),
-      MT = cT.n(lT),
-      KT = cT(71),
-      OT = cT(4552),
-      yT = cT(1099);
+    var Yq = gq(1018),
+      lq = gq.n(Yq),
+      Oq = gq(57),
+      mq = gq(4405),
+      xq = gq(1070);
 
-    function fT(TT) {
+    function Aq(qq) {
       let {
-        locked: kT,
-        children: cT
-      } = TT;
-      const lT = (0, KT.useRef)(null),
-        fT = (0, OT.b)(lT, "y");
-      return (0, yT.jsx)("div", {
-        ref: lT,
-        className: MT()("CreateCustomLobbyBody", {
-          CreateCustomLobbyBodyMoreAbove: fT.before,
-          CreateCustomLobbyBodyMoreBelow: fT.after
+        locked: Eq,
+        children: gq
+      } = qq;
+      const Yq = (0, Oq.useRef)(null),
+        Aq = (0, mq.c)(Yq, "y");
+      return (0, xq.jsx)("div", {
+        ref: Yq,
+        className: lq()("CreateCustomLobbyBody", {
+          CreateCustomLobbyBodyMoreAbove: Aq.before,
+          CreateCustomLobbyBodyMoreBelow: Aq.after
         }),
-        "data-pad-ignore": kT || void 0,
-        children: cT
+        "data-pad-ignore": Eq || void 0,
+        children: gq
       })
     }
   },
-  36236: (TT, kT, cT) => {
-    cT.r(kT), cT.d(kT, {
-      showFirstWorldSetupPopup: () => tT
+  36490: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      showFirstWorldSetupPopup: () => Vq
     });
-    cT(4893), cT(36147);
-    var lT = cT(4611),
-      MT = cT(71),
-      KT = cT(4566),
-      OT = cT(1195),
-      yT = cT(1363),
-      fT = cT(36166),
-      xT = cT(4899),
-      IT = cT(1470),
-      AT = cT(3436),
-      CT = cT(36160),
-      jT = cT(4598),
-      vT = cT(1099);
+    gq(4781), gq(36406);
+    var Yq = gq(4456),
+      lq = gq(57),
+      Oq = gq(4413),
+      mq = gq(1183),
+      xq = gq(1336),
+      Aq = gq(36428),
+      cq = gq(4786),
+      uq = gq(1422),
+      Bq = gq(3369),
+      Wq = gq(36424),
+      Nq = gq(4443),
+      aq = gq(1070);
 
-    function tT(TT) {
-      const kT = {
+    function Vq(qq) {
+      const Eq = {
         requested: !1,
         closed: !1
       };
-      yT.NotificationProvider.showCustomPopup({
-        body: cT => (0, vT.jsx)(hT, {
-          flow: kT,
-          close: cT,
-          ...TT
+      xq.NotificationProvider.showCustomPopup({
+        body: gq => (0, aq.jsx)(dq, {
+          flow: Eq,
+          close: gq,
+          ...qq
         }),
         middleScreenPopupClassName: "CreateCustomLobbyPopup",
         onClose: () => {
-          kT.closed = !0, kT.requested || (0, jT.g)()
+          Eq.closed = !0, Eq.requested || (0, Nq.h)()
         }
       })
     }
 
-    function hT(TT) {
+    function dq(qq) {
       let {
-        flow: kT,
-        close: cT,
-        onCreating: yT,
-        onCreated: tT,
-        onFailedClosed: hT,
-        join: NT
-      } = TT;
+        flow: Eq,
+        close: gq,
+        onCreating: xq,
+        onCreated: Vq,
+        onFailedClosed: dq,
+        join: jq
+      } = qq;
       const {
-        t: QT
-      } = (0, OT.B)(), [ST, DT] = (0, MT.useState)(lT.y), [aT, FT] = (0, MT.useState)(!1), [rT, PT] = (0, MT.useState)(""), wT = (0, AT.b)();
-      (0, MT.useEffect)((() => {
-        (0, jT.l)()
+        t: Hq
+      } = (0, mq.v)(), [oq, Pq] = (0, lq.useState)(Yq.u), [Qq, yq] = (0, lq.useState)(!1), [tq, rq] = (0, lq.useState)(""), vq = (0, Bq.c)();
+      (0, lq.useEffect)((() => {
+        (0, Nq.o)()
       }), []);
-      const mT = TT => ({
-        isEnabled: () => ST.plugins[TT],
-        PD: kT => {
-          (0, jT.i)({
-            plugin: TT,
-            enabled: kT
-          }), DT({
-            ...ST,
+      const hq = qq => ({
+        isEnabled: () => oq.plugins[qq],
+        hG: Eq => {
+          (0, Nq.l)({
+            plugin: qq,
+            enabled: Eq
+          }), Pq({
+            ...oq,
             plugins: {
-              ...ST.plugins,
-              [TT]: kT
+              ...oq.plugins,
+              [qq]: Eq
             }
           })
         }
       });
-      return (0, vT.jsxs)("div", {
+      return (0, aq.jsxs)("div", {
         className: "CreateCustomLobby",
-        children: [(0, vT.jsx)("div", {
+        children: [(0, aq.jsx)("div", {
           className: "CreateCustomLobbyTitleContainer",
-          children: (0, vT.jsx)("div", {
+          children: (0, aq.jsx)("div", {
             className: "CreateCustomLobbyTitle",
-            children: QT("homePage:myWorld")
+            children: Hq("homePage:myWorld")
           })
-        }), (0, vT.jsx)(fT.b, {
-          locked: aT,
-          children: (0, vT.jsxs)("div", {
+        }), (0, aq.jsx)(Aq.c, {
+          locked: Qq,
+          children: (0, aq.jsxs)("div", {
             className: "CreateCustomLobbyFields",
-            children: [(0, vT.jsx)(CT.b, {
-              value: ST.defaultGamemode,
-              onChange: TT => {
-                (0, lT.z)(TT) && TT !== ST.defaultGamemode && ((0, jT.i)({
-                  defaultGamemode: TT
-                }), DT({
-                  ...ST,
-                  defaultGamemode: TT
+            children: [(0, aq.jsx)(Wq.e, {
+              value: oq.defaultGamemode,
+              onChange: qq => {
+                (0, Yq.w)(qq) && qq !== oq.defaultGamemode && ((0, Nq.l)({
+                  defaultGamemode: qq
+                }), Pq({
+                  ...oq,
+                  defaultGamemode: qq
                 }))
               },
               showAll: !1,
-              disabled: aT
-            }), (0, vT.jsx)(CT.d, {
-              mapTypes: lT.j,
-              value: ST.mapType,
-              onChange: TT => {
-                (0, lT.A)(TT) && TT !== ST.mapType && ((0, jT.i)({
-                  mapType: TT
-                }), DT({
-                  ...ST,
-                  mapType: TT
+              disabled: Qq
+            }), (0, aq.jsx)(Wq.i, {
+              mapTypes: Yq.h,
+              value: oq.mapType,
+              onChange: qq => {
+                (0, Yq.x)(qq) && qq !== oq.mapType && ((0, Nq.l)({
+                  mapType: qq
+                }), Pq({
+                  ...oq,
+                  mapType: qq
                 }))
               },
               showAll: !1,
-              disabled: aT
-            }), (0, vT.jsx)(xT.b, {
+              disabled: Qq
+            }), (0, aq.jsx)(cq.e, {
               callbacks: {
-                dayNight: mT("dayNight"),
-                fallDamage: mT("fallDamage"),
-                survivalGuns: mT("survivalGuns")
+                dayNight: hq("dayNight"),
+                fallDamage: hq("fallDamage"),
+                survivalGuns: hq("survivalGuns")
               },
-              disabled: aT,
+              disabled: Qq,
               advancedMode: !1
             })]
           })
-        }), (0, vT.jsxs)("div", {
+        }), (0, aq.jsxs)("div", {
           className: "CreateCustomLobbyFooter",
-          children: [(0, vT.jsx)(IT.m, {
+          children: [(0, aq.jsx)(uq.p, {
             className: "CreateCustomLobbyButton",
             padDefaultFocus: !0,
-            loading: aT,
+            loading: Qq,
             onClick: () => {
-              kT.requested = !0, FT(!0), yT(!0), PT(""), (0, jT.j)(ST), KT.c.createPersonalWorld(ST).then((TT => {
-                yT(!1);
-                const lT = tT(TT);
-                !kT.closed && wT.current ? (cT(), NT(TT)) : lT || (0, jT.g)()
-              }), (TT => {
-                if (console.error("Failed to create personal world:", TT), yT(!1), kT.requested = !1, kT.closed || !wT.current) return (0, jT.g)(), void hT(TT);
-                PT(TT.message), FT(!1)
+              Eq.requested = !0, yq(!0), xq(!0), rq(""), (0, Nq.n)(oq), Oq.d.createPersonalWorld(oq).then((qq => {
+                xq(!1);
+                const Yq = Vq(qq);
+                !Eq.closed && vq.current ? (gq(), jq(qq)) : Yq || (0, Nq.h)()
+              }), (qq => {
+                if (console.error("Failed to create personal world:", qq), xq(!1), Eq.requested = !1, Eq.closed || !vq.current) return (0, Nq.h)(), void dq(qq);
+                rq(qq.message), yq(!1)
               }))
             },
-            children: QT("general:play")
-          }), rT && (0, vT.jsx)("div", {
+            children: Hq("general:play")
+          }), tq && (0, aq.jsx)("div", {
             className: "CreateCustomLobbyError AnimFadeInScaleUp",
-            children: rT
+            children: tq
           })]
         })]
       })
     }
   },
-  4899: (TT, kT, cT) => {
-    cT.d(kT, {
-      b: () => xT
+  4786: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => cq
     });
-    var lT = cT(1046),
-      MT = cT.n(lT),
-      KT = cT(4611),
-      OT = cT(1195),
-      yT = cT(1099);
-    const fT = [...KT.n, "tpRequests", "spawnProtection", "spawnReset", "smpMarketplace"];
+    var Yq = gq(1018),
+      lq = gq.n(Yq),
+      Oq = gq(4456),
+      mq = gq(1183),
+      xq = gq(1070);
+    const Aq = [...Oq.i, "tpRequests", "spawnProtection", "spawnReset", "smpMarketplace"];
 
-    function xT(TT) {
+    function cq(qq) {
       const {
-        disabled: kT,
-        hideWrapper: cT
-      } = TT, {
-        t: lT
-      } = (0, OT.B)(), xT = TT.advancedMode ? fT.map((kT => [kT, TT.callbacks[kT]])) : KT.n.map((kT => [kT, TT.callbacks[kT]])), AT = (0, yT.jsx)("div", {
-        className: MT()("PluginsGrid", {
-          SectionBody: !cT
+        disabled: Eq,
+        hideWrapper: gq
+      } = qq, {
+        t: Yq
+      } = (0, mq.v)(), cq = qq.advancedMode ? Aq.map((Eq => [Eq, qq.callbacks[Eq]])) : Oq.i.map((Eq => [Eq, qq.callbacks[Eq]])), Bq = (0, xq.jsx)("div", {
+        className: lq()("PluginsGrid", {
+          SectionBody: !gq
         }),
-        children: xT.map((TT => {
-          let [cT, lT] = TT;
-          return (0, yT.jsx)(IT, {
-            plugin: cT,
-            callbacks: lT,
-            disabled: kT
-          }, cT)
+        children: cq.map((qq => {
+          let [gq, Yq] = qq;
+          return (0, xq.jsx)(uq, {
+            plugin: gq,
+            callbacks: Yq,
+            disabled: Eq
+          }, gq)
         }))
       });
-      return cT ? AT : (0, yT.jsxs)("div", {
+      return gq ? Bq : (0, xq.jsxs)("div", {
         className: "BloxdForm",
-        children: [(0, yT.jsx)("div", {
+        children: [(0, xq.jsx)("div", {
           className: "SectionTitle",
-          children: lT("worldBuilder:pluginsSection")
-        }), AT]
+          children: Yq("worldBuilder:pluginsSection")
+        }), Bq]
       })
     }
 
-    function IT(TT) {
+    function uq(qq) {
       let {
-        plugin: kT,
+        plugin: Eq,
         callbacks: {
-          isEnabled: cT,
-          PD: lT
+          isEnabled: gq,
+          hG: Yq
         },
-        disabled: KT
-      } = TT;
+        disabled: Oq
+      } = qq;
       const {
-        t: fT
-      } = (0, OT.B)(), xT = cT();
-      return (0, yT.jsxs)("div", {
-        className: MT()("PluginCard", {
-          PluginCardEnabled: xT,
-          PluginCardDisabledForm: KT
+        t: Aq
+      } = (0, mq.v)(), cq = gq();
+      return (0, xq.jsxs)("div", {
+        className: lq()("PluginCard", {
+          PluginCardEnabled: cq,
+          PluginCardDisabledForm: Oq
         }),
         "data-pad-focusable": !0,
-        "aria-disabled": KT || void 0,
+        "aria-disabled": Oq || void 0,
         onClick: () => {
-          KT || lT(!xT)
+          Oq || Yq(!cq)
         },
-        children: [(0, yT.jsx)("div", {
+        children: [(0, xq.jsx)("div", {
           className: "PluginCardIcon",
-          children: (0, yT.jsx)("img", {
-            src: `/textures/games/classic/customGames/${kT}.png`,
-            alt: kT
+          children: (0, xq.jsx)("img", {
+            src: `/textures/games/classic/customGames/${Eq}.png`,
+            alt: Eq
           })
-        }), (0, yT.jsxs)("div", {
+        }), (0, xq.jsxs)("div", {
           className: "PluginCardBody",
-          children: [(0, yT.jsx)("div", {
+          children: [(0, xq.jsx)("div", {
             className: "PluginCardTitle",
-            children: fT(AT[kT])
-          }), (0, yT.jsx)("div", {
+            children: Aq(Bq[Eq])
+          }), (0, xq.jsx)("div", {
             className: "PluginCardDescription",
-            children: fT(CT[kT])
+            children: Aq(Wq[Eq])
           })]
-        }), (0, yT.jsx)("span", {
+        }), (0, xq.jsx)("span", {
           className: "PluginCardToggleLabel",
-          children: fT(xT ? "general:on" : "general:off")
+          children: Aq(cq ? "general:on" : "general:off")
         })]
       })
     }
-    const AT = {
+    const Bq = {
         fallDamage: "classic:enableFallDamage",
         tpRequests: "classic:enableTpRequests",
         spawnProtection: "classic:enableSpawnProtection",
@@ -258,7 +258,7 @@ export const modules = {
         survivalGuns: "classic:enableSurvivalGuns",
         dayNight: "classic:enableDayNight"
       },
-      CT = {
+      Wq = {
         fallDamage: "classic:enableFallDamageDescription",
         tpRequests: "classic:enableTpRequestsDescription",
         spawnProtection: "classic:enableSpawnProtectionDescription",
@@ -268,97 +268,97 @@ export const modules = {
         dayNight: "classic:enableDayNightDescription"
       }
   },
-  36160: (TT, kT, cT) => {
-    cT.d(kT, {
-      b: () => xT,
-      d: () => IT
+  36424: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => cq,
+      i: () => uq
     });
-    cT(71);
-    var lT = cT(1046),
-      MT = cT.n(lT),
-      KT = cT(4611),
-      OT = cT(328),
-      yT = cT(1195),
-      fT = cT(1099);
+    gq(57);
+    var Yq = gq(1018),
+      lq = gq.n(Yq),
+      Oq = gq(4456),
+      mq = gq(296),
+      xq = gq(1183),
+      Aq = gq(1070);
 
-    function xT(TT) {
+    function cq(qq) {
       let {
-        value: kT,
-        onChange: cT,
-        showAll: lT,
-        disabled: xT = !1
-      } = TT;
+        value: Eq,
+        onChange: gq,
+        showAll: Yq,
+        disabled: cq = !1
+      } = qq;
       const {
-        t: IT
-      } = (0, yT.B)();
-      return (0, fT.jsxs)("div", {
-        className: MT()("BloxdForm GamemodeForm", {
-          BasicOptions: !lT
+        t: uq
+      } = (0, xq.v)();
+      return (0, Aq.jsxs)("div", {
+        className: lq()("BloxdForm GamemodeForm", {
+          BasicOptions: !Yq
         }),
-        children: [(0, fT.jsx)("div", {
+        children: [(0, Aq.jsx)("div", {
           className: "SectionTitle",
-          children: IT("classic:defaultGamemode")
-        }), (0, fT.jsx)("div", {
+          children: uq("classic:defaultGamemode")
+        }), (0, Aq.jsx)("div", {
           className: "SectionBody",
-          children: KT.G.map((TT => lT || (0, KT.z)(TT) ? (0, fT.jsx)("button", {
+          children: Oq.A.map((qq => Yq || (0, Oq.w)(qq) ? (0, Aq.jsx)("button", {
             type: "button",
-            className: MT()("WorldGamemode", {
-              Selected: kT === TT
+            className: lq()("WorldGamemode", {
+              Selected: Eq === qq
             }),
-            disabled: xT,
+            disabled: cq,
             onClick: () => {
-              cT(TT)
+              gq(qq)
             },
             style: {
-              "--background-image": `url(${OT.u[TT]})`
+              "--background-image": `url(${mq.v[qq]})`
             },
-            children: OT.q[TT]
-          }, TT) : null))
+            children: mq.r[qq]
+          }, qq) : null))
         })]
       })
     }
 
-    function IT(TT) {
+    function uq(qq) {
       let {
-        mapTypes: kT,
-        value: cT,
-        onChange: lT,
-        showAll: xT,
-        disabled: IT = !1,
-        children: AT
-      } = TT;
+        mapTypes: Eq,
+        value: gq,
+        onChange: Yq,
+        showAll: cq,
+        disabled: uq = !1,
+        children: Bq
+      } = qq;
       const {
-        t: CT
-      } = (0, yT.B)();
-      return (0, fT.jsxs)("div", {
-        className: MT()("BloxdForm MapTypeForm", {
-          BasicOptions: !xT
+        t: Wq
+      } = (0, xq.v)();
+      return (0, Aq.jsxs)("div", {
+        className: lq()("BloxdForm MapTypeForm", {
+          BasicOptions: !cq
         }),
-        children: [(0, fT.jsx)("div", {
+        children: [(0, Aq.jsx)("div", {
           className: "SectionTitle",
-          children: CT("customLobby:mapType")
-        }), (0, fT.jsx)("div", {
+          children: Wq("customLobby:mapType")
+        }), (0, Aq.jsx)("div", {
           className: "SectionBody",
-          children: kT.map((TT => xT || (0, KT.A)(TT) ? (0, fT.jsx)("button", {
+          children: Eq.map((qq => cq || (0, Oq.x)(qq) ? (0, Aq.jsx)("button", {
             type: "button",
-            className: MT()("MapType", {
-              Selected: cT === TT
+            className: lq()("MapType", {
+              Selected: gq === qq
             }),
-            disabled: IT,
+            disabled: uq,
             onClick: () => {
-              lT(TT)
+              Yq(qq)
             },
             style: {
-              "--background-image": `url(${OT.k[TT]})`
+              "--background-image": `url(${mq.o[qq]})`
             },
-            children: OT.i[TT]
-          }, TT) : null))
-        }), AT]
+            children: mq.k[qq]
+          }, qq) : null))
+        }), Bq]
       })
     }
   },
-  4893: () => {},
-  36147: () => {}
+  4781: () => {},
+  36406: () => {}
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

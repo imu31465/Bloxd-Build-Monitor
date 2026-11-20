@@ -1,30 +1,30 @@
 export const id = 47;
 export const ids = [47];
 export const modules = {
-  4673: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => IT
+  4516: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => uq
     });
-    var lT = cT(31),
-      MT = cT(36),
-      KT = cT(1292),
-      OT = cT(2853);
-    const yT = 3e4,
-      fT = 1e3;
+    var Yq = gq(24),
+      lq = gq(31),
+      Oq = gq(1274),
+      mq = gq(2733);
+    const xq = 3e4,
+      Aq = 1e3;
 
-    function xT() {
-      return "visible" === document.visibilityState && "inGame" === lT.e.get("gameState") && (0, KT.q)()
+    function cq() {
+      return "visible" === document.visibilityState && "inGame" === Yq.b.get("gameState") && (0, Oq.p)()
     }
 
-    function IT(TT, kT) {
-      (0, OT.q)() || function(TT, kT, cT) {
-        let lT = 0;
-        const MT = setInterval((() => {
-          kT() && (lT += fT, lT >= TT && (clearInterval(MT), cT()))
-        }), fT)
-      }(yT, xT, (() => {
-        kT().then((() => {
-          TT(`saved for the player after ${yT/1e3} s of play`), (0, OT.y)(), MT.k.nt("chat", {
+    function uq(qq, Eq) {
+      (0, mq.v)() || function(qq, Eq, gq) {
+        let Yq = 0;
+        const lq = setInterval((() => {
+          Eq() && (Yq += Aq, Yq >= qq && (clearInterval(lq), gq()))
+        }), Aq)
+      }(xq, cq, (() => {
+        Eq().then((() => {
+          qq(`saved for the player after ${xq/1e3} s of play`), (0, mq.C)(), lq.i.TV("chat", {
             content: [{
               str: "Saved a debug file to your downloads: please send it to us with a screenshot of the game.",
               style: {
@@ -36,61 +36,61 @@ export const modules = {
       }))
     }
   },
-  4670: (TT, kT, cT) => {
-    cT.r(kT), cT.d(kT, {
-      installRenderDebug: () => Cc,
-      renderDebugPlayable: () => vc,
-      startRenderDebug: () => jc,
-      waitForDraw: () => tc
+  4511: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      installRenderDebug: () => Bg,
+      renderDebugPlayable: () => Ng,
+      startRenderDebug: () => Wg,
+      waitForDraw: () => ag
     });
-    var lT = cT(1828),
-      MT = cT(4673),
-      KT = cT(2853);
-    const OT = ["+x", "-x", "+y", "-y", "+z", "-z", "dir6", "dir7"];
+    var Yq = gq(1789),
+      lq = gq(4516),
+      Oq = gq(2733);
+    const mq = ["+x", "-x", "+y", "-y", "+z", "-z", "dir6", "dir7"];
 
-    function yT(TT) {
-      return 7 & TT
+    function xq(qq) {
+      return 7 & qq
     }
 
-    function fT(TT) {
-      return TT >>> 11 & 1
+    function Aq(qq) {
+      return qq >>> 11 & 1
     }
 
-    function xT(TT) {
-      return [1 + (TT >>> 18 & 63), 1 + (TT >>> 24 & 63)]
+    function cq(qq) {
+      return [1 + (qq >>> 18 & 63), 1 + (qq >>> 24 & 63)]
     }
 
-    function IT(TT, kT) {
-      const [cT, , lT] = TT, MT = yT(lT), KT = function(TT, kT, cT) {
-        return kT + (1 === (22 >>> TT & 1) ? 4 - cT : cT) & 3
-      }(MT, fT(lT), kT), OT = MT >>> 1, [IT, AT] = xT(cT), CT = 1 === KT || 2 === KT ? IT : 0, jT = KT >= 2 ? AT : 0, vT = [63 & cT, cT >>> 6 & 63, cT >>> 12 & 63];
-      return vT[2 === OT ? 0 : 2] += CT, vT[1 === OT ? 0 : 1] += jT, vT
+    function uq(qq, Eq) {
+      const [gq, , Yq] = qq, lq = xq(Yq), Oq = function(qq, Eq, gq) {
+        return Eq + (1 === (22 >>> qq & 1) ? 4 - gq : gq) & 3
+      }(lq, Aq(Yq), Eq), mq = lq >>> 1, [uq, Bq] = cq(gq), Wq = 1 === Oq || 2 === Oq ? uq : 0, Nq = Oq >= 2 ? Bq : 0, aq = [63 & gq, gq >>> 6 & 63, gq >>> 12 & 63];
+      return aq[2 === mq ? 0 : 2] += Wq, aq[1 === mq ? 0 : 1] += Nq, aq
     }
 
-    function AT(TT) {
-      const kT = Math.max(...xT(TT[0]));
-      return 1 === kT ? "1" : kT <= 4 ? "2-4" : kT <= 16 ? "5-16" : "17-64"
+    function Bq(qq) {
+      const Eq = Math.max(...cq(qq[0]));
+      return 1 === Eq ? "1" : Eq <= 4 ? "2-4" : Eq <= 16 ? "5-16" : "17-64"
     }
-    const CT = 16;
+    const Wq = 16;
 
-    function jT(TT) {
-      let kT = 2166136261;
-      for (let cT = 0; cT < TT.length; cT++) kT = Math.imul(kT ^ TT[cT], 16777619);
-      return kT >>> 0
+    function Nq(qq) {
+      let Eq = 2166136261;
+      for (let gq = 0; gq < qq.length; gq++) Eq = Math.imul(Eq ^ qq[gq], 16777619);
+      return Eq >>> 0
     }
 
-    function vT(TT, kT) {
-      let cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 12;
-      const lT = Math.max(0, kT - cT),
-        MT = Math.min(TT.length, kT + cT),
-        KT = [];
-      for (let OT = lT; OT < MT; OT++) {
-        const cT = TT[OT].toString(16).padStart(2, "0");
-        KT.push(OT === kT ? `[${cT}]` : cT)
+    function aq(qq, Eq) {
+      let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 12;
+      const Yq = Math.max(0, Eq - gq),
+        lq = Math.min(qq.length, Eq + gq),
+        Oq = [];
+      for (let mq = Yq; mq < lq; mq++) {
+        const gq = qq[mq].toString(16).padStart(2, "0");
+        Oq.push(mq === Eq ? `[${gq}]` : gq)
       }
-      return KT.join(" ")
+      return Oq.join(" ")
     }
-    const tT = {
+    const Vq = {
         NO_ERROR: 0,
         POINTS: 0,
         ARRAY_BUFFER: 34962,
@@ -168,437 +168,437 @@ export const modules = {
         FLOAT_MAT3: 35675,
         FLOAT_MAT4: 35676
       },
-      hT = "_vs2fs_location0",
-      NT = 0,
-      QT = 4,
-      ST = 6,
-      DT = [0, 1, 2, 0, 2, 3],
-      aT = 2048,
-      FT = 4,
-      rT = 256,
-      PT = 64,
-      wT = 268435456,
-      mT = 65536,
-      bT = /^#version [^\n]*\/\/ program (\S+)$/m;
+      dq = "_vs2fs_location0",
+      jq = 0,
+      Hq = 4,
+      oq = 6,
+      Pq = [0, 1, 2, 0, 2, 3],
+      Qq = 2048,
+      yq = 4,
+      tq = 256,
+      rq = 64,
+      vq = 268435456,
+      hq = 65536,
+      nq = /^#version [^\n]*\/\/ program (\S+)$/m;
 
-    function zT(TT) {
-      return null === TT.name ? `#${TT.id}` : `#${TT.id} ${TT.name}`
+    function bq(qq) {
+      return null === qq.name ? `#${qq.id}` : `#${qq.id} ${qq.name}`
     }
-    const JT = [],
-      oT = new WeakMap,
-      HT = new WeakMap,
-      eT = {
+    const iq = [],
+      Zq = new WeakMap,
+      fq = new WeakMap,
+      Mq = {
         context: null,
         inProbe: !1,
         pendingCheck: null,
         shadowBytes: 0,
         uncopied: 0
       };
-    let GT = 1;
-    const VT = new WeakMap;
+    let Tq = 1;
+    const zq = new WeakMap;
 
-    function ET(TT) {
-      if (null === TT) return 0;
-      let kT = VT.get(TT);
-      return void 0 === kT && (kT = GT++, VT.set(TT, kT)), kT
+    function Sq(qq) {
+      if (null === qq) return 0;
+      let Eq = zq.get(qq);
+      return void 0 === Eq && (Eq = Tq++, zq.set(qq, Eq)), Eq
     }
-    class ZT {
-      constructor(TT, kT) {
-        this.print = TT, this.now = kT, this.shown = 0, this.ty = 0, this.sections = 0, this.second = -1 / 0, this.inSecond = 0, this.wj = [], this.dropped = 0
+    class pq {
+      constructor(qq, Eq) {
+        this.print = qq, this.now = Eq, this.shown = 0, this.Fc = 0, this.sections = 0, this.second = -1 / 0, this.inSecond = 0, this.jN = [], this.dropped = 0
       }
-      line(TT) {
-        const kT = this.now();
-        if (kT - this.second >= 1e3 && (this.second = kT, this.inSecond = 0), this.shown >= 400 || this.inSecond >= 20) return this.ty++, void this.store(TT);
-        this.shown++, this.inSecond++, this.print(400 === this.shown ? `${TT} (the last line here: the rest go to bloxdDebug.save())` : TT)
+      line(qq) {
+        const Eq = this.now();
+        if (Eq - this.second >= 1e3 && (this.second = Eq, this.inSecond = 0), this.shown >= 400 || this.inSecond >= 20) return this.Fc++, void this.store(qq);
+        this.shown++, this.inSecond++, this.print(400 === this.shown ? `${qq} (the last line here: the rest go to bloxdDebug.save())` : qq)
       }
-      keep(TT) {
-        this.sections++, this.store(TT)
+      keep(qq) {
+        this.sections++, this.store(qq)
       }
-      store(TT) {
-        this.wj.push(`${new Date(Date.now()).toISOString()} ${TT}`), this.wj.length > 2e4 && (this.wj.shift(), this.dropped++)
+      store(qq) {
+        this.jN.push(`${new Date(Date.now()).toISOString()} ${qq}`), this.jN.length > 2e4 && (this.jN.shift(), this.dropped++)
       }
       dump() {
-        return [`${this.shown} lines logged (above); kept here: ${this.ty} lines past the console's budget, ${this.sections} sections; ${this.dropped} oldest dropped`, ...this.wj].join("\n")
+        return [`${this.shown} lines logged (above); kept here: ${this.Fc} lines past the console's budget, ${this.sections} sections; ${this.dropped} oldest dropped`, ...this.jN].join("\n")
       }
     }
-    let uT = null;
+    let Gq = null;
 
-    function XT() {
-      if (null === uT) {
-        const TT = new ZT((TT => {
-          (0, KT.k)("render", TT)
+    function Lq() {
+      if (null === Gq) {
+        const qq = new pq((qq => {
+          (0, Oq.m)("render", qq)
         }), (() => performance.now()));
-        (0, KT.j)("render", (() => TT.dump())), uT = TT
+        (0, Oq.j)("render", (() => qq.dump())), Gq = qq
       }
-      return uT
+      return Gq
     }
 
-    function dT(TT) {
-      XT().line(TT)
+    function Jq(qq) {
+      Lq().line(qq)
     }
 
-    function LT(TT) {
-      XT().keep(TT)
+    function kq(qq) {
+      Lq().keep(qq)
     }
 
-    function RT(TT) {
-      let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 4096;
-      return TT.length <= kT ? TT : `${TT.slice(0,kT)}... (${TT.length-kT} more characters)`
+    function Rq(qq) {
+      let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 4096;
+      return qq.length <= Eq ? qq : `${qq.slice(0,Eq)}... (${qq.length-Eq} more characters)`
     }
 
-    function gT(TT, kT, cT, lT, MT, KT) {
-      const OT = eT.pendingCheck;
-      if (null === OT) return;
-      const yT = "undefined" !== typeof WebGL2RenderingContext && TT instanceof WebGL2RenderingContext,
-        fT = {
-          gl: TT,
-          program: cT,
-          call: lT,
-          qt: MT,
-          instances: KT,
+    function Uq(qq, Eq, gq, Yq, lq, Oq) {
+      const mq = Mq.pendingCheck;
+      if (null === mq) return;
+      const xq = "undefined" !== typeof WebGL2RenderingContext && qq instanceof WebGL2RenderingContext,
+        Aq = {
+          gl: qq,
+          program: gq,
+          call: Yq,
+          zV: lq,
+          instances: Oq,
           attributes: [],
           group: -1,
           chunk: "",
           pages: []
         };
-      if (OT.draws.push(fT), yT) try {
-        const lT = function(TT) {
-          const kT = [],
-            cT = new Map,
-            lT = Math.min(16, TT.getParameter(tT.MAX_VERTEX_ATTRIBS));
-          for (let MT = 0; MT < lT; MT++) {
-            if (!TT.getVertexAttrib(MT, tT.VERTEX_ATTRIB_ARRAY_ENABLED)) continue;
-            const lT = TT.getVertexAttrib(MT, tT.VERTEX_ATTRIB_ARRAY_BUFFER_BINDING),
-              KT = TT.getVertexAttribOffset(MT, tT.VERTEX_ATTRIB_ARRAY_POINTER),
-              OT = TT.getVertexAttrib(MT, tT.VERTEX_ATTRIB_ARRAY_STRIDE),
-              yT = TT.getVertexAttrib(MT, tT.VERTEX_ATTRIB_ARRAY_SIZE),
-              fT = TT.getVertexAttrib(MT, tT.VERTEX_ATTRIB_ARRAY_TYPE),
-              xT = "VERTEX_ATTRIB_ARRAY_INTEGER" in TT && TT.getVertexAttrib(MT, tT.VERTEX_ATTRIB_ARRAY_INTEGER),
-              IT = "VERTEX_ATTRIB_ARRAY_DIVISOR" in TT ? TT.getVertexAttrib(MT, tT.VERTEX_ATTRIB_ARRAY_DIVISOR) : 0;
-            cT.set(MT, {
-              buffer: lT,
-              offset: KT,
-              stride: OT
-            }), kT.push(`@${MT} buf#${ET(lT)} +${KT} stride ${OT} ${yT}x0x${fT.toString(16)}${xT?" int":""} div ${IT}`)
+      if (mq.draws.push(Aq), xq) try {
+        const Yq = function(qq) {
+          const Eq = [],
+            gq = new Map,
+            Yq = Math.min(16, qq.getParameter(Vq.MAX_VERTEX_ATTRIBS));
+          for (let lq = 0; lq < Yq; lq++) {
+            if (!qq.getVertexAttrib(lq, Vq.VERTEX_ATTRIB_ARRAY_ENABLED)) continue;
+            const Yq = qq.getVertexAttrib(lq, Vq.VERTEX_ATTRIB_ARRAY_BUFFER_BINDING),
+              Oq = qq.getVertexAttribOffset(lq, Vq.VERTEX_ATTRIB_ARRAY_POINTER),
+              mq = qq.getVertexAttrib(lq, Vq.VERTEX_ATTRIB_ARRAY_STRIDE),
+              xq = qq.getVertexAttrib(lq, Vq.VERTEX_ATTRIB_ARRAY_SIZE),
+              Aq = qq.getVertexAttrib(lq, Vq.VERTEX_ATTRIB_ARRAY_TYPE),
+              cq = "VERTEX_ATTRIB_ARRAY_INTEGER" in qq && qq.getVertexAttrib(lq, Vq.VERTEX_ATTRIB_ARRAY_INTEGER),
+              uq = "VERTEX_ATTRIB_ARRAY_DIVISOR" in qq ? qq.getVertexAttrib(lq, Vq.VERTEX_ATTRIB_ARRAY_DIVISOR) : 0;
+            gq.set(lq, {
+              buffer: Yq,
+              offset: Oq,
+              stride: mq
+            }), Eq.push(`@${lq} buf#${Sq(Yq)} +${Oq} stride ${mq} ${xq}x0x${Aq.toString(16)}${cq?" int":""} div ${uq}`)
           }
           return {
-            lines: kT,
-            byLocation: cT
+            lines: Eq,
+            byLocation: gq
           }
-        }(TT);
-        if (fT.attributes = lT.lines, "inst" === cT.terrain) {
+        }(qq);
+        if (Aq.attributes = Yq.lines, "inst" === gq.terrain) {
           const {
-            group: MT,
-            chunk: yT
-          } = function(TT, kT, cT) {
-            const lT = kT.get(ST),
-              MT = TT.getVertexAttrib(ST, tT.CURRENT_VERTEX_ATTRIB),
-              KT = lT ? `+${lT.offset}` : MT ? Array.from(MT).slice(0, 3).join(",") : "?";
-            let OT = cT.groups.get(KT);
-            return void 0 === OT && (OT = cT.groups.size, cT.groups.set(KT, OT)), {
-              group: OT,
-              chunk: KT
+            group: lq,
+            chunk: xq
+          } = function(qq, Eq, gq) {
+            const Yq = Eq.get(oq),
+              lq = qq.getVertexAttrib(oq, Vq.CURRENT_VERTEX_ATTRIB),
+              Oq = Yq ? `+${Yq.offset}` : lq ? Array.from(lq).slice(0, 3).join(",") : "?";
+            let mq = gq.groups.get(Oq);
+            return void 0 === mq && (mq = gq.groups.size, gq.groups.set(Oq, mq)), {
+              group: mq,
+              chunk: Oq
             }
-          }(TT, lT.byLocation, OT);
-          fT.group = MT, fT.chunk = yT;
-          for (const TT of [NT, QT]) {
-            var xT;
-            const kT = null === (xT = lT.byLocation.get(TT)) || void 0 === xT ? void 0 : xT.buffer;
-            kT && fT.pages.push({
+          }(qq, Yq.byLocation, mq);
+          Aq.group = lq, Aq.chunk = xq;
+          for (const qq of [jq, Hq]) {
+            var cq;
+            const Eq = null === (cq = Yq.byLocation.get(qq)) || void 0 === cq ? void 0 : cq.buffer;
+            Eq && Aq.pages.push({
               kind: "buf",
-              buffer: kT
+              buffer: Eq
             })
-          }! function(TT, kT, cT, lT, MT, KT, OT) {
-            const yT = lT.get(NT),
-              fT = OT.parts.get(KT);
-            if (void 0 === fT && OT.parts.size >= FT) return;
-            const xT = Math.min(MT, PT, rT - (null !== fT && void 0 !== fT ? fT : 0));
-            if (null === yT || void 0 === yT || !yT.buffer || xT <= 0) return;
-            const IT = UT(TT, kT, cT);
-            if (!IT) return;
-            const AT = yT.stride || 12,
-              CT = pT(TT, yT.buffer, yT.offset, (xT - 1) * AT + 12),
-              jT = new DataView(CT.buffer),
-              vT = function(TT, kT) {
-                const cT = function(TT) {
-                    const kT = sT.get(TT);
-                    if (void 0 !== kT && (null === kT || TT.isProgram(kT))) return kT;
-                    eT.inProbe = !0;
-                    let cT = null;
+          }! function(qq, Eq, gq, Yq, lq, Oq, mq) {
+            const xq = Yq.get(jq),
+              Aq = mq.parts.get(Oq);
+            if (void 0 === Aq && mq.parts.size >= yq) return;
+            const cq = Math.min(lq, rq, tq - (null !== Aq && void 0 !== Aq ? Aq : 0));
+            if (null === xq || void 0 === xq || !xq.buffer || cq <= 0) return;
+            const uq = Fq(qq, Eq, gq);
+            if (!uq) return;
+            const Bq = xq.stride || 12,
+              Wq = Cq(qq, xq.buffer, xq.offset, (cq - 1) * Bq + 12),
+              Nq = new DataView(Wq.buffer),
+              aq = function(qq, Eq) {
+                const gq = function(qq) {
+                    const Eq = Dq.get(qq);
+                    if (void 0 !== Eq && (null === Eq || qq.isProgram(Eq))) return Eq;
+                    Mq.inProbe = !0;
+                    let gq = null;
                     try {
-                      cT = YT(TT, iT, qT, "fed", "the record feed")
+                      gq = sq(qq, Iq, eq, "fed", "the record feed")
                     } finally {
-                      eT.inProbe = !1
+                      Mq.inProbe = !1
                     }
-                    return sT.set(TT, cT), cT
-                  }(TT),
-                  lT = cT ? nT(TT, cT, kT, (() => {
-                    TT.drawArraysInstanced(tT.POINTS, 0, 1, kT)
+                    return Dq.set(qq, gq), gq
+                  }(qq),
+                  Yq = gq ? Kq(qq, gq, Eq, (() => {
+                    qq.drawArraysInstanced(Vq.POINTS, 0, 1, Eq)
                   }), "decode probe input (the record feed)") : null;
-                return lT ? new Uint32Array(lT.buffer) : null
-              }(TT, xT);
-            vT || OT.fed.failed++;
-            const hT = nT(TT, IT, 4 * xT, (() => {
-              TT.drawArraysInstanced(tT.POINTS, 0, 4, xT)
+                return Yq ? new Uint32Array(Yq.buffer) : null
+              }(qq, cq);
+            aq || mq.fed.failed++;
+            const dq = Kq(qq, uq, 4 * cq, (() => {
+              qq.drawArraysInstanced(Vq.POINTS, 0, 4, cq)
             }));
-            if (!hT) return;
-            OT.parts.set(KT, (null !== fT && void 0 !== fT ? fT : 0) + xT);
-            for (let tT = 0; tT < xT; tT++) {
-              const TT = tT * AT,
-                kT = [jT.getUint32(TT, !0), jT.getUint32(TT + 4, !0), jT.getUint32(TT + 8, !0)],
-                cT = vT ? [vT[3 * tT], vT[3 * tT + 1], vT[3 * tT + 2]] : kT;
-              vT && (OT.fed.records++, cT.some(((TT, cT) => TT !== kT[cT])) && (OT.fed.differing++, OT.fed.first.length < 8 && OT.fed.first.push(`part ${KT} instance ${tT}: fed ${cT.map(Mk).join(" ")} buffer ${kT.map(Mk).join(" ")}`)));
-              for (let lT = 0; lT < 4; lT++) {
-                const TT = 3 * (4 * tT + lT);
-                OT.vertices.push({
-                  record: cT,
-                  slot: lT,
-                  group: KT,
-                  gpu: [hT[TT], hT[TT + 1], hT[TT + 2]]
+            if (!dq) return;
+            mq.parts.set(Oq, (null !== Aq && void 0 !== Aq ? Aq : 0) + cq);
+            for (let Vq = 0; Vq < cq; Vq++) {
+              const qq = Vq * Bq,
+                Eq = [Nq.getUint32(qq, !0), Nq.getUint32(qq + 4, !0), Nq.getUint32(qq + 8, !0)],
+                gq = aq ? [aq[3 * Vq], aq[3 * Vq + 1], aq[3 * Vq + 2]] : Eq;
+              aq && (mq.fed.records++, gq.some(((qq, gq) => qq !== Eq[gq])) && (mq.fed.differing++, mq.fed.first.length < 8 && mq.fed.first.push(`part ${Oq} instance ${Vq}: fed ${gq.map(lE).join(" ")} buffer ${Eq.map(lE).join(" ")}`)));
+              for (let Yq = 0; Yq < 4; Yq++) {
+                const qq = 3 * (4 * Vq + Yq);
+                mq.vertices.push({
+                  record: gq,
+                  slot: Yq,
+                  group: Oq,
+                  gpu: [dq[qq], dq[qq + 1], dq[qq + 2]]
                 })
               }
             }
-          }(TT, kT, cT, lT.byLocation, KT, MT, OT)
+          }(qq, Eq, gq, Yq.byLocation, Oq, lq, mq)
         } else {
-          const lT = Tk(TT, kT, 16),
-            KT = Tk(TT, kT, 8);
-          for (const TT of [lT, KT]) TT && fT.pages.push({
+          const Yq = qE(qq, Eq, 16),
+            Oq = qE(qq, Eq, 8);
+          for (const qq of [Yq, Oq]) qq && Aq.pages.push({
             kind: "tex",
-            texture: TT
+            texture: qq
           });
-          lT && function(TT, kT, cT, lT, MT, KT) {
-            if (KT.parts.size >= FT) return;
-            const OT = UT(TT, kT, cT);
-            if (!OT) return;
-            let yT = 6 * rT;
-            const fT = [];
-            for (const [jT, vT] of MT) {
-              const TT = Math.min(vT, yT, Math.max(6, 6 * Math.floor(rT / MT.length)));
-              TT > 0 && (fT.push([jT, TT]), yT -= TT)
+          Yq && function(qq, Eq, gq, Yq, lq, Oq) {
+            if (Oq.parts.size >= yq) return;
+            const mq = Fq(qq, Eq, gq);
+            if (!mq) return;
+            let xq = 6 * tq;
+            const Aq = [];
+            for (const [Nq, aq] of lq) {
+              const qq = Math.min(aq, xq, Math.max(6, 6 * Math.floor(tq / lq.length)));
+              qq > 0 && (Aq.push([Nq, qq]), xq -= qq)
             }
-            const xT = fT.reduce(((TT, kT) => {
-                let [, cT] = kT;
-                return TT + cT
+            const cq = Aq.reduce(((qq, Eq) => {
+                let [, gq] = Eq;
+                return qq + gq
               }), 0),
-              IT = nT(TT, OT, xT, (() => {
-                for (const [kT, cT] of fT) TT.drawArrays(tT.POINTS, kT, cT)
+              uq = Kq(qq, mq, cq, (() => {
+                for (const [Eq, gq] of Aq) qq.drawArrays(Vq.POINTS, Eq, gq)
               }));
-            if (!IT) return;
-            let AT = 0;
-            for (const [jT, vT] of fT) {
-              const kT = Math.floor(jT / 6),
-                cT = Math.floor((jT + vT - 1) / 6) - kT + 1,
-                MT = kk(TT, lT, aT, kT, cT);
-              for (let TT = jT; TT < jT + vT; TT++, AT++) {
-                var CT;
-                const cT = 4 * (Math.floor(TT / 6) - kT),
-                  lT = [MT[cT], MT[cT + 1], MT[cT + 2]];
-                KT.parts.set(MT[cT + 3], (null !== (CT = KT.parts.get(MT[cT + 3])) && void 0 !== CT ? CT : 0) + (TT % 6 === 0 ? 1 : 0)), KT.vertices.push({
-                  record: lT,
-                  slot: DT[TT % 6],
-                  group: MT[cT + 3],
-                  gpu: [IT[3 * AT], IT[3 * AT + 1], IT[3 * AT + 2]]
+            if (!uq) return;
+            let Bq = 0;
+            for (const [Nq, aq] of Aq) {
+              const Eq = Math.floor(Nq / 6),
+                gq = Math.floor((Nq + aq - 1) / 6) - Eq + 1,
+                lq = EE(qq, Yq, Qq, Eq, gq);
+              for (let qq = Nq; qq < Nq + aq; qq++, Bq++) {
+                var Wq;
+                const gq = 4 * (Math.floor(qq / 6) - Eq),
+                  Yq = [lq[gq], lq[gq + 1], lq[gq + 2]];
+                Oq.parts.set(lq[gq + 3], (null !== (Wq = Oq.parts.get(lq[gq + 3])) && void 0 !== Wq ? Wq : 0) + (qq % 6 === 0 ? 1 : 0)), Oq.vertices.push({
+                  record: Yq,
+                  slot: Pq[qq % 6],
+                  group: lq[gq + 3],
+                  gpu: [uq[3 * Bq], uq[3 * Bq + 1], uq[3 * Bq + 2]]
                 })
               }
             }
-          }(TT, kT, cT, lT, MT, OT)
+          }(qq, Eq, gq, Yq, lq, mq)
         }
-      } catch (IT) {
-        dT(`decode probe failed on program ${zT(cT)}: ${String(IT)}`)
+      } catch (uq) {
+        Jq(`decode probe failed on program ${bq(gq)}: ${String(uq)}`)
       }
     }
 
-    function UT(TT, kT, cT) {
-      if (void 0 !== cT.probe) return cT.probe && BT(TT, kT, cT.probe), cT.probe;
-      cT.probe = null, eT.inProbe = !0;
+    function Fq(qq, Eq, gq) {
+      if (void 0 !== gq.probe) return gq.probe && Xq(qq, Eq, gq.probe), gq.probe;
+      gq.probe = null, Mq.inProbe = !0;
       try {
-        cT.probe = function(TT, kT) {
-          return YT(TT, kT.vertex, kT.fragment, hT, `program ${zT(kT)}'s twin`)
-        }(TT, cT)
+        gq.probe = function(qq, Eq) {
+          return sq(qq, Eq.vertex, Eq.fragment, dq, `program ${bq(Eq)}'s twin`)
+        }(qq, gq)
       } finally {
-        eT.inProbe = !1
+        Mq.inProbe = !1
       }
-      return cT.probe && BT(TT, kT, cT.probe), cT.probe
+      return gq.probe && Xq(qq, Eq, gq.probe), gq.probe
     }
 
-    function YT(TT, kT, cT, lT, MT) {
-      const KT = [TT.createShader(tT.VERTEX_SHADER), TT.createShader(tT.FRAGMENT_SHADER)],
-        OT = TT.createProgram();
-      if (!OT || !KT[0] || !KT[1]) return null;
-      TT.shaderSource(KT[0], kT), TT.shaderSource(KT[1], cT);
-      for (const fT of KT) TT.compileShader(fT), TT.attachShader(OT, fT);
-      TT.transformFeedbackVaryings(OT, [lT], tT.INTERLEAVED_ATTRIBS), TT.linkProgram(OT);
-      for (const fT of KT) TT.deleteShader(fT);
-      var yT;
-      return TT.getProgramParameter(OT, tT.LINK_STATUS) ? OT : (dT(`decode probe: ${MT} failed to link: ${RT(null!==(yT=TT.getProgramInfoLog(OT))&&void 0!==yT?yT:"",300)}`), TT.deleteProgram(OT), null)
+    function sq(qq, Eq, gq, Yq, lq) {
+      const Oq = [qq.createShader(Vq.VERTEX_SHADER), qq.createShader(Vq.FRAGMENT_SHADER)],
+        mq = qq.createProgram();
+      if (!mq || !Oq[0] || !Oq[1]) return null;
+      qq.shaderSource(Oq[0], Eq), qq.shaderSource(Oq[1], gq);
+      for (const Aq of Oq) qq.compileShader(Aq), qq.attachShader(mq, Aq);
+      qq.transformFeedbackVaryings(mq, [Yq], Vq.INTERLEAVED_ATTRIBS), qq.linkProgram(mq);
+      for (const Aq of Oq) qq.deleteShader(Aq);
+      var xq;
+      return qq.getProgramParameter(mq, Vq.LINK_STATUS) ? mq : (Jq(`decode probe: ${lq} failed to link: ${Rq(null!==(xq=qq.getProgramInfoLog(mq))&&void 0!==xq?xq:"",300)}`), qq.deleteProgram(mq), null)
     }
 
-    function BT(TT, kT, cT) {
-      const lT = TT.getProgramParameter(kT, tT.ACTIVE_UNIFORM_BLOCKS);
-      for (let yT = 0; yT < lT; yT++) {
-        const lT = TT.getActiveUniformBlockName(kT, yT),
-          MT = null === lT ? tT.INVALID_INDEX : TT.getUniformBlockIndex(cT, lT);
-        MT !== tT.INVALID_INDEX && TT.uniformBlockBinding(cT, MT, TT.getActiveUniformBlockParameter(kT, yT, tT.UNIFORM_BLOCK_BINDING))
+    function Xq(qq, Eq, gq) {
+      const Yq = qq.getProgramParameter(Eq, Vq.ACTIVE_UNIFORM_BLOCKS);
+      for (let xq = 0; xq < Yq; xq++) {
+        const Yq = qq.getActiveUniformBlockName(Eq, xq),
+          lq = null === Yq ? Vq.INVALID_INDEX : qq.getUniformBlockIndex(gq, Yq);
+        lq !== Vq.INVALID_INDEX && qq.uniformBlockBinding(gq, lq, qq.getActiveUniformBlockParameter(Eq, xq, Vq.UNIFORM_BLOCK_BINDING))
       }
-      const MT = TT.getParameter(tT.CURRENT_PROGRAM);
-      TT.useProgram(cT);
-      const KT = TT.getProgramParameter(kT, tT.ACTIVE_UNIFORMS),
-        OT = TT.getActiveUniforms(kT, [...Array(KT).keys()], tT.UNIFORM_BLOCK_INDEX);
-      for (let yT = 0; yT < KT; yT++) {
-        const lT = TT.getActiveUniform(kT, yT);
-        if (!lT || -1 !== OT[yT]) continue;
-        const MT = lT.name.replace(/\[0\]$/, "");
-        for (let KT = 0; KT < lT.size; KT++) {
-          const OT = lT.size > 1 ? `${MT}[${KT}]` : lT.name,
-            yT = TT.getUniformLocation(kT, OT),
-            fT = TT.getUniformLocation(cT, OT);
-          yT && fT && WT(TT, fT, lT.type, TT.getUniform(kT, yT))
+      const lq = qq.getParameter(Vq.CURRENT_PROGRAM);
+      qq.useProgram(gq);
+      const Oq = qq.getProgramParameter(Eq, Vq.ACTIVE_UNIFORMS),
+        mq = qq.getActiveUniforms(Eq, [...Array(Oq).keys()], Vq.UNIFORM_BLOCK_INDEX);
+      for (let xq = 0; xq < Oq; xq++) {
+        const Yq = qq.getActiveUniform(Eq, xq);
+        if (!Yq || -1 !== mq[xq]) continue;
+        const lq = Yq.name.replace(/\[0\]$/, "");
+        for (let Oq = 0; Oq < Yq.size; Oq++) {
+          const mq = Yq.size > 1 ? `${lq}[${Oq}]` : Yq.name,
+            xq = qq.getUniformLocation(Eq, mq),
+            Aq = qq.getUniformLocation(gq, mq);
+          xq && Aq && wq(qq, Aq, Yq.type, qq.getUniform(Eq, xq))
         }
       }
-      TT.useProgram(MT)
+      qq.useProgram(lq)
     }
 
-    function WT(TT, kT, cT, lT) {
-      const MT = ArrayBuffer.isView(lT) ? Array.from(lT) : [Number(lT)];
-      switch (cT) {
-        case tT.FLOAT:
-          return void TT.uniform1f(kT, MT[0]);
-        case tT.FLOAT_VEC2:
-          return void TT.uniform2fv(kT, MT);
-        case tT.FLOAT_VEC3:
-          return void TT.uniform3fv(kT, MT);
-        case tT.FLOAT_VEC4:
-          return void TT.uniform4fv(kT, MT);
-        case tT.FLOAT_MAT3:
-          return void TT.uniformMatrix3fv(kT, !1, MT);
-        case tT.FLOAT_MAT4:
-          return void TT.uniformMatrix4fv(kT, !1, MT);
-        case tT.UNSIGNED_INT:
-          return void TT.uniform1ui(kT, MT[0]);
-        case tT.UNSIGNED_INT_VEC2:
-          return void TT.uniform2uiv(kT, MT);
-        case tT.UNSIGNED_INT_VEC3:
-          return void TT.uniform3uiv(kT, MT);
-        case tT.UNSIGNED_INT_VEC4:
-          return void TT.uniform4uiv(kT, MT);
-        case tT.INT_VEC2:
-          return void TT.uniform2iv(kT, MT);
-        case tT.INT_VEC3:
-          return void TT.uniform3iv(kT, MT);
-        case tT.INT_VEC4:
-          return void TT.uniform4iv(kT, MT);
+    function wq(qq, Eq, gq, Yq) {
+      const lq = ArrayBuffer.isView(Yq) ? Array.from(Yq) : [Number(Yq)];
+      switch (gq) {
+        case Vq.FLOAT:
+          return void qq.uniform1f(Eq, lq[0]);
+        case Vq.FLOAT_VEC2:
+          return void qq.uniform2fv(Eq, lq);
+        case Vq.FLOAT_VEC3:
+          return void qq.uniform3fv(Eq, lq);
+        case Vq.FLOAT_VEC4:
+          return void qq.uniform4fv(Eq, lq);
+        case Vq.FLOAT_MAT3:
+          return void qq.uniformMatrix3fv(Eq, !1, lq);
+        case Vq.FLOAT_MAT4:
+          return void qq.uniformMatrix4fv(Eq, !1, lq);
+        case Vq.UNSIGNED_INT:
+          return void qq.uniform1ui(Eq, lq[0]);
+        case Vq.UNSIGNED_INT_VEC2:
+          return void qq.uniform2uiv(Eq, lq);
+        case Vq.UNSIGNED_INT_VEC3:
+          return void qq.uniform3uiv(Eq, lq);
+        case Vq.UNSIGNED_INT_VEC4:
+          return void qq.uniform4uiv(Eq, lq);
+        case Vq.INT_VEC2:
+          return void qq.uniform2iv(Eq, lq);
+        case Vq.INT_VEC3:
+          return void qq.uniform3iv(Eq, lq);
+        case Vq.INT_VEC4:
+          return void qq.uniform4iv(Eq, lq);
         default:
-          TT.uniform1i(kT, MT[0])
+          qq.uniform1i(Eq, lq[0])
       }
     }
 
-    function nT(TT, kT, cT, lT) {
-      let MT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "decode probe";
-      const KT = TT.getParameter(tT.CURRENT_PROGRAM),
-        OT = TT.getParameter(tT.TRANSFORM_FEEDBACK_BINDING),
-        yT = TT.getParameter(tT.TRANSFORM_FEEDBACK_BUFFER_BINDING),
-        fT = TT.getParameter(tT.COPY_READ_BUFFER_BINDING),
-        xT = TT.isEnabled(tT.RASTERIZER_DISCARD),
-        IT = TT.createTransformFeedback(),
-        AT = TT.createBuffer();
-      eT.inProbe = !0;
+    function Kq(qq, Eq, gq, Yq) {
+      let lq = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "decode probe";
+      const Oq = qq.getParameter(Vq.CURRENT_PROGRAM),
+        mq = qq.getParameter(Vq.TRANSFORM_FEEDBACK_BINDING),
+        xq = qq.getParameter(Vq.TRANSFORM_FEEDBACK_BUFFER_BINDING),
+        Aq = qq.getParameter(Vq.COPY_READ_BUFFER_BINDING),
+        cq = qq.isEnabled(Vq.RASTERIZER_DISCARD),
+        uq = qq.createTransformFeedback(),
+        Bq = qq.createBuffer();
+      Mq.inProbe = !0;
       try {
-        const KT = TT.getError();
-        KT !== tT.NO_ERROR && dT(`GL error 0x${KT.toString(16)} pending before the decode probe (the renderer's)`), TT.useProgram(kT), TT.bindTransformFeedback(tT.TRANSFORM_FEEDBACK, IT), TT.bindBuffer(tT.TRANSFORM_FEEDBACK_BUFFER, AT), TT.bufferData(tT.TRANSFORM_FEEDBACK_BUFFER, 12 * cT, tT.STREAM_READ), TT.bindBufferBase(tT.TRANSFORM_FEEDBACK_BUFFER, 0, AT), TT.enable(tT.RASTERIZER_DISCARD), TT.beginTransformFeedback(tT.POINTS), lT(), TT.endTransformFeedback(), TT.bindBufferBase(tT.TRANSFORM_FEEDBACK_BUFFER, 0, null);
-        const OT = TT.getError();
-        if (OT !== tT.NO_ERROR) return dT(`${MT}: GL error 0x${OT.toString(16)} on the feedback draw`), null;
-        const yT = new Float32Array(3 * cT);
-        return TT.bindBuffer(tT.COPY_READ_BUFFER, AT), TT.getBufferSubData(tT.COPY_READ_BUFFER, 0, yT), yT
+        const Oq = qq.getError();
+        Oq !== Vq.NO_ERROR && Jq(`GL error 0x${Oq.toString(16)} pending before the decode probe (the renderer's)`), qq.useProgram(Eq), qq.bindTransformFeedback(Vq.TRANSFORM_FEEDBACK, uq), qq.bindBuffer(Vq.TRANSFORM_FEEDBACK_BUFFER, Bq), qq.bufferData(Vq.TRANSFORM_FEEDBACK_BUFFER, 12 * gq, Vq.STREAM_READ), qq.bindBufferBase(Vq.TRANSFORM_FEEDBACK_BUFFER, 0, Bq), qq.enable(Vq.RASTERIZER_DISCARD), qq.beginTransformFeedback(Vq.POINTS), Yq(), qq.endTransformFeedback(), qq.bindBufferBase(Vq.TRANSFORM_FEEDBACK_BUFFER, 0, null);
+        const mq = qq.getError();
+        if (mq !== Vq.NO_ERROR) return Jq(`${lq}: GL error 0x${mq.toString(16)} on the feedback draw`), null;
+        const xq = new Float32Array(3 * gq);
+        return qq.bindBuffer(Vq.COPY_READ_BUFFER, Bq), qq.getBufferSubData(Vq.COPY_READ_BUFFER, 0, xq), xq
       } finally {
-        xT || TT.disable(tT.RASTERIZER_DISCARD), TT.bindTransformFeedback(tT.TRANSFORM_FEEDBACK, OT), TT.bindBuffer(tT.TRANSFORM_FEEDBACK_BUFFER, yT), TT.bindBuffer(tT.COPY_READ_BUFFER, fT), TT.deleteTransformFeedback(IT), TT.deleteBuffer(AT), TT.useProgram(KT), eT.inProbe = !1
+        cq || qq.disable(Vq.RASTERIZER_DISCARD), qq.bindTransformFeedback(Vq.TRANSFORM_FEEDBACK, mq), qq.bindBuffer(Vq.TRANSFORM_FEEDBACK_BUFFER, xq), qq.bindBuffer(Vq.COPY_READ_BUFFER, Aq), qq.deleteTransformFeedback(uq), qq.deleteBuffer(Bq), qq.useProgram(Oq), Mq.inProbe = !1
       }
     }
 
-    function pT(TT, kT, cT, lT) {
-      const MT = TT.getParameter(tT.COPY_READ_BUFFER_BINDING),
-        KT = new Uint8Array(lT);
-      return TT.bindBuffer(tT.COPY_READ_BUFFER, kT), TT.getBufferSubData(tT.COPY_READ_BUFFER, cT, KT), TT.bindBuffer(tT.COPY_READ_BUFFER, MT), KT
+    function Cq(qq, Eq, gq, Yq) {
+      const lq = qq.getParameter(Vq.COPY_READ_BUFFER_BINDING),
+        Oq = new Uint8Array(Yq);
+      return qq.bindBuffer(Vq.COPY_READ_BUFFER, Eq), qq.getBufferSubData(Vq.COPY_READ_BUFFER, gq, Oq), qq.bindBuffer(Vq.COPY_READ_BUFFER, lq), Oq
     }
-    const iT = `#version 300 es\nlayout(location = ${NT}) in uvec3 record;\nflat out uvec3 fed;\nvoid main() {\n\tfed = record;\n\tgl_Position = vec4(0.0);\n\tgl_PointSize = 1.0;\n}\n`,
-      qT = "#version 300 es\nprecision highp float;\nout vec4 color;\nvoid main() {\n\tcolor = vec4(0.0);\n}\n",
-      sT = new WeakMap;
+    const Iq = `#version 300 es\nlayout(location = ${jq}) in uvec3 record;\nflat out uvec3 fed;\nvoid main() {\n\tfed = record;\n\tgl_Position = vec4(0.0);\n\tgl_PointSize = 1.0;\n}\n`,
+      eq = "#version 300 es\nprecision highp float;\nout vec4 color;\nvoid main() {\n\tcolor = vec4(0.0);\n}\n",
+      Dq = new WeakMap;
 
-    function Tk(TT, kT, cT) {
-      const lT = TT.getProgramParameter(kT, tT.ACTIVE_UNIFORMS),
-        MT = TT.getParameter(tT.ACTIVE_TEXTURE);
+    function qE(qq, Eq, gq) {
+      const Yq = qq.getProgramParameter(Eq, Vq.ACTIVE_UNIFORMS),
+        lq = qq.getParameter(Vq.ACTIVE_TEXTURE);
       try {
-        for (let MT = 0; MT < lT; MT++) {
-          const lT = TT.getActiveUniform(kT, MT);
-          if ((null === lT || void 0 === lT ? void 0 : lT.type) !== tT.UNSIGNED_INT_SAMPLER_2D) continue;
-          const KT = TT.getUniformLocation(kT, lT.name),
-            OT = KT ? TT.getUniform(kT, KT) : -1;
-          if (OT < 0) continue;
-          TT.activeTexture(tT.TEXTURE0 + OT);
-          const yT = TT.getParameter(tT.TEXTURE_BINDING_2D);
-          if (yT && HT.get(yT) === cT) return yT
+        for (let lq = 0; lq < Yq; lq++) {
+          const Yq = qq.getActiveUniform(Eq, lq);
+          if ((null === Yq || void 0 === Yq ? void 0 : Yq.type) !== Vq.UNSIGNED_INT_SAMPLER_2D) continue;
+          const Oq = qq.getUniformLocation(Eq, Yq.name),
+            mq = Oq ? qq.getUniform(Eq, Oq) : -1;
+          if (mq < 0) continue;
+          qq.activeTexture(Vq.TEXTURE0 + mq);
+          const xq = qq.getParameter(Vq.TEXTURE_BINDING_2D);
+          if (xq && fq.get(xq) === gq) return xq
         }
         return null
       } finally {
-        TT.activeTexture(MT)
+        qq.activeTexture(lq)
       }
     }
 
-    function kk(TT, kT, cT, lT, MT) {
-      const KT = new Uint32Array(4 * MT),
-        OT = TT.getParameter(tT.READ_FRAMEBUFFER_BINDING),
-        yT = TT.createFramebuffer();
-      TT.bindFramebuffer(tT.READ_FRAMEBUFFER, yT), TT.framebufferTexture2D(tT.READ_FRAMEBUFFER, tT.COLOR_ATTACHMENT0, tT.TEXTURE_2D, kT, 0);
+    function EE(qq, Eq, gq, Yq, lq) {
+      const Oq = new Uint32Array(4 * lq),
+        mq = qq.getParameter(Vq.READ_FRAMEBUFFER_BINDING),
+        xq = qq.createFramebuffer();
+      qq.bindFramebuffer(Vq.READ_FRAMEBUFFER, xq), qq.framebufferTexture2D(Vq.READ_FRAMEBUFFER, Vq.COLOR_ATTACHMENT0, Vq.TEXTURE_2D, Eq, 0);
       try {
-        let kT = 0;
-        for (; kT < MT;) {
-          const OT = lT + kT,
-            yT = OT % cT,
-            fT = Math.min(MT - kT, cT - yT);
-          TT.readPixels(yT, Math.floor(OT / cT), fT, 1, tT.RGBA_INTEGER, tT.UNSIGNED_INT, KT.subarray(4 * kT, 4 * (kT + fT))), kT += fT
+        let Eq = 0;
+        for (; Eq < lq;) {
+          const mq = Yq + Eq,
+            xq = mq % gq,
+            Aq = Math.min(lq - Eq, gq - xq);
+          qq.readPixels(xq, Math.floor(mq / gq), Aq, 1, Vq.RGBA_INTEGER, Vq.UNSIGNED_INT, Oq.subarray(4 * Eq, 4 * (Eq + Aq))), Eq += Aq
         }
       } finally {
-        TT.bindFramebuffer(tT.READ_FRAMEBUFFER, OT), TT.deleteFramebuffer(yT)
+        qq.bindFramebuffer(Vq.READ_FRAMEBUFFER, mq), qq.deleteFramebuffer(xq)
       }
-      return KT
+      return Oq
     }
 
-    function ck(TT, kT, cT) {
-      let lT = 0,
-        MT = 0;
-      for (let fT = 0; fT < kT.bytes.length; fT += mT) {
-        lT++;
-        const TT = Math.min(fT + mT, kT.bytes.length);
-        jT(kT.bytes.subarray(fT, TT)) !== jT(cT.subarray(fT, TT)) && MT++
+    function gE(qq, Eq, gq) {
+      let Yq = 0,
+        lq = 0;
+      for (let Aq = 0; Aq < Eq.bytes.length; Aq += hq) {
+        Yq++;
+        const qq = Math.min(Aq + hq, Eq.bytes.length);
+        Nq(Eq.bytes.subarray(Aq, qq)) !== Nq(gq.subarray(Aq, qq)) && lq++
       }
-      const KT = `${TT} ${kT.bytes.length} B cpu ${jT(kT.bytes).toString(16)} gpu ${jT(cT).toString(16)}, ${MT}/${lT} blocks differ${kT.missed?`, ${kT.missed} GPU-side writes uncopied`:""}`;
-      if (0 === MT) return KT;
+      const Oq = `${qq} ${Eq.bytes.length} B cpu ${Nq(Eq.bytes).toString(16)} gpu ${Nq(gq).toString(16)}, ${lq}/${Yq} blocks differ${Eq.missed?`, ${Eq.missed} GPU-side writes uncopied`:""}`;
+      if (0 === lq) return Oq;
       const {
-        count: OT,
-        offsets: yT
-      } = function(TT, kT) {
-        let cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 8;
-        const lT = Math.min(TT.length, kT.length);
-        let MT = Math.abs(TT.length - kT.length);
-        const KT = [];
-        for (let OT = 0; OT < lT; OT++) TT[OT] !== kT[OT] && (MT++, KT.length < cT && KT.push(OT));
+        count: mq,
+        offsets: xq
+      } = function(qq, Eq) {
+        let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 8;
+        const Yq = Math.min(qq.length, Eq.length);
+        let lq = Math.abs(qq.length - Eq.length);
+        const Oq = [];
+        for (let mq = 0; mq < Yq; mq++) qq[mq] !== Eq[mq] && (lq++, Oq.length < gq && Oq.push(mq));
         return {
-          count: MT,
-          offsets: KT
+          count: lq,
+          offsets: Oq
         }
-      }(kT.bytes, cT);
-      return LT([`${KT}: ${OT} bytes differ`, ...yT.map((TT => `  +${TT}: cpu ${vT(kT.bytes,TT)} | gpu ${vT(cT,TT)}`))].join("\n")), `${KT}: ${OT} bytes differ, first at ${yT.join(", ")} (context in the saved file)`
+      }(Eq.bytes, gq);
+      return kq([`${Oq}: ${mq} bytes differ`, ...xq.map((qq => `  +${qq}: cpu ${aq(Eq.bytes,qq)} | gpu ${aq(gq,qq)}`))].join("\n")), `${Oq}: ${mq} bytes differ, first at ${xq.join(", ")} (context in the saved file)`
     }
 
-    function lk(TT) {
-      if (0 === TT.vertices.length) return void dT(`decode probe (${TT.reason}): no terrain draw probed (${TT.draws.length} seen)`);
-      const kT = function(TT) {
-          const kT = new Map;
-          for (const lT of TT) {
-            const TT = kT.get(lT.group);
-            TT ? TT.push(lT) : kT.set(lT.group, [lT])
+    function YE(qq) {
+      if (0 === qq.vertices.length) return void Jq(`decode probe (${qq.reason}): no terrain draw probed (${qq.draws.length} seen)`);
+      const Eq = function(qq) {
+          const Eq = new Map;
+          for (const Yq of qq) {
+            const qq = Eq.get(Yq.group);
+            qq ? qq.push(Yq) : Eq.set(Yq.group, [Yq])
           }
-          const cT = {
-            vertices: TT.length,
+          const gq = {
+            vertices: qq.length,
             mismatches: 0,
             byDirection: new Array(8).fill(0),
             byDiagonal: [0, 0],
@@ -606,67 +606,67 @@ export const modules = {
             translations: new Map,
             first: []
           };
-          for (const [lT, MT] of kT) {
-            const TT = new Map,
-              kT = MT.map((kT => {
-                const cT = IT(kT.record, kT.slot),
-                  lT = [kT.gpu[0] - cT[0], kT.gpu[1] - cT[1], kT.gpu[2] - cT[2]],
-                  MT = lT.map((TT => Math.round(64 * TT))).join(","),
-                  KT = TT.get(MT);
-                return KT ? KT.count++ : TT.set(MT, {
+          for (const [Yq, lq] of Eq) {
+            const qq = new Map,
+              Eq = lq.map((Eq => {
+                const gq = uq(Eq.record, Eq.slot),
+                  Yq = [Eq.gpu[0] - gq[0], Eq.gpu[1] - gq[1], Eq.gpu[2] - gq[2]],
+                  lq = Yq.map((qq => Math.round(64 * qq))).join(","),
+                  Oq = qq.get(lq);
+                return Oq ? Oq.count++ : qq.set(lq, {
                   count: 1,
-                  offset: lT
-                }), cT
+                  offset: Yq
+                }), gq
               }));
-            let KT = [0, 0, 0],
-              OT = 0;
-            for (const cT of TT.values()) cT.count > OT && (OT = cT.count, KT = cT.offset);
-            cT.translations.set(lT, KT), MT.forEach(((TT, lT) => {
-              var MT;
-              const OT = [kT[lT][0] + KT[0], kT[lT][1] + KT[1], kT[lT][2] + KT[2]];
-              if (OT.every(((kT, cT) => {
-                  return lT = TT.gpu[cT], MT = kT, Math.abs(lT - MT) <= Math.max(.001, 1e-6 * Math.abs(MT));
-                  var lT, MT
+            let Oq = [0, 0, 0],
+              mq = 0;
+            for (const gq of qq.values()) gq.count > mq && (mq = gq.count, Oq = gq.offset);
+            gq.translations.set(Yq, Oq), lq.forEach(((qq, Yq) => {
+              var lq;
+              const mq = [Eq[Yq][0] + Oq[0], Eq[Yq][1] + Oq[1], Eq[Yq][2] + Oq[2]];
+              if (mq.every(((Eq, gq) => {
+                  return Yq = qq.gpu[gq], lq = Eq, Math.abs(Yq - lq) <= Math.max(.001, 1e-6 * Math.abs(lq));
+                  var Yq, lq
                 }))) return;
-              cT.mismatches++, cT.byDirection[yT(TT.record[2])]++, cT.byDiagonal[fT(TT.record[2])]++;
-              const xT = AT(TT.record);
-              cT.byBand[xT] = (null !== (MT = cT.byBand[xT]) && void 0 !== MT ? MT : 0) + 1, cT.first.length < CT && cT.first.push({
-                ...TT,
-                expected: OT
+              gq.mismatches++, gq.byDirection[xq(qq.record[2])]++, gq.byDiagonal[Aq(qq.record[2])]++;
+              const cq = Bq(qq.record);
+              gq.byBand[cq] = (null !== (lq = gq.byBand[cq]) && void 0 !== lq ? lq : 0) + 1, gq.first.length < Wq && gq.first.push({
+                ...qq,
+                expected: mq
               })
             }))
           }
-          return cT
-        }(TT.vertices),
-        cT = kT.byDirection.map(((TT, kT) => TT ? `${OT[kT]} ${TT}` : "")).filter(Boolean).join(" "),
-        lT = Object.entries(kT.byBand).map((TT => {
-          let [kT, cT] = TT;
-          return `${kT}: ${cT}`
+          return gq
+        }(qq.vertices),
+        gq = Eq.byDirection.map(((qq, Eq) => qq ? `${mq[Eq]} ${qq}` : "")).filter(Boolean).join(" "),
+        Yq = Object.entries(Eq.byBand).map((qq => {
+          let [Eq, gq] = qq;
+          return `${Eq}: ${gq}`
         })).join(" ");
-      if (dT(`decode probe (${TT.reason}): ${kT.mismatches}/${kT.vertices} vertices differ from the CPU decode over ${TT.parts.size} parts, in the probe's own transform feedback draw (the frame's draws can still differ)` + (kT.mismatches ? ` by direction [${cT}] diagonal [0: ${kT.byDiagonal[0]} 1: ${kT.byDiagonal[1]}] extent [${lT}]` : "")), TT.fed.records > 0 || TT.fed.failed > 0) {
-        dT(`decode probe input: ${TT.fed.differing}/${TT.fed.records} instanced records the vertex input fed differ from the buffer's readback` + (TT.fed.differing ? " (H2: the GPU's vertex copy differs, unless the feed's own integer pass-through is the fault)" : "") + (TT.fed.failed ? `; the feed failed on ${TT.fed.failed} draws, whose decode is held to the buffer's readback` : ""));
-        for (const kT of TT.fed.first) dT(`  ${kT}`)
+      if (Jq(`decode probe (${qq.reason}): ${Eq.mismatches}/${Eq.vertices} vertices differ from the CPU decode over ${qq.parts.size} parts, in the probe's own transform feedback draw (the frame's draws can still differ)` + (Eq.mismatches ? ` by direction [${gq}] diagonal [0: ${Eq.byDiagonal[0]} 1: ${Eq.byDiagonal[1]}] extent [${Yq}]` : "")), qq.fed.records > 0 || qq.fed.failed > 0) {
+        Jq(`decode probe input: ${qq.fed.differing}/${qq.fed.records} instanced records the vertex input fed differ from the buffer's readback` + (qq.fed.differing ? " (H2: the GPU's vertex copy differs, unless the feed's own integer pass-through is the fault)" : "") + (qq.fed.failed ? `; the feed failed on ${qq.fed.failed} draws, whose decode is held to the buffer's readback` : ""));
+        for (const Eq of qq.fed.first) Jq(`  ${Eq}`)
       }
-      for (const MT of kT.first) {
-        const [TT, kT, cT] = MT.record;
-        dT(`  mismatch part ${MT.group} r0 ${TT.toString(16)} r1 ${kT.toString(16)} r2 ${cT.toString(16)} slot ${MT.slot} (${OT[yT(cT)]}): expected ${MT.expected.map(Kk).join(",")} gpu ${MT.gpu.map(Kk).join(",")}`)
+      for (const lq of Eq.first) {
+        const [qq, Eq, gq] = lq.record;
+        Jq(`  mismatch part ${lq.group} r0 ${qq.toString(16)} r1 ${Eq.toString(16)} r2 ${gq.toString(16)} slot ${lq.slot} (${mq[xq(gq)]}): expected ${lq.expected.map(OE).join(",")} gpu ${lq.gpu.map(OE).join(",")}`)
       }
-      LT(`decode probe translations: ${[...kT.translations].map((TT=>{let[kT,cT]=TT;return`${kT}: ${cT.map(Kk).join(",")}`})).join("; ")}`)
+      kq(`decode probe translations: ${[...Eq.translations].map((qq=>{let[Eq,gq]=qq;return`${Eq}: ${gq.map(OE).join(",")}`})).join("; ")}`)
     }
 
-    function Mk(TT) {
-      return TT.toString(16)
+    function lE(qq) {
+      return qq.toString(16)
     }
 
-    function Kk(TT) {
-      return Number.isInteger(TT) ? String(TT) : TT.toFixed(3)
+    function OE(qq) {
+      return Number.isInteger(qq) ? String(qq) : qq.toFixed(3)
     }
 
-    function Ok(TT) {
-      return null !== eT.pendingCheck ? Promise.resolve() : new Promise((kT => {
-        let cT = !1;
-        const lT = {
-          reason: TT,
+    function mE(qq) {
+      return null !== Mq.pendingCheck ? Promise.resolve() : new Promise((Eq => {
+        let gq = !1;
+        const Yq = {
+          reason: qq,
           terrainDraws: 0,
           draws: [],
           vertices: [],
@@ -679,85 +679,85 @@ export const modules = {
             failed: 0
           }
         };
-        eT.pendingCheck = lT;
-        const MT = () => {
-            eT.pendingCheck = null;
+        Mq.pendingCheck = Yq;
+        const lq = () => {
+            Mq.pendingCheck = null;
             try {
-              ! function(TT) {
-                dT(`draw ranges (${TT.reason}): ${TT.terrainDraws} terrain draws in the frame, the first ${TT.draws.length} here`);
-                for (const kT of TT.draws) {
-                  const TT = kT.qt.slice(0, 8).map((TT => {
-                      let [kT, cT] = TT;
-                      return `${kT}+${cT}`
+              ! function(qq) {
+                Jq(`draw ranges (${qq.reason}): ${qq.terrainDraws} terrain draws in the frame, the first ${qq.draws.length} here`);
+                for (const Eq of qq.draws) {
+                  const qq = Eq.zV.slice(0, 8).map((qq => {
+                      let [Eq, gq] = qq;
+                      return `${Eq}+${gq}`
                     })).join(" "),
-                    cT = kT.qt.length > 8 ? ` (+${kT.qt.length-8} ranges)` : "";
-                  dT(`  ${zT(kT.program)} ${kT.program.terrain} ${kT.call} ${TT}${cT} x${kT.instances}${kT.group>=0?` part ${kT.group} chunk ${kT.chunk}`:""} | ${kT.attributes.join(" | ")}`)
+                    gq = Eq.zV.length > 8 ? ` (+${Eq.zV.length-8} ranges)` : "";
+                  Jq(`  ${bq(Eq.program)} ${Eq.program.terrain} ${Eq.call} ${qq}${gq} x${Eq.instances}${Eq.group>=0?` part ${Eq.group} chunk ${Eq.chunk}`:""} | ${Eq.attributes.join(" | ")}`)
                 }
-              }(lT), lk(lT);
-              lT.draws.some((TT => "undefined" !== typeof WebGL2RenderingContext && TT.gl instanceof WebGL2RenderingContext)) || 0 === lT.draws.length ? function(TT) {
-                const kT = [],
-                  cT = new Map;
-                for (const lT of TT)
-                  if ("undefined" !== typeof WebGL2RenderingContext && lT.gl instanceof WebGL2RenderingContext)
-                    for (const TT of lT.pages) cT.set("buf" === TT.kind ? TT.buffer : TT.texture, {
-                      page: TT,
-                      gl: lT.gl
+              }(Yq), YE(Yq);
+              Yq.draws.some((qq => "undefined" !== typeof WebGL2RenderingContext && qq.gl instanceof WebGL2RenderingContext)) || 0 === Yq.draws.length ? function(qq) {
+                const Eq = [],
+                  gq = new Map;
+                for (const Yq of qq)
+                  if ("undefined" !== typeof WebGL2RenderingContext && Yq.gl instanceof WebGL2RenderingContext)
+                    for (const qq of Yq.pages) gq.set("buf" === qq.kind ? qq.buffer : qq.texture, {
+                      page: qq,
+                      gl: Yq.gl
                     });
-                for (const [lT, {
-                    page: MT,
-                    gl: KT
-                  }] of cT) {
-                  const TT = oT.get(lT);
-                  if (!TT) {
-                    kT.push(`${MT.kind}#${ET(lT)}: no CPU copy (${eT.uncopied} pages over the copy budget)`);
+                for (const [Yq, {
+                    page: lq,
+                    gl: Oq
+                  }] of gq) {
+                  const qq = Zq.get(Yq);
+                  if (!qq) {
+                    Eq.push(`${lq.kind}#${Sq(Yq)}: no CPU copy (${Mq.uncopied} pages over the copy budget)`);
                     continue
                   }
-                  if ("buf" === MT.kind) {
-                    kT.push(ck(`buf#${TT.id}`, TT, pT(KT, MT.buffer, 0, TT.bytes.length)));
+                  if ("buf" === lq.kind) {
+                    Eq.push(gE(`buf#${qq.id}`, qq, Cq(Oq, lq.buffer, 0, qq.bytes.length)));
                     continue
                   }
-                  const cT = kk(KT, MT.texture, TT.width, 0, TT.width * TT.height),
-                    OT = 16 === TT.texelBytes ? new Uint8Array(cT.buffer) : new Uint8Array(new Uint16Array(cT).buffer);
-                  kT.push(ck(`tex#${TT.id} (${16===TT.texelBytes?"records":"light"})`, TT, OT))
+                  const gq = EE(Oq, lq.texture, qq.width, 0, qq.width * qq.height),
+                    mq = 16 === qq.texelBytes ? new Uint8Array(gq.buffer) : new Uint8Array(new Uint16Array(gq).buffer);
+                  Eq.push(gE(`tex#${qq.id} (${16===qq.texelBytes?"records":"light"})`, qq, mq))
                 }
-                for (const lT of kT) dT(`page readback ${lT}`)
-              }(lT.draws) : dT("page readback: none on WebGL1 (no buffer readback)")
-            } catch (TT) {
-              dT(`check failed: ${String(TT)}`)
+                for (const Yq of Eq) Jq(`page readback ${Yq}`)
+              }(Yq.draws) : Jq("page readback: none on WebGL1 (no buffer readback)")
+            } catch (qq) {
+              Jq(`check failed: ${String(qq)}`)
             }
-            kT()
+            Eq()
           },
-          KT = () => {
-            if (lT.draws.length > 0 && !cT) return cT = !0, void setTimeout(MT, 0);
-            cT || requestAnimationFrame(KT)
+          Oq = () => {
+            if (Yq.draws.length > 0 && !gq) return gq = !0, void setTimeout(lq, 0);
+            gq || requestAnimationFrame(Oq)
           };
-        requestAnimationFrame(KT), setTimeout((() => {
-          cT || (cT = !0, MT())
+        requestAnimationFrame(Oq), setTimeout((() => {
+          gq || (gq = !0, lq())
         }), 5e3)
       }))
     }
-    var yk = cT(4681);
-    const fk = 20,
-      xk = 24,
-      Ik = Reflect.apply;
+    var xE = gq(4524);
+    const AE = 20,
+      cE = 24,
+      uE = Reflect.apply;
 
-    function Ak(TT, kT, cT) {
-      if (!TT) return;
-      const lT = TT[kT];
-      if ("function" === typeof lT) {
-        const MT = cT(lT);
-        TT[kT] = MT, (0, yk.u)(MT, lT)
+    function BE(qq, Eq, gq) {
+      if (!qq) return;
+      const Yq = qq[Eq];
+      if ("function" === typeof Yq) {
+        const lq = gq(Yq);
+        qq[Eq] = lq, (0, xE.B)(lq, Yq)
       }
     }
-    let Ck = !1;
-    const jk = new WeakMap,
-      vk = new WeakMap,
-      tk = new WeakMap,
-      hk = {
+    let WE = !1;
+    const NE = new WeakMap,
+      aE = new WeakMap,
+      VE = new WeakMap,
+      dE = {
         gl: 0,
         lost: 0
       };
-    let Nk = {
+    let jE = {
         inst: {
           draws: 0,
           faces: 0
@@ -771,307 +771,307 @@ export const modules = {
           faces: 0
         }
       },
-      Qk = {
+      HE = {
         buffer: 0,
         texture: 0
       },
-      Sk = 0;
+      oE = 0;
 
-    function Dk(TT) {
-      let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-      if (TT instanceof ArrayBuffer) return new Uint8Array(TT, kT, cT || void 0);
-      if (!ArrayBuffer.isView(TT)) return null;
-      const lT = "BYTES_PER_ELEMENT" in TT ? TT.BYTES_PER_ELEMENT : 1,
-        MT = TT.byteOffset + kT * lT,
-        KT = cT ? cT * lT : TT.byteLength - kT * lT;
-      return new Uint8Array(TT.buffer, MT, Math.max(0, KT))
+    function PE(qq) {
+      let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      if (qq instanceof ArrayBuffer) return new Uint8Array(qq, Eq, gq || void 0);
+      if (!ArrayBuffer.isView(qq)) return null;
+      const Yq = "BYTES_PER_ELEMENT" in qq ? qq.BYTES_PER_ELEMENT : 1,
+        lq = qq.byteOffset + Eq * Yq,
+        Oq = gq ? gq * Yq : qq.byteLength - Eq * Yq;
+      return new Uint8Array(qq.buffer, lq, Math.max(0, Oq))
     }
 
-    function ak(TT, kT) {
-      const cT = function(TT) {
-        switch (TT) {
-          case tT.ARRAY_BUFFER:
-            return tT.ARRAY_BUFFER_BINDING;
-          case tT.ELEMENT_ARRAY_BUFFER:
-            return tT.ELEMENT_ARRAY_BUFFER_BINDING;
-          case tT.COPY_READ_BUFFER:
-            return tT.COPY_READ_BUFFER_BINDING;
-          case tT.COPY_WRITE_BUFFER:
-            return tT.COPY_WRITE_BUFFER_BINDING;
-          case tT.UNIFORM_BUFFER:
-            return tT.UNIFORM_BUFFER_BINDING;
-          case tT.PIXEL_UNPACK_BUFFER:
-            return tT.PIXEL_UNPACK_BUFFER_BINDING;
-          case tT.TRANSFORM_FEEDBACK_BUFFER:
-            return tT.TRANSFORM_FEEDBACK_BUFFER_BINDING;
+    function QE(qq, Eq) {
+      const gq = function(qq) {
+        switch (qq) {
+          case Vq.ARRAY_BUFFER:
+            return Vq.ARRAY_BUFFER_BINDING;
+          case Vq.ELEMENT_ARRAY_BUFFER:
+            return Vq.ELEMENT_ARRAY_BUFFER_BINDING;
+          case Vq.COPY_READ_BUFFER:
+            return Vq.COPY_READ_BUFFER_BINDING;
+          case Vq.COPY_WRITE_BUFFER:
+            return Vq.COPY_WRITE_BUFFER_BINDING;
+          case Vq.UNIFORM_BUFFER:
+            return Vq.UNIFORM_BUFFER_BINDING;
+          case Vq.PIXEL_UNPACK_BUFFER:
+            return Vq.PIXEL_UNPACK_BUFFER_BINDING;
+          case Vq.TRANSFORM_FEEDBACK_BUFFER:
+            return Vq.TRANSFORM_FEEDBACK_BUFFER_BINDING;
           default:
             return 0
         }
-      }(kT);
-      return cT ? TT.getParameter(cT) : null
+      }(Eq);
+      return gq ? qq.getParameter(gq) : null
     }
 
-    function Fk(TT) {
-      const kT = oT.get(TT);
-      kT && (eT.shadowBytes -= kT.bytes.length, oT.delete(TT))
+    function yE(qq) {
+      const Eq = Zq.get(qq);
+      Eq && (Mq.shadowBytes -= Eq.bytes.length, Zq.delete(qq))
     }
 
-    function rk(TT, kT) {
-      let cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        lT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-        MT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
-      Fk(TT), eT.shadowBytes + kT > wT ? eT.uncopied++ : (eT.shadowBytes += kT, oT.set(TT, {
-        id: ET(TT),
-        bytes: new Uint8Array(kT),
-        width: cT,
-        height: lT,
-        texelBytes: MT,
+    function tE(qq, Eq) {
+      let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        Yq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+        lq = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
+      yE(qq), Mq.shadowBytes + Eq > vq ? Mq.uncopied++ : (Mq.shadowBytes += Eq, Zq.set(qq, {
+        id: Sq(qq),
+        bytes: new Uint8Array(Eq),
+        width: gq,
+        height: Yq,
+        texelBytes: lq,
         missed: 0
       }))
     }
 
-    function Pk(TT, kT) {
-      for (const cT of ["deleteBuffer", "deleteTexture"]) Ak(TT, cT, (TT => function() {
-        for (var kT = arguments.length, cT = new Array(kT), lT = 0; lT < kT; lT++) cT[lT] = arguments[lT];
-        return cT[0] && Fk(cT[0]), Ik(TT, this, cT)
+    function rE(qq, Eq) {
+      for (const gq of ["deleteBuffer", "deleteTexture"]) BE(qq, gq, (qq => function() {
+        for (var Eq = arguments.length, gq = new Array(Eq), Yq = 0; Yq < Eq; Yq++) gq[Yq] = arguments[Yq];
+        return gq[0] && yE(gq[0]), uE(qq, this, gq)
       }));
-      Ak(TT, "shaderSource", (TT => function() {
-        for (var kT = arguments.length, cT = new Array(kT), lT = 0; lT < kT; lT++) cT[lT] = arguments[lT];
-        return cT[0] && "string" === typeof cT[1] && jk.set(cT[0], cT[1]), Ik(TT, this, cT)
-      })), Ak(TT, "attachShader", (TT => function() {
-        for (var kT, cT = arguments.length, lT = new Array(cT), MT = 0; MT < cT; MT++) lT[MT] = arguments[MT];
-        const KT = lT[0],
-          OT = null !== (kT = vk.get(KT)) && void 0 !== kT ? kT : [];
-        return OT.push(lT[1]), vk.set(KT, OT), Ik(TT, this, lT)
-      })), Ak(TT, "linkProgram", (TT => function() {
-        for (var kT = arguments.length, cT = new Array(kT), lT = 0; lT < kT; lT++) cT[lT] = arguments[lT];
-        const MT = Ik(TT, this, cT);
-        return eT.inProbe || function(TT, kT) {
-          var cT, lT, MT;
-          "undefined" !== typeof HTMLCanvasElement && TT.canvas instanceof HTMLCanvasElement && function(TT) {
-            if (Hk.has(TT)) return;
-            Hk.add(TT);
-            for (const kT of ["webglcontextlost", "webglcontextrestored", "webglcontextcreationerror"]) TT.addEventListener(kT, (TT => {
-              hk.lost < fk && (hk.lost++, dT(`${kT}${"statusMessage"in TT?`: ${String(TT.statusMessage)}`:""}`))
+      BE(qq, "shaderSource", (qq => function() {
+        for (var Eq = arguments.length, gq = new Array(Eq), Yq = 0; Yq < Eq; Yq++) gq[Yq] = arguments[Yq];
+        return gq[0] && "string" === typeof gq[1] && NE.set(gq[0], gq[1]), uE(qq, this, gq)
+      })), BE(qq, "attachShader", (qq => function() {
+        for (var Eq, gq = arguments.length, Yq = new Array(gq), lq = 0; lq < gq; lq++) Yq[lq] = arguments[lq];
+        const Oq = Yq[0],
+          mq = null !== (Eq = aE.get(Oq)) && void 0 !== Eq ? Eq : [];
+        return mq.push(Yq[1]), aE.set(Oq, mq), uE(qq, this, Yq)
+      })), BE(qq, "linkProgram", (qq => function() {
+        for (var Eq = arguments.length, gq = new Array(Eq), Yq = 0; Yq < Eq; Yq++) gq[Yq] = arguments[Yq];
+        const lq = uE(qq, this, gq);
+        return Mq.inProbe || function(qq, Eq) {
+          var gq, Yq, lq;
+          "undefined" !== typeof HTMLCanvasElement && qq.canvas instanceof HTMLCanvasElement && function(qq) {
+            if (ZE.has(qq)) return;
+            ZE.add(qq);
+            for (const Eq of ["webglcontextlost", "webglcontextrestored", "webglcontextcreationerror"]) qq.addEventListener(Eq, (qq => {
+              dE.lost < AE && (dE.lost++, Jq(`${Eq}${"statusMessage"in qq?`: ${String(qq.statusMessage)}`:""}`))
             }))
-          }(TT.canvas);
-          eT.context ??= TT;
-          const KT = null !== (cT = vk.get(kT)) && void 0 !== cT ? cT : [];
-          let OT = "",
-            yT = "";
-          for (const IT of KT) {
-            var fT;
-            const TT = null !== (fT = jk.get(IT)) && void 0 !== fT ? fT : "";
-            /\bgl_Position\b/.test(TT) ? OT = TT : yT = TT
+          }(qq.canvas);
+          Mq.context ??= qq;
+          const Oq = null !== (gq = aE.get(Eq)) && void 0 !== gq ? gq : [];
+          let mq = "",
+            xq = "";
+          for (const uq of Oq) {
+            var Aq;
+            const qq = null !== (Aq = NE.get(uq)) && void 0 !== Aq ? Aq : "";
+            /\bgl_Position\b/.test(qq) ? mq = qq : xq = qq
           }
-          const xT = {
-            id: ET(kT),
-            name: null !== (lT = null === (MT = bT.exec(OT)) || void 0 === MT ? void 0 : MT[1]) && void 0 !== lT ? lT : null,
-            gl: TT,
-            vertex: OT,
-            fragment: yT,
-            terrain: mk(OT),
+          const cq = {
+            id: Sq(Eq),
+            name: null !== (Yq = null === (lq = nq.exec(mq)) || void 0 === lq ? void 0 : lq[1]) && void 0 !== Yq ? Yq : null,
+            gl: qq,
+            vertex: mq,
+            fragment: xq,
+            terrain: hE(mq),
             checked: !1,
             firstDraw: !1
           };
-          if (tk.set(kT, xT), JT.push([kT, xT]), null !== xT.terrain) {
-            const kT = KT.map((kT => {
-              var cT;
-              return null !== (cT = TT.getShaderInfoLog(kT)) && void 0 !== cT ? cT : ""
-            })).filter((TT => "" !== TT.trim()));
-            kT.length > 0 && LT(`program ${zT(xT)} (${xT.terrain}) shader logs:\n${RT(kT.join("\n"))}`)
+          if (VE.set(Eq, cq), iq.push([Eq, cq]), null !== cq.terrain) {
+            const Eq = Oq.map((Eq => {
+              var gq;
+              return null !== (gq = qq.getShaderInfoLog(Eq)) && void 0 !== gq ? gq : ""
+            })).filter((qq => "" !== qq.trim()));
+            Eq.length > 0 && kq(`program ${bq(cq)} (${cq.terrain}) shader logs:\n${Rq(Eq.join("\n"))}`)
           }
-        }(this, cT[0]), MT
-      })), Ak(TT, "bufferData", (TT => function() {
-        for (var kT = arguments.length, cT = new Array(kT), lT = 0; lT < kT; lT++) cT[lT] = arguments[lT];
-        const MT = Ik(TT, this, cT);
-        if (!eT.inProbe) {
-          const TT = ak(this, cT[0]);
-          if (TT) {
-            var KT, OT, yT;
-            const kT = "number" === typeof cT[1] ? null : Dk(cT[1], null !== (KT = cT[3]) && void 0 !== KT ? KT : 0, null !== (OT = cT[4]) && void 0 !== OT ? OT : 0);
-            var fT;
-            if (rk(TT, "number" === typeof cT[1] ? cT[1] : null !== (yT = null === kT || void 0 === kT ? void 0 : kT.length) && void 0 !== yT ? yT : 0), kT) null === (fT = oT.get(TT)) || void 0 === fT || fT.bytes.set(kT)
-          }
-        }
-        return MT
-      })), Ak(TT, "bufferSubData", (TT => function() {
-        for (var kT = arguments.length, cT = new Array(kT), lT = 0; lT < kT; lT++) cT[lT] = arguments[lT];
-        const MT = Ik(TT, this, cT);
-        if (!eT.inProbe) {
-          var KT, OT;
-          const TT = ak(this, cT[0]),
-            kT = TT ? oT.get(TT) : void 0,
-            lT = Dk(cT[2], null !== (KT = cT[3]) && void 0 !== KT ? KT : 0, null !== (OT = cT[4]) && void 0 !== OT ? OT : 0);
-          if (kT && lT) {
-            const TT = cT[1];
-            kT.bytes.set(lT.subarray(0, Math.max(0, kT.bytes.length - TT)), TT), wk("buffer", kT, TT, lT.length)
+        }(this, gq[0]), lq
+      })), BE(qq, "bufferData", (qq => function() {
+        for (var Eq = arguments.length, gq = new Array(Eq), Yq = 0; Yq < Eq; Yq++) gq[Yq] = arguments[Yq];
+        const lq = uE(qq, this, gq);
+        if (!Mq.inProbe) {
+          const qq = QE(this, gq[0]);
+          if (qq) {
+            var Oq, mq, xq;
+            const Eq = "number" === typeof gq[1] ? null : PE(gq[1], null !== (Oq = gq[3]) && void 0 !== Oq ? Oq : 0, null !== (mq = gq[4]) && void 0 !== mq ? mq : 0);
+            var Aq;
+            if (tE(qq, "number" === typeof gq[1] ? gq[1] : null !== (xq = null === Eq || void 0 === Eq ? void 0 : Eq.length) && void 0 !== xq ? xq : 0), Eq) null === (Aq = Zq.get(qq)) || void 0 === Aq || Aq.bytes.set(Eq)
           }
         }
-        return MT
-      })), kT && (Ak(TT, "copyBufferSubData", (TT => function() {
-        for (var kT = arguments.length, cT = new Array(kT), lT = 0; lT < kT; lT++) cT[lT] = arguments[lT];
-        const MT = Ik(TT, this, cT);
-        if (!eT.inProbe) {
-          const [TT, kT, lT, MT, KT] = cT, OT = ak(this, TT), yT = ak(this, kT), fT = OT ? oT.get(OT) : void 0, xT = yT ? oT.get(yT) : void 0;
-          xT && (fT ? xT.bytes.set(fT.bytes.slice(lT, lT + KT), MT) : xT.missed++)
-        }
-        return MT
-      })), Ak(TT, "texStorage2D", (TT => function() {
-        for (var kT = arguments.length, cT = new Array(kT), lT = 0; lT < kT; lT++) cT[lT] = arguments[lT];
-        const MT = Ik(TT, this, cT),
-          [, , KT, OT, yT] = cT;
-        if (!eT.inProbe && (KT === tT.RGBA32UI || KT === tT.RGBA16UI)) {
-          const TT = this.getParameter(tT.TEXTURE_BINDING_2D),
-            kT = KT === tT.RGBA32UI ? 16 : 8;
-          TT && (HT.set(TT, kT), rk(TT, OT * yT * kT, OT, yT, kT))
-        }
-        return MT
-      })), Ak(TT, "texSubImage2D", (TT => function() {
-        for (var kT = arguments.length, cT = new Array(kT), lT = 0; lT < kT; lT++) cT[lT] = arguments[lT];
-        const MT = Ik(TT, this, cT);
-        return !eT.inProbe && cT.length >= 9 && cT[0] === tT.TEXTURE_2D && 0 === cT[1] && function(TT, kT) {
-          var cT;
-          const lT = TT.getParameter(tT.TEXTURE_BINDING_2D),
-            MT = lT ? oT.get(lT) : void 0;
-          if (!MT) return;
-          const [, , KT, OT, yT, fT] = kT;
-          let xT = Dk(kT[8], null !== (cT = kT[9]) && void 0 !== cT ? cT : 0);
-          if (null === xT && "number" === typeof kT[8]) {
-            const cT = ak(TT, tT.PIXEL_UNPACK_BUFFER),
-              lT = cT ? oT.get(cT) : void 0;
-            xT = lT ? lT.bytes.subarray(kT[8]) : null
+        return lq
+      })), BE(qq, "bufferSubData", (qq => function() {
+        for (var Eq = arguments.length, gq = new Array(Eq), Yq = 0; Yq < Eq; Yq++) gq[Yq] = arguments[Yq];
+        const lq = uE(qq, this, gq);
+        if (!Mq.inProbe) {
+          var Oq, mq;
+          const qq = QE(this, gq[0]),
+            Eq = qq ? Zq.get(qq) : void 0,
+            Yq = PE(gq[2], null !== (Oq = gq[3]) && void 0 !== Oq ? Oq : 0, null !== (mq = gq[4]) && void 0 !== mq ? mq : 0);
+          if (Eq && Yq) {
+            const qq = gq[1];
+            Eq.bytes.set(Yq.subarray(0, Math.max(0, Eq.bytes.length - qq)), qq), vE("buffer", Eq, qq, Yq.length)
           }
-          if (null === xT) return void MT.missed++;
-          const IT = TT.getParameter(tT.UNPACK_ROW_LENGTH) || yT,
-            AT = TT.getParameter(tT.UNPACK_SKIP_ROWS),
-            CT = TT.getParameter(tT.UNPACK_SKIP_PIXELS),
-            jT = MT.texelBytes;
-          for (let vT = 0; vT < fT; vT++) {
-            const TT = ((AT + vT) * IT + CT) * jT,
-              kT = ((OT + vT) * MT.width + KT) * jT;
-            MT.bytes.set(xT.subarray(TT, TT + yT * jT), kT)
+        }
+        return lq
+      })), Eq && (BE(qq, "copyBufferSubData", (qq => function() {
+        for (var Eq = arguments.length, gq = new Array(Eq), Yq = 0; Yq < Eq; Yq++) gq[Yq] = arguments[Yq];
+        const lq = uE(qq, this, gq);
+        if (!Mq.inProbe) {
+          const [qq, Eq, Yq, lq, Oq] = gq, mq = QE(this, qq), xq = QE(this, Eq), Aq = mq ? Zq.get(mq) : void 0, cq = xq ? Zq.get(xq) : void 0;
+          cq && (Aq ? cq.bytes.set(Aq.bytes.slice(Yq, Yq + Oq), lq) : cq.missed++)
+        }
+        return lq
+      })), BE(qq, "texStorage2D", (qq => function() {
+        for (var Eq = arguments.length, gq = new Array(Eq), Yq = 0; Yq < Eq; Yq++) gq[Yq] = arguments[Yq];
+        const lq = uE(qq, this, gq),
+          [, , Oq, mq, xq] = gq;
+        if (!Mq.inProbe && (Oq === Vq.RGBA32UI || Oq === Vq.RGBA16UI)) {
+          const qq = this.getParameter(Vq.TEXTURE_BINDING_2D),
+            Eq = Oq === Vq.RGBA32UI ? 16 : 8;
+          qq && (fq.set(qq, Eq), tE(qq, mq * xq * Eq, mq, xq, Eq))
+        }
+        return lq
+      })), BE(qq, "texSubImage2D", (qq => function() {
+        for (var Eq = arguments.length, gq = new Array(Eq), Yq = 0; Yq < Eq; Yq++) gq[Yq] = arguments[Yq];
+        const lq = uE(qq, this, gq);
+        return !Mq.inProbe && gq.length >= 9 && gq[0] === Vq.TEXTURE_2D && 0 === gq[1] && function(qq, Eq) {
+          var gq;
+          const Yq = qq.getParameter(Vq.TEXTURE_BINDING_2D),
+            lq = Yq ? Zq.get(Yq) : void 0;
+          if (!lq) return;
+          const [, , Oq, mq, xq, Aq] = Eq;
+          let cq = PE(Eq[8], null !== (gq = Eq[9]) && void 0 !== gq ? gq : 0);
+          if (null === cq && "number" === typeof Eq[8]) {
+            const gq = QE(qq, Vq.PIXEL_UNPACK_BUFFER),
+              Yq = gq ? Zq.get(gq) : void 0;
+            cq = Yq ? Yq.bytes.subarray(Eq[8]) : null
           }
-          wk("texture", MT, (OT * MT.width + KT) * jT, yT * fT * jT)
-        }(this, cT), MT
-      })), Ak(TT, "copyTexSubImage2D", (TT => function() {
-        for (var kT = arguments.length, cT = new Array(kT), lT = 0; lT < kT; lT++) cT[lT] = arguments[lT];
-        const MT = cT[0] === tT.TEXTURE_2D ? this.getParameter(tT.TEXTURE_BINDING_2D) : null,
-          KT = MT ? oT.get(MT) : void 0;
-        return KT && KT.missed++, Ik(TT, this, cT)
+          if (null === cq) return void lq.missed++;
+          const uq = qq.getParameter(Vq.UNPACK_ROW_LENGTH) || xq,
+            Bq = qq.getParameter(Vq.UNPACK_SKIP_ROWS),
+            Wq = qq.getParameter(Vq.UNPACK_SKIP_PIXELS),
+            Nq = lq.texelBytes;
+          for (let aq = 0; aq < Aq; aq++) {
+            const qq = ((Bq + aq) * uq + Wq) * Nq,
+              Eq = ((mq + aq) * lq.width + Oq) * Nq;
+            lq.bytes.set(cq.subarray(qq, qq + xq * Nq), Eq)
+          }
+          vE("texture", lq, (mq * lq.width + Oq) * Nq, xq * Aq * Nq)
+        }(this, gq), lq
+      })), BE(qq, "copyTexSubImage2D", (qq => function() {
+        for (var Eq = arguments.length, gq = new Array(Eq), Yq = 0; Yq < Eq; Yq++) gq[Yq] = arguments[Yq];
+        const lq = gq[0] === Vq.TEXTURE_2D ? this.getParameter(Vq.TEXTURE_BINDING_2D) : null,
+          Oq = lq ? Zq.get(lq) : void 0;
+        return Oq && Oq.missed++, uE(qq, this, gq)
       })));
-      for (const cT of ["drawArrays", "drawElements", "drawArraysInstanced", "drawElementsInstanced"]) Ak(TT, cT, (TT => function() {
-        for (var kT = arguments.length, lT = new Array(kT), MT = 0; MT < kT; MT++) lT[MT] = arguments[MT];
-        const KT = Ik(TT, this, lT);
-        return eT.inProbe || zk(this, cT, lT), KT
+      for (const gq of ["drawArrays", "drawElements", "drawArraysInstanced", "drawElementsInstanced"]) BE(qq, gq, (qq => function() {
+        for (var Eq = arguments.length, Yq = new Array(Eq), lq = 0; lq < Eq; lq++) Yq[lq] = arguments[lq];
+        const Oq = uE(qq, this, Yq);
+        return Mq.inProbe || bE(this, gq, Yq), Oq
       }));
-      Ak(TT, "getExtension", (TT => function() {
-        for (var kT = arguments.length, cT = new Array(kT), lT = 0; lT < kT; lT++) cT[lT] = arguments[lT];
-        const MT = Ik(TT, this, cT);
-        return MT && "object" === typeof MT && function(TT, kT, cT) {
-          const lT = {
+      BE(qq, "getExtension", (qq => function() {
+        for (var Eq = arguments.length, gq = new Array(Eq), Yq = 0; Yq < Eq; Yq++) gq[Yq] = arguments[Yq];
+        const lq = uE(qq, this, gq);
+        return lq && "object" === typeof lq && function(qq, Eq, gq) {
+          const Yq = {
             WEBGL_multi_draw: ["multiDrawArraysWEBGL", "multiDrawElementsWEBGL", "multiDrawArraysInstancedWEBGL", "multiDrawElementsInstancedWEBGL"],
             ANGLE_instanced_arrays: ["drawArraysInstancedANGLE", "drawElementsInstancedANGLE"]
           };
-          if (!(kT in lT) || cT.bloxdRenderDebug) return;
-          cT.bloxdRenderDebug = !0;
-          for (const MT of lT[kT]) {
-            const kT = cT[MT];
-            "function" === typeof kT && (cT[MT] = function() {
-              for (var lT = arguments.length, KT = new Array(lT), OT = 0; OT < lT; OT++) KT[OT] = arguments[OT];
-              const yT = Ik(kT, cT, KT);
-              return eT.inProbe || zk(TT, MT, KT), yT
+          if (!(Eq in Yq) || gq.bloxdRenderDebug) return;
+          gq.bloxdRenderDebug = !0;
+          for (const lq of Yq[Eq]) {
+            const Eq = gq[lq];
+            "function" === typeof Eq && (gq[lq] = function() {
+              for (var Yq = arguments.length, Oq = new Array(Yq), mq = 0; mq < Yq; mq++) Oq[mq] = arguments[mq];
+              const xq = uE(Eq, gq, Oq);
+              return Mq.inProbe || bE(qq, lq, Oq), xq
             })
           }
-        }(this, cT[0], MT), MT
+        }(this, gq[0], lq), lq
       }))
     }
 
-    function wk(TT, kT, cT, lT) {
-      Qk[TT] += lT, Sk < 32 && kT.bytes.length >= 1 << 20 && (Sk++, LT(`upload ${TT} #${kT.id} +${cT} ${lT} B`))
+    function vE(qq, Eq, gq, Yq) {
+      HE[qq] += Yq, oE < 32 && Eq.bytes.length >= 1 << 20 && (oE++, kq(`upload ${qq} #${Eq.id} +${gq} ${Yq} B`))
     }
 
-    function mk(TT) {
-      if (!TT.includes("decodeQuad")) return null;
-      return !/^\s*#version 300 es/.test(TT) || /in uvec3 _p2vs_location0\b/.test(TT) ? "inst" : "tex"
+    function hE(qq) {
+      if (!qq.includes("decodeQuad")) return null;
+      return !/^\s*#version 300 es/.test(qq) || /in uvec3 _p2vs_location0\b/.test(qq) ? "inst" : "tex"
     }
 
-    function bk(TT, kT, cT) {
-      var lT;
-      if (cT.checked) return;
-      cT.checked = !0;
-      const MT = TT.getProgramParameter(kT, tT.LINK_STATUS),
-        KT = (null !== (lT = TT.getProgramInfoLog(kT)) && void 0 !== lT ? lT : "").trim();
-      var OT;
-      null === cT.terrain && MT || (dT(`program ${zT(cT)} ${null!==(OT=cT.terrain)&&void 0!==OT?OT:"other"} link ${MT?"ok":"FAILED"}${KT?`: ${RT(KT,300)}`:""}`), KT && LT(`program ${zT(cT)} link log:\n${RT(KT)}`))
+    function nE(qq, Eq, gq) {
+      var Yq;
+      if (gq.checked) return;
+      gq.checked = !0;
+      const lq = qq.getProgramParameter(Eq, Vq.LINK_STATUS),
+        Oq = (null !== (Yq = qq.getProgramInfoLog(Eq)) && void 0 !== Yq ? Yq : "").trim();
+      var mq;
+      null === gq.terrain && lq || (Jq(`program ${bq(gq)} ${null!==(mq=gq.terrain)&&void 0!==mq?mq:"other"} link ${lq?"ok":"FAILED"}${Oq?`: ${Rq(Oq,300)}`:""}`), Oq && kq(`program ${bq(gq)} link log:\n${Rq(Oq)}`))
     }
 
-    function zk(TT, kT, cT) {
-      var lT;
-      const MT = TT.getParameter(tT.CURRENT_PROGRAM),
-        KT = MT ? tk.get(MT) : void 0;
-      if (!MT || !KT) return;
-      const OT = null !== (lT = KT.terrain) && void 0 !== lT ? lT : "other",
+    function bE(qq, Eq, gq) {
+      var Yq;
+      const lq = qq.getParameter(Vq.CURRENT_PROGRAM),
+        Oq = lq ? VE.get(lq) : void 0;
+      if (!lq || !Oq) return;
+      const mq = null !== (Yq = Oq.terrain) && void 0 !== Yq ? Yq : "other",
         {
-          qt: yT,
-          instances: fT
-        } = function(TT, kT) {
-          switch (TT) {
+          zV: xq,
+          instances: Aq
+        } = function(qq, Eq) {
+          switch (qq) {
             case "drawArrays":
               return {
-                qt: [
-                  [kT[1], kT[2]]
+                zV: [
+                  [Eq[1], Eq[2]]
                 ], instances: 1
               };
             case "drawArraysInstanced":
             case "drawArraysInstancedANGLE":
               return {
-                qt: [
-                  [kT[1], kT[2]]
-                ], instances: kT[3]
+                zV: [
+                  [Eq[1], Eq[2]]
+                ], instances: Eq[3]
               };
             case "drawElements":
               return {
-                qt: [
-                  [0, kT[1]]
+                zV: [
+                  [0, Eq[1]]
                 ], instances: 1
               };
             case "drawElementsInstanced":
             case "drawElementsInstancedANGLE":
               return {
-                qt: [
-                  [0, kT[1]]
-                ], instances: kT[4]
+                zV: [
+                  [0, Eq[1]]
+                ], instances: Eq[4]
               };
             case "multiDrawArraysWEBGL": {
-              const TT = kT[1],
-                cT = kT[3],
-                lT = kT[2],
-                MT = kT[4],
-                KT = [];
-              for (let OT = 0; OT < kT[5]; OT++) KT.push([TT[lT + OT], cT[MT + OT]]);
+              const qq = Eq[1],
+                gq = Eq[3],
+                Yq = Eq[2],
+                lq = Eq[4],
+                Oq = [];
+              for (let mq = 0; mq < Eq[5]; mq++) Oq.push([qq[Yq + mq], gq[lq + mq]]);
               return {
-                qt: KT,
+                zV: Oq,
                 instances: 1
               }
             }
             default:
               return {
-                qt: [], instances: 0
+                zV: [], instances: 0
               }
           }
-        }(kT, cT),
-        xT = "inst" === KT.terrain ? fT : yT.reduce(((TT, kT) => {
-          let [, cT] = kT;
-          return TT + cT
+        }(Eq, gq),
+        cq = "inst" === Oq.terrain ? Aq : xq.reduce(((qq, Eq) => {
+          let [, gq] = Eq;
+          return qq + gq
         }), 0) / 6;
-      if (Nk[OT].draws++, Nk[OT].faces += xT, null === KT.terrain) return;
-      if (eT.context = TT, !KT.firstDraw) {
-        KT.firstDraw = !0, bk(TT, MT, KT), Jk || (Jk = !0, dT(function(TT) {
-          var kT;
-          const cT = TT.getParameter(tT.DEPTH_FUNC),
-            lT = {
+      if (jE[mq].draws++, jE[mq].faces += cq, null === Oq.terrain) return;
+      if (Mq.context = qq, !Oq.firstDraw) {
+        Oq.firstDraw = !0, nE(qq, lq, Oq), iE || (iE = !0, Jq(function(qq) {
+          var Eq;
+          const gq = qq.getParameter(Vq.DEPTH_FUNC),
+            Yq = {
               513: "less",
               514: "equal",
               515: "lequal",
@@ -1079,319 +1079,319 @@ export const modules = {
               518: "gequal",
               519: "always"
             };
-          let MT = "default framebuffer";
-          if ("DRAW_FRAMEBUFFER" in TT && TT.getParameter(tT.DRAW_FRAMEBUFFER_BINDING)) {
-            const kT = TT;
-            MT = kT.getFramebufferAttachmentParameter(tT.DRAW_FRAMEBUFFER, tT.DEPTH_ATTACHMENT, tT.FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE) ? `depth ${String(kT.getFramebufferAttachmentParameter(tT.DRAW_FRAMEBUFFER,tT.DEPTH_ATTACHMENT,tT.FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE))} bits type 0x${Number(kT.getFramebufferAttachmentParameter(tT.DRAW_FRAMEBUFFER,tT.DEPTH_ATTACHMENT,tT.FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE)).toString(16)}` : "no depth attachment"
+          let lq = "default framebuffer";
+          if ("DRAW_FRAMEBUFFER" in qq && qq.getParameter(Vq.DRAW_FRAMEBUFFER_BINDING)) {
+            const Eq = qq;
+            lq = Eq.getFramebufferAttachmentParameter(Vq.DRAW_FRAMEBUFFER, Vq.DEPTH_ATTACHMENT, Vq.FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE) ? `depth ${String(Eq.getFramebufferAttachmentParameter(Vq.DRAW_FRAMEBUFFER,Vq.DEPTH_ATTACHMENT,Vq.FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE))} bits type 0x${Number(Eq.getFramebufferAttachmentParameter(Vq.DRAW_FRAMEBUFFER,Vq.DEPTH_ATTACHMENT,Vq.FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE)).toString(16)}` : "no depth attachment"
           }
-          const KT = TT.getParameter(tT.DEPTH_CLEAR_VALUE);
-          return `depth ${null!==(kT=lT[cT])&&void 0!==kT?kT:`0x${cT.toString(16)}`} clear ${KT}${516===cT||518===cT?" (reverse-Z)":""}, samples ${String(TT.getParameter(tT.SAMPLES))}, ${MT}`
-        }(TT)));
-        const cT = TT.getError();
-        cT !== tT.NO_ERROR && hk.gl < fk && (hk.gl++, dT(`GL error 0x${cT.toString(16)} after program ${zT(KT)}'s first terrain draw (${kT})`))
+          const Oq = qq.getParameter(Vq.DEPTH_CLEAR_VALUE);
+          return `depth ${null!==(Eq=Yq[gq])&&void 0!==Eq?Eq:`0x${gq.toString(16)}`} clear ${Oq}${516===gq||518===gq?" (reverse-Z)":""}, samples ${String(qq.getParameter(Vq.SAMPLES))}, ${lq}`
+        }(qq)));
+        const gq = qq.getError();
+        gq !== Vq.NO_ERROR && dE.gl < AE && (dE.gl++, Jq(`GL error 0x${gq.toString(16)} after program ${bq(Oq)}'s first terrain draw (${Eq})`))
       }
-      const IT = eT.pendingCheck;
-      null !== IT && (IT.terrainDraws++, IT.draws.length < xk && gT(TT, MT, KT, kT, yT, fT))
+      const uq = Mq.pendingCheck;
+      null !== uq && (uq.terrainDraws++, uq.draws.length < cE && Uq(qq, lq, Oq, Eq, xq, Aq))
     }
-    let Jk = !1;
-    const Hk = new WeakSet;
-    var ek = cT(4491),
-      Gk = cT(4688);
-    const Vk = ["maxStorageBuffersPerShaderStage", "maxStorageBufferBindingSize", "maxBufferSize", "maxUniformBufferBindingSize", "minUniformBufferOffsetAlignment", "maxTextureDimension2D", "maxTextureArrayLayers", "maxVertexBuffers", "maxVertexAttributes", "maxVertexBufferArrayStride", "maxBindGroups", "maxColorAttachmentBytesPerSample"];
-    let Ek = !1;
-    const Zk = new WeakSet,
-      uk = new WeakMap,
-      Xk = new WeakMap,
-      dk = {
+    let iE = !1;
+    const ZE = new WeakSet;
+    var fE = gq(4340),
+      ME = gq(4527);
+    const TE = ["maxStorageBuffersPerShaderStage", "maxStorageBufferBindingSize", "maxBufferSize", "maxUniformBufferBindingSize", "minUniformBufferOffsetAlignment", "maxTextureDimension2D", "maxTextureArrayLayers", "maxVertexBuffers", "maxVertexAttributes", "maxVertexBufferArrayStride", "maxBindGroups", "maxColorAttachmentBytesPerSample"];
+    let zE = !1;
+    const SE = new WeakSet,
+      pE = new WeakMap,
+      GE = new WeakMap,
+      LE = {
         uncaptured: 0,
         compile: 0,
         rejected: 0
       };
-    let Lk = 0,
-      Rk = !1,
-      gk = null,
-      Uk = {
+    let JE = 0,
+      kE = !1,
+      RE = null,
+      UE = {
         draws: 0,
         faces: 0
       };
 
-    function Yk(TT) {
-      const kT = globalThis[TT];
-      return null === kT || void 0 === kT ? void 0 : kT.prototype
+    function FE(qq) {
+      const Eq = globalThis[qq];
+      return null === Eq || void 0 === Eq ? void 0 : Eq.prototype
     }
 
-    function Bk(TT) {
-      return TT && "function" === typeof TT[Symbol.iterator] ? [...TT].sort().join(" ") : ""
+    function sE(qq) {
+      return qq && "function" === typeof qq[Symbol.iterator] ? [...qq].sort().join(" ") : ""
     }
 
-    function Wk(TT, kT) {
-      const cT = null !== TT && void 0 !== TT ? TT : {},
-        lT = null !== kT && void 0 !== kT ? kT : Object.keys(Object.getPrototypeOf(cT)).concat(Object.keys(cT));
-      return [...new Set(lT)].filter((TT => "number" === typeof cT[TT])).map((TT => `${TT} ${String(cT[TT])}`)).join(", ")
+    function XE(qq, Eq) {
+      const gq = null !== qq && void 0 !== qq ? qq : {},
+        Yq = null !== Eq && void 0 !== Eq ? Eq : Object.keys(Object.getPrototypeOf(gq)).concat(Object.keys(gq));
+      return [...new Set(Yq)].filter((qq => "number" === typeof gq[qq])).map((qq => `${qq} ${String(gq[qq])}`)).join(", ")
     }
 
-    function nk(TT, kT) {
-      var cT;
-      const lT = null !== (cT = kT.vertex) && void 0 !== cT ? cT : {};
-      if (lT.module && Zk.has(lT.module)) {
-        var MT;
-        const cT = String(null !== (MT = lT.entryPoint) && void 0 !== MT ? MT : "");
-        if (cT.startsWith("vs_packed") && uk.set(TT, cT), !Rk) {
-          var KT, OT, yT, fT, xT;
-          Rk = !0;
-          const TT = null !== (KT = kT.depthStencil) && void 0 !== KT ? KT : {},
-            lT = null !== (OT = kT.multisample) && void 0 !== OT ? OT : {},
-            MT = String(null !== (yT = TT.depthCompare) && void 0 !== yT ? yT : "");
-          dT(`WebGPU terrain pipeline ${cT}: depth ${String(null!==(fT=TT.format)&&void 0!==fT?fT:"none")} ${MT}${MT.startsWith("greater")?" (reverse-Z)":""}, MSAA ${String(null!==(xT=lT.count)&&void 0!==xT?xT:1)}`)
+    function wE(qq, Eq) {
+      var gq;
+      const Yq = null !== (gq = Eq.vertex) && void 0 !== gq ? gq : {};
+      if (Yq.module && SE.has(Yq.module)) {
+        var lq;
+        const gq = String(null !== (lq = Yq.entryPoint) && void 0 !== lq ? lq : "");
+        if (gq.startsWith("vs_packed") && pE.set(qq, gq), !kE) {
+          var Oq, mq, xq, Aq, cq;
+          kE = !0;
+          const qq = null !== (Oq = Eq.depthStencil) && void 0 !== Oq ? Oq : {},
+            Yq = null !== (mq = Eq.multisample) && void 0 !== mq ? mq : {},
+            lq = String(null !== (xq = qq.depthCompare) && void 0 !== xq ? xq : "");
+          Jq(`WebGPU terrain pipeline ${gq}: depth ${String(null!==(Aq=qq.format)&&void 0!==Aq?Aq:"none")} ${lq}${lq.startsWith("greater")?" (reverse-Z)":""}, MSAA ${String(null!==(cq=Yq.count)&&void 0!==cq?cq:1)}`)
         }
       }
     }
 
-    function pk(TT) {
-      Ak(TT, "setPipeline", (TT => function() {
-        for (var kT = arguments.length, cT = new Array(kT), lT = 0; lT < kT; lT++) cT[lT] = arguments[lT];
-        return Xk.set(this, cT[0]), Ik(TT, this, cT)
+    function KE(qq) {
+      BE(qq, "setPipeline", (qq => function() {
+        for (var Eq = arguments.length, gq = new Array(Eq), Yq = 0; Yq < Eq; Yq++) gq[Yq] = arguments[Yq];
+        return GE.set(this, gq[0]), uE(qq, this, gq)
       }));
-      for (const kT of ["draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect"]) Ak(TT, kT, (TT => function() {
-        const cT = Xk.get(this),
-          lT = cT ? uk.get(cT) : void 0;
-        for (var MT = arguments.length, KT = new Array(MT), OT = 0; OT < MT; OT++) KT[OT] = arguments[OT];
-        return void 0 !== lT && ik(kT, lT, KT), Ik(TT, this, KT)
+      for (const Eq of ["draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect"]) BE(qq, Eq, (qq => function() {
+        const gq = GE.get(this),
+          Yq = gq ? pE.get(gq) : void 0;
+        for (var lq = arguments.length, Oq = new Array(lq), mq = 0; mq < lq; mq++) Oq[mq] = arguments[mq];
+        return void 0 !== Yq && CE(Eq, Yq, Oq), uE(qq, this, Oq)
       }))
     }
 
-    function ik(TT, kT, cT) {
-      var lT;
-      (Uk.draws++, "draw" === TT || "drawIndexed" === TT) && (Uk.faces += cT[0] * (null !== (lT = cT[1]) && void 0 !== lT ? lT : 1) / 6);
-      if (null !== gk && gk.length < xk) {
-        const lT = ("draw" === TT ? ["vertices", "instances", "firstVertex", "firstInstance"] : "drawIndexed" === TT ? ["indices", "instances", "firstIndex", "baseVertex", "firstInstance"] : ["indirectOffset"]).map(((kT, lT) => {
-          const MT = TT.endsWith("Indirect") ? cT[1] : cT[lT];
-          return `${kT} ${String(null!==MT&&void 0!==MT?MT:"instances"===kT?1:0)}`
+    function CE(qq, Eq, gq) {
+      var Yq;
+      (UE.draws++, "draw" === qq || "drawIndexed" === qq) && (UE.faces += gq[0] * (null !== (Yq = gq[1]) && void 0 !== Yq ? Yq : 1) / 6);
+      if (null !== RE && RE.length < cE) {
+        const Yq = ("draw" === qq ? ["vertices", "instances", "firstVertex", "firstInstance"] : "drawIndexed" === qq ? ["indices", "instances", "firstIndex", "baseVertex", "firstInstance"] : ["indirectOffset"]).map(((Eq, Yq) => {
+          const lq = qq.endsWith("Indirect") ? gq[1] : gq[Yq];
+          return `${Eq} ${String(null!==lq&&void 0!==lq?lq:"instances"===Eq?1:0)}`
         }));
-        gk.push(`  ${kT} ${TT} ${lT.join(" ")}`)
+        RE.push(`  ${Eq} ${qq} ${Yq.join(" ")}`)
       }
     }
 
-    function qk() {
-      if (Ek || "undefined" === typeof navigator || !("gpu" in navigator)) return;
-      Ek = !0, Ak(Yk("GPU"), "requestAdapter", (TT => function() {
-        for (var kT = arguments.length, cT = new Array(kT), lT = 0; lT < kT; lT++) cT[lT] = arguments[lT];
-        return Ik(TT, this, cT).then((TT => {
-          var kT;
-          TT ? function(TT) {
-            var kT;
-            const cT = null !== (kT = TT.info) && void 0 !== kT ? kT : {};
-            dT(`WebGPU adapter ${["vendor","architecture","device","description"].map((TT=>{var kT;return`${TT} "${String(null!==(kT=cT[TT])&&void 0!==kT?kT:"")}"`})).join(" ")}${TT.isFallbackAdapter?" (fallback)":""}`), dT(`WebGPU adapter features ${Bk(TT.features)}`), dT(`WebGPU adapter limits ${Wk(TT.limits,Vk)}`), LT(`WebGPU adapter all limits ${Wk(TT.limits,null)}`)
-          }(TT) : dT(`WebGPU requestAdapter(${JSON.stringify(null!==(kT=cT[0])&&void 0!==kT?kT:{})}) gave none`);
-          return TT
+    function IE() {
+      if (zE || "undefined" === typeof navigator || !("gpu" in navigator)) return;
+      zE = !0, BE(FE("GPU"), "requestAdapter", (qq => function() {
+        for (var Eq = arguments.length, gq = new Array(Eq), Yq = 0; Yq < Eq; Yq++) gq[Yq] = arguments[Yq];
+        return uE(qq, this, gq).then((qq => {
+          var Eq;
+          qq ? function(qq) {
+            var Eq;
+            const gq = null !== (Eq = qq.info) && void 0 !== Eq ? Eq : {};
+            Jq(`WebGPU adapter ${["vendor","architecture","device","description"].map((qq=>{var Eq;return`${qq} "${String(null!==(Eq=gq[qq])&&void 0!==Eq?Eq:"")}"`})).join(" ")}${qq.isFallbackAdapter?" (fallback)":""}`), Jq(`WebGPU adapter features ${sE(qq.features)}`), Jq(`WebGPU adapter limits ${XE(qq.limits,TE)}`), kq(`WebGPU adapter all limits ${XE(qq.limits,null)}`)
+          }(qq) : Jq(`WebGPU requestAdapter(${JSON.stringify(null!==(Eq=gq[0])&&void 0!==Eq?Eq:{})}) gave none`);
+          return qq
         }))
-      })), Ak(Yk("GPUAdapter"), "requestDevice", (TT => function() {
-        for (var kT = arguments.length, cT = new Array(kT), lT = 0; lT < kT; lT++) cT[lT] = arguments[lT];
-        return Ik(TT, this, cT).then((TT => (function(TT) {
-          dT(`WebGPU device features ${Bk(TT.features)}`), dT(`WebGPU device limits ${Wk(TT.limits,Vk)}`), TT.addEventListener("uncapturederror", (TT => {
-            if (dk.uncaptured < fk) {
-              var kT, cT, lT;
-              dk.uncaptured++;
-              const MT = TT.error;
-              dT(`WebGPU uncaptured ${null!==(kT=null===MT||void 0===MT||null===(cT=MT.constructor)||void 0===cT?void 0:cT.name)&&void 0!==kT?kT:"error"}: ${RT(String(null!==(lT=null===MT||void 0===MT?void 0:MT.message)&&void 0!==lT?lT:""),600)}`)
+      })), BE(FE("GPUAdapter"), "requestDevice", (qq => function() {
+        for (var Eq = arguments.length, gq = new Array(Eq), Yq = 0; Yq < Eq; Yq++) gq[Yq] = arguments[Yq];
+        return uE(qq, this, gq).then((qq => (function(qq) {
+          Jq(`WebGPU device features ${sE(qq.features)}`), Jq(`WebGPU device limits ${XE(qq.limits,TE)}`), qq.addEventListener("uncapturederror", (qq => {
+            if (LE.uncaptured < AE) {
+              var Eq, gq, Yq;
+              LE.uncaptured++;
+              const lq = qq.error;
+              Jq(`WebGPU uncaptured ${null!==(Eq=null===lq||void 0===lq||null===(gq=lq.constructor)||void 0===gq?void 0:gq.name)&&void 0!==Eq?Eq:"error"}: ${Rq(String(null!==(Yq=null===lq||void 0===lq?void 0:lq.message)&&void 0!==Yq?Yq:""),600)}`)
             }
           }));
-          const kT = TT.lost;
-          null === kT || void 0 === kT || kT.then((TT => {
-            var kT;
-            dT(`WebGPU device lost (${String(TT.reason)}): ${RT(String(null!==(kT=TT.message)&&void 0!==kT?kT:""),600)}`)
+          const Eq = qq.lost;
+          null === Eq || void 0 === Eq || Eq.then((qq => {
+            var Eq;
+            Jq(`WebGPU device lost (${String(qq.reason)}): ${Rq(String(null!==(Eq=qq.message)&&void 0!==Eq?Eq:""),600)}`)
           }))
-        }(TT), TT)), (TT => {
-          throw dT(`WebGPU requestDevice failed: ${String(TT)}`), TT
+        }(qq), qq)), (qq => {
+          throw Jq(`WebGPU requestDevice failed: ${String(qq)}`), qq
         }))
       }));
-      const TT = Yk("GPUDevice");
-      Ak(TT, "createShaderModule", (TT => function() {
-        for (var kT, cT, lT = arguments.length, MT = new Array(lT), KT = 0; KT < lT; KT++) MT[KT] = arguments[KT];
-        const OT = Ik(TT, this, MT);
-        return function(TT, kT) {
-          const cT = kT.includes("decodeQuad");
-          cT && Zk.add(TT);
-          const lT = TT.getCompilationInfo;
-          null === lT || void 0 === lT || lT.call(TT).then((TT => {
-            if (0 === TT.messages.length && !cT) return;
-            const kT = {};
-            for (const cT of TT.messages) {
-              var lT;
-              kT[String(cT.type)] = (null !== (lT = kT[String(cT.type)]) && void 0 !== lT ? lT : 0) + 1
+      const qq = FE("GPUDevice");
+      BE(qq, "createShaderModule", (qq => function() {
+        for (var Eq, gq, Yq = arguments.length, lq = new Array(Yq), Oq = 0; Oq < Yq; Oq++) lq[Oq] = arguments[Oq];
+        const mq = uE(qq, this, lq);
+        return function(qq, Eq) {
+          const gq = Eq.includes("decodeQuad");
+          gq && SE.add(qq);
+          const Yq = qq.getCompilationInfo;
+          null === Yq || void 0 === Yq || Yq.call(qq).then((qq => {
+            if (0 === qq.messages.length && !gq) return;
+            const Eq = {};
+            for (const gq of qq.messages) {
+              var Yq;
+              Eq[String(gq.type)] = (null !== (Yq = Eq[String(gq.type)]) && void 0 !== Yq ? Yq : 0) + 1
             }
-            const MT = TT.messages.map((TT => `${String(TT.type)} ${String(TT.lineNum)}:${String(TT.linePos)} ${String(TT.message)}`)).join("\n");
-            dk.compile < fk && (dk.compile++, dT(`WebGPU ${cT?"terrain ":""}shader module compiled: ${JSON.stringify(kT)}${MT?` first: ${RT(MT.split("\n")[0],300)}`:""}`)), MT && LT(`WebGPU shader module messages:\n${RT(MT)}`)
+            const lq = qq.messages.map((qq => `${String(qq.type)} ${String(qq.lineNum)}:${String(qq.linePos)} ${String(qq.message)}`)).join("\n");
+            LE.compile < AE && (LE.compile++, Jq(`WebGPU ${gq?"terrain ":""}shader module compiled: ${JSON.stringify(Eq)}${lq?` first: ${Rq(lq.split("\n")[0],300)}`:""}`)), lq && kq(`WebGPU shader module messages:\n${Rq(lq)}`)
           }))
-        }(OT, String(null !== (kT = (null !== (cT = MT[0]) && void 0 !== cT ? cT : {}).code) && void 0 !== kT ? kT : "")), OT
-      })), Ak(TT, "createRenderPipeline", (TT => function() {
-        for (var kT, cT = arguments.length, lT = new Array(cT), MT = 0; MT < cT; MT++) lT[MT] = arguments[MT];
-        const KT = Ik(TT, this, lT);
-        return nk(KT, null !== (kT = lT[0]) && void 0 !== kT ? kT : {}), KT
-      })), Ak(TT, "createRenderPipelineAsync", (TT => function() {
-        for (var kT = arguments.length, cT = new Array(kT), lT = 0; lT < kT; lT++) cT[lT] = arguments[lT];
-        return Ik(TT, this, cT).then((TT => {
-          var kT;
-          return nk(TT, null !== (kT = cT[0]) && void 0 !== kT ? kT : {}), TT
-        }), (TT => {
-          var kT;
-          throw function(TT, kT) {
-            var cT, lT, MT;
-            if (dk.rejected >= fk) return;
-            dk.rejected++;
+        }(mq, String(null !== (Eq = (null !== (gq = lq[0]) && void 0 !== gq ? gq : {}).code) && void 0 !== Eq ? Eq : "")), mq
+      })), BE(qq, "createRenderPipeline", (qq => function() {
+        for (var Eq, gq = arguments.length, Yq = new Array(gq), lq = 0; lq < gq; lq++) Yq[lq] = arguments[lq];
+        const Oq = uE(qq, this, Yq);
+        return wE(Oq, null !== (Eq = Yq[0]) && void 0 !== Eq ? Eq : {}), Oq
+      })), BE(qq, "createRenderPipelineAsync", (qq => function() {
+        for (var Eq = arguments.length, gq = new Array(Eq), Yq = 0; Yq < Eq; Yq++) gq[Yq] = arguments[Yq];
+        return uE(qq, this, gq).then((qq => {
+          var Eq;
+          return wE(qq, null !== (Eq = gq[0]) && void 0 !== Eq ? Eq : {}), qq
+        }), (qq => {
+          var Eq;
+          throw function(qq, Eq) {
+            var gq, Yq, lq;
+            if (LE.rejected >= AE) return;
+            LE.rejected++;
             const {
-              reason: KT,
-              message: OT
-            } = null !== kT && void 0 !== kT ? kT : {}, yT = String(null !== (cT = (null !== (lT = TT.vertex) && void 0 !== lT ? lT : {}).entryPoint) && void 0 !== cT ? cT : "");
-            dT(`WebGPU pipeline "${String(null!==(MT=TT.label)&&void 0!==MT?MT:"")}" ${yT} rejected (${String(null!==KT&&void 0!==KT?KT:"no reason")}): ${RT(String(null!==OT&&void 0!==OT?OT:kT),600)}`)
-          }(null !== (kT = cT[0]) && void 0 !== kT ? kT : {}, TT), TT
+              reason: Oq,
+              message: mq
+            } = null !== Eq && void 0 !== Eq ? Eq : {}, xq = String(null !== (gq = (null !== (Yq = qq.vertex) && void 0 !== Yq ? Yq : {}).entryPoint) && void 0 !== gq ? gq : "");
+            Jq(`WebGPU pipeline "${String(null!==(lq=qq.label)&&void 0!==lq?lq:"")}" ${xq} rejected (${String(null!==Oq&&void 0!==Oq?Oq:"no reason")}): ${Rq(String(null!==mq&&void 0!==mq?mq:Eq),600)}`)
+          }(null !== (Eq = gq[0]) && void 0 !== Eq ? Eq : {}, qq), qq
         }))
-      })), Ak(Yk("GPUCanvasContext"), "configure", (TT => function() {
-        for (var kT, cT = arguments.length, lT = new Array(cT), MT = 0; MT < cT; MT++) lT[MT] = arguments[MT];
-        const KT = null !== (kT = lT[0]) && void 0 !== kT ? kT : {};
-        var OT, yT;
-        Lk++ < 3 && dT(`WebGPU canvas ${String(KT.format)} ${String(null!==(OT=KT.colorSpace)&&void 0!==OT?OT:"srgb")} alpha ${String(null!==(yT=KT.alphaMode)&&void 0!==yT?yT:"opaque")}`);
-        return Ik(TT, this, lT)
-      })), pk(Yk("GPURenderPassEncoder")), pk(Yk("GPURenderBundleEncoder"))
+      })), BE(FE("GPUCanvasContext"), "configure", (qq => function() {
+        for (var Eq, gq = arguments.length, Yq = new Array(gq), lq = 0; lq < gq; lq++) Yq[lq] = arguments[lq];
+        const Oq = null !== (Eq = Yq[0]) && void 0 !== Eq ? Eq : {};
+        var mq, xq;
+        JE++ < 3 && Jq(`WebGPU canvas ${String(Oq.format)} ${String(null!==(mq=Oq.colorSpace)&&void 0!==mq?mq:"srgb")} alpha ${String(null!==(xq=Oq.alphaMode)&&void 0!==xq?xq:"opaque")}`);
+        return uE(qq, this, Yq)
+      })), KE(FE("GPURenderPassEncoder")), KE(FE("GPURenderBundleEncoder"))
     }
-    const sk = 1e4,
-      Tc = 6e4,
-      kc = 5e3,
-      cc = 3e3,
-      lc = 100;
-    let Mc = null,
-      Kc = !1,
-      Oc = {
-        ...ek.c
+    const eE = 1e4,
+      DE = 6e4,
+      qg = 5e3,
+      Eg = 3e3,
+      gg = 100;
+    let Yg = null,
+      lg = !1,
+      Og = {
+        ...fE.b
       },
-      yc = !1,
-      fc = null,
-      xc = 0,
-      Ic = () => {};
-    const Ac = new Promise((TT => {
-      Ic = TT
+      mg = !1,
+      xg = null,
+      Ag = 0,
+      cg = () => {};
+    const ug = new Promise((qq => {
+      cg = qq
     }));
 
-    function Cc() {
-      var TT;
-      Kc || (Kc = !0, Oc = Object.assign(window.bloxdRenderDebug ??= {
-        ...ek.c
+    function Bg() {
+      var qq;
+      lg || (lg = !0, Og = Object.assign(window.bloxdRenderDebug ??= {
+        ...fE.b
       }, {
-        faceCull: "0" === (0, KT.m)("faceCull") ? "0" : "1",
-        adrenoProbe: null !== (TT = (0, KT.m)("adrenoProbe")) && void 0 !== TT ? TT : ""
-      }), dT("quality steps off while the topic is on (util/weakGpu.ts): no stepped MSAA or scale, no weak-GPU tier"), Ck || "undefined" === typeof window || (Ck = !0, "undefined" !== typeof WebGL2RenderingContext && Pk(WebGL2RenderingContext.prototype, !0), "undefined" !== typeof WebGLRenderingContext && Pk(WebGLRenderingContext.prototype, !1)), qk(), (0, KT.e)("renderProbe", (() => {
-        Qc("console")
-      })), hc(), setInterval(Dc, kc))
+        faceCull: "0" === (0, Oq.o)("faceCull") ? "0" : "1",
+        adrenoProbe: null !== (qq = (0, Oq.o)("adrenoProbe")) && void 0 !== qq ? qq : ""
+      }), Jq("quality steps off while the topic is on (util/weakGpu.ts): no stepped MSAA or scale, no weak-GPU tier"), WE || "undefined" === typeof window || (WE = !0, "undefined" !== typeof WebGL2RenderingContext && rE(WebGL2RenderingContext.prototype, !0), "undefined" !== typeof WebGLRenderingContext && rE(WebGLRenderingContext.prototype, !1)), IE(), (0, Oq.c)("renderProbe", (() => {
+        jg("console")
+      })), Vg(), setInterval(og, qg))
     }
 
-    function jc(TT) {
-      var kT, cT;
-      Cc(), Mc = null !== (kT = null === TT || void 0 === TT ? void 0 : TT.backend) && void 0 !== kT ? kT : null;
-      const lT = `, renderer param ${null!==(cT=(0,KT.m)("renderer"))&&void 0!==cT?cT:"none"}, faceCull ${"0"===Oc.faceCull?"off (whole parts)":"on"}, adrenoProbe ${Oc.adrenoProbe||"none"}`;
-      dT(`${(0,Gk.e)(TT)}${null===TT?"":lT}`)
+    function Wg(qq) {
+      var Eq, gq;
+      Bg(), Yg = null !== (Eq = null === qq || void 0 === qq ? void 0 : qq.backend) && void 0 !== Eq ? Eq : null;
+      const Yq = `, renderer param ${null!==(gq=(0,Oq.o)("renderer"))&&void 0!==gq?gq:"none"}, faceCull ${"0"===Og.faceCull?"off (whole parts)":"on"}, adrenoProbe ${Og.adrenoProbe||"none"}`;
+      Jq(`${(0,ME.e)(qq)}${null===qq?"":Yq}`)
     }
 
-    function vc() {
-      const TT = performance.now(),
-        kT = tc(Ac, sk, Tc).then((kT => Qc(`${Math.round((performance.now()-TT)/1e3)} s after playable${kT?"":", no terrain drawn yet"}`)));
-      (0, MT.c)(dT, (async () => {
-        await kT, await fc
+    function Ng() {
+      const qq = performance.now(),
+        Eq = ag(ug, eE, DE).then((Eq => jg(`${Math.round((performance.now()-qq)/1e3)} s after playable${Eq?"":", no terrain drawn yet"}`)));
+      (0, lq.d)(Jq, (async () => {
+        await Eq, await xg
       }))
     }
-    async function tc(TT, kT, cT) {
-      const MT = (0, lT.e)(cT).then((() => !1));
-      return await (0, lT.e)(kT), Promise.race([TT.then((() => !0)), MT])
+    async function ag(qq, Eq, gq) {
+      const lq = (0, Yq.b)(gq).then((() => !1));
+      return await (0, Yq.b)(Eq), Promise.race([qq.then((() => !0)), lq])
     }
 
-    function hc() {
+    function Vg() {
       requestAnimationFrame((() => {
-        xc++, hc()
+        Ag++, Vg()
       }))
     }
 
-    function Nc() {
-      var TT, kT, cT;
-      if (yc) return;
-      (yc = !0, dT(`renderer caps ${null!==(TT=Oc.caps)&&void 0!==TT?TT:"(not noted)"}; terrain fetch ${null!==(kT=Oc.fetch)&&void 0!==kT?kT:"(not noted)"}`), Oc.adrenoProbe) && dT(`adrenoProbe ${Oc.adrenoProbe} asked; in force (storage fetch only): ${null!==(cT=Oc.probe)&&void 0!==cT?cT:"(not noted)"}`);
-      const lT = eT.context;
-      if (lT) {
-        for (const TT of function(TT) {
-            var kT;
-            const cT = [],
-              lT = TT.getExtension("WEBGL_debug_renderer_info"),
-              MT = lT ? TT.getParameter(lT.UNMASKED_VENDOR_WEBGL) : "(masked)",
-              KT = lT ? TT.getParameter(lT.UNMASKED_RENDERER_WEBGL) : "(masked)";
-            cT.push(`GL ${String(TT.getParameter(TT.VERSION))} | ${String(TT.getParameter(TT.SHADING_LANGUAGE_VERSION))} | ${String(TT.getParameter(TT.VENDOR))} / ${String(TT.getParameter(TT.RENDERER))}`), cT.push(`GL unmasked ${MT} / ${KT}`);
-            const OT = [
-              ["MAX_TEXTURE_SIZE", TT.MAX_TEXTURE_SIZE],
-              ["MAX_VERTEX_ATTRIBS", TT.MAX_VERTEX_ATTRIBS],
-              ["MAX_VERTEX_UNIFORM_VECTORS", TT.MAX_VERTEX_UNIFORM_VECTORS],
-              ["MAX_VERTEX_TEXTURE_IMAGE_UNITS", TT.MAX_VERTEX_TEXTURE_IMAGE_UNITS],
-              ["MAX_COMBINED_TEXTURE_IMAGE_UNITS", TT.MAX_COMBINED_TEXTURE_IMAGE_UNITS],
-              ["MAX_VARYING_VECTORS", TT.MAX_VARYING_VECTORS],
-              ["MAX_RENDERBUFFER_SIZE", TT.MAX_RENDERBUFFER_SIZE]
+    function dg() {
+      var qq, Eq, gq;
+      if (mg) return;
+      (mg = !0, Jq(`renderer caps ${null!==(qq=Og.caps)&&void 0!==qq?qq:"(not noted)"}; terrain fetch ${null!==(Eq=Og.fetch)&&void 0!==Eq?Eq:"(not noted)"}`), Og.adrenoProbe) && Jq(`adrenoProbe ${Og.adrenoProbe} asked; in force (storage fetch only): ${null!==(gq=Og.probe)&&void 0!==gq?gq:"(not noted)"}`);
+      const Yq = Mq.context;
+      if (Yq) {
+        for (const qq of function(qq) {
+            var Eq;
+            const gq = [],
+              Yq = qq.getExtension("WEBGL_debug_renderer_info"),
+              lq = Yq ? qq.getParameter(Yq.UNMASKED_VENDOR_WEBGL) : "(masked)",
+              Oq = Yq ? qq.getParameter(Yq.UNMASKED_RENDERER_WEBGL) : "(masked)";
+            gq.push(`GL ${String(qq.getParameter(qq.VERSION))} | ${String(qq.getParameter(qq.SHADING_LANGUAGE_VERSION))} | ${String(qq.getParameter(qq.VENDOR))} / ${String(qq.getParameter(qq.RENDERER))}`), gq.push(`GL unmasked ${lq} / ${Oq}`);
+            const mq = [
+              ["MAX_TEXTURE_SIZE", qq.MAX_TEXTURE_SIZE],
+              ["MAX_VERTEX_ATTRIBS", qq.MAX_VERTEX_ATTRIBS],
+              ["MAX_VERTEX_UNIFORM_VECTORS", qq.MAX_VERTEX_UNIFORM_VECTORS],
+              ["MAX_VERTEX_TEXTURE_IMAGE_UNITS", qq.MAX_VERTEX_TEXTURE_IMAGE_UNITS],
+              ["MAX_COMBINED_TEXTURE_IMAGE_UNITS", qq.MAX_COMBINED_TEXTURE_IMAGE_UNITS],
+              ["MAX_VARYING_VECTORS", qq.MAX_VARYING_VECTORS],
+              ["MAX_RENDERBUFFER_SIZE", qq.MAX_RENDERBUFFER_SIZE]
             ];
-            "MAX_UNIFORM_BLOCK_SIZE" in TT && OT.push(["MAX_UNIFORM_BLOCK_SIZE", TT.MAX_UNIFORM_BLOCK_SIZE], ["MAX_VERTEX_UNIFORM_BLOCKS", TT.MAX_VERTEX_UNIFORM_BLOCKS], ["MAX_SAMPLES", TT.MAX_SAMPLES], ["MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS", TT.MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS]), cT.push(`GL limits ${OT.map((kT=>{let[cT,lT]=kT;return`${cT} ${String(TT.getParameter(lT))}`})).join(", ")}`);
-            const yT = (kT, cT) => {
-              const lT = TT.getShaderPrecisionFormat(kT, TT.HIGH_FLOAT),
-                MT = TT.getShaderPrecisionFormat(kT, TT.HIGH_INT);
-              return `${cT} highp float ${lT?`${lT.rangeMin}/${lT.rangeMax}/${lT.precision}`:"?"} int ${MT?`${MT.rangeMin}/${MT.rangeMax}/${MT.precision}`:"?"}`
+            "MAX_UNIFORM_BLOCK_SIZE" in qq && mq.push(["MAX_UNIFORM_BLOCK_SIZE", qq.MAX_UNIFORM_BLOCK_SIZE], ["MAX_VERTEX_UNIFORM_BLOCKS", qq.MAX_VERTEX_UNIFORM_BLOCKS], ["MAX_SAMPLES", qq.MAX_SAMPLES], ["MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS", qq.MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS]), gq.push(`GL limits ${mq.map((Eq=>{let[gq,Yq]=Eq;return`${gq} ${String(qq.getParameter(Yq))}`})).join(", ")}`);
+            const xq = (Eq, gq) => {
+              const Yq = qq.getShaderPrecisionFormat(Eq, qq.HIGH_FLOAT),
+                lq = qq.getShaderPrecisionFormat(Eq, qq.HIGH_INT);
+              return `${gq} highp float ${Yq?`${Yq.rangeMin}/${Yq.rangeMax}/${Yq.precision}`:"?"} int ${lq?`${lq.rangeMin}/${lq.rangeMax}/${lq.precision}`:"?"}`
             };
-            cT.push(`GL precision ${yT(TT.VERTEX_SHADER,"VS")}, ${yT(TT.FRAGMENT_SHADER,"FS")}`);
-            const fT = TT.getContextAttributes();
-            return cT.push(`GL context ${JSON.stringify(fT)} drawingBuffer ${TT.drawingBufferWidth}x${TT.drawingBufferHeight}${"drawingBufferFormat"in TT?` format 0x${Number(TT.drawingBufferFormat).toString(16)}`:""}${"drawingBufferColorSpace"in TT?` ${String(TT.drawingBufferColorSpace)}`:""}`), cT.push(`GL extensions ${(null!==(kT=TT.getSupportedExtensions())&&void 0!==kT?kT:[]).join(" ")}`), cT
-          }(lT)) dT(TT);
+            gq.push(`GL precision ${xq(qq.VERTEX_SHADER,"VS")}, ${xq(qq.FRAGMENT_SHADER,"FS")}`);
+            const Aq = qq.getContextAttributes();
+            return gq.push(`GL context ${JSON.stringify(Aq)} drawingBuffer ${qq.drawingBufferWidth}x${qq.drawingBufferHeight}${"drawingBufferFormat"in qq?` format 0x${Number(qq.drawingBufferFormat).toString(16)}`:""}${"drawingBufferColorSpace"in qq?` ${String(qq.drawingBufferColorSpace)}`:""}`), gq.push(`GL extensions ${(null!==(Eq=qq.getSupportedExtensions())&&void 0!==Eq?Eq:[]).join(" ")}`), gq
+          }(Yq)) Jq(qq);
         ! function() {
-          if (!eT.context) return;
-          let TT = 0,
-            kT = 0;
-          for (const [cT, lT] of JT) !lT.gl.isContextLost() && lT.gl.isProgram(cT) && (kT++, bk(lT.gl, cT, lT), null !== lT.terrain && TT++);
-          dT(`programs: ${kT} live of ${JT.length} linked, ${TT} packed terrain; CPU page copies ${Math.round(eT.shadowBytes/1048576)} MiB (${eT.uncopied} over budget)`)
+          if (!Mq.context) return;
+          let qq = 0,
+            Eq = 0;
+          for (const [gq, Yq] of iq) !Yq.gl.isContextLost() && Yq.gl.isProgram(gq) && (Eq++, nE(Yq.gl, gq, Yq), null !== Yq.terrain && qq++);
+          Jq(`programs: ${Eq} live of ${iq.length} linked, ${qq} packed terrain; CPU page copies ${Math.round(Mq.shadowBytes/1048576)} MiB (${Mq.uncopied} over budget)`)
         }()
       }
     }
 
-    function Qc(TT) {
-      return fc ??= async function(TT) {
-        Nc(), "webgpu" === Mc ? (Sc(), "1" === Oc.slotCheck && dT("slot check: the last request is still unanswered, so the next answer reads the slots as they were then"), Oc.slotCheck = "1", await
-          function(TT) {
-            if (null !== gk) return Promise.resolve();
-            const kT = [];
-            return gk = kT, new Promise((cT => {
+    function jg(qq) {
+      return xg ??= async function(qq) {
+        dg(), "webgpu" === Yg ? (Hg(), "1" === Og.slotCheck && Jq("slot check: the last request is still unanswered, so the next answer reads the slots as they were then"), Og.slotCheck = "1", await
+          function(qq) {
+            if (null !== RE) return Promise.resolve();
+            const Eq = [];
+            return RE = Eq, new Promise((gq => {
               setTimeout((() => {
-                gk = null, dT(`WebGPU draw ranges (${TT}): ${kT.length} terrain draws recorded in a second (first ${xk}; bundles replay without new ones)`);
-                for (const TT of kT) dT(TT);
-                cT()
+                RE = null, Jq(`WebGPU draw ranges (${qq}): ${Eq.length} terrain draws recorded in a second (first ${cE}; bundles replay without new ones)`);
+                for (const qq of Eq) Jq(qq);
+                gq()
               }), 1e3)
             }))
-          }(TT), await async function() {
-            if (await (0, ek.h)(Oc, "slotCheck", ["1"], cc, lc), "1" === Oc.slotCheck) return void dT(`slot check: no answer in ${cc} ms (only the storage fetch has one; a later answer logs on its own)`);
-            Sc()
-          }()) : await Ok(TT);
-        dT(`check (${TT}) done: bloxdDebug.save() downloads it all`)
-      }(TT).catch((kT => {
-        dT(`check (${TT}) failed: ${String(kT)}`)
+          }(qq), await async function() {
+            if (await (0, fE.g)(Og, "slotCheck", ["1"], Eg, gg), "1" === Og.slotCheck) return void Jq(`slot check: no answer in ${Eg} ms (only the storage fetch has one; a later answer logs on its own)`);
+            Hg()
+          }()) : await mE(qq);
+        Jq(`check (${qq}) done: bloxdDebug.save() downloads it all`)
+      }(qq).catch((Eq => {
+        Jq(`check (${qq}) failed: ${String(Eq)}`)
       })).finally((() => {
-        fc = null
-      })), fc
+        xg = null
+      })), xg
     }
 
-    function Sc() {
-      void 0 !== Oc.slotCheck && "1" !== Oc.slotCheck && (dT(Oc.slotCheck), delete Oc.slotCheck)
+    function Hg() {
+      void 0 !== Og.slotCheck && "1" !== Og.slotCheck && (Jq(Og.slotCheck), delete Og.slotCheck)
     }
 
-    function Dc() {
-      const TT = TT => xc ? (TT / xc).toFixed(1) : "0",
-        kT = function() {
-          const TT = Uk;
-          return Uk = {
+    function og() {
+      const qq = qq => Ag ? (qq / Ag).toFixed(1) : "0",
+        Eq = function() {
+          const qq = UE;
+          return UE = {
             draws: 0,
             faces: 0
-          }, TT
+          }, qq
         }(),
-        cT = function() {
-          const TT = Nk;
-          return Nk = {
+        gq = function() {
+          const qq = jE;
+          return jE = {
             inst: {
               draws: 0,
               faces: 0
@@ -1404,30 +1404,30 @@ export const modules = {
               draws: 0,
               faces: 0
             }
-          }, TT
+          }, qq
         }(),
-        lT = function() {
-          const TT = Qk;
-          return Qk = {
+        Yq = function() {
+          const qq = HE;
+          return HE = {
             buffer: 0,
             texture: 0
-          }, TT
+          }, qq
         }();
-      Sc(), ("webgpu" === Mc ? kT.draws : cT.inst.draws + cT.tex.draws) > 0 && Ic();
-      const MT = "webgpu" === Mc ? [`terrain ${TT(kT.draws)} draws ${TT(kT.faces)} faces a frame (bundles' replays uncounted)`] : ["inst", "tex", "other"].filter((TT => cT[TT].draws > 0)).map((kT => `${kT} ${TT(cT[kT].draws)} draws ${TT(cT[kT].faces)} faces a frame`));
-      dT(`${xc} frames: ${MT.join(", ")||"no draws"}; uploaded ${Math.round(lT.buffer/1024)} KiB to buffers, ${Math.round(lT.texture/1024)} KiB to data textures`), xc = 0
+      Hg(), ("webgpu" === Yg ? Eq.draws : gq.inst.draws + gq.tex.draws) > 0 && cg();
+      const lq = "webgpu" === Yg ? [`terrain ${qq(Eq.draws)} draws ${qq(Eq.faces)} faces a frame (bundles' replays uncounted)`] : ["inst", "tex", "other"].filter((qq => gq[qq].draws > 0)).map((Eq => `${Eq} ${qq(gq[Eq].draws)} draws ${qq(gq[Eq].faces)} faces a frame`));
+      Jq(`${Ag} frames: ${lq.join(", ")||"no draws"}; uploaded ${Math.round(Yq.buffer/1024)} KiB to buffers, ${Math.round(Yq.texture/1024)} KiB to data textures`), Ag = 0
     }
   },
-  4688: (TT, kT, cT) => {
-    function lT(TT) {
-      if (null === TT) return "backend: none picked (no renderer build)";
-      const kT = TT.adapter ? `${TT.adapter.vendor}/${TT.adapter.architecture}` : "none";
-      return `backend ${TT.backend}: reason ${TT.reason}, source ${TT.source}, adapter ${kT}`
+  4527: (qq, Eq, gq) => {
+    function Yq(qq) {
+      if (null === qq) return "backend: none picked (no renderer build)";
+      const Eq = qq.adapter ? `${qq.adapter.vendor}/${qq.adapter.architecture}` : "none";
+      return `backend ${qq.backend}: reason ${qq.reason}, source ${qq.source}, adapter ${Eq}`
     }
-    cT.d(kT, {
-      e: () => lT
+    gq.d(Eq, {
+      e: () => Yq
     })
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

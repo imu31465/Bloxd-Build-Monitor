@@ -1,1164 +1,2284 @@
 export const id = 215;
 export const ids = [215];
 export const modules = {
-  36460: TT => {
-    TT.exports = {
-      aliceblue: [240, 248, 255],
-      antiquewhite: [250, 235, 215],
-      aqua: [0, 255, 255],
-      aquamarine: [127, 255, 212],
-      azure: [240, 255, 255],
-      beige: [245, 245, 220],
-      bisque: [255, 228, 196],
-      black: [0, 0, 0],
-      blanchedalmond: [255, 235, 205],
-      blue: [0, 0, 255],
-      blueviolet: [138, 43, 226],
-      brown: [165, 42, 42],
-      burlywood: [222, 184, 135],
-      cadetblue: [95, 158, 160],
-      chartreuse: [127, 255, 0],
-      chocolate: [210, 105, 30],
-      coral: [255, 127, 80],
-      cornflowerblue: [100, 149, 237],
-      cornsilk: [255, 248, 220],
-      crimson: [220, 20, 60],
-      cyan: [0, 255, 255],
-      darkblue: [0, 0, 139],
-      darkcyan: [0, 139, 139],
-      darkgoldenrod: [184, 134, 11],
-      darkgray: [169, 169, 169],
-      darkgreen: [0, 100, 0],
-      darkgrey: [169, 169, 169],
-      darkkhaki: [189, 183, 107],
-      darkmagenta: [139, 0, 139],
-      darkolivegreen: [85, 107, 47],
-      darkorange: [255, 140, 0],
-      darkorchid: [153, 50, 204],
-      darkred: [139, 0, 0],
-      darksalmon: [233, 150, 122],
-      darkseagreen: [143, 188, 143],
-      darkslateblue: [72, 61, 139],
-      darkslategray: [47, 79, 79],
-      darkslategrey: [47, 79, 79],
-      darkturquoise: [0, 206, 209],
-      darkviolet: [148, 0, 211],
-      deeppink: [255, 20, 147],
-      deepskyblue: [0, 191, 255],
-      dimgray: [105, 105, 105],
-      dimgrey: [105, 105, 105],
-      dodgerblue: [30, 144, 255],
-      firebrick: [178, 34, 34],
-      floralwhite: [255, 250, 240],
-      forestgreen: [34, 139, 34],
-      fuchsia: [255, 0, 255],
-      gainsboro: [220, 220, 220],
-      ghostwhite: [248, 248, 255],
-      gold: [255, 215, 0],
-      goldenrod: [218, 165, 32],
-      gray: [128, 128, 128],
-      green: [0, 128, 0],
-      greenyellow: [173, 255, 47],
-      grey: [128, 128, 128],
-      honeydew: [240, 255, 240],
-      hotpink: [255, 105, 180],
-      indianred: [205, 92, 92],
-      indigo: [75, 0, 130],
-      ivory: [255, 255, 240],
-      khaki: [240, 230, 140],
-      lavender: [230, 230, 250],
-      lavenderblush: [255, 240, 245],
-      lawngreen: [124, 252, 0],
-      lemonchiffon: [255, 250, 205],
-      lightblue: [173, 216, 230],
-      lightcoral: [240, 128, 128],
-      lightcyan: [224, 255, 255],
-      lightgoldenrodyellow: [250, 250, 210],
-      lightgray: [211, 211, 211],
-      lightgreen: [144, 238, 144],
-      lightgrey: [211, 211, 211],
-      lightpink: [255, 182, 193],
-      lightsalmon: [255, 160, 122],
-      lightseagreen: [32, 178, 170],
-      lightskyblue: [135, 206, 250],
-      lightslategray: [119, 136, 153],
-      lightslategrey: [119, 136, 153],
-      lightsteelblue: [176, 196, 222],
-      lightyellow: [255, 255, 224],
-      lime: [0, 255, 0],
-      limegreen: [50, 205, 50],
-      linen: [250, 240, 230],
-      magenta: [255, 0, 255],
-      maroon: [128, 0, 0],
-      mediumaquamarine: [102, 205, 170],
-      mediumblue: [0, 0, 205],
-      mediumorchid: [186, 85, 211],
-      mediumpurple: [147, 112, 219],
-      mediumseagreen: [60, 179, 113],
-      mediumslateblue: [123, 104, 238],
-      mediumspringgreen: [0, 250, 154],
-      mediumturquoise: [72, 209, 204],
-      mediumvioletred: [199, 21, 133],
-      midnightblue: [25, 25, 112],
-      mintcream: [245, 255, 250],
-      mistyrose: [255, 228, 225],
-      moccasin: [255, 228, 181],
-      navajowhite: [255, 222, 173],
-      navy: [0, 0, 128],
-      oldlace: [253, 245, 230],
-      olive: [128, 128, 0],
-      olivedrab: [107, 142, 35],
-      orange: [255, 165, 0],
-      orangered: [255, 69, 0],
-      orchid: [218, 112, 214],
-      palegoldenrod: [238, 232, 170],
-      palegreen: [152, 251, 152],
-      paleturquoise: [175, 238, 238],
-      palevioletred: [219, 112, 147],
-      papayawhip: [255, 239, 213],
-      peachpuff: [255, 218, 185],
-      peru: [205, 133, 63],
-      pink: [255, 192, 203],
-      plum: [221, 160, 221],
-      powderblue: [176, 224, 230],
-      purple: [128, 0, 128],
-      rebeccapurple: [102, 51, 153],
-      red: [255, 0, 0],
-      rosybrown: [188, 143, 143],
-      royalblue: [65, 105, 225],
-      saddlebrown: [139, 69, 19],
-      salmon: [250, 128, 114],
-      sandybrown: [244, 164, 96],
-      seagreen: [46, 139, 87],
-      seashell: [255, 245, 238],
-      sienna: [160, 82, 45],
-      silver: [192, 192, 192],
-      skyblue: [135, 206, 235],
-      slateblue: [106, 90, 205],
-      slategray: [112, 128, 144],
-      slategrey: [112, 128, 144],
-      snow: [255, 250, 250],
-      springgreen: [0, 255, 127],
-      steelblue: [70, 130, 180],
-      tan: [210, 180, 140],
-      teal: [0, 128, 128],
-      thistle: [216, 191, 216],
-      tomato: [255, 99, 71],
-      turquoise: [64, 224, 208],
-      violet: [238, 130, 238],
-      wheat: [245, 222, 179],
-      white: [255, 255, 255],
-      whitesmoke: [245, 245, 245],
-      yellow: [255, 255, 0],
-      yellowgreen: [154, 205, 50]
+  40821: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      LobbyManageView: () => PE
+    });
+    var Yq = gq(57),
+      lq = gq(1448),
+      Oq = gq(2383),
+      mq = gq(2402),
+      xq = gq(2411),
+      Aq = gq(36612);
+
+    function cq() {
+      const [qq, Eq] = (0, Yq.useState)(new Map);
+      return {
+        get: Eq => qq.get(Eq),
+        hold: (0, Yq.useCallback)(((qq, gq, Yq) => {
+          Eq((Eq => new Map(Eq).set(qq, gq))), Yq.then((() => {
+            Eq((Eq => {
+              const gq = new Map(Eq);
+              return gq.delete(qq), gq
+            }))
+          }))
+        }), [])
+      }
     }
-  },
-  36454: (TT, kT, cT) => {
-    var lT = cT(36460),
-      MT = cT(36462),
-      KT = Object.hasOwnProperty,
-      OT = Object.create(null);
-    for (var yT in lT) KT.call(lT, yT) && (OT[lT[yT]] = yT);
-    var fT = TT.exports = {
-      to: {},
-      get: {}
+    var uq = gq(1018),
+      Bq = gq.n(uq),
+      Wq = gq(1183),
+      Nq = gq(1025),
+      aq = gq(1326),
+      Vq = gq(2569),
+      dq = gq(4858),
+      jq = gq(3455);
+    var Hq = gq(1942),
+      oq = gq(1422);
+
+    function Pq(qq, Eq, gq) {
+      const Yq = qq.filter((qq => qq.name !== Eq)),
+        lq = Yq.filter((qq => "none" === qq.role)).sort(((qq, Eq) => Eq.at - qq.at)),
+        Oq = Yq.filter((qq => "none" !== qq.role)).sort(((qq, Eq) => gq.indexOf(qq.role) - gq.indexOf(Eq.role) || Eq.at - qq.at));
+      return [...qq.some((qq => qq.name === Eq)) && null !== Eq ? [Eq] : [], ...[...lq, ...Oq].map((qq => qq.name))]
+    }
+
+    function Qq(qq, Eq) {
+      const gq = qq.banned.map((qq => qq.name)),
+        Yq = new Set(gq);
+      return {
+        here: Pq(qq.here, Eq, qq.roles.map((qq => qq.role))),
+        away: qq.away.filter((qq => !Yq.has(qq.name))).map((qq => qq.name)),
+        banned: gq
+      }
+    }
+
+    function yq(qq, Eq) {
+      const gq = qq.here.find((qq => qq.name === Eq));
+      if (gq) return {
+        section: "here",
+        player: gq
+      };
+      const Yq = qq.banned.find((qq => qq.name === Eq));
+      if (Yq) return {
+        section: "banned",
+        bannedAt: Yq.at
+      };
+      const lq = qq.away.find((qq => qq.name === Eq));
+      return lq ? {
+        section: "away",
+        player: lq
+      } : {
+        section: "gone"
+      }
+    }
+    const tq = {
+      gamemode: !1,
+      roles: [],
+      fixedRole: null,
+      kick: !1,
+      ban: !1,
+      unban: !1
     };
+    var rq = gq(2563),
+      vq = gq(36599),
+      hq = gq(36759),
+      nq = gq(3040),
+      bq = gq(307);
 
-    function xT(TT, kT, cT) {
-      return Math.min(Math.max(kT, TT), cT)
-    }
-
-    function IT(TT) {
-      var kT = Math.round(TT).toString(16).toUpperCase();
-      return kT.length < 2 ? "0" + kT : kT
-    }
-    fT.get = function(TT) {
-      var kT, cT;
-      switch (TT.substring(0, 3).toLowerCase()) {
-        case "hsl":
-          kT = fT.get.hsl(TT), cT = "hsl";
-          break;
-        case "hwb":
-          kT = fT.get.hwb(TT), cT = "hwb";
-          break;
-        default:
-          kT = fT.get.rgb(TT), cT = "rgb"
-      }
-      return kT ? {
-        model: cT,
-        value: kT
-      } : null
-    }, fT.get.rgb = function(TT) {
-      if (!TT) return null;
-      var kT, cT, MT, OT = [0, 0, 0, 1];
-      if (kT = TT.match(/^#([a-f0-9]{6})([a-f0-9]{2})?$/i)) {
-        for (MT = kT[2], kT = kT[1], cT = 0; cT < 3; cT++) {
-          var yT = 2 * cT;
-          OT[cT] = parseInt(kT.slice(yT, yT + 2), 16)
-        }
-        MT && (OT[3] = parseInt(MT, 16) / 255)
-      } else if (kT = TT.match(/^#([a-f0-9]{3,4})$/i)) {
-        for (MT = (kT = kT[1])[3], cT = 0; cT < 3; cT++) OT[cT] = parseInt(kT[cT] + kT[cT], 16);
-        MT && (OT[3] = parseInt(MT + MT, 16) / 255)
-      } else if (kT = TT.match(/^rgba?\(\s*([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/)) {
-        for (cT = 0; cT < 3; cT++) OT[cT] = parseInt(kT[cT + 1], 0);
-        kT[4] && (kT[5] ? OT[3] = .01 * parseFloat(kT[4]) : OT[3] = parseFloat(kT[4]))
-      } else {
-        if (!(kT = TT.match(/^rgba?\(\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/))) return (kT = TT.match(/^(\w+)$/)) ? "transparent" === kT[1] ? [0, 0, 0, 0] : KT.call(lT, kT[1]) ? ((OT = lT[kT[1]])[3] = 1, OT) : null : null;
-        for (cT = 0; cT < 3; cT++) OT[cT] = Math.round(2.55 * parseFloat(kT[cT + 1]));
-        kT[4] && (kT[5] ? OT[3] = .01 * parseFloat(kT[4]) : OT[3] = parseFloat(kT[4]))
-      }
-      for (cT = 0; cT < 3; cT++) OT[cT] = xT(OT[cT], 0, 255);
-      return OT[3] = xT(OT[3], 0, 1), OT
-    }, fT.get.hsl = function(TT) {
-      if (!TT) return null;
-      var kT = TT.match(/^hsla?\(\s*([+-]?(?:\d{0,3}\.)?\d+)(?:deg)?\s*,?\s*([+-]?[\d\.]+)%\s*,?\s*([+-]?[\d\.]+)%\s*(?:[,|\/]\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
-      if (kT) {
-        var cT = parseFloat(kT[4]);
-        return [(parseFloat(kT[1]) % 360 + 360) % 360, xT(parseFloat(kT[2]), 0, 100), xT(parseFloat(kT[3]), 0, 100), xT(isNaN(cT) ? 1 : cT, 0, 1)]
-      }
-      return null
-    }, fT.get.hwb = function(TT) {
-      if (!TT) return null;
-      var kT = TT.match(/^hwb\(\s*([+-]?\d{0,3}(?:\.\d+)?)(?:deg)?\s*,\s*([+-]?[\d\.]+)%\s*,\s*([+-]?[\d\.]+)%\s*(?:,\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
-      if (kT) {
-        var cT = parseFloat(kT[4]);
-        return [(parseFloat(kT[1]) % 360 + 360) % 360, xT(parseFloat(kT[2]), 0, 100), xT(parseFloat(kT[3]), 0, 100), xT(isNaN(cT) ? 1 : cT, 0, 1)]
-      }
-      return null
-    }, fT.to.hex = function() {
-      var TT = MT(arguments);
-      return "#" + IT(TT[0]) + IT(TT[1]) + IT(TT[2]) + (TT[3] < 1 ? IT(Math.round(255 * TT[3])) : "")
-    }, fT.to.rgb = function() {
-      var TT = MT(arguments);
-      return TT.length < 4 || 1 === TT[3] ? "rgb(" + Math.round(TT[0]) + ", " + Math.round(TT[1]) + ", " + Math.round(TT[2]) + ")" : "rgba(" + Math.round(TT[0]) + ", " + Math.round(TT[1]) + ", " + Math.round(TT[2]) + ", " + TT[3] + ")"
-    }, fT.to.rgb.percent = function() {
-      var TT = MT(arguments),
-        kT = Math.round(TT[0] / 255 * 100),
-        cT = Math.round(TT[1] / 255 * 100),
-        lT = Math.round(TT[2] / 255 * 100);
-      return TT.length < 4 || 1 === TT[3] ? "rgb(" + kT + "%, " + cT + "%, " + lT + "%)" : "rgba(" + kT + "%, " + cT + "%, " + lT + "%, " + TT[3] + ")"
-    }, fT.to.hsl = function() {
-      var TT = MT(arguments);
-      return TT.length < 4 || 1 === TT[3] ? "hsl(" + TT[0] + ", " + TT[1] + "%, " + TT[2] + "%)" : "hsla(" + TT[0] + ", " + TT[1] + "%, " + TT[2] + "%, " + TT[3] + ")"
-    }, fT.to.hwb = function() {
-      var TT = MT(arguments),
-        kT = "";
-      return TT.length >= 4 && 1 !== TT[3] && (kT = ", " + TT[3]), "hwb(" + TT[0] + ", " + TT[1] + "%, " + TT[2] + "%" + kT + ")"
-    }, fT.to.keyword = function(TT) {
-      return OT[TT.slice(0, 3)]
-    }
-  },
-  36448: (TT, kT, cT) => {
-    const lT = cT(36454),
-      MT = cT(36474),
-      KT = ["keyword", "gray", "hex"],
-      OT = {};
-    for (const jT of Object.keys(MT)) OT[[...MT[jT].labels].sort().join("")] = jT;
-    const yT = {};
-
-    function fT(TT, kT) {
-      if (!(this instanceof fT)) return new fT(TT, kT);
-      if (kT && kT in KT && (kT = null), kT && !(kT in MT)) throw new Error("Unknown model: " + kT);
-      let cT, xT;
-      if (null == TT) this.model = "rgb", this.color = [0, 0, 0], this.valpha = 1;
-      else if (TT instanceof fT) this.model = TT.model, this.color = [...TT.color], this.valpha = TT.valpha;
-      else if ("string" === typeof TT) {
-        const kT = lT.get(TT);
-        if (null === kT) throw new Error("Unable to parse color from string: " + TT);
-        this.model = kT.model, xT = MT[this.model].channels, this.color = kT.value.slice(0, xT), this.valpha = "number" === typeof kT.value[xT] ? kT.value[xT] : 1
-      } else if (TT.length > 0) {
-        this.model = kT || "rgb", xT = MT[this.model].channels;
-        const cT = Array.prototype.slice.call(TT, 0, xT);
-        this.color = CT(cT, xT), this.valpha = "number" === typeof TT[xT] ? TT[xT] : 1
-      } else if ("number" === typeof TT) this.model = "rgb", this.color = [TT >> 16 & 255, TT >> 8 & 255, 255 & TT], this.valpha = 1;
-      else {
-        this.valpha = 1;
-        const kT = Object.keys(TT);
-        "alpha" in TT && (kT.splice(kT.indexOf("alpha"), 1), this.valpha = "number" === typeof TT.alpha ? TT.alpha : 0);
-        const lT = kT.sort().join("");
-        if (!(lT in OT)) throw new Error("Unable to parse color from object: " + JSON.stringify(TT));
-        this.model = OT[lT];
-        const {
-          labels: KT
-        } = MT[this.model], yT = [];
-        for (cT = 0; cT < KT.length; cT++) yT.push(TT[KT[cT]]);
-        this.color = CT(yT)
-      }
-      if (yT[this.model])
-        for (xT = MT[this.model].channels, cT = 0; cT < xT; cT++) {
-          const TT = yT[this.model][cT];
-          TT && (this.color[cT] = TT(this.color[cT]))
-        }
-      this.valpha = Math.max(0, Math.min(1, this.valpha)), Object.freeze && Object.freeze(this)
-    }
-    fT.prototype = {
-      toString() {
-        return this.string()
-      },
-      toJSON() {
-        return this[this.model]()
-      },
-      string(TT) {
-        let kT = this.model in lT.to ? this : this.rgb();
-        kT = kT.round("number" === typeof TT ? TT : 1);
-        const cT = 1 === kT.valpha ? kT.color : [...kT.color, this.valpha];
-        return lT.to[kT.model](cT)
-      },
-      percentString(TT) {
-        const kT = this.rgb().round("number" === typeof TT ? TT : 1),
-          cT = 1 === kT.valpha ? kT.color : [...kT.color, this.valpha];
-        return lT.to.rgb.percent(cT)
-      },
-      array() {
-        return 1 === this.valpha ? [...this.color] : [...this.color, this.valpha]
-      },
-      object() {
-        const TT = {},
-          {
-            channels: kT
-          } = MT[this.model],
-          {
-            labels: cT
-          } = MT[this.model];
-        for (let lT = 0; lT < kT; lT++) TT[cT[lT]] = this.color[lT];
-        return 1 !== this.valpha && (TT.alpha = this.valpha), TT
-      },
-      unitArray() {
-        const TT = this.rgb().color;
-        return TT[0] /= 255, TT[1] /= 255, TT[2] /= 255, 1 !== this.valpha && TT.push(this.valpha), TT
-      },
-      unitObject() {
-        const TT = this.rgb().object();
-        return TT.r /= 255, TT.g /= 255, TT.b /= 255, 1 !== this.valpha && (TT.alpha = this.valpha), TT
-      },
-      round(TT) {
-        return TT = Math.max(TT || 0, 0), new fT([...this.color.map(xT(TT)), this.valpha], this.model)
-      },
-      alpha(TT) {
-        return void 0 !== TT ? new fT([...this.color, Math.max(0, Math.min(1, TT))], this.model) : this.valpha
-      },
-      red: IT("rgb", 0, AT(255)),
-      green: IT("rgb", 1, AT(255)),
-      blue: IT("rgb", 2, AT(255)),
-      hue: IT(["hsl", "hsv", "hsl", "hwb", "hcg"], 0, (TT => (TT % 360 + 360) % 360)),
-      saturationl: IT("hsl", 1, AT(100)),
-      lightness: IT("hsl", 2, AT(100)),
-      saturationv: IT("hsv", 1, AT(100)),
-      value: IT("hsv", 2, AT(100)),
-      chroma: IT("hcg", 1, AT(100)),
-      gray: IT("hcg", 2, AT(100)),
-      white: IT("hwb", 1, AT(100)),
-      wblack: IT("hwb", 2, AT(100)),
-      cyan: IT("cmyk", 0, AT(100)),
-      magenta: IT("cmyk", 1, AT(100)),
-      yellow: IT("cmyk", 2, AT(100)),
-      black: IT("cmyk", 3, AT(100)),
-      x: IT("xyz", 0, AT(95.047)),
-      y: IT("xyz", 1, AT(100)),
-      z: IT("xyz", 2, AT(108.833)),
-      l: IT("lab", 0, AT(100)),
-      a: IT("lab", 1),
-      b: IT("lab", 2),
-      keyword(TT) {
-        return void 0 !== TT ? new fT(TT) : MT[this.model].keyword(this.color)
-      },
-      hex(TT) {
-        return void 0 !== TT ? new fT(TT) : lT.to.hex(this.rgb().round().color)
-      },
-      hexa(TT) {
-        if (void 0 !== TT) return new fT(TT);
-        const kT = this.rgb().round().color;
-        let cT = Math.round(255 * this.valpha).toString(16).toUpperCase();
-        return 1 === cT.length && (cT = "0" + cT), lT.to.hex(kT) + cT
-      },
-      rgbNumber() {
-        const TT = this.rgb().color;
-        return (255 & TT[0]) << 16 | (255 & TT[1]) << 8 | 255 & TT[2]
-      },
-      luminosity() {
-        const TT = this.rgb().color,
-          kT = [];
-        for (const [cT, lT] of TT.entries()) {
-          const TT = lT / 255;
-          kT[cT] = TT <= .04045 ? TT / 12.92 : ((TT + .055) / 1.055) ** 2.4
-        }
-        return .2126 * kT[0] + .7152 * kT[1] + .0722 * kT[2]
-      },
-      contrast(TT) {
-        const kT = this.luminosity(),
-          cT = TT.luminosity();
-        return kT > cT ? (kT + .05) / (cT + .05) : (cT + .05) / (kT + .05)
-      },
-      level(TT) {
-        const kT = this.contrast(TT);
-        return kT >= 7 ? "AAA" : kT >= 4.5 ? "AA" : ""
-      },
-      isDark() {
-        const TT = this.rgb().color;
-        return (2126 * TT[0] + 7152 * TT[1] + 722 * TT[2]) / 1e4 < 128
-      },
-      isLight() {
-        return !this.isDark()
-      },
-      rc() {
-        const TT = this.rgb();
-        for (let kT = 0; kT < 3; kT++) TT.color[kT] = 255 - TT.color[kT];
-        return TT
-      },
-      lighten(TT) {
-        const kT = this.hsl();
-        return kT.color[2] += kT.color[2] * TT, kT
-      },
-      darken(TT) {
-        const kT = this.hsl();
-        return kT.color[2] -= kT.color[2] * TT, kT
-      },
-      saturate(TT) {
-        const kT = this.hsl();
-        return kT.color[1] += kT.color[1] * TT, kT
-      },
-      desaturate(TT) {
-        const kT = this.hsl();
-        return kT.color[1] -= kT.color[1] * TT, kT
-      },
-      whiten(TT) {
-        const kT = this.hwb();
-        return kT.color[1] += kT.color[1] * TT, kT
-      },
-      blacken(TT) {
-        const kT = this.hwb();
-        return kT.color[2] += kT.color[2] * TT, kT
-      },
-      grayscale() {
-        const TT = this.rgb().color,
-          kT = .3 * TT[0] + .59 * TT[1] + .11 * TT[2];
-        return fT.rgb(kT, kT, kT)
-      },
-      fade(TT) {
-        return this.alpha(this.valpha - this.valpha * TT)
-      },
-      opaquer(TT) {
-        return this.alpha(this.valpha + this.valpha * TT)
-      },
-      rotate(TT) {
-        const kT = this.hsl();
-        let cT = kT.color[0];
-        return cT = (cT + TT) % 360, cT = cT < 0 ? 360 + cT : cT, kT.color[0] = cT, kT
-      },
-      mix(TT, kT) {
-        if (!TT || !TT.rgb) throw new Error('Argument to "mix" was not a Color instance, but rather an instance of ' + typeof TT);
-        const cT = TT.rgb(),
-          lT = this.rgb(),
-          MT = void 0 === kT ? .5 : kT,
-          KT = 2 * MT - 1,
-          OT = cT.alpha() - lT.alpha(),
-          yT = ((KT * OT === -1 ? KT : (KT + OT) / (1 + KT * OT)) + 1) / 2,
-          xT = 1 - yT;
-        return fT.rgb(yT * cT.red() + xT * lT.red(), yT * cT.green() + xT * lT.green(), yT * cT.blue() + xT * lT.blue(), cT.alpha() * MT + lT.alpha() * (1 - MT))
-      }
-    };
-    for (const jT of Object.keys(MT)) {
-      if (KT.includes(jT)) continue;
-      const {
-        channels: TT
-      } = MT[jT];
-      fT.prototype[jT] = function() {
-        if (this.model === jT) return new fT(this);
-        for (var TT = arguments.length, kT = new Array(TT), cT = 0; cT < TT; cT++) kT[cT] = arguments[cT];
-        return kT.length > 0 ? new fT(kT, jT) : new fT([...(lT = MT[this.model][jT].raw(this.color), Array.isArray(lT) ? lT : [lT]), this.valpha], jT);
-        var lT
-      }, fT[jT] = function() {
-        for (var kT = arguments.length, cT = new Array(kT), lT = 0; lT < kT; lT++) cT[lT] = arguments[lT];
-        let MT = cT[0];
-        return "number" === typeof MT && (MT = CT(cT, TT)), new fT(MT, jT)
-      }
+    function iq(qq, Eq, gq) {
+      return Eq.map((Eq => {
+        if ("string" === typeof Eq) return Eq;
+        const Yq = "str" in Eq ? Eq.str : Eq;
+        return "string" === typeof Yq ? Yq : "entityName" in Yq ? Yq.entityName : "translationKey" in Yq ? qq(Yq.translationKey, (0, Wq.j)(Yq.params, gq)) : ""
+      })).join("")
     }
 
-    function xT(TT) {
-      return function(kT) {
-        return function(TT, kT) {
-          return Number(TT.toFixed(kT))
-        }(kT, TT)
-      }
-    }
-
-    function IT(TT, kT, cT) {
-      TT = Array.isArray(TT) ? TT : [TT];
-      for (const lT of TT)(yT[lT] || (yT[lT] = []))[kT] = cT;
-      return TT = TT[0],
-        function(lT) {
-          let MT;
-          return void 0 !== lT ? (cT && (lT = cT(lT)), MT = this[TT](), MT.color[kT] = lT, MT) : (MT = this[TT]().color[kT], cT && (MT = cT(MT)), MT)
-        }
-    }
-
-    function AT(TT) {
-      return function(kT) {
-        return Math.max(0, Math.min(TT, kT))
-      }
-    }
-
-    function CT(TT, kT) {
-      for (let cT = 0; cT < kT; cT++) "number" !== typeof TT[cT] && (TT[cT] = 0);
-      return TT
-    }
-    TT.exports = fT
-  },
-  36480: (TT, kT, cT) => {
-    const lT = cT(36487),
-      MT = {};
-    for (const OT of Object.keys(lT)) MT[lT[OT]] = OT;
-    const KT = {
-      rgb: {
-        channels: 3,
-        labels: "rgb"
-      },
-      hsl: {
-        channels: 3,
-        labels: "hsl"
-      },
-      hsv: {
-        channels: 3,
-        labels: "hsv"
-      },
-      hwb: {
-        channels: 3,
-        labels: "hwb"
-      },
-      cmyk: {
-        channels: 4,
-        labels: "cmyk"
-      },
-      xyz: {
-        channels: 3,
-        labels: "xyz"
-      },
-      lab: {
-        channels: 3,
-        labels: "lab"
-      },
-      lch: {
-        channels: 3,
-        labels: "lch"
-      },
-      hex: {
-        channels: 1,
-        labels: ["hex"]
-      },
-      keyword: {
-        channels: 1,
-        labels: ["keyword"]
-      },
-      ansi16: {
-        channels: 1,
-        labels: ["ansi16"]
-      },
-      ansi256: {
-        channels: 1,
-        labels: ["ansi256"]
-      },
-      hcg: {
-        channels: 3,
-        labels: ["h", "c", "g"]
-      },
-      apple: {
-        channels: 3,
-        labels: ["r16", "g16", "b16"]
-      },
-      gray: {
-        channels: 1,
-        labels: ["gray"]
-      }
-    };
-    TT.exports = KT;
-    for (const OT of Object.keys(KT)) {
-      if (!("channels" in KT[OT])) throw new Error("missing channels property: " + OT);
-      if (!("labels" in KT[OT])) throw new Error("missing channel labels property: " + OT);
-      if (KT[OT].labels.length !== KT[OT].channels) throw new Error("channel and label counts mismatch: " + OT);
-      const {
-        channels: TT,
-        labels: kT
-      } = KT[OT];
-      delete KT[OT].channels, delete KT[OT].labels, Object.defineProperty(KT[OT], "channels", {
-        value: TT
-      }), Object.defineProperty(KT[OT], "labels", {
-        value: kT
+    function Zq(qq, Eq, gq, Yq, lq) {
+      return lq - Yq < 6e4 ? qq(`${gq}JustNow`) : qq(gq, {
+        time: (0, bq.lb)((0, Wq.h)(Eq, gq), Yq, lq)
       })
     }
-    KT.rgb.hsl = function(TT) {
-      const kT = TT[0] / 255,
-        cT = TT[1] / 255,
-        lT = TT[2] / 255,
-        MT = Math.min(kT, cT, lT),
-        KT = Math.max(kT, cT, lT),
-        OT = KT - MT;
-      let yT, fT;
-      KT === MT ? yT = 0 : kT === KT ? yT = (cT - lT) / OT : cT === KT ? yT = 2 + (lT - kT) / OT : lT === KT && (yT = 4 + (kT - cT) / OT), yT = Math.min(60 * yT, 360), yT < 0 && (yT += 360);
-      const xT = (MT + KT) / 2;
-      return fT = KT === MT ? 0 : xT <= .5 ? OT / (KT + MT) : OT / (2 - KT - MT), [yT, 100 * fT, 100 * xT]
-    }, KT.rgb.hsv = function(TT) {
-      let kT, cT, lT, MT, KT;
-      const OT = TT[0] / 255,
-        yT = TT[1] / 255,
-        fT = TT[2] / 255,
-        xT = Math.max(OT, yT, fT),
-        IT = xT - Math.min(OT, yT, fT),
-        AT = function(TT) {
-          return (xT - TT) / 6 / IT + .5
-        };
-      return 0 === IT ? (MT = 0, KT = 0) : (KT = IT / xT, kT = AT(OT), cT = AT(yT), lT = AT(fT), OT === xT ? MT = lT - cT : yT === xT ? MT = 1 / 3 + kT - lT : fT === xT && (MT = 2 / 3 + cT - kT), MT < 0 ? MT += 1 : MT > 1 && (MT -= 1)), [360 * MT, 100 * KT, 100 * xT]
-    }, KT.rgb.hwb = function(TT) {
-      const kT = TT[0],
-        cT = TT[1];
-      let lT = TT[2];
-      const MT = KT.rgb.hsl(TT)[0],
-        OT = 1 / 255 * Math.min(kT, Math.min(cT, lT));
-      return lT = 1 - 1 / 255 * Math.max(kT, Math.max(cT, lT)), [MT, 100 * OT, 100 * lT]
-    }, KT.rgb.cmyk = function(TT) {
-      const kT = TT[0] / 255,
-        cT = TT[1] / 255,
-        lT = TT[2] / 255,
-        MT = Math.min(1 - kT, 1 - cT, 1 - lT);
-      return [100 * ((1 - kT - MT) / (1 - MT) || 0), 100 * ((1 - cT - MT) / (1 - MT) || 0), 100 * ((1 - lT - MT) / (1 - MT) || 0), 100 * MT]
-    }, KT.rgb.keyword = function(TT) {
-      const kT = MT[TT];
-      if (kT) return kT;
-      let cT, KT = 1 / 0;
-      for (const MT of Object.keys(lT)) {
-        const kT = lT[MT],
-          fT = (yT = kT, ((OT = TT)[0] - yT[0]) ** 2 + (OT[1] - yT[1]) ** 2 + (OT[2] - yT[2]) ** 2);
-        fT < KT && (KT = fT, cT = MT)
-      }
-      var OT, yT;
-      return cT
-    }, KT.keyword.rgb = function(TT) {
-      return lT[TT]
-    }, KT.rgb.xyz = function(TT) {
-      let kT = TT[0] / 255,
-        cT = TT[1] / 255,
-        lT = TT[2] / 255;
-      kT = kT > .04045 ? ((kT + .055) / 1.055) ** 2.4 : kT / 12.92, cT = cT > .04045 ? ((cT + .055) / 1.055) ** 2.4 : cT / 12.92, lT = lT > .04045 ? ((lT + .055) / 1.055) ** 2.4 : lT / 12.92;
-      return [100 * (.4124 * kT + .3576 * cT + .1805 * lT), 100 * (.2126 * kT + .7152 * cT + .0722 * lT), 100 * (.0193 * kT + .1192 * cT + .9505 * lT)]
-    }, KT.rgb.lab = function(TT) {
-      const kT = KT.rgb.xyz(TT);
-      let cT = kT[0],
-        lT = kT[1],
-        MT = kT[2];
-      cT /= 95.047, lT /= 100, MT /= 108.883, cT = cT > .008856 ? cT ** (1 / 3) : 7.787 * cT + 16 / 116, lT = lT > .008856 ? lT ** (1 / 3) : 7.787 * lT + 16 / 116, MT = MT > .008856 ? MT ** (1 / 3) : 7.787 * MT + 16 / 116;
-      return [116 * lT - 16, 500 * (cT - lT), 200 * (lT - MT)]
-    }, KT.hsl.rgb = function(TT) {
-      const kT = TT[0] / 360,
-        cT = TT[1] / 100,
-        lT = TT[2] / 100;
-      let MT, KT, OT;
-      if (0 === cT) return OT = 255 * lT, [OT, OT, OT];
-      MT = lT < .5 ? lT * (1 + cT) : lT + cT - lT * cT;
-      const yT = 2 * lT - MT,
-        fT = [0, 0, 0];
-      for (let xT = 0; xT < 3; xT++) KT = kT + 1 / 3 * -(xT - 1), KT < 0 && KT++, KT > 1 && KT--, OT = 6 * KT < 1 ? yT + 6 * (MT - yT) * KT : 2 * KT < 1 ? MT : 3 * KT < 2 ? yT + (MT - yT) * (2 / 3 - KT) * 6 : yT, fT[xT] = 255 * OT;
-      return fT
-    }, KT.hsl.hsv = function(TT) {
-      const kT = TT[0];
-      let cT = TT[1] / 100,
-        lT = TT[2] / 100,
-        MT = cT;
-      const KT = Math.max(lT, .01);
-      lT *= 2, cT *= lT <= 1 ? lT : 2 - lT, MT *= KT <= 1 ? KT : 2 - KT;
-      return [kT, 100 * (0 === lT ? 2 * MT / (KT + MT) : 2 * cT / (lT + cT)), 100 * ((lT + cT) / 2)]
-    }, KT.hsv.rgb = function(TT) {
-      const kT = TT[0] / 60,
-        cT = TT[1] / 100;
-      let lT = TT[2] / 100;
-      const MT = Math.floor(kT) % 6,
-        KT = kT - Math.floor(kT),
-        OT = 255 * lT * (1 - cT),
-        yT = 255 * lT * (1 - cT * KT),
-        fT = 255 * lT * (1 - cT * (1 - KT));
-      switch (lT *= 255, MT) {
-        case 0:
-          return [lT, fT, OT];
-        case 1:
-          return [yT, lT, OT];
-        case 2:
-          return [OT, lT, fT];
-        case 3:
-          return [OT, yT, lT];
-        case 4:
-          return [fT, OT, lT];
-        case 5:
-          return [lT, OT, yT]
-      }
-    }, KT.hsv.hsl = function(TT) {
-      const kT = TT[0],
-        cT = TT[1] / 100,
-        lT = TT[2] / 100,
-        MT = Math.max(lT, .01);
-      let KT, OT;
-      OT = (2 - cT) * lT;
-      const yT = (2 - cT) * MT;
-      return KT = cT * MT, KT /= yT <= 1 ? yT : 2 - yT, KT = KT || 0, OT /= 2, [kT, 100 * KT, 100 * OT]
-    }, KT.hwb.rgb = function(TT) {
-      const kT = TT[0] / 360;
-      let cT = TT[1] / 100,
-        lT = TT[2] / 100;
-      const MT = cT + lT;
-      let KT;
-      MT > 1 && (cT /= MT, lT /= MT);
-      const OT = Math.floor(6 * kT),
-        yT = 1 - lT;
-      KT = 6 * kT - OT, 0 !== (1 & OT) && (KT = 1 - KT);
-      const fT = cT + KT * (yT - cT);
-      let xT, IT, AT;
-      switch (OT) {
-        default:
-        case 6:
-        case 0:
-          xT = yT, IT = fT, AT = cT;
-          break;
-        case 1:
-          xT = fT, IT = yT, AT = cT;
-          break;
-        case 2:
-          xT = cT, IT = yT, AT = fT;
-          break;
-        case 3:
-          xT = cT, IT = fT, AT = yT;
-          break;
-        case 4:
-          xT = fT, IT = cT, AT = yT;
-          break;
-        case 5:
-          xT = yT, IT = cT, AT = fT
-      }
-      return [255 * xT, 255 * IT, 255 * AT]
-    }, KT.cmyk.rgb = function(TT) {
-      const kT = TT[0] / 100,
-        cT = TT[1] / 100,
-        lT = TT[2] / 100,
-        MT = TT[3] / 100;
-      return [255 * (1 - Math.min(1, kT * (1 - MT) + MT)), 255 * (1 - Math.min(1, cT * (1 - MT) + MT)), 255 * (1 - Math.min(1, lT * (1 - MT) + MT))]
-    }, KT.xyz.rgb = function(TT) {
-      const kT = TT[0] / 100,
-        cT = TT[1] / 100,
-        lT = TT[2] / 100;
-      let MT, KT, OT;
-      return MT = 3.2406 * kT + -1.5372 * cT + -.4986 * lT, KT = -.9689 * kT + 1.8758 * cT + .0415 * lT, OT = .0557 * kT + -.204 * cT + 1.057 * lT, MT = MT > .0031308 ? 1.055 * MT ** (1 / 2.4) - .055 : 12.92 * MT, KT = KT > .0031308 ? 1.055 * KT ** (1 / 2.4) - .055 : 12.92 * KT, OT = OT > .0031308 ? 1.055 * OT ** (1 / 2.4) - .055 : 12.92 * OT, MT = Math.min(Math.max(0, MT), 1), KT = Math.min(Math.max(0, KT), 1), OT = Math.min(Math.max(0, OT), 1), [255 * MT, 255 * KT, 255 * OT]
-    }, KT.xyz.lab = function(TT) {
-      let kT = TT[0],
-        cT = TT[1],
-        lT = TT[2];
-      kT /= 95.047, cT /= 100, lT /= 108.883, kT = kT > .008856 ? kT ** (1 / 3) : 7.787 * kT + 16 / 116, cT = cT > .008856 ? cT ** (1 / 3) : 7.787 * cT + 16 / 116, lT = lT > .008856 ? lT ** (1 / 3) : 7.787 * lT + 16 / 116;
-      return [116 * cT - 16, 500 * (kT - cT), 200 * (cT - lT)]
-    }, KT.lab.xyz = function(TT) {
-      let kT, cT, lT;
-      cT = (TT[0] + 16) / 116, kT = TT[1] / 500 + cT, lT = cT - TT[2] / 200;
-      const MT = cT ** 3,
-        KT = kT ** 3,
-        OT = lT ** 3;
-      return cT = MT > .008856 ? MT : (cT - 16 / 116) / 7.787, kT = KT > .008856 ? KT : (kT - 16 / 116) / 7.787, lT = OT > .008856 ? OT : (lT - 16 / 116) / 7.787, kT *= 95.047, cT *= 100, lT *= 108.883, [kT, cT, lT]
-    }, KT.lab.lch = function(TT) {
-      const kT = TT[0],
-        cT = TT[1],
-        lT = TT[2];
-      let MT;
-      MT = 360 * Math.atan2(lT, cT) / 2 / Math.PI, MT < 0 && (MT += 360);
-      return [kT, Math.sqrt(cT * cT + lT * lT), MT]
-    }, KT.lch.lab = function(TT) {
-      const kT = TT[0],
-        cT = TT[1],
-        lT = TT[2] / 360 * 2 * Math.PI;
-      return [kT, cT * Math.cos(lT), cT * Math.sin(lT)]
-    }, KT.rgb.ansi16 = function(TT) {
-      let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const [cT, lT, MT] = TT;
-      let OT = null === kT ? KT.rgb.hsv(TT)[2] : kT;
-      if (OT = Math.round(OT / 50), 0 === OT) return 30;
-      let yT = 30 + (Math.round(MT / 255) << 2 | Math.round(lT / 255) << 1 | Math.round(cT / 255));
-      return 2 === OT && (yT += 60), yT
-    }, KT.hsv.ansi16 = function(TT) {
-      return KT.rgb.ansi16(KT.hsv.rgb(TT), TT[2])
-    }, KT.rgb.ansi256 = function(TT) {
-      const kT = TT[0],
-        cT = TT[1],
-        lT = TT[2];
-      if (kT === cT && cT === lT) return kT < 8 ? 16 : kT > 248 ? 231 : Math.round((kT - 8) / 247 * 24) + 232;
-      return 16 + 36 * Math.round(kT / 255 * 5) + 6 * Math.round(cT / 255 * 5) + Math.round(lT / 255 * 5)
-    }, KT.ansi16.rgb = function(TT) {
-      let kT = TT % 10;
-      if (0 === kT || 7 === kT) return TT > 50 && (kT += 3.5), kT = kT / 10.5 * 255, [kT, kT, kT];
-      const cT = .5 * (1 + ~~(TT > 50));
-      return [(1 & kT) * cT * 255, (kT >> 1 & 1) * cT * 255, (kT >> 2 & 1) * cT * 255]
-    }, KT.ansi256.rgb = function(TT) {
-      if (TT >= 232) {
-        const kT = 10 * (TT - 232) + 8;
-        return [kT, kT, kT]
-      }
-      let kT;
-      TT -= 16;
-      return [Math.floor(TT / 36) / 5 * 255, Math.floor((kT = TT % 36) / 6) / 5 * 255, kT % 6 / 5 * 255]
-    }, KT.rgb.hex = function(TT) {
-      const kT = (((255 & Math.round(TT[0])) << 16) + ((255 & Math.round(TT[1])) << 8) + (255 & Math.round(TT[2]))).toString(16).toUpperCase();
-      return "000000".substring(kT.length) + kT
-    }, KT.hex.rgb = function(TT) {
-      const kT = TT.toString(16).match(/[a-f0-9]{6}|[a-f0-9]{3}/i);
-      if (!kT) return [0, 0, 0];
-      let cT = kT[0];
-      3 === kT[0].length && (cT = cT.split("").map((TT => TT + TT)).join(""));
-      const lT = parseInt(cT, 16);
-      return [lT >> 16 & 255, lT >> 8 & 255, 255 & lT]
-    }, KT.rgb.hcg = function(TT) {
-      const kT = TT[0] / 255,
-        cT = TT[1] / 255,
-        lT = TT[2] / 255,
-        MT = Math.max(Math.max(kT, cT), lT),
-        KT = Math.min(Math.min(kT, cT), lT),
-        OT = MT - KT;
-      let yT, fT;
-      return yT = OT < 1 ? KT / (1 - OT) : 0, fT = OT <= 0 ? 0 : MT === kT ? (cT - lT) / OT % 6 : MT === cT ? 2 + (lT - kT) / OT : 4 + (kT - cT) / OT, fT /= 6, fT %= 1, [360 * fT, 100 * OT, 100 * yT]
-    }, KT.hsl.hcg = function(TT) {
-      const kT = TT[1] / 100,
-        cT = TT[2] / 100,
-        lT = cT < .5 ? 2 * kT * cT : 2 * kT * (1 - cT);
-      let MT = 0;
-      return lT < 1 && (MT = (cT - .5 * lT) / (1 - lT)), [TT[0], 100 * lT, 100 * MT]
-    }, KT.hsv.hcg = function(TT) {
-      const kT = TT[1] / 100,
-        cT = TT[2] / 100,
-        lT = kT * cT;
-      let MT = 0;
-      return lT < 1 && (MT = (cT - lT) / (1 - lT)), [TT[0], 100 * lT, 100 * MT]
-    }, KT.hcg.rgb = function(TT) {
-      const kT = TT[0] / 360,
-        cT = TT[1] / 100,
-        lT = TT[2] / 100;
-      if (0 === cT) return [255 * lT, 255 * lT, 255 * lT];
-      const MT = [0, 0, 0],
-        KT = kT % 1 * 6,
-        OT = KT % 1,
-        yT = 1 - OT;
-      let fT = 0;
-      switch (Math.floor(KT)) {
-        case 0:
-          MT[0] = 1, MT[1] = OT, MT[2] = 0;
-          break;
-        case 1:
-          MT[0] = yT, MT[1] = 1, MT[2] = 0;
-          break;
-        case 2:
-          MT[0] = 0, MT[1] = 1, MT[2] = OT;
-          break;
-        case 3:
-          MT[0] = 0, MT[1] = yT, MT[2] = 1;
-          break;
-        case 4:
-          MT[0] = OT, MT[1] = 0, MT[2] = 1;
-          break;
-        default:
-          MT[0] = 1, MT[1] = 0, MT[2] = yT
-      }
-      return fT = (1 - cT) * lT, [255 * (cT * MT[0] + fT), 255 * (cT * MT[1] + fT), 255 * (cT * MT[2] + fT)]
-    }, KT.hcg.hsv = function(TT) {
-      const kT = TT[1] / 100,
-        cT = kT + TT[2] / 100 * (1 - kT);
-      let lT = 0;
-      return cT > 0 && (lT = kT / cT), [TT[0], 100 * lT, 100 * cT]
-    }, KT.hcg.hsl = function(TT) {
-      const kT = TT[1] / 100,
-        cT = TT[2] / 100 * (1 - kT) + .5 * kT;
-      let lT = 0;
-      return cT > 0 && cT < .5 ? lT = kT / (2 * cT) : cT >= .5 && cT < 1 && (lT = kT / (2 * (1 - cT))), [TT[0], 100 * lT, 100 * cT]
-    }, KT.hcg.hwb = function(TT) {
-      const kT = TT[1] / 100,
-        cT = kT + TT[2] / 100 * (1 - kT);
-      return [TT[0], 100 * (cT - kT), 100 * (1 - cT)]
-    }, KT.hwb.hcg = function(TT) {
-      const kT = TT[1] / 100,
-        cT = 1 - TT[2] / 100,
-        lT = cT - kT;
-      let MT = 0;
-      return lT < 1 && (MT = (cT - lT) / (1 - lT)), [TT[0], 100 * lT, 100 * MT]
-    }, KT.apple.rgb = function(TT) {
-      return [TT[0] / 65535 * 255, TT[1] / 65535 * 255, TT[2] / 65535 * 255]
-    }, KT.rgb.apple = function(TT) {
-      return [TT[0] / 255 * 65535, TT[1] / 255 * 65535, TT[2] / 255 * 65535]
-    }, KT.gray.rgb = function(TT) {
-      return [TT[0] / 100 * 255, TT[0] / 100 * 255, TT[0] / 100 * 255]
-    }, KT.gray.hsl = function(TT) {
-      return [0, 0, TT[0]]
-    }, KT.gray.hsv = KT.gray.hsl, KT.gray.hwb = function(TT) {
-      return [0, 100, TT[0]]
-    }, KT.gray.cmyk = function(TT) {
-      return [0, 0, 0, TT[0]]
-    }, KT.gray.lab = function(TT) {
-      return [TT[0], 0, 0]
-    }, KT.gray.hex = function(TT) {
-      const kT = 255 & Math.round(TT[0] / 100 * 255),
-        cT = ((kT << 16) + (kT << 8) + kT).toString(16).toUpperCase();
-      return "000000".substring(cT.length) + cT
-    }, KT.rgb.gray = function(TT) {
-      return [(TT[0] + TT[1] + TT[2]) / 3 / 255 * 100]
-    }
-  },
-  36474: (TT, kT, cT) => {
-    const lT = cT(36480),
-      MT = cT(36493),
-      KT = {};
-    Object.keys(lT).forEach((TT => {
-      KT[TT] = {}, Object.defineProperty(KT[TT], "channels", {
-        value: lT[TT].channels
-      }), Object.defineProperty(KT[TT], "labels", {
-        value: lT[TT].labels
-      });
-      const kT = MT(TT);
-      Object.keys(kT).forEach((cT => {
-        const lT = kT[cT];
-        KT[TT][cT] = function(TT) {
-          const kT = function() {
-            for (var kT = arguments.length, cT = new Array(kT), lT = 0; lT < kT; lT++) cT[lT] = arguments[lT];
-            const MT = cT[0];
-            if (void 0 === MT || null === MT) return MT;
-            MT.length > 1 && (cT = MT);
-            const KT = TT(cT);
-            if ("object" === typeof KT)
-              for (let TT = KT.length, OT = 0; OT < TT; OT++) KT[OT] = Math.round(KT[OT]);
-            return KT
-          };
-          return "conversion" in TT && (kT.conversion = TT.conversion), kT
-        }(lT), KT[TT][cT].raw = function(TT) {
-          const kT = function() {
-            for (var kT = arguments.length, cT = new Array(kT), lT = 0; lT < kT; lT++) cT[lT] = arguments[lT];
-            const MT = cT[0];
-            return void 0 === MT || null === MT ? MT : (MT.length > 1 && (cT = MT), TT(cT))
-          };
-          return "conversion" in TT && (kT.conversion = TT.conversion), kT
-        }(lT)
-      }))
-    })), TT.exports = KT
-  },
-  36493: (TT, kT, cT) => {
-    const lT = cT(36480);
+    var fq = gq(1876),
+      Mq = gq(1659),
+      Tq = gq(1070);
 
-    function MT(TT) {
-      const kT = function() {
-          const TT = {},
-            kT = Object.keys(lT);
-          for (let cT = kT.length, lT = 0; lT < cT; lT++) TT[kT[lT]] = {
-            distance: -1,
-            parent: null
-          };
-          return TT
-        }(),
-        cT = [TT];
-      for (kT[TT].distance = 0; cT.length;) {
-        const TT = cT.pop(),
-          MT = Object.keys(lT[TT]);
-        for (let lT = MT.length, KT = 0; KT < lT; KT++) {
-          const lT = MT[KT],
-            OT = kT[lT]; - 1 === OT.distance && (OT.distance = kT[TT].distance + 1, OT.parent = TT, cT.unshift(lT))
-        }
-      }
-      return kT
+    function zq(qq) {
+      let {
+        status: Eq
+      } = qq;
+      return (0, Tq.jsx)("span", {
+        className: Bq()("LobbyManageStatus", {
+          LobbyManageStatusRefused: !Eq.ok
+        }),
+        children: (0, Tq.jsx)(fq.c, {
+          text: Eq.text
+        })
+      })
     }
 
-    function KT(TT, kT) {
-      return function(cT) {
-        return kT(TT(cT))
-      }
+    function Sq(qq) {
+      let {
+        names: Eq,
+        cap: gq,
+        filterFrom: lq,
+        moreLabel: Oq,
+        reveal: mq = null,
+        renderRow: xq
+      } = qq;
+      const {
+        t: Aq
+      } = (0, Wq.v)(), [cq, uq] = (0, Yq.useState)(!1), [Bq, aq] = (0, Yq.useState)(""), dq = cq || null !== mq && Eq.indexOf(mq) >= gq, jq = (dq || Eq.length <= gq) && null !== lq && Eq.length > lq, Hq = Bq.trim().toLowerCase();
+      let oq = dq ? Eq : Eq.slice(0, gq);
+      return jq && "" !== Hq && (oq = oq.filter((qq => qq.toLowerCase().includes(Hq)))), (0, Tq.jsxs)(Tq.Fragment, {
+        children: [jq && (0, Tq.jsx)(Mq.b, {
+          className: "LobbyManageFilter",
+          placeholderText: Aq("lobbyManage:findName"),
+          ariaLabel: Aq("lobbyManage:findName"),
+          onValueChange: qq => {
+            aq(qq)
+          }
+        }), oq.length > 0 && (0, Tq.jsx)("div", {
+          className: "PlayerRows",
+          children: oq.map(((qq, Eq) => xq(qq, oq.length - Eq)))
+        }), !dq && Eq.length > gq && (0, Tq.jsx)("div", {
+          className: "LobbyManageMore",
+          children: (0, Tq.jsx)(Vq.c, {
+            label: (0, Tq.jsxs)(Tq.Fragment, {
+              children: [Oq, " ", (0, Tq.jsx)(Nq.d, {
+                name: "angle-down"
+              })]
+            }),
+            onClick: () => {
+              uq(!0)
+            }
+          })
+        })]
+      })
     }
 
-    function OT(TT, kT) {
-      const cT = [kT[TT].parent, TT];
-      let MT = lT[kT[TT].parent][TT],
-        OT = kT[TT].parent;
-      for (; kT[OT].parent;) cT.unshift(kT[OT].parent), MT = KT(lT[kT[OT].parent][OT], MT), OT = kT[OT].parent;
-      return MT.conversion = cT, MT
-    }
-    TT.exports = function(TT) {
-      const kT = MT(TT),
-        cT = {},
-        lT = Object.keys(kT);
-      for (let MT = lT.length, KT = 0; KT < MT; KT++) {
-        const TT = lT[KT];
-        null !== kT[TT].parent && (cT[TT] = OT(TT, kT))
-      }
-      return cT
-    }
-  },
-  36487: TT => {
-    TT.exports = {
-      aliceblue: [240, 248, 255],
-      antiquewhite: [250, 235, 215],
-      aqua: [0, 255, 255],
-      aquamarine: [127, 255, 212],
-      azure: [240, 255, 255],
-      beige: [245, 245, 220],
-      bisque: [255, 228, 196],
-      black: [0, 0, 0],
-      blanchedalmond: [255, 235, 205],
-      blue: [0, 0, 255],
-      blueviolet: [138, 43, 226],
-      brown: [165, 42, 42],
-      burlywood: [222, 184, 135],
-      cadetblue: [95, 158, 160],
-      chartreuse: [127, 255, 0],
-      chocolate: [210, 105, 30],
-      coral: [255, 127, 80],
-      cornflowerblue: [100, 149, 237],
-      cornsilk: [255, 248, 220],
-      crimson: [220, 20, 60],
-      cyan: [0, 255, 255],
-      darkblue: [0, 0, 139],
-      darkcyan: [0, 139, 139],
-      darkgoldenrod: [184, 134, 11],
-      darkgray: [169, 169, 169],
-      darkgreen: [0, 100, 0],
-      darkgrey: [169, 169, 169],
-      darkkhaki: [189, 183, 107],
-      darkmagenta: [139, 0, 139],
-      darkolivegreen: [85, 107, 47],
-      darkorange: [255, 140, 0],
-      darkorchid: [153, 50, 204],
-      darkred: [139, 0, 0],
-      darksalmon: [233, 150, 122],
-      darkseagreen: [143, 188, 143],
-      darkslateblue: [72, 61, 139],
-      darkslategray: [47, 79, 79],
-      darkslategrey: [47, 79, 79],
-      darkturquoise: [0, 206, 209],
-      darkviolet: [148, 0, 211],
-      deeppink: [255, 20, 147],
-      deepskyblue: [0, 191, 255],
-      dimgray: [105, 105, 105],
-      dimgrey: [105, 105, 105],
-      dodgerblue: [30, 144, 255],
-      firebrick: [178, 34, 34],
-      floralwhite: [255, 250, 240],
-      forestgreen: [34, 139, 34],
-      fuchsia: [255, 0, 255],
-      gainsboro: [220, 220, 220],
-      ghostwhite: [248, 248, 255],
-      gold: [255, 215, 0],
-      goldenrod: [218, 165, 32],
-      gray: [128, 128, 128],
-      green: [0, 128, 0],
-      greenyellow: [173, 255, 47],
-      grey: [128, 128, 128],
-      honeydew: [240, 255, 240],
-      hotpink: [255, 105, 180],
-      indianred: [205, 92, 92],
-      indigo: [75, 0, 130],
-      ivory: [255, 255, 240],
-      khaki: [240, 230, 140],
-      lavender: [230, 230, 250],
-      lavenderblush: [255, 240, 245],
-      lawngreen: [124, 252, 0],
-      lemonchiffon: [255, 250, 205],
-      lightblue: [173, 216, 230],
-      lightcoral: [240, 128, 128],
-      lightcyan: [224, 255, 255],
-      lightgoldenrodyellow: [250, 250, 210],
-      lightgray: [211, 211, 211],
-      lightgreen: [144, 238, 144],
-      lightgrey: [211, 211, 211],
-      lightpink: [255, 182, 193],
-      lightsalmon: [255, 160, 122],
-      lightseagreen: [32, 178, 170],
-      lightskyblue: [135, 206, 250],
-      lightslategray: [119, 136, 153],
-      lightslategrey: [119, 136, 153],
-      lightsteelblue: [176, 196, 222],
-      lightyellow: [255, 255, 224],
-      lime: [0, 255, 0],
-      limegreen: [50, 205, 50],
-      linen: [250, 240, 230],
-      magenta: [255, 0, 255],
-      maroon: [128, 0, 0],
-      mediumaquamarine: [102, 205, 170],
-      mediumblue: [0, 0, 205],
-      mediumorchid: [186, 85, 211],
-      mediumpurple: [147, 112, 219],
-      mediumseagreen: [60, 179, 113],
-      mediumslateblue: [123, 104, 238],
-      mediumspringgreen: [0, 250, 154],
-      mediumturquoise: [72, 209, 204],
-      mediumvioletred: [199, 21, 133],
-      midnightblue: [25, 25, 112],
-      mintcream: [245, 255, 250],
-      mistyrose: [255, 228, 225],
-      moccasin: [255, 228, 181],
-      navajowhite: [255, 222, 173],
-      navy: [0, 0, 128],
-      oldlace: [253, 245, 230],
-      olive: [128, 128, 0],
-      olivedrab: [107, 142, 35],
-      orange: [255, 165, 0],
-      orangered: [255, 69, 0],
-      orchid: [218, 112, 214],
-      palegoldenrod: [238, 232, 170],
-      palegreen: [152, 251, 152],
-      paleturquoise: [175, 238, 238],
-      palevioletred: [219, 112, 147],
-      papayawhip: [255, 239, 213],
-      peachpuff: [255, 218, 185],
-      peru: [205, 133, 63],
-      pink: [255, 192, 203],
-      plum: [221, 160, 221],
-      powderblue: [176, 224, 230],
-      purple: [128, 0, 128],
-      rebeccapurple: [102, 51, 153],
-      red: [255, 0, 0],
-      rosybrown: [188, 143, 143],
-      royalblue: [65, 105, 225],
-      saddlebrown: [139, 69, 19],
-      salmon: [250, 128, 114],
-      sandybrown: [244, 164, 96],
-      seagreen: [46, 139, 87],
-      seashell: [255, 245, 238],
-      sienna: [160, 82, 45],
-      silver: [192, 192, 192],
-      skyblue: [135, 206, 235],
-      slateblue: [106, 90, 205],
-      slategray: [112, 128, 144],
-      slategrey: [112, 128, 144],
-      snow: [255, 250, 250],
-      springgreen: [0, 255, 127],
-      steelblue: [70, 130, 180],
-      tan: [210, 180, 140],
-      teal: [0, 128, 128],
-      thistle: [216, 191, 216],
-      tomato: [255, 99, 71],
-      turquoise: [64, 224, 208],
-      violet: [238, 130, 238],
-      wheat: [245, 222, 179],
-      white: [255, 255, 255],
-      whitesmoke: [245, 245, 245],
-      yellow: [255, 255, 0],
-      yellowgreen: [154, 205, 50]
-    }
-  },
-  36462: (TT, kT, cT) => {
-    var lT = cT(36466),
-      MT = Array.prototype.concat,
-      KT = Array.prototype.slice,
-      OT = TT.exports = function(TT) {
-        for (var kT = [], cT = 0, OT = TT.length; cT < OT; cT++) {
-          var yT = TT[cT];
-          lT(yT) ? kT = MT.call(kT, KT.call(yT)) : kT.push(yT)
-        }
-        return kT
+    function pq(qq) {
+      let {
+        value: Eq,
+        placeholder: gq,
+        ariaLabel: lq,
+        maxLength: Oq,
+        wide: mq = !1,
+        onSave: xq
+      } = qq;
+      const Aq = (0, Yq.useRef)(null),
+        [cq, uq] = (0, Yq.useState)(0),
+        Wq = (0, Yq.useRef)(!0),
+        Nq = (0, Yq.useRef)(null),
+        aq = (0, Yq.useRef)({
+          value: Eq,
+          onSave: xq
+        });
+      aq.current = {
+        value: Eq,
+        onSave: xq
       };
-    OT.wrap = function(TT) {
-      return function() {
-        return TT(OT(arguments))
+      const Vq = () => {
+        const qq = Nq.current;
+        Nq.current = null, null !== qq && qq !== aq.current.value && aq.current.onSave(qq).then((() => {
+          Wq.current && uq((qq => qq + 1))
+        }))
+      };
+      return (0, Yq.useEffect)((() => {
+        null === Nq.current && Aq.current && (Aq.current.value = Eq)
+      }), [Eq, cq]), (0, Yq.useEffect)((() => () => {
+        Wq.current = !1, Vq()
+      }), []), (0, Tq.jsx)("div", {
+        className: Bq()("LobbyManageRuleInput", {
+          LobbyManageRuleInputWide: mq
+        }),
+        onBlur: Vq,
+        children: (0, Tq.jsx)(Mq.b, {
+          domRef: Aq,
+          defaultValue: Eq,
+          placeholderText: gq,
+          ariaLabel: lq,
+          maxLength: Oq,
+          onValueChange: qq => {
+            Nq.current = qq
+          },
+          onEnter: Vq
+        })
+      })
+    }
+    const Gq = ["mod", "coOwner"],
+      Lq = {
+        coOwner: "lobbyManage:roleCanCoOwner",
+        mod: "lobbyManage:roleCanMod",
+        coder: "lobbyManage:roleCanCoder",
+        builder: "lobbyManage:roleCanBuilder"
+      };
+
+    function Jq(qq) {
+      var Eq, gq, Oq;
+      let {
+        name: mq,
+        place: xq,
+        openedIn: Aq,
+        isYou: uq,
+        manage: Bq,
+        hiddenNames: aq,
+        zIndex: Vq
+      } = qq;
+      const {
+        t: dq,
+        selectedLanguage: jq
+      } = (0, Wq.v)(), [Hq, Pq] = (0, Yq.useState)(null), {
+        state: Qq
+      } = Bq, yq = `player:${mq}`, bq = function(qq, Eq) {
+        if ("banned" === qq.section) return {
+          ...tq,
+          unban: !0
+        };
+        if ("gone" === qq.section) return tq;
+        const {
+          player: gq
+        } = qq, Yq = "here" === qq.section, lq = Yq || "none" !== gq.role ? gq.can.roles : [];
+        return {
+          gamemode: Yq && Eq && null !== gq.gamemode && gq.can.gamemode,
+          roles: lq,
+          fixedRole: 0 === lq.length && "none" !== gq.role ? gq.role : null,
+          kick: Yq && gq.can.kick,
+          ban: gq.can.ban,
+          unban: !1
+        }
+      }(xq, null !== Qq.gamemodes), fq = Bq.statusOf(yq), Mq = Bq.isPending(yq), Sq = cq(), pq = Date.now(), Jq = qq => {
+        var Eq, gq;
+        return null !== (Eq = null === (gq = (qq => Qq.roles.find((Eq => Eq.role === qq)))(qq)) || void 0 === gq ? void 0 : gq.label) && void 0 !== Eq ? Eq : qq
+      }, kq = qq => {
+        const Eq = Lq[qq];
+        return void 0 === Eq ? void 0 : dq(Eq)
+      }, Rq = "here" === xq.section || "away" === xq.section ? xq.player : null, Uq = "here" === xq.section ? xq.player.id : null, {
+        playerSocialPreview: Fq,
+        isFriend: sq
+      } = null === Uq ? {
+        playerSocialPreview: (0, hq.l)(mq, null),
+        isFriend: !1
+      } : (0, vq.d)(Uq, mq), Xq = function() {
+        Bq.send(...arguments)
+      }, wq = (qq, Eq) => {
+        Sq.hold("role", qq, Bq.send({
+          type: "setRole",
+          name: mq,
+          role: qq
+        }, yq, Eq))
+      };
+      let Kq = null;
+      if ("ban" === (null === Hq || void 0 === Hq ? void 0 : Hq.kind)) Kq = dq("lobbyManageEntry:banConfirm", {
+        playerName: mq
+      });
+      else if ("role" === (null === Hq || void 0 === Hq ? void 0 : Hq.kind)) {
+        var Cq;
+        Kq = `${dq("lobbyManage:roleConfirm",{playerName:mq,role:Jq(Hq.role)})} ${null!==(Cq=kq(Hq.role))&&void 0!==Cq?Cq:""}`
+      } else if (fq) Kq = (0, Tq.jsx)(zq, {
+        status: fq
+      });
+      else if (uq) Kq = dq("lobbyManage:you");
+      else if ("here" === xq.section) "none" === xq.player.role && pq - xq.player.at < 6e5 && (Kq = Zq(dq, jq.code, "lobbyManage:joinedAgo", xq.player.at, pq));
+      else if ("away" === xq.section) {
+        if (xq.player.at > 0) {
+          const qq = "kicked" === xq.player.why ? "lobbyManage:kickedAgo" : "lobbyManage:leftAgo";
+          Kq = Zq(dq, jq.code, qq, xq.player.at, pq)
+        }
+      } else "banned" === xq.section ? null !== xq.bannedAt && (Kq = Zq(dq, jq.code, "lobbyManage:bannedAgo", xq.bannedAt, pq)) : "banned" === Aq && (Kq = dq("lobbyManageEntry:unbanned"));
+      return (0, Tq.jsx)("div", {
+        className: "LobbyManagePlayerRow",
+        "data-lobby-manage-row": mq,
+        children: (0, Tq.jsxs)(rq.i, {
+          playerSocialPreview: Fq,
+          isFriend: sq,
+          status: Kq,
+          opensProfileCard: !uq && (0, vq.f)(!0, mq, aq),
+          zIndex: Vq,
+          children: [null !== Hq && (0, Tq.jsxs)("div", {
+            className: "LobbyManageButtons",
+            children: ["ban" === Hq.kind && (0, Tq.jsxs)(oq.K, {
+              className: "LobbyManageIconButton SmallTextLight",
+              analyticsClick: {
+                id: "lobby_manage.ban",
+                value: "row"
+              },
+              onClick: () => {
+                Pq(null), Xq({
+                  type: "ban",
+                  name: mq
+                }, yq)
+              },
+              children: [(0, Tq.jsx)(Nq.d, {
+                name: "gavel"
+              }), (0, Tq.jsx)("span", {
+                className: "LobbyManageButtonLabel",
+                children: dq("lobbyManageEntry:ban")
+              })]
+            }), "role" === Hq.kind && (0, Tq.jsx)(oq.g, {
+              className: "LobbyManageIconButton SmallTextLight",
+              analyticsClick: {
+                id: "lobby_manage.set_role",
+                value: Hq.role
+              },
+              onClick: () => {
+                Pq(null), wq(Hq.role)
+              },
+              children: dq("lobbyManage:makeRole", {
+                role: Jq(Hq.role)
+              })
+            }), (0, Tq.jsx)(oq.i, {
+              className: "LobbyManageIconButton SmallTextLight",
+              onClick: () => {
+                Pq(null)
+              },
+              children: dq("general:cancel")
+            })]
+          }), null === Hq && (0, Tq.jsxs)(Tq.Fragment, {
+            children: [(0, Tq.jsxs)("div", {
+              className: "LobbyManageChoices",
+              children: [bq.gamemode && null !== Rq && (0, Tq.jsx)(nq.d, {
+                options: (null !== (Eq = Qq.gamemodes) && void 0 !== Eq ? Eq : []).map((qq => ({
+                  value: qq.value,
+                  label: iq(dq, qq.label, aq)
+                }))),
+                value: null !== (gq = Sq.get("gamemode")) && void 0 !== gq ? gq : Rq.gamemode,
+                disabled: Mq,
+                onChange: qq => {
+                  (0, lq.reportAnalyticsClick)({
+                    id: "lobby_manage.set_gamemode",
+                    value: qq.value
+                  }), Sq.hold("gamemode", qq.value, Bq.send({
+                    type: "setGamemode",
+                    name: mq,
+                    gamemode: qq.value
+                  }, yq))
+                }
+              }), bq.roles.length > 0 && null !== Rq && (0, Tq.jsx)(nq.d, {
+                options: [...Qq.roles].reverse().filter((qq => bq.roles.includes(qq.role))).map((qq => ({
+                  value: qq.role,
+                  label: qq.label
+                }))),
+                value: null !== (Oq = Sq.get("role")) && void 0 !== Oq ? Oq : Rq.role,
+                disabled: Mq,
+                onChange: qq => {
+                  var Eq;
+                  (Eq = qq.value) !== (null === Rq || void 0 === Rq ? void 0 : Rq.role) && (Gq.includes(Eq) ? Pq({
+                    kind: "role",
+                    role: Eq
+                  }) : ((0, lq.reportAnalyticsClick)({
+                    id: "lobby_manage.set_role",
+                    value: Eq
+                  }), wq(Eq, kq(Eq))))
+                }
+              }), null !== bq.fixedRole && (0, Tq.jsx)("div", {
+                className: "LobbyManageChoiceFixed",
+                children: Jq(bq.fixedRole)
+              })]
+            }), (0, Tq.jsxs)("div", {
+              className: "LobbyManageButtons",
+              children: [bq.kick && (0, Tq.jsxs)(oq.i, {
+                className: "LobbyManageIconButton SmallTextLight",
+                ariaLabel: `${dq("lobbyManageEntry:kick")} ${mq}`,
+                disabled: Mq,
+                analyticsClick: {
+                  id: "lobby_manage.kick",
+                  value: "row"
+                },
+                onClick: () => {
+                  Xq({
+                    type: "kick",
+                    name: mq
+                  }, yq)
+                },
+                children: [(0, Tq.jsx)(Nq.d, {
+                  name: "person-falling-burst"
+                }), (0, Tq.jsx)("span", {
+                  className: "LobbyManageButtonLabel",
+                  children: dq("lobbyManageEntry:kick")
+                })]
+              }), bq.ban && (0, Tq.jsxs)(oq.L, {
+                className: "LobbyManageOutlineButton SmallTextLight",
+                ariaLabel: `${dq("lobbyManageEntry:ban")} ${mq}`,
+                disabled: Mq,
+                padDestructive: !0,
+                onClick: () => {
+                  Pq({
+                    kind: "ban"
+                  })
+                },
+                children: [(0, Tq.jsx)(Nq.d, {
+                  name: "gavel"
+                }), (0, Tq.jsx)("span", {
+                  className: "LobbyManageButtonLabel",
+                  children: dq("lobbyManageEntry:ban")
+                })]
+              }), bq.unban && (0, Tq.jsxs)(oq.i, {
+                className: "LobbyManageIconButton SmallTextLight",
+                ariaLabel: `${dq("lobbyManageEntry:unban")} ${mq}`,
+                disabled: Mq,
+                analyticsClick: {
+                  id: "lobby_manage.unban"
+                },
+                onClick: () => {
+                  Xq({
+                    type: "unban",
+                    name: mq
+                  }, yq)
+                },
+                children: [(0, Tq.jsx)(Nq.d, {
+                  name: "user-unlock"
+                }), (0, Tq.jsx)("span", {
+                  className: "LobbyManageButtonLabel",
+                  children: dq("lobbyManageEntry:unban")
+                })]
+              })]
+            })]
+          })]
+        })
+      })
+    }
+
+    function kq(qq) {
+      var Eq, gq, lq, Oq;
+      let {
+        manage: mq,
+        focusRequest: xq,
+        onFocused: Aq
+      } = qq;
+      const {
+        t: cq
+      } = (0, Wq.v)(), uq = (0, Hq.g)("players"), Bq = (0, Hq.g)("hiddenPlayerNames"), aq = (0, Yq.useRef)(null), {
+        state: dq
+      } = mq, jq = null === uq.localId ? null : null !== (Eq = null === (gq = uq.byId[uq.localId]) || void 0 === gq ? void 0 : gq.name) && void 0 !== Eq ? Eq : null, [Pq] = (0, Yq.useState)((() => Qq(dq, jq))), tq = function(qq, Eq, gq) {
+        const Yq = new Set([...qq.here, ...qq.away, ...qq.banned]),
+          lq = Qq(Eq, gq),
+          Oq = Eq => {
+            const gq = lq[Eq].filter((qq => !Yq.has(qq)));
+            for (const qq of gq) Yq.add(qq);
+            return [...qq[Eq], ...gq]
+          };
+        return {
+          here: Oq("here"),
+          away: Oq("away"),
+          banned: Oq("banned")
+        }
+      }(Pq, dq, jq), [rq, vq] = (0, Yq.useState)(!1), hq = function(qq, Eq) {
+        return qq.here.filter((qq => qq.name !== Eq && "none" === qq.role && qq.can.kick)).length
+      }(dq, jq), nq = mq.statusOf("kickAll");
+      (0, Yq.useEffect)((() => {
+        var qq, Eq;
+        if (null === xq) return;
+        const gq = null === (qq = aq.current) || void 0 === qq ? void 0 : qq.querySelector(`[data-lobby-manage-row="${CSS.escape(xq.name)}"]`);
+        null === gq || void 0 === gq || gq.scrollIntoView({
+          block: "center"
+        }), null === gq || void 0 === gq || null === (Eq = gq.querySelector(".ProfilePreview")) || void 0 === Eq || Eq.focus({
+          preventScroll: !0
+        }), Aq(xq.seq)
+      }), [null === xq || void 0 === xq ? void 0 : xq.seq]);
+      const bq = qq => (Eq, gq) => (0, Tq.jsx)(Jq, {
+        name: Eq,
+        place: yq(dq, Eq),
+        openedIn: qq,
+        isYou: Eq === jq,
+        manage: mq,
+        hiddenNames: Bq,
+        zIndex: gq
+      }, Eq);
+      return (0, Tq.jsxs)("div", {
+        ref: aq,
+        className: "LobbyManagePage",
+        children: [tq.here.length > 0 && (0, Tq.jsxs)("div", {
+          className: "LobbyManageBox",
+          children: [(0, Tq.jsxs)("div", {
+            className: "LobbyManageBoxHeading",
+            children: [(0, Tq.jsx)(Vq.c, {
+              label: cq("lobbyManage:here"),
+              meta: dq.here.length
+            }), hq >= 2 && !rq && (0, Tq.jsxs)(oq.L, {
+              className: "LobbyManageTitleAction SmallTextLight",
+              padDestructive: !0,
+              disabled: mq.isPending("kickAll"),
+              onClick: () => {
+                vq(!0)
+              },
+              children: [(0, Tq.jsx)(Nq.d, {
+                name: "person-falling-burst"
+              }), " ", cq("lobbyManage:kickAll")]
+            })]
+          }), rq && hq >= 2 && (0, Tq.jsxs)("div", {
+            className: "LobbyManageConfirm",
+            children: [(0, Tq.jsx)("span", {
+              className: "LobbyManageConfirmText",
+              children: cq("lobbyManage:kickAllConfirm", {
+                count: hq
+              })
+            }), (0, Tq.jsxs)("div", {
+              className: "LobbyManageButtons",
+              children: [(0, Tq.jsx)(oq.K, {
+                className: "LobbyManageIconButton SmallTextLight",
+                analyticsClick: {
+                  id: "lobby_manage.kick_all"
+                },
+                onClick: () => {
+                  vq(!1), mq.send({
+                    type: "kickAll"
+                  }, "kickAll")
+                },
+                children: cq("lobbyManage:kickAll")
+              }), (0, Tq.jsx)(oq.i, {
+                className: "LobbyManageIconButton SmallTextLight",
+                onClick: () => {
+                  vq(!1)
+                },
+                children: cq("general:cancel")
+              })]
+            })]
+          }), nq && (0, Tq.jsx)("div", {
+            className: "LobbyManageBoxStatus",
+            children: (0, Tq.jsx)(zq, {
+              status: nq
+            })
+          }), (0, Tq.jsx)(Sq, {
+            names: tq.here,
+            cap: tq.here.length,
+            filterFrom: 20,
+            moreLabel: "",
+            renderRow: bq("here")
+          })]
+        }), tq.away.length > 0 && (0, Tq.jsxs)("div", {
+          className: "LobbyManageBox",
+          children: [(0, Tq.jsx)(Vq.c, {
+            label: cq("lobbyManage:notHere"),
+            meta: tq.away.length
+          }), (0, Tq.jsx)(Sq, {
+            names: tq.away,
+            cap: 5,
+            filterFrom: null,
+            moreLabel: cq("lobbyManage:allCount", {
+              count: tq.away.length
+            }),
+            reveal: null !== (lq = null === xq || void 0 === xq ? void 0 : xq.name) && void 0 !== lq ? lq : null,
+            renderRow: bq("away")
+          })]
+        }), tq.banned.length > 0 && (0, Tq.jsxs)("div", {
+          className: "LobbyManageBox",
+          children: [(0, Tq.jsx)(Vq.c, {
+            label: cq("lobbyManage:banned"),
+            meta: tq.banned.length
+          }), (0, Tq.jsx)(Sq, {
+            names: tq.banned,
+            cap: 5,
+            filterFrom: 20,
+            moreLabel: cq("lobbyManage:allCount", {
+              count: tq.banned.length
+            }),
+            reveal: null !== (Oq = null === xq || void 0 === xq ? void 0 : xq.name) && void 0 !== Oq ? Oq : null,
+            renderRow: bq("banned")
+          })]
+        })]
+      })
+    }
+    var Rq = gq(4456),
+      Uq = gq(1628),
+      Fq = gq(36748),
+      sq = gq(36757),
+      Xq = gq(36755),
+      wq = gq(36753),
+      Kq = gq(36775),
+      Cq = gq(36764),
+      Iq = gq(36768);
+
+    function eq(qq) {
+      const Eq = new Set;
+      for (const gq of qq) Eq.add(gq.toLowerCase());
+      return Eq
+    }
+
+    function Dq(qq) {
+      var Eq, gq;
+      let {
+        state: lq,
+        lobbyName: Oq,
+        listed: mq,
+        isListed: xq,
+        Wy: Aq,
+        Fy: cq,
+        statusOf: uq
+      } = qq;
+      const {
+        t: Bq,
+        selectedLanguage: Nq
+      } = (0, Wq.v)(), aq = (0, Uq.g)(), dq = (0, Hq.g)("players"), jq = null === dq.localId ? null : null !== (Eq = null === (gq = dq.byId[dq.localId]) || void 0 === gq ? void 0 : gq.name) && void 0 !== Eq ? Eq : null, oq = (0, Yq.useMemo)((() => (0, wq.h)(aq.friends, Oq, lq.here.map((qq => qq.name)))), [aq.friends, Oq, lq.here]), Pq = new Map(oq.map((qq => [qq.friend.name.toLowerCase(), qq]))), Qq = function(qq) {
+        let {
+          refused: Eq,
+          listed: gq,
+          here: Yq,
+          friends: lq,
+          excluded: Oq
+        } = qq;
+        const mq = eq(Oq),
+          xq = qq => qq.filter((qq => {
+            const Eq = qq.toLowerCase();
+            return !mq.has(Eq) && (mq.add(Eq), !0)
+          }));
+        return {
+          added: [],
+          refused: xq(Eq),
+          listed: xq(gq),
+          suggested: xq([...Yq, ...lq])
+        }
+      }({
+        refused: lq.refused.map((qq => qq.name)),
+        listed: mq,
+        here: lq.here.map((qq => qq.name)),
+        friends: oq.flatMap((qq => "here" === qq.place ? [] : [qq.friend.name])),
+        excluded: [...null === jq ? [] : [jq], ...[...lq.here, ...lq.away].flatMap((qq => "none" === qq.role || (0, wq.k)(mq, qq.name) ? [] : [qq.name]))]
+      }), [yq] = (0, Yq.useState)(Qq), [tq, rq] = (0, Yq.useState)([]), nq = function(qq, Eq, gq) {
+        const Yq = eq(gq),
+          lq = eq([...gq, ...qq.refused, ...qq.listed, ...qq.suggested]),
+          Oq = gq => [...qq[gq].filter((qq => !Yq.has(qq.toLowerCase()))), ...Eq[gq].filter((qq => {
+            const Eq = qq.toLowerCase();
+            return !lq.has(Eq) && (lq.add(Eq), !0)
+          }))];
+        return {
+          added: [...gq],
+          refused: Oq("refused"),
+          listed: Oq("listed"),
+          suggested: Oq("suggested")
+        }
+      }(yq, Qq, tq), bq = (qq, Eq) => {
+        var gq, Yq;
+        const Oq = qq.toLowerCase(),
+          mq = Pq.get(Oq),
+          cq = lq.here.find((qq => qq.name.toLowerCase() === Oq)),
+          Wq = lq.refused.find((qq => qq.name.toLowerCase() === Oq)),
+          aq = null !== (gq = null === uq || void 0 === uq ? void 0 : uq(qq)) && void 0 !== gq ? gq : null;
+        let Vq = null;
+        aq ? Vq = (0, Tq.jsx)(zq, {
+          status: aq
+        }) : Wq ? Vq = Zq(Bq, Nq.code, "lobbyManage:triedToJoinAgo", Wq.at, Date.now()) : mq && cq ? Vq = Bq("lobbyManage:friendHere") : mq ? Vq = "online" === mq.place ? Bq("lobbyManage:friendOnline") : Bq("lobbyManage:friend") : cq && (Vq = Bq("lobbyManage:hereStatus"));
+        let dq = null !== (Yq = null === mq || void 0 === mq ? void 0 : mq.friend) && void 0 !== Yq ? Yq : (0, hq.l)(qq, null);
+        return !mq && null !== cq && void 0 !== cq && cq.id && (dq = (0, vq.d)(cq.id, cq.name).playerSocialPreview), (0, Tq.jsx)(Cq.d, {
+          playerSocialPreview: dq,
+          isFriend: void 0 !== mq,
+          hideFriendBadge: !0,
+          status: Vq,
+          zIndex: Eq,
+          SB: {
+            on: xq(qq),
+            onChange: Eq => {
+              Aq(qq, Eq)
+            }
+          }
+        }, Oq)
+      }, iq = [...nq.added, ...nq.refused];
+      return (0, Tq.jsxs)("div", {
+        className: "LobbyManageBox",
+        children: [(0, Tq.jsx)(Vq.c, {
+          label: Bq("worldSocial:whitelist"),
+          meta: mq.length
+        }), (0, Tq.jsx)(Iq.c, {
+          label: Bq("lobbyManage:add"),
+          icon: "user-check",
+          placeholder: Bq("socialBar:enterPlayerName"),
+          onSubmit: async qq => {
+            const Eq = await cq(qq);
+            return Eq.ok && rq((Eq => [qq, ...Eq])), Eq
+          }
+        }), iq.length > 0 && (0, Tq.jsx)("div", {
+          className: "PlayerRows",
+          children: iq.map(((qq, Eq) => bq(qq, iq.length - Eq)))
+        }), (0, Tq.jsx)(Sq, {
+          names: nq.listed,
+          cap: 8,
+          filterFrom: 8,
+          moreLabel: Bq("lobbyManage:allOnWhitelist", {
+            count: nq.listed.length
+          }),
+          renderRow: bq
+        }), (0, Tq.jsx)(Sq, {
+          names: nq.suggested,
+          cap: 8,
+          filterFrom: null,
+          moreLabel: Bq("lobbyManage:allCount", {
+            count: nq.suggested.length
+          }),
+          renderRow: bq
+        })]
+      })
+    }
+
+    function qE(qq) {
+      let {
+        manage: Eq,
+        listing: gq
+      } = qq;
+      const {
+        t: Yq
+      } = (0, Wq.v)(), Oq = (qq, gq) => ((0, lq.reportAnalyticsClick)({
+        id: "lobby_manage.set_listing",
+        value: qq
+      }), Eq.send({
+        type: "setListing",
+        field: qq,
+        value: gq
+      }, `listing:${qq}`)), mq = qq => {
+        const gq = Eq.statusOf(`listing:${qq}`);
+        return gq && !gq.ok && (0, Tq.jsx)("div", {
+          className: "LobbyManageFieldError",
+          children: (0, Tq.jsx)(zq, {
+            status: gq
+          })
+        })
+      };
+      return (0, Tq.jsxs)("div", {
+        className: "LobbyManageBox LobbyManageListing",
+        children: [(0, Tq.jsx)(Vq.c, {
+          label: Yq("lobbyManage:inWorldsList")
+        }), (0, Tq.jsxs)("div", {
+          className: "LobbyManageRuleRow",
+          children: [(0, Tq.jsx)("div", {
+            className: "SliderText",
+            children: Yq("lobbyManage:description")
+          }), (0, Tq.jsx)(pq, {
+            value: gq.description,
+            ariaLabel: Yq("lobbyManage:description"),
+            wide: !0,
+            onSave: qq => Oq("description", qq)
+          })]
+        }), mq("description"), (0, Tq.jsxs)("div", {
+          className: "LobbyManageRuleRow",
+          children: [(0, Tq.jsx)("div", {
+            className: "SliderText",
+            children: Yq("lobbyManage:emojis")
+          }), (0, Tq.jsx)(pq, {
+            value: gq.emojis,
+            ariaLabel: Yq("lobbyManage:emojis"),
+            onSave: qq => Oq("emojis", qq)
+          })]
+        }), mq("emojis"), (0, Tq.jsxs)("div", {
+          className: "LobbyManageRuleRow",
+          children: [(0, Tq.jsx)("div", {
+            className: "SliderText",
+            children: Yq("lobbyManage:colour")
+          }), (0, Tq.jsx)(EE, {
+            value: gq.colour,
+            ariaLabel: Yq("lobbyManage:colour"),
+            onSave: qq => {
+              Oq("colour", qq)
+            }
+          })]
+        }), mq("colour")]
+      })
+    }
+
+    function EE(qq) {
+      let {
+        value: Eq,
+        ariaLabel: gq,
+        onSave: lq
+      } = qq;
+      const Oq = (0, Yq.useRef)(null),
+        mq = (0, Yq.useRef)({
+          value: Eq,
+          onSave: lq
+        });
+      mq.current = {
+        value: Eq,
+        onSave: lq
+      };
+      const xq = (0, Yq.useRef)(null),
+        Aq = (0, Yq.useRef)(!1),
+        cq = qq => {
+          Aq.current && qq.value !== mq.current.value && qq.value !== xq.current && (xq.current = qq.value, mq.current.onSave(qq.value))
+        };
+      return (0, Yq.useEffect)((() => {
+        Oq.current && document.activeElement !== Oq.current && (Oq.current.value = Eq)
+      }), [Eq]), (0, Yq.useEffect)((() => {
+        const qq = Oq.current,
+          Eq = () => {
+            cq(qq)
+          };
+        return qq.addEventListener("change", Eq), () => {
+          qq.removeEventListener("change", Eq), cq(qq)
+        }
+      }), []), (0, Tq.jsx)("input", {
+        ref: Oq,
+        type: "color",
+        className: "LobbyManageColour",
+        defaultValue: Eq,
+        "aria-label": gq,
+        onInput: () => {
+          Aq.current = !0
+        },
+        onBlur: qq => {
+          cq(qq.currentTarget)
+        }
+      })
+    }
+
+    function gE(qq) {
+      let {
+        manage: Eq
+      } = qq;
+      const {
+        lobbyName: gq,
+        shownLobbyName: Yq
+      } = (0, Hq.g)("connectedGame");
+      return Eq.state.you.canSetVisibility && null !== gq ? (0, Tq.jsx)(lE, {
+        manage: Eq,
+        lobbyName: gq,
+        worldCode: null !== Yq && void 0 !== Yq ? Yq : gq
+      }, gq) : (0, Tq.jsx)(OE, {
+        manage: Eq,
+        lobbyName: null !== gq && void 0 !== gq ? gq : ""
+      })
+    }
+
+    function YE(qq) {
+      return qq.map((qq => qq.toLowerCase())).sort().join(",")
+    }
+
+    function lE(qq) {
+      var Eq;
+      let {
+        manage: gq,
+        lobbyName: Oq,
+        worldCode: mq
+      } = qq;
+      const {
+        t: xq
+      } = (0, Wq.v)(), {
+        settings: Aq,
+        loading: cq,
+        change: uq,
+        retry: Bq,
+        refresh: Nq
+      } = (0, Fq.j)(Oq), dq = (0, Uq.g)(), {
+        state: jq
+      } = gq, Hq = (0, Yq.useRef)(Aq);
+      Hq.current = Aq;
+      const Pq = YE(null !== (Eq = jq.whitelist) && void 0 !== Eq ? Eq : []),
+        Qq = null !== jq.whitelist;
+      (0, Yq.useEffect)((() => {
+        const qq = Hq.current;
+        null !== qq && (qq.visibility !== jq.visibility || Qq && YE(qq.whitelist) !== Pq) && Nq()
+      }), [jq.visibility, Pq, Qq, Nq]);
+      const yq = async (qq, Eq) => {
+        let gq = null;
+        return await uq(qq, Eq, {
+          quiet: !0,
+          onAnswer: qq => {
+            gq = qq
+          }
+        }), gq
+      }, tq = (qq, Eq) => {
+        null !== Eq && "error" in Eq && gq.showStatus(qq, {
+          ok: !1,
+          text: [xq(Eq.error)]
+        })
+      }, rq = async qq => {
+        if (null === Aq || qq === Aq.visibility) return;
+        (0, lq.reportAnalyticsClick)({
+          id: "lobby_manage.set_mode",
+          value: qq
+        });
+        const Eq = "whitelist" === qq ? (0, wq.d)((0, wq.h)(dq.friends, Oq, jq.here.map((qq => qq.name))), (0, Kq.b)(Oq), Aq.whitelist) : [],
+          gq = await yq({
+            setVisibility: qq
+          }, (Eq => ({
+            ...Eq,
+            visibility: qq
+          })));
+        tq("mode", gq), null === gq || "error" in gq || await (async qq => {
+          for (const Eq of (0, wq.l)(qq, Rq.z))
+            if (!await uq({
+                whitelistAdd: Eq
+              }, (qq => (0, wq.s)(qq, Eq, !0)))) return !1;
+          return !0
+        })(Eq)
+      }, vq = (0, Yq.useMemo)((() => {
+        var qq;
+        if (null === Aq) return [];
+        const Eq = null !== (qq = jq.whitelist) && void 0 !== qq ? qq : [];
+        return [...Eq.filter((qq => (0, wq.k)(Aq.whitelist, qq))), ...Aq.whitelist.filter((qq => !(0, wq.k)(Eq, qq)))]
+      }), [Aq, jq.whitelist]), hq = gq.statusOf("mode");
+      return (0, Tq.jsxs)("div", {
+        className: "LobbyManagePage",
+        children: [(0, Tq.jsxs)("div", {
+          className: "LobbyManageBox",
+          children: [(0, Tq.jsx)(Vq.c, {
+            label: xq("worldSocial:whoCanJoin")
+          }), null === Aq && cq && (0, Tq.jsx)("div", {
+            className: "LobbyManageLoading",
+            children: (0, Tq.jsx)(aq.e, {})
+          }), null === Aq && !cq && (0, Tq.jsx)(oq.i, {
+            className: "SmallTextLight",
+            onClick: Bq,
+            children: xq("worldSocial:loadFailed")
+          }), null !== Aq && (0, Tq.jsx)(sq.d, {
+            visibility: Aq.visibility,
+            onPick: qq => {
+              rq(qq)
+            }
+          }), hq && (0, Tq.jsx)("div", {
+            className: "LobbyManageFieldError",
+            children: (0, Tq.jsx)(zq, {
+              status: hq
+            })
+          }), null !== Aq && "private" !== Aq.visibility && (0, Tq.jsx)(Xq.c, {
+            worldCode: mq,
+            message: null
+          })]
+        }), "whitelist" === (null === Aq || void 0 === Aq ? void 0 : Aq.visibility) && (0, Tq.jsx)(Dq, {
+          state: jq,
+          lobbyName: Oq,
+          listed: vq,
+          isListed: qq => (0, wq.k)(Aq.whitelist, qq),
+          Wy: (qq, Eq) => {
+            (0, lq.reportAnalyticsClick)(Eq ? {
+              id: "lobby_manage.whitelist_add",
+              value: "SB"
+            } : {
+              id: "lobby_manage.whitelist_remove"
+            }), yq(Eq ? {
+              whitelistAdd: [qq]
+            } : {
+              whitelistRemove: qq
+            }, (gq => (0, wq.s)(gq, [qq], Eq))).then((Eq => {
+              tq(`whitelist:${qq.toLowerCase()}`, Eq)
+            }))
+          },
+          Fy: async qq => {
+            (0, lq.reportAnalyticsClick)({
+              id: "lobby_manage.whitelist_add",
+              value: "field"
+            });
+            const Eq = await yq({
+              whitelistAdd: [qq]
+            }, (Eq => (0, wq.s)(Eq, [qq], !0)));
+            return null === Eq ? {
+              ok: !1,
+              error: xq("worldSocial:changeFailed")
+            } : "error" in Eq ? {
+              ok: !1,
+              error: xq(Eq.error)
+            } : (0, wq.k)(Eq.notFound, qq) ? {
+              ok: !1,
+              error: xq("lobbyManage:noPlayerCalled", {
+                playerName: qq
+              })
+            } : {
+              ok: !0
+            }
+          },
+          statusOf: qq => gq.statusOf(`whitelist:${qq.toLowerCase()}`)
+        }), "public" === (null === Aq || void 0 === Aq ? void 0 : Aq.visibility) && null !== jq.listing && (0, Tq.jsx)(qE, {
+          manage: gq,
+          listing: jq.listing
+        })]
+      })
+    }
+
+    function OE(qq) {
+      var Eq;
+      let {
+        manage: gq,
+        lobbyName: Yq
+      } = qq;
+      const {
+        t: Oq
+      } = (0, Wq.v)(), {
+        state: mq
+      } = gq, xq = cq(), Aq = null !== (Eq = mq.whitelist) && void 0 !== Eq ? Eq : [];
+      return (0, Tq.jsxs)("div", {
+        className: "LobbyManagePage",
+        children: [(0, Tq.jsxs)("div", {
+          className: "LobbyManageBox",
+          children: [(0, Tq.jsx)(Vq.c, {
+            label: Oq("worldSocial:whoCanJoin")
+          }), (0, Tq.jsx)("div", {
+            className: "LobbyManageModeText",
+            children: Oq(`worldSocial:${mq.visibility}`)
+          })]
+        }), "whitelist" === mq.visibility && mq.you.canEditWhitelist && (0, Tq.jsx)(Dq, {
+          state: mq,
+          lobbyName: Yq,
+          listed: Aq,
+          isListed: qq => {
+            var Eq;
+            return null !== (Eq = xq.get(qq.toLowerCase())) && void 0 !== Eq ? Eq : (0, wq.k)(Aq, qq)
+          },
+          Wy: (qq, Eq) => {
+            (0, lq.reportAnalyticsClick)(Eq ? {
+              id: "lobby_manage.whitelist_add",
+              value: "SB"
+            } : {
+              id: "lobby_manage.whitelist_remove"
+            });
+            const Yq = qq.toLowerCase();
+            xq.hold(Yq, Eq, gq.send(Eq ? {
+              type: "whitelistAdd",
+              names: [qq]
+            } : {
+              type: "whitelistRemove",
+              name: qq
+            }, `whitelist:${Yq}`))
+          },
+          Fy: async qq => {
+            (0, lq.reportAnalyticsClick)({
+              id: "lobby_manage.whitelist_add",
+              value: "field"
+            });
+            const Eq = await gq.send({
+              type: "whitelistAdd",
+              names: [qq]
+            }, "whitelist-field");
+            return Eq.ok ? {
+              ok: !0
+            } : {
+              ok: !1,
+              error: (0, Tq.jsx)(fq.c, {
+                text: Eq.message
+              })
+            }
+          },
+          statusOf: qq => gq.statusOf(`whitelist:${qq.toLowerCase()}`)
+        }), "public" === mq.visibility && null !== mq.listing && (0, Tq.jsx)(qE, {
+          manage: gq,
+          listing: mq.listing
+        })]
+      })
+    }
+    var mE = gq(4828),
+      xE = gq(1341);
+    const AE = /[\p{Script_Extensions=Han}\p{Script_Extensions=Hiragana}\p{Script_Extensions=Katakana}\p{Script_Extensions=Hangul}\u{3000}-\u{303F}\u{FF01}-\u{FF60}\u{FFE0}-\u{FFE6}]/u;
+    const cE = (0, Yq.memo)((function(qq) {
+      var Eq;
+      let {
+        rule: gq,
+        value: Yq,
+        status: lq,
+        pending: Oq,
+        hiddenNames: mq,
+        eT: xq,
+        onAction: Aq
+      } = qq;
+      const {
+        t: cq
+      } = (0, Wq.v)(), uq = qq => xq(gq, qq), Bq = (qq, Eq) => {
+        Aq(gq, qq, Eq)
+      }, Nq = iq(cq, gq.label, mq), aq = gq.info ? iq(cq, gq.info, mq) : void 0, Vq = gq.placeholder ? iq(cq, gq.placeholder, mq) : void 0, dq = (null !== (Eq = gq.options) && void 0 !== Eq ? Eq : []).map((qq => ({
+        value: qq.value,
+        label: iq(cq, qq.label, mq)
+      }))), jq = Math.max(0, ...dq.map((qq => function(qq) {
+        let Eq = 0;
+        for (const gq of qq) Eq += AE.test(gq) ? 2 : 1;
+        return Eq
+      }(qq.label)))), Hq = lq && (0, Tq.jsx)("div", {
+        className: "LobbyManageRuleStatus",
+        children: (0, Tq.jsx)(zq, {
+          status: lq
+        })
+      }), Pq = (0, Tq.jsxs)("div", {
+        className: "SliderText",
+        children: [Nq, void 0 !== aq && (0, Tq.jsx)(xE.c, {
+          className: "SettingsTextInputCircleInfo",
+          hoverInfo: aq
+        })]
+      });
+      return "toggle" === gq.kind ? (0, Tq.jsxs)(Tq.Fragment, {
+        children: [(0, Tq.jsx)(mE.d, {
+          label: Nq,
+          checked: !0 === Yq,
+          circleInfoText: aq,
+          disabled: Oq,
+          onClick: uq
+        }), Hq]
+      }) : "choice" === gq.kind && dq.length <= 3 ? (0, Tq.jsxs)(Tq.Fragment, {
+        children: [(0, Tq.jsx)(mE.f, {
+          label: Nq,
+          options: dq,
+          value: String(Yq),
+          circleInfoText: aq,
+          onChange: uq
+        }), Hq]
+      }) : (0, Tq.jsxs)("div", {
+        className: "SettingBox LobbyManageRuleRow",
+        children: [Pq, "choice" === gq.kind && (0, Tq.jsx)("span", {
+          className: "LobbyManageRuleChoice",
+          style: {
+            "--lobby-choice-chars": jq
+          },
+          children: (0, Tq.jsx)(nq.d, {
+            options: dq,
+            value: String(Yq),
+            disabled: Oq,
+            onChange: qq => {
+              uq(qq.value)
+            }
+          })
+        }), ("number" === gq.kind || "text" === gq.kind) && (0, Tq.jsx)(pq, {
+          value: null === Yq ? "" : String(Yq),
+          placeholder: Vq,
+          ariaLabel: Nq,
+          onSave: qq => {
+            const Eq = qq.trim(),
+              Yq = Number(Eq);
+            return uq("number" === gq.kind && "" !== Eq && Number.isFinite(Yq) ? Yq : Eq)
+          }
+        }), "action" === gq.kind && (0, Tq.jsxs)("div", {
+          className: "LobbyManageRuleInput",
+          children: [dq.length > 3 && (0, Tq.jsx)(nq.d, {
+            options: dq,
+            value: {
+              value: "",
+              label: null !== Vq && void 0 !== Vq ? Vq : Nq
+            },
+            disabled: Oq,
+            onChange: qq => {
+              Bq(qq.value)
+            }
+          }), dq.length > 0 && dq.length <= 3 && dq.map((qq => (0, Tq.jsx)(oq.i, {
+            className: "SmallTextLight",
+            disabled: Oq,
+            onClick: () => {
+              Bq(qq.value)
+            },
+            children: qq.label
+          }, qq.value))), 0 === dq.length && (0, Tq.jsx)(oq.i, {
+            className: "SmallTextLight",
+            disabled: Oq,
+            onClick: () => {
+              Bq()
+            },
+            children: null !== Vq && void 0 !== Vq ? Vq : Nq
+          })]
+        }), "names" === gq.kind && (0, Tq.jsx)(uE, {
+          names: Array.isArray(Yq) ? Yq : [],
+          pending: Oq,
+          onAction: Bq
+        }), Hq]
+      })
+    }));
+
+    function uE(qq) {
+      let {
+        names: Eq,
+        pending: gq,
+        onAction: lq
+      } = qq;
+      const {
+        t: Oq
+      } = (0, Wq.v)(), mq = (0, Yq.useRef)(null), [xq, Aq] = (0, Yq.useState)(""), cq = () => {
+        const qq = xq.trim();
+        "" !== qq && (lq(qq, "add"), mq.current && (mq.current.value = ""), Aq(""))
+      };
+      return (0, Tq.jsxs)("div", {
+        className: "LobbyManageNames",
+        children: [Eq.map((qq => (0, Tq.jsxs)("div", {
+          className: "LobbyManageName",
+          children: [(0, Tq.jsx)("span", {
+            className: "LobbyManageNameText",
+            children: qq
+          }), (0, Tq.jsx)(oq.i, {
+            className: "LobbyManageIconButton SmallTextLight",
+            ariaLabel: Oq("lobbyManage:removeName", {
+              name: qq
+            }),
+            disabled: gq,
+            onClick: () => {
+              lq(qq, "remove")
+            },
+            children: (0, Tq.jsx)(Nq.d, {
+              name: "xmark"
+            })
+          })]
+        }, qq))), (0, Tq.jsxs)("div", {
+          className: "LobbyManageRuleInput",
+          children: [(0, Tq.jsx)(Mq.b, {
+            domRef: mq,
+            placeholderText: Oq("lobbyManage:namePlaceholder"),
+            ariaLabel: Oq("lobbyManage:namePlaceholder"),
+            maxLength: 32,
+            onValueChange: qq => {
+              Aq(qq)
+            },
+            onEnter: cq
+          }), (0, Tq.jsx)(oq.i, {
+            className: "SmallTextLight",
+            disabled: gq || "" === xq.trim(),
+            onClick: cq,
+            children: Oq("lobbyManage:addHere")
+          })]
+        })]
+      })
+    }
+    const BE = [{
+      group: "gameplay",
+      title: "lobbyManage:gameplay"
+    }, {
+      group: "world",
+      title: "lobbyManage:world"
+    }];
+
+    function WE(qq) {
+      return BE.flatMap((Eq => {
+        let {
+          group: gq
+        } = Eq;
+        return qq.filter((qq => qq.group === gq && void 0 === qq.parent))
+      }))
+    }
+
+    function NE(qq) {
+      let {
+        manage: Eq,
+        rowsShown: gq
+      } = qq;
+      const {
+        t: Oq
+      } = (0, Wq.v)(), mq = (0, Hq.g)("hiddenPlayerNames"), {
+        rules: xq
+      } = Eq.state, Aq = cq(), uq = new Set(WE(xq).slice(0, gq)), Bq = qq => {
+        const Eq = Aq.get(qq.key);
+        return void 0 === Eq ? qq.value : Eq
+      }, {
+        hold: Nq
+      } = Aq, aq = (0, Yq.useCallback)(((qq, gq) => {
+        (0, lq.reportAnalyticsClick)({
+          id: "lobby_manage.set_rule",
+          value: qq.key
+        });
+        const Yq = Eq.send({
+          type: "setRule",
+          key: qq.key,
+          value: gq
+        }, `rule:${qq.key}`);
+        return Nq(qq.key, gq, Yq), Yq
+      }), [Eq, Nq]), dq = (0, Yq.useCallback)(((qq, gq, Yq) => {
+        (0, lq.reportAnalyticsClick)({
+          id: "lobby_manage.set_rule",
+          value: qq.key
+        }), Eq.send({
+          type: "ruleAction",
+          key: qq.key,
+          ...void 0 === gq ? {} : {
+            arg: gq
+          },
+          ...void 0 === Yq ? {} : {
+            op: Yq
+          }
+        }, `rule:${qq.key}`, void 0 === Yq ? Oq("lobbyManage:setJustNow") : void 0)
+      }), [Eq, Oq]), jq = qq => {
+        const gq = `rule:${qq.key}`;
+        return (0, Tq.jsx)(cE, {
+          rule: qq,
+          value: Bq(qq),
+          status: Eq.statusOf(gq),
+          pending: Eq.isPending(gq),
+          hiddenNames: mq,
+          eT: aq,
+          onAction: dq
+        }, qq.key)
+      };
+      return (0, Tq.jsx)("div", {
+        className: "LobbyManagePage LobbyManageRules",
+        children: BE.map((qq => {
+          let {
+            group: Eq,
+            title: gq
+          } = qq;
+          const lq = xq.filter((qq => qq.group === Eq && uq.has(qq)));
+          return 0 === lq.length ? null : (0, Tq.jsxs)(Yq.Fragment, {
+            children: [(0, Tq.jsx)(Vq.c, {
+              label: Oq(gq)
+            }), lq.map((qq => {
+              const Eq = xq.filter((Eq => Eq.parent === qq.key));
+              return 0 === Eq.length || !0 !== Bq(qq) ? jq(qq) : (0, Tq.jsxs)("div", {
+                className: "SettingBoxGroup",
+                children: [jq(qq), Eq.map(jq)]
+              }, qq.key)
+            }))]
+          }, Eq)
+        }))
+      })
+    }
+    const aE = {
+        players: {
+          icon: "user-group",
+          title: "lobbyManage:players"
+        },
+        joining: {
+          icon: "door-open",
+          title: "lobbyManage:joining"
+        },
+        rules: {
+          icon: "list",
+          title: "lobbyManage:rules"
+        },
+        leaderboard: {
+          icon: "trophy",
+          title: "lobbyManage:leaderboard"
+        }
+      },
+      VE = 5,
+      dE = (0, Yq.memo)((function(qq) {
+        let {
+          page: Eq,
+          manage: gq,
+          leaderboard: lq,
+          focusRequest: Oq,
+          onFocused: mq,
+          ruleRowsShown: xq
+        } = qq;
+        return "leaderboard" === Eq ? (0, Tq.jsx)(Yq.Suspense, {
+          fallback: (0, Tq.jsx)("div", {
+            className: "LobbyManageLoading",
+            children: (0, Tq.jsx)(aq.e, {})
+          }),
+          children: lq
+        }) : "joining" === Eq ? (0, Tq.jsx)(gE, {
+          manage: gq
+        }) : "rules" === Eq ? (0, Tq.jsx)(NE, {
+          manage: gq,
+          rowsShown: xq
+        }) : (0, Tq.jsx)(kq, {
+          manage: gq,
+          focusRequest: Oq,
+          onFocused: mq
+        })
+      }));
+
+    function jE(qq) {
+      let {
+        page: Eq
+      } = qq;
+      const {
+        t: gq
+      } = (0, Wq.v)(), Yq = aE[Eq];
+      return (0, Tq.jsxs)(Tq.Fragment, {
+        children: [(0, Tq.jsx)(Nq.d, {
+          name: Yq.icon
+        }), " ", (0, Tq.jsx)("span", {
+          className: "LobbyManagePageTitle",
+          children: gq(Yq.title)
+        })]
+      })
+    }
+
+    function HE(qq) {
+      var Eq;
+      const {
+        t: gq
+      } = (0, Wq.v)(), {
+        pages: Oq,
+        landing: mq
+      } = qq, Aq = (0, Yq.useRef)(null), cq = (0, Yq.useRef)(null), uq = (0, Yq.useRef)(null), Nq = (0, Yq.useRef)(new Map), [aq, Hq] = (0, Yq.useState)(null), oq = (0, Yq.useRef)(aq), Pq = (0, Yq.useRef)(0), [Qq, yq] = (0, Yq.useState)(Oq[0]), tq = null !== aq && void 0 !== aq ? aq : Oq.includes(Qq) ? Qq : Oq[0], [rq] = (0, Yq.useState)(null !== (Eq = null === mq || void 0 === mq ? void 0 : mq.page) && void 0 !== Eq ? Eq : null), vq = null !== rq && Oq.includes(rq) ? [rq, ...Oq.filter((qq => qq !== rq))] : Oq, hq = Math.max(1, Math.ceil(WE(qq.manage.state.rules).length / VE)), nq = vq.flatMap((qq => "rules" === qq ? Array(hq).fill(qq) : [qq])), bq = function(qq, Eq) {
+        const [gq, lq] = (0, Yq.useState)(qq), Oq = gq >= Eq;
+        return Oq && gq !== 1 / 0 && lq(1 / 0), (0, Yq.useLayoutEffect)((() => {
+          if (Oq) return;
+          let qq = !0;
+          return (0, jq.b)().then((() => {
+            qq && lq((qq => qq + 1))
+          })), () => {
+            qq = !1
+          }
+        }), [gq, Oq]), Oq ? 1 / 0 : gq
+      }(1, nq.length), iq = nq.slice(0, bq), Zq = new Set(iq), fq = bq < nq.length, Mq = fq ? iq.filter((qq => "rules" === qq)).length * VE : 1 / 0, zq = (0, Yq.useRef)(qq.focusRequest);
+      zq.current = qq.focusRequest;
+      const Sq = qq => {
+          oq.current = qq, Hq(qq)
+        },
+        pq = () => {
+          var qq, Eq;
+          Aq.current.style.scrollPaddingTop = `${null!==(qq=null===(Eq=uq.current)||void 0===Eq?void 0:Eq.offsetHeight)&&void 0!==qq?qq:0}px`
+        },
+        Gq = qq => {
+          const Eq = Aq.current,
+            gq = Nq.current.get(qq);
+          if (void 0 === gq) return;
+          const Yq = document.activeElement,
+            lq = zq.current,
+            Oq = null === lq ? null : gq.querySelector(`[data-lobby-manage-row="${CSS.escape(lq.name)}"]`);
+          pq(), Yq instanceof HTMLElement && null !== Oq && void 0 !== Oq && Oq.contains(Yq) ? Yq.scrollIntoView({
+            block: "center"
+          }) : null === gq.previousElementSibling ? Eq.scrollTop = 0 : gq.scrollIntoView({
+            block: "start"
+          }), Pq.current = Eq.scrollTop
+        },
+        Lq = qq => {
+          (0, lq.reportAnalyticsClick)({
+            id: "lobby_manage.page",
+            value: qq
+          }), Sq(qq), Gq(qq)
+        },
+        Jq = () => {
+          var qq, Eq;
+          const gq = Aq.current,
+            Yq = gq.getBoundingClientRect().top + (null !== (qq = null === (Eq = uq.current) || void 0 === Eq ? void 0 : Eq.offsetHeight) && void 0 !== qq ? qq : 0),
+            lq = Oq.map((qq => {
+              var Eq, gq;
+              return (null !== (Eq = null === (gq = Nq.current.get(qq)) || void 0 === gq ? void 0 : gq.getBoundingClientRect().top) && void 0 !== Eq ? Eq : 1 / 0) - Yq
+            })),
+            mq = !fq && gq.scrollTop + gq.clientHeight >= gq.scrollHeight - 1;
+          yq(Oq[(0, xq.g)(lq, mq)])
+        },
+        kq = () => {
+          null !== oq.current && (Sq(null), Jq())
+        };
+      (0, Yq.useLayoutEffect)((() => {
+        null !== mq && Oq.includes(mq.page) && Lq(mq.page)
+      }), [null === mq || void 0 === mq ? void 0 : mq.seq]), (0, Yq.useLayoutEffect)((() => {
+        null === oq.current || Oq.includes(oq.current) || kq()
+      }));
+      const {
+        onFocused: Rq
+      } = qq, Uq = (0, Yq.useCallback)((qq => {
+        null !== oq.current && Gq(oq.current), Rq(qq)
+      }), [Rq]);
+      (0, Yq.useLayoutEffect)((() => {
+        const qq = oq.current;
+        null !== qq && (!fq || Oq.indexOf(nq[bq - 1]) < Oq.indexOf(qq)) && Gq(qq)
+      }), [bq]), (0, Yq.useEffect)((() => {
+        const qq = new ResizeObserver((() => {
+          null !== oq.current ? Gq(oq.current) : pq()
+        }));
+        return qq.observe(Aq.current), qq.observe(cq.current), () => {
+          qq.disconnect()
+        }
+      }), []), (0, Yq.useLayoutEffect)((() => {
+        const qq = uq.current,
+          Eq = null === qq || void 0 === qq ? void 0 : qq.querySelector(".SegmentedToggleOptionSelected");
+        Eq && (qq.scrollLeft = Math.min(Eq.offsetLeft, Math.max(qq.scrollLeft, Eq.offsetLeft + Eq.offsetWidth - qq.clientWidth)))
+      }), [tq]);
+      return (0, Tq.jsxs)("div", {
+        ref: Aq,
+        className: "MenuBody LobbyManageBody",
+        onScroll: () => {
+          null === oq.current ? Jq() : Math.abs(Aq.current.scrollTop - Pq.current) > 1 && kq()
+        },
+        onClick: qq => {
+          var Eq;
+          null !== (Eq = uq.current) && void 0 !== Eq && Eq.contains(qq.target) || kq()
+        },
+        onFocus: qq => {
+          var Eq;
+          const gq = null === oq.current ? null : Nq.current.get(oq.current);
+          !gq || gq.contains(qq.target) || null !== (Eq = uq.current) && void 0 !== Eq && Eq.contains(qq.target) || kq()
+        },
+        children: [Oq.length > 1 && (0, Tq.jsx)("div", {
+          ref: uq,
+          className: "LobbyManageChips",
+          children: (0, Tq.jsx)(dq.c, {
+            options: Oq.map((qq => ({
+              value: qq,
+              label: (0, Tq.jsx)(jE, {
+                page: qq
+              }),
+              ariaLabel: gq(aE[qq].title)
+            }))),
+            value: tq,
+            padTabs: "2",
+            ariaLabel: gq("lobbyManageEntry:manageLobby"),
+            reselectable: !0,
+            onChange: Lq
+          })
+        }), (0, Tq.jsx)("div", {
+          ref: cq,
+          className: Bq()("LobbyManageInner", {
+            Staging: fq
+          }),
+          children: Oq.filter((qq => Zq.has(qq))).map((Eq => {
+            const gq = Eq === aq;
+            return (0, Tq.jsxs)("section", {
+              ref: qq => {
+                qq ? Nq.current.set(Eq, qq) : Nq.current.delete(Eq)
+              },
+              className: "LobbyManageSection",
+              "data-pad-initial-area": gq || void 0,
+              children: [Oq.length > 1 && (0, Tq.jsx)("div", {
+                className: "LobbyManageSectionHeading",
+                "data-pad-focusable": gq || void 0,
+                "data-pad-unavailable": gq || void 0,
+                children: (0, Tq.jsx)(Vq.c, {
+                  label: (0, Tq.jsx)(jE, {
+                    page: Eq
+                  })
+                })
+              }), (0, Tq.jsx)(dE, {
+                page: Eq,
+                manage: qq.manage,
+                leaderboard: qq.leaderboard,
+                focusRequest: qq.focusRequest,
+                onFocused: Uq,
+                ruleRowsShown: "rules" === Eq ? Mq : 1 / 0
+              })]
+            }, Eq)
+          }))
+        })]
+      })
+    }
+
+    function oE(qq) {
+      return void 0 === (null === qq || void 0 === qq ? void 0 : qq.page) ? null : {
+        page: qq.page,
+        seq: qq.seq
+      }
+    }
+
+    function PE(qq) {
+      let {
+        leaderboard: Eq
+      } = qq;
+      const gq = function() {
+          const qq = (0, Oq.h)("lobbyManage"),
+            [Eq, gq] = (0, Yq.useReducer)((qq => qq + 1), 0),
+            [lq] = (0, Yq.useState)((() => new Aq.e(gq)));
+          return (0, Yq.useEffect)((() => {
+            const qq = lq.nextDeadline();
+            if (null === qq) return;
+            const Eq = setTimeout((() => {
+              lq.expire(Date.now()), gq()
+            }), Math.max(0, qq - Date.now()));
+            return () => {
+              clearTimeout(Eq)
+            }
+          })), (0, Yq.useMemo)((() => null === qq ? null : {
+            state: qq,
+            send: (qq, Eq, Yq) => {
+              const Oq = lq.send(qq, Eq, null !== Yq && void 0 !== Yq ? Yq : null);
+              return gq(), Oq
+            },
+            statusOf: qq => lq.statusOf(qq, Date.now()),
+            showStatus: (qq, Eq) => {
+              lq.show(qq, Eq)
+            },
+            isPending: qq => lq.isPending(qq)
+          }), [qq, Eq, lq])
+        }(),
+        cq = (0, xq.k)((0, Oq.h)("lobbyLeaderboardInfo")),
+        uq = (0, mq.i)(),
+        [Bq, Wq] = (0, Yq.useState)((() => oE(uq))),
+        [Nq, aq] = (0, Yq.useState)(null);
+      return (0, Yq.useEffect)((() => {
+        null === uq && (0, lq.reportAnalyticsClick)({
+          id: "lobby_manage.open",
+          value: "menu_tab"
+        })
+      }), []), (0, Yq.useEffect)((() => {
+        null !== uq && (Wq((qq => (null === qq || void 0 === qq ? void 0 : qq.seq) === uq.seq ? qq : oE(uq))), void 0 !== uq.focusName && "players" === uq.page ? aq({
+          name: uq.focusName,
+          seq: uq.seq
+        }) : (0, mq.g)(uq.seq))
+      }), [null === uq || void 0 === uq ? void 0 : uq.seq]), null === gq ? null : (0, Tq.jsx)("div", {
+        className: "LobbyManage Menu",
+        children: (0, Tq.jsx)(HE, {
+          pages: (0, xq.d)(gq.state, cq),
+          manage: gq,
+          leaderboard: Eq,
+          focusRequest: Nq,
+          onFocused: mq.g,
+          landing: Bq
+        })
+      })
+    }
+  },
+  36612: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => uq,
+      g: () => Aq
+    });
+    var Yq = gq(1448),
+      lq = gq(1926),
+      Oq = gq(1904);
+    const mq = 1e4;
+    let xq = 0;
+
+    function Aq(qq) {
+      const Eq = ++xq;
+      return new Promise((gq => {
+        const xq = Eq => {
+            Aq(), clearTimeout(cq), !1 === (null === Eq || void 0 === Eq ? void 0 : Eq.ok) && (0, Yq.reportAnalyticsClick)({
+              id: "lobby_manage.refused",
+              value: qq.type
+            }), gq(Eq)
+          },
+          Aq = lq.c.subscribe("lobbyManage", (qq => {
+            const gq = function(qq, Eq) {
+              var gq;
+              return null !== (gq = null === qq || void 0 === qq ? void 0 : qq.results.find((qq => qq.requestId === Eq))) && void 0 !== gq ? gq : null
+            }(qq, Eq);
+            null !== gq && xq(gq)
+          })),
+          cq = setTimeout((() => {
+            xq(null)
+          }), mq);
+        Oq.gameBridge.send("lobbyManage", {
+          ...qq,
+          requestId: Eq
+        })
+      }))
+    }
+    const cq = [{
+      translationKey: "lobbyManageEntry:noAnswer"
+    }];
+    class uq {
+      constructor(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Aq;
+        this.onChange = qq, this.sendAction = Eq, this.pending = new Map, this.statuses = new Map
+      }
+      send(qq, Eq, gq) {
+        var Yq;
+        return this.statuses.delete(Eq), this.pending.set(Eq, (null !== (Yq = this.pending.get(Eq)) && void 0 !== Yq ? Yq : 0) + 1), this.sendAction(qq).then((qq => {
+          var Yq;
+          const lq = null !== qq && void 0 !== qq ? qq : {
+              requestId: -1,
+              ok: !1,
+              message: cq
+            },
+            Oq = (null !== (Yq = this.pending.get(Eq)) && void 0 !== Yq ? Yq : 1) - 1;
+          Oq > 0 ? this.pending.set(Eq, Oq) : this.pending.delete(Eq);
+          const mq = !lq.ok || lq.message.length > 0 ? lq.message : null === gq ? null : [gq];
+          return null !== mq && this.statuses.set(Eq, {
+            ok: lq.ok,
+            text: mq,
+            until: Date.now() + 4e3
+          }), this.onChange(), lq
+        }))
+      }
+      show(qq, Eq) {
+        this.statuses.set(qq, {
+          ...Eq,
+          until: Date.now() + 4e3
+        }), this.onChange()
+      }
+      expire(qq) {
+        for (const [Eq, gq] of this.statuses) gq.until <= qq && this.statuses.delete(Eq)
+      }
+      nextDeadline() {
+        let qq = null;
+        for (const gq of this.statuses.values()) {
+          var Eq;
+          qq = Math.min(null !== (Eq = qq) && void 0 !== Eq ? Eq : 1 / 0, gq.until)
+        }
+        return qq
+      }
+      statusOf(qq, Eq) {
+        const gq = this.statuses.get(qq);
+        return !gq || gq.until <= Eq ? null : {
+          ok: gq.ok,
+          text: gq.text
+        }
+      }
+      isPending(qq) {
+        return this.pending.has(qq)
       }
     }
   },
-  36466: TT => {
-    TT.exports = function(TT) {
-      return !(!TT || "string" === typeof TT) && (TT instanceof Array || Array.isArray(TT) || TT.length >= 0 && (TT.splice instanceof Function || Object.getOwnPropertyDescriptor(TT, TT.length - 1) && "String" !== TT.constructor.name))
+  36599: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => cq,
+      f: () => Aq
+    });
+    var Yq = gq(576),
+      lq = gq(1904),
+      Oq = gq(1628),
+      mq = gq(96),
+      xq = gq(1252);
+
+    function Aq(qq, Eq, gq) {
+      return mq.featureFlags.useSocialFeatures && qq && null === (0, xq.d)(Eq, gq)
     }
+
+    function cq(qq, Eq) {
+      var gq, mq;
+      const xq = Oq.c.getSocialState().friends.find((qq => qq.name.toLowerCase() === Eq.toLowerCase())),
+        Aq = lq.gameBridge.latest("players").byId[qq],
+        cq = void 0 !== Aq && Aq.name === Eq,
+        uq = cq && null !== (gq = Aq.cosmetics) && void 0 !== gq ? gq : void 0,
+        Bq = xq && uq ? {
+          ...xq,
+          cosmetics: uq
+        } : xq;
+      return {
+        playerSocialPreview: null !== Bq && void 0 !== Bq ? Bq : {
+          isError: !1,
+          name: Eq,
+          ranks: cq ? [...Aq.ranks] : [],
+          cosmetics: null !== uq && void 0 !== uq ? uq : {},
+          nameColour: null !== (mq = null === uq || void 0 === uq ? void 0 : uq.nameColour) && void 0 !== mq ? mq : Yq.e,
+          location: {
+            status: "inGame"
+          }
+        },
+        isFriend: void 0 !== xq
+      }
+    }
+  },
+  36768: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => Bq
+    });
+    var Yq = gq(57),
+      lq = gq(1018),
+      Oq = gq.n(lq),
+      mq = gq(1659),
+      xq = gq(1422),
+      Aq = gq(1326),
+      cq = gq(1025),
+      uq = gq(1070);
+
+    function Bq(qq) {
+      let {
+        label: Eq,
+        icon: gq,
+        placeholder: lq,
+        onSubmit: Bq
+      } = qq;
+      const Wq = (0, Yq.useRef)(null),
+        [Nq, aq] = (0, Yq.useState)(""),
+        [Vq, dq] = (0, Yq.useState)("Enter"),
+        [jq, Hq] = (0, Yq.useState)(null);
+      (0, Yq.useEffect)((() => {
+        if ("Success" !== Vq && "Error" !== Vq) return;
+        const qq = setTimeout((() => {
+          "Success" === Vq && Wq.current && (Wq.current.value = "", aq("")), dq("Enter")
+        }), "Success" === Vq ? 1e3 : 4e3);
+        return () => {
+          clearTimeout(qq)
+        }
+      }), [Vq]);
+      const oq = () => {
+        const qq = Nq.trim();
+        "" !== qq && "Enter" === Vq && (dq("Loading"), Bq(qq).then((qq => {
+          Wq.current && ("error" in qq ? null === qq.error ? dq("Enter") : (Hq(qq.error), dq("Error")) : dq("Success"))
+        })))
+      };
+      return (0, uq.jsxs)("div", {
+        className: "PlayerNameField",
+        onKeyDown: qq => {
+          qq.target === Wq.current && "Escape" !== qq.key && qq.stopPropagation()
+        },
+        children: [(0, uq.jsxs)("div", {
+          className: Oq()("AddFriendBodyOverlay", `AddFriendBodyOverlay${Vq}`),
+          children: ["Loading" === Vq && (0, uq.jsx)(Aq.e, {}), "Success" === Vq && (0, uq.jsx)(cq.d, {
+            name: "check"
+          }), "Error" === Vq && jq]
+        }), (0, uq.jsxs)("div", {
+          className: "PlayerSearch",
+          children: [(0, uq.jsx)(mq.b, {
+            className: "PlayerSearchInput",
+            domRef: Wq,
+            maxLength: 32,
+            placeholderText: lq,
+            ariaLabel: lq,
+            stopPropagation: !1,
+            onValueChange: qq => {
+              aq(qq)
+            },
+            onEnter: oq
+          }), (0, uq.jsxs)(xq.g, {
+            className: "PlayerSearchInputButton SmallTextLight",
+            disabled: "Enter" !== Vq || "" === Nq.trim(),
+            onClick: oq,
+            children: [(0, uq.jsx)(cq.d, {
+              name: gq
+            }), " ", Eq]
+          })]
+        })]
+      })
+    }
+  },
+  36757: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => Bq
+    });
+    var Yq = gq(57),
+      lq = gq(1018),
+      Oq = gq.n(lq),
+      mq = gq(1183),
+      xq = gq(1025),
+      Aq = gq(1070);
+    const cq = {
+        unlisted: "link",
+        public: "globe",
+        whitelist: "user-check",
+        private: "lock"
+      },
+      uq = ["unlisted", "public", "whitelist", "private"];
+
+    function Bq(qq) {
+      let {
+        visibility: Eq,
+        onPick: gq
+      } = qq;
+      const {
+        t: lq
+      } = (0, mq.v)(), Bq = (0, Yq.useRef)([]);
+      return (0, Aq.jsx)("div", {
+        className: "WorldSocialTiles",
+        role: "group",
+        "aria-label": lq("worldSocial:whoCanJoin"),
+        children: uq.map(((qq, Yq) => {
+          const mq = qq === Eq;
+          return (0, Aq.jsxs)("button", {
+            ref: qq => {
+              Bq.current[Yq] = qq
+            },
+            type: "button",
+            className: Oq()("WorldSocialTile", {
+              WorldSocialTileSelected: mq
+            }),
+            "aria-pressed": mq,
+            tabIndex: mq ? 0 : -1,
+            onKeyDown: qq => {
+              ((qq, Eq) => {
+                const gq = "ArrowRight" === qq.key || "ArrowDown" === qq.key ? 1 : "ArrowLeft" === qq.key || "ArrowUp" === qq.key ? -1 : 0;
+                var Yq;
+                0 !== gq && (qq.preventDefault(), null === (Yq = Bq.current[(Eq + gq + uq.length) % uq.length]) || void 0 === Yq || Yq.focus())
+              })(qq, Yq)
+            },
+            onClick: () => {
+              gq(qq)
+            },
+            children: [(0, Aq.jsx)("span", {
+              className: "WorldSocialTileIcon",
+              children: (0, Aq.jsx)(xq.d, {
+                name: cq[qq]
+              })
+            }), (0, Aq.jsxs)("span", {
+              className: "WorldSocialTileText",
+              children: [(0, Aq.jsx)("span", {
+                className: "WorldSocialTileTitle",
+                children: lq(`worldSocial:${qq}`)
+              }), (0, Aq.jsx)("span", {
+                className: "WorldSocialTileDescription",
+                children: lq(`worldSocial:${qq}Description`)
+              })]
+            })]
+          }, qq)
+        }))
+      })
+    }
+  },
+  36764: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => xq
+    });
+    var Yq = gq(1183),
+      lq = gq(2563),
+      Oq = gq(4195),
+      mq = gq(1070);
+
+    function xq(qq) {
+      let {
+        SB: Eq,
+        children: gq,
+        ...xq
+      } = qq;
+      const {
+        t: Aq
+      } = (0, Yq.v)();
+      return (0, mq.jsx)("div", {
+        className: "WhitelistTickRow",
+        onClick: () => {
+          Eq.onChange(!Eq.on)
+        },
+        children: (0, mq.jsx)(lq.i, {
+          ...xq,
+          opensProfileCard: !1,
+          children: (0, mq.jsxs)("div", {
+            className: "WhitelistTickRowActions",
+            onClick: qq => {
+              qq.stopPropagation()
+            },
+            children: [gq, (0, mq.jsx)("label", {
+              className: "WhitelistTickRowTick",
+              children: (0, mq.jsx)(Oq.b, {
+                checked: Eq.on,
+                disabled: !1,
+                ariaLabel: Aq("worldSocial:letJoin", {
+                  playerName: xq.playerSocialPreview.name
+                }),
+                onChange: qq => {
+                  Eq.onChange(qq.target.checked)
+                }
+              })
+            })]
+          })
+        })
+      })
+    }
+  },
+  36755: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => aq
+    });
+    var Yq = gq(57),
+      lq = gq(1183),
+      Oq = gq(1824),
+      mq = gq(96),
+      xq = gq(24),
+      Aq = gq(1448),
+      cq = gq(2595),
+      uq = gq(9176),
+      Bq = gq(1422),
+      Wq = gq(1025),
+      Nq = gq(1070);
+
+    function aq(qq) {
+      let {
+        worldCode: Eq,
+        message: gq
+      } = qq;
+      const {
+        t: aq
+      } = (0, lq.v)(), {
+        isTouchScreen: Vq
+      } = (0, xq.j)(["isTouchScreen"]), dq = mq.featureFlags.canUseInviteLinks, jq = (0, uq.g)(dq && null === gq), [Hq, oq] = (0, cq.i)(), Pq = (0, Yq.useRef)(null);
+      if (null !== gq) return (0, Nq.jsxs)("div", {
+        className: "WorldSocialLinkRow WorldSocialLinkRowMessage",
+        children: [(0, Nq.jsx)(Wq.d, {
+          name: "lock"
+        }), (0, Nq.jsx)("span", {
+          children: gq
+        })]
+      });
+      const Qq = dq ? jq : Eq,
+        yq = Vq && dq && (0, cq.b)();
+      return (0, Nq.jsxs)("div", {
+        className: "WorldSocialLinkRow",
+        children: [!dq && (0, Nq.jsx)("span", {
+          className: "WorldSocialCodeLabel",
+          children: aq("worldSocial:worldCode")
+        }), (0, Nq.jsx)("input", {
+          ref: Pq,
+          className: "WorldSocialLink",
+          readOnly: !0,
+          value: null !== Qq && void 0 !== Qq ? Qq : "",
+          "aria-label": aq(dq ? "worldSocial:worldLink" : "worldSocial:worldCode"),
+          onFocus: qq => {
+            qq.currentTarget.select()
+          }
+        }), (0, Nq.jsxs)(Bq.g, {
+          className: "WorldSocialCopy",
+          disabled: null === Qq,
+          onClick: () => {
+            null !== Qq && (0, cq.f)(Qq, {
+              useShareSheet: yq,
+              onOutcome: qq => {
+                if ((0, Aq.reportAnalyticsClick)({
+                    id: "world_social.copy_link",
+                    value: "copied" !== qq || dq ? qq : "code"
+                  }), "copied" === qq) oq();
+                else if ("failed" === qq) {
+                  var Eq;
+                  null === (Eq = Pq.current) || void 0 === Eq || Eq.focus(), Oq.g.showMessage({
+                    translationKey: "partyBar:copyFailed"
+                  })
+                }
+              }
+            })
+          },
+          children: [(0, Nq.jsx)(Wq.d, {
+            name: Hq ? "check" : yq ? "up-from-bracket" : "copy"
+          }), " ", aq(Hq ? "general:copied" : yq ? "worldSocial:share" : "general:copy")]
+        })]
+      })
+    }
+  },
+  36759: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => Nq,
+      h: () => Wq,
+      l: () => Bq
+    });
+    var Yq = gq(576),
+      lq = gq(1183),
+      Oq = gq(1628),
+      mq = gq(2563),
+      xq = gq(2517),
+      Aq = gq(1422),
+      cq = gq(36764),
+      uq = gq(1070);
+
+    function Bq(qq, Eq) {
+      var gq;
+      return {
+        isError: !1,
+        name: qq,
+        ranks: [...arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : []],
+        cosmetics: null !== Eq && void 0 !== Eq ? Eq : {},
+        nameColour: null !== (gq = null === Eq || void 0 === Eq ? void 0 : Eq.nameColour) && void 0 !== gq ? gq : Yq.e,
+        location: {
+          status: "offline"
+        }
+      }
+    }
+
+    function Wq(qq) {
+      let {
+        player: Eq,
+        isFriend: gq = !1,
+        status: Yq,
+        showLocation: Aq = void 0 === Yq,
+        SB: Bq,
+        onSendFriendRequest: Wq,
+        actions: Nq,
+        zIndex: aq
+      } = qq;
+      const {
+        t: Vq
+      } = (0, lq.v)();
+      let dq = Yq;
+      null !== Bq && void 0 !== Bq && Bq.on && (dq = (0, uq.jsxs)(uq.Fragment, {
+        children: [null !== Yq && void 0 !== Yq ? Yq : (0, uq.jsx)(xq.e, {
+          socialPreview: Eq
+        }), (0, uq.jsxs)("span", {
+          className: "WorldSocialCanJoin",
+          children: [" \xb7 ", Vq("worldSocial:canJoin")]
+        })]
+      }));
+      const jq = {
+        playerSocialPreview: Eq,
+        isFriend: gq,
+        hideFriendBadge: !0,
+        onFriendRemoved: gq ? qq => {
+          Oq.c.removeFriendFromState(qq)
+        } : void 0,
+        status: dq,
+        showLocation: Aq,
+        onSendFriendRequest: Wq,
+        zIndex: aq
+      };
+      return Bq ? (0, uq.jsx)(cq.d, {
+        ...jq,
+        SB: Bq,
+        children: Nq
+      }) : (0, uq.jsx)(mq.i, {
+        ...jq,
+        opensProfileCard: !1,
+        children: Nq || void 0
+      })
+    }
+
+    function Nq(qq) {
+      let {
+        row: Eq,
+        SB: gq,
+        canInvite: Yq,
+        invited: Oq,
+        onInvite: mq,
+        zIndex: xq
+      } = qq;
+      const {
+        t: cq
+      } = (0, lq.v)(), Bq = "online" === Eq.place ? Aq.g : Aq.i;
+      return (0, uq.jsx)(Wq, {
+        player: Eq.friend,
+        isFriend: !0,
+        status: "here" === Eq.place ? cq("worldSocial:inThisWorld") : void 0,
+        showLocation: !0,
+        SB: gq,
+        zIndex: xq,
+        actions: Yq && (0, uq.jsx)(Bq, {
+          className: "WorldSocialInvite SmallTextLight",
+          disabled: Oq,
+          onClick: mq,
+          ariaLabel: `${cq("worldSocial:invite")} ${Eq.friend.name}`,
+          children: cq(Oq ? "worldSocial:invited" : "worldSocial:invite")
+        })
+      })
+    }
+  },
+  36748: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => Aq,
+      h: () => mq,
+      j: () => cq
+    });
+    var Yq = gq(57),
+      lq = gq(4413),
+      Oq = gq(1824);
+
+    function mq(qq) {
+      const Eq = {
+        lobbyName: qq,
+        answer: null,
+        response: lq.d.getSocialSettings(qq)
+      };
+      return Eq.response.then((qq => {
+        Eq.answer = qq
+      })), Eq
+    }
+    const xq = new Map;
+
+    function Aq(qq) {
+      xq.set(qq.lobbyName, qq)
+    }
+
+    function cq(qq) {
+      const [Eq] = (0, Yq.useState)((() => function(qq) {
+        var Eq;
+        const gq = null !== (Eq = xq.get(qq)) && void 0 !== Eq ? Eq : null;
+        return null !== gq && void 0 !== gq && gq.answer && "error" in gq.answer ? null : gq
+      }(qq))), [gq, mq] = (0, Yq.useState)((() => null !== Eq && void 0 !== Eq && Eq.answer && "settings" in Eq.answer ? Eq.answer.settings : null)), [Aq, cq] = (0, Yq.useState)(!0), [uq, Bq] = (0, Yq.useState)(null !== gq), Wq = (0, Yq.useRef)(gq);
+      Wq.current = gq;
+      const Nq = (0, Yq.useRef)(0),
+        aq = (0, Yq.useRef)(0),
+        Vq = (0, Yq.useRef)(!1),
+        dq = (0, Yq.useRef)(!0),
+        jq = (0, Yq.useCallback)((async Eq => {
+          const gq = ++Nq.current,
+            Yq = await (null !== Eq && void 0 !== Eq ? Eq : lq.d.getSocialSettings(qq));
+          dq.current && gq === Nq.current && (Bq(!0), cq(!1), "error" in Yq || mq(Yq.settings))
+        }), [qq]),
+        Hq = (0, Yq.useCallback)((() => {
+          cq(!0), jq()
+        }), [jq]),
+        oq = (0, Yq.useCallback)((() => {
+          aq.current > 0 ? Vq.current = !0 : jq()
+        }), [jq]);
+      (0, Yq.useEffect)((() => (dq.current = !0, xq.delete(qq), cq(!0), jq(null === Eq || void 0 === Eq ? void 0 : Eq.response), () => {
+        dq.current = !1
+      })), [jq, qq, Eq]);
+      const Pq = qq => {
+        Nq.current++, cq(!1), Wq.current = qq, mq(qq)
+      };
+      return {
+        settings: gq,
+        loading: Aq,
+        answered: uq,
+        retry: Hq,
+        refresh: oq,
+        change: async function(Eq, gq) {
+          let {
+            quiet: Yq = !1,
+            onAnswer: mq
+          } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+          const xq = Wq.current;
+          if (null === xq) return !1;
+          Pq(gq(xq)), aq.current > 0 && (Vq.current = !0), aq.current++;
+          const Aq = await lq.d.setSocialSettings(qq, Eq);
+          aq.current--;
+          const cq = !("error" in Aq);
+          if (!dq.current) return cq;
+          if (null === mq || void 0 === mq || mq(Aq), Yq);
+          else if ("error" in Aq) Oq.g.showMessage({
+            translationKey: Aq.error
+          });
+          else
+            for (const qq of Aq.notFound) Oq.g.showMessage({
+              translationKey: "worldSocial:notFound",
+              params: {
+                playerName: qq
+              }
+            });
+          if (aq.current > 0) return cq;
+          const uq = Vq.current;
+          return Vq.current = !1, !uq && "settings" in Aq ? Pq(Aq.settings) : (uq || Pq(xq), jq()), cq
+        }
+      }
+    }
+  },
+  36775: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => mq,
+      e: () => Oq
+    });
+    var Yq = gq(163);
+    const lq = new Map;
+
+    function Oq(qq, Eq) {
+      var gq;
+      const Yq = null !== (gq = lq.get(qq)) && void 0 !== gq ? gq : new Map;
+      Yq.set(Eq, Date.now()), lq.set(qq, Yq)
+    }
+
+    function mq(qq) {
+      const Eq = lq.get(qq);
+      if (!Eq) return [];
+      const gq = Date.now();
+      for (const [lq, Oq] of Eq) gq - Oq >= Yq.j && Eq.delete(lq);
+      return [...Eq.keys()]
+    }
+  },
+  36753: (qq, Eq, gq) => {
+    function Yq(qq, Eq) {
+      const gq = Eq.toLowerCase();
+      for (const Yq of qq)
+        if (Yq.toLowerCase() === gq) return !0;
+      return !1
+    }
+
+    function lq(qq, Eq, gq) {
+      const lq = [],
+        Oq = [],
+        mq = [];
+      for (const xq of qq) !xq.isError && xq.name && ("inGame" === xq.location.status && xq.location.inLobbyName === Eq || Yq(gq, xq.name) ? Oq.push({
+        friend: xq,
+        place: "here"
+      }) : "offline" === xq.location.status ? mq.push({
+        friend: xq,
+        place: "offline"
+      }) : lq.push({
+        friend: xq,
+        place: "online"
+      }));
+      return [...lq, ...Oq, ...mq]
+    }
+
+    function Oq(qq, Eq, gq) {
+      const lq = [],
+        Oq = qq.flatMap((qq => "here" === qq.place ? [qq.friend.name] : []));
+      for (const mq of [...Oq, ...Eq]) Yq(lq, mq) || Yq(gq, mq) || lq.push(mq);
+      return lq
+    }
+
+    function mq(qq, Eq) {
+      return null === qq || void 0 === qq || !qq.canManage || Yq(qq.whitelist, Eq) ? "none" : "whitelist" === qq.visibility ? "required" : "quiet"
+    }
+
+    function xq(qq) {
+      if (null === qq) return !0;
+      const {
+        visibility: Eq
+      } = qq;
+      return "public" === Eq || "unlisted" === Eq || "whitelist" === Eq && qq.canManage
+    }
+
+    function Aq(qq, Eq, gq) {
+      if (gq) {
+        const gq = Eq.filter((Eq => !Yq(qq.whitelist, Eq)));
+        return {
+          ...qq,
+          whitelist: [...qq.whitelist, ...gq]
+        }
+      }
+      return {
+        ...qq,
+        whitelist: qq.whitelist.filter((qq => !Yq(Eq, qq)))
+      }
+    }
+
+    function cq(qq, Eq) {
+      const gq = [];
+      for (let Yq = 0; Yq < qq.length; Yq += Eq) gq.push(qq.slice(Yq, Yq + Eq));
+      return gq
+    }
+    gq.d(Eq, {
+      c: () => xq,
+      d: () => Oq,
+      h: () => lq,
+      k: () => Yq,
+      l: () => cq,
+      o: () => mq,
+      s: () => Aq
+    })
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

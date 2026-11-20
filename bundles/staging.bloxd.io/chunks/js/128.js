@@ -1,106 +1,106 @@
 export const id = 128;
-export const ids = [127, 128, 130];
+export const ids = [128, 131];
 export const modules = {
-  6597: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => lT.e,
-      d: () => MT,
-      f: () => lT.l
+  6482: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => Yq.h,
+      c: () => lq,
+      e: () => Yq.o
     });
-    var lT = cT(6581);
-    const MT = [!1, !0].flatMap((TT => ["terrain", "liquid", "model"].map((kT => ({
-      strict: TT,
-      program: kT
+    var Yq = gq(6458);
+    const lq = [!1, !0].flatMap((qq => ["terrain", "liquid", "model"].map((Eq => ({
+      strict: qq,
+      program: Eq
     })))))
   },
-  6641: (TT, kT, cT) => {
-    cT.r(kT), cT.d(kT, {
-      forgetShaderPackActiveHint: () => zT,
-      isOtherApiVersion: () => PT,
-      isShaderPackActive: () => DT,
-      isShaderPackChangePending: () => rT,
-      markShaderPackChangePending: () => FT,
-      pageShaderPackValidationVersion: () => wT,
-      reconcileStoredShaderPackHint: () => bT,
-      removeShaderPack: () => ST,
-      replaceShaderPack: () => hT,
-      saveShaderPack: () => tT,
-      shaderPackNeedsCheck: () => mT,
-      storedPackOutcome: () => aT,
-      storedShaderPackFiles: () => CT,
-      toStoredShaderPack: () => AT
+  6531: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      forgetShaderPackActiveHint: () => bq,
+      isOtherApiVersion: () => rq,
+      isShaderPackActive: () => Pq,
+      isShaderPackChangePending: () => tq,
+      markShaderPackChangePending: () => yq,
+      pageShaderPackValidationVersion: () => vq,
+      reconcileStoredShaderPackHint: () => nq,
+      removeShaderPack: () => oq,
+      replaceShaderPack: () => dq,
+      saveShaderPack: () => Vq,
+      shaderPackNeedsCheck: () => hq,
+      storedPackOutcome: () => Qq,
+      storedShaderPackFiles: () => Wq,
+      toStoredShaderPack: () => Bq
     });
-    var lT = cT(6581),
-      MT = cT(6597),
-      KT = cT(47),
-      OT = cT(3383),
-      yT = cT(6647),
-      fT = cT(6623);
-    const xT = "shaderPackChangePending";
-    let IT = null;
+    var Yq = gq(6458),
+      lq = gq(6482),
+      Oq = gq(38),
+      mq = gq(3324),
+      xq = gq(6535),
+      Aq = gq(6514);
+    const cq = "shaderPackChangePending";
+    let uq = null;
 
-    function AT(TT, kT, cT) {
+    function Bq(qq, Eq, gq) {
       return {
-        manifest: TT.manifest,
-        files: (0, lT.s)(TT.files),
-        validation: kT,
-        ...cT && {
-          listing: cT
+        manifest: qq.manifest,
+        files: (0, Yq.w)(qq.files),
+        validation: Eq,
+        ...gq && {
+          listing: gq
         }
       }
     }
 
-    function CT(TT) {
-      return Object.keys(TT.files).map((kT => ({
-        path: kT,
-        source: TT.files[kT]
+    function Wq(qq) {
+      return Object.keys(qq.files).map((Eq => ({
+        path: Eq,
+        source: qq.files[Eq]
       })))
     }
-    let jT = Promise.resolve();
+    let Nq = Promise.resolve();
 
-    function vT(TT) {
-      const kT = jT.then(TT);
-      return jT = kT.catch((() => {})), kT
-    }
-
-    function tT(TT, kT) {
-      return vT((() => NT(TT, kT)))
+    function aq(qq) {
+      const Eq = Nq.then(qq);
+      return Nq = Eq.catch((() => {})), Eq
     }
 
-    function hT(TT, kT, cT) {
-      return vT((async () => JSON.stringify(await (0, yT.e)()) === JSON.stringify(TT) && (null === kT ? (await QT(), !0) : NT(kT, cT))))
-    }
-    async function NT(TT, kT) {
-      const cT = await KT.d.setItem(yT.b, TT);
-      return cT && JT(TT, kT), cT
-    }
-    async function QT() {
-      await KT.d.removeItem(yT.b), KT.e.removeItem(OT.d)
+    function Vq(qq, Eq) {
+      return aq((() => jq(qq, Eq)))
     }
 
-    function ST() {
-      return vT(QT)
+    function dq(qq, Eq, gq) {
+      return aq((async () => JSON.stringify(await (0, xq.d)()) === JSON.stringify(qq) && (null === Eq ? (await Hq(), !0) : jq(Eq, gq))))
+    }
+    async function jq(qq, Eq) {
+      const gq = await Oq.f.setItem(xq.b, qq);
+      return gq && iq(qq, Eq), gq
+    }
+    async function Hq() {
+      await Oq.f.removeItem(xq.b), Oq.i.removeItem(mq.c)
     }
 
-    function DT(TT, kT) {
-      return "active" === aT(TT, kT).kind
+    function oq() {
+      return aq(Hq)
     }
 
-    function aT(TT, kT) {
-      var cT;
-      return null === TT ? {
+    function Pq(qq, Eq) {
+      return "active" === Qq(qq, Eq).kind
+    }
+
+    function Qq(qq, Eq) {
+      var gq;
+      return null === qq ? {
         kind: "none",
         reason: "nothingStored"
-      } : PT(TT) ? {
+      } : rq(qq) ? {
         kind: "none",
         reason: "otherApiVersion"
-      } : !1 !== (null === (cT = TT.validation) || void 0 === cT ? void 0 : cT.ok) || TT.validation.fromRecheck ? null === kT ? {
+      } : !1 !== (null === (gq = qq.validation) || void 0 === gq ? void 0 : gq.ok) || qq.validation.fromRecheck ? null === Eq ? {
         kind: "none",
         reason: "noCompiler"
-      } : mT(TT, kT) ? {
+      } : hq(qq, Eq) ? {
         kind: "blocked",
         messageKey: "shaderPack:failedUnchecked"
-      } : TT.validation.ok ? {
+      } : qq.validation.ok ? {
         kind: "active"
       } : {
         kind: "blocked",
@@ -111,258 +111,245 @@ export const modules = {
       }
     }
 
-    function FT() {
-      KT.g.setItem(xT, performance.timeOrigin)
+    function yq() {
+      Oq.k.setItem(cq, performance.timeOrigin)
     }
 
-    function rT() {
-      return KT.g.getItem(xT) === performance.timeOrigin
+    function tq() {
+      return Oq.k.getItem(cq) === performance.timeOrigin
     }
 
-    function PT(TT) {
-      return !(0, MT.f)(TT.manifest.apiVersion)
+    function rq(qq) {
+      return !(0, lq.e)(qq.manifest.apiVersion)
     }
 
-    function wT(TT) {
-      return IT ??= TT.OJ((0, fT.shaderPackTextures)()), IT
+    function vq(qq) {
+      return uq ??= qq.yJ((0, Aq.shaderPackTextures)()), uq
     }
 
-    function mT(TT, kT) {
-      var cT;
-      return (null === (cT = TT.validation) || void 0 === cT ? void 0 : cT.headerVersion) !== wT(kT)
+    function hq(qq, Eq) {
+      var gq;
+      return (null === (gq = qq.validation) || void 0 === gq ? void 0 : gq.headerVersion) !== vq(Eq)
     }
 
-    function bT(TT) {
-      return vT((async () => {
-        JT(await (0, yT.e)(!0), TT)
+    function nq(qq) {
+      return aq((async () => {
+        iq(await (0, xq.d)(!0), qq)
       }))
     }
 
-    function zT() {
-      return vT((async () => {
-        KT.e.removeItem(OT.d)
+    function bq() {
+      return aq((async () => {
+        Oq.i.removeItem(mq.c)
       }))
     }
 
-    function JT(TT, kT) {
-      DT(TT, kT) ? KT.e.setItem(OT.d, !0) : KT.e.removeItem(OT.d)
+    function iq(qq, Eq) {
+      Pq(qq, Eq) ? Oq.i.setItem(mq.c, !0) : Oq.i.removeItem(mq.c)
     }
   },
-  6647: (TT, kT, cT) => {
-    cT.d(kT, {
-      b: () => MT,
-      e: () => KT
+  6514: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      loadShaderPackTextures: () => mq,
+      shaderPackTextures: () => xq
     });
-    var lT = cT(47);
-    const MT = "shaderPack";
-    async function KT() {
-      var TT;
-      let kT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (TT = await lT.d.getItem(MT, kT)) && void 0 !== TT ? TT : null
-    }
-  },
-  6623: (TT, kT, cT) => {
-    cT.r(kT), cT.d(kT, {
-      loadShaderPackTextures: () => OT,
-      shaderPackTextures: () => yT
-    });
-    var lT = cT(6581);
-    let MT = null,
-      KT = null;
+    var Yq = gq(6458);
+    let lq = null,
+      Oq = null;
 
-    function OT() {
-      return KT ??= Promise.all([cT.e(70), cT.e(198)]).then((() => cT(40123))).then((TT => {
+    function mq() {
+      return Oq ??= Promise.all([gq.e(70), gq.e(199)]).then((() => gq(40244))).then((qq => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: kT,
-          textureNameToIndex: cT,
-          textureAnimationData: KT
-        } = TT;
-        return MT ??= (0, lT.i)(cT, KT, kT), MT
-      })), KT
+          FORMER_BLOCK_IMAGE_NAMES: Eq,
+          textureNameToIndex: gq,
+          textureAnimationData: Oq
+        } = qq;
+        return lq ??= (0, Yq.j)(gq, Oq, Eq), lq
+      })), Oq
     }
 
-    function yT() {
-      if (null === MT) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return MT
+    function xq() {
+      if (null === lq) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return lq
     }
   },
-  6581: (TT, kT, cT) => {
-    cT.d(kT, {
-      b: () => OT,
-      c: () => KT,
-      e: () => lT,
-      i: () => vT,
-      j: () => IT,
-      l: () => MT,
-      p: () => fT,
-      s: () => xT,
-      u: () => AT
+  6458: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      A: () => Bq,
+      d: () => mq,
+      f: () => Oq,
+      h: () => Yq,
+      j: () => aq,
+      k: () => uq,
+      o: () => lq,
+      s: () => Aq,
+      w: () => cq
     });
-    const lT = 5;
+    const Yq = 5;
 
-    function MT(TT) {
-      return TT === lT
+    function lq(qq) {
+      return qq === Yq
     }
-    const KT = 262144,
-      OT = 256,
-      yT = 256;
+    const Oq = 262144,
+      mq = 256,
+      xq = 256;
 
-    function fT(TT) {
-      if ("object" !== typeof TT || null === TT || Array.isArray(TT)) return "The pack has no files.";
-      const kT = [];
-      for (const [cT, lT] of Object.entries(TT)) {
-        if ("string" !== typeof lT) return `${cT} isn't text.`;
-        kT.push({
-          path: cT,
-          source: lT
+    function Aq(qq) {
+      if ("object" !== typeof qq || null === qq || Array.isArray(qq)) return "The pack has no files.";
+      const Eq = [];
+      for (const [gq, Yq] of Object.entries(qq)) {
+        if ("string" !== typeof Yq) return `${gq} isn't text.`;
+        Eq.push({
+          path: gq,
+          source: Yq
         })
       }
-      return kT.sort(((TT, kT) => IT(TT.path, kT.path))),
-        function(TT) {
-          if (0 === TT.length) return "The pack has no .wgsl files.";
-          if (TT.length > OT) return `The pack has more than ${OT} .wgsl files.`;
-          const kT = new Set;
+      return Eq.sort(((qq, Eq) => uq(qq.path, Eq.path))),
+        function(qq) {
+          if (0 === qq.length) return "The pack has no .wgsl files.";
+          if (qq.length > mq) return `The pack has more than ${mq} .wgsl files.`;
+          const Eq = new Set;
           for (const {
-              path: cT
+              path: gq
             }
-            of TT) {
-            const TT = CT(cT);
-            if (null !== TT) return TT;
-            if (kT.has(cT)) return `The pack has two files at ${cT}.`;
-            kT.add(cT)
+            of qq) {
+            const qq = Wq(gq);
+            if (null !== qq) return qq;
+            if (Eq.has(gq)) return `The pack has two files at ${gq}.`;
+            Eq.add(gq)
           }
-          return AT(TT) > KT ? `The pack's .wgsl files are over ${KT/1024} KB in total.` : null
-        }(kT) ?? kT
+          return Bq(qq) > Oq ? `The pack's .wgsl files are over ${Oq/1024} KB in total.` : null
+        }(Eq) ?? Eq
     }
 
-    function xT(TT) {
-      const kT = {};
-      for (const cT of TT) kT[cT.path] = cT.source;
-      return kT
+    function cq(qq) {
+      const Eq = {};
+      for (const gq of qq) Eq[gq.path] = gq.source;
+      return Eq
     }
 
-    function IT(TT, kT) {
-      return TT < kT ? -1 : TT > kT ? 1 : 0
+    function uq(qq, Eq) {
+      return qq < Eq ? -1 : qq > Eq ? 1 : 0
     }
 
-    function AT(TT) {
-      const kT = new TextEncoder;
-      let cT = 0;
+    function Bq(qq) {
+      const Eq = new TextEncoder;
+      let gq = 0;
       for (const {
-          source: lT
+          source: Yq
         }
-        of TT) cT += kT.encode(lT).byteLength;
-      return cT
+        of qq) gq += Eq.encode(Yq).byteLength;
+      return gq
     }
 
-    function CT(TT) {
-      if (!TT.toLowerCase().endsWith(".wgsl")) return `${TT} isn't a .wgsl file.`;
-      if (TT.length > yT) return `A file path is over ${yT} characters.`;
-      if (TT.includes("\\") || /[\u0000-\u001f]/.test(TT)) return `${TT} isn't a valid file path.`;
-      return TT.split("/").some((TT => "" === TT || "." === TT || ".." === TT)) ? `${TT} isn't a valid file path.` : null
+    function Wq(qq) {
+      if (!qq.toLowerCase().endsWith(".wgsl")) return `${qq} isn't a .wgsl file.`;
+      if (qq.length > xq) return `A file path is over ${xq} characters.`;
+      if (qq.includes("\\") || /[\u0000-\u001f]/.test(qq)) return `${qq} isn't a valid file path.`;
+      return qq.split("/").some((qq => "" === qq || "." === qq || ".." === qq)) ? `${qq} isn't a valid file path.` : null
     }
-    const jT = /^(.*)\[rot\[([1-4])$/;
+    const Nq = /^(.*)\[rot\[([1-4])$/;
 
-    function vT(TT, kT) {
-      let cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const lT = new Map;
-      kT.forEach(((TT, kT) => {
+    function aq(qq, Eq) {
+      let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const Yq = new Map;
+      Eq.forEach(((qq, Eq) => {
         let {
-          numAnimStates: cT,
-          animStartIdx: MT
-        } = TT;
-        for (let KT = 1; KT < cT; KT++) lT.set(MT + KT - 1, kT)
+          numAnimStates: gq,
+          animStartIdx: lq
+        } = qq;
+        for (let Oq = 1; Oq < gq; Oq++) Yq.set(lq + Oq - 1, Eq)
       }));
-      const MT = Object.entries(TT),
-        KT = new Map;
-      for (const [tT, hT] of MT) {
-        const TT = jT.exec(tT);
-        "1" === TT?.[2] && KT.set(TT[1], hT + 1)
+      const lq = Object.entries(qq),
+        Oq = new Map;
+      for (const [Vq, dq] of lq) {
+        const qq = Nq.exec(Vq);
+        "1" === qq?.[2] && Oq.set(qq[1], dq + 1)
       }
-      const OT = TT => {
-          const kT = jT.exec(TT);
-          return kT && KT.has(kT[1]) ? {
-            root: kT[1],
-            rotation: Number(kT[2]) - 1
+      const mq = qq => {
+          const Eq = Nq.exec(qq);
+          return Eq && Oq.has(Eq[1]) ? {
+            root: Eq[1],
+            rotation: Number(Eq[2]) - 1
           } : null
         },
-        yT = new Set(MT.map((TT => {
-          let [kT] = TT;
-          return OT(kT)?.root ?? kT
+        xq = new Set(lq.map((qq => {
+          let [Eq] = qq;
+          return mq(Eq)?.root ?? Eq
         }))),
-        fT = (TT, cT) => {
-          const lT = TT.replace(/_?0$/, "");
-          return (kT[cT]?.numAnimStates ?? 0) > 1 && !yT.has(lT) ? lT : TT
+        Aq = (qq, gq) => {
+          const Yq = qq.replace(/_?0$/, "");
+          return (Eq[gq]?.numAnimStates ?? 0) > 1 && !xq.has(Yq) ? Yq : qq
         },
-        xT = new Map;
-      for (const [jT, tT] of MT) xT.set(tT, fT(OT(jT)?.root ?? jT, tT));
-      const IT = MT.reduce(((TT, kT) => {
-          let [, cT] = kT;
-          return Math.max(TT, cT + 1)
+        cq = new Map;
+      for (const [Nq, Vq] of lq) cq.set(Vq, Aq(mq(Nq)?.root ?? Nq, Vq));
+      const uq = lq.reduce(((qq, Eq) => {
+          let [, gq] = Eq;
+          return Math.max(qq, gq + 1)
         }), 0),
-        AT = Array.from({
-          length: IT
-        }, ((TT, kT) => ({
-          id: kT + 1,
+        Bq = Array.from({
+          length: uq
+        }, ((qq, Eq) => ({
+          id: Eq + 1,
           rotation: 0
         }))),
-        CT = new Map,
-        vT = new Map;
-      for (const [jT, tT] of MT) {
-        const TT = OT(jT),
-          kT = lT.get(tT);
-        if (void 0 !== kT) {
-          const cT = xT.get(kT);
-          vT.set(jT, {
-            name: jT,
-            texture: cT,
+        Wq = new Map,
+        aq = new Map;
+      for (const [Nq, Vq] of lq) {
+        const qq = mq(Nq),
+          Eq = Yq.get(Vq);
+        if (void 0 !== Eq) {
+          const gq = cq.get(Eq);
+          aq.set(Nq, {
+            name: Nq,
+            texture: gq,
             kind: "frame"
-          }), TT && !vT.has(TT.root) && vT.set(TT.root, {
-            name: TT.root,
-            texture: cT,
+          }), qq && !aq.has(qq.root) && aq.set(qq.root, {
+            name: qq.root,
+            texture: gq,
             kind: "frame"
           });
           continue
         }
-        const cT = xT.get(tT),
-          MT = TT?.root ?? jT;
-        if (cT !== MT && vT.set(MT, {
-            name: MT,
-            texture: cT,
+        const gq = cq.get(Vq),
+          lq = qq?.root ?? Nq;
+        if (gq !== lq && aq.set(lq, {
+            name: lq,
+            texture: gq,
             kind: "frame"
-          }), TT) {
-          const kT = KT.get(TT.root);
-          AT[tT] = {
-            id: kT,
-            rotation: TT.rotation
-          }, CT.set(cT, kT), vT.set(jT, {
-            name: jT,
-            texture: cT,
+          }), qq) {
+          const Eq = Oq.get(qq.root);
+          Bq[Vq] = {
+            id: Eq,
+            rotation: qq.rotation
+          }, Wq.set(gq, Eq), aq.set(Nq, {
+            name: Nq,
+            texture: gq,
             kind: "rotation"
           })
-        } else CT.set(cT, tT + 1)
+        } else Wq.set(gq, Vq + 1)
       }
-      for (const jT of CT.keys()) vT.delete(jT);
-      for (const [jT, tT] of cT) {
-        const TT = CT.get(tT);
-        void 0 === TT || CT.has(jT) || (CT.set(jT, TT), vT.delete(jT))
+      for (const Nq of Wq.keys()) aq.delete(Nq);
+      for (const [Nq, Vq] of gq) {
+        const qq = Wq.get(Vq);
+        void 0 === qq || Wq.has(Nq) || (Wq.set(Nq, qq), aq.delete(Nq))
       }
       return {
-        named: [...CT].sort(((TT, kT) => {
-          let [cT] = TT, [lT] = kT;
-          return cT < lT ? -1 : cT > lT ? 1 : 0
-        })).map((TT => {
-          let [kT, cT] = TT;
+        named: [...Wq].sort(((qq, Eq) => {
+          let [gq] = qq, [Yq] = Eq;
+          return gq < Yq ? -1 : gq > Yq ? 1 : 0
+        })).map((qq => {
+          let [Eq, gq] = qq;
           return {
-            name: kT,
-            id: cT
+            name: Eq,
+            id: gq
           }
         })),
-        aliases: [...vT.values()],
-        layers: AT
+        aliases: [...aq.values()],
+        layers: Bq
       }
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

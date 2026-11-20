@@ -1,80 +1,80 @@
 export const id = 241;
 export const ids = [241];
 export const modules = {
-  39432: (TT, kT, cT) => {
-    cT.r(kT), cT.d(kT, {
-      playDocsSound: () => yT
+  39569: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      playDocsSound: () => xq
     });
-    var lT = cT(4820),
-      MT = cT(36580),
-      KT = cT(1202);
-    const OT = new Map;
+    var Yq = gq(4684),
+      lq = gq(36796),
+      Oq = gq(1195);
+    const mq = new Map;
 
-    function yT(TT, kT, cT, yT, fT) {
-      let xT, IT = null,
-        AT = 0,
-        CT = 0;
-      if (kT) xT = new lT.Howl({
-        src: [`${KT.clientSideServerUrls.staticUrl}/sounds/music/${TT}.mp3`],
+    function xq(qq, Eq, gq, xq, Aq) {
+      let cq, uq = null,
+        Bq = 0,
+        Wq = 0;
+      if (Eq) cq = new Yq.Howl({
+        src: [`${Oq.clientSideServerUrls.staticUrl}/sounds/music/${qq}.mp3`],
         html5: !0,
-        volume: cT
+        volume: gq
       });
       else {
-        var jT;
-        IT = (0, MT.m)(TT);
-        const kT = (0, MT.l)(IT),
-          cT = null !== (jT = kT.sprite[TT]) && void 0 !== jT ? jT : null;
-        if (!cT) throw new Error(`Docs sound ${TT} is not in sprite sheet ${IT}`);
-        AT = cT[0] / 1e3, CT = cT[1] / 1e3, xT = OT.get(IT), xT || (xT = new lT.Howl({
-          ...kT,
+        var Nq;
+        uq = (0, lq.k)(qq);
+        const Eq = (0, lq.g)(uq),
+          gq = null !== (Nq = Eq.sprite[qq]) && void 0 !== Nq ? Nq : null;
+        if (!gq) throw new Error(`Docs sound ${qq} is not in sprite sheet ${uq}`);
+        Bq = gq[0] / 1e3, Wq = gq[1] / 1e3, cq = mq.get(uq), cq || (cq = new Yq.Howl({
+          ...Eq,
           volume: 1
-        }), OT.set(IT, xT))
+        }), mq.set(uq, cq))
       }
-      const vT = kT ? xT.play() : xT.play(TT);
-      xT.volume(cT, vT), yT > 0 && xT.seek(AT + yT, vT);
-      const tT = () => kT ? xT.duration() : CT;
-      let hT = !1;
-      const NT = TT => {
-          hT || (hT = !0, xT.off("play", QT, vT), xT.off("end", ST, vT), xT.off("loaderror", aT), xT.off("playerror", DT, vT), kT && xT.unload(), fT.onEnd(TT))
+      const aq = Eq ? cq.play() : cq.play(qq);
+      cq.volume(gq, aq), xq > 0 && cq.seek(Bq + xq, aq);
+      const Vq = () => Eq ? cq.duration() : Wq;
+      let dq = !1;
+      const jq = qq => {
+          dq || (dq = !0, cq.off("play", Hq, aq), cq.off("end", oq, aq), cq.off("loaderror", Qq), cq.off("playerror", Pq, aq), Eq && cq.unload(), Aq.onEnd(qq))
         },
-        QT = () => {
-          fT.onPlay(tT())
+        Hq = () => {
+          Aq.onPlay(Vq())
         },
-        ST = () => {
-          NT(!1)
+        oq = () => {
+          jq(!1)
         },
-        DT = (kT, cT) => {
-          console.error(`Could not play docs sound ${TT}`, cT), NT(!0)
+        Pq = (Eq, gq) => {
+          console.error(`Could not play docs sound ${qq}`, gq), jq(!0)
         },
-        aT = (TT, kT) => {
-          null !== IT && OT.get(IT) === xT && (OT.delete(IT), xT.unload()), DT(TT, kT)
+        Qq = (qq, Eq) => {
+          null !== uq && mq.get(uq) === cq && (mq.delete(uq), cq.unload()), Pq(qq, Eq)
         };
-      return xT.on("play", QT, vT), xT.once("end", ST, vT), xT.once("loaderror", aT), xT.once("playerror", DT, vT), {
+      return cq.on("play", Hq, aq), cq.once("end", oq, aq), cq.once("loaderror", Qq), cq.once("playerror", Pq, aq), {
         pause: () => {
-          xT.pause(vT)
+          cq.pause(aq)
         },
         resume: () => {
-          xT.play(vT)
+          cq.play(aq)
         },
-        seek: TT => {
-          const kT = tT(),
-            cT = Math.max(TT, 0);
-          xT.seek(AT + (kT > 0 ? Math.min(cT, kT) : cT), vT)
+        seek: qq => {
+          const Eq = Vq(),
+            gq = Math.max(qq, 0);
+          cq.seek(Bq + (Eq > 0 ? Math.min(gq, Eq) : gq), aq)
         },
-        kN: () => {
-          const TT = xT.seek(vT);
-          return "number" === typeof TT ? Math.max(0, TT - AT) : 0
+        Py: () => {
+          const qq = cq.seek(aq);
+          return "number" === typeof qq ? Math.max(0, qq - Bq) : 0
         },
-        getDuration: tT,
-        setVolume: TT => {
-          xT.volume(TT, vT)
+        getDuration: Vq,
+        setVolume: qq => {
+          cq.volume(qq, aq)
         },
         stop: () => {
-          hT || (xT.stop(vT), NT(!1))
+          dq || (cq.stop(aq), jq(!1))
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

@@ -1,74 +1,74 @@
 export const id = 92;
 export const ids = [92];
 export const modules = {
-  4820: (TT, kT, cT) => {
-    cT.r(kT), cT.d(kT, {
-      Howl: () => MT.Howl,
-      Howler: () => MT.Howler,
-      musicOutput: () => vT,
-      readyAudioContext: () => tT
+  4684: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      Howl: () => lq.Howl,
+      Howler: () => lq.Howler,
+      musicOutput: () => aq,
+      readyAudioContext: () => Vq
     });
-    var lT, MT = cT(4825),
-      KT = cT(4641);
-    const OT = MT.Howler;
+    var Yq, lq = gq(4692),
+      Oq = gq(4477);
+    const mq = lq.Howler;
 
-    function yT() {
-      var TT, kT;
-      if (OT.ctx || !OT.usingWebAudio || "undefined" === typeof AudioContext || !(0, KT.f)()) return;
-      const cT = navigator.audioSession;
-      let lT;
-      "auto" === (null === cT || void 0 === cT ? void 0 : cT.type) && (cT.type = "ambient");
+    function xq() {
+      var qq, Eq;
+      if (mq.ctx || !mq.usingWebAudio || "undefined" === typeof AudioContext || !(0, Oq.f)()) return;
+      const gq = navigator.audioSession;
+      let Yq;
+      "auto" === (null === gq || void 0 === gq ? void 0 : gq.type) && (gq.type = "ambient");
       try {
-        lT = new AudioContext({
+        Yq = new AudioContext({
           sampleRate: 44100
         })
       } catch {
         return
       }
-      const MT = lT.createGain();
-      MT.gain.setValueAtTime(OT._muted ? 0 : null !== (TT = OT._volume) && void 0 !== TT ? TT : 1, lT.currentTime), MT.connect(lT.destination), OT.ctx = lT, OT.masterGain = MT, null === (kT = OT._setup) || void 0 === kT || kT.call(OT)
+      const lq = Yq.createGain();
+      lq.gain.setValueAtTime(mq._muted ? 0 : null !== (qq = mq._volume) && void 0 !== qq ? qq : 1, Yq.currentTime), lq.connect(Yq.destination), mq.ctx = Yq, mq.masterGain = lq, null === (Eq = mq._setup) || void 0 === Eq || Eq.call(mq)
     }
-    OT._mobileUnloaded = !0;
-    const fT = OT.volume.bind(MT.Howler);
-    OT.volume = function() {
-      return yT(), fT(...arguments)
+    mq._mobileUnloaded = !0;
+    const Aq = mq.volume.bind(lq.Howler);
+    mq.volume = function() {
+      return xq(), Aq(...arguments)
     };
-    const xT = OT.mute.bind(MT.Howler);
-    OT.mute = TT => (yT(), xT(TT));
-    const IT = MT.Howl.prototype,
-      AT = IT.init;
-    IT.init = function(TT) {
-      return yT(), AT.call(this, TT)
+    const cq = mq.mute.bind(lq.Howler);
+    mq.mute = qq => (xq(), cq(qq));
+    const uq = lq.Howl.prototype,
+      Bq = uq.init;
+    uq.init = function(qq) {
+      return xq(), Bq.call(this, qq)
     };
-    let CT = 0;
-    const jT = null === (lT = OT._autoSuspend) || void 0 === lT ? void 0 : lT.bind(MT.Howler);
+    let Wq = 0;
+    const Nq = null === (Yq = mq._autoSuspend) || void 0 === Yq ? void 0 : Yq.bind(lq.Howler);
 
-    function vT() {
-      tT();
+    function aq() {
+      Vq();
       const {
-        ctx: TT,
-        masterGain: kT
-      } = OT;
-      return TT && kT ? {
-        ctx: TT,
-        destination: kT,
-        holdAwake: TT => {
-          var kT, cT;
-          (CT += TT ? 1 : -1, TT) ? null === (kT = OT._autoResume) || void 0 === kT || kT.call(OT): null === (cT = OT._autoSuspend) || void 0 === cT || cT.call(OT)
+        ctx: qq,
+        masterGain: Eq
+      } = mq;
+      return qq && Eq ? {
+        ctx: qq,
+        destination: Eq,
+        holdAwake: qq => {
+          var Eq, gq;
+          (Wq += qq ? 1 : -1, qq) ? null === (Eq = mq._autoResume) || void 0 === Eq || Eq.call(mq): null === (gq = mq._autoSuspend) || void 0 === gq || gq.call(mq)
         },
         wake: () => {
-          var kT;
-          "running" !== TT.state && (null === (kT = OT._autoResume) || void 0 === kT || kT.call(OT), TT.resume().catch((() => {})))
+          var Eq;
+          "running" !== qq.state && (null === (Eq = mq._autoResume) || void 0 === Eq || Eq.call(mq), qq.resume().catch((() => {})))
         }
       } : null
     }
 
-    function tT() {
-      var TT;
-      (OT.volume(), OT.ctx && OT.autoUnlock) && (null === (TT = OT._unlockAudio) || void 0 === TT || TT.call(OT))
+    function Vq() {
+      var qq;
+      (mq.volume(), mq.ctx && mq.autoUnlock) && (null === (qq = mq._unlockAudio) || void 0 === qq || qq.call(mq))
     }
-    jT && (OT._autoSuspend = () => CT > 0 ? MT.Howler : jT())
+    Nq && (mq._autoSuspend = () => Wq > 0 ? lq.Howler : Nq())
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

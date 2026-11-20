@@ -1,637 +1,757 @@
 export const id = 132;
 export const ids = [132];
 export const modules = {
-  36089: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => yT,
-      g: () => xT,
-      h: () => OT,
-      k: () => AT
+  6496: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      loadPageShaderPackCompiler: () => WE
     });
-    var lT = cT(36077),
-      MT = cT(15);
-    const KT = /wasm-function\[\d+\]|wasm:\/\/|\[wasm code\]/;
-
-    function OT(TT) {
-      if (TT instanceof WebAssembly.RuntimeError) return !0;
-      const kT = TT instanceof Error ? TT.stack : void 0;
-      return "string" === typeof kT && KT.test(kT)
-    }
-
-    function yT(TT, kT, cT) {
-      var MT;
-      const OT = TT instanceof Error ? TT.name : "thrown",
-        yT = (TT instanceof Error && null !== (MT = TT.stack) && void 0 !== MT ? MT : "").split("\n").filter((TT => KT.test(TT))).slice(0, 8).map((TT => TT.trim())),
-        fT = null === kT ? "wasm memory unknown" : `wasm memory ${Math.round(kT/2**20)} MB`,
-        xT = null === cT.panic ? "" : `, panic: ${(0,lT.i)(cT.panic)}`,
-        IT = `${OT}: ${TT instanceof Error?TT.message:String(TT)}`;
-      return `${(0,lT.m)(cT.kind,cT.refusedBytes)} ${IT} (${fT})${xT}${yT.length>0?` | ${yT.join(" < ")}`:""}`
-    }
-    const fT = /on a detached ArrayBuffer|access detached ArrayBuffer|has been detached from the view/;
-
-    function xT(TT) {
-      var kT;
-      let cT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ArrayBuffer.prototype;
-      if (!(TT instanceof Error) || !fT.test(TT.message)) return {};
-      if (!("detached" in cT)) return {
-        arrayBufferDetached: "absent"
-      };
-      return {
-        arrayBufferDetached: (0, MT.U)(null === (kT = (0, MT.R)(cT, "detached")) || void 0 === kT ? void 0 : kT.get, /^function (get )?detached\(\) \{\s*\[native code\]\s*\}$/) ? "native" : "script"
-      }
-    }
-    const IT = 500;
-
-    function AT(TT) {
-      let kT = "[object Object]";
-      try {
-        kT = String(TT)
-      } catch {}
-      if ("[object Object]" !== kT) return kT;
-      try {
-        var cT, lT;
-        return null !== (cT = null === (lT = JSON.stringify(TT)) || void 0 === lT ? void 0 : lT.slice(0, IT)) && void 0 !== cT ? cT : kT
-      } catch {
-        return kT
-      }
-    }
-  },
-  36113: (TT, kT, cT) => {
-    cT.d(kT, {
-      b: () => nT,
-      d: () => sT,
-      e: () => iT,
-      h: () => WT
+    var Yq = {};
+    gq.r(Yq), gq.d(Yq, {
+      rlq: () => lq,
+      tqq: () => Oq,
+      default: () => Fq,
+      vlq: () => mq,
+      hlq: () => xq,
+      initSync: () => Uq,
+      Cu: () => Aq,
+      aYq: () => cq,
+      nlq: () => uq,
+      blq: () => Bq,
+      vJ: () => Wq,
+      ilq: () => Nq,
+      yJ: () => aq,
+      Zlq: () => Vq
     });
-    var lT = cT(3679),
-      MT = cT(3692),
-      KT = cT(6609),
-      OT = cT(4681),
-      yT = cT(3687),
-      fT = cT(3684);
-    const xT = "bloxd-wasmDownloaded",
-      IT = 12;
-
-    function AT(TT) {
-      return TT.pathname.slice(TT.pathname.lastIndexOf("/") + 1)
-    }
-
-    function CT() {
-      try {
-        if ("undefined" === typeof localStorage) return null;
-        const TT = JSON.parse(localStorage.getItem(xT) ?? "[]");
-        return Array.isArray(TT) ? TT.filter((TT => "string" === typeof TT)) : []
-      } catch (TT) {
-        return console.warn("Bloxd wasm: the record of downloaded modules could not be read: asking the HTTP cache for none", TT), null
+    class lq {
+      static __wrap(qq) {
+        const Eq = Object.create(lq.prototype);
+        return Eq.__wbg_ptr = qq, jq.register(Eq, Eq.__wbg_ptr, Eq), Eq
       }
-    }
-    const jT = Reflect.apply,
-      vT = "undefined" === typeof Worker ? void 0 : Worker,
-      tT = vT?.prototype.postMessage,
-      hT = vT?.prototype.terminate,
-      NT = "undefined" === typeof EventTarget ? void 0 : EventTarget.prototype.addEventListener,
-      QT = "undefined" === typeof MessageEvent ? void 0 : Object.getOwnPropertyDescriptor(MessageEvent.prototype, "data")?.get,
-      ST = Object.getOwnPropertyDescriptor(Object.getPrototypeOf(Uint8Array.prototype), "buffer").get,
-      DT = function() {
+      __destroy_into_raw() {
+        const qq = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, jq.unregister(this), qq
+      }
+      free() {
+        const qq = this.__destroy_into_raw();
+        Jq.mpnV(qq, 0)
+      }
+      get errorsJson() {
+        let qq, Eq;
         try {
-          return (0, OT.j)(vT, "Worker", !0) && (0, OT.j)(tT, "postMessage") && (0, OT.j)(hT, "terminate") && (0, OT.j)(ST, "buffer") && void 0 !== NT && void 0 !== QT
-        } catch {
-          return !1
-        }
-      }();
-    let aT = !1;
-
-    function FT() {
-      return DT && !aT
-    }
-    class rT {
-      worker = null;
-      failed = !1;
-      constructor() {
-        if (FT()) try {
-          this.worker = wT(), jT(NT, this.worker, ["error", () => {
-            this.failed = !0
-          }])
-        } catch {
-          this.stop()
+          const gq = Jq.Un78(this.__wbg_ptr);
+          return qq = gq[0], Eq = gq[1], tq(gq[0], gq[1])
+        } finally {
+          Jq.HLoe(qq, Eq, 1)
         }
       }
-      take() {
-        const TT = this.worker;
-        if (this.worker = null, null !== TT && this.failed) throw jT(hT, TT, []), new Error("it did not run");
-        return TT
+      get features() {
+        const qq = Jq.lkVE(this.__wbg_ptr);
+        var Eq = oq(qq[0], qq[1]);
+        return Jq.HLoe(qq[0], 4 * qq[1], 4), Eq
       }
-      stop() {
-        const TT = this.worker;
-        this.worker = null, null !== TT && jT(hT, TT, [])
+      get hooks() {
+        const qq = Jq.Zjru(this.__wbg_ptr);
+        var Eq = Pq(qq[0], qq[1]).slice();
+        return Jq.HLoe(qq[0], 1 * qq[1], 1), Eq
       }
-    }
-    class PT {
-      decoded;
-      worker;
-      reject;
-      constructor(TT, kT, cT, lT, KT) {
+      mapValidationMessage(qq, Eq, gq, Yq, lq) {
+        let Oq, mq;
         try {
-          this.worker = KT?.take() ?? wT()
-        } catch (xT) {
-          throw aT = !0, new Error(`The zstd decoder's worker did not start: ${(0,yT.f)(xT)}`)
+          const cq = Jq.CJsj(this.__wbg_ptr, qq, Eq, gq, Hq(Yq), Hq(lq));
+          var xq = cq[0],
+            Aq = cq[1];
+          if (cq[3]) throw xq = 0, Aq = 0, Mq(cq[2]);
+          return Oq = xq, mq = Aq, tq(xq, Aq)
+        } finally {
+          Jq.HLoe(Oq, mq, 1)
         }
-        const OT = this.worker;
-        this.decoded = (0, MT.j)(((kT, MT) => {
-          this.reject = MT;
-          const KT = (TT, kT) => {
-            jT(NT, OT, [TT, kT])
-          };
-          KT("message", (TT => {
-            lT();
-            try {
-              const lT = jT(QT, TT, []);
-              if (!0 === lT) kT();
-              else {
-                if ("string" === typeof lT) throw lT.startsWith(yT.c) && (aT = !0), new Error(lT);
-                cT(lT, jT(fT.x, lT, []))
-              }
-            } catch (xT) {
-              MT(xT)
-            }
-          })), KT("error", (() => {
-            aT = !0, MT(new Error("The zstd decoder's worker did not run"))
-          })), KT("messageerror", (() => {
-            MT(new Error(`${TT}'s decoder sent a piece that could not be read`))
-          }))
-        })), (0, fT.bb)(this.decoded), jT(tT, OT, [
-          [TT, kT]
-        ])
       }
-      push(TT) {
-        jT(tT, this.worker, [TT, [jT(ST, TT, [])]])
+      get moduleCodes() {
+        const qq = Jq.bI5u(this.__wbg_ptr);
+        var Eq = oq(qq[0], qq[1]);
+        return Jq.HLoe(qq[0], 4 * qq[1], 4), Eq
       }
-      end() {
-        jT(tT, this.worker, [null])
+      get offInStrictJson() {
+        let qq, Eq;
+        try {
+          const gq = Jq.AP2v(this.__wbg_ptr);
+          return qq = gq[0], Eq = gq[1], tq(gq[0], gq[1])
+        } finally {
+          Jq.HLoe(qq, Eq, 1)
+        }
       }
-      markWorkerFailed() {
-        aT = !0
+      get reads() {
+        const qq = Jq.KG2d(this.__wbg_ptr);
+        var Eq = oq(qq[0], qq[1]);
+        return Jq.HLoe(qq[0], 4 * qq[1], 4), Eq
       }
-      fail(TT) {
-        this.reject(TT), this.terminate()
+      get validationModuleCodes() {
+        const qq = Jq.mSlF(this.__wbg_ptr);
+        var Eq = oq(qq[0], qq[1]);
+        return Jq.HLoe(qq[0], 4 * qq[1], 4), Eq
       }
-      terminate() {
-        jT(hT, this.worker, [])
+      get validationModuleKeys() {
+        const qq = Jq.EfPO(this.__wbg_ptr);
+        var Eq = Pq(qq[0], qq[1]).slice();
+        return Jq.HLoe(qq[0], 1 * qq[1], 1), Eq
+      }
+      get variantFlags() {
+        const qq = Jq.ySwX(this.__wbg_ptr);
+        var Eq = Pq(qq[0], qq[1]).slice();
+        return Jq.HLoe(qq[0], 1 * qq[1], 1), Eq
       }
     }
 
-    function wT() {
-      if (globalThis.Worker !== vT) throw new Error("Worker is not the one the page loaded with");
-      return new Worker(new URL(cT.p + cT.u(65), cT.b), {
-        name: "wasmZstdDecoder",
-        type: "module"
-      })
-    }
-    const mT = Reflect.apply,
-      bT = ArrayBuffer,
-      zT = "undefined" === typeof Response ? void 0 : Response,
-      JT = "undefined" === typeof ReadableStream ? void 0 : ReadableStream,
-      oT = function() {
-        let TT;
-        void 0 !== JT && new JT({
-          __proto__: null,
-          start(kT) {
-            const {
-              enqueue: cT,
-              close: lT,
-              error: MT
-            } = Object.getPrototypeOf(kT);
-            TT = {
-              enqueue: cT,
-              close: lT,
-              error: MT
-            }
-          }
-        }, {
-          __proto__: null
-        });
-        return TT
-      }(),
-      HT = function() {
-        try {
-          return "undefined" !== typeof WebAssembly && "function" === typeof WebAssembly.compileStreaming && void 0 !== oT && (0, OT.j)(zT, "Response", !0) && (0, OT.j)(JT, "ReadableStream", !0) && (0, OT.j)(oT.enqueue, "enqueue") && (0, OT.j)(oT.close, "close") && (0, OT.j)(oT.error, "error") && (0, OT.j)(fT.hb, "body") && (0, OT.j)(fT.U, "getReader") && (0, OT.j)(fT.eb, "read")
-        } catch {
-          return !1
-        }
-      }();
-    async function eT(TT, kT, cT, lT, KT, OT, xT) {
-      const IT = new bT(kT),
-        {
-          controller: AT,
-          compiled: CT
-        } = function(TT) {
-          try {
-            let TT;
-            const kT = new JT({
-                __proto__: null,
-                start(kT) {
-                  TT = kT
-                }
-              }, {
-                __proto__: null
-              }),
-              cT = new zT(kT, {
-                __proto__: null,
-                headers: {
-                  __proto__: null,
-                  "Content-Type": "application/wasm"
-                }
-              });
-            return {
-              controller: TT,
-              compiled: (0, fT.bb)((0, fT.B)((0, fT.qb)(cT)))
-            }
-          } catch (kT) {
-            throw new Error(`${TT} could not be streamed into a compile: ${(0,yT.f)(kT)}`)
-          }
-        }(TT),
-        {
-          enqueue: jT,
-          close: vT,
-          error: tT
-        } = oT,
-        hT = TT => {
-          try {
-            mT(tT, AT, [TT])
-          } catch {}
-        };
-      let NT = 0;
-      const QT = (cT, lT) => {
-        if (NT + lT > kT) throw new Error(`${TT} decoded past its module's ${kT} bytes`);
-        mT(fT.kb, new fT.k(IT), [new fT.k(cT), NT]);
-        try {
-          mT(jT, AT, [new fT.k(IT, NT, lT)])
-        } catch {}
-        NT += lT
-      };
-      let ST, DT;
-      try {
-        ST = new PT(TT, kT, QT, lT, xT)
-      } catch (wT) {
-        throw hT(wT), wT
-      }
-      const aT = TT => {
-        ST.fail(TT), void 0 !== DT && GT(DT)
-      };
-      let FT = !1;
-      cT.addEventListener("abort", (() => {
-        FT && ST.markWorkerFailed(), aT(new Error(`${TT} stalled`))
-      }), {
-        once: !0
-      }), (0, MT.v)(CT, (() => {}), aT);
-      try {
-        let OT;
-        try {
-          OT = await fetch(TT, {
-            signal: cT
-          })
-        } catch (wT) {
-          throw new Error(`Fetching ${TT} failed: ${(0,yT.f)(wT)}`)
-        }
-        const {
-          ok: xT,
-          status: IT,
-          body: AT
-        } = function(TT, kT) {
-          try {
-            const {
-              ok: TT,
-              status: cT
-            } = kT;
-            return {
-              ok: TT,
-              status: cT,
-              body: mT(fT.hb, kT, [])
-            }
-          } catch {
-            throw new Error(`${TT} came in a response a page script made`)
-          }
-        }(TT, OT);
-        if (!xT) throw new Error(`Fetching ${TT} failed: HTTP ${IT}`);
-        lT();
-        const CT = mT(fT.U, AT, []);
-        DT = CT;
-        const jT = () => {
-          GT(CT)
-        };
-        for ((0, MT.v)(ST.decoded, jT, jT);;) {
-          let kT;
-          try {
-            kT = await mT(fT.eb, CT, [])
-          } catch (wT) {
-            throw new Error(`Downloading ${TT} failed: ${(0,yT.f)(wT)}`)
-          }
-          if (kT.done) break;
-          lT(), ST.push(kT.value)
-        }
-        if (FT = !0, ST.end(), await ST.decoded, KT(), NT !== kT) throw new Error(`${TT} ended before its module did`)
-      } catch (wT) {
-        throw hT(wT), aT(wT), wT
-      }
-      ST.terminate();
-      try {
-        mT(vT, AT, [])
-      } catch {}
-      const rT = await CT;
-      return void 0 !== OT && await (0, fT.y)(TT, new fT.k(IT), {
-        sha256: OT.sha256,
-        onMismatch: () => {}
-      }), rT
+    function Oq(qq, Eq, gq, Yq, Oq, mq, xq) {
+      const Aq = fq(qq, Jq.QPs9),
+        cq = kq,
+        uq = fq(Eq, Jq.QPs9),
+        Bq = kq,
+        Wq = fq(gq, Jq.QPs9),
+        Nq = kq,
+        aq = Zq(Yq, Jq.QPs9),
+        Vq = kq,
+        dq = fq(Oq, Jq.QPs9),
+        jq = kq,
+        Hq = fq(mq, Jq.QPs9),
+        oq = kq,
+        Pq = fq(xq, Jq.QPs9),
+        Qq = kq,
+        yq = Jq.t5es(Aq, cq, uq, Bq, Wq, Nq, aq, Vq, dq, jq, Hq, oq, Pq, Qq);
+      if (yq[2]) throw Mq(yq[1]);
+      return lq.__wrap(yq[0])
     }
 
-    function GT(TT) {
-      try {
-        (0, fT.bb)(TT.cancel())
-      } catch {}
+    function mq() {
+      const qq = Jq.xyN8();
+      var Eq = oq(qq[0], qq[1]);
+      return Jq.HLoe(qq[0], 4 * qq[1], 4), Eq
     }
-    const VT = ".zst.bin",
-      ET = 1e3;
-    let ZT = null;
 
-    function uT(TT) {
-      return ZT ??= function() {
-        const TT = new Map,
-          kT = "bloxd_wasm_webgpu:5000472,bloxd_wasm_webgl:5362696,bloxd_wasm_webgl1:4763369,bloxd_wasm_workers:196044,bloxd_wasm_models:311680,bloxd_wasm_client:3667451";
-        for (const cT of kT?.split(",") ?? []) {
-          const [kT = "", lT] = cT.split(":"), MT = Number(lT);
-          Number.isInteger(MT) && MT > 0 && TT.set(kT, MT)
-        }
-        return TT
-      }(), ZT.get(TT)
+    function xq() {
+      const qq = Jq.FQZs();
+      var Eq = oq(qq[0], qq[1]);
+      return Jq.HLoe(qq[0], 4 * qq[1], 4), Eq
     }
-    async function XT(TT, kT) {
-      let cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const lT = uT(TT.name);
-      if (void 0 === lT) return dT(await LT(TT, kT, cT), "cold-wasm");
-      const KT = HT ? new rT : null;
-      let OT;
+
+    function Aq() {
+      Jq.GItG()
+    }
+
+    function cq(qq, Eq, gq, Yq, lq) {
+      let Oq, mq;
       try {
-        if (xT = TT.url(), CT()?.includes(AT(xT)) && await async function(TT) {
-            const kT = new AbortController;
-            let cT;
-            const lT = (0, MT.j)((TT => {
-              cT = setTimeout((() => {
-                kT.abort(), TT(null)
-              }), ET)
-            }));
-            try {
-              const cT = fetch(TT.href, {
-                  cache: "only-if-cached",
-                  mode: "same-origin",
-                  signal: kT.signal
-                }),
-                KT = await (0, MT.s)([cT, lT]);
-              return !!KT?.ok && ((0, fT.bb)(KT.body.cancel()), !0)
-            } catch {
-              return !1
-            } finally {
-              clearTimeout(cT)
-            }
-          }(TT.url())) return KT?.stop(), await async function(TT, kT, cT, lT) {
-          let MT = !1;
-          const KT = cT && {
-            sha256: cT.sha256,
-            onMismatch: () => {
-              MT = !0
-            }
-          };
-          try {
-            return dT(await LT(TT, KT, lT), "warm")
-          } catch (OT) {
-            const lT = await RT(TT, kT, cT, null);
-            if (null === lT) throw MT && cT.onMismatch(), OT;
-            return console.warn(`${TT.url().href} from the HTTP cache failed: ${(0,yT.f)(OT)}: loaded its copy instead`), dT(lT, MT ? "warm-refused" : "warm-broken")
-          }
-        }(TT, lT, kT, cT);
-        OT = await RT(TT, lT, kT, KT)
+        const cq = fq(qq, Jq.QPs9),
+          uq = kq,
+          Bq = Zq(Eq, Jq.QPs9),
+          Wq = kq,
+          Nq = fq(gq, Jq.QPs9),
+          aq = kq,
+          Vq = Zq(Yq, Jq.QPs9),
+          dq = kq,
+          jq = function(qq, Eq) {
+            const gq = Eq(1 * qq.length, 1) >>> 0;
+            return hq().set(qq, gq / 1), kq = qq.length, gq
+          }(lq, Jq.QPs9),
+          Hq = kq,
+          oq = Jq.mIvI(cq, uq, Bq, Wq, Nq, aq, Vq, dq, jq, Hq);
+        var xq = oq[0],
+          Aq = oq[1];
+        if (oq[3]) throw xq = 0, Aq = 0, Mq(oq[2]);
+        return Oq = xq, mq = Aq, tq(xq, Aq)
       } finally {
-        KT?.stop()
+        Jq.HLoe(Oq, mq, 1)
       }
-      var xT;
-      return null !== OT ? dT(OT, "cold-worker") : dT(await LT(TT, kT, cT), "cold-wasm")
     }
 
-    function dT(TT, kT) {
+    function uq() {
+      let qq, Eq;
+      try {
+        const gq = Jq.N1CF();
+        return qq = gq[0], Eq = gq[1], tq(gq[0], gq[1])
+      } finally {
+        Jq.HLoe(qq, Eq, 1)
+      }
+    }
+
+    function Bq(qq) {
+      let Eq, gq;
+      try {
+        const Oq = Jq.RnxY(qq);
+        var Yq = Oq[0],
+          lq = Oq[1];
+        if (Oq[3]) throw Yq = 0, lq = 0, Mq(Oq[2]);
+        return Eq = Yq, gq = lq, tq(Yq, lq)
+      } finally {
+        Jq.HLoe(Eq, gq, 1)
+      }
+    }
+
+    function Wq() {
+      return Jq.yE0z() >>> 0
+    }
+
+    function Nq() {
+      let qq, Eq;
+      try {
+        const gq = Jq.AUTO();
+        return qq = gq[0], Eq = gq[1], tq(gq[0], gq[1])
+      } finally {
+        Jq.HLoe(qq, Eq, 1)
+      }
+    }
+
+    function aq(qq, Eq) {
+      let gq, Yq;
+      try {
+        const mq = fq(qq, Jq.QPs9),
+          xq = kq,
+          Aq = Zq(Eq, Jq.QPs9),
+          cq = kq,
+          uq = Jq.YIMe(mq, xq, Aq, cq);
+        var lq = uq[0],
+          Oq = uq[1];
+        if (uq[3]) throw lq = 0, Oq = 0, Mq(uq[2]);
+        return gq = lq, Yq = Oq, tq(lq, Oq)
+      } finally {
+        Jq.HLoe(gq, Yq, 1)
+      }
+    }
+
+    function Vq(qq) {
+      let Eq, gq;
+      try {
+        const Oq = Jq.LPWj(Hq(qq));
+        var Yq = Oq[0],
+          lq = Oq[1];
+        if (Oq[3]) throw Yq = 0, lq = 0, Mq(Oq[2]);
+        return Eq = Yq, gq = lq, tq(Yq, lq)
+      } finally {
+        Jq.HLoe(Eq, gq, 1)
+      }
+    }
+
+    function dq() {
       return {
         __proto__: null,
-        module: TT,
-        path: kT
-      }
-    }
-
-    function LT(TT, kT, cT) {
-      return void 0 === uT(TT.name) ? (0, fT.J)(TT.url(), kT, cT) : (0, fT.J)(TT.url(), kT, {
-        ...cT,
-        hideThen: !0,
-        onDownloaded: () => {
-          ! function(TT) {
-            const kT = CT();
-            if (null === kT) return;
-            const cT = AT(TT),
-              lT = kT.filter((TT => TT !== cT));
-            lT.push(cT);
-            try {
-              localStorage.setItem(xT, JSON.stringify(lT.slice(-IT)))
-            } catch (MT) {
-              console.warn(`Bloxd wasm: ${cT} could not be recorded as downloaded: a later join asks the HTTP cache nothing for it`, MT)
-            }
-          }(TT.url()), cT.onDownloaded?.()
-        }
-      })
-    }
-    async function RT(TT, kT, cT, lT) {
-      if (!HT || !FT()) return null;
-      const MT = TT.url(),
-        KT = `${MT.href}${VT}`;
-      try {
-        return await (0, fT.nb)(KT, ((TT, MT, OT) => eT(KT, kT, TT, MT, OT, cT, lT)))
-      } catch (OT) {
-        return console.warn(`${(0,yT.f)(OT)}: loading ${MT.href} instead`), null
-      }
-    }
-    let gT = null,
-      UT = !1;
-    const YT = new Map,
-      BT = new Map;
-
-    function WT(TT, kT, cT) {
-      return null === gT ? gT = pT(TT, kT) : TT !== gT.build ? console.warn(`Bloxd wasm: ${TT.name} was asked for after ${gT.build.name} started loading, which this thread keeps`) : kT.name !== gT.workers.name && console.warn(`Bloxd wasm: ${kT.name} was asked for workers after ${gT.workers.name}, which this thread keeps`), cT?.reloadFailedDownload && !UT && (0, lT.T)() && (UT = !0, gT = pT(gT.build, gT.workers)), gT.loaded
-    }
-
-    function nT(TT, kT) {
-      if (null !== gT) return (0, MT.f)([]);
-      const cT = TT.filter((TT => !YT.has(TT.name))).map((TT => {
-        const cT = new AbortController,
-          lT = {
-            compiled: LT(TT, (0, KT.e)(TT.name), {
-              priority: kT,
-              KT: cT.signal,
-              onDownloaded: () => {
-                lT.downloaded = !0
-              },
-              retries: {
-                onRetry: () => {
-                  lT.downloaded = !1, null !== gT && cT.abort()
-                }
-              }
-            }),
-            cancel: cT,
-            downloaded: !1
-          };
-        return YT.set(TT.name, lT), (0, MT.j)((kT => {
-          (0, MT.v)(lT.compiled, (() => {
-            lT.downloaded = !0, kT()
-          }), (lT => {
-            cT.signal.aborted || console.warn(`Bloxd wasm: ${TT.name}'s compile ahead of the load failed: the load compiles it afresh`, lT), kT()
-          }))
-        }))
-      }));
-      return (0, MT.f)(cT)
-    }
-
-    function pT(TT, kT) {
-      const cT = (0, lT.D)((async () => {
-        (0, OT.y)(), BT.clear();
-        const cT = qT(TT),
-          lT = kT.name === TT.name ? cT : qT(kT);
-        for (const {
-            cancel: TT
-          }
-          of YT.values()) TT.abort();
-        YT.clear(), await (0, MT.f)([cT, lT]);
-        const KT = await cT,
-          yT = await lT;
-        return (0, OT.y)(), {
-          module: KT,
-          workerModule: yT
-        }
-      }), TT);
-      return {
-        build: TT,
-        workers: kT,
-        loaded: cT
-      }
-    }
-
-    function iT(TT) {
-      return BT.get(TT)
-    }
-
-    function qT(TT) {
-      const kT = performance.now(),
-        cT = YT.get(TT.name);
-      YT.delete(TT.name);
-      const lT = !0 === cT?.downloaded ? cT : void 0;
-      return void 0 !== cT && void 0 === lT && cT.cancel.abort(), (0, MT.j)(((cT, KT) => {
-        const OT = (lT, MT) => {
-            BT.set(TT.name, {
-              path: MT,
-              ms: performance.now() - kT
-            }), cT(lT)
+        kCZL: {
+          __proto__: null,
+          dFih: function(qq, Eq) {
+            return Hq(Error(tq(qq, Eq)))
           },
-          yT = () => {
-            (0, MT.v)(Tk(TT), (TT => {
-              let {
-                module: kT,
-                path: cT
-              } = TT;
-              OT(kT, cT)
-            }), KT)
-          };
-        void 0 === lT ? yT() : (0, MT.v)(lT.compiled, (TT => {
-          OT(TT, "ahead")
-        }), yT)
+          YKNr: function(qq) {
+            return null === nq(qq)
+          },
+          zU3V: function(qq) {
+            return "string" === typeof nq(qq)
+          },
+          voR9: function(qq, Eq) {
+            const gq = nq(Eq),
+              Yq = "string" === typeof gq ? gq : void 0;
+            var lq, Oq = void 0 === (lq = Yq) || null === lq ? 0 : function(qq, Eq, gq) {
+                if (void 0 === gq) {
+                  const gq = pq.encode(qq),
+                    Yq = Eq(gq.length, 1) >>> 0;
+                  return hq().subarray(Yq, Yq + gq.length).set(gq), kq = gq.length, Yq
+                }
+                let Yq = qq.length,
+                  lq = Eq(Yq, 1) >>> 0;
+                const Oq = hq();
+                let mq = 0;
+                for (; mq < Yq; mq++) {
+                  const Eq = qq.charCodeAt(mq);
+                  if (Eq > 127) break;
+                  Oq[lq + mq] = Eq
+                }
+                if (mq !== Yq) {
+                  0 !== mq && (qq = qq.slice(mq)), lq = gq(lq, Yq, Yq = mq + 3 * qq.length, 1) >>> 0;
+                  const Eq = hq().subarray(lq + mq, lq + Yq);
+                  mq += pq.encodeInto(qq, Eq).written, lq = gq(lq, Yq, mq, 1) >>> 0
+                }
+                return kq = mq, lq
+              }(Yq, Jq.QPs9, Jq.CIkR),
+              mq = kq;
+            yq().setInt32(qq + 4, mq, !0), yq().setInt32(qq + 0, Oq, !0)
+          },
+          EBho: function(qq, Eq) {
+            throw new Error(tq(qq, Eq))
+          },
+          iYbJ: function(qq, Eq) {
+            return nq(qq).charCodeAt(Eq >>> 0)
+          },
+          RHb0: function(qq, Eq) {
+            console.error(tq(qq, Eq))
+          },
+          ArrS: function(qq) {
+            return nq(qq).length
+          },
+          EteA: function(qq, Eq) {
+            return Hq(tq(qq, Eq))
+          },
+          FD1m: function(qq) {
+            Mq(qq)
+          }
+        }
+      }
+    }
+    Symbol.dispose && (lq.prototype[Symbol.dispose] = lq.prototype.free);
+    const jq = "undefined" === typeof FinalizationRegistry ? {
+      register: () => {},
+      unregister: () => {}
+    } : new FinalizationRegistry((qq => Jq.mpnV(qq, 1)));
+
+    function Hq(qq) {
+      iq === bq.length && bq.push(bq.length + 1);
+      const Eq = iq;
+      return iq = bq[Eq], bq[Eq] = qq, Eq
+    }
+
+    function oq(qq, Eq) {
+      qq >>>= 0;
+      const gq = yq(),
+        Yq = [];
+      for (let lq = qq; lq < qq + 4 * Eq; lq += 4) Yq.push(Mq(gq.getUint32(lq, !0)));
+      return Yq
+    }
+
+    function Pq(qq, Eq) {
+      return qq >>>= 0, hq().subarray(qq / 1, qq / 1 + Eq)
+    }
+    let Qq = null;
+
+    function yq() {
+      return (null === Qq || !0 === Qq.buffer.detached || void 0 === Qq.buffer.detached && Qq.buffer !== Jq.memory.buffer) && (Qq = new DataView(Jq.memory.buffer)), Qq
+    }
+
+    function tq(qq, Eq) {
+      return function(qq, Eq) {
+        Sq += Eq, Sq >= zq && (Tq = new TextDecoder("utf-8", {
+          ignoreBOM: !0,
+          fatal: !0
+        }), Tq.decode(), Sq = Eq);
+        return Tq.decode(hq().subarray(qq, qq + Eq))
+      }(qq >>> 0, Eq)
+    }
+    let rq = null;
+    let vq = null;
+
+    function hq() {
+      return null !== vq && 0 !== vq.byteLength || (vq = new Uint8Array(Jq.memory.buffer)), vq
+    }
+
+    function nq(qq) {
+      return bq[qq]
+    }
+    let bq = new Array(1024).fill(void 0);
+    bq.push(void 0, null, !0, !1);
+    let iq = bq.length;
+
+    function Zq(qq, Eq) {
+      const gq = Eq(4 * qq.length, 4) >>> 0;
+      return (null !== rq && 0 !== rq.byteLength || (rq = new Uint32Array(Jq.memory.buffer)), rq).set(qq, gq / 4), kq = qq.length, gq
+    }
+
+    function fq(qq, Eq) {
+      const gq = Eq(4 * qq.length, 4) >>> 0,
+        Yq = yq();
+      for (let lq = 0; lq < qq.length; lq++) Yq.setUint32(gq + 4 * lq, Hq(qq[lq]), !0);
+      return kq = qq.length, gq
+    }
+
+    function Mq(qq) {
+      const Eq = nq(qq);
+      return function(qq) {
+        qq < 1028 || (bq[qq] = iq, iq = qq)
+      }(qq), Eq
+    }
+    let Tq = new TextDecoder("utf-8", {
+      ignoreBOM: !0,
+      fatal: !0
+    });
+    Tq.decode();
+    const zq = 2146435072;
+    let Sq = 0;
+    const pq = new TextEncoder;
+    "encodeInto" in pq || (pq.encodeInto = function(qq, Eq) {
+      const gq = pq.encode(qq);
+      return Eq.set(gq), {
+        read: qq.length,
+        written: gq.length
+      }
+    });
+    let Gq, Lq, Jq, kq = 0;
+
+    function Rq(qq, Eq) {
+      return Lq = qq, Jq = qq.exports, Gq = Eq, Qq = null, rq = null, vq = null, Jq.u0o2(), Jq
+    }
+
+    function Uq(qq) {
+      if (void 0 !== Jq) return Jq;
+      void 0 !== qq && (Object.getPrototypeOf(qq) === Object.prototype ? ({
+        module: qq
+      } = qq) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
+      const Eq = dq();
+      qq instanceof WebAssembly.Module || (qq = new WebAssembly.Module(qq));
+      return Rq(new WebAssembly.Instance(qq, Eq), qq)
+    }
+    async function Fq(qq) {
+      if (void 0 !== Jq) return Jq;
+      void 0 !== qq && (Object.getPrototypeOf(qq) === Object.prototype ? ({
+        module_or_path: qq
+      } = qq) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
+      const Eq = dq();
+      ("string" === typeof qq || "function" === typeof Request && qq instanceof Request || "function" === typeof URL && qq instanceof URL) && (qq = fetch(qq));
+      const {
+        instance: gq,
+        module: Yq
+      } = await async function(qq, Eq) {
+        if ("function" === typeof Response && qq instanceof Response) {
+          if (!qq.ok) throw new Error(`failed to fetch Wasm: ${qq.status} ${qq.statusText} fetching '${qq.url}'`);
+          if ("function" === typeof WebAssembly.instantiateStreaming) try {
+            return await WebAssembly.instantiateStreaming(qq, Eq)
+          } catch (gq) {
+            if (! function(qq) {
+                switch (qq) {
+                  case "basic":
+                  case "cors":
+                  case "default":
+                    return !0
+                }
+                return !1
+              }(qq.type) || "application/wasm" === qq.headers.get("Content-Type")) throw gq;
+            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", gq)
+          }
+          const Yq = await qq.arrayBuffer();
+          return await WebAssembly.instantiate(Yq, Eq)
+        } {
+          const gq = await WebAssembly.instantiate(qq, Eq);
+          return gq instanceof WebAssembly.Instance ? {
+            instance: gq,
+            module: qq
+          } : gq
+        }
+      }(await qq, Eq);
+      return Rq(gq, Yq)
+    }
+    var sq = gq(2805),
+      Xq = gq(6500);
+    class wq extends Error {
+      stage;
+      constructor(qq, Eq) {
+        super((0, sq.M)(qq, Eq), {
+          cause: Eq
+        }), this.name = "BloxdShaderPackWasmLoadError", this.stage = qq
+      }
+    }
+    let Kq = null,
+      Cq = null;
+
+    function Iq() {
+      return Kq ? Promise.resolve(Kq) : (Cq || (Cq = async function() {
+        let qq;
+        try {
+          qq = await (0, sq.N)(new gq.U(gq(6508)), (0, Xq.d)("bloxd_wasm_shader_pack"))
+        } catch (Eq) {
+          throw new wq((0, sq.R)(Eq), Eq)
+        }
+        try {
+          await Fq({
+            module_or_path: qq
+          })
+        } catch (Eq) {
+          throw new wq("instantiate", Eq)
+        }
+        return Kq = Yq, Kq
+      }(), Cq.then(void 0, (() => {
+        Cq = null
+      }))), Cq)
+    }
+    var eq = gq(6517);
+
+    function Dq(qq) {
+      let [Eq, gq, Yq, lq] = qq;
+      const Oq = {
+        file: Eq,
+        line: gq,
+        message: Yq
+      };
+      return lq && (Oq.variants = lq.map(eq.l)), Oq
+    }
+
+    function qE(qq) {
+      return JSON.parse(qq).map(Dq)
+    }
+
+    function EE(qq, Eq) {
+      if (!Number.isInteger(qq) || qq < 0 || qq > 4294967295) throw new Error(`${Eq} ${qq} is not a whole number from 0 to 4294967295`);
+      return qq
+    }
+
+    function gE(qq) {
+      return [qq.named.map((qq => qq.name)), Uint32Array.from(qq.named, (qq => EE(qq.id, "Texture ID")))]
+    }
+    const YE = new WeakMap;
+    const lE = new WeakMap,
+      OE = new WeakSet;
+
+    function mE(qq, Eq) {
+      if (OE.has(qq)) throw new Error("The shader pack compiler crashed earlier on this page, so it can't run again until a reload");
+      try {
+        return Eq()
+      } catch (gq) {
+        throw gq instanceof WebAssembly.RuntimeError && OE.add(qq), gq
+      }
+    }
+
+    function xE(qq) {
+      let Eq = lE.get(qq);
+      if (!Eq) {
+        let gq, Yq;
+        Eq = {
+          tqq: (Eq, gq) => mE(qq, (() => function(qq, Eq, gq) {
+            const Yq = qq.tqq(Eq.map((qq => qq.path)), Eq.map((qq => qq.source)), ...gE(gq), gq.aliases.map((qq => qq.name)), gq.aliases.map((qq => qq.texture)), gq.aliases.map((qq => qq.kind)));
+            let lq = !1;
+            try {
+              const qq = Yq.validationModuleCodes,
+                Eq = Array.from(Yq.validationModuleKeys, ((Eq, gq) => ({
+                  key: (0, eq.l)(Eq),
+                  code: qq[gq]
+                }))),
+                gq = {
+                  errors: qE(Yq.errorsJson),
+                  offInStrict: qE(Yq.offInStrictJson),
+                  variants: (0, eq.f)(Yq),
+                  validationModules: Eq,
+                  features: Yq.features
+                };
+              return Eq.forEach(((qq, Eq) => {
+                YE.set(qq, {
+                  pack: Yq,
+                  index: Eq
+                })
+              })), lq = Eq.length > 0, gq
+            } finally {
+              lq || Yq.free()
+            }
+          }(qq, Eq, gq))),
+          mapValidationMessage: (Eq, gq) => {
+            const Yq = YE.get(Eq);
+            if (!Yq) throw new Error("mapValidationMessage takes a validation module this compiler made");
+            return Dq(JSON.parse(mE(qq, (() => Yq.pack.mapValidationMessage(Yq.index, gq.lineNum, gq.linePos, gq.message, gq.type)))))
+          },
+          aYq: Eq => mE(qq, (() => function(qq, Eq) {
+            const gq = new Int32Array(Eq.length),
+              Yq = [];
+            return Eq.forEach(((qq, Eq) => {
+              gq[Eq] = qq.variants ? qq.variants.length : -1;
+              for (const gq of qq.variants ?? []) Yq.push((0, eq.j)(gq))
+            })), qE(qq.aYq(Eq.map((qq => qq.file)), Uint32Array.from(Eq, (qq => EE(qq.line, "Diagnostic line"))), Eq.map((qq => qq.message)), gq, Uint8Array.from(Yq)))
+          }(qq, Eq))),
+          yJ: Eq => mE(qq, (() => qq.yJ(...gE(Eq)))),
+          get SHADER_PACK_HEADER_VERSION() {
+            return gq ??= mE(qq, (() => qq.ilq())), gq
+          },
+          get DEFAULT_SHADER_PACK_FILES() {
+            return Yq ??= mE(qq, (() => {
+              const Eq = qq.hlq();
+              return qq.vlq().map(((qq, gq) => ({
+                path: qq,
+                source: Eq[gq]
+              })))
+            })), Yq
+          },
+          Zlq: Eq => mE(qq, (() => qq.Zlq(Eq))),
+          resolveHeader: Eq => mE(qq, (() => qq.blq((0, eq.j)(Eq)))),
+          nlq: () => mE(qq, (() => qq.nlq()))
+        }, lE.set(qq, Eq)
+      }
+      return Eq
+    }
+    var AE = gq(3120),
+      cE = gq(6514);
+    const uE = "bloxdShaderPackWasmFailureReported";
+    let BE = null;
+
+    function WE() {
+      return BE ??= async function() {
+        if ("undefined" === typeof WebAssembly) return NE("unsupported", "This browser has no WebAssembly"), null;
+        const qq = (0, cE.loadShaderPackTextures)().then((() => !0), (qq => (console.error("Could not load the shader pack textures, so shader packs can't run", qq), !1)));
+        try {
+          const Eq = await async function() {
+            let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Iq;
+            return xE(await qq())
+          }();
+          return await qq ? Eq : null
+        } catch (Eq) {
+          const qq = Eq instanceof Error ? Eq.message : String(Eq);
+          return NE(AE.c[Eq instanceof wq ? Eq.stage : "instantiate"], qq), null
+        }
+      }(), BE
+    }
+
+    function NE(qq, Eq) {
+      (0, AE.e)(uE, `Shader pack wasm ${qq}, so shader packs can't run: ${Eq}`, Eq, `shader_pack_${qq}`)
+    }
+  },
+  6508: (qq, Eq, gq) => {
+    qq.exports = gq.p + "static/media/bloxd_wasm_shader_pack_bg.85a99b3f49b7ce9ed7dc.wasm"
+  },
+  6500: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => mq
+    });
+    var Yq = gq(2805);
+    const lq = {
+      bloxd_wasm: () => "6d78896f037d6c3dd2ec91f53e012efc14d4c7478e36fc57749ae14be1df3096",
+      bloxd_wasm_client: () => "132c78fe4d5d985a39aef9cb5338e6d40926f1581f341ef925ca4f1b873982cf",
+      bloxd_wasm_workers: () => "9fa00e1e679c4b317e391d15a0e20bcce764b10ac53881c003b3245b86db6cf5",
+      bloxd_wasm_models: () => "9dd9f9fb8ff600ad7045604d8a17da38690a8b012f1e8b7f578a1a671baf7185",
+      bloxd_wasm_webgpu: () => "72b5e9034b38cfcfd84eb4e4b1607ea3fedbb7078518766dd27ac431c9922848",
+      bloxd_wasm_webgl: () => "a5cefc5390d0e4cf10eab192e6d4403fc337fb14cfe0e3164c3430a7c721595d",
+      bloxd_wasm_webgl1: () => "3cb76bb92c5501eb795864d943ed2c567c8b5ff7777cd5f2c08b0940197979c9",
+      bloxd_wasm_replay: () => "f8132694ecb3c07d332a67ad7dab19d035d58dc2cea1ddbf2ca6dc7ec556cd0c",
+      bloxd_wasm_recorder: () => "166b4da1bfa19d1d90b1f2d66b23de17c858096a88eb92fe87a8c9e58f77c3bb",
+      bloxd_wasm_anim: () => "11dd5bcc2c7323ae0a5b9e4cd8b8c81d457a9ea85d6e339c6454ed1bb80a27c4",
+      bloxd_wasm_textures: () => "2ba4917ae218104948db870865715dacd8571878aedd4fece740312291892fac",
+      bloxd_wasm_shader_pack: () => "dfb97693642c8a1ee7219f62c2557fcfb1c20ef622361f5b18389c544478cae6"
+    };
+    var Oq = gq(4524);
+
+    function mq(qq) {
+      const Eq = Object.prototype.hasOwnProperty.call(lq, qq) ? lq[qq]() : void 0;
+      if (void 0 !== Eq) return {
+        sha256: Eq,
+        onMismatch: Oq.C
+      };
+      throw new Yq.j(`${qq} has no release digest, so this build refuses it`)
+    }
+  },
+  6517: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => Pq,
+      f: () => Qq,
+      j: () => Hq,
+      l: () => jq
+    });
+    var Yq = gq(6521);
+    const lq = 6,
+      Oq = 3,
+      mq = 1,
+      xq = 2,
+      Aq = 4,
+      cq = 8,
+      uq = 16,
+      Bq = 32,
+      Wq = 64,
+      Nq = 128,
+      aq = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
+
+    function Vq(qq) {
+      if (!qq) return 0;
+      const Eq = aq.indexOf(qq);
+      if (Eq <= 0) throw new Error(`"${qq}" is not a shader pack hook function`);
+      return Eq
+    }
+
+    function dq(qq) {
+      if (0 === qq) return null;
+      const Eq = aq[qq];
+      if (void 0 === Eq) throw new Error(`${qq} is not a shader pack hook function id`);
+      return Eq
+    }
+
+    function jq(qq) {
+      const Eq = Yq.b.length;
+      return {
+        strict: qq >= Eq,
+        program: Yq.b[qq % Eq]
+      }
+    }
+
+    function Hq(qq) {
+      return Number(qq.strict) * Yq.b.length + Yq.b.indexOf(qq.program)
+    }
+
+    function oq(qq) {
+      return "" === qq ? [] : qq.split(" ")
+    }
+
+    function Pq(qq) {
+      const Eq = {
+        variantFlags: new Uint8Array(lq),
+        hooks: new Uint8Array(lq * Oq),
+        moduleCodes: Array(lq).fill(""),
+        reads: Array(2 * lq).fill("")
+      };
+      for (const gq of qq) {
+        const qq = Hq(gq.key),
+          Yq = (qq, Eq) => null === gq.hooks.surface || gq.reads.fragment.includes(qq) ? 0 : Eq;
+        Eq.variantFlags[qq] = (gq.sceneDepth ? mq : 0) | (gq.movesVertices ? xq : 0) | (gq.sunShadow ? Aq : 0) | (gq.airShadow ? cq : 0) | (gq.discards ? uq : 0) | Yq("localPosition", Bq) | Yq("enchantSpeed", Wq) | Yq("enchantTier", Nq), Eq.hooks[qq * Oq] = Vq(gq.hooks.vertex), Eq.hooks[qq * Oq + 1] = Vq(gq.hooks.surface), Eq.hooks[qq * Oq + 2] = Vq(gq.hooks.light), Eq.moduleCodes[qq] = gq.moduleCode, Eq.reads[2 * qq] = gq.reads.vertex.join(" "), Eq.reads[2 * qq + 1] = gq.reads.fragment.join(" ")
+      }
+      return Eq
+    }
+
+    function Qq(qq) {
+      const {
+        hooks: Eq,
+        moduleCodes: gq,
+        reads: Yq
+      } = qq;
+      return Array.from(qq.variantFlags, ((qq, lq) => {
+        const Bq = lq * Oq;
+        return {
+          key: jq(lq),
+          hooks: {
+            vertex: dq(Eq[Bq]),
+            surface: dq(Eq[Bq + 1]),
+            light: dq(Eq[Bq + 2])
+          },
+          moduleCode: gq[lq],
+          sceneDepth: 0 !== (qq & mq),
+          sunShadow: 0 !== (qq & Aq),
+          airShadow: 0 !== (qq & cq),
+          movesVertices: 0 !== (qq & xq),
+          discards: 0 !== (qq & uq),
+          reads: {
+            vertex: oq(Yq[2 * lq]),
+            fragment: oq(Yq[2 * lq + 1])
+          }
+        }
       }))
     }
-    async function sT(TT, kT) {
-      const {
-        module: cT
-      } = await Tk(TT, {
-        retries: kT
-      });
-      return cT
-    }
-    async function Tk(TT) {
-      let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      return await XT(TT, (0, KT.e)(TT.name), kT)
-    }
   },
-  6609: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => OT
+  6521: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => Yq,
+      d: () => mq,
+      g: () => xq,
+      j: () => lq,
+      m: () => Oq
     });
-    var lT = cT(3684);
-    const MT = {
-      bloxd_wasm: () => "a0f424b25368d6393787ae0cadc74c38a79bf45853cbc8fe0d3b4b00ed2f3987",
-      bloxd_wasm_client: () => "0848a1ad8f1a6acd15190097c16d6c8cee3ea20961c9a5135fb70c8e5a3a8765",
-      bloxd_wasm_workers: () => "70acc026337513cb3482a9557a18f648e482d0083d7e5e1b6fe3e07bdcb2f8e3",
-      bloxd_wasm_models: () => "634d37ef8cef3ee4f695383ddf3aede7e518819fda02f111669a55711db8829c",
-      bloxd_wasm_webgpu: () => "af696a84742b4427e456975c7e2c98397cd27946ad3057ca6a41701cfdd49270",
-      bloxd_wasm_webgl: () => "47a865a6f0812bc9a2a7d464d212069d989bfc60e391a5b004c51ed9559d1e27",
-      bloxd_wasm_webgl1: () => "5aba3664c214844c153b620384afd9cea74130cc607a9c685d1bcb6b1c27c0ab",
-      bloxd_wasm_replay: () => "e3dd0cd7ff45dd407891c5abf1fcf21a49472dcaf48a1de94d52bdc122668ccb",
-      bloxd_wasm_recorder: () => "2ae924a7cec0f9372a697abc3ae0b17fe0bb9ee6dd19eec21dc29e9750c477ef",
-      bloxd_wasm_anim: () => "430af23f79668b6e0629c901770a89c5c28880e27fbfff3d39abec128e94239a",
-      bloxd_wasm_textures: () => "b21f3145552327388bc76ac1444ca300a6882c320fa905c6294cbf6b199edb5f",
-      bloxd_wasm_shader_pack: () => "8971c80e16c937b8809bd65766732ac5b19a0f1e03dd98d4cfc7cc2bf271b324"
-    };
-    var KT = cT(4681);
+    const Yq = ["terrain", "liquid", "model"];
 
-    function OT(TT) {
-      const kT = Object.prototype.hasOwnProperty.call(MT, TT) ? MT[TT]() : void 0;
-      if (void 0 !== kT) return {
-        sha256: kT,
-        onMismatch: KT.x
-      };
-      throw new lT.f(`${TT} has no release digest, so this build refuses it`)
-    }
-  },
-  36077: (TT, kT, cT) => {
-    cT.d(kT, {
-      d: () => lT,
-      g: () => KT,
-      i: () => fT,
-      l: () => OT,
-      m: () => MT
-    });
-    const lT = /^alloc_failed (\d+) bytes$/;
-
-    function MT(TT, kT) {
-      return KT(TT, kT) ? `trap=alloc_failed ${kT} bytes` : `trap=${TT}`
+    function lq() {
+      const qq = [];
+      for (const Eq of [!1, !0])
+        for (const gq of Yq) qq.push({
+          strict: Eq,
+          program: gq
+        });
+      return qq
     }
 
-    function KT(TT, kT) {
-      return "unreachable" === TT && kT > 0
+    function Oq(qq) {
+      return `${qq.strict?"strict":"allow"}.${qq.program}`
     }
 
-    function OT(TT, kT, cT) {
-      const lT = function(TT) {
-        return TT instanceof WebAssembly.RuntimeError ? /unreachable/i.test(TT.message) ? "unreachable" : /out of bounds/i.test(TT.message) ? "out_of_bounds" : "runtime_error" : (TT instanceof RangeError || TT instanceof Error && "InternalError" === TT.name) && /call stack|recursion/i.test(TT.message) ? "stack_overflow" : "js_error"
-      }(TT);
-      if ("unreachable" !== lT) return {
-        kind: lT,
-        panic: null,
-        refusedBytes: 0
-      };
-      const MT = kT(),
-        KT = cT();
-      return {
-        kind: lT,
-        panic: KT > 0 ? null : MT,
-        refusedBytes: KT
-      }
+    function mq(qq) {
+      return !qq.hooks.vertex && !qq.hooks.surface && !qq.hooks.light
     }
-    const yT = 300;
 
-    function fT(TT) {
-      return TT.replace(/\s*\n\s*/g, " / ").slice(0, yT)
+    function xq(qq, Eq) {
+      return "off" !== Eq && (null === qq || qq.some((qq => qq.key.strict === ("strict" === Eq) && !mq(qq))))
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

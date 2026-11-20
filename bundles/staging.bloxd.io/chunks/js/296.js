@@ -1,261 +1,261 @@
 export const id = 296;
 export const ids = [296];
 export const modules = {
-  41286: (TT, kT, cT) => {
-    cT.d(kT, {
-      b: () => CT,
-      d: () => NT,
-      g: () => jT,
-      k: () => vT,
-      l: () => ST,
-      n: () => QT
+  41459: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => Wq,
+      f: () => jq,
+      i: () => Nq,
+      l: () => aq,
+      o: () => oq,
+      r: () => Hq
     });
-    var lT = cT(41242);
-    var MT = "Babylon Lite v1.32.0",
-      KT = cT(41291);
+    var Yq = gq(41402);
+    var lq = "Babylon Lite v1.32.0",
+      Oq = gq(41467);
 
-    function OT(TT) {
-      return "clientWidth" in TT
+    function mq(qq) {
+      return "clientWidth" in qq
     }
-    var yT = 1;
+    var xq = 1;
 
-    function fT(TT, kT, cT) {
-      const fT = kT.getContext("webgpu");
-      fT || (0, lT.e)(54), OT(kT) && kT.setAttribute("data-engine", MT);
-      const xT = cT?.format ?? navigator.gpu.getPreferredCanvasFormat(),
-        IT = cT?.srgb ? (AT = xT).endsWith("-srgb") ? AT : `${AT}-srgb` : xT;
-      var AT;
-      const CT = cT?.alphaMode ?? "opaque";
-      fT.configure({
-        device: TT._device,
-        format: xT,
-        alphaMode: CT,
-        viewFormats: [IT]
+    function Aq(qq, Eq, gq) {
+      const Aq = Eq.getContext("webgpu");
+      Aq || (0, Yq.d)(54), mq(Eq) && Eq.setAttribute("data-engine", lq);
+      const cq = gq?.format ?? navigator.gpu.getPreferredCanvasFormat(),
+        uq = gq?.srgb ? (Bq = cq).endsWith("-srgb") ? Bq : `${Bq}-srgb` : cq;
+      var Bq;
+      const Wq = gq?.alphaMode ?? "opaque";
+      Aq.configure({
+        device: qq._device,
+        format: cq,
+        alphaMode: Wq,
+        viewFormats: [uq]
       });
-      const jT = 1 === cT?.msaaSamples ? 1 : 4,
-        vT = (0, KT.b)({
+      const Nq = 1 === gq?.msaaSamples ? 1 : 4,
+        aq = (0, Oq.d)({
           lbl: "swapchain",
-          format: IT,
+          format: uq,
           samples: 1,
           size: {
             width: 0,
             height: 0
           }
         });
-      return vT._eager = !0, {
-        engine: TT,
-        canvas: kT,
-        format: IT,
-        msaaSamples: jT,
-        scRT: vT,
-        maxDevicePixelRatio: cT?.maxDevicePixelRatio ?? 1 / 0,
-        _uniqueId: yT++,
-        _context: fT,
-        _configureFormat: xT,
-        _alphaMode: CT,
+      return aq._eager = !0, {
+        engine: qq,
+        canvas: Eq,
+        format: uq,
+        msaaSamples: Nq,
+        scRT: aq,
+        maxDevicePixelRatio: gq?.maxDevicePixelRatio ?? 1 / 0,
+        _uniqueId: xq++,
+        _context: Aq,
+        _configureFormat: cq,
+        _alphaMode: Wq,
         _renderingContexts: []
       }
     }
 
-    function xT(TT) {
-      const kT = TT._context.getCurrentTexture(),
-        cT = TT.scRT;
-      cT._colorTexture = kT, cT._colorView = kT.createView({
-        format: TT.format
-      }), cT._width = kT.width, cT._height = kT.height
+    function cq(qq) {
+      const Eq = qq._context.getCurrentTexture(),
+        gq = qq.scRT;
+      gq._colorTexture = Eq, gq._colorView = Eq.createView({
+        format: qq.format
+      }), gq._width = Eq.width, gq._height = Eq.height
     }
 
-    function IT(TT) {
-      const kT = TT.canvas;
-      if (!OT(kT)) return;
-      const cT = TT._w ?? kT.clientWidth,
-        lT = TT._h ?? kT.clientHeight;
-      if (!(cT > 0 && lT > 0)) return;
-      const MT = Math.min(globalThis.devicePixelRatio || 1, TT.maxDevicePixelRatio);
-      AT(TT, cT * MT | 0, lT * MT | 0)
+    function uq(qq) {
+      const Eq = qq.canvas;
+      if (!mq(Eq)) return;
+      const gq = qq._w ?? Eq.clientWidth,
+        Yq = qq._h ?? Eq.clientHeight;
+      if (!(gq > 0 && Yq > 0)) return;
+      const lq = Math.min(globalThis.devicePixelRatio || 1, qq.maxDevicePixelRatio);
+      Bq(qq, gq * lq | 0, Yq * lq | 0)
     }
 
-    function AT(TT, kT, cT) {
-      const lT = TT.canvas,
-        MT = 0 | kT,
-        KT = 0 | cT;
-      if (MT > 0 && KT > 0 && (MT !== lT.width || KT !== lT.height)) {
-        lT.width = MT, lT.height = KT, TT.scRT._width = MT, TT.scRT._height = KT;
-        for (const kT of TT._renderingContexts) kT._resize?.()
+    function Bq(qq, Eq, gq) {
+      const Yq = qq.canvas,
+        lq = 0 | Eq,
+        Oq = 0 | gq;
+      if (lq > 0 && Oq > 0 && (lq !== Yq.width || Oq !== Yq.height)) {
+        Yq.width = lq, Yq.height = Oq, qq.scRT._width = lq, qq.scRT._height = Oq;
+        for (const Eq of qq._renderingContexts) Eq._resize?.()
       }
     }
-    var CT = 0;
+    var Wq = 0;
 
-    function jT(TT, kT) {
-      return -1 !== TT._renderingContexts.indexOf(kT)
+    function Nq(qq, Eq) {
+      return -1 !== qq._renderingContexts.indexOf(Eq)
     }
 
-    function vT(TT, kT) {
-      return -1 === TT._renderingContexts.indexOf(kT) && (TT._renderingContexts.push(kT), !0)
+    function aq(qq, Eq) {
+      return -1 === qq._renderingContexts.indexOf(Eq) && (qq._renderingContexts.push(Eq), !0)
     }
-    var tT = null;
-    var hT = ["float32-filterable", "texture-compression-astc", "texture-compression-bc", "texture-compression-etc2", "texture-compression-unaligned", "timestamp-query", "primitive-index"];
-    async function NT(TT, kT) {
-      const KT = await navigator.gpu.requestAdapter({
+    var Vq = null;
+    var dq = ["float32-filterable", "texture-compression-astc", "texture-compression-bc", "texture-compression-etc2", "texture-compression-unaligned", "timestamp-query", "primitive-index"];
+    async function jq(qq, Eq) {
+      const Oq = await navigator.gpu.requestAdapter({
         powerPreference: "high-performance",
-        ...tT ? tT() : {}
+        ...Vq ? Vq() : {}
       });
-      KT || (0, lT.e)(47);
-      const OT = tT?.deviceFeatures?.(KT, kT) ?? function(TT) {
-          return hT.filter((kT => TT.features.has(kT)))
-        }(KT),
-        yT = await KT.requestDevice({
-          requiredFeatures: OT,
-          requiredLimits: kT?.requiredLimits
+      Oq || (0, Yq.d)(47);
+      const mq = Vq?.deviceFeatures?.(Oq, Eq) ?? function(qq) {
+          return dq.filter((Eq => qq.features.has(Eq)))
+        }(Oq),
+        xq = await Oq.requestDevice({
+          requiredFeatures: mq,
+          requiredLimits: Eq?.requiredLimits
         });
-      console.log(`${MT} - WebGPU engine`);
-      const AT = !!kT?.useHighPrecisionMatrix,
-        CT = !!kT?.useFloatingOrigin;
-      if (CT && !AT && (0, lT.e)(48), AT) {
+      console.log(`${lq} - WebGPU engine`);
+      const Bq = !!Eq?.useHighPrecisionMatrix,
+        Wq = !!Eq?.useFloatingOrigin;
+      if (Wq && !Bq && (0, Yq.d)(48), Bq) {
         const {
-          allocateF64Mat4: TT
-        } = await cT.e(350).then((() => cT(60629)));
+          allocateF64Mat4: qq
+        } = await gq.e(350).then((() => gq(61205)));
         0
       }
-      let jT, vT, NT, QT;
-      if (CT) {
+      let Nq, aq, jq, Hq;
+      if (Wq) {
         const [{
-          wrapRenderableForFO: TT,
-          lightFoVersion: kT,
-          applyLightFoOffset: lT
+          wrapRenderableForFO: qq,
+          lightFoVersion: Eq,
+          applyLightFoOffset: Yq
         }, {
-          makePackMeshWorld: MT
-        }] = await Promise.all([cT.e(351).then((() => cT(60636))), cT.e(352).then((() => cT(60644)))]);
-        jT = TT, vT = MT, NT = kT, QT = lT
+          makePackMeshWorld: lq
+        }] = await Promise.all([gq.e(351).then((() => gq(61207))), gq.e(352).then((() => gq(61212)))]);
+        Nq = qq, aq = lq, jq = Eq, Hq = Yq
       }
-      const ST = {
-          _device: yT
+      const oq = {
+          _device: xq
         },
-        DT = [ST];
-      return Object.assign(ST, {
-        engine: ST,
-        surfaces: DT,
-        _surfaces: DT,
-        _device: yT,
-        _options: kT,
+        Pq = [oq];
+      return Object.assign(oq, {
+        engine: oq,
+        surfaces: Pq,
+        _surfaces: Pq,
+        _device: xq,
+        _options: Eq,
         drawCallCount: 0,
         gpuFrameTimeMs: 0,
-        useHighPrecisionMatrix: AT,
-        useFloatingOrigin: CT,
+        useHighPrecisionMatrix: Bq,
+        useFloatingOrigin: Wq,
         _animFrameId: 0,
         _renderFn: null,
         _currentEncoder: void 0,
         _currentDelta: 0,
         _cbs: [],
-        _wrapRenderableForFO: jT,
-        _makePackMeshWorld: vT,
-        _lightFoVersion: NT,
-        _applyLightFoOffset: QT
-      }, fT(ST, TT, kT)), IT(ST), xT(ST), ST
+        _wrapRenderableForFO: Nq,
+        _makePackMeshWorld: aq,
+        _lightFoVersion: jq,
+        _applyLightFoOffset: Hq
+      }, Aq(oq, qq, Eq)), uq(oq), cq(oq), oq
     }
 
-    function QT(TT, kT, cT) {
-      AT(TT, kT, cT)
+    function Hq(qq, Eq, gq) {
+      Bq(qq, Eq, gq)
     }
 
-    function ST(TT, kT) {
-      let cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : TT.surfaces;
-      if (cT !== TT.surfaces)
-        for (let MT = cT.length; MT--;) cT[MT].engine !== TT && (0, lT.e)(49);
-      DT(TT, kT, cT)
+    function oq(qq, Eq) {
+      let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : qq.surfaces;
+      if (gq !== qq.surfaces)
+        for (let lq = gq.length; lq--;) gq[lq].engine !== qq && (0, Yq.d)(49);
+      Pq(qq, Eq, gq)
     }
 
-    function DT(TT, kT) {
-      let cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : TT._surfaces,
-        lT = 0;
-      for (let KT = cT.length; KT--;) lT += cT[KT]._renderingContexts.length;
-      if (!lT) return TT.drawCallCount = 0, TT._flushGpuRetirements?.(TT);
-      const MT = TT._device.createCommandEncoder({
+    function Pq(qq, Eq) {
+      let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : qq._surfaces,
+        Yq = 0;
+      for (let Oq = gq.length; Oq--;) Yq += gq[Oq]._renderingContexts.length;
+      if (!Yq) return qq.drawCallCount = 0, qq._flushGpuRetirements?.(qq);
+      const lq = qq._device.createCommandEncoder({
         label: "frame"
       });
-      TT._currentEncoder = MT, TT._currentDelta = kT;
+      qq._currentEncoder = lq, qq._currentDelta = Eq;
       try {
-        TT._gpuTimerBegin?.(MT), lT = 0;
-        for (let TT = 0; TT < cT.length; TT++) {
-          const kT = cT[TT];
-          kT._capturePreFrame?.(kT), xT(kT);
-          const MT = kT._renderingContexts;
-          for (let TT = 0; TT < MT.length; TT++) {
-            const kT = MT[TT];
-            kT._update(), lT += kT._drawCallsPre + kT._record()
+        qq._gpuTimerBegin?.(lq), Yq = 0;
+        for (let qq = 0; qq < gq.length; qq++) {
+          const Eq = gq[qq];
+          Eq._capturePreFrame?.(Eq), cq(Eq);
+          const lq = Eq._renderingContexts;
+          for (let qq = 0; qq < lq.length; qq++) {
+            const Eq = lq[qq];
+            Eq._update(), Yq += Eq._drawCallsPre + Eq._record()
           }
         }
-        const kT = TT._currentEncoder;
-        for (let TT = 0; TT < cT.length; TT++) {
-          const lT = cT[TT];
-          lT._captureService?.(lT, kT)
+        const Eq = qq._currentEncoder;
+        for (let qq = 0; qq < gq.length; qq++) {
+          const Yq = gq[qq];
+          Yq._captureService?.(Yq, Eq)
         }
-        TT._gpuTimerEnd?.(kT), TT._cbs[0] = kT.finish(), TT._device.queue.submit(TT._cbs), TT._flushGpuRetirements?.(TT), TT.drawCallCount = lT, TT._gpuTimerResolve?.()
+        qq._gpuTimerEnd?.(Eq), qq._cbs[0] = Eq.finish(), qq._device.queue.submit(qq._cbs), qq._flushGpuRetirements?.(qq), qq.drawCallCount = Yq, qq._gpuTimerResolve?.()
       } finally {
-        TT._currentEncoder = void 0
+        qq._currentEncoder = void 0
       }
     }
   },
-  41244: (TT, kT, cT) => {
-    cT.d(kT, {
-      d: () => MT,
-      f: () => KT,
-      g: () => lT
+  41406: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => lq,
+      c: () => Oq,
+      f: () => Yq
     });
-    var lT = globalThis.GPUTextureUsage,
-      MT = globalThis.GPUBufferUsage,
-      KT = globalThis.GPUShaderStage;
+    var Yq = globalThis.GPUTextureUsage,
+      lq = globalThis.GPUBufferUsage,
+      Oq = globalThis.GPUShaderStage;
     globalThis.GPUColorWrite
   },
-  41302: (TT, kT, cT) => {
-    function lT(TT) {
-      MT(TT.splice(0))
+  41489: (qq, Eq, gq) => {
+    function Yq(qq) {
+      lq(qq.splice(0))
     }
 
-    function MT(TT) {
-      for (const cT of TT) try {
-        cT()
-      } catch (kT) {
-        console.error("GPU resource retirement failed.", kT)
+    function lq(qq) {
+      for (const gq of qq) try {
+        gq()
+      } catch (Eq) {
+        console.error("GPU resource retirement failed.", Eq)
       }
     }
 
-    function KT(TT, kT) {
-      TT._flushGpuRetirements ??= OT, (TT._retirements ??= []).push(kT)
+    function Oq(qq, Eq) {
+      qq._flushGpuRetirements ??= mq, (qq._retirements ??= []).push(Eq)
     }
 
-    function OT(TT) {
-      const kT = TT._retirements;
-      if (!kT) return;
-      TT._retirements = null;
-      const cT = TT._retiring ??= new Set;
-      cT.add(kT), queueMicrotask((() => {
-        TT._device.queue.onSubmittedWorkDone().then((() => {
-          cT.delete(kT), lT(kT)
+    function mq(qq) {
+      const Eq = qq._retirements;
+      if (!Eq) return;
+      qq._retirements = null;
+      const gq = qq._retiring ??= new Set;
+      gq.add(Eq), queueMicrotask((() => {
+        qq._device.queue.onSubmittedWorkDone().then((() => {
+          gq.delete(Eq), Yq(Eq)
         })).catch((() => {}))
       }))
     }
-    cT.d(kT, {
-      b: () => KT
+    gq.d(Eq, {
+      c: () => Oq
     })
   },
-  41291: (TT, kT, cT) => {
-    cT.d(kT, {
-      b: () => KT,
-      c: () => OT,
-      f: () => yT
+  41467: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => Oq,
+      h: () => mq,
+      l: () => xq
     });
-    var lT = cT(41244);
+    var Yq = gq(41406);
 
-    function MT(TT) {
-      const kT = TT.size;
-      return "canvas" in kT ? kT.canvas : kT
+    function lq(qq) {
+      const Eq = qq.size;
+      return "canvas" in Eq ? Eq.canvas : Eq
     }
 
-    function KT(TT) {
+    function Oq(qq) {
       return {
-        _descriptor: TT,
-        _resolveSize: MT,
+        _descriptor: qq,
+        _resolveSize: lq,
         _colorTexture: null,
         _colorView: null,
         _depthTexture: null,
@@ -265,609 +265,609 @@ export const modules = {
       }
     }
 
-    function OT(TT, kT) {
-      if (TT._eager) return void TT._syncEager?.(kT);
-      yT(TT);
-      const cT = TT._descriptor,
+    function mq(qq, Eq) {
+      if (qq._eager) return void qq._syncEager?.(Eq);
+      xq(qq);
+      const gq = qq._descriptor,
         {
-          width: KT,
-          height: OT
-        } = (TT._resolveSize ?? MT)(cT);
-      TT._width = KT, TT._height = OT;
-      const fT = kT._device;
-      cT.format && (TT._colorTexture = fT.createTexture({
-        label: cT.lbl,
+          width: Oq,
+          height: mq
+        } = (qq._resolveSize ?? lq)(gq);
+      qq._width = Oq, qq._height = mq;
+      const Aq = Eq._device;
+      gq.format && (qq._colorTexture = Aq.createTexture({
+        label: gq.lbl,
         size: {
-          width: KT,
-          height: OT
+          width: Oq,
+          height: mq
         },
-        format: cT.format,
-        sampleCount: cT.samples,
-        usage: lT.g.RENDER_ATTACHMENT | lT.g.TEXTURE_BINDING | lT.g.COPY_SRC | lT.g.COPY_DST
-      }), TT._colorView = TT._colorTexture.createView()), cT.dFormat && (TT._depthTexture = fT.createTexture({
-        label: cT.lbl,
+        format: gq.format,
+        sampleCount: gq.samples,
+        usage: Yq.f.RENDER_ATTACHMENT | Yq.f.TEXTURE_BINDING | Yq.f.COPY_SRC | Yq.f.COPY_DST
+      }), qq._colorView = qq._colorTexture.createView()), gq.dFormat && (qq._depthTexture = Aq.createTexture({
+        label: gq.lbl,
         size: {
-          width: KT,
-          height: OT
+          width: Oq,
+          height: mq
         },
-        format: cT.dFormat,
-        sampleCount: cT.samples,
-        usage: lT.g.RENDER_ATTACHMENT | lT.g.TEXTURE_BINDING
-      }), TT._depthView = TT._depthTexture.createView())
+        format: gq.dFormat,
+        sampleCount: gq.samples,
+        usage: Yq.f.RENDER_ATTACHMENT | Yq.f.TEXTURE_BINDING
+      }), qq._depthView = qq._depthTexture.createView())
     }
 
-    function yT(TT) {
-      if (!TT || TT._eager && !TT._disposeAttachments) return;
-      const kT = TT._colorTexture,
-        cT = TT._depthTexture;
-      if (TT._colorTexture = TT._depthTexture = null, TT._colorView = TT._depthView = null, TT._width = TT._height = 0, TT._disposeAttachments) TT._disposeAttachments(kT, cT);
+    function xq(qq) {
+      if (!qq || qq._eager && !qq._disposeAttachments) return;
+      const Eq = qq._colorTexture,
+        gq = qq._depthTexture;
+      if (qq._colorTexture = qq._depthTexture = null, qq._colorView = qq._depthView = null, qq._width = qq._height = 0, qq._disposeAttachments) qq._disposeAttachments(Eq, gq);
       else try {
-        kT?.destroy()
+        Eq?.destroy()
       } finally {
-        !1 !== TT._ownsDepthTexture && cT?.destroy()
+        !1 !== qq._ownsDepthTexture && gq?.destroy()
       }
     }
   },
-  41299: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => lT,
-      f: () => MT,
-      h: () => KT
+  41483: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => Yq,
+      e: () => lq,
+      h: () => Oq
     });
-    var lT = Float32Array,
-      MT = Float64Array,
-      KT = Uint32Array
+    var Yq = Float32Array,
+      lq = Float64Array,
+      Oq = Uint32Array
   },
-  41304: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => lT
+  41492: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => Yq
     });
-    var lT = 16
+    var Yq = 16
   },
-  41242: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => MT
+  41402: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => lq
     });
-    var lT = null;
+    var Yq = null;
 
-    function MT(TT) {
-      for (var kT = arguments.length, cT = new Array(kT > 1 ? kT - 1 : 0), MT = 1; MT < kT; MT++) cT[MT - 1] = arguments[MT];
-      const KT = new Error(lT?.(TT, cT) ?? `#${TT}`);
-      throw KT.lite = cT, KT
+    function lq(qq) {
+      for (var Eq = arguments.length, gq = new Array(Eq > 1 ? Eq - 1 : 0), lq = 1; lq < Eq; lq++) gq[lq - 1] = arguments[lq];
+      const Oq = new Error(Yq?.(qq, gq) ?? `#${qq}`);
+      throw Oq.lite = gq, Oq
     }
   },
-  41271: (TT, kT, cT) => {
-    cT.d(kT, {
-      b: () => MT
+  41436: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => lq
     });
-    var lT = cT(41256);
+    var Yq = gq(41422);
 
-    function MT(TT) {
-      let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      const cT = kT.compare,
-        MT = kT.lodMinClamp ?? 0,
-        KT = kT.lodMaxClamp ?? 32,
-        OT = void 0 !== cT || 0 !== MT || 32 !== KT ? `${cT??""}:${MT}:${KT}` : "";
-      return (0, lT.c)(TT, kT, OT)
+    function lq(qq) {
+      let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      const gq = Eq.compare,
+        lq = Eq.lodMinClamp ?? 0,
+        Oq = Eq.lodMaxClamp ?? 32,
+        mq = void 0 !== gq || 0 !== lq || 32 !== Oq ? `${gq??""}:${lq}:${Oq}` : "";
+      return (0, Yq.c)(qq, Eq, mq)
     }
   },
-  41247: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => KT
+  41413: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => Oq
     });
-    var lT = null;
+    var Yq = null;
 
-    function MT(TT) {
-      const kT = lT ??= new WeakMap;
-      kT.set(TT, (kT.get(TT) ?? 0) + 1)
+    function lq(qq) {
+      const Eq = Yq ??= new WeakMap;
+      Eq.set(qq, (Eq.get(qq) ?? 0) + 1)
     }
 
-    function KT(TT) {
-      MT(TT.texture)
+    function Oq(qq) {
+      lq(qq.texture)
     }
   },
-  41256: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => yT
+  41422: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => xq
     });
-    var lT = null,
-      MT = "nearest",
-      KT = "clamp-to-edge",
-      OT = {
-        minFilter: MT,
-        magFilter: MT,
-        mipmapFilter: MT,
-        addressModeU: KT,
-        addressModeV: KT,
-        addressModeW: KT,
+    var Yq = null,
+      lq = "nearest",
+      Oq = "clamp-to-edge",
+      mq = {
+        minFilter: lq,
+        magFilter: lq,
+        mipmapFilter: lq,
+        addressModeU: Oq,
+        addressModeV: Oq,
+        addressModeW: Oq,
         maxAnisotropy: 1
       };
 
-    function yT(TT) {
-      let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-      const MT = TT._device,
-        KT = lT ??= new WeakMap;
-      let yT = KT.get(MT);
-      yT || KT.set(MT, yT = new Map);
-      let fT = cT;
-      for (const lT in OT) {
-        const TT = lT;
-        fT += `:${kT[TT]??OT[TT]}`
+    function xq(qq) {
+      let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+      const lq = qq._device,
+        Oq = Yq ??= new WeakMap;
+      let xq = Oq.get(lq);
+      xq || Oq.set(lq, xq = new Map);
+      let Aq = gq;
+      for (const Yq in mq) {
+        const qq = Yq;
+        Aq += `:${Eq[qq]??mq[qq]}`
       }
-      let xT = yT.get(fT);
-      return xT || yT.set(fT, xT = MT.createSampler(kT)), xT
+      let cq = xq.get(Aq);
+      return cq || xq.set(Aq, cq = lq.createSampler(Eq)), cq
     }
   },
-  41296: (TT, kT, cT) => {
-    cT.d(kT, {
-      d: () => ZT,
-      e: () => dT
+  41475: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => pq,
+      g: () => Jq
     });
-    var lT = cT(41291),
-      MT = cT(41286);
+    var Yq = gq(41467),
+      lq = gq(41459);
 
-    function KT(TT, kT) {
-      kT._passes.length = 0, TT._currentProcessedTask = kT;
+    function Oq(qq, Eq) {
+      Eq._passes.length = 0, qq._currentProcessedTask = Eq;
       try {
-        kT.record()
+        Eq.record()
       } finally {
-        TT._currentProcessedTask = null
+        qq._currentProcessedTask = null
       }
     }
-    var OT = cT(41299);
+    var mq = gq(41483);
 
-    function yT(TT) {
-      const kT = TT.worldMatrixVersion;
-      if (TT._viewVer === kT) return TT._viewCache;
-      const cT = TT._viewCache,
-        lT = TT.worldMatrix,
-        MT = TT._useFloatingOrigin,
-        KT = MT ? 0 : lT[12],
-        OT = MT ? 0 : lT[13],
-        yT = MT ? 0 : lT[14];
-      return cT[0] = lT[0], cT[1] = lT[4], cT[2] = lT[8], cT[3] = 0, cT[4] = lT[1], cT[5] = lT[5], cT[6] = lT[9], cT[7] = 0, cT[8] = lT[2], cT[9] = lT[6], cT[10] = lT[10], cT[11] = 0, cT[12] = -(lT[0] * KT + lT[1] * OT + lT[2] * yT), cT[13] = -(lT[4] * KT + lT[5] * OT + lT[6] * yT), cT[14] = -(lT[8] * KT + lT[9] * OT + lT[10] * yT), cT[15] = 1, TT._viewVer = kT, cT
+    function xq(qq) {
+      const Eq = qq.worldMatrixVersion;
+      if (qq._viewVer === Eq) return qq._viewCache;
+      const gq = qq._viewCache,
+        Yq = qq.worldMatrix,
+        lq = qq._useFloatingOrigin,
+        Oq = lq ? 0 : Yq[12],
+        mq = lq ? 0 : Yq[13],
+        xq = lq ? 0 : Yq[14];
+      return gq[0] = Yq[0], gq[1] = Yq[4], gq[2] = Yq[8], gq[3] = 0, gq[4] = Yq[1], gq[5] = Yq[5], gq[6] = Yq[9], gq[7] = 0, gq[8] = Yq[2], gq[9] = Yq[6], gq[10] = Yq[10], gq[11] = 0, gq[12] = -(Yq[0] * Oq + Yq[1] * mq + Yq[2] * xq), gq[13] = -(Yq[4] * Oq + Yq[5] * mq + Yq[6] * xq), gq[14] = -(Yq[8] * Oq + Yq[9] * mq + Yq[10] * xq), gq[15] = 1, qq._viewVer = Eq, gq
     }
-    var fT = null;
+    var Aq = null;
 
-    function xT(TT) {
-      return TT._projFov === TT.fov && TT._projNear === TT.nearPlane && TT._projFar === TT.farPlane || (TT._projFov = TT.fov, TT._projNear = TT.nearPlane, TT._projFar = TT.farPlane, TT._projRev = (TT._projRev ?? 0) + 1), TT.worldMatrixVersion + (TT._projRev ?? 0)
+    function cq(qq) {
+      return qq._projFov === qq.fov && qq._projNear === qq.nearPlane && qq._projFar === qq.farPlane || (qq._projFov = qq.fov, qq._projNear = qq.nearPlane, qq._projFar = qq.farPlane, qq._projRev = (qq._projRev ?? 0) + 1), qq.worldMatrixVersion + (qq._projRev ?? 0)
     }
 
-    function IT(TT, kT) {
-      const cT = xT(TT);
-      if (TT._projVer === cT && TT._projAspect === kT) return TT._projCache;
-      const lT = TT._projCache;
-      return null !== fT && TT.ortho ? fT(TT, kT, lT) : function(TT, kT, cT, lT, MT) {
-        const KT = 1 / Math.tan(.5 * kT),
-          OT = MT - lT;
-        TT[0] = KT / cT, TT[5] = KT, TT[10] = -lT / OT, TT[11] = 1, TT[14] = MT * lT / OT
-      }(lT, TT.fov, kT, TT.nearPlane, TT.farPlane), TT._projVer = cT, TT._projAspect = kT, lT
+    function uq(qq, Eq) {
+      const gq = cq(qq);
+      if (qq._projVer === gq && qq._projAspect === Eq) return qq._projCache;
+      const Yq = qq._projCache;
+      return null !== Aq && qq.ortho ? Aq(qq, Eq, Yq) : function(qq, Eq, gq, Yq, lq) {
+        const Oq = 1 / Math.tan(.5 * Eq),
+          mq = lq - Yq;
+        qq[0] = Oq / gq, qq[5] = Oq, qq[10] = -Yq / mq, qq[11] = 1, qq[14] = lq * Yq / mq
+      }(Yq, qq.fov, Eq, qq.nearPlane, qq.farPlane), qq._projVer = gq, qq._projAspect = Eq, Yq
     }
-    var AT = cT(41244);
+    var Bq = gq(41406);
 
-    function CT(TT, kT, cT) {
-      return TT._device.createBuffer({
-        label: cT,
-        size: (lT = kT, MT = 16, Math.ceil(lT / MT) * MT),
-        usage: AT.d.UNIFORM | AT.d.COPY_DST
+    function Wq(qq, Eq, gq) {
+      return qq._device.createBuffer({
+        label: gq,
+        size: (Yq = Eq, lq = 16, Math.ceil(Yq / lq) * lq),
+        usage: Bq.b.UNIFORM | Bq.b.COPY_DST
       });
-      var lT, MT
+      var Yq, lq
     }
-    var jT = cT(41302),
-      vT = null;
+    var Nq = gq(41489),
+      aq = null;
 
-    function tT(TT) {
-      const kT = TT._device,
-        cT = vT ??= new WeakMap;
-      let lT = cT.get(kT);
-      return lT || (lT = kT.createBindGroupLayout({
-        label: "et",
+    function Vq(qq) {
+      const Eq = qq._device,
+        gq = aq ??= new WeakMap;
+      let Yq = gq.get(Eq);
+      return Yq || (Yq = Eq.createBindGroupLayout({
+        label: "PV",
         entries: [{
           binding: 0,
-          visibility: AT.f.VERTEX | AT.f.FRAGMENT,
+          visibility: Bq.c.VERTEX | Bq.c.FRAGMENT,
           buffer: {
             type: "uniform"
           }
         }, {
           binding: 1,
-          visibility: AT.f.FRAGMENT,
+          visibility: Bq.c.FRAGMENT,
           buffer: {
             type: "uniform"
           }
         }]
-      }), cT.set(kT, lT)), lT
+      }), gq.set(Eq, Yq)), Yq
     }
 
-    function hT(TT, kT, cT) {
-      const lT = TT._device,
-        MT = CT(TT, kT.byteLength, cT);
+    function dq(qq, Eq, gq) {
+      const Yq = qq._device,
+        lq = Wq(qq, Eq.byteLength, gq);
       try {
-        lT.queue.writeBuffer(MT, 0, kT.buffer, kT.byteOffset, kT.byteLength)
-      } catch (KT) {
-        throw MT.destroy(), KT
+        Yq.queue.writeBuffer(lq, 0, Eq.buffer, Eq.byteOffset, Eq.byteLength)
+      } catch (Oq) {
+        throw lq.destroy(), Oq
       }
-      return MT
+      return lq
     }
-    var NT = cT(41304),
-      QT = new OT.h(1),
-      ST = new OT.c(QT.buffer);
+    var jq = gq(41492),
+      Hq = new mq.h(1),
+      oq = new mq.c(Hq.buffer);
 
-    function DT(TT) {
-      let kT = 0;
-      for (const cT of TT) kT += cT._lightVersion ?? 0;
-      return kT
+    function Pq(qq) {
+      let Eq = 0;
+      for (const gq of qq) Eq += gq._lightVersion ?? 0;
+      return Eq
     }
 
-    function aT(TT, kT) {
-      TT.fill(0);
-      let cT = 0;
-      for (const lT of kT) {
-        if (cT >= NT.c) break;
-        lT._writeLightUbo && (lT._writeLightUbo(TT, 4 + 16 * cT), cT++)
+    function Qq(qq, Eq) {
+      qq.fill(0);
+      let gq = 0;
+      for (const Yq of Eq) {
+        if (gq >= jq.e) break;
+        Yq._writeLightUbo && (Yq._writeLightUbo(qq, 4 + 16 * gq), gq++)
       }
-      QT[0] = cT, TT[0] = ST[0]
+      Hq[0] = gq, qq[0] = oq[0]
     }
 
-    function FT(TT, kT) {
-      let cT = kT._lightGpuState;
-      const lT = 16 + 16 * NT.c * 4;
-      if (cT && cT._byteSize === lT) return cT;
-      const MT = !cT;
-      cT?._buffer.destroy();
-      const KT = new OT.c(lT / 4);
-      return aT(KT, kT.lights), TT._applyLightFoOffset?.(KT, kT), cT = {
-        _buffer: hT(TT, KT),
-        _scratch: KT,
-        tV: DT(kT.lights) + (TT._lightFoVersion?.(kT) ?? 0),
-        _listVersion: kT._lightListVersion ?? 0,
-        _lightCount: kT.lights.length,
-        _byteSize: lT
-      }, kT._lightGpuState = cT, MT && kT._disposables.push((() => {
-        kT._lightGpuState?._buffer.destroy(), kT._lightGpuState = void 0
-      })), cT
+    function yq(qq, Eq) {
+      let gq = Eq._lightGpuState;
+      const Yq = 16 + 16 * jq.e * 4;
+      if (gq && gq._byteSize === Yq) return gq;
+      const lq = !gq;
+      gq?._buffer.destroy();
+      const Oq = new mq.c(Yq / 4);
+      return Qq(Oq, Eq.lights), qq._applyLightFoOffset?.(Oq, Eq), gq = {
+        _buffer: dq(qq, Oq),
+        _scratch: Oq,
+        Gs: Pq(Eq.lights) + (qq._lightFoVersion?.(Eq) ?? 0),
+        _listVersion: Eq._lightListVersion ?? 0,
+        _lightCount: Eq.lights.length,
+        _byteSize: Yq
+      }, Eq._lightGpuState = gq, lq && Eq._disposables.push((() => {
+        Eq._lightGpuState?._buffer.destroy(), Eq._lightGpuState = void 0
+      })), gq
     }
 
-    function rT(TT, kT) {
-      let cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        lT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-      const MT = kT;
-      if (0 === lT && 16 === MT.length) return void TT.set(MT, cT);
-      const KT = lT,
-        OT = cT;
-      TT[OT + 0] = MT[KT + 0], TT[OT + 1] = MT[KT + 1], TT[OT + 2] = MT[KT + 2], TT[OT + 3] = MT[KT + 3], TT[OT + 4] = MT[KT + 4], TT[OT + 5] = MT[KT + 5], TT[OT + 6] = MT[KT + 6], TT[OT + 7] = MT[KT + 7], TT[OT + 8] = MT[KT + 8], TT[OT + 9] = MT[KT + 9], TT[OT + 10] = MT[KT + 10], TT[OT + 11] = MT[KT + 11], TT[OT + 12] = MT[KT + 12], TT[OT + 13] = MT[KT + 13], TT[OT + 14] = MT[KT + 14], TT[OT + 15] = MT[KT + 15]
+    function tq(qq, Eq) {
+      let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        Yq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+      const lq = Eq;
+      if (0 === Yq && 16 === lq.length) return void qq.set(lq, gq);
+      const Oq = Yq,
+        mq = gq;
+      qq[mq + 0] = lq[Oq + 0], qq[mq + 1] = lq[Oq + 1], qq[mq + 2] = lq[Oq + 2], qq[mq + 3] = lq[Oq + 3], qq[mq + 4] = lq[Oq + 4], qq[mq + 5] = lq[Oq + 5], qq[mq + 6] = lq[Oq + 6], qq[mq + 7] = lq[Oq + 7], qq[mq + 8] = lq[Oq + 8], qq[mq + 9] = lq[Oq + 9], qq[mq + 10] = lq[Oq + 10], qq[mq + 11] = lq[Oq + 11], qq[mq + 12] = lq[Oq + 12], qq[mq + 13] = lq[Oq + 13], qq[mq + 14] = lq[Oq + 14], qq[mq + 15] = lq[Oq + 15]
     }
 
-    function PT(TT, kT, cT, lT, MT) {
-      TT.fill(0);
-      const KT = function(TT, kT) {
-          const cT = xT(TT);
-          if (TT._vpVer === cT && TT._vpAspect === kT) return TT._vpCache;
-          const lT = TT._vpCache;
-          return function(TT, kT, cT, lT, MT, KT) {
-            const OT = cT[lT],
-              yT = cT[lT + 1],
-              fT = cT[lT + 2],
-              xT = cT[lT + 3],
-              IT = cT[lT + 4],
-              AT = cT[lT + 5],
-              CT = cT[lT + 6],
-              jT = cT[lT + 7],
-              vT = cT[lT + 8],
-              tT = cT[lT + 9],
-              hT = cT[lT + 10],
-              NT = cT[lT + 11],
-              QT = cT[lT + 12],
-              ST = cT[lT + 13],
-              DT = cT[lT + 14],
-              aT = cT[lT + 15];
-            let FT = MT[KT],
-              rT = MT[KT + 1],
-              PT = MT[KT + 2],
-              wT = MT[KT + 3];
-            TT[kT] = OT * FT + IT * rT + vT * PT + QT * wT, TT[kT + 1] = yT * FT + AT * rT + tT * PT + ST * wT, TT[kT + 2] = fT * FT + CT * rT + hT * PT + DT * wT, TT[kT + 3] = xT * FT + jT * rT + NT * PT + aT * wT, FT = MT[KT + 4], rT = MT[KT + 5], PT = MT[KT + 6], wT = MT[KT + 7], TT[kT + 4] = OT * FT + IT * rT + vT * PT + QT * wT, TT[kT + 5] = yT * FT + AT * rT + tT * PT + ST * wT, TT[kT + 6] = fT * FT + CT * rT + hT * PT + DT * wT, TT[kT + 7] = xT * FT + jT * rT + NT * PT + aT * wT, FT = MT[KT + 8], rT = MT[KT + 9], PT = MT[KT + 10], wT = MT[KT + 11], TT[kT + 8] = OT * FT + IT * rT + vT * PT + QT * wT, TT[kT + 9] = yT * FT + AT * rT + tT * PT + ST * wT, TT[kT + 10] = fT * FT + CT * rT + hT * PT + DT * wT, TT[kT + 11] = xT * FT + jT * rT + NT * PT + aT * wT, FT = MT[KT + 12], rT = MT[KT + 13], PT = MT[KT + 14], wT = MT[KT + 15], TT[kT + 12] = OT * FT + IT * rT + vT * PT + QT * wT, TT[kT + 13] = yT * FT + AT * rT + tT * PT + ST * wT, TT[kT + 14] = fT * FT + CT * rT + hT * PT + DT * wT, TT[kT + 15] = xT * FT + jT * rT + NT * PT + aT * wT
-          }(lT, 0, IT(TT, kT), 0, yT(TT), 0), TT._vpVer = cT, TT._vpAspect = kT, lT
-        }(lT, MT),
-        OT = yT(lT),
-        fT = lT.worldMatrix;
-      rT(TT, KT, 0), rT(TT, OT, 16), kT.useFloatingOrigin ? (TT[32] = 0, TT[33] = 0, TT[34] = 0) : (TT[32] = fT[12], TT[33] = fT[13], TT[34] = fT[14]), TT[87] = kT.canvas.width;
-      const AT = cT.imageProcessing;
-      TT[76] = AT.exposure, TT[77] = AT.contrast, TT[78] = cT._envTextures?.lodGenerationScale ?? .8, TT[79] = +AT.toneMappingEnabled, TT[37] = kT.canvas.height
+    function rq(qq, Eq, gq, Yq, lq) {
+      qq.fill(0);
+      const Oq = function(qq, Eq) {
+          const gq = cq(qq);
+          if (qq._vpVer === gq && qq._vpAspect === Eq) return qq._vpCache;
+          const Yq = qq._vpCache;
+          return function(qq, Eq, gq, Yq, lq, Oq) {
+            const mq = gq[Yq],
+              xq = gq[Yq + 1],
+              Aq = gq[Yq + 2],
+              cq = gq[Yq + 3],
+              uq = gq[Yq + 4],
+              Bq = gq[Yq + 5],
+              Wq = gq[Yq + 6],
+              Nq = gq[Yq + 7],
+              aq = gq[Yq + 8],
+              Vq = gq[Yq + 9],
+              dq = gq[Yq + 10],
+              jq = gq[Yq + 11],
+              Hq = gq[Yq + 12],
+              oq = gq[Yq + 13],
+              Pq = gq[Yq + 14],
+              Qq = gq[Yq + 15];
+            let yq = lq[Oq],
+              tq = lq[Oq + 1],
+              rq = lq[Oq + 2],
+              vq = lq[Oq + 3];
+            qq[Eq] = mq * yq + uq * tq + aq * rq + Hq * vq, qq[Eq + 1] = xq * yq + Bq * tq + Vq * rq + oq * vq, qq[Eq + 2] = Aq * yq + Wq * tq + dq * rq + Pq * vq, qq[Eq + 3] = cq * yq + Nq * tq + jq * rq + Qq * vq, yq = lq[Oq + 4], tq = lq[Oq + 5], rq = lq[Oq + 6], vq = lq[Oq + 7], qq[Eq + 4] = mq * yq + uq * tq + aq * rq + Hq * vq, qq[Eq + 5] = xq * yq + Bq * tq + Vq * rq + oq * vq, qq[Eq + 6] = Aq * yq + Wq * tq + dq * rq + Pq * vq, qq[Eq + 7] = cq * yq + Nq * tq + jq * rq + Qq * vq, yq = lq[Oq + 8], tq = lq[Oq + 9], rq = lq[Oq + 10], vq = lq[Oq + 11], qq[Eq + 8] = mq * yq + uq * tq + aq * rq + Hq * vq, qq[Eq + 9] = xq * yq + Bq * tq + Vq * rq + oq * vq, qq[Eq + 10] = Aq * yq + Wq * tq + dq * rq + Pq * vq, qq[Eq + 11] = cq * yq + Nq * tq + jq * rq + Qq * vq, yq = lq[Oq + 12], tq = lq[Oq + 13], rq = lq[Oq + 14], vq = lq[Oq + 15], qq[Eq + 12] = mq * yq + uq * tq + aq * rq + Hq * vq, qq[Eq + 13] = xq * yq + Bq * tq + Vq * rq + oq * vq, qq[Eq + 14] = Aq * yq + Wq * tq + dq * rq + Pq * vq, qq[Eq + 15] = cq * yq + Nq * tq + jq * rq + Qq * vq
+          }(Yq, 0, uq(qq, Eq), 0, xq(qq), 0), qq._vpVer = gq, qq._vpAspect = Eq, Yq
+        }(Yq, lq),
+        mq = xq(Yq),
+        Aq = Yq.worldMatrix;
+      tq(qq, Oq, 0), tq(qq, mq, 16), Eq.useFloatingOrigin ? (qq[32] = 0, qq[33] = 0, qq[34] = 0) : (qq[32] = Aq[12], qq[33] = Aq[13], qq[34] = Aq[14]), qq[87] = Eq.canvas.width;
+      const Bq = gq.imageProcessing;
+      qq[76] = Bq.exposure, qq[77] = Bq.contrast, qq[78] = gq._envTextures?.lodGenerationScale ?? .8, qq[79] = +Bq.toneMappingEnabled, qq[37] = Eq.canvas.height
     }
 
-    function wT(TT, kT) {
+    function vq(qq, Eq) {
       return {
-        _renderables: TT,
+        _renderables: qq,
         _opaqueBindings: [],
         _directBindings: [],
         _transparentBindings: [],
         _ob: [],
-        _lastVersion: kT
+        _lastVersion: Eq
       }
     }
 
-    function mT(TT, kT, cT) {
-      TT.clr ??= !0;
-      const MT = TT.rt._descriptor,
-        KT = TT.depth?._descriptor,
-        fT = {
-          _colorFormat: MT.format,
-          _depthStencilFormat: KT?.dFormat ?? MT.dFormat,
-          _depthCompare: MT.depthCompare ?? KT?.depthCompare,
-          _sampleCount: MT.samples
+    function hq(qq, Eq, gq) {
+      qq.clr ??= !0;
+      const lq = qq.rt._descriptor,
+        Oq = qq.depth?._descriptor,
+        Aq = {
+          _colorFormat: lq.format,
+          _depthStencilFormat: Oq?.dFormat ?? lq.dFormat,
+          _depthCompare: lq.depthCompare ?? Oq?.depthCompare,
+          _sampleCount: lq.samples
         },
-        IT = {
+        uq = {
           loadOp: "clear",
           storeOp: "store"
         },
-        AT = {
-          ...wT([], -1),
-          name: TT.name,
-          _config: TT,
-          _ownsTargets: !TT.sharedRt,
-          engine: kT,
-          et: cT,
+        Bq = {
+          ...vq([], -1),
+          name: qq.name,
+          _config: qq,
+          _ownsTargets: !qq.sharedRt,
+          engine: Eq,
+          PV: gq,
           _passes: [],
           _renderPassDescriptor: {
-            colorAttachments: [IT]
+            colorAttachments: [uq]
           },
-          _colorAttachment: IT,
-          _sceneUBO: CT(kT, 368),
-          _suData: new OT.c(92),
+          _colorAttachment: uq,
+          _sceneUBO: Wq(Eq, 368),
+          _suData: new mq.c(92),
           _sceneUboCacheKey: [],
-          _targetSignature: fT,
+          _targetSignature: Aq,
           _updateContext: {
             targetWidth: 0,
             targetHeight: 0
           },
           record() {
-            if (AT._disposed) throw new Error("RenderTask has been disposed.");
-            AT._recordExplicit ? AT._recordExplicit(AT, !0) : JT(AT, !1 !== TT.autoMirror ? cT._renderables.slice() : AT._renderables, !0)
+            if (Bq._disposed) throw new Error("RenderTask has been disposed.");
+            Bq._recordExplicit ? Bq._recordExplicit(Bq, !0) : iq(Bq, !1 !== qq.autoMirror ? gq._renderables.slice() : Bq._renderables, !0)
           },
-          execute: () => function(TT, kT, cT) {
-            if (!1 === TT.enabled) return 0;
-            const lT = TT.et;
-            ! function(TT, kT, cT) {
-              const lT = TT.et;
-              !1 !== TT._config.autoMirror && TT._lastVersion !== lT._renderableVersion && JT(TT, lT._renderables.slice());
-              HT(TT, kT);
-              const MT = TT._updateContext,
-                KT = TT._config.cam ?? lT.camera;
-              cT._colorFormat && (TT._config._skipClusteredLights || lT._clusteredLightUpdater?.(KT, MT.targetWidth, MT.targetHeight), function(TT, kT) {
-                const cT = FT(TT, kT),
-                  lT = DT(kT.lights) + (TT._lightFoVersion?.(kT) ?? 0),
-                  MT = kT._lightListVersion ?? 0;
-                lT === cT.tV && MT === cT._listVersion && kT.lights.length === cT._lightCount || (cT.tV = lT, cT._listVersion = MT, cT._lightCount = kT.lights.length, aT(cT._scratch, kT.lights), TT._applyLightFoOffset?.(cT._scratch, kT), TT._device.queue.writeBuffer(cT._buffer, 0, cT._scratch)), cT._buffer
-              }(kT, lT));
-              (function(TT, kT, cT, lT) {
-                if (!lT) return;
-                const MT = lT.viewport,
-                  KT = TT._config.rt,
-                  OT = (TT._config.cs ? kT.canvas.width / kT.canvas.height : KT._width / KT._height) * (MT ? MT.width / MT.height : 1),
-                  yT = cT.fog,
-                  fT = cT.imageProcessing,
-                  IT = xT(lT),
-                  AT = cT._envTextures,
-                  CT = TT._sceneUboCacheKey;
-                if (CT[0] === lT && CT[1] === yT && CT[2] === IT && CT[3] === OT && CT[4] === fT.exposure && CT[5] === fT.contrast && CT[6] === AT) return;
-                CT[0] = lT, CT[1] = yT, CT[2] = IT, CT[3] = OT, CT[4] = fT.exposure, CT[5] = fT.contrast, CT[6] = AT;
-                const jT = TT._suData;
-                PT(jT, kT, cT, lT, OT);
-                const vT = cT._sceneUboContributors;
-                if (vT)
-                  for (const xT of vT) xT(jT, cT);
-                kT._device.queue.writeBuffer(TT._sceneUBO, 0, jT)
-              })(TT, kT, lT, KT), MT.FY = KT, TT._batchState?._reset(), eT(TT._opaqueBindings, MT), eT(TT._directBindings, MT), eT(TT._transparentBindings, MT), TT._batchState?._flush(kT),
-                function(TT, kT) {
-                  const cT = TT._transparentBindings;
-                  if (cT.length <= 1 || !kT) return;
-                  const lT = yT(kT);
-                  for (const MT of cT) {
-                    const TT = MT.renderable._worldCenter;
-                    MT._sortDistance = TT ? TT[0] * lT[2] + TT[1] * lT[6] + TT[2] * lT[10] + lT[14] : 0
+          execute: () => function(qq, Eq, gq) {
+            if (!1 === qq.enabled) return 0;
+            const Yq = qq.PV;
+            ! function(qq, Eq, gq) {
+              const Yq = qq.PV;
+              !1 !== qq._config.autoMirror && qq._lastVersion !== Yq._renderableVersion && iq(qq, Yq._renderables.slice());
+              fq(qq, Eq);
+              const lq = qq._updateContext,
+                Oq = qq._config.cam ?? Yq.camera;
+              gq._colorFormat && (qq._config._skipClusteredLights || Yq._clusteredLightUpdater?.(Oq, lq.targetWidth, lq.targetHeight), function(qq, Eq) {
+                const gq = yq(qq, Eq),
+                  Yq = Pq(Eq.lights) + (qq._lightFoVersion?.(Eq) ?? 0),
+                  lq = Eq._lightListVersion ?? 0;
+                Yq === gq.Gs && lq === gq._listVersion && Eq.lights.length === gq._lightCount || (gq.Gs = Yq, gq._listVersion = lq, gq._lightCount = Eq.lights.length, Qq(gq._scratch, Eq.lights), qq._applyLightFoOffset?.(gq._scratch, Eq), qq._device.queue.writeBuffer(gq._buffer, 0, gq._scratch)), gq._buffer
+              }(Eq, Yq));
+              (function(qq, Eq, gq, Yq) {
+                if (!Yq) return;
+                const lq = Yq.viewport,
+                  Oq = qq._config.rt,
+                  mq = (qq._config.cs ? Eq.canvas.width / Eq.canvas.height : Oq._width / Oq._height) * (lq ? lq.width / lq.height : 1),
+                  xq = gq.fog,
+                  Aq = gq.imageProcessing,
+                  uq = cq(Yq),
+                  Bq = gq._envTextures,
+                  Wq = qq._sceneUboCacheKey;
+                if (Wq[0] === Yq && Wq[1] === xq && Wq[2] === uq && Wq[3] === mq && Wq[4] === Aq.exposure && Wq[5] === Aq.contrast && Wq[6] === Bq) return;
+                Wq[0] = Yq, Wq[1] = xq, Wq[2] = uq, Wq[3] = mq, Wq[4] = Aq.exposure, Wq[5] = Aq.contrast, Wq[6] = Bq;
+                const Nq = qq._suData;
+                rq(Nq, Eq, gq, Yq, mq);
+                const aq = gq._sceneUboContributors;
+                if (aq)
+                  for (const cq of aq) cq(Nq, gq);
+                Eq._device.queue.writeBuffer(qq._sceneUBO, 0, Nq)
+              })(qq, Eq, Yq, Oq), lq.X3 = Oq, qq._batchState?._reset(), Mq(qq._opaqueBindings, lq), Mq(qq._directBindings, lq), Mq(qq._transparentBindings, lq), qq._batchState?._flush(Eq),
+                function(qq, Eq) {
+                  const gq = qq._transparentBindings;
+                  if (gq.length <= 1 || !Eq) return;
+                  const Yq = xq(Eq);
+                  for (const lq of gq) {
+                    const qq = lq.renderable._worldCenter;
+                    lq._sortDistance = qq ? qq[0] * Yq[2] + qq[1] * Yq[6] + qq[2] * Yq[10] + Yq[14] : 0
                   }
-                  cT.sort(bT)
-                }(TT, KT)
-            }(TT, kT, cT);
-            const MT = TT._colorAttachment,
-              KT = TT._config;
-            KT.rt._colorView && (KT.rt === lT.surface.scRT && (MT.view = KT.rt._colorView), MT.resolveTarget = KT.rst?._colorView ?? void 0, MT.clearValue = KT.clrColor ?? lT.clearColor, MT.loadOp = KT.clr ? "clear" : "load");
-            if (TT._executeWithTransmission) return TT._executeWithTransmission(cT._sampleCount);
-            const OT = kT._currentEncoder.beginRenderPass(TT._renderPassDescriptor),
-              fT = oT(TT, OT);
-            return OT.end(), fT
-          }(AT, kT, fT),
+                  gq.sort(nq)
+                }(qq, Oq)
+            }(qq, Eq, gq);
+            const lq = qq._colorAttachment,
+              Oq = qq._config;
+            Oq.rt._colorView && (Oq.rt === Yq.surface.scRT && (lq.view = Oq.rt._colorView), lq.resolveTarget = Oq.rst?._colorView ?? void 0, lq.clearValue = Oq.clrColor ?? Yq.clearColor, lq.loadOp = Oq.clr ? "clear" : "load");
+            if (qq._executeWithTransmission) return qq._executeWithTransmission(gq._sampleCount);
+            const mq = Eq._currentEncoder.beginRenderPass(qq._renderPassDescriptor),
+              Aq = Zq(qq, mq);
+            return mq.end(), Aq
+          }(Bq, Eq, Aq),
           dispose() {
-            if (AT._disposed) return;
-            AT._disposed = !0;
-            const kT = AT._pendingMeshes;
-            kT && (kT.length = 0);
-            for (const TT of AT._renderables) AT._retireRenderable?.(AT.engine, TT);
-            AT._passes.length = AT._opaqueBindings.length = AT._directBindings.length = 0, AT._transparentBindings.length = AT._renderables.length = AT._ob.length = 0, AT._ownsTargets && ((0, lT.f)(TT.rt), (0, lT.f)(TT.rst)), TT.depth?._eager || (0, lT.f)(TT.depth);
-            const cT = AT._sceneUBO;
-            (0, jT.b)(AT.engine, (() => cT.destroy())), AT._batchState?._release(AT.engine), AT._batchState = void 0
+            if (Bq._disposed) return;
+            Bq._disposed = !0;
+            const Eq = Bq._pendingMeshes;
+            Eq && (Eq.length = 0);
+            for (const qq of Bq._renderables) Bq._retireRenderable?.(Bq.engine, qq);
+            Bq._passes.length = Bq._opaqueBindings.length = Bq._directBindings.length = 0, Bq._transparentBindings.length = Bq._renderables.length = Bq._ob.length = 0, Bq._ownsTargets && ((0, Yq.l)(qq.rt), (0, Yq.l)(qq.rst)), qq.depth?._eager || (0, Yq.l)(qq.depth);
+            const gq = Bq._sceneUBO;
+            (0, Nq.c)(Bq.engine, (() => gq.destroy())), Bq._batchState?._release(Bq.engine), Bq._batchState = void 0
           }
         };
-      return AT
+      return Bq
     }
 
-    function bT(TT, kT) {
-      return kT._sortDistance - TT._sortDistance || TT.renderable.order - kT.renderable.order
+    function nq(qq, Eq) {
+      return Eq._sortDistance - qq._sortDistance || qq.renderable.order - Eq.renderable.order
     }
 
-    function zT(TT, kT) {
-      return TT.renderable.order - kT.renderable.order
+    function bq(qq, Eq) {
+      return qq.renderable.order - Eq.renderable.order
     }
 
-    function JT(TT) {
-      let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : TT._renderables,
-        cT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        MT = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
-        KT = arguments.length > 4 ? arguments[4] : void 0;
-      const OT = TT._config,
-        yT = OT.rt,
-        fT = TT._batchState,
-        xT = wT(kT, TT.et._renderableVersion);
-      if (cT) {
-        const kT = (kT, cT) => {
-          kT && (cT || TT._ownsTargets || kT._eager) && (0, lT.c)(kT, TT.engine)
+    function iq(qq) {
+      let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : qq._renderables,
+        gq = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        lq = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
+        Oq = arguments.length > 4 ? arguments[4] : void 0;
+      const mq = qq._config,
+        xq = mq.rt,
+        Aq = qq._batchState,
+        cq = vq(Eq, qq.PV._renderableVersion);
+      if (gq) {
+        const Eq = (Eq, gq) => {
+          Eq && (gq || qq._ownsTargets || Eq._eager) && (0, Yq.h)(Eq, qq.engine)
         };
-        kT(yT), yT._descriptor.samples > 1 && kT(OT.rst), kT(OT.depth, !0)
+        Eq(xq), xq._descriptor.samples > 1 && Eq(mq.rst), Eq(mq.depth, !0)
       }
       const {
-        _opaqueBindings: IT,
-        _directBindings: AT,
-        _transparentBindings: CT
-      } = xT;
+        _opaqueBindings: uq,
+        _directBindings: Bq,
+        _transparentBindings: Wq
+      } = cq;
       try {
-        for (const cT of kT) {
-          const kT = cT.bind(TT.engine, TT._targetSignature);
-          xT._batchState = TT._targetSignature._collectBatches?.(xT._batchState, kT), cT.isTransparent || cT._transmissive ? CT.push(kT) : cT._direct ? AT.push(kT) : IT.push(kT)
+        for (const gq of Eq) {
+          const Eq = gq.bind(qq.engine, qq._targetSignature);
+          cq._batchState = qq._targetSignature._collectBatches?.(cq._batchState, Eq), gq.isTransparent || gq._transmissive ? Wq.push(Eq) : gq._direct ? Bq.push(Eq) : uq.push(Eq)
         }
-        IT.sort(zT), AT.sort(zT), cT && HT(TT, TT.engine, !1)
-      } catch (jT) {
-        throw xT._batchState?._release(void 0, KT ?? [fT]), jT
+        uq.sort(bq), Bq.sort(bq), gq && fq(qq, qq.engine, !1)
+      } catch (Nq) {
+        throw cq._batchState?._release(void 0, Oq ?? [Aq]), Nq
       }
-      return cT && (! function(TT, kT) {
-        const cT = TT._config,
-          lT = TT._colorAttachment;
-        lT.view = kT._colorView, TT._renderPassDescriptor.colorAttachments = kT._colorView ? [lT] : [];
-        const MT = cT.depth ?? kT,
-          KT = MT._depthView;
-        let OT;
-        if (KT) {
-          const TT = MT._descriptor,
-            kT = (cT.depth ? MT._eager : !1 === cT.depthClear) ? "load" : "clear";
-          OT = {
-            view: KT,
-            depthClearValue: TT.depthClearValue ?? 0,
-            depthLoadOp: kT,
+      return gq && (! function(qq, Eq) {
+        const gq = qq._config,
+          Yq = qq._colorAttachment;
+        Yq.view = Eq._colorView, qq._renderPassDescriptor.colorAttachments = Eq._colorView ? [Yq] : [];
+        const lq = gq.depth ?? Eq,
+          Oq = lq._depthView;
+        let mq;
+        if (Oq) {
+          const qq = lq._descriptor,
+            Eq = (gq.depth ? lq._eager : !1 === gq.depthClear) ? "load" : "clear";
+          mq = {
+            view: Oq,
+            depthClearValue: qq.depthClearValue ?? 0,
+            depthLoadOp: Eq,
             depthStoreOp: "store"
-          }, TT.dFormat?.includes("stencil") && (OT.stencilClearValue = 0, OT.stencilLoadOp = kT, OT.stencilStoreOp = "store")
+          }, qq.dFormat?.includes("stencil") && (mq.stencilClearValue = 0, mq.stencilLoadOp = Eq, mq.stencilStoreOp = "store")
         }
-        TT._renderPassDescriptor.depthStencilAttachment = OT
-      }(TT, yT), TT._updateContext.targetWidth = yT._width, TT._updateContext.targetHeight = yT._height), MT && (Object.assign(TT, xT), fT?._release(TT.engine, [xT._batchState])), xT
+        qq._renderPassDescriptor.depthStencilAttachment = mq
+      }(qq, xq), qq._updateContext.targetWidth = xq._width, qq._updateContext.targetHeight = xq._height), lq && (Object.assign(qq, cq), Aq?._release(qq.engine, [cq._batchState])), cq
     }
 
-    function oT(TT, kT) {
-      const cT = TT.engine,
-        lT = TT._config,
-        KT = lT.rt,
-        OT = TT.et,
-        yT = TT._opaqueBindings,
-        fT = TT._ob,
-        xT = TT._sceneBG;
-      if (function(TT, kT, cT, lT) {
-          const MT = kT?.viewport;
-          if (!MT) return;
-          const KT = Math.floor(MT.x * cT),
-            OT = Math.floor((1 - MT.y - MT.height) * lT),
-            yT = Math.ceil((MT.x + MT.width) * cT) - KT,
-            fT = Math.ceil((1 - MT.y) * lT) - OT;
-          TT.setViewport(KT, OT, yT, fT, 0, 1), TT.setScissorRect(KT, OT, yT, fT)
-        }(kT, lT.cam ?? OT.camera, KT._width, KT._height), kT.setBindGroup(0, xT), TT._lastVis !== MT.b || !fT.length) {
-        const kT = KT._descriptor,
-          lT = cT._device.createRenderBundleEncoder({
-            colorFormats: kT.format ? [kT.format] : [],
-            depthStencilFormat: TT._targetSignature._depthStencilFormat,
-            sampleCount: kT.samples
+    function Zq(qq, Eq) {
+      const gq = qq.engine,
+        Yq = qq._config,
+        Oq = Yq.rt,
+        mq = qq.PV,
+        xq = qq._opaqueBindings,
+        Aq = qq._ob,
+        cq = qq._sceneBG;
+      if (function(qq, Eq, gq, Yq) {
+          const lq = Eq?.viewport;
+          if (!lq) return;
+          const Oq = Math.floor(lq.x * gq),
+            mq = Math.floor((1 - lq.y - lq.height) * Yq),
+            xq = Math.ceil((lq.x + lq.width) * gq) - Oq,
+            Aq = Math.ceil((1 - lq.y) * Yq) - mq;
+          qq.setViewport(Oq, mq, xq, Aq, 0, 1), qq.setScissorRect(Oq, mq, xq, Aq)
+        }(Eq, Yq.cam ?? mq.camera, Oq._width, Oq._height), Eq.setBindGroup(0, cq), qq._lastVis !== lq.e || !Aq.length) {
+        const Eq = Oq._descriptor,
+          Yq = gq._device.createRenderBundleEncoder({
+            colorFormats: Eq.format ? [Eq.format] : [],
+            depthStencilFormat: qq._targetSignature._depthStencilFormat,
+            sampleCount: Eq.samples
           });
-        lT.setBindGroup(0, xT), GT(lT, yT, cT), fT[0] = lT.finish(), TT._lastVis = MT.b
+        Yq.setBindGroup(0, cq), Tq(Yq, xq, gq), Aq[0] = Yq.finish(), qq._lastVis = lq.e
       }
-      let IT = yT.length;
-      return kT.executeBundles(fT), kT.setBindGroup(0, xT), IT += GT(kT, TT._directBindings, cT), IT += GT(kT, TT._transparentBindings, cT), IT
+      let uq = xq.length;
+      return Eq.executeBundles(Aq), Eq.setBindGroup(0, cq), uq += Tq(Eq, qq._directBindings, gq), uq += Tq(Eq, qq._transparentBindings, gq), uq
     }
 
-    function HT(TT, kT) {
-      let cT = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-      const lT = FT(kT, TT.et)._buffer;
-      if (lT === TT._lightsUBO) return;
-      const MT = kT._device.createBindGroup({
-        layout: tT(kT),
+    function fq(qq, Eq) {
+      let gq = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+      const Yq = yq(Eq, qq.PV)._buffer;
+      if (Yq === qq._lightsUBO) return;
+      const lq = Eq._device.createBindGroup({
+        layout: Vq(Eq),
         entries: [{
           binding: 0,
           resource: {
-            buffer: TT._sceneUBO
+            buffer: qq._sceneUBO
           }
         }, {
           binding: 1,
           resource: {
-            buffer: lT
+            buffer: Yq
           }
         }]
       });
-      TT._lightsUBO = lT, TT._sceneBG = MT, cT && (TT._ob = [])
+      qq._lightsUBO = Yq, qq._sceneBG = lq, gq && (qq._ob = [])
     }
 
-    function eT(TT, kT) {
-      for (const cT of TT) cT.update?.(kT)
+    function Mq(qq, Eq) {
+      for (const gq of qq) gq.update?.(Eq)
     }
 
-    function GT(TT, kT, cT) {
-      let lT = null,
-        MT = 0;
-      for (const KT of kT) {
-        const kT = KT.renderable.mesh;
-        kT && !1 === kT.visible || (KT.pipeline !== lT && (TT.setPipeline(KT.pipeline), lT = KT.pipeline), MT += KT.draw(TT, cT))
+    function Tq(qq, Eq, gq) {
+      let Yq = null,
+        lq = 0;
+      for (const Oq of Eq) {
+        const Eq = Oq.renderable.mesh;
+        Eq && !1 === Eq.visible || (Oq.pipeline !== Yq && (qq.setPipeline(Oq.pipeline), Yq = Oq.pipeline), lq += Oq.draw(qq, gq))
       }
-      return MT
+      return lq
     }
 
-    function VT(TT) {
-      const kT = TT._materialSwapQueue;
-      if (!kT[0] || TT._runtimeBuilds?.w) return;
-      let lT, MT, KT;
-      const OT = TT._renderables;
-      for (const cT of kT) {
-        const kT = cT.material;
-        if (!kT) continue;
-        const yT = cT._runtimeThinBuild;
-        if (yT) {
-          MT = yT(TT, cT, MT);
+    function zq(qq) {
+      const Eq = qq._materialSwapQueue;
+      if (!Eq[0] || qq._runtimeBuilds?.w) return;
+      let Yq, lq, Oq;
+      const mq = qq._renderables;
+      for (const gq of Eq) {
+        const Eq = gq.material;
+        if (!Eq) continue;
+        const xq = gq._runtimeThinBuild;
+        if (xq) {
+          lq = xq(qq, gq, lq);
           continue
         }
-        const fT = TT._groups.get(kT._buildGroup),
-          xT = fT?.r;
-        if (!xT) {
-          (KT ??= []).push(cT);
+        const Aq = qq._groups.get(Eq._buildGroup),
+          cq = Aq?.r;
+        if (!cq) {
+          (Oq ??= []).push(gq);
           continue
         }
-        if (fT._w?.(cT)) {
-          (KT ??= []).push([cT, kT]);
+        if (Aq._w?.(gq)) {
+          (Oq ??= []).push([gq, Eq]);
           continue
         }
-        const IT = TT._meshDisposables.get(cT);
-        IT && (TT._meshDisposables.delete(cT), (0, jT.b)(TT.surface.engine, (() => IT.forEach((TT => TT())))));
-        const AT = fT.o;
-        let CT;
-        for (let TT = OT.length; TT--;) OT[TT].mesh === cT && (CT = OT.splice(TT, 1)[0]);
-        kT._csmGen = -~kT._csmGen;
-        const vT = xT(TT, cT);
-        if (AT) {
-          const TT = AT.indexOf(CT);
-          TT < 0 ? AT.push(vT) : AT[TT] = vT
+        const uq = qq._meshDisposables.get(gq);
+        uq && (qq._meshDisposables.delete(gq), (0, Nq.c)(qq.surface.engine, (() => uq.forEach((qq => qq())))));
+        const Bq = Aq.o;
+        let Wq;
+        for (let qq = mq.length; qq--;) mq[qq].mesh === gq && (Wq = mq.splice(qq, 1)[0]);
+        Eq._csmGen = -~Eq._csmGen;
+        const aq = cq(qq, gq);
+        if (Bq) {
+          const qq = Bq.indexOf(Wq);
+          qq < 0 ? Bq.push(aq) : Bq[qq] = aq
         }
-        lT = OT.push(vT)
+        Yq = mq.push(aq)
       }
-      if (lT && (OT.sort(((TT, kT) => TT.order - kT.order)), TT._renderableVersion++, TT._materialEpoch++), kT.length = 0, !KT) return MT;
-      const yT = KT;
-      return cT.e(356).then((() => cT(60666))).then((kT => {
+      if (Yq && (mq.sort(((qq, Eq) => qq.order - Eq.order)), qq._renderableVersion++, qq._materialEpoch++), Eq.length = 0, !Oq) return lq;
+      const xq = Oq;
+      return gq.e(356).then((() => gq(61241))).then((Eq => {
         let {
-          C: cT
-        } = kT;
-        return cT(TT, yT, MT)
-      }), (kT => {
-        const cT = TT._runtimeBuilds;
-        cT ? cT._x(kT) : console.error(kT)
+          C: gq
+        } = Eq;
+        return gq(qq, xq, lq)
+      }), (Eq => {
+        const gq = qq._runtimeBuilds;
+        gq ? gq._x(Eq) : console.error(Eq)
       }))
     }
-    var ET = null;
+    var Sq = null;
 
-    function ZT(TT, kT) {
-      const cT = TT.engine,
-        MT = {
-          _kind: "et",
-          surface: TT,
+    function pq(qq, Eq) {
+      const gq = qq.engine,
+        lq = {
+          _kind: "PV",
+          surface: qq,
           clearColor: {
             r: .2,
             g: .2,
@@ -902,365 +902,365 @@ export const modules = {
           _built: !1,
           _drawCallsPre: 0,
           _update() {
-            cT.useFloatingOrigin && MT.camera && !MT.camera._useFloatingOrigin && (MT.camera._useFloatingOrigin = !0, MT.camera._viewVer = -1, MT.camera._vpVer = -1);
-            const TT = MT.fixedDeltaMs > 0 ? MT.fixedDeltaMs : cT._currentDelta,
-              kT = cT._currentEncoder;
-            let lT = 0;
-            for (const cT of MT._beforeRender) cT(TT);
-            MT._materialSwapQueue.length && VT(MT);
-            for (const KT of MT._prePasses) lT += KT.execute(kT, cT);
-            for (const KT of MT._uniformUpdaters) KT.update(cT);
-            MT._drawCallsPre = lT
+            gq.useFloatingOrigin && lq.camera && !lq.camera._useFloatingOrigin && (lq.camera._useFloatingOrigin = !0, lq.camera._viewVer = -1, lq.camera._vpVer = -1);
+            const qq = lq.fixedDeltaMs > 0 ? lq.fixedDeltaMs : gq._currentDelta,
+              Eq = gq._currentEncoder;
+            let Yq = 0;
+            for (const gq of lq._beforeRender) gq(qq);
+            lq._materialSwapQueue.length && zq(lq);
+            for (const Oq of lq._prePasses) Yq += Oq.execute(Eq, gq);
+            for (const Oq of lq._uniformUpdaters) Oq.update(gq);
+            lq._drawCallsPre = Yq
           },
-          _record: () => MT._frameGraph.execute(),
+          _record: () => lq._frameGraph.execute(),
           _resize() {
-            MT._frameGraph.build()
+            lq._frameGraph.build()
           }
         },
-        OT = function() {
-          const TT = {
+        mq = function() {
+          const qq = {
             _tasks: [],
             _currentProcessedTask: null,
             build() {
-              for (let kT = 0; kT < TT._tasks.length; kT++) KT(TT, TT._tasks[kT]);
-              for (const kT of TT._tasks)
-                for (const TT of kT._passes) TT._initialize()
+              for (let Eq = 0; Eq < qq._tasks.length; Eq++) Oq(qq, qq._tasks[Eq]);
+              for (const Eq of qq._tasks)
+                for (const qq of Eq._passes) qq._initialize()
             },
             execute() {
-              let kT = 0;
-              for (const cT of TT._tasks)
-                if (!1 !== cT.executionEnabled)
-                  if (cT.execute) kT += cT.execute();
+              let Eq = 0;
+              for (const gq of qq._tasks)
+                if (!1 !== gq.executionEnabled)
+                  if (gq.execute) Eq += gq.execute();
                   else
-                    for (const TT of cT._passes) kT += TT._execute();
-              return kT
+                    for (const qq of gq._passes) Eq += qq._execute();
+              return Eq
             },
             dispose() {
-              for (const kT of TT._tasks) kT.dispose();
-              TT._tasks.length = 0, TT._currentProcessedTask = null
+              for (const Eq of qq._tasks) Eq.dispose();
+              qq._tasks.length = 0, qq._currentProcessedTask = null
             }
           };
-          return TT
+          return qq
         }();
-      if (MT._frameGraph = OT, !1 !== kT?.defaultRenderTask) {
-        const kT = TT.msaaSamples > 1,
-          KT = kT ? (0, lT.b)({
+      if (lq._frameGraph = mq, !1 !== Eq?.defaultRenderTask) {
+        const Eq = qq.msaaSamples > 1,
+          Oq = Eq ? (0, Yq.d)({
             lbl: "scene-color",
-            format: TT.format,
+            format: qq.format,
             dFormat: "depth24plus-stencil8",
-            samples: TT.msaaSamples,
-            size: TT
-          }) : TT.scRT,
-          yT = kT ? void 0 : (0, lT.b)({
+            samples: qq.msaaSamples,
+            size: qq
+          }) : qq.scRT,
+          xq = Eq ? void 0 : (0, Yq.d)({
             lbl: "scene-depth",
             dFormat: "depth24plus-stencil8",
             samples: 1,
-            size: TT
+            size: qq
           });
-        ! function(TT, kT) {
-          TT._tasks.push(kT)
-        }(OT, mT({
-          name: "et",
-          rt: KT,
-          rst: kT ? TT.scRT : void 0,
-          depth: yT
-        }, cT, MT))
+        ! function(qq, Eq) {
+          qq._tasks.push(Eq)
+        }(mq, hq({
+          name: "PV",
+          rt: Oq,
+          rst: Eq ? qq.scRT : void 0,
+          depth: xq
+        }, gq, lq))
       }
-      return MT._disposables.push((() => OT.dispose())), MT
+      return lq._disposables.push((() => mq.dispose())), lq
     }
-    async function uT(TT) {
-      const kT = TT;
-      for (kT._built || (kT._materialSwapQueue.length = 0); kT._deferredBuilders.length;) {
-        const TT = kT._deferredBuilders.splice(0);
-        await Promise.all(TT.map((TT => TT())))
+    async function Gq(qq) {
+      const Eq = qq;
+      for (Eq._built || (Eq._materialSwapQueue.length = 0); Eq._deferredBuilders.length;) {
+        const qq = Eq._deferredBuilders.splice(0);
+        await Promise.all(qq.map((qq => qq())))
       }
-      await VT(kT), ET?.get(kT)?.() || (kT._runtimeBuilds?._e(), kT._renderableVersion++, kT._built = !0), await (kT._rebuildHook?.(kT))
+      await zq(Eq), Sq?.get(Eq)?.() || (Eq._runtimeBuilds?._e(), Eq._renderableVersion++, Eq._built = !0), await (Eq._rebuildHook?.(Eq))
     }
-    var XT = null;
-    async function dT(TT) {
-      const kT = TT,
-        lT = kT.surface;
-      (0, MT.g)(lT, kT) || (await uT(TT), kT._renderables.sort(LT), await Promise.all(kT._frameGraph._tasks.map((TT => TT._preload?.()))), XT && await XT(kT), kT._frameGraph.build(), lT._renderingContexts[0] && (await cT.e(354).then((() => cT(60660)))).configureSwapchainOverlayScene(lT, kT), ET?.get(kT)?.() || (0, MT.k)(lT, kT))
+    var Lq = null;
+    async function Jq(qq) {
+      const Eq = qq,
+        Yq = Eq.surface;
+      (0, lq.i)(Yq, Eq) || (await Gq(qq), Eq._renderables.sort(kq), await Promise.all(Eq._frameGraph._tasks.map((qq => qq._preload?.()))), Lq && await Lq(Eq), Eq._frameGraph.build(), Yq._renderingContexts[0] && (await gq.e(354).then((() => gq(61225)))).configureSwapchainOverlayScene(Yq, Eq), Sq?.get(Eq)?.() || (0, lq.l)(Yq, Eq))
     }
-    var LT = (TT, kT) => TT.order - kT.order
+    var kq = (qq, Eq) => qq.order - Eq.order
   },
-  41277: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => xT,
-      g: () => IT
+  41450: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => cq,
+      d: () => uq
     });
-    var lT = cT(41242),
-      MT = cT(41244),
-      KT = cT(41247),
-      OT = cT(41256),
-      yT = cT(41259),
-      fT = cT(41267);
+    var Yq = gq(41402),
+      lq = gq(41406),
+      Oq = gq(41413),
+      mq = gq(41422),
+      xq = gq(41427),
+      Aq = gq(41429);
 
-    function xT(TT, kT, cT) {
-      let yT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      (kT < 1 || cT < 1) && (0, lT.e)(676, kT, cT);
-      const xT = TT._device,
-        IT = yT.mipMaps ?? !1,
-        AT = yT.srgb ? "rgba8unorm-srgb" : "rgba8unorm",
-        CT = IT ? (0, fT.d)(kT, cT) : 1,
-        jT = xT.createTexture({
+    function cq(qq, Eq, gq) {
+      let xq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+      (Eq < 1 || gq < 1) && (0, Yq.d)(676, Eq, gq);
+      const cq = qq._device,
+        uq = xq.mipMaps ?? !1,
+        Bq = xq.srgb ? "rgba8unorm-srgb" : "rgba8unorm",
+        Wq = uq ? (0, Aq.d)(Eq, gq) : 1,
+        Nq = cq.createTexture({
           size: {
-            width: kT,
-            height: cT
+            width: Eq,
+            height: gq
           },
-          format: AT,
-          mipLevelCount: CT,
-          usage: MT.g.TEXTURE_BINDING | MT.g.COPY_DST | MT.g.RENDER_ATTACHMENT
+          format: Bq,
+          mipLevelCount: Wq,
+          usage: lq.f.TEXTURE_BINDING | lq.f.COPY_DST | lq.f.RENDER_ATTACHMENT
         }),
-        vT = {
-          addressModeU: yT.addressModeU ?? "clamp-to-edge",
-          addressModeV: yT.addressModeV ?? "clamp-to-edge",
-          minFilter: yT.minFilter ?? "linear",
-          magFilter: yT.magFilter ?? "linear",
-          mipmapFilter: IT ? "linear" : "nearest"
+        aq = {
+          addressModeU: xq.addressModeU ?? "clamp-to-edge",
+          addressModeV: xq.addressModeV ?? "clamp-to-edge",
+          minFilter: xq.minFilter ?? "linear",
+          magFilter: xq.magFilter ?? "linear",
+          mipmapFilter: uq ? "linear" : "nearest"
         },
-        tT = (0, OT.c)(TT, vT),
-        hT = {
-          texture: jT,
-          view: jT.createView(),
-          sampler: tT,
-          width: kT,
-          height: cT
+        Vq = (0, mq.c)(qq, aq),
+        dq = {
+          texture: Nq,
+          view: Nq.createView(),
+          sampler: Vq,
+          width: Eq,
+          height: gq
         };
-      return (0, KT.c)(hT), TT._dlr && TT._dlr.t(hT, {
+      return (0, Oq.b)(dq), qq._dlr && qq._dlr.t(dq, {
         kind: "dynamic",
-        width: kT,
-        height: cT,
-        format: AT,
-        levels: CT,
-        samplerDesc: vT,
+        width: Eq,
+        height: gq,
+        format: Bq,
+        levels: Wq,
+        samplerDesc: aq,
         source: null,
         flipY: !0,
         premultipliedAlpha: !1
-      }), hT
+      }), dq
     }
 
-    function IT(TT, kT, cT) {
-      let lT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const MT = lT.invertY ?? !0,
-        KT = lT.premultiplyAlpha ?? !1;
-      TT._device.queue.copyExternalImageToTexture({
-        source: cT,
-        flipY: MT
+    function uq(qq, Eq, gq) {
+      let Yq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+      const lq = Yq.invertY ?? !0,
+        Oq = Yq.premultiplyAlpha ?? !1;
+      qq._device.queue.copyExternalImageToTexture({
+        source: gq,
+        flipY: lq
       }, {
-        texture: kT.texture,
-        premultipliedAlpha: KT
-      }, [kT.width, kT.height]);
-      const OT = kT._recoverySource;
-      OT && "dynamic" === OT.kind && (OT.source = cT, OT.flipY = MT, OT.premultipliedAlpha = KT), kT.texture.mipLevelCount > 1 && (0, yT.generateMipmaps)(TT, kT.texture)
+        texture: Eq.texture,
+        premultipliedAlpha: Oq
+      }, [Eq.width, Eq.height]);
+      const mq = Eq._recoverySource;
+      mq && "dynamic" === mq.kind && (mq.source = gq, mq.flipY = lq, mq.premultipliedAlpha = Oq), Eq.texture.mipLevelCount > 1 && (0, xq.generateMipmaps)(qq, Eq.texture)
     }
   },
-  41274: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => fT
+  41443: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => Aq
     });
-    var lT = cT(41242),
-      MT = cT(41244),
-      KT = cT(41247),
-      OT = cT(41256),
-      yT = cT(41267);
-    async function fT(TT, kT) {
-      let fT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const [xT, IT] = function(TT) {
-        const kT = TT,
-          cT = [
-            [kT.displayWidth, kT.displayHeight],
-            [kT.videoWidth, kT.videoHeight],
-            [kT.naturalWidth, kT.naturalHeight],
-            [kT.width, kT.height]
+    var Yq = gq(41402),
+      lq = gq(41406),
+      Oq = gq(41413),
+      mq = gq(41422),
+      xq = gq(41429);
+    async function Aq(qq, Eq) {
+      let Aq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const [cq, uq] = function(qq) {
+        const Eq = qq,
+          gq = [
+            [Eq.displayWidth, Eq.displayHeight],
+            [Eq.videoWidth, Eq.videoHeight],
+            [Eq.naturalWidth, Eq.naturalHeight],
+            [Eq.width, Eq.height]
           ];
-        for (const [lT, MT] of cT)
-          if (void 0 !== lT && void 0 !== MT && Number.isInteger(lT) && Number.isInteger(MT) && lT > 0 && MT > 0) return [lT, MT];
+        for (const [Yq, lq] of gq)
+          if (void 0 !== Yq && void 0 !== lq && Number.isInteger(Yq) && Number.isInteger(lq) && Yq > 0 && lq > 0) return [Yq, lq];
         throw new TypeError("createTexture2DFromExternalImage: source has no supported positive intrinsic dimensions")
-      }(kT), [AT, CT] = function(TT, kT, cT) {
-        if (void 0 === cT) return [TT, kT];
-        if (!Number.isInteger(cT) || cT < 1) throw new TypeError(`createTexture2DFromExternalImage: maxDimension must be a positive integer (got ${cT})`);
-        if (Math.max(TT, kT) <= cT) return [TT, kT];
-        const lT = cT / Math.max(TT, kT);
-        return TT >= kT ? [cT, Math.max(1, Math.round(kT * lT))] : [Math.max(1, Math.round(TT * lT)), cT]
-      }(xT, IT, fT.maxDimension), jT = fT.mipMaps ?? !0, vT = fT.premultiplyAlpha ?? !1;
-      let tT = kT,
-        hT = null;
-      const NT = {
+      }(Eq), [Bq, Wq] = function(qq, Eq, gq) {
+        if (void 0 === gq) return [qq, Eq];
+        if (!Number.isInteger(gq) || gq < 1) throw new TypeError(`createTexture2DFromExternalImage: maxDimension must be a positive integer (got ${gq})`);
+        if (Math.max(qq, Eq) <= gq) return [qq, Eq];
+        const Yq = gq / Math.max(qq, Eq);
+        return qq >= Eq ? [gq, Math.max(1, Math.round(Eq * Yq))] : [Math.max(1, Math.round(qq * Yq)), gq]
+      }(cq, uq, Aq.maxDimension), Nq = Aq.mipMaps ?? !0, aq = Aq.premultiplyAlpha ?? !1;
+      let Vq = Eq,
+        dq = null;
+      const jq = {
         texture: null
       };
       try {
-        AT === xT && CT === IT || (hT = await createImageBitmap(kT, {
-          resizeWidth: AT,
-          resizeHeight: CT,
+        Bq === cq && Wq === uq || (dq = await createImageBitmap(Eq, {
+          resizeWidth: Bq,
+          resizeHeight: Wq,
           resizeQuality: "high",
-          premultiplyAlpha: vT ? "premultiply" : "none",
+          premultiplyAlpha: aq ? "premultiply" : "none",
           colorSpaceConversion: "none"
-        }), tT = hT);
-        const QT = TT._device,
-          ST = fT.srgb ? "rgba8unorm-srgb" : "rgba8unorm",
-          DT = jT ? (0, yT.d)(AT, CT) : 1,
-          aT = DT > 1 ? (await Promise.resolve().then((() => cT(41259)))).generateMipmaps : null,
-          FT = {
-            addressModeU: fT.addressModeU ?? "repeat",
-            addressModeV: fT.addressModeV ?? "repeat",
-            minFilter: fT.minFilter ?? "linear",
-            magFilter: fT.magFilter ?? "linear",
-            mipmapFilter: jT ? "linear" : "nearest"
+        }), Vq = dq);
+        const Hq = qq._device,
+          oq = Aq.srgb ? "rgba8unorm-srgb" : "rgba8unorm",
+          Pq = Nq ? (0, xq.d)(Bq, Wq) : 1,
+          Qq = Pq > 1 ? (await Promise.resolve().then((() => gq(41427)))).generateMipmaps : null,
+          yq = {
+            addressModeU: Aq.addressModeU ?? "repeat",
+            addressModeV: Aq.addressModeV ?? "repeat",
+            minFilter: Aq.minFilter ?? "linear",
+            magFilter: Aq.magFilter ?? "linear",
+            mipmapFilter: Nq ? "linear" : "nearest"
           };
-        FT.maxAnisotropy = "linear" === FT.minFilter && "linear" === FT.magFilter && "linear" === FT.mipmapFilter ? 4 : 1;
-        const rT = fT.invertY ?? !0,
-          PT = async kT => {
-            let cT;
-            QT.pushErrorScope("validation"), QT.pushErrorScope("out-of-memory");
-            let KT = null;
+        yq.maxAnisotropy = "linear" === yq.minFilter && "linear" === yq.magFilter && "linear" === yq.mipmapFilter ? 4 : 1;
+        const tq = Aq.invertY ?? !0,
+          rq = async Eq => {
+            let gq;
+            Hq.pushErrorScope("validation"), Hq.pushErrorScope("out-of-memory");
+            let Oq = null;
             try {
-              const cT = NT.texture = QT.createTexture({
+              const gq = jq.texture = Hq.createTexture({
                 size: {
-                  width: AT,
-                  height: CT
+                  width: Bq,
+                  height: Wq
                 },
-                format: ST,
-                mipLevelCount: DT,
-                usage: MT.g.TEXTURE_BINDING | MT.g.COPY_DST | MT.g.RENDER_ATTACHMENT
+                format: oq,
+                mipLevelCount: Pq,
+                usage: lq.f.TEXTURE_BINDING | lq.f.COPY_DST | lq.f.RENDER_ATTACHMENT
               });
-              QT.queue.copyExternalImageToTexture({
-                source: kT,
-                flipY: rT
+              Hq.queue.copyExternalImageToTexture({
+                source: Eq,
+                flipY: tq
               }, {
-                texture: cT,
-                premultipliedAlpha: vT
+                texture: gq,
+                premultipliedAlpha: aq
               }, {
-                width: AT,
-                height: CT
-              }), aT && aT(TT, cT), KT = (0, OT.c)(TT, FT)
-            } catch (jT) {
-              cT = jT
+                width: Bq,
+                height: Wq
+              }), Qq && Qq(qq, gq), Oq = (0, mq.c)(qq, yq)
+            } catch (Nq) {
+              gq = Nq
             }
-            const [yT, fT] = await Promise.all([QT.popErrorScope(), QT.popErrorScope()]);
-            if (cT) throw cT;
-            const xT = fT ?? yT;
-            if (xT) throw new Error(`createTexture2DFromExternalImage: GPU upload failed: ${xT.message}`, {
-              cause: xT
+            const [xq, Aq] = await Promise.all([Hq.popErrorScope(), Hq.popErrorScope()]);
+            if (gq) throw gq;
+            const cq = Aq ?? xq;
+            if (cq) throw new Error(`createTexture2DFromExternalImage: GPU upload failed: ${cq.message}`, {
+              cause: cq
             });
-            const IT = NT.texture;
-            return IT && KT || (0, lT.e)(677), {
-              texture: IT,
-              view: IT.createView(),
-              sampler: KT,
-              width: AT,
-              height: CT
+            const uq = jq.texture;
+            return uq && Oq || (0, Yq.d)(677), {
+              texture: uq,
+              view: uq.createView(),
+              sampler: Oq,
+              width: Bq,
+              height: Wq
             }
-          }, wT = await (TT._dlr?.x(tT, AT, CT, ST, DT, FT, rT, vT, PT)) ?? await PT(tT);
-        return (0, KT.c)(wT), wT
-      } catch (QT) {
-        throw NT.texture?.destroy(), QT
+          }, vq = await (qq._dlr?.x(Vq, Bq, Wq, oq, Pq, yq, tq, aq, rq)) ?? await rq(Vq);
+        return (0, Oq.b)(vq), vq
+      } catch (Hq) {
+        throw jq.texture?.destroy(), Hq
       } finally {
-        hT?.close()
+        dq?.close()
       }
     }
   },
-  41259: (TT, kT, cT) => {
-    cT.r(kT), cT.d(kT, {
-      generateMipmaps: () => jT,
-      recordMipmaps: () => vT
+  41427: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      generateMipmaps: () => Nq,
+      recordMipmaps: () => aq
     });
-    var lT = cT(41244),
-      MT = cT(41256),
-      KT = {
+    var Yq = gq(41406),
+      lq = gq(41422),
+      Oq = {
         magFilter: "linear",
         minFilter: "linear"
       };
-    var OT = "@group(0)@binding(0)var t:texture_2d<f32>;@group(0)@binding(1)var s:sampler;struct V{@builtin(position)p:vec4f,@location(0)u:vec2f};@vertex fn vs(@builtin(vertex_index)i:u32)->V{let p=array<vec2f,3>(vec2f(-1,-1),vec2f(3,-1),vec2f(-1,3))[i];return V(vec4f(p,0,1),p*vec2f(.5,-.5)+.5);}@fragment fn fs(v:V)->@location(0)vec4f{return textureSample(t,s,v.u);}",
-      yT = null,
-      fT = null,
-      xT = null,
-      IT = null,
-      AT = null;
+    var mq = "@group(0)@binding(0)var t:texture_2d<f32>;@group(0)@binding(1)var s:sampler;struct V{@builtin(position)p:vec4f,@location(0)u:vec2f};@vertex fn vs(@builtin(vertex_index)i:u32)->V{let p=array<vec2f,3>(vec2f(-1,-1),vec2f(3,-1),vec2f(-1,3))[i];return V(vec4f(p,0,1),p*vec2f(.5,-.5)+.5);}@fragment fn fs(v:V)->@location(0)vec4f{return textureSample(t,s,v.u);}",
+      xq = null,
+      Aq = null,
+      cq = null,
+      uq = null,
+      Bq = null;
 
-    function CT(TT) {
-      const kT = TT._device;
-      kT !== AT && (yT?.clear(), yT = null, fT = null, xT = null, IT = null, AT = null, AT = kT), fT ??= kT.createShaderModule({
-        code: OT
-      }), xT ??= function(TT) {
-        return (0, MT.c)(TT, KT)
-      }(TT), IT ??= kT.createBindGroupLayout({
+    function Wq(qq) {
+      const Eq = qq._device;
+      Eq !== Bq && (xq?.clear(), xq = null, Aq = null, cq = null, uq = null, Bq = null, Bq = Eq), Aq ??= Eq.createShaderModule({
+        code: mq
+      }), cq ??= function(qq) {
+        return (0, lq.c)(qq, Oq)
+      }(qq), uq ??= Eq.createBindGroupLayout({
         entries: [{
           binding: 0,
-          visibility: lT.f.FRAGMENT,
+          visibility: Yq.c.FRAGMENT,
           texture: {
             sampleType: "float"
           }
         }, {
           binding: 1,
-          visibility: lT.f.FRAGMENT,
+          visibility: Yq.c.FRAGMENT,
           sampler: {}
         }]
       })
     }
 
-    function jT(TT, kT, cT) {
-      const lT = TT._device,
-        MT = lT.createCommandEncoder();
-      vT(TT, kT, MT, cT), lT.queue.submit([MT.finish()])
+    function Nq(qq, Eq, gq) {
+      const Yq = qq._device,
+        lq = Yq.createCommandEncoder();
+      aq(qq, Eq, lq, gq), Yq.queue.submit([lq.finish()])
     }
 
-    function vT(TT, kT, cT, lT) {
-      if (kT.mipLevelCount <= 1) return;
-      const MT = TT._device,
-        KT = function(TT, kT) {
-          const cT = TT._device;
-          CT(TT), yT ??= new Map;
-          let lT = yT.get(kT);
-          return lT || (lT = cT.createRenderPipeline({
-            layout: cT.createPipelineLayout({
-              bindGroupLayouts: [IT]
+    function aq(qq, Eq, gq, Yq) {
+      if (Eq.mipLevelCount <= 1) return;
+      const lq = qq._device,
+        Oq = function(qq, Eq) {
+          const gq = qq._device;
+          Wq(qq), xq ??= new Map;
+          let Yq = xq.get(Eq);
+          return Yq || (Yq = gq.createRenderPipeline({
+            layout: gq.createPipelineLayout({
+              bindGroupLayouts: [uq]
             }),
             vertex: {
-              module: fT,
+              module: Aq,
               entryPoint: "vs"
             },
             fragment: {
-              module: fT,
+              module: Aq,
               entryPoint: "fs",
               targets: [{
-                format: kT
+                format: Eq
               }]
             },
             primitive: {
               topology: "triangle-list"
             }
-          }), yT.set(kT, lT)), lT
-        }(TT, kT.format),
-        OT = null != lT ? {
+          }), xq.set(Eq, Yq)), Yq
+        }(qq, Eq.format),
+        mq = null != Yq ? {
           dimension: "2d",
-          baseArrayLayer: lT,
+          baseArrayLayer: Yq,
           arrayLayerCount: 1
         } : {};
-      for (let yT = 1; yT < kT.mipLevelCount; yT++) {
-        const TT = kT.createView({
-            baseMipLevel: yT - 1,
+      for (let xq = 1; xq < Eq.mipLevelCount; xq++) {
+        const qq = Eq.createView({
+            baseMipLevel: xq - 1,
             mipLevelCount: 1,
-            ...OT
+            ...mq
           }),
-          lT = kT.createView({
-            baseMipLevel: yT,
+          Yq = Eq.createView({
+            baseMipLevel: xq,
             mipLevelCount: 1,
-            ...OT
+            ...mq
           }),
-          fT = MT.createBindGroup({
-            layout: IT,
+          Aq = lq.createBindGroup({
+            layout: uq,
             entries: [{
               binding: 0,
-              resource: TT
+              resource: qq
             }, {
               binding: 1,
-              resource: xT
+              resource: cq
             }]
           }),
-          AT = cT.beginRenderPass({
+          Bq = gq.beginRenderPass({
             colorAttachments: [{
-              view: lT,
+              view: Yq,
               loadOp: "clear",
               storeOp: "store",
               clearValue: {
@@ -1271,82 +1271,82 @@ export const modules = {
               }
             }]
           });
-        AT.setPipeline(KT), AT.setBindGroup(0, fT), AT.draw(3), AT.end()
+        Bq.setPipeline(Oq), Bq.setBindGroup(0, Aq), Bq.draw(3), Bq.end()
       }
     }
   },
-  41267: (TT, kT, cT) => {
-    function lT(TT, kT) {
-      return Math.floor(Math.log2(Math.max(TT, kT))) + 1
+  41429: (qq, Eq, gq) => {
+    function Yq(qq, Eq) {
+      return Math.floor(Math.log2(Math.max(qq, Eq))) + 1
     }
-    cT.d(kT, {
-      d: () => lT
+    gq.d(Eq, {
+      d: () => Yq
     })
   },
-  41233: (TT, kT, cT) => {
-    cT.d(kT, {
-      d: () => xT,
-      g: () => IT
+  41394: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => cq,
+      f: () => uq
     });
-    var lT = cT(41242),
-      MT = cT(41244),
-      KT = cT(41247),
-      OT = cT(41256),
-      yT = cT(41259),
-      fT = cT(41267);
+    var Yq = gq(41402),
+      lq = gq(41406),
+      Oq = gq(41413),
+      mq = gq(41422),
+      xq = gq(41427),
+      Aq = gq(41429);
 
-    function xT(TT, kT, cT, yT) {
-      let xT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
-      (kT < 1 || cT < 1 || yT < 1) && (0, lT.e)(722, kT, cT, yT);
-      const IT = TT._device,
-        AT = xT.mipMaps ?? !0,
-        CT = xT.srgb ? "rgba8unorm-srgb" : "rgba8unorm",
-        jT = IT.createTexture({
+    function cq(qq, Eq, gq, xq) {
+      let cq = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+      (Eq < 1 || gq < 1 || xq < 1) && (0, Yq.d)(722, Eq, gq, xq);
+      const uq = qq._device,
+        Bq = cq.mipMaps ?? !0,
+        Wq = cq.srgb ? "rgba8unorm-srgb" : "rgba8unorm",
+        Nq = uq.createTexture({
           size: {
-            width: kT,
-            height: cT,
-            depthOrArrayLayers: yT
+            width: Eq,
+            height: gq,
+            depthOrArrayLayers: xq
           },
           dimension: "2d",
-          format: CT,
-          mipLevelCount: AT ? (0, fT.d)(kT, cT) : 1,
-          usage: MT.g.TEXTURE_BINDING | MT.g.COPY_DST | MT.g.RENDER_ATTACHMENT
+          format: Wq,
+          mipLevelCount: Bq ? (0, Aq.d)(Eq, gq) : 1,
+          usage: lq.f.TEXTURE_BINDING | lq.f.COPY_DST | lq.f.RENDER_ATTACHMENT
         }),
-        vT = (0, OT.c)(TT, {
-          addressModeU: xT.addressModeU ?? "repeat",
-          addressModeV: xT.addressModeV ?? "repeat",
-          minFilter: xT.minFilter ?? "linear",
-          magFilter: xT.magFilter ?? "linear",
-          mipmapFilter: AT ? "linear" : "nearest"
+        aq = (0, mq.c)(qq, {
+          addressModeU: cq.addressModeU ?? "repeat",
+          addressModeV: cq.addressModeV ?? "repeat",
+          minFilter: cq.minFilter ?? "linear",
+          magFilter: cq.magFilter ?? "linear",
+          mipmapFilter: Bq ? "linear" : "nearest"
         }),
-        tT = {
-          texture: jT,
-          view: jT.createView({
+        Vq = {
+          texture: Nq,
+          view: Nq.createView({
             dimension: "2d-array"
           }),
-          sampler: vT,
-          width: kT,
-          height: cT,
-          layers: yT
+          sampler: aq,
+          width: Eq,
+          height: gq,
+          layers: xq
         };
-      return (0, KT.c)(tT), tT
+      return (0, Oq.b)(Vq), Vq
     }
 
-    function IT(TT, kT, cT, MT) {
-      let KT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
-      (cT < 0 || cT >= kT.layers || (0 | cT) !== cT) && (0, lT.e)(723, kT.layers, cT);
-      const OT = KT.invertY ?? !0,
-        fT = KT.premultiplyAlpha ?? !1;
-      TT._device.queue.copyExternalImageToTexture({
-        source: MT,
-        flipY: OT
+    function uq(qq, Eq, gq, lq) {
+      let Oq = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+      (gq < 0 || gq >= Eq.layers || (0 | gq) !== gq) && (0, Yq.d)(723, Eq.layers, gq);
+      const mq = Oq.invertY ?? !0,
+        Aq = Oq.premultiplyAlpha ?? !1;
+      qq._device.queue.copyExternalImageToTexture({
+        source: lq,
+        flipY: mq
       }, {
-        texture: kT.texture,
-        origin: [0, 0, cT],
-        premultipliedAlpha: fT
-      }, [kT.width, kT.height, 1]), kT.texture.mipLevelCount > 1 && (0, yT.generateMipmaps)(TT, kT.texture, cT)
+        texture: Eq.texture,
+        origin: [0, 0, gq],
+        premultipliedAlpha: Aq
+      }, [Eq.width, Eq.height, 1]), Eq.texture.mipLevelCount > 1 && (0, xq.generateMipmaps)(qq, Eq.texture, gq)
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

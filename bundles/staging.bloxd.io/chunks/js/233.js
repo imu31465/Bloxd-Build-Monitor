@@ -1,248 +1,248 @@
 export const id = 233;
 export const ids = [233];
 export const modules = {
-  37632: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => MT
+  37758: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => lq
     });
-    var lT = cT(37637);
-    class MT {
-      static GetPlanes(TT) {
-        const kT = [];
-        for (let cT = 0; cT < 6; cT++) kT.push(new lT.e(0, 0, 0, 0));
-        return MT.GetPlanesToRef(TT, kT), kT
+    var Yq = gq(37767);
+    class lq {
+      static GetPlanes(qq) {
+        const Eq = [];
+        for (let gq = 0; gq < 6; gq++) Eq.push(new Yq.d(0, 0, 0, 0));
+        return lq.GetPlanesToRef(qq, Eq), Eq
       }
-      static GetNearPlaneToRef(TT, kT) {
-        const cT = TT.m;
-        kT.normal.x = cT[3] + cT[2], kT.normal.y = cT[7] + cT[6], kT.normal.z = cT[11] + cT[10], kT.d = cT[15] + cT[14], kT.normalize()
+      static GetNearPlaneToRef(qq, Eq) {
+        const gq = qq.m;
+        Eq.normal.x = gq[3] + gq[2], Eq.normal.y = gq[7] + gq[6], Eq.normal.z = gq[11] + gq[10], Eq.d = gq[15] + gq[14], Eq.normalize()
       }
-      static GetFarPlaneToRef(TT, kT) {
-        const cT = TT.m;
-        kT.normal.x = cT[3] - cT[2], kT.normal.y = cT[7] - cT[6], kT.normal.z = cT[11] - cT[10], kT.d = cT[15] - cT[14], kT.normalize()
+      static GetFarPlaneToRef(qq, Eq) {
+        const gq = qq.m;
+        Eq.normal.x = gq[3] - gq[2], Eq.normal.y = gq[7] - gq[6], Eq.normal.z = gq[11] - gq[10], Eq.d = gq[15] - gq[14], Eq.normalize()
       }
-      static GetLeftPlaneToRef(TT, kT) {
-        const cT = TT.m;
-        kT.normal.x = cT[3] + cT[0], kT.normal.y = cT[7] + cT[4], kT.normal.z = cT[11] + cT[8], kT.d = cT[15] + cT[12], kT.normalize()
+      static GetLeftPlaneToRef(qq, Eq) {
+        const gq = qq.m;
+        Eq.normal.x = gq[3] + gq[0], Eq.normal.y = gq[7] + gq[4], Eq.normal.z = gq[11] + gq[8], Eq.d = gq[15] + gq[12], Eq.normalize()
       }
-      static GetRightPlaneToRef(TT, kT) {
-        const cT = TT.m;
-        kT.normal.x = cT[3] - cT[0], kT.normal.y = cT[7] - cT[4], kT.normal.z = cT[11] - cT[8], kT.d = cT[15] - cT[12], kT.normalize()
+      static GetRightPlaneToRef(qq, Eq) {
+        const gq = qq.m;
+        Eq.normal.x = gq[3] - gq[0], Eq.normal.y = gq[7] - gq[4], Eq.normal.z = gq[11] - gq[8], Eq.d = gq[15] - gq[12], Eq.normalize()
       }
-      static GetTopPlaneToRef(TT, kT) {
-        const cT = TT.m;
-        kT.normal.x = cT[3] - cT[1], kT.normal.y = cT[7] - cT[5], kT.normal.z = cT[11] - cT[9], kT.d = cT[15] - cT[13], kT.normalize()
+      static GetTopPlaneToRef(qq, Eq) {
+        const gq = qq.m;
+        Eq.normal.x = gq[3] - gq[1], Eq.normal.y = gq[7] - gq[5], Eq.normal.z = gq[11] - gq[9], Eq.d = gq[15] - gq[13], Eq.normalize()
       }
-      static GetBottomPlaneToRef(TT, kT) {
-        const cT = TT.m;
-        kT.normal.x = cT[3] + cT[1], kT.normal.y = cT[7] + cT[5], kT.normal.z = cT[11] + cT[9], kT.d = cT[15] + cT[13], kT.normalize()
+      static GetBottomPlaneToRef(qq, Eq) {
+        const gq = qq.m;
+        Eq.normal.x = gq[3] + gq[1], Eq.normal.y = gq[7] + gq[5], Eq.normal.z = gq[11] + gq[9], Eq.d = gq[15] + gq[13], Eq.normalize()
       }
-      static GetPlanesToRef(TT, kT) {
-        MT.GetNearPlaneToRef(TT, kT[0]), MT.GetFarPlaneToRef(TT, kT[1]), MT.GetLeftPlaneToRef(TT, kT[2]), MT.GetRightPlaneToRef(TT, kT[3]), MT.GetTopPlaneToRef(TT, kT[4]), MT.GetBottomPlaneToRef(TT, kT[5])
+      static GetPlanesToRef(qq, Eq) {
+        lq.GetNearPlaneToRef(qq, Eq[0]), lq.GetFarPlaneToRef(qq, Eq[1]), lq.GetLeftPlaneToRef(qq, Eq[2]), lq.GetRightPlaneToRef(qq, Eq[3]), lq.GetTopPlaneToRef(qq, Eq[4]), lq.GetBottomPlaneToRef(qq, Eq[5])
       }
-      static IsPointInFrustum(TT, kT) {
-        for (let cT = 0; cT < 6; cT++)
-          if (kT[cT].dotCoordinate(TT) < 0) return !1;
+      static IsPointInFrustum(qq, Eq) {
+        for (let gq = 0; gq < 6; gq++)
+          if (Eq[gq].dotCoordinate(qq) < 0) return !1;
         return !0
       }
     }
   },
-  37637: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => MT
+  37767: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => lq
     });
-    var lT = cT(36892);
-    class MT {
-      constructor(TT, kT, cT, MT) {
-        this.normal = new lT.m(TT, kT, cT), this.d = MT
+    var Yq = gq(37139);
+    class lq {
+      constructor(qq, Eq, gq, lq) {
+        this.normal = new Yq.q(qq, Eq, gq), this.d = lq
       }
-      acT() {
+      bYq() {
         return [this.normal.x, this.normal.y, this.normal.z, this.d]
       }
       clone() {
-        return new MT(this.normal.x, this.normal.y, this.normal.z, this.d)
+        return new lq(this.normal.x, this.normal.y, this.normal.z, this.d)
       }
       getClassName() {
         return "Plane"
       }
       getHashCode() {
-        let TT = this.normal.getHashCode();
-        return TT = 397 * TT ^ this.d, TT
+        let qq = this.normal.getHashCode();
+        return qq = 397 * qq ^ this.d, qq
       }
       normalize() {
-        const TT = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
-        let kT = 0;
-        return 0 !== TT && (kT = 1 / TT), this.normal.x *= kT, this.normal.y *= kT, this.normal.z *= kT, this.d *= kT, this
+        const qq = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
+        let Eq = 0;
+        return 0 !== qq && (Eq = 1 / qq), this.normal.x *= Eq, this.normal.y *= Eq, this.normal.z *= Eq, this.d *= Eq, this
       }
-      transform(TT) {
-        const kT = MT._TmpMatrix;
-        TT.invertToRef(kT);
-        const cT = kT.m,
-          lT = this.normal.x,
-          KT = this.normal.y,
-          OT = this.normal.z,
-          yT = this.d,
-          fT = lT * cT[0] + KT * cT[1] + OT * cT[2] + yT * cT[3],
-          xT = lT * cT[4] + KT * cT[5] + OT * cT[6] + yT * cT[7],
-          IT = lT * cT[8] + KT * cT[9] + OT * cT[10] + yT * cT[11],
-          AT = lT * cT[12] + KT * cT[13] + OT * cT[14] + yT * cT[15];
-        return new MT(fT, xT, IT, AT)
+      transform(qq) {
+        const Eq = lq._TmpMatrix;
+        qq.invertToRef(Eq);
+        const gq = Eq.m,
+          Yq = this.normal.x,
+          Oq = this.normal.y,
+          mq = this.normal.z,
+          xq = this.d,
+          Aq = Yq * gq[0] + Oq * gq[1] + mq * gq[2] + xq * gq[3],
+          cq = Yq * gq[4] + Oq * gq[5] + mq * gq[6] + xq * gq[7],
+          uq = Yq * gq[8] + Oq * gq[9] + mq * gq[10] + xq * gq[11],
+          Bq = Yq * gq[12] + Oq * gq[13] + mq * gq[14] + xq * gq[15];
+        return new lq(Aq, cq, uq, Bq)
       }
-      dotCoordinate(TT) {
-        return this.normal.x * TT.x + this.normal.y * TT.y + this.normal.z * TT.z + this.d
+      dotCoordinate(qq) {
+        return this.normal.x * qq.x + this.normal.y * qq.y + this.normal.z * qq.z + this.d
       }
-      copyFromPoints(TT, kT, cT) {
-        const lT = kT.x - TT.x,
-          MT = kT.y - TT.y,
-          KT = kT.z - TT.z,
-          OT = cT.x - TT.x,
-          yT = cT.y - TT.y,
-          fT = cT.z - TT.z,
-          xT = MT * fT - KT * yT,
-          IT = KT * OT - lT * fT,
-          AT = lT * yT - MT * OT,
-          CT = Math.sqrt(xT * xT + IT * IT + AT * AT);
-        let jT;
-        return jT = 0 !== CT ? 1 / CT : 0, this.normal.x = xT * jT, this.normal.y = IT * jT, this.normal.z = AT * jT, this.d = -(this.normal.x * TT.x + this.normal.y * TT.y + this.normal.z * TT.z), this
+      copyFromPoints(qq, Eq, gq) {
+        const Yq = Eq.x - qq.x,
+          lq = Eq.y - qq.y,
+          Oq = Eq.z - qq.z,
+          mq = gq.x - qq.x,
+          xq = gq.y - qq.y,
+          Aq = gq.z - qq.z,
+          cq = lq * Aq - Oq * xq,
+          uq = Oq * mq - Yq * Aq,
+          Bq = Yq * xq - lq * mq,
+          Wq = Math.sqrt(cq * cq + uq * uq + Bq * Bq);
+        let Nq;
+        return Nq = 0 !== Wq ? 1 / Wq : 0, this.normal.x = cq * Nq, this.normal.y = uq * Nq, this.normal.z = Bq * Nq, this.d = -(this.normal.x * qq.x + this.normal.y * qq.y + this.normal.z * qq.z), this
       }
-      isFrontFacingTo(TT, kT) {
-        return lT.m.Dot(this.normal, TT) <= kT
+      isFrontFacingTo(qq, Eq) {
+        return Yq.q.Dot(this.normal, qq) <= Eq
       }
-      signedDistanceTo(TT) {
-        return lT.m.Dot(TT, this.normal) + this.d
+      signedDistanceTo(qq) {
+        return Yq.q.Dot(qq, this.normal) + this.d
       }
-      static FromArray(TT) {
-        return new MT(TT[0], TT[1], TT[2], TT[3])
+      static FromArray(qq) {
+        return new lq(qq[0], qq[1], qq[2], qq[3])
       }
-      static FromPoints(TT, kT, cT) {
-        const lT = new MT(0, 0, 0, 0);
-        return lT.copyFromPoints(TT, kT, cT), lT
+      static FromPoints(qq, Eq, gq) {
+        const Yq = new lq(0, 0, 0, 0);
+        return Yq.copyFromPoints(qq, Eq, gq), Yq
       }
-      static FromPositionAndNormal(TT, kT) {
-        const cT = new MT(0, 0, 0, 0);
-        return this.FromPositionAndNormalToRef(TT, kT, cT)
+      static FromPositionAndNormal(qq, Eq) {
+        const gq = new lq(0, 0, 0, 0);
+        return this.FromPositionAndNormalToRef(qq, Eq, gq)
       }
-      static FromPositionAndNormalToRef(TT, kT, cT) {
-        return cT.normal.UkT(kT), cT.normal.normalize(), cT.d = -TT.dot(cT.normal), cT
+      static FromPositionAndNormalToRef(qq, Eq, gq) {
+        return gq.normal.WG(Eq), gq.normal.normalize(), gq.d = -qq.dot(gq.normal), gq
       }
-      static SignedDistanceToPlaneFromPositionAndNormal(TT, kT, cT) {
-        const MT = -(kT.x * TT.x + kT.y * TT.y + kT.z * TT.z);
-        return lT.m.Dot(cT, kT) + MT
+      static SignedDistanceToPlaneFromPositionAndNormal(qq, Eq, gq) {
+        const lq = -(Eq.x * qq.x + Eq.y * qq.y + Eq.z * qq.z);
+        return Yq.q.Dot(gq, Eq) + lq
       }
     }
-    MT._TmpMatrix = lT.d.Identity()
+    lq._TmpMatrix = Yq.e.Identity()
   },
-  38507: (TT, kT, cT) => {
-    cT.d(kT, {
-      d: () => KT
+  38649: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => Oq
     });
-    var lT = cT(38512);
-    const MT = (TT, kT, cT) => TT ? TT.getClassName && "Mesh" === TT.getClassName() ? null : !TT.getClassName || "SubMesh" !== TT.getClassName() && "PhysicsBody" !== TT.getClassName() ? TT.clone ? TT.clone() : Array.isArray(TT) ? TT.slice() : cT && "object" === typeof TT ? {
-      ...TT
-    } : null : TT.clone(kT) : null;
-    class KT {
-      static DeepCopy(TT, kT, cT, KT) {
-        let OT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const yT = function(TT) {
-          const kT = [];
+    var Yq = gq(38653);
+    const lq = (qq, Eq, gq) => qq ? qq.getClassName && "Mesh" === qq.getClassName() ? null : !qq.getClassName || "SubMesh" !== qq.getClassName() && "PhysicsBody" !== qq.getClassName() ? qq.clone ? qq.clone() : Array.isArray(qq) ? qq.slice() : gq && "object" === typeof qq ? {
+      ...qq
+    } : null : qq.clone(Eq) : null;
+    class Oq {
+      static DeepCopy(qq, Eq, gq, Oq) {
+        let mq = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const xq = function(qq) {
+          const Eq = [];
           do {
-            const cT = Object.getOwnPropertyNames(TT);
-            for (const TT of cT) - 1 === kT.indexOf(TT) && kT.push(TT)
-          } while (TT = Object.getPrototypeOf(TT));
-          return kT
-        }(TT);
-        for (const xT of yT) {
-          if ("_" === xT[0] && (!KT || -1 === KT.indexOf(xT))) continue;
-          if (xT.endsWith("Observable")) continue;
-          if (cT && -1 !== cT.indexOf(xT)) continue;
-          const yT = TT[xT],
-            IT = typeof yT;
-          if ("function" !== IT) try {
-            if ("object" === IT)
-              if (yT instanceof Uint8Array) kT[xT] = Uint8Array.from(yT);
-              else if (yT instanceof Array) {
-              if (kT[xT] = [], yT.length > 0)
-                if ("object" == typeof yT[0])
-                  for (let TT = 0; TT < yT.length; TT++) {
-                    const cT = MT(yT[TT], kT, OT); - 1 === kT[xT].indexOf(cT) && kT[xT].push(cT)
-                  } else kT[xT] = yT.slice(0)
-            } else kT[xT] = MT(yT, kT, OT);
-            else kT[xT] = yT
-          } catch (fT) {
-            lT.e.Warn(fT.message)
+            const gq = Object.getOwnPropertyNames(qq);
+            for (const qq of gq) - 1 === Eq.indexOf(qq) && Eq.push(qq)
+          } while (qq = Object.getPrototypeOf(qq));
+          return Eq
+        }(qq);
+        for (const cq of xq) {
+          if ("_" === cq[0] && (!Oq || -1 === Oq.indexOf(cq))) continue;
+          if (cq.endsWith("Observable")) continue;
+          if (gq && -1 !== gq.indexOf(cq)) continue;
+          const xq = qq[cq],
+            uq = typeof xq;
+          if ("function" !== uq) try {
+            if ("object" === uq)
+              if (xq instanceof Uint8Array) Eq[cq] = Uint8Array.from(xq);
+              else if (xq instanceof Array) {
+              if (Eq[cq] = [], xq.length > 0)
+                if ("object" == typeof xq[0])
+                  for (let qq = 0; qq < xq.length; qq++) {
+                    const gq = lq(xq[qq], Eq, mq); - 1 === Eq[cq].indexOf(gq) && Eq[cq].push(gq)
+                  } else Eq[cq] = xq.slice(0)
+            } else Eq[cq] = lq(xq, Eq, mq);
+            else Eq[cq] = xq
+          } catch (Aq) {
+            Yq.b.Warn(Aq.message)
           }
         }
       }
     }
   },
-  37760: (TT, kT, cT) => {
-    function lT() {
-      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (TT => {
-        const kT = 16 * Math.random() | 0;
-        return ("x" === TT ? kT : 3 & kT | 8).toString(16)
+  37872: (qq, Eq, gq) => {
+    function Yq() {
+      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (qq => {
+        const Eq = 16 * Math.random() | 0;
+        return ("x" === qq ? Eq : 3 & Eq | 8).toString(16)
       }))
     }
-    cT.d(kT, {
-      c: () => lT
+    gq.d(Eq, {
+      d: () => Yq
     })
   },
-  38512: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => lT
+  38653: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => Yq
     });
-    class lT {
-      static _CheckLimit(TT, kT) {
-        let cT = lT._LogLimitOutputs[TT];
-        return cT ? cT.current++ : (cT = {
-          limit: kT,
+    class Yq {
+      static _CheckLimit(qq, Eq) {
+        let gq = Yq._LogLimitOutputs[qq];
+        return gq ? gq.current++ : (gq = {
+          limit: Eq,
           current: 1
-        }, lT._LogLimitOutputs[TT] = cT), cT.current <= cT.limit
+        }, Yq._LogLimitOutputs[qq] = gq), gq.current <= gq.limit
       }
-      static _GenerateLimitMessage(TT) {
-        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const cT = lT._LogLimitOutputs[TT];
-        if (!cT || !lT.MessageLimitReached) return;
-        const MT = this._Levels[kT];
-        cT.current === cT.limit && lT[MT.name](lT.MessageLimitReached.replace(/%LIMIT%/g, "" + cT.limit).replace(/%TYPE%/g, MT.name ?? ""))
+      static _GenerateLimitMessage(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const gq = Yq._LogLimitOutputs[qq];
+        if (!gq || !Yq.MessageLimitReached) return;
+        const lq = this._Levels[Eq];
+        gq.current === gq.limit && Yq[lq.name](Yq.MessageLimitReached.replace(/%LIMIT%/g, "" + gq.limit).replace(/%TYPE%/g, lq.name ?? ""))
       }
-      static _AddLogEntry(TT) {
-        lT._LogCache = TT + lT._LogCache, lT.OnNewCacheEntry && lT.OnNewCacheEntry(TT)
+      static _AddLogEntry(qq) {
+        Yq._LogCache = qq + Yq._LogCache, Yq.OnNewCacheEntry && Yq.OnNewCacheEntry(qq)
       }
-      static _FormatMessage(TT) {
-        const kT = TT => TT < 10 ? "0" + TT : "" + TT,
-          cT = new Date;
-        return "[" + kT(cT.getHours()) + ":" + kT(cT.getMinutes()) + ":" + kT(cT.getSeconds()) + "]: " + TT
+      static _FormatMessage(qq) {
+        const Eq = qq => qq < 10 ? "0" + qq : "" + qq,
+          gq = new Date;
+        return "[" + Eq(gq.getHours()) + ":" + Eq(gq.getMinutes()) + ":" + Eq(gq.getSeconds()) + "]: " + qq
       }
-      static _LogDisabled(TT, kT) {}
+      static _LogDisabled(qq, Eq) {}
       static _LogEnabled() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          kT = arguments.length > 1 ? arguments[1] : void 0,
-          cT = arguments.length > 2 ? arguments[2] : void 0;
-        const MT = Array.isArray(kT) ? kT[0] : kT;
-        if (void 0 !== cT && !lT._CheckLimit(MT, cT)) return;
-        const KT = lT._FormatMessage(MT),
-          OT = this._Levels[TT],
-          yT = Array.isArray(kT) ? kT.slice(1) : [];
-        OT.logFunc && OT.logFunc("BJS - " + KT, ...yT);
-        const fT = `<div style='color:${OT.color}'>${KT}</div><br>`;
-        lT._AddLogEntry(fT), lT._GenerateLimitMessage(MT, TT)
+        let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          Eq = arguments.length > 1 ? arguments[1] : void 0,
+          gq = arguments.length > 2 ? arguments[2] : void 0;
+        const lq = Array.isArray(Eq) ? Eq[0] : Eq;
+        if (void 0 !== gq && !Yq._CheckLimit(lq, gq)) return;
+        const Oq = Yq._FormatMessage(lq),
+          mq = this._Levels[qq],
+          xq = Array.isArray(Eq) ? Eq.slice(1) : [];
+        mq.logFunc && mq.logFunc("BJS - " + Oq, ...xq);
+        const Aq = `<div style='color:${mq.color}'>${Oq}</div><br>`;
+        Yq._AddLogEntry(Aq), Yq._GenerateLimitMessage(lq, qq)
       }
       static get LogCache() {
-        return lT._LogCache
+        return Yq._LogCache
       }
       static ClearLogCache() {
-        lT._LogCache = "", lT._LogLimitOutputs = {}, lT.errorsCount = 0
+        Yq._LogCache = "", Yq._LogLimitOutputs = {}, Yq.errorsCount = 0
       }
-      static set LogLevels(TT) {
-        lT.Log = lT._LogDisabled, lT.Warn = lT._LogDisabled, lT.Error = lT._LogDisabled;
-        const kT = [lT.MessageLogLevel, lT.WarningLogLevel, lT.ErrorLogLevel];
-        for (const cT of kT)
-          if ((TT & cT) === cT) {
-            const TT = this._Levels[cT];
-            lT[TT.name] = lT._LogEnabled.bind(lT, cT)
+      static set LogLevels(qq) {
+        Yq.Log = Yq._LogDisabled, Yq.Warn = Yq._LogDisabled, Yq.Error = Yq._LogDisabled;
+        const Eq = [Yq.MessageLogLevel, Yq.WarningLogLevel, Yq.ErrorLogLevel];
+        for (const gq of Eq)
+          if ((qq & gq) === gq) {
+            const qq = this._Levels[gq];
+            Yq[qq.name] = Yq._LogEnabled.bind(Yq, gq)
           }
       }
     }
-    lT.NoneLogLevel = 0, lT.MessageLogLevel = 1, lT.WarningLogLevel = 2, lT.ErrorLogLevel = 4, lT.AllLogLevel = 7, lT.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", lT._LogCache = "", lT._LogLimitOutputs = {}, lT._Levels = [{}, {
+    Yq.NoneLogLevel = 0, Yq.MessageLogLevel = 1, Yq.WarningLogLevel = 2, Yq.ErrorLogLevel = 4, Yq.AllLogLevel = 7, Yq.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Yq._LogCache = "", Yq._LogLimitOutputs = {}, Yq._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -254,8 +254,8 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], lT.errorsCount = 0, lT.Log = lT._LogEnabled.bind(lT, lT.MessageLogLevel), lT.Warn = lT._LogEnabled.bind(lT, lT.WarningLogLevel), lT.Error = lT._LogEnabled.bind(lT, lT.ErrorLogLevel)
+    }], Yq.errorsCount = 0, Yq.Log = Yq._LogEnabled.bind(Yq, Yq.MessageLogLevel), Yq.Warn = Yq._LogEnabled.bind(Yq, Yq.WarningLogLevel), Yq.Error = Yq._LogEnabled.bind(Yq, Yq.ErrorLogLevel)
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

@@ -1,685 +1,685 @@
 export const id = 110;
 export const ids = [110];
 export const modules = {
-  4945: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => vT,
-      h: () => ST,
-      l: () => tT,
-      m: () => QT
+  4828: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => aq,
+      f: () => oq,
+      h: () => Vq,
+      l: () => Hq
     });
-    var lT = cT(71),
-      MT = cT(4948),
-      KT = cT(4355),
-      OT = cT(1379),
-      yT = cT(4968),
-      fT = cT(1046),
-      xT = cT.n(fT),
-      IT = cT(1363),
-      AT = cT(1741),
-      CT = cT(4975),
-      jT = cT(1099);
+    var Yq = gq(57),
+      lq = gq(4837),
+      Oq = gq(4195),
+      mq = gq(1341),
+      xq = gq(4858),
+      Aq = gq(1018),
+      cq = gq.n(Aq),
+      uq = gq(1336),
+      Bq = gq(1710),
+      Wq = gq(4866),
+      Nq = gq(1070);
 
-    function vT(TT) {
+    function aq(qq) {
       let {
-        label: kT,
-        onClick: cT,
-        checked: lT,
-        circleInfoText: MT,
-        className: yT,
-        disabled: fT,
-        note: IT
-      } = TT;
-      return (0, jT.jsxs)("div", {
-        "aria-disabled": fT || void 0,
+        label: Eq,
+        onClick: gq,
+        checked: Yq,
+        circleInfoText: lq,
+        className: xq,
+        disabled: Aq,
+        note: uq
+      } = qq;
+      return (0, Nq.jsxs)("div", {
+        "aria-disabled": Aq || void 0,
         "data-pad-focusable": !0,
-        className: xT()("SettingBox CheckboxContainer", {
-          [yT]: yT,
-          SettingBoxDisabled: fT
+        className: cq()("SettingBox CheckboxContainer", {
+          [xq]: xq,
+          SettingBoxDisabled: Aq
         }),
         onClick: () => {
-          fT || cT(!lT)
+          Aq || gq(!Yq)
         },
-        children: [(0, jT.jsxs)("div", {
+        children: [(0, Nq.jsxs)("div", {
           className: "CheckboxInputAndText",
-          children: [(0, jT.jsx)("label", {
+          children: [(0, Nq.jsx)("label", {
             className: "CheckboxClickableLabel",
-            children: (0, jT.jsx)(KT.d, {
+            children: (0, Nq.jsx)(Oq.b, {
               className: "SettingsCheckbox",
-              checked: lT,
-              disabled: fT,
+              checked: Yq,
+              disabled: Aq,
               onChange: () => {}
             })
-          }), (0, jT.jsxs)("div", {
+          }), (0, Nq.jsxs)("div", {
             className: "CheckboxText",
-            children: [kT, MT && (0, jT.jsx)("span", {
-              onClick: TT => TT.stopPropagation(),
-              children: (0, jT.jsx)(OT.b, {
+            children: [Eq, lq && (0, Nq.jsx)("span", {
+              onClick: qq => qq.stopPropagation(),
+              children: (0, Nq.jsx)(mq.c, {
                 className: "SettingsTextInputCircleInfo",
-                hoverInfo: MT
+                hoverInfo: lq
               })
             })]
           })]
-        }), IT && (0, jT.jsx)("div", {
+        }), uq && (0, Nq.jsx)("div", {
           className: "SettingNote",
-          children: IT
+          children: uq
         })]
       })
     }
 
-    function tT(TT) {
+    function Vq(qq) {
       let {
-        name: kT,
-        onChange: cT,
-        min: MT,
-        max: KT,
-        step: yT,
-        initValue: fT,
-        circleInfoText: IT,
-        format: AT,
-        className: CT,
-        padStep: vT,
-        disabled: tT = !1,
-        selectableMax: hT,
-        cappedNote: QT,
-        onChangeComplete: ST
-      } = TT;
-      const [DT, aT] = (0, lT.useState)(fT), FT = (0, lT.useRef)(fT);
-      (0, lT.useEffect)((() => {
-        FT.current = fT, aT(fT)
-      }), [fT]);
-      const rT = void 0 !== hT && hT < KT,
-        PT = rT ? {
-          "--slider-selectable": (hT - MT) / (KT - MT)
+        name: Eq,
+        onChange: gq,
+        min: lq,
+        max: Oq,
+        step: xq,
+        initValue: Aq,
+        circleInfoText: uq,
+        format: Bq,
+        className: Wq,
+        padStep: aq,
+        disabled: Vq = !1,
+        selectableMax: dq,
+        cappedNote: Hq,
+        onChangeComplete: oq
+      } = qq;
+      const [Pq, Qq] = (0, Yq.useState)(Aq), yq = (0, Yq.useRef)(Aq);
+      (0, Yq.useEffect)((() => {
+        yq.current = Aq, Qq(Aq)
+      }), [Aq]);
+      const tq = void 0 !== dq && dq < Oq,
+        rq = tq ? {
+          "--slider-selectable": (dq - lq) / (Oq - lq)
         } : void 0;
-      return (0, jT.jsxs)("div", {
-        className: xT()("SettingBox SettingsSliderDiv", {
-          [CT]: CT,
-          SettingBoxDisabled: tT,
-          SliderCapped: rT
+      return (0, Nq.jsxs)("div", {
+        className: cq()("SettingBox SettingsSliderDiv", {
+          [Wq]: Wq,
+          SettingBoxDisabled: Vq,
+          SliderCapped: tq
         }),
-        style: PT,
-        children: [(0, jT.jsxs)("div", {
+        style: rq,
+        children: [(0, Nq.jsxs)("div", {
           className: "SliderText",
-          children: [`${kT}: ${AT?AT(DT):DT}`, IT && (0, jT.jsx)(OT.b, {
+          children: [`${Eq}: ${Bq?Bq(Pq):Pq}`, uq && (0, Nq.jsx)(mq.c, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: IT
+            hoverInfo: uq
           })]
-        }), (0, jT.jsx)("div", {
+        }), (0, Nq.jsx)("div", {
           className: "SliderDiv",
-          children: (0, jT.jsx)(NT, {
-            value: DT,
-            min: MT,
-            max: KT,
-            step: yT,
-            onChange: TT => {
-              if (rT && TT >= hT && DT === hT) return;
-              const kT = rT ? Math.min(TT, hT) : TT;
-              FT.current = kT, aT(kT), cT(kT)
+          children: (0, Nq.jsx)(jq, {
+            value: Pq,
+            min: lq,
+            max: Oq,
+            step: xq,
+            onChange: qq => {
+              if (tq && qq >= dq && Pq === dq) return;
+              const Eq = tq ? Math.min(qq, dq) : qq;
+              yq.current = Eq, Qq(Eq), gq(Eq)
             },
-            onChangeComplete: ST && (() => {
-              ST(FT.current)
+            onChangeComplete: oq && (() => {
+              oq(yq.current)
             }),
-            format: AT,
-            padStep: vT,
-            disabled: tT
+            format: Bq,
+            padStep: aq,
+            disabled: Vq
           })
-        }), rT && QT && (0, jT.jsx)("div", {
+        }), tq && Hq && (0, Nq.jsx)("div", {
           className: "SettingNote",
-          children: QT
+          children: Hq
         })]
       })
     }
-    const hT = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
+    const dq = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
 
-    function NT(TT) {
-      var kT;
+    function jq(qq) {
+      var Eq;
       let {
-        value: cT,
-        min: KT,
-        max: OT,
-        step: yT,
-        onChange: fT,
-        orientation: xT,
-        reverse: IT,
-        setIsChanging: AT,
-        tooltip: vT,
-        labels: tT,
-        handleLabel: NT,
-        format: QT,
-        onChangeStart: ST,
-        onChangeComplete: DT,
-        padStep: aT,
-        disabled: FT = !1
-      } = TT;
-      const rT = (0, lT.useRef)(null),
-        PT = (0, lT.useRef)(null);
-      (0, lT.useLayoutEffect)((() => {
-        var TT, kT, cT;
-        const lT = null !== (TT = null === (kT = rT.current) || void 0 === kT ? void 0 : kT.querySelector(".rangeslider")) && void 0 !== TT ? TT : null;
-        null === lT || void 0 === lT || lT.setAttribute("data-pad-slider", ""), null === lT || void 0 === lT || lT.setAttribute("data-pad-focusable", ""), null === lT || void 0 === lT || null === (cT = lT.querySelector(".rangeslider__handle")) || void 0 === cT || cT.setAttribute("data-pad-slider-handle", ""), PT.current = lT
-      }), []), (0, lT.useLayoutEffect)((() => {
-        var TT, kT;
-        FT ? null === (TT = PT.current) || void 0 === TT || TT.setAttribute("aria-disabled", "true") : null === (kT = PT.current) || void 0 === kT || kT.removeAttribute("aria-disabled")
-      }), [FT]);
-      const wT = (null !== (kT = String(yT).split(".")[1]) && void 0 !== kT ? kT : "").length,
-        mT = TT => {
-          const kT = Number((Math.round((TT - KT) / yT) * yT + KT).toFixed(wT));
-          return Math.min(OT, Math.max(KT, kT))
+        value: gq,
+        min: Oq,
+        max: mq,
+        step: xq,
+        onChange: Aq,
+        orientation: cq,
+        reverse: uq,
+        setIsChanging: Bq,
+        tooltip: aq,
+        labels: Vq,
+        handleLabel: jq,
+        format: Hq,
+        onChangeStart: oq,
+        onChangeComplete: Pq,
+        padStep: Qq,
+        disabled: yq = !1
+      } = qq;
+      const tq = (0, Yq.useRef)(null),
+        rq = (0, Yq.useRef)(null);
+      (0, Yq.useLayoutEffect)((() => {
+        var qq, Eq, gq;
+        const Yq = null !== (qq = null === (Eq = tq.current) || void 0 === Eq ? void 0 : Eq.querySelector(".rangeslider")) && void 0 !== qq ? qq : null;
+        null === Yq || void 0 === Yq || Yq.setAttribute("data-pad-slider", ""), null === Yq || void 0 === Yq || Yq.setAttribute("data-pad-focusable", ""), null === Yq || void 0 === Yq || null === (gq = Yq.querySelector(".rangeslider__handle")) || void 0 === gq || gq.setAttribute("data-pad-slider-handle", ""), rq.current = Yq
+      }), []), (0, Yq.useLayoutEffect)((() => {
+        var qq, Eq;
+        yq ? null === (qq = rq.current) || void 0 === qq || qq.setAttribute("aria-disabled", "true") : null === (Eq = rq.current) || void 0 === Eq || Eq.removeAttribute("aria-disabled")
+      }), [yq]);
+      const vq = (null !== (Eq = String(xq).split(".")[1]) && void 0 !== Eq ? Eq : "").length,
+        hq = qq => {
+          const Eq = Number((Math.round((qq - Oq) / xq) * xq + Oq).toFixed(vq));
+          return Math.min(mq, Math.max(Oq, Eq))
         },
-        bT = (0, lT.useRef)(DT);
-      bT.current = DT, (0, lT.useEffect)((() => {
-        const TT = rT.current;
-        if (!TT) return;
-        const kT = TT => {
-          var kT;
-          hT.has(TT.key) && (null === (kT = bT.current) || void 0 === kT || kT.call(bT))
+        nq = (0, Yq.useRef)(Pq);
+      nq.current = Pq, (0, Yq.useEffect)((() => {
+        const qq = tq.current;
+        if (!qq) return;
+        const Eq = qq => {
+          var Eq;
+          dq.has(qq.key) && (null === (Eq = nq.current) || void 0 === Eq || Eq.call(nq))
         };
-        return TT.addEventListener("keyup", kT), () => {
-          TT.removeEventListener("keyup", kT)
+        return qq.addEventListener("keyup", Eq), () => {
+          qq.removeEventListener("keyup", Eq)
         }
       }), []);
-      const zT = (0, lT.useRef)(!1);
-      return (0, CT.d)(PT, {
-        adjust: TT => {
-          if (FT) return;
-          const kT = null !== aT && void 0 !== aT ? aT : Math.max(yT, Math.round((OT - KT) / 20 / yT) * yT),
-            lT = mT(cT + TT * kT * (IT ? -1 : 1));
-          lT !== cT && (null === ST || void 0 === ST || ST(), fT(lT), null === DT || void 0 === DT || DT())
+      const bq = (0, Yq.useRef)(!1);
+      return (0, Wq.i)(rq, {
+        adjust: qq => {
+          if (yq) return;
+          const Eq = null !== Qq && void 0 !== Qq ? Qq : Math.max(xq, Math.round((mq - Oq) / 20 / xq) * xq),
+            Yq = hq(gq + qq * Eq * (uq ? -1 : 1));
+          Yq !== gq && (null === oq || void 0 === oq || oq(), Aq(Yq), null === Pq || void 0 === Pq || Pq())
         },
-        setFraction: TT => {
-          if (FT) return;
-          const kT = mT(KT + (IT ? 1 - TT : TT) * (OT - KT));
-          kT !== cT && (zT.current || (zT.current = !0, null === ST || void 0 === ST || ST()), fT(kT))
+        setFraction: qq => {
+          if (yq) return;
+          const Eq = hq(Oq + (uq ? 1 - qq : qq) * (mq - Oq));
+          Eq !== gq && (bq.current || (bq.current = !0, null === oq || void 0 === oq || oq()), Aq(Eq))
         },
         endDrag: () => {
-          zT.current && (zT.current = !1, null === DT || void 0 === DT || DT())
+          bq.current && (bq.current = !1, null === Pq || void 0 === Pq || Pq())
         }
-      }), (0, jT.jsx)("div", {
-        ref: rT,
+      }), (0, Nq.jsx)("div", {
+        ref: tq,
         style: {
           display: "contents"
         },
-        children: (0, jT.jsx)(MT.b, {
-          value: cT,
-          min: KT,
-          max: OT,
-          step: yT,
-          onChange: fT,
-          orientation: xT,
-          reverse: IT,
-          tooltip: vT,
-          labels: tT,
-          handleLabel: NT,
-          format: QT,
+        children: (0, Nq.jsx)(lq.d, {
+          value: gq,
+          min: Oq,
+          max: mq,
+          step: xq,
+          onChange: Aq,
+          orientation: cq,
+          reverse: uq,
+          tooltip: aq,
+          labels: Vq,
+          handleLabel: jq,
+          format: Hq,
           onChangeStart: () => {
-            null === ST || void 0 === ST || ST(), null === AT || void 0 === AT || AT(!0)
+            null === oq || void 0 === oq || oq(), null === Bq || void 0 === Bq || Bq(!0)
           },
           onChangeComplete: () => {
-            null === AT || void 0 === AT || AT(!1), null === DT || void 0 === DT || DT()
+            null === Bq || void 0 === Bq || Bq(!1), null === Pq || void 0 === Pq || Pq()
           }
         })
       })
     }
-    async function QT() {
-      let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-      const kT = IT.NotificationProvider.showPromptPopup({
+    async function Hq() {
+      let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+      const Eq = uq.NotificationProvider.showPromptPopup({
         title: "settingsMenu:reloadPagePopupTitle",
         subtitle: "settingsMenu:reloadPagePopupSubtitle",
         confirmText: "settingsMenu:reloadPagePopupConfirm",
         confirmTooltip: "",
         cancelText: "general:cancel",
         cancelTooltip: "",
-        unlockPointerKey: TT
+        unlockPointerKey: qq
       });
-      !0 === await kT.getResult() && (0, AT.reloadBloxd)()
+      !0 === await Eq.getResult() && (0, Bq.reloadBloxd)()
     }
 
-    function ST(TT) {
+    function oq(qq) {
       let {
-        label: kT,
-        options: cT,
-        value: lT,
-        onChange: MT,
-        circleInfoText: KT
-      } = TT;
-      return (0, jT.jsxs)("div", {
+        label: Eq,
+        options: gq,
+        value: Yq,
+        onChange: lq,
+        circleInfoText: Oq
+      } = qq;
+      return (0, Nq.jsxs)("div", {
         className: "SettingBox SegmentedSettingRow",
-        children: [(0, jT.jsxs)("div", {
+        children: [(0, Nq.jsxs)("div", {
           className: "SliderText",
-          children: [kT, KT && (0, jT.jsx)(OT.b, {
+          children: [Eq, Oq && (0, Nq.jsx)(mq.c, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: KT
+            hoverInfo: Oq
           })]
-        }), (0, jT.jsx)(yT.d, {
-          ariaLabel: kT,
-          options: cT,
-          value: lT,
-          onChange: MT
+        }), (0, Nq.jsx)(xq.c, {
+          ariaLabel: Eq,
+          options: gq,
+          value: Yq,
+          onChange: lq
         })]
       })
     }
   },
-  6649: (TT, kT, cT) => {
-    cT.r(kT), cT.d(kT, {
-      default: () => nT
+  6540: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      default: () => Kq
     });
-    var lT = cT(71),
-      MT = cT(1535),
-      KT = cT(6550),
-      OT = cT(1226),
-      yT = cT(339),
-      fT = cT(1348),
-      xT = cT(1530),
-      IT = cT(1470),
-      AT = cT(1379),
-      CT = cT(2600),
-      jT = cT(2744),
-      vT = cT(4537),
-      tT = cT(1130),
-      hT = cT(1518),
-      NT = cT(118),
-      QT = cT(1195);
-    const ST = cT.p + "static/media/bloxdhubLogo.6a6c367af2ad6e6f1eb3.webp";
-    var DT = cT(1046),
-      aT = cT.n(DT),
-      FT = cT(1061),
-      rT = cT(1363),
-      PT = cT(6547),
-      wT = cT(1099);
-    const mT = (0, lT.lazy)((() => Promise.all([cT.e(106), cT.e(75), cT.e(131), cT.e(125), cT.e(124)]).then((() => cT(6578))).then((TT => ({
-      default: TT.ShaderPackPublishForm
+    var Yq = gq(57),
+      lq = gq(1512),
+      Oq = gq(6424),
+      mq = gq(1214),
+      xq = gq(307),
+      Aq = gq(1326),
+      cq = gq(1498),
+      uq = gq(1422),
+      Bq = gq(1341),
+      Wq = gq(2517),
+      Nq = gq(2641),
+      aq = gq(4379),
+      Vq = gq(1101),
+      dq = gq(1477),
+      jq = gq(96),
+      Hq = gq(1183);
+    const oq = gq.p + "static/media/bloxdhubLogo.6a6c367af2ad6e6f1eb3.webp";
+    var Pq = gq(1018),
+      Qq = gq.n(Pq),
+      yq = gq(1025),
+      tq = gq(1336),
+      rq = gq(6422),
+      vq = gq(1070);
+    const hq = (0, Yq.lazy)((() => Promise.all([gq.e(106), gq.e(75), gq.e(132), gq.e(126), gq.e(125)]).then((() => gq(6456))).then((qq => ({
+      default: qq.ShaderPackPublishForm
     })))));
 
-    function bT(TT) {
+    function nq(qq) {
       let {
-        details: kT,
-        owner: cT,
-        onChanged: MT
-      } = TT;
+        details: Eq,
+        owner: gq,
+        onChanged: lq
+      } = qq;
       const {
-        t: OT
-      } = (0, QT.B)(), yT = (0, xT.useNavigatePreserveSearch)(), {
-        userContext: AT
-      } = (0, tT.b)(), [CT, jT] = (0, lT.useState)(!1), [vT, NT] = (0, lT.useState)(null), [ST, DT] = (0, lT.useState)(!1), {
-        packId: bT,
-        name: zT,
-        description: JT,
-        live: oT
-      } = kT;
-      async function HT(TT) {
-        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : MT;
-        jT(!0), NT(null);
+        t: mq
+      } = (0, Hq.v)(), xq = (0, cq.useNavigatePreserveSearch)(), {
+        userContext: Bq
+      } = (0, Vq.c)(), [Wq, Nq] = (0, Yq.useState)(!1), [aq, jq] = (0, Yq.useState)(null), [oq, Pq] = (0, Yq.useState)(!1), {
+        packId: nq,
+        name: bq,
+        description: iq,
+        live: Zq
+      } = Eq;
+      async function fq(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : lq;
+        Nq(!0), jq(null);
         try {
-          await TT(), kT()
-        } catch (cT) {
-          console.error("Failed to change a shader pack", cT), NT((0, PT.v)(cT, OT, "shaderPackListing:ownerActionFailed"))
+          await qq(), Eq()
+        } catch (gq) {
+          console.error("Failed to change a shader pack", gq), jq((0, rq.s)(gq, mq, "shaderPackListing:ownerActionFailed"))
         } finally {
-          jT(!1)
+          Nq(!1)
         }
       }
-      const eT = (0, PT.r)(AT);
-      return (0, wT.jsxs)("section", {
+      const Mq = (0, rq.p)(Bq);
+      return (0, vq.jsxs)("section", {
         className: "ShaderPackOwnerPanel",
-        children: [(0, wT.jsx)("h2", {
+        children: [(0, vq.jsx)("h2", {
           className: "ShaderPackSectionTitle",
-          children: OT("general:manage")
-        }), (0, PT.R)(cT, !(null === oT || void 0 === oT || !oT.renderId), Date.now(), OT).map((TT => (0, wT.jsxs)("div", {
-          className: aT()("ShaderPackOwnerNotice", {
-            Warning: "warning" === TT.tone
+          children: mq("general:manage")
+        }), (0, rq.X)(gq, !(null === Zq || void 0 === Zq || !Zq.renderId), Date.now(), mq).map((qq => (0, vq.jsxs)("div", {
+          className: Qq()("ShaderPackOwnerNotice", {
+            Warning: "warning" === qq.tone
           }),
-          children: [(0, wT.jsx)(FT.e, {
-            name: "warning" === TT.tone ? "triangle-exclamation" : "circle-info"
-          }), (0, wT.jsxs)("div", {
-            children: [TT.text, TT.detail && (0, wT.jsx)("pre", {
+          children: [(0, vq.jsx)(yq.d, {
+            name: "warning" === qq.tone ? "triangle-exclamation" : "circle-info"
+          }), (0, vq.jsxs)("div", {
+            children: [qq.text, qq.detail && (0, vq.jsx)("pre", {
               className: "ShaderPackOwnerNoticeDetail",
-              children: TT.detail
+              children: qq.detail
             })]
           })]
-        }, TT.text))), kT.ban && (0, wT.jsxs)("div", {
+        }, qq.text))), Eq.ban && (0, vq.jsxs)("div", {
           className: "ShaderPackOwnerNotice Warning",
-          children: [(0, wT.jsx)(FT.e, {
+          children: [(0, vq.jsx)(yq.d, {
             name: "ban"
-          }), (0, wT.jsxs)("div", {
-            children: ["Banned by ", kT.ban.byName, " on ", new Date(kT.ban.at).toLocaleString()]
+          }), (0, vq.jsxs)("div", {
+            children: ["Banned by ", Eq.ban.byName, " on ", new Date(Eq.ban.at).toLocaleString()]
           })]
-        }), vT && (0, wT.jsx)("div", {
+        }), aq && (0, vq.jsx)("div", {
           className: "ShaderPackOwnerError",
-          children: vT
-        }), (0, wT.jsxs)("div", {
+          children: aq
+        }), (0, vq.jsxs)("div", {
           className: "ShaderPackOwnerActions",
-          children: [(0, wT.jsxs)(IT.P, {
-            disabled: CT,
+          children: [(0, vq.jsxs)(uq.Q, {
+            disabled: Wq,
             onClick: () => {
               !async function() {
-                const TT = await rT.NotificationProvider.showInputPopup({
+                const qq = await tq.NotificationProvider.showInputPopup({
                   title: "shaderPackListing:renameTitle",
-                  initialValue: zT,
-                  maxLength: KT.v,
+                  initialValue: bq,
+                  maxLength: Oq.z,
                   submitText: "general:save",
-                  validate: TT => TT.trim().length < KT.w ? OT("shaderPackListing:nameTooShort", {
-                    min: String(KT.w)
+                  validate: qq => qq.trim().length < Oq.D ? mq("shaderPackListing:nameTooShort", {
+                    min: String(Oq.D)
                   }) : null
                 }).getResult();
-                "notificationTornDown" !== TT && "submit" === (null === TT || void 0 === TT ? void 0 : TT.type) && TT.value.trim() !== zT && await HT((() => hT.d.updateShaderPack(AT, {
-                  packId: bT,
-                  name: TT.value.trim()
+                "notificationTornDown" !== qq && "submit" === (null === qq || void 0 === qq ? void 0 : qq.type) && qq.value.trim() !== bq && await fq((() => dq.e.updateShaderPack(Bq, {
+                  packId: nq,
+                  name: qq.value.trim()
                 })))
               }()
             },
-            children: [(0, wT.jsx)(FT.e, {
+            children: [(0, vq.jsx)(yq.d, {
               name: "pen"
-            }), " ", OT("shaderPackListing:rename")]
-          }), (0, wT.jsxs)(IT.P, {
-            disabled: CT,
+            }), " ", mq("shaderPackListing:rename")]
+          }), (0, vq.jsxs)(uq.Q, {
+            disabled: Wq,
             onClick: () => {
               !async function() {
-                const TT = await rT.NotificationProvider.showInputPopup({
+                const qq = await tq.NotificationProvider.showInputPopup({
                   title: "shaderPackListing:editDescription",
-                  initialValue: JT,
-                  maxLength: KT.m,
+                  initialValue: iq,
+                  maxLength: Oq.n,
                   multiline: !0,
                   allowEmptySubmit: !0,
                   submitText: "general:save"
                 }).getResult();
-                "notificationTornDown" !== TT && "submit" === (null === TT || void 0 === TT ? void 0 : TT.type) && TT.value.trim() !== JT && await HT((() => hT.d.updateShaderPack(AT, {
-                  packId: bT,
-                  description: TT.value.trim()
+                "notificationTornDown" !== qq && "submit" === (null === qq || void 0 === qq ? void 0 : qq.type) && qq.value.trim() !== iq && await fq((() => dq.e.updateShaderPack(Bq, {
+                  packId: nq,
+                  description: qq.value.trim()
                 })))
               }()
             },
-            children: [(0, wT.jsx)(FT.e, {
+            children: [(0, vq.jsx)(yq.d, {
               name: "file-lines"
-            }), " ", OT("shaderPackListing:editDescription")]
-          }), (0, wT.jsxs)(IT.P, {
-            disabled: CT || cT.isBanned && !cT.listed,
+            }), " ", mq("shaderPackListing:editDescription")]
+          }), (0, vq.jsxs)(uq.Q, {
+            disabled: Wq || gq.isBanned && !gq.listed,
             onClick: () => {
-              HT((() => hT.d.updateShaderPack(AT, {
-                packId: bT,
-                listed: !cT.listed
+              fq((() => dq.e.updateShaderPack(Bq, {
+                packId: nq,
+                listed: !gq.listed
               })))
             },
-            children: [(0, wT.jsx)(FT.e, {
-              name: cT.listed ? "eye-slash" : "eye"
-            }), " ", OT(cT.listed ? "shaderPackListing:unlist" : "shaderPackListing:relist")]
-          }), !cT.isBanned && (0, wT.jsxs)(IT.e, {
-            disabled: CT,
+            children: [(0, vq.jsx)(yq.d, {
+              name: gq.listed ? "eye-slash" : "eye"
+            }), " ", mq(gq.listed ? "shaderPackListing:unlist" : "shaderPackListing:relist")]
+          }), !gq.isBanned && (0, vq.jsxs)(uq.g, {
+            disabled: Wq,
             onClick: () => {
-              DT(!ST)
+              Pq(!oq)
             },
-            children: [(0, wT.jsx)(FT.e, {
+            children: [(0, vq.jsx)(yq.d, {
               name: "upload"
-            }), " ", OT("shaderPackListing:uploadVersion")]
-          }), (0, wT.jsxs)(IT.L, {
-            disabled: CT || cT.isBanned,
+            }), " ", mq("shaderPackListing:uploadVersion")]
+          }), (0, vq.jsxs)(uq.L, {
+            disabled: Wq || gq.isBanned,
             onClick: () => {
               !async function() {
-                !0 === await rT.NotificationProvider.showPromptPopup({
+                !0 === await tq.NotificationProvider.showPromptPopup({
                   title: "shaderPackListing:deleteTitle",
                   subtitle: "shaderPackListing:deleteSubtitle",
                   confirmText: "general:delete",
                   cancelText: "general:cancel",
                   destructive: !0
-                }).getResult() && await HT((() => hT.d.deleteShaderPack(AT, bT)), (() => {
-                  yT(`${PT.Q}?section=mine`, {
+                }).getResult() && await fq((() => dq.e.deleteShaderPack(Bq, nq)), (() => {
+                  xq(`${rq.V}?section=mine`, {
                     replace: !0
                   })
                 }))
               }()
             },
-            children: [(0, wT.jsx)(FT.e, {
+            children: [(0, vq.jsx)(yq.d, {
               name: "trash-can"
-            }), " ", OT("general:delete")]
-          }), eT && (0, wT.jsxs)(IT.L, {
-            disabled: CT,
+            }), " ", mq("general:delete")]
+          }), Mq && (0, vq.jsxs)(uq.L, {
+            disabled: Wq,
             onClick: () => {
-              HT((() => hT.d.setShaderPackBanned(AT, bT, !cT.isBanned)))
+              fq((() => dq.e.setShaderPackBanned(Bq, nq, !gq.isBanned)))
             },
-            children: [(0, wT.jsx)(FT.e, {
-              name: cT.isBanned ? "circle-check" : "ban"
-            }), " ", cT.isBanned ? "Unban" : "Ban"]
+            children: [(0, vq.jsx)(yq.d, {
+              name: gq.isBanned ? "circle-check" : "ban"
+            }), " ", gq.isBanned ? "Unban" : "Ban"]
           })]
-        }), ST && (0, wT.jsx)(lT.Suspense, {
-          fallback: (0, wT.jsx)(fT.d, {}),
-          children: (0, wT.jsx)(mT, {
+        }), oq && (0, vq.jsx)(Yq.Suspense, {
+          fallback: (0, vq.jsx)(Aq.e, {}),
+          children: (0, vq.jsx)(hq, {
             existing: {
-              packId: bT,
-              name: zT,
-              description: JT
+              packId: nq,
+              name: bq,
+              description: iq
             },
             onPublished: () => {
-              DT(!1), MT()
+              Pq(!1), lq()
             }
           })
         })]
       })
     }
-    var zT = cT(94),
-      JT = cT(1915),
-      oT = cT(1289),
-      HT = cT(4975),
-      eT = cT(1202),
-      GT = cT(6557),
-      VT = cT(6555),
-      ET = cT(6567);
+    var bq = gq(71),
+      iq = gq(1870),
+      Zq = gq(1267),
+      fq = gq(4866),
+      Mq = gq(1195),
+      Tq = gq(6431),
+      zq = gq(6428),
+      Sq = gq(6443);
 
-    function ZT(TT) {
+    function pq(qq) {
       let {
-        item: kT
-      } = TT;
+        item: Eq
+      } = qq;
       const {
-        t: cT
-      } = (0, QT.B)(), [MT] = (0, GT.g)(), [OT, yT] = (0, lT.useState)(MT), [fT, xT] = (0, lT.useState)(!1), [IT, AT] = (0, lT.useState)(!1), {
-        s3Url: CT
-      } = eT.clientSideServerUrls, {
-        width: jT,
-        height: vT
-      } = KT.o.large, tT = (0, KT.q)(CT, kT, OT, "large"), {
-        renderVersion: hT
-      } = kT;
-      return (0, wT.jsxs)("div", {
+        t: gq
+      } = (0, Hq.v)(), [lq] = (0, Tq.l)(), [mq, xq] = (0, Yq.useState)(lq), [Aq, cq] = (0, Yq.useState)(!1), [uq, Bq] = (0, Yq.useState)(!1), {
+        s3Url: Wq
+      } = Mq.clientSideServerUrls, {
+        width: Nq,
+        height: aq
+      } = Oq.p.large, Vq = (0, Oq.r)(Wq, Eq, mq, "large"), {
+        renderVersion: dq
+      } = Eq;
+      return (0, vq.jsxs)("div", {
         className: "ShaderPackPreviews",
-        children: [(0, wT.jsx)(ET.e, {
-          selected: OT,
-          onSelect: TT => {
-            yT(TT), xT(!1)
+        children: [(0, vq.jsx)(Sq.c, {
+          selected: mq,
+          onSelect: qq => {
+            xq(qq), cq(!1)
           },
-          imageUrl: TT => (0, KT.q)(CT, kT, TT, "thumb")
-        }), (0, wT.jsxs)("div", {
+          imageUrl: qq => (0, Oq.r)(Wq, Eq, qq, "thumb")
+        }), (0, vq.jsxs)("div", {
           className: "ShaderPackPreviewStage",
-          children: [!fT && (0, wT.jsxs)("button", {
+          children: [!Aq && (0, vq.jsxs)("button", {
             type: "button",
             className: "ShaderPackPreviewMain",
-            title: null === hT ? void 0 : cT("shaderPackListing:fullSize"),
-            disabled: null === hT,
+            title: null === dq ? void 0 : gq("shaderPackListing:fullSize"),
+            disabled: null === dq,
             onClick: () => {
-              AT(!0)
+              Bq(!0)
             },
-            children: [(0, wT.jsx)("img", {
-              src: tT,
-              width: jT,
-              height: vT,
-              alt: cT(PT.db[OT]),
+            children: [(0, vq.jsx)("img", {
+              src: Vq,
+              width: Nq,
+              height: aq,
+              alt: gq(rq.fb[mq]),
               draggable: !1
-            }), (0, wT.jsx)(VT.d, {
-              item: kT
+            }), (0, vq.jsx)(zq.e, {
+              item: Eq
             })]
-          }), !fT && null !== hT && (0, wT.jsxs)(LT, {
+          }), !Aq && null !== dq && (0, vq.jsxs)(kq, {
             side: "Right",
             onClick: () => {
-              xT(!0)
+              cq(!0)
             },
-            children: [(0, wT.jsx)(FT.e, {
+            children: [(0, vq.jsx)(yq.d, {
               name: "arrows-left-right"
-            }), " ", cT("shaderPackListing:compare")]
-          }), fT && null !== hT && (0, wT.jsx)(dT, {
-            item: kT,
-            packUrl: tT,
-            baselineUrl: (0, KT.i)(CT, hT, OT, "large")
-          }), fT && (0, wT.jsx)(LT, {
+            }), " ", gq("shaderPackListing:compare")]
+          }), Aq && null !== dq && (0, vq.jsx)(Jq, {
+            item: Eq,
+            packUrl: Vq,
+            baselineUrl: (0, Oq.m)(Wq, dq, mq, "large")
+          }), Aq && (0, vq.jsx)(kq, {
             side: "Left",
             onClick: () => {
-              xT(!1)
+              cq(!1)
             },
-            children: cT("shaderPackListing:withPack")
-          }), fT && (0, wT.jsx)(LT, {
+            children: gq("shaderPackListing:withPack")
+          }), Aq && (0, vq.jsx)(kq, {
             side: "Right",
             onClick: () => {
-              xT(!1)
+              cq(!1)
             },
-            children: cT("shaderPackListing:withoutPack")
+            children: gq("shaderPackListing:withoutPack")
           })]
-        }), IT && (0, wT.jsx)(uT, {
-          fullUrl: (0, KT.q)(CT, kT, OT, "full"),
-          largeUrl: tT,
-          alt: cT(PT.db[OT]),
+        }), uq && (0, vq.jsx)(Gq, {
+          fullUrl: (0, Oq.r)(Wq, Eq, mq, "full"),
+          largeUrl: Vq,
+          alt: gq(rq.fb[mq]),
           onClose: () => {
-            AT(!1)
+            Bq(!1)
           }
         })]
       })
     }
 
-    function uT(TT) {
+    function Gq(qq) {
       let {
-        fullUrl: kT,
-        largeUrl: cT,
-        alt: MT,
-        onClose: KT
-      } = TT;
-      const OT = (0, lT.useRef)(null);
-      return (0, oT.q)("popup", OT, KT), (0, lT.useEffect)((() => {
-        function TT(TT) {
-          "Escape" === TT.key && (TT.stopPropagation(), KT())
+        fullUrl: Eq,
+        largeUrl: gq,
+        alt: lq,
+        onClose: Oq
+      } = qq;
+      const mq = (0, Yq.useRef)(null);
+      return (0, Zq.w)("popup", mq, Oq), (0, Yq.useEffect)((() => {
+        function qq(qq) {
+          "Escape" === qq.key && (qq.stopPropagation(), Oq())
         }
-        return window.addEventListener("keydown", TT, !0), () => {
-          window.removeEventListener("keydown", TT, !0)
+        return window.addEventListener("keydown", qq, !0), () => {
+          window.removeEventListener("keydown", qq, !0)
         }
-      }), [KT]), (0, zT.createPortal)((0, wT.jsxs)("div", {
-        ref: OT,
+      }), [Oq]), (0, bq.createPortal)((0, vq.jsxs)("div", {
+        ref: mq,
         className: "ShaderPackFullSize",
-        onClick: KT,
-        children: [(0, wT.jsx)("img", {
+        onClick: Oq,
+        children: [(0, vq.jsx)("img", {
           className: "ShaderPackFullSizeImage",
-          src: kT,
-          alt: MT,
+          src: Eq,
+          alt: lq,
           draggable: !1,
           style: {
-            backgroundImage: `url(${cT})`
+            backgroundImage: `url(${gq})`
           }
-        }), (0, wT.jsx)(IT.l, {
+        }), (0, vq.jsx)(uq.m, {
           className: "ShaderPackFullSizeClose",
-          onClick: KT
+          onClick: Oq
         })]
       }), document.body)
     }
-    const XT = 5;
+    const Lq = 5;
 
-    function dT(TT) {
+    function Jq(qq) {
       let {
-        item: kT,
-        packUrl: cT,
-        baselineUrl: MT
-      } = TT;
+        item: Eq,
+        packUrl: gq,
+        baselineUrl: lq
+      } = qq;
       const {
-        t: OT
-      } = (0, QT.B)(), [yT, fT] = (0, lT.useState)(50), xT = (0, lT.useRef)(!1), IT = (0, lT.useRef)(null), {
-        width: AT,
-        height: CT
-      } = KT.o.large;
+        t: mq
+      } = (0, Hq.v)(), [xq, Aq] = (0, Yq.useState)(50), cq = (0, Yq.useRef)(!1), uq = (0, Yq.useRef)(null), {
+        width: Bq,
+        height: Wq
+      } = Oq.p.large;
 
-      function jT(TT) {
-        fT((kT => (0, JT.d)(kT + TT, 0, 100)))
+      function Nq(qq) {
+        Aq((Eq => (0, iq.e)(Eq + qq, 0, 100)))
       }
 
-      function vT(TT) {
-        const kT = TT.currentTarget.getBoundingClientRect();
-        fT((0, JT.d)((TT.clientX - kT.left) / kT.width * 100, 0, 100))
+      function aq(qq) {
+        const Eq = qq.currentTarget.getBoundingClientRect();
+        Aq((0, iq.e)((qq.clientX - Eq.left) / Eq.width * 100, 0, 100))
       }
-      return (0, HT.d)(IT, {
-        adjust: TT => {
-          jT(TT * XT)
+      return (0, fq.i)(uq, {
+        adjust: qq => {
+          Nq(qq * Lq)
         },
-        setFraction: TT => {
-          fT(100 * TT)
+        setFraction: qq => {
+          Aq(100 * qq)
         },
         endDrag: () => {}
-      }), (0, wT.jsxs)("div", {
-        ref: IT,
+      }), (0, vq.jsxs)("div", {
+        ref: uq,
         className: "ShaderPackCompare",
         "data-pad-slider": "",
         "data-pad-focusable": "",
         role: "slider",
         tabIndex: 0,
-        "aria-label": OT("shaderPackListing:compare"),
+        "aria-label": mq("shaderPackListing:compare"),
         "aria-valuemin": 0,
         "aria-valuemax": 100,
-        "aria-valuenow": Math.round(yT),
+        "aria-valuenow": Math.round(xq),
         style: {
-          "--split": `${yT}%`
+          "--split": `${xq}%`
         },
-        onKeyDown: function(TT) {
-          const kT = "ArrowLeft" === TT.key ? -XT : "ArrowRight" === TT.key ? XT : 0;
-          0 !== kT && (TT.preventDefault(), jT(kT))
+        onKeyDown: function(qq) {
+          const Eq = "ArrowLeft" === qq.key ? -Lq : "ArrowRight" === qq.key ? Lq : 0;
+          0 !== Eq && (qq.preventDefault(), Nq(Eq))
         },
-        onPointerDown: TT => {
-          xT.current = !0, TT.currentTarget.setPointerCapture(TT.pointerId), vT(TT)
+        onPointerDown: qq => {
+          cq.current = !0, qq.currentTarget.setPointerCapture(qq.pointerId), aq(qq)
         },
-        onPointerMove: TT => {
-          xT.current && vT(TT)
+        onPointerMove: qq => {
+          cq.current && aq(qq)
         },
         onPointerUp: () => {
-          xT.current = !1
+          cq.current = !1
         },
         onPointerCancel: () => {
-          xT.current = !1
+          cq.current = !1
         },
-        children: [(0, wT.jsx)("img", {
+        children: [(0, vq.jsx)("img", {
           className: "ShaderPackCompareBaseline",
-          src: MT,
-          width: AT,
-          height: CT,
+          src: lq,
+          width: Bq,
+          height: Wq,
           alt: "",
           draggable: !1,
           style: {
-            backgroundImage: `url(${cT})`
+            backgroundImage: `url(${gq})`
           }
-        }), (0, wT.jsx)("div", {
+        }), (0, vq.jsx)("div", {
           className: "ShaderPackCompareLine"
-        }), (0, wT.jsx)("img", {
+        }), (0, vq.jsx)("img", {
           className: "ShaderPackComparePack",
-          src: cT,
-          width: AT,
-          height: CT,
+          src: gq,
+          width: Bq,
+          height: Wq,
           alt: "",
           draggable: !1
-        }), (0, wT.jsx)(VT.d, {
-          item: kT,
+        }), (0, vq.jsx)(zq.e, {
+          item: Eq,
           className: "ShaderPackCompareNotice"
         })]
       })
     }
 
-    function LT(TT) {
+    function kq(qq) {
       let {
-        side: kT,
-        onClick: cT,
-        children: lT
-      } = TT;
-      return (0, wT.jsx)("button", {
+        side: Eq,
+        onClick: gq,
+        children: Yq
+      } = qq;
+      return (0, vq.jsx)("button", {
         type: "button",
-        className: `ShaderPackStageButton ${kT}`,
-        onClick: cT,
-        children: (0, wT.jsx)("span", {
+        className: `ShaderPackStageButton ${Eq}`,
+        onClick: gq,
+        children: (0, vq.jsx)("span", {
           className: "ShaderPackStageButtonFace SmallTextBold",
-          children: lT
+          children: Yq
         })
       })
     }
-    var RT = cT(4945),
-      gT = cT(307),
-      UT = cT(6647);
-    const YT = {
+    var Rq = gq(4828),
+      Uq = gq(275),
+      Fq = gq(6535);
+    const sq = {
       compiler: "shaderPack:compilerUnavailable",
       download: "shaderPackListing:useDownloadFailed",
       apiVersion: "shaderPackListing:useOtherApiVersion",
@@ -688,397 +688,397 @@ export const modules = {
       save: "shaderPack:saveFailed"
     };
 
-    function BT(TT) {
+    function Xq(qq) {
       const {
-        userContext: kT
-      } = (0, tT.b)(), [MT, KT] = (0, lT.useState)(null), [OT, yT] = (0, lT.useState)(!1), [fT, xT] = (0, lT.useState)(!1), [IT, AT] = (0, lT.useState)(null), CT = null === TT || void 0 === TT ? void 0 : TT.packId, jT = null === TT || void 0 === TT ? void 0 : TT.sourceHash;
-      return (0, lT.useEffect)((() => {
-        if (yT(!1), AT(null), void 0 === CT) return;
-        let TT = !1;
-        return Promise.all([(0, NT.hasUsableWebGpuAdapter)(), (0, UT.e)()]).then((kT => {
-          let [cT, lT] = kT;
-          var MT;
-          TT || (KT(cT), yT((null === lT || void 0 === lT || null === (MT = lT.listing) || void 0 === MT ? void 0 : MT.packId) === CT && lT.listing.sourceHash === jT))
-        })).catch((kT => {
-          console.error("Failed to check whether this shader pack can be used", kT), TT || KT(!1)
+        userContext: Eq
+      } = (0, Vq.c)(), [lq, Oq] = (0, Yq.useState)(null), [mq, xq] = (0, Yq.useState)(!1), [Aq, cq] = (0, Yq.useState)(!1), [uq, Bq] = (0, Yq.useState)(null), Wq = null === qq || void 0 === qq ? void 0 : qq.packId, Nq = null === qq || void 0 === qq ? void 0 : qq.sourceHash;
+      return (0, Yq.useEffect)((() => {
+        if (xq(!1), Bq(null), void 0 === Wq) return;
+        let qq = !1;
+        return Promise.all([(0, jq.hasUsableWebGpuAdapter)(), (0, Fq.d)()]).then((Eq => {
+          let [gq, Yq] = Eq;
+          var lq;
+          qq || (Oq(gq), xq((null === Yq || void 0 === Yq || null === (lq = Yq.listing) || void 0 === lq ? void 0 : lq.packId) === Wq && Yq.listing.sourceHash === Nq))
+        })).catch((Eq => {
+          console.error("Failed to check whether this shader pack can be used", Eq), qq || Oq(!1)
         })), () => {
-          TT = !0
+          qq = !0
         }
-      }), [CT, jT]), {
-        webGpuUsable: MT,
-        inUse: OT,
-        busy: fT,
-        errorKey: IT,
+      }), [Wq, Nq]), {
+        webGpuUsable: lq,
+        inUse: mq,
+        busy: Aq,
+        errorKey: uq,
         use: () => {
-          null !== TT && async function(TT) {
-            xT(!0), AT(null);
+          null !== qq && async function(qq) {
+            cq(!0), Bq(null);
             try {
               const {
-                installListedShaderPack: lT
-              } = await Promise.all([cT.e(75), cT.e(131), cT.e(126)]).then((() => cT(40126))), MT = await lT({
-                packId: TT.packId,
-                sourceHash: TT.sourceHash,
-                name: TT.name,
-                ownerName: TT.ownerName,
-                description: TT.description
+                installListedShaderPack: Yq
+              } = await Promise.all([gq.e(75), gq.e(132), gq.e(127)]).then((() => gq(40249))), lq = await Yq({
+                packId: qq.packId,
+                sourceHash: qq.sourceHash,
+                name: qq.name,
+                ownerName: qq.ownerName,
+                description: qq.description
               });
-              if ("failed" === MT.kind) return void AT(YT[MT.reason]);
-              yT(!0), hT.d.recordShaderPackDownload(kT, TT.packId).catch((TT => {
-                console.error("Failed to count a shader pack's download", TT)
-              })), (0, RT.m)()
-            } catch (lT) {
-              console.error("Failed to use the shader pack", lT), AT("shaderPack:unexpectedError")
+              if ("failed" === lq.kind) return void Bq(sq[lq.reason]);
+              xq(!0), dq.e.recordShaderPackDownload(Eq, qq.packId).catch((qq => {
+                console.error("Failed to count a shader pack's download", qq)
+              })), (0, Rq.l)()
+            } catch (Yq) {
+              console.error("Failed to use the shader pack", Yq), Bq("shaderPack:unexpectedError")
             } finally {
-              xT(!1)
+              cq(!1)
             }
-          }(TT)
+          }(qq)
         }
       }
     }
 
-    function WT(TT) {
+    function wq(qq) {
       let {
-        packUse: kT
-      } = TT;
+        packUse: Eq
+      } = qq;
       const {
-        t: cT
-      } = (0, QT.B)(), {
-        webGpuUsable: lT,
-        inUse: MT,
-        busy: KT,
-        errorKey: OT,
-        use: yT
-      } = kT;
-      return (0, wT.jsxs)("div", {
+        t: gq
+      } = (0, Hq.v)(), {
+        webGpuUsable: Yq,
+        inUse: lq,
+        busy: Oq,
+        errorKey: mq,
+        use: xq
+      } = Eq;
+      return (0, vq.jsxs)("div", {
         className: "ShaderPackUse",
-        children: [(0, wT.jsxs)(IT.m, {
-          disabled: !0 !== lT || MT,
-          loading: KT,
-          onClick: yT,
-          children: [(0, wT.jsx)(FT.e, {
-            name: MT ? "check" : "download"
-          }), " ", cT(MT ? "shaderPackListing:inUse" : "shaderPackListing:use")]
-        }), !1 === lT && (0, wT.jsx)("div", {
+        children: [(0, vq.jsxs)(uq.p, {
+          disabled: !0 !== Yq || lq,
+          loading: Oq,
+          onClick: xq,
+          children: [(0, vq.jsx)(yq.d, {
+            name: lq ? "check" : "download"
+          }), " ", gq(lq ? "shaderPackListing:inUse" : "shaderPackListing:use")]
+        }), !1 === Yq && (0, vq.jsx)("div", {
           className: "ShaderPackUseNote",
-          children: cT((0, gT.g)() ? "shaderPack:needsWebGpuDisabledUntilRestart" : "shaderPack:needsWebGpu")
-        }), OT && (0, wT.jsx)("div", {
+          children: gq((0, Uq.f)() ? "shaderPack:needsWebGpuDisabledUntilRestart" : "shaderPack:needsWebGpu")
+        }), mq && (0, vq.jsx)("div", {
           className: "ShaderPackUseNote Error",
-          children: cT(OT)
+          children: gq(mq)
         })]
       })
     }
 
-    function nT() {
-      var TT;
+    function Kq() {
+      var qq;
       const {
-        t: kT
-      } = (0, QT.B)(), cT = (0, xT.useNavigatePreserveSearch)(), {
-        packId: KT
-      } = (0, MT.v)(), {
-        userContext: OT,
-        isUserContextUpdating: yT
-      } = (0, tT.b)(), [AT, CT] = (0, lT.useState)(null), [jT, NT] = (0, lT.useState)(null), [ST, DT] = (0, lT.useState)(0), aT = (0, lT.useRef)(0);
+        t: Eq
+      } = (0, Hq.v)(), gq = (0, cq.useNavigatePreserveSearch)(), {
+        packId: Oq
+      } = (0, lq.v)(), {
+        userContext: mq,
+        isUserContextUpdating: xq
+      } = (0, Vq.c)(), [Bq, Wq] = (0, Yq.useState)(null), [Nq, jq] = (0, Yq.useState)(null), [oq, Pq] = (0, Yq.useState)(0), Qq = (0, Yq.useRef)(0);
 
-      function FT() {
-        var TT;
-        null !== (TT = (0, xT.getPreviousLocation)()) && void 0 !== TT && TT.startsWith(PT.Q) ? cT(-1) : cT(PT.Q)
-      }(0, vT.e)(FT), (0, GT.d)(), (0, lT.useEffect)((() => {
-        if (yT || void 0 === KT) return;
-        const TT = ++aT.current;
-        NT(null), hT.d.getShaderPack(OT, KT).then((kT => {
-          aT.current === TT && CT(kT)
-        })).catch((kT => {
-          aT.current === TT && (console.error("Failed to get the shader pack", kT), CT(null), NT({
-            error: kT
+      function yq() {
+        var qq;
+        null !== (qq = (0, cq.getPreviousLocation)()) && void 0 !== qq && qq.startsWith(rq.V) ? gq(-1) : gq(rq.V)
+      }(0, aq.b)(yq), (0, Tq.e)(), (0, Yq.useEffect)((() => {
+        if (xq || void 0 === Oq) return;
+        const qq = ++Qq.current;
+        jq(null), dq.e.getShaderPack(mq, Oq).then((Eq => {
+          Qq.current === qq && Wq(Eq)
+        })).catch((Eq => {
+          Qq.current === qq && (console.error("Failed to get the shader pack", Eq), Wq(null), jq({
+            error: Eq
           }))
         }))
-      }), [KT, OT, yT, ST]);
-      const rT = () => {
-          DT((TT => TT + 1))
+      }), [Oq, mq, xq, oq]);
+      const tq = () => {
+          Pq((qq => qq + 1))
         },
-        mT = (null === AT || void 0 === AT ? void 0 : AT.packId) === KT ? AT : null,
-        zT = (0, GT.j)(),
-        JT = BT(null !== (TT = null === mT || void 0 === mT ? void 0 : mT.live) && void 0 !== TT ? TT : null),
-        oT = null !== mT && void 0 !== mT && mT.live ? (0, wT.jsx)(pT, {
-          item: mT.live,
-          favourites: zT,
-          packUse: JT
+        hq = (null === Bq || void 0 === Bq ? void 0 : Bq.packId) === Oq ? Bq : null,
+        bq = (0, Tq.m)(),
+        iq = Xq(null !== (qq = null === hq || void 0 === hq ? void 0 : hq.live) && void 0 !== qq ? qq : null),
+        Zq = null !== hq && void 0 !== hq && hq.live ? (0, vq.jsx)(Cq, {
+          item: hq.live,
+          favourites: bq,
+          packUse: iq
         }) : null;
-      return (0, wT.jsxs)("article", {
+      return (0, vq.jsxs)("article", {
         className: "ShaderPackInformation AnimFadeIn",
-        children: [(0, wT.jsx)(IT.b, {
-          onClick: FT,
-          children: kT("shaderPackListing:backToPacks")
-        }), null === mT && null === jT && (0, wT.jsx)("div", {
+        children: [(0, vq.jsx)(uq.d, {
+          onClick: yq,
+          children: Eq("shaderPackListing:backToPacks")
+        }), null === hq && null === Nq && (0, vq.jsx)("div", {
           className: "ShaderPackInformationMessage",
-          children: (0, wT.jsx)(fT.d, {})
-        }), null !== jT && (0, wT.jsxs)("div", {
+          children: (0, vq.jsx)(Aq.e, {})
+        }), null !== Nq && (0, vq.jsxs)("div", {
           className: "ShaderPackInformationMessage",
-          children: [(0, PT.v)(jT.error, kT, "shaderPackListing:loadPackFailed"), (0, wT.jsx)(IT.e, {
-            onClick: rT,
-            children: kT("general:tryAgain")
+          children: [(0, rq.s)(Nq.error, Eq, "shaderPackListing:loadPackFailed"), (0, vq.jsx)(uq.g, {
+            onClick: tq,
+            children: Eq("general:tryAgain")
           })]
-        }), null !== mT && null === jT && (0, wT.jsxs)("div", {
+        }), null !== hq && null === Nq && (0, vq.jsxs)("div", {
           className: "ShaderPackInformationBody",
-          children: [(0, wT.jsxs)("header", {
+          children: [(0, vq.jsxs)("header", {
             className: "ShaderPackInformationHeader",
-            children: [(0, wT.jsx)("h1", {
+            children: [(0, vq.jsx)("h1", {
               className: "FullyFancyText",
-              children: mT.name
-            }), oT]
-          }), mT.live && (0, wT.jsx)(ZT, {
-            item: mT.live
-          }), mT.live && (0, wT.jsx)(iT, {
-            item: mT.live,
-            ownerPreview: mT.ownerPreview,
-            bloxdhubSlug: mT.bloxdhubSlug,
-            actions: oT
-          }), mT.owner && (0, wT.jsx)(bT, {
-            details: mT,
-            owner: mT.owner,
-            onChanged: rT
+              children: hq.name
+            }), Zq]
+          }), hq.live && (0, vq.jsx)(pq, {
+            item: hq.live
+          }), hq.live && (0, vq.jsx)(Iq, {
+            item: hq.live,
+            ownerPreview: hq.ownerPreview,
+            bloxdhubSlug: hq.bloxdhubSlug,
+            actions: Zq
+          }), hq.owner && (0, vq.jsx)(nq, {
+            details: hq,
+            owner: hq.owner,
+            onChanged: tq
           })]
         })]
       })
     }
 
-    function pT(TT) {
+    function Cq(qq) {
       let {
-        item: kT,
-        favourites: cT,
-        packUse: lT
-      } = TT;
-      const MT = cT.isFavourite(kT.packId);
-      return (0, wT.jsxs)("div", {
+        item: Eq,
+        favourites: gq,
+        packUse: Yq
+      } = qq;
+      const lq = gq.isFavourite(Eq.packId);
+      return (0, vq.jsxs)("div", {
         className: "ShaderPackInformationActions",
-        children: [NT.featureFlags.settings.canUseShaderPacks && (0, wT.jsx)(WT, {
-          packUse: lT
-        }), (0, wT.jsx)(IT.s, {
+        children: [jq.featureFlags.settings.canUseShaderPacks && (0, vq.jsx)(wq, {
+          packUse: Yq
+        }), (0, vq.jsx)(uq.x, {
           className: "ShaderPackInformationLike",
           onClick: () => {
-            cT.toggle(kT.packId)
+            gq.toggle(Eq.packId)
           },
-          isLiked: !0 === MT,
-          isLoading: null === MT
+          isLiked: !0 === lq,
+          isLoading: null === lq
         })]
       })
     }
 
-    function iT(TT) {
+    function Iq(qq) {
       let {
-        item: kT,
-        ownerPreview: cT,
-        bloxdhubSlug: lT,
-        actions: MT
-      } = TT;
+        item: Eq,
+        ownerPreview: gq,
+        bloxdhubSlug: Yq,
+        actions: lq
+      } = qq;
       const {
-        t: yT
-      } = (0, QT.B)(), fT = (0, jT.r)(), IT = null === lT ? null : (0, KT.c)(lT);
-      return (0, wT.jsxs)("div", {
+        t: xq
+      } = (0, Hq.v)(), Aq = (0, Nq.t)(), uq = null === Yq ? null : (0, Oq.g)(Yq);
+      return (0, vq.jsxs)("div", {
         className: "ShaderPackFacts",
-        children: [kT.description && (0, wT.jsx)("p", {
+        children: [Eq.description && (0, vq.jsx)("p", {
           className: "ShaderPackDescription",
-          children: kT.description
-        }), (0, wT.jsxs)("div", {
+          children: Eq.description
+        }), (0, vq.jsxs)("div", {
           className: "ShaderPackFeatureList",
-          children: [(null !== cT || null !== IT) && (0, wT.jsx)("div", {
+          children: [(null !== gq || null !== uq) && (0, vq.jsx)("div", {
             className: "ShaderPackAuthor",
-            children: null !== cT ? (0, wT.jsxs)(wT.Fragment, {
-              children: [(0, wT.jsx)(CT.h, {
-                playerSocialPreview: cT,
+            children: null !== gq ? (0, vq.jsxs)(vq.Fragment, {
+              children: [(0, vq.jsx)(Wq.h, {
+                playerSocialPreview: gq,
                 showLocation: !1,
                 linkToProfile: !0
-              }), null !== IT && (0, wT.jsx)("a", {
+              }), null !== uq && (0, vq.jsx)("a", {
                 className: "ShaderPackBloxdhubLogo",
-                href: IT,
+                href: uq,
                 target: "_blank",
                 rel: "noopener noreferrer",
-                children: (0, wT.jsx)("img", {
-                  src: ST,
-                  alt: KT.b
+                children: (0, vq.jsx)("img", {
+                  src: oq,
+                  alt: Oq.e
                 })
               })]
-            }) : (0, wT.jsxs)("a", {
+            }) : (0, vq.jsxs)("a", {
               className: "ShaderPackBloxdhubName",
-              href: IT,
+              href: uq,
               target: "_blank",
               rel: "noopener noreferrer",
-              children: [KT.b, (0, wT.jsx)("img", {
-                src: ST,
+              children: [Oq.e, (0, vq.jsx)("img", {
+                src: oq,
                 alt: ""
               })]
             })
-          }), PT.w.filter((TT => kT.features.includes(TT))).map((TT => (0, wT.jsx)(xT.LinkPreserveSearch, {
+          }), rq.w.filter((qq => Eq.features.includes(qq))).map((qq => (0, vq.jsx)(cq.LinkPreserveSearch, {
             className: "ShaderPackFeature",
-            to: (0, PT.D)(TT),
-            children: yT(PT.G[TT])
-          }, TT)))]
-        }), MT, (0, wT.jsxs)("dl", {
+            to: (0, rq.G)(qq),
+            children: xq(rq.K[qq])
+          }, qq)))]
+        }), lq, (0, vq.jsxs)("dl", {
           className: "ShaderPackFactList",
-          children: [(0, wT.jsxs)("div", {
-            children: [(0, wT.jsx)("dt", {
-              children: yT("shaderPackListing:downloads")
-            }), (0, wT.jsx)("dd", {
-              children: (0, OT.P)(kT.downloads)
+          children: [(0, vq.jsxs)("div", {
+            children: [(0, vq.jsx)("dt", {
+              children: xq("shaderPackListing:downloads")
+            }), (0, vq.jsx)("dd", {
+              children: (0, mq.S)(Eq.downloads)
             })]
-          }), (0, wT.jsx)(qT, {
-            label: yT("shaderPackListing:updated"),
-            time: kT.listedUpdatedAt,
-            now: fT
-          }), (0, wT.jsx)(qT, {
-            label: yT("shaderPackListing:created"),
-            time: kT.publishedAt,
-            now: fT
-          }), null !== kT.gpuCost && (0, wT.jsxs)("div", {
-            children: [(0, wT.jsx)("dt", {
-              children: yT("shaderPackListing:lag")
-            }), (0, wT.jsx)("dd", {
-              children: yT("shaderPackListing:lagPercent", {
-                percent: String((0, PT.O)(kT.gpuCost))
+          }), (0, vq.jsx)(eq, {
+            label: xq("shaderPackListing:updated"),
+            time: Eq.listedUpdatedAt,
+            now: Aq
+          }), (0, vq.jsx)(eq, {
+            label: xq("shaderPackListing:created"),
+            time: Eq.publishedAt,
+            now: Aq
+          }), null !== Eq.gpuCost && (0, vq.jsxs)("div", {
+            children: [(0, vq.jsx)("dt", {
+              children: xq("shaderPackListing:lag")
+            }), (0, vq.jsx)("dd", {
+              children: xq("shaderPackListing:lagPercent", {
+                percent: String((0, rq.R)(Eq.gpuCost))
               })
             })]
-          }), (0, wT.jsxs)("div", {
-            children: [(0, wT.jsx)("dt", {
-              children: yT("shaderPackListing:size")
-            }), (0, wT.jsx)("dd", {
-              children: yT("shaderPackListing:sizeValue", {
-                kilobytes: String((0, PT.K)(kT.sourceBytes))
+          }), (0, vq.jsxs)("div", {
+            children: [(0, vq.jsx)("dt", {
+              children: xq("shaderPackListing:size")
+            }), (0, vq.jsx)("dd", {
+              children: xq("shaderPackListing:sizeValue", {
+                kilobytes: String((0, rq.O)(Eq.sourceBytes))
               })
             })]
-          }), (0, wT.jsxs)("div", {
-            children: [(0, wT.jsx)("dt", {
-              children: yT("shaderPackListing:files")
-            }), (0, wT.jsx)("dd", {
-              children: kT.fileCount
+          }), (0, vq.jsxs)("div", {
+            children: [(0, vq.jsx)("dt", {
+              children: xq("shaderPackListing:files")
+            }), (0, vq.jsx)("dd", {
+              children: Eq.fileCount
             })]
           })]
         })]
       })
     }
 
-    function qT(TT) {
+    function eq(qq) {
       let {
-        label: kT,
-        time: cT,
-        now: lT
-      } = TT;
+        label: Eq,
+        time: gq,
+        now: Yq
+      } = qq;
       const {
-        t: MT,
-        selectedLanguage: KT
-      } = (0, QT.B)(), OT = new Date(cT);
-      let fT = OT.toLocaleDateString();
-      if (lT - cT <= 30 * yT.i) {
-        const TT = (0, QT.k)(KT.code, "shaderPackListing:timeAgo");
-        fT = MT("shaderPackListing:timeAgo", {
-          time: (0, yT._)(TT, cT, lT)
+        t: lq,
+        selectedLanguage: Oq
+      } = (0, Hq.v)(), mq = new Date(gq);
+      let Aq = mq.toLocaleDateString();
+      if (Yq - gq <= 30 * xq.k) {
+        const qq = (0, Hq.h)(Oq.code, "shaderPackListing:timeAgo");
+        Aq = lq("shaderPackListing:timeAgo", {
+          time: (0, xq.lb)(qq, gq, Yq)
         })
       }
-      return (0, wT.jsx)(AT.c, {
-        tooltipInner: OT.toLocaleString(),
-        children: (0, wT.jsxs)("div", {
-          children: [(0, wT.jsx)("dt", {
-            children: kT
-          }), (0, wT.jsx)("dd", {
-            children: fT
+      return (0, vq.jsx)(Bq.e, {
+        tooltipInner: mq.toLocaleString(),
+        children: (0, vq.jsxs)("div", {
+          children: [(0, vq.jsx)("dt", {
+            children: Eq
+          }), (0, vq.jsx)("dd", {
+            children: Aq
           })]
         })
       })
     }
   },
-  4968: (TT, kT, cT) => {
-    cT.d(kT, {
-      d: () => OT
+  4858: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => mq
     });
-    var lT = cT(1046),
-      MT = cT.n(lT),
-      KT = cT(1099);
+    var Yq = gq(1018),
+      lq = gq.n(Yq),
+      Oq = gq(1070);
 
-    function OT(TT) {
+    function mq(qq) {
       let {
-        options: kT,
-        value: cT,
-        onChange: lT,
-        ariaLabel: OT,
-        className: yT,
-        reselectable: fT = !1,
-        keepsFocus: xT = !1,
-        padTabs: IT
-      } = TT;
-      const AT = void 0 !== IT;
-      return (0, KT.jsx)("div", {
-        className: MT()("SegmentedToggle", yT),
+        options: Eq,
+        value: gq,
+        onChange: Yq,
+        ariaLabel: mq,
+        className: xq,
+        reselectable: Aq = !1,
+        keepsFocus: cq = !1,
+        padTabs: uq
+      } = qq;
+      const Bq = void 0 !== uq;
+      return (0, Oq.jsx)("div", {
+        className: lq()("SegmentedToggle", xq),
         role: "group",
-        "aria-label": OT,
-        "data-pad-tabs": IT,
-        children: kT.map((TT => {
-          const kT = TT.value === cT;
-          return (0, KT.jsx)("button", {
+        "aria-label": mq,
+        "data-pad-tabs": uq,
+        children: Eq.map((qq => {
+          const Eq = qq.value === gq;
+          return (0, Oq.jsx)("button", {
             type: "button",
-            "aria-pressed": kT,
-            "data-pad-tab": AT || void 0,
-            "data-pad-selected": AT && kT ? "true" : void 0,
-            "data-pad-default-focus": AT && kT || void 0,
-            "aria-label": TT.ariaLabel,
-            title: TT.ariaLabel,
-            className: MT()("SegmentedToggleOption SmallTextLight", {
-              SegmentedToggleOptionSelected: kT
+            "aria-pressed": Eq,
+            "data-pad-tab": Bq || void 0,
+            "data-pad-selected": Bq && Eq ? "true" : void 0,
+            "data-pad-default-focus": Bq && Eq || void 0,
+            "aria-label": qq.ariaLabel,
+            title: qq.ariaLabel,
+            className: lq()("SegmentedToggleOption SmallTextLight", {
+              SegmentedToggleOptionSelected: Eq
             }),
-            onMouseDown: xT ? TT => {
-              TT.preventDefault()
+            onMouseDown: cq ? qq => {
+              qq.preventDefault()
             } : void 0,
             onClick: () => {
-              kT && !fT || lT(TT.value)
+              Eq && !Aq || Yq(qq.value)
             },
-            children: TT.label
-          }, TT.value)
+            children: qq.label
+          }, qq.value)
         }))
       })
     }
   },
-  4975: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => KT,
-      d: () => OT
+  4866: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => Oq,
+      i: () => mq
     });
-    var lT = cT(71);
-    const MT = new WeakMap,
-      KT = TT => {
-        var kT;
-        const cT = TT.closest("[data-pad-slider]");
-        return cT && null !== (kT = MT.get(cT)) && void 0 !== kT ? kT : null
+    var Yq = gq(57);
+    const lq = new WeakMap,
+      Oq = qq => {
+        var Eq;
+        const gq = qq.closest("[data-pad-slider]");
+        return gq && null !== (Eq = lq.get(gq)) && void 0 !== Eq ? Eq : null
       },
-      OT = (TT, kT) => {
-        const cT = (0, lT.useRef)(kT);
-        cT.current = kT, (0, lT.useEffect)((() => {
-          if (TT.current) return ((TT, kT) => (MT.set(TT, kT), () => {
-            MT.get(TT) === kT && MT.delete(TT)
-          }))(TT.current, {
-            adjust: TT => {
-              cT.current.adjust(TT)
+      mq = (qq, Eq) => {
+        const gq = (0, Yq.useRef)(Eq);
+        gq.current = Eq, (0, Yq.useEffect)((() => {
+          if (qq.current) return ((qq, Eq) => (lq.set(qq, Eq), () => {
+            lq.get(qq) === Eq && lq.delete(qq)
+          }))(qq.current, {
+            adjust: qq => {
+              gq.current.adjust(qq)
             },
-            setFraction: TT => {
-              cT.current.setFraction(TT)
+            setFraction: qq => {
+              gq.current.setFraction(qq)
             },
             endDrag: () => {
-              cT.current.endDrag()
+              gq.current.endDrag()
             }
           })
-        }), [TT])
+        }), [qq])
       }
   },
-  6647: (TT, kT, cT) => {
-    cT.d(kT, {
-      b: () => MT,
-      e: () => KT
+  6535: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => lq,
+      d: () => Oq
     });
-    var lT = cT(47);
-    const MT = "shaderPack";
-    async function KT() {
-      var TT;
-      let kT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (TT = await lT.d.getItem(MT, kT)) && void 0 !== TT ? TT : null
+    var Yq = gq(38);
+    const lq = "shaderPack";
+    async function Oq() {
+      var qq;
+      let Eq = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (qq = await Yq.f.getItem(lq, Eq)) && void 0 !== qq ? qq : null
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

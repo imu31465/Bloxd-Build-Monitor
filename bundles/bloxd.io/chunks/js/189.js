@@ -1,230 +1,1090 @@
 export const id = 189;
 export const ids = [189];
 export const modules = {
-  9384: (TT, kT, cT) => {
-    cT.r(kT), cT.d(kT, {
-      MAX_BLOCK_ID: () => lT,
-      armourReductionOf: () => LT,
-      clipSizeOf: () => dT,
-      creativeAltNames: () => Ok,
-      creativeCategoryOf: () => qT,
-      creativeItemCategories: () => yT,
-      creativeItemCategoryIcons: () => fT,
-      creativeItemIds: () => iT,
-      descriptionOf: () => ZT,
-      displayNameOf: () => ET,
-      dropsNothing: () => UT,
-      enchantmentPerksOf: () => nT,
-      gunTypeOf: () => gT,
-      harvestsNullLevelOf: () => YT,
-      isDevOnlyItem: () => ck,
-      itemIsDisabled: () => Mk,
-      itemTypeNameOf: () => XT,
-      itemTypeOf: () => uT,
-      rootMetaDescOf: () => WT,
-      scopeTypeOf: () => RT,
-      showInCreativeInvenOf: () => lk,
-      showOnlyInCreativeCategory: () => kk,
-      showOnlyInCreativeSearch: () => Tk,
-      showsAimingUi: () => BT
+  39064: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => xq,
+      g: () => Oq
     });
-    const lT = 8558,
-      MT = "''WL&M3GT%cM)MK$YE1aM2'I+F+O_*c^*=%'%%%%%%%K>F>%%)K=H=%%[*W5_5['[R$ZW$S%[X&NH&L5C$W$5,KS&%]]&I%^Z&NM&b7TK$Y6G,Y>%M%M7P6$WD%Vc$LZ$OY$%+Q[&;S$/G$N&W%F$W%F$S$N&G'.F$c%`'1+%)41(1(+49$(2=b$/`N,RN,K/c_&Q0EC$O(''P`&O$%-%%^R2-*)&%;NV/ZT%IT%3XM$%%%%%_U$%b73.%%`-T-%%%%%%L9$M8X7/$``3/Fa3T+%%%%SAQ<U6W<^7V]&&)*'OAO<Y6W<^7X]&+&)*'CG%%`)W<^7VW&C[&Tc%Wc%Tc%P;'O;Uc%PH%SH%]T$`T$J;^7S&ZX%S]%VX$ZF$U5W^/TF$aU/C$C$C$C$C$O7E7K<^7RX%33333`4E7K<^7_`$++++++O1K<^7_B$aR%%D'%b_$CH$%%%G3'Y*R?SH&]I&I>RO&KM&DC%L$/Q+C.Q0QH$''_b$TS$J-%%%%%%%%%)I%)$','G6b=E7K<^7NQ&%%%%%%%%%%%%%%%CW&S$S$S$S$S$S$S$S$S$S$S$S$S$S$S$G:+++++++++++++++S+%%%%Va$*$(50)2+,7:%)5>Q?^1S$]T$XG&333333333333333U[$333333333333333CN%)@G$))))X$`$))))P%W%]H(<3$3('<)%+.3$2+YJ2HH2*$&52)6%+/2%7&6MD%S$/G$N&W%F$W%F$S$N&G'.F$c%`'O['C%3S$R'S&R$S&R$C%R'S(2R$c&S)Xc&'+%)41(1(+49$(2=Q$S$/G$N&W%F$W%F$S$N&G'.F$c%`'C]&C%3S$R'S&R$S&R$C%R'S(2R$c&S)TI'+%)41(1(+49$(2=Q)S$/G$N&W%F$W%F$S$N&G'.F$c%`'C_&C%3S$R'S&R$S&R$C%R'S(2R$c&S)JW*34$*'9(-0,+.9('CZ$34$*'9(-0,+.9('M%%%%%%%%%%%%%%%%MM'cJ)%%%%%%%%%%%%%%%G-+++++++++++++++UZ(X-%%M.DE(//////G2E7K<^7_S%/Wa$M3MT%_b'//////QY$DY$///////////////////////`Y'3333333333MD*C&C&C&C&C&C&C&C&C&C&M.C$C$C$C$C$C$C$C$C$C$FW+333333333333333333333333333333M`,'cF2%CG2%%%%%%%%%'E8N7%%%''''''-+%)41(1(+49$(2=E$)$'%%/_%E+'%)%%)&)&)%'%%%%%%cI2)%G`12^,T,%%%[-%%%%%%%%%%%VD1+WD1(%%)$b<T%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%aD2%%E>WO%b`+%%%ab.EC&HC&U6UA%%%%LU$'5[5H<%%'%%3`;%QH$M&%UD$W$/%%%^L*cR-OK1%RN2+S$^L2%M$@%.%5%+%O$)%H$%5%.%M$%+%+%+%+)))%+N%L$%5%.%3+%)%T%%.%5%-$S%%.%5%+%)))+%)c&D$-7S%,R%Q$,=F$O$4F$W%-)))-)]0'%'%+['$W.+%)41(1(+49$(2=M<%'+%)41(1(+49$(2=%%'+%)41(1(+49$(2=V_$%%%%%%%%%%%%'%%%%%%%%%%%%%%%HL1%%%%%[Y1+++++++++5UU$%%%%'%%%%3%%%%'%%%%'%%%%N$%%%%RV$EY$3JJ%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Y6)&[$&3Z$&[$>.'/'>3?.Z1'%*W2%'F3%%M0W%RJ/--L+W+-D,%K*^3-VT(C[$G<G'+J'%%%%%%%%%%%%%%%U&%%%%%%%5%%6+1%%%%%%E'++++MI2%%%%%%aG2IU$C$C$C$SO$RN$C$C$KZ0%%%H$'-.c)55&Y$*V%%%'%%%%%%%'%%%%%''%%%%%%%%%%%%%%%%%%%'%%'%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%M$%%%%%%%%%%%%%K(Y$Y$Y$c'Y$Y$Y$c'Y$Y$Y$c'Y$Y$Y$c'Y$Y$Y$a'Y$Y$Y$F(Y$Y$Y$V'Y$Y$Y$]'Y$Y$Y$Z'Y$Y$Y$c'Y$Y$Y$a'Y$Y$Y$c'Y$Y$Y$c'Y$Y$Y$J(Y$Y$Y$D)Y$Y$Y$c'Y$Y$Y$_'Y$Y$Y$H(Y$Y$Y$c'Y$Y$Y$E$%%%%%%%%%%%%%%%%%+-%%%%%%%%%%%%%+-%%%%%%%%%%%%%+-%%%%%%%%%%%%%+-%%%%%%%%%%%%%%%VI6QX(%%%%%%%%%%%%%%%%",
-      KT = "S-$SW$$R&$SG2$)$'$)$4$)$X*$I6$-$%$%$cC1$WD1$%%%$]5$b7$RH4$%$%$%$%$%$%$%$%$%$)$N+$EG&$ZT%$IT%$3$XM$$%$%$%$%$%$Z1$Y[$$O`0$'$'$'$-&+&%&)&4&1&(&1*(*+&4&9&$&(&2&=&E$&'&%&%&%&1%_%$TV3$%$D.$$$Uc&$S$$S$$S$$S$$S$$S$$S$&S$&S$$S$$S$$S$$S$$S$$S$$S$$^1$S$$]I($%$M/$+$N-$%$Z$$%$I6$3$Uc$$3$WR%$X$$T`%$F$$CC($R$$P_&$($I$$($W'$F$$WC'$R$$cZ&$F$$WE'$R$$Cc,$($[<$%$'$+$%$)$4$1$($1&(&+$4$9$$$($2$=$%$%$'$+$%$)$4$1$($1&(&+$4$9$$$($2$=$ZX$$%$%$%$%$%$%$%$%$%$cb0$MK2'T%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$aD2$%$%$E>$WO%$b`+$%$%$%$ab.$EC&$HC&$U6$UA$%$%$%$%$LU$$'$5$[5$H<$%$%$'$%$%$3$`;$%$QH$$M&$%$UD$$W$$/$%$%$%$^L*$FP0$QX($%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$L]%$OP1%%%S@&%'%'%'%'%%ZU0$C$$C$$C$$SO$$RN$$C$$C$$OZ0%/%",
-      OT = "Crafting Table|Cauldron|Sign|Iron Nugget|Gold Nugget|Diamond Nugget|Moonstone Nugget|Iron Ingot|Gold Ingot|Draugr Knight Sword|Cooked Potato|Cooked Beef|Raw Lamb|Cooked Lamb|Gold Watermelon Stag Antlers|Bear Fur|Cave Golem Eye|Frost Golem Eye|Draugr Knight Heart|Fur Boots|Milk Bottle|Yellow Flower|Red Flower|Red Flower|Pink Flower|White Flower|Orange Flower|White Yellow Flower|Blue Flower|Blue Flower|Purple Flower|Black Flower|Cobblestone|Carved Cobblestone|Mossy Cobblestone|Snowy Cobblestone|Compressed Snow|Compressed Cobblestone|Extra Compressed Cobblestone|Super Compressed Cobblestone|Hyper Compressed Cobblestone|Ultra Compressed Cobblestone|Mega Compressed Cobblestone|Cobblestone Slab|Snowy Cobblestone Slab|Wood Hand Glider|Iron Hand Glider|Gold Hand Glider|Diamond Hand Glider|White Go Kart|White Cart|White Go Cart|Orange Go Kart|Orange Cart|Orange Go Cart|Magenta Go Kart|Magenta Cart|Magenta Go Cart|Light Blue Go Kart|Light Blue Cart|Light Blue Go Cart|Yellow Go Kart|Yellow Cart|Yellow Go Cart|Lime Go Kart|Lime Cart|Lime Go Cart|Pink Go Kart|Pink Cart|Pink Go Cart|Gray Go Kart|Gray Cart|Gray Go Cart|Grey Kart|Grey Go Kart|Grey Cart|Grey Go Cart|Light Gray Go Kart|Light Gray Cart|Light Gray Go Cart|Light Grey Kart|Light Grey Go Kart|Light Grey Cart|Light Grey Go Cart|Cyan Go Kart|Cyan Cart|Cyan Go Cart|Purple Go Kart|Purple Cart|Purple Go Cart|Blue Go Kart|Blue Cart|Blue Go Cart|Brown Go Kart|Brown Cart|Brown Go Cart|Green Go Kart|Green Cart|Green Go Cart|Red Go Kart|Red Cart|Red Go Cart|Black Go Kart|Black Cart|Black Go Cart|Off Road Jeep|Off Road Truck|Off Road Car|Drill|Mining Drill|Digger|Drill|Mining Drill|Digger|Drill|Mining Drill|Digger|Drill|Mining Drill|Digger|Light Blue Car|Light Blue Sedan|Hoverboat|Grey Planks|Light Grey Planks|Light Grey Wool|Grey Wool|White Flag|Orange Flag|Magenta Flag|Light Blue Flag|Yellow Flag|Lime Flag|Pink Flag|Gray Flag|Grey Banner|Grey Flag|Light Gray Flag|Light Grey Banner|Light Grey Flag|Cyan Flag|Purple Flag|Blue Flag|Brown Flag|Green Flag|Red Flag|Black Flag|Draugr Flag|Skull Flag|Rainbow Flag|Grey Baked Clay|Light Grey Baked Clay|Grey Ceramic|Light Grey Ceramic|Grey Glass|Light Grey Glass|Grey Concrete|Light Grey Concrete|Grey Bed|Light Grey Bed|Grey Strongbed|Light Grey Strongbed|Small Grey Pod|Small Light Grey Pod|Grey Concrete Slab|Light Grey Concrete Slab|Grey Concrete Stairs|Light Grey Concrete Stairs|Grey Chalk|Light Grey Chalk|Grey Chalk Bricks|Light Grey Chalk Bricks|Grey Chalk Slab|Light Grey Chalk Slab|Grey Chalk Stairs|Light Grey Chalk Stairs|Grey Chalk Bricks Slab|Light Grey Chalk Bricks Slab|Grey Chalk Bricks Stairs|Light Grey Chalk Bricks Stairs|Grey Balloon|Light Grey Balloon|Firework|Rainbow Firework|White Firework|Orange Firework|Magenta Firework|Light Blue Firework|Yellow Firework|Lime Firework|Pink Firework|Gray Firework|Grey Firework|Grey Firecracker|Light Gray Firework|Light Grey Firework|Light Grey Firecracker|Cyan Firework|Purple Firework|Blue Firework|Brown Firework|Green Firework|Red Firework|Black Firework|Firework Pebble|Rainbow Firework Pebble|White Firework Pebble|Orange Firework Pebble|Magenta Firework Pebble|Light Blue Firework Pebble|Yellow Firework Pebble|Lime Firework Pebble|Pink Firework Pebble|Gray Firework Pebble|Grey Firework Pebble|Grey Firecracker Pebble|Light Gray Firework Pebble|Light Grey Firework Pebble|Light Grey Firecracker Pebble|Cyan Firework Pebble|Purple Firework Pebble|Blue Firework Pebble|Brown Firework Pebble|Green Firework Pebble|Red Firework Pebble|Black Firework Pebble|Grey Wood Helmet|Grey Wood Chestplate|Grey Wood Leggings|Grey Wood Boots|Grey Wood Gauntlets|Light Grey Wood Helmet|Light Grey Wood Chestplate|Light Grey Wood Leggings|Light Grey Wood Boots|Light Grey Wood Gauntlets|Command Block|Mob Net|Catcher Net|Pet Net|Pet Catcher|Mob Pig Spawn Egg|Mob Cow Spawn Egg|Mob Sheep Spawn Egg|Mob Horse Spawn Egg|Mob Camel Spawn Egg|Mob Iron Goofy Golem Spawn Egg|Mob Gold Goofy Golem Spawn Egg|Mob Diamond Goofy Golem Spawn Egg|Mob Moonstone Goofy Golem Spawn Egg|Mob Deer Spawn Egg|Mob Slime Spawn Egg|Mob Wolf Spawn Egg|Mob Wildcat Spawn Egg|Mob Spirit Golem Spawn Egg|Mob Spirit Wolf Spawn Egg|Mob Spirit Bear Spawn Egg|Mob Spirit Stag Spawn Egg|Mob Spirit Gorilla Spawn Egg|Mob Bear Spawn Egg|Mob Stag Spawn Egg|Mob Gold Watermelon Stag Spawn Egg|Mob Gorilla Spawn Egg|Mob Cave Golem Spawn Egg|Mob Draugr Zombie Spawn Egg|Mob Draugr Skeleton Spawn Egg|Mob Frost Golem Spawn Egg|Mob Frost Zombie Spawn Egg|Mob Frost Skeleton Spawn Egg|Mob Draugr Knight Spawn Egg|Mob Draugr Huntress Spawn Egg|Mob Magma Golem Spawn Egg|Mob Draugr Warper Spawn Egg|Mob Frost Wraith Spawn Egg|Mob Draugr Reaver Spawn Egg|Mob Stalker Spawn Egg|Mob Crone Spawn Egg|Mob Iron Guardian Spawn Egg|Mob Gold Guardian Spawn Egg|Mob Diamond Guardian Spawn Egg|Mob Moonstone Guardian Spawn Egg|Mob Tiki Terror Spawn Egg|Pig Mob Spawner Block|Cow Mob Spawner Block|Sheep Mob Spawner Block|Horse Mob Spawner Block|Camel Mob Spawner Block|Iron Goofy Golem Mob Spawner Block|Gold Goofy Golem Mob Spawner Block|Diamond Goofy Golem Mob Spawner Block|Moonstone Goofy Golem Mob Spawner Block|Deer Mob Spawner Block|Slime Mob Spawner Block|Wolf Mob Spawner Block|Wildcat Mob Spawner Block|Spirit Golem Mob Spawner Block|Spirit Wolf Mob Spawner Block|Spirit Bear Mob Spawner Block|Spirit Stag Mob Spawner Block|Spirit Gorilla Mob Spawner Block|Bear Mob Spawner Block|Stag Mob Spawner Block|Gold Watermelon Stag Mob Spawner Block|Gorilla Mob Spawner Block|Cave Golem Mob Spawner Block|Draugr Zombie Mob Spawner Block|Draugr Skeleton Mob Spawner Block|Frost Golem Mob Spawner Block|Frost Zombie Mob Spawner Block|Frost Skeleton Mob Spawner Block|Draugr Knight Mob Spawner Block|Draugr Huntress Mob Spawner Block|Magma Golem Mob Spawner Block|Draugr Warper Mob Spawner Block|Frost Wraith Mob Spawner Block|Draugr Reaver Mob Spawner Block|Stalker Mob Spawner Block|Crone Mob Spawner Block|Iron Guardian Mob Spawner Block|Gold Guardian Mob Spawner Block|Diamond Guardian Mob Spawner Block|Moonstone Guardian Mob Spawner Block|Tiki Terror Mob Spawner Block|Barrier|Yellow Light Block|White Light Block|Red Light Block|Purple Light Block|Pink Light Block|Orange Light Block|Magenta Light Block|Lime Light Block|Light Gray Light Block|Light Blue Light Block|Green Light Block|Gray Light Block|Cyan Light Block|Brown Light Block|Blue Light Block|Black Light Block|Sky Light Block|Empty Mob Spawner Block|XRay Vision Potion|X Ray Vision Potion|Splash XRay Vision Potion|Splash X Ray Vision Potion|Experience Orb|EXP Orb|Enchanting Orb|Experience Potion|Enchanting Potion|Bottle of Enchanting|EXP Potion|Experience Potion II|Enchanting Potion II|Bottle of Enchanting II|EXP Potion II|Splash Experience Potion|Splash Enchanting Potion|Splash Bottle of Enchanting|Splash EXP Potion|Splash Experience Potion II|Splash Enchanting Potion II|Splash Bottle of Enchanting II|Splash EXP Potion II|Enchanting Arrow|EXP Arrow|Sheep Painting|Cow Painting|Pig Painting|Horse Painting|Camel Painting|Wolf Painting|Deer Painting|Wildcat Painting|Cow Milk|Cows Milk|Sheep Milk|Sheeps Milk",
-      yT = ["building", "colours", "nature", "decoration", "utility", "tools", "combat", "food", "mobs", "materials", "worldTools"],
-      fT = {
-        building: "Stone Bricks",
-        colours: "Magenta Wool",
-        nature: "Grass Block",
-        decoration: "Lantern",
-        utility: "Workbench",
-        tools: "Iron Pickaxe",
-        combat: "Iron Sword",
-        food: "Apple",
-        mobs: "Pig Spawn Orb",
-        materials: "Iron Bar",
-        worldTools: "Code Block"
-      };
-    var xT = cT(3214),
-      IT = cT(3222);
-    const AT = Object.freeze([]);
+    var Yq = gq(3933);
+    let lq = null;
 
-    function CT(TT) {
-      let kT = null;
-      return cT => {
-        var lT;
-        return kT ??= (0, IT.D)(TT, 10091), null !== (lT = kT[cT]) && void 0 !== lT ? lT : 0
+    function Oq(qq) {
+      return null !== lq && qq === lq
+    }
+
+    function mq() {
+      this.IK = !1, this.stopPropagation = !1, this.gC = !1, this.disabled = !1
+    }
+    class xq {
+      constructor(qq, Eq) {
+        this.version = "0.7.0";
+        var gq = Object.assign({}, new mq, Eq || {});
+        this.element = qq || document, this.IK = !!gq.IK, this.stopPropagation = !!gq.stopPropagation, this.gC = !!gq.gC, this.disabled = !!gq.disabled, this.filterEvents = (qq, Eq) => !0, this.ignoreEvent = qq => !1, this.down = new Yq.EventEmitter, this.up = new Yq.EventEmitter, this.state = {}, this.lC = {
+          dx: 0,
+          dy: 0,
+          hEq: 0,
+          nEq: 0,
+          bEq: 0
+        }, this.pressCount = {}, this.releaseCount = {}, this._keyBindmap = {}, this._keyStates = {}, this._bindPressCount = {}, this._touches = {
+          lastX: 0,
+          lastY: 0,
+          currID: null
+        }, "loading" !== document.readyState ? cq(this) : document.addEventListener("DOMContentLoaded", (qq => {
+          cq(this)
+        }), {
+          once: !0
+        })
       }
-    }
-
-    function jT(TT, kT, cT) {
-      const lT = CT(TT);
-      let MT = null,
-        KT = [];
-      return TT => {
-        const OT = lT(TT);
-        if (0 !== OT) return null === MT && (MT = kT.split(IT.s), KT = new Array(MT.length)), KT[OT - 1] ??= cT(MT[OT - 1])
+      bind(qq) {
+        for (var Eq = arguments.length, gq = new Array(Eq > 1 ? Eq - 1 : 0), Yq = 1; Yq < Eq; Yq++) gq[Yq - 1] = arguments[Yq];
+        gq.forEach((Eq => {
+          var gq = this._keyBindmap[Eq] || [];
+          gq.includes(qq) || (gq.push(qq), this._keyBindmap[Eq] = gq)
+        })), this.state[qq] = !!this.state[qq], this.pressCount[qq] = this.pressCount[qq] || 0, this.releaseCount[qq] = this.releaseCount[qq] || 0
       }
-    }
-
-    function vT(TT) {
-      return TT
-    }
-
-    function tT(TT) {
-      return TT === IT.f ? null : (0, IT.E)(TT)
-    }
-    const hT = jT("T$$#&#$T'#$F$#$$%$B#$>#$##=$$1$.)$*#$(&$)#)$N$#$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$+##$&#$$%$*/$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$T$&$($$$*$(#$$1$$1$$1$$1$$1$$1$$)$$)$$)$$)$$)$*)$N2#$.($$1$$)$T$$$,#$4#$)##$V'#$)#[$$+#$#$($$'#%$&$$N)*$4#$$1$$)$:$$##1$##.$#*####*C%$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$,($$($&)$################################2R$$################1$##########-$####################/$##+$(#$$1$$)$T%$$########1$##+$################################################################-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#)$2&$(#$(#$$1$$)$<$$.#$####/$####/$####3$##)#'#'#'#)#'#'#'#'#'#'#'##$B#$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#1$###########$$R&$##)$**$**$0*$%##$%##$%#$#####$%##$%##$%##$%##$%##$%##$%##$%##$%##$%##$%##$%##$%#)$9#9$9#1$$.$*)$*#$*#$*#$*#$*3#)#)#)#)#)#)#)#)#)#)#)#)#)#)#)#,F'$$5$$&$(2$##U$$&2$*5$X$#$H%.$##-$(2$####$&#######'$@#$##$2#######################################b?$1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#IW&$b$I*b$J*b$K*b$L*b$M*b$N*b$O*b$P*b$Q*b$R*b$S*b$T*b$U*b$V*b$W*b$X*b$Y*b$Z*b$[*b$]*b$^*b$_*b$`*b$a*b$b*b$c*b$C+b$D+b$E+b$F+b$G+b$H+Z'&$##b$$A#b$$A#b$$A#b$$A#b$$A#b$$A#b$$A#b$$A#b$$A#b$$A#b$$A#b&$b&#;$1#1$1#1$1#1$1#1$1#1$1#1$1#1$1#1$1#1$1#1$1#########)$J&6$)#;$%#b$$)E,U&$##U&$$#$c&($I$#Y$$1#O%$####-$)I,Q'$b&#)$b&#G($<,$##[+$'#5$$#$$#$$#$$#$$#$$#$$#$B#$$2$,#$$'$$#$##%$##3$##'$########`%$7###S%$##################+$###$##%$###$##%$###$##%$###$##+$###$##%$###$##%$###$##+$###$##'$##%$###$##%$###$##%$###$##%$###$##/$#######$###$##/$$##$##$##$##$##$##$##$##$##$##$##$##$##$##$##$##$##$##S$$c&2$################################################################################################################################U)$2P'$###$##K%$##5$##O&$##C'$##+$##^&$##########A$##########################################)#)#######################################)#)#######################################)#)#######################################)#)###############Y)$##G$$############W'$##W$$", '*|forget-Me-Not|ladder|wheat|jackO\'Lantern|bookshelf|rice|cotton|rocket|cornSeeds|corn|chest|ice|yellowSpawnBlock|whiteSpawnBlock|redSpawnBlock|purpleSpawnBlock|pinkSpawnBlock|orangeSpawnBlock|magentaSpawnBlock|limeSpawnBlock|lightGraySpawnBlock|lightBlueSpawnBlock|greenSpawnBlock|graySpawnBlock|cyanSpawnBlock|brownSpawnBlock|blueSpawnBlock|blackSpawnBlock|redGeneratorSpawnBlock|blueGeneratorSpawnBlock|limeGeneratorSpawnBlock|yellowGeneratorSpawnBlock|cyanGeneratorSpawnBlock|whiteGeneratorSpawnBlock|pinkGeneratorSpawnBlock|grayGeneratorSpawnBlock|diamondGeneratorSpawnBlock|moonstoneGeneratorSpawnBlock|oreGeneratorSpawnBlock|redGoalBlock|blueGoalBlock|pigMobSpawnerBlock|cowMobSpawnerBlock|sheepMobSpawnerBlock|caveGolemMobSpawnerBlock|draugrZombieMobSpawnerBlock|draugrSkeletonMobSpawnerBlock|emptyMobSpawnerBlock|frostGolemMobSpawnerBlock|frostZombieMobSpawnerBlock|frostSkeletonMobSpawnerBlock|draugrKnightMobSpawnerBlock|wolfMobSpawnerBlock|bearMobSpawnerBlock|deerMobSpawnerBlock|stagMobSpawnerBlock|goldWatermelonStagMobSpawnerBlock|colouredChalk^colour=$t(colour:yellow)|colouredChalk^colour=$t(colour:white)|colouredChalk^colour=$t(colour:red)|colouredChalk^colour=$t(colour:purple)|colouredChalk^colour=$t(colour:pink)|colouredChalk^colour=$t(colour:orange)|colouredChalk^colour=$t(colour:magenta)|colouredChalk^colour=$t(colour:lime)|colouredChalk^colour=$t(colour:light_gray)|colouredChalk^colour=$t(colour:light_blue)|colouredChalk^colour=$t(colour:green)|colouredChalk^colour=$t(colour:gray)|colouredChalk^colour=$t(colour:cyan)|colouredChalk^colour=$t(colour:brown)|colouredChalk^colour=$t(colour:blue)|colouredChalk^colour=$t(colour:black)|colouredChalkBricks^colour=$t(colour:yellow)|colouredChalkBricks^colour=$t(colour:white)|colouredChalkBricks^colour=$t(colour:red)|colouredChalkBricks^colour=$t(colour:purple)|colouredChalkBricks^colour=$t(colour:pink)|colouredChalkBricks^colour=$t(colour:orange)|colouredChalkBricks^colour=$t(colour:magenta)|colouredChalkBricks^colour=$t(colour:lime)|colouredChalkBricks^colour=$t(colour:light_gray)|colouredChalkBricks^colour=$t(colour:light_blue)|colouredChalkBricks^colour=$t(colour:green)|colouredChalkBricks^colour=$t(colour:gray)|colouredChalkBricks^colour=$t(colour:cyan)|colouredChalkBricks^colour=$t(colour:brown)|colouredChalkBricks^colour=$t(colour:blue)|colouredChalkBricks^colour=$t(colour:black)|colouredChalkSlab^colour=$t(colour:yellow)|colouredChalkSlab^colour=$t(colour:white)|colouredChalkSlab^colour=$t(colour:red)|colouredChalkSlab^colour=$t(colour:purple)|colouredChalkSlab^colour=$t(colour:pink)|colouredChalkSlab^colour=$t(colour:orange)|colouredChalkSlab^colour=$t(colour:magenta)|colouredChalkSlab^colour=$t(colour:lime)|colouredChalkSlab^colour=$t(colour:light_gray)|colouredChalkSlab^colour=$t(colour:light_blue)|colouredChalkSlab^colour=$t(colour:green)|colouredChalkSlab^colour=$t(colour:gray)|colouredChalkSlab^colour=$t(colour:cyan)|colouredChalkSlab^colour=$t(colour:brown)|colouredChalkSlab^colour=$t(colour:blue)|colouredChalkSlab^colour=$t(colour:black)|colouredChalkBricksSlab^colour=$t(colour:yellow)|colouredChalkBricksSlab^colour=$t(colour:white)|colouredChalkBricksSlab^colour=$t(colour:red)|colouredChalkBricksSlab^colour=$t(colour:purple)|colouredChalkBricksSlab^colour=$t(colour:pink)|colouredChalkBricksSlab^colour=$t(colour:orange)|colouredChalkBricksSlab^colour=$t(colour:magenta)|colouredChalkBricksSlab^colour=$t(colour:lime)|colouredChalkBricksSlab^colour=$t(colour:light_gray)|colouredChalkBricksSlab^colour=$t(colour:light_blue)|colouredChalkBricksSlab^colour=$t(colour:green)|colouredChalkBricksSlab^colour=$t(colour:gray)|colouredChalkBricksSlab^colour=$t(colour:cyan)|colouredChalkBricksSlab^colour=$t(colour:brown)|colouredChalkBricksSlab^colour=$t(colour:blue)|colouredChalkBricksSlab^colour=$t(colour:black)|gorillaMobSpawnerBlock|wildcatMobSpawnerBlock|draugrHuntressMobSpawnerBlock|magmaGolemMobSpawnerBlock|lightbluePortal|lightgrayPortal|horseMobSpawnerBlock|tomato|carrotSeeds|potatoSeeds|strawberries|sugarCane|lettuce|coffeeBean|cauliflower|parsnip|blueberries|redCabbage|beetrootSeeds|whiteBanner|orangeBanner|magentaBanner|lightBlueBanner|yellowBanner|limeBanner|pinkBanner|grayBanner|lightGrayBanner|cyanBanner|purpleBanner|blueBanner|brownBanner|greenBanner|redBanner|blackBanner|draugrBanner|spiritGolemMobSpawnerBlock|spiritWolfMobSpawnerBlock|spiritBearMobSpawnerBlock|spiritStagMobSpawnerBlock|spiritGorillaMobSpawnerBlock|draugrWarperMobSpawnerBlock|smallMagentaPod|smallLightGrayPod|smallRedPod|frostWraithMobSpawnerBlock|draugrReaverMobSpawnerBlock|smallWhitePod|smallOrangePod|smallLightBluePod|smallYellowPod|smallLimePod|smallPinkPod|smallGrayPod|smallCyanPod|smallPurplePod|smallBluePod|smallBrownPod|smallGreenPod|smallBlackPod|skullBanner|rainbowBanner|directionalArrow^colour=$t(colour:white)|directionalArrow^colour=$t(colour:orange)|directionalArrow^colour=$t(colour:magenta)|directionalArrow^colour=$t(colour:light_blue)|directionalArrow^colour=$t(colour:yellow)|directionalArrow^colour=$t(colour:lime)|directionalArrow^colour=$t(colour:pink)|directionalArrow^colour=$t(colour:gray)|directionalArrow^colour=$t(colour:light_gray)|directionalArrow^colour=$t(colour:cyan)|directionalArrow^colour=$t(colour:purple)|directionalArrow^colour=$t(colour:blue)|directionalArrow^colour=$t(colour:brown)|directionalArrow^colour=$t(colour:green)|directionalArrow^colour=$t(colour:red)|directionalArrow^colour=$t(colour:black)|=Smoke Block|stalkerMobSpawnerBlock|croneMobSpawnerBlock|slimeMobSpawnerBlock|ironGuardianMobSpawnerBlock|goldGuardianMobSpawnerBlock|diamondGuardianMobSpawnerBlock|moonstoneGuardianMobSpawnerBlock|camelMobSpawnerBlock|=Rare Lucky Block|=Super Lucky Block|=Rare Weapon Lucky Block|=Super Weapon Lucky Block|=Building Lucky Block|=Rare Building Lucky Block|=Super Building Lucky Block|=Armour Lucky Block|=Rare Armour Lucky Block|=Super Armour Lucky Block|=Tools Lucky Block|=Rare Tools Lucky Block|=Super Tools Lucky Block|=Food Lucky Block|=Rare Food Lucky Block|=Super Food Lucky Block|=Potion Lucky Block|=Rare Potion Lucky Block|=Super Potion Lucky Block|=Block Destroyer TNT|colouredChalkStairs^colour=$t(colour:yellow)|colouredChalkStairs^colour=$t(colour:white)|colouredChalkStairs^colour=$t(colour:red)|colouredChalkStairs^colour=$t(colour:purple)|colouredChalkStairs^colour=$t(colour:pink)|colouredChalkStairs^colour=$t(colour:orange)|colouredChalkStairs^colour=$t(colour:magenta)|colouredChalkStairs^colour=$t(colour:lime)|colouredChalkStairs^colour=$t(colour:light_gray)|colouredChalkStairs^colour=$t(colour:light_blue)|colouredChalkStairs^colour=$t(colour:green)|colouredChalkStairs^colour=$t(colour:gray)|colouredChalkStairs^colour=$t(colour:cyan)|colouredChalkStairs^colour=$t(colour:brown)|colouredChalkStairs^colour=$t(colour:blue)|colouredChalkStairs^colour=$t(colour:black)|colouredChalkBricksStairs^colour=$t(colour:yellow)|colouredChalkBricksStairs^colour=$t(colour:white)|colouredChalkBricksStairs^colour=$t(colour:red)|colouredChalkBricksStairs^colour=$t(colour:purple)|colouredChalkBricksStairs^colour=$t(colour:pink)|colouredChalkBricksStairs^colour=$t(colour:orange)|colouredChalkBricksStairs^colour=$t(colour:magenta)|colouredChalkBricksStairs^colour=$t(colour:lime)|colouredChalkBricksStairs^colour=$t(colour:light_gray)|colouredChalkBricksStairs^colour=$t(colour:light_blue)|colouredChalkBricksStairs^colour=$t(colour:green)|colouredChalkBricksStairs^colour=$t(colour:gray)|colouredChalkBricksStairs^colour=$t(colour:cyan)|colouredChalkBricksStairs^colour=$t(colour:brown)|colouredChalkBricksStairs^colour=$t(colour:blue)|colouredChalkBricksStairs^colour=$t(colour:black)|tikiTerrorMobSpawnerBlock|mapleFence|pineFence|plumFence|cedarFence|aspenFence|jungleFence|palmFence|pearFence|cherryFence|spectralFence|mangoFence|noticeboard|mapleFenceGate|pineFenceGate|plumFenceGate|cedarFenceGate|aspenFenceGate|jungleFenceGate|palmFenceGate|pearFenceGate|cherryFenceGate|spectralFenceGate|mangoFenceGate|ironGoofyGolemMobSpawnerBlock|goldGoofyGolemMobSpawnerBlock|diamondGoofyGolemMobSpawnerBlock|moonstoneGoofyGolemMobSpawnerBlock|autoBench|homesteadCore|starframe|reactorFrame|collider|jetChestplate|atomicSpire|fluidPipe|waterPipe|=Artisan Axe|bowlOfCranberries|=Snowball Launcher|=Bullet|rpg|=67 Base Projectile|=67 Boosted Projectile|=Capitano Grenade|=Scatter Pellet|=Compass|=Chunk Map|=Teleport Heart|=Frost Shard|=Molten Cog|=Choir Bell|=Siege Core|=Flywheel|=Radiant Spark|=Brood Sac|=Bandolier|slownessPotionII|splashSlownessPotionII|poisonPotionII|splashPoisonPotionII|weaknessPotionII|splashWeaknessPotionII|instantDamagePotionII|splashInstantDamagePotionII|speedPotionII|splashSpeedPotionII|defensePotionII|splashDefensePotionII|strengthPotionII|splashStrengthPotionII|jumpPotionII|splashJumpPotionII|splashKnockbackPotionII|regenerationPotionII|splashRegenerationPotionII|instantHealingPotionII|splashInstantHealingPotionII|hastePotionII|splashHastePotionII|shieldPotionII|splashShieldPotionII|xRayVisionPotion|splashXRayVisionPotion|arrowOfXRayVision|miningYieldPotionII|splashMiningYieldPotionII|=AK-47|=M16|=MP40|=TAR-21|=M1911|=One Shot Pistol|=Double Barrel|=AWP|=Deagle|=Striker-12|=VSR|=DMR|=Minigun|=FMR|=SKAR|=Block-19|=Mini Izu|=GPMG|yellowPaintballExplosive|whitePaintballExplosive|redPaintballExplosive|purplePaintballExplosive|pinkPaintballExplosive|orangePaintballExplosive|magentaPaintballExplosive|limePaintballExplosive|lightGrayPaintballExplosive|lightBluePaintballExplosive|greenPaintballExplosive|grayPaintballExplosive|cyanPaintballExplosive|brownPaintballExplosive|bluePaintballExplosive|blackPaintballExplosive|yellowStickyPaintballExplosive|whiteStickyPaintballExplosive|redStickyPaintballExplosive|purpleStickyPaintballExplosive|pinkStickyPaintballExplosive|orangeStickyPaintballExplosive|magentaStickyPaintballExplosive|limeStickyPaintballExplosive|lightGrayStickyPaintballExplosive|lightBlueStickyPaintballExplosive|greenStickyPaintballExplosive|grayStickyPaintballExplosive|cyanStickyPaintballExplosive|brownStickyPaintballExplosive|blueStickyPaintballExplosive|blackStickyPaintballExplosive|yellowSeekingPaintballExplosive|whiteSeekingPaintballExplosive|redSeekingPaintballExplosive|purpleSeekingPaintballExplosive|pinkSeekingPaintballExplosive|orangeSeekingPaintballExplosive|magentaSeekingPaintballExplosive|limeSeekingPaintballExplosive|lightGraySeekingPaintballExplosive|lightBlueSeekingPaintballExplosive|greenSeekingPaintballExplosive|graySeekingPaintballExplosive|cyanSeekingPaintballExplosive|brownSeekingPaintballExplosive|blueSeekingPaintballExplosive|blackSeekingPaintballExplosive|yellowQuickPaintballExplosive|whiteQuickPaintballExplosive|redQuickPaintballExplosive|purpleQuickPaintballExplosive|pinkQuickPaintballExplosive|orangeQuickPaintballExplosive|magentaQuickPaintballExplosive|limeQuickPaintballExplosive|lightGrayQuickPaintballExplosive|lightBlueQuickPaintballExplosive|greenQuickPaintballExplosive|grayQuickPaintballExplosive|cyanQuickPaintballExplosive|brownQuickPaintballExplosive|blueQuickPaintballExplosive|blackQuickPaintballExplosive|auraXpPotionII|splashAuraXpPotionII|worldBuilderWand|barnacleJaw|triPointedNeedlefish|cowsMilk|sheepsMilk|[{"str":"Common Lottery Ticket","style":{"color":"#4d4d4d"}}]|[{"str":"Uncommon Lottery Ticket","style":{"color":"#A9FF21"}}]|[{"str":"Rare Lottery Ticket","style":{"color":"#84E0FF"}}]|[{"str":"Epic Lottery Ticket","style":{"color":"#800080"}}]|[{"str":"Legendary Lottery Ticket","style":{"color":"#ffa500"}}]|=Sword Upgrade|=Armour Upgrade|=Tools Upgrade|=Clovers|=Void Wings|=Lucky Bomb|=Unlucky Bomb|=Swap Orb|=Golden Clover|=Amethite|=Amethite Fragment|=Amethite Pickaxe|=Amethite Axe|=Amethite Spade|=Amethite Sword|=Amethite Hoe|=Amethite Helmet|=Amethite Chestplate|=Amethite Leggings|=Amethite Boots|=Amethite Gauntlets|=Amethite Bow|=Amethite Crossbow|=Amethite Crossbow Charged|=Amethite Spear|=Amethite Dagger|=Amethite Boomerang|=Amethite Club|=Amethite Mace|=Amethite Whip|=Magmasteel|=Magmasteel Fragment|=Magmasteel Pickaxe|=Magmasteel Axe|=Magmasteel Spade|=Magmasteel Sword|=Magmasteel Hoe|=Magmasteel Helmet|=Magmasteel Chestplate|=Magmasteel Leggings|=Magmasteel Boots|=Magmasteel Gauntlets|=Magmasteel Bow|=Magmasteel Crossbow|=Magmasteel Crossbow Charged|=Magmasteel Spear|=Magmasteel Dagger|=Magmasteel Boomerang|=Magmasteel Club|=Magmasteel Mace|=Magmasteel Whip|=Rubellite|=Rubellite Fragment|=Rubellite Pickaxe|=Rubellite Axe|=Rubellite Spade|=Rubellite Sword|=Rubellite Hoe|=Rubellite Helmet|=Rubellite Chestplate|=Rubellite Leggings|=Rubellite Boots|=Rubellite Gauntlets|=Rubellite Bow|=Rubellite Crossbow|=Rubellite Crossbow Charged|=Rubellite Spear|=Rubellite Dagger|=Rubellite Boomerang|=Rubellite Club|=Rubellite Mace|=Rubellite Whip|=Serpentite|=Serpentite Fragment|=Serpentite Pickaxe|=Serpentite Axe|=Serpentite Spade|=Serpentite Sword|=Serpentite Hoe|=Serpentite Helmet|=Serpentite Chestplate|=Serpentite Leggings|=Serpentite Boots|=Serpentite Gauntlets|=Serpentite Bow|=Serpentite Crossbow|=Serpentite Crossbow Charged|=Serpentite Spear|=Serpentite Dagger|=Serpentite Boomerang|=Serpentite Club|=Serpentite Mace|=Serpentite Whip|=Cracked Rubellite Pickaxe|depositSeedCopper|depositSeedGold|depositSeedVoltite|depositSeedCoal|depositSeedIron|depositSeedStone|depositSeedUranium', tT),
-      NT = jT("$J$#$&$$F&$23$$J$$$A$$c$$,^'$&H2$$'$$'$$0$*9$$R$#49$$($$&$$%$$$#,C(##$$#$&U)#$#$$($B+#2R$$1#7$%#+$6#$$)$J$O$#*-$1#M1$$a$$&'#%$&)$$4$.&$(;$*%$$$$$#$$#$,Z/$$T&$&V$$$Z-$###$%/V$O$$&2$*5#X$#$V%.$&2$&#$*&$$5$$E$#c2R1$&$$cc$c]$$$R%$*G=$]/=$2:$J5-$b*#G$$,,#%$+##$#4+#+##$+#%$$*$$*$$^%$$#$&#$$#$$#$&#$*#$&#$$#$$'$$^$###%8<#$########[%#$#$7###'#/$###$##/$##%$#D$#A#D$#A#D$#A#D$#A%$$#$*$$##################+$###$##$#$###$##$#$###$##$#$###$##$#$##$#$###$##$#$###$##$#$###$##&#$$#$###$##&#$##$#$###$##$#$###$##$#$###$##$#$###$##&#$&#$&#$$#$###$##&#$&#$2H$$A#B2#A#A#AL%A#A#A#A#b&####################################################################################$2P'$###$##$#$C$##$C$##$$%$$*$$($$#$$6$$%$(E%$$&$F$*$.##-#-#-#-#-#A$+#A###################$###3#4#5#6#74'>#a&#b&#c&#C'#D'#E'$###3#4#5#6#74'>#a&#b&#c&#C'#D'#E'$#Q'#3#4#5#6#74'>#a&#b&#c&#C'#D'#E'$#Q'#3#4#5#6#74'>#a&#b&#c&#C'#D'#E'$1R'#63>#a&#b&#C'#D'#E'#C'$'Q'#63>#a&#b&#C'#D'#E'#C'$'Q'#63>#a&#b&#C'#D'#E'#C'$'R'#63>#a&#b&#C'#D'#E'#C'$,#W&$#######T'#U'#V'#T'#U'#V'#T'#U'#V'#T'#U'#V'#T'#U'#V'#T'#U'#V'#T'#U'#V'#T'#U'#V'#6b$$+#)$", "*|emptyBookshelfDescription|=Prevents other factions from changing blocks and\nopening chests in the placed chunk|spikesDescription|fatMushroomDescription|spawnBlockDescription|teamGeneratorSpawnBlockDescription|goalBlockDescription|enchantingTableDescription|antlersDescription|ceilingClimbableDescription|jumpPadDescription|rocketShipDescription|=Place it to start a 30 second fuse. When it goes off, every placed block on the map is removed. Lucky blocks survive.|fluidPipeDescription|pickaxeDescription|axeDescription|spadeDescription|swordDescription|hoeDescription|throwableItemDescription|=Rapidly fires snowballs!|=The base projectile for the 67 character in Heroes v Brainrots|=The boosted projectile for the 67 character in Heroes v Brainrots|=A small explosive grenade thrown by Capitano Explovissimo in Heroes v Brainrots|=Primary spread shot from Scatter in Heroes v Brainrots|bowDescription|compassDescription|=Drop into any locked chunk to instantly unlock it.|foodDescription|watermelonSliceDescription|melonSliceDescription|rawFoodDescription|=The still-beating core of a Blink. Salvaged from a Warp Stalker.|=A splinter of cryogenic shell that never melts. Salvaged from a Frost Revenant.|=A gear from an overload mechanism, seized mid-cycle. Salvaged from a Magma Warden.|=The toll that calls the dead. Salvaged from a Hollow Choir.|=The firing heart of a barrage. Salvaged from a Siege Engine.|=The wheel a room-mill spins around. Salvaged from a Carousel.|=A mote of the failure state itself. Salvaged from Breach Zero.|=A sac filled with an acidic bile. Still full. Salvaged from a Broodfather.|=Her charge belt. Three still on it, and nobody has volunteered to count again. Salvaged from a Deadlock.|slownessPotionDescription|splashSlownessPotionDescription|poisonPotionDescription|splashPoisonPotionDescription|weaknessPotionDescription|splashWeaknessPotionDescription|instantDamagePotionDescription|splashInstantDamagePotionDescription|milkPotionDescription|speedPotionDescription|splashSpeedPotionDescription|defensePotionDescription|splashDefensePotionDescription|strengthPotionDescription|splashStrengthPotionDescription|jumpPotionDescription|splashJumpPotionDescription|splashKnockbackPotionDescription|regenerationPotionDescription|splashRegenerationPotionDescription|instantHealingPotionDescription|splashInstantHealingPotionDescription|hastePotionDescription|splashHastePotionDescription|shieldPotionDescription|splashShieldPotionDescription|miningYieldPotionDescription|splashMiningYieldPotionDescription|balloonDescription|popupTowerDescription|paintballGunDescription|paintballDescription|paintballExplosiveDescription|stickyPaintballExplosiveDescription|seekingPaintballExplosiveDescription|quickPaintballExplosiveDescription|paintBowDescription|pigSpawnOrbDescription^mob=Pig|cowSpawnOrbDescription^mob=Cow|sheepSpawnOrbDescription^mob=Sheep|horseSpawnOrbDescription^mob=Horse|camelSpawnOrbDescription^mob=Camel|ironGoofyGolemSpawnOrbDescription^mob=Iron Goofy Golem|goldGoofyGolemSpawnOrbDescription^mob=Gold Goofy Golem|diamondGoofyGolemSpawnOrbDescription^mob=Diamond Goofy Golem|moonstoneGoofyGolemSpawnOrbDescription^mob=Moonstone Goofy Golem|deerSpawnOrbDescription^mob=Deer|slimeSpawnOrbDescription^mob=Slime|wolfSpawnOrbDescription^mob=Wolf|wildcatSpawnOrbDescription^mob=Wildcat|spiritGolemSpawnOrbDescription^mob=Spirit Golem|spiritWolfSpawnOrbDescription^mob=Spirit Wolf|spiritBearSpawnOrbDescription^mob=Spirit Bear|spiritStagSpawnOrbDescription^mob=Spirit Stag|spiritGorillaSpawnOrbDescription^mob=Spirit Gorilla|bearSpawnOrbDescription^mob=Bear|stagSpawnOrbDescription^mob=Stag|goldWatermelonStagSpawnOrbDescription^mob=Gold Watermelon Stag|gorillaSpawnOrbDescription^mob=Gorilla|caveGolemSpawnOrbDescription^mob=Cave Golem|draugrZombieSpawnOrbDescription^mob=Draugr Zombie|draugrSkeletonSpawnOrbDescription^mob=Draugr Skeleton|frostGolemSpawnOrbDescription^mob=Frost Golem|frostZombieSpawnOrbDescription^mob=Frost Zombie|frostSkeletonSpawnOrbDescription^mob=Frost Skeleton|draugrKnightSpawnOrbDescription^mob=Draugr Knight|draugrHuntressSpawnOrbDescription^mob=Draugr Huntress|magmaGolemSpawnOrbDescription^mob=Magma Golem|draugrWarperSpawnOrbDescription^mob=Draugr Warper|frostWraithSpawnOrbDescription^mob=Frost Wraith|draugrReaverSpawnOrbDescription^mob=Draugr Reaver|stalkerSpawnOrbDescription^mob=Stalker|croneSpawnOrbDescription^mob=Crone|ironGuardianSpawnOrbDescription^mob=Iron Guardian|goldGuardianSpawnOrbDescription^mob=Gold Guardian|diamondGuardianSpawnOrbDescription^mob=Diamond Guardian|moonstoneGuardianSpawnOrbDescription^mob=Moonstone Guardian|tikiTerrorSpawnOrbDescription^mob=Tiki Terror|auraXpPotionDescription|splashAuraXpPotionDescription|firecrackerDescription|firecrackerPebbleDescription|spearDescription|daggerDescription|boomerangDescription|clubDescription|maceDescription|whipDescription|=Take it to the Lottery stall in the spawn hub to redeem it for a reward.|clockDescription|=Use to permanently advance your Sword tier for this match. Share spare upgrades with your team.|=Use to permanently advance your Armour tier for this match. Share spare upgrades with your team.|=Use to permanently advance your Pickaxe and Axe tier for this match. Share spare upgrades with your team.|=Earned from lucky blocks, kills and beds. Spend them at your base's Lucky Trader and Lucky Upgrades.|=Keep one in your inventory. Falling into the void uses it up and puts you back on solid ground.|=A random lucky effect for everyone it splashes, you included. Usually good!|=A random unlucky effect for everyone it splashes, you included. Usually bad!|=Throw near an enemy or mob to swap places with them.|=A shiny golden four-leaf clover.|elementalShardDescription|forgeFragmentDescription|=Ruby calls it cracked, not beaten. A sturdy pickaxe ready for the stubborn stone in her mine.|swordBladeDescription|swordGuardDescription|swordHandleDescription|cagedMobDescription", tT),
-      QT = new Map,
-      ST = new Map;
-    let DT = -1;
-
-    function aT(TT, kT, cT) {
-      DT !== (0, xT.k)() && (DT = (0, xT.k)(), QT.clear(), ST.clear());
-      let lT = TT.get(kT);
-      return void 0 === lT && (lT = cT(), void 0 !== lT && TT.set(kT, lT)), lT
-    }
-    const FT = jT("_$QN+###Y$#b'#%$=%/#I'%##7%))+%[%(#%9##%)(#%9(#%?(I$%'('%%('%%('%%('%#(%%%('%%('%%('%#(%%%('%#('%%('%%('%%('%%('%#(%%#(%%#(%%%('%#(%%%(#%I%##%%)M&%A)A%A)b&%b&(Q.%)(#%)(W%%#(1%#(-%#(#%#(Q$%#(G(%/(#%1('%I%$b%%+$+&3(-$%%+$+&3(-$%%+$+&3(-$%%+$+&3(-$?&#%#$3(-$+&#%#$3(-$+&#%#$3(-$+&#%#$3(-$+&+%#$;%#$I$%#$1%#$5%+&W$%#$O$%/&#$-%#$'%", "Tool|Item|Armour|GrayscaleArmour|Chargeable|FullAuto|Directional|Gun", vT),
-      rT = jT("J,##O$##$#%/$#%/$#%/$-%9$1%#$)%A$#%b&$1%-$[+%S%$%%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%9$M2#+%-$#%/$#%/$#%/$#%%$-&/$-%+$9%3$-%E$$b%%I%$A%#$%%=$b(&-$-&#%/$#%/$#%/$#%%$-&)%'$-%#$7%M'$E+%#$%%#$?%K)$5%#$-&#%%$#%+$#%/$#%/$#%/$#%%$-&Q$%#$-&'%#$C$%C%$b.&1%#$-&'%+$#%/$#%/$#%/$#%%$-&)%%$5%/$%%E$$O%%%$#%-$#%#$#%#$^<%#$b)%#$+%)$1%)$1%)$)%%$G*%#$I1%A$+%O$$#%#$A%)$U%%#$b%%A$E%%#$#%%$I$%'$5%%$#%#$-&U$%I$$bO$#)$bV('CQ$%+$Y/%G%$1&;$1&I($)&=$A&U%$#%#$-%1$7%^)$Y$&=$b&%1$b&%)$b*%5$)%+$5%^$###Y$#b'#%(=)/#I')##7))-+)[%,#)9##)),#)9,#)?,I$)',')%,')%,')%,')#,%)%,')%,')%,')#,%)%,')#,')%,')%,')%,')%,')#,%)#,%)#,%)%,')#,%)%,#)I%##)%-M&)A-A)A-b&)b&,Q.)),#)),W%)#,1)#,-)#,#)#,Q$)#,G()/,#)1,')I%(b%)+(+*3,-(%)+(+*3,-(%)+(+*3,-(%)+(+*3,-(?*#)#(3,-(+*#)#(3,-(+*#)#(3,-(+*#)#(3,-(+*+)#(;)#(I$)#(1)#(5)+*W$)#(O$)/*#(-)#(')", "CubeBlock|TwoDBlock|SlabBlock|StairsBlock|TwoDTool|TwoDItem|TwoDArmour|GrayscaleTwoDArmour|Chargeable|FullAuto|Directional|Gun", vT),
-      PT = jT(".W]+#%#%#%#%#%#%#%#%%%#%#%#%%%#%#%#", "30|20|16|1|2|5|7|12|8|100|21|24|22|75", Number),
-      wT = jT("&PO+#####%####################$#%#,#%#####,%&#)#,#.#%#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1$bC$'#*#/#,#&$8'#*#/#,#&$8'#*#/#,#&$8'#*#/#,#&$1'#*#&#/#,#'#*#&#/#,#'#*#&#/#,$3'#*#&#/#,$3'#*#&#/#,$3'#*#&#/#,$3'#*#&#/#,$_$-#######&$U$######7#'#)#4", "0.07|0.09|0.11|0.13|0.18|0.21|0.24|0.22|0.1|0.14|0.16|0.19|0.05|0.06|0.08|0.25|0.12|0.2|0|0.27|0.15", Number),
-      mT = jT(">W]+#%#)$)%9$", "none|sniper", vT),
-      bT = jT("*W]+#%#%#%#%$%#)&%(%%%$%%)$)'%&", "semi_automatic|submachine|rifle|pistol|shotgun", vT),
-      zT = CT("]%LV+#c&M.$4_1$44$44$44$49$4/$4/$4/$"),
-      JT = CT("$a&#$9$Z$K?$&;$$[($(c($6Y&$$)$$$$&G%$*$$$*$(V*$Z$V$$$#$$#$&+$$#$$%$$$$$$$$$$&$$$#$$($,E0$$T&$&V$$D$`-$(%$6*$$%$T$M$$$L%$6;$$$$$2$$W:$*D^%$$N%$BB$BB$BB$BB$BB$BB$BB$BB$BB$BB$BB$2O'$2*$2*$2*$2*$2*$2*$2*$2*$2*$:*$0=$&^$$$N$$(Q$$$]$$.#$&6$$K%$:.$*I$$*&$*S+$6,$"),
-      oT = jT("$DO+#######%#$ZD$$#%#&#'%(#$#%#&#'%(#$#%#&#'%(#$#%#&#'%(#$#%#&#'%(#$#%#&#'%($U$(.1($'(.1($'(.1($'(.1($2(.+($((.+($((.+($((.+($C&($@$", "1|2|3|4|5", (TT => "" === TT ? null : Number(TT))),
-      HT = jT("$F(#$%$$&#$)%$)%$0$$,$$%$$&$$6$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$@$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$'$$I$%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$.#$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$2%$)%$)%$,&$.$$.$$'$$&$$%$$'$$7$$%$$%$$%$$%$$%$$%$$%$$5#$%#$9#$J$&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$-&$'%$)%$)%$,&$'$$:$$G%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$B<$$R$$$%$$-$$%$$;&$0%$)%$)%$,&$'$$%$$%$$%$$%$$%$$&&$/$$%$$&$$F$&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'$$%$$&&$/%$)%$)%$,&$'$$)$$N%$$,&$%#$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$;$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$'$$%$$%$$%$$%$$%$$%$$%$$%$$'$$X$&$%*$5&$%*$I$$$&$$&$$&$$&$$6$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$&$$%$$*&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$U$&$'&$'$$)#$7$$%$$%$$%$$%$$?+$8$$%$$%$$%$$%+$7#$'#$+$$%$$%$$%$$%$$6&$'&$&$$&$$%$$%$$%$$9&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$Q^%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$V3$$b$$$F%%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$-$$%$$%$$%$$%$$%$$0$$%$$%$$%$$%$$%$$%$$%$$&$$%$$%$$%$$%$$P$$$*$$)$$)$$)$$)$$&$$>$$+$$)$$A$$8$$)$$)$$)$$)$$*$$B$$,$$%$$%$$%$$%$$&$$-$$?+$b$$$)+$O)$0O(#$[%.$%.$%.$%.$%.$%.$%.$%.$%.$%.$+#*..:#.@#.,6.*#.&#.&%.$%.($.&$.&%.$%.&$.$%.&%.&%.&%.&%.$%.$$.$$.&$.$%.&$.$P).$%.$%.$%.$%.$%.$%.$%.$%.$%.$%.$%.$%.$%.$%.$%.$^(.*&.$M$.$*.$(.$#.$:.0U%.2#.$C&.$%.$8.$%.$8.$%.$8.$%.$=.$%.$3.$%.$3.$%.$3.$%.", "meta,rot1|meta,rot1,closed|meta,rot1,bot|meta,rot1,books6|meta,rot1,books0|meta,rot1,empty|meta,rot1,top|meta,conn,none|meta,input,none|meta,output,none|meta,charging1|meta,dir1", (TT => TT.split(IT.o).join(IT.s))),
-      eT = jT(",QN+####$/#+#+###+#4####1+##S(+$$#2A#$H%#$%0$%0$%0$%0$%0$%0$%0$%0$%0$U.0$%0$%0$%0$%0$%0$%0$%0$%0$%0$%0$%0$%0$%0$%0$%0:C/(:.($R$$#&#'#(#*++#0$%0&&(&$($$$#&#'#(#*++#0$%0&&(&$($$$#&#'#(#*++#0$%0&&(&$($$$#&#'#(#*++#0$%0&&(&$(?+$#(#0$%0&&(&#(,#+$#(#0$%0&&(&#(,#+$#(#0$%0&&(&#(,#+$#(#0$%0&&(&#(,#+$'$,X$+$=(09+", "Break Speed,Momentum,Mining Yield,Mining Aura|Break Speed,Momentum|Break Speed,Momentum,Lumber Aura|Break Speed,Momentum,Digging Aura|Damage,Attack Speed,Critical Damage|Damage,Attack Speed,Critical Damage,Horizontal Knockback|Break Speed,Momentum,Farming Yield,Farming Aura|Protection,Health,Health Regen|Protection,Health,Health Regen,Knockback Resist|Protection,Health,Health Regen,Stomp Damage|Horizontal Knockback,Vertical Knockback,Damage|Firecracker Cooldown,Firecracker Boost,Gliding Speed|Arrow Speed,Arrow Damage,Quick Charge", (TT => Object.freeze(TT.split(",")))),
-      GT = jT(",$#0#$-#-$&#%2#%(#$$$$'%B$##%b$&)$$#$#%A&$&#)%,$%#$#%$&%###%:#$$$$##$%)$%%#)$1).)$$#)$))%$#)$%$$&)B%&#)#&$%&$%&$%&$%&$%&$%&$%&$%&$%&$%&$%&$%&$%&$%&$%&$%$$'$&#$$%%$/)$))$))$))$))$))$))$))$))$))$))$))$))$))$))$))&)$#)$%%#$,#%2%%($$$*$$#%#$#)$1)$1)$1)$1)$1)$1)$))$))$))$))$))$)$#%%$$#$$'%$'%$'%$'%$'%$'%$'%$'$$'$$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%(-$#%#$#)$1)$)$$$%$'$-%##*%$$%$$'$$'$#%$%%$%$$'$B#&#)$%)$%)$%)$%)$%)$%)$%)B%*#)$%)$9)$)$$($($$$%)#$&$$$-&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&&($$#%%$$')$1)$)$$$%$')$%$.$)%$$R%)$))$))$))$))$))$))$))$))$))$))$))$))$))$))$))*,$$0'B#'$R$)$%'4%'$%'6%'#%5#%%$'+#$#%'$$#%#$#)$1)$)$$$%$')$%)$%)$%)$%)$%)&%$*'$)+#*$%*$%+#)$%%C%&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$')&)$$'$(#$$#%#$#)$1)$)$$$%$')(%$$'*#$%+/$%+-)6#)#%#+$H$$$#$#).&$#*$9*$9*$9*$9*$9*$9*$9*$9*$9*$9*$9*$9*$9*$9*$9*$9*,9+$+*$1*$1*$1*$1*$1*$1*$*+&F$)#*$%*$$*$$*&%+#*$$*$$*$$*$$*$$*$$*$$*$$*$$*$$*$$*$$*$$*$9*$E$)$)*$&*$&*$&*$&*$6*$%*$%*$%*$%*$%*$%*$%*$%*$%*$%*$%*$%*$%*$%*$%*$3*$'*$'*$'*$'*$'*$'*$'*$'*$'*$'*$'*$'*$'*$'*$'*$'*B'&+)C$'$$)$&)#$$'$$'*(%$$Q'+$:%%+*&+'$$#$$'*$&$$%+$**$=%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$+$$K_%*$I$+#*$Q$*$Q$*$Q$*$Q$*$Q$*$Q$*$Q$*$Q$*$Q$*$Q$*$Q$*$F'*$1*$1*$1*$1*$1*$1*$1*$1*$1*$1**1+&:%#$.Q)%$+%<]1#,#,-(-,Y)(#,8##&#-*%##-*#,$#,$#,$#,$#,$#,$#,$#,B#,$2,,#,$',$#(&#(4#((#($&($%($%($%($%($%($%($%($%($%($*(#,@..D$#.'-%+'-$++%-+.#().#().#().#(%.#().#().#().#(%.#().#('.#().#().#().#().#(%.#(%.#(%.#().#(%.#(#.&#($#($#($#($#($%($#($#($#($#($#($#($#($#($#($#($#($#-%(#,#(B&,V%R)+.U'.K%((#-#.1-#.--#.#-#.Q$-#.G'-',$&,0*.#(1.#(#-,#(,#(,#(,#(,#(,#($8,$),&2-',#(#,-($%(.&(%-',#(#,-($%(.&(%-',#(#,-($%(.&(%-',#(#,-($%(L$&(#-%($%(8&(#-%($%(8&(#-%($%(8&(#-%($%(8&(+-", "nature|building|colours|worldTools|combat|utility|decoration|mobs|tools|materials|food", vT),
-      VT = jT("$b&#$R)#$)%$)%$)%$)%$1%$)%$)%$)%$)%$)%$)%$)%$)%$)%$_7%$'%$'%$'%$'%$'%$'%$-%$'%$'%$'%$'%$'%$'%$'%$a$#$T%%$)%$)%$)%$)%$1%$)%$)%$)%$)%$)%$)%$)%$)%$)%$>#B#'$V$&4%'$%'6%'$)#$b%#$%)$G$%$'%$'%$'%$'%$'%$'%$-%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$-%$'%$'%$'%$'%$'%$'%$'%$`'%$9%$9%$9%$9%$Q$%$9%$9%$9%$9%$9%$9%$9%$9%$9%$9%&U(&$&%$$%$$%$'%$$%$$%$$%$'%$$%$$%$$%$$%$$%$$%$$%$$%$9%$E$&D$[*$$$&$&&$P5%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%*CZ&)c'Q;%&N$%<#%(G$&$%&&#&&Q)&$#&$#&$#&$#&$%&$#&$#&$#&$#&$#&$#&$#&$#&$#&$#&$#&&,%<#%*W))$-)BS(%B$%", "6|2|8|10|17|9", Number);
-
-    function ET(TT) {
-      const kT = hT(TT);
-      return null !== kT ? kT : aT(QT, TT, (() => {
-        const kT = (0, xT.i)(TT);
-        return void 0 === kT ? void 0 : (0, IT.G)(kT)
-      }))
-    }
-
-    function ZT(TT) {
-      const kT = NT(TT);
-      return null !== kT ? kT : aT(ST, TT, (() => {
-        var kT;
-        return null !== (kT = (0, IT.F)(ET(TT))) && void 0 !== kT ? kT : void 0
-      }))
-    }
-
-    function uT(TT) {
-      return FT(TT)
-    }
-
-    function XT(TT) {
-      return rT(TT)
-    }
-
-    function dT(TT) {
-      return PT(TT)
-    }
-
-    function LT(TT) {
-      return wT(TT)
-    }
-
-    function RT(TT) {
-      return mT(TT)
-    }
-
-    function gT(TT) {
-      return bT(TT)
-    }
-
-    function UT(TT) {
-      return 0 !== JT(TT)
-    }
-
-    function YT(TT) {
-      return oT(TT)
-    }
-
-    function BT(TT) {
-      return 0 !== zT(TT)
-    }
-
-    function WT(TT) {
-      const kT = HT(TT);
-      if (void 0 === kT || kT.startsWith(IT.p)) return null === kT || void 0 === kT ? void 0 : kT.slice(IT.p.length);
-      const cT = (0, xT.i)(TT);
-      return void 0 === cT ? void 0 : `${cT}${IT.s}${kT}`
-    }
-
-    function nT(TT) {
-      var kT;
-      return null !== (kT = eT(TT)) && void 0 !== kT ? kT : AT
-    }
-    let pT = null;
-
-    function iT() {
-      if (null === pT) {
-        const TT = [],
-          kT = new IT.v(MT);
-        let cT = 0;
-        for (; !kT.done;) cT += (0, IT.J)(kT.next()), TT.push(cT);
-        pT = Object.freeze(TT)
-      }
-      return pT
-    }
-
-    function qT(TT) {
-      return GT(TT)
-    }
-
-    function sT(TT, kT) {
-      var cT;
-      return 0 !== ((null !== (cT = VT(TT)) && void 0 !== cT ? cT : 0) & kT)
-    }
-
-    function Tk(TT) {
-      return sT(TT, IT.d.OnlyInSearch)
-    }
-
-    function kk(TT) {
-      return sT(TT, IT.d.OnlyInCategory)
-    }
-
-    function ck(TT) {
-      return sT(TT, IT.d.DevOnly)
-    }
-
-    function lk(TT) {
-      return !sT(TT, IT.d.HiddenByDefault) && void 0
-    }
-
-    function Mk(TT, kT, cT, lT) {
-      var MT;
-      const KT = null !== (MT = VT(TT)) && void 0 !== MT ? MT : 0;
-      return 0 !== (KT & IT.d.DisabledInPublicLobbies) && kT || 0 !== (KT & IT.d.DisabledInProduction) && !0 || !cT || !lT && 0 !== (KT & IT.d.DevOnly)
-    }
-    let Kk = null;
-
-    function Ok() {
-      if (null === Kk) {
-        const TT = OT.split(IT.s),
-          kT = new Map,
-          cT = new IT.v(KT);
-        let lT = 0,
-          MT = 0;
-        for (; !cT.done;) {
-          lT += (0, IT.J)(cT.next());
-          const KT = cT.next();
-          kT.set(lT, Object.freeze(TT.slice(MT, MT + KT))), MT += KT
+      unbind(qq) {
+        for (var Eq in this._keyBindmap) {
+          var gq = this._keyBindmap[Eq],
+            Yq = gq.indexOf(qq);
+          Yq > -1 && gq.splice(Yq, 1)
         }
-        Kk = kT
       }
-      return Kk
+      getBindings() {
+        var qq = {};
+        for (var Eq in this._keyBindmap) {
+          this._keyBindmap[Eq].forEach((gq => {
+            qq[gq] = qq[gq] || [], qq[gq].push(Eq)
+          }))
+        }
+        return qq
+      }
+      SB() {
+        Aq(this.lC), Aq(this.pressCount), Aq(this.releaseCount)
+      }
     }
+
+    function Aq(qq) {
+      for (var Eq in qq) qq[Eq] = 0
+    }
+
+    function cq(qq) {
+      window.addEventListener("keydown", dq.bind(null, qq, !0), !1), window.addEventListener("keyup", dq.bind(null, qq, !1), !1);
+      var Eq = {
+        passive: !0
+      };
+      qq.element.addEventListener("touchstart", Nq.bind(void 0, qq), {
+        passive: !1
+      }), qq.element.addEventListener("touchend", Vq.bind(void 0, qq), Eq), qq.element.addEventListener("mousedown", jq.bind(null, qq, !0), Eq), window.document.addEventListener("mouseup", jq.bind(null, qq, !1), Eq), qq.element.addEventListener("touchmove", Hq.bind(null, qq), Eq), qq.element.addEventListener("mousemove", Hq.bind(null, qq), Eq), window.PointerEvent, qq.element.addEventListener("wheel", oq.bind(null, qq), Eq), qq.element.addEventListener("contextmenu", Pq.bind(null, qq), !1), window.addEventListener("blur", tq.bind(null, qq), !1)
+    }
+    var uq = 0,
+      Bq = 0,
+      Wq = null;
+
+    function Nq(qq, Eq) {
+      Eq.preventDefault(), aq(Eq)
+    }
+
+    function aq(qq) {
+      let Eq = !1;
+      for (let gq = 0; gq < qq.touches.length; ++gq)
+        if (qq.touches[gq].identifier === Wq) {
+          Eq = !0;
+          break
+        } if (!Eq) {
+        const Eq = qq.changedTouches[0];
+        uq = Eq.clientX, Bq = Eq.clientY, Wq = Eq.identifier
+      }
+    }
+
+    function Vq(qq, Eq) {
+      for (var gq = Eq.changedTouches, Yq = 0; Yq < gq.length; ++Yq) gq[Yq].identifier === Wq && (Wq = null)
+    }
+
+    function dq(qq, Eq, gq) {
+      if (!qq.ignoreEvent(gq)) try {
+        rq(qq, gq), Eq && gq.isTrusted && !gq.repeat && qq._keyStates[gq.code] && vq(qq, gq.code)
+      } finally {
+        hq(gq.code, Eq, qq, gq)
+      }
+    }
+
+    function jq(qq, Eq, gq) {
+      if (!qq.ignoreEvent(gq)) try {
+        rq(qq, gq)
+      } finally {
+        ! function(qq, Eq, gq) {
+          if ("pointerId" in gq)
+            if (Eq) {
+              if (null !== qq._touches.currID) return;
+              qq._touches.currID = gq.pointerId
+            } else {
+              if (qq._touches.currID !== gq.pointerId) return;
+              qq._touches.currID = null
+            } var Yq = "button" in gq ? gq.button + 1 : 1;
+          hq("Mouse" + Yq, Eq, qq, gq)
+        }(qq, Eq, gq)
+      }
+    }
+
+    function Hq(qq, Eq) {
+      var gq = Eq.movementX || Eq.mozMovementX || 0,
+        Yq = Eq.movementY || Eq.mozMovementY || 0;
+      if (Eq.touches && 0 === (gq | Yq)) {
+        var lq = function(qq) {
+          aq(qq);
+          for (let Eq = 0; Eq < qq.changedTouches.length; ++Eq)
+            if (qq.changedTouches[Eq].identifier == Wq) {
+              const gq = qq.changedTouches[Eq],
+                Yq = [gq.clientX - uq, gq.clientY - Bq];
+              return uq = gq.clientX, Bq = gq.clientY, Yq
+            } return console.error(`Did not find touch id ${Wq}`), [0, 0]
+        }(Eq);
+        gq = lq[0], Yq = lq[1]
+      }
+      qq.lC.dx += gq, qq.lC.dy += Yq
+    }
+
+    function oq(qq, Eq) {
+      rq(qq, Eq);
+      var gq = 1;
+      switch (Eq.deltaMode) {
+        case 0:
+          gq = 1;
+          break;
+        case 1:
+          gq = 12;
+          break;
+        case 2:
+          gq = qq.element.clientHeight || window.innerHeight
+      }
+      qq.lC.hEq += (Eq.deltaX || 0) * gq, qq.lC.nEq += (Eq.deltaY || 0) * gq, qq.lC.bEq += (Eq.deltaZ || 0) * gq
+    }
+
+    function Pq(qq, Eq) {
+      if (!qq.gC) return Eq.preventDefault(), !1
+    }
+    var Qq = {
+      AltLeft: "altKey",
+      AltRight: "altKey",
+      ControlLeft: "ctrlKey",
+      ControlRight: "ctrlKey",
+      ShiftLeft: "shiftKey",
+      ShiftRight: "shiftKey",
+      MetaLeft: "metaKey",
+      MetaRight: "metaKey"
+    };
+
+    function yq(qq, Eq) {
+      return !!qq[Qq[Eq]] || ("AltRight" === Eq || "ControlLeft" === Eq) && "function" === typeof qq.getModifierState && !0 === qq.getModifierState("AltGraph")
+    }
+
+    function tq(qq, Eq) {
+      for (var gq in qq._modifiersHeldThroughBlur = {}, Qq) qq._keyStates[gq] && (qq._modifiersHeldThroughBlur[gq] = !0);
+      Eq && Eq.isTrusted && function() {
+        try {
+          return window.self !== window.top
+        } catch (qq) {
+          return !0
+        }
+      }() && (clearTimeout(qq._blurRelease), qq._blurRelease = setTimeout((function() {
+        if (!document.hasFocus())
+          for (var Eq in qq._modifiersHeldThroughBlur = {}, qq._keyStates) qq._keyStates[Eq] && !/^Mouse\d/.test(Eq) && vq(qq, Eq)
+      }), 0))
+    }
+
+    function rq(qq, Eq) {
+      var gq = qq._modifiersHeldThroughBlur;
+      if (gq && Eq.isTrusted && document.hasFocus())
+        for (var Yq in gq) delete gq[Yq], qq._keyStates[Yq] && Yq !== Eq.code && (yq(Eq, Yq) || vq(qq, Yq))
+    }
+
+    function vq(qq, Eq) {
+      const gq = {
+          code: Eq,
+          preventDefault: () => {},
+          stopPropagation: () => {}
+        },
+        Yq = lq;
+      lq = gq;
+      try {
+        hq(Eq, !1, qq, gq)
+      } finally {
+        lq = Yq
+      }
+    }
+
+    function hq(qq, Eq, gq, Yq) {
+      var lq = gq._keyBindmap[qq];
+      lq && (nq(gq._keyStates[qq], Eq) && (gq._keyStates[qq] = Eq, lq.forEach((qq => {
+        (!gq.filterEvents || gq.filterEvents(Yq, qq)) && function(qq, Eq, gq, Yq) {
+          var lq = Eq ? gq.pressCount : gq.releaseCount;
+          lq[qq] = (lq[qq] || 0) + 1;
+          var Oq = gq._bindPressCount[qq] || 0;
+          (Oq += Eq ? 1 : -1) < 0 && (Oq = 0);
+          gq._bindPressCount[qq] = Oq;
+          var mq = gq.state[qq];
+          if (nq(mq, Oq)) {
+            gq.state[qq] = Oq > 0;
+            var xq = Eq ? gq.down : gq.up;
+            gq.disabled || xq.emit(qq, Yq)
+          }
+        }(qq, Eq, gq, Yq)
+      }))), "button" in Yq || (gq.IK && !Yq.defaultPrevented && Yq.preventDefault(), gq.stopPropagation && Yq.stopPropagation()))
+    }
+
+    function nq(qq, Eq) {
+      return qq ? !Eq : Eq
+    }
+  },
+  36734: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => Vq,
+      e: () => dq
+    });
+    var Yq = gq(57),
+      lq = gq(1416),
+      Oq = gq(1942),
+      mq = gq(36681),
+      xq = gq(598),
+      Aq = gq(1018),
+      cq = gq.n(Aq),
+      uq = gq(1070);
+    const Bq = [Wq()];
+
+    function Wq() {
+      return {
+        source: null,
+        direction: null,
+        mF: null,
+        timeout: void 0,
+        writtenAngle: null
+      }
+    }
+
+    function Nq(qq) {
+      return Bq.find((Eq => null !== Eq.source && Eq.source === qq))
+    }
+
+    function aq(qq) {
+      clearTimeout(qq.timeout), qq.source = null, qq.direction = null, qq.writtenAngle = null, qq.mF && (qq.mF.style.rotate = "")
+    }
+    const Vq = (0, Yq.memo)((function() {
+      const [, qq] = (0, Yq.useReducer)((qq => qq + 1), 0);
+      return (0, lq.f)("damagedByOtherPlayer", (Eq => {
+        let {
+          jY: gq,
+          direction: Yq
+        } = Eq;
+        const lq = gq || "nonDirectional",
+          Oq = function(qq) {
+            var Eq;
+            const gq = null !== (Eq = Nq(qq)) && void 0 !== Eq ? Eq : Bq.find((qq => null === qq.source));
+            if (gq) return gq;
+            const Yq = {
+              source: null,
+              direction: null,
+              mF: null,
+              timeout: void 0,
+              writtenAngle: null
+            };
+            return Bq.push(Yq), Yq
+          }(lq);
+        clearTimeout(Oq.timeout), Oq.source = lq, Oq.direction = Yq, Oq.timeout = setTimeout((() => {
+          aq(Oq), qq()
+        }), 800), qq()
+      })), (0, Oq.d)("kill", (Eq => {
+        let {
+          killer: gq,
+          victim: Yq
+        } = Eq;
+        const lq = gq.local && Nq(Yq.id);
+        lq && (aq(lq), qq())
+      })), (0, Yq.useEffect)((() => {
+        const qq = (0, mq.h)("turnDamageIndicators", dq);
+        return () => {
+          qq(), Bq.forEach(aq)
+        }
+      }), []), (0, uq.jsx)("div", {
+        className: "DirectionalDamage",
+        children: Bq.map(((qq, Eq) => (0, uq.jsx)("div", {
+          ref: Eq => {
+            qq.mF = Eq
+          },
+          className: cq()("DamageIndicator", {
+            DamageIndicatorFullCircle: (0, xq.H)(qq.direction),
+            DamageIndicatorIdle: null === qq.source
+          })
+        }, Eq)))
+      })
+    }));
+
+    function dq(qq) {
+      for (const Eq of Bq) {
+        if (null === Eq.source || (0, xq.H)(Eq.direction)) continue;
+        const gq = Eq.direction - qq;
+        gq !== Eq.writtenAngle && (Eq.writtenAngle = gq, Eq.mF.style.rotate = `${gq}rad`)
+      }
+    }
+  },
+  36543: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => lq,
+      h: () => Oq
+    });
+    let Yq = !1;
+
+    function lq() {
+      return Yq
+    }
+
+    function Oq(qq) {
+      return Yq !== qq && (Yq = qq, !0)
+    }
+  },
+  9207: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => Oq,
+      d: () => lq
+    });
+    var Yq = gq(24);
+
+    function lq(qq, Eq) {
+      return qq && !Eq
+    }
+
+    function Oq() {
+      return lq(Yq.b.get("isTouchScreen"), Yq.b.get("clientEscMenuOptions").touchActionButtons)
+    }
+  },
+  40400: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      startPadGameplay: () => Qq
+    });
+    gq(40293);
+    var Yq = gq(40295),
+      lq = gq(3595),
+      Oq = gq(24),
+      mq = gq(39021),
+      xq = gq(3545),
+      Aq = gq(39040),
+      cq = gq(31),
+      uq = gq(2668),
+      Bq = gq(38420),
+      Wq = gq(8826),
+      Nq = gq(40301);
+    const aq = {
+      yawRadPerSec: 0,
+      pitchRadPerSec: 0
+    };
+    var Vq = gq(40314),
+      dq = gq(8803),
+      jq = gq(39056);
+    const Hq = qq => qq.padSneakToggled || !!Oq.b.get("clientEscMenuOptions").crouchIsToggle && qq.crouchToggled,
+      oq = () => {
+        const qq = (() => {
+          const qq = (0, Wq.b)();
+          let Eq = aq;
+          const gq = new Nq.d;
+          let Yq = !1,
+            lq = 0;
+          const Oq = () => {
+            const gq = performance.now(),
+              Oq = 0 === lq ? 0 : gq - lq;
+            if (lq = gq, !Yq) return qq.discardPending(), null;
+            const mq = (0, Nq.m)(Eq, Oq),
+              xq = qq.drainLookDelta(),
+              Aq = (0, Bq.i)();
+            return {
+              VJ: (mq.VJ + xq.VJ) * Aq,
+              dJ: (mq.dJ + xq.dJ) * Aq
+            }
+          };
+          return {
+            update: (qq, lq, mq, xq) => {
+              qq.camera.uD !== Oq && (qq.camera.uD = Oq), Yq = !0, Eq = (0, Nq.o)(gq, lq, mq, xq, performance.now())
+            },
+            release: () => {
+              Yq = !1, Eq = aq, gq.reset()
+            },
+            uninstall: qq => {
+              qq.camera.uD === Oq && (qq.camera.uD = null)
+            }
+          }
+        })();
+        return {
+          update: (Eq, gq, Yq) => {
+            qq.update((0, uq.e)(), Eq, gq, Yq)
+          },
+          release: qq.release,
+          uninstall: () => {
+            const Eq = (0, uq.e)();
+            Eq && qq.uninstall(Eq)
+          }
+        }
+      };
+    var Pq = gq(40309);
+    gq(37686), gq(8686);
+    gq(8704).b;
+    const Qq = () => {
+      const qq = (0, Pq.d)((() => {
+          const qq = {
+            x: 0,
+            y: 0,
+            magnitude: 0,
+            headingOffset: 0,
+            jumpHeld: !1,
+            jumpPressedSinceTick: !1,
+            crouchHeld: !1,
+            running: !1,
+            sprintHeld: !1
+          };
+          return {
+            bodies: () => (0, mq.c)(),
+            look: oq(),
+            move: (Eq, gq) => {
+              const Yq = (0, uq.e)(),
+                lq = Yq.Iy.Hgq();
+              if (qq.x = Eq.x, qq.y = Eq.y, qq.magnitude = Eq.magnitude, qq.headingOffset = Eq.headingOffset, qq.jumpHeld = Eq.jumpHeld, Eq.jumpPressed && (qq.jumpPressedSinceTick = !0), qq.running = Eq.running, qq.sprintHeld = Eq.sprintHeld, gq) {
+                const Eq = (0, Vq.c)({
+                  ...gq,
+                  descending: Yq.Iy.yEq(Yq.oR).shouldIgnoreCrouchingSpeedReduction(),
+                  canCrouch: !!Yq.Uy.canCrouch,
+                  toggled: Hq(lq)
+                });
+                qq.crouchHeld = Eq.crouchHeld, lq.padSneakToggled = Eq.toggled, lq.crouchToggled = !1, (0, dq.f)(Eq.toggled)
+              }
+              lq.gamepad = qq
+            },
+            stopMoving: () => {
+              var Eq;
+              Object.assign(qq, {
+                x: 0,
+                y: 0,
+                magnitude: 0,
+                headingOffset: 0,
+                jumpHeld: !1,
+                jumpPressedSinceTick: !1,
+                crouchHeld: !1,
+                running: !1,
+                sprintHeld: !1
+              });
+              const gq = null === (Eq = (0, uq.e)()) || void 0 === Eq ? void 0 : Eq.Iy.Hgq();
+              (null === gq || void 0 === gq ? void 0 : gq.gamepad) === qq && (gq.gamepad = null)
+            },
+            uninstall: () => {},
+            deviceChanged: qq => {
+              const Eq = (0, uq.e)(),
+                gq = null === Eq || void 0 === Eq ? void 0 : Eq.Iy.Hgq();
+              "touch" === qq ? ((0, dq.f)(!1), null !== gq && void 0 !== gq && gq.padSneakToggled && (gq.padSneakToggled = !1, gq.isTouchscreen && !gq.gamepad && Eq.Iy.REq(Eq.oR).setCrouching(!!Eq.Uy.canCrouch && gq.touchCrouch))) : "gamepad" === qq && gq && (0, dq.f)(Hq(gq))
+            },
+            hasPlayer: () => {
+              var qq;
+              return !(null === (qq = (0, uq.e)()) || void 0 === qq || !qq.oR)
+            },
+            isPlayerDead: () => {
+              var qq;
+              const Eq = (0, uq.e)();
+              return !1 === (null === (qq = Eq.Iy.Bgq(Eq.oR)) || void 0 === qq ? void 0 : qq.isAlive)
+            },
+            isReplayMode: () => {
+              var qq, Eq;
+              return !(null === (qq = (0, uq.b)()) || void 0 === qq || null === (Eq = qq.client) || void 0 === Eq || !Eq.isReplayMode())
+            },
+            isFreeCameraOn: () => {
+              var qq, Eq, gq;
+              return !(null === (qq = (0, uq.b)()) || void 0 === qq || null === (Eq = qq.client) || void 0 === Eq || null === (gq = Eq.freeCameraController) || void 0 === gq || !gq.isEnabled())
+            },
+            targetsBlock: () => !!(0, uq.e)().Kqq,
+            selectedSlotEmpty: () => {
+              var qq;
+              const Eq = (0, uq.e)();
+              return !(null !== (qq = Eq.Iy.sEq(Eq.oR)) && void 0 !== qq && qq.getItemAtSelectedSlot())
+            },
+            pickBlockAllowed: () => {
+              const qq = (0, uq.e)().Uy;
+              return !!qq.creative && !!qq.canPickBlocks
+            },
+            scrollHotbar: qq => {
+              cq.i.TV("ScrollInventorySlot", qq)
+            },
+            hasFullInventory: () => (0, Aq.c)((0, uq.e)()),
+            hasLobbyTab: () => (0, jq.d)((0, uq.e)().Uy),
+            contextActionInputs: () => {
+              var qq, Eq, gq, Yq;
+              const lq = (0, uq.e)();
+              return {
+                holdingGun: !(null === (qq = lq.Iy.Wgq(lq.oR)) || void 0 === qq || null === (Eq = qq.aZ) || void 0 === Eq || !Eq.isGun()),
+                customButtons: null !== (gq = lq.Uy.customButtons) && void 0 !== gq ? gq : null,
+                touchscreenActionButton: null !== (Yq = lq.Uy.touchscreenActionButton) && void 0 !== Yq ? Yq : null
+              }
+            },
+            pressTouchButton: qq => {
+              (0, xq.sendColyMessage)(lq.fk, qq)
+            }
+          }
+        })()),
+        Eq = (0, Yq.e)(),
+        gq = null,
+        Oq = null;
+      return () => {
+        qq(), Eq(), null === gq || void 0 === gq || gq(), null === Oq || void 0 === Oq || Oq()
+      }
+    }
+  },
+  36662: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => Oq,
+      d: () => Vq,
+      g: () => dq,
+      h: () => xq,
+      l: () => Wq,
+      m: () => jq,
+      o: () => Bq,
+      p: () => oq,
+      r: () => aq,
+      v: () => Hq
+    });
+    var Yq = gq(24),
+      lq = gq(31);
+    const Oq = "clientGameInventoryButtonsChanged",
+      mq = new Map;
+
+    function xq() {
+      return [...mq.values()].sort(((qq, Eq) => {
+        var gq, Yq;
+        return (null !== (gq = qq.order) && void 0 !== gq ? gq : 0) - (null !== (Yq = Eq.order) && void 0 !== Yq ? Yq : 0)
+      }))
+    }
+    let Aq = null;
+
+    function cq(qq) {
+      Aq = qq
+    }
+    let uq = !1;
+
+    function Bq(qq) {
+      uq = !0;
+      try {
+        qq.onClick()
+      } finally {
+        uq = !1
+      }
+      qq.panel && "clientGame" === Yq.b.get("openInGameMenuName") && cq(qq.id)
+    }
+
+    function Wq() {
+      return uq
+    }
+
+    function Nq() {
+      return xq().filter((qq => qq.panel && !qq.disabled))
+    }
+
+    function aq(qq) {
+      const Eq = Nq(),
+        gq = Eq.findIndex((qq => qq.id === Aq));
+      return !(gq < 0 || Eq.length < 2) && (Bq(Eq[(gq + qq + Eq.length) % Eq.length]), !0)
+    }
+
+    function Vq() {
+      return null !== Aq && Nq().length > 1
+    }
+
+    function dq() {
+      cq(null)
+    }
+
+    function jq() {
+      "inventory" !== Yq.b.get("openInGameMenuName") && cq(null)
+    }
+
+    function Hq() {
+      const qq = Aq;
+      return cq(null), qq
+    }
+
+    function oq(qq) {
+      return mq.set(qq.id, qq), lq.i.TV(Oq, xq(), !0), () => {
+        mq.get(qq.id) === qq && (mq.delete(qq.id), lq.i.TV(Oq, xq()))
+      }
+    }
+  },
+  36657: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => xq,
+      e: () => dq,
+      h: () => jq,
+      j: () => Wq,
+      l: () => cq,
+      m: () => Vq,
+      n: () => Nq,
+      r: () => uq
+    });
+    var Yq = gq(24),
+      lq = gq(31),
+      Oq = gq(1274),
+      mq = gq(36662);
+    const xq = "clientGameUiChanged";
+    let Aq = null;
+
+    function cq() {
+      return Aq
+    }
+
+    function uq(qq, Eq) {
+      const gq = {
+        content: qq,
+        menu: Eq
+      };
+      return Aq = gq, lq.i.TV(xq, Aq, !0), () => {
+        Aq === gq && (Aq = null, aq = !1, dq(), lq.i.TV(xq, null))
+      }
+    }
+    let Bq = null;
+
+    function Wq() {
+      return Bq
+    }
+
+    function Nq(qq) {
+      return Bq = qq, () => {
+        Bq === qq && (Bq = null)
+      }
+    }
+    let aq = !1;
+
+    function Vq() {
+      const qq = Yq.b.get("openInGameMenuName");
+      "clientGame" !== qq && (aq = "inventory" === qq), (0, mq.l)() || (0, mq.g)(), (0, Oq.m)(Oq.d), Yq.b.set({
+        openInGameMenuName: "clientGame",
+        openEverythingMenuName: null
+      })
+    }
+
+    function dq() {
+      Hq(!1)
+    }
+
+    function jq() {
+      Hq(aq)
+    }
+
+    function Hq(qq) {
+      "clientGame" === Yq.b.get("openInGameMenuName") && Yq.b.set({
+        openInGameMenuName: qq ? "inventory" : null
+      }), qq || (0, mq.g)(), aq = !1
+    }
+  },
+  36534: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => Aq
+    });
+    var Yq = gq(296),
+      lq = gq(24),
+      Oq = gq(36543),
+      mq = gq(1622),
+      xq = gq(1952);
+
+    function Aq(qq, Eq) {
+      var gq, Aq, cq;
+      if (!lq.b.get("isKeydownEnabled") || qq.repeat) return;
+      const uq = qq.code;
+      "Escape" === qq.key ? (0, mq.h)(qq) : null !== (gq = xq.u.OpenSettings) && void 0 !== gq && gq.includes(uq) ? (0, mq.u)(qq, Yq.p.SETTINGS) : null !== (Aq = xq.u.OpenCharacterCustomization) && void 0 !== Aq && Aq.includes(uq) ? (0, Oq.e)() || (0, mq.u)(qq, Yq.p.CUSTOMISATION, Eq()) : null !== (cq = xq.u.ShowDebugOverlay) && void 0 !== cq && cq.includes(uq) && lq.b.set({
+        showDebugOverlay: !lq.b.get("showDebugOverlay")
+      })
+    }
+  },
+  36519: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => Wq,
+      f: () => uq,
+      g: () => Nq,
+      i: () => Bq
+    });
+    var Yq = gq(307),
+      lq = gq(616),
+      Oq = gq(632),
+      mq = gq(38);
+    const xq = {
+        idStorageKey: "playSessionId",
+        lastActivityStorageKey: "playSessionLastActivityMs",
+        expiryMs: 3e5
+      },
+      Aq = "playSessionGameNameWithVariation",
+      cq = "wasMatchmakePlayer";
+
+    function uq() {
+      let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : mq.k;
+      (0, Oq.f)(qq, xq)
+    }
+
+    function Bq() {
+      (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : mq.k).setItem(cq, !0)
+    }
+
+    function Wq() {
+      let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : mq.k;
+      return (0, Oq.c)(qq, xq)
+    }
+
+    function Nq(qq) {
+      let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : mq.k;
+      const gq = (0, Oq.c)(Eq, xq),
+        uq = function(qq) {
+          const Eq = qq.getItem(Aq);
+          return "string" !== typeof Eq ? null : Eq
+        }(Eq),
+        Bq = function() {
+          return !0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : mq.k).getItem(cq)
+        }(Eq);
+      let Wq;
+      return Wq = null !== gq && null !== uq && (0, Oq.d)(Eq, xq) && function(qq, Eq, gq) {
+          const lq = (0, Yq.Yb)(qq),
+            Oq = (0, Yq.Yb)(Eq),
+            mq = (0, Yq.Tb)(qq),
+            xq = (0, Yq.Tb)(Eq);
+          return !(lq !== Oq || !gq) || lq === Oq && mq === xq
+        }(uq, qq, Bq) ? gq : (0, lq.d)(), (0, Oq.h)(Eq, xq, Wq), Eq.setItem(Aq, qq),
+        function() {
+          (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : mq.k).removeItem(cq)
+        }(Eq), Wq
+    }
+  },
+  36515: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => Hq,
+      c: () => oq
+    });
+    var Yq = gq(987),
+      lq = gq(600),
+      Oq = gq(307),
+      mq = gq(989),
+      xq = gq(611),
+      Aq = gq(642),
+      cq = gq(4346),
+      uq = gq(96),
+      Bq = gq(136),
+      Wq = gq(1710),
+      Nq = gq(114),
+      aq = gq(36519),
+      Vq = gq(38),
+      dq = gq(623),
+      jq = gq(36523);
+
+    function Hq() {
+      var qq, Eq;
+      return [...null !== (qq = navigator.languages) && void 0 !== qq ? qq : [null !== (Eq = navigator.language) && void 0 !== Eq ? Eq : "none"], "EN-gb"]
+    }
+
+    function oq(qq, Eq, gq, oq, Pq) {
+      const Qq = (0, Yq.j)(Eq) ? (0, Yq.o)(Eq) : null,
+        yq = {
+          cookies: (0, Wq.getAllCookiesForGameNameWithVariation)(Eq),
+          isMobile: (0, uq.isMobile)(),
+          isUsingCustomGameTexturePack: null !== Qq && Pq(Qq),
+          generalCookies: {
+            joinDiscord: !!Vq.i.getItem("DiscordPressed"),
+            newGo: cq.b,
+            ...qq.getMetricsCookies(),
+            trafficCode: oq,
+            compliance: uq.compliance
+          },
+          browserInfo: {
+            ua: window.navigator.userAgent,
+            name: (0, uq.getBrowserName)(),
+            version: (0, uq.getBrowserVersion)(),
+            platform: navigator.platform,
+            platformType: (0, uq.getPlatformType)(),
+            deviceType: (0, Nq.d)()
+          },
+          isLoggedIn: qq.isLoggedIn(),
+          lobbyName: gq,
+          languages: Hq(),
+          version: lq.e,
+          siteUsed: Bq.n,
+          subsiteUsed: Bq.q,
+          playSessionId: (0, aq.g)(Eq),
+          visitSessionId: (0, dq.e)(),
+          clientReason: xq.k.reason,
+          budgetBasis: (0, jq.c)(),
+          ...null !== Aq.r && {
+            diagClaim: Aq.r.claimId
+          }
+        };
+      return null !== Qq && (0, Oq.Pc)(Qq) ? (yq.lobbyName = (0, Yq.f)(Qq, (0, Yq.k)(Eq), gq), {
+        roomName: `classic_${mq.i}`,
+        joinOptions: yq
+      }) : {
+        roomName: Eq,
+        joinOptions: yq
+      }
+    }
+  },
+  36350: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => Yq,
+      g: () => lq,
+      j: () => Oq,
+      k: () => mq
+    });
+    const Yq = 1024,
+      lq = 1024 * Yq;
+
+    function Oq(qq) {
+      return 2 ** Math.floor(Math.log2(Math.max(1, qq / lq)))
+    }
+
+    function mq(qq) {
+      return (qq / lq).toFixed(1)
+    }
+  },
+  36528: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => Oq,
+      f: () => xq,
+      g: () => mq,
+      i: () => Aq,
+      j: () => cq,
+      k: () => uq
+    });
+    var Yq = gq(190);
+    const lq = 32 * gq(36350).g,
+      Oq = 6144,
+      mq = 4608,
+      xq = 512;
+
+    function Aq(qq) {
+      return Math.floor(lq * qq / Oq)
+    }
+
+    function cq(qq) {
+      const Eq = qq - Math.floor(qq / 6);
+      let gq = Yq.c.maxChunkHorizAddDistance,
+        lq = Yq.c.maxChunkVertAddDistance;
+      if (uq(gq + 1, lq + 1) <= Eq) return null;
+      for (; uq(gq + 1, lq + 1) > Eq && (gq > 0 || lq > 0);) gq > lq ? gq-- : lq--;
+      return {
+        horizontal: gq,
+        vertical: lq
+      }
+    }
+
+    function uq(qq, Eq) {
+      const gq = Math.max(qq, Eq);
+      let Yq = 0;
+      for (let lq = -gq; lq <= gq; lq++)
+        for (let Oq = -gq; Oq <= gq; Oq++)
+          for (let mq = -gq; mq <= gq; mq++) Bq(qq, Eq, lq, Oq, mq) && Yq++;
+      return Yq
+    }
+
+    function Bq(qq, Eq, gq, Yq, lq) {
+      const Oq = gq * gq + lq * lq;
+      return qq === Eq ? Oq + Yq * Yq <= qq * qq : qq > Eq ? Math.abs(Yq) <= Eq && Oq + Yq * Yq <= qq * qq : Oq <= qq * qq && Oq + Yq * Yq <= Eq * Eq
+    }
+  },
+  36523: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => yq,
+      c: () => Qq,
+      e: () => Pq
+    });
+    var Yq = gq(190),
+      lq = gq(96),
+      Oq = gq(2825),
+      mq = gq(4231),
+      xq = gq(614),
+      Aq = gq(36528);
+    const cq = 1048576,
+      uq = 1024 * cq,
+      Bq = 400 * cq,
+      Wq = 147456,
+      Nq = .5,
+      aq = 1.5 * uq,
+      Vq = 768 * cq;
+
+    function dq(qq) {
+      return Bq + qq * Wq
+    }
+
+    function jq(qq, Eq, gq) {
+      var lq, mq;
+      let {
+        footprintBytes: xq,
+        basis: cq,
+        namesLimit: jq
+      } = function(qq) {
+        const {
+          os: Eq,
+          deviceMemory: gq
+        } = qq;
+        if ("ios" === Eq) switch ((0, Oq.h)(qq)) {
+          case "ipad_m":
+            return {
+              footprintBytes: dq(Aq.c), basis: "ipad-m", namesLimit: !1
+            };
+          case "ipad":
+            return {
+              footprintBytes: Vq, basis: "ipad", namesLimit: !0
+            };
+          case "iphone_6gb":
+            return {
+              footprintBytes: aq, basis: "iphone-6gb", namesLimit: !0
+            };
+          case "iphone":
+            return {
+              footprintBytes: Vq, basis: "iphone", namesLimit: !0
+            }
+        }
+        return "number" === typeof gq && Number.isFinite(gq) && gq > 0 ? {
+          footprintBytes: gq * uq * Nq,
+          basis: `memory-${gq}`,
+          namesLimit: !0
+        } : "android" === Eq ? {
+          footprintBytes: Vq,
+          basis: "android",
+          namesLimit: !0
+        } : {
+          footprintBytes: dq(Aq.g),
+          basis: "unreported",
+          namesLimit: !1
+        }
+      }(qq);
+      if (gq) {
+        const qq = Math.min(xq, dq(Aq.c));
+        xq = Bq + Math.max(0, qq - Bq) / 2, cq += "+killed", jq = !0
+      }
+      null !== Eq && dq(Eq) < xq && (xq = dq(Eq), cq += "+learned", jq = !0);
+      const Hq = function(qq) {
+          const Eq = Math.floor((qq - Bq) / Wq);
+          return Math.min(Aq.c, Math.max(Aq.f, Eq))
+        }(xq),
+        oq = (0, Aq.j)(Hq);
+      return {
+        footprintBytes: xq,
+        shedFootprintBytes: jq ? Math.max(xq, dq(Hq)) : null,
+        chunkCap: Hq,
+        maxHorizDistance: null !== (lq = null === oq || void 0 === oq ? void 0 : oq.horizontal) && void 0 !== lq ? lq : Yq.c.maxChunkHorizAddDistance,
+        maxVertDistance: null !== (mq = null === oq || void 0 === oq ? void 0 : oq.vertical) && void 0 !== mq ? mq : Yq.c.maxChunkVertAddDistance,
+        basis: cq
+      }
+    }
+    let Hq = null;
+
+    function oq() {
+      return jq({
+        os: (0, lq.getOperatingSystem)(),
+        deviceMemory: navigator.deviceMemory,
+        ...(0, Oq.k)()
+      }, (0, mq.g)(), (0, xq.D)("wasm").length > 0)
+    }
+
+    function Pq() {
+      return Hq ??= oq(), Hq
+    }
+
+    function Qq() {
+      var qq;
+      return (null !== (qq = Hq) && void 0 !== qq ? qq : oq()).basis
+    }
+
+    function yq(qq, Eq) {
+      return qq.setChunkCap(Eq.chunkCap)
+    }
+  },
+  36912: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => lq,
+      f: () => Oq,
+      h: () => Wq,
+      j: () => xq,
+      l: () => Aq,
+      n: () => cq,
+      o: () => Bq,
+      q: () => uq,
+      t: () => mq
+    });
+    var Yq = gq(1226);
+    let lq = function(qq) {
+        return qq[qq.Join = 0] = "Join", qq[qq.Leave = 1] = "Leave", qq[qq.Push = 2] = "Push", qq[qq.Cursor = 3] = "Cursor", qq[qq.Submit = 4] = "Submit", qq[qq.ReloadAsVariation = 5] = "ReloadAsVariation", qq[qq.CreateFile = 6] = "CreateFile", qq[qq.RenameFile = 7] = "RenameFile", qq[qq.DeleteFile = 8] = "DeleteFile", qq[qq.SetEngine = 9] = "SetEngine", qq[qq.RenameFolder = 10] = "RenameFolder", qq
+      }({}),
+      Oq = function(qq) {
+        return qq[qq.Joined = 0] = "Joined", qq[qq.Updates = 1] = "Updates", qq[qq.Presence = 2] = "Presence", qq[qq.RemoteCursor = 3] = "RemoteCursor", qq[qq.ForceClose = 4] = "ForceClose", qq[qq.LobbyFilesChanged = 5] = "LobbyFilesChanged", qq[qq.EngineSettings = 6] = "EngineSettings", qq
+      }({});
+
+    function mq(qq) {
+      return "lobby" === qq.kind ? `lobby:${qq.path}` : `codeBlock:${qq.pos[0]},${qq.pos[1]},${qq.pos[2]}`
+    }
+
+    function xq(qq) {
+      if ("lobby" === qq) return {
+        kind: "lobby",
+        path: Yq.j
+      };
+      if (qq.startsWith("lobby:")) {
+        const Eq = qq.slice(6);
+        return Bq(Eq) ? {
+          kind: "lobby",
+          path: Eq
+        } : null
+      }
+      const Eq = qq.match(/^codeBlock:(-?\d+),(-?\d+),(-?\d+)$/);
+      return Eq ? {
+        kind: "codeBlock",
+        pos: [parseInt(Eq[1]), parseInt(Eq[2]), parseInt(Eq[3])]
+      } : null
+    }
+
+    function Aq(qq) {
+      return qq.endsWith(".d.ts")
+    }
+
+    function cq(qq) {
+      return qq.endsWith(".ts") && !Aq(qq)
+    }
+    const uq = 64;
+
+    function Bq(qq) {
+      if (!qq || qq !== qq.trim()) return !1;
+      if (qq.length > uq) return !1;
+      if (qq.startsWith("/") || qq.includes("\\") || qq.includes("\0")) return !1;
+      if (!Aq(qq) && !cq(qq) && ! function(qq) {
+          return qq.endsWith(".js") && !qq.endsWith(".min.js") && !qq.endsWith(".bundle.js")
+        }(qq)) return !1;
+      const Eq = qq.split("/");
+      for (const gq of Eq)
+        if ("" === gq || "." === gq || ".." === gq) return !1;
+      return !0
+    }
+    const Wq = 14e3
+  },
+  38974: (qq, Eq, gq) => {
+    function Yq(qq, Eq, gq, Yq, lq) {
+      var Oq = {};
+      return Object.keys(Yq).forEach((function(qq) {
+        Oq[qq] = Yq[qq]
+      })), Oq.enumerable = !!Oq.enumerable, Oq.configurable = !!Oq.configurable, ("value" in Oq || Oq.initializer) && (Oq.writable = !0), Oq = gq.slice().reverse().reduce((function(gq, Yq) {
+        return Yq(qq, Eq, gq) || gq
+      }), Oq), lq && void 0 !== Oq.initializer && (Oq.value = Oq.initializer ? Oq.initializer.call(lq) : void 0, Oq.initializer = void 0), void 0 === Oq.initializer && (Object.defineProperty(qq, Eq, Oq), Oq = null), Oq
+    }
+    gq.d(Eq, {
+      c: () => Yq
+    })
+  },
+  38968: (qq, Eq, gq) => {
+    function Yq(qq, Eq, gq, Yq) {
+      gq && Object.defineProperty(qq, Eq, {
+        enumerable: gq.enumerable,
+        configurable: gq.configurable,
+        writable: gq.writable,
+        value: gq.initializer ? gq.initializer.call(Yq) : void 0
+      })
+    }
+    gq.d(Eq, {
+      d: () => Yq
+    })
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

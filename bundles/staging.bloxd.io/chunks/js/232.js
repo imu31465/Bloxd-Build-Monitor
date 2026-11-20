@@ -1,28 +1,28 @@
 export const id = 232;
 export const ids = [232, 233];
 export const modules = {
-  39876: (TT, kT, cT) => {
-    cT.d(kT, {
-      d: () => IT,
-      e: () => CT
+  39993: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => uq,
+      e: () => Wq
     });
-    var lT = cT(39620),
-      MT = cT(39624),
-      KT = cT(36892),
-      OT = cT(37093),
-      yT = cT(39883),
-      fT = cT(39846),
-      xT = cT(36949);
-    let IT = (() => {
-        var TT;
-        let kT, cT, fT = yT.d,
-          xT = [],
-          IT = [],
-          AT = [],
-          CT = [];
-        return TT = class extends fT {
-          constructor(TT, kT, cT, MT) {
-            super(TT, cT, MT), this.groundColor = (0, lT.h)(this, xT, new OT.c(0, 0, 0)), this.direction = ((0, lT.h)(this, IT), (0, lT.h)(this, AT, void 0)), (0, lT.h)(this, CT), this.direction = kT || KT.m.Up()
+    var Yq = gq(39757),
+      lq = gq(39759),
+      Oq = gq(37139),
+      mq = gq(37289),
+      xq = gq(39995),
+      Aq = gq(39960),
+      cq = gq(37171);
+    let uq = (() => {
+        var qq;
+        let Eq, gq, Aq = xq.c,
+          cq = [],
+          uq = [],
+          Bq = [],
+          Wq = [];
+        return qq = class extends Aq {
+          constructor(qq, Eq, gq, lq) {
+            super(qq, gq, lq), this.groundColor = (0, Yq.i)(this, cq, new mq.d(0, 0, 0)), this.direction = ((0, Yq.i)(this, uq), (0, Yq.i)(this, Bq, void 0)), (0, Yq.i)(this, Wq), this.direction = Eq || Oq.q.Up()
           }
           _buildUniformLayout() {
             this._uniformBuffer.addUniform("vLightData", 4), this._uniformBuffer.addUniform("vLightDiffuse", 4), this._uniformBuffer.addUniform("vLightSpecular", 4), this._uniformBuffer.addUniform("vLightGround", 3), this._uniformBuffer.addUniform("shadowsInfo", 3), this._uniformBuffer.addUniform("depthValues", 2), this._uniformBuffer.create()
@@ -30,332 +30,332 @@ export const modules = {
           getClassName() {
             return "HemisphericLight"
           }
-          setDirectionToTarget(TT) {
-            return this.direction = KT.m.Normalize(TT.subtract(KT.m.Zero())), this.direction
+          setDirectionToTarget(qq) {
+            return this.direction = Oq.q.Normalize(qq.subtract(Oq.q.Zero())), this.direction
           }
           getShadowGenerator() {
             return null
           }
-          transferToEffect(TT, kT) {
-            const cT = KT.m.Normalize(this.direction);
-            return this._uniformBuffer.updateFloat4("vLightData", cT.x, cT.y, cT.z, 0, kT), this._uniformBuffer.updateColor3("vLightGround", this.groundColor.scale(this.intensity), kT), this
+          transferToEffect(qq, Eq) {
+            const gq = Oq.q.Normalize(this.direction);
+            return this._uniformBuffer.updateFloat4("vLightData", gq.x, gq.y, gq.z, 0, Eq), this._uniformBuffer.updateColor3("vLightGround", this.groundColor.scale(this.intensity), Eq), this
           }
-          transferToNodeMaterialEffect(TT, kT) {
-            const cT = KT.m.Normalize(this.direction);
-            return TT.setFloat3(kT, cT.x, cT.y, cT.z), this
+          transferToNodeMaterialEffect(qq, Eq) {
+            const gq = Oq.q.Normalize(this.direction);
+            return qq.setFloat3(Eq, gq.x, gq.y, gq.z), this
           }
           computeWorldMatrix() {
-            return this._worldMatrix || (this._worldMatrix = KT.d.Identity()), this._worldMatrix
+            return this._worldMatrix || (this._worldMatrix = Oq.e.Identity()), this._worldMatrix
           }
           getTypeID() {
-            return yT.d.LIGHTTYPEID_HEMISPHERICLIGHT
+            return xq.c.LIGHTTYPEID_HEMISPHERICLIGHT
           }
-          prepareLightSpecificDefines(TT, kT) {
-            TT["HEMILIGHT" + kT] = !0
+          prepareLightSpecificDefines(qq, Eq) {
+            qq["HEMILIGHT" + Eq] = !0
           }
         }, (() => {
-          const KT = "function" === typeof Symbol && Symbol.metadata ? Object.create(fT[Symbol.metadata] ?? null) : void 0;
-          kT = [(0, MT.m)()], cT = [(0, MT.F)()], (0, lT.e)(null, null, kT, {
+          const Oq = "function" === typeof Symbol && Symbol.metadata ? Object.create(Aq[Symbol.metadata] ?? null) : void 0;
+          Eq = [(0, lq.o)()], gq = [(0, lq.I)()], (0, Yq.f)(null, null, Eq, {
             kind: "field",
             name: "groundColor",
             static: !1,
             private: !1,
             access: {
-              has: TT => "groundColor" in TT,
-              get: TT => TT.groundColor,
-              set: (TT, kT) => {
-                TT.groundColor = kT
+              has: qq => "groundColor" in qq,
+              get: qq => qq.groundColor,
+              set: (qq, Eq) => {
+                qq.groundColor = Eq
               }
             },
-            metadata: KT
-          }, xT, IT), (0, lT.e)(null, null, cT, {
+            metadata: Oq
+          }, cq, uq), (0, Yq.f)(null, null, gq, {
             kind: "field",
             name: "direction",
             static: !1,
             private: !1,
             access: {
-              has: TT => "direction" in TT,
-              get: TT => TT.direction,
-              set: (TT, kT) => {
-                TT.direction = kT
+              has: qq => "direction" in qq,
+              get: qq => qq.direction,
+              set: (qq, Eq) => {
+                qq.direction = Eq
               }
             },
-            metadata: KT
-          }, AT, CT), KT && Object.defineProperty(TT, Symbol.metadata, {
+            metadata: Oq
+          }, Bq, Wq), Oq && Object.defineProperty(qq, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: KT
+            value: Oq
           })
-        })(), TT
+        })(), qq
       })(),
-      AT = !1;
+      Bq = !1;
 
-    function CT() {
-      AT || (AT = !0, fT.b.AddNodeConstructor("Light_Type_3", ((TT, kT) => () => new IT(TT, KT.m.Zero(), kT))), (0, xT.g)("BABYLON.HemisphericLight", IT))
+    function Wq() {
+      Bq || (Bq = !0, Aq.c.AddNodeConstructor("Light_Type_3", ((qq, Eq) => () => new uq(qq, Oq.q.Zero(), Eq))), (0, cq.g)("BABYLON.HemisphericLight", uq))
     }
   },
-  37632: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => MT
+  37758: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => lq
     });
-    var lT = cT(37637);
-    class MT {
-      static GetPlanes(TT) {
-        const kT = [];
-        for (let cT = 0; cT < 6; cT++) kT.push(new lT.e(0, 0, 0, 0));
-        return MT.GetPlanesToRef(TT, kT), kT
+    var Yq = gq(37767);
+    class lq {
+      static GetPlanes(qq) {
+        const Eq = [];
+        for (let gq = 0; gq < 6; gq++) Eq.push(new Yq.d(0, 0, 0, 0));
+        return lq.GetPlanesToRef(qq, Eq), Eq
       }
-      static GetNearPlaneToRef(TT, kT) {
-        const cT = TT.m;
-        kT.normal.x = cT[3] + cT[2], kT.normal.y = cT[7] + cT[6], kT.normal.z = cT[11] + cT[10], kT.d = cT[15] + cT[14], kT.normalize()
+      static GetNearPlaneToRef(qq, Eq) {
+        const gq = qq.m;
+        Eq.normal.x = gq[3] + gq[2], Eq.normal.y = gq[7] + gq[6], Eq.normal.z = gq[11] + gq[10], Eq.d = gq[15] + gq[14], Eq.normalize()
       }
-      static GetFarPlaneToRef(TT, kT) {
-        const cT = TT.m;
-        kT.normal.x = cT[3] - cT[2], kT.normal.y = cT[7] - cT[6], kT.normal.z = cT[11] - cT[10], kT.d = cT[15] - cT[14], kT.normalize()
+      static GetFarPlaneToRef(qq, Eq) {
+        const gq = qq.m;
+        Eq.normal.x = gq[3] - gq[2], Eq.normal.y = gq[7] - gq[6], Eq.normal.z = gq[11] - gq[10], Eq.d = gq[15] - gq[14], Eq.normalize()
       }
-      static GetLeftPlaneToRef(TT, kT) {
-        const cT = TT.m;
-        kT.normal.x = cT[3] + cT[0], kT.normal.y = cT[7] + cT[4], kT.normal.z = cT[11] + cT[8], kT.d = cT[15] + cT[12], kT.normalize()
+      static GetLeftPlaneToRef(qq, Eq) {
+        const gq = qq.m;
+        Eq.normal.x = gq[3] + gq[0], Eq.normal.y = gq[7] + gq[4], Eq.normal.z = gq[11] + gq[8], Eq.d = gq[15] + gq[12], Eq.normalize()
       }
-      static GetRightPlaneToRef(TT, kT) {
-        const cT = TT.m;
-        kT.normal.x = cT[3] - cT[0], kT.normal.y = cT[7] - cT[4], kT.normal.z = cT[11] - cT[8], kT.d = cT[15] - cT[12], kT.normalize()
+      static GetRightPlaneToRef(qq, Eq) {
+        const gq = qq.m;
+        Eq.normal.x = gq[3] - gq[0], Eq.normal.y = gq[7] - gq[4], Eq.normal.z = gq[11] - gq[8], Eq.d = gq[15] - gq[12], Eq.normalize()
       }
-      static GetTopPlaneToRef(TT, kT) {
-        const cT = TT.m;
-        kT.normal.x = cT[3] - cT[1], kT.normal.y = cT[7] - cT[5], kT.normal.z = cT[11] - cT[9], kT.d = cT[15] - cT[13], kT.normalize()
+      static GetTopPlaneToRef(qq, Eq) {
+        const gq = qq.m;
+        Eq.normal.x = gq[3] - gq[1], Eq.normal.y = gq[7] - gq[5], Eq.normal.z = gq[11] - gq[9], Eq.d = gq[15] - gq[13], Eq.normalize()
       }
-      static GetBottomPlaneToRef(TT, kT) {
-        const cT = TT.m;
-        kT.normal.x = cT[3] + cT[1], kT.normal.y = cT[7] + cT[5], kT.normal.z = cT[11] + cT[9], kT.d = cT[15] + cT[13], kT.normalize()
+      static GetBottomPlaneToRef(qq, Eq) {
+        const gq = qq.m;
+        Eq.normal.x = gq[3] + gq[1], Eq.normal.y = gq[7] + gq[5], Eq.normal.z = gq[11] + gq[9], Eq.d = gq[15] + gq[13], Eq.normalize()
       }
-      static GetPlanesToRef(TT, kT) {
-        MT.GetNearPlaneToRef(TT, kT[0]), MT.GetFarPlaneToRef(TT, kT[1]), MT.GetLeftPlaneToRef(TT, kT[2]), MT.GetRightPlaneToRef(TT, kT[3]), MT.GetTopPlaneToRef(TT, kT[4]), MT.GetBottomPlaneToRef(TT, kT[5])
+      static GetPlanesToRef(qq, Eq) {
+        lq.GetNearPlaneToRef(qq, Eq[0]), lq.GetFarPlaneToRef(qq, Eq[1]), lq.GetLeftPlaneToRef(qq, Eq[2]), lq.GetRightPlaneToRef(qq, Eq[3]), lq.GetTopPlaneToRef(qq, Eq[4]), lq.GetBottomPlaneToRef(qq, Eq[5])
       }
-      static IsPointInFrustum(TT, kT) {
-        for (let cT = 0; cT < 6; cT++)
-          if (kT[cT].dotCoordinate(TT) < 0) return !1;
+      static IsPointInFrustum(qq, Eq) {
+        for (let gq = 0; gq < 6; gq++)
+          if (Eq[gq].dotCoordinate(qq) < 0) return !1;
         return !0
       }
     }
   },
-  37637: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => MT
+  37767: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => lq
     });
-    var lT = cT(36892);
-    class MT {
-      constructor(TT, kT, cT, MT) {
-        this.normal = new lT.m(TT, kT, cT), this.d = MT
+    var Yq = gq(37139);
+    class lq {
+      constructor(qq, Eq, gq, lq) {
+        this.normal = new Yq.q(qq, Eq, gq), this.d = lq
       }
-      acT() {
+      bYq() {
         return [this.normal.x, this.normal.y, this.normal.z, this.d]
       }
       clone() {
-        return new MT(this.normal.x, this.normal.y, this.normal.z, this.d)
+        return new lq(this.normal.x, this.normal.y, this.normal.z, this.d)
       }
       getClassName() {
         return "Plane"
       }
       getHashCode() {
-        let TT = this.normal.getHashCode();
-        return TT = 397 * TT ^ this.d, TT
+        let qq = this.normal.getHashCode();
+        return qq = 397 * qq ^ this.d, qq
       }
       normalize() {
-        const TT = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
-        let kT = 0;
-        return 0 !== TT && (kT = 1 / TT), this.normal.x *= kT, this.normal.y *= kT, this.normal.z *= kT, this.d *= kT, this
+        const qq = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
+        let Eq = 0;
+        return 0 !== qq && (Eq = 1 / qq), this.normal.x *= Eq, this.normal.y *= Eq, this.normal.z *= Eq, this.d *= Eq, this
       }
-      transform(TT) {
-        const kT = MT._TmpMatrix;
-        TT.invertToRef(kT);
-        const cT = kT.m,
-          lT = this.normal.x,
-          KT = this.normal.y,
-          OT = this.normal.z,
-          yT = this.d,
-          fT = lT * cT[0] + KT * cT[1] + OT * cT[2] + yT * cT[3],
-          xT = lT * cT[4] + KT * cT[5] + OT * cT[6] + yT * cT[7],
-          IT = lT * cT[8] + KT * cT[9] + OT * cT[10] + yT * cT[11],
-          AT = lT * cT[12] + KT * cT[13] + OT * cT[14] + yT * cT[15];
-        return new MT(fT, xT, IT, AT)
+      transform(qq) {
+        const Eq = lq._TmpMatrix;
+        qq.invertToRef(Eq);
+        const gq = Eq.m,
+          Yq = this.normal.x,
+          Oq = this.normal.y,
+          mq = this.normal.z,
+          xq = this.d,
+          Aq = Yq * gq[0] + Oq * gq[1] + mq * gq[2] + xq * gq[3],
+          cq = Yq * gq[4] + Oq * gq[5] + mq * gq[6] + xq * gq[7],
+          uq = Yq * gq[8] + Oq * gq[9] + mq * gq[10] + xq * gq[11],
+          Bq = Yq * gq[12] + Oq * gq[13] + mq * gq[14] + xq * gq[15];
+        return new lq(Aq, cq, uq, Bq)
       }
-      dotCoordinate(TT) {
-        return this.normal.x * TT.x + this.normal.y * TT.y + this.normal.z * TT.z + this.d
+      dotCoordinate(qq) {
+        return this.normal.x * qq.x + this.normal.y * qq.y + this.normal.z * qq.z + this.d
       }
-      copyFromPoints(TT, kT, cT) {
-        const lT = kT.x - TT.x,
-          MT = kT.y - TT.y,
-          KT = kT.z - TT.z,
-          OT = cT.x - TT.x,
-          yT = cT.y - TT.y,
-          fT = cT.z - TT.z,
-          xT = MT * fT - KT * yT,
-          IT = KT * OT - lT * fT,
-          AT = lT * yT - MT * OT,
-          CT = Math.sqrt(xT * xT + IT * IT + AT * AT);
-        let jT;
-        return jT = 0 !== CT ? 1 / CT : 0, this.normal.x = xT * jT, this.normal.y = IT * jT, this.normal.z = AT * jT, this.d = -(this.normal.x * TT.x + this.normal.y * TT.y + this.normal.z * TT.z), this
+      copyFromPoints(qq, Eq, gq) {
+        const Yq = Eq.x - qq.x,
+          lq = Eq.y - qq.y,
+          Oq = Eq.z - qq.z,
+          mq = gq.x - qq.x,
+          xq = gq.y - qq.y,
+          Aq = gq.z - qq.z,
+          cq = lq * Aq - Oq * xq,
+          uq = Oq * mq - Yq * Aq,
+          Bq = Yq * xq - lq * mq,
+          Wq = Math.sqrt(cq * cq + uq * uq + Bq * Bq);
+        let Nq;
+        return Nq = 0 !== Wq ? 1 / Wq : 0, this.normal.x = cq * Nq, this.normal.y = uq * Nq, this.normal.z = Bq * Nq, this.d = -(this.normal.x * qq.x + this.normal.y * qq.y + this.normal.z * qq.z), this
       }
-      isFrontFacingTo(TT, kT) {
-        return lT.m.Dot(this.normal, TT) <= kT
+      isFrontFacingTo(qq, Eq) {
+        return Yq.q.Dot(this.normal, qq) <= Eq
       }
-      signedDistanceTo(TT) {
-        return lT.m.Dot(TT, this.normal) + this.d
+      signedDistanceTo(qq) {
+        return Yq.q.Dot(qq, this.normal) + this.d
       }
-      static FromArray(TT) {
-        return new MT(TT[0], TT[1], TT[2], TT[3])
+      static FromArray(qq) {
+        return new lq(qq[0], qq[1], qq[2], qq[3])
       }
-      static FromPoints(TT, kT, cT) {
-        const lT = new MT(0, 0, 0, 0);
-        return lT.copyFromPoints(TT, kT, cT), lT
+      static FromPoints(qq, Eq, gq) {
+        const Yq = new lq(0, 0, 0, 0);
+        return Yq.copyFromPoints(qq, Eq, gq), Yq
       }
-      static FromPositionAndNormal(TT, kT) {
-        const cT = new MT(0, 0, 0, 0);
-        return this.FromPositionAndNormalToRef(TT, kT, cT)
+      static FromPositionAndNormal(qq, Eq) {
+        const gq = new lq(0, 0, 0, 0);
+        return this.FromPositionAndNormalToRef(qq, Eq, gq)
       }
-      static FromPositionAndNormalToRef(TT, kT, cT) {
-        return cT.normal.UkT(kT), cT.normal.normalize(), cT.d = -TT.dot(cT.normal), cT
+      static FromPositionAndNormalToRef(qq, Eq, gq) {
+        return gq.normal.WG(Eq), gq.normal.normalize(), gq.d = -qq.dot(gq.normal), gq
       }
-      static SignedDistanceToPlaneFromPositionAndNormal(TT, kT, cT) {
-        const MT = -(kT.x * TT.x + kT.y * TT.y + kT.z * TT.z);
-        return lT.m.Dot(cT, kT) + MT
+      static SignedDistanceToPlaneFromPositionAndNormal(qq, Eq, gq) {
+        const lq = -(Eq.x * qq.x + Eq.y * qq.y + Eq.z * qq.z);
+        return Yq.q.Dot(gq, Eq) + lq
       }
     }
-    MT._TmpMatrix = lT.d.Identity()
+    lq._TmpMatrix = Yq.e.Identity()
   },
-  37939: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => lT
+  38065: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => Yq
     });
-    class lT {
-      constructor(TT, kT, cT, lT) {
-        this.x = TT, this.y = kT, this.width = cT, this.height = lT
+    class Yq {
+      constructor(qq, Eq, gq, Yq) {
+        this.x = qq, this.y = Eq, this.width = gq, this.height = Yq
       }
-      toGlobal(TT, kT) {
-        return new lT(this.x * TT, this.y * kT, this.width * TT, this.height * kT)
+      toGlobal(qq, Eq) {
+        return new Yq(this.x * qq, this.y * Eq, this.width * qq, this.height * Eq)
       }
-      toGlobalToRef(TT, kT, cT) {
-        return cT.x = this.x * TT, cT.y = this.y * kT, cT.width = this.width * TT, cT.height = this.height * kT, this
+      toGlobalToRef(qq, Eq, gq) {
+        return gq.x = this.x * qq, gq.y = this.y * Eq, gq.width = this.width * qq, gq.height = this.height * Eq, this
       }
       clone() {
-        return new lT(this.x, this.y, this.width, this.height)
+        return new Yq(this.x, this.y, this.width, this.height)
       }
     }
   },
-  38507: (TT, kT, cT) => {
-    cT.d(kT, {
-      d: () => KT
+  38649: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => Oq
     });
-    var lT = cT(38512);
-    const MT = (TT, kT, cT) => TT ? TT.getClassName && "Mesh" === TT.getClassName() ? null : !TT.getClassName || "SubMesh" !== TT.getClassName() && "PhysicsBody" !== TT.getClassName() ? TT.clone ? TT.clone() : Array.isArray(TT) ? TT.slice() : cT && "object" === typeof TT ? {
-      ...TT
-    } : null : TT.clone(kT) : null;
-    class KT {
-      static DeepCopy(TT, kT, cT, KT) {
-        let OT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const yT = function(TT) {
-          const kT = [];
+    var Yq = gq(38653);
+    const lq = (qq, Eq, gq) => qq ? qq.getClassName && "Mesh" === qq.getClassName() ? null : !qq.getClassName || "SubMesh" !== qq.getClassName() && "PhysicsBody" !== qq.getClassName() ? qq.clone ? qq.clone() : Array.isArray(qq) ? qq.slice() : gq && "object" === typeof qq ? {
+      ...qq
+    } : null : qq.clone(Eq) : null;
+    class Oq {
+      static DeepCopy(qq, Eq, gq, Oq) {
+        let mq = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const xq = function(qq) {
+          const Eq = [];
           do {
-            const cT = Object.getOwnPropertyNames(TT);
-            for (const TT of cT) - 1 === kT.indexOf(TT) && kT.push(TT)
-          } while (TT = Object.getPrototypeOf(TT));
-          return kT
-        }(TT);
-        for (const xT of yT) {
-          if ("_" === xT[0] && (!KT || -1 === KT.indexOf(xT))) continue;
-          if (xT.endsWith("Observable")) continue;
-          if (cT && -1 !== cT.indexOf(xT)) continue;
-          const yT = TT[xT],
-            IT = typeof yT;
-          if ("function" !== IT) try {
-            if ("object" === IT)
-              if (yT instanceof Uint8Array) kT[xT] = Uint8Array.from(yT);
-              else if (yT instanceof Array) {
-              if (kT[xT] = [], yT.length > 0)
-                if ("object" == typeof yT[0])
-                  for (let TT = 0; TT < yT.length; TT++) {
-                    const cT = MT(yT[TT], kT, OT); - 1 === kT[xT].indexOf(cT) && kT[xT].push(cT)
-                  } else kT[xT] = yT.slice(0)
-            } else kT[xT] = MT(yT, kT, OT);
-            else kT[xT] = yT
-          } catch (fT) {
-            lT.e.Warn(fT.message)
+            const gq = Object.getOwnPropertyNames(qq);
+            for (const qq of gq) - 1 === Eq.indexOf(qq) && Eq.push(qq)
+          } while (qq = Object.getPrototypeOf(qq));
+          return Eq
+        }(qq);
+        for (const cq of xq) {
+          if ("_" === cq[0] && (!Oq || -1 === Oq.indexOf(cq))) continue;
+          if (cq.endsWith("Observable")) continue;
+          if (gq && -1 !== gq.indexOf(cq)) continue;
+          const xq = qq[cq],
+            uq = typeof xq;
+          if ("function" !== uq) try {
+            if ("object" === uq)
+              if (xq instanceof Uint8Array) Eq[cq] = Uint8Array.from(xq);
+              else if (xq instanceof Array) {
+              if (Eq[cq] = [], xq.length > 0)
+                if ("object" == typeof xq[0])
+                  for (let qq = 0; qq < xq.length; qq++) {
+                    const gq = lq(xq[qq], Eq, mq); - 1 === Eq[cq].indexOf(gq) && Eq[cq].push(gq)
+                  } else Eq[cq] = xq.slice(0)
+            } else Eq[cq] = lq(xq, Eq, mq);
+            else Eq[cq] = xq
+          } catch (Aq) {
+            Yq.b.Warn(Aq.message)
           }
         }
       }
     }
   },
-  37760: (TT, kT, cT) => {
-    function lT() {
-      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (TT => {
-        const kT = 16 * Math.random() | 0;
-        return ("x" === TT ? kT : 3 & kT | 8).toString(16)
+  37872: (qq, Eq, gq) => {
+    function Yq() {
+      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (qq => {
+        const Eq = 16 * Math.random() | 0;
+        return ("x" === qq ? Eq : 3 & Eq | 8).toString(16)
       }))
     }
-    cT.d(kT, {
-      c: () => lT
+    gq.d(Eq, {
+      d: () => Yq
     })
   },
-  38512: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => lT
+  38653: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => Yq
     });
-    class lT {
-      static _CheckLimit(TT, kT) {
-        let cT = lT._LogLimitOutputs[TT];
-        return cT ? cT.current++ : (cT = {
-          limit: kT,
+    class Yq {
+      static _CheckLimit(qq, Eq) {
+        let gq = Yq._LogLimitOutputs[qq];
+        return gq ? gq.current++ : (gq = {
+          limit: Eq,
           current: 1
-        }, lT._LogLimitOutputs[TT] = cT), cT.current <= cT.limit
+        }, Yq._LogLimitOutputs[qq] = gq), gq.current <= gq.limit
       }
-      static _GenerateLimitMessage(TT) {
-        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const cT = lT._LogLimitOutputs[TT];
-        if (!cT || !lT.MessageLimitReached) return;
-        const MT = this._Levels[kT];
-        cT.current === cT.limit && lT[MT.name](lT.MessageLimitReached.replace(/%LIMIT%/g, "" + cT.limit).replace(/%TYPE%/g, MT.name ?? ""))
+      static _GenerateLimitMessage(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const gq = Yq._LogLimitOutputs[qq];
+        if (!gq || !Yq.MessageLimitReached) return;
+        const lq = this._Levels[Eq];
+        gq.current === gq.limit && Yq[lq.name](Yq.MessageLimitReached.replace(/%LIMIT%/g, "" + gq.limit).replace(/%TYPE%/g, lq.name ?? ""))
       }
-      static _AddLogEntry(TT) {
-        lT._LogCache = TT + lT._LogCache, lT.OnNewCacheEntry && lT.OnNewCacheEntry(TT)
+      static _AddLogEntry(qq) {
+        Yq._LogCache = qq + Yq._LogCache, Yq.OnNewCacheEntry && Yq.OnNewCacheEntry(qq)
       }
-      static _FormatMessage(TT) {
-        const kT = TT => TT < 10 ? "0" + TT : "" + TT,
-          cT = new Date;
-        return "[" + kT(cT.getHours()) + ":" + kT(cT.getMinutes()) + ":" + kT(cT.getSeconds()) + "]: " + TT
+      static _FormatMessage(qq) {
+        const Eq = qq => qq < 10 ? "0" + qq : "" + qq,
+          gq = new Date;
+        return "[" + Eq(gq.getHours()) + ":" + Eq(gq.getMinutes()) + ":" + Eq(gq.getSeconds()) + "]: " + qq
       }
-      static _LogDisabled(TT, kT) {}
+      static _LogDisabled(qq, Eq) {}
       static _LogEnabled() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          kT = arguments.length > 1 ? arguments[1] : void 0,
-          cT = arguments.length > 2 ? arguments[2] : void 0;
-        const MT = Array.isArray(kT) ? kT[0] : kT;
-        if (void 0 !== cT && !lT._CheckLimit(MT, cT)) return;
-        const KT = lT._FormatMessage(MT),
-          OT = this._Levels[TT],
-          yT = Array.isArray(kT) ? kT.slice(1) : [];
-        OT.logFunc && OT.logFunc("BJS - " + KT, ...yT);
-        const fT = `<div style='color:${OT.color}'>${KT}</div><br>`;
-        lT._AddLogEntry(fT), lT._GenerateLimitMessage(MT, TT)
+        let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          Eq = arguments.length > 1 ? arguments[1] : void 0,
+          gq = arguments.length > 2 ? arguments[2] : void 0;
+        const lq = Array.isArray(Eq) ? Eq[0] : Eq;
+        if (void 0 !== gq && !Yq._CheckLimit(lq, gq)) return;
+        const Oq = Yq._FormatMessage(lq),
+          mq = this._Levels[qq],
+          xq = Array.isArray(Eq) ? Eq.slice(1) : [];
+        mq.logFunc && mq.logFunc("BJS - " + Oq, ...xq);
+        const Aq = `<div style='color:${mq.color}'>${Oq}</div><br>`;
+        Yq._AddLogEntry(Aq), Yq._GenerateLimitMessage(lq, qq)
       }
       static get LogCache() {
-        return lT._LogCache
+        return Yq._LogCache
       }
       static ClearLogCache() {
-        lT._LogCache = "", lT._LogLimitOutputs = {}, lT.errorsCount = 0
+        Yq._LogCache = "", Yq._LogLimitOutputs = {}, Yq.errorsCount = 0
       }
-      static set LogLevels(TT) {
-        lT.Log = lT._LogDisabled, lT.Warn = lT._LogDisabled, lT.Error = lT._LogDisabled;
-        const kT = [lT.MessageLogLevel, lT.WarningLogLevel, lT.ErrorLogLevel];
-        for (const cT of kT)
-          if ((TT & cT) === cT) {
-            const TT = this._Levels[cT];
-            lT[TT.name] = lT._LogEnabled.bind(lT, cT)
+      static set LogLevels(qq) {
+        Yq.Log = Yq._LogDisabled, Yq.Warn = Yq._LogDisabled, Yq.Error = Yq._LogDisabled;
+        const Eq = [Yq.MessageLogLevel, Yq.WarningLogLevel, Yq.ErrorLogLevel];
+        for (const gq of Eq)
+          if ((qq & gq) === gq) {
+            const qq = this._Levels[gq];
+            Yq[qq.name] = Yq._LogEnabled.bind(Yq, gq)
           }
       }
     }
-    lT.NoneLogLevel = 0, lT.MessageLogLevel = 1, lT.WarningLogLevel = 2, lT.ErrorLogLevel = 4, lT.AllLogLevel = 7, lT.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", lT._LogCache = "", lT._LogLimitOutputs = {}, lT._Levels = [{}, {
+    Yq.NoneLogLevel = 0, Yq.MessageLogLevel = 1, Yq.WarningLogLevel = 2, Yq.ErrorLogLevel = 4, Yq.AllLogLevel = 7, Yq.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Yq._LogCache = "", Yq._LogLimitOutputs = {}, Yq._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -367,102 +367,102 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], lT.errorsCount = 0, lT.Log = lT._LogEnabled.bind(lT, lT.MessageLogLevel), lT.Warn = lT._LogEnabled.bind(lT, lT.WarningLogLevel), lT.Error = lT._LogEnabled.bind(lT, lT.ErrorLogLevel)
+    }], Yq.errorsCount = 0, Yq.Log = Yq._LogEnabled.bind(Yq, Yq.MessageLogLevel), Yq.Warn = Yq._LogEnabled.bind(Yq, Yq.WarningLogLevel), Yq.Error = Yq._LogEnabled.bind(Yq, Yq.ErrorLogLevel)
   },
-  60554: (TT, kT, cT) => {
-    cT.r(kT), cT.d(kT, {
-      CreateScreenshot: () => ET,
-      CreateScreenshotAsync: () => ZT,
-      CreateScreenshotForFrameGraphAsync: () => LT,
-      CreateScreenshotUsingRenderTarget: () => XT,
-      CreateScreenshotUsingRenderTargetAsync: () => dT,
-      CreateScreenshotWithResizeAsync: () => uT,
-      RegisterScreenshotTools: () => YT,
-      ScreenshotTools: () => gT
+  61121: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      CreateScreenshot: () => Sq,
+      CreateScreenshotAsync: () => pq,
+      CreateScreenshotForFrameGraphAsync: () => kq,
+      CreateScreenshotUsingRenderTarget: () => Lq,
+      CreateScreenshotUsingRenderTargetAsync: () => Jq,
+      CreateScreenshotWithResizeAsync: () => Gq,
+      RegisterScreenshotTools: () => sq,
+      ScreenshotTools: () => Uq
     });
-    var lT = cT(40111),
-      MT = cT(41380),
-      KT = cT(41357),
-      OT = cT(39645),
-      yT = cT(41359),
-      fT = cT(36925),
-      xT = cT(36892);
-    class IT extends yT.g {
-      static _GetDefines(TT) {
-        if (!TT) return null;
-        return TT.extractDriverInfo().toLowerCase().indexOf("mali") > -1 ? "#define MALI 1\n" : null
+    var Yq = gq(40233),
+      lq = gq(41568),
+      Oq = gq(41551),
+      mq = gq(39779),
+      xq = gq(41555),
+      Aq = gq(37153),
+      cq = gq(37139);
+    class uq extends xq.e {
+      static _GetDefines(qq) {
+        if (!qq) return null;
+        return qq.extractDriverInfo().toLowerCase().indexOf("mali") > -1 ? "#define MALI 1\n" : null
       }
-      _gatherImports(TT, kT) {
-        TT ? (this._webGPUReady = !0, kT.push(Promise.all([cT.e(368).then((() => cT(60893))), cT.e(369).then((() => cT(60900)))]))) : kT.push(Promise.all([cT.e(370).then((() => cT(60909))), cT.e(371).then((() => cT(60915)))]))
+      _gatherImports(qq, Eq) {
+        qq ? (this._webGPUReady = !0, Eq.push(Promise.all([gq.e(368).then((() => gq(61473))), gq.e(369).then((() => gq(61477)))]))) : Eq.push(Promise.all([gq.e(370).then((() => gq(61485))), gq.e(371).then((() => gq(61488)))]))
       }
-      constructor(TT) {
-        const kT = {
+      constructor(qq) {
+        const Eq = {
           ...arguments.length > 2 ? arguments[2] : void 0,
-          name: TT,
-          engine: (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null) || fT.d.LastCreatedEngine,
+          name: qq,
+          engine: (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null) || Aq.b.LastCreatedEngine,
           useShaderStore: !0,
           useAsPostProcess: !0,
-          vertexShader: IT.VertexUrl,
-          fragmentShader: IT.FragmentUrl,
-          uniforms: IT.Uniforms
+          vertexShader: uq.VertexUrl,
+          fragmentShader: uq.FragmentUrl,
+          uniforms: uq.Uniforms
         };
         super({
-          ...kT,
-          defines: IT._GetDefines(kT.engine)
-        }), this.texelSize = new xT.i(0, 0)
+          ...Eq,
+          defines: uq._GetDefines(Eq.engine)
+        }), this.texelSize = new cq.p(0, 0)
       }
       bind() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        super.bind(TT), this._drawWrapper.effect.setFloat2("texelSize", this.texelSize.x, this.texelSize.y)
+        let qq = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        super.bind(qq), this._drawWrapper.effect.setFloat2("texelSize", this.texelSize.x, this.texelSize.y)
       }
     }
-    IT.VertexUrl = "fxaa", IT.FragmentUrl = "fxaa", IT.Uniforms = ["texelSize"];
-    class AT extends KT.e {
+    uq.VertexUrl = "fxaa", uq.FragmentUrl = "fxaa", uq.Uniforms = ["texelSize"];
+    class Bq extends Oq.e {
       getClassName() {
         return "FxaaPostProcess"
       }
-      constructor(TT, kT) {
-        let cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-          MT = arguments.length > 3 ? arguments[3] : void 0,
-          KT = arguments.length > 4 ? arguments[4] : void 0,
-          OT = arguments.length > 5 ? arguments[5] : void 0,
-          yT = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0;
-        const fT = {
-          uniforms: IT.Uniforms,
-          size: "number" === typeof kT ? kT : void 0,
-          camera: cT,
-          samplingMode: MT || lT.f.BILINEAR_SAMPLINGMODE,
-          engine: KT,
-          reusable: OT,
-          textureType: yT,
-          ...kT
+      constructor(qq, Eq) {
+        let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+          lq = arguments.length > 3 ? arguments[3] : void 0,
+          Oq = arguments.length > 4 ? arguments[4] : void 0,
+          mq = arguments.length > 5 ? arguments[5] : void 0,
+          xq = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0;
+        const Aq = {
+          uniforms: uq.Uniforms,
+          size: "number" === typeof Eq ? Eq : void 0,
+          camera: gq,
+          samplingMode: lq || Yq.d.BILINEAR_SAMPLINGMODE,
+          engine: Oq,
+          reusable: mq,
+          textureType: xq,
+          ...Eq
         };
-        super(TT, IT.FragmentUrl, {
-          effectWrapper: "number" !== typeof kT && kT.effectWrapper ? void 0 : new IT(TT, KT, fT),
-          ...fT
-        }), this.onApplyObservable.add((TT => {
+        super(qq, uq.FragmentUrl, {
+          effectWrapper: "number" !== typeof Eq && Eq.effectWrapper ? void 0 : new uq(qq, Oq, Aq),
+          ...Aq
+        }), this.onApplyObservable.add((qq => {
           this._effectWrapper.texelSize = this.texelSize
         }))
       }
-      static _Parse(TT, kT, cT, lT) {
-        return OT.d.Parse((() => new AT(TT.name, TT.options, kT, TT.renderTargetSamplingMode, cT.Dv(), TT.reusable)), TT, cT, lT)
+      static _Parse(qq, Eq, gq, Yq) {
+        return mq.d.Parse((() => new Bq(qq.name, qq.options, Eq, qq.renderTargetSamplingMode, gq.Ba(), qq.reusable)), qq, gq, Yq)
       }
     }
-    var CT = cT(38512),
-      jT = cT(39727),
-      vT = cT(41386),
-      tT = cT(41377),
-      hT = cT(39514);
-    const NT = 0;
-    class QT {
-      constructor(TT, kT, cT) {
-        this.name = TT, this._parentTask = kT, this._context = cT, this.disabled = !1
+    var Wq = gq(38653),
+      Nq = gq(39845),
+      aq = gq(41581),
+      Vq = gq(41561),
+      dq = gq(39644);
+    const jq = 0;
+    class Hq {
+      constructor(qq, Eq, gq) {
+        this.name = qq, this._parentTask = Eq, this._context = gq, this.disabled = !1
       }
-      setInitializeFunc(TT) {
-        this._initFunc = TT
+      setInitializeFunc(qq) {
+        this._initFunc = qq
       }
-      setExecuteFunc(TT) {
-        this._executeFunc = TT
+      setExecuteFunc(qq) {
+        this._executeFunc = qq
       }
       _execute() {
         this.disabled || this._executeFunc(this._context)
@@ -475,27 +475,27 @@ export const modules = {
       }
       _dispose() {}
     }
-    class ST extends QT {
-      static IsObjectListPass(TT) {
-        return void 0 !== TT.setObjectList
+    class oq extends Hq {
+      static IsObjectListPass(qq) {
+        return void 0 !== qq.setObjectList
       }
       get objectList() {
         return this._objectList
       }
-      setObjectList(TT) {
-        this._objectList = TT
+      setObjectList(qq) {
+        this._objectList = qq
       }
-      constructor(TT, kT, cT, lT) {
-        super(TT, kT, cT), this._engine = lT
+      constructor(qq, Eq, gq, Yq) {
+        super(qq, Eq, gq), this._engine = Yq
       }
       _isValid() {
-        const TT = super._isValid();
-        return TT || (void 0 !== this._objectList ? null : "Object list is not set (call setObjectList to set it)")
+        const qq = super._isValid();
+        return qq || (void 0 !== this._objectList ? null : "Object list is not set (call setObjectList to set it)")
       }
     }
-    class DT extends QT {
-      static IsRenderPass(TT) {
-        return void 0 !== TT.setRenderTarget
+    class Pq extends Hq {
+      static IsRenderPass(qq) {
+        return void 0 !== qq.setRenderTarget
       }
       get renderTarget() {
         return this._renderTarget
@@ -506,34 +506,34 @@ export const modules = {
       get frameGraphRenderTarget() {
         return this._frameGraphRenderTarget
       }
-      constructor(TT, kT, cT, lT) {
-        super(TT, kT, cT), this._dependencies = new Set, this.depthReadOnly = !1, this.stencilReadOnly = !1, this._engine = lT
+      constructor(qq, Eq, gq, Yq) {
+        super(qq, Eq, gq), this._dependencies = new Set, this.depthReadOnly = !1, this.stencilReadOnly = !1, this._engine = Yq
       }
-      setRenderTarget(TT) {
-        this._renderTarget = TT
+      setRenderTarget(qq) {
+        this._renderTarget = qq
       }
-      setRenderTargetDepth(TT) {
-        this._renderTargetDepth = TT
+      setRenderTargetDepth(qq) {
+        this._renderTargetDepth = qq
       }
-      addDependencies(TT) {
-        if (void 0 !== TT)
-          if (Array.isArray(TT))
-            for (const kT of TT) this._dependencies.add(kT);
-          else this._dependencies.add(TT)
+      addDependencies(qq) {
+        if (void 0 !== qq)
+          if (Array.isArray(qq))
+            for (const Eq of qq) this._dependencies.add(Eq);
+          else this._dependencies.add(qq)
       }
-      collectDependencies(TT) {
-        const kT = this._dependencies.keys();
-        for (let cT = kT.next(); !0 !== cT.done; cT = kT.next()) TT.add(cT.value);
+      collectDependencies(qq) {
+        const Eq = this._dependencies.keys();
+        for (let gq = Eq.next(); !0 !== gq.done; gq = Eq.next()) qq.add(gq.value);
         if (void 0 !== this._renderTarget)
           if (Array.isArray(this._renderTarget))
-            for (const cT of this._renderTarget) void 0 !== cT && TT.add(cT);
-          else TT.add(this._renderTarget);
-        void 0 !== this._renderTargetDepth && TT.add(this._renderTargetDepth)
+            for (const gq of this._renderTarget) void 0 !== gq && qq.add(gq);
+          else qq.add(this._renderTarget);
+        void 0 !== this._renderTargetDepth && qq.add(this._renderTargetDepth)
       }
-      setOutputLayerAndFaceIndices(TT) {
-        const kT = this.frameGraphRenderTarget.renderTargetWrapper;
-        if (kT)
-          for (const cT of TT) kT.setLayerAndFaceIndex(cT.targetIndex, cT.layerIndex, cT.faceIndex)
+      setOutputLayerAndFaceIndices(qq) {
+        const Eq = this.frameGraphRenderTarget.renderTargetWrapper;
+        if (Eq)
+          for (const gq of qq) Eq.setLayerAndFaceIndex(gq.targetIndex, gq.layerIndex, gq.faceIndex)
       }
       _initialize() {
         this._frameGraphRenderTarget = this._context.createRenderTarget(this.name, this._renderTarget, this._renderTargetDepth, this.depthReadOnly, this.stencilReadOnly), super._initialize()
@@ -542,26 +542,26 @@ export const modules = {
         this._context.bindRenderTarget(this._frameGraphRenderTarget), super._execute(), this._context.restoreDefaultFramebuffer()
       }
       _isValid() {
-        const TT = super._isValid();
-        return TT || (void 0 !== this._renderTarget || void 0 !== this.renderTargetDepth ? null : "Render target and render target depth cannot both be undefined.")
+        const qq = super._isValid();
+        return qq || (void 0 !== this._renderTarget || void 0 !== this.renderTargetDepth ? null : "Render target and render target depth cannot both be undefined.")
       }
       _dispose() {
         this._frameGraphRenderTarget?.dispose()
       }
     }
-    var aT = cT(36932);
-    class FT {
+    var Qq = gq(37156);
+    class yq {
       get name() {
         return this._name
       }
-      set name(TT) {
-        this._name = TT
+      set name(qq) {
+        this._name = qq
       }
       get disabled() {
         return this._disabled
       }
-      set disabled(TT) {
-        this._disabled = TT
+      set disabled(qq) {
+        this._disabled = qq
       }
       get passes() {
         return this._passes
@@ -581,61 +581,61 @@ export const modules = {
       dispose() {
         this._reset(), this.onTexturesAllocatedObservable.clear(), this.onBeforeTaskExecute.clear(), this.onAfterTaskExecute.clear()
       }
-      constructor(TT, kT) {
-        this._passes = [], this._passesDisabled = [], this._disabled = !1, this.onTexturesAllocatedObservable = new aT.b, this.onBeforeTaskExecute = new aT.b, this.onAfterTaskExecute = new aT.b, this.name = TT, this._frameGraph = kT, this._reset()
+      constructor(qq, Eq) {
+        this._passes = [], this._passesDisabled = [], this._disabled = !1, this.onTexturesAllocatedObservable = new Qq.d, this.onBeforeTaskExecute = new Qq.d, this.onAfterTaskExecute = new Qq.d, this.name = qq, this._frameGraph = Eq, this._reset()
       }
       _reset() {
-        for (const TT of this._passes) TT._dispose();
-        for (const TT of this._passesDisabled) TT._dispose();
+        for (const qq of this._passes) qq._dispose();
+        for (const qq of this._passesDisabled) qq._dispose();
         this._passes.length = 0, this._passesDisabled.length = 0
       }
-      _addPass(TT, kT) {
-        kT ? this._passesDisabled.push(TT) : this._passes.push(TT)
+      _addPass(qq, Eq) {
+        Eq ? this._passesDisabled.push(qq) : this._passes.push(qq)
       }
       _checkTask() {
-        let TT, kT = null,
-          cT = null;
-        for (const yT of this._passes) {
-          const lT = yT._isValid();
-          if (lT) throw new Error(`Pass "${yT.name}" is not valid. ${lT}`);
-          if (DT.IsRenderPass(yT)) {
-            const TT = Array.isArray(yT.renderTarget) ? yT.renderTarget : [yT.renderTarget];
-            kT = [];
-            for (const cT of TT) void 0 !== cT && kT.push(this._frameGraph.textureManager.getTextureFromHandle(cT));
-            cT = void 0 !== yT.renderTargetDepth ? this._frameGraph.textureManager.getTextureFromHandle(yT.renderTargetDepth) : null
-          } else ST.IsObjectListPass(yT) && (TT = yT.objectList)
+        let qq, Eq = null,
+          gq = null;
+        for (const xq of this._passes) {
+          const Yq = xq._isValid();
+          if (Yq) throw new Error(`Pass "${xq.name}" is not valid. ${Yq}`);
+          if (Pq.IsRenderPass(xq)) {
+            const qq = Array.isArray(xq.renderTarget) ? xq.renderTarget : [xq.renderTarget];
+            Eq = [];
+            for (const gq of qq) void 0 !== gq && Eq.push(this._frameGraph.textureManager.getTextureFromHandle(gq));
+            gq = void 0 !== xq.renderTargetDepth ? this._frameGraph.textureManager.getTextureFromHandle(xq.renderTargetDepth) : null
+          } else oq.IsObjectListPass(xq) && (qq = xq.objectList)
         }
-        let lT, MT = null,
-          KT = [],
-          OT = null;
-        for (const yT of this._passesDisabled) {
-          const TT = yT._isValid();
-          if (TT) throw new Error(`Pass "${yT.name}" is not valid. ${TT}`);
-          if (DT.IsRenderPass(yT)) {
-            const TT = Array.isArray(yT.renderTarget) ? yT.renderTarget : [yT.renderTarget];
-            MT = [];
-            for (const kT of TT) void 0 !== kT && MT.push(this._frameGraph.textureManager.getTextureFromHandle(kT));
-            KT = TT, OT = void 0 !== yT.renderTargetDepth ? this._frameGraph.textureManager.getTextureFromHandle(yT.renderTargetDepth) : null
-          } else ST.IsObjectListPass(yT) && (lT = yT.objectList)
+        let Yq, lq = null,
+          Oq = [],
+          mq = null;
+        for (const xq of this._passesDisabled) {
+          const qq = xq._isValid();
+          if (qq) throw new Error(`Pass "${xq.name}" is not valid. ${qq}`);
+          if (Pq.IsRenderPass(xq)) {
+            const qq = Array.isArray(xq.renderTarget) ? xq.renderTarget : [xq.renderTarget];
+            lq = [];
+            for (const Eq of qq) void 0 !== Eq && lq.push(this._frameGraph.textureManager.getTextureFromHandle(Eq));
+            Oq = qq, mq = void 0 !== xq.renderTargetDepth ? this._frameGraph.textureManager.getTextureFromHandle(xq.renderTargetDepth) : null
+          } else oq.IsObjectListPass(xq) && (Yq = xq.objectList)
         }
         if (this._passesDisabled.length > 0) {
-          if (!this._checkSameRenderTarget(kT, MT)) {
-            let TT = !0;
-            for (const kT of KT)
-              if (void 0 !== kT && !this._frameGraph.textureManager.isHistoryTexture(kT)) {
-                TT = !1;
+          if (!this._checkSameRenderTarget(Eq, lq)) {
+            let qq = !0;
+            for (const Eq of Oq)
+              if (void 0 !== Eq && !this._frameGraph.textureManager.isHistoryTexture(Eq)) {
+                qq = !1;
                 break
-              } if (!TT) throw new Error(`The output texture of the task "${this.name}" is different when it is enabled or disabled.`)
+              } if (!qq) throw new Error(`The output texture of the task "${this.name}" is different when it is enabled or disabled.`)
           }
-          if (cT !== OT && null !== OT) throw new Error(`The output depth texture of the task "${this.name}" is different when it is enabled or disabled.`);
-          if (TT !== lT && null !== lT) throw new Error(`The output object list of the task "${this.name}" is different when it is enabled or disabled.`)
+          if (gq !== mq && null !== mq) throw new Error(`The output depth texture of the task "${this.name}" is different when it is enabled or disabled.`);
+          if (qq !== Yq && null !== Yq) throw new Error(`The output object list of the task "${this.name}" is different when it is enabled or disabled.`)
         }
       }
       _execute() {
-        const TT = this._disabled && this._passesDisabled.length > 0 ? this._passesDisabled : this._passes;
+        const qq = this._disabled && this._passesDisabled.length > 0 ? this._passesDisabled : this._passes;
         this.onBeforeTaskExecute.notifyObservers(this), this._frameGraph.engine._debugPushGroup?.(`${this.getClassName()} (${this.name})`);
         try {
-          for (const kT of TT) kT._execute()
+          for (const Eq of qq) Eq._execute()
         } finally {
           this._frameGraph.engine._debugPopGroup?.()
         }
@@ -644,32 +644,32 @@ export const modules = {
       _initializePasses() {
         this._frameGraph.engine._debugPushGroup?.(`${this.getClassName()} (${this.name})`);
         try {
-          for (const TT of this._passes) TT._initialize();
-          for (const TT of this._passesDisabled) TT._initialize()
+          for (const qq of this._passes) qq._initialize();
+          for (const qq of this._passesDisabled) qq._initialize()
         } finally {
           this._frameGraph.engine._debugPopGroup?.()
         }
       }
-      _checkSameRenderTarget(TT, kT) {
-        if (null === TT || null === kT) return TT === kT;
-        if (TT.length !== kT.length) return !1;
-        for (let cT = 0; cT < TT.length; cT++)
-          if (TT[cT] !== kT[cT]) return !1;
+      _checkSameRenderTarget(qq, Eq) {
+        if (null === qq || null === Eq) return qq === Eq;
+        if (qq.length !== Eq.length) return !1;
+        for (let gq = 0; gq < qq.length; gq++)
+          if (qq[gq] !== Eq[gq]) return !1;
         return !0
       }
     }
-    class rT extends FT {
+    class tq extends yq {
       get alphaMode() {
         return this.postProcess.alphaMode
       }
-      set alphaMode(TT) {
-        this.postProcess.alphaMode = TT
+      set alphaMode(qq) {
+        this.postProcess.alphaMode = qq
       }
       get drawWrapper() {
         return this._postProcessDrawWrapper
       }
-      constructor(TT, kT, cT) {
-        super(TT, kT), this.sourceSamplingMode = 2, this.depthReadOnly = !1, this.stencilReadOnly = !1, this.disableColorWrite = !1, this.drawBackFace = !1, this.depthTest = !0, this.postProcess = cT, this._postProcessDrawWrapper = this.postProcess.drawWrapper, this.outputTexture = this._frameGraph.textureManager.createDanglingHandle(), this.outputDepthAttachmentTexture = this._frameGraph.textureManager.createDanglingHandle()
+      constructor(qq, Eq, gq) {
+        super(qq, Eq), this.sourceSamplingMode = 2, this.depthReadOnly = !1, this.stencilReadOnly = !1, this.disableColorWrite = !1, this.drawBackFace = !1, this.depthTest = !0, this.postProcess = gq, this._postProcessDrawWrapper = this.postProcess.drawWrapper, this.outputTexture = this._frameGraph.textureManager.createDanglingHandle(), this.outputDepthAttachmentTexture = this._frameGraph.textureManager.createDanglingHandle()
       }
       isReady() {
         return this.postProcess.isReady()
@@ -678,361 +678,361 @@ export const modules = {
         return "FrameGraphPostProcessTask"
       }
       record() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-          kT = arguments.length > 1 ? arguments[1] : void 0,
-          cT = arguments.length > 2 ? arguments[2] : void 0;
+        let qq = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+          Eq = arguments.length > 1 ? arguments[1] : void 0,
+          gq = arguments.length > 2 ? arguments[2] : void 0;
         if (void 0 === this.sourceTexture && void 0 === this.targetTexture) throw new Error(`FrameGraphPostProcessTask "${this.name}": sourceTexture or targetTexture is required`);
-        const lT = void 0 !== this.sourceTexture ? this._frameGraph.textureManager.getTextureCreationOptions(this.sourceTexture) : void 0;
-        if (lT && (lT.options.samples = 1), this._frameGraph.textureManager.resolveDanglingHandle(this.outputTexture, this.targetTexture, this.name, lT), void 0 !== this.depthAttachmentTexture && this._frameGraph.textureManager.resolveDanglingHandle(this.outputDepthAttachmentTexture, this.depthAttachmentTexture), lT) {
-          const TT = this._frameGraph.textureManager.getTextureAbsoluteDimensions(lT);
-          this._sourceWidth = TT.width, this._sourceHeight = TT.height
+        const Yq = void 0 !== this.sourceTexture ? this._frameGraph.textureManager.getTextureCreationOptions(this.sourceTexture) : void 0;
+        if (Yq && (Yq.options.samples = 1), this._frameGraph.textureManager.resolveDanglingHandle(this.outputTexture, this.targetTexture, this.name, Yq), void 0 !== this.depthAttachmentTexture && this._frameGraph.textureManager.resolveDanglingHandle(this.outputDepthAttachmentTexture, this.depthAttachmentTexture), Yq) {
+          const qq = this._frameGraph.textureManager.getTextureAbsoluteDimensions(Yq);
+          this._sourceWidth = qq.width, this._sourceHeight = qq.height
         }
-        const MT = this._frameGraph.textureManager.getTextureDescription(this.outputTexture);
-        this._outputWidth = MT.size.width, this._outputHeight = MT.size.height;
-        const KT = this._frameGraph.addRenderPass(this.name);
-        if (KT.depthReadOnly = this.depthReadOnly, KT.stencilReadOnly = this.stencilReadOnly, KT.addDependencies(this.sourceTexture), KT.setRenderTarget(this.outputTexture), KT.setRenderTargetDepth(this.depthAttachmentTexture), KT.setExecuteFunc((TT => {
-            TT.pushDebugGroup(`Apply post-process (${this.name})`), void 0 !== this.sourceTexture && TT.setTextureSamplingMode(this.sourceTexture, this.sourceSamplingMode), kT?.(TT), this.viewport && TT.setViewport(this.viewport), TT.applyFullScreenEffect(this._postProcessDrawWrapper, (() => {
-              void 0 !== this.sourceTexture && TT.bindTextureHandle(this._postProcessDrawWrapper.effect, "textureSampler", this.sourceTexture), cT?.(TT), this.postProcess.bind()
-            }), this.stencilState, this.disableColorWrite, this.drawBackFace, this.depthTest, void 0 !== this.viewport), TT.restoreDefaultFramebuffer(), TT.popDebugGroup()
-          })), !TT) {
-          const TT = this._frameGraph.addRenderPass(this.name + "_disabled", !0);
-          TT.depthReadOnly = this.depthReadOnly, TT.stencilReadOnly = this.stencilReadOnly, TT.addDependencies(this.sourceTexture), TT.setRenderTarget(this.outputTexture), TT.setRenderTargetDepth(this.depthAttachmentTexture), TT.setExecuteFunc((TT => {
-            void 0 !== this.sourceTexture && 0 === this.alphaMode && (this.viewport && TT.setViewport(this.viewport), TT.copyTexture(this.sourceTexture, void 0, void 0 !== this.viewport))
+        const lq = this._frameGraph.textureManager.getTextureDescription(this.outputTexture);
+        this._outputWidth = lq.size.width, this._outputHeight = lq.size.height;
+        const Oq = this._frameGraph.addRenderPass(this.name);
+        if (Oq.depthReadOnly = this.depthReadOnly, Oq.stencilReadOnly = this.stencilReadOnly, Oq.addDependencies(this.sourceTexture), Oq.setRenderTarget(this.outputTexture), Oq.setRenderTargetDepth(this.depthAttachmentTexture), Oq.setExecuteFunc((qq => {
+            qq.pushDebugGroup(`Apply post-process (${this.name})`), void 0 !== this.sourceTexture && qq.setTextureSamplingMode(this.sourceTexture, this.sourceSamplingMode), Eq?.(qq), this.viewport && qq.setViewport(this.viewport), qq.applyFullScreenEffect(this._postProcessDrawWrapper, (() => {
+              void 0 !== this.sourceTexture && qq.bindTextureHandle(this._postProcessDrawWrapper.effect, "textureSampler", this.sourceTexture), gq?.(qq), this.postProcess.bind()
+            }), this.stencilState, this.disableColorWrite, this.drawBackFace, this.depthTest, void 0 !== this.viewport), qq.restoreDefaultFramebuffer(), qq.popDebugGroup()
+          })), !qq) {
+          const qq = this._frameGraph.addRenderPass(this.name + "_disabled", !0);
+          qq.depthReadOnly = this.depthReadOnly, qq.stencilReadOnly = this.stencilReadOnly, qq.addDependencies(this.sourceTexture), qq.setRenderTarget(this.outputTexture), qq.setRenderTargetDepth(this.depthAttachmentTexture), qq.setExecuteFunc((qq => {
+            void 0 !== this.sourceTexture && 0 === this.alphaMode && (this.viewport && qq.setViewport(this.viewport), qq.copyTexture(this.sourceTexture, void 0, void 0 !== this.viewport))
           }))
         }
-        return KT
+        return Oq
       }
       dispose() {
         this.postProcess.dispose(), super.dispose()
       }
     }
-    class PT extends rT {
-      constructor(TT, kT, cT) {
-        super(TT, kT, cT || new IT(TT, kT.engine))
+    class rq extends tq {
+      constructor(qq, Eq, gq) {
+        super(qq, Eq, gq || new uq(qq, Eq.engine))
       }
       getClassName() {
         return "FrameGraphFXAATask"
       }
       record() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-          kT = arguments.length > 1 ? arguments[1] : void 0,
-          cT = arguments.length > 2 ? arguments[2] : void 0;
-        const lT = super.record(TT, kT, cT);
-        return this.postProcess.texelSize.x = 1 / this._sourceWidth, this.postProcess.texelSize.y = 1 / this._sourceHeight, lT
+        let qq = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+          Eq = arguments.length > 1 ? arguments[1] : void 0,
+          gq = arguments.length > 2 ? arguments[2] : void 0;
+        const Yq = super.record(qq, Eq, gq);
+        return this.postProcess.texelSize.x = 1 / this._sourceWidth, this.postProcess.texelSize.y = 1 / this._sourceHeight, Yq
       }
     }
-    var wT = cT(41382);
-    class mT extends rT {
-      constructor(TT, kT, cT) {
-        super(TT, kT, cT || new wT.h(TT, kT.engine))
+    var vq = gq(41577);
+    class hq extends tq {
+      constructor(qq, Eq, gq) {
+        super(qq, Eq, gq || new vq.f(qq, Eq.engine))
       }
       getClassName() {
         return "FrameGraphPassTask"
       }
     }
-    var bT = cT(39720),
-      zT = cT(39812),
-      JT = cT(39775),
-      oT = cT(39876),
-      HT = cT(37093);
-    class eT {
-      getRenderCamera(TT) {
+    var nq = gq(39838),
+      bq = gq(39919),
+      iq = gq(39876),
+      Zq = gq(39993),
+      fq = gq(37289);
+    class Mq {
+      getRenderCamera(qq) {
         if (this._renderCamera) return this._renderCamera;
         {
-          let kT;
-          return kT = this.originalScene.activeCameras && this.originalScene.activeCameras.length > 1 ? this.originalScene.activeCameras[this.originalScene.activeCameras.length - 1] : this.originalScene.activeCamera, TT && kT && kT.isRigCamera ? kT.rigParent : kT
+          let Eq;
+          return Eq = this.originalScene.activeCameras && this.originalScene.activeCameras.length > 1 ? this.originalScene.activeCameras[this.originalScene.activeCameras.length - 1] : this.originalScene.activeCamera, qq && Eq && Eq.isRigCamera ? Eq.rigParent : Eq
         }
       }
-      setRenderCamera(TT) {
-        this._renderCamera = TT
+      setRenderCamera(qq) {
+        this._renderCamera = qq
       }
       _getSharedGizmoLight() {
-        return this._sharedGizmoLight || (this._sharedGizmoLight = new oT.d("shared gizmo light", new xT.m(0, 1, 0), this.utilityLayerScene), this._sharedGizmoLight.intensity = 2, this._sharedGizmoLight.groundColor = HT.c.Gray()), this._sharedGizmoLight
+        return this._sharedGizmoLight || (this._sharedGizmoLight = new Zq.d("shared gizmo light", new cq.q(0, 1, 0), this.utilityLayerScene), this._sharedGizmoLight.intensity = 2, this._sharedGizmoLight.groundColor = fq.d.Gray()), this._sharedGizmoLight
       }
       static get DefaultUtilityLayer() {
-        return null == eT._DefaultUtilityLayer ? eT._CreateDefaultUtilityLayerFromScene(fT.d.LastCreatedScene) : eT._DefaultUtilityLayer
+        return null == Mq._DefaultUtilityLayer ? Mq._CreateDefaultUtilityLayerFromScene(Aq.b.LastCreatedScene) : Mq._DefaultUtilityLayer
       }
-      static _CreateDefaultUtilityLayerFromScene(TT) {
-        return eT._DefaultUtilityLayer = new eT(TT), eT._DefaultUtilityLayer.originalScene.QJ.addOnce((() => {
-          eT._DefaultUtilityLayer = null
-        })), eT._DefaultUtilityLayer
+      static _CreateDefaultUtilityLayerFromScene(qq) {
+        return Mq._DefaultUtilityLayer = new Mq(qq), Mq._DefaultUtilityLayer.originalScene.MJ.addOnce((() => {
+          Mq._DefaultUtilityLayer = null
+        })), Mq._DefaultUtilityLayer
       }
       static get DefaultKeepDepthUtilityLayer() {
-        return null == eT._DefaultKeepDepthUtilityLayer ? eT._CreateDefaultKeepUtilityLayerFromScene(fT.d.LastCreatedScene) : eT._DefaultKeepDepthUtilityLayer
+        return null == Mq._DefaultKeepDepthUtilityLayer ? Mq._CreateDefaultKeepUtilityLayerFromScene(Aq.b.LastCreatedScene) : Mq._DefaultKeepDepthUtilityLayer
       }
-      static _CreateDefaultKeepUtilityLayerFromScene(TT) {
-        return eT._DefaultKeepDepthUtilityLayer = new eT(TT), eT._DefaultKeepDepthUtilityLayer.utilityLayerScene.autoClearDepthAndStencil = !1, eT._DefaultKeepDepthUtilityLayer.originalScene.QJ.addOnce((() => {
-          eT._DefaultKeepDepthUtilityLayer = null
-        })), eT._DefaultKeepDepthUtilityLayer
+      static _CreateDefaultKeepUtilityLayerFromScene(qq) {
+        return Mq._DefaultKeepDepthUtilityLayer = new Mq(qq), Mq._DefaultKeepDepthUtilityLayer.utilityLayerScene.autoClearDepthAndStencil = !1, Mq._DefaultKeepDepthUtilityLayer.originalScene.MJ.addOnce((() => {
+          Mq._DefaultKeepDepthUtilityLayer = null
+        })), Mq._DefaultKeepDepthUtilityLayer
       }
-      constructor(TT) {
-        let kT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-          cT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        this.originalScene = TT, this.handleEvents = kT, this._pointerCaptures = {}, this._lastPointerEvents = {}, this._sharedGizmoLight = null, this._renderCamera = null, this.pickUtilitySceneFirst = !0, this.shouldRender = !0, this.onlyCheckPointerDownEvents = !0, this.processAllEvents = !1, this.pickingEnabled = !0, this.onPointerOutObservable = new aT.b, this.utilityLayerScene = new bT.f(TT.Dv(), {
+      constructor(qq) {
+        let Eq = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          gq = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        this.originalScene = qq, this.handleEvents = Eq, this._pointerCaptures = {}, this._lastPointerEvents = {}, this._sharedGizmoLight = null, this._renderCamera = null, this.pickUtilitySceneFirst = !0, this.shouldRender = !0, this.onlyCheckPointerDownEvents = !0, this.processAllEvents = !1, this.pickingEnabled = !0, this.onPointerOutObservable = new Qq.d, this.utilityLayerScene = new nq.i(qq.Ba(), {
           virtual: !0,
-          useFloatingOrigin: TT.floatingOriginMode
-        }), this.utilityLayerScene.useRightHandedSystem = TT.useRightHandedSystem, this.utilityLayerScene._allowPostProcessClearColor = !1, this.utilityLayerScene.postProcessesEnabled = !1, this.utilityLayerScene.detachControl(), kT && (this._originalPointerObserver = TT.onPrePointerObservable.add((kT => {
+          useFloatingOrigin: qq.floatingOriginMode
+        }), this.utilityLayerScene.useRightHandedSystem = qq.useRightHandedSystem, this.utilityLayerScene._allowPostProcessClearColor = !1, this.utilityLayerScene.postProcessesEnabled = !1, this.utilityLayerScene.detachControl(), Eq && (this._originalPointerObserver = qq.onPrePointerObservable.add((Eq => {
           if (!this.utilityLayerScene.activeCamera) return;
           if (!this.pickingEnabled) return;
-          if (!this.processAllEvents && kT.type !== zT.c.POINTERMOVE && kT.type !== zT.c.POINTERUP && kT.type !== zT.c.POINTERDOWN && kT.type !== zT.c.POINTERDOUBLETAP) return;
-          this.utilityLayerScene.pointerX = TT.pointerX, this.utilityLayerScene.pointerY = TT.pointerY;
-          const cT = kT.event;
-          if (TT.isPointerCaptured(cT.pointerId)) return void(this._pointerCaptures[cT.pointerId] = !1);
-          const lT = cT => {
-              let lT;
-              if (kT.nearInteractionPickingInfo) lT = kT.nearInteractionPickingInfo.pickedMesh.NJ() == cT ? kT.nearInteractionPickingInfo : new JT.d;
-              else if (cT !== this.utilityLayerScene && kT.originalPickingInfo) lT = kT.originalPickingInfo;
+          if (!this.processAllEvents && Eq.type !== bq.b.POINTERMOVE && Eq.type !== bq.b.POINTERUP && Eq.type !== bq.b.POINTERDOWN && Eq.type !== bq.b.POINTERDOUBLETAP) return;
+          this.utilityLayerScene.pointerX = qq.pointerX, this.utilityLayerScene.pointerY = qq.pointerY;
+          const gq = Eq.event;
+          if (qq.isPointerCaptured(gq.pointerId)) return void(this._pointerCaptures[gq.pointerId] = !1);
+          const Yq = gq => {
+              let Yq;
+              if (Eq.nearInteractionPickingInfo) Yq = Eq.nearInteractionPickingInfo.pickedMesh.ZJ() == gq ? Eq.nearInteractionPickingInfo : new iq.d;
+              else if (gq !== this.utilityLayerScene && Eq.originalPickingInfo) Yq = Eq.originalPickingInfo;
               else {
-                let MT = null;
-                this._renderCamera && (MT = cT._activeCamera, cT._activeCamera = this._renderCamera, kT.ray = null), lT = kT.ray ? cT.pickWithRay(kT.ray) : cT.gC(TT.pointerX, TT.pointerY), MT && (cT._activeCamera = MT)
+                let lq = null;
+                this._renderCamera && (lq = gq._activeCamera, gq._activeCamera = this._renderCamera, Eq.ray = null), Yq = Eq.ray ? gq.pickWithRay(Eq.ray) : gq.zW(qq.pointerX, qq.pointerY), lq && (gq._activeCamera = lq)
               }
-              return lT
+              return Yq
             },
-            MT = lT(this.utilityLayerScene);
-          if (!kT.ray && MT && (kT.ray = MT.ray), kT.originalPickingInfo?.aimTransform && MT && (MT.aimTransform = kT.originalPickingInfo.aimTransform, MT.gripTransform = kT.originalPickingInfo.gripTransform), this.utilityLayerScene.onPrePointerObservable.notifyObservers(kT), this.onlyCheckPointerDownEvents && kT.type != zT.c.POINTERDOWN) return kT.skipOnPointerObservable || this.utilityLayerScene.onPointerObservable.notifyObservers(new zT.h(kT.type, kT.event, MT), kT.type), void(kT.type === zT.c.POINTERUP && this._pointerCaptures[cT.pointerId] && (this._pointerCaptures[cT.pointerId] = !1));
-          if (this.utilityLayerScene.autoClearDepthAndStencil || this.pickUtilitySceneFirst) MT && MT.hit && (kT.skipOnPointerObservable || this.utilityLayerScene.onPointerObservable.notifyObservers(new zT.h(kT.type, kT.event, MT), kT.type), kT.skipOnPointerObservable = !0);
+            lq = Yq(this.utilityLayerScene);
+          if (!Eq.ray && lq && (Eq.ray = lq.ray), Eq.originalPickingInfo?.aimTransform && lq && (lq.aimTransform = Eq.originalPickingInfo.aimTransform, lq.gripTransform = Eq.originalPickingInfo.gripTransform), this.utilityLayerScene.onPrePointerObservable.notifyObservers(Eq), this.onlyCheckPointerDownEvents && Eq.type != bq.b.POINTERDOWN) return Eq.skipOnPointerObservable || this.utilityLayerScene.onPointerObservable.notifyObservers(new bq.h(Eq.type, Eq.event, lq), Eq.type), void(Eq.type === bq.b.POINTERUP && this._pointerCaptures[gq.pointerId] && (this._pointerCaptures[gq.pointerId] = !1));
+          if (this.utilityLayerScene.autoClearDepthAndStencil || this.pickUtilitySceneFirst) lq && lq.hit && (Eq.skipOnPointerObservable || this.utilityLayerScene.onPointerObservable.notifyObservers(new bq.h(Eq.type, Eq.event, lq), Eq.type), Eq.skipOnPointerObservable = !0);
           else {
-            const cT = lT(TT),
-              KT = kT.event;
-            cT && MT && (0 === MT.distance && cT.pickedMesh ? this.mainSceneTrackerPredicate && this.mainSceneTrackerPredicate(cT.pickedMesh) ? (this._notifyObservers(kT, cT, KT), kT.skipOnPointerObservable = !0) : kT.type === zT.c.POINTERDOWN ? (this._pointerCaptures[KT.pointerId] = !0, this._notifyObservers(kT, cT, KT)) : kT.type !== zT.c.POINTERMOVE && kT.type !== zT.c.POINTERUP || (this._lastPointerEvents[KT.pointerId] && (this.onPointerOutObservable.notifyObservers(KT.pointerId), delete this._lastPointerEvents[KT.pointerId]), this._notifyObservers(kT, cT, KT)) : !this._pointerCaptures[KT.pointerId] && (MT.distance < cT.distance || 0 === cT.distance) ? (this._notifyObservers(kT, MT, KT), kT.skipOnPointerObservable || (kT.skipOnPointerObservable = MT.distance > 0)) : !this._pointerCaptures[KT.pointerId] && MT.distance >= cT.distance && (this.mainSceneTrackerPredicate && this.mainSceneTrackerPredicate(cT.pickedMesh) ? (this._notifyObservers(kT, cT, KT), kT.skipOnPointerObservable = !0) : (kT.type !== zT.c.POINTERMOVE && kT.type !== zT.c.POINTERUP || this._lastPointerEvents[KT.pointerId] && (this.onPointerOutObservable.notifyObservers(KT.pointerId), delete this._lastPointerEvents[KT.pointerId]), this._notifyObservers(kT, MT, KT))), kT.type === zT.c.POINTERUP && this._pointerCaptures[KT.pointerId] && (this._pointerCaptures[KT.pointerId] = !1))
+            const gq = Yq(qq),
+              Oq = Eq.event;
+            gq && lq && (0 === lq.distance && gq.pickedMesh ? this.mainSceneTrackerPredicate && this.mainSceneTrackerPredicate(gq.pickedMesh) ? (this._notifyObservers(Eq, gq, Oq), Eq.skipOnPointerObservable = !0) : Eq.type === bq.b.POINTERDOWN ? (this._pointerCaptures[Oq.pointerId] = !0, this._notifyObservers(Eq, gq, Oq)) : Eq.type !== bq.b.POINTERMOVE && Eq.type !== bq.b.POINTERUP || (this._lastPointerEvents[Oq.pointerId] && (this.onPointerOutObservable.notifyObservers(Oq.pointerId), delete this._lastPointerEvents[Oq.pointerId]), this._notifyObservers(Eq, gq, Oq)) : !this._pointerCaptures[Oq.pointerId] && (lq.distance < gq.distance || 0 === gq.distance) ? (this._notifyObservers(Eq, lq, Oq), Eq.skipOnPointerObservable || (Eq.skipOnPointerObservable = lq.distance > 0)) : !this._pointerCaptures[Oq.pointerId] && lq.distance >= gq.distance && (this.mainSceneTrackerPredicate && this.mainSceneTrackerPredicate(gq.pickedMesh) ? (this._notifyObservers(Eq, gq, Oq), Eq.skipOnPointerObservable = !0) : (Eq.type !== bq.b.POINTERMOVE && Eq.type !== bq.b.POINTERUP || this._lastPointerEvents[Oq.pointerId] && (this.onPointerOutObservable.notifyObservers(Oq.pointerId), delete this._lastPointerEvents[Oq.pointerId]), this._notifyObservers(Eq, lq, Oq))), Eq.type === bq.b.POINTERUP && this._pointerCaptures[Oq.pointerId] && (this._pointerCaptures[Oq.pointerId] = !1))
           }
-        })), this._originalPointerObserver && TT.onPrePointerObservable.makeObserverTopPriority(this._originalPointerObserver)), this.utilityLayerScene.autoClear = !1, cT || (this._afterRenderObserver = this.originalScene.onAfterRenderCameraObservable.add((TT => {
-          this.shouldRender && TT == this.getRenderCamera() && this.render()
-        }))), this._sceneDisposeObserver = this.originalScene.QJ.add((() => {
+        })), this._originalPointerObserver && qq.onPrePointerObservable.makeObserverTopPriority(this._originalPointerObserver)), this.utilityLayerScene.autoClear = !1, gq || (this._afterRenderObserver = this.originalScene.onAfterRenderCameraObservable.add((qq => {
+          this.shouldRender && qq == this.getRenderCamera() && this.render()
+        }))), this._sceneDisposeObserver = this.originalScene.MJ.add((() => {
           this.dispose()
         })), this._updateCamera()
       }
-      _notifyObservers(TT, kT, cT) {
-        TT.skipOnPointerObservable || (this.utilityLayerScene.onPointerObservable.notifyObservers(new zT.h(TT.type, TT.event, kT), TT.type), this._lastPointerEvents[cT.pointerId] = !0)
+      _notifyObservers(qq, Eq, gq) {
+        qq.skipOnPointerObservable || (this.utilityLayerScene.onPointerObservable.notifyObservers(new bq.h(qq.type, qq.event, Eq), qq.type), this._lastPointerEvents[gq.pointerId] = !0)
       }
       render() {
         if (this._updateCamera(), this.utilityLayerScene.activeCamera) {
-          const TT = this.utilityLayerScene.activeCamera.NJ(),
-            kT = this.utilityLayerScene.activeCamera;
-          kT._scene = this.utilityLayerScene, kT.leftCamera && (kT.leftCamera._scene = this.utilityLayerScene), kT.rightCamera && (kT.rightCamera._scene = this.utilityLayerScene), this.utilityLayerScene.render(!1), kT._scene = TT, kT.leftCamera && (kT.leftCamera._scene = TT), kT.rightCamera && (kT.rightCamera._scene = TT)
+          const qq = this.utilityLayerScene.activeCamera.ZJ(),
+            Eq = this.utilityLayerScene.activeCamera;
+          Eq._scene = this.utilityLayerScene, Eq.leftCamera && (Eq.leftCamera._scene = this.utilityLayerScene), Eq.rightCamera && (Eq.rightCamera._scene = this.utilityLayerScene), this.utilityLayerScene.render(!1), Eq._scene = qq, Eq.leftCamera && (Eq.leftCamera._scene = qq), Eq.rightCamera && (Eq.rightCamera._scene = qq)
         }
       }
       dispose() {
-        this.onPointerOutObservable.clear(), this._afterRenderObserver && this.originalScene.onAfterRenderCameraObservable.remove(this._afterRenderObserver), this._sceneDisposeObserver && this.originalScene.QJ.remove(this._sceneDisposeObserver), this._originalPointerObserver && this.originalScene.onPrePointerObservable.remove(this._originalPointerObserver), this.utilityLayerScene.dispose()
+        this.onPointerOutObservable.clear(), this._afterRenderObserver && this.originalScene.onAfterRenderCameraObservable.remove(this._afterRenderObserver), this._sceneDisposeObserver && this.originalScene.MJ.remove(this._sceneDisposeObserver), this._originalPointerObserver && this.originalScene.onPrePointerObservable.remove(this._originalPointerObserver), this.utilityLayerScene.dispose()
       }
       _updateCamera() {
         this.utilityLayerScene.cameraToUseForPointers = this.getRenderCamera(), this.utilityLayerScene.activeCamera = this.getRenderCamera()
       }
     }
-    eT._DefaultUtilityLayer = null, eT._DefaultKeepDepthUtilityLayer = null;
-    const GT = {
-      FindMainCamera: function(TT) {
-        return TT.findMainCamera()
+    Mq._DefaultUtilityLayer = null, Mq._DefaultKeepDepthUtilityLayer = null;
+    const Tq = {
+      FindMainCamera: function(qq) {
+        return qq.findMainCamera()
       },
-      FindMainObjectRenderer: function(TT) {
-        return TT.findMainObjectRenderer()
+      FindMainObjectRenderer: function(qq) {
+        return qq.findMainObjectRenderer()
       },
-      CreateUtilityLayerRenderer: function(TT) {
-        let kT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        const cT = TT.et,
-          lT = new eT(cT, kT, !0);
-        lT.utilityLayerScene.activeCamera = cT.activeCamera;
-        let MT = GT.FindMainCamera(cT.frameGraph);
-        !MT && cT.cameras.length > 0 && (MT = cT.cameras[0]), MT && (lT.setRenderCamera(MT), lT.utilityLayerScene.activeCamera = MT);
-        const KT = cT.onAfterRenderObservable.add((() => {
-          lT.render()
+      CreateUtilityLayerRenderer: function(qq) {
+        let Eq = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        const gq = qq.PV,
+          Yq = new Mq(gq, Eq, !0);
+        Yq.utilityLayerScene.activeCamera = gq.activeCamera;
+        let lq = Tq.FindMainCamera(gq.frameGraph);
+        !lq && gq.cameras.length > 0 && (lq = gq.cameras[0]), lq && (Yq.setRenderCamera(lq), Yq.utilityLayerScene.activeCamera = lq);
+        const Oq = gq.onAfterRenderObservable.add((() => {
+          Yq.render()
         }));
-        return lT.utilityLayerScene.QJ.addOnce((() => {
-          cT.onAfterRenderObservable.remove(KT)
-        })), lT
+        return Yq.utilityLayerScene.MJ.addOnce((() => {
+          gq.onAfterRenderObservable.remove(Oq)
+        })), Yq
       }
     };
-    let VT = null;
+    let zq = null;
 
-    function ET(TT, kT, cT, lT) {
-      let MT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "image/png",
-        KT = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-        OT = arguments.length > 6 ? arguments[6] : void 0,
-        yT = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
-        fT = arguments.length > 8 && void 0 !== arguments[8] && arguments[8];
+    function Sq(qq, Eq, gq, Yq) {
+      let lq = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "image/png",
+        Oq = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+        mq = arguments.length > 6 ? arguments[6] : void 0,
+        xq = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
+        Aq = arguments.length > 8 && void 0 !== arguments[8] && arguments[8];
       const {
-        height: xT,
-        width: IT
-      } = RT(TT, kT, cT);
-      if (!xT || !IT) return void CT.e.Error("Invalid 'size' parameter !");
-      const AT = kT.NJ();
-      let vT = AT.activeCamera !== kT;
-      if (AT.frameGraph) {
-        const TT = GT.FindMainObjectRenderer(AT.frameGraph);
-        TT && (vT = TT.camera !== kT)
+        height: cq,
+        width: uq
+      } = Rq(qq, Eq, gq);
+      if (!cq || !uq) return void Wq.b.Error("Invalid 'size' parameter !");
+      const Bq = Eq.ZJ();
+      let aq = Bq.activeCamera !== Eq;
+      if (Bq.frameGraph) {
+        const qq = Tq.FindMainObjectRenderer(Bq.frameGraph);
+        qq && (aq = qq.camera !== Eq)
       }
-      vT ? XT(TT, kT, cT, (TT => {
-        if (KT) {
-          const kT = new Blob([TT]);
-          jT.h.DownloadBlob(kT), lT && lT("")
-        } else lT && lT(TT)
-      }), MT, 1, TT.getCreationOptions().antialias, void 0, void 0, void 0, void 0, OT) : TT.onEndFrameObservable.addOnce((() => {
-        VT || (VT = document.createElement("canvas")), VT.width = IT, VT.height = xT;
-        const kT = VT.getContext("2d"),
-          cT = TT.getRenderingCanvas();
-        if (!kT || !cT) return void CT.e.Error("Failed to create screenshot. Rendering context or rendering canvas is not available.");
-        const vT = cT.width,
-          tT = cT.height,
-          hT = VT.width,
-          NT = VT.height,
-          QT = hT / vT,
-          ST = NT / tT,
-          DT = yT ? Math.max(QT, ST) : Math.min(QT, ST),
-          aT = vT * DT,
-          FT = tT * DT,
-          rT = (hT - aT) / 2,
-          PT = (NT - FT) / 2;
-        kT.save(), kT.fillStyle = fT ? AT.clearColor.toHexString() : "rgba(0, 0, 0, 0)", kT.fillRect(0, 0, IT, xT), kT.restore(), kT.drawImage(cT, 0, 0, vT, tT, rT, PT, aT, FT), KT ? (jT.h.EncodeScreenshotCanvasData(VT, void 0, MT, void 0, OT), lT && lT("")) : jT.h.EncodeScreenshotCanvasData(VT, lT, MT, void 0, OT)
+      aq ? Lq(qq, Eq, gq, (qq => {
+        if (Oq) {
+          const Eq = new Blob([qq]);
+          Nq.f.DownloadBlob(Eq), Yq && Yq("")
+        } else Yq && Yq(qq)
+      }), lq, 1, qq.getCreationOptions().antialias, void 0, void 0, void 0, void 0, mq) : qq.onEndFrameObservable.addOnce((() => {
+        zq || (zq = document.createElement("canvas")), zq.width = uq, zq.height = cq;
+        const Eq = zq.getContext("2d"),
+          gq = qq.getRenderingCanvas();
+        if (!Eq || !gq) return void Wq.b.Error("Failed to create screenshot. Rendering context or rendering canvas is not available.");
+        const aq = gq.width,
+          Vq = gq.height,
+          dq = zq.width,
+          jq = zq.height,
+          Hq = dq / aq,
+          oq = jq / Vq,
+          Pq = xq ? Math.max(Hq, oq) : Math.min(Hq, oq),
+          Qq = aq * Pq,
+          yq = Vq * Pq,
+          tq = (dq - Qq) / 2,
+          rq = (jq - yq) / 2;
+        Eq.save(), Eq.fillStyle = Aq ? Bq.clearColor.toHexString() : "rgba(0, 0, 0, 0)", Eq.fillRect(0, 0, uq, cq), Eq.restore(), Eq.drawImage(gq, 0, 0, aq, Vq, tq, rq, Qq, yq), Oq ? (Nq.f.EncodeScreenshotCanvasData(zq, void 0, lq, void 0, mq), Yq && Yq("")) : Nq.f.EncodeScreenshotCanvasData(zq, Yq, lq, void 0, mq)
       }))
     }
-    async function ZT(TT, kT, cT) {
-      let lT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "image/png",
-        MT = arguments.length > 4 ? arguments[4] : void 0,
-        KT = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-        OT = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
-        yT = arguments.length > 7 && void 0 !== arguments[7] && arguments[7];
-      return await new Promise(((fT, xT) => {
-        ET(TT, kT, cT, (TT => {
-          "undefined" !== typeof TT ? fT(TT) : xT(new Error("Data is undefined"))
-        }), lT, yT, MT, KT, OT)
+    async function pq(qq, Eq, gq) {
+      let Yq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "image/png",
+        lq = arguments.length > 4 ? arguments[4] : void 0,
+        Oq = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+        mq = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
+        xq = arguments.length > 7 && void 0 !== arguments[7] && arguments[7];
+      return await new Promise(((Aq, cq) => {
+        Sq(qq, Eq, gq, (qq => {
+          "undefined" !== typeof qq ? Aq(qq) : cq(new Error("Data is undefined"))
+        }), Yq, xq, lq, Oq, mq)
       }))
     }
-    async function uT(TT, kT, cT, lT) {
-      let MT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "image/png",
-        KT = arguments.length > 5 ? arguments[5] : void 0,
-        OT = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
-      return await new Promise((yT => {
-        ET(TT, kT, {
-          width: cT,
-          height: lT
+    async function Gq(qq, Eq, gq, Yq) {
+      let lq = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "image/png",
+        Oq = arguments.length > 5 ? arguments[5] : void 0,
+        mq = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
+      return await new Promise((xq => {
+        Sq(qq, Eq, {
+          width: gq,
+          height: Yq
         }, (() => {
-          yT()
-        }), MT, !0, KT, OT)
+          xq()
+        }), lq, !0, Oq, mq)
       }))
     }
 
-    function XT(TT, kT, KT, OT) {
-      let yT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "image/png",
-        fT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 1,
-        xT = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
-        IT = arguments.length > 7 ? arguments[7] : void 0,
-        jT = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
-        NT = arguments.length > 9 && void 0 !== arguments[9] && arguments[9],
-        QT = !(arguments.length > 10 && void 0 !== arguments[10]) || arguments[10],
-        ST = arguments.length > 11 ? arguments[11] : void 0,
-        DT = arguments.length > 12 ? arguments[12] : void 0,
-        aT = arguments.length > 13 ? arguments[13] : void 0,
-        FT = arguments.length > 14 && void 0 !== arguments[14] ? arguments[14] : 3e4,
-        rT = arguments.length > 15 ? arguments[15] : void 0;
-      const PT = kT.NJ();
-      if (PT.frameGraph) return void LT(PT.frameGraph, kT, KT, yT, fT, xT, IT, ST, aT, !OT).then((TT => {
-        OT && OT(TT)
+    function Lq(qq, Eq, Oq, mq) {
+      let xq = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "image/png",
+        Aq = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 1,
+        cq = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
+        uq = arguments.length > 7 ? arguments[7] : void 0,
+        Nq = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
+        jq = arguments.length > 9 && void 0 !== arguments[9] && arguments[9],
+        Hq = !(arguments.length > 10 && void 0 !== arguments[10]) || arguments[10],
+        oq = arguments.length > 11 ? arguments[11] : void 0,
+        Pq = arguments.length > 12 ? arguments[12] : void 0,
+        Qq = arguments.length > 13 ? arguments[13] : void 0,
+        yq = arguments.length > 14 && void 0 !== arguments[14] ? arguments[14] : 3e4,
+        tq = arguments.length > 15 ? arguments[15] : void 0;
+      const rq = Eq.ZJ();
+      if (rq.frameGraph) return void kq(rq.frameGraph, Eq, Oq, xq, Aq, cq, uq, oq, Qq, !mq).then((qq => {
+        mq && mq(qq)
       }));
       const {
-        height: wT,
-        width: mT,
-        finalWidth: bT,
-        finalHeight: zT
-      } = RT(TT, kT, KT), JT = {
-        width: mT,
-        height: wT
+        height: vq,
+        width: hq,
+        finalWidth: nq,
+        finalHeight: bq
+      } = Rq(qq, Eq, Oq), iq = {
+        width: hq,
+        height: vq
       };
-      if (!wT || !mT) return void CT.e.Error("Invalid 'size' parameter !");
-      TT.skipFrameRender = !0;
-      const oT = TT.getRenderWidth,
-        HT = TT.getRenderHeight;
-      TT.getRenderWidth = function() {
-        return !(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && TT._currentRenderTarget ? TT._currentRenderTarget.width : mT
-      }, TT.getRenderHeight = function() {
-        return !(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && TT._currentRenderTarget ? TT._currentRenderTarget.height : wT
-      }, TT.onResizeObservable.hasObservers() && TT.onResizeObservable.notifyObservers(TT);
-      const eT = new MT.c("screenShot", JT, PT, !1, !1, 0, !1, lT.f.BILINEAR_SAMPLINGMODE, void 0, NT, void 0, void 0, void 0, fT);
-      eT.renderList = PT.meshes.slice(), eT.samples = fT, eT.renderSprites = jT, eT.activeCamera = kT, eT.forceLayerMaskCheck = QT, DT?.(eT);
-      const GT = aT || vT.DumpData,
-        VT = () => {
-          PT.incrementRenderId(), PT.resetCachedMaterial(), (0, hT.g)((() => eT.isReadyForRendering() && kT.isReady(!0)), (() => {
-            TT.onEndFrameObservable.addOnce((() => {
-              bT === mT && zT === wT ? eT.readPixels(void 0, void 0, void 0, !1).then((TT => {
-                GT(mT, wT, TT, OT, yT, IT, !0, void 0, ST), eT.dispose()
-              })) : (TT.isWebGPU ? cT.e(364).then((() => cT(60836))) : cT.e(365).then((() => cT(60844)))).then((async () => await (0, tT.b)("pass", eT.getInternalTexture(), PT, void 0, void 0, void 0, bT, zT).then((kT => {
-                TT._readTexturePixels(kT, bT, zT, -1, 0, null, !0, !1, 0, 0).then((TT => {
-                  GT(bT, zT, TT, OT, yT, IT, !0, void 0, ST), kT.dispose()
+      if (!vq || !hq) return void Wq.b.Error("Invalid 'size' parameter !");
+      qq.skipFrameRender = !0;
+      const Zq = qq.getRenderWidth,
+        fq = qq.getRenderHeight;
+      qq.getRenderWidth = function() {
+        return !(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && qq._currentRenderTarget ? qq._currentRenderTarget.width : hq
+      }, qq.getRenderHeight = function() {
+        return !(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && qq._currentRenderTarget ? qq._currentRenderTarget.height : vq
+      }, qq.onResizeObservable.hasObservers() && qq.onResizeObservable.notifyObservers(qq);
+      const Mq = new lq.c("screenShot", iq, rq, !1, !1, 0, !1, Yq.d.BILINEAR_SAMPLINGMODE, void 0, jq, void 0, void 0, void 0, Aq);
+      Mq.renderList = rq.meshes.slice(), Mq.samples = Aq, Mq.renderSprites = Nq, Mq.activeCamera = Eq, Mq.forceLayerMaskCheck = Hq, Pq?.(Mq);
+      const Tq = Qq || aq.DumpData,
+        zq = () => {
+          rq.incrementRenderId(), rq.resetCachedMaterial(), (0, dq.e)((() => Mq.isReadyForRendering() && Eq.isReady(!0)), (() => {
+            qq.onEndFrameObservable.addOnce((() => {
+              nq === hq && bq === vq ? Mq.readPixels(void 0, void 0, void 0, !1).then((qq => {
+                Tq(hq, vq, qq, mq, xq, uq, !0, void 0, oq), Mq.dispose()
+              })) : (qq.isWebGPU ? gq.e(364).then((() => gq(61421))) : gq.e(365).then((() => gq(61424)))).then((async () => await (0, Vq.c)("pass", Mq.getInternalTexture(), rq, void 0, void 0, void 0, nq, bq).then((Eq => {
+                qq._readTexturePixels(Eq, nq, bq, -1, 0, null, !0, !1, 0, 0).then((qq => {
+                  Tq(nq, bq, qq, mq, xq, uq, !0, void 0, oq), Eq.dispose()
                 }))
               }))))
-            })), PT.incrementRenderId(), PT.resetCachedMaterial();
-            const lT = PT.activeCamera,
-              MT = PT.activeCameras,
-              KT = kT.outputRenderTarget,
-              fT = PT.spritesEnabled;
-            PT.activeCamera = kT, PT.activeCameras = null, kT.outputRenderTarget = eT, PT.spritesEnabled = jT;
-            const xT = PT.meshes;
-            PT.meshes = eT.renderList || PT.meshes;
+            })), rq.incrementRenderId(), rq.resetCachedMaterial();
+            const Yq = rq.activeCamera,
+              lq = rq.activeCameras,
+              Oq = Eq.outputRenderTarget,
+              Aq = rq.spritesEnabled;
+            rq.activeCamera = Eq, rq.activeCameras = null, Eq.outputRenderTarget = Mq, rq.spritesEnabled = Nq;
+            const cq = rq.meshes;
+            rq.meshes = Mq.renderList || rq.meshes;
             try {
-              PT.render()
+              rq.render()
             } finally {
-              PT.activeCamera = lT, PT.activeCameras = MT, kT.outputRenderTarget = KT, PT.spritesEnabled = fT, PT.meshes = xT, TT.getRenderWidth = oT, TT.getRenderHeight = HT, TT.onResizeObservable.hasObservers() && TT.onResizeObservable.notifyObservers(TT), kT.getProjectionMatrix(!0), TT.skipFrameRender = !1
+              rq.activeCamera = Yq, rq.activeCameras = lq, Eq.outputRenderTarget = Oq, rq.spritesEnabled = Aq, rq.meshes = cq, qq.getRenderWidth = Zq, qq.getRenderHeight = fq, qq.onResizeObservable.hasObservers() && qq.onResizeObservable.notifyObservers(qq), Eq.getProjectionMatrix(!0), qq.skipFrameRender = !1
             }
           }), (() => {
-            TT.skipFrameRender = !1, TT.getRenderWidth = oT, TT.getRenderHeight = HT, rT?.()
-          }), void 0, FT)
+            qq.skipFrameRender = !1, qq.getRenderWidth = Zq, qq.getRenderHeight = fq, tq?.()
+          }), void 0, yq)
         };
-      if (xT) {
-        const TT = new AT("antialiasing", 1, PT.activeCamera);
-        eT.addPostProcess(TT), TT.autoClear = !0, TT.onEffectCreatedObservable.addOnce((TT => {
-          TT.isReady() ? VT() : TT.onCompiled = () => {
-            VT()
+      if (cq) {
+        const qq = new Bq("antialiasing", 1, rq.activeCamera);
+        Mq.addPostProcess(qq), qq.autoClear = !0, qq.onEffectCreatedObservable.addOnce((qq => {
+          qq.isReady() ? zq() : qq.onCompiled = () => {
+            zq()
           }
         }))
-      } else VT()
+      } else zq()
     }
-    async function dT(TT, kT, cT) {
-      let lT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "image/png",
-        MT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1,
-        KT = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-        OT = arguments.length > 6 ? arguments[6] : void 0,
-        yT = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
-        fT = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
-        xT = !(arguments.length > 9 && void 0 !== arguments[9]) || arguments[9],
-        IT = arguments.length > 10 ? arguments[10] : void 0,
-        AT = arguments.length > 11 ? arguments[11] : void 0,
-        CT = arguments.length > 12 ? arguments[12] : void 0;
-      return await new Promise(((jT, vT) => {
-        XT(TT, kT, cT, (TT => {
-          "undefined" !== typeof TT ? jT(TT) : vT(new Error("Data is undefined"))
-        }), lT, MT, KT, OT, yT, fT, xT, IT, AT, CT)
+    async function Jq(qq, Eq, gq) {
+      let Yq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "image/png",
+        lq = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1,
+        Oq = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+        mq = arguments.length > 6 ? arguments[6] : void 0,
+        xq = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
+        Aq = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
+        cq = !(arguments.length > 9 && void 0 !== arguments[9]) || arguments[9],
+        uq = arguments.length > 10 ? arguments[10] : void 0,
+        Bq = arguments.length > 11 ? arguments[11] : void 0,
+        Wq = arguments.length > 12 ? arguments[12] : void 0;
+      return await new Promise(((Nq, aq) => {
+        Lq(qq, Eq, gq, (qq => {
+          "undefined" !== typeof qq ? Nq(qq) : aq(new Error("Data is undefined"))
+        }), Yq, lq, Oq, mq, xq, Aq, cq, uq, Bq, Wq)
       }))
     }
-    async function LT(TT, kT, cT) {
-      let lT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "image/png",
-        MT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1,
-        KT = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-        OT = arguments.length > 6 ? arguments[6] : void 0,
-        yT = arguments.length > 7 ? arguments[7] : void 0,
-        fT = arguments.length > 8 ? arguments[8] : void 0,
-        xT = arguments.length > 9 && void 0 !== arguments[9] && arguments[9],
-        IT = arguments.length > 10 ? arguments[10] : void 0;
-      const AT = TT.engine,
-        CT = TT.textureManager,
+    async function kq(qq, Eq, gq) {
+      let Yq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "image/png",
+        lq = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1,
+        Oq = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+        mq = arguments.length > 6 ? arguments[6] : void 0,
+        xq = arguments.length > 7 ? arguments[7] : void 0,
+        Aq = arguments.length > 8 ? arguments[8] : void 0,
+        cq = arguments.length > 9 && void 0 !== arguments[9] && arguments[9],
+        uq = arguments.length > 10 ? arguments[10] : void 0;
+      const Bq = qq.engine,
+        Wq = qq.textureManager,
         {
-          height: jT,
-          width: tT,
-          finalWidth: hT,
-          finalHeight: QT
-        } = RT(AT, kT, cT),
-        ST = {
-          width: tT,
-          height: jT
+          height: Nq,
+          width: Vq,
+          finalWidth: dq,
+          finalHeight: Hq
+        } = Rq(Bq, Eq, gq),
+        oq = {
+          width: Vq,
+          height: Nq
         },
-        DT = fT || vT.DumpData,
-        aT = TT.tasks,
-        FT = aT.length,
-        rT = TT.pausedExecution,
-        wT = AT.getCaps().parallelShaderCompile;
-      CT.setBackBufferTextures(0, 0, {
-        size: ST,
+        Pq = Aq || aq.DumpData,
+        Qq = qq.tasks,
+        yq = Qq.length,
+        tq = qq.pausedExecution,
+        vq = Bq.getCaps().parallelShaderCompile;
+      Wq.setBackBufferTextures(0, 0, {
+        size: oq,
         options: {
           createMipMaps: !1,
-          samples: MT,
+          samples: lq,
           types: [0],
           formats: [5],
           useSRGBBuffers: [!1],
@@ -1041,29 +1041,29 @@ export const modules = {
         },
         sizeIsPercentage: !1
       }, {
-        size: ST,
+        size: oq,
         options: {
           createMipMaps: !1,
-          samples: MT,
+          samples: lq,
           types: [0],
-          formats: [AT.isStencilEnable ? 13 : 14],
+          formats: [Bq.isStencilEnable ? 13 : 14],
           useSRGBBuffers: [!1],
           creationFlags: [0],
           labels: ["screenshot depth"]
         },
         sizeIsPercentage: !1
       });
-      let bT = NT;
-      if (KT) {
-        const kT = new PT("fxaa", TT);
-        kT.sourceTexture = bT, bT = kT.outputTexture, TT.addTask(kT)
+      let nq = jq;
+      if (Oq) {
+        const Eq = new rq("fxaa", qq);
+        Eq.sourceTexture = nq, nq = Eq.outputTexture, qq.addTask(Eq)
       }
-      if (hT !== tT || QT !== jT) {
-        const kT = new mT("pass", TT);
-        kT.sourceTexture = bT, kT.targetTexture = TT.textureManager.createRenderTargetTexture("pass_output", {
+      if (dq !== Vq || Hq !== Nq) {
+        const Eq = new hq("pass", qq);
+        Eq.sourceTexture = nq, Eq.targetTexture = qq.textureManager.createRenderTargetTexture("pass_output", {
           size: {
-            width: hT,
-            height: QT
+            width: dq,
+            height: Hq
           },
           options: {
             createMipMaps: !1,
@@ -1074,57 +1074,57 @@ export const modules = {
             useSRGBBuffers: [!1]
           },
           sizeIsPercentage: !1
-        }), bT = kT.outputTexture, TT.addTask(kT)
+        }), nq = Eq.outputTexture, qq.addTask(Eq)
       }
-      const zT = GT.FindMainObjectRenderer(TT);
-      let JT = null;
-      zT && (JT = zT.camera, zT.camera = kT), AT.getCaps().parallelShaderCompile = void 0, await TT.buildAsync();
-      const oT = IT ?? (CT.hasHistoryTextures ? 32 : 1);
-      for (let vT = 0; vT < oT; ++vT) TT.execute();
-      TT.pausedExecution = !0, AT.getCaps().parallelShaderCompile = wT;
-      for (let vT = FT; vT < aT.length; ++vT) TT.tasks[vT].dispose();
-      TT.tasks.length = FT, zT && JT && (zT.camera = JT);
-      const HT = TT.textureManager.getTextureFromHandle(bT);
-      return HT.incrementReferences(), CT.resetBackBufferTextures(), await TT.buildAsync(), TT.pausedExecution = rT, new Promise((TT => {
-        AT._readTexturePixels(HT, hT, QT, -1, 0, null, !0, !1, 0, 0).then((async kT => {
-          HT.dispose(), DT(hT, QT, kT, xT ? void 0 : kT => TT(kT), lT, OT, !0, void 0, yT), xT && TT(null)
+      const bq = Tq.FindMainObjectRenderer(qq);
+      let iq = null;
+      bq && (iq = bq.camera, bq.camera = Eq), Bq.getCaps().parallelShaderCompile = void 0, await qq.buildAsync();
+      const Zq = uq ?? (Wq.hasHistoryTextures ? 32 : 1);
+      for (let aq = 0; aq < Zq; ++aq) qq.execute();
+      qq.pausedExecution = !0, Bq.getCaps().parallelShaderCompile = vq;
+      for (let aq = yq; aq < Qq.length; ++aq) qq.tasks[aq].dispose();
+      qq.tasks.length = yq, bq && iq && (bq.camera = iq);
+      const fq = qq.textureManager.getTextureFromHandle(nq);
+      return fq.incrementReferences(), Wq.resetBackBufferTextures(), await qq.buildAsync(), qq.pausedExecution = tq, new Promise((qq => {
+        Bq._readTexturePixels(fq, dq, Hq, -1, 0, null, !0, !1, 0, 0).then((async Eq => {
+          fq.dispose(), Pq(dq, Hq, Eq, cq ? void 0 : Eq => qq(Eq), Yq, mq, !0, void 0, xq), cq && qq(null)
         }))
       }))
     }
 
-    function RT(TT, kT, cT) {
-      let lT = 0,
-        MT = 0,
-        KT = 0,
-        OT = 0;
-      if ("object" === typeof cT) {
-        const yT = cT.precision ? Math.abs(cT.precision) : 1;
-        cT.width && cT.height ? (lT = cT.height * yT, MT = cT.width * yT) : cT.width && !cT.height ? (MT = cT.width * yT, lT = Math.round(MT / TT.getAspectRatio(kT))) : cT.height && !cT.width ? (lT = cT.height * yT, MT = Math.round(lT * TT.getAspectRatio(kT))) : (MT = Math.round(TT.getRenderWidth() * yT), lT = Math.round(MT / TT.getAspectRatio(kT))), cT.finalWidth && cT.finalHeight ? (OT = cT.finalHeight, KT = cT.finalWidth) : cT.finalWidth && !cT.finalHeight ? (KT = cT.finalWidth, OT = Math.round(KT / TT.getAspectRatio(kT))) : cT.finalHeight && !cT.finalWidth ? (OT = cT.finalHeight, KT = Math.round(OT * TT.getAspectRatio(kT))) : (KT = MT, OT = lT)
-      } else isNaN(cT) || (lT = cT, MT = cT, KT = cT, OT = cT);
-      return MT && (MT = Math.floor(MT)), lT && (lT = Math.floor(lT)), KT && (KT = Math.floor(KT)), OT && (OT = Math.floor(OT)), {
-        height: 0 | lT,
-        width: 0 | MT,
-        finalWidth: 0 | KT,
-        finalHeight: 0 | OT
+    function Rq(qq, Eq, gq) {
+      let Yq = 0,
+        lq = 0,
+        Oq = 0,
+        mq = 0;
+      if ("object" === typeof gq) {
+        const xq = gq.precision ? Math.abs(gq.precision) : 1;
+        gq.width && gq.height ? (Yq = gq.height * xq, lq = gq.width * xq) : gq.width && !gq.height ? (lq = gq.width * xq, Yq = Math.round(lq / qq.getAspectRatio(Eq))) : gq.height && !gq.width ? (Yq = gq.height * xq, lq = Math.round(Yq * qq.getAspectRatio(Eq))) : (lq = Math.round(qq.getRenderWidth() * xq), Yq = Math.round(lq / qq.getAspectRatio(Eq))), gq.finalWidth && gq.finalHeight ? (mq = gq.finalHeight, Oq = gq.finalWidth) : gq.finalWidth && !gq.finalHeight ? (Oq = gq.finalWidth, mq = Math.round(Oq / qq.getAspectRatio(Eq))) : gq.finalHeight && !gq.finalWidth ? (mq = gq.finalHeight, Oq = Math.round(mq * qq.getAspectRatio(Eq))) : (Oq = lq, mq = Yq)
+      } else isNaN(gq) || (Yq = gq, lq = gq, Oq = gq, mq = gq);
+      return lq && (lq = Math.floor(lq)), Yq && (Yq = Math.floor(Yq)), Oq && (Oq = Math.floor(Oq)), mq && (mq = Math.floor(mq)), {
+        height: 0 | Yq,
+        width: 0 | lq,
+        finalWidth: 0 | Oq,
+        finalHeight: 0 | mq
       }
     }
-    const gT = {
-      CreateScreenshot: ET,
-      CreateScreenshotAsync: ZT,
-      CreateScreenshotWithResizeAsync: uT,
-      CreateScreenshotUsingRenderTarget: XT,
-      CreateScreenshotUsingRenderTargetAsync: dT,
-      CreateScreenshotForFrameGraphAsync: LT
+    const Uq = {
+      CreateScreenshot: Sq,
+      CreateScreenshotAsync: pq,
+      CreateScreenshotWithResizeAsync: Gq,
+      CreateScreenshotUsingRenderTarget: Lq,
+      CreateScreenshotUsingRenderTargetAsync: Jq,
+      CreateScreenshotForFrameGraphAsync: kq
     };
-    let UT = !1;
+    let Fq = !1;
 
-    function YT() {
-      if (UT) return;
-      UT = !0;
-      jT.h.CreateScreenshot = ET, jT.h.CreateScreenshotAsync = ZT, jT.h.CreateScreenshotUsingRenderTarget = XT, jT.h.CreateScreenshotUsingRenderTargetAsync = dT
+    function sq() {
+      if (Fq) return;
+      Fq = !0;
+      Nq.f.CreateScreenshot = Sq, Nq.f.CreateScreenshotAsync = pq, Nq.f.CreateScreenshotUsingRenderTarget = Lq, Nq.f.CreateScreenshotUsingRenderTargetAsync = Jq
     }
-    YT()
+    sq()
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

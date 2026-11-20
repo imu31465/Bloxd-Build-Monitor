@@ -1,40 +1,43 @@
 export const id = 179;
 export const ids = [179];
 export const modules = {
-  9056: (TT, kT, cT) => {
-    cT.r(kT), cT.d(kT, {
-      pageBody: () => lT
+  8995: (qq, Eq, gq) => {
+    gq.r(Eq), gq.d(Eq, {
+      pageBody: () => Yq
     });
-    const lT = {
-      whatIs: ["Can your team last 99 nights of darkness? Bloxd Escape the Forest is a co-op horror survival game for teams of up to 6, and you can jump in for free straight from your browser. Make camp, keep the fire going, search for the missing children and watch out for whatever comes out after sunset. Get through all 99 nights, then find your way out."],
-      howToPlay: ["Your team starts around the campfire. During the day you'll gather wood, hunt Pigs and Cows for meat and explore the landmarks dotted around the forest. Throw fuel into the fire to level it up. Each new level unlocks crafting recipes and helps you find the lost kids. Bring back Monster Hearts to push the fire even higher.", 'When "Night Approaches" pops up, head back to camp. Monsters are scared of fire, but some nights the Horde attacks, the Monster wakes up or the Warper rises. If you go down, a teammate can revive you with a Revive Splash Potion.', "Every lost kid you find adds days to your count, which gets you closer to 99. Do quests for the Travelling Trader, then follow Maverick the wizard's guidance to the frozen forest. Collect the portal keystones, open the portal and send the kids home."],
-      features: ["Co-op with Up to 6 Players", "Survive 99 Nights, Then See How Much Longer You Can Last", "Level Up the Campfire to Unlock New Recipes", "Rescue the Lost Kids and Send Them Home", "Quests from the Travelling Trader and Maverick the Wizard", "Explore Landmarks like the Graveyard, Frozen Lagoon, Molten Gorge and Mount Doomrock", "Night Attacks from the Horde, the Monster and the Warper", "Revive Teammates and Repair the Respawn Pod", "Show Your Best Score on Your Nametag and Earn Aura XP", "Inferno Mode with a Day Multiplier"],
-      tips: ["Keep the fire fuelled. It's your best protection at night", "Cook Raw Morsels and Steak on the fire before you eat them", 'Get back to camp as soon as you see "Night Approaches"', "Bring Monster Hearts to the fire to reach the higher levels", "Place your Radar near the fire", "Throw a Decoy to distract monsters, or throw an Invisibility Potion to hide", "Fire a Call for Help flare if you go down", "Bring armour, ideally enchanted, before you go hunting for portal keystones"],
-      similarGames: ["horrorHotel", "containmentBreach", "classic_survivalDayNight", "backrooms"],
+    const Yq = {
+      whatIs: ["Trust no one. In Bloxd Murder Mystery friends go quiet, roles stay secret and every round turns into a guessing game full of twists and close calls. It's a social deduction game for up to 12 players. Can you work out who the Murderer is before it's too late?"],
+      howToPlay: ["When a round starts, everyone gets a secret role. Most of you will be Innocents, and your job is simply to stay alive as long as you can. One player is the Detective and gets a gun to find and stop the Murderer. And one player is the Murderer. They get their weapon after a short countdown and have to take out everyone else.", "Innocents can collect 10 Moonstone from around the map to get a gun of their own. If the Detective gets taken out, their gun drops and someone else can pick it up. Guns have a 5-second cooldown, so make each shot count. Careful as the Detective, though. Shoot an innocent player and you're out too. Stop the Murderer or survive until the 4-minute timer runs out, and then you'll find out who it really was."],
+      features: ["Up to 12 Players per Round", "Three Secret Roles: Innocent, Detective and Murderer", "Collect Moonstone to Earn a Gun", "4 Maps That Change Every Round: Mansion, Laboratory, Dinosaur and Water Park", "Map Secrets like Trapdoors, Poisoned Water, Reactor Doors and Moonstone Rings", "Please the Dino to Reveal a Role or Win a Gun", "Earn Gold to Unlock Murderer Weapons and Funny Death Messages", "Daily and Weekly Quests", "Track Your Wins as Detective and Murderer"],
+      tips: ["As an Innocent, keep moving and pick up Moonstone whenever you can", "Watch how people act. The Murderer will be trying to blend in", "As the Detective, only shoot when you're sure", "If the Detective goes down, grab that dropped gun", "As the Murderer, catch players on their own when nobody's looking", "Every map has secrets, so explore them for an edge"],
+      similarGames: ["hideseek", "infection", "horrorHotel", "ninetyNineNights"],
       faq: [{
-        question: "What is Bloxd Escape the Forest?",
-        answer: "A co-op horror survival mode for up to 6 players. You team up, survive 99 nights, rescue the lost kids and send them home through the portal."
+        question: "What is Bloxd Murder Mystery?",
+        answer: "A social deduction mode. One player is secretly the Murderer, one is the Detective, and everyone else tries to survive and work out who the Murderer is."
       }, {
-        question: "In Escape the Forest, how do you survive 99 nights?",
-        answer: "Keep the campfire fuelled and stay close to it at night, because monsters are scared of fire. Level the fire up, cook your food and stick with your team."
+        question: "What are the roles in Murder Mystery?",
+        answer: "Innocents try to stay alive. The Detective tries to find and stop the Murderer. The Murderer tries to take out every other player."
       }, {
-        question: "How many players can team up in Escape the Forest?",
-        answer: "Up to 6 in each game, and others can join to spectate."
+        question: "Who wins a round of Murder Mystery?",
+        answer: "If the Murderer takes out all the Innocents, they win. Everyone else wins by stopping the Murderer or surviving until the 4-minute timer runs out."
       }, {
-        question: "Where are the lost kids?",
-        answer: "Out in the forest. Level up your fire to find more of them, then go searching. Every kid you find adds to your day count."
+        question: "How do I get a gun?",
+        answer: "Collect 10 Moonstone, or pick up the Detective's gun if it's been dropped. On the Dinosaur map the dino might hand you one too."
       }, {
-        question: "What happens if you go down?",
-        answer: "A teammate can revive you with a Revive Splash Potion. You can fire a Call for Help flare too, and the Respawn Pod can bring back players who die."
+        question: "How long is a round?",
+        answer: "4 minutes."
       }, {
-        question: "How do you escape the forest?",
-        answer: "Follow Maverick the wizard's guidance to the frozen forest, collect the portal keystones, open the portal and send the kids home."
+        question: "How many people do you need to play Murder Mystery?",
+        answer: "You need at least 2 to start, and a round can hold up to 12."
       }, {
-        question: "Is there anything after night 99?",
-        answer: "You've beaten the challenge by then, but how much longer can you survive? Your best number of nights survived shows on your nametag."
+        question: "Can I play Murder Mystery with friends?",
+        answer: "Yes. Jump into the same game and see which of you spots the Murderer first."
+      }, {
+        question: "How do I earn gold?",
+        answer: "Survive, collect Moonstone, stop the Murderer or win as the Murderer. Rewards only kick in when there are at least 5 players in the game."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

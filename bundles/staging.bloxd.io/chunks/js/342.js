@@ -1,68 +1,68 @@
 export const id = 342;
 export const ids = [342];
 export const modules = {
-  42086: (TT, kT, cT) => {
-    function lT(TT) {
-      return Math.floor(TT / 8)
+  42308: (qq, Eq, gq) => {
+    function Yq(qq) {
+      return Math.floor(qq / 8)
     }
 
-    function MT(TT) {
-      return 1 << TT % 8
+    function lq(qq) {
+      return 1 << qq % 8
     }
-    cT.d(kT, {
-      OptimizeIndices: () => OT
+    gq.d(Eq, {
+      OptimizeIndices: () => mq
     });
-    class KT {
-      constructor(TT) {
-        this.size = TT, this._byteArray = new Uint8Array(Math.ceil(this.size / 8))
+    class Oq {
+      constructor(qq) {
+        this.size = qq, this._byteArray = new Uint8Array(Math.ceil(this.size / 8))
       }
-      get(TT) {
-        if (TT >= this.size) throw new RangeError("Bit index out of range");
-        const kT = lT(TT),
-          cT = MT(TT);
-        return 0 !== (this._byteArray[kT] & cT)
+      get(qq) {
+        if (qq >= this.size) throw new RangeError("Bit index out of range");
+        const Eq = Yq(qq),
+          gq = lq(qq);
+        return 0 !== (this._byteArray[Eq] & gq)
       }
-      set(TT, kT) {
-        if (TT >= this.size) throw new RangeError("Bit index out of range");
-        const cT = lT(TT),
-          KT = MT(TT);
-        kT ? this._byteArray[cT] |= KT : this._byteArray[cT] &= ~KT
+      set(qq, Eq) {
+        if (qq >= this.size) throw new RangeError("Bit index out of range");
+        const gq = Yq(qq),
+          Oq = lq(qq);
+        Eq ? this._byteArray[gq] |= Oq : this._byteArray[gq] &= ~Oq
       }
     }
 
-    function OT(TT) {
-      const kT = [],
-        cT = TT.length / 3;
-      for (let KT = 0; KT < cT; KT++) kT.push([TT[3 * KT], TT[3 * KT + 1], TT[3 * KT + 2]]);
-      const lT = new Map;
-      for (let KT = 0; KT < kT.length; KT++) {
-        const TT = kT[KT];
-        for (const kT of TT) {
-          let TT = lT.get(kT);
-          TT || lT.set(kT, TT = []), TT.push(KT)
+    function mq(qq) {
+      const Eq = [],
+        gq = qq.length / 3;
+      for (let Oq = 0; Oq < gq; Oq++) Eq.push([qq[3 * Oq], qq[3 * Oq + 1], qq[3 * Oq + 2]]);
+      const Yq = new Map;
+      for (let Oq = 0; Oq < Eq.length; Oq++) {
+        const qq = Eq[Oq];
+        for (const Eq of qq) {
+          let qq = Yq.get(Eq);
+          qq || Yq.set(Eq, qq = []), qq.push(Oq)
         }
       }
-      const MT = new KT(cT),
-        OT = [],
-        yT = TT => {
-          const cT = [TT];
-          for (; cT.length > 0;) {
-            const TT = cT.pop();
-            if (!MT.get(TT)) {
-              MT.set(TT, !0), OT.push(kT[TT]);
-              for (const KT of kT[TT]) {
-                const TT = lT.get(KT);
-                if (!TT) return;
-                for (const kT of TT) MT.get(kT) || cT.push(kT)
+      const lq = new Oq(gq),
+        mq = [],
+        xq = qq => {
+          const gq = [qq];
+          for (; gq.length > 0;) {
+            const qq = gq.pop();
+            if (!lq.get(qq)) {
+              lq.set(qq, !0), mq.push(Eq[qq]);
+              for (const Oq of Eq[qq]) {
+                const qq = Yq.get(Oq);
+                if (!qq) return;
+                for (const Eq of qq) lq.get(Eq) || gq.push(Eq)
               }
             }
           }
         };
-      for (let KT = 0; KT < cT; KT++) MT.get(KT) || yT(KT);
-      let fT = 0;
-      for (const KT of OT) TT[fT++] = KT[0], TT[fT++] = KT[1], TT[fT++] = KT[2]
+      for (let Oq = 0; Oq < gq; Oq++) lq.get(Oq) || xq(Oq);
+      let Aq = 0;
+      for (const Oq of mq) qq[Aq++] = Oq[0], qq[Aq++] = Oq[1], qq[Aq++] = Oq[2]
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);

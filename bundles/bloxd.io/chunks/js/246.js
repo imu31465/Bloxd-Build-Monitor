@@ -1,83 +1,83 @@
 export const id = 246;
 export const ids = [246];
 export const modules = {
-  39689: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => CT,
-      f: () => AT,
-      g: () => fT,
-      h: () => jT,
-      i: () => xT,
-      j: () => yT,
-      m: () => IT
+  39817: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => Wq,
+      d: () => Bq,
+      h: () => Aq,
+      l: () => Nq,
+      o: () => cq,
+      q: () => xq,
+      r: () => uq
     });
-    var lT = cT(38512),
-      MT = cT(39694);
+    var Yq = gq(38653),
+      lq = gq(39819);
 
-    function KT(TT, kT, cT, lT) {
-      switch (kT) {
+    function Oq(qq, Eq, gq, Yq) {
+      switch (Eq) {
         case 5120: {
-          let kT = TT.getInt8(cT);
-          return lT && (kT = Math.max(kT / 127, -1)), kT
+          let Eq = qq.getInt8(gq);
+          return Yq && (Eq = Math.max(Eq / 127, -1)), Eq
         }
         case 5121: {
-          let kT = TT.getUint8(cT);
-          return lT && (kT /= 255), kT
+          let Eq = qq.getUint8(gq);
+          return Yq && (Eq /= 255), Eq
         }
         case 5122: {
-          let kT = TT.getInt16(cT, !0);
-          return lT && (kT = Math.max(kT / 32767, -1)), kT
+          let Eq = qq.getInt16(gq, !0);
+          return Yq && (Eq = Math.max(Eq / 32767, -1)), Eq
         }
         case 5123: {
-          let kT = TT.getUint16(cT, !0);
-          return lT && (kT /= 65535), kT
+          let Eq = qq.getUint16(gq, !0);
+          return Yq && (Eq /= 65535), Eq
         }
         case 5131:
-          return (0, MT.e)(TT.getUint16(cT, !0));
+          return (0, lq.e)(qq.getUint16(gq, !0));
         case 5124:
-          return TT.getInt32(cT, !0);
+          return qq.getInt32(gq, !0);
         case 5125:
-          return TT.getUint32(cT, !0);
+          return qq.getUint32(gq, !0);
         case 5126:
-          return TT.getFloat32(cT, !0);
+          return qq.getFloat32(gq, !0);
         default:
-          throw new Error(`Invalid component type ${kT}`)
+          throw new Error(`Invalid component type ${Eq}`)
       }
     }
 
-    function OT(TT, kT, cT, lT, KT) {
-      switch (kT) {
+    function mq(qq, Eq, gq, Yq, Oq) {
+      switch (Eq) {
         case 5120:
-          lT && (KT = Math.round(127 * KT)), TT.setInt8(cT, KT);
+          Yq && (Oq = Math.round(127 * Oq)), qq.setInt8(gq, Oq);
           break;
         case 5121:
-          lT && (KT = Math.round(255 * KT)), TT.setUint8(cT, KT);
+          Yq && (Oq = Math.round(255 * Oq)), qq.setUint8(gq, Oq);
           break;
         case 5122:
-          lT && (KT = Math.round(32767 * KT)), TT.setInt16(cT, KT, !0);
+          Yq && (Oq = Math.round(32767 * Oq)), qq.setInt16(gq, Oq, !0);
           break;
         case 5123:
-          lT && (KT = Math.round(65535 * KT)), TT.setUint16(cT, KT, !0);
+          Yq && (Oq = Math.round(65535 * Oq)), qq.setUint16(gq, Oq, !0);
           break;
         case 5131:
-          TT.setUint16(cT, (0, MT.i)(KT), !0);
+          qq.setUint16(gq, (0, lq.j)(Oq), !0);
           break;
         case 5124:
-          TT.setInt32(cT, KT, !0);
+          qq.setInt32(gq, Oq, !0);
           break;
         case 5125:
-          TT.setUint32(cT, KT, !0);
+          qq.setUint32(gq, Oq, !0);
           break;
         case 5126:
-          TT.setFloat32(cT, KT, !0);
+          qq.setFloat32(gq, Oq, !0);
           break;
         default:
-          throw new Error(`Invalid component type ${kT}`)
+          throw new Error(`Invalid component type ${Eq}`)
       }
     }
 
-    function yT(TT) {
-      switch (TT) {
+    function xq(qq) {
+      switch (qq) {
         case 5120:
         case 5121:
           return 1;
@@ -90,61 +90,61 @@ export const modules = {
         case 5126:
           return 4;
         default:
-          throw new Error(`Invalid type '${TT}'`)
+          throw new Error(`Invalid type '${qq}'`)
       }
     }
 
-    function fT(TT, kT, cT, lT, MT, fT, xT, IT) {
-      const AT = new Array(lT),
-        CT = new Array(lT);
-      if (TT instanceof Array) {
-        let MT = kT / 4;
-        const KT = cT / 4;
-        for (let kT = 0; kT < fT; kT += lT) {
-          for (let kT = 0; kT < lT; kT++) AT[kT] = CT[kT] = TT[MT + kT];
-          IT(CT, kT);
-          for (let kT = 0; kT < lT; kT++) AT[kT] !== CT[kT] && (TT[MT + kT] = CT[kT]);
-          MT += KT
+    function Aq(qq, Eq, gq, Yq, lq, Aq, cq, uq) {
+      const Bq = new Array(Yq),
+        Wq = new Array(Yq);
+      if (qq instanceof Array) {
+        let lq = Eq / 4;
+        const Oq = gq / 4;
+        for (let Eq = 0; Eq < Aq; Eq += Yq) {
+          for (let Eq = 0; Eq < Yq; Eq++) Bq[Eq] = Wq[Eq] = qq[lq + Eq];
+          uq(Wq, Eq);
+          for (let Eq = 0; Eq < Yq; Eq++) Bq[Eq] !== Wq[Eq] && (qq[lq + Eq] = Wq[Eq]);
+          lq += Oq
         }
       } else {
-        const jT = ArrayBuffer.isView(TT) ? new DataView(TT.buffer, TT.byteOffset, TT.byteLength) : new DataView(TT),
-          vT = yT(MT);
-        for (let TT = 0; TT < fT; TT += lT) {
-          for (let TT = 0, cT = kT; TT < lT; TT++, cT += vT) AT[TT] = CT[TT] = KT(jT, MT, cT, xT);
-          IT(CT, TT);
-          for (let TT = 0, cT = kT; TT < lT; TT++, cT += vT) AT[TT] !== CT[TT] && OT(jT, MT, cT, xT, CT[TT]);
-          kT += cT
+        const Nq = ArrayBuffer.isView(qq) ? new DataView(qq.buffer, qq.byteOffset, qq.byteLength) : new DataView(qq),
+          aq = xq(lq);
+        for (let qq = 0; qq < Aq; qq += Yq) {
+          for (let qq = 0, gq = Eq; qq < Yq; qq++, gq += aq) Bq[qq] = Wq[qq] = Oq(Nq, lq, gq, cq);
+          uq(Wq, qq);
+          for (let qq = 0, gq = Eq; qq < Yq; qq++, gq += aq) Bq[qq] !== Wq[qq] && mq(Nq, lq, gq, cq, Wq[qq]);
+          Eq += gq
         }
       }
     }
 
-    function xT(TT, kT, cT, MT, KT, OT, xT, IT) {
-      const AT = kT * yT(cT),
-        CT = xT * kT;
-      if (5126 !== cT || KT !== AT) {
-        const lT = new Float32Array(CT);
-        return fT(TT, MT, KT, kT, cT, CT, OT, ((TT, cT) => {
-          for (let MT = 0; MT < kT; MT++) lT[cT + MT] = TT[MT]
-        })), lT
+    function cq(qq, Eq, gq, lq, Oq, mq, cq, uq) {
+      const Bq = Eq * xq(gq),
+        Wq = cq * Eq;
+      if (5126 !== gq || Oq !== Bq) {
+        const Yq = new Float32Array(Wq);
+        return Aq(qq, lq, Oq, Eq, gq, Wq, mq, ((qq, gq) => {
+          for (let lq = 0; lq < Eq; lq++) Yq[gq + lq] = qq[lq]
+        })), Yq
       }
-      if (!(TT instanceof Array || TT instanceof Float32Array) || 0 !== MT || TT.length !== CT) {
-        if (TT instanceof Array) {
-          const kT = MT / 4;
-          return TT.slice(kT, kT + CT)
+      if (!(qq instanceof Array || qq instanceof Float32Array) || 0 !== lq || qq.length !== Wq) {
+        if (qq instanceof Array) {
+          const Eq = lq / 4;
+          return qq.slice(Eq, Eq + Wq)
         }
-        if (ArrayBuffer.isView(TT)) {
-          const kT = TT.byteOffset + MT;
-          return 0 !== (3 & kT) && (lT.e.Warn("Float array must be aligned to 4-bytes border"), IT = !0), IT ? new Float32Array(TT.buffer.slice(kT, kT + CT * Float32Array.BYTES_PER_ELEMENT)) : new Float32Array(TT.buffer, kT, CT)
+        if (ArrayBuffer.isView(qq)) {
+          const Eq = qq.byteOffset + lq;
+          return 0 !== (3 & Eq) && (Yq.b.Warn("Float array must be aligned to 4-bytes border"), uq = !0), uq ? new Float32Array(qq.buffer.slice(Eq, Eq + Wq * Float32Array.BYTES_PER_ELEMENT)) : new Float32Array(qq.buffer, Eq, Wq)
         }
-        return new Float32Array(TT, MT, CT)
+        return new Float32Array(qq, lq, Wq)
       }
-      return IT ? TT.slice() : TT
+      return uq ? qq.slice() : qq
     }
 
-    function IT(TT, kT, cT, MT, KT, OT, xT) {
-      const IT = yT(cT),
-        AT = function(TT) {
-          switch (TT) {
+    function uq(qq, Eq, gq, lq, Oq, mq, cq) {
+      const uq = xq(gq),
+        Bq = function(qq) {
+          switch (qq) {
             case 5120:
               return Int8Array;
             case 5121:
@@ -161,120 +161,120 @@ export const modules = {
             case 5126:
               return Float32Array;
             default:
-              throw new Error(`Invalid component type '${TT}'`)
+              throw new Error(`Invalid component type '${qq}'`)
           }
-        }(cT),
-        CT = OT * kT;
-      if (Array.isArray(TT)) {
-        if (0 !== (3 & MT) || 0 !== (3 & KT)) throw new Error("byteOffset and byteStride must be a multiple of 4 for number[] data.");
-        const lT = MT / 4,
-          yT = KT / 4;
-        if (lT + (OT - 1) * yT + kT > TT.length) throw new Error("Last accessed index is out of bounds.");
-        if (yT < kT) throw new Error("Data stride cannot be smaller than the component size.");
-        if (yT !== kT) {
-          const lT = new AT(CT);
-          return fT(TT, MT, KT, kT, cT, CT, !1, ((TT, cT) => {
-            for (let MT = 0; MT < kT; MT++) lT[cT + MT] = TT[MT]
-          })), lT
+        }(gq),
+        Wq = mq * Eq;
+      if (Array.isArray(qq)) {
+        if (0 !== (3 & lq) || 0 !== (3 & Oq)) throw new Error("byteOffset and byteStride must be a multiple of 4 for number[] data.");
+        const Yq = lq / 4,
+          xq = Oq / 4;
+        if (Yq + (mq - 1) * xq + Eq > qq.length) throw new Error("Last accessed index is out of bounds.");
+        if (xq < Eq) throw new Error("Data stride cannot be smaller than the component size.");
+        if (xq !== Eq) {
+          const Yq = new Bq(Wq);
+          return Aq(qq, lq, Oq, Eq, gq, Wq, !1, ((qq, gq) => {
+            for (let lq = 0; lq < Eq; lq++) Yq[gq + lq] = qq[lq]
+          })), Yq
         }
-        return new AT(TT.slice(lT, lT + CT))
+        return new Bq(qq.slice(Yq, Yq + Wq))
       }
-      let jT, vT = MT;
-      ArrayBuffer.isView(TT) ? (jT = TT.buffer, vT += TT.byteOffset) : jT = TT;
-      if (vT + (OT - 1) * KT + kT * IT > jT.byteLength) throw new Error("Last accessed byte is out of bounds.");
-      const tT = kT * IT;
-      if (KT < tT) throw new Error("Byte stride cannot be smaller than the component's byte size.");
-      if (KT !== tT) {
-        const TT = new AT(CT),
-          cT = new Uint8Array(jT, vT),
-          lT = new Uint8Array(TT.buffer),
-          MT = kT * IT;
-        for (let kT = 0, yT = 0, fT = 0; kT < OT; kT++, yT += KT, fT += MT) lT.set(cT.subarray(yT, yT + MT), fT);
-        return TT
+      let Nq, aq = lq;
+      ArrayBuffer.isView(qq) ? (Nq = qq.buffer, aq += qq.byteOffset) : Nq = qq;
+      if (aq + (mq - 1) * Oq + Eq * uq > Nq.byteLength) throw new Error("Last accessed byte is out of bounds.");
+      const Vq = Eq * uq;
+      if (Oq < Vq) throw new Error("Byte stride cannot be smaller than the component's byte size.");
+      if (Oq !== Vq) {
+        const qq = new Bq(Wq),
+          gq = new Uint8Array(Nq, aq),
+          Yq = new Uint8Array(qq.buffer),
+          lq = Eq * uq;
+        for (let Eq = 0, xq = 0, Aq = 0; Eq < mq; Eq++, xq += Oq, Aq += lq) Yq.set(gq.subarray(xq, xq + lq), Aq);
+        return qq
       }
-      return 1 !== IT && 0 !== (vT & IT - 1) && (lT.e.Warn("Array must be aligned to border of element size. Data will be copied."), xT = !0), xT ? new AT(jT.slice(vT, vT + CT * IT)) : new AT(jT, vT, CT)
+      return 1 !== uq && 0 !== (aq & uq - 1) && (Yq.b.Warn("Array must be aligned to border of element size. Data will be copied."), cq = !0), cq ? new Bq(Nq.slice(aq, aq + Wq * uq)) : new Bq(Nq, aq, Wq)
     }
 
-    function AT(TT, kT, cT, MT, KT, OT, xT, IT) {
-      const AT = kT * yT(cT),
-        CT = xT * kT;
-      if (IT.length !== CT) throw new Error("Output length is not valid");
-      if (5126 === cT && KT === AT)
-        if (TT instanceof Array) {
-          const kT = MT / 4;
-          IT.set(TT, kT)
-        } else if (ArrayBuffer.isView(TT)) {
-        const kT = TT.byteOffset + MT;
-        if (0 !== (3 & kT)) return lT.e.Warn("Float array must be aligned to 4-bytes border"), void IT.set(new Float32Array(TT.buffer.slice(kT, kT + CT * Float32Array.BYTES_PER_ELEMENT)));
-        const cT = new Float32Array(TT.buffer, kT, CT);
-        IT.set(cT)
+    function Bq(qq, Eq, gq, lq, Oq, mq, cq, uq) {
+      const Bq = Eq * xq(gq),
+        Wq = cq * Eq;
+      if (uq.length !== Wq) throw new Error("Output length is not valid");
+      if (5126 === gq && Oq === Bq)
+        if (qq instanceof Array) {
+          const Eq = lq / 4;
+          uq.set(qq, Eq)
+        } else if (ArrayBuffer.isView(qq)) {
+        const Eq = qq.byteOffset + lq;
+        if (0 !== (3 & Eq)) return Yq.b.Warn("Float array must be aligned to 4-bytes border"), void uq.set(new Float32Array(qq.buffer.slice(Eq, Eq + Wq * Float32Array.BYTES_PER_ELEMENT)));
+        const gq = new Float32Array(qq.buffer, Eq, Wq);
+        uq.set(gq)
       } else {
-        const kT = new Float32Array(TT, MT, CT);
-        IT.set(kT)
-      } else fT(TT, MT, KT, kT, cT, CT, OT, ((TT, cT) => {
-        for (let lT = 0; lT < kT; lT++) IT[cT + lT] = TT[lT]
+        const Eq = new Float32Array(qq, lq, Wq);
+        uq.set(Eq)
+      } else Aq(qq, lq, Oq, Eq, gq, Wq, mq, ((qq, gq) => {
+        for (let Yq = 0; Yq < Eq; Yq++) uq[gq + Yq] = qq[Yq]
       }))
     }
 
-    function CT(TT, kT) {
-      let cT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        lT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-      if (Array.isArray(TT)) {
-        for (let MT = 0; MT < kT; MT++)
-          if (TT[cT + MT] - lT > 65535) return !0;
+    function Wq(qq, Eq) {
+      let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        Yq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+      if (Array.isArray(qq)) {
+        for (let lq = 0; lq < Eq; lq++)
+          if (qq[gq + lq] - Yq > 65535) return !0;
         return !1
       }
-      return 4 === TT.BYTES_PER_ELEMENT
+      return 4 === qq.BYTES_PER_ELEMENT
     }
 
-    function jT(TT) {
-      const kT = TT.buffer;
-      if (kT instanceof ArrayBuffer) return TT;
-      const cT = new ArrayBuffer(TT.byteLength);
-      return new Uint8Array(cT).set(new Uint8Array(kT, TT.byteOffset, TT.byteLength)), cT
+    function Nq(qq) {
+      const Eq = qq.buffer;
+      if (Eq instanceof ArrayBuffer) return qq;
+      const gq = new ArrayBuffer(qq.byteLength);
+      return new Uint8Array(gq).set(new Uint8Array(Eq, qq.byteOffset, qq.byteLength)), gq
     }
   },
-  39509: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => PT,
-      e: () => FT,
-      k: () => rT,
-      g: () => HT,
-      o: () => eT
+  39640: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      d: () => rq,
+      f: () => yq,
+      k: () => tq,
+      g: () => fq,
+      n: () => Mq
     });
-    class lT {
+    class Yq {
       constructor() {
         this.children = []
       }
-      isValid(TT) {
+      isValid(qq) {
         return !0
       }
-      process(TT, kT, cT) {
-        let lT = "";
+      process(qq, Eq, gq) {
+        let Yq = "";
         if (this.line) {
-          let cT = this.line;
-          const MT = kT.processor;
-          if (MT) {
-            MT.lineProcessor && (cT = MT.lineProcessor(cT, kT.isFragment, kT.processingContext));
-            const lT = kT.processor?.attributeKeywordName ?? "attribute",
-              KT = kT.isFragment && kT.processor?.varyingFragmentKeywordName ? kT.processor?.varyingFragmentKeywordName : !kT.isFragment && kT.processor?.varyingVertexKeywordName ? kT.processor?.varyingVertexKeywordName : "varying";
-            if (!kT.isFragment && MT.attributeProcessor && this.line.startsWith(lT)) cT = MT.attributeProcessor(this.line, TT, kT.processingContext);
-            else if (MT.varyingProcessor && (MT.varyingCheck?.(this.line, kT.isFragment) || !MT.varyingCheck && this.line.startsWith(KT))) cT = MT.varyingProcessor(this.line, kT.isFragment, TT, kT.processingContext);
-            else if (MT.uniformProcessor && MT.uniformRegexp && MT.uniformRegexp.test(this.line)) kT.lookForClosingBracketForUniformBuffer || (cT = MT.uniformProcessor(this.line, kT.isFragment, TT, kT.processingContext));
-            else if (MT.uniformBufferProcessor && MT.uniformBufferRegexp && MT.uniformBufferRegexp.test(this.line)) kT.lookForClosingBracketForUniformBuffer || (cT = MT.uniformBufferProcessor(this.line, kT.isFragment, kT.processingContext), kT.lookForClosingBracketForUniformBuffer = !0);
-            else if (MT.textureProcessor && MT.textureRegexp && MT.textureRegexp.test(this.line)) cT = MT.textureProcessor(this.line, kT.isFragment, TT, kT.processingContext);
-            else if ((MT.uniformProcessor || MT.uniformBufferProcessor) && this.line.startsWith("uniform") && !kT.lookForClosingBracketForUniformBuffer) {
-              /uniform\s+(?:(?:highp)?|(?:lowp)?)\s*(\S+)\s+(\S+)\s*;/.test(this.line) ? MT.uniformProcessor && (cT = MT.uniformProcessor(this.line, kT.isFragment, TT, kT.processingContext)) : MT.uniformBufferProcessor && (cT = MT.uniformBufferProcessor(this.line, kT.isFragment, kT.processingContext), kT.lookForClosingBracketForUniformBuffer = !0)
+          let gq = this.line;
+          const lq = Eq.processor;
+          if (lq) {
+            lq.lineProcessor && (gq = lq.lineProcessor(gq, Eq.isFragment, Eq.processingContext));
+            const Yq = Eq.processor?.attributeKeywordName ?? "attribute",
+              Oq = Eq.isFragment && Eq.processor?.varyingFragmentKeywordName ? Eq.processor?.varyingFragmentKeywordName : !Eq.isFragment && Eq.processor?.varyingVertexKeywordName ? Eq.processor?.varyingVertexKeywordName : "varying";
+            if (!Eq.isFragment && lq.attributeProcessor && this.line.startsWith(Yq)) gq = lq.attributeProcessor(this.line, qq, Eq.processingContext);
+            else if (lq.varyingProcessor && (lq.varyingCheck?.(this.line, Eq.isFragment) || !lq.varyingCheck && this.line.startsWith(Oq))) gq = lq.varyingProcessor(this.line, Eq.isFragment, qq, Eq.processingContext);
+            else if (lq.uniformProcessor && lq.uniformRegexp && lq.uniformRegexp.test(this.line)) Eq.lookForClosingBracketForUniformBuffer || (gq = lq.uniformProcessor(this.line, Eq.isFragment, qq, Eq.processingContext));
+            else if (lq.uniformBufferProcessor && lq.uniformBufferRegexp && lq.uniformBufferRegexp.test(this.line)) Eq.lookForClosingBracketForUniformBuffer || (gq = lq.uniformBufferProcessor(this.line, Eq.isFragment, Eq.processingContext), Eq.lookForClosingBracketForUniformBuffer = !0);
+            else if (lq.textureProcessor && lq.textureRegexp && lq.textureRegexp.test(this.line)) gq = lq.textureProcessor(this.line, Eq.isFragment, qq, Eq.processingContext);
+            else if ((lq.uniformProcessor || lq.uniformBufferProcessor) && this.line.startsWith("uniform") && !Eq.lookForClosingBracketForUniformBuffer) {
+              /uniform\s+(?:(?:highp)?|(?:lowp)?)\s*(\S+)\s+(\S+)\s*;/.test(this.line) ? lq.uniformProcessor && (gq = lq.uniformProcessor(this.line, Eq.isFragment, qq, Eq.processingContext)) : lq.uniformBufferProcessor && (gq = lq.uniformBufferProcessor(this.line, Eq.isFragment, Eq.processingContext), Eq.lookForClosingBracketForUniformBuffer = !0)
             }
-            kT.lookForClosingBracketForUniformBuffer && -1 !== this.line.indexOf("}") && (kT.lookForClosingBracketForUniformBuffer = !1, MT.endOfUniformBufferProcessor && (cT = MT.endOfUniformBufferProcessor(this.line, kT.isFragment, kT.processingContext)))
+            Eq.lookForClosingBracketForUniformBuffer && -1 !== this.line.indexOf("}") && (Eq.lookForClosingBracketForUniformBuffer = !1, lq.endOfUniformBufferProcessor && (gq = lq.endOfUniformBufferProcessor(this.line, Eq.isFragment, Eq.processingContext)))
           }
-          lT += cT + "\n"
+          Yq += gq + "\n"
         }
-        for (const MT of this.children) lT += MT.process(TT, kT, cT);
-        return this.additionalDefineKey && (TT[this.additionalDefineKey] = this.additionalDefineValue || "true", cT[this.additionalDefineKey] = TT[this.additionalDefineKey]), lT
+        for (const lq of this.children) Yq += lq.process(qq, Eq, gq);
+        return this.additionalDefineKey && (qq[this.additionalDefineKey] = this.additionalDefineValue || "true", gq[this.additionalDefineKey] = qq[this.additionalDefineKey]), Yq
       }
     }
-    class MT {
+    class lq {
       constructor() {
         this._lines = []
       }
@@ -284,273 +284,273 @@ export const modules = {
       get canRead() {
         return this.lineIndex < this._lines.length - 1
       }
-      set lines(TT) {
+      set lines(qq) {
         this._lines.length = 0;
-        for (const kT of TT) {
-          if (!kT || "\r" === kT) continue;
-          if ("#" === kT[0]) {
-            this._lines.push(kT);
+        for (const Eq of qq) {
+          if (!Eq || "\r" === Eq) continue;
+          if ("#" === Eq[0]) {
+            this._lines.push(Eq);
             continue
           }
-          const TT = kT.trim();
-          if (!TT) continue;
-          if (TT.startsWith("//")) {
-            this._lines.push(kT);
+          const qq = Eq.trim();
+          if (!qq) continue;
+          if (qq.startsWith("//")) {
+            this._lines.push(Eq);
             continue
           }
-          const cT = TT.indexOf(";");
-          if (-1 === cT) this._lines.push(TT);
-          else if (cT === TT.length - 1) TT.length > 1 && this._lines.push(TT);
+          const gq = qq.indexOf(";");
+          if (-1 === gq) this._lines.push(qq);
+          else if (gq === qq.length - 1) qq.length > 1 && this._lines.push(qq);
           else {
-            const TT = kT.split(";");
-            for (let kT = 0; kT < TT.length; kT++) {
-              let cT = TT[kT];
-              cT && (cT = cT.trim(), cT && this._lines.push(cT + (kT !== TT.length - 1 ? ";" : "")))
+            const qq = Eq.split(";");
+            for (let Eq = 0; Eq < qq.length; Eq++) {
+              let gq = qq[Eq];
+              gq && (gq = gq.trim(), gq && this._lines.push(gq + (Eq !== qq.length - 1 ? ";" : "")))
             }
           }
         }
       }
     }
-    class KT extends lT {
-      process(TT, kT, cT) {
-        for (let lT = 0; lT < this.children.length; lT++) {
-          const MT = this.children[lT];
-          if (MT.isValid(TT)) return MT.process(TT, kT, cT)
+    class Oq extends Yq {
+      process(qq, Eq, gq) {
+        for (let Yq = 0; Yq < this.children.length; Yq++) {
+          const lq = this.children[Yq];
+          if (lq.isValid(qq)) return lq.process(qq, Eq, gq)
         }
         return ""
       }
     }
-    class OT extends lT {
-      isValid(TT) {
-        return this.testExpression.isTrue(TT)
+    class mq extends Yq {
+      isValid(qq) {
+        return this.testExpression.isTrue(qq)
       }
     }
-    class yT {
-      isTrue(TT) {
+    class xq {
+      isTrue(qq) {
         return !0
       }
-      static postfixToInfix(TT) {
-        const kT = [];
-        for (const cT of TT)
-          if (void 0 === yT._OperatorPriority[cT]) kT.push(cT);
+      static postfixToInfix(qq) {
+        const Eq = [];
+        for (const gq of qq)
+          if (void 0 === xq._OperatorPriority[gq]) Eq.push(gq);
           else {
-            const TT = kT[kT.length - 1],
-              lT = kT[kT.length - 2];
-            kT.length -= 2, kT.push(`(${lT}${cT}${TT})`)
-          } return kT[kT.length - 1]
+            const qq = Eq[Eq.length - 1],
+              Yq = Eq[Eq.length - 2];
+            Eq.length -= 2, Eq.push(`(${Yq}${gq}${qq})`)
+          } return Eq[Eq.length - 1]
       }
-      static infixToPostfix(TT) {
-        const kT = yT._InfixToPostfixCache.get(TT);
-        if (kT) return kT.accessTime = Date.now(), kT.result;
-        if (!TT.includes("&&") && !TT.includes("||") && !TT.includes(")") && !TT.includes("(")) return [TT];
-        const cT = [];
-        let lT = -1;
-        const MT = () => {
-            IT = IT.trim(), "" !== IT && (cT.push(IT), IT = "")
+      static infixToPostfix(qq) {
+        const Eq = xq._InfixToPostfixCache.get(qq);
+        if (Eq) return Eq.accessTime = Date.now(), Eq.result;
+        if (!qq.includes("&&") && !qq.includes("||") && !qq.includes(")") && !qq.includes("(")) return [qq];
+        const gq = [];
+        let Yq = -1;
+        const lq = () => {
+            uq = uq.trim(), "" !== uq && (gq.push(uq), uq = "")
           },
-          KT = TT => {
-            lT < yT._Stack.length - 1 && (yT._Stack[++lT] = TT)
+          Oq = qq => {
+            Yq < xq._Stack.length - 1 && (xq._Stack[++Yq] = qq)
           },
-          OT = () => yT._Stack[lT],
-          fT = () => -1 === lT ? "!!INVALID EXPRESSION!!" : yT._Stack[lT--];
-        let xT = 0,
-          IT = "";
-        for (; xT < TT.length;) {
-          const kT = TT.charAt(xT),
-            AT = xT < TT.length - 1 ? TT.substring(xT, 2 + xT) : "";
-          if ("(" === kT) IT = "", KT(kT);
-          else if (")" === kT) {
-            for (MT(); - 1 !== lT && "(" !== OT();) cT.push(fT());
-            fT()
-          } else if (yT._OperatorPriority[AT] > 1) {
-            for (MT(); - 1 !== lT && yT._OperatorPriority[OT()] >= yT._OperatorPriority[AT];) cT.push(fT());
-            KT(AT), xT++
-          } else IT += kT;
-          xT++
+          mq = () => xq._Stack[Yq],
+          Aq = () => -1 === Yq ? "!!INVALID EXPRESSION!!" : xq._Stack[Yq--];
+        let cq = 0,
+          uq = "";
+        for (; cq < qq.length;) {
+          const Eq = qq.charAt(cq),
+            Bq = cq < qq.length - 1 ? qq.substring(cq, 2 + cq) : "";
+          if ("(" === Eq) uq = "", Oq(Eq);
+          else if (")" === Eq) {
+            for (lq(); - 1 !== Yq && "(" !== mq();) gq.push(Aq());
+            Aq()
+          } else if (xq._OperatorPriority[Bq] > 1) {
+            for (lq(); - 1 !== Yq && xq._OperatorPriority[mq()] >= xq._OperatorPriority[Bq];) gq.push(Aq());
+            Oq(Bq), cq++
+          } else uq += Eq;
+          cq++
         }
-        for (MT(); - 1 !== lT;) "(" === OT() ? fT() : cT.push(fT());
-        return yT._InfixToPostfixCache.size >= yT.InfixToPostfixCacheLimitSize && yT.ClearCache(), yT._InfixToPostfixCache.set(TT, {
-          result: cT,
+        for (lq(); - 1 !== Yq;) "(" === mq() ? Aq() : gq.push(Aq());
+        return xq._InfixToPostfixCache.size >= xq.InfixToPostfixCacheLimitSize && xq.ClearCache(), xq._InfixToPostfixCache.set(qq, {
+          result: gq,
           accessTime: Date.now()
-        }), cT
+        }), gq
       }
       static ClearCache() {
-        const TT = Array.from(yT._InfixToPostfixCache.entries()).sort(((TT, kT) => TT[1].accessTime - kT[1].accessTime));
-        for (let kT = 0; kT < yT.InfixToPostfixCacheCleanupSize; kT++) yT._InfixToPostfixCache.delete(TT[kT][0])
+        const qq = Array.from(xq._InfixToPostfixCache.entries()).sort(((qq, Eq) => qq[1].accessTime - Eq[1].accessTime));
+        for (let Eq = 0; Eq < xq.InfixToPostfixCacheCleanupSize; Eq++) xq._InfixToPostfixCache.delete(qq[Eq][0])
       }
     }
-    yT.InfixToPostfixCacheLimitSize = 5e4, yT.InfixToPostfixCacheCleanupSize = 25e3, yT._InfixToPostfixCache = new Map, yT._OperatorPriority = {
+    xq.InfixToPostfixCacheLimitSize = 5e4, xq.InfixToPostfixCacheCleanupSize = 25e3, xq._InfixToPostfixCache = new Map, xq._OperatorPriority = {
       ")": 0,
       "(": 1,
       "||": 2,
       "&&": 3
-    }, yT._Stack = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""];
-    class fT extends yT {
-      constructor(TT) {
-        let kT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        super(), this.define = TT, this.not = kT
+    }, xq._Stack = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""];
+    class Aq extends xq {
+      constructor(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        super(), this.define = qq, this.not = Eq
       }
-      isTrue(TT) {
-        let kT = void 0 !== TT[this.define];
-        return this.not && (kT = !kT), kT
-      }
-    }
-    class xT extends yT {
-      isTrue(TT) {
-        return this.leftOperand.isTrue(TT) || this.rightOperand.isTrue(TT)
+      isTrue(qq) {
+        let Eq = void 0 !== qq[this.define];
+        return this.not && (Eq = !Eq), Eq
       }
     }
-    class IT extends yT {
-      isTrue(TT) {
-        return this.leftOperand.isTrue(TT) && this.rightOperand.isTrue(TT)
+    class cq extends xq {
+      isTrue(qq) {
+        return this.leftOperand.isTrue(qq) || this.rightOperand.isTrue(qq)
       }
     }
-    class AT extends yT {
-      constructor(TT, kT, cT) {
-        super(), this.define = TT, this.operand = kT, this.testValue = cT
+    class uq extends xq {
+      isTrue(qq) {
+        return this.leftOperand.isTrue(qq) && this.rightOperand.isTrue(qq)
+      }
+    }
+    class Bq extends xq {
+      constructor(qq, Eq, gq) {
+        super(), this.define = qq, this.operand = Eq, this.testValue = gq
       }
       toString() {
         return `${this.define} ${this.operand} ${this.testValue}`
       }
-      isTrue(TT) {
-        let kT = !1;
-        const cT = parseInt(void 0 != TT[this.define] ? TT[this.define] : this.define),
-          lT = parseInt(void 0 != TT[this.testValue] ? TT[this.testValue] : this.testValue);
-        if (isNaN(cT) || isNaN(lT)) return !1;
+      isTrue(qq) {
+        let Eq = !1;
+        const gq = parseInt(void 0 != qq[this.define] ? qq[this.define] : this.define),
+          Yq = parseInt(void 0 != qq[this.testValue] ? qq[this.testValue] : this.testValue);
+        if (isNaN(gq) || isNaN(Yq)) return !1;
         switch (this.operand) {
           case ">":
-            kT = cT > lT;
+            Eq = gq > Yq;
             break;
           case "<":
-            kT = cT < lT;
+            Eq = gq < Yq;
             break;
           case "<=":
-            kT = cT <= lT;
+            Eq = gq <= Yq;
             break;
           case ">=":
-            kT = cT >= lT;
+            Eq = gq >= Yq;
             break;
           case "==":
-            kT = cT === lT;
+            Eq = gq === Yq;
             break;
           case "!=":
-            kT = cT !== lT
+            Eq = gq !== Yq
         }
-        return kT
+        return Eq
       }
     }
-    var CT = cT(39500),
-      jT = cT(39496);
-    const vT = /defined\s*?\((.+?)\)/g,
-      tT = /defined\s*?\[(.+?)\]/g,
-      hT = /#include\s?<(.+)>(\((.*)\))*(\[(.*)\])*/g,
-      NT = /__decl__/,
-      QT = /light\{X\}.(\w*)/g,
-      ST = /\{X\}/g,
-      DT = [],
-      aT = /(#ifdef)|(#else)|(#elif)|(#endif)|(#ifndef)|(#if)/;
+    var Wq = gq(39636),
+      Nq = gq(39630);
+    const aq = /defined\s*?\((.+?)\)/g,
+      Vq = /defined\s*?\[(.+?)\]/g,
+      dq = /#include\s?<(.+)>(\((.*)\))*(\[(.*)\])*/g,
+      jq = /__decl__/,
+      Hq = /light\{X\}.(\w*)/g,
+      oq = /\{X\}/g,
+      Pq = [],
+      Qq = /(#ifdef)|(#else)|(#elif)|(#endif)|(#ifndef)|(#if)/;
 
-    function FT(TT) {
-      TT.processor && TT.processor.initializeShaders && TT.processor.initializeShaders(TT.processingContext)
+    function yq(qq) {
+      qq.processor && qq.processor.initializeShaders && qq.processor.initializeShaders(qq.processingContext)
     }
 
-    function rT(TT, kT, cT, lT) {
-      kT.processor?.preProcessShaderCode && (TT = kT.processor.preProcessShaderCode(TT, kT.isFragment)), HT(TT, kT, (TT => {
-        kT.processCodeAfterIncludes && (TT = kT.processCodeAfterIncludes(kT.isFragment ? "fragment" : "vertex", TT, kT.defines));
-        const MT = function(TT, kT, cT) {
-          let lT = function(TT, kT) {
-            if (kT.processor?.noPrecision) return TT;
-            const cT = kT.shouldUseHighPrecisionShader; - 1 === TT.indexOf("precision highp float") ? TT = cT ? "precision highp float;\n" + TT : "precision mediump float;\n" + TT : cT || (TT = TT.replace("precision highp float", "precision mediump float"));
-            return TT
-          }(TT, kT);
-          if (!kT.processor) return lT;
-          if (0 === kT.processor.shaderLanguage && -1 !== lT.indexOf("#version 3") && (lT = lT.replace("#version 300 es", ""), !kT.processor.parseGLES3)) return lT;
-          const MT = kT.defines,
-            KT = oT(kT, cT);
-          kT.processor.preProcessor && (lT = kT.processor.preProcessor(lT, MT, KT, kT.isFragment, kT.processingContext));
-          const OT = {};
-          lT = JT(lT, KT, kT, OT), kT.processor.postProcessor && (lT = kT.processor.postProcessor(lT, MT, kT.isFragment, kT.processingContext, cT ? {
-            drawBuffersExtensionDisabled: !cT.getCaps().drawBuffersExtension
-          } : {}, KT, OT));
-          cT?._features.needShaderCodeInlining && (lT = cT.inlineShaderCode(lT));
-          return lT
-        }(TT, kT, lT);
-        cT(MT, TT)
+    function tq(qq, Eq, gq, Yq) {
+      Eq.processor?.preProcessShaderCode && (qq = Eq.processor.preProcessShaderCode(qq, Eq.isFragment)), fq(qq, Eq, (qq => {
+        Eq.processCodeAfterIncludes && (qq = Eq.processCodeAfterIncludes(Eq.isFragment ? "fragment" : "vertex", qq, Eq.defines));
+        const lq = function(qq, Eq, gq) {
+          let Yq = function(qq, Eq) {
+            if (Eq.processor?.noPrecision) return qq;
+            const gq = Eq.shouldUseHighPrecisionShader; - 1 === qq.indexOf("precision highp float") ? qq = gq ? "precision highp float;\n" + qq : "precision mediump float;\n" + qq : gq || (qq = qq.replace("precision highp float", "precision mediump float"));
+            return qq
+          }(qq, Eq);
+          if (!Eq.processor) return Yq;
+          if (0 === Eq.processor.shaderLanguage && -1 !== Yq.indexOf("#version 3") && (Yq = Yq.replace("#version 300 es", ""), !Eq.processor.parseGLES3)) return Yq;
+          const lq = Eq.defines,
+            Oq = Zq(Eq, gq);
+          Eq.processor.preProcessor && (Yq = Eq.processor.preProcessor(Yq, lq, Oq, Eq.isFragment, Eq.processingContext));
+          const mq = {};
+          Yq = iq(Yq, Oq, Eq, mq), Eq.processor.postProcessor && (Yq = Eq.processor.postProcessor(Yq, lq, Eq.isFragment, Eq.processingContext, gq ? {
+            drawBuffersExtensionDisabled: !gq.getCaps().drawBuffersExtension
+          } : {}, Oq, mq));
+          gq?._features.needShaderCodeInlining && (Yq = gq.inlineShaderCode(Yq));
+          return Yq
+        }(qq, Eq, Yq);
+        gq(lq, qq)
       }))
     }
 
-    function PT(TT, kT, cT) {
-      return cT.processor && cT.processor.finalizeShaders ? cT.processor.finalizeShaders(TT, kT, cT.processingContext) : {
-        vertexCode: TT,
-        fragmentCode: kT
+    function rq(qq, Eq, gq) {
+      return gq.processor && gq.processor.finalizeShaders ? gq.processor.finalizeShaders(qq, Eq, gq.processingContext) : {
+        vertexCode: qq,
+        fragmentCode: Eq
       }
     }
 
-    function wT(TT) {
-      const kT = /defined\((.+)\)/.exec(TT);
-      if (kT && kT.length) return new fT(kT[1].trim(), "!" === TT[0]);
-      const cT = ["==", "!=", ">=", "<=", "<", ">"];
-      let lT = "",
-        MT = 0;
-      for (lT of cT)
-        if (MT = TT.indexOf(lT), MT > -1) break;
-      if (-1 === MT) return new fT(TT);
-      const KT = TT.substring(0, MT).trim(),
-        OT = TT.substring(MT + lT.length).trim();
-      return new AT(KT, lT, OT)
+    function vq(qq) {
+      const Eq = /defined\((.+)\)/.exec(qq);
+      if (Eq && Eq.length) return new Aq(Eq[1].trim(), "!" === qq[0]);
+      const gq = ["==", "!=", ">=", "<=", "<", ">"];
+      let Yq = "",
+        lq = 0;
+      for (Yq of gq)
+        if (lq = qq.indexOf(Yq), lq > -1) break;
+      if (-1 === lq) return new Aq(qq);
+      const Oq = qq.substring(0, lq).trim(),
+        mq = qq.substring(lq + Yq.length).trim();
+      return new Bq(Oq, Yq, mq)
     }
 
-    function mT(TT, kT) {
-      const cT = new OT,
-        lT = TT.substring(0, kT);
-      let MT = TT.substring(kT);
-      return MT = MT.substring(0, (MT.indexOf("//") + 1 || MT.length + 1) - 1).trim(), cT.testExpression = "#ifdef" === lT ? new fT(MT) : "#ifndef" === lT ? new fT(MT, !0) : function(TT) {
-        TT = TT.replace(vT, "defined[$1]");
-        const kT = yT.infixToPostfix(TT),
-          cT = [];
-        for (const MT of kT)
-          if ("||" !== MT && "&&" !== MT) cT.push(MT);
-          else if (cT.length >= 2) {
-          let TT = cT[cT.length - 1],
-            kT = cT[cT.length - 2];
-          cT.length -= 2;
-          const lT = "&&" == MT ? new IT : new xT;
-          "string" === typeof TT && (TT = TT.replace(tT, "defined($1)")), "string" === typeof kT && (kT = kT.replace(tT, "defined($1)")), lT.leftOperand = "string" === typeof kT ? wT(kT) : kT, lT.rightOperand = "string" === typeof TT ? wT(TT) : TT, cT.push(lT)
+    function hq(qq, Eq) {
+      const gq = new mq,
+        Yq = qq.substring(0, Eq);
+      let lq = qq.substring(Eq);
+      return lq = lq.substring(0, (lq.indexOf("//") + 1 || lq.length + 1) - 1).trim(), gq.testExpression = "#ifdef" === Yq ? new Aq(lq) : "#ifndef" === Yq ? new Aq(lq, !0) : function(qq) {
+        qq = qq.replace(aq, "defined[$1]");
+        const Eq = xq.infixToPostfix(qq),
+          gq = [];
+        for (const lq of Eq)
+          if ("||" !== lq && "&&" !== lq) gq.push(lq);
+          else if (gq.length >= 2) {
+          let qq = gq[gq.length - 1],
+            Eq = gq[gq.length - 2];
+          gq.length -= 2;
+          const Yq = "&&" == lq ? new uq : new cq;
+          "string" === typeof qq && (qq = qq.replace(Vq, "defined($1)")), "string" === typeof Eq && (Eq = Eq.replace(Vq, "defined($1)")), Yq.leftOperand = "string" === typeof Eq ? vq(Eq) : Eq, Yq.rightOperand = "string" === typeof qq ? vq(qq) : qq, gq.push(Yq)
         }
-        let lT = cT[cT.length - 1];
-        return "string" === typeof lT && (lT = lT.replace(tT, "defined($1)")), "string" === typeof lT ? wT(lT) : lT
-      }(MT), cT
+        let Yq = gq[gq.length - 1];
+        return "string" === typeof Yq && (Yq = Yq.replace(Vq, "defined($1)")), "string" === typeof Yq ? vq(Yq) : Yq
+      }(lq), gq
     }
 
-    function bT(TT, kT, cT, MT) {
-      let KT;
-      for (; zT(TT, cT, MT);) {
-        KT = TT.currentLine;
-        const OT = KT.substring(0, 5).toLowerCase();
-        if ("#else" === OT) {
-          const cT = new lT;
-          return kT.children.push(cT), void zT(TT, cT, MT)
+    function nq(qq, Eq, gq, lq) {
+      let Oq;
+      for (; bq(qq, gq, lq);) {
+        Oq = qq.currentLine;
+        const mq = Oq.substring(0, 5).toLowerCase();
+        if ("#else" === mq) {
+          const gq = new Yq;
+          return Eq.children.push(gq), void bq(qq, gq, lq)
         }
-        if ("#elif" === OT) {
-          const TT = mT(KT, 5);
-          kT.children.push(TT), cT = TT
+        if ("#elif" === mq) {
+          const qq = hq(Oq, 5);
+          Eq.children.push(qq), gq = qq
         }
       }
     }
 
-    function zT(TT, kT, cT) {
-      for (; TT.canRead;) {
-        TT.lineIndex++;
-        const MT = TT.currentLine;
-        if (MT.indexOf("#") >= 0) {
-          const lT = aT.exec(MT);
-          if (lT && lT.length) {
-            switch (lT[0]) {
+    function bq(qq, Eq, gq) {
+      for (; qq.canRead;) {
+        qq.lineIndex++;
+        const lq = qq.currentLine;
+        if (lq.indexOf("#") >= 0) {
+          const Yq = Qq.exec(lq);
+          if (Yq && Yq.length) {
+            switch (Yq[0]) {
               case "#ifdef": {
-                const lT = new KT;
-                kT.children.push(lT);
-                const OT = mT(MT, 6);
-                lT.children.push(OT), bT(TT, lT, OT, cT);
+                const Yq = new Oq;
+                Eq.children.push(Yq);
+                const mq = hq(lq, 6);
+                Yq.children.push(mq), nq(qq, Yq, mq, gq);
                 break
               }
               case "#else":
@@ -559,155 +559,155 @@ export const modules = {
               case "#endif":
                 return !1;
               case "#ifndef": {
-                const lT = new KT;
-                kT.children.push(lT);
-                const OT = mT(MT, 7);
-                lT.children.push(OT), bT(TT, lT, OT, cT);
+                const Yq = new Oq;
+                Eq.children.push(Yq);
+                const mq = hq(lq, 7);
+                Yq.children.push(mq), nq(qq, Yq, mq, gq);
                 break
               }
               case "#if": {
-                const lT = new KT,
-                  OT = mT(MT, 3);
-                kT.children.push(lT), lT.children.push(OT), bT(TT, lT, OT, cT);
+                const Yq = new Oq,
+                  mq = hq(lq, 3);
+                Eq.children.push(Yq), Yq.children.push(mq), nq(qq, Yq, mq, gq);
                 break
               }
             }
             continue
           }
         }
-        const OT = new lT;
-        if (OT.line = MT, kT.children.push(OT), "#" === MT[0] && "d" === MT[1]) {
-          const TT = MT.replace(";", "").split(" ");
-          OT.additionalDefineKey = TT[1], 3 === TT.length && (OT.additionalDefineValue = TT[2])
+        const mq = new Yq;
+        if (mq.line = lq, Eq.children.push(mq), "#" === lq[0] && "d" === lq[1]) {
+          const qq = lq.replace(";", "").split(" ");
+          mq.additionalDefineKey = qq[1], 3 === qq.length && (mq.additionalDefineValue = qq[2])
         }
       }
       return !1
     }
 
-    function JT(TT, kT, cT, KT) {
-      const OT = new lT,
-        yT = new MT;
-      return yT.lineIndex = -1, yT.lines = TT.split("\n"), zT(yT, OT, KT), OT.process(kT, cT, KT)
+    function iq(qq, Eq, gq, Oq) {
+      const mq = new Yq,
+        xq = new lq;
+      return xq.lineIndex = -1, xq.lines = qq.split("\n"), bq(xq, mq, Oq), mq.process(Eq, gq, Oq)
     }
 
-    function oT(TT, kT) {
-      const cT = TT.defines,
-        lT = {};
-      for (const MT of cT) {
-        const TT = MT.replace("#define", "").replace(";", "").trim().split(" ");
-        lT[TT[0]] = TT.length > 1 ? TT[1] : ""
+    function Zq(qq, Eq) {
+      const gq = qq.defines,
+        Yq = {};
+      for (const lq of gq) {
+        const qq = lq.replace("#define", "").replace(";", "").trim().split(" ");
+        Yq[qq[0]] = qq.length > 1 ? qq[1] : ""
       }
-      return 0 === TT.processor?.shaderLanguage && (lT.GL_ES = "true"), lT.__VERSION__ = TT.version, lT[TT.platformName] = "true", (0, jT.l)(lT, kT?.isNDCHalfZRange, kT?.QcT, kT?.useExactSrgbConversions), lT
+      return 0 === qq.processor?.shaderLanguage && (Yq.GL_ES = "true"), Yq.__VERSION__ = qq.version, Yq[qq.platformName] = "true", (0, Nq.i)(Yq, Eq?.isNDCHalfZRange, Eq?.vYq, Eq?.useExactSrgbConversions), Yq
     }
 
-    function HT(TT, kT, cT) {
-      let lT;
-      for (DT.length = 0; null !== (lT = hT.exec(TT));) DT.push(lT);
-      let MT = [TT],
-        KT = !1;
-      for (const yT of DT) {
-        let TT = yT[1];
-        if (-1 !== TT.indexOf("__decl__") && (TT = TT.replace(NT, ""), kT.supportsUniformBuffers && (TT = TT.replace("Vertex", "Ubo").replace("Fragment", "Ubo")), TT += "Declaration"), !kT.includesShadersStore[TT]) {
-          const lT = kT.shadersRepository + "ShadersInclude/" + TT + ".fx";
-          return void eT.loadFile(lT, (lT => {
-            kT.includesShadersStore[TT] = lT, HT(MT.join(""), kT, cT)
+    function fq(qq, Eq, gq) {
+      let Yq;
+      for (Pq.length = 0; null !== (Yq = dq.exec(qq));) Pq.push(Yq);
+      let lq = [qq],
+        Oq = !1;
+      for (const xq of Pq) {
+        let qq = xq[1];
+        if (-1 !== qq.indexOf("__decl__") && (qq = qq.replace(jq, ""), Eq.supportsUniformBuffers && (qq = qq.replace("Vertex", "Ubo").replace("Fragment", "Ubo")), qq += "Declaration"), !Eq.includesShadersStore[qq]) {
+          const Yq = Eq.shadersRepository + "ShadersInclude/" + qq + ".fx";
+          return void Mq.loadFile(Yq, (Yq => {
+            Eq.includesShadersStore[qq] = Yq, fq(lq.join(""), Eq, gq)
           }))
         } {
-          let cT = kT.includesShadersStore[TT];
-          if (yT[2]) {
-            const TT = yT[3].split(",");
-            for (let kT = 0; kT < TT.length; kT += 2) {
-              const lT = new RegExp(TT[kT], "g"),
-                MT = TT[kT + 1];
-              cT = cT.replace(lT, MT)
+          let gq = Eq.includesShadersStore[qq];
+          if (xq[2]) {
+            const qq = xq[3].split(",");
+            for (let Eq = 0; Eq < qq.length; Eq += 2) {
+              const Yq = new RegExp(qq[Eq], "g"),
+                lq = qq[Eq + 1];
+              gq = gq.replace(Yq, lq)
             }
           }
-          if (yT[4]) {
-            const TT = yT[5];
-            if (-1 !== TT.indexOf("..")) {
-              const lT = TT.split(".."),
-                MT = parseInt(lT[0]);
-              let KT = parseInt(lT[1]),
-                OT = cT.slice(0);
-              cT = "", isNaN(KT) && (KT = kT.indexParameters[lT[1]]);
-              for (let TT = MT; TT < KT; TT++) kT.supportsUniformBuffers || (OT = OT.replace(QT, ((TT, kT) => kT + "{X}"))), cT += OT.replace(ST, TT.toString()) + "\n"
-            } else kT.supportsUniformBuffers || (cT = cT.replace(QT, ((TT, kT) => kT + "{X}"))), cT = cT.replace(ST, TT)
+          if (xq[4]) {
+            const qq = xq[5];
+            if (-1 !== qq.indexOf("..")) {
+              const Yq = qq.split(".."),
+                lq = parseInt(Yq[0]);
+              let Oq = parseInt(Yq[1]),
+                mq = gq.slice(0);
+              gq = "", isNaN(Oq) && (Oq = Eq.indexParameters[Yq[1]]);
+              for (let qq = lq; qq < Oq; qq++) Eq.supportsUniformBuffers || (mq = mq.replace(Hq, ((qq, Eq) => Eq + "{X}"))), gq += mq.replace(oq, qq.toString()) + "\n"
+            } else Eq.supportsUniformBuffers || (gq = gq.replace(Hq, ((qq, Eq) => Eq + "{X}"))), gq = gq.replace(oq, qq)
           }
-          const lT = [];
-          for (const TT of MT) {
-            const kT = TT.split(yT[0]);
-            for (let TT = 0; TT < kT.length - 1; TT++) lT.push(kT[TT]), lT.push(cT);
-            lT.push(kT[kT.length - 1])
+          const Yq = [];
+          for (const qq of lq) {
+            const Eq = qq.split(xq[0]);
+            for (let qq = 0; qq < Eq.length - 1; qq++) Yq.push(Eq[qq]), Yq.push(gq);
+            Yq.push(Eq[Eq.length - 1])
           }
-          MT = lT, KT = KT || cT.indexOf("#include<") >= 0 || cT.indexOf("#include <") >= 0
+          lq = Yq, Oq = Oq || gq.indexOf("#include<") >= 0 || gq.indexOf("#include <") >= 0
         }
       }
-      DT.length = 0;
-      const OT = MT.join("");
-      KT ? HT(OT.toString(), kT, cT) : cT(OT)
+      Pq.length = 0;
+      const mq = lq.join("");
+      Oq ? fq(mq.toString(), Eq, gq) : gq(mq)
     }
-    const eT = {
-      loadFile: (TT, kT, cT, lT, MT, KT) => {
-        throw (0, CT.i)("FileTools")
+    const Mq = {
+      loadFile: (qq, Eq, gq, Yq, lq, Oq) => {
+        throw (0, Wq.m)("FileTools")
       }
     }
   },
-  39496: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => MT,
-      i: () => KT,
-      l: () => yT,
-      m: () => OT,
-      n: () => fT
+  39630: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => lq,
+      h: () => Oq,
+      i: () => xq,
+      m: () => mq,
+      p: () => Aq
     });
-    var lT = cT(39500);
-    const MT = {};
+    var Yq = gq(39636);
+    const lq = {};
 
-    function KT(TT, kT) {
-      return (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "") + (kT ? kT + "\n" : "") + TT
+    function Oq(qq, Eq) {
+      return (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "") + (Eq ? Eq + "\n" : "") + qq
     }
 
-    function OT(TT, kT, cT, KT, OT, yT, fT) {
-      const xT = fT || MT.loadFile;
-      if (!xT) throw (0, lT.i)("FileTools");
-      return xT(TT, kT, cT, KT, OT, yT)
+    function mq(qq, Eq, gq, Oq, mq, xq, Aq) {
+      const cq = Aq || lq.loadFile;
+      if (!cq) throw (0, Yq.m)("FileTools");
+      return cq(qq, Eq, gq, Oq, mq, xq)
     }
 
-    function yT(TT, kT, cT, lT) {
-      if (TT) return kT ? TT.IS_NDC_HALF_ZRANGE = "" : delete TT.IS_NDC_HALF_ZRANGE, cT ? TT.USE_REVERSE_DEPTHBUFFER = "" : delete TT.USE_REVERSE_DEPTHBUFFER, void(lT ? TT.USE_EXACT_SRGB_CONVERSIONS = "" : delete TT.USE_EXACT_SRGB_CONVERSIONS);
+    function xq(qq, Eq, gq, Yq) {
+      if (qq) return Eq ? qq.IS_NDC_HALF_ZRANGE = "" : delete qq.IS_NDC_HALF_ZRANGE, gq ? qq.USE_REVERSE_DEPTHBUFFER = "" : delete qq.USE_REVERSE_DEPTHBUFFER, void(Yq ? qq.USE_EXACT_SRGB_CONVERSIONS = "" : delete qq.USE_EXACT_SRGB_CONVERSIONS);
       {
-        let TT = "";
-        return kT && (TT += "#define IS_NDC_HALF_ZRANGE"), cT && (TT && (TT += "\n"), TT += "#define USE_REVERSE_DEPTHBUFFER"), lT && (TT && (TT += "\n"), TT += "#define USE_EXACT_SRGB_CONVERSIONS"), TT
+        let qq = "";
+        return Eq && (qq += "#define IS_NDC_HALF_ZRANGE"), gq && (qq && (qq += "\n"), qq += "#define USE_REVERSE_DEPTHBUFFER"), Yq && (qq && (qq += "\n"), qq += "#define USE_EXACT_SRGB_CONVERSIONS"), qq
       }
     }
 
-    function fT(TT, kT) {
-      let cT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        lT = arguments.length > 3 ? arguments[3] : void 0;
-      switch (TT) {
+    function Aq(qq, Eq) {
+      let gq = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        Yq = arguments.length > 3 ? arguments[3] : void 0;
+      switch (qq) {
         case 3: {
-          const TT = new Int8Array(kT);
-          return lT && TT.set(new Int8Array(lT)), TT
+          const qq = new Int8Array(Eq);
+          return Yq && qq.set(new Int8Array(Yq)), qq
         }
         case 0: {
-          const TT = new Uint8Array(kT);
-          return lT && TT.set(new Uint8Array(lT)), TT
+          const qq = new Uint8Array(Eq);
+          return Yq && qq.set(new Uint8Array(Yq)), qq
         }
         case 4: {
-          const TT = "number" !== typeof kT ? new Int16Array(kT) : new Int16Array(cT ? kT / 2 : kT);
-          return lT && TT.set(new Int16Array(lT)), TT
+          const qq = "number" !== typeof Eq ? new Int16Array(Eq) : new Int16Array(gq ? Eq / 2 : Eq);
+          return Yq && qq.set(new Int16Array(Yq)), qq
         }
         case 5:
         case 8:
         case 9:
         case 10:
         case 2: {
-          const TT = "number" !== typeof kT ? new Uint16Array(kT) : new Uint16Array(cT ? kT / 2 : kT);
-          return lT && TT.set(new Uint16Array(lT)), TT
+          const qq = "number" !== typeof Eq ? new Uint16Array(Eq) : new Uint16Array(gq ? Eq / 2 : Eq);
+          return Yq && qq.set(new Uint16Array(Yq)), qq
         }
         case 6: {
-          const TT = "number" !== typeof kT ? new Int32Array(kT) : new Int32Array(cT ? kT / 4 : kT);
-          return lT && TT.set(new Int32Array(lT)), TT
+          const qq = "number" !== typeof Eq ? new Int32Array(Eq) : new Int32Array(gq ? Eq / 4 : Eq);
+          return Yq && qq.set(new Int32Array(Yq)), qq
         }
         case 7:
         case 11:
@@ -715,55 +715,55 @@ export const modules = {
         case 13:
         case 14:
         case 15: {
-          const TT = "number" !== typeof kT ? new Uint32Array(kT) : new Uint32Array(cT ? kT / 4 : kT);
-          return lT && TT.set(new Uint32Array(lT)), TT
+          const qq = "number" !== typeof Eq ? new Uint32Array(Eq) : new Uint32Array(gq ? Eq / 4 : Eq);
+          return Yq && qq.set(new Uint32Array(Yq)), qq
         }
         case 1: {
-          const TT = "number" !== typeof kT ? new Float32Array(kT) : new Float32Array(cT ? kT / 4 : kT);
-          return lT && TT.set(new Float32Array(lT)), TT
+          const qq = "number" !== typeof Eq ? new Float32Array(Eq) : new Float32Array(gq ? Eq / 4 : Eq);
+          return Yq && qq.set(new Float32Array(Yq)), qq
         }
       }
-      const MT = new Uint8Array(kT);
-      return lT && MT.set(new Uint8Array(lT)), MT
+      const lq = new Uint8Array(Eq);
+      return Yq && lq.set(new Uint8Array(Yq)), lq
     }
   },
-  39500: (TT, kT, cT) => {
-    cT.d(kT, {
-      c: () => xT,
-      d: () => IT,
-      f: () => fT,
-      i: () => MT
+  39636: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => cq,
+      e: () => uq,
+      i: () => Aq,
+      m: () => lq
     });
-    const lT = {};
+    const Yq = {};
 
-    function MT(TT) {
-      if (!(arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) || !lT[TT]) return lT[TT] = !0, `${TT} needs to be imported before as it contains a side-effect required by your code.`
+    function lq(qq) {
+      if (!(arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) || !Yq[qq]) return Yq[qq] = !0, `${qq} needs to be imported before as it contains a side-effect required by your code.`
     }
-    const KT = {};
-    let OT = !1,
-      yT = 0;
+    const Oq = {};
+    let mq = !1,
+      xq = 0;
 
-    function fT(TT, kT) {
-      let cT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      const lT = function() {
-        if ((cT || OT) && 0 === yT) {
-          const cT = `${TT}.${kT}`;
-          KT[cT] || (KT[cT] = !0, console.warn(`[Babylon.js] ${cT}() requires a side-effect import. See: https://doc.babylonjs.com/setup/treeshaking`))
+    function Aq(qq, Eq) {
+      let gq = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const Yq = function() {
+        if ((gq || mq) && 0 === xq) {
+          const gq = `${qq}.${Eq}`;
+          Oq[gq] || (Oq[gq] = !0, console.warn(`[Babylon.js] ${gq}() requires a side-effect import. See: https://doc.babylonjs.com/setup/treeshaking`))
         }
       };
-      return lT.__isSideEffectStub = !0, lT
+      return Yq.__isSideEffectStub = !0, Yq
     }
 
-    function xT(TT) {
-      return !!TT && !TT.__isSideEffectStub
+    function cq(qq) {
+      return !!qq && !qq.__isSideEffectStub
     }
 
-    function IT(TT, kT) {
+    function uq(qq, Eq) {
       return {
         get() {},
-        set(TT) {
-          Object.defineProperty(this, kT, {
-            value: TT,
+        set(qq) {
+          Object.defineProperty(this, Eq, {
+            value: qq,
             writable: !0,
             configurable: !0,
             enumerable: !0
@@ -774,41 +774,41 @@ export const modules = {
       }
     }
   },
-  39482: (TT, kT, cT) => {
-    function lT() {
+  39626: (qq, Eq, gq) => {
+    function Yq() {
       return "undefined" !== typeof window
     }
 
-    function MT() {
+    function lq() {
       return "undefined" !== typeof navigator
     }
 
-    function KT() {
+    function Oq() {
       return "undefined" !== typeof document
     }
 
-    function OT(TT) {
-      let kT = "",
-        cT = TT.firstChild;
-      for (; cT;) 3 === cT.nodeType && (kT += cT.textContent), cT = cT.nextSibling;
-      return kT
+    function mq(qq) {
+      let Eq = "",
+        gq = qq.firstChild;
+      for (; gq;) 3 === gq.nodeType && (Eq += gq.textContent), gq = gq.nextSibling;
+      return Eq
     }
-    cT.d(kT, {
-      b: () => OT,
-      d: () => KT,
-      g: () => MT,
-      i: () => lT
+    gq.d(Eq, {
+      b: () => mq,
+      f: () => Oq,
+      j: () => lq,
+      n: () => Yq
     })
   },
-  39683: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => lT,
-      f: () => MT,
-      h: () => KT
+  39805: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => Yq,
+      f: () => lq,
+      h: () => Oq
     });
-    class lT extends Error {}
-    lT._setPrototypeOf = Object.setPrototypeOf || ((TT, kT) => (TT.__proto__ = kT, TT));
-    const MT = {
+    class Yq extends Error {}
+    Yq._setPrototypeOf = Object.setPrototypeOf || ((qq, Eq) => (qq.__proto__ = Eq, qq));
+    const lq = {
       MeshInvalidPositionsError: 0,
       UnsupportedTextureError: 1e3,
       GLTFLoaderUnexpectedMagicError: 2e3,
@@ -817,339 +817,339 @@ export const modules = {
       RequestFileError: 4001,
       ReadFileError: 4002
     };
-    class KT extends lT {
-      constructor(TT, kT, cT) {
-        super(TT), this.errorCode = kT, this.innerError = cT, this.name = "RuntimeError", lT._setPrototypeOf(this, KT.prototype)
+    class Oq extends Yq {
+      constructor(qq, Eq, gq) {
+        super(qq), this.errorCode = Eq, this.innerError = gq, this.name = "RuntimeError", Yq._setPrototypeOf(this, Oq.prototype)
       }
     }
   },
-  39666: (TT, kT, cT) => {
-    cT.d(kT, {
-      b: () => oT,
-      c: () => ST,
-      f: () => mT,
-      g: () => zT,
-      k: () => PT,
-      o: () => FT,
-      p: () => rT,
-      q: () => ET,
-      u: () => wT,
-      v: () => DT
+  39799: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => Zq,
+      i: () => oq,
+      m: () => hq,
+      q: () => bq,
+      u: () => rq,
+      x: () => yq,
+      z: () => tq,
+      D: () => Sq,
+      F: () => vq,
+      J: () => Pq
     });
-    var lT = cT(39675),
-      MT = cT(39482),
-      KT = cT(36932);
-    class OT {}
-    OT.FilesToLoad = {};
-    var yT = cT(39683),
-      fT = cT(39687),
-      xT = cT(36925),
-      IT = cT(39496),
-      AT = cT(39509),
-      CT = cT(38512),
-      jT = cT(39514),
-      vT = cT(39689);
-    const tT = new RegExp(/^data:([^,]+\/[^,]+)?;base64,/i);
-    class hT extends yT.h {
-      constructor(TT, kT) {
-        super(TT, yT.f.LoadFileError), this.name = "LoadFileError", yT.e._setPrototypeOf(this, hT.prototype), kT instanceof lT.b ? this.request = kT : this.file = kT
+    var Yq = gq(39801),
+      lq = gq(39626),
+      Oq = gq(37156);
+    class mq {}
+    mq.FilesToLoad = {};
+    var xq = gq(39805),
+      Aq = gq(39810),
+      cq = gq(37153),
+      uq = gq(39630),
+      Bq = gq(39640),
+      Wq = gq(38653),
+      Nq = gq(39644),
+      aq = gq(39817);
+    const Vq = new RegExp(/^data:([^,]+\/[^,]+)?;base64,/i);
+    class dq extends xq.h {
+      constructor(qq, Eq) {
+        super(qq, xq.f.LoadFileError), this.name = "LoadFileError", xq.e._setPrototypeOf(this, dq.prototype), Eq instanceof Yq.e ? this.request = Eq : this.file = Eq
       }
     }
-    class NT extends yT.h {
-      constructor(TT, kT) {
-        super(TT, yT.f.RequestFileError), this.request = kT, this.name = "RequestFileError", yT.e._setPrototypeOf(this, NT.prototype)
+    class jq extends xq.h {
+      constructor(qq, Eq) {
+        super(qq, xq.f.RequestFileError), this.request = Eq, this.name = "RequestFileError", xq.e._setPrototypeOf(this, jq.prototype)
       }
     }
-    class QT extends yT.h {
-      constructor(TT, kT) {
-        super(TT, yT.f.ReadFileError), this.file = kT, this.name = "ReadFileError", yT.e._setPrototypeOf(this, QT.prototype)
+    class Hq extends xq.h {
+      constructor(qq, Eq) {
+        super(qq, xq.f.ReadFileError), this.file = Eq, this.name = "ReadFileError", xq.e._setPrototypeOf(this, Hq.prototype)
       }
     }
-    const ST = {
+    const oq = {
         DefaultRetryStrategy: class {
           static ExponentialBackoff() {
-            let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 3,
-              kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500;
-            return (cT, lT, MT) => 0 !== lT.status || MT >= TT || -1 !== cT.indexOf("file:") ? -1 : Math.pow(2, MT) * kT
+            let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 3,
+              Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500;
+            return (gq, Yq, lq) => 0 !== Yq.status || lq >= qq || -1 !== gq.indexOf("file:") ? -1 : Math.pow(2, lq) * Eq
           }
         }.ExponentialBackoff(),
         BaseUrl: "",
         CorsBehavior: "anonymous",
-        PreprocessUrl: TT => TT,
+        PreprocessUrl: qq => qq,
         ScriptBaseUrl: "",
-        ScriptPreprocessUrl: TT => TT,
-        CleanUrl: TT => TT = TT.replace(/#/gm, "%23")
+        ScriptPreprocessUrl: qq => qq,
+        CleanUrl: qq => qq = qq.replace(/#/gm, "%23")
       },
-      DT = (TT, kT) => {
-        if ((!TT || 0 !== TT.indexOf("data:")) && ST.CorsBehavior)
-          if ("string" === typeof ST.CorsBehavior || ST.CorsBehavior instanceof String) kT.crossOrigin = ST.CorsBehavior;
+      Pq = (qq, Eq) => {
+        if ((!qq || 0 !== qq.indexOf("data:")) && oq.CorsBehavior)
+          if ("string" === typeof oq.CorsBehavior || oq.CorsBehavior instanceof String) Eq.crossOrigin = oq.CorsBehavior;
           else {
-            const cT = ST.CorsBehavior(TT);
-            cT && (kT.crossOrigin = cT)
+            const gq = oq.CorsBehavior(qq);
+            gq && (Eq.crossOrigin = gq)
           }
       },
-      aT = {
+      Qq = {
         getRequiredSize: null
       },
-      FT = function(TT, kT, cT, MT) {
-        let KT, yT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
-          IT = arguments.length > 5 ? arguments[5] : void 0,
-          AT = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : xT.d.LastCreatedEngine;
-        if ("undefined" === typeof HTMLImageElement && !AT?._features.forceBitmapOverHTMLImageElement) return cT("LoadImage is only supported in web or BabylonNative environments."), null;
-        if (AT?._features.forceBitmapOverHTMLImageElement && "string" !== typeof TT && "undefined" !== typeof Blob) {
-          let lT;
-          if (TT instanceof Blob) lT = TT;
+      yq = function(qq, Eq, gq, lq) {
+        let Oq, xq = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
+          uq = arguments.length > 5 ? arguments[5] : void 0,
+          Bq = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : cq.b.LastCreatedEngine;
+        if ("undefined" === typeof HTMLImageElement && !Bq?._features.forceBitmapOverHTMLImageElement) return gq("LoadImage is only supported in web or BabylonNative environments."), null;
+        if (Bq?._features.forceBitmapOverHTMLImageElement && "string" !== typeof qq && "undefined" !== typeof Blob) {
+          let Yq;
+          if (qq instanceof Blob) Yq = qq;
           else {
-            const kT = TT instanceof ArrayBuffer ? TT : (0, vT.h)(TT);
-            lT = new Blob([kT], {
-              type: yT
+            const Eq = qq instanceof ArrayBuffer ? qq : (0, aq.l)(qq);
+            Yq = new Blob([Eq], {
+              type: xq
             })
           }
-          return AT.createImageBitmap(lT, {
+          return Bq.createImageBitmap(Yq, {
             premultiplyAlpha: "none",
             colorSpaceConversion: "none",
-            ...IT
-          }).then(kT).catch((kT => {
-            cT && cT("Error while trying to load image: " + TT, kT)
+            ...uq
+          }).then(Eq).catch((Eq => {
+            gq && gq("Error while trying to load image: " + qq, Eq)
           })), null
         }
-        let CT = !1;
-        if (TT instanceof ArrayBuffer || ArrayBuffer.isView(TT))
+        let Wq = !1;
+        if (qq instanceof ArrayBuffer || ArrayBuffer.isView(qq))
           if ("undefined" !== typeof Blob && "undefined" !== typeof URL) {
-            let kT;
-            kT = TT instanceof ArrayBuffer ? TT : (0, vT.h)(TT), KT = URL.createObjectURL(new Blob([kT], {
-              type: yT
-            })), CT = !0
-          } else KT = `data:${yT};base64,` + (0, fT.k)(TT);
-        else TT instanceof Blob ? (KT = URL.createObjectURL(TT), CT = !0) : (KT = ST.CleanUrl(TT), KT = ST.PreprocessUrl(KT));
-        const jT = kT => {
-          if (cT) {
-            const lT = KT || TT.toString();
-            cT(`Error while trying to load image: ${0===lT.indexOf("http")||lT.length<=128?lT:lT.slice(0,128)+"..."}`, kT)
+            let Eq;
+            Eq = qq instanceof ArrayBuffer ? qq : (0, aq.l)(qq), Oq = URL.createObjectURL(new Blob([Eq], {
+              type: xq
+            })), Wq = !0
+          } else Oq = `data:${xq};base64,` + (0, Aq.f)(qq);
+        else qq instanceof Blob ? (Oq = URL.createObjectURL(qq), Wq = !0) : (Oq = oq.CleanUrl(qq), Oq = oq.PreprocessUrl(Oq));
+        const Nq = Eq => {
+          if (gq) {
+            const Yq = Oq || qq.toString();
+            gq(`Error while trying to load image: ${0===Yq.indexOf("http")||Yq.length<=128?Yq:Yq.slice(0,128)+"..."}`, Eq)
           }
         };
-        if (AT?._features.forceBitmapOverHTMLImageElement) return PT(KT, (lT => {
-          AT.createImageBitmap(new Blob([lT], {
-            type: yT
+        if (Bq?._features.forceBitmapOverHTMLImageElement) return rq(Oq, (Yq => {
+          Bq.createImageBitmap(new Blob([Yq], {
+            type: xq
           }), {
             premultiplyAlpha: "none",
             colorSpaceConversion: "none",
-            ...IT
-          }).then((TT => {
-            kT(TT), CT && URL.revokeObjectURL(KT)
-          })).catch((kT => {
-            cT && cT("Error while trying to load image: " + TT, kT)
+            ...uq
+          }).then((qq => {
+            Eq(qq), Wq && URL.revokeObjectURL(Oq)
+          })).catch((Eq => {
+            gq && gq("Error while trying to load image: " + qq, Eq)
           }))
-        }), void 0, MT || void 0, !0, ((TT, kT) => {
-          jT(kT)
+        }), void 0, lq || void 0, !0, ((qq, Eq) => {
+          Nq(Eq)
         })), null;
-        const tT = new Image;
-        if (aT.getRequiredSize) {
-          const kT = aT.getRequiredSize(TT);
-          kT.width && (tT.width = kT.width), kT.height && (tT.height = kT.height)
+        const Vq = new Image;
+        if (Qq.getRequiredSize) {
+          const Eq = Qq.getRequiredSize(qq);
+          Eq.width && (Vq.width = Eq.width), Eq.height && (Vq.height = Eq.height)
         }
-        DT(KT, tT);
-        const hT = [],
-          NT = () => {
-            for (const TT of hT) TT.target.removeEventListener(TT.name, TT.handler);
-            hT.length = 0
+        Pq(Oq, Vq);
+        const dq = [],
+          jq = () => {
+            for (const qq of dq) qq.target.removeEventListener(qq.name, qq.handler);
+            dq.length = 0
           };
-        hT.push({
-          target: tT,
+        dq.push({
+          target: Vq,
           name: "load",
           handler: () => {
-            NT(), kT(tT), CT && tT.src && URL.revokeObjectURL(tT.src)
+            jq(), Eq(Vq), Wq && Vq.src && URL.revokeObjectURL(Vq.src)
           }
-        }), hT.push({
-          target: tT,
+        }), dq.push({
+          target: Vq,
           name: "error",
-          handler: TT => {
-            NT(), jT(TT), CT && tT.src && URL.revokeObjectURL(tT.src)
+          handler: qq => {
+            jq(), Nq(qq), Wq && Vq.src && URL.revokeObjectURL(Vq.src)
           }
-        }), hT.push({
+        }), dq.push({
           target: document,
           name: "securitypolicyviolation",
-          handler: TT => {
-            if (TT.blockedURI !== tT.src || "Yj" === TT.disposition) return;
-            NT();
-            const kT = new Error(`CSP violation of policy ${TT.effectiveDirective} ${TT.blockedURI}. Current policy is ${TT.originalPolicy}`);
-            xT.d.UseFallbackTexture = !1, jT(kT), CT && tT.src && URL.revokeObjectURL(tT.src), tT.src = ""
+          handler: qq => {
+            if (qq.blockedURI !== Vq.src || "SN" === qq.disposition) return;
+            jq();
+            const Eq = new Error(`CSP violation of policy ${qq.effectiveDirective} ${qq.blockedURI}. Current policy is ${qq.originalPolicy}`);
+            cq.b.UseFallbackTexture = !1, Nq(Eq), Wq && Vq.src && URL.revokeObjectURL(Vq.src), Vq.src = ""
           }
         }), (() => {
-          for (const TT of hT) TT.target.addEventListener(TT.name, TT.handler)
+          for (const qq of dq) qq.target.addEventListener(qq.name, qq.handler)
         })();
-        const QT = "blob:" === KT.substring(0, 5),
-          FT = "data:" === KT.substring(0, 5),
-          rT = () => {
-            QT || FT || !lT.b.IsCustomRequestAvailable ? tT.src = KT : PT(KT, ((TT, kT, cT) => {
-              const lT = new Blob([TT], {
-                  type: !yT && cT ? cT : yT
+        const Hq = "blob:" === Oq.substring(0, 5),
+          yq = "data:" === Oq.substring(0, 5),
+          tq = () => {
+            Hq || yq || !Yq.e.IsCustomRequestAvailable ? Vq.src = Oq : rq(Oq, ((qq, Eq, gq) => {
+              const Yq = new Blob([qq], {
+                  type: !xq && gq ? gq : xq
                 }),
-                MT = URL.createObjectURL(lT);
-              CT = !0, tT.src = MT
-            }), void 0, MT || void 0, !0, ((TT, kT) => {
-              jT(kT)
+                lq = URL.createObjectURL(Yq);
+              Wq = !0, Vq.src = lq
+            }), void 0, lq || void 0, !0, ((qq, Eq) => {
+              Nq(Eq)
             }))
           },
-          wT = () => {
-            MT && MT.loadImage(KT, tT)
+          vq = () => {
+            lq && lq.loadImage(Oq, Vq)
           };
-        if (!QT && !FT && MT && MT.enableTexturesOffline) MT.open(wT, rT);
+        if (!Hq && !yq && lq && lq.enableTexturesOffline) lq.open(vq, tq);
         else {
-          if (-1 !== KT.indexOf("file:")) {
-            const TT = decodeURIComponent(KT.substring(5).toLowerCase());
-            if (OT.FilesToLoad[TT] && "undefined" !== typeof URL) {
+          if (-1 !== Oq.indexOf("file:")) {
+            const qq = decodeURIComponent(Oq.substring(5).toLowerCase());
+            if (mq.FilesToLoad[qq] && "undefined" !== typeof URL) {
               try {
-                let kT;
+                let Eq;
                 try {
-                  kT = URL.createObjectURL(OT.FilesToLoad[TT])
-                } catch (mT) {
-                  kT = URL.createObjectURL(OT.FilesToLoad[TT])
+                  Eq = URL.createObjectURL(mq.FilesToLoad[qq])
+                } catch (hq) {
+                  Eq = URL.createObjectURL(mq.FilesToLoad[qq])
                 }
-                tT.src = kT, CT = !0
-              } catch (bT) {
-                tT.src = ""
+                Vq.src = Eq, Wq = !0
+              } catch (nq) {
+                Vq.src = ""
               }
-              return tT
+              return Vq
             }
           }
-          rT()
+          tq()
         }
-        return tT
+        return Vq
       },
-      rT = (TT, kT, cT, lT, MT) => {
-        const OT = new FileReader,
-          yT = {
-            onCompleteObservable: new KT.b,
-            abort: () => OT.abort()
+      tq = (qq, Eq, gq, Yq, lq) => {
+        const mq = new FileReader,
+          xq = {
+            onCompleteObservable: new Oq.d,
+            abort: () => mq.abort()
           };
-        return OT.onloadend = () => yT.onCompleteObservable.notifyObservers(yT), MT && (OT.onerror = () => {
-          MT(new QT(`Unable to read ${TT.name}`, TT))
-        }), OT.onload = TT => {
-          kT(TT.target.result)
-        }, cT && (OT.onprogress = cT), lT ? OT.readAsArrayBuffer(TT) : OT.readAsText(TT), yT
+        return mq.onloadend = () => xq.onCompleteObservable.notifyObservers(xq), lq && (mq.onerror = () => {
+          lq(new Hq(`Unable to read ${qq.name}`, qq))
+        }), mq.onload = qq => {
+          Eq(qq.target.result)
+        }, gq && (mq.onprogress = gq), Yq ? mq.readAsArrayBuffer(qq) : mq.readAsText(qq), xq
       },
-      PT = (TT, kT, cT, lT, MT, fT, xT) => {
-        if (TT.name) return rT(TT, kT, cT, MT, fT ? TT => {
-          fT(void 0, TT)
+      rq = (qq, Eq, gq, Yq, lq, Aq, cq) => {
+        if (qq.name) return tq(qq, Eq, gq, lq, Aq ? qq => {
+          Aq(void 0, qq)
         } : void 0);
-        const IT = TT;
-        if (-1 !== IT.indexOf("file:")) {
-          let TT = decodeURIComponent(IT.substring(5).toLowerCase());
-          0 === TT.indexOf("./") && (TT = TT.substring(2));
-          const lT = OT.FilesToLoad[TT];
-          if (lT) return rT(lT, kT, cT, MT, fT ? TT => fT(void 0, new hT(TT.message, TT.file)) : void 0)
+        const uq = qq;
+        if (-1 !== uq.indexOf("file:")) {
+          let qq = decodeURIComponent(uq.substring(5).toLowerCase());
+          0 === qq.indexOf("./") && (qq = qq.substring(2));
+          const Yq = mq.FilesToLoad[qq];
+          if (Yq) return tq(Yq, Eq, gq, lq, Aq ? qq => Aq(void 0, new dq(qq.message, qq.file)) : void 0)
         }
         const {
-          match: AT,
-          type: vT
-        } = JT(IT);
-        if (AT) {
-          const TT = {
-            onCompleteObservable: new KT.b,
+          match: Bq,
+          type: aq
+        } = iq(uq);
+        if (Bq) {
+          const qq = {
+            onCompleteObservable: new Oq.d,
             abort: () => () => {}
           };
           try {
-            const TT = MT ? oT(IT) : HT(IT);
-            kT(TT, void 0, vT)
-          } catch (yT) {
-            fT ? fT(void 0, yT) : CT.e.Error(yT.message || "Failed to parse the Data URL")
+            const qq = lq ? Zq(uq) : fq(uq);
+            Eq(qq, void 0, aq)
+          } catch (xq) {
+            Aq ? Aq(void 0, xq) : Wq.b.Error(xq.message || "Failed to parse the Data URL")
           }
-          return jT.e.SetImmediate((() => {
-            TT.onCompleteObservable.notifyObservers(TT)
-          })), TT
+          return Nq.c.SetImmediate((() => {
+            qq.onCompleteObservable.notifyObservers(qq)
+          })), qq
         }
-        return wT(IT, ((TT, cT) => {
-          kT(TT, cT?.responseURL, cT?.getResponseHeader("content-type"))
-        }), cT, lT, MT, fT ? TT => {
-          fT(TT.request, new hT(TT.message, TT.request))
-        } : void 0, xT)
+        return vq(uq, ((qq, gq) => {
+          Eq(qq, gq?.responseURL, gq?.getResponseHeader("content-type"))
+        }), gq, Yq, lq, Aq ? qq => {
+          Aq(qq.request, new dq(qq.message, qq.request))
+        } : void 0, cq)
       },
-      wT = (TT, kT, cT, OT, yT, fT, IT) => {
-        null !== OT && (OT ?? (OT = xT.d.LastCreatedScene?.offlineProvider)), TT = ST.CleanUrl(TT), TT = ST.PreprocessUrl(TT);
-        const AT = ST.BaseUrl + TT;
-        let jT = !1;
-        const vT = {
-            onCompleteObservable: new KT.b,
-            abort: () => jT = !0
+      vq = (qq, Eq, gq, mq, xq, Aq, uq) => {
+        null !== mq && (mq ?? (mq = cq.b.LastCreatedScene?.offlineProvider)), qq = oq.CleanUrl(qq), qq = oq.PreprocessUrl(qq);
+        const Bq = oq.BaseUrl + qq;
+        let Nq = !1;
+        const aq = {
+            onCompleteObservable: new Oq.d,
+            abort: () => Nq = !0
           },
-          tT = () => {
-            let TT, KT = new lT.b,
-              OT = null;
-            const xT = () => {
-              KT && (cT && KT.removeEventListener("progress", cT), TT && KT.removeEventListener("readystatechange", TT), KT.removeEventListener("loadend", tT))
+          Vq = () => {
+            let qq, Oq = new Yq.e,
+              mq = null;
+            const cq = () => {
+              Oq && (gq && Oq.removeEventListener("progress", gq), qq && Oq.removeEventListener("readystatechange", qq), Oq.removeEventListener("loadend", Vq))
             };
-            let tT = () => {
-              xT(), vT.onCompleteObservable.notifyObservers(vT), vT.onCompleteObservable.clear(), cT = void 0, TT = null, tT = null, fT = void 0, IT = void 0, kT = void 0
+            let Vq = () => {
+              cq(), aq.onCompleteObservable.notifyObservers(aq), aq.onCompleteObservable.clear(), gq = void 0, qq = null, Vq = null, Aq = void 0, uq = void 0, Eq = void 0
             };
-            vT.abort = () => {
-              jT = !0, tT && tT(), KT && KT.readyState !== (XMLHttpRequest.DONE || 4) && KT.abort(), null !== OT && (clearTimeout(OT), OT = null), KT = null
+            aq.abort = () => {
+              Nq = !0, Vq && Vq(), Oq && Oq.readyState !== (XMLHttpRequest.DONE || 4) && Oq.abort(), null !== mq && (clearTimeout(mq), mq = null), Oq = null
             };
-            const hT = TT => {
-                const kT = TT.message || "Unknown error";
-                fT && KT ? fT(new NT(kT, KT)) : CT.e.Error(kT)
+            const dq = qq => {
+                const Eq = qq.message || "Unknown error";
+                Aq && Oq ? Aq(new jq(Eq, Oq)) : Wq.b.Error(Eq)
               },
-              QT = CT => {
-                if (KT) {
-                  if (KT.open("GET", AT), IT) try {
-                    IT(KT)
-                  } catch (vT) {
-                    return void hT(vT)
+              Hq = Wq => {
+                if (Oq) {
+                  if (Oq.open("GET", Bq), uq) try {
+                    uq(Oq)
+                  } catch (aq) {
+                    return void dq(aq)
                   }
-                  yT && (KT.responseType = "arraybuffer"), cT && KT.addEventListener("progress", cT), tT && KT.addEventListener("loadend", tT), TT = () => {
-                    if (!jT && KT && KT.readyState === (XMLHttpRequest.DONE || 4)) {
-                      if (TT && KT.removeEventListener("readystatechange", TT), KT.status >= 200 && KT.status < 300 || 0 === KT.status && (!(0, MT.i)() || bT())) {
-                        const TT = yT ? KT.response : KT.responseText;
-                        if (null !== TT) {
+                  xq && (Oq.responseType = "arraybuffer"), gq && Oq.addEventListener("progress", gq), Vq && Oq.addEventListener("loadend", Vq), qq = () => {
+                    if (!Nq && Oq && Oq.readyState === (XMLHttpRequest.DONE || 4)) {
+                      if (qq && Oq.removeEventListener("readystatechange", qq), Oq.status >= 200 && Oq.status < 300 || 0 === Oq.status && (!(0, lq.n)() || nq())) {
+                        const qq = xq ? Oq.response : Oq.responseText;
+                        if (null !== qq) {
                           try {
-                            kT && kT(TT, KT)
-                          } catch (vT) {
-                            hT(vT)
+                            Eq && Eq(qq, Oq)
+                          } catch (aq) {
+                            dq(aq)
                           }
                           return
                         }
                       }
-                      const cT = ST.DefaultRetryStrategy;
-                      if (cT) {
-                        const TT = cT(AT, KT, CT);
-                        if (-1 !== TT) return xT(), KT = new lT.b, void(OT = setTimeout((() => QT(CT + 1)), TT))
+                      const gq = oq.DefaultRetryStrategy;
+                      if (gq) {
+                        const qq = gq(Bq, Oq, Wq);
+                        if (-1 !== qq) return cq(), Oq = new Yq.e, void(mq = setTimeout((() => Hq(Wq + 1)), qq))
                       }
-                      const IT = new NT("Error status: " + KT.status + " " + KT.statusText + " - Unable to load " + AT, KT);
-                      fT && fT(IT)
+                      const uq = new jq("Error status: " + Oq.status + " " + Oq.statusText + " - Unable to load " + Bq, Oq);
+                      Aq && Aq(uq)
                     }
-                  }, KT.addEventListener("readystatechange", TT), KT.send()
+                  }, Oq.addEventListener("readystatechange", qq), Oq.send()
                 }
               };
-            QT(0)
+            Hq(0)
           };
-        if (OT && OT.enableSceneOffline && !TT.startsWith("blob:")) {
-          const lT = TT => {
-              TT && TT.status > 400 ? fT && fT(TT) : tT()
+        if (mq && mq.enableSceneOffline && !qq.startsWith("blob:")) {
+          const Yq = qq => {
+              qq && qq.status > 400 ? Aq && Aq(qq) : Vq()
             },
-            MT = () => {
-              OT && OT.loadFile(ST.BaseUrl + TT, (TT => {
-                !jT && kT && kT(TT), vT.onCompleteObservable.notifyObservers(vT)
-              }), cT ? TT => {
-                !jT && cT && cT(TT)
-              } : void 0, lT, yT)
+            lq = () => {
+              mq && mq.loadFile(oq.BaseUrl + qq, (qq => {
+                !Nq && Eq && Eq(qq), aq.onCompleteObservable.notifyObservers(aq)
+              }), gq ? qq => {
+                !Nq && gq && gq(qq)
+              } : void 0, Yq, xq)
             };
-          OT.open(MT, lT)
-        } else tT();
-        return vT
+          mq.open(lq, Yq)
+        } else Vq();
+        return aq
       },
-      mT = TT => {
+      hq = qq => {
         const {
-          match: kT,
-          type: cT
-        } = JT(TT);
-        if (kT) return cT || void 0;
-        const lT = TT.lastIndexOf(".");
-        switch (TT.substring(lT + 1).toLowerCase()) {
+          match: Eq,
+          type: gq
+        } = iq(qq);
+        if (Eq) return gq || void 0;
+        const Yq = qq.lastIndexOf(".");
+        switch (qq.substring(Yq + 1).toLowerCase()) {
           case "glb":
             return "model/gltf-binary";
           case "bin":
             return "application/octet-stream";
-          case "KJ":
+          case "QJ":
             return "model/gltf+json";
           case "jpg":
           case "jpeg":
@@ -1168,275 +1168,275 @@ export const modules = {
             return
         }
       },
-      bT = () => "undefined" !== typeof location && "file:" === location.protocol,
-      zT = TT => tT.test(TT),
-      JT = TT => {
-        const kT = tT.exec(TT);
-        if (null === kT || 0 === kT.length) return {
+      nq = () => "undefined" !== typeof location && "file:" === location.protocol,
+      bq = qq => Vq.test(qq),
+      iq = qq => {
+        const Eq = Vq.exec(qq);
+        if (null === Eq || 0 === Eq.length) return {
           match: !1,
           type: ""
         };
         return {
           match: !0,
-          type: kT[0].replace("data:", "").replace(";base64,", "")
+          type: Eq[0].replace("data:", "").replace(";base64,", "")
         }
       };
 
-    function oT(TT) {
-      return (0, fT.e)(TT.split(",")[1])
+    function Zq(qq) {
+      return (0, Aq.b)(qq.split(",")[1])
     }
-    const HT = TT => (0, fT.i)(TT.split(",")[1]);
-    let eT;
-    const GT = (TT, kT, cT, lT, MT, KT, OT, yT, fT, xT) => {
-      eT = {
-        DecodeBase64UrlToBinary: TT,
-        DecodeBase64UrlToString: kT,
-        DefaultRetryStrategy: cT.DefaultRetryStrategy,
-        BaseUrl: cT.BaseUrl,
-        CorsBehavior: cT.CorsBehavior,
-        PreprocessUrl: cT.PreprocessUrl,
-        IsBase64DataUrl: lT,
-        IsFileURL: MT,
-        LoadFile: KT,
-        LoadImage: OT,
-        ReadFile: yT,
-        RequestFile: fT,
-        SetCorsBehavior: xT
-      }, Object.defineProperty(eT, "DefaultRetryStrategy", {
+    const fq = qq => (0, Aq.d)(qq.split(",")[1]);
+    let Mq;
+    const Tq = (qq, Eq, gq, Yq, lq, Oq, mq, xq, Aq, cq) => {
+      Mq = {
+        DecodeBase64UrlToBinary: qq,
+        DecodeBase64UrlToString: Eq,
+        DefaultRetryStrategy: gq.DefaultRetryStrategy,
+        BaseUrl: gq.BaseUrl,
+        CorsBehavior: gq.CorsBehavior,
+        PreprocessUrl: gq.PreprocessUrl,
+        IsBase64DataUrl: Yq,
+        IsFileURL: lq,
+        LoadFile: Oq,
+        LoadImage: mq,
+        ReadFile: xq,
+        RequestFile: Aq,
+        SetCorsBehavior: cq
+      }, Object.defineProperty(Mq, "DefaultRetryStrategy", {
         get: function() {
-          return cT.DefaultRetryStrategy
+          return gq.DefaultRetryStrategy
         },
-        set: function(TT) {
-          cT.DefaultRetryStrategy = TT
+        set: function(qq) {
+          gq.DefaultRetryStrategy = qq
         }
-      }), Object.defineProperty(eT, "BaseUrl", {
+      }), Object.defineProperty(Mq, "BaseUrl", {
         get: function() {
-          return cT.BaseUrl
+          return gq.BaseUrl
         },
-        set: function(TT) {
-          cT.BaseUrl = TT
+        set: function(qq) {
+          gq.BaseUrl = qq
         }
-      }), Object.defineProperty(eT, "PreprocessUrl", {
+      }), Object.defineProperty(Mq, "PreprocessUrl", {
         get: function() {
-          return cT.PreprocessUrl
+          return gq.PreprocessUrl
         },
-        set: function(TT) {
-          cT.PreprocessUrl = TT
+        set: function(qq) {
+          gq.PreprocessUrl = qq
         }
-      }), Object.defineProperty(eT, "CorsBehavior", {
+      }), Object.defineProperty(Mq, "CorsBehavior", {
         get: function() {
-          return cT.CorsBehavior
+          return gq.CorsBehavior
         },
-        set: function(TT) {
-          cT.CorsBehavior = TT
+        set: function(qq) {
+          gq.CorsBehavior = qq
         }
       })
     };
-    let VT = !1;
+    let zq = !1;
 
-    function ET() {
-      VT || (VT = !0, GT(oT, HT, ST, zT, bT, PT, FT, rT, wT, DT), IT.e.loadFile = PT, IT.e.loadImage = FT, AT.o.loadFile = PT)
+    function Sq() {
+      zq || (zq = !0, Tq(Zq, fq, oq, bq, nq, rq, yq, tq, vq, Pq), uq.e.loadFile = rq, uq.e.loadImage = yq, Bq.n.loadFile = rq)
     }
   },
-  39694: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => yT,
-      f: () => KT,
-      i: () => OT
+  39819: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => xq,
+      f: () => Oq,
+      j: () => mq
     });
-    let lT = null;
+    let Yq = null;
 
-    function MT() {
-      if (lT) return lT;
-      const TT = new ArrayBuffer(4),
-        kT = new Float32Array(TT),
-        cT = new Uint32Array(TT),
-        MT = new Uint32Array(512),
-        KT = new Uint32Array(512);
-      for (let lT = 0; lT < 256; ++lT) {
-        const TT = lT - 127;
-        TT < -24 ? (MT[lT] = 0, MT[256 | lT] = 32768, KT[lT] = 24, KT[256 | lT] = 24) : TT < -14 ? (MT[lT] = 1024 >> -TT - 14, MT[256 | lT] = 1024 >> -TT - 14 | 32768, KT[lT] = -TT - 1, KT[256 | lT] = -TT - 1) : TT <= 15 ? (MT[lT] = TT + 15 << 10, MT[256 | lT] = TT + 15 << 10 | 32768, KT[lT] = 13, KT[256 | lT] = 13) : TT < 128 ? (MT[lT] = 31744, MT[256 | lT] = 64512, KT[lT] = 24, KT[256 | lT] = 24) : (MT[lT] = 31744, MT[256 | lT] = 64512, KT[lT] = 13, KT[256 | lT] = 13)
+    function lq() {
+      if (Yq) return Yq;
+      const qq = new ArrayBuffer(4),
+        Eq = new Float32Array(qq),
+        gq = new Uint32Array(qq),
+        lq = new Uint32Array(512),
+        Oq = new Uint32Array(512);
+      for (let Yq = 0; Yq < 256; ++Yq) {
+        const qq = Yq - 127;
+        qq < -24 ? (lq[Yq] = 0, lq[256 | Yq] = 32768, Oq[Yq] = 24, Oq[256 | Yq] = 24) : qq < -14 ? (lq[Yq] = 1024 >> -qq - 14, lq[256 | Yq] = 1024 >> -qq - 14 | 32768, Oq[Yq] = -qq - 1, Oq[256 | Yq] = -qq - 1) : qq <= 15 ? (lq[Yq] = qq + 15 << 10, lq[256 | Yq] = qq + 15 << 10 | 32768, Oq[Yq] = 13, Oq[256 | Yq] = 13) : qq < 128 ? (lq[Yq] = 31744, lq[256 | Yq] = 64512, Oq[Yq] = 24, Oq[256 | Yq] = 24) : (lq[Yq] = 31744, lq[256 | Yq] = 64512, Oq[Yq] = 13, Oq[256 | Yq] = 13)
       }
-      const OT = new Uint32Array(2048),
-        yT = new Uint32Array(64),
-        fT = new Uint32Array(64);
-      for (let lT = 1; lT < 1024; ++lT) {
-        let TT = lT << 13,
-          kT = 0;
-        for (; 0 === (8388608 & TT);) TT <<= 1, kT -= 8388608;
-        TT &= -8388609, kT += 947912704, OT[lT] = TT | kT
+      const mq = new Uint32Array(2048),
+        xq = new Uint32Array(64),
+        Aq = new Uint32Array(64);
+      for (let Yq = 1; Yq < 1024; ++Yq) {
+        let qq = Yq << 13,
+          Eq = 0;
+        for (; 0 === (8388608 & qq);) qq <<= 1, Eq -= 8388608;
+        qq &= -8388609, Eq += 947912704, mq[Yq] = qq | Eq
       }
-      for (let lT = 1024; lT < 2048; ++lT) OT[lT] = 939524096 + (lT - 1024 << 13);
-      for (let lT = 1; lT < 31; ++lT) yT[lT] = lT << 23;
-      yT[31] = 1199570944, yT[32] = 2147483648;
-      for (let lT = 33; lT < 63; ++lT) yT[lT] = 2147483648 + (lT - 32 << 23);
-      yT[63] = 3347054592;
-      for (let lT = 1; lT < 64; ++lT) 32 !== lT && (fT[lT] = 1024);
-      return lT = {
-        floatView: kT,
-        uint32View: cT,
-        baseTable: MT,
-        shiftTable: KT,
-        mantissaTable: OT,
-        exponentTable: yT,
-        offsetTable: fT
-      }, lT
+      for (let Yq = 1024; Yq < 2048; ++Yq) mq[Yq] = 939524096 + (Yq - 1024 << 13);
+      for (let Yq = 1; Yq < 31; ++Yq) xq[Yq] = Yq << 23;
+      xq[31] = 1199570944, xq[32] = 2147483648;
+      for (let Yq = 33; Yq < 63; ++Yq) xq[Yq] = 2147483648 + (Yq - 32 << 23);
+      xq[63] = 3347054592;
+      for (let Yq = 1; Yq < 64; ++Yq) 32 !== Yq && (Aq[Yq] = 1024);
+      return Yq = {
+        floatView: Eq,
+        uint32View: gq,
+        baseTable: lq,
+        shiftTable: Oq,
+        mantissaTable: mq,
+        exponentTable: xq,
+        offsetTable: Aq
+      }, Yq
     }
-    const KT = 65504;
+    const Oq = 65504;
 
-    function OT(TT) {
-      const kT = MT();
-      kT.floatView[0] = TT;
-      const cT = kT.uint32View[0],
-        lT = cT >> 23 & 511;
-      return kT.baseTable[lT] + ((8388607 & cT) >> kT.shiftTable[lT])
+    function mq(qq) {
+      const Eq = lq();
+      Eq.floatView[0] = qq;
+      const gq = Eq.uint32View[0],
+        Yq = gq >> 23 & 511;
+      return Eq.baseTable[Yq] + ((8388607 & gq) >> Eq.shiftTable[Yq])
     }
 
-    function yT(TT) {
-      const kT = MT();
-      return kT.uint32View[0] = kT.mantissaTable[kT.offsetTable[TT >> 10] + (1023 & TT)] + kT.exponentTable[TT >> 10], kT.floatView[0]
+    function xq(qq) {
+      const Eq = lq();
+      return Eq.uint32View[0] = Eq.mantissaTable[Eq.offsetTable[qq >> 10] + (1023 & qq)] + Eq.exponentTable[qq >> 10], Eq.floatView[0]
     }
   },
-  39687: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => KT,
-      i: () => MT,
-      k: () => lT
+  39810: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      b: () => Oq,
+      d: () => lq,
+      f: () => Yq
     });
-    const lT = TT => {
-        const kT = ArrayBuffer.isView(TT) ? new Uint8Array(TT.buffer, TT.byteOffset, TT.byteLength) : new Uint8Array(TT);
-        return "function" === typeof kT.toBase64 ? kT.toBase64() : function(TT) {
-          const kT = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
-          let cT, lT, MT, KT, OT, yT, fT, xT = "",
-            IT = 0;
-          for (; IT < TT.length;) cT = TT[IT++], lT = IT < TT.length ? TT[IT++] : Number.NaN, MT = IT < TT.length ? TT[IT++] : Number.NaN, KT = cT >> 2, OT = (3 & cT) << 4 | lT >> 4, yT = (15 & lT) << 2 | MT >> 6, fT = 63 & MT, isNaN(lT) ? yT = fT = 64 : isNaN(MT) && (fT = 64), xT += kT.charAt(KT) + kT.charAt(OT) + kT.charAt(yT) + kT.charAt(fT);
-          return xT
-        }(kT)
+    const Yq = qq => {
+        const Eq = ArrayBuffer.isView(qq) ? new Uint8Array(qq.buffer, qq.byteOffset, qq.byteLength) : new Uint8Array(qq);
+        return "function" === typeof Eq.toBase64 ? Eq.toBase64() : function(qq) {
+          const Eq = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+          let gq, Yq, lq, Oq, mq, xq, Aq, cq = "",
+            uq = 0;
+          for (; uq < qq.length;) gq = qq[uq++], Yq = uq < qq.length ? qq[uq++] : Number.NaN, lq = uq < qq.length ? qq[uq++] : Number.NaN, Oq = gq >> 2, mq = (3 & gq) << 4 | Yq >> 4, xq = (15 & Yq) << 2 | lq >> 6, Aq = 63 & lq, isNaN(Yq) ? xq = Aq = 64 : isNaN(lq) && (Aq = 64), cq += Eq.charAt(Oq) + Eq.charAt(mq) + Eq.charAt(xq) + Eq.charAt(Aq);
+          return cq
+        }(Eq)
       },
-      MT = TT => atob(TT),
-      KT = TT => "function" === typeof Uint8Array.fromBase64 ? Uint8Array.fromBase64(TT).buffer : function(TT) {
-        const kT = MT(TT),
-          cT = kT.length,
-          lT = new Uint8Array(new ArrayBuffer(cT));
-        for (let MT = 0; MT < cT; MT++) lT[MT] = kT.charCodeAt(MT);
-        return lT.buffer
-      }(TT)
+      lq = qq => atob(qq),
+      Oq = qq => "function" === typeof Uint8Array.fromBase64 ? Uint8Array.fromBase64(qq).buffer : function(qq) {
+        const Eq = lq(qq),
+          gq = Eq.length,
+          Yq = new Uint8Array(new ArrayBuffer(gq));
+        for (let lq = 0; lq < gq; lq++) Yq[lq] = Eq.charCodeAt(lq);
+        return Yq.buffer
+      }(qq)
   },
-  39514: (TT, kT, cT) => {
-    cT.d(kT, {
-      e: () => MT,
-      g: () => OT
+  39644: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      c: () => lq,
+      e: () => mq
     });
-    let lT = [];
-    class MT {
-      static SetImmediate(TT) {
-        0 === lT.length && setTimeout((() => {
-          const TT = lT;
-          lT = [];
-          for (const kT of TT) kT()
-        }), 1), lT.push(TT)
+    let Yq = [];
+    class lq {
+      static SetImmediate(qq) {
+        0 === Yq.length && setTimeout((() => {
+          const qq = Yq;
+          Yq = [];
+          for (const Eq of qq) Eq()
+        }), 1), Yq.push(qq)
       }
     }
 
-    function KT(TT, kT, cT) {
+    function Oq(qq, Eq, gq) {
       try {
-        if (TT()) return kT(), !0
-      } catch (lT) {
-        return cT?.(lT), !0
+        if (qq()) return Eq(), !0
+      } catch (Yq) {
+        return gq?.(Yq), !0
       }
       return !1
     }
-    const OT = function(TT, kT, cT) {
-      let lT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 16,
-        MT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3e4,
-        OT = arguments.length > 6 ? arguments[6] : void 0;
-      if ((!(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5]) && KT(TT, kT, cT)) return null;
-      const yT = setInterval((() => {
-        KT(TT, kT, cT) ? clearInterval(yT) : (MT -= lT, MT < 0 && (clearInterval(yT), cT?.(new Error("Operation timed out after maximum retries. " + (OT || "")), !0)))
-      }), lT);
-      return () => clearInterval(yT)
+    const mq = function(qq, Eq, gq) {
+      let Yq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 16,
+        lq = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3e4,
+        mq = arguments.length > 6 ? arguments[6] : void 0;
+      if ((!(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5]) && Oq(qq, Eq, gq)) return null;
+      const xq = setInterval((() => {
+        Oq(qq, Eq, gq) ? clearInterval(xq) : (lq -= Yq, lq < 0 && (clearInterval(xq), gq?.(new Error("Operation timed out after maximum retries. " + (mq || "")), !0)))
+      }), Yq);
+      return () => clearInterval(xq)
     }
   },
-  39675: (TT, kT, cT) => {
-    cT.d(kT, {
-      b: () => lT
+  39801: (qq, Eq, gq) => {
+    gq.d(Eq, {
+      e: () => Yq
     });
-    class lT {
+    class Yq {
       constructor() {
         this._xhr = "undefined" !== typeof _native && _native.XMLHttpRequest ? new _native.XMLHttpRequest : new XMLHttpRequest, this._requestURL = ""
       }
       static get IsCustomRequestAvailable() {
-        return Object.keys(lT.CustomRequestHeaders).length > 0 || lT.CustomRequestModifiers.length > 0
+        return Object.keys(Yq.CustomRequestHeaders).length > 0 || Yq.CustomRequestModifiers.length > 0
       }
-      static _CleanUrl(TT) {
-        return TT = (TT = TT.replace("file:http:", "http:")).replace("file:https:", "https:")
+      static _CleanUrl(qq) {
+        return qq = (qq = qq.replace("file:http:", "http:")).replace("file:https:", "https:")
       }
-      static _ShouldSkipRequestModifications(TT) {
-        return lT.SkipRequestModificationForBabylonCDN && (TT.includes("preview.babylonjs.com") || TT.includes("cdn.babylonjs.com"))
+      static _ShouldSkipRequestModifications(qq) {
+        return Yq.SkipRequestModificationForBabylonCDN && (qq.includes("preview.babylonjs.com") || qq.includes("cdn.babylonjs.com"))
       }
-      static _CollectCustomizations(TT) {
-        const kT = {
+      static _CollectCustomizations(qq) {
+        const Eq = {
           ...arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}
         };
-        if (lT._ShouldSkipRequestModifications(TT)) return {
-          url: TT,
-          headers: kT
+        if (Yq._ShouldSkipRequestModifications(qq)) return {
+          url: qq,
+          headers: Eq
         };
-        for (const MT in lT.CustomRequestHeaders) {
-          const TT = lT.CustomRequestHeaders[MT];
-          TT && (kT[MT] = TT)
+        for (const lq in Yq.CustomRequestHeaders) {
+          const qq = Yq.CustomRequestHeaders[lq];
+          qq && (Eq[lq] = qq)
         }
-        const cT = {
-          setRequestHeader: (TT, cT) => {
-            kT[TT] = cT
+        const gq = {
+          setRequestHeader: (qq, gq) => {
+            Eq[qq] = gq
           }
         };
-        for (const MT of lT.CustomRequestModifiers) {
-          if (lT._ShouldSkipRequestModifications(TT)) break;
-          const kT = MT(cT, TT);
-          "string" === typeof kT && (TT = kT)
+        for (const lq of Yq.CustomRequestModifiers) {
+          if (Yq._ShouldSkipRequestModifications(qq)) break;
+          const Eq = lq(gq, qq);
+          "string" === typeof Eq && (qq = Eq)
         }
         return {
-          url: TT,
-          headers: kT
+          url: qq,
+          headers: Eq
         }
       }
-      static async FetchAsync(TT) {
-        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const cT = kT.method ?? "GET";
+      static async FetchAsync(qq) {
+        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const gq = Eq.method ?? "GET";
         if ("undefined" !== typeof fetch) {
           const {
-            url: MT,
-            headers: KT
-          } = lT._CollectCustomizations(lT._CleanUrl(TT), kT.headers ?? {});
-          return await fetch(MT, {
-            method: cT,
-            headers: KT,
-            body: kT.body ?? void 0
+            url: lq,
+            headers: Oq
+          } = Yq._CollectCustomizations(Yq._CleanUrl(qq), Eq.headers ?? {});
+          return await fetch(lq, {
+            method: gq,
+            headers: Oq,
+            body: Eq.body ?? void 0
           })
         }
-        return await new Promise(((MT, KT) => {
-          const OT = new lT;
-          OT.responseType = "arraybuffer", OT.addEventListener("readystatechange", (() => {
-            if (4 === OT.readyState)
-              if (OT.status >= 200 && OT.status < 300) {
-                const TT = "undefined" !== typeof Headers ? new Headers : void 0,
-                  kT = OT.getResponseHeader("Content-Type");
-                kT && TT && TT.set("Content-Type", kT), "undefined" !== typeof Response ? MT(new Response(OT.response, {
-                  status: OT.status,
-                  statusText: OT.statusText,
-                  headers: TT
-                })) : MT({
+        return await new Promise(((lq, Oq) => {
+          const mq = new Yq;
+          mq.responseType = "arraybuffer", mq.addEventListener("readystatechange", (() => {
+            if (4 === mq.readyState)
+              if (mq.status >= 200 && mq.status < 300) {
+                const qq = "undefined" !== typeof Headers ? new Headers : void 0,
+                  Eq = mq.getResponseHeader("Content-Type");
+                Eq && qq && qq.set("Content-Type", Eq), "undefined" !== typeof Response ? lq(new Response(mq.response, {
+                  status: mq.status,
+                  statusText: mq.statusText,
+                  headers: qq
+                })) : lq({
                   ok: !0,
-                  status: OT.status,
-                  statusText: OT.statusText,
+                  status: mq.status,
+                  statusText: mq.statusText,
                   headers: {
-                    get: TT => OT.getResponseHeader(TT)
+                    get: qq => mq.getResponseHeader(qq)
                   },
-                  arrayBuffer: async () => await Promise.resolve(OT.response)
+                  arrayBuffer: async () => await Promise.resolve(mq.response)
                 })
-              } else KT(new Error(`HTTP ${OT.status} loading '${OT.requestURL}': ${OT.statusText}`))
-          })), OT.open(cT, TT, kT.headers), OT.send(kT.body ?? null)
+              } else Oq(new Error(`HTTP ${mq.status} loading '${mq.requestURL}': ${mq.statusText}`))
+          })), mq.open(gq, qq, Eq.headers), mq.send(Eq.body ?? null)
         }))
       }
       get requestURL() {
@@ -1445,8 +1445,8 @@ export const modules = {
       get onprogress() {
         return this._xhr.onprogress
       }
-      set onprogress(TT) {
-        this._xhr.onprogress = TT
+      set onprogress(qq) {
+        this._xhr.onprogress = qq
       }
       get readyState() {
         return this._xhr.readyState
@@ -1469,44 +1469,44 @@ export const modules = {
       get responseType() {
         return this._xhr.responseType
       }
-      set responseType(TT) {
-        this._xhr.responseType = TT
+      set responseType(qq) {
+        this._xhr.responseType = qq
       }
       get timeout() {
         return this._xhr.timeout
       }
-      set timeout(TT) {
-        this._xhr.timeout = TT
+      set timeout(qq) {
+        this._xhr.timeout = qq
       }
-      addEventListener(TT, kT, cT) {
-        this._xhr.addEventListener(TT, kT, cT)
+      addEventListener(qq, Eq, gq) {
+        this._xhr.addEventListener(qq, Eq, gq)
       }
-      removeEventListener(TT, kT, cT) {
-        this._xhr.removeEventListener(TT, kT, cT)
+      removeEventListener(qq, Eq, gq) {
+        this._xhr.removeEventListener(qq, Eq, gq)
       }
       abort() {
         this._xhr.abort()
       }
-      send(TT) {
-        this._xhr.send(TT)
+      send(qq) {
+        this._xhr.send(qq)
       }
-      open(TT, kT, cT) {
+      open(qq, Eq, gq) {
         const {
-          url: MT,
-          headers: KT
-        } = lT._CollectCustomizations(kT, cT);
-        this._requestURL = lT._CleanUrl(MT), this._xhr.open(TT, this._requestURL, !0);
-        for (const lT in KT) this._xhr.setRequestHeader(lT, KT[lT])
+          url: lq,
+          headers: Oq
+        } = Yq._CollectCustomizations(Eq, gq);
+        this._requestURL = Yq._CleanUrl(lq), this._xhr.open(qq, this._requestURL, !0);
+        for (const Yq in Oq) this._xhr.setRequestHeader(Yq, Oq[Yq])
       }
-      setRequestHeader(TT, kT) {
-        this._xhr.setRequestHeader(TT, kT)
+      setRequestHeader(qq, Eq) {
+        this._xhr.setRequestHeader(qq, Eq)
       }
-      getResponseHeader(TT) {
-        return this._xhr.getResponseHeader(TT)
+      getResponseHeader(qq) {
+        return this._xhr.getResponseHeader(qq)
       }
     }
-    lT.CustomRequestHeaders = {}, lT.CustomRequestModifiers = new Array, lT.SkipRequestModificationForBabylonCDN = !0
+    Yq.CustomRequestHeaders = {}, Yq.CustomRequestModifiers = new Array, Yq.SkipRequestModificationForBabylonCDN = !0
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const qq in modules) Object.freeze(modules[qq]);
