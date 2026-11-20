@@ -1,345 +1,345 @@
 export const id = 25;
 export const ids = [25];
 export const modules = {
-  36235: (bb, cb, sb) => {
-    sb.d(cb, {
-      d: () => nb,
-      e: () => mb,
-      i: () => Xb,
-      j: () => Mb
+  36013: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      b: () => Xb,
+      e: () => jb,
+      h: () => Pb,
+      k: () => Lb
     });
-    var kb = sb(8917),
-      Wb = sb(36240),
-      ab = sb(36247),
-      Tb = sb(8330),
-      Ub = sb(1423),
-      Ib = sb(64),
-      Hb = sb(89),
-      fb = sb(1087);
+    var Ab = Ub(8906),
+      Mb = Ub(36017),
+      Tb = Ub(36023),
+      Eb = Ub(8280),
+      Yb = Ub(1345),
+      Bb = Ub(52),
+      eb = Ub(75),
+      vb = Ub(1023);
 
-    function Mb() {
+    function Lb() {
       var bb;
-      return (0, Ub.h)(Wb.c, (0, Wb.l)()), (0, fb.jsx)(fb.Fragment, {
-        children: null === (bb = (0, Wb.l)()) || void 0 === bb ? void 0 : bb.content
+      return (0, Yb.i)(Mb.c, (0, Mb.l)()), (0, vb.jsx)(vb.Fragment, {
+        children: null === (bb = (0, Mb.l)()) || void 0 === bb ? void 0 : bb.content
+      })
+    }
+
+    function Pb(bb) {
+      var ab;
+      let {
+        show: Ub
+      } = bb;
+      (0, Yb.i)(Mb.c, (0, Mb.l)());
+      const eb = null === (ab = (0, Mb.l)()) || void 0 === ab ? void 0 : ab.menu;
+      return (0, Bb.useEffect)((() => {
+        var bb;
+        Ub || (null === eb || void 0 === eb || null === (bb = eb.onClose) || void 0 === bb || bb.call(eb), (0, Tb.p)())
+      }), [Ub, eb]), (0, Bb.useEffect)((() => Ub ? (0, Eb.g)(Tb.v, Tb.i) : void 0), [Ub]), (0, vb.jsx)(Ab.d, {
+        showing: Ub,
+        globallyUniqueKey: "clientGameMenu",
+        children: null === eb || void 0 === eb ? void 0 : eb.content
       })
     }
 
     function Xb(bb) {
-      var cb;
       let {
-        show: sb
+        placement: ab = "bottom"
       } = bb;
-      (0, Ub.h)(Wb.c, (0, Wb.l)());
-      const Hb = null === (cb = (0, Wb.l)()) || void 0 === cb ? void 0 : cb.menu;
-      return (0, Ib.useEffect)((() => {
-        var bb;
-        sb || (null === Hb || void 0 === Hb || null === (bb = Hb.onClose) || void 0 === bb || bb.call(Hb), (0, ab.o)())
-      }), [sb, Hb]), (0, Ib.useEffect)((() => sb ? (0, Tb.e)(ab.v, ab.g) : void 0), [sb]), (0, fb.jsx)(kb.b, {
-        showing: sb,
-        globallyUniqueKey: "clientGameMenu",
-        children: null === Hb || void 0 === Hb ? void 0 : Hb.content
-      })
-    }
-
-    function nb(bb) {
-      let {
-        placement: cb = "bottom"
-      } = bb;
-      return (0, fb.jsx)("div", {
-        id: `clientGameHud-${cb}`,
+      return (0, vb.jsx)("div", {
+        id: `clientGameHud-${ab}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function mb(bb) {
+    function jb(bb) {
       let {
-        children: cb,
-        placement: sb = "bottom"
+        children: ab,
+        placement: Ub = "bottom"
       } = bb;
-      const [kb, Wb] = (0, Ib.useState)(null);
-      return (0, Ib.useEffect)((() => {
-        Wb(document.getElementById(`clientGameHud-${sb}`))
-      }), [sb]), kb ? (0, Hb.createPortal)(cb, kb) : null
+      const [Ab, Mb] = (0, Bb.useState)(null);
+      return (0, Bb.useEffect)((() => {
+        Mb(document.getElementById(`clientGameHud-${Ub}`))
+      }), [Ub]), Ab ? (0, eb.createPortal)(ab, Ab) : null
     }
   },
-  4553: (bb, cb, sb) => {
-    sb.d(cb, {
-      d: () => Qb,
-      e: () => eb
+  4516: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      c: () => kb,
+      f: () => yb
     });
-    var kb = sb(1033),
-      Wb = sb.n(kb),
-      ab = sb(64),
-      Tb = sb(1197),
-      Ub = sb(4556),
-      Ib = sb(1839),
-      Hb = sb(2337),
-      fb = sb(4561),
-      Mb = sb(1087);
-    const Xb = new WeakMap;
-    let nb = 0;
+    var Ab = Ub(984),
+      Mb = Ub.n(Ab),
+      Tb = Ub(52),
+      Eb = Ub(1134),
+      Yb = Ub(4522),
+      Bb = Ub(1794),
+      eb = Ub(2268),
+      vb = Ub(4531),
+      Lb = Ub(1023);
+    const Pb = new WeakMap;
+    let Xb = 0;
 
-    function mb(bb) {
-      let cb = Xb.get(bb);
-      return void 0 === cb && (cb = nb++, Xb.set(bb, cb)), cb
+    function jb(bb) {
+      let ab = Pb.get(bb);
+      return void 0 === ab && (ab = Xb++, Pb.set(bb, ab)), ab
     }
 
-    function lb(bb) {
+    function Rb(bb) {
       let {
-        piece: cb
+        piece: ab
       } = bb;
-      return "space" === cb.kind ? (0, Mb.jsx)(Mb.Fragment, {
-        children: cb.text
-      }) : (0, Mb.jsx)("span", {
+      return "space" === ab.kind ? (0, Lb.jsx)(Lb.Fragment, {
+        children: ab.text
+      }) : (0, Lb.jsx)("span", {
         className: "DialogueWord",
         style: {
-          "--word-delay": `${cb.delayMs}ms`
+          "--word-delay": `${ab.delayMs}ms`
         },
-        children: (0, Mb.jsx)(Ub.b, {
-          text: "icon" === cb.kind ? `[[${cb.icon}]]` : cb.text
+        children: (0, Lb.jsx)(Yb.c, {
+          text: "icon" === ab.kind ? `[[${ab.icon}]]` : ab.text
         })
       })
     }
 
-    function Qb(bb) {
+    function kb(bb) {
       let {
-        display: cb
+        display: ab
       } = bb;
       const {
-        selectedLanguage: sb
-      } = (0, Tb.E)(), kb = (0, ab.useMemo)((() => (0, fb.e)((0, fb.h)(cb).plan.pieces)), [cb, sb.code]);
-      return (0, Mb.jsxs)("div", {
-        className: Wb()("Dialogue", {
-          DialogueAnimateIn: !1 !== cb.animateIn
+        selectedLanguage: Ub
+      } = (0, Eb.A)(), Ab = (0, Tb.useMemo)((() => (0, vb.e)((0, vb.g)(ab).plan.pieces)), [ab, Ub.code]);
+      return (0, Lb.jsxs)("div", {
+        className: Mb()("Dialogue", {
+          DialogueAnimateIn: !1 !== ab.animateIn
         }),
-        children: [cb.speakerName && (0, Mb.jsx)(Ib.d, {
-          text: cb.speakerName,
+        children: [ab.speakerName && (0, Lb.jsx)(Bb.c, {
+          text: ab.speakerName,
           className: "DialogueSpeaker"
-        }), (0, Mb.jsx)("p", {
+        }), (0, Lb.jsx)("p", {
           className: "DialogueLine",
-          children: kb.map(((bb, cb) => 1 === bb.length && "space" === bb[0].kind ? bb[0].text : (0, Mb.jsx)("span", {
+          children: Ab.map(((bb, ab) => 1 === bb.length && "space" === bb[0].kind ? bb[0].text : (0, Lb.jsx)("span", {
             className: "DialogueGlue",
-            children: bb.map(((bb, cb) => (0, Mb.jsx)(lb, {
+            children: bb.map(((bb, ab) => (0, Lb.jsx)(Rb, {
               piece: bb
-            }, cb)))
-          }, cb)))
+            }, ab)))
+          }, ab)))
         })]
       })
     }
-    const eb = (0, ab.memo)((function() {
-      const bb = (0, Hb.d)("dialogue");
-      return (0, Mb.jsx)("div", {
+    const yb = (0, Tb.memo)((function() {
+      const bb = (0, eb.h)("dialogue");
+      return (0, Lb.jsx)("div", {
         className: "DialogueAnchor",
         "data-camera-keeper": "",
         role: "status",
         "aria-live": "polite",
         "aria-atomic": "true",
-        children: bb && (0, Mb.jsx)(Qb, {
+        children: bb && (0, Lb.jsx)(kb, {
           display: bb
-        }, mb(bb))
+        }, jb(bb))
       })
     }))
   },
-  4556: (bb, cb, sb) => {
-    sb.d(cb, {
-      b: () => Ub
+  4522: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      c: () => Yb
     });
-    var kb = sb(64),
-      Wb = sb(334),
-      ab = sb(1858),
-      Tb = sb(1087);
+    var Ab = Ub(52),
+      Mb = Ub(307),
+      Tb = Ub(1812),
+      Eb = Ub(1023);
 
-    function Ub(bb) {
+    function Yb(bb) {
       let {
-        text: cb
+        text: ab
       } = bb;
-      const sb = [];
-      let Ub = "";
-      return (0, Wb.ic)(cb).forEach(((bb, cb) => {
-        if ("string" === typeof bb || !(0, ab.e)(bb.icon)) return void(Ub += "string" === typeof bb ? bb : bb.icon);
-        const Wb = Math.max(0, Ub.trimEnd().search(/\S{1,12}$/));
-        sb.push((0, Tb.jsxs)(kb.Fragment, {
-          children: [Ub.slice(0, Wb), (0, Tb.jsxs)("span", {
+      const Ub = [];
+      let Yb = "";
+      return (0, Mb.cc)(ab).forEach(((bb, ab) => {
+        if ("string" === typeof bb || !(0, Tb.f)(bb.icon)) return void(Yb += "string" === typeof bb ? bb : bb.icon);
+        const Mb = Math.max(0, Yb.trimEnd().search(/\S{1,12}$/));
+        Ub.push((0, Eb.jsxs)(Ab.Fragment, {
+          children: [Yb.slice(0, Mb), (0, Eb.jsxs)("span", {
             className: "InlineIconTextGlue",
-            children: [Ub.slice(Wb), (0, Tb.jsx)("span", {
+            children: [Yb.slice(Mb), (0, Eb.jsx)("span", {
               className: "InlineIconTextIcon",
               role: "img",
               "aria-label": bb.icon,
-              children: (0, Tb.jsx)(ab.d, {
+              children: (0, Eb.jsx)(Tb.c, {
                 itemName: bb.icon,
                 amount: 0
               })
             })]
           })]
-        }, cb)), Ub = ""
-      })), sb.push(Ub), (0, Tb.jsx)(Tb.Fragment, {
-        children: sb
+        }, ab)), Yb = ""
+      })), Ub.push(Yb), (0, Eb.jsx)(Eb.Fragment, {
+        children: Ub
       })
     }
   },
-  8917: (bb, cb, sb) => {
-    sb.d(cb, {
-      b: () => ab
+  8906: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      d: () => Tb
     });
-    var kb = sb(4275),
-      Wb = sb(4282);
+    var Ab = Ub(4218),
+      Mb = Ub(4225);
 
-    function ab(bb) {
+    function Tb(bb) {
       let {
-        children: cb,
-        showing: sb,
-        globallyUniqueKey: ab,
-        alwaysMountChildren: Tb = !1,
-        doGameplayStartStopOnShow: Ub = !0,
-        keepsMovement: Ib = !1
+        children: ab,
+        showing: Ub,
+        globallyUniqueKey: Tb,
+        alwaysMountChildren: Eb = !1,
+        doGameplayStartStopOnShow: Yb = !0,
+        keepsMovement: Bb = !1
       } = bb;
-      return (0, Wb.d)(!0, sb, ab, Ib), (0, kb.e)(Ub, sb), sb || Tb ? cb : null
+      return (0, Mb.b)(!0, Ub, Tb, Bb), (0, Ab.c)(Yb, Ub), Ub || Eb ? ab : null
     }
   },
-  4561: (bb, cb, sb) => {
-    sb.d(cb, {
-      e: () => ib,
-      h: () => Eb
+  4531: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      e: () => Gb,
+      g: () => hb
     });
-    var kb = sb(4569),
-      Wb = sb(334);
-    const ab = 120,
-      Tb = 260,
-      Ub = 1.15,
-      Ib = 1.2,
-      Hb = 2,
-      fb = 1.08,
-      Mb = .8,
-      Xb = .95,
-      nb = 8,
-      mb = "[\"')\\]\u300d\u300f\uff09]*",
-      lb = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${mb}$`),
-      Qb = new RegExp(`[?\uff1f]${mb}$`),
-      eb = new RegExp(`[!\uff01]${mb}$`),
-      Cb = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-      Nb = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-      Vb = new RegExp(`[${Nb}]`),
-      Lb = new RegExp(`[${Nb}]|[^${Nb}]+`, "g"),
-      ub = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+    var Ab = Ub(4536),
+      Mb = Ub(307);
+    const Tb = 120,
+      Eb = 260,
+      Yb = 1.15,
+      Bb = 1.2,
+      eb = 2,
+      vb = 1.08,
+      Lb = .8,
+      Pb = .95,
+      Xb = 8,
+      jb = "[\"')\\]\u300d\u300f\uff09]*",
+      Rb = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${jb}$`),
+      kb = new RegExp(`[?\uff1f]${jb}$`),
+      yb = new RegExp(`[!\uff01]${jb}$`),
+      Zb = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+      Db = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+      zb = new RegExp(`[${Db}]`),
+      xb = new RegExp(`[${Db}]|[^${Db}]+`, "g"),
+      ib = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-    function Yb(bb) {
-      let cb = 2166136261;
-      for (let sb = 0; sb < bb.length; sb++) cb ^= bb.charCodeAt(sb), cb = Math.imul(cb, 16777619);
-      return (cb >>> 0) / 4294967295 * 2 - 1
+    function fb(bb) {
+      let ab = 2166136261;
+      for (let Ub = 0; Ub < bb.length; Ub++) ab ^= bb.charCodeAt(Ub), ab = Math.imul(ab, 16777619);
+      return (ab >>> 0) / 4294967295 * 2 - 1
     }
 
-    function hb(bb) {
-      var cb;
-      if (Vb.test(bb)) return 1;
-      const sb = bb.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-        kb = sb.replace(/[^0-9]/g, "");
-      if (kb.length > 0 && !/\p{L}/u.test(sb)) return Math.min(kb.length, 4);
-      const Wb = null !== (cb = sb.match(ub)) && void 0 !== cb ? cb : [];
-      if (0 === Wb.length) {
-        var ab, Tb;
-        const bb = null !== (ab = null === (Tb = sb.match(/\p{L}/gu)) || void 0 === Tb ? void 0 : Tb.length) && void 0 !== ab ? ab : 0;
-        return 0 === bb ? 0 : Math.min(Math.max(1, Math.round(bb / 2.5)), nb)
+    function mb(bb) {
+      var ab;
+      if (zb.test(bb)) return 1;
+      const Ub = bb.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+        Ab = Ub.replace(/[^0-9]/g, "");
+      if (Ab.length > 0 && !/\p{L}/u.test(Ub)) return Math.min(Ab.length, 4);
+      const Mb = null !== (ab = Ub.match(ib)) && void 0 !== ab ? ab : [];
+      if (0 === Mb.length) {
+        var Tb, Eb;
+        const bb = null !== (Tb = null === (Eb = Ub.match(/\p{L}/gu)) || void 0 === Eb ? void 0 : Eb.length) && void 0 !== Tb ? Tb : 0;
+        return 0 === bb ? 0 : Math.min(Math.max(1, Math.round(bb / 2.5)), Xb)
       }
-      const Ub = sb.replace(/[^\p{L}]/gu, ""),
-        Ib = Wb.length > 1 && "e" === Wb.at(-1) && Ub.endsWith("e") && !Ub.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(bb.replace(/[^\p{L}]/gu, ""));
-      return Math.min(Wb.length - (Ib ? 1 : 0), nb)
+      const Yb = Ub.replace(/[^\p{L}]/gu, ""),
+        Bb = Mb.length > 1 && "e" === Mb.at(-1) && Yb.endsWith("e") && !Yb.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(bb.replace(/[^\p{L}]/gu, ""));
+      return Math.min(Mb.length - (Bb ? 1 : 0), Xb)
     }
 
-    function Jb(bb) {
+    function pb(bb) {
       return bb.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
     }
 
-    function gb(bb) {
-      const cb = bb.replace(/[^\p{L}]/gu, "");
-      return cb.length >= 2 && cb === cb.toUpperCase() && cb !== cb.toLowerCase()
+    function Nb(bb) {
+      const ab = bb.replace(/[^\p{L}]/gu, "");
+      return ab.length >= 2 && ab === ab.toUpperCase() && ab !== ab.toLowerCase()
     }
 
-    function Bb(bb, cb) {
-      var sb;
-      const nb = cb && (0, kb.g)(cb),
-        mb = null !== (sb = null === nb || void 0 === nb ? void 0 : nb.syllableMs) && void 0 !== sb ? sb : kb.b,
-        Nb = function(bb) {
-          const cb = [];
-          for (const kb of (0, Wb.ic)(bb))
-            if ("string" === typeof kb)
-              for (const bb of kb.split(/(\s+)/)) {
+    function Wb(bb, ab) {
+      var Ub;
+      const Xb = ab && (0, Ab.k)(ab),
+        jb = null !== (Ub = null === Xb || void 0 === Xb ? void 0 : Xb.syllableMs) && void 0 !== Ub ? Ub : Ab.b,
+        Db = function(bb) {
+          const ab = [];
+          for (const Ab of (0, Mb.cc)(bb))
+            if ("string" === typeof Ab)
+              for (const bb of Ab.split(/(\s+)/)) {
                 if ("" === bb) continue;
                 if (/^\s+$/.test(bb)) {
-                  cb.push({
+                  ab.push({
                     kind: "space",
                     text: bb
                   });
                   continue
                 }
-                if (!Vb.test(bb)) {
-                  cb.push({
+                if (!zb.test(bb)) {
+                  ab.push({
                     kind: "word",
                     text: bb,
                     delayMs: 0
                   });
                   continue
                 }
-                let kb = !0;
-                for (const Wb of null !== (sb = bb.match(Lb)) && void 0 !== sb ? sb : []) {
-                  var sb;
-                  const bb = cb.at(-1);
-                  kb || "word" !== (null === bb || void 0 === bb ? void 0 : bb.kind) || Vb.test(Wb) || /[\p{L}\p{N}]/u.test(Wb) ? (kb || cb.push({
+                let Ab = !0;
+                for (const Mb of null !== (Ub = bb.match(xb)) && void 0 !== Ub ? Ub : []) {
+                  var Ub;
+                  const bb = ab.at(-1);
+                  Ab || "word" !== (null === bb || void 0 === bb ? void 0 : bb.kind) || zb.test(Mb) || /[\p{L}\p{N}]/u.test(Mb) ? (Ab || ab.push({
                     kind: "space",
                     text: "\u200b"
-                  }), cb.push({
+                  }), ab.push({
                     kind: "word",
-                    text: Wb,
+                    text: Mb,
                     delayMs: 0
-                  }), kb = !1) : bb.text += Wb
+                  }), Ab = !1) : bb.text += Mb
                 }
-              } else cb.push({
+              } else ab.push({
                 kind: "icon",
-                text: kb.icon,
+                text: Ab.icon,
                 delayMs: 0
               });
-          return cb
+          return ab
         }(bb),
-        ub = [];
-      let Bb = [];
-      for (const kb of Nb) "space" !== kb.kind && (Bb.push(kb), lb.test(kb.text) && (ub.push(Bb), Bb = []));
-      ub.push(Bb);
-      const tb = [];
-      let yb = 0;
-      for (const kb of ub) {
-        var Pb, Db;
-        const bb = null !== (Pb = null === (Db = kb.at(-1)) || void 0 === Db ? void 0 : Db.text) && void 0 !== Pb ? Pb : "",
-          cb = Qb.test(bb),
-          sb = eb.test(bb),
-          Wb = kb.map((bb => "word" === bb.kind ? hb(bb.text) : 1)),
-          Nb = Wb.findLastIndex((bb => bb > 0));
-        for (const [Qb, eb] of kb.entries()) {
-          const bb = "word" === eb.kind,
-            kb = Wb[Qb];
-          eb.delayMs = yb;
-          for (let Wb = 0; nb && Wb < kb; Wb++) {
+        ib = [];
+      let Wb = [];
+      for (const Ab of Db) "space" !== Ab.kind && (Wb.push(Ab), Rb.test(Ab.text) && (ib.push(Wb), Wb = []));
+      ib.push(Wb);
+      const Hb = [];
+      let Ib = 0;
+      for (const Ab of ib) {
+        var db, Fb;
+        const bb = null !== (db = null === (Fb = Ab.at(-1)) || void 0 === Fb ? void 0 : Fb.text) && void 0 !== db ? db : "",
+          ab = kb.test(bb),
+          Ub = yb.test(bb),
+          Mb = Ab.map((bb => "word" === bb.kind ? mb(bb.text) : 1)),
+          Db = Mb.findLastIndex((bb => bb > 0));
+        for (const [kb, yb] of Ab.entries()) {
+          const bb = "word" === yb.kind,
+            Ab = Mb[kb];
+          yb.delayMs = Ib;
+          for (let Mb = 0; Xb && Mb < Ab; Mb++) {
             const {
-              intonation: ab
-            } = nb;
-            let Tb = Nb > 0 ? -ab.declineSemitones * (Qb / Nb) : 0;
-            Tb += Yb(`${Jb(eb.text)}|${Wb}`) * ab.variationSemitones;
-            const lb = Math.min(1, ab.variationSemitones);
-            let Cb = nb.glideSemitones,
-              Vb = 1;
-            sb && (Tb += ab.exclaimLiftSemitones, Vb *= Ub), cb && Qb === Nb && (Tb += ab.questionRiseSemitones * (kb > 1 ? .5 + .5 * Wb / (kb - 1) : 1), Wb === kb - 1 && (Cb = Math.abs(Cb) + ab.questionRiseSemitones / 2)), bb && gb(eb.text) && (Tb += Hb * lb, Vb *= Ib), kb > 1 && 0 === Wb && (Tb += Mb * lb, Vb *= fb), tb.push({
-              atMs: yb + Wb * mb,
-              semitones: Tb,
-              glideSemitones: Cb,
-              durationMs: Wb < kb - 1 ? Math.min(nb.durationMs, mb * Xb) : nb.durationMs,
-              level: Vb
+              intonation: Tb
+            } = Xb;
+            let Eb = Db > 0 ? -Tb.declineSemitones * (kb / Db) : 0;
+            Eb += fb(`${pb(yb.text)}|${Mb}`) * Tb.variationSemitones;
+            const Rb = Math.min(1, Tb.variationSemitones);
+            let Zb = Xb.glideSemitones,
+              zb = 1;
+            Ub && (Eb += Tb.exclaimLiftSemitones, zb *= Yb), ab && kb === Db && (Eb += Tb.questionRiseSemitones * (Ab > 1 ? .5 + .5 * Mb / (Ab - 1) : 1), Mb === Ab - 1 && (Zb = Math.abs(Zb) + Tb.questionRiseSemitones / 2)), bb && Nb(yb.text) && (Eb += eb * Rb, zb *= Bb), Ab > 1 && 0 === Mb && (Eb += Lb * Rb, zb *= vb), Hb.push({
+              atMs: Ib + Mb * jb,
+              semitones: Eb,
+              glideSemitones: Zb,
+              durationMs: Mb < Ab - 1 ? Math.min(Xb.durationMs, jb * Pb) : Xb.durationMs,
+              level: zb
             })
           }
-          yb += kb * mb + (lb.test(eb.text) ? Tb : Cb.test(eb.text) ? ab : 0)
+          Ib += Ab * jb + (Rb.test(yb.text) ? Eb : Zb.test(yb.text) ? Tb : 0)
         }
       }
       return {
-        pieces: Nb.map((bb => "space" === bb.kind ? bb : "icon" === bb.kind ? {
+        pieces: Db.map((bb => "space" === bb.kind ? bb : "icon" === bb.kind ? {
           kind: "icon",
           icon: bb.text,
           delayMs: bb.delayMs
@@ -348,250 +348,250 @@ export const modules = {
           text: bb.text,
           delayMs: bb.delayMs
         })),
-        blips: tb
+        blips: Hb
       }
     }
-    var tb = sb(1197),
-      yb = sb(1258),
-      Pb = sb(1876);
+    var Hb = Ub(1134),
+      Ib = Ub(1198),
+      db = Ub(1829);
 
-    function Db(bb) {
+    function Fb(bb) {
       if ("string" === typeof bb) return bb;
-      const cb = yb.e.get().getCurrentLanguageCode();
-      return (0, tb.q)(cb, bb.translationKey, (0, tb.p)(bb.params, Pb.b.shown))
+      const ab = Ib.f.get().getCurrentLanguageCode();
+      return (0, Hb.p)(ab, bb.translationKey, (0, Hb.m)(bb.params, db.c.shown))
     }
 
-    function Eb(bb) {
-      const cb = void 0 === bb.voice ? null : (0, kb.i)(bb.voice),
-        sb = cb && (0, kb.g)(cb);
+    function hb(bb) {
+      const ab = void 0 === bb.voice ? null : (0, Ab.n)(bb.voice),
+        Ub = ab && (0, Ab.k)(ab);
       return {
-        plan: Bb(Db(bb.line), sb),
-        synth: sb
+        plan: Wb(Fb(bb.line), Ub),
+        synth: Ub
       }
     }
 
-    function ib(bb) {
-      const cb = [];
-      let sb = [];
-      for (const [Wb, ab] of bb.entries()) {
-        var kb;
-        "space" === ab.kind && (" " !== ab.text || "icon" !== (null === (kb = bb[Wb + 1]) || void 0 === kb ? void 0 : kb.kind)) ? (sb.length > 0 && cb.push(sb), cb.push([ab]), sb = []) : sb.push(ab)
+    function Gb(bb) {
+      const ab = [];
+      let Ub = [];
+      for (const [Mb, Tb] of bb.entries()) {
+        var Ab;
+        "space" === Tb.kind && (" " !== Tb.text || "icon" !== (null === (Ab = bb[Mb + 1]) || void 0 === Ab ? void 0 : Ab.kind)) ? (Ub.length > 0 && ab.push(Ub), ab.push([Tb]), Ub = []) : Ub.push(Tb)
       }
-      return sb.length > 0 && cb.push(sb), cb
+      return Ub.length > 0 && ab.push(Ub), ab
     }
   },
-  8330: (bb, cb, sb) => {
-    sb.d(cb, {
-      c: () => ab,
-      e: () => Wb
+  8280: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      d: () => Tb,
+      g: () => Mb
     });
-    let kb = null;
-    const Wb = function(bb) {
-        const cb = {
+    let Ab = null;
+    const Mb = function(bb) {
+        const ab = {
           cycle: bb,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return kb = cb, () => {
-          kb === cb && (kb = null)
+        return Ab = ab, () => {
+          Ab === ab && (Ab = null)
         }
       },
-      ab = () => {
+      Tb = () => {
         var bb;
-        return null !== (bb = kb) && void 0 !== bb && bb.canCycle() ? kb.cycle : null
+        return null !== (bb = Ab) && void 0 !== bb && bb.canCycle() ? Ab.cycle : null
       }
   },
-  36247: (bb, cb, sb) => {
-    sb.d(cb, {
-      e: () => ab,
-      g: () => lb,
-      i: () => Qb,
-      l: () => Ub,
-      n: () => Xb,
-      o: () => eb,
-      q: () => Mb,
-      s: () => Nb,
-      v: () => mb,
-      z: () => Cb
+  36023: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      e: () => Tb,
+      i: () => Rb,
+      j: () => kb,
+      l: () => Yb,
+      n: () => Pb,
+      p: () => yb,
+      s: () => Lb,
+      u: () => Db,
+      v: () => jb,
+      x: () => Zb
     });
-    var kb = sb(19),
-      Wb = sb(26);
-    const ab = "clientGameInventoryButtonsChanged",
-      Tb = new Map;
+    var Ab = Ub(19),
+      Mb = Ub(22);
+    const Tb = "clientGameInventoryButtonsChanged",
+      Eb = new Map;
 
-    function Ub() {
-      return [...Tb.values()].sort(((bb, cb) => {
-        var sb, kb;
-        return (null !== (sb = bb.order) && void 0 !== sb ? sb : 0) - (null !== (kb = cb.order) && void 0 !== kb ? kb : 0)
+    function Yb() {
+      return [...Eb.values()].sort(((bb, ab) => {
+        var Ub, Ab;
+        return (null !== (Ub = bb.order) && void 0 !== Ub ? Ub : 0) - (null !== (Ab = ab.order) && void 0 !== Ab ? Ab : 0)
       }))
     }
-    let Ib = null;
+    let Bb = null;
 
-    function Hb(bb) {
-      Ib = bb
+    function eb(bb) {
+      Bb = bb
     }
-    let fb = !1;
+    let vb = !1;
 
-    function Mb(bb) {
-      fb = !0;
+    function Lb(bb) {
+      vb = !0;
       try {
         bb.onClick()
       } finally {
-        fb = !1
+        vb = !1
       }
-      bb.panel && "clientGame" === kb.d.get("openInGameMenuName") && Hb(bb.id)
+      bb.panel && "clientGame" === Ab.c.get("openInGameMenuName") && eb(bb.id)
+    }
+
+    function Pb() {
+      return vb
     }
 
     function Xb() {
-      return fb
+      return Yb().filter((bb => bb.panel && !bb.disabled))
     }
 
-    function nb() {
-      return Ub().filter((bb => bb.panel && !bb.disabled))
+    function jb(bb) {
+      const ab = Xb(),
+        Ub = ab.findIndex((bb => bb.id === Bb));
+      return !(Ub < 0 || ab.length < 2) && (Lb(ab[(Ub + bb + ab.length) % ab.length]), !0)
     }
 
-    function mb(bb) {
-      const cb = nb(),
-        sb = cb.findIndex((bb => bb.id === Ib));
-      return !(sb < 0 || cb.length < 2) && (Mb(cb[(sb + bb + cb.length) % cb.length]), !0)
+    function Rb() {
+      return null !== Bb && Xb().length > 1
     }
 
-    function lb() {
-      return null !== Ib && nb().length > 1
+    function kb() {
+      eb(null)
     }
 
-    function Qb() {
-      Hb(null)
+    function yb() {
+      "inventory" !== Ab.c.get("openInGameMenuName") && eb(null)
     }
 
-    function eb() {
-      "inventory" !== kb.d.get("openInGameMenuName") && Hb(null)
+    function Zb() {
+      const bb = Bb;
+      return eb(null), bb
     }
 
-    function Cb() {
-      const bb = Ib;
-      return Hb(null), bb
-    }
-
-    function Nb(bb) {
-      return Tb.set(bb.id, bb), Wb.j.QQ(ab, Ub(), !0), () => {
-        Tb.get(bb.id) === bb && (Tb.delete(bb.id), Wb.j.QQ(ab, Ub()))
+    function Db(bb) {
+      return Eb.set(bb.id, bb), Mb.m.IR(Tb, Yb(), !0), () => {
+        Eb.get(bb.id) === bb && (Eb.delete(bb.id), Mb.m.IR(Tb, Yb()))
       }
     }
   },
-  36240: (bb, cb, sb) => {
-    sb.d(cb, {
-      c: () => Ub,
-      e: () => Qb,
-      g: () => eb,
-      i: () => Xb,
-      l: () => Hb,
-      m: () => lb,
-      p: () => nb,
-      s: () => fb
+  36017: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      c: () => Yb,
+      g: () => kb,
+      i: () => yb,
+      j: () => Pb,
+      l: () => eb,
+      o: () => Rb,
+      s: () => Xb,
+      w: () => vb
     });
-    var kb = sb(19),
-      Wb = sb(26),
-      ab = sb(1287),
-      Tb = sb(36247);
-    const Ub = "clientGameUiChanged";
-    let Ib = null;
+    var Ab = Ub(19),
+      Mb = Ub(22),
+      Tb = Ub(1216),
+      Eb = Ub(36023);
+    const Yb = "clientGameUiChanged";
+    let Bb = null;
 
-    function Hb() {
-      return Ib
+    function eb() {
+      return Bb
     }
 
-    function fb(bb, cb) {
-      const sb = {
+    function vb(bb, ab) {
+      const Ub = {
         content: bb,
-        menu: cb
+        menu: ab
       };
-      return Ib = sb, Wb.j.QQ(Ub, Ib, !0), () => {
-        Ib === sb && (Ib = null, mb = !1, Qb(), Wb.j.QQ(Ub, null))
+      return Bb = Ub, Mb.m.IR(Yb, Bb, !0), () => {
+        Bb === Ub && (Bb = null, jb = !1, kb(), Mb.m.IR(Yb, null))
       }
     }
-    let Mb = null;
+    let Lb = null;
 
-    function Xb() {
-      return Mb
+    function Pb() {
+      return Lb
     }
 
-    function nb(bb) {
-      return Mb = bb, () => {
-        Mb === bb && (Mb = null)
+    function Xb(bb) {
+      return Lb = bb, () => {
+        Lb === bb && (Lb = null)
       }
     }
-    let mb = !1;
+    let jb = !1;
 
-    function lb() {
-      const bb = kb.d.get("openInGameMenuName");
-      "clientGame" !== bb && (mb = "inventory" === bb), (0, Tb.n)() || (0, Tb.i)(), (0, ab.n)(ab.b), kb.d.set({
+    function Rb() {
+      const bb = Ab.c.get("openInGameMenuName");
+      "clientGame" !== bb && (jb = "inventory" === bb), (0, Eb.n)() || (0, Eb.j)(), (0, Tb.h)(Tb.b), Ab.c.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function Qb() {
-      Cb(!1)
+    function kb() {
+      Zb(!1)
     }
 
-    function eb() {
-      Cb(mb)
+    function yb() {
+      Zb(jb)
     }
 
-    function Cb(bb) {
-      "clientGame" === kb.d.get("openInGameMenuName") && kb.d.set({
+    function Zb(bb) {
+      "clientGame" === Ab.c.get("openInGameMenuName") && Ab.c.set({
         openInGameMenuName: bb ? "inventory" : null
-      }), bb || (0, Tb.i)(), mb = !1
+      }), bb || (0, Eb.j)(), jb = !1
     }
   },
-  38124: (bb, cb, sb) => {
-    function kb(bb, cb, sb) {
-      const kb = new Set,
-        Wb = new ResizeObserver(sb),
-        ab = () => {
-          const cb = new Set(document.querySelectorAll(bb));
-          let ab = !1;
-          for (const bb of kb) cb.has(bb) || (Wb.unobserve(bb), kb.delete(bb), ab = !0);
-          for (const bb of cb) kb.has(bb) || (Wb.observe(bb), Tb.observe(bb, {
+  37843: (bb, ab, Ub) => {
+    function Ab(bb, ab, Ub) {
+      const Ab = new Set,
+        Mb = new ResizeObserver(Ub),
+        Tb = () => {
+          const ab = new Set(document.querySelectorAll(bb));
+          let Tb = !1;
+          for (const bb of Ab) ab.has(bb) || (Mb.unobserve(bb), Ab.delete(bb), Tb = !0);
+          for (const bb of ab) Ab.has(bb) || (Mb.observe(bb), Eb.observe(bb, {
             attributes: !0,
             attributeFilter: ["class", "style"]
-          }), kb.add(bb));
-          ab && sb()
+          }), Ab.add(bb));
+          Tb && Ub()
         },
-        Tb = new MutationObserver((cb => {
-          cb.some((bb => "attributes" === bb.type)) && sb(), cb.some((cb => function(bb, cb, sb) {
+        Eb = new MutationObserver((ab => {
+          ab.some((bb => "attributes" === bb.type)) && Ub(), ab.some((ab => function(bb, ab, Ub) {
             if ("childList" !== bb.type) return !1;
-            for (const kb of bb.addedNodes)
-              if (kb instanceof Element && (kb.matches(cb) || kb.querySelector(cb))) return !0;
-            for (const kb of bb.removedNodes)
-              if (kb instanceof Element)
-                for (const bb of sb)
-                  if (kb.contains(bb)) return !0;
+            for (const Ab of bb.addedNodes)
+              if (Ab instanceof Element && (Ab.matches(ab) || Ab.querySelector(ab))) return !0;
+            for (const Ab of bb.removedNodes)
+              if (Ab instanceof Element)
+                for (const bb of Ub)
+                  if (Ab.contains(bb)) return !0;
             return !1
-          }(cb, bb, kb))) && ab()
+          }(ab, bb, Ab))) && Tb()
         }));
-      Tb.observe(document.body, {
+      Eb.observe(document.body, {
         childList: !0,
         subtree: !0
       });
-      for (const Ub of cb) Wb.observe(Ub);
-      return window.addEventListener("resize", sb), ab(), sb(), () => {
-        Wb.disconnect(), Tb.disconnect(), window.removeEventListener("resize", sb)
+      for (const Yb of ab) Mb.observe(Yb);
+      return window.addEventListener("resize", Ub), Tb(), Ub(), () => {
+        Mb.disconnect(), Eb.disconnect(), window.removeEventListener("resize", Ub)
       }
     }
-    sb.d(cb, {
-      c: () => kb
+    Ub.d(ab, {
+      e: () => Ab
     })
   },
-  8487: (bb, cb, sb) => {
-    sb.d(cb, {
-      b: () => Ub,
-      f: () => Ib
+  8441: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      d: () => Yb,
+      f: () => Bb
     });
-    var kb = sb(19),
-      Wb = sb(1312),
-      ab = sb(117);
-    const Tb = {
+    var Ab = Ub(19),
+      Mb = Ub(1242),
+      Tb = Ub(101);
+    const Eb = {
       blockMined: {
         pattern: [18],
         priority: 1,
@@ -634,350 +634,350 @@ export const modules = {
       }
     };
 
-    function Ub() {
-      return (0, ab.isMobile)() && "function" === typeof navigator.vibrate
+    function Yb() {
+      return (0, Tb.isMobile)() && "function" === typeof navigator.vibrate
     }
-    const Ib = new class {
+    const Bb = new class {
       constructor(bb) {
         this.deps = bb, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
       }
-      play(bb, cb) {
-        var sb;
+      play(bb, ab) {
+        var Ub;
         if (!this.deps.enabled()) return;
-        const kb = Tb[bb],
-          Wb = null !== cb && void 0 !== cb ? cb : kb.pattern;
-        if (null === Wb) return void console.warn("No vibration pattern for", bb);
-        const ab = this.deps.now();
-        ab - this.lastAnyAt < 40 && kb.priority < this.playingPriority || ab - (null !== (sb = this.lastAt.get(bb)) && void 0 !== sb ? sb : -1 / 0) < kb.minGapMs || ab < this.playingUntil && kb.priority < this.playingPriority || (this.lastAt.set(bb, ab), this.lastAnyAt = ab, this.playingUntil = ab + Wb.reduce(((bb, cb) => bb + cb), 0), this.playingPriority = kb.priority, this.deps.vibrate(Wb))
+        const Ab = Eb[bb],
+          Mb = null !== ab && void 0 !== ab ? ab : Ab.pattern;
+        if (null === Mb) return void console.warn("No vibration pattern for", bb);
+        const Tb = this.deps.now();
+        Tb - this.lastAnyAt < 40 && Ab.priority < this.playingPriority || Tb - (null !== (Ub = this.lastAt.get(bb)) && void 0 !== Ub ? Ub : -1 / 0) < Ab.minGapMs || Tb < this.playingUntil && Ab.priority < this.playingPriority || (this.lastAt.set(bb, Tb), this.lastAnyAt = Tb, this.playingUntil = Tb + Mb.reduce(((bb, ab) => bb + ab), 0), this.playingPriority = Ab.priority, this.deps.vibrate(Mb))
       }
     }({
       vibrate: bb => {
         navigator.vibrate([...bb])
       },
       now: () => performance.now(),
-      enabled: () => Ub() && kb.d.get("isTouchScreen") && kb.d.get("clientEscMenuOptions").vibration && !(0, Wb.h)()
+      enabled: () => Yb() && Ab.c.get("isTouchScreen") && Ab.c.get("clientEscMenuOptions").vibration && !(0, Mb.f)()
     })
   },
-  36717: (bb, cb, sb) => {
-    sb.d(cb, {
-      d: () => Ub,
-      g: () => Tb
+  36471: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      c: () => Yb,
+      e: () => Eb
     });
-    var kb = sb(36705),
-      Wb = sb(344),
-      ab = sb(1832);
+    var Ab = Ub(36460),
+      Mb = Ub(325),
+      Tb = Ub(1786);
 
-    function Tb(bb) {
-      if ("da" in bb) return ub.createAnimationScript(bb);
-      return new Hb(bb).createAnimationScript()
+    function Eb(bb) {
+      if ("jT" in bb) return ib.createAnimationScript(bb);
+      return new eb(bb).createAnimationScript()
     }
 
-    function Ub(bb, cb, sb, Wb) {
-      const ab = bb.da <= 0 ? 1 : cb + sb * Math.max(0, Wb) / bb.da;
-      return bb.Aa === kb.m.LoopOnLastFrame ? ab % 1 : bb.Aa === kb.m.NoLoop && ab >= 1 ? null : Math.min(1, ab)
+    function Yb(bb, ab, Ub, Mb) {
+      const Tb = bb.jT <= 0 ? 1 : ab + Ub * Math.max(0, Mb) / bb.jT;
+      return bb.RT === Ab.k.LoopOnLastFrame ? Tb % 1 : bb.RT === Ab.k.NoLoop && Tb >= 1 ? null : Math.min(1, Tb)
     }
-    class Ib {
+    class Bb {
       createAnimationScript(bb) {
         const {
-          da: cb,
-          loop: sb,
-          ra: kb
+          jT: ab,
+          loop: Ub,
+          kT: Ab
         } = bb;
         return {
-          da: Math.round(cb),
-          Aa: this.createLoopMode(null !== sb && void 0 !== sb && sb),
-          ra: this.createNodeSkeletonAnimationScript(null !== kb && void 0 !== kb ? kb : null)
+          jT: Math.round(ab),
+          RT: this.createLoopMode(null !== Ub && void 0 !== Ub && Ub),
+          kT: this.createNodeSkeletonAnimationScript(null !== Ab && void 0 !== Ab ? Ab : null)
         }
       }
       createLoopMode(bb) {
         switch (bb) {
           case !1:
-            return kb.m.NoLoop;
+            return Ab.k.NoLoop;
           case !0:
-            return kb.m.LoopOnLastFrame;
+            return Ab.k.LoopOnLastFrame;
           case "hold-on-last-frame":
-            return kb.m.HoldOnLastFrame
+            return Ab.k.HoldOnLastFrame
         }
         throw new Error(`Invalid loop mode schema: ${bb}`)
       }
       createNodeSkeletonAnimationScript(bb) {
         if (null === bb) return null;
-        const cb = {};
-        for (const sb in bb) {
-          const kb = bb[sb];
-          cb[sb] = this.createNodeAnimationScript(kb)
+        const ab = {};
+        for (const Ub in bb) {
+          const Ab = bb[Ub];
+          ab[Ub] = this.createNodeAnimationScript(Ab)
         }
-        return cb
+        return ab
       }
       createNodeAnimationScript(bb) {
         const {
-          timeline: cb
-        } = bb, sb = cb.filter((bb => Number.isFinite(bb.timeFraction)));
-        return sb.sort(((bb, cb) => bb.timeFraction - cb.timeFraction)), {
-          rotation: this.createTimelineFromKeyframes(sb, "rotation", Xb),
-          position: this.createTimelineFromKeyframes(sb, "position", mb)
+          timeline: ab
+        } = bb, Ub = ab.filter((bb => Number.isFinite(bb.timeFraction)));
+        return Ub.sort(((bb, ab) => bb.timeFraction - ab.timeFraction)), {
+          rotation: this.createTimelineFromKeyframes(Ub, "rotation", Pb),
+          position: this.createTimelineFromKeyframes(Ub, "position", jb)
         }
       }
-      createTimelineFromKeyframes(bb, cb, sb) {
-        const kb = [];
-        for (const Ib of bb) {
-          const bb = Ib[cb];
+      createTimelineFromKeyframes(bb, ab, Ub) {
+        const Ab = [];
+        for (const Bb of bb) {
+          const bb = Bb[ab];
           if (bb) {
-            const cb = this.createAnimationFrameWithoutPrecomputes(Ib.timeFraction, bb);
-            fb(cb) && kb.push(cb)
+            const ab = this.createAnimationFrameWithoutPrecomputes(Bb.timeFraction, bb);
+            vb(ab) && Ab.push(ab)
           }
         }
-        const Wb = [];
-        for (let Ib = 0; Ib < kb.length; Ib++) {
-          var ab, Tb, Ub;
-          const bb = kb[Ib],
-            cb = null !== (ab = kb[Ib - 1]) && void 0 !== ab ? ab : bb,
-            Hb = null !== (Tb = kb[Ib + 1]) && void 0 !== Tb ? Tb : bb,
-            fb = null !== (Ub = kb[Ib + 2]) && void 0 !== Ub ? Ub : Hb;
-          Wb.push({
+        const Mb = [];
+        for (let Bb = 0; Bb < Ab.length; Bb++) {
+          var Tb, Eb, Yb;
+          const bb = Ab[Bb],
+            ab = null !== (Tb = Ab[Bb - 1]) && void 0 !== Tb ? Tb : bb,
+            eb = null !== (Eb = Ab[Bb + 1]) && void 0 !== Eb ? Eb : bb,
+            vb = null !== (Yb = Ab[Bb + 2]) && void 0 !== Yb ? Yb : eb;
+          Mb.push({
             ...bb,
-            ...sb(cb.post, cb.timeFraction, bb.post, bb.timeFraction, Hb.pre, Hb.timeFraction, fb.pre, fb.timeFraction)
+            ...Ub(ab.post, ab.timeFraction, bb.post, bb.timeFraction, eb.pre, eb.timeFraction, vb.pre, vb.timeFraction)
           })
         }
-        return Wb
+        return Mb
       }
-      createAnimationFrameWithoutPrecomputes(bb, cb) {
-        let sb, kb, Wb = null;
-        var ab;
-        if ("object" === typeof cb && "point" in cb) Wb = null !== (ab = cb.Ra) && void 0 !== ab ? ab : null, sb = cb.point, kb = cb.point;
-        else if ("object" === typeof cb && "pre" in cb) {
-          var Tb;
-          Wb = null !== (Tb = cb.Ra) && void 0 !== Tb ? Tb : null, sb = cb.pre, kb = cb.post
-        } else sb = cb, kb = cb;
+      createAnimationFrameWithoutPrecomputes(bb, ab) {
+        let Ub, Ab, Mb = null;
+        var Tb;
+        if ("object" === typeof ab && "point" in ab) Mb = null !== (Tb = ab.DT) && void 0 !== Tb ? Tb : null, Ub = ab.point, Ab = ab.point;
+        else if ("object" === typeof ab && "pre" in ab) {
+          var Eb;
+          Mb = null !== (Eb = ab.DT) && void 0 !== Eb ? Eb : null, Ub = ab.pre, Ab = ab.post
+        } else Ub = ab, Ab = ab;
         return {
           timeFraction: bb,
-          Ra: this.createLerpMode(Wb),
-          pre: sb,
-          post: kb
+          DT: this.createLerpMode(Mb),
+          pre: Ub,
+          post: Ab
         }
       }
       createLerpMode(bb) {
-        return null === bb ? kb.i.Linear : Ib.LERP_MODE_SCHEMA_MAPPING[bb]
+        return null === bb ? Ab.h.Linear : Bb.LERP_MODE_SCHEMA_MAPPING[bb]
       }
     }
-    Ib.LERP_MODE_SCHEMA_MAPPING = {
-      linear: kb.i.Linear,
-      "catmull-rom-spline": kb.i.CatmullRomSpline
+    Bb.LERP_MODE_SCHEMA_MAPPING = {
+      linear: Ab.h.Linear,
+      "catmull-rom-spline": Ab.h.CatmullRomSpline
     };
-    class Hb {
+    class eb {
       constructor(bb) {
         this.animationSchema = bb
       }
       createAnimationScript() {
         const {
           animation_length: bb,
-          loop: cb,
-          bones: sb
+          loop: ab,
+          bones: Ub
         } = this.animationSchema;
         return {
-          da: Math.round(1e3 * bb),
-          Aa: this.createLoopMode(null !== cb && void 0 !== cb && cb),
-          ra: this.createNodeSkeletonAnimationScript(null !== sb && void 0 !== sb ? sb : null)
+          jT: Math.round(1e3 * bb),
+          RT: this.createLoopMode(null !== ab && void 0 !== ab && ab),
+          kT: this.createNodeSkeletonAnimationScript(null !== Ub && void 0 !== Ub ? Ub : null)
         }
       }
       createLoopMode(bb) {
         switch (bb) {
           case !1:
-            return kb.m.NoLoop;
+            return Ab.k.NoLoop;
           case !0:
-            return kb.m.LoopOnLastFrame;
+            return Ab.k.LoopOnLastFrame;
           case "hold_on_last_frame":
-            return kb.m.HoldOnLastFrame
+            return Ab.k.HoldOnLastFrame
         }
         throw new Error(`Invalid Blockbench loop mode schema: ${bb}`)
       }
       createNodeSkeletonAnimationScript(bb) {
         if (null === bb) return null;
-        const cb = {};
-        for (const sb in bb) {
-          const kb = bb[sb];
-          cb[sb] = this.createNodeAnimationScript(kb)
+        const ab = {};
+        for (const Ub in bb) {
+          const Ab = bb[Ub];
+          ab[Ub] = this.createNodeAnimationScript(Ab)
         }
-        return cb
+        return ab
       }
       createNodeAnimationScript(bb) {
         const {
-          rotation: cb,
-          position: sb
+          rotation: ab,
+          position: Ub
         } = bb;
         return {
-          rotation: this.createAnimationTimeline(null !== cb && void 0 !== cb ? cb : null, Qb, Xb, !0),
-          position: this.createAnimationTimeline(null !== sb && void 0 !== sb ? sb : null, Cb, mb, !1)
+          rotation: this.createAnimationTimeline(null !== ab && void 0 !== ab ? ab : null, kb, Pb, !0),
+          position: this.createAnimationTimeline(null !== Ub && void 0 !== Ub ? Ub : null, Zb, jb, !1)
         }
       }
-      createAnimationTimeline(bb, cb, sb, kb) {
+      createAnimationTimeline(bb, ab, Ub, Ab) {
         if (null === bb) return [];
         if (Array.isArray(bb)) {
           bb = {
             "0.0": bb
           }
         }
-        const Wb = Object.entries(bb).map((bb => {
-          let [sb, kb] = bb;
-          const Wb = Number(sb) / this.animationSchema.animation_length;
-          return this.createAnimationFrameWithoutPrecomputes(Wb, kb, cb)
-        })).filter(fb);
-        Wb.sort(((bb, cb) => bb.timeFraction - cb.timeFraction)), kb && function(bb) {
-          for (let cb = 1; cb < bb.length; cb++) {
-            const sb = bb[cb - 1].post,
-              kb = bb[cb],
-              Wb = Nb(kb.pre),
-              ab = Nb(kb.post),
-              Tb = Lb(sb, kb.pre);
-            Lb(sb, Wb) < Tb && (bb[cb] = {
-              ...kb,
-              pre: Wb,
-              post: ab
+        const Mb = Object.entries(bb).map((bb => {
+          let [Ub, Ab] = bb;
+          const Mb = Number(Ub) / this.animationSchema.animation_length;
+          return this.createAnimationFrameWithoutPrecomputes(Mb, Ab, ab)
+        })).filter(vb);
+        Mb.sort(((bb, ab) => bb.timeFraction - ab.timeFraction)), Ab && function(bb) {
+          for (let ab = 1; ab < bb.length; ab++) {
+            const Ub = bb[ab - 1].post,
+              Ab = bb[ab],
+              Mb = Db(Ab.pre),
+              Tb = Db(Ab.post),
+              Eb = xb(Ub, Ab.pre);
+            xb(Ub, Mb) < Eb && (bb[ab] = {
+              ...Ab,
+              pre: Mb,
+              post: Tb
             })
           }
-        }(Wb);
-        const ab = [];
-        for (let Hb = 0; Hb < Wb.length; Hb++) {
-          var Tb, Ub, Ib;
-          const bb = Wb[Hb],
-            cb = null !== (Tb = Wb[Hb - 1]) && void 0 !== Tb ? Tb : bb,
-            kb = null !== (Ub = Wb[Hb + 1]) && void 0 !== Ub ? Ub : bb,
-            fb = null !== (Ib = Wb[Hb + 2]) && void 0 !== Ib ? Ib : kb;
-          ab.push({
+        }(Mb);
+        const Tb = [];
+        for (let eb = 0; eb < Mb.length; eb++) {
+          var Eb, Yb, Bb;
+          const bb = Mb[eb],
+            ab = null !== (Eb = Mb[eb - 1]) && void 0 !== Eb ? Eb : bb,
+            Ab = null !== (Yb = Mb[eb + 1]) && void 0 !== Yb ? Yb : bb,
+            vb = null !== (Bb = Mb[eb + 2]) && void 0 !== Bb ? Bb : Ab;
+          Tb.push({
             ...bb,
-            ...sb(cb.post, cb.timeFraction, bb.post, bb.timeFraction, kb.pre, kb.timeFraction, fb.pre, fb.timeFraction)
+            ...Ub(ab.post, ab.timeFraction, bb.post, bb.timeFraction, Ab.pre, Ab.timeFraction, vb.pre, vb.timeFraction)
           })
         }
-        return ab
+        return Tb
       }
-      createAnimationFrameWithoutPrecomputes(bb, cb, sb) {
-        let kb, Wb, ab = null;
-        if ("object" === typeof cb && "post" in cb) {
-          var Tb;
-          ab = null !== (Tb = cb.lerp_mode) && void 0 !== Tb ? Tb : null, Wb = lb(cb.post, sb), kb = cb.pre ? lb(cb.pre, sb) : Wb
+      createAnimationFrameWithoutPrecomputes(bb, ab, Ub) {
+        let Ab, Mb, Tb = null;
+        if ("object" === typeof ab && "post" in ab) {
+          var Eb;
+          Tb = null !== (Eb = ab.lerp_mode) && void 0 !== Eb ? Eb : null, Mb = Rb(ab.post, Ub), Ab = ab.pre ? Rb(ab.pre, Ub) : Mb
         } else {
-          const bb = lb(cb, sb);
-          Wb = bb, kb = bb
+          const bb = Rb(ab, Ub);
+          Mb = bb, Ab = bb
         }
         return {
           timeFraction: bb,
-          Ra: this.createLerpMode(ab),
-          pre: kb,
-          post: Wb
+          DT: this.createLerpMode(Tb),
+          pre: Ab,
+          post: Mb
         }
       }
       createLerpMode(bb) {
-        return null === bb ? kb.i.Linear : Hb.LERP_MODE_SCHEMA_MAPPING[bb]
+        return null === bb ? Ab.h.Linear : eb.LERP_MODE_SCHEMA_MAPPING[bb]
       }
     }
 
-    function fb(bb) {
-      return Number.isFinite(bb.timeFraction) && Mb(bb.pre) && Mb(bb.post)
+    function vb(bb) {
+      return Number.isFinite(bb.timeFraction) && Lb(bb.pre) && Lb(bb.post)
     }
 
-    function Mb(bb) {
+    function Lb(bb) {
       return Number.isFinite(bb[0]) && Number.isFinite(bb[1]) && Number.isFinite(bb[2])
     }
 
-    function Xb(bb, cb, sb, kb, Wb, ab, Tb, Ub) {
-      const Ib = ab - cb,
-        Hb = ab - kb,
-        fb = Ub - kb,
-        Mb = [null, null, null];
-      for (let Xb = 0; Xb < Mb.length; Xb++) Mb[Xb] = nb(bb[Xb], sb[Xb], Wb[Xb], Tb[Xb], Ib, fb);
+    function Pb(bb, ab, Ub, Ab, Mb, Tb, Eb, Yb) {
+      const Bb = Tb - ab,
+        eb = Tb - Ab,
+        vb = Yb - Ab,
+        Lb = [null, null, null];
+      for (let Pb = 0; Pb < Lb.length; Pb++) Lb[Pb] = Xb(bb[Pb], Ub[Pb], Mb[Pb], Eb[Pb], Bb, vb);
       return {
-        va: Hb,
-        Fa: Mb
+        zT: eb,
+        xT: Lb
       }
     }
 
-    function nb(bb, cb, sb, kb, ab, Tb) {
+    function Xb(bb, ab, Ub, Ab, Tb, Eb) {
       return {
-        ja: Wb.d.computeShortestRotation(bb, sb) / ab,
-        bT: Wb.d.computeShortestRotation(cb, kb) / Tb,
-        delta: Wb.d.computeShortestRotation(cb, sb)
+        fT: Mb.d.computeShortestRotation(bb, Ub) / Tb,
+        mT: Mb.d.computeShortestRotation(ab, Ab) / Eb,
+        delta: Mb.d.computeShortestRotation(ab, Ub)
       }
     }
 
-    function mb(bb, cb, sb, kb, Wb, ab, Tb, Ub) {
-      const Ib = ab - cb,
-        Hb = ab - kb,
-        fb = Ub - kb,
-        Mb = [null, null, null];
-      for (let Xb = 0; Xb < Mb.length; Xb++) Mb[Xb] = {
-        ja: (Wb[Xb] - bb[Xb]) / Ib,
-        bT: (Tb[Xb] - sb[Xb]) / fb,
-        delta: Wb[Xb] - sb[Xb]
+    function jb(bb, ab, Ub, Ab, Mb, Tb, Eb, Yb) {
+      const Bb = Tb - ab,
+        eb = Tb - Ab,
+        vb = Yb - Ab,
+        Lb = [null, null, null];
+      for (let Pb = 0; Pb < Lb.length; Pb++) Lb[Pb] = {
+        fT: (Mb[Pb] - bb[Pb]) / Bb,
+        mT: (Eb[Pb] - Ub[Pb]) / vb,
+        delta: Mb[Pb] - Ub[Pb]
       };
       return {
-        va: Hb,
-        Fa: Mb
+        zT: eb,
+        xT: Lb
       }
     }
 
-    function lb(bb, cb) {
-      return null === cb ? bb : cb(bb)
+    function Rb(bb, ab) {
+      return null === ab ? bb : ab(bb)
     }
 
-    function Qb(bb) {
-      const [cb, sb, kb] = bb, Tb = -(0, ab.i)(cb), Ub = -(0, ab.i)(sb), Ib = (0, ab.i)(kb), Hb = Wb.d.quaternionFromEulerZYX(Tb, Ub, Ib);
-      return Wb.d.eulerYXZFromQuaternion(Hb)
+    function kb(bb) {
+      const [ab, Ub, Ab] = bb, Eb = -(0, Tb.i)(ab), Yb = -(0, Tb.i)(Ub), Bb = (0, Tb.i)(Ab), eb = Mb.d.quaternionFromEulerZYX(Eb, Yb, Bb);
+      return Mb.d.eulerYXZFromQuaternion(eb)
     }
-    Hb.LERP_MODE_SCHEMA_MAPPING = {
-      linear: kb.i.Linear,
-      catmullrom: kb.i.CatmullRomSpline
+    eb.LERP_MODE_SCHEMA_MAPPING = {
+      linear: Ab.h.Linear,
+      catmullrom: Ab.h.CatmullRomSpline
     };
-    const eb = 1 / 16;
+    const yb = 1 / 16;
 
-    function Cb(bb) {
-      return [-bb[0] * eb, bb[1] * eb, bb[2] * eb]
+    function Zb(bb) {
+      return [-bb[0] * yb, bb[1] * yb, bb[2] * yb]
     }
 
-    function Nb(bb) {
-      const [cb, sb, kb] = bb;
-      return [cb >= 0 ? Math.PI - cb : -Math.PI - cb, Vb(sb + Math.PI), Vb(kb + Math.PI)]
+    function Db(bb) {
+      const [ab, Ub, Ab] = bb;
+      return [ab >= 0 ? Math.PI - ab : -Math.PI - ab, zb(Ub + Math.PI), zb(Ab + Math.PI)]
     }
 
-    function Vb(bb) {
-      return Wb.d.mod(bb + Math.PI, 2 * Math.PI) - Math.PI
+    function zb(bb) {
+      return Mb.d.mod(bb + Math.PI, 2 * Math.PI) - Math.PI
     }
 
-    function Lb(bb, cb) {
-      return Math.abs(Wb.d.computeShortestRotation(bb[0], cb[0])) + Math.abs(Wb.d.computeShortestRotation(bb[1], cb[1])) + Math.abs(Wb.d.computeShortestRotation(bb[2], cb[2]))
+    function xb(bb, ab) {
+      return Math.abs(Mb.d.computeShortestRotation(bb[0], ab[0])) + Math.abs(Mb.d.computeShortestRotation(bb[1], ab[1])) + Math.abs(Mb.d.computeShortestRotation(bb[2], ab[2]))
     }
-    const ub = new Ib
+    const ib = new Bb
   },
-  36705: (bb, cb, sb) => {
-    sb.d(cb, {
-      e: () => Tb,
-      f: () => ab,
-      i: () => kb,
-      m: () => Wb
+  36460: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      b: () => Eb,
+      d: () => Tb,
+      h: () => Ab,
+      k: () => Mb
     });
-    let kb = function(bb) {
+    let Ab = function(bb) {
         return bb[bb.Linear = 0] = "Linear", bb[bb.CatmullRomSpline = 1] = "CatmullRomSpline", bb
       }({}),
-      Wb = function(bb) {
+      Mb = function(bb) {
         return bb[bb.NoLoop = 0] = "NoLoop", bb[bb.LoopOnLastFrame = 1] = "LoopOnLastFrame", bb[bb.HoldOnLastFrame = 2] = "HoldOnLastFrame", bb
       }({}),
-      ab = function(bb) {
+      Tb = function(bb) {
         return bb[bb.Movement = 0] = "Movement", bb[bb.Action = 1] = "Action", bb[bb.Emote = 2] = "Emote", bb[bb.Custom = 3] = "Custom", bb
       }({}),
-      Tb = function(bb) {
+      Eb = function(bb) {
         return bb[bb.Start = 0] = "Start", bb[bb.Stop = 1] = "Stop", bb
       }({})
   },
-  4569: (bb, cb, sb) => {
-    sb.d(cb, {
-      b: () => Wb,
-      e: () => kb,
-      f: () => ab,
-      g: () => Ib,
-      i: () => Tb
+  4536: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      b: () => Mb,
+      e: () => Ab,
+      i: () => Tb,
+      k: () => Bb,
+      n: () => Eb
     });
-    const kb = ["sine", "triangle", "square", "sawtooth"],
-      Wb = 55,
-      ab = {
+    const Ab = ["sine", "triangle", "square", "sawtooth"],
+      Mb = 55,
+      Tb = {
         soft: {
           waveform: "sine",
           pitchHz: 300,
@@ -1116,36 +1116,36 @@ export const modules = {
         }
       };
 
-    function Tb(bb) {
-      return "string" !== typeof bb ? bb : Object.hasOwn(ab, bb) ? ab[bb] : null
+    function Eb(bb) {
+      return "string" !== typeof bb ? bb : Object.hasOwn(Tb, bb) ? Tb[bb] : null
     }
 
-    function Ub(bb, cb, sb) {
-      return Math.min(sb, Math.max(cb, bb))
+    function Yb(bb, ab, Ub) {
+      return Math.min(Ub, Math.max(ab, bb))
     }
 
-    function Ib(bb) {
-      const cb = Ub(bb.durationMs, 10, 500),
-        sb = Ub(bb.attackMs, 0, cb),
+    function Bb(bb) {
+      const ab = Yb(bb.durationMs, 10, 500),
+        Ub = Yb(bb.attackMs, 0, ab),
         {
-          intonation: Wb
+          intonation: Mb
         } = bb;
       return {
-        waveform: kb.includes(bb.waveform) ? bb.waveform : "sine",
-        pitchHz: Ub(bb.pitchHz, 20, 4e3),
-        glideSemitones: Ub(bb.glideSemitones, -24, 24),
-        durationMs: cb,
-        attackMs: sb,
-        releaseMs: Ub(bb.releaseMs, 0, cb - sb),
-        lowpassHz: null === bb.lowpassHz ? null : Ub(bb.lowpassHz, 20, 2e4),
-        volume: Ub(bb.volume, 0, 2),
+        waveform: Ab.includes(bb.waveform) ? bb.waveform : "sine",
+        pitchHz: Yb(bb.pitchHz, 20, 4e3),
+        glideSemitones: Yb(bb.glideSemitones, -24, 24),
+        durationMs: ab,
+        attackMs: Ub,
+        releaseMs: Yb(bb.releaseMs, 0, ab - Ub),
+        lowpassHz: null === bb.lowpassHz ? null : Yb(bb.lowpassHz, 20, 2e4),
+        volume: Yb(bb.volume, 0, 2),
         intonation: {
-          variationSemitones: Ub(Wb.variationSemitones, 0, 6),
-          declineSemitones: Ub(Wb.declineSemitones, 0, 12),
-          questionRiseSemitones: Ub(Wb.questionRiseSemitones, 0, 12),
-          exclaimLiftSemitones: Ub(Wb.exclaimLiftSemitones, 0, 12)
+          variationSemitones: Yb(Mb.variationSemitones, 0, 6),
+          declineSemitones: Yb(Mb.declineSemitones, 0, 12),
+          questionRiseSemitones: Yb(Mb.questionRiseSemitones, 0, 12),
+          exclaimLiftSemitones: Yb(Mb.exclaimLiftSemitones, 0, 12)
         },
-        syllableMs: Ub(bb.syllableMs, 25, 200)
+        syllableMs: Yb(bb.syllableMs, 25, 200)
       }
     }
   }

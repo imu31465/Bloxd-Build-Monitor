@@ -1,17 +1,17 @@
 export const id = 382;
 export const ids = [382];
 export const modules = {
-  61299: (bb, cb, sb) => {
-    sb.r(cb), sb.d(cb, {
-      proceduralVertexShader: () => Tb
+  61014: (bb, ab, Ub) => {
+    Ub.r(ab), Ub.d(ab, {
+      proceduralVertexShader: () => Eb
     });
-    var kb = sb(39267);
-    const Wb = "proceduralVertexShader",
-      ab = "attribute vec2 position;varying vec2 vPosition;varying vec2 vUV;const vec2 madd=vec2(0.5,0.5);\n#define CUSTOM_VERTEX_DEFINITIONS\nvoid main(void) {\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvPosition=position;vUV=position*madd+madd;gl_Position=vec4(position,0.0,1.0);\n#define CUSTOM_VERTEX_MAIN_END\n}";
-    kb.d.ShadersStore[Wb] || (kb.d.ShadersStore[Wb] = ab);
-    const Tb = {
-      name: Wb,
-      shader: ab
+    var Ab = Ub(38943);
+    const Mb = "proceduralVertexShader",
+      Tb = "attribute vec2 position;varying vec2 vPosition;varying vec2 vUV;const vec2 madd=vec2(0.5,0.5);\n#define CUSTOM_VERTEX_DEFINITIONS\nvoid main(void) {\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvPosition=position;vUV=position*madd+madd;gl_Position=vec4(position,0.0,1.0);\n#define CUSTOM_VERTEX_MAIN_END\n}";
+    Ab.d.ShadersStore[Mb] || (Ab.d.ShadersStore[Mb] = Tb);
+    const Eb = {
+      name: Mb,
+      shader: Tb
     }
   }
 };

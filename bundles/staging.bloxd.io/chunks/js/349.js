@@ -1,16 +1,16 @@
 export const id = 349;
 export const ids = [349];
 export const modules = {
-  60657: (bb, cb, sb) => {
-    sb.d(cb, {
-      allocateF64Mat4: () => Wb
+  60329: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      allocateF64Mat4: () => Mb
     });
-    var kb = sb(41128);
+    var Ab = Ub(40840);
 
-    function Wb() {
-      return new kb.c(16)
+    function Mb() {
+      return new Ab.e(16)
     }
-    Wb["@@MAT4_STORAGE_F64@@"] = !0
+    Mb["@@MAT4_STORAGE_F64@@"] = !0
   }
 };
 Object.freeze(modules);

@@ -1,257 +1,257 @@
 export const id = 19;
 export const ids = [19];
 export const modules = {
-  36235: (bb, cb, sb) => {
-    sb.d(cb, {
-      d: () => nb,
-      e: () => mb,
-      i: () => Xb,
-      j: () => Mb
+  36013: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      b: () => Xb,
+      e: () => jb,
+      h: () => Pb,
+      k: () => Lb
     });
-    var kb = sb(8917),
-      Wb = sb(36240),
-      ab = sb(36247),
-      Tb = sb(8330),
-      Ub = sb(1423),
-      Ib = sb(64),
-      Hb = sb(89),
-      fb = sb(1087);
+    var Ab = Ub(8906),
+      Mb = Ub(36017),
+      Tb = Ub(36023),
+      Eb = Ub(8280),
+      Yb = Ub(1345),
+      Bb = Ub(52),
+      eb = Ub(75),
+      vb = Ub(1023);
 
-    function Mb() {
+    function Lb() {
       var bb;
-      return (0, Ub.h)(Wb.c, (0, Wb.l)()), (0, fb.jsx)(fb.Fragment, {
-        children: null === (bb = (0, Wb.l)()) || void 0 === bb ? void 0 : bb.content
+      return (0, Yb.i)(Mb.c, (0, Mb.l)()), (0, vb.jsx)(vb.Fragment, {
+        children: null === (bb = (0, Mb.l)()) || void 0 === bb ? void 0 : bb.content
+      })
+    }
+
+    function Pb(bb) {
+      var ab;
+      let {
+        show: Ub
+      } = bb;
+      (0, Yb.i)(Mb.c, (0, Mb.l)());
+      const eb = null === (ab = (0, Mb.l)()) || void 0 === ab ? void 0 : ab.menu;
+      return (0, Bb.useEffect)((() => {
+        var bb;
+        Ub || (null === eb || void 0 === eb || null === (bb = eb.onClose) || void 0 === bb || bb.call(eb), (0, Tb.p)())
+      }), [Ub, eb]), (0, Bb.useEffect)((() => Ub ? (0, Eb.g)(Tb.v, Tb.i) : void 0), [Ub]), (0, vb.jsx)(Ab.d, {
+        showing: Ub,
+        globallyUniqueKey: "clientGameMenu",
+        children: null === eb || void 0 === eb ? void 0 : eb.content
       })
     }
 
     function Xb(bb) {
-      var cb;
       let {
-        show: sb
+        placement: ab = "bottom"
       } = bb;
-      (0, Ub.h)(Wb.c, (0, Wb.l)());
-      const Hb = null === (cb = (0, Wb.l)()) || void 0 === cb ? void 0 : cb.menu;
-      return (0, Ib.useEffect)((() => {
-        var bb;
-        sb || (null === Hb || void 0 === Hb || null === (bb = Hb.onClose) || void 0 === bb || bb.call(Hb), (0, ab.o)())
-      }), [sb, Hb]), (0, Ib.useEffect)((() => sb ? (0, Tb.e)(ab.v, ab.g) : void 0), [sb]), (0, fb.jsx)(kb.b, {
-        showing: sb,
-        globallyUniqueKey: "clientGameMenu",
-        children: null === Hb || void 0 === Hb ? void 0 : Hb.content
-      })
-    }
-
-    function nb(bb) {
-      let {
-        placement: cb = "bottom"
-      } = bb;
-      return (0, fb.jsx)("div", {
-        id: `clientGameHud-${cb}`,
+      return (0, vb.jsx)("div", {
+        id: `clientGameHud-${ab}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function mb(bb) {
+    function jb(bb) {
       let {
-        children: cb,
-        placement: sb = "bottom"
+        children: ab,
+        placement: Ub = "bottom"
       } = bb;
-      const [kb, Wb] = (0, Ib.useState)(null);
-      return (0, Ib.useEffect)((() => {
-        Wb(document.getElementById(`clientGameHud-${sb}`))
-      }), [sb]), kb ? (0, Hb.createPortal)(cb, kb) : null
+      const [Ab, Mb] = (0, Bb.useState)(null);
+      return (0, Bb.useEffect)((() => {
+        Mb(document.getElementById(`clientGameHud-${Ub}`))
+      }), [Ub]), Ab ? (0, eb.createPortal)(ab, Ab) : null
     }
   },
-  8917: (bb, cb, sb) => {
-    sb.d(cb, {
-      b: () => ab
+  8906: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      d: () => Tb
     });
-    var kb = sb(4275),
-      Wb = sb(4282);
+    var Ab = Ub(4218),
+      Mb = Ub(4225);
 
-    function ab(bb) {
+    function Tb(bb) {
       let {
-        children: cb,
-        showing: sb,
-        globallyUniqueKey: ab,
-        alwaysMountChildren: Tb = !1,
-        doGameplayStartStopOnShow: Ub = !0,
-        keepsMovement: Ib = !1
+        children: ab,
+        showing: Ub,
+        globallyUniqueKey: Tb,
+        alwaysMountChildren: Eb = !1,
+        doGameplayStartStopOnShow: Yb = !0,
+        keepsMovement: Bb = !1
       } = bb;
-      return (0, Wb.d)(!0, sb, ab, Ib), (0, kb.e)(Ub, sb), sb || Tb ? cb : null
+      return (0, Mb.b)(!0, Ub, Tb, Bb), (0, Ab.c)(Yb, Ub), Ub || Eb ? ab : null
     }
   },
-  8330: (bb, cb, sb) => {
-    sb.d(cb, {
-      c: () => ab,
-      e: () => Wb
+  8280: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      d: () => Tb,
+      g: () => Mb
     });
-    let kb = null;
-    const Wb = function(bb) {
-        const cb = {
+    let Ab = null;
+    const Mb = function(bb) {
+        const ab = {
           cycle: bb,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return kb = cb, () => {
-          kb === cb && (kb = null)
+        return Ab = ab, () => {
+          Ab === ab && (Ab = null)
         }
       },
-      ab = () => {
+      Tb = () => {
         var bb;
-        return null !== (bb = kb) && void 0 !== bb && bb.canCycle() ? kb.cycle : null
+        return null !== (bb = Ab) && void 0 !== bb && bb.canCycle() ? Ab.cycle : null
       }
   },
-  36247: (bb, cb, sb) => {
-    sb.d(cb, {
-      e: () => ab,
-      g: () => lb,
-      i: () => Qb,
-      l: () => Ub,
-      n: () => Xb,
-      o: () => eb,
-      q: () => Mb,
-      s: () => Nb,
-      v: () => mb,
-      z: () => Cb
+  36023: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      e: () => Tb,
+      i: () => Rb,
+      j: () => kb,
+      l: () => Yb,
+      n: () => Pb,
+      p: () => yb,
+      s: () => Lb,
+      u: () => Db,
+      v: () => jb,
+      x: () => Zb
     });
-    var kb = sb(19),
-      Wb = sb(26);
-    const ab = "clientGameInventoryButtonsChanged",
-      Tb = new Map;
+    var Ab = Ub(19),
+      Mb = Ub(22);
+    const Tb = "clientGameInventoryButtonsChanged",
+      Eb = new Map;
 
-    function Ub() {
-      return [...Tb.values()].sort(((bb, cb) => {
-        var sb, kb;
-        return (null !== (sb = bb.order) && void 0 !== sb ? sb : 0) - (null !== (kb = cb.order) && void 0 !== kb ? kb : 0)
+    function Yb() {
+      return [...Eb.values()].sort(((bb, ab) => {
+        var Ub, Ab;
+        return (null !== (Ub = bb.order) && void 0 !== Ub ? Ub : 0) - (null !== (Ab = ab.order) && void 0 !== Ab ? Ab : 0)
       }))
     }
-    let Ib = null;
+    let Bb = null;
 
-    function Hb(bb) {
-      Ib = bb
+    function eb(bb) {
+      Bb = bb
     }
-    let fb = !1;
+    let vb = !1;
 
-    function Mb(bb) {
-      fb = !0;
+    function Lb(bb) {
+      vb = !0;
       try {
         bb.onClick()
       } finally {
-        fb = !1
+        vb = !1
       }
-      bb.panel && "clientGame" === kb.d.get("openInGameMenuName") && Hb(bb.id)
+      bb.panel && "clientGame" === Ab.c.get("openInGameMenuName") && eb(bb.id)
+    }
+
+    function Pb() {
+      return vb
     }
 
     function Xb() {
-      return fb
+      return Yb().filter((bb => bb.panel && !bb.disabled))
     }
 
-    function nb() {
-      return Ub().filter((bb => bb.panel && !bb.disabled))
+    function jb(bb) {
+      const ab = Xb(),
+        Ub = ab.findIndex((bb => bb.id === Bb));
+      return !(Ub < 0 || ab.length < 2) && (Lb(ab[(Ub + bb + ab.length) % ab.length]), !0)
     }
 
-    function mb(bb) {
-      const cb = nb(),
-        sb = cb.findIndex((bb => bb.id === Ib));
-      return !(sb < 0 || cb.length < 2) && (Mb(cb[(sb + bb + cb.length) % cb.length]), !0)
+    function Rb() {
+      return null !== Bb && Xb().length > 1
     }
 
-    function lb() {
-      return null !== Ib && nb().length > 1
+    function kb() {
+      eb(null)
     }
 
-    function Qb() {
-      Hb(null)
+    function yb() {
+      "inventory" !== Ab.c.get("openInGameMenuName") && eb(null)
     }
 
-    function eb() {
-      "inventory" !== kb.d.get("openInGameMenuName") && Hb(null)
+    function Zb() {
+      const bb = Bb;
+      return eb(null), bb
     }
 
-    function Cb() {
-      const bb = Ib;
-      return Hb(null), bb
-    }
-
-    function Nb(bb) {
-      return Tb.set(bb.id, bb), Wb.j.QQ(ab, Ub(), !0), () => {
-        Tb.get(bb.id) === bb && (Tb.delete(bb.id), Wb.j.QQ(ab, Ub()))
+    function Db(bb) {
+      return Eb.set(bb.id, bb), Mb.m.IR(Tb, Yb(), !0), () => {
+        Eb.get(bb.id) === bb && (Eb.delete(bb.id), Mb.m.IR(Tb, Yb()))
       }
     }
   },
-  36240: (bb, cb, sb) => {
-    sb.d(cb, {
-      c: () => Ub,
-      e: () => Qb,
-      g: () => eb,
-      i: () => Xb,
-      l: () => Hb,
-      m: () => lb,
-      p: () => nb,
-      s: () => fb
+  36017: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      c: () => Yb,
+      g: () => kb,
+      i: () => yb,
+      j: () => Pb,
+      l: () => eb,
+      o: () => Rb,
+      s: () => Xb,
+      w: () => vb
     });
-    var kb = sb(19),
-      Wb = sb(26),
-      ab = sb(1287),
-      Tb = sb(36247);
-    const Ub = "clientGameUiChanged";
-    let Ib = null;
+    var Ab = Ub(19),
+      Mb = Ub(22),
+      Tb = Ub(1216),
+      Eb = Ub(36023);
+    const Yb = "clientGameUiChanged";
+    let Bb = null;
 
-    function Hb() {
-      return Ib
+    function eb() {
+      return Bb
     }
 
-    function fb(bb, cb) {
-      const sb = {
+    function vb(bb, ab) {
+      const Ub = {
         content: bb,
-        menu: cb
+        menu: ab
       };
-      return Ib = sb, Wb.j.QQ(Ub, Ib, !0), () => {
-        Ib === sb && (Ib = null, mb = !1, Qb(), Wb.j.QQ(Ub, null))
+      return Bb = Ub, Mb.m.IR(Yb, Bb, !0), () => {
+        Bb === Ub && (Bb = null, jb = !1, kb(), Mb.m.IR(Yb, null))
       }
     }
-    let Mb = null;
+    let Lb = null;
 
-    function Xb() {
-      return Mb
+    function Pb() {
+      return Lb
     }
 
-    function nb(bb) {
-      return Mb = bb, () => {
-        Mb === bb && (Mb = null)
+    function Xb(bb) {
+      return Lb = bb, () => {
+        Lb === bb && (Lb = null)
       }
     }
-    let mb = !1;
+    let jb = !1;
 
-    function lb() {
-      const bb = kb.d.get("openInGameMenuName");
-      "clientGame" !== bb && (mb = "inventory" === bb), (0, Tb.n)() || (0, Tb.i)(), (0, ab.n)(ab.b), kb.d.set({
+    function Rb() {
+      const bb = Ab.c.get("openInGameMenuName");
+      "clientGame" !== bb && (jb = "inventory" === bb), (0, Eb.n)() || (0, Eb.j)(), (0, Tb.h)(Tb.b), Ab.c.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function Qb() {
-      Cb(!1)
+    function kb() {
+      Zb(!1)
     }
 
-    function eb() {
-      Cb(mb)
+    function yb() {
+      Zb(jb)
     }
 
-    function Cb(bb) {
-      "clientGame" === kb.d.get("openInGameMenuName") && kb.d.set({
+    function Zb(bb) {
+      "clientGame" === Ab.c.get("openInGameMenuName") && Ab.c.set({
         openInGameMenuName: bb ? "inventory" : null
-      }), bb || (0, Tb.i)(), mb = !1
+      }), bb || (0, Eb.j)(), jb = !1
     }
   },
-  39019: (bb, cb, sb) => {
-    sb.r(cb), sb.d(cb, {
-      default: () => pb
+  38662: (bb, ab, Ub) => {
+    Ub.r(ab), Ub.d(ab, {
+      default: () => Sb
     });
-    const kb = {
+    const Ab = {
       trader: {
         name: "Lucky Trader",
         shopTab: "Basic Blocks"
@@ -261,270 +261,270 @@ export const modules = {
         shopTab: "Team Upgrades"
       }
     };
-    var Wb = sb(64),
-      ab = sb(37630),
-      Tb = sb(344);
-    const Ub = ["Basic", "Rare", "Super"];
+    var Mb = Ub(52),
+      Tb = Ub(37374),
+      Eb = Ub(325);
+    const Yb = ["Basic", "Rare", "Super"];
 
-    function Ib(bb, cb) {
-      return `${"Basic"===cb?"":`${cb} `}${"Simple"===bb?"":`${bb} `}Lucky Block`
+    function Bb(bb, ab) {
+      return `${"Basic"===ab?"":`${ab} `}${"Simple"===bb?"":`${bb} `}Lucky Block`
     }
-    const Hb = new Map(["Simple", "Building", "Weapon", "Armour", "Tools", "Food", "Potion"].flatMap((bb => Ub.map((cb => [Ib(bb, cb), {
+    const eb = new Map(["Simple", "Building", "Weapon", "Armour", "Tools", "Food", "Potion"].flatMap((bb => Yb.map((ab => [Bb(bb, ab), {
       category: bb,
-      rarity: cb
+      rarity: ab
     }])))));
-    Hb.keys();
+    eb.keys();
 
-    function fb(bb) {
-      return Hb.get(bb)
+    function vb(bb) {
+      return eb.get(bb)
     }
-    const Mb = "Obsidian",
-      Xb = ["Cobweb"],
-      nb = [...["Red", "Blue", "Green", "Yellow"].map((bb => `${(0,Tb.X)(bb)} Wool`)), "Maple Wood Planks", "Cracked Stone Bricks", "Baked Clay", Mb, ...Xb];
+    const Lb = "Obsidian",
+      Pb = ["Cobweb"],
+      Xb = [...["Red", "Blue", "Green", "Yellow"].map((bb => `${(0,Eb.X)(bb)} Wool`)), "Maple Wood Planks", "Cracked Stone Bricks", "Baked Clay", Lb, ...Pb];
 
-    function mb(bb) {
-      return nb.includes(bb)
+    function jb(bb) {
+      return Xb.includes(bb)
     }
-    var lb = sb(628);
+    var Rb = Ub(591);
 
-    function Qb(bb, cb) {
-      const sb = fb(bb);
-      if (sb) {
-        const bb = fb(cb);
+    function kb(bb, ab) {
+      const Ub = vb(bb);
+      if (Ub) {
+        const bb = vb(ab);
         if (!bb) return;
-        const kb = Ub.length - 1 - Ub.indexOf(bb.rarity);
-        return (bb.category === sb.category ? 0 : 1) * Ub.length + kb
+        const Ab = Yb.length - 1 - Yb.indexOf(bb.rarity);
+        return (bb.category === Ub.category ? 0 : 1) * Yb.length + Ab
       }
-      if (!mb(bb)) return;
-      if (cb === bb) return 0;
-      const kb = bb => mb(bb) && !Xb.includes(bb) && bb !== Mb;
-      return kb(bb) && kb(cb) ? 1 : void 0
+      if (!jb(bb)) return;
+      if (ab === bb) return 0;
+      const Ab = bb => jb(bb) && !Pb.includes(bb) && bb !== Lb;
+      return Ab(bb) && Ab(ab) ? 1 : void 0
     }
-    const eb = [...Array.from({
-      length: lb.q - lb.n
-    }, ((bb, cb) => lb.n + cb)), ...Array.from({
-      length: lb.n
-    }, ((bb, cb) => cb))];
-    class Cb {
+    const yb = [...Array.from({
+      length: Rb.o - Rb.m
+    }, ((bb, ab) => Rb.m + ab)), ...Array.from({
+      length: Rb.m
+    }, ((bb, ab) => ab))];
+    class Zb {
       constructor(bb) {
         this.inventory = bb, this.pending = new Map
       }
       onPlace(bb) {
-        var cb;
-        const sb = this.inventory.selectedSlot(),
-          kb = this.inventory.itemAt(sb);
-        (null === kb || void 0 === kb ? void 0 : kb.name) === bb && (null !== (cb = kb.amount) && void 0 !== cb ? cb : 1) <= 1 && Nb(bb) && this.pending.set(sb, bb)
+        var ab;
+        const Ub = this.inventory.selectedSlot(),
+          Ab = this.inventory.itemAt(Ub);
+        (null === Ab || void 0 === Ab ? void 0 : Ab.name) === bb && (null !== (ab = Ab.amount) && void 0 !== ab ? ab : 1) <= 1 && Db(bb) && this.pending.set(Ub, bb)
       }
-      onDrop(bb, cb) {
-        cb < lb.n && null === this.inventory.itemAt(cb) && Nb(bb) && this.refill(cb, bb)
+      onDrop(bb, ab) {
+        ab < Rb.m && null === this.inventory.itemAt(ab) && Db(bb) && this.refill(ab, bb)
       }
-      aX() {
+      qL() {
         const bb = [...this.pending];
         this.pending.clear();
-        for (const [cb, sb] of bb) null === this.inventory.itemAt(cb) && this.refill(cb, sb)
+        for (const [ab, Ub] of bb) null === this.inventory.itemAt(ab) && this.refill(ab, Ub)
       }
-      refill(bb, cb) {
-        const sb = function(bb, cb, sb, kb) {
-          let Wb, ab = 1 / 0;
-          for (const Tb of eb) {
-            if (Tb === cb) continue;
-            const Ub = kb(Tb);
-            if (!Ub || Tb < lb.n && cb !== sb) continue;
-            const Ib = Qb(bb, Ub.name);
-            void 0 !== Ib && Ib < ab && (Wb = Tb, ab = Ib)
+      refill(bb, ab) {
+        const Ub = function(bb, ab, Ub, Ab) {
+          let Mb, Tb = 1 / 0;
+          for (const Eb of yb) {
+            if (Eb === ab) continue;
+            const Yb = Ab(Eb);
+            if (!Yb || Eb < Rb.m && ab !== Ub) continue;
+            const Bb = kb(bb, Yb.name);
+            void 0 !== Bb && Bb < Tb && (Mb = Eb, Tb = Bb)
           }
-          return Wb
-        }(cb, bb, this.inventory.selectedSlot(), this.inventory.itemAt);
-        void 0 !== sb && this.inventory.swap(bb, sb)
+          return Mb
+        }(ab, bb, this.inventory.selectedSlot(), this.inventory.itemAt);
+        void 0 !== Ub && this.inventory.swap(bb, Ub)
       }
     }
 
-    function Nb(bb) {
-      return !!fb(bb) || mb(bb)
+    function Db(bb) {
+      return !!vb(bb) || jb(bb)
     }
-    var Vb = sb(36240),
-      Lb = sb(89),
-      ub = sb(1033),
-      Yb = sb.n(ub);
-    const hb = "Lucky Clover",
-      Jb = {
+    var zb = Ub(36017),
+      xb = Ub(75),
+      ib = Ub(984),
+      fb = Ub.n(ib);
+    const mb = "Lucky Clover",
+      pb = {
         Basic: [35, 45],
         Rare: [100, 130],
         Super: [250, 330]
       };
 
-    function gb(bb) {
-      return Jb[bb][0]
+    function Nb(bb) {
+      return pb[bb][0]
     }
 
-    function Bb(bb) {
-      return Ub.filter((cb => bb >= gb(cb)))
+    function Wb(bb) {
+      return Yb.filter((ab => bb >= Nb(ab)))
     }
-    var tb = sb(334),
-      yb = sb(2337),
-      Pb = sb(19),
-      Db = sb(2424),
-      Eb = sb(1858),
-      ib = sb(36235),
-      Ob = sb(1039);
-    var Gb = sb(1087);
-    const Kb = {
-      Basic: Tb.L.whiteUiText,
-      Rare: Tb.L.goldUiText,
-      Super: Tb.L.cyanUiText
+    var Hb = Ub(307),
+      Ib = Ub(2268),
+      db = Ub(19),
+      Fb = Ub(2381),
+      hb = Ub(1812),
+      Gb = Ub(36013),
+      Qb = Ub(990);
+    var qb = Ub(1023);
+    const ub = {
+      Basic: Eb.E.whiteUiText,
+      Rare: Eb.E.goldUiText,
+      Super: Eb.E.cyanUiText
     };
-    let Zb = 1;
+    let rb = 1;
 
-    function zb() {
-      const bb = (0, yb.d)("currencyAmounts"),
-        cb = null === bb || void 0 === bb ? void 0 : bb.Clovers;
-      return !cb || cb.hidden ? null : (0, Gb.jsx)(ib.e, {
-        children: (0, Gb.jsx)(qb, {
-          amount: cb.amount
+    function Kb() {
+      const bb = (0, Ib.h)("currencyAmounts"),
+        ab = null === bb || void 0 === bb ? void 0 : bb.Clovers;
+      return !ab || ab.hidden ? null : (0, qb.jsx)(Gb.e, {
+        children: (0, qb.jsx)(ob, {
+          amount: ab.amount
         })
       })
     }
 
-    function qb(bb) {
-      var cb, sb, kb;
+    function ob(bb) {
+      var ab, Ub, Ab;
       let {
-        amount: ab
+        amount: Tb
       } = bb;
       const {
-        openEverythingMenuName: Ib
-      } = (0, Pb.p)(["openEverythingMenuName"]), Hb = (0, Db.c)(), [fb, Mb] = (0, Wb.useState)(ab), [Xb, nb] = (0, Wb.useState)(null), [mb, lb] = (0, Wb.useState)(0), [Qb, eb] = (0, Wb.useState)([]), Cb = (0, Wb.useRef)(ab), Nb = (0, Wb.useRef)(!1), Vb = (0, Wb.useRef)(null), ub = Ib === tb.r.SHOP;
-      (0, Wb.useEffect)((() => {
-        const bb = Cb.current;
-        if (Cb.current = ab, ab <= bb || ub) return void Mb(ab);
-        const cb = Hb || Qb.length > 0 || window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : (sb = ab - bb, kb = !Nb.current, sb <= 0 || !kb && sb < 40 ? 0 : Math.min(4, Math.ceil(sb / 30)));
-        var sb, kb;
-        if (Nb.current = !0, Bb(ab).length > Bb(bb).length && lb(Zb++), cb > 0) {
+        openEverythingMenuName: Bb
+      } = (0, db.n)(["openEverythingMenuName"]), eb = (0, Fb.d)(), [vb, Lb] = (0, Mb.useState)(Tb), [Pb, Xb] = (0, Mb.useState)(null), [jb, Rb] = (0, Mb.useState)(0), [kb, yb] = (0, Mb.useState)([]), Zb = (0, Mb.useRef)(Tb), Db = (0, Mb.useRef)(!1), zb = (0, Mb.useRef)(null), ib = Bb === Hb.j.SHOP;
+      (0, Mb.useEffect)((() => {
+        const bb = Zb.current;
+        if (Zb.current = Tb, Tb <= bb || ib) return void Lb(Tb);
+        const ab = eb || kb.length > 0 || window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : (Ub = Tb - bb, Ab = !Db.current, Ub <= 0 || !Ab && Ub < 40 ? 0 : Math.min(4, Math.ceil(Ub / 30)));
+        var Ub, Ab;
+        if (Db.current = !0, Wb(Tb).length > Wb(bb).length && Rb(rb++), ab > 0) {
           const bb = [];
-          for (let sb = 0; sb < cb; sb++) bb.push({
-            id: Zb++,
+          for (let Ub = 0; Ub < ab; Ub++) bb.push({
+            id: rb++,
             x: window.innerWidth / 2 + 60 * (Math.random() - .5),
             y: .58 * window.innerHeight + 30 * (Math.random() - .5),
-            delayMs: 70 * sb
+            delayMs: 70 * Ub
           });
-          eb((cb => [...cb, ...bb]))
+          yb((ab => [...ab, ...bb]))
         }
-        const Wb = cb > 0 ? 600 : 0;
-        nb({
-          id: Zb++,
-          delayMs: Wb
+        const Mb = ab > 0 ? 600 : 0;
+        Xb({
+          id: rb++,
+          delayMs: Mb
         });
-        const Ub = performance.now() + Wb;
-        let Ib = 0;
-        const fb = cb => {
-          const sb = Tb.d.clamp((cb - Ub) / 600, 0, 1);
-          Mb(Math.round(bb + (ab - bb) * sb)), sb < 1 && (Ib = requestAnimationFrame(fb))
+        const Yb = performance.now() + Mb;
+        let Bb = 0;
+        const vb = ab => {
+          const Ub = Eb.d.clamp((ab - Yb) / 600, 0, 1);
+          Lb(Math.round(bb + (Tb - bb) * Ub)), Ub < 1 && (Bb = requestAnimationFrame(vb))
         };
-        return Ib = requestAnimationFrame(fb), () => {
-          cancelAnimationFrame(Ib)
+        return Bb = requestAnimationFrame(vb), () => {
+          cancelAnimationFrame(Bb)
         }
-      }), [ab, ub]);
-      const Jb = function(bb) {
-          var cb;
-          const sb = null !== (cb = Ub.find((cb => bb < gb(cb)))) && void 0 !== cb ? cb : "Super";
+      }), [Tb, ib]);
+      const pb = function(bb) {
+          var ab;
+          const Ub = null !== (ab = Yb.find((ab => bb < Nb(ab)))) && void 0 !== ab ? ab : "Super";
           return {
-            rarity: sb,
-            progress: Tb.d.clamp(bb / gb(sb), 0, 1)
+            rarity: Ub,
+            progress: Eb.d.clamp(bb / Nb(Ub), 0, 1)
           }
-        }(fb),
-        yb = Bb(fb).at(-1);
-      return (0, Gb.jsxs)(Gb.Fragment, {
-        children: [(0, Gb.jsx)("div", {
+        }(vb),
+        Ib = Wb(vb).at(-1);
+      return (0, qb.jsxs)(qb.Fragment, {
+        children: [(0, qb.jsx)("div", {
           className: "LuckyCloverWalletAnchor",
-          children: (0, Gb.jsxs)("div", {
-            className: Yb()("LuckyCloverWallet", {
-              Capped: yb && "Basic" !== yb
+          children: (0, qb.jsxs)("div", {
+            className: fb()("LuckyCloverWallet", {
+              Capped: Ib && "Basic" !== Ib
             }),
-            style: yb && {
-              "--luckyTierColour": Kb[yb]
+            style: Ib && {
+              "--luckyTierColour": ub[Ib]
             },
-            children: [(0, Gb.jsx)("div", {
+            children: [(0, qb.jsx)("div", {
               className: "LuckyCloverWalletFill",
               style: {
-                transform: `scaleX(${Jb.progress})`
+                transform: `scaleX(${pb.progress})`
               }
-            }), mb > 0 && (0, Gb.jsx)("div", {
+            }), jb > 0 && (0, qb.jsx)("div", {
               className: "LuckyCloverWalletReached",
               style: {
-                animationDelay: `${null!==(cb=null===Xb||void 0===Xb?void 0:Xb.delayMs)&&void 0!==cb?cb:0}ms`
+                animationDelay: `${null!==(ab=null===Pb||void 0===Pb?void 0:Pb.delayMs)&&void 0!==ab?ab:0}ms`
               }
-            }, mb), (0, Gb.jsx)("div", {
-              ref: Vb,
-              className: Yb()("LuckyCloverWalletIcon", Xb && "Bounce"),
+            }, jb), (0, qb.jsx)("div", {
+              ref: zb,
+              className: fb()("LuckyCloverWalletIcon", Pb && "Bounce"),
               style: {
-                animationDelay: `${null!==(kb=null===Xb||void 0===Xb?void 0:Xb.delayMs)&&void 0!==kb?kb:0}ms`
+                animationDelay: `${null!==(Ab=null===Pb||void 0===Pb?void 0:Pb.delayMs)&&void 0!==Ab?Ab:0}ms`
               },
-              children: (0, Gb.jsx)(Eb.d, {
-                itemName: hb,
+              children: (0, qb.jsx)(hb.c, {
+                itemName: mb,
                 amount: 0
               })
-            }, null !== (sb = null === Xb || void 0 === Xb ? void 0 : Xb.id) && void 0 !== sb ? sb : 0), (0, Gb.jsx)("span", {
+            }, null !== (Ub = null === Pb || void 0 === Pb ? void 0 : Pb.id) && void 0 !== Ub ? Ub : 0), (0, qb.jsx)("span", {
               className: "LuckyCloverWalletAmount SmallTextBold",
-              children: fb
-            }), yb && (0, Gb.jsx)(Ob.b, {
+              children: vb
+            }), Ib && (0, qb.jsx)(Qb.e, {
               className: "LuckyCloverWalletShop",
               name: "cart-shopping"
             })]
           })
-        }), (0, Lb.createPortal)(Qb.map((bb => (0, Gb.jsx)(db, {
+        }), (0, xb.createPortal)(kb.map((bb => (0, qb.jsx)(lb, {
           flyer: bb,
-          target: Vb,
+          target: zb,
           onDone: () => {
-            eb((cb => cb.filter((cb => cb.id !== bb.id))))
+            yb((ab => ab.filter((ab => ab.id !== bb.id))))
           }
         }, bb.id))), document.body)]
       })
     }
 
-    function db(bb) {
+    function lb(bb) {
       let {
-        flyer: cb,
-        target: sb,
-        onDone: kb
+        flyer: ab,
+        target: Ub,
+        onDone: Ab
       } = bb;
-      const ab = (0, Wb.useRef)(null);
-      return (0, Wb.useEffect)((() => {
+      const Tb = (0, Mb.useRef)(null);
+      return (0, Mb.useEffect)((() => {
         var bb;
-        const Wb = null === (bb = sb.current) || void 0 === bb ? void 0 : bb.getBoundingClientRect();
-        if (!ab.current || !Wb) return void kb();
+        const Mb = null === (bb = Ub.current) || void 0 === bb ? void 0 : bb.getBoundingClientRect();
+        if (!Tb.current || !Mb) return void Ab();
         const {
-          x: Tb,
-          y: Ub
-        } = cb, Ib = Tb + 140 * (Math.random() - .5), Hb = Ub - 30 - 40 * Math.random(), fb = ab.current.animate([{
-          transform: `translate(${Tb}px, ${Ub}px) scale(0.3)`,
+          x: Eb,
+          y: Yb
+        } = ab, Bb = Eb + 140 * (Math.random() - .5), eb = Yb - 30 - 40 * Math.random(), vb = Tb.current.animate([{
+          transform: `translate(${Eb}px, ${Yb}px) scale(0.3)`,
           opacity: 0
         }, {
-          transform: `translate(${Ib}px, ${Hb}px) scale(1.3)`,
+          transform: `translate(${Bb}px, ${eb}px) scale(1.3)`,
           opacity: 1,
           offset: .3
         }, {
-          transform: `translate(${Wb.left}px, ${Wb.top}px) scale(0.8)`,
+          transform: `translate(${Mb.left}px, ${Mb.top}px) scale(0.8)`,
           opacity: .9
         }], {
           duration: 750,
           easing: "ease-in",
-          delay: cb.delayMs,
+          delay: ab.delayMs,
           fill: "backwards"
         });
-        return fb.onfinish = kb, () => {
-          fb.cancel()
+        return vb.onfinish = Ab, () => {
+          vb.cancel()
         }
-      }), []), (0, Gb.jsx)("div", {
-        ref: ab,
+      }), []), (0, qb.jsx)("div", {
+        ref: Tb,
         className: "LuckyCloverFlying",
-        children: (0, Gb.jsx)(Eb.d, {
-          itemName: hb,
+        children: (0, qb.jsx)(hb.c, {
+          itemName: mb,
           amount: 0
         })
       })
     }
-    var Ab = sb(26);
+    var tb = Ub(22);
     const wb = "luckyGearUpgradeView",
-      rb = {
+      sb = {
         Wood: "#c8964f",
         Stone: "#b4b4b4",
         Iron: "#f2f2f2",
@@ -532,13 +532,13 @@ export const modules = {
         Diamond: "#5cf2ea"
       };
 
-    function ob(bb) {
-      var cb;
-      return null !== (cb = rb[bb.split(" ")[0]]) && void 0 !== cb ? cb : "#e07bff"
+    function gb(bb) {
+      var ab;
+      return null !== (ab = sb[bb.split(" ")[0]]) && void 0 !== ab ? ab : "#e07bff"
     }
-    class Sb {
-      constructor(bb, cb) {
-        this.selectedSlot = bb, this.itemAt = cb, this.rings = [], this.unseen = new Map, this.view = {
+    class Cb {
+      constructor(bb, ab) {
+        this.selectedSlot = bb, this.itemAt = ab, this.rings = [], this.unseen = new Map, this.view = {
           rings: [],
           unseenSlots: []
         }, this.nextId = 0
@@ -546,198 +546,198 @@ export const modules = {
       getView() {
         return this.view
       }
-      Km(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
-        for (const [sb, kb, Wb] of bb) this.rings.push({
+      aj(bb) {
+        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
+        for (const [Ub, Ab, Mb] of bb) this.rings.push({
           id: this.nextId++,
-          slot: sb,
-          colour: ob(Wb),
-          until: cb + 1200
-        }), sb !== this.selectedSlot() && this.unseen.set(sb, {
-          from: kb,
-          to: Wb
+          slot: Ub,
+          colour: gb(Mb),
+          until: ab + 1200
+        }), Ub !== this.selectedSlot() && this.unseen.set(Ub, {
+          from: Ab,
+          to: Mb
         });
-        this.QQ()
+        this.IR()
       }
-      aX() {
+      qL() {
         let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : performance.now();
         if (!this.rings.length && !this.unseen.size) return;
-        const cb = this.rings.filter((cb => cb.until > bb));
-        let sb = cb.length !== this.rings.length;
-        this.rings = cb;
-        for (const [kb, {
-            from: Wb,
-            to: ab
+        const ab = this.rings.filter((ab => ab.until > bb));
+        let Ub = ab.length !== this.rings.length;
+        this.rings = ab;
+        for (const [Ab, {
+            from: Mb,
+            to: Tb
           }] of this.unseen) {
-          const bb = this.itemAt(kb);
-          (kb === this.selectedSlot() || bb !== ab && bb !== Wb) && (this.unseen.delete(kb), sb = !0)
+          const bb = this.itemAt(Ab);
+          (Ab === this.selectedSlot() || bb !== Tb && bb !== Mb) && (this.unseen.delete(Ab), Ub = !0)
         }
-        sb && this.QQ()
+        Ub && this.IR()
       }
-      QQ() {
+      IR() {
         this.view = {
           rings: [...this.rings],
           unseenSlots: [...this.unseen.keys()]
-        }, Ab.j.QQ(wb, this.view)
+        }, tb.m.IR(wb, this.view)
       }
     }
-    var Rb = sb(1423);
+    var Vb = Ub(1345);
 
-    function vb(bb) {
+    function Ob(bb) {
       return document.querySelector(`.HotBar [data-inven-idx="${bb}"]`)
     }
 
-    function Fb(bb) {
+    function cb(bb) {
       let {
-        ring: cb
+        ring: ab
       } = bb;
-      const [sb, kb] = (0, Wb.useState)(null);
-      return (0, Wb.useLayoutEffect)((() => {
-        var bb, sb;
-        kb(null !== (bb = null === (sb = vb(cb.slot)) || void 0 === sb ? void 0 : sb.getBoundingClientRect()) && void 0 !== bb ? bb : null)
-      }), [cb]), sb ? (0, Gb.jsx)("div", {
+      const [Ub, Ab] = (0, Mb.useState)(null);
+      return (0, Mb.useLayoutEffect)((() => {
+        var bb, Ub;
+        Ab(null !== (bb = null === (Ub = Ob(ab.slot)) || void 0 === Ub ? void 0 : Ub.getBoundingClientRect()) && void 0 !== bb ? bb : null)
+      }), [ab]), Ub ? (0, qb.jsx)("div", {
         className: "LuckyGearRing",
         style: {
-          left: sb.left,
-          top: sb.top,
-          width: sb.width,
-          height: sb.height,
-          "--ringColour": cb.colour,
+          left: Ub.left,
+          top: Ub.top,
+          width: Ub.width,
+          height: Ub.height,
+          "--ringColour": ab.colour,
           "--ringMs": "1200ms"
         }
       }) : null
     }
 
-    function xb(bb) {
+    function Jb(bb) {
       let {
-        slot: cb
+        slot: ab
       } = bb;
-      const [sb, kb] = (0, Wb.useState)(null);
-      return (0, Wb.useLayoutEffect)((() => {
+      const [Ub, Ab] = (0, Mb.useState)(null);
+      return (0, Mb.useLayoutEffect)((() => {
         const bb = () => {
-          kb(vb(cb))
+          Ab(Ob(ab))
         };
         bb();
-        const sb = new MutationObserver(bb),
-          Wb = document.querySelector(".BottomMiddleElements");
-        return Wb && sb.observe(Wb, {
+        const Ub = new MutationObserver(bb),
+          Mb = document.querySelector(".BottomMiddleElements");
+        return Mb && Ub.observe(Mb, {
           childList: !0,
           subtree: !0
         }), () => {
-          sb.disconnect()
+          Ub.disconnect()
         }
-      }), [cb]), sb ? (0, Lb.createPortal)((0, Gb.jsx)("div", {
+      }), [ab]), Ub ? (0, xb.createPortal)((0, qb.jsx)("div", {
         className: "LuckyGearUnseen"
-      }), sb) : null
+      }), Ub) : null
     }
 
-    function jb(bb) {
+    function nb(bb) {
       let {
-        controller: cb
+        controller: ab
       } = bb;
-      const sb = (0, Rb.h)(wb, cb.getView());
-      return (0, Gb.jsxs)(Gb.Fragment, {
-        children: [sb.rings.map((bb => (0, Gb.jsx)(Fb, {
+      const Ub = (0, Vb.i)(wb, ab.getView());
+      return (0, qb.jsxs)(qb.Fragment, {
+        children: [Ub.rings.map((bb => (0, qb.jsx)(cb, {
           ring: bb
-        }, bb.id))), sb.unseenSlots.map((bb => (0, Gb.jsx)(xb, {
+        }, bb.id))), Ub.unseenSlots.map((bb => (0, qb.jsx)(Jb, {
           slot: bb
         }, bb)))]
       })
     }
-    const pb = function(bb, cb, sb, Tb) {
-      let Ub, {
-          localPlayerId: Ib
-        } = Tb,
-        Hb = null;
-      const fb = new Cb({
-          itemAt: bb => Ub.getItemSlot(Ib, bb),
-          selectedSlot: () => Ub.getSelectedInventorySlotI(Ib),
-          swap: (bb, cb) => {
-            Ub.swapInventorySlots(bb, cb)
+    const Sb = function(bb, ab, Ub, Eb) {
+      let Yb, {
+          localPlayerId: Bb
+        } = Eb,
+        eb = null;
+      const vb = new Zb({
+          itemAt: bb => Yb.getItemSlot(Bb, bb),
+          selectedSlot: () => Yb.getSelectedInventorySlotI(Bb),
+          swap: (bb, ab) => {
+            Yb.swapInventorySlots(bb, ab)
           }
         }),
-        Mb = new Sb((() => Ub.getSelectedInventorySlotI(Ib)), (bb => {
-          var cb;
-          return null === (cb = Ub.getItemSlot(Ib, bb)) || void 0 === cb ? void 0 : cb.name
+        Lb = new Cb((() => Yb.getSelectedInventorySlotI(Bb)), (bb => {
+          var ab;
+          return null === (ab = Yb.getItemSlot(Bb, bb)) || void 0 === ab ? void 0 : ab.name
         }));
       return {
         plugins: {
-          placeAgainstBeds: (0, ab.e)()
+          placeAgainstBeds: (0, Tb.c)()
         },
         onCreate: bb => {
-          Ub = bb, Hb = (0, Vb.s)((0, Wb.createElement)(Wb.Fragment, null, (0, Wb.createElement)(zb), (0, Wb.createElement)(jb, {
-            controller: Mb
+          Yb = bb, eb = (0, zb.w)((0, Mb.createElement)(Mb.Fragment, null, (0, Mb.createElement)(Kb), (0, Mb.createElement)(nb, {
+            controller: Lb
           })))
         },
         onClose: () => {
           var bb;
-          null === (bb = Hb) || void 0 === bb || bb()
+          null === (bb = eb) || void 0 === bb || bb()
         },
-        aX: () => {
-          fb.aX(), Mb.aX()
+        qL: () => {
+          vb.qL(), Lb.qL()
         },
-        onReceivedMessageFromServer: (bb, cb) => {
-          "luckyGearUpgrade" === bb && Mb.Km(cb)
+        onReceivedMessageFromServer: (bb, ab) => {
+          "luckyGearUpgrade" === bb && Lb.aj(ab)
         },
-        onPlayerChangeBlock: (bb, cb, sb, kb, Wb, ab) => {
-          "Air" !== ab && fb.onPlace(ab)
+        onPlayerChangeBlock: (bb, ab, Ub, Ab, Mb, Tb) => {
+          "Air" !== Tb && vb.onPlace(Tb)
         },
-        onPlayerDropItem: (bb, cb, sb, kb) => {
-          fb.onDrop(cb, kb)
+        onPlayerDropItem: (bb, ab, Ub, Ab) => {
+          vb.onDrop(ab, Ab)
         },
-        onPlayerAltAction: (bb, cb, sb, Wb, ab, Tb) => {
-          if (!Tb || "Mesh" !== Ub.getEntityType(Tb)) return;
-          const Ib = Ub.getEntityName(Tb),
-            Hb = Object.values(kb).find((bb => bb.name === Ib));
-          Hb && Ub.openShop(bb, !1, Hb.shopTab)
+        onPlayerAltAction: (bb, ab, Ub, Mb, Tb, Eb) => {
+          if (!Eb || "Mesh" !== Yb.getEntityType(Eb)) return;
+          const Bb = Yb.getEntityName(Eb),
+            eb = Object.values(Ab).find((bb => bb.name === Bb));
+          eb && Yb.openShop(bb, !1, eb.shopTab)
         }
       }
     }
   },
-  37630: (bb, cb, sb) => {
-    sb.d(cb, {
-      e: () => Ub
+  37374: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      c: () => Yb
     });
-    var kb = sb(344),
-      Wb = sb(36505),
-      ab = sb(4218);
-    const Tb = ["Leaf Bed", "_Leaf Bed Head", ...kb.Hc.flatMap((bb => [`${bb} Bed`, `_${bb} Bed Head`, `${bb} Strongbed`, `_${bb} Strongbed Head`]))];
+    var Ab = Ub(325),
+      Mb = Ub(36263),
+      Tb = Ub(4156);
+    const Eb = ["Leaf Bed", "_Leaf Bed Head", ...Ab.qc.flatMap((bb => [`${bb} Bed`, `_${bb} Bed Head`, `${bb} Strongbed`, `_${bb} Strongbed Head`]))];
 
-    function Ub() {
+    function Yb() {
       let bb;
       return {
-        onCreate(cb) {
-          bb = cb
+        onCreate(ab) {
+          bb = ab
         },
-        altVetoBlocks: Tb,
-        onPlayerAttemptAltAction(cb, sb, kb, Tb, Ub, Ib) {
-          var Hb;
-          if ((0, Wb.e)(bb.getMetaInfo(Ub).rootName) && !bb.isEntityInteractable(Ib) && (0, ab.h)(null === (Hb = bb.Xcb(cb)) || void 0 === Hb ? void 0 : Hb.typeObj.type)) return "preventAction"
+        altVetoBlocks: Eb,
+        onPlayerAttemptAltAction(ab, Ub, Ab, Eb, Yb, Bb) {
+          var eb;
+          if ((0, Mb.d)(bb.getMetaInfo(Yb).rootName) && !bb.isEntityInteractable(Bb) && (0, Tb.e)(null === (eb = bb.vab(ab)) || void 0 === eb ? void 0 : eb.typeObj.type)) return "preventAction"
         }
       }
     }
   },
-  36505: (bb, cb, sb) => {
-    function kb(bb) {
+  36263: (bb, ab, Ub) => {
+    function Ab(bb) {
       return bb.includes("Leaf Bed")
     }
 
-    function Wb(bb) {
-      return / Bed(?: Head)?(?:\||$)/.test(bb) && !kb(bb)
-    }
-
-    function ab(bb) {
-      return bb.includes(" Strongbed")
+    function Mb(bb) {
+      return / Bed(?: Head)?(?:\||$)/.test(bb) && !Ab(bb)
     }
 
     function Tb(bb) {
-      return kb(bb) || Wb(bb) || ab(bb)
+      return bb.includes(" Strongbed")
     }
-    sb.d(cb, {
-      e: () => Tb,
-      f: () => kb,
-      h: () => ab,
-      j: () => Wb
+
+    function Eb(bb) {
+      return Ab(bb) || Mb(bb) || Tb(bb)
+    }
+    Ub.d(ab, {
+      d: () => Eb,
+      g: () => Ab,
+      h: () => Tb,
+      i: () => Mb
     })
   }
 };

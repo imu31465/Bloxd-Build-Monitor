@@ -1,46 +1,46 @@
-Bloxd build update — 2026-11-20T18:48 JST (bloxd.io=fsa8nn.c5bdbb5a, staging.bloxd.io=fsa8nn.c5bdbb5a)
+Bloxd build update — 2026-11-20T19:41 JST (bloxd.io=teusab.46cefca6, staging.bloxd.io=teusab.46cefca6)
 
 Bundle files use stable Webpack paths; original CDN names and hashes remain in .monitor-state.json.
 
-Readable per-file diff: [diffs/202611201848-fsa8nn-c5bdbb5a-fsa8nn-c5bdbb5a/index.md](diffs/202611201848-fsa8nn-c5bdbb5a-fsa8nn-c5bdbb5a/index.md)
+Readable per-file diff: [diffs/202611201941-teusab-46cefca6-teusab-46cefca6/index.md](diffs/202611201941-teusab-46cefca6-teusab-46cefca6/index.md)
 
-## bloxd.io — 6ndy1f.3c564e68 → fsa8nn.c5bdbb5a
+## bloxd.io — fsa8nn.c5bdbb5a → teusab.46cefca6
 
 ```diff
 - Files: 433 files
 + Files: 433 files (changed 385, added 0, removed 0, unchanged 48)
-- Total size: 45.06 MB
-+ Total size: 45.04 MB (-22.49 KB)
+- Total size: 45.04 MB
++ Total size: 44.96 MB (-76.95 KB)
 + Largest changes:
-- chunks/js/82.js decreased 52.04 KB (862d2c1e → c0fd6f78)
-+ main.js increased 17.53 KB (3c564e68 → c5bdbb5a)
-+ chunks/js/wasmPlay.js increased 5.29 KB (0b6d9d4a → cec24465)
-+ chunks/js/112.js increased 4.04 KB (0f4f1880 → f4ef6f17)
-+ chunks/js/155.js increased 3.99 KB (1bda82e7 → 521263df)
-- chunks/js/219.js decreased 1.15 KB (c28fecae → 7d74cb5c)
-- chunks/js/90.js decreased 292 B (83c9871e → fa971036)
-+ chunks/js/224.js increased 28 B (a386c8c5 → 84cb60ea)
-+ chunks/js/110.js increased 18 B (9f1e06b0 → 805c5d75)
-- chunks/js/wasmClientGame.js decreased 18 B (e5dc8201 → b38bcc60)
+- chunks/js/wasmPlay.js decreased 38.58 KB (cec24465 → d3cd53ef)
++ chunks/js/82.js increased 32.60 KB (c0fd6f78 → a0fb79c8)
+- chunks/js/112.js decreased 27.87 KB (f4ef6f17 → bf5f1e85)
+- main.js decreased 23.98 KB (c5bdbb5a → 46cefca6)
+- chunks/js/90.js decreased 14.08 KB (fa971036 → b8f51398)
+- chunks/js/155.js decreased 8.32 KB (521263df → 5d76aff2)
++ chunks/js/219.js increased 3.55 KB (7d74cb5c → 9648406a)
+- chunks/js/96.js decreased 38 B (f3f56c38 → 933e9763)
+- chunks/js/224.js decreased 29 B (84cb60ea → 64630551)
+- chunks/js/284.js decreased 21 B (64695e2a → 52294b4d)
 ```
 
 
-## staging.bloxd.io — 6ndy1f.3c564e68 → fsa8nn.c5bdbb5a
+## staging.bloxd.io — fsa8nn.c5bdbb5a → teusab.46cefca6
 
 ```diff
 - Files: 433 files
 + Files: 433 files (changed 385, added 0, removed 0, unchanged 48)
-- Total size: 45.06 MB
-+ Total size: 45.04 MB (-22.49 KB)
+- Total size: 45.04 MB
++ Total size: 44.96 MB (-76.95 KB)
 + Largest changes:
-- chunks/js/82.js decreased 52.04 KB (862d2c1e → c0fd6f78)
-+ main.js increased 17.53 KB (3c564e68 → c5bdbb5a)
-+ chunks/js/wasmPlay.js increased 5.29 KB (0b6d9d4a → cec24465)
-+ chunks/js/112.js increased 4.04 KB (0f4f1880 → f4ef6f17)
-+ chunks/js/155.js increased 3.99 KB (1bda82e7 → 521263df)
-- chunks/js/219.js decreased 1.15 KB (c28fecae → 7d74cb5c)
-- chunks/js/90.js decreased 292 B (83c9871e → fa971036)
-+ chunks/js/224.js increased 28 B (a386c8c5 → 84cb60ea)
-+ chunks/js/110.js increased 18 B (9f1e06b0 → 805c5d75)
-- chunks/js/wasmClientGame.js decreased 18 B (e5dc8201 → b38bcc60)
+- chunks/js/wasmPlay.js decreased 38.58 KB (cec24465 → d3cd53ef)
++ chunks/js/82.js increased 32.60 KB (c0fd6f78 → a0fb79c8)
+- chunks/js/112.js decreased 27.87 KB (f4ef6f17 → bf5f1e85)
+- main.js decreased 23.98 KB (c5bdbb5a → 46cefca6)
+- chunks/js/90.js decreased 14.08 KB (fa971036 → b8f51398)
+- chunks/js/155.js decreased 8.32 KB (521263df → 5d76aff2)
++ chunks/js/219.js increased 3.55 KB (7d74cb5c → 9648406a)
+- chunks/js/96.js decreased 38 B (f3f56c38 → 933e9763)
+- chunks/js/224.js decreased 29 B (84cb60ea → 64630551)
+- chunks/js/284.js decreased 21 B (64695e2a → 52294b4d)
 ```

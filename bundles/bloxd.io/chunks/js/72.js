@@ -1,18 +1,18 @@
 export const id = 72;
 export const ids = [72];
 export const modules = {
-  36623: (bb, cb, sb) => {
-    if (sb.d(cb, {
-        d: () => Ib,
-        h: () => Wb,
-        l: () => Tb,
-        n: () => ab,
-        q: () => Lb,
-        u: () => eb
-      }), 39 == sb.j) var kb = sb(36632);
-    const Wb = ["Wood", "Stone", "Iron", "Gold", "Diamond", "Moonstone", "Magmasteel", "Sanguine", "Astral"],
-      ab = ["Blade", "Guard", "Handle"],
-      Tb = {
+  36370: (bb, ab, Ub) => {
+    if (Ub.d(ab, {
+        b: () => Bb,
+        e: () => Mb,
+        g: () => Eb,
+        h: () => Tb,
+        l: () => xb,
+        m: () => yb
+      }), 39 == Ub.j) var Ab = Ub(36373);
+    const Mb = ["Wood", "Stone", "Iron", "Gold", "Diamond", "Moonstone", "Magmasteel", "Sanguine", "Astral"],
+      Tb = ["Blade", "Guard", "Handle"],
+      Eb = {
         Wood: {
           material: "Wood",
           baseSword: "Wood Sword",
@@ -131,21 +131,21 @@ export const modules = {
           handleReach: .5
         }
       },
-      Ub = 4,
-      Ib = "Coal",
-      Hb = {
+      Yb = 4,
+      Bb = "Coal",
+      eb = {
         Blade: 1,
         Guard: .6,
         Handle: .4
       },
-      fb = 1.15,
-      Mb = 1.35,
-      Xb = .06,
-      nb = {
+      vb = 1.15,
+      Lb = 1.35,
+      Pb = .06,
+      Xb = {
         defence: {
           name: "Bulwark",
           amount: .06,
-          describe: bb => `${hb(.06*bb)} less damage taken`
+          describe: bb => `${mb(.06*bb)} less damage taken`
         },
         coins: {
           name: "Midas",
@@ -156,34 +156,34 @@ export const modules = {
           name: "Keen Edge",
           chance: .12,
           amount: .6,
-          describe: bb => `${hb(.12*bb)} chance to strike for +60% damage`
+          describe: bb => `${mb(.12*bb)} chance to strike for +60% damage`
         },
         bossBane: {
           name: "Bossbane",
           amount: .2,
-          describe: bb => `+${hb(.2*bb)} damage to bosses`
+          describe: bb => `+${mb(.2*bb)} damage to bosses`
         },
         firePool: {
           name: "Magma Pool",
           chance: .15,
           amount: .12,
           cooldownMs: 3e3,
-          describe: bb => `${hb(.15*bb)} chance to leave a fire pool under the mob that burns for 3s`
+          describe: bb => `${mb(.15*bb)} chance to leave a fire pool under the mob that burns for 3s`
         },
         lifesteal: {
           name: "Bloodthirst",
           amount: .06,
-          describe: bb => `Heal ${hb(.06*bb)} of the damage you deal`
+          describe: bb => `Heal ${mb(.06*bb)} of the damage you deal`
         },
         starfall: {
           name: "Starfall",
           chance: .1,
           amount: .6,
           cooldownMs: 4e3,
-          describe: bb => `${hb(.1*bb)} chance to call a falling star that hits nearby mobs and slows them`
+          describe: bb => `${mb(.1*bb)} chance to call a falling star that hits nearby mobs and slows them`
         }
       },
-      mb = {
+      jb = {
         eclipseField: {
           name: "Eclipse Field",
           description: "Right-click: slow every mob within 6 blocks for 3s",
@@ -225,118 +225,118 @@ export const modules = {
           cooldownMs: 25e3
         }
       },
-      lb = 39 == sb.j ? kb.c : null,
-      Qb = "skyblock:forged:";
+      Rb = 39 == Ub.j ? Ab.c : null,
+      kb = "skyblock:forged:";
 
-    function eb(bb, cb) {
-      return `${bb} ${cb}`
+    function yb(bb, ab) {
+      return `${bb} ${ab}`
     }
-    Wb.flatMap((bb => ab.map((cb => eb(bb, cb)))));
+    Mb.flatMap((bb => Tb.map((ab => yb(bb, ab)))));
 
-    function Cb(bb) {
+    function Zb(bb) {
       let {
-        blade: cb,
-        guard: sb,
-        handle: kb
+        blade: ab,
+        guard: Ub,
+        handle: Ab
       } = bb;
-      return `${Qb}${cb.toLowerCase()}-${sb.toLowerCase()}-${kb.toLowerCase()}`
+      return `${kb}${ab.toLowerCase()}-${Ub.toLowerCase()}-${Ab.toLowerCase()}`
     }
 
-    function Nb(bb) {
+    function Db(bb) {
       if (! function(bb) {
-          return "string" === typeof bb && bb.startsWith(Qb)
+          return "string" === typeof bb && bb.startsWith(kb)
         }(bb)) return null;
-      const cb = bb.slice(Qb.length).split("-").map((bb => Wb.find((cb => cb.toLowerCase() === bb))));
-      return 3 !== cb.length || cb.includes(void 0) ? null : {
-        blade: cb[0],
-        guard: cb[1],
-        handle: cb[2]
+      const ab = bb.slice(kb.length).split("-").map((bb => Mb.find((ab => ab.toLowerCase() === bb))));
+      return 3 !== ab.length || ab.includes(void 0) ? null : {
+        blade: ab[0],
+        guard: ab[1],
+        handle: ab[2]
       }
     }
-    const Vb = new Map;
+    const zb = new Map;
 
-    function Lb(bb) {
-      var cb;
-      let sb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : lb;
-      const kb = "string" === typeof bb ? Nb(bb) : bb;
-      if (null === kb) return null;
-      const Wb = Cb(kb),
-        Ib = sb === lb ? Vb.get(Wb) : void 0;
-      if (void 0 !== Ib) return Ib;
-      const Qb = function(bb, cb) {
-        var sb, kb, Wb, Ib, lb, Qb, eb, Nb, Vb;
+    function xb(bb) {
+      var ab;
+      let Ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Rb;
+      const Ab = "string" === typeof bb ? Db(bb) : bb;
+      if (null === Ab) return null;
+      const Mb = Zb(Ab),
+        Bb = Ub === Rb ? zb.get(Mb) : void 0;
+      if (void 0 !== Bb) return Bb;
+      const kb = function(bb, ab) {
+        var Ub, Ab, Mb, Bb, Rb, kb, yb, Db, zb;
         const {
-          blade: Lb,
-          guard: gb,
-          handle: Bb
-        } = bb, tb = Tb, yb = Lb === gb && gb === Bb, Pb = Yb((1 + tb[Lb].bladeDamage) * (yb ? 1 + Xb : 1)), Db = null !== (sb = cb.damageMultiplier) && void 0 !== sb ? sb : Pb, Eb = null !== (kb = cb.cooldownMultiplier) && void 0 !== kb ? kb : tb[Bb].handleCooldown, ib = null !== (Wb = cb.knockbackMultiplier) && void 0 !== Wb ? Wb : Yb(1 + tb[Bb].handleKnockback), Ob = null !== (Ib = cb.reachBonus) && void 0 !== Ib ? Ib : tb[Bb].handleReach, Gb = null !== (lb = cb.damageReduction) && void 0 !== lb ? lb : tb[gb].guardReduction, Kb = null !== (Qb = cb.traits) && void 0 !== Qb ? Qb : function(bb) {
-          const cb = {},
-            sb = {};
-          for (const Ub of ab) {
-            var kb, Wb;
-            const ab = Tb[ub(bb, Ub)].trait;
-            null !== ab && (cb[ab] = (null !== (kb = cb[ab]) && void 0 !== kb ? kb : 0) + Hb[Ub], sb[ab] = (null !== (Wb = sb[ab]) && void 0 !== Wb ? Wb : 0) + 1)
+          blade: xb,
+          guard: Nb,
+          handle: Wb
+        } = bb, Hb = Eb, Ib = xb === Nb && Nb === Wb, db = fb((1 + Hb[xb].bladeDamage) * (Ib ? 1 + Pb : 1)), Fb = null !== (Ub = ab.damageMultiplier) && void 0 !== Ub ? Ub : db, hb = null !== (Ab = ab.cooldownMultiplier) && void 0 !== Ab ? Ab : Hb[Wb].handleCooldown, Gb = null !== (Mb = ab.knockbackMultiplier) && void 0 !== Mb ? Mb : fb(1 + Hb[Wb].handleKnockback), Qb = null !== (Bb = ab.reachBonus) && void 0 !== Bb ? Bb : Hb[Wb].handleReach, qb = null !== (Rb = ab.damageReduction) && void 0 !== Rb ? Rb : Hb[Nb].guardReduction, ub = null !== (kb = ab.traits) && void 0 !== kb ? kb : function(bb) {
+          const ab = {},
+            Ub = {};
+          for (const Yb of Tb) {
+            var Ab, Mb;
+            const Tb = Eb[ib(bb, Yb)].trait;
+            null !== Tb && (ab[Tb] = (null !== (Ab = ab[Tb]) && void 0 !== Ab ? Ab : 0) + eb[Yb], Ub[Tb] = (null !== (Mb = Ub[Tb]) && void 0 !== Mb ? Mb : 0) + 1)
           }
-          for (const ab of Object.keys(cb)) {
-            const bb = 3 === sb[ab] ? Mb : 2 === sb[ab] ? fb : 1;
-            cb[ab] = Yb(cb[ab] * bb)
+          for (const Tb of Object.keys(ab)) {
+            const bb = 3 === Ub[Tb] ? Lb : 2 === Ub[Tb] ? vb : 1;
+            ab[Tb] = fb(ab[Tb] * bb)
           }
-          return cb
-        }(bb), Zb = null !== (eb = cb.ability) && void 0 !== eb ? eb : null, zb = void 0 !== cb.name, qb = null !== (Nb = cb.name) && void 0 !== Nb ? Nb : yb ? `Pure ${Lb} Sword` : `${tb[gb].epithet} ${Lb} Sword`, db = null !== (Vb = cb.lore) && void 0 !== Vb ? Vb : `Forged by the Forge Mother from a ${Lb.toLowerCase()} blade, ${gb.toLowerCase()} guard and ${Bb.toLowerCase()} handle.`, Ab = function(bb) {
+          return ab
+        }(bb), rb = null !== (yb = ab.ability) && void 0 !== yb ? yb : null, Kb = void 0 !== ab.name, ob = null !== (Db = ab.name) && void 0 !== Db ? Db : Ib ? `Pure ${xb} Sword` : `${Hb[Nb].epithet} ${xb} Sword`, lb = null !== (zb = ab.lore) && void 0 !== zb ? zb : `Forged by the Forge Mother from a ${xb.toLowerCase()} blade, ${Nb.toLowerCase()} guard and ${Wb.toLowerCase()} handle.`, tb = function(bb) {
           let {
-            blade: cb,
-            guard: sb,
-            handle: kb
+            blade: ab,
+            guard: Ub,
+            handle: Ab
           } = bb;
-          const Wb = Tb;
-          return Ub * (Wb[cb].value + Wb[sb].value + Wb[kb].value)
-        }(bb), wb = tb[Lb].value + tb[gb].value + tb[Bb].value, rb = zb ? "Tier 5" : wb <= 4 ? "Tier 1" : wb <= 8 ? "Tier 2" : wb <= 14 ? "Tier 3" : wb <= 22 ? "Tier 4" : "Tier 5", ob = [];
-        1 !== Db && ob.push(`${Jb(Db-1)} damage`);
-        1 !== Eb && ob.push(`${hb(1/Eb-1)} faster strikes`);
-        1 !== ib && ob.push(`${Jb(ib-1)} knockback`);
-        Ob > 0 && ob.push(`+${Ob} reach`);
-        Gb > 0 && ob.push(`${hb(Gb)} less damage taken while held`);
-        const Sb = [];
-        for (const ab of Object.keys(Kb)) Sb.push(`${nb[ab].name}: ${nb[ab].describe(Kb[ab])}`);
-        null !== Zb && Sb.push(`${mb[Zb].name}: ${mb[Zb].description}`);
-        return ob.push(...Sb), {
-          id: Cb(bb),
+          const Mb = Eb;
+          return Yb * (Mb[ab].value + Mb[Ub].value + Mb[Ab].value)
+        }(bb), wb = Hb[xb].value + Hb[Nb].value + Hb[Wb].value, sb = Kb ? "Tier 5" : wb <= 4 ? "Tier 1" : wb <= 8 ? "Tier 2" : wb <= 14 ? "Tier 3" : wb <= 22 ? "Tier 4" : "Tier 5", gb = [];
+        1 !== Fb && gb.push(`${pb(Fb-1)} damage`);
+        1 !== hb && gb.push(`${mb(1/hb-1)} faster strikes`);
+        1 !== Gb && gb.push(`${pb(Gb-1)} knockback`);
+        Qb > 0 && gb.push(`+${Qb} reach`);
+        qb > 0 && gb.push(`${mb(qb)} less damage taken while held`);
+        const Cb = [];
+        for (const Tb of Object.keys(ub)) Cb.push(`${Xb[Tb].name}: ${Xb[Tb].describe(ub[Tb])}`);
+        null !== rb && Cb.push(`${jb[rb].name}: ${jb[rb].description}`);
+        return gb.push(...Cb), {
+          id: Zb(bb),
           parts: bb,
-          baseSword: tb[Lb].baseSword,
-          displayName: qb,
-          lore: db,
-          properties: ob,
-          effects: Sb,
-          named: zb,
-          damageMultiplier: Db,
-          cooldownMultiplier: Eb,
-          knockbackMultiplier: ib,
-          reachBonus: Ob,
-          damageReduction: Gb,
-          traits: Kb,
-          ability: Zb,
-          coalCost: Ab,
-          enchantmentTier: rb,
-          powerMultiplier: Yb(Db / Eb)
+          baseSword: Hb[xb].baseSword,
+          displayName: ob,
+          lore: lb,
+          properties: gb,
+          effects: Cb,
+          named: Kb,
+          damageMultiplier: Fb,
+          cooldownMultiplier: hb,
+          knockbackMultiplier: Gb,
+          reachBonus: Qb,
+          damageReduction: qb,
+          traits: ub,
+          ability: rb,
+          coalCost: tb,
+          enchantmentTier: sb,
+          powerMultiplier: fb(Fb / hb)
         }
-      }(kb, null !== (cb = sb[Wb]) && void 0 !== cb ? cb : {});
-      return sb === lb && Vb.set(Wb, Qb), Qb
+      }(Ab, null !== (ab = Ub[Mb]) && void 0 !== ab ? ab : {});
+      return Ub === Rb && zb.set(Mb, kb), kb
     }
 
-    function ub(bb, cb) {
-      return "Blade" === cb ? bb.blade : "Guard" === cb ? bb.guard : bb.handle
+    function ib(bb, ab) {
+      return "Blade" === ab ? bb.blade : "Guard" === ab ? bb.guard : bb.handle
     }
 
-    function Yb(bb) {
+    function fb(bb) {
       return Math.round(100 * bb) / 100
     }
 
-    function hb(bb) {
+    function mb(bb) {
       return `${Math.round(100*bb)}%`
     }
 
-    function Jb(bb) {
-      return `${bb>=0?"+":""}${hb(bb)}`
+    function pb(bb) {
+      return `${bb>=0?"+":""}${mb(bb)}`
     }
   }
 };

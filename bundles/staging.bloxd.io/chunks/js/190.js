@@ -1,62 +1,62 @@
 export const id = 190;
 export const ids = [49, 190];
 export const modules = {
-  38240: (bb, cb, sb) => {
-    sb.d(cb, {
-      c: () => Wb,
-      f: () => ab
+  37946: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      e: () => Mb,
+      g: () => Tb
     });
-    const kb = new WeakMap;
+    const Ab = new WeakMap;
 
-    function Wb(bb, cb) {
-      return kb.set(bb, cb), bb
+    function Mb(bb, ab) {
+      return Ab.set(bb, ab), bb
     }
 
-    function ab(bb) {
-      var cb;
-      return null !== (cb = kb.get(bb)) && void 0 !== cb ? cb : null
+    function Tb(bb) {
+      var ab;
+      return null !== (ab = Ab.get(bb)) && void 0 !== ab ? ab : null
     }
   },
-  38137: (bb, cb, sb) => {
-    function kb(bb, cb, sb) {
-      var kb;
+  37865: (bb, ab, Ub) => {
+    function Ab(bb, ab, Ub) {
+      var Ab;
       const {
-        width: Wb,
-        height: ab
-      } = sb, Tb = null !== (kb = bb.text) && void 0 !== kb ? kb : bb, Ub = (Tb.x / 100 - .5) * Wb, Ib = (Tb.y / 100 - .5) * ab, Hb = Wb / 2 - cb.x;
-      if (null !== bb.text && Math.abs(Ub) <= Hb && Ib >= cb.top - ab / 2 && Ib <= ab / 2 - cb.bottom) return {
-        x: Tb.x,
-        y: Tb.y
+        width: Mb,
+        height: Tb
+      } = Ub, Eb = null !== (Ab = bb.text) && void 0 !== Ab ? Ab : bb, Yb = (Eb.x / 100 - .5) * Mb, Bb = (Eb.y / 100 - .5) * Tb, eb = Mb / 2 - ab.x;
+      if (null !== bb.text && Math.abs(Yb) <= eb && Bb >= ab.top - Tb / 2 && Bb <= Tb / 2 - ab.bottom) return {
+        x: Eb.x,
+        y: Eb.y
       };
-      const fb = Math.min(0 === Ub ? 1 / 0 : Hb / Math.abs(Ub), Ib > 0 ? (ab / 2 - cb.bottom) / Ib : Ib < 0 ? (cb.top - ab / 2) / Ib : 1 / 0);
-      return !Number.isFinite(fb) || fb < 0 ? {
+      const vb = Math.min(0 === Yb ? 1 / 0 : eb / Math.abs(Yb), Bb > 0 ? (Tb / 2 - ab.bottom) / Bb : Bb < 0 ? (ab.top - Tb / 2) / Bb : 1 / 0);
+      return !Number.isFinite(vb) || vb < 0 ? {
         x: 50,
         y: 50
       } : {
-        x: 50 + Ub * fb / Wb * 100,
-        y: 50 + Ib * fb / ab * 100
+        x: 50 + Yb * vb / Mb * 100,
+        y: 50 + Bb * vb / Tb * 100
       }
     }
-    sb.d(cb, {
-      e: () => kb
+    Ub.d(ab, {
+      b: () => Ab
     })
   },
-  38152: (bb, cb, sb) => {
-    sb.d(cb, {
-      b: () => Tb
+  37875: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      b: () => Eb
     });
-    const kb = 4,
-      Wb = 12e3,
-      ab = 1e3;
-    class Tb {
+    const Ab = 4,
+      Mb = 12e3,
+      Tb = 1e3;
+    class Eb {
       constructor() {
         let {
-          limit: bb = kb,
-          windowMs: cb = Wb,
-          spacingMs: sb = ab,
-          now: Tb = Date.now
+          limit: bb = Ab,
+          windowMs: ab = Mb,
+          spacingMs: Ub = Tb,
+          now: Eb = Date.now
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        this.sent = [], this.lastSentAt = -1 / 0, this.timer = null, this.listeners = new Set, this.priority = new Set, this.limit = void 0, this.windowMs = void 0, this.spacingMs = void 0, this.now = void 0, this.limit = bb, this.windowMs = cb, this.spacingMs = sb, this.now = Tb
+        this.sent = [], this.lastSentAt = -1 / 0, this.timer = null, this.listeners = new Set, this.priority = new Set, this.limit = void 0, this.windowMs = void 0, this.spacingMs = void 0, this.now = void 0, this.limit = bb, this.windowMs = ab, this.spacingMs = Ub, this.now = Eb
       }
       isPacing() {
         return !this.canSendPriority() || this.isPriorityWaiting()
@@ -98,11 +98,11 @@ export const modules = {
       schedule() {
         this.clearTimer();
         const bb = this.now(),
-          cb = this.lastSentAt + this.spacingMs,
-          sb = Math.min(cb > bb ? cb : 1 / 0, this.sent.length > 0 ? this.sent[0] + this.windowMs : 1 / 0);
-        sb !== 1 / 0 && (this.timer = setTimeout((() => {
+          ab = this.lastSentAt + this.spacingMs,
+          Ub = Math.min(ab > bb ? ab : 1 / 0, this.sent.length > 0 ? this.sent[0] + this.windowMs : 1 / 0);
+        Ub !== 1 / 0 && (this.timer = setTimeout((() => {
           this.timer = null, this.prune(), this.schedule(), this.notify()
-        }), Math.max(0, sb - bb)))
+        }), Math.max(0, Ub - bb)))
       }
       notify() {
         for (const bb of this.listeners) bb()
@@ -112,14 +112,14 @@ export const modules = {
       }
     }
   },
-  38135: (bb, cb, sb) => {
-    sb.d(cb, {
-      e: () => kb
+  37856: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      d: () => Ab
     });
-    class kb {
-      constructor(bb, cb, sb) {
-        this.QQ = bb, this.beforeOpen = cb, this.afterClose = sb, this.open = !1, this.Em = !1, this.snapshot = void 0, this.getSnapshot = () => this.snapshot, this.show = () => {
-          this.isEnabled() && !this.Em && (this.open = !0, this.beforeOpen(this), this.emit())
+    class Ab {
+      constructor(bb, ab, Ub) {
+        this.IR = bb, this.beforeOpen = ab, this.afterClose = Ub, this.open = !1, this.cX = !1, this.snapshot = void 0, this.getSnapshot = () => this.snapshot, this.show = () => {
+          this.isEnabled() && !this.cX && (this.open = !0, this.beforeOpen(this), this.emit())
         }, this.close = () => {
           this.closePanel(!1)
         }, this.dismiss = () => {
@@ -137,55 +137,55 @@ export const modules = {
       }
       onClosed() {}
       dispose() {
-        this.open = !1, this.emit(), this.Em = !0
+        this.open = !1, this.emit(), this.cX = !0
       }
       isEnabled() {
         return !0
       }
       emit() {
-        this.Em || (this.snapshot = this.buildSnapshot(), this.QQ(this.snapshot))
+        this.cX || (this.snapshot = this.buildSnapshot(), this.IR(this.snapshot))
       }
     }
   },
-  38245: (bb, cb, sb) => {
-    sb.r(cb), sb.d(cb, {
-      SkyblockEntityFacing: () => Ub,
-      needsSkyblockEntityFacing: () => Tb
+  37953: (bb, ab, Ub) => {
+    Ub.r(ab), Ub.d(ab, {
+      SkyblockEntityFacing: () => Yb,
+      needsSkyblockEntityFacing: () => Eb
     });
-    var kb = sb(624),
-      Wb = sb(4023),
-      ab = sb(38253);
+    var Ab = Ub(583),
+      Mb = Ub(3959),
+      Tb = Ub(37955);
 
-    function Tb(bb, cb) {
-      if (bb.metaInfo === kb.b || "Iron Guardian" === bb.type || "Gold Guardian" === bb.type) return !0;
+    function Eb(bb, ab) {
+      if (bb.metaInfo === Ab.b || "Iron Guardian" === bb.type || "Gold Guardian" === bb.type) return !0;
       if ("Pig" === bb.type) return "sitting" === bb.pose;
       if ("Person" !== bb.meshKind || void 0 === bb.meshOpts) return !1;
-      let sb = null === cb || void 0 === cb ? void 0 : cb.get(bb.meshOpts);
-      if (void 0 === sb) {
-        var ab, Tb;
-        const kb = (0, Wb.h)(bb);
-        sb = !1, "pig_napoleon" === (null === kb || void 0 === kb || null === (ab = kb.opts.textures) || void 0 === ab ? void 0 : ab.head) ? sb = !0 : "npc_pig_head" === (null === kb || void 0 === kb || null === (Tb = kb.opts.textures) || void 0 === Tb ? void 0 : Tb.head) && (sb = "sitting" === kb.opts.pose || "sitting"), cb && (cb.size >= 256 && cb.clear(), cb.set(bb.meshOpts, sb))
+      let Ub = null === ab || void 0 === ab ? void 0 : ab.get(bb.meshOpts);
+      if (void 0 === Ub) {
+        var Tb, Eb;
+        const Ab = (0, Mb.h)(bb);
+        Ub = !1, "pig_napoleon" === (null === Ab || void 0 === Ab || null === (Tb = Ab.opts.textures) || void 0 === Tb ? void 0 : Tb.head) ? Ub = !0 : "npc_pig_head" === (null === Ab || void 0 === Ab || null === (Eb = Ab.opts.textures) || void 0 === Eb ? void 0 : Eb.head) && (Ub = "sitting" === Ab.opts.pose || "sitting"), ab && (ab.size >= 256 && ab.clear(), ab.set(bb.meshOpts, Ub))
       }
-      return "sitting" === sb ? "sitting" === bb.pose : sb
-    }(0, ab.g)("skyblock", ((bb, cb) => {
-      cb.setFacingTolerance(Tb(bb) ? 0 : null)
+      return "sitting" === Ub ? "sitting" === bb.pose : Ub
+    }(0, Tb.h)("skyblock", ((bb, ab) => {
+      ab.setFacingTolerance(Eb(bb) ? 0 : null)
     }));
-    class Ub {
+    class Yb {
       constructor(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        this.api = bb, this.alsoVisit = cb, this.facing = new Set, this.nextFacing = new Set, this.meshFacingCache = new Map, this.visit = bb => {
-          var cb;
-          const sb = this.api.getEntityInfo(bb);
-          sb && (Tb(sb, this.meshFacingCache) && (this.api.setFacingTolerance(bb, 0), this.nextFacing.add(bb)), null === (cb = this.alsoVisit) || void 0 === cb || cb.call(this, bb, sb))
+        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        this.api = bb, this.alsoVisit = ab, this.facing = new Set, this.nextFacing = new Set, this.meshFacingCache = new Map, this.visit = bb => {
+          var ab;
+          const Ub = this.api.getEntityInfo(bb);
+          Ub && (Eb(Ub, this.meshFacingCache) && (this.api.setFacingTolerance(bb, 0), this.nextFacing.add(bb)), null === (ab = this.alsoVisit) || void 0 === ab || ab.call(this, bb, Ub))
         }
       }
-      aX() {
+      qL() {
         const {
           api: bb
-        } = this, cb = this.nextFacing;
+        } = this, ab = this.nextFacing;
         bb.forEachEntity(this.visit);
-        for (const sb of this.facing) cb.has(sb) || bb.setFacingTolerance(sb, null);
-        this.facing.clear(), this.nextFacing = this.facing, this.facing = cb
+        for (const Ub of this.facing) ab.has(Ub) || bb.setFacingTolerance(Ub, null);
+        this.facing.clear(), this.nextFacing = this.facing, this.facing = ab
       }
       dispose() {
         for (const bb of this.facing) this.api.setFacingTolerance(bb, null);
@@ -193,136 +193,136 @@ export const modules = {
       }
     }
   },
-  38132: (bb, cb, sb) => {
-    sb.r(cb), sb.d(cb, {
-      default: () => HI
+  37852: (bb, ab, Ub) => {
+    Ub.r(ab), Ub.d(ab, {
+      default: () => EB
     });
-    const kb = "island";
-    var Wb = sb(344);
-    const ab = (0, Wb.Fb)([0, 0, -1]),
-      Tb = [{
+    const Ab = "island";
+    var Mb = Ub(325);
+    const Tb = (0, Mb.sb)([0, 0, -1]),
+      Eb = [{
         name: "S",
-        bearing: (0, Wb.Fb)([0, 0, 1])
+        bearing: (0, Mb.sb)([0, 0, 1])
       }, {
         name: "E",
-        bearing: (0, Wb.Fb)([-1, 0, 0])
+        bearing: (0, Mb.sb)([-1, 0, 0])
       }, {
         name: "N",
-        bearing: ab
+        bearing: Tb
       }, {
         name: "W",
-        bearing: (0, Wb.Fb)([1, 0, 0])
+        bearing: (0, Mb.sb)([1, 0, 0])
       }];
 
-    function Ub(bb, cb, sb) {
-      return [100 * (sb.mapMaxX - bb) / (sb.mapMaxX - sb.mapMinX), 100 * (cb - sb.mapMinZ) / (sb.mapMaxZ - sb.mapMinZ)]
+    function Yb(bb, ab, Ub) {
+      return [100 * (Ub.mapMaxX - bb) / (Ub.mapMaxX - Ub.mapMinX), 100 * (ab - Ub.mapMinZ) / (Ub.mapMaxZ - Ub.mapMinZ)]
     }
 
-    function Ib(bb, cb, sb) {
-      const Wb = "local" === cb,
-        ab = bb.background,
-        Tb = cb => ab ? Ub(cb[0] - bb.mapOrigin[0], cb[2] - bb.mapOrigin[2], ab.bounds) : [50, 50],
-        Ib = (bb.insideDungeon ? [] : bb.landmarks).map((bb => {
-          var cb, kb;
+    function Bb(bb, ab, Ub) {
+      const Mb = "local" === ab,
+        Tb = bb.background,
+        Eb = ab => Tb ? Yb(ab[0] - bb.mapOrigin[0], ab[2] - bb.mapOrigin[2], Tb.bounds) : [50, 50],
+        Bb = (bb.insideDungeon ? [] : bb.landmarks).map((bb => {
+          var ab, Ab;
           return {
             id: bb.id,
-            name: sb(bb.visited && bb.nameKey ? null !== (cb = bb.mapLabelKey) && void 0 !== cb ? cb : bb.nameKey : "skyblockGame:mapUnknown"),
-            icon: bb.visited && null !== (kb = bb.icon) && void 0 !== kb ? kb : "unknown",
+            name: Ub(bb.visited && bb.nameKey ? null !== (ab = bb.mapLabelKey) && void 0 !== ab ? ab : bb.nameKey : "skyblockGame:mapUnknown"),
+            icon: bb.visited && null !== (Ab = bb.icon) && void 0 !== Ab ? Ab : "unknown",
             visited: bb.visited,
             current: !1,
-            position: Tb(bb.position),
+            position: Eb(bb.position),
             travelKind: "landmark",
             travelId: bb.id
           }
         })),
-        fb = bb.zones.map((cb => {
-          var kb;
+        vb = bb.zones.map((ab => {
+          var Ab;
           return {
-            id: cb.id,
-            name: sb(cb.visited && cb.nameKey ? cb.nameKey : "skyblockGame:mapUnknown"),
-            icon: cb.visited && null !== (kb = cb.icon) && void 0 !== kb ? kb : "unknown",
-            visited: cb.visited,
-            current: cb.id === bb.zoneId,
-            position: cb.position,
-            thumbnail: cb.visited ? cb.id : void 0,
+            id: ab.id,
+            name: Ub(ab.visited && ab.nameKey ? ab.nameKey : "skyblockGame:mapUnknown"),
+            icon: ab.visited && null !== (Ab = ab.icon) && void 0 !== Ab ? Ab : "unknown",
+            visited: ab.visited,
+            current: ab.id === bb.zoneId,
+            position: ab.position,
+            thumbnail: ab.visited ? ab.id : void 0,
             travelKind: "zone",
-            travelId: cb.id
+            travelId: ab.id
           }
         })),
-        Mb = bb.insideDungeon || !ab ? [] : bb.portals.map((bb => {
-          var cb;
+        Lb = bb.insideDungeon || !Tb ? [] : bb.portals.map((bb => {
+          var ab;
           return {
             id: bb.id,
-            name: sb(null !== (cb = bb.nameKey) && void 0 !== cb ? cb : "skyblockGame:mapUnknown"),
+            name: Ub(null !== (ab = bb.nameKey) && void 0 !== ab ? ab : "skyblockGame:mapUnknown"),
             icon: bb.visited ? "dungeons" === bb.destination ? "portal_orange" : "portal" : "unknown",
             visited: bb.visited,
             current: !1,
-            position: Tb(bb.position),
+            position: Eb(bb.position),
             colour: bb.colour,
             travelKind: "zone",
             travelId: bb.destination
           }
         })),
-        Xb = Wb ? Ib : fb,
-        nb = Xb.filter((bb => bb.visited)).length,
-        mb = ab ? (ab.bounds.mapMaxX - ab.bounds.mapMinX) / (ab.bounds.mapMaxZ - ab.bounds.mapMinZ) : 2,
-        lb = ab ? JSON.stringify([ab.bounds, bb.mapOrigin]) : "";
+        Pb = Mb ? Bb : vb,
+        Xb = Pb.filter((bb => bb.visited)).length,
+        jb = Tb ? (Tb.bounds.mapMaxX - Tb.bounds.mapMinX) / (Tb.bounds.mapMaxZ - Tb.bounds.mapMinZ) : 2,
+        Rb = Tb ? JSON.stringify([Tb.bounds, bb.mapOrigin]) : "";
       return {
-        local: Wb,
-        points: Xb,
-        portals: Wb ? Mb : [],
-        progress: Xb.length ? sb("skyblockGame:mapDiscovered", {
-          current: String(nb),
-          total: String(Xb.length)
+        local: Mb,
+        points: Pb,
+        portals: Mb ? Lb : [],
+        progress: Pb.length ? Ub("skyblockGame:mapDiscovered", {
+          current: String(Xb),
+          total: String(Pb.length)
         }) : null,
-        percent: Xb.length ? 100 * nb / Xb.length : 0,
-        canTravel: [...Xb, ...Wb ? Mb : []].some((bb => bb.visited && !bb.current)),
-        noLandmarks: Wb && !bb.insideDungeon && 0 === Ib.length,
-        background: ab ? {
-          imageKey: ab.imageKey,
+        percent: Pb.length ? 100 * Xb / Pb.length : 0,
+        canTravel: [...Pb, ...Mb ? Lb : []].some((bb => bb.visited && !bb.current)),
+        noLandmarks: Mb && !bb.insideDungeon && 0 === Bb.length,
+        background: Tb ? {
+          imageKey: Tb.imageKey,
           fallbackImageKey: bb.zoneId,
-          geometryKey: lb,
-          label: sb(ab.labelKey),
-          colour: ab.backgroundColour,
-          ratio: mb
+          geometryKey: Rb,
+          label: Ub(Tb.labelKey),
+          colour: Tb.backgroundColour,
+          ratio: jb
         } : null,
-        connections: Hb(bb.zones),
-        minimap: ab ? {
-          imageKey: ab.imageKey,
+        connections: eb(bb.zones),
+        minimap: Tb ? {
+          imageKey: Tb.imageKey,
           fallbackImageKey: bb.zoneId,
-          geometryKey: lb,
-          label: sb(ab.labelKey),
-          colour: ab.backgroundColour,
-          caption: sb(bb.zoneId === kb ? "skyblockGame:zoneIsland" : ab.labelKey),
-          width: (ab.bounds.mapMaxX - ab.bounds.mapMinX) / ab.minimapSpan * 100 + "%",
-          height: (ab.bounds.mapMaxZ - ab.bounds.mapMinZ) / ab.minimapSpan * 100 + "%",
-          markers: [...Ib, ...Mb]
+          geometryKey: Rb,
+          label: Ub(Tb.labelKey),
+          colour: Tb.backgroundColour,
+          caption: Ub(bb.zoneId === Ab ? "skyblockGame:zoneIsland" : Tb.labelKey),
+          width: (Tb.bounds.mapMaxX - Tb.bounds.mapMinX) / Tb.minimapSpan * 100 + "%",
+          height: (Tb.bounds.mapMaxZ - Tb.bounds.mapMinZ) / Tb.minimapSpan * 100 + "%",
+          markers: [...Bb, ...Lb]
         } : null
       }
     }
 
-    function Hb(bb) {
-      const cb = new Set;
-      return bb.flatMap((sb => sb.connections.flatMap((kb => {
-        const Wb = bb.find((bb => bb.id === kb)),
-          ab = [sb.id, kb].sort().join("|");
-        return !Wb || cb.has(ab) ? [] : (cb.add(ab), [{
-          id: `${sb.id}-${kb}`,
-          start: sb.position,
-          end: Wb.position,
-          explored: sb.visited && Wb.visited
+    function eb(bb) {
+      const ab = new Set;
+      return bb.flatMap((Ub => Ub.connections.flatMap((Ab => {
+        const Mb = bb.find((bb => bb.id === Ab)),
+          Tb = [Ub.id, Ab].sort().join("|");
+        return !Mb || ab.has(Tb) ? [] : (ab.add(Tb), [{
+          id: `${Ub.id}-${Ab}`,
+          start: Ub.position,
+          end: Mb.position,
+          explored: Ub.visited && Mb.visited
         }])
       }))))
     }
-    var fb = sb(38135);
-    class Mb extends fb.e {}
-    const Xb = "skyblockMapView";
-    class nb extends Mb {
-      constructor(bb, cb, sb) {
-        let kb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {},
-          Wb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {},
-          ab = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now;
-        super(bb, kb, Wb), this.requestTravel = cb, this.translate = sb, this.now = ab, this.entities = [], this.map = null, this.tab = "local", this.pending = null, this.nextRequestId = 0, this.feedbackKey = "", this.snapshot = {
+    var vb = Ub(37856);
+    class Lb extends vb.d {}
+    const Pb = "skyblockMapView";
+    class Xb extends Lb {
+      constructor(bb, ab, Ub) {
+        let Ab = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {},
+          Mb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {},
+          Tb = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now;
+        super(bb, Ab, Mb), this.requestTravel = ab, this.translate = Ub, this.now = Tb, this.entities = [], this.map = null, this.tab = "local", this.pending = null, this.nextRequestId = 0, this.feedbackKey = "", this.snapshot = {
           presentation: null,
           enabled: !1,
           open: !1,
@@ -334,23 +334,23 @@ export const modules = {
           this.selectTab("local"), this.show()
         }, this.selectTab = bb => {
           this.tab = bb, this.feedbackKey = "", this.emit()
-        }, this.travel = (bb, cb) => {
-          if (!this.map || this.pending || this.Em) return;
-          const sb = ("zone" === bb ? this.map.zones : this.map.landmarks).find((bb => bb.id === cb));
-          if (sb) {
+        }, this.travel = (bb, ab) => {
+          if (!this.map || this.pending || this.cX) return;
+          const Ub = ("zone" === bb ? this.map.zones : this.map.landmarks).find((bb => bb.id === ab));
+          if (Ub) {
             if (this.map.insideDungeon) this.feedbackKey = "skyblockGame:mapDungeonTravelDisabled";
-            else if ("fastTravelEnabled" in sb && !sb.fastTravelEnabled) this.feedbackKey = "skyblockGame:mapLandmarkTravelDisabled";
-            else if (sb.visited)
-              if ("zone" === bb && cb === this.map.zoneId) this.feedbackKey = "skyblockGame:mapAlreadyHere";
+            else if ("fastTravelEnabled" in Ub && !Ub.fastTravelEnabled) this.feedbackKey = "skyblockGame:mapLandmarkTravelDisabled";
+            else if (Ub.visited)
+              if ("zone" === bb && ab === this.map.zoneId) this.feedbackKey = "skyblockGame:mapAlreadyHere";
               else {
-                const sb = ++this.nextRequestId;
+                const Ub = ++this.nextRequestId;
                 this.pending = {
-                  requestId: sb,
+                  requestId: Ub,
                   expiresAt: this.now() + 1e4
                 }, this.feedbackKey = "skyblockGame:mapTravelling", this.requestTravel({
                   kind: bb,
-                  id: cb,
-                  requestId: sb
+                  id: ab,
+                  requestId: Ub
                 })
               }
             else this.feedbackKey = "skyblockGame:mapVisitFirst";
@@ -364,25 +364,25 @@ export const modules = {
       setTranslator(bb) {
         this.translate = bb, this.emit()
       }
-      Km(bb) {
-        var cb;
-        if (!this.Em)
+      aj(bb) {
+        var ab;
+        if (!this.cX)
           if ("entities" !== bb.kind)
             if ("open" !== bb.kind) {
-              var sb, kb;
-              if ("snapshot" === bb.kind)(null === (sb = bb.snapshot) || void 0 === sb ? void 0 : sb.zoneId) !== (null === (kb = this.map) || void 0 === kb ? void 0 : kb.zoneId) && (this.pending = null, this.feedbackKey = ""), this.map = bb.snapshot, !this.map && this.open && this.close();
+              var Ub, Ab;
+              if ("snapshot" === bb.kind)(null === (Ub = bb.snapshot) || void 0 === Ub ? void 0 : Ub.zoneId) !== (null === (Ab = this.map) || void 0 === Ab ? void 0 : Ab.zoneId) && (this.pending = null, this.feedbackKey = ""), this.map = bb.snapshot, !this.map && this.open && this.close();
               else if ("travelQueued" === bb.kind) {
-                var Wb;
-                bb.requestId === (null === (Wb = this.pending) || void 0 === Wb ? void 0 : Wb.requestId) && (this.pending.expiresAt = 1 / 0, this.close())
-              } else if (bb.requestId === (null === (cb = this.pending) || void 0 === cb ? void 0 : cb.requestId)) {
-                var ab;
-                this.pending = null, this.feedbackKey = null !== (ab = bb.errorKey) && void 0 !== ab ? ab : "", null === bb.errorKey && this.close()
+                var Mb;
+                bb.requestId === (null === (Mb = this.pending) || void 0 === Mb ? void 0 : Mb.requestId) && (this.pending.expiresAt = 1 / 0, this.close())
+              } else if (bb.requestId === (null === (ab = this.pending) || void 0 === ab ? void 0 : ab.requestId)) {
+                var Tb;
+                this.pending = null, this.feedbackKey = null !== (Tb = bb.errorKey) && void 0 !== Tb ? Tb : "", null === bb.errorKey && this.close()
               }
               this.emit()
             } else this.show();
         else this.entities = bb.entities
       }
-      aX() {
+      qL() {
         this.pending && this.now() >= this.pending.expiresAt && (this.pending = null, this.feedbackKey = "skyblockGame:mapTravelTimeout", this.emit())
       }
       dispose() {
@@ -393,7 +393,7 @@ export const modules = {
       }
       buildSnapshot() {
         return {
-          presentation: this.map ? Ib(this.map, this.tab, this.translate) : null,
+          presentation: this.map ? Bb(this.map, this.tab, this.translate) : null,
           enabled: this.isEnabled(),
           open: this.open,
           tab: this.tab,
@@ -403,89 +403,89 @@ export const modules = {
         }
       }
     }
-    const mb = 67.5 * Math.PI / 180;
+    const jb = 67.5 * Math.PI / 180;
 
-    function lb(bb, cb) {
-      const sb = Math.abs(bb);
-      if (sb > mb || cb.trackHalfWidth <= 0) return null;
-      const kb = cb.trackHalfWidth,
-        Wb = cb.screenHalfWidth / (cb.tanHalfFovX * Math.max(.5, Math.cos(cb.pitch))),
-        ab = Math.min(Math.atan(.6 * kb / Wb), .75 * mb),
-        Tb = Wb * Math.tan(ab);
-      let Ub;
-      if (sb <= ab) Ub = Wb * Math.tan(sb);
+    function Rb(bb, ab) {
+      const Ub = Math.abs(bb);
+      if (Ub > jb || ab.trackHalfWidth <= 0) return null;
+      const Ab = ab.trackHalfWidth,
+        Mb = ab.screenHalfWidth / (ab.tanHalfFovX * Math.max(.5, Math.cos(ab.pitch))),
+        Tb = Math.min(Math.atan(.6 * Ab / Mb), .75 * jb),
+        Eb = Mb * Math.tan(Tb);
+      let Yb;
+      if (Ub <= Tb) Yb = Mb * Math.tan(Ub);
       else {
-        const bb = mb - ab,
-          cb = Math.max(0, Wb * bb / (Math.cos(ab) ** 2 * (kb - Tb)) - 1),
-          Ib = (sb - ab) / bb;
-        Ub = Tb + (kb - Tb) * (1 + cb) * Ib / (1 + cb * Ib)
+        const bb = jb - Tb,
+          ab = Math.max(0, Mb * bb / (Math.cos(Tb) ** 2 * (Ab - Eb)) - 1),
+          Bb = (Ub - Tb) / bb;
+        Yb = Eb + (Ab - Eb) * (1 + ab) * Bb / (1 + ab * Bb)
       }
-      return 50 + Math.sign(bb) * Ub * 50 / kb
+      return 50 + Math.sign(bb) * Yb * 50 / Ab
     }
-    class Qb {
-      constructor(bb, cb) {
-        this.map = bb, this.visited = cb, this.id = void 0, this.enabled = !0, this.range = 96, this.limit = 40, this.id = cb ? "landmarks" : "unknownLandmarks"
+    class kb {
+      constructor(bb, ab) {
+        this.map = bb, this.visited = ab, this.id = void 0, this.enabled = !0, this.range = 96, this.limit = 40, this.id = ab ? "landmarks" : "unknownLandmarks"
       }
       getPoints() {
         const bb = this.map.getSnapshot().map;
         return !bb || bb.insideDungeon ? [] : bb.landmarks.filter((bb => bb.visited === this.visited)).map((bb => {
-          var cb, sb;
+          var ab, Ub;
           return {
             id: `landmark:${bb.id}`,
             position: bb.position,
-            icon: null !== (cb = bb.icon) && void 0 !== cb ? cb : "unknown",
-            nameKey: null !== (sb = bb.nameKey) && void 0 !== sb ? sb : "skyblockGame:compassUnknown",
+            icon: null !== (ab = bb.icon) && void 0 !== ab ? ab : "unknown",
+            nameKey: null !== (Ub = bb.nameKey) && void 0 !== Ub ? Ub : "skyblockGame:compassUnknown",
             kind: this.visited ? "landmark" : "unknown"
           }
         }))
       }
     }
-    class eb {
-      constructor(bb, cb, sb, kb) {
-        this.map = bb, this.kind = cb, this.position = sb, this.alive = kb, this.id = void 0, this.enabled = !0, this.range = void 0, this.limit = void 0, this.id = cb, this.range = "enemy" === cb ? 48 : 64, this.limit = 12
+    class yb {
+      constructor(bb, ab, Ub, Ab) {
+        this.map = bb, this.kind = ab, this.position = Ub, this.alive = Ab, this.id = void 0, this.enabled = !0, this.range = void 0, this.limit = void 0, this.id = ab, this.range = "enemy" === ab ? 48 : 64, this.limit = 12
       }
-      aN(bb) {
-        if ("enemy" !== this.kind || this.alive(bb.ia)) return this.position(bb.ia)
+      eZ(bb) {
+        if ("enemy" !== this.kind || this.alive(bb.YT)) return this.position(bb.YT)
       }
       getPoints() {
         const bb = [];
-        for (const kb of this.map.getEntities()) {
-          if (kb.kind !== this.kind || "enemy" === this.kind && !this.alive(kb.compassEntityId)) continue;
-          const Wb = this.position(kb.compassEntityId);
-          var cb, sb;
-          if (Wb) bb.push({
-            id: `${this.kind}:${kb.compassEntityId}`,
-            ia: kb.compassEntityId,
+        for (const Ab of this.map.getEntities()) {
+          if (Ab.kind !== this.kind || "enemy" === this.kind && !this.alive(Ab.compassEntityId)) continue;
+          const Mb = this.position(Ab.compassEntityId);
+          var ab, Ub;
+          if (Mb) bb.push({
+            id: `${this.kind}:${Ab.compassEntityId}`,
+            YT: Ab.compassEntityId,
             kind: this.kind,
-            icon: null !== (cb = kb.icon) && void 0 !== cb ? cb : kb.npcSkin ? `npc_${kb.npcSkin}` : this.kind,
-            displayName: kb.displayName,
-            position: Wb,
-            nameKey: null !== (sb = kb.nameKey) && void 0 !== sb ? sb : "enemy" === this.kind ? "skyblockGame:compassEnemy" : "skyblockGame:compassNpc"
+            icon: null !== (ab = Ab.icon) && void 0 !== ab ? ab : Ab.npcSkin ? `npc_${Ab.npcSkin}` : this.kind,
+            displayName: Ab.displayName,
+            position: Mb,
+            nameKey: null !== (Ub = Ab.nameKey) && void 0 !== Ub ? Ub : "enemy" === this.kind ? "skyblockGame:compassEnemy" : "skyblockGame:compassNpc"
           })
         }
         return bb
       }
     }
-    class Cb {
+    class Zb {
       constructor(bb) {
         this.map = bb, this.id = "portals", this.enabled = !0, this.range = 96, this.limit = 12
       }
       getPoints() {
         const bb = this.map.getSnapshot().map;
         return !bb || bb.insideDungeon ? [] : bb.portals.map((bb => {
-          var cb;
+          var ab;
           return {
             id: "portal:" + bb.id,
             kind: "portal",
             position: bb.position,
-            nameKey: null !== (cb = bb.nameKey) && void 0 !== cb ? cb : "skyblockGame:compassUnvisitedZone",
+            nameKey: null !== (ab = bb.nameKey) && void 0 !== ab ? ab : "skyblockGame:compassUnvisitedZone",
             icon: bb.visited ? "dungeons" === bb.destination ? "portal_orange" : "portal" : "unknown",
             colour: bb.colour
           }
         }))
       }
     }
-    class Nb {
+    class Db {
       constructor(bb) {
         this.target = bb, this.id = "quest", this.enabled = !0, this.range = 1 / 0, this.limit = 1
       }
@@ -501,34 +501,34 @@ export const modules = {
       }
     }
 
-    function Vb(bb, cb, sb) {
-      let kb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : bb.position;
-      const ab = kb[0] - cb[0],
-        Tb = kb[2] - cb[2];
+    function zb(bb, ab, Ub) {
+      let Ab = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : bb.position;
+      const Tb = Ab[0] - ab[0],
+        Eb = Ab[2] - ab[2];
       return {
         ...bb,
-        position: kb,
-        offset: Wb.d.computeShortestRotation(sb, (0, Wb.Fb)([ab, 0, Tb])),
-        distance: Math.hypot(ab, kb[1] - cb[1], Tb)
+        position: Ab,
+        offset: Mb.d.computeShortestRotation(Ub, (0, Mb.sb)([Tb, 0, Eb])),
+        distance: Math.hypot(Tb, Ab[1] - ab[1], Eb)
       }
     }
-    let Lb;
+    let xb;
 
-    function ub(bb, cb) {
-      var sb;
-      return (null === (sb = Lb) || void 0 === sb ? void 0 : sb.locale) !== cb && (Lb = {
-        locale: cb,
-        near: new Intl.NumberFormat(cb, {
+    function ib(bb, ab) {
+      var Ub;
+      return (null === (Ub = xb) || void 0 === Ub ? void 0 : Ub.locale) !== ab && (xb = {
+        locale: ab,
+        near: new Intl.NumberFormat(ab, {
           minimumFractionDigits: 1,
           maximumFractionDigits: 1
         }),
-        far: new Intl.NumberFormat(cb, {
+        far: new Intl.NumberFormat(ab, {
           minimumFractionDigits: 0,
           maximumFractionDigits: 0
         })
-      }), (bb < 10 ? Lb.near : Lb.far).format(bb)
+      }), (bb < 10 ? xb.near : xb.far).format(bb)
     }
-    class Yb {
+    class fb {
       constructor() {
         this.providers = new Map, this.candidates = [], this.refreshAt = 0
       }
@@ -537,49 +537,49 @@ export const modules = {
           this.providers.get(bb.id) === bb && (this.providers.delete(bb.id), this.refreshAt = 0)
         }
       }
-      frame(bb, cb, sb) {
-        if (sb >= this.refreshAt) {
-          this.refreshAt = sb + 200, this.candidates = [];
-          for (const cb of this.providers.values()) {
-            if (!cb.enabled) continue;
-            const sb = cb.getPoints().map((cb => {
-              const sb = cb.position;
+      frame(bb, ab, Ub) {
+        if (Ub >= this.refreshAt) {
+          this.refreshAt = Ub + 200, this.candidates = [];
+          for (const ab of this.providers.values()) {
+            if (!ab.enabled) continue;
+            const Ub = ab.getPoints().map((ab => {
+              const Ub = ab.position;
               return {
-                point: cb,
-                distance: Math.hypot(sb[0] - bb[0], sb[1] - bb[1], sb[2] - bb[2])
+                point: ab,
+                distance: Math.hypot(Ub[0] - bb[0], Ub[1] - bb[1], Ub[2] - bb[2])
               }
-            })).filter((bb => bb.distance <= cb.range)).sort(((bb, cb) => bb.distance - cb.distance)).slice(0, cb.limit);
+            })).filter((bb => bb.distance <= ab.range)).sort(((bb, ab) => bb.distance - ab.distance)).slice(0, ab.limit);
             for (const {
                 point: bb
               }
-              of sb) this.candidates.push({
-              provider: cb,
+              of Ub) this.candidates.push({
+              provider: ab,
               point: bb
             })
           }
         }
-        const kb = [];
+        const Ab = [];
         for (const {
-            point: Wb,
-            provider: ab
+            point: Mb,
+            provider: Tb
           }
           of this.candidates) {
-          if (!ab.enabled) continue;
-          const sb = ab.aN ? ab.aN(Wb) : Wb.position;
-          if (sb) {
-            const ab = Vb(Wb, bb, cb, sb);
-            Math.abs(ab.offset) <= mb && kb.push(ab)
+          if (!Tb.enabled) continue;
+          const Ub = Tb.eZ ? Tb.eZ(Mb) : Mb.position;
+          if (Ub) {
+            const Tb = zb(Mb, bb, ab, Ub);
+            Math.abs(Tb.offset) <= jb && Ab.push(Tb)
           }
         }
-        return kb
+        return Ab
       }
       dispose() {
         this.providers.clear(), this.candidates = []
       }
     }
-    var hb = sb(36247),
-      Jb = sb(64);
-    const gb = [{
+    var mb = Ub(36023),
+      pb = Ub(52);
+    const Nb = [{
         dailyRewardCoins: 1e3,
         dailyRewardItems: []
       }, {
@@ -610,41 +610,41 @@ export const modules = {
           dailyRewardItemAmount: 1
         }]
       }],
-      Bb = gb.length;
+      Wb = Nb.length;
 
-    function tb(bb) {
-      return bb >= Bb ? 1 : bb + 1
+    function Hb(bb) {
+      return bb >= Wb ? 1 : bb + 1
     }
-    const yb = "skyblockQuests",
-      Pb = Object.freeze({
+    const Ib = "skyblockQuests",
+      db = Object.freeze({
         easy: "skyblockGame:difficultyEasy",
         medium: "skyblockGame:difficultyMedium",
         hard: "skyblockGame:difficultyHard",
         insane: "skyblockGame:difficultyInsane"
       }),
-      Db = Object.freeze({
+      Fb = Object.freeze({
         easy: "#77b326",
         medium: "#eac03d",
         hard: "#df7622",
         insane: "#e74d4d"
       });
 
-    function Eb(bb) {
-      let cb = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-      const sb = Math.max(0, Math.floor(bb)),
-        kb = Math.floor(sb % 1e3 / 100),
-        Wb = Math.floor(sb / 1e3),
-        ab = Wb % 60,
-        Tb = Math.floor(Wb / 60),
-        Ub = Tb % 60,
-        Ib = Math.floor(Tb / 60),
-        Hb = bb => bb < 10 ? `0${bb}` : String(bb),
-        fb = cb ? `.${kb}` : "";
-      return Ib > 0 ? `${Ib}:${Hb(Ub)}:${Hb(ab)}${fb}` : `${Ub}:${Hb(ab)}${fb}`
+    function hb(bb) {
+      let ab = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+      const Ub = Math.max(0, Math.floor(bb)),
+        Ab = Math.floor(Ub % 1e3 / 100),
+        Mb = Math.floor(Ub / 1e3),
+        Tb = Mb % 60,
+        Eb = Math.floor(Mb / 60),
+        Yb = Eb % 60,
+        Bb = Math.floor(Eb / 60),
+        eb = bb => bb < 10 ? `0${bb}` : String(bb),
+        vb = ab ? `.${Ab}` : "";
+      return Bb > 0 ? `${Bb}:${eb(Yb)}:${eb(Tb)}${vb}` : `${Yb}:${eb(Tb)}${vb}`
     }
-    const ib = "devquests",
-      Ob = "none",
-      Gb = {
+    const Gb = "devquests",
+      Qb = "none",
+      qb = {
         hub: {
           farming_1: {
             min: [4, 16, 90],
@@ -682,8 +682,8 @@ export const modules = {
           }
         }
       },
-      Kb = "Compressed Messy Stone",
-      Zb = {
+      ub = "Compressed Messy Stone",
+      rb = {
         "Grass Block": "Useless Soil",
         "Pine Grass Block": "Useless Soil",
         "Jungle Grass Block": "Useless Soil",
@@ -696,120 +696,120 @@ export const modules = {
         Sand: "Sandstone",
         Gravel: "Smooth Andesite"
       },
-      zb = ["Stone", "Diorite", "Andesite", "Granite"],
-      qb = new Set(zb),
-      db = (Object.keys(Zb), {
+      Kb = ["Stone", "Diorite", "Andesite", "Granite"],
+      ob = new Set(Kb),
+      lb = (Object.keys(rb), {
         "Pure Coal Ore": "Coal Ore",
         "Pure Iron Ore": "Iron Ore",
         "Pure Gold Ore": "Gold Ore",
         "Pure Diamond Ore": "Diamond Ore",
         "Pure Moonstone Ore": "Moonstone Ore"
       });
-    const Ab = ["Magmasteel Helmet", "Magmasteel Chestplate", "Magmasteel Gauntlets", "Magmasteel Leggings", "Magmasteel Boots"];
+    const tb = ["Magmasteel Helmet", "Magmasteel Chestplate", "Magmasteel Gauntlets", "Magmasteel Leggings", "Magmasteel Boots"];
 
-    function wb(bb, cb) {
-      const sb = Math.floor(5 * bb / (2 * cb + 1));
-      return Math.min(4, Math.max(0, sb))
+    function wb(bb, ab) {
+      const Ub = Math.floor(5 * bb / (2 * ab + 1));
+      return Math.min(4, Math.max(0, Ub))
     }
-    var rb = sb(1253);
-    var ob = sb(36039);
-    var Sb = sb(36240),
-      Rb = sb(26),
-      vb = sb(8487);
-    const Fb = ["foraging", "combat", "mining", "farming", "fishing", "exploration"],
-      xb = 1e3;
+    var sb = Ub(1189);
+    var gb = Ub(35822);
+    var Cb = Ub(36017),
+      Vb = Ub(22),
+      Ob = Ub(8441);
+    const cb = ["foraging", "combat", "mining", "farming", "fishing", "exploration"],
+      Jb = 1e3;
 
-    function jb(bb) {
+    function nb(bb) {
       return Math.max(0, bb)
     }
 
-    function pb(bb) {
-      return 1 + .01 * jb(bb)
+    function Sb(bb) {
+      return 1 + .01 * nb(bb)
     }
 
-    function bc(bb) {
-      return 1 + .005 * jb(bb)
+    function ba(bb) {
+      return 1 + .005 * nb(bb)
     }
 
-    function cc(bb) {
-      return 1 + .005 * jb(bb)
+    function aa(bb) {
+      return 1 + .005 * nb(bb)
     }
 
-    function sc(bb) {
-      return .01 * jb(bb)
+    function Ua(bb) {
+      return .01 * nb(bb)
     }
 
-    function kc(bb) {
-      return 150 / (150 + jb(bb))
+    function Aa(bb) {
+      return 150 / (150 + nb(bb))
     }
 
-    function Wc(bb) {
-      return 1 + .002 * jb(bb)
+    function Ma(bb) {
+      return 1 + .002 * nb(bb)
     }
 
-    function ac(bb) {
+    function Ta(bb) {
       return Math.round(10 * bb) / 10
     }
 
-    function Tc(bb, cb) {
+    function Ea(bb, ab) {
       switch (bb) {
         case "foraging":
           return {
-            translationKey: "skyblockGame:foragingBenefit", percent: ac(100 * (bc(cb) - 1))
+            translationKey: "skyblockGame:foragingBenefit", percent: Ta(100 * (ba(ab) - 1))
           };
         case "combat":
           return {
-            translationKey: "skyblockGame:combatBenefit", percent: ac(100 * (pb(cb) - 1))
+            translationKey: "skyblockGame:combatBenefit", percent: Ta(100 * (Sb(ab) - 1))
           };
         case "mining":
           return {
-            translationKey: "skyblockGame:miningBenefit", percent: ac(100 * (cc(cb) - 1))
+            translationKey: "skyblockGame:miningBenefit", percent: Ta(100 * (aa(ab) - 1))
           };
         case "farming":
           return {
-            translationKey: "skyblockGame:farmingBenefit", percent: ac(100 * sc(cb))
+            translationKey: "skyblockGame:farmingBenefit", percent: Ta(100 * Ua(ab))
           };
         case "fishing":
           return {
-            translationKey: "skyblockGame:fishingBenefit", percent: ac(100 * (1 - kc(cb)))
+            translationKey: "skyblockGame:fishingBenefit", percent: Ta(100 * (1 - Aa(ab)))
           };
         case "exploration":
           return {
-            translationKey: "skyblockGame:explorationBenefit", percent: ac(100 * (Wc(cb) - 1))
+            translationKey: "skyblockGame:explorationBenefit", percent: Ta(100 * (Ma(ab) - 1))
           }
       }
     }
 
-    function Uc(bb) {
+    function Ya(bb) {
       return "farming" === bb ? 200 : 100
     }
 
-    function Ic(bb, cb) {
+    function Ba(bb, ab) {
       if (!Number.isSafeInteger(bb) || bb < 0) throw new Error("Skill XP must be a non-negative safe integer");
-      const sb = Uc(cb),
-        kb = bb => function(bb, cb) {
-          return Uc(bb) * cb * (cb + 1) / 2
-        }(cb, bb);
-      let Wb = Math.min(xb, Math.floor((Math.sqrt(8 * bb / sb + 1) - 1) / 2));
-      return Wb < xb && kb(Wb + 1) <= bb ? Wb++ : kb(Wb) > bb && Wb--, {
+      const Ub = Ya(ab),
+        Ab = bb => function(bb, ab) {
+          return Ya(bb) * ab * (ab + 1) / 2
+        }(ab, bb);
+      let Mb = Math.min(Jb, Math.floor((Math.sqrt(8 * bb / Ub + 1) - 1) / 2));
+      return Mb < Jb && Ab(Mb + 1) <= bb ? Mb++ : Ab(Mb) > bb && Mb--, {
         totalXp: bb,
-        level: Wb,
-        xpIntoLevel: bb - kb(Wb),
-        xpForNextLevel: Wb === xb ? null : sb * (Wb + 1)
+        level: Mb,
+        xpIntoLevel: bb - Ab(Mb),
+        xpForNextLevel: Mb === Jb ? null : Ub * (Mb + 1)
       }
     }
-    const Hc = new Set(["Apple Block", "Plum Block", "Coconut Block", "Pear Block", "Cherry Block", "Mango Block", "Banana Block"]);
+    const ea = new Set(["Apple Block", "Plum Block", "Coconut Block", "Pear Block", "Cherry Block", "Mango Block", "Banana Block"]);
 
-    function fc(bb) {
-      return Hc.has(bb)
+    function va(bb) {
+      return ea.has(bb)
     }
-    const Mc = new Set(Wb.rb);
+    const La = new Set(Mb.hb);
 
-    function Xc(bb) {
-      return Mc.has(bb)
+    function Pa(bb) {
+      return La.has(bb)
     }
     new Set(["Watermelon", "Melon", "Wheat|FreshlyGrown", "Rice|FreshlyGrown", "Corn Plant|FreshlyGrown", "Chili Pepper Plant|FreshlyGrown", "Chili Pepper Plant|Lava|FreshlyGrown", "Tomato Plant|FreshlyGrown", "Tomato Plant|Top|FreshlyGrown", "Carrot Plant|FreshlyGrown", "Potato Plant|FreshlyGrown", "Sugar Cane Plant|FreshlyGrown", "Sugar Cane Plant|Top|FreshlyGrown", "Coffee Plant|FreshlyGrown", "Lettuce Plant|FreshlyGrown", "Cauliflower Plant|FreshlyGrown", "Parsnip Plant|FreshlyGrown", "Red Cabbage Plant|FreshlyGrown", "Beetroot Plant|FreshlyGrown"]);
-    const nc = {
+    const Xa = {
         "Maple Log": 10,
         "Pine Log": 10,
         "Plum Log": 10,
@@ -822,7 +822,7 @@ export const modules = {
         "Spectral Log": 10,
         "Mango Log": 10
       },
-      mc = {
+      ja = {
         Stone: 2,
         Diorite: 18,
         Granite: 18,
@@ -835,14 +835,14 @@ export const modules = {
         "Block of Coal": 15,
         "Block of Gold": 30
       },
-      lc = {
-        ...mc,
-        ...Object.fromEntries(Object.entries(db).map((bb => {
-          let [cb, sb] = bb;
-          return [cb, 9 * mc[sb]]
+      Ra = {
+        ...ja,
+        ...Object.fromEntries(Object.entries(lb).map((bb => {
+          let [ab, Ub] = bb;
+          return [ab, 9 * ja[Ub]]
         })))
       },
-      Qc = {
+      ka = {
         Watermelon: 10,
         Melon: 10,
         "Wheat|FreshlyGrown": 10,
@@ -863,7 +863,7 @@ export const modules = {
         "Red Cabbage Plant|FreshlyGrown": 10,
         "Beetroot Plant|FreshlyGrown": 10
       },
-      ec = {
+      ya = {
         Wheatfish: 25,
         Darter: 25,
         "Sunset Minnow": 25,
@@ -927,7 +927,7 @@ export const modules = {
         "Pearlescent Moonfish": 300,
         "Game Dev Fish": 50
       };
-    const Cc = {
+    const Za = {
         foraging: "Iron Axe",
         combat: "Iron Sword",
         mining: "Iron Pickaxe",
@@ -935,7 +935,7 @@ export const modules = {
         fishing: "Rusty Rod",
         exploration: "Compass"
       },
-      Nc = {
+      Da = {
         foraging: [80, 220, 100],
         combat: [240, 70, 70],
         mining: [60, 220, 240],
@@ -944,112 +944,112 @@ export const modules = {
         exploration: [255, 180, 70]
       };
 
-    function Vc(bb) {
-      return `rgb(${Nc[bb].join(", ")})`
+    function za(bb) {
+      return `rgb(${Da[bb].join(", ")})`
     }
 
-    function Lc(bb, cb, sb) {
-      if (!sb) return bb(cb);
-      const kb = {};
-      for (const [Wb, ab] of Object.entries(sb)) kb[Wb] = "string" === typeof ab ? ab : bb(ab.translationKey);
-      return bb(cb, kb)
+    function xa(bb, ab, Ub) {
+      if (!Ub) return bb(ab);
+      const Ab = {};
+      for (const [Mb, Tb] of Object.entries(Ub)) Ab[Mb] = "string" === typeof Tb ? Tb : bb(Tb.translationKey);
+      return bb(ab, Ab)
     }
-    class uc {
-      constructor(bb, cb) {
-        this.now = bb, this.getJournal = cb, this.pending = [], this.current = null, this.followUp = null, this.shownAt = 0, this.expiresAt = 0, this.token = 0, this.qU = !1, this.onShown = () => {}
+    class ia {
+      constructor(bb, ab) {
+        this.now = bb, this.getJournal = ab, this.pending = [], this.current = null, this.followUp = null, this.shownAt = 0, this.expiresAt = 0, this.token = 0, this.PY = !1, this.onShown = () => {}
       }
       enqueue(bb) {
-        const cb = Yc(bb);
-        if (cb) this.pending.push(bb);
+        const ab = fa(bb);
+        if (ab) this.pending.push(bb);
         else {
-          const cb = this.pending.findIndex(Yc);
-          this.pending.splice(-1 === cb ? this.pending.length : cb, 0, bb)
+          const ab = this.pending.findIndex(fa);
+          this.pending.splice(-1 === ab ? this.pending.length : ab, 0, bb)
         }
-        return (null === this.current || null !== this.followUp && !cb) && (this.advance(), !0)
+        return (null === this.current || null !== this.followUp && !ab) && (this.advance(), !0)
       }
       setHeld(bb) {
-        return this.qU = bb, !bb && null === this.current && this.pending.length > 0 && (this.advance(), !0)
+        return this.PY = bb, !bb && null === this.current && this.pending.length > 0 && (this.advance(), !0)
       }
-      aX() {
+      qL() {
         const bb = this.getJournal(),
-          cb = this.followUp;
-        if (null !== this.current && this.now() >= this.expiresAt) return this.showFollowUp(null === cb ? this.findFollowUp(this.current) : null), !0;
-        if ("explore" === (null === cb || void 0 === cb ? void 0 : cb.kind) && bb && bb.active.length > 0) return this.showFollowUp(this.findFollowUp(this.current)), !0;
-        if ("step" === (null === cb || void 0 === cb ? void 0 : cb.kind)) {
+          ab = this.followUp;
+        if (null !== this.current && this.now() >= this.expiresAt) return this.showFollowUp(null === ab ? this.findFollowUp(this.current) : null), !0;
+        if ("explore" === (null === ab || void 0 === ab ? void 0 : ab.kind) && bb && bb.active.length > 0) return this.showFollowUp(this.findFollowUp(this.current)), !0;
+        if ("step" === (null === ab || void 0 === ab ? void 0 : ab.kind)) {
           const bb = this.findFollowUp(this.current);
-          if ("step" !== (null === bb || void 0 === bb ? void 0 : bb.kind) || bb.questId !== cb.questId || bb.step.id !== cb.step.id) return this.showFollowUp(bb, this.expiresAt), !0
+          if ("step" !== (null === bb || void 0 === bb ? void 0 : bb.kind) || bb.questId !== ab.questId || bb.step.id !== ab.step.id) return this.showFollowUp(bb, this.expiresAt), !0
         }
         return !1
       }
       clear() {
         this.pending = [], this.current = null, this.followUp = null, this.expiresAt = 0
       }
-      getView(bb, cb, sb) {
-        var kb, Wb, ab, Tb;
+      getView(bb, ab, Ub) {
+        var Ab, Mb, Tb, Eb;
         if (null === this.current) return null;
-        if ("skillLevel" === this.current.questCompletionKind) return this.getSkillLevelView(this.current, bb, sb);
+        if ("skillLevel" === this.current.questCompletionKind) return this.getSkillLevelView(this.current, bb, Ub);
         if ("landmark" === this.current.questCompletionKind) return this.getLandmarkView(this.current, bb);
-        if ("npcNote" === this.current.questCompletionKind) return this.getNpcNoteView(this.current, bb, cb);
+        if ("npcNote" === this.current.questCompletionKind) return this.getNpcNoteView(this.current, bb, ab);
         const {
-          questCompletionKind: Ub,
-          questCompletionNameKey: Ib
-        } = this.current, Hb = "step" === this.current.questCompletionKind ? this.current.questCompletionNameParams : void 0, fb = "quest" === this.current.questCompletionKind ? this.current.questCompletionCoins : 0, Mb = "step" === (null === (kb = this.followUp) || void 0 === kb ? void 0 : kb.kind) ? this.followUp : null, Xb = "explore" === (null === (Wb = this.followUp) || void 0 === Wb ? void 0 : Wb.kind);
-        let nb;
-        return nb = Xb ? bb("skyblockGame:questExploreTitle") : null !== Mb ? "quest" === Ub ? bb("skyblockGame:questNextQuestTitle", {
-          quest: bb(Mb.questNameKey)
-        }) : bb("skyblockGame:questNextStepTitle") : bb("started" === Ub ? "skyblockGame:questStartedTitle" : "quest" === Ub ? "skyblockGame:questCompletedTitle" : "skyblockGame:subquestCompletedTitle"), {
+          questCompletionKind: Yb,
+          questCompletionNameKey: Bb
+        } = this.current, eb = "step" === this.current.questCompletionKind ? this.current.questCompletionNameParams : void 0, vb = "quest" === this.current.questCompletionKind ? this.current.questCompletionCoins : 0, Lb = "step" === (null === (Ab = this.followUp) || void 0 === Ab ? void 0 : Ab.kind) ? this.followUp : null, Pb = "explore" === (null === (Mb = this.followUp) || void 0 === Mb ? void 0 : Mb.kind);
+        let Xb;
+        return Xb = Pb ? bb("skyblockGame:questExploreTitle") : null !== Lb ? "quest" === Yb ? bb("skyblockGame:questNextQuestTitle", {
+          quest: bb(Lb.questNameKey)
+        }) : bb("skyblockGame:questNextStepTitle") : bb("started" === Yb ? "skyblockGame:questStartedTitle" : "quest" === Yb ? "skyblockGame:questCompletedTitle" : "skyblockGame:subquestCompletedTitle"), {
           token: this.token,
-          kind: null === this.followUp ? Ub : "step",
+          kind: null === this.followUp ? Yb : "step",
           phase: null === this.followUp ? "completion" : "next",
-          title: nb,
-          name: Xb ? cb("skyblockGame:questExploreName") : null !== Mb ? Lc(cb, Mb.step.nameKey, Mb.step.nameParams) : Lc(cb, Ib, Hb),
-          description: Xb ? cb("skyblockGame:questExploreDescription") : null === Mb ? null : Lc(cb, Mb.step.descriptionKey, Mb.step.descriptionParams),
-          reward: null === this.followUp && fb > 0 ? cb("skyblockGame:questCoinRewardSuffix", {
-            amount: fb.toLocaleString(sb)
+          title: Xb,
+          name: Pb ? ab("skyblockGame:questExploreName") : null !== Lb ? xa(ab, Lb.step.nameKey, Lb.step.nameParams) : xa(ab, Bb, eb),
+          description: Pb ? ab("skyblockGame:questExploreDescription") : null === Lb ? null : xa(ab, Lb.step.descriptionKey, Lb.step.descriptionParams),
+          reward: null === this.followUp && vb > 0 ? ab("skyblockGame:questCoinRewardSuffix", {
+            amount: vb.toLocaleString(Ub)
           }) : null,
-          iconItem: null !== (ab = null === Mb || void 0 === Mb ? void 0 : Mb.step.questIconItem) && void 0 !== ab ? ab : null,
+          iconItem: null !== (Tb = null === Lb || void 0 === Lb ? void 0 : Lb.step.questIconItem) && void 0 !== Tb ? Tb : null,
           accent: null,
           durationMs: this.expiresAt - this.shownAt,
-          waypointNameKey: null !== Mb && (null === (Tb = this.getJournal()) || void 0 === Tb ? void 0 : Tb.trackedQuestId) === Mb.questId ? Mb.step.nameKey : null
+          waypointNameKey: null !== Lb && (null === (Eb = this.getJournal()) || void 0 === Eb ? void 0 : Eb.trackedQuestId) === Lb.questId ? Lb.step.nameKey : null
         }
       }
-      getSkillLevelView(bb, cb, sb) {
+      getSkillLevelView(bb, ab, Ub) {
         let {
-          skill: kb,
-          beforeLevel: Wb,
-          level: ab
+          skill: Ab,
+          beforeLevel: Mb,
+          level: Tb
         } = bb;
-        const Tb = Tc(kb, Wb),
-          Ub = Tc(kb, ab);
+        const Eb = Ea(Ab, Mb),
+          Yb = Ea(Ab, Tb);
         return {
           token: this.token,
           kind: "skillLevel",
           phase: "completion",
-          title: cb(`skyblockGame:${kb}`),
-          name: cb("skyblockGame:skillLevelUp", {
-            to: ab.toLocaleString(sb)
+          title: ab(`skyblockGame:${Ab}`),
+          name: ab("skyblockGame:skillLevelUp", {
+            to: Tb.toLocaleString(Ub)
           }),
-          description: Tb.percent === Ub.percent ? null : cb(`${Ub.translationKey}Change`, {
-            before: Tb.percent.toLocaleString(sb),
-            after: Ub.percent.toLocaleString(sb)
+          description: Eb.percent === Yb.percent ? null : ab(`${Yb.translationKey}Change`, {
+            before: Eb.percent.toLocaleString(Ub),
+            after: Yb.percent.toLocaleString(Ub)
           }),
           reward: null,
-          iconItem: Cc[kb],
-          accent: Vc(kb),
+          iconItem: Za[Ab],
+          accent: za(Ab),
           durationMs: this.expiresAt - this.shownAt,
           waypointNameKey: null
         }
       }
-      getLandmarkView(bb, cb) {
+      getLandmarkView(bb, ab) {
         let {
-          landmarkNameKey: sb
+          landmarkNameKey: Ub
         } = bb;
         return {
           token: this.token,
           kind: "landmark",
           phase: "completion",
-          title: cb("skyblockGame:landmarkDiscovered"),
-          name: cb(sb),
+          title: ab("skyblockGame:landmarkDiscovered"),
+          name: ab(Ub),
           description: null,
           reward: null,
           iconItem: null,
@@ -1058,27 +1058,27 @@ export const modules = {
           waypointNameKey: null
         }
       }
-      getNpcNoteView(bb, cb, sb) {
+      getNpcNoteView(bb, ab, Ub) {
         let {
-          titleKey: kb,
-          textKey: Wb,
-          params: ab = {},
-          nameKeys: Tb = {},
-          iconItem: Ub = null
+          titleKey: Ab,
+          textKey: Mb,
+          params: Tb = {},
+          nameKeys: Eb = {},
+          iconItem: Yb = null
         } = bb;
-        const Ib = {
-          ...ab
+        const Bb = {
+          ...Tb
         };
-        for (const [Hb, fb] of Object.entries(Tb)) Ib[Hb] = cb(fb);
+        for (const [eb, vb] of Object.entries(Eb)) Bb[eb] = ab(vb);
         return {
           token: this.token,
           kind: "npcNote",
           phase: "completion",
-          title: cb(kb),
-          name: sb(Wb, Ib),
+          title: ab(Ab),
+          name: Ub(Mb, Bb),
           description: null,
           reward: null,
-          iconItem: Ub,
+          iconItem: Yb,
           accent: null,
           durationMs: this.expiresAt - this.shownAt,
           waypointNameKey: null
@@ -1102,89 +1102,89 @@ export const modules = {
             return 2400
         }
       }
-      showFollowUp(bb, cb) {
-        null === bb || this.qU ? this.advance() : (this.followUp = bb, this.token++, this.shownAt = this.now(), this.expiresAt = null !== cb && void 0 !== cb ? cb : this.shownAt + this.durationMs())
+      showFollowUp(bb, ab) {
+        null === bb || this.PY ? this.advance() : (this.followUp = bb, this.token++, this.shownAt = this.now(), this.expiresAt = null !== ab && void 0 !== ab ? ab : this.shownAt + this.durationMs())
       }
       findFollowUp(bb) {
-        var cb;
-        const sb = this.getJournal();
-        if (!sb || this.hasPendingQuestPopup() || Yc(bb)) return null;
-        const kb = "started" === bb.questCompletionKind ? sb.active.some((cb => cb.id === bb.questCompletionQuestId)) : "quest" === bb.questCompletionKind ? sb.completed.some((cb => cb.id === bb.questCompletionQuestId)) : [...sb.active, ...sb.completed].some((cb => cb.id === bb.questCompletionQuestId && cb.subquests.some((cb => cb.id === bb.questCompletionStepId && "completed" === cb.status))));
-        if (!kb) return null;
-        if ("quest" === bb.questCompletionKind && 0 === sb.active.length && !this.hasPendingQuestPopup()) return {
+        var ab;
+        const Ub = this.getJournal();
+        if (!Ub || this.hasPendingQuestPopup() || fa(bb)) return null;
+        const Ab = "started" === bb.questCompletionKind ? Ub.active.some((ab => ab.id === bb.questCompletionQuestId)) : "quest" === bb.questCompletionKind ? Ub.completed.some((ab => ab.id === bb.questCompletionQuestId)) : [...Ub.active, ...Ub.completed].some((ab => ab.id === bb.questCompletionQuestId && ab.subquests.some((ab => ab.id === bb.questCompletionStepId && "completed" === ab.status))));
+        if (!Ab) return null;
+        if ("quest" === bb.questCompletionKind && 0 === Ub.active.length && !this.hasPendingQuestPopup()) return {
           kind: "explore"
         };
-        const Wb = sb.active.find((bb => bb.id === sb.trackedQuestId)),
-          ab = null !== (cb = null === Wb || void 0 === Wb ? void 0 : Wb.subquests.find((bb => "ready" === bb.status))) && void 0 !== cb ? cb : null === Wb || void 0 === Wb ? void 0 : Wb.subquests.find((bb => "active" === bb.status));
-        return ab ? {
+        const Mb = Ub.active.find((bb => bb.id === Ub.trackedQuestId)),
+          Tb = null !== (ab = null === Mb || void 0 === Mb ? void 0 : Mb.subquests.find((bb => "ready" === bb.status))) && void 0 !== ab ? ab : null === Mb || void 0 === Mb ? void 0 : Mb.subquests.find((bb => "active" === bb.status));
+        return Tb ? {
           kind: "step",
-          questId: Wb.id,
-          questNameKey: Wb.nameKey,
-          step: ab
+          questId: Mb.id,
+          questNameKey: Mb.nameKey,
+          step: Tb
         } : null
       }
       hasPendingQuestPopup() {
-        return this.pending.some((bb => !Yc(bb)))
+        return this.pending.some((bb => !fa(bb)))
       }
       advance() {
         var bb;
-        this.current = this.qU ? null : null !== (bb = this.pending.shift()) && void 0 !== bb ? bb : null, this.followUp = null, null !== this.current && (this.token++, this.shownAt = this.now(), this.expiresAt = this.shownAt + this.durationMs(), this.onShown(this.current.questCompletionKind))
+        this.current = this.PY ? null : null !== (bb = this.pending.shift()) && void 0 !== bb ? bb : null, this.followUp = null, null !== this.current && (this.token++, this.shownAt = this.now(), this.expiresAt = this.shownAt + this.durationMs(), this.onShown(this.current.questCompletionKind))
       }
     }
 
-    function Yc(bb) {
-      return hc(bb.questCompletionKind)
+    function fa(bb) {
+      return ma(bb.questCompletionKind)
     }
 
-    function hc(bb) {
+    function ma(bb) {
       return "skillLevel" === bb || "landmark" === bb || "npcNote" === bb
     }
-    var Jc = sb(38137);
-    const gc = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAP0lEQVR4nGNgoAD8h2L8Cqz6T4IxLsVwyZwTb+CYAZ9imCI5Gx+cisEK73/7jYLRFcKtxqcIwzPE+BymgXwAABikVOyJwpyoAAAAAElFTkSuQmCC",
-      Bc = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAUUlEQVR4nGNgIAP8x4FRwH8w+OqOim+LYyiGSLzQR8G/DipgKgy2Vvqfc+INmEZm4zQRphCniTA3wRXeFseuECQIwlfbmMEYxsfqc2KChyAAANDbei83hMJpAAAAAElFTkSuQmCC",
-      tc = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAVElEQVR4nGNgIAP8x4FRwH8QePfuFQq+dO44hmKwxOMHN1Hw4b3bMRW6unv/zznxBkwjs3GaCFOI00SYm2AKQWysCkGCILxm6TwwhvGx+pyY4CEIAG45h2BiJfmeAAAAAElFTkSuQmCC",
-      yc = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAASElEQVR4nGNgIAP8x4FRwP9sF+X/XVEGKDjbRRlDMVjww44uFHyyKw5TIUjC2n4BXBGIjVMh0SaSpHBBkC0Y41IIVkxM8BAEAGLKe3rsiWx2AAAAAElFTkSuQmCC",
-      Pc = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAW0lEQVR4nGNgIAP8J0bs//M750GCKPg5Qgyh8OT2Vf870vxR8MntqzAVysnL/wcBmCIQAIlhVQjCMIUwPobCjAC7/+XZSSgYJIZVoZGWKlwRiI1NISwosGHSAAAPvV+9cOwRMQAAAABJRU5ErkJggg==";
-    var Dc = sb(38146);
-    const Ec = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAT0lEQVR4nGNgIAP8h2JcfDD4X2lg/D9RRhQmCWbnq6piKAYrRMf52BSCTHAU54QrArGRbEA18ev3X3CFIDZOq2GmwkzDqxAdY/U5DkwaAACgalVtqFSm5wAAAABJRU5ErkJggg==",
-      ic = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAf0lEQVR4nO3VsQkEIRCG0ek/MbwWbMXk4u1kOBi4bWANhA0U3oM/9zOZCAAAAAAm8lf/Nza+1+NiNym4BKfgEjxOCR6Th7ZPX9rsI2I3Q/AluAnugvOU4Fw8M6vnKnaTgkvwEFyC8/TgtniWZovdpOAS3AR3we2UYAAAAIDYxQ2IeNNWBgNQ/AAAAABJRU5ErkJggg==";
-    const Oc = sb.p + "static/media/quest_search.b4f00072d5f134fdf189ecb8a48edc99.svg";
-    const Gc = sb.p + "static/media/quest_talk.7d2326c7bdb6bc060cc0cde294f4fa89.svg",
-      Kc = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAANklEQVR4nGNgIBP8R8NYwX8QuH7nGRwzYFEMVwQzDcSetXgHdsXEKIIrJkYRusn4FVHdRJwAALfWRnO5uwepAAAAAElFTkSuQmCC";
-    var Zc = sb(18175),
-      zc = sb(20313),
-      qc = sb(22716),
-      dc = sb(24310),
-      Ac = sb(26032);
-    const wc = {
+    var pa = Ub(37865);
+    const Na = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAP0lEQVR4nGNgoAD8h2L8Cqz6T4IxLsVwyZwTb+CYAZ9imCI5Gx+cisEK73/7jYLRFcKtxqcIwzPE+BymgXwAABikVOyJwpyoAAAAAElFTkSuQmCC",
+      Wa = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAUUlEQVR4nGNgIAP8x4FRwH8w+OqOim+LYyiGSLzQR8G/DipgKgy2Vvqfc+INmEZm4zQRphCniTA3wRXeFseuECQIwlfbmMEYxsfqc2KChyAAANDbei83hMJpAAAAAElFTkSuQmCC",
+      Ha = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAVElEQVR4nGNgIAP8x4FRwH8QePfuFQq+dO44hmKwxOMHN1Hw4b3bMRW6unv/zznxBkwjs3GaCFOI00SYm2AKQWysCkGCILxm6TwwhvGx+pyY4CEIAG45h2BiJfmeAAAAAElFTkSuQmCC",
+      Ia = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAASElEQVR4nGNgIAP8x4FRwP9sF+X/XVEGKDjbRRlDMVjww44uFHyyKw5TIUjC2n4BXBGIjVMh0SaSpHBBkC0Y41IIVkxM8BAEAGLKe3rsiWx2AAAAAElFTkSuQmCC",
+      da = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAW0lEQVR4nGNgIAP8J0bs//M750GCKPg5Qgyh8OT2Vf870vxR8MntqzAVysnL/wcBmCIQAIlhVQjCMIUwPobCjAC7/+XZSSgYJIZVoZGWKlwRiI1NISwosGHSAAAPvV+9cOwRMQAAAABJRU5ErkJggg==";
+    var Fa = Ub(37873);
+    const ha = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAT0lEQVR4nGNgIAP8h2JcfDD4X2lg/D9RRhQmCWbnq6piKAYrRMf52BSCTHAU54QrArGRbEA18ev3X3CFIDZOq2GmwkzDqxAdY/U5DkwaAACgalVtqFSm5wAAAABJRU5ErkJggg==",
+      Ga = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAf0lEQVR4nO3VsQkEIRCG0ek/MbwWbMXk4u1kOBi4bWANhA0U3oM/9zOZCAAAAAAm8lf/Nza+1+NiNym4BKfgEjxOCR6Th7ZPX9rsI2I3Q/AluAnugvOU4Fw8M6vnKnaTgkvwEFyC8/TgtniWZovdpOAS3AR3we2UYAAAAIDYxQ2IeNNWBgNQ/AAAAABJRU5ErkJggg==";
+    const Qa = Ub.p + "static/media/quest_search.b4f00072d5f134fdf189ecb8a48edc99.svg";
+    const qa = Ub.p + "static/media/quest_talk.7d2326c7bdb6bc060cc0cde294f4fa89.svg",
+      ua = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAANklEQVR4nGNgIBP8R8NYwX8QuH7nGRwzYFEMVwQzDcSetXgHdsXEKIIrJkYRusn4FVHdRJwAALfWRnO5uwepAAAAAElFTkSuQmCC";
+    var ra = Ub(18102),
+      Ka = Ub(20197),
+      oa = Ub(22580),
+      la = Ub(24136),
+      ta = Ub(25798);
+    const wa = {
       ashen_fort: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAUElEQVR4nGNgIAP8R6PR2RCBzRu2/kemQbirvQ/GRlUIwyAFIJyUkIFbobyUHhjjVAiSgCmM1p9HWCFI0YKYD/gVgjDMapAibAphQYENkwYAeH1pEdiBhHAAAAAASUVORK5CYII=",
       auction: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAR0lEQVR4nGNgoAD8h2K84P+kApf/vw4qEFT8H6SoJsr8/5quIMKKg62VwIrxmfx/apEbWBKkCOQMbArhimB8YhThBUQpIggAQqYxE90Y9BMAAAAASUVORK5CYII=",
       bank: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAR0lEQVR4nGNgIBP8R8NYwX8w+OoOwbfFcSr+/+ugAhi/X8zz/0gVD1aFCNNui6Ow0RWDBWGmIbPJVwhzFwgjs7G6EwcmDQAAuONyKxIgH/AAAAAASUVORK5CYII=",
-      carrot: Zc,
+      carrot: ra,
       castle: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAVUlEQVR4nGNgoAD8R8I4wf+pRW7/n2nrgzEDDsX/YQrxmfr/yIHdYAkQDWNP6uvDUAxXAMIgBSCcm5mJqRAkAVIUbK0ExgQV1kSZgzEuhXDPYMGkAQC0sV3YpEV43gAAAABJRU5ErkJggg==",
       cinderfall: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAATUlEQVR4nGNgoAD8h2K84P//N/5gjE/x/78dLHCFIDYuxWDJxqys/362tjgVwhXBFOJS/P+yCROKImNNbbAYhkJ000AKQRir9TgwaQAA9pxTDDdv+r4AAAAASUVORK5CYII=",
-      combat_1: zc,
-      cow: Pc,
+      combat_1: Ka,
+      cow: da,
       craft: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAPklEQVR4nGNgIAH8JxIz/L+2JA2Mp6VZYGUzwBSCBPFhBphCYq0GKy7w0kARwCGGIgjHhBTiNxHdLTjECAMAZEReU1MzQpcAAAAASUVORK5CYII=",
       dungeons: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQUlEQVR4nGNgIBP8R8NYwf++KbPhOKewHKtiuAJ5KT0wBinEphis6L+1AVwhiA0Sw6oQpgiGKVdIjBvBinFg0gAAOOVdfOFyr7kAAAAASUVORK5CYII=",
       emberwatch: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAATElEQVR4nGNgoAD8h2L8Cv6/8f//t4PlPy4N/48c2A2WACm6bMIEZk/q68NQDFYIwyAFIJybmYnbVJCJ+BTBFRIyjSSFcJ8TE0Q4AQDqiVfWwMcDkgAAAABJRU5ErkJggg==",
       enemy: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAU0lEQVR4nGNgIBP8R8NYwf///W3/n3r4wjEDFsUYikB4s4o2hmKwhDY3L1wRiI1ToQgLK1whiI1TIQjnCYqBMUgRNoVgxSAJmCIQjdfnxAQPXgAAraZYPXKBMfkAAAAASUVORK5CYII=",
-      farm: sb(26052),
+      farm: Ub(25812),
       farming_1: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAR0lEQVR4nGNgoAD8h2K84P+nbP//87SU8Cr+D1J0w1H///9LXjgV/4cpQsbYFIMlPjw+hILxKqyJMv8fbK1EuUKwYhyYNAAAbaVgzAUMTa8AAAAASUVORK5CYII=",
-      fishing: gc,
-      fishing_1: gc,
+      fishing: Na,
+      fishing_1: Na,
       forest: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAASElEQVR4nGNgIBP8R8NYwf+c/TZgbN+jA8YMWBRjKAJhg3JlDMUoikAKQFgxWgi7qcQogiuuiTL/H2ythFcRSQrBiolRhBMAAJ9tQRoOB1rEAAAAAElFTkSuQmCC",
-      guardian_gold: Bc,
-      guardian_iron: tc,
+      guardian_gold: Wa,
+      guardian_iron: Ha,
       hub: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAWElEQVR4nGNgoAL4T5SirGUf/uNTDJa0r78GxjpRK7Aq/v8p2x8s8eHxIThGVwhWdMNR//88LSWwgv+XvLArhJlwcnMXfhNBgjVR5nCFIDY2hXCPYMGkAQDGNGSEX91FFwAAAABJRU5ErkJggg==",
       island: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAUElEQVR4nGNgoAD8h2K84L//OlcwxqcYrECvyQKOGXAohkn870pxgLMxFC17FgfGOfut4Ni7Xwe74u60ADDO8rIC03jdCVIEwkT5nBhFOAEAI1k9HXZqyYAAAAAASUVORK5CYII=",
-      melon: qc,
-      mines: dc,
-      mining_1: dc,
-      npc: yc,
+      melon: oa,
+      mines: la,
+      mining_1: la,
+      npc: Ia,
       npc_beaver_lumberjack: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAASUlEQVR4nGNgIAP8h2JcfDD4XxQVCMYwBSB2nJsbhmKwhJKyMlwDiI1TYUVyMFgBCIPYeBX+/3zt/6vbJ6moEBljUwhWjAOTBgAZSmJ9XCb2zAAAAABJRU5ErkJggg==",
       npc_chef: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAW0lEQVR4nGNgIBP8R8NYwf+v33/B8f1nH7AqRlEEU3gfi+L/RVGB/y/feQlXAGKDxLAqlJDX//9pfycYg9g4FYIUxLm5gfHJvgz8Cl9vaQFjkEIQxuohHJg0AACncHuimGgHPgAAAABJRU5ErkJggg==",
-      npc_cow: Pc,
+      npc_cow: da,
       npc_draugr_warper: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAb0lEQVR4nGNgIBIwIrH/41PDCFPU+/IzVlXF4rxgdSwwgUV33oFpXh42MP35yy+sVv///x9is8GxR2D6gpUcRAEjxGYmZF2nvv/BygYBuNUwk0BASoKHIe38M+wKQZLIAMa/iOZGsDuxehtVDWEAAHwCHXf9ctZjAAAAAElFTkSuQmCC",
       npc_dwarf_blue_hair: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAUElEQVR4nGNgIBP8R8NYwf//51lRMAMWxf/TM0r+/z/AjoLTM0owFENMeSCBirGY+l+r/SpY8OGmBjBGFkNR6DD9FVwRDIPEyFYIVowDkwYAEBZzAwnUgyIAAAAASUVORK5CYII=",
       npc_dwarf_braided_hair: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAASElEQVR4nGNgIBP8R8NYwX9deRUUzIBFMYYiXIr/h5rqYMUYCr9+/wUWjLE2AGNkMRSF6Q6mcEUwDBLDUIiuCNlkDA/hwKQBAPnYUUW1+JaKAAAAAElFTkSuQmCC",
@@ -1201,13 +1201,13 @@ export const modules = {
       npc_forge_mother: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAXklEQVR4nGNgIAP8x4FRwP+vzy+AJSKd7MEYWQxF4avbJ8EYphDGx1D49fsvTBOhYigKfS0s/l9dPAsFg8SwKpyYkAVXBGLjVPj/POv//x+0Ifg8K1aFYMXEBA9BAACWKnGnkFHGrQAAAABJRU5ErkJggg==",
       npc_goblin_goggles: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAgklEQVR4nGNkQAX/0fiMGAyQIhMPGxRVZ3YcgathwqUIBKBi/2Gq//tMzWDw4HBkwAZ2/NjPsCV7Btzq/1+//2LQ1dFkSMgoBQssmNHNcPnKdQZuTjawgXCFTd0zsJpYV5oBVsgCEzj+7wRWhTAA8wwcPNt2A4zRAUrw4DAMWQ1hAADlHCXxWLGl2AAAAABJRU5ErkJggg==",
       npc_goblin_mad_scientist: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAV0lEQVR4nGNgIBP8R8NYwX/PzoT/qpZGYAxiY1P8//8DCayYAU3x/7OXboEFkRXAxFAUfv3+67+SsvL//+dZwRjEBolhKIQpQMcYCkGOx4axeggHJg0AAFKzbFf/ov6kAAAAAElFTkSuQmCC",
-      npc_gold_guardian: Bc,
+      npc_gold_guardian: Wa,
       npc_gold_watermelon_stag: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAWElEQVR4nGNgIAP8R6KR2Sjg/5sH4f9hNDKbAZ9ifIoYQIKfV6nAFSKxURVt8jH7f1+R9//ZVH8wBrFBYuiKwZIgiS27w8AYxAaJ4TQVWSEuN4IVo2HSAQCFHFiN1+WGFAAAAABJRU5ErkJggg==",
       npc_head_8_0: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAdElEQVR4nGNgIBIwIrH/41PDCFO06sIzMMNbQ5Jh643ncFVhBlJgdXCFSnJqDBJiMgwvXj1BMe7eo1tghSzIgrPqMlAU+eXUwNlMyBINs7gYZJTkwBjERgYoCud0iGBlYygEgStrdoAxVq/DPIQhi6mGMAAAMzccpadovTMAAAAASUVORK5CYII=",
       npc_human_archer: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAc0lEQVR4nGNkQID/DNgBI5wAKTqwtAOrKofoCrA6FmTBvinLUBQV5UTB2SgKf//5i8N2BoTVX7//YuC2VmfwZOYCC2z/+43h69GbDNycbGB1cIWHXBywmmS35wBYIRNOu9AA3I1ffnzFqxBmNdh6ItQQBgAsaRzpv2C9aQAAAABJRU5ErkJggg==",
       npc_human_desert_guard: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAfklEQVR4nGNkQID/DNgBI5wAKfpxdztWVRzKnmB1LDCBdReZGUSEhVAUvXn7Ds6GKwSB23MnoigUDIiFs5lgDH9PB4Zll+7DJUBskBiKQ0FunBoXy/D9xw8UEzk5OBiyFy1GdSPHpTMM+rw8KApvfv6CaTUhALMabD0RaggDACCpH2oXfV//AAAAAElFTkSuQmCC",
       npc_human_sentry: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAYUlEQVR4nGNgIBIwIrH/41PDCFOkqamJVdX169fB6liQBXNMTVAUTTl9BkPj/6/ff4Gs/j81LhaMkcVQrO4JC2Xg5OBA0f39xw+GklWrUa2edvYcTh+DABNeWSRAdPAQDQAzViKkGPwLjwAAAABJRU5ErkJggg==",
-      npc_iron_guardian: tc,
+      npc_iron_guardian: Ha,
       npc_jackal_priest: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAdklEQVR4nGNgQID/UIyVzwQT1NTUZBAWFoYrALFBYjDFjDCF/zdyMGADjP4/wBQLTODVVXkGh8UwCyDgQOw/BgaGmyhWg8GZcxexsjEUmhjpM3z79g2MQWxkALcaBP79/cvAwc4OZyO8gGYiPoDQghqGuNQQBgAoCCX1U3QMRQAAAABJRU5ErkJggg==",
       npc_minotaur: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAaklEQVR4nGNgIAP8R6KR2Sjg/9fnF8AKMgJ8wBhZDEXhq9snwRimEMbHUPj1+6//DBYBCBMtAiBi6ApBkhMTsv5fXTwLjEHsODc37Ar/n2eFKwSxcSp8sGHO//8ftMEYxMamEKwYByYNAABmXHNFjN9ucgAAAABJRU5ErkJggg==",
       npc_minotaur_elder: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAg0lEQVR4nGNgIBIwIrH/41PDBFP09fkFMKMuJxWMQQAq9h9ZIcPXLz8ZXt0+CTcGxAaJwQBcIbeMIYOYqjlcAsQGiaG78X9ZajxDvJ01iuMWHjrK0DV7IVgd3EQQ2LMX4k50NgiwIHPy8mczMCiqgdlaOrcYyqdFYVgN9x0WgKyGMAAArq0oYNR0jFIAAAAASUVORK5CYII=",
@@ -1224,43 +1224,43 @@ export const modules = {
       npc_smuglyn: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAASklEQVR42mNgIAP8x4FRFWlqamLF6IrBgj1hoSgYq8Kv33/9txBi/z81LhaMQWyQGIbC5VmZcEUwDBLDUIiuCIRB1pOtkOjgIQgAhutlSTAZTWcAAAAASUVORK5CYII=",
       npc_tentacle_boy: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAiElEQVR4nGNkQID/DNgBI5wAKXJw8Wb48vkjhqozJ4+A1bHABKI0arEad+akBdzY/ybmNgw/f/3CqpCdjQ1sKthEM4scHM5DsZ7hf23T3v9fv//6z8srAmaj80FqmGC6JMSkUExB54Ot1ubgYSgoXQkWuHXrKpiG8UFyMAA3HkbjEIMoRqMxxABOskezGUlSqQAAAABJRU5ErkJggg==",
       npc_tentacle_girl: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAgklEQVR4nGNgwA3+QzEYMOGQ/H9viS7Dp4N+MDEGFmRFO8PqGYTFRBjevnrDwMCwjuHN4/twSRZsikD07U1BUKnLKArBQExYAIxh7OvX78DlUNzoMbEWKxtDYb11MFY2htXPPr5nOH7mApiW4hdECxAkX/fbJIGDYqV3MYwND0eiAQAf4TQGGrZ+tQAAAABJRU5ErkJggg==",
-      npc_tentacle_guy: Dc,
+      npc_tentacle_guy: Fa,
       npc_tentacle_guy_fisherman: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAVElEQVR4nGNgIBP8R8NYwX9XD7//JuY2cMyARTFcUtfQDIxxKf4fHFaFgRPjWzAVVpXP/K+krAymYWycCrMzeuEKQWycCmE0jI1NIVgxEo3MJg0AAIJsWIj/ilEbAAAAAElFTkSuQmCC",
       npc_wolf_in_suit: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAVUlEQVR4nGNgIAP8h2JcfDD47+0X/N/a1gEmCWY7u3piKAYrRMfOuBQqKSvDFYHYOBV+/f4LbCUIg9g4FYIUgEwCYbxu/P/5GtxEEBubQrBiHJg0AAB07Vx5G7sqWQAAAABJRU5ErkJggg==",
-      npc_wolf_security: Ec,
+      npc_wolf_security: ha,
       player: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQElEQVR4nGNgoAD8h2K84D8M4FP8/9HLz3CFIDYuxUQpBEugK8SmGCy4cttpmASYjVUhkiJ8YhAJbO7GGT64AACb2mXTEt92cwAAAABJRU5ErkJggg==",
       portal: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAU0lEQVR4nGNgIAP8x4FRwP9YmzYwtlOJAWMYG10xWOL7zz9wfPLcDdwKQZL901eAMUixrowDpkKQbphJMFPxKoSZCMI4FYIkQBiZjdXnxAQPQQAAOtFywhRvXJwAAAAASUVORK5CYII=",
       portal_orange: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAVUlEQVR4nGNgIAP8x4FRwP9YmzYwtlOJAWMYG10xWOLzJAs4/tSkglshSPJjldT/D4UCYMW6Mg6YCkG6YSbBTMWrEGQiDONUCJIAYWQ2Vp8TEzwEAQAA6GVEbqZ9DwAAAABJRU5ErkJggg==",
       quest: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAMElEQVR4nGNgoAD8h2K84P//Xwf+/35tSFDxf+or/P3a8P/nVSrEuZMoRVQ3EScAAIINMAfVJxmxAAAAAElFTkSuQmCC",
-      quest_search: Oc,
-      quest_talk: Gc,
+      quest_search: Qa,
+      quest_talk: qa,
       scorched_flats: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAUUlEQVR4nGNgIBP8R8NYwf8HT+6jYAYsisES/vIicEUg9t4TuzAUY5gGUoRNIVwxSBJGY1W0wF0LjKuMFcAYxsewGiYJchtMAzaFYMU4MGkAADMzb36mUd86AAAAAElFTkSuQmCC",
       scorp_pit: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAASElEQVR4nGNgoAD8R8I4wf//l6rA+MUCG5yK/z/T1kc27T8uxeiCWBXCrUQ2cUOCHHYTQRIgU2BuxKYQxUSYApwmIgmi08QDAPP+Ttl2n8EbAAAAAElFTkSuQmCC",
       shooting_gallery: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAASElEQVR4nGNgIBP8x4IxwP9n2vpw/P+SFxijK4ZIIoGaKHP8CkE0WNH///83q2jjVwhj41WIDLAphCsGScIwLl+DFRMKGoIAAPFdcuGHeG5wAAAAAElFTkSuQmCC",
       smelt: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAP0lEQVR4nGNgIBH8J4DB4P+8efPwYgaoYjCnoKAAK56HTSG6lXgV/n5t+P9zhQphhSBFeBUS4xmwYmKChygAADFjjqm4UTd5AAAAAElFTkSuQmCC",
       talk: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAANElEQVR4nGNgIBH8x4Ph4D8+wICkGC6Ai2Yg2cRdx67hxBjuhGnA5xkUk3FJYphKSBFBAACXuoGa4rCq3AAAAABJRU5ErkJggg==",
       tower_of_doom: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAPUlEQVR4nGNgIAP8J0bsf1VBG0gQBduaucHYmAr/X/L6/9/aAKdCBpjiqKAkMMaliPoKwYrQFeJUjAOTBgBhWEzjnMiaVwAAAABJRU5ErkJggg==",
-      unknown: Kc,
-      watermelon: Ac
+      unknown: ua,
+      watermelon: ta
     };
 
-    function rc(bb, cb) {
-      const sb = document.createElement("img");
-      return sb.className = cb, sb.src = bb, sb.alt = "", sb.draggable = !1, sb
+    function sa(bb, ab) {
+      const Ub = document.createElement("img");
+      return Ub.className = ab, Ub.src = bb, Ub.alt = "", Ub.draggable = !1, Ub
     }
 
-    function oc(bb) {
-      var cb;
-      const sb = null !== (cb = wc[bb]) && void 0 !== cb ? cb : bb.startsWith("npc_") ? yc : Kc;
-      if ("portal" !== bb) return rc(sb, "SkyblockMapIcon");
-      const kb = document.createElement("span");
-      kb.className = "SkyblockMapIcon Portal";
-      const Wb = document.createElement("span");
-      return Wb.className = "SkyblockMapIconTint", Wb.style.maskImage = Wb.style.webkitMaskImage = `url("${ic}")`, kb.append(rc(sb, "SkyblockMapIconLayer"), Wb, rc(ic, "SkyblockMapIconLayer SkyblockMapIconShade")), kb
+    function ga(bb) {
+      var ab;
+      const Ub = null !== (ab = wa[bb]) && void 0 !== ab ? ab : bb.startsWith("npc_") ? Ia : ua;
+      if ("portal" !== bb) return sa(Ub, "SkyblockMapIcon");
+      const Ab = document.createElement("span");
+      Ab.className = "SkyblockMapIcon Portal";
+      const Mb = document.createElement("span");
+      return Mb.className = "SkyblockMapIconTint", Mb.style.maskImage = Mb.style.webkitMaskImage = `url("${Ga}")`, Ab.append(sa(Ub, "SkyblockMapIconLayer"), Mb, sa(Ga, "SkyblockMapIconLayer SkyblockMapIconShade")), Ab
     }
-    var Sc = sb(38124),
-      Rc = sb(4033);
-    const vc = [{
+    var Ca = Ub(37843),
+      Va = Ub(3968);
+    const Oa = [{
       lobes: [3, 4],
       amount: [.04, .055]
     }, {
@@ -1268,52 +1268,52 @@ export const modules = {
       amount: [.025, .035]
     }];
 
-    function Fc(bb) {
-      const cb = new Rc.j(bb);
+    function ca(bb) {
+      const ab = new Va.g(bb);
       return {
         radius: 45,
         squareness: 3,
-        wobbles: vc.map((bb => {
+        wobbles: Oa.map((bb => {
           let {
-            lobes: sb,
-            amount: kb
+            lobes: Ub,
+            amount: Ab
           } = bb;
           return {
-            lobes: sb[Math.floor(cb.next() * sb.length)],
-            amount: kb[0] + cb.next() * (kb[1] - kb[0]),
-            phase: 2 * cb.next() * Math.PI
+            lobes: Ub[Math.floor(ab.next() * Ub.length)],
+            amount: Ab[0] + ab.next() * (Ab[1] - Ab[0]),
+            phase: 2 * ab.next() * Math.PI
           }
         })),
         samples: 160
       }
     }
 
-    function xc(bb) {
+    function Ja(bb) {
       let {
-        radius: cb,
-        squareness: sb,
-        wobbles: kb,
-        samples: Wb
+        radius: ab,
+        squareness: Ub,
+        wobbles: Ab,
+        samples: Mb
       } = bb;
-      const ab = [];
-      for (let Tb = 0; Tb < Wb; Tb++) {
-        const bb = 2 * Math.PI * Tb / Wb,
-          Ub = Math.cos(bb),
-          Ib = Math.sin(bb),
-          Hb = cb * (Math.abs(Ub) ** sb + Math.abs(Ib) ** sb) ** (-1 / sb) * kb.reduce(((cb, sb) => {
+      const Tb = [];
+      for (let Eb = 0; Eb < Mb; Eb++) {
+        const bb = 2 * Math.PI * Eb / Mb,
+          Yb = Math.cos(bb),
+          Bb = Math.sin(bb),
+          eb = ab * (Math.abs(Yb) ** Ub + Math.abs(Bb) ** Ub) ** (-1 / Ub) * Ab.reduce(((ab, Ub) => {
             let {
-              lobes: kb,
-              amount: Wb,
-              phase: ab
-            } = sb;
-            return cb + Wb * Math.sin(kb * bb + ab)
+              lobes: Ab,
+              amount: Mb,
+              phase: Tb
+            } = Ub;
+            return ab + Mb * Math.sin(Ab * bb + Tb)
           }), 1);
-        ab.push(`${(50+Hb*Ub).toFixed(2)} ${(50+Hb*Ib).toFixed(2)}`)
+        Tb.push(`${(50+eb*Yb).toFixed(2)} ${(50+eb*Bb).toFixed(2)}`)
       }
-      return `M${ab.join("L")}Z`
+      return `M${Tb.join("L")}Z`
     }
-    const jc = ".InGameHeaderContainer, .TopRightElementsLeft > *, .TopRightElementsRight > *, .MiddleTextTopContainer";
-    class pc {
+    const na = ".InGameHeaderContainer, .TopRightElementsLeft > *, .TopRightElementsRight > *, .MiddleTextTopContainer";
+    class Sa {
       constructor() {
         this.compassSpacing = 1, this.compassSize = {
           trackHalfWidth: 0,
@@ -1334,389 +1334,389 @@ export const modules = {
         }, this.viewport = {
           width: 0,
           height: 0
-        }, this.stopLayout = null, this.stopWaypoint = null, this.stopWaypointOrigin = null, this.waypointOriginToken = null, this.waypointLaunch = null, this.markers = new Map, this.cardinals = [], this.frame = null, this.Em = !1, this.mountCompass = bb => {
-          var cb;
-          if (null === (cb = this.stopLayout) || void 0 === cb || cb.call(this), this.stopLayout = null, this.markers.clear(), this.cardinals = [], this.compass = null, !bb || this.Em) return;
-          const sb = bb.querySelector(".SkyblockCompassTrack");
+        }, this.stopLayout = null, this.stopWaypoint = null, this.stopWaypointOrigin = null, this.waypointOriginToken = null, this.waypointLaunch = null, this.markers = new Map, this.cardinals = [], this.frame = null, this.cX = !1, this.mountCompass = bb => {
+          var ab;
+          if (null === (ab = this.stopLayout) || void 0 === ab || ab.call(this), this.stopLayout = null, this.markers.clear(), this.cardinals = [], this.compass = null, !bb || this.cX) return;
+          const Ub = bb.querySelector(".SkyblockCompassTrack");
           this.compass = {
             root: bb,
-            track: sb,
+            track: Ub,
             label: bb.querySelector(".SkyblockCompassLabel")
-          }, sb.replaceChildren();
-          for (let Wb = 0; Wb < 4; Wb++) {
+          }, Ub.replaceChildren();
+          for (let Mb = 0; Mb < 4; Mb++) {
             const bb = document.createElement("span");
-            bb.className = "SkyblockCompassCardinal", sb.appendChild(bb), this.cardinals.push(bb)
+            bb.className = "SkyblockCompassCardinal", Ub.appendChild(bb), this.cardinals.push(bb)
           }
-          const kb = (0, Sc.c)(jc, [bb], this.layout);
+          const Ab = (0, Ca.e)(na, [bb], this.layout);
           this.stopLayout = () => {
-            kb(), sb.replaceChildren()
+            Ab(), Ub.replaceChildren()
           }, this.render(this.frame)
         }, this.mountTerrain = bb => {
-          this.terrain = this.Em ? null : bb, this.render(this.frame)
+          this.terrain = this.cX ? null : bb, this.render(this.frame)
         }, this.mountMinimapSearchArea = bb => {
           this.mountSearchArea("minimap", bb)
         }, this.mountMapSearchArea = bb => {
           this.mountSearchArea("map", bb)
         }, this.mountPlayer = bb => {
-          this.player = this.Em ? null : bb, this.render(this.frame)
+          this.player = this.cX ? null : bb, this.render(this.frame)
         }, this.mountWaypoint = bb => {
-          var cb, sb;
-          if (null === (cb = this.stopWaypoint) || void 0 === cb || cb.call(this), this.stopWaypoint = null, this.waypoint = null, this.markerIcon = null, !bb || this.Em) return;
-          const kb = bb.querySelector(".SkyblockQuestWaypointMarker");
-          kb.replaceChildren(oc("quest")), this.markerIcon = "quest", this.waypoint = {
+          var ab, Ub;
+          if (null === (ab = this.stopWaypoint) || void 0 === ab || ab.call(this), this.stopWaypoint = null, this.waypoint = null, this.markerIcon = null, !bb || this.cX) return;
+          const Ab = bb.querySelector(".SkyblockQuestWaypointMarker");
+          Ab.replaceChildren(ga("quest")), this.markerIcon = "quest", this.waypoint = {
             root: bb,
-            marker: kb,
+            marker: Ab,
             clip: bb.querySelector(".SkyblockQuestWaypointTextClip"),
             text: bb.querySelector(".SkyblockQuestWaypointText"),
             label: bb.querySelector(".SkyblockQuestWaypointLabel"),
             distance: bb.querySelector(".SkyblockQuestWaypointDistance"),
             hint: bb.querySelector(".SkyblockQuestWaypointHint")
           };
-          const Wb = () => {
+          const Mb = () => {
               this.waypointMarkerSize = {
-                width: kb.offsetWidth,
-                height: kb.offsetHeight
+                width: Ab.offsetWidth,
+                height: Ab.offsetHeight
               }, this.waypointInset = {
-                x: kb.offsetWidth / 2 + 8,
-                top: kb.offsetHeight + 8,
+                x: Ab.offsetWidth / 2 + 8,
+                top: Ab.offsetHeight + 8,
                 bottom: 8
               }
             },
-            ab = new ResizeObserver((() => {
-              Wb(), this.render(this.frame)
+            Tb = new ResizeObserver((() => {
+              Mb(), this.render(this.frame)
             }));
-          ab.observe(kb, {
+          Tb.observe(Ab, {
             box: "border-box"
           });
-          const Tb = () => {
+          const Eb = () => {
             this.viewport = {
               width: window.innerWidth,
               height: window.innerHeight
             }
           };
-          window.addEventListener("resize", Tb), null === (sb = window.visualViewport) || void 0 === sb || sb.addEventListener("resize", Tb), this.stopWaypoint = () => {
+          window.addEventListener("resize", Eb), null === (Ub = window.visualViewport) || void 0 === Ub || Ub.addEventListener("resize", Eb), this.stopWaypoint = () => {
             var bb;
-            ab.disconnect(), window.removeEventListener("resize", Tb), null === (bb = window.visualViewport) || void 0 === bb || bb.removeEventListener("resize", Tb)
-          }, Tb(), Wb(), this.render(this.frame)
+            Tb.disconnect(), window.removeEventListener("resize", Eb), null === (bb = window.visualViewport) || void 0 === bb || bb.removeEventListener("resize", Eb)
+          }, Eb(), Mb(), this.render(this.frame)
         }, this.mountWaypointOrigin = bb => {
-          var cb;
-          if (null === (cb = this.stopWaypointOrigin) || void 0 === cb || cb.call(this), this.stopWaypointOrigin = null, this.waypointLaunch = null, this.waypointOriginToken = bb && !this.Em ? Number(bb.dataset.notificationToken) : null, bb && !this.Em && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-            const cb = {
+          var ab;
+          if (null === (ab = this.stopWaypointOrigin) || void 0 === ab || ab.call(this), this.stopWaypointOrigin = null, this.waypointLaunch = null, this.waypointOriginToken = bb && !this.cX ? Number(bb.dataset.notificationToken) : null, bb && !this.cX && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            const ab = {
               nameKey: bb.dataset.waypointNameKey,
               x: 0,
               y: 0,
               startedAt: null
             };
-            this.waypointLaunch = cb;
-            const sb = () => {
-                const sb = bb.getBoundingClientRect();
-                cb.x = (sb.left + sb.width / 2) / window.innerWidth * 100, cb.y = (sb.top + sb.height / 2) / window.innerHeight * 100
+            this.waypointLaunch = ab;
+            const Ub = () => {
+                const Ub = bb.getBoundingClientRect();
+                ab.x = (Ub.left + Ub.width / 2) / window.innerWidth * 100, ab.y = (Ub.top + Ub.height / 2) / window.innerHeight * 100
               },
-              kb = new ResizeObserver(sb);
-            kb.observe(bb.parentElement), kb.observe(bb), window.addEventListener("resize", sb), this.stopWaypointOrigin = () => {
-              kb.disconnect(), window.removeEventListener("resize", sb)
-            }, sb()
+              Ab = new ResizeObserver(Ub);
+            Ab.observe(bb.parentElement), Ab.observe(bb), window.addEventListener("resize", Ub), this.stopWaypointOrigin = () => {
+              Ab.disconnect(), window.removeEventListener("resize", Ub)
+            }, Ub()
           }
           this.render(this.frame)
         }, this.layout = () => {
           if (!this.compass) return;
           const bb = this.compass.root,
-            cb = getComputedStyle(bb),
-            sb = getComputedStyle(document.documentElement),
-            kb = parseFloat(sb.fontSize),
-            Wb = parseFloat(cb.getPropertyValue("--compass-icon-size")) * kb,
-            ab = "1" === cb.getPropertyValue("--compass-fit-top").trim(),
-            Tb = ab ? 1 : 8,
-            Ub = Array.from(document.querySelectorAll(jc), (bb => {
-              var cb;
-              return (null !== (cb = bb.querySelector(".MiddleTextTop")) && void 0 !== cb ? cb : bb).getBoundingClientRect()
+            ab = getComputedStyle(bb),
+            Ub = getComputedStyle(document.documentElement),
+            Ab = parseFloat(Ub.fontSize),
+            Mb = parseFloat(ab.getPropertyValue("--compass-icon-size")) * Ab,
+            Tb = "1" === ab.getPropertyValue("--compass-fit-top").trim(),
+            Eb = Tb ? 1 : 8,
+            Yb = Array.from(document.querySelectorAll(na), (bb => {
+              var ab;
+              return (null !== (ab = bb.querySelector(".MiddleTextTop")) && void 0 !== ab ? ab : bb).getBoundingClientRect()
             })).filter((bb => bb.width > 0 && bb.height > 0));
-          let Ib = (parseFloat(sb.getPropertyValue("--notchTop")) || 0) + Tb,
-            Hb = "";
-          if (ab) {
-            const cb = window.innerWidth / 2,
-              sb = bb.getBoundingClientRect().height,
-              ab = [Ib, ...Ub.map((bb => Math.max(Ib, bb.bottom + Tb)))].sort(((bb, cb) => bb - cb));
-            for (const bb of ab) {
-              let ab = cb - 8;
-              for (const kb of Ub) kb.bottom + Tb <= bb || kb.top >= bb + sb + Tb || (ab = Math.min(ab, kb.right <= cb ? cb - kb.right - 8 : kb.left - cb - 8));
-              const fb = 2 * ab - Wb;
-              if (fb >= 16 * kb) {
-                Hb = `${fb}px`, Ib = bb;
+          let Bb = (parseFloat(Ub.getPropertyValue("--notchTop")) || 0) + Eb,
+            eb = "";
+          if (Tb) {
+            const ab = window.innerWidth / 2,
+              Ub = bb.getBoundingClientRect().height,
+              Tb = [Bb, ...Yb.map((bb => Math.max(Bb, bb.bottom + Eb)))].sort(((bb, ab) => bb - ab));
+            for (const bb of Tb) {
+              let Tb = ab - 8;
+              for (const Ab of Yb) Ab.bottom + Eb <= bb || Ab.top >= bb + Ub + Eb || (Tb = Math.min(Tb, Ab.right <= ab ? ab - Ab.right - 8 : Ab.left - ab - 8));
+              const vb = 2 * Tb - Mb;
+              if (vb >= 16 * Ab) {
+                eb = `${vb}px`, Bb = bb;
                 break
               }
             }
           }
-          bb.style.maxWidth !== Hb && (bb.style.maxWidth = Hb);
-          const fb = bb.getBoundingClientRect(),
-            Mb = this.compassSize.trackHalfWidth;
-          if (fb.width > 0) {
+          bb.style.maxWidth !== eb && (bb.style.maxWidth = eb);
+          const vb = bb.getBoundingClientRect(),
+            Lb = this.compassSize.trackHalfWidth;
+          if (vb.width > 0) {
             const bb = this.compass.track.getBoundingClientRect();
             this.compassSize = {
               trackHalfWidth: bb.width / 2,
               screenHalfWidth: window.innerWidth / 2
-            }, this.compassSpacing = 4 * Wb / bb.width
+            }, this.compassSpacing = 4 * Mb / bb.width
           }
-          if (!Hb)
-            for (const Xb of Ub) Xb.right > fb.left - 8 && Xb.left < fb.right + 8 && (Ib = Math.max(Ib, Xb.bottom + Tb));
-          bb.style.top = `${Ib}px`, this.compassSize.trackHalfWidth !== Mb && this.render(this.frame)
+          if (!eb)
+            for (const Pb of Yb) Pb.right > vb.left - 8 && Pb.left < vb.right + 8 && (Bb = Math.max(Bb, Pb.bottom + Eb));
+          bb.style.top = `${Bb}px`, this.compassSize.trackHalfWidth !== Lb && this.render(this.frame)
         }
       }
-      mountSearchArea(bb, cb) {
-        this.searchAreas[bb] = this.Em ? null : cb, this.render(this.frame)
+      mountSearchArea(bb, ab) {
+        this.searchAreas[bb] = this.cX ? null : ab, this.render(this.frame)
       }
       render(bb) {
-        if (this.Em) return;
-        if (this.frame = bb, this.compass && (bs(this.compass.root, !bb), bb)) {
-          const cb = this.compassSize.trackHalfWidth / 50;
-          bb.compass.cardinals.forEach(((bb, sb) => {
-            const kb = this.cardinals[sb];
-            kb.textContent !== bb.name && (kb.textContent = bb.name), bs(kb, bb.hidden), kb.style.translate = bb.left * cb + "px"
+        if (this.cX) return;
+        if (this.frame = bb, this.compass && (bU(this.compass.root, !bb), bb)) {
+          const ab = this.compassSize.trackHalfWidth / 50;
+          bb.compass.cardinals.forEach(((bb, Ub) => {
+            const Ab = this.cardinals[Ub];
+            Ab.textContent !== bb.name && (Ab.textContent = bb.name), bU(Ab, bb.hidden), Ab.style.translate = bb.left * ab + "px"
           }));
-          const sb = new Set;
-          bb.compass.markers.forEach(((kb, Wb) => {
-            var ab;
-            sb.add(kb.id);
-            let Tb = this.markers.get(kb.id);
-            Tb || (Tb = document.createElement("span"), Tb.className = "SkyblockCompassMarker", this.markers.set(kb.id, Tb), this.compass.track.appendChild(Tb)), Tb.dataset.icon !== kb.icon && (Tb.dataset.icon = kb.icon, Tb.replaceChildren(oc(kb.icon))), Tb.style.color = null !== (ab = kb.colour) && void 0 !== ab ? ab : "", Tb.style.translate = kb.left * cb + "px", Tb.style.zIndex = String(bb.compass.markers.length - Wb), Tb.title !== kb.name && (Tb.title = kb.name)
+          const Ub = new Set;
+          bb.compass.markers.forEach(((Ab, Mb) => {
+            var Tb;
+            Ub.add(Ab.id);
+            let Eb = this.markers.get(Ab.id);
+            Eb || (Eb = document.createElement("span"), Eb.className = "SkyblockCompassMarker", this.markers.set(Ab.id, Eb), this.compass.track.appendChild(Eb)), Eb.dataset.icon !== Ab.icon && (Eb.dataset.icon = Ab.icon, Eb.replaceChildren(ga(Ab.icon))), Eb.style.color = null !== (Tb = Ab.colour) && void 0 !== Tb ? Tb : "", Eb.style.translate = Ab.left * ab + "px", Eb.style.zIndex = String(bb.compass.markers.length - Mb), Eb.title !== Ab.name && (Eb.title = Ab.name)
           }));
-          for (const [bb, kb] of this.markers) sb.has(bb) || (kb.remove(), this.markers.delete(bb));
+          for (const [bb, Ab] of this.markers) Ub.has(bb) || (Ab.remove(), this.markers.delete(bb));
           this.compass.label.textContent !== bb.compass.label && (this.compass.label.textContent = bb.compass.label)
         }
-        this.terrain && (bs(this.terrain, !(null !== bb && void 0 !== bb && bb.minimap)), null !== bb && void 0 !== bb && bb.minimap && (this.terrain.style.transform = bb.minimap.transform, this.terrain.style.setProperty("--minimap-icon-rotation", bb.minimap.iconRotation)));
-        const cb = null === bb || void 0 === bb ? void 0 : bb.searchArea;
-        for (const sb of [this.searchAreas.minimap, this.searchAreas.map])
-          if (sb && (bs(sb, !cb), cb)) {
-            if (this.searchAreaPath.seed !== cb.shapeSeed && (this.searchAreaPath = {
-                seed: cb.shapeSeed,
-                d: xc(Fc(cb.shapeSeed))
-              }), sb.dataset.shapeSeed !== cb.shapeSeed) {
-              sb.dataset.shapeSeed = cb.shapeSeed;
-              for (const bb of sb.querySelectorAll("path")) bb.setAttribute("d", this.searchAreaPath.d)
+        this.terrain && (bU(this.terrain, !(null !== bb && void 0 !== bb && bb.minimap)), null !== bb && void 0 !== bb && bb.minimap && (this.terrain.style.transform = bb.minimap.transform, this.terrain.style.setProperty("--minimap-icon-rotation", bb.minimap.iconRotation)));
+        const ab = null === bb || void 0 === bb ? void 0 : bb.searchArea;
+        for (const Ub of [this.searchAreas.minimap, this.searchAreas.map])
+          if (Ub && (bU(Ub, !ab), ab)) {
+            if (this.searchAreaPath.seed !== ab.shapeSeed && (this.searchAreaPath = {
+                seed: ab.shapeSeed,
+                d: Ja(ca(ab.shapeSeed))
+              }), Ub.dataset.shapeSeed !== ab.shapeSeed) {
+              Ub.dataset.shapeSeed = ab.shapeSeed;
+              for (const bb of Ub.querySelectorAll("path")) bb.setAttribute("d", this.searchAreaPath.d)
             }
-            sb.style.left = `${cb.left}%`, sb.style.top = `${cb.top}%`, sb.style.width = `${cb.width}%`, sb.style.height = `${cb.height}%`
-          } if (this.player && (bs(this.player, !(null !== bb && void 0 !== bb && bb.player) || bb.player.hidden), null !== bb && void 0 !== bb && bb.player && (this.player.style.left = `${bb.player.left}%`, this.player.style.top = `${bb.player.top}%`, this.player.style.setProperty("--map-player-rotation", bb.player.rotation))), this.waypoint) {
+            Ub.style.left = `${ab.left}%`, Ub.style.top = `${ab.top}%`, Ub.style.width = `${ab.width}%`, Ub.style.height = `${ab.height}%`
+          } if (this.player && (bU(this.player, !(null !== bb && void 0 !== bb && bb.player) || bb.player.hidden), null !== bb && void 0 !== bb && bb.player && (this.player.style.left = `${bb.player.left}%`, this.player.style.top = `${bb.player.top}%`, this.player.style.setProperty("--map-player-rotation", bb.player.rotation))), this.waypoint) {
           const {
-            root: cb,
-            marker: sb,
-            clip: kb,
-            text: Wb,
-            label: ab,
-            distance: Tb,
-            hint: Ub
-          } = this.waypoint, Ib = !(null !== bb && void 0 !== bb && bb.waypoint) || null !== bb.waypoint.popupToken && bb.waypoint.popupToken !== this.waypointOriginToken;
-          bs(cb, Ib);
-          let Hb = 1;
-          const fb = this.waypointLaunch;
-          if (!Ib && fb && bb.waypoint.nameKey === fb.nameKey) {
+            root: ab,
+            marker: Ub,
+            clip: Ab,
+            text: Mb,
+            label: Tb,
+            distance: Eb,
+            hint: Yb
+          } = this.waypoint, Bb = !(null !== bb && void 0 !== bb && bb.waypoint) || null !== bb.waypoint.popupToken && bb.waypoint.popupToken !== this.waypointOriginToken;
+          bU(ab, Bb);
+          let eb = 1;
+          const vb = this.waypointLaunch;
+          if (!Bb && vb && bb.waypoint.nameKey === vb.nameKey) {
             const bb = performance.now();
-            fb.startedAt ??= bb, Hb = Math.min(1, Math.max(0, (bb - fb.startedAt - 450) / 1e3)), sb.style.opacity = String(Math.min(1, (bb - fb.startedAt) / 150)), 1 === Hb && (this.waypointLaunch = null)
-          } else sb.style.opacity = "", fb && null !== fb.startedAt && (this.waypointLaunch = null);
-          if (cb.classList.toggle("Launching", Hb < 1), null !== bb && void 0 !== bb && bb.waypoint) {
-            const cb = this.waypointInset,
-              Ib = "quest_talk" === bb.waypoint.markerIcon ? function(bb, cb, sb) {
+            vb.startedAt ??= bb, eb = Math.min(1, Math.max(0, (bb - vb.startedAt - 450) / 1e3)), Ub.style.opacity = String(Math.min(1, (bb - vb.startedAt) / 150)), 1 === eb && (this.waypointLaunch = null)
+          } else Ub.style.opacity = "", vb && null !== vb.startedAt && (this.waypointLaunch = null);
+          if (ab.classList.toggle("Launching", eb < 1), null !== bb && void 0 !== bb && bb.waypoint) {
+            const ab = this.waypointInset,
+              Bb = "quest_talk" === bb.waypoint.markerIcon ? function(bb, ab, Ub) {
                 if (!bb.text || null === bb.blockHeight || 0 === bb.nearness) return bb;
-                const kb = bb.blockHeight / 100 * sb.height,
-                  Wb = -bb.nearness * (cs * kb + cb.width / 2),
-                  ab = bb.nearness * (ss * kb + cb.height / 2);
+                const Ab = bb.blockHeight / 100 * Ub.height,
+                  Mb = -bb.nearness * (aU * Ab + ab.width / 2),
+                  Tb = bb.nearness * (UU * Ab + ab.height / 2);
                 return {
                   ...bb,
                   text: {
-                    x: bb.text.x + Wb / sb.width * 100,
-                    y: bb.text.y + ab / sb.height * 100
+                    x: bb.text.x + Mb / Ub.width * 100,
+                    y: bb.text.y + Tb / Ub.height * 100
                   }
                 }
               }(bb.waypoint, this.waypointMarkerSize, this.viewport) : bb.waypoint,
-              Mb = (0, Jc.e)(Ib, cb, this.viewport),
-              Xb = Hb * Hb * (3 - 2 * Hb),
-              nb = Hb < 1 ? fb.x + (Mb.x - fb.x) * Xb : Mb.x,
-              mb = Hb < 1 ? fb.y + (Mb.y - fb.y) * Xb : Mb.y;
-            sb.style.translate = `${nb}vw ${mb}vh`, kb.style.clipPath = `inset(${cb.top}px ${cb.x}px ${cb.bottom}px)`, bs(Wb, Hb < 1 || !bb.waypoint.text), Wb.style.opacity = String(1 - bb.waypoint.nearness), bb.waypoint.text && (Wb.style.translate = `${bb.waypoint.text.x}vw ${bb.waypoint.text.y}vh`), ab.textContent !== bb.waypoint.name && (ab.textContent = bb.waypoint.name), this.markerIcon !== bb.waypoint.markerIcon && (this.markerIcon = bb.waypoint.markerIcon, sb.replaceChildren(oc(this.markerIcon))), Tb.textContent !== bb.waypoint.distance && (Tb.textContent = bb.waypoint.distance), bs(Ub, null === bb.waypoint.hint), null !== bb.waypoint.hint && Ub.textContent !== bb.waypoint.hint && (Ub.textContent = bb.waypoint.hint)
+              Lb = (0, pa.b)(Bb, ab, this.viewport),
+              Pb = eb * eb * (3 - 2 * eb),
+              Xb = eb < 1 ? vb.x + (Lb.x - vb.x) * Pb : Lb.x,
+              jb = eb < 1 ? vb.y + (Lb.y - vb.y) * Pb : Lb.y;
+            Ub.style.translate = `${Xb}vw ${jb}vh`, Ab.style.clipPath = `inset(${ab.top}px ${ab.x}px ${ab.bottom}px)`, bU(Mb, eb < 1 || !bb.waypoint.text), Mb.style.opacity = String(1 - bb.waypoint.nearness), bb.waypoint.text && (Mb.style.translate = `${bb.waypoint.text.x}vw ${bb.waypoint.text.y}vh`), Tb.textContent !== bb.waypoint.name && (Tb.textContent = bb.waypoint.name), this.markerIcon !== bb.waypoint.markerIcon && (this.markerIcon = bb.waypoint.markerIcon, Ub.replaceChildren(ga(this.markerIcon))), Eb.textContent !== bb.waypoint.distance && (Eb.textContent = bb.waypoint.distance), bU(Yb, null === bb.waypoint.hint), null !== bb.waypoint.hint && Yb.textContent !== bb.waypoint.hint && (Yb.textContent = bb.waypoint.hint)
           }
         }
       }
       dispose() {
-        var bb, cb;
-        this.mountWaypointOrigin(null), this.render(null), null === (bb = this.stopLayout) || void 0 === bb || bb.call(this), this.stopLayout = null, null === (cb = this.stopWaypoint) || void 0 === cb || cb.call(this), this.stopWaypoint = null, this.compass = null, this.terrain = null, this.searchAreas = {
+        var bb, ab;
+        this.mountWaypointOrigin(null), this.render(null), null === (bb = this.stopLayout) || void 0 === bb || bb.call(this), this.stopLayout = null, null === (ab = this.stopWaypoint) || void 0 === ab || ab.call(this), this.stopWaypoint = null, this.compass = null, this.terrain = null, this.searchAreas = {
           minimap: null,
           map: null
-        }, this.player = null, this.waypoint = null, this.markers.clear(), this.cardinals = [], this.Em = !0
+        }, this.player = null, this.waypoint = null, this.markers.clear(), this.cardinals = [], this.cX = !0
       }
     }
 
-    function bs(bb, cb) {
-      bb.hidden !== cb && (bb.hidden = cb)
+    function bU(bb, ab) {
+      bb.hidden !== ab && (bb.hidden = ab)
     }
-    const cs = .55,
-      ss = .6;
-    const ks = {
+    const aU = .55,
+      UU = .6;
+    const AU = {
       talk: "quest_talk",
       search: "quest_search"
     };
-    class Ws {
-      constructor(bb, cb, sb, kb) {
-        this.map = bb, this.quests = cb, this.compass = sb, this.display = new pc, this.translate = void 0, this.locale = "en-GB", this.metresFormat = new Intl.NumberFormat(this.locale), this.Em = !1, this.snapshot = null, this.texts = new Map, this.translate = kb
+    class MU {
+      constructor(bb, ab, Ub, Ab) {
+        this.map = bb, this.quests = ab, this.compass = Ub, this.display = new Sa, this.translate = void 0, this.locale = "en-GB", this.metresFormat = new Intl.NumberFormat(this.locale), this.cX = !1, this.snapshot = null, this.texts = new Map, this.translate = Ab
       }
-      setTranslator(bb, cb) {
-        this.translate = bb, this.locale = cb, this.metresFormat = new Intl.NumberFormat(cb), this.texts.clear()
+      setTranslator(bb, ab) {
+        this.translate = bb, this.locale = ab, this.metresFormat = new Intl.NumberFormat(ab), this.texts.clear()
       }
-      translateCached(bb, cb) {
-        const sb = void 0 === cb ? bb : `${bb} ${cb}`;
-        let kb = this.texts.get(sb);
-        return void 0 === kb && (this.texts.size >= 500 && this.texts.clear(), kb = this.translate(bb, void 0 === cb ? void 0 : {
-          distance: cb
-        }), this.texts.set(sb, kb)), kb
+      translateCached(bb, ab) {
+        const Ub = void 0 === ab ? bb : `${bb} ${ab}`;
+        let Ab = this.texts.get(Ub);
+        return void 0 === Ab && (this.texts.size >= 500 && this.texts.clear(), Ab = this.translate(bb, void 0 === ab ? void 0 : {
+          distance: ab
+        }), this.texts.set(Ub, Ab)), Ab
       }
       getSnapshot() {
         return this.snapshot
       }
-      afterRender(bb, cb, sb) {
-        if (this.Em) return;
+      afterRender(bb, ab, Ub) {
+        if (this.cX) return;
         if (!bb) return this.snapshot = null, void this.display.render(null);
-        const kb = this.map.getSnapshot().map,
-          Ib = sb.cameraHeading,
-          Hb = {
+        const Ab = this.map.getSnapshot().map,
+          Bb = Ub.cameraHeading,
+          eb = {
             ...this.display.compassSize,
-            tanHalfFovX: sb.tanHalfFovX,
-            pitch: sb.cameraPitch
+            tanHalfFovX: Ub.tanHalfFovX,
+            pitch: Ub.cameraPitch
           },
-          fb = [];
-        if (kb)
-          for (const Wb of this.compass.frame(bb, Ib, cb)) {
-            const bb = lb(Wb.offset, Hb);
-            null !== bb && fb.push({
-              ...Wb,
+          vb = [];
+        if (Ab)
+          for (const Mb of this.compass.frame(bb, Bb, ab)) {
+            const bb = Rb(Mb.offset, eb);
+            null !== bb && vb.push({
+              ...Mb,
               left: bb
             })
           }
-        const Mb = function(bb, cb) {
-            const sb = [],
-              kb = bb => "quest" === bb.kind ? bb.distance - 1 : bb.distance,
-              Wb = [...bb].sort(((bb, cb) => kb(bb) - kb(cb) || bb.id.localeCompare(cb.id)));
-            for (const ab of Wb) {
+        const Lb = function(bb, ab) {
+            const Ub = [],
+              Ab = bb => "quest" === bb.kind ? bb.distance - 1 : bb.distance,
+              Mb = [...bb].sort(((bb, ab) => Ab(bb) - Ab(ab) || bb.id.localeCompare(ab.id)));
+            for (const Tb of Mb) {
               let bb = !1;
-              if ("quest" !== ab.kind)
-                for (const kb of sb)
-                  if (Math.abs(kb.left - ab.left) < cb) {
+              if ("quest" !== Tb.kind)
+                for (const Ab of Ub)
+                  if (Math.abs(Ab.left - Tb.left) < ab) {
                     bb = !0;
                     break
-                  } bb || sb.push(ab)
+                  } bb || Ub.push(Tb)
             }
-            return sb
-          }(fb, this.display.compassSpacing),
-          Xb = function(bb) {
-            let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI / 36,
-              sb = null;
-            for (const kb of bb) Math.abs(kb.offset) <= cb && (!sb || kb.distance < sb.distance || kb.distance === sb.distance && Math.abs(kb.offset) < Math.abs(sb.offset)) && (sb = kb);
-            return sb
-          }(Mb),
-          nb = bb => {
-            var cb;
-            return null !== (cb = bb.displayName) && void 0 !== cb ? cb : this.translateCached(bb.nameKey)
+            return Ub
+          }(vb, this.display.compassSpacing),
+          Pb = function(bb) {
+            let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI / 36,
+              Ub = null;
+            for (const Ab of bb) Math.abs(Ab.offset) <= ab && (!Ub || Ab.distance < Ub.distance || Ab.distance === Ub.distance && Math.abs(Ab.offset) < Math.abs(Ub.offset)) && (Ub = Ab);
+            return Ub
+          }(Lb),
+          Xb = bb => {
+            var ab;
+            return null !== (ab = bb.displayName) && void 0 !== ab ? ab : this.translateCached(bb.nameKey)
           },
-          mb = {
+          jb = {
             compass: {
-              markers: Mb.map((bb => ({
+              markers: Lb.map((bb => ({
                 id: bb.id,
                 icon: bb.icon,
                 colour: bb.colour,
-                name: nb(bb),
+                name: Xb(bb),
                 left: bb.left
               }))),
-              cardinals: Tb.map((bb => {
+              cardinals: Eb.map((bb => {
                 let {
-                  name: cb,
-                  bearing: sb
+                  name: ab,
+                  bearing: Ub
                 } = bb;
-                const kb = lb(Wb.d.computeShortestRotation(Ib, sb), Hb);
+                const Ab = Rb(Mb.d.computeShortestRotation(Bb, Ub), eb);
                 return {
-                  name: cb,
-                  left: null !== kb && void 0 !== kb ? kb : 0,
-                  hidden: null === kb
+                  name: ab,
+                  left: null !== Ab && void 0 !== Ab ? Ab : 0,
+                  hidden: null === Ab
                 }
               })),
-              label: Xb ? `${nb(Xb)} \xb7 ${this.translateCached("skyblockGame:waypointDistance",ub(Xb.distance,this.locale))}` : ""
+              label: Pb ? `${Xb(Pb)} \xb7 ${this.translateCached("skyblockGame:waypointDistance",ib(Pb.distance,this.locale))}` : ""
             },
             minimap: null,
             searchArea: null,
             player: null,
             waypoint: null
           };
-        if (null !== kb && void 0 !== kb && kb.background) {
-          const cb = bb[0] - kb.mapOrigin[0],
-            sb = bb[2] - kb.mapOrigin[2],
+        if (null !== Ab && void 0 !== Ab && Ab.background) {
+          const ab = bb[0] - Ab.mapOrigin[0],
+            Ub = bb[2] - Ab.mapOrigin[2],
             {
-              rotation: Wb,
-              transform: Tb
-            } = function(bb, cb, sb, kb) {
-              const [Wb, Tb] = Ub(bb, cb, kb), Ib = ab - sb;
+              rotation: Mb,
+              transform: Eb
+            } = function(bb, ab, Ub, Ab) {
+              const [Mb, Eb] = Yb(bb, ab, Ab), Bb = Tb - Ub;
               return {
-                rotation: Ib,
-                transform: `rotate(${Ib}rad) translate(-${Wb}%, -${Tb}%)`
+                rotation: Bb,
+                transform: `rotate(${Bb}rad) translate(-${Mb}%, -${Eb}%)`
               }
-            }(cb, sb, Ib, kb.background.bounds);
-          mb.minimap = {
-            transform: Tb,
-            iconRotation: -Wb + "rad"
+            }(ab, Ub, Bb, Ab.background.bounds);
+          jb.minimap = {
+            transform: Eb,
+            iconRotation: -Mb + "rad"
           };
-          const [Hb, fb] = Ub(cb, sb, kb.background.bounds);
-          mb.player = {
-            left: Hb,
-            top: fb,
-            hidden: Hb < 0 || fb < 0 || Hb > 100 || fb > 100,
-            rotation: -Wb + "rad"
+          const [eb, vb] = Yb(ab, Ub, Ab.background.bounds);
+          jb.player = {
+            left: eb,
+            top: vb,
+            hidden: eb < 0 || vb < 0 || eb > 100 || vb > 100,
+            rotation: -Mb + "rad"
           }
         }
         const {
-          waypoint: Qb
+          waypoint: kb
         } = this.quests.getSnapshot();
-        if ("search" === (null === Qb || void 0 === Qb ? void 0 : Qb.questMarkerIcon) && null !== kb && void 0 !== kb && kb.background) {
+        if ("search" === (null === kb || void 0 === kb ? void 0 : kb.questMarkerIcon) && null !== Ab && void 0 !== Ab && Ab.background) {
           const {
             bounds: bb
-          } = kb.background, [cb, sb] = Ub(Qb.position[0] - kb.mapOrigin[0], Qb.position[2] - kb.mapOrigin[2], bb);
-          mb.searchArea = {
-            left: cb,
-            top: sb,
+          } = Ab.background, [ab, Ub] = Yb(kb.position[0] - Ab.mapOrigin[0], kb.position[2] - Ab.mapOrigin[2], bb);
+          jb.searchArea = {
+            left: ab,
+            top: Ub,
             width: 6400 / (bb.mapMaxX - bb.mapMinX),
             height: 6400 / (bb.mapMaxZ - bb.mapMinZ),
-            shapeSeed: Qb.nameKey
+            shapeSeed: kb.nameKey
           }
         }
-        const eb = this.quests.getNotificationSnapshot(),
-          Cb = "completion" === (null === eb || void 0 === eb ? void 0 : eb.phase) && !hc(eb.kind);
-        if (Qb && !Cb) {
-          const cb = Math.hypot(...Qb.position.map(((cb, sb) => cb - bb[sb]))),
-            kb = Math.round(cb),
-            Wb = "talk" === Qb.questMarkerIcon ? Math.min(1, Math.max(0, (10 - cb) / 5)) : 0,
-            ab = sb.projectWorldPosToViewport(Qb.position),
-            Tb = ab && sb.projectWorldPosToViewport([Qb.position[0], Qb.position[1] - 1, Qb.position[2]]);
-          mb.waypoint = {
-            ...sb.projectWorldPosToScreenPos(Qb.position),
-            text: ab,
-            nearness: Wb * Wb * (3 - 2 * Wb),
-            blockHeight: ab && Tb ? Tb.y - ab.y : null,
-            name: this.translateCached(Qb.nameKey),
-            nameKey: Qb.nameKey,
-            markerIcon: Qb.questMarkerIcon ? ks[Qb.questMarkerIcon] : "quest",
-            popupToken: (null === eb || void 0 === eb ? void 0 : eb.waypointNameKey) === Qb.nameKey ? eb.token : null,
-            distance: this.translateCached("skyblockGame:waypointDistance", this.metresFormat.format(kb)),
-            hint: "search" === Qb.questMarkerIcon && Math.hypot(Qb.position[0] - bb[0], Qb.position[2] - bb[2]) <= 32 ? this.translateCached("skyblockGame:waypointSearchHint") : null
+        const yb = this.quests.getNotificationSnapshot(),
+          Zb = "completion" === (null === yb || void 0 === yb ? void 0 : yb.phase) && !ma(yb.kind);
+        if (kb && !Zb) {
+          const ab = Math.hypot(...kb.position.map(((ab, Ub) => ab - bb[Ub]))),
+            Ab = Math.round(ab),
+            Mb = "talk" === kb.questMarkerIcon ? Math.min(1, Math.max(0, (10 - ab) / 5)) : 0,
+            Tb = Ub.projectWorldPosToViewport(kb.position),
+            Eb = Tb && Ub.projectWorldPosToViewport([kb.position[0], kb.position[1] - 1, kb.position[2]]);
+          jb.waypoint = {
+            ...Ub.projectWorldPosToScreenPos(kb.position),
+            text: Tb,
+            nearness: Mb * Mb * (3 - 2 * Mb),
+            blockHeight: Tb && Eb ? Eb.y - Tb.y : null,
+            name: this.translateCached(kb.nameKey),
+            nameKey: kb.nameKey,
+            markerIcon: kb.questMarkerIcon ? AU[kb.questMarkerIcon] : "quest",
+            popupToken: (null === yb || void 0 === yb ? void 0 : yb.waypointNameKey) === kb.nameKey ? yb.token : null,
+            distance: this.translateCached("skyblockGame:waypointDistance", this.metresFormat.format(Ab)),
+            hint: "search" === kb.questMarkerIcon && Math.hypot(kb.position[0] - bb[0], kb.position[2] - bb[2]) <= 32 ? this.translateCached("skyblockGame:waypointSearchHint") : null
           }
         }
-        this.snapshot = mb, this.display.render(mb)
+        this.snapshot = jb, this.display.render(jb)
       }
       dispose() {
-        this.Em = !0, this.snapshot = null, this.display.dispose()
+        this.cX = !0, this.snapshot = null, this.display.dispose()
       }
     }
-    const as = "skyblockSkillsView";
-    class Ts extends Mb {
+    const TU = "skyblockSkillsView";
+    class EU extends Lb {
       constructor(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now,
-          sb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : bb => bb,
-          kb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "en-GB",
-          Wb = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : bb => bb;
-        super(bb, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}, arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : () => {}), this.now = cb, this.translate = sb, this.locale = kb, this.itemName = Wb, this.progress = null, this.selected = "foraging", this.pending = new Map, this.recent = null, this.nextLevelUpToken = 0, this.onLevelUp = () => {}, this.skillText = new Map, this.sourceText = new Map, this.snapshot = {
+        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now,
+          Ub = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : bb => bb,
+          Ab = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "en-GB",
+          Mb = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : bb => bb;
+        super(bb, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}, arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : () => {}), this.now = ab, this.translate = Ub, this.locale = Ab, this.itemName = Mb, this.progress = null, this.selected = "foraging", this.pending = new Map, this.recent = null, this.nextLevelUpToken = 0, this.onLevelUp = () => {}, this.skillText = new Map, this.sourceText = new Map, this.snapshot = {
           enabled: !1,
           open: !1,
           skills: [],
@@ -1727,68 +1727,68 @@ export const modules = {
           this.selected = bb, this.emit()
         }
       }
-      setTranslator(bb, cb, sb) {
-        this.translate = bb, this.locale = cb, this.itemName = sb, this.skillText.clear(), this.sourceText.clear(), this.emit()
+      setTranslator(bb, ab, Ub) {
+        this.translate = bb, this.locale = ab, this.itemName = Ub, this.skillText.clear(), this.sourceText.clear(), this.emit()
       }
       text(bb) {
-        let cb = this.skillText.get(bb);
-        return cb || (cb = {
+        let ab = this.skillText.get(bb);
+        return ab || (ab = {
           label: this.translate(`skyblockGame:${bb}`),
           description: this.translate(`skyblockGame:${bb}Description`)
-        }, this.skillText.set(bb, cb)), cb
+        }, this.skillText.set(bb, ab)), ab
       }
       sources(bb) {
         if ("mining" === bb || "fishing" === bb) return this.buildSources(bb);
-        let cb = this.sourceText.get(bb);
-        return cb || (cb = this.buildSources(bb), this.sourceText.set(bb, cb)), cb
+        let ab = this.sourceText.get(bb);
+        return ab || (ab = this.buildSources(bb), this.sourceText.set(bb, ab)), ab
       }
       buildSources(bb) {
-        const cb = this.translate;
-        return "exploration" === bb ? [cb("skyblockGame:explorationZoneSource", {
+        const ab = this.translate;
+        return "exploration" === bb ? [ab("skyblockGame:explorationZoneSource", {
           xp: this.number(100)
-        }), cb("skyblockGame:explorationLandmarkSource", {
+        }), ab("skyblockGame:explorationLandmarkSource", {
           xp: this.number(50)
-        })] : "foraging" === bb ? [cb("skyblockGame:logSource", {
-          xp: this.number(nc["Maple Log"])
-        })] : "combat" === bb ? [cb("skyblockGame:creatureKillSource"), cb("skyblockGame:noEnvironmentalXp")] : "farming" === bb ? [cb("skyblockGame:cropSource", {
-          xp: this.number(Qc["Wheat|FreshlyGrown"])
-        }), cb("skyblockGame:terrainFarmingSource", {
+        })] : "foraging" === bb ? [ab("skyblockGame:logSource", {
+          xp: this.number(Xa["Maple Log"])
+        })] : "combat" === bb ? [ab("skyblockGame:creatureKillSource"), ab("skyblockGame:noEnvironmentalXp")] : "farming" === bb ? [ab("skyblockGame:cropSource", {
+          xp: this.number(ka["Wheat|FreshlyGrown"])
+        }), ab("skyblockGame:terrainFarmingSource", {
           xp: this.number(2)
-        }), cb("skyblockGame:noYoungCropXp")] : Object.entries("mining" === bb ? lc : ec).map((bb => {
-          let [sb, kb] = bb;
-          return cb("skyblockGame:itemXpSource", {
-            item: this.itemName(sb),
-            xp: this.number(kb)
+        }), ab("skyblockGame:noYoungCropXp")] : Object.entries("mining" === bb ? Ra : ya).map((bb => {
+          let [Ub, Ab] = bb;
+          return ab("skyblockGame:itemXpSource", {
+            item: this.itemName(Ub),
+            xp: this.number(Ab)
           })
         }))
       }
       number(bb) {
         return bb.toLocaleString(this.locale)
       }
-      benefit(bb, cb) {
-        const sb = Tc(bb, cb);
-        return this.translate(sb.translationKey, {
-          bonus: this.number(sb.percent)
+      benefit(bb, ab) {
+        const Ub = Ea(bb, ab);
+        return this.translate(Ub.translationKey, {
+          bonus: this.number(Ub.percent)
         })
       }
-      Km(bb) {
-        if (!this.Em) {
+      aj(bb) {
+        if (!this.cX) {
           if ("snapshot" === bb.kind) this.progress = bb.progress, this.pending.clear(), this.recent = null;
           else if ("award" === bb.kind && this.progress) {
             const {
-              award: cb
+              award: ab
             } = bb;
             this.progress = {
               ...this.progress,
-              [cb.skill]: cb.after
+              [ab.skill]: ab.after
             };
-            for (const [bb, kb] of this.pending) kb.skill === cb.skill && this.pending.delete(bb);
-            const sb = cb.after.level > cb.before.level;
-            this.recordGain(cb.skill, cb.amount, sb ? ++this.nextLevelUpToken : null), sb && this.onLevelUp({
+            for (const [bb, Ab] of this.pending) Ab.skill === ab.skill && this.pending.delete(bb);
+            const Ub = ab.after.level > ab.before.level;
+            this.recordGain(ab.skill, ab.amount, Ub ? ++this.nextLevelUpToken : null), Ub && this.onLevelUp({
               questCompletionKind: "skillLevel",
-              skill: cb.skill,
-              beforeLevel: cb.before.level,
-              level: cb.after.level
+              skill: ab.skill,
+              beforeLevel: ab.before.level,
+              level: ab.after.level
             })
           } else {
             if ("rejectBlock" === bb.kind) return void this.rejectBlock(bb.position);
@@ -1797,135 +1797,135 @@ export const modules = {
           this.emit()
         }
       }
-      predictBlock(bb, cb, sb) {
-        if (!this.progress || this.Em || sb) return;
-        const kb = function(bb, cb) {
-          const sb = bb.split("|")[0];
-          return "Air" === cb || cb === `Barkless ${bb}` ? Object.hasOwn(nc, sb) ? {
+      predictBlock(bb, ab, Ub) {
+        if (!this.progress || this.cX || Ub) return;
+        const Ab = function(bb, ab) {
+          const Ub = bb.split("|")[0];
+          return "Air" === ab || ab === `Barkless ${bb}` ? Object.hasOwn(Xa, Ub) ? {
             skill: "foraging",
-            amount: nc[sb]
-          } : "Air" !== cb ? null : Object.hasOwn(lc, bb) ? {
+            amount: Xa[Ub]
+          } : "Air" !== ab ? null : Object.hasOwn(Ra, bb) ? {
             skill: "mining",
-            amount: lc[bb]
-          } : fc(bb) ? {
+            amount: Ra[bb]
+          } : va(bb) ? {
             skill: "farming",
             amount: 10
-          } : Xc(bb) ? {
+          } : Pa(bb) ? {
             skill: "foraging",
             amount: 2
-          } : Object.hasOwn(Qc, bb) ? {
+          } : Object.hasOwn(ka, bb) ? {
             skill: "farming",
-            amount: Qc[bb]
-          } : Object.hasOwn(Zb, bb) ? {
+            amount: ka[bb]
+          } : Object.hasOwn(rb, bb) ? {
             skill: "farming",
             amount: 2
           } : null : null
-        }(cb, "Air");
-        if (!kb) return;
-        const Wb = bb.join(",");
-        if (this.pending.has(Wb)) return;
-        const ab = this.predictedProgress(kb.skill).totalXp + kb.amount;
-        Number.isSafeInteger(ab) && (this.pending.set(Wb, {
-          ...kb,
+        }(ab, "Air");
+        if (!Ab) return;
+        const Mb = bb.join(",");
+        if (this.pending.has(Mb)) return;
+        const Tb = this.predictedProgress(Ab.skill).totalXp + Ab.amount;
+        Number.isSafeInteger(Tb) && (this.pending.set(Mb, {
+          ...Ab,
           expires: this.now() + 2e3
-        }), this.recordGain(kb.skill, 0), this.emit())
+        }), this.recordGain(Ab.skill, 0), this.emit())
       }
       rejectBlock(bb) {
         this.pending.delete(bb.join(",")) && this.emit()
       }
-      aX() {
-        if (this.Em) return;
+      qL() {
+        if (this.cX) return;
         let bb = !1;
-        for (const [cb, sb] of this.pending) sb.expires <= this.now() && (this.pending.delete(cb), bb = !0);
+        for (const [ab, Ub] of this.pending) Ub.expires <= this.now() && (this.pending.delete(ab), bb = !0);
         this.recent && this.recent.expires <= this.now() && (this.recent = null, bb = !0), bb && this.emit()
       }
       dispose() {
         this.progress = null, this.pending.clear(), this.recent = null, super.dispose()
       }
-      recordGain(bb, cb) {
-        var sb, kb;
-        let Wb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        const ab = (null === (sb = this.recent) || void 0 === sb ? void 0 : sb.skill) === bb && this.recent.expires > this.now() ? this.recent.confirmed : 0,
-          Tb = (null === (kb = this.recent) || void 0 === kb ? void 0 : kb.skill) === bb && this.recent.expires > this.now() ? this.recent.levelUpToken : null;
+      recordGain(bb, ab) {
+        var Ub, Ab;
+        let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        const Tb = (null === (Ub = this.recent) || void 0 === Ub ? void 0 : Ub.skill) === bb && this.recent.expires > this.now() ? this.recent.confirmed : 0,
+          Eb = (null === (Ab = this.recent) || void 0 === Ab ? void 0 : Ab.skill) === bb && this.recent.expires > this.now() ? this.recent.levelUpToken : null;
         this.recent = {
           skill: bb,
-          confirmed: ab + cb,
+          confirmed: Tb + ab,
           expires: this.now() + 3e3,
-          levelUpToken: null !== Wb && void 0 !== Wb ? Wb : Tb
+          levelUpToken: null !== Mb && void 0 !== Mb ? Mb : Eb
         }
       }
       pendingXp(bb) {
-        let cb = 0;
-        for (const sb of this.pending.values()) sb.skill === bb && (cb += sb.amount);
-        return cb
+        let ab = 0;
+        for (const Ub of this.pending.values()) Ub.skill === bb && (ab += Ub.amount);
+        return ab
       }
       predictedProgress(bb) {
-        const cb = this.progress[bb],
-          sb = this.pendingXp(bb);
-        return sb ? Ic(cb.totalXp + sb, bb) : cb
+        const ab = this.progress[bb],
+          Ub = this.pendingXp(bb);
+        return Ub ? Ba(ab.totalXp + Ub, bb) : ab
       }
       isEnabled() {
         return null !== this.progress
       }
       buildSnapshot() {
-        var bb, cb, sb;
-        const kb = this.progress ? Fb.map((bb => {
-            const cb = this.predictedProgress(bb);
+        var bb, ab, Ub;
+        const Ab = this.progress ? cb.map((bb => {
+            const ab = this.predictedProgress(bb);
             return {
               ...this.text(bb),
-              icon: Cc[bb],
-              benefit: this.benefit(bb, cb.level),
+              icon: Za[bb],
+              benefit: this.benefit(bb, ab.level),
               sources: this.sources(bb),
               id: bb,
               selected: bb === this.selected,
               level: this.translate("skyblockGame:level", {
-                level: this.number(cb.level)
+                level: this.number(ab.level)
               }),
-              xp: null === cb.xpForNextLevel ? this.translate("skyblockGame:max") : this.translate("skyblockGame:xpProgress", {
-                current: this.number(cb.xpIntoLevel),
-                target: this.number(cb.xpForNextLevel)
+              xp: null === ab.xpForNextLevel ? this.translate("skyblockGame:max") : this.translate("skyblockGame:xpProgress", {
+                current: this.number(ab.xpIntoLevel),
+                target: this.number(ab.xpForNextLevel)
               }),
-              percent: null === cb.xpForNextLevel ? 100 : Math.min(100, cb.xpIntoLevel / cb.xpForNextLevel * 100)
+              percent: null === ab.xpForNextLevel ? 100 : Math.min(100, ab.xpIntoLevel / ab.xpForNextLevel * 100)
             }
           })) : [],
-          Wb = kb.find((bb => {
-            var cb;
-            return bb.id === (null === (cb = this.recent) || void 0 === cb ? void 0 : cb.skill)
+          Mb = Ab.find((bb => {
+            var ab;
+            return bb.id === (null === (ab = this.recent) || void 0 === ab ? void 0 : ab.skill)
           })),
-          ab = this.recent ? this.recent.confirmed + this.pendingXp(this.recent.skill) : 0;
+          Tb = this.recent ? this.recent.confirmed + this.pendingXp(this.recent.skill) : 0;
         return {
           enabled: this.isEnabled(),
           open: this.open,
-          skills: kb,
-          detail: null !== (bb = kb.find((bb => bb.selected))) && void 0 !== bb ? bb : null,
-          overallLevel: this.progress ? Fb.reduce(((bb, cb) => bb + this.predictedProgress(cb).level), 0) : null,
-          hud: Wb && ab > 0 ? {
-            skill: Wb,
+          skills: Ab,
+          detail: null !== (bb = Ab.find((bb => bb.selected))) && void 0 !== bb ? bb : null,
+          overallLevel: this.progress ? cb.reduce(((bb, ab) => bb + this.predictedProgress(ab).level), 0) : null,
+          hud: Mb && Tb > 0 ? {
+            skill: Mb,
             gain: this.translate("skyblockGame:xpGain", {
-              xp: this.number(ab)
+              xp: this.number(Tb)
             }),
-            levelUpToken: null !== (cb = null === (sb = this.recent) || void 0 === sb ? void 0 : sb.levelUpToken) && void 0 !== cb ? cb : null,
-            colour: Vc(Wb.id)
+            levelUpToken: null !== (ab = null === (Ub = this.recent) || void 0 === Ub ? void 0 : Ub.levelUpToken) && void 0 !== ab ? ab : null,
+            colour: za(Mb.id)
           } : null
         }
       }
     }
-    const Us = Math.max(1600, 600, 950) + 400,
-      Is = {
+    const YU = Math.max(1600, 600, 950) + 400,
+      BU = {
         "--quest-step-flash": "1600ms",
         "--quest-step-pop": "600ms",
         "--quest-step-unlock": "500ms",
         "--quest-step-unlock-delay": "450ms"
       },
-      Hs = "skyblockQuestsView",
-      fs = "skyblockQuestNotificationView";
-    class Ms extends Mb {
-      constructor(bb, cb, sb) {
-        let kb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {},
-          Wb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Date.now,
-          ab = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : "en-GB",
-          Tb = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : () => {};
-        super(bb, kb, arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : () => {}), this.requestTracking = cb, this.translate = sb, this.now = Wb, this.locale = ab, this.publishNotification = Tb, this.notifications = void 0, this.notificationSnapshot = null, this.authoritative = null, this.receivedAt = 0, this.selected = null, this.completedExpanded = !1, this.trackAvailableAt = 0, this.waitingForTrack = !1, this.compassTarget = null, this.waypoint = null, this.trackedSteps = null, this.trackedStepPulse = 0, this.trackedChange = null, this.onTrackedStepFinished = () => {}, this.onViewDialogue = null, this.translateWithIcons = null, this.snapshot = {
+      eU = "skyblockQuestsView",
+      vU = "skyblockQuestNotificationView";
+    class LU extends Lb {
+      constructor(bb, ab, Ub) {
+        let Ab = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {},
+          Mb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Date.now,
+          Tb = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : "en-GB",
+          Eb = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : () => {};
+        super(bb, Ab, arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : () => {}), this.requestTracking = ab, this.translate = Ub, this.now = Mb, this.locale = Tb, this.publishNotification = Eb, this.notifications = void 0, this.notificationSnapshot = null, this.authoritative = null, this.receivedAt = 0, this.selected = null, this.completedExpanded = !1, this.trackAvailableAt = 0, this.waitingForTrack = !1, this.compassTarget = null, this.waypoint = null, this.trackedSteps = null, this.trackedStepPulse = 0, this.trackedChange = null, this.onTrackedStepFinished = () => {}, this.onViewDialogue = null, this.translateWithIcons = null, this.snapshot = {
           enabled: !1,
           open: !1,
           active: [],
@@ -1937,60 +1937,60 @@ export const modules = {
           waypoint: null,
           compassTarget: null
         }, this.getNotificationSnapshot = () => this.notificationSnapshot, this.showTracked = () => {
-          var bb, cb;
-          this.selected = null !== (bb = null === (cb = this.authoritative) || void 0 === cb ? void 0 : cb.trackedQuestId) && void 0 !== bb ? bb : null, this.show()
+          var bb, ab;
+          this.selected = null !== (bb = null === (ab = this.authoritative) || void 0 === ab ? void 0 : ab.trackedQuestId) && void 0 !== bb ? bb : null, this.show()
         }, this.select = bb => {
           this.selected = bb, this.emit()
         }, this.toggleCompleted = () => {
           this.completedExpanded = !this.completedExpanded, this.emit()
         }, this.trackSelected = () => {
           const bb = this.snapshot.detail;
-          !this.Em && null !== bb && void 0 !== bb && bb.canTrack && this.now() >= this.trackAvailableAt && (this.trackAvailableAt = this.now() + 2500, this.waitingForTrack = !0, this.requestTracking(bb.id), this.emit())
+          !this.cX && null !== bb && void 0 !== bb && bb.canTrack && this.now() >= this.trackAvailableAt && (this.trackAvailableAt = this.now() + 2500, this.waitingForTrack = !0, this.requestTracking(bb.id), this.emit())
         }, this.viewDialogue = () => {
           const bb = this.snapshot.detail;
-          var cb;
-          bb && (null === (cb = this.onViewDialogue) || void 0 === cb || cb.call(this, bb.id))
-        }, this.notifications = new uc(Wb, (() => this.authoritative))
+          var ab;
+          bb && (null === (ab = this.onViewDialogue) || void 0 === ab || ab.call(this, bb.id))
+        }, this.notifications = new ia(Mb, (() => this.authoritative))
       }
       getTrackedQuestId() {
-        var bb, cb;
-        return null !== (bb = null === (cb = this.authoritative) || void 0 === cb ? void 0 : cb.trackedQuestId) && void 0 !== bb ? bb : null
+        var bb, ab;
+        return null !== (bb = null === (ab = this.authoritative) || void 0 === ab ? void 0 : ab.trackedQuestId) && void 0 !== bb ? bb : null
       }
       notify(bb) {
-        !this.Em && this.notifications.enqueue(bb) && this.emitNotification()
+        !this.cX && this.notifications.enqueue(bb) && this.emitNotification()
       }
       setNotificationsHeld(bb) {
         (this.notifications.setHeld(bb) || bb) && this.emitNotification()
       }
-      aX() {
-        var bb, cb;
-        if (this.Em) return;
-        this.notifications.aX() && this.emitNotification();
-        let sb = !1;
-        this.trackAvailableAt && this.now() >= this.trackAvailableAt && (this.trackAvailableAt = 0, this.waitingForTrack = !1, sb = !0), this.trackedChange && this.now() >= this.trackedChange.expiresAt && (this.trackedChange = null, sb = !0);
-        const kb = Xs(this.authoritative);
-        null !== kb && void 0 !== kb && null !== (bb = kb.questClock) && void 0 !== bb && bb.running && this.clockText(kb) !== (null === (cb = this.snapshot.tracked) || void 0 === cb ? void 0 : cb.clock) && (sb = !0), sb && this.emit()
+      qL() {
+        var bb, ab;
+        if (this.cX) return;
+        this.notifications.qL() && this.emitNotification();
+        let Ub = !1;
+        this.trackAvailableAt && this.now() >= this.trackAvailableAt && (this.trackAvailableAt = 0, this.waitingForTrack = !1, Ub = !0), this.trackedChange && this.now() >= this.trackedChange.expiresAt && (this.trackedChange = null, Ub = !0);
+        const Ab = PU(this.authoritative);
+        null !== Ab && void 0 !== Ab && null !== (bb = Ab.questClock) && void 0 !== bb && bb.running && this.clockText(Ab) !== (null === (ab = this.snapshot.tracked) || void 0 === ab ? void 0 : ab.clock) && (Ub = !0), Ub && this.emit()
       }
       setTranslator(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.locale;
-        this.translate = bb, this.locale = cb, this.emitNotification(), this.emit()
+        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.locale;
+        this.translate = bb, this.locale = ab, this.emitNotification(), this.emit()
       }
-      Km(bb) {
-        if (!this.Em)
+      aj(bb) {
+        if (!this.cX)
           if ("completion" === bb.kind) this.notify(bb.questCompletion);
           else if ("landmark" === bb.kind) this.notify({
           questCompletionKind: "landmark",
           landmarkNameKey: bb.landmarkDiscoveredNameKey
         });
         else if ("npcNote" === bb.kind) {
-          var cb, sb, kb;
+          var ab, Ub, Ab;
           this.notify({
             questCompletionKind: "npcNote",
             titleKey: bb.npcNoteTitleKey,
             textKey: bb.npcNoteTextKey,
-            params: null !== (cb = bb.npcNoteParams) && void 0 !== cb ? cb : {},
-            nameKeys: null !== (sb = bb.npcNoteNameKeys) && void 0 !== sb ? sb : {},
-            iconItem: null !== (kb = bb.npcNoteIconItem) && void 0 !== kb ? kb : null
+            params: null !== (ab = bb.npcNoteParams) && void 0 !== ab ? ab : {},
+            nameKeys: null !== (Ub = bb.npcNoteNameKeys) && void 0 !== Ub ? Ub : {},
+            iconItem: null !== (Ab = bb.npcNoteIconItem) && void 0 !== Ab ? Ab : null
           })
         } else if ("open" === bb.kind) this.show();
         else if ("guidance" === bb.kind) this.waypoint = bb.waypoint, this.compassTarget = bb.compassTarget, this.snapshot = {
@@ -1999,105 +1999,105 @@ export const modules = {
           compassTarget: this.compassTarget
         };
         else if ("snapshot" === bb.kind) {
-          this.authoritative = bb.snapshot, this.notifications.aX() && this.emitNotification(), this.receivedAt = this.now(), this.waitingForTrack = !1;
-          const cb = this.trackedStepPulse;
-          this.updateTrackedStepPulse(bb.snapshot), this.emit(), this.trackedStepPulse > cb && this.onTrackedStepFinished()
+          this.authoritative = bb.snapshot, this.notifications.qL() && this.emitNotification(), this.receivedAt = this.now(), this.waitingForTrack = !1;
+          const ab = this.trackedStepPulse;
+          this.updateTrackedStepPulse(bb.snapshot), this.emit(), this.trackedStepPulse > ab && this.onTrackedStepFinished()
         }
       }
       dispose() {
         this.notifications.clear(), this.emitNotification(), this.authoritative = null, this.selected = null, this.completedExpanded = !1, this.trackAvailableAt = 0, this.waitingForTrack = !1, this.waypoint = null, this.compassTarget = null, this.trackedSteps = null, this.trackedStepPulse = 0, this.trackedChange = null, super.dispose()
       }
       emitNotification() {
-        this.Em || (this.notificationSnapshot = this.notifications.getView(this.translate, this.questTextTranslator(), this.locale), this.publishNotification(this.notificationSnapshot))
+        this.cX || (this.notificationSnapshot = this.notifications.getView(this.translate, this.questTextTranslator(), this.locale), this.publishNotification(this.notificationSnapshot))
       }
       questTextTranslator() {
         var bb;
         return null !== (bb = this.translateWithIcons) && void 0 !== bb ? bb : this.translate
       }
       clockText(bb) {
-        const cb = bb.questClock;
-        if (!cb) return null;
-        const sb = cb.elapsedMs + (cb.running ? this.now() - this.receivedAt : 0);
-        return void 0 === cb.countdownFromMs ? Eb(sb, !1) : Eb(1e3 * Math.ceil(Math.max(0, cb.countdownFromMs - sb) / 1e3), !1)
+        const ab = bb.questClock;
+        if (!ab) return null;
+        const Ub = ab.elapsedMs + (ab.running ? this.now() - this.receivedAt : 0);
+        return void 0 === ab.countdownFromMs ? hb(Ub, !1) : hb(1e3 * Math.ceil(Math.max(0, ab.countdownFromMs - Ub) / 1e3), !1)
       }
       updateTrackedStepPulse(bb) {
-        var cb, sb, kb;
-        const Wb = Xs(bb);
-        if (!Wb) return this.trackedSteps = null, this.trackedStepPulse = 0, void(this.trackedChange = null);
-        const ab = bb => Wb.subquests.filter((cb => bb(cb.status))).map((bb => bb.id)),
-          Tb = ab((bb => "completed" === bb || "skipped" === bb)),
-          Ub = ab((bb => "locked" !== bb)),
-          Ib = (null === (cb = this.trackedSteps) || void 0 === cb ? void 0 : cb.questId) === Wb.id && Wb.progress >= this.trackedSteps.progress ? this.trackedSteps : null;
-        if (Ib) {
-          const bb = Tb.filter((bb => !Ib.finished.has(bb))),
-            cb = ab((bb => "active" === bb || "ready" === bb)).filter((bb => !Ib.unlocked.has(bb)));
-          bb.length > 0 && this.trackedStepPulse++, (bb.length > 0 || cb.length > 0) && (this.trackedChange = {
+        var ab, Ub, Ab;
+        const Mb = PU(bb);
+        if (!Mb) return this.trackedSteps = null, this.trackedStepPulse = 0, void(this.trackedChange = null);
+        const Tb = bb => Mb.subquests.filter((ab => bb(ab.status))).map((bb => bb.id)),
+          Eb = Tb((bb => "completed" === bb || "skipped" === bb)),
+          Yb = Tb((bb => "locked" !== bb)),
+          Bb = (null === (ab = this.trackedSteps) || void 0 === ab ? void 0 : ab.questId) === Mb.id && Mb.progress >= this.trackedSteps.progress ? this.trackedSteps : null;
+        if (Bb) {
+          const bb = Eb.filter((bb => !Bb.finished.has(bb))),
+            ab = Tb((bb => "active" === bb || "ready" === bb)).filter((bb => !Bb.unlocked.has(bb)));
+          bb.length > 0 && this.trackedStepPulse++, (bb.length > 0 || ab.length > 0) && (this.trackedChange = {
             finished: new Set(bb),
-            unlocked: new Set(cb),
-            expiresAt: this.now() + Us
+            unlocked: new Set(ab),
+            expiresAt: this.now() + YU
           })
         } else {
-          var Hb;
-          this.trackedStepPulse = (null === (Hb = this.trackedSteps) || void 0 === Hb ? void 0 : Hb.questId) === Wb.id ? this.trackedStepPulse : 0, this.trackedChange = null
+          var eb;
+          this.trackedStepPulse = (null === (eb = this.trackedSteps) || void 0 === eb ? void 0 : eb.questId) === Mb.id ? this.trackedStepPulse : 0, this.trackedChange = null
         }
         this.trackedSteps = {
-          questId: Wb.id,
-          progress: Wb.progress,
-          finished: new Set([...null !== (sb = null === Ib || void 0 === Ib ? void 0 : Ib.finished) && void 0 !== sb ? sb : [], ...Tb]),
-          unlocked: new Set([...null !== (kb = null === Ib || void 0 === Ib ? void 0 : Ib.unlocked) && void 0 !== kb ? kb : [], ...Ub])
+          questId: Mb.id,
+          progress: Mb.progress,
+          finished: new Set([...null !== (Ub = null === Bb || void 0 === Bb ? void 0 : Bb.finished) && void 0 !== Ub ? Ub : [], ...Eb]),
+          unlocked: new Set([...null !== (Ab = null === Bb || void 0 === Bb ? void 0 : Bb.unlocked) && void 0 !== Ab ? Ab : [], ...Yb])
         }
       }
-      entry(bb, cb) {
-        var sb, kb;
-        const Wb = bb.id === (null === (sb = this.authoritative) || void 0 === sb ? void 0 : sb.trackedQuestId),
-          ab = this.now() < this.trackAvailableAt,
-          Tb = this.questTextTranslator(),
-          Ub = bb.subquests.map((cb => {
-            var sb, kb, ab, Ub, Ib, Hb;
-            const fb = null !== (sb = cb.handInNpcName) && void 0 !== sb ? sb : bb.giverName,
-              Mb = this.translate("skyblockGame:progress", {
-                current: cb.progress.toLocaleString(this.locale),
-                target: cb.target.toLocaleString(this.locale)
+      entry(bb, ab) {
+        var Ub, Ab;
+        const Mb = bb.id === (null === (Ub = this.authoritative) || void 0 === Ub ? void 0 : Ub.trackedQuestId),
+          Tb = this.now() < this.trackAvailableAt,
+          Eb = this.questTextTranslator(),
+          Yb = bb.subquests.map((ab => {
+            var Ub, Ab, Tb, Yb, Bb, eb;
+            const vb = null !== (Ub = ab.handInNpcName) && void 0 !== Ub ? Ub : bb.giverName,
+              Lb = this.translate("skyblockGame:progress", {
+                current: ab.progress.toLocaleString(this.locale),
+                target: ab.target.toLocaleString(this.locale)
               }),
-              Xb = {
+              Pb = {
                 active: null,
                 locked: "skyblockGame:subquestLocked",
-                ready: fb ? "skyblockGame:subquestReady" : "skyblockGame:subquestReadyNoNpc",
+                ready: vb ? "skyblockGame:subquestReady" : "skyblockGame:subquestReadyNoNpc",
                 completed: "skyblockGame:completed",
                 skipped: "skyblockGame:subquestSkipped"
-              } [cb.status],
-              nb = "active" === cb.status || "ready" === cb.status;
+              } [ab.status],
+              Xb = "active" === ab.status || "ready" === ab.status;
             return {
-              id: cb.id,
-              name: Lc(Tb, cb.nameKey, cb.nameParams),
-              description: Lc(Tb, cb.descriptionKey, cb.descriptionParams),
-              progress: Mb,
-              status: cb.status,
-              statusLabel: Xb ? this.translate(Xb, {
-                npc: fb
-              }) : Mb,
-              iconItem: nb && null !== (kb = cb.questIconItem) && void 0 !== kb ? kb : null,
-              barPercent: "active" === cb.status && cb.showsProgressBar ? Math.min(100, 100 * cb.progress / cb.target) : null,
-              justFinished: Wb && null !== (ab = null === (Ub = this.trackedChange) || void 0 === Ub ? void 0 : Ub.finished.has(cb.id)) && void 0 !== ab && ab,
-              justUnlocked: Wb && null !== (Ib = null === (Hb = this.trackedChange) || void 0 === Hb ? void 0 : Hb.unlocked.has(cb.id)) && void 0 !== Ib && Ib
+              id: ab.id,
+              name: xa(Eb, ab.nameKey, ab.nameParams),
+              description: xa(Eb, ab.descriptionKey, ab.descriptionParams),
+              progress: Lb,
+              status: ab.status,
+              statusLabel: Pb ? this.translate(Pb, {
+                npc: vb
+              }) : Lb,
+              iconItem: Xb && null !== (Ab = ab.questIconItem) && void 0 !== Ab ? Ab : null,
+              barPercent: "active" === ab.status && ab.showsProgressBar ? Math.min(100, 100 * ab.progress / ab.target) : null,
+              justFinished: Mb && null !== (Tb = null === (Yb = this.trackedChange) || void 0 === Yb ? void 0 : Yb.finished.has(ab.id)) && void 0 !== Tb && Tb,
+              justUnlocked: Mb && null !== (Bb = null === (eb = this.trackedChange) || void 0 === eb ? void 0 : eb.unlocked.has(ab.id)) && void 0 !== Bb && Bb
             }
           }));
         return {
           id: bb.id,
-          name: Lc(Tb, bb.nameKey, bb.nameParams),
-          description: Lc(Tb, bb.descriptionKey, bb.descriptionParams),
-          progress: cb ? this.translate("skyblockGame:completed") : this.translate("skyblockGame:stepsProgress", {
+          name: xa(Eb, bb.nameKey, bb.nameParams),
+          description: xa(Eb, bb.descriptionKey, bb.descriptionParams),
+          progress: ab ? this.translate("skyblockGame:completed") : this.translate("skyblockGame:stepsProgress", {
             current: bb.progress.toLocaleString(this.locale),
             target: bb.target.toLocaleString(this.locale)
           }),
-          completed: cb,
-          tracked: Wb,
+          completed: ab,
+          tracked: Mb,
           selected: bb.id === this.selected,
-          canTrack: !cb && !Wb && !ab,
-          trackLabel: this.translate(Wb ? "skyblockGame:trackingQuest" : this.waitingForTrack ? "skyblockGame:updating" : ab ? "skyblockGame:pleaseWait" : "skyblockGame:trackQuest"),
+          canTrack: !ab && !Mb && !Tb,
+          trackLabel: this.translate(Mb ? "skyblockGame:trackingQuest" : this.waitingForTrack ? "skyblockGame:updating" : Tb ? "skyblockGame:pleaseWait" : "skyblockGame:trackQuest"),
           canViewDialogue: null !== this.onViewDialogue && "dungeon_run" !== bb.id,
-          subquests: Ub,
-          focusStep: null !== (kb = Ub.find((bb => null !== bb.barPercent))) && void 0 !== kb ? kb : null,
+          subquests: Yb,
+          focusStep: null !== (Ab = Yb.find((bb => null !== bb.barPercent))) && void 0 !== Ab ? Ab : null,
           clock: this.clockText(bb)
         }
       }
@@ -2105,21 +2105,21 @@ export const modules = {
         return null !== this.authoritative
       }
       buildSnapshot() {
-        var bb, cb, sb, kb, Wb, ab, Tb, Ub, Ib, Hb;
-        const fb = [...null !== (bb = null === (cb = this.authoritative) || void 0 === cb ? void 0 : cb.active) && void 0 !== bb ? bb : [], ...null !== (sb = null === (kb = this.authoritative) || void 0 === kb ? void 0 : kb.completed) && void 0 !== sb ? sb : []];
-        var Mb, Xb, nb, mb;
-        fb.some((bb => bb.id === this.selected)) || (this.selected = null !== (Mb = null !== (Xb = null === (nb = this.authoritative) || void 0 === nb ? void 0 : nb.trackedQuestId) && void 0 !== Xb ? Xb : null === (mb = fb[0]) || void 0 === mb ? void 0 : mb.id) && void 0 !== Mb ? Mb : null);
-        const lb = null !== (Wb = null === (ab = this.authoritative) || void 0 === ab ? void 0 : ab.active.map((bb => this.entry(bb, !1)))) && void 0 !== Wb ? Wb : [];
-        lb.sort(((bb, cb) => Number(cb.tracked) - Number(bb.tracked)));
-        const Qb = null !== (Tb = null === (Ub = this.authoritative) || void 0 === Ub ? void 0 : Ub.completed.map((bb => this.entry(bb, !0)))) && void 0 !== Tb ? Tb : [];
+        var bb, ab, Ub, Ab, Mb, Tb, Eb, Yb, Bb, eb;
+        const vb = [...null !== (bb = null === (ab = this.authoritative) || void 0 === ab ? void 0 : ab.active) && void 0 !== bb ? bb : [], ...null !== (Ub = null === (Ab = this.authoritative) || void 0 === Ab ? void 0 : Ab.completed) && void 0 !== Ub ? Ub : []];
+        var Lb, Pb, Xb, jb;
+        vb.some((bb => bb.id === this.selected)) || (this.selected = null !== (Lb = null !== (Pb = null === (Xb = this.authoritative) || void 0 === Xb ? void 0 : Xb.trackedQuestId) && void 0 !== Pb ? Pb : null === (jb = vb[0]) || void 0 === jb ? void 0 : jb.id) && void 0 !== Lb ? Lb : null);
+        const Rb = null !== (Mb = null === (Tb = this.authoritative) || void 0 === Tb ? void 0 : Tb.active.map((bb => this.entry(bb, !1)))) && void 0 !== Mb ? Mb : [];
+        Rb.sort(((bb, ab) => Number(ab.tracked) - Number(bb.tracked)));
+        const kb = null !== (Eb = null === (Yb = this.authoritative) || void 0 === Yb ? void 0 : Yb.completed.map((bb => this.entry(bb, !0)))) && void 0 !== Eb ? Eb : [];
         return {
           enabled: this.isEnabled(),
           open: this.open,
-          active: lb,
-          completed: Qb,
+          active: Rb,
+          completed: kb,
           completedExpanded: this.completedExpanded,
-          detail: null !== (Ib = [...lb, ...Qb].find((bb => bb.selected))) && void 0 !== Ib ? Ib : null,
-          tracked: null !== (Hb = lb.find((bb => bb.tracked))) && void 0 !== Hb ? Hb : null,
+          detail: null !== (Bb = [...Rb, ...kb].find((bb => bb.selected))) && void 0 !== Bb ? Bb : null,
+          tracked: null !== (eb = Rb.find((bb => bb.tracked))) && void 0 !== eb ? eb : null,
           trackedStepPulse: this.trackedStepPulse,
           waypoint: this.waypoint,
           compassTarget: this.compassTarget
@@ -2127,16 +2127,16 @@ export const modules = {
       }
     }
 
-    function Xs(bb) {
-      var cb;
-      return null !== (cb = null === bb || void 0 === bb ? void 0 : bb.active.find((cb => cb.id === bb.trackedQuestId))) && void 0 !== cb ? cb : null
+    function PU(bb) {
+      var ab;
+      return null !== (ab = null === bb || void 0 === bb ? void 0 : bb.active.find((ab => ab.id === bb.trackedQuestId))) && void 0 !== ab ? ab : null
     }
-    const ns = "skyblockDungeonsView";
-    class ms extends Mb {
-      constructor(bb, cb) {
-        let sb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "en-GB",
-          kb = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : () => {};
-        super(bb, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {}), this.translate = cb, this.locale = sb, this.requestEnter = kb, this.authoritative = null, this.selected = null, this.pickerDungeonId = null, this.pageIndex = 0, this.snapshot = {
+    const XU = "skyblockDungeonsView";
+    class jU extends Lb {
+      constructor(bb, ab) {
+        let Ub = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "en-GB",
+          Ab = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : () => {};
+        super(bb, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {}), this.translate = ab, this.locale = Ub, this.requestEnter = Ab, this.authoritative = null, this.selected = null, this.pickerDungeonId = null, this.pageIndex = 0, this.snapshot = {
           enabled: !1,
           open: !1,
           dungeons: [],
@@ -2150,17 +2150,17 @@ export const modules = {
           this.turnTo(this.pageIndex + 1)
         }, this.enter = () => {
           const bb = this.pickerEntry(),
-            cb = null === bb || void 0 === bb ? void 0 : bb.difficulties[this.pageIndex];
-          void 0 !== cb && null !== cb.unlockedBoss && (this.close(), this.requestEnter(bb.id, cb.difficulty))
+            ab = null === bb || void 0 === bb ? void 0 : bb.difficulties[this.pageIndex];
+          void 0 !== ab && null !== ab.unlockedBoss && (this.close(), this.requestEnter(bb.id, ab.difficulty))
         }
       }
       setTranslator(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.locale;
-        this.translate = bb, this.locale = cb, this.emit()
+        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.locale;
+        this.translate = bb, this.locale = ab, this.emit()
       }
-      Km(bb) {
-        var cb, sb;
-        if (!this.Em) return "open" === bb.kind ? (this.pickerDungeonId = null, void this.show()) : void("choose" !== bb.kind ? "snapshot" === bb.kind && (this.authoritative = bb.snapshot, this.pageIndex = Math.min(this.pageIndex, Math.max(0, (null !== (cb = null === (sb = this.pickerEntry()) || void 0 === sb ? void 0 : sb.difficulties.length) && void 0 !== cb ? cb : 1) - 1)), null === bb.snapshot && this.open ? this.close() : this.emit()) : this.choose(bb.chooseDungeonId))
+      aj(bb) {
+        var ab, Ub;
+        if (!this.cX) return "open" === bb.kind ? (this.pickerDungeonId = null, void this.show()) : void("choose" !== bb.kind ? "snapshot" === bb.kind && (this.authoritative = bb.snapshot, this.pageIndex = Math.min(this.pageIndex, Math.max(0, (null !== (ab = null === (Ub = this.pickerEntry()) || void 0 === Ub ? void 0 : Ub.difficulties.length) && void 0 !== ab ? ab : 1) - 1)), null === bb.snapshot && this.open ? this.close() : this.emit()) : this.choose(bb.chooseDungeonId))
       }
       dispose() {
         this.authoritative = null, this.selected = null, this.pickerDungeonId = null, super.dispose()
@@ -2169,132 +2169,132 @@ export const modules = {
         this.pickerDungeonId = null
       }
       choose(bb) {
-        var cb;
-        const sb = null === (cb = this.authoritative) || void 0 === cb ? void 0 : cb.dungeons.find((cb => cb.id === bb));
-        void 0 !== sb ? this.open && this.pickerDungeonId === bb || (this.pickerDungeonId = bb, this.pageIndex = Math.max(0, sb.difficulties.findLastIndex((bb => null !== bb.unlockedBoss))), this.showOrRefresh()) : console.warn(`Skyblock dungeons: asked to choose a boss in unknown dungeon ${bb}`)
+        var ab;
+        const Ub = null === (ab = this.authoritative) || void 0 === ab ? void 0 : ab.dungeons.find((ab => ab.id === bb));
+        void 0 !== Ub ? this.open && this.pickerDungeonId === bb || (this.pickerDungeonId = bb, this.pageIndex = Math.max(0, Ub.difficulties.findLastIndex((bb => null !== bb.unlockedBoss))), this.showOrRefresh()) : console.warn(`Skyblock dungeons: asked to choose a boss in unknown dungeon ${bb}`)
       }
       turnTo(bb) {
-        var cb, sb;
-        const kb = null !== (cb = null === (sb = this.pickerEntry()) || void 0 === sb ? void 0 : sb.difficulties.length) && void 0 !== cb ? cb : 0;
-        bb < 0 || bb >= kb || bb === this.pageIndex || (this.pageIndex = bb, this.emit())
+        var ab, Ub;
+        const Ab = null !== (ab = null === (Ub = this.pickerEntry()) || void 0 === Ub ? void 0 : Ub.difficulties.length) && void 0 !== ab ? ab : 0;
+        bb < 0 || bb >= Ab || bb === this.pageIndex || (this.pageIndex = bb, this.emit())
       }
       pickerEntry() {
-        var bb, cb;
-        return null !== (bb = null === (cb = this.authoritative) || void 0 === cb ? void 0 : cb.dungeons.find((bb => bb.id === this.pickerDungeonId))) && void 0 !== bb ? bb : null
+        var bb, ab;
+        return null !== (bb = null === (ab = this.authoritative) || void 0 === ab ? void 0 : ab.dungeons.find((bb => bb.id === this.pickerDungeonId))) && void 0 !== bb ? bb : null
       }
       difficulty(bb) {
-        const cb = bb.completions > 0,
-          sb = null === bb.bestMs ? null : Eb(bb.bestMs);
+        const ab = bb.completions > 0,
+          Ub = null === bb.bestMs ? null : hb(bb.bestMs);
         return {
           difficulty: bb.difficulty,
-          label: this.translate(Pb[bb.difficulty]),
-          colour: Db[bb.difficulty],
-          beaten: cb,
-          bestTime: sb,
+          label: this.translate(db[bb.difficulty]),
+          colour: Fb[bb.difficulty],
+          beaten: ab,
+          bestTime: Ub,
           completions: bb.completions,
-          summary: cb ? [null === sb ? null : this.translate("skyblockGame:dungeonBestTime", {
-            time: sb
+          summary: ab ? [null === Ub ? null : this.translate("skyblockGame:dungeonBestTime", {
+            time: Ub
           }), this.translate("skyblockGame:dungeonCompletions", {
             completions: bb.completions.toLocaleString(this.locale)
           })].filter((bb => null !== bb)).join(" \xb7 ") : this.translate("skyblockGame:dungeonNotCompleted")
         }
       }
       entry(bb) {
-        const cb = bb.difficulties.map((bb => this.difficulty(bb))),
-          sb = cb.filter((bb => bb.beaten)).length;
+        const ab = bb.difficulties.map((bb => this.difficulty(bb))),
+          Ub = ab.filter((bb => bb.beaten)).length;
         return {
           id: bb.id,
           name: this.translate(bb.nameKey),
           selected: bb.id === this.selected,
-          beatenSummary: `${sb} / ${cb.length}`,
-          difficulties: cb
+          beatenSummary: `${Ub} / ${ab.length}`,
+          difficulties: ab
         }
       }
       picker() {
         const bb = this.pickerEntry();
         if (null === bb || 0 === bb.difficulties.length) return null;
-        const cb = bb.difficulties.map(((cb, sb) => {
-          var kb, Wb, ab, Tb;
-          const Ub = cb.unlockedBoss,
-            Ib = null === Ub ? this.lockedHint(bb, sb) : null;
+        const ab = bb.difficulties.map(((ab, Ub) => {
+          var Ab, Mb, Tb, Eb;
+          const Yb = ab.unlockedBoss,
+            Bb = null === Yb ? this.lockedHint(bb, Ub) : null;
           return {
-            ...this.difficulty(cb),
-            unlocked: null !== Ub,
-            bossName: null === Ub ? null : this.translate(Ub.bossNameKey),
-            bossMobType: null !== (kb = null === Ub || void 0 === Ub ? void 0 : Ub.bossMobType) && void 0 !== kb ? kb : null,
-            bossMobVariation: null !== (Wb = null === Ub || void 0 === Ub ? void 0 : Ub.bossMobVariation) && void 0 !== Wb ? Wb : null,
-            lockedHint: null !== (ab = null === Ib || void 0 === Ib ? void 0 : Ib.text) && void 0 !== ab ? ab : null,
-            lockedHintHighlight: null !== (Tb = null === Ib || void 0 === Ib ? void 0 : Ib.highlight) && void 0 !== Tb ? Tb : null,
-            current: sb === this.pageIndex
+            ...this.difficulty(ab),
+            unlocked: null !== Yb,
+            bossName: null === Yb ? null : this.translate(Yb.bossNameKey),
+            bossMobType: null !== (Ab = null === Yb || void 0 === Yb ? void 0 : Yb.bossMobType) && void 0 !== Ab ? Ab : null,
+            bossMobVariation: null !== (Mb = null === Yb || void 0 === Yb ? void 0 : Yb.bossMobVariation) && void 0 !== Mb ? Mb : null,
+            lockedHint: null !== (Tb = null === Bb || void 0 === Bb ? void 0 : Bb.text) && void 0 !== Tb ? Tb : null,
+            lockedHintHighlight: null !== (Eb = null === Bb || void 0 === Bb ? void 0 : Bb.highlight) && void 0 !== Eb ? Eb : null,
+            current: Ub === this.pageIndex
           }
         }));
         return {
           dungeonName: this.translate(bb.nameKey),
-          pages: cb,
-          page: cb[this.pageIndex],
+          pages: ab,
+          page: ab[this.pageIndex],
           canPrevious: this.pageIndex > 0,
-          canNext: this.pageIndex < cb.length - 1
+          canNext: this.pageIndex < ab.length - 1
         }
       }
-      lockedHint(bb, cb) {
-        var sb, kb, Wb;
-        if (0 === cb && "number" === typeof bb.combatLevelLock) {
-          const cb = this.translate("skyblockGame:dungeonBossLockedCombatLevel", {
+      lockedHint(bb, ab) {
+        var Ub, Ab, Mb;
+        if (0 === ab && "number" === typeof bb.combatLevelLock) {
+          const ab = this.translate("skyblockGame:dungeonBossLockedCombatLevel", {
             level: bb.combatLevelLock
           });
           return this.hintHighlighting("skyblockGame:dungeonBossLockedCombat", {}, "skill", {
-            name: cb,
-            colour: Vc("combat"),
-            icon: Cc.combat
+            name: ab,
+            colour: za("combat"),
+            icon: Za.combat
           })
         }
-        const ab = null !== (sb = null === (kb = this.authoritative) || void 0 === kb ? void 0 : kb.dungeons) && void 0 !== sb ? sb : [],
-          Tb = cb > 0 ? bb : null !== (Wb = ab[ab.indexOf(bb) - 1]) && void 0 !== Wb ? Wb : null,
-          Ub = cb > 0 ? bb.difficulties[cb - 1] : null === Tb || void 0 === Tb ? void 0 : Tb.difficulties[0];
-        if (null === Tb || void 0 === Ub) return null;
-        const Ib = this.translate(Tb.nameKey);
-        if (null === Ub.unlockedBoss) return Tb === bb ? this.hintNamingDifficulty("skyblockGame:dungeonBossLockedUnseen", {}, Ub.difficulty) : this.hintNamingDifficulty("skyblockGame:dungeonBossLockedUnseenElsewhere", {
-          dungeon: Ib
-        }, Ub.difficulty);
-        const Hb = this.translate(Ub.unlockedBoss.bossNameKey);
-        return Tb === bb ? this.hintNamingDifficulty("skyblockGame:dungeonBossLocked", {
-          boss: Hb
-        }, Ub.difficulty) : {
+        const Tb = null !== (Ub = null === (Ab = this.authoritative) || void 0 === Ab ? void 0 : Ab.dungeons) && void 0 !== Ub ? Ub : [],
+          Eb = ab > 0 ? bb : null !== (Mb = Tb[Tb.indexOf(bb) - 1]) && void 0 !== Mb ? Mb : null,
+          Yb = ab > 0 ? bb.difficulties[ab - 1] : null === Eb || void 0 === Eb ? void 0 : Eb.difficulties[0];
+        if (null === Eb || void 0 === Yb) return null;
+        const Bb = this.translate(Eb.nameKey);
+        if (null === Yb.unlockedBoss) return Eb === bb ? this.hintNamingDifficulty("skyblockGame:dungeonBossLockedUnseen", {}, Yb.difficulty) : this.hintNamingDifficulty("skyblockGame:dungeonBossLockedUnseenElsewhere", {
+          dungeon: Bb
+        }, Yb.difficulty);
+        const eb = this.translate(Yb.unlockedBoss.bossNameKey);
+        return Eb === bb ? this.hintNamingDifficulty("skyblockGame:dungeonBossLocked", {
+          boss: eb
+        }, Yb.difficulty) : {
           text: this.translate("skyblockGame:dungeonBossLockedElsewhere", {
-            boss: Hb,
-            dungeon: Ib
+            boss: eb,
+            dungeon: Bb
           }),
           highlight: null
         }
       }
-      hintNamingDifficulty(bb, cb, sb) {
-        return this.hintHighlighting(bb, cb, "difficulty", {
-          name: this.translate(Pb[sb]),
-          colour: Db[sb],
+      hintNamingDifficulty(bb, ab, Ub) {
+        return this.hintHighlighting(bb, ab, "difficulty", {
+          name: this.translate(db[Ub]),
+          colour: Fb[Ub],
           icon: null
         })
       }
-      hintHighlighting(bb, cb, sb, kb) {
+      hintHighlighting(bb, ab, Ub, Ab) {
         let {
-          name: Wb,
-          colour: ab,
-          icon: Tb
-        } = kb;
-        const Ub = this.translate(bb, {
-          ...cb,
-          [sb]: "\x01"
+          name: Mb,
+          colour: Tb,
+          icon: Eb
+        } = Ab;
+        const Yb = this.translate(bb, {
+          ...ab,
+          [Ub]: "\x01"
         }).split("\x01");
         return {
           text: this.translate(bb, {
-            ...cb,
-            [sb]: Wb
+            ...ab,
+            [Ub]: Mb
           }),
-          highlight: 2 === Ub.length ? {
-            before: Ub[0],
-            name: Wb,
-            after: Ub[1],
-            colour: ab,
-            icon: Tb
+          highlight: 2 === Yb.length ? {
+            before: Yb[0],
+            name: Mb,
+            after: Yb[1],
+            colour: Tb,
+            icon: Eb
           } : null
         }
       }
@@ -2302,49 +2302,49 @@ export const modules = {
         return null !== this.authoritative
       }
       buildSnapshot() {
-        var bb, cb, sb;
-        const kb = null !== (bb = null === (cb = this.authoritative) || void 0 === cb ? void 0 : cb.dungeons) && void 0 !== bb ? bb : [];
-        var Wb, ab;
-        kb.some((bb => bb.id === this.selected)) || (this.selected = null !== (Wb = null === (ab = kb[0]) || void 0 === ab ? void 0 : ab.id) && void 0 !== Wb ? Wb : null);
-        const Tb = kb.map((bb => this.entry(bb)));
+        var bb, ab, Ub;
+        const Ab = null !== (bb = null === (ab = this.authoritative) || void 0 === ab ? void 0 : ab.dungeons) && void 0 !== bb ? bb : [];
+        var Mb, Tb;
+        Ab.some((bb => bb.id === this.selected)) || (this.selected = null !== (Mb = null === (Tb = Ab[0]) || void 0 === Tb ? void 0 : Tb.id) && void 0 !== Mb ? Mb : null);
+        const Eb = Ab.map((bb => this.entry(bb)));
         return {
           enabled: this.isEnabled(),
           open: this.open,
-          dungeons: Tb,
-          detail: null !== (sb = Tb.find((bb => bb.selected))) && void 0 !== sb ? sb : null,
+          dungeons: Eb,
+          detail: null !== (Ub = Eb.find((bb => bb.selected))) && void 0 !== Ub ? Ub : null,
           picker: null === this.pickerDungeonId ? null : this.picker()
         }
       }
     }
-    const ls = ["mining", "farming", "foraging", "fishing", "combat"],
-      Qs = [25, 50, 100, 200, 400, 750, 1250, 2e3, 3e3],
-      es = [20, 40, 80, 150, 300, 500, 800, 1200, 2e3];
+    const RU = ["mining", "farming", "foraging", "fishing", "combat"],
+      kU = [25, 50, 100, 200, 400, 750, 1250, 2e3, 3e3],
+      yU = [20, 40, 80, 150, 300, 500, 800, 1200, 2e3];
 
-    function Cs() {
-      for (var bb = arguments.length, cb = new Array(bb), sb = 0; sb < bb; sb++) cb[sb] = arguments[sb];
-      return cb.map(((bb, cb) => ({
+    function ZU() {
+      for (var bb = arguments.length, ab = new Array(bb), Ub = 0; Ub < bb; Ub++) ab[Ub] = arguments[Ub];
+      return ab.map(((bb, ab) => ({
         amount: bb,
-        coins: Qs[cb],
-        xp: es[cb]
+        coins: kU[ab],
+        xp: yU[ab]
       })))
     }
-    const Ns = Cs(100, 250, 500, 1e3, 2500, 5e3, 1e4, 25e3, 5e4),
-      Vs = Cs(50, 100, 250, 1e3, 2500, 5e3, 1e4, 25e3),
-      Ls = Cs(50, 100, 250, 500, 1e3, 2500, 5e3),
-      us = Cs(25, 50, 100, 250, 500, 1e3),
-      Ys = Cs(10, 25, 50, 100, 250, 500, 1e3),
-      hs = Cs(1, 5, 10, 25, 50);
+    const DU = ZU(100, 250, 500, 1e3, 2500, 5e3, 1e4, 25e3, 5e4),
+      zU = ZU(50, 100, 250, 1e3, 2500, 5e3, 1e4, 25e3),
+      xU = ZU(50, 100, 250, 500, 1e3, 2500, 5e3),
+      iU = ZU(25, 50, 100, 250, 500, 1e3),
+      fU = ZU(10, 25, 50, 100, 250, 500, 1e3),
+      mU = ZU(1, 5, 10, 25, 50);
 
-    function gs(bb, cb) {
+    function pU(bb, ab) {
       return {
         id: bb,
         category: "fishing",
-        item: cb,
-        drops: [cb],
-        tiers: arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Ys
+        item: ab,
+        drops: [ab],
+        tiers: arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : fU
       }
     }
-    const Bs = [{
+    const NU = [{
         id: "coal",
         category: "mining",
         item: "Coal",
@@ -2353,7 +2353,7 @@ export const modules = {
           "Pure Coal Ore": 9,
           "Block of Coal": 3
         },
-        tiers: Vs
+        tiers: zU
       }, {
         id: "iron",
         category: "mining",
@@ -2362,7 +2362,7 @@ export const modules = {
           "Iron Ore": 1,
           "Pure Iron Ore": 9
         },
-        tiers: Ls
+        tiers: xU
       }, {
         id: "gold",
         category: "mining",
@@ -2371,7 +2371,7 @@ export const modules = {
           "Gold Ore": 1,
           "Pure Gold Ore": 9
         },
-        tiers: Ls
+        tiers: xU
       }, {
         id: "diamond",
         category: "mining",
@@ -2380,7 +2380,7 @@ export const modules = {
           "Diamond Ore": 1,
           "Pure Diamond Ore": 9
         },
-        tiers: us
+        tiers: iU
       }, {
         id: "moonstone",
         category: "mining",
@@ -2389,7 +2389,7 @@ export const modules = {
           "Moonstone Ore": 1,
           "Pure Moonstone Ore": 9
         },
-        tiers: us
+        tiers: iU
       }, {
         id: "stone",
         category: "mining",
@@ -2397,7 +2397,7 @@ export const modules = {
         blocks: {
           Stone: 1
         },
-        tiers: Vs
+        tiers: zU
       }, {
         id: "wheat",
         category: "farming",
@@ -2405,7 +2405,7 @@ export const modules = {
         blocks: {
           "Wheat|FreshlyGrown": 1
         },
-        tiers: Ns
+        tiers: DU
       }, {
         id: "carrot",
         category: "farming",
@@ -2413,7 +2413,7 @@ export const modules = {
         blocks: {
           "Carrot Plant|FreshlyGrown": 1
         },
-        tiers: Ns
+        tiers: DU
       }, {
         id: "potato",
         category: "farming",
@@ -2421,7 +2421,7 @@ export const modules = {
         blocks: {
           "Potato Plant|FreshlyGrown": 1
         },
-        tiers: Ns
+        tiers: DU
       }, {
         id: "beetroot",
         category: "farming",
@@ -2429,7 +2429,7 @@ export const modules = {
         blocks: {
           "Beetroot Plant|FreshlyGrown": 1
         },
-        tiers: Ls
+        tiers: xU
       }, {
         id: "melon",
         category: "farming",
@@ -2437,7 +2437,7 @@ export const modules = {
         blocks: {
           Melon: 1
         },
-        tiers: Vs
+        tiers: zU
       }, {
         id: "watermelon",
         category: "farming",
@@ -2445,7 +2445,7 @@ export const modules = {
         blocks: {
           Watermelon: 1
         },
-        tiers: Vs
+        tiers: zU
       }, {
         id: "maple_log",
         category: "foraging",
@@ -2453,7 +2453,7 @@ export const modules = {
         blocks: {
           "Maple Log": 1
         },
-        tiers: Vs
+        tiers: zU
       }, {
         id: "pear_log",
         category: "foraging",
@@ -2461,7 +2461,7 @@ export const modules = {
         blocks: {
           "Pear Log": 1
         },
-        tiers: Ls
+        tiers: xU
       }, {
         id: "palm_log",
         category: "foraging",
@@ -2469,58 +2469,58 @@ export const modules = {
         blocks: {
           "Palm Log": 1
         },
-        tiers: Ls
-      }, gs("wheatfish", "Wheatfish"), gs("darter", "Darter"), gs("sunset_minnow", "Sunset Minnow"), gs("root_flounder", "Root Flounder"), gs("greenfin_loach", "Greenfin Loach"), gs("red_strongfish", "Red Strongfish"), gs("green_strongfish", "Green Strongfish"), gs("boomerang_fish", "Boomerang Fish"), gs("seahorse", "Seahorse"), gs("spined_stickleback", "Spined Stickleback"), gs("moon_strongfish", "Moon Strongfish"), gs("boulder_bass", "Boulder Bass"), gs("grass_snapper", "Grass Snapper"), gs("crystal_wheatfish", "Crystalized Wheatfish", hs), gs("moonstone_pupfish", "Moonstone Pupfish", hs), gs("reedglass_minnow", "Reedglass Minnow"), gs("mangrove_herring", "Mangrove Herring"), gs("mudline_perch", "Mudline Perch"), gs("coastal_mullet", "Coastal Mullet"), gs("reef_sardine", "Reef Sardine"), gs("root_perch", "Root Perch"), gs("driftwood_catfish", "Driftwood Catfish"), gs("aether_minnow", "Aether Minnow"), gs("needlefish", "Tri-Pointed Needlefish"), gs("threadfin_bream", "Threadfin Bream"), gs("mudbelly_tilapia", "Mudbelly Tilapia"), gs("rotslab_eel", "Rotslab Eel"), gs("polarflash_electron", "Polarflash Electron"), gs("mireback_carp", "Mireback Carp"), gs("blackwater_bream", "Blackwater Bream"), gs("stone_grouper", "Stone Grouper"), gs("shadeback_ray", "Shadeback Ray"), gs("glacial_silverfish", "Glacial Silverfish"), gs("hatchetfish", "Hatchetfish"), gs("moonlit_boomerang", "Moonlit Boomerang Fish"), gs("murkborne_ray", "Murkborne Ray"), gs("bamboo_catfish", "Bamboo Catfish"), gs("mossback_arapaima", "Mossback Arapaima"), gs("murk_stingray", "Murk Stingray"), gs("channel_sawfish", "Channel Sawfish"), gs("boned_sturgeon", "Boned Sturgeon"), gs("oarfish", "Oarfish"), gs("snakehead", "Snakehead", hs), gs("eldertide_leviathan", "Eldertide Leviathan", hs), gs("pithead", "Pithead"), gs("electric_eel", "Electric Eel"), gs("shadow_darter", "Shadow Darter"), gs("abyss_carp", "Abyss Carp"), gs("nomai_moray", "Nomai Moray"), gs("silver_dragonfish", "Silver Dragonfish"), gs("giant_moray", "Giant Moray"), gs("coelacanth", "Coelacanth", hs), gs("frost_herring", "Frost Herring"), gs("permafrost_halibut", "Permafrost Halibut"), gs("glacial_lanternfish", "Glacial Lanternfish"), gs("frozen_grenadier", "Frozen Grenadier"), gs("blackfin_icefish", "Blackfin Icefish"), gs("moonfish", "Moonfish"), gs("alpha_strongfish", "Alpha Moon Strongfish"), gs("deep_lanternfish", "Deepwater Lanternfish", hs), gs("pearlescent_moonfish", "Pearlescent Moonfish", hs), {
+        tiers: xU
+      }, pU("wheatfish", "Wheatfish"), pU("darter", "Darter"), pU("sunset_minnow", "Sunset Minnow"), pU("root_flounder", "Root Flounder"), pU("greenfin_loach", "Greenfin Loach"), pU("red_strongfish", "Red Strongfish"), pU("green_strongfish", "Green Strongfish"), pU("boomerang_fish", "Boomerang Fish"), pU("seahorse", "Seahorse"), pU("spined_stickleback", "Spined Stickleback"), pU("moon_strongfish", "Moon Strongfish"), pU("boulder_bass", "Boulder Bass"), pU("grass_snapper", "Grass Snapper"), pU("crystal_wheatfish", "Crystalized Wheatfish", mU), pU("moonstone_pupfish", "Moonstone Pupfish", mU), pU("reedglass_minnow", "Reedglass Minnow"), pU("mangrove_herring", "Mangrove Herring"), pU("mudline_perch", "Mudline Perch"), pU("coastal_mullet", "Coastal Mullet"), pU("reef_sardine", "Reef Sardine"), pU("root_perch", "Root Perch"), pU("driftwood_catfish", "Driftwood Catfish"), pU("aether_minnow", "Aether Minnow"), pU("needlefish", "Tri-Pointed Needlefish"), pU("threadfin_bream", "Threadfin Bream"), pU("mudbelly_tilapia", "Mudbelly Tilapia"), pU("rotslab_eel", "Rotslab Eel"), pU("polarflash_electron", "Polarflash Electron"), pU("mireback_carp", "Mireback Carp"), pU("blackwater_bream", "Blackwater Bream"), pU("stone_grouper", "Stone Grouper"), pU("shadeback_ray", "Shadeback Ray"), pU("glacial_silverfish", "Glacial Silverfish"), pU("hatchetfish", "Hatchetfish"), pU("moonlit_boomerang", "Moonlit Boomerang Fish"), pU("murkborne_ray", "Murkborne Ray"), pU("bamboo_catfish", "Bamboo Catfish"), pU("mossback_arapaima", "Mossback Arapaima"), pU("murk_stingray", "Murk Stingray"), pU("channel_sawfish", "Channel Sawfish"), pU("boned_sturgeon", "Boned Sturgeon"), pU("oarfish", "Oarfish"), pU("snakehead", "Snakehead", mU), pU("eldertide_leviathan", "Eldertide Leviathan", mU), pU("pithead", "Pithead"), pU("electric_eel", "Electric Eel"), pU("shadow_darter", "Shadow Darter"), pU("abyss_carp", "Abyss Carp"), pU("nomai_moray", "Nomai Moray"), pU("silver_dragonfish", "Silver Dragonfish"), pU("giant_moray", "Giant Moray"), pU("coelacanth", "Coelacanth", mU), pU("frost_herring", "Frost Herring"), pU("permafrost_halibut", "Permafrost Halibut"), pU("glacial_lanternfish", "Glacial Lanternfish"), pU("frozen_grenadier", "Frozen Grenadier"), pU("blackfin_icefish", "Blackfin Icefish"), pU("moonfish", "Moonfish"), pU("alpha_strongfish", "Alpha Moon Strongfish"), pU("deep_lanternfish", "Deepwater Lanternfish", mU), pU("pearlescent_moonfish", "Pearlescent Moonfish", mU), {
         id: "rotten_flesh",
         category: "combat",
         item: "Rotten Flesh",
         drops: ["Rotten Flesh"],
-        tiers: Vs
+        tiers: zU
       }, {
         id: "rotten_brain",
         category: "combat",
         item: "Rotten Brain",
         drops: ["Rotten Brain"],
-        tiers: us
+        tiers: iU
       }, {
         id: "iron_fragment",
         category: "combat",
         item: "Iron Fragment",
         drops: ["Iron Fragment"],
-        tiers: us
+        tiers: iU
       }],
-      ts = (new Map(Bs.map((bb => [bb.id, bb]))), new Map),
-      ys = new Map;
-    for (const fI of Bs) {
-      for (const [bb, cb] of Object.entries(null !== (Ps = fI.blocks) && void 0 !== Ps ? Ps : {})) {
-        var Ps;
-        ts.set(bb, {
-          collection: fI,
-          amount: cb
+      WU = (new Map(NU.map((bb => [bb.id, bb]))), new Map),
+      HU = new Map;
+    for (const YB of NU) {
+      for (const [bb, ab] of Object.entries(null !== (IU = YB.blocks) && void 0 !== IU ? IU : {})) {
+        var IU;
+        WU.set(bb, {
+          collection: YB,
+          amount: ab
         })
       }
-      for (const bb of null !== (Ds = fI.drops) && void 0 !== Ds ? Ds : []) {
-        var Ds;
-        ys.set(bb, fI)
+      for (const bb of null !== (dU = YB.drops) && void 0 !== dU ? dU : []) {
+        var dU;
+        HU.set(bb, YB)
       }
     }
 
-    function Es(bb, cb) {
-      let sb = 0;
-      for (; sb < bb.tiers.length && cb >= bb.tiers[sb].amount;) sb++;
-      return sb
+    function FU(bb, ab) {
+      let Ub = 0;
+      for (; Ub < bb.tiers.length && ab >= bb.tiers[Ub].amount;) Ub++;
+      return Ub
     }
-    const is = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"];
+    const hU = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"];
 
-    function Os(bb) {
-      return is[bb - 1]
+    function GU(bb) {
+      return hU[bb - 1]
     }
-    const Gs = "skyblockCollectionsView";
-    class Ks extends Mb {
-      constructor(bb, cb) {
-        let sb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "en-GB",
-          kb = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : bb => bb;
-        super(bb, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {}), this.translate = cb, this.locale = sb, this.itemName = kb, this.counts = null, this.category = "mining", this.selected = Bs[0].id, this.snapshot = {
+    const QU = "skyblockCollectionsView";
+    class qU extends Lb {
+      constructor(bb, ab) {
+        let Ub = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "en-GB",
+          Ab = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : bb => bb;
+        super(bb, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {}), this.translate = ab, this.locale = Ub, this.itemName = Ab, this.counts = null, this.category = "mining", this.selected = NU[0].id, this.snapshot = {
           enabled: !1,
           open: !1,
           categories: [],
@@ -2533,14 +2533,14 @@ export const modules = {
           this.selected = bb, this.emit()
         }
       }
-      setTranslator(bb, cb, sb) {
-        this.translate = bb, this.locale = cb, this.itemName = sb, this.emit()
+      setTranslator(bb, ab, Ub) {
+        this.translate = bb, this.locale = ab, this.itemName = Ub, this.emit()
       }
-      Km(bb) {
-        if (!this.Em)
+      aj(bb) {
+        if (!this.cX)
           if ("collOpen" !== bb.kind) {
             (bb.collFull || null === this.counts) && (this.counts = new Map);
-            for (const [cb, sb] of bb.collCounts) this.counts.set(cb, sb);
+            for (const [ab, Ub] of bb.collCounts) this.counts.set(ab, Ub);
             this.emit()
           } else this.show()
       }
@@ -2560,260 +2560,260 @@ export const modules = {
           detail: null,
           tiersUnlocked: ""
         };
-        const cb = this.inCategory(this.category).map((bb => this.collectionView(bb))),
-          sb = Bs.reduce(((bb, cb) => bb + this.tierOf(cb)), 0);
+        const ab = this.inCategory(this.category).map((bb => this.collectionView(bb))),
+          Ub = NU.reduce(((bb, ab) => bb + this.tierOf(ab)), 0);
         return {
           enabled: !0,
           open: this.open,
-          categories: ls.map((bb => this.categoryView(bb))),
-          collections: cb,
-          detail: null !== (bb = cb.find((bb => bb.selected))) && void 0 !== bb ? bb : null,
+          categories: RU.map((bb => this.categoryView(bb))),
+          collections: ab,
+          detail: null !== (bb = ab.find((bb => bb.selected))) && void 0 !== bb ? bb : null,
           tiersUnlocked: this.translate("skyblockGame:collectionTiersUnlocked", {
-            count: this.number(sb)
+            count: this.number(Ub)
           })
         }
       }
       categoryView(bb) {
-        const cb = this.inCategory(bb),
-          sb = cb.reduce(((bb, cb) => bb + this.tierOf(cb)), 0),
-          kb = cb.reduce(((bb, cb) => bb + cb.tiers.length), 0);
+        const ab = this.inCategory(bb),
+          Ub = ab.reduce(((bb, ab) => bb + this.tierOf(ab)), 0),
+          Ab = ab.reduce(((bb, ab) => bb + ab.tiers.length), 0);
         return {
           id: bb,
           label: this.translate(`skyblockGame:${bb}`),
-          icon: Cc[bb],
+          icon: Za[bb],
           tiers: this.translate("skyblockGame:collectionProgress", {
-            current: this.number(sb),
-            target: this.number(kb)
+            current: this.number(Ub),
+            target: this.number(Ab)
           }),
           selected: bb === this.category
         }
       }
       collectionView(bb) {
-        var cb, sb;
-        const kb = null !== (cb = this.counts.get(bb.id)) && void 0 !== cb ? cb : 0,
-          Wb = Es(bb, kb),
-          ab = null !== (sb = bb.tiers[Wb]) && void 0 !== sb ? sb : null,
-          Tb = 0 === Wb ? 0 : bb.tiers[Wb - 1].amount;
+        var ab, Ub;
+        const Ab = null !== (ab = this.counts.get(bb.id)) && void 0 !== ab ? ab : 0,
+          Mb = FU(bb, Ab),
+          Tb = null !== (Ub = bb.tiers[Mb]) && void 0 !== Ub ? Ub : null,
+          Eb = 0 === Mb ? 0 : bb.tiers[Mb - 1].amount;
         return {
           id: bb.id,
           name: this.itemName(bb.item),
           icon: bb.item,
           selected: bb.id === this.selected,
-          locked: 0 === kb,
+          locked: 0 === Ab,
           count: this.translate("skyblockGame:collectionCount", {
-            count: this.number(kb)
+            count: this.number(Ab)
           }),
-          tier: 0 === Wb ? this.translate("skyblockGame:collectionNoTier") : this.tierLabel(Wb),
-          percent: null === ab ? 100 : Math.min(100, (kb - Tb) / (ab.amount - Tb) * 100),
-          progress: null === ab ? this.translate("skyblockGame:max") : this.translate("skyblockGame:collectionProgress", {
-            current: this.number(kb),
-            target: this.number(ab.amount)
+          tier: 0 === Mb ? this.translate("skyblockGame:collectionNoTier") : this.tierLabel(Mb),
+          percent: null === Tb ? 100 : Math.min(100, (Ab - Eb) / (Tb.amount - Eb) * 100),
+          progress: null === Tb ? this.translate("skyblockGame:max") : this.translate("skyblockGame:collectionProgress", {
+            current: this.number(Ab),
+            target: this.number(Tb.amount)
           }),
-          nextReward: null === ab ? null : this.reward(bb, ab.coins, ab.xp)
+          nextReward: null === Tb ? null : this.reward(bb, Tb.coins, Tb.xp)
         }
       }
-      reward(bb, cb, sb) {
+      reward(bb, ab, Ub) {
         return this.translate("skyblockGame:collectionReward", {
-          coins: this.number(cb),
-          xp: this.number(sb),
+          coins: this.number(ab),
+          xp: this.number(Ub),
           skill: this.translate(`skyblockGame:${bb.category}`)
         })
       }
       tierLabel(bb) {
         return this.translate("skyblockGame:collectionTier", {
-          tier: Os(bb)
+          tier: GU(bb)
         })
       }
       tierOf(bb) {
-        var cb;
-        return Es(bb, null !== (cb = this.counts.get(bb.id)) && void 0 !== cb ? cb : 0)
+        var ab;
+        return FU(bb, null !== (ab = this.counts.get(bb.id)) && void 0 !== ab ? ab : 0)
       }
       inCategory(bb) {
-        return Bs.filter((cb => cb.category === bb))
+        return NU.filter((ab => ab.category === bb))
       }
       number(bb) {
         return bb.toLocaleString(this.locale)
       }
     }
-    const Zs = "skyblockPortalTransitView",
-      zs = "skyblockPortalArrival";
-    class qs {
-      constructor(bb, cb) {
-        let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now;
-        this.QQ = bb, this.storage = cb, this.now = sb, this.view = null, this.token = 0, this.hideTimer = null
+    const uU = "skyblockPortalTransitView",
+      rU = "skyblockPortalArrival";
+    class KU {
+      constructor(bb, ab) {
+        let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now;
+        this.IR = bb, this.storage = ab, this.now = Ub, this.view = null, this.token = 0, this.hideTimer = null
       }
       getSnapshot() {
         return this.view
       }
-      Km(bb) {
-        const cb = {
+      aj(bb) {
+        const ab = {
           zoneNameKey: bb.transitZoneNameKey,
           variation: bb.transitZoneVariation,
           colour: bb.transitColour,
           departedAt: this.now()
         };
-        this.storage.setItem(zs, cb), this.show("departure", cb.zoneNameKey, cb.colour, bb.transitDurationMs, bb.transitDurationMs + 1500, (() => {
-          this.storage.removeItem(zs)
+        this.storage.setItem(rU, ab), this.show("departure", ab.zoneNameKey, ab.colour, bb.transitDurationMs, bb.transitDurationMs + 1500, (() => {
+          this.storage.removeItem(rU)
         }))
       }
       resumeArrival(bb) {
-        const cb = this.storage.getItem(zs);
-        this.storage.removeItem(zs), null === cb || cb.variation !== bb || this.now() - cb.departedAt > 3e4 || this.show("arrival", cb.zoneNameKey, cb.colour, 3200, 2e4)
+        const ab = this.storage.getItem(rU);
+        this.storage.removeItem(rU), null === ab || ab.variation !== bb || this.now() - ab.departedAt > 3e4 || this.show("arrival", ab.zoneNameKey, ab.colour, 3200, 2e4)
       }
       finishArrival(bb) {
-        var cb;
-        "arrival" === (null === (cb = this.view) || void 0 === cb ? void 0 : cb.phase) && this.view.token === bb && (this.clearTimer(), this.view = null, this.QQ(null))
+        var ab;
+        "arrival" === (null === (ab = this.view) || void 0 === ab ? void 0 : ab.phase) && this.view.token === bb && (this.clearTimer(), this.view = null, this.IR(null))
       }
       dispose() {
         this.clearTimer()
       }
-      show(bb, cb, sb, kb, Wb, ab) {
+      show(bb, ab, Ub, Ab, Mb, Tb) {
         this.clearTimer(), this.view = {
           token: ++this.token,
           phase: bb,
-          zoneNameKey: cb,
-          colour: sb,
-          durationMs: kb
-        }, this.QQ(this.view), this.hideTimer = setTimeout((() => {
-          this.hideTimer = null, this.view = null, this.QQ(null), null === ab || void 0 === ab || ab()
-        }), Wb)
+          zoneNameKey: ab,
+          colour: Ub,
+          durationMs: Ab
+        }, this.IR(this.view), this.hideTimer = setTimeout((() => {
+          this.hideTimer = null, this.view = null, this.IR(null), null === Tb || void 0 === Tb || Tb()
+        }), Mb)
       }
       clearTimer() {
         null !== this.hideTimer && (clearTimeout(this.hideTimer), this.hideTimer = null)
       }
     }
-    const ds = "skyblockDailyRewardView",
-      As = "skyblockDailyRewardCoin";
-    class ws {
-      constructor(bb, cb, sb, kb) {
-        let Wb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {},
-          ab = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : () => {},
-          Tb = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : () => {},
-          Ub = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : () => {},
-          Ib = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : performance.now.bind(performance);
-        this.QQ = bb, this.isBusy = cb, this.holdQuestPopups = sb, this.onHeldCoinsChanged = kb, this.onCoinLanded = Wb, this.onStarted = ab, this.onFinished = Tb, this.onItemLanded = Ub, this.now = Ib, this.qU = [], this.queue = [], this.playing = null, this.token = 0
+    const oU = "skyblockDailyRewardView",
+      lU = "skyblockDailyRewardCoin";
+    class tU {
+      constructor(bb, ab, Ub, Ab) {
+        let Mb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {},
+          Tb = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : () => {},
+          Eb = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : () => {},
+          Yb = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : () => {},
+          Bb = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : performance.now.bind(performance);
+        this.IR = bb, this.isBusy = ab, this.holdQuestPopups = Ub, this.onHeldCoinsChanged = Ab, this.onCoinLanded = Mb, this.onStarted = Tb, this.onFinished = Eb, this.onItemLanded = Yb, this.now = Bb, this.PY = [], this.queue = [], this.playing = null, this.token = 0
       }
       getSnapshot() {
-        var bb, cb;
-        return null !== (bb = null === (cb = this.playing) || void 0 === cb ? void 0 : cb.view) && void 0 !== bb ? bb : null
+        var bb, ab;
+        return null !== (bb = null === (ab = this.playing) || void 0 === ab ? void 0 : ab.view) && void 0 !== bb ? bb : null
       }
       getHeldCoins() {
-        var bb, cb;
-        let sb = 0;
-        for (const kb of this.qU) sb += kb.coins;
-        return sb - (null !== (bb = null === (cb = this.playing) || void 0 === cb ? void 0 : cb.released) && void 0 !== bb ? bb : 0)
+        var bb, ab;
+        let Ub = 0;
+        for (const Ab of this.PY) Ub += Ab.coins;
+        return Ub - (null !== (bb = null === (ab = this.playing) || void 0 === ab ? void 0 : ab.released) && void 0 !== bb ? bb : 0)
       }
-      Km(bb) {
-        "dailyRewardClaimed" !== bb.kind ? (this.queue.push(bb), this.aX()) : this.qU.push({
+      aj(bb) {
+        "dailyRewardClaimed" !== bb.kind ? (this.queue.push(bb), this.qL()) : this.PY.push({
           coins: bb.dailyRewardCoins,
           receivedAt: this.now()
         })
       }
-      aX() {
+      qL() {
         const bb = this.now();
         if (null === this.playing) return this.releaseUnshown(bb), void this.startNext(bb);
-        const cb = this.playing,
-          sb = bb - cb.startedAt,
-          kb = cb.view.flyingCoins,
-          Wb = function(bb, cb) {
-            let sb = 0;
-            for (; sb < cb && os(sb, cb) <= bb;) sb++;
-            return sb
-          }(sb, kb);
-        if (Wb !== cb.landed) {
-          for (let bb = Wb - cb.landed > 2 ? Wb - 1 : cb.landed; bb < Wb; bb++) this.onCoinLanded(bb, kb);
-          cb.landed = Wb, cb.released = Math.round(cb.view.coins * Wb / kb), this.onHeldCoinsChanged()
+        const ab = this.playing,
+          Ub = bb - ab.startedAt,
+          Ab = ab.view.flyingCoins,
+          Mb = function(bb, ab) {
+            let Ub = 0;
+            for (; Ub < ab && sU(Ub, ab) <= bb;) Ub++;
+            return Ub
+          }(Ub, Ab);
+        if (Mb !== ab.landed) {
+          for (let bb = Mb - ab.landed > 2 ? Mb - 1 : ab.landed; bb < Mb; bb++) this.onCoinLanded(bb, Ab);
+          ab.landed = Mb, ab.released = Math.round(ab.view.coins * Mb / Ab), this.onHeldCoinsChanged()
         }
-        for (; cb.itemsLanded < cb.view.items.length && 2e3 + 160 * cb.itemsLanded + 630 <= sb;) this.onItemLanded(cb.itemsLanded), cb.itemsLanded++;
-        sb >= cb.view.durationMs && (this.finish(), this.startNext(bb))
+        for (; ab.itemsLanded < ab.view.items.length && 2e3 + 160 * ab.itemsLanded + 630 <= Ub;) this.onItemLanded(ab.itemsLanded), ab.itemsLanded++;
+        Ub >= ab.view.durationMs && (this.finish(), this.startNext(bb))
       }
       dispose() {
-        null !== this.playing && this.holdQuestPopups(!1), this.playing = null, this.queue = [], this.qU = [], this.QQ(null)
+        null !== this.playing && this.holdQuestPopups(!1), this.playing = null, this.queue = [], this.PY = [], this.IR(null)
       }
       startNext(bb) {
         if (0 === this.queue.length || this.isBusy()) return;
-        const cb = this.queue.shift();
+        const ab = this.queue.shift();
         this.token++;
-        const sb = {
+        const Ub = {
           token: this.token,
-          day: cb.dailyRewardDay,
-          coins: cb.dailyRewardCoins,
-          items: cb.dailyRewardItems,
+          day: ab.dailyRewardDay,
+          coins: ab.dailyRewardCoins,
+          items: ab.dailyRewardItems,
           durationMs: 5e3,
-          flyingCoins: cb.dailyRewardDay === Bb ? 24 : 14
+          flyingCoins: ab.dailyRewardDay === Wb ? 24 : 14
         };
         this.playing = {
-          view: sb,
+          view: Ub,
           startedAt: bb,
           landed: 0,
           released: 0,
           itemsLanded: 0
-        }, this.holdQuestPopups(!0), this.QQ(sb), this.onStarted(sb)
+        }, this.holdQuestPopups(!0), this.IR(Ub), this.onStarted(Ub)
       }
       finish() {
-        this.qU.shift(), this.playing = null, this.holdQuestPopups(!1), this.QQ(null), this.onHeldCoinsChanged(), this.onFinished()
+        this.PY.shift(), this.playing = null, this.holdQuestPopups(!1), this.IR(null), this.onHeldCoinsChanged(), this.onFinished()
       }
       releaseUnshown(bb) {
-        if (this.queue.length > 0 || 0 === this.qU.length) return;
-        const cb = this.qU.length;
-        this.qU = this.qU.filter((cb => bb - cb.receivedAt < 6e4)), this.qU.length !== cb && this.onHeldCoinsChanged()
+        if (this.queue.length > 0 || 0 === this.PY.length) return;
+        const ab = this.PY.length;
+        this.PY = this.PY.filter((ab => bb - ab.receivedAt < 6e4)), this.PY.length !== ab && this.onHeldCoinsChanged()
       }
     }
 
-    function rs(bb, cb) {
-      return 450 + 715 * bb / (cb - 1)
+    function wU(bb, ab) {
+      return 450 + 715 * bb / (ab - 1)
     }
 
-    function os(bb, cb) {
-      return rs(bb, cb) + 650
+    function sU(bb, ab) {
+      return wU(bb, ab) + 650
     }
-    const Ss = "skyblockMailboxView";
-    class Rs {
-      constructor(bb, cb) {
-        let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {},
-          kb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : performance.now.bind(performance);
-        this.QQ = bb, this.isBusy = cb, this.onStarted = sb, this.now = kb, this.waiting = [], this.playing = null, this.token = 0, this.itemName = bb => bb
+    const gU = "skyblockMailboxView";
+    class CU {
+      constructor(bb, ab) {
+        let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {},
+          Ab = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : performance.now.bind(performance);
+        this.IR = bb, this.isBusy = ab, this.onStarted = Ub, this.now = Ab, this.waiting = [], this.playing = null, this.token = 0, this.itemName = bb => bb
       }
       getSnapshot() {
-        var bb, cb;
-        return null !== (bb = null === (cb = this.playing) || void 0 === cb ? void 0 : cb.view) && void 0 !== bb ? bb : null
+        var bb, ab;
+        return null !== (bb = null === (ab = this.playing) || void 0 === ab ? void 0 : ab.view) && void 0 !== bb ? bb : null
       }
       setItemName(bb) {
         this.itemName = bb
       }
-      Km(bb) {
-        this.waiting.push(...bb.mailLetters), this.aX()
+      aj(bb) {
+        this.waiting.push(...bb.mailLetters), this.qL()
       }
-      aX() {
+      qL() {
         const bb = this.now();
-        null !== this.playing && bb - this.playing.startedAt >= this.playing.view.durationMs && (this.playing = null, this.QQ(null)), null === this.playing && this.waiting.length > 0 && !this.isBusy() && this.start(bb)
+        null !== this.playing && bb - this.playing.startedAt >= this.playing.view.durationMs && (this.playing = null, this.IR(null)), null === this.playing && this.waiting.length > 0 && !this.isBusy() && this.start(bb)
       }
       dispose() {
-        this.playing = null, this.waiting = [], this.QQ(null)
+        this.playing = null, this.waiting = [], this.IR(null)
       }
       start(bb) {
-        const cb = this.waiting.slice(0, 3);
+        const ab = this.waiting.slice(0, 3);
         this.token++;
-        const sb = {
+        const Ub = {
           token: this.token,
-          letters: cb.map((bb => this.toView(bb))),
-          more: this.waiting.length - cb.length,
-          durationMs: 4500 + 700 * cb.length
+          letters: ab.map((bb => this.toView(bb))),
+          more: this.waiting.length - ab.length,
+          durationMs: 4500 + 700 * ab.length
         };
         this.waiting = [], this.playing = {
-          view: sb,
+          view: Ub,
           startedAt: bb
-        }, this.QQ(sb), this.onStarted(sb)
+        }, this.IR(Ub), this.onStarted(Ub)
       }
       toView(bb) {
         return {
           coins: bb.mailCoins,
           items: bb.mailItems.map((bb => {
-            var cb;
+            var ab;
             return {
               itemName: bb.mailItemName,
               amount: bb.mailItemAmount,
-              label: null !== (cb = bb.mailItemLabel) && void 0 !== cb ? cb : this.itemName(bb.mailItemName)
+              label: null !== (ab = bb.mailItemLabel) && void 0 !== ab ? ab : this.itemName(bb.mailItemName)
             }
           })),
           reasonKey: bb.mailReasonKey,
@@ -2821,36 +2821,36 @@ export const modules = {
         }
       }
     }
-    const vs = "skyblockQuestGraphView",
-      Fs = "skyblockDevQuestJump";
+    const VU = "skyblockQuestGraphView",
+      OU = "skyblockDevQuestJump";
 
-    function xs(bb) {
+    function cU(bb) {
       if (0 === bb.length) return "";
-      const cb = [`M ${bb[0].x} ${bb[0].y}`];
-      for (let kb = 1; kb < bb.length - 1; kb++) {
-        const sb = bb[kb + 1];
-        cb.push(`Q ${bb[kb].x} ${bb[kb].y} ${(bb[kb].x+sb.x)/2} ${(bb[kb].y+sb.y)/2}`)
+      const ab = [`M ${bb[0].x} ${bb[0].y}`];
+      for (let Ab = 1; Ab < bb.length - 1; Ab++) {
+        const Ub = bb[Ab + 1];
+        ab.push(`Q ${bb[Ab].x} ${bb[Ab].y} ${(bb[Ab].x+Ub.x)/2} ${(bb[Ab].y+Ub.y)/2}`)
       }
-      const sb = bb[bb.length - 1];
-      return cb.push(`L ${sb.x} ${sb.y}`), cb.join(" ")
+      const Ub = bb[bb.length - 1];
+      return ab.push(`L ${Ub.x} ${Ub.y}`), ab.join(" ")
     }
 
-    function ps(bb, cb) {
-      return bb < cb ? `${bb}|${cb}` : `${cb}|${bb}`
+    function JU(bb, ab) {
+      return bb < ab ? `${bb}|${ab}` : `${ab}|${bb}`
     }
-    class bk extends Mb {
-      constructor(bb, cb) {
-        let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {},
-          kb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {},
-          Wb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {},
-          ab = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : () => {},
-          Tb = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : {
+    class nU extends Lb {
+      constructor(bb, ab) {
+        let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {},
+          Ab = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {},
+          Mb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {},
+          Tb = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : () => {},
+          Eb = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : {
             getItem: () => null,
             setItem: () => {},
             removeItem: () => {}
           },
-          Ub = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : Date.now;
-        super(bb, sb, kb), this.translate = cb, this.requestJump = Wb, this.requestArrive = ab, this.storage = Tb, this.now = Ub, this.layout = null, this.hoveredId = null, this.graphCount = 0, this.snapshot = {
+          Yb = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : Date.now;
+        super(bb, Ub, Ab), this.translate = ab, this.requestJump = Mb, this.requestArrive = Tb, this.storage = Eb, this.now = Yb, this.layout = null, this.hoveredId = null, this.graphCount = 0, this.snapshot = {
           enabled: !1,
           open: !1,
           width: 0,
@@ -2864,80 +2864,80 @@ export const modules = {
           this.close(), this.requestJump(bb)
         }
       }
-      Km(bb) {
-        if (!this.Em)
+      aj(bb) {
+        if (!this.cX)
           if ("graph" !== bb.kind) {
             if ("jumping" === bb.kind) {
-              const cb = {
+              const ab = {
                 questId: bb.graphQuestId,
                 variation: bb.graphVariation,
                 completes: bb.graphCompletesOnArrival,
                 departedAt: this.now()
               };
-              this.storage.setItem(Fs, cb)
+              this.storage.setItem(OU, ab)
             }
           } else {
-            const cb = ++this.graphCount;
-            sb.e(111).then((() => sb(6099))).then((sb => {
+            const ab = ++this.graphCount;
+            Ub.e(111).then((() => Ub(6044))).then((Ub => {
               let {
-                default: kb
-              } = sb;
-              this.Em || cb !== this.graphCount || (this.layout = function(bb, cb, sb) {
-                var kb, Wb;
-                const ab = new bb.graphlib.Graph;
-                ab.setGraph({
+                default: Ab
+              } = Ub;
+              this.cX || ab !== this.graphCount || (this.layout = function(bb, ab, Ub) {
+                var Ab, Mb;
+                const Tb = new bb.graphlib.Graph;
+                Tb.setGraph({
                   rankdir: "LR",
                   ranksep: 70,
                   nodesep: 14,
                   marginx: 24,
                   marginy: 24
-                }), ab.setDefaultEdgeLabel((() => ({})));
-                const Tb = new Set;
-                for (const fb of cb) Tb.add(fb.graphQuestId), ab.setNode(fb.graphQuestId, {
+                }), Tb.setDefaultEdgeLabel((() => ({})));
+                const Eb = new Set;
+                for (const vb of ab) Eb.add(vb.graphQuestId), Tb.setNode(vb.graphQuestId, {
                   width: 190,
                   height: 52
                 });
-                const Ub = sb.filter((bb => Tb.has(bb.graphFromId) && Tb.has(bb.graphToId) && bb.graphFromId !== bb.graphToId)),
-                  Ib = new Map;
-                for (const fb of [...Ub].sort(((bb, cb) => Number("awaits" === bb.graphEdgeKind) - Number("awaits" === cb.graphEdgeKind)))) {
-                  const bb = ps(fb.graphFromId, fb.graphToId);
-                  Ib.has(bb) || (Ib.set(bb, fb), ab.setEdge(fb.graphFromId, fb.graphToId))
+                const Yb = Ub.filter((bb => Eb.has(bb.graphFromId) && Eb.has(bb.graphToId) && bb.graphFromId !== bb.graphToId)),
+                  Bb = new Map;
+                for (const vb of [...Yb].sort(((bb, ab) => Number("awaits" === bb.graphEdgeKind) - Number("awaits" === ab.graphEdgeKind)))) {
+                  const bb = JU(vb.graphFromId, vb.graphToId);
+                  Bb.has(bb) || (Bb.set(bb, vb), Tb.setEdge(vb.graphFromId, vb.graphToId))
                 }
-                bb.layout(ab);
-                const Hb = ab.graph();
+                bb.layout(Tb);
+                const eb = Tb.graph();
                 return {
-                  width: Math.ceil(null !== (kb = Hb.width) && void 0 !== kb ? kb : 0),
-                  height: Math.ceil(null !== (Wb = Hb.height) && void 0 !== Wb ? Wb : 0),
-                  nodes: cb.map((bb => {
-                    var cb, sb;
-                    const kb = ab.node(bb.graphQuestId);
+                  width: Math.ceil(null !== (Ab = eb.width) && void 0 !== Ab ? Ab : 0),
+                  height: Math.ceil(null !== (Mb = eb.height) && void 0 !== Mb ? Mb : 0),
+                  nodes: ab.map((bb => {
+                    var ab, Ub;
+                    const Ab = Tb.node(bb.graphQuestId);
                     return {
                       node: bb,
-                      left: (null !== (cb = kb.x) && void 0 !== cb ? cb : 0) - 95,
-                      top: (null !== (sb = kb.y) && void 0 !== sb ? sb : 0) - 26
+                      left: (null !== (ab = Ab.x) && void 0 !== ab ? ab : 0) - 95,
+                      top: (null !== (Ub = Ab.y) && void 0 !== Ub ? Ub : 0) - 26
                     }
                   })),
-                  edges: Ub.map((bb => {
-                    var cb;
-                    const sb = Ib.get(ps(bb.graphFromId, bb.graphToId)),
-                      kb = null !== (cb = ab.edge(sb.graphFromId, sb.graphToId).points) && void 0 !== cb ? cb : [];
+                  edges: Yb.map((bb => {
+                    var ab;
+                    const Ub = Bb.get(JU(bb.graphFromId, bb.graphToId)),
+                      Ab = null !== (ab = Tb.edge(Ub.graphFromId, Ub.graphToId).points) && void 0 !== ab ? ab : [];
                     return {
                       edge: bb,
                       key: `${bb.graphFromId}|${bb.graphToId}|${bb.graphEdgeKind}`,
-                      path: xs(sb.graphFromId === bb.graphFromId ? kb : [...kb].reverse())
+                      path: cU(Ub.graphFromId === bb.graphFromId ? Ab : [...Ab].reverse())
                     }
                   })),
-                  plans: new Map(cb.map((bb => [bb.graphQuestId, new Set([bb.graphQuestId, ...bb.graphPlanIds])])))
+                  plans: new Map(ab.map((bb => [bb.graphQuestId, new Set([bb.graphQuestId, ...bb.graphPlanIds])])))
                 }
-              }(kb, bb.graphNodes, bb.graphEdges), this.show())
+              }(Ab, bb.graphNodes, bb.graphEdges), this.show())
             })).catch((bb => {
               console.error("The quest graph could not be laid out", bb)
             }))
           }
       }
       resumeJump(bb) {
-        const cb = this.storage.getItem(Fs);
-        this.storage.removeItem(Fs), null === cb || cb.variation !== bb || this.now() - cb.departedAt > 6e4 || this.requestArrive(cb.questId, cb.completes)
+        const ab = this.storage.getItem(OU);
+        this.storage.removeItem(OU), null === ab || ab.variation !== bb || this.now() - ab.departedAt > 6e4 || this.requestArrive(ab.questId, ab.completes)
       }
       setTranslator(bb) {
         this.translate = bb, this.emit()
@@ -2952,8 +2952,8 @@ export const modules = {
         return null !== this.layout
       }
       getPlan() {
-        var bb, cb;
-        return null !== (bb = null === this.hoveredId || null === (cb = this.layout) || void 0 === cb ? void 0 : cb.plans.get(this.hoveredId)) && void 0 !== bb ? bb : new Set
+        var bb, ab;
+        return null !== (bb = null === this.hoveredId || null === (ab = this.layout) || void 0 === ab ? void 0 : ab.plans.get(this.hoveredId)) && void 0 !== bb ? bb : new Set
       }
       buildSnapshot() {
         const bb = this.layout;
@@ -2966,7 +2966,7 @@ export const modules = {
           edges: [],
           planning: !1
         };
-        const cb = this.getPlan();
+        const ab = this.getPlan();
         return {
           enabled: !0,
           open: this.open,
@@ -2974,211 +2974,211 @@ export const modules = {
           height: bb.height,
           nodes: bb.nodes.map((bb => {
             let {
-              node: sb,
-              left: kb,
-              top: Wb
+              node: Ub,
+              left: Ab,
+              top: Mb
             } = bb;
             return {
-              id: sb.graphQuestId,
-              name: this.translate(sb.graphNameKey),
-              detail: null === sb.graphGiverName ? sb.graphZoneId : `${sb.graphGiverName} \xb7 ${sb.graphZoneId}`,
-              state: sb.graphState,
-              left: kb,
-              top: Wb,
-              inPlan: cb.has(sb.graphQuestId),
-              hovered: sb.graphQuestId === this.hoveredId
+              id: Ub.graphQuestId,
+              name: this.translate(Ub.graphNameKey),
+              detail: null === Ub.graphGiverName ? Ub.graphZoneId : `${Ub.graphGiverName} \xb7 ${Ub.graphZoneId}`,
+              state: Ub.graphState,
+              left: Ab,
+              top: Mb,
+              inPlan: ab.has(Ub.graphQuestId),
+              hovered: Ub.graphQuestId === this.hoveredId
             }
           })),
           edges: bb.edges.map((bb => {
             let {
-              edge: sb,
-              key: kb,
-              path: Wb
+              edge: Ub,
+              key: Ab,
+              path: Mb
             } = bb;
             return {
-              key: kb,
-              kind: sb.graphEdgeKind,
-              path: Wb,
-              inPlan: cb.has(sb.graphFromId) && cb.has(sb.graphToId)
+              key: Ab,
+              kind: Ub.graphEdgeKind,
+              path: Mb,
+              inPlan: ab.has(Ub.graphFromId) && ab.has(Ub.graphToId)
             }
           })),
-          planning: cb.size > 0
+          planning: ab.size > 0
         }
       }
     }
-    var ck = sb(36623);
-    const sk = 250,
-      kk = 2150,
-      Wk = -2.8,
-      ak = 2.2,
-      Tk = -27,
-      Uk = {
+    var SU = Ub(36370);
+    const bA = 250,
+      aA = 2150,
+      UA = -2.8,
+      AA = 2.2,
+      MA = -27,
+      TA = {
         zeta: .34,
         period: .7,
         lead: .1,
         rush: .04
       },
-      Ik = {
+      EA = {
         zeta: .45,
         period: .55,
         delay: .12,
         to: 1.25
       },
-      Hk = Math.round(50 + 1e3 * (Ik.delay + Ik.period / 2)),
-      fk = "\u16a0\u16a2\u16a6\u16a8\u16b1\u16b2\u16b7\u16b9\u16ba\u16be\u16c1\u16c3\u16c7\u16c8\u16c9\u16ca\u16cf\u16d2\u16d6\u16d7\u16da\u16dc\u16de\u16df",
-      Mk = Array.from({
+      YA = Math.round(50 + 1e3 * (EA.delay + EA.period / 2)),
+      BA = "\u16a0\u16a2\u16a6\u16a8\u16b1\u16b2\u16b7\u16b9\u16ba\u16be\u16c1\u16c3\u16c7\u16c8\u16c9\u16ca\u16cf\u16d2\u16d6\u16d7\u16da\u16dc\u16de\u16df",
+      eA = Array.from({
         length: 26
-      }, ((bb, cb) => {
-        const sb = 2.39996 * cb,
-          kb = .5 + .618034 * cb % 1 * .23,
-          Wb = cb % 3 !== 2;
+      }, ((bb, ab) => {
+        const Ub = 2.39996 * ab,
+          Ab = .5 + .618034 * ab % 1 * .23,
+          Mb = ab % 3 !== 2;
         return {
-          rune: Wb ? fk[7 * cb % 24] : "",
+          rune: Mb ? BA[7 * ab % 24] : "",
           style: {
-            "--from-x": `calc(var(--sword-size) * ${(Math.cos(sb)*kb).toFixed(3)})`,
-            "--from-y": `calc(var(--sword-size) * ${(Math.sin(sb)*kb).toFixed(3)})`,
-            "--spin": 40 * (cb % 5 - 2) + "deg",
-            "--size": (Wb ? 1 + cb % 4 * .2 : .3 + cb % 2 * .15) + "rem",
-            "--duration": `${(1.8+7*cb%5*.35).toFixed(2)}s`,
-            "--delay": `${(-.83*cb%3).toFixed(2)}s`
+            "--from-x": `calc(var(--sword-size) * ${(Math.cos(Ub)*Ab).toFixed(3)})`,
+            "--from-y": `calc(var(--sword-size) * ${(Math.sin(Ub)*Ab).toFixed(3)})`,
+            "--spin": 40 * (ab % 5 - 2) + "deg",
+            "--size": (Mb ? 1 + ab % 4 * .2 : .3 + ab % 2 * .15) + "rem",
+            "--duration": `${(1.8+7*ab%5*.35).toFixed(2)}s`,
+            "--delay": `${(-.83*ab%3).toFixed(2)}s`
           }
         }
       }));
 
-    function Xk(bb, cb) {
+    function vA(bb, ab) {
       return Array.from({
-        length: 30 + 3 * bb + (cb ? 10 : 0)
-      }, ((bb, cb) => {
-        const sb = cb < 4,
-          kb = sb ? "#fff" : Math.random() < .25 ? "#ff922b" : "#ffe08a",
-          Wb = sb ? 7 + 3 * Math.random() : 3.5 + 5 * Math.random(),
-          ab = sb ? 2.2 : .6 + Math.random(),
-          Tb = sb ? .3 : Math.random() < .5 ? .16 : .24,
-          Ub = sb ? 600 + 100 * Math.random() : 280 + 280 * Math.random();
+        length: 30 + 3 * bb + (ab ? 10 : 0)
+      }, ((bb, ab) => {
+        const Ub = ab < 4,
+          Ab = Ub ? "#fff" : Math.random() < .25 ? "#ff922b" : "#ffe08a",
+          Mb = Ub ? 7 + 3 * Math.random() : 3.5 + 5 * Math.random(),
+          Tb = Ub ? 2.2 : .6 + Math.random(),
+          Eb = Ub ? .3 : Math.random() < .5 ? .16 : .24,
+          Yb = Ub ? 600 + 100 * Math.random() : 280 + 280 * Math.random();
         return {
-          "--c": kb,
+          "--c": Ab,
           "--angle": `${Math.round(220*(Math.random()-.5)+15)}deg`,
-          "--distance": `${Wb.toFixed(2)}rem`,
-          "--length": `${ab.toFixed(2)}rem`,
-          "--width": `${Tb}rem`,
-          "--duration": `${Math.round(Ub)}ms`,
+          "--distance": `${Mb.toFixed(2)}rem`,
+          "--length": `${Tb.toFixed(2)}rem`,
+          "--width": `${Eb}rem`,
+          "--duration": `${Math.round(Yb)}ms`,
           "--delay": `${Math.round(40*Math.random())}ms`,
           "--fall": `${(1+Math.random()).toFixed(2)}rem`
         }
       }))
     }
 
-    function nk(bb) {
+    function LA(bb) {
       let {
-        zeta: cb,
-        period: sb
+        zeta: ab,
+        period: Ub
       } = bb;
-      const kb = 2 * Math.PI / sb;
+      const Ab = 2 * Math.PI / Ub;
       return {
-        w: kb,
-        decay: cb * kb / Math.sqrt(1 - cb * cb)
+        w: Ab,
+        decay: ab * Ab / Math.sqrt(1 - ab * ab)
       }
     }
-    let mk = !1;
+    let PA = !1;
 
-    function lk() {
-      if (mk) return;
-      mk = !0;
+    function XA() {
+      if (PA) return;
+      PA = !0;
       const bb = document.createElement("style");
       bb.textContent = function() {
-        const bb = nk(Uk),
-          cb = nk(Ik),
-          sb = cb => Math.exp(-bb.decay * cb) * Math.sin(bb.w * cb),
-          kb = sb(Math.atan(bb.w / bb.decay) / bb.w),
-          Wb = .25,
-          ab = 2.15,
-          Tb = Math.round(215),
-          Ub = [];
-        for (let Ib = 0; Ib <= Tb; Ib++) {
-          const bb = Ib / Tb * ab;
-          let Hb = Math.sin(Math.min(bb, Wb) / Wb * Math.PI / 2) ** 2,
-            fb = 0,
-            Mb = 1,
-            Xb = 1 - .2 * Hb,
-            nb = 1;
-          if (bb >= Wb) {
-            const Tb = bb - Wb,
-              Ub = Math.max(0, Tb - .05);
-            Hb = Math.exp(-Ub / .05), fb = sb(Ub + Uk.lead * (1 - Math.exp(-Ub / Uk.rush))) / kb;
-            const Ib = Ub - Ik.delay,
-              mb = Ib <= 0 ? 0 : 1 - Math.exp(-cb.decay * Ib) * (Math.cos(cb.w * Ib) + cb.decay / cb.w * Math.sin(cb.w * Ib)),
-              lb = Math.max(0, (bb - 1.77) / (ab - 1.77));
-            Mb = (1 + (Ik.to - 1) * mb) * (1 + .08 * lb), Xb = 1.1 + 1.5 * Math.exp(-Tb / .07) + .3 * Math.exp(-(((1e3 * Tb - Hk) / 100) ** 2)) + .8 * lb, nb = 1 - lb ** 1.5
+        const bb = LA(TA),
+          ab = LA(EA),
+          Ub = ab => Math.exp(-bb.decay * ab) * Math.sin(bb.w * ab),
+          Ab = Ub(Math.atan(bb.w / bb.decay) / bb.w),
+          Mb = .25,
+          Tb = 2.15,
+          Eb = Math.round(215),
+          Yb = [];
+        for (let Bb = 0; Bb <= Eb; Bb++) {
+          const bb = Bb / Eb * Tb;
+          let eb = Math.sin(Math.min(bb, Mb) / Mb * Math.PI / 2) ** 2,
+            vb = 0,
+            Lb = 1,
+            Pb = 1 - .2 * eb,
+            Xb = 1;
+          if (bb >= Mb) {
+            const Eb = bb - Mb,
+              Yb = Math.max(0, Eb - .05);
+            eb = Math.exp(-Yb / .05), vb = Ub(Yb + TA.lead * (1 - Math.exp(-Yb / TA.rush))) / Ab;
+            const Bb = Yb - EA.delay,
+              jb = Bb <= 0 ? 0 : 1 - Math.exp(-ab.decay * Bb) * (Math.cos(ab.w * Bb) + ab.decay / ab.w * Math.sin(ab.w * Bb)),
+              Rb = Math.max(0, (bb - 1.77) / (Tb - 1.77));
+            Lb = (1 + (EA.to - 1) * jb) * (1 + .08 * Rb), Pb = 1.1 + 1.5 * Math.exp(-Eb / .07) + .3 * Math.exp(-(((1e3 * Eb - YA) / 100) ** 2)) + .8 * Rb, Xb = 1 - Rb ** 1.5
           }
-          const mb = .15 * Hb + Wk * fb,
-            lb = -.1 * Hb + ak * fb,
-            Qb = 3 * Hb + Tk * fb;
-          Ub.push(`${(Ib/Tb*100).toFixed(3)}% { opacity: ${nb.toFixed(3)}; transform: translate(${mb.toFixed(3)}rem, ${lb.toFixed(3)}rem) rotate(${Qb.toFixed(2)}deg) scale(${Mb.toFixed(3)}); filter: brightness(${Xb.toFixed(2)}) drop-shadow(0 0 0.8rem color-mix(in srgb, var(--tier) 55%, transparent)); }`)
+          const jb = .15 * eb + UA * vb,
+            Rb = -.1 * eb + AA * vb,
+            kb = 3 * eb + MA * vb;
+          Yb.push(`${(Bb/Eb*100).toFixed(3)}% { opacity: ${Xb.toFixed(3)}; transform: translate(${jb.toFixed(3)}rem, ${Rb.toFixed(3)}rem) rotate(${kb.toFixed(2)}deg) scale(${Lb.toFixed(3)}); filter: brightness(${Pb.toFixed(2)}) drop-shadow(0 0 0.8rem color-mix(in srgb, var(--tier) 55%, transparent)); }`)
         }
-        return `@keyframes SkyblockForgeSwordBurst { ${Ub.join(" ")} }`
+        return `@keyframes SkyblockForgeSwordBurst { ${Yb.join(" ")} }`
       }(), document.head.append(bb)
     }
-    const Qk = "skyblockForgeView",
-      ek = {
+    const jA = "skyblockForgeView",
+      RA = {
         Blade: "skyblockGame:forgeSlotBlade",
         Guard: "skyblockGame:forgeSlotGuard",
         Handle: "skyblockGame:forgeSlotHandle"
       };
-    class Ck extends Mb {
-      constructor(bb, cb, sb, kb, Wb) {
-        super(bb, sb, kb), this.translate = cb, this.requestForge = Wb, this.snapshot = void 0, this.owned = {}, this.coal = 0, this.received = !1, this.awaitingReply = !1, this.pacing = null, this.replyTimeout = null, this.status = null, this.forging = null, this.forgeId = 0, this.arriving = null, this.selected = {
+    class kA extends Lb {
+      constructor(bb, ab, Ub, Ab, Mb) {
+        super(bb, Ub, Ab), this.translate = ab, this.requestForge = Mb, this.snapshot = void 0, this.owned = {}, this.coal = 0, this.received = !1, this.awaitingReply = !1, this.pacing = null, this.replyTimeout = null, this.status = null, this.forging = null, this.forgeId = 0, this.arriving = null, this.selected = {
           Blade: null,
           Guard: null,
           Handle: null
-        }, this.onForgeStarted = null, this.onPartSelected = null, this.select = (bb, cb) => {
-          var sb, kb;
-          null !== this.forging || (null !== (sb = this.owned[(0, ck.u)(cb, bb)]) && void 0 !== sb ? sb : 0) <= 0 || (this.selected[bb] = this.selected[bb] === cb ? null : cb, this.status = null, null === (kb = this.onPartSelected) || void 0 === kb || kb.call(this), this.emit())
+        }, this.onForgeStarted = null, this.onPartSelected = null, this.select = (bb, ab) => {
+          var Ub, Ab;
+          null !== this.forging || (null !== (Ub = this.owned[(0, SU.m)(ab, bb)]) && void 0 !== Ub ? Ub : 0) <= 0 || (this.selected[bb] = this.selected[bb] === ab ? null : ab, this.status = null, null === (Ab = this.onPartSelected) || void 0 === Ab || Ab.call(this), this.emit())
         }, this.forge = bb => {
-          var cb, sb;
-          const kb = this.selectedParts();
-          if (null === kb || this.isPending() || !this.open) return;
-          const Wb = (0, ck.q)(kb);
-          if (null === Wb || Wb.coalCost > this.coal) return;
-          const ab = this.preview(Wb),
-            Tb = null !== (cb = null === (sb = this.onForgeStarted) || void 0 === sb ? void 0 : sb.call(this, ab.tier, ab.named, bb)) && void 0 !== cb ? cb : () => {};
+          var ab, Ub;
+          const Ab = this.selectedParts();
+          if (null === Ab || this.isPending() || !this.open) return;
+          const Mb = (0, SU.l)(Ab);
+          if (null === Mb || Mb.coalCost > this.coal) return;
+          const Tb = this.preview(Mb),
+            Eb = null !== (ab = null === (Ub = this.onForgeStarted) || void 0 === Ub ? void 0 : Ub.call(this, Tb.tier, Tb.named, bb)) && void 0 !== ab ? ab : () => {};
           if (this.dropArrival(), bb) {
             const bb = {
               id: ++this.forgeId,
-              preview: ab,
+              preview: Tb,
               timers: [],
-              stopSounds: Tb,
+              stopSounds: Eb,
               landed: !1,
               reply: null
             };
             bb.timers.push(setTimeout((() => {
               bb.landed = !0, null !== bb.reply && (this.apply(bb.reply), bb.reply = null, this.emit())
-            }), sk), setTimeout((() => {
+            }), bA), setTimeout((() => {
               this.finishForge(bb)
-            }), kk)), this.forging = bb
+            }), aA)), this.forging = bb
           }
           this.awaitingReply = !0, this.pacing = setTimeout((() => {
             this.pacing = null, this.emit()
           }), 2500), this.replyTimeout = setTimeout((() => {
             this.replyTimeout = null, this.awaitingReply = !1, this.emit()
-          }), 8e3), this.emit(), this.requestForge(kb)
+          }), 8e3), this.emit(), this.requestForge(Ab)
         }, this.snapshot = this.buildSnapshot()
       }
-      Km(bb) {
+      aj(bb) {
         if (this.received = !0, this.awaitingReply = !1, this.clearReplyTimeout(), "open" === bb.forgeMessageKind) return this.dropForge(), this.apply(bb), this.status = null, void this.show();
-        const cb = this.forging;
-        if (null !== cb && null !== bb.forgeRefusalKey) this.dropForge();
-        else if (null !== cb && !cb.landed) return void(cb.reply = bb);
+        const ab = this.forging;
+        if (null !== ab && null !== bb.forgeRefusalKey) this.dropForge();
+        else if (null !== ab && !ab.landed) return void(ab.reply = bb);
         this.apply(bb), this.emit()
       }
       apply(bb) {
         if (this.owned = bb.forgeOwnedParts, this.coal = bb.forgeCoalOwned, this.keepSelectionOwned("open" === bb.forgeMessageKind), null !== bb.forgeForgedSwordId) {
-          var cb;
-          const sb = (0, ck.q)(bb.forgeForgedSwordId);
+          var ab;
+          const Ub = (0, SU.l)(bb.forgeForgedSwordId);
           this.status = {
             tone: "forged",
             key: "skyblockGame:forgeForged",
             params: {
-              sword: null !== (cb = null === sb || void 0 === sb ? void 0 : sb.displayName) && void 0 !== cb ? cb : ""
+              sword: null !== (ab = null === Ub || void 0 === Ub ? void 0 : Ub.displayName) && void 0 !== ab ? ab : ""
             }
           }
         } else null !== bb.forgeRefusalKey && (this.status = {
@@ -3197,23 +3197,23 @@ export const modules = {
         this.dropForge(), this.dropArrival(), this.status = null, this.awaitingReply = !1, this.clearReplyTimeout()
       }
       finishForge(bb) {
-        var cb;
+        var ab;
         this.forging = null;
-        const sb = this.selectedParts(),
-          kb = setTimeout((() => {
+        const Ub = this.selectedParts(),
+          Ab = setTimeout((() => {
             this.arriving = null, this.emit()
           }), 400);
         this.arriving = {
           id: bb.id,
-          sameSword: null !== sb && (null === (cb = (0, ck.q)(sb)) || void 0 === cb ? void 0 : cb.displayName) === bb.preview.name,
-          timer: kb
+          sameSword: null !== Ub && (null === (ab = (0, SU.l)(Ub)) || void 0 === ab ? void 0 : ab.displayName) === bb.preview.name,
+          timer: Ab
         }, this.emit()
       }
       dropForge() {
         const bb = this.forging;
         if (null !== bb) {
           this.forging = null;
-          for (const cb of bb.timers) clearTimeout(cb);
+          for (const ab of bb.timers) clearTimeout(ab);
           bb.stopSounds(), null !== bb.reply && this.apply(bb.reply)
         }
       }
@@ -3227,23 +3227,23 @@ export const modules = {
         null !== this.replyTimeout && (clearTimeout(this.replyTimeout), this.replyTimeout = null)
       }
       buildSnapshot() {
-        var bb, cb, sb;
-        const kb = this.selectedParts(),
-          Wb = null === kb ? null : (0, ck.q)(kb),
-          ab = null !== (bb = null === (cb = this.forging) || void 0 === cb ? void 0 : cb.preview) && void 0 !== bb ? bb : null === Wb ? null : this.preview(Wb);
+        var bb, ab, Ub;
+        const Ab = this.selectedParts(),
+          Mb = null === Ab ? null : (0, SU.l)(Ab),
+          Tb = null !== (bb = null === (ab = this.forging) || void 0 === ab ? void 0 : ab.preview) && void 0 !== bb ? bb : null === Mb ? null : this.preview(Mb);
         return {
           enabled: this.received,
           open: this.open,
-          slots: ck.n.map((bb => ({
+          slots: SU.h.map((bb => ({
             kind: bb,
-            label: this.translate(ek[bb]),
+            label: this.translate(RA[bb]),
             parts: this.partsFor(bb)
           }))),
           coalOwned: this.coal,
-          preview: ab,
-          unformedSword: ck.l[null !== (sb = this.selected.Blade) && void 0 !== sb ? sb : "Iron"].baseSword,
+          preview: Tb,
+          unformedSword: SU.g[null !== (Ub = this.selected.Blade) && void 0 !== Ub ? Ub : "Iron"].baseSword,
           anyParts: Object.values(this.owned).some((bb => bb > 0)),
-          canForge: null !== ab && !ab.coalShort && !this.isPending(),
+          canForge: null !== Tb && !Tb.coalShort && !this.isPending(),
           status: null === this.status ? null : {
             tone: this.status.tone,
             text: this.translate(this.status.key, this.status.params)
@@ -3273,33 +3273,33 @@ export const modules = {
         }
       }
       partsFor(bb) {
-        const cb = [];
-        for (const kb of ck.h) {
-          var sb;
-          const Wb = (0, ck.u)(kb, bb),
-            ab = null !== (sb = this.owned[Wb]) && void 0 !== sb ? sb : 0;
-          ab > 0 && cb.push({
-            material: kb,
-            itemName: Wb,
-            owned: ab,
-            selected: this.selected[bb] === kb,
+        const ab = [];
+        for (const Ab of SU.e) {
+          var Ub;
+          const Mb = (0, SU.m)(Ab, bb),
+            Tb = null !== (Ub = this.owned[Mb]) && void 0 !== Ub ? Ub : 0;
+          Tb > 0 && ab.push({
+            material: Ab,
+            itemName: Mb,
+            owned: Tb,
+            selected: this.selected[bb] === Ab,
             placeholder: !1
           })
         }
-        if (0 === cb.length) {
-          const sb = ck.h[0];
-          cb.push({
-            material: sb,
-            itemName: (0, ck.u)(sb, bb),
+        if (0 === ab.length) {
+          const Ub = SU.e[0];
+          ab.push({
+            material: Ub,
+            itemName: (0, SU.m)(Ub, bb),
             owned: 0,
             selected: !1,
             placeholder: !0
           })
         }
-        return cb
+        return ab
       }
       stats(bb) {
-        const cb = [{
+        const ab = [{
           label: this.translate("skyblockGame:forgeStatPower"),
           value: `\xd7${bb.powerMultiplier.toFixed(2)}`,
           better: bb.powerMultiplier > 1
@@ -3316,78 +3316,78 @@ export const modules = {
           value: `\xd7${bb.knockbackMultiplier.toFixed(2)}`,
           better: bb.knockbackMultiplier > 1
         }];
-        return bb.reachBonus > 0 && cb.push({
+        return bb.reachBonus > 0 && ab.push({
           label: this.translate("skyblockGame:forgeStatReach"),
           value: `+${bb.reachBonus.toFixed(1)}`,
           better: !0
-        }), bb.damageReduction > 0 && cb.push({
+        }), bb.damageReduction > 0 && ab.push({
           label: this.translate("skyblockGame:forgeStatDefence"),
           value: `${Math.round(100*bb.damageReduction)}%`,
           better: !0
-        }), cb
+        }), ab
       }
       selectedParts() {
         const {
           Blade: bb,
-          Guard: cb,
-          Handle: sb
+          Guard: ab,
+          Handle: Ub
         } = this.selected;
-        return null === bb || null === cb || null === sb ? null : {
+        return null === bb || null === ab || null === Ub ? null : {
           blade: bb,
-          guard: cb,
-          handle: sb
+          guard: ab,
+          handle: Ub
         }
       }
       keepSelectionOwned(bb) {
-        for (const sb of ck.n) {
-          var cb;
-          const kb = this.selected[sb];
-          if (null !== kb && (null !== (cb = this.owned[(0, ck.u)(kb, sb)]) && void 0 !== cb ? cb : 0) > 0) continue;
+        for (const Ub of SU.h) {
+          var ab;
+          const Ab = this.selected[Ub];
+          if (null !== Ab && (null !== (ab = this.owned[(0, SU.m)(Ab, Ub)]) && void 0 !== ab ? ab : 0) > 0) continue;
           if (!bb) {
-            this.selected[sb] = null;
+            this.selected[Ub] = null;
             continue
           }
-          const Wb = [...ck.h].reverse().find((bb => {
-            var cb;
-            return (null !== (cb = this.owned[(0, ck.u)(bb, sb)]) && void 0 !== cb ? cb : 0) > 0
+          const Mb = [...SU.e].reverse().find((bb => {
+            var ab;
+            return (null !== (ab = this.owned[(0, SU.m)(bb, Ub)]) && void 0 !== ab ? ab : 0) > 0
           }));
-          this.selected[sb] = null !== Wb && void 0 !== Wb ? Wb : null
+          this.selected[Ub] = null !== Mb && void 0 !== Mb ? Mb : null
         }
       }
       dispose() {
         this.received = !1, this.dropForge(), this.dropArrival(), this.clearReplyTimeout(), null !== this.pacing && (clearTimeout(this.pacing), this.pacing = null), super.dispose()
       }
     }
-    const Nk = "skyblockSmugglerView",
-      Vk = {
+    const yA = "skyblockSmugglerView",
+      ZA = {
         "Red Firecracker Pebble": "skyblockGame:mortarStrike",
         "Purple Firecracker Pebble": "skyblockGame:interdimensionalStrike"
       };
-    class Lk extends Mb {
-      constructor(bb, cb, sb, kb, Wb) {
-        let ab = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now;
-        super(bb, sb, kb), this.translate = cb, this.requestBuy = Wb, this.now = ab, this.snapshot = void 0, this.day = 0, this.deals = [], this.rivets = 0, this.crests = 0, this.soldOut = new Set, this.rotatesAtMs = 0, this.received = !1, this.awaitingReply = !1, this.pacing = null, this.replyTimeout = null, this.countdown = null, this.status = null, this.boughtSlot = null, this.boughtCount = 0, this.itemName = bb => bb, this.onBought = null, this.buy = bb => {
-          const cb = this.deals[bb];
-          void 0 !== cb && !this.isPending() && this.open && !this.soldOut.has(bb) && this.canAfford(cb) && (this.awaitingReply = !0, this.pacing = setTimeout((() => {
+    class DA extends Lb {
+      constructor(bb, ab, Ub, Ab, Mb) {
+        let Tb = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now;
+        super(bb, Ub, Ab), this.translate = ab, this.requestBuy = Mb, this.now = Tb, this.snapshot = void 0, this.day = 0, this.deals = [], this.rivets = 0, this.crests = 0, this.soldOut = new Set, this.rotatesAtMs = 0, this.received = !1, this.awaitingReply = !1, this.pacing = null, this.replyTimeout = null, this.countdown = null, this.status = null, this.boughtSlot = null, this.boughtCount = 0, this.itemName = bb => bb, this.onBought = null, this.buy = bb => {
+          const ab = this.deals[bb];
+          void 0 !== ab && !this.isPending() && this.open && !this.soldOut.has(bb) && this.canAfford(ab) && (this.awaitingReply = !0, this.pacing = setTimeout((() => {
             this.pacing = null, this.emit()
           }), 2500), this.replyTimeout = setTimeout((() => {
             this.replyTimeout = null, this.awaitingReply = !1, this.emit()
           }), 8e3), this.emit(), this.requestBuy(this.day, bb))
         }, this.snapshot = this.buildSnapshot()
       }
-      Km(bb) {
+      aj(bb) {
         if (this.received = !0, this.day = bb.smugglerDay, this.deals = bb.smugglerDeals, this.rivets = bb.smugglerRivetsOwned, this.crests = bb.smugglerCrestsOwned, this.soldOut = new Set(bb.smugglerSoldOutSlots), this.rotatesAtMs = this.now() + bb.smugglerRotatesInMs, this.awaitingReply = !1, this.clearReplyTimeout(), "open" === bb.smugglerMessageKind) return this.status = null, this.boughtSlot = null, this.show(), void this.startCountdown();
         if (this.boughtSlot = bb.smugglerBoughtSlot, null !== bb.smugglerBoughtSlot) {
-          var cb, sb;
-          const kb = this.deals[bb.smugglerBoughtSlot];
+          var ab, Ub;
+          const Ab = this.deals[bb.smugglerBoughtSlot];
           this.status = {
             tone: "bought",
             key: "skyblockGame:smugglerBought",
             params: {
-              item: void 0 === kb ? "" : this.dealName(kb),
-              amount: String(null !== (cb = null === kb || void 0 === kb ? void 0 : kb.smugglerDealAmount) && void 0 !== cb ? cb : 0)
+              item: void 0 === Ab ? "" : this.dealName(Ab),
+              amount: String(null !== (ab = null === Ab || void 0 === Ab ? void 0 : Ab.smugglerDealAmount) && void 0 !== ab ? ab : 0)
             }
-          }, this.boughtCount++, null === (sb = this.onBought) || void 0 === sb || sb.call(this)
+          }, this.boughtCount++, null === (Ub = this.onBought) || void 0 === Ub || Ub.call(this)
         } else null !== bb.smugglerRefusalKey && (this.status = {
           tone: "refused",
           key: bb.smugglerRefusalKey,
@@ -3395,8 +3395,8 @@ export const modules = {
         });
         this.emit()
       }
-      setTranslator(bb, cb, sb) {
-        this.translate = bb, void 0 !== sb && (this.itemName = sb), this.emit()
+      setTranslator(bb, ab, Ub) {
+        this.translate = bb, void 0 !== Ub && (this.itemName = Ub), this.emit()
       }
       isEnabled() {
         return this.received
@@ -3406,8 +3406,8 @@ export const modules = {
       }
       dealName(bb) {
         if (null !== bb.smugglerDealUniqueName) return bb.smugglerDealUniqueName;
-        const cb = Vk[bb.smugglerDealItem];
-        return void 0 === cb ? this.itemName(bb.smugglerDealItem) : this.translate(cb)
+        const ab = ZA[bb.smugglerDealItem];
+        return void 0 === ab ? this.itemName(bb.smugglerDealItem) : this.translate(ab)
       }
       canAfford(bb) {
         return bb.smugglerDealRivets <= this.rivets && bb.smugglerDealCrests <= this.crests
@@ -3439,8 +3439,8 @@ export const modules = {
         return {
           enabled: this.received,
           open: this.open,
-          deals: this.deals.map(((bb, cb) => ({
-            slot: cb,
+          deals: this.deals.map(((bb, ab) => ({
+            slot: ab,
             itemName: bb.smugglerDealItem,
             displayName: this.dealName(bb),
             enchantmentTier: bb.smugglerDealEnchantmentTier,
@@ -3448,8 +3448,8 @@ export const modules = {
             rivets: bb.smugglerDealRivets,
             crests: bb.smugglerDealCrests,
             affordable: this.canAfford(bb),
-            soldOut: this.soldOut.has(cb),
-            justBought: this.boughtSlot === cb
+            soldOut: this.soldOut.has(ab),
+            justBought: this.boughtSlot === ab
           }))),
           rivetsOwned: this.rivets,
           crestsOwned: this.crests,
@@ -3466,40 +3466,40 @@ export const modules = {
         this.received = !1, this.clearReplyTimeout(), this.stopCountdown(), null !== this.pacing && (clearTimeout(this.pacing), this.pacing = null), super.dispose()
       }
     }
-    const uk = "skyblockPassageView",
-      Yk = {
+    const zA = "skyblockPassageView",
+      xA = {
         new: "skyblockGame:passagePhaseNew",
         waxing: "skyblockGame:passagePhaseWaxing",
         full: "skyblockGame:passagePhaseFull",
         waning: "skyblockGame:passagePhaseWaning"
       };
 
-    function hk(bb, cb) {
-      return bb(Yk[cb])
+    function iA(bb, ab) {
+      return bb(xA[ab])
     }
 
-    function Jk(bb, cb, sb, kb) {
-      const Wb = Math.ceil((sb - kb) / 864e5),
-        ab = hk(bb, cb);
-      return Wb > 1 ? bb("skyblockGame:passageNextDays", {
-        phase: ab,
-        days: String(Wb)
+    function fA(bb, ab, Ub, Ab) {
+      const Mb = Math.ceil((Ub - Ab) / 864e5),
+        Tb = iA(bb, ab);
+      return Mb > 1 ? bb("skyblockGame:passageNextDays", {
+        phase: Tb,
+        days: String(Mb)
       }) : bb("skyblockGame:passageNextSoon", {
-        phase: ab
+        phase: Tb
       })
     }
-    class gk extends Mb {
-      constructor(bb, cb, sb, kb) {
-        let Wb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Date.now;
-        super(bb, sb, kb), this.translate = cb, this.now = Wb, this.snapshot = void 0, this.message = null, this.receivedAtMs = 0, this.itemName = bb => bb, this.toggle = () => {
+    class mA extends Lb {
+      constructor(bb, ab, Ub, Ab) {
+        let Mb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Date.now;
+        super(bb, Ub, Ab), this.translate = ab, this.now = Mb, this.snapshot = void 0, this.message = null, this.receivedAtMs = 0, this.itemName = bb => bb, this.toggle = () => {
           this.open ? this.dismiss() : this.show()
         }, this.snapshot = this.buildSnapshot()
       }
-      Km(bb) {
+      aj(bb) {
         this.message = bb, this.receivedAtMs = this.now(), this.emit()
       }
-      setTranslator(bb, cb, sb) {
-        this.translate = bb, void 0 !== sb && (this.itemName = sb), this.emit()
+      setTranslator(bb, ab, Ub) {
+        this.translate = bb, void 0 !== Ub && (this.itemName = Ub), this.emit()
       }
       isEnabled() {
         return null !== this.message
@@ -3528,42 +3528,42 @@ export const modules = {
           enabled: !0,
           open: this.open,
           phase: bb.passagePhase,
-          phaseName: hk(this.translate, bb.passagePhase),
+          phaseName: iA(this.translate, bb.passagePhase),
           visitors: bb.passageVisitors.map((bb => this.describe(bb))),
           resting: this.describe(bb.passageResting),
           nextPhase: bb.passageNextPhase,
-          next: Jk(this.translate, bb.passageNextPhase, bb.passageTurnsInMs, this.now() - this.receivedAtMs)
+          next: fA(this.translate, bb.passageNextPhase, bb.passageTurnsInMs, this.now() - this.receivedAtMs)
         }
       }
       dispose() {
         this.message = null, super.dispose()
       }
     }
-    var Bk = sb(38152);
-    const tk = "skyblockKeepersChairView";
-    class yk extends Mb {
-      constructor(bb, cb, sb, kb, Wb) {
-        let ab = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now,
-          Tb = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : new Bk.b;
-        super(bb, sb, kb), this.translate = cb, this.requestAim = Wb, this.now = ab, this.pacer = Tb, this.snapshot = void 0, this.islands = [], this.favoured = null, this.received = !1, this.awaitingReply = !1, this.unsubscribePacer = void 0, this.replyTimeout = null, this.status = null, this.aimedCount = 0, this.passage = null, this.passageReceivedAtMs = 0, this.atChair = !0, this.itemName = bb => bb, this.aim = bb => {
-          !this.awaitingReply && this.open && this.atChair && bb !== this.favoured && (null === bb || this.islands.some((cb => cb.keepersChairIslandId === bb && cb.keepersChairIslandRelit))) && this.pacer.tryStart() && (this.awaitingReply = !0, this.replyTimeout = setTimeout((() => {
+    var pA = Ub(37875);
+    const NA = "skyblockKeepersChairView";
+    class WA extends Lb {
+      constructor(bb, ab, Ub, Ab, Mb) {
+        let Tb = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now,
+          Eb = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : new pA.b;
+        super(bb, Ub, Ab), this.translate = ab, this.requestAim = Mb, this.now = Tb, this.pacer = Eb, this.snapshot = void 0, this.islands = [], this.favoured = null, this.received = !1, this.awaitingReply = !1, this.unsubscribePacer = void 0, this.replyTimeout = null, this.status = null, this.aimedCount = 0, this.passage = null, this.passageReceivedAtMs = 0, this.atChair = !0, this.itemName = bb => bb, this.aim = bb => {
+          !this.awaitingReply && this.open && this.atChair && bb !== this.favoured && (null === bb || this.islands.some((ab => ab.keepersChairIslandId === bb && ab.keepersChairIslandRelit))) && this.pacer.tryStart() && (this.awaitingReply = !0, this.replyTimeout = setTimeout((() => {
             this.replyTimeout = null, this.awaitingReply = !1, this.emit()
           }), 8e3), this.emit(), this.requestAim(null !== bb && void 0 !== bb ? bb : "none"))
-        }, this.snapshot = this.buildSnapshot(), this.unsubscribePacer = Tb.subscribe((() => {
+        }, this.snapshot = this.buildSnapshot(), this.unsubscribePacer = Eb.subscribe((() => {
           this.emit()
         }))
       }
-      Km(bb) {
-        var cb, sb;
+      aj(bb) {
+        var ab, Ub;
         this.received = !0;
-        const kb = this.favoured,
-          Wb = this.atChair;
-        var ab;
-        return this.islands = bb.keepersChairIslands, this.favoured = bb.keepersChairFavoured, this.passage = null !== (cb = bb.keepersChairPassage) && void 0 !== cb ? cb : null, this.passageReceivedAtMs = this.now(), this.atChair = null === (sb = bb.keepersChairAtChair) || void 0 === sb || sb, "place" === bb.keepersChairMessageKind ? (!Wb && this.atChair && "refused" === (null === (ab = this.status) || void 0 === ab ? void 0 : ab.tone) && (this.status = null), void this.emit()) : (this.awaitingReply = !1, this.clearReplyTimeout(), "open" === bb.keepersChairMessageKind ? (this.status = null, void this.show()) : void(this.open ? (null !== bb.keepersChairRefusalKey ? this.status = {
+        const Ab = this.favoured,
+          Mb = this.atChair;
+        var Tb;
+        return this.islands = bb.keepersChairIslands, this.favoured = bb.keepersChairFavoured, this.passage = null !== (ab = bb.keepersChairPassage) && void 0 !== ab ? ab : null, this.passageReceivedAtMs = this.now(), this.atChair = null === (Ub = bb.keepersChairAtChair) || void 0 === Ub || Ub, "place" === bb.keepersChairMessageKind ? (!Mb && this.atChair && "refused" === (null === (Tb = this.status) || void 0 === Tb ? void 0 : Tb.tone) && (this.status = null), void this.emit()) : (this.awaitingReply = !1, this.clearReplyTimeout(), "open" === bb.keepersChairMessageKind ? (this.status = null, void this.show()) : void(this.open ? (null !== bb.keepersChairRefusalKey ? this.status = {
           tone: "refused",
           key: bb.keepersChairRefusalKey,
           island: null
-        } : this.favoured !== kb && (this.status = null === this.favoured ? {
+        } : this.favoured !== Ab && (this.status = null === this.favoured ? {
           tone: "aimed",
           key: "skyblockGame:keepersChairRestedStatus",
           island: null
@@ -3579,8 +3579,8 @@ export const modules = {
       receivePassage(bb) {
         this.received && (this.passage = bb, this.passageReceivedAtMs = this.now(), this.emit())
       }
-      setTranslator(bb, cb, sb) {
-        this.translate = bb, void 0 !== sb && (this.itemName = sb), this.emit()
+      setTranslator(bb, ab, Ub) {
+        this.translate = bb, void 0 !== Ub && (this.itemName = Ub), this.emit()
       }
       isEnabled() {
         return this.received
@@ -3595,8 +3595,8 @@ export const modules = {
         null !== this.replyTimeout && (clearTimeout(this.replyTimeout), this.replyTimeout = null)
       }
       islandName(bb) {
-        const cb = this.islands.find((cb => cb.keepersChairIslandId === bb));
-        return void 0 === cb ? bb : this.translate(cb.keepersChairIslandNameKey)
+        const ab = this.islands.find((ab => ab.keepersChairIslandId === bb));
+        return void 0 === ab ? bb : this.translate(ab.keepersChairIslandNameKey)
       }
       buildSnapshot() {
         const bb = this.atChair ? this.status : {
@@ -3604,19 +3604,19 @@ export const modules = {
             key: "skyblockGame:keepersChairTooFar",
             island: null
           },
-          cb = this.passage;
+          ab = this.passage;
         return {
           enabled: this.received,
           open: this.open,
           islands: this.islands.map((bb => {
-            const cb = bb.keepersChairFeaturedFish;
+            const ab = bb.keepersChairFeaturedFish;
             return {
               id: bb.keepersChairIslandId,
               name: this.translate(bb.keepersChairIslandNameKey),
               relit: bb.keepersChairIslandRelit,
-              featuredFish: null === cb ? null : {
-                itemName: cb,
-                displayName: this.itemName(cb)
+              featuredFish: null === ab ? null : {
+                itemName: ab,
+                displayName: this.itemName(ab)
               },
               favoured: bb.keepersChairIslandId === this.favoured
             }
@@ -3630,11 +3630,11 @@ export const modules = {
             })
           },
           aimedCount: this.aimedCount,
-          almanac: null === cb ? null : {
-            phase: cb.keepersChairPassagePhase,
-            phaseName: hk(this.translate, cb.keepersChairPassagePhase),
-            nextPhase: cb.keepersChairPassageNextPhase,
-            next: Jk(this.translate, cb.keepersChairPassageNextPhase, cb.keepersChairPassageTurnsInMs, this.now() - this.passageReceivedAtMs)
+          almanac: null === ab ? null : {
+            phase: ab.keepersChairPassagePhase,
+            phaseName: iA(this.translate, ab.keepersChairPassagePhase),
+            nextPhase: ab.keepersChairPassageNextPhase,
+            next: fA(this.translate, ab.keepersChairPassageNextPhase, ab.keepersChairPassageTurnsInMs, this.now() - this.passageReceivedAtMs)
           }
         }
       }
@@ -3642,63 +3642,63 @@ export const modules = {
         this.received = !1, this.passage = null, this.atChair = !0, this.clearReplyTimeout(), this.unsubscribePacer(), super.dispose()
       }
     }
-    const Pk = "skyblockReachLogView",
-      Dk = ["skyblockGame:reachLogBronze", "skyblockGame:reachLogSilver", "skyblockGame:reachLogGold"],
-      Ek = "Caught Fish",
-      ik = [1, 2, 4];
+    const HA = "skyblockReachLogView",
+      IA = ["skyblockGame:reachLogBronze", "skyblockGame:reachLogSilver", "skyblockGame:reachLogGold"],
+      dA = "Caught Fish",
+      FA = [1, 2, 4];
 
-    function Ok(bb, cb) {
+    function hA(bb, ab) {
       return bb.map((bb => ({
         ...bb,
         reachLogPageFish: bb.reachLogPageFish.map((bb => ({
           ...bb,
-          reachLogFishFresh: cb(bb)
+          reachLogFishFresh: ab(bb)
         })))
       })))
     }
-    class Gk extends Mb {
-      constructor(bb, cb, sb, kb, Wb) {
-        let ab = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : new Bk.b;
-        super(bb, sb, kb), this.translate = cb, this.requestOpen = Wb, this.pacer = ab, this.snapshot = void 0, this.pages = [], this.pagesCurrent = !1, this.serverFresh = 0, this.passagePhase = null, this.heldFresh = new Set, this.shown = !1, this.received = !1, this.selected = null, this.letGoShown = !1, this.awaitingReply = !1, this.replyTimeout = null, this.newsToken = 0, this.news = !1, this.pageViews = null, this.newsTimeout = null, this.unsubscribePacer = void 0, this.itemName = bb => bb, this.ask = () => {
+    class GA extends Lb {
+      constructor(bb, ab, Ub, Ab, Mb) {
+        let Tb = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : new pA.b;
+        super(bb, Ub, Ab), this.translate = ab, this.requestOpen = Mb, this.pacer = Tb, this.snapshot = void 0, this.pages = [], this.pagesCurrent = !1, this.serverFresh = 0, this.passagePhase = null, this.heldFresh = new Set, this.shown = !1, this.received = !1, this.selected = null, this.letGoShown = !1, this.awaitingReply = !1, this.replyTimeout = null, this.newsToken = 0, this.news = !1, this.pageViews = null, this.newsTimeout = null, this.unsubscribePacer = void 0, this.itemName = bb => bb, this.ask = () => {
           !this.received || this.open || this.awaitingReply || (this.pagesCurrent && 0 === this.serverFresh ? this.showPages() : this.pacer.tryStart() && (this.awaitingReply = !0, this.replyTimeout = setTimeout((() => {
             this.replyTimeout = null, this.awaitingReply = !1, this.emit()
           }), 8e3), this.emit(), this.requestOpen()))
         }, this.selectPage = bb => {
-          this.pages.some((cb => cb.reachLogIslandId === bb)) && (this.selected = bb, this.emit())
-        }, this.snapshot = this.buildSnapshot(), this.unsubscribePacer = ab.subscribe((() => {
+          this.pages.some((ab => ab.reachLogIslandId === bb)) && (this.selected = bb, this.emit())
+        }, this.snapshot = this.buildSnapshot(), this.unsubscribePacer = Tb.subscribe((() => {
           this.emit()
         }))
       }
-      Km(bb) {
+      aj(bb) {
         if (this.received = !0, "status" === bb.reachLogMessageKind) return !0 === bb.reachLogNews && this.markNews(), this.serverFresh = bb.reachLogFreshCount, this.pagesCurrent = !1, void this.emit();
-        const cb = this.awaitingReply;
+        const ab = this.awaitingReply;
         if (this.awaitingReply = !1, this.clearReplyTimeout(), "unavailable" !== bb.reachLogMessageKind)
-          if (this.pageViews = null, this.pages = Ok(bb.reachLogPages, (bb => bb.reachLogFishFresh || this.heldFresh.has(bb.reachLogFishItem))), this.letGoShown = bb.reachLogLetGoRibbonShown, this.pagesCurrent = !0, this.serverFresh = 0, cb) this.showPages();
+          if (this.pageViews = null, this.pages = hA(bb.reachLogPages, (bb => bb.reachLogFishFresh || this.heldFresh.has(bb.reachLogFishItem))), this.letGoShown = bb.reachLogLetGoRibbonShown, this.pagesCurrent = !0, this.serverFresh = 0, ab) this.showPages();
           else {
             for (const bb of this.pages)
-              for (const cb of bb.reachLogPageFish) cb.reachLogFishFresh && this.heldFresh.add(cb.reachLogFishItem);
+              for (const ab of bb.reachLogPageFish) ab.reachLogFishFresh && this.heldFresh.add(ab.reachLogFishItem);
             this.emit()
           }
         else this.emit()
       }
-      setTranslator(bb, cb, sb) {
-        this.translate = bb, this.pageViews = null, void 0 !== sb && (this.itemName = sb), this.emit()
+      setTranslator(bb, ab, Ub) {
+        this.translate = bb, this.pageViews = null, void 0 !== Ub && (this.itemName = Ub), this.emit()
       }
       isEnabled() {
         return this.received
       }
       onClosed() {
-        this.shown && (this.shown = !1, this.pageViews = null, this.pages = Ok(this.pages, (() => !1)))
+        this.shown && (this.shown = !1, this.pageViews = null, this.pages = hA(this.pages, (() => !1)))
       }
       showPages() {
         this.heldFresh.clear(), this.selected = this.pickPage(), this.show(), this.shown = this.isOpen()
       }
       pickPage() {
-        var bb, cb, sb, kb;
-        const Wb = this.pages.find((bb => bb.reachLogPageFish.some((bb => bb.reachLogFishFresh))));
-        if (void 0 !== Wb) return Wb.reachLogIslandId;
+        var bb, ab, Ub, Ab;
+        const Mb = this.pages.find((bb => bb.reachLogPageFish.some((bb => bb.reachLogFishFresh))));
+        if (void 0 !== Mb) return Mb.reachLogIslandId;
         if (null !== this.selected && this.pages.some((bb => bb.reachLogIslandId === this.selected))) return this.selected;
-        return null !== (bb = null !== (cb = null === (sb = this.pages.filter((bb => bb.reachLogIslandAwake)).at(-1)) || void 0 === sb ? void 0 : sb.reachLogIslandId) && void 0 !== cb ? cb : null === (kb = this.pages[0]) || void 0 === kb ? void 0 : kb.reachLogIslandId) && void 0 !== bb ? bb : null
+        return null !== (bb = null !== (ab = null === (Ub = this.pages.filter((bb => bb.reachLogIslandAwake)).at(-1)) || void 0 === Ub ? void 0 : Ub.reachLogIslandId) && void 0 !== ab ? ab : null === (Ab = this.pages[0]) || void 0 === Ab ? void 0 : Ab.reachLogIslandId) && void 0 !== bb ? bb : null
       }
       markNews() {
         this.newsToken++, this.news = !0, this.clearNewsTimeout(), this.newsTimeout = setTimeout((() => {
@@ -3726,7 +3726,7 @@ export const modules = {
       }
       buildPages() {
         return this.pages.map((bb => {
-          var cb;
+          var ab;
           return {
             id: bb.reachLogIslandId,
             name: this.translate(bb.reachLogIslandNameKey),
@@ -3735,7 +3735,7 @@ export const modules = {
             caught: bb.reachLogPageFish.filter((bb => bb.reachLogFishCaught && !bb.reachLogFishVisitor)).length,
             total: bb.reachLogPageFish.filter((bb => !bb.reachLogFishVisitor)).length,
             fish: bb.reachLogPageFish.map((bb => {
-              const cb = bb.reachLogFishBestKg;
+              const ab = bb.reachLogFishBestKg;
               return {
                 itemName: bb.reachLogFishItem,
                 name: bb.reachLogFishCaught ? this.itemName(bb.reachLogFishItem) : this.translate("skyblockGame:reachLogUnknownFish"),
@@ -3743,18 +3743,18 @@ export const modules = {
                 chance: this.translate("skyblockGame:reachLogChance", {
                   count: Math.max(1, Math.round(1 / bb.reachLogFishChance))
                 }),
-                best: bb.reachLogFishCaught ? null === cb ? this.translate("skyblockGame:reachLogNoSize") : this.translate("skyblockGame:reachLogBest", {
-                  kg: cb.toFixed(1)
+                best: bb.reachLogFishCaught ? null === ab ? this.translate("skyblockGame:reachLogNoSize") : this.translate("skyblockGame:reachLogBest", {
+                  kg: ab.toFixed(1)
                 }) : this.translate("skyblockGame:reachLogNotCaught"),
                 marks: bb.reachLogFishMarks,
-                ribbons: ik.map((cb => 0 !== (bb.reachLogFishRibbons & cb))),
+                ribbons: FA.map((ab => 0 !== (bb.reachLogFishRibbons & ab))),
                 glimmer: 0 !== (8 & bb.reachLogFishRibbons),
                 halo: 0 !== (32 & bb.reachLogFishRibbons),
                 fresh: bb.reachLogFishFresh,
                 visitor: bb.reachLogFishVisitor
               }
             })),
-            returner: this.buildReturner(null !== (cb = bb.reachLogPageReturner) && void 0 !== cb ? cb : null)
+            returner: this.buildReturner(null !== (ab = bb.reachLogPageReturner) && void 0 !== ab ? ab : null)
           }
         }))
       }
@@ -3775,37 +3775,37 @@ export const modules = {
         this.received = !1, this.pagesCurrent = !1, this.passagePhase = null, this.heldFresh.clear(), this.clearReplyTimeout(), this.clearNewsTimeout(), this.unsubscribePacer(), super.dispose()
       }
     }
-    const Kk = "skyblockLampLightView";
-    class Zk {
-      constructor(bb, cb, sb, kb) {
-        this.QQ = bb, this.translate = cb, this.requestCommand = sb, this.pacer = kb, this.snapshot = void 0, this.message = null, this.shop = null, this.situation = "open", this.awaitingTag = null, this.awaitingOff = !1, this.offQueued = !1, this.offTag = null, this.lastTag = 0, this.replyTimeout = null, this.offTimeout = null, this.refusalKey = null, this.gainedCount = 0, this.lastGained = 0, this.atChair = !0, this.sparkle = null, this.locale = "en", this.Em = !1, this.unsubscribePacer = void 0, this.removePriority = void 0, this.getSnapshot = () => this.snapshot, this.setRelease = bb => {
+    const QA = "skyblockLampLightView";
+    class qA {
+      constructor(bb, ab, Ub, Ab) {
+        this.IR = bb, this.translate = ab, this.requestCommand = Ub, this.pacer = Ab, this.snapshot = void 0, this.message = null, this.shop = null, this.situation = "open", this.awaitingTag = null, this.awaitingOff = !1, this.offQueued = !1, this.offTag = null, this.lastTag = 0, this.replyTimeout = null, this.offTimeout = null, this.refusalKey = null, this.gainedCount = 0, this.lastGained = 0, this.atChair = !0, this.sparkle = null, this.locale = "en", this.cX = !1, this.unsubscribePacer = void 0, this.removePriority = void 0, this.getSnapshot = () => this.snapshot, this.setRelease = bb => {
           bb ? this.send("release on") : this.awaitingOff || (this.awaitingOff = !0, this.offQueued = !0, this.sendQueuedOff(), this.emit())
         }, this.buy = bb => {
           this.send(`buy ${bb}`)
         }, this.socket = bb => {
-          this.send(`socket ${null!==bb&&void 0!==bb?bb:Ob}`)
+          this.send(`socket ${null!==bb&&void 0!==bb?bb:Qb}`)
         }, this.wearTint = bb => {
-          this.send(`tint ${null!==bb&&void 0!==bb?bb:Ob}`)
+          this.send(`tint ${null!==bb&&void 0!==bb?bb:Qb}`)
         }, this.setSituation = bb => {
           this.situation = bb, this.emit()
-        }, this.snapshot = this.buildSnapshot(), this.unsubscribePacer = kb.subscribe((() => {
+        }, this.snapshot = this.buildSnapshot(), this.unsubscribePacer = Ab.subscribe((() => {
           this.sendQueuedOff(), this.emit()
-        })), this.removePriority = kb.addPriority({
+        })), this.removePriority = Ab.addPriority({
           waiting: () => this.offQueued,
           flush: () => {
             this.sendQueuedOff()
           }
         })
       }
-      Km(bb) {
+      aj(bb) {
         if (this.message = bb, null !== bb.lampLightShop && (this.shop = bb.lampLightShop), "open" === bb.lampLightKind && (this.refusalKey = null), "reply" === bb.lampLightKind) {
-          var cb;
-          const Wb = null !== (cb = bb.lampLightReplyTag) && void 0 !== cb ? cb : null,
-            ab = null !== Wb && Wb === this.offTag;
-          var sb, kb;
-          if (ab ? this.settleOff() : null !== Wb && Wb !== this.awaitingTag || this.settleReply(), this.refusalKey = bb.lampLightRefusalKey, null !== bb.lampLightBought && !ab) this.sparkle = {
+          var ab;
+          const Mb = null !== (ab = bb.lampLightReplyTag) && void 0 !== ab ? ab : null,
+            Tb = null !== Mb && Mb === this.offTag;
+          var Ub, Ab;
+          if (Tb ? this.settleOff() : null !== Mb && Mb !== this.awaitingTag || this.settleReply(), this.refusalKey = bb.lampLightRefusalKey, null !== bb.lampLightBought && !Tb) this.sparkle = {
             id: bb.lampLightBought,
-            count: (null !== (sb = null === (kb = this.sparkle) || void 0 === kb ? void 0 : kb.count) && void 0 !== sb ? sb : 0) + 1
+            count: (null !== (Ub = null === (Ab = this.sparkle) || void 0 === Ab ? void 0 : Ab.count) && void 0 !== Ub ? Ub : 0) + 1
           }
         }
         bb.lampLightReleasing || (this.settleOff(), this.gainedCount = 0), "released" === bb.lampLightKind && (this.lastGained = bb.lampLightGained, this.gainedCount++), this.emit()
@@ -3813,23 +3813,23 @@ export const modules = {
       setAtChair(bb) {
         bb !== this.atChair && (this.atChair = bb, bb && (this.refusalKey = null), this.emit())
       }
-      setTranslator(bb, cb) {
-        this.translate = bb, this.locale = null !== cb && void 0 !== cb ? cb : this.locale, this.emit()
+      setTranslator(bb, ab) {
+        this.translate = bb, this.locale = null !== ab && void 0 !== ab ? ab : this.locale, this.emit()
       }
       onChairClosed() {
         this.refusalKey = null, this.emit()
       }
       dispose() {
-        this.clearReplyTimeout(), this.settleOff(), this.unsubscribePacer(), this.removePriority(), this.message = null, this.shop = null, this.emit(), this.Em = !0
+        this.clearReplyTimeout(), this.settleOff(), this.unsubscribePacer(), this.removePriority(), this.message = null, this.shop = null, this.emit(), this.cX = !0
       }
       send(bb) {
-        var cb;
-        if (null !== this.awaitingTag || "ready" !== (null === (cb = this.message) || void 0 === cb ? void 0 : cb.lampLightStatus) || !this.atChair) return;
+        var ab;
+        if (null !== this.awaitingTag || "ready" !== (null === (ab = this.message) || void 0 === ab ? void 0 : ab.lampLightStatus) || !this.atChair) return;
         if (this.sendQueuedOff(), this.offQueued || !this.pacer.tryStart()) return;
-        const sb = this.nextTag();
-        this.awaitingTag = sb, this.replyTimeout = setTimeout((() => {
+        const Ub = this.nextTag();
+        this.awaitingTag = Ub, this.replyTimeout = setTimeout((() => {
           this.replyTimeout = null, this.awaitingTag = null, this.emit()
-        }), 8e3), this.requestCommand(`lamplight-${bb} ${sb}`), this.emit()
+        }), 8e3), this.requestCommand(`lamplight-${bb} ${Ub}`), this.emit()
       }
       sendQueuedOff() {
         if (!this.offQueued || !this.pacer.canSendPriority()) return;
@@ -3855,304 +3855,304 @@ export const modules = {
         null !== this.replyTimeout && (clearTimeout(this.replyTimeout), this.replyTimeout = null)
       }
       emit() {
-        this.Em || (this.snapshot = this.buildSnapshot(), this.QQ(this.snapshot))
+        this.cX || (this.snapshot = this.buildSnapshot(), this.IR(this.snapshot))
       }
       formatLight(bb) {
         return Math.floor(bb).toLocaleString(this.locale)
       }
       formatPercent(bb) {
-        const cb = 100 * bb;
-        return cb >= 10 ? Math.round(cb).toLocaleString(this.locale) : cb.toLocaleString(this.locale, {
+        const ab = 100 * bb;
+        return ab >= 10 ? Math.round(ab).toLocaleString(this.locale) : ab.toLocaleString(this.locale, {
           maximumFractionDigits: 1
         })
       }
-      formatOdds(bb, cb) {
+      formatOdds(bb, ab) {
         if ("bite" === bb) return this.translate("skyblockGame:lampLightBite", {
-          seconds: (cb.lampLightBiteMs / 1e3).toLocaleString(this.locale, {
+          seconds: (ab.lampLightBiteMs / 1e3).toLocaleString(this.locale, {
             maximumFractionDigits: 1
           })
         });
         if ("rare" === bb) return this.translate("skyblockGame:lampLightRare", {
-          percent: this.formatPercent(cb.lampLightRareChance)
+          percent: this.formatPercent(ab.lampLightRareChance)
         });
-        if ("notice" === bb) return null === cb.lampLightNoticeChance ? null : this.translate("skyblockGame:lampLightNotice", {
-          percent: this.formatPercent(cb.lampLightNoticeChance)
+        if ("notice" === bb) return null === ab.lampLightNoticeChance ? null : this.translate("skyblockGame:lampLightNotice", {
+          percent: this.formatPercent(ab.lampLightNoticeChance)
         });
-        const sb = "meter" === bb ? cb.lampLightMeterCatches : cb.lampLightBloomCatches;
-        return null === sb ? null : this.translate("meter" === bb ? "skyblockGame:lampLightMeter" : "skyblockGame:lampLightBloomLasts", {
-          catches: String(Math.round(sb))
+        const Ub = "meter" === bb ? ab.lampLightMeterCatches : ab.lampLightBloomCatches;
+        return null === Ub ? null : this.translate("meter" === bb ? "skyblockGame:lampLightMeter" : "skyblockGame:lampLightBloomLasts", {
+          catches: String(Math.round(Ub))
         })
       }
-      oddsLines(bb, cb) {
-        const sb = (bb, cb) => {
-            var sb;
-            return null !== (sb = {
-              bite: cb.lampLightBiteMs,
-              rare: cb.lampLightRareChance,
-              meter: cb.lampLightMeterCatches,
-              bloom: cb.lampLightBloomCatches,
-              notice: cb.lampLightNoticeChance
-            } [bb]) && void 0 !== sb ? sb : 0
+      oddsLines(bb, ab) {
+        const Ub = (bb, ab) => {
+            var Ub;
+            return null !== (Ub = {
+              bite: ab.lampLightBiteMs,
+              rare: ab.lampLightRareChance,
+              meter: ab.lampLightMeterCatches,
+              bloom: ab.lampLightBloomCatches,
+              notice: ab.lampLightNoticeChance
+            } [bb]) && void 0 !== Ub ? Ub : 0
           },
-          kb = {
+          Ab = {
             bite: !0,
             rare: !1,
             meter: !0,
             bloom: !1,
             notice: !1
           },
-          Wb = [];
-        for (const ab of ["bite", "rare", "meter", "bloom", "notice"]) {
-          const Tb = this.formatOdds(ab, bb),
-            Ub = this.formatOdds(ab, cb);
-          if (null === Tb || null === Ub || "bite" !== ab && "rare" !== ab && Tb === Ub) continue;
-          const Ib = sb(ab, cb) - sb(ab, bb),
-            Hb = kb[ab] ? Ib < 0 : Ib > 0;
-          Wb.push({
-            label: ab,
-            before: Tb,
-            after: Ub,
-            tone: Tb === Ub ? "same" : Hb ? "better" : "worse"
+          Mb = [];
+        for (const Tb of ["bite", "rare", "meter", "bloom", "notice"]) {
+          const Eb = this.formatOdds(Tb, bb),
+            Yb = this.formatOdds(Tb, ab);
+          if (null === Eb || null === Yb || "bite" !== Tb && "rare" !== Tb && Eb === Yb) continue;
+          const Bb = Ub(Tb, ab) - Ub(Tb, bb),
+            eb = Ab[Tb] ? Bb < 0 : Bb > 0;
+          Mb.push({
+            label: Tb,
+            before: Eb,
+            after: Yb,
+            tone: Eb === Yb ? "same" : eb ? "better" : "worse"
           })
         }
-        return Wb
+        return Mb
       }
-      charmView(bb, cb, sb) {
-        const kb = bb.lampLightCharmId.charAt(0).toUpperCase() + bb.lampLightCharmId.slice(1),
-          Wb = "bloom" === this.situation;
+      charmView(bb, ab, Ub) {
+        const Ab = bb.lampLightCharmId.charAt(0).toUpperCase() + bb.lampLightCharmId.slice(1),
+          Mb = "bloom" === this.situation;
         return {
           id: bb.lampLightCharmId,
-          name: this.translate(`skyblockGame:lampLightCharm${kb}`),
-          effect: this.translate(`skyblockGame:lampLightCharm${kb}Effect`),
+          name: this.translate(`skyblockGame:lampLightCharm${Ab}`),
+          effect: this.translate(`skyblockGame:lampLightCharm${Ab}Effect`),
           cost: this.translate("skyblockGame:lampLightCost", {
             light: this.formatLight(bb.lampLightCharmCost)
           }),
           owned: bb.lampLightCharmOwned,
-          affordable: sb >= bb.lampLightCharmCost,
-          socketed: cb.lampLightSocketed === bb.lampLightCharmId,
-          lines: this.oddsLines(Wb ? cb.lampLightBareBloom : cb.lampLightBareOpen, Wb ? bb.lampLightCharmBloom : bb.lampLightCharmOpen)
+          affordable: Ub >= bb.lampLightCharmCost,
+          socketed: ab.lampLightSocketed === bb.lampLightCharmId,
+          lines: this.oddsLines(Mb ? ab.lampLightBareBloom : ab.lampLightBareOpen, Mb ? bb.lampLightCharmBloom : bb.lampLightCharmOpen)
         }
       }
       buildSnapshot() {
-        var bb, cb, sb, kb;
-        const Wb = this.message,
-          ab = "ready" === (null === Wb || void 0 === Wb ? void 0 : Wb.lampLightStatus) ? this.shop : null,
-          Tb = null !== (bb = null === Wb || void 0 === Wb ? void 0 : Wb.lampLightBalance) && void 0 !== bb ? bb : 0,
-          Ub = this.atChair,
-          Ib = "loading" === (null === Wb || void 0 === Wb ? void 0 : Wb.lampLightStatus) ? "skyblockGame:lampLightLoading" : "unreadable" === (null === Wb || void 0 === Wb ? void 0 : Wb.lampLightStatus) ? "skyblockGame:lampLightUnreadable" : null,
-          Hb = "ready" !== (null === Wb || void 0 === Wb ? void 0 : Wb.lampLightStatus) || Ub ? null !== (cb = this.refusalKey) && void 0 !== cb ? cb : Ib : "skyblockGame:lampLightTooFar";
+        var bb, ab, Ub, Ab;
+        const Mb = this.message,
+          Tb = "ready" === (null === Mb || void 0 === Mb ? void 0 : Mb.lampLightStatus) ? this.shop : null,
+          Eb = null !== (bb = null === Mb || void 0 === Mb ? void 0 : Mb.lampLightBalance) && void 0 !== bb ? bb : 0,
+          Yb = this.atChair,
+          Bb = "loading" === (null === Mb || void 0 === Mb ? void 0 : Mb.lampLightStatus) ? "skyblockGame:lampLightLoading" : "unreadable" === (null === Mb || void 0 === Mb ? void 0 : Mb.lampLightStatus) ? "skyblockGame:lampLightUnreadable" : null,
+          eb = "ready" !== (null === Mb || void 0 === Mb ? void 0 : Mb.lampLightStatus) || Yb ? null !== (ab = this.refusalKey) && void 0 !== ab ? ab : Bb : "skyblockGame:lampLightTooFar";
         return {
-          enabled: null !== Wb && "locked" !== Wb.lampLightStatus,
-          status: null !== (sb = null === Wb || void 0 === Wb ? void 0 : Wb.lampLightStatus) && void 0 !== sb ? sb : "loading",
+          enabled: null !== Mb && "locked" !== Mb.lampLightStatus,
+          status: null !== (Ub = null === Mb || void 0 === Mb ? void 0 : Mb.lampLightStatus) && void 0 !== Ub ? Ub : "loading",
           balance: this.translate("skyblockGame:lampLightBalance", {
-            light: this.formatLight(Tb)
+            light: this.formatLight(Eb)
           }),
-          releasing: null !== (kb = null === Wb || void 0 === Wb ? void 0 : Wb.lampLightReleasing) && void 0 !== kb && kb,
-          gained: null === Wb || 0 === this.gainedCount ? null : {
+          releasing: null !== (Ab = null === Mb || void 0 === Mb ? void 0 : Mb.lampLightReleasing) && void 0 !== Ab && Ab,
+          gained: null === Mb || 0 === this.gainedCount ? null : {
             text: this.translate("skyblockGame:lampLightGained", {
               light: this.formatLight(this.lastGained)
             }),
             count: this.gainedCount
           },
-          canCommand: "ready" === (null === Wb || void 0 === Wb ? void 0 : Wb.lampLightStatus) && Ub && !this.isPending(),
+          canCommand: "ready" === (null === Mb || void 0 === Mb ? void 0 : Mb.lampLightStatus) && Yb && !this.isPending(),
           situation: this.situation,
-          shop: null === ab ? null : {
+          shop: null === Tb ? null : {
             oddsFor: this.translate("skyblockGame:lampLightOddsFor", {
-              rod: ab.lampLightOddsRod,
-              island: this.translate(ab.lampLightIslandNameKey)
+              rod: Tb.lampLightOddsRod,
+              island: this.translate(Tb.lampLightIslandNameKey)
             }),
-            heldRod: null !== ab.lampLightHeldRod,
-            charms: ab.lampLightCharms.map((bb => this.charmView(bb, ab, Tb))),
-            tints: ab.lampLightTints.map((bb => {
-              const cb = bb.lampLightTintId,
-                [sb, kb, Wb] = bb.lampLightTintColour;
+            heldRod: null !== Tb.lampLightHeldRod,
+            charms: Tb.lampLightCharms.map((bb => this.charmView(bb, Tb, Eb))),
+            tints: Tb.lampLightTints.map((bb => {
+              const ab = bb.lampLightTintId,
+                [Ub, Ab, Mb] = bb.lampLightTintColour;
               return {
-                id: cb,
-                name: this.translate(`skyblockGame:lampLightTint${cb.charAt(0).toUpperCase()}${cb.slice(1)}`),
+                id: ab,
+                name: this.translate(`skyblockGame:lampLightTint${ab.charAt(0).toUpperCase()}${ab.slice(1)}`),
                 cost: this.translate("skyblockGame:lampLightCost", {
                   light: this.formatLight(bb.lampLightTintCost)
                 }),
                 owned: bb.lampLightTintOwned,
-                affordable: Tb >= bb.lampLightTintCost,
-                wearing: ab.lampLightTint === cb,
-                colour: `rgb(${sb}, ${kb}, ${Wb})`
+                affordable: Eb >= bb.lampLightTintCost,
+                wearing: Tb.lampLightTint === ab,
+                colour: `rgb(${Ub}, ${Ab}, ${Mb})`
               }
             })),
-            wearingIslandColours: null === ab.lampLightTint
+            wearingIslandColours: null === Tb.lampLightTint
           },
-          notice: null === Hb ? null : this.translate(Hb),
+          notice: null === eb ? null : this.translate(eb),
           sparkle: this.sparkle
         }
       }
     }
-    const zk = "skyblockMagmawardView";
-    class qk {
+    const uA = "skyblockMagmawardView";
+    class rA {
       constructor(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
-        this.QQ = bb, this.now = cb, this.snapshot = null, this.pulseToken = 0, this.pulseAt = -1 / 0, this.flareToken = 0, this.flareAt = -1 / 0, this.setLitToken = 0, this.setLitAt = -1 / 0, this.wornTokens = Ab.map((() => 0)), this.wornAt = Ab.map((() => -1 / 0))
+        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
+        this.IR = bb, this.now = ab, this.snapshot = null, this.pulseToken = 0, this.pulseAt = -1 / 0, this.flareToken = 0, this.flareAt = -1 / 0, this.setLitToken = 0, this.setLitAt = -1 / 0, this.wornTokens = tb.map((() => 0)), this.wornAt = tb.map((() => -1 / 0))
       }
       getSnapshot() {
         return this.snapshot
       }
-      Km(bb) {
-        var cb, sb;
-        const kb = Ab.map(((cb, sb) => !0 === bb.magmawardPiecesWorn[sb]));
-        if (!kb.includes(!0)) return this.snapshot = null, void this.QQ(null);
-        const Wb = this.now(),
-          ab = this.snapshot;
-        null === ab && (this.wornTokens.fill(0), this.wornAt.fill(-1 / 0), this.setLitAt = -1 / 0);
-        const Tb = bb.magmawardFuelCarried,
-          Ub = !kb.includes(!1);
-        let Ib = null !== (cb = null === ab || void 0 === ab ? void 0 : ab.pulse) && void 0 !== cb ? cb : null,
-          Hb = null !== (sb = null === ab || void 0 === ab ? void 0 : ab.flare) && void 0 !== sb ? sb : null;
-        bb.magmawardFuelBurned ? (Ib = "burn", Hb = "burn", this.pulseToken++, this.flareToken++, this.pulseAt = Wb, this.flareAt = Wb) : null !== ab && Tb > ab.fuel && (Ib = "gain", this.pulseToken++, this.pulseAt = Wb), Ub && null !== ab && !ab.fullSet && (Hb = "fullSet", this.flareToken++, this.setLitToken++, this.flareAt = Wb, this.setLitAt = Wb);
-        const fb = Ab.map(((bb, cb) => (kb[cb] && null !== ab && !ab.pieces[cb].worn && (this.wornTokens[cb]++, this.wornAt[cb] = Wb), {
+      aj(bb) {
+        var ab, Ub;
+        const Ab = tb.map(((ab, Ub) => !0 === bb.magmawardPiecesWorn[Ub]));
+        if (!Ab.includes(!0)) return this.snapshot = null, void this.IR(null);
+        const Mb = this.now(),
+          Tb = this.snapshot;
+        null === Tb && (this.wornTokens.fill(0), this.wornAt.fill(-1 / 0), this.setLitAt = -1 / 0);
+        const Eb = bb.magmawardFuelCarried,
+          Yb = !Ab.includes(!1);
+        let Bb = null !== (ab = null === Tb || void 0 === Tb ? void 0 : Tb.pulse) && void 0 !== ab ? ab : null,
+          eb = null !== (Ub = null === Tb || void 0 === Tb ? void 0 : Tb.flare) && void 0 !== Ub ? Ub : null;
+        bb.magmawardFuelBurned ? (Bb = "burn", eb = "burn", this.pulseToken++, this.flareToken++, this.pulseAt = Mb, this.flareAt = Mb) : null !== Tb && Eb > Tb.fuel && (Bb = "gain", this.pulseToken++, this.pulseAt = Mb), Yb && null !== Tb && !Tb.fullSet && (eb = "fullSet", this.flareToken++, this.setLitToken++, this.flareAt = Mb, this.setLitAt = Mb);
+        const vb = tb.map(((bb, ab) => (Ab[ab] && null !== Tb && !Tb.pieces[ab].worn && (this.wornTokens[ab]++, this.wornAt[ab] = Mb), {
           itemName: bb,
-          worn: kb[cb],
-          wornToken: this.wornTokens[cb],
-          justWorn: kb[cb] && this.isPlaying(this.wornAt[cb], Wb)
+          worn: Ab[ab],
+          wornToken: this.wornTokens[ab],
+          justWorn: Ab[ab] && this.isPlaying(this.wornAt[ab], Mb)
         })));
         this.snapshot = {
-          pieces: fb,
-          wornCount: kb.filter(Boolean).length,
-          fullSet: Ub,
-          fuel: Tb,
-          fuelState: Tb <= 0 ? "empty" : Tb <= 3 ? "low" : "ok",
-          pulse: this.isPlaying(this.pulseAt, Wb) ? Ib : null,
+          pieces: vb,
+          wornCount: Ab.filter(Boolean).length,
+          fullSet: Yb,
+          fuel: Eb,
+          fuelState: Eb <= 0 ? "empty" : Eb <= 3 ? "low" : "ok",
+          pulse: this.isPlaying(this.pulseAt, Mb) ? Bb : null,
           pulseToken: this.pulseToken,
-          flare: this.isPlaying(this.flareAt, Wb) ? Hb : null,
+          flare: this.isPlaying(this.flareAt, Mb) ? eb : null,
           flareToken: this.flareToken,
-          setLit: Ub && this.isPlaying(this.setLitAt, Wb),
+          setLit: Yb && this.isPlaying(this.setLitAt, Mb),
           setLitToken: this.setLitToken
-        }, this.QQ(this.snapshot)
+        }, this.IR(this.snapshot)
       }
       dispose() {
-        this.snapshot = null, this.QQ(null)
+        this.snapshot = null, this.IR(null)
       }
-      isPlaying(bb, cb) {
-        return cb - bb < 1200
+      isPlaying(bb, ab) {
+        return ab - bb < 1200
       }
     }
-    const dk = "skyblockGlowtideView";
-    class Ak {
+    const KA = "skyblockGlowtideView";
+    class oA {
       constructor(bb) {
-        this.QQ = bb, this.bloom = null, this.snapshot = null, this.inRangeToken = 0, this.arrow = null, this.arrowTurn = NaN, this.mountArrow = bb => {
+        this.IR = bb, this.bloom = null, this.snapshot = null, this.inRangeToken = 0, this.arrow = null, this.arrowTurn = NaN, this.mountArrow = bb => {
           this.arrow = bb, this.arrowTurn = NaN
         }
       }
       getSnapshot() {
         return this.snapshot
       }
-      Km(bb) {
-        this.bloom = bb.glowtideBloom, null === this.bloom && null !== this.snapshot && (this.snapshot = null, this.QQ(null))
+      aj(bb) {
+        this.bloom = bb.glowtideBloom, null === this.bloom && null !== this.snapshot && (this.snapshot = null, this.IR(null))
       }
-      afterRender(bb, cb) {
-        const sb = this.bloom;
-        if (null === sb || null === bb) return;
-        const kb = sb.glowtideBloomX - bb[0],
-          ab = sb.glowtideBloomZ - bb[2],
-          Tb = Math.hypot(kb, ab),
-          Ub = this.snapshot,
-          Ib = null !== Ub && void 0 !== Ub && Ub.inRange ? 1 : 0,
-          Hb = Tb <= 12.5 + Ib && bb[1] - sb.glowtideBloomY <= 10 + Ib;
-        !Hb || null !== Ub && void 0 !== Ub && Ub.inRange || this.inRangeToken++;
-        const fb = {
-          colour: sb.glowtideBloomColour,
-          inRange: Hb,
-          distance: Math.round(Tb),
+      afterRender(bb, ab) {
+        const Ub = this.bloom;
+        if (null === Ub || null === bb) return;
+        const Ab = Ub.glowtideBloomX - bb[0],
+          Tb = Ub.glowtideBloomZ - bb[2],
+          Eb = Math.hypot(Ab, Tb),
+          Yb = this.snapshot,
+          Bb = null !== Yb && void 0 !== Yb && Yb.inRange ? 1 : 0,
+          eb = Eb <= 12.5 + Bb && bb[1] - Ub.glowtideBloomY <= 10 + Bb;
+        !eb || null !== Yb && void 0 !== Yb && Yb.inRange || this.inRangeToken++;
+        const vb = {
+          colour: Ub.glowtideBloomColour,
+          inRange: eb,
+          distance: Math.round(Eb),
           inRangeToken: this.inRangeToken
         };
-        (null === Ub || fb.colour !== Ub.colour || fb.inRange !== Ub.inRange || !Hb && fb.distance !== Ub.distance) && (this.snapshot = fb, this.QQ(fb));
-        const Mb = Wb.d.computeShortestRotation(cb, (0, Wb.Fb)([kb, 0, ab]));
-        null === this.arrow || Math.abs(Mb - this.arrowTurn) < .01 || (this.arrow.style.transform = `rotate(${Mb}rad)`, this.arrowTurn = Mb)
+        (null === Yb || vb.colour !== Yb.colour || vb.inRange !== Yb.inRange || !eb && vb.distance !== Yb.distance) && (this.snapshot = vb, this.IR(vb));
+        const Lb = Mb.d.computeShortestRotation(ab, (0, Mb.sb)([Ab, 0, Tb]));
+        null === this.arrow || Math.abs(Lb - this.arrowTurn) < .01 || (this.arrow.style.transform = `rotate(${Lb}rad)`, this.arrowTurn = Lb)
       }
       dispose() {
-        this.bloom = null, this.arrow = null, this.snapshot = null, this.QQ(null)
+        this.bloom = null, this.arrow = null, this.snapshot = null, this.IR(null)
       }
     }
-    const wk = "skyblockGlowMeterView";
-    class rk {
+    const lA = "skyblockGlowMeterView";
+    class tA {
       constructor(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
-        this.QQ = bb, this.now = cb, this.snapshot = null, this.fullToken = 0, this.fullAt = -1 / 0, this.burstToken = 0, this.burstAt = -1 / 0, this.gainToken = 0, this.gainAt = -1 / 0
+        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
+        this.IR = bb, this.now = ab, this.snapshot = null, this.fullToken = 0, this.fullAt = -1 / 0, this.burstToken = 0, this.burstAt = -1 / 0, this.gainToken = 0, this.gainAt = -1 / 0
       }
       getSnapshot() {
         return this.snapshot
       }
-      Km(bb) {
-        const cb = this.now(),
+      aj(bb) {
+        const ab = this.now(),
           {
-            glowMeterFill: sb,
-            glowMeterCapacity: kb
+            glowMeterFill: Ub,
+            glowMeterCapacity: Ab
           } = bb,
-          Wb = sb >= kb,
-          ab = this.snapshot;
-        null !== ab && (Wb && !ab.full && (this.fullToken++, this.fullAt = cb), ab.full && !Wb ? (this.burstToken++, this.burstAt = cb) : sb > ab.fill && (this.gainToken++, this.gainAt = cb)), this.snapshot = {
-          fill: sb,
-          GM: kb,
-          ratio: Math.min(1, Math.max(0, sb / kb)),
-          full: Wb,
+          Mb = Ub >= Ab,
+          Tb = this.snapshot;
+        null !== Tb && (Mb && !Tb.full && (this.fullToken++, this.fullAt = ab), Tb.full && !Mb ? (this.burstToken++, this.burstAt = ab) : Ub > Tb.fill && (this.gainToken++, this.gainAt = ab)), this.snapshot = {
+          fill: Ub,
+          PL: Ab,
+          ratio: Math.min(1, Math.max(0, Ub / Ab)),
+          full: Mb,
           rares: bb.glowMeterRares,
-          ready: Wb && this.isPlaying(this.fullAt, cb),
+          ready: Mb && this.isPlaying(this.fullAt, ab),
           fullToken: this.fullToken,
-          burst: this.isPlaying(this.burstAt, cb),
+          burst: this.isPlaying(this.burstAt, ab),
           burstToken: this.burstToken,
-          gained: this.isPlaying(this.gainAt, cb),
+          gained: this.isPlaying(this.gainAt, ab),
           gainToken: this.gainToken
-        }, this.QQ(this.snapshot)
+        }, this.IR(this.snapshot)
       }
       dispose() {
-        this.snapshot = null, this.QQ(null)
+        this.snapshot = null, this.IR(null)
       }
-      isPlaying(bb, cb) {
-        return cb - bb < 2e3
+      isPlaying(bb, ab) {
+        return ab - bb < 2e3
       }
     }
-    const Sk = "skyblockHushWaitView";
-    class Rk {
+    const wA = "skyblockHushWaitView";
+    class sA {
       constructor(bb) {
-        this.QQ = bb, this.snapshot = null, this.token = 0, this.timers = []
+        this.IR = bb, this.snapshot = null, this.token = 0, this.timers = []
       }
       getSnapshot() {
         return this.snapshot
       }
-      Km(bb) {
+      aj(bb) {
         let {
-          hushWaitMs: cb,
-          hushWaitTotalMs: sb,
-          hushWaitLines: kb
+          hushWaitMs: ab,
+          hushWaitTotalMs: Ub,
+          hushWaitLines: Ab
         } = bb;
-        if (this.clearTimers(), this.token++, 0 === kb.length) return console.warn("Skyblock: a Hush wait message came without a line"), void this.show(null);
-        if (cb <= 0) return this.show({
+        if (this.clearTimers(), this.token++, 0 === Ab.length) return console.warn("Skyblock: a Hush wait message came without a line"), void this.show(null);
+        if (ab <= 0) return this.show({
           token: this.token,
           phase: "abandoned",
           waitMs: 3500,
           elapsedMs: 0,
-          line: kb[0],
+          line: Ab[0],
           lineIndex: 0
         }), void this.later(3500, (() => {
           this.show(null)
         }));
-        const Wb = Math.max(null !== sb && void 0 !== sb ? sb : cb, cb),
-          ab = Wb - cb,
-          Tb = bb => Wb * bb / kb.length,
-          Ub = bb => {
+        const Mb = Math.max(null !== Ub && void 0 !== Ub ? Ub : ab, ab),
+          Tb = Mb - ab,
+          Eb = bb => Mb * bb / Ab.length,
+          Yb = bb => {
             this.show({
               token: this.token,
               phase: "waiting",
-              waitMs: Wb,
-              elapsedMs: ab,
-              line: kb[bb],
+              waitMs: Mb,
+              elapsedMs: Tb,
+              line: Ab[bb],
               lineIndex: bb
             })
           };
-        let Ib = 0;
-        for (; Ib + 1 < kb.length && Tb(Ib + 1) <= ab;) Ib++;
-        Ub(Ib);
-        for (let Hb = Ib + 1; Hb < kb.length; Hb++) this.later(Tb(Hb) - ab, (() => {
-          Ub(Hb)
+        let Bb = 0;
+        for (; Bb + 1 < Ab.length && Eb(Bb + 1) <= Tb;) Bb++;
+        Yb(Bb);
+        for (let eb = Bb + 1; eb < Ab.length; eb++) this.later(Eb(eb) - Tb, (() => {
+          Yb(eb)
         }));
-        this.later(cb, (() => {
+        this.later(ab, (() => {
           this.show(null)
         }))
       }
@@ -4160,119 +4160,119 @@ export const modules = {
         this.clearTimers(), this.show(null)
       }
       show(bb) {
-        this.snapshot = bb, this.QQ(bb)
+        this.snapshot = bb, this.IR(bb)
       }
-      later(bb, cb) {
-        this.timers.push(setTimeout(cb, bb))
+      later(bb, ab) {
+        this.timers.push(setTimeout(ab, bb))
       }
       clearTimers() {
         for (const bb of this.timers) clearTimeout(bb);
         this.timers = []
       }
     }
-    const vk = "skyblockTideChartsView",
-      Fk = 36e5,
-      xk = 864e5;
+    const gA = "skyblockTideChartsView",
+      CA = 36e5,
+      VA = 864e5;
 
-    function jk(bb, cb, sb) {
-      const [kb, Wb, ab, Tb] = bb.tideChartArea, Ub = Math.floor(cb), Ib = Math.floor(sb);
-      return Ub >= kb && Ub <= ab && Ib >= Wb && Ib <= Tb
+    function OA(bb, ab, Ub) {
+      const [Ab, Mb, Tb, Eb] = bb.tideChartArea, Yb = Math.floor(ab), Bb = Math.floor(Ub);
+      return Yb >= Ab && Yb <= Tb && Bb >= Mb && Bb <= Eb
     }
 
-    function pk(bb, cb, sb) {
-      const [kb, Wb, ab, Tb] = bb.tideChartWater;
-      return function(bb, cb, sb, kb, Wb, ab) {
-        const Tb = 4 - wb(Math.floor(Wb) - (bb - sb), sb);
-        return 5 * wb(Math.floor(ab) - (cb - kb), kb) + Tb
-      }(kb, Wb, ab, Tb, cb, sb)
+    function cA(bb, ab, Ub) {
+      const [Ab, Mb, Tb, Eb] = bb.tideChartWater;
+      return function(bb, ab, Ub, Ab, Mb, Tb) {
+        const Eb = 4 - wb(Math.floor(Mb) - (bb - Ub), Ub);
+        return 5 * wb(Math.floor(Tb) - (ab - Ab), Ab) + Eb
+      }(Ab, Mb, Tb, Eb, ab, Ub)
     }
 
-    function bW(bb, cb, sb) {
-      const kb = bb.tideCharts;
-      for (let Wb = 0; Wb < kb.length; Wb++)
-        if (jk(kb[Wb], cb, sb)) return kb[Wb];
+    function JA(bb, ab, Ub) {
+      const Ab = bb.tideCharts;
+      for (let Mb = 0; Mb < Ab.length; Mb++)
+        if (OA(Ab[Mb], ab, Ub)) return Ab[Mb];
       return null
     }
 
-    function cW(bb, cb, sb) {
-      const kb = Math.max(0, cb - sb);
-      return kb > xk ? bb("skyblockGame:tideChartsTurnDays", {
-        days: String(Math.ceil(kb / xk))
-      }) : kb > Fk ? bb("skyblockGame:tideChartsTurnHours", {
-        hours: String(Math.ceil(kb / Fk))
+    function nA(bb, ab, Ub) {
+      const Ab = Math.max(0, ab - Ub);
+      return Ab > VA ? bb("skyblockGame:tideChartsTurnDays", {
+        days: String(Math.ceil(Ab / VA))
+      }) : Ab > CA ? bb("skyblockGame:tideChartsTurnHours", {
+        hours: String(Math.ceil(Ab / CA))
       }) : bb("skyblockGame:tideChartsTurnSoon")
     }
-    class sW extends Mb {
-      constructor(bb, cb, sb, kb) {
-        let Wb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Date.now;
-        super(bb, sb, kb), this.translate = cb, this.now = Wb, this.snapshot = void 0, this.message = null, this.receivedAtMs = 0, this.hereIsland = null, this.hereCell = -1, this.lastX = Number.NaN, this.lastZ = Number.NaN, this.picked = null, this.lastIsland = null, this.pulse = {
+    class SA extends Lb {
+      constructor(bb, ab, Ub, Ab) {
+        let Mb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Date.now;
+        super(bb, Ub, Ab), this.translate = ab, this.now = Mb, this.snapshot = void 0, this.message = null, this.receivedAtMs = 0, this.hereIsland = null, this.hereCell = -1, this.lastX = Number.NaN, this.lastZ = Number.NaN, this.picked = null, this.lastIsland = null, this.pulse = {
           island: "",
           cells: 0,
           token: 0,
           atMs: 0
         }, this.cast = null, this.castToken = 0, this.turnsCheckedAtMs = 0, this.toggle = () => {
           this.open ? this.dismiss() : (this.picked = null, this.show())
-        }, this.Wn = bb => {
+        }, this.GP = bb => {
           this.picked = bb, this.emit()
         }, this.snapshot = this.buildSnapshot()
       }
-      Km(bb) {
-        const cb = this.message;
-        if (null !== cb)
-          for (const kb of bb.tideCharts) {
-            var sb;
-            const bb = cb.tideCharts.find((bb => bb.tideChartIsland === kb.tideChartIsland)),
-              Wb = kb.tideChartLit & ~(null !== (sb = null === bb || void 0 === bb ? void 0 : bb.tideChartLit) && void 0 !== sb ? sb : 0);
-            void 0 !== bb && 0 !== Wb && (this.pulse = {
-              island: kb.tideChartIsland,
-              cells: Wb,
+      aj(bb) {
+        const ab = this.message;
+        if (null !== ab)
+          for (const Ab of bb.tideCharts) {
+            var Ub;
+            const bb = ab.tideCharts.find((bb => bb.tideChartIsland === Ab.tideChartIsland)),
+              Mb = Ab.tideChartLit & ~(null !== (Ub = null === bb || void 0 === bb ? void 0 : bb.tideChartLit) && void 0 !== Ub ? Ub : 0);
+            void 0 !== bb && 0 !== Mb && (this.pulse = {
+              island: Ab.tideChartIsland,
+              cells: Mb,
               token: this.pulse.token + 1,
               atMs: this.now()
             })
           }
         this.message = bb, this.receivedAtMs = this.now(), this.locate(this.lastX, this.lastZ), this.emit()
       }
-      locate(bb, cb) {
-        var sb;
-        const kb = null === this.message || Number.isNaN(bb) ? null : bW(this.message, bb, cb),
-          Wb = null !== (sb = null === kb || void 0 === kb ? void 0 : kb.tideChartIsland) && void 0 !== sb ? sb : null,
-          ab = null === kb ? -1 : function(bb, cb, sb) {
-            const [kb, Wb, ab, Tb] = bb.tideChartWater;
-            return function(bb, cb, sb, kb, Wb, ab, Tb) {
-              return ((Wb - bb) / (sb + Tb)) ** 2 + ((ab - cb) / (kb + Tb)) ** 2 <= 1
-            }(kb, Wb, ab, Tb, cb, sb, 2) ? pk(bb, cb, sb) : -1
-          }(kb, bb, cb);
-        return (Wb !== this.hereIsland || ab !== this.hereCell) && (this.hereIsland = Wb, this.hereCell = ab, null !== Wb && (this.lastIsland = Wb), !0)
+      locate(bb, ab) {
+        var Ub;
+        const Ab = null === this.message || Number.isNaN(bb) ? null : JA(this.message, bb, ab),
+          Mb = null !== (Ub = null === Ab || void 0 === Ab ? void 0 : Ab.tideChartIsland) && void 0 !== Ub ? Ub : null,
+          Tb = null === Ab ? -1 : function(bb, ab, Ub) {
+            const [Ab, Mb, Tb, Eb] = bb.tideChartWater;
+            return function(bb, ab, Ub, Ab, Mb, Tb, Eb) {
+              return ((Mb - bb) / (Ub + Eb)) ** 2 + ((Tb - ab) / (Ab + Eb)) ** 2 <= 1
+            }(Ab, Mb, Tb, Eb, ab, Ub, 2) ? cA(bb, ab, Ub) : -1
+          }(Ab, bb, ab);
+        return (Mb !== this.hereIsland || Tb !== this.hereCell) && (this.hereIsland = Mb, this.hereCell = Tb, null !== Mb && (this.lastIsland = Mb), !0)
       }
       afterRender(bb) {
         if (null === this.message) return;
         this.lastX = null === bb ? Number.NaN : bb[0], this.lastZ = null === bb ? Number.NaN : bb[2];
-        const cb = this.locate(this.lastX, this.lastZ),
-          sb = this.expirePulses();
-        (cb || sb || this.turnsChanged()) && this.emit()
+        const ab = this.locate(this.lastX, this.lastZ),
+          Ub = this.expirePulses();
+        (ab || Ub || this.turnsChanged()) && this.emit()
       }
       turnsChanged() {
         const bb = this.now();
-        return !(!this.open || bb - this.turnsCheckedAtMs < 3e4 || null === this.message) && (this.turnsCheckedAtMs = bb, cW(this.translate, this.message.tideChartTurnsInMs, bb - this.receivedAtMs) !== this.snapshot.turnsText)
+        return !(!this.open || bb - this.turnsCheckedAtMs < 3e4 || null === this.message) && (this.turnsCheckedAtMs = bb, nA(this.translate, this.message.tideChartTurnsInMs, bb - this.receivedAtMs) !== this.snapshot.turnsText)
       }
-      castLanded(bb, cb) {
-        const sb = null === this.message ? null : bW(this.message, bb, cb);
-        if (null === sb) return;
-        const kb = pk(sb, bb, cb);
-        0 === (sb.tideChartPreBlank & 1 << kb) && (this.cast = {
-          island: sb.tideChartIsland,
-          cell: kb,
+      castLanded(bb, ab) {
+        const Ub = null === this.message ? null : JA(this.message, bb, ab);
+        if (null === Ub) return;
+        const Ab = cA(Ub, bb, ab);
+        0 === (Ub.tideChartPreBlank & 1 << Ab) && (this.cast = {
+          island: Ub.tideChartIsland,
+          cell: Ab,
           token: ++this.castToken,
           atMs: this.now()
         }, this.emit())
       }
       expirePulses() {
         const bb = this.now();
-        let cb = !1;
+        let ab = !1;
         return 0 !== this.pulse.cells && bb - this.pulse.atMs >= 1500 && (this.pulse = {
           ...this.pulse,
           cells: 0
-        }, cb = !0), null !== this.cast && bb - this.cast.atMs >= 1500 && (this.cast = null, cb = !0), cb
+        }, ab = !0), null !== this.cast && bb - this.cast.atMs >= 1500 && (this.cast = null, ab = !0), ab
       }
       setTranslator(bb) {
         this.translate = bb, this.emit()
@@ -4283,62 +4283,62 @@ export const modules = {
       onClosed() {
         this.picked = null
       }
-      findChart(bb, cb) {
-        var sb;
-        return null !== (sb = bb.tideCharts.find((bb => bb.tideChartIsland === cb))) && void 0 !== sb ? sb : null
+      findChart(bb, ab) {
+        var Ub;
+        return null !== (Ub = bb.tideCharts.find((bb => bb.tideChartIsland === ab))) && void 0 !== Ub ? Ub : null
       }
       describe(bb) {
-        var cb, sb, kb;
-        const Wb = bb.tideChartIsland,
-          ab = [];
-        for (let nb = 0; nb < 25; nb++) {
-          const cb = 1 << nb;
-          0 !== (bb.tideChartLit & cb) ? ab.push("lit") : 0 !== (bb.tideChartClear & cb) ? ab.push("clear") : 0 !== (bb.tideChartPreBlank & cb) ? ab.push("shore") : ab.push("water")
+        var ab, Ub, Ab;
+        const Mb = bb.tideChartIsland,
+          Tb = [];
+        for (let Xb = 0; Xb < 25; Xb++) {
+          const ab = 1 << Xb;
+          0 !== (bb.tideChartLit & ab) ? Tb.push("lit") : 0 !== (bb.tideChartClear & ab) ? Tb.push("clear") : 0 !== (bb.tideChartPreBlank & ab) ? Tb.push("shore") : Tb.push("water")
         }
-        const Tb = function(bb) {
-            let cb = 0;
-            for (let sb = bb >>> 0; 0 !== sb; sb &= sb - 1) cb++;
-            return cb
+        const Eb = function(bb) {
+            let ab = 0;
+            for (let Ub = bb >>> 0; 0 !== Ub; Ub &= Ub - 1) ab++;
+            return ab
           }(bb.tideChartLit),
-          Ub = bb.tideChartInkCount,
-          Ib = this.translate(bb.tideChartIslandNameKey),
-          Hb = this.translate("skyblockGame:tideChartsLit", {
-            lit: String(Tb),
-            ink: String(Ub)
+          Yb = bb.tideChartInkCount,
+          Bb = this.translate(bb.tideChartIslandNameKey),
+          eb = this.translate("skyblockGame:tideChartsLit", {
+            lit: String(Eb),
+            ink: String(Yb)
           }),
-          fb = null === bb.tideChartPictureNameKey ? null : this.translate(bb.tideChartPictureNameKey),
-          Mb = this.hereIsland === Wb && -1 !== this.hereCell ? this.hereCell : null,
-          Xb = [`${Ib}: ${Hb}.`];
-        if (null !== fb && Xb.push(this.translate("skyblockGame:tideChartsPictureRevealed", {
-            picture: fb
-          })), null !== Mb) {
-          const bb = Math.floor(Mb / 5) + 1,
-            cb = Mb % 5 + 1;
-          Xb.push(this.translate("skyblockGame:tideChartsHereCell", {
+          vb = null === bb.tideChartPictureNameKey ? null : this.translate(bb.tideChartPictureNameKey),
+          Lb = this.hereIsland === Mb && -1 !== this.hereCell ? this.hereCell : null,
+          Pb = [`${Bb}: ${eb}.`];
+        if (null !== vb && Pb.push(this.translate("skyblockGame:tideChartsPictureRevealed", {
+            picture: vb
+          })), null !== Lb) {
+          const bb = Math.floor(Lb / 5) + 1,
+            ab = Lb % 5 + 1;
+          Pb.push(this.translate("skyblockGame:tideChartsHereCell", {
             row: String(bb),
-            column: String(cb)
+            column: String(ab)
           }))
         }
         return {
-          island: Wb,
-          islandName: Ib,
-          cells: ab,
-          hereCell: Mb,
-          lit: Tb,
-          ink: Ub,
-          litText: Hb,
-          pictureName: fb,
-          gridLabel: Xb.join(" "),
-          pulseCells: this.pulse.island === Wb ? this.pulse.cells : 0,
+          island: Mb,
+          islandName: Bb,
+          cells: Tb,
+          hereCell: Lb,
+          lit: Eb,
+          ink: Yb,
+          litText: eb,
+          pictureName: vb,
+          gridLabel: Pb.join(" "),
+          pulseCells: this.pulse.island === Mb ? this.pulse.cells : 0,
           pulseToken: this.pulse.token,
-          castCell: (null === (cb = this.cast) || void 0 === cb ? void 0 : cb.island) === Wb ? this.cast.cell : null,
-          castToken: null !== (sb = null === (kb = this.cast) || void 0 === kb ? void 0 : kb.token) && void 0 !== sb ? sb : 0
+          castCell: (null === (ab = this.cast) || void 0 === ab ? void 0 : ab.island) === Mb ? this.cast.cell : null,
+          castToken: null !== (Ub = null === (Ab = this.cast) || void 0 === Ab ? void 0 : Ab.token) && void 0 !== Ub ? Ub : 0
         }
       }
       buildSnapshot() {
-        var bb, cb, sb;
-        const kb = this.message;
-        if (null === kb || 0 === kb.tideCharts.length) return {
+        var bb, ab, Ub;
+        const Ab = this.message;
+        if (null === Ab || 0 === Ab.tideCharts.length) return {
           enabled: !1,
           open: !1,
           chip: null,
@@ -4347,22 +4347,22 @@ export const modules = {
           bookText: "",
           tabs: []
         };
-        const Wb = this.findChart(kb, this.hereIsland),
-          ab = null !== (bb = null !== (cb = null !== (sb = this.findChart(kb, this.open ? this.picked : null)) && void 0 !== sb ? sb : Wb) && void 0 !== cb ? cb : this.findChart(kb, this.lastIsland)) && void 0 !== bb ? bb : kb.tideCharts[0],
-          Tb = null === Wb ? null : this.describe(Wb);
+        const Mb = this.findChart(Ab, this.hereIsland),
+          Tb = null !== (bb = null !== (ab = null !== (Ub = this.findChart(Ab, this.open ? this.picked : null)) && void 0 !== Ub ? Ub : Mb) && void 0 !== ab ? ab : this.findChart(Ab, this.lastIsland)) && void 0 !== bb ? bb : Ab.tideCharts[0],
+          Eb = null === Mb ? null : this.describe(Mb);
         return this.turnsCheckedAtMs = this.now(), {
           enabled: !0,
           open: this.open,
-          chip: Tb,
-          card: ab === Wb ? Tb : this.describe(ab),
-          turnsText: cW(this.translate, kb.tideChartTurnsInMs, this.now() - this.receivedAtMs),
+          chip: Eb,
+          card: Tb === Mb ? Eb : this.describe(Tb),
+          turnsText: nA(this.translate, Ab.tideChartTurnsInMs, this.now() - this.receivedAtMs),
           bookText: this.translate("skyblockGame:tideChartsBook", {
-            count: String(kb.tideChartBookCount)
+            count: String(Ab.tideChartBookCount)
           }),
-          tabs: kb.tideCharts.map((bb => ({
+          tabs: Ab.tideCharts.map((bb => ({
             island: bb.tideChartIsland,
             name: this.translate(bb.tideChartIslandNameKey),
-            selected: bb.tideChartIsland === ab.tideChartIsland
+            selected: bb.tideChartIsland === Tb.tideChartIsland
           })))
         }
       }
@@ -4370,30 +4370,30 @@ export const modules = {
         this.message = null, this.hereIsland = null, this.hereCell = -1, this.cast = null, super.dispose()
       }
     }
-    const kW = "skyblockRegularsView",
-      WW = {
+    const bM = "skyblockRegularsView",
+      aM = {
         goal: "skyblockGame:regularsGiftTint",
         given: "skyblockGame:regularsGiftTint",
         owed: "skyblockGame:regularsGiftTintOwed"
       },
-      aW = {
+      UM = {
         goal: "skyblockGame:regularsCharmGoal",
         given: "skyblockGame:regularsCharmGiven",
         owed: "skyblockGame:regularsCharmOwed"
       };
 
-    function TW(bb, cb) {
-      return "given" === bb ? cb.given : "owed" === bb ? cb.owed : cb.goal
+    function AM(bb, ab) {
+      return "given" === bb ? ab.given : "owed" === bb ? ab.owed : ab.goal
     }
-    class UW extends Mb {
-      constructor(bb, cb, sb, kb) {
-        super(bb, sb, kb), this.translate = cb, this.snapshot = void 0, this.message = null, this.selected = "", this.openedFromReachLog = !1, this.itemName = bb => bb, this.openIsland = bb => {
+    class MM extends Lb {
+      constructor(bb, ab, Ub, Ab) {
+        super(bb, Ub, Ab), this.translate = ab, this.snapshot = void 0, this.message = null, this.selected = "", this.openedFromReachLog = !1, this.itemName = bb => bb, this.openIsland = bb => {
           this.selected = bb, this.openedFromReachLog = !0, this.show()
         }, this.selectIsland = bb => {
           this.selected = bb, this.emit()
         }, this.snapshot = this.buildSnapshot()
       }
-      Km(bb) {
+      aj(bb) {
         this.message = bb, this.emit()
       }
       isOverReachLog() {
@@ -4403,140 +4403,140 @@ export const modules = {
         const bb = this.openedFromReachLog;
         return this.openedFromReachLog = !1, bb
       }
-      setTranslator(bb, cb, sb) {
-        this.translate = bb, void 0 !== sb && (this.itemName = sb), this.emit()
+      setTranslator(bb, ab, Ub) {
+        this.translate = bb, void 0 !== Ub && (this.itemName = Ub), this.emit()
       }
       isEnabled() {
         return null !== this.message
       }
-      describeGift(bb, cb, sb) {
+      describeGift(bb, ab, Ub) {
         return {
-          text: this.translate(TW(bb, cb), sb),
+          text: this.translate(AM(bb, ab), Ub),
           given: "given" === bb
         }
       }
-      describeRegular(bb, cb) {
-        const sb = this.translate,
-          kb = null !== bb.regularKg,
-          Wb = bb.regularMeetings,
-          ab = kb ? 0 === Wb ? sb("skyblockGame:regularsNotMet") : 1 === Wb ? sb("skyblockGame:regularsMeetingsOne") : sb("skyblockGame:regularsMeetings", {
-            count: Wb
+      describeRegular(bb, ab) {
+        const Ub = this.translate,
+          Ab = null !== bb.regularKg,
+          Mb = bb.regularMeetings,
+          Tb = Ab ? 0 === Mb ? Ub("skyblockGame:regularsNotMet") : 1 === Mb ? Ub("skyblockGame:regularsMeetingsOne") : Ub("skyblockGame:regularsMeetings", {
+            count: Mb
           }) : "";
         return {
           id: bb.regularId,
-          name: sb(bb.regularNameKey),
-          line: sb(bb.regularLineKey),
+          name: Ub(bb.regularNameKey),
+          line: Ub(bb.regularLineKey),
           itemName: bb.regularFishItem,
           fishName: this.itemName(bb.regularFishItem),
-          tagged: kb,
-          size: null === bb.regularKg ? sb("skyblockGame:regularsNotTagged") : sb("skyblockGame:regularsSize", {
+          tagged: Ab,
+          size: null === bb.regularKg ? Ub("skyblockGame:regularsNotTagged") : Ub("skyblockGame:regularsSize", {
             kg: bb.regularKg.toFixed(1)
           }),
-          meetings: ab,
-          chance: sb("skyblockGame:regularsChance", {
+          meetings: Tb,
+          chance: Ub("skyblockGame:regularsChance", {
             count: bb.regularOneInCasts
           }),
           resting: bb.regularRestingToday,
           gifts: [{
-            text: sb("skyblockGame:regularsGiftFlare"),
-            given: Wb >= 3
-          }, this.describeGift(bb.regularTintGift, WW, {
-            tint: sb(bb.regularTintNameKey)
+            text: Ub("skyblockGame:regularsGiftFlare"),
+            given: Mb >= 3
+          }, this.describeGift(bb.regularTintGift, aM, {
+            tint: Ub(bb.regularTintNameKey)
           })],
           history: [...bb.regularHistory].reverse().map((bb => {
-            const kb = bb.regularMeetingKg.toFixed(1),
-              Wb = cb - bb.regularMeetingDay;
-            return Wb <= 0 ? sb("skyblockGame:regularsToday", {
-              kg: kb
-            }) : sb("skyblockGame:regularsDaysAgo", {
-              days: Wb,
-              kg: kb
+            const Ab = bb.regularMeetingKg.toFixed(1),
+              Mb = ab - bb.regularMeetingDay;
+            return Mb <= 0 ? Ub("skyblockGame:regularsToday", {
+              kg: Ab
+            }) : Ub("skyblockGame:regularsDaysAgo", {
+              days: Mb,
+              kg: Ab
             })
           }))
         }
       }
-      describeIsland(bb, cb) {
+      describeIsland(bb, ab) {
         return {
           id: bb.regularsIslandId,
           name: this.translate(bb.regularsIslandNameKey),
-          charm: this.describeGift(bb.regularsCharmGift, aW, {
+          charm: this.describeGift(bb.regularsCharmGift, UM, {
             charm: this.translate(bb.regularsCharmNameKey)
           }),
-          regulars: bb.regularsList.map((bb => this.describeRegular(bb, cb)))
+          regulars: bb.regularsList.map((bb => this.describeRegular(bb, ab)))
         }
       }
       buildSnapshot() {
-        var bb, cb, sb, kb;
-        const Wb = this.message;
-        if (null === Wb) return {
+        var bb, ab, Ub, Ab;
+        const Mb = this.message;
+        if (null === Mb) return {
           enabled: !1,
           open: !1,
           selected: "",
           islands: []
         };
-        const ab = Wb.regularsIslands.map((bb => this.describeIsland(bb, Wb.regularsToday))),
-          Tb = null !== (bb = null !== (cb = null === (sb = ab.find((bb => bb.id === this.selected))) || void 0 === sb ? void 0 : sb.id) && void 0 !== cb ? cb : null === (kb = ab[0]) || void 0 === kb ? void 0 : kb.id) && void 0 !== bb ? bb : "";
+        const Tb = Mb.regularsIslands.map((bb => this.describeIsland(bb, Mb.regularsToday))),
+          Eb = null !== (bb = null !== (ab = null === (Ub = Tb.find((bb => bb.id === this.selected))) || void 0 === Ub ? void 0 : Ub.id) && void 0 !== ab ? ab : null === (Ab = Tb[0]) || void 0 === Ab ? void 0 : Ab.id) && void 0 !== bb ? bb : "";
         return {
           enabled: !0,
           open: this.open,
-          selected: Tb,
-          islands: ab
+          selected: Eb,
+          islands: Tb
         }
       }
       dispose() {
         this.message = null, super.dispose()
       }
     }
-    const IW = "skyblockHiddenWatersView";
-    class HW {
+    const TM = "skyblockHiddenWatersView";
+    class EM {
       constructor(bb) {
-        this.QQ = bb, this.snapshot = null
+        this.IR = bb, this.snapshot = null
       }
       getSnapshot() {
         return this.snapshot
       }
-      Km(bb) {
+      aj(bb) {
         this.snapshot = function(bb) {
-          const [cb, sb] = bb.hiddenWatersMapSize, kb = (bb, kb) => ({
-            left: 1 - bb / cb,
-            top: kb / sb
-          }), Wb = new Map;
-          for (const [Tb, Ub] of bb.hiddenWatersGlimpses) {
-            var ab;
-            const bb = null !== (ab = Wb.get(Tb)) && void 0 !== ab ? ab : [];
-            bb.push(Ub), Wb.set(Tb, bb)
+          const [ab, Ub] = bb.hiddenWatersMapSize, Ab = (bb, Ab) => ({
+            left: 1 - bb / ab,
+            top: Ab / Ub
+          }), Mb = new Map;
+          for (const [Eb, Yb] of bb.hiddenWatersGlimpses) {
+            var Tb;
+            const bb = null !== (Tb = Mb.get(Eb)) && void 0 !== Tb ? Tb : [];
+            bb.push(Yb), Mb.set(Eb, bb)
           }
           return {
             found: bb.hiddenWatersFound,
             total: bb.hiddenWatersTotal,
-            aspect: sb / cb,
+            aspect: Ub / ab,
             pins: bb.hiddenWatersPins.map((bb => {
-              let [cb, sb] = bb;
-              return kb(cb, sb)
+              let [ab, Ub] = bb;
+              return Ab(ab, Ub)
             })),
             islands: bb.hiddenWatersIslands.map((bb => {
-              let [Wb, ab, Tb, Ub] = bb;
+              let [Mb, Tb, Eb, Yb] = bb;
               const {
-                left: Ib,
-                top: Hb
-              } = kb(Tb + 1, ab);
+                left: Bb,
+                top: eb
+              } = Ab(Eb + 1, Tb);
               return {
-                left: Ib,
-                top: Hb,
-                width: (Tb + 1 - Wb) / cb,
-                height: (Ub + 1 - ab) / sb
+                left: Bb,
+                top: eb,
+                width: (Eb + 1 - Mb) / ab,
+                height: (Yb + 1 - Tb) / Ub
               }
             })),
-            glimpses: Wb
+            glimpses: Mb
           }
-        }(bb), this.QQ(this.snapshot)
+        }(bb), this.IR(this.snapshot)
       }
     }
-    const fW = "skyblockDialogueView";
-    class MW extends Mb {
-      constructor(bb, cb, sb, kb, Wb) {
-        let ab = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now;
-        super(bb, sb, kb), this.translate = cb, this.requestDialogue = Wb, this.now = ab, this.snapshot = void 0, this.enabled = !1, this.scripts = [], this.speakers = new Map, this.received = !1, this.selection = {
+    const YM = "skyblockDialogueView";
+    class BM extends Lb {
+      constructor(bb, ab, Ub, Ab, Mb) {
+        let Tb = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now;
+        super(bb, Ub, Ab), this.translate = ab, this.requestDialogue = Mb, this.now = Tb, this.snapshot = void 0, this.enabled = !1, this.scripts = [], this.speakers = new Map, this.received = !1, this.selection = {
           kind: "character",
           npcId: null
         }, this.requestAvailableAt = 0, this.showCharacters = () => {
@@ -4556,7 +4556,7 @@ export const modules = {
           }, this.emit()
         }, this.snapshot = this.buildSnapshot()
       }
-      Km(bb) {
+      aj(bb) {
         this.received = !0, this.scripts = bb.questDialogueScripts, this.speakers = new Map(bb.questDialogueSpeakers.map((bb => [bb.dialogueSpeakerId, bb]))), this.emit()
       }
       setTranslator(bb) {
@@ -4571,65 +4571,65 @@ export const modules = {
       }
       buildSnapshot() {
         var bb;
-        const cb = {
+        const ab = {
           enabled: this.enabled,
           open: this.open,
           loading: !this.received,
           completedLabel: this.translate("skyblockDialogue:completed")
         };
         if (!this.open) return {
-          ...cb,
+          ...ab,
           characters: [],
           questFocus: null,
           conversations: []
         };
-        const sb = this.selection;
-        if ("quest" === sb.kind) {
-          const bb = this.scripts.find((bb => bb.dialogueQuestId === sb.questId));
+        const Ub = this.selection;
+        if ("quest" === Ub.kind) {
+          const bb = this.scripts.find((bb => bb.dialogueQuestId === Ub.questId));
           return {
-            ...cb,
+            ...ab,
             characters: [],
-            questFocus: sb.questId,
+            questFocus: Ub.questId,
             conversations: bb ? [this.conversation(bb)] : []
           }
         }
-        const kb = [];
-        for (let ab = this.scripts.length - 1; ab >= 0; ab--) {
-          const bb = this.scripts[ab].dialogueLines;
-          for (let cb = bb.length - 1; cb >= 0; cb--) kb.includes(bb[cb].dialogueSpeakerId) || kb.push(bb[cb].dialogueSpeakerId)
+        const Ab = [];
+        for (let Tb = this.scripts.length - 1; Tb >= 0; Tb--) {
+          const bb = this.scripts[Tb].dialogueLines;
+          for (let ab = bb.length - 1; ab >= 0; ab--) Ab.includes(bb[ab].dialogueSpeakerId) || Ab.push(bb[ab].dialogueSpeakerId)
         }
-        const Wb = null !== sb.npcId && kb.includes(sb.npcId) ? sb.npcId : null !== (bb = kb[0]) && void 0 !== bb ? bb : null;
+        const Mb = null !== Ub.npcId && Ab.includes(Ub.npcId) ? Ub.npcId : null !== (bb = Ab[0]) && void 0 !== bb ? bb : null;
         return {
-          ...cb,
-          characters: kb.map((bb => {
-            var cb, sb;
+          ...ab,
+          characters: Ab.map((bb => {
+            var ab, Ub;
             return {
               id: bb,
-              styling: null !== (cb = null === (sb = this.speakers.get(bb)) || void 0 === sb ? void 0 : sb.dialogueSpeakerStyling) && void 0 !== cb ? cb : bb,
-              selected: bb === Wb
+              styling: null !== (ab = null === (Ub = this.speakers.get(bb)) || void 0 === Ub ? void 0 : Ub.dialogueSpeakerStyling) && void 0 !== ab ? ab : bb,
+              selected: bb === Mb
             }
           })),
           questFocus: null,
-          conversations: this.scripts.filter((bb => bb.dialogueLines.some((bb => bb.dialogueSpeakerId === Wb)))).map((bb => this.conversation(bb))).reverse()
+          conversations: this.scripts.filter((bb => bb.dialogueLines.some((bb => bb.dialogueSpeakerId === Mb)))).map((bb => this.conversation(bb))).reverse()
         }
       }
       conversation(bb) {
-        let cb = null;
+        let ab = null;
         return {
           questId: bb.dialogueQuestId,
           questName: this.translate(bb.dialogueQuestNameKey),
           completed: bb.dialogueQuestCompleted,
-          lines: bb.dialogueLines.map(((bb, sb) => {
-            var kb;
-            const Wb = bb.dialogueSpeakerId === cb || null === (kb = this.speakers.get(bb.dialogueSpeakerId)) || void 0 === kb ? void 0 : kb.dialogueSpeakerStyling;
-            return cb = bb.dialogueSpeakerId, {
-              key: sb,
+          lines: bb.dialogueLines.map(((bb, Ub) => {
+            var Ab;
+            const Mb = bb.dialogueSpeakerId === ab || null === (Ab = this.speakers.get(bb.dialogueSpeakerId)) || void 0 === Ab ? void 0 : Ab.dialogueSpeakerStyling;
+            return ab = bb.dialogueSpeakerId, {
+              key: Ub,
               display: {
                 line: {
                   translationKey: bb.dialogueLineKey,
                   params: this.params(bb.dialogueLineParams)
                 },
-                speakerName: Wb,
+                speakerName: Mb,
                 animateIn: !1
               }
             }
@@ -4638,28 +4638,28 @@ export const modules = {
       }
       params(bb) {
         if (void 0 !== bb) return Object.fromEntries(Object.entries(bb).map((bb => {
-          let [cb, sb] = bb;
-          return [cb, "string" === typeof sb ? sb : this.translate(sb.translationKey)]
+          let [ab, Ub] = bb;
+          return [ab, "string" === typeof Ub ? Ub : this.translate(Ub.translationKey)]
         })))
       }
     }
-    var XW = sb(613),
-      nW = sb(1271),
-      mW = sb(117);
-    const lW = "skyblockAutographsView";
+    var eM = Ub(574),
+      vM = Ub(1208),
+      LM = Ub(101);
+    const PM = "skyblockAutographsView";
 
-    function QW(bb) {
-      const cb = XW.h[bb];
+    function XM(bb) {
+      const ab = eM.m[bb];
       return {
-        label: cb.chatTag.map((bb => bb.str)).join(""),
-        icon: cb.icon,
-        colour: cb.mainRGB
+        label: ab.chatTag.map((bb => bb.str)).join(""),
+        icon: ab.icon,
+        colour: ab.mainRGB
       }
     }
-    class eW extends Mb {
+    class jM extends Lb {
       constructor(bb) {
-        let cb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "en-GB";
-        super(bb, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => {}, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}), this.locale = cb, this.signatures = null, this.snapshot = {
+        let ab = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "en-GB";
+        super(bb, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => {}, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}), this.locale = ab, this.signatures = null, this.snapshot = {
           enabled: !1,
           open: !1,
           entries: [],
@@ -4667,12 +4667,12 @@ export const modules = {
           rankTotal: 0
         }
       }
-      Km(bb) {
+      aj(bb) {
         this.signatures = bb.autographSignatures, bb.autographOpen ? this.show() : this.emit()
       }
       setTranslator(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.locale;
-        this.locale = cb, this.emit()
+        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.locale;
+        this.locale = ab, this.emit()
       }
       dispose() {
         this.signatures = null, super.dispose()
@@ -4682,140 +4682,140 @@ export const modules = {
       }
       buildSnapshot() {
         var bb;
-        const cb = null !== (bb = this.signatures) && void 0 !== bb ? bb : [],
-          sb = new Intl.DateTimeFormat(this.locale, {
+        const ab = null !== (bb = this.signatures) && void 0 !== bb ? bb : [],
+          Ub = new Intl.DateTimeFormat(this.locale, {
             dateStyle: "medium"
           }),
-          kb = [...cb].sort(((bb, cb) => Number(null !== cb.autographRank) - Number(null !== bb.autographRank) || cb.autographSignedAtMs - bb.autographSignedAtMs)).map((bb => ({
+          Ab = [...ab].sort(((bb, ab) => Number(null !== ab.autographRank) - Number(null !== bb.autographRank) || ab.autographSignedAtMs - bb.autographSignedAtMs)).map((bb => ({
             key: `${bb.autographSignedAtMs}|${bb.autographSignerName}`,
-            name: (0, nW.d)(bb.autographSignerName, !mW.featureFlags.canSeeRealPlayerNames),
-            rank: null === bb.autographRank ? null : QW(bb.autographRank),
-            signedOn: sb.format(bb.autographSignedAtMs)
+            name: (0, vM.d)(bb.autographSignerName, !LM.featureFlags.canSeeRealPlayerNames),
+            rank: null === bb.autographRank ? null : XM(bb.autographRank),
+            signedOn: Ub.format(bb.autographSignedAtMs)
           })));
         return {
           enabled: this.isEnabled(),
           open: this.open,
-          entries: kb,
-          total: kb.length,
-          rankTotal: kb.filter((bb => null !== bb.rank)).length
+          entries: Ab,
+          total: Ab.length,
+          rankTotal: Ab.filter((bb => null !== bb.rank)).length
         }
       }
     }
-    const CW = "skyblockHudView",
-      NW = () => {},
-      VW = {
+    const RM = "skyblockHudView",
+      kM = () => {},
+      yM = {
         getItem: () => null,
-        setItem: NW,
-        removeItem: NW
+        setItem: kM,
+        removeItem: kM
       };
-    class LW {
+    class ZM {
       constructor(bb) {
         let {
-          translate: cb,
-          translateWithIcons: sb,
-          setMenuOpen: kb = NW,
-          dismissMenu: Wb = () => {
-            kb(!1)
+          translate: ab,
+          translateWithIcons: Ub,
+          setMenuOpen: Ab = kM,
+          dismissMenu: Mb = () => {
+            Ab(!1)
           },
-          publishSkills: ab = NW,
-          publishQuests: Tb = NW,
-          publishQuestNotification: Ub = NW,
-          publishDungeons: Ib = NW,
-          publishCollections: Hb = NW,
-          publishMap: fb = NW,
-          publishHud: Mb = NW,
-          publishPortalTransit: Xb = NW,
-          publishDailyReward: mb = NW,
-          publishMailbox: lb = NW,
-          publishQuestGraph: Qb = NW,
-          publishForge: eb = NW,
-          publishSmuggler: Cb = NW,
-          publishKeepersChair: Nb = NW,
-          publishReachLog: Vb = NW,
-          publishLampLight: Lb = NW,
-          publishMagmaward: ub = NW,
-          publishGlowtide: hb = NW,
-          publishGlowMeter: Jb = NW,
-          publishHushWait: gb = NW,
-          publishPassage: Bb = NW,
-          publishTideCharts: tb = NW,
-          publishRegulars: yb = NW,
-          publishHiddenWaters: Pb = NW,
-          publishDialogue: Db = NW,
-          publishAutographs: Eb = NW,
-          isLoadingScreenUp: ib = () => !1,
-          onDailyRewardCoinLanded: Ob = NW,
-          onDailyRewardStarted: Gb = NW,
-          onDailyRewardFinished: Kb = NW,
-          onDailyRewardItemLanded: Zb = NW,
-          onMailboxStarted: zb = NW,
-          journeyStorage: qb = VW,
-          requestTracking: db = NW,
-          requestTravel: Ab = NW,
-          requestDungeonEnter: wb = NW,
-          requestQuestJump: rb = NW,
-          requestQuestArrive: ob = NW,
-          requestForge: Sb = NW,
-          requestSmuggle: Rb = NW,
-          requestKeepersChairAim: vb = NW,
-          requestReachLogOpen: Fb = NW,
-          requestLampLight: xb = NW,
-          requestDialogue: jb = NW
+          publishSkills: Tb = kM,
+          publishQuests: Eb = kM,
+          publishQuestNotification: Yb = kM,
+          publishDungeons: Bb = kM,
+          publishCollections: eb = kM,
+          publishMap: vb = kM,
+          publishHud: Lb = kM,
+          publishPortalTransit: Pb = kM,
+          publishDailyReward: jb = kM,
+          publishMailbox: Rb = kM,
+          publishQuestGraph: kb = kM,
+          publishForge: yb = kM,
+          publishSmuggler: Zb = kM,
+          publishKeepersChair: Db = kM,
+          publishReachLog: zb = kM,
+          publishLampLight: xb = kM,
+          publishMagmaward: ib = kM,
+          publishGlowtide: mb = kM,
+          publishGlowMeter: pb = kM,
+          publishHushWait: Nb = kM,
+          publishPassage: Wb = kM,
+          publishTideCharts: Hb = kM,
+          publishRegulars: Ib = kM,
+          publishHiddenWaters: db = kM,
+          publishDialogue: Fb = kM,
+          publishAutographs: hb = kM,
+          isLoadingScreenUp: Gb = () => !1,
+          onDailyRewardCoinLanded: Qb = kM,
+          onDailyRewardStarted: qb = kM,
+          onDailyRewardFinished: ub = kM,
+          onDailyRewardItemLanded: rb = kM,
+          onMailboxStarted: Kb = kM,
+          journeyStorage: ob = yM,
+          requestTracking: lb = kM,
+          requestTravel: tb = kM,
+          requestDungeonEnter: wb = kM,
+          requestQuestJump: sb = kM,
+          requestQuestArrive: gb = kM,
+          requestForge: Cb = kM,
+          requestSmuggle: Vb = kM,
+          requestKeepersChairAim: Ob = kM,
+          requestReachLogOpen: cb = kM,
+          requestLampLight: Jb = kM,
+          requestDialogue: nb = kM
         } = bb;
-        this.navigation = void 0, this.map = void 0, this.compass = new Yb, this.skills = void 0, this.quests = void 0, this.dungeons = void 0, this.collections = void 0, this.questGraph = void 0, this.forge = void 0, this.smuggler = void 0, this.keepersChair = void 0, this.reachLog = void 0, this.lampLight = void 0, this.commandPacer = new Bk.b, this.passage = void 0, this.tideCharts = void 0, this.regulars = void 0, this.hiddenWaters = void 0, this.autographs = void 0, this.portalTransit = void 0, this.dailyReward = void 0, this.mailbox = void 0, this.magmaward = void 0, this.glowtide = void 0, this.glowMeter = void 0, this.hushWait = void 0, this.dialogue = void 0, this.panels = void 0, this.setMenuOpen = void 0, this.hudSnapshot = null, this.openingPanel = null, this.publishHud = void 0, this.resolveItemName = bb => bb, this.close = () => {
+        this.navigation = void 0, this.map = void 0, this.compass = new fb, this.skills = void 0, this.quests = void 0, this.dungeons = void 0, this.collections = void 0, this.questGraph = void 0, this.forge = void 0, this.smuggler = void 0, this.keepersChair = void 0, this.reachLog = void 0, this.lampLight = void 0, this.commandPacer = new pA.b, this.passage = void 0, this.tideCharts = void 0, this.regulars = void 0, this.hiddenWaters = void 0, this.autographs = void 0, this.portalTransit = void 0, this.dailyReward = void 0, this.mailbox = void 0, this.magmaward = void 0, this.glowtide = void 0, this.glowMeter = void 0, this.hushWait = void 0, this.dialogue = void 0, this.panels = void 0, this.setMenuOpen = void 0, this.hudSnapshot = null, this.openingPanel = null, this.publishHud = void 0, this.resolveItemName = bb => bb, this.close = () => {
           for (const bb of this.panels) bb.close()
-        }, this.setMenuOpen = kb, this.publishHud = Mb, this.portalTransit = new qs(Xb, qb), this.magmaward = new qk(ub), this.glowtide = new Ak(hb), this.glowMeter = new rk(Jb), this.hushWait = new Rk(gb), this.dailyReward = new ws(mb, (() => ib() || null !== this.portalTransit.getSnapshot() || null !== this.quests.getNotificationSnapshot() || null !== this.mailbox.getSnapshot()), (bb => {
+        }, this.setMenuOpen = Ab, this.publishHud = Lb, this.portalTransit = new KU(Pb, ob), this.magmaward = new rA(ib), this.glowtide = new oA(mb), this.glowMeter = new tA(pb), this.hushWait = new sA(Nb), this.dailyReward = new tU(jb, (() => Gb() || null !== this.portalTransit.getSnapshot() || null !== this.quests.getNotificationSnapshot() || null !== this.mailbox.getSnapshot()), (bb => {
           this.quests.setNotificationsHeld(bb)
         }), (() => {
           null !== this.hudSnapshot && this.publishHud(this.getHudSnapshot())
-        }), Ob, Gb, Kb, Zb);
-        const pb = bb => {
-          this.panels.some((bb => bb.isOpen())) || (bb ? Wb() : this.setMenuOpen(!1))
+        }), Qb, qb, ub, rb);
+        const Sb = bb => {
+          this.panels.some((bb => bb.isOpen())) || (bb ? Mb() : this.setMenuOpen(!1))
         };
-        this.skills = new Ts(ab, Date.now, (() => {
+        this.skills = new EU(Tb, Date.now, (() => {
           this.beforePanelOpen(this.skills)
-        }), cb, void 0, void 0, pb), this.quests = new Ms(Tb, db, cb, (() => {
+        }), ab, void 0, void 0, Sb), this.quests = new LU(Eb, lb, ab, (() => {
           this.beforePanelOpen(this.quests)
-        }), void 0, void 0, pb, Ub), this.dungeons = new ms(Ib, cb, (() => {
+        }), void 0, void 0, Sb, Yb), this.dungeons = new jU(Bb, ab, (() => {
           this.beforePanelOpen(this.dungeons)
-        }), void 0, pb, wb), this.collections = new Ks(Hb, cb, (() => {
+        }), void 0, Sb, wb), this.collections = new qU(eb, ab, (() => {
           this.beforePanelOpen(this.collections)
-        }), pb), this.map = new nb(fb, Ab, cb, (() => {
+        }), Sb), this.map = new Xb(vb, tb, ab, (() => {
           this.beforePanelOpen(this.map)
-        }), pb), this.questGraph = new bk(Qb, cb, (() => {
+        }), Sb), this.questGraph = new nU(kb, ab, (() => {
           this.beforePanelOpen(this.questGraph)
-        }), pb, rb, ob, qb), this.forge = new Ck(eb, cb, (() => {
+        }), Sb, sb, gb, ob), this.forge = new kA(yb, ab, (() => {
           this.beforePanelOpen(this.forge)
-        }), pb, Sb), this.smuggler = new Lk(Cb, cb, (() => {
+        }), Sb, Cb), this.smuggler = new DA(Zb, ab, (() => {
           this.beforePanelOpen(this.smuggler)
-        }), pb, Rb), this.lampLight = new Zk(Lb, cb, xb, this.commandPacer), this.keepersChair = new yk(Nb, cb, (() => {
+        }), Sb, Vb), this.lampLight = new qA(xb, ab, Jb, this.commandPacer), this.keepersChair = new WA(Db, ab, (() => {
           this.beforePanelOpen(this.keepersChair)
         }), (bb => {
-          this.lampLight.onChairClosed(), pb(bb)
-        }), vb, Date.now, this.commandPacer), this.reachLog = new Gk(Vb, cb, (() => {
+          this.lampLight.onChairClosed(), Sb(bb)
+        }), Ob, Date.now, this.commandPacer), this.reachLog = new GA(zb, ab, (() => {
           this.beforePanelOpen(this.reachLog)
-        }), pb, Fb, this.commandPacer), this.passage = new gk(Bb, cb, (() => {
+        }), Sb, cb, this.commandPacer), this.passage = new mA(Wb, ab, (() => {
           this.beforePanelOpen(this.passage)
-        }), pb), this.tideCharts = new sW(tb, cb, (() => {
+        }), Sb), this.tideCharts = new SA(Hb, ab, (() => {
           this.beforePanelOpen(this.tideCharts)
-        }), pb), this.regulars = new UW(yb, cb, (() => {
+        }), Sb), this.regulars = new MM(Ib, ab, (() => {
           this.beforePanelOpen(this.regulars)
         }), (bb => {
-          this.regulars.takeReturnToReachLog() && !bb && null === this.openingPanel && this.reachLog.isOpen() && this.reachLog.close(), pb(bb)
-        })), this.hiddenWaters = new HW(Pb), this.dialogue = new MW(Db, cb, (() => {
+          this.regulars.takeReturnToReachLog() && !bb && null === this.openingPanel && this.reachLog.isOpen() && this.reachLog.close(), Sb(bb)
+        })), this.hiddenWaters = new EM(db), this.dialogue = new BM(Fb, ab, (() => {
           this.beforePanelOpen(this.dialogue)
-        }), pb, jb), this.autographs = new eW(Eb, (() => {
+        }), Sb, nb), this.autographs = new jM(hb, (() => {
           this.beforePanelOpen(this.autographs)
-        }), pb), this.mailbox = new Rs(lb, (() => ib() || null !== this.portalTransit.getSnapshot() || null !== this.dailyReward.getSnapshot()), zb), this.quests.translateWithIcons = null !== sb && void 0 !== sb ? sb : null, this.skills.onLevelUp = bb => {
+        }), Sb), this.mailbox = new CU(Rb, (() => Gb() || null !== this.portalTransit.getSnapshot() || null !== this.dailyReward.getSnapshot()), Kb), this.quests.translateWithIcons = null !== Ub && void 0 !== Ub ? Ub : null, this.skills.onLevelUp = bb => {
           this.quests.notify(bb)
-        }, this.panels = [this.map, this.skills, this.quests, this.dungeons, this.collections, this.questGraph, this.forge, this.smuggler, this.keepersChair, this.reachLog, this.passage, this.tideCharts, this.regulars, this.dialogue, this.autographs], this.navigation = new Ws(this.map, this.quests, this.compass, cb)
+        }, this.panels = [this.map, this.skills, this.quests, this.dungeons, this.collections, this.questGraph, this.forge, this.smuggler, this.keepersChair, this.reachLog, this.passage, this.tideCharts, this.regulars, this.dialogue, this.autographs], this.navigation = new MU(this.map, this.quests, this.compass, ab)
       }
       getHudSnapshot() {
         const bb = this.hudSnapshot,
-          cb = this.dailyReward.getHeldCoins();
-        return null === bb || cb <= 0 || !("hudPurseCoins" in bb) ? bb : {
+          ab = this.dailyReward.getHeldCoins();
+        return null === bb || ab <= 0 || !("hudPurseCoins" in bb) ? bb : {
           ...bb,
-          hudPurseCoins: Math.max(0, bb.hudPurseCoins - cb)
+          hudPurseCoins: Math.max(0, bb.hudPurseCoins - ab)
         }
       }
       receiveHud(bb) {
@@ -4823,114 +4823,114 @@ export const modules = {
       }
       beforePanelOpen(bb) {
         this.setMenuOpen(!0);
-        const cb = bb === this.regulars && this.regulars.isOverReachLog();
+        const ab = bb === this.regulars && this.regulars.isOverReachLog();
         this.openingPanel = bb;
-        for (const sb of this.panels) sb === bb || cb && sb === this.reachLog || sb.close();
+        for (const Ub of this.panels) Ub === bb || ab && Ub === this.reachLog || Ub.close();
         this.openingPanel = null
       }
-      setTranslator(bb, cb, sb) {
-        let kb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : cb => this.resolveItemName(cb, bb);
-        this.quests.translateWithIcons = null !== sb && void 0 !== sb ? sb : null, this.navigation.setTranslator(bb, cb), this.lampLight.setTranslator(bb, cb), this.mailbox.setItemName(kb);
-        for (const Wb of this.panels) Wb.setTranslator(bb, cb, kb)
+      setTranslator(bb, ab, Ub) {
+        let Ab = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : ab => this.resolveItemName(ab, bb);
+        this.quests.translateWithIcons = null !== Ub && void 0 !== Ub ? Ub : null, this.navigation.setTranslator(bb, ab), this.lampLight.setTranslator(bb, ab), this.mailbox.setItemName(Ab);
+        for (const Mb of this.panels) Mb.setTranslator(bb, ab, Ab)
       }
       dispose() {
         this.navigation.dispose(), this.compass.dispose(), this.portalTransit.dispose(), this.dailyReward.dispose(), this.mailbox.dispose(), this.magmaward.dispose(), this.glowtide.dispose(), this.glowMeter.dispose(), this.hushWait.dispose(), this.lampLight.dispose(), this.commandPacer.dispose();
         for (const bb of this.panels) bb.dispose()
       }
     }
-    var uW = sb(1033),
-      YW = sb.n(uW),
-      hW = sb(19),
-      JW = sb(36235),
-      gW = sb(3179),
-      BW = sb(1858),
-      tW = sb(1839),
-      yW = sb(8947),
-      PW = sb(1197),
-      DW = sb(1423),
-      EW = sb(1087);
+    var DM = Ub(984),
+      zM = Ub.n(DM),
+      xM = Ub(19),
+      iM = Ub(36013),
+      fM = Ub(3083),
+      mM = Ub(1812),
+      pM = Ub(1794),
+      NM = Ub(8930),
+      WM = Ub(1134),
+      HM = Ub(1345),
+      IM = Ub(1023);
 
-    function iW(bb) {
+    function dM(bb) {
       let {
-        controller: cb,
-        minimap: sb,
-        children: kb
+        controller: ab,
+        minimap: Ub,
+        children: Ab
       } = bb;
-      const ab = (0, DW.h)(CW, cb.getHudSnapshot()),
-        [Tb, Ub] = (0, Jb.useState)(cb.skills.getSnapshot().overallLevel);
-      (0, DW.f)(as, (bb => {
-        Ub(bb.overallLevel)
+      const Tb = (0, HM.i)(RM, ab.getHudSnapshot()),
+        [Eb, Yb] = (0, pb.useState)(ab.skills.getSnapshot().overallLevel);
+      (0, HM.f)(TU, (bb => {
+        Yb(bb.overallLevel)
       }));
-      const Ib = (0, Jb.useRef)(null);
-      (0, DW.f)(As, (bb => {
-        ! function(bb, cb) {
+      const Bb = (0, pb.useRef)(null);
+      (0, HM.f)(lU, (bb => {
+        ! function(bb, ab) {
           if (null === bb || "function" !== typeof bb.animate) return;
-          const sb = cb ? 1.35 : 1.15;
+          const Ub = ab ? 1.35 : 1.15;
           bb.animate([{
             transform: "scale(1)"
           }, {
-            transform: `scale(${sb})`
+            transform: `scale(${Ub})`
           }, {
             transform: "scale(1)"
           }], {
-            duration: cb ? 320 : 160,
+            duration: ab ? 320 : 160,
             easing: "ease-out"
-          }), bb.classList.toggle("Receiving", !cb), cb && (bb.classList.remove("Shine"), bb.offsetWidth, bb.classList.add("Shine"))
-        }(Ib.current, bb)
+          }), bb.classList.toggle("Receiving", !ab), ab && (bb.classList.remove("Shine"), bb.offsetWidth, bb.classList.add("Shine"))
+        }(Bb.current, bb)
       }));
       const {
-        t: Hb
-      } = (0, PW.E)(), {
-        isTouchScreen: fb
-      } = (0, hW.p)(["isTouchScreen"]), [Mb, Xb] = (0, Jb.useState)(null);
-      return (0, gW.j)(Mb, ".SkyblockRightHud"), null !== ab || sb ? (0, EW.jsx)(JW.e, {
+        t: eb
+      } = (0, WM.A)(), {
+        isTouchScreen: vb
+      } = (0, xM.n)(["isTouchScreen"]), [Lb, Pb] = (0, pb.useState)(null);
+      return (0, fM.k)(Lb, ".SkyblockRightHud"), null !== Tb || Ub ? (0, IM.jsx)(iM.e, {
         placement: "topRight",
-        children: (0, EW.jsxs)("div", {
-          className: YW()("SkyblockRightHud", {
-            TouchScreen: fb
+        children: (0, IM.jsxs)("div", {
+          className: zM()("SkyblockRightHud", {
+            TouchScreen: vb
           }),
-          children: [sb, null !== ab && (0, EW.jsxs)("div", {
-            ref: Xb,
+          children: [Ub, null !== Tb && (0, IM.jsxs)("div", {
+            ref: Pb,
             className: "SkyblockRightHudCard",
-            children: ["hudHelpText" in ab ? (0, EW.jsx)("div", {
+            children: ["hudHelpText" in Tb ? (0, IM.jsx)("div", {
               className: "SkyblockHudHelp",
-              children: ab.hudHelpText
-            }) : (0, EW.jsxs)(EW.Fragment, {
-              children: [(0, EW.jsxs)("div", {
+              children: Tb.hudHelpText
+            }) : (0, IM.jsxs)(IM.Fragment, {
+              children: [(0, IM.jsxs)("div", {
                 className: "SkyblockHudStatus",
-                children: [(0, EW.jsxs)("span", {
+                children: [(0, IM.jsxs)("span", {
                   className: "SkyblockHudIdentity",
-                  children: [(0, EW.jsx)("strong", {
+                  children: [(0, IM.jsx)("strong", {
                     style: {
-                      color: Wb.L.cyanUiText
+                      color: Mb.E.cyanUiText
                     },
-                    children: Hb(ab.hudZoneNameKey)
-                  }), null !== Tb && (0, EW.jsx)("span", {
+                    children: eb(Tb.hudZoneNameKey)
+                  }), null !== Eb && (0, IM.jsx)("span", {
                     style: {
-                      color: Wb.L.goldUiText
+                      color: Mb.E.goldUiText
                     },
-                    children: Hb("skyblockGame:level", {
-                      level: (0, yW.g)(Tb)
+                    children: eb("skyblockGame:level", {
+                      level: (0, NM.g)(Eb)
                     })
                   })]
-                }), (0, EW.jsxs)("span", {
+                }), (0, IM.jsxs)("span", {
                   className: "SkyblockHudCoins",
-                  ref: Ib,
-                  children: [(0, EW.jsx)("span", {
+                  ref: Bb,
+                  children: [(0, IM.jsx)("span", {
                     "aria-hidden": "true",
-                    children: (0, EW.jsx)(BW.d, {
+                    children: (0, IM.jsx)(mM.c, {
                       itemName: "Gold Coin",
                       amount: 0
                     })
-                  }), (0, yW.g)(ab.hudPurseCoins)]
+                  }), (0, NM.g)(Tb.hudPurseCoins)]
                 })]
-              }), ab.hudClockText.length > 0 && (0, EW.jsx)("div", {
+              }), Tb.hudClockText.length > 0 && (0, IM.jsx)("div", {
                 className: "SkyblockHudClock",
-                children: (0, EW.jsx)(tW.d, {
-                  text: ab.hudClockText
+                children: (0, IM.jsx)(pM.c, {
+                  text: Tb.hudClockText
                 })
               })]
-            }), kb, "hudZoneNameKey" in ab && (0, EW.jsx)("div", {
+            }), Ab, "hudZoneNameKey" in Tb && (0, IM.jsx)("div", {
               className: "SkyblockHudAddress",
               children: "www.bloxd.io"
             })]
@@ -4939,460 +4939,460 @@ export const modules = {
       }) : null
     }
 
-    function OW(bb) {
+    function FM(bb) {
       let {
-        icon: cb
+        icon: ab
       } = bb;
-      const sb = (0, Jb.useCallback)((bb => {
-        null === bb || void 0 === bb || bb.replaceChildren(oc(cb))
-      }), [cb]);
-      return (0, EW.jsx)("span", {
+      const Ub = (0, pb.useCallback)((bb => {
+        null === bb || void 0 === bb || bb.replaceChildren(ga(ab))
+      }), [ab]);
+      return (0, IM.jsx)("span", {
         className: "SkyblockMapIconSlot",
-        ref: sb
+        ref: Ub
       })
     }
 
-    function GW(bb) {
+    function hM(bb) {
       let {
-        controller: cb
+        controller: ab
       } = bb;
       const {
-        t: sb
-      } = (0, PW.E)();
-      return (0, EW.jsx)("div", {
+        t: Ub
+      } = (0, WM.A)();
+      return (0, IM.jsx)("div", {
         className: "SkyblockMapPlayer",
-        ref: cb.display.mountPlayer,
-        title: sb("skyblockGame:mapYouAreHere"),
-        children: (0, EW.jsx)(OW, {
+        ref: ab.display.mountPlayer,
+        title: Ub("skyblockGame:mapYouAreHere"),
+        children: (0, IM.jsx)(FM, {
           icon: "player"
         })
       })
     }
-    const KW = sb(38155),
-      ZW = Object.fromEntries(KW.keys().map((bb => [bb.replace(/^\.\/(.*)\.png$/, "$1"), KW(bb)])));
+    const GM = Ub(37878),
+      QM = Object.fromEntries(GM.keys().map((bb => [bb.replace(/^\.\/(.*)\.png$/, "$1"), GM(bb)])));
 
-    function zW(bb, cb) {
-      var sb;
-      return null !== (sb = ZW[bb]) && void 0 !== sb ? sb : ZW[cb]
+    function qM(bb, ab) {
+      var Ub;
+      return null !== (Ub = QM[bb]) && void 0 !== Ub ? Ub : QM[ab]
     }
 
-    function qW(bb) {
+    function uM(bb) {
       let {
-        imageKey: cb,
-        fallbackImageKey: sb,
-        geometryKey: kb,
-        alt: Wb,
-        className: ab
+        imageKey: ab,
+        fallbackImageKey: Ub,
+        geometryKey: Ab,
+        alt: Mb,
+        className: Tb
       } = bb;
-      const [Tb, Ub] = (0, Jb.useState)((() => function(bb, cb) {
+      const [Eb, Yb] = (0, pb.useState)((() => function(bb, ab) {
         return [{
           id: 0,
           imageKey: bb,
-          geometryKey: cb,
+          geometryKey: ab,
           phase: "shown"
         }]
-      }(cb, kb))), Ib = function(bb, cb, sb) {
-        const kb = bb[bb.length - 1];
-        if (kb.imageKey === cb && kb.geometryKey === sb) return bb;
-        const Wb = {
-          id: kb.id + 1,
-          imageKey: cb,
-          geometryKey: sb,
+      }(ab, Ab))), Bb = function(bb, ab, Ub) {
+        const Ab = bb[bb.length - 1];
+        if (Ab.imageKey === ab && Ab.geometryKey === Ub) return bb;
+        const Mb = {
+          id: Ab.id + 1,
+          imageKey: ab,
+          geometryKey: Ub,
           phase: "entering"
         };
-        return kb.geometryKey === sb ? [{
-          ...kb,
+        return Ab.geometryKey === Ub ? [{
+          ...Ab,
           phase: "leaving"
-        }, Wb] : [Wb]
-      }(Tb, cb, kb);
-      return Ib !== Tb && Ub(Ib), (0, EW.jsx)(EW.Fragment, {
-        children: Ib.map((bb => (0, EW.jsx)("img", {
-          className: YW()("SkyblockMapTerrainImage", ab, {
+        }, Mb] : [Mb]
+      }(Eb, ab, Ab);
+      return Bb !== Eb && Yb(Bb), (0, IM.jsx)(IM.Fragment, {
+        children: Bb.map((bb => (0, IM.jsx)("img", {
+          className: zM()("SkyblockMapTerrainImage", Tb, {
             Entering: "entering" === bb.phase,
             Leaving: "leaving" === bb.phase
           }),
-          src: zW(bb.imageKey, sb),
-          alt: "leaving" === bb.phase ? "" : Wb,
+          src: qM(bb.imageKey, Ub),
+          alt: "leaving" === bb.phase ? "" : Mb,
           onAnimationEnd: () => {
-            Ub((cb => function(bb, cb) {
-              return bb.flatMap((bb => bb.id !== cb ? [bb] : "leaving" === bb.phase ? [] : [{
+            Yb((ab => function(bb, ab) {
+              return bb.flatMap((bb => bb.id !== ab ? [bb] : "leaving" === bb.phase ? [] : [{
                 ...bb,
                 phase: "shown"
               }]))
-            }(cb, bb.id)))
+            }(ab, bb.id)))
           }
         }, bb.id)))
       })
     }
-    var dW = sb(4270),
-      AW = sb(1431);
+    var rM = Ub(4211),
+      KM = Ub(1352);
 
-    function wW(bb) {
+    function oM(bb) {
       if ("Tab" !== bb.key) return;
-      const cb = Array.from(bb.currentTarget.querySelectorAll('[role="button"][tabindex="0"], button:not(:disabled)')),
-        sb = cb.indexOf(document.activeElement);
-      var kb;
-      if (bb.shiftKey && sb <= 0) bb.preventDefault(), null === (kb = cb.at(-1)) || void 0 === kb || kb.focus();
-      else if (!bb.shiftKey && (-1 === sb || sb === cb.length - 1)) {
-        var Wb;
-        bb.preventDefault(), null === (Wb = cb[0]) || void 0 === Wb || Wb.focus()
+      const ab = Array.from(bb.currentTarget.querySelectorAll('[role="button"][tabindex="0"], button:not(:disabled)')),
+        Ub = ab.indexOf(document.activeElement);
+      var Ab;
+      if (bb.shiftKey && Ub <= 0) bb.preventDefault(), null === (Ab = ab.at(-1)) || void 0 === Ab || Ab.focus();
+      else if (!bb.shiftKey && (-1 === Ub || Ub === ab.length - 1)) {
+        var Mb;
+        bb.preventDefault(), null === (Mb = ab[0]) || void 0 === Mb || Mb.focus()
       }
     }
 
-    function rW() {
-      const bb = (0, Jb.useRef)(null);
-      return (0, Jb.useCallback)((cb => {
-        var sb;
-        cb ? (bb.current = document.activeElement, cb.focus()) : null === (sb = bb.current) || void 0 === sb || sb.focus()
+    function lM() {
+      const bb = (0, pb.useRef)(null);
+      return (0, pb.useCallback)((ab => {
+        var Ub;
+        ab ? (bb.current = document.activeElement, ab.focus()) : null === (Ub = bb.current) || void 0 === Ub || Ub.focus()
       }), [])
     }
 
-    function oW(bb) {
+    function tM(bb) {
       let {
-        percent: cb,
-        label: sb,
-        levelUpToken: kb,
-        colour: Wb
+        percent: ab,
+        label: Ub,
+        levelUpToken: Ab,
+        colour: Mb
       } = bb;
-      return (0, EW.jsxs)("div", {
+      return (0, IM.jsxs)("div", {
         className: "SkillProgressBar",
         role: "progressbar",
-        "aria-label": sb,
+        "aria-label": Ub,
         "aria-valuemin": 0,
         "aria-valuemax": 100,
-        "aria-valuenow": cb,
-        "aria-valuetext": sb,
-        children: [(0, EW.jsx)("div", {
+        "aria-valuenow": ab,
+        "aria-valuetext": Ub,
+        children: [(0, IM.jsx)("div", {
           className: "SkillProgressBarFill",
           style: {
-            transform: `scaleX(${cb/100})`
+            transform: `scaleX(${ab/100})`
           }
-        }), null !== kb && void 0 !== kb && (0, EW.jsx)("div", {
+        }), null !== Ab && void 0 !== Ab && (0, IM.jsx)("div", {
           className: "SkillProgressBarLevelUp",
           style: {
-            "--skill-colour": Wb
+            "--skill-colour": Mb
           }
-        }, kb)]
+        }, Ab)]
       })
     }
 
-    function SW(bb) {
+    function wM(bb) {
       let {
-        mount: cb
+        mount: ab
       } = bb;
-      return (0, EW.jsx)("div", {
+      return (0, IM.jsx)("div", {
         className: "SkyblockSearchArea",
-        ref: cb,
+        ref: ab,
         hidden: !0,
-        children: (0, EW.jsxs)("svg", {
+        children: (0, IM.jsxs)("svg", {
           viewBox: "0 0 100 100",
           preserveAspectRatio: "none",
-          children: [(0, EW.jsx)("path", {
+          children: [(0, IM.jsx)("path", {
             className: "SkyblockSearchAreaShadow"
-          }), (0, EW.jsx)("path", {
+          }), (0, IM.jsx)("path", {
             className: "SkyblockSearchAreaDashes"
           })]
         })
       })
     }
 
-    function RW(bb, cb, sb, kb) {
-      (0, Jb.useLayoutEffect)((() => {
-        const Wb = bb.current;
-        if (!sb || null === cb || void 0 === cb || !cb.local || !Wb) return;
-        const ab = Array.from(Wb.querySelectorAll(".SkyblockMapNode")),
-          Tb = [...cb.points, ...cb.portals],
-          Ub = () => {
-            const bb = Wb.clientWidth,
-              sb = Wb.clientHeight,
-              Ub = ab.map(((Wb, ab) => {
-                const Ub = Tb[ab];
+    function sM(bb, ab, Ub, Ab) {
+      (0, pb.useLayoutEffect)((() => {
+        const Mb = bb.current;
+        if (!Ub || null === ab || void 0 === ab || !ab.local || !Mb) return;
+        const Tb = Array.from(Mb.querySelectorAll(".SkyblockMapNode")),
+          Eb = [...ab.points, ...ab.portals],
+          Yb = () => {
+            const bb = Mb.clientWidth,
+              Ub = Mb.clientHeight,
+              Yb = Tb.map(((Mb, Tb) => {
+                const Yb = Eb[Tb];
                 return {
-                  id: Ub.id,
-                  portal: ab >= cb.points.length,
-                  x: Ub.position[0] * bb / 100,
-                  y: Ub.position[1] * sb / 100,
-                  width: Wb.offsetWidth / kb,
-                  height: Wb.offsetHeight / kb
+                  id: Yb.id,
+                  portal: Tb >= ab.points.length,
+                  x: Yb.position[0] * bb / 100,
+                  y: Yb.position[1] * Ub / 100,
+                  width: Mb.offsetWidth / Ab,
+                  height: Mb.offsetHeight / Ab
                 }
               })),
-              Ib = new Map(Tb.map(((bb, cb) => [bb.id, ab[cb]])));
-            for (const cb of function(bb, cb, sb) {
-                const kb = [],
-                  Wb = [...bb].sort(((bb, cb) => Number(cb.portal) - Number(bb.portal) || bb.id.localeCompare(cb.id)));
-                for (const ab of Wb) {
-                  const bb = bb => Math.max(ab.width / 2, Math.min(cb - ab.width / 2, bb)),
-                    Wb = bb => Math.max(ab.height / 2, Math.min(sb - ab.height / 2, bb)),
-                    Tb = [bb(ab.x)],
-                    Ub = [Wb(ab.y)];
-                  for (const cb of kb) Tb.push(bb(cb.x - (cb.width + ab.width) / 2 - 4), bb(cb.x + (cb.width + ab.width) / 2 + 4)), Ub.push(Wb(cb.y - (cb.height + ab.height) / 2 - 4), Wb(cb.y + (cb.height + ab.height) / 2 + 4));
-                  let Ib = {
-                      ...ab,
-                      x: Tb[0],
-                      y: Ub[0]
+              Bb = new Map(Eb.map(((bb, ab) => [bb.id, Tb[ab]])));
+            for (const ab of function(bb, ab, Ub) {
+                const Ab = [],
+                  Mb = [...bb].sort(((bb, ab) => Number(ab.portal) - Number(bb.portal) || bb.id.localeCompare(ab.id)));
+                for (const Tb of Mb) {
+                  const bb = bb => Math.max(Tb.width / 2, Math.min(ab - Tb.width / 2, bb)),
+                    Mb = bb => Math.max(Tb.height / 2, Math.min(Ub - Tb.height / 2, bb)),
+                    Eb = [bb(Tb.x)],
+                    Yb = [Mb(Tb.y)];
+                  for (const ab of Ab) Eb.push(bb(ab.x - (ab.width + Tb.width) / 2 - 4), bb(ab.x + (ab.width + Tb.width) / 2 + 4)), Yb.push(Mb(ab.y - (ab.height + Tb.height) / 2 - 4), Mb(ab.y + (ab.height + Tb.height) / 2 + 4));
+                  let Bb = {
+                      ...Tb,
+                      x: Eb[0],
+                      y: Yb[0]
                     },
-                    Hb = 1 / 0,
-                    fb = 1 / 0;
-                  for (const cb of new Set(Tb))
-                    for (const bb of new Set(Ub)) {
-                      let sb = 0;
-                      for (const Tb of kb) sb += Math.max(0, (ab.width + Tb.width) / 2 + 4 - Math.abs(cb - Tb.x)) * Math.max(0, (ab.height + Tb.height) / 2 + 4 - Math.abs(bb - Tb.y));
-                      const Wb = (cb - ab.x) ** 2 + (bb - ab.y) ** 2;
-                      (sb < Hb || sb === Hb && Wb < fb) && (Ib = {
-                        ...ab,
-                        x: cb,
+                    eb = 1 / 0,
+                    vb = 1 / 0;
+                  for (const ab of new Set(Eb))
+                    for (const bb of new Set(Yb)) {
+                      let Ub = 0;
+                      for (const Eb of Ab) Ub += Math.max(0, (Tb.width + Eb.width) / 2 + 4 - Math.abs(ab - Eb.x)) * Math.max(0, (Tb.height + Eb.height) / 2 + 4 - Math.abs(bb - Eb.y));
+                      const Mb = (ab - Tb.x) ** 2 + (bb - Tb.y) ** 2;
+                      (Ub < eb || Ub === eb && Mb < vb) && (Bb = {
+                        ...Tb,
+                        x: ab,
                         y: bb
-                      }, Hb = sb, fb = Wb)
+                      }, eb = Ub, vb = Mb)
                     }
-                  kb.push(Ib)
+                  Ab.push(Bb)
                 }
-                return kb
-              }(Ub, bb, sb)) {
-              const bb = Ib.get(cb.id);
-              bb.style.left = `${cb.x}px`, bb.style.top = `${cb.y}px`
+                return Ab
+              }(Yb, bb, Ub)) {
+              const bb = Bb.get(ab.id);
+              bb.style.left = `${ab.x}px`, bb.style.top = `${ab.y}px`
             }
           };
-        Ub();
-        const Ib = new ResizeObserver(Ub);
-        Ib.observe(Wb);
-        for (const bb of ab) Ib.observe(bb);
+        Yb();
+        const Bb = new ResizeObserver(Yb);
+        Bb.observe(Mb);
+        for (const bb of Tb) Bb.observe(bb);
         return () => {
-          Ib.disconnect()
+          Bb.disconnect()
         }
-      }), [bb, cb, sb, kb])
+      }), [bb, ab, Ub, Ab])
     }
-    const vW = {
+    const gM = {
         zoom: 1,
         x: 0,
         y: 0
       },
-      FW = {
+      CM = {
         x0: 0,
         y0: 0,
         x1: 1,
         y1: 1
       };
 
-    function xW(bb, cb, sb) {
-      return Math.min(sb, Math.max(cb, bb))
+    function VM(bb, ab, Ub) {
+      return Math.min(Ub, Math.max(ab, bb))
     }
 
-    function jW(bb, cb, sb) {
-      const kb = Math.min(1, sb * cb / bb),
-        Wb = Math.min(1, bb / (sb * cb));
+    function OM(bb, ab, Ub) {
+      const Ab = Math.min(1, Ub * ab / bb),
+        Mb = Math.min(1, bb / (Ub * ab));
       return {
-        x0: (1 - kb) / 2,
-        y0: (1 - Wb) / 2,
-        x1: (1 + kb) / 2,
-        y1: (1 + Wb) / 2
+        x0: (1 - Ab) / 2,
+        y0: (1 - Mb) / 2,
+        x1: (1 + Ab) / 2,
+        y1: (1 + Mb) / 2
       }
     }
 
-    function pW(bb, cb, sb, kb) {
-      const Wb = cb * (kb - sb);
-      if (Wb <= 1) return .5 - cb * (sb + kb) / 2;
-      const ab = .45 * Math.min(1, Wb - 1);
-      return xW(bb, 1 - cb * kb - ab, ab - cb * sb)
+    function cM(bb, ab, Ub, Ab) {
+      const Mb = ab * (Ab - Ub);
+      if (Mb <= 1) return .5 - ab * (Ub + Ab) / 2;
+      const Tb = .45 * Math.min(1, Mb - 1);
+      return VM(bb, 1 - ab * Ab - Tb, Tb - ab * Ub)
     }
 
-    function ba(bb, cb) {
-      const sb = xW(bb.zoom, 1, 12);
+    function JM(bb, ab) {
+      const Ub = VM(bb.zoom, 1, 12);
       return {
-        zoom: sb,
-        x: pW(bb.x, sb, cb.x0, cb.x1),
-        y: pW(bb.y, sb, cb.y0, cb.y1)
+        zoom: Ub,
+        x: cM(bb.x, Ub, ab.x0, ab.x1),
+        y: cM(bb.y, Ub, ab.y0, ab.y1)
       }
     }
 
-    function ca(bb, cb, sb, kb) {
-      let Wb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : FW;
-      const ab = xW(bb.zoom * cb, 1, 12),
-        Tb = ab / bb.zoom;
-      return ba({
-        zoom: ab,
-        x: sb - (sb - bb.x) * Tb,
-        y: kb - (kb - bb.y) * Tb
-      }, Wb)
+    function nM(bb, ab, Ub, Ab) {
+      let Mb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : CM;
+      const Tb = VM(bb.zoom * ab, 1, 12),
+        Eb = Tb / bb.zoom;
+      return JM({
+        zoom: Tb,
+        x: Ub - (Ub - bb.x) * Eb,
+        y: Ab - (Ab - bb.y) * Eb
+      }, Mb)
     }
 
-    function sa(bb, cb, sb, kb) {
-      const [Wb, ab] = (0, Jb.useState)(vW);
-      (0, Jb.useEffect)((() => {
-        ab(vW)
-      }), [sb]), (0, Jb.useEffect)((() => {
-        const sb = bb.current;
-        if (!cb || !sb) return;
-        const Wb = () => jW(sb.clientWidth, sb.clientHeight, kb),
-          Tb = bb => {
-            const cb = sb.getBoundingClientRect();
+    function SM(bb, ab, Ub, Ab) {
+      const [Mb, Tb] = (0, pb.useState)(gM);
+      (0, pb.useEffect)((() => {
+        Tb(gM)
+      }), [Ub]), (0, pb.useEffect)((() => {
+        const Ub = bb.current;
+        if (!ab || !Ub) return;
+        const Mb = () => OM(Ub.clientWidth, Ub.clientHeight, Ab),
+          Eb = bb => {
+            const ab = Ub.getBoundingClientRect();
             return {
-              x: (bb.clientX - cb.left) / cb.width,
-              y: (bb.clientY - cb.top) / cb.height
+              x: (bb.clientX - ab.left) / ab.width,
+              y: (bb.clientY - ab.top) / ab.height
             }
           },
-          Ub = new Map;
-        let Ib = {
+          Yb = new Map;
+        let Bb = {
             x: 0,
             y: 0
           },
-          Hb = !1,
-          fb = 0;
-        const Mb = bb => {
+          eb = !1,
+          vb = 0;
+        const Lb = bb => {
             bb.preventDefault();
-            const cb = bb.deltaMode === WheelEvent.DOM_DELTA_LINE ? 16 * bb.deltaY : bb.deltaY,
-              sb = Tb(bb);
-            ab((bb => ca(bb, Math.exp(.0015 * -cb), sb.x, sb.y, Wb())))
+            const ab = bb.deltaMode === WheelEvent.DOM_DELTA_LINE ? 16 * bb.deltaY : bb.deltaY,
+              Ub = Eb(bb);
+            Tb((bb => nM(bb, Math.exp(.0015 * -ab), Ub.x, Ub.y, Mb())))
           },
-          Xb = bb => {
-            "mouse" === bb.pointerType && 0 !== bb.button || (Ub.set(bb.pointerId, Tb(bb)), 1 === Ub.size && (Ib = {
+          Pb = bb => {
+            "mouse" === bb.pointerType && 0 !== bb.button || (Yb.set(bb.pointerId, Eb(bb)), 1 === Yb.size && (Bb = {
               x: bb.clientX,
               y: bb.clientY
-            }, Hb = !1), fb = 0)
+            }, eb = !1), vb = 0)
           },
-          nb = bb => {
-            const cb = Ub.get(bb.pointerId);
-            if (!cb) return;
-            const kb = Tb(bb);
-            if (Ub.set(bb.pointerId, kb), 2 === Ub.size) {
-              const [bb, cb] = [...Ub.values()], sb = Math.hypot(bb.x - cb.x, bb.y - cb.y);
-              if (fb > 0) {
-                const kb = sb / fb;
-                ab((sb => ca(sb, kb, (bb.x + cb.x) / 2, (bb.y + cb.y) / 2, Wb())))
+          Xb = bb => {
+            const ab = Yb.get(bb.pointerId);
+            if (!ab) return;
+            const Ab = Eb(bb);
+            if (Yb.set(bb.pointerId, Ab), 2 === Yb.size) {
+              const [bb, ab] = [...Yb.values()], Ub = Math.hypot(bb.x - ab.x, bb.y - ab.y);
+              if (vb > 0) {
+                const Ab = Ub / vb;
+                Tb((Ub => nM(Ub, Ab, (bb.x + ab.x) / 2, (bb.y + ab.y) / 2, Mb())))
               }
-              return fb = sb, void(Hb = !0)
-            }!Hb && Math.hypot(bb.clientX - Ib.x, bb.clientY - Ib.y) < 4 || (Hb || (Hb = !0, sb.setPointerCapture(bb.pointerId)), ab((bb => function(bb, cb, sb) {
-              let kb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : FW;
-              return ba({
+              return vb = Ub, void(eb = !0)
+            }!eb && Math.hypot(bb.clientX - Bb.x, bb.clientY - Bb.y) < 4 || (eb || (eb = !0, Ub.setPointerCapture(bb.pointerId)), Tb((bb => function(bb, ab, Ub) {
+              let Ab = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : CM;
+              return JM({
                 zoom: bb.zoom,
-                x: bb.x + cb,
-                y: bb.y + sb
-              }, kb)
-            }(bb, kb.x - cb.x, kb.y - cb.y, Wb()))))
+                x: bb.x + ab,
+                y: bb.y + Ub
+              }, Ab)
+            }(bb, Ab.x - ab.x, Ab.y - ab.y, Mb()))))
           },
-          mb = bb => {
-            Ub.delete(bb.pointerId), fb = 0
+          jb = bb => {
+            Yb.delete(bb.pointerId), vb = 0
           },
-          lb = bb => {
-            Hb && (bb.stopPropagation(), bb.preventDefault(), Hb = !1)
+          Rb = bb => {
+            eb && (bb.stopPropagation(), bb.preventDefault(), eb = !1)
           },
-          Qb = new ResizeObserver((() => {
-            ab((bb => ba(bb, Wb())))
+          kb = new ResizeObserver((() => {
+            Tb((bb => JM(bb, Mb())))
           }));
-        return Qb.observe(sb), sb.addEventListener("wheel", Mb, {
+        return kb.observe(Ub), Ub.addEventListener("wheel", Lb, {
           passive: !1
-        }), sb.addEventListener("pointerdown", Xb), sb.addEventListener("pointermove", nb), sb.addEventListener("pointerup", mb), sb.addEventListener("pointercancel", mb), sb.addEventListener("click", lb, !0), () => {
-          Qb.disconnect(), sb.removeEventListener("wheel", Mb), sb.removeEventListener("pointerdown", Xb), sb.removeEventListener("pointermove", nb), sb.removeEventListener("pointerup", mb), sb.removeEventListener("pointercancel", mb), sb.removeEventListener("click", lb, !0)
+        }), Ub.addEventListener("pointerdown", Pb), Ub.addEventListener("pointermove", Xb), Ub.addEventListener("pointerup", jb), Ub.addEventListener("pointercancel", jb), Ub.addEventListener("click", Rb, !0), () => {
+          kb.disconnect(), Ub.removeEventListener("wheel", Lb), Ub.removeEventListener("pointerdown", Pb), Ub.removeEventListener("pointermove", Xb), Ub.removeEventListener("pointerup", jb), Ub.removeEventListener("pointercancel", jb), Ub.removeEventListener("click", Rb, !0)
         }
-      }), [bb, cb, sb, kb]);
+      }), [bb, ab, Ub, Ab]);
       return {
-        view: Wb,
-        zoomBy: cb => {
-          const sb = bb.current;
-          sb && ab((bb => ca(bb, cb, .5, .5, jW(sb.clientWidth, sb.clientHeight, kb))))
+        view: Mb,
+        zoomBy: ab => {
+          const Ub = bb.current;
+          Ub && Tb((bb => nM(bb, ab, .5, .5, OM(Ub.clientWidth, Ub.clientHeight, Ab))))
         }
       }
     }
 
-    function ka(bb) {
-      var cb, sb, kb, Wb;
+    function bT(bb) {
+      var ab, Ub, Ab, Mb;
       let {
-        controller: ab,
-        navigation: Tb
+        controller: Tb,
+        navigation: Eb
       } = bb;
-      const Ub = (0, DW.h)(Xb, ab.getSnapshot()),
+      const Yb = (0, HM.i)(Pb, Tb.getSnapshot()),
         {
-          t: Ib
-        } = (0, PW.E)(),
-        Hb = rW(),
-        fb = Ub.presentation,
-        Mb = (0, Jb.useRef)(null),
-        nb = (0, Jb.useRef)(null),
-        mb = Boolean(Ub.open && (null === fb || void 0 === fb ? void 0 : fb.local) && fb.background),
-        lb = sa(Mb, mb, `${Ub.open}|${Ub.tab}|${null===fb||void 0===fb||null===(cb=fb.background)||void 0===cb?void 0:cb.geometryKey}`, null !== (sb = null === fb || void 0 === fb || null === (kb = fb.background) || void 0 === kb ? void 0 : kb.ratio) && void 0 !== sb ? sb : 2);
-      if (RW(nb, fb, Ub.open, lb.view.zoom), !fb || !Ub.open) return null;
-      const Qb = fb.local ? fb.background : null,
-        eb = {
-          "--map-ratio": String(null !== (Wb = null === Qb || void 0 === Qb ? void 0 : Qb.ratio) && void 0 !== Wb ? Wb : 2),
-          backgroundColor: null === Qb || void 0 === Qb ? void 0 : Qb.colour
+          t: Bb
+        } = (0, WM.A)(),
+        eb = lM(),
+        vb = Yb.presentation,
+        Lb = (0, pb.useRef)(null),
+        Xb = (0, pb.useRef)(null),
+        jb = Boolean(Yb.open && (null === vb || void 0 === vb ? void 0 : vb.local) && vb.background),
+        Rb = SM(Lb, jb, `${Yb.open}|${Yb.tab}|${null===vb||void 0===vb||null===(ab=vb.background)||void 0===ab?void 0:ab.geometryKey}`, null !== (Ub = null === vb || void 0 === vb || null === (Ab = vb.background) || void 0 === Ab ? void 0 : Ab.ratio) && void 0 !== Ub ? Ub : 2);
+      if (sM(Xb, vb, Yb.open, Rb.view.zoom), !vb || !Yb.open) return null;
+      const kb = vb.local ? vb.background : null,
+        yb = {
+          "--map-ratio": String(null !== (Mb = null === kb || void 0 === kb ? void 0 : kb.ratio) && void 0 !== Mb ? Mb : 2),
+          backgroundColor: null === kb || void 0 === kb ? void 0 : kb.colour
         },
-        Cb = {
-          "--map-zoom": String(lb.view.zoom),
-          transform: `translate(${100*lb.view.x}%, ${100*lb.view.y}%) scale(${lb.view.zoom})`
+        Zb = {
+          "--map-zoom": String(Rb.view.zoom),
+          transform: `translate(${100*Rb.view.x}%, ${100*Rb.view.y}%) scale(${Rb.view.zoom})`
         };
-      return (0, EW.jsx)(dW.c, {
-        show: Ub.open,
-        close: ab.dismiss,
+      return (0, IM.jsx)(rM.d, {
+        show: Yb.open,
+        close: Tb.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, EW.jsxs)("section", {
+        children: (0, IM.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockMapPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockMapTitle",
           tabIndex: -1,
-          ref: Hb,
-          onKeyDown: wW,
-          children: [(0, EW.jsxs)("header", {
+          ref: eb,
+          onKeyDown: oM,
+          children: [(0, IM.jsxs)("header", {
             className: "SkyblockSkillsHeader",
-            children: [(0, EW.jsxs)("div", {
+            children: [(0, IM.jsxs)("div", {
               className: "SkyblockMapTitle",
-              children: [(0, EW.jsx)("h2", {
+              children: [(0, IM.jsx)("h2", {
                 id: "skyblockMapTitle",
-                children: Ib("skyblockGame:map")
-              }), fb.minimap && (0, EW.jsx)("p", {
-                children: fb.minimap.caption
+                children: Bb("skyblockGame:map")
+              }), vb.minimap && (0, IM.jsx)("p", {
+                children: vb.minimap.caption
               })]
-            }), (0, EW.jsx)("div", {
+            }), (0, IM.jsx)("div", {
               className: "SkyblockMapTabs",
               "data-pad-tabs": "1",
-              children: ["local", "world"].map((bb => (0, EW.jsx)("button", {
+              children: ["local", "world"].map((bb => (0, IM.jsx)("button", {
                 type: "button",
                 "data-pad-tab": !0,
-                "data-pad-selected": bb === Ub.tab ? "true" : void 0,
-                className: YW()({
-                  Selected: bb === Ub.tab
+                "data-pad-selected": bb === Yb.tab ? "true" : void 0,
+                className: zM()({
+                  Selected: bb === Yb.tab
                 }),
-                "aria-pressed": bb === Ub.tab,
+                "aria-pressed": bb === Yb.tab,
                 onClick: () => {
-                  ab.selectTab(bb)
+                  Tb.selectTab(bb)
                 },
-                children: Ib("local" === bb ? "skyblockGame:mapLocal" : "skyblockGame:mapWorld")
+                children: Bb("local" === bb ? "skyblockGame:mapLocal" : "skyblockGame:mapWorld")
               }, bb)))
-            }), (0, EW.jsx)(AW.j, {
+            }), (0, IM.jsx)(KM.k, {
               padIgnore: !0,
-              onClick: ab.dismiss
+              onClick: Tb.dismiss
             })]
-          }), (0, EW.jsx)("div", {
+          }), (0, IM.jsx)("div", {
             className: "SkyblockMapBody",
-            children: (0, EW.jsxs)("div", {
-              ref: Mb,
-              className: YW()("SkyblockMapCanvas", {
-                Local: fb.local,
-                Overview: !fb.local,
-                Zoomed: lb.view.zoom > 1
+            children: (0, IM.jsxs)("div", {
+              ref: Lb,
+              className: zM()("SkyblockMapCanvas", {
+                Local: vb.local,
+                Overview: !vb.local,
+                Zoomed: Rb.view.zoom > 1
               }),
-              style: eb,
-              children: [(0, EW.jsx)("div", {
+              style: yb,
+              children: [(0, IM.jsx)("div", {
                 className: "SkyblockMapZoomLayer",
-                style: mb ? Cb : void 0,
-                children: (0, EW.jsxs)("div", {
+                style: jb ? Zb : void 0,
+                children: (0, IM.jsxs)("div", {
                   className: "SkyblockMapArea",
-                  ref: nb,
-                  children: [Qb && (0, EW.jsx)(qW, {
+                  ref: Xb,
+                  children: [kb && (0, IM.jsx)(uM, {
                     className: "SkyblockMapTerrain",
-                    imageKey: Qb.imageKey,
-                    fallbackImageKey: Qb.fallbackImageKey,
-                    geometryKey: Qb.geometryKey,
-                    alt: Qb.label
-                  }), fb.local && (0, EW.jsx)(SW, {
-                    mount: Tb.display.mountMapSearchArea
-                  }), !fb.local && (0, EW.jsx)("svg", {
+                    imageKey: kb.imageKey,
+                    fallbackImageKey: kb.fallbackImageKey,
+                    geometryKey: kb.geometryKey,
+                    alt: kb.label
+                  }), vb.local && (0, IM.jsx)(wM, {
+                    mount: Eb.display.mountMapSearchArea
+                  }), !vb.local && (0, IM.jsx)("svg", {
                     className: "SkyblockMapConnections",
                     viewBox: "0 0 100 100",
                     preserveAspectRatio: "none",
                     "aria-hidden": "true",
-                    children: fb.connections.map((bb => (0, EW.jsx)("line", {
-                      className: YW()({
+                    children: vb.connections.map((bb => (0, IM.jsx)("line", {
+                      className: zM()({
                         Explored: bb.explored
                       }),
                       x1: bb.start[0],
@@ -5400,161 +5400,161 @@ export const modules = {
                       x2: bb.end[0],
                       y2: bb.end[1]
                     }, bb.id)))
-                  }), fb.points.map((bb => {
-                    const cb = !fb.local && bb.thumbnail ? ZW[bb.thumbnail] : void 0;
-                    return (0, EW.jsxs)("div", {
-                      className: YW()("SkyblockMapNode", {
+                  }), vb.points.map((bb => {
+                    const ab = !vb.local && bb.thumbnail ? QM[bb.thumbnail] : void 0;
+                    return (0, IM.jsxs)("div", {
+                      className: zM()("SkyblockMapNode", {
                         Current: bb.current
                       }),
                       style: {
                         left: `${bb.position[0]}%`,
                         top: `${bb.position[1]}%`
                       },
-                      children: [(0, EW.jsxs)(AW.d, {
-                        className: YW()("SkyblockMapPin", {
+                      children: [(0, IM.jsxs)(KM.g, {
+                        className: zM()("SkyblockMapPin", {
                           Unknown: !bb.visited,
                           Current: bb.current
                         }),
-                        disabled: Ub.pending,
+                        disabled: Yb.pending,
                         onClick: () => {
-                          ab.travel(bb.travelKind, bb.travelId)
+                          Tb.travel(bb.travelKind, bb.travelId)
                         },
-                        children: [cb && (0, EW.jsx)("img", {
+                        children: [ab && (0, IM.jsx)("img", {
                           className: "SkyblockMapZoneThumbnail",
-                          src: cb,
+                          src: ab,
                           alt: ""
-                        }), !cb && (0, EW.jsx)("span", {
+                        }), !ab && (0, IM.jsx)("span", {
                           className: "SkyblockMapPinSymbol",
                           "aria-hidden": "true",
-                          children: (0, EW.jsx)(OW, {
+                          children: (0, IM.jsx)(FM, {
                             icon: bb.icon
                           })
-                        }), (0, EW.jsx)("span", {
+                        }), (0, IM.jsx)("span", {
                           className: "SkyblockMapPinName",
                           children: bb.name
                         })]
-                      }), bb.current && (0, EW.jsx)("span", {
-                        className: YW()("SkyblockMapHereBadge", {
+                      }), bb.current && (0, IM.jsx)("span", {
+                        className: zM()("SkyblockMapHereBadge", {
                           Above: bb.position[1] > 50
                         }),
-                        children: Ib("skyblockGame:mapYouAreHere")
+                        children: Bb("skyblockGame:mapYouAreHere")
                       })]
                     }, bb.id)
-                  })), fb.portals.map((bb => (0, EW.jsx)("div", {
+                  })), vb.portals.map((bb => (0, IM.jsx)("div", {
                     className: "SkyblockMapNode",
                     style: {
                       left: `clamp(3rem, ${bb.position[0]}%, calc(100% - 3rem))`,
                       top: `clamp(2rem, ${bb.position[1]}%, calc(100% - 2rem))`
                     },
-                    children: (0, EW.jsxs)(AW.d, {
+                    children: (0, IM.jsxs)(KM.g, {
                       className: "SkyblockMapPin",
-                      disabled: Ub.pending,
+                      disabled: Yb.pending,
                       onClick: () => {
-                        ab.travel(bb.travelKind, bb.travelId)
+                        Tb.travel(bb.travelKind, bb.travelId)
                       },
-                      children: [(0, EW.jsx)("span", {
+                      children: [(0, IM.jsx)("span", {
                         className: "SkyblockMapPinSymbol",
                         style: {
                           color: bb.colour
                         },
                         "aria-hidden": "true",
-                        children: (0, EW.jsx)(OW, {
+                        children: (0, IM.jsx)(FM, {
                           icon: bb.icon
                         })
-                      }), (0, EW.jsx)("span", {
+                      }), (0, IM.jsx)("span", {
                         className: "SkyblockMapPinName",
                         children: bb.name
                       })]
                     })
-                  }, bb.id))), fb.local && (0, EW.jsx)(GW, {
-                    controller: Tb
+                  }, bb.id))), vb.local && (0, IM.jsx)(hM, {
+                    controller: Eb
                   })]
                 })
-              }), mb && (0, EW.jsxs)("div", {
+              }), jb && (0, IM.jsxs)("div", {
                 className: "SkyblockMapZoomControls",
-                children: [(0, EW.jsx)("button", {
+                children: [(0, IM.jsx)("button", {
                   type: "button",
-                  "aria-label": Ib("skyblockGame:mapZoomIn"),
-                  disabled: lb.view.zoom >= 12,
+                  "aria-label": Bb("skyblockGame:mapZoomIn"),
+                  disabled: Rb.view.zoom >= 12,
                   onClick: () => {
-                    lb.zoomBy(1.5)
+                    Rb.zoomBy(1.5)
                   },
                   children: "+"
-                }), (0, EW.jsx)("button", {
+                }), (0, IM.jsx)("button", {
                   type: "button",
-                  "aria-label": Ib("skyblockGame:mapZoomOut"),
-                  disabled: lb.view.zoom <= 1,
+                  "aria-label": Bb("skyblockGame:mapZoomOut"),
+                  disabled: Rb.view.zoom <= 1,
                   onClick: () => {
-                    lb.zoomBy(1 / 1.5)
+                    Rb.zoomBy(1 / 1.5)
                   },
                   children: "\u2212"
                 })]
-              }), (0, EW.jsx)("div", {
+              }), (0, IM.jsx)("div", {
                 className: "SkyblockMapFeedback",
                 role: "status",
                 "aria-live": "polite",
-                children: Ub.feedback
+                children: Yb.feedback
               })]
             })
-          }), (0, EW.jsxs)("footer", {
+          }), (0, IM.jsxs)("footer", {
             className: "SkyblockMapFooter",
-            children: [fb.progress && (0, EW.jsxs)("div", {
+            children: [vb.progress && (0, IM.jsxs)("div", {
               className: "SkyblockMapProgress",
-              children: [(0, EW.jsx)("span", {
-                children: fb.progress
-              }), (0, EW.jsx)(oW, {
-                percent: fb.percent,
-                label: fb.progress
+              children: [(0, IM.jsx)("span", {
+                children: vb.progress
+              }), (0, IM.jsx)(tM, {
+                percent: vb.percent,
+                label: vb.progress
               })]
-            }), fb.noLandmarks && (0, EW.jsx)("span", {
-              children: Ib("skyblockGame:mapNoLandmarks")
-            }), fb.canTravel && (0, EW.jsx)("span", {
+            }), vb.noLandmarks && (0, IM.jsx)("span", {
+              children: Bb("skyblockGame:mapNoLandmarks")
+            }), vb.canTravel && (0, IM.jsx)("span", {
               className: "SkyblockMapHint",
-              children: Ib("skyblockGame:mapTravelHint")
+              children: Bb("skyblockGame:mapTravelHint")
             })]
           })]
         })
       })
     }
 
-    function Wa(bb) {
+    function aT(bb) {
       let {
-        view: cb,
-        controller: sb,
-        navigation: kb
+        view: ab,
+        controller: Ub,
+        navigation: Ab
       } = bb;
       const {
-        t: Wb
-      } = (0, PW.E)(), {
-        isTouchScreen: ab
-      } = (0, hW.p)(["isTouchScreen"]);
-      return (0, EW.jsxs)("aside", {
+        t: Mb
+      } = (0, WM.A)(), {
+        isTouchScreen: Tb
+      } = (0, xM.n)(["isTouchScreen"]);
+      return (0, IM.jsxs)("aside", {
         className: "SkyblockMinimap",
-        "aria-label": Wb("skyblockGame:mapLocal"),
-        children: [ab && (0, EW.jsx)(AW.d, {
+        "aria-label": Mb("skyblockGame:mapLocal"),
+        children: [Tb && (0, IM.jsx)(KM.g, {
           className: "SkyblockMinimapOpen",
-          onClick: sb.showLocal,
-          children: Wb("skyblockGame:map")
-        }), (0, EW.jsxs)("div", {
+          onClick: Ub.showLocal,
+          children: Mb("skyblockGame:map")
+        }), (0, IM.jsxs)("div", {
           className: "SkyblockMinimapFrame",
           style: {
-            backgroundColor: cb.colour
+            backgroundColor: ab.colour
           },
-          children: [(0, EW.jsxs)("div", {
+          children: [(0, IM.jsxs)("div", {
             className: "SkyblockMinimapTerrain",
-            ref: kb.display.mountTerrain,
+            ref: Ab.display.mountTerrain,
             style: {
-              width: cb.width,
-              height: cb.height
+              width: ab.width,
+              height: ab.height
             },
-            children: [(0, EW.jsx)(qW, {
-              imageKey: cb.imageKey,
-              fallbackImageKey: cb.fallbackImageKey,
-              geometryKey: cb.geometryKey,
-              alt: cb.label
-            }), (0, EW.jsx)(SW, {
-              mount: kb.display.mountMinimapSearchArea
-            }), cb.markers.map((bb => (0, EW.jsx)("span", {
+            children: [(0, IM.jsx)(uM, {
+              imageKey: ab.imageKey,
+              fallbackImageKey: ab.fallbackImageKey,
+              geometryKey: ab.geometryKey,
+              alt: ab.label
+            }), (0, IM.jsx)(wM, {
+              mount: Ab.display.mountMinimapSearchArea
+            }), ab.markers.map((bb => (0, IM.jsx)("span", {
               className: "SkyblockMinimapLandmark",
               style: {
                 left: `${bb.position[0]}%`,
@@ -5562,192 +5562,192 @@ export const modules = {
                 color: bb.colour
               },
               title: bb.name,
-              children: (0, EW.jsx)(OW, {
+              children: (0, IM.jsx)(FM, {
                 icon: bb.icon
               })
             }, bb.id)))]
-          }), (0, EW.jsx)("div", {
+          }), (0, IM.jsx)("div", {
             className: "SkyblockMinimapPlayer",
-            title: Wb("skyblockGame:mapYouAreHere"),
-            children: (0, EW.jsx)(OW, {
+            title: Mb("skyblockGame:mapYouAreHere"),
+            children: (0, IM.jsx)(FM, {
               icon: "player"
             })
           })]
-        }), (0, EW.jsx)("div", {
+        }), (0, IM.jsx)("div", {
           className: "SkyblockMinimapCaption",
-          children: cb.caption
+          children: ab.caption
         })]
       })
     }
 
-    function aa(bb) {
+    function UT(bb) {
       let {
-        controller: cb
+        controller: ab
       } = bb;
-      return (0, EW.jsxs)("div", {
+      return (0, IM.jsxs)("div", {
         className: "SkyblockCompass",
-        ref: cb.display.mountCompass,
-        children: [(0, EW.jsx)("span", {
+        ref: ab.display.mountCompass,
+        children: [(0, IM.jsx)("span", {
           className: "SkyblockCompassArrow",
           "aria-hidden": "true",
           children: "\u25bc"
-        }), (0, EW.jsx)("div", {
+        }), (0, IM.jsx)("div", {
           className: "SkyblockCompassTrack",
           "aria-hidden": "true"
-        }), (0, EW.jsx)("div", {
+        }), (0, IM.jsx)("div", {
           className: "SkyblockCompassLabel"
         })]
       })
     }
 
-    function Ta(bb) {
+    function AT(bb) {
       let {
-        controller: cb,
-        surface: sb
+        controller: ab,
+        surface: Ub
       } = bb;
       const {
-        t: kb
-      } = (0, PW.E)(), Wb = (0, DW.h)(as, cb.getSnapshot()), ab = rW();
-      return Wb.enabled ? (0, EW.jsxs)(EW.Fragment, {
-        children: ["hud" === sb && (0, EW.jsx)(JW.e, {
+        t: Ab
+      } = (0, WM.A)(), Mb = (0, HM.i)(TU, ab.getSnapshot()), Tb = lM();
+      return Mb.enabled ? (0, IM.jsxs)(IM.Fragment, {
+        children: ["hud" === Ub && (0, IM.jsx)(iM.e, {
           placement: "statBars",
-          children: Wb.hud && (0, EW.jsxs)("div", {
+          children: Mb.hud && (0, IM.jsxs)("div", {
             className: "SkyblockSkillsHudCompact",
             style: {
-              "--skill-colour": Wb.hud.colour
+              "--skill-colour": Mb.hud.colour
             },
-            children: [(0, EW.jsx)(oW, {
-              percent: Wb.hud.skill.percent,
-              label: Wb.hud.skill.xp,
-              levelUpToken: Wb.hud.levelUpToken,
-              colour: Wb.hud.colour
-            }), (0, EW.jsxs)("div", {
+            children: [(0, IM.jsx)(tM, {
+              percent: Mb.hud.skill.percent,
+              label: Mb.hud.skill.xp,
+              levelUpToken: Mb.hud.levelUpToken,
+              colour: Mb.hud.colour
+            }), (0, IM.jsxs)("div", {
               className: "SkyblockSkillsHudCompactText SmallTextBold",
-              children: [(0, EW.jsxs)("span", {
-                children: [Wb.hud.skill.label, " \xb7 ", Wb.hud.skill.level]
-              }), (0, EW.jsx)("span", {
-                children: Wb.hud.gain
+              children: [(0, IM.jsxs)("span", {
+                children: [Mb.hud.skill.label, " \xb7 ", Mb.hud.skill.level]
+              }), (0, IM.jsx)("span", {
+                children: Mb.hud.gain
               })]
             })]
           })
-        }), "hud" === sb && (0, EW.jsx)(JW.e, {
-          children: Wb.hud && (0, EW.jsxs)("div", {
+        }), "hud" === Ub && (0, IM.jsx)(iM.e, {
+          children: Mb.hud && (0, IM.jsxs)("div", {
             className: "SkyblockSkillsHud",
-            children: [(0, EW.jsxs)("div", {
+            children: [(0, IM.jsxs)("div", {
               className: "SkyblockSkillsHudHeading",
-              children: [(0, EW.jsx)("strong", {
-                children: Wb.hud.skill.label
-              }), (0, EW.jsx)("span", {
-                children: Wb.hud.gain
+              children: [(0, IM.jsx)("strong", {
+                children: Mb.hud.skill.label
+              }), (0, IM.jsx)("span", {
+                children: Mb.hud.gain
               })]
-            }), (0, EW.jsx)(oW, {
-              percent: Wb.hud.skill.percent,
-              label: Wb.hud.skill.xp,
-              levelUpToken: Wb.hud.levelUpToken,
-              colour: Wb.hud.colour
-            }), (0, EW.jsxs)("div", {
+            }), (0, IM.jsx)(tM, {
+              percent: Mb.hud.skill.percent,
+              label: Mb.hud.skill.xp,
+              levelUpToken: Mb.hud.levelUpToken,
+              colour: Mb.hud.colour
+            }), (0, IM.jsxs)("div", {
               className: "SkyblockSkillsHudProgress",
-              children: [(0, EW.jsx)("span", {
-                children: Wb.hud.skill.level
-              }), (0, EW.jsx)("span", {
-                children: Wb.hud.skill.xp
+              children: [(0, IM.jsx)("span", {
+                children: Mb.hud.skill.level
+              }), (0, IM.jsx)("span", {
+                children: Mb.hud.skill.xp
               })]
             })]
           })
-        }), "menu" === sb && (0, EW.jsx)(dW.c, {
-          show: Wb.open,
-          close: cb.dismiss,
+        }), "menu" === Ub && (0, IM.jsx)(rM.d, {
+          show: Mb.open,
+          close: ab.dismiss,
           togglePointerLock: !1,
           className: "SkyblockSkillsOverlay",
-          children: (0, EW.jsxs)("section", {
+          children: (0, IM.jsxs)("section", {
             className: "SkyblockSkillsPanel",
             role: "dialog",
             "aria-modal": "true",
             "aria-labelledby": "skyblockSkillsTitle",
             tabIndex: -1,
-            ref: ab,
-            onKeyDown: wW,
-            children: [(0, EW.jsxs)("header", {
+            ref: Tb,
+            onKeyDown: oM,
+            children: [(0, IM.jsxs)("header", {
               className: "SkyblockSkillsHeader",
-              children: [(0, EW.jsxs)("div", {
-                children: [(0, EW.jsx)("h2", {
+              children: [(0, IM.jsxs)("div", {
+                children: [(0, IM.jsx)("h2", {
                   id: "skyblockSkillsTitle",
-                  children: kb("skyblockGame:skills")
-                }), (0, EW.jsx)("p", {
-                  children: kb("skyblockGame:skillsIntro")
+                  children: Ab("skyblockGame:skills")
+                }), (0, IM.jsx)("p", {
+                  children: Ab("skyblockGame:skillsIntro")
                 })]
-              }), (0, EW.jsx)(AW.j, {
+              }), (0, IM.jsx)(KM.k, {
                 padIgnore: !0,
-                onClick: cb.dismiss
+                onClick: ab.dismiss
               })]
-            }), (0, EW.jsxs)("div", {
+            }), (0, IM.jsxs)("div", {
               className: "SkyblockSkillsBody",
-              children: [(0, EW.jsx)("div", {
+              children: [(0, IM.jsx)("div", {
                 className: "SkyblockSkillsList",
                 "data-pad-select-on-focus": !0,
-                children: Wb.skills.map((bb => (0, EW.jsxs)(AW.d, {
-                  className: YW()("SkyblockSkillCard", {
+                children: Mb.skills.map((bb => (0, IM.jsxs)(KM.g, {
+                  className: zM()("SkyblockSkillCard", {
                     Selected: bb.selected
                   }),
                   ariaPressed: bb.selected,
                   onClick: () => {
-                    cb.select(bb.id)
+                    ab.select(bb.id)
                   },
-                  children: [(0, EW.jsx)("div", {
+                  children: [(0, IM.jsx)("div", {
                     className: "SkyblockSkillIcon",
-                    children: (0, EW.jsx)(BW.d, {
+                    children: (0, IM.jsx)(mM.c, {
                       itemName: bb.icon,
                       amount: 0
                     })
-                  }), (0, EW.jsxs)("div", {
+                  }), (0, IM.jsxs)("div", {
                     className: "SkyblockSkillSummary",
-                    children: [(0, EW.jsxs)("div", {
+                    children: [(0, IM.jsxs)("div", {
                       className: "SkyblockSkillTitle",
-                      children: [(0, EW.jsx)("strong", {
+                      children: [(0, IM.jsx)("strong", {
                         children: bb.label
-                      }), (0, EW.jsx)("span", {
+                      }), (0, IM.jsx)("span", {
                         children: bb.level
                       })]
-                    }), (0, EW.jsx)(oW, {
+                    }), (0, IM.jsx)(tM, {
                       percent: bb.percent,
                       label: `${bb.label}: ${bb.xp}`
-                    }), (0, EW.jsx)("span", {
+                    }), (0, IM.jsx)("span", {
                       className: "SkyblockSkillXp",
                       children: bb.xp
                     })]
                   })]
                 }, bb.id)))
-              }), Wb.detail && (0, EW.jsxs)("div", {
+              }), Mb.detail && (0, IM.jsxs)("div", {
                 className: "SkyblockSkillDetail",
-                children: [(0, EW.jsx)("div", {
+                children: [(0, IM.jsx)("div", {
                   className: "SkyblockSkillDetailIcon",
-                  children: (0, EW.jsx)(BW.d, {
-                    itemName: Wb.detail.icon,
+                  children: (0, IM.jsx)(mM.c, {
+                    itemName: Mb.detail.icon,
                     amount: 0
                   })
-                }), (0, EW.jsx)("h3", {
-                  children: Wb.detail.label
-                }), (0, EW.jsx)("strong", {
+                }), (0, IM.jsx)("h3", {
+                  children: Mb.detail.label
+                }), (0, IM.jsx)("strong", {
                   className: "SkyblockSkillDetailLevel",
-                  children: Wb.detail.level
-                }), (0, EW.jsx)("p", {
-                  children: Wb.detail.description
-                }), (0, EW.jsxs)("div", {
+                  children: Mb.detail.level
+                }), (0, IM.jsx)("p", {
+                  children: Mb.detail.description
+                }), (0, IM.jsxs)("div", {
                   className: "SkyblockSkillBenefit",
-                  children: [(0, EW.jsx)("strong", {
-                    children: kb("skyblockGame:currentBenefit")
-                  }), (0, EW.jsx)("span", {
-                    children: Wb.detail.benefit
+                  children: [(0, IM.jsx)("strong", {
+                    children: Ab("skyblockGame:currentBenefit")
+                  }), (0, IM.jsx)("span", {
+                    children: Mb.detail.benefit
                   })]
-                }), (0, EW.jsx)(oW, {
-                  percent: Wb.detail.percent,
-                  label: Wb.detail.xp
-                }), (0, EW.jsx)("p", {
-                  children: Wb.detail.xp
-                }), (0, EW.jsx)("h4", {
-                  children: kb("skyblockGame:earnXp")
-                }), (0, EW.jsx)("ul", {
-                  children: Wb.detail.sources.map((bb => (0, EW.jsx)("li", {
+                }), (0, IM.jsx)(tM, {
+                  percent: Mb.detail.percent,
+                  label: Mb.detail.xp
+                }), (0, IM.jsx)("p", {
+                  children: Mb.detail.xp
+                }), (0, IM.jsx)("h4", {
+                  children: Ab("skyblockGame:earnXp")
+                }), (0, IM.jsx)("ul", {
+                  children: Mb.detail.sources.map((bb => (0, IM.jsx)("li", {
                     children: bb
                   }, bb)))
                 })]
@@ -5757,274 +5757,274 @@ export const modules = {
         })]
       }) : null
     }
-    var Ua = sb(1341),
-      Ia = sb(4556),
-      Ha = sb(334);
+    var MT = Ub(1268),
+      TT = Ub(4522),
+      ET = Ub(307);
 
-    function fa(bb) {
+    function YT(bb) {
       let {
-        item: cb
+        item: ab
       } = bb;
-      return (0, EW.jsx)("span", {
+      return (0, IM.jsx)("span", {
         className: "SkyblockQuestStepIcon",
         "aria-hidden": "true",
-        children: (0, EW.jsx)(BW.d, {
-          itemName: cb,
+        children: (0, IM.jsx)(mM.c, {
+          itemName: ab,
           amount: 0
         })
       })
     }
 
-    function Ma(bb) {
+    function BT(bb) {
       let {
-        name: cb,
-        percent: sb,
-        progress: kb
+        name: ab,
+        percent: Ub,
+        progress: Ab
       } = bb;
-      return (0, EW.jsxs)("span", {
+      return (0, IM.jsxs)("span", {
         className: "SkyblockQuestStepBar",
-        children: [(0, EW.jsx)(oW, {
-          percent: sb,
-          label: `${(0,Ha.wb)(cb)}: ${kb}`
-        }), (0, EW.jsx)("span", {
+        children: [(0, IM.jsx)(tM, {
+          percent: Ub,
+          label: `${(0,ET.nb)(ab)}: ${Ab}`
+        }), (0, IM.jsx)("span", {
           className: "SkyblockQuestStepBarLabel",
-          children: kb
+          children: Ab
         })]
       })
     }
 
-    function Xa(bb) {
+    function eT(bb) {
       let {
-        subquests: cb,
-        showDescriptions: sb = !1
+        subquests: ab,
+        showDescriptions: Ub = !1
       } = bb;
-      return (0, EW.jsx)("ul", {
+      return (0, IM.jsx)("ul", {
         className: "SkyblockQuestChecklist",
-        children: cb.map((bb => {
-          const cb = sb && "completed" === bb.status,
-            kb = (0, EW.jsxs)("li", {
-              className: YW()("SkyblockQuestStep", bb.status, {
+        children: ab.map((bb => {
+          const ab = Ub && "completed" === bb.status,
+            Ab = (0, IM.jsxs)("li", {
+              className: zM()("SkyblockQuestStep", bb.status, {
                 JustFinished: bb.justFinished,
                 JustUnlocked: bb.justUnlocked
               }),
-              tabIndex: cb ? 0 : void 0,
-              children: [null !== bb.iconItem && (0, EW.jsx)(fa, {
+              tabIndex: ab ? 0 : void 0,
+              children: [null !== bb.iconItem && (0, IM.jsx)(YT, {
                 item: bb.iconItem
-              }), null === bb.iconItem && (0, EW.jsx)("span", {
+              }), null === bb.iconItem && (0, IM.jsx)("span", {
                 className: "SkyblockQuestStepMark",
                 "aria-hidden": "true",
                 children: "completed" === bb.status ? "\u2713" : "skipped" === bb.status ? "\u2212" : "\u25cb"
-              }), (0, EW.jsxs)("span", {
+              }), (0, IM.jsxs)("span", {
                 className: "SkyblockQuestStepBody",
-                children: [(0, EW.jsx)("strong", {
-                  children: (0, EW.jsx)(Ia.b, {
+                children: [(0, IM.jsx)("strong", {
+                  children: (0, IM.jsx)(TT.c, {
                     text: bb.name
                   })
-                }), sb && !cb && (0, EW.jsx)("span", {
-                  children: (0, EW.jsx)(Ia.b, {
+                }), Ub && !ab && (0, IM.jsx)("span", {
+                  children: (0, IM.jsx)(TT.c, {
                     text: bb.description
                   })
-                }), null !== bb.barPercent && (0, EW.jsx)(Ma, {
+                }), null !== bb.barPercent && (0, IM.jsx)(BT, {
                   name: bb.name,
                   percent: bb.barPercent,
                   progress: bb.progress
-                }), null === bb.barPercent && !cb && (0, EW.jsx)("span", {
+                }), null === bb.barPercent && !ab && (0, IM.jsx)("span", {
                   className: "SkyblockQuestStepStatus",
                   children: bb.statusLabel
                 })]
               })]
             }, bb.id);
-          return cb ? (0, EW.jsx)(Ua.f, {
+          return ab ? (0, IM.jsx)(MT.g, {
             delayShow: 200,
-            tooltipInner: (0, EW.jsxs)("div", {
+            tooltipInner: (0, IM.jsxs)("div", {
               className: "SkyblockQuestStepTooltip",
-              children: [(0, EW.jsx)("span", {
-                children: (0, EW.jsx)(Ia.b, {
+              children: [(0, IM.jsx)("span", {
+                children: (0, IM.jsx)(TT.c, {
                   text: bb.description
                 })
-              }), (0, EW.jsx)("strong", {
+              }), (0, IM.jsx)("strong", {
                 children: bb.statusLabel
               })]
             }),
-            children: kb
-          }, bb.id) : kb
+            children: Ab
+          }, bb.id) : Ab
         }))
       })
     }
 
-    function na(bb) {
+    function vT(bb) {
       let {
-        quest: cb,
-        select: sb
+        quest: ab,
+        select: Ub
       } = bb;
       const {
-        t: kb
-      } = (0, PW.E)(), Wb = cb.focusStep;
-      return (0, EW.jsxs)(AW.d, {
-        className: YW()("SkyblockQuestCard", {
-          Selected: cb.selected,
-          Tracked: cb.tracked
+        t: Ab
+      } = (0, WM.A)(), Mb = ab.focusStep;
+      return (0, IM.jsxs)(KM.g, {
+        className: zM()("SkyblockQuestCard", {
+          Selected: ab.selected,
+          Tracked: ab.tracked
         }),
         onClick: () => {
-          sb(cb.id)
+          Ub(ab.id)
         },
-        children: [(0, EW.jsxs)("div", {
+        children: [(0, IM.jsxs)("div", {
           className: "SkyblockQuestCardTitle",
-          children: [(0, EW.jsx)("strong", {
-            children: (0, EW.jsx)(Ia.b, {
-              text: cb.name
+          children: [(0, IM.jsx)("strong", {
+            children: (0, IM.jsx)(TT.c, {
+              text: ab.name
             })
-          }), cb.tracked && (0, EW.jsx)("span", {
+          }), ab.tracked && (0, IM.jsx)("span", {
             className: "SkyblockQuestTrackingBadge",
-            children: kb("skyblockGame:currentQuest")
+            children: Ab("skyblockGame:currentQuest")
           })]
-        }), Wb && (0, EW.jsxs)("div", {
+        }), Mb && (0, IM.jsxs)("div", {
           className: "SkyblockQuestCardStep",
-          children: [null !== Wb.iconItem && (0, EW.jsx)(fa, {
-            item: Wb.iconItem
-          }), (0, EW.jsx)(Ma, {
-            name: Wb.name,
-            percent: Wb.barPercent,
-            progress: Wb.progress
+          children: [null !== Mb.iconItem && (0, IM.jsx)(YT, {
+            item: Mb.iconItem
+          }), (0, IM.jsx)(BT, {
+            name: Mb.name,
+            percent: Mb.barPercent,
+            progress: Mb.progress
           })]
-        }), (0, EW.jsx)("span", {
+        }), (0, IM.jsx)("span", {
           className: "SkyblockQuestProgress",
-          children: cb.progress
+          children: ab.progress
         })]
       })
     }
 
-    function ma(bb) {
+    function LT(bb) {
       let {
-        controller: cb,
-        surface: sb
+        controller: ab,
+        surface: Ub
       } = bb;
-      const kb = (0, DW.h)(Hs, cb.getSnapshot()),
+      const Ab = (0, HM.i)(eU, ab.getSnapshot()),
         {
-          t: Wb
-        } = (0, PW.E)(),
-        ab = rW();
-      return kb.enabled ? (0, EW.jsxs)(EW.Fragment, {
-        children: ["hud" === sb && (0, EW.jsx)(EW.Fragment, {
-          children: kb.tracked && (0, EW.jsx)("div", {
+          t: Mb
+        } = (0, WM.A)(),
+        Tb = lM();
+      return Ab.enabled ? (0, IM.jsxs)(IM.Fragment, {
+        children: ["hud" === Ub && (0, IM.jsx)(IM.Fragment, {
+          children: Ab.tracked && (0, IM.jsx)("div", {
             className: "SkyblockQuestTracker",
-            style: Is,
-            children: (0, EW.jsxs)("div", {
+            style: BU,
+            children: (0, IM.jsxs)("div", {
               className: "SkyblockQuestTrackerBody",
-              children: [kb.trackedStepPulse > 0 && (0, EW.jsx)("span", {
+              children: [Ab.trackedStepPulse > 0 && (0, IM.jsx)("span", {
                 className: "SkyblockQuestTrackerPulse",
                 "aria-hidden": "true"
-              }, kb.trackedStepPulse), (0, EW.jsx)("span", {
+              }, Ab.trackedStepPulse), (0, IM.jsx)("span", {
                 className: "SkyblockQuestEyebrow",
-                children: Wb("skyblockGame:currentQuest")
-              }), (0, EW.jsxs)("span", {
+                children: Mb("skyblockGame:currentQuest")
+              }), (0, IM.jsxs)("span", {
                 className: "SkyblockQuestTrackerTitle",
-                children: [(0, EW.jsx)("strong", {
-                  children: (0, EW.jsx)(Ia.b, {
-                    text: kb.tracked.name
+                children: [(0, IM.jsx)("strong", {
+                  children: (0, IM.jsx)(TT.c, {
+                    text: Ab.tracked.name
                   })
-                }), null !== kb.tracked.clock && (0, EW.jsx)("span", {
+                }), null !== Ab.tracked.clock && (0, IM.jsx)("span", {
                   className: "SkyblockQuestClock",
-                  children: kb.tracked.clock
+                  children: Ab.tracked.clock
                 })]
-              }), (0, EW.jsx)(Xa, {
-                subquests: kb.tracked.subquests
+              }), (0, IM.jsx)(eT, {
+                subquests: Ab.tracked.subquests
               })]
             })
           })
-        }), "menu" === sb && (0, EW.jsx)(dW.c, {
-          show: kb.open,
-          close: cb.dismiss,
+        }), "menu" === Ub && (0, IM.jsx)(rM.d, {
+          show: Ab.open,
+          close: ab.dismiss,
           togglePointerLock: !1,
           className: "SkyblockSkillsOverlay",
-          children: (0, EW.jsxs)("section", {
+          children: (0, IM.jsxs)("section", {
             className: "SkyblockSkillsPanel SkyblockQuestsPanel",
             role: "dialog",
             "aria-modal": "true",
             "aria-labelledby": "skyblockQuestsTitle",
             tabIndex: -1,
-            ref: ab,
-            onKeyDown: wW,
-            children: [(0, EW.jsxs)("header", {
+            ref: Tb,
+            onKeyDown: oM,
+            children: [(0, IM.jsxs)("header", {
               className: "SkyblockSkillsHeader",
-              children: [(0, EW.jsx)("div", {
-                children: (0, EW.jsx)("h2", {
+              children: [(0, IM.jsx)("div", {
+                children: (0, IM.jsx)("h2", {
                   id: "skyblockQuestsTitle",
-                  children: Wb("skyblockGame:quests")
+                  children: Mb("skyblockGame:quests")
                 })
-              }), (0, EW.jsx)(AW.j, {
+              }), (0, IM.jsx)(KM.k, {
                 padIgnore: !0,
-                onClick: cb.dismiss
+                onClick: ab.dismiss
               })]
-            }), (0, EW.jsxs)("div", {
+            }), (0, IM.jsxs)("div", {
               className: "SkyblockSkillsBody SkyblockQuestsBody",
-              children: [(0, EW.jsxs)("div", {
+              children: [(0, IM.jsxs)("div", {
                 className: "SkyblockQuestList",
-                children: [(0, EW.jsx)("h3", {
-                  children: Wb("skyblockGame:current")
-                }), 0 === kb.active.length && (0, EW.jsx)("p", {
+                children: [(0, IM.jsx)("h3", {
+                  children: Mb("skyblockGame:current")
+                }), 0 === Ab.active.length && (0, IM.jsx)("p", {
                   className: "SkyblockQuestEmpty",
-                  children: Wb("skyblockGame:noActiveQuests")
-                }), kb.active.map((bb => (0, EW.jsx)(na, {
+                  children: Mb("skyblockGame:noActiveQuests")
+                }), Ab.active.map((bb => (0, IM.jsx)(vT, {
                   quest: bb,
-                  select: cb.select
-                }, bb.id))), (0, EW.jsx)("h3", {
-                  children: (0, EW.jsxs)("button", {
+                  select: ab.select
+                }, bb.id))), (0, IM.jsx)("h3", {
+                  children: (0, IM.jsxs)("button", {
                     type: "button",
-                    className: YW()("SkyblockQuestSectionToggle", {
-                      Expanded: kb.completedExpanded
+                    className: zM()("SkyblockQuestSectionToggle", {
+                      Expanded: Ab.completedExpanded
                     }),
-                    "aria-expanded": kb.completedExpanded,
-                    onClick: cb.toggleCompleted,
-                    children: [(0, EW.jsx)("span", {
+                    "aria-expanded": Ab.completedExpanded,
+                    onClick: ab.toggleCompleted,
+                    children: [(0, IM.jsx)("span", {
                       className: "SkyblockQuestSectionCaret",
                       "aria-hidden": "true"
-                    }), Wb("skyblockGame:completed"), (0, EW.jsx)("span", {
+                    }), Mb("skyblockGame:completed"), (0, IM.jsx)("span", {
                       className: "SkyblockQuestSectionCount",
-                      children: kb.completed.length
+                      children: Ab.completed.length
                     })]
                   })
-                }), kb.completedExpanded && 0 === kb.completed.length && (0, EW.jsx)("p", {
+                }), Ab.completedExpanded && 0 === Ab.completed.length && (0, IM.jsx)("p", {
                   className: "SkyblockQuestEmpty",
-                  children: Wb("skyblockGame:noCompletedQuests")
-                }), kb.completedExpanded && kb.completed.map((bb => (0, EW.jsx)(na, {
+                  children: Mb("skyblockGame:noCompletedQuests")
+                }), Ab.completedExpanded && Ab.completed.map((bb => (0, IM.jsx)(vT, {
                   quest: bb,
-                  select: cb.select
+                  select: ab.select
                 }, bb.id)))]
-              }), kb.detail && (0, EW.jsxs)("div", {
+              }), Ab.detail && (0, IM.jsxs)("div", {
                 className: "SkyblockQuestDetail",
-                children: [kb.detail.completed && (0, EW.jsx)("span", {
+                children: [Ab.detail.completed && (0, IM.jsx)("span", {
                   className: "SkyblockQuestEyebrow",
-                  children: Wb("skyblockGame:completedQuest")
-                }), (0, EW.jsx)("h3", {
-                  children: (0, EW.jsx)(Ia.b, {
-                    text: kb.detail.name
+                  children: Mb("skyblockGame:completedQuest")
+                }), (0, IM.jsx)("h3", {
+                  children: (0, IM.jsx)(TT.c, {
+                    text: Ab.detail.name
                   })
-                }), (0, EW.jsx)("p", {
+                }), (0, IM.jsx)("p", {
                   className: "SkyblockQuestDescription",
-                  children: (0, EW.jsx)(Ia.b, {
-                    text: kb.detail.description
+                  children: (0, IM.jsx)(TT.c, {
+                    text: Ab.detail.description
                   })
-                }), (0, EW.jsxs)("p", {
+                }), (0, IM.jsxs)("p", {
                   className: "SkyblockQuestProgress",
-                  children: [kb.detail.progress, null !== kb.detail.clock && (0, EW.jsx)("span", {
+                  children: [Ab.detail.progress, null !== Ab.detail.clock && (0, IM.jsx)("span", {
                     className: "SkyblockQuestClock",
-                    children: kb.detail.clock
+                    children: Ab.detail.clock
                   })]
-                }), (0, EW.jsx)(Xa, {
-                  subquests: kb.detail.subquests,
+                }), (0, IM.jsx)(eT, {
+                  subquests: Ab.detail.subquests,
                   showDescriptions: !0
-                }), kb.detail.tracked && (0, EW.jsx)("p", {
+                }), Ab.detail.tracked && (0, IM.jsx)("p", {
                   className: "SkyblockQuestTrackingStatus",
-                  children: kb.detail.trackLabel
-                }), !kb.detail.completed && !kb.detail.tracked && (0, EW.jsx)(AW.n, {
-                  onClick: cb.trackSelected,
-                  disabled: !kb.detail.canTrack,
-                  children: kb.detail.trackLabel
-                }), kb.detail.canViewDialogue && (0, EW.jsx)(AW.d, {
+                  children: Ab.detail.trackLabel
+                }), !Ab.detail.completed && !Ab.detail.tracked && (0, IM.jsx)(KM.m, {
+                  onClick: ab.trackSelected,
+                  disabled: !Ab.detail.canTrack,
+                  children: Ab.detail.trackLabel
+                }), Ab.detail.canViewDialogue && (0, IM.jsx)(KM.g, {
                   className: "SkyblockQuestViewDialogue",
-                  onClick: cb.viewDialogue,
-                  children: Wb("skyblockDialogue:viewDialogue")
+                  onClick: ab.viewDialogue,
+                  children: Mb("skyblockDialogue:viewDialogue")
                 })]
               })]
             })]
@@ -6032,35 +6032,35 @@ export const modules = {
         })]
       }) : null
     }
-    var la = sb(1039),
-      Qa = sb(2459);
+    var PT = Ub(990),
+      XT = Ub(2424);
 
-    function ea(bb, cb, sb, kb, Wb) {
-      const ab = bb => "linear" === Wb ? bb : {
-          Ra: Wb,
+    function jT(bb, ab, Ub, Ab, Mb) {
+      const Tb = bb => "linear" === Mb ? bb : {
+          DT: Mb,
           point: bb
         },
-        Tb = {};
-      for (const [Ub, Ib] of kb)
-        for (const [cb, sb] of Object.entries(bb(Ub, Ib, ab))) Tb[cb] ??= {
+        Eb = {};
+      for (const [Yb, Bb] of Ab)
+        for (const [ab, Ub] of Object.entries(bb(Yb, Bb, Tb))) Eb[ab] ??= {
           timeline: []
-        }, Tb[cb].timeline.push(sb);
+        }, Eb[ab].timeline.push(Ub);
       return {
-        da: cb,
-        loop: sb,
-        ra: Tb
+        jT: ab,
+        loop: Ub,
+        kT: Eb
       }
     }
-    const Ca = .547,
-      Na = .022,
-      Va = {
+    const RT = .547,
+      kT = .022,
+      yT = {
         drop: -.03,
         torso: -.28,
         nod: -.4,
         arms: -2.85,
         spread: .18
       },
-      La = {
+      ZT = {
         drop: .22,
         torso: .7,
         nod: -.25,
@@ -6069,167 +6069,167 @@ export const modules = {
         spread: .12
       };
 
-    function ua(bb, cb, sb) {
+    function DT(bb, ab, Ub) {
       const {
-        drop: kb = 0,
-        shift: Wb = 0,
-        torso: ab = 0,
-        nod: Tb = 0,
-        tilt: Ub = 0,
-        legs: Ib = [0, 0],
-        arms: Hb = 0,
-        spread: fb = 0
-      } = cb, Mb = Ca * Math.cos(ab) - Na * Math.sin(ab), Xb = Ca * Math.sin(ab) + Na * Math.cos(ab), nb = sb([0, -kb, Wb]);
+        drop: Ab = 0,
+        shift: Mb = 0,
+        torso: Tb = 0,
+        nod: Eb = 0,
+        tilt: Yb = 0,
+        legs: Bb = [0, 0],
+        arms: eb = 0,
+        spread: vb = 0
+      } = ab, Lb = RT * Math.cos(Tb) - kT * Math.sin(Tb), Pb = RT * Math.sin(Tb) + kT * Math.cos(Tb), Xb = Ub([0, -Ab, Mb]);
       return {
         LowerBody: {
           timeFraction: bb,
-          position: nb,
-          rotation: sb([0, 0, 0])
+          position: Xb,
+          rotation: Ub([0, 0, 0])
         },
         UpperBody: {
           timeFraction: bb,
-          position: nb,
-          rotation: sb([ab, 0, Ub])
+          position: Xb,
+          rotation: Ub([Tb, 0, Yb])
         },
         HeadMesh: {
           timeFraction: bb,
-          position: sb([0, Mb - Ca - kb, Xb - Na + Wb]),
-          rotation: sb([ab + Tb, 0, Ub])
+          position: Ub([0, Lb - RT - Ab, Pb - kT + Mb]),
+          rotation: Ub([Tb + Eb, 0, Yb])
         },
         LegLeftMesh: {
           timeFraction: bb,
-          rotation: sb([Ib[0], 0, 0])
+          rotation: Ub([Bb[0], 0, 0])
         },
         LegRightMesh: {
           timeFraction: bb,
-          rotation: sb([Ib[1], 0, 0])
+          rotation: Ub([Bb[1], 0, 0])
         },
         ArmLeftMesh: {
           timeFraction: bb,
-          rotation: sb([Hb, 0, fb])
+          rotation: Ub([eb, 0, vb])
         },
         ArmRightMesh: {
           timeFraction: bb,
-          rotation: sb([Hb, 0, -fb])
+          rotation: Ub([eb, 0, -vb])
         }
       }
     }
 
-    function Ya(bb, cb, sb) {
-      return ea(ua, bb, cb, sb, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "linear")
+    function zT(bb, ab, Ub) {
+      return jT(DT, bb, ab, Ub, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "linear")
     }
 
-    function ha(bb) {
+    function xT(bb) {
       return "number" === typeof bb ? [bb, bb] : bb
     }
 
-    function Ja(bb, cb, sb) {
+    function iT(bb, ab, Ub) {
       const {
-        rise: kb = 0,
-        shift: Wb = 0,
-        torso: ab = 0,
-        twist: Tb = 0,
-        tilt: Ub = 0,
-        nod: Ib = 0,
-        cock: Hb = 0,
-        arms: fb = 0,
-        spread: Mb = 0
-      } = cb, [Xb, nb] = ha(fb), [mb, lb] = ha(Mb);
+        rise: Ab = 0,
+        shift: Mb = 0,
+        torso: Tb = 0,
+        twist: Eb = 0,
+        tilt: Yb = 0,
+        nod: Bb = 0,
+        cock: eb = 0,
+        arms: vb = 0,
+        spread: Lb = 0
+      } = ab, [Pb, Xb] = xT(vb), [jb, Rb] = xT(Lb);
       return {
         TorsoNode: {
           timeFraction: bb,
-          position: sb([0, kb, Wb]),
-          rotation: sb([ab, Tb, Ub])
+          position: Ub([0, Ab, Mb]),
+          rotation: Ub([Tb, Eb, Yb])
         },
         HeadMesh: {
           timeFraction: bb,
-          rotation: sb([Ib, 0, Hb])
+          rotation: Ub([Bb, 0, eb])
         },
         ArmLeftMesh: {
           timeFraction: bb,
-          rotation: sb([Xb, 0, mb])
+          rotation: Ub([Pb, 0, jb])
         },
         ArmRightMesh: {
           timeFraction: bb,
-          rotation: sb([nb, 0, -lb])
+          rotation: Ub([Xb, 0, -Rb])
         }
       }
     }
-    const ga = [1.0625, -1, 0];
+    const fT = [1.0625, -1, 0];
 
-    function Ba(bb) {
+    function mT(bb) {
       return "number" === typeof bb ? [bb, bb] : bb
     }
 
-    function ta(bb, cb, sb) {
+    function pT(bb, ab, Ub) {
       const {
-        drop: kb = 0,
-        shift: Wb = 0,
-        torso: ab = 0,
-        tilt: Tb = 0,
-        nod: Ub = 0,
-        cock: Ib = 0,
-        legs: Hb = [0, 0],
-        arms: fb = 0,
-        spread: Mb = 0
-      } = cb, [Xb, nb] = Ba(fb), [mb, lb] = Ba(Mb), Qb = -ab, eb = -Tb, [Cb, Nb, Vb] = function(bb, cb) {
-        const [sb, kb, Wb] = [-ga[0], ga[1], -ga[2]], ab = sb * Math.cos(cb) - kb * Math.sin(cb), Tb = sb * Math.sin(cb) + kb * Math.cos(cb);
-        return [ab - sb, -(Tb * Math.cos(bb) - Wb * Math.sin(bb) - kb), Tb * Math.sin(bb) + Wb * Math.cos(bb) - Wb]
-      }(Qb, eb), Lb = sb([0, -kb, Wb]);
+        drop: Ab = 0,
+        shift: Mb = 0,
+        torso: Tb = 0,
+        tilt: Eb = 0,
+        nod: Yb = 0,
+        cock: Bb = 0,
+        legs: eb = [0, 0],
+        arms: vb = 0,
+        spread: Lb = 0
+      } = ab, [Pb, Xb] = mT(vb), [jb, Rb] = mT(Lb), kb = -Tb, yb = -Eb, [Zb, Db, zb] = function(bb, ab) {
+        const [Ub, Ab, Mb] = [-fT[0], fT[1], -fT[2]], Tb = Ub * Math.cos(ab) - Ab * Math.sin(ab), Eb = Ub * Math.sin(ab) + Ab * Math.cos(ab);
+        return [Tb - Ub, -(Eb * Math.cos(bb) - Mb * Math.sin(bb) - Ab), Eb * Math.sin(bb) + Mb * Math.cos(bb) - Mb]
+      }(kb, yb), xb = Ub([0, -Ab, Mb]);
       return {
         TorsoNode: {
           timeFraction: bb,
-          position: sb([Cb, Nb - kb, Vb + Wb]),
-          rotation: sb([Qb, 0, eb])
+          position: Ub([Zb, Db - Ab, zb + Mb]),
+          rotation: Ub([kb, 0, yb])
         },
         HeadMesh: {
           timeFraction: bb,
-          rotation: sb([-Ub, 0, -Ib])
+          rotation: Ub([-Yb, 0, -Bb])
         },
         ArmLeftMesh: {
           timeFraction: bb,
-          rotation: sb([-Xb, 0, -mb])
+          rotation: Ub([-Pb, 0, -jb])
         },
         ArmRightMesh: {
           timeFraction: bb,
-          rotation: sb([-nb, 0, lb])
+          rotation: Ub([-Xb, 0, Rb])
         },
         LegLeftMesh: {
           timeFraction: bb,
-          position: Lb,
-          rotation: sb([-Hb[0], 0, 0])
+          position: xb,
+          rotation: Ub([-eb[0], 0, 0])
         },
         LegRightMesh: {
           timeFraction: bb,
-          position: Lb,
-          rotation: sb([-Hb[1], 0, 0])
+          position: xb,
+          rotation: Ub([-eb[1], 0, 0])
         }
       }
     }
-    var ya = sb(36717),
-      Pa = sb(38080),
-      Da = sb(38240);
+    var NT = Ub(36471),
+      WT = Ub(37803),
+      HT = Ub(37946);
 
-    function Ea(bb, cb, sb) {
-      var kb, Wb;
-      const ab = function() {
+    function IT(bb, ab, Ub) {
+      var Ab, Mb;
+      const Tb = function() {
           let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-          return bb + ((arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0) - bb) * sb
+          return bb + ((arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0) - bb) * Ub
         },
-        [Tb, Ub] = null !== (kb = bb.legs) && void 0 !== kb ? kb : [0, 0],
-        [Ib, Hb] = null !== (Wb = cb.legs) && void 0 !== Wb ? Wb : [0, 0];
+        [Eb, Yb] = null !== (Ab = bb.legs) && void 0 !== Ab ? Ab : [0, 0],
+        [Bb, eb] = null !== (Mb = ab.legs) && void 0 !== Mb ? Mb : [0, 0];
       return {
-        drop: ab(bb.drop, cb.drop),
-        shift: ab(bb.shift, cb.shift),
-        torso: ab(bb.torso, cb.torso),
-        nod: ab(bb.nod, cb.nod),
-        tilt: ab(bb.tilt, cb.tilt),
-        legs: [ab(Tb, Ib), ab(Ub, Hb)],
-        arms: ab(bb.arms, cb.arms),
-        spread: ab(bb.spread, cb.spread)
+        drop: Tb(bb.drop, ab.drop),
+        shift: Tb(bb.shift, ab.shift),
+        torso: Tb(bb.torso, ab.torso),
+        nod: Tb(bb.nod, ab.nod),
+        tilt: Tb(bb.tilt, ab.tilt),
+        legs: [Tb(Eb, Bb), Tb(Yb, eb)],
+        arms: Tb(bb.arms, ab.arms),
+        spread: Tb(bb.spread, ab.spread)
       }
     }
-    const ia = {
+    const dT = {
         drop: .1,
         torso: .22,
         nod: -.32,
@@ -6237,44 +6237,44 @@ export const modules = {
         arms: -.75,
         spread: .32
       },
-      Oa = Ya(4400, !0, [
-        [0, ia],
+      FT = zT(4400, !0, [
+        [0, dT],
         [.16, {
-          ...ia,
+          ...dT,
           drop: .06,
           torso: .16,
           arms: -.85
         }],
-        [.3, ia],
+        [.3, dT],
         [.44, {
-          ...ia,
+          ...dT,
           drop: .06,
           torso: .16,
           arms: -.85
         }],
-        [.56, Ea(ia, Va, .7)],
-        [.66, Ea(ia, Va, .78)],
-        [.74, Ea(ia, La, .65)],
+        [.56, IT(dT, yT, .7)],
+        [.66, IT(dT, yT, .78)],
+        [.74, IT(dT, ZT, .65)],
         [.86, {
-          ...ia,
+          ...dT,
           drop: .14
         }],
-        [1, ia]
+        [1, dT]
       ], "catmull-rom-spline"),
-      Ga = {
-        ...ia,
+      hT = {
+        ...dT,
         drop: .14,
         torso: .3,
         spread: .4
       },
-      Ka = {
+      GT = {
         rise: .15,
         torso: .15,
         nod: -.25,
         arms: -.6,
         spread: .35
       },
-      Za = {
+      QT = {
         drop: .06,
         torso: .18,
         nod: -.25,
@@ -6282,62 +6282,62 @@ export const modules = {
         arms: -.45,
         spread: .45
       },
-      za = {
-        caveGolem: Oa,
-        magmaGolem: Ya(3600, !0, [
-          [0, Ga],
+      qT = {
+        caveGolem: FT,
+        magmaGolem: zT(3600, !0, [
+          [0, hT],
           [.12, {
-            ...Ga,
+            ...hT,
             tilt: .08,
             drop: .11
           }],
           [.26, {
-            ...Ga,
+            ...hT,
             tilt: -.08
           }],
           [.4, {
-            ...Ga,
+            ...hT,
             tilt: .06,
             drop: .11
           }],
-          [.52, Ea(Ga, Va, .9)],
-          [.62, Ea(Ga, La, .8)],
-          [.7, Ea(Ga, La, .45)],
-          [.78, Ea(Ga, La, .85)],
+          [.52, IT(hT, yT, .9)],
+          [.62, IT(hT, ZT, .8)],
+          [.7, IT(hT, ZT, .45)],
+          [.78, IT(hT, ZT, .85)],
           [.9, {
-            ...Ga,
+            ...hT,
             drop: .17
           }],
-          [1, Ga]
+          [1, hT]
         ], "catmull-rom-spline"),
-        frostWraith: function(bb, cb, sb) {
-          return ea(Ja, bb, cb, sb, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "linear")
+        frostWraith: function(bb, ab, Ub) {
+          return jT(iT, bb, ab, Ub, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "linear")
         }(4800, !0, [
-          [0, Ka],
+          [0, GT],
           [.14, {
-            ...Ka,
+            ...GT,
             rise: .25,
             tilt: .06
           }],
           [.28, {
-            ...Ka,
+            ...GT,
             rise: .12,
             tilt: -.04
           }],
           [.42, {
-            ...Ka,
+            ...GT,
             rise: .24,
             tilt: .04
           }],
           [.54, {
-            ...Ka,
+            ...GT,
             rise: .22,
             twist: .2,
             arms: [-.3, -1.6],
             spread: [.4, .05]
           }],
           [.64, {
-            ...Ka,
+            ...GT,
             rise: .26,
             twist: .2,
             torso: .05,
@@ -6345,7 +6345,7 @@ export const modules = {
             spread: [.4, .05]
           }],
           [.72, {
-            ...Ka,
+            ...GT,
             rise: .1,
             twist: .22,
             torso: .35,
@@ -6354,26 +6354,26 @@ export const modules = {
             spread: [.4, -.05]
           }],
           [.86, {
-            ...Ka,
+            ...GT,
             rise: .16,
             tilt: -.04
           }],
-          [1, Ka]
+          [1, GT]
         ], "catmull-rom-spline"),
-        tikiTerror: function(bb, cb, sb) {
-          return ea(ta, bb, cb, sb, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "linear")
+        tikiTerror: function(bb, ab, Ub) {
+          return jT(pT, bb, ab, Ub, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "linear")
         }(4400, !0, [
-          [0, Za],
+          [0, QT],
           [.16, {
-            ...Za,
+            ...QT,
             drop: .02,
             torso: .12,
             arms: -.55,
             spread: .52
           }],
-          [.3, Za],
+          [.3, QT],
           [.44, {
-            ...Za,
+            ...QT,
             drop: .02,
             torso: .12,
             arms: -.55,
@@ -6406,195 +6406,195 @@ export const modules = {
             spread: 1.1
           }],
           [.86, {
-            ...Za,
+            ...QT,
             drop: .1
           }],
-          [1, Za]
+          [1, QT]
         ], "catmull-rom-spline")
       },
-      qa = {
+      uT = {
         golem: "caveGolem",
         wraith: "frostWraith",
         tiki: "tikiTerror"
       },
-      da = {
+      rT = {
         "Cave Golem": "caveGolem",
         "Magma Golem": "magmaGolem"
       },
-      Aa = Object.fromEntries(Object.entries(za).map((bb => {
-        let [cb, sb] = bb;
-        return [cb, (0, Da.c)((0, ya.g)(sb), cb)]
+      KT = Object.fromEntries(Object.entries(qT).map((bb => {
+        let [ab, Ub] = bb;
+        return [ab, (0, HT.e)((0, NT.e)(Ub), ab)]
       })));
 
-    function wa(bb) {
-      const cb = function(bb) {
-        var cb;
-        const sb = (0, Pa.e)(bb).poseRig;
-        return null !== (cb = da[bb]) && void 0 !== cb ? cb : void 0 === sb ? null : qa[sb]
+    function oT(bb) {
+      const ab = function(bb) {
+        var ab;
+        const Ub = (0, WT.b)(bb).poseRig;
+        return null !== (ab = rT[bb]) && void 0 !== ab ? ab : void 0 === Ub ? null : uT[Ub]
       }(bb);
-      return null === cb ? null : Aa[cb]
+      return null === ab ? null : KT[ab]
     }
 
-    function ra(bb) {
+    function lT(bb) {
       return {
         "--difficulty-colour": bb
       }
     }
-    const oa = (0, Jb.lazy)((() => (0, Qa.c)(sb.e(192).then((() => sb(40939))), (bb => bb.MobPreview))));
+    const tT = (0, pb.lazy)((() => (0, XT.e)(Ub.e(192).then((() => Ub(40649))), (bb => bb.MobPreview))));
 
-    function Sa(bb) {
-      var cb, sb, kb;
+    function wT(bb) {
+      var ab, Ub, Ab;
       let {
-        picker: Wb,
-        controller: ab
+        picker: Mb,
+        controller: Tb
       } = bb;
       const {
-        t: Tb
-      } = (0, PW.E)(), Ub = rW(), {
-        page: Ib
-      } = Wb;
-      return (0, EW.jsxs)("section", {
+        t: Eb
+      } = (0, WM.A)(), Yb = lM(), {
+        page: Bb
+      } = Mb;
+      return (0, IM.jsxs)("section", {
         className: "SkyblockSkillsPanel SkyblockBossPicker",
         role: "dialog",
         "aria-modal": "true",
         "aria-labelledby": "skyblockBossPickerTitle",
         tabIndex: -1,
-        ref: Ub,
+        ref: Yb,
         onKeyDown: bb => {
-          "ArrowLeft" === bb.key ? (bb.preventDefault(), bb.stopPropagation(), ab.previous()) : "ArrowRight" === bb.key ? (bb.preventDefault(), bb.stopPropagation(), ab.next()) : wW(bb)
+          "ArrowLeft" === bb.key ? (bb.preventDefault(), bb.stopPropagation(), Tb.previous()) : "ArrowRight" === bb.key ? (bb.preventDefault(), bb.stopPropagation(), Tb.next()) : oM(bb)
         },
-        style: ra(Ib.colour),
-        children: [(0, EW.jsxs)("header", {
+        style: lT(Bb.colour),
+        children: [(0, IM.jsxs)("header", {
           className: "SkyblockSkillsHeader",
-          children: [(0, EW.jsx)("h2", {
+          children: [(0, IM.jsx)("h2", {
             id: "skyblockBossPickerTitle",
-            children: Wb.dungeonName
-          }), (0, EW.jsx)(AW.j, {
+            children: Mb.dungeonName
+          }), (0, IM.jsx)(KM.k, {
             padIgnore: !0,
-            onClick: ab.dismiss
+            onClick: Tb.dismiss
           })]
-        }), (0, EW.jsxs)("div", {
+        }), (0, IM.jsxs)("div", {
           className: "SkyblockBossPickerBody",
-          children: [(0, EW.jsxs)("div", {
+          children: [(0, IM.jsxs)("div", {
             className: "SkyblockBossPickerStage",
-            children: [(0, EW.jsx)(AW.d, {
+            children: [(0, IM.jsx)(KM.g, {
               className: "SkyblockBossPickerTurn Previous",
-              disabled: !Wb.canPrevious,
-              onClick: ab.previous,
-              children: (0, EW.jsx)("span", {
+              disabled: !Mb.canPrevious,
+              onClick: Tb.previous,
+              children: (0, IM.jsx)("span", {
                 className: "SkyblockBossPickerChevron",
-                children: (0, EW.jsx)(la.b, {
+                children: (0, IM.jsx)(PT.e, {
                   name: "angle-up"
                 })
               })
-            }), (0, EW.jsxs)("div", {
-              className: YW()("SkyblockBossPickerBoss", {
-                Locked: !Ib.unlocked
+            }), (0, IM.jsxs)("div", {
+              className: zM()("SkyblockBossPickerBoss", {
+                Locked: !Bb.unlocked
               }),
-              children: [null !== Ib.bossMobType && (0, EW.jsx)(Jb.Suspense, {
-                fallback: (0, EW.jsx)("div", {
+              children: [null !== Bb.bossMobType && (0, IM.jsx)(pb.Suspense, {
+                fallback: (0, IM.jsx)("div", {
                   className: "SkyblockBossPickerModel"
                 }),
-                children: (0, EW.jsx)(oa, {
+                children: (0, IM.jsx)(tT, {
                   className: "SkyblockBossPickerModel",
-                  mobType: Ib.bossMobType,
-                  variation: Ib.bossMobVariation,
-                  animation: null !== (cb = wa(Ib.bossMobType)) && void 0 !== cb ? cb : void 0
+                  mobType: Bb.bossMobType,
+                  variation: Bb.bossMobVariation,
+                  animation: null !== (ab = oT(Bb.bossMobType)) && void 0 !== ab ? ab : void 0
                 })
-              }), null === Ib.bossMobType && (0, EW.jsx)("div", {
+              }), null === Bb.bossMobType && (0, IM.jsx)("div", {
                 className: "SkyblockBossPickerModel SkyblockBossPickerUnknown",
                 "aria-hidden": "true",
                 children: "?"
               })]
-            }), (0, EW.jsx)(AW.d, {
+            }), (0, IM.jsx)(KM.g, {
               className: "SkyblockBossPickerTurn Next",
-              disabled: !Wb.canNext,
-              onClick: ab.next,
-              children: (0, EW.jsx)("span", {
+              disabled: !Mb.canNext,
+              onClick: Tb.next,
+              children: (0, IM.jsx)("span", {
                 className: "SkyblockBossPickerChevron",
-                children: (0, EW.jsx)(la.b, {
+                children: (0, IM.jsx)(PT.e, {
                   name: "angle-up"
                 })
               })
             })]
-          }), (0, EW.jsxs)("div", {
+          }), (0, IM.jsxs)("div", {
             className: "SkyblockBossPickerCaption",
-            children: [(0, EW.jsxs)("span", {
+            children: [(0, IM.jsxs)("span", {
               className: "SkyblockBossPickerDifficulty",
-              children: [Ib.beaten && (0, EW.jsx)("span", {
+              children: [Bb.beaten && (0, IM.jsx)("span", {
                 "aria-hidden": "true",
                 children: "\u2713 "
-              }), Ib.label]
-            }), (0, EW.jsx)("strong", {
+              }), Bb.label]
+            }), (0, IM.jsx)("strong", {
               className: "SkyblockBossPickerName",
-              children: null !== (sb = Ib.bossName) && void 0 !== sb ? sb : "???"
-            }), (0, EW.jsxs)("span", {
-              className: YW()("SkyblockBossPickerRecord", {
-                Locked: null !== Ib.lockedHint
+              children: null !== (Ub = Bb.bossName) && void 0 !== Ub ? Ub : "???"
+            }), (0, IM.jsxs)("span", {
+              className: zM()("SkyblockBossPickerRecord", {
+                Locked: null !== Bb.lockedHint
               }),
-              children: [null !== Ib.lockedHintHighlight && (0, EW.jsxs)(EW.Fragment, {
-                children: [Ib.lockedHintHighlight.before, (0, EW.jsxs)("span", {
+              children: [null !== Bb.lockedHintHighlight && (0, IM.jsxs)(IM.Fragment, {
+                children: [Bb.lockedHintHighlight.before, (0, IM.jsxs)("span", {
                   className: "SkyblockDifficulty",
-                  style: ra(Ib.lockedHintHighlight.colour),
-                  children: [null !== Ib.lockedHintHighlight.icon && (0, EW.jsx)("span", {
+                  style: lT(Bb.lockedHintHighlight.colour),
+                  children: [null !== Bb.lockedHintHighlight.icon && (0, IM.jsx)("span", {
                     className: "SkyblockBossPickerHintIcon",
                     "aria-hidden": "true",
-                    children: (0, EW.jsx)(BW.d, {
-                      itemName: Ib.lockedHintHighlight.icon,
+                    children: (0, IM.jsx)(mM.c, {
+                      itemName: Bb.lockedHintHighlight.icon,
                       amount: 0
                     })
-                  }), Ib.lockedHintHighlight.name]
-                }), Ib.lockedHintHighlight.after]
-              }), null === Ib.lockedHintHighlight && (null !== (kb = Ib.lockedHint) && void 0 !== kb ? kb : Ib.summary)]
+                  }), Bb.lockedHintHighlight.name]
+                }), Bb.lockedHintHighlight.after]
+              }), null === Bb.lockedHintHighlight && (null !== (Ab = Bb.lockedHint) && void 0 !== Ab ? Ab : Bb.summary)]
             })]
-          }), (0, EW.jsx)("div", {
+          }), (0, IM.jsx)("div", {
             className: "SkyblockBossPickerDots",
             "aria-hidden": "true",
-            children: Wb.pages.map((bb => (0, EW.jsx)("span", {
-              className: YW()("SkyblockBossPickerDot", {
+            children: Mb.pages.map((bb => (0, IM.jsx)("span", {
+              className: zM()("SkyblockBossPickerDot", {
                 Current: bb.current,
                 Locked: !bb.unlocked
               }),
-              style: ra(bb.colour)
+              style: lT(bb.colour)
             }, bb.difficulty)))
-          }), (0, EW.jsx)(AW.p, {
+          }), (0, IM.jsx)(KM.s, {
             className: "SkyblockBossPickerFight",
-            disabled: !Ib.unlocked,
-            onClick: ab.enter,
-            children: Tb("skyblockGame:dungeonFight")
+            disabled: !Bb.unlocked,
+            onClick: Tb.enter,
+            children: Eb("skyblockGame:dungeonFight")
           })]
         })]
       })
     }
 
-    function Ra(bb) {
+    function sT(bb) {
       let {
-        dungeon: cb,
-        select: sb
+        dungeon: ab,
+        select: Ub
       } = bb;
-      return (0, EW.jsxs)(AW.d, {
-        className: YW()("SkyblockDungeonCard", {
-          Selected: cb.selected
+      return (0, IM.jsxs)(KM.g, {
+        className: zM()("SkyblockDungeonCard", {
+          Selected: ab.selected
         }),
         onClick: () => {
-          sb(cb.id)
+          Ub(ab.id)
         },
-        children: [(0, EW.jsxs)("div", {
+        children: [(0, IM.jsxs)("div", {
           className: "SkyblockDungeonCardTitle",
-          children: [(0, EW.jsx)("strong", {
-            children: cb.name
-          }), (0, EW.jsx)("span", {
-            children: cb.beatenSummary
+          children: [(0, IM.jsx)("strong", {
+            children: ab.name
+          }), (0, IM.jsx)("span", {
+            children: ab.beatenSummary
           })]
-        }), (0, EW.jsx)("div", {
+        }), (0, IM.jsx)("div", {
           className: "SkyblockDungeonChips",
-          children: cb.difficulties.map((bb => (0, EW.jsxs)("span", {
-            className: YW()("SkyblockDungeonChip", "SkyblockDifficulty", {
+          children: ab.difficulties.map((bb => (0, IM.jsxs)("span", {
+            className: zM()("SkyblockDungeonChip", "SkyblockDifficulty", {
               Beaten: bb.beaten
             }),
-            style: ra(bb.colour),
+            style: lT(bb.colour),
             title: bb.summary,
-            children: [bb.beaten && (0, EW.jsx)("span", {
+            children: [bb.beaten && (0, IM.jsx)("span", {
               "aria-hidden": "true",
               children: "\u2713 "
             }), bb.label]
@@ -6603,70 +6603,70 @@ export const modules = {
       })
     }
 
-    function va(bb) {
+    function gT(bb) {
       let {
-        controller: cb
+        controller: ab
       } = bb;
-      const sb = (0, DW.h)(ns, cb.getSnapshot()),
+      const Ub = (0, HM.i)(XU, ab.getSnapshot()),
         {
-          t: kb
-        } = (0, PW.E)(),
-        Wb = rW();
-      return sb.enabled ? (0, EW.jsxs)(dW.c, {
-        show: sb.open,
-        close: cb.dismiss,
+          t: Ab
+        } = (0, WM.A)(),
+        Mb = lM();
+      return Ub.enabled ? (0, IM.jsxs)(rM.d, {
+        show: Ub.open,
+        close: ab.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: [sb.picker && (0, EW.jsx)(Sa, {
-          picker: sb.picker,
-          controller: cb
-        }), !sb.picker && (0, EW.jsxs)("section", {
+        children: [Ub.picker && (0, IM.jsx)(wT, {
+          picker: Ub.picker,
+          controller: ab
+        }), !Ub.picker && (0, IM.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockDungeonsPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockDungeonsTitle",
           tabIndex: -1,
-          ref: Wb,
-          onKeyDown: wW,
-          children: [(0, EW.jsxs)("header", {
+          ref: Mb,
+          onKeyDown: oM,
+          children: [(0, IM.jsxs)("header", {
             className: "SkyblockSkillsHeader",
-            children: [(0, EW.jsxs)("div", {
-              children: [(0, EW.jsx)("h2", {
+            children: [(0, IM.jsxs)("div", {
+              children: [(0, IM.jsx)("h2", {
                 id: "skyblockDungeonsTitle",
-                children: kb("skyblockGame:dungeons")
-              }), (0, EW.jsx)("p", {
-                children: kb("skyblockGame:dungeonsIntro")
+                children: Ab("skyblockGame:dungeons")
+              }), (0, IM.jsx)("p", {
+                children: Ab("skyblockGame:dungeonsIntro")
               })]
-            }), (0, EW.jsx)(AW.j, {
+            }), (0, IM.jsx)(KM.k, {
               padIgnore: !0,
-              onClick: cb.dismiss
+              onClick: ab.dismiss
             })]
-          }), (0, EW.jsxs)("div", {
+          }), (0, IM.jsxs)("div", {
             className: "SkyblockSkillsBody SkyblockDungeonsBody",
-            children: [(0, EW.jsx)("div", {
+            children: [(0, IM.jsx)("div", {
               className: "SkyblockDungeonList",
-              children: sb.dungeons.map((bb => (0, EW.jsx)(Ra, {
+              children: Ub.dungeons.map((bb => (0, IM.jsx)(sT, {
                 dungeon: bb,
-                select: cb.select
+                select: ab.select
               }, bb.id)))
-            }), sb.detail && (0, EW.jsxs)("div", {
+            }), Ub.detail && (0, IM.jsxs)("div", {
               className: "SkyblockDungeonDetail",
-              children: [(0, EW.jsx)("h3", {
-                children: sb.detail.name
-              }), (0, EW.jsx)("ul", {
+              children: [(0, IM.jsx)("h3", {
+                children: Ub.detail.name
+              }), (0, IM.jsx)("ul", {
                 className: "SkyblockDungeonRecords",
-                children: sb.detail.difficulties.map((bb => (0, EW.jsxs)("li", {
-                  className: YW()("SkyblockDungeonRecord", {
+                children: Ub.detail.difficulties.map((bb => (0, IM.jsxs)("li", {
+                  className: zM()("SkyblockDungeonRecord", {
                     Beaten: bb.beaten
                   }),
-                  children: [(0, EW.jsxs)("span", {
+                  children: [(0, IM.jsxs)("span", {
                     className: "SkyblockDungeonRecordName SkyblockDifficulty",
-                    style: ra(bb.colour),
-                    children: [bb.beaten && (0, EW.jsx)("span", {
+                    style: lT(bb.colour),
+                    children: [bb.beaten && (0, IM.jsx)("span", {
                       "aria-hidden": "true",
                       children: "\u2713 "
                     }), bb.label]
-                  }), (0, EW.jsx)("span", {
+                  }), (0, IM.jsx)("span", {
                     className: "SkyblockDungeonRecordSummary",
                     children: bb.summary
                   })]
@@ -6678,236 +6678,236 @@ export const modules = {
       }) : null
     }
 
-    function Fa(bb) {
+    function CT(bb) {
       let {
-        collection: cb,
-        select: sb
+        collection: ab,
+        select: Ub
       } = bb;
-      return (0, EW.jsxs)(AW.d, {
-        className: YW()("SkyblockSkillCard", "SkyblockCollectionCard", {
-          Selected: cb.selected,
-          Locked: cb.locked
+      return (0, IM.jsxs)(KM.g, {
+        className: zM()("SkyblockSkillCard", "SkyblockCollectionCard", {
+          Selected: ab.selected,
+          Locked: ab.locked
         }),
-        ariaPressed: cb.selected,
+        ariaPressed: ab.selected,
         onClick: () => {
-          sb(cb.id)
+          Ub(ab.id)
         },
-        children: [(0, EW.jsx)("div", {
+        children: [(0, IM.jsx)("div", {
           className: "SkyblockSkillIcon",
-          children: (0, EW.jsx)(BW.d, {
-            itemName: cb.icon,
+          children: (0, IM.jsx)(mM.c, {
+            itemName: ab.icon,
             amount: 0
           })
-        }), (0, EW.jsxs)("div", {
+        }), (0, IM.jsxs)("div", {
           className: "SkyblockSkillSummary",
-          children: [(0, EW.jsxs)("div", {
+          children: [(0, IM.jsxs)("div", {
             className: "SkyblockSkillTitle",
-            children: [(0, EW.jsx)("strong", {
-              children: cb.name
-            }), (0, EW.jsx)("span", {
-              children: cb.tier
+            children: [(0, IM.jsx)("strong", {
+              children: ab.name
+            }), (0, IM.jsx)("span", {
+              children: ab.tier
             })]
-          }), (0, EW.jsx)(oW, {
-            percent: cb.percent,
-            label: `${cb.name}: ${cb.progress}`
-          }), (0, EW.jsx)("span", {
+          }), (0, IM.jsx)(tM, {
+            percent: ab.percent,
+            label: `${ab.name}: ${ab.progress}`
+          }), (0, IM.jsx)("span", {
             className: "SkyblockSkillXp",
-            children: cb.progress
+            children: ab.progress
           })]
         })]
       })
     }
 
-    function xa(bb) {
+    function VT(bb) {
       let {
-        collection: cb
+        collection: ab
       } = bb;
       const {
-        t: sb
-      } = (0, PW.E)();
-      return (0, EW.jsxs)("div", {
+        t: Ub
+      } = (0, WM.A)();
+      return (0, IM.jsxs)("div", {
         className: "SkyblockSkillDetail SkyblockCollectionDetail",
-        children: [(0, EW.jsx)("div", {
+        children: [(0, IM.jsx)("div", {
           className: "SkyblockSkillDetailIcon",
-          children: (0, EW.jsx)(BW.d, {
-            itemName: cb.icon,
+          children: (0, IM.jsx)(mM.c, {
+            itemName: ab.icon,
             amount: 0
           })
-        }), (0, EW.jsx)("h3", {
-          children: cb.name
-        }), (0, EW.jsx)("strong", {
+        }), (0, IM.jsx)("h3", {
+          children: ab.name
+        }), (0, IM.jsx)("strong", {
           className: "SkyblockSkillDetailLevel",
-          children: cb.tier
-        }), (0, EW.jsx)("p", {
-          children: cb.locked ? sb("skyblockGame:collectionLocked") : cb.count
-        }), null !== cb.nextReward && (0, EW.jsxs)("div", {
+          children: ab.tier
+        }), (0, IM.jsx)("p", {
+          children: ab.locked ? Ub("skyblockGame:collectionLocked") : ab.count
+        }), null !== ab.nextReward && (0, IM.jsxs)("div", {
           className: "SkyblockSkillBenefit",
-          children: [(0, EW.jsx)("strong", {
-            children: sb("skyblockGame:collectionNextReward")
-          }), (0, EW.jsx)("span", {
-            children: cb.nextReward
+          children: [(0, IM.jsx)("strong", {
+            children: Ub("skyblockGame:collectionNextReward")
+          }), (0, IM.jsx)("span", {
+            children: ab.nextReward
           })]
-        }), (0, EW.jsx)(oW, {
-          percent: cb.percent,
-          label: cb.progress
-        }), (0, EW.jsx)("p", {
-          children: cb.progress
+        }), (0, IM.jsx)(tM, {
+          percent: ab.percent,
+          label: ab.progress
+        }), (0, IM.jsx)("p", {
+          children: ab.progress
         })]
       })
     }
 
-    function ja(bb) {
+    function OT(bb) {
       let {
-        controller: cb
+        controller: ab
       } = bb;
-      const sb = (0, DW.h)(Gs, cb.getSnapshot()),
+      const Ub = (0, HM.i)(QU, ab.getSnapshot()),
         {
-          t: kb
-        } = (0, PW.E)(),
-        Wb = rW();
-      return sb.enabled ? (0, EW.jsx)(dW.c, {
-        show: sb.open,
-        close: cb.dismiss,
+          t: Ab
+        } = (0, WM.A)(),
+        Mb = lM();
+      return Ub.enabled ? (0, IM.jsx)(rM.d, {
+        show: Ub.open,
+        close: ab.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, EW.jsxs)("section", {
+        children: (0, IM.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockCollectionsPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockCollectionsTitle",
           tabIndex: -1,
-          ref: Wb,
-          onKeyDown: wW,
-          children: [(0, EW.jsxs)("header", {
+          ref: Mb,
+          onKeyDown: oM,
+          children: [(0, IM.jsxs)("header", {
             className: "SkyblockSkillsHeader",
-            children: [(0, EW.jsxs)("div", {
-              children: [(0, EW.jsx)("h2", {
+            children: [(0, IM.jsxs)("div", {
+              children: [(0, IM.jsx)("h2", {
                 id: "skyblockCollectionsTitle",
-                children: kb("skyblockGame:collections")
-              }), (0, EW.jsxs)("p", {
-                children: [kb("skyblockGame:collectionsIntro"), " ", sb.tiersUnlocked]
+                children: Ab("skyblockGame:collections")
+              }), (0, IM.jsxs)("p", {
+                children: [Ab("skyblockGame:collectionsIntro"), " ", Ub.tiersUnlocked]
               })]
-            }), (0, EW.jsx)(AW.j, {
+            }), (0, IM.jsx)(KM.k, {
               padIgnore: !0,
-              onClick: cb.dismiss
+              onClick: ab.dismiss
             })]
-          }), (0, EW.jsx)("div", {
+          }), (0, IM.jsx)("div", {
             className: "SkyblockCollectionCategories",
             "data-pad-tabs": "1",
-            children: sb.categories.map((bb => (0, EW.jsxs)(AW.d, {
-              className: YW()("SkyblockCollectionCategory", {
+            children: Ub.categories.map((bb => (0, IM.jsxs)(KM.g, {
+              className: zM()("SkyblockCollectionCategory", {
                 Selected: bb.selected
               }),
               ariaPressed: bb.selected,
               padTabSelected: bb.selected,
               onClick: () => {
-                cb.selectCategory(bb.id)
+                ab.selectCategory(bb.id)
               },
-              children: [(0, EW.jsx)("span", {
+              children: [(0, IM.jsx)("span", {
                 className: "SkyblockCollectionCategoryIcon",
-                children: (0, EW.jsx)(BW.d, {
+                children: (0, IM.jsx)(mM.c, {
                   itemName: bb.icon,
                   amount: 0
                 })
-              }), (0, EW.jsxs)("span", {
+              }), (0, IM.jsxs)("span", {
                 className: "SkyblockCollectionCategoryText",
-                children: [(0, EW.jsx)("strong", {
+                children: [(0, IM.jsx)("strong", {
                   children: bb.label
-                }), (0, EW.jsx)("span", {
+                }), (0, IM.jsx)("span", {
                   children: bb.tiers
                 })]
               })]
             }, bb.id)))
-          }), (0, EW.jsxs)("div", {
+          }), (0, IM.jsxs)("div", {
             className: "SkyblockSkillsBody",
-            children: [(0, EW.jsx)("div", {
+            children: [(0, IM.jsx)("div", {
               className: "SkyblockSkillsList",
               "data-pad-select-on-focus": !0,
-              children: sb.collections.map((bb => (0, EW.jsx)(Fa, {
+              children: Ub.collections.map((bb => (0, IM.jsx)(CT, {
                 collection: bb,
-                select: cb.select
+                select: ab.select
               }, bb.id)))
-            }), sb.detail && (0, EW.jsx)(xa, {
-              collection: sb.detail
+            }), Ub.detail && (0, IM.jsx)(VT, {
+              collection: Ub.detail
             })]
           })]
         })
       }) : null
     }
-    const pa = ["completed", "active", "available", "locked"],
-      bT = ["prerequisite", "acceptFirst", "sends", "awaits"];
+    const cT = ["completed", "active", "available", "locked"],
+      JT = ["prerequisite", "acceptFirst", "sends", "awaits"];
 
-    function cT(bb) {
+    function nT(bb) {
       let {
-        controller: cb
+        controller: ab
       } = bb;
-      const sb = (0, DW.h)(vs, cb.getSnapshot()),
+      const Ub = (0, HM.i)(VU, ab.getSnapshot()),
         {
-          t: kb
-        } = (0, PW.E)(),
-        Wb = rW();
-      return sb.enabled ? (0, EW.jsx)(dW.c, {
-        show: sb.open,
-        close: cb.dismiss,
+          t: Ab
+        } = (0, WM.A)(),
+        Mb = lM();
+      return Ub.enabled ? (0, IM.jsx)(rM.d, {
+        show: Ub.open,
+        close: ab.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, EW.jsxs)("section", {
+        children: (0, IM.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockQuestGraphPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockQuestGraphTitle",
           tabIndex: -1,
-          ref: Wb,
-          onKeyDown: wW,
-          children: [(0, EW.jsxs)("header", {
+          ref: Mb,
+          onKeyDown: oM,
+          children: [(0, IM.jsxs)("header", {
             className: "SkyblockSkillsHeader",
-            children: [(0, EW.jsxs)("div", {
-              children: [(0, EW.jsx)("h2", {
+            children: [(0, IM.jsxs)("div", {
+              children: [(0, IM.jsx)("h2", {
                 id: "skyblockQuestGraphTitle",
-                children: kb("skyblockDevQuests:title")
-              }), (0, EW.jsx)("p", {
-                children: kb("skyblockDevQuests:intro")
+                children: Ab("skyblockDevQuests:title")
+              }), (0, IM.jsx)("p", {
+                children: Ab("skyblockDevQuests:intro")
               })]
-            }), (0, EW.jsx)(AW.j, {
-              onClick: cb.dismiss
+            }), (0, IM.jsx)(KM.k, {
+              onClick: ab.dismiss
             })]
-          }), (0, EW.jsxs)("div", {
+          }), (0, IM.jsxs)("div", {
             className: "SkyblockQuestGraphLegend",
-            children: [pa.map((bb => (0, EW.jsx)("span", {
-              className: YW()("SkyblockQuestGraphLegendState", bb),
-              children: kb(`skyblockDevQuests:state_${bb}`)
-            }, bb))), bT.map((bb => (0, EW.jsxs)("span", {
+            children: [cT.map((bb => (0, IM.jsx)("span", {
+              className: zM()("SkyblockQuestGraphLegendState", bb),
+              children: Ab(`skyblockDevQuests:state_${bb}`)
+            }, bb))), JT.map((bb => (0, IM.jsxs)("span", {
               className: "SkyblockQuestGraphLegendEdge",
-              children: [(0, EW.jsx)("svg", {
+              children: [(0, IM.jsx)("svg", {
                 width: "28",
                 height: "8",
                 "aria-hidden": "true",
-                children: (0, EW.jsx)("line", {
-                  className: YW()("SkyblockQuestGraphEdge", bb),
+                children: (0, IM.jsx)("line", {
+                  className: zM()("SkyblockQuestGraphEdge", bb),
                   x1: "0",
                   y1: "4",
                   x2: "28",
                   y2: "4"
                 })
-              }), kb(`skyblockDevQuests:edge_${bb}`)]
+              }), Ab(`skyblockDevQuests:edge_${bb}`)]
             }, bb)))]
-          }), (0, EW.jsx)("div", {
+          }), (0, IM.jsx)("div", {
             className: "SkyblockQuestGraphScroll",
-            children: (0, EW.jsxs)("div", {
-              className: YW()("SkyblockQuestGraphCanvas", {
-                Planning: sb.planning
+            children: (0, IM.jsxs)("div", {
+              className: zM()("SkyblockQuestGraphCanvas", {
+                Planning: Ub.planning
               }),
               style: {
-                width: sb.width,
-                height: sb.height
+                width: Ub.width,
+                height: Ub.height
               },
-              children: [(0, EW.jsxs)("svg", {
+              children: [(0, IM.jsxs)("svg", {
                 className: "SkyblockQuestGraphEdges",
-                width: sb.width,
-                height: sb.height,
+                width: Ub.width,
+                height: Ub.height,
                 "aria-hidden": "true",
-                children: [(0, EW.jsx)("defs", {
-                  children: (0, EW.jsx)("marker", {
+                children: [(0, IM.jsx)("defs", {
+                  children: (0, IM.jsx)("marker", {
                     id: "skyblockQuestGraphArrow",
                     viewBox: "0 0 8 8",
                     refX: "7",
@@ -6915,21 +6915,21 @@ export const modules = {
                     markerWidth: "6",
                     markerHeight: "6",
                     orient: "auto-start-reverse",
-                    children: (0, EW.jsx)("path", {
+                    children: (0, IM.jsx)("path", {
                       className: "SkyblockQuestGraphArrow",
                       d: "M 0 0 L 8 4 L 0 8 z"
                     })
                   })
-                }), sb.edges.map((bb => (0, EW.jsx)("path", {
-                  className: YW()("SkyblockQuestGraphEdge", bb.kind, {
+                }), Ub.edges.map((bb => (0, IM.jsx)("path", {
+                  className: zM()("SkyblockQuestGraphEdge", bb.kind, {
                     InPlan: bb.inPlan
                   }),
                   d: bb.path,
                   markerEnd: "url(#skyblockQuestGraphArrow)"
                 }, bb.key)))]
-              }), sb.nodes.map((bb => (0, EW.jsxs)("button", {
+              }), Ub.nodes.map((bb => (0, IM.jsxs)("button", {
                 type: "button",
-                className: YW()("SkyblockQuestGraphNode", bb.state, {
+                className: zM()("SkyblockQuestGraphNode", bb.state, {
                   InPlan: bb.inPlan,
                   Hovered: bb.hovered
                 }),
@@ -6941,23 +6941,23 @@ export const modules = {
                 },
                 title: bb.id,
                 onMouseEnter: () => {
-                  cb.hover(bb.id)
+                  ab.hover(bb.id)
                 },
                 onMouseLeave: () => {
-                  cb.hover(null)
+                  ab.hover(null)
                 },
                 onFocus: () => {
-                  cb.hover(bb.id)
+                  ab.hover(bb.id)
                 },
                 onBlur: () => {
-                  cb.hover(null)
+                  ab.hover(null)
                 },
                 onClick: () => {
-                  cb.jump(bb.id)
+                  ab.jump(bb.id)
                 },
-                children: [(0, EW.jsx)("strong", {
+                children: [(0, IM.jsx)("strong", {
                   children: bb.name
-                }), (0, EW.jsx)("span", {
+                }), (0, IM.jsx)("span", {
                   children: bb.detail
                 })]
               }, bb.id)))]
@@ -6966,341 +6966,341 @@ export const modules = {
         })
       }) : null
     }
-    const sT = ["skyblockGame:forgeStatPower", "skyblockGame:forgeStatDamage", "skyblockGame:forgeStatSpeed", "skyblockGame:forgeStatKnockback"],
-      kT = {
+    const ST = ["skyblockGame:forgeStatPower", "skyblockGame:forgeStatDamage", "skyblockGame:forgeStatSpeed", "skyblockGame:forgeStatKnockback"],
+      bE = {
         "--impact": "250ms",
         "--hold": "50ms",
-        "--pop-at": `${Hk}ms`,
+        "--pop-at": `${YA}ms`,
         "--forge-duration": "2150ms"
       },
-      WT = Array.from({
+      aE = Array.from({
         length: 18
-      }, ((bb, cb) => ({
-        "--ember-left": `${(4+92*(.618034*cb%1)).toFixed(1)}%`,
-        "--ember-size": 3 + cb % 3 * 2 + "px",
-        "--ember-drift": 14 * (cb % 5 - 2) + "px",
-        "--ember-duration": `${(5.5+7*cb%5*.9).toFixed(1)}s`,
-        "--ember-delay": `${(-1.37*cb%8).toFixed(2)}s`
+      }, ((bb, ab) => ({
+        "--ember-left": `${(4+92*(.618034*ab%1)).toFixed(1)}%`,
+        "--ember-size": 3 + ab % 3 * 2 + "px",
+        "--ember-drift": 14 * (ab % 5 - 2) + "px",
+        "--ember-duration": `${(5.5+7*ab%5*.9).toFixed(1)}s`,
+        "--ember-delay": `${(-1.37*ab%8).toFixed(2)}s`
       })));
 
-    function aT(bb) {
+    function UE(bb) {
       if (bb.style.removeProperty("--part-size"), null === bb.parentElement || "wrap" === getComputedStyle(bb.parentElement).flexWrap) return;
-      const cb = [...bb.children],
-        sb = getComputedStyle(bb),
-        kb = parseFloat(sb.getPropertyValue("--part-size")) * parseFloat(getComputedStyle(document.documentElement).fontSize),
-        Wb = (bb.clientHeight - parseFloat(sb.rowGap) * (cb.length - 1)) / cb.length,
-        ab = cb.map((bb => {
-          const cb = getComputedStyle(bb),
-            sb = bb.querySelector("h3"),
-            ab = bb.querySelector(".SkyblockForgeParts");
-          if (null === sb || null === ab) return kb;
-          const Tb = Wb - parseFloat(cb.paddingTop) - parseFloat(cb.paddingBottom) - sb.offsetHeight - parseFloat(getComputedStyle(sb).marginBottom),
-            Ub = parseFloat(getComputedStyle(ab).columnGap),
-            Ib = ab.children.length;
-          let Hb = 0;
-          for (let kb = 1; kb <= Ib; kb++) {
-            const bb = Math.ceil(Ib / kb);
-            Hb = Math.max(Hb, Math.min((ab.clientWidth - Ub * (kb - 1)) / kb, (Tb - Ub * (bb - 1)) / bb))
+      const ab = [...bb.children],
+        Ub = getComputedStyle(bb),
+        Ab = parseFloat(Ub.getPropertyValue("--part-size")) * parseFloat(getComputedStyle(document.documentElement).fontSize),
+        Mb = (bb.clientHeight - parseFloat(Ub.rowGap) * (ab.length - 1)) / ab.length,
+        Tb = ab.map((bb => {
+          const ab = getComputedStyle(bb),
+            Ub = bb.querySelector("h3"),
+            Tb = bb.querySelector(".SkyblockForgeParts");
+          if (null === Ub || null === Tb) return Ab;
+          const Eb = Mb - parseFloat(ab.paddingTop) - parseFloat(ab.paddingBottom) - Ub.offsetHeight - parseFloat(getComputedStyle(Ub).marginBottom),
+            Yb = parseFloat(getComputedStyle(Tb).columnGap),
+            Bb = Tb.children.length;
+          let eb = 0;
+          for (let Ab = 1; Ab <= Bb; Ab++) {
+            const bb = Math.ceil(Bb / Ab);
+            eb = Math.max(eb, Math.min((Tb.clientWidth - Yb * (Ab - 1)) / Ab, (Eb - Yb * (bb - 1)) / bb))
           }
-          return Hb
+          return eb
         }));
-      bb.style.setProperty("--part-size", `${Math.floor(Math.max(kb,Math.min(...ab)))}px`)
+      bb.style.setProperty("--part-size", `${Math.floor(Math.max(Ab,Math.min(...Tb)))}px`)
     }
 
-    function TT(bb) {
-      var cb, sb, kb, ab, Tb;
+    function AE(bb) {
+      var ab, Ub, Ab, Tb, Eb;
       let {
-        controller: Ub
+        controller: Yb
       } = bb;
-      const Ib = (0, DW.h)(Qk, Ub.getSnapshot()),
+      const Bb = (0, HM.i)(jA, Yb.getSnapshot()),
         {
-          t: Hb
-        } = (0, PW.E)(),
-        fb = rW(),
-        Mb = function() {
-          const bb = (0, Jb.useRef)(null),
-            cb = (0, Jb.useRef)(null);
-          return (0, Jb.useLayoutEffect)((() => {
-            null !== bb.current && aT(bb.current)
-          })), (0, Jb.useCallback)((sb => {
-            var kb;
-            null === (kb = cb.current) || void 0 === kb || kb.disconnect(), cb.current = null, bb.current = sb, null !== sb && (cb.current = new ResizeObserver((() => {
-              aT(sb)
-            })), cb.current.observe(sb))
+          t: eb
+        } = (0, WM.A)(),
+        vb = lM(),
+        Lb = function() {
+          const bb = (0, pb.useRef)(null),
+            ab = (0, pb.useRef)(null);
+          return (0, pb.useLayoutEffect)((() => {
+            null !== bb.current && UE(bb.current)
+          })), (0, pb.useCallback)((Ub => {
+            var Ab;
+            null === (Ab = ab.current) || void 0 === Ab || Ab.disconnect(), ab.current = null, bb.current = Ub, null !== Ub && (ab.current = new ResizeObserver((() => {
+              UE(Ub)
+            })), ab.current.observe(Ub))
           }), [])
         }(),
-        Xb = function(bb) {
-          const cb = (0, Jb.useRef)(null);
-          return (0, Jb.useLayoutEffect)((() => {
-            const bb = cb.current;
+        Pb = function(bb) {
+          const ab = (0, pb.useRef)(null);
+          return (0, pb.useLayoutEffect)((() => {
+            const bb = ab.current;
             if (null !== bb) {
               bb.style.removeProperty("font-size");
-              for (let cb = 1.7; cb > 1.1 && bb.scrollWidth > bb.clientWidth; cb -= .1) bb.style.fontSize = cb - .1 + "rem"
+              for (let ab = 1.7; ab > 1.1 && bb.scrollWidth > bb.clientWidth; ab -= .1) bb.style.fontSize = ab - .1 + "rem"
             }
-          }), [bb]), (0, Jb.useCallback)((bb => {
-            cb.current = bb
+          }), [bb]), (0, pb.useCallback)((bb => {
+            ab.current = bb
           }), [])
-        }(null === (cb = Ib.preview) || void 0 === cb ? void 0 : cb.name),
-        nb = (0, Jb.useRef)(null),
-        mb = (0, Jb.useRef)({}),
-        lb = Ib.forging,
-        Qb = null !== (sb = null === lb || void 0 === lb ? void 0 : lb.preview.tier) && void 0 !== sb ? sb : 0,
-        eb = null !== (kb = null === lb || void 0 === lb ? void 0 : lb.preview.named) && void 0 !== kb && kb,
-        Cb = (0, Jb.useMemo)((() => {
-          return null === lb ? null : {
-            flames: (bb = Qb, cb = eb, Array.from({
-              length: 26 + 6 * bb + (cb ? 20 : 0)
-            }, ((bb, cb) => {
-              const sb = cb < 6,
-                kb = Math.random() * Math.PI * 2,
-                Wb = sb ? 5 + 3 * Math.random() : 6 + Math.random() ** 1.3 * 8,
-                ab = Math.cos(kb) * Wb,
-                Tb = Math.sin(kb) * Wb - 2 - 3 * Math.random(),
-                Ub = Math.random(),
-                [Ib, Hb, fb] = sb ? ["var(--ember-glow)", .8 + .2 * Math.random(), 1100 + 200 * Math.random()] : Ub < .15 ? ["#fff6c2", .3 + .2 * Math.random(), 350 + 150 * Math.random()] : Ub < .45 ? ["var(--tier)", .35 + .45 * Math.random(), 500 + 300 * Math.random()] : [Ub < .7 ? "var(--ember)" : "var(--ember-glow)", .35 + .5 * Math.random(), 500 + 300 * Math.random()];
+        }(null === (ab = Bb.preview) || void 0 === ab ? void 0 : ab.name),
+        Xb = (0, pb.useRef)(null),
+        jb = (0, pb.useRef)({}),
+        Rb = Bb.forging,
+        kb = null !== (Ub = null === Rb || void 0 === Rb ? void 0 : Rb.preview.tier) && void 0 !== Ub ? Ub : 0,
+        yb = null !== (Ab = null === Rb || void 0 === Rb ? void 0 : Rb.preview.named) && void 0 !== Ab && Ab,
+        Zb = (0, pb.useMemo)((() => {
+          return null === Rb ? null : {
+            flames: (bb = kb, ab = yb, Array.from({
+              length: 26 + 6 * bb + (ab ? 20 : 0)
+            }, ((bb, ab) => {
+              const Ub = ab < 6,
+                Ab = Math.random() * Math.PI * 2,
+                Mb = Ub ? 5 + 3 * Math.random() : 6 + Math.random() ** 1.3 * 8,
+                Tb = Math.cos(Ab) * Mb,
+                Eb = Math.sin(Ab) * Mb - 2 - 3 * Math.random(),
+                Yb = Math.random(),
+                [Bb, eb, vb] = Ub ? ["var(--ember-glow)", .8 + .2 * Math.random(), 1100 + 200 * Math.random()] : Yb < .15 ? ["#fff6c2", .3 + .2 * Math.random(), 350 + 150 * Math.random()] : Yb < .45 ? ["var(--tier)", .35 + .45 * Math.random(), 500 + 300 * Math.random()] : [Yb < .7 ? "var(--ember)" : "var(--ember-glow)", .35 + .5 * Math.random(), 500 + 300 * Math.random()];
               return {
-                "--c": Ib,
-                "--x0": `${(.15*ab).toFixed(2)}rem`,
-                "--y0": `${(.15*Tb).toFixed(2)}rem`,
-                "--x": `${ab.toFixed(2)}rem`,
-                "--y": `${Tb.toFixed(2)}rem`,
+                "--c": Bb,
+                "--x0": `${(.15*Tb).toFixed(2)}rem`,
+                "--y0": `${(.15*Eb).toFixed(2)}rem`,
+                "--x": `${Tb.toFixed(2)}rem`,
+                "--y": `${Eb.toFixed(2)}rem`,
                 "--spin": `${Math.round(360*(Math.random()-.5))}deg`,
-                "--size": `${Hb.toFixed(2)}rem`,
-                "--duration": `${Math.round(fb)}ms`,
+                "--size": `${eb.toFixed(2)}rem`,
+                "--duration": `${Math.round(vb)}ms`,
                 "--delay": `${Math.round(80*Math.random())}ms`
               }
             }))),
-            sparks: Xk(Qb, eb)
+            sparks: vA(kb, yb)
           };
-          var bb, cb
-        }), [null === lb || void 0 === lb ? void 0 : lb.id]);
-      if (!Ib.enabled) return null;
-      const Nb = Ib.preview,
-        Vb = Ib.arriving,
-        Lb = null !== Vb && !Vb.sameSword,
-        ub = null !== Nb && (0, EW.jsx)(BW.d, {
-          itemName: Nb.baseSword,
+          var bb, ab
+        }), [null === Rb || void 0 === Rb ? void 0 : Rb.id]);
+      if (!Bb.enabled) return null;
+      const Db = Bb.preview,
+        zb = Bb.arriving,
+        xb = null !== zb && !zb.sameSword,
+        ib = null !== Db && (0, IM.jsx)(mM.c, {
+          itemName: Db.baseSword,
           amount: 0,
-          enchantmentTier: Nb.enchantmentTier
+          enchantmentTier: Db.enchantmentTier
         });
-      return (0, EW.jsx)(dW.c, {
-        show: Ib.open,
-        close: Ub.dismiss,
+      return (0, IM.jsx)(rM.d, {
+        show: Bb.open,
+        close: Yb.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, EW.jsxs)("section", {
+        children: (0, IM.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockForgePanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockForgeTitle",
           tabIndex: -1,
-          ref: fb,
-          onKeyDown: wW,
-          children: [(0, EW.jsx)("div", {
+          ref: vb,
+          onKeyDown: oM,
+          children: [(0, IM.jsx)("div", {
             className: "SkyblockForgeEmbers",
             "aria-hidden": "true",
-            children: WT.map(((bb, cb) => (0, EW.jsx)("span", {
+            children: aE.map(((bb, ab) => (0, IM.jsx)("span", {
               style: bb
-            }, cb)))
-          }), (0, EW.jsxs)("header", {
+            }, ab)))
+          }), (0, IM.jsxs)("header", {
             className: "SkyblockSkillsHeader",
-            children: [(0, EW.jsxs)("div", {
-              children: [(0, EW.jsx)("h2", {
+            children: [(0, IM.jsxs)("div", {
+              children: [(0, IM.jsx)("h2", {
                 id: "skyblockForgeTitle",
-                children: Hb("skyblockGame:forgeTitle")
-              }), (0, EW.jsx)("p", {
-                children: Hb("skyblockGame:forgeIntro")
+                children: eb("skyblockGame:forgeTitle")
+              }), (0, IM.jsx)("p", {
+                children: eb("skyblockGame:forgeIntro")
               })]
-            }), (0, EW.jsx)(AW.j, {
-              onClick: Ub.dismiss
+            }), (0, IM.jsx)(KM.k, {
+              onClick: Yb.dismiss
             })]
-          }), (0, EW.jsxs)("div", {
+          }), (0, IM.jsxs)("div", {
             className: "SkyblockForgeBody",
-            children: [(0, EW.jsx)("div", {
-              ref: Mb,
-              className: YW()("SkyblockForgeSlots", {
-                Locked: null !== lb
+            children: [(0, IM.jsx)("div", {
+              ref: Lb,
+              className: zM()("SkyblockForgeSlots", {
+                Locked: null !== Rb
               }),
-              children: Ib.slots.map((bb => (0, EW.jsxs)("div", {
+              children: Bb.slots.map((bb => (0, IM.jsxs)("div", {
                 className: "SkyblockForgeSlot",
-                children: [(0, EW.jsx)("h3", {
+                children: [(0, IM.jsx)("h3", {
                   children: bb.label
-                }), (0, EW.jsx)("div", {
+                }), (0, IM.jsx)("div", {
                   className: "SkyblockForgeParts",
-                  children: bb.parts.map((cb => (0, EW.jsx)("button", {
+                  children: bb.parts.map((ab => (0, IM.jsx)("button", {
                     type: "button",
-                    className: YW()("SkyblockForgePart", {
-                      Selected: cb.selected,
-                      Missing: cb.placeholder
+                    className: zM()("SkyblockForgePart", {
+                      Selected: ab.selected,
+                      Missing: ab.placeholder
                     }),
-                    disabled: cb.placeholder,
-                    title: cb.placeholder ? Hb("skyblockGame:forgePickParts") : cb.itemName,
-                    "aria-pressed": cb.selected,
+                    disabled: ab.placeholder,
+                    title: ab.placeholder ? eb("skyblockGame:forgePickParts") : ab.itemName,
+                    "aria-pressed": ab.selected,
                     onClick: () => {
-                      Ub.select(bb.kind, cb.material)
+                      Yb.select(bb.kind, ab.material)
                     },
-                    children: (0, EW.jsx)(BW.d, {
-                      itemName: cb.itemName,
-                      amount: cb.owned
+                    children: (0, IM.jsx)(mM.c, {
+                      itemName: ab.itemName,
+                      amount: ab.owned
                     })
-                  }, cb.material)))
+                  }, ab.material)))
                 })]
               }, bb.kind)))
-            }), (0, EW.jsxs)("div", {
-              className: YW()("SkyblockForgeAnvil", {
-                Named: null === Nb || void 0 === Nb ? void 0 : Nb.named
+            }), (0, IM.jsxs)("div", {
+              className: zM()("SkyblockForgeAnvil", {
+                Named: null === Db || void 0 === Db ? void 0 : Db.named
               }),
               style: {
-                "--tier": null === Nb ? "transparent" : Wb.nb[Nb.enchantmentTier]
+                "--tier": null === Db ? "transparent" : Mb.fb[Db.enchantmentTier]
               },
-              children: [(0, EW.jsxs)("div", {
-                className: YW()("SkyblockForgeAltar", {
-                  Forging: null !== lb
+              children: [(0, IM.jsxs)("div", {
+                className: zM()("SkyblockForgeAltar", {
+                  Forging: null !== Rb
                 }),
-                style: null === lb ? void 0 : kT,
-                children: [(0, EW.jsxs)("div", {
-                  className: YW()("SkyblockForgeMount", {
-                    Arrive: null !== Vb
+                style: null === Rb ? void 0 : bE,
+                children: [(0, IM.jsxs)("div", {
+                  className: zM()("SkyblockForgeMount", {
+                    Arrive: null !== zb
                   }),
-                  children: [null === Nb && (0, EW.jsx)("div", {
+                  children: [null === Db && (0, IM.jsx)("div", {
                     className: "SkyblockForgeSword Unformed",
-                    children: (0, EW.jsx)(BW.d, {
-                      itemName: Ib.unformedSword,
+                    children: (0, IM.jsx)(mM.c, {
+                      itemName: Bb.unformedSword,
                       amount: 0
                     })
-                  }), null !== Nb && (0, EW.jsx)("div", {
+                  }), null !== Db && (0, IM.jsx)("div", {
                     className: "SkyblockForgeGlow"
-                  }), null !== Nb && null === lb && (0, EW.jsx)("div", {
-                    ref: nb,
+                  }), null !== Db && null === Rb && (0, IM.jsx)("div", {
+                    ref: Xb,
                     className: "SkyblockForgeFloat",
-                    children: (0, EW.jsx)("div", {
+                    children: (0, IM.jsx)("div", {
                       className: "SkyblockForgeSword",
-                      children: ub
+                      children: ib
                     })
-                  }), null !== Nb && (0, EW.jsx)("div", {
+                  }), null !== Db && (0, IM.jsx)("div", {
                     className: "SkyblockForgeAura",
                     "aria-hidden": "true",
-                    children: Mk.map(((bb, cb) => (0, EW.jsx)("span", {
-                      className: YW()({
+                    children: eA.map(((bb, ab) => (0, IM.jsx)("span", {
+                      className: zM()({
                         Rune: "" !== bb.rune
                       }),
                       style: bb.style,
                       children: bb.rune
-                    }, cb)))
-                  }), null !== lb && null !== Cb && (0, EW.jsxs)(EW.Fragment, {
-                    children: [(0, EW.jsx)("div", {
+                    }, ab)))
+                  }), null !== Rb && null !== Zb && (0, IM.jsxs)(IM.Fragment, {
+                    children: [(0, IM.jsx)("div", {
                       className: "SkyblockForgeFlash"
-                    }), (0, EW.jsx)("div", {
+                    }), (0, IM.jsx)("div", {
                       className: "SkyblockForgeFlames",
-                      children: Cb.flames.map(((bb, cb) => (0, EW.jsx)("span", {
+                      children: Zb.flames.map(((bb, ab) => (0, IM.jsx)("span", {
                         style: bb
-                      }, cb)))
-                    }), (0, EW.jsx)("div", {
+                      }, ab)))
+                    }), (0, IM.jsx)("div", {
                       className: "SkyblockForgeSettle",
-                      style: mb.current,
-                      children: (0, EW.jsx)("div", {
+                      style: jb.current,
+                      children: (0, IM.jsx)("div", {
                         className: "SkyblockForgeSword",
-                        children: ub
+                        children: ib
                       })
-                    }), (0, EW.jsx)("div", {
+                    }), (0, IM.jsx)("div", {
                       className: "SkyblockForgeHitFlash"
-                    }), (0, EW.jsx)("div", {
+                    }), (0, IM.jsx)("div", {
                       className: "SkyblockForgeShock"
-                    }), (Qb >= 4 || eb) && (0, EW.jsx)("div", {
+                    }), (kb >= 4 || yb) && (0, IM.jsx)("div", {
                       className: "SkyblockForgeShock Echo"
-                    }), (0, EW.jsx)("div", {
+                    }), (0, IM.jsx)("div", {
                       className: "SkyblockForgeSparks",
-                      children: Cb.sparks.map(((bb, cb) => (0, EW.jsx)("span", {
+                      children: Zb.sparks.map(((bb, ab) => (0, IM.jsx)("span", {
                         style: bb
-                      }, cb)))
-                    }), (0, EW.jsx)("div", {
+                      }, ab)))
+                    }), (0, IM.jsx)("div", {
                       className: "SkyblockForgeSwing"
                     })]
                   })]
-                }), (0, EW.jsx)("p", {
-                  className: YW()("SkyblockForgeStatus", null === (ab = Ib.status) || void 0 === ab ? void 0 : ab.tone),
-                  children: null === (Tb = Ib.status) || void 0 === Tb ? void 0 : Tb.text
+                }), (0, IM.jsx)("p", {
+                  className: zM()("SkyblockForgeStatus", null === (Tb = Bb.status) || void 0 === Tb ? void 0 : Tb.tone),
+                  children: null === (Eb = Bb.status) || void 0 === Eb ? void 0 : Eb.text
                 })]
-              }), null === Nb && (0, EW.jsx)("p", {
-                className: YW()("SkyblockForgeName Waiting", {
-                  ArriveText: Lb
+              }), null === Db && (0, IM.jsx)("p", {
+                className: zM()("SkyblockForgeName Waiting", {
+                  ArriveText: xb
                 }),
-                children: Hb(Ib.anyParts ? "skyblockGame:forgePickToPreview" : "skyblockGame:forgePickParts")
-              }), null !== Nb && (0, EW.jsx)("h3", {
-                ref: Xb,
-                className: YW()("SkyblockForgeName", {
-                  ArriveText: Lb
+                children: eb(Bb.anyParts ? "skyblockGame:forgePickToPreview" : "skyblockGame:forgePickParts")
+              }), null !== Db && (0, IM.jsx)("h3", {
+                ref: Pb,
+                className: zM()("SkyblockForgeName", {
+                  ArriveText: xb
                 }),
-                title: Nb.name,
-                children: Nb.name
-              }), (null === Nb || void 0 === Nb ? void 0 : Nb.named) && (0, EW.jsx)("span", {
+                title: Db.name,
+                children: Db.name
+              }), (null === Db || void 0 === Db ? void 0 : Db.named) && (0, IM.jsx)("span", {
                 className: "SkyblockForgeSecret",
-                children: Hb("skyblockGame:forgeSecret")
-              }), (0, EW.jsxs)(AW.p, {
+                children: eb("skyblockGame:forgeSecret")
+              }), (0, IM.jsxs)(KM.s, {
                 className: "SkyblockForgeButton",
-                disabled: !Ib.canForge,
-                title: null === Nb ? void 0 : Hb("skyblockGame:forgeCoalOwned", {
-                  owned: String(Ib.coalOwned)
+                disabled: !Bb.canForge,
+                title: null === Db ? void 0 : eb("skyblockGame:forgeCoalOwned", {
+                  owned: String(Bb.coalOwned)
                 }),
                 onClick: () => {
-                  mb.current = function(bb) {
-                    const cb = null === bb ? "none" : getComputedStyle(bb).transform,
-                      sb = new DOMMatrixReadOnly("none" === cb ? void 0 : cb);
+                  jb.current = function(bb) {
+                    const ab = null === bb ? "none" : getComputedStyle(bb).transform,
+                      Ub = new DOMMatrixReadOnly("none" === ab ? void 0 : ab);
                     return {
-                      "--settle-y": `${sb.f.toFixed(2)}px`,
-                      "--settle-turn": `${(180*Math.atan2(sb.b,sb.a)/Math.PI).toFixed(2)}deg`
+                      "--settle-y": `${Ub.f.toFixed(2)}px`,
+                      "--settle-turn": `${(180*Math.atan2(Ub.b,Ub.a)/Math.PI).toFixed(2)}deg`
                     }
-                  }(nb.current), lk(), Ub.forge(!window.matchMedia("(prefers-reduced-motion: reduce)").matches)
+                  }(Xb.current), XA(), Yb.forge(!window.matchMedia("(prefers-reduced-motion: reduce)").matches)
                 },
-                children: [Hb("skyblockGame:forgeButton"), null !== Nb && (0, EW.jsxs)("span", {
-                  className: YW()("SkyblockForgeCost", {
-                    Short: Nb.coalShort
+                children: [eb("skyblockGame:forgeButton"), null !== Db && (0, IM.jsxs)("span", {
+                  className: zM()("SkyblockForgeCost", {
+                    Short: Db.coalShort
                   }),
-                  children: [(0, EW.jsx)("span", {
+                  children: [(0, IM.jsx)("span", {
                     className: "SkyblockForgeCoal",
-                    children: (0, EW.jsx)(BW.d, {
-                      itemName: ck.d,
+                    children: (0, IM.jsx)(mM.c, {
+                      itemName: SU.b,
                       amount: 0
                     })
-                  }), Nb.coalCost]
+                  }), Db.coalCost]
                 })]
               })]
-            }), (0, EW.jsxs)("div", {
-              className: YW()("SkyblockForgeDetails", {
-                Named: null === Nb || void 0 === Nb ? void 0 : Nb.named
+            }), (0, IM.jsxs)("div", {
+              className: zM()("SkyblockForgeDetails", {
+                Named: null === Db || void 0 === Db ? void 0 : Db.named
               }),
-              children: [(0, EW.jsx)("p", {
-                className: YW()("SkyblockForgeLore", {
-                  ArriveText: Lb
+              children: [(0, IM.jsx)("p", {
+                className: zM()("SkyblockForgeLore", {
+                  ArriveText: xb
                 }),
-                title: null === Nb || void 0 === Nb ? void 0 : Nb.lore,
-                children: null === Nb || void 0 === Nb ? void 0 : Nb.lore
-              }), (0, EW.jsxs)("dl", {
-                className: YW()("SkyblockForgeStats", {
-                  ArriveText: Lb
+                title: null === Db || void 0 === Db ? void 0 : Db.lore,
+                children: null === Db || void 0 === Db ? void 0 : Db.lore
+              }), (0, IM.jsxs)("dl", {
+                className: zM()("SkyblockForgeStats", {
+                  ArriveText: xb
                 }),
-                children: [null === Nb && sT.map((bb => (0, EW.jsxs)("div", {
+                children: [null === Db && ST.map((bb => (0, IM.jsxs)("div", {
                   className: "SkyblockForgeStat Empty",
-                  children: [(0, EW.jsx)("dt", {
-                    children: Hb(bb)
-                  }), (0, EW.jsx)("dd", {
+                  children: [(0, IM.jsx)("dt", {
+                    children: eb(bb)
+                  }), (0, IM.jsx)("dd", {
                     children: "\u2013"
                   })]
-                }, bb))), null === Nb || void 0 === Nb ? void 0 : Nb.stats.map((bb => (0, EW.jsxs)("div", {
-                  className: YW()("SkyblockForgeStat", {
+                }, bb))), null === Db || void 0 === Db ? void 0 : Db.stats.map((bb => (0, IM.jsxs)("div", {
+                  className: zM()("SkyblockForgeStat", {
                     Better: bb.better
                   }),
-                  children: [(0, EW.jsx)("dt", {
+                  children: [(0, IM.jsx)("dt", {
                     children: bb.label
-                  }), (0, EW.jsx)("dd", {
+                  }), (0, IM.jsx)("dd", {
                     children: bb.value
                   })]
                 }, bb.label)))]
-              }), (0, EW.jsx)("ul", {
-                className: YW()("SkyblockForgeEffects", {
-                  ArriveText: Lb
+              }), (0, IM.jsx)("ul", {
+                className: zM()("SkyblockForgeEffects", {
+                  ArriveText: xb
                 }),
-                children: null === Nb || void 0 === Nb ? void 0 : Nb.effects.map((bb => (0, EW.jsx)("li", {
+                children: null === Db || void 0 === Db ? void 0 : Db.effects.map((bb => (0, IM.jsx)("li", {
                   children: bb
                 }, bb)))
               })]
@@ -7309,305 +7309,305 @@ export const modules = {
         })
       })
     }
-    const UT = "Doom Rivet",
-      IT = "Doom Crest";
+    const ME = "Doom Rivet",
+      TE = "Doom Crest";
 
-    function HT(bb) {
+    function EE(bb) {
       let {
-        itemName: cb,
-        amount: sb,
-        owned: kb
+        itemName: ab,
+        amount: Ub,
+        owned: Ab
       } = bb;
-      return (0, EW.jsxs)("span", {
-        className: YW()("SkyblockSmugglerPrice", {
-          Short: sb > kb
+      return (0, IM.jsxs)("span", {
+        className: zM()("SkyblockSmugglerPrice", {
+          Short: Ub > Ab
         }),
-        children: [(0, EW.jsx)("span", {
+        children: [(0, IM.jsx)("span", {
           className: "SkyblockSmugglerPriceIcon",
-          children: (0, EW.jsx)(BW.d, {
-            itemName: cb,
+          children: (0, IM.jsx)(mM.c, {
+            itemName: ab,
             amount: 0
           })
-        }), (0, EW.jsx)("span", {
-          children: sb
+        }), (0, IM.jsx)("span", {
+          children: Ub
         })]
       })
     }
 
-    function fT(bb) {
+    function YE(bb) {
       return bb.justBought ? "skyblockGame:smugglerJustBought" : bb.soldOut ? "skyblockGame:smugglerSoldOut" : "skyblockGame:smugglerBuy"
     }
 
-    function MT(bb) {
+    function BE(bb) {
       let {
-        deal: cb,
-        view: sb,
-        buy: kb
+        deal: ab,
+        view: Ub,
+        buy: Ab
       } = bb;
       const {
-        t: Wb
-      } = (0, PW.E)();
-      return (0, EW.jsxs)("div", {
-        className: YW()("SkyblockSmugglerPocket", {
-          Bought: cb.justBought,
-          Unaffordable: !cb.affordable,
-          SoldOut: cb.soldOut && !cb.justBought
+        t: Mb
+      } = (0, WM.A)();
+      return (0, IM.jsxs)("div", {
+        className: zM()("SkyblockSmugglerPocket", {
+          Bought: ab.justBought,
+          Unaffordable: !ab.affordable,
+          SoldOut: ab.soldOut && !ab.justBought
         }),
-        children: [(0, EW.jsx)("span", {
+        children: [(0, IM.jsx)("span", {
           className: "SkyblockSmugglerBuckle",
           "aria-hidden": "true"
-        }), (0, EW.jsxs)("div", {
+        }), (0, IM.jsxs)("div", {
           className: "SkyblockSmugglerGoods",
-          children: [(0, EW.jsx)(BW.d, {
-            itemName: cb.itemName,
+          children: [(0, IM.jsx)(mM.c, {
+            itemName: ab.itemName,
             amount: 0,
-            enchantmentTier: cb.enchantmentTier
-          }), cb.amount > 1 && (0, EW.jsx)("span", {
+            enchantmentTier: ab.enchantmentTier
+          }), ab.amount > 1 && (0, IM.jsx)("span", {
             className: "SkyblockSmugglerAmount",
-            children: Wb("skyblockGame:smugglerAmount", {
-              amount: cb.amount
+            children: Mb("skyblockGame:smugglerAmount", {
+              amount: ab.amount
             })
           })]
-        }), (0, EW.jsx)("h3", {
-          children: cb.displayName
-        }), (0, EW.jsxs)("div", {
+        }), (0, IM.jsx)("h3", {
+          children: ab.displayName
+        }), (0, IM.jsxs)("div", {
           className: "SkyblockSmugglerDeal",
-          children: [(0, EW.jsxs)("div", {
+          children: [(0, IM.jsxs)("div", {
             className: "SkyblockSmugglerPrices",
-            children: [cb.rivets > 0 && (0, EW.jsx)(HT, {
-              itemName: UT,
-              amount: cb.rivets,
-              owned: sb.rivetsOwned
-            }), cb.crests > 0 && (0, EW.jsx)(HT, {
-              itemName: IT,
-              amount: cb.crests,
-              owned: sb.crestsOwned
+            children: [ab.rivets > 0 && (0, IM.jsx)(EE, {
+              itemName: ME,
+              amount: ab.rivets,
+              owned: Ub.rivetsOwned
+            }), ab.crests > 0 && (0, IM.jsx)(EE, {
+              itemName: TE,
+              amount: ab.crests,
+              owned: Ub.crestsOwned
             })]
-          }), (0, EW.jsx)(AW.d, {
+          }), (0, IM.jsx)(KM.g, {
             className: "SkyblockSmugglerBuy",
-            disabled: cb.soldOut || !cb.affordable || sb.pending,
+            disabled: ab.soldOut || !ab.affordable || Ub.pending,
             onClick: () => {
-              kb(cb.slot)
+              Ab(ab.slot)
             },
-            children: Wb(fT(cb))
+            children: Mb(YE(ab))
           })]
         })]
-      }, cb.justBought ? sb.boughtCount : 0)
+      }, ab.justBought ? Ub.boughtCount : 0)
     }
 
-    function XT(bb) {
+    function eE(bb) {
       let {
-        controller: cb
+        controller: ab
       } = bb;
-      const sb = (0, DW.h)(Nk, cb.getSnapshot()),
+      const Ub = (0, HM.i)(yA, ab.getSnapshot()),
         {
-          t: kb
-        } = (0, PW.E)(),
-        Wb = rW();
-      return sb.enabled ? (0, EW.jsx)(dW.c, {
-        show: sb.open,
-        close: cb.dismiss,
+          t: Ab
+        } = (0, WM.A)(),
+        Mb = lM();
+      return Ub.enabled ? (0, IM.jsx)(rM.d, {
+        show: Ub.open,
+        close: ab.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, EW.jsxs)("section", {
+        children: (0, IM.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockSmugglerPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockSmugglerTitle",
           tabIndex: -1,
-          ref: Wb,
-          onKeyDown: wW,
-          children: [(0, EW.jsx)("span", {
+          ref: Mb,
+          onKeyDown: oM,
+          children: [(0, IM.jsx)("span", {
             className: "SkyblockSmugglerStrap Left",
             "aria-hidden": "true"
-          }), (0, EW.jsx)("span", {
+          }), (0, IM.jsx)("span", {
             className: "SkyblockSmugglerStrap Right",
             "aria-hidden": "true"
-          }), (0, EW.jsxs)("header", {
+          }), (0, IM.jsxs)("header", {
             className: "SkyblockSmugglerFlap",
-            children: [(0, EW.jsxs)("div", {
-              children: [(0, EW.jsx)("h2", {
+            children: [(0, IM.jsxs)("div", {
+              children: [(0, IM.jsx)("h2", {
                 id: "skyblockSmugglerTitle",
-                children: kb("skyblockGame:smugglerTitle")
-              }), (0, EW.jsx)("p", {
-                children: kb("skyblockGame:smugglerIntro")
+                children: Ab("skyblockGame:smugglerTitle")
+              }), (0, IM.jsx)("p", {
+                children: Ab("skyblockGame:smugglerIntro")
               })]
-            }), (0, EW.jsxs)("div", {
+            }), (0, IM.jsxs)("div", {
               className: "SkyblockSmugglerFlapActions",
-              children: [(0, EW.jsxs)("div", {
+              children: [(0, IM.jsxs)("div", {
                 className: "SkyblockSmugglerWallet",
-                children: [(0, EW.jsx)(HT, {
-                  itemName: UT,
-                  amount: sb.rivetsOwned,
-                  owned: sb.rivetsOwned
-                }), (0, EW.jsx)(HT, {
-                  itemName: IT,
-                  amount: sb.crestsOwned,
-                  owned: sb.crestsOwned
+                children: [(0, IM.jsx)(EE, {
+                  itemName: ME,
+                  amount: Ub.rivetsOwned,
+                  owned: Ub.rivetsOwned
+                }), (0, IM.jsx)(EE, {
+                  itemName: TE,
+                  amount: Ub.crestsOwned,
+                  owned: Ub.crestsOwned
                 })]
-              }), (0, EW.jsx)(AW.j, {
-                onClick: cb.dismiss
+              }), (0, IM.jsx)(KM.k, {
+                onClick: ab.dismiss
               })]
             })]
-          }), (0, EW.jsx)("div", {
+          }), (0, IM.jsx)("div", {
             className: "SkyblockSmugglerPockets",
-            children: sb.deals.map((bb => (0, EW.jsx)(MT, {
+            children: Ub.deals.map((bb => (0, IM.jsx)(BE, {
               deal: bb,
-              view: sb,
-              buy: cb.buy
+              view: Ub,
+              buy: ab.buy
             }, bb.slot)))
-          }), (0, EW.jsxs)("footer", {
+          }), (0, IM.jsxs)("footer", {
             className: "SkyblockSmugglerBedroll",
-            children: [(0, EW.jsx)("span", {
+            children: [(0, IM.jsx)("span", {
               className: "SkyblockSmugglerRotates",
-              children: sb.rotatesText
-            }), null !== sb.status && (0, EW.jsx)("span", {
-              className: YW()("SkyblockSmugglerStatus", sb.status.tone),
-              children: sb.status.text
+              children: Ub.rotatesText
+            }), null !== Ub.status && (0, IM.jsx)("span", {
+              className: zM()("SkyblockSmugglerStatus", Ub.status.tone),
+              children: Ub.status.text
             })]
           })]
         })
       }) : null
     }
 
-    function nT(bb) {
+    function vE(bb) {
       let {
-        phase: cb,
-        className: sb
+        phase: ab,
+        className: Ub
       } = bb;
-      return (0, EW.jsx)("span", {
-        className: YW()("SkyblockMoon", `Moon-${cb}`, sb),
+      return (0, IM.jsx)("span", {
+        className: zM()("SkyblockMoon", `Moon-${ab}`, Ub),
         "aria-hidden": "true"
       })
     }
 
-    function mT(bb) {
+    function LE(bb) {
       let {
-        controller: cb
+        controller: ab
       } = bb;
-      const sb = (0, DW.h)(uk, cb.getSnapshot()),
+      const Ub = (0, HM.i)(zA, ab.getSnapshot()),
         {
-          t: kb
-        } = (0, PW.E)();
-      return sb.enabled ? (0, EW.jsx)(JW.e, {
+          t: Ab
+        } = (0, WM.A)();
+      return Ub.enabled ? (0, IM.jsx)(iM.e, {
         placement: "statBars",
-        children: (0, EW.jsx)("button", {
+        children: (0, IM.jsx)("button", {
           type: "button",
           tabIndex: -1,
-          className: YW()("SkyblockPassageChip", sb.open && "Open"),
-          "aria-label": kb("skyblockGame:passageChipLabel", {
-            phase: sb.phaseName
+          className: zM()("SkyblockPassageChip", Ub.open && "Open"),
+          "aria-label": Ab("skyblockGame:passageChipLabel", {
+            phase: Ub.phaseName
           }),
-          title: kb("skyblockGame:passageChipLabel", {
-            phase: sb.phaseName
+          title: Ab("skyblockGame:passageChipLabel", {
+            phase: Ub.phaseName
           }),
           onMouseDown: bb => {
             bb.preventDefault()
           },
-          onClick: cb.toggle,
-          children: (0, EW.jsx)(nT, {
-            phase: sb.phase
-          }, sb.phase)
+          onClick: ab.toggle,
+          children: (0, IM.jsx)(vE, {
+            phase: Ub.phase
+          }, Ub.phase)
         })
       }) : null
     }
 
-    function lT(bb) {
+    function PE(bb) {
       let {
-        fish: cb
+        fish: ab
       } = bb;
-      return (0, EW.jsxs)("li", {
+      return (0, IM.jsxs)("li", {
         className: "SkyblockPassageFish",
-        children: [(0, EW.jsx)("span", {
+        children: [(0, IM.jsx)("span", {
           className: "SkyblockPassageFishIcon",
-          children: (0, EW.jsx)(BW.d, {
-            itemName: cb.itemName,
+          children: (0, IM.jsx)(mM.c, {
+            itemName: ab.itemName,
             amount: 0
           })
-        }), (0, EW.jsxs)("span", {
+        }), (0, IM.jsxs)("span", {
           className: "SkyblockPassageFishText",
-          children: [(0, EW.jsx)("span", {
+          children: [(0, IM.jsx)("span", {
             className: "SkyblockPassageFishName",
-            children: cb.displayName
-          }), (0, EW.jsx)("span", {
+            children: ab.displayName
+          }), (0, IM.jsx)("span", {
             className: "SkyblockPassageFishWhere",
-            children: cb.where
+            children: ab.where
           })]
         })]
       })
     }
 
-    function QT(bb) {
+    function XE(bb) {
       let {
-        controller: cb
+        controller: ab
       } = bb;
-      const sb = (0, DW.h)(uk, cb.getSnapshot()),
+      const Ub = (0, HM.i)(zA, ab.getSnapshot()),
         {
-          t: kb
-        } = (0, PW.E)(),
-        Wb = rW();
-      return sb.enabled ? (0, EW.jsx)(dW.c, {
-        show: sb.open,
-        close: cb.dismiss,
+          t: Ab
+        } = (0, WM.A)(),
+        Mb = lM();
+      return Ub.enabled ? (0, IM.jsx)(rM.d, {
+        show: Ub.open,
+        close: ab.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, EW.jsxs)("section", {
+        children: (0, IM.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockPassagePanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockPassageTitle",
           tabIndex: -1,
-          ref: Wb,
-          onKeyDown: wW,
-          children: [(0, EW.jsxs)("header", {
+          ref: Mb,
+          onKeyDown: oM,
+          children: [(0, IM.jsxs)("header", {
             className: "SkyblockPassageHeader",
-            children: [(0, EW.jsx)(nT, {
-              phase: sb.phase,
+            children: [(0, IM.jsx)(vE, {
+              phase: Ub.phase,
               className: "SkyblockPassageHeaderMoon"
-            }), (0, EW.jsxs)("div", {
-              children: [(0, EW.jsx)("h2", {
+            }), (0, IM.jsxs)("div", {
+              children: [(0, IM.jsx)("h2", {
                 id: "skyblockPassageTitle",
-                children: kb("skyblockGame:passageTitle")
-              }), (0, EW.jsx)("p", {
+                children: Ab("skyblockGame:passageTitle")
+              }), (0, IM.jsx)("p", {
                 className: "SkyblockPassagePhase",
-                children: sb.phaseName
+                children: Ub.phaseName
               })]
-            }), (0, EW.jsx)(AW.j, {
+            }), (0, IM.jsx)(KM.k, {
               padIgnore: !0,
-              onClick: cb.dismiss
+              onClick: ab.dismiss
             })]
-          }), (0, EW.jsx)("p", {
+          }), (0, IM.jsx)("p", {
             className: "SkyblockPassageIntro",
-            children: kb("skyblockGame:passageIntro")
-          }), (0, EW.jsxs)("div", {
+            children: Ab("skyblockGame:passageIntro")
+          }), (0, IM.jsxs)("div", {
             className: "SkyblockPassageBody",
-            children: [(0, EW.jsxs)("section", {
+            children: [(0, IM.jsxs)("section", {
               className: "SkyblockPassageColumn",
-              children: [(0, EW.jsx)("h3", {
-                children: kb("skyblockGame:passageVisiting")
-              }), (0, EW.jsx)("ul", {
+              children: [(0, IM.jsx)("h3", {
+                children: Ab("skyblockGame:passageVisiting")
+              }), (0, IM.jsx)("ul", {
                 className: "SkyblockPassageList",
-                children: sb.visitors.map((bb => (0, EW.jsx)(lT, {
+                children: Ub.visitors.map((bb => (0, IM.jsx)(PE, {
                   fish: bb
                 }, bb.itemName)))
               })]
-            }), (0, EW.jsxs)("section", {
+            }), (0, IM.jsxs)("section", {
               className: "SkyblockPassageColumn",
-              children: [null !== sb.resting && (0, EW.jsxs)(EW.Fragment, {
-                children: [(0, EW.jsx)("h3", {
-                  children: kb("skyblockGame:passageResting")
-                }), (0, EW.jsx)("ul", {
+              children: [null !== Ub.resting && (0, IM.jsxs)(IM.Fragment, {
+                children: [(0, IM.jsx)("h3", {
+                  children: Ab("skyblockGame:passageResting")
+                }), (0, IM.jsx)("ul", {
                   className: "SkyblockPassageList Resting",
-                  children: (0, EW.jsx)(lT, {
-                    fish: sb.resting
+                  children: (0, IM.jsx)(PE, {
+                    fish: Ub.resting
                   })
                 })]
-              }), (0, EW.jsxs)("p", {
+              }), (0, IM.jsxs)("p", {
                 className: "SkyblockPassageNext",
-                children: [(0, EW.jsx)(nT, {
-                  phase: sb.nextPhase
-                }), (0, EW.jsx)("span", {
-                  children: sb.next
+                children: [(0, IM.jsx)(vE, {
+                  phase: Ub.nextPhase
+                }), (0, IM.jsx)("span", {
+                  children: Ub.next
                 })]
               })]
             })]
@@ -7616,11 +7616,11 @@ export const modules = {
       }) : null
     }
 
-    function eT() {
-      return (0, EW.jsx)("span", {
+    function jE() {
+      return (0, IM.jsx)("span", {
         className: "SkyblockLampLightSparkle",
         "aria-hidden": "true",
-        children: [0, 1, 2, 3, 4, 5].map((bb => (0, EW.jsx)("i", {
+        children: [0, 1, 2, 3, 4, 5].map((bb => (0, IM.jsx)("i", {
           style: {
             "--sparkle-index": bb
           }
@@ -7628,562 +7628,562 @@ export const modules = {
       })
     }
 
-    function CT(bb) {
-      var cb;
+    function RE(bb) {
+      var ab;
       let {
-        charm: sb,
-        view: kb,
-        controller: Wb
+        charm: Ub,
+        view: Ab,
+        controller: Mb
       } = bb;
       const {
-        t: ab
-      } = (0, PW.E)(), Tb = kb.shop, Ub = (null === (cb = kb.sparkle) || void 0 === cb ? void 0 : cb.id) === sb.id;
-      return (0, EW.jsxs)("li", {
-        className: YW()("SkyblockLampLightCharm", sb.owned && "Owned", sb.socketed && "Socketed"),
-        children: [Ub && (0, EW.jsx)(eT, {}, kb.sparkle.count), (0, EW.jsx)("h4", {
-          children: sb.name
-        }), (0, EW.jsx)("p", {
+        t: Tb
+      } = (0, WM.A)(), Eb = Ab.shop, Yb = (null === (ab = Ab.sparkle) || void 0 === ab ? void 0 : ab.id) === Ub.id;
+      return (0, IM.jsxs)("li", {
+        className: zM()("SkyblockLampLightCharm", Ub.owned && "Owned", Ub.socketed && "Socketed"),
+        children: [Yb && (0, IM.jsx)(jE, {}, Ab.sparkle.count), (0, IM.jsx)("h4", {
+          children: Ub.name
+        }), (0, IM.jsx)("p", {
           className: "SkyblockLampLightEffect",
-          children: sb.effect
-        }), (0, EW.jsx)("ul", {
+          children: Ub.effect
+        }), (0, IM.jsx)("ul", {
           className: "SkyblockLampLightOdds",
-          children: sb.lines.map((bb => (0, EW.jsxs)("li", {
-            className: YW()("SkyblockLampLightOddsLine", "better" === bb.tone ? "Better" : "worse" === bb.tone ? "Worse" : "Same"),
-            children: [(0, EW.jsx)("span", {
+          children: Ub.lines.map((bb => (0, IM.jsxs)("li", {
+            className: zM()("SkyblockLampLightOddsLine", "better" === bb.tone ? "Better" : "worse" === bb.tone ? "Worse" : "Same"),
+            children: [(0, IM.jsx)("span", {
               className: "Before",
               children: bb.before
-            }), (0, EW.jsx)("span", {
+            }), (0, IM.jsx)("span", {
               className: "Arrow",
               children: "\u2192"
-            }), (0, EW.jsx)("span", {
+            }), (0, IM.jsx)("span", {
               className: "After",
               children: bb.after
             })]
           }, bb.label)))
-        }), (0, EW.jsx)("div", {
+        }), (0, IM.jsx)("div", {
           className: "SkyblockLampLightCharmAction",
-          children: sb.owned ? sb.socketed ? (0, EW.jsxs)(EW.Fragment, {
-            children: [(0, EW.jsx)("span", {
+          children: Ub.owned ? Ub.socketed ? (0, IM.jsxs)(IM.Fragment, {
+            children: [(0, IM.jsx)("span", {
               className: "SkyblockLampLightBadge",
-              children: ab("skyblockGame:lampLightSocketed")
-            }), (0, EW.jsx)(AW.M, {
-              disabled: !kb.canCommand,
-              ariaLabel: ab("skyblockGame:lampLightRemoveLabel", {
-                charm: sb.name
+              children: Tb("skyblockGame:lampLightSocketed")
+            }), (0, IM.jsx)(KM.M, {
+              disabled: !Ab.canCommand,
+              ariaLabel: Tb("skyblockGame:lampLightRemoveLabel", {
+                charm: Ub.name
               }),
               onClick: () => {
-                Wb.socket(null)
+                Mb.socket(null)
               },
-              children: ab("skyblockGame:lampLightRemove")
+              children: Tb("skyblockGame:lampLightRemove")
             })]
-          }) : (0, EW.jsx)(AW.d, {
-            disabled: !kb.canCommand || !Tb.heldRod,
-            ariaLabel: ab("skyblockGame:lampLightSocketLabel", {
-              charm: sb.name
+          }) : (0, IM.jsx)(KM.g, {
+            disabled: !Ab.canCommand || !Eb.heldRod,
+            ariaLabel: Tb("skyblockGame:lampLightSocketLabel", {
+              charm: Ub.name
             }),
             onClick: () => {
-              Wb.socket(sb.id)
+              Mb.socket(Ub.id)
             },
-            children: ab("skyblockGame:lampLightSocket")
-          }) : (0, EW.jsx)(AW.d, {
-            disabled: !kb.canCommand || !sb.affordable,
-            ariaLabel: ab("skyblockGame:lampLightBuyLabel", {
-              item: sb.name,
-              cost: sb.cost
+            children: Tb("skyblockGame:lampLightSocket")
+          }) : (0, IM.jsx)(KM.g, {
+            disabled: !Ab.canCommand || !Ub.affordable,
+            ariaLabel: Tb("skyblockGame:lampLightBuyLabel", {
+              item: Ub.name,
+              cost: Ub.cost
             }),
             onClick: () => {
-              Wb.buy(sb.id)
+              Mb.buy(Ub.id)
             },
-            children: sb.cost
+            children: Ub.cost
           })
         })]
       })
     }
 
-    function NT(bb) {
-      var cb;
+    function kE(bb) {
+      var ab;
       let {
-        tint: sb,
-        view: kb,
-        controller: Wb
+        tint: Ub,
+        view: Ab,
+        controller: Mb
       } = bb;
       const {
-        t: ab
-      } = (0, PW.E)();
-      return (0, EW.jsxs)("li", {
-        className: YW()("SkyblockLampLightTint", sb.wearing && "Wearing"),
+        t: Tb
+      } = (0, WM.A)();
+      return (0, IM.jsxs)("li", {
+        className: zM()("SkyblockLampLightTint", Ub.wearing && "Wearing"),
         style: {
-          "--tint-colour": sb.colour
+          "--tint-colour": Ub.colour
         },
-        children: [(null === (cb = kb.sparkle) || void 0 === cb ? void 0 : cb.id) === sb.id && (0, EW.jsx)(eT, {}, kb.sparkle.count), (0, EW.jsx)("span", {
+        children: [(null === (ab = Ab.sparkle) || void 0 === ab ? void 0 : ab.id) === Ub.id && (0, IM.jsx)(jE, {}, Ab.sparkle.count), (0, IM.jsx)("span", {
           className: "SkyblockLampLightSwatch",
           "aria-hidden": "true"
-        }), (0, EW.jsx)("span", {
+        }), (0, IM.jsx)("span", {
           className: "SkyblockLampLightTintName",
-          children: sb.name
-        }), sb.wearing ? (0, EW.jsx)("span", {
+          children: Ub.name
+        }), Ub.wearing ? (0, IM.jsx)("span", {
           className: "SkyblockLampLightBadge",
-          children: ab("skyblockGame:lampLightWearing")
-        }) : (0, EW.jsx)(AW.d, {
-          disabled: !kb.canCommand || !sb.owned && !sb.affordable,
-          ariaLabel: sb.owned ? ab("skyblockGame:lampLightWearLabel", {
-            tint: sb.name
-          }) : ab("skyblockGame:lampLightBuyLabel", {
-            item: sb.name,
-            cost: sb.cost
+          children: Tb("skyblockGame:lampLightWearing")
+        }) : (0, IM.jsx)(KM.g, {
+          disabled: !Ab.canCommand || !Ub.owned && !Ub.affordable,
+          ariaLabel: Ub.owned ? Tb("skyblockGame:lampLightWearLabel", {
+            tint: Ub.name
+          }) : Tb("skyblockGame:lampLightBuyLabel", {
+            item: Ub.name,
+            cost: Ub.cost
           }),
           onClick: () => {
-            sb.owned ? Wb.wearTint(sb.id) : Wb.buy(sb.id)
+            Ub.owned ? Mb.wearTint(Ub.id) : Mb.buy(Ub.id)
           },
-          children: sb.owned ? ab("skyblockGame:lampLightWear") : sb.cost
+          children: Ub.owned ? Tb("skyblockGame:lampLightWear") : Ub.cost
         })]
       })
     }
 
-    function VT(bb) {
+    function yE(bb) {
       let {
-        controller: cb
+        controller: ab
       } = bb;
-      const sb = (0, DW.h)(Kk, cb.getSnapshot()),
+      const Ub = (0, HM.i)(QA, ab.getSnapshot()),
         {
-          t: kb
-        } = (0, PW.E)(),
-        Wb = sb.shop;
-      return (0, EW.jsxs)("div", {
+          t: Ab
+        } = (0, WM.A)(),
+        Mb = Ub.shop;
+      return (0, IM.jsxs)("div", {
         className: "SkyblockLampLightTab",
-        children: [(0, EW.jsxs)("div", {
+        children: [(0, IM.jsxs)("div", {
           className: "SkyblockLampLightTop",
-          children: [(0, EW.jsx)("span", {
+          children: [(0, IM.jsx)("span", {
             className: "SkyblockLampLightBalance",
-            children: sb.balance
-          }), (0, EW.jsxs)("button", {
+            children: Ub.balance
+          }), (0, IM.jsxs)("button", {
             type: "button",
             role: "switch",
-            "aria-checked": sb.releasing,
-            className: YW()("SkyblockLampLightSwitch", sb.releasing && "On"),
-            disabled: sb.releasing ? "ready" !== sb.status : !sb.canCommand,
+            "aria-checked": Ub.releasing,
+            className: zM()("SkyblockLampLightSwitch", Ub.releasing && "On"),
+            disabled: Ub.releasing ? "ready" !== Ub.status : !Ub.canCommand,
             onClick: () => {
-              cb.setRelease(!sb.releasing)
+              ab.setRelease(!Ub.releasing)
             },
-            children: [(0, EW.jsx)("span", {
+            children: [(0, IM.jsx)("span", {
               className: "SkyblockLampLightSwitchTrack",
               "aria-hidden": "true",
-              children: (0, EW.jsx)("span", {
+              children: (0, IM.jsx)("span", {
                 className: "SkyblockLampLightSwitchKnob"
               })
-            }), kb("skyblockGame:lampLightRelease")]
-          }), (0, EW.jsx)("span", {
+            }), Ab("skyblockGame:lampLightRelease")]
+          }), (0, IM.jsx)("span", {
             className: "SkyblockLampLightHint",
-            children: kb("skyblockGame:lampLightReleaseHint")
+            children: Ab("skyblockGame:lampLightReleaseHint")
           })]
-        }), null !== sb.notice && (0, EW.jsx)("p", {
+        }), null !== Ub.notice && (0, IM.jsx)("p", {
           className: "SkyblockLampLightNotice",
           role: "status",
-          children: sb.notice
-        }), null !== Wb && (0, EW.jsxs)(EW.Fragment, {
-          children: [(0, EW.jsxs)("div", {
+          children: Ub.notice
+        }), null !== Mb && (0, IM.jsxs)(IM.Fragment, {
+          children: [(0, IM.jsxs)("div", {
             className: "SkyblockLampLightSectionHead",
-            children: [(0, EW.jsx)("h3", {
-              children: kb("skyblockGame:lampLightCharms")
-            }), (0, EW.jsx)("span", {
+            children: [(0, IM.jsx)("h3", {
+              children: Ab("skyblockGame:lampLightCharms")
+            }), (0, IM.jsx)("span", {
               className: "SkyblockLampLightOddsFor",
-              children: Wb.oddsFor
-            }), (0, EW.jsx)("div", {
+              children: Mb.oddsFor
+            }), (0, IM.jsx)("div", {
               className: "SkyblockLampLightSituations",
               role: "group",
-              children: ["open", "bloom"].map((bb => (0, EW.jsx)("button", {
+              children: ["open", "bloom"].map((bb => (0, IM.jsx)("button", {
                 type: "button",
-                "aria-pressed": sb.situation === bb,
-                className: YW()("SkyblockLampLightSituation", sb.situation === bb && "Selected"),
+                "aria-pressed": Ub.situation === bb,
+                className: zM()("SkyblockLampLightSituation", Ub.situation === bb && "Selected"),
                 onClick: () => {
-                  cb.setSituation(bb)
+                  ab.setSituation(bb)
                 },
-                children: kb("open" === bb ? "skyblockGame:lampLightOpenWater" : "skyblockGame:lampLightInBloom")
+                children: Ab("open" === bb ? "skyblockGame:lampLightOpenWater" : "skyblockGame:lampLightInBloom")
               }, bb)))
             })]
-          }), !Wb.heldRod && (0, EW.jsx)("p", {
+          }), !Mb.heldRod && (0, IM.jsx)("p", {
             className: "SkyblockLampLightHoldRod",
-            children: kb("skyblockGame:lampLightHoldRod")
-          }), (0, EW.jsx)("ul", {
+            children: Ab("skyblockGame:lampLightHoldRod")
+          }), (0, IM.jsx)("ul", {
             className: "SkyblockLampLightCharms",
-            children: Wb.charms.map((bb => (0, EW.jsx)(CT, {
+            children: Mb.charms.map((bb => (0, IM.jsx)(RE, {
               charm: bb,
-              view: sb,
-              controller: cb
+              view: Ub,
+              controller: ab
             }, bb.id)))
-          }), (0, EW.jsx)("div", {
+          }), (0, IM.jsx)("div", {
             className: "SkyblockLampLightSectionHead",
-            children: (0, EW.jsx)("h3", {
-              children: kb("skyblockGame:lampLightTints")
+            children: (0, IM.jsx)("h3", {
+              children: Ab("skyblockGame:lampLightTints")
             })
-          }), (0, EW.jsxs)("ul", {
+          }), (0, IM.jsxs)("ul", {
             className: "SkyblockLampLightTints",
-            children: [(0, EW.jsxs)("li", {
-              className: YW()("SkyblockLampLightTint", "Islands", Wb.wearingIslandColours && "Wearing"),
-              children: [(0, EW.jsx)("span", {
+            children: [(0, IM.jsxs)("li", {
+              className: zM()("SkyblockLampLightTint", "Islands", Mb.wearingIslandColours && "Wearing"),
+              children: [(0, IM.jsx)("span", {
                 className: "SkyblockLampLightSwatch",
                 "aria-hidden": "true"
-              }), (0, EW.jsx)("span", {
+              }), (0, IM.jsx)("span", {
                 className: "SkyblockLampLightTintName",
-                children: kb("skyblockGame:lampLightIslandColours")
-              }), Wb.wearingIslandColours ? (0, EW.jsx)("span", {
+                children: Ab("skyblockGame:lampLightIslandColours")
+              }), Mb.wearingIslandColours ? (0, IM.jsx)("span", {
                 className: "SkyblockLampLightBadge",
-                children: kb("skyblockGame:lampLightWearing")
-              }) : (0, EW.jsx)(AW.d, {
-                disabled: !sb.canCommand,
-                ariaLabel: kb("skyblockGame:lampLightWearLabel", {
-                  tint: kb("skyblockGame:lampLightIslandColours")
+                children: Ab("skyblockGame:lampLightWearing")
+              }) : (0, IM.jsx)(KM.g, {
+                disabled: !Ub.canCommand,
+                ariaLabel: Ab("skyblockGame:lampLightWearLabel", {
+                  tint: Ab("skyblockGame:lampLightIslandColours")
                 }),
                 onClick: () => {
-                  cb.wearTint(null)
+                  ab.wearTint(null)
                 },
-                children: kb("skyblockGame:lampLightWear")
+                children: Ab("skyblockGame:lampLightWear")
               })]
-            }), Wb.tints.map((bb => (0, EW.jsx)(NT, {
+            }), Mb.tints.map((bb => (0, IM.jsx)(kE, {
               tint: bb,
-              view: sb,
-              controller: cb
+              view: Ub,
+              controller: ab
             }, bb.id)))]
           })]
         })]
       })
     }
 
-    function LT(bb) {
+    function ZE(bb) {
       let {
-        controller: cb
+        controller: ab
       } = bb;
-      const sb = (0, DW.h)(Kk, cb.getSnapshot()),
+      const Ub = (0, HM.i)(QA, ab.getSnapshot()),
         {
-          t: kb
-        } = (0, PW.E)();
-      return sb.releasing ? (0, EW.jsx)(JW.e, {
-        children: (0, EW.jsxs)("button", {
+          t: Ab
+        } = (0, WM.A)();
+      return Ub.releasing ? (0, IM.jsx)(iM.e, {
+        children: (0, IM.jsxs)("button", {
           type: "button",
           className: "SkyblockLampLightPill",
           onClick: () => {
-            cb.setRelease(!1)
+            ab.setRelease(!1)
           },
-          children: [(0, EW.jsx)("span", {
+          children: [(0, IM.jsx)("span", {
             className: "SkyblockLampLightPillOrb",
             "aria-hidden": "true"
-          }), (0, EW.jsxs)("span", {
+          }), (0, IM.jsxs)("span", {
             className: "SkyblockLampLightPillText SmallTextBold",
-            children: [kb("skyblockGame:lampLightReleasing"), " \xb7 ", sb.balance]
-          }), (0, EW.jsx)("span", {
+            children: [Ab("skyblockGame:lampLightReleasing"), " \xb7 ", Ub.balance]
+          }), (0, IM.jsx)("span", {
             className: "SkyblockLampLightPillStop SmallTextBold",
-            children: kb("skyblockGame:lampLightKeepCatches")
-          }), null !== sb.gained && (0, EW.jsx)("span", {
+            children: Ab("skyblockGame:lampLightKeepCatches")
+          }), null !== Ub.gained && (0, IM.jsx)("span", {
             className: "SkyblockLampLightPillGain SmallTextBold",
             "aria-hidden": "true",
-            children: sb.gained.text
-          }, sb.gained.count)]
+            children: Ub.gained.text
+          }, Ub.gained.count)]
         })
       }) : null
     }
 
-    function uT(bb) {
+    function DE(bb) {
       let {
-        island: cb,
-        view: sb,
-        aim: kb
+        island: ab,
+        view: Ub,
+        aim: Ab
       } = bb;
       const {
-        t: Wb
-      } = (0, PW.E)(), ab = cb.featuredFish;
-      return (0, EW.jsxs)("li", {
-        className: YW()("SkyblockKeepersChairIsland", `Island-${cb.id}`, cb.favoured && "Aimed", !cb.relit && "Dark"),
-        children: [(0, EW.jsx)("h3", {
-          children: cb.name
-        }), cb.relit && null !== ab ? (0, EW.jsxs)("div", {
+        t: Mb
+      } = (0, WM.A)(), Tb = ab.featuredFish;
+      return (0, IM.jsxs)("li", {
+        className: zM()("SkyblockKeepersChairIsland", `Island-${ab.id}`, ab.favoured && "Aimed", !ab.relit && "Dark"),
+        children: [(0, IM.jsx)("h3", {
+          children: ab.name
+        }), ab.relit && null !== Tb ? (0, IM.jsxs)("div", {
           className: "SkyblockKeepersChairNotice",
-          children: [(0, EW.jsx)("span", {
+          children: [(0, IM.jsx)("span", {
             className: "SkyblockKeepersChairNoticeLabel",
-            children: Wb("skyblockGame:keepersChairTideNotice")
-          }), (0, EW.jsx)("span", {
+            children: Mb("skyblockGame:keepersChairTideNotice")
+          }), (0, IM.jsx)("span", {
             className: "SkyblockKeepersChairFish",
-            children: (0, EW.jsx)(BW.d, {
-              itemName: ab.itemName,
+            children: (0, IM.jsx)(mM.c, {
+              itemName: Tb.itemName,
               amount: 0
             })
-          }), (0, EW.jsx)("span", {
+          }), (0, IM.jsx)("span", {
             className: "SkyblockKeepersChairFishName",
-            children: ab.displayName
+            children: Tb.displayName
           })]
-        }) : (0, EW.jsx)("div", {
+        }) : (0, IM.jsx)("div", {
           className: "SkyblockKeepersChairNotice",
-          children: (0, EW.jsx)("span", {
+          children: (0, IM.jsx)("span", {
             className: "SkyblockKeepersChairDarkLens",
-            children: Wb("skyblockGame:keepersChairDark")
+            children: Mb("skyblockGame:keepersChairDark")
           })
-        }), cb.relit && (cb.favoured ? (0, EW.jsx)("span", {
+        }), ab.relit && (ab.favoured ? (0, IM.jsx)("span", {
           className: "SkyblockKeepersChairAimedBadge",
-          children: Wb("skyblockGame:keepersChairAimed")
-        }) : (0, EW.jsx)(AW.d, {
+          children: Mb("skyblockGame:keepersChairAimed")
+        }) : (0, IM.jsx)(KM.g, {
           className: "SkyblockKeepersChairAim",
-          disabled: !sb.canAim,
-          ariaLabel: Wb("skyblockGame:keepersChairAimLabel", {
-            island: cb.name
+          disabled: !Ub.canAim,
+          ariaLabel: Mb("skyblockGame:keepersChairAimLabel", {
+            island: ab.name
           }),
           onClick: () => {
-            kb(cb.id)
+            Ab(ab.id)
           },
-          children: Wb("skyblockGame:keepersChairAim")
+          children: Mb("skyblockGame:keepersChairAim")
         }))]
-      }, cb.favoured ? sb.aimedCount : 0)
+      }, ab.favoured ? Ub.aimedCount : 0)
     }
 
-    function YT(bb) {
+    function zE(bb) {
       let {
-        controller: cb,
-        lampLight: sb
+        controller: ab,
+        lampLight: Ub
       } = bb;
-      const kb = (0, DW.h)(tk, cb.getSnapshot()),
-        Wb = (0, DW.h)(Kk, sb.getSnapshot()),
-        [ab, Tb] = (0, Jb.useState)("lamp"),
+      const Ab = (0, HM.i)(NA, ab.getSnapshot()),
+        Mb = (0, HM.i)(QA, Ub.getSnapshot()),
+        [Tb, Eb] = (0, pb.useState)("lamp"),
         {
-          t: Ub
-        } = (0, PW.E)(),
-        Ib = rW();
-      if (!kb.enabled) return null;
-      const Hb = "light" === ab && Wb.enabled;
-      return (0, EW.jsx)(dW.c, {
-        show: kb.open,
-        close: cb.dismiss,
+          t: Yb
+        } = (0, WM.A)(),
+        Bb = lM();
+      if (!Ab.enabled) return null;
+      const eb = "light" === Tb && Mb.enabled;
+      return (0, IM.jsx)(rM.d, {
+        show: Ab.open,
+        close: ab.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, EW.jsxs)("section", {
-          className: YW()("SkyblockSkillsPanel", "SkyblockKeepersChairPanel", Hb && "OnLampLight"),
+        children: (0, IM.jsxs)("section", {
+          className: zM()("SkyblockSkillsPanel", "SkyblockKeepersChairPanel", eb && "OnLampLight"),
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockKeepersChairTitle",
           tabIndex: -1,
-          ref: Ib,
-          onKeyDown: wW,
-          children: [(0, EW.jsxs)("header", {
+          ref: Bb,
+          onKeyDown: oM,
+          children: [(0, IM.jsxs)("header", {
             className: "SkyblockKeepersChairHeader",
-            children: [(0, EW.jsxs)("div", {
-              children: [(0, EW.jsx)("h2", {
+            children: [(0, IM.jsxs)("div", {
+              children: [(0, IM.jsx)("h2", {
                 id: "skyblockKeepersChairTitle",
-                children: Ub("skyblockGame:keepersChairTitle")
-              }), (0, EW.jsx)("p", {
-                children: Ub(Hb ? "skyblockGame:keeperWickLampLightWelcome" : "skyblockGame:keeperWickKeepersChairWelcome")
+                children: Yb("skyblockGame:keepersChairTitle")
+              }), (0, IM.jsx)("p", {
+                children: Yb(eb ? "skyblockGame:keeperWickLampLightWelcome" : "skyblockGame:keeperWickKeepersChairWelcome")
               })]
-            }), (0, EW.jsx)(AW.j, {
+            }), (0, IM.jsx)(KM.k, {
               padIgnore: !0,
-              ariaLabel: Ub("skyblockGame:keepersChairClose"),
-              onClick: cb.dismiss
+              ariaLabel: Yb("skyblockGame:keepersChairClose"),
+              onClick: ab.dismiss
             })]
-          }), Wb.enabled && (0, EW.jsx)("div", {
+          }), Mb.enabled && (0, IM.jsx)("div", {
             className: "SkyblockKeepersChairTabs",
             role: "tablist",
             "data-pad-tabs": "1",
-            children: ["lamp", "light"].map((bb => (0, EW.jsxs)("button", {
+            children: ["lamp", "light"].map((bb => (0, IM.jsxs)("button", {
               type: "button",
               role: "tab",
-              "aria-selected": "light" === bb === Hb,
+              "aria-selected": "light" === bb === eb,
               "data-pad-tab": !0,
-              "data-pad-selected": "light" === bb === Hb ? "true" : void 0,
-              className: YW()("SkyblockKeepersChairTab", "light" === bb === Hb && "Selected"),
+              "data-pad-selected": "light" === bb === eb ? "true" : void 0,
+              className: zM()("SkyblockKeepersChairTab", "light" === bb === eb && "Selected"),
               onClick: () => {
-                Tb(bb)
+                Eb(bb)
               },
-              children: [Ub("lamp" === bb ? "skyblockGame:lampLightChairTab" : "skyblockGame:lampLightTab"), "light" === bb && (0, EW.jsx)("span", {
+              children: [Yb("lamp" === bb ? "skyblockGame:lampLightChairTab" : "skyblockGame:lampLightTab"), "light" === bb && (0, IM.jsx)("span", {
                 className: "SkyblockKeepersChairTabBalance",
-                children: Wb.balance
+                children: Mb.balance
               })]
             }, bb)))
-          }), Hb ? (0, EW.jsx)(VT, {
-            controller: sb
-          }) : (0, EW.jsx)(hT, {
-            view: kb,
-            controller: cb
+          }), eb ? (0, IM.jsx)(yE, {
+            controller: Ub
+          }) : (0, IM.jsx)(xE, {
+            view: Ab,
+            controller: ab
           })]
         })
       })
     }
 
-    function hT(bb) {
+    function xE(bb) {
       let {
-        view: cb,
-        controller: sb
+        view: ab,
+        controller: Ub
       } = bb;
       const {
-        t: kb
-      } = (0, PW.E)();
-      return (0, EW.jsxs)(EW.Fragment, {
-        children: [(0, EW.jsx)("ul", {
+        t: Ab
+      } = (0, WM.A)();
+      return (0, IM.jsxs)(IM.Fragment, {
+        children: [(0, IM.jsx)("ul", {
           className: "SkyblockKeepersChairIslands",
-          children: cb.islands.map((bb => (0, EW.jsx)(uT, {
+          children: ab.islands.map((bb => (0, IM.jsx)(DE, {
             island: bb,
-            view: cb,
-            aim: sb.aim
+            view: ab,
+            aim: Ub.aim
           }, bb.id)))
-        }), null !== cb.almanac && (0, EW.jsxs)("div", {
+        }), null !== ab.almanac && (0, IM.jsxs)("div", {
           className: "SkyblockKeepersChairAlmanac",
-          children: [(0, EW.jsx)("span", {
+          children: [(0, IM.jsx)("span", {
             className: "SkyblockKeepersChairAlmanacLabel",
-            children: kb("skyblockGame:passageTitle")
-          }), (0, EW.jsxs)("span", {
+            children: Ab("skyblockGame:passageTitle")
+          }), (0, IM.jsxs)("span", {
             className: "SkyblockKeepersChairAlmanacWeek",
-            children: [(0, EW.jsx)(nT, {
-              phase: cb.almanac.phase
-            }), cb.almanac.phaseName]
-          }), (0, EW.jsxs)("span", {
+            children: [(0, IM.jsx)(vE, {
+              phase: ab.almanac.phase
+            }), ab.almanac.phaseName]
+          }), (0, IM.jsxs)("span", {
             className: "SkyblockKeepersChairAlmanacWeek Next",
-            children: [(0, EW.jsx)(nT, {
-              phase: cb.almanac.nextPhase
-            }), cb.almanac.next]
+            children: [(0, IM.jsx)(vE, {
+              phase: ab.almanac.nextPhase
+            }), ab.almanac.next]
           })]
-        }), (0, EW.jsxs)("footer", {
+        }), (0, IM.jsxs)("footer", {
           className: "SkyblockKeepersChairFooter",
-          children: [(0, EW.jsx)("span", {
+          children: [(0, IM.jsx)("span", {
             className: "SkyblockKeepersChairFavour",
-            children: kb("skyblockGame:keepersChairFavour")
-          }), cb.aimed && (0, EW.jsx)(AW.M, {
+            children: Ab("skyblockGame:keepersChairFavour")
+          }), ab.aimed && (0, IM.jsx)(KM.M, {
             className: "SkyblockKeepersChairRest",
-            disabled: !cb.canAim,
+            disabled: !ab.canAim,
             onClick: () => {
-              sb.aim(null)
+              Ub.aim(null)
             },
-            children: kb("skyblockGame:keepersChairRest")
+            children: Ab("skyblockGame:keepersChairRest")
           })]
-        }), null !== cb.status && (0, EW.jsx)("p", {
-          className: YW()("SkyblockKeepersChairStatus", "refused" === cb.status.tone ? "Refused" : "Shines"),
+        }), null !== ab.status && (0, IM.jsx)("p", {
+          className: zM()("SkyblockKeepersChairStatus", "refused" === ab.status.tone ? "Refused" : "Shines"),
           role: "status",
-          children: cb.status.text
+          children: ab.status.text
         })]
       })
     }
 
-    function JT(bb) {
+    function iE(bb) {
       let {
-        controller: cb
+        controller: ab
       } = bb;
       const {
-        t: sb
-      } = (0, PW.E)(), kb = (0, DW.h)(Pk, cb.getSnapshot());
-      if (!kb.enabled) return null;
-      const Wb = kb.freshCount > 0 ? sb("skyblockGame:reachLogOpenNews", {
-        count: kb.freshCount
-      }) : sb("skyblockGame:reachLogOpen");
-      return (0, EW.jsx)(JW.e, {
+        t: Ub
+      } = (0, WM.A)(), Ab = (0, HM.i)(HA, ab.getSnapshot());
+      if (!Ab.enabled) return null;
+      const Mb = Ab.freshCount > 0 ? Ub("skyblockGame:reachLogOpenNews", {
+        count: Ab.freshCount
+      }) : Ub("skyblockGame:reachLogOpen");
+      return (0, IM.jsx)(iM.e, {
         placement: "statBars",
-        children: (0, EW.jsxs)("button", {
+        children: (0, IM.jsxs)("button", {
           type: "button",
-          className: YW()("SkyblockReachLogButton", kb.freshCount > 0 && "HasNews", kb.pending && "Pending"),
-          "aria-label": Wb,
-          title: Wb,
-          onClick: cb.ask,
-          children: [kb.news && (0, EW.jsx)("span", {
+          className: zM()("SkyblockReachLogButton", Ab.freshCount > 0 && "HasNews", Ab.pending && "Pending"),
+          "aria-label": Mb,
+          title: Mb,
+          onClick: ab.ask,
+          children: [Ab.news && (0, IM.jsx)("span", {
             className: "SkyblockReachLogPulse",
             "aria-hidden": "true"
-          }, `pulse:${kb.newsToken}`), (0, EW.jsx)("span", {
-            className: YW()("SkyblockReachLogIcon", kb.news && "Jump"),
+          }, `pulse:${Ab.newsToken}`), (0, IM.jsx)("span", {
+            className: zM()("SkyblockReachLogIcon", Ab.news && "Jump"),
             "aria-hidden": "true",
-            children: (0, EW.jsx)(BW.d, {
-              itemName: Ek,
+            children: (0, IM.jsx)(mM.c, {
+              itemName: dA,
               amount: 0
             })
-          }, `icon:${kb.newsToken}`), kb.freshCount > 0 && (0, EW.jsx)("span", {
+          }, `icon:${Ab.newsToken}`), Ab.freshCount > 0 && (0, IM.jsx)("span", {
             className: "SkyblockReachLogBadge",
-            children: kb.freshCount
+            children: Ab.freshCount
           })]
         })
       })
     }
 
-    function gT(bb) {
+    function fE(bb) {
       let {
-        gift: cb
+        gift: ab
       } = bb;
-      return (0, EW.jsx)("li", {
-        className: YW()("SkyblockRegularsGift", cb.given && "Given"),
-        children: cb.text
+      return (0, IM.jsx)("li", {
+        className: zM()("SkyblockRegularsGift", ab.given && "Given"),
+        children: ab.text
       })
     }
 
-    function BT(bb) {
+    function mE(bb) {
       let {
-        regular: cb
+        regular: ab
       } = bb;
       const {
-        t: sb
-      } = (0, PW.E)();
-      return (0, EW.jsxs)("li", {
-        className: YW()("SkyblockRegularsCard", cb.tagged ? "Tagged" : "Untagged", cb.resting && "Resting"),
-        children: [(0, EW.jsxs)("div", {
+        t: Ub
+      } = (0, WM.A)();
+      return (0, IM.jsxs)("li", {
+        className: zM()("SkyblockRegularsCard", ab.tagged ? "Tagged" : "Untagged", ab.resting && "Resting"),
+        children: [(0, IM.jsxs)("div", {
           className: "SkyblockRegularsCardTop",
-          children: [(0, EW.jsx)("span", {
+          children: [(0, IM.jsx)("span", {
             className: "SkyblockRegularsIcon",
-            title: cb.fishName,
-            children: (0, EW.jsx)(BW.d, {
-              itemName: cb.itemName,
+            title: ab.fishName,
+            children: (0, IM.jsx)(mM.c, {
+              itemName: ab.itemName,
               amount: 0
             })
-          }), (0, EW.jsxs)("div", {
+          }), (0, IM.jsxs)("div", {
             className: "SkyblockRegularsNames",
-            children: [(0, EW.jsx)("h3", {
-              children: cb.name
-            }), (0, EW.jsx)("span", {
+            children: [(0, IM.jsx)("h3", {
+              children: ab.name
+            }), (0, IM.jsx)("span", {
               className: "SkyblockRegularsFish",
-              children: cb.fishName
+              children: ab.fishName
             })]
           })]
-        }), (0, EW.jsx)("p", {
+        }), (0, IM.jsx)("p", {
           className: "SkyblockRegularsLine",
-          children: cb.line
-        }), (0, EW.jsxs)("p", {
+          children: ab.line
+        }), (0, IM.jsxs)("p", {
           className: "SkyblockRegularsStats",
-          children: [(0, EW.jsx)("span", {
+          children: [(0, IM.jsx)("span", {
             className: "SkyblockRegularsSize",
-            children: cb.size
-          }), cb.tagged && (0, EW.jsx)("span", {
+            children: ab.size
+          }), ab.tagged && (0, IM.jsx)("span", {
             className: "SkyblockRegularsMeetings",
-            children: cb.resting ? sb("skyblockGame:regularsResting") : cb.meetings
+            children: ab.resting ? Ub("skyblockGame:regularsResting") : ab.meetings
           })]
-        }), (0, EW.jsx)("p", {
+        }), (0, IM.jsx)("p", {
           className: "SkyblockRegularsChance",
-          children: cb.chance
-        }), (0, EW.jsx)("ul", {
+          children: ab.chance
+        }), (0, IM.jsx)("ul", {
           className: "SkyblockRegularsGifts",
-          children: cb.gifts.map((bb => (0, EW.jsx)(gT, {
+          children: ab.gifts.map((bb => (0, IM.jsx)(fE, {
             gift: bb
           }, bb.text)))
-        }), cb.history.length > 0 && (0, EW.jsx)("ul", {
+        }), ab.history.length > 0 && (0, IM.jsx)("ul", {
           className: "SkyblockRegularsHistory",
-          children: cb.history.map(((bb, cb) => (0, EW.jsx)("li", {
+          children: ab.history.map(((bb, ab) => (0, IM.jsx)("li", {
             children: bb
-          }, cb)))
+          }, ab)))
         })]
       })
     }
 
-    function tT(bb) {
+    function pE(bb) {
       let {
-        controller: cb,
-        island: sb
+        controller: ab,
+        island: Ub
       } = bb;
       const {
-        t: kb
-      } = (0, PW.E)(), Wb = (0, DW.h)(kW, cb.getSnapshot()), ab = Wb.islands.find((bb => bb.id === sb));
-      if (!Wb.enabled || void 0 === ab) return null;
-      const Tb = kb("skyblockGame:regularsOpen");
-      return (0, EW.jsxs)("button", {
+        t: Ab
+      } = (0, WM.A)(), Mb = (0, HM.i)(bM, ab.getSnapshot()), Tb = Mb.islands.find((bb => bb.id === Ub));
+      if (!Mb.enabled || void 0 === Tb) return null;
+      const Eb = Ab("skyblockGame:regularsOpen");
+      return (0, IM.jsxs)("button", {
         type: "button",
         className: "SkyblockRegularsStrip",
-        "aria-label": Tb,
-        title: Tb,
+        "aria-label": Eb,
+        title: Eb,
         onClick: () => {
-          cb.openIsland(sb)
+          ab.openIsland(Ub)
         },
-        children: [(0, EW.jsx)("span", {
+        children: [(0, IM.jsx)("span", {
           className: "SkyblockRegularsStripTitle",
-          children: kb("skyblockGame:regularsTitle")
-        }), ab.regulars.map((bb => (0, EW.jsx)("span", {
-          className: YW()("SkyblockRegularsStripIcon", bb.tagged && "Tagged"),
+          children: Ab("skyblockGame:regularsTitle")
+        }), Tb.regulars.map((bb => (0, IM.jsx)("span", {
+          className: zM()("SkyblockRegularsStripIcon", bb.tagged && "Tagged"),
           title: bb.name,
-          children: (0, EW.jsx)(BW.d, {
+          children: (0, IM.jsx)(mM.c, {
             itemName: bb.itemName,
             amount: 0
           })
@@ -8191,89 +8191,89 @@ export const modules = {
       })
     }
 
-    function yT(bb) {
-      var cb;
+    function NE(bb) {
+      var ab;
       let {
-        controller: sb
+        controller: Ub
       } = bb;
-      const kb = (0, DW.h)(kW, sb.getSnapshot()),
+      const Ab = (0, HM.i)(bM, Ub.getSnapshot()),
         {
-          t: Wb
-        } = (0, PW.E)(),
-        ab = rW();
-      if (!kb.enabled) return null;
-      const Tb = null !== (cb = kb.islands.find((bb => bb.id === kb.selected))) && void 0 !== cb ? cb : null;
-      return (0, EW.jsx)(dW.c, {
-        show: kb.open,
-        close: sb.dismiss,
+          t: Mb
+        } = (0, WM.A)(),
+        Tb = lM();
+      if (!Ab.enabled) return null;
+      const Eb = null !== (ab = Ab.islands.find((bb => bb.id === Ab.selected))) && void 0 !== ab ? ab : null;
+      return (0, IM.jsx)(rM.d, {
+        show: Ab.open,
+        close: Ub.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, EW.jsxs)("section", {
+        children: (0, IM.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockReachLogPanel SkyblockRegularsPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockRegularsTitle",
           tabIndex: -1,
-          ref: ab,
-          onKeyDown: wW,
-          children: [(0, EW.jsxs)("header", {
+          ref: Tb,
+          onKeyDown: oM,
+          children: [(0, IM.jsxs)("header", {
             className: "SkyblockReachLogHeader",
-            children: [(0, EW.jsxs)("div", {
-              children: [(0, EW.jsx)("h2", {
+            children: [(0, IM.jsxs)("div", {
+              children: [(0, IM.jsx)("h2", {
                 id: "skyblockRegularsTitle",
-                children: Wb("skyblockGame:regularsTitle")
-              }), (0, EW.jsx)("p", {
-                children: Wb("skyblockGame:pimRegularsLedgerWelcome")
+                children: Mb("skyblockGame:regularsTitle")
+              }), (0, IM.jsx)("p", {
+                children: Mb("skyblockGame:pimRegularsLedgerWelcome")
               })]
-            }), (0, EW.jsx)(AW.j, {
+            }), (0, IM.jsx)(KM.k, {
               padIgnore: !0,
-              onClick: sb.dismiss
+              onClick: Ub.dismiss
             })]
-          }), (0, EW.jsx)("nav", {
+          }), (0, IM.jsx)("nav", {
             className: "SkyblockReachLogTabs",
             role: "tablist",
             "data-pad-tabs": "1",
-            children: kb.islands.map((bb => {
-              const cb = bb.id === kb.selected;
-              return (0, EW.jsx)("button", {
+            children: Ab.islands.map((bb => {
+              const ab = bb.id === Ab.selected;
+              return (0, IM.jsx)("button", {
                 type: "button",
                 role: "tab",
-                "aria-selected": cb,
+                "aria-selected": ab,
                 "data-pad-tab": !0,
-                "data-pad-selected": cb ? "true" : void 0,
-                className: YW()("SkyblockReachLogTab", `Island-${bb.id}`, cb && "Selected", bb.charm.given && "GoldPage"),
+                "data-pad-selected": ab ? "true" : void 0,
+                className: zM()("SkyblockReachLogTab", `Island-${bb.id}`, ab && "Selected", bb.charm.given && "GoldPage"),
                 onClick: () => {
-                  sb.selectIsland(bb.id)
+                  Ub.selectIsland(bb.id)
                 },
-                children: (0, EW.jsx)("span", {
+                children: (0, IM.jsx)("span", {
                   className: "SkyblockReachLogTabName",
                   children: bb.name
                 })
               }, bb.id)
             }))
-          }), (0, EW.jsxs)("div", {
-            className: YW()("SkyblockRegularsPage", null !== Tb && `Island-${Tb.id}`),
+          }), (0, IM.jsxs)("div", {
+            className: zM()("SkyblockRegularsPage", null !== Eb && `Island-${Eb.id}`),
             role: "tabpanel",
-            children: [(0, EW.jsx)("p", {
+            children: [(0, IM.jsx)("p", {
               className: "SkyblockRegularsHow",
-              children: Wb("skyblockGame:regularsHow")
-            }), null !== Tb && (0, EW.jsx)("ul", {
+              children: Mb("skyblockGame:regularsHow")
+            }), null !== Eb && (0, IM.jsx)("ul", {
               className: "SkyblockRegularsGrid",
-              children: Tb.regulars.map((bb => (0, EW.jsx)(BT, {
+              children: Eb.regulars.map((bb => (0, IM.jsx)(mE, {
                 regular: bb
               }, bb.id)))
             })]
-          }), null !== Tb && (0, EW.jsx)("footer", {
+          }), null !== Eb && (0, IM.jsx)("footer", {
             className: "SkyblockRegularsFooter",
-            children: (0, EW.jsx)("span", {
-              className: YW()("SkyblockRegularsCharm", Tb.charm.given && "Given"),
-              children: Tb.charm.text
+            children: (0, IM.jsx)("span", {
+              className: zM()("SkyblockRegularsCharm", Eb.charm.given && "Given"),
+              children: Eb.charm.text
             })
           })]
         })
       })
     }
-    const PT = [{
+    const WE = [{
         "--left": "12%",
         "--tilt": "14deg",
         "--duration": "11s",
@@ -8284,111 +8284,111 @@ export const modules = {
         "--duration": "14s",
         "--delay": "-9s"
       }],
-      DT = Array.from({
+      HE = Array.from({
         length: 6
-      }, ((bb, cb) => ({
-        "--x": `${(88*(.618034*cb%1)).toFixed(1)}%`,
-        "--y": `${(10+37*cb%70).toFixed(1)}%`,
-        "--size": 7 + cb % 3 * 3 + "rem",
-        "--drift-x": 3 * (cb % 3 - 1) + "rem",
-        "--drift-y": 2 * (cb % 2 === 0 ? -1 : 1) + "rem",
-        "--duration": 14 + cb % 4 * 3 + "s",
-        "--delay": 2.5 * -cb + "s"
+      }, ((bb, ab) => ({
+        "--x": `${(88*(.618034*ab%1)).toFixed(1)}%`,
+        "--y": `${(10+37*ab%70).toFixed(1)}%`,
+        "--size": 7 + ab % 3 * 3 + "rem",
+        "--drift-x": 3 * (ab % 3 - 1) + "rem",
+        "--drift-y": 2 * (ab % 2 === 0 ? -1 : 1) + "rem",
+        "--duration": 14 + ab % 4 * 3 + "s",
+        "--delay": 2.5 * -ab + "s"
       }))),
-      ET = Array.from({
+      IE = Array.from({
         length: 14
-      }, ((bb, cb) => ({
-        "--left": `${(3+94*((.618034*cb+.3)%1)).toFixed(1)}%`,
-        "--size": 4 + cb % 4 * 2 + "px",
-        "--sway": cb % 3 * 3 + 3 + "px",
-        "--duration": `${(8+7*cb%6*1.1).toFixed(1)}s`,
-        "--delay": `${(-1.73*cb%12).toFixed(2)}s`
+      }, ((bb, ab) => ({
+        "--left": `${(3+94*((.618034*ab+.3)%1)).toFixed(1)}%`,
+        "--size": 4 + ab % 4 * 2 + "px",
+        "--sway": ab % 3 * 3 + 3 + "px",
+        "--duration": `${(8+7*ab%6*1.1).toFixed(1)}s`,
+        "--delay": `${(-1.73*ab%12).toFixed(2)}s`
       }))),
-      iT = (0, Jb.memo)((function(bb) {
+      dE = (0, pb.memo)((function(bb) {
         let {
-          island: cb
+          island: ab
         } = bb;
-        return (0, EW.jsxs)("div", {
-          className: YW()("SkyblockReachLogDepths", null !== cb && `Island-${cb}`),
+        return (0, IM.jsxs)("div", {
+          className: zM()("SkyblockReachLogDepths", null !== ab && `Island-${ab}`),
           "aria-hidden": "true",
-          children: [PT.map(((bb, cb) => (0, EW.jsx)("span", {
+          children: [WE.map(((bb, ab) => (0, IM.jsx)("span", {
             className: "SkyblockReachLogShaft",
             style: bb
-          }, `shaft${cb}`))), DT.map(((bb, cb) => (0, EW.jsx)("span", {
-            className: YW()("SkyblockReachLogMote", cb % 2 === 1 && "Violet"),
+          }, `shaft${ab}`))), HE.map(((bb, ab) => (0, IM.jsx)("span", {
+            className: zM()("SkyblockReachLogMote", ab % 2 === 1 && "Violet"),
             style: bb
-          }, `mote${cb}`))), ET.map(((bb, cb) => (0, EW.jsx)("span", {
+          }, `mote${ab}`))), IE.map(((bb, ab) => (0, IM.jsx)("span", {
             className: "SkyblockReachLogBubble",
             style: bb
-          }, `bubble${cb}`)))]
+          }, `bubble${ab}`)))]
         })
       })),
-      OT = 100;
+      FE = 100;
 
-    function GT(bb) {
+    function hE(bb) {
       let {
-        view: cb
+        view: ab
       } = bb;
       const {
-        t: sb
-      } = (0, PW.E)();
-      if (null === cb || 0 === cb.total) return null;
-      const kb = OT * cb.aspect,
-        Wb = sb("skyblockGame:hiddenWatersCount", {
-          found: cb.found,
-          total: cb.total
+        t: Ub
+      } = (0, WM.A)();
+      if (null === ab || 0 === ab.total) return null;
+      const Ab = FE * ab.aspect,
+        Mb = Ub("skyblockGame:hiddenWatersCount", {
+          found: ab.found,
+          total: ab.total
         });
-      return (0, EW.jsxs)("div", {
+      return (0, IM.jsxs)("div", {
         className: "SkyblockHiddenWatersStrip",
-        title: `${sb("skyblockGame:hiddenWatersTitle")}: ${Wb}`,
-        children: [(0, EW.jsxs)("svg", {
+        title: `${Ub("skyblockGame:hiddenWatersTitle")}: ${Mb}`,
+        children: [(0, IM.jsxs)("svg", {
           className: "SkyblockHiddenWatersOutline",
-          viewBox: `0 0 100 ${kb}`,
+          viewBox: `0 0 100 ${Ab}`,
           "aria-hidden": "true",
-          children: [cb.islands.map(((bb, cb) => (0, EW.jsx)("ellipse", {
+          children: [ab.islands.map(((bb, ab) => (0, IM.jsx)("ellipse", {
             className: "SkyblockHiddenWatersIsland",
-            cx: (bb.left + bb.width / 2) * OT,
-            cy: (bb.top + bb.height / 2) * kb,
-            rx: bb.width / 2 * OT,
-            ry: bb.height / 2 * kb
-          }, cb))), cb.pins.map(((bb, cb) => (0, EW.jsx)("circle", {
+            cx: (bb.left + bb.width / 2) * FE,
+            cy: (bb.top + bb.height / 2) * Ab,
+            rx: bb.width / 2 * FE,
+            ry: bb.height / 2 * Ab
+          }, ab))), ab.pins.map(((bb, ab) => (0, IM.jsx)("circle", {
             className: "SkyblockHiddenWatersPin",
-            cx: bb.left * OT,
-            cy: bb.top * kb,
+            cx: bb.left * FE,
+            cy: bb.top * Ab,
             r: 13
-          }, cb)))]
-        }), (0, EW.jsxs)("span", {
+          }, ab)))]
+        }), (0, IM.jsxs)("span", {
           className: "SkyblockHiddenWatersText",
-          children: [(0, EW.jsx)("span", {
+          children: [(0, IM.jsx)("span", {
             className: "SkyblockHiddenWatersTitle",
-            children: sb("skyblockGame:hiddenWatersTitle")
-          }), (0, EW.jsx)("span", {
-            className: cb.found === cb.total ? "SkyblockHiddenWatersCount AllFound" : "SkyblockHiddenWatersCount",
-            children: Wb
+            children: Ub("skyblockGame:hiddenWatersTitle")
+          }), (0, IM.jsx)("span", {
+            className: ab.found === ab.total ? "SkyblockHiddenWatersCount AllFound" : "SkyblockHiddenWatersCount",
+            children: Mb
           })]
         })]
       })
     }
 
-    function KT(bb) {
+    function GE(bb) {
       let {
-        view: cb,
-        island: sb
+        view: ab,
+        island: Ub
       } = bb;
       const {
-        t: kb
-      } = (0, PW.E)(), Wb = null === cb || void 0 === cb ? void 0 : cb.glimpses.get(sb);
-      return void 0 === Wb || 0 === Wb.length ? null : (0, EW.jsxs)("div", {
+        t: Ab
+      } = (0, WM.A)(), Mb = null === ab || void 0 === ab ? void 0 : ab.glimpses.get(Ub);
+      return void 0 === Mb || 0 === Mb.length ? null : (0, IM.jsxs)("div", {
         className: "SkyblockHiddenWatersGlimpses",
-        children: [(0, EW.jsx)("span", {
+        children: [(0, IM.jsx)("span", {
           className: "SkyblockHiddenWatersGlimpsesTitle",
-          children: kb("skyblockGame:hiddenWatersGlimpsed")
-        }), (0, EW.jsx)("span", {
+          children: Ab("skyblockGame:hiddenWatersGlimpsed")
+        }), (0, IM.jsx)("span", {
           className: "SkyblockHiddenWatersGlimpsesRow",
-          children: Wb.map((bb => (0, EW.jsx)("span", {
+          children: Mb.map((bb => (0, IM.jsx)("span", {
             className: "SkyblockHiddenWatersSilhouette",
             "aria-hidden": "true",
-            children: (0, EW.jsx)(BW.d, {
+            children: (0, IM.jsx)(mM.c, {
               itemName: bb,
               amount: 0
             })
@@ -8396,8 +8396,8 @@ export const modules = {
         })]
       })
     }
-    const ZT = ["Bronze", "Silver", "Gold"],
-      zT = [{
+    const QE = ["Bronze", "Silver", "Gold"],
+      qE = [{
         className: "Bloom",
         titleKey: "skyblockGame:reachLogRibbonBloomTitle",
         legendKey: "skyblockGame:reachLogLegendBloom"
@@ -8410,364 +8410,364 @@ export const modules = {
         titleKey: "skyblockGame:reachLogRibbonLetGoTitle",
         legendKey: "skyblockGame:reachLogLegendLetGo"
       }],
-      qT = zT.slice(0, 2);
+      uE = qE.slice(0, 2);
 
-    function dT(bb) {
-      return bb ? zT : qT
+    function rE(bb) {
+      return bb ? qE : uE
     }
 
-    function AT(bb) {
+    function KE(bb) {
       let {
-        fish: cb,
-        letGoShown: sb
+        fish: ab,
+        letGoShown: Ub
       } = bb;
       const {
-        t: kb
-      } = (0, PW.E)();
-      return (0, EW.jsxs)("span", {
+        t: Ab
+      } = (0, WM.A)();
+      return (0, IM.jsxs)("span", {
         className: "SkyblockReachLogMarks",
-        children: [ZT.map(((bb, sb) => {
-          const Wb = sb < cb.marks;
-          return (0, EW.jsx)("span", {
-            className: YW()("SkyblockReachLogPip", bb, Wb && "Earned", Wb && cb.fresh && sb === cb.marks - 1 && "Newest"),
-            title: kb(Dk[sb])
+        children: [QE.map(((bb, Ub) => {
+          const Mb = Ub < ab.marks;
+          return (0, IM.jsx)("span", {
+            className: zM()("SkyblockReachLogPip", bb, Mb && "Earned", Mb && ab.fresh && Ub === ab.marks - 1 && "Newest"),
+            title: Ab(IA[Ub])
           }, bb)
-        })), (0, EW.jsx)("span", {
+        })), (0, IM.jsx)("span", {
           className: "SkyblockReachLogDivider"
-        }), dT(sb).map(((bb, sb) => (0, EW.jsx)("span", {
-          className: YW()("SkyblockReachLogRibbon", bb.className, !0 === cb.ribbons[sb] && "Earned"),
-          title: kb(bb.titleKey)
+        }), rE(Ub).map(((bb, Ub) => (0, IM.jsx)("span", {
+          className: zM()("SkyblockReachLogRibbon", bb.className, !0 === ab.ribbons[Ub] && "Earned"),
+          title: Ab(bb.titleKey)
         }, bb.className)))]
       })
     }
 
-    function wT(bb) {
+    function oE(bb) {
       let {
-        letGoShown: cb,
-        haloShown: sb
+        letGoShown: ab,
+        haloShown: Ub
       } = bb;
       const {
-        t: kb
-      } = (0, PW.E)();
-      return (0, EW.jsxs)("span", {
+        t: Ab
+      } = (0, WM.A)();
+      return (0, IM.jsxs)("span", {
         className: "SkyblockReachLogLegend",
-        children: [(0, EW.jsxs)("span", {
+        children: [(0, IM.jsxs)("span", {
           className: "SkyblockReachLogLegendItem",
-          title: kb("skyblockGame:reachLogMarks"),
-          children: [(0, EW.jsx)("span", {
+          title: Ab("skyblockGame:reachLogMarks"),
+          children: [(0, IM.jsx)("span", {
             className: "SkyblockReachLogPip Gold Earned"
-          }), kb("skyblockGame:reachLogLegendMarks")]
-        }), dT(cb).map((bb => (0, EW.jsxs)("span", {
+          }), Ab("skyblockGame:reachLogLegendMarks")]
+        }), rE(ab).map((bb => (0, IM.jsxs)("span", {
           className: "SkyblockReachLogLegendItem",
-          title: kb(bb.titleKey),
-          children: [(0, EW.jsx)("span", {
-            className: YW()("SkyblockReachLogRibbon", bb.className, "Earned")
-          }), kb(bb.legendKey)]
-        }, bb.className))), (0, EW.jsxs)("span", {
+          title: Ab(bb.titleKey),
+          children: [(0, IM.jsx)("span", {
+            className: zM()("SkyblockReachLogRibbon", bb.className, "Earned")
+          }), Ab(bb.legendKey)]
+        }, bb.className))), (0, IM.jsxs)("span", {
           className: "SkyblockReachLogLegendItem",
-          title: kb("skyblockGame:reachLogGlimmerTitle"),
-          children: [(0, EW.jsx)("span", {
+          title: Ab("skyblockGame:reachLogGlimmerTitle"),
+          children: [(0, IM.jsx)("span", {
             className: "SkyblockReachLogGlimmer"
-          }), kb("skyblockGame:reachLogLegendGlimmer")]
-        }), sb && (0, EW.jsxs)("span", {
+          }), Ab("skyblockGame:reachLogLegendGlimmer")]
+        }), Ub && (0, IM.jsxs)("span", {
           className: "SkyblockReachLogLegendItem",
-          title: kb("skyblockGame:reachLogHaloTitle"),
-          children: [(0, EW.jsx)("span", {
+          title: Ab("skyblockGame:reachLogHaloTitle"),
+          children: [(0, IM.jsx)("span", {
             className: "SkyblockReachLogHalo"
-          }), kb("skyblockGame:reachLogLegendHalo")]
+          }), Ab("skyblockGame:reachLogLegendHalo")]
         })]
       })
     }
 
-    function rT(bb) {
+    function lE(bb) {
       let {
-        returner: cb
+        returner: ab
       } = bb;
-      return (0, EW.jsxs)("div", {
-        className: YW()("SkyblockReachLogReturner", cb.back && "Back"),
-        children: [(0, EW.jsx)("span", {
+      return (0, IM.jsxs)("div", {
+        className: zM()("SkyblockReachLogReturner", ab.back && "Back"),
+        children: [(0, IM.jsx)("span", {
           className: "SkyblockReachLogReturnerIcon",
           "aria-hidden": "true",
-          children: (0, EW.jsx)(BW.d, {
-            itemName: cb.itemName,
+          children: (0, IM.jsx)(mM.c, {
+            itemName: ab.itemName,
             amount: 0
           })
-        }), (0, EW.jsx)("span", {
+        }), (0, IM.jsx)("span", {
           className: "SkyblockReachLogReturnerLine",
-          children: cb.line
+          children: ab.line
         })]
       })
     }
 
-    function oT(bb) {
+    function tE(bb) {
       let {
-        fish: cb,
-        letGoShown: sb
+        fish: ab,
+        letGoShown: Ub
       } = bb;
       const {
-        t: kb
-      } = (0, PW.E)();
-      return (0, EW.jsxs)("li", {
-        className: YW()("SkyblockReachLogCard", cb.caught ? "Caught" : "Unknown", cb.marks >= 3 && "GoldCard", cb.fresh && "Fresh", cb.visitor && "Visitor"),
-        children: [cb.visitor && (0, EW.jsx)("span", {
+        t: Ab
+      } = (0, WM.A)();
+      return (0, IM.jsxs)("li", {
+        className: zM()("SkyblockReachLogCard", ab.caught ? "Caught" : "Unknown", ab.marks >= 3 && "GoldCard", ab.fresh && "Fresh", ab.visitor && "Visitor"),
+        children: [ab.visitor && (0, IM.jsx)("span", {
           className: "SkyblockReachLogVisitorTag",
-          children: kb("skyblockGame:reachLogVisitor")
-        }), cb.fresh && Array.from({
+          children: Ab("skyblockGame:reachLogVisitor")
+        }), ab.fresh && Array.from({
           length: 4
-        }, ((bb, cb) => (0, EW.jsx)("span", {
+        }, ((bb, ab) => (0, IM.jsx)("span", {
           className: "SkyblockReachLogSparkle"
-        }, cb))), (0, EW.jsxs)("span", {
+        }, ab))), (0, IM.jsxs)("span", {
           className: "SkyblockReachLogFishIcon",
           "aria-hidden": "true",
-          children: [cb.halo && (0, EW.jsx)("span", {
+          children: [ab.halo && (0, IM.jsx)("span", {
             className: "SkyblockReachLogHalo",
-            title: kb("skyblockGame:reachLogHaloTitle")
-          }), (0, EW.jsx)(BW.d, {
-            itemName: cb.itemName,
+            title: Ab("skyblockGame:reachLogHaloTitle")
+          }), (0, IM.jsx)(mM.c, {
+            itemName: ab.itemName,
             amount: 0
-          }), cb.glimmer && (0, EW.jsx)("span", {
+          }), ab.glimmer && (0, IM.jsx)("span", {
             className: "SkyblockReachLogGlimmer",
-            title: kb("skyblockGame:reachLogGlimmerTitle")
+            title: Ab("skyblockGame:reachLogGlimmerTitle")
           })]
-        }), (0, EW.jsx)("span", {
+        }), (0, IM.jsx)("span", {
           className: "SkyblockReachLogFishName",
-          children: cb.name
-        }), (0, EW.jsx)("span", {
+          children: ab.name
+        }), (0, IM.jsx)("span", {
           className: "SkyblockReachLogFishChance",
-          children: cb.chance
-        }), (0, EW.jsx)("span", {
+          children: ab.chance
+        }), (0, IM.jsx)("span", {
           className: "SkyblockReachLogFishBest",
-          children: cb.best
-        }), (0, EW.jsx)(AT, {
-          fish: cb,
-          letGoShown: sb
+          children: ab.best
+        }), (0, IM.jsx)(KE, {
+          fish: ab,
+          letGoShown: Ub
         })]
       })
     }
 
-    function ST(bb) {
+    function wE(bb) {
       let {
-        page: cb,
-        letGoShown: sb,
-        hiddenWaters: kb
+        page: ab,
+        letGoShown: Ub,
+        hiddenWaters: Ab
       } = bb;
       const {
-        t: Wb
-      } = (0, PW.E)();
-      return cb.awake ? (0, EW.jsx)("ul", {
+        t: Mb
+      } = (0, WM.A)();
+      return ab.awake ? (0, IM.jsx)("ul", {
         className: "SkyblockReachLogGrid",
-        children: cb.fish.map((bb => (0, EW.jsx)(oT, {
+        children: ab.fish.map((bb => (0, IM.jsx)(tE, {
           fish: bb,
-          letGoShown: sb
+          letGoShown: Ub
         }, bb.itemName)))
-      }) : (0, EW.jsxs)(EW.Fragment, {
-        children: [(0, EW.jsx)("p", {
+      }) : (0, IM.jsxs)(IM.Fragment, {
+        children: [(0, IM.jsx)("p", {
           className: "SkyblockReachLogAsleep",
-          children: Wb("skyblockGame:reachLogAsleep")
-        }), (0, EW.jsx)(KT, {
-          view: kb,
-          island: cb.id
+          children: Mb("skyblockGame:reachLogAsleep")
+        }), (0, IM.jsx)(GE, {
+          view: Ab,
+          island: ab.id
         })]
       })
     }
 
-    function RT(bb) {
-      var cb, sb;
+    function sE(bb) {
+      var ab, Ub;
       let {
-        controller: kb,
-        regulars: Wb,
-        hiddenWaters: ab
+        controller: Ab,
+        regulars: Mb,
+        hiddenWaters: Tb
       } = bb;
-      const Tb = (0, DW.h)(Pk, kb.getSnapshot()),
-        Ub = function(bb) {
-          return (0, DW.h)(IW, bb.getSnapshot())
-        }(ab),
-        Ib = (0, DW.h)(kW, Wb.getSnapshot()),
+      const Eb = (0, HM.i)(HA, Ab.getSnapshot()),
+        Yb = function(bb) {
+          return (0, HM.i)(TM, bb.getSnapshot())
+        }(Tb),
+        Bb = (0, HM.i)(bM, Mb.getSnapshot()),
         {
-          t: Hb
-        } = (0, PW.E)(),
-        fb = rW();
-      if (!Tb.enabled) return null;
-      const Mb = null !== (cb = Tb.pages.find((bb => bb.id === Tb.selected))) && void 0 !== cb ? cb : null;
-      return (0, EW.jsx)(dW.c, {
-        show: Tb.open,
-        close: kb.dismiss,
+          t: eb
+        } = (0, WM.A)(),
+        vb = lM();
+      if (!Eb.enabled) return null;
+      const Lb = null !== (ab = Eb.pages.find((bb => bb.id === Eb.selected))) && void 0 !== ab ? ab : null;
+      return (0, IM.jsx)(rM.d, {
+        show: Eb.open,
+        close: Ab.dismiss,
         togglePointerLock: !1,
-        className: YW()("SkyblockSkillsOverlay", Ib.open && "SkyblockReachLogUnderLedger"),
-        children: (0, EW.jsxs)("section", {
+        className: zM()("SkyblockSkillsOverlay", Bb.open && "SkyblockReachLogUnderLedger"),
+        children: (0, IM.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockReachLogPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockReachLogTitle",
           tabIndex: -1,
-          ref: fb,
-          onKeyDown: wW,
-          children: [(0, EW.jsx)(iT, {
-            island: null !== (sb = null === Mb || void 0 === Mb ? void 0 : Mb.id) && void 0 !== sb ? sb : null
-          }), (0, EW.jsxs)("header", {
+          ref: vb,
+          onKeyDown: oM,
+          children: [(0, IM.jsx)(dE, {
+            island: null !== (Ub = null === Lb || void 0 === Lb ? void 0 : Lb.id) && void 0 !== Ub ? Ub : null
+          }), (0, IM.jsxs)("header", {
             className: "SkyblockReachLogHeader",
-            children: [(0, EW.jsxs)("div", {
-              children: [(0, EW.jsx)("h2", {
+            children: [(0, IM.jsxs)("div", {
+              children: [(0, IM.jsx)("h2", {
                 id: "skyblockReachLogTitle",
-                children: Hb("skyblockGame:reachLogTitle")
-              }), (0, EW.jsx)("p", {
-                children: Hb("skyblockGame:keeperWickReachLogWelcome")
+                children: eb("skyblockGame:reachLogTitle")
+              }), (0, IM.jsx)("p", {
+                children: eb("skyblockGame:keeperWickReachLogWelcome")
               })]
-            }), (0, EW.jsx)(GT, {
-              view: Ub
-            }), (0, EW.jsx)(AW.j, {
+            }), (0, IM.jsx)(hE, {
+              view: Yb
+            }), (0, IM.jsx)(KM.k, {
               padIgnore: !0,
-              onClick: kb.dismiss
+              onClick: Ab.dismiss
             })]
-          }), (0, EW.jsx)("nav", {
+          }), (0, IM.jsx)("nav", {
             className: "SkyblockReachLogTabs",
             role: "tablist",
             "data-pad-tabs": "1",
-            children: Tb.pages.map((bb => {
-              const cb = bb.id === Tb.selected,
-                sb = bb.fish.some((bb => bb.fresh));
-              return (0, EW.jsxs)("button", {
+            children: Eb.pages.map((bb => {
+              const ab = bb.id === Eb.selected,
+                Ub = bb.fish.some((bb => bb.fresh));
+              return (0, IM.jsxs)("button", {
                 type: "button",
                 role: "tab",
-                "aria-selected": cb,
+                "aria-selected": ab,
                 "data-pad-tab": !0,
-                "data-pad-selected": cb ? "true" : void 0,
-                className: YW()("SkyblockReachLogTab", `Island-${bb.id}`, cb && "Selected", !bb.awake && "Asleep", bb.gold && "GoldPage", sb && "HasNews"),
+                "data-pad-selected": ab ? "true" : void 0,
+                className: zM()("SkyblockReachLogTab", `Island-${bb.id}`, ab && "Selected", !bb.awake && "Asleep", bb.gold && "GoldPage", Ub && "HasNews"),
                 onClick: () => {
-                  kb.selectPage(bb.id)
+                  Ab.selectPage(bb.id)
                 },
-                children: [(0, EW.jsx)("span", {
+                children: [(0, IM.jsx)("span", {
                   className: "SkyblockReachLogTabName",
                   children: bb.name
-                }), bb.awake && (0, EW.jsx)("span", {
+                }), bb.awake && (0, IM.jsx)("span", {
                   className: "SkyblockReachLogTabCount",
-                  children: Hb("skyblockGame:reachLogCaughtCount", {
+                  children: eb("skyblockGame:reachLogCaughtCount", {
                     caught: bb.caught,
                     total: bb.total
                   })
                 })]
               }, bb.id)
             }))
-          }), (0, EW.jsxs)("div", {
-            className: YW()("SkyblockReachLogPage", null !== Mb && `Island-${Mb.id}`),
+          }), (0, IM.jsxs)("div", {
+            className: zM()("SkyblockReachLogPage", null !== Lb && `Island-${Lb.id}`),
             role: "tabpanel",
-            children: [null !== Mb && (0, EW.jsx)(ST, {
-              page: Mb,
-              letGoShown: Tb.letGoShown,
-              hiddenWaters: Ub
-            }), !0 === (null === Mb || void 0 === Mb ? void 0 : Mb.awake) && null !== Mb.returner && (0, EW.jsx)(rT, {
-              returner: Mb.returner
-            }), !0 === (null === Mb || void 0 === Mb ? void 0 : Mb.awake) && (0, EW.jsx)(tT, {
-              controller: Wb,
-              island: Mb.id
+            children: [null !== Lb && (0, IM.jsx)(wE, {
+              page: Lb,
+              letGoShown: Eb.letGoShown,
+              hiddenWaters: Yb
+            }), !0 === (null === Lb || void 0 === Lb ? void 0 : Lb.awake) && null !== Lb.returner && (0, IM.jsx)(lE, {
+              returner: Lb.returner
+            }), !0 === (null === Lb || void 0 === Lb ? void 0 : Lb.awake) && (0, IM.jsx)(pE, {
+              controller: Mb,
+              island: Lb.id
             })]
-          }), (0, EW.jsx)("footer", {
-            className: YW()("SkyblockReachLogFooter", null !== Mb && `Island-${Mb.id}`, !0 === (null === Mb || void 0 === Mb ? void 0 : Mb.gold) && "GoldPage"),
-            children: !0 === (null === Mb || void 0 === Mb ? void 0 : Mb.gold) ? (0, EW.jsx)("span", {
+          }), (0, IM.jsx)("footer", {
+            className: zM()("SkyblockReachLogFooter", null !== Lb && `Island-${Lb.id}`, !0 === (null === Lb || void 0 === Lb ? void 0 : Lb.gold) && "GoldPage"),
+            children: !0 === (null === Lb || void 0 === Lb ? void 0 : Lb.gold) ? (0, IM.jsx)("span", {
               className: "SkyblockReachLogGoldLine",
-              children: Hb("skyblockGame:keeperWickReachLogPageGold")
-            }) : (0, EW.jsxs)(EW.Fragment, {
-              children: [(0, EW.jsx)(wT, {
-                letGoShown: Tb.letGoShown,
-                haloShown: !0 === (null === Mb || void 0 === Mb ? void 0 : Mb.fish.some((bb => bb.halo)))
-              }), (0, EW.jsx)("span", {
+              children: eb("skyblockGame:keeperWickReachLogPageGold")
+            }) : (0, IM.jsxs)(IM.Fragment, {
+              children: [(0, IM.jsx)(oE, {
+                letGoShown: Eb.letGoShown,
+                haloShown: !0 === (null === Lb || void 0 === Lb ? void 0 : Lb.fish.some((bb => bb.halo)))
+              }), (0, IM.jsx)("span", {
                 className: "SkyblockReachLogReward",
-                children: Hb("skyblockGame:reachLogPageReward")
+                children: eb("skyblockGame:reachLogPageReward")
               })]
             })
           })]
         })
       })
     }
-    var vT = sb(4553);
+    var gE = Ub(4516);
 
-    function FT(bb) {
+    function CE(bb) {
       let {
-        conversation: cb,
-        completedLabel: sb
+        conversation: ab,
+        completedLabel: Ub
       } = bb;
-      return (0, EW.jsxs)("article", {
+      return (0, IM.jsxs)("article", {
         className: "SkyblockDialogueConversation",
-        children: [(0, EW.jsxs)("header", {
-          children: [(0, EW.jsx)("h3", {
-            children: cb.questName
-          }), cb.completed && (0, EW.jsx)("span", {
+        children: [(0, IM.jsxs)("header", {
+          children: [(0, IM.jsx)("h3", {
+            children: ab.questName
+          }), ab.completed && (0, IM.jsx)("span", {
             className: "SkyblockDialogueCompleted",
-            children: sb
+            children: Ub
           })]
-        }), cb.lines.map((bb => (0, EW.jsx)(vT.d, {
+        }), ab.lines.map((bb => (0, IM.jsx)(gE.c, {
           display: bb.display
         }, bb.key)))]
       })
     }
 
-    function xT(bb) {
+    function VE(bb) {
       let {
-        controller: cb
+        controller: ab
       } = bb;
       const {
-        t: sb
-      } = (0, PW.E)(), kb = (0, DW.h)(fW, cb.getSnapshot()), Wb = rW();
-      if (!kb.enabled) return null;
-      const ab = !kb.loading && 0 === kb.conversations.length;
-      return (0, EW.jsx)(dW.c, {
-        show: kb.open,
-        close: cb.dismiss,
+        t: Ub
+      } = (0, WM.A)(), Ab = (0, HM.i)(YM, ab.getSnapshot()), Mb = lM();
+      if (!Ab.enabled) return null;
+      const Tb = !Ab.loading && 0 === Ab.conversations.length;
+      return (0, IM.jsx)(rM.d, {
+        show: Ab.open,
+        close: ab.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, EW.jsxs)("section", {
+        children: (0, IM.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockDialoguePanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockDialogueTitle",
           tabIndex: -1,
-          ref: Wb,
-          onKeyDown: wW,
-          children: [(0, EW.jsxs)("header", {
+          ref: Mb,
+          onKeyDown: oM,
+          children: [(0, IM.jsxs)("header", {
             className: "SkyblockSkillsHeader",
-            children: [(0, EW.jsxs)("div", {
-              children: [(0, EW.jsx)("h2", {
+            children: [(0, IM.jsxs)("div", {
+              children: [(0, IM.jsx)("h2", {
                 id: "skyblockDialogueTitle",
-                children: sb("skyblockDialogue:title")
-              }), (0, EW.jsx)("p", {
-                children: sb("skyblockDialogue:intro")
+                children: Ub("skyblockDialogue:title")
+              }), (0, IM.jsx)("p", {
+                children: Ub("skyblockDialogue:intro")
               })]
-            }), (0, EW.jsx)(AW.j, {
+            }), (0, IM.jsx)(KM.k, {
               padIgnore: !0,
-              onClick: cb.dismiss
+              onClick: ab.dismiss
             })]
-          }), (0, EW.jsxs)("div", {
-            className: YW()("SkyblockDialogueBody", {
-              SingleColumn: null !== kb.questFocus || 0 === kb.characters.length
+          }), (0, IM.jsxs)("div", {
+            className: zM()("SkyblockDialogueBody", {
+              SingleColumn: null !== Ab.questFocus || 0 === Ab.characters.length
             }),
-            children: [null === kb.questFocus && kb.characters.length > 0 && (0, EW.jsx)("nav", {
+            children: [null === Ab.questFocus && Ab.characters.length > 0 && (0, IM.jsx)("nav", {
               className: "SkyblockDialogueCharacters",
-              children: kb.characters.map((bb => (0, EW.jsx)(AW.d, {
-                className: YW()("SkyblockDialogueCharacter", {
+              children: Ab.characters.map((bb => (0, IM.jsx)(KM.g, {
+                className: zM()("SkyblockDialogueCharacter", {
                   Selected: bb.selected
                 }),
                 onClick: () => {
-                  cb.selectCharacter(bb.id)
+                  ab.selectCharacter(bb.id)
                 },
-                children: (0, EW.jsx)(tW.d, {
+                children: (0, IM.jsx)(pM.c, {
                   text: bb.styling
                 })
               }, bb.id)))
-            }), (0, EW.jsxs)("div", {
+            }), (0, IM.jsxs)("div", {
               className: "SkyblockDialogueConversations",
-              children: [null !== kb.questFocus && (0, EW.jsx)(AW.d, {
+              children: [null !== Ab.questFocus && (0, IM.jsx)(KM.g, {
                 className: "SkyblockDialogueBack",
-                onClick: cb.showCharacters,
-                children: sb("skyblockDialogue:allCharacters")
-              }), kb.loading && (0, EW.jsx)("p", {
+                onClick: ab.showCharacters,
+                children: Ub("skyblockDialogue:allCharacters")
+              }), Ab.loading && (0, IM.jsx)("p", {
                 className: "SkyblockDialogueEmpty",
-                children: sb("skyblockDialogue:loading")
-              }), ab && (0, EW.jsx)("p", {
+                children: Ub("skyblockDialogue:loading")
+              }), Tb && (0, IM.jsx)("p", {
                 className: "SkyblockDialogueEmpty",
-                children: sb(null === kb.questFocus ? "skyblockDialogue:empty" : "skyblockDialogue:questEmpty")
-              }), kb.conversations.map((bb => (0, EW.jsx)(FT, {
+                children: Ub(null === Ab.questFocus ? "skyblockDialogue:empty" : "skyblockDialogue:questEmpty")
+              }), Ab.conversations.map((bb => (0, IM.jsx)(CE, {
                 conversation: bb,
-                completedLabel: kb.completedLabel
+                completedLabel: Ab.completedLabel
               }, bb.questId)))]
             })]
           })]
@@ -8775,87 +8775,87 @@ export const modules = {
       })
     }
 
-    function jT(bb) {
+    function OE(bb) {
       let {
-        controller: cb
+        controller: ab
       } = bb;
-      const sb = (0, DW.h)(lW, cb.getSnapshot()),
+      const Ub = (0, HM.i)(PM, ab.getSnapshot()),
         {
-          t: kb
-        } = (0, PW.E)(),
-        Wb = rW();
-      return sb.enabled ? (0, EW.jsx)(dW.c, {
-        show: sb.open,
-        close: cb.dismiss,
+          t: Ab
+        } = (0, WM.A)(),
+        Mb = lM();
+      return Ub.enabled ? (0, IM.jsx)(rM.d, {
+        show: Ub.open,
+        close: ab.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, EW.jsxs)("section", {
+        children: (0, IM.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockAutographsPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockAutographsTitle",
           tabIndex: -1,
-          ref: Wb,
-          onKeyDown: wW,
-          children: [(0, EW.jsxs)("header", {
+          ref: Mb,
+          onKeyDown: oM,
+          children: [(0, IM.jsxs)("header", {
             className: "SkyblockSkillsHeader",
-            children: [(0, EW.jsxs)("div", {
-              children: [(0, EW.jsx)("h2", {
+            children: [(0, IM.jsxs)("div", {
+              children: [(0, IM.jsx)("h2", {
                 id: "skyblockAutographsTitle",
-                children: kb("skyblockGame:autographBook")
-              }), (0, EW.jsx)("p", {
-                children: kb("skyblockGame:autographBookIntro")
+                children: Ab("skyblockGame:autographBook")
+              }), (0, IM.jsx)("p", {
+                children: Ab("skyblockGame:autographBookIntro")
               })]
-            }), (0, EW.jsx)(AW.j, {
+            }), (0, IM.jsx)(KM.k, {
               padIgnore: !0,
-              onClick: cb.dismiss
+              onClick: ab.dismiss
             })]
-          }), (0, EW.jsxs)("div", {
+          }), (0, IM.jsxs)("div", {
             className: "SkyblockAutographsBody",
-            children: [(0, EW.jsxs)("div", {
+            children: [(0, IM.jsxs)("div", {
               className: "SkyblockAutographTotals",
-              children: [(0, EW.jsxs)("div", {
+              children: [(0, IM.jsxs)("div", {
                 className: "SkyblockAutographTotal",
-                children: [(0, EW.jsx)("strong", {
-                  children: sb.total
-                }), (0, EW.jsx)("span", {
-                  children: kb("skyblockGame:autographTotal")
+                children: [(0, IM.jsx)("strong", {
+                  children: Ub.total
+                }), (0, IM.jsx)("span", {
+                  children: Ab("skyblockGame:autographTotal")
                 })]
-              }), (0, EW.jsxs)("div", {
+              }), (0, IM.jsxs)("div", {
                 className: "SkyblockAutographTotal Ranked",
-                children: [(0, EW.jsx)("strong", {
-                  children: sb.rankTotal
-                }), (0, EW.jsx)("span", {
-                  children: kb("skyblockGame:autographRankTotal")
+                children: [(0, IM.jsx)("strong", {
+                  children: Ub.rankTotal
+                }), (0, IM.jsx)("span", {
+                  children: Ab("skyblockGame:autographRankTotal")
                 })]
               })]
-            }), 0 === sb.entries.length ? (0, EW.jsx)("p", {
+            }), 0 === Ub.entries.length ? (0, IM.jsx)("p", {
               className: "SkyblockAutographsEmpty",
-              children: kb("skyblockGame:autographBookEmpty")
-            }) : (0, EW.jsx)("ul", {
+              children: Ab("skyblockGame:autographBookEmpty")
+            }) : (0, IM.jsx)("ul", {
               className: "SkyblockAutographList",
-              children: sb.entries.map((bb => (0, EW.jsxs)("li", {
-                className: YW()("SkyblockAutograph", {
+              children: Ub.entries.map((bb => (0, IM.jsxs)("li", {
+                className: zM()("SkyblockAutograph", {
                   Ranked: null !== bb.rank
                 }),
                 style: null === bb.rank ? void 0 : {
                   color: bb.rank.colour
                 },
-                children: [null !== bb.rank && (0, EW.jsx)(la.b, {
+                children: [null !== bb.rank && (0, IM.jsx)(PT.e, {
                   className: "SkyblockAutographRankIcon",
                   name: bb.rank.icon,
-                  kit: (0, la.f)(bb.rank.icon)
-                }), (0, EW.jsxs)("div", {
+                  kit: (0, PT.f)(bb.rank.icon)
+                }), (0, IM.jsxs)("div", {
                   className: "SkyblockAutographText",
-                  children: [(0, EW.jsx)("span", {
+                  children: [(0, IM.jsx)("span", {
                     className: "SkyblockAutographName",
                     children: bb.name
-                  }), (0, EW.jsxs)("span", {
+                  }), (0, IM.jsxs)("span", {
                     className: "SkyblockAutographDetails",
-                    children: [null !== bb.rank && (0, EW.jsx)("span", {
+                    children: [null !== bb.rank && (0, IM.jsx)("span", {
                       className: "SkyblockAutographRank",
                       children: bb.rank.label
-                    }), (0, EW.jsx)("span", {
+                    }), (0, IM.jsx)("span", {
                       className: "SkyblockAutographDate",
                       children: bb.signedOn
                     })]
@@ -8867,24 +8867,24 @@ export const modules = {
         })
       }) : null
     }
-    const pT = (0, Jb.memo)((function(bb) {
+    const cE = (0, pb.memo)((function(bb) {
         let {
-          controller: cb
+          controller: ab
         } = bb;
-        return (0, EW.jsxs)("div", {
+        return (0, IM.jsxs)("div", {
           className: "SkyblockQuestWaypoint",
-          ref: cb.display.mountWaypoint,
-          children: [(0, EW.jsx)("div", {
+          ref: ab.display.mountWaypoint,
+          children: [(0, IM.jsx)("div", {
             className: "SkyblockQuestWaypointMarker"
-          }), (0, EW.jsx)("div", {
+          }), (0, IM.jsx)("div", {
             className: "SkyblockQuestWaypointTextClip",
-            children: (0, EW.jsxs)("div", {
+            children: (0, IM.jsxs)("div", {
               className: "SkyblockQuestWaypointText",
-              children: [(0, EW.jsx)("span", {
+              children: [(0, IM.jsx)("span", {
                 className: "SkyblockQuestWaypointLabel"
-              }), (0, EW.jsx)("span", {
+              }), (0, IM.jsx)("span", {
                 className: "SkyblockQuestWaypointDistance"
-              }), (0, EW.jsx)("span", {
+              }), (0, IM.jsx)("span", {
                 className: "SkyblockQuestWaypointHint",
                 hidden: !0
               })]
@@ -8892,7 +8892,7 @@ export const modules = {
           })]
         })
       })),
-      bU = {
+      JE = {
         started: "!",
         quest: "\u2605",
         step: "\u2713",
@@ -8901,178 +8901,178 @@ export const modules = {
         npcNote: "\u2709\ufe0e"
       };
 
-    function cU(bb) {
-      return "next" === bb.phase ? "\u2192" : bU[bb.kind]
+    function nE(bb) {
+      return "next" === bb.phase ? "\u2192" : JE[bb.kind]
     }
-    const sU = (0, Jb.memo)((function(bb) {
+    const SE = (0, pb.memo)((function(bb) {
       let {
-        controller: cb,
-        display: sb
+        controller: ab,
+        display: Ub
       } = bb;
-      const kb = (0, DW.h)(fs, cb.getNotificationSnapshot()),
-        [Wb, ab] = (0, Jb.useState)(!1);
-      return (0, DW.f)("qteStateUpdated", (bb => {
-        ab(bb.isActive)
-      })), (0, EW.jsxs)("div", {
-        className: "SkyblockQuestNotificationAnchor" + (Wb ? " UnderQte" : ""),
+      const Ab = (0, HM.i)(vU, ab.getNotificationSnapshot()),
+        [Mb, Tb] = (0, pb.useState)(!1);
+      return (0, HM.f)("qteStateUpdated", (bb => {
+        Tb(bb.isActive)
+      })), (0, IM.jsxs)("div", {
+        className: "SkyblockQuestNotificationAnchor" + (Mb ? " UnderQte" : ""),
         role: "status",
         "aria-live": "polite",
         "aria-atomic": "true",
-        children: [kb && (0, EW.jsxs)("div", {
-          className: `SkyblockQuestNotification ${kb.kind} ${kb.phase}`,
+        children: [Ab && (0, IM.jsxs)("div", {
+          className: `SkyblockQuestNotification ${Ab.kind} ${Ab.phase}`,
           style: {
-            "--quest-notification-duration": `${kb.durationMs}ms`,
-            ...kb.accent && {
-              "--quest-notification-accent": kb.accent
+            "--quest-notification-duration": `${Ab.durationMs}ms`,
+            ...Ab.accent && {
+              "--quest-notification-accent": Ab.accent
             }
           },
-          children: [(0, EW.jsxs)("div", {
-            className: "SkyblockQuestNotificationSymbols" + (kb.iconItem ? " WithIcon" : ""),
+          children: [(0, IM.jsxs)("div", {
+            className: "SkyblockQuestNotificationSymbols" + (Ab.iconItem ? " WithIcon" : ""),
             "aria-hidden": "true",
-            children: [(0, EW.jsx)("span", {
+            children: [(0, IM.jsx)("span", {
               className: "SkyblockQuestNotificationMark",
-              children: cU(kb)
-            }), kb.iconItem && (0, EW.jsx)("span", {
+              children: nE(Ab)
+            }), Ab.iconItem && (0, IM.jsx)("span", {
               className: "SkyblockQuestNotificationIcon",
-              children: (0, EW.jsx)(BW.d, {
-                itemName: kb.iconItem,
+              children: (0, IM.jsx)(mM.c, {
+                itemName: Ab.iconItem,
                 amount: 0
               })
             })]
-          }), (0, EW.jsxs)("div", {
+          }), (0, IM.jsxs)("div", {
             className: "SkyblockQuestNotificationText",
-            children: [(0, EW.jsx)("span", {
+            children: [(0, IM.jsx)("span", {
               className: "SkyblockQuestNotificationTitle",
-              children: kb.title
-            }), (0, EW.jsx)("strong", {
+              children: Ab.title
+            }), (0, IM.jsx)("strong", {
               className: "SkyblockQuestNotificationName",
-              children: (0, EW.jsx)(Ia.b, {
-                text: kb.name
+              children: (0, IM.jsx)(TT.c, {
+                text: Ab.name
               })
-            }), kb.description && (0, EW.jsx)("span", {
+            }), Ab.description && (0, IM.jsx)("span", {
               className: "SkyblockQuestNotificationDescription",
-              children: (0, EW.jsx)(Ia.b, {
-                text: kb.description
+              children: (0, IM.jsx)(TT.c, {
+                text: Ab.description
               })
-            }), kb.reward && (0, EW.jsx)("span", {
+            }), Ab.reward && (0, IM.jsx)("span", {
               className: "SkyblockQuestNotificationReward",
-              children: (0, EW.jsx)(Ia.b, {
-                text: kb.reward
+              children: (0, IM.jsx)(TT.c, {
+                text: Ab.reward
               })
             })]
           })]
-        }, kb.token), (null === kb || void 0 === kb ? void 0 : kb.waypointNameKey) && (0, EW.jsx)("div", {
+        }, Ab.token), (null === Ab || void 0 === Ab ? void 0 : Ab.waypointNameKey) && (0, IM.jsx)("div", {
           className: "SkyblockQuestNotificationWaypointOrigin",
-          "data-waypoint-name-key": kb.waypointNameKey,
-          "data-notification-token": kb.token,
-          ref: sb.mountWaypointOrigin,
+          "data-waypoint-name-key": Ab.waypointNameKey,
+          "data-notification-token": Ab.token,
+          ref: Ub.mountWaypointOrigin,
           "aria-hidden": "true"
-        }, `waypoint-${kb.token}`)]
+        }, `waypoint-${Ab.token}`)]
       })
     }));
 
-    function kU(bb) {
-      const cb = parseInt(bb.replace("#", ""), 16);
-      return `${cb>>16&255}, ${cb>>8&255}, ${255&cb}`
+    function bY(bb) {
+      const ab = parseInt(bb.replace("#", ""), 16);
+      return `${ab>>16&255}, ${ab>>8&255}, ${255&ab}`
     }
-    const WU = (0, Jb.memo)((function(bb) {
+    const aY = (0, pb.memo)((function(bb) {
       let {
-        controller: cb
+        controller: ab
       } = bb;
       const {
-        t: sb
-      } = (0, PW.E)(), kb = (0, DW.h)(Zs, cb.getSnapshot());
-      if (!kb) return null;
-      const Wb = "arrival" === kb.phase;
-      return (0, EW.jsxs)("div", {
-        className: YW()("SkyblockPortalTransit", {
-          Departure: !Wb,
-          Arrival: Wb
+        t: Ub
+      } = (0, WM.A)(), Ab = (0, HM.i)(uU, ab.getSnapshot());
+      if (!Ab) return null;
+      const Mb = "arrival" === Ab.phase;
+      return (0, IM.jsxs)("div", {
+        className: zM()("SkyblockPortalTransit", {
+          Departure: !Mb,
+          Arrival: Mb
         }),
         style: {
-          "--portal-rgb": kU(kb.colour),
-          "--portal-duration": `${kb.durationMs}ms`
+          "--portal-rgb": bY(Ab.colour),
+          "--portal-duration": `${Ab.durationMs}ms`
         },
         role: "status",
         "aria-live": "polite",
-        children: [(0, EW.jsx)("div", {
+        children: [(0, IM.jsx)("div", {
           className: "SkyblockPortalTransitVeil",
           "aria-hidden": "true"
-        }), (0, EW.jsx)("div", {
+        }), (0, IM.jsx)("div", {
           className: "SkyblockPortalTransitRim",
           "aria-hidden": "true",
           onAnimationEnd: () => {
-            cb.finishArrival(kb.token)
+            ab.finishArrival(Ab.token)
           }
-        }), (0, EW.jsxs)("div", {
+        }), (0, IM.jsxs)("div", {
           className: "SkyblockPortalTransitTitle",
-          children: [(0, EW.jsx)("div", {
+          children: [(0, IM.jsx)("div", {
             className: "SkyblockPortalTransitBand",
             "aria-hidden": "true"
-          }), !Wb && (0, EW.jsx)("span", {
+          }), !Mb && (0, IM.jsx)("span", {
             className: "SkyblockPortalTransitEyebrow",
-            children: sb("skyblockGame:portalTransitHeading")
-          }), (0, EW.jsx)("strong", {
+            children: Ub("skyblockGame:portalTransitHeading")
+          }), (0, IM.jsx)("strong", {
             className: "SkyblockPortalTransitZone",
-            children: sb(kb.zoneNameKey)
+            children: Ub(Ab.zoneNameKey)
           })]
         })]
-      }, kb.token)
+      }, Ab.token)
     }));
 
-    function aU() {
+    function UY() {
       return window.matchMedia("(prefers-reduced-motion: reduce)").matches
     }
 
-    function TU() {
+    function AY() {
       const bb = document.querySelector(".SkyblockHudCoins"),
-        cb = null === bb || void 0 === bb ? void 0 : bb.getBoundingClientRect();
-      return cb && cb.width > 0 ? {
-        x: cb.left + Math.min(cb.width, 24) / 2,
-        y: cb.top + cb.height / 2
+        ab = null === bb || void 0 === bb ? void 0 : bb.getBoundingClientRect();
+      return ab && ab.width > 0 ? {
+        x: ab.left + Math.min(ab.width, 24) / 2,
+        y: ab.top + ab.height / 2
       } : {
         x: window.innerWidth - 48,
         y: 48
       }
     }
 
-    function UU(bb) {
+    function MY(bb) {
       return {
         x: bb.left + bb.width / 2,
         y: bb.top + bb.height / 2
       }
     }
 
-    function IU() {
+    function TY() {
       var bb;
-      const cb = null === (bb = document.querySelector(".HotBar")) || void 0 === bb ? void 0 : bb.getBoundingClientRect();
-      return cb && cb.width > 0 ? UU(cb) : {
+      const ab = null === (bb = document.querySelector(".HotBar")) || void 0 === bb ? void 0 : bb.getBoundingClientRect();
+      return ab && ab.width > 0 ? MY(ab) : {
         x: window.innerWidth / 2,
         y: window.innerHeight - 40
       }
     }
 
-    function HU(bb) {
+    function EY(bb) {
       let {
-        items: cb,
-        origins: sb,
-        target: kb
+        items: ab,
+        origins: Ub,
+        target: Ab
       } = bb;
-      return (0, EW.jsx)("div", {
+      return (0, IM.jsx)("div", {
         className: "SkyblockDailyRewardFlyingItems",
-        children: cb.map(((bb, cb) => {
-          const Wb = sb[cb];
-          return (0, EW.jsx)("span", {
+        children: ab.map(((bb, ab) => {
+          const Mb = Ub[ab];
+          return (0, IM.jsx)("span", {
             className: "SkyblockDailyRewardFlyingItem",
             style: {
-              left: `${Wb.x}px`,
-              top: `${Wb.y}px`,
-              "--item-dx": kb.x - Wb.x + "px",
-              "--item-dy": kb.y - Wb.y + "px",
-              "--item-delay": 2e3 + 160 * cb + "ms",
+              left: `${Mb.x}px`,
+              top: `${Mb.y}px`,
+              "--item-dx": Ab.x - Mb.x + "px",
+              "--item-dy": Ab.y - Mb.y + "px",
+              "--item-delay": 2e3 + 160 * ab + "ms",
               "--item-flight": "700ms"
             },
-            children: (0, EW.jsx)(BW.d, {
+            children: (0, IM.jsx)(mM.c, {
               itemName: bb.dailyRewardItemName,
               amount: 0
             })
@@ -9081,63 +9081,63 @@ export const modules = {
       })
     }
 
-    function fU(bb, cb) {
-      const sb = -Math.PI / 2 + 1.25 * (bb / (cb - 1) * 2 - 1),
-        kb = 70 + bb % 3 * 22;
+    function YY(bb, ab) {
+      const Ub = -Math.PI / 2 + 1.25 * (bb / (ab - 1) * 2 - 1),
+        Ab = 70 + bb % 3 * 22;
       return {
-        x: Math.cos(sb) * kb,
-        y: Math.sin(sb) * kb * .7
+        x: Math.cos(Ub) * Ab,
+        y: Math.sin(Ub) * Ab * .7
       }
     }
 
-    function MU(bb) {
+    function BY(bb) {
       let {
-        origin: cb,
-        target: sb,
-        count: kb
+        origin: ab,
+        target: Ub,
+        count: Ab
       } = bb;
-      const Wb = [];
-      for (let ab = 0; ab < kb; ab++) {
-        const bb = fU(ab, kb);
-        Wb.push((0, EW.jsx)("span", {
+      const Mb = [];
+      for (let Tb = 0; Tb < Ab; Tb++) {
+        const bb = YY(Tb, Ab);
+        Mb.push((0, IM.jsx)("span", {
           className: "SkyblockDailyRewardCoin",
           style: {
-            left: `${cb.x}px`,
-            top: `${cb.y}px`,
+            left: `${ab.x}px`,
+            top: `${ab.y}px`,
             "--coin-bx": `${bb.x}px`,
             "--coin-by": `${bb.y}px`,
-            "--coin-dx": sb.x - cb.x + "px",
-            "--coin-dy": sb.y - cb.y + "px",
-            "--coin-delay": `${rs(ab,kb)}ms`,
+            "--coin-dx": Ub.x - ab.x + "px",
+            "--coin-dy": Ub.y - ab.y + "px",
+            "--coin-delay": `${wU(Tb,Ab)}ms`,
             "--coin-flight": "650ms"
           },
-          children: (0, EW.jsx)(BW.d, {
+          children: (0, IM.jsx)(mM.c, {
             itemName: "Gold Coin",
             amount: 0
           })
-        }, ab))
+        }, Tb))
       }
-      return (0, EW.jsx)("div", {
+      return (0, IM.jsx)("div", {
         className: "SkyblockDailyRewardCoins",
-        children: Wb
+        children: Mb
       })
     }
 
-    function XU(bb) {
+    function eY(bb) {
       let {
-        day: cb
+        day: ab
       } = bb;
-      const sb = gb[cb - 1];
-      return (0, EW.jsxs)(EW.Fragment, {
-        children: [(0, EW.jsxs)("span", {
+      const Ub = Nb[ab - 1];
+      return (0, IM.jsxs)(IM.Fragment, {
+        children: [(0, IM.jsxs)("span", {
           className: "SkyblockDailyRewardFooterReward",
-          children: [(0, EW.jsx)(BW.d, {
+          children: [(0, IM.jsx)(mM.c, {
             itemName: "Gold Coin",
             amount: 0
-          }), (0, yW.g)(sb.dailyRewardCoins)]
-        }), sb.dailyRewardItems.map((bb => (0, EW.jsxs)("span", {
+          }), (0, NM.g)(Ub.dailyRewardCoins)]
+        }), Ub.dailyRewardItems.map((bb => (0, IM.jsxs)("span", {
           className: "SkyblockDailyRewardFooterReward",
-          children: [(0, EW.jsx)(BW.d, {
+          children: [(0, IM.jsx)(mM.c, {
             itemName: bb.dailyRewardItemName,
             amount: 0
           }), "\xd7", bb.dailyRewardItemAmount]
@@ -9145,387 +9145,387 @@ export const modules = {
       })
     }
 
-    function nU(bb) {
+    function vY(bb) {
       let {
-        day: cb
+        day: ab
       } = bb;
-      const sb = tb(cb);
-      return (0, EW.jsx)("ol", {
+      const Ub = Hb(ab);
+      return (0, IM.jsx)("ol", {
         className: "SkyblockDailyRewardStrip",
-        children: gb.map(((bb, kb) => {
-          const Wb = kb + 1;
-          return (0, EW.jsxs)("li", {
-            className: YW()("SkyblockDailyRewardTile", {
-              Claimed: Wb < cb && Wb !== sb,
-              Today: Wb === cb,
-              Tomorrow: Wb === sb,
-              Jackpot: Wb === Bb
+        children: Nb.map(((bb, Ab) => {
+          const Mb = Ab + 1;
+          return (0, IM.jsxs)("li", {
+            className: zM()("SkyblockDailyRewardTile", {
+              Claimed: Mb < ab && Mb !== Ub,
+              Today: Mb === ab,
+              Tomorrow: Mb === Ub,
+              Jackpot: Mb === Wb
             }),
-            children: [(0, EW.jsx)("span", {
+            children: [(0, IM.jsx)("span", {
               className: "SkyblockDailyRewardTileDay",
-              children: Wb
-            }), (0, EW.jsxs)("span", {
+              children: Mb
+            }), (0, IM.jsxs)("span", {
               className: "SkyblockDailyRewardTileReward SkyblockDailyRewardTileCoins",
-              children: [(0, EW.jsx)(BW.d, {
+              children: [(0, IM.jsx)(mM.c, {
                 itemName: "Gold Coin",
                 amount: 0
-              }), (0, yW.g)(bb.dailyRewardCoins)]
-            }), bb.dailyRewardItems.map((bb => (0, EW.jsxs)("span", {
+              }), (0, NM.g)(bb.dailyRewardCoins)]
+            }), bb.dailyRewardItems.map((bb => (0, IM.jsxs)("span", {
               className: "SkyblockDailyRewardTileReward",
-              children: [(0, EW.jsx)(BW.d, {
+              children: [(0, IM.jsx)(mM.c, {
                 itemName: bb.dailyRewardItemName,
                 amount: 0
               }), "\xd7", bb.dailyRewardItemAmount]
             }, bb.dailyRewardItemName)))]
-          }, Wb)
+          }, Mb)
         }))
       })
     }
 
-    function mU(bb) {
+    function LY(bb) {
       let {
-        view: cb
+        view: ab
       } = bb;
       const {
-        t: sb
-      } = (0, PW.E)(), kb = (0, Jb.useRef)(null), Wb = (0, Jb.useRef)(null), [ab, Tb] = (0, Jb.useState)(null);
-      (0, Jb.useLayoutEffect)((() => {
+        t: Ub
+      } = (0, WM.A)(), Ab = (0, pb.useRef)(null), Mb = (0, pb.useRef)(null), [Tb, Eb] = (0, pb.useState)(null);
+      (0, pb.useLayoutEffect)((() => {
         var bb;
-        const cb = null === (bb = kb.current) || void 0 === bb ? void 0 : bb.getBoundingClientRect();
-        if (cb) {
-          var sb, ab;
-          const bb = Array.from(null !== (sb = null === (ab = Wb.current) || void 0 === ab ? void 0 : ab.children) && void 0 !== sb ? sb : [], (bb => UU(bb.getBoundingClientRect())));
-          Tb({
-            origin: UU(cb),
-            target: TU(),
+        const ab = null === (bb = Ab.current) || void 0 === bb ? void 0 : bb.getBoundingClientRect();
+        if (ab) {
+          var Ub, Tb;
+          const bb = Array.from(null !== (Ub = null === (Tb = Mb.current) || void 0 === Tb ? void 0 : Tb.children) && void 0 !== Ub ? Ub : [], (bb => MY(bb.getBoundingClientRect())));
+          Eb({
+            origin: MY(ab),
+            target: AY(),
             itemOrigins: bb,
-            itemTarget: IU()
+            itemTarget: TY()
           })
         }
       }), []);
-      const Ub = tb(cb.day),
-        Ib = function(bb, cb) {
-          const [sb, kb] = (0, Jb.useState)((() => aU() ? bb : 0));
-          return (0, Jb.useEffect)((() => {
-            if (aU()) return;
-            const sb = performance.now();
-            let Wb = 0;
-            const ab = Tb => {
-              const Ub = Math.min(Math.max((Tb - sb) / cb, 0), 1);
-              kb(Math.round(bb * (1 - (1 - Ub) ** 3))), Ub < 1 && (Wb = requestAnimationFrame(ab))
+      const Yb = Hb(ab.day),
+        Bb = function(bb, ab) {
+          const [Ub, Ab] = (0, pb.useState)((() => UY() ? bb : 0));
+          return (0, pb.useEffect)((() => {
+            if (UY()) return;
+            const Ub = performance.now();
+            let Mb = 0;
+            const Tb = Eb => {
+              const Yb = Math.min(Math.max((Eb - Ub) / ab, 0), 1);
+              Ab(Math.round(bb * (1 - (1 - Yb) ** 3))), Yb < 1 && (Mb = requestAnimationFrame(Tb))
             };
-            return Wb = requestAnimationFrame(ab), () => {
-              cancelAnimationFrame(Wb)
+            return Mb = requestAnimationFrame(Tb), () => {
+              cancelAnimationFrame(Mb)
             }
-          }), [bb, cb]), sb
-        }(cb.coins, 450);
-      return (0, EW.jsxs)("div", {
-        className: YW()("SkyblockDailyReward", {
-          Jackpot: cb.day === Bb
+          }), [bb, ab]), Ub
+        }(ab.coins, 450);
+      return (0, IM.jsxs)("div", {
+        className: zM()("SkyblockDailyReward", {
+          Jackpot: ab.day === Wb
         }),
         style: {
-          "--daily-duration": `${cb.durationMs}ms`
+          "--daily-duration": `${ab.durationMs}ms`
         },
         role: "status",
         "aria-live": "polite",
-        children: [(0, EW.jsx)("div", {
+        children: [(0, IM.jsx)("div", {
           className: "SkyblockDailyRewardGlow",
           "aria-hidden": "true"
-        }), (0, EW.jsxs)("div", {
+        }), (0, IM.jsxs)("div", {
           className: "SkyblockDailyRewardCard",
-          children: [(0, EW.jsxs)("div", {
+          children: [(0, IM.jsxs)("div", {
             className: "SkyblockDailyRewardHeading",
-            children: [(0, EW.jsx)("span", {
+            children: [(0, IM.jsx)("span", {
               className: "SkyblockDailyRewardTitle",
-              children: sb("skyblockGame:dailyRewardTitle")
-            }), (0, EW.jsx)("span", {
+              children: Ub("skyblockGame:dailyRewardTitle")
+            }), (0, IM.jsx)("span", {
               className: "SkyblockDailyRewardDay",
-              children: sb("skyblockGame:dailyRewardDay", {
-                day: String(cb.day)
+              children: Ub("skyblockGame:dailyRewardDay", {
+                day: String(ab.day)
               })
             })]
-          }), (0, EW.jsxs)("div", {
+          }), (0, IM.jsxs)("div", {
             className: "SkyblockDailyRewardAmount",
-            ref: kb,
-            children: [(0, EW.jsx)(BW.d, {
+            ref: Ab,
+            children: [(0, IM.jsx)(mM.c, {
               itemName: "Gold Coin",
               amount: 0
-            }), (0, EW.jsxs)("span", {
-              children: ["+", (0, yW.g)(Ib)]
+            }), (0, IM.jsxs)("span", {
+              children: ["+", (0, NM.g)(Bb)]
             })]
-          }), cb.items.length > 0 && (0, EW.jsx)("div", {
+          }), ab.items.length > 0 && (0, IM.jsx)("div", {
             className: "SkyblockDailyRewardItems",
-            ref: Wb,
-            children: cb.items.map((bb => (0, EW.jsxs)("span", {
+            ref: Mb,
+            children: ab.items.map((bb => (0, IM.jsxs)("span", {
               className: "SkyblockDailyRewardItem",
-              children: [(0, EW.jsx)(BW.d, {
+              children: [(0, IM.jsx)(mM.c, {
                 itemName: bb.dailyRewardItemName,
                 amount: 0
               }), "\xd7", bb.dailyRewardItemAmount]
             }, bb.dailyRewardItemName)))
-          }), (0, EW.jsx)(nU, {
-            day: cb.day
-          }), (0, EW.jsxs)("div", {
+          }), (0, IM.jsx)(vY, {
+            day: ab.day
+          }), (0, IM.jsxs)("div", {
             className: "SkyblockDailyRewardFooter",
-            children: [sb("skyblockGame:dailyRewardComeBack"), (0, EW.jsx)(XU, {
-              day: Ub
+            children: [Ub("skyblockGame:dailyRewardComeBack"), (0, IM.jsx)(eY, {
+              day: Yb
             })]
           })]
-        }), null !== ab && (0, EW.jsx)(MU, {
-          origin: ab.origin,
-          target: ab.target,
-          count: cb.flyingCoins
-        }), null !== ab && ab.itemOrigins.length === cb.items.length && (0, EW.jsx)(HU, {
-          items: cb.items,
-          origins: ab.itemOrigins,
-          target: ab.itemTarget
+        }), null !== Tb && (0, IM.jsx)(BY, {
+          origin: Tb.origin,
+          target: Tb.target,
+          count: ab.flyingCoins
+        }), null !== Tb && Tb.itemOrigins.length === ab.items.length && (0, IM.jsx)(EY, {
+          items: ab.items,
+          origins: Tb.itemOrigins,
+          target: Tb.itemTarget
         })]
       })
     }
-    const lU = (0, Jb.memo)((function(bb) {
+    const PY = (0, pb.memo)((function(bb) {
         let {
-          controller: cb
+          controller: ab
         } = bb;
-        const sb = (0, DW.h)(ds, cb.getSnapshot());
-        return sb ? (0, EW.jsx)(mU, {
-          view: sb
-        }, sb.token) : null
+        const Ub = (0, HM.i)(oU, ab.getSnapshot());
+        return Ub ? (0, IM.jsx)(LY, {
+          view: Ub
+        }, Ub.token) : null
       })),
-      QU = "Gold Coin";
+      XY = "Gold Coin";
 
-    function eU(bb) {
+    function jY(bb) {
       return 650 + 220 * bb
     }
 
-    function CU(bb) {
+    function RY(bb) {
       return {
-        "--letter-delay": `${eU(bb)}ms`,
-        "--letter-land": `${eU(bb)+300}ms`
+        "--letter-delay": `${jY(bb)}ms`,
+        "--letter-land": `${jY(bb)+300}ms`
       }
     }
 
-    function NU(bb) {
+    function kY(bb) {
       let {
-        letterCount: cb
+        letterCount: ab
       } = bb;
-      return (0, EW.jsxs)("div", {
+      return (0, IM.jsxs)("div", {
         className: "SkyblockMailboxArt",
         "aria-hidden": "true",
-        children: [(0, EW.jsx)("img", {
+        children: [(0, IM.jsx)("img", {
           className: "SkyblockMailboxFrame",
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAPUlEQVR4nGNgGBTgPxbMgKHoU7Y/Cr7hqI9VMVji8yqV//8veYHxPC0l7ApBEugYp/UgXBNljteN6BrIBwC4hzWhsgbVSgAAAABJRU5ErkJggg==",
           alt: ""
-        }), (0, EW.jsx)("img", {
+        }), (0, IM.jsx)("img", {
           className: "SkyblockMailboxFrame SkyblockMailboxFrameFlag",
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAATElEQVR4nGNgIBP8h2L8iv5f8gJjQor/f16lAlOEU/H/T9n+YIUgGoRvOOpjVQyWACkE0SA8T0sJu0KQBDrGaT0I10SZ43UjugbyAQAsw0ABFINz6QAAAABJRU5ErkJggg==",
           alt: ""
-        }), (0, EW.jsx)("img", {
+        }), (0, IM.jsx)("img", {
           className: "SkyblockMailboxFrame SkyblockMailboxFrameOpen",
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAW0lEQVR4nGNgIBP8h2L8iv5f8gJjQor/f16lAlOEjBlQFH3K9gcrBNEgHGyt9P//rwMYiv/fcNQHKwTRIPzh8SEwxlA4T0sJBYNMBJmM1XoQrokyx+tGdA3kAwD3jUzPjfodhAAAAABJRU5ErkJggg==",
           alt: ""
         }), Array.from({
-          length: cb
-        }, ((bb, cb) => (0, EW.jsx)("img", {
+          length: ab
+        }, ((bb, ab) => (0, IM.jsx)("img", {
           className: "SkyblockMailboxFlyingLetter",
-          style: CU(cb),
+          style: RY(ab),
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAP0lEQVR4nGNgoCX4jwOjgP//fx1AwZ+y/f/fcNTHUPz/w+NDKBikaJ6WEnaFa7qCwBhZA0ETcSkEKybGM9QDAOtbYxX7UuH5AAAAAElFTkSuQmCC",
           alt: ""
-        }, cb)))]
+        }, ab)))]
       })
     }
 
-    function VU(bb) {
-      var cb, sb, kb;
+    function yY(bb) {
+      var ab, Ub, Ab;
       let {
-        letter: Wb,
-        index: ab
+        letter: Mb,
+        index: Tb
       } = bb;
       const {
-        t: Tb
-      } = (0, PW.E)(), Ub = null !== (cb = null === (sb = Wb.items[0]) || void 0 === sb ? void 0 : sb.itemName) && void 0 !== cb ? cb : QU;
-      return (0, EW.jsxs)("li", {
+        t: Eb
+      } = (0, WM.A)(), Yb = null !== (ab = null === (Ub = Mb.items[0]) || void 0 === Ub ? void 0 : Ub.itemName) && void 0 !== ab ? ab : XY;
+      return (0, IM.jsxs)("li", {
         className: "SkyblockMailboxLetter",
-        style: CU(ab),
-        children: [(0, EW.jsx)("div", {
+        style: RY(Tb),
+        children: [(0, IM.jsx)("div", {
           className: "SkyblockMailboxStamp",
           "aria-hidden": "true",
-          children: (0, EW.jsx)(BW.d, {
-            itemName: Ub,
+          children: (0, IM.jsx)(mM.c, {
+            itemName: Yb,
             amount: 0
           })
-        }), (0, EW.jsx)("div", {
+        }), (0, IM.jsx)("div", {
           className: "SkyblockMailboxReason",
-          children: Tb(Wb.reasonKey, null !== (kb = Wb.reasonParams) && void 0 !== kb ? kb : void 0)
-        }), (0, EW.jsxs)("div", {
+          children: Eb(Mb.reasonKey, null !== (Ab = Mb.reasonParams) && void 0 !== Ab ? Ab : void 0)
+        }), (0, IM.jsxs)("div", {
           className: "SkyblockMailboxContents",
-          children: [Wb.coins > 0 && (0, EW.jsxs)("span", {
+          children: [Mb.coins > 0 && (0, IM.jsxs)("span", {
             className: "SkyblockMailboxGift SkyblockMailboxCoins",
-            children: [(0, EW.jsx)(BW.d, {
-              itemName: QU,
+            children: [(0, IM.jsx)(mM.c, {
+              itemName: XY,
               amount: 0
-            }), "+", (0, yW.g)(Wb.coins)]
-          }), Wb.items.map(((bb, cb) => (0, EW.jsxs)("span", {
+            }), "+", (0, NM.g)(Mb.coins)]
+          }), Mb.items.map(((bb, ab) => (0, IM.jsxs)("span", {
             className: "SkyblockMailboxGift",
-            children: [(0, EW.jsx)(BW.d, {
+            children: [(0, IM.jsx)(mM.c, {
               itemName: bb.itemName,
               amount: 0
             }), bb.label, " \xd7", bb.amount]
-          }, cb)))]
+          }, ab)))]
         })]
       })
     }
 
-    function LU(bb) {
+    function ZY(bb) {
       let {
-        view: cb
+        view: ab
       } = bb;
       const {
-        t: sb
-      } = (0, PW.E)();
-      return (0, EW.jsx)("div", {
+        t: Ub
+      } = (0, WM.A)();
+      return (0, IM.jsx)("div", {
         className: "SkyblockMailbox",
         style: {
-          "--mail-duration": `${cb.durationMs}ms`,
+          "--mail-duration": `${ab.durationMs}ms`,
           "--flag-up": "300ms",
           "--door-open": "500ms",
-          "--more-land": `${eU(cb.letters.length)+300}ms`
+          "--more-land": `${jY(ab.letters.length)+300}ms`
         },
         role: "status",
         "aria-live": "polite",
-        children: (0, EW.jsxs)("div", {
+        children: (0, IM.jsxs)("div", {
           className: "SkyblockMailboxCard",
-          children: [(0, EW.jsxs)("div", {
+          children: [(0, IM.jsxs)("div", {
             className: "SkyblockMailboxHeading",
-            children: [(0, EW.jsx)(NU, {
-              letterCount: cb.letters.length
-            }), (0, EW.jsx)("span", {
+            children: [(0, IM.jsx)(kY, {
+              letterCount: ab.letters.length
+            }), (0, IM.jsx)("span", {
               className: "SkyblockMailboxTitle",
-              children: sb("skyblockGame:mailboxTitle")
+              children: Ub("skyblockGame:mailboxTitle")
             })]
-          }), (0, EW.jsx)("ol", {
+          }), (0, IM.jsx)("ol", {
             className: "SkyblockMailboxLetters",
-            children: cb.letters.map(((bb, cb) => (0, EW.jsx)(VU, {
+            children: ab.letters.map(((bb, ab) => (0, IM.jsx)(yY, {
               letter: bb,
-              index: cb
-            }, cb)))
-          }), cb.more > 0 && (0, EW.jsx)("div", {
+              index: ab
+            }, ab)))
+          }), ab.more > 0 && (0, IM.jsx)("div", {
             className: "SkyblockMailboxMore",
-            children: sb("skyblockGame:mailboxMore", {
-              count: String(cb.more)
+            children: Ub("skyblockGame:mailboxMore", {
+              count: String(ab.more)
             })
           })]
         })
       })
     }
-    const uU = (0, Jb.memo)((function(bb) {
+    const DY = (0, pb.memo)((function(bb) {
       let {
-        controller: cb
+        controller: ab
       } = bb;
-      const sb = (0, DW.h)(Ss, cb.getSnapshot());
-      return sb ? (0, EW.jsx)(LU, {
-        view: sb
-      }, sb.token) : null
+      const Ub = (0, HM.i)(gU, ab.getSnapshot());
+      return Ub ? (0, IM.jsx)(ZY, {
+        view: Ub
+      }, Ub.token) : null
     }));
 
-    function YU(bb) {
+    function zY(bb) {
       let {
-        controller: cb
+        controller: ab
       } = bb;
       const {
-        t: sb
-      } = (0, PW.E)(), kb = (0, DW.h)(zk, cb.getSnapshot());
-      if (null === kb) return null;
-      const Wb = kb.fullSet ? "empty" === kb.fuelState ? {
-        text: sb("skyblockGame:magmawardHudNoFuel"),
+        t: Ub
+      } = (0, WM.A)(), Ab = (0, HM.i)(uA, ab.getSnapshot());
+      if (null === Ab) return null;
+      const Mb = Ab.fullSet ? "empty" === Ab.fuelState ? {
+        text: Ub("skyblockGame:magmawardHudNoFuel"),
         tone: "empty"
       } : null : {
-        text: sb("skyblockGame:magmawardHudFullSet", {
-          worn: String(kb.wornCount)
+        text: Ub("skyblockGame:magmawardHudFullSet", {
+          worn: String(Ab.wornCount)
         }),
         tone: "partial"
       };
-      return (0, EW.jsx)(JW.e, {
+      return (0, IM.jsx)(iM.e, {
         placement: "statBars",
-        children: (0, EW.jsxs)("div", {
-          className: YW()("SkyblockMagmawardHud", `SkyblockMagmawardHud-${kb.fuelState}`, {
-            "SkyblockMagmawardHud-partial": !kb.fullSet,
-            "SkyblockMagmawardHud-armed": kb.fullSet && "empty" !== kb.fuelState
+        children: (0, IM.jsxs)("div", {
+          className: zM()("SkyblockMagmawardHud", `SkyblockMagmawardHud-${Ab.fuelState}`, {
+            "SkyblockMagmawardHud-partial": !Ab.fullSet,
+            "SkyblockMagmawardHud-armed": Ab.fullSet && "empty" !== Ab.fuelState
           }),
-          children: [null !== kb.flare && (0, EW.jsx)("div", {
-            className: `SkyblockMagmawardFlare SkyblockMagmawardFlare-${kb.flare}`
-          }, `flare:${kb.flareToken}`), (0, EW.jsx)("div", {
-            className: YW()("SkyblockMagmawardPieces", {
-              SkyblockMagmawardPiecesComplete: kb.setLit
+          children: [null !== Ab.flare && (0, IM.jsx)("div", {
+            className: `SkyblockMagmawardFlare SkyblockMagmawardFlare-${Ab.flare}`
+          }, `flare:${Ab.flareToken}`), (0, IM.jsx)("div", {
+            className: zM()("SkyblockMagmawardPieces", {
+              SkyblockMagmawardPiecesComplete: Ab.setLit
             }),
-            children: kb.pieces.map(((bb, cb) => (0, EW.jsx)("div", {
-              className: YW()("SkyblockMagmawardPiece", {
+            children: Ab.pieces.map(((bb, ab) => (0, IM.jsx)("div", {
+              className: zM()("SkyblockMagmawardPiece", {
                 SkyblockMagmawardPieceWorn: bb.worn,
                 SkyblockMagmawardPieceJustWorn: bb.justWorn
               }),
-              children: (0, EW.jsx)(BW.d, {
+              children: (0, IM.jsx)(mM.c, {
                 itemName: bb.itemName,
                 amount: 0
               })
-            }, `${cb}:${bb.wornToken}`)))
-          }, `pieces:${kb.setLitToken}`), (0, EW.jsxs)("div", {
+            }, `${ab}:${bb.wornToken}`)))
+          }, `pieces:${Ab.setLitToken}`), (0, IM.jsxs)("div", {
             className: "SkyblockMagmawardFuel",
-            children: [(0, EW.jsx)("div", {
+            children: [(0, IM.jsx)("div", {
               className: "SkyblockMagmawardLowGlow"
-            }), (0, EW.jsxs)("div", {
-              className: YW()("SkyblockMagmawardFuelCounter", kb.pulse && `SkyblockMagmawardFuelCounter-${kb.pulse}`),
-              children: [(0, EW.jsx)("div", {
+            }), (0, IM.jsxs)("div", {
+              className: zM()("SkyblockMagmawardFuelCounter", Ab.pulse && `SkyblockMagmawardFuelCounter-${Ab.pulse}`),
+              children: [(0, IM.jsx)("div", {
                 className: "SkyblockMagmawardFuelIcon",
-                children: (0, EW.jsx)(BW.d, {
+                children: (0, IM.jsx)(mM.c, {
                   itemName: "Magmaward Fuel",
                   amount: 0
                 })
-              }), (0, EW.jsx)("span", {
+              }), (0, IM.jsx)("span", {
                 className: "SkyblockMagmawardFuelCount SmallTextBold",
-                children: kb.fuel
+                children: Ab.fuel
               })]
-            }, `counter:${kb.pulseToken}`), "burn" === kb.pulse && (0, EW.jsx)("span", {
+            }, `counter:${Ab.pulseToken}`), "burn" === Ab.pulse && (0, IM.jsx)("span", {
               className: "SkyblockMagmawardEmber SmallTextBold",
               children: "-1"
-            }, `ember:${kb.pulseToken}`)]
-          }), Wb && (0, EW.jsx)("div", {
-            className: `SkyblockMagmawardCaption SkyblockMagmawardCaption-${Wb.tone} SmallTextBold`,
-            children: Wb.text
+            }, `ember:${Ab.pulseToken}`)]
+          }), Mb && (0, IM.jsx)("div", {
+            className: `SkyblockMagmawardCaption SkyblockMagmawardCaption-${Mb.tone} SmallTextBold`,
+            children: Mb.text
           })]
         })
       })
     }
 
-    function hU(bb) {
+    function xY(bb) {
       let {
-        controller: cb
+        controller: ab
       } = bb;
       const {
-        t: sb,
-        selectedLanguage: kb
-      } = (0, PW.E)(), Wb = (0, DW.h)(dk, cb.getSnapshot());
-      return null === Wb ? null : (0, EW.jsx)(JW.e, {
+        t: Ub,
+        selectedLanguage: Ab
+      } = (0, WM.A)(), Mb = (0, HM.i)(KA, ab.getSnapshot());
+      return null === Mb ? null : (0, IM.jsx)(iM.e, {
         placement: "statBars",
-        children: (0, EW.jsxs)("div", {
-          className: YW()("SkyblockGlowtideChip", {
-            SkyblockGlowtideChipInRange: Wb.inRange
+        children: (0, IM.jsxs)("div", {
+          className: zM()("SkyblockGlowtideChip", {
+            SkyblockGlowtideChipInRange: Mb.inRange
           }),
           style: {
-            "--glowtide-colour": Wb.colour
+            "--glowtide-colour": Mb.colour
           },
-          "aria-label": sb("skyblockGame:glowtideChipLabel"),
-          children: [(0, EW.jsx)("div", {
+          "aria-label": Ub("skyblockGame:glowtideChipLabel"),
+          children: [(0, IM.jsx)("div", {
             className: "SkyblockGlowtideChipOrb"
-          }), Wb.inRange ? (0, EW.jsx)("span", {
+          }), Mb.inRange ? (0, IM.jsx)("span", {
             className: "SkyblockGlowtideChipCall SmallTextBold",
-            children: sb("skyblockGame:glowtideChipInRange")
-          }, `call:${Wb.inRangeToken}`) : (0, EW.jsxs)(EW.Fragment, {
-            children: [(0, EW.jsx)("div", {
-              ref: cb.mountArrow,
+            children: Ub("skyblockGame:glowtideChipInRange")
+          }, `call:${Mb.inRangeToken}`) : (0, IM.jsxs)(IM.Fragment, {
+            children: [(0, IM.jsx)("div", {
+              ref: ab.mountArrow,
               className: "SkyblockGlowtideChipArrow"
-            }), (0, EW.jsx)("span", {
+            }), (0, IM.jsx)("span", {
               className: "SkyblockGlowtideChipDistance SmallTextBold",
-              children: sb("skyblockGame:waypointDistance", {
-                distance: ub(Wb.distance, kb.code)
+              children: Ub("skyblockGame:waypointDistance", {
+                distance: ib(Mb.distance, Ab.code)
               })
             })]
           })]
@@ -9533,266 +9533,266 @@ export const modules = {
       })
     }
 
-    function JU(bb) {
+    function iY(bb) {
       let {
-        controller: cb
+        controller: ab
       } = bb;
       const {
-        t: sb
-      } = (0, PW.E)(), kb = (0, DW.h)(wk, cb.getSnapshot());
-      return null === kb ? null : (0, EW.jsx)(JW.e, {
+        t: Ub
+      } = (0, WM.A)(), Ab = (0, HM.i)(lA, ab.getSnapshot());
+      return null === Ab ? null : (0, IM.jsx)(iM.e, {
         placement: "statBars",
-        children: (0, EW.jsxs)("div", {
-          className: YW()("SkyblockGlowMeter", {
-            SkyblockGlowMeterFull: kb.full
+        children: (0, IM.jsxs)("div", {
+          className: zM()("SkyblockGlowMeter", {
+            SkyblockGlowMeterFull: Ab.full
           }),
-          "aria-label": sb("skyblockGame:glowMeterLabel", {
-            fill: String(kb.fill),
-            GM: String(kb.GM)
+          "aria-label": Ub("skyblockGame:glowMeterLabel", {
+            fill: String(Ab.fill),
+            PL: String(Ab.PL)
           }),
-          children: [kb.burst && (0, EW.jsx)("div", {
+          children: [Ab.burst && (0, IM.jsx)("div", {
             className: "SkyblockGlowMeterBurst"
-          }, `burst:${kb.burstToken}`), (0, EW.jsxs)("div", {
+          }, `burst:${Ab.burstToken}`), (0, IM.jsxs)("div", {
             className: "SkyblockGlowMeterVial",
-            children: [(0, EW.jsx)("div", {
+            children: [(0, IM.jsx)("div", {
               className: "SkyblockGlowMeterLiquid",
               style: {
-                transform: `scaleX(${kb.ratio})`
+                transform: `scaleX(${Ab.ratio})`
               }
-            }), kb.gained && (0, EW.jsx)("div", {
+            }), Ab.gained && (0, IM.jsx)("div", {
               className: "SkyblockGlowMeterGlint"
-            }, `gain:${kb.gainToken}`), kb.full && Array.from({
+            }, `gain:${Ab.gainToken}`), Ab.full && Array.from({
               length: 5
-            }, ((bb, cb) => (0, EW.jsx)("span", {
+            }, ((bb, ab) => (0, IM.jsx)("span", {
               className: "SkyblockGlowMeterSparkle"
-            }, cb)))]
-          }), kb.full && kb.rares.map((bb => (0, EW.jsx)("div", {
+            }, ab)))]
+          }), Ab.full && Ab.rares.map((bb => (0, IM.jsx)("div", {
             className: "SkyblockGlowMeterRare",
-            children: (0, EW.jsx)(BW.d, {
+            children: (0, IM.jsx)(mM.c, {
               itemName: bb,
               amount: 0
             })
-          }, bb))), kb.ready && (0, EW.jsx)("div", {
+          }, bb))), Ab.ready && (0, IM.jsx)("div", {
             className: "SkyblockGlowMeterReady SmallTextBold",
-            children: (0, EW.jsx)("span", {
-              children: sb("skyblockGame:glowMeterReady")
+            children: (0, IM.jsx)("span", {
+              children: Ub("skyblockGame:glowMeterReady")
             })
-          }, `ready:${kb.fullToken}`)]
+          }, `ready:${Ab.fullToken}`)]
         })
       })
     }
 
-    function gU(bb) {
+    function fY(bb) {
       let {
-        controller: cb
+        controller: ab
       } = bb;
       const {
-        t: sb
-      } = (0, PW.E)(), kb = (0, DW.h)(Sk, cb.getSnapshot());
-      if (null === kb) return null;
-      const Wb = "waiting" === kb.phase,
-        ab = {
-          animationDuration: `${kb.waitMs}ms`,
-          animationDelay: -kb.elapsedMs + "ms"
+        t: Ub
+      } = (0, WM.A)(), Ab = (0, HM.i)(wA, ab.getSnapshot());
+      if (null === Ab) return null;
+      const Mb = "waiting" === Ab.phase,
+        Tb = {
+          animationDuration: `${Ab.waitMs}ms`,
+          animationDelay: -Ab.elapsedMs + "ms"
         },
-        Tb = Wb ? void 0 : {
-          animationDuration: `${kb.waitMs}ms`
+        Eb = Mb ? void 0 : {
+          animationDuration: `${Ab.waitMs}ms`
         };
-      return (0, EW.jsxs)("div", {
-        className: Wb ? "SkyblockHushWait" : "SkyblockHushWait SkyblockHushWaitAbandoned",
-        children: [Wb && (0, EW.jsxs)("div", {
+      return (0, IM.jsxs)("div", {
+        className: Mb ? "SkyblockHushWait" : "SkyblockHushWait SkyblockHushWaitAbandoned",
+        children: [Mb && (0, IM.jsxs)("div", {
           className: "SkyblockHushWaitRing",
           children: [Array.from({
             length: 3
-          }, ((bb, cb) => (0, EW.jsx)("span", {
+          }, ((bb, ab) => (0, IM.jsx)("span", {
             className: "SkyblockHushWaitRipple"
-          }, cb))), (0, EW.jsx)("span", {
+          }, ab))), (0, IM.jsx)("span", {
             className: "SkyblockHushWaitClosing",
-            style: ab
-          }), (0, EW.jsxs)("svg", {
+            style: Tb
+          }), (0, IM.jsxs)("svg", {
             className: "SkyblockHushWaitProgress",
             viewBox: "0 0 100 100",
-            children: [(0, EW.jsx)("circle", {
+            children: [(0, IM.jsx)("circle", {
               className: "SkyblockHushWaitTrack",
               cx: "50",
               cy: "50",
               r: 46
-            }), (0, EW.jsx)("circle", {
+            }), (0, IM.jsx)("circle", {
               className: "SkyblockHushWaitArc",
               cx: "50",
               cy: "50",
               r: 46,
               pathLength: 100,
-              style: ab
+              style: Tb
             })]
-          }), (0, EW.jsx)("span", {
+          }), (0, IM.jsx)("span", {
             className: "SkyblockHushWaitMoon"
           })]
-        }), (0, EW.jsx)("div", {
+        }), (0, IM.jsx)("div", {
           className: "SkyblockHushWaitLine SmallTextBold",
-          style: Tb,
-          children: sb(kb.line)
-        }, kb.lineIndex)]
-      }, kb.token)
+          style: Eb,
+          children: Ub(Ab.line)
+        }, Ab.lineIndex)]
+      }, Ab.token)
     }
 
-    function BU(bb) {
+    function mY(bb) {
       let {
-        chart: cb,
-        showHere: sb,
-        className: kb
+        chart: ab,
+        showHere: Ub,
+        className: Ab
       } = bb;
-      return (0, EW.jsx)("div", {
-        className: YW()("SkyblockTideChartGrid", kb, null !== cb.pictureName && "Complete"),
+      return (0, IM.jsx)("div", {
+        className: zM()("SkyblockTideChartGrid", Ab, null !== ab.pictureName && "Complete"),
         "aria-hidden": "true",
-        children: cb.cells.map(((bb, kb) => {
-          const Wb = 0 !== (cb.pulseCells & 1 << kb),
-            ab = cb.castCell === kb;
-          return (0, EW.jsx)("span", {
-            className: YW()("SkyblockTideChartCell", `Cell-${bb}`, Wb && "Pulse", ab && "Cast", sb && cb.hereCell === kb && "Here")
-          }, `${kb}:${Wb?`p${cb.pulseToken}`:""}:${ab?`c${cb.castToken}`:""}`)
+        children: ab.cells.map(((bb, Ab) => {
+          const Mb = 0 !== (ab.pulseCells & 1 << Ab),
+            Tb = ab.castCell === Ab;
+          return (0, IM.jsx)("span", {
+            className: zM()("SkyblockTideChartCell", `Cell-${bb}`, Mb && "Pulse", Tb && "Cast", Ub && ab.hereCell === Ab && "Here")
+          }, `${Ab}:${Mb?`p${ab.pulseToken}`:""}:${Tb?`c${ab.castToken}`:""}`)
         }))
       })
     }
 
-    function tU(bb) {
+    function pY(bb) {
       let {
-        controller: cb
+        controller: ab
       } = bb;
-      const sb = (0, DW.h)(vk, cb.getSnapshot()),
+      const Ub = (0, HM.i)(gA, ab.getSnapshot()),
         {
-          t: kb
-        } = (0, PW.E)(),
-        Wb = sb.chip;
-      if (!sb.enabled || null === Wb) return null;
-      const ab = kb("skyblockGame:tideChartsChipLabel", {
-        island: Wb.islandName,
-        lit: String(Wb.lit),
-        ink: String(Wb.ink)
+          t: Ab
+        } = (0, WM.A)(),
+        Mb = Ub.chip;
+      if (!Ub.enabled || null === Mb) return null;
+      const Tb = Ab("skyblockGame:tideChartsChipLabel", {
+        island: Mb.islandName,
+        lit: String(Mb.lit),
+        ink: String(Mb.ink)
       });
-      return (0, EW.jsx)(JW.e, {
+      return (0, IM.jsx)(iM.e, {
         placement: "statBars",
-        children: (0, EW.jsxs)("button", {
+        children: (0, IM.jsxs)("button", {
           type: "button",
           tabIndex: -1,
-          className: YW()("SkyblockTideChartsChip", sb.open && "Open", null !== Wb.pictureName && "Complete"),
-          "aria-label": ab,
-          title: ab,
+          className: zM()("SkyblockTideChartsChip", Ub.open && "Open", null !== Mb.pictureName && "Complete"),
+          "aria-label": Tb,
+          title: Tb,
           onMouseDown: bb => {
             bb.preventDefault()
           },
-          onClick: cb.toggle,
-          children: [(0, EW.jsx)(BU, {
-            chart: Wb,
+          onClick: ab.toggle,
+          children: [(0, IM.jsx)(mY, {
+            chart: Mb,
             showHere: !1,
             className: "Mini"
-          }), (0, EW.jsxs)("span", {
+          }), (0, IM.jsxs)("span", {
             className: "SkyblockTideChartsChipCount SmallTextBold",
-            children: [Wb.lit, "/", Wb.ink]
+            children: [Mb.lit, "/", Mb.ink]
           })]
         })
       })
     }
 
-    function yU(bb) {
+    function NY(bb) {
       let {
-        controller: cb
+        controller: ab
       } = bb;
-      const sb = (0, DW.h)(vk, cb.getSnapshot()),
+      const Ub = (0, HM.i)(gA, ab.getSnapshot()),
         {
-          t: kb
-        } = (0, PW.E)(),
-        Wb = rW(),
-        ab = sb.card;
-      return sb.enabled && null !== ab ? (0, EW.jsx)(dW.c, {
-        show: sb.open,
-        close: cb.dismiss,
+          t: Ab
+        } = (0, WM.A)(),
+        Mb = lM(),
+        Tb = Ub.card;
+      return Ub.enabled && null !== Tb ? (0, IM.jsx)(rM.d, {
+        show: Ub.open,
+        close: ab.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, EW.jsxs)("section", {
+        children: (0, IM.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockTideChartsPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockTideChartsTitle",
           tabIndex: -1,
-          ref: Wb,
-          onKeyDown: wW,
-          children: [(0, EW.jsxs)("header", {
+          ref: Mb,
+          onKeyDown: oM,
+          children: [(0, IM.jsxs)("header", {
             className: "SkyblockTideChartsHeader",
-            children: [(0, EW.jsxs)("div", {
-              children: [(0, EW.jsx)("h2", {
+            children: [(0, IM.jsxs)("div", {
+              children: [(0, IM.jsx)("h2", {
                 id: "skyblockTideChartsTitle",
-                children: kb("skyblockGame:tideChartsTitle")
-              }), (0, EW.jsx)("p", {
+                children: Ab("skyblockGame:tideChartsTitle")
+              }), (0, IM.jsx)("p", {
                 className: "SkyblockTideChartsIntro",
-                children: kb("skyblockGame:tideChartsIntro")
+                children: Ab("skyblockGame:tideChartsIntro")
               })]
-            }), (0, EW.jsx)(AW.j, {
+            }), (0, IM.jsx)(KM.k, {
               padIgnore: !0,
-              ariaLabel: kb("skyblockGame:tideChartsClose"),
-              onClick: cb.dismiss
+              ariaLabel: Ab("skyblockGame:tideChartsClose"),
+              onClick: ab.dismiss
             })]
-          }), sb.tabs.length > 1 && (0, EW.jsx)("div", {
+          }), Ub.tabs.length > 1 && (0, IM.jsx)("div", {
             className: "SkyblockTideChartsTabs",
             role: "group",
-            "aria-label": kb("skyblockGame:tideChartsIslands"),
-            children: sb.tabs.map((bb => (0, EW.jsx)("button", {
+            "aria-label": Ab("skyblockGame:tideChartsIslands"),
+            children: Ub.tabs.map((bb => (0, IM.jsx)("button", {
               type: "button",
-              className: YW()("SkyblockTideChartsTab", bb.selected && "Selected"),
+              className: zM()("SkyblockTideChartsTab", bb.selected && "Selected"),
               "aria-pressed": bb.selected,
               onClick: () => {
-                cb.Wn(bb.island)
+                ab.GP(bb.island)
               },
               children: bb.name
             }, bb.island)))
-          }), (0, EW.jsxs)("div", {
+          }), (0, IM.jsxs)("div", {
             className: "SkyblockTideChartsBody",
-            children: [(0, EW.jsx)("div", {
+            children: [(0, IM.jsx)("div", {
               className: "SkyblockTideChartsMap",
               role: "img",
-              "aria-label": ab.gridLabel,
-              children: (0, EW.jsx)(BU, {
-                chart: ab,
+              "aria-label": Tb.gridLabel,
+              children: (0, IM.jsx)(mY, {
+                chart: Tb,
                 showHere: !0,
                 className: "Large"
               })
-            }), (0, EW.jsxs)("div", {
+            }), (0, IM.jsxs)("div", {
               className: "SkyblockTideChartsInfo",
-              children: [(0, EW.jsx)("h3", {
-                children: ab.islandName
-              }), (0, EW.jsx)("p", {
+              children: [(0, IM.jsx)("h3", {
+                children: Tb.islandName
+              }), (0, IM.jsx)("p", {
                 className: "SkyblockTideChartsLit",
-                children: ab.litText
-              }), null === ab.pictureName ? (0, EW.jsx)("p", {
+                children: Tb.litText
+              }), null === Tb.pictureName ? (0, IM.jsx)("p", {
                 className: "SkyblockTideChartsPicture",
-                children: kb("skyblockGame:tideChartsPictureHidden")
-              }) : (0, EW.jsx)("p", {
+                children: Ab("skyblockGame:tideChartsPictureHidden")
+              }) : (0, IM.jsx)("p", {
                 className: "SkyblockTideChartsPicture Revealed",
-                children: kb("skyblockGame:tideChartsPictureRevealed", {
-                  picture: ab.pictureName
+                children: Ab("skyblockGame:tideChartsPictureRevealed", {
+                  picture: Tb.pictureName
                 })
-              }, ab.pictureName), (0, EW.jsxs)("ul", {
+              }, Tb.pictureName), (0, IM.jsxs)("ul", {
                 className: "SkyblockTideChartsLegend",
                 "aria-hidden": "true",
-                children: [(0, EW.jsxs)("li", {
-                  children: [(0, EW.jsx)("span", {
+                children: [(0, IM.jsxs)("li", {
+                  children: [(0, IM.jsx)("span", {
                     className: "SkyblockTideChartCell Cell-lit"
-                  }), kb("skyblockGame:tideChartsLegendLit")]
-                }), (0, EW.jsxs)("li", {
-                  children: [(0, EW.jsx)("span", {
+                  }), Ab("skyblockGame:tideChartsLegendLit")]
+                }), (0, IM.jsxs)("li", {
+                  children: [(0, IM.jsx)("span", {
                     className: "SkyblockTideChartCell Cell-clear"
-                  }), kb("skyblockGame:tideChartsLegendClear")]
-                }), null !== ab.hereCell && (0, EW.jsxs)("li", {
-                  children: [(0, EW.jsx)("span", {
+                  }), Ab("skyblockGame:tideChartsLegendClear")]
+                }), null !== Tb.hereCell && (0, IM.jsxs)("li", {
+                  children: [(0, IM.jsx)("span", {
                     className: "SkyblockTideChartCell Cell-water Here"
-                  }), kb("skyblockGame:tideChartsLegendHere")]
+                  }), Ab("skyblockGame:tideChartsLegendHere")]
                 })]
-              }), (0, EW.jsxs)("p", {
+              }), (0, IM.jsxs)("p", {
                 className: "SkyblockTideChartsFooter",
-                children: [(0, EW.jsx)("span", {
-                  children: sb.turnsText
-                }), (0, EW.jsx)("span", {
-                  children: sb.bookText
+                children: [(0, IM.jsx)("span", {
+                  children: Ub.turnsText
+                }), (0, IM.jsx)("span", {
+                  children: Ub.bookText
                 })]
               })]
             })]
@@ -9801,153 +9801,153 @@ export const modules = {
       }) : null
     }
 
-    function PU(bb) {
-      var cb;
+    function WY(bb) {
+      var ab;
       let {
-        controller: sb
+        controller: Ub
       } = bb;
       const {
-        selectedLanguage: kb
-      } = (0, PW.E)(), Wb = kb.code;
-      (0, Jb.useEffect)((() => {
-        sb.setTranslator(((bb, cb) => (0, PW.y)(Wb, bb, cb)), Wb, ((bb, cb) => (0, PW.q)(Wb, bb, cb)))
-      }), [sb, Wb]);
-      const ab = (0, DW.h)(Xb, sb.map.getSnapshot()),
+        selectedLanguage: Ab
+      } = (0, WM.A)(), Mb = Ab.code;
+      (0, pb.useEffect)((() => {
+        Ub.setTranslator(((bb, ab) => (0, WM.w)(Mb, bb, ab)), Mb, ((bb, ab) => (0, WM.p)(Mb, bb, ab)))
+      }), [Ub, Mb]);
+      const Tb = (0, HM.i)(Pb, Ub.map.getSnapshot()),
         {
-          openInGameMenuName: Tb
-        } = (0, hW.p)(["openInGameMenuName"]);
-      return (0, EW.jsxs)(EW.Fragment, {
-        children: [(0, EW.jsx)(sU, {
-          controller: sb.quests,
-          display: sb.navigation.display
-        }), ab.enabled && !Tb && (0, EW.jsx)(aa, {
-          controller: sb.navigation
-        }), (0, EW.jsx)(iW, {
-          controller: sb,
-          minimap: ab.enabled && (null === (cb = ab.presentation) || void 0 === cb ? void 0 : cb.minimap) && (0, EW.jsx)(Wa, {
-            view: ab.presentation.minimap,
-            navigation: sb.navigation,
-            controller: sb.map
+          openInGameMenuName: Eb
+        } = (0, xM.n)(["openInGameMenuName"]);
+      return (0, IM.jsxs)(IM.Fragment, {
+        children: [(0, IM.jsx)(SE, {
+          controller: Ub.quests,
+          display: Ub.navigation.display
+        }), Tb.enabled && !Eb && (0, IM.jsx)(UT, {
+          controller: Ub.navigation
+        }), (0, IM.jsx)(dM, {
+          controller: Ub,
+          minimap: Tb.enabled && (null === (ab = Tb.presentation) || void 0 === ab ? void 0 : ab.minimap) && (0, IM.jsx)(aT, {
+            view: Tb.presentation.minimap,
+            navigation: Ub.navigation,
+            controller: Ub.map
           }),
-          children: (0, EW.jsx)(ma, {
-            controller: sb.quests,
+          children: (0, IM.jsx)(LT, {
+            controller: Ub.quests,
             surface: "hud"
           })
-        }), (0, EW.jsx)(pT, {
-          controller: sb.navigation
-        }), (0, EW.jsx)(WU, {
-          controller: sb.portalTransit
-        }), (0, EW.jsx)(lU, {
-          controller: sb.dailyReward
-        }), (0, EW.jsx)(uU, {
-          controller: sb.mailbox
-        }), (0, EW.jsx)(YU, {
-          controller: sb.magmaward
-        }), (0, EW.jsx)(hU, {
-          controller: sb.glowtide
-        }), (0, EW.jsx)(mT, {
-          controller: sb.passage
-        }), (0, EW.jsx)(tU, {
-          controller: sb.tideCharts
-        }), (0, EW.jsx)(JU, {
-          controller: sb.glowMeter
-        }), (0, EW.jsx)(JT, {
-          controller: sb.reachLog
-        }), (0, EW.jsx)(gU, {
-          controller: sb.hushWait
-        }), (0, EW.jsx)(LT, {
-          controller: sb.lampLight
-        }), (0, EW.jsx)(Ta, {
-          controller: sb.skills,
+        }), (0, IM.jsx)(cE, {
+          controller: Ub.navigation
+        }), (0, IM.jsx)(aY, {
+          controller: Ub.portalTransit
+        }), (0, IM.jsx)(PY, {
+          controller: Ub.dailyReward
+        }), (0, IM.jsx)(DY, {
+          controller: Ub.mailbox
+        }), (0, IM.jsx)(zY, {
+          controller: Ub.magmaward
+        }), (0, IM.jsx)(xY, {
+          controller: Ub.glowtide
+        }), (0, IM.jsx)(LE, {
+          controller: Ub.passage
+        }), (0, IM.jsx)(pY, {
+          controller: Ub.tideCharts
+        }), (0, IM.jsx)(iY, {
+          controller: Ub.glowMeter
+        }), (0, IM.jsx)(iE, {
+          controller: Ub.reachLog
+        }), (0, IM.jsx)(fY, {
+          controller: Ub.hushWait
+        }), (0, IM.jsx)(ZE, {
+          controller: Ub.lampLight
+        }), (0, IM.jsx)(AT, {
+          controller: Ub.skills,
           surface: "hud"
         })]
       })
     }
 
-    function DU(bb) {
+    function HY(bb) {
       let {
-        controller: cb
+        controller: ab
       } = bb;
-      return (0, EW.jsxs)(EW.Fragment, {
-        children: [(0, EW.jsx)(ka, {
-          controller: cb.map,
-          navigation: cb.navigation
-        }), (0, EW.jsx)(Ta, {
-          controller: cb.skills,
+      return (0, IM.jsxs)(IM.Fragment, {
+        children: [(0, IM.jsx)(bT, {
+          controller: ab.map,
+          navigation: ab.navigation
+        }), (0, IM.jsx)(AT, {
+          controller: ab.skills,
           surface: "menu"
-        }), (0, EW.jsx)(ma, {
-          controller: cb.quests,
+        }), (0, IM.jsx)(LT, {
+          controller: ab.quests,
           surface: "menu"
-        }), (0, EW.jsx)(va, {
-          controller: cb.dungeons
-        }), (0, EW.jsx)(ja, {
-          controller: cb.collections
-        }), (0, EW.jsx)(cT, {
-          controller: cb.questGraph
-        }), (0, EW.jsx)(TT, {
-          controller: cb.forge
-        }), (0, EW.jsx)(XT, {
-          controller: cb.smuggler
-        }), (0, EW.jsx)(YT, {
-          controller: cb.keepersChair,
-          lampLight: cb.lampLight
-        }), (0, EW.jsx)(RT, {
-          controller: cb.reachLog,
-          regulars: cb.regulars,
-          hiddenWaters: cb.hiddenWaters
-        }), (0, EW.jsx)(yT, {
-          controller: cb.regulars
-        }), (0, EW.jsx)(QT, {
-          controller: cb.passage
-        }), (0, EW.jsx)(yU, {
-          controller: cb.tideCharts
-        }), (0, EW.jsx)(xT, {
-          controller: cb.dialogue
-        }), (0, EW.jsx)(jT, {
-          controller: cb.autographs
+        }), (0, IM.jsx)(gT, {
+          controller: ab.dungeons
+        }), (0, IM.jsx)(OT, {
+          controller: ab.collections
+        }), (0, IM.jsx)(nT, {
+          controller: ab.questGraph
+        }), (0, IM.jsx)(AE, {
+          controller: ab.forge
+        }), (0, IM.jsx)(eE, {
+          controller: ab.smuggler
+        }), (0, IM.jsx)(zE, {
+          controller: ab.keepersChair,
+          lampLight: ab.lampLight
+        }), (0, IM.jsx)(sE, {
+          controller: ab.reachLog,
+          regulars: ab.regulars,
+          hiddenWaters: ab.hiddenWaters
+        }), (0, IM.jsx)(NE, {
+          controller: ab.regulars
+        }), (0, IM.jsx)(XE, {
+          controller: ab.passage
+        }), (0, IM.jsx)(NY, {
+          controller: ab.tideCharts
+        }), (0, IM.jsx)(VE, {
+          controller: ab.dialogue
+        }), (0, IM.jsx)(OE, {
+          controller: ab.autographs
         })]
       })
     }
-    var EU = sb(36359);
-    const iU = sk + Hk;
+    var IY = Ub(36108);
+    const dY = bA + YA;
 
-    function OU(bb, cb, sb, kb, Wb) {
-      const ab = [],
-        Tb = [],
-        Ub = sb => {
-          const kb = bb.playSound(cb, sb.sound, sb.volume, sb.rate);
-          kb && (Tb.push(kb), void 0 !== sb.cutAfter && ab.push(setTimeout((() => {
-            kb.fade(kb.getVolume(), 0, 300)
-          }), sb.cutAfter)))
+    function FY(bb, ab, Ub, Ab, Mb) {
+      const Tb = [],
+        Eb = [],
+        Yb = Ub => {
+          const Ab = bb.playSound(ab, Ub.sound, Ub.volume, Ub.rate);
+          Ab && (Eb.push(Ab), void 0 !== Ub.cutAfter && Tb.push(setTimeout((() => {
+            Ab.fade(Ab.getVolume(), 0, 300)
+          }), Ub.cutAfter)))
         };
-      for (const Ib of function(bb, cb) {
-          const sb = [{
+      for (const Bb of function(bb, ab) {
+          const Ub = [{
             sound: "rpgKnifeSlice1",
-            beat: sk,
+            beat: bA,
             lead: 260,
             volume: .5,
             rate: 1
           }, {
             sound: "sweep6",
-            beat: sk,
+            beat: bA,
             lead: 140,
             volume: .35,
             rate: .85
           }, {
             sound: "rpgMetalPot1",
-            beat: sk,
+            beat: bA,
             lead: 100,
             volume: 1,
             rate: .78 + .04 * Math.random()
           }, {
             sound: "hit1",
-            beat: sk,
+            beat: bA,
             lead: 0,
             volume: .8,
             rate: .7
           }, {
             sound: "lowDrum1",
-            beat: sk,
+            beat: bA,
             lead: 60,
             volume: .6,
             rate: 1
@@ -9958,7 +9958,7 @@ export const modules = {
             volume: .3,
             rate: 1.3
           }, {
-            sound: (0, EU.c)("firecracker"),
+            sound: (0, IY.e)("firecracker"),
             beat: 420,
             lead: 160,
             volume: .25,
@@ -9966,109 +9966,109 @@ export const modules = {
             cutAfter: 500
           }, {
             sound: "fireBurn",
-            beat: iU + 150,
+            beat: dY + 150,
             lead: 400,
             volume: .6,
             rate: 1.2
           }, {
-            sound: (0, EU.c)("bigDrumSwish"),
-            beat: iU + 80,
+            sound: (0, IY.e)("bigDrumSwish"),
+            beat: dY + 80,
             lead: 480,
             volume: .35,
             rate: 1,
             cutAfter: 1400
           }, {
             sound: "magicAccent2",
-            beat: iU + 60,
+            beat: dY + 60,
             lead: 180,
             volume: .5 + .06 * bb,
             rate: .82 + .07 * bb
           }];
-          return bb >= 4 && sb.push({
+          return bb >= 4 && Ub.push({
             sound: "exp_levelup",
-            beat: iU + 120,
+            beat: dY + 120,
             lead: 60,
             volume: .35,
             rate: 1
-          }), cb && sb.push({
+          }), ab && Ub.push({
             sound: "trumpetFlare",
-            beat: iU + 40,
+            beat: dY + 40,
             lead: 20,
             volume: .8,
             rate: 1
-          }), sb.push({
+          }), Ub.push({
             sound: "harp_pling",
-            beat: kk,
+            beat: aA,
             lead: 40,
             volume: .2,
             rate: 1.5
-          }), sb
-        }(sb, kb)) Wb ? ab.push(setTimeout((() => {
-        Ub(Ib)
-      }), Math.max(0, Ib.beat - Ib.lead / Ib.rate))) : Ib.beat !== sk && "magicAccent2" !== Ib.sound && "trumpetFlare" !== Ib.sound || Ub(Ib);
+          }), Ub
+        }(Ub, Ab)) Mb ? Tb.push(setTimeout((() => {
+        Yb(Bb)
+      }), Math.max(0, Bb.beat - Bb.lead / Bb.rate))) : Bb.beat !== bA && "magicAccent2" !== Bb.sound && "trumpetFlare" !== Bb.sound || Yb(Bb);
       return () => {
-        for (const bb of ab) clearTimeout(bb);
-        for (const bb of Tb) bb.fade(bb.getVolume(), 0, 120)
+        for (const bb of Tb) clearTimeout(bb);
+        for (const bb of Eb) bb.fade(bb.getVolume(), 0, 120)
       }
     }
-    class GU {
+    class hY {
       constructor(bb) {
         this.deps = bb, this.pending = new Map, this.localHook = null
       }
-      hookWaiting(bb, cb) {
+      hookWaiting(bb, ab) {
         this.pending.delete(bb);
-        const sb = this.deps.now();
-        if (null === cb) {
-          var kb;
-          if ((null === (kb = this.localHook) || void 0 === kb ? void 0 : kb.hookId) === bb) {
-            const bb = sb >= this.localHook.biteAtMs - 300;
+        const Ub = this.deps.now();
+        if (null === ab) {
+          var Ab;
+          if ((null === (Ab = this.localHook) || void 0 === Ab ? void 0 : Ab.hookId) === bb) {
+            const bb = Ub >= this.localHook.biteAtMs - 300;
             this.localHook = null, this.deps.onLocalWaitEnded(bb)
           }
           return
         }
-        const Wb = sb + cb;
-        this.settle(bb, Wb) || (this.pending.size >= 16 && this.pending.delete(this.pending.keys().next().value), this.pending.set(bb, {
-          untilMs: sb + 1e3,
-          biteAtMs: Wb
+        const Mb = Ub + ab;
+        this.settle(bb, Mb) || (this.pending.size >= 16 && this.pending.delete(this.pending.keys().next().value), this.pending.set(bb, {
+          untilMs: Ub + 1e3,
+          biteAtMs: Mb
         }))
       }
       getLocalHook() {
-        var bb, cb;
-        return null !== (bb = null === (cb = this.localHook) || void 0 === cb ? void 0 : cb.hookId) && void 0 !== bb ? bb : null
+        var bb, ab;
+        return null !== (bb = null === (ab = this.localHook) || void 0 === ab ? void 0 : ab.hookId) && void 0 !== bb ? bb : null
       }
       afterRender() {
         if (0 === this.pending.size) return;
         const bb = this.deps.now();
-        for (const [cb, {
-            untilMs: sb,
-            biteAtMs: kb
-          }] of this.pending)(this.settle(cb, kb) || bb > sb) && this.pending.delete(cb)
+        for (const [ab, {
+            untilMs: Ub,
+            biteAtMs: Ab
+          }] of this.pending)(this.settle(ab, Ab) || bb > Ub) && this.pending.delete(ab)
       }
       dispose() {
         this.pending.clear(), this.localHook = null
       }
-      settle(bb, cb) {
-        const sb = this.deps.getLineOwner(bb);
-        if (null === sb) return !1;
-        if (!this.deps.isLocalPlayer(sb)) return !0;
+      settle(bb, ab) {
+        const Ub = this.deps.getLineOwner(bb);
+        if (null === Ub) return !1;
+        if (!this.deps.isLocalPlayer(Ub)) return !0;
         if (this.localHook = {
             hookId: bb,
-            biteAtMs: cb
+            biteAtMs: ab
           }, !this.deps.isHushWaiting()) {
-          const [cb, sb] = this.deps.getHookPosition(bb);
-          this.deps.onCastLanded(cb, sb)
+          const [ab, Ub] = this.deps.getHookPosition(bb);
+          this.deps.onCastLanded(ab, Ub)
         }
         return this.deps.onLocalHookSettled(), !0
       }
     }
-    var KU = sb(4023);
-    const ZU = {
+    var GY = Ub(3959);
+    const QY = {
         0: [15],
         1: [40, 60, 40],
         2: [40, 60, 40, 60, 60],
         3: [30, 50, 30, 50, 90]
       },
-      zU = {
+      qY = {
         1: {
           count: 24,
           rise: 2.5,
@@ -10085,16 +10085,16 @@ export const modules = {
           colour: [206, 145, 206]
         }
       };
-    class qU {
+    class uY {
       constructor(bb) {
         this.deps = bb, this.tell = null
       }
       receiveTell(bb) {
         let {
-          biteTellTier: cb
+          biteTellTier: ab
         } = bb;
         this.tell = {
-          tier: cb,
+          tier: ab,
           atMs: this.deps.now(),
           burst: !1
         }, this.burstAtHook()
@@ -10103,34 +10103,34 @@ export const modules = {
         null !== this.tell && this.deps.now() - this.tell.atMs <= 500 && this.burstAtHook()
       }
       onLocalWaitEnded(bb) {
-        const cb = this.tell;
+        const ab = this.tell;
         if (this.tell = null, !bb) return;
-        const sb = null !== cb && this.deps.now() - cb.atMs <= 3e3 ? cb.tier : 0;
-        this.deps.vibrate(ZU[sb])
+        const Ub = null !== ab && this.deps.now() - ab.atMs <= 3e3 ? ab.tier : 0;
+        this.deps.vibrate(QY[Ub])
       }
       burstAtHook() {
         const bb = this.tell,
-          cb = this.deps.getLocalHookPosition();
-        null === bb || bb.burst || null === cb || (bb.burst = !0, this.deps.playParticles(function(bb, cb) {
-          let [sb, kb, Wb] = cb;
+          ab = this.deps.getLocalHookPosition();
+        null === bb || bb.burst || null === ab || (bb.burst = !0, this.deps.playParticles(function(bb, ab) {
+          let [Ub, Ab, Mb] = ab;
           const {
-            count: ab,
-            rise: Tb,
-            colour: Ub
-          } = zU[bb], [Ib, Hb, fb] = Ub;
+            count: Tb,
+            rise: Eb,
+            colour: Yb
+          } = qY[bb], [Bb, eb, vb] = Yb;
           return {
             texture: "glint",
-            pos1: [sb - .3, kb, Wb - .3],
-            pos2: [sb + .3, kb + .2, Wb + .3],
-            dir1: [-.6, Tb, -.6],
-            dir2: [.6, 1.4 * Tb, .6],
+            pos1: [Ub - .3, Ab, Mb - .3],
+            pos2: [Ub + .3, Ab + .2, Mb + .3],
+            dir1: [-.6, Eb, -.6],
+            dir2: [.6, 1.4 * Eb, .6],
             minLifeTime: .5,
             maxLifeTime: .9,
             minEmitPower: 1,
             maxEmitPower: 1.6,
             minSize: .12,
             maxSize: .3,
-            manualEmitCount: ab,
+            manualEmitCount: Tb,
             gravity: [0, -4, 0],
             velocityGradients: [{
               timeFraction: 0,
@@ -10143,38 +10143,38 @@ export const modules = {
             }],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [Ib, Hb, fb, 1],
+              minColor: [Bb, eb, vb, 1],
               maxColor: [255, 255, 255, 1]
             }, {
               timeFraction: 1,
-              minColor: [Ib, Hb, fb, 0],
-              maxColor: [Ib, Hb, fb, 0]
+              minColor: [Bb, eb, vb, 0],
+              maxColor: [Bb, eb, vb, 0]
             }],
-            blendMode: KU.f.Add,
+            blendMode: GY.f.Add,
             hideDist: 48
           }
-        }(bb.tier, cb)))
+        }(bb.tier, ab)))
       }
     }
-    var dU = sb(1258),
-      AU = sb(1876),
-      wU = sb(37);
+    var rY = Ub(1198),
+      KY = Ub(1829),
+      oY = Ub(31);
 
-    function rU(bb, cb) {
+    function lY(bb, ab) {
       return [{
         timeFraction: 0,
         minColor: [255 * bb[0], 255 * bb[1], 255 * bb[2], 1],
-        maxColor: [255 * cb[0], 255 * cb[1], 255 * cb[2], 1]
+        maxColor: [255 * ab[0], 255 * ab[1], 255 * ab[2], 1]
       }, {
         timeFraction: 1,
         minColor: [0, 0, 0, 1]
       }]
     }
-    const oU = [0, 0, 0],
-      SU = {
+    const tY = [0, 0, 0],
+      wY = {
         texture: "glint",
         mipmaps: !1,
-        GM: 24,
+        PL: 24,
         minLifeTime: .18,
         maxLifeTime: .35,
         minSize: .07,
@@ -10182,23 +10182,23 @@ export const modules = {
         minEmitPower: 0,
         maxEmitPower: 0,
         emitRate: 12,
-        dir1: oU,
-        dir2: oU,
-        blendMode: KU.f.OneOne
+        dir1: tY,
+        dir2: tY,
+        blendMode: GY.f.OneOne
       },
-      RU = {
-        ...SU,
-        colorGradients: rU([1, .88, .38], [1, .65, .15])
+      sY = {
+        ...wY,
+        colorGradients: lY([1, .88, .38], [1, .65, .15])
       },
-      vU = {
-        ...SU,
-        colorGradients: rU([.55, .95, 1], [.9, 1, 1])
+      gY = {
+        ...wY,
+        colorGradients: lY([.55, .95, 1], [.9, 1, 1])
       },
-      FU = [.5, .5, .5],
-      xU = {
+      CY = [.5, .5, .5],
+      VY = {
         texture: "glint",
         mipmaps: !1,
-        GM: 24,
+        PL: 24,
         minLifeTime: .2,
         maxLifeTime: .4,
         minSize: .12,
@@ -10206,24 +10206,24 @@ export const modules = {
         minEmitPower: .5,
         maxEmitPower: 1.5,
         emitRate: 0,
-        colorGradients: rU([1, .12, .12], [1, .35, .2]),
-        blendMode: KU.f.OneOne
+        colorGradients: lY([1, .12, .12], [1, .35, .2]),
+        blendMode: GY.f.OneOne
       };
-    class jU {
+    class OY {
       constructor() {
         this.drops = new Map
       }
-      Km(bb, cb) {
-        if ("overflowFlash" === cb.kind) {
-          const [sb, kb, Wb] = cb.position, ab = bb.createParticles(xU, {
-            pos: [sb, kb, Wb],
-            half: FU
+      aj(bb, ab) {
+        if ("overflowFlash" === ab.kind) {
+          const [Ub, Ab, Mb] = ab.position, Tb = bb.createParticles(VY, {
+            pos: [Ub, Ab, Mb],
+            half: CY
           });
-          return ab.emit(18), void ab.stop()
+          return Tb.emit(18), void Tb.stop()
         }
-        this.drops.has(cb.itemId) || this.drops.set(cb.itemId, {
-          owner: cb.owner,
-          cosmetic: cb.cosmetic,
+        this.drops.has(ab.itemId) || this.drops.set(ab.itemId, {
+          owner: ab.owner,
+          cosmetic: ab.cosmetic,
           pickupDelayCleared: !1,
           seen: !1,
           markedAt: performance.now(),
@@ -10232,55 +10232,55 @@ export const modules = {
           particles: null
         })
       }
-      aX(bb) {
+      qL(bb) {
         if (0 === this.drops.size) return;
-        const cb = performance.now(),
-          sb = bb.getCameraPosition();
-        let kb = 0;
-        for (const ab of this.drops.values()) null !== ab.particles && kb++;
-        for (const [ab, Tb] of this.drops) {
-          const Ub = bb.getPositionView(ab);
-          if (null === Ub) {
-            var Wb;
-            if (Tb.seen || cb - Tb.markedAt > 5e3) null !== Tb.particles && kb--, null === (Wb = Tb.particles) || void 0 === Wb || Wb.stop(), this.drops.delete(ab);
+        const ab = performance.now(),
+          Ub = bb.getCameraPosition();
+        let Ab = 0;
+        for (const Tb of this.drops.values()) null !== Tb.particles && Ab++;
+        for (const [Tb, Eb] of this.drops) {
+          const Yb = bb.getPositionView(Tb);
+          if (null === Yb) {
+            var Mb;
+            if (Eb.seen || ab - Eb.markedAt > 5e3) null !== Eb.particles && Ab--, null === (Mb = Eb.particles) || void 0 === Mb || Mb.stop(), this.drops.delete(Tb);
             continue
           }
-          Tb.cosmetic || !bb.isLocalPlayer(Tb.owner) || Tb.pickupDelayCleared || (bb.clearPickupDelay(ab), Tb.pickupDelayCleared = !0);
-          const Ib = Tb.lastPosition,
-            Hb = Tb.seen && (Ub[0] - Ib[0]) ** 2 + (Ub[1] - Ib[1]) ** 2 + (Ub[2] - Ib[2]) ** 2 > 4e-4,
-            fb = (Ub[0] - sb[0]) ** 2 + (Ub[1] - sb[1]) ** 2 + (Ub[2] - sb[2]) ** 2 < 2025;
-          Tb.seen = !0, Ib[0] = Ub[0], Ib[1] = Ub[1], Ib[2] = Ub[2], Hb && (Tb.lastMovingAt = cb), null !== Tb.particles && (!fb || cb - Tb.lastMovingAt > 500) && (Tb.particles.stop(), Tb.particles = null, kb--), Hb && fb && null === Tb.particles && kb < 32 && (Tb.particles = bb.createParticles(Tb.cosmetic ? vU : RU, {
-            pos: Ub
-          }), kb++), null !== Tb.particles && (Tb.particles.moveTo(Ub), Tb.particles.setEmitRate(Hb ? 12 : 0)), !Hb && null === Tb.particles && cb - Math.max(Tb.lastMovingAt, Tb.markedAt) > 2e3 && this.drops.delete(ab)
+          Eb.cosmetic || !bb.isLocalPlayer(Eb.owner) || Eb.pickupDelayCleared || (bb.clearPickupDelay(Tb), Eb.pickupDelayCleared = !0);
+          const Bb = Eb.lastPosition,
+            eb = Eb.seen && (Yb[0] - Bb[0]) ** 2 + (Yb[1] - Bb[1]) ** 2 + (Yb[2] - Bb[2]) ** 2 > 4e-4,
+            vb = (Yb[0] - Ub[0]) ** 2 + (Yb[1] - Ub[1]) ** 2 + (Yb[2] - Ub[2]) ** 2 < 2025;
+          Eb.seen = !0, Bb[0] = Yb[0], Bb[1] = Yb[1], Bb[2] = Yb[2], eb && (Eb.lastMovingAt = ab), null !== Eb.particles && (!vb || ab - Eb.lastMovingAt > 500) && (Eb.particles.stop(), Eb.particles = null, Ab--), eb && vb && null === Eb.particles && Ab < 32 && (Eb.particles = bb.createParticles(Eb.cosmetic ? gY : sY, {
+            pos: Yb
+          }), Ab++), null !== Eb.particles && (Eb.particles.moveTo(Yb), Eb.particles.setEmitRate(eb ? 12 : 0)), !eb && null === Eb.particles && ab - Math.max(Eb.lastMovingAt, Eb.markedAt) > 2e3 && this.drops.delete(Tb)
         }
       }
       dispose() {
-        for (const cb of this.drops.values()) {
+        for (const ab of this.drops.values()) {
           var bb;
-          null === (bb = cb.particles) || void 0 === bb || bb.stop()
+          null === (bb = ab.particles) || void 0 === bb || bb.stop()
         }
         this.drops.clear()
       }
     }
-    var pU = sb(223);
-    const bI = pU.e.JC * pU.e.playerEyeToHeightRatio;
-    class cI {
+    var cY = Ub(205);
+    const JY = cY.c.Py * cY.c.playerEyeToHeightRatio;
+    class nY {
       constructor(bb) {
         this.host = bb, this.lava = [], this.loop = null, this.nextUpdateAt = 0
       }
-      Km(bb) {
+      aj(bb) {
         this.lava = bb, this.nextUpdateAt = 0
       }
-      aX() {
+      qL() {
         var bb;
-        const cb = this.host.now();
-        if (cb < this.nextUpdateAt) return;
-        this.nextUpdateAt = cb + 250;
-        const sb = this.host.playerPosition(),
-          kb = sb && this.findNearest([sb[0], sb[1] + bI, sb[2]]);
-        if (!kb || kb.distance >= 40) return void this.stop();
-        const Wb = .5 * Math.min(1, (40 - kb.distance) / 8);
-        this.loop ? this.loop.setRelativeVolume(Wb) : this.loop = this.host.play("lavaFlow", Wb, kb.position, 40 + bI, 9, !0), null === (bb = this.loop) || void 0 === bb || bb.setPosition(kb.position)
+        const ab = this.host.now();
+        if (ab < this.nextUpdateAt) return;
+        this.nextUpdateAt = ab + 250;
+        const Ub = this.host.playerPosition(),
+          Ab = Ub && this.findNearest([Ub[0], Ub[1] + JY, Ub[2]]);
+        if (!Ab || Ab.distance >= 40) return void this.stop();
+        const Mb = .5 * Math.min(1, (40 - Ab.distance) / 8);
+        this.loop ? this.loop.setRelativeVolume(Mb) : this.loop = this.host.play("lavaFlow", Mb, Ab.position, 40 + JY, 9, !0), null === (bb = this.loop) || void 0 === bb || bb.setPosition(Ab.position)
       }
       dispose() {
         this.stop(), this.lava = []
@@ -10290,47 +10290,47 @@ export const modules = {
         null === (bb = this.loop) || void 0 === bb || bb.stop(), this.loop = null
       }
       findNearest(bb) {
-        let cb = -1,
-          sb = 1 / 0;
-        for (let kb = 0; kb < this.lava.length; kb += 3) {
-          const Wb = this.lava[kb] - bb[0],
-            ab = this.lava[kb + 1] - bb[1],
-            Tb = this.lava[kb + 2] - bb[2],
-            Ub = Wb * Wb + ab * ab + Tb * Tb;
-          Ub < sb && (sb = Ub, cb = kb)
+        let ab = -1,
+          Ub = 1 / 0;
+        for (let Ab = 0; Ab < this.lava.length; Ab += 3) {
+          const Mb = this.lava[Ab] - bb[0],
+            Tb = this.lava[Ab + 1] - bb[1],
+            Eb = this.lava[Ab + 2] - bb[2],
+            Yb = Mb * Mb + Tb * Tb + Eb * Eb;
+          Yb < Ub && (Ub = Yb, ab = Ab)
         }
-        return cb < 0 ? null : {
-          position: [this.lava[cb], this.lava[cb + 1], this.lava[cb + 2]],
-          distance: Math.sqrt(sb)
+        return ab < 0 ? null : {
+          position: [this.lava[ab], this.lava[ab + 1], this.lava[ab + 2]],
+          distance: Math.sqrt(Ub)
         }
       }
     }
-    var sI = sb(1851),
-      kI = sb(38245);
-    const WI = {
+    var SY = Ub(1805),
+      bB = Ub(37953);
+    const aB = {
       "Grey Portal": "Gray"
     };
-    for (const fI of Wb.Hc) WI[`${fI} Portal`] = fI;
-    const aI = Object.keys(WI),
-      TI = Object.fromEntries(aI.map((bb => [bb, (0, Wb.U)(Wb.L[`${(0,Wb.Je)(WI[bb])}Team`])])));
-    Object.fromEntries(aI.map((bb => [bb, Wb.L[`${(0,Wb.Je)(WI[bb])}UiText`]])));
-    class UI {
-      constructor(bb, cb) {
-        this.presentation = bb, this.portal = cb, this.unlocked = void 0
+    for (const YB of Mb.qc) aB[`${YB} Portal`] = YB;
+    const UB = Object.keys(aB),
+      AB = Object.fromEntries(UB.map((bb => [bb, (0, Mb.T)(Mb.E[`${(0,Mb.he)(aB[bb])}Team`])])));
+    Object.fromEntries(UB.map((bb => [bb, Mb.E[`${(0,Mb.he)(aB[bb])}UiText`]])));
+    class MB {
+      constructor(bb, ab) {
+        this.presentation = bb, this.portal = ab, this.unlocked = void 0
       }
-      Km(bb) {
-        const cb = !1 === this.unlocked && bb;
-        this.unlocked = bb, this.aX();
+      aj(bb) {
+        const ab = !1 === this.unlocked && bb;
+        this.unlocked = bb, this.qL();
         const {
-          min: sb,
-          max: kb,
-          unlockedBlock: Wb
+          min: Ub,
+          max: Ab,
+          unlockedBlock: Mb
         } = this.portal;
-        if (cb && this.presentation.hasChunk(...sb)) {
-          const [bb, cb, ab] = TI[Wb];
+        if (ab && this.presentation.hasChunk(...Ub)) {
+          const [bb, ab, Tb] = AB[Mb];
           this.presentation.playParticles({
-            pos1: [...sb],
-            pos2: kb.map((bb => bb + 1)),
+            pos1: [...Ub],
+            pos2: Ab.map((bb => bb + 1)),
             dir1: [-1, 0, -1],
             dir2: [1, 1, 1],
             texture: "glint",
@@ -10345,8 +10345,8 @@ export const modules = {
             gravity: [0, .5, 0],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [bb, cb, ab, 1],
-              maxColor: [Math.min(255, bb + 55), Math.min(255, cb + 55), Math.min(255, ab + 90), 1]
+              minColor: [bb, ab, Tb, 1],
+              maxColor: [Math.min(255, bb + 55), Math.min(255, ab + 55), Math.min(255, Tb + 90), 1]
             }],
             velocityGradients: [{
               timeFraction: 0,
@@ -10357,19 +10357,19 @@ export const modules = {
           })
         }
       }
-      aX() {
+      qL() {
         var bb;
-        const cb = this.unlocked ? this.portal.unlockedBlock : null !== (bb = this.portal.lockedBlock) && void 0 !== bb ? bb : "Light Gray Portal",
+        const ab = this.unlocked ? this.portal.unlockedBlock : null !== (bb = this.portal.lockedBlock) && void 0 !== bb ? bb : "Light Gray Portal",
           {
-            min: sb,
-            max: kb
+            min: Ub,
+            max: Ab
           } = this.portal;
-        for (let Wb = sb[0]; Wb <= kb[0]; Wb++)
-          for (let bb = sb[1]; bb <= kb[1]; bb++)
-            for (let ab = sb[2]; ab <= kb[2]; ab++) this.presentation.hasChunk(Wb, bb, ab) && this.presentation.rC(Wb, bb, ab) !== cb && this.presentation.Tu(Wb, bb, ab, cb)
+        for (let Mb = Ub[0]; Mb <= Ab[0]; Mb++)
+          for (let bb = Ub[1]; bb <= Ab[1]; bb++)
+            for (let Tb = Ub[2]; Tb <= Ab[2]; Tb++) this.presentation.hasChunk(Mb, bb, Tb) && this.presentation.Qy(Mb, bb, Tb) !== ab && this.presentation.Qp(Mb, bb, Tb, ab)
       }
     }
-    const II = {
+    const TB = {
         farming_1: {
           raises: bb => "NPC" === bb.type && "chef" === bb.variation,
           rise: .4
@@ -10379,290 +10379,290 @@ export const modules = {
           rise: .4
         }
       },
-      HI = (bb, cb, sb, ab) => {
+      EB = (bb, ab, Ub, Tb) => {
         let {
-          localPlayerId: Tb
-        } = ab;
-        const Ub = new LW({
-          translate: (bb, cb) => (0, PW.y)(dU.e.get().getCurrentLanguageCode(), bb, cb),
-          translateWithIcons: (bb, cb) => (0, PW.q)(dU.e.get().getCurrentLanguageCode(), bb, cb),
+          localPlayerId: Eb
+        } = Tb;
+        const Yb = new ZM({
+          translate: (bb, ab) => (0, WM.w)(rY.f.get().getCurrentLanguageCode(), bb, ab),
+          translateWithIcons: (bb, ab) => (0, WM.p)(rY.f.get().getCurrentLanguageCode(), bb, ab),
           setMenuOpen: bb => {
-            bb ? (0, Sb.m)() : (0, Sb.e)()
+            bb ? (0, Cb.o)() : (0, Cb.g)()
           },
-          dismissMenu: Sb.g,
+          dismissMenu: Cb.i,
           publishSkills: bb => {
-            Rb.j.QQ(as, bb, !0)
+            Vb.m.IR(TU, bb, !0)
           },
           publishQuests: bb => {
-            Rb.j.QQ(Hs, bb, !0)
+            Vb.m.IR(eU, bb, !0)
           },
           publishQuestNotification: bb => {
-            Rb.j.QQ(fs, bb, !0)
+            Vb.m.IR(vU, bb, !0)
           },
           publishDungeons: bb => {
-            Rb.j.QQ(ns, bb, !0)
+            Vb.m.IR(XU, bb, !0)
           },
           publishCollections: bb => {
-            Rb.j.QQ(Gs, bb, !0)
+            Vb.m.IR(QU, bb, !0)
           },
           publishMap: bb => {
-            Rb.j.QQ(Xb, bb, !0)
+            Vb.m.IR(Pb, bb, !0)
           },
           publishHud: bb => {
-            Rb.j.QQ(CW, bb, !0)
+            Vb.m.IR(RM, bb, !0)
           },
           publishPortalTransit: bb => {
-            Rb.j.QQ(Zs, bb, !0)
+            Vb.m.IR(uU, bb, !0)
           },
-          isLoadingScreenUp: () => hW.d.get("loadingOverlayVisible"),
+          isLoadingScreenUp: () => xM.c.get("loadingOverlayVisible"),
           publishDailyReward: bb => {
-            Rb.j.QQ(ds, bb, !0)
+            Vb.m.IR(oU, bb, !0)
           },
           publishMailbox: bb => {
-            Rb.j.QQ(Ss, bb, !0)
+            Vb.m.IR(gU, bb, !0)
           },
           publishQuestGraph: bb => {
-            Rb.j.QQ(vs, bb, !0)
+            Vb.m.IR(VU, bb, !0)
           },
           publishForge: bb => {
-            Rb.j.QQ(Qk, bb, !0)
+            Vb.m.IR(jA, bb, !0)
           },
           publishSmuggler: bb => {
-            Rb.j.QQ(Nk, bb, !0)
+            Vb.m.IR(yA, bb, !0)
           },
           publishKeepersChair: bb => {
-            Rb.j.QQ(tk, bb, !0)
+            Vb.m.IR(NA, bb, !0)
           },
           publishReachLog: bb => {
-            Rb.j.QQ(Pk, bb, !0)
+            Vb.m.IR(HA, bb, !0)
           },
           publishLampLight: bb => {
-            Rb.j.QQ(Kk, bb, !0)
+            Vb.m.IR(QA, bb, !0)
           },
           publishMagmaward: bb => {
-            Rb.j.QQ(zk, bb, !0)
+            Vb.m.IR(uA, bb, !0)
           },
           publishGlowtide: bb => {
-            Rb.j.QQ(dk, bb, !0)
+            Vb.m.IR(KA, bb, !0)
           },
           publishGlowMeter: bb => {
-            Rb.j.QQ(wk, bb, !0)
+            Vb.m.IR(lA, bb, !0)
           },
           publishHushWait: bb => {
-            Rb.j.QQ(Sk, bb, !0)
+            Vb.m.IR(wA, bb, !0)
           },
           publishPassage: bb => {
-            Rb.j.QQ(uk, bb, !0)
+            Vb.m.IR(zA, bb, !0)
           },
           publishTideCharts: bb => {
-            Rb.j.QQ(vk, bb, !0)
+            Vb.m.IR(gA, bb, !0)
           },
           publishRegulars: bb => {
-            Rb.j.QQ(kW, bb, !0)
+            Vb.m.IR(bM, bb, !0)
           },
           publishHiddenWaters: bb => {
-            Rb.j.QQ(IW, bb, !0)
+            Vb.m.IR(TM, bb, !0)
           },
           publishDialogue: bb => {
-            Rb.j.QQ(fW, bb, !0)
+            Vb.m.IR(YM, bb, !0)
           },
           publishAutographs: bb => {
-            Rb.j.QQ(lW, bb, !0)
+            Vb.m.IR(PM, bb, !0)
           },
           onDailyRewardStarted: bb => {
-            Db.playSound(Tb, bb.day === Bb ? "trumpetFlare" : "chestOpen", .8, 1)
+            Fb.playSound(Eb, bb.day === Wb ? "trumpetFlare" : "chestOpen", .8, 1)
           },
-          onDailyRewardCoinLanded: (bb, cb) => {
-            Db.playSound(Tb, "exp_collect", .35, 1 + .6 * bb / (cb - 1)), Rb.j.QQ(As, bb === cb - 1)
+          onDailyRewardCoinLanded: (bb, ab) => {
+            Fb.playSound(Eb, "exp_collect", .35, 1 + .6 * bb / (ab - 1)), Vb.m.IR(lU, bb === ab - 1)
           },
           onDailyRewardItemLanded: bb => {
-            Db.playSound(Tb, "pickUp", .6, 1 + .15 * bb)
+            Fb.playSound(Eb, "pickUp", .6, 1 + .15 * bb)
           },
           onMailboxStarted: () => {
-            Db.playSound(Tb, "rpgMetalClick", .6, 1), Db.playSound(Tb, "rpgBookFlip1", .7, 1)
+            Fb.playSound(Eb, "rpgMetalClick", .6, 1), Fb.playSound(Eb, "rpgBookFlip1", .7, 1)
           },
           onDailyRewardFinished: () => {
-            Db.sendCommand("skyblockDailyRewardDone")
+            Fb.sendCommand("skyblockDailyRewardDone")
           },
-          journeyStorage: wU.i,
+          journeyStorage: oY.j,
           requestTracking: bb => {
-            Db.sendCommand(`quests track ${bb}`)
+            Fb.sendCommand(`quests track ${bb}`)
           },
-          requestDungeonEnter: (bb, cb) => {
-            Db.sendCommand(`dungeonEnter ${bb} ${cb}`)
+          requestDungeonEnter: (bb, ab) => {
+            Fb.sendCommand(`dungeonEnter ${bb} ${ab}`)
           },
           requestQuestJump: bb => {
-            Db.sendCommand(`${ib} jump ${bb}`)
+            Fb.sendCommand(`${Gb} jump ${bb}`)
           },
-          requestQuestArrive: (bb, cb) => {
-            const sb = `${ib} arrive ${bb}`;
-            Db.sendCommand(cb ? `${sb} complete` : sb)
+          requestQuestArrive: (bb, ab) => {
+            const Ub = `${Gb} arrive ${bb}`;
+            Fb.sendCommand(ab ? `${Ub} complete` : Ub)
           },
           requestForge: bb => {
             let {
-              blade: cb,
-              guard: sb,
-              handle: kb
+              blade: ab,
+              guard: Ub,
+              handle: Ab
             } = bb;
-            Db.sendCommand(`forge ${cb} ${sb} ${kb}`)
+            Fb.sendCommand(`forge ${ab} ${Ub} ${Ab}`)
           },
           requestDialogue: () => {
-            Db.sendCommand("quests dialogue")
+            Fb.sendCommand("quests dialogue")
           },
-          requestSmuggle: (bb, cb) => {
-            Db.sendCommand(`smuggle ${bb} ${cb}`)
+          requestSmuggle: (bb, ab) => {
+            Fb.sendCommand(`smuggle ${bb} ${ab}`)
           },
           requestKeepersChairAim: bb => {
-            Db.sendCommand(`keeperschair-aim ${bb}`)
+            Fb.sendCommand(`keeperschair-aim ${bb}`)
           },
           requestReachLogOpen: () => {
-            Db.sendCommand("reachlog-open")
+            Fb.sendCommand("reachlog-open")
           },
           requestLampLight: bb => {
-            Db.sendCommand(`${bb}`)
+            Fb.sendCommand(`${bb}`)
           },
           requestTravel: bb => {
-            Db.sendCommand(`map travel ${bb.kind} ${bb.id} ${bb.requestId}`)
+            Fb.sendCommand(`map travel ${bb.kind} ${bb.id} ${bb.requestId}`)
           }
         });
-        let Ib, Hb, fb, Mb, nb, mb, lb, Vb, Lb, ub, Yb, gb, tb;
-        const Pb = new jU;
-        let Db, Eb = null;
-        const Ob = II[null !== sb && void 0 !== sb ? sb : ""],
-          zb = (bb, cb) => {
-            null !== Ob && void 0 !== Ob && Ob.raises(cb) && Db.setNametagOffset(bb, Ob.rise)
+        let Bb, eb, vb, Lb, Xb, jb, Rb, zb, xb, ib, fb, Nb, Hb;
+        const db = new OY;
+        let Fb, hb = null;
+        const Qb = TB[null !== Ub && void 0 !== Ub ? Ub : ""],
+          Kb = (bb, ab) => {
+            null !== Qb && void 0 !== Qb && Qb.raises(ab) && Fb.setNametagOffset(bb, Qb.rise)
           },
-          Ab = new qU({
+          tb = new uY({
             getLocalHookPosition: () => {
               const bb = wb.getLocalHook();
-              return null !== bb && Db.checkValid(bb) ? Db.aN(bb) : null
+              return null !== bb && Fb.checkValid(bb) ? Fb.eZ(bb) : null
             },
             playParticles: bb => {
-              Db.playParticleEffect(bb)
+              Fb.playParticleEffect(bb)
             },
             vibrate: bb => {
-              vb.f.play("fishBite", bb)
+              Ob.f.play("fishBite", bb)
             },
             now: () => performance.now()
           }),
-          wb = new GU({
-            getLineOwner: bb => Db.checkValid(bb) ? Db.getLineOwner(bb) : null,
-            isLocalPlayer: bb => Db.isLocalPlayer(bb),
+          wb = new hY({
+            getLineOwner: bb => Fb.checkValid(bb) ? Fb.getLineOwner(bb) : null,
+            isLocalPlayer: bb => Fb.isLocalPlayer(bb),
             getHookPosition: bb => {
-              const [cb, , sb] = Db.aN(bb);
-              return [cb, sb]
+              const [ab, , Ub] = Fb.eZ(bb);
+              return [ab, Ub]
             },
             isHushWaiting: () => {
               var bb;
-              return "waiting" === (null === (bb = Ub.hushWait.getSnapshot()) || void 0 === bb ? void 0 : bb.phase)
+              return "waiting" === (null === (bb = Yb.hushWait.getSnapshot()) || void 0 === bb ? void 0 : bb.phase)
             },
-            onCastLanded: (bb, cb) => {
-              Ub.tideCharts.castLanded(bb, cb)
+            onCastLanded: (bb, ab) => {
+              Yb.tideCharts.castLanded(bb, ab)
             },
             onLocalHookSettled: () => {
-              Ab.onLocalHookSettled()
+              tb.onLocalHookSettled()
             },
             onLocalWaitEnded: bb => {
-              Ab.onLocalWaitEnded(bb)
+              tb.onLocalWaitEnded(bb)
             },
             now: () => performance.now()
           }),
-          Fb = new cI({
+          cb = new nY({
             now: () => performance.now(),
-            playerPosition: () => Db.checkValid(Tb) ? Db.aN(Tb) : null,
-            play: (bb, cb, sb, kb, Wb, ab) => Db.playSound(Tb, bb, cb, 1, {
-              ca: sb,
-              maxHearDist: kb,
-              refDistance: Wb
-            }, ab)
+            playerPosition: () => Fb.checkValid(Eb) ? Fb.eZ(Eb) : null,
+            play: (bb, ab, Ub, Ab, Mb, Tb) => Fb.playSound(Eb, bb, ab, 1, {
+              HM: Ub,
+              maxHearDist: Ab,
+              refDistance: Mb
+            }, Tb)
           }),
-          xb = new Map;
-        let jb;
+          Jb = new Map;
+        let nb;
         return {
           onCreate: bb => {
-            if (Db = bb, Eb = new kI.SkyblockEntityFacing(bb, Ob ? zb : null), Ub.portalTransit.resumeArrival(null !== sb && void 0 !== sb ? sb : null), (null !== sb && void 0 !== sb ? sb : kb) === kb) {
+            if (Fb = bb, hb = new bB.SkyblockEntityFacing(bb, Qb ? Kb : null), Yb.portalTransit.resumeArrival(null !== Ub && void 0 !== Ub ? Ub : null), (null !== Ub && void 0 !== Ub ? Ub : Ab) === Ab) {
               let bb = -1 / 0;
-              jb = Rb.j.subscribe("toggleMenu", (cb => {
-                const sb = performance.now();
-                "inventory|Workbench" !== cb || "cross_to_hub" !== Ub.quests.getTrackedQuestId() || sb - bb < 1e4 || (bb = sb, Db.sendCommand("skyblockWorkbenchOpened"))
+              nb = Vb.m.subscribe("toggleMenu", (ab => {
+                const Ub = performance.now();
+                "inventory|Workbench" !== ab || "cross_to_hub" !== Yb.quests.getTrackedQuestId() || Ub - bb < 1e4 || (bb = Ub, Fb.sendCommand("skyblockWorkbenchOpened"))
               }))
             }
-            for (const [kb, Wb] of Object.entries(null !== (cb = Gb[null !== sb && void 0 !== sb ? sb : ""]) && void 0 !== cb ? cb : {})) {
-              var cb;
-              xb.set(kb, new UI({
-                hasChunk: (cb, sb, kb) => bb.isBlockInLoadedChunk(cb, sb, kb),
-                rC: (cb, sb, kb) => bb.blockIdToBlockName(bb.getBlockId(cb, sb, kb)),
-                Tu: (cb, sb, kb, Wb) => {
-                  bb.Tu(cb, sb, kb, Wb)
+            for (const [Ab, Mb] of Object.entries(null !== (ab = qb[null !== Ub && void 0 !== Ub ? Ub : ""]) && void 0 !== ab ? ab : {})) {
+              var ab;
+              Jb.set(Ab, new MB({
+                hasChunk: (ab, Ub, Ab) => bb.isBlockInLoadedChunk(ab, Ub, Ab),
+                Qy: (ab, Ub, Ab) => bb.blockIdToBlockName(bb.getBlockId(ab, Ub, Ab)),
+                Qp: (ab, Ub, Ab, Mb) => {
+                  bb.Qp(ab, Ub, Ab, Mb)
                 },
-                playParticles: cb => {
-                  bb.playParticleEffect(cb)
+                playParticles: ab => {
+                  bb.playParticleEffect(ab)
                 }
-              }, Wb))
+              }, Mb))
             }
-            tb = (0, sI.f)((bb => function(bb) {
-              return Object.hasOwn(wc, bb) || bb.startsWith("npc_")
-            }(bb) ? oc(bb) : null)), Ub.resolveItemName = (cb, sb) => {
-              const kb = bb.getItemStat(Tb, cb, "displayName");
-              return kb && "object" === typeof kb && "translationKey" in kb ? sb(kb.translationKey, (0, PW.p)(kb.params, AU.b.shown)) : "string" === typeof kb ? sb(kb) : cb
-            }, Ub.quests.notifications.onShown = bb => {
-              "quest" === bb ? Db.playSound(Tb, "magicAccent1", 1, 1) : "skillLevel" === bb ? Db.playSound(Tb, "magicAccent1", 1, .6) : "landmark" === bb ? Db.playSound(Tb, "trumpetFlare", 1, .6) : "npcNote" === bb ? Db.playSound(Tb, "magicAccent2", .8, 1.1) : "started" === bb ? Db.playSound(Tb, (0, EU.c)("bigDrumSwish"), 1, 1) : Db.playSound(Tb, (0, EU.c)("rpgHandleSmallLeather"), 1, 1)
-            }, Ub.forge.onPartSelected = () => {
-              Db.playSound(Tb, "rpgMetalClick", .6, .9 + .2 * Math.random())
-            }, Ub.forge.onForgeStarted = (cb, sb, kb) => OU(bb, Tb, cb, sb, kb), Ub.smuggler.onBought = () => {
-              Db.playSound(Tb, (0, EU.c)("rpgHandleSmallLeather"), 1, 1), Db.playSound(Tb, "chestOpen", .6, 1)
-            }, Ub.compass.register(new Qb(Ub.map, !0)), Ub.compass.register(new Qb(Ub.map, !1)), Ub.compass.register(new Cb(Ub.map)), Ub.compass.register(new Nb((() => Ub.quests.getSnapshot().compassTarget)));
-            for (const sb of ["enemy", "npc"]) Ub.compass.register(new eb(Ub.map, sb, (cb => bb.checkValid(cb) ? bb.aN(cb) : void 0), (cb => bb.isAlive(cb))))
+            Hb = (0, SY.g)((bb => function(bb) {
+              return Object.hasOwn(wa, bb) || bb.startsWith("npc_")
+            }(bb) ? ga(bb) : null)), Yb.resolveItemName = (ab, Ub) => {
+              const Ab = bb.getItemStat(Eb, ab, "displayName");
+              return Ab && "object" === typeof Ab && "translationKey" in Ab ? Ub(Ab.translationKey, (0, WM.m)(Ab.params, KY.c.shown)) : "string" === typeof Ab ? Ub(Ab) : ab
+            }, Yb.quests.notifications.onShown = bb => {
+              "quest" === bb ? Fb.playSound(Eb, "magicAccent1", 1, 1) : "skillLevel" === bb ? Fb.playSound(Eb, "magicAccent1", 1, .6) : "landmark" === bb ? Fb.playSound(Eb, "trumpetFlare", 1, .6) : "npcNote" === bb ? Fb.playSound(Eb, "magicAccent2", .8, 1.1) : "started" === bb ? Fb.playSound(Eb, (0, IY.e)("bigDrumSwish"), 1, 1) : Fb.playSound(Eb, (0, IY.e)("rpgHandleSmallLeather"), 1, 1)
+            }, Yb.forge.onPartSelected = () => {
+              Fb.playSound(Eb, "rpgMetalClick", .6, .9 + .2 * Math.random())
+            }, Yb.forge.onForgeStarted = (ab, Ub, Ab) => FY(bb, Eb, ab, Ub, Ab), Yb.smuggler.onBought = () => {
+              Fb.playSound(Eb, (0, IY.e)("rpgHandleSmallLeather"), 1, 1), Fb.playSound(Eb, "chestOpen", .6, 1)
+            }, Yb.compass.register(new kb(Yb.map, !0)), Yb.compass.register(new kb(Yb.map, !1)), Yb.compass.register(new Zb(Yb.map)), Yb.compass.register(new Db((() => Yb.quests.getSnapshot().compassTarget)));
+            for (const Ub of ["enemy", "npc"]) Yb.compass.register(new yb(Yb.map, Ub, (ab => bb.checkValid(ab) ? bb.eZ(ab) : void 0), (ab => bb.isAlive(ab))))
           },
-          onAfterRender: (bb, cb) => {
-            const sb = Db.checkValid(Tb) ? Db.aN(Tb) : null;
-            Ub.navigation.afterRender(sb, performance.now(), cb), Ub.glowtide.afterRender(sb, cb.cameraHeading), Ub.tideCharts.afterRender(sb), wb.afterRender()
+          onAfterRender: (bb, ab) => {
+            const Ub = Fb.checkValid(Eb) ? Fb.eZ(Eb) : null;
+            Yb.navigation.afterRender(Ub, performance.now(), ab), Yb.glowtide.afterRender(Ub, ab.cameraHeading), Yb.tideCharts.afterRender(Ub), wb.afterRender()
           },
           onClose: () => {
-            var bb, cb, sb, kb, Wb, ab, Tb, Xb, mb, Qb, eb, Cb, Nb, hb, Jb;
-            jb && Rb.j.unsubscribe(jb), null === (bb = tb) || void 0 === bb || bb(), Pb.dispose(), Fb.dispose(), null === (cb = Eb) || void 0 === cb || cb.dispose(), wb.dispose(), Ub.dispose(), null === (sb = Ib) || void 0 === sb || sb(), null === (kb = Hb) || void 0 === kb || kb(), null === (Wb = fb) || void 0 === Wb || Wb(), null === (ab = Mb) || void 0 === ab || ab(), null === (Tb = nb) || void 0 === Tb || Tb(), null === (Xb = lb) || void 0 === Xb || Xb(), null === (mb = undefined) || void 0 === mb || mb(), null === (Qb = Vb) || void 0 === Qb || Qb(), null === (eb = Lb) || void 0 === eb || eb(), null === (Cb = ub) || void 0 === Cb || Cb(), null === (Nb = Yb) || void 0 === Nb || Nb(), null === (hb = undefined) || void 0 === hb || hb(), null === (Jb = gb) || void 0 === Jb || Jb()
+            var bb, ab, Ub, Ab, Mb, Tb, Eb, Pb, jb, kb, yb, Zb, Db, mb, pb;
+            nb && Vb.m.unsubscribe(nb), null === (bb = Hb) || void 0 === bb || bb(), db.dispose(), cb.dispose(), null === (ab = hb) || void 0 === ab || ab.dispose(), wb.dispose(), Yb.dispose(), null === (Ub = Bb) || void 0 === Ub || Ub(), null === (Ab = eb) || void 0 === Ab || Ab(), null === (Mb = vb) || void 0 === Mb || Mb(), null === (Tb = Lb) || void 0 === Tb || Tb(), null === (Eb = Xb) || void 0 === Eb || Eb(), null === (Pb = Rb) || void 0 === Pb || Pb(), null === (jb = undefined) || void 0 === jb || jb(), null === (kb = zb) || void 0 === kb || kb(), null === (yb = xb) || void 0 === yb || yb(), null === (Zb = ib) || void 0 === Zb || Zb(), null === (Db = fb) || void 0 === Db || Db(), null === (mb = undefined) || void 0 === mb || mb(), null === (pb = Nb) || void 0 === pb || pb()
           },
-          onPlayerChangeBlock: (bb, cb, kb, ab, Ib, Hb) => {
-            if (bb === Tb && "Air" === Hb) {
-              const bb = Db.getClientOption(Tb, "creative");
-              Ub.skills.predictBlock([cb, kb, ab], Ib, bb);
-              const Hb = function(bb, cb) {
-                  if ("hub" === cb || "farming_1" === cb || "mining_1" === cb) return !qb.has(bb) || "hub" !== cb && "mining_1" !== cb ? Object.hasOwn(Zb, bb) ? Zb[bb] : void 0 : Kb
-                }(Ib, sb),
-                fb = ("hub" === sb || "mining_1" === sb) && (Wb.xd.some((bb => bb === Ib)) || Object.hasOwn(db, Ib) || "mining_1" === sb && "Block of Coal" === Ib);
-              bb || void 0 === Hb && !fb || Db.Tu(cb, kb, ab, null !== Hb && void 0 !== Hb ? Hb : Kb)
+          onPlayerChangeBlock: (bb, ab, Ab, Tb, Bb, eb) => {
+            if (bb === Eb && "Air" === eb) {
+              const bb = Fb.getClientOption(Eb, "creative");
+              Yb.skills.predictBlock([ab, Ab, Tb], Bb, bb);
+              const eb = function(bb, ab) {
+                  if ("hub" === ab || "farming_1" === ab || "mining_1" === ab) return !ob.has(bb) || "hub" !== ab && "mining_1" !== ab ? Object.hasOwn(rb, bb) ? rb[bb] : void 0 : ub
+                }(Bb, Ub),
+                vb = ("hub" === Ub || "mining_1" === Ub) && (Mb.gd.some((bb => bb === Bb)) || Object.hasOwn(lb, Bb) || "mining_1" === Ub && "Block of Coal" === Bb);
+              bb || void 0 === eb && !vb || Fb.Qp(ab, Ab, Tb, null !== eb && void 0 !== eb ? eb : ub)
             }
           },
-          onPlayerAttackEntity: (bb, cb) => {
-            if (bb !== Tb || "Player" !== Db.getEntityType(cb)) return;
-            const [sb, kb, Wb] = Db.aN(cb);
-            Db.burstParticlePreset("critical", [sb, kb + 1, Wb], 10)
+          onPlayerAttackEntity: (bb, ab) => {
+            if (bb !== Eb || "Player" !== Fb.getEntityType(ab)) return;
+            const [Ub, Ab, Mb] = Fb.eZ(ab);
+            Fb.burstParticlePreset("critical", [Ub, Ab + 1, Mb], 10)
           },
           onChangeBlockFail: bb => {
             for (const {
-                TT: cb
+                dT: ab
               }
-              of bb) Ub.skills.rejectBlock(cb)
+              of bb) Yb.skills.rejectBlock(ab)
           },
-          onReceivedMessageFromServer: (bb, cb) => {
+          onReceivedMessageFromServer: (bb, ab) => {
             if ("skyblockGatedPortal" === bb) {
-              var sb;
-              const [bb, kb] = cb;
-              return void(null === (sb = xb.get(bb)) || void 0 === sb || sb.Km(kb))
+              var Ub;
+              const [bb, Ab] = ab;
+              return void(null === (Ub = Jb.get(bb)) || void 0 === Ub || Ub.aj(Ab))
             }
-            if ("skyblockDailyReward" === bb) return void Ub.dailyReward.Km(cb);
-            if ("skyblockMailbox" === bb) return void Ub.mailbox.Km(cb);
-            if ("skyblockPortalTransit" === bb) return void Ub.portalTransit.Km(cb);
-            if ("skyblockLoot" === bb) return void Pb.Km(Db, cb);
-            if ("skyblockLava" === bb) return void Fb.Km(cb);
-            if ("skyblockForge" === bb) return void Ub.forge.Km(cb);
-            if ("skyblockMagmaward" === bb) return void Ub.magmaward.Km(cb);
-            if ("skyblockGlowtide" === bb) return void Ub.glowtide.Km(cb);
-            if ("skyblockGlowMeter" === bb) return void Ub.glowMeter.Km(cb);
-            if ("skyblockHushWait" === bb) return void Ub.hushWait.Km(cb);
+            if ("skyblockDailyReward" === bb) return void Yb.dailyReward.aj(ab);
+            if ("skyblockMailbox" === bb) return void Yb.mailbox.aj(ab);
+            if ("skyblockPortalTransit" === bb) return void Yb.portalTransit.aj(ab);
+            if ("skyblockLoot" === bb) return void db.aj(Fb, ab);
+            if ("skyblockLava" === bb) return void cb.aj(ab);
+            if ("skyblockForge" === bb) return void Yb.forge.aj(ab);
+            if ("skyblockMagmaward" === bb) return void Yb.magmaward.aj(ab);
+            if ("skyblockGlowtide" === bb) return void Yb.glowtide.aj(ab);
+            if ("skyblockGlowMeter" === bb) return void Yb.glowMeter.aj(ab);
+            if ("skyblockHushWait" === bb) return void Yb.hushWait.aj(ab);
             if ("skyblockPassage" === bb) {
-              const bb = cb;
-              return Ub.passage.Km(bb), Ub.reachLog.receivePassagePhase(bb.passagePhase), ub ??= (0, hb.s)({
+              const bb = ab;
+              return Yb.passage.aj(bb), Yb.reachLog.receivePassagePhase(bb.passagePhase), ib ??= (0, mb.u)({
                 id: "skyblockPassage",
                 order: 5,
                 labelKey: "skyblockGame:passageButton",
@@ -10671,16 +10671,16 @@ export const modules = {
                   name: "Moonfish"
                 },
                 panel: !0,
-                onClick: Ub.passage.show
-              }), void Ub.keepersChair.receivePassage({
+                onClick: Yb.passage.show
+              }), void Yb.keepersChair.receivePassage({
                 keepersChairPassagePhase: bb.passagePhase,
                 keepersChairPassageNextPhase: bb.passageNextPhase,
                 keepersChairPassageTurnsInMs: bb.passageTurnsInMs
               })
             }
             if ("skyblockTideCharts" === bb) {
-              const bb = cb;
-              return Ub.tideCharts.Km(bb), void(bb.tideCharts.length > 0 && (Yb ??= (0, hb.s)({
+              const bb = ab;
+              return Yb.tideCharts.aj(bb), void(bb.tideCharts.length > 0 && (fb ??= (0, mb.u)({
                 id: "skyblockTideCharts",
                 order: 8,
                 labelKey: "skyblockGame:tideChartsTitle",
@@ -10689,24 +10689,24 @@ export const modules = {
                   name: "Chunk Map"
                 },
                 panel: !0,
-                onClick: Ub.tideCharts.show
+                onClick: Yb.tideCharts.show
               })))
             }
-            if (bb === rb.v) {
-              var kb;
+            if (bb === sb.w) {
+              var Ab;
               const {
                 hookId: bb,
-                waiting: sb
-              } = cb;
-              return void wb.hookWaiting(bb, null !== (kb = null === sb || void 0 === sb ? void 0 : sb.remainingMs) && void 0 !== kb ? kb : null)
+                waiting: Ub
+              } = ab;
+              return void wb.hookWaiting(bb, null !== (Ab = null === Ub || void 0 === Ub ? void 0 : Ub.remainingMs) && void 0 !== Ab ? Ab : null)
             }
-            if ("skyblockBiteTell" === bb) return void Ab.receiveTell(cb);
-            if ("skyblockSmuggler" === bb) return void Ub.smuggler.Km(cb);
-            if ("skyblockKeepersChair" === bb) return Ub.keepersChair.Km(cb), void Ub.lampLight.setAtChair(Ub.keepersChair.isAtChair());
+            if ("skyblockBiteTell" === bb) return void tb.receiveTell(ab);
+            if ("skyblockSmuggler" === bb) return void Yb.smuggler.aj(ab);
+            if ("skyblockKeepersChair" === bb) return Yb.keepersChair.aj(ab), void Yb.lampLight.setAtChair(Yb.keepersChair.isAtChair());
             if ("skyblockLampLight" === bb) {
-              const bb = cb;
-              var Wb;
-              if (Ub.lampLight.Km(bb), bb.lampLightReleasing) Lb ??= (0, hb.s)({
+              const bb = ab;
+              var Mb;
+              if (Yb.lampLight.aj(bb), bb.lampLightReleasing) xb ??= (0, mb.u)({
                 id: "skyblockLampLightKeepCatches",
                 order: 7,
                 labelKey: "skyblockGame:lampLightKeepCatches",
@@ -10715,42 +10715,42 @@ export const modules = {
                   name: "Bucket"
                 },
                 onClick: () => {
-                  Ub.lampLight.setRelease(!1)
+                  Yb.lampLight.setRelease(!1)
                 }
               });
-              else null === (Wb = Lb) || void 0 === Wb || Wb(), Lb = void 0;
+              else null === (Mb = xb) || void 0 === Mb || Mb(), xb = void 0;
               return
             }
-            if ("skyblockRegulars" === bb) return void Ub.regulars.Km(cb);
-            if ("skyblockHiddenWaters" === bb) return void Ub.hiddenWaters.Km(cb);
-            if ("skyblockReachLog" === bb) return Ub.reachLog.Km(cb), void(Vb ??= (0, hb.s)({
+            if ("skyblockRegulars" === bb) return void Yb.regulars.aj(ab);
+            if ("skyblockHiddenWaters" === bb) return void Yb.hiddenWaters.aj(ab);
+            if ("skyblockReachLog" === bb) return Yb.reachLog.aj(ab), void(zb ??= (0, mb.u)({
               id: "skyblockReachLog",
               order: 6,
               labelKey: "skyblockGame:reachLogTitle",
               icon: {
                 kind: "item",
-                name: Ek
+                name: dA
               },
-              onClick: Ub.reachLog.ask
+              onClick: Yb.reachLog.ask
             }));
             if ("skyblockBurrowDoor" === bb) {
-              for (const [bb, sb, kb, Wb] of cb) Db.Tu(bb, sb, kb, Wb);
+              for (const [bb, Ub, Ab, Mb] of ab) Fb.Qp(bb, Ub, Ab, Mb);
               return
             }
-            if ("skyblockHud" === bb) Ub.receiveHud(cb);
-            else if ("skyblockMap" === bb) Ub.map.Km(cb);
-            else if (bb === ob.f) Ub.skills.Km(cb);
-            else if (bb === yb && "dialogue" === cb.kind) Ub.dialogue.Km(cb);
-            else if (bb === yb) Ub.quests.Km(cb);
-            else if ("skyblockDungeons" === bb) Ub.dungeons.Km(cb);
-            else if ("sbCollections" === bb) Ub.collections.Km(cb);
-            else if ("skyblockQuestGraph" === bb) Ub.questGraph.Km(cb);
+            if ("skyblockHud" === bb) Yb.receiveHud(ab);
+            else if ("skyblockMap" === bb) Yb.map.aj(ab);
+            else if (bb === gb.g) Yb.skills.aj(ab);
+            else if (bb === Ib && "dialogue" === ab.kind) Yb.dialogue.aj(ab);
+            else if (bb === Ib) Yb.quests.aj(ab);
+            else if ("skyblockDungeons" === bb) Yb.dungeons.aj(ab);
+            else if ("sbCollections" === bb) Yb.collections.aj(ab);
+            else if ("skyblockQuestGraph" === bb) Yb.questGraph.aj(ab);
             else {
               if ("skyblockAutographs" !== bb) return;
-              Ub.autographs.Km(cb)
+              Yb.autographs.aj(ab)
             }
-            if (!Hb && Ub.map.getSnapshot().enabled) {
-              const bb = (0, hb.s)({
+            if (!eb && Yb.map.getSnapshot().enabled) {
+              const bb = (0, mb.u)({
                   id: "skyblockMap",
                   order: 3,
                   labelKey: "skyblockGame:map",
@@ -10759,13 +10759,13 @@ export const modules = {
                     name: "Compass"
                   },
                   panel: !0,
-                  onClick: Ub.map.show
+                  onClick: Yb.map.show
                 }),
-                cb = (0, Sb.p)(Ub.map.show);
-              Hb = () => {
-                bb(), cb()
+                ab = (0, Cb.s)(Yb.map.show);
+              eb = () => {
+                bb(), ab()
               }
-            }!fb && Ub.skills.getSnapshot().enabled && (fb = (0, hb.s)({
+            }!vb && Yb.skills.getSnapshot().enabled && (vb = (0, mb.u)({
               id: "skyblockSkills",
               order: 0,
               labelKey: "skyblockGame:skills",
@@ -10774,8 +10774,8 @@ export const modules = {
                 name: "Iron Sword"
               },
               panel: !0,
-              onClick: Ub.skills.show
-            })), !lb && Ub.collections.getSnapshot().enabled && (lb = (0, hb.s)({
+              onClick: Yb.skills.show
+            })), !Rb && Yb.collections.getSnapshot().enabled && (Rb = (0, mb.u)({
               id: "skyblockCollections",
               order: 2.5,
               labelKey: "skyblockGame:collections",
@@ -10784,8 +10784,8 @@ export const modules = {
                 name: "Coal"
               },
               panel: !0,
-              onClick: Ub.collections.show
-            })), !Mb && Ub.quests.getSnapshot().enabled && (Mb = (0, hb.s)({
+              onClick: Yb.collections.show
+            })), !Lb && Yb.quests.getSnapshot().enabled && (Lb = (0, mb.u)({
               id: "skyblockQuests",
               order: 1,
               labelKey: "skyblockGame:quests",
@@ -10794,8 +10794,8 @@ export const modules = {
                 name: "Book"
               },
               panel: !0,
-              onClick: Ub.quests.show
-            })), !gb && Ub.autographs.getSnapshot().enabled && (gb = (0, hb.s)({
+              onClick: Yb.quests.show
+            })), !Nb && Yb.autographs.getSnapshot().enabled && (Nb = (0, mb.u)({
               id: "skyblockAutographs",
               order: 5,
               labelKey: "skyblockGame:autographs",
@@ -10804,53 +10804,53 @@ export const modules = {
                 name: "Name Tag"
               },
               panel: !0,
-              onClick: Ub.autographs.show
+              onClick: Yb.autographs.show
             }));
-            const ab = Ub.dungeons.getSnapshot().enabled;
-            var Tb;
-            (fb || Mb || ab) && mb !== ab && (mb = ab, null === (Tb = nb) || void 0 === Tb || Tb(), nb = (0, hb.s)({
+            const Tb = Yb.dungeons.getSnapshot().enabled;
+            var Eb;
+            (vb || Lb || Tb) && jb !== Tb && (jb = Tb, null === (Eb = Xb) || void 0 === Eb || Eb(), Xb = (0, mb.u)({
               id: "skyblockDungeons",
               order: 2,
               labelKey: "skyblockGame:dungeons",
               icon: {
                 kind: "image",
-                src: Ec
+                src: ha
               },
-              disabled: !ab,
+              disabled: !Tb,
               panel: !0,
-              onClick: Ub.dungeons.show
+              onClick: Yb.dungeons.show
             }));
-            Ib || (Ib = (0, Sb.s)((0, Jb.createElement)(PU, {
-              controller: Ub
+            Bb || (Bb = (0, Cb.w)((0, pb.createElement)(WY, {
+              controller: Yb
             }), {
-              content: (0, Jb.createElement)(DU, {
-                controller: Ub
+              content: (0, pb.createElement)(HY, {
+                controller: Yb
               }),
-              onClose: Ub.close
+              onClose: Yb.close
             }))
           },
-          aX: () => {
+          qL: () => {
             var bb;
-            for (const cb of xb.values()) cb.aX();
-            Pb.aX(Db), Fb.aX(), null === (bb = Eb) || void 0 === bb || bb.aX(), Ub.skills.aX(), Ub.quests.aX(), Ub.dailyReward.aX(), Ub.mailbox.aX(), Ub.map.aX()
+            for (const ab of Jb.values()) ab.qL();
+            db.qL(Fb), cb.qL(), null === (bb = hb) || void 0 === bb || bb.qL(), Yb.skills.qL(), Yb.quests.qL(), Yb.dailyReward.qL(), Yb.mailbox.qL(), Yb.map.qL()
           }
         }
       }
   },
-  36039: (bb, cb, sb) => {
-    sb.d(cb, {
-      c: () => Wb,
-      f: () => kb
+  35822: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      e: () => Mb,
+      g: () => Ab
     });
-    const kb = "skyblockSkills",
-      Wb = "skills_test_gym"
+    const Ab = "skyblockSkills",
+      Mb = "skills_test_gym"
   },
-  8947: (bb, cb, sb) => {
-    sb.d(cb, {
-      e: () => Wb,
-      g: () => Tb
+  8930: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      d: () => Mb,
+      g: () => Eb
     });
-    const kb = [{
+    const Ab = [{
       threshold: 10n ** 180n,
       suffix: "NoQig"
     }, {
@@ -11032,162 +11032,162 @@ export const modules = {
       suffix: "K"
     }];
 
-    function Wb(bb) {
-      let cb, sb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
+    function Mb(bb) {
+      let ab, Ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
       if ("number" === typeof bb) {
         if (!Number.isFinite(bb)) return "0";
         if (Math.abs(bb) < 100) {
-          const cb = bb < 0 ? "-" : "",
-            sb = Math.abs(bb);
-          return sb >= 10 ? `${cb}${sb.toFixed(1).replace(/\.0$/,"")}` : `${cb}${sb.toFixed(2).replace(/\.?0+$/,"")}`
+          const ab = bb < 0 ? "-" : "",
+            Ub = Math.abs(bb);
+          return Ub >= 10 ? `${ab}${Ub.toFixed(1).replace(/\.0$/,"")}` : `${ab}${Ub.toFixed(2).replace(/\.?0+$/,"")}`
         }
-        cb = BigInt(Math.floor(bb))
-      } else cb = bb;
-      const Wb = cb < 0n ? -cb : cb,
-        ab = cb < 0n ? "-" : "",
-        Tb = Wb.toString();
-      if (Tb.length <= sb) return `${ab}${Tb}`;
-      const Ub = 3 * Math.floor((Tb.length - 1) / 3);
-      if (Ub < 3) return `${ab}${Tb}`;
-      if (Ub > 3 * kb.length) {
-        const bb = Tb[0],
-          cb = Tb.slice(1, 3).replace(/0+$/, "");
-        return `${ab}${cb?`${bb}.${cb}`:bb}e${Tb.length-1}`
+        ab = BigInt(Math.floor(bb))
+      } else ab = bb;
+      const Mb = ab < 0n ? -ab : ab,
+        Tb = ab < 0n ? "-" : "",
+        Eb = Mb.toString();
+      if (Eb.length <= Ub) return `${Tb}${Eb}`;
+      const Yb = 3 * Math.floor((Eb.length - 1) / 3);
+      if (Yb < 3) return `${Tb}${Eb}`;
+      if (Yb > 3 * Ab.length) {
+        const bb = Eb[0],
+          ab = Eb.slice(1, 3).replace(/0+$/, "");
+        return `${Tb}${ab?`${bb}.${ab}`:bb}e${Eb.length-1}`
       }
       const {
-        threshold: Ib,
-        suffix: Hb
-      } = kb[kb.length - Ub / 3], fb = Wb / Ib, Mb = Number(1000n * (Wb % Ib) / Ib), Xb = Number(fb) + Mb / 1e3;
-      let nb;
-      return nb = Xb >= 100 ? Math.floor(Xb).toString() : Xb >= 10 ? Xb.toFixed(1).replace(/\.0$/, "") : Xb.toFixed(2).replace(/\.?0+$/, ""), `${ab}${nb}${Hb}`
+        threshold: Bb,
+        suffix: eb
+      } = Ab[Ab.length - Yb / 3], vb = Mb / Bb, Lb = Number(1000n * (Mb % Bb) / Bb), Pb = Number(vb) + Lb / 1e3;
+      let Xb;
+      return Xb = Pb >= 100 ? Math.floor(Pb).toString() : Pb >= 10 ? Pb.toFixed(1).replace(/\.0$/, "") : Pb.toFixed(2).replace(/\.?0+$/, ""), `${Tb}${Xb}${eb}`
     }
-    const ab = kb.map((bb => {
+    const Tb = Ab.map((bb => {
       let {
-        threshold: cb,
-        suffix: sb
+        threshold: ab,
+        suffix: Ub
       } = bb;
       return {
-        threshold: Number(cb),
-        suffix: sb
+        threshold: Number(ab),
+        suffix: Ub
       }
     })).filter((bb => {
       let {
-        threshold: cb
+        threshold: ab
       } = bb;
-      return Number.isFinite(cb)
+      return Number.isFinite(ab)
     }));
 
-    function Tb(bb) {
-      const cb = Math.abs(bb),
-        sb = bb < 0 ? "-" : "";
+    function Eb(bb) {
+      const ab = Math.abs(bb),
+        Ub = bb < 0 ? "-" : "";
       for (const {
-          threshold: kb,
-          suffix: Wb
+          threshold: Ab,
+          suffix: Mb
         }
-        of ab)
-        if (cb >= kb) {
-          const bb = cb / kb;
-          if (bb >= 1e3) return `${sb}${cb.toExponential(2).replace("e+","e")}`;
-          let ab;
-          return ab = bb >= 100 ? Math.floor(bb).toString() : bb >= 10 ? bb.toFixed(1).replace(/\.0$/, "") : bb.toFixed(2).replace(/\.?0+$/, ""), `${sb}${ab}${Wb}`
-        } return `${sb}${cb}`
+        of Tb)
+        if (ab >= Ab) {
+          const bb = ab / Ab;
+          if (bb >= 1e3) return `${Ub}${ab.toExponential(2).replace("e+","e")}`;
+          let Tb;
+          return Tb = bb >= 100 ? Math.floor(bb).toString() : bb >= 10 ? bb.toFixed(1).replace(/\.0$/, "") : bb.toFixed(2).replace(/\.?0+$/, ""), `${Ub}${Tb}${Mb}`
+        } return `${Ub}${ab}`
     }
   },
-  38155: (bb, cb, sb) => {
-    var kb = {
-      "./combat_1.png": 38164,
-      "./dungeon_crumbling_crypt.png": 38173,
-      "./dungeon_frozen_hollow.png": 38182,
-      "./dungeon_wildwood_grove.png": 38184,
-      "./dungeons.png": 38191,
-      "./farming_1.png": 38193,
-      "./fishing_1.png": 38198,
-      "./hub.png": 38206,
-      "./island.png": 38212,
-      "./mining_1.png": 38218,
-      "./mining_1_bridge.png": 38227,
-      "./mining_1_gallery.png": 38229,
-      "./mining_1_hollow.png": 38233,
-      "./mining_1_village.png": 38237
+  37878: (bb, ab, Ub) => {
+    var Ab = {
+      "./combat_1.png": 37882,
+      "./dungeon_crumbling_crypt.png": 37891,
+      "./dungeon_frozen_hollow.png": 37893,
+      "./dungeon_wildwood_grove.png": 37896,
+      "./dungeons.png": 37898,
+      "./farming_1.png": 37905,
+      "./fishing_1.png": 37908,
+      "./hub.png": 37911,
+      "./island.png": 37914,
+      "./mining_1.png": 37918,
+      "./mining_1_bridge.png": 37920,
+      "./mining_1_gallery.png": 37927,
+      "./mining_1_hollow.png": 37934,
+      "./mining_1_village.png": 37938
     };
 
-    function Wb(bb) {
-      var cb = ab(bb);
-      return sb(cb)
+    function Mb(bb) {
+      var ab = Tb(bb);
+      return Ub(ab)
     }
 
-    function ab(bb) {
-      if (!sb.o(kb, bb)) {
-        var cb = new Error("Cannot find module '" + bb + "'");
-        throw cb.code = "MODULE_NOT_FOUND", cb
+    function Tb(bb) {
+      if (!Ub.o(Ab, bb)) {
+        var ab = new Error("Cannot find module '" + bb + "'");
+        throw ab.code = "MODULE_NOT_FOUND", ab
       }
-      return kb[bb]
+      return Ab[bb]
     }
-    Wb.keys = function() {
-      return Object.keys(kb)
-    }, Wb.resolve = ab, bb.exports = Wb, Wb.id = 38155
+    Mb.keys = function() {
+      return Object.keys(Ab)
+    }, Mb.resolve = Tb, bb.exports = Mb, Mb.id = 37878
   },
-  38164: (bb, cb, sb) => {
-    bb.exports = sb.p + "static/media/combat_1.72ac23641446e4f80923.png"
+  37882: (bb, ab, Ub) => {
+    bb.exports = Ub.p + "static/media/combat_1.72ac23641446e4f80923.png"
   },
-  38173: (bb, cb, sb) => {
-    bb.exports = sb.p + "static/media/dungeon_crumbling_crypt.39389aef74bd36e64180.png"
+  37891: (bb, ab, Ub) => {
+    bb.exports = Ub.p + "static/media/dungeon_crumbling_crypt.39389aef74bd36e64180.png"
   },
-  38182: (bb, cb, sb) => {
-    bb.exports = sb.p + "static/media/dungeon_frozen_hollow.042bf06d2cfd2c68c7e6.png"
+  37893: (bb, ab, Ub) => {
+    bb.exports = Ub.p + "static/media/dungeon_frozen_hollow.042bf06d2cfd2c68c7e6.png"
   },
-  38184: (bb, cb, sb) => {
-    bb.exports = sb.p + "static/media/dungeon_wildwood_grove.d5115bf7a4d3fc811ff4.png"
+  37896: (bb, ab, Ub) => {
+    bb.exports = Ub.p + "static/media/dungeon_wildwood_grove.d5115bf7a4d3fc811ff4.png"
   },
-  38191: (bb, cb, sb) => {
-    bb.exports = sb.p + "static/media/dungeons.6836b40c30687755a545.png"
+  37898: (bb, ab, Ub) => {
+    bb.exports = Ub.p + "static/media/dungeons.6836b40c30687755a545.png"
   },
-  38193: (bb, cb, sb) => {
-    bb.exports = sb.p + "static/media/farming_1.08302e28e41bf98474fe.png"
+  37905: (bb, ab, Ub) => {
+    bb.exports = Ub.p + "static/media/farming_1.08302e28e41bf98474fe.png"
   },
-  38198: (bb, cb, sb) => {
-    bb.exports = sb.p + "static/media/fishing_1.c63e97744abce5bb9af7.png"
+  37908: (bb, ab, Ub) => {
+    bb.exports = Ub.p + "static/media/fishing_1.c63e97744abce5bb9af7.png"
   },
-  38206: (bb, cb, sb) => {
-    bb.exports = sb.p + "static/media/hub.8b20a64678134496251d.png"
+  37911: (bb, ab, Ub) => {
+    bb.exports = Ub.p + "static/media/hub.8b20a64678134496251d.png"
   },
-  38212: (bb, cb, sb) => {
-    bb.exports = sb.p + "static/media/island.113e20c7bd7db93fe1ce.png"
+  37914: (bb, ab, Ub) => {
+    bb.exports = Ub.p + "static/media/island.113e20c7bd7db93fe1ce.png"
   },
-  38218: (bb, cb, sb) => {
-    bb.exports = sb.p + "static/media/mining_1.68cac4bdadc5ef809ae5.png"
+  37918: (bb, ab, Ub) => {
+    bb.exports = Ub.p + "static/media/mining_1.68cac4bdadc5ef809ae5.png"
   },
-  38227: (bb, cb, sb) => {
-    bb.exports = sb.p + "static/media/mining_1_bridge.56ff82ba845db0b52726.png"
+  37920: (bb, ab, Ub) => {
+    bb.exports = Ub.p + "static/media/mining_1_bridge.56ff82ba845db0b52726.png"
   },
-  38229: (bb, cb, sb) => {
-    bb.exports = sb.p + "static/media/mining_1_gallery.4e799e6329dbc66249ce.png"
+  37927: (bb, ab, Ub) => {
+    bb.exports = Ub.p + "static/media/mining_1_gallery.4e799e6329dbc66249ce.png"
   },
-  38233: (bb, cb, sb) => {
-    bb.exports = sb.p + "static/media/mining_1_hollow.82ed2e9c753519918230.png"
+  37934: (bb, ab, Ub) => {
+    bb.exports = Ub.p + "static/media/mining_1_hollow.82ed2e9c753519918230.png"
   },
-  38237: (bb, cb, sb) => {
-    bb.exports = sb.p + "static/media/mining_1_village.c2a625c1c4541a1fbe65.png"
+  37938: (bb, ab, Ub) => {
+    bb.exports = Ub.p + "static/media/mining_1_village.c2a625c1c4541a1fbe65.png"
   },
-  18175: bb => {
+  18102: bb => {
     bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAFT2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS41LjAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICAgeG1sbnM6ZXhpZj0iaHR0cDovL25zLmFkb2JlLmNvbS9leGlmLzEuMC8iCiAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyIKICAgIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIKICAgIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgZXhpZjpQaXhlbFhEaW1lbnNpb249IjEwIgogICBleGlmOlBpeGVsWURpbWVuc2lvbj0iMTAiCiAgIGV4aWY6Q29sb3JTcGFjZT0iMSIKICAgdGlmZjpJbWFnZVdpZHRoPSIxMCIKICAgdGlmZjpJbWFnZUxlbmd0aD0iMTAiCiAgIHRpZmY6UmVzb2x1dGlvblVuaXQ9IjIiCiAgIHRpZmY6WFJlc29sdXRpb249IjcyLzEiCiAgIHRpZmY6WVJlc29sdXRpb249IjcyLzEiCiAgIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiCiAgIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIKICAgeG1wOk1vZGlmeURhdGU9IjIwMjUtMDktMTFUMDY6MDg6MTMtMDQ6MDAiCiAgIHhtcDpNZXRhZGF0YURhdGU9IjIwMjUtMDktMTFUMDY6MDg6MTMtMDQ6MDAiPgogICA8ZGM6dGl0bGU+CiAgICA8cmRmOkFsdD4KICAgICA8cmRmOmxpIHhtbDpsYW5nPSJ4LWRlZmF1bHQiPlBsYW5rczwvcmRmOmxpPgogICAgPC9yZGY6QWx0PgogICA8L2RjOnRpdGxlPgogICA8eG1wTU06SGlzdG9yeT4KICAgIDxyZGY6U2VxPgogICAgIDxyZGY6bGkKICAgICAgc3RFdnQ6YWN0aW9uPSJwcm9kdWNlZCIKICAgICAgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWZmaW5pdHkgRGVzaWduZXIgMS4xMC42IgogICAgICBzdEV2dDp3aGVuPSIyMDI1LTA5LTExVDA2OjA4OjEzLTA0OjAwIi8+CiAgICA8L3JkZjpTZXE+CiAgIDwveG1wTU06SGlzdG9yeT4KICA8L3JkZjpEZXNjcmlwdGlvbj4KIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+Cjw/eHBhY2tldCBlbmQ9InIiPz5RDOytAAABgWlDQ1BzUkdCIElFQzYxOTY2LTIuMQAAKJF1kbtLA0EQhz9PxTcRtLAQDKJWKlEhaGOR4AvUIp7gq0kul0RI4nEXkWAr2AoKoo2vQv8CbQVrQVAUQay1VbTRcM7lAhExs8zOt7/dGXZnQVGTWsqq8EEqnTFDYwHv3PyCt+qVGuqoRaEtrFnG1MyoSkn7vKfMibc9Tq3S5/61uqhuaVBWLTysGWZGeFx4ci1jOLwj3KwlwlHhM+FuUy4ofOfoEZdfHI67/O2wqYaCoDQKe+O/OPKLtYSZEpaX05FKrmqF+zgvqdfTszMS28VbsQgxRgAvE4wQxE8fQzL76aGfXllRIt+Xz59mRXI1mQ2ymCwTJ0GGblFXpbouMSa6LiNJ1un/375asYF+t3p9ACqfbfu9E6q2Ibdl219Htp07hvInuEwX81cOYfBD9K2i1nEAng04vypqkV242ISWRyNshvNSubgSi8HbKTTMQ9MN1C66PSvsc/IA6rp81TXs7UOXnPcs/QAlUWfIbV2y+QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAG9JREFUGJVjYKAQ/IdiOGDEpqh6jiYDAwMDQ2vKdbgaJnzG5nSqwEzHUPj/1WJThpZPDxg+vv2N212vFpv+/9/H+f9yFi/MjXB3wtz4/38fJwMDAwPDlTssDLrTPmO4nwXGuHIHwsSmCMVELGLkAQBi0iUZsdoC/wAAAABJRU5ErkJggg=="
   },
-  20313: bb => {
+  20197: bb => {
     bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAABgWlDQ1BzUkdCIElFQzYxOTY2LTIuMQAAKJF1kc8rRFEUxz9miMYIsbCweGlYDflREymLmRgKizHKYPPmmTejZsbrvZFkq2wVJTZ+LfgL2CprpYiUbFkTG/ScZ6Zmkjm3c8/nfu89p3vPBVc0rWWsym7IZHNmJBxUZmKzSvUzNbTSyCAeVbOMiamRKGXt444KJ950OrXKn/vXahcSlgYVNcJDmmHmhEeFx1dyhsPbws1aSl0QPhX2m3JB4VtHj+f5xeFknr8cNqORELgahJVkCcdLWEuZGWF5Ob5Melkr3Md5iTeRnZ6S2CbeikWEMEEUxhgmRIAeBmQO0EkvXbKiTH73b/4kS5KryWywiskiSVLk8Iu6LNUTEnXREzLSrDr9/9tXS+/rzVf3BqHqybbf2qF6C743bfvz0La/j8D9CBfZYv7SAfS/i75Z1Hz7UL8OZ5dFLb4D5xvQ8mCopvorucVdug6vJ1AXg6Zr8Mzle1bY5/geomvyVVewuwcdcr5+/gejEmgBy3n7uAAAAGRJREFUGJWVkDEOgCAMRZ+Eu5iQeBtu6MpRnNkYuUZhULQwKP7lN+n7bVOY1HJ5+eJsq8q+AiA5ARCDALAdpxsdk5yIQYhBcL5rPWCDmka4j73oBscJzptug9UpDWsIfrxn9kQqJZUnE6phAjUAAAAASUVORK5CYII="
   },
-  22716: bb => {
+  22580: bb => {
     bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAGtJREFUGJVjYKAC+A/FDAwMDAxMuBR9fr6D4esduAasCv9/fr6D4cX7yyiC6Ar/f36+g4GBgYFBQlAXp0K4InTTGBgYGBjRrYOZxPTVg4FbBUUNROHXO6iYgYHhv3eYEHafImMXfz6siggCADC+M1RlDaxOAAAAAElFTkSuQmCC"
   },
-  24310: bb => {
+  24136: bb => {
     bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAE9JREFUGJVjYCASMKLx/+OSR1b4/z9PMqqqL3OxGcbwHxl3MXj9/8+T/B+LLQgNNVHm/6E24FT4f2qRG9xUXAqRFTHgUoiuCNnNWD1COQAAFWcvZJ927BwAAAAASUVORK5CYII="
   },
-  26032: bb => {
+  25798: bb => {
     bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAH1JREFUGJVjYKAC+A/FDAwMDAxMuBSdyDdkWLzBGKYBq8L/J+wNGR4se4IiiK7w/wl7QwYGBgYGBS0ZnArhih5cQzUNWeH/E/mGcAUKWjIMtwuZGGIDzjIwMDAwwgkGBob/UIfDQWzAWQbvMCHGraveYXoCGbv482HxJxEAAJssJtLET2YfAAAAAElFTkSuQmCC"
   },
-  26052: bb => {
+  25812: bb => {
     bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAItJREFUGJVjYKAA/Ifh3nJb/Arv7E79X+Mp+p+BgeH/1EYX7Ir299n8v7M79f/+PhuYyQwMDAwMTOgqZXU1GR5fvs4gq6vJcGd3KswpDCzoCmGKHl++zrB3901UybBACwYGBob/NZ6icLfBMFSOgRHJbQwMDAwMjkVHGMICLRiRDVq1/gTCE+gmkA0A4Aw5D/wQUU0AAAAASUVORK5CYII="
   },
-  38146: bb => {
+  37873: bb => {
     bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAYElEQVR4nGNgIBIwovH/45JnRFaUGN+Comr+whq4GiZ0RVycnGAMAlAxsC0sMN2fvn9DodEBzEQGdUV5hvNnV4JpGJuPkwtTIQh4umZhZWMonDqjGCsbHcCCBkQjs0kDAPeaHpfX1eroAAAAAElFTkSuQmCC"
   }
 };

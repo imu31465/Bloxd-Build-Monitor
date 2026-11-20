@@ -1,30 +1,30 @@
 export const id = 73;
 export const ids = [73];
 export const modules = {
-  4418: (bb, cb, sb) => {
-    sb.d(cb, {
-      d: () => fb
+  4368: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      b: () => vb
     });
-    var kb = sb(19),
-      Wb = sb(26),
-      ab = sb(1287),
-      Tb = sb(2680);
-    const Ub = 3e4,
-      Ib = 1e3;
+    var Ab = Ub(19),
+      Mb = Ub(22),
+      Tb = Ub(1216),
+      Eb = Ub(2621);
+    const Yb = 3e4,
+      Bb = 1e3;
 
-    function Hb() {
-      return "visible" === document.visibilityState && "inGame" === kb.d.get("gameState") && (0, ab.r)()
+    function eb() {
+      return "visible" === document.visibilityState && "inGame" === Ab.c.get("gameState") && (0, Tb.i)()
     }
 
-    function fb(bb, cb) {
-      (0, Tb.s)() || function(bb, cb, sb) {
-        let kb = 0;
-        const Wb = setInterval((() => {
-          cb() && (kb += Ib, kb >= bb && (clearInterval(Wb), sb()))
-        }), Ib)
-      }(Ub, Hb, (() => {
-        cb().then((() => {
-          bb(`saved for the player after ${Ub/1e3} s of play`), (0, Tb.B)(), Wb.j.QQ("chat", {
+    function vb(bb, ab) {
+      (0, Eb.u)() || function(bb, ab, Ub) {
+        let Ab = 0;
+        const Mb = setInterval((() => {
+          ab() && (Ab += Bb, Ab >= bb && (clearInterval(Mb), Ub()))
+        }), Bb)
+      }(Yb, eb, (() => {
+        ab().then((() => {
+          bb(`saved for the player after ${Yb/1e3} s of play`), (0, Eb.C)(), Mb.m.IR("chat", {
             content: [{
               str: "Saved a debug file to your downloads: please send it to us with a screenshot of the game.",
               style: {
@@ -36,155 +36,155 @@ export const modules = {
       }))
     }
   },
-  8805: (bb, cb, sb) => {
-    function kb(bb, cb) {
-      return 0 === bb.length ? 0 : bb[Math.min(bb.length - 1, Math.floor(cb * bb.length))]
+  8779: (bb, ab, Ub) => {
+    function Ab(bb, ab) {
+      return 0 === bb.length ? 0 : bb[Math.min(bb.length - 1, Math.floor(ab * bb.length))]
     }
-    sb.d(cb, {
-      d: () => kb
+    Ub.d(ab, {
+      d: () => Ab
     })
   },
-  37532: (bb, cb, sb) => {
-    sb.d(cb, {
-      b: () => Hb,
-      f: () => fb,
-      g: () => Vb,
-      h: () => Nb,
-      l: () => Cb
+  37290: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      b: () => eb,
+      c: () => vb,
+      f: () => zb,
+      i: () => Db,
+      k: () => Zb
     });
-    var kb = sb(4418),
-      Wb = sb(8805),
-      ab = sb(2680);
-    const Tb = 20,
-      Ub = ["totalMs", "slotMs", "workerMs", "applyMs", "ahead", "inFlight", "GM", "jobMs"];
+    var Ab = Ub(4368),
+      Mb = Ub(8779),
+      Tb = Ub(2621);
+    const Eb = 20,
+      Yb = ["totalMs", "slotMs", "workerMs", "applyMs", "ahead", "inFlight", "PL", "jobMs"];
 
-    function Ib(bb) {
-      return [...bb].sort(((bb, cb) => bb - cb))
+    function Bb(bb) {
+      return [...bb].sort(((bb, ab) => bb - ab))
     }
-    const Hb = [];
+    const eb = [];
 
-    function fb(bb, cb, sb) {
-      return `${bb},${cb},${sb}`
+    function vb(bb, ab, Ub) {
+      return `${bb},${ab},${Ub}`
     }
-    class Mb {
+    class Lb {
       constructor() {
         this.pending = new Map, this.jobs = new Map, this.edits = [], this.nextEdit = 0, this.reported = 0, this.windowStart = performance.now(), this.frames = 0, this.lastFrameAt = 0, this.maxFrameMs = 0, this.jobsSent = 0, this.maxAhead = 0, this.maxCapacity = 0, this.roundTrips = [], this.windowEdits = [], this.outliers = 0, this.gaveUp = 0
       }
-      edit(bb, cb) {
-        var sb;
-        const kb = null !== (sb = this.pending.get(bb)) && void 0 !== sb ? sb : [];
-        kb.push({
-          editAt: cb,
+      edit(bb, ab) {
+        var Ub;
+        const Ab = null !== (Ub = this.pending.get(bb)) && void 0 !== Ub ? Ub : [];
+        Ab.push({
+          editAt: ab,
           meshJobId: 0
-        }), this.pending.set(bb, kb)
+        }), this.pending.set(bb, Ab)
       }
       frame(bb) {
         this.lastFrameAt > 0 && (this.maxFrameMs = Math.max(this.maxFrameMs, bb - this.lastFrameAt)), this.lastFrameAt = bb, this.frames++, bb - this.windowStart >= 1e3 && this.summarise(bb)
       }
-      sent(bb, cb, sb, kb, Wb, ab, Tb) {
-        this.jobs.set(cb, {
-          sentAt: Tb,
+      sent(bb, ab, Ub, Ab, Mb, Tb, Eb) {
+        this.jobs.set(ab, {
+          sentAt: Eb,
           receivedAt: 0,
-          ahead: sb,
-          inFlight: kb,
-          GM: Wb,
+          ahead: Ub,
+          inFlight: Ab,
+          PL: Mb,
           jobMs: 0
-        }), this.jobsSent++, this.maxAhead = Math.max(this.maxAhead, sb), this.maxCapacity = Math.max(this.maxCapacity, Wb);
-        for (const Ib of null !== (Ub = this.pending.get(bb)) && void 0 !== Ub ? Ub : []) {
-          var Ub;
-          ab.includes(Ib.meshJobId) || (Ib.meshJobId = cb)
+        }), this.jobsSent++, this.maxAhead = Math.max(this.maxAhead, Ub), this.maxCapacity = Math.max(this.maxCapacity, Mb);
+        for (const Bb of null !== (Yb = this.pending.get(bb)) && void 0 !== Yb ? Yb : []) {
+          var Yb;
+          Tb.includes(Bb.meshJobId) || (Bb.meshJobId = ab)
         }
       }
-      received(bb, cb, sb) {
-        const kb = this.jobs.get(bb);
-        void 0 !== kb && (this.roundTrips.push(sb - kb.sentAt), kb.receivedAt = sb, kb.jobMs = cb)
+      received(bb, ab, Ub) {
+        const Ab = this.jobs.get(bb);
+        void 0 !== Ab && (this.roundTrips.push(Ub - Ab.sentAt), Ab.receivedAt = Ub, Ab.jobMs = ab)
       }
       failed(bb) {
         this.jobs.delete(bb)
       }
-      reassign(bb, cb, sb) {
-        this.jobs.delete(cb);
-        for (const Wb of null !== (kb = this.pending.get(bb)) && void 0 !== kb ? kb : []) {
-          var kb;
-          Wb.meshJobId === cb && (Wb.meshJobId = sb)
+      reassign(bb, ab, Ub) {
+        this.jobs.delete(ab);
+        for (const Mb of null !== (Ab = this.pending.get(bb)) && void 0 !== Ab ? Ab : []) {
+          var Ab;
+          Mb.meshJobId === ab && (Mb.meshJobId = Ub)
         }
       }
-      applied(bb, cb, sb) {
-        const kb = this.jobs.get(cb);
-        this.jobs.delete(cb), void 0 !== kb && this.show(bb, kb, sb, (bb => bb.meshJobId === cb))
+      applied(bb, ab, Ub) {
+        const Ab = this.jobs.get(ab);
+        this.jobs.delete(ab), void 0 !== Ab && this.show(bb, Ab, Ub, (bb => bb.meshJobId === ab))
       }
-      emptied(bb, cb) {
-        const sb = {
-          sentAt: cb,
-          receivedAt: cb,
+      emptied(bb, ab) {
+        const Ub = {
+          sentAt: ab,
+          receivedAt: ab,
           ahead: 0,
           inFlight: 0,
-          GM: 0,
+          PL: 0,
           jobMs: 0
         };
-        this.show(bb, sb, cb, (() => !0))
+        this.show(bb, Ub, ab, (() => !0))
       }
-      show(bb, cb, sb, kb) {
-        const Wb = this.pending.get(bb);
-        if (!Wb) return;
-        const ab = Wb.filter((Wb => !kb(Wb) || (this.record(bb, Wb.editAt, cb, sb), !1)));
-        ab.length > 0 ? this.pending.set(bb, ab) : this.pending.delete(bb)
+      show(bb, ab, Ub, Ab) {
+        const Mb = this.pending.get(bb);
+        if (!Mb) return;
+        const Tb = Mb.filter((Mb => !Ab(Mb) || (this.record(bb, Mb.editAt, ab, Ub), !1)));
+        Tb.length > 0 ? this.pending.set(bb, Tb) : this.pending.delete(bb)
       }
-      lm(bb) {
-        this.reported += bb, this === nb && this.reported >= Tb && null !== mb && (mb(), mb = null)
+      GX(bb) {
+        this.reported += bb, this === Xb && this.reported >= Eb && null !== jb && (jb(), jb = null)
       }
-      record(bb, cb, sb, kb) {
-        const Wb = {
-          totalMs: kb - cb,
-          slotMs: sb.sentAt - cb,
-          workerMs: sb.receivedAt - sb.sentAt,
-          applyMs: kb - sb.receivedAt,
-          ahead: sb.ahead,
-          inFlight: sb.inFlight,
-          GM: sb.GM,
-          jobMs: sb.jobMs
+      record(bb, ab, Ub, Ab) {
+        const Mb = {
+          totalMs: Ab - ab,
+          slotMs: Ub.sentAt - ab,
+          workerMs: Ub.receivedAt - Ub.sentAt,
+          applyMs: Ab - Ub.receivedAt,
+          ahead: Ub.ahead,
+          inFlight: Ub.inFlight,
+          PL: Ub.PL,
+          jobMs: Ub.jobMs
         };
-        if (this.edits[this.nextEdit] = Wb, this.nextEdit = (this.nextEdit + 1) % 500, this.windowEdits.push(Wb.totalMs), this.lm(1), Wb.totalMs < 100 || ++this.outliers > 5) return;
-        const Tb = bb => Math.round(bb);
-        (0, ab.m)("remesh", `slow edit (${bb}) shown in ${Tb(Wb.totalMs)} ms: slot ${Tb(Wb.slotMs)}, worker ${Tb(Wb.workerMs)} (${Wb.ahead} ahead, ${Wb.inFlight}/${Wb.GM} in flight; job ${Tb(Wb.jobMs)}), apply ${Tb(Wb.applyMs)}`)
+        if (this.edits[this.nextEdit] = Mb, this.nextEdit = (this.nextEdit + 1) % 500, this.windowEdits.push(Mb.totalMs), this.GX(1), Mb.totalMs < 100 || ++this.outliers > 5) return;
+        const Eb = bb => Math.round(bb);
+        (0, Tb.n)("remesh", `slow edit (${bb}) shown in ${Eb(Mb.totalMs)} ms: slot ${Eb(Mb.slotMs)}, worker ${Eb(Mb.workerMs)} (${Mb.ahead} ahead, ${Mb.inFlight}/${Mb.PL} in flight; job ${Eb(Mb.jobMs)}), apply ${Eb(Mb.applyMs)}`)
       }
       summarise(bb) {
-        const cb = (bb - this.windowStart) / 1e3;
-        for (const [sb, kb] of this.pending) {
-          const cb = kb.filter((cb => bb - cb.editAt <= 1e4));
-          this.gaveUp += kb.length - cb.length, this.lm(kb.length - cb.length), cb.length > 0 ? this.pending.set(sb, cb) : this.pending.delete(sb)
+        const ab = (bb - this.windowStart) / 1e3;
+        for (const [Ub, Ab] of this.pending) {
+          const ab = Ab.filter((ab => bb - ab.editAt <= 1e4));
+          this.gaveUp += Ab.length - ab.length, this.GX(Ab.length - ab.length), ab.length > 0 ? this.pending.set(Ub, ab) : this.pending.delete(Ub)
         }
-        for (const [sb, kb] of this.jobs) bb - kb.sentAt > (kb.receivedAt > 0 ? 1e4 : 6e4) && this.jobs.delete(sb);
+        for (const [Ub, Ab] of this.jobs) bb - Ab.sentAt > (Ab.receivedAt > 0 ? 1e4 : 6e4) && this.jobs.delete(Ub);
         if (this.jobsSent > 0 || this.roundTrips.length > 0 || this.windowEdits.length > 0 || this.gaveUp > 0) {
-          const bb = Ib(this.roundTrips),
-            sb = Ib(this.windowEdits),
-            kb = Math.max(0, this.outliers - 5);
-          (0, ab.m)("remesh", `${Math.round(this.frames/cb)} fps (longest ${Math.round(this.maxFrameMs)} ms) | ${this.jobsSent} jobs sent, up to ${this.maxAhead} ahead on a worker, capacity ${this.maxCapacity} | round trip p50 ${Math.round((0,Wb.d)(bb,.5))} max ${Math.round((0,Wb.d)(bb,1))} ms | ${sb.length} edits shown, p50 ${Math.round((0,Wb.d)(sb,.5))} max ${Math.round((0,Wb.d)(sb,1))} ms${kb>0?`, ${kb} more slow`:""}${this.gaveUp>0?`, ${this.gaveUp} never shown`:""}`)
+          const bb = Bb(this.roundTrips),
+            Ub = Bb(this.windowEdits),
+            Ab = Math.max(0, this.outliers - 5);
+          (0, Tb.n)("remesh", `${Math.round(this.frames/ab)} fps (longest ${Math.round(this.maxFrameMs)} ms) | ${this.jobsSent} jobs sent, up to ${this.maxAhead} ahead on a worker, capacity ${this.maxCapacity} | round trip p50 ${Math.round((0,Mb.d)(bb,.5))} max ${Math.round((0,Mb.d)(bb,1))} ms | ${Ub.length} edits shown, p50 ${Math.round((0,Mb.d)(Ub,.5))} max ${Math.round((0,Mb.d)(Ub,1))} ms${Ab>0?`, ${Ab} more slow`:""}${this.gaveUp>0?`, ${this.gaveUp} never shown`:""}`)
         }
         this.windowStart = bb, this.frames = 0, this.maxFrameMs = 0, this.jobsSent = 0, this.maxAhead = 0, this.maxCapacity = 0, this.roundTrips = [], this.windowEdits = [], this.outliers = 0, this.gaveUp = 0
       }
       stats() {
-        const bb = Ub.map((bb => {
-          const cb = Ib(this.edits.map((cb => cb[bb])));
-          return `${bb}: p50 ${Math.round((0,Wb.d)(cb,.5))} p90 ${Math.round((0,Wb.d)(cb,.9))} max ${Math.round((0,Wb.d)(cb,1))}`
+        const bb = Yb.map((bb => {
+          const ab = Bb(this.edits.map((ab => ab[bb])));
+          return `${bb}: p50 ${Math.round((0,Mb.d)(ab,.5))} p90 ${Math.round((0,Mb.d)(ab,.9))} max ${Math.round((0,Mb.d)(ab,1))}`
         }));
         return [`${this.edits.length} edits`, ...bb].join("\n")
       }
       dump() {
-        const bb = this.edits.map((bb => Ub.map((cb => Math.round(10 * bb[cb]) / 10)).join(",")));
-        return [this.stats(), Ub.join(","), ...bb].join("\n")
+        const bb = this.edits.map((bb => Yb.map((ab => Math.round(10 * bb[ab]) / 10)).join(",")));
+        return [this.stats(), Yb.join(","), ...bb].join("\n")
       }
     }
-    class Xb {
-      constructor(bb, cb) {
-        this.log = bb, this.eX = cb
+    class Pb {
+      constructor(bb, ab) {
+        this.log = bb, this.VL = ab
       }
-      edit(bb, cb, sb) {
-        const [kb, Wb, ab] = this.eX.fX.Ekb(bb, cb, sb), Tb = this.eX.fX.Gl.Kl(kb, Wb, ab);
-        Tb && Tb.il && this.log.edit(fb(kb, Wb, ab), performance.now())
+      edit(bb, ab, Ub) {
+        const [Ab, Mb, Tb] = this.VL.lL.hAb(bb, ab, Ub), Eb = this.VL.lL.Jj.nj(Ab, Mb, Tb);
+        Eb && Eb.Vj && this.log.edit(vb(Ab, Mb, Tb), performance.now())
       }
-      sent(bb, cb, sb, kb, Wb) {
-        this.log.sent(fb(bb.i, bb.j, bb.k), cb, sb, kb, Wb, Hb, performance.now())
+      sent(bb, ab, Ub, Ab, Mb) {
+        this.log.sent(vb(bb.i, bb.j, bb.k), ab, Ub, Ab, Mb, eb, performance.now())
       }
       received(bb) {
         this.log.received(bb.meshJobId, bb.jobMs, performance.now())
@@ -192,161 +192,161 @@ export const modules = {
       failed(bb) {
         this.log.failed(bb)
       }
-      applied(bb, cb) {
-        this.log.applied(fb(bb.i, bb.j, bb.k), cb, performance.now())
+      applied(bb, ab) {
+        this.log.applied(vb(bb.i, bb.j, bb.k), ab, performance.now())
       }
     }
-    let nb = null,
-      mb = null,
-      lb = !1,
-      Qb = null;
+    let Xb = null,
+      jb = null,
+      Rb = !1,
+      kb = null;
 
-    function eb() {
+    function yb() {
       return new Promise((bb => {
-        null !== nb && nb.reported >= Tb ? bb() : mb = bb
+        null !== Xb && Xb.reported >= Eb ? bb() : jb = bb
       }))
     }
 
-    function Cb() {
-      const bb = new Mb;
-      return nb = bb, (0, ab.k)("remesh", (() => bb.dump())), (0, ab.e)("remeshStats", (() => {
+    function Zb() {
+      const bb = new Lb;
+      return Xb = bb, (0, Tb.j)("remesh", (() => bb.dump())), (0, Tb.e)("remeshStats", (() => {
         console.log(bb.stats())
-      })), lb || (lb = !0, (0, kb.d)((bb => {
-        (0, ab.m)("remesh", bb)
-      }), eb)), bb
+      })), Rb || (Rb = !0, (0, Ab.b)((bb => {
+        (0, Tb.n)("remesh", bb)
+      }), yb)), bb
     }
 
-    function Nb(bb) {
-      const cb = Cb();
-      Qb = new Xb(cb, bb), bb.HV.meshProbe = Qb, bb.on("beforeRender", (() => {
-        cb.frame(performance.now())
+    function Db(bb) {
+      const ab = Zb();
+      kb = new Pb(ab, bb), bb.zD.meshProbe = kb, bb.on("beforeRender", (() => {
+        ab.frame(performance.now())
       }))
     }
 
-    function Vb(bb, cb, sb) {
-      var kb;
-      null === (kb = Qb) || void 0 === kb || kb.edit(bb, cb, sb)
+    function zb(bb, ab, Ub) {
+      var Ab;
+      null === (Ab = kb) || void 0 === Ab || Ab.edit(bb, ab, Ub)
     }
   },
-  37340: (bb, cb, sb) => {
-    function kb(bb) {
+  37092: (bb, ab, Ub) => {
+    function Ab(bb) {
       return "string" !== typeof bb || 2 !== bb.length && ":" !== bb[2] ? null : bb[0] + bb[1]
     }
-    sb.d(cb, {
-      b: () => Qb,
-      e: () => Nb,
-      f: () => Ub,
-      j: () => Tb,
-      k: () => ab,
-      m: () => Ib,
-      o: () => eb,
-      q: () => lb
+    Ub.d(ab, {
+      c: () => kb,
+      e: () => Db,
+      i: () => Yb,
+      m: () => Eb,
+      n: () => Tb,
+      q: () => Bb,
+      u: () => yb,
+      x: () => Rb
     });
-    const Wb = ["op:ytInitialPlayerResponse.adPlacements", "op:ytInitialPlayerResponse.playerAds", "op:ytInitialPlayerResponse.adSlots", "op:playerResponse.adPlacements", "op:playerResponse.playerAds", "op:playerResponse.adSlots"];
-
-    function ab(bb) {
-      if (function(bb) {
-          for (let cb = 0; cb < Wb.length; cb++)
-            if (bb === Wb[cb]) return !0;
-          return !1
-        }(bb)) return !1;
-      const cb = kb(bb);
-      return "op" === cb || "ep" === cb || "wi" === cb || "pp" === cb || "fp:call" === bb || "fp:t" === bb
-    }
+    const Mb = ["op:ytInitialPlayerResponse.adPlacements", "op:ytInitialPlayerResponse.playerAds", "op:ytInitialPlayerResponse.adSlots", "op:playerResponse.adPlacements", "op:playerResponse.playerAds", "op:playerResponse.adSlots"];
 
     function Tb(bb) {
-      return "fp" === kb(bb) && !ab(bb)
+      if (function(bb) {
+          for (let ab = 0; ab < Mb.length; ab++)
+            if (bb === Mb[ab]) return !0;
+          return !1
+        }(bb)) return !1;
+      const ab = Ab(bb);
+      return "op" === ab || "ep" === ab || "wi" === ab || "pp" === ab || "fp:call" === bb || "fp:t" === bb
     }
 
-    function Ub(bb) {
+    function Eb(bb) {
+      return "fp" === Ab(bb) && !Tb(bb)
+    }
+
+    function Yb(bb) {
       if ("string" !== typeof bb) return !1;
       return "o" === bb[0] && "p" === bb[1] && (2 === bb.length || ":" === bb[2]) || "fp:call" === bb || "2" === bb || "t" === bb || "a" === bb
     }
 
-    function Ib(bb, cb) {
-      return `~${function(bb){return bb.length<2?bb:":"===bb[1]?bb[0]:bb[0]+bb[1]}(cb)}~${bb}`
+    function Bb(bb, ab) {
+      return `~${function(bb){return bb.length<2?bb:":"===bb[1]?bb[0]:bb[0]+bb[1]}(ab)}~${bb}`
     }
-    const Hb = 200;
+    const eb = 200;
 
-    function fb(bb) {
-      let cb = bb.length - 1;
-      for (let sb = 0; sb < 2; sb++) {
-        const sb = cb;
-        for (; cb >= 0 && bb[cb] >= "0" && bb[cb] <= "9";) cb--;
-        if (cb < 0 || cb === sb || ":" !== bb[cb]) return -1;
-        cb--
+    function vb(bb) {
+      let ab = bb.length - 1;
+      for (let Ub = 0; Ub < 2; Ub++) {
+        const Ub = ab;
+        for (; ab >= 0 && bb[ab] >= "0" && bb[ab] <= "9";) ab--;
+        if (ab < 0 || ab === Ub || ":" !== bb[ab]) return -1;
+        ab--
       }
-      return cb + 1
+      return ab + 1
     }
 
-    function Mb(bb) {
-      return "unknown" === bb || fb(bb) >= 0
+    function Lb(bb) {
+      return "unknown" === bb || vb(bb) >= 0
     }
 
-    function Xb(bb, cb) {
-      return bb[cb] >= "\ud800" && bb[cb] <= "\udbff" && cb + 1 < bb.length && bb[cb + 1] >= "\udc00" && bb[cb + 1] <= "\udfff" ? 2 : 1
+    function Pb(bb, ab) {
+      return bb[ab] >= "\ud800" && bb[ab] <= "\udbff" && ab + 1 < bb.length && bb[ab + 1] >= "\udc00" && bb[ab + 1] <= "\udfff" ? 2 : 1
     }
 
-    function nb(bb, cb, sb) {
-      return 2 === sb ? 4 : bb[cb] <= "\x7f" ? 1 : bb[cb] <= "\u07ff" ? 2 : 3
+    function Xb(bb, ab, Ub) {
+      return 2 === Ub ? 4 : bb[ab] <= "\x7f" ? 1 : bb[ab] <= "\u07ff" ? 2 : 3
     }
 
-    function mb(bb, cb, sb) {
-      let kb = 0;
-      for (; kb < cb;) {
-        const cb = Xb(bb, kb),
-          Wb = nb(bb, kb, cb);
-        if (Wb > sb) break;
-        sb -= Wb, kb += cb
+    function jb(bb, ab, Ub) {
+      let Ab = 0;
+      for (; Ab < ab;) {
+        const ab = Pb(bb, Ab),
+          Mb = Xb(bb, Ab, ab);
+        if (Mb > Ub) break;
+        Ub -= Mb, Ab += ab
       }
-      return kb
+      return Ab
     }
 
-    function lb(bb) {
-      let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1 / 0;
-      if ("string" !== typeof bb || bb.length > Hb || !Mb(bb)) return "t";
-      let sb = 2;
-      for (let Ub = 0; Ub < bb.length;) {
-        const cb = Xb(bb, Ub);
-        sb += nb(bb, Ub, cb), Ub += cb
+    function Rb(bb) {
+      let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1 / 0;
+      if ("string" !== typeof bb || bb.length > eb || !Lb(bb)) return "t";
+      let Ub = 2;
+      for (let Yb = 0; Yb < bb.length;) {
+        const ab = Pb(bb, Yb);
+        Ub += Xb(bb, Yb, ab), Yb += ab
       }
-      if (sb <= cb) return `t ${bb}`;
-      const kb = fb(bb),
-        Wb = cb - 2 - (bb.length - kb);
-      if (Wb < 0) return "t";
-      const ab = mb(bb, kb, Wb);
-      let Tb = "t ";
-      for (let Ub = 0; Ub < ab; Ub++) Tb += bb[Ub];
-      for (let Ub = kb; Ub < bb.length; Ub++) Tb += bb[Ub];
-      return Tb
+      if (Ub <= ab) return `t ${bb}`;
+      const Ab = vb(bb),
+        Mb = ab - 2 - (bb.length - Ab);
+      if (Mb < 0) return "t";
+      const Tb = jb(bb, Ab, Mb);
+      let Eb = "t ";
+      for (let Yb = 0; Yb < Tb; Yb++) Eb += bb[Yb];
+      for (let Yb = Ab; Yb < bb.length; Yb++) Eb += bb[Yb];
+      return Eb
     }
-    const Qb = 62;
+    const kb = 62;
 
-    function eb(bb) {
-      let cb = "so:";
-      const sb = mb(bb, bb.length, Qb - cb.length);
-      for (let kb = 0; kb < sb; kb++) cb += bb[kb];
-      return cb
+    function yb(bb) {
+      let ab = "so:";
+      const Ub = jb(bb, bb.length, kb - ab.length);
+      for (let Ab = 0; Ab < Ub; Ab++) ab += bb[Ab];
+      return ab
     }
-    const Cb = "BABYLON ";
+    const Zb = "BABYLON ";
 
-    function Nb(bb) {
-      return eb(Cb + bb)
+    function Db(bb) {
+      return yb(Zb + bb)
     }
   },
-  37566: bb => {
+  37323: bb => {
     bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v+LFy8yvH//noGXl/ccuq8A/vQKd00yOdIAAAAASUVORK5CYII="
   },
-  37549: bb => {
+  37314: bb => {
     bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAALUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMnBzczN8/PjxHLLPAORwCnfkvOdNAAAAAElFTkSuQmCC"
   },
-  37572: bb => {
+  37331: bb => {
     bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
   },
-  37547: bb => {
+  37312: bb => {
     bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAANUlEQVQYGWM8CwQMeAATHjmw1JBQAHLp/wMHDvy/ePHi/4CAgP937tz5Ly6u+5/P3uw/KAgAgjwWhHm22JoAAAAASUVORK5CYII="
   },
-  37558: bb => {
+  37318: bb => {
     bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
   }
 };

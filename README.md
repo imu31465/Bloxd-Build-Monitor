@@ -8,21 +8,21 @@ Per-build reports under `diffs/` are paginated to stay below GitHub file-size li
 
 | Environment | Checked at (JST) | Build | Main bundle |
 |---|---|---|---|
-| bloxd.io | 2026-11-20T18:47:38+09:00 | fsa8nn.c5bdbb5a | `bundles/bloxd.io/main.js` · 2.80 MB · `cc8693f58f99…` |
-| preprod.bloxd.io | 2026-11-20T18:48:06+09:00 | ad2avs.90d9e4dd | `bundles/preprod.bloxd.io/main.js` · 2.84 MB · `6fe78b383b9d…` |
-| staging.bloxd.io | 2026-11-20T18:48:07+09:00 | fsa8nn.c5bdbb5a | `bundles/staging.bloxd.io/main.js` · 2.80 MB · `cc8693f58f99…` |
+| bloxd.io | 2026-11-20T19:41:28+09:00 | teusab.46cefca6 | `bundles/bloxd.io/main.js` · 2.78 MB · `6c673f903c3c…` |
+| preprod.bloxd.io | 2026-11-20T19:41:55+09:00 | ad2avs.90d9e4dd | `bundles/preprod.bloxd.io/main.js` · 2.84 MB · `6fe78b383b9d…` |
+| staging.bloxd.io | 2026-11-20T19:41:55+09:00 | teusab.46cefca6 | `bundles/staging.bloxd.io/main.js` · 2.78 MB · `6c673f903c3c…` |
 
 ## Main bundle details
 
-- **bloxd.io** — source: https://bloxd.io/static/js/fsa8nn.main.c5bdbb5a.js
-  - file: `bundles/bloxd.io/main.js` · 2,940,601 bytes (2.80 MB)
-  - sha256: `cc8693f58f997316b999c8b7917a488f63ba1853efda8015670f3a49d880d124`
-  - archived build files: 433 (45.04 MB total, full manifest in `.monitor-state.json`)
+- **bloxd.io** — source: https://bloxd.io/static/js/teusab.main.46cefca6.js
+  - file: `bundles/bloxd.io/main.js` · 2,916,042 bytes (2.78 MB)
+  - sha256: `6c673f903c3ccf6f0abf822759a85abab7391fc993e6d78c44ff9c564f24a2c2`
+  - archived build files: 433 (44.96 MB total, full manifest in `.monitor-state.json`)
 - **preprod.bloxd.io** — source: https://preprod.bloxd.io/static/js/ad2avs.main.90d9e4dd.js
   - file: `bundles/preprod.bloxd.io/main.js` · 2,973,373 bytes (2.84 MB)
   - sha256: `6fe78b383b9d8ee75192c60945c9cb4297282afb2c99e74a543bda43cd8351dc`
   - archived build files: 433 (44.95 MB total, full manifest in `.monitor-state.json`)
-- **staging.bloxd.io** — source: https://staging.bloxd.io/static/js/fsa8nn.main.c5bdbb5a.js
-  - file: `bundles/staging.bloxd.io/main.js` · 2,940,601 bytes (2.80 MB)
-  - sha256: `cc8693f58f997316b999c8b7917a488f63ba1853efda8015670f3a49d880d124`
-  - archived build files: 433 (45.04 MB total, full manifest in `.monitor-state.json`)
+- **staging.bloxd.io** — source: https://staging.bloxd.io/static/js/teusab.main.46cefca6.js
+  - file: `bundles/staging.bloxd.io/main.js` · 2,916,042 bytes (2.78 MB)
+  - sha256: `6c673f903c3ccf6f0abf822759a85abab7391fc993e6d78c44ff9c564f24a2c2`
+  - archived build files: 433 (44.96 MB total, full manifest in `.monitor-state.json`)

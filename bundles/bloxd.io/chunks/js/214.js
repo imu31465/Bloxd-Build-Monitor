@@ -1,7 +1,7 @@
 export const id = 214;
 export const ids = [214];
 export const modules = {
-  36279: bb => {
+  36049: bb => {
     bb.exports = {
       aliceblue: [240, 248, 255],
       antiquewhite: [250, 235, 215],
@@ -153,146 +153,146 @@ export const modules = {
       yellowgreen: [154, 205, 50]
     }
   },
-  36273: (bb, cb, sb) => {
-    var kb = sb(36279),
-      Wb = sb(36287),
-      ab = Object.hasOwnProperty,
-      Tb = Object.create(null);
-    for (var Ub in kb) ab.call(kb, Ub) && (Tb[kb[Ub]] = Ub);
-    var Ib = bb.exports = {
+  36045: (bb, ab, Ub) => {
+    var Ab = Ub(36049),
+      Mb = Ub(36054),
+      Tb = Object.hasOwnProperty,
+      Eb = Object.create(null);
+    for (var Yb in Ab) Tb.call(Ab, Yb) && (Eb[Ab[Yb]] = Yb);
+    var Bb = bb.exports = {
       to: {},
       get: {}
     };
 
-    function Hb(bb, cb, sb) {
-      return Math.min(Math.max(cb, bb), sb)
+    function eb(bb, ab, Ub) {
+      return Math.min(Math.max(ab, bb), Ub)
     }
 
-    function fb(bb) {
-      var cb = Math.round(bb).toString(16).toUpperCase();
-      return cb.length < 2 ? "0" + cb : cb
+    function vb(bb) {
+      var ab = Math.round(bb).toString(16).toUpperCase();
+      return ab.length < 2 ? "0" + ab : ab
     }
-    Ib.get = function(bb) {
-      var cb, sb;
+    Bb.get = function(bb) {
+      var ab, Ub;
       switch (bb.substring(0, 3).toLowerCase()) {
         case "hsl":
-          cb = Ib.get.hsl(bb), sb = "hsl";
+          ab = Bb.get.hsl(bb), Ub = "hsl";
           break;
         case "hwb":
-          cb = Ib.get.hwb(bb), sb = "hwb";
+          ab = Bb.get.hwb(bb), Ub = "hwb";
           break;
         default:
-          cb = Ib.get.rgb(bb), sb = "rgb"
+          ab = Bb.get.rgb(bb), Ub = "rgb"
       }
-      return cb ? {
-        model: sb,
-        value: cb
+      return ab ? {
+        model: Ub,
+        value: ab
       } : null
-    }, Ib.get.rgb = function(bb) {
+    }, Bb.get.rgb = function(bb) {
       if (!bb) return null;
-      var cb, sb, Wb, Tb = [0, 0, 0, 1];
-      if (cb = bb.match(/^#([a-f0-9]{6})([a-f0-9]{2})?$/i)) {
-        for (Wb = cb[2], cb = cb[1], sb = 0; sb < 3; sb++) {
-          var Ub = 2 * sb;
-          Tb[sb] = parseInt(cb.slice(Ub, Ub + 2), 16)
+      var ab, Ub, Mb, Eb = [0, 0, 0, 1];
+      if (ab = bb.match(/^#([a-f0-9]{6})([a-f0-9]{2})?$/i)) {
+        for (Mb = ab[2], ab = ab[1], Ub = 0; Ub < 3; Ub++) {
+          var Yb = 2 * Ub;
+          Eb[Ub] = parseInt(ab.slice(Yb, Yb + 2), 16)
         }
-        Wb && (Tb[3] = parseInt(Wb, 16) / 255)
-      } else if (cb = bb.match(/^#([a-f0-9]{3,4})$/i)) {
-        for (Wb = (cb = cb[1])[3], sb = 0; sb < 3; sb++) Tb[sb] = parseInt(cb[sb] + cb[sb], 16);
-        Wb && (Tb[3] = parseInt(Wb + Wb, 16) / 255)
-      } else if (cb = bb.match(/^rgba?\(\s*([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/)) {
-        for (sb = 0; sb < 3; sb++) Tb[sb] = parseInt(cb[sb + 1], 0);
-        cb[4] && (cb[5] ? Tb[3] = .01 * parseFloat(cb[4]) : Tb[3] = parseFloat(cb[4]))
+        Mb && (Eb[3] = parseInt(Mb, 16) / 255)
+      } else if (ab = bb.match(/^#([a-f0-9]{3,4})$/i)) {
+        for (Mb = (ab = ab[1])[3], Ub = 0; Ub < 3; Ub++) Eb[Ub] = parseInt(ab[Ub] + ab[Ub], 16);
+        Mb && (Eb[3] = parseInt(Mb + Mb, 16) / 255)
+      } else if (ab = bb.match(/^rgba?\(\s*([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/)) {
+        for (Ub = 0; Ub < 3; Ub++) Eb[Ub] = parseInt(ab[Ub + 1], 0);
+        ab[4] && (ab[5] ? Eb[3] = .01 * parseFloat(ab[4]) : Eb[3] = parseFloat(ab[4]))
       } else {
-        if (!(cb = bb.match(/^rgba?\(\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/))) return (cb = bb.match(/^(\w+)$/)) ? "transparent" === cb[1] ? [0, 0, 0, 0] : ab.call(kb, cb[1]) ? ((Tb = kb[cb[1]])[3] = 1, Tb) : null : null;
-        for (sb = 0; sb < 3; sb++) Tb[sb] = Math.round(2.55 * parseFloat(cb[sb + 1]));
-        cb[4] && (cb[5] ? Tb[3] = .01 * parseFloat(cb[4]) : Tb[3] = parseFloat(cb[4]))
+        if (!(ab = bb.match(/^rgba?\(\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/))) return (ab = bb.match(/^(\w+)$/)) ? "transparent" === ab[1] ? [0, 0, 0, 0] : Tb.call(Ab, ab[1]) ? ((Eb = Ab[ab[1]])[3] = 1, Eb) : null : null;
+        for (Ub = 0; Ub < 3; Ub++) Eb[Ub] = Math.round(2.55 * parseFloat(ab[Ub + 1]));
+        ab[4] && (ab[5] ? Eb[3] = .01 * parseFloat(ab[4]) : Eb[3] = parseFloat(ab[4]))
       }
-      for (sb = 0; sb < 3; sb++) Tb[sb] = Hb(Tb[sb], 0, 255);
-      return Tb[3] = Hb(Tb[3], 0, 1), Tb
-    }, Ib.get.hsl = function(bb) {
+      for (Ub = 0; Ub < 3; Ub++) Eb[Ub] = eb(Eb[Ub], 0, 255);
+      return Eb[3] = eb(Eb[3], 0, 1), Eb
+    }, Bb.get.hsl = function(bb) {
       if (!bb) return null;
-      var cb = bb.match(/^hsla?\(\s*([+-]?(?:\d{0,3}\.)?\d+)(?:deg)?\s*,?\s*([+-]?[\d\.]+)%\s*,?\s*([+-]?[\d\.]+)%\s*(?:[,|\/]\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
-      if (cb) {
-        var sb = parseFloat(cb[4]);
-        return [(parseFloat(cb[1]) % 360 + 360) % 360, Hb(parseFloat(cb[2]), 0, 100), Hb(parseFloat(cb[3]), 0, 100), Hb(isNaN(sb) ? 1 : sb, 0, 1)]
+      var ab = bb.match(/^hsla?\(\s*([+-]?(?:\d{0,3}\.)?\d+)(?:deg)?\s*,?\s*([+-]?[\d\.]+)%\s*,?\s*([+-]?[\d\.]+)%\s*(?:[,|\/]\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
+      if (ab) {
+        var Ub = parseFloat(ab[4]);
+        return [(parseFloat(ab[1]) % 360 + 360) % 360, eb(parseFloat(ab[2]), 0, 100), eb(parseFloat(ab[3]), 0, 100), eb(isNaN(Ub) ? 1 : Ub, 0, 1)]
       }
       return null
-    }, Ib.get.hwb = function(bb) {
+    }, Bb.get.hwb = function(bb) {
       if (!bb) return null;
-      var cb = bb.match(/^hwb\(\s*([+-]?\d{0,3}(?:\.\d+)?)(?:deg)?\s*,\s*([+-]?[\d\.]+)%\s*,\s*([+-]?[\d\.]+)%\s*(?:,\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
-      if (cb) {
-        var sb = parseFloat(cb[4]);
-        return [(parseFloat(cb[1]) % 360 + 360) % 360, Hb(parseFloat(cb[2]), 0, 100), Hb(parseFloat(cb[3]), 0, 100), Hb(isNaN(sb) ? 1 : sb, 0, 1)]
+      var ab = bb.match(/^hwb\(\s*([+-]?\d{0,3}(?:\.\d+)?)(?:deg)?\s*,\s*([+-]?[\d\.]+)%\s*,\s*([+-]?[\d\.]+)%\s*(?:,\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
+      if (ab) {
+        var Ub = parseFloat(ab[4]);
+        return [(parseFloat(ab[1]) % 360 + 360) % 360, eb(parseFloat(ab[2]), 0, 100), eb(parseFloat(ab[3]), 0, 100), eb(isNaN(Ub) ? 1 : Ub, 0, 1)]
       }
       return null
-    }, Ib.to.hex = function() {
-      var bb = Wb(arguments);
-      return "#" + fb(bb[0]) + fb(bb[1]) + fb(bb[2]) + (bb[3] < 1 ? fb(Math.round(255 * bb[3])) : "")
-    }, Ib.to.rgb = function() {
-      var bb = Wb(arguments);
+    }, Bb.to.hex = function() {
+      var bb = Mb(arguments);
+      return "#" + vb(bb[0]) + vb(bb[1]) + vb(bb[2]) + (bb[3] < 1 ? vb(Math.round(255 * bb[3])) : "")
+    }, Bb.to.rgb = function() {
+      var bb = Mb(arguments);
       return bb.length < 4 || 1 === bb[3] ? "rgb(" + Math.round(bb[0]) + ", " + Math.round(bb[1]) + ", " + Math.round(bb[2]) + ")" : "rgba(" + Math.round(bb[0]) + ", " + Math.round(bb[1]) + ", " + Math.round(bb[2]) + ", " + bb[3] + ")"
-    }, Ib.to.rgb.percent = function() {
-      var bb = Wb(arguments),
-        cb = Math.round(bb[0] / 255 * 100),
-        sb = Math.round(bb[1] / 255 * 100),
-        kb = Math.round(bb[2] / 255 * 100);
-      return bb.length < 4 || 1 === bb[3] ? "rgb(" + cb + "%, " + sb + "%, " + kb + "%)" : "rgba(" + cb + "%, " + sb + "%, " + kb + "%, " + bb[3] + ")"
-    }, Ib.to.hsl = function() {
-      var bb = Wb(arguments);
+    }, Bb.to.rgb.percent = function() {
+      var bb = Mb(arguments),
+        ab = Math.round(bb[0] / 255 * 100),
+        Ub = Math.round(bb[1] / 255 * 100),
+        Ab = Math.round(bb[2] / 255 * 100);
+      return bb.length < 4 || 1 === bb[3] ? "rgb(" + ab + "%, " + Ub + "%, " + Ab + "%)" : "rgba(" + ab + "%, " + Ub + "%, " + Ab + "%, " + bb[3] + ")"
+    }, Bb.to.hsl = function() {
+      var bb = Mb(arguments);
       return bb.length < 4 || 1 === bb[3] ? "hsl(" + bb[0] + ", " + bb[1] + "%, " + bb[2] + "%)" : "hsla(" + bb[0] + ", " + bb[1] + "%, " + bb[2] + "%, " + bb[3] + ")"
-    }, Ib.to.hwb = function() {
-      var bb = Wb(arguments),
-        cb = "";
-      return bb.length >= 4 && 1 !== bb[3] && (cb = ", " + bb[3]), "hwb(" + bb[0] + ", " + bb[1] + "%, " + bb[2] + "%" + cb + ")"
-    }, Ib.to.keyword = function(bb) {
-      return Tb[bb.slice(0, 3)]
+    }, Bb.to.hwb = function() {
+      var bb = Mb(arguments),
+        ab = "";
+      return bb.length >= 4 && 1 !== bb[3] && (ab = ", " + bb[3]), "hwb(" + bb[0] + ", " + bb[1] + "%, " + bb[2] + "%" + ab + ")"
+    }, Bb.to.keyword = function(bb) {
+      return Eb[bb.slice(0, 3)]
     }
   },
-  36266: (bb, cb, sb) => {
-    const kb = sb(36273),
-      Wb = sb(36304),
-      ab = ["keyword", "gray", "hex"],
-      Tb = {};
-    for (const nb of Object.keys(Wb)) Tb[[...Wb[nb].labels].sort().join("")] = nb;
-    const Ub = {};
+  36042: (bb, ab, Ub) => {
+    const Ab = Ub(36045),
+      Mb = Ub(36062),
+      Tb = ["keyword", "gray", "hex"],
+      Eb = {};
+    for (const Xb of Object.keys(Mb)) Eb[[...Mb[Xb].labels].sort().join("")] = Xb;
+    const Yb = {};
 
-    function Ib(bb, cb) {
-      if (!(this instanceof Ib)) return new Ib(bb, cb);
-      if (cb && cb in ab && (cb = null), cb && !(cb in Wb)) throw new Error("Unknown model: " + cb);
-      let sb, Hb;
+    function Bb(bb, ab) {
+      if (!(this instanceof Bb)) return new Bb(bb, ab);
+      if (ab && ab in Tb && (ab = null), ab && !(ab in Mb)) throw new Error("Unknown model: " + ab);
+      let Ub, eb;
       if (null == bb) this.model = "rgb", this.color = [0, 0, 0], this.valpha = 1;
-      else if (bb instanceof Ib) this.model = bb.model, this.color = [...bb.color], this.valpha = bb.valpha;
+      else if (bb instanceof Bb) this.model = bb.model, this.color = [...bb.color], this.valpha = bb.valpha;
       else if ("string" === typeof bb) {
-        const cb = kb.get(bb);
-        if (null === cb) throw new Error("Unable to parse color from string: " + bb);
-        this.model = cb.model, Hb = Wb[this.model].channels, this.color = cb.value.slice(0, Hb), this.valpha = "number" === typeof cb.value[Hb] ? cb.value[Hb] : 1
+        const ab = Ab.get(bb);
+        if (null === ab) throw new Error("Unable to parse color from string: " + bb);
+        this.model = ab.model, eb = Mb[this.model].channels, this.color = ab.value.slice(0, eb), this.valpha = "number" === typeof ab.value[eb] ? ab.value[eb] : 1
       } else if (bb.length > 0) {
-        this.model = cb || "rgb", Hb = Wb[this.model].channels;
-        const sb = Array.prototype.slice.call(bb, 0, Hb);
-        this.color = Xb(sb, Hb), this.valpha = "number" === typeof bb[Hb] ? bb[Hb] : 1
+        this.model = ab || "rgb", eb = Mb[this.model].channels;
+        const Ub = Array.prototype.slice.call(bb, 0, eb);
+        this.color = Pb(Ub, eb), this.valpha = "number" === typeof bb[eb] ? bb[eb] : 1
       } else if ("number" === typeof bb) this.model = "rgb", this.color = [bb >> 16 & 255, bb >> 8 & 255, 255 & bb], this.valpha = 1;
       else {
         this.valpha = 1;
-        const cb = Object.keys(bb);
-        "alpha" in bb && (cb.splice(cb.indexOf("alpha"), 1), this.valpha = "number" === typeof bb.alpha ? bb.alpha : 0);
-        const kb = cb.sort().join("");
-        if (!(kb in Tb)) throw new Error("Unable to parse color from object: " + JSON.stringify(bb));
-        this.model = Tb[kb];
+        const ab = Object.keys(bb);
+        "alpha" in bb && (ab.splice(ab.indexOf("alpha"), 1), this.valpha = "number" === typeof bb.alpha ? bb.alpha : 0);
+        const Ab = ab.sort().join("");
+        if (!(Ab in Eb)) throw new Error("Unable to parse color from object: " + JSON.stringify(bb));
+        this.model = Eb[Ab];
         const {
-          labels: ab
-        } = Wb[this.model], Ub = [];
-        for (sb = 0; sb < ab.length; sb++) Ub.push(bb[ab[sb]]);
-        this.color = Xb(Ub)
+          labels: Tb
+        } = Mb[this.model], Yb = [];
+        for (Ub = 0; Ub < Tb.length; Ub++) Yb.push(bb[Tb[Ub]]);
+        this.color = Pb(Yb)
       }
-      if (Ub[this.model])
-        for (Hb = Wb[this.model].channels, sb = 0; sb < Hb; sb++) {
-          const bb = Ub[this.model][sb];
-          bb && (this.color[sb] = bb(this.color[sb]))
+      if (Yb[this.model])
+        for (eb = Mb[this.model].channels, Ub = 0; Ub < eb; Ub++) {
+          const bb = Yb[this.model][Ub];
+          bb && (this.color[Ub] = bb(this.color[Ub]))
         }
       this.valpha = Math.max(0, Math.min(1, this.valpha)), Object.freeze && Object.freeze(this)
     }
-    Ib.prototype = {
+    Bb.prototype = {
       toString() {
         return this.string()
       },
@@ -300,15 +300,15 @@ export const modules = {
         return this[this.model]()
       },
       string(bb) {
-        let cb = this.model in kb.to ? this : this.rgb();
-        cb = cb.round("number" === typeof bb ? bb : 1);
-        const sb = 1 === cb.valpha ? cb.color : [...cb.color, this.valpha];
-        return kb.to[cb.model](sb)
+        let ab = this.model in Ab.to ? this : this.rgb();
+        ab = ab.round("number" === typeof bb ? bb : 1);
+        const Ub = 1 === ab.valpha ? ab.color : [...ab.color, this.valpha];
+        return Ab.to[ab.model](Ub)
       },
       percentString(bb) {
-        const cb = this.rgb().round("number" === typeof bb ? bb : 1),
-          sb = 1 === cb.valpha ? cb.color : [...cb.color, this.valpha];
-        return kb.to.rgb.percent(sb)
+        const ab = this.rgb().round("number" === typeof bb ? bb : 1),
+          Ub = 1 === ab.valpha ? ab.color : [...ab.color, this.valpha];
+        return Ab.to.rgb.percent(Ub)
       },
       array() {
         return 1 === this.valpha ? [...this.color] : [...this.color, this.valpha]
@@ -316,12 +316,12 @@ export const modules = {
       object() {
         const bb = {},
           {
-            channels: cb
-          } = Wb[this.model],
+            channels: ab
+          } = Mb[this.model],
           {
-            labels: sb
-          } = Wb[this.model];
-        for (let kb = 0; kb < cb; kb++) bb[sb[kb]] = this.color[kb];
+            labels: Ub
+          } = Mb[this.model];
+        for (let Ab = 0; Ab < ab; Ab++) bb[Ub[Ab]] = this.color[Ab];
         return 1 !== this.valpha && (bb.alpha = this.valpha), bb
       },
       unitArray() {
@@ -333,44 +333,44 @@ export const modules = {
         return bb.r /= 255, bb.g /= 255, bb.b /= 255, 1 !== this.valpha && (bb.alpha = this.valpha), bb
       },
       round(bb) {
-        return bb = Math.max(bb || 0, 0), new Ib([...this.color.map(Hb(bb)), this.valpha], this.model)
+        return bb = Math.max(bb || 0, 0), new Bb([...this.color.map(eb(bb)), this.valpha], this.model)
       },
       alpha(bb) {
-        return void 0 !== bb ? new Ib([...this.color, Math.max(0, Math.min(1, bb))], this.model) : this.valpha
+        return void 0 !== bb ? new Bb([...this.color, Math.max(0, Math.min(1, bb))], this.model) : this.valpha
       },
-      red: fb("rgb", 0, Mb(255)),
-      green: fb("rgb", 1, Mb(255)),
-      blue: fb("rgb", 2, Mb(255)),
-      hue: fb(["hsl", "hsv", "hsl", "hwb", "hcg"], 0, (bb => (bb % 360 + 360) % 360)),
-      saturationl: fb("hsl", 1, Mb(100)),
-      lightness: fb("hsl", 2, Mb(100)),
-      saturationv: fb("hsv", 1, Mb(100)),
-      value: fb("hsv", 2, Mb(100)),
-      chroma: fb("hcg", 1, Mb(100)),
-      gray: fb("hcg", 2, Mb(100)),
-      white: fb("hwb", 1, Mb(100)),
-      wblack: fb("hwb", 2, Mb(100)),
-      cyan: fb("cmyk", 0, Mb(100)),
-      magenta: fb("cmyk", 1, Mb(100)),
-      yellow: fb("cmyk", 2, Mb(100)),
-      black: fb("cmyk", 3, Mb(100)),
-      x: fb("xyz", 0, Mb(95.047)),
-      y: fb("xyz", 1, Mb(100)),
-      z: fb("xyz", 2, Mb(108.833)),
-      l: fb("lab", 0, Mb(100)),
-      a: fb("lab", 1),
-      b: fb("lab", 2),
+      red: vb("rgb", 0, Lb(255)),
+      green: vb("rgb", 1, Lb(255)),
+      blue: vb("rgb", 2, Lb(255)),
+      hue: vb(["hsl", "hsv", "hsl", "hwb", "hcg"], 0, (bb => (bb % 360 + 360) % 360)),
+      saturationl: vb("hsl", 1, Lb(100)),
+      lightness: vb("hsl", 2, Lb(100)),
+      saturationv: vb("hsv", 1, Lb(100)),
+      value: vb("hsv", 2, Lb(100)),
+      chroma: vb("hcg", 1, Lb(100)),
+      gray: vb("hcg", 2, Lb(100)),
+      white: vb("hwb", 1, Lb(100)),
+      wblack: vb("hwb", 2, Lb(100)),
+      cyan: vb("cmyk", 0, Lb(100)),
+      magenta: vb("cmyk", 1, Lb(100)),
+      yellow: vb("cmyk", 2, Lb(100)),
+      black: vb("cmyk", 3, Lb(100)),
+      x: vb("xyz", 0, Lb(95.047)),
+      y: vb("xyz", 1, Lb(100)),
+      z: vb("xyz", 2, Lb(108.833)),
+      l: vb("lab", 0, Lb(100)),
+      a: vb("lab", 1),
+      b: vb("lab", 2),
       keyword(bb) {
-        return void 0 !== bb ? new Ib(bb) : Wb[this.model].keyword(this.color)
+        return void 0 !== bb ? new Bb(bb) : Mb[this.model].keyword(this.color)
       },
       hex(bb) {
-        return void 0 !== bb ? new Ib(bb) : kb.to.hex(this.rgb().round().color)
+        return void 0 !== bb ? new Bb(bb) : Ab.to.hex(this.rgb().round().color)
       },
       hexa(bb) {
-        if (void 0 !== bb) return new Ib(bb);
-        const cb = this.rgb().round().color;
-        let sb = Math.round(255 * this.valpha).toString(16).toUpperCase();
-        return 1 === sb.length && (sb = "0" + sb), kb.to.hex(cb) + sb
+        if (void 0 !== bb) return new Bb(bb);
+        const ab = this.rgb().round().color;
+        let Ub = Math.round(255 * this.valpha).toString(16).toUpperCase();
+        return 1 === Ub.length && (Ub = "0" + Ub), Ab.to.hex(ab) + Ub
       },
       rgbNumber() {
         const bb = this.rgb().color;
@@ -378,21 +378,21 @@ export const modules = {
       },
       luminosity() {
         const bb = this.rgb().color,
-          cb = [];
-        for (const [sb, kb] of bb.entries()) {
-          const bb = kb / 255;
-          cb[sb] = bb <= .04045 ? bb / 12.92 : ((bb + .055) / 1.055) ** 2.4
+          ab = [];
+        for (const [Ub, Ab] of bb.entries()) {
+          const bb = Ab / 255;
+          ab[Ub] = bb <= .04045 ? bb / 12.92 : ((bb + .055) / 1.055) ** 2.4
         }
-        return .2126 * cb[0] + .7152 * cb[1] + .0722 * cb[2]
+        return .2126 * ab[0] + .7152 * ab[1] + .0722 * ab[2]
       },
       contrast(bb) {
-        const cb = this.luminosity(),
-          sb = bb.luminosity();
-        return cb > sb ? (cb + .05) / (sb + .05) : (sb + .05) / (cb + .05)
+        const ab = this.luminosity(),
+          Ub = bb.luminosity();
+        return ab > Ub ? (ab + .05) / (Ub + .05) : (Ub + .05) / (ab + .05)
       },
       level(bb) {
-        const cb = this.contrast(bb);
-        return cb >= 7 ? "AAA" : cb >= 4.5 ? "AA" : ""
+        const ab = this.contrast(bb);
+        return ab >= 7 ? "AAA" : ab >= 4.5 ? "AA" : ""
       },
       isDark() {
         const bb = this.rgb().color;
@@ -401,39 +401,39 @@ export const modules = {
       isLight() {
         return !this.isDark()
       },
-      Of() {
+      pa() {
         const bb = this.rgb();
-        for (let cb = 0; cb < 3; cb++) bb.color[cb] = 255 - bb.color[cb];
+        for (let ab = 0; ab < 3; ab++) bb.color[ab] = 255 - bb.color[ab];
         return bb
       },
       lighten(bb) {
-        const cb = this.hsl();
-        return cb.color[2] += cb.color[2] * bb, cb
+        const ab = this.hsl();
+        return ab.color[2] += ab.color[2] * bb, ab
       },
       darken(bb) {
-        const cb = this.hsl();
-        return cb.color[2] -= cb.color[2] * bb, cb
+        const ab = this.hsl();
+        return ab.color[2] -= ab.color[2] * bb, ab
       },
       saturate(bb) {
-        const cb = this.hsl();
-        return cb.color[1] += cb.color[1] * bb, cb
+        const ab = this.hsl();
+        return ab.color[1] += ab.color[1] * bb, ab
       },
       desaturate(bb) {
-        const cb = this.hsl();
-        return cb.color[1] -= cb.color[1] * bb, cb
+        const ab = this.hsl();
+        return ab.color[1] -= ab.color[1] * bb, ab
       },
       whiten(bb) {
-        const cb = this.hwb();
-        return cb.color[1] += cb.color[1] * bb, cb
+        const ab = this.hwb();
+        return ab.color[1] += ab.color[1] * bb, ab
       },
       blacken(bb) {
-        const cb = this.hwb();
-        return cb.color[2] += cb.color[2] * bb, cb
+        const ab = this.hwb();
+        return ab.color[2] += ab.color[2] * bb, ab
       },
       grayscale() {
         const bb = this.rgb().color,
-          cb = .3 * bb[0] + .59 * bb[1] + .11 * bb[2];
-        return Ib.rgb(cb, cb, cb)
+          ab = .3 * bb[0] + .59 * bb[1] + .11 * bb[2];
+        return Bb.rgb(ab, ab, ab)
       },
       fade(bb) {
         return this.alpha(this.valpha - this.valpha * bb)
@@ -442,74 +442,74 @@ export const modules = {
         return this.alpha(this.valpha + this.valpha * bb)
       },
       rotate(bb) {
-        const cb = this.hsl();
-        let sb = cb.color[0];
-        return sb = (sb + bb) % 360, sb = sb < 0 ? 360 + sb : sb, cb.color[0] = sb, cb
+        const ab = this.hsl();
+        let Ub = ab.color[0];
+        return Ub = (Ub + bb) % 360, Ub = Ub < 0 ? 360 + Ub : Ub, ab.color[0] = Ub, ab
       },
-      mix(bb, cb) {
+      mix(bb, ab) {
         if (!bb || !bb.rgb) throw new Error('Argument to "mix" was not a Color instance, but rather an instance of ' + typeof bb);
-        const sb = bb.rgb(),
-          kb = this.rgb(),
-          Wb = void 0 === cb ? .5 : cb,
-          ab = 2 * Wb - 1,
-          Tb = sb.alpha() - kb.alpha(),
-          Ub = ((ab * Tb === -1 ? ab : (ab + Tb) / (1 + ab * Tb)) + 1) / 2,
-          Hb = 1 - Ub;
-        return Ib.rgb(Ub * sb.red() + Hb * kb.red(), Ub * sb.green() + Hb * kb.green(), Ub * sb.blue() + Hb * kb.blue(), sb.alpha() * Wb + kb.alpha() * (1 - Wb))
+        const Ub = bb.rgb(),
+          Ab = this.rgb(),
+          Mb = void 0 === ab ? .5 : ab,
+          Tb = 2 * Mb - 1,
+          Eb = Ub.alpha() - Ab.alpha(),
+          Yb = ((Tb * Eb === -1 ? Tb : (Tb + Eb) / (1 + Tb * Eb)) + 1) / 2,
+          eb = 1 - Yb;
+        return Bb.rgb(Yb * Ub.red() + eb * Ab.red(), Yb * Ub.green() + eb * Ab.green(), Yb * Ub.blue() + eb * Ab.blue(), Ub.alpha() * Mb + Ab.alpha() * (1 - Mb))
       }
     };
-    for (const nb of Object.keys(Wb)) {
-      if (ab.includes(nb)) continue;
+    for (const Xb of Object.keys(Mb)) {
+      if (Tb.includes(Xb)) continue;
       const {
         channels: bb
-      } = Wb[nb];
-      Ib.prototype[nb] = function() {
-        if (this.model === nb) return new Ib(this);
-        for (var bb = arguments.length, cb = new Array(bb), sb = 0; sb < bb; sb++) cb[sb] = arguments[sb];
-        return cb.length > 0 ? new Ib(cb, nb) : new Ib([...(kb = Wb[this.model][nb].raw(this.color), Array.isArray(kb) ? kb : [kb]), this.valpha], nb);
-        var kb
-      }, Ib[nb] = function() {
-        for (var cb = arguments.length, sb = new Array(cb), kb = 0; kb < cb; kb++) sb[kb] = arguments[kb];
-        let Wb = sb[0];
-        return "number" === typeof Wb && (Wb = Xb(sb, bb)), new Ib(Wb, nb)
+      } = Mb[Xb];
+      Bb.prototype[Xb] = function() {
+        if (this.model === Xb) return new Bb(this);
+        for (var bb = arguments.length, ab = new Array(bb), Ub = 0; Ub < bb; Ub++) ab[Ub] = arguments[Ub];
+        return ab.length > 0 ? new Bb(ab, Xb) : new Bb([...(Ab = Mb[this.model][Xb].raw(this.color), Array.isArray(Ab) ? Ab : [Ab]), this.valpha], Xb);
+        var Ab
+      }, Bb[Xb] = function() {
+        for (var ab = arguments.length, Ub = new Array(ab), Ab = 0; Ab < ab; Ab++) Ub[Ab] = arguments[Ab];
+        let Mb = Ub[0];
+        return "number" === typeof Mb && (Mb = Pb(Ub, bb)), new Bb(Mb, Xb)
       }
     }
 
-    function Hb(bb) {
-      return function(cb) {
-        return function(bb, cb) {
-          return Number(bb.toFixed(cb))
-        }(cb, bb)
+    function eb(bb) {
+      return function(ab) {
+        return function(bb, ab) {
+          return Number(bb.toFixed(ab))
+        }(ab, bb)
       }
     }
 
-    function fb(bb, cb, sb) {
+    function vb(bb, ab, Ub) {
       bb = Array.isArray(bb) ? bb : [bb];
-      for (const kb of bb)(Ub[kb] || (Ub[kb] = []))[cb] = sb;
+      for (const Ab of bb)(Yb[Ab] || (Yb[Ab] = []))[ab] = Ub;
       return bb = bb[0],
-        function(kb) {
-          let Wb;
-          return void 0 !== kb ? (sb && (kb = sb(kb)), Wb = this[bb](), Wb.color[cb] = kb, Wb) : (Wb = this[bb]().color[cb], sb && (Wb = sb(Wb)), Wb)
+        function(Ab) {
+          let Mb;
+          return void 0 !== Ab ? (Ub && (Ab = Ub(Ab)), Mb = this[bb](), Mb.color[ab] = Ab, Mb) : (Mb = this[bb]().color[ab], Ub && (Mb = Ub(Mb)), Mb)
         }
     }
 
-    function Mb(bb) {
-      return function(cb) {
-        return Math.max(0, Math.min(bb, cb))
+    function Lb(bb) {
+      return function(ab) {
+        return Math.max(0, Math.min(bb, ab))
       }
     }
 
-    function Xb(bb, cb) {
-      for (let sb = 0; sb < cb; sb++) "number" !== typeof bb[sb] && (bb[sb] = 0);
+    function Pb(bb, ab) {
+      for (let Ub = 0; Ub < ab; Ub++) "number" !== typeof bb[Ub] && (bb[Ub] = 0);
       return bb
     }
-    bb.exports = Ib
+    bb.exports = Bb
   },
-  36308: (bb, cb, sb) => {
-    const kb = sb(36314),
-      Wb = {};
-    for (const Tb of Object.keys(kb)) Wb[kb[Tb]] = Tb;
-    const ab = {
+  36067: (bb, ab, Ub) => {
+    const Ab = Ub(36071),
+      Mb = {};
+    for (const Eb of Object.keys(Ab)) Mb[Ab[Eb]] = Eb;
+    const Tb = {
       rgb: {
         channels: 3,
         labels: "rgb"
@@ -571,421 +571,421 @@ export const modules = {
         labels: ["gray"]
       }
     };
-    bb.exports = ab;
-    for (const Tb of Object.keys(ab)) {
-      if (!("channels" in ab[Tb])) throw new Error("missing channels property: " + Tb);
-      if (!("labels" in ab[Tb])) throw new Error("missing channel labels property: " + Tb);
-      if (ab[Tb].labels.length !== ab[Tb].channels) throw new Error("channel and label counts mismatch: " + Tb);
+    bb.exports = Tb;
+    for (const Eb of Object.keys(Tb)) {
+      if (!("channels" in Tb[Eb])) throw new Error("missing channels property: " + Eb);
+      if (!("labels" in Tb[Eb])) throw new Error("missing channel labels property: " + Eb);
+      if (Tb[Eb].labels.length !== Tb[Eb].channels) throw new Error("channel and label counts mismatch: " + Eb);
       const {
         channels: bb,
-        labels: cb
-      } = ab[Tb];
-      delete ab[Tb].channels, delete ab[Tb].labels, Object.defineProperty(ab[Tb], "channels", {
+        labels: ab
+      } = Tb[Eb];
+      delete Tb[Eb].channels, delete Tb[Eb].labels, Object.defineProperty(Tb[Eb], "channels", {
         value: bb
-      }), Object.defineProperty(ab[Tb], "labels", {
-        value: cb
+      }), Object.defineProperty(Tb[Eb], "labels", {
+        value: ab
       })
     }
-    ab.rgb.hsl = function(bb) {
-      const cb = bb[0] / 255,
-        sb = bb[1] / 255,
-        kb = bb[2] / 255,
-        Wb = Math.min(cb, sb, kb),
-        ab = Math.max(cb, sb, kb),
-        Tb = ab - Wb;
-      let Ub, Ib;
-      ab === Wb ? Ub = 0 : cb === ab ? Ub = (sb - kb) / Tb : sb === ab ? Ub = 2 + (kb - cb) / Tb : kb === ab && (Ub = 4 + (cb - sb) / Tb), Ub = Math.min(60 * Ub, 360), Ub < 0 && (Ub += 360);
-      const Hb = (Wb + ab) / 2;
-      return Ib = ab === Wb ? 0 : Hb <= .5 ? Tb / (ab + Wb) : Tb / (2 - ab - Wb), [Ub, 100 * Ib, 100 * Hb]
-    }, ab.rgb.hsv = function(bb) {
-      let cb, sb, kb, Wb, ab;
-      const Tb = bb[0] / 255,
+    Tb.rgb.hsl = function(bb) {
+      const ab = bb[0] / 255,
         Ub = bb[1] / 255,
-        Ib = bb[2] / 255,
-        Hb = Math.max(Tb, Ub, Ib),
-        fb = Hb - Math.min(Tb, Ub, Ib),
-        Mb = function(bb) {
-          return (Hb - bb) / 6 / fb + .5
+        Ab = bb[2] / 255,
+        Mb = Math.min(ab, Ub, Ab),
+        Tb = Math.max(ab, Ub, Ab),
+        Eb = Tb - Mb;
+      let Yb, Bb;
+      Tb === Mb ? Yb = 0 : ab === Tb ? Yb = (Ub - Ab) / Eb : Ub === Tb ? Yb = 2 + (Ab - ab) / Eb : Ab === Tb && (Yb = 4 + (ab - Ub) / Eb), Yb = Math.min(60 * Yb, 360), Yb < 0 && (Yb += 360);
+      const eb = (Mb + Tb) / 2;
+      return Bb = Tb === Mb ? 0 : eb <= .5 ? Eb / (Tb + Mb) : Eb / (2 - Tb - Mb), [Yb, 100 * Bb, 100 * eb]
+    }, Tb.rgb.hsv = function(bb) {
+      let ab, Ub, Ab, Mb, Tb;
+      const Eb = bb[0] / 255,
+        Yb = bb[1] / 255,
+        Bb = bb[2] / 255,
+        eb = Math.max(Eb, Yb, Bb),
+        vb = eb - Math.min(Eb, Yb, Bb),
+        Lb = function(bb) {
+          return (eb - bb) / 6 / vb + .5
         };
-      return 0 === fb ? (Wb = 0, ab = 0) : (ab = fb / Hb, cb = Mb(Tb), sb = Mb(Ub), kb = Mb(Ib), Tb === Hb ? Wb = kb - sb : Ub === Hb ? Wb = 1 / 3 + cb - kb : Ib === Hb && (Wb = 2 / 3 + sb - cb), Wb < 0 ? Wb += 1 : Wb > 1 && (Wb -= 1)), [360 * Wb, 100 * ab, 100 * Hb]
-    }, ab.rgb.hwb = function(bb) {
-      const cb = bb[0],
-        sb = bb[1];
-      let kb = bb[2];
-      const Wb = ab.rgb.hsl(bb)[0],
-        Tb = 1 / 255 * Math.min(cb, Math.min(sb, kb));
-      return kb = 1 - 1 / 255 * Math.max(cb, Math.max(sb, kb)), [Wb, 100 * Tb, 100 * kb]
-    }, ab.rgb.cmyk = function(bb) {
-      const cb = bb[0] / 255,
-        sb = bb[1] / 255,
-        kb = bb[2] / 255,
-        Wb = Math.min(1 - cb, 1 - sb, 1 - kb);
-      return [100 * ((1 - cb - Wb) / (1 - Wb) || 0), 100 * ((1 - sb - Wb) / (1 - Wb) || 0), 100 * ((1 - kb - Wb) / (1 - Wb) || 0), 100 * Wb]
-    }, ab.rgb.keyword = function(bb) {
-      const cb = Wb[bb];
-      if (cb) return cb;
-      let sb, ab = 1 / 0;
-      for (const Wb of Object.keys(kb)) {
-        const cb = kb[Wb],
-          Ib = (Ub = cb, ((Tb = bb)[0] - Ub[0]) ** 2 + (Tb[1] - Ub[1]) ** 2 + (Tb[2] - Ub[2]) ** 2);
-        Ib < ab && (ab = Ib, sb = Wb)
+      return 0 === vb ? (Mb = 0, Tb = 0) : (Tb = vb / eb, ab = Lb(Eb), Ub = Lb(Yb), Ab = Lb(Bb), Eb === eb ? Mb = Ab - Ub : Yb === eb ? Mb = 1 / 3 + ab - Ab : Bb === eb && (Mb = 2 / 3 + Ub - ab), Mb < 0 ? Mb += 1 : Mb > 1 && (Mb -= 1)), [360 * Mb, 100 * Tb, 100 * eb]
+    }, Tb.rgb.hwb = function(bb) {
+      const ab = bb[0],
+        Ub = bb[1];
+      let Ab = bb[2];
+      const Mb = Tb.rgb.hsl(bb)[0],
+        Eb = 1 / 255 * Math.min(ab, Math.min(Ub, Ab));
+      return Ab = 1 - 1 / 255 * Math.max(ab, Math.max(Ub, Ab)), [Mb, 100 * Eb, 100 * Ab]
+    }, Tb.rgb.cmyk = function(bb) {
+      const ab = bb[0] / 255,
+        Ub = bb[1] / 255,
+        Ab = bb[2] / 255,
+        Mb = Math.min(1 - ab, 1 - Ub, 1 - Ab);
+      return [100 * ((1 - ab - Mb) / (1 - Mb) || 0), 100 * ((1 - Ub - Mb) / (1 - Mb) || 0), 100 * ((1 - Ab - Mb) / (1 - Mb) || 0), 100 * Mb]
+    }, Tb.rgb.keyword = function(bb) {
+      const ab = Mb[bb];
+      if (ab) return ab;
+      let Ub, Tb = 1 / 0;
+      for (const Mb of Object.keys(Ab)) {
+        const ab = Ab[Mb],
+          Bb = (Yb = ab, ((Eb = bb)[0] - Yb[0]) ** 2 + (Eb[1] - Yb[1]) ** 2 + (Eb[2] - Yb[2]) ** 2);
+        Bb < Tb && (Tb = Bb, Ub = Mb)
       }
-      var Tb, Ub;
-      return sb
-    }, ab.keyword.rgb = function(bb) {
-      return kb[bb]
-    }, ab.rgb.xyz = function(bb) {
-      let cb = bb[0] / 255,
-        sb = bb[1] / 255,
-        kb = bb[2] / 255;
-      cb = cb > .04045 ? ((cb + .055) / 1.055) ** 2.4 : cb / 12.92, sb = sb > .04045 ? ((sb + .055) / 1.055) ** 2.4 : sb / 12.92, kb = kb > .04045 ? ((kb + .055) / 1.055) ** 2.4 : kb / 12.92;
-      return [100 * (.4124 * cb + .3576 * sb + .1805 * kb), 100 * (.2126 * cb + .7152 * sb + .0722 * kb), 100 * (.0193 * cb + .1192 * sb + .9505 * kb)]
-    }, ab.rgb.lab = function(bb) {
-      const cb = ab.rgb.xyz(bb);
-      let sb = cb[0],
-        kb = cb[1],
-        Wb = cb[2];
-      sb /= 95.047, kb /= 100, Wb /= 108.883, sb = sb > .008856 ? sb ** (1 / 3) : 7.787 * sb + 16 / 116, kb = kb > .008856 ? kb ** (1 / 3) : 7.787 * kb + 16 / 116, Wb = Wb > .008856 ? Wb ** (1 / 3) : 7.787 * Wb + 16 / 116;
-      return [116 * kb - 16, 500 * (sb - kb), 200 * (kb - Wb)]
-    }, ab.hsl.rgb = function(bb) {
-      const cb = bb[0] / 360,
-        sb = bb[1] / 100,
-        kb = bb[2] / 100;
-      let Wb, ab, Tb;
-      if (0 === sb) return Tb = 255 * kb, [Tb, Tb, Tb];
-      Wb = kb < .5 ? kb * (1 + sb) : kb + sb - kb * sb;
-      const Ub = 2 * kb - Wb,
-        Ib = [0, 0, 0];
-      for (let Hb = 0; Hb < 3; Hb++) ab = cb + 1 / 3 * -(Hb - 1), ab < 0 && ab++, ab > 1 && ab--, Tb = 6 * ab < 1 ? Ub + 6 * (Wb - Ub) * ab : 2 * ab < 1 ? Wb : 3 * ab < 2 ? Ub + (Wb - Ub) * (2 / 3 - ab) * 6 : Ub, Ib[Hb] = 255 * Tb;
-      return Ib
-    }, ab.hsl.hsv = function(bb) {
-      const cb = bb[0];
-      let sb = bb[1] / 100,
-        kb = bb[2] / 100,
-        Wb = sb;
-      const ab = Math.max(kb, .01);
-      kb *= 2, sb *= kb <= 1 ? kb : 2 - kb, Wb *= ab <= 1 ? ab : 2 - ab;
-      return [cb, 100 * (0 === kb ? 2 * Wb / (ab + Wb) : 2 * sb / (kb + sb)), 100 * ((kb + sb) / 2)]
-    }, ab.hsv.rgb = function(bb) {
-      const cb = bb[0] / 60,
-        sb = bb[1] / 100;
-      let kb = bb[2] / 100;
-      const Wb = Math.floor(cb) % 6,
-        ab = cb - Math.floor(cb),
-        Tb = 255 * kb * (1 - sb),
-        Ub = 255 * kb * (1 - sb * ab),
-        Ib = 255 * kb * (1 - sb * (1 - ab));
-      switch (kb *= 255, Wb) {
+      var Eb, Yb;
+      return Ub
+    }, Tb.keyword.rgb = function(bb) {
+      return Ab[bb]
+    }, Tb.rgb.xyz = function(bb) {
+      let ab = bb[0] / 255,
+        Ub = bb[1] / 255,
+        Ab = bb[2] / 255;
+      ab = ab > .04045 ? ((ab + .055) / 1.055) ** 2.4 : ab / 12.92, Ub = Ub > .04045 ? ((Ub + .055) / 1.055) ** 2.4 : Ub / 12.92, Ab = Ab > .04045 ? ((Ab + .055) / 1.055) ** 2.4 : Ab / 12.92;
+      return [100 * (.4124 * ab + .3576 * Ub + .1805 * Ab), 100 * (.2126 * ab + .7152 * Ub + .0722 * Ab), 100 * (.0193 * ab + .1192 * Ub + .9505 * Ab)]
+    }, Tb.rgb.lab = function(bb) {
+      const ab = Tb.rgb.xyz(bb);
+      let Ub = ab[0],
+        Ab = ab[1],
+        Mb = ab[2];
+      Ub /= 95.047, Ab /= 100, Mb /= 108.883, Ub = Ub > .008856 ? Ub ** (1 / 3) : 7.787 * Ub + 16 / 116, Ab = Ab > .008856 ? Ab ** (1 / 3) : 7.787 * Ab + 16 / 116, Mb = Mb > .008856 ? Mb ** (1 / 3) : 7.787 * Mb + 16 / 116;
+      return [116 * Ab - 16, 500 * (Ub - Ab), 200 * (Ab - Mb)]
+    }, Tb.hsl.rgb = function(bb) {
+      const ab = bb[0] / 360,
+        Ub = bb[1] / 100,
+        Ab = bb[2] / 100;
+      let Mb, Tb, Eb;
+      if (0 === Ub) return Eb = 255 * Ab, [Eb, Eb, Eb];
+      Mb = Ab < .5 ? Ab * (1 + Ub) : Ab + Ub - Ab * Ub;
+      const Yb = 2 * Ab - Mb,
+        Bb = [0, 0, 0];
+      for (let eb = 0; eb < 3; eb++) Tb = ab + 1 / 3 * -(eb - 1), Tb < 0 && Tb++, Tb > 1 && Tb--, Eb = 6 * Tb < 1 ? Yb + 6 * (Mb - Yb) * Tb : 2 * Tb < 1 ? Mb : 3 * Tb < 2 ? Yb + (Mb - Yb) * (2 / 3 - Tb) * 6 : Yb, Bb[eb] = 255 * Eb;
+      return Bb
+    }, Tb.hsl.hsv = function(bb) {
+      const ab = bb[0];
+      let Ub = bb[1] / 100,
+        Ab = bb[2] / 100,
+        Mb = Ub;
+      const Tb = Math.max(Ab, .01);
+      Ab *= 2, Ub *= Ab <= 1 ? Ab : 2 - Ab, Mb *= Tb <= 1 ? Tb : 2 - Tb;
+      return [ab, 100 * (0 === Ab ? 2 * Mb / (Tb + Mb) : 2 * Ub / (Ab + Ub)), 100 * ((Ab + Ub) / 2)]
+    }, Tb.hsv.rgb = function(bb) {
+      const ab = bb[0] / 60,
+        Ub = bb[1] / 100;
+      let Ab = bb[2] / 100;
+      const Mb = Math.floor(ab) % 6,
+        Tb = ab - Math.floor(ab),
+        Eb = 255 * Ab * (1 - Ub),
+        Yb = 255 * Ab * (1 - Ub * Tb),
+        Bb = 255 * Ab * (1 - Ub * (1 - Tb));
+      switch (Ab *= 255, Mb) {
         case 0:
-          return [kb, Ib, Tb];
+          return [Ab, Bb, Eb];
         case 1:
-          return [Ub, kb, Tb];
+          return [Yb, Ab, Eb];
         case 2:
-          return [Tb, kb, Ib];
+          return [Eb, Ab, Bb];
         case 3:
-          return [Tb, Ub, kb];
+          return [Eb, Yb, Ab];
         case 4:
-          return [Ib, Tb, kb];
+          return [Bb, Eb, Ab];
         case 5:
-          return [kb, Tb, Ub]
+          return [Ab, Eb, Yb]
       }
-    }, ab.hsv.hsl = function(bb) {
-      const cb = bb[0],
-        sb = bb[1] / 100,
-        kb = bb[2] / 100,
-        Wb = Math.max(kb, .01);
-      let ab, Tb;
-      Tb = (2 - sb) * kb;
-      const Ub = (2 - sb) * Wb;
-      return ab = sb * Wb, ab /= Ub <= 1 ? Ub : 2 - Ub, ab = ab || 0, Tb /= 2, [cb, 100 * ab, 100 * Tb]
-    }, ab.hwb.rgb = function(bb) {
-      const cb = bb[0] / 360;
-      let sb = bb[1] / 100,
-        kb = bb[2] / 100;
-      const Wb = sb + kb;
-      let ab;
-      Wb > 1 && (sb /= Wb, kb /= Wb);
-      const Tb = Math.floor(6 * cb),
-        Ub = 1 - kb;
-      ab = 6 * cb - Tb, 0 !== (1 & Tb) && (ab = 1 - ab);
-      const Ib = sb + ab * (Ub - sb);
-      let Hb, fb, Mb;
-      switch (Tb) {
+    }, Tb.hsv.hsl = function(bb) {
+      const ab = bb[0],
+        Ub = bb[1] / 100,
+        Ab = bb[2] / 100,
+        Mb = Math.max(Ab, .01);
+      let Tb, Eb;
+      Eb = (2 - Ub) * Ab;
+      const Yb = (2 - Ub) * Mb;
+      return Tb = Ub * Mb, Tb /= Yb <= 1 ? Yb : 2 - Yb, Tb = Tb || 0, Eb /= 2, [ab, 100 * Tb, 100 * Eb]
+    }, Tb.hwb.rgb = function(bb) {
+      const ab = bb[0] / 360;
+      let Ub = bb[1] / 100,
+        Ab = bb[2] / 100;
+      const Mb = Ub + Ab;
+      let Tb;
+      Mb > 1 && (Ub /= Mb, Ab /= Mb);
+      const Eb = Math.floor(6 * ab),
+        Yb = 1 - Ab;
+      Tb = 6 * ab - Eb, 0 !== (1 & Eb) && (Tb = 1 - Tb);
+      const Bb = Ub + Tb * (Yb - Ub);
+      let eb, vb, Lb;
+      switch (Eb) {
         default:
         case 6:
         case 0:
-          Hb = Ub, fb = Ib, Mb = sb;
+          eb = Yb, vb = Bb, Lb = Ub;
           break;
         case 1:
-          Hb = Ib, fb = Ub, Mb = sb;
+          eb = Bb, vb = Yb, Lb = Ub;
           break;
         case 2:
-          Hb = sb, fb = Ub, Mb = Ib;
+          eb = Ub, vb = Yb, Lb = Bb;
           break;
         case 3:
-          Hb = sb, fb = Ib, Mb = Ub;
+          eb = Ub, vb = Bb, Lb = Yb;
           break;
         case 4:
-          Hb = Ib, fb = sb, Mb = Ub;
+          eb = Bb, vb = Ub, Lb = Yb;
           break;
         case 5:
-          Hb = Ub, fb = sb, Mb = Ib
+          eb = Yb, vb = Ub, Lb = Bb
       }
-      return [255 * Hb, 255 * fb, 255 * Mb]
-    }, ab.cmyk.rgb = function(bb) {
-      const cb = bb[0] / 100,
-        sb = bb[1] / 100,
-        kb = bb[2] / 100,
-        Wb = bb[3] / 100;
-      return [255 * (1 - Math.min(1, cb * (1 - Wb) + Wb)), 255 * (1 - Math.min(1, sb * (1 - Wb) + Wb)), 255 * (1 - Math.min(1, kb * (1 - Wb) + Wb))]
-    }, ab.xyz.rgb = function(bb) {
-      const cb = bb[0] / 100,
-        sb = bb[1] / 100,
-        kb = bb[2] / 100;
-      let Wb, ab, Tb;
-      return Wb = 3.2406 * cb + -1.5372 * sb + -.4986 * kb, ab = -.9689 * cb + 1.8758 * sb + .0415 * kb, Tb = .0557 * cb + -.204 * sb + 1.057 * kb, Wb = Wb > .0031308 ? 1.055 * Wb ** (1 / 2.4) - .055 : 12.92 * Wb, ab = ab > .0031308 ? 1.055 * ab ** (1 / 2.4) - .055 : 12.92 * ab, Tb = Tb > .0031308 ? 1.055 * Tb ** (1 / 2.4) - .055 : 12.92 * Tb, Wb = Math.min(Math.max(0, Wb), 1), ab = Math.min(Math.max(0, ab), 1), Tb = Math.min(Math.max(0, Tb), 1), [255 * Wb, 255 * ab, 255 * Tb]
-    }, ab.xyz.lab = function(bb) {
-      let cb = bb[0],
-        sb = bb[1],
-        kb = bb[2];
-      cb /= 95.047, sb /= 100, kb /= 108.883, cb = cb > .008856 ? cb ** (1 / 3) : 7.787 * cb + 16 / 116, sb = sb > .008856 ? sb ** (1 / 3) : 7.787 * sb + 16 / 116, kb = kb > .008856 ? kb ** (1 / 3) : 7.787 * kb + 16 / 116;
-      return [116 * sb - 16, 500 * (cb - sb), 200 * (sb - kb)]
-    }, ab.lab.xyz = function(bb) {
-      let cb, sb, kb;
-      sb = (bb[0] + 16) / 116, cb = bb[1] / 500 + sb, kb = sb - bb[2] / 200;
-      const Wb = sb ** 3,
-        ab = cb ** 3,
-        Tb = kb ** 3;
-      return sb = Wb > .008856 ? Wb : (sb - 16 / 116) / 7.787, cb = ab > .008856 ? ab : (cb - 16 / 116) / 7.787, kb = Tb > .008856 ? Tb : (kb - 16 / 116) / 7.787, cb *= 95.047, sb *= 100, kb *= 108.883, [cb, sb, kb]
-    }, ab.lab.lch = function(bb) {
-      const cb = bb[0],
-        sb = bb[1],
-        kb = bb[2];
-      let Wb;
-      Wb = 360 * Math.atan2(kb, sb) / 2 / Math.PI, Wb < 0 && (Wb += 360);
-      return [cb, Math.sqrt(sb * sb + kb * kb), Wb]
-    }, ab.lch.lab = function(bb) {
-      const cb = bb[0],
-        sb = bb[1],
-        kb = bb[2] / 360 * 2 * Math.PI;
-      return [cb, sb * Math.cos(kb), sb * Math.sin(kb)]
-    }, ab.rgb.ansi16 = function(bb) {
-      let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const [sb, kb, Wb] = bb;
-      let Tb = null === cb ? ab.rgb.hsv(bb)[2] : cb;
-      if (Tb = Math.round(Tb / 50), 0 === Tb) return 30;
-      let Ub = 30 + (Math.round(Wb / 255) << 2 | Math.round(kb / 255) << 1 | Math.round(sb / 255));
-      return 2 === Tb && (Ub += 60), Ub
-    }, ab.hsv.ansi16 = function(bb) {
-      return ab.rgb.ansi16(ab.hsv.rgb(bb), bb[2])
-    }, ab.rgb.ansi256 = function(bb) {
-      const cb = bb[0],
-        sb = bb[1],
-        kb = bb[2];
-      if (cb === sb && sb === kb) return cb < 8 ? 16 : cb > 248 ? 231 : Math.round((cb - 8) / 247 * 24) + 232;
-      return 16 + 36 * Math.round(cb / 255 * 5) + 6 * Math.round(sb / 255 * 5) + Math.round(kb / 255 * 5)
-    }, ab.ansi16.rgb = function(bb) {
-      let cb = bb % 10;
-      if (0 === cb || 7 === cb) return bb > 50 && (cb += 3.5), cb = cb / 10.5 * 255, [cb, cb, cb];
-      const sb = .5 * (1 + ~~(bb > 50));
-      return [(1 & cb) * sb * 255, (cb >> 1 & 1) * sb * 255, (cb >> 2 & 1) * sb * 255]
-    }, ab.ansi256.rgb = function(bb) {
+      return [255 * eb, 255 * vb, 255 * Lb]
+    }, Tb.cmyk.rgb = function(bb) {
+      const ab = bb[0] / 100,
+        Ub = bb[1] / 100,
+        Ab = bb[2] / 100,
+        Mb = bb[3] / 100;
+      return [255 * (1 - Math.min(1, ab * (1 - Mb) + Mb)), 255 * (1 - Math.min(1, Ub * (1 - Mb) + Mb)), 255 * (1 - Math.min(1, Ab * (1 - Mb) + Mb))]
+    }, Tb.xyz.rgb = function(bb) {
+      const ab = bb[0] / 100,
+        Ub = bb[1] / 100,
+        Ab = bb[2] / 100;
+      let Mb, Tb, Eb;
+      return Mb = 3.2406 * ab + -1.5372 * Ub + -.4986 * Ab, Tb = -.9689 * ab + 1.8758 * Ub + .0415 * Ab, Eb = .0557 * ab + -.204 * Ub + 1.057 * Ab, Mb = Mb > .0031308 ? 1.055 * Mb ** (1 / 2.4) - .055 : 12.92 * Mb, Tb = Tb > .0031308 ? 1.055 * Tb ** (1 / 2.4) - .055 : 12.92 * Tb, Eb = Eb > .0031308 ? 1.055 * Eb ** (1 / 2.4) - .055 : 12.92 * Eb, Mb = Math.min(Math.max(0, Mb), 1), Tb = Math.min(Math.max(0, Tb), 1), Eb = Math.min(Math.max(0, Eb), 1), [255 * Mb, 255 * Tb, 255 * Eb]
+    }, Tb.xyz.lab = function(bb) {
+      let ab = bb[0],
+        Ub = bb[1],
+        Ab = bb[2];
+      ab /= 95.047, Ub /= 100, Ab /= 108.883, ab = ab > .008856 ? ab ** (1 / 3) : 7.787 * ab + 16 / 116, Ub = Ub > .008856 ? Ub ** (1 / 3) : 7.787 * Ub + 16 / 116, Ab = Ab > .008856 ? Ab ** (1 / 3) : 7.787 * Ab + 16 / 116;
+      return [116 * Ub - 16, 500 * (ab - Ub), 200 * (Ub - Ab)]
+    }, Tb.lab.xyz = function(bb) {
+      let ab, Ub, Ab;
+      Ub = (bb[0] + 16) / 116, ab = bb[1] / 500 + Ub, Ab = Ub - bb[2] / 200;
+      const Mb = Ub ** 3,
+        Tb = ab ** 3,
+        Eb = Ab ** 3;
+      return Ub = Mb > .008856 ? Mb : (Ub - 16 / 116) / 7.787, ab = Tb > .008856 ? Tb : (ab - 16 / 116) / 7.787, Ab = Eb > .008856 ? Eb : (Ab - 16 / 116) / 7.787, ab *= 95.047, Ub *= 100, Ab *= 108.883, [ab, Ub, Ab]
+    }, Tb.lab.lch = function(bb) {
+      const ab = bb[0],
+        Ub = bb[1],
+        Ab = bb[2];
+      let Mb;
+      Mb = 360 * Math.atan2(Ab, Ub) / 2 / Math.PI, Mb < 0 && (Mb += 360);
+      return [ab, Math.sqrt(Ub * Ub + Ab * Ab), Mb]
+    }, Tb.lch.lab = function(bb) {
+      const ab = bb[0],
+        Ub = bb[1],
+        Ab = bb[2] / 360 * 2 * Math.PI;
+      return [ab, Ub * Math.cos(Ab), Ub * Math.sin(Ab)]
+    }, Tb.rgb.ansi16 = function(bb) {
+      let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const [Ub, Ab, Mb] = bb;
+      let Eb = null === ab ? Tb.rgb.hsv(bb)[2] : ab;
+      if (Eb = Math.round(Eb / 50), 0 === Eb) return 30;
+      let Yb = 30 + (Math.round(Mb / 255) << 2 | Math.round(Ab / 255) << 1 | Math.round(Ub / 255));
+      return 2 === Eb && (Yb += 60), Yb
+    }, Tb.hsv.ansi16 = function(bb) {
+      return Tb.rgb.ansi16(Tb.hsv.rgb(bb), bb[2])
+    }, Tb.rgb.ansi256 = function(bb) {
+      const ab = bb[0],
+        Ub = bb[1],
+        Ab = bb[2];
+      if (ab === Ub && Ub === Ab) return ab < 8 ? 16 : ab > 248 ? 231 : Math.round((ab - 8) / 247 * 24) + 232;
+      return 16 + 36 * Math.round(ab / 255 * 5) + 6 * Math.round(Ub / 255 * 5) + Math.round(Ab / 255 * 5)
+    }, Tb.ansi16.rgb = function(bb) {
+      let ab = bb % 10;
+      if (0 === ab || 7 === ab) return bb > 50 && (ab += 3.5), ab = ab / 10.5 * 255, [ab, ab, ab];
+      const Ub = .5 * (1 + ~~(bb > 50));
+      return [(1 & ab) * Ub * 255, (ab >> 1 & 1) * Ub * 255, (ab >> 2 & 1) * Ub * 255]
+    }, Tb.ansi256.rgb = function(bb) {
       if (bb >= 232) {
-        const cb = 10 * (bb - 232) + 8;
-        return [cb, cb, cb]
+        const ab = 10 * (bb - 232) + 8;
+        return [ab, ab, ab]
       }
-      let cb;
+      let ab;
       bb -= 16;
-      return [Math.floor(bb / 36) / 5 * 255, Math.floor((cb = bb % 36) / 6) / 5 * 255, cb % 6 / 5 * 255]
-    }, ab.rgb.hex = function(bb) {
-      const cb = (((255 & Math.round(bb[0])) << 16) + ((255 & Math.round(bb[1])) << 8) + (255 & Math.round(bb[2]))).toString(16).toUpperCase();
-      return "000000".substring(cb.length) + cb
-    }, ab.hex.rgb = function(bb) {
-      const cb = bb.toString(16).match(/[a-f0-9]{6}|[a-f0-9]{3}/i);
-      if (!cb) return [0, 0, 0];
-      let sb = cb[0];
-      3 === cb[0].length && (sb = sb.split("").map((bb => bb + bb)).join(""));
-      const kb = parseInt(sb, 16);
-      return [kb >> 16 & 255, kb >> 8 & 255, 255 & kb]
-    }, ab.rgb.hcg = function(bb) {
-      const cb = bb[0] / 255,
-        sb = bb[1] / 255,
-        kb = bb[2] / 255,
-        Wb = Math.max(Math.max(cb, sb), kb),
-        ab = Math.min(Math.min(cb, sb), kb),
-        Tb = Wb - ab;
-      let Ub, Ib;
-      return Ub = Tb < 1 ? ab / (1 - Tb) : 0, Ib = Tb <= 0 ? 0 : Wb === cb ? (sb - kb) / Tb % 6 : Wb === sb ? 2 + (kb - cb) / Tb : 4 + (cb - sb) / Tb, Ib /= 6, Ib %= 1, [360 * Ib, 100 * Tb, 100 * Ub]
-    }, ab.hsl.hcg = function(bb) {
-      const cb = bb[1] / 100,
-        sb = bb[2] / 100,
-        kb = sb < .5 ? 2 * cb * sb : 2 * cb * (1 - sb);
-      let Wb = 0;
-      return kb < 1 && (Wb = (sb - .5 * kb) / (1 - kb)), [bb[0], 100 * kb, 100 * Wb]
-    }, ab.hsv.hcg = function(bb) {
-      const cb = bb[1] / 100,
-        sb = bb[2] / 100,
-        kb = cb * sb;
-      let Wb = 0;
-      return kb < 1 && (Wb = (sb - kb) / (1 - kb)), [bb[0], 100 * kb, 100 * Wb]
-    }, ab.hcg.rgb = function(bb) {
-      const cb = bb[0] / 360,
-        sb = bb[1] / 100,
-        kb = bb[2] / 100;
-      if (0 === sb) return [255 * kb, 255 * kb, 255 * kb];
-      const Wb = [0, 0, 0],
-        ab = cb % 1 * 6,
-        Tb = ab % 1,
-        Ub = 1 - Tb;
-      let Ib = 0;
-      switch (Math.floor(ab)) {
+      return [Math.floor(bb / 36) / 5 * 255, Math.floor((ab = bb % 36) / 6) / 5 * 255, ab % 6 / 5 * 255]
+    }, Tb.rgb.hex = function(bb) {
+      const ab = (((255 & Math.round(bb[0])) << 16) + ((255 & Math.round(bb[1])) << 8) + (255 & Math.round(bb[2]))).toString(16).toUpperCase();
+      return "000000".substring(ab.length) + ab
+    }, Tb.hex.rgb = function(bb) {
+      const ab = bb.toString(16).match(/[a-f0-9]{6}|[a-f0-9]{3}/i);
+      if (!ab) return [0, 0, 0];
+      let Ub = ab[0];
+      3 === ab[0].length && (Ub = Ub.split("").map((bb => bb + bb)).join(""));
+      const Ab = parseInt(Ub, 16);
+      return [Ab >> 16 & 255, Ab >> 8 & 255, 255 & Ab]
+    }, Tb.rgb.hcg = function(bb) {
+      const ab = bb[0] / 255,
+        Ub = bb[1] / 255,
+        Ab = bb[2] / 255,
+        Mb = Math.max(Math.max(ab, Ub), Ab),
+        Tb = Math.min(Math.min(ab, Ub), Ab),
+        Eb = Mb - Tb;
+      let Yb, Bb;
+      return Yb = Eb < 1 ? Tb / (1 - Eb) : 0, Bb = Eb <= 0 ? 0 : Mb === ab ? (Ub - Ab) / Eb % 6 : Mb === Ub ? 2 + (Ab - ab) / Eb : 4 + (ab - Ub) / Eb, Bb /= 6, Bb %= 1, [360 * Bb, 100 * Eb, 100 * Yb]
+    }, Tb.hsl.hcg = function(bb) {
+      const ab = bb[1] / 100,
+        Ub = bb[2] / 100,
+        Ab = Ub < .5 ? 2 * ab * Ub : 2 * ab * (1 - Ub);
+      let Mb = 0;
+      return Ab < 1 && (Mb = (Ub - .5 * Ab) / (1 - Ab)), [bb[0], 100 * Ab, 100 * Mb]
+    }, Tb.hsv.hcg = function(bb) {
+      const ab = bb[1] / 100,
+        Ub = bb[2] / 100,
+        Ab = ab * Ub;
+      let Mb = 0;
+      return Ab < 1 && (Mb = (Ub - Ab) / (1 - Ab)), [bb[0], 100 * Ab, 100 * Mb]
+    }, Tb.hcg.rgb = function(bb) {
+      const ab = bb[0] / 360,
+        Ub = bb[1] / 100,
+        Ab = bb[2] / 100;
+      if (0 === Ub) return [255 * Ab, 255 * Ab, 255 * Ab];
+      const Mb = [0, 0, 0],
+        Tb = ab % 1 * 6,
+        Eb = Tb % 1,
+        Yb = 1 - Eb;
+      let Bb = 0;
+      switch (Math.floor(Tb)) {
         case 0:
-          Wb[0] = 1, Wb[1] = Tb, Wb[2] = 0;
+          Mb[0] = 1, Mb[1] = Eb, Mb[2] = 0;
           break;
         case 1:
-          Wb[0] = Ub, Wb[1] = 1, Wb[2] = 0;
+          Mb[0] = Yb, Mb[1] = 1, Mb[2] = 0;
           break;
         case 2:
-          Wb[0] = 0, Wb[1] = 1, Wb[2] = Tb;
+          Mb[0] = 0, Mb[1] = 1, Mb[2] = Eb;
           break;
         case 3:
-          Wb[0] = 0, Wb[1] = Ub, Wb[2] = 1;
+          Mb[0] = 0, Mb[1] = Yb, Mb[2] = 1;
           break;
         case 4:
-          Wb[0] = Tb, Wb[1] = 0, Wb[2] = 1;
+          Mb[0] = Eb, Mb[1] = 0, Mb[2] = 1;
           break;
         default:
-          Wb[0] = 1, Wb[1] = 0, Wb[2] = Ub
+          Mb[0] = 1, Mb[1] = 0, Mb[2] = Yb
       }
-      return Ib = (1 - sb) * kb, [255 * (sb * Wb[0] + Ib), 255 * (sb * Wb[1] + Ib), 255 * (sb * Wb[2] + Ib)]
-    }, ab.hcg.hsv = function(bb) {
-      const cb = bb[1] / 100,
-        sb = cb + bb[2] / 100 * (1 - cb);
-      let kb = 0;
-      return sb > 0 && (kb = cb / sb), [bb[0], 100 * kb, 100 * sb]
-    }, ab.hcg.hsl = function(bb) {
-      const cb = bb[1] / 100,
-        sb = bb[2] / 100 * (1 - cb) + .5 * cb;
-      let kb = 0;
-      return sb > 0 && sb < .5 ? kb = cb / (2 * sb) : sb >= .5 && sb < 1 && (kb = cb / (2 * (1 - sb))), [bb[0], 100 * kb, 100 * sb]
-    }, ab.hcg.hwb = function(bb) {
-      const cb = bb[1] / 100,
-        sb = cb + bb[2] / 100 * (1 - cb);
-      return [bb[0], 100 * (sb - cb), 100 * (1 - sb)]
-    }, ab.hwb.hcg = function(bb) {
-      const cb = bb[1] / 100,
-        sb = 1 - bb[2] / 100,
-        kb = sb - cb;
-      let Wb = 0;
-      return kb < 1 && (Wb = (sb - kb) / (1 - kb)), [bb[0], 100 * kb, 100 * Wb]
-    }, ab.apple.rgb = function(bb) {
+      return Bb = (1 - Ub) * Ab, [255 * (Ub * Mb[0] + Bb), 255 * (Ub * Mb[1] + Bb), 255 * (Ub * Mb[2] + Bb)]
+    }, Tb.hcg.hsv = function(bb) {
+      const ab = bb[1] / 100,
+        Ub = ab + bb[2] / 100 * (1 - ab);
+      let Ab = 0;
+      return Ub > 0 && (Ab = ab / Ub), [bb[0], 100 * Ab, 100 * Ub]
+    }, Tb.hcg.hsl = function(bb) {
+      const ab = bb[1] / 100,
+        Ub = bb[2] / 100 * (1 - ab) + .5 * ab;
+      let Ab = 0;
+      return Ub > 0 && Ub < .5 ? Ab = ab / (2 * Ub) : Ub >= .5 && Ub < 1 && (Ab = ab / (2 * (1 - Ub))), [bb[0], 100 * Ab, 100 * Ub]
+    }, Tb.hcg.hwb = function(bb) {
+      const ab = bb[1] / 100,
+        Ub = ab + bb[2] / 100 * (1 - ab);
+      return [bb[0], 100 * (Ub - ab), 100 * (1 - Ub)]
+    }, Tb.hwb.hcg = function(bb) {
+      const ab = bb[1] / 100,
+        Ub = 1 - bb[2] / 100,
+        Ab = Ub - ab;
+      let Mb = 0;
+      return Ab < 1 && (Mb = (Ub - Ab) / (1 - Ab)), [bb[0], 100 * Ab, 100 * Mb]
+    }, Tb.apple.rgb = function(bb) {
       return [bb[0] / 65535 * 255, bb[1] / 65535 * 255, bb[2] / 65535 * 255]
-    }, ab.rgb.apple = function(bb) {
+    }, Tb.rgb.apple = function(bb) {
       return [bb[0] / 255 * 65535, bb[1] / 255 * 65535, bb[2] / 255 * 65535]
-    }, ab.gray.rgb = function(bb) {
+    }, Tb.gray.rgb = function(bb) {
       return [bb[0] / 100 * 255, bb[0] / 100 * 255, bb[0] / 100 * 255]
-    }, ab.gray.hsl = function(bb) {
+    }, Tb.gray.hsl = function(bb) {
       return [0, 0, bb[0]]
-    }, ab.gray.hsv = ab.gray.hsl, ab.gray.hwb = function(bb) {
+    }, Tb.gray.hsv = Tb.gray.hsl, Tb.gray.hwb = function(bb) {
       return [0, 100, bb[0]]
-    }, ab.gray.cmyk = function(bb) {
+    }, Tb.gray.cmyk = function(bb) {
       return [0, 0, 0, bb[0]]
-    }, ab.gray.lab = function(bb) {
+    }, Tb.gray.lab = function(bb) {
       return [bb[0], 0, 0]
-    }, ab.gray.hex = function(bb) {
-      const cb = 255 & Math.round(bb[0] / 100 * 255),
-        sb = ((cb << 16) + (cb << 8) + cb).toString(16).toUpperCase();
-      return "000000".substring(sb.length) + sb
-    }, ab.rgb.gray = function(bb) {
+    }, Tb.gray.hex = function(bb) {
+      const ab = 255 & Math.round(bb[0] / 100 * 255),
+        Ub = ((ab << 16) + (ab << 8) + ab).toString(16).toUpperCase();
+      return "000000".substring(Ub.length) + Ub
+    }, Tb.rgb.gray = function(bb) {
       return [(bb[0] + bb[1] + bb[2]) / 3 / 255 * 100]
     }
   },
-  36304: (bb, cb, sb) => {
-    const kb = sb(36308),
-      Wb = sb(36320),
-      ab = {};
-    Object.keys(kb).forEach((bb => {
-      ab[bb] = {}, Object.defineProperty(ab[bb], "channels", {
-        value: kb[bb].channels
-      }), Object.defineProperty(ab[bb], "labels", {
-        value: kb[bb].labels
+  36062: (bb, ab, Ub) => {
+    const Ab = Ub(36067),
+      Mb = Ub(36079),
+      Tb = {};
+    Object.keys(Ab).forEach((bb => {
+      Tb[bb] = {}, Object.defineProperty(Tb[bb], "channels", {
+        value: Ab[bb].channels
+      }), Object.defineProperty(Tb[bb], "labels", {
+        value: Ab[bb].labels
       });
-      const cb = Wb(bb);
-      Object.keys(cb).forEach((sb => {
-        const kb = cb[sb];
-        ab[bb][sb] = function(bb) {
-          const cb = function() {
-            for (var cb = arguments.length, sb = new Array(cb), kb = 0; kb < cb; kb++) sb[kb] = arguments[kb];
-            const Wb = sb[0];
-            if (void 0 === Wb || null === Wb) return Wb;
-            Wb.length > 1 && (sb = Wb);
-            const ab = bb(sb);
-            if ("object" === typeof ab)
-              for (let bb = ab.length, Tb = 0; Tb < bb; Tb++) ab[Tb] = Math.round(ab[Tb]);
-            return ab
+      const ab = Mb(bb);
+      Object.keys(ab).forEach((Ub => {
+        const Ab = ab[Ub];
+        Tb[bb][Ub] = function(bb) {
+          const ab = function() {
+            for (var ab = arguments.length, Ub = new Array(ab), Ab = 0; Ab < ab; Ab++) Ub[Ab] = arguments[Ab];
+            const Mb = Ub[0];
+            if (void 0 === Mb || null === Mb) return Mb;
+            Mb.length > 1 && (Ub = Mb);
+            const Tb = bb(Ub);
+            if ("object" === typeof Tb)
+              for (let bb = Tb.length, Eb = 0; Eb < bb; Eb++) Tb[Eb] = Math.round(Tb[Eb]);
+            return Tb
           };
-          return "conversion" in bb && (cb.conversion = bb.conversion), cb
-        }(kb), ab[bb][sb].raw = function(bb) {
-          const cb = function() {
-            for (var cb = arguments.length, sb = new Array(cb), kb = 0; kb < cb; kb++) sb[kb] = arguments[kb];
-            const Wb = sb[0];
-            return void 0 === Wb || null === Wb ? Wb : (Wb.length > 1 && (sb = Wb), bb(sb))
+          return "conversion" in bb && (ab.conversion = bb.conversion), ab
+        }(Ab), Tb[bb][Ub].raw = function(bb) {
+          const ab = function() {
+            for (var ab = arguments.length, Ub = new Array(ab), Ab = 0; Ab < ab; Ab++) Ub[Ab] = arguments[Ab];
+            const Mb = Ub[0];
+            return void 0 === Mb || null === Mb ? Mb : (Mb.length > 1 && (Ub = Mb), bb(Ub))
           };
-          return "conversion" in bb && (cb.conversion = bb.conversion), cb
-        }(kb)
+          return "conversion" in bb && (ab.conversion = bb.conversion), ab
+        }(Ab)
       }))
-    })), bb.exports = ab
+    })), bb.exports = Tb
   },
-  36320: (bb, cb, sb) => {
-    const kb = sb(36308);
+  36079: (bb, ab, Ub) => {
+    const Ab = Ub(36067);
 
-    function Wb(bb) {
-      const cb = function() {
+    function Mb(bb) {
+      const ab = function() {
           const bb = {},
-            cb = Object.keys(kb);
-          for (let sb = cb.length, kb = 0; kb < sb; kb++) bb[cb[kb]] = {
+            ab = Object.keys(Ab);
+          for (let Ub = ab.length, Ab = 0; Ab < Ub; Ab++) bb[ab[Ab]] = {
             distance: -1,
             parent: null
           };
           return bb
         }(),
-        sb = [bb];
-      for (cb[bb].distance = 0; sb.length;) {
-        const bb = sb.pop(),
-          Wb = Object.keys(kb[bb]);
-        for (let kb = Wb.length, ab = 0; ab < kb; ab++) {
-          const kb = Wb[ab],
-            Tb = cb[kb]; - 1 === Tb.distance && (Tb.distance = cb[bb].distance + 1, Tb.parent = bb, sb.unshift(kb))
+        Ub = [bb];
+      for (ab[bb].distance = 0; Ub.length;) {
+        const bb = Ub.pop(),
+          Mb = Object.keys(Ab[bb]);
+        for (let Ab = Mb.length, Tb = 0; Tb < Ab; Tb++) {
+          const Ab = Mb[Tb],
+            Eb = ab[Ab]; - 1 === Eb.distance && (Eb.distance = ab[bb].distance + 1, Eb.parent = bb, Ub.unshift(Ab))
         }
       }
-      return cb
+      return ab
     }
 
-    function ab(bb, cb) {
-      return function(sb) {
-        return cb(bb(sb))
+    function Tb(bb, ab) {
+      return function(Ub) {
+        return ab(bb(Ub))
       }
     }
 
-    function Tb(bb, cb) {
-      const sb = [cb[bb].parent, bb];
-      let Wb = kb[cb[bb].parent][bb],
-        Tb = cb[bb].parent;
-      for (; cb[Tb].parent;) sb.unshift(cb[Tb].parent), Wb = ab(kb[cb[Tb].parent][Tb], Wb), Tb = cb[Tb].parent;
-      return Wb.conversion = sb, Wb
+    function Eb(bb, ab) {
+      const Ub = [ab[bb].parent, bb];
+      let Mb = Ab[ab[bb].parent][bb],
+        Eb = ab[bb].parent;
+      for (; ab[Eb].parent;) Ub.unshift(ab[Eb].parent), Mb = Tb(Ab[ab[Eb].parent][Eb], Mb), Eb = ab[Eb].parent;
+      return Mb.conversion = Ub, Mb
     }
     bb.exports = function(bb) {
-      const cb = Wb(bb),
-        sb = {},
-        kb = Object.keys(cb);
-      for (let Wb = kb.length, ab = 0; ab < Wb; ab++) {
-        const bb = kb[ab];
-        null !== cb[bb].parent && (sb[bb] = Tb(bb, cb))
+      const ab = Mb(bb),
+        Ub = {},
+        Ab = Object.keys(ab);
+      for (let Mb = Ab.length, Tb = 0; Tb < Mb; Tb++) {
+        const bb = Ab[Tb];
+        null !== ab[bb].parent && (Ub[bb] = Eb(bb, ab))
       }
-      return sb
+      return Ub
     }
   },
-  36314: bb => {
+  36071: bb => {
     bb.exports = {
       aliceblue: [240, 248, 255],
       antiquewhite: [250, 235, 215],
@@ -1137,24 +1137,24 @@ export const modules = {
       yellowgreen: [154, 205, 50]
     }
   },
-  36287: (bb, cb, sb) => {
-    var kb = sb(36295),
-      Wb = Array.prototype.concat,
-      ab = Array.prototype.slice,
-      Tb = bb.exports = function(bb) {
-        for (var cb = [], sb = 0, Tb = bb.length; sb < Tb; sb++) {
-          var Ub = bb[sb];
-          kb(Ub) ? cb = Wb.call(cb, ab.call(Ub)) : cb.push(Ub)
+  36054: (bb, ab, Ub) => {
+    var Ab = Ub(36059),
+      Mb = Array.prototype.concat,
+      Tb = Array.prototype.slice,
+      Eb = bb.exports = function(bb) {
+        for (var ab = [], Ub = 0, Eb = bb.length; Ub < Eb; Ub++) {
+          var Yb = bb[Ub];
+          Ab(Yb) ? ab = Mb.call(ab, Tb.call(Yb)) : ab.push(Yb)
         }
-        return cb
+        return ab
       };
-    Tb.wrap = function(bb) {
+    Eb.wrap = function(bb) {
       return function() {
-        return bb(Tb(arguments))
+        return bb(Eb(arguments))
       }
     }
   },
-  36295: bb => {
+  36059: bb => {
     bb.exports = function(bb) {
       return !(!bb || "string" === typeof bb) && (bb instanceof Array || Array.isArray(bb) || bb.length >= 0 && (bb.splice instanceof Function || Object.getOwnPropertyDescriptor(bb, bb.length - 1) && "String" !== bb.constructor.name))
     }

@@ -1,69 +1,69 @@
 export const id = 18;
 export const ids = [18];
 export const modules = {
-  39010: (bb, cb, sb) => {
-    sb.r(cb), sb.d(cb, {
-      default: () => Wb
+  38657: (bb, ab, Ub) => {
+    Ub.r(ab), Ub.d(ab, {
+      default: () => Mb
     });
-    const kb = .4,
-      Wb = function(bb, cb, sb, Wb) {
-        let ab, {
-            localPlayerId: Tb
-          } = Wb,
-          Ub = !1,
-          Ib = null,
-          Hb = null,
-          fb = null,
-          Mb = 1,
-          Xb = null,
-          nb = 0,
-          mb = 0;
+    const Ab = .4,
+      Mb = function(bb, ab, Ub, Mb) {
+        let Tb, {
+            localPlayerId: Eb
+          } = Mb,
+          Yb = !1,
+          Bb = null,
+          eb = null,
+          vb = null,
+          Lb = 1,
+          Pb = null,
+          Xb = 0,
+          jb = 0;
 
-        function lb() {
-          if (Xb) {
-            const bb = Xb;
+        function Rb() {
+          if (Pb) {
+            const bb = Pb;
             bb.fade(bb.getVolume(), 0, 500), setTimeout((() => {
               bb.stop()
-            }), 500), Xb = null
+            }), 500), Pb = null
           }
-          mb = 0
+          jb = 0
         }
 
-        function Qb(bb) {
-          var cb;
-          if (!Ib || Ub || null === Hb) return void(Xb && lb());
-          const sb = Date.now();
-          if (!Xb || sb - nb > 54e3) {
-            if (Xb) {
-              const bb = Xb;
+        function kb(bb) {
+          var ab;
+          if (!Bb || Yb || null === eb) return void(Pb && Rb());
+          const Ub = Date.now();
+          if (!Pb || Ub - Xb > 54e3) {
+            if (Pb) {
+              const bb = Pb;
               bb.fade(bb.getVolume(), 0, 2e3), setTimeout((() => {
                 bb.stop()
               }), 2e3)
             }
-            Xb = ab.playSound(Tb, "crowdAmbience", kb, 1), nb = sb, mb = kb
+            Pb = Tb.playSound(Eb, "crowdAmbience", Ab, 1), Xb = Ub, jb = Ab
           }
-          const Wb = function() {
-              if (null === Hb || null === fb || !Ib) return 0;
-              const bb = ab.getPositionView(Ib);
+          const Mb = function() {
+              if (null === eb || null === vb || !Bb) return 0;
+              const bb = Tb.getPositionView(Bb);
               if (!bb) return 0;
-              const cb = Math.abs(bb[2] - Hb),
-                sb = Math.abs(bb[2] - fb),
-                kb = Math.min(cb, sb);
-              return Math.max(0, 1 - kb / Mb)
+              const ab = Math.abs(bb[2] - eb),
+                Ub = Math.abs(bb[2] - vb),
+                Ab = Math.min(ab, Ub);
+              return Math.max(0, 1 - Ab / Lb)
             }(),
-            Qb = bb / 1e3;
-          mb += (kb + .6 * Wb - mb) * Math.min(1, 2 * Qb), null === (cb = Xb) || void 0 === cb || cb.setRelativeVolume(mb)
+            kb = bb / 1e3;
+          jb += (Ab + .6 * Mb - jb) * Math.min(1, 2 * kb), null === (ab = Pb) || void 0 === ab || ab.setRelativeVolume(jb)
         }
         return {
           onCreate: bb => {
-            ab = bb
+            Tb = bb
           },
-          onReceivedMessageFromServer: (bb, cb) => {
-            var sb;
-            "ballState" === bb ? (Ib = null !== (sb = cb.eId) && void 0 !== sb ? sb : null, Ib || lb()) : "frozen" === bb ? Ub = cb.frozen : "pitchInfo" === bb && (Hb = cb.goalZRed, fb = cb.goalZBlue, Mb = Math.abs(fb - Hb) / 2)
+          onReceivedMessageFromServer: (bb, ab) => {
+            var Ub;
+            "ballState" === bb ? (Bb = null !== (Ub = ab.eId) && void 0 !== Ub ? Ub : null, Bb || Rb()) : "frozen" === bb ? Yb = ab.frozen : "pitchInfo" === bb && (eb = ab.goalZRed, vb = ab.goalZBlue, Lb = Math.abs(vb - eb) / 2)
           },
-          aX: bb => {
-            Qb(bb)
+          qL: bb => {
+            kb(bb)
           }
         }
       }

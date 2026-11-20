@@ -1,384 +1,384 @@
 export const id = 22;
 export const ids = [22];
 export const modules = {
-  36235: (bb, cb, sb) => {
-    sb.d(cb, {
-      d: () => nb,
-      e: () => mb,
-      i: () => Xb,
-      j: () => Mb
+  36013: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      b: () => Xb,
+      e: () => jb,
+      h: () => Pb,
+      k: () => Lb
     });
-    var kb = sb(8917),
-      Wb = sb(36240),
-      ab = sb(36247),
-      Tb = sb(8330),
-      Ub = sb(1423),
-      Ib = sb(64),
-      Hb = sb(89),
-      fb = sb(1087);
+    var Ab = Ub(8906),
+      Mb = Ub(36017),
+      Tb = Ub(36023),
+      Eb = Ub(8280),
+      Yb = Ub(1345),
+      Bb = Ub(52),
+      eb = Ub(75),
+      vb = Ub(1023);
 
-    function Mb() {
+    function Lb() {
       var bb;
-      return (0, Ub.h)(Wb.c, (0, Wb.l)()), (0, fb.jsx)(fb.Fragment, {
-        children: null === (bb = (0, Wb.l)()) || void 0 === bb ? void 0 : bb.content
+      return (0, Yb.i)(Mb.c, (0, Mb.l)()), (0, vb.jsx)(vb.Fragment, {
+        children: null === (bb = (0, Mb.l)()) || void 0 === bb ? void 0 : bb.content
+      })
+    }
+
+    function Pb(bb) {
+      var ab;
+      let {
+        show: Ub
+      } = bb;
+      (0, Yb.i)(Mb.c, (0, Mb.l)());
+      const eb = null === (ab = (0, Mb.l)()) || void 0 === ab ? void 0 : ab.menu;
+      return (0, Bb.useEffect)((() => {
+        var bb;
+        Ub || (null === eb || void 0 === eb || null === (bb = eb.onClose) || void 0 === bb || bb.call(eb), (0, Tb.p)())
+      }), [Ub, eb]), (0, Bb.useEffect)((() => Ub ? (0, Eb.g)(Tb.v, Tb.i) : void 0), [Ub]), (0, vb.jsx)(Ab.d, {
+        showing: Ub,
+        globallyUniqueKey: "clientGameMenu",
+        children: null === eb || void 0 === eb ? void 0 : eb.content
       })
     }
 
     function Xb(bb) {
-      var cb;
       let {
-        show: sb
+        placement: ab = "bottom"
       } = bb;
-      (0, Ub.h)(Wb.c, (0, Wb.l)());
-      const Hb = null === (cb = (0, Wb.l)()) || void 0 === cb ? void 0 : cb.menu;
-      return (0, Ib.useEffect)((() => {
-        var bb;
-        sb || (null === Hb || void 0 === Hb || null === (bb = Hb.onClose) || void 0 === bb || bb.call(Hb), (0, ab.o)())
-      }), [sb, Hb]), (0, Ib.useEffect)((() => sb ? (0, Tb.e)(ab.v, ab.g) : void 0), [sb]), (0, fb.jsx)(kb.b, {
-        showing: sb,
-        globallyUniqueKey: "clientGameMenu",
-        children: null === Hb || void 0 === Hb ? void 0 : Hb.content
-      })
-    }
-
-    function nb(bb) {
-      let {
-        placement: cb = "bottom"
-      } = bb;
-      return (0, fb.jsx)("div", {
-        id: `clientGameHud-${cb}`,
+      return (0, vb.jsx)("div", {
+        id: `clientGameHud-${ab}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function mb(bb) {
+    function jb(bb) {
       let {
-        children: cb,
-        placement: sb = "bottom"
+        children: ab,
+        placement: Ub = "bottom"
       } = bb;
-      const [kb, Wb] = (0, Ib.useState)(null);
-      return (0, Ib.useEffect)((() => {
-        Wb(document.getElementById(`clientGameHud-${sb}`))
-      }), [sb]), kb ? (0, Hb.createPortal)(cb, kb) : null
+      const [Ab, Mb] = (0, Bb.useState)(null);
+      return (0, Bb.useEffect)((() => {
+        Mb(document.getElementById(`clientGameHud-${Ub}`))
+      }), [Ub]), Ab ? (0, eb.createPortal)(ab, Ab) : null
     }
   },
-  8917: (bb, cb, sb) => {
-    sb.d(cb, {
-      b: () => ab
+  8906: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      d: () => Tb
     });
-    var kb = sb(4275),
-      Wb = sb(4282);
+    var Ab = Ub(4218),
+      Mb = Ub(4225);
 
-    function ab(bb) {
+    function Tb(bb) {
       let {
-        children: cb,
-        showing: sb,
-        globallyUniqueKey: ab,
-        alwaysMountChildren: Tb = !1,
-        doGameplayStartStopOnShow: Ub = !0,
-        keepsMovement: Ib = !1
+        children: ab,
+        showing: Ub,
+        globallyUniqueKey: Tb,
+        alwaysMountChildren: Eb = !1,
+        doGameplayStartStopOnShow: Yb = !0,
+        keepsMovement: Bb = !1
       } = bb;
-      return (0, Wb.d)(!0, sb, ab, Ib), (0, kb.e)(Ub, sb), sb || Tb ? cb : null
+      return (0, Mb.b)(!0, Ub, Tb, Bb), (0, Ab.c)(Yb, Ub), Ub || Eb ? ab : null
     }
   },
-  36334: (bb, cb, sb) => {
-    sb.d(cb, {
-      e: () => ab,
-      i: () => Tb,
-      l: () => Ub,
-      n: () => Ib
+  36090: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      c: () => Tb,
+      e: () => Eb,
+      g: () => Yb,
+      j: () => Bb
     });
-    var kb = sb(64),
-      Wb = sb(1113);
-    const ab = 8,
-      Tb = "InGameHeaderContainer",
-      Ub = "TopRightElements";
+    var Ab = Ub(52),
+      Mb = Ub(1055);
+    const Tb = 8,
+      Eb = "InGameHeaderContainer",
+      Yb = "TopRightElements";
 
-    function Ib(bb) {
-      const [cb] = (0, Wb.c)(), [sb, Ib] = (0, kb.useState)(!1);
-      return (0, kb.useLayoutEffect)((() => {
+    function Bb(bb) {
+      const [ab] = (0, Mb.e)(), [Ub, Bb] = (0, Ab.useState)(!1);
+      return (0, Ab.useLayoutEffect)((() => {
         if (!bb) return;
-        const cb = document.querySelector(`.${Tb}`),
-          sb = document.querySelector(`.${Ub}`),
-          kb = () => {
-            const kb = bb.getBoundingClientRect(),
-              Wb = cb ? cb.getBoundingClientRect().right : 0,
-              Tb = sb ? sb.getBoundingClientRect().left : window.innerWidth,
-              Ub = kb.left < Wb + ab,
-              Hb = kb.right > Tb - ab;
-            Ib(Ub || Hb)
+        const ab = document.querySelector(`.${Eb}`),
+          Ub = document.querySelector(`.${Yb}`),
+          Ab = () => {
+            const Ab = bb.getBoundingClientRect(),
+              Mb = ab ? ab.getBoundingClientRect().right : 0,
+              Eb = Ub ? Ub.getBoundingClientRect().left : window.innerWidth,
+              Yb = Ab.left < Mb + Tb,
+              eb = Ab.right > Eb - Tb;
+            Bb(Yb || eb)
           };
-        kb();
-        const Wb = new ResizeObserver(kb);
-        return Wb.observe(bb), cb && Wb.observe(cb), sb && Wb.observe(sb), () => {
-          Wb.disconnect()
+        Ab();
+        const Mb = new ResizeObserver(Ab);
+        return Mb.observe(bb), ab && Mb.observe(ab), Ub && Mb.observe(Ub), () => {
+          Mb.disconnect()
         }
-      }), [bb, cb]), sb
+      }), [bb, ab]), Ub
     }
   },
-  8330: (bb, cb, sb) => {
-    sb.d(cb, {
-      c: () => ab,
-      e: () => Wb
+  8280: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      d: () => Tb,
+      g: () => Mb
     });
-    let kb = null;
-    const Wb = function(bb) {
-        const cb = {
+    let Ab = null;
+    const Mb = function(bb) {
+        const ab = {
           cycle: bb,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return kb = cb, () => {
-          kb === cb && (kb = null)
+        return Ab = ab, () => {
+          Ab === ab && (Ab = null)
         }
       },
-      ab = () => {
+      Tb = () => {
         var bb;
-        return null !== (bb = kb) && void 0 !== bb && bb.canCycle() ? kb.cycle : null
+        return null !== (bb = Ab) && void 0 !== bb && bb.canCycle() ? Ab.cycle : null
       }
   },
-  36247: (bb, cb, sb) => {
-    sb.d(cb, {
-      e: () => ab,
-      g: () => lb,
-      i: () => Qb,
-      l: () => Ub,
-      n: () => Xb,
-      o: () => eb,
-      q: () => Mb,
-      s: () => Nb,
-      v: () => mb,
-      z: () => Cb
+  36023: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      e: () => Tb,
+      i: () => Rb,
+      j: () => kb,
+      l: () => Yb,
+      n: () => Pb,
+      p: () => yb,
+      s: () => Lb,
+      u: () => Db,
+      v: () => jb,
+      x: () => Zb
     });
-    var kb = sb(19),
-      Wb = sb(26);
-    const ab = "clientGameInventoryButtonsChanged",
-      Tb = new Map;
+    var Ab = Ub(19),
+      Mb = Ub(22);
+    const Tb = "clientGameInventoryButtonsChanged",
+      Eb = new Map;
 
-    function Ub() {
-      return [...Tb.values()].sort(((bb, cb) => {
-        var sb, kb;
-        return (null !== (sb = bb.order) && void 0 !== sb ? sb : 0) - (null !== (kb = cb.order) && void 0 !== kb ? kb : 0)
+    function Yb() {
+      return [...Eb.values()].sort(((bb, ab) => {
+        var Ub, Ab;
+        return (null !== (Ub = bb.order) && void 0 !== Ub ? Ub : 0) - (null !== (Ab = ab.order) && void 0 !== Ab ? Ab : 0)
       }))
     }
-    let Ib = null;
+    let Bb = null;
 
-    function Hb(bb) {
-      Ib = bb
+    function eb(bb) {
+      Bb = bb
     }
-    let fb = !1;
+    let vb = !1;
 
-    function Mb(bb) {
-      fb = !0;
+    function Lb(bb) {
+      vb = !0;
       try {
         bb.onClick()
       } finally {
-        fb = !1
+        vb = !1
       }
-      bb.panel && "clientGame" === kb.d.get("openInGameMenuName") && Hb(bb.id)
+      bb.panel && "clientGame" === Ab.c.get("openInGameMenuName") && eb(bb.id)
+    }
+
+    function Pb() {
+      return vb
     }
 
     function Xb() {
-      return fb
+      return Yb().filter((bb => bb.panel && !bb.disabled))
     }
 
-    function nb() {
-      return Ub().filter((bb => bb.panel && !bb.disabled))
+    function jb(bb) {
+      const ab = Xb(),
+        Ub = ab.findIndex((bb => bb.id === Bb));
+      return !(Ub < 0 || ab.length < 2) && (Lb(ab[(Ub + bb + ab.length) % ab.length]), !0)
     }
 
-    function mb(bb) {
-      const cb = nb(),
-        sb = cb.findIndex((bb => bb.id === Ib));
-      return !(sb < 0 || cb.length < 2) && (Mb(cb[(sb + bb + cb.length) % cb.length]), !0)
+    function Rb() {
+      return null !== Bb && Xb().length > 1
     }
 
-    function lb() {
-      return null !== Ib && nb().length > 1
+    function kb() {
+      eb(null)
     }
 
-    function Qb() {
-      Hb(null)
+    function yb() {
+      "inventory" !== Ab.c.get("openInGameMenuName") && eb(null)
     }
 
-    function eb() {
-      "inventory" !== kb.d.get("openInGameMenuName") && Hb(null)
+    function Zb() {
+      const bb = Bb;
+      return eb(null), bb
     }
 
-    function Cb() {
-      const bb = Ib;
-      return Hb(null), bb
-    }
-
-    function Nb(bb) {
-      return Tb.set(bb.id, bb), Wb.j.QQ(ab, Ub(), !0), () => {
-        Tb.get(bb.id) === bb && (Tb.delete(bb.id), Wb.j.QQ(ab, Ub()))
+    function Db(bb) {
+      return Eb.set(bb.id, bb), Mb.m.IR(Tb, Yb(), !0), () => {
+        Eb.get(bb.id) === bb && (Eb.delete(bb.id), Mb.m.IR(Tb, Yb()))
       }
     }
   },
-  36240: (bb, cb, sb) => {
-    sb.d(cb, {
-      c: () => Ub,
-      e: () => Qb,
-      g: () => eb,
-      i: () => Xb,
-      l: () => Hb,
-      m: () => lb,
-      p: () => nb,
-      s: () => fb
+  36017: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      c: () => Yb,
+      g: () => kb,
+      i: () => yb,
+      j: () => Pb,
+      l: () => eb,
+      o: () => Rb,
+      s: () => Xb,
+      w: () => vb
     });
-    var kb = sb(19),
-      Wb = sb(26),
-      ab = sb(1287),
-      Tb = sb(36247);
-    const Ub = "clientGameUiChanged";
-    let Ib = null;
+    var Ab = Ub(19),
+      Mb = Ub(22),
+      Tb = Ub(1216),
+      Eb = Ub(36023);
+    const Yb = "clientGameUiChanged";
+    let Bb = null;
 
-    function Hb() {
-      return Ib
+    function eb() {
+      return Bb
     }
 
-    function fb(bb, cb) {
-      const sb = {
+    function vb(bb, ab) {
+      const Ub = {
         content: bb,
-        menu: cb
+        menu: ab
       };
-      return Ib = sb, Wb.j.QQ(Ub, Ib, !0), () => {
-        Ib === sb && (Ib = null, mb = !1, Qb(), Wb.j.QQ(Ub, null))
+      return Bb = Ub, Mb.m.IR(Yb, Bb, !0), () => {
+        Bb === Ub && (Bb = null, jb = !1, kb(), Mb.m.IR(Yb, null))
       }
     }
-    let Mb = null;
+    let Lb = null;
 
-    function Xb() {
-      return Mb
+    function Pb() {
+      return Lb
     }
 
-    function nb(bb) {
-      return Mb = bb, () => {
-        Mb === bb && (Mb = null)
+    function Xb(bb) {
+      return Lb = bb, () => {
+        Lb === bb && (Lb = null)
       }
     }
-    let mb = !1;
+    let jb = !1;
 
-    function lb() {
-      const bb = kb.d.get("openInGameMenuName");
-      "clientGame" !== bb && (mb = "inventory" === bb), (0, Tb.n)() || (0, Tb.i)(), (0, ab.n)(ab.b), kb.d.set({
+    function Rb() {
+      const bb = Ab.c.get("openInGameMenuName");
+      "clientGame" !== bb && (jb = "inventory" === bb), (0, Eb.n)() || (0, Eb.j)(), (0, Tb.h)(Tb.b), Ab.c.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function Qb() {
-      Cb(!1)
+    function kb() {
+      Zb(!1)
     }
 
-    function eb() {
-      Cb(mb)
+    function yb() {
+      Zb(jb)
     }
 
-    function Cb(bb) {
-      "clientGame" === kb.d.get("openInGameMenuName") && kb.d.set({
+    function Zb(bb) {
+      "clientGame" === Ab.c.get("openInGameMenuName") && Ab.c.set({
         openInGameMenuName: bb ? "inventory" : null
-      }), bb || (0, Tb.i)(), mb = !1
+      }), bb || (0, Eb.j)(), jb = !1
     }
   },
-  38126: (bb, cb, sb) => {
-    sb.d(cb, {
-      d: () => Tb,
-      g: () => Ub,
-      j: () => Ib
+  37849: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      c: () => Eb,
+      e: () => Yb,
+      h: () => Bb
     });
-    const kb = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1],
-      Wb = [0, 1, 2, 0, 2, 3],
-      ab = [4, 5];
+    const Ab = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1],
+      Mb = [0, 1, 2, 0, 2, 3],
+      Tb = [4, 5];
 
-    function Tb(bb, cb, sb, kb, Wb) {
-      for (let Tb = 0; Tb < 6; Tb++) ab.includes(Tb) === Wb && Hb(bb, cb, sb, kb, Tb)
+    function Eb(bb, ab, Ub, Ab, Mb) {
+      for (let Eb = 0; Eb < 6; Eb++) Tb.includes(Eb) === Mb && eb(bb, ab, Ub, Ab, Eb)
     }
 
-    function Ub(bb, cb, sb, kb) {
-      for (let Wb = 0; Wb < 6; Wb++) Hb(bb, cb, sb, kb, Wb)
+    function Yb(bb, ab, Ub, Ab) {
+      for (let Mb = 0; Mb < 6; Mb++) eb(bb, ab, Ub, Ab, Mb)
     }
 
-    function Ib(bb, cb, sb, ab, Tb) {
-      for (let Ub = 0; Ub < 6; Ub++)
-        for (const Ib of [0, 1]) {
-          const [Hb, fb, Mb] = [Ib + 2, Ib + 1, (Ib + 3) % 4], Xb = bb.length / 3;
-          for (const [cb, Wb] of [
-              [Ib, fb],
-              [Hb, fb],
-              [Hb, Mb],
-              [Ib, Mb]
+    function Bb(bb, ab, Ub, Tb, Eb) {
+      for (let Yb = 0; Yb < 6; Yb++)
+        for (const Bb of [0, 1]) {
+          const [eb, vb, Lb] = [Bb + 2, Bb + 1, (Bb + 3) % 4], Pb = bb.length / 3;
+          for (const [ab, Mb] of [
+              [Bb, vb],
+              [eb, vb],
+              [eb, Lb],
+              [Bb, Lb]
             ])
-            for (let Ib = 0; Ib < 3; Ib++) {
-              const Hb = kb[3 * (4 * Ub + cb) + Ib],
-                fb = kb[3 * (4 * Ub + Wb) + Ib];
-              bb.push((Hb + (fb - Hb) * Tb) * ab / 2 + sb[Ib])
+            for (let Bb = 0; Bb < 3; Bb++) {
+              const eb = Ab[3 * (4 * Yb + ab) + Bb],
+                vb = Ab[3 * (4 * Yb + Mb) + Bb];
+              bb.push((eb + (vb - eb) * Eb) * Tb / 2 + Ub[Bb])
             }
-          for (const bb of Wb) cb.push(Xb + bb)
+          for (const bb of Mb) ab.push(Pb + bb)
         }
     }
 
-    function Hb(bb, cb, sb, ab, Tb) {
-      let [Ub, Ib, Hb] = sb, [fb, Mb, Xb] = ab;
-      const nb = bb.length / 3;
-      for (let Wb = 4 * Tb; Wb < 4 * Tb + 4; Wb++) bb.push(kb[3 * Wb] * fb / 2 + Ub, kb[3 * Wb + 1] * Mb / 2 + Ib, kb[3 * Wb + 2] * Xb / 2 + Hb);
-      for (const kb of Wb) cb.push(nb + kb)
+    function eb(bb, ab, Ub, Tb, Eb) {
+      let [Yb, Bb, eb] = Ub, [vb, Lb, Pb] = Tb;
+      const Xb = bb.length / 3;
+      for (let Mb = 4 * Eb; Mb < 4 * Eb + 4; Mb++) bb.push(Ab[3 * Mb] * vb / 2 + Yb, Ab[3 * Mb + 1] * Lb / 2 + Bb, Ab[3 * Mb + 2] * Pb / 2 + eb);
+      for (const Ab of Mb) ab.push(Xb + Ab)
     }
   },
-  36469: (bb, cb, sb) => {
-    function kb(bb, cb) {
-      return null === bb || null === cb ? bb === cb : bb[0] === cb[0] && bb[1] === cb[1] && bb[2] === cb[2]
+  36226: (bb, ab, Ub) => {
+    function Ab(bb, ab) {
+      return null === bb || null === ab ? bb === ab : bb[0] === ab[0] && bb[1] === ab[1] && bb[2] === ab[2]
     }
 
-    function Wb(bb) {
+    function Mb(bb) {
       return [bb[0] + .5, bb[1] + .5, bb[2] + .5]
     }
-    sb.d(cb, {
-      e: () => Wb,
-      f: () => kb
+    Ub.d(ab, {
+      d: () => Mb,
+      e: () => Ab
     })
   },
-  36505: (bb, cb, sb) => {
-    function kb(bb) {
+  36263: (bb, ab, Ub) => {
+    function Ab(bb) {
       return bb.includes("Leaf Bed")
     }
 
-    function Wb(bb) {
-      return / Bed(?: Head)?(?:\||$)/.test(bb) && !kb(bb)
-    }
-
-    function ab(bb) {
-      return bb.includes(" Strongbed")
+    function Mb(bb) {
+      return / Bed(?: Head)?(?:\||$)/.test(bb) && !Ab(bb)
     }
 
     function Tb(bb) {
-      return kb(bb) || Wb(bb) || ab(bb)
+      return bb.includes(" Strongbed")
     }
-    sb.d(cb, {
-      e: () => Tb,
-      f: () => kb,
-      h: () => ab,
-      j: () => Wb
+
+    function Eb(bb) {
+      return Ab(bb) || Mb(bb) || Tb(bb)
+    }
+    Ub.d(ab, {
+      d: () => Eb,
+      g: () => Ab,
+      h: () => Tb,
+      i: () => Mb
     })
   },
-  36502: (bb, cb, sb) => {
-    sb.d(cb, {
-      d: () => Hb
+  36260: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      d: () => eb
     });
-    var kb = sb(36505),
-      Wb = sb(9017);
-    const ab = [],
-      Tb = [],
-      Ub = [],
-      Ib = [];
-    for (const fb of Object.keys(Wb.k))(0, kb.f)(fb) ? ab.push(fb) : (0, kb.j)(fb) && Tb.push(fb), (0, kb.h)(fb) && Ub.push(fb), (fb.includes(" Bed Head") || fb.includes(" Strongbed Head")) && Ib.push(fb);
-    const Hb = {
-      leafBeds: ab,
-      woolBeds: Tb,
-      strongBeds: Ub,
-      beds: [...ab, ...Tb, ...Ub],
-      bedHeads: Ib,
+    var Ab = Ub(36263),
+      Mb = Ub(9007);
+    const Tb = [],
+      Eb = [],
+      Yb = [],
+      Bb = [];
+    for (const vb of Object.keys(Mb.p))(0, Ab.g)(vb) ? Tb.push(vb) : (0, Ab.i)(vb) && Eb.push(vb), (0, Ab.h)(vb) && Yb.push(vb), (vb.includes(" Bed Head") || vb.includes(" Strongbed Head")) && Bb.push(vb);
+    const eb = {
+      leafBeds: Tb,
+      woolBeds: Eb,
+      strongBeds: Yb,
+      beds: [...Tb, ...Eb, ...Yb],
+      bedHeads: Bb,
       blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
     }
   }

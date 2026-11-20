@@ -1,205 +1,205 @@
 export const id = 202;
 export const ids = [202];
 export const modules = {
-  35916: (bb, cb, sb) => {
-    sb.r(cb), sb.d(cb, {
-      WasmTextureWorker: () => Cb
+  35717: (bb, ab, Ub) => {
+    Ub.r(ab), Ub.d(ab, {
+      WasmTextureWorker: () => Zb
     });
-    var kb = sb(620),
-      Wb = sb(2939),
-      ab = sb(35924),
-      Tb = sb.n(ab);
+    var Ab = Ub(580),
+      Mb = Ub(2925),
+      Tb = Ub(35722),
+      Eb = Ub.n(Tb);
 
-    function Ub() {
-      return Tb()('(()=>{var bb={d:(cb,sb)=>{for(var kb in sb)bb.o(sb,kb)&&!bb.o(cb,kb)&&Object.defineProperty(cb,kb,{enumerable:!0,get:sb[kb]})},o:(bb,cb)=>Object.prototype.hasOwnProperty.call(bb,cb),r:bb=>{"undefined"!==typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(bb,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(bb,"__esModule",{value:!0})}},cb={};bb.r(cb),bb.d(cb,{ab:()=>sb,CM:()=>kb,default:()=>Pb,initSync:()=>yb,NM:()=>Wb});class sb{__destroy_into_raw(){const bb=this.__wbg_ptr;return this.__wbg_ptr=0,Tb.unregister(this),bb}free(){const bb=this.__destroy_into_raw();gb.eUzG(bb,0)}nb(bb){const cb=function(bb,cb){const sb=cb(1*bb.length,1)>>>0;return mb().set(bb,sb/1),Bb=bb.length,sb}(bb,gb.RgTx),sb=Bb;return gb.wxLn(this.__wbg_ptr,cb,sb)>>>0}mb(){const bb=gb.SChb(this.__wbg_ptr);var cb=Ub(bb[0],bb[1]).slice();return gb.RFsU(bb[0],4*bb[1],4),cb}lb(){let bb,cb;try{const sb=gb.gkOo(this.__wbg_ptr);return bb=sb[0],cb=sb[1],fb(sb[0],sb[1])}finally{gb.RFsU(bb,cb,1)}}eb(){return gb.o4tn(this.__wbg_ptr)>>>0}hb(){return gb.ouk3(this.__wbg_ptr)>>>0}wb(){let bb,cb;try{const sb=gb.OZxE(this.__wbg_ptr);return bb=sb[0],cb=sb[1],fb(sb[0],sb[1])}finally{gb.RFsU(bb,cb,1)}}rb(){const bb=gb.bRmu(this.__wbg_ptr);var cb=Ub(bb[0],bb[1]).slice();return gb.RFsU(bb[0],4*bb[1],4),cb}cc(){const bb=gb.eJfi(this.__wbg_ptr);var cb,sb,kb=(cb=bb[0],sb=bb[1],cb>>>=0,Hb().subarray(cb/8,cb/8+sb)).slice();return gb.RFsU(bb[0],8*bb[1],8),kb}ec(){return gb.OKQ7(this.__wbg_ptr)>>>0}cs(bb){const cb=gb.UqzX(this.__wbg_ptr,bb);if(cb[1])throw Nb(cb[0])}ss(){gb.XXww(this.__wbg_ptr)}ns(){gb.jRO9(this.__wbg_ptr)}bs(){const bb=gb.vnC4(this.__wbg_ptr);if(bb[1])throw Nb(bb[0])}As(){return gb.xGjE(this.__wbg_ptr)>>>0}ks(){const bb=gb.bqO8(this.__wbg_ptr);if(bb[1])throw Nb(bb[0])}ws(bb,cb){const sb=gb.GSVp(this.__wbg_ptr,bb,cb);if(sb[1])throw Nb(sb[0])}vs(bb){let cb,sb;try{const ab=gb.xLFE(this.__wbg_ptr,bb);var kb=ab[0],Wb=ab[1];if(ab[3])throw kb=0,Wb=0,Nb(ab[2]);return cb=kb,sb=Wb,fb(kb,Wb)}finally{gb.RFsU(cb,sb,1)}}ps(bb){return gb.OOlT(this.__wbg_ptr,bb)>>>0}ck(bb){return gb.Iwau(this.__wbg_ptr,bb)>>>0}wc(){const bb=gb.ptQ6(this.__wbg_ptr);var cb=Ub(bb[0],bb[1]).slice();return gb.RFsU(bb[0],4*bb[1],4),cb}ek(){return 0!==gb.awMJ(this.__wbg_ptr)}constructor(bb,cb,sb,kb,Wb,ab){const Ub=Cb(bb,gb.RgTx,gb.fpy5),Ib=Bb,fb=eb(cb,gb.RgTx),Mb=Bb,Xb=function(bb,cb){const sb=cb(8*bb.length,8)>>>0;return Hb().set(bb,sb/8),Bb=bb.length,sb}(sb,gb.RgTx),nb=Bb,mb=eb(kb,gb.RgTx),lb=Bb,Qb=eb(Wb,gb.RgTx),Vb=Bb,Lb=gb.kSrB(Ub,Ib,fb,Mb,Xb,nb,mb,lb,Qb,Vb,ab);if(Lb[2])throw Nb(Lb[1]);return this.__wbg_ptr=Lb[0],Tb.register(this,this.__wbg_ptr,this),this}dk(){let bb,cb;try{const sb=gb.cAGz(this.__wbg_ptr);return bb=sb[0],cb=sb[1],fb(sb[0],sb[1])}finally{gb.RFsU(bb,cb,1)}}pk(bb,cb){const sb=Cb(bb,gb.RgTx,gb.fpy5),kb=Bb,Wb=eb(cb,gb.RgTx),ab=Bb,Tb=gb.XyO1(this.__wbg_ptr,sb,kb,Wb,ab);if(Tb[1])throw Nb(Tb[0])}ta(){return gb.SS38(this.__wbg_ptr)>>>0}wa(){return gb.zybT(this.__wbg_ptr)>>>0}us(){return gb.w49w(this.__wbg_ptr)>>>0}rc(){return gb.EBf5(this.__wbg_ptr)>>>0}warnings(){let bb,cb;try{const sb=gb.n0Ve(this.__wbg_ptr);return bb=sb[0],cb=sb[1],fb(sb[0],sb[1])}finally{gb.RFsU(bb,cb,1)}}}function kb(bb,cb){const sb=Cb(bb,gb.RgTx,gb.fpy5),kb=Bb,Wb=gb.NXVY(sb,kb,cb);if(Wb[1])throw Nb(Wb[0])}function Wb(){gb.Ac2s()}function ab(){return{__proto__:null,W8xL:{__proto__:null,QtyM:function(bb,cb){return function(bb){Qb===lb.length&&lb.push(lb.length+1);const cb=Qb;return Qb=lb[cb],lb[cb]=bb,cb}(Error(fb(bb,cb)))},ynhH:function(bb,cb){throw new Error(fb(bb,cb))},tnm5:function(bb,cb){console.error(fb(bb,cb))}}}}Symbol.dispose&&(sb.prototype[Symbol.dispose]=sb.prototype.free);const Tb="undefined"===typeof FinalizationRegistry?{register:()=>{},unregister:()=>{}}:new FinalizationRegistry((bb=>gb.eUzG(bb,1)));function Ub(bb,cb){return bb>>>=0,Xb().subarray(bb/4,bb/4+cb)}let Ib=null;function Hb(){return null!==Ib&&0!==Ib.byteLength||(Ib=new Float64Array(gb.memory.buffer)),Ib}function fb(bb,cb){return function(bb,cb){ub+=cb,ub>=Lb&&(Vb=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0}),Vb.decode(),ub=cb);return Vb.decode(mb().subarray(bb,bb+cb))}(bb>>>0,cb)}let Mb=null;function Xb(){return null!==Mb&&0!==Mb.byteLength||(Mb=new Uint32Array(gb.memory.buffer)),Mb}let nb=null;function mb(){return null!==nb&&0!==nb.byteLength||(nb=new Uint8Array(gb.memory.buffer)),nb}let lb=new Array(1024).fill(void 0);lb.push(void 0,null,!0,!1);let Qb=lb.length;function eb(bb,cb){const sb=cb(4*bb.length,4)>>>0;return Xb().set(bb,sb/4),Bb=bb.length,sb}function Cb(bb,cb,sb){if(void 0===sb){const sb=Yb.encode(bb),kb=cb(sb.length,1)>>>0;return mb().subarray(kb,kb+sb.length).set(sb),Bb=sb.length,kb}let kb=bb.length,Wb=cb(kb,1)>>>0;const ab=mb();let Tb=0;for(;Tb<kb;Tb++){const cb=bb.charCodeAt(Tb);if(cb>127)break;ab[Wb+Tb]=cb}if(Tb!==kb){0!==Tb&&(bb=bb.slice(Tb)),Wb=sb(Wb,kb,kb=Tb+3*bb.length,1)>>>0;const cb=mb().subarray(Wb+Tb,Wb+kb);Tb+=Yb.encodeInto(bb,cb).written,Wb=sb(Wb,kb,Tb,1)>>>0}return Bb=Tb,Wb}function Nb(bb){const cb=function(bb){return lb[bb]}(bb);return function(bb){bb<1028||(lb[bb]=Qb,Qb=bb)}(bb),cb}let Vb=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0});Vb.decode();const Lb=2146435072;let ub=0;const Yb=new TextEncoder;"encodeInto"in Yb||(Yb.encodeInto=function(bb,cb){const sb=Yb.encode(bb);return cb.set(sb),{read:bb.length,written:sb.length}});let hb,Jb,gb,Bb=0;function tb(bb,cb){return Jb=bb,gb=bb.exports,hb=cb,Ib=null,Mb=null,nb=null,gb.fBoA(),gb}function yb(bb){if(void 0!==gb)return gb;void 0!==bb&&(Object.getPrototypeOf(bb)===Object.prototype?({module:bb}=bb):console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));const cb=ab();bb instanceof WebAssembly.Module||(bb=new WebAssembly.Module(bb));return tb(new WebAssembly.Instance(bb,cb),bb)}async function Pb(bb){if(void 0!==gb)return gb;void 0!==bb&&(Object.getPrototypeOf(bb)===Object.prototype?({module_or_path:bb}=bb):console.warn("using deprecated parameters for the initialization function; pass a single object instead"));const cb=ab();("string"===typeof bb||"function"===typeof Request&&bb instanceof Request||"function"===typeof URL&&bb instanceof URL)&&(bb=fetch(bb));const{instance:sb,module:kb}=await async function(bb,cb){if("function"===typeof Response&&bb instanceof Response){if(!bb.ok)throw new Error(`failed to fetch Wasm: ${bb.status} ${bb.statusText} fetching \'${bb.url}\'`);if("function"===typeof WebAssembly.instantiateStreaming)try{return await WebAssembly.instantiateStreaming(bb,cb)}catch(sb){if(!function(bb){switch(bb){case"basic":case"cors":case"default":return!0}return!1}(bb.type)||"application/wasm"===bb.headers.get("Content-Type"))throw sb;console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\\n",sb)}const kb=await bb.arrayBuffer();return await WebAssembly.instantiate(kb,cb)}{const sb=await WebAssembly.instantiate(bb,cb);return sb instanceof WebAssembly.Instance?{instance:sb,module:bb}:sb}}(await bb,cb);return tb(sb,kb)}let Db=null,Eb=null;function ib(bb){if(null!==Eb)throw Eb;if(null===Db)try{const{memory:sb}=yb({module:bb});Db={wasm:cb,memory:sb}}catch(sb){throw Eb=function(bb,cb){return new Error(`${bb}: ${cb instanceof Error?`${cb.name}: ${cb.message}`:String(cb)}`,{cause:cb})}("instantiate",sb),Eb}return Db}function Ob(bb){return bb instanceof Error?bb.message:String(bb)}const Gb=0,Kb=1,Zb=2,zb=3,qb=4;Error;function db(bb){return`the texture module didn\'t load (${Ob(bb)})`}function Ab(bb){return""===bb?[]:bb.split("\\0")}const wb=self;let rb=null,ob=null,Sb=Gb,Rb=0;function vb(bb){const cb=performance.now();var sb,kb;(bb!==Sb||cb-Rb>=1e3)&&(Sb=bb,Rb=cb,wb.postMessage({type:"progress",stage:bb,wasmBytes:null!==(sb=null===(kb=ob)||void 0===kb?void 0:kb.buffer.byteLength)&&void 0!==sb?sb:0}))}const{FileReaderSync:Fb}=self;function xb(bb){return(new Fb).readAsDataURL(new Blob([bb],{type:"image/png"}))}function jb(bb,cb){wb.postMessage({type:"sheet",sheet:bb,pixels:cb},[cb.buffer])}function pb(bb){let cb;vb(Kb);try{cb=ib(bb.module)}catch(Tb){return void wb.postMessage({type:"failed",reason:db(Tb),moduleLoad:!0})}ob=cb.memory,vb(Zb);const{assets:sb,layerCap:kb,warnings:Wb,generator:ab}=function(bb,cb,sb,kb,Wb,ab,Tb){var Ub;const{wasm:Ib,memory:Hb}=bb,{strings:fb,blocks:Mb,numbers:Xb,index:nb,armour:mb}=cb,lb=new Ib.ab(fb,Mb,Xb,nb,mb,sb),Qb=kb.sources.map((bb=>(null===ab||void 0===ab||ab(Zb),lb.nb(bb)))),eb=new Uint32Array(2*kb.sourceOfName.length);for(const[Bb,tb]of kb.sourceOfName.entries())eb[2*Bb]=Bb,eb[2*Bb+1]=Qb[tb];lb.pk(kb.names,eb),null===ab||void 0===ab||ab(zb),lb.ws(Wb,null!==(Ub=null===Tb||void 0===Tb?void 0:Tb.layers)&&void 0!==Ub?Ub:0),null===ab||void 0===ab||ab(qb);const Cb={};for(const[Bb,tb]of Ab(lb.dk()).entries())null===ab||void 0===ab||ab(qb),Cb[tb]=lb.vs(Bb);const Nb={},Vb=lb.mb(),Lb=new Map;for(const[Bb,tb]of Ab(lb.lb()).entries()){const bb=Vb[Bb];Lb.has(bb)||(null===ab||void 0===ab||ab(qb),Lb.set(bb,lb.vs(bb))),Nb[tb]=Lb.get(bb)}lb.ss();const ub=Array.from(lb.wc()),Yb=[],hb=[],Jb=(bb,cb)=>new Uint8ClampedArray(Hb.buffer,bb,cb).slice();if(Tb){for(let bb=0;bb<ub.length;bb++)null===ab||void 0===ab||ab(qb),lb.cs(bb),lb.bs(),Yb.push(Tb.dataUrl(new Uint8Array(Hb.buffer,lb.us(),lb.wa()))),Tb.onSheet(bb,Jb(lb.rc(),lb.ta()));lb.ns()}const gb=lb.As();for(let Bb=gb;Bb<gb+lb.hb();Bb++)null===ab||void 0===ab||ab(qb),Yb.push(lb.vs(Bb)),hb.push(Jb(lb.ck(Bb),lb.ps(Bb)));return{assets:{rotatedBlockTextures:Cb,animatedBlockTextures:Nb,blockAtlasArr:Yb,blockAtlasPixels:hb,armourAtlas:lb.vs(lb.eb()),imagesPerAtlas:ub,blockAtlasWidth:lb.ec()},layerCap:lb.ek()?Wb:0,warnings:lb.warnings(),generator:lb}}(cb,bb.inputs,bb.isDefaultPack,{sources:bb.sources,names:bb.names,sourceOfName:bb.sourceOfName},bb.maxLayerWidth,vb,bb.sheetLayers>0?{layers:bb.sheetLayers,onSheet:jb,dataUrl:xb}:void 0);rb=ab,wb.postMessage({type:"required",assets:sb,layerCap:kb,warnings:Wb},sb.blockAtlasPixels.map((bb=>bb.buffer)))}self.onmessageerror=()=>{wb.postMessage({type:"failed",reason:"the request couldn\'t be deserialised"})},self.onmessage=bb=>{let{data:cb}=bb;try{"required"===cb.type?pb(cb):function(){if(!rb)throw new Error("No required assets to follow");const{colours:bb,warnings:cb}=function(bb){return bb.ks(),{colours:{blocks:bb.wb(),counts:bb.rb(),values:bb.cc()},warnings:bb.warnings()}}(rb);wb.postMessage({type:"optional",...bb,warnings:cb},[bb.counts.buffer,bb.values.buffer])}()}catch(sb){const bb=Ob(sb),cb=sb instanceof WebAssembly.RuntimeError?`wasm trapped (${bb})`:bb;wb.postMessage({type:"failed",reason:cb,stack:sb instanceof Error?sb.stack:void 0})}}})();', "Worker", void 0, sb.p + "generation.worker.40ad6222.worker.js")
+    function Yb() {
+      return Eb()('(()=>{var bb={d:(ab,Ub)=>{for(var Ab in Ub)bb.o(Ub,Ab)&&!bb.o(ab,Ab)&&Object.defineProperty(ab,Ab,{enumerable:!0,get:Ub[Ab]})},o:(bb,ab)=>Object.prototype.hasOwnProperty.call(bb,ab),r:bb=>{"undefined"!==typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(bb,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(bb,"__esModule",{value:!0})}},ab={};bb.r(ab),bb.d(ab,{ab:()=>Ub,Ov:()=>Ab,default:()=>db,initSync:()=>Ib,cv:()=>Mb});class Ub{__destroy_into_raw(){const bb=this.__wbg_ptr;return this.__wbg_ptr=0,Eb.unregister(this),bb}free(){const bb=this.__destroy_into_raw();Nb.KMUq(bb,0)}eb(bb){const ab=function(bb,ab){const Ub=ab(1*bb.length,1)>>>0;return jb().set(bb,Ub/1),Wb=bb.length,Ub}(bb,Nb.OkLZ),Ub=Wb;return Nb.Z3fF(this.__wbg_ptr,ab,Ub)>>>0}mb(){const bb=Nb.w7Gd(this.__wbg_ptr);var ab=Yb(bb[0],bb[1]).slice();return Nb.BdWA(bb[0],4*bb[1],4),ab}hb(){let bb,ab;try{const Ub=Nb.CNBD(this.__wbg_ptr);return bb=Ub[0],ab=Ub[1],vb(Ub[0],Ub[1])}finally{Nb.BdWA(bb,ab,1)}}nb(){return Nb.ogoK(this.__wbg_ptr)>>>0}BE(){return Nb.pIcX(this.__wbg_ptr)>>>0}MB(){let bb,ab;try{const Ub=Nb.oWV4(this.__wbg_ptr);return bb=Ub[0],ab=Ub[1],vb(Ub[0],Ub[1])}finally{Nb.BdWA(bb,ab,1)}}KB(){const bb=Nb.VNiD(this.__wbg_ptr);var ab=Yb(bb[0],bb[1]).slice();return Nb.BdWA(bb[0],4*bb[1],4),ab}me(){const bb=Nb.UMZI(this.__wbg_ptr);var ab,Ub,Ab=(ab=bb[0],Ub=bb[1],ab>>>=0,eb().subarray(ab/8,ab/8+Ub)).slice();return Nb.BdWA(bb[0],8*bb[1],8),Ab}We(){return Nb.ek5W(this.__wbg_ptr)>>>0}uR(bb){const ab=Nb.bE7W(this.__wbg_ptr,bb);if(ab[1])throw Db(ab[0])}rR(){Nb.Aedg(this.__wbg_ptr)}oR(){Nb.LYc6(this.__wbg_ptr)}dj(){const bb=Nb.ZlkX(this.__wbg_ptr);if(bb[1])throw Db(bb[0])}tR(){return Nb.cNTX(this.__wbg_ptr)>>>0}KR(){const bb=Nb.ocx7(this.__wbg_ptr);if(bb[1])throw Db(bb[0])}wR(bb,ab){const Ub=Nb.AzTt(this.__wbg_ptr,bb,ab);if(Ub[1])throw Db(Ub[0])}sR(bb){let ab,Ub;try{const Tb=Nb.UtB8(this.__wbg_ptr,bb);var Ab=Tb[0],Mb=Tb[1];if(Tb[3])throw Ab=0,Mb=0,Db(Tb[2]);return ab=Ab,Ub=Mb,vb(Ab,Mb)}finally{Nb.BdWA(ab,Ub,1)}}gR(bb){return Nb.nktL(this.__wbg_ptr,bb)>>>0}CR(bb){return Nb.yt2R(this.__wbg_ptr,bb)>>>0}re(){const bb=Nb.aP77(this.__wbg_ptr);var ab=Yb(bb[0],bb[1]).slice();return Nb.BdWA(bb[0],4*bb[1],4),ab}VR(){return 0!==Nb.EG7R(this.__wbg_ptr)}constructor(bb,ab,Ub,Ab,Mb,Tb){const Yb=Zb(bb,Nb.OkLZ,Nb.a0cl),Bb=Wb,vb=yb(ab,Nb.OkLZ),Lb=Wb,Pb=function(bb,ab){const Ub=ab(8*bb.length,8)>>>0;return eb().set(bb,Ub/8),Wb=bb.length,Ub}(Ub,Nb.OkLZ),Xb=Wb,jb=yb(Ab,Nb.OkLZ),Rb=Wb,kb=yb(Mb,Nb.OkLZ),zb=Wb,xb=Nb.fKaC(Yb,Bb,vb,Lb,Pb,Xb,jb,Rb,kb,zb,Tb);if(xb[2])throw Db(xb[1]);return this.__wbg_ptr=xb[0],Eb.register(this,this.__wbg_ptr,this),this}OR(){let bb,ab;try{const Ub=Nb.MTD4(this.__wbg_ptr);return bb=Ub[0],ab=Ub[1],vb(Ub[0],Ub[1])}finally{Nb.BdWA(bb,ab,1)}}cR(bb,ab){const Ub=Zb(bb,Nb.OkLZ,Nb.a0cl),Ab=Wb,Mb=yb(ab,Nb.OkLZ),Tb=Wb,Eb=Nb.xKRe(this.__wbg_ptr,Ub,Ab,Mb,Tb);if(Eb[1])throw Db(Eb[0])}JR(){return Nb.s17r(this.__wbg_ptr)>>>0}nR(){return Nb.QWTt(this.__wbg_ptr)>>>0}lR(){return Nb.Duz9(this.__wbg_ptr)>>>0}we(){return Nb.wNGX(this.__wbg_ptr)>>>0}warnings(){let bb,ab;try{const Ub=Nb.MKPM(this.__wbg_ptr);return bb=Ub[0],ab=Ub[1],vb(Ub[0],Ub[1])}finally{Nb.BdWA(bb,ab,1)}}}function Ab(bb,ab){const Ub=Zb(bb,Nb.OkLZ,Nb.a0cl),Ab=Wb,Mb=Nb.Salm(Ub,Ab,ab);if(Mb[1])throw Db(Mb[0])}function Mb(){Nb.kyif()}function Tb(){return{__proto__:null,RQ91:{__proto__:null,b6OP:function(bb,ab){return function(bb){kb===Rb.length&&Rb.push(Rb.length+1);const ab=kb;return kb=Rb[ab],Rb[ab]=bb,ab}(Error(vb(bb,ab)))},zuLZ:function(bb,ab){throw new Error(vb(bb,ab))},zFe4:function(bb,ab){console.error(vb(bb,ab))}}}}Symbol.dispose&&(Ub.prototype[Symbol.dispose]=Ub.prototype.free);const Eb="undefined"===typeof FinalizationRegistry?{register:()=>{},unregister:()=>{}}:new FinalizationRegistry((bb=>Nb.KMUq(bb,1)));function Yb(bb,ab){return bb>>>=0,Pb().subarray(bb/4,bb/4+ab)}let Bb=null;function eb(){return null!==Bb&&0!==Bb.byteLength||(Bb=new Float64Array(Nb.memory.buffer)),Bb}function vb(bb,ab){return function(bb,ab){ib+=ab,ib>=xb&&(zb=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0}),zb.decode(),ib=ab);return zb.decode(jb().subarray(bb,bb+ab))}(bb>>>0,ab)}let Lb=null;function Pb(){return null!==Lb&&0!==Lb.byteLength||(Lb=new Uint32Array(Nb.memory.buffer)),Lb}let Xb=null;function jb(){return null!==Xb&&0!==Xb.byteLength||(Xb=new Uint8Array(Nb.memory.buffer)),Xb}let Rb=new Array(1024).fill(void 0);Rb.push(void 0,null,!0,!1);let kb=Rb.length;function yb(bb,ab){const Ub=ab(4*bb.length,4)>>>0;return Pb().set(bb,Ub/4),Wb=bb.length,Ub}function Zb(bb,ab,Ub){if(void 0===Ub){const Ub=fb.encode(bb),Ab=ab(Ub.length,1)>>>0;return jb().subarray(Ab,Ab+Ub.length).set(Ub),Wb=Ub.length,Ab}let Ab=bb.length,Mb=ab(Ab,1)>>>0;const Tb=jb();let Eb=0;for(;Eb<Ab;Eb++){const ab=bb.charCodeAt(Eb);if(ab>127)break;Tb[Mb+Eb]=ab}if(Eb!==Ab){0!==Eb&&(bb=bb.slice(Eb)),Mb=Ub(Mb,Ab,Ab=Eb+3*bb.length,1)>>>0;const ab=jb().subarray(Mb+Eb,Mb+Ab);Eb+=fb.encodeInto(bb,ab).written,Mb=Ub(Mb,Ab,Eb,1)>>>0}return Wb=Eb,Mb}function Db(bb){const ab=function(bb){return Rb[bb]}(bb);return function(bb){bb<1028||(Rb[bb]=kb,kb=bb)}(bb),ab}let zb=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0});zb.decode();const xb=2146435072;let ib=0;const fb=new TextEncoder;"encodeInto"in fb||(fb.encodeInto=function(bb,ab){const Ub=fb.encode(bb);return ab.set(Ub),{read:bb.length,written:Ub.length}});let mb,pb,Nb,Wb=0;function Hb(bb,ab){return pb=bb,Nb=bb.exports,mb=ab,Bb=null,Lb=null,Xb=null,Nb.Gcnx(),Nb}function Ib(bb){if(void 0!==Nb)return Nb;void 0!==bb&&(Object.getPrototypeOf(bb)===Object.prototype?({module:bb}=bb):console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));const ab=Tb();bb instanceof WebAssembly.Module||(bb=new WebAssembly.Module(bb));return Hb(new WebAssembly.Instance(bb,ab),bb)}async function db(bb){if(void 0!==Nb)return Nb;void 0!==bb&&(Object.getPrototypeOf(bb)===Object.prototype?({module_or_path:bb}=bb):console.warn("using deprecated parameters for the initialization function; pass a single object instead"));const ab=Tb();("string"===typeof bb||"function"===typeof Request&&bb instanceof Request||"function"===typeof URL&&bb instanceof URL)&&(bb=fetch(bb));const{instance:Ub,module:Ab}=await async function(bb,ab){if("function"===typeof Response&&bb instanceof Response){if(!bb.ok)throw new Error(`failed to fetch Wasm: ${bb.status} ${bb.statusText} fetching \'${bb.url}\'`);if("function"===typeof WebAssembly.instantiateStreaming)try{return await WebAssembly.instantiateStreaming(bb,ab)}catch(Ub){if(!function(bb){switch(bb){case"basic":case"cors":case"default":return!0}return!1}(bb.type)||"application/wasm"===bb.headers.get("Content-Type"))throw Ub;console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\\n",Ub)}const Ab=await bb.arrayBuffer();return await WebAssembly.instantiate(Ab,ab)}{const Ub=await WebAssembly.instantiate(bb,ab);return Ub instanceof WebAssembly.Instance?{instance:Ub,module:bb}:Ub}}(await bb,ab);return Hb(Ub,Ab)}let Fb=null,hb=null;function Gb(bb){if(null!==hb)throw hb;if(null===Fb)try{const{memory:Ub}=Ib({module:bb});Fb={wasm:ab,memory:Ub}}catch(Ub){throw hb=function(bb,ab){return new Error(`${bb}: ${ab instanceof Error?`${ab.name}: ${ab.message}`:String(ab)}`,{cause:ab})}("instantiate",Ub),hb}return Fb}function Qb(bb){return bb instanceof Error?bb.message:String(bb)}const qb=0,ub=1,rb=2,Kb=3,ob=4;Error;function lb(bb){return`the texture module didn\'t load (${Qb(bb)})`}function tb(bb){return""===bb?[]:bb.split("\\0")}const wb=self;let sb=null,gb=null,Cb=qb,Vb=0;function Ob(bb){const ab=performance.now();var Ub,Ab;(bb!==Cb||ab-Vb>=1e3)&&(Cb=bb,Vb=ab,wb.postMessage({type:"progress",stage:bb,wasmBytes:null!==(Ub=null===(Ab=gb)||void 0===Ab?void 0:Ab.buffer.byteLength)&&void 0!==Ub?Ub:0}))}const{FileReaderSync:cb}=self;function Jb(bb){return(new cb).readAsDataURL(new Blob([bb],{type:"image/png"}))}function nb(bb,ab){wb.postMessage({type:"sheet",sheet:bb,pixels:ab},[ab.buffer])}function Sb(bb){let ab;Ob(ub);try{ab=Gb(bb.module)}catch(Eb){return void wb.postMessage({type:"failed",reason:lb(Eb),moduleLoad:!0})}gb=ab.memory,Ob(rb);const{assets:Ub,layerCap:Ab,warnings:Mb,generator:Tb}=function(bb,ab,Ub,Ab,Mb,Tb,Eb){var Yb;const{wasm:Bb,memory:eb}=bb,{strings:vb,blocks:Lb,numbers:Pb,index:Xb,armour:jb}=ab,Rb=new Bb.ab(vb,Lb,Pb,Xb,jb,Ub),kb=Ab.sources.map((bb=>(null===Tb||void 0===Tb||Tb(rb),Rb.eb(bb)))),yb=new Uint32Array(2*Ab.sourceOfName.length);for(const[Wb,Hb]of Ab.sourceOfName.entries())yb[2*Wb]=Wb,yb[2*Wb+1]=kb[Hb];Rb.cR(Ab.names,yb),null===Tb||void 0===Tb||Tb(Kb),Rb.wR(Mb,null!==(Yb=null===Eb||void 0===Eb?void 0:Eb.layers)&&void 0!==Yb?Yb:0),null===Tb||void 0===Tb||Tb(ob);const Zb={};for(const[Wb,Hb]of tb(Rb.OR()).entries())null===Tb||void 0===Tb||Tb(ob),Zb[Hb]=Rb.sR(Wb);const Db={},zb=Rb.mb(),xb=new Map;for(const[Wb,Hb]of tb(Rb.hb()).entries()){const bb=zb[Wb];xb.has(bb)||(null===Tb||void 0===Tb||Tb(ob),xb.set(bb,Rb.sR(bb))),Db[Hb]=xb.get(bb)}Rb.rR();const ib=Array.from(Rb.re()),fb=[],mb=[],pb=(bb,ab)=>new Uint8ClampedArray(eb.buffer,bb,ab).slice();if(Eb){for(let bb=0;bb<ib.length;bb++)null===Tb||void 0===Tb||Tb(ob),Rb.uR(bb),Rb.dj(),fb.push(Eb.dataUrl(new Uint8Array(eb.buffer,Rb.lR(),Rb.nR()))),Eb.onSheet(bb,pb(Rb.we(),Rb.JR()));Rb.oR()}const Nb=Rb.tR();for(let Wb=Nb;Wb<Nb+Rb.BE();Wb++)null===Tb||void 0===Tb||Tb(ob),fb.push(Rb.sR(Wb)),mb.push(pb(Rb.CR(Wb),Rb.gR(Wb)));return{assets:{rotatedBlockTextures:Zb,animatedBlockTextures:Db,blockAtlasArr:fb,blockAtlasPixels:mb,armourAtlas:Rb.sR(Rb.nb()),imagesPerAtlas:ib,blockAtlasWidth:Rb.We()},layerCap:Rb.VR()?Mb:0,warnings:Rb.warnings(),generator:Rb}}(ab,bb.inputs,bb.isDefaultPack,{sources:bb.sources,names:bb.names,sourceOfName:bb.sourceOfName},bb.maxLayerWidth,Ob,bb.sheetLayers>0?{layers:bb.sheetLayers,onSheet:nb,dataUrl:Jb}:void 0);sb=Tb,wb.postMessage({type:"required",assets:Ub,layerCap:Ab,warnings:Mb},Ub.blockAtlasPixels.map((bb=>bb.buffer)))}self.onmessageerror=()=>{wb.postMessage({type:"failed",reason:"the request couldn\'t be deserialised"})},self.onmessage=bb=>{let{data:ab}=bb;try{"required"===ab.type?Sb(ab):function(){if(!sb)throw new Error("No required assets to follow");const{colours:bb,warnings:ab}=function(bb){return bb.KR(),{colours:{blocks:bb.MB(),counts:bb.KB(),values:bb.me()},warnings:bb.warnings()}}(sb);wb.postMessage({type:"optional",...bb,warnings:ab},[bb.counts.buffer,bb.values.buffer])}()}catch(Ub){const bb=Qb(Ub),ab=Ub instanceof WebAssembly.RuntimeError?`wasm trapped (${bb})`:bb;wb.postMessage({type:"failed",reason:ab,stack:Ub instanceof Error?Ub.stack:void 0})}}})();', "Worker", void 0, Ub.p + "generation.worker.0a6f20d0.worker.js")
     }
-    var Ib = sb(35928),
-      Hb = sb(2982),
-      fb = sb(3019),
-      Mb = sb(3015),
-      Xb = sb(2952);
+    var Bb = Ub(35728),
+      eb = Ub(2953),
+      vb = Ub(2965),
+      Lb = Ub(2960),
+      Pb = Ub(2934);
 
-    function nb(bb) {
+    function Xb(bb) {
       return "" === bb ? [] : bb.split("\0")
     }
 
-    function mb(bb) {
+    function jb(bb) {
       if ("" !== bb)
-        for (const cb of bb.split("\n")) console.error(cb)
+        for (const ab of bb.split("\n")) console.error(ab)
     }
 
-    function lb(bb, cb) {
-      return async function(bb, cb) {
-        const sb = Object.keys(bb),
-          kb = [],
-          Wb = new Map,
-          ab = new Uint32Array(sb.length);
-        for (const [Tb, Ub] of sb.entries()) {
+    function Rb(bb, ab) {
+      return async function(bb, ab) {
+        const Ub = Object.keys(bb),
+          Ab = [],
+          Mb = new Map,
+          Tb = new Uint32Array(Ub.length);
+        for (const [Eb, Yb] of Ub.entries()) {
           const {
-            url: cb
-          } = bb[Ub];
-          Wb.has(cb) || (Wb.set(cb, kb.length), kb.push(cb)), ab[Tb] = Wb.get(cb)
+            url: ab
+          } = bb[Yb];
+          Mb.has(ab) || (Mb.set(ab, Ab.length), Ab.push(ab)), Tb[Eb] = Mb.get(ab)
         }
         return {
-          sources: await cb(kb),
-          names: sb.join("\0"),
-          sourceOfName: ab
+          sources: await ab(Ab),
+          names: Ub.join("\0"),
+          sourceOfName: Tb
         }
       }(bb, (async bb => {
-        const sb = await async function(bb, cb) {
-          const sb = new AbortController,
-            kb = () => {
-              sb.abort()
+        const Ub = await async function(bb, ab) {
+          const Ub = new AbortController,
+            Ab = () => {
+              Ub.abort()
             };
-          cb.addEventListener("abort", kb);
+          ab.addEventListener("abort", Ab);
           try {
-            const cb = await Promise.all(bb.map((async bb => {
+            const ab = await Promise.all(bb.map((async bb => {
               try {
-                const cb = await fetch(bb, {
-                  signal: sb.signal
+                const ab = await fetch(bb, {
+                  signal: Ub.signal
                 });
-                if (!cb.ok) throw new Error(`HTTP ${cb.status}`);
-                return [bb, await cb.blob()]
-              } catch (cb) {
-                throw sb.abort(), new fb.m(fb.j.Fetch, `fetching ${bb} failed: ${(0,Mb.c)(cb)}`)
+                if (!ab.ok) throw new Error(`HTTP ${ab.status}`);
+                return [bb, await ab.blob()]
+              } catch (ab) {
+                throw Ub.abort(), new vb.i(vb.h.Fetch, `fetching ${bb} failed: ${(0,Lb.e)(ab)}`)
               }
             })));
-            return new Map(cb)
+            return new Map(ab)
           } finally {
-            cb.removeEventListener("abort", kb)
+            ab.removeEventListener("abort", Ab)
           }
-        }(bb.filter((bb => !bb.startsWith("data:"))), cb);
+        }(bb.filter((bb => !bb.startsWith("data:"))), ab);
         return Promise.all(bb.map((bb => {
-          var cb;
-          return (0, Xb.c)(null !== (cb = sb.get(bb)) && void 0 !== cb ? cb : bb)
+          var ab;
+          return (0, Pb.e)(null !== (ab = Ub.get(bb)) && void 0 !== ab ? ab : bb)
         })))
       }))
     }
 
-    function Qb(bb, cb) {
-      let sb;
-      return bb instanceof fb.m ? sb = bb : (sb = new fb.m(cb ? fb.j.Optional : fb.j.Error, (0, Mb.c)(bb)), bb instanceof Error && (sb.stack = `${sb.name}: ${sb.message}\n${bb.stack}`)), sb.code !== fb.j.Fetch && sb.code !== fb.j.Error && (0, Hb.d)(sb.message), sb
+    function kb(bb, ab) {
+      let Ub;
+      return bb instanceof vb.i ? Ub = bb : (Ub = new vb.i(ab ? vb.h.Optional : vb.h.Error, (0, Lb.e)(bb)), bb instanceof Error && (Ub.stack = `${Ub.name}: ${Ub.message}\n${bb.stack}`)), Ub.code !== vb.h.Fetch && Ub.code !== vb.h.Error && (0, eb.i)(Ub.message), Ub
     }
 
-    function eb(bb) {
-      return bb.message ? new Error(`the texture worker failed: ${bb.message}`) : new fb.m(fb.j.Load, "the texture worker failed to start")
+    function yb(bb) {
+      return bb.message ? new Error(`the texture worker failed: ${bb.message}`) : new vb.i(vb.h.Load, "the texture worker failed to start")
     }
-    class Cb {
+    class Zb {
       constructor(bb) {
         this.worker = bb, this.failure = void 0, this.abandonStep = null, bb.addEventListener("error", (bb => {
-          bb.preventDefault(), this.failure ??= eb(bb)
+          bb.preventDefault(), this.failure ??= yb(bb)
         }))
       }
-      static async generateRequired(bb, cb, sb, ab) {
-        let Tb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : fb.b,
-          Hb = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
-        const Xb = (0, Ib.m)();
-        if (null !== Xb) throw Qb(new fb.m(fb.j.Load, Xb), !1);
-        let nb;
-        const eb = new AbortController;
+      static async generateRequired(bb, ab, Ub, Tb) {
+        let Eb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : vb.b,
+          eb = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
+        const Pb = (0, Bb.i)();
+        if (null !== Pb) throw kb(new vb.i(vb.h.Load, Pb), !1);
+        let Xb;
+        const yb = new AbortController;
         try {
-          nb = new Cb(function() {
+          Xb = new Zb(function() {
             try {
-              return new Ub
+              return new Yb
             } catch (bb) {
-              throw new fb.m(fb.j.Load, `the texture worker failed to start: ${(0,Mb.c)(bb)}`)
+              throw new vb.i(vb.h.Load, `the texture worker failed to start: ${(0,Lb.e)(bb)}`)
             }
           }());
-          const Xb = (0, Ib.d)().catch((bb => {
-              throw new fb.m(fb.j.Load, function(bb) {
-                return `the texture module didn't load (${(0,Mb.c)(bb)})`
+          const Pb = (0, Bb.b)().catch((bb => {
+              throw new vb.i(vb.h.Load, function(bb) {
+                return `the texture module didn't load (${(0,Lb.e)(bb)})`
               }(bb))
             })),
-            Qb = (async () => {
-              const ab = function(bb, cb, sb) {
-                const kb = [],
-                  Wb = new Map,
-                  ab = bb => {
-                    let cb = Wb.get(bb);
-                    return void 0 === cb && (cb = kb.length, kb.push(bb), Wb.set(bb, cb)), cb
+            kb = (async () => {
+              const Tb = function(bb, ab, Ub) {
+                const Ab = [],
+                  Mb = new Map,
+                  Tb = bb => {
+                    let ab = Mb.get(bb);
+                    return void 0 === ab && (ab = Ab.length, Ab.push(bb), Mb.set(bb, ab)), ab
                   },
-                  Tb = [],
-                  Ub = [],
-                  Ib = new Map,
-                  Hb = (bb, cb) => {
-                    const sb = "object" === typeof bb && null !== bb && "animTextures" in bb ? bb.animTextures : void 0;
-                    if (!Array.isArray(sb) || !sb.every((bb => "string" === typeof bb))) throw new Error(`Block ${cb} has textureInfo the encoding doesn't cover`);
-                    Tb.push(sb.length, ...sb.map(ab))
+                  Eb = [],
+                  Yb = [],
+                  Bb = new Map,
+                  eb = (bb, ab) => {
+                    const Ub = "object" === typeof bb && null !== bb && "animTextures" in bb ? bb.animTextures : void 0;
+                    if (!Array.isArray(Ub) || !Ub.every((bb => "string" === typeof bb))) throw new Error(`Block ${ab} has textureInfo the encoding doesn't cover`);
+                    Eb.push(Ub.length, ...Ub.map(Tb))
                   };
-                let fb = 0;
-                for (const nb in bb) {
-                  const cb = bb[nb];
-                  Tb.push(ab(nb));
-                  const sb = (cb.transTex ? 1 : 0) | (cb.Nn ? 2 : 0) | (cb.particlesIgnoreBlack ? 4 : 0),
-                    kb = "string" === typeof cb.itemTexture ? ab(cb.itemTexture) : 4294967295,
-                    Wb = `${sb},${kb}`,
-                    Mb = cb.textureInfo,
-                    Xb = Ib.get(Mb);
-                  if ((null === Xb || void 0 === Xb ? void 0 : Xb.fields) !== Wb)
-                    if (Ib.set(Mb, {
-                        entry: fb++,
-                        fields: Wb
-                      }), Tb.push(1, sb, kb), "string" === typeof Mb) Tb.push(1, ab(Mb));
-                    else if (Array.isArray(Mb)) {
-                    Tb.push(3, Mb.length);
-                    for (const bb of Mb) "string" === typeof bb ? Tb.push(0, ab(bb)) : "number" === typeof bb ? (Tb.push(2, Ub.length), Ub.push(bb)) : (Tb.push(1), Hb(bb, nb))
-                  } else Mb ? (Tb.push(2), Hb(Mb, nb)) : Tb.push(0);
-                  else Tb.push(0, Xb.entry), fb++
+                let vb = 0;
+                for (const Xb in bb) {
+                  const ab = bb[Xb];
+                  Eb.push(Tb(Xb));
+                  const Ub = (ab.transTex ? 1 : 0) | (ab.CP ? 2 : 0) | (ab.particlesIgnoreBlack ? 4 : 0),
+                    Ab = "string" === typeof ab.itemTexture ? Tb(ab.itemTexture) : 4294967295,
+                    Mb = `${Ub},${Ab}`,
+                    Lb = ab.textureInfo,
+                    Pb = Bb.get(Lb);
+                  if ((null === Pb || void 0 === Pb ? void 0 : Pb.fields) !== Mb)
+                    if (Bb.set(Lb, {
+                        entry: vb++,
+                        fields: Mb
+                      }), Eb.push(1, Ub, Ab), "string" === typeof Lb) Eb.push(1, Tb(Lb));
+                    else if (Array.isArray(Lb)) {
+                    Eb.push(3, Lb.length);
+                    for (const bb of Lb) "string" === typeof bb ? Eb.push(0, Tb(bb)) : "number" === typeof bb ? (Eb.push(2, Yb.length), Yb.push(bb)) : (Eb.push(1), eb(bb, Xb))
+                  } else Lb ? (Eb.push(2), eb(Lb, Xb)) : Eb.push(0);
+                  else Eb.push(0, Pb.entry), vb++
                 }
-                const Mb = [];
-                for (const nb in cb) Mb.push(ab(nb), cb[nb]);
-                const Xb = new Uint32Array(sb.map(ab));
+                const Lb = [];
+                for (const Xb in ab) Lb.push(Tb(Xb), ab[Xb]);
+                const Pb = new Uint32Array(Ub.map(Tb));
                 return {
-                  strings: kb.join("\0"),
-                  blocks: new Uint32Array(Tb),
-                  numbers: new Float64Array(Ub),
-                  index: new Uint32Array(Mb),
-                  armour: Xb
+                  strings: Ab.join("\0"),
+                  blocks: new Uint32Array(Eb),
+                  numbers: new Float64Array(Yb),
+                  index: new Uint32Array(Lb),
+                  armour: Pb
                 }
-              }(bb, cb, kb.g.map(Wb.l));
+              }(bb, ab, Ab.f.map(Mb.f));
               return {
-                inputs: ab,
-                sources: await lb(sb, eb.signal)
+                inputs: Tb,
+                sources: await Rb(Ub, yb.signal)
               }
             })(),
-            [Nb, {
-              inputs: Vb,
-              sources: Lb
-            }] = await Promise.all([Xb, Qb]),
-            ub = [Vb.blocks.buffer, Vb.numbers.buffer, Vb.index.buffer, Vb.armour.buffer, Lb.sourceOfName.buffer];
-          for (const bb of Lb.sources) ub.push(bb.buffer);
-          const Yb = [],
+            [Db, {
+              inputs: zb,
+              sources: xb
+            }] = await Promise.all([Pb, kb]),
+            ib = [zb.blocks.buffer, zb.numbers.buffer, zb.index.buffer, zb.armour.buffer, xb.sourceOfName.buffer];
+          for (const bb of xb.sources) ib.push(bb.buffer);
+          const fb = [],
             {
-              assets: hb,
-              layerCap: Jb,
-              warnings: gb
-            } = await nb.request({
+              assets: mb,
+              layerCap: pb,
+              warnings: Nb
+            } = await Xb.request({
               type: "required",
-              module: Nb,
-              inputs: Vb,
-              isDefaultPack: ab,
-              maxLayerWidth: Tb,
-              sheetLayers: Hb,
-              ...Lb
-            }, ub, ((bb, cb) => {
-              Yb[bb] = cb
+              module: Db,
+              inputs: zb,
+              isDefaultPack: Tb,
+              maxLayerWidth: Eb,
+              sheetLayers: eb,
+              ...xb
+            }, ib, ((bb, ab) => {
+              fb[bb] = ab
             }));
-          return Hb > 0 && (hb.blockAtlasPixels = function(bb, cb) {
-            const sb = [];
-            for (let kb = 0; kb < cb; kb++) {
-              const Wb = bb[kb];
-              if (void 0 === Wb) throw new Error(`the texture worker's sheet ${kb} of ${cb} didn't arrive`);
-              sb.push(Wb)
+          return eb > 0 && (mb.blockAtlasPixels = function(bb, ab) {
+            const Ub = [];
+            for (let Ab = 0; Ab < ab; Ab++) {
+              const Mb = bb[Ab];
+              if (void 0 === Mb) throw new Error(`the texture worker's sheet ${Ab} of ${ab} didn't arrive`);
+              Ub.push(Mb)
             }
-            return sb
-          }(Yb, hb.imagesPerAtlas.length)), mb(gb), {
-            assets: hb,
-            layerCap: Jb,
-            worker: nb
+            return Ub
+          }(fb, mb.imagesPerAtlas.length)), jb(Nb), {
+            assets: mb,
+            layerCap: pb,
+            worker: Xb
           }
-        } catch (Vb) {
-          var Nb;
-          throw eb.abort(), null === (Nb = nb) || void 0 === Nb || Nb.terminate(), Qb(Vb, !1)
+        } catch (zb) {
+          var Db;
+          throw yb.abort(), null === (Db = Xb) || void 0 === Db || Db.terminate(), kb(zb, !1)
         }
       }
       async generateOptional() {
@@ -208,102 +208,102 @@ export const modules = {
           bb = await this.request({
             type: "optional"
           }, [])
-        } catch (cb) {
-          throw Qb(cb, !0)
+        } catch (ab) {
+          throw kb(ab, !0)
         } finally {
           this.terminate()
         }
-        return mb(bb.warnings),
+        return jb(bb.warnings),
           function(bb) {
             let {
-              blocks: cb,
-              counts: sb,
-              values: kb
+              blocks: ab,
+              counts: Ub,
+              values: Ab
             } = bb;
-            const Wb = {};
-            let ab = 0;
-            for (const [Tb, Ub] of nb(cb).entries()) {
+            const Mb = {};
+            let Tb = 0;
+            for (const [Eb, Yb] of Xb(ab).entries()) {
               const bb = [];
-              for (let cb = 0; cb < sb[Tb]; cb++, ab += 3) bb.push([kb[ab], kb[ab + 1], kb[ab + 2]]);
-              Wb[Ub] = bb
+              for (let ab = 0; ab < Ub[Eb]; ab++, Tb += 3) bb.push([Ab[Tb], Ab[Tb + 1], Ab[Tb + 2]]);
+              Mb[Yb] = bb
             }
-            return Wb
+            return Mb
           }(bb)
       }
       terminate() {
         var bb;
         this.worker.terminate(), null === (bb = this.abandonStep) || void 0 === bb || bb.call(this)
       }
-      request(bb, cb, sb) {
-        return new Promise(((kb, Wb) => {
-          if (void 0 !== this.failure) return void Wb(this.failure);
-          let ab = fb.q.None,
-            Tb = 0,
-            Ub = null;
-          const Ib = () => {
+      request(bb, ab, Ub) {
+        return new Promise(((Ab, Mb) => {
+          if (void 0 !== this.failure) return void Mb(this.failure);
+          let Tb = vb.l.None,
+            Eb = 0,
+            Yb = null;
+          const Bb = () => {
             var bb;
-            null === (bb = Ub) || void 0 === bb || bb.stop(), this.abandonStep = null, this.worker.onmessage = null, this.worker.onerror = null, this.worker.onmessageerror = null
+            null === (bb = Yb) || void 0 === bb || bb.stop(), this.abandonStep = null, this.worker.onmessage = null, this.worker.onerror = null, this.worker.onmessageerror = null
           };
           this.abandonStep = () => {
-            Ib(), Wb(new Error("the texture worker was terminated"))
-          }, this.worker.onmessage = cb => {
+            Bb(), Mb(new Error("the texture worker was terminated"))
+          }, this.worker.onmessage = ab => {
             let {
-              data: Hb
-            } = cb;
-            var Mb;
-            if ("progress" === Hb.type) return ab = Hb.stage, Tb = Hb.wasmBytes, void(null === (Mb = Ub) || void 0 === Mb || Mb.restart(ab === fb.q.Generating ? fb.c : fb.f));
-            "sheet" === Hb.type && sb ? sb(Hb.sheet, Hb.pixels) : (Ib(), "failed" === Hb.type ? Wb(Hb.moduleLoad ? new fb.m(fb.j.Load, Hb.reason) : function(bb, cb) {
+              data: eb
+            } = ab;
+            var Lb;
+            if ("progress" === eb.type) return Tb = eb.stage, Eb = eb.wasmBytes, void(null === (Lb = Yb) || void 0 === Lb || Lb.restart(Tb === vb.l.Generating ? vb.c : vb.f));
+            "sheet" === eb.type && Ub ? Ub(eb.sheet, eb.pixels) : (Bb(), "failed" === eb.type ? Mb(eb.moduleLoad ? new vb.i(vb.h.Load, eb.reason) : function(bb, ab) {
               let {
-                reason: sb,
-                stack: kb
+                reason: Ub,
+                stack: Ab
               } = bb;
-              const Wb = new Error(Nb(sb, cb));
-              void 0 !== kb && (Wb.stack = kb);
-              return Wb
-            }(Hb, Tb)) : Hb.type !== bb.type ? Wb(new Error(`the texture worker answered ${Hb.type} to ${bb.type}`)) : kb(Hb))
+              const Mb = new Error(Db(Ub, ab));
+              void 0 !== Ab && (Mb.stack = Ab);
+              return Mb
+            }(eb, Eb)) : eb.type !== bb.type ? Mb(new Error(`the texture worker answered ${eb.type} to ${bb.type}`)) : Ab(eb))
           }, this.worker.onerror = bb => {
-            Ib(), Wb(eb(bb))
+            Bb(), Mb(yb(bb))
           }, this.worker.onmessageerror = () => {
-            Ib(), Wb(new Error("the texture worker's answer couldn't be read"))
+            Bb(), Mb(new Error("the texture worker's answer couldn't be read"))
           };
           try {
-            this.worker.postMessage(bb, cb), Ub = (0, fb.r)((() => {
-              Ib();
-              const cb = new fb.m("required" === bb.type ? `${fb.j.Stalled}${ab}` : fb.j.Optional, Nb("the texture worker stopped responding", Tb));
-              Wb(cb)
+            this.worker.postMessage(bb, ab), Yb = (0, vb.m)((() => {
+              Bb();
+              const ab = new vb.i("required" === bb.type ? `${vb.h.Stalled}${Tb}` : vb.h.Optional, Db("the texture worker stopped responding", Eb));
+              Mb(ab)
             }))
-          } catch (Hb) {
-            Ib(), Wb(Hb)
+          } catch (eb) {
+            Bb(), Mb(eb)
           }
         }))
       }
     }
 
-    function Nb(bb, cb) {
-      return cb > 0 ? `${bb}, its module's memory ${Math.round(cb/2**20)} MiB` : bb
+    function Db(bb, ab) {
+      return ab > 0 ? `${bb}, its module's memory ${Math.round(ab/2**20)} MiB` : bb
     }
   },
-  35924: bb => {
-    bb.exports = function(bb, cb, sb, kb) {
-      var Wb = self || window;
+  35722: bb => {
+    bb.exports = function(bb, ab, Ub, Ab) {
+      var Mb = self || window;
       try {
         try {
-          var ab;
+          var Tb;
           try {
-            ab = new Wb.Blob([bb])
-          } catch (Hb) {
-            (ab = new(Wb.BlobBuilder || Wb.WebKitBlobBuilder || Wb.MozBlobBuilder || Wb.MSBlobBuilder)).append(bb), ab = ab.getBlob()
+            Tb = new Mb.Blob([bb])
+          } catch (eb) {
+            (Tb = new(Mb.BlobBuilder || Mb.WebKitBlobBuilder || Mb.MozBlobBuilder || Mb.MSBlobBuilder)).append(bb), Tb = Tb.getBlob()
           }
-          var Tb = Wb.URL || Wb.webkitURL,
-            Ub = Tb.createObjectURL(ab),
-            Ib = new Wb[cb](Ub, sb);
-          return Tb.revokeObjectURL(Ub), Ib
-        } catch (Hb) {
-          return new Wb[cb]("data:application/javascript,".concat(encodeURIComponent(bb)), sb)
+          var Eb = Mb.URL || Mb.webkitURL,
+            Yb = Eb.createObjectURL(Tb),
+            Bb = new Mb[ab](Yb, Ub);
+          return Eb.revokeObjectURL(Yb), Bb
+        } catch (eb) {
+          return new Mb[ab]("data:application/javascript,".concat(encodeURIComponent(bb)), Ub)
         }
-      } catch (Hb) {
-        if (!kb) throw Error("Inline worker is not supported");
-        return new Wb[cb](kb, sb)
+      } catch (eb) {
+        if (!Ab) throw Error("Inline worker is not supported");
+        return new Mb[ab](Ab, Ub)
       }
     }
   }

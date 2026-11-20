@@ -1,66 +1,66 @@
 export const id = 341;
 export const ids = [341];
 export const modules = {
-  41909: (bb, cb, sb) => {
-    function kb(bb) {
+  41637: (bb, ab, Ub) => {
+    function Ab(bb) {
       return Math.floor(bb / 8)
     }
 
-    function Wb(bb) {
+    function Mb(bb) {
       return 1 << bb % 8
     }
-    sb.d(cb, {
-      OptimizeIndices: () => Tb
+    Ub.d(ab, {
+      OptimizeIndices: () => Eb
     });
-    class ab {
+    class Tb {
       constructor(bb) {
         this.size = bb, this._byteArray = new Uint8Array(Math.ceil(this.size / 8))
       }
       get(bb) {
         if (bb >= this.size) throw new RangeError("Bit index out of range");
-        const cb = kb(bb),
-          sb = Wb(bb);
-        return 0 !== (this._byteArray[cb] & sb)
+        const ab = Ab(bb),
+          Ub = Mb(bb);
+        return 0 !== (this._byteArray[ab] & Ub)
       }
-      set(bb, cb) {
+      set(bb, ab) {
         if (bb >= this.size) throw new RangeError("Bit index out of range");
-        const sb = kb(bb),
-          ab = Wb(bb);
-        cb ? this._byteArray[sb] |= ab : this._byteArray[sb] &= ~ab
+        const Ub = Ab(bb),
+          Tb = Mb(bb);
+        ab ? this._byteArray[Ub] |= Tb : this._byteArray[Ub] &= ~Tb
       }
     }
 
-    function Tb(bb) {
-      const cb = [],
-        sb = bb.length / 3;
-      for (let ab = 0; ab < sb; ab++) cb.push([bb[3 * ab], bb[3 * ab + 1], bb[3 * ab + 2]]);
-      const kb = new Map;
-      for (let ab = 0; ab < cb.length; ab++) {
-        const bb = cb[ab];
-        for (const cb of bb) {
-          let bb = kb.get(cb);
-          bb || kb.set(cb, bb = []), bb.push(ab)
+    function Eb(bb) {
+      const ab = [],
+        Ub = bb.length / 3;
+      for (let Tb = 0; Tb < Ub; Tb++) ab.push([bb[3 * Tb], bb[3 * Tb + 1], bb[3 * Tb + 2]]);
+      const Ab = new Map;
+      for (let Tb = 0; Tb < ab.length; Tb++) {
+        const bb = ab[Tb];
+        for (const ab of bb) {
+          let bb = Ab.get(ab);
+          bb || Ab.set(ab, bb = []), bb.push(Tb)
         }
       }
-      const Wb = new ab(sb),
-        Tb = [],
-        Ub = bb => {
-          const sb = [bb];
-          for (; sb.length > 0;) {
-            const bb = sb.pop();
-            if (!Wb.get(bb)) {
-              Wb.set(bb, !0), Tb.push(cb[bb]);
-              for (const ab of cb[bb]) {
-                const bb = kb.get(ab);
+      const Mb = new Tb(Ub),
+        Eb = [],
+        Yb = bb => {
+          const Ub = [bb];
+          for (; Ub.length > 0;) {
+            const bb = Ub.pop();
+            if (!Mb.get(bb)) {
+              Mb.set(bb, !0), Eb.push(ab[bb]);
+              for (const Tb of ab[bb]) {
+                const bb = Ab.get(Tb);
                 if (!bb) return;
-                for (const cb of bb) Wb.get(cb) || sb.push(cb)
+                for (const ab of bb) Mb.get(ab) || Ub.push(ab)
               }
             }
           }
         };
-      for (let ab = 0; ab < sb; ab++) Wb.get(ab) || Ub(ab);
-      let Ib = 0;
-      for (const ab of Tb) bb[Ib++] = ab[0], bb[Ib++] = ab[1], bb[Ib++] = ab[2]
+      for (let Tb = 0; Tb < Ub; Tb++) Mb.get(Tb) || Yb(Tb);
+      let Bb = 0;
+      for (const Tb of Eb) bb[Bb++] = Tb[0], bb[Bb++] = Tb[1], bb[Bb++] = Tb[2]
     }
   }
 };

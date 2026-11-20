@@ -1,495 +1,495 @@
 export const id = 88;
 export const ids = [88];
 export const modules = {
-  40891: (bb, cb, sb) => {
-    async function kb(bb, cb) {
+  40598: (bb, ab, Ub) => {
+    async function Ab(bb, ab) {
       const [{
-        clientSideServerUrls: kb
+        clientSideServerUrls: Ab
       }, {
-        postJsonWithMetricsCookiesAndJsonResponse: Wb
+        postJsonWithMetricsCookiesAndJsonResponse: Mb
       }, {
-        gameBridge: ab
-      }] = await Promise.all([Promise.resolve().then((() => sb(1208))), Promise.resolve().then((() => sb(1126))), Promise.resolve().then((() => sb(1870)))]), Tb = ab.latest("connectedGame").websocketUrl;
-      if (!Tb) throw new Error("AI Helper: not connected to a game server");
-      const Ub = `${kb.getHttpUrlFromWebSocketUrl(Tb)}${bb}`;
-      return await Wb(Ub, cb, {
+        gameBridge: Tb
+      }] = await Promise.all([Promise.resolve().then((() => Ub(1142))), Promise.resolve().then((() => Ub(1065))), Promise.resolve().then((() => Ub(1824)))]), Eb = Tb.latest("connectedGame").websocketUrl;
+      if (!Eb) throw new Error("AI Helper: not connected to a game server");
+      const Yb = `${Ab.getHttpUrlFromWebSocketUrl(Eb)}${bb}`;
+      return await Mb(Yb, ab, {
         retries: 0
       })
     }
-    sb.r(cb), sb.d(cb, {
-      postToGameServer: () => kb
+    Ub.r(ab), Ub.d(ab, {
+      postToGameServer: () => Ab
     })
   },
-  40888: (bb, cb, sb) => {
-    sb.r(cb), sb.d(cb, {
-      WorldCodeAiPanel: () => oM,
-      default: () => SM
+  40590: (bb, ab, Ub) => {
+    Ub.r(ab), Ub.d(ab, {
+      WorldCodeAiPanel: () => oL,
+      default: () => lL
     });
-    var kb = sb(64),
-      Wb = sb(1033),
-      ab = sb.n(Wb),
-      Tb = sb(1087);
+    var Ab = Ub(52),
+      Mb = Ub(984),
+      Tb = Ub.n(Mb),
+      Eb = Ub(1023);
 
-    function Ub(bb) {
+    function Yb(bb) {
       let {
-        title: cb,
-        children: sb,
-        isCalm: Wb = !1,
-        isElsewhere: Ub = !1,
-        defaultOpen: Ib = !1,
-        isOpen: Hb,
-        onToggle: fb,
-        className: Mb
+        title: ab,
+        children: Ub,
+        isCalm: Mb = !1,
+        isElsewhere: Yb = !1,
+        defaultOpen: Bb = !1,
+        isOpen: eb,
+        onToggle: vb,
+        className: Lb
       } = bb;
-      const [Xb, nb] = (0, kb.useState)(Ib), mb = null !== Hb && void 0 !== Hb ? Hb : Xb;
-      return (0, Tb.jsxs)("div", {
-        className: ab()("WorldCodeAiLog", Wb && "WorldCodeAiLog-calm", Ub && "WorldCodeAiLog-elsewhere", mb && "WorldCodeAiLog-open", Mb),
-        children: [(0, Tb.jsxs)("button", {
+      const [Pb, Xb] = (0, Ab.useState)(Bb), jb = null !== eb && void 0 !== eb ? eb : Pb;
+      return (0, Eb.jsxs)("div", {
+        className: Tb()("WorldCodeAiLog", Mb && "WorldCodeAiLog-calm", Yb && "WorldCodeAiLog-elsewhere", jb && "WorldCodeAiLog-open", Lb),
+        children: [(0, Eb.jsxs)("button", {
           className: "WorldCodeAiLogToggle",
-          "aria-expanded": mb,
+          "aria-expanded": jb,
           onClick: () => {
-            void 0 === Hb && nb(!mb), null === fb || void 0 === fb || fb(!mb)
+            void 0 === eb && Xb(!jb), null === vb || void 0 === vb || vb(!jb)
           },
-          children: [(0, Tb.jsx)("span", {
+          children: [(0, Eb.jsx)("span", {
             className: "WorldCodeAiLogChevron",
             "aria-hidden": "true",
-            children: mb ? "\u25be" : "\u25b8"
-          }), cb]
-        }), mb && (0, Tb.jsx)("div", {
+            children: jb ? "\u25be" : "\u25b8"
+          }), ab]
+        }), jb && (0, Eb.jsx)("div", {
           className: "WorldCodeAiLogBody",
-          children: sb
+          children: Ub
         })]
       })
     }
-    var Ib = sb(1870),
-      Hb = sb(6153),
-      fb = sb(1431),
-      Mb = sb(36460),
-      Xb = sb(1039),
-      nb = sb(4469),
-      mb = sb(36479),
-      lb = sb(1572),
-      Qb = sb(4545),
-      eb = sb(6142);
-    const Cb = new URL(lb.e).host;
+    var Bb = Ub(1824),
+      eb = Ub(6109),
+      vb = Ub(1352),
+      Lb = Ub(36220),
+      Pb = Ub(990),
+      Xb = Ub(4428),
+      jb = Ub(36240),
+      Rb = Ub(1505),
+      kb = Ub(4509),
+      yb = Ub(6104);
+    const Zb = new URL(Rb.d).host;
 
-    function Nb(bb) {
-      const cb = bb.trim();
-      let sb;
+    function Db(bb) {
+      const ab = bb.trim();
+      let Ub;
       try {
-        const bb = /^docs\//i.test(cb) ? `${lb.e}/` : `${lb.e}/docs/`,
-          kb = cb.toLowerCase().replace(/^www\./, "").startsWith(`${Cb}/`);
-        sb = new URL(kb ? `https://${cb}` : cb, bb)
+        const bb = /^docs\//i.test(ab) ? `${Rb.d}/` : `${Rb.d}/docs/`,
+          Ab = ab.toLowerCase().replace(/^www\./, "").startsWith(`${Zb}/`);
+        Ub = new URL(Ab ? `https://${ab}` : ab, bb)
       } catch {
         return null
       }
-      if ("https:" !== sb.protocol && "http:" !== sb.protocol || sb.host !== Cb && sb.host !== `www.${Cb}`) return null;
-      const kb = sb.pathname.toLowerCase();
-      return Vb(kb) || null !== (0, Qb.B)(kb) ? kb : (0, Qb.z)(kb)
+      if ("https:" !== Ub.protocol && "http:" !== Ub.protocol || Ub.host !== Zb && Ub.host !== `www.${Zb}`) return null;
+      const Ab = Ub.pathname.toLowerCase();
+      return zb(Ab) || null !== (0, kb.C)(Ab) ? Ab : (0, kb.B)(Ab)
     }
 
-    function Vb(bb) {
-      return bb === Qb.j || bb === Qb.n
+    function zb(bb) {
+      return bb === kb.j || bb === kb.q
     }
 
-    function Lb(bb) {
-      const cb = Nb(bb);
-      return null === cb ? bb : `${lb.e}${cb}`
+    function xb(bb) {
+      const ab = Db(bb);
+      return null === ab ? bb : `${Rb.d}${ab}`
     }
-    var ub = sb(232),
-      Yb = sb(40826),
-      hb = sb.n(Yb);
+    var ib = Ub(212),
+      fb = Ub(40505),
+      mb = Ub.n(fb);
 
-    function Jb(bb) {
-      const cb = [];
-      let sb = 0;
-      return bb.split("\n").forEach(((bb, kb) => {
-        cb.push({
+    function pb(bb) {
+      const ab = [];
+      let Ub = 0;
+      return bb.split("\n").forEach(((bb, Ab) => {
+        ab.push({
           text: bb,
-          from: sb,
-          index: kb
-        }), sb += bb.length + 1
-      })), cb
+          from: Ub,
+          index: Ab
+        }), Ub += bb.length + 1
+      })), ab
     }
 
-    function gb(bb) {
+    function Nb(bb) {
       return bb.replace(/^\s*\/\/.*$/, "").replace(/\s+/g, "").replace(/['`]/g, '"').replace(/[;,]+$/, "")
     }
 
-    function Bb(bb, cb, sb) {
-      if (0 === cb.length) return null;
-      let kb = null;
-      for (let Wb = 0; Wb + cb.length <= bb.length; Wb++) {
-        if (cb.every(((cb, kb) => sb(bb[Wb + kb].text) === cb))) {
-          if (kb) return {
-            ...kb,
+    function Wb(bb, ab, Ub) {
+      if (0 === ab.length) return null;
+      let Ab = null;
+      for (let Mb = 0; Mb + ab.length <= bb.length; Mb++) {
+        if (ab.every(((ab, Ab) => Ub(bb[Mb + Ab].text) === ab))) {
+          if (Ab) return {
+            ...Ab,
             isOnly: !1
           };
-          const sb = bb[Wb + cb.length - 1];
-          kb = {
-            from: bb[Wb].from,
-            to: sb.from + sb.text.length
+          const Ub = bb[Mb + ab.length - 1];
+          Ab = {
+            from: bb[Mb].from,
+            to: Ub.from + Ub.text.length
           }
         }
       }
-      return kb ? {
-        ...kb,
+      return Ab ? {
+        ...Ab,
         isOnly: !0
       } : null
     }
 
-    function tb(bb, cb) {
-      if ("" === cb.trim()) return null;
-      const sb = Jb(bb),
-        kb = function(bb) {
-          return bb.split("\n").map((bb => bb.trim())).filter(((bb, cb, sb) => "" !== bb || cb > 0 && cb < sb.length - 1))
-        }(cb),
-        Wb = Bb(sb, kb, (bb => bb.trim()));
-      if (null !== Wb) return {
-        from: Wb.from,
-        to: Wb.to,
-        isLoose: !Wb.isOnly
+    function Hb(bb, ab) {
+      if ("" === ab.trim()) return null;
+      const Ub = pb(bb),
+        Ab = function(bb) {
+          return bb.split("\n").map((bb => bb.trim())).filter(((bb, ab, Ub) => "" !== bb || ab > 0 && ab < Ub.length - 1))
+        }(ab),
+        Mb = Wb(Ub, Ab, (bb => bb.trim()));
+      if (null !== Mb) return {
+        from: Mb.from,
+        to: Mb.to,
+        isLoose: !Mb.isOnly
       };
-      const ab = bb => bb.trim().replace(/;+$/, ""),
-        Tb = Bb(sb, kb.map(ab), ab);
-      if (null !== Tb) {
-        const sb = bb.indexOf(cb),
-          kb = -1 !== sb && (sb < Tb.from || sb >= Tb.to);
+      const Tb = bb => bb.trim().replace(/;+$/, ""),
+        Eb = Wb(Ub, Ab.map(Tb), Tb);
+      if (null !== Eb) {
+        const Ub = bb.indexOf(ab),
+          Ab = -1 !== Ub && (Ub < Eb.from || Ub >= Eb.to);
         return {
-          from: Tb.from,
-          to: Tb.to,
-          isLoose: !Tb.isOnly || kb
+          from: Eb.from,
+          to: Eb.to,
+          isLoose: !Eb.isOnly || Ab
         }
       }
-      const Ub = bb.indexOf(cb);
-      if (-1 !== Ub) {
-        var Ib, Hb, fb;
-        const sb = /\w/.test(cb[0]) && /\w/.test(null !== (Ib = bb[Ub - 1]) && void 0 !== Ib ? Ib : "") || /\w/.test(null !== (Hb = cb.at(-1)) && void 0 !== Hb ? Hb : "") && /\w/.test(null !== (fb = bb[Ub + cb.length]) && void 0 !== fb ? fb : "");
+      const Yb = bb.indexOf(ab);
+      if (-1 !== Yb) {
+        var Bb, eb, vb;
+        const Ub = /\w/.test(ab[0]) && /\w/.test(null !== (Bb = bb[Yb - 1]) && void 0 !== Bb ? Bb : "") || /\w/.test(null !== (eb = ab.at(-1)) && void 0 !== eb ? eb : "") && /\w/.test(null !== (vb = bb[Yb + ab.length]) && void 0 !== vb ? vb : "");
         return {
-          from: Ub,
-          to: Ub + cb.length,
-          isLoose: sb || -1 !== bb.indexOf(cb, Ub + 1)
+          from: Yb,
+          to: Yb + ab.length,
+          isLoose: Ub || -1 !== bb.indexOf(ab, Yb + 1)
         }
       }
-      const Mb = cb.split("\n").map(gb).filter(Boolean),
-        Xb = Bb(sb.filter((bb => "" !== gb(bb.text))), Mb, gb);
-      return null === Xb ? null : {
-        from: Xb.from,
-        to: Xb.to,
+      const Lb = ab.split("\n").map(Nb).filter(Boolean),
+        Pb = Wb(Ub.filter((bb => "" !== Nb(bb.text))), Lb, Nb);
+      return null === Pb ? null : {
+        from: Pb.from,
+        to: Pb.to,
         isLoose: !0
       }
     }
 
-    function yb(bb) {
-      var cb, sb;
-      return null !== (cb = null === (sb = /^[ \t]*/.exec(bb)) || void 0 === sb ? void 0 : sb[0]) && void 0 !== cb ? cb : ""
+    function Ib(bb) {
+      var ab, Ub;
+      return null !== (ab = null === (Ub = /^[ \t]*/.exec(bb)) || void 0 === Ub ? void 0 : Ub[0]) && void 0 !== ab ? ab : ""
     }
 
-    function Pb(bb, cb, sb, kb) {
-      if (cb.from > 0 && "\n" !== bb[cb.from - 1]) return kb;
-      const Wb = bb.slice(cb.from, cb.to).split("\n").filter((bb => "" !== bb.trim())),
-        ab = sb.split("\n").filter((bb => "" !== bb.trim()));
-      if (0 === Wb.length || 0 === ab.length) return kb;
-      const Tb = yb(Wb[0]),
-        Ub = yb(ab[0]);
-      if (Tb === Ub) return kb;
-      const Ib = ab.length > 1 && ab.length === Wb.length && ab.slice(1).every(((bb, cb) => yb(bb) === yb(Wb[cb + 1]))),
-        Hb = kb.split("\n"),
-        fb = Hb.findIndex((bb => "" !== bb.trim()));
-      if (-1 === fb || yb(Hb[fb]) === Tb) return kb;
-      let Mb = !1;
-      return Hb.map(((bb, cb) => {
-        var sb, kb;
-        const Wb = Mb;
-        return (null !== (sb = null === (kb = bb.replace(/\\`/g, "").match(/`/g)) || void 0 === kb ? void 0 : kb.length) && void 0 !== sb ? sb : 0) % 2 === 1 && (Mb = !Mb), Wb || Ib && cb !== fb ? bb : function(bb, cb, sb) {
+    function db(bb, ab, Ub, Ab) {
+      if (ab.from > 0 && "\n" !== bb[ab.from - 1]) return Ab;
+      const Mb = bb.slice(ab.from, ab.to).split("\n").filter((bb => "" !== bb.trim())),
+        Tb = Ub.split("\n").filter((bb => "" !== bb.trim()));
+      if (0 === Mb.length || 0 === Tb.length) return Ab;
+      const Eb = Ib(Mb[0]),
+        Yb = Ib(Tb[0]);
+      if (Eb === Yb) return Ab;
+      const Bb = Tb.length > 1 && Tb.length === Mb.length && Tb.slice(1).every(((bb, ab) => Ib(bb) === Ib(Mb[ab + 1]))),
+        eb = Ab.split("\n"),
+        vb = eb.findIndex((bb => "" !== bb.trim()));
+      if (-1 === vb || Ib(eb[vb]) === Eb) return Ab;
+      let Lb = !1;
+      return eb.map(((bb, ab) => {
+        var Ub, Ab;
+        const Mb = Lb;
+        return (null !== (Ub = null === (Ab = bb.replace(/\\`/g, "").match(/`/g)) || void 0 === Ab ? void 0 : Ab.length) && void 0 !== Ub ? Ub : 0) % 2 === 1 && (Lb = !Lb), Mb || Bb && ab !== vb ? bb : function(bb, ab, Ub) {
           if ("" === bb.trim()) return bb;
-          const kb = yb(bb);
-          return kb.startsWith(cb) ? sb + bb.slice(cb.length) : cb.startsWith(kb) ? sb.slice(0, Math.max(0, sb.length - (cb.length - kb.length))) + bb.trimStart() : bb
-        }(bb, Ub, Tb)
+          const Ab = Ib(bb);
+          return Ab.startsWith(ab) ? Ub + bb.slice(ab.length) : ab.startsWith(Ab) ? Ub.slice(0, Math.max(0, Ub.length - (ab.length - Ab.length))) + bb.trimStart() : bb
+        }(bb, Yb, Eb)
       })).join("\n")
     }
 
-    function Db(bb, cb) {
-      let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-      const kb = new Map;
-      for (const Ub of bb.split("\n")) {
-        const bb = Ub.trim(),
-          cb = bb.replace(/;$/, "");
-        "" === cb || bb.endsWith(";") || kb.has(cb) || kb.set(cb, bb)
+    function Fb(bb, ab) {
+      let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+      const Ab = new Map;
+      for (const Yb of bb.split("\n")) {
+        const bb = Yb.trim(),
+          ab = bb.replace(/;$/, "");
+        "" === ab || bb.endsWith(";") || Ab.has(ab) || Ab.set(ab, bb)
       }
-      const Wb = cb.split("\n");
-      let ab = !1;
-      const Tb = Wb.map(((bb, cb) => {
-        var Tb, Ub, Ib;
-        const Hb = ab;
-        (null !== (Tb = null === (Ub = bb.replace(/\\`/g, "").match(/`/g)) || void 0 === Ub ? void 0 : Ub.length) && void 0 !== Tb ? Tb : 0) % 2 === 1 && (ab = !ab);
-        const fb = bb.trim(),
-          Mb = kb.get(fb.replace(/;$/, ""));
-        if (void 0 === Mb || Mb === fb || Hb || ab) return bb;
-        const Xb = null !== (Ib = Wb.slice(cb + 1).find((bb => "" !== bb.trim()))) && void 0 !== Ib ? Ib : sb;
-        return /^(?:[([`+-]|\/(?![/*]))/.test(Xb.trim()) ? bb : bb.slice(0, bb.length - bb.trimStart().length) + Mb
+      const Mb = ab.split("\n");
+      let Tb = !1;
+      const Eb = Mb.map(((bb, ab) => {
+        var Eb, Yb, Bb;
+        const eb = Tb;
+        (null !== (Eb = null === (Yb = bb.replace(/\\`/g, "").match(/`/g)) || void 0 === Yb ? void 0 : Yb.length) && void 0 !== Eb ? Eb : 0) % 2 === 1 && (Tb = !Tb);
+        const vb = bb.trim(),
+          Lb = Ab.get(vb.replace(/;$/, ""));
+        if (void 0 === Lb || Lb === vb || eb || Tb) return bb;
+        const Pb = null !== (Bb = Mb.slice(ab + 1).find((bb => "" !== bb.trim()))) && void 0 !== Bb ? Bb : Ub;
+        return /^(?:[([`+-]|\/(?![/*]))/.test(Pb.trim()) ? bb : bb.slice(0, bb.length - bb.trimStart().length) + Lb
       })).join("\n");
-      return Tb.trim() === bb.trim() && cb.trim() !== bb.trim() ? cb : Tb
+      return Eb.trim() === bb.trim() && ab.trim() !== bb.trim() ? ab : Eb
     }
 
-    function Eb(bb) {
-      var cb;
-      return null !== (cb = bb.split("\n").find((bb => "" !== bb.trim()))) && void 0 !== cb ? cb : ""
+    function hb(bb) {
+      var ab;
+      return null !== (ab = bb.split("\n").find((bb => "" !== bb.trim()))) && void 0 !== ab ? ab : ""
     }
 
-    function ib(bb, cb) {
-      if (bb === cb) return 1;
-      if (bb.length < 2 || cb.length < 2) return 0;
-      const sb = new Map;
-      for (let Tb = 0; Tb < bb.length - 1; Tb++) {
-        var kb;
-        const cb = bb.slice(Tb, Tb + 2);
-        sb.set(cb, (null !== (kb = sb.get(cb)) && void 0 !== kb ? kb : 0) + 1)
+    function Gb(bb, ab) {
+      if (bb === ab) return 1;
+      if (bb.length < 2 || ab.length < 2) return 0;
+      const Ub = new Map;
+      for (let Eb = 0; Eb < bb.length - 1; Eb++) {
+        var Ab;
+        const ab = bb.slice(Eb, Eb + 2);
+        Ub.set(ab, (null !== (Ab = Ub.get(ab)) && void 0 !== Ab ? Ab : 0) + 1)
       }
-      let Wb = 0;
-      for (let Tb = 0; Tb < cb.length - 1; Tb++) {
-        var ab;
-        const bb = cb.slice(Tb, Tb + 2),
-          kb = null !== (ab = sb.get(bb)) && void 0 !== ab ? ab : 0;
-        kb > 0 && (sb.set(bb, kb - 1), Wb++)
+      let Mb = 0;
+      for (let Eb = 0; Eb < ab.length - 1; Eb++) {
+        var Tb;
+        const bb = ab.slice(Eb, Eb + 2),
+          Ab = null !== (Tb = Ub.get(bb)) && void 0 !== Tb ? Tb : 0;
+        Ab > 0 && (Ub.set(bb, Ab - 1), Mb++)
       }
-      return 2 * Wb / (bb.length + cb.length - 2)
+      return 2 * Mb / (bb.length + ab.length - 2)
     }
 
-    function Ob(bb, cb) {
-      const sb = cb.split("\n").map(gb).filter(Boolean),
-        kb = Jb(bb).filter((bb => "" !== gb(bb.text)));
-      if (0 === sb.length || 0 === kb.length) return null;
-      const Wb = Math.min(sb.length, kb.length);
-      let ab = null;
-      for (let Ub = 0; Ub + Wb <= kb.length; Ub++) {
+    function Qb(bb, ab) {
+      const Ub = ab.split("\n").map(Nb).filter(Boolean),
+        Ab = pb(bb).filter((bb => "" !== Nb(bb.text)));
+      if (0 === Ub.length || 0 === Ab.length) return null;
+      const Mb = Math.min(Ub.length, Ab.length);
+      let Tb = null;
+      for (let Yb = 0; Yb + Mb <= Ab.length; Yb++) {
         let bb = 0;
-        for (let cb = 0; cb < Wb; cb++) bb += ib(gb(kb[Ub + cb].text), sb[cb]);
-        bb /= sb.length, (null === ab || bb > ab.score) && (ab = {
-          start: Ub,
+        for (let ab = 0; ab < Mb; ab++) bb += Gb(Nb(Ab[Yb + ab].text), Ub[ab]);
+        bb /= Ub.length, (null === Tb || bb > Tb.score) && (Tb = {
+          start: Yb,
           score: bb
         })
       }
-      if (null === ab || ab.score < .5) return null;
-      const Tb = kb.slice(ab.start, ab.start + Wb);
+      if (null === Tb || Tb.score < .5) return null;
+      const Eb = Ab.slice(Tb.start, Tb.start + Mb);
       return {
-        line: Tb[0].index + 1,
-        lastLine: Tb[Tb.length - 1].index + 1,
-        text: Tb.map((bb => bb.text.trim())).join("\n")
+        line: Eb[0].index + 1,
+        lastLine: Eb[Eb.length - 1].index + 1,
+        text: Eb.map((bb => bb.text.trim())).join("\n")
       }
-    }
-
-    function Gb(bb) {
-      return hb().isFunctionExpression(bb) || hb().isArrowFunction(bb)
-    }
-
-    function Kb(bb) {
-      return hb().isExpressionStatement(bb) && hb().isBinaryExpression(bb.expression) && hb().isPropertyAccessExpression(bb.expression.left) && ! function(bb) {
-        return hb().isIdentifier(bb) && ("globalThis" === bb.text || "window" === bb.text || "self" === bb.text)
-      }(bb.expression.left.expression)
-    }
-
-    function Zb(bb, cb, sb) {
-      let kb = sb;
-      for (const ab of (null !== (Wb = hb().getLeadingCommentRanges(bb, cb.getFullStart())) && void 0 !== Wb ? Wb : []).reverse()) {
-        var Wb;
-        if (/\n[^\S\n]*\n/.test(bb.slice(ab.end, kb))) break;
-        kb = ab.pos
-      }
-      return kb
-    }
-
-    function zb(bb) {
-      var cb;
-      const {
-        parseDiagnostics: sb
-      } = bb;
-      return (null !== (cb = null === sb || void 0 === sb ? void 0 : sb.length) && void 0 !== cb ? cb : 0) > 0
     }
 
     function qb(bb) {
-      const cb = hb().createSourceFile("worldCode.js", bb, hb().ScriptTarget.Latest, !1, hb().ScriptKind.JS),
-        sb = [],
-        kb = (Wb, ab) => {
-          const Tb = function(bb) {
-            var cb, sb;
-            if (hb().isFunctionDeclaration(bb)) return null !== (cb = null === (sb = bb.name) || void 0 === sb ? void 0 : sb.text) && void 0 !== cb ? cb : null;
-            if (hb().isVariableStatement(bb) && 1 === bb.declarationList.declarations.length) {
-              const cb = bb.declarationList.declarations[0];
-              return hb().isIdentifier(cb.name) && cb.initializer && Gb(cb.initializer) ? cb.name.text : null
+      return mb().isFunctionExpression(bb) || mb().isArrowFunction(bb)
+    }
+
+    function ub(bb) {
+      return mb().isExpressionStatement(bb) && mb().isBinaryExpression(bb.expression) && mb().isPropertyAccessExpression(bb.expression.left) && ! function(bb) {
+        return mb().isIdentifier(bb) && ("globalThis" === bb.text || "window" === bb.text || "self" === bb.text)
+      }(bb.expression.left.expression)
+    }
+
+    function rb(bb, ab, Ub) {
+      let Ab = Ub;
+      for (const Tb of (null !== (Mb = mb().getLeadingCommentRanges(bb, ab.getFullStart())) && void 0 !== Mb ? Mb : []).reverse()) {
+        var Mb;
+        if (/\n[^\S\n]*\n/.test(bb.slice(Tb.end, Ab))) break;
+        Ab = Tb.pos
+      }
+      return Ab
+    }
+
+    function Kb(bb) {
+      var ab;
+      const {
+        parseDiagnostics: Ub
+      } = bb;
+      return (null !== (ab = null === Ub || void 0 === Ub ? void 0 : Ub.length) && void 0 !== ab ? ab : 0) > 0
+    }
+
+    function ob(bb) {
+      const ab = mb().createSourceFile("worldCode.js", bb, mb().ScriptTarget.Latest, !1, mb().ScriptKind.JS),
+        Ub = [],
+        Ab = (Mb, Tb) => {
+          const Eb = function(bb) {
+            var ab, Ub;
+            if (mb().isFunctionDeclaration(bb)) return null !== (ab = null === (Ub = bb.name) || void 0 === Ub ? void 0 : Ub.text) && void 0 !== ab ? ab : null;
+            if (mb().isVariableStatement(bb) && 1 === bb.declarationList.declarations.length) {
+              const ab = bb.declarationList.declarations[0];
+              return mb().isIdentifier(ab.name) && ab.initializer && qb(ab.initializer) ? ab.name.text : null
             }
-            if (hb().isExpressionStatement(bb) && hb().isBinaryExpression(bb.expression) && bb.expression.operatorToken.kind === hb().SyntaxKind.EqualsToken && Gb(bb.expression.right)) {
-              const cb = bb.expression.left;
-              return hb().isIdentifier(cb) ? cb.text : hb().isPropertyAccessExpression(cb) ? cb.name.text : null
+            if (mb().isExpressionStatement(bb) && mb().isBinaryExpression(bb.expression) && bb.expression.operatorToken.kind === mb().SyntaxKind.EqualsToken && qb(bb.expression.right)) {
+              const ab = bb.expression.left;
+              return mb().isIdentifier(ab) ? ab.text : mb().isPropertyAccessExpression(ab) ? ab.name.text : null
             }
             return null
-          }(Wb);
-          if (null !== Tb) {
-            const kb = Wb.getStart(cb);
-            sb.push({
-              name: Tb,
-              from: kb,
-              to: Wb.getEnd(),
-              commentFrom: Zb(bb, Wb, kb),
-              topLevel: ab,
-              isProperty: Kb(Wb)
+          }(Mb);
+          if (null !== Eb) {
+            const Ab = Mb.getStart(ab);
+            Ub.push({
+              name: Eb,
+              from: Ab,
+              to: Mb.getEnd(),
+              commentFrom: rb(bb, Mb, Ab),
+              topLevel: Tb,
+              isProperty: ub(Mb)
             })
           }
-          hb().forEachChild(Wb, (bb => {
-            kb(bb, !1)
+          mb().forEachChild(Mb, (bb => {
+            Ab(bb, !1)
           }))
         };
-      for (const Wb of cb.statements) kb(Wb, !0);
+      for (const Mb of ab.statements) Ab(Mb, !0);
       return {
-        functions: sb,
-        hasErrors: zb(cb)
+        functions: Ub,
+        hasErrors: Kb(ab)
       }
     }
 
-    function db(bb) {
-      return qb(bb).functions
+    function lb(bb) {
+      return ob(bb).functions
     }
 
-    function Ab(bb) {
+    function tb(bb) {
       return bb.trim().replace(/^(?:callback:|function\s+)/, "").replace(/\s*\(.*$/s, "").trim()
     }
 
-    function wb(bb, cb) {
-      var sb;
-      const kb = bb.filter((bb => bb.name === cb)),
-        Wb = kb.filter((bb => !bb.isProperty)),
-        ab = Wb.length > 0 ? Wb : kb;
-      return null !== (sb = ab.find((bb => bb.topLevel))) && void 0 !== sb ? sb : ab[0]
+    function wb(bb, ab) {
+      var Ub;
+      const Ab = bb.filter((bb => bb.name === ab)),
+        Mb = Ab.filter((bb => !bb.isProperty)),
+        Tb = Mb.length > 0 ? Mb : Ab;
+      return null !== (Ub = Tb.find((bb => bb.topLevel))) && void 0 !== Ub ? Ub : Tb[0]
     }
 
-    function rb(bb, cb) {
-      return "" === bb.trim() ? `${cb.trim()}\n` : `${bb.replace(/\s*$/,"")}\n\n${cb.trim()}\n`
+    function sb(bb, ab) {
+      return "" === bb.trim() ? `${ab.trim()}\n` : `${bb.replace(/\s*$/,"")}\n\n${ab.trim()}\n`
     }
 
-    function ob(bb, cb, sb) {
-      var kb, Wb;
-      const ab = qb(bb),
+    function gb(bb, ab, Ub) {
+      var Ab, Mb;
+      const Tb = ob(bb),
         {
-          functions: Tb
-        } = ab,
-        Ub = db(sb),
-        Ib = null !== (kb = Ub.find((bb => bb.topLevel && !bb.isProperty))) && void 0 !== kb ? kb : Ub.find((bb => bb.topLevel)),
-        Hb = Ab(cb),
-        fb = Ib ? wb(Tb, Ib.name) : void 0,
-        Mb = null !== (Wb = void 0 !== fb && !Ub.some((bb => bb.topLevel && bb.name === Hb)) ? fb : wb(Tb, Hb)) && void 0 !== Wb ? Wb : fb;
-      return Mb ? Sb(bb, ab, Mb, Ub, sb) : rb(bb, sb)
+          functions: Eb
+        } = Tb,
+        Yb = lb(Ub),
+        Bb = null !== (Ab = Yb.find((bb => bb.topLevel && !bb.isProperty))) && void 0 !== Ab ? Ab : Yb.find((bb => bb.topLevel)),
+        eb = tb(ab),
+        vb = Bb ? wb(Eb, Bb.name) : void 0,
+        Lb = null !== (Mb = void 0 !== vb && !Yb.some((bb => bb.topLevel && bb.name === eb)) ? vb : wb(Eb, eb)) && void 0 !== Mb ? Mb : vb;
+      return Lb ? Cb(bb, Tb, Lb, Yb, Ub) : sb(bb, Ub)
     }
 
-    function Sb(bb, cb, sb, kb, Wb) {
+    function Cb(bb, ab, Ub, Ab, Mb) {
       let {
-        functions: ab,
-        hasErrors: Tb
-      } = cb;
-      const Ub = ab.some((bb => bb.from > sb.from && bb.to <= sb.to && !kb.some((cb => cb.name === bb.name))));
-      if (Tb && Ub) return null;
-      const Ib = /^\s*(?:\/\/|\/\*)/.test(Wb) ? sb.commentFrom : sb.from;
-      return bb.slice(0, Ib) + Db(bb.slice(Ib, sb.to), Wb.trim(), Eb(bb.slice(sb.to))) + bb.slice(sb.to)
+        functions: Tb,
+        hasErrors: Eb
+      } = ab;
+      const Yb = Tb.some((bb => bb.from > Ub.from && bb.to <= Ub.to && !Ab.some((ab => ab.name === bb.name))));
+      if (Eb && Yb) return null;
+      const Bb = /^\s*(?:\/\/|\/\*)/.test(Mb) ? Ub.commentFrom : Ub.from;
+      return bb.slice(0, Bb) + Fb(bb.slice(Bb, Ub.to), Mb.trim(), hb(bb.slice(Ub.to))) + bb.slice(Ub.to)
     }
 
-    function Rb(bb, cb, sb, kb, Wb) {
-      const ab = kb.trim();
-      if (ab.includes("\n") || !ab.endsWith("{")) return null;
-      const Tb = qb(bb),
-        Ub = Tb.functions.find((kb => kb.topLevel && vb(bb, kb.from) <= cb && sb < kb.to && !bb.slice(kb.from, sb).includes("\n"))),
-        Ib = qb(Wb),
-        Hb = Ib.functions.filter((bb => bb.topLevel)),
-        fb = !Ib.hasErrors && (1 === Hb.length || Hb.some((bb => bb.name === (null === Ub || void 0 === Ub ? void 0 : Ub.name)))),
-        Mb = 1 === Hb.length && Hb[0].name !== (null === Ub || void 0 === Ub ? void 0 : Ub.name) ? Hb[0].name : void 0,
-        Xb = void 0 === Mb ? void 0 : Tb.functions.find((bb => bb.topLevel && bb.name === Mb));
-      return Ub && fb ? Sb(bb, Tb, null !== Xb && void 0 !== Xb ? Xb : Ub, Ib.functions, Wb) : function(bb, cb, sb, kb, Wb) {
-        const ab = hb().createSourceFile("worldCode.js", bb, hb().ScriptTarget.Latest, !0, hb().ScriptKind.JS),
-          Tb = ab.statements.find((kb => {
-            const Wb = kb.getStart(ab);
-            return vb(bb, Wb) <= cb && sb < kb.getEnd() && !bb.slice(Wb, sb).includes("\n")
+    function Vb(bb, ab, Ub, Ab, Mb) {
+      const Tb = Ab.trim();
+      if (Tb.includes("\n") || !Tb.endsWith("{")) return null;
+      const Eb = ob(bb),
+        Yb = Eb.functions.find((Ab => Ab.topLevel && Ob(bb, Ab.from) <= ab && Ub < Ab.to && !bb.slice(Ab.from, Ub).includes("\n"))),
+        Bb = ob(Mb),
+        eb = Bb.functions.filter((bb => bb.topLevel)),
+        vb = !Bb.hasErrors && (1 === eb.length || eb.some((bb => bb.name === (null === Yb || void 0 === Yb ? void 0 : Yb.name)))),
+        Lb = 1 === eb.length && eb[0].name !== (null === Yb || void 0 === Yb ? void 0 : Yb.name) ? eb[0].name : void 0,
+        Pb = void 0 === Lb ? void 0 : Eb.functions.find((bb => bb.topLevel && bb.name === Lb));
+      return Yb && vb ? Cb(bb, Eb, null !== Pb && void 0 !== Pb ? Pb : Yb, Bb.functions, Mb) : function(bb, ab, Ub, Ab, Mb) {
+        const Tb = mb().createSourceFile("worldCode.js", bb, mb().ScriptTarget.Latest, !0, mb().ScriptKind.JS),
+          Eb = Tb.statements.find((Ab => {
+            const Mb = Ab.getStart(Tb);
+            return Ob(bb, Mb) <= ab && Ub < Ab.getEnd() && !bb.slice(Mb, Ub).includes("\n")
           })),
-          Ub = hb().createSourceFile("replace.js", Wb.trim(), hb().ScriptTarget.Latest, !0, hb().ScriptKind.JS),
-          Ib = 1 === Ub.statements.length ? Ub.statements[0] : void 0;
-        if (!Tb || !Ib || zb(Ub) || Ib.kind !== Tb.kind || !Ib.getText(Ub).startsWith(kb)) return null;
-        const Hb = Tb.getStart(ab);
-        return bb.slice(0, Hb) + Wb.trim() + bb.slice(Tb.getEnd())
-      }(bb, cb, sb, ab, Wb)
+          Yb = mb().createSourceFile("replace.js", Mb.trim(), mb().ScriptTarget.Latest, !0, mb().ScriptKind.JS),
+          Bb = 1 === Yb.statements.length ? Yb.statements[0] : void 0;
+        if (!Eb || !Bb || Kb(Yb) || Bb.kind !== Eb.kind || !Bb.getText(Yb).startsWith(Ab)) return null;
+        const eb = Eb.getStart(Tb);
+        return bb.slice(0, eb) + Mb.trim() + bb.slice(Eb.getEnd())
+      }(bb, ab, Ub, Tb, Mb)
     }
 
-    function vb(bb, cb) {
-      let sb = cb;
-      for (; sb > 0 && (" " === bb[sb - 1] || "\t" === bb[sb - 1]);) sb--;
-      return 0 === sb || "\n" === bb[sb - 1] ? sb : cb
+    function Ob(bb, ab) {
+      let Ub = ab;
+      for (; Ub > 0 && (" " === bb[Ub - 1] || "\t" === bb[Ub - 1]);) Ub--;
+      return 0 === Ub || "\n" === bb[Ub - 1] ? Ub : ab
     }
 
-    function Fb(bb, cb, sb) {
-      const kb = cb.trim().toLowerCase();
-      if ("" !== bb.trim() && ("top" === kb || "start" === kb)) return `${sb.trim()}\n\n${bb.replace(/^\s+/,"")}`;
-      const Wb = "end" === kb ? void 0 : wb(db(bb), Ab(cb));
-      return Wb ? `${bb.slice(0,Wb.to)}\n\n${sb.trim()}${bb.slice(Wb.to)}` : rb(bb, sb)
+    function cb(bb, ab, Ub) {
+      const Ab = ab.trim().toLowerCase();
+      if ("" !== bb.trim() && ("top" === Ab || "start" === Ab)) return `${Ub.trim()}\n\n${bb.replace(/^\s+/,"")}`;
+      const Mb = "end" === Ab ? void 0 : wb(lb(bb), tb(ab));
+      return Mb ? `${bb.slice(0,Mb.to)}\n\n${Ub.trim()}${bb.slice(Mb.to)}` : sb(bb, Ub)
     }
 
-    function xb(bb) {
-      return [...new Set(db(bb).filter((bb => bb.topLevel)).map((bb => bb.name)))]
+    function Jb(bb) {
+      return [...new Set(lb(bb).filter((bb => bb.topLevel)).map((bb => bb.name)))]
     }
-    const jb = 120,
-      pb = /\b(?:my|his|her|their)\s+(?:real\s+|full\s+|first\s+|last\s+)?(?:name|age|school|address|email|phone|birthday)\b|\b(?:i am|i'm)\s+\d+\b|\b\d+\s+years?\s+old\b|\be-?mail\b|\bphone number\b|\bpassword\b|\bwhere (?:i|we) live\b/i;
+    const nb = 120,
+      Sb = /\b(?:my|his|her|their)\s+(?:real\s+|full\s+|first\s+|last\s+)?(?:name|age|school|address|email|phone|birthday)\b|\b(?:i am|i'm)\s+\d+\b|\b\d+\s+years?\s+old\b|\be-?mail\b|\bphone number\b|\bpassword\b|\bwhere (?:i|we) live\b/i;
 
-    function bc(bb) {
-      let cb = bb.replace(/\s+/g, " ").trim();
-      if ("" === cb || pb.test(cb)) return null;
-      if (cb.length > jb) {
-        const bb = cb.slice(0, jb);
-        cb = `${bb.slice(0,Math.max(bb.lastIndexOf(" "),60)).trimEnd()}\u2026`
+    function ba(bb) {
+      let ab = bb.replace(/\s+/g, " ").trim();
+      if ("" === ab || Sb.test(ab)) return null;
+      if (ab.length > nb) {
+        const bb = ab.slice(0, nb);
+        ab = `${bb.slice(0,Math.max(bb.lastIndexOf(" "),60)).trimEnd()}\u2026`
       }
-      return cb.charAt(0).toUpperCase() + cb.slice(1)
+      return ab.charAt(0).toUpperCase() + ab.slice(1)
     }
-    const cc = /(?:===?\s*|\bcase\s+|startsWith\(\s*)["'`]\/?([a-zA-Z][\w-]{0,20})/g;
+    const aa = /(?:===?\s*|\bcase\s+|startsWith\(\s*)["'`]\/?([a-zA-Z][\w-]{0,20})/g;
 
-    function sc(bb) {
-      var cb, sb;
-      const kb = null === (cb = /\(([^)]*)\)/.exec(bb)) || void 0 === cb || null === (sb = cb[1].split(",")[1]) || void 0 === sb ? void 0 : sb.trim();
-      return kb && /^[A-Za-z_$][\w$]*$/.test(kb) ? [...bb.matchAll(/\b([A-Za-z_$][\w$]*)\s*\(([^()]*)\)/g)].flatMap((bb => bb[2].split(",").some((bb => bb.trim() === kb)) ? [bb[1]] : [])) : []
+    function Ua(bb) {
+      var ab, Ub;
+      const Ab = null === (ab = /\(([^)]*)\)/.exec(bb)) || void 0 === ab || null === (Ub = ab[1].split(",")[1]) || void 0 === Ub ? void 0 : Ub.trim();
+      return Ab && /^[A-Za-z_$][\w$]*$/.test(Ab) ? [...bb.matchAll(/\b([A-Za-z_$][\w$]*)\s*\(([^()]*)\)/g)].flatMap((bb => bb[2].split(",").some((bb => bb.trim() === Ab)) ? [bb[1]] : [])) : []
     }
 
-    function kc(bb, cb) {
-      const sb = new Set,
-        kb = new Set,
-        Wb = new Set,
-        ab = Object.values(bb).map((bb => {
-          const cb = db(bb),
-            sb = cb.filter((bb => "playerCommand" === bb.name)).map((cb => bb.slice(cb.from, cb.to)));
+    function Aa(bb, ab) {
+      const Ub = new Set,
+        Ab = new Set,
+        Mb = new Set,
+        Tb = Object.values(bb).map((bb => {
+          const ab = lb(bb),
+            Ub = ab.filter((bb => "playerCommand" === bb.name)).map((ab => bb.slice(ab.from, ab.to)));
           return {
             text: bb,
-            found: cb,
-            own: sb
+            found: ab,
+            own: Ub
           }
         })),
-        Tb = new Set(ab.flatMap((bb => {
+        Eb = new Set(Tb.flatMap((bb => {
           let {
-            own: cb
+            own: ab
           } = bb;
-          return cb.flatMap(sc)
+          return ab.flatMap(Ua)
         })));
       for (const {
-          text: Ib,
-          found: Hb,
-          own: fb
+          text: Bb,
+          found: eb,
+          own: vb
         }
-        of ab) {
-        for (const Wb of xb(Ib)) cb.has(Wb) ? sb.add(Wb) : kb.add(Wb);
-        const bb = [...fb, ...Hb.filter((bb => "playerCommand" !== bb.name && Tb.has(bb.name))).map((bb => Ib.slice(bb.from, bb.to)))],
-          ab = bb.length > 0 || !/\bplayerCommand\b/.test(Ib) ? bb : [Ib];
-        for (const cb of ab)
-          for (const bb of cb.matchAll(cc)) Wb.add(`/${bb[1].split(/\s/)[0]}`)
+        of Tb) {
+        for (const Mb of Jb(Bb)) ab.has(Mb) ? Ub.add(Mb) : Ab.add(Mb);
+        const bb = [...vb, ...eb.filter((bb => "playerCommand" !== bb.name && Eb.has(bb.name))).map((bb => Bb.slice(bb.from, bb.to)))],
+          Tb = bb.length > 0 || !/\bplayerCommand\b/.test(Bb) ? bb : [Bb];
+        for (const ab of Tb)
+          for (const bb of ab.matchAll(aa)) Mb.add(`/${bb[1].split(/\s/)[0]}`)
       }
-      const Ub = bb => [...bb].slice(0, 12);
+      const Yb = bb => [...bb].slice(0, 12);
       return {
-        callbacks: Ub(sb),
-        commands: Ub(Wb),
-        functions: Ub(kb)
+        callbacks: Yb(Ub),
+        commands: Yb(Mb),
+        functions: Yb(Ab)
       }
     }
-    const Wc = new Map([
+    const Ma = new Map([
       ["onPlayerJoin", "When a player joins"],
       ["onPlayerLeave", "When a player leaves"],
       ["onPlayerChat", "When a player chats"],
@@ -520,87 +520,87 @@ export const modules = {
       ["doPeriodicSave", "When the game saves"]
     ]);
 
-    function ac(bb) {
-      const cb = Wc.get(bb);
-      if (cb) return cb;
+    function Ta(bb) {
+      const ab = Ma.get(bb);
+      if (ab) return ab;
       return `When: ${bb.replace(/^on/,"").replace(/([a-z])([A-Z])/g,"$1 $2").toLowerCase()}`
     }
 
-    function Tc(bb) {
+    function Ea(bb) {
       return Array.isArray(bb) && bb.every((bb => "string" === typeof bb))
     }
-    const Uc = /\b(?:game|minigame|tycoon|rpg|simulator|obby|shop|store|upgrades?|levels?|rounds?|teams?|quests?|leaderboards?|lobby|economy|inventory|bosse?s?|waves?|missions?)\b/gi,
-      Ic = /,|\band\b|\bthen\b|\bplus\b|\bwith\b|\balso\b/gi;
+    const Ya = /\b(?:game|minigame|tycoon|rpg|simulator|obby|shop|store|upgrades?|levels?|rounds?|teams?|quests?|leaderboards?|lobby|economy|inventory|bosse?s?|waves?|missions?)\b/gi,
+      Ba = /,|\band\b|\bthen\b|\bplus\b|\bwith\b|\balso\b/gi;
 
-    function Hc(bb) {
-      var cb, sb;
-      const kb = bb.trim().split(/\s+/).length,
-        Wb = new Set((null !== (cb = bb.match(Uc)) && void 0 !== cb ? cb : []).map((bb => bb.toLowerCase().replace(/s$/, "")))).size,
-        ab = (null !== (sb = bb.match(Ic)) && void 0 !== sb ? sb : []).length;
-      return Wb >= 2 && ab >= 2 || kb >= 30 && ab >= 3
+    function ea(bb) {
+      var ab, Ub;
+      const Ab = bb.trim().split(/\s+/).length,
+        Mb = new Set((null !== (ab = bb.match(Ya)) && void 0 !== ab ? ab : []).map((bb => bb.toLowerCase().replace(/s$/, "")))).size,
+        Tb = (null !== (Ub = bb.match(Ba)) && void 0 !== Ub ? Ub : []).length;
+      return Mb >= 2 && Tb >= 2 || Ab >= 30 && Tb >= 3
     }
 
-    function fc(bb) {
-      const cb = bb.split(/\n|\|/).map((bb => bb.replace(/^\s*(?:[-*\u2022]|\d+[.)]|step\s*\d+[:.)]?)\s*/i, "").replace(/\s+/g, " ").trim())).filter((bb => "" !== bb)).slice(0, 5).map((bb => bb.length > 90 ? `${bb.slice(0,89).trimEnd()}\u2026` : bb));
-      return cb.length >= 2 ? cb : []
+    function va(bb) {
+      const ab = bb.split(/\n|\|/).map((bb => bb.replace(/^\s*(?:[-*\u2022]|\d+[.)]|step\s*\d+[:.)]?)\s*/i, "").replace(/\s+/g, " ").trim())).filter((bb => "" !== bb)).slice(0, 5).map((bb => bb.length > 90 ? `${bb.slice(0,89).trimEnd()}\u2026` : bb));
+      return ab.length >= 2 ? ab : []
     }
-    var Mc = sb(4588);
+    var La = Ub(4553);
 
-    function Xc(bb) {
+    function Pa(bb) {
       return bb.replace(/^on/, "").replace(/^player/i, "").toLowerCase()
     }
 
-    function nc(bb) {
-      const cb = new Set;
-      for (const sb of bb.matchAll(/^(?:async\s+)?function\s+([A-Za-z_$][\w$]*)\s*\(/gm)) cb.add(sb[1]);
-      for (const sb of bb.matchAll(/^([A-Za-z_$][\w$]*)\s*=\s*(?:async\s+)?(?:function\b|\([^)]*\)\s*=>|[A-Za-z_$][\w$]*\s*=>)/gm)) cb.add(sb[1]);
-      return [...cb]
+    function Xa(bb) {
+      const ab = new Set;
+      for (const Ub of bb.matchAll(/^(?:async\s+)?function\s+([A-Za-z_$][\w$]*)\s*\(/gm)) ab.add(Ub[1]);
+      for (const Ub of bb.matchAll(/^([A-Za-z_$][\w$]*)\s*=\s*(?:async\s+)?(?:function\b|\([^)]*\)\s*=>|[A-Za-z_$][\w$]*\s*=>)/gm)) ab.add(Ub[1]);
+      return [...ab]
     }
 
-    function mc(bb, cb) {
-      let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-      const kb = new Set(cb),
-        Wb = new Map;
-      for (const Mb of cb) {
-        var ab;
-        const bb = Xc(Mb);
-        Wb.set(bb, [...null !== (ab = Wb.get(bb)) && void 0 !== ab ? ab : [], Mb])
+    function ja(bb, ab) {
+      let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+      const Ab = new Set(ab),
+        Mb = new Map;
+      for (const Lb of ab) {
+        var Tb;
+        const bb = Pa(Lb);
+        Mb.set(bb, [...null !== (Tb = Mb.get(bb)) && void 0 !== Tb ? Tb : [], Lb])
       }
-      const Tb = nc(bb),
-        Ub = new Set(nc(sb)),
-        Ib = [];
-      let Hb = bb;
-      for (const Mb of Tb) {
-        var fb;
-        if (kb.has(Mb) || Ub.has(Mb) || !/^(on|player)[A-Z]/.test(Mb)) continue;
-        const bb = null !== (fb = Wb.get(Xc(Mb))) && void 0 !== fb ? fb : [];
-        1 !== bb.length || Tb.includes(bb[0]) || (Hb = (0, Mc.t)(Hb, new RegExp(`${Mb}(?![\\w$])`, "g"), Mc.m, (() => bb[0])), Ib.push({
-          from: Mb,
+      const Eb = Xa(bb),
+        Yb = new Set(Xa(Ub)),
+        Bb = [];
+      let eb = bb;
+      for (const Lb of Eb) {
+        var vb;
+        if (Ab.has(Lb) || Yb.has(Lb) || !/^(on|player)[A-Z]/.test(Lb)) continue;
+        const bb = null !== (vb = Mb.get(Pa(Lb))) && void 0 !== vb ? vb : [];
+        1 !== bb.length || Eb.includes(bb[0]) || (eb = (0, La.s)(eb, new RegExp(`${Lb}(?![\\w$])`, "g"), La.l, (() => bb[0])), Bb.push({
+          from: Lb,
           to: bb[0]
         }))
       }
       return {
-        code: Hb,
-        renames: Ib
+        code: eb,
+        renames: Bb
       }
     }
-    const lc = {
+    const Ra = {
         functions: "api",
         callbacks: "callback",
         "client options": "clientOption"
       },
-      Qc = Object.keys(lc).map((bb => `"${bb}"`)).join(", ").replace(/, ([^,]*)$/, " or $1"),
-      ec = {
+      ka = Object.keys(Ra).map((bb => `"${bb}"`)).join(", ").replace(/, ([^,]*)$/, " or $1"),
+      ya = {
         type: "string",
         description: "A few plain words for the creator on what this change does, under 80 characters"
       },
-      Cc = {
+      Za = {
         readOnlyHint: !0,
         destructiveHint: !1,
         idempotentHint: !0,
         openWorldHint: !1
       },
-      Nc = [{
+      Da = [{
         name: "write_file",
         title: "Write a file",
         description: "Replaces a file with new code, or makes a new file",
@@ -611,7 +611,7 @@ export const modules = {
               type: "string",
               description: "The file's path, e.g. index.js"
             },
-            why: ec,
+            why: ya,
             content: {
               type: "string",
               description: "The whole new file"
@@ -636,7 +636,7 @@ export const modules = {
               type: "string",
               description: "The file's path, e.g. index.js"
             },
-            why: ec,
+            why: ya,
             search: {
               type: "string",
               description: "Lines to find, copied exactly from the current file"
@@ -669,7 +669,7 @@ export const modules = {
               type: "string",
               description: "The function's or callback's name, e.g. onPlayerJoin"
             },
-            why: ec,
+            why: ya,
             code: {
               type: "string",
               description: "The whole new function"
@@ -698,7 +698,7 @@ export const modules = {
               type: "string",
               description: 'Where it goes: "top", "end", or the name of the function to put it after'
             },
-            why: ec,
+            why: ya,
             code: {
               type: "string",
               description: "Only the new code"
@@ -731,7 +731,7 @@ export const modules = {
               type: "string",
               description: "The file's path, e.g. index.js"
             },
-            why: ec
+            why: ya
           },
           required: ["name"]
         },
@@ -768,7 +768,7 @@ export const modules = {
         inputSchema: {
           type: "object",
           properties: {
-            why: ec,
+            why: ya,
             search: {
               type: "string",
               description: "Lines to find, copied exactly from the open code"
@@ -906,7 +906,7 @@ export const modules = {
           },
           required: ["path"]
         },
-        annotations: Cc,
+        annotations: Za,
         _meta: {
           isLookup: !0
         }
@@ -919,7 +919,7 @@ export const modules = {
           properties: {},
           required: []
         },
-        annotations: Cc,
+        annotations: Za,
         _meta: {
           isLookup: !0
         }
@@ -937,7 +937,7 @@ export const modules = {
           },
           required: []
         },
-        annotations: Cc,
+        annotations: Za,
         _meta: {
           isLookup: !0
         }
@@ -950,25 +950,25 @@ export const modules = {
           properties: {},
           required: []
         },
-        annotations: Cc,
+        annotations: Za,
         _meta: {
           isLookup: !0
         }
       }, {
         name: "fetch_url",
         title: "Read a docs page",
-        description: `Reads a page of Bloxd's docs as Markdown. ${Qb.m} lists every page with its link; then read the page, or the part of a long page, you need`,
+        description: `Reads a page of Bloxd's docs as Markdown. ${kb.n} lists every page with its link; then read the page, or the part of a long page, you need`,
         inputSchema: {
           type: "object",
           properties: {
             url: {
               type: "string",
-              description: `${Qb.m}, or a page it links to`
+              description: `${kb.n}, or a page it links to`
             }
           },
           required: ["url"]
         },
-        annotations: Cc,
+        annotations: Za,
         _meta: {
           isLookup: !0
         }
@@ -981,7 +981,7 @@ export const modules = {
           properties: {
             list: {
               type: "string",
-              description: `${Qc}, to list every one of them`
+              description: `${ka}, to list every one of them`
             },
             name: {
               type: "string",
@@ -990,7 +990,7 @@ export const modules = {
           },
           required: []
         },
-        annotations: Cc,
+        annotations: Za,
         _meta: {
           isLookup: !0
         }
@@ -1008,7 +1008,7 @@ export const modules = {
           },
           required: ["words"]
         },
-        annotations: Cc,
+        annotations: Za,
         _meta: {
           isLookup: !0
         }
@@ -1026,7 +1026,7 @@ export const modules = {
           },
           required: []
         },
-        annotations: Cc,
+        annotations: Za,
         _meta: {
           isLookup: !0
         }
@@ -1044,7 +1044,7 @@ export const modules = {
           },
           required: ["name"]
         },
-        annotations: Cc,
+        annotations: Za,
         _meta: {
           isLookup: !0
         }
@@ -1057,290 +1057,290 @@ export const modules = {
           properties: {},
           required: []
         },
-        annotations: Cc,
+        annotations: Za,
         _meta: {
           isLookup: !0
         }
       }];
 
-    function Vc(bb) {
-      var cb;
-      return !0 === (null === (cb = Lc(bb)._meta) || void 0 === cb ? void 0 : cb.isLookup)
+    function za(bb) {
+      var ab;
+      return !0 === (null === (ab = xa(bb)._meta) || void 0 === ab ? void 0 : ab.isLookup)
     }
 
-    function Lc(bb) {
-      const cb = Nc.find((cb => cb.name === bb));
-      if (!cb) throw new Error(`No AI Helper tool ${bb}`);
-      return cb
+    function xa(bb) {
+      const ab = Da.find((ab => ab.name === bb));
+      if (!ab) throw new Error(`No AI Helper tool ${bb}`);
+      return ab
     }
-    const uc = Nc.map((bb => bb.name)).filter((bb => "plan" !== bb && "remember" !== bb)).join("|"),
-      Yc = new RegExp(String.raw`^(?:\s*(?:We(?:'ll|'d| will| need to| should| must| can(?!'t))|Will use|Need to|Simpler:)(?:[^\n.]*\.(?=[A-Z])|[^\n]*(?:\n+|$))|\s*(?:Now,? )?(?:I'll |I will |[Ll]et's |[Ll]et me )?(?:[Ww]rite|[Mm]ake|[Ss]end|[Oo]utput|[Pp]roduce|[Uu]se|[Dd]o|[Cc]all) (?:the |an? |one )?(?:${uc})\b[^\n.]*\.?[ \t]*\n*)+`),
-      hc = [new RegExp(String.raw`(?:^|[^\w"</=.])(?:${uc})\b(?!\s*\()`), /\btool calls?\b|^(?:so,? )?(?:(?:we(?:'ll| will)?|I'll|let's) (?:produce|output|generate)|now (?:produce|output))\b|^The user (?:wants?|wanted|asks?|asked|requests?|requested|says|said)\b/i, /^We (?:need|have) to\b/, /^(?:Now|Then),? (?:replace|apply) \S+\.?$|^First edit\b|^Provide (?:the )?(?:entire|full)\b/, /^Let's (?:update|write|implement|produce|output|apply|edit) (?:the )?(?:code|edits?|changes?|calls?|function)\b/, /^(?:Implement|Proceed)\.?$/],
-      Jc = /[.!?](?=[ \t]|[A-Z]|$)|\n|$/g;
+    const ia = Da.map((bb => bb.name)).filter((bb => "plan" !== bb && "remember" !== bb)).join("|"),
+      fa = new RegExp(String.raw`^(?:\s*(?:We(?:'ll|'d| will| need to| should| must| can(?!'t))|Will use|Need to|Simpler:)(?:[^\n.]*\.(?=[A-Z])|[^\n]*(?:\n+|$))|\s*(?:Now,? )?(?:I'll |I will |[Ll]et's |[Ll]et me )?(?:[Ww]rite|[Mm]ake|[Ss]end|[Oo]utput|[Pp]roduce|[Uu]se|[Dd]o|[Cc]all) (?:the |an? |one )?(?:${ia})\b[^\n.]*\.?[ \t]*\n*)+`),
+      ma = [new RegExp(String.raw`(?:^|[^\w"</=.])(?:${ia})\b(?!\s*\()`), /\btool calls?\b|^(?:so,? )?(?:(?:we(?:'ll| will)?|I'll|let's) (?:produce|output|generate)|now (?:produce|output))\b|^The user (?:wants?|wanted|asks?|asked|requests?|requested|says|said)\b/i, /^We (?:need|have) to\b/, /^(?:Now|Then),? (?:replace|apply) \S+\.?$|^First edit\b|^Provide (?:the )?(?:entire|full)\b/, /^Let's (?:update|write|implement|produce|output|apply|edit) (?:the )?(?:code|edits?|changes?|calls?|function)\b/, /^(?:Implement|Proceed)\.?$/],
+      pa = /[.!?](?=[ \t]|[A-Z]|$)|\n|$/g;
 
-    function gc(bb) {
-      const cb = bb.trim();
-      return hc.some((bb => bb.test(cb)))
+    function Na(bb) {
+      const ab = bb.trim();
+      return ma.some((bb => bb.test(ab)))
     }
 
-    function Bc(bb, cb) {
-      const sb = bb.replace(Yc, "");
-      return cb ? function(bb) {
-        const cb = bb.indexOf("```"),
-          sb = -1 === cb ? bb : bb.slice(0, cb);
-        let kb = -1,
-          Wb = -1,
-          ab = 0;
-        for (const Tb of sb.matchAll(Jc)) {
-          const bb = Tb.index + Tb[0].length;
-          gc(sb.slice(ab, bb)) && (kb = -1 === kb ? ab : kb, Wb = bb), ab = bb
+    function Wa(bb, ab) {
+      const Ub = bb.replace(fa, "");
+      return ab ? function(bb) {
+        const ab = bb.indexOf("```"),
+          Ub = -1 === ab ? bb : bb.slice(0, ab);
+        let Ab = -1,
+          Mb = -1,
+          Tb = 0;
+        for (const Eb of Ub.matchAll(pa)) {
+          const bb = Eb.index + Eb[0].length;
+          Na(Ub.slice(Tb, bb)) && (Ab = -1 === Ab ? Tb : Ab, Mb = bb), Tb = bb
         }
-        return -1 === Wb ? bb : "" !== sb.slice(Wb).trim() ? bb.slice(Wb).trimStart() : `${bb.slice(0,kb).trimEnd()}\n${bb.slice(sb.length)}`.trim()
-      }(sb) : "" !== sb.trim() ? sb : bb
+        return -1 === Mb ? bb : "" !== Ub.slice(Mb).trim() ? bb.slice(Mb).trimStart() : `${bb.slice(0,Ab).trimEnd()}\n${bb.slice(Ub.length)}`.trim()
+      }(Ub) : "" !== Ub.trim() ? Ub : bb
     }
-    const tc = /^(?=[\s\S]{200})[^\n]*(?:\\n[^\n]*){3}$/,
-      yc = new Set(["content", "code"]);
+    const Ha = /^(?=[\s\S]{200})[^\n]*(?:\\n[^\n]*){3}$/,
+      Ia = new Set(["content", "code"]);
 
-    function Pc(bb) {
-      const cb = "string" === typeof bb ? bb.split(/[./:]/).pop() : void 0;
+    function da(bb) {
+      const ab = "string" === typeof bb ? bb.split(/[./:]/).pop() : void 0;
       return function(bb) {
-        return Nc.some((cb => cb.name === bb))
-      }(cb) ? cb : null
+        return Da.some((ab => ab.name === bb))
+      }(ab) ? ab : null
     }
 
-    function Dc(bb, cb) {
-      return sb => {
-        const kb = [];
-        let Wb;
-        for (const Ib of sb.matchAll(bb)) {
-          var ab;
-          const bb = Pc(Ib[1]);
+    function Fa(bb, ab) {
+      return Ub => {
+        const Ab = [];
+        let Mb;
+        for (const Bb of Ub.matchAll(bb)) {
+          var Tb;
+          const bb = da(Bb[1]);
           if (null === bb) continue;
-          const Hb = {};
-          for (const sb of Ib[2].matchAll(cb)) {
-            var Tb, Ub;
-            Hb[null !== (Tb = sb[1]) && void 0 !== Tb ? Tb : sb[2]] = null !== (Ub = sb[3]) && void 0 !== Ub ? Ub : sb[4]
-          }(null === (ab = Wb) || void 0 === ab ? void 0 : ab.call.name) === bb && "" === sb.slice(Wb.index + Wb.call.source.length, Ib.index).trim() ? kb[kb.length - 1] = {
+          const eb = {};
+          for (const Ub of Bb[2].matchAll(ab)) {
+            var Eb, Yb;
+            eb[null !== (Eb = Ub[1]) && void 0 !== Eb ? Eb : Ub[2]] = null !== (Yb = Ub[3]) && void 0 !== Yb ? Yb : Ub[4]
+          }(null === (Tb = Mb) || void 0 === Tb ? void 0 : Tb.call.name) === bb && "" === Ub.slice(Mb.index + Mb.call.source.length, Bb.index).trim() ? Ab[Ab.length - 1] = {
             call: {
               name: bb,
-              args: Hb,
-              source: sb.slice(Wb.index, Ib.index + Ib[0].length)
+              args: eb,
+              source: Ub.slice(Mb.index, Bb.index + Bb[0].length)
             },
-            index: Wb.index
-          } : kb.push({
+            index: Mb.index
+          } : Ab.push({
             call: {
               name: bb,
-              args: Hb,
-              source: Ib[0]
+              args: eb,
+              source: Bb[0]
             },
-            index: Ib.index
-          }), Wb = "" === Ib[2].trim() && Lc(bb).inputSchema.required.length > 0 ? kb.at(-1) : void 0
+            index: Bb.index
+          }), Mb = "" === Bb[2].trim() && xa(bb).inputSchema.required.length > 0 ? Ab.at(-1) : void 0
         }
-        return kb
+        return Ab
       }
     }
 
-    function Ec(bb) {
-      return bb.replace(/\\(["\\nt])/g, ((bb, cb) => "n" === cb ? "\n" : "t" === cb ? "\t" : cb))
+    function ha(bb) {
+      return bb.replace(/\\(["\\nt])/g, ((bb, ab) => "n" === ab ? "\n" : "t" === ab ? "\t" : ab))
     }
 
-    function ic(bb) {
-      let cb = null !== bb && void 0 !== bb ? bb : {};
-      if ("string" === typeof cb) try {
-        cb = JSON.parse("" === cb ? "{}" : cb)
+    function Ga(bb) {
+      let ab = null !== bb && void 0 !== bb ? bb : {};
+      if ("string" === typeof ab) try {
+        ab = JSON.parse("" === ab ? "{}" : ab)
       } catch {
         return null
       }
-      if ("object" !== typeof cb || null === cb) return null;
-      const sb = {};
-      for (const [kb, Wb] of Object.entries(cb)) "string" === typeof Wb ? sb[kb] = yc.has(kb) && tc.test(Wb) && !Wb.includes("\n") ? Ec(Wb) : Wb : "boolean" === typeof Wb || "number" === typeof Wb ? sb[kb] = String(Wb) : "object" !== typeof Wb || null === Wb || Array.isArray(Wb) ? Array.isArray(Wb) && Wb.every((bb => "string" === typeof bb)) && (sb[kb] = Wb.join("\n")) : sb[kb] = JSON.stringify(Wb);
-      return sb
+      if ("object" !== typeof ab || null === ab) return null;
+      const Ub = {};
+      for (const [Ab, Mb] of Object.entries(ab)) "string" === typeof Mb ? Ub[Ab] = Ia.has(Ab) && Ha.test(Mb) && !Mb.includes("\n") ? ha(Mb) : Mb : "boolean" === typeof Mb || "number" === typeof Mb ? Ub[Ab] = String(Mb) : "object" !== typeof Mb || null === Mb || Array.isArray(Mb) ? Array.isArray(Mb) && Mb.every((bb => "string" === typeof bb)) && (Ub[Ab] = Mb.join("\n")) : Ub[Ab] = JSON.stringify(Mb);
+      return Ub
     }
 
-    function Oc(bb, cb) {
-      let sb = 0,
-        kb = !1;
-      for (let Wb = cb; Wb < bb.length; Wb++) {
-        const cb = bb[Wb];
-        if (kb) "\\" === cb ? Wb++ : '"' === cb && (kb = !1);
-        else if ('"' === cb) kb = !0;
-        else if ("{" === cb) sb++;
-        else if ("}" === cb && (sb--, 0 === sb)) return Wb + 1
+    function Qa(bb, ab) {
+      let Ub = 0,
+        Ab = !1;
+      for (let Mb = ab; Mb < bb.length; Mb++) {
+        const ab = bb[Mb];
+        if (Ab) "\\" === ab ? Mb++ : '"' === ab && (Ab = !1);
+        else if ('"' === ab) Ab = !0;
+        else if ("{" === ab) Ub++;
+        else if ("}" === ab && (Ub--, 0 === Ub)) return Mb + 1
       }
       return null
     }
 
-    function Gc(bb, cb) {
-      let sb = bb;
+    function qa(bb, ab) {
+      let Ub = bb;
       for (const {
-          call: kb,
-          index: Wb
+          call: Ab,
+          index: Mb
         }
-        of cb) sb = sb.slice(0, Wb) + " ".repeat(kb.source.length) + sb.slice(Wb + kb.source.length);
-      return sb
+        of ab) Ub = Ub.slice(0, Mb) + " ".repeat(Ab.source.length) + Ub.slice(Mb + Ab.source.length);
+      return Ub
     }
-    const Kc = new RegExp(`\\b(${Nc.map((bb=>bb.name)).join("|")})\\s*\\(\\s*(?=\\{)`, "g");
-    const Zc = {
-        formatCall: (bb, cb) => {
-          const sb = Object.fromEntries(Object.entries(cb).filter((bb => {
-            let [, cb] = bb;
-            return void 0 !== cb
+    const ua = new RegExp(`\\b(${Da.map((bb=>bb.name)).join("|")})\\s*\\(\\s*(?=\\{)`, "g");
+    const ra = {
+        formatCall: (bb, ab) => {
+          const Ub = Object.fromEntries(Object.entries(ab).filter((bb => {
+            let [, ab] = bb;
+            return void 0 !== ab
           })));
-          return `${bb}(${JSON.stringify(sb)})`
+          return `${bb}(${JSON.stringify(Ub)})`
         },
         declareTools: bb => bb,
         callStyle: "Make each call with function calling, its code in full: never write a call, or the code it carries, in your answer's words or in a code fence.",
-        fileResult: (bb, cb, sb) => `<file path="${bb}"${sb?' open_in_editor="true"':""}>\n${cb}\n</file>`,
-        editFailure: (bb, cb) => `${bb} failed: ${cb}`,
-        lookupResult: (bb, cb, sb) => `${bb} ${cb}:\n${sb}`
+        fileResult: (bb, ab, Ub) => `<file path="${bb}"${Ub?' open_in_editor="true"':""}>\n${ab}\n</file>`,
+        editFailure: (bb, ab) => `${bb} failed: ${ab}`,
+        lookupResult: (bb, ab, Ub) => `${bb} ${ab}:\n${Ub}`
       },
-      zc = /(?:<\|start\|>\s*assistant\s*)?<\|channel\|>[^<{]*?\bto=([\w./:-]+)[^{]*?(?=\{)/g;
+      Ka = /(?:<\|start\|>\s*assistant\s*)?<\|channel\|>[^<{]*?\bto=([\w./:-]+)[^{]*?(?=\{)/g;
 
-    function qc(bb) {
-      const cb = [];
-      for (const Wb of bb.matchAll(zc)) {
-        const ab = Pc(Wb[1]),
-          Tb = Wb.index + Wb[0].length,
-          Ub = Oc(bb, Tb),
-          Ib = null === Ub ? null : ic(bb.slice(Tb, Ub));
-        if (null !== ab && null !== Ub && null !== Ib) {
-          var sb, kb;
-          const Tb = null !== (sb = null === (kb = bb.slice(Ub).match(/^\s*<\|call\|>/)) || void 0 === kb ? void 0 : kb[0]) && void 0 !== sb ? sb : "";
-          cb.push({
+    function oa(bb) {
+      const ab = [];
+      for (const Mb of bb.matchAll(Ka)) {
+        const Tb = da(Mb[1]),
+          Eb = Mb.index + Mb[0].length,
+          Yb = Qa(bb, Eb),
+          Bb = null === Yb ? null : Ga(bb.slice(Eb, Yb));
+        if (null !== Tb && null !== Yb && null !== Bb) {
+          var Ub, Ab;
+          const Eb = null !== (Ub = null === (Ab = bb.slice(Yb).match(/^\s*<\|call\|>/)) || void 0 === Ab ? void 0 : Ab[0]) && void 0 !== Ub ? Ub : "";
+          ab.push({
             call: {
-              name: ab,
-              args: Ib,
-              source: bb.slice(Wb.index, Ub + Tb.length)
+              name: Tb,
+              args: Bb,
+              source: bb.slice(Mb.index, Yb + Eb.length)
             },
-            index: Wb.index
+            index: Mb.index
           })
         }
       }
-      return cb
+      return ab
     }
 
-    function dc(bb) {
-      var cb, sb, kb, Wb;
-      let ab = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+    function la(bb) {
+      var ab, Ub, Ab, Mb;
+      let Tb = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
       if ("object" !== typeof bb || null === bb) return [];
-      const Tb = bb;
-      if (Array.isArray(Tb.tool_calls)) return Tb.tool_calls.flatMap((bb => dc(bb, !0)));
-      if (void 0 !== Tb.tool_call) return dc(Tb.tool_call, !0);
-      if (void 0 !== Tb.function) return dc(Tb.function, !0);
-      const Ub = null !== (cb = null !== (sb = null !== (kb = null !== (Wb = Tb.arguments) && void 0 !== Wb ? Wb : Tb.params) && void 0 !== kb ? kb : Tb.param) && void 0 !== sb ? sb : Tb.args) && void 0 !== cb ? cb : Tb.input,
-        Ib = Pc(Tb.tool);
-      if (null !== Ib) {
+      const Eb = bb;
+      if (Array.isArray(Eb.tool_calls)) return Eb.tool_calls.flatMap((bb => la(bb, !0)));
+      if (void 0 !== Eb.tool_call) return la(Eb.tool_call, !0);
+      if (void 0 !== Eb.function) return la(Eb.function, !0);
+      const Yb = null !== (ab = null !== (Ub = null !== (Ab = null !== (Mb = Eb.arguments) && void 0 !== Mb ? Mb : Eb.params) && void 0 !== Ab ? Ab : Eb.param) && void 0 !== Ub ? Ub : Eb.args) && void 0 !== ab ? ab : Eb.input,
+        Bb = da(Eb.tool);
+      if (null !== Bb) {
         const {
           tool: bb,
-          ...cb
-        } = Tb, sb = ic(null !== Ub && void 0 !== Ub ? Ub : cb);
-        return null === sb ? [] : [{
-          name: Ib,
-          args: sb
+          ...ab
+        } = Eb, Ub = Ga(null !== Yb && void 0 !== Yb ? Yb : ab);
+        return null === Ub ? [] : [{
+          name: Bb,
+          args: Ub
         }]
       }
-      if (!ab && void 0 === Ub) return [];
-      const Hb = Pc(Tb.name),
-        fb = ic(Ub);
-      return null === Hb || null === fb ? [] : [{
-        name: Hb,
-        args: fb
+      if (!Tb && void 0 === Yb) return [];
+      const eb = da(Eb.name),
+        vb = Ga(Yb);
+      return null === eb || null === vb ? [] : [{
+        name: eb,
+        args: vb
       }]
     }
 
-    function Ac(bb) {
-      const cb = [];
-      let sb = bb.indexOf("{");
-      for (; - 1 !== sb;) {
-        const kb = Oc(bb, sb);
-        let Wb = [];
-        if (null !== kb) try {
-          Wb = dc(JSON.parse(bb.slice(sb, kb)))
+    function ta(bb) {
+      const ab = [];
+      let Ub = bb.indexOf("{");
+      for (; - 1 !== Ub;) {
+        const Ab = Qa(bb, Ub);
+        let Mb = [];
+        if (null !== Ab) try {
+          Mb = la(JSON.parse(bb.slice(Ub, Ab)))
         } catch {}
-        if (null !== kb && Wb.length > 0) {
-          const ab = bb.slice(sb, kb);
-          cb.push(...Wb.map((bb => ({
+        if (null !== Ab && Mb.length > 0) {
+          const Tb = bb.slice(Ub, Ab);
+          ab.push(...Mb.map((bb => ({
             call: {
               ...bb,
-              source: ab
+              source: Tb
             },
-            index: sb
-          })))), sb = bb.indexOf("{", kb)
-        } else sb = bb.indexOf("{", sb + 1)
+            index: Ub
+          })))), Ub = bb.indexOf("{", Ab)
+        } else Ub = bb.indexOf("{", Ub + 1)
       }
-      return cb
+      return ab
     }
 
-    function wc(bb) {
-      if (Array.isArray(bb)) return `[${bb.map(wc).join(", ")}]`;
+    function wa(bb) {
+      if (Array.isArray(bb)) return `[${bb.map(wa).join(", ")}]`;
       if ("object" === typeof bb && null !== bb) {
-        return `{${Object.entries(bb).map((bb=>{let[cb,sb]=bb;return`${JSON.stringify(cb)}: ${wc(sb)}`})).join(", ")}}`
+        return `{${Object.entries(bb).map((bb=>{let[ab,Ub]=bb;return`${JSON.stringify(ab)}: ${wa(Ub)}`})).join(", ")}}`
       }
       return JSON.stringify(bb)
     }
-    const rc = {
-        formatCall: (bb, cb) => `<tool_call>\n<function=${bb}>\n${Object.entries(cb).flatMap((bb=>{let[cb,sb]=bb;return void 0===sb?[]:[`<parameter=${cb}>\n${sb}\n</parameter>\n`]})).join("")}</function>\n</tool_call>`,
-        declareTools: (bb, cb, sb) => sb || 0 === cb.length ? bb : `${function(bb){return`# Tools\n\nYou have access to the following functions:\n\n<tools>${bb.map((bb=>`\n${wc({type:"function",function:{name:bb.name,description:bb.description,parameters:bb.inputSchema}})}`)).join("")}\n</tools>\n\nIf you choose to call a function ONLY reply in the following format with NO suffix:\n\n<tool_call>\n<function=example_function_name>\n<parameter=example_parameter_1>\nvalue_1\n</parameter>\n<parameter=example_parameter_2>\nThis is the value for the second parameter\nthat can span\nmultiple lines\n</parameter>\n</function>\n</tool_call>\n\n<IMPORTANT>\nReminder:\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\n- Required parameters MUST be specified\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\n</IMPORTANT>`}(cb)}\n\n${bb}`,
+    const sa = {
+        formatCall: (bb, ab) => `<tool_call>\n<function=${bb}>\n${Object.entries(ab).flatMap((bb=>{let[ab,Ub]=bb;return void 0===Ub?[]:[`<parameter=${ab}>\n${Ub}\n</parameter>\n`]})).join("")}</function>\n</tool_call>`,
+        declareTools: (bb, ab, Ub) => Ub || 0 === ab.length ? bb : `${function(bb){return`# Tools\n\nYou have access to the following functions:\n\n<tools>${bb.map((bb=>`\n${wa({type:"function",function:{name:bb.name,description:bb.description,parameters:bb.inputSchema}})}`)).join("")}\n</tools>\n\nIf you choose to call a function ONLY reply in the following format with NO suffix:\n\n<tool_call>\n<function=example_function_name>\n<parameter=example_parameter_1>\nvalue_1\n</parameter>\n<parameter=example_parameter_2>\nThis is the value for the second parameter\nthat can span\nmultiple lines\n</parameter>\n</function>\n</tool_call>\n\n<IMPORTANT>\nReminder:\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\n- Required parameters MUST be specified\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\n</IMPORTANT>`}(ab)}\n\n${bb}`,
         callStyle: "Write each call in your answer as a <tool_call> holding a <function=name> block with a <parameter=name> for each argument, the code inside as it is, not escaped and in full: never as JSON or inside a code fence.",
-        fileResult: (bb, cb, sb) => `<tool_response>\nview_file ${bb}${sb?" (open in the editor)":""}:\n${cb}\n</tool_response>`,
-        editFailure: (bb, cb) => `<tool_response>\nError: ${cb}\n</tool_response>`,
-        lookupResult: (bb, cb, sb) => `<tool_response>\n${bb} ${cb}:\n${sb}\n</tool_response>`
+        fileResult: (bb, ab, Ub) => `<tool_response>\nview_file ${bb}${Ub?" (open in the editor)":""}:\n${ab}\n</tool_response>`,
+        editFailure: (bb, ab) => `<tool_response>\nError: ${ab}\n</tool_response>`,
+        lookupResult: (bb, ab, Ub) => `<tool_response>\n${bb} ${ab}:\n${Ub}\n</tool_response>`
       },
-      oc = Dc(/(?:<tool_call>\s*)?<function=([\w.:/-]+)>((?:(?!<tool_call\b|<function=)[\s\S])*?(?:<\/parameter>(?=\s*(?:<tool_call\b|<function=|$))|(?=<\/function>|<\/tool_call>)))(?:<\/function>(?:\s*<\/tool_call>)?|<\/tool_call>|\s*(?=<tool_call\b|<function=|$))/g, /<parameter(?:=([\w-]+)|\s+name\s*=\s*"([^"]+)")\s*>\n?([\s\S]*?)(?:\n?<\/parameter>|(?=<parameter[=\s])|\n?$)/g),
-      Sc = new Set(["path", "why", "name", "after", "question", "allow_other", "note"]),
-      Rc = {
-        formatCall: (bb, cb) => `<tool_call name="${bb}">\n${Object.entries(cb).flatMap((bb=>{let[cb,sb]=bb;return void 0===sb?[]:[`<param name="${cb}">${Sc.has(cb)?sb:`\n${sb}\n`}</param>\n`]})).join("")}</tool_call>`,
+      ga = Fa(/(?:<tool_call>\s*)?<function=([\w.:/-]+)>((?:(?!<tool_call\b|<function=)[\s\S])*?(?:<\/parameter>(?=\s*(?:<tool_call\b|<function=|$))|(?=<\/function>|<\/tool_call>)))(?:<\/function>(?:\s*<\/tool_call>)?|<\/tool_call>|\s*(?=<tool_call\b|<function=|$))/g, /<parameter(?:=([\w-]+)|\s+name\s*=\s*"([^"]+)")\s*>\n?([\s\S]*?)(?:\n?<\/parameter>|(?=<parameter[=\s])|\n?$)/g),
+      Ca = new Set(["path", "why", "name", "after", "question", "allow_other", "note"]),
+      Va = {
+        formatCall: (bb, ab) => `<tool_call name="${bb}">\n${Object.entries(ab).flatMap((bb=>{let[ab,Ub]=bb;return void 0===Ub?[]:[`<param name="${ab}">${Ca.has(ab)?Ub:`\n${Ub}\n`}</param>\n`]})).join("")}</tool_call>`,
         declareTools: bb => bb,
         callStyle: "Write each call in your answer as a <tool_call> with a <param> for each argument, the code inside as it is, not escaped and in full: never as JSON, a function call or inside a code fence.",
-        fileResult: (bb, cb, sb) => `<tool_result name="view_file" path="${bb}"${sb?' open_in_editor="true"':""}>\n${cb}\n</tool_result>`,
-        editFailure: (bb, cb) => `<tool_result name="${bb}" is_error="true">\n${cb}\n</tool_result>`,
-        lookupResult: (bb, cb, sb) => `<tool_result name="${bb}" about="${cb.replace(/"/g,"'")}">\n${sb}\n</tool_result>`
+        fileResult: (bb, ab, Ub) => `<tool_result name="view_file" path="${bb}"${Ub?' open_in_editor="true"':""}>\n${ab}\n</tool_result>`,
+        editFailure: (bb, ab) => `<tool_result name="${bb}" is_error="true">\n${ab}\n</tool_result>`,
+        lookupResult: (bb, ab, Ub) => `<tool_result name="${bb}" about="${ab.replace(/"/g,"'")}">\n${Ub}\n</tool_result>`
       },
-      vc = Dc(/<tool_call\s+name\s*=\s*"([^"]+)"\s*>((?:(?!<tool_call\b)[\s\S])*?(?:<\/param(?:eter)?>(?=\s*(?:<tool_call\b|$))|(?=<\/(?:tool_call|invoke|function)>)))(?:<\/(?:tool_call|invoke|function)>|\s*(?=<tool_call\b|$))/g, /<(?:param(?:eter)?\s+name\s*=\s*"([^"]+)"|(?:param(?:eter)?(?:=|\s+)|(?=(?:search|replace)>))([\w-]+))\s*>\n?(?:([\s\S]*?)\n?<\/(?:param(?:eter)?|\1\2)>|((?=\s*\S)(?![\s\S]*<\/[\w-]+[^>]*>)[\s\S]*?)\s*$)/g),
-      Fc = {
-        simple: Rc,
-        qwenXml: rc,
-        deepseek: Zc
+      Oa = Fa(/<tool_call\s+name\s*=\s*"([^"]+)"\s*>((?:(?!<tool_call\b)[\s\S])*?(?:<\/param(?:eter)?>(?=\s*(?:<tool_call\b|$))|(?=<\/(?:tool_call|invoke|function)>)))(?:<\/(?:tool_call|invoke|function)>|\s*(?=<tool_call\b|$))/g, /<(?:param(?:eter)?\s+name\s*=\s*"([^"]+)"|(?:param(?:eter)?(?:=|\s+)|(?=(?:search|replace)>))([\w-]+))\s*>\n?(?:([\s\S]*?)\n?<\/(?:param(?:eter)?|\1\2)>|((?=\s*\S)(?![\s\S]*<\/[\w-]+[^>]*>)[\s\S]*?)\s*$)/g),
+      ca = {
+        simple: Va,
+        qwenXml: sa,
+        deepseek: ra
       },
-      xc = {
-        simple: vc,
-        qwenXml: oc,
+      Ja = {
+        simple: Oa,
+        qwenXml: ga,
         deepseek: function(bb) {
-          const cb = [];
-          for (const Ub of bb.matchAll(Kc)) {
-            var sb, kb, Wb, ab, Tb;
-            const Ib = Pc(Ub[1]),
-              Hb = Ub.index + Ub[0].length,
-              fb = Oc(bb, Hb);
-            if (null === Ib || null === fb || (null !== (sb = null === (kb = cb.at(-1)) || void 0 === kb ? void 0 : kb.index) && void 0 !== sb ? sb : -1) + (null !== (Wb = null === (ab = cb.at(-1)) || void 0 === ab ? void 0 : ab.call.source.length) && void 0 !== Wb ? Wb : 0) > Ub.index) continue;
-            const Mb = ic(bb.slice(Hb, fb));
-            if (null === Mb) continue;
-            const Xb = /^\s*\)/.exec(bb.slice(fb)),
-              nb = bb.slice(Ub.index, fb + (null !== (Tb = null === Xb || void 0 === Xb ? void 0 : Xb[0].length) && void 0 !== Tb ? Tb : 0));
-            cb.push({
+          const ab = [];
+          for (const Yb of bb.matchAll(ua)) {
+            var Ub, Ab, Mb, Tb, Eb;
+            const Bb = da(Yb[1]),
+              eb = Yb.index + Yb[0].length,
+              vb = Qa(bb, eb);
+            if (null === Bb || null === vb || (null !== (Ub = null === (Ab = ab.at(-1)) || void 0 === Ab ? void 0 : Ab.index) && void 0 !== Ub ? Ub : -1) + (null !== (Mb = null === (Tb = ab.at(-1)) || void 0 === Tb ? void 0 : Tb.call.source.length) && void 0 !== Mb ? Mb : 0) > Yb.index) continue;
+            const Lb = Ga(bb.slice(eb, vb));
+            if (null === Lb) continue;
+            const Pb = /^\s*\)/.exec(bb.slice(vb)),
+              Xb = bb.slice(Yb.index, vb + (null !== (Eb = null === Pb || void 0 === Pb ? void 0 : Pb[0].length) && void 0 !== Eb ? Eb : 0));
+            ab.push({
               call: {
-                name: Ib,
-                args: Mb,
-                source: nb
+                name: Bb,
+                args: Lb,
+                source: Xb
               },
-              index: Ub.index
+              index: Yb.index
             })
           }
-          return cb
+          return ab
         }
       },
-      jc = ["simple", "qwenXml"];
+      na = ["simple", "qwenXml"];
 
-    function pc(bb) {
+    function Sa(bb) {
       return "deepseek" === bb ? "simple" : bb
     }
-    const bs = /<\|[a-z_]+\|>/g,
-      cs = /^[ \t]*`{1,2}[ \t]*$/gm,
-      ss = /^[ \t]*<\/(?:tool_call|invoke|function|param(?:eter)?)>[ \t]*$/gm,
-      ks = /^[ \t]*(?:Wait|Oops|Hmm)\b[^\n]*\b(?:redo|re-do|the format|let me (?:fix|try|rewrite|write) (?:that|it|this))\b[^\n]*$/gim,
-      Ws = /```[\w-]*/g,
-      as = /^[\s[\],]*$/,
-      Ts = {
+    const bU = /<\|[a-z_]+\|>/g,
+      aU = /^[ \t]*`{1,2}[ \t]*$/gm,
+      UU = /^[ \t]*<\/(?:tool_call|invoke|function|param(?:eter)?)>[ \t]*$/gm,
+      AU = /^[ \t]*(?:Wait|Oops|Hmm)\b[^\n]*\b(?:redo|re-do|the format|let me (?:fix|try|rewrite|write) (?:that|it|this))\b[^\n]*$/gim,
+      MU = /```[\w-]*/g,
+      TU = /^[\s[\],]*$/,
+      EU = {
         use_prefab: 0,
         add_world_code: 1,
         write_file: 2,
@@ -1365,69 +1365,69 @@ export const modules = {
         view_prefab: 21
       };
 
-    function Us(bb) {
-      return Lc(bb.name).inputSchema.required.every((cb => void 0 !== bb.args[cb]))
+    function YU(bb) {
+      return xa(bb.name).inputSchema.required.every((ab => void 0 !== bb.args[ab]))
     }
 
-    function Is(bb, cb) {
-      const sb = Pc(bb),
-        kb = ic(cb);
-      return null === sb || null === kb ? null : {
-        name: sb,
-        args: kb
+    function BU(bb, ab) {
+      const Ub = da(bb),
+        Ab = Ga(ab);
+      return null === Ub || null === Ab ? null : {
+        name: Ub,
+        args: Ab
       }
     }
 
-    function Hs(bb, cb) {
-      const sb = [];
-      for (const kb of function(bb) {
-          const cb = pc(bb),
-            sb = jc.filter((bb => bb !== cb));
-          return [xc[cb], ...bb === cb ? [] : [xc[bb]], ...sb.map((bb => xc[bb])), qc, Ac]
-        }(cb)) sb.push(...kb(Gc(bb, sb)));
-      return sb.map((bb => {
+    function eU(bb, ab) {
+      const Ub = [];
+      for (const Ab of function(bb) {
+          const ab = Sa(bb),
+            Ub = na.filter((bb => bb !== ab));
+          return [Ja[ab], ...bb === ab ? [] : [Ja[bb]], ...Ub.map((bb => Ja[bb])), oa, ta]
+        }(ab)) Ub.push(...Ab(qa(bb, Ub)));
+      return Ub.map((bb => {
         let {
-          call: cb
+          call: ab
         } = bb;
-        return cb
+        return ab
       }))
     }
 
-    function fs(bb, cb) {
-      return Hs(bb, cb).sort(((bb, cb) => Ts[bb.name] - Ts[cb.name]))
+    function vU(bb, ab) {
+      return eU(bb, ab).sort(((bb, ab) => EU[bb.name] - EU[ab.name]))
     }
 
-    function Ms(bb) {
+    function LU(bb) {
       return function(bb) {
-        const cb = [...bb.matchAll(Ws)],
-          sb = [];
-        let kb = 0;
-        for (; kb < cb.length;) {
-          const Wb = cb[kb],
-            ab = cb.at(kb + 1);
-          void 0 !== ab && "```" === ab[0] ? (as.test(bb.slice(Wb.index + Wb[0].length, ab.index)) && sb.push({
-            from: Wb.index,
-            to: ab.index + ab[0].length
-          }), kb += 2) : (sb.push({
-            from: Wb.index,
-            to: Wb.index + Wb[0].length
-          }), kb++)
+        const ab = [...bb.matchAll(MU)],
+          Ub = [];
+        let Ab = 0;
+        for (; Ab < ab.length;) {
+          const Mb = ab[Ab],
+            Tb = ab.at(Ab + 1);
+          void 0 !== Tb && "```" === Tb[0] ? (TU.test(bb.slice(Mb.index + Mb[0].length, Tb.index)) && Ub.push({
+            from: Mb.index,
+            to: Tb.index + Tb[0].length
+          }), Ab += 2) : (Ub.push({
+            from: Mb.index,
+            to: Mb.index + Mb[0].length
+          }), Ab++)
         }
-        let Wb = bb;
+        let Mb = bb;
         for (const {
-            from: ab,
-            to: Tb
+            from: Tb,
+            to: Eb
           }
-          of sb.reverse()) Wb = Wb.slice(0, ab) + Wb.slice(Tb);
-        return Wb
-      }(bb.replace(bs, "").replace(cs, "").replace(ss, "").replace(ks, ""))
+          of Ub.reverse()) Mb = Mb.slice(0, Tb) + Mb.slice(Eb);
+        return Mb
+      }(bb.replace(bU, "").replace(aU, "").replace(UU, "").replace(AU, ""))
     }
 
-    function Xs(bb) {
+    function PU(bb) {
       return /^(?:on[A-Z]\w*|tick|playerCommand)$/.test(bb)
     }
-    const ns = new Set(["tick", "onPlayerJoin", "onPlayerLeave", "onMobDespawned", "onBlockStand", "onBlockStandStart", "onBlockStandStop", "onPlayerJump", "onPlayerSelectInventorySlot", "onEntityCollision", "onChunkLoaded", "onClose"]),
-      ms = {
+    const XU = new Set(["tick", "onPlayerJoin", "onPlayerLeave", "onMobDespawned", "onBlockStand", "onBlockStandStart", "onBlockStandStop", "onPlayerJump", "onPlayerSelectInventorySlot", "onEntityCollision", "onChunkLoaded", "onClose"]),
+      jU = {
         playerCommand: {
           stopsWhen: bb => `${bb} !== undefined && ${bb} !== false`,
           passedOn: !1
@@ -1442,746 +1442,746 @@ export const modules = {
         }
       };
 
-    function ls(bb) {
-      var cb;
-      const sb = hb().createSourceFile("worldCode.js", bb, hb().ScriptTarget.Latest, !0, hb().ScriptKind.JS),
+    function RU(bb) {
+      var ab;
+      const Ub = mb().createSourceFile("worldCode.js", bb, mb().ScriptTarget.Latest, !0, mb().ScriptKind.JS),
         {
-          parseDiagnostics: kb
-        } = sb;
+          parseDiagnostics: Ab
+        } = Ub;
       return {
-        file: sb,
-        hasErrors: (null !== (cb = null === kb || void 0 === kb ? void 0 : kb.length) && void 0 !== cb ? cb : 0) > 0
+        file: Ub,
+        hasErrors: (null !== (ab = null === Ab || void 0 === Ab ? void 0 : Ab.length) && void 0 !== ab ? ab : 0) > 0
       }
     }
 
-    function Qs(bb) {
-      return void 0 !== bb && (hb().isFunctionExpression(bb) || hb().isArrowFunction(bb))
+    function kU(bb) {
+      return void 0 !== bb && (mb().isFunctionExpression(bb) || mb().isArrowFunction(bb))
     }
 
-    function es(bb) {
-      if (hb().isFunctionDeclaration(bb) && bb.name) return {
-        Nm: bb,
+    function yU(bb) {
+      if (mb().isFunctionDeclaration(bb) && bb.name) return {
+        uX: bb,
         nameNode: bb.name
       };
-      if (hb().isVariableStatement(bb) && 1 === bb.declarationList.declarations.length) {
-        const cb = bb.declarationList.declarations[0],
-          sb = cb.initializer && Cs(cb.initializer);
-        if (hb().isIdentifier(cb.name) && Qs(sb)) return {
-          Nm: sb,
-          nameNode: cb.name
+      if (mb().isVariableStatement(bb) && 1 === bb.declarationList.declarations.length) {
+        const ab = bb.declarationList.declarations[0],
+          Ub = ab.initializer && ZU(ab.initializer);
+        if (mb().isIdentifier(ab.name) && kU(Ub)) return {
+          uX: Ub,
+          nameNode: ab.name
         }
       }
-      const cb = Ns(bb),
-        sb = cb && Cs(cb.value);
-      return cb && Qs(sb) ? {
-        Nm: sb,
-        nameNode: cb.name
+      const ab = DU(bb),
+        Ub = ab && ZU(ab.value);
+      return ab && kU(Ub) ? {
+        uX: Ub,
+        nameNode: ab.name
       } : null
     }
 
-    function Cs(bb) {
-      return hb().isParenthesizedExpression(bb) ? Cs(bb.expression) : bb
+    function ZU(bb) {
+      return mb().isParenthesizedExpression(bb) ? ZU(bb.expression) : bb
     }
 
-    function Ns(bb) {
-      return hb().isExpressionStatement(bb) && hb().isBinaryExpression(bb.expression) && bb.expression.operatorToken.kind === hb().SyntaxKind.EqualsToken && hb().isIdentifier(bb.expression.left) ? {
+    function DU(bb) {
+      return mb().isExpressionStatement(bb) && mb().isBinaryExpression(bb.expression) && bb.expression.operatorToken.kind === mb().SyntaxKind.EqualsToken && mb().isIdentifier(bb.expression.left) ? {
         name: bb.expression.left,
         value: bb.expression.right
       } : null
     }
 
-    function Vs(bb) {
-      return hb().isIdentifier(bb) ? [bb.text] : bb.elements.flatMap((bb => hb().isOmittedExpression(bb) ? [] : Vs(bb.name)))
+    function zU(bb) {
+      return mb().isIdentifier(bb) ? [bb.text] : bb.elements.flatMap((bb => mb().isOmittedExpression(bb) ? [] : zU(bb.name)))
     }
 
-    function Ls(bb) {
-      if (!hb().isVariableStatement(bb)) return null;
-      const cb = bb.declarationList.declarations.find((bb => hb().isIdentifier(bb.name) && "CONFIG" === bb.name.text));
-      return null !== cb && void 0 !== cb && cb.initializer && hb().isObjectLiteralExpression(cb.initializer) ? cb.initializer : null
+    function xU(bb) {
+      if (!mb().isVariableStatement(bb)) return null;
+      const ab = bb.declarationList.declarations.find((bb => mb().isIdentifier(bb.name) && "CONFIG" === bb.name.text));
+      return null !== ab && void 0 !== ab && ab.initializer && mb().isObjectLiteralExpression(ab.initializer) ? ab.initializer : null
     }
 
-    function us(bb, cb) {
-      return cb.statements.map((sb => {
-        var kb;
-        const Wb = function(bb, cb, sb) {
-            let kb = sb.getStart(cb);
-            for (const ab of (null !== (Wb = hb().getLeadingCommentRanges(bb, sb.getFullStart())) && void 0 !== Wb ? Wb : []).reverse()) {
-              var Wb;
-              if (/\n[^\S\n]*\n/.test(bb.slice(ab.end, kb))) break;
-              kb = ab.pos
+    function iU(bb, ab) {
+      return ab.statements.map((Ub => {
+        var Ab;
+        const Mb = function(bb, ab, Ub) {
+            let Ab = Ub.getStart(ab);
+            for (const Tb of (null !== (Mb = mb().getLeadingCommentRanges(bb, Ub.getFullStart())) && void 0 !== Mb ? Mb : []).reverse()) {
+              var Mb;
+              if (/\n[^\S\n]*\n/.test(bb.slice(Tb.end, Ab))) break;
+              Ab = Tb.pos
             }
-            return kb
-          }(bb, cb, sb),
-          ab = es(sb);
-        if (null !== ab && void 0 !== ab && ab.nameNode) {
-          const bb = ab.nameNode.text;
+            return Ab
+          }(bb, ab, Ub),
+          Tb = yU(Ub);
+        if (null !== Tb && void 0 !== Tb && Tb.nameNode) {
+          const bb = Tb.nameNode.text;
           return {
-            kind: Xs(bb) ? "callback" : "function",
+            kind: PU(bb) ? "callback" : "function",
             names: [bb],
-            from: Wb,
-            to: sb.getEnd(),
-            node: sb
+            from: Mb,
+            to: Ub.getEnd(),
+            node: Ub
           }
         }
-        const Tb = hb().isVariableStatement(sb) ? sb.declarationList.declarations.flatMap((bb => Vs(bb.name))) : [];
-        if (Ls(sb)) {
+        const Eb = mb().isVariableStatement(Ub) ? Ub.declarationList.declarations.flatMap((bb => zU(bb.name))) : [];
+        if (xU(Ub)) {
           return {
             kind: "config",
-            names: ["CONFIG", ...Tb.filter((bb => "CONFIG" !== bb))],
-            from: Wb,
-            to: sb.getEnd(),
-            node: sb
+            names: ["CONFIG", ...Eb.filter((bb => "CONFIG" !== bb))],
+            from: Mb,
+            to: Ub.getEnd(),
+            node: Ub
           }
         }
-        if (hb().isVariableStatement(sb)) return {
+        if (mb().isVariableStatement(Ub)) return {
           kind: "variable",
-          names: Tb,
-          from: Wb,
-          to: sb.getEnd(),
-          node: sb
+          names: Eb,
+          from: Mb,
+          to: Ub.getEnd(),
+          node: Ub
         };
-        if (hb().isClassDeclaration(sb) && sb.name) return {
+        if (mb().isClassDeclaration(Ub) && Ub.name) return {
           kind: "function",
-          names: [sb.name.text],
-          from: Wb,
-          to: sb.getEnd(),
-          node: sb
+          names: [Ub.name.text],
+          from: Mb,
+          to: Ub.getEnd(),
+          node: Ub
         };
-        const Ub = null === (kb = Ns(sb)) || void 0 === kb ? void 0 : kb.name.text;
+        const Yb = null === (Ab = DU(Ub)) || void 0 === Ab ? void 0 : Ab.name.text;
         return {
           kind: "other",
-          names: void 0 !== Ub && Xs(Ub) ? [Ub] : [],
-          from: Wb,
-          to: sb.getEnd(),
-          node: sb
+          names: void 0 !== Yb && PU(Yb) ? [Yb] : [],
+          from: Mb,
+          to: Ub.getEnd(),
+          node: Ub
         }
       }))
     }
 
-    function Ys(bb) {
-      if (!hb().isPropertyAssignment(bb) && !hb().isShorthandPropertyAssignment(bb)) return null;
-      const cb = bb.name;
-      return hb().isIdentifier(cb) || hb().isStringLiteral(cb) ? cb.text : null
+    function fU(bb) {
+      if (!mb().isPropertyAssignment(bb) && !mb().isShorthandPropertyAssignment(bb)) return null;
+      const ab = bb.name;
+      return mb().isIdentifier(ab) || mb().isStringLiteral(ab) ? ab.text : null
     }
 
-    function hs(bb, cb) {
-      return bb.lastIndexOf("\n", cb - 1) + 1
+    function mU(bb, ab) {
+      return bb.lastIndexOf("\n", ab - 1) + 1
     }
 
-    function gs(bb, cb) {
-      var sb, kb;
-      const Wb = bb.slice(hs(bb, cb), cb);
-      return /^\s*$/.test(Wb) ? Wb : `${null!==(sb=null===(kb=/^\s*/.exec(Wb))||void 0===kb?void 0:kb[0])&&void 0!==sb?sb:""}\t`
+    function pU(bb, ab) {
+      var Ub, Ab;
+      const Mb = bb.slice(mU(bb, ab), ab);
+      return /^\s*$/.test(Mb) ? Mb : `${null!==(Ub=null===(Ab=/^\s*/.exec(Mb))||void 0===Ab?void 0:Ab[0])&&void 0!==Ub?Ub:""}\t`
     }
 
-    function Bs(bb, cb, sb) {
-      const kb = bb.slice(hs(bb, cb.getStart(sb)), function(bb, cb) {
-          const sb = bb.indexOf("\n", cb);
-          return -1 === sb ? bb.length : sb
-        }(bb, cb.getEnd())),
-        Wb = kb.trim(),
-        ab = /^[\w$"']+\s*:/.test(Wb) && "" === bb.slice(hs(bb, cb.getStart(sb)), cb.getStart(sb)).trim() ? kb.replace(/^\s*/, "\t") : `\t${cb.getText(sb)},`;
-      return /,\s*(?:\/\/.*)?$/.test(ab) ? ab : ab.replace(/(\s*(?:\/\/.*)?)$/, ",$1")
+    function NU(bb, ab, Ub) {
+      const Ab = bb.slice(mU(bb, ab.getStart(Ub)), function(bb, ab) {
+          const Ub = bb.indexOf("\n", ab);
+          return -1 === Ub ? bb.length : Ub
+        }(bb, ab.getEnd())),
+        Mb = Ab.trim(),
+        Tb = /^[\w$"']+\s*:/.test(Mb) && "" === bb.slice(mU(bb, ab.getStart(Ub)), ab.getStart(Ub)).trim() ? Ab.replace(/^\s*/, "\t") : `\t${ab.getText(Ub)},`;
+      return /,\s*(?:\/\/.*)?$/.test(Tb) ? Tb : Tb.replace(/(\s*(?:\/\/.*)?)$/, ",$1")
     }
 
-    function ts(bb, cb) {
-      let sb = bb;
-      for (const kb of [...cb].sort(((bb, cb) => cb.from - bb.from))) sb = sb.slice(0, kb.from) + kb.text + sb.slice(kb.to);
-      return sb
+    function WU(bb, ab) {
+      let Ub = bb;
+      for (const Ab of [...ab].sort(((bb, ab) => ab.from - bb.from))) Ub = Ub.slice(0, Ab.from) + Ab.text + Ub.slice(Ab.to);
+      return Ub
     }
 
-    function ys(bb) {
+    function HU(bb) {
       return bb.charAt(0).toUpperCase() + bb.slice(1)
     }
 
-    function Ps(bb) {
-      return bb.replace(/[^A-Za-z0-9]+(.)?/g, ((bb, cb) => cb ? cb.toUpperCase() : ""))
+    function IU(bb) {
+      return bb.replace(/[^A-Za-z0-9]+(.)?/g, ((bb, ab) => ab ? ab.toUpperCase() : ""))
     }
 
-    function Ds(bb, cb) {
-      var sb, kb;
-      const Wb = bb.filter((bb => bb.names.includes(cb))),
-        ab = Wb.filter((bb => !hb().isFunctionDeclaration(bb.node) && function(bb, cb) {
-          return !hb().isVariableStatement(bb) || bb.declarationList.declarations.some((bb => void 0 !== bb.initializer && Vs(bb.name).includes(cb)))
-        }(bb.node, cb))),
-        Tb = null !== (sb = ab[ab.length - 1]) && void 0 !== sb ? sb : Wb[Wb.length - 1];
-      if ("callback" === (null === Tb || void 0 === Tb ? void 0 : Tb.kind)) return es(Tb.node);
-      const Ub = "other" === (null === Tb || void 0 === Tb ? void 0 : Tb.kind) ? null === (kb = Ns(Tb.node)) || void 0 === kb ? void 0 : kb.value : void 0;
-      if (!Ub || !hb().isIdentifier(Ub)) return null;
-      const Ib = bb.filter((bb => {
-          var cb;
-          const sb = null === (cb = Ns(bb.node)) || void 0 === cb ? void 0 : cb.value;
-          return void 0 !== sb && hb().isIdentifier(sb) && sb.text === Ub.text
+    function dU(bb, ab) {
+      var Ub, Ab;
+      const Mb = bb.filter((bb => bb.names.includes(ab))),
+        Tb = Mb.filter((bb => !mb().isFunctionDeclaration(bb.node) && function(bb, ab) {
+          return !mb().isVariableStatement(bb) || bb.declarationList.declarations.some((bb => void 0 !== bb.initializer && zU(bb.name).includes(ab)))
+        }(bb.node, ab))),
+        Eb = null !== (Ub = Tb[Tb.length - 1]) && void 0 !== Ub ? Ub : Mb[Mb.length - 1];
+      if ("callback" === (null === Eb || void 0 === Eb ? void 0 : Eb.kind)) return yU(Eb.node);
+      const Yb = "other" === (null === Eb || void 0 === Eb ? void 0 : Eb.kind) ? null === (Ab = DU(Eb.node)) || void 0 === Ab ? void 0 : Ab.value : void 0;
+      if (!Yb || !mb().isIdentifier(Yb)) return null;
+      const Bb = bb.filter((bb => {
+          var ab;
+          const Ub = null === (ab = DU(bb.node)) || void 0 === ab ? void 0 : ab.value;
+          return void 0 !== Ub && mb().isIdentifier(Ub) && Ub.text === Yb.text
         })),
-        Hb = bb.filter((bb => bb.names.includes(Ub.text))),
-        fb = 1 === Hb.length && "function" === Hb[0].kind ? es(Hb[0].node) : null;
-      return 1 === Ib.length ? fb : null
+        eb = bb.filter((bb => bb.names.includes(Yb.text))),
+        vb = 1 === eb.length && "function" === eb[0].kind ? yU(eb[0].node) : null;
+      return 1 === Bb.length ? vb : null
     }
 
-    function Es(bb) {
-      return bb.parameters.map((bb => hb().isIdentifier(bb.name) ? bb.name.text : null))
+    function FU(bb) {
+      return bb.parameters.map((bb => mb().isIdentifier(bb.name) ? bb.name.text : null))
     }
 
-    function is(bb, cb, sb, kb, Wb, ab, Tb) {
-      var Ub;
-      let Ib = arguments.length > 7 && void 0 !== arguments[7] && arguments[7];
+    function hU(bb, ab, Ub, Ab, Mb, Tb, Eb) {
+      var Yb;
+      let Bb = arguments.length > 7 && void 0 !== arguments[7] && arguments[7];
       const {
-        Nm: Hb
-      } = sb, fb = Hb.body;
-      if (!fb) return [];
-      const Mb = [],
-        Xb = Es(Hb),
-        nb = [],
-        mb = new Set([...Xb.filter((bb => null !== bb)), ...Ks(fb)]),
-        lb = (bb, cb) => {
-          let sb = bb;
-          for (let kb = cb; mb.has(sb); kb++) sb = `${bb}${kb}`;
-          return mb.add(sb), sb
+        uX: eb
+      } = Ub, vb = eb.body;
+      if (!vb) return [];
+      const Lb = [],
+        Pb = FU(eb),
+        Xb = [],
+        jb = new Set([...Pb.filter((bb => null !== bb)), ...qU(vb)]),
+        Rb = (bb, ab) => {
+          let Ub = bb;
+          for (let Ab = ab; jb.has(Ub); Ab++) Ub = `${bb}${Ab}`;
+          return jb.add(Ub), Ub
         },
-        Qb = [];
-      for (const [hb, Bb] of ab.entries()) {
-        var eb;
-        const bb = Xb[hb];
-        if (void 0 !== bb && null !== (eb = Hb.parameters[hb]) && void 0 !== eb && eb.dotDotDotToken) {
-          nb.push(null === bb ? "undefined" : `...${bb}`);
+        kb = [];
+      for (const [mb, Wb] of Tb.entries()) {
+        var yb;
+        const bb = Pb[mb];
+        if (void 0 !== bb && null !== (yb = eb.parameters[mb]) && void 0 !== yb && yb.dotDotDotToken) {
+          Xb.push(null === bb ? "undefined" : `...${bb}`);
           break
         }
         if (void 0 !== bb) {
-          nb.push(null !== bb && void 0 !== bb ? bb : "undefined");
+          Xb.push(null !== bb && void 0 !== bb ? bb : "undefined");
           continue
         }
-        const cb = lb(Bb, hb);
-        Qb.push(cb), nb.push(cb)
+        const ab = Rb(Wb, mb);
+        kb.push(ab), Xb.push(ab)
       }
-      if (Qb.length > 0) {
-        const bb = Hb.getChildren(cb).find((bb => bb.kind === hb().SyntaxKind.CloseParenToken)),
-          sb = bb ? bb.getStart(cb) : -1;
-        if (-1 === sb) {
-          const bb = Hb.parameters[0];
+      if (kb.length > 0) {
+        const bb = eb.getChildren(ab).find((bb => bb.kind === mb().SyntaxKind.CloseParenToken)),
+          Ub = bb ? bb.getStart(ab) : -1;
+        if (-1 === Ub) {
+          const bb = eb.parameters[0];
           if (!bb) return [];
-          Mb.push({
-            from: bb.getStart(cb),
+          Lb.push({
+            from: bb.getStart(ab),
             to: bb.getEnd(),
-            text: `(${[bb.getText(cb),...Qb].join(", ")})`
+            text: `(${[bb.getText(ab),...kb].join(", ")})`
           })
         } else {
-          const bb = Hb.parameters.hasTrailingComma ? " " : Hb.parameters.length > 0 ? ", " : "";
-          Mb.push({
-            from: sb,
-            to: sb,
-            text: `${bb}${Qb.join(", ")}`
+          const bb = eb.parameters.hasTrailingComma ? " " : eb.parameters.length > 0 ? ", " : "";
+          Lb.push({
+            from: Ub,
+            to: Ub,
+            text: `${bb}${kb.join(", ")}`
           })
         }
       }
-      const Cb = `${Wb}(${nb.join(", ")})`,
-        Nb = lb(`${Ps(Tb)}Result`, 2),
-        Vb = ms[kb],
-        Lb = ns.has(kb) ? [Cb] : Vb ? [`const ${Nb} = ${Cb}`, `if (${Vb.stopsWhen(Nb)}) return ${Nb}`] : [`const ${Nb} = ${Cb}`],
-        ub = !ns.has(kb) && (null === (Ub = null === Vb || void 0 === Vb ? void 0 : Vb.passedOn) || void 0 === Ub || Ub);
-      if (ub && hb().isBlock(fb)) {
-        const sb = function(bb, cb) {
-            const sb = new Set;
-            for (const kb of bb.statements) {
-              const bb = hb().isVariableStatement(kb) ? kb.declarationList.declarations[0] : void 0;
-              bb && hb().isIdentifier(bb.name) && bb.initializer && Os(bb.initializer, cb) && sb.add(bb.name.text)
+      const Zb = `${Mb}(${Xb.join(", ")})`,
+        Db = Rb(`${IU(Eb)}Result`, 2),
+        zb = jU[Ab],
+        xb = XU.has(Ab) ? [Zb] : zb ? [`const ${Db} = ${Zb}`, `if (${zb.stopsWhen(Db)}) return ${Db}`] : [`const ${Db} = ${Zb}`],
+        ib = !XU.has(Ab) && (null === (Yb = null === zb || void 0 === zb ? void 0 : zb.passedOn) || void 0 === Yb || Yb);
+      if (ib && mb().isBlock(vb)) {
+        const Ub = function(bb, ab) {
+            const Ub = new Set;
+            for (const Ab of bb.statements) {
+              const bb = mb().isVariableStatement(Ab) ? Ab.declarationList.declarations[0] : void 0;
+              bb && mb().isIdentifier(bb.name) && bb.initializer && GU(bb.initializer, ab) && Ub.add(bb.name.text)
             }
-            return sb
-          }(fb, kb),
-          Wb = bb => {
-            if (!hb().isFunctionLike(bb) && ! function(bb, cb, sb) {
-                if (!hb().isIfStatement(bb) || !hb().isReturnStatement(bb.thenStatement) || !bb.thenStatement.expression) return !1;
-                const kb = bb.thenStatement.expression;
-                return hb().isIdentifier(kb) && cb.has(kb.text) && bb.expression.getText(sb).startsWith(`${kb.text} `)
-              }(bb, sb, cb)) {
-              if (hb().isReturnStatement(bb) && !bb.expression) Mb.push({
-                from: bb.getStart(cb),
+            return Ub
+          }(vb, Ab),
+          Mb = bb => {
+            if (!mb().isFunctionLike(bb) && ! function(bb, ab, Ub) {
+                if (!mb().isIfStatement(bb) || !mb().isReturnStatement(bb.thenStatement) || !bb.thenStatement.expression) return !1;
+                const Ab = bb.thenStatement.expression;
+                return mb().isIdentifier(Ab) && ab.has(Ab.text) && bb.expression.getText(Ub).startsWith(`${Ab.text} `)
+              }(bb, Ub, ab)) {
+              if (mb().isReturnStatement(bb) && !bb.expression) Lb.push({
+                from: bb.getStart(ab),
                 to: bb.getEnd(),
-                text: `return ${Nb}`
+                text: `return ${Db}`
               });
-              else if (hb().isReturnStatement(bb) && bb.expression) {
-                const kb = Gs(bb.expression, sb);
-                kb && Mb.push({
-                  from: kb.getStart(cb),
-                  to: kb.getEnd(),
-                  text: `${kb.text} !== undefined ? ${kb.text} : ${Nb}`
+              else if (mb().isReturnStatement(bb) && bb.expression) {
+                const Ab = QU(bb.expression, Ub);
+                Ab && Lb.push({
+                  from: Ab.getStart(ab),
+                  to: Ab.getEnd(),
+                  text: `${Ab.text} !== undefined ? ${Ab.text} : ${Db}`
                 })
               }
-              hb().forEachChild(bb, Wb)
+              mb().forEachChild(bb, Mb)
             }
           };
-        fb.statements.forEach(Wb);
-        const ab = fb.statements[fb.statements.length - 1];
-        if (!ab || !hb().isReturnStatement(ab) && !hb().isThrowStatement(ab)) {
-          const sb = fb.getEnd() - 1,
-            kb = ab ? gs(bb, ab.getStart(cb)) : `${bb.slice(hs(bb,Hb.getStart(cb)),Hb.getStart(cb)).replace(/\S.*$/,"")}\t`,
-            Wb = bb.slice(hs(bb, sb), sb),
-            Tb = /^\s*$/.test(Wb) ? `${kb}return ${Nb}\n${Wb}` : `\n${kb}return ${Nb}\n`;
-          Mb.push({
-            from: /^\s*$/.test(Wb) ? hs(bb, sb) : sb,
-            to: sb,
-            text: Tb
+        vb.statements.forEach(Mb);
+        const Tb = vb.statements[vb.statements.length - 1];
+        if (!Tb || !mb().isReturnStatement(Tb) && !mb().isThrowStatement(Tb)) {
+          const Ub = vb.getEnd() - 1,
+            Ab = Tb ? pU(bb, Tb.getStart(ab)) : `${bb.slice(mU(bb,eb.getStart(ab)),eb.getStart(ab)).replace(/\S.*$/,"")}\t`,
+            Mb = bb.slice(mU(bb, Ub), Ub),
+            Eb = /^\s*$/.test(Mb) ? `${Ab}return ${Db}\n${Mb}` : `\n${Ab}return ${Db}\n`;
+          Lb.push({
+            from: /^\s*$/.test(Mb) ? mU(bb, Ub) : Ub,
+            to: Ub,
+            text: Eb
           })
         }
       }
-      const Yb = hb().isBlock(fb) ? [...fb.statements] : [],
-        Jb = Yb.findIndex((bb => ! function(bb, cb) {
-          return hb().isExpressionStatement(bb) && Os(bb.expression, cb)
-        }(bb, kb))),
-        gb = Yb[(-1 === Jb ? Yb.length : Jb) - 1];
-      if (Ib && ns.has(kb) && gb) Mb.push({
-        from: gb.getEnd(),
-        to: gb.getEnd(),
-        text: `\n${gs(bb,gb.getStart(cb))}${Cb}`
+      const fb = mb().isBlock(vb) ? [...vb.statements] : [],
+        pb = fb.findIndex((bb => ! function(bb, ab) {
+          return mb().isExpressionStatement(bb) && GU(bb.expression, ab)
+        }(bb, Ab))),
+        Nb = fb[(-1 === pb ? fb.length : pb) - 1];
+      if (Bb && XU.has(Ab) && Nb) Lb.push({
+        from: Nb.getEnd(),
+        to: Nb.getEnd(),
+        text: `\n${pU(bb,Nb.getStart(ab))}${Zb}`
       });
-      else if (hb().isBlock(fb)) {
-        const sb = fb.statements[0],
-          kb = sb ? gs(bb, sb.getStart(cb)) : `${bb.slice(hs(bb,Hb.getStart(cb)),Hb.getStart(cb)).replace(/\S.*$/,"")}\t`,
-          Wb = fb.getStart(cb) + 1,
-          ab = void 0 !== sb && !bb.slice(Wb, sb.getStart(cb)).includes("\n");
-        Mb.push({
-          from: Wb,
-          to: ab ? sb.getStart(cb) : Wb,
-          text: `\n${Lb.map((bb=>`${kb}${bb}`)).join("\n")}${sb?ab?`\n${kb}`:"":"\n"}`
+      else if (mb().isBlock(vb)) {
+        const Ub = vb.statements[0],
+          Ab = Ub ? pU(bb, Ub.getStart(ab)) : `${bb.slice(mU(bb,eb.getStart(ab)),eb.getStart(ab)).replace(/\S.*$/,"")}\t`,
+          Mb = vb.getStart(ab) + 1,
+          Tb = void 0 !== Ub && !bb.slice(Mb, Ub.getStart(ab)).includes("\n");
+        Lb.push({
+          from: Mb,
+          to: Tb ? Ub.getStart(ab) : Mb,
+          text: `\n${xb.map((bb=>`${Ab}${bb}`)).join("\n")}${Ub?Tb?`\n${Ab}`:"":"\n"}`
         })
       } else {
-        const sb = bb.slice(hs(bb, Hb.getStart(cb)), Hb.getStart(cb)).replace(/\S.*$/, ""),
-          kb = lb("ownResult", 2),
-          Wb = ub ? [`const ${kb} = ${fb.getText(cb)}`, `return ${kb} !== undefined ? ${kb} : ${Nb}`] : [`return ${fb.getText(cb)}`];
-        Mb.push({
-          from: fb.getStart(cb),
-          to: fb.getEnd(),
-          text: `{\n${[...Lb,...Wb].map((bb=>`${sb}\t${bb}`)).join("\n")}\n${sb}}`
+        const Ub = bb.slice(mU(bb, eb.getStart(ab)), eb.getStart(ab)).replace(/\S.*$/, ""),
+          Ab = Rb("ownResult", 2),
+          Mb = ib ? [`const ${Ab} = ${vb.getText(ab)}`, `return ${Ab} !== undefined ? ${Ab} : ${Db}`] : [`return ${vb.getText(ab)}`];
+        Lb.push({
+          from: vb.getStart(ab),
+          to: vb.getEnd(),
+          text: `{\n${[...xb,...Mb].map((bb=>`${Ub}\t${bb}`)).join("\n")}\n${Ub}}`
         })
       }
-      return Mb
+      return Lb
     }
 
-    function Os(bb, cb) {
-      return hb().isCallExpression(bb) && hb().isIdentifier(bb.expression) && bb.expression.text.endsWith(ys(cb)) && bb.expression.text !== ys(cb)
+    function GU(bb, ab) {
+      return mb().isCallExpression(bb) && mb().isIdentifier(bb.expression) && bb.expression.text.endsWith(HU(ab)) && bb.expression.text !== HU(ab)
     }
 
-    function Gs(bb, cb) {
-      return hb().isIdentifier(bb) ? cb.has(bb.text) ? bb : null : hb().isConditionalExpression(bb) ? Gs(bb.whenFalse, cb) : null
+    function QU(bb, ab) {
+      return mb().isIdentifier(bb) ? ab.has(bb.text) ? bb : null : mb().isConditionalExpression(bb) ? QU(bb.whenFalse, ab) : null
     }
 
-    function Ks(bb) {
-      const cb = [],
-        sb = bb => {
-          hb().isIdentifier(bb) && cb.push(bb.text), hb().forEachChild(bb, sb)
+    function qU(bb) {
+      const ab = [],
+        Ub = bb => {
+          mb().isIdentifier(bb) && ab.push(bb.text), mb().forEachChild(bb, Ub)
         };
-      return sb(bb), cb
+      return Ub(bb), ab
     }
 
-    function Zs(bb, cb, sb) {
-      var kb, Wb;
-      return (0, Mc.e)(null !== (kb = null === (Wb = bb.body) || void 0 === Wb ? void 0 : Wb.getText(cb)) && void 0 !== kb ? kb : "", new RegExp(`${sb}\\s*\\(`), Mc.m).length > 0
+    function uU(bb, ab, Ub) {
+      var Ab, Mb;
+      return (0, La.f)(null !== (Ab = null === (Mb = bb.body) || void 0 === Mb ? void 0 : Mb.getText(ab)) && void 0 !== Ab ? Ab : "", new RegExp(`${Ub}\\s*\\(`), La.l).length > 0
     }
 
-    function zs(bb, cb, sb) {
-      var kb;
+    function rU(bb, ab, Ub) {
+      var Ab;
       const {
-        owner: Wb,
-        heading: ab
-      } = sb, Tb = null !== (kb = sb.overrides) && void 0 !== kb ? kb : new Set;
-      if ("" === bb.trim() && !0 !== sb.chainCallbacks) {
-        const bb = `${ab?`${ab}\n`:""}${cb.trim()}\n`,
+        owner: Mb,
+        heading: Tb
+      } = Ub, Eb = null !== (Ab = Ub.overrides) && void 0 !== Ab ? Ab : new Set;
+      if ("" === bb.trim() && !0 !== Ub.chainCallbacks) {
+        const bb = `${Tb?`${Tb}\n`:""}${ab.trim()}\n`,
           {
-            file: sb,
-            hasErrors: kb
-          } = ls(bb);
-        if (kb) return null;
-        const Wb = us(bb, sb);
+            file: Ub,
+            hasErrors: Ab
+          } = RU(bb);
+        if (Ab) return null;
+        const Mb = iU(bb, Ub);
         return {
           text: bb,
-          added: Wb.flatMap((bb => "config" === bb.kind ? [] : bb.names)),
+          added: Mb.flatMap((bb => "config" === bb.kind ? [] : bb.names)),
           chained: [],
-          settings: Wb.flatMap((bb => {
-            var cb;
-            const sb = "config" === bb.kind ? Ls(bb.node) : null;
-            return (null !== (cb = null === sb || void 0 === sb ? void 0 : sb.properties) && void 0 !== cb ? cb : []).flatMap((bb => {
-              const cb = Ys(bb);
-              return null === cb ? [] : [cb]
+          settings: Mb.flatMap((bb => {
+            var ab;
+            const Ub = "config" === bb.kind ? xU(bb.node) : null;
+            return (null !== (ab = null === Ub || void 0 === Ub ? void 0 : Ub.properties) && void 0 !== ab ? ab : []).flatMap((bb => {
+              const ab = fU(bb);
+              return null === ab ? [] : [ab]
             }))
           }))
         }
       }
-      const Ub = ls(bb),
-        Ib = ls(cb);
-      if (Ub.hasErrors || Ib.hasErrors) return null;
-      const Hb = us(bb, Ub.file),
-        fb = us(cb, Ib.file),
-        Mb = new Set(Hb.flatMap((bb => bb.names))),
-        Xb = new Set(Mb),
-        nb = [],
-        mb = [],
-        lb = [],
-        Qb = [];
-      let eb = [];
-      const Cb = fb.find((bb => "config" === bb.kind)),
-        Nb = Hb.find((bb => "config" === bb.kind));
-      if (Cb) {
-        const sb = Ls(Cb.node),
-          kb = Nb ? Ls(Nb.node) : null;
-        if (sb && kb) {
-          const Wb = function(bb, cb, sb, kb, Wb, ab, Tb) {
-            const Ub = new Map;
-            for (const Nb of sb.properties) {
-              const bb = Ys(Nb);
-              null !== bb && Ub.set(bb, Nb)
+      const Yb = RU(bb),
+        Bb = RU(ab);
+      if (Yb.hasErrors || Bb.hasErrors) return null;
+      const eb = iU(bb, Yb.file),
+        vb = iU(ab, Bb.file),
+        Lb = new Set(eb.flatMap((bb => bb.names))),
+        Pb = new Set(Lb),
+        Xb = [],
+        jb = [],
+        Rb = [],
+        kb = [];
+      let yb = [];
+      const Zb = vb.find((bb => "config" === bb.kind)),
+        Db = eb.find((bb => "config" === bb.kind));
+      if (Zb) {
+        const Ub = xU(Zb.node),
+          Ab = Db ? xU(Db.node) : null;
+        if (Ub && Ab) {
+          const Mb = function(bb, ab, Ub, Ab, Mb, Tb, Eb) {
+            const Yb = new Map;
+            for (const Db of Ub.properties) {
+              const bb = fU(Db);
+              null !== bb && Yb.set(bb, Db)
             }
-            const Ib = [],
-              Hb = [],
-              fb = [],
-              Mb = new Map;
-            for (const Nb of ab.properties) {
-              const bb = Ys(Nb);
+            const Bb = [],
+              eb = [],
+              vb = [],
+              Lb = new Map;
+            for (const Db of Tb.properties) {
+              const bb = fU(Db);
               if (null === bb) continue;
-              const sb = Ub.get(bb);
-              if (sb) {
-                if (Tb.has(bb) && hb().isPropertyAssignment(sb) && hb().isPropertyAssignment(Nb)) {
-                  const kb = Nb.initializer.getText(Wb);
-                  sb.initializer.getText(cb) !== kb && (Ib.push({
-                    from: sb.initializer.getStart(cb),
-                    to: sb.initializer.getEnd(),
-                    text: kb
-                  }), Mb.set(sb, kb), Hb.push(bb))
+              const Ub = Yb.get(bb);
+              if (Ub) {
+                if (Eb.has(bb) && mb().isPropertyAssignment(Ub) && mb().isPropertyAssignment(Db)) {
+                  const Ab = Db.initializer.getText(Mb);
+                  Ub.initializer.getText(ab) !== Ab && (Bb.push({
+                    from: Ub.initializer.getStart(ab),
+                    to: Ub.initializer.getEnd(),
+                    text: Ab
+                  }), Lb.set(Ub, Ab), eb.push(bb))
                 }
-              } else fb.push(Bs(kb, Nb, Wb)), Hb.push(bb)
+              } else vb.push(NU(Ab, Db, Mb)), eb.push(bb)
             }
-            if (0 === fb.length) return {
-              edits: Ib,
-              settings: Hb
+            if (0 === vb.length) return {
+              edits: Bb,
+              settings: eb
             };
-            const Xb = sb.getEnd() - 1,
-              nb = sb.properties[sb.properties.length - 1];
-            if (!bb.slice(sb.getStart(cb), Xb).includes("\n")) {
-              const bb = sb.properties.map((bb => {
-                const sb = Mb.get(bb);
-                return hb().isPropertyAssignment(bb) && void 0 !== sb ? `\t${bb.name.getText(cb)}: ${sb},` : `\t${bb.getText(cb)},`
+            const Pb = Ub.getEnd() - 1,
+              Xb = Ub.properties[Ub.properties.length - 1];
+            if (!bb.slice(Ub.getStart(ab), Pb).includes("\n")) {
+              const bb = Ub.properties.map((bb => {
+                const Ub = Lb.get(bb);
+                return mb().isPropertyAssignment(bb) && void 0 !== Ub ? `\t${bb.name.getText(ab)}: ${Ub},` : `\t${bb.getText(ab)},`
               }));
               return {
                 edits: [{
-                  from: sb.getStart(cb),
-                  to: sb.getEnd(),
-                  text: `{\n${[...bb,...fb].join("\n")}\n}`
+                  from: Ub.getStart(ab),
+                  to: Ub.getEnd(),
+                  text: `{\n${[...bb,...vb].join("\n")}\n}`
                 }],
-                settings: Hb
+                settings: eb
               }
             }
-            const mb = void 0 !== nb && !sb.properties.hasTrailingComma,
-              lb = hs(bb, Xb),
-              Qb = bb.slice(lb, Xb);
-            if ("" === Qb.trim()) return mb && Ib.push({
-              from: nb.getEnd(),
-              to: nb.getEnd(),
+            const jb = void 0 !== Xb && !Ub.properties.hasTrailingComma,
+              Rb = mU(bb, Pb),
+              kb = bb.slice(Rb, Pb);
+            if ("" === kb.trim()) return jb && Bb.push({
+              from: Xb.getEnd(),
+              to: Xb.getEnd(),
               text: ","
-            }), Ib.push({
-              from: lb,
-              to: lb,
-              text: `${fb.join("\n")}\n`
+            }), Bb.push({
+              from: Rb,
+              to: Rb,
+              text: `${vb.join("\n")}\n`
             }), {
-              edits: Ib,
-              settings: Hb
+              edits: Bb,
+              settings: eb
             };
-            const eb = lb + Qb.trimEnd().length,
-              Cb = mb && nb.getEnd() === eb;
-            return mb && !Cb && Ib.push({
-              from: nb.getEnd(),
-              to: nb.getEnd(),
+            const yb = Rb + kb.trimEnd().length,
+              Zb = jb && Xb.getEnd() === yb;
+            return jb && !Zb && Bb.push({
+              from: Xb.getEnd(),
+              to: Xb.getEnd(),
               text: ","
-            }), Ib.push({
-              from: eb,
-              to: Xb,
-              text: `${Cb?",":""}\n${fb.join("\n")}\n`
+            }), Bb.push({
+              from: yb,
+              to: Pb,
+              text: `${Zb?",":""}\n${vb.join("\n")}\n`
             }), {
-              edits: Ib,
-              settings: Hb
+              edits: Bb,
+              settings: eb
             }
-          }(bb, Ub.file, kb, cb, Ib.file, sb, Tb);
-          nb.push(...Wb.edits), eb = Wb.settings
-        } else if (sb) {
-          if (Xb.has("CONFIG")) return null;
-          const kb = function(bb, cb) {
-              const sb = cb.statements[0];
-              return sb ? hs(bb, sb.getStart(cb)) : bb.length
-            }(bb, Ub.file),
-            Wb = kb > 0 && "\n" !== bb[kb - 1] ? "\n" : "";
-          nb.push({
-            from: kb,
-            to: kb,
-            text: `${Wb}${cb.slice(Cb.from,Cb.to)}\n\n`
-          }), eb = sb.properties.flatMap((bb => {
-            const cb = Ys(bb);
-            return null === cb ? [] : [cb]
+          }(bb, Yb.file, Ab, ab, Bb.file, Ub, Eb);
+          Xb.push(...Mb.edits), yb = Mb.settings
+        } else if (Ub) {
+          if (Pb.has("CONFIG")) return null;
+          const Ab = function(bb, ab) {
+              const Ub = ab.statements[0];
+              return Ub ? mU(bb, Ub.getStart(ab)) : bb.length
+            }(bb, Yb.file),
+            Mb = Ab > 0 && "\n" !== bb[Ab - 1] ? "\n" : "";
+          Xb.push({
+            from: Ab,
+            to: Ab,
+            text: `${Mb}${ab.slice(Zb.from,Zb.to)}\n\n`
+          }), yb = Ub.properties.flatMap((bb => {
+            const ab = fU(bb);
+            return null === ab ? [] : [ab]
           }))
         }
       }
-      const Vb = [],
-        Lb = (bb, sb) => {
-          const kb = Vb[Vb.length - 1],
-            Wb = void 0 !== kb && kb >= 0 && kb === sb - 1 && !/\n[^\S\n]*\n/.test(cb.slice(fb[kb].to, fb[sb].from)) ? "\n" : "\n\n";
-          mb.push(0 === mb.length ? bb : `${Wb}${bb}`), Vb.push(sb)
+      const zb = [],
+        xb = (bb, Ub) => {
+          const Ab = zb[zb.length - 1],
+            Mb = void 0 !== Ab && Ab >= 0 && Ab === Ub - 1 && !/\n[^\S\n]*\n/.test(ab.slice(vb[Ab].to, vb[Ub].from)) ? "\n" : "\n\n";
+          jb.push(0 === jb.length ? bb : `${Mb}${bb}`), zb.push(Ub)
         };
-      for (const [Yb, hb] of fb.entries()) {
-        if ("config" === hb.kind) continue;
-        const kb = cb.slice(hb.from, hb.to);
-        if ("callback" === hb.kind) {
-          const cb = hb.names[0],
-            ab = Ds(Hb, cb);
-          if (!ab && Mb.has(cb)) {
-            if (!0 === sb.chainCallbacks) continue;
+      for (const [fb, mb] of vb.entries()) {
+        if ("config" === mb.kind) continue;
+        const Ab = ab.slice(mb.from, mb.to);
+        if ("callback" === mb.kind) {
+          const ab = mb.names[0],
+            Tb = dU(eb, ab);
+          if (!Tb && Lb.has(ab)) {
+            if (!0 === Ub.chainCallbacks) continue;
             return null
           }
-          if (!ab && !0 !== sb.chainCallbacks) {
-            Xb.has(cb) || (Lb(kb, Yb), lb.push(cb), Xb.add(cb));
+          if (!Tb && !0 !== Ub.chainCallbacks) {
+            Pb.has(ab) || (xb(Ab, fb), Rb.push(ab), Pb.add(ab));
             continue
           }
-          const Tb = `${Ps(Wb)}${ys(cb)}`,
-            fb = es(hb.node);
-          if (null === fb || void 0 === fb || !fb.nameNode) continue;
-          if (!Xb.has(Tb)) {
-            const bb = fb.nameNode.getStart(Ib.file) - hb.from,
-              cb = fb.nameNode.getEnd() - hb.from;
-            Lb(kb.slice(0, bb) + Tb + kb.slice(cb), Yb), lb.push(Tb), Xb.add(Tb)
+          const Eb = `${IU(Mb)}${HU(ab)}`,
+            vb = yU(mb.node);
+          if (null === vb || void 0 === vb || !vb.nameNode) continue;
+          if (!Pb.has(Eb)) {
+            const bb = vb.nameNode.getStart(Bb.file) - mb.from,
+              ab = vb.nameNode.getEnd() - mb.from;
+            xb(Ab.slice(0, bb) + Eb + Ab.slice(ab), fb), Rb.push(Eb), Pb.add(Eb)
           }
-          const mb = Es(fb.Nm).map(((bb, cb) => null !== bb && void 0 !== bb ? bb : `arg${cb}`));
-          if (!ab) {
-            const bb = `${Tb}(${mb.join(", ")})`,
-              sb = `${Ps(Wb)}Result`;
-            Lb(`function ${cb}(${mb.join(", ")}) {\n\t${ns.has(cb)?bb:`const ${sb} = ${bb}\n\treturn ${sb}`}\n}`, -1), lb.push(cb), Xb.add(cb);
+          const jb = FU(vb.uX).map(((bb, ab) => null !== bb && void 0 !== bb ? bb : `arg${ab}`));
+          if (!Tb) {
+            const bb = `${Eb}(${jb.join(", ")})`,
+              Ub = `${IU(Mb)}Result`;
+            xb(`function ${ab}(${jb.join(", ")}) {\n\t${XU.has(ab)?bb:`const ${Ub} = ${bb}\n\treturn ${Ub}`}\n}`, -1), Rb.push(ab), Pb.add(ab);
             continue
           }
-          Zs(ab.Nm, Ub.file, Tb) || (nb.push(...is(bb, Ub.file, ab, cb, Tb, mb, Wb, !0 === sb.runsLast)), Qb.push(cb));
+          uU(Tb.uX, Yb.file, Eb) || (Xb.push(...hU(bb, Yb.file, Tb, ab, Eb, jb, Mb, !0 === Ub.runsLast)), kb.push(ab));
           continue
         }
-        const ab = hb.names.filter((bb => !Xb.has(bb)));
-        if ("other" === hb.kind || hb.names.length > 0 && ab.length === hb.names.length) {
-          Lb(kb, Yb), lb.push(...ab);
-          for (const bb of ab) Xb.add(bb)
+        const Tb = mb.names.filter((bb => !Pb.has(bb)));
+        if ("other" === mb.kind || mb.names.length > 0 && Tb.length === mb.names.length) {
+          xb(Ab, fb), Rb.push(...Tb);
+          for (const bb of Tb) Pb.add(bb)
         }
       }
-      let ub = ts(bb, nb);
-      if (mb.length > 0) {
-        const bb = ub.replace(/\s*$/, "");
-        ub = `${""===bb?"":`${bb}\n\n`}${ab?`${ab}\n`:""}${mb.join("")}\n`
+      let ib = WU(bb, Xb);
+      if (jb.length > 0) {
+        const bb = ib.replace(/\s*$/, "");
+        ib = `${""===bb?"":`${bb}\n\n`}${Tb?`${Tb}\n`:""}${jb.join("")}\n`
       }
-      return ls(ub).hasErrors ? null : {
-        text: ub,
-        added: lb,
-        chained: Qb,
-        settings: eb
+      return RU(ib).hasErrors ? null : {
+        text: ib,
+        added: Rb,
+        chained: kb,
+        settings: yb
       }
     }
 
-    function qs(bb) {
+    function KU(bb) {
       const {
-        file: cb
-      } = ls(bb);
-      return new Set(us(bb, cb).flatMap((bb => bb.names)))
+        file: ab
+      } = RU(bb);
+      return new Set(iU(bb, ab).flatMap((bb => bb.names)))
     }
 
-    function ds(bb) {
+    function oU(bb) {
       const {
-        file: cb
-      } = ls(bb), sb = new Set, kb = bb => {
-        hb().isCallExpression(bb) && hb().isIdentifier(bb.expression) && sb.add(bb.expression.text), hb().forEachChild(bb, kb)
+        file: ab
+      } = RU(bb), Ub = new Set, Ab = bb => {
+        mb().isCallExpression(bb) && mb().isIdentifier(bb.expression) && Ub.add(bb.expression.text), mb().forEachChild(bb, Ab)
       };
-      return kb(cb), sb
+      return Ab(ab), Ub
     }
 
-    function As(bb) {
-      return !ls(bb).hasErrors
+    function lU(bb) {
+      return !RU(bb).hasErrors
     }
 
-    function ws(bb, cb) {
-      return hb().isCallExpression(bb) && hb().isPropertyAccessExpression(bb.expression) && "api" === bb.expression.expression.getText(cb)
+    function tU(bb, ab) {
+      return mb().isCallExpression(bb) && mb().isPropertyAccessExpression(bb.expression) && "api" === bb.expression.expression.getText(ab)
     }
 
-    function rs(bb, cb) {
-      var sb;
-      const kb = bb.getPropertiesOfType(bb.getNonNullableType(cb)),
-        Wb = null !== (sb = kb.find((bb => "color" === bb.name))) && void 0 !== sb ? sb : kb[0];
-      if (!Wb) return;
-      const ab = bb.typeToString(bb.getNonNullableType(bb.getTypeOfSymbol(Wb))),
-        Tb = "color" === Wb.name ? '"red"' : ab.includes("number") ? "1" : "boolean" === ab ? "true" : '"..."';
-      return `{ ${Wb.name}: ${Tb} }`
+    function wU(bb, ab) {
+      var Ub;
+      const Ab = bb.getPropertiesOfType(bb.getNonNullableType(ab)),
+        Mb = null !== (Ub = Ab.find((bb => "color" === bb.name))) && void 0 !== Ub ? Ub : Ab[0];
+      if (!Mb) return;
+      const Tb = bb.typeToString(bb.getNonNullableType(bb.getTypeOfSymbol(Mb))),
+        Eb = "color" === Mb.name ? '"red"' : Tb.includes("number") ? "1" : "boolean" === Tb ? "true" : '"..."';
+      return `{ ${Mb.name}: ${Eb} }`
     }
 
-    function os(bb) {
-      return bb.isUnion() ? bb.types.every((bb => 0 !== (bb.flags & hb().TypeFlags.Object))) : 0 !== (bb.flags & hb().TypeFlags.Object)
+    function sU(bb) {
+      return bb.isUnion() ? bb.types.every((bb => 0 !== (bb.flags & mb().TypeFlags.Object))) : 0 !== (bb.flags & mb().TypeFlags.Object)
     }
 
-    function Ss(bb, cb) {
-      let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-      const kb = bb.getNonNullableType(cb);
-      if (kb.isUnion()) {
-        const cb = [...new Set(kb.types.map((cb => Ss(bb, cb, sb))))];
-        return cb.length > 7 ? `${cb.slice(0,7).join(" or ")} or ...` : cb.join(" or ")
+    function gU(bb, ab) {
+      let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      const Ab = bb.getNonNullableType(ab);
+      if (Ab.isUnion()) {
+        const ab = [...new Set(Ab.types.map((ab => gU(bb, ab, Ub))))];
+        return ab.length > 7 ? `${ab.slice(0,7).join(" or ")} or ...` : ab.join(" or ")
       }
-      if (kb.isStringLiteral()) return `"${kb.value}"`;
-      if (kb.isNumberLiteral()) return `${kb.value}`;
-      if (kb.flags & hb().TypeFlags.StringLike) return "text";
-      if (kb.flags & hb().TypeFlags.NumberLike) return "a number";
-      if (kb.flags & hb().TypeFlags.BooleanLike) return "true or false";
-      if (bb.isTupleType(kb)) {
-        return `[${bb.getTypeArguments(kb).map((cb=>Ss(bb,cb,sb+1))).join(", ")}]`
+      if (Ab.isStringLiteral()) return `"${Ab.value}"`;
+      if (Ab.isNumberLiteral()) return `${Ab.value}`;
+      if (Ab.flags & mb().TypeFlags.StringLike) return "text";
+      if (Ab.flags & mb().TypeFlags.NumberLike) return "a number";
+      if (Ab.flags & mb().TypeFlags.BooleanLike) return "true or false";
+      if (bb.isTupleType(Ab)) {
+        return `[${bb.getTypeArguments(Ab).map((ab=>gU(bb,ab,Ub+1))).join(", ")}]`
       }
-      if (bb.isArrayType(kb)) {
-        if (sb > 1) return "a list";
-        const cb = Ss(bb, bb.getTypeArguments(kb)[0], sb + 1);
-        return `a list of ${cb.includes(" or ")?`(${cb})`:cb}`
+      if (bb.isArrayType(Ab)) {
+        if (Ub > 1) return "a list";
+        const ab = gU(bb, bb.getTypeArguments(Ab)[0], Ub + 1);
+        return `a list of ${ab.includes(" or ")?`(${ab})`:ab}`
       }
-      if (kb.getCallSignatures().length > 0) return "a function";
-      const Wb = bb.getPropertiesOfType(kb);
-      if (0 === Wb.length || sb > 1) return "{ ... }";
-      return `{ ${Wb.slice(0,10).map((bb=>`${bb.name}${bb.flags&hb().SymbolFlags.Optional?"?":""}`)).join(", ")}${Wb.length>10?", ...":""} }`
+      if (Ab.getCallSignatures().length > 0) return "a function";
+      const Mb = bb.getPropertiesOfType(Ab);
+      if (0 === Mb.length || Ub > 1) return "{ ... }";
+      return `{ ${Mb.slice(0,10).map((bb=>`${bb.name}${bb.flags&mb().SymbolFlags.Optional?"?":""}`)).join(", ")}${Mb.length>10?", ...":""} }`
     }
 
-    function Rs(bb, cb, sb) {
-      const kb = (cb, sb) => bb.isTypeAssignableTo(cb, sb) || Rs(bb, cb, sb),
-        Wb = cb => bb.getTypeArguments(cb)[0];
-      if ("string | number" === bb.typeToString(cb)) return !0;
-      if (cb.isUnion() && !(cb.flags & hb().TypeFlags.Boolean)) return cb.types.every((bb => kb(bb, sb)));
-      const ab = bb.getNonNullableType(sb);
-      return (ab.isUnion() ? ab.types : [ab]).some((sb => bb.isTupleType(sb) ? bb.isArrayType(cb) && bb.getTypeArguments(sb).every((bb => kb(Wb(cb), bb))) : bb.isArrayType(sb) ? bb.isArrayType(cb) && kb(Wb(cb), Wb(sb)) : sb.flags & (hb().TypeFlags.Object | hb().TypeFlags.Intersection) && 0 === sb.getCallSignatures().length ? !!(cb.flags & (hb().TypeFlags.Object | hb().TypeFlags.Intersection)) && !bb.isArrayType(cb) && !bb.isTupleType(cb) && bb.getPropertiesOfType(sb).every((bb => 0 !== (bb.flags & hb().SymbolFlags.Optional) || void 0 !== cb.getProperty(bb.name))) && bb.getPropertiesOfType(cb).every((cb => {
-        var Wb;
-        if (bb.getTypeOfSymbol(cb).flags & hb().TypeFlags.Undefined) return !0;
-        const ab = sb.getProperty(cb.name),
-          Tb = ab ? bb.getTypeOfSymbol(ab) : null === (Wb = bb.getIndexInfoOfType(sb, hb().IndexKind.String)) || void 0 === Wb ? void 0 : Wb.type;
-        return void 0 !== Tb && kb(bb.getTypeOfSymbol(cb), Tb)
-      })) : sb.isNumberLiteral() && cb.flags === hb().TypeFlags.Number || sb.isStringLiteral() && cb.flags === hb().TypeFlags.String))
+    function CU(bb, ab, Ub) {
+      const Ab = (ab, Ub) => bb.isTypeAssignableTo(ab, Ub) || CU(bb, ab, Ub),
+        Mb = ab => bb.getTypeArguments(ab)[0];
+      if ("string | number" === bb.typeToString(ab)) return !0;
+      if (ab.isUnion() && !(ab.flags & mb().TypeFlags.Boolean)) return ab.types.every((bb => Ab(bb, Ub)));
+      const Tb = bb.getNonNullableType(Ub);
+      return (Tb.isUnion() ? Tb.types : [Tb]).some((Ub => bb.isTupleType(Ub) ? bb.isArrayType(ab) && bb.getTypeArguments(Ub).every((bb => Ab(Mb(ab), bb))) : bb.isArrayType(Ub) ? bb.isArrayType(ab) && Ab(Mb(ab), Mb(Ub)) : Ub.flags & (mb().TypeFlags.Object | mb().TypeFlags.Intersection) && 0 === Ub.getCallSignatures().length ? !!(ab.flags & (mb().TypeFlags.Object | mb().TypeFlags.Intersection)) && !bb.isArrayType(ab) && !bb.isTupleType(ab) && bb.getPropertiesOfType(Ub).every((bb => 0 !== (bb.flags & mb().SymbolFlags.Optional) || void 0 !== ab.getProperty(bb.name))) && bb.getPropertiesOfType(ab).every((ab => {
+        var Mb;
+        if (bb.getTypeOfSymbol(ab).flags & mb().TypeFlags.Undefined) return !0;
+        const Tb = Ub.getProperty(ab.name),
+          Eb = Tb ? bb.getTypeOfSymbol(Tb) : null === (Mb = bb.getIndexInfoOfType(Ub, mb().IndexKind.String)) || void 0 === Mb ? void 0 : Mb.type;
+        return void 0 !== Eb && Ab(bb.getTypeOfSymbol(ab), Eb)
+      })) : Ub.isNumberLiteral() && ab.flags === mb().TypeFlags.Number || Ub.isStringLiteral() && ab.flags === mb().TypeFlags.String))
     }
 
-    function vs(bb, cb) {
-      return hb().isTypeReferenceNode(bb) && hb().isIdentifier(bb.typeName) && cb.has(bb.typeName.text) || !!hb().forEachChild(bb, (bb => vs(bb, cb) || void 0))
+    function VU(bb, ab) {
+      return mb().isTypeReferenceNode(bb) && mb().isIdentifier(bb.typeName) && ab.has(bb.typeName.text) || !!mb().forEachChild(bb, (bb => VU(bb, ab) || void 0))
     }
 
-    function Fs(bb, cb) {
-      const sb = new Set,
-        kb = Wb => {
-          if (ws(Wb, bb)) {
-            var ab, Tb, Ub;
-            const kb = cb.getResolvedSignature(Wb),
-              Ib = null !== (ab = null === kb || void 0 === kb ? void 0 : kb.getParameters()) && void 0 !== ab ? ab : [],
-              Hb = new Set((null !== (Tb = null === kb || void 0 === kb || null === (Ub = kb.getDeclaration()) || void 0 === Ub ? void 0 : Ub.typeParameters) && void 0 !== Tb ? Tb : []).map((bb => bb.name.text)));
-            Wb.arguments.forEach(((cb, kb) => {
-              var ab;
-              const Tb = null === (ab = Ib[kb]) || void 0 === ab ? void 0 : ab.valueDeclaration,
-                Ub = Tb && hb().isParameter(Tb) ? Tb.type : void 0;
-              if (cb.kind === hb().SyntaxKind.NullKeyword && Ub && !vs(Ub, Hb) && !/\b(?:null|any|unknown)\b/.test(Ub.getText())) {
-                const cb = kb === Wb.arguments.length - 1;
-                sb.add(`${Wb.expression.getText(bb)} can't take null as ${Ib[kb].name}: ${cb?"leave it out":"give undefined instead"}, or it throws when that line runs.`)
+    function OU(bb, ab) {
+      const Ub = new Set,
+        Ab = Mb => {
+          if (tU(Mb, bb)) {
+            var Tb, Eb, Yb;
+            const Ab = ab.getResolvedSignature(Mb),
+              Bb = null !== (Tb = null === Ab || void 0 === Ab ? void 0 : Ab.getParameters()) && void 0 !== Tb ? Tb : [],
+              eb = new Set((null !== (Eb = null === Ab || void 0 === Ab || null === (Yb = Ab.getDeclaration()) || void 0 === Yb ? void 0 : Yb.typeParameters) && void 0 !== Eb ? Eb : []).map((bb => bb.name.text)));
+            Mb.arguments.forEach(((ab, Ab) => {
+              var Tb;
+              const Eb = null === (Tb = Bb[Ab]) || void 0 === Tb ? void 0 : Tb.valueDeclaration,
+                Yb = Eb && mb().isParameter(Eb) ? Eb.type : void 0;
+              if (ab.kind === mb().SyntaxKind.NullKeyword && Yb && !VU(Yb, eb) && !/\b(?:null|any|unknown)\b/.test(Yb.getText())) {
+                const ab = Ab === Mb.arguments.length - 1;
+                Ub.add(`${Mb.expression.getText(bb)} can't take null as ${Bb[Ab].name}: ${ab?"leave it out":"give undefined instead"}, or it throws when that line runs.`)
               }
             }))
           }
-          hb().forEachChild(Wb, kb)
+          mb().forEachChild(Mb, Ab)
         };
-      return kb(bb), [...sb]
+      return Ab(bb), [...Ub]
     }
 
-    function xs(bb) {
-      return ls(bb).file
+    function cU(bb) {
+      return RU(bb).file
     }
 
-    function ps(bb) {
+    function JU(bb) {
       return {
         from: bb.getFullStart(),
         to: bb.getEnd()
       }
     }
 
-    function bk(bb) {
+    function nU(bb) {
       if (!/\buse_?prefab\s*\(/i.test(bb)) return {
         code: bb,
         calls: []
       };
-      const cb = xs(bb),
-        sb = function(bb) {
-          const cb = new Map;
-          for (const sb of bb.statements)
-            if (hb().isVariableStatement(sb))
-              for (const bb of sb.declarationList.declarations)
-                if (hb().isIdentifier(bb.name) && "CONFIG" === bb.name.text && bb.initializer && hb().isObjectLiteralExpression(bb.initializer))
-                  for (const sb of bb.initializer.properties) hb().isPropertyAssignment(sb) && (hb().isIdentifier(sb.name) || hb().isStringLiteral(sb.name)) && cb.set(sb.name.text, sb.initializer.getText());
-          return cb
-        }(cb),
-        kb = [],
-        Wb = [],
-        ab = bb => {
-          var cb;
-          return hb().isPropertyAccessExpression(bb) && hb().isIdentifier(bb.expression) && "CONFIG" === bb.expression.text && null !== (cb = sb.get(bb.name.text)) && void 0 !== cb ? cb : bb.getText()
+      const ab = cU(bb),
+        Ub = function(bb) {
+          const ab = new Map;
+          for (const Ub of bb.statements)
+            if (mb().isVariableStatement(Ub))
+              for (const bb of Ub.declarationList.declarations)
+                if (mb().isIdentifier(bb.name) && "CONFIG" === bb.name.text && bb.initializer && mb().isObjectLiteralExpression(bb.initializer))
+                  for (const Ub of bb.initializer.properties) mb().isPropertyAssignment(Ub) && (mb().isIdentifier(Ub.name) || mb().isStringLiteral(Ub.name)) && ab.set(Ub.name.text, Ub.initializer.getText());
+          return ab
+        }(ab),
+        Ab = [],
+        Mb = [],
+        Tb = bb => {
+          var ab;
+          return mb().isPropertyAccessExpression(bb) && mb().isIdentifier(bb.expression) && "CONFIG" === bb.expression.text && null !== (ab = Ub.get(bb.name.text)) && void 0 !== ab ? ab : bb.getText()
         },
-        Tb = bb => bb && (hb().isStringLiteral(bb) || hb().isNoSubstitutionTemplateLiteral(bb)) ? bb.text : bb && hb().isObjectLiteralExpression(bb) ? bb.properties.flatMap((bb => hb().isPropertyAssignment(bb) && (hb().isIdentifier(bb.name) || hb().isStringLiteral(bb.name)) ? [`${bb.name.text}: ${ab(bb.initializer)}`] : hb().isShorthandPropertyAssignment(bb) && sb.has(bb.name.text) ? [`${bb.name.text}: ${sb.get(bb.name.text)}`] : [])).join("\n") : "";
-      for (const Ub of cb.statements) {
-        const bb = hb().isExpressionStatement(Ub) ? Ub.expression : null;
-        if (!bb || !hb().isCallExpression(bb) || !hb().isIdentifier(bb.expression) || !/^use_?prefab$/i.test(bb.expression.text)) continue;
-        const [cb, sb] = bb.arguments;
-        if (cb && (hb().isStringLiteral(cb) || hb().isNoSubstitutionTemplateLiteral(cb))) kb.push({
-          name: cb.text,
-          settings: Tb(sb)
+        Eb = bb => bb && (mb().isStringLiteral(bb) || mb().isNoSubstitutionTemplateLiteral(bb)) ? bb.text : bb && mb().isObjectLiteralExpression(bb) ? bb.properties.flatMap((bb => mb().isPropertyAssignment(bb) && (mb().isIdentifier(bb.name) || mb().isStringLiteral(bb.name)) ? [`${bb.name.text}: ${Tb(bb.initializer)}`] : mb().isShorthandPropertyAssignment(bb) && Ub.has(bb.name.text) ? [`${bb.name.text}: ${Ub.get(bb.name.text)}`] : [])).join("\n") : "";
+      for (const Yb of ab.statements) {
+        const bb = mb().isExpressionStatement(Yb) ? Yb.expression : null;
+        if (!bb || !mb().isCallExpression(bb) || !mb().isIdentifier(bb.expression) || !/^use_?prefab$/i.test(bb.expression.text)) continue;
+        const [ab, Ub] = bb.arguments;
+        if (ab && (mb().isStringLiteral(ab) || mb().isNoSubstitutionTemplateLiteral(ab))) Ab.push({
+          name: ab.text,
+          settings: Eb(Ub)
         });
         else {
-          if (!cb || !hb().isObjectLiteralExpression(cb)) continue;
+          if (!ab || !mb().isObjectLiteralExpression(ab)) continue;
           {
             const bb = bb => {
-                var sb;
-                return null === (sb = cb.properties.find((cb => hb().isPropertyAssignment(cb) && hb().isIdentifier(cb.name) && cb.name.text === bb))) || void 0 === sb ? void 0 : sb.initializer
+                var Ub;
+                return null === (Ub = ab.properties.find((ab => mb().isPropertyAssignment(ab) && mb().isIdentifier(ab.name) && ab.name.text === bb))) || void 0 === Ub ? void 0 : Ub.initializer
               },
-              sb = bb("name");
-            sb && hb().isStringLiteral(sb) && kb.push({
-              name: sb.text,
-              settings: Tb(bb("settings"))
+              Ub = bb("name");
+            Ub && mb().isStringLiteral(Ub) && Ab.push({
+              name: Ub.text,
+              settings: Eb(bb("settings"))
             })
           }
         }
-        Wb.push({
-          ...ps(Ub),
+        Mb.push({
+          ...JU(Yb),
           text: ""
         })
       }
       return {
-        code: ts(bb, Wb),
-        calls: kb
+        code: WU(bb, Mb),
+        calls: Ab
       }
     }
 
-    function ck(bb) {
+    function SU(bb) {
       if (!/=\s*(?:on[A-Z]\w*|tick|playerCommand)\b/.test(bb)) return bb;
-      const cb = xs(bb),
-        sb = new Set(cb.statements.flatMap((bb => hb().isFunctionDeclaration(bb) && bb.name ? [bb.name.text] : []))),
-        kb = [];
-      for (const Wb of cb.statements)
-        if (hb().isExpressionStatement(Wb) && hb().isBinaryExpression(Wb.expression) && Wb.expression.operatorToken.kind === hb().SyntaxKind.EqualsToken && hb().isIdentifier(Wb.expression.left) && sb.add(Wb.expression.left.text), hb().isVariableStatement(Wb))
-          for (const bb of Wb.declarationList.declarations) {
-            const cb = bb.initializer;
-            cb && hb().isIdentifier(cb) && Xs(cb.text) && !sb.has(cb.text) && kb.push({
-              from: cb.getStart(),
-              to: cb.getEnd(),
+      const ab = cU(bb),
+        Ub = new Set(ab.statements.flatMap((bb => mb().isFunctionDeclaration(bb) && bb.name ? [bb.name.text] : []))),
+        Ab = [];
+      for (const Mb of ab.statements)
+        if (mb().isExpressionStatement(Mb) && mb().isBinaryExpression(Mb.expression) && Mb.expression.operatorToken.kind === mb().SyntaxKind.EqualsToken && mb().isIdentifier(Mb.expression.left) && Ub.add(Mb.expression.left.text), mb().isVariableStatement(Mb))
+          for (const bb of Mb.declarationList.declarations) {
+            const ab = bb.initializer;
+            ab && mb().isIdentifier(ab) && PU(ab.text) && !Ub.has(ab.text) && Ab.push({
+              from: ab.getStart(),
+              to: ab.getEnd(),
               text: "function () {}"
-            }), cb && hb().isIdentifier(bb.name) && sb.add(bb.name.text)
+            }), ab && mb().isIdentifier(bb.name) && Ub.add(bb.name.text)
           }
-      return ts(bb, kb)
+      return WU(bb, Ab)
     }
 
-    function sk(bb, cb) {
+    function bA(bb, ab) {
       if (!bb.includes("api.setBlockRect(")) return bb;
-      const sb = xs(bb);
-      if (sb.statements.some((bb => {
-          var cb;
-          return hb().isFunctionDeclaration(bb) && "fillBox" === (null === (cb = bb.name) || void 0 === cb ? void 0 : cb.text) && 3 !== bb.parameters.length
-        }))) return bb;
-      const kb = [],
-        Wb = bb => {
+      const Ub = cU(bb);
+      if (Ub.statements.some((bb => {
           var ab;
-          hb().isFunctionDeclaration(bb) && "fillBox" === (null === (ab = bb.name) || void 0 === ab ? void 0 : ab.text) || (ws(bb, sb) && "setBlockRect" === bb.expression.name.text && 3 === bb.arguments.length && !cb.includes(bb.getText()) && kb.push({
+          return mb().isFunctionDeclaration(bb) && "fillBox" === (null === (ab = bb.name) || void 0 === ab ? void 0 : ab.text) && 3 !== bb.parameters.length
+        }))) return bb;
+      const Ab = [],
+        Mb = bb => {
+          var Tb;
+          mb().isFunctionDeclaration(bb) && "fillBox" === (null === (Tb = bb.name) || void 0 === Tb ? void 0 : Tb.text) || (tU(bb, Ub) && "setBlockRect" === bb.expression.name.text && 3 === bb.arguments.length && !ab.includes(bb.getText()) && Ab.push({
             from: bb.expression.getStart(),
             to: bb.expression.getEnd(),
             text: "fillBox"
-          }), hb().forEachChild(bb, Wb))
+          }), mb().forEachChild(bb, Mb))
         };
-      return Wb(sb), ts(bb, kb)
+      return Mb(Ub), WU(bb, Ab)
     }
-    const kk = [{
+    const aA = [{
         name: "parkour",
         kind: "game",
         title: "Parkour / obby",
@@ -4416,7 +4416,7 @@ export const modules = {
         }],
         setup: "Put your own Bloxd name in admins to get the admin commands, and set spawnPosition to where players should start."
       }],
-      Wk = [{
+      UA = [{
         group: "timers",
         code: "// Ready-made timers: runLater(seconds, fn) runs fn once after some seconds, repeatEvery(seconds, fn) runs it every\n// few seconds, and cancelTimer(id) stops either. Time is counted in tick. The list is a var made on first use, so\n// they can be called from the top of the file, above this code.\nvar timerList\nvar nextTimerId\n\nfunction runLater(seconds, fn) {\n\treturn addToTimerList(seconds, 0, fn)\n}\n\nfunction repeatEvery(seconds, fn) {\n\treturn addToTimerList(seconds, Math.max(50, seconds * 1000), fn)\n}\n\nfunction addToTimerList(seconds, everyMs, fn) {\n\tif (!timerList) {\n\t\ttimerList = []\n\t\tnextTimerId = 1\n\t}\n\tconst id = nextTimerId++\n\ttimerList.push({ id: id, msLeft: seconds * 1000, everyMs: everyMs, fn: fn })\n\treturn id\n}\n\nfunction cancelTimer(id) {\n\tconst index = timerList ? timerList.findIndex((timer) => timer.id === id) : -1\n\tif (index !== -1) {\n\t\ttimerList.splice(index, 1)\n\t}\n}\n\nfunction tick(ms) {\n\tif (!timerList) {\n\t\treturn\n\t}\n\tfor (const timer of timerList.slice()) {\n\t\tif (!timerList.includes(timer)) {\n\t\t\tcontinue\n\t\t}\n\t\ttimer.msLeft -= ms\n\t\tif (timer.msLeft > 0) {\n\t\t\tcontinue\n\t\t}\n\t\tif (timer.everyMs > 0) {\n\t\t\ttimer.msLeft += timer.everyMs\n\t\t} else {\n\t\t\tcancelTimer(timer.id)\n\t\t}\n\t\ttimer.fn()\n\t}\n}",
         helpers: [{
@@ -5003,8 +5003,8 @@ export const modules = {
           about: "Stops a risingLava (the handle it returned). With clear true it also takes away the blocks it placed, and only those, e.g. for the next round. Returns nothing.",
           example: "stopLava(lava, true)"
         }]
-      }].flatMap((bb => bb.helpers.map((cb => ({
-        ...cb,
+      }].flatMap((bb => bb.helpers.map((ab => ({
+        ...ab,
         group: bb.group,
         code: bb.code,
         ...bb.uses ? {
@@ -5012,171 +5012,171 @@ export const modules = {
         } : {}
       })))));
 
-    function ak(bb) {
+    function AA(bb) {
       const {
-        file: cb,
-        hasErrors: sb
-      } = ls(`(${bb})`), kb = cb.statements[0];
-      if (sb || 1 !== cb.statements.length || !kb || !hb().isExpressionStatement(kb)) return null;
-      const Wb = kb.expression;
-      return hb().isParenthesizedExpression(Wb) ? Wb.expression : Wb
+        file: ab,
+        hasErrors: Ub
+      } = RU(`(${bb})`), Ab = ab.statements[0];
+      if (Ub || 1 !== ab.statements.length || !Ab || !mb().isExpressionStatement(Ab)) return null;
+      const Mb = Ab.expression;
+      return mb().isParenthesizedExpression(Mb) ? Mb.expression : Mb
     }
 
-    function Tk(bb) {
-      return !!(hb().isNumericLiteral(bb) || hb().isStringLiteral(bb) || hb().isNoSubstitutionTemplateLiteral(bb)) || (bb.kind === hb().SyntaxKind.TrueKeyword || bb.kind === hb().SyntaxKind.FalseKeyword || bb.kind === hb().SyntaxKind.NullKeyword || (!hb().isPrefixUnaryExpression(bb) || bb.operator !== hb().SyntaxKind.MinusToken && bb.operator !== hb().SyntaxKind.PlusToken ? hb().isArrayLiteralExpression(bb) ? bb.elements.every((bb => Tk(bb))) : !!hb().isObjectLiteralExpression(bb) && bb.properties.every((bb => hb().isPropertyAssignment(bb) && (hb().isIdentifier(bb.name) || hb().isStringLiteral(bb.name)) && Tk(bb.initializer))) : hb().isNumericLiteral(bb.operand)))
+    function MA(bb) {
+      return !!(mb().isNumericLiteral(bb) || mb().isStringLiteral(bb) || mb().isNoSubstitutionTemplateLiteral(bb)) || (bb.kind === mb().SyntaxKind.TrueKeyword || bb.kind === mb().SyntaxKind.FalseKeyword || bb.kind === mb().SyntaxKind.NullKeyword || (!mb().isPrefixUnaryExpression(bb) || bb.operator !== mb().SyntaxKind.MinusToken && bb.operator !== mb().SyntaxKind.PlusToken ? mb().isArrayLiteralExpression(bb) ? bb.elements.every((bb => MA(bb))) : !!mb().isObjectLiteralExpression(bb) && bb.properties.every((bb => mb().isPropertyAssignment(bb) && (mb().isIdentifier(bb.name) || mb().isStringLiteral(bb.name)) && MA(bb.initializer))) : mb().isNumericLiteral(bb.operand)))
     }
 
-    function Uk(bb) {
-      return hb().isNumericLiteral(bb) || hb().isPrefixUnaryExpression(bb) && hb().isNumericLiteral(bb.operand)
+    function TA(bb) {
+      return mb().isNumericLiteral(bb) || mb().isPrefixUnaryExpression(bb) && mb().isNumericLiteral(bb.operand)
     }
 
-    function Ik(bb) {
-      return hb().isStringLiteral(bb) || hb().isNoSubstitutionTemplateLiteral(bb) ? bb.text : null
+    function EA(bb) {
+      return mb().isStringLiteral(bb) || mb().isNoSubstitutionTemplateLiteral(bb) ? bb.text : null
     }
-    const Hk = /"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'/g;
+    const YA = /"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'/g;
 
-    function fk(bb) {
-      const cb = bb.trim();
-      if ("" === cb) return [];
-      if (cb.startsWith("{")) try {
-        const bb = JSON.parse(cb);
+    function BA(bb) {
+      const ab = bb.trim();
+      if ("" === ab) return [];
+      if (ab.startsWith("{")) try {
+        const bb = JSON.parse(ab);
         if (bb && "object" === typeof bb && !Array.isArray(bb)) return Object.entries(bb).map((bb => {
-          let [cb, sb] = bb;
-          return [cb, JSON.stringify(sb)]
+          let [ab, Ub] = bb;
+          return [ab, JSON.stringify(Ub)]
         }))
       } catch {}
-      const sb = function(bb) {
-        const cb = ak(bb);
-        if (!cb || !hb().isObjectLiteralExpression(cb)) return null;
-        const sb = [];
-        for (const kb of cb.properties) {
-          if (!hb().isPropertyAssignment(kb) || !hb().isIdentifier(kb.name) && !hb().isStringLiteral(kb.name)) return null;
-          sb.push([kb.name.text, kb.initializer.getText()])
+      const Ub = function(bb) {
+        const ab = AA(bb);
+        if (!ab || !mb().isObjectLiteralExpression(ab)) return null;
+        const Ub = [];
+        for (const Ab of ab.properties) {
+          if (!mb().isPropertyAssignment(Ab) || !mb().isIdentifier(Ab.name) && !mb().isStringLiteral(Ab.name)) return null;
+          Ub.push([Ab.name.text, Ab.initializer.getText()])
         }
-        return sb
-      }(cb.startsWith("{") ? cb : `{${cb}}`);
-      if (sb) return sb;
-      const kb = [];
-      let Wb = null,
-        ab = 0;
-      const Tb = cb.startsWith("{") ? cb.replace(/^\{/, "").replace(/\}\s*$/, "") : cb;
-      for (const Mb of Tb.split("\n")) {
-        var Ub, Ib, Hb, fb;
-        const bb = /\/\//.exec(Mb.replace(Hk, (bb => " ".repeat(bb.length)))),
-          cb = (bb ? Mb.slice(0, bb.index) : Mb).trim();
-        if ("" === cb) continue;
-        if (Wb && ab > 0) Wb[1] += `\n${cb}`;
+        return Ub
+      }(ab.startsWith("{") ? ab : `{${ab}}`);
+      if (Ub) return Ub;
+      const Ab = [];
+      let Mb = null,
+        Tb = 0;
+      const Eb = ab.startsWith("{") ? ab.replace(/^\{/, "").replace(/\}\s*$/, "") : ab;
+      for (const Lb of Eb.split("\n")) {
+        var Yb, Bb, eb, vb;
+        const bb = /\/\//.exec(Lb.replace(YA, (bb => " ".repeat(bb.length)))),
+          ab = (bb ? Lb.slice(0, bb.index) : Lb).trim();
+        if ("" === ab) continue;
+        if (Mb && Tb > 0) Mb[1] += `\n${ab}`;
         else {
-          const bb = /^["']?([A-Za-z_$][\w$]*)["']?\s*[:=]\s*(.*)$/.exec(cb.replace(/^[-*\u2022]\s*/, ""));
+          const bb = /^["']?([A-Za-z_$][\w$]*)["']?\s*[:=]\s*(.*)$/.exec(ab.replace(/^[-*\u2022]\s*/, ""));
           if (!bb) continue;
-          Wb = [bb[1], bb[2]], kb.push(Wb)
+          Mb = [bb[1], bb[2]], Ab.push(Mb)
         }
-        const sb = cb.replace(Hk, "");
-        ab = Math.max(0, ab + (null !== (Ub = null === (Ib = sb.match(/[[{(]/g)) || void 0 === Ib ? void 0 : Ib.length) && void 0 !== Ub ? Ub : 0) - (null !== (Hb = null === (fb = sb.match(/[\]})]/g)) || void 0 === fb ? void 0 : fb.length) && void 0 !== Hb ? Hb : 0))
+        const Ub = ab.replace(YA, "");
+        Tb = Math.max(0, Tb + (null !== (Yb = null === (Bb = Ub.match(/[[{(]/g)) || void 0 === Bb ? void 0 : Bb.length) && void 0 !== Yb ? Yb : 0) - (null !== (eb = null === (vb = Ub.match(/[\]})]/g)) || void 0 === vb ? void 0 : vb.length) && void 0 !== eb ? eb : 0))
       }
-      return kb.map((bb => {
-        let [cb, sb] = bb;
-        return [cb, sb.trim().replace(/[,;]\s*$/, "")]
+      return Ab.map((bb => {
+        let [ab, Ub] = bb;
+        return [ab, Ub.trim().replace(/[,;]\s*$/, "")]
       }))
     }
 
-    function Mk(bb, cb, sb) {
-      const kb = "string" === bb.kind || "block" === bb.kind || "item" === bb.kind || "mob" === bb.kind;
-      let Wb = ak(cb),
-        ab = cb;
-      var Tb;
-      if (Wb && Tk(Wb) || !kb || (Tb = cb, ab = JSON.stringify(Tb.replace(/^["'`]|["'`]$/g, "")), Wb = ak(ab)), !Wb || !Tk(Wb)) return {
-        problem: `${bb.key} must be a plain value like ${bb.value}, not ${cb}`
+    function eA(bb, ab, Ub) {
+      const Ab = "string" === bb.kind || "block" === bb.kind || "item" === bb.kind || "mob" === bb.kind;
+      let Mb = AA(ab),
+        Tb = ab;
+      var Eb;
+      if (Mb && MA(Mb) || !Ab || (Eb = ab, Tb = JSON.stringify(Eb.replace(/^["'`]|["'`]$/g, "")), Mb = AA(Tb)), !Mb || !MA(Mb)) return {
+        problem: `${bb.key} must be a plain value like ${bb.value}, not ${ab}`
       };
-      if ("number" === bb.kind && !Uk(Wb)) return {
+      if ("number" === bb.kind && !TA(Mb)) return {
         problem: `${bb.key} must be a number, like ${bb.value}`
       };
-      if ("boolean" === bb.kind && Wb.kind !== hb().SyntaxKind.TrueKeyword && Wb.kind !== hb().SyntaxKind.FalseKeyword) return {
+      if ("boolean" === bb.kind && Mb.kind !== mb().SyntaxKind.TrueKeyword && Mb.kind !== mb().SyntaxKind.FalseKeyword) return {
         problem: `${bb.key} must be true or false`
       };
       if ("position" === bb.kind && ! function(bb) {
-          return hb().isArrayLiteralExpression(bb) && 3 === bb.elements.length && bb.elements.every(Uk)
-        }(Wb) && (Wb.kind !== hb().SyntaxKind.NullKeyword || "null" !== bb.value)) return {
+          return mb().isArrayLiteralExpression(bb) && 3 === bb.elements.length && bb.elements.every(TA)
+        }(Mb) && (Mb.kind !== mb().SyntaxKind.NullKeyword || "null" !== bb.value)) return {
         problem: `${bb.key} must be a position [x, y, z], like ${"null"===bb.value?"[0, 10, 0]":bb.value}`
       };
-      if ("list" === bb.kind && !hb().isArrayLiteralExpression(Wb)) return {
+      if ("list" === bb.kind && !mb().isArrayLiteralExpression(Mb)) return {
         problem: `${bb.key} must be a list in [ ], like ${bb.value}`
       };
-      if ("list" === bb.kind && bb.names && sb && hb().isArrayLiteralExpression(Wb)) return function(bb, cb, sb, kb) {
-        const Wb = bb => bb.elements.flatMap(((cb, kb) => {
-            if (hb().isArrayLiteralExpression(cb)) return Wb(cb);
-            if ("item" === sb && hb().isObjectLiteralExpression(cb)) return ab(cb);
-            const Tb = bb.elements[kb + 1],
-              Ub = void 0 !== Tb && hb().isArrayLiteralExpression(Tb);
-            return null === Ik(cb) || Ub ? [] : [cb]
+      if ("list" === bb.kind && bb.names && Ub && mb().isArrayLiteralExpression(Mb)) return function(bb, ab, Ub, Ab) {
+        const Mb = bb => bb.elements.flatMap(((ab, Ab) => {
+            if (mb().isArrayLiteralExpression(ab)) return Mb(ab);
+            if ("item" === Ub && mb().isObjectLiteralExpression(ab)) return Tb(ab);
+            const Eb = bb.elements[Ab + 1],
+              Yb = void 0 !== Eb && mb().isArrayLiteralExpression(Eb);
+            return null === EA(ab) || Yb ? [] : [ab]
           })),
-          ab = bb => bb.properties.flatMap((bb => {
-            if (!hb().isPropertyAssignment(bb) || !["item", "ammo", "projectile", "items"].includes(bb.name.getText().replace(/["']/g, ""))) return [];
-            const cb = bb.initializer;
-            return hb().isArrayLiteralExpression(cb) ? Wb(cb) : null !== Ik(cb) ? [cb] : []
+          Tb = bb => bb.properties.flatMap((bb => {
+            if (!mb().isPropertyAssignment(bb) || !["item", "ammo", "projectile", "items"].includes(bb.name.getText().replace(/["']/g, ""))) return [];
+            const ab = bb.initializer;
+            return mb().isArrayLiteralExpression(ab) ? Mb(ab) : null !== EA(ab) ? [ab] : []
           })),
-          Tb = Wb(cb),
-          Ub = cb.getStart();
-        let Ib = cb.getText();
-        const Hb = [],
-          fb = [],
-          Mb = new Map([...bb.value.matchAll(/\{ item: "([^"]+)"[^}]*?action: "(\w+)"/g)].map((bb => [bb[2], bb[1]]))),
-          Xb = bb => {
-            var cb;
-            const sb = bb.parent,
-              kb = null === sb || void 0 === sb ? void 0 : sb.parent;
-            if (!hb().isPropertyAssignment(sb) || "item" !== sb.name.getText().replace(/["']/g, "") || !kb || !hb().isObjectLiteralExpression(kb)) return;
-            const Wb = bb => kb.properties.find((cb => hb().isPropertyAssignment(cb) && cb.name.getText().replace(/["']/g, "") === bb)),
-              ab = Wb("action"),
-              Tb = ab ? Mb.get(null !== (cb = Ik(ab.initializer)) && void 0 !== cb ? cb : "") : void 0;
-            return Tb ? {
-              property: sb,
-              item: Tb,
-              named: void 0 !== Wb("name")
+          Eb = Mb(ab),
+          Yb = ab.getStart();
+        let Bb = ab.getText();
+        const eb = [],
+          vb = [],
+          Lb = new Map([...bb.value.matchAll(/\{ item: "([^"]+)"[^}]*?action: "(\w+)"/g)].map((bb => [bb[2], bb[1]]))),
+          Pb = bb => {
+            var ab;
+            const Ub = bb.parent,
+              Ab = null === Ub || void 0 === Ub ? void 0 : Ub.parent;
+            if (!mb().isPropertyAssignment(Ub) || "item" !== Ub.name.getText().replace(/["']/g, "") || !Ab || !mb().isObjectLiteralExpression(Ab)) return;
+            const Mb = bb => Ab.properties.find((ab => mb().isPropertyAssignment(ab) && ab.name.getText().replace(/["']/g, "") === bb)),
+              Tb = Mb("action"),
+              Eb = Tb ? Lb.get(null !== (ab = EA(Tb.initializer)) && void 0 !== ab ? ab : "") : void 0;
+            return Eb ? {
+              property: Ub,
+              item: Eb,
+              named: void 0 !== Mb("name")
             } : void 0
           };
-        for (const mb of [...Tb].reverse()) {
-          var nb;
-          const bb = null !== (nb = Ik(mb)) && void 0 !== nb ? nb : "",
-            cb = kb(sb, bb),
-            Wb = null === cb ? Xb(mb) : void 0;
-          if (Wb) {
-            const cb = Wb.named ? `item: ${JSON.stringify(Wb.item)}` : `item: ${JSON.stringify(Wb.item)}, name: ${JSON.stringify(bb)}`;
-            Hb.unshift(`"${bb}" isn't an item, so it is a ${Wb.item}${Wb.named?"":` named "${bb}"`}`), Ib = `${Ib.slice(0,Wb.property.getStart()-Ub)}${cb}${Ib.slice(Wb.property.getEnd()-Ub)}`
-          } else null === cb ? fb.unshift(`"${bb}"`) : cb !== bb && (Hb.unshift(`"${bb}" is "${cb}"`), Ib = `${Ib.slice(0,mb.getStart()-Ub)}${JSON.stringify(cb)}${Ib.slice(mb.getEnd()-Ub)}`)
+        for (const jb of [...Eb].reverse()) {
+          var Xb;
+          const bb = null !== (Xb = EA(jb)) && void 0 !== Xb ? Xb : "",
+            ab = Ab(Ub, bb),
+            Mb = null === ab ? Pb(jb) : void 0;
+          if (Mb) {
+            const ab = Mb.named ? `item: ${JSON.stringify(Mb.item)}` : `item: ${JSON.stringify(Mb.item)}, name: ${JSON.stringify(bb)}`;
+            eb.unshift(`"${bb}" isn't an item, so it is a ${Mb.item}${Mb.named?"":` named "${bb}"`}`), Bb = `${Bb.slice(0,Mb.property.getStart()-Yb)}${ab}${Bb.slice(Mb.property.getEnd()-Yb)}`
+          } else null === ab ? vb.unshift(`"${bb}"`) : ab !== bb && (eb.unshift(`"${bb}" is "${ab}"`), Bb = `${Bb.slice(0,jb.getStart()-Yb)}${JSON.stringify(ab)}${Bb.slice(jb.getEnd()-Yb)}`)
         }
-        if (fb.length > 0) return {
-          problem: `${fb.join(", ")} ${1===fb.length?"item"===sb?"isn't an":"isn't a":"aren't"} ${sb} name${1===fb.length?"":"s"}, so ${bb.key} kept ${bb.value}`
+        if (vb.length > 0) return {
+          problem: `${vb.join(", ")} ${1===vb.length?"item"===Ub?"isn't an":"isn't a":"aren't"} ${Ub} name${1===vb.length?"":"s"}, so ${bb.key} kept ${bb.value}`
         };
         return {
-          value: Ib,
-          ...Hb.length > 0 ? {
-            fixed: Hb.join(", ")
+          value: Bb,
+          ...eb.length > 0 ? {
+            fixed: eb.join(", ")
           } : {}
         }
-      }(bb, Wb, bb.names, sb);
-      if (kb) {
-        const cb = Ik(Wb);
-        if (null === cb) return {
+      }(bb, Mb, bb.names, Ub);
+      if (Ab) {
+        const ab = EA(Mb);
+        if (null === ab) return {
           problem: `${bb.key} must be text in quotes, like ${bb.value}`
         };
-        if (("block" === bb.kind || "item" === bb.kind || "mob" === bb.kind) && sb) {
-          const kb = sb(bb.kind, cb);
-          if (null === kb) return {
-            problem: `"${cb}" isn't ${"item"===bb.kind?"an":"a"} ${bb.kind} name, so ${bb.key} kept ${bb.value}`
+        if (("block" === bb.kind || "item" === bb.kind || "mob" === bb.kind) && Ub) {
+          const Ab = Ub(bb.kind, ab);
+          if (null === Ab) return {
+            problem: `"${ab}" isn't ${"item"===bb.kind?"an":"a"} ${bb.kind} name, so ${bb.key} kept ${bb.value}`
           };
-          if (kb !== cb) return {
-            value: JSON.stringify(kb),
-            fixed: `"${cb}" is "${kb}"`
+          if (Ab !== ab) return {
+            value: JSON.stringify(Ab),
+            fixed: `"${ab}" is "${Ab}"`
           }
         }
       }
       return {
-        value: Wb.getText()
+        value: Mb.getText()
       }
     }
-    const Xk = kk,
-      nk = new Map([
+    const vA = aA,
+      LA = new Map([
         ["parkour", "parkour, obbies and races to a finish"],
         ["pvp", "fighting other players: arenas, kills, last one standing"],
         ["teams", "teams against each other"],
@@ -5190,343 +5190,343 @@ export const modules = {
         ["screen", "text on players' screens and announcements"]
       ]);
 
-    function mk(bb) {
+    function PA(bb) {
       return bb.toLowerCase().replace(/[^a-z0-9]/g, "")
     }
 
-    function lk(bb) {
-      var cb;
-      const sb = mk(bb);
-      return null !== (cb = Xk.find((bb => mk(bb.name) === sb || mk(bb.title) === sb))) && void 0 !== cb ? cb : null
+    function XA(bb) {
+      var ab;
+      const Ub = PA(bb);
+      return null !== (ab = vA.find((bb => PA(bb.name) === Ub || PA(bb.title) === Ub))) && void 0 !== ab ? ab : null
     }
 
-    function Qk(bb) {
-      var cb;
-      return null !== (cb = Wk.find((cb => cb.name === bb))) && void 0 !== cb ? cb : null
+    function jA(bb) {
+      var ab;
+      return null !== (ab = UA.find((ab => ab.name === bb))) && void 0 !== ab ? ab : null
     }
 
-    function ek(bb) {
-      let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Map;
-      const sb = function(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Map;
-        return 0 === bb.length ? "" : `const CONFIG = {\n${bb.map((bb=>{var sb;return`\t${bb.key}: ${null!==(sb=cb.get(bb.key))&&void 0!==sb?sb:bb.value}, // ${bb.about}`})).join("\n")}\n}`
-      }(bb.settings, cb);
-      return `${""===sb?"":`${sb}\n\n`}${bb.code.trim()}\n`
+    function RA(bb) {
+      let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Map;
+      const Ub = function(bb) {
+        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Map;
+        return 0 === bb.length ? "" : `const CONFIG = {\n${bb.map((bb=>{var Ub;return`\t${bb.key}: ${null!==(Ub=ab.get(bb.key))&&void 0!==Ub?Ub:bb.value}, // ${bb.about}`})).join("\n")}\n}`
+      }(bb.settings, ab);
+      return `${""===Ub?"":`${Ub}\n\n`}${bb.code.trim()}\n`
     }
 
-    function Ck(bb) {
-      const cb = [],
-        sb = new Set,
-        kb = bb => {
-          const Wb = Qk(bb);
-          if (Wb && !sb.has(Wb.group)) {
-            sb.add(Wb.group);
-            for (const bb of null !== (ab = Wb.uses) && void 0 !== ab ? ab : []) {
-              var ab;
-              kb(bb)
+    function kA(bb) {
+      const ab = [],
+        Ub = new Set,
+        Ab = bb => {
+          const Mb = jA(bb);
+          if (Mb && !Ub.has(Mb.group)) {
+            Ub.add(Mb.group);
+            for (const bb of null !== (Tb = Mb.uses) && void 0 !== Tb ? Tb : []) {
+              var Tb;
+              Ab(bb)
             }
-            cb.push(Wb)
+            ab.push(Mb)
           }
         };
-      for (const Wb of bb) kb(Wb);
-      return cb
+      for (const Mb of bb) Ab(Mb);
+      return ab
     }
 
-    function Nk(bb, cb) {
-      const sb = bb => bb.replace(/\s+/g, ""),
-        kb = new RegExp(`function ${cb.name}\\s*\\([^)]*\\)\\s*\\{`).exec(bb);
-      return !!kb && sb(cb.code).includes(sb(bb.slice(kb.index, kb.index + 200)).slice(0, 60))
+    function yA(bb, ab) {
+      const Ub = bb => bb.replace(/\s+/g, ""),
+        Ab = new RegExp(`function ${ab.name}\\s*\\([^)]*\\)\\s*\\{`).exec(bb);
+      return !!Ab && Ub(ab.code).includes(Ub(bb.slice(Ab.index, Ab.index + 200)).slice(0, 60))
     }
 
-    function Vk(bb) {
-      let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Set;
-      if (!As(bb)) return {
+    function ZA(bb) {
+      let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Set;
+      if (!lU(bb)) return {
         text: bb,
         added: []
       };
-      let sb = bb;
-      const kb = [];
-      for (let Wb = 0; Wb < 4; Wb++) {
-        const bb = qs(sb),
-          Wb = [...ds(sb)].filter((kb => {
-            const Wb = Qk(kb);
-            return null !== Wb && !cb.has(kb) && (!bb.has(kb) || Nk(sb, Wb))
+      let Ub = bb;
+      const Ab = [];
+      for (let Mb = 0; Mb < 4; Mb++) {
+        const bb = KU(Ub),
+          Mb = [...oU(Ub)].filter((Ab => {
+            const Mb = jA(Ab);
+            return null !== Mb && !ab.has(Ab) && (!bb.has(Ab) || yA(Ub, Mb))
           }));
-        let ab = !1;
-        for (const cb of Ck(Wb)) {
-          const Tb = zs(sb, cb.code, {
-            owner: cb.group,
+        let Tb = !1;
+        for (const ab of kA(Mb)) {
+          const Eb = rU(Ub, ab.code, {
+            owner: ab.group,
             chainCallbacks: !0
           });
-          Tb && Tb.text !== sb && (sb = Tb.text, ab = !0, bb.has(cb.name) || kb.push(...Wk.filter((bb => bb.group === cb.group && Wb.includes(bb.name))).map((bb => bb.name))))
+          Eb && Eb.text !== Ub && (Ub = Eb.text, Tb = !0, bb.has(ab.name) || Ab.push(...UA.filter((bb => bb.group === ab.group && Mb.includes(bb.name))).map((bb => bb.name))))
         }
-        if (!ab) break
+        if (!Tb) break
       }
       return {
-        text: sb,
-        added: [...new Set(kb)]
+        text: Ub,
+        added: [...new Set(Ab)]
       }
     }
 
-    function Lk(bb, cb) {
-      const sb = [...qs(cb.code)].filter((bb => "CONFIG" !== bb && !Xs(bb)));
-      if (0 === sb.length) return bb.includes(cb.code.trim().slice(0, 80));
-      const kb = As(bb) ? qs(bb) : new Set;
-      return 2 * sb.filter((bb => kb.has(bb))).length >= sb.length
+    function DA(bb, ab) {
+      const Ub = [...KU(ab.code)].filter((bb => "CONFIG" !== bb && !PU(bb)));
+      if (0 === Ub.length) return bb.includes(ab.code.trim().slice(0, 80));
+      const Ab = lU(bb) ? KU(bb) : new Set;
+      return 2 * Ub.filter((bb => Ab.has(bb))).length >= Ub.length
     }
 
-    function uk(bb) {
-      const cb = /^const CONFIG = \{\n([\s\S]*?)\n\}/m.exec(bb.code);
-      return cb ? cb[1].split("\n").flatMap((bb => {
-        const cb = /^\t(\w+): (.+?), \/\/ (.*)$/.exec(bb);
-        if (!cb) return [];
-        const [, sb, kb, Wb] = cb;
+    function zA(bb) {
+      const ab = /^const CONFIG = \{\n([\s\S]*?)\n\}/m.exec(bb.code);
+      return ab ? ab[1].split("\n").flatMap((bb => {
+        const ab = /^\t(\w+): (.+?), \/\/ (.*)$/.exec(bb);
+        if (!ab) return [];
+        const [, Ub, Ab, Mb] = ab;
         return [{
-          key: sb,
-          kind: /^-?\d/.test(kb) ? "number" : "true" === kb || "false" === kb ? "boolean" : kb.startsWith("[") ? "list" : "string",
-          value: kb,
-          about: Wb
+          key: Ub,
+          kind: /^-?\d/.test(Ab) ? "number" : "true" === Ab || "false" === Ab ? "boolean" : Ab.startsWith("[") ? "list" : "string",
+          value: Ab,
+          about: Mb
         }]
       })) : []
     }
 
-    function Yk(bb) {
-      const cb = new Set(bb.settings.map((bb => bb.key))),
-        sb = new Map;
-      for (const kb of Ck(ds(bb.code)))
-        for (const bb of uk(kb)) cb.has(bb.key) || sb.set(bb.key, bb);
-      return [...sb.values()]
+    function xA(bb) {
+      const ab = new Set(bb.settings.map((bb => bb.key))),
+        Ub = new Map;
+      for (const Ab of kA(oU(bb.code)))
+        for (const bb of zA(Ab)) ab.has(bb.key) || Ub.set(bb.key, bb);
+      return [...Ub.values()]
     }
 
-    function hk(bb, cb, sb, kb) {
-      const Wb = Yk(cb),
-        ab = function(bb, cb, sb) {
-          const kb = new Map,
-            Wb = [],
-            ab = [],
-            Tb = new Map(bb.settings.map((bb => [bb.key.toLowerCase(), bb])));
-          for (const [Ub, Ib] of fk(cb)) {
-            const cb = Tb.get(Ub.toLowerCase());
-            if (!cb) {
-              Wb.push(`${bb.name} has no setting ${Ub}`);
+    function iA(bb, ab, Ub, Ab) {
+      const Mb = xA(ab),
+        Tb = function(bb, ab, Ub) {
+          const Ab = new Map,
+            Mb = [],
+            Tb = [],
+            Eb = new Map(bb.settings.map((bb => [bb.key.toLowerCase(), bb])));
+          for (const [Yb, Bb] of BA(ab)) {
+            const ab = Eb.get(Yb.toLowerCase());
+            if (!ab) {
+              Mb.push(`${bb.name} has no setting ${Yb}`);
               continue
             }
-            if (/^CONFIG\.\w+$/.test(Ib.trim())) continue;
-            const Hb = Mk(cb, Ib, sb);
-            "problem" in Hb ? Wb.push(Hb.problem) : (kb.set(cb.key, Hb.value), Hb.fixed && ab.push(Hb.fixed))
+            if (/^CONFIG\.\w+$/.test(Bb.trim())) continue;
+            const eb = eA(ab, Bb, Ub);
+            "problem" in eb ? Mb.push(eb.problem) : (Ab.set(ab.key, eb.value), eb.fixed && Tb.push(eb.fixed))
           }
           return {
-            values: kb,
-            problems: Wb,
-            fixed: ab
+            values: Ab,
+            problems: Mb,
+            fixed: Tb
           }
         }({
-          ...cb,
-          settings: [...cb.settings, ...Wb]
-        }, sb, kb),
-        Tb = Wb.filter((bb => ab.values.has(bb.key))),
-        Ub = zs(bb, ek({
-          ...cb,
-          settings: [...cb.settings, ...Tb]
-        }, ab.values), {
-          owner: cb.name,
-          overrides: new Set(ab.values.keys()),
-          heading: "" === bb.trim() ? void 0 : `// ---- ${cb.title} (ready-made) ----`
+          ...ab,
+          settings: [...ab.settings, ...Mb]
+        }, Ub, Ab),
+        Eb = Mb.filter((bb => Tb.values.has(bb.key))),
+        Yb = rU(bb, RA({
+          ...ab,
+          settings: [...ab.settings, ...Eb]
+        }, Tb.values), {
+          owner: ab.name,
+          overrides: new Set(Tb.values.keys()),
+          heading: "" === bb.trim() ? void 0 : `// ---- ${ab.title} (ready-made) ----`
         });
-      if (!Ub) return {
-        error: As(bb) ? "The prefab couldn't be fitted into the code around it without breaking it. Put it into an empty file instead." : "The code around it doesn't parse (a bracket is likely missing), so the prefab couldn't be fitted in. Fix the code first."
+      if (!Yb) return {
+        error: lU(bb) ? "The prefab couldn't be fitted into the code around it without breaking it. Put it into an empty file instead." : "The code around it doesn't parse (a bracket is likely missing), so the prefab couldn't be fitted in. Fix the code first."
       };
-      const Ib = Vk(Ub.text);
+      const Bb = ZA(Yb.text);
       return {
-        prefab: cb,
-        text: Ib.text,
-        problems: ab.problems,
-        fixed: ab.fixed,
-        chained: Ub.chained,
-        helpers: Ib.added
+        prefab: ab,
+        text: Bb.text,
+        problems: Tb.problems,
+        fixed: Tb.fixed,
+        chained: Yb.chained,
+        helpers: Bb.added
       }
     }
 
-    function Jk(bb) {
+    function fA(bb) {
       return `- ${bb.name}: ${bb.summary}. Settings: ${bb.settings.map((bb=>bb.key)).join(", ")}`
     }
 
-    function gk(bb) {
-      var cb;
-      const sb = null !== (cb = null === bb || void 0 === bb ? void 0 : bb.trim().toLowerCase()) && void 0 !== cb ? cb : "",
-        kb = [...nk.keys()].find((bb => bb === sb)),
-        Wb = kb ? Xk.filter((bb => bb.category === kb)) : Xk,
-        ab = kb ? Wk.filter((bb => bb.category === kb)) : [];
-      return `${kb?`Prefabs for ${nk.get(kb)}:`:""===sb||"all"===sb?"Every prefab:":`There is no category ${bb}. Every prefab:`}\n${Wb.length>0?Wb.map(Jk).join("\n"):"(none yet)"}${ab.length>0?`\nReady-made functions for it (call them; their code is added by itself):\n${ab.map((bb=>`- ${bb.signature}: ${bb.about}`)).join("\n")}`:""}${kb?"":`\nCategories: ${[...nk.keys()].join(", ")}`}`
+    function mA(bb) {
+      var ab;
+      const Ub = null !== (ab = null === bb || void 0 === bb ? void 0 : bb.trim().toLowerCase()) && void 0 !== ab ? ab : "",
+        Ab = [...LA.keys()].find((bb => bb === Ub)),
+        Mb = Ab ? vA.filter((bb => bb.category === Ab)) : vA,
+        Tb = Ab ? UA.filter((bb => bb.category === Ab)) : [];
+      return `${Ab?`Prefabs for ${LA.get(Ab)}:`:""===Ub||"all"===Ub?"Every prefab:":`There is no category ${bb}. Every prefab:`}\n${Mb.length>0?Mb.map(fA).join("\n"):"(none yet)"}${Tb.length>0?`\nReady-made functions for it (call them; their code is added by itself):\n${Tb.map((bb=>`- ${bb.signature}: ${bb.about}`)).join("\n")}`:""}${Ab?"":`\nCategories: ${[...LA.keys()].join(", ")}`}`
     }
 
-    function Bk(bb, cb) {
-      var sb;
-      const kb = [...bb.settings, ...Yk(bb)].map((bb => `- ${bb.key} (${bb.kind}, default ${bb.value}): ${bb.about}`)).join("\n"),
-        Wb = null !== (sb = bb.changeable) && void 0 !== sb && sb.length ? `\nFunctions to replace by name for a game of their own:\n${bb.changeable.map((bb=>`- ${bb.name}: ${bb.about}`)).join("\n")}` : "",
-        ab = cb ? `\nIts code, as it goes in with the default settings:\n${ek(bb)}` : "";
-      return `${bb.name} (${bb.title}): ${bb.summary}.\nHow it plays: ${bb.howItPlays}\nSettings:\n${kb}${Wb}${bb.setup?`\nThe creator sets up: ${bb.setup}`:""}${ab}`
+    function pA(bb, ab) {
+      var Ub;
+      const Ab = [...bb.settings, ...xA(bb)].map((bb => `- ${bb.key} (${bb.kind}, default ${bb.value}): ${bb.about}`)).join("\n"),
+        Mb = null !== (Ub = bb.changeable) && void 0 !== Ub && Ub.length ? `\nFunctions to replace by name for a game of their own:\n${bb.changeable.map((bb=>`- ${bb.name}: ${bb.about}`)).join("\n")}` : "",
+        Tb = ab ? `\nIts code, as it goes in with the default settings:\n${RA(bb)}` : "";
+      return `${bb.name} (${bb.title}): ${bb.summary}.\nHow it plays: ${bb.howItPlays}\nSettings:\n${Ab}${Mb}${bb.setup?`\nThe creator sets up: ${bb.setup}`:""}${Tb}`
     }
 
-    function tk(bb) {
-      let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 4;
-      const sb = function(bb) {
+    function NA(bb) {
+      let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 4;
+      const Ub = function(bb) {
           return new Set(bb.toLowerCase().split(/[^a-z0-9]+/).filter((bb => bb.length > 1)))
         }(bb),
-        kb = ` ${bb.toLowerCase().replace(/[^a-z0-9]+/g," ")} `;
-      return Xk.map((bb => {
-        const cb = bb.keywords.map((bb => bb.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim())).filter((bb => bb.includes(" ") ? kb.includes(` ${bb} `) : sb.has(bb))),
-          Wb = Math.min(...cb.map((bb => kb.indexOf(` ${bb} `))));
+        Ab = ` ${bb.toLowerCase().replace(/[^a-z0-9]+/g," ")} `;
+      return vA.map((bb => {
+        const ab = bb.keywords.map((bb => bb.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim())).filter((bb => bb.includes(" ") ? Ab.includes(` ${bb} `) : Ub.has(bb))),
+          Mb = Math.min(...ab.map((bb => Ab.indexOf(` ${bb} `))));
         return {
           prefab: bb,
-          score: cb.length,
-          first: Wb
+          score: ab.length,
+          first: Mb
         }
-      })).filter((bb => bb.score > 0)).sort(((bb, cb) => cb.score - bb.score || bb.first - cb.first)).slice(0, cb).map((bb => bb.prefab))
+      })).filter((bb => bb.score > 0)).sort(((bb, ab) => ab.score - bb.score || bb.first - ab.first)).slice(0, ab).map((bb => bb.prefab))
     }
-    const yk = /\byour\s+(?:real\s+|full\s+|first\s+|last\s+)?(?:name|age|school|address|email|phone|birthday)\b|\bhow old\b|\bwhere (?:do )?you live\b|\be-?mail\b|\bphone number\b|\bpassword\b/i;
+    const WA = /\byour\s+(?:real\s+|full\s+|first\s+|last\s+)?(?:name|age|school|address|email|phone|birthday)\b|\bhow old\b|\bwhere (?:do )?you live\b|\be-?mail\b|\bphone number\b|\bpassword\b/i;
 
-    function Pk(bb) {
-      var cb, sb, kb, Wb, ab, Tb;
-      const Ub = function(bb) {
-          var cb, sb;
-          const kb = null === (cb = bb.questions) || void 0 === cb ? void 0 : cb.trim();
-          if (null !== (sb = bb.question) && void 0 !== sb && sb.trim() || !kb) return bb;
-          const Wb = {
+    function HA(bb) {
+      var ab, Ub, Ab, Mb, Tb, Eb;
+      const Yb = function(bb) {
+          var ab, Ub;
+          const Ab = null === (ab = bb.questions) || void 0 === ab ? void 0 : ab.trim();
+          if (null !== (Ub = bb.question) && void 0 !== Ub && Ub.trim() || !Ab) return bb;
+          const Mb = {
             ...bb,
-            question: kb
+            question: Ab
           };
-          if (!/^[[{]/.test(kb)) return Wb;
+          if (!/^[[{]/.test(Ab)) return Mb;
           try {
-            const cb = JSON.parse(kb),
-              sb = Array.isArray(cb) ? cb[0] : cb;
-            if ("string" === typeof sb) {
-              const kb = Array.isArray(cb) ? cb.slice(1).filter((bb => "string" === typeof bb)) : [];
+            const ab = JSON.parse(Ab),
+              Ub = Array.isArray(ab) ? ab[0] : ab;
+            if ("string" === typeof Ub) {
+              const Ab = Array.isArray(ab) ? ab.slice(1).filter((bb => "string" === typeof bb)) : [];
               return {
                 ...bb,
-                question: sb,
-                ...kb.length > 0 && void 0 === bb.choices ? {
-                  choices: kb.join("\n")
+                question: Ub,
+                ...Ab.length > 0 && void 0 === bb.choices ? {
+                  choices: Ab.join("\n")
                 } : {}
               }
             }
-            if ("object" !== typeof sb || null === sb) return Wb;
-            const ab = sb,
-              Tb = bb => "string" === typeof bb ? bb : "boolean" === typeof bb ? String(bb) : Array.isArray(bb) ? bb.filter((bb => "string" === typeof bb)).join("\n") : void 0,
-              Ub = {
-                question: Tb(ab.question),
-                choices: Tb(ab.choices),
-                allow_other: Tb(ab.allow_other)
+            if ("object" !== typeof Ub || null === Ub) return Mb;
+            const Tb = Ub,
+              Eb = bb => "string" === typeof bb ? bb : "boolean" === typeof bb ? String(bb) : Array.isArray(bb) ? bb.filter((bb => "string" === typeof bb)).join("\n") : void 0,
+              Yb = {
+                question: Eb(Tb.question),
+                choices: Eb(Tb.choices),
+                allow_other: Eb(Tb.allow_other)
               };
             return {
               ...bb,
-              ...Object.fromEntries(Object.entries(Ub).filter((bb => {
-                let [, cb] = bb;
-                return void 0 !== cb
+              ...Object.fromEntries(Object.entries(Yb).filter((bb => {
+                let [, ab] = bb;
+                return void 0 !== ab
               })))
             }
           } catch {
-            return kb.startsWith("[") ? Wb : bb
+            return Ab.startsWith("[") ? Mb : bb
           }
         }(bb),
-        Ib = null !== (cb = null === (sb = Ub.question) || void 0 === sb ? void 0 : sb.replace(/\s+/g, " ").trim()) && void 0 !== cb ? cb : "",
-        Hb = (null !== (kb = Ub.choices) && void 0 !== kb ? kb : "").includes("\n") ? (null !== (Wb = Ub.choices) && void 0 !== Wb ? Wb : "").split("\n") : (null !== (ab = Ub.choices) && void 0 !== ab ? ab : "").split("|"),
-        fb = [...new Set(Hb.map((bb => bb.replace(/^\s*(?:[-*\u2022]|\d+[.)])\s*/, "").trim())).filter(Boolean))].slice(0, 4),
-        Mb = "false" !== (null === (Tb = Ub.allow_other) || void 0 === Tb ? void 0 : Tb.trim().toLowerCase());
-      return "" === Ib || yk.test(Ib) || fb.length < 2 && !Mb ? null : {
-        question: Ib,
-        choices: fb,
-        allowOther: Mb
+        Bb = null !== (ab = null === (Ub = Yb.question) || void 0 === Ub ? void 0 : Ub.replace(/\s+/g, " ").trim()) && void 0 !== ab ? ab : "",
+        eb = (null !== (Ab = Yb.choices) && void 0 !== Ab ? Ab : "").includes("\n") ? (null !== (Mb = Yb.choices) && void 0 !== Mb ? Mb : "").split("\n") : (null !== (Tb = Yb.choices) && void 0 !== Tb ? Tb : "").split("|"),
+        vb = [...new Set(eb.map((bb => bb.replace(/^\s*(?:[-*\u2022]|\d+[.)])\s*/, "").trim())).filter(Boolean))].slice(0, 4),
+        Lb = "false" !== (null === (Eb = Yb.allow_other) || void 0 === Eb ? void 0 : Eb.trim().toLowerCase());
+      return "" === Bb || WA.test(Bb) || vb.length < 2 && !Lb ? null : {
+        question: Bb,
+        choices: vb,
+        allowOther: Lb
       }
     }
-    const Dk = /^\s*(?:\.\.\.|\u2026)\s*$/,
-      Ek = /^[ \t]*(?:\/\/|\/\*)[ \t]*(?:(?:\.\.\.|\u2026)[ \t]*(?:\*\/)?[ \t]*$|(?:\.\.\.|\u2026)?[ \t]*(?:existing code|rest of (?:the |your )?(?:code|file)))/im;
+    const IA = /^\s*(?:\.\.\.|\u2026)\s*$/,
+      dA = /^[ \t]*(?:\/\/|\/\*)[ \t]*(?:(?:\.\.\.|\u2026)[ \t]*(?:\*\/)?[ \t]*$|(?:\.\.\.|\u2026)?[ \t]*(?:existing code|rest of (?:the |your )?(?:code|file)))/im;
 
-    function ik(bb, cb) {
-      if (Dk.test(bb)) return !0;
-      const sb = new Set(cb.split("\n").map((bb => bb.trim())));
-      return bb.split("\n").some((bb => Ek.test(bb) && !sb.has(bb.trim())))
+    function FA(bb, ab) {
+      if (IA.test(bb)) return !0;
+      const Ub = new Set(ab.split("\n").map((bb => bb.trim())));
+      return bb.split("\n").some((bb => dA.test(bb) && !Ub.has(bb.trim())))
     }
-    const Ok = /```(?:js|javascript|ts|typescript)?\n([\s\S]*?)```/g,
-      Gk = String.raw`on[A-Z]\w*|tick|playerCommand`,
-      Kk = new RegExp(String.raw`^(?:(?:async\s+)?function\s+(?:${Gk})\s*\(|(?:${Gk})\s*=\s*(?:async\s+)?(?:function\b|\())`, "m"),
-      Zk = new RegExp(`^(?:${Gk})$`),
-      zk = new RegExp(String.raw`^(${Gk})(\s*\([^()\n]*\)\s*\{)`, "gm"),
-      qk = new RegExp(String.raw`\bapi\.|\bfunction\s+(?:${Gk})\b|\buse_?prefab\s*\(`, "i");
+    const hA = /```(?:js|javascript|ts|typescript)?\n([\s\S]*?)```/g,
+      GA = String.raw`on[A-Z]\w*|tick|playerCommand`,
+      QA = new RegExp(String.raw`^(?:(?:async\s+)?function\s+(?:${GA})\s*\(|(?:${GA})\s*=\s*(?:async\s+)?(?:function\b|\())`, "m"),
+      qA = new RegExp(`^(?:${GA})$`),
+      uA = new RegExp(String.raw`^(${GA})(\s*\([^()\n]*\)\s*\{)`, "gm"),
+      rA = new RegExp(String.raw`\bapi\.|\bfunction\s+(?:${GA})\b|\buse_?prefab\s*\(`, "i");
 
-    function dk(bb) {
+    function KA(bb) {
       return bb.replace(/^\s*```[\w-]*[^\n]*\n/, "").replace(/\n?```\s*$/, "")
     }
 
-    function Ak(bb) {
-      return dk(bb).replace(/\s*$/, "\n")
+    function oA(bb) {
+      return KA(bb).replace(/\s*$/, "\n")
     }
 
-    function wk(bb, cb) {
+    function lA(bb, ab) {
       switch (bb) {
         case "view_file":
-          return void 0 === cb.path ? cb : {
-            path: rk(cb.path)
+          return void 0 === ab.path ? ab : {
+            path: tA(ab.path)
           };
         case "fetch_url":
-          return void 0 === cb.url ? cb : {
-            url: Lb(cb.url)
+          return void 0 === ab.url ? ab : {
+            url: xb(ab.url)
           };
         default:
-          return cb
+          return ab
       }
     }
 
-    function rk(bb) {
+    function tA(bb) {
       return bb.trim().replace(/^\.?\//, "")
     }
 
-    function Sk(bb) {
-      return bb.replace(zk, "function $1$2")
+    function wA(bb) {
+      return bb.replace(uA, "function $1$2")
     }
 
-    function Rk(bb) {
+    function sA(bb) {
       return bb.replace(/\bif\s*\(\s*(\/\*(?:(?!\*\/)[^])*\*\/)\s*\)/g, "if (false $1)")
     }
 
-    function vk(bb, cb, sb, kb) {
-      let Wb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [],
-        ab = arguments.length > 5 ? arguments[5] : void 0,
-        Tb = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "offer",
-        Ub = arguments.length > 7 ? arguments[7] : void 0,
-        Ib = arguments.length > 8 ? arguments[8] : void 0;
-      const Hb = {
-          ...sb
+    function gA(bb, ab, Ub, Ab) {
+      let Mb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [],
+        Tb = arguments.length > 5 ? arguments[5] : void 0,
+        Eb = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "offer",
+        Yb = arguments.length > 7 ? arguments[7] : void 0,
+        Bb = arguments.length > 8 ? arguments[8] : void 0;
+      const eb = {
+          ...Ub
         },
-        fb = new Set,
-        Mb = [];
-      let Xb;
-      const nb = (bb, cb, sb, kb) => {
-        Mb.push({
+        vb = new Set,
+        Lb = [];
+      let Pb;
+      const Xb = (bb, ab, Ub, Ab) => {
+        Lb.push({
           tool: bb,
-          path: cb,
-          reason: sb,
+          path: ab,
+          reason: Ub,
           closest: null,
           functions: [],
-          ...kb,
-          ...Xb ? {
-            call: Xb
+          ...Ab,
+          ...Pb ? {
+            call: Pb
           } : {}
         })
       };
-      let lb = bb;
-      const Qb = Object.keys(sb).some(mb.e),
-        eb = bb => null !== bb && Qb && (0, mb.e)(bb),
-        Cb = bb => eb(bb) ? `${mb.j}${(0,mb.g)(bb)}` : null !== ab && void 0 !== ab ? ab : rk(bb),
-        Nb = bb => void 0 === ab || eb(bb),
-        Vb = bb => void 0 !== Ub && !Ub.has(bb),
-        Lb = new Set,
-        ub = bb => JSON.stringify({
+      let Rb = bb;
+      const kb = Object.keys(Ub).some(jb.f),
+        yb = bb => null !== bb && kb && (0, jb.f)(bb),
+        Zb = bb => yb(bb) ? `${jb.l}${(0,jb.j)(bb)}` : null !== Tb && void 0 !== Tb ? Tb : tA(bb),
+        Db = bb => void 0 === Tb || yb(bb),
+        zb = bb => void 0 !== Yb && !Yb.has(bb),
+        xb = new Set,
+        ib = bb => JSON.stringify({
           name: bb.name,
           args: bb.args
         }),
-        Yb = bb => {
-          const cb = eb(bb) ? {
+        fb = bb => {
+          const ab = yb(bb) ? {
               name: "view_world_code",
               args: {}
             } : {
@@ -5535,362 +5535,362 @@ export const modules = {
                 path: bb
               }
             },
-            sb = Xb ? {
-              ...cb,
-              call: Xb
-            } : cb;
-          Lb.add(ub(sb)), Jb(sb)
+            Ub = Pb ? {
+              ...ab,
+              call: Pb
+            } : ab;
+          xb.add(ib(Ub)), pb(Ub)
         },
-        hb = [],
-        Jb = bb => {
-          const cb = ub(bb);
-          hb.length < 4 && !hb.some((bb => ub(bb) === cb)) && hb.push(bb)
+        mb = [],
+        pb = bb => {
+          const ab = ib(bb);
+          mb.length < 4 && !mb.some((bb => ib(bb) === ab)) && mb.push(bb)
         },
-        gb = [],
-        Bb = [],
-        yb = [],
-        ib = new Map,
+        Nb = [],
+        Wb = [],
+        Ib = [],
         Gb = new Map,
-        Kb = (bb, cb, sb) => {
-          var kb;
-          const Wb = function(bb) {
-              const cb = bb.replace(/\s+/g, " ").trim();
-              if (cb.length <= 80) return cb;
-              const sb = cb.slice(0, 80);
-              return `${sb.slice(0,Math.max(sb.lastIndexOf(" "),40)).replace(/[\s,.;:]+$/,"")}\u2026`
-            }(null !== cb && void 0 !== cb ? cb : ""),
-            ab = null !== (kb = ib.get(bb)) && void 0 !== kb ? kb : [];
-          var Tb;
-          ("" === Wb || ab.includes(Wb) || ib.set(bb, [...ab, Wb]), "" !== Wb) && Gb.set(bb, [...null !== (Tb = Gb.get(bb)) && void 0 !== Tb ? Tb : [], {
-            why: Wb,
-            code: sb
+        qb = new Map,
+        ub = (bb, ab, Ub) => {
+          var Ab;
+          const Mb = function(bb) {
+              const ab = bb.replace(/\s+/g, " ").trim();
+              if (ab.length <= 80) return ab;
+              const Ub = ab.slice(0, 80);
+              return `${Ub.slice(0,Math.max(Ub.lastIndexOf(" "),40)).replace(/[\s,.;:]+$/,"")}\u2026`
+            }(null !== ab && void 0 !== ab ? ab : ""),
+            Tb = null !== (Ab = Gb.get(bb)) && void 0 !== Ab ? Ab : [];
+          var Eb;
+          ("" === Mb || Tb.includes(Mb) || Gb.set(bb, [...Tb, Mb]), "" !== Mb) && qb.set(bb, [...null !== (Eb = qb.get(bb)) && void 0 !== Eb ? Eb : [], {
+            why: Mb,
+            code: Ub
           }])
         },
-        Zb = new Set,
-        zb = [],
-        qb = new Map,
-        db = [];
+        rb = new Set,
+        Kb = [],
+        ob = new Map,
+        lb = [];
       let wb = null;
-      const rb = [];
-      let Sb = [];
-      const vb = (bb, cb) => void 0 !== ab && !eb(bb) && (null === bb || rk(bb) !== ab) && Kk.test(cb),
-        jb = (bb, cb, sb, kb) => {
-          var Wb, ab;
-          const Tb = function(bb, cb, sb, kb) {
-            const Wb = lk(cb);
-            return Wb ? hk(bb, Wb, sb, kb) : {
-              error: `There is no prefab called ${cb}. The prefabs are: ${Xk.map((bb=>bb.name)).join(", ")}.`
+      const sb = [];
+      let Cb = [];
+      const Ob = (bb, ab) => void 0 !== Tb && !yb(bb) && (null === bb || tA(bb) !== Tb) && QA.test(ab),
+        nb = (bb, ab, Ub, Ab) => {
+          var Mb, Tb;
+          const Eb = function(bb, ab, Ub, Ab) {
+            const Mb = XA(ab);
+            return Mb ? iA(bb, Mb, Ub, Ab) : {
+              error: `There is no prefab called ${ab}. The prefabs are: ${vA.map((bb=>bb.name)).join(", ")}.`
             }
-          }(null !== (Wb = Hb[bb]) && void 0 !== Wb ? Wb : "", cb, sb, Ib);
-          return "error" in Tb ? (nb("use_prefab", bb, "prefab", {
-            detail: Tb.error
-          }), !1) : (Hb[bb] = Tb.text, fb.add(bb), qb.set(bb, {
-            prefab: Tb.prefab,
-            settings: sb
-          }), Kb(bb, null !== kb && void 0 !== kb ? kb : Tb.prefab.title, Tb.text), zb.push({
-            name: Tb.prefab.name,
-            title: Tb.prefab.title,
+          }(null !== (Mb = eb[bb]) && void 0 !== Mb ? Mb : "", ab, Ub, Bb);
+          return "error" in Eb ? (Xb("use_prefab", bb, "prefab", {
+            detail: Eb.error
+          }), !1) : (eb[bb] = Eb.text, vb.add(bb), ob.set(bb, {
+            prefab: Eb.prefab,
+            settings: Ub
+          }), ub(bb, null !== Ab && void 0 !== Ab ? Ab : Eb.prefab.title, Eb.text), Kb.push({
+            name: Eb.prefab.name,
+            title: Eb.prefab.title,
             path: bb,
-            problems: Tb.problems,
-            fixed: Tb.fixed,
-            setup: null !== (ab = Tb.prefab.setup) && void 0 !== ab ? ab : null
+            problems: Eb.problems,
+            fixed: Eb.fixed,
+            setup: null !== (Tb = Eb.prefab.setup) && void 0 !== Tb ? Tb : null
           }), !0)
         },
-        pb = (bb, cb, sb) => {
-          const kb = bk(cb);
-          if (0 === kb.calls.length) return !1;
-          Hb[bb] = kb.code, fb.add(bb);
-          for (const Wb of kb.calls) jb(bb, Wb.name, Wb.settings, sb);
-          return Kb(bb, sb, kb.code), !0
+        Sb = (bb, ab, Ub) => {
+          const Ab = nU(ab);
+          if (0 === Ab.calls.length) return !1;
+          eb[bb] = Ab.code, vb.add(bb);
+          for (const Mb of Ab.calls) nb(bb, Mb.name, Mb.settings, Ub);
+          return ub(bb, Ub, Ab.code), !0
         },
-        cc = bb => {
-          const cb = mc(Sk(Ak(bb)), Wb);
-          gb.push(cb.code), yb.push(...cb.renames)
+        aa = bb => {
+          const ab = ja(wA(oA(bb)), Mb);
+          Nb.push(ab.code), Ib.push(...ab.renames)
         },
-        sc = fs(bb, cb),
-        kc = new Map;
-      for (const mb of sc) {
-        var Wc, ac, Tc, Uc;
-        const bb = null !== (Wc = kc.get(mb.name)) && void 0 !== Wc ? Wc : 0;
-        kc.set(mb.name, bb + 1), Xb = {
-          name: mb.name,
+        Ua = vU(bb, ab),
+        Aa = new Map;
+      for (const jb of Ua) {
+        var Ma, Ta, Ea, Ya;
+        const bb = null !== (Ma = Aa.get(jb.name)) && void 0 !== Ma ? Ma : 0;
+        Aa.set(jb.name, bb + 1), Pb = {
+          name: jb.name,
           nth: bb
         };
-        const cb = ("replace_function" === mb.name || "insert_code" === mb.name) && void 0 === mb.args.code && void 0 !== mb.args.content ? {
-            ...mb,
+        const ab = ("replace_function" === jb.name || "insert_code" === jb.name) && void 0 === jb.args.code && void 0 !== jb.args.content ? {
+            ...jb,
             args: {
-              ...mb.args,
-              code: mb.args.content,
-              path: null !== (ac = null !== (Tc = null !== (Uc = mb.args.path) && void 0 !== Uc ? Uc : ab) && void 0 !== Tc ? Tc : kb) && void 0 !== ac ? ac : void 0
+              ...jb.args,
+              code: jb.args.content,
+              path: null !== (Ta = null !== (Ea = null !== (Ya = jb.args.path) && void 0 !== Ya ? Ya : Tb) && void 0 !== Ea ? Ea : Ab) && void 0 !== Ta ? Ta : void 0
             }
-          } : mb,
+          } : jb,
           {
-            path: Wb,
-            content: Tb,
-            search: Ub,
-            replace: Mb,
-            code: Qb
-          } = cb.args,
-          eb = Lc(cb.name),
-          Lb = `${cb.name}\n${JSON.stringify({...cb.args,why:void 0})}`,
-          ub = Zb.has(Lb);
-        if (eb.annotations.idempotentHint && ub) lb = lb.replace(cb.source, "");
+            path: Mb,
+            content: Eb,
+            search: Yb,
+            replace: Lb,
+            code: kb
+          } = ab.args,
+          yb = xa(ab.name),
+          xb = `${ab.name}\n${JSON.stringify({...ab.args,why:void 0})}`,
+          ib = rb.has(xb);
+        if (yb.annotations.idempotentHint && ib) Rb = Rb.replace(ab.source, "");
         else {
-          if (Zb.add(Lb), Vc(cb.name)) {
-            const bb = Object.fromEntries(Object.entries(cb.args).flatMap((bb => {
-              let [cb, sb] = bb;
-              return void 0 === sb || "" === sb.trim() ? [] : [
-                [cb, sb.trim()]
+          if (rb.add(xb), za(ab.name)) {
+            const bb = Object.fromEntries(Object.entries(ab.args).flatMap((bb => {
+              let [ab, Ub] = bb;
+              return void 0 === Ub || "" === Ub.trim() ? [] : [
+                [ab, Ub.trim()]
               ]
             })));
-            Jb({
-              name: cb.name,
-              args: wk(cb.name, bb),
-              call: Xb
+            pb({
+              name: ab.name,
+              args: lA(ab.name, bb),
+              call: Pb
             })
-          } else if ("add_world_code" === cb.name) {
-            if (void 0 === ab) continue;
-            void 0 !== Qb ? cc(Qb) : nb(cb.name, null, "missingArgs")
-          } else if ("use_prefab" === cb.name) {
-            const bb = void 0 !== Wb && "" !== Wb.trim() ? Cb(Wb) : void 0 === ab ? null !== kb && void 0 !== kb ? kb : "index.js" : null;
-            if (void 0 === cb.args.name || "" === cb.args.name.trim()) nb(cb.name, bb, "missingArgs");
-            else if (null !== bb && Nb(bb)) {
-              var Ic;
-              jb(bb, cb.args.name, null !== (Ic = cb.args.settings) && void 0 !== Ic ? Ic : "", cb.args.why)
-            } else nb(cb.name, bb, "prefab", {
+          } else if ("add_world_code" === ab.name) {
+            if (void 0 === Tb) continue;
+            void 0 !== kb ? aa(kb) : Xb(ab.name, null, "missingArgs")
+          } else if ("use_prefab" === ab.name) {
+            const bb = void 0 !== Mb && "" !== Mb.trim() ? Zb(Mb) : void 0 === Tb ? null !== Ab && void 0 !== Ab ? Ab : "index.js" : null;
+            if (void 0 === ab.args.name || "" === ab.args.name.trim()) Xb(ab.name, bb, "missingArgs");
+            else if (null !== bb && Db(bb)) {
+              var Ba;
+              nb(bb, ab.args.name, null !== (Ba = ab.args.settings) && void 0 !== Ba ? Ba : "", ab.args.why)
+            } else Xb(ab.name, bb, "prefab", {
               detail: "A prefab goes in World Code, not in a code block."
             })
-          } else if ("ask_creator" === cb.name) wb ??= Pk(cb.args);
-          else if ("plan" === cb.name) {
-            var Hc;
-            if (0 === Sb.length) Sb = fc(null !== (Hc = cb.args.steps) && void 0 !== Hc ? Hc : "")
-          } else if ("remember" === cb.name) {
-            var Mc;
-            const bb = bc(null !== (Mc = cb.args.note) && void 0 !== Mc ? Mc : "");
-            null !== bb && 0 === rb.length && rb.push(bb)
-          } else if ("export_game" === cb.name || "switch_to_world_code" === cb.name) {
-            if ("switch_to_world_code" === cb.name && void 0 === ab) continue;
-            const bb = "export_game" === cb.name ? "exportGame" : "switchToWorldCode";
-            var Xc;
-            if (!Bb.some((cb => cb.kind === bb))) Bb.push("export_game" === cb.name ? {
+          } else if ("ask_creator" === ab.name) wb ??= HA(ab.args);
+          else if ("plan" === ab.name) {
+            var ea;
+            if (0 === Cb.length) Cb = va(null !== (ea = ab.args.steps) && void 0 !== ea ? ea : "")
+          } else if ("remember" === ab.name) {
+            var La;
+            const bb = ba(null !== (La = ab.args.note) && void 0 !== La ? La : "");
+            null !== bb && 0 === sb.length && sb.push(bb)
+          } else if ("export_game" === ab.name || "switch_to_world_code" === ab.name) {
+            if ("switch_to_world_code" === ab.name && void 0 === Tb) continue;
+            const bb = "export_game" === ab.name ? "exportGame" : "switchToWorldCode";
+            var Pa;
+            if (!Wb.some((ab => ab.kind === bb))) Wb.push("export_game" === ab.name ? {
               kind: "exportGame"
             } : {
               kind: "switchToWorldCode",
-              request: (null === (Xc = cb.args.request) || void 0 === Xc ? void 0 : Xc.trim()) || null
+              request: (null === (Pa = ab.args.request) || void 0 === Pa ? void 0 : Pa.trim()) || null
             })
-          } else if ("write_file" === cb.name) {
-            var nc, lc;
-            if (Us(cb))
-              if (void 0 === Tb || "" !== Tb.trim() && !ik(dk(Tb), void 0 === Wb ? "" : null !== (nc = Hb[Cb(Wb)]) && void 0 !== nc ? nc : "")) {
-                if (void 0 !== Wb && void 0 !== Tb && vb(Wb, Tb)) cc(Tb);
-                else if (void 0 !== Wb && Vb(Cb(Wb)) && "" !== (null !== (lc = sb[Cb(Wb)]) && void 0 !== lc ? lc : "").trim()) nb(cb.name, Cb(Wb), "unread", void 0 === Tb ? void 0 : {
-                  code: Ak(Tb)
-                }), Yb(Cb(Wb));
-                else if (void 0 !== Wb && void 0 !== Tb) {
-                  const bb = Cb(Wb),
-                    sb = ck(Ak(Tb));
-                  if (!Nb(bb) || !pb(bb, sb, cb.args.why)) {
-                    const kb = qb.get(bb),
-                      Wb = kb && !Lk(sb, kb.prefab) ? hk(sb, kb.prefab, kb.settings, Ib) : null;
-                    Hb[bb] = Wb && !("error" in Wb) ? Wb.text : sb, fb.add(bb), Kb(bb, cb.args.why, Tb)
+          } else if ("write_file" === ab.name) {
+            var Xa, Ra;
+            if (YU(ab))
+              if (void 0 === Eb || "" !== Eb.trim() && !FA(KA(Eb), void 0 === Mb ? "" : null !== (Xa = eb[Zb(Mb)]) && void 0 !== Xa ? Xa : "")) {
+                if (void 0 !== Mb && void 0 !== Eb && Ob(Mb, Eb)) aa(Eb);
+                else if (void 0 !== Mb && zb(Zb(Mb)) && "" !== (null !== (Ra = Ub[Zb(Mb)]) && void 0 !== Ra ? Ra : "").trim()) Xb(ab.name, Zb(Mb), "unread", void 0 === Eb ? void 0 : {
+                  code: oA(Eb)
+                }), fb(Zb(Mb));
+                else if (void 0 !== Mb && void 0 !== Eb) {
+                  const bb = Zb(Mb),
+                    Ub = SU(oA(Eb));
+                  if (!Db(bb) || !Sb(bb, Ub, ab.args.why)) {
+                    const Ab = ob.get(bb),
+                      Mb = Ab && !DA(Ub, Ab.prefab) ? iA(Ub, Ab.prefab, Ab.settings, Bb) : null;
+                    eb[bb] = Mb && !("error" in Mb) ? Mb.text : Ub, vb.add(bb), ub(bb, ab.args.why, Eb)
                   }
                 }
-              } else nb(cb.name, void 0 === Wb ? null : Cb(Wb), "placeholder");
-            else nb(cb.name, void 0 === Wb ? null : Cb(Wb), "missingArgs")
-          } else if ("replace_function" === cb.name || "insert_code" === cb.name) {
-            var Qc, ec, Cc;
-            const bb = void 0 === Wb ? null : Cb(Wb),
-              sb = "replace_function" === cb.name ? cb.args.name : cb.args.after,
-              kb = void 0 === sb ? void 0 : Ab(sb),
-              ab = null === bb ? "" : null !== (Qc = Hb[bb]) && void 0 !== Qc ? Qc : "",
-              Tb = void 0 === Qb ? "" : dk(Qb),
-              Ub = null === bb ? void 0 : qb.get(bb),
-              Ib = "replace_function" === cb.name && void 0 !== Ub && void 0 !== kb && Zk.test(kb) && qs(Ub.prefab.code).has(kb),
-              Mb = null === bb || void 0 === Qb || void 0 === sb ? null : Ib ? null !== (ec = null === (Cc = zs(ab, Tb, {
+              } else Xb(ab.name, void 0 === Mb ? null : Zb(Mb), "placeholder");
+            else Xb(ab.name, void 0 === Mb ? null : Zb(Mb), "missingArgs")
+          } else if ("replace_function" === ab.name || "insert_code" === ab.name) {
+            var ka, ya, Za;
+            const bb = void 0 === Mb ? null : Zb(Mb),
+              Ub = "replace_function" === ab.name ? ab.args.name : ab.args.after,
+              Ab = void 0 === Ub ? void 0 : tb(Ub),
+              Tb = null === bb ? "" : null !== (ka = eb[bb]) && void 0 !== ka ? ka : "",
+              Eb = void 0 === kb ? "" : KA(kb),
+              Yb = null === bb ? void 0 : ob.get(bb),
+              Bb = "replace_function" === ab.name && void 0 !== Yb && void 0 !== Ab && qA.test(Ab) && KU(Yb.prefab.code).has(Ab),
+              Lb = null === bb || void 0 === kb || void 0 === Ub ? null : Bb ? null !== (ya = null === (Za = rU(Tb, Eb, {
                 owner: "extra",
                 runsLast: !0
-              })) || void 0 === Cc ? void 0 : Cc.text) && void 0 !== ec ? ec : null : "replace_function" === cb.name ? ob(ab, sb, Tb) : Fb(ab, sb, Tb);
-            null === bb || null === Mb ? nb(cb.name, bb, Us(cb) ? "brokenCode" : "missingArgs") : ik(Tb, ab) ? nb(cb.name, bb, "placeholder") : "replace_function" === cb.name && Vb(bb) && xb(ab).includes(null !== kb && void 0 !== kb ? kb : "") ? (nb(cb.name, bb, "unread", {
-              code: Ak(Tb)
-            }), Yb(bb)) : (Hb[bb] = Mb, fb.add(bb), Kb(bb, cb.args.why, Tb))
+              })) || void 0 === Za ? void 0 : Za.text) && void 0 !== ya ? ya : null : "replace_function" === ab.name ? gb(Tb, Ub, Eb) : cb(Tb, Ub, Eb);
+            null === bb || null === Lb ? Xb(ab.name, bb, YU(ab) ? "brokenCode" : "missingArgs") : FA(Eb, Tb) ? Xb(ab.name, bb, "placeholder") : "replace_function" === ab.name && zb(bb) && Jb(Tb).includes(null !== Ab && void 0 !== Ab ? Ab : "") ? (Xb(ab.name, bb, "unread", {
+              code: oA(Eb)
+            }), fb(bb)) : (eb[bb] = Lb, vb.add(bb), ub(bb, ab.args.why, Eb))
           } else {
-            var Nc, uc;
-            const bb = !0 === (null === (Nc = eb._meta) || void 0 === Nc ? void 0 : Nc.appliesAtOnce) ? null !== ab && void 0 !== ab ? ab : kb : void 0 === Wb ? null : Cb(Wb),
-              sb = null === bb ? "" : null !== (uc = Hb[bb]) && void 0 !== uc ? uc : "",
-              Tb = Us(cb) && void 0 !== Ub,
-              Ib = Tb ? tb(sb, Ub) : null,
-              Xb = null === Ib && void 0 !== Ub && Ub.includes("\\n") ? tb(sb, Ec(Ub)) : null,
-              mb = null !== Ib && void 0 !== Ib ? Ib : Xb,
-              lb = null !== Xb ? Ec(null !== Mb && void 0 !== Mb ? Mb : "") : null !== Mb && void 0 !== Mb ? Mb : "",
-              Qb = null === mb || void 0 === Ub ? lb : Db(sb.slice(mb.from, mb.to), Pb(sb, mb, null !== Xb ? Ec(Ub) : Ub, lb), Eb(sb.slice(mb.to)));
-            if (null === bb || null === mb) nb(cb.name, bb, Tb ? "noMatch" : "missingArgs", {
-              closest: Tb ? Ob(sb, Ub) : null,
-              functions: Nb(bb) ? xb(sb) : []
+            var Da, ia;
+            const bb = !0 === (null === (Da = yb._meta) || void 0 === Da ? void 0 : Da.appliesAtOnce) ? null !== Tb && void 0 !== Tb ? Tb : Ab : void 0 === Mb ? null : Zb(Mb),
+              Ub = null === bb ? "" : null !== (ia = eb[bb]) && void 0 !== ia ? ia : "",
+              Eb = YU(ab) && void 0 !== Yb,
+              Bb = Eb ? Hb(Ub, Yb) : null,
+              Pb = null === Bb && void 0 !== Yb && Yb.includes("\\n") ? Hb(Ub, ha(Yb)) : null,
+              jb = null !== Bb && void 0 !== Bb ? Bb : Pb,
+              Rb = null !== Pb ? ha(null !== Lb && void 0 !== Lb ? Lb : "") : null !== Lb && void 0 !== Lb ? Lb : "",
+              kb = null === jb || void 0 === Yb ? Rb : Fb(Ub.slice(jb.from, jb.to), db(Ub, jb, null !== Pb ? ha(Yb) : Yb, Rb), hb(Ub.slice(jb.to)));
+            if (null === bb || null === jb) Xb(ab.name, bb, Eb ? "noMatch" : "missingArgs", {
+              closest: Eb ? Qb(Ub, Yb) : null,
+              functions: Db(bb) ? Jb(Ub) : []
             });
-            else if (ik(Qb, sb.slice(mb.from, mb.to))) nb(cb.name, bb, "placeholder");
+            else if (FA(kb, Ub.slice(jb.from, jb.to))) Xb(ab.name, bb, "placeholder");
             else {
-              const kb = Nb(bb) ? Rb(sb, mb.from, mb.to, null !== Ub && void 0 !== Ub ? Ub : "", lb) : null;
-              Hb[bb] = null !== kb && void 0 !== kb ? kb : sb.slice(0, mb.from) + Qb + sb.slice(mb.to), fb.add(bb), Kb(bb, cb.args.why, Qb)
+              const Ab = Db(bb) ? Vb(Ub, jb.from, jb.to, null !== Yb && void 0 !== Yb ? Yb : "", Rb) : null;
+              eb[bb] = null !== Ab && void 0 !== Ab ? Ab : Ub.slice(0, jb.from) + kb + Ub.slice(jb.to), vb.add(bb), ub(bb, ab.args.why, kb)
             }
           }
-          lb = lb.replace(cb.source, "")
+          Rb = Rb.replace(ab.source, "")
         }
       }
-      if (Xb = void 0, lb = Bc(Ms(lb), sc.length > 0), 0 === sc.length) {
-        var Yc, hc;
-        const cb = [...bb.matchAll(Ok)],
-          sb = 1 === cb.length ? cb[0][1] : null,
-          Wb = null !== (Yc = null !== ab && void 0 !== ab ? ab : kb) && void 0 !== Yc ? Yc : "index.js";
-        if (null !== sb && vb(null, sb)) cc(sb), lb = lb.replace(cb[0][0], "");
-        else if (null !== sb && qk.test(sb) && !ik(sb, null !== (hc = Hb[Wb]) && void 0 !== hc ? hc : "")) {
-          const bb = ck(Ak(sb));
-          Nb(Wb) && pb(Wb, bb, void 0) || (Hb[Wb] = bb, fb.add(Wb)), lb = lb.replace(cb[0][0], "")
+      if (Pb = void 0, Rb = Wa(LU(Rb), Ua.length > 0), 0 === Ua.length) {
+        var fa, ma;
+        const ab = [...bb.matchAll(hA)],
+          Ub = 1 === ab.length ? ab[0][1] : null,
+          Mb = null !== (fa = null !== Tb && void 0 !== Tb ? Tb : Ab) && void 0 !== fa ? fa : "index.js";
+        if (null !== Ub && Ob(null, Ub)) aa(Ub), Rb = Rb.replace(ab[0][0], "");
+        else if (null !== Ub && rA.test(Ub) && !FA(Ub, null !== (ma = eb[Mb]) && void 0 !== ma ? ma : "")) {
+          const bb = SU(oA(Ub));
+          Db(Mb) && Sb(Mb, bb, void 0) || (eb[Mb] = bb, vb.add(Mb)), Rb = Rb.replace(ab[0][0], "")
         }
       }
-      for (const mb of fb) {
-        var Jc;
-        if (Nb(mb)) {
-          var gc;
-          const bb = Object.values(Hb).some((bb => /\brequire\s*\(/.test(bb)));
-          Hb[mb] = sk(ck(bb ? Hb[mb] : Hb[mb].replace(/^module\.exports\s*=\s*(?:\{[\s\w$,:]*\}|[\w$]+)\s*;?[ \t]*(?:\n|$)/gm, "")), null !== (gc = sb[mb]) && void 0 !== gc ? gc : "");
-          const cb = new Set(Object.keys(Hb).filter((bb => bb !== mb && Nb(bb))).flatMap((bb => [...qs(Hb[bb])]))),
-            kb = Vk(Hb[mb], cb);
-          Hb[mb] = kb.text, db.push(...kb.added)
+      for (const jb of vb) {
+        var pa;
+        if (Db(jb)) {
+          var Na;
+          const bb = Object.values(eb).some((bb => /\brequire\s*\(/.test(bb)));
+          eb[jb] = bA(SU(bb ? eb[jb] : eb[jb].replace(/^module\.exports\s*=\s*(?:\{[\s\w$,:]*\}|[\w$]+)\s*;?[ \t]*(?:\n|$)/gm, "")), null !== (Na = Ub[jb]) && void 0 !== Na ? Na : "");
+          const ab = new Set(Object.keys(eb).filter((bb => bb !== jb && Db(bb))).flatMap((bb => [...KU(eb[bb])]))),
+            Ab = ZA(eb[jb], ab);
+          eb[jb] = Ab.text, lb.push(...Ab.added)
         }
-        const bb = mc(Rk(Sk(Hb[mb])), Nb(mb) ? Wb : [], null !== (Jc = sb[mb]) && void 0 !== Jc ? Jc : "");
-        Hb[mb] = bb.code, yb.push(...bb.renames)
+        const bb = ja(sA(wA(eb[jb])), Db(jb) ? Mb : [], null !== (pa = Ub[jb]) && void 0 !== pa ? pa : "");
+        eb[jb] = bb.code, Ib.push(...bb.renames)
       }
-      for (const mb of zb) {
-        const bb = mb.problems.length > 0 ? ` Kept as it was: ${mb.problems.join("; ")}.` : "",
-          cb = mb.fixed.length > 0 ? ` Names changed to real ones: ${mb.fixed.join(", ")}.` : "";
-        lb += `\n\nThis uses the ready-made ${mb.title}.${cb}${bb}${mb.setup?` ${mb.setup}`:""}`
+      for (const jb of Kb) {
+        const bb = jb.problems.length > 0 ? ` Kept as it was: ${jb.problems.join("; ")}.` : "",
+          ab = jb.fixed.length > 0 ? ` Names changed to real ones: ${jb.fixed.join(", ")}.` : "";
+        Rb += `\n\nThis uses the ready-made ${jb.title}.${ab}${bb}${jb.setup?` ${jb.setup}`:""}`
       }
       for (const {
-          from: mb,
-          to: tb
+          from: jb,
+          to: Hb
         }
-        of yb) lb += `\n\nI renamed \`${mb}\` to \`${tb}\`, the name World Code calls.`;
-      const tc = [];
-      for (const mb of fb) {
-        var yc;
-        const bb = null !== (yc = sb[mb]) && void 0 !== yc ? yc : "";
-        if (Hb[mb] !== bb) {
-          const cb = ib.get(mb);
-          tc.push(cb ? {
-            path: mb,
+        of Ib) Rb += `\n\nI renamed \`${jb}\` to \`${Hb}\`, the name World Code calls.`;
+      const Ha = [];
+      for (const jb of vb) {
+        var Ia;
+        const bb = null !== (Ia = Ub[jb]) && void 0 !== Ia ? Ia : "";
+        if (eb[jb] !== bb) {
+          const ab = Gb.get(jb);
+          Ha.push(ab ? {
+            path: jb,
             before: bb,
-            after: Hb[mb],
-            why: cb,
-            parts: Gb.get(mb)
+            after: eb[jb],
+            why: ab,
+            parts: qb.get(jb)
           } : {
-            path: mb,
+            path: jb,
             before: bb,
-            after: Hb[mb]
+            after: eb[jb]
           })
         }
       }
-      const Pc = "direct" === Tb && tc.length > 0,
-        Dc = tc.length > 0 || gb.length > 0;
+      const da = "direct" === Eb && Ha.length > 0,
+        Fa = Ha.length > 0 || Nb.length > 0;
       return {
-        text: lb.replace(/\n{3,}/g, "\n\n").trim(),
-        changes: tc,
-        failedEdits: Mb,
-        renamedCallbacks: yb,
-        worldCode: gb,
-        inPlace: Pc,
-        actions: Bb,
-        question: Dc ? null : wb,
-        notes: rb,
-        plan: Dc ? [] : Sb,
-        lookups: Dc ? hb.filter((bb => Lb.has(ub(bb)))) : null !== wb || Sb.length > 0 ? [] : hb,
-        prefabs: zb,
-        helpersAdded: [...new Set(db)]
+        text: Rb.replace(/\n{3,}/g, "\n\n").trim(),
+        changes: Ha,
+        failedEdits: Lb,
+        renamedCallbacks: Ib,
+        worldCode: Nb,
+        inPlace: da,
+        actions: Wb,
+        question: Fa ? null : wb,
+        notes: sb,
+        plan: Fa ? [] : Cb,
+        lookups: Fa ? mb.filter((bb => xb.has(ib(bb)))) : null !== wb || Cb.length > 0 ? [] : mb,
+        prefabs: Kb,
+        helpersAdded: [...new Set(lb)]
       }
     }
 
-    function Fk(bb, cb) {
-      const sb = "" === bb ? [] : bb.replace(/\n$/, "").split("\n"),
-        kb = "" === cb ? [] : cb.replace(/\n$/, "").split("\n");
-      let Wb = 0;
-      for (; Wb < sb.length && Wb < kb.length && sb[Wb] === kb[Wb];) Wb++;
-      let ab = sb.length,
-        Tb = kb.length;
-      for (; ab > Wb && Tb > Wb && sb[ab - 1] === kb[Tb - 1];) ab--, Tb--;
-      const Ub = sb.slice(Wb, ab),
-        Ib = kb.slice(Wb, Tb),
-        Hb = Array.from({
-          length: Ub.length + 1
-        }, (() => new Array(Ib.length + 1).fill(0)));
-      for (let nb = Ub.length - 1; nb >= 0; nb--)
-        for (let bb = Ib.length - 1; bb >= 0; bb--) Hb[nb][bb] = Ub[nb] === Ib[bb] ? Hb[nb + 1][bb + 1] + 1 : Math.max(Hb[nb + 1][bb], Hb[nb][bb + 1]);
-      const fb = sb.slice(0, Wb).map((bb => ({
+    function CA(bb, ab) {
+      const Ub = "" === bb ? [] : bb.replace(/\n$/, "").split("\n"),
+        Ab = "" === ab ? [] : ab.replace(/\n$/, "").split("\n");
+      let Mb = 0;
+      for (; Mb < Ub.length && Mb < Ab.length && Ub[Mb] === Ab[Mb];) Mb++;
+      let Tb = Ub.length,
+        Eb = Ab.length;
+      for (; Tb > Mb && Eb > Mb && Ub[Tb - 1] === Ab[Eb - 1];) Tb--, Eb--;
+      const Yb = Ub.slice(Mb, Tb),
+        Bb = Ab.slice(Mb, Eb),
+        eb = Array.from({
+          length: Yb.length + 1
+        }, (() => new Array(Bb.length + 1).fill(0)));
+      for (let Xb = Yb.length - 1; Xb >= 0; Xb--)
+        for (let bb = Bb.length - 1; bb >= 0; bb--) eb[Xb][bb] = Yb[Xb] === Bb[bb] ? eb[Xb + 1][bb + 1] + 1 : Math.max(eb[Xb + 1][bb], eb[Xb][bb + 1]);
+      const vb = Ub.slice(0, Mb).map((bb => ({
         kind: "same",
         text: bb
       })));
-      let Mb = 0,
-        Xb = 0;
-      for (; Mb < Ub.length || Xb < Ib.length;) Mb < Ub.length && Xb < Ib.length && Ub[Mb] === Ib[Xb] ? (fb.push({
+      let Lb = 0,
+        Pb = 0;
+      for (; Lb < Yb.length || Pb < Bb.length;) Lb < Yb.length && Pb < Bb.length && Yb[Lb] === Bb[Pb] ? (vb.push({
         kind: "same",
-        text: Ub[Mb]
-      }), Mb++, Xb++) : Xb < Ib.length && (Mb === Ub.length || Hb[Mb][Xb + 1] > Hb[Mb + 1][Xb]) ? (fb.push({
+        text: Yb[Lb]
+      }), Lb++, Pb++) : Pb < Bb.length && (Lb === Yb.length || eb[Lb][Pb + 1] > eb[Lb + 1][Pb]) ? (vb.push({
         kind: "added",
-        text: Ib[Xb]
-      }), Xb++) : (fb.push({
+        text: Bb[Pb]
+      }), Pb++) : (vb.push({
         kind: "removed",
-        text: Ub[Mb]
-      }), Mb++);
-      for (const nb of sb.slice(ab)) fb.push({
+        text: Yb[Lb]
+      }), Lb++);
+      for (const Xb of Ub.slice(Tb)) vb.push({
         kind: "same",
-        text: nb
+        text: Xb
       });
-      return fb
+      return vb
     }
-    const xk = /\b(?:publish|export)\b|\bsave\b.{0,20}\b(?:game|world|map|it|this|work)\b/i;
+    const VA = /\b(?:publish|export)\b|\bsave\b.{0,20}\b(?:game|world|map|it|this|work)\b/i;
 
-    function jk(bb) {
-      return xk.test(bb)
+    function OA(bb) {
+      return VA.test(bb)
     }
-    const pk = {
+    const cA = {
       worldCode: new Set(["write_file", "edit_file", "replace_function", "use_prefab", "edit_code_in_place", "export_game", "ask_creator", "plan", "remember", "view_file", "view_chunk", "view_game_state", "get_docs", "find_names", "view_prefab", "view_errors"]),
       codeBlock: new Set(["write_file", "edit_file", "replace_function", "add_world_code", "edit_code_in_place", "switch_to_world_code", "ask_creator", "view_world_code", "view_chunk", "view_game_state", "get_docs", "find_names", "view_errors"])
     };
 
-    function bW(bb, cb, sb) {
-      return Fc[bb].formatCall(cb, sb)
+    function JA(bb, ab, Ub) {
+      return ca[bb].formatCall(ab, Ub)
     }
 
-    function cW(bb, cb, sb, kb) {
-      return Fc[sb].declareTools(bb, cb, kb)
+    function nA(bb, ab, Ub, Ab) {
+      return ca[Ub].declareTools(bb, ab, Ab)
     }
 
-    function sW(bb) {
-      const cb = null === bb.path ? bb.tool : `${bb.tool} ${bb.path}`;
-      var sb;
-      if ("prefab" === bb.reason) return `${cb}: ${null!==(sb=bb.detail)&&void 0!==sb?sb:"the prefab couldn't go in."} Nothing changed.`;
-      if ("missingArgs" === bb.reason) return `${cb}: the call was missing an argument it needs, so nothing changed.`;
-      if ("placeholder" === bb.reason) return "write_file" === bb.tool ? `${cb}: the content was only "..." or had a line standing in for the rest, so nothing changed. Send the whole file, every line of it.` : `${cb}: the code had a line standing in for code left out ("// ... existing code ..."), so nothing changed. Write out every line it replaces.`;
-      if ("unread" === bb.reason) return `${cb}: you hadn't seen this code, so writing it whole could have lost what it has, and nothing changed. Make the change from its code, which ${null!==bb.path&&(0,mb.e)(bb.path)?"view_world_code":"view_file"} shows.`;
-      if ("brokenCode" === bb.reason) return `${cb}: the code around that function doesn't parse (a bracket is likely missing), so where it ends isn't clear and nothing changed. Send the whole fixed file with write_file instead.`;
-      return `${cb}: search matched nothing in the file, so nothing changed. ${bb.closest?`The closest lines (${bb.closest.line}-${bb.closest.lastLine}) are:\n${bb.closest.text}`:"No lines in the file are like it."}\nCopy the lines exactly${bb.functions.length>0?`, or use replace_function with one of these names: ${bb.functions.join(", ")}`:""}.`
+    function SA(bb) {
+      const ab = null === bb.path ? bb.tool : `${bb.tool} ${bb.path}`;
+      var Ub;
+      if ("prefab" === bb.reason) return `${ab}: ${null!==(Ub=bb.detail)&&void 0!==Ub?Ub:"the prefab couldn't go in."} Nothing changed.`;
+      if ("missingArgs" === bb.reason) return `${ab}: the call was missing an argument it needs, so nothing changed.`;
+      if ("placeholder" === bb.reason) return "write_file" === bb.tool ? `${ab}: the content was only "..." or had a line standing in for the rest, so nothing changed. Send the whole file, every line of it.` : `${ab}: the code had a line standing in for code left out ("// ... existing code ..."), so nothing changed. Write out every line it replaces.`;
+      if ("unread" === bb.reason) return `${ab}: you hadn't seen this code, so writing it whole could have lost what it has, and nothing changed. Make the change from its code, which ${null!==bb.path&&(0,jb.f)(bb.path)?"view_world_code":"view_file"} shows.`;
+      if ("brokenCode" === bb.reason) return `${ab}: the code around that function doesn't parse (a bracket is likely missing), so where it ends isn't clear and nothing changed. Send the whole fixed file with write_file instead.`;
+      return `${ab}: search matched nothing in the file, so nothing changed. ${bb.closest?`The closest lines (${bb.closest.line}-${bb.closest.lastLine}) are:\n${bb.closest.text}`:"No lines in the file are like it."}\nCopy the lines exactly${bb.functions.length>0?`, or use replace_function with one of these names: ${bb.functions.join(", ")}`:""}.`
     }
-    const kW = {
+    const bM = {
         offer: "matched",
         list: "matched",
         categories: !1,
         helperIndex: !0
       },
-      WW = /\b(?:game|minigame|mini-game|gamemode|game mode|map|server)\b/i;
+      aM = /\b(?:game|minigame|mini-game|gamemode|game mode|map|server)\b/i;
 
-    function aW(bb) {
+    function UM(bb) {
       return Object.values(bb).some((bb => "" !== bb.trim()))
     }
-    const TW = {
+    const AM = {
         format: "simple",
         nativeTools: !1
       },
-      UW = bb => `You are the coding helper inside Bloxd's World Code editor. Bloxd is a voxel game; World Code is JavaScript that runs on the game server for one world. The person asking is a young creator (13 or older) who is new to coding.\n\nHow World Code works:\n- The engine calls special top-level functions ("callbacks") when things happen: function onPlayerJoin(playerId) {...}, function tick(ms) {...}, function playerCommand(playerId, command) {...} and the others ${bb?"in the docs":"in the callback list"}. Define each callback once; never call callbacks yourself.\n- playerCommand gets the chat line without its "/" (e.g. "speed 2"); return true for a command you handled, so the player isn't told it is unknown, and return nothing (never false) for any other, or the game's own commands (/spawn) stop working.\n- tick(ms) runs 20 times a second, with the milliseconds since the last tick. Count time with it (add up ms) instead of setTimeout, and keep it light.\n- Talk to the game only through the api object: api.sendMessage(playerId, text), api.setClientOption(playerId, option, value) and the other methods ${bb?"in the docs":"in the API list"}. Use only methods, callbacks and client options that are ${bb?"in the docs":"in the lists below"}, with their exact names.\n- Item, block and mob names are case-sensitive, e.g. "Diamond Sword", "Red Wool", "Block of Gold", "Draugr Zombie". Use only names from the lists below. If what they asked for doesn't exist (e.g. there is no "Golden Apple"), use the closest real one and say so in your answer.\n- Pass arguments exactly as the docs describe. Leave optional arguments out instead of passing null or undefined, and don't pass later optional arguments just to reach one. The style argument of api.sendMessage and api.broadcastMessage is an object, e.g. { color: "green" }; positions are [x, y, z] arrays.\n- Text shown to players (messages, middle text, RightInfoText) must be a string: turn numbers into text with String(n) or a template string.\n- Variables at the top level keep their values while the world runs. Players are identified by playerId (a string, not their name).\n- Values you keep per player (lists, timers, scores, teams) need a start in onPlayerJoin and removing in onPlayerLeave(playerId), so tick never uses a player who left.\n- Use plain JavaScript (var/let/const, functions, objects, arrays). No import/export, no await, no DOM, no Node modules.\n- Settings: numbers and messages the creator may want to change (times, amounts, prices, speeds, messages shown to players, on/off switches) go in one const CONFIG = { ... } at the top of the file, each value a plain number, a quoted string or true/false with a short comment saying what it does, e.g. waveSeconds: 30, // seconds between zombie waves. The code uses CONFIG.waveSeconds, and a message that mentions a setting builds it from CONFIG ("You start with " + CONFIG.startCoins + " coins"), so changing the setting changes the message too. If the file has a CONFIG, add new settings to it and change a setting there; never make a second one. Don't move code they didn't ask about into CONFIG.\n\nRecipes for things the docs don't spell out:\n- Sounds: api.playSound(playerId, "levelup", 1, 1) or api.broadcastSound("coinsDrop", 1, 1); posSettings is left out or { playerIdOrPos: playerId }, never {}. Real names only: levelup, exp_collect, coinsDrop, cashRegister, beep, chestOpen, firecracker1, magicAccent1, horrorFright, ZombieGrunt1.\n- Particles: api.playParticleEffect({ presetId: "aura", pos1: [x, y, z], pos2: [x + 1, y + 2, z + 1] }); a preset takes only presetId, pos1, pos2. Real presetIds: aura, stomp, mobDeath, mobSpawnOrb, speedOuter, glowingOuter, redFirecrackerLarge (or blue, green...); no "portal" or "sparkle".\n- Shapes: customButtons [{ id: "dash", icon: "house", keycode: "KeyR" }] (no text); giveItem attributes { customDisplayName }; configureShopCategory { customTitle, sortPriority } (no icon); editItemCraftingRecipes [{ requires: [{ items: ["Leather"], amt: 3 }], produces: 1 }].\n- A player's name: api.getEntityName(playerId).\n- Flying: api.setClientOption(playerId, "creative", true) (false to stop).\n- Leaderboard: in onPlayerJoin, api.setClientOption(playerId, "lobbyLeaderboardInfo", { name: { displayName: "Name", sortPriority: 0 }, coins: { displayName: "Coins", sortPriority: 1 } }); then whenever a value changes, api.setTargetedPlayerSettingForEveryone(playerId, "lobbyLeaderboardValues", { coins: 5 }, true).\n- Text on the right of the screen: api.setClientOption(playerId, "RightInfoText", "Coins: 5").\n- Full health: api.setHealth(playerId, api.getClientOption(playerId, "maxHealth")).\n- Teleporting somewhere nearby: change x and z only, and keep y (or add a little so they drop onto the ground), e.g. const [x, y, z] = api.getPosition(playerId); api.setPosition(playerId, x + dx, y + 5, z + dz).\n- Positions: api.getPosition(playerId) is the player's feet. The block under them is api.getBlock(Math.floor(x), Math.floor(y) - 1, Math.floor(z)).\n- A player who can't play any more (e.g. out of lives): api.setPlayerGamemode(playerId, "spectator"); "survival" brings them back.\n- Mob waves: api.attemptSpawnMob(mobType, x, y, z) returns the mob's id. Keep the ids, and remove each in onMobDespawned(mobId) to know when they are all dead.\n- Removing or changing a block later: count ms in tick, then api.setBlock(x, y, z, "Air").\n- Coins as a currency: make it once in onPlayerJoin, only if they don't have it yet (a saved one comes back by itself, and setCurrency again would reset it): if (api.getCurrencyAmount(playerId, "coins") === null) api.setCurrency(playerId, "coins", { amount: 0, icon: "coins" }). Then api.giveCurrencyAmount(playerId, "coins", 5). When the request says anything is saved or kept after leaving (e.g. "it saves if you leave"), the coins are saved too: add persistent: true. Otherwise leave it out.\n- Values the request says must stay after leaving (e.g. when they last claimed a reward): api.setPlayerDbValue(playerId, "lastClaim", Date.now()) and api.getPlayerDbValue(playerId, "lastClaim") (null if never set); a saved value is a string or a number. Only those: lives, scores, checkpoints and timers for one game stay in top-level variables, which reset when they leave.\n- A player dying, from anything: onAttemptKillPlayer(killedPlayerId, attackingLifeformId). onPlayerKilledOtherPlayer only covers kills by players.\n- Stopping one player hurting another (e.g. teammates): onPlayerDamagingOtherPlayer(attackingPlayer, damagedPlayer) returns "preventDamage". onAttemptKillPlayer only stops the death, not the damage.\n- A counter of how long each player has been alive: in tick, count only while api.isAlive(playerId), and start again from 0 in onRespawnRequest (the death screen isn't time alive). Other timers don't need this.\n- A reward for reaching a count (5 kills, 10 coins): give it when the count first reaches it (=== 5, or keep a per-player flag such as rewarded[playerId] = true), never on every count after (>= 5 alone gives it again each time).\n- Telling whether a player moved: compare with where they were after any teleport of yours (update the saved position when you teleport them), or your own teleport counts as them moving.\n- A box around a player: the floor is at Math.floor(y) - 1 (y is their feet) and the roof just above their head at Math.floor(y) + 2 (players are 2 blocks tall), e.g. api.setBlockWalls([bx - 2, by - 1, bz - 2], [bx + 2, by + 2, bz + 2], "Glass", true, true) with bx, by, bz the floored position. A bottom corner at by would fill the block they stand in; replacing the ground under them is fine. If they should be trapped, also stop them breaking it: api.setCantChangeBlockRect(playerId, [bx - 2, by - 1, bz - 2], [bx + 2, by + 2, bz + 2]).`,
-      IW = bb => `You are the coding helper inside Bloxd's code block editor. Bloxd is a voxel game; a code block is a block in the world holding JavaScript that runs on the game server when a player clicks it. The person asking is a young creator (13 or older) who is new to coding.\n\nHow code blocks work:\n- Each click runs the whole code once, from top to bottom. A code block has no callbacks: something that has to happen later or by itself (when players join, every tick, on a chat command, when a player breaks a block) needs World Code, the world's main code, where callbacks such as onPlayerJoin(playerId), tick() and playerCommand(playerId, command) are defined as functions. Write that part as World Code (see How to answer), and put what one click does in the code block.\n- myId is the id of the player who clicked the block (a string, not their name), and thisPos is the block's position as [x, y, z].\n- Talk to the game only through the api object: api.sendMessage(myId, text), api.setClientOption(myId, option, value) and the other methods ${bb?"in the docs":"in the API list"}. Use only methods and client options that are ${bb?"in the docs":"in the lists below"}, with their exact names.\n- Item, block and mob names are case-sensitive, e.g. "Diamond Sword", "Red Wool", "Block of Gold", "Draugr Zombie". Use only names from the lists below. If what they asked for doesn't exist (e.g. there is no "Golden Apple"), use the closest real one and say so in your answer.\n- Pass arguments exactly as the docs describe. Leave optional arguments out instead of passing null or undefined, and don't pass later optional arguments just to reach one. The style argument of api.sendMessage and api.broadcastMessage is an object, e.g. { color: "green" }; positions are [x, y, z] arrays.\n- Text shown to players (messages, middle text, RightInfoText) must be a string: turn numbers into text with String(n) or a template string.\n- Variables made with const or let start again on every click. A value kept between clicks is assigned without const or let, after checking it is there, e.g. clicks = (typeof clicks === "number" ? clicks : 0) + 1. It lasts until World Code is next saved or the world restarts.\n- When the last line has a value, the player who clicked sees it in chat as "Result: ...".\n- Use plain JavaScript (var/let/const, functions, objects, arrays). No import/export, no await, no DOM, no Node modules.\n\nRecipes for things the docs don't spell out:\n- Sounds: api.playSound(myId, "levelup", 1, 1) or api.broadcastSound("coinsDrop", 1, 1); posSettings is left out or { playerIdOrPos: myId }, never {}. Real names only: levelup, exp_collect, coinsDrop, cashRegister, beep, chestOpen, firecracker1, magicAccent1, horrorFright, ZombieGrunt1.\n- Particles: api.playParticleEffect({ presetId: "aura", pos1: [x, y, z], pos2: [x + 1, y + 2, z + 1] }); a preset takes only presetId, pos1, pos2. Real presetIds: aura, stomp, mobDeath, mobSpawnOrb, speedOuter, glowingOuter, redFirecrackerLarge (or blue, green...); no "portal" or "sparkle".\n- Shapes: customButtons [{ id: "dash", icon: "house", keycode: "KeyR" }] (no text); giveItem attributes { customDisplayName }; configureShopCategory { customTitle, sortPriority } (no icon); editItemCraftingRecipes [{ requires: [{ items: ["Leather"], amt: 3 }], produces: 1 }].\n- A player's name: api.getEntityName(myId).\n- Teleporting the player onto this block: api.setPosition(myId, thisPos[0] + 0.5, thisPos[1] + 1, thisPos[2] + 0.5).\n- A block next to this one: api.setBlock(thisPos[0], thisPos[1] + 1, thisPos[2], "Block of Gold").\n- Flying: api.setClientOption(myId, "creative", true) (false to stop).\n- Text on the right of the screen: api.setClientOption(myId, "RightInfoText", "Coins: 5").\n- Full health: api.setHealth(myId, api.getClientOption(myId, "maxHealth")).\n- Teleporting somewhere nearby: change x and z only, and keep y (or add a little so they drop onto the ground), e.g. const [x, y, z] = api.getPosition(myId); api.setPosition(myId, x + dx, y + 5, z + dz).\n- Positions: api.getPosition(myId) is the player's feet. The block under them is api.getBlock(Math.floor(x), Math.floor(y) - 1, Math.floor(z)).\n- Coins as a currency: make it only if they don't have it yet (setCurrency again would reset it): if (api.getCurrencyAmount(myId, "coins") === null) api.setCurrency(myId, "coins", { amount: 0, icon: "coins" }). Then api.giveCurrencyAmount(myId, "coins", 5).\n- A box around the player: the floor is at Math.floor(y) - 1 (y is their feet) and the roof just above their head at Math.floor(y) + 2 (players are 2 blocks tall), e.g. api.setBlockWalls([bx - 2, by - 1, bz - 2], [bx + 2, by + 2, bz + 2], "Glass", true, true) with bx, by, bz the floored position.`,
-      HW = {
+      MM = bb => `You are the coding helper inside Bloxd's World Code editor. Bloxd is a voxel game; World Code is JavaScript that runs on the game server for one world. The person asking is a young creator (13 or older) who is new to coding.\n\nHow World Code works:\n- The engine calls special top-level functions ("callbacks") when things happen: function onPlayerJoin(playerId) {...}, function tick(ms) {...}, function playerCommand(playerId, command) {...} and the others ${bb?"in the docs":"in the callback list"}. Define each callback once; never call callbacks yourself.\n- playerCommand gets the chat line without its "/" (e.g. "speed 2"); return true for a command you handled, so the player isn't told it is unknown, and return nothing (never false) for any other, or the game's own commands (/spawn) stop working.\n- tick(ms) runs 20 times a second, with the milliseconds since the last tick. Count time with it (add up ms) instead of setTimeout, and keep it light.\n- Talk to the game only through the api object: api.sendMessage(playerId, text), api.setClientOption(playerId, option, value) and the other methods ${bb?"in the docs":"in the API list"}. Use only methods, callbacks and client options that are ${bb?"in the docs":"in the lists below"}, with their exact names.\n- Item, block and mob names are case-sensitive, e.g. "Diamond Sword", "Red Wool", "Block of Gold", "Draugr Zombie". Use only names from the lists below. If what they asked for doesn't exist (e.g. there is no "Golden Apple"), use the closest real one and say so in your answer.\n- Pass arguments exactly as the docs describe. Leave optional arguments out instead of passing null or undefined, and don't pass later optional arguments just to reach one. The style argument of api.sendMessage and api.broadcastMessage is an object, e.g. { color: "green" }; positions are [x, y, z] arrays.\n- Text shown to players (messages, middle text, RightInfoText) must be a string: turn numbers into text with String(n) or a template string.\n- Variables at the top level keep their values while the world runs. Players are identified by playerId (a string, not their name).\n- Values you keep per player (lists, timers, scores, teams) need a start in onPlayerJoin and removing in onPlayerLeave(playerId), so tick never uses a player who left.\n- Use plain JavaScript (var/let/const, functions, objects, arrays). No import/export, no await, no DOM, no Node modules.\n- Settings: numbers and messages the creator may want to change (times, amounts, prices, speeds, messages shown to players, on/off switches) go in one const CONFIG = { ... } at the top of the file, each value a plain number, a quoted string or true/false with a short comment saying what it does, e.g. waveSeconds: 30, // seconds between zombie waves. The code uses CONFIG.waveSeconds, and a message that mentions a setting builds it from CONFIG ("You start with " + CONFIG.startCoins + " coins"), so changing the setting changes the message too. If the file has a CONFIG, add new settings to it and change a setting there; never make a second one. Don't move code they didn't ask about into CONFIG.\n\nRecipes for things the docs don't spell out:\n- Sounds: api.playSound(playerId, "levelup", 1, 1) or api.broadcastSound("coinsDrop", 1, 1); posSettings is left out or { playerIdOrPos: playerId }, never {}. Real names only: levelup, exp_collect, coinsDrop, cashRegister, beep, chestOpen, firecracker1, magicAccent1, horrorFright, ZombieGrunt1.\n- Particles: api.playParticleEffect({ presetId: "aura", pos1: [x, y, z], pos2: [x + 1, y + 2, z + 1] }); a preset takes only presetId, pos1, pos2. Real presetIds: aura, stomp, mobDeath, mobSpawnOrb, speedOuter, glowingOuter, redFirecrackerLarge (or blue, green...); no "portal" or "sparkle".\n- Shapes: customButtons [{ id: "dash", icon: "house", keycode: "KeyR" }] (no text); giveItem attributes { customDisplayName }; configureShopCategory { customTitle, sortPriority } (no icon); editItemCraftingRecipes [{ requires: [{ items: ["Leather"], amt: 3 }], produces: 1 }].\n- A player's name: api.getEntityName(playerId).\n- Flying: api.setClientOption(playerId, "creative", true) (false to stop).\n- Leaderboard: in onPlayerJoin, api.setClientOption(playerId, "lobbyLeaderboardInfo", { name: { displayName: "Name", sortPriority: 0 }, coins: { displayName: "Coins", sortPriority: 1 } }); then whenever a value changes, api.setTargetedPlayerSettingForEveryone(playerId, "lobbyLeaderboardValues", { coins: 5 }, true).\n- Text on the right of the screen: api.setClientOption(playerId, "RightInfoText", "Coins: 5").\n- Full health: api.setHealth(playerId, api.getClientOption(playerId, "maxHealth")).\n- Teleporting somewhere nearby: change x and z only, and keep y (or add a little so they drop onto the ground), e.g. const [x, y, z] = api.getPosition(playerId); api.setPosition(playerId, x + dx, y + 5, z + dz).\n- Positions: api.getPosition(playerId) is the player's feet. The block under them is api.getBlock(Math.floor(x), Math.floor(y) - 1, Math.floor(z)).\n- A player who can't play any more (e.g. out of lives): api.setPlayerGamemode(playerId, "spectator"); "survival" brings them back.\n- Mob waves: api.attemptSpawnMob(mobType, x, y, z) returns the mob's id. Keep the ids, and remove each in onMobDespawned(mobId) to know when they are all dead.\n- Removing or changing a block later: count ms in tick, then api.setBlock(x, y, z, "Air").\n- Coins as a currency: make it once in onPlayerJoin, only if they don't have it yet (a saved one comes back by itself, and setCurrency again would reset it): if (api.getCurrencyAmount(playerId, "coins") === null) api.setCurrency(playerId, "coins", { amount: 0, icon: "coins" }). Then api.giveCurrencyAmount(playerId, "coins", 5). When the request says anything is saved or kept after leaving (e.g. "it saves if you leave"), the coins are saved too: add persistent: true. Otherwise leave it out.\n- Values the request says must stay after leaving (e.g. when they last claimed a reward): api.setPlayerDbValue(playerId, "lastClaim", Date.now()) and api.getPlayerDbValue(playerId, "lastClaim") (null if never set); a saved value is a string or a number. Only those: lives, scores, checkpoints and timers for one game stay in top-level variables, which reset when they leave.\n- A player dying, from anything: onAttemptKillPlayer(killedPlayerId, attackingLifeformId). onPlayerKilledOtherPlayer only covers kills by players.\n- Stopping one player hurting another (e.g. teammates): onPlayerDamagingOtherPlayer(attackingPlayer, damagedPlayer) returns "preventDamage". onAttemptKillPlayer only stops the death, not the damage.\n- A counter of how long each player has been alive: in tick, count only while api.isAlive(playerId), and start again from 0 in onRespawnRequest (the death screen isn't time alive). Other timers don't need this.\n- A reward for reaching a count (5 kills, 10 coins): give it when the count first reaches it (=== 5, or keep a per-player flag such as rewarded[playerId] = true), never on every count after (>= 5 alone gives it again each time).\n- Telling whether a player moved: compare with where they were after any teleport of yours (update the saved position when you teleport them), or your own teleport counts as them moving.\n- A box around a player: the floor is at Math.floor(y) - 1 (y is their feet) and the roof just above their head at Math.floor(y) + 2 (players are 2 blocks tall), e.g. api.setBlockWalls([bx - 2, by - 1, bz - 2], [bx + 2, by + 2, bz + 2], "Glass", true, true) with bx, by, bz the floored position. A bottom corner at by would fill the block they stand in; replacing the ground under them is fine. If they should be trapped, also stop them breaking it: api.setCantChangeBlockRect(playerId, [bx - 2, by - 1, bz - 2], [bx + 2, by + 2, bz + 2]).`,
+      TM = bb => `You are the coding helper inside Bloxd's code block editor. Bloxd is a voxel game; a code block is a block in the world holding JavaScript that runs on the game server when a player clicks it. The person asking is a young creator (13 or older) who is new to coding.\n\nHow code blocks work:\n- Each click runs the whole code once, from top to bottom. A code block has no callbacks: something that has to happen later or by itself (when players join, every tick, on a chat command, when a player breaks a block) needs World Code, the world's main code, where callbacks such as onPlayerJoin(playerId), tick() and playerCommand(playerId, command) are defined as functions. Write that part as World Code (see How to answer), and put what one click does in the code block.\n- myId is the id of the player who clicked the block (a string, not their name), and thisPos is the block's position as [x, y, z].\n- Talk to the game only through the api object: api.sendMessage(myId, text), api.setClientOption(myId, option, value) and the other methods ${bb?"in the docs":"in the API list"}. Use only methods and client options that are ${bb?"in the docs":"in the lists below"}, with their exact names.\n- Item, block and mob names are case-sensitive, e.g. "Diamond Sword", "Red Wool", "Block of Gold", "Draugr Zombie". Use only names from the lists below. If what they asked for doesn't exist (e.g. there is no "Golden Apple"), use the closest real one and say so in your answer.\n- Pass arguments exactly as the docs describe. Leave optional arguments out instead of passing null or undefined, and don't pass later optional arguments just to reach one. The style argument of api.sendMessage and api.broadcastMessage is an object, e.g. { color: "green" }; positions are [x, y, z] arrays.\n- Text shown to players (messages, middle text, RightInfoText) must be a string: turn numbers into text with String(n) or a template string.\n- Variables made with const or let start again on every click. A value kept between clicks is assigned without const or let, after checking it is there, e.g. clicks = (typeof clicks === "number" ? clicks : 0) + 1. It lasts until World Code is next saved or the world restarts.\n- When the last line has a value, the player who clicked sees it in chat as "Result: ...".\n- Use plain JavaScript (var/let/const, functions, objects, arrays). No import/export, no await, no DOM, no Node modules.\n\nRecipes for things the docs don't spell out:\n- Sounds: api.playSound(myId, "levelup", 1, 1) or api.broadcastSound("coinsDrop", 1, 1); posSettings is left out or { playerIdOrPos: myId }, never {}. Real names only: levelup, exp_collect, coinsDrop, cashRegister, beep, chestOpen, firecracker1, magicAccent1, horrorFright, ZombieGrunt1.\n- Particles: api.playParticleEffect({ presetId: "aura", pos1: [x, y, z], pos2: [x + 1, y + 2, z + 1] }); a preset takes only presetId, pos1, pos2. Real presetIds: aura, stomp, mobDeath, mobSpawnOrb, speedOuter, glowingOuter, redFirecrackerLarge (or blue, green...); no "portal" or "sparkle".\n- Shapes: customButtons [{ id: "dash", icon: "house", keycode: "KeyR" }] (no text); giveItem attributes { customDisplayName }; configureShopCategory { customTitle, sortPriority } (no icon); editItemCraftingRecipes [{ requires: [{ items: ["Leather"], amt: 3 }], produces: 1 }].\n- A player's name: api.getEntityName(myId).\n- Teleporting the player onto this block: api.setPosition(myId, thisPos[0] + 0.5, thisPos[1] + 1, thisPos[2] + 0.5).\n- A block next to this one: api.setBlock(thisPos[0], thisPos[1] + 1, thisPos[2], "Block of Gold").\n- Flying: api.setClientOption(myId, "creative", true) (false to stop).\n- Text on the right of the screen: api.setClientOption(myId, "RightInfoText", "Coins: 5").\n- Full health: api.setHealth(myId, api.getClientOption(myId, "maxHealth")).\n- Teleporting somewhere nearby: change x and z only, and keep y (or add a little so they drop onto the ground), e.g. const [x, y, z] = api.getPosition(myId); api.setPosition(myId, x + dx, y + 5, z + dz).\n- Positions: api.getPosition(myId) is the player's feet. The block under them is api.getBlock(Math.floor(x), Math.floor(y) - 1, Math.floor(z)).\n- Coins as a currency: make it only if they don't have it yet (setCurrency again would reset it): if (api.getCurrencyAmount(myId, "coins") === null) api.setCurrency(myId, "coins", { amount: 0, icon: "coins" }). Then api.giveCurrencyAmount(myId, "coins", 5).\n- A box around the player: the floor is at Math.floor(y) - 1 (y is their feet) and the roof just above their head at Math.floor(y) + 2 (players are 2 blocks tall), e.g. api.setBlockWalls([bx - 2, by - 1, bz - 2], [bx + 2, by + 2, bz + 2], "Glass", true, true) with bx, by, bz the floored position.`,
+      EM = {
         search: "lines to find",
         replace: "lines to put instead",
         codeBlock: "...all of the code block's code...",
@@ -5898,112 +5898,112 @@ export const modules = {
         worldCode: "...only the World Code to add...",
         function: "function onPlayerJoin(playerId) {\n\t...the whole new function...\n}"
       },
-      fW = Object.values(HW);
-    const MW = `You looked at World Code: its files are below, their paths starting ${mb.j}. Put the part of the request that needs World Code (a callback, or something that happens without a click) straight into World Code with the same calls, its path exactly as shown, e.g. ${mb.j}index.js (in World Code the player is playerId; there is no myId or thisPos). A callback World Code already has is changed in place, with what it already does kept, never defined twice. Keep the code block's own change on the path ${mb.d}, and leave it out if the request is all World Code. They are taken to World Code to see the change.`;
+      YM = Object.values(EM);
+    const BM = `You looked at World Code: its files are below, their paths starting ${jb.l}. Put the part of the request that needs World Code (a callback, or something that happens without a click) straight into World Code with the same calls, its path exactly as shown, e.g. ${jb.l}index.js (in World Code the player is playerId; there is no myId or thisPos). A callback World Code already has is changed in place, with what it already does kept, never defined twice. Keep the code block's own change on the path ${jb.b}, and leave it out if the request is all World Code. They are taken to World Code to see the change.`;
 
-    function XW(bb, cb, sb, kb) {
-      var Wb, ab, Tb, Ub;
+    function eM(bb, ab, Ub, Ab) {
+      var Mb, Tb, Eb, Yb;
       let {
-        hasWorldCodeFiles: Ib,
-        hasLookedUp: Hb,
-        movesToWorldCode: fb,
-        listedPrefabs: Mb,
-        guidesToPrefabs: Xb
-      } = kb;
-      const nb = cb ? mb.d : "index.js",
-        lb = cb ? `${mb.j}index.js` : nb,
-        eb = (bb, cb) => bW(sb, bb, cb),
-        Cb = cb => bb.some((bb => bb.name === cb)),
-        Nb = bb.filter((bb => ["content", "replace", "code"].some((cb => cb in bb.inputSchema.properties)))),
-        Vb = Cb("edit_code_in_place") ? `\nFor a fix of one to a few lines in the code open in the editor, use edit_code_in_place instead: it changes their code straight away, as if they pressed Apply, and they can undo it. search is copied exactly from the open code:\n${eb("edit_code_in_place",{why:"what this fix does",search:HW.search,replace:HW.replace})}` : "",
-        Lb = Cb("export_game") ? `\nWhen the creator asks to export, save or publish their world or game, your answer must contain the export_game call; without it nothing is exported. For example, if the creator writes "export the world", your whole answer is:\nSaving your world as your custom game now!\n${eb("export_game",{})}` : "",
-        ub = Cb("replace_function") ? `\nWhen you change only one or two functions or callbacks of a file that already has code, you can send just those instead of the whole file. replace_function finds a function by its name and puts your whole new function in its place; with a name the file doesn't have yet, it adds your new callback or function at the end, changing nothing already there:\n${eb("replace_function",{path:lb,name:"onPlayerJoin",why:"what the new function does",code:HW.function})}` : "",
-        Yb = Cb("edit_file") ? `\nFor a file longer than 6000 characters, don't send it whole: change only the parts that need it, with replace_function where you can, and an edit_file call for each other part, where search is copied exactly from the current file:\n${eb("edit_file",{path:nb,why:"what this part's change does",search:HW.search,replace:HW.replace})}` : "",
-        hb = cb ? `2. Then give the whole new code with a write_file call, exactly like this:\n${eb("write_file",{path:nb,why:"what the change does",content:HW.codeBlock})}` : `2. Then give every file you change, in full, with a write_file call, exactly like this:\n${eb("write_file",{path:nb,why:"what the change does",content:HW.file})}`,
-        Jb = cb ? "" : ` If there is no code yet, write it in ${nb}.`,
-        gb = eb("switch_to_world_code", {}),
-        Bb = cb ? Ib ? `\n${MW}` : `\nIf part of the request needs World Code (a callback, or something that happens without a click), give that part as World Code with an add_world_code call, with its callbacks written as functions (in World Code the player is playerId; there is no myId or thisPos), exactly like this:\n${eb("add_world_code",{code:HW.worldCode})}\n${fb?"In your sentences, say which part goes in World Code: they are taken there, and it is put in for them.":"In your sentences, say which part goes in World Code and that they should press the World Code button to switch there and add it."} Leave out the code block's write_file call if the request is all World Code.${Cb("view_world_code")?`\nTo see what World Code already has before you write that part (a callback it may already define), look at it first:\n${eb("view_world_code",{})}`:""}\nWhen the request is all World Code, also call switch_to_world_code after add_world_code: it takes them to World Code, where its AI Helper is asked to add your World Code part. Give a request instead when they asked to go to World Code for something else:\n${gb}` : "",
-        tb = Xb && Cb("use_prefab") && Mb.length >= 2,
-        yb = tb ? Mb.slice(0, 3).map((bb => bb.title)).join("\n") : "A parkour race\nZombie survival\nCapture the flag",
-        Pb = tb ? " When you ask what kind of game they want, the choices are the 2 to 4 listed prefabs that fit the request best, by their titles: the one they pick is put in with use_prefab next." : "",
-        Db = Cb("ask_creator") ? `\nOnly if the request is too unclear to build anything sensible, ask instead of writing code: call ask_creator with one short question and 2 to 4 short choices, one per line. That is: no idea what kind of thing they want ("make a game"), or asking to make their game better, more fun or cooler without saying how ("make it more fun"): then the choices are 2 to 4 different ideas built on what their code already has, each a short concrete thing to add, not a general word like "more fun" (e.g. for a snowball fight: "Power-ups that drop in", "A score at the top", "Last player standing wins"). Otherwise build it, choosing sensibly, and say in your sentences what you chose so they can ask for something different. Never ask for personal details (name, age, school, where they live).${Pb}\n${eb("ask_creator",{question:"What kind of game should it be?",choices:yb,allow_other:"true"})}` : "",
-        Eb = Cb("plan") ? `\n${"deepseek"===sb?"When a request is big, instead of writing it all at once, you may":"This request is big. Instead of writing it all at once, you may"} call plan with 2 to 5 short steps, one per line, each small enough to build and try on its own, the first one playable. Then send no code: the creator builds the steps one at a time. Build it at once instead if it is really only a few lines:\n${eb("plan",{steps:"Give each player 0 coins when they join, shown on screen\nEarn a coin for each block broken\nA /shop command that sells a sword for 10 coins"})}` : "",
-        ib = null !== (Wb = Mb[0]) && void 0 !== Wb ? Wb : lk("parkour"),
-        Ob = (null !== (ab = null === ib || void 0 === ib ? void 0 : ib.settings) && void 0 !== ab ? ab : []).slice(0, 2).map((bb => `${bb.key}: ${bb.value}`)).join("\n");
-      return `How to answer:\n1. Start with one or two short, friendly sentences in simple words saying what the change does, in the present tense as they read it before it goes in ("This adds...", "This changes..."; or what was wrong), and anything you had to do differently from what they asked. Don't promise it works: they will press Submit and try it. No long lectures.\n${hb}${ub}${Yb}${Vb}${Bb}${Cb("use_prefab")?`\nFor a game, or a feature (a kit, a shop, rewards...), that a prefab listed below fits, put the prefab in with use_prefab instead of writing that code yourself: it is tested code that works, and it fits around the code they already have: their code stays as it is, and where both have the same callback (onPlayerJoin...) both run, so never rewrite their code to make room for a prefab. Give only the settings the request changes, one per line as key: value, each value written as in JavaScript (text in quotes, positions as [x, y, z]); the rest keep their defaults. For a game like the one asked for but not the same, still use the closest prefab, then in the same answer, after the use_prefab call, change what it doesn't do: replace one of its functions by name, or add a callback, with replace_function. If no prefab fits, write the code yourself:\n${eb("use_prefab",{name:null!==(Tb=null===ib||void 0===ib?void 0:ib.name)&&void 0!==Tb?Tb:"parkour",settings:Ob,why:null!==(Ub=null===ib||void 0===ib?void 0:ib.summary)&&void 0!==Ub?Ub:"a parkour course"})}`:""}${Lb}${Db}${Eb}${Cb("remember")?`\nIf the creator tells you something lasting about their game that later requests should know (its idea, its rules, names of teams, items or places in it), also call remember with one short sentence about the game. They are asked before it is kept. Only what they said, never personal details, and not what the code already shows:\n${eb("remember",{note:"A zombie survival game: a wave comes every 30 seconds and players start with a sword"})}`:""}${function(bb,cb,sb){const kb=bb.some((bb=>"fetch_url"===bb.name)),Wb={view_file:`To see another of their files from the list, before you change it:\n${cb("view_file",{path:"shop.js"})}`,view_world_code:`To see World Code, so you can change it yourself:\n${cb("view_world_code",{})}`,view_chunk:`To see the blocks around the player (or give a position "x y z" for another chunk near them):\n${cb("view_chunk",{})}`,view_game_state:`To see where the player is, their health, what they hold and carry, and the players and mobs near them:\n${cb("view_game_state",{})}`,fetch_url:`To read the docs: ${Qb.m} lists every docs page with its link. Read it, then the page you need (for a long page, the part that has it):\n${cb("fetch_url",{url:Qb.m})}`,get_docs:kb?`Or, for a name you already know, read its docs in full, or list every api method, callback or client option by name (${Qc}):\n${cb("get_docs",{name:"setClientOption"})}\n${cb("get_docs",{list:"callbacks"})}`:`To read the full docs of an api method, callback or client option the lists only name:\n${cb("get_docs",{name:"setClientOption"})}`,find_names:`To find the exact names of blocks, items or mobs:\n${cb("find_names",{words:"gold sword"})}`,view_errors:`To see all the errors their world showed, not only the newest:\n${cb("view_errors",{})}`,list_prefabs:`To see the prefabs for one kind of game, and the ready-made functions for it:\n${cb("list_prefabs",{category:"pvp"})}`,view_prefab:`To see one prefab in full, every setting and the functions to replace to change it, before you use it:\n${cb("view_prefab",{name:"parkour"})}`},ab=bb.flatMap((bb=>{const cb=Wb[bb.name];return void 0===cb?[]:[cb]}));return 0===ab.length?sb?"\nYou have looked things up as many times as you can: answer now with what you found.":"":`\
+        hasWorldCodeFiles: Bb,
+        hasLookedUp: eb,
+        movesToWorldCode: vb,
+        listedPrefabs: Lb,
+        guidesToPrefabs: Pb
+      } = Ab;
+      const Xb = ab ? jb.b : "index.js",
+        Rb = ab ? `${jb.l}index.js` : Xb,
+        yb = (bb, ab) => JA(Ub, bb, ab),
+        Zb = ab => bb.some((bb => bb.name === ab)),
+        Db = bb.filter((bb => ["content", "replace", "code"].some((ab => ab in bb.inputSchema.properties)))),
+        zb = Zb("edit_code_in_place") ? `\nFor a fix of one to a few lines in the code open in the editor, use edit_code_in_place instead: it changes their code straight away, as if they pressed Apply, and they can undo it. search is copied exactly from the open code:\n${yb("edit_code_in_place",{why:"what this fix does",search:EM.search,replace:EM.replace})}` : "",
+        xb = Zb("export_game") ? `\nWhen the creator asks to export, save or publish their world or game, your answer must contain the export_game call; without it nothing is exported. For example, if the creator writes "export the world", your whole answer is:\nSaving your world as your custom game now!\n${yb("export_game",{})}` : "",
+        ib = Zb("replace_function") ? `\nWhen you change only one or two functions or callbacks of a file that already has code, you can send just those instead of the whole file. replace_function finds a function by its name and puts your whole new function in its place; with a name the file doesn't have yet, it adds your new callback or function at the end, changing nothing already there:\n${yb("replace_function",{path:Rb,name:"onPlayerJoin",why:"what the new function does",code:EM.function})}` : "",
+        fb = Zb("edit_file") ? `\nFor a file longer than 6000 characters, don't send it whole: change only the parts that need it, with replace_function where you can, and an edit_file call for each other part, where search is copied exactly from the current file:\n${yb("edit_file",{path:Xb,why:"what this part's change does",search:EM.search,replace:EM.replace})}` : "",
+        mb = ab ? `2. Then give the whole new code with a write_file call, exactly like this:\n${yb("write_file",{path:Xb,why:"what the change does",content:EM.codeBlock})}` : `2. Then give every file you change, in full, with a write_file call, exactly like this:\n${yb("write_file",{path:Xb,why:"what the change does",content:EM.file})}`,
+        pb = ab ? "" : ` If there is no code yet, write it in ${Xb}.`,
+        Nb = yb("switch_to_world_code", {}),
+        Wb = ab ? Bb ? `\n${BM}` : `\nIf part of the request needs World Code (a callback, or something that happens without a click), give that part as World Code with an add_world_code call, with its callbacks written as functions (in World Code the player is playerId; there is no myId or thisPos), exactly like this:\n${yb("add_world_code",{code:EM.worldCode})}\n${vb?"In your sentences, say which part goes in World Code: they are taken there, and it is put in for them.":"In your sentences, say which part goes in World Code and that they should press the World Code button to switch there and add it."} Leave out the code block's write_file call if the request is all World Code.${Zb("view_world_code")?`\nTo see what World Code already has before you write that part (a callback it may already define), look at it first:\n${yb("view_world_code",{})}`:""}\nWhen the request is all World Code, also call switch_to_world_code after add_world_code: it takes them to World Code, where its AI Helper is asked to add your World Code part. Give a request instead when they asked to go to World Code for something else:\n${Nb}` : "",
+        Hb = Pb && Zb("use_prefab") && Lb.length >= 2,
+        Ib = Hb ? Lb.slice(0, 3).map((bb => bb.title)).join("\n") : "A parkour race\nZombie survival\nCapture the flag",
+        db = Hb ? " When you ask what kind of game they want, the choices are the 2 to 4 listed prefabs that fit the request best, by their titles: the one they pick is put in with use_prefab next." : "",
+        Fb = Zb("ask_creator") ? `\nOnly if the request is too unclear to build anything sensible, ask instead of writing code: call ask_creator with one short question and 2 to 4 short choices, one per line. That is: no idea what kind of thing they want ("make a game"), or asking to make their game better, more fun or cooler without saying how ("make it more fun"): then the choices are 2 to 4 different ideas built on what their code already has, each a short concrete thing to add, not a general word like "more fun" (e.g. for a snowball fight: "Power-ups that drop in", "A score at the top", "Last player standing wins"). Otherwise build it, choosing sensibly, and say in your sentences what you chose so they can ask for something different. Never ask for personal details (name, age, school, where they live).${db}\n${yb("ask_creator",{question:"What kind of game should it be?",choices:Ib,allow_other:"true"})}` : "",
+        hb = Zb("plan") ? `\n${"deepseek"===Ub?"When a request is big, instead of writing it all at once, you may":"This request is big. Instead of writing it all at once, you may"} call plan with 2 to 5 short steps, one per line, each small enough to build and try on its own, the first one playable. Then send no code: the creator builds the steps one at a time. Build it at once instead if it is really only a few lines:\n${yb("plan",{steps:"Give each player 0 coins when they join, shown on screen\nEarn a coin for each block broken\nA /shop command that sells a sword for 10 coins"})}` : "",
+        Gb = null !== (Mb = Lb[0]) && void 0 !== Mb ? Mb : XA("parkour"),
+        Qb = (null !== (Tb = null === Gb || void 0 === Gb ? void 0 : Gb.settings) && void 0 !== Tb ? Tb : []).slice(0, 2).map((bb => `${bb.key}: ${bb.value}`)).join("\n");
+      return `How to answer:\n1. Start with one or two short, friendly sentences in simple words saying what the change does, in the present tense as they read it before it goes in ("This adds...", "This changes..."; or what was wrong), and anything you had to do differently from what they asked. Don't promise it works: they will press Submit and try it. No long lectures.\n${mb}${ib}${fb}${zb}${Wb}${Zb("use_prefab")?`\nFor a game, or a feature (a kit, a shop, rewards...), that a prefab listed below fits, put the prefab in with use_prefab instead of writing that code yourself: it is tested code that works, and it fits around the code they already have: their code stays as it is, and where both have the same callback (onPlayerJoin...) both run, so never rewrite their code to make room for a prefab. Give only the settings the request changes, one per line as key: value, each value written as in JavaScript (text in quotes, positions as [x, y, z]); the rest keep their defaults. For a game like the one asked for but not the same, still use the closest prefab, then in the same answer, after the use_prefab call, change what it doesn't do: replace one of its functions by name, or add a callback, with replace_function. If no prefab fits, write the code yourself:\n${yb("use_prefab",{name:null!==(Eb=null===Gb||void 0===Gb?void 0:Gb.name)&&void 0!==Eb?Eb:"parkour",settings:Qb,why:null!==(Yb=null===Gb||void 0===Gb?void 0:Gb.summary)&&void 0!==Yb?Yb:"a parkour course"})}`:""}${xb}${Fb}${hb}${Zb("remember")?`\nIf the creator tells you something lasting about their game that later requests should know (its idea, its rules, names of teams, items or places in it), also call remember with one short sentence about the game. They are asked before it is kept. Only what they said, never personal details, and not what the code already shows:\n${yb("remember",{note:"A zombie survival game: a wave comes every 30 seconds and players start with a sword"})}`:""}${function(bb,ab,Ub){const Ab=bb.some((bb=>"fetch_url"===bb.name)),Mb={view_file:`To see another of their files from the list, before you change it:\n${ab("view_file",{path:"shop.js"})}`,view_world_code:`To see World Code, so you can change it yourself:\n${ab("view_world_code",{})}`,view_chunk:`To see the blocks around the player (or give a position "x y z" for another chunk near them):\n${ab("view_chunk",{})}`,view_game_state:`To see where the player is, their health, what they hold and carry, and the players and mobs near them:\n${ab("view_game_state",{})}`,fetch_url:`To read the docs: ${kb.n} lists every docs page with its link. Read it, then the page you need (for a long page, the part that has it):\n${ab("fetch_url",{url:kb.n})}`,get_docs:Ab?`Or, for a name you already know, read its docs in full, or list every api method, callback or client option by name (${ka}):\n${ab("get_docs",{name:"setClientOption"})}\n${ab("get_docs",{list:"callbacks"})}`:`To read the full docs of an api method, callback or client option the lists only name:\n${ab("get_docs",{name:"setClientOption"})}`,find_names:`To find the exact names of blocks, items or mobs:\n${ab("find_names",{words:"gold sword"})}`,view_errors:`To see all the errors their world showed, not only the newest:\n${ab("view_errors",{})}`,list_prefabs:`To see the prefabs for one kind of game, and the ready-made functions for it:\n${ab("list_prefabs",{category:"pvp"})}`,view_prefab:`To see one prefab in full, every setting and the functions to replace to change it, before you use it:\n${ab("view_prefab",{name:"parkour"})}`},Tb=bb.flatMap((bb=>{const ab=Mb[bb.name];return void 0===ab?[]:[ab]}));return 0===Tb.length?Ub?"\nYou have looked things up as many times as you can: answer now with what you found.":"":`\
       nIf you need to see something before you can answer well, look it up first: answer with only look - up calls, no other words and no code, and you are asked again with what they found.$ {
-        kb ? "The docs aren't in this message: before you use an api method, callback or client option, look up any you aren't sure of, with llms.txt where you can. Make every look-up you need in one answer where you can, up to 4." : "Most requests need no look-up: only look when the answer depends on it."
+        Ab ? "The docs aren't in this message: before you use an api method, callback or client option, look up any you aren't sure of, with llms.txt where you can. Make every look-up you need in one answer where you can, up to 4." : "Most requests need no look-up: only look when the answer depends on it."
       }\
       n$ {
-        ab.join("\n")
+        Tb.join("\n")
       }
-      `}(bb,eb,Hb)}\nGive each call that changes code a why: a few plain words the creator sees beside that change, e.g. "gives everyone a sword when they join".\n3. Keep everything that already works; change only what the request needs. Don't add commands or features they didn't ask for: suggest them in your answer instead.${Jb}\n4. If the request is not about their ${cb?"code block":"World Code"}, or asks for something unsafe or unkind, say briefly that you can only help with their game's code.\nDo not put code anywhere except in ${Nb.map((bb=>bb.name)).join(" or ")} calls. ${function(bb){return Fc[bb].callStyle}(sb)}`
+      `}(bb,yb,eb)}\nGive each call that changes code a why: a few plain words the creator sees beside that change, e.g. "gives everyone a sword when they join".\n3. Keep everything that already works; change only what the request needs. Don't add commands or features they didn't ask for: suggest them in your answer instead.${pb}\n4. If the request is not about their ${ab?"code block":"World Code"}, or asks for something unsafe or unkind, say briefly that you can only help with their game's code.\nDo not put code anywhere except in ${Db.map((bb=>bb.name)).join(" or ")} calls. ${function(bb){return ca[bb].callStyle}(Ub)}`
     }
 
-    function nW(bb, cb, sb) {
-      return Object.keys(bb).filter((bb => !sb || !(0, mb.e)(bb))).sort(((bb, sb) => (sb === cb ? 1 : 0) - (bb === cb ? 1 : 0) || bb.localeCompare(sb)))
+    function vM(bb, ab, Ub) {
+      return Object.keys(bb).filter((bb => !Ub || !(0, jb.f)(bb))).sort(((bb, Ub) => (Ub === ab ? 1 : 0) - (bb === ab ? 1 : 0) || bb.localeCompare(Ub)))
     }
 
-    function mW(bb, cb, sb) {
-      var kb;
-      const Wb = nW(bb, cb, sb);
-      return null !== cb && Wb.includes(cb) ? cb : null !== (kb = Wb[0]) && void 0 !== kb ? kb : null
+    function LM(bb, ab, Ub) {
+      var Ab;
+      const Mb = vM(bb, ab, Ub);
+      return null !== ab && Mb.includes(ab) ? ab : null !== (Ab = Mb[0]) && void 0 !== Ab ? Ab : null
     }
 
-    function lW(bb) {
-      const cb = `${arguments.length>1&&void 0!==arguments[1]?arguments[1]:""}${bb.includes("index.ts")?"index.ts":"index.js"}`;
-      return `Only ${cb} runs by itself: another file runs when ${cb} imports or requires it, so keep the import, require and export lines their files have (no import/export is for one file), and put callbacks in ${cb}.\n`
+    function PM(bb) {
+      const ab = `${arguments.length>1&&void 0!==arguments[1]?arguments[1]:""}${bb.includes("index.ts")?"index.ts":"index.js"}`;
+      return `Only ${ab} runs by itself: another file runs when ${ab} imports or requires it, so keep the import, require and export lines their files have (no import/export is for one file), and put callbacks in ${ab}.\n`
     }
 
-    function QW(bb, cb) {
-      var sb;
+    function XM(bb, ab) {
+      var Ub;
       const {
-        files: kb,
-        activePath: Wb
-      } = bb, ab = !0 === bb.codeBlock, Tb = nW(kb, Wb, ab);
-      if (0 === Tb.length || Tb.every((bb => "" === kb[bb].trim()))) return ab ? "There is no code yet: the code block is empty." : Tb.includes("index.ts") ? "There is no code yet: index.ts is empty. Write it in index.ts." : "There is no code yet: index.js is empty.";
-      const Ub = null !== (sb = mW(kb, Wb, ab)) && void 0 !== sb ? sb : Tb[0];
-      return `${Tb.length>1?`Their files:\n${Tb.map((bb=>{const cb=""===(sb=kb[bb])?0:sb.replace(/\n$/,"").split("\n").length;var sb;return`- ${bb}: ${1===cb?"1 line":`${cb} lines`}${bb===Ub?" (open in the editor, its code below)":""}`})).join("\n")}\n${ab?"":lW(Tb)}\n`:""}${function(bb,cb,sb,kb){return cb.map((cb=>Fc[kb].fileResult(cb,bb[cb],cb===sb))).join("\n\n")}(kb,[Ub],Wb,cb)}`
+        files: Ab,
+        activePath: Mb
+      } = bb, Tb = !0 === bb.codeBlock, Eb = vM(Ab, Mb, Tb);
+      if (0 === Eb.length || Eb.every((bb => "" === Ab[bb].trim()))) return Tb ? "There is no code yet: the code block is empty." : Eb.includes("index.ts") ? "There is no code yet: index.ts is empty. Write it in index.ts." : "There is no code yet: index.js is empty.";
+      const Yb = null !== (Ub = LM(Ab, Mb, Tb)) && void 0 !== Ub ? Ub : Eb[0];
+      return `${Eb.length>1?`Their files:\n${Eb.map((bb=>{const ab=""===(Ub=Ab[bb])?0:Ub.replace(/\n$/,"").split("\n").length;var Ub;return`- ${bb}: ${1===ab?"1 line":`${ab} lines`}${bb===Yb?" (open in the editor, its code below)":""}`})).join("\n")}\n${Tb?"":PM(Eb)}\n`:""}${function(bb,ab,Ub,Ab){return ab.map((ab=>ca[Ab].fileResult(ab,bb[ab],ab===Ub))).join("\n\n")}(Ab,[Yb],Mb,ab)}`
     }
 
-    function eW(bb) {
-      var cb, sb, kb, Wb, ab, Tb;
+    function jM(bb) {
+      var ab, Ub, Ab, Mb, Tb, Eb;
       return {
         codeBlock: !0 === bb.codeBlock,
-        hasCode: "" !== (null !== (cb = bb.files[null !== (sb = bb.activePath) && void 0 !== sb ? sb : ""]) && void 0 !== cb ? cb : "").trim(),
+        hasCode: "" !== (null !== (ab = bb.files[null !== (Ub = bb.activePath) && void 0 !== Ub ? Ub : ""]) && void 0 !== ab ? ab : "").trim(),
         hasBigFile: Object.values(bb.files).some((bb => bb.length > 6e3)),
-        wantsExport: jk(bb.request),
+        wantsExport: OA(bb.request),
         canAsk: !0 === bb.canAsk,
-        canRemember: !0 === (null === (kb = bb.about) || void 0 === kb ? void 0 : kb.canRemember),
-        isBigRequest: Hc(bb.request),
+        canRemember: !0 === (null === (Ab = bb.about) || void 0 === Ab ? void 0 : Ab.canRemember),
+        isBigRequest: ea(bb.request),
         canLookUp: !0 === bb.canLookUp,
         hasOtherFiles: Object.keys(bb.files).length > 1,
         hasErrors: bb.errors.length > 0,
         canChangeWorldCode: !0 === bb.canChangeWorldCode,
-        hasWorldCodeFiles: Object.keys(bb.files).some(mb.e),
-        offersPrefabs: (Wb = bb.request, ab = bb.files, Tb = CW(bb), "never" !== Tb.offer && ("always" === Tb.offer || tk(Wb, 1).length > 0 || Hc(Wb) || !aW(ab) && WW.test(Wb))),
-        listsPrefabs: CW(bb).categories,
+        hasWorldCodeFiles: Object.keys(bb.files).some(jb.f),
+        offersPrefabs: (Mb = bb.request, Tb = bb.files, Eb = RM(bb), "never" !== Eb.offer && ("always" === Eb.offer || NA(Mb, 1).length > 0 || ea(Mb) || !UM(Tb) && aM.test(Mb))),
+        listsPrefabs: RM(bb).categories,
         looksUpDocs: !0 === bb.looksUpDocs
       }
     }
 
-    function CW(bb) {
-      var cb;
-      return null !== (cb = bb.prefabs) && void 0 !== cb ? cb : kW
+    function RM(bb) {
+      var ab;
+      return null !== (ab = bb.prefabs) && void 0 !== ab ? ab : bM
     }
 
-    function NW(bb, cb) {
-      return "deepseek" === cb ? function(bb) {
-        const cb = pk[bb ? "codeBlock" : "worldCode"];
-        return Nc.filter((bb => cb.has(bb.name)))
+    function kM(bb, ab) {
+      return "deepseek" === ab ? function(bb) {
+        const ab = cA[bb ? "codeBlock" : "worldCode"];
+        return Da.filter((bb => ab.has(bb.name)))
       }(!0 === bb.codeBlock) : function(bb) {
-        const cb = (bb.hasCode || bb.hasBigFile) && !bb.codeBlock || !0 === bb.hasWorldCodeFiles,
-          sb = !0 === bb.canLookUp,
-          kb = bb.codeBlock && !0 === bb.canChangeWorldCode && !0 !== bb.hasWorldCodeFiles && sb,
-          Wb = {
+        const ab = (bb.hasCode || bb.hasBigFile) && !bb.codeBlock || !0 === bb.hasWorldCodeFiles,
+          Ub = !0 === bb.canLookUp,
+          Ab = bb.codeBlock && !0 === bb.canChangeWorldCode && !0 !== bb.hasWorldCodeFiles && Ub,
+          Mb = {
             write_file: !0,
             edit_file: bb.hasBigFile,
-            replace_function: cb,
+            replace_function: ab,
             insert_code: !1,
             add_world_code: bb.codeBlock && !0 !== bb.hasWorldCodeFiles,
             edit_code_in_place: bb.hasCode,
@@ -6012,210 +6012,210 @@ export const modules = {
             ask_creator: bb.canAsk,
             remember: !0 === bb.canRemember && !bb.codeBlock,
             plan: !0 === bb.isBigRequest && bb.canAsk && !bb.codeBlock,
-            view_file: sb && !0 === bb.hasOtherFiles && !bb.codeBlock,
-            view_world_code: kb,
-            view_chunk: sb,
-            view_game_state: sb,
-            get_docs: sb,
-            fetch_url: sb && !0 === bb.looksUpDocs,
-            find_names: sb,
-            view_errors: sb && !0 === bb.hasErrors,
+            view_file: Ub && !0 === bb.hasOtherFiles && !bb.codeBlock,
+            view_world_code: Ab,
+            view_chunk: Ub,
+            view_game_state: Ub,
+            get_docs: Ub,
+            fetch_url: Ub && !0 === bb.looksUpDocs,
+            find_names: Ub,
+            view_errors: Ub && !0 === bb.hasErrors,
             use_prefab: !0 === bb.offersPrefabs && !bb.codeBlock,
-            list_prefabs: sb && !0 === bb.listsPrefabs && !bb.codeBlock,
-            view_prefab: sb && !0 === bb.offersPrefabs && !bb.codeBlock
+            list_prefabs: Ub && !0 === bb.listsPrefabs && !bb.codeBlock,
+            view_prefab: Ub && !0 === bb.offersPrefabs && !bb.codeBlock
           };
-        let ab = Nc.filter((bb => Wb[bb.name]));
-        for (const Tb of ["remember", "plan"]) ab.filter((bb => !Vc(bb.name))).length > 7 && (ab = ab.filter((bb => bb.name !== Tb)));
-        return ab
-      }(eW(bb))
+        let Tb = Da.filter((bb => Mb[bb.name]));
+        for (const Eb of ["remember", "plan"]) Tb.filter((bb => !za(bb.name))).length > 7 && (Tb = Tb.filter((bb => bb.name !== Eb)));
+        return Tb
+      }(jM(bb))
     }
 
-    function VW(bb, cb) {
-      var sb, kb;
-      const Wb = eW(bb),
-        ab = !0 === Wb.canLookUp,
-        Tb = (null !== (sb = null === (kb = bb.lookups) || void 0 === kb ? void 0 : kb.length) && void 0 !== sb ? sb : 0) > 0,
-        Ub = !0 === Wb.hasWorldCodeFiles,
-        Ib = [Wb.hasCode ? "" : "No open file has code, so don't call edit_code_in_place.", Wb.hasBigFile ? "" : "Every file is short, so change them with write_file or replace_function, not edit_file.", ab ? "" : Tb ? "You have looked things up as many times as you can: answer now with what you found, calling no view_ tool, get_docs or find_names." : "Answer with what you have: call no view_ tool, get_docs or find_names.", ab && !0 !== Wb.hasErrors ? "Their world showed no errors, so don't call view_errors." : "", ...Wb.codeBlock ? [Wb.canAsk ? "" : "Build what they asked: don't call ask_creator.", Ub ? `${MW} So don't call add_world_code or view_world_code.` : "", Ub || !0 !== Wb.canChangeWorldCode ? "" : "When part of it needs World Code, say which part goes there: they are taken to World Code, and it is put in for them.", Ub || !0 === Wb.canChangeWorldCode && ab ? "" : "Don't call view_world_code.", Ub ? "" : "The code block has no functions, so don't call replace_function."] : [Wb.canAsk ? "" : "Build what they asked: don't call ask_creator or plan.", Wb.canAsk && !0 !== Wb.isBigRequest ? "This request isn't big, so build it rather than calling plan." : "", Wb.wantsExport ? "" : "They haven't asked to save, so don't call export_game.", !0 === Wb.canRemember ? "" : "Their AI notes are full, so don't call remember.", ab && !0 !== Wb.hasOtherFiles ? "They have only the one file, so don't call view_file." : "", !0 === Wb.offersPrefabs ? "" : "No prefab fits this request, so don't call use_prefab or view_prefab.", Wb.canAsk && !0 === CW(bb).guide && cb.length >= 2 ? `When you ask what kind of game they want, the choices are the 2 to 4 listed prefabs that fit the request best, by their titles (${cb.slice(0,3).map((bb=>bb.title)).join(", ")}...): the one they pick is put in with use_prefab next.` : ""]].filter((bb => "" !== bb));
-      return Ib.length > 0 ? `\n\nFor this request: ${Ib.join(" ")}` : ""
+    function yM(bb, ab) {
+      var Ub, Ab;
+      const Mb = jM(bb),
+        Tb = !0 === Mb.canLookUp,
+        Eb = (null !== (Ub = null === (Ab = bb.lookups) || void 0 === Ab ? void 0 : Ab.length) && void 0 !== Ub ? Ub : 0) > 0,
+        Yb = !0 === Mb.hasWorldCodeFiles,
+        Bb = [Mb.hasCode ? "" : "No open file has code, so don't call edit_code_in_place.", Mb.hasBigFile ? "" : "Every file is short, so change them with write_file or replace_function, not edit_file.", Tb ? "" : Eb ? "You have looked things up as many times as you can: answer now with what you found, calling no view_ tool, get_docs or find_names." : "Answer with what you have: call no view_ tool, get_docs or find_names.", Tb && !0 !== Mb.hasErrors ? "Their world showed no errors, so don't call view_errors." : "", ...Mb.codeBlock ? [Mb.canAsk ? "" : "Build what they asked: don't call ask_creator.", Yb ? `${BM} So don't call add_world_code or view_world_code.` : "", Yb || !0 !== Mb.canChangeWorldCode ? "" : "When part of it needs World Code, say which part goes there: they are taken to World Code, and it is put in for them.", Yb || !0 === Mb.canChangeWorldCode && Tb ? "" : "Don't call view_world_code.", Yb ? "" : "The code block has no functions, so don't call replace_function."] : [Mb.canAsk ? "" : "Build what they asked: don't call ask_creator or plan.", Mb.canAsk && !0 !== Mb.isBigRequest ? "This request isn't big, so build it rather than calling plan." : "", Mb.wantsExport ? "" : "They haven't asked to save, so don't call export_game.", !0 === Mb.canRemember ? "" : "Their AI notes are full, so don't call remember.", Tb && !0 !== Mb.hasOtherFiles ? "They have only the one file, so don't call view_file." : "", !0 === Mb.offersPrefabs ? "" : "No prefab fits this request, so don't call use_prefab or view_prefab.", Mb.canAsk && !0 === RM(bb).guide && ab.length >= 2 ? `When you ask what kind of game they want, the choices are the 2 to 4 listed prefabs that fit the request best, by their titles (${ab.slice(0,3).map((bb=>bb.title)).join(", ")}...): the one they pick is put in with use_prefab next.` : ""]].filter((bb => "" !== bb));
+      return Bb.length > 0 ? `\n\nFor this request: ${Bb.join(" ")}` : ""
     }
 
-    function LW(bb, cb) {
-      var sb, kb, Wb, ab, Tb, Ub;
-      let Ib = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : TW,
+    function ZM(bb, ab) {
+      var Ub, Ab, Mb, Tb, Eb, Yb;
+      let Bb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : AM,
         {
-          docsInTurn: Hb = !1,
-          tQ: fb = !1
+          docsInTurn: eb = !1,
+          qR: vb = !1
         } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const Mb = "deepseek" === Ib.format,
-        Xb = Object.values(cb.files).join("\n"),
-        nb = cb.history.slice(-2).map((bb => bb.text)).join("\n"),
-        mb = `${cb.request}\n${nb}\n${cb.errors.join("\n")}`,
-        lb = !0 === cb.looksUpDocs,
-        Qb = lb && !0 === cb.canLookUp ? [] : bb.find(mb, Xb, 12),
-        eb = bb.matchItemAndBlockNames(mb, 12),
-        Cb = !0 === cb.codeBlock,
-        Nb = Cb ? "myId" : "playerId",
-        Vb = NW(cb, Ib.format),
-        Lb = Vb.some((bb => "use_prefab" === bb.name)),
-        ub = !Lb || Mb && !0 !== eW(cb).offersPrefabs ? [] : function(bb, cb, sb) {
-          if ("never" === sb.offer || "none" === sb.list) return [];
-          if ("all" === sb.list) return [...Xk];
-          const kb = tk(bb, 4);
-          if (aW(cb) || !WW.test(bb) && !Hc(bb)) return kb;
-          const Wb = Xk.filter((bb => "game" === bb.kind && !kb.includes(bb)));
-          return [...kb, ...Wb]
-        }(cb.request, cb.files, CW(cb)),
-        Yb = Lb ? function(bb, cb, sb) {
-          const kb = cb ? `\nOther kinds of game have prefabs too: look them up with list_prefabs (${[...nk.keys()].join(", ")}).` : "";
-          if (0 === bb.length) return cb ? `## Prefabs (ready-made games)${kb}` : "";
-          const Wb = sb && bb.includes(sb) ? `\nThis request fits ${sb.name}: put it in with use_prefab, then change only what the request wants differently: what it already does needs no code of yours (its sidebar is the text on the right of the screen).\n${Bk(sb,!1)}` : "";
-          return `## Prefabs: ready-made games and features to start from (use_prefab)\n${bb.map(Jk).join("\n")}${Wb}${kb}`
-        }(ub, CW(cb).categories, tk(cb.request, 1)[0]) : "",
-        hb = Cb || !0 !== CW(cb).inlineCode ? "" : function(bb) {
-          const cb = tk(bb, 1)[0];
-          if (!cb) return "";
-          const sb = Vk(ek(cb)).text;
-          return `## Tested code for this kind of game (${cb.title})\nThis code works. Start from it: put it in the file, keeping what the file already has, and change what the request needs. Change settings in its CONFIG.\n\`\`\`js\n${sb}\`\`\``
-        }(cb.request),
-        Jb = [Qb.length > 0 ? `## Docs for this request\n${Qb.map((bb=>bb.text)).join("\n\n")}` : "", eb.length > 0 ? `## Exact item and block names that match the request\n${eb.join(", ")}` : ""].filter((bb => "" !== bb)),
-        gb = [{
+      const Lb = "deepseek" === Bb.format,
+        Pb = Object.values(ab.files).join("\n"),
+        Xb = ab.history.slice(-2).map((bb => bb.text)).join("\n"),
+        jb = `${ab.request}\n${Xb}\n${ab.errors.join("\n")}`,
+        Rb = !0 === ab.looksUpDocs,
+        kb = Rb && !0 === ab.canLookUp ? [] : bb.find(jb, Pb, 12),
+        yb = bb.matchItemAndBlockNames(jb, 12),
+        Zb = !0 === ab.codeBlock,
+        Db = Zb ? "myId" : "playerId",
+        zb = kM(ab, Bb.format),
+        xb = zb.some((bb => "use_prefab" === bb.name)),
+        ib = !xb || Lb && !0 !== jM(ab).offersPrefabs ? [] : function(bb, ab, Ub) {
+          if ("never" === Ub.offer || "none" === Ub.list) return [];
+          if ("all" === Ub.list) return [...vA];
+          const Ab = NA(bb, 4);
+          if (UM(ab) || !aM.test(bb) && !ea(bb)) return Ab;
+          const Mb = vA.filter((bb => "game" === bb.kind && !Ab.includes(bb)));
+          return [...Ab, ...Mb]
+        }(ab.request, ab.files, RM(ab)),
+        fb = xb ? function(bb, ab, Ub) {
+          const Ab = ab ? `\nOther kinds of game have prefabs too: look them up with list_prefabs (${[...LA.keys()].join(", ")}).` : "";
+          if (0 === bb.length) return ab ? `## Prefabs (ready-made games)${Ab}` : "";
+          const Mb = Ub && bb.includes(Ub) ? `\nThis request fits ${Ub.name}: put it in with use_prefab, then change only what the request wants differently: what it already does needs no code of yours (its sidebar is the text on the right of the screen).\n${pA(Ub,!1)}` : "";
+          return `## Prefabs: ready-made games and features to start from (use_prefab)\n${bb.map(fA).join("\n")}${Mb}${Ab}`
+        }(ib, RM(ab).categories, NA(ab.request, 1)[0]) : "",
+        mb = Zb || !0 !== RM(ab).inlineCode ? "" : function(bb) {
+          const ab = NA(bb, 1)[0];
+          if (!ab) return "";
+          const Ub = ZA(RA(ab)).text;
+          return `## Tested code for this kind of game (${ab.title})\nThis code works. Start from it: put it in the file, keeping what the file already has, and change what the request needs. Change settings in its CONFIG.\n\`\`\`js\n${Ub}\`\`\``
+        }(ab.request),
+        pb = [kb.length > 0 ? `## Docs for this request\n${kb.map((bb=>bb.text)).join("\n\n")}` : "", yb.length > 0 ? `## Exact item and block names that match the request\n${yb.join(", ")}` : ""].filter((bb => "" !== bb)),
+        Nb = [{
           role: "system",
-          content: cW([Cb ? IW(lb) : UW(lb), ...lb ? [] : [Cb ? `## World Code callbacks (all of them; only for World Code, never in the code block)\n${bb.index("callback")}` : `## Callbacks (all of them)\n${bb.index("callback")}`, `## API methods (all of them, call as api.name(...))\n${bb.index("api")}`, `## Client options (all of them, set with api.setClientOption(${Nb}, name, value))\n${bb.index("clientOption")}`], ...Hb ? [] : Jb, bb.mobTypes.length > 0 ? `## Mob types (for api.attemptSpawnMob)\n${bb.mobTypes.join(", ")}` : "", Mb ? "" : Yb, !Cb && CW(cb).helperIndex ? `## Ready-made functions (call them by name, without api. and without writing them: their code is added to the file by itself; get_docs shows one)\n${Wk.map((bb=>bb.signature)).join(", ")}` : "", Mb ? "" : hb, XW(Vb, Cb, Ib.format, Mb ? {
+          content: nA([Zb ? TM(Rb) : MM(Rb), ...Rb ? [] : [Zb ? `## World Code callbacks (all of them; only for World Code, never in the code block)\n${bb.index("callback")}` : `## Callbacks (all of them)\n${bb.index("callback")}`, `## API methods (all of them, call as api.name(...))\n${bb.index("api")}`, `## Client options (all of them, set with api.setClientOption(${Db}, name, value))\n${bb.index("clientOption")}`], ...eb ? [] : pb, bb.mobTypes.length > 0 ? `## Mob types (for api.attemptSpawnMob)\n${bb.mobTypes.join(", ")}` : "", Lb ? "" : fb, !Zb && RM(ab).helperIndex ? `## Ready-made functions (call them by name, without api. and without writing them: their code is added to the file by itself; get_docs shows one)\n${UA.map((bb=>bb.signature)).join(", ")}` : "", Lb ? "" : mb, eM(zb, Zb, Bb.format, Lb ? {
             hasWorldCodeFiles: !1,
             hasLookedUp: !1,
             movesToWorldCode: !1,
             listedPrefabs: [],
             guidesToPrefabs: !1
           } : {
-            hasWorldCodeFiles: !0 === eW(cb).hasWorldCodeFiles,
-            hasLookedUp: (null !== (sb = null === (kb = cb.lookups) || void 0 === kb ? void 0 : kb.length) && void 0 !== sb ? sb : 0) > 0,
-            movesToWorldCode: !0 === cb.canChangeWorldCode,
-            listedPrefabs: ub,
-            guidesToPrefabs: !0 === CW(cb).guide
-          })].filter((bb => "" !== bb)).join("\n\n"), Vb, Ib.format, Ib.nativeTools)
+            hasWorldCodeFiles: !0 === jM(ab).hasWorldCodeFiles,
+            hasLookedUp: (null !== (Ub = null === (Ab = ab.lookups) || void 0 === Ab ? void 0 : Ab.length) && void 0 !== Ub ? Ub : 0) > 0,
+            movesToWorldCode: !0 === ab.canChangeWorldCode,
+            listedPrefabs: ib,
+            guidesToPrefabs: !0 === RM(ab).guide
+          })].filter((bb => "" !== bb)).join("\n\n"), zb, Bb.format, Bb.nativeTools)
         }];
-      if (!Mb)
-        for (const Kb of cb.history) gb.push({
-          role: Kb.role,
-          content: Kb.text
+      if (!Lb)
+        for (const ub of ab.history) Nb.push({
+          role: ub.role,
+          content: ub.text
         });
-      const Bb = Mb && !fb && cb.history.length > 0 ? `Earlier in this chat:\n${cb.history.map((bb=>`${"user"===bb.role?"They asked":"You answered"}: ${bb.text}`)).join("\n")}\n\n` : "",
-        tb = null !== (Wb = cb.about) && void 0 !== Wb && Wb.notes.length ? `AI notes (notes they kept):\n${cb.about.notes.map((bb=>`- ${bb}`)).join("\n")}\n\n` : "",
-        yb = null !== (ab = cb.about) && void 0 !== ab && ab.outline ? `Outline of their code:\n${cb.about.outline}\n\n` : "",
-        Pb = cb.errors.length > 0 ? `\n\nErrors their world showed recently:\n${cb.errors.slice(-5).join("\n")}` : "",
-        Db = null === (Tb = cb.failedEdits) || void 0 === Tb || !Tb.length || Mb && fb ? "" : `\n\nWhat happened to your last answer's changes:\n${function(bb,cb){return bb.map((bb=>Fc[cb].editFailure(bb.tool,sW(bb)))).join("\n\n")}(cb.failedEdits,Ib.format)}`,
-        Eb = [...Hb ? Jb : [], ...Mb ? [Yb, hb] : []].filter((bb => "" !== bb)).map((bb => `${bb}\n\n`)).join(""),
-        ib = null === (Ub = cb.lookups) || void 0 === Ub || !Ub.length || Mb && fb ? "" : `\n\nWhat you looked up for this request:\n${Ob=cb.lookups,Gb=Ib.format,Ob.map((bb=>Fc[Gb].lookupResult(bb.tool,bb.about,bb.text))).join("\n\n")}`;
-      var Ob, Gb;
-      return gb.push({
+      const Wb = Lb && !vb && ab.history.length > 0 ? `Earlier in this chat:\n${ab.history.map((bb=>`${"user"===bb.role?"They asked":"You answered"}: ${bb.text}`)).join("\n")}\n\n` : "",
+        Hb = null !== (Mb = ab.about) && void 0 !== Mb && Mb.notes.length ? `AI notes (notes they kept):\n${ab.about.notes.map((bb=>`- ${bb}`)).join("\n")}\n\n` : "",
+        Ib = null !== (Tb = ab.about) && void 0 !== Tb && Tb.outline ? `Outline of their code:\n${ab.about.outline}\n\n` : "",
+        db = ab.errors.length > 0 ? `\n\nErrors their world showed recently:\n${ab.errors.slice(-5).join("\n")}` : "",
+        Fb = null === (Eb = ab.failedEdits) || void 0 === Eb || !Eb.length || Lb && vb ? "" : `\n\nWhat happened to your last answer's changes:\n${function(bb,ab){return bb.map((bb=>ca[ab].editFailure(bb.tool,SA(bb)))).join("\n\n")}(ab.failedEdits,Bb.format)}`,
+        hb = [...eb ? pb : [], ...Lb ? [fb, mb] : []].filter((bb => "" !== bb)).map((bb => `${bb}\n\n`)).join(""),
+        Gb = null === (Yb = ab.lookups) || void 0 === Yb || !Yb.length || Lb && vb ? "" : `\n\nWhat you looked up for this request:\n${Qb=ab.lookups,qb=Bb.format,Qb.map((bb=>ca[qb].lookupResult(bb.tool,bb.about,bb.text))).join("\n\n")}`;
+      var Qb, qb;
+      return Nb.push({
         role: "user",
-        content: `${Eb}${tb}${yb}${Bb}Their code now:\n${QW(cb,Ib.format)}${Pb}${Db}${ib}${Mb?VW(cb,ub):""}\n\nTheir request: ${cb.request}`
-      }), gb
+        content: `${hb}${Hb}${Ib}${Wb}Their code now:\n${XM(ab,Bb.format)}${db}${Fb}${Gb}${Lb?yM(ab,ib):""}\n\nTheir request: ${ab.request}`
+      }), Nb
     }
-    var uW = sb(39208);
+    var DM = Ub(38856);
 
-    function YW(bb) {
-      var cb, sb, kb, Wb, ab, Tb;
+    function zM(bb) {
+      var ab, Ub, Ab, Mb, Tb, Eb;
       const {
-        args: Ub
+        args: Yb
       } = bb;
       switch (bb.name) {
         case "view_file":
-          return null !== (cb = Ub.path) && void 0 !== cb ? cb : "a file";
+          return null !== (ab = Yb.path) && void 0 !== ab ? ab : "a file";
         case "view_world_code":
           return "your World Code";
         case "view_chunk":
-          return Ub.position ? `the blocks near ${null!==(sb=null===(kb=(0,uW.e)(Ub.position))||void 0===kb?void 0:kb.map(Math.floor).join(", "))&&void 0!==sb?sb:Ub.position}` : "the blocks around you";
+          return Yb.position ? `the blocks near ${null!==(Ub=null===(Ab=(0,DM.f)(Yb.position))||void 0===Ab?void 0:Ab.map(Math.floor).join(", "))&&void 0!==Ub?Ub:Yb.position}` : "the blocks around you";
         case "view_game_state":
           return "what you see in your world";
         case "get_docs":
-          return Ub.name ? `the docs for ${Ub.name}` : `the list of ${JW(null!==(Wb=Ub.list)&&void 0!==Wb?Wb:hW)}`;
+          return Yb.name ? `the docs for ${Yb.name}` : `the list of ${iM(null!==(Mb=Yb.list)&&void 0!==Mb?Mb:xM)}`;
         case "fetch_url":
           return function(bb) {
-            const cb = void 0 === bb ? null : Nb(bb);
-            if (null === cb) return null !== bb && void 0 !== bb ? bb : "a docs page";
-            return Vb(cb) ? "the list of docs pages" : `the docs page ${function(bb){const cb=(0,Qb.B)(bb);return null===cb?bb:`${cb.name}${null===cb.part?"":`/${cb.part}`}`}(cb)}`
-          }(Ub.url);
+            const ab = void 0 === bb ? null : Db(bb);
+            if (null === ab) return null !== bb && void 0 !== bb ? bb : "a docs page";
+            return zb(ab) ? "the list of docs pages" : `the docs page ${function(bb){const ab=(0,kb.C)(bb);return null===ab?bb:`${ab.name}${null===ab.part?"":`/${ab.part}`}`}(ab)}`
+          }(Yb.url);
         case "find_names":
-          return `names for "${null!==(ab=Ub.words)&&void 0!==ab?ab:""}"`;
+          return `names for "${null!==(Tb=Yb.words)&&void 0!==Tb?Tb:""}"`;
         case "view_errors":
           return "your world's errors";
         case "list_prefabs":
-          return Ub.category ? `the ready-made ${Ub.category} games` : "the ready-made games";
+          return Yb.category ? `the ready-made ${Yb.category} games` : "the ready-made games";
         case "view_prefab":
-          return `the ready-made ${null!==(Tb=Ub.name)&&void 0!==Tb?Tb:"game"}`
+          return `the ready-made ${null!==(Eb=Yb.name)&&void 0!==Eb?Eb:"game"}`
       }
     }
-    const hW = "functions";
+    const xM = "functions";
 
-    function JW(bb) {
+    function iM(bb) {
       return bb.trim().toLowerCase().replace(/[\s_]+/g, " ").replace(/s?$/, "s")
     }
 
-    function gW(bb) {
+    function fM(bb) {
       return "get_docs" === bb.name || "fetch_url" === bb.name
     }
-    async function BW(bb, cb) {
-      var sb;
-      const kb = YW(bb),
-        Wb = cb => ({
+    async function mM(bb, ab) {
+      var Ub;
+      const Ab = zM(bb),
+        Mb = ab => ({
           result: {
             tool: bb.name,
-            about: kb,
-            text: cb
+            about: Ab,
+            text: ab
           }
         });
       switch (bb.name) {
         case "view_file":
-          return Wb((Ub = bb.args.path, Ib = cb.files, void 0 === Ub ? "No path was given: give the path of a file from the list." : Object.hasOwn(Ib, Ub) ? "" === Ib[Ub] ? `${Ub} is empty.` : Ib[Ub] : `There is no file called ${Ub}. Their files are: ${Object.keys(Ib).join(", ")}.`));
+          return Mb((Yb = bb.args.path, Bb = ab.files, void 0 === Yb ? "No path was given: give the path of a file from the list." : Object.hasOwn(Bb, Yb) ? "" === Bb[Yb] ? `${Yb} is empty.` : Bb[Yb] : `There is no file called ${Yb}. Their files are: ${Object.keys(Bb).join(", ")}.`));
         case "view_world_code": {
-          const bb = cb.readWorldCode ? await cb.readWorldCode() : null;
-          if (null === bb) return Wb("World Code couldn't be read, so it can't be changed from here. Give its part with add_world_code instead.");
-          const sb = Object.keys(bb).sort(),
-            kb = Object.fromEntries(sb.map((cb => [`${mb.j}${cb}`, bb[cb]]))),
-            ab = sb.map((cb => `${mb.j}${cb}:\n${""===bb[cb]?"(empty)":bb[cb]}`)).join("\n\n"),
-            Tb = sb.length > 1 ? `\n\n${lW(sb,mb.j)}` : "";
+          const bb = ab.readWorldCode ? await ab.readWorldCode() : null;
+          if (null === bb) return Mb("World Code couldn't be read, so it can't be changed from here. Give its part with add_world_code instead.");
+          const Ub = Object.keys(bb).sort(),
+            Ab = Object.fromEntries(Ub.map((ab => [`${jb.l}${ab}`, bb[ab]]))),
+            Tb = Ub.map((ab => `${jb.l}${ab}:\n${""===bb[ab]?"(empty)":bb[ab]}`)).join("\n\n"),
+            Eb = Ub.length > 1 ? `\n\n${PM(Ub,jb.l)}` : "";
           return {
-            ...Wb("" === ab ? `World Code has no code yet: ${mb.j}index.js is empty.` : `${ab}${Tb}`),
-            worldCodeFiles: kb
+            ...Mb("" === Tb ? `World Code has no code yet: ${jb.l}index.js is empty.` : `${Tb}${Eb}`),
+            worldCodeFiles: Ab
           }
         }
         case "view_chunk":
-          return Wb(await cb.viewChunk((0, uW.e)(bb.args.position)));
+          return Mb(await ab.viewChunk((0, DM.f)(bb.args.position)));
         case "view_game_state":
-          return Wb(await cb.viewGameState());
+          return Mb(await ab.viewGameState());
         case "get_docs":
-          return Wb(function(bb, cb, sb) {
+          return Mb(function(bb, ab, Ub) {
             if (void 0 === bb) {
-              const bb = (0, ub.e)(lc, JW(null !== cb && void 0 !== cb ? cb : hW));
-              return void 0 === bb ? `There is no list called ${cb}: ask for ${Qc}.` : sb.index(bb)
+              const bb = (0, ib.c)(Ra, iM(null !== ab && void 0 !== ab ? ab : xM));
+              return void 0 === bb ? `There is no list called ${ab}: ask for ${ka}.` : Ub.index(bb)
             }
-            const kb = sb.section(bb);
-            if (kb) return kb.text;
-            const Wb = sb.find(bb, "", 3).map((bb => bb.name)).join(", ");
-            return `Nothing is called ${bb}.${""===Wb?"":` The closest names are: ${Wb}.`}`
-          }(bb.args.name, bb.args.list, cb.docs));
+            const Ab = Ub.section(bb);
+            if (Ab) return Ab.text;
+            const Mb = Ub.find(bb, "", 3).map((bb => bb.name)).join(", ");
+            return `Nothing is called ${bb}.${""===Mb?"":` The closest names are: ${Mb}.`}`
+          }(bb.args.name, bb.args.list, ab.docs));
         case "fetch_url":
-          return Wb(await cb.fetchDocsPage(null !== (sb = bb.args.url) && void 0 !== sb ? sb : ""));
+          return Mb(await ab.fetchDocsPage(null !== (Ub = bb.args.url) && void 0 !== Ub ? Ub : ""));
         case "find_names": {
-          var ab, Tb;
-          const sb = cb.docs.searchNames(null !== (ab = bb.args.words) && void 0 !== ab ? ab : "", 20);
-          return Wb(sb.length > 0 ? sb.join(", ") : `No block, item or mob name has any of the words "${null!==(Tb=bb.args.words)&&void 0!==Tb?Tb:""}".`)
+          var Tb, Eb;
+          const Ub = ab.docs.searchNames(null !== (Tb = bb.args.words) && void 0 !== Tb ? Tb : "", 20);
+          return Mb(Ub.length > 0 ? Ub.join(", ") : `No block, item or mob name has any of the words "${null!==(Eb=bb.args.words)&&void 0!==Eb?Eb:""}".`)
         }
         case "view_errors":
-          return Wb(cb.errors.length > 0 ? cb.errors.slice(-30).join("\n") : "Their world showed no errors recently.");
+          return Mb(ab.errors.length > 0 ? ab.errors.slice(-30).join("\n") : "Their world showed no errors recently.");
         case "list_prefabs":
-          return Wb(gk(bb.args.category));
+          return Mb(mA(bb.args.category));
         case "view_prefab":
-          return Wb(function(bb, cb) {
-            const sb = void 0 === bb ? null : lk(bb);
-            return sb ? Bk(sb, cb) : `There is no prefab called ${null!==bb&&void 0!==bb?bb:"that"}.\n${gk()}`
-          }(bb.args.name, !0 === cb.showPrefabCode))
+          return Mb(function(bb, ab) {
+            const Ub = void 0 === bb ? null : XA(bb);
+            return Ub ? pA(Ub, ab) : `There is no prefab called ${null!==bb&&void 0!==bb?bb:"that"}.\n${mA()}`
+          }(bb.args.name, !0 === ab.showPrefabCode))
       }
-      var Ub, Ib
+      var Yb, Bb
     }
-    const tW = [
+    const pM = [
       [/\bme\b/gi, "the player"],
       [/\bmyself\b/gi, "the player"],
       [/\bmy\b/gi, "the player's"],
@@ -6241,206 +6241,206 @@ export const modules = {
       [/\bstolen\b/gi, "taken"]
     ];
 
-    function yW(bb) {
-      let cb = bb;
-      for (const [sb, kb] of tW) cb = cb.replace(sb, (bb => bb.length > 1 && bb[0] !== bb[0].toLowerCase() && bb.slice(1) === bb.slice(1).toLowerCase() ? kb[0].toUpperCase() + kb.slice(1) : kb));
-      return cb
+    function NM(bb) {
+      let ab = bb;
+      for (const [Ub, Ab] of pM) ab = ab.replace(Ub, (bb => bb.length > 1 && bb[0] !== bb[0].toLowerCase() && bb.slice(1) === bb.slice(1).toLowerCase() ? Ab[0].toUpperCase() + Ab.slice(1) : Ab));
+      return ab
     }
-    const PW = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
-      DW = ["Qwen3Guard-Gen-0.6B", "Qwen3Guard-Gen-8B"],
-      EW = ["Qwen3Guard-Gen-8B", "Qwen3Guard-Gen-0.6B"],
-      iW = 12e3,
-      OW = new Set(["Violent", "Non-violent Illegal Acts", "Unethical Acts"]);
+    const WM = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
+      HM = ["Qwen3Guard-Gen-0.6B", "Qwen3Guard-Gen-8B"],
+      IM = ["Qwen3Guard-Gen-8B", "Qwen3Guard-Gen-0.6B"],
+      dM = 12e3,
+      FM = new Set(["Violent", "Non-violent Illegal Acts", "Unethical Acts"]);
 
-    function GW(bb) {
-      var cb, sb, kb;
-      const Wb = null === (cb = /Safety:\s*(\w+)/.exec(bb)) || void 0 === cb ? void 0 : cb[1],
-        ab = null !== (sb = null === (kb = /Categories:\s*(.+)/.exec(bb)) || void 0 === kb ? void 0 : kb[1]) && void 0 !== sb ? sb : "";
-      return /PII/.test(ab) ? "personalInfo" : "Unsafe" === Wb || /Jailbreak|Sexual|Suicide|Self-Harm/i.test(ab) ? "unsafe" : "ok"
-    }
-
-    function KW(bb) {
-      var cb, sb, kb;
-      const Wb = null === (cb = /Safety:\s*(\w+)/.exec(bb)) || void 0 === cb ? void 0 : cb[1];
-      if (!Wb) return null;
-      const ab = (null !== (sb = null === (kb = /Categories:\s*(.+)/.exec(bb)) || void 0 === kb ? void 0 : kb[1]) && void 0 !== sb ? sb : "").split(",").map((bb => bb.trim())).filter((bb => "" !== bb && "None" !== bb));
-      return "Safe" !== Wb && ab.some((bb => /Sexual/.test(bb))) ? "unsafe" : "Unsafe" !== Wb ? "ok" : ab.length > 0 && ab.every((bb => OW.has(bb))) ? "maybeGame" : "unsafe"
-    }
-    async function ZW(bb, cb) {
-      let sb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      const kb = await cb(bb),
-        Wb = null === kb ? null : KW(kb);
-      if (null === Wb) return "unchecked";
-      if ("ok" === Wb || "unsafe" === Wb && (!sb || null === kb || /Sexual/.test(kb))) return Wb;
-      const ab = yW(bb);
-      if (ab === bb) return "unsafe";
-      const Tb = await cb(ab),
-        Ub = null === Tb ? null : KW(Tb);
-      return null === Ub ? "unchecked" : "ok" === Ub ? "ok" : "unsafe"
+    function hM(bb) {
+      var ab, Ub, Ab;
+      const Mb = null === (ab = /Safety:\s*(\w+)/.exec(bb)) || void 0 === ab ? void 0 : ab[1],
+        Tb = null !== (Ub = null === (Ab = /Categories:\s*(.+)/.exec(bb)) || void 0 === Ab ? void 0 : Ab[1]) && void 0 !== Ub ? Ub : "";
+      return /PII/.test(Tb) ? "personalInfo" : "Unsafe" === Mb || /Jailbreak|Sexual|Suicide|Self-Harm/i.test(Tb) ? "unsafe" : "ok"
     }
 
-    function zW(bb) {
-      const cb = [];
-      return wW(bb, 0, !1, cb), cb.map((bb => bb.trim())).filter((bb => "" !== bb))
+    function GM(bb) {
+      var ab, Ub, Ab;
+      const Mb = null === (ab = /Safety:\s*(\w+)/.exec(bb)) || void 0 === ab ? void 0 : ab[1];
+      if (!Mb) return null;
+      const Tb = (null !== (Ub = null === (Ab = /Categories:\s*(.+)/.exec(bb)) || void 0 === Ab ? void 0 : Ab[1]) && void 0 !== Ub ? Ub : "").split(",").map((bb => bb.trim())).filter((bb => "" !== bb && "None" !== bb));
+      return "Safe" !== Mb && Tb.some((bb => /Sexual/.test(bb))) ? "unsafe" : "Unsafe" !== Mb ? "ok" : Tb.length > 0 && Tb.every((bb => FM.has(bb))) ? "maybeGame" : "unsafe"
     }
-    const qW = new Set(["return", "typeof", "case", "do", "else", "in", "of", "new", "delete", "void", "throw", "instanceof", "yield", "await"]);
-
-    function dW(bb, cb) {
-      let sb = cb - 1;
-      for (; sb >= 0 && /\s/.test(bb[sb]);) sb--;
-      if (sb < 0 || /[(,=:[!&|?{};+\-*%<>~^]/.test(bb[sb])) return !0;
-      let kb = sb;
-      for (; kb > 0 && /[\w$]/.test(bb[kb - 1]);) kb--;
-      return qW.has(bb.slice(kb, sb + 1))
+    async function QM(bb, ab) {
+      let Ub = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const Ab = await ab(bb),
+        Mb = null === Ab ? null : GM(Ab);
+      if (null === Mb) return "unchecked";
+      if ("ok" === Mb || "unsafe" === Mb && (!Ub || null === Ab || /Sexual/.test(Ab))) return Mb;
+      const Tb = NM(bb);
+      if (Tb === bb) return "unsafe";
+      const Eb = await ab(Tb),
+        Yb = null === Eb ? null : GM(Eb);
+      return null === Yb ? "unchecked" : "ok" === Yb ? "ok" : "unsafe"
     }
 
-    function AW(bb, cb) {
-      let sb = !1;
-      for (let kb = cb + 1; kb < bb.length; kb++) {
-        const cb = bb[kb];
-        if ("\\" === cb) kb++;
+    function qM(bb) {
+      const ab = [];
+      return oM(bb, 0, !1, ab), ab.map((bb => bb.trim())).filter((bb => "" !== bb))
+    }
+    const uM = new Set(["return", "typeof", "case", "do", "else", "in", "of", "new", "delete", "void", "throw", "instanceof", "yield", "await"]);
+
+    function rM(bb, ab) {
+      let Ub = ab - 1;
+      for (; Ub >= 0 && /\s/.test(bb[Ub]);) Ub--;
+      if (Ub < 0 || /[(,=:[!&|?{};+\-*%<>~^]/.test(bb[Ub])) return !0;
+      let Ab = Ub;
+      for (; Ab > 0 && /[\w$]/.test(bb[Ab - 1]);) Ab--;
+      return uM.has(bb.slice(Ab, Ub + 1))
+    }
+
+    function KM(bb, ab) {
+      let Ub = !1;
+      for (let Ab = ab + 1; Ab < bb.length; Ab++) {
+        const ab = bb[Ab];
+        if ("\\" === ab) Ab++;
         else {
-          if ("\n" === cb) break;
-          if (sb) sb = "]" !== cb;
-          else if ("[" === cb) sb = !0;
-          else if ("/" === cb) return kb + 1
+          if ("\n" === ab) break;
+          if (Ub) Ub = "]" !== ab;
+          else if ("[" === ab) Ub = !0;
+          else if ("/" === ab) return Ab + 1
         }
       }
-      return cb + 1
+      return ab + 1
     }
 
-    function wW(bb, cb, sb, kb) {
-      let Wb = cb,
-        ab = 0;
-      for (; Wb < bb.length;) {
-        const cb = bb[Wb],
-          Tb = bb[Wb + 1];
-        if ("/" === cb && "/" === Tb) {
-          const cb = bb.indexOf("\n", Wb);
-          kb.push(bb.slice(Wb + 2, -1 === cb ? bb.length : cb)), Wb = -1 === cb ? bb.length : cb
-        } else if ("/" === cb && "*" === Tb) {
-          const cb = bb.indexOf("*/", Wb + 2);
-          kb.push(bb.slice(Wb + 2, -1 === cb ? bb.length : cb)), Wb = -1 === cb ? bb.length : cb + 2
-        } else if ("/" === cb && dW(bb, Wb)) Wb = AW(bb, Wb);
-        else if ('"' === cb || "'" === cb || "`" === cb) {
-          const sb = kb.length;
-          kb.push("");
-          let ab = "";
-          for (Wb++; Wb < bb.length && bb[Wb] !== cb;) "\\" === bb[Wb] ? (ab += bb.slice(Wb, Wb + 2), Wb += 2) : "`" === cb && "$" === bb[Wb] && "{" === bb[Wb + 1] ? (ab += " ", Wb = wW(bb, Wb + 2, !0, kb)) : (ab += bb[Wb], Wb++);
-          kb[sb] = ab, Wb++
+    function oM(bb, ab, Ub, Ab) {
+      let Mb = ab,
+        Tb = 0;
+      for (; Mb < bb.length;) {
+        const ab = bb[Mb],
+          Eb = bb[Mb + 1];
+        if ("/" === ab && "/" === Eb) {
+          const ab = bb.indexOf("\n", Mb);
+          Ab.push(bb.slice(Mb + 2, -1 === ab ? bb.length : ab)), Mb = -1 === ab ? bb.length : ab
+        } else if ("/" === ab && "*" === Eb) {
+          const ab = bb.indexOf("*/", Mb + 2);
+          Ab.push(bb.slice(Mb + 2, -1 === ab ? bb.length : ab)), Mb = -1 === ab ? bb.length : ab + 2
+        } else if ("/" === ab && rM(bb, Mb)) Mb = KM(bb, Mb);
+        else if ('"' === ab || "'" === ab || "`" === ab) {
+          const Ub = Ab.length;
+          Ab.push("");
+          let Tb = "";
+          for (Mb++; Mb < bb.length && bb[Mb] !== ab;) "\\" === bb[Mb] ? (Tb += bb.slice(Mb, Mb + 2), Mb += 2) : "`" === ab && "$" === bb[Mb] && "{" === bb[Mb + 1] ? (Tb += " ", Mb = oM(bb, Mb + 2, !0, Ab)) : (Tb += bb[Mb], Mb++);
+          Ab[Ub] = Tb, Mb++
         } else {
-          if (sb && "{" === cb) ab++;
-          else if (sb && "}" === cb) {
-            if (0 === ab) return Wb + 1;
-            ab--
+          if (Ub && "{" === ab) Tb++;
+          else if (Ub && "}" === ab) {
+            if (0 === Tb) return Mb + 1;
+            Tb--
           }
-          Wb++
+          Mb++
         }
       }
-      return Wb
+      return Mb
     }
-    const rW = 4e5;
-    var oW = sb(40891);
-    const SW = 15e3;
-    let RW = [],
-      vW = null;
+    const lM = 4e5;
+    var tM = Ub(40598);
+    const wM = 15e3;
+    let sM = [],
+      gM = null;
 
-    function FW(bb) {
+    function CM(bb) {
       return Math.ceil(bb.length / 4)
     }
 
-    function xW(bb) {
+    function VM(bb) {
       return "number" === typeof bb && Number.isInteger(bb) && bb >= 0
     }
 
-    function jW(bb, cb, sb) {
-      var kb;
-      let Wb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+    function OM(bb, ab, Ub) {
+      var Ab;
+      let Mb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
       ! function(bb) {
         if ("undefined" === typeof window) return;
-        if (RW.push(bb), RW.length >= 40) return void pW();
-        vW ??= setTimeout((() => {
-          pW()
-        }), SW)
-      }(null !== (kb = function(bb) {
+        if (sM.push(bb), sM.length >= 40) return void cM();
+        gM ??= setTimeout((() => {
+          cM()
+        }), wM)
+      }(null !== (Ab = function(bb) {
         if (null === bb || "object" !== typeof bb) return null;
         const {
-          prompt_tokens: cb,
-          completion_tokens: sb,
-          prompt_tokens_details: kb
+          prompt_tokens: ab,
+          completion_tokens: Ub,
+          prompt_tokens_details: Ab
         } = bb;
-        if (!xW(cb) || !xW(sb)) return null;
-        const Wb = null !== kb && "object" === typeof kb ? kb.cached_tokens : void 0;
+        if (!VM(ab) || !VM(Ub)) return null;
+        const Mb = null !== Ab && "object" === typeof Ab ? Ab.cached_tokens : void 0;
         return {
-          sent: cb,
-          cached: xW(Wb) ? Wb : 0,
-          received: sb
+          sent: ab,
+          cached: VM(Mb) ? Mb : 0,
+          received: Ub
         }
-      }(bb)) && void 0 !== kb ? kb : {
-        sent: FW(JSON.stringify(cb)),
+      }(bb)) && void 0 !== Ab ? Ab : {
+        sent: CM(JSON.stringify(ab)),
         cached: 0,
-        received: FW(sb) + Wb
+        received: CM(Ub) + Mb
       })
     }
-    async function pW() {
-      null !== vW && (clearTimeout(vW), vW = null);
-      const bb = RW.slice(0, 40);
-      if (RW = RW.slice(40), RW.length > 0 && (vW = setTimeout((() => {
-          pW()
-        }), SW)), 0 !== bb.length) try {
-        await (0, oW.postToGameServer)("/ai-helper/usage", {
+    async function cM() {
+      null !== gM && (clearTimeout(gM), gM = null);
+      const bb = sM.slice(0, 40);
+      if (sM = sM.slice(40), sM.length > 0 && (gM = setTimeout((() => {
+          cM()
+        }), wM)), 0 !== bb.length) try {
+        await (0, tM.postToGameServer)("/ai-helper/usage", {
           calls: bb
         })
       } catch {}
     }
-    const ba = 6e4;
-    const ca = new class {
+    const JM = 6e4;
+    const nM = new class {
         constructor() {
           this.calls = new Map, this.fullUntil = new Map
         }
         record(bb) {
-          let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-          this.calls.set(bb, [...this.recent(bb, cb), cb])
+          let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+          this.calls.set(bb, [...this.recent(bb, ab), ab])
         }
         markFull(bb) {
-          let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-          this.fullUntil.set(bb, cb + ba)
+          let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+          this.fullUntil.set(bb, ab + JM)
         }
         callsInLastMinute(bb) {
-          let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-          return this.recent(bb, cb).length
+          let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+          return this.recent(bb, ab).length
         }
         freeAt(bb) {
-          var cb;
-          let sb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-          const kb = this.recent(bb, sb),
-            Wb = kb.length < 2 ? sb : kb[kb.length - 2] + ba;
-          return Math.max(Wb, null !== (cb = this.fullUntil.get(bb)) && void 0 !== cb ? cb : 0, sb)
+          var ab;
+          let Ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+          const Ab = this.recent(bb, Ub),
+            Mb = Ab.length < 2 ? Ub : Ab[Ab.length - 2] + JM;
+          return Math.max(Mb, null !== (ab = this.fullUntil.get(bb)) && void 0 !== ab ? ab : 0, Ub)
         }
         firstFreeAt(bb) {
-          let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-          return Math.min(...bb.map((bb => this.freeAt(bb, cb))))
+          let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+          return Math.min(...bb.map((bb => this.freeAt(bb, ab))))
         }
         clear() {
           this.calls.clear(), this.fullUntil.clear()
         }
-        recent(bb, cb) {
-          var sb;
-          return (null !== (sb = this.calls.get(bb)) && void 0 !== sb ? sb : []).filter((bb => cb - bb < ba))
+        recent(bb, ab) {
+          var Ub;
+          return (null !== (Ub = this.calls.get(bb)) && void 0 !== Ub ? Ub : []).filter((bb => ab - bb < JM))
         }
       },
-      sa = /\n{3,}/,
-      ka = /<tool_call\b|<function=/;
+      SM = /\n{3,}/,
+      bT = /<tool_call\b|<function=/;
 
-    function Wa(bb) {
-      const cb = bb.trimStart(),
-        sb = sa.exec(cb),
-        kb = ka.exec(cb);
-      if (null === sb || null !== kb && kb.index < sb.index) return null;
-      const Wb = cb.slice(sb.index + sb[0].length);
-      return "" === Wb.trim() ? null : Wb
+    function aT(bb) {
+      const ab = bb.trimStart(),
+        Ub = SM.exec(ab),
+        Ab = bT.exec(ab);
+      if (null === Ub || null !== Ab && Ab.index < Ub.index) return null;
+      const Mb = ab.slice(Ub.index + Ub[0].length);
+      return "" === Mb.trim() ? null : Mb
     }
-    const aa = [{
+    const UT = [{
       name: "Qwen3.8-27B",
       temperature: .6,
       nativeTools: !0,
@@ -6459,44 +6459,44 @@ export const modules = {
       temperature: 1,
       reasoningEffort: "high"
     }];
-    const Ta = {
+    const AT = {
       name: "Qwen3.6-27B",
       temperature: .6,
       nativeTools: !0,
       callFormat: "qwenXml"
     };
 
-    function Ua(bb) {
-      return [...aa, Ta].find((cb => cb.name === bb))
+    function MT(bb) {
+      return [...UT, AT].find((ab => ab.name === bb))
     }
 
-    function Ia(bb) {
-      var cb, sb;
-      return null !== (cb = null === (sb = Ua(bb)) || void 0 === sb ? void 0 : sb.callFormat) && void 0 !== cb ? cb : "simple"
+    function TT(bb) {
+      var ab, Ub;
+      return null !== (ab = null === (Ub = MT(bb)) || void 0 === Ub ? void 0 : Ub.callFormat) && void 0 !== ab ? ab : "simple"
     }
 
-    function Ha(bb) {
-      var cb;
+    function ET(bb) {
+      var ab;
       return {
-        format: null !== (cb = bb.callFormat) && void 0 !== cb ? cb : "simple",
+        format: null !== (ab = bb.callFormat) && void 0 !== ab ? ab : "simple",
         nativeTools: !0 === bb.nativeTools
       }
     }
 
-    function fa(bb, cb) {
-      return "function" === typeof bb ? bb(cb) : bb
+    function YT(bb, ab) {
+      return "function" === typeof bb ? bb(ab) : bb
     }
-    const Ma = "TOO_COMPLEX",
-      Xa = `\n\nYou are the quick helper: answer only small requests yourself, and pass everything else to a bigger model by replying with exactly ${Ma} and nothing else.\nAnswer yourself only when the whole change is a few lines doing one or two simple things, such as giving an item, sending a message, teleporting, setting a block or a client option, or one callback that does one of those.\nReply ${Ma} for anything more: a game or minigame, anything where players make choices, take turns or type commands with options, scores, timers, rounds or values that must be kept, more than about 10 new lines, a fix for an error, a question about what the code does, or exporting, saving or publishing the game. Reply ${Ma} too if you aren't sure of an exact api method, option or item name.\nCode runs fresh each time: nothing you write remembers anything from one click or event to the next. So reply ${Ma} to any request that says once, again, already, count, how many, total, times, score, every few seconds, until, wait, after or each player, whatever else it asks. "Everyone" alone is fine.\nThese are too complex: reply ${Ma} to each of them, and to anything like them:\n- "Count how many times each player clicked this block", "Show how many times this block has been clicked in total": a count kept between clicks\n- "Give me a sword but only once", "Give me a sword, but only once" or "only every 10 seconds": remembering who already got it, or when\n- "Make a rock paper scissors game", "Make a parkour course", "Make a quiz": any game, round or win and lose\n- "Make a /give command" or "a /tp command that takes a player's name": commands with options to read\n- "Make a shop where I buy a sword for 10 coins": currencies, prices and checking what a player has\n- "Start a 60 second countdown", "Spawn a zombie every 5 seconds": timers and things that repeat\n- "Put players into two teams", "Show a leaderboard of the top players": sorting or grouping players\n- "Build me a house" or "a tower": many blocks placed in loops\n- "Teleport me somewhere random but safe": finding the ground or a free space\n- "Why doesn't my code work?", "Fix this error", "What does this line do?"\n- "Export the world", "Save my game", "Publish this": exporting the game is for the bigger model\nThese are small enough to answer yourself:\n- "Give me a diamond sword", "Teleport me onto this block", "Put a gold block on top of this one", "Let me fly", "Heal me", "Say hello to everyone"\n- "Welcome players when they join" (one callback with one message)`,
-      na = 24e4,
-      ma = ["tooLarge", "busy", "timeout", "turnedAway", "failed"];
-    class la extends Error {
+    const BT = "TOO_COMPLEX",
+      eT = `\n\nYou are the quick helper: answer only small requests yourself, and pass everything else to a bigger model by replying with exactly ${BT} and nothing else.\nAnswer yourself only when the whole change is a few lines doing one or two simple things, such as giving an item, sending a message, teleporting, setting a block or a client option, or one callback that does one of those.\nReply ${BT} for anything more: a game or minigame, anything where players make choices, take turns or type commands with options, scores, timers, rounds or values that must be kept, more than about 10 new lines, a fix for an error, a question about what the code does, or exporting, saving or publishing the game. Reply ${BT} too if you aren't sure of an exact api method, option or item name.\nCode runs fresh each time: nothing you write remembers anything from one click or event to the next. So reply ${BT} to any request that says once, again, already, count, how many, total, times, score, every few seconds, until, wait, after or each player, whatever else it asks. "Everyone" alone is fine.\nThese are too complex: reply ${BT} to each of them, and to anything like them:\n- "Count how many times each player clicked this block", "Show how many times this block has been clicked in total": a count kept between clicks\n- "Give me a sword but only once", "Give me a sword, but only once" or "only every 10 seconds": remembering who already got it, or when\n- "Make a rock paper scissors game", "Make a parkour course", "Make a quiz": any game, round or win and lose\n- "Make a /give command" or "a /tp command that takes a player's name": commands with options to read\n- "Make a shop where I buy a sword for 10 coins": currencies, prices and checking what a player has\n- "Start a 60 second countdown", "Spawn a zombie every 5 seconds": timers and things that repeat\n- "Put players into two teams", "Show a leaderboard of the top players": sorting or grouping players\n- "Build me a house" or "a tower": many blocks placed in loops\n- "Teleport me somewhere random but safe": finding the ground or a free space\n- "Why doesn't my code work?", "Fix this error", "What does this line do?"\n- "Export the world", "Save my game", "Publish this": exporting the game is for the bigger model\nThese are small enough to answer yourself:\n- "Give me a diamond sword", "Teleport me onto this block", "Put a gold block on top of this one", "Let me fly", "Heal me", "Say hello to everyone"\n- "Welcome players when they join" (one callback with one message)`,
+      vT = 24e4,
+      LT = ["tooLarge", "busy", "timeout", "turnedAway", "failed"];
+    class PT extends Error {
       constructor(bb) {
         super(`World Code AI ${bb}`), this.reason = bb
       }
     }
 
-    function Qa(bb) {
+    function XT(bb) {
       switch (bb) {
         case "busy":
           return "Bot.xd is busy right now.";
@@ -6510,75 +6510,75 @@ export const modules = {
       }
     }
 
-    function ea(bb, cb) {
-      var sb, kb, Wb, ab, Tb;
-      const Ub = bb[null !== (sb = cb.index) && void 0 !== sb ? sb : 0] ??= {
+    function jT(bb, ab) {
+      var Ub, Ab, Mb, Tb, Eb;
+      const Yb = bb[null !== (Ub = ab.index) && void 0 !== Ub ? Ub : 0] ??= {
         name: "",
         args: ""
       };
-      Ub.name += null !== (kb = null === (Wb = cb.function) || void 0 === Wb ? void 0 : Wb.name) && void 0 !== kb ? kb : "", Ub.args += null !== (ab = null === (Tb = cb.function) || void 0 === Tb ? void 0 : Tb.arguments) && void 0 !== ab ? ab : ""
+      Yb.name += null !== (Ab = null === (Mb = ab.function) || void 0 === Mb ? void 0 : Mb.name) && void 0 !== Ab ? Ab : "", Yb.args += null !== (Tb = null === (Eb = ab.function) || void 0 === Eb ? void 0 : Eb.arguments) && void 0 !== Tb ? Tb : ""
     }
 
-    function Ca(bb) {
+    function RT(bb) {
       return "mcp" === bb ? "simple" : bb
     }
 
-    function Na(bb, cb, sb, kb) {
-      let Wb = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-      return Va(bb, cb, sb, Ca(kb), Wb).answer
+    function kT(bb, ab, Ub, Ab) {
+      let Mb = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+      return yT(bb, ab, Ub, RT(Ab), Mb).answer
     }
 
-    function Va(bb, cb, sb, kb, Wb) {
-      const ab = sb.flatMap((bb => {
-        const cb = Is(bb.name, bb.args);
-        return null === cb ? [] : [bW(pc(kb), cb.name, cb.args)]
+    function yT(bb, ab, Ub, Ab, Mb) {
+      const Tb = Ub.flatMap((bb => {
+        const ab = BU(bb.name, bb.args);
+        return null === ab ? [] : [JA(Sa(Ab), ab.name, ab.args)]
       }));
-      let Tb = !1;
-      return 0 !== ab.length || 0 !== fs(bb, kb).length || bb.includes("```") || (ab.push(...Wb ? [] : function(bb, cb) {
-        let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-        const kb = new Map;
-        for (const Ub of Hs(bb, cb)) {
-          const bb = Object.values(Ub.args).some((bb => void 0 !== bb && sb.includes(bb.trim())));
-          var Wb, ab, Tb;
-          "export_game" === Ub.name || "switch_to_world_code" === Ub.name || Vc(Ub.name) || bb || kb.set(`${Ub.name} ${null!==(Wb=Ub.args.path)&&void 0!==Wb?Wb:""} ${null!==(ab=Ub.args.search)&&void 0!==ab?ab:""} ${null!==(Tb=Ub.args.name)&&void 0!==Tb?Tb:""}`, Ub.source)
+      let Eb = !1;
+      return 0 !== Tb.length || 0 !== vU(bb, Ab).length || bb.includes("```") || (Tb.push(...Mb ? [] : function(bb, ab) {
+        let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+        const Ab = new Map;
+        for (const Yb of eU(bb, ab)) {
+          const bb = Object.values(Yb.args).some((bb => void 0 !== bb && Ub.includes(bb.trim())));
+          var Mb, Tb, Eb;
+          "export_game" === Yb.name || "switch_to_world_code" === Yb.name || za(Yb.name) || bb || Ab.set(`${Yb.name} ${null!==(Mb=Yb.args.path)&&void 0!==Mb?Mb:""} ${null!==(Tb=Yb.args.search)&&void 0!==Tb?Tb:""} ${null!==(Eb=Yb.args.name)&&void 0!==Eb?Eb:""}`, Yb.source)
         }
-        return [...new Set(kb.values())]
-      }(cb, kb, fW)), Tb = ab.length > 0), {
-        answer: [bb, ...ab].join("\n\n").trim(),
-        hasCallsFromReasoning: Tb
+        return [...new Set(Ab.values())]
+      }(ab, Ab, YM)), Eb = Tb.length > 0), {
+        answer: [bb, ...Tb].join("\n\n").trim(),
+        hasCallsFromReasoning: Eb
       }
     }
-    async function La(bb, cb) {
-      const sb = bb.getReader(),
-        kb = new TextDecoder;
-      let Wb = "";
+    async function ZT(bb, ab) {
+      const Ub = bb.getReader(),
+        Ab = new TextDecoder;
+      let Mb = "";
       for (;;) {
         const {
           done: bb,
-          value: ab
-        } = await sb.read();
+          value: Tb
+        } = await Ub.read();
         if (bb) break;
-        Wb += kb.decode(ab, {
+        Mb += Ab.decode(Tb, {
           stream: !0
         });
-        let Tb = Wb.indexOf("\n");
-        for (; - 1 !== Tb;) {
-          const bb = Wb.slice(0, Tb).trim();
-          if (Wb = Wb.slice(Tb + 1), Tb = Wb.indexOf("\n"), !bb.startsWith("data:")) continue;
-          const sb = bb.slice(5).trim();
-          if ("[DONE]" === sb) return;
-          let kb;
+        let Eb = Mb.indexOf("\n");
+        for (; - 1 !== Eb;) {
+          const bb = Mb.slice(0, Eb).trim();
+          if (Mb = Mb.slice(Eb + 1), Eb = Mb.indexOf("\n"), !bb.startsWith("data:")) continue;
+          const Ub = bb.slice(5).trim();
+          if ("[DONE]" === Ub) return;
+          let Ab;
           try {
-            kb = JSON.parse(sb)
+            Ab = JSON.parse(Ub)
           } catch {
             continue
           }
-          cb(kb)
+          ab(Ab)
         }
       }
     }
 
-    function ua(bb) {
+    function DT(bb) {
       return bb.map((bb => ({
         type: "function",
         function: {
@@ -6589,22 +6589,22 @@ export const modules = {
       })))
     }
 
-    function Ya(bb) {
+    function zT(bb) {
       return "object" === typeof bb
     }
-    async function ha(bb, cb, sb, kb) {
-      var Wb;
-      let ab = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [];
-      if (ca.freeAt(bb.name) > Date.now()) return "busy";
-      ca.record(bb.name);
-      const Tb = await fetch(PW, {
+    async function xT(bb, ab, Ub, Ab) {
+      var Mb;
+      let Tb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [];
+      if (nM.freeAt(bb.name) > Date.now()) return "busy";
+      nM.record(bb.name);
+      const Eb = await fetch(WM, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
           model: bb.name,
-          messages: cb,
+          messages: ab,
           max_tokens: 16e3,
           temperature: bb.temperature,
           reasoning_effort: bb.reasoningEffort,
@@ -6612,299 +6612,299 @@ export const modules = {
           stream_options: {
             include_usage: !0
           },
-          ...bb.nativeTools && ab.length > 0 ? {
-            tools: ua(ab)
+          ...bb.nativeTools && Tb.length > 0 ? {
+            tools: DT(Tb)
           } : {}
         }),
         credentials: "omit",
         referrerPolicy: "no-referrer",
-        signal: sb
+        signal: Ub
       });
-      if (429 === Tb.status) return ca.markFull(bb.name), "busy";
-      if (!Tb.ok || !Tb.body) return console.warn(`World Code AI: ${bb.name} answered ${Tb.status}`), Tb.ok ? "failed" : 429 === (Ub = Tb.status) ? "busy" : 400 === Ub || 413 === Ub ? "tooLarge" : 401 === Ub || 403 === Ub ? "turnedAway" : "failed";
-      var Ub;
-      let Ib = "",
-        Hb = "";
-      const fb = [];
-      let Mb = !1,
-        Xb = !1,
-        nb = null;
+      if (429 === Eb.status) return nM.markFull(bb.name), "busy";
+      if (!Eb.ok || !Eb.body) return console.warn(`World Code AI: ${bb.name} answered ${Eb.status}`), Eb.ok ? "failed" : 429 === (Yb = Eb.status) ? "busy" : 400 === Yb || 413 === Yb ? "tooLarge" : 401 === Yb || 403 === Yb ? "turnedAway" : "failed";
+      var Yb;
+      let Bb = "",
+        eb = "";
+      const vb = [];
+      let Lb = !1,
+        Pb = !1,
+        Xb = null;
       try {
-        await async function(bb, cb, sb) {
-          await La(bb, (bb => {
-            var kb;
-            const Wb = bb,
-              ab = null === (kb = Wb.choices) || void 0 === kb ? void 0 : kb[0];
-            var Tb, Ub;
-            ab && cb(null !== (Tb = ab.delta) && void 0 !== Tb ? Tb : {}, null !== (Ub = ab.finish_reason) && void 0 !== Ub ? Ub : null), Wb.usage && (null === sb || void 0 === sb || sb(Wb.usage))
+        await async function(bb, ab, Ub) {
+          await ZT(bb, (bb => {
+            var Ab;
+            const Mb = bb,
+              Tb = null === (Ab = Mb.choices) || void 0 === Ab ? void 0 : Ab[0];
+            var Eb, Yb;
+            Tb && ab(null !== (Eb = Tb.delta) && void 0 !== Eb ? Eb : {}, null !== (Yb = Tb.finish_reason) && void 0 !== Yb ? Yb : null), Mb.usage && (null === Ub || void 0 === Ub || Ub(Mb.usage))
           }))
-        }(Tb.body, ((cb, sb) => {
-          var Wb, ab, Tb, Ub;
-          Mb ||= "length" === sb, Hb += null !== (Wb = null !== (ab = cb.reasoning) && void 0 !== ab ? ab : cb.reasoning_content) && void 0 !== Wb ? Wb : "", Ib += null !== (Tb = cb.content) && void 0 !== Tb ? Tb : "";
-          for (const bb of null !== (nb = cb.tool_calls) && void 0 !== nb ? nb : []) {
-            var nb;
-            Xb ||= "" !== Hb && "" === Ib.trim(), ea(fb, bb)
+        }(Eb.body, ((ab, Ub) => {
+          var Mb, Tb, Eb, Yb;
+          Lb ||= "length" === Ub, eb += null !== (Mb = null !== (Tb = ab.reasoning) && void 0 !== Tb ? Tb : ab.reasoning_content) && void 0 !== Mb ? Mb : "", Bb += null !== (Eb = ab.content) && void 0 !== Eb ? Eb : "";
+          for (const bb of null !== (Xb = ab.tool_calls) && void 0 !== Xb ? Xb : []) {
+            var Xb;
+            Pb ||= "" !== eb && "" === Bb.trim(), jT(vb, bb)
           }
-          const mb = bb.nativeTools && Xb ? null !== (Ub = Wa(Ib)) && void 0 !== Ub ? Ub : "" : Ib;
-          null === kb || void 0 === kb || kb({
+          const jb = bb.nativeTools && Pb ? null !== (Yb = aT(Bb)) && void 0 !== Yb ? Yb : "" : Bb;
+          null === Ab || void 0 === Ab || Ab({
             model: bb.name,
-            reasoningChars: Hb.length,
-            answer: mb,
-            isCalling: fb.length > 0
+            reasoningChars: eb.length,
+            answer: jb,
+            isCalling: vb.length > 0
           })
         }), (bb => {
-          nb = bb
+          Xb = bb
         }))
       } finally {
-        jW(nb, cb, Ib + Hb, 20 * fb.length)
+        OM(Xb, ab, Bb + eb, 20 * vb.length)
       }
-      return null !== (Wb = Ja(bb, Ib, Hb, fb, Mb, Xb)) && void 0 !== Wb ? Wb : "failed"
+      return null !== (Mb = iT(bb, Bb, eb, vb, Lb, Pb)) && void 0 !== Mb ? Mb : "failed"
     }
 
-    function Ja(bb, cb, sb, kb, Wb) {
-      var ab;
-      let Tb = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-        Ub = cb;
-      var Ib;
-      bb.nativeTools && Tb && (Ub = null !== (Ib = Wa(Ub)) && void 0 !== Ib ? Ib : Ub);
-      Ub = Ub.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
-      const Hb = Va(Ub, sb, kb, null !== (ab = bb.callFormat) && void 0 !== ab ? ab : "simple", Wb);
-      return "" === Hb.answer ? null : {
+    function iT(bb, ab, Ub, Ab, Mb) {
+      var Tb;
+      let Eb = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+        Yb = ab;
+      var Bb;
+      bb.nativeTools && Eb && (Yb = null !== (Bb = aT(Yb)) && void 0 !== Bb ? Bb : Yb);
+      Yb = Yb.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
+      const eb = yT(Yb, Ub, Ab, null !== (Tb = bb.callFormat) && void 0 !== Tb ? Tb : "simple", Mb);
+      return "" === eb.answer ? null : {
         model: bb.name,
-        answer: Hb.answer,
-        reasoning: sb,
-        isCutShort: Wb,
-        hasCallsFromReasoning: Hb.hasCallsFromReasoning
+        answer: eb.answer,
+        reasoning: Ub,
+        isCutShort: Mb,
+        hasCallsFromReasoning: eb.hasCallsFromReasoning
       }
     }
 
-    function ga(bb) {
+    function fT(bb) {
       return bb.replace(/<think>[\s\S]*?(<\/think>|$)/g, "")
     }
 
-    function Ba(bb) {
-      return Ya(bb) && !bb.isCutShort
+    function mT(bb) {
+      return zT(bb) && !bb.isCutShort
     }
-    async function ta(bb, cb, sb, kb, Wb) {
-      const ab = bb.map((() => new AbortController)),
-        Tb = () => {
-          for (const bb of ab) bb.abort()
+    async function pT(bb, ab, Ub, Ab, Mb) {
+      const Tb = bb.map((() => new AbortController)),
+        Eb = () => {
+          for (const bb of Tb) bb.abort()
         };
-      null !== sb && void 0 !== sb && sb.aborted && Tb(), null === sb || void 0 === sb || sb.addEventListener("abort", Tb, {
+      null !== Ub && void 0 !== Ub && Ub.aborted && Eb(), null === Ub || void 0 === Ub || Ub.addEventListener("abort", Eb, {
         once: !0
       });
-      const Ub = bb.map((() => {})),
-        Ib = bb.map((() => {}));
-      let Hb = null;
-      const fb = bb => void 0 !== bb && ("" !== ga(bb.answer).trim() || !0 === bb.isCalling);
-      let Mb = () => {};
-      bb.forEach(((bb, sb) => {
-        const Tb = (0, eb.b)(na, ab[sb].signal);
-        ha(bb, fa(cb, bb), Tb.signal, (bb => {
-          Ib[sb] = bb, null === Hb && fb(bb) && (Hb = sb), Hb === sb && (null === kb || void 0 === kb || kb(bb))
-        }), Wb).catch((cb => {
-          if (ab[sb].signal.aborted) return "failed";
-          const kb = Tb.signal.aborted;
-          return console.warn(`World Code AI: ${bb.name} ${kb?"took longer than 240 s":"couldn't be reached"}`, cb), kb ? "timeout" : "failed"
+      const Yb = bb.map((() => {})),
+        Bb = bb.map((() => {}));
+      let eb = null;
+      const vb = bb => void 0 !== bb && ("" !== fT(bb.answer).trim() || !0 === bb.isCalling);
+      let Lb = () => {};
+      bb.forEach(((bb, Ub) => {
+        const Eb = (0, yb.b)(vT, Tb[Ub].signal);
+        xT(bb, YT(ab, bb), Eb.signal, (bb => {
+          Bb[Ub] = bb, null === eb && vb(bb) && (eb = Ub), eb === Ub && (null === Ab || void 0 === Ab || Ab(bb))
+        }), Mb).catch((ab => {
+          if (Tb[Ub].signal.aborted) return "failed";
+          const Ab = Eb.signal.aborted;
+          return console.warn(`World Code AI: ${bb.name} ${Ab?"took longer than 240 s":"couldn't be reached"}`, ab), Ab ? "timeout" : "failed"
         })).then((bb => {
-          Tb.clear(), Ub[sb] = bb, Hb !== sb || Ba(bb) || (Hb = null), Mb()
+          Eb.clear(), Yb[Ub] = bb, eb !== Ub || mT(bb) || (eb = null), Lb()
         }))
       }));
-      const Xb = () => {
+      const Pb = () => {
         var bb;
-        if (null !== Hb) {
-          const bb = Ub[Hb];
-          return Ba(bb) ? {
+        if (null !== eb) {
+          const bb = Yb[eb];
+          return mT(bb) ? {
             reply: bb
           } : void 0
         }
-        const cb = Ub.find(Ba);
-        if (cb) return {
-          reply: cb
+        const ab = Yb.find(mT);
+        if (ab) return {
+          reply: ab
         };
-        if (!Ub.includes(void 0)) return {
-          reply: null !== (bb = Ub.find(Ya)) && void 0 !== bb ? bb : null
+        if (!Yb.includes(void 0)) return {
+          reply: null !== (bb = Yb.find(zT)) && void 0 !== bb ? bb : null
         };
         {
-          const bb = Ub.findIndex(((bb, cb) => void 0 === bb && fb(Ib[cb])));
+          const bb = Yb.findIndex(((bb, ab) => void 0 === bb && vb(Bb[ab])));
           if (-1 !== bb) {
-            Hb = bb;
-            const cb = Ib[bb];
-            cb && (null === kb || void 0 === kb || kb(cb))
+            eb = bb;
+            const ab = Bb[bb];
+            ab && (null === Ab || void 0 === Ab || Ab(ab))
           }
         }
       };
       try {
         for (;;) {
-          if (null !== sb && void 0 !== sb && sb.aborted) throw new DOMException("The World Code AI request was stopped", "AbortError");
-          const bb = Xb();
+          if (null !== Ub && void 0 !== Ub && Ub.aborted) throw new DOMException("The World Code AI request was stopped", "AbortError");
+          const bb = Pb();
           if (bb) {
-            const cb = Ub.filter((bb => "string" === typeof bb));
+            const ab = Yb.filter((bb => "string" === typeof bb));
             return {
               reply: bb.reply,
-              failures: cb
+              failures: ab
             }
           }
           await new Promise((bb => {
-            Mb = bb
+            Lb = bb
           }))
         }
       } finally {
-        null === sb || void 0 === sb || sb.removeEventListener("abort", Tb), Tb()
+        null === Ub || void 0 === Ub || Ub.removeEventListener("abort", Eb), Eb()
       }
     }
 
-    function ya() {
+    function NT() {
       let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Date.now();
-      return ca.firstFreeAt(aa.map((bb => bb.name)), bb)
+      return nM.firstFreeAt(UT.map((bb => bb.name)), bb)
     }
-    async function Pa(bb) {
-      var cb;
-      let sb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      const kb = Date.now(),
-        Wb = null !== (cb = sb.models) && void 0 !== cb ? cb : aa,
-        ab = void 0 === sb.models ? function(bb, cb) {
-          let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
-          const kb = bb.map((bb => ({
+    async function WT(bb) {
+      var ab;
+      let Ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      const Ab = Date.now(),
+        Mb = null !== (ab = Ub.models) && void 0 !== ab ? ab : UT,
+        Tb = void 0 === Ub.models ? function(bb, ab) {
+          let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
+          const Ab = bb.map((bb => ({
               model: bb,
-              key: sb()
-            }))).sort(((bb, cb) => bb.key - cb.key)).map((bb => {
+              key: Ub()
+            }))).sort(((bb, ab) => bb.key - ab.key)).map((bb => {
               let {
-                model: cb
+                model: ab
               } = bb;
-              return cb
+              return ab
             })),
-            Wb = [...kb.filter((bb => cb(bb))), ...kb.filter((bb => !cb(bb)))],
-            ab = [];
-          for (let Tb = 0; Tb < Wb.length; Tb += 2) ab.push(Wb.slice(Tb, Tb + 2));
-          return ab
-        }(Wb, (bb => ca.freeAt(bb.name) <= kb)) : Wb.map((bb => [bb])),
-        Tb = [];
-      for (const Ib of ab) {
-        const cb = await ta(Ib, bb, sb.signal, sb.onProgress, sb.tools);
-        if (null !== cb.reply) {
-          const Wb = Ib.find((bb => {
-            var sb;
-            return bb.name === (null === (sb = cb.reply) || void 0 === sb ? void 0 : sb.model)
+            Mb = [...Ab.filter((bb => ab(bb))), ...Ab.filter((bb => !ab(bb)))],
+            Tb = [];
+          for (let Eb = 0; Eb < Mb.length; Eb += 2) Tb.push(Mb.slice(Eb, Eb + 2));
+          return Tb
+        }(Mb, (bb => nM.freeAt(bb.name) <= Ab)) : Mb.map((bb => [bb])),
+        Eb = [];
+      for (const Bb of Tb) {
+        const ab = await pT(Bb, bb, Ub.signal, Ub.onProgress, Ub.tools);
+        if (null !== ab.reply) {
+          const Mb = Bb.find((bb => {
+            var Ub;
+            return bb.name === (null === (Ub = ab.reply) || void 0 === Ub ? void 0 : Ub.model)
           }));
           return {
-            ...Wb && !1 !== sb.canNudge ? await ia(Wb, fa(bb, Wb), cb.reply, sb.signal, sb.onProgress, sb.tools) : cb.reply,
-            ms: Date.now() - kb
+            ...Mb && !1 !== Ub.canNudge ? await dT(Mb, YT(bb, Mb), ab.reply, Ub.signal, Ub.onProgress, Ub.tools) : ab.reply,
+            ms: Date.now() - Ab
           }
         }
-        Tb.push(...cb.failures)
+        Eb.push(...ab.failures)
       }
-      const Ub = ma.find((bb => Tb.includes(bb)));
-      throw new la(null !== Ub && void 0 !== Ub ? Ub : "failed")
+      const Yb = LT.find((bb => Eb.includes(bb)));
+      throw new PT(null !== Yb && void 0 !== Yb ? Yb : "failed")
     }
-    const Da = "You said what you'd change but made no call, so nothing changed. Make the call now, with the code in full.";
+    const HT = "You said what you'd change but made no call, so nothing changed. Make the call now, with the code in full.";
 
-    function Ea(bb) {
-      const cb = bb.trim();
-      return cb.length <= 400 && !/<tool_call|<function=|<\|channel\|>|```/.test(cb) && !/^\s*(?:\d+[.)]|[-*\u2022])\s/m.test(cb) && /^(?:I['\u2019]ll|I will|I['\u2019]m going to|We(?:['\u2019]ll| will| need to| should)|Let me(?! know)|Will|Need to)\s(?!not\b|never\b)[^.!?\n]*\b(?:add|change|replace|update|fix|rewrite|write|create|make|edit|remove|put)\b/i.test(cb)
+    function IT(bb) {
+      const ab = bb.trim();
+      return ab.length <= 400 && !/<tool_call|<function=|<\|channel\|>|```/.test(ab) && !/^\s*(?:\d+[.)]|[-*\u2022])\s/m.test(ab) && /^(?:I['\u2019]ll|I will|I['\u2019]m going to|We(?:['\u2019]ll| will| need to| should)|Let me(?! know)|Will|Need to)\s(?!not\b|never\b)[^.!?\n]*\b(?:add|change|replace|update|fix|rewrite|write|create|make|edit|remove|put)\b/i.test(ab)
     }
-    async function ia(bb, cb, sb, kb, Wb, ab) {
-      var Tb;
-      let Ub = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : na;
-      if (! function(bb, cb) {
-          return !bb.isCutShort && Ea(bb.answer) && !bb.answer.includes("?") && 0 === fs(bb.answer, cb).length
-        }(sb, null !== (Tb = bb.callFormat) && void 0 !== Tb ? Tb : "simple")) return sb;
-      const Ib = [...cb, {
+    async function dT(bb, ab, Ub, Ab, Mb, Tb) {
+      var Eb;
+      let Yb = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : vT;
+      if (! function(bb, ab) {
+          return !bb.isCutShort && IT(bb.answer) && !bb.answer.includes("?") && 0 === vU(bb.answer, ab).length
+        }(Ub, null !== (Eb = bb.callFormat) && void 0 !== Eb ? Eb : "simple")) return Ub;
+      const Bb = [...ab, {
           role: "assistant",
-          content: sb.answer
+          content: Ub.answer
         }, {
           role: "user",
-          content: Da
+          content: HT
         }],
-        Hb = (0, eb.b)(Ub, kb);
+        eb = (0, yb.b)(Yb, Ab);
       try {
-        const cb = await ha(bb, Ib, Hb.signal, Wb, ab);
-        return Ya(cb) && "" !== cb.answer.trim() ? cb : sb
-      } catch (fb) {
-        if (null !== kb && void 0 !== kb && kb.aborted) throw fb;
-        return sb
+        const ab = await xT(bb, Bb, eb.signal, Mb, Tb);
+        return zT(ab) && "" !== ab.answer.trim() ? ab : Ub
+      } catch (vb) {
+        if (null !== Ab && void 0 !== Ab && Ab.aborted) throw vb;
+        return Ub
       } finally {
-        Hb.clear()
+        eb.clear()
       }
     }
 
-    function Oa(bb) {
-      const cb = ga(bb);
-      return /too_complex/i.test(cb) || /^\W*too[\s_-]*complex\W*$/i.test(cb.trim())
+    function FT(bb) {
+      const ab = fT(bb);
+      return /too_complex/i.test(ab) || /^\W*too[\s_-]*complex\W*$/i.test(ab.trim())
     }
 
-    function Ga(bb) {
-      const cb = ga(bb).trim();
-      return cb.length > 19 && !/^\W*too[\s_-]*complex/i.test(cb)
+    function hT(bb) {
+      const ab = fT(bb).trim();
+      return ab.length > 19 && !/^\W*too[\s_-]*complex/i.test(ab)
     }
 
-    function Ka(bb) {
-      return bb.map(((bb, cb) => 0 === cb && "system" === bb.role ? {
+    function GT(bb) {
+      return bb.map(((bb, ab) => 0 === ab && "system" === bb.role ? {
         ...bb,
-        content: bb.content + Xa
+        content: bb.content + eT
       } : bb))
     }
-    async function Za(bb, cb) {
-      let sb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      for (const kb of DW) {
-        const sb = await za(kb, [{
+    async function QT(bb, ab) {
+      let Ub = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      for (const Ab of HM) {
+        const Ub = await qT(Ab, [{
           role: "user",
           content: bb
-        }], cb);
-        if (null !== sb && "busy" !== sb) return GW(sb)
+        }], ab);
+        if (null !== Ub && "busy" !== Ub) return hM(Ub)
       }
-      return sb ? "unchecked" : "ok"
+      return Ub ? "unchecked" : "ok"
     }
-    async function za(bb, cb, sb) {
-      const kb = (0, eb.b)(2e4, sb);
-      ca.record(bb);
+    async function qT(bb, ab, Ub) {
+      const Ab = (0, yb.b)(2e4, Ub);
+      nM.record(bb);
       try {
-        var Wb, ab, Tb, Ub;
-        const sb = await fetch(PW, {
+        var Mb, Tb, Eb, Yb;
+        const Ub = await fetch(WM, {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
           },
           body: JSON.stringify({
             model: bb,
-            messages: cb,
+            messages: ab,
             max_tokens: 40
           }),
           credentials: "omit",
           referrerPolicy: "no-referrer",
-          signal: kb.signal
+          signal: Ab.signal
         });
-        if (429 === sb.status) return ca.markFull(bb), "busy";
-        if (!sb.ok) return null;
-        const Ib = await sb.json(),
-          Hb = String(null !== (Wb = null === (ab = Ib.choices) || void 0 === ab || null === (Tb = ab[0]) || void 0 === Tb || null === (Ub = Tb.message) || void 0 === Ub ? void 0 : Ub.content) && void 0 !== Wb ? Wb : "");
-        return jW(Ib.usage, cb, Hb),
+        if (429 === Ub.status) return nM.markFull(bb), "busy";
+        if (!Ub.ok) return null;
+        const Bb = await Ub.json(),
+          eb = String(null !== (Mb = null === (Tb = Bb.choices) || void 0 === Tb || null === (Eb = Tb[0]) || void 0 === Eb || null === (Yb = Eb.message) || void 0 === Yb ? void 0 : Yb.content) && void 0 !== Mb ? Mb : "");
+        return OM(Bb.usage, ab, eb),
           function(bb) {
             return /Safety:/.test(bb)
-          }(Hb) ? Hb : null
-      } catch (Ib) {
-        if (null !== sb && void 0 !== sb && sb.aborted) throw Ib;
+          }(eb) ? eb : null
+      } catch (Bb) {
+        if (null !== Ub && void 0 !== Ub && Ub.aborted) throw Bb;
         return null
       } finally {
-        kb.clear()
+        Ab.clear()
       }
     }
-    var qa = sb(37);
-    const da = "aiHelperDataSharing";
+    var uT = Ub(31);
+    const rT = "aiHelperDataSharing";
 
-    function Aa() {
-      const bb = qa.h.getItem(da);
+    function KT() {
+      const bb = uT.f.getItem(rT);
       return null !== bb && "object" === typeof bb ? bb : {}
     }
-    const wa = new class {
+    const oT = new class {
       constructor() {
         this.player = null, this.unsaved = new Map, this.listeners = new Set, this.listening = !1, this.subscribe = bb => (this.listen(), this.listeners.add(bb), () => {
           this.listeners.delete(bb)
         })
       }
       get() {
-        var bb, cb;
-        return null === this.player ? null : null !== (bb = null !== (cb = this.unsaved.get(this.player)) && void 0 !== cb ? cb : Aa()[this.player]) && void 0 !== bb ? bb : null
+        var bb, ab;
+        return null === this.player ? null : null !== (bb = null !== (ab = this.unsaved.get(this.player)) && void 0 !== ab ? ab : KT()[this.player]) && void 0 !== bb ? bb : null
       }
       getPlayer() {
         return this.player
@@ -6912,17 +6912,17 @@ export const modules = {
       async refresh() {
         this.listen();
         const bb = await async function() {
-          var bb, cb;
+          var bb, ab;
           const {
-            userContextManager: kb
-          } = await Promise.resolve().then((() => sb(1126)));
-          return null !== (bb = null === (cb = kb.peekCurrentUserContext()) || void 0 === cb ? void 0 : cb.whamm) && void 0 !== bb ? bb : null
+            userContextManager: Ab
+          } = await Promise.resolve().then((() => Ub(1065)));
+          return null !== (bb = null === (ab = Ab.peekCurrentUserContext()) || void 0 === ab ? void 0 : ab.whamm) && void 0 !== bb ? bb : null
         }().catch((bb => (console.error("AI Helper: couldn't look up the player for sharing chats", bb), null)));
         return bb !== this.player && (this.player = bb, this.notify()), this.get()
       }
       set(bb) {
-        null !== this.player && (qa.h.setItem(da, {
-          ...Aa(),
+        null !== this.player && (uT.f.setItem(rT, {
+          ...KT(),
           [this.player]: bb
         }) ? this.unsaved.delete(this.player) : this.unsaved.set(this.player, bb), this.notify())
       }
@@ -6935,130 +6935,130 @@ export const modules = {
         for (const bb of this.listeners) bb()
       }
     };
-    let ra = null,
-      oa = !1;
-    const Sa = 4e5,
-      Ra = 6e4,
-      va = 12,
-      Fa = 9e5;
+    let lT = null,
+      tT = !1;
+    const wT = 4e5,
+      sT = 6e4,
+      gT = 12,
+      CT = 9e5;
 
-    function xa(bb, cb) {
-      if (bb.length <= cb) return bb;
-      const sb = `\n[... ${bb.length-cb} more characters cut]`;
-      let kb = Math.max(0, cb - sb.length);
-      const Wb = bb.charCodeAt(kb - 1);
-      return Wb >= 55296 && Wb <= 56319 && kb--, bb.slice(0, kb) + sb
+    function VT(bb, ab) {
+      if (bb.length <= ab) return bb;
+      const Ub = `\n[... ${bb.length-ab} more characters cut]`;
+      let Ab = Math.max(0, ab - Ub.length);
+      const Mb = bb.charCodeAt(Ab - 1);
+      return Mb >= 55296 && Mb <= 56319 && Ab--, bb.slice(0, Ab) + Ub
     }
-    var ja = sb(635);
+    var OT = Ub(595);
 
-    function pa(bb) {
-      var cb;
-      return "system" === (null === (cb = bb[0]) || void 0 === cb ? void 0 : cb.role) ? function(bb) {
-        let cb = 2166136261;
-        for (let sb = 0; sb < bb.length; sb++) cb ^= bb.charCodeAt(sb), cb = Math.imul(cb, 16777619);
-        return (cb >>> 0).toString(16).padStart(8, "0")
+    function cT(bb) {
+      var ab;
+      return "system" === (null === (ab = bb[0]) || void 0 === ab ? void 0 : ab.role) ? function(bb) {
+        let ab = 2166136261;
+        for (let Ub = 0; Ub < bb.length; Ub++) ab ^= bb.charCodeAt(Ub), ab = Math.imul(ab, 16777619);
+        return (ab >>> 0).toString(16).padStart(8, "0")
       }(bb[0].content.split("\n\n## ")[0]) : ""
     }
 
-    function bT(bb, cb, sb) {
-      const kb = (Wb = cb.input, JSON.stringify({
-        ...Wb,
+    function JT(bb, ab, Ub) {
+      const Ab = (Mb = ab.input, JSON.stringify({
+        ...Mb,
         prefabs: void 0
       }));
-      var Wb;
-      return kb.length > Sa ? null : {
+      var Mb;
+      return Ab.length > wT ? null : {
         sentAt: Date.now(),
         chatId: bb,
-        responder: cb.responder,
-        promptVersion: cb.promptVersion,
-        clientVersion: String(ja.d),
-        request: kb,
-        responses: [cT(sb)]
+        responder: ab.responder,
+        promptVersion: ab.promptVersion,
+        clientVersion: String(OT.b),
+        request: Ab,
+        responses: [nT(Ub)]
       }
     }
 
-    function cT(bb) {
+    function nT(bb) {
       return {
         model: bb.model,
-        text: xa(bb.text, Ra)
+        text: VT(bb.text, sT)
       }
     }
-    class sT {
+    class ST {
       constructor() {
-        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : TT;
-        this.lm = bb, this.chatId = function() {
+        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : AE;
+        this.GX = bb, this.chatId = function() {
           const bb = new Uint8Array(12);
           return crypto.getRandomValues(bb), Array.from(bb, (bb => bb.toString(16).padStart(2, "0"))).join("")
         }(), this.open = new Map
       }
-      requestStarted(bb, cb) {
-        const sb = this.open.get(bb);
-        sb && (clearTimeout(sb.timer), cb || (this.open.delete(bb), this.send(sb.lm)))
+      requestStarted(bb, ab) {
+        const Ub = this.open.get(bb);
+        Ub && (clearTimeout(Ub.timer), ab || (this.open.delete(bb), this.send(Ub.GX)))
       }
-      answered(bb, cb, sb) {
-        if ("" === sb.text.trim()) return;
-        const kb = this.open.get(bb);
-        if (kb) return void(kb.lm.responses.length < va && kb.lm.responses.push(cT(sb)));
-        const Wb = bT(this.chatId, cb, sb);
-        Wb && this.open.set(bb, {
-          lm: Wb
+      answered(bb, ab, Ub) {
+        if ("" === Ub.text.trim()) return;
+        const Ab = this.open.get(bb);
+        if (Ab) return void(Ab.GX.responses.length < gT && Ab.GX.responses.push(nT(Ub)));
+        const Mb = JT(this.chatId, ab, Ub);
+        Mb && this.open.set(bb, {
+          GX: Mb
         })
       }
       drop(bb) {
-        var cb;
-        clearTimeout(null === (cb = this.open.get(bb)) || void 0 === cb ? void 0 : cb.timer), this.open.delete(bb)
+        var ab;
+        clearTimeout(null === (ab = this.open.get(bb)) || void 0 === ab ? void 0 : ab.timer), this.open.delete(bb)
       }
       requestEnded(bb) {
-        const cb = this.open.get(bb);
-        cb && (clearTimeout(cb.timer), cb.timer = setTimeout((() => {
-          this.open.delete(bb), this.send(cb.lm)
+        const ab = this.open.get(bb);
+        ab && (clearTimeout(ab.timer), ab.timer = setTimeout((() => {
+          this.open.delete(bb), this.send(ab.GX)
         }), 2e4))
       }
       send(bb) {
         (function(bb) {
-          return (new TextEncoder).encode(JSON.stringify(bb)).length <= Fa
-        })(bb) && this.lm(bb)
+          return (new TextEncoder).encode(JSON.stringify(bb)).length <= CT
+        })(bb) && this.GX(bb)
       }
     }
-    const kT = [],
-      WT = 5;
-    let aT = !1;
+    const bE = [],
+      aE = 5;
+    let UE = !1;
 
-    function TT(bb) {
+    function AE(bb) {
       (async () => {
-        const cb = await wa.refresh(),
-          sb = wa.getPlayer();
-        "yes" === cb ? await IT([bb]) : null === cb && null !== sb && function(bb, cb) {
-          aT || (aT = !0, wa.subscribe(UT));
-          kT.push({
+        const ab = await oT.refresh(),
+          Ub = oT.getPlayer();
+        "yes" === ab ? await TE([bb]) : null === ab && null !== Ub && function(bb, ab) {
+          UE || (UE = !0, oT.subscribe(ME));
+          bE.push({
             player: bb,
-            lm: cb
-          }), kT.length > WT && kT.shift()
-        }(sb, bb)
+            GX: ab
+          }), bE.length > aE && bE.shift()
+        }(Ub, bb)
       })()
     }
 
-    function UT() {
-      const bb = wa.get();
+    function ME() {
+      const bb = oT.get();
       if (null === bb) return;
-      const cb = wa.getPlayer(),
-        sb = kT.splice(0).filter((bb => bb.player === cb));
-      "yes" === bb && sb.length > 0 && IT(sb.map((bb => bb.lm)))
+      const ab = oT.getPlayer(),
+        Ub = bE.splice(0).filter((bb => bb.player === ab));
+      "yes" === bb && Ub.length > 0 && TE(Ub.map((bb => bb.GX)))
     }
-    async function IT(bb) {
-      const cb = Promise.resolve().then((() => sb(40891)));
-      for (const sb of bb) try {
+    async function TE(bb) {
+      const ab = Promise.resolve().then((() => Ub(40598)));
+      for (const Ub of bb) try {
         const {
           postToGameServer: bb
-        } = await cb;
-        await bb("/ai-helper/turn", sb)
-      } catch (kb) {
-        console.warn("AI Helper: couldn't share a turn", kb)
+        } = await ab;
+        await bb("/ai-helper/turn", Ub)
+      } catch (Ab) {
+        console.warn("AI Helper: couldn't share a turn", Ab)
       }
     }
-    var HT = sb(344),
-      fT = sb(195);
-    const MT = {
+    var EE = Ub(325),
+      YE = Ub(166);
+    const BE = {
         openrouter: {
           id: "openrouter",
           name: "OpenRouter",
@@ -7095,201 +7095,201 @@ export const modules = {
           keyPage: ""
         }
       },
-      XT = ["openrouter", "anthropic", "openai", "gemini", "custom"],
-      nT = new Set(Object.values(MT).flatMap((bb => "" === bb.baseUrl ? [] : [new URL(bb.baseUrl).host])));
+      eE = ["openrouter", "anthropic", "openai", "gemini", "custom"],
+      vE = new Set(Object.values(BE).flatMap((bb => "" === bb.baseUrl ? [] : [new URL(bb.baseUrl).host])));
 
-    function mT(bb) {
+    function LE(bb) {
       return bb.trim().replace(/^[A-Z_]+\s*=\s*/, "").replace(/^["'`]+|["'`]+$/g, "").replace(/^Bearer\s+/i, "").replace(/\s+/g, "")
     }
 
-    function lT(bb) {
+    function PE(bb) {
       return bb.startsWith("sk-or-") ? "openrouter" : bb.startsWith("sk-ant-") ? "anthropic" : bb.startsWith("AIza") ? "gemini" : bb.startsWith("sk-") ? "openai" : null
     }
 
-    function QT(bb) {
-      let cb;
+    function XE(bb) {
+      let ab;
       try {
-        cb = new URL(bb.trim())
+        ab = new URL(bb.trim())
       } catch {
         return null
       }
-      const sb = "localhost" === cb.hostname || "127.0.0.1" === cb.hostname;
-      return "https:" !== cb.protocol && ("http:" !== cb.protocol || !sb) || cb.username || cb.password || cb.search ? null : `${cb.origin}${cb.pathname}`.replace(/\/chat\/completions\/?$/, "").replace(/\/+$/, "")
+      const Ub = "localhost" === ab.hostname || "127.0.0.1" === ab.hostname;
+      return "https:" !== ab.protocol && ("http:" !== ab.protocol || !Ub) || ab.username || ab.password || ab.search ? null : `${ab.origin}${ab.pathname}`.replace(/\/chat\/completions\/?$/, "").replace(/\/+$/, "")
     }
 
-    function eT(bb, cb) {
-      let sb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      return "custom" === bb && cb ? new URL(cb).host : sb ? MT[bb].shortName : MT[bb].name
+    function jE(bb, ab) {
+      let Ub = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      return "custom" === bb && ab ? new URL(ab).host : Ub ? BE[bb].shortName : BE[bb].name
     }
-    class CT extends Error {
-      constructor(bb, cb, sb, kb) {
-        super(`AI key request: ${bb}`), this.problem = bb, this.retryAfterMs = cb, this.status = sb, this.detail = kb
+    class RE extends Error {
+      constructor(bb, ab, Ub, Ab) {
+        super(`AI key request: ${bb}`), this.problem = bb, this.retryAfterMs = ab, this.status = Ub, this.detail = Ab
       }
     }
 
-    function NT(bb, cb) {
-      return ("" === cb ? bb : bb.split(cb).join("\u2026")).replace(/[\w-]{24,}/g, "\u2026")
+    function kE(bb, ab) {
+      return ("" === ab ? bb : bb.split(ab).join("\u2026")).replace(/[\w-]{24,}/g, "\u2026")
     }
 
-    function VT(bb, cb) {
-      const sb = "custom" === cb ? "That server" : MT[cb].shortName;
+    function yE(bb, ab) {
+      const Ub = "custom" === ab ? "That server" : BE[ab].shortName;
       switch (bb) {
         case "badKey":
-          return `${sb} didn't accept your key: it may be wrong or deleted. Check you copied all of it.`;
+          return `${Ub} didn't accept your key: it may be wrong or deleted. Check you copied all of it.`;
         case "busy":
           return "Too many requests right now. Wait a minute and try again.";
         case "noModel":
-          return `${sb} can't find that model. Check its name.`;
+          return `${Ub} can't find that model. Check its name.`;
         case "unreachable":
-          return "anthropic" === cb ? "Claude didn't accept your key: check it, or make a new one." : "custom" === cb ? "Couldn't reach that address. Check it's typed right and the server is running. Your server must allow web pages to use it. In LM Studio turn on CORS; for Ollama see its help." : `Couldn't reach ${sb}. Check your internet and try again.`;
+          return "anthropic" === ab ? "Claude didn't accept your key: check it, or make a new one." : "custom" === ab ? "Couldn't reach that address. Check it's typed right and the server is running. Your server must allow web pages to use it. In LM Studio turn on CORS; for Ollama see its help." : `Couldn't reach ${Ub}. Check your internet and try again.`;
         case "noCredit":
-          return "custom" === cb ? "That server stopped your key for now: it has used all it can." : `${sb} stopped your key for now: it has used all it can. Check it on ${sb}'s website.`;
+          return "custom" === ab ? "That server stopped your key for now: it has used all it can." : `${Ub} stopped your key for now: it has used all it can. Check it on ${Ub}'s website.`;
         case "blocked":
-          return `${sb} doesn't work from where you are.`;
+          return `${Ub} doesn't work from where you are.`;
         case "timeout":
           return "That took too long. Try again.";
         default:
-          return `${sb} had a problem with that. Try again in a minute.`
+          return `${Ub} had a problem with that. Try again in a minute.`
       }
     }
 
-    function LT(bb) {
-      var cb;
-      const sb = bb.at(-1);
-      if (!sb || null !== Is(sb.name, sb.args) || function(bb) {
+    function ZE(bb) {
+      var ab;
+      const Ub = bb.at(-1);
+      if (!Ub || null !== BU(Ub.name, Ub.args) || function(bb) {
           try {
             return JSON.parse(bb), !0
           } catch {
             return !1
           }
-        }(sb.args)) return;
-      const kb = null === (cb = /"path"\s*:\s*"((?:[^"\\]|\\.)*)"/.exec(sb.args)) || void 0 === cb ? void 0 : cb[1];
+        }(Ub.args)) return;
+      const Ab = null === (ab = /"path"\s*:\s*"((?:[^"\\]|\\.)*)"/.exec(Ub.args)) || void 0 === ab ? void 0 : ab[1];
       return {
-        name: sb.name || "write_file",
-        path: kb
+        name: Ub.name || "write_file",
+        path: Ab
       }
     }
-    const uT = 1e4,
-      YT = 3e5,
-      hT = 16e3;
-    async function JT(bb, cb, sb, kb) {
+    const DE = 1e4,
+      zE = 3e5,
+      xE = 16e3;
+    async function iE(bb, ab, Ub, Ab) {
       if ("custom" !== bb && ! function(bb) {
-          return nT.has(new URL(bb).host)
-        }(cb)) throw new Error(`AI key request to an unknown host for ${bb}`);
-      const Wb = await fetch(cb, {
-        ...sb,
+          return vE.has(new URL(bb).host)
+        }(ab)) throw new Error(`AI key request to an unknown host for ${bb}`);
+      const Mb = await fetch(ab, {
+        ...Ub,
         credentials: "omit",
         referrerPolicy: "no-referrer",
-        signal: kb
+        signal: Ab
       });
-      if (!Wb.ok) {
-        const cb = await Wb.text().catch((() => ""));
-        throw console.warn(`AI key request: ${bb} answered ${Wb.status}`), new CT(function(bb, cb, sb) {
-          const kb = !("gemini" === bb && 429 === cb) && /credit|quota|billing|balance|payment|spend|budget|limit[ _]exceeded|key limit/i.test(sb);
-          return 401 === cb ? "badKey" : 404 !== cb && 400 !== cb || !/model_not_found|not_found_error[^\n]{0,80}model:|models?\b[^\n]{0,80}?(does not exist|not found)|no such model|unknown model|(invalid|not a valid) model/i.test(sb) ? 402 === cb || (400 === cb || 403 === cb || 429 === cb) && kb && !/rate[ _-]?limit/i.test(sb) ? "noCredit" : 400 === cb && /(location|region|country|territory)[^\n]{0,40}not supported|unsupported_country/i.test(sb) ? "blocked" : 400 === cb && /api[ _-]?key/i.test(sb) ? "badKey" : 403 === cb ? /moderat|flagged/i.test(sb) ? "refused" : /region|country|territor|location/i.test(sb) ? "blocked" : "badKey" : 429 === cb ? "busy" : "failed" : "noModel"
-        }(bb, Wb.status, cb), function(bb) {
-          const cb = bb.headers.get("retry-after");
-          if (!cb) return;
-          const sb = Number(cb);
-          return Number.isFinite(sb) ? 1e3 * sb : Math.max(0, Date.parse(cb) - Date.now()) || void 0
-        }(Wb), Wb.status, function(bb, cb) {
-          let sb = bb;
+      if (!Mb.ok) {
+        const ab = await Mb.text().catch((() => ""));
+        throw console.warn(`AI key request: ${bb} answered ${Mb.status}`), new RE(function(bb, ab, Ub) {
+          const Ab = !("gemini" === bb && 429 === ab) && /credit|quota|billing|balance|payment|spend|budget|limit[ _]exceeded|key limit/i.test(Ub);
+          return 401 === ab ? "badKey" : 404 !== ab && 400 !== ab || !/model_not_found|not_found_error[^\n]{0,80}model:|models?\b[^\n]{0,80}?(does not exist|not found)|no such model|unknown model|(invalid|not a valid) model/i.test(Ub) ? 402 === ab || (400 === ab || 403 === ab || 429 === ab) && Ab && !/rate[ _-]?limit/i.test(Ub) ? "noCredit" : 400 === ab && /(location|region|country|territory)[^\n]{0,40}not supported|unsupported_country/i.test(Ub) ? "blocked" : 400 === ab && /api[ _-]?key/i.test(Ub) ? "badKey" : 403 === ab ? /moderat|flagged/i.test(Ub) ? "refused" : /region|country|territor|location/i.test(Ub) ? "blocked" : "badKey" : 429 === ab ? "busy" : "failed" : "noModel"
+        }(bb, Mb.status, ab), function(bb) {
+          const ab = bb.headers.get("retry-after");
+          if (!ab) return;
+          const Ub = Number(ab);
+          return Number.isFinite(Ub) ? 1e3 * Ub : Math.max(0, Date.parse(ab) - Date.now()) || void 0
+        }(Mb), Mb.status, function(bb, ab) {
+          let Ub = bb;
           try {
-            const cb = JSON.parse(bb),
-              kb = cb.error && "object" === typeof cb.error ? cb.error.message : void 0,
-              Wb = [cb.error, kb, cb.message].find((bb => "string" === typeof bb));
-            sb = "string" === typeof Wb ? Wb : bb
+            const ab = JSON.parse(bb),
+              Ab = ab.error && "object" === typeof ab.error ? ab.error.message : void 0,
+              Mb = [ab.error, Ab, ab.message].find((bb => "string" === typeof bb));
+            Ub = "string" === typeof Mb ? Mb : bb
           } catch {}
-          const kb = cb.reduce(((bb, cb) => NT(bb, cb)), sb.replace(/\s+/g, " ").trim()).slice(0, 200);
-          return "" === kb ? void 0 : kb
-        }(cb, function(bb) {
-          const cb = [];
-          return new Headers(bb.headers).forEach(((bb, sb) => {
-            /authorization|key/i.test(sb) && cb.push(bb, bb.replace(/^Bearer\s+/i, ""))
-          })), cb.filter((bb => bb.length >= 6))
-        }(sb)))
+          const Ab = ab.reduce(((bb, ab) => kE(bb, ab)), Ub.replace(/\s+/g, " ").trim()).slice(0, 200);
+          return "" === Ab ? void 0 : Ab
+        }(ab, function(bb) {
+          const ab = [];
+          return new Headers(bb.headers).forEach(((bb, Ub) => {
+            /authorization|key/i.test(Ub) && ab.push(bb, bb.replace(/^Bearer\s+/i, ""))
+          })), ab.filter((bb => bb.length >= 6))
+        }(Ub)))
       }
-      return Wb
+      return Mb
     }
-    async function gT(bb, cb, sb) {
-      const kb = (0, eb.b)(bb, cb);
+    async function fE(bb, ab, Ub) {
+      const Ab = (0, yb.b)(bb, ab);
       try {
-        return await sb(kb.signal)
-      } catch (Wb) {
-        if (Wb instanceof CT || null !== cb && void 0 !== cb && cb.aborted) throw Wb;
-        throw kb.signal.aborted || console.warn("AI key request couldn't be read", Wb), new CT(kb.signal.aborted ? "timeout" : "unreachable")
+        return await Ub(Ab.signal)
+      } catch (Mb) {
+        if (Mb instanceof RE || null !== ab && void 0 !== ab && ab.aborted) throw Mb;
+        throw Ab.signal.aborted || console.warn("AI key request couldn't be read", Mb), new RE(Ab.signal.aborted ? "timeout" : "unreachable")
       } finally {
-        kb.clear()
+        Ab.clear()
       }
     }
 
-    function BT(bb) {
-      let cb = bb.length;
-      const sb = bb.lastIndexOf("<tool_call"); - 1 === sb || bb.includes("</tool_call>", sb) || (cb = sb);
-      const kb = [...bb.matchAll(/\{\s*"(?:jsonrpc|name|tool|method|function)"/g)].find((cb => null === function(bb, cb) {
-        let sb = 0,
-          kb = !1;
-        for (let Wb = cb; Wb < bb.length; Wb++) {
-          const cb = bb[Wb];
-          if (kb) "\\" === cb ? Wb++ : '"' === cb && (kb = !1);
-          else if ('"' === cb) kb = !0;
-          else if ("{" === cb) sb++;
-          else if ("}" === cb && (sb--, 0 === sb)) return Wb + 1
+    function mE(bb) {
+      let ab = bb.length;
+      const Ub = bb.lastIndexOf("<tool_call"); - 1 === Ub || bb.includes("</tool_call>", Ub) || (ab = Ub);
+      const Ab = [...bb.matchAll(/\{\s*"(?:jsonrpc|name|tool|method|function)"/g)].find((ab => null === function(bb, ab) {
+        let Ub = 0,
+          Ab = !1;
+        for (let Mb = ab; Mb < bb.length; Mb++) {
+          const ab = bb[Mb];
+          if (Ab) "\\" === ab ? Mb++ : '"' === ab && (Ab = !1);
+          else if ('"' === ab) Ab = !0;
+          else if ("{" === ab) Ub++;
+          else if ("}" === ab && (Ub--, 0 === Ub)) return Mb + 1
         }
         return null
-      }(bb, cb.index)));
-      return kb && kb.index < cb && (cb = kb.index), bb.slice(0, cb).replace(/```[\w-]*\s*$/, "").trim()
+      }(bb, ab.index)));
+      return Ab && Ab.index < ab && (ab = Ab.index), bb.slice(0, ab).replace(/```[\w-]*\s*$/, "").trim()
     }
 
-    function tT(bb, cb) {
-      let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "simple",
-        kb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "";
+    function pE(bb, ab) {
+      let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "simple",
+        Ab = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "";
       const {
-        answer: Wb,
-        reasoning: ab,
-        qsb: Tb,
-        isCutShort: Ub,
-        nativeCalls: Ib = []
-      } = cb, Hb = Wb.replace(/<think>[\s\S]*?<\/think>/g, ""), fb = "" === kb ? Hb.trim() : function(bb, cb) {
-        var sb, kb;
-        const Wb = cb.trimStart(),
-          ab = bb.trimStart();
-        if (ab.length >= 16 && Wb.startsWith(ab.slice(0, 240))) return Wb;
-        const Tb = null !== (sb = null === (kb = bb.match(/```/g)) || void 0 === kb ? void 0 : kb.length) && void 0 !== sb ? sb : 0,
-          Ub = BT(bb) !== bb.trim() || Tb % 2 === 1 ? 48 : 16;
-        for (let Ib = Math.min(bb.length, Wb.length, 4e3); Ib >= Ub; Ib--)
-          if (bb.endsWith(Wb.slice(0, Ib))) return bb + Wb.slice(Ib);
-        return bb + cb
-      }(kb, Hb).trim(), Mb = Na(fb, "", Ib, sb), Xb = Na(Ub ? BT(fb) : fb, ab, Ib, sb, Ub), nb = Ub ? LT(Ib) : void 0;
-      if (Tb && "" === Xb) throw new CT("refused");
-      if ("" === Xb && (!Ub || "" === Mb && !nb)) throw new CT("failed");
+        answer: Mb,
+        reasoning: Tb,
+        lUb: Eb,
+        isCutShort: Yb,
+        nativeCalls: Bb = []
+      } = ab, eb = Mb.replace(/<think>[\s\S]*?<\/think>/g, ""), vb = "" === Ab ? eb.trim() : function(bb, ab) {
+        var Ub, Ab;
+        const Mb = ab.trimStart(),
+          Tb = bb.trimStart();
+        if (Tb.length >= 16 && Mb.startsWith(Tb.slice(0, 240))) return Mb;
+        const Eb = null !== (Ub = null === (Ab = bb.match(/```/g)) || void 0 === Ab ? void 0 : Ab.length) && void 0 !== Ub ? Ub : 0,
+          Yb = mE(bb) !== bb.trim() || Eb % 2 === 1 ? 48 : 16;
+        for (let Bb = Math.min(bb.length, Mb.length, 4e3); Bb >= Yb; Bb--)
+          if (bb.endsWith(Mb.slice(0, Bb))) return bb + Mb.slice(Bb);
+        return bb + ab
+      }(Ab, eb).trim(), Lb = kT(vb, "", Bb, Ub), Pb = kT(Yb ? mE(vb) : vb, Tb, Bb, Ub, Yb), Xb = Yb ? ZE(Bb) : void 0;
+      if (Eb && "" === Pb) throw new RE("refused");
+      if ("" === Pb && (!Yb || "" === Lb && !Xb)) throw new RE("failed");
       return {
         model: bb,
-        answer: Xb,
-        reasoning: ab,
-        isCutShort: Ub,
-        written: Ub ? Mb : void 0,
-        cutCall: nb
+        answer: Pb,
+        reasoning: Tb,
+        isCutShort: Yb,
+        written: Yb ? Lb : void 0,
+        cutCall: Xb
       }
     }
 
-    function yT(bb) {
-      const cb = bb.findIndex((bb => "user" === bb.role));
-      return -1 === cb ? [] : bb.slice(cb)
+    function NE(bb) {
+      const ab = bb.findIndex((bb => "user" === bb.role));
+      return -1 === ab ? [] : bb.slice(ab)
     }
 
-    function PT(bb, cb) {
-      var sb;
-      const kb = null !== (sb = cb.tools) && void 0 !== sb ? sb : [];
-      if (0 === kb.length) return {};
+    function WE(bb, ab) {
+      var Ub;
+      const Ab = null !== (Ub = ab.tools) && void 0 !== Ub ? Ub : [];
+      if (0 === Ab.length) return {};
       switch (bb) {
         case "openai":
           return {
-            tools: ua(kb)
+            tools: DT(Ab)
           };
         case "anthropic":
           return {
-            tools: kb.map((bb => ({
+            tools: Ab.map((bb => ({
               name: bb.name,
               description: bb.description,
               input_schema: bb.inputSchema
@@ -7298,89 +7298,89 @@ export const modules = {
         case "gemini":
           return {
             tools: [{
-              functionDeclarations: kb.map((bb => {
+              functionDeclarations: Ab.map((bb => {
                 return {
                   name: bb.name,
                   description: bb.description,
-                  parameters: (cb = bb.inputSchema, {
+                  parameters: (ab = bb.inputSchema, {
                     type: "OBJECT",
-                    properties: Object.fromEntries(Object.entries(cb.properties).map((bb => {
-                      let [cb, sb] = bb;
-                      return [cb, {
+                    properties: Object.fromEntries(Object.entries(ab.properties).map((bb => {
+                      let [ab, Ub] = bb;
+                      return [ab, {
                         type: "STRING",
-                        description: sb.description
+                        description: Ub.description
                       }]
                     }))),
-                    required: cb.required
+                    required: ab.required
                   })
                 };
-                var cb
+                var ab
               }))
             }]
           }
       }
     }
-    class DT {
-      constructor(bb, cb, sb) {
-        this.provider = bb, this.baseUrl = cb, this.key = sb
+    class HE {
+      constructor(bb, ab, Ub) {
+        this.provider = bb, this.baseUrl = ab, this.key = Ub
       }
       async check(bb) {
-        return gT(uT, bb, (async bb => {
-          var cb;
-          const sb = await JT(this.provider, `${this.baseUrl}/models`, {
+        return fE(DE, bb, (async bb => {
+          var ab;
+          const Ub = await iE(this.provider, `${this.baseUrl}/models`, {
             headers: this.headers()
           }, bb);
           return {
-            models: (null !== (cb = (await sb.json()).data) && void 0 !== cb ? cb : []).map((bb => ({
+            models: (null !== (ab = (await Ub.json()).data) && void 0 !== ab ? ab : []).map((bb => ({
               id: bb.id,
               name: bb.name
             })))
           }
         }))
       }
-      async ask(bb, cb) {
-        let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        return gT(YT, sb.signal, (async kb => {
-          var Wb;
-          const ab = await JT(this.provider, `${this.baseUrl}/chat/completions`, {
+      async ask(bb, ab) {
+        let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        return fE(zE, Ub.signal, (async Ab => {
+          var Mb;
+          const Tb = await iE(this.provider, `${this.baseUrl}/chat/completions`, {
             method: "POST",
             headers: this.headers(),
             body: JSON.stringify({
               model: bb,
-              messages: cb,
-              ["openai" === this.provider ? "max_completion_tokens" : "max_tokens"]: hT,
+              messages: ab,
+              ["openai" === this.provider ? "max_completion_tokens" : "max_tokens"]: xE,
               stream: !0,
-              ...PT("openai", sb)
+              ...WE("openai", Ub)
             })
-          }, kb);
-          let Tb = "",
-            Ub = "",
-            Ib = !1,
-            Hb = !1;
-          const fb = [];
-          return await La(null !== (Wb = ab.body) && void 0 !== Wb ? Wb : new ReadableStream, (cb => {
-            var kb, Wb, ab, Mb, Xb, nb, mb, lb;
-            const Qb = cb;
-            if (Qb.error) throw new CT(402 === Number(Qb.error.code) ? "noCredit" : "failed");
-            const eb = null === (kb = Qb.choices) || void 0 === kb ? void 0 : kb[0];
-            Ub += null !== (Wb = null !== (ab = null === eb || void 0 === eb || null === (Mb = eb.delta) || void 0 === Mb ? void 0 : Mb.reasoning) && void 0 !== ab ? ab : null === eb || void 0 === eb || null === (Xb = eb.delta) || void 0 === Xb ? void 0 : Xb.reasoning_content) && void 0 !== Wb ? Wb : "", Tb += null !== (nb = null === eb || void 0 === eb || null === (mb = eb.delta) || void 0 === mb ? void 0 : mb.content) && void 0 !== nb ? nb : "";
-            for (const bb of null !== (Cb = null === eb || void 0 === eb || null === (Nb = eb.delta) || void 0 === Nb ? void 0 : Nb.tool_calls) && void 0 !== Cb ? Cb : []) {
-              var Cb, Nb;
-              ea(fb, bb)
+          }, Ab);
+          let Eb = "",
+            Yb = "",
+            Bb = !1,
+            eb = !1;
+          const vb = [];
+          return await ZT(null !== (Mb = Tb.body) && void 0 !== Mb ? Mb : new ReadableStream, (ab => {
+            var Ab, Mb, Tb, Lb, Pb, Xb, jb, Rb;
+            const kb = ab;
+            if (kb.error) throw new RE(402 === Number(kb.error.code) ? "noCredit" : "failed");
+            const yb = null === (Ab = kb.choices) || void 0 === Ab ? void 0 : Ab[0];
+            Yb += null !== (Mb = null !== (Tb = null === yb || void 0 === yb || null === (Lb = yb.delta) || void 0 === Lb ? void 0 : Lb.reasoning) && void 0 !== Tb ? Tb : null === yb || void 0 === yb || null === (Pb = yb.delta) || void 0 === Pb ? void 0 : Pb.reasoning_content) && void 0 !== Mb ? Mb : "", Eb += null !== (Xb = null === yb || void 0 === yb || null === (jb = yb.delta) || void 0 === jb ? void 0 : jb.content) && void 0 !== Xb ? Xb : "";
+            for (const bb of null !== (Zb = null === yb || void 0 === yb || null === (Db = yb.delta) || void 0 === Db ? void 0 : Db.tool_calls) && void 0 !== Zb ? Zb : []) {
+              var Zb, Db;
+              jT(vb, bb)
             }
-            Ib ||= "content_filter" === (null === eb || void 0 === eb ? void 0 : eb.finish_reason), Hb ||= "length" === (null === eb || void 0 === eb ? void 0 : eb.finish_reason), null === (lb = sb.onProgress) || void 0 === lb || lb.call(sb, {
+            Bb ||= "content_filter" === (null === yb || void 0 === yb ? void 0 : yb.finish_reason), eb ||= "length" === (null === yb || void 0 === yb ? void 0 : yb.finish_reason), null === (Rb = Ub.onProgress) || void 0 === Rb || Rb.call(Ub, {
               model: bb,
-              reasoningChars: Ub.length,
-              answer: Tb,
-              isCalling: fb.length > 0
+              reasoningChars: Yb.length,
+              answer: Eb,
+              isCalling: vb.length > 0
             })
-          })), tT(bb, {
-            answer: Tb,
-            reasoning: Ub,
-            qsb: Ib,
-            isCutShort: Hb,
-            nativeCalls: fb
-          }, sb.callFormat, sb.continueFrom)
+          })), pE(bb, {
+            answer: Eb,
+            reasoning: Yb,
+            lUb: Bb,
+            isCutShort: eb,
+            nativeCalls: vb
+          }, Ub.callFormat, Ub.continueFrom)
         }))
       }
       headers() {
@@ -7392,99 +7392,99 @@ export const modules = {
         }
       }
     }
-    class ET {
+    class IE {
       constructor(bb) {
-        this.key = bb, this.chat = void 0, this.chat = new DT("openrouter", MT.openrouter.baseUrl, bb)
+        this.key = bb, this.chat = void 0, this.chat = new HE("openrouter", BE.openrouter.baseUrl, bb)
       }
       async check(bb) {
-        return await gT(uT, bb, (async bb => JT("openrouter", `${MT.openrouter.baseUrl}/key`, {
+        return await fE(DE, bb, (async bb => iE("openrouter", `${BE.openrouter.baseUrl}/key`, {
           headers: {
             Authorization: `Bearer ${this.key}`
           }
         }, bb))), this.chat.check(bb)
       }
-      ask(bb, cb, sb) {
-        return this.chat.ask(bb, cb, sb)
+      ask(bb, ab, Ub) {
+        return this.chat.ask(bb, ab, Ub)
       }
     }
-    class iT {
+    class dE {
       constructor(bb) {
-        this.key = bb, this.baseUrl = MT.anthropic.baseUrl
+        this.key = bb, this.baseUrl = BE.anthropic.baseUrl
       }
       async check(bb) {
-        return gT(uT, bb, (async bb => {
-          var cb;
-          const sb = await JT("anthropic", `${this.baseUrl}/models?limit=1000`, {
+        return fE(DE, bb, (async bb => {
+          var ab;
+          const Ub = await iE("anthropic", `${this.baseUrl}/models?limit=1000`, {
             headers: this.headers()
           }, bb);
           return {
-            models: (null !== (cb = (await sb.json()).data) && void 0 !== cb ? cb : []).map((bb => ({
+            models: (null !== (ab = (await Ub.json()).data) && void 0 !== ab ? ab : []).map((bb => ({
               id: bb.id,
               name: bb.display_name
             })))
           }
         }))
       }
-      async ask(bb, cb) {
-        let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const kb = cb.filter((bb => "system" === bb.role)).map((bb => bb.content)).join("\n\n"),
-          Wb = yT(cb).map((bb => ({
+      async ask(bb, ab) {
+        let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const Ab = ab.filter((bb => "system" === bb.role)).map((bb => bb.content)).join("\n\n"),
+          Mb = NE(ab).map((bb => ({
             role: bb.role,
             content: bb.content
           })));
-        return gT(YT, sb.signal, (async cb => {
-          var ab;
-          const Tb = await JT("anthropic", `${this.baseUrl}/messages`, {
+        return fE(zE, Ub.signal, (async ab => {
+          var Tb;
+          const Eb = await iE("anthropic", `${this.baseUrl}/messages`, {
             method: "POST",
             headers: this.headers(),
             body: JSON.stringify({
               model: bb,
-              max_tokens: hT,
-              system: kb,
-              messages: Wb,
+              max_tokens: xE,
+              system: Ab,
+              messages: Mb,
               stream: !0,
-              ...PT("anthropic", sb)
+              ...WE("anthropic", Ub)
             })
-          }, cb);
-          let Ub = "",
-            Ib = "",
-            Hb = !1,
-            fb = !1;
-          const Mb = new Map;
-          await La(null !== (ab = Tb.body) && void 0 !== ab ? ab : new ReadableStream, (cb => {
-            var kb, Wb;
-            const ab = cb;
-            var Tb, Xb, nb, mb;
-            if ("error" === ab.type) throw new CT("overloaded_error" === (null === (Tb = ab.error) || void 0 === Tb ? void 0 : Tb.type) || "rate_limit_error" === (null === (Xb = ab.error) || void 0 === Xb ? void 0 : Xb.type) ? "busy" : "failed");
-            if ("content_block_start" === ab.type && "tool_use" === (null === (kb = ab.content_block) || void 0 === kb ? void 0 : kb.type)) Mb.set(null !== (nb = ab.index) && void 0 !== nb ? nb : Mb.size, {
-              name: null !== (mb = ab.content_block.name) && void 0 !== mb ? mb : "",
+          }, ab);
+          let Yb = "",
+            Bb = "",
+            eb = !1,
+            vb = !1;
+          const Lb = new Map;
+          await ZT(null !== (Tb = Eb.body) && void 0 !== Tb ? Tb : new ReadableStream, (ab => {
+            var Ab, Mb;
+            const Tb = ab;
+            var Eb, Pb, Xb, jb;
+            if ("error" === Tb.type) throw new RE("overloaded_error" === (null === (Eb = Tb.error) || void 0 === Eb ? void 0 : Eb.type) || "rate_limit_error" === (null === (Pb = Tb.error) || void 0 === Pb ? void 0 : Pb.type) ? "busy" : "failed");
+            if ("content_block_start" === Tb.type && "tool_use" === (null === (Ab = Tb.content_block) || void 0 === Ab ? void 0 : Ab.type)) Lb.set(null !== (Xb = Tb.index) && void 0 !== Xb ? Xb : Lb.size, {
+              name: null !== (jb = Tb.content_block.name) && void 0 !== jb ? jb : "",
               args: ""
             });
-            else if ("content_block_delta" === ab.type) {
-              var lb, Qb, eb, Cb, Nb, Vb;
-              Ub += null !== (lb = null === (Qb = ab.delta) || void 0 === Qb ? void 0 : Qb.text) && void 0 !== lb ? lb : "", Ib += null !== (eb = null === (Cb = ab.delta) || void 0 === Cb ? void 0 : Cb.thinking) && void 0 !== eb ? eb : "";
-              const bb = Mb.get(null !== (Nb = ab.index) && void 0 !== Nb ? Nb : -1);
-              var Lb;
-              if (bb && "input_json_delta" === (null === (Vb = ab.delta) || void 0 === Vb ? void 0 : Vb.type)) bb.args += null !== (Lb = ab.delta.partial_json) && void 0 !== Lb ? Lb : ""
-            } else if ("message_delta" === ab.type) {
-              var ub, Yb;
-              Hb ||= "refusal" === (null === (ub = ab.delta) || void 0 === ub ? void 0 : ub.stop_reason), fb ||= "max_tokens" === (null === (Yb = ab.delta) || void 0 === Yb ? void 0 : Yb.stop_reason)
+            else if ("content_block_delta" === Tb.type) {
+              var Rb, kb, yb, Zb, Db, zb;
+              Yb += null !== (Rb = null === (kb = Tb.delta) || void 0 === kb ? void 0 : kb.text) && void 0 !== Rb ? Rb : "", Bb += null !== (yb = null === (Zb = Tb.delta) || void 0 === Zb ? void 0 : Zb.thinking) && void 0 !== yb ? yb : "";
+              const bb = Lb.get(null !== (Db = Tb.index) && void 0 !== Db ? Db : -1);
+              var xb;
+              if (bb && "input_json_delta" === (null === (zb = Tb.delta) || void 0 === zb ? void 0 : zb.type)) bb.args += null !== (xb = Tb.delta.partial_json) && void 0 !== xb ? xb : ""
+            } else if ("message_delta" === Tb.type) {
+              var ib, fb;
+              eb ||= "refusal" === (null === (ib = Tb.delta) || void 0 === ib ? void 0 : ib.stop_reason), vb ||= "max_tokens" === (null === (fb = Tb.delta) || void 0 === fb ? void 0 : fb.stop_reason)
             }
-            null === (Wb = sb.onProgress) || void 0 === Wb || Wb.call(sb, {
+            null === (Mb = Ub.onProgress) || void 0 === Mb || Mb.call(Ub, {
               model: bb,
-              reasoningChars: Ib.length,
-              answer: Ub,
-              isCalling: Mb.size > 0
+              reasoningChars: Bb.length,
+              answer: Yb,
+              isCalling: Lb.size > 0
             })
           }));
-          const Xb = [...Mb.values()];
-          return tT(bb, {
-            answer: Ub,
-            reasoning: Ib,
-            qsb: Hb,
-            isCutShort: fb,
-            nativeCalls: Xb
-          }, sb.callFormat, sb.continueFrom)
+          const Pb = [...Lb.values()];
+          return pE(bb, {
+            answer: Yb,
+            reasoning: Bb,
+            lUb: eb,
+            isCutShort: vb,
+            nativeCalls: Pb
+          }, Ub.callFormat, Ub.continueFrom)
         }))
       }
       headers() {
@@ -7496,20 +7496,20 @@ export const modules = {
         }
       }
     }
-    class OT {
+    class FE {
       constructor(bb) {
-        this.key = bb, this.baseUrl = MT.gemini.baseUrl
+        this.key = bb, this.baseUrl = BE.gemini.baseUrl
       }
       async check(bb) {
-        return gT(uT, bb, (async bb => {
-          var cb;
-          const sb = await JT("gemini", `${this.baseUrl}/models?pageSize=1000`, {
+        return fE(DE, bb, (async bb => {
+          var ab;
+          const Ub = await iE("gemini", `${this.baseUrl}/models?pageSize=1000`, {
             headers: this.headers()
           }, bb);
           return {
-            models: (null !== (cb = (await sb.json()).models) && void 0 !== cb ? cb : []).filter((bb => {
-              var cb, sb;
-              return null === (cb = null === (sb = bb.supportedGenerationMethods) || void 0 === sb ? void 0 : sb.includes("generateContent")) || void 0 === cb || cb
+            models: (null !== (ab = (await Ub.json()).models) && void 0 !== ab ? ab : []).filter((bb => {
+              var ab, Ub;
+              return null === (ab = null === (Ub = bb.supportedGenerationMethods) || void 0 === Ub ? void 0 : Ub.includes("generateContent")) || void 0 === ab || ab
             })).map((bb => ({
               id: bb.name.replace(/^models\//, ""),
               name: bb.displayName
@@ -7517,69 +7517,69 @@ export const modules = {
           }
         }))
       }
-      async ask(bb, cb) {
-        let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const kb = cb.filter((bb => "system" === bb.role)).map((bb => ({
+      async ask(bb, ab) {
+        let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const Ab = ab.filter((bb => "system" === bb.role)).map((bb => ({
             text: bb.content
           }))),
-          Wb = yT(cb).map((bb => ({
+          Mb = NE(ab).map((bb => ({
             role: "assistant" === bb.role ? "model" : "user",
             parts: [{
               text: bb.content
             }]
           })));
-        return gT(YT, sb.signal, (async cb => {
-          var ab;
-          const Tb = await JT("gemini", `${this.baseUrl}/models/${encodeURIComponent(bb)}:streamGenerateContent?alt=sse`, {
+        return fE(zE, Ub.signal, (async ab => {
+          var Tb;
+          const Eb = await iE("gemini", `${this.baseUrl}/models/${encodeURIComponent(bb)}:streamGenerateContent?alt=sse`, {
             method: "POST",
             headers: this.headers(),
             body: JSON.stringify({
               systemInstruction: {
-                parts: kb
+                parts: Ab
               },
-              contents: Wb,
+              contents: Mb,
               generationConfig: {
-                maxOutputTokens: hT
+                maxOutputTokens: xE
               },
-              ...PT("gemini", sb)
+              ...WE("gemini", Ub)
             })
-          }, cb);
-          let Ub = "",
-            Ib = "",
-            Hb = !1,
-            fb = !1;
-          const Mb = [];
-          return await La(null !== (ab = Tb.body) && void 0 !== ab ? ab : new ReadableStream, (cb => {
-            var kb, Wb, ab;
-            const Tb = cb,
-              Xb = null === (kb = Tb.candidates) || void 0 === kb ? void 0 : kb[0];
-            for (const bb of null !== (nb = null === Xb || void 0 === Xb || null === (mb = Xb.content) || void 0 === mb ? void 0 : mb.parts) && void 0 !== nb ? nb : []) {
-              var nb, mb, lb, Qb;
-              if (bb.functionCall) Mb.push({
-                name: null !== (lb = bb.functionCall.name) && void 0 !== lb ? lb : "",
-                args: JSON.stringify(null !== (Qb = bb.functionCall.args) && void 0 !== Qb ? Qb : {})
+          }, ab);
+          let Yb = "",
+            Bb = "",
+            eb = !1,
+            vb = !1;
+          const Lb = [];
+          return await ZT(null !== (Tb = Eb.body) && void 0 !== Tb ? Tb : new ReadableStream, (ab => {
+            var Ab, Mb, Tb;
+            const Eb = ab,
+              Pb = null === (Ab = Eb.candidates) || void 0 === Ab ? void 0 : Ab[0];
+            for (const bb of null !== (Xb = null === Pb || void 0 === Pb || null === (jb = Pb.content) || void 0 === jb ? void 0 : jb.parts) && void 0 !== Xb ? Xb : []) {
+              var Xb, jb, Rb, kb;
+              if (bb.functionCall) Lb.push({
+                name: null !== (Rb = bb.functionCall.name) && void 0 !== Rb ? Rb : "",
+                args: JSON.stringify(null !== (kb = bb.functionCall.args) && void 0 !== kb ? kb : {})
               });
               else if (bb.thought) {
-                var eb;
-                Ib += null !== (eb = bb.text) && void 0 !== eb ? eb : ""
+                var yb;
+                Bb += null !== (yb = bb.text) && void 0 !== yb ? yb : ""
               } else {
-                var Cb;
-                Ub += null !== (Cb = bb.text) && void 0 !== Cb ? Cb : ""
+                var Zb;
+                Yb += null !== (Zb = bb.text) && void 0 !== Zb ? Zb : ""
               }
             }
-            Hb ||= void 0 !== (null === (Wb = Tb.promptFeedback) || void 0 === Wb ? void 0 : Wb.blockReason) || "SAFETY" === (null === Xb || void 0 === Xb ? void 0 : Xb.finishReason) || "PROHIBITED_CONTENT" === (null === Xb || void 0 === Xb ? void 0 : Xb.finishReason), fb ||= "MAX_TOKENS" === (null === Xb || void 0 === Xb ? void 0 : Xb.finishReason), null === (ab = sb.onProgress) || void 0 === ab || ab.call(sb, {
+            eb ||= void 0 !== (null === (Mb = Eb.promptFeedback) || void 0 === Mb ? void 0 : Mb.blockReason) || "SAFETY" === (null === Pb || void 0 === Pb ? void 0 : Pb.finishReason) || "PROHIBITED_CONTENT" === (null === Pb || void 0 === Pb ? void 0 : Pb.finishReason), vb ||= "MAX_TOKENS" === (null === Pb || void 0 === Pb ? void 0 : Pb.finishReason), null === (Tb = Ub.onProgress) || void 0 === Tb || Tb.call(Ub, {
               model: bb,
-              reasoningChars: Ib.length,
-              answer: Ub,
-              isCalling: Mb.length > 0
+              reasoningChars: Bb.length,
+              answer: Yb,
+              isCalling: Lb.length > 0
             })
-          })), tT(bb, {
-            answer: Ub,
-            reasoning: Ib,
-            qsb: Hb,
-            isCutShort: fb,
-            nativeCalls: Mb
-          }, sb.callFormat, sb.continueFrom)
+          })), pE(bb, {
+            answer: Yb,
+            reasoning: Bb,
+            lUb: eb,
+            isCutShort: vb,
+            nativeCalls: Lb
+          }, Ub.callFormat, Ub.continueFrom)
         }))
       }
       headers() {
@@ -7590,26 +7590,26 @@ export const modules = {
       }
     }
 
-    function GT(bb, cb, sb) {
+    function hE(bb, ab, Ub) {
       switch (bb) {
         case "openrouter":
-          return new ET(cb);
+          return new IE(ab);
         case "anthropic":
-          return new iT(cb);
+          return new dE(ab);
         case "gemini":
-          return new OT(cb);
+          return new FE(ab);
         case "openai":
-          return new DT("openai", MT.openai.baseUrl, cb);
+          return new HE("openai", BE.openai.baseUrl, ab);
         case "custom":
-          return new DT("custom", null !== sb && void 0 !== sb ? sb : "", cb)
+          return new HE("custom", null !== Ub && void 0 !== Ub ? Ub : "", ab)
       }
     }
-    const KT = {
+    const GE = {
         fast: "Fast",
         smart: "Smart",
         smartest: "Smartest"
       },
-      ZT = {
+      QE = {
         anthropic: {
           fast: [{
             id: "claude-haiku-5-5",
@@ -7716,426 +7716,426 @@ export const modules = {
         }
       };
 
-    function zT(bb) {
+    function qE(bb) {
       return /claude-(sonnet|opus|fable)|gpt-5(\.\d+)?($|-codex|-pro|-sol)|gpt-6(\.\d+)?-(sol|astra)|gemini-[\d.]+-pro|gemini-4/.test(bb) ? "mcp" : "simple"
     }
 
-    function qT(bb, cb) {
-      return "custom" !== bb && /claude-|gpt-|gemini-/.test(cb)
+    function uE(bb, ab) {
+      return "custom" !== bb && /claude-|gpt-|gemini-/.test(ab)
     }
 
-    function dT(bb, cb, sb) {
-      var kb;
-      const Wb = sb.find((bb => bb.id === cb));
+    function rE(bb, ab, Ub) {
+      var Ab;
+      const Mb = Ub.find((bb => bb.id === ab));
       return {
-        id: cb,
-        name: null !== (kb = null === Wb || void 0 === Wb ? void 0 : Wb.name) && void 0 !== kb ? kb : cb,
-        callFormat: zT(cb),
-        nativeTools: qT(bb, cb)
+        id: ab,
+        name: null !== (Ab = null === Mb || void 0 === Mb ? void 0 : Mb.name) && void 0 !== Ab ? Ab : ab,
+        callFormat: qE(ab),
+        nativeTools: uE(bb, ab)
       }
     }
 
-    function AT(bb, cb) {
-      return "custom" !== bb ? function(bb, cb) {
+    function KE(bb, ab) {
+      return "custom" !== bb ? function(bb, ab) {
         if ("custom" === bb) return [];
-        const sb = new Set(cb.map((bb => bb.id))),
-          kb = ZT[bb];
-        return Object.keys(kb).flatMap((Wb => {
-          const ab = kb[Wb].find((bb => sb.has(bb.id)));
-          return ab ? [{
-            ...dT(bb, ab.id, cb),
-            name: ab.name,
-            tier: Wb
+        const Ub = new Set(ab.map((bb => bb.id))),
+          Ab = QE[bb];
+        return Object.keys(Ab).flatMap((Mb => {
+          const Tb = Ab[Mb].find((bb => Ub.has(bb.id)));
+          return Tb ? [{
+            ...rE(bb, Tb.id, ab),
+            name: Tb.name,
+            tier: Mb
           }] : []
         }))
-      }(bb, cb) : cb.slice(0, 20).map((sb => dT(bb, sb.id, cb)))
+      }(bb, ab) : ab.slice(0, 20).map((Ub => rE(bb, Ub.id, ab)))
     }
 
-    function wT(bb) {
-      var cb;
-      return null !== (cb = bb.find((bb => "smart" === bb.tier))) && void 0 !== cb ? cb : bb[0]
+    function oE(bb) {
+      var ab;
+      return null !== (ab = bb.find((bb => "smart" === bb.tier))) && void 0 !== ab ? ab : bb[0]
     }
 
-    function rT(bb) {
-      var cb;
-      let sb = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      return null !== (cb = bb.name) && void 0 !== cb ? cb : eT(bb.provider, bb.baseUrl, sb)
+    function lE(bb) {
+      var ab;
+      let Ub = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      return null !== (ab = bb.name) && void 0 !== ab ? ab : jE(bb.provider, bb.baseUrl, Ub)
     }
-    const oT = "bloxdAiHelperKeys",
-      ST = {
+    const tE = "bloxdAiHelperKeys",
+      wE = {
         keys: [],
         selected: null,
         remember: !1
       };
 
-    function RT(bb, cb) {
-      return bb.id === cb.id || "custom" === bb.provider && "custom" === cb.provider && bb.baseUrl === cb.baseUrl
+    function sE(bb, ab) {
+      return bb.id === ab.id || "custom" === bb.provider && "custom" === ab.provider && bb.baseUrl === ab.baseUrl
     }
 
-    function vT(bb) {
+    function gE(bb) {
       if ("custom" !== bb.provider) return !0;
       try {
-        var cb;
-        return new URL(null !== (cb = bb.baseUrl) && void 0 !== cb ? cb : "").protocol.startsWith("http")
+        var ab;
+        return new URL(null !== (ab = bb.baseUrl) && void 0 !== ab ? ab : "").protocol.startsWith("http")
       } catch {
         return !1
       }
     }
 
-    function FT(bb) {
+    function CE(bb) {
       try {
         return "undefined" === typeof window ? null : window[bb]
-      } catch (cb) {
-        return console.warn(`AI Helper: no ${bb}`, cb), null
+      } catch (ab) {
+        return console.warn(`AI Helper: no ${bb}`, ab), null
       }
     }
-    const xT = new class {
-      constructor(bb, cb) {
-        var sb;
-        this.session = bb, this.local = cb, this.state = void 0, this.listeners = new Set, this.ownsRemembered = !1, this.lastUsedAt = 0, this.getState = () => this.state, this.subscribe = bb => (this.listeners.add(bb), () => {
+    const VE = new class {
+      constructor(bb, ab) {
+        var Ub;
+        this.session = bb, this.local = ab, this.state = void 0, this.listeners = new Set, this.ownsRemembered = !1, this.lastUsedAt = 0, this.getState = () => this.state, this.subscribe = bb => (this.listeners.add(bb), () => {
           this.listeners.delete(bb)
         });
-        for (const ab of [bb, cb]) null !== ab && void 0 !== ab && ab.getItem(oT) && !this.read(ab) && ab.removeItem(oT);
-        const kb = this.read(bb),
-          Wb = this.read(cb);
-        this.state = null !== kb && void 0 !== kb && kb.remember ? null !== Wb && void 0 !== Wb && Wb.remember ? Wb : {
-          ...kb,
+        for (const Tb of [bb, ab]) null !== Tb && void 0 !== Tb && Tb.getItem(tE) && !this.read(Tb) && Tb.removeItem(tE);
+        const Ab = this.read(bb),
+          Mb = this.read(ab);
+        this.state = null !== Ab && void 0 !== Ab && Ab.remember ? null !== Mb && void 0 !== Mb && Mb.remember ? Mb : {
+          ...Ab,
           remember: !1
-        } : null !== (sb = null !== kb && void 0 !== kb ? kb : Wb) && void 0 !== sb ? sb : ST, this.ownsRemembered = this.state.remember && null !== Wb
+        } : null !== (Ub = null !== Ab && void 0 !== Ab ? Ab : Mb) && void 0 !== Ub ? Ub : wE, this.ownsRemembered = this.state.remember && null !== Mb
       }
       nextUsedAt() {
         return this.lastUsedAt = Math.max(Date.now(), this.lastUsedAt + 1), this.lastUsedAt
       }
       activeKey() {
         const bb = this.state.selected,
-          cb = bb ? this.state.keys.find((cb => cb.id === bb.keyId)) : void 0,
-          sb = null === cb || void 0 === cb ? void 0 : cb.models.find((cb => cb.id === (null === bb || void 0 === bb ? void 0 : bb.modelId)));
-        return cb && sb ? {
-          ...cb,
-          model: sb
+          ab = bb ? this.state.keys.find((ab => ab.id === bb.keyId)) : void 0,
+          Ub = null === ab || void 0 === ab ? void 0 : ab.models.find((ab => ab.id === (null === bb || void 0 === bb ? void 0 : bb.modelId)));
+        return ab && Ub ? {
+          ...ab,
+          model: Ub
         } : null
       }
-      addKey(bb, cb, sb) {
-        var kb, Wb, ab;
-        const Tb = this.state.keys.find((cb => "custom" === cb.provider && cb.baseUrl === bb.baseUrl)),
-          Ub = "custom" !== bb.provider ? bb.provider : null !== (kb = null === Tb || void 0 === Tb ? void 0 : Tb.id) && void 0 !== kb ? kb : `custom-${Date.now().toString(36)}${Math.random().toString(36).slice(2,6)}`,
-          Ib = void 0 === cb ? wT(bb.models) : null !== (Wb = bb.models.find((bb => bb.id === cb))) && void 0 !== Wb ? Wb : bb.models[0],
-          Hb = this.state.keys.find((bb => bb.id === Ub)),
-          fb = {
+      addKey(bb, ab, Ub) {
+        var Ab, Mb, Tb;
+        const Eb = this.state.keys.find((ab => "custom" === ab.provider && ab.baseUrl === bb.baseUrl)),
+          Yb = "custom" !== bb.provider ? bb.provider : null !== (Ab = null === Eb || void 0 === Eb ? void 0 : Eb.id) && void 0 !== Ab ? Ab : `custom-${Date.now().toString(36)}${Math.random().toString(36).slice(2,6)}`,
+          Bb = void 0 === ab ? oE(bb.models) : null !== (Mb = bb.models.find((bb => bb.id === ab))) && void 0 !== Mb ? Mb : bb.models[0],
+          eb = this.state.keys.find((bb => bb.id === Yb)),
+          vb = {
             ...bb,
-            id: Ub,
+            id: Yb,
             usedAt: this.nextUsedAt(),
-            ...Ib ? {
-              usedModelId: Ib.id
+            ...Bb ? {
+              usedModelId: Bb.id
             } : {},
-            ...null !== Hb && void 0 !== Hb && Hb.name && !bb.name ? {
-              name: Hb.name
+            ...null !== eb && void 0 !== eb && eb.name && !bb.name ? {
+              name: eb.name
             } : {}
           },
-          Mb = this.state.keys.every((bb => bb.id !== Ub)),
-          Xb = void 0 !== sb && sb !== Ub && this.state.keys.some((bb => bb.id === sb)),
-          nb = Xb ? this.state.keys.filter((bb => bb.id !== Ub)).map((bb => bb.id === sb ? fb : bb)) : Mb ? [...this.state.keys, fb] : this.state.keys.map((bb => bb.id === Ub ? fb : bb)),
-          mb = Ib ? {
-            keyId: Ub,
-            modelId: Ib.id
-          } : (null === (ab = this.state.selected) || void 0 === ab ? void 0 : ab.keyId) === sb && Xb ? null : this.state.selected;
+          Lb = this.state.keys.every((bb => bb.id !== Yb)),
+          Pb = void 0 !== Ub && Ub !== Yb && this.state.keys.some((bb => bb.id === Ub)),
+          Xb = Pb ? this.state.keys.filter((bb => bb.id !== Yb)).map((bb => bb.id === Ub ? vb : bb)) : Lb ? [...this.state.keys, vb] : this.state.keys.map((bb => bb.id === Yb ? vb : bb)),
+          jb = Bb ? {
+            keyId: Yb,
+            modelId: Bb.id
+          } : (null === (Tb = this.state.selected) || void 0 === Tb ? void 0 : Tb.keyId) === Ub && Pb ? null : this.state.selected;
         return this.update({
-          keys: nb,
-          selected: mb
-        }), Ub
+          keys: Xb,
+          selected: jb
+        }), Yb
       }
-      renameKey(bb, cb) {
-        const sb = cb.replace(/\s+/g, " ").trim().slice(0, 30);
+      renameKey(bb, ab) {
+        const Ub = ab.replace(/\s+/g, " ").trim().slice(0, 30);
         this.update({
-          keys: this.state.keys.map((cb => {
-            if (cb.id !== bb) return cb;
+          keys: this.state.keys.map((ab => {
+            if (ab.id !== bb) return ab;
             const {
-              name: kb,
-              ...Wb
-            } = cb;
-            return "" === sb ? Wb : {
-              ...Wb,
-              name: sb
+              name: Ab,
+              ...Mb
+            } = ab;
+            return "" === Ub ? Mb : {
+              ...Mb,
+              name: Ub
             }
           }))
         })
       }
       select(bb) {
-        const cb = this.nextUsedAt(),
-          sb = null === bb ? this.state.keys : this.state.keys.map((sb => sb.id === bb.keyId ? {
-            ...sb,
-            usedAt: cb,
+        const ab = this.nextUsedAt(),
+          Ub = null === bb ? this.state.keys : this.state.keys.map((Ub => Ub.id === bb.keyId ? {
+            ...Ub,
+            usedAt: ab,
             usedModelId: bb.modelId
-          } : sb));
+          } : Ub));
         this.update({
-          keys: sb,
+          keys: Ub,
           selected: bb
         })
       }
-      refreshModels(bb, cb, sb) {
-        const kb = this.state.keys.find((cb => cb.id === bb));
-        if (!kb || sb && (kb.key !== sb.key || kb.baseUrl !== sb.baseUrl)) return !1;
-        const Wb = [...cb.map((bb => {
-            const cb = kb.models.find((cb => cb.id === bb.id));
+      refreshModels(bb, ab, Ub) {
+        const Ab = this.state.keys.find((ab => ab.id === bb));
+        if (!Ab || Ub && (Ab.key !== Ub.key || Ab.baseUrl !== Ub.baseUrl)) return !1;
+        const Mb = [...ab.map((bb => {
+            const ab = Ab.models.find((ab => ab.id === bb.id));
             return {
               ...bb,
-              ...!1 === (null === cb || void 0 === cb ? void 0 : cb.nativeTools) ? {
+              ...!1 === (null === ab || void 0 === ab ? void 0 : ab.nativeTools) ? {
                 nativeTools: !1
               } : {},
-              ...null !== cb && void 0 !== cb && cb.typed ? {
+              ...null !== ab && void 0 !== ab && ab.typed ? {
                 typed: !0
               } : {}
             }
-          })), ...kb.models.filter((bb => bb.typed && !cb.some((cb => cb.id === bb.id))))],
-          ab = this.state.selected,
-          Tb = (null === ab || void 0 === ab ? void 0 : ab.keyId) === bb && !Wb.some((bb => bb.id === ab.modelId)),
-          Ub = wT(Wb);
+          })), ...Ab.models.filter((bb => bb.typed && !ab.some((ab => ab.id === bb.id))))],
+          Tb = this.state.selected,
+          Eb = (null === Tb || void 0 === Tb ? void 0 : Tb.keyId) === bb && !Mb.some((bb => bb.id === Tb.modelId)),
+          Yb = oE(Mb);
         return this.update({
-          keys: this.state.keys.map((cb => cb.id === bb ? {
-            ...cb,
-            models: Wb
-          } : cb)),
-          selected: Tb ? Ub ? {
+          keys: this.state.keys.map((ab => ab.id === bb ? {
+            ...ab,
+            models: Mb
+          } : ab)),
+          selected: Eb ? Yb ? {
             keyId: bb,
-            modelId: Ub.id
-          } : null : ab
+            modelId: Yb.id
+          } : null : Tb
         }), !0
       }
-      stopNativeTools(bb, cb) {
+      stopNativeTools(bb, ab) {
         this.update({
-          keys: this.state.keys.map((sb => {
-            if (sb.id !== bb) return sb;
-            const kb = sb.models.map((bb => bb.id === cb ? {
+          keys: this.state.keys.map((Ub => {
+            if (Ub.id !== bb) return Ub;
+            const Ab = Ub.models.map((bb => bb.id === ab ? {
               ...bb,
               nativeTools: !1
             } : bb));
             return {
-              ...sb,
-              models: kb
+              ...Ub,
+              models: Ab
             }
           }))
         })
       }
       removeKey(bb) {
-        var cb;
-        const sb = this.state,
-          kb = sb.keys.findIndex((cb => cb.id === bb)),
-          Wb = sb.keys[kb];
-        if (!Wb) return () => {};
-        const ab = sb.keys.filter((cb => cb.id !== bb)),
-          Tb = (null === (cb = sb.selected) || void 0 === cb ? void 0 : cb.keyId) === bb ? null : sb.selected;
+        var ab;
+        const Ub = this.state,
+          Ab = Ub.keys.findIndex((ab => ab.id === bb)),
+          Mb = Ub.keys[Ab];
+        if (!Mb) return () => {};
+        const Tb = Ub.keys.filter((ab => ab.id !== bb)),
+          Eb = (null === (ab = Ub.selected) || void 0 === ab ? void 0 : ab.keyId) === bb ? null : Ub.selected;
         return this.update({
-          keys: ab,
-          selected: Tb,
-          remember: ab.length > 0 && sb.remember
+          keys: Tb,
+          selected: Eb,
+          remember: Tb.length > 0 && Ub.remember
         }), () => {
-          var cb;
-          const ab = this.state.keys.some((bb => RT(bb, Wb)));
-          if (ab) return;
-          const Tb = [...this.state.keys];
-          Tb.splice(Math.min(kb, Tb.length), 0, Wb);
-          const Ub = (null === (cb = sb.selected) || void 0 === cb ? void 0 : cb.keyId) === bb && null === this.state.selected;
+          var ab;
+          const Tb = this.state.keys.some((bb => sE(bb, Mb)));
+          if (Tb) return;
+          const Eb = [...this.state.keys];
+          Eb.splice(Math.min(Ab, Eb.length), 0, Mb);
+          const Yb = (null === (ab = Ub.selected) || void 0 === ab ? void 0 : ab.keyId) === bb && null === this.state.selected;
           this.update({
-            keys: Tb,
-            selected: Ub ? sb.selected : this.state.selected,
-            remember: this.state.remember || sb.remember
+            keys: Eb,
+            selected: Yb ? Ub.selected : this.state.selected,
+            remember: this.state.remember || Ub.remember
           })
         }
       }
       removeAll() {
-        this.update(ST), this.local && null !== this.local.getItem(oT) && (this.local.setItem(oT, JSON.stringify(ST)), this.local.removeItem(oT))
+        this.update(wE), this.local && null !== this.local.getItem(tE) && (this.local.setItem(tE, JSON.stringify(wE)), this.local.removeItem(tE))
       }
       setRemember(bb) {
-        var cb;
-        const sb = bb && !this.ownsRemembered ? this.read(this.local) : null,
-          kb = (null !== (cb = null === sb || void 0 === sb ? void 0 : sb.keys) && void 0 !== cb ? cb : []).filter((bb => this.state.keys.every((cb => !RT(cb, bb)))));
+        var ab;
+        const Ub = bb && !this.ownsRemembered ? this.read(this.local) : null,
+          Ab = (null !== (ab = null === Ub || void 0 === Ub ? void 0 : Ub.keys) && void 0 !== ab ? ab : []).filter((bb => this.state.keys.every((ab => !sE(ab, bb)))));
         this.update({
           remember: bb,
-          keys: [...kb, ...this.state.keys]
+          keys: [...Ab, ...this.state.keys]
         })
       }
       otherTabChanged(bb) {
-        var cb;
+        var ab;
         if (!this.state.remember) return;
-        const sb = bb ? this.parse(bb) : null;
-        sb ? (this.state = sb, this.ownsRemembered = sb.remember) : (this.ownsRemembered = !1, this.state = {
+        const Ub = bb ? this.parse(bb) : null;
+        Ub ? (this.state = Ub, this.ownsRemembered = Ub.remember) : (this.ownsRemembered = !1, this.state = {
           ...this.state,
           remember: !1
-        }), null === (cb = this.session) || void 0 === cb || cb.setItem(oT, JSON.stringify(this.state)), this.notify()
+        }), null === (ab = this.session) || void 0 === ab || ab.setItem(tE, JSON.stringify(this.state)), this.notify()
       }
       notify() {
         for (const bb of this.listeners) bb()
       }
       update(bb) {
-        var cb;
+        var ab;
         this.state = {
           ...this.state,
           ...bb
         };
-        const sb = JSON.stringify(this.state);
-        var kb;
-        if (null === (cb = this.session) || void 0 === cb || cb.setItem(oT, sb), this.state.remember && this.state.keys.length > 0) null === (kb = this.local) || void 0 === kb || kb.setItem(oT, sb), this.ownsRemembered = !0;
+        const Ub = JSON.stringify(this.state);
+        var Ab;
+        if (null === (ab = this.session) || void 0 === ab || ab.setItem(tE, Ub), this.state.remember && this.state.keys.length > 0) null === (Ab = this.local) || void 0 === Ab || Ab.setItem(tE, Ub), this.ownsRemembered = !0;
         else if (this.ownsRemembered) {
-          var Wb, ab;
-          if (0 === this.state.keys.length) null === (ab = this.local) || void 0 === ab || ab.setItem(oT, JSON.stringify(ST));
-          null === (Wb = this.local) || void 0 === Wb || Wb.removeItem(oT), this.ownsRemembered = !1
+          var Mb, Tb;
+          if (0 === this.state.keys.length) null === (Tb = this.local) || void 0 === Tb || Tb.setItem(tE, JSON.stringify(wE));
+          null === (Mb = this.local) || void 0 === Mb || Mb.removeItem(tE), this.ownsRemembered = !1
         }
         this.notify()
       }
       read(bb) {
-        const cb = null === bb || void 0 === bb ? void 0 : bb.getItem(oT);
-        return cb ? this.parse(cb) : null
+        const ab = null === bb || void 0 === bb ? void 0 : bb.getItem(tE);
+        return ab ? this.parse(ab) : null
       }
       parse(bb) {
         try {
-          const cb = {
-            ...ST,
+          const ab = {
+            ...wE,
             ...JSON.parse(bb)
           };
-          return Array.isArray(cb.keys) && cb.keys.every(vT) ? cb : (console.warn("AI Helper: saved keys are in a form this version doesn't read"), null)
-        } catch (cb) {
-          return console.warn("AI Helper: saved keys couldn't be read", cb instanceof Error ? cb.name : "error"), null
+          return Array.isArray(ab.keys) && ab.keys.every(gE) ? ab : (console.warn("AI Helper: saved keys are in a form this version doesn't read"), null)
+        } catch (ab) {
+          return console.warn("AI Helper: saved keys couldn't be read", ab instanceof Error ? ab.name : "error"), null
         }
       }
-    }(FT("sessionStorage"), FT("localStorage"));
+    }(CE("sessionStorage"), CE("localStorage"));
 
-    function jT() {
+    function OE() {
       const bb = function() {
-          const [bb, cb] = (0, kb.useState)(xT.getState);
-          return (0, kb.useEffect)((() => (cb(xT.getState()), xT.subscribe((() => {
-            cb(xT.getState())
+          const [bb, ab] = (0, Ab.useState)(VE.getState);
+          return (0, Ab.useEffect)((() => (ab(VE.getState()), VE.subscribe((() => {
+            ab(VE.getState())
           })))), []), bb
         }(),
-        cb = xT.activeKey();
+        ab = VE.activeKey();
       return {
         ...bb,
-        active: cb,
-        isSelected: sb => {
-          return (kb = cb ? bb.selected : null) === (Wb = sb) || null !== kb && null !== Wb && kb.keyId === Wb.keyId && kb.modelId === Wb.modelId;
-          var kb, Wb
+        active: ab,
+        isSelected: Ub => {
+          return (Ab = ab ? bb.selected : null) === (Mb = Ub) || null !== Ab && null !== Mb && Ab.keyId === Mb.keyId && Ab.modelId === Mb.modelId;
+          var Ab, Mb
         },
         select: bb => {
-          xT.select(bb)
+          VE.select(bb)
         },
-        removeKey: bb => xT.removeKey(bb),
-        renameKey: (bb, cb) => {
-          xT.renameKey(bb, cb)
+        removeKey: bb => VE.removeKey(bb),
+        renameKey: (bb, ab) => {
+          VE.renameKey(bb, ab)
         },
         setRemember: bb => {
-          xT.setRemember(bb)
+          VE.setRemember(bb)
         }
       }
     }
-    async function pT(bb, cb) {
-      var sb;
+    async function cE(bb, ab) {
+      var Ub;
       let {
-        provider: kb,
-        key: Wb,
-        baseUrl: ab,
-        modelName: Tb
+        provider: Ab,
+        key: Mb,
+        baseUrl: Tb,
+        modelName: Eb
       } = bb;
-      const Ub = null !== (sb = null === Tb || void 0 === Tb ? void 0 : Tb.trim()) && void 0 !== sb ? sb : "";
-      let Ib = [];
+      const Yb = null !== (Ub = null === Eb || void 0 === Eb ? void 0 : Eb.trim()) && void 0 !== Ub ? Ub : "";
+      let Bb = [];
       try {
-        Ib = (await GT(kb, Wb, ab).check(cb)).models
-      } catch (Hb) {
-        if (!("custom" === kb && Hb instanceof CT && ("failed" === Hb.problem || "noModel" === Hb.problem))) throw Hb
+        Bb = (await hE(Ab, Mb, Tb).check(ab)).models
+      } catch (eb) {
+        if (!("custom" === Ab && eb instanceof RE && ("failed" === eb.problem || "noModel" === eb.problem))) throw eb
       }
-      if (null !== cb && void 0 !== cb && cb.aborted) throw new DOMException("The AI key test was stopped", "AbortError");
-      return "" !== Ub ? [{
-        ...dT(kb, Ub, Ib),
+      if (null !== ab && void 0 !== ab && ab.aborted) throw new DOMException("The AI key test was stopped", "AbortError");
+      return "" !== Yb ? [{
+        ...rE(Ab, Yb, Bb),
         typed: !0
-      }] : AT(kb, Ib)
+      }] : KE(Ab, Bb)
     }
     "undefined" !== typeof window && window.addEventListener("storage", (bb => {
-      bb.storageArea === FT("localStorage") && bb.key === oT && xT.otherTabChanged(bb.newValue)
+      bb.storageArea === CE("localStorage") && bb.key === tE && VE.otherTabChanged(bb.newValue)
     }));
-    async function bU(bb, cb) {
-      let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const kb = GT(bb.provider, bb.key, bb.baseUrl);
-      let Wb = {
-        ...sb,
+    async function JE(bb, ab) {
+      let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const Ab = hE(bb.provider, bb.key, bb.baseUrl);
+      let Mb = {
+        ...Ub,
         callFormat: bb.model.callFormat,
-        tools: bb.model.nativeTools ? sb.tools : void 0
+        tools: bb.model.nativeTools ? Ub.tools : void 0
       };
-      const ab = async () => {
+      const Tb = async () => {
         try {
-          return await kb.ask(bb.model.id, cb, Wb)
-        } catch (sb) {
-          if (! function(bb, cb) {
-              var sb, kb, Wb;
-              return 0 !== (null !== (sb = null === (kb = cb.tools) || void 0 === kb ? void 0 : kb.length) && void 0 !== sb ? sb : 0) && bb instanceof CT && "failed" === bb.problem && (400 === bb.status || 404 === bb.status && /\btool/i.test(null !== (Wb = bb.detail) && void 0 !== Wb ? Wb : ""))
-            }(sb, Wb)) throw sb;
-          const ab = {
-              ...Wb,
+          return await Ab.ask(bb.model.id, ab, Mb)
+        } catch (Ub) {
+          if (! function(bb, ab) {
+              var Ub, Ab, Mb;
+              return 0 !== (null !== (Ub = null === (Ab = ab.tools) || void 0 === Ab ? void 0 : Ab.length) && void 0 !== Ub ? Ub : 0) && bb instanceof RE && "failed" === bb.problem && (400 === bb.status || 404 === bb.status && /\btool/i.test(null !== (Mb = bb.detail) && void 0 !== Mb ? Mb : ""))
+            }(Ub, Mb)) throw Ub;
+          const Tb = {
+              ...Mb,
               tools: void 0
             },
-            Tb = await kb.ask(bb.model.id, cb, ab);
-          return xT.stopNativeTools(bb.id, bb.model.id), Wb = ab, Tb
+            Eb = await Ab.ask(bb.model.id, ab, Tb);
+          return VE.stopNativeTools(bb.id, bb.model.id), Mb = Tb, Eb
         }
       };
       try {
-        return await ab()
-      } catch (Mb) {
-        var Tb, Ub;
-        if (!((fb = Mb) instanceof CT && void 0 !== fb.status && "noCredit" !== fb.problem && (429 === fb.status || 408 === fb.status || fb.status >= 500))) throw Mb;
-        return await (Ib = Math.min(null !== (Tb = null !== (Ub = Mb.retryAfterMs) && void 0 !== Ub ? Ub : sb.retryWaitMs) && void 0 !== Tb ? Tb : 3e3, 2e4), Hb = sb.signal, new Promise(((bb, cb) => {
-          if (null !== Hb && void 0 !== Hb && Hb.aborted) return void cb(new DOMException("The AI key request was stopped", "AbortError"));
-          const sb = setTimeout(bb, Ib);
-          null === Hb || void 0 === Hb || Hb.addEventListener("abort", (() => {
-            clearTimeout(sb), cb(new DOMException("The AI key request was stopped", "AbortError"))
+        return await Tb()
+      } catch (Lb) {
+        var Eb, Yb;
+        if (!((vb = Lb) instanceof RE && void 0 !== vb.status && "noCredit" !== vb.problem && (429 === vb.status || 408 === vb.status || vb.status >= 500))) throw Lb;
+        return await (Bb = Math.min(null !== (Eb = null !== (Yb = Lb.retryAfterMs) && void 0 !== Yb ? Yb : Ub.retryWaitMs) && void 0 !== Eb ? Eb : 3e3, 2e4), eb = Ub.signal, new Promise(((bb, ab) => {
+          if (null !== eb && void 0 !== eb && eb.aborted) return void ab(new DOMException("The AI key request was stopped", "AbortError"));
+          const Ub = setTimeout(bb, Bb);
+          null === eb || void 0 === eb || eb.addEventListener("abort", (() => {
+            clearTimeout(Ub), ab(new DOMException("The AI key request was stopped", "AbortError"))
           }), {
             once: !0
           })
-        }))), ab()
+        }))), Tb()
       }
-      var Ib, Hb, fb
+      var Bb, eb, vb
     }
-    var cU = sb(3430);
-    const sU = "Super Bot.xd",
-      kU = {
+    var nE = Ub(3309);
+    const SE = "Super Bot.xd",
+      bY = {
         ovh: {
-          name: sU,
+          name: SE,
           temperature: .6,
           nativeTools: !0,
           callFormat: "qwenXml"
         },
         deepseek: {
-          name: sU,
+          name: SE,
           temperature: 1,
           nativeTools: !0,
           callFormat: "deepseek"
         }
       };
-    const WU = "bloxdAiHelperSuperBot",
-      aU = "bloxdAiHelperDeepSeekNotice";
+    const aY = "bloxdAiHelperSuperBot",
+      UY = "bloxdAiHelperDeepSeekNotice";
 
-    function TU(bb) {
+    function AY(bb) {
       if ("deepseek" !== bb) return !0;
       try {
-        return "undefined" !== typeof window && "1" === window.localStorage.getItem(aU)
+        return "undefined" !== typeof window && "1" === window.localStorage.getItem(UY)
       } catch {
         return !1
       }
     }
 
-    function UU() {
+    function MY() {
       try {
-        return "undefined" !== typeof window && "1" === window.sessionStorage.getItem(WU)
+        return "undefined" !== typeof window && "1" === window.sessionStorage.getItem(aY)
       } catch {
         return !1
       }
     }
-    const IU = new class {
+    const TY = new class {
       constructor() {
         this.state = void 0, this.listeners = new Set, this.refreshing = null, this.getState = () => this.state, this.subscribe = bb => (this.listeners.add(bb), () => {
           this.listeners.delete(bb)
         }), this.state = {
-          picked: UU(),
+          picked: MY(),
           status: null,
           canBuySuperRank: null
-        }, xT.subscribe((() => {
-          null !== xT.getState().selected && this.state.picked && this.update({
+        }, VE.subscribe((() => {
+          null !== VE.getState().selected && this.state.picked && this.update({
             picked: !1
           })
         }))
@@ -8144,8 +8144,8 @@ export const modules = {
         var bb;
         return this.state.picked && "ok" === (null === (bb = this.state.status) || void 0 === bb ? void 0 : bb.availability)
       }
-      Wn() {
-        xT.select(null), this.update({
+      GP() {
+        VE.select(null), this.update({
           picked: !0
         })
       }
@@ -8155,23 +8155,23 @@ export const modules = {
         })
       }
       setStatus(bb) {
-        const cb = this.state.picked && XU(bb, this.state.canBuySuperRank) && TU(bb.provider);
+        const ab = this.state.picked && eY(bb, this.state.canBuySuperRank) && AY(bb.provider);
         this.update({
           status: bb,
-          picked: cb
+          picked: ab
         })
       }
       setCanBuySuperRank(bb) {
         const {
-          status: cb
+          status: ab
         } = this.state;
         this.update({
           canBuySuperRank: bb,
-          picked: this.state.picked && (null === cb || XU(cb, bb))
+          picked: this.state.picked && (null === ab || eY(ab, bb))
         })
       }
       async refresh() {
-        return this.refreshing ??= (0, oW.postToGameServer)("/ai-helper/super-bot-xd/status", {}).then((bb => {
+        return this.refreshing ??= (0, tM.postToGameServer)("/ai-helper/super-bot-xd/status", {}).then((bb => {
           this.setStatus(bb)
         })).catch((bb => {
           console.warn("AI Helper: Super Bot.xd's usage couldn't be checked", bb)
@@ -8185,22 +8185,22 @@ export const modules = {
           ...bb
         };
         try {
-          window.sessionStorage.setItem(WU, this.state.picked ? "1" : "0")
+          window.sessionStorage.setItem(aY, this.state.picked ? "1" : "0")
         } catch {}
-        for (const cb of this.listeners) cb()
+        for (const ab of this.listeners) ab()
       }
     };
 
-    function HU() {
-      const [bb, cb] = (0, kb.useState)(IU.getState);
-      return (0, kb.useEffect)((() => (cb(IU.getState()), IU.subscribe((() => {
-        cb(IU.getState())
+    function EY() {
+      const [bb, ab] = (0, Ab.useState)(TY.getState);
+      return (0, Ab.useEffect)((() => (ab(TY.getState()), TY.subscribe((() => {
+        ab(TY.getState())
       })))), []), bb
     }
 
-    function fU(bb) {
-      var cb;
-      let sb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+    function YY(bb) {
+      var ab;
+      let Ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
       if (null === bb) return "Checking whether Super Bot.xd can answer for you\u2026";
       switch (bb.availability) {
         case "ok":
@@ -8208,50 +8208,50 @@ export const modules = {
         case "guest":
           return "Log in to use Super Bot.xd.";
         case "tooNew":
-          return `Super Bot.xd opens once your account is a week old: ${CU((null!==(cb=bb.availableFrom)&&void 0!==cb?cb:sb)-sb)} to go.`;
+          return `Super Bot.xd opens once your account is a week old: ${RY((null!==(ab=bb.availableFrom)&&void 0!==ab?ab:Ub)-Ub)} to go.`;
         case "noUsageLeft":
-          return bb.isSuper ? `You've used this week's Super Bot.xd usage. It comes back ${function(bb,cb){const sb=Math.ceil((bb-cb)/36e5);if(sb<=24)return sb<=1?"within the hour":`in ${sb} hours`;return`in ${CU(bb-cb)}`}(bb.resetsAt,sb)}.` : "0 usage remaining - upgrade to Super for a more powerful AI.";
+          return bb.isSuper ? `You've used this week's Super Bot.xd usage. It comes back ${function(bb,ab){const Ub=Math.ceil((bb-ab)/36e5);if(Ub<=24)return Ub<=1?"within the hour":`in ${Ub} hours`;return`in ${RY(bb-ab)}`}(bb.resetsAt,Ub)}.` : "0 usage remaining - upgrade to Super for a more powerful AI.";
         case "unavailable":
           return "Super Bot.xd can't answer right now. Try again later."
       }
     }
 
-    function MU(bb) {
+    function BY(bb) {
       return null !== bb && !bb.isSuper && "noUsageLeft" === bb.availability
     }
 
-    function XU(bb, cb) {
-      return "ok" === bb.availability || !1 !== cb && MU(bb)
+    function eY(bb, ab) {
+      return "ok" === bb.availability || !1 !== ab && BY(bb)
     }
 
-    function nU(bb) {
-      return !0 === bb.canBuySuperRank && MU(bb.status)
+    function vY(bb) {
+      return !0 === bb.canBuySuperRank && BY(bb.status)
     }
 
-    function mU(bb) {
-      return nU(bb) ? null : fU(bb.status)
+    function LY(bb) {
+      return vY(bb) ? null : YY(bb.status)
     }
 
-    function lU(bb) {
-      return bb.picked && null === mU(bb)
+    function PY(bb) {
+      return bb.picked && null === LY(bb)
     }
 
-    function QU(bb) {
-      return bb.picked && nU(bb)
+    function XY(bb) {
+      return bb.picked && vY(bb)
     }
 
-    function eU(bb) {
+    function jY(bb) {
       return `Usage left: ${bb.left}`
     }
 
-    function CU(bb) {
-      const cb = Math.max(1, Math.ceil(bb / HT.j));
-      return 1 === cb ? "1 day" : `${cb} days`
+    function RY(bb) {
+      const ab = Math.max(1, Math.ceil(bb / EE.g));
+      return 1 === ab ? "1 day" : `${ab} days`
     }
 
-    function NU(bb, cb) {
-      const sb = "unavailable" === bb ? fU(cb) : null;
-      if (sb) return `${sb} Bot.xd is answering instead.`;
+    function kY(bb, ab) {
+      const Ub = "unavailable" === bb ? YY(ab) : null;
+      if (Ub) return `${Ub} Bot.xd is answering instead.`;
       switch (bb) {
         case "busy":
           return "Super Bot.xd is busy, so Bot.xd is answering this one.";
@@ -8267,91 +8267,91 @@ export const modules = {
           return "Super Bot.xd couldn't answer, so Bot.xd is answering this one."
       }
     }
-    async function VU(bb) {
+    async function yY(bb) {
       if (function(bb) {
-          var cb, sb, kb, Wb, ab, Tb, Ub;
-          return bb.messages.length > 12 || bb.messages.some((bb => bb.content.length > rW)) || (null !== (cb = null === (sb = bb.toolsJson) || void 0 === sb ? void 0 : sb.length) && void 0 !== cb ? cb : 0) > 1e5 || (null !== (kb = null === (Wb = bb.request) || void 0 === Wb ? void 0 : Wb.length) && void 0 !== kb ? kb : 0) > rW || (null !== (ab = null === (Tb = bb.code) || void 0 === Tb ? void 0 : Tb.length) && void 0 !== ab ? ab : 0) > rW || (null !== (Ub = bb.toolResults) && void 0 !== Ub ? Ub : []).some((bb => bb.text.length > 1e5))
+          var ab, Ub, Ab, Mb, Tb, Eb, Yb;
+          return bb.messages.length > 12 || bb.messages.some((bb => bb.content.length > lM)) || (null !== (ab = null === (Ub = bb.toolsJson) || void 0 === Ub ? void 0 : Ub.length) && void 0 !== ab ? ab : 0) > 1e5 || (null !== (Ab = null === (Mb = bb.request) || void 0 === Mb ? void 0 : Mb.length) && void 0 !== Ab ? Ab : 0) > lM || (null !== (Tb = null === (Eb = bb.code) || void 0 === Eb ? void 0 : Eb.length) && void 0 !== Tb ? Tb : 0) > lM || (null !== (Yb = bb.toolResults) && void 0 !== Yb ? Yb : []).some((bb => bb.text.length > 1e5))
         }(bb)) return {
         outcome: "tooLarge"
       };
       try {
-        return await (0, oW.postToGameServer)("/ai-helper/super-bot-xd/ask", bb)
-      } catch (cb) {
-        if (cb instanceof fT.d && 413 === cb.httpCode) return {
+        return await (0, tM.postToGameServer)("/ai-helper/super-bot-xd/ask", bb)
+      } catch (ab) {
+        if (ab instanceof YE.c && 413 === ab.httpCode) return {
           outcome: "tooLarge"
         };
-        throw cb
+        throw ab
       }
     }
-    async function LU(bb, cb) {
-      return cb ? await new Promise(((sb, kb) => {
-        const Wb = () => {
-          kb(new DOMException("The Super Bot.xd request was stopped", "AbortError"))
+    async function ZY(bb, ab) {
+      return ab ? await new Promise(((Ub, Ab) => {
+        const Mb = () => {
+          Ab(new DOMException("The Super Bot.xd request was stopped", "AbortError"))
         };
-        cb.aborted ? Wb() : (cb.addEventListener("abort", Wb, {
+        ab.aborted ? Mb() : (ab.addEventListener("abort", Mb, {
           once: !0
-        }), bb.then(sb, kb).finally((() => {
-          cb.removeEventListener("abort", Wb)
+        }), bb.then(Ub, Ab).finally((() => {
+          ab.removeEventListener("abort", Mb)
         })))
       })) : await bb
     }
-    var uU = sb(26),
-      YU = sb(19),
-      hU = sb(2180);
-    let JU = null;
+    var DY = Ub(22),
+      zY = Ub(19),
+      xY = Ub(2132);
+    let iY = null;
 
-    function gU() {
-      JU ??= Promise.resolve().then((() => sb(2195))), JU.then((bb => {
+    function fY() {
+      iY ??= Promise.resolve().then((() => Ub(2147))), iY.then((bb => {
         let {
-          purchasesAllowed: cb
+          purchasesAllowed: ab
         } = bb;
-        IU.setCanBuySuperRank(cb())
+        TY.setCanBuySuperRank(ab())
       }), (bb => {
-        JU = null, console.warn("AI Helper: couldn't find out whether Super rank is sold here", bb)
+        iY = null, console.warn("AI Helper: couldn't find out whether Super rank is sold here", bb)
       }))
     }
-    let BU = !1,
-      tU = null;
-    async function yU() {
-      if (BU) return !0;
-      BU = !0;
+    let mY = !1,
+      pY = null;
+    async function NY() {
+      if (mY) return !0;
+      mY = !0;
       try {
         var bb;
-        if (await IU.refresh(), !QU(IU.getState())) return !1;
+        if (await TY.refresh(), !XY(TY.getState())) return !1;
         document.activeElement instanceof HTMLElement && document.activeElement.blur();
         const [{
-          NotificationProvider: cb
+          NotificationProvider: ab
         }, {
-          WorldCodeAiOutOfUsage: kb
-        }] = await Promise.all([Promise.resolve().then((() => sb(1332))), sb.e(346).then((() => sb(60602)))]);
-        null === (bb = tU) || void 0 === bb || bb.tearDownNotification();
-        const Wb = cb.showCustomPopup({
-          body: bb => (0, Tb.jsx)(kb, {
+          WorldCodeAiOutOfUsage: Ab
+        }] = await Promise.all([Promise.resolve().then((() => Ub(1260))), Ub.e(346).then((() => Ub(60270)))]);
+        null === (bb = pY) || void 0 === bb || bb.tearDownNotification();
+        const Mb = ab.showCustomPopup({
+          body: bb => (0, Eb.jsx)(Ab, {
             onGetSuperRank: () => {
               bb(),
                 function() {
-                  uU.j.QQ("OpenStoreFromCodeEditor"), (0, hU.o)({
+                  DY.m.IR("OpenStoreFromCodeEditor"), (0, xY.m)({
                     mode: "self",
                     source: "codeEditorAi",
                     openItem: "superRank"
                   });
-                  const bb = uU.j.subscribe("appManagerUpdated|openEverythingMenuName", (() => {
-                    null === YU.d.get("openEverythingMenuName") && (uU.j.unsubscribe(bb), IU.refresh())
+                  const bb = DY.m.subscribe("appManagerUpdated|openEverythingMenuName", (() => {
+                    null === zY.c.get("openEverythingMenuName") && (DY.m.unsubscribe(bb), TY.refresh())
                   }))
                 }()
             }
           })
         });
-        return tU = Wb, Wb.getResult().finally((() => {
-          tU === Wb && (tU = null)
+        return pY = Mb, Mb.getResult().finally((() => {
+          pY === Mb && (pY = null)
         })), !0
-      } catch (cb) {
-        return console.warn("AI Helper: the out of usage popup couldn't be opened", cb), !0
+      } catch (ab) {
+        return console.warn("AI Helper: the out of usage popup couldn't be opened", ab), !0
       } finally {
-        BU = !1
+        mY = !1
       }
     }
-    const PU = {
+    const WY = {
         wood: ["Maple Log"],
         log: ["Maple Log"],
         logs: ["Maple Log"],
@@ -8429,7 +8429,7 @@ export const modules = {
         glowstone: ["Glow Lamp"],
         "sea lantern": ["Glow Lamp", "Lantern"]
       },
-      DU = {
+      HY = {
         wooden: "wood",
         golden: "gold",
         oak: "maple",
@@ -8441,7 +8441,7 @@ export const modules = {
         egg: "orb",
         stained: ""
       },
-      EU = {
+      IY = {
         teleport: ["setPosition"],
         tp: ["setPosition"],
         heal: ["setHealth", "getHealth"],
@@ -8504,129 +8504,129 @@ export const modules = {
         green: ["sendMessage"],
         red: ["sendMessage"]
       },
-      iU = new Set("a an and are as at be but by can do does for from get got give go has have he her his how i if in into is it its make me my no not of on or our please so that the their them then there they this to u up us was we what when where which who will with you your want wanna like just also add let lets makes".split(" "));
+      dY = new Set("a an and are as at be but by can do does for from get got give go has have he her his how i if in into is it its make me my no not of on or our please so that the their them then there they this to u up us was we what when where which who will with you your want wanna like just also add let lets makes".split(" "));
 
-    function OU(bb) {
+    function FY(bb) {
       return bb.replace(/([a-z])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z0-9]+/).filter((bb => bb.length > 1))
     }
 
-    function GU(bb) {
+    function hY(bb) {
       return bb.length > 4 && bb.endsWith("ies") ? `${bb.slice(0,-3)}y` : bb.length > 3 && bb.endsWith("s") && !bb.endsWith("ss") ? bb.slice(0, -1) : bb
     }
 
-    function KU(bb) {
-      return new Set(OU(bb).map((bb => GU(bb))))
+    function GY(bb) {
+      return new Set(FY(bb).map((bb => hY(bb))))
     }
-    const ZU = /^(?:async\s+)?function\s+([A-Za-z_$][\w$]*)\s*\(|^([A-Za-z_$][\w$]*)\s*=\s*(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)/gm;
+    const QY = /^(?:async\s+)?function\s+([A-Za-z_$][\w$]*)\s*\(|^([A-Za-z_$][\w$]*)\s*=\s*(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)/gm;
 
-    function zU(bb) {
+    function qY(bb) {
       return bb.split("\n").map((bb => bb.replace(/\/\/.*$/, "").replace(/(["'`])(?:\\.|(?!\1).)*\1/g, '""'))).join("\n").replace(/\/\*[^]*?\*\//g, (bb => bb.replace(/[^\n]/g, ""))).split("\n")
     }
 
-    function qU(bb) {
-      let cb = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      const sb = [],
-        kb = new Set,
-        Wb = zU(cb ? bb : (0, Mc.t)(bb, /require(?=\s*\(\s*["'`](?:\.\.?\/|@plugins\/))/g, Mc.m, (() => "projectRequire"))),
-        ab = new Set([...Wb.join("\n").matchAll(/\b(?:function\s+|(?:const|let|var)\s+)([\w$]+)/g)].map((bb => bb[1])));
-      return Wb.forEach(((bb, cb) => {
-        for (const Wb of (0, Mc.e)(bb, /(global|window|document|process|require)\b\s*[.([]/g, Mc.m)) kb.has(Wb[1]) || ab.has(Wb[1]) || (kb.add(Wb[1]), sb.push(`Line ${cb+1} uses "${Wb[1]}", which World Code doesn't have, so it throws there. Callbacks need no export: function onPlayerJoin(playerId) {} is enough.`))
-      })), sb
+    function uY(bb) {
+      let ab = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      const Ub = [],
+        Ab = new Set,
+        Mb = qY(ab ? bb : (0, La.s)(bb, /require(?=\s*\(\s*["'`](?:\.\.?\/|@plugins\/))/g, La.l, (() => "projectRequire"))),
+        Tb = new Set([...Mb.join("\n").matchAll(/\b(?:function\s+|(?:const|let|var)\s+)([\w$]+)/g)].map((bb => bb[1])));
+      return Mb.forEach(((bb, ab) => {
+        for (const Mb of (0, La.f)(bb, /(global|window|document|process|require)\b\s*[.([]/g, La.l)) Ab.has(Mb[1]) || Tb.has(Mb[1]) || (Ab.add(Mb[1]), Ub.push(`Line ${ab+1} uses "${Mb[1]}", which World Code doesn't have, so it throws there. Callbacks need no export: function onPlayerJoin(playerId) {} is enough.`))
+      })), Ub
     }
 
-    function dU(bb) {
-      const cb = bb.split("\n"),
-        sb = [];
-      return cb.forEach(((bb, kb) => {
-        var Wb, ab, Tb, Ub, Ib;
-        const Hb = bb.indexOf("api.setCurrency(");
-        if (-1 === Hb) return;
-        const fb = cb.slice(kb, kb + 3).join(" ").slice(Hb),
-          Mb = fb.slice(0, fb.indexOf("}") + 1 || void 0),
-          Xb = null === (Wb = /amount\s*:\s*(\d+)/.exec(Mb)) || void 0 === Wb ? void 0 : Wb[1];
-        if (!/persistent\s*:\s*true/.test(Mb) || void 0 === Xb) return;
-        const nb = [null !== (ab = cb[kb - 2]) && void 0 !== ab ? ab : "", null !== (Tb = cb[kb - 1]) && void 0 !== Tb ? Tb : "", bb.slice(0, Hb)].join(" ");
-        if (/\bif\s*\(|\belse\b|\?\s*$|&&\s*$/.test(nb)) return;
-        const mb = null !== (Ub = null === (Ib = /api\.setCurrency\(\s*[^,]+,\s*["']([^"']+)["']/.exec(Mb)) || void 0 === Ib ? void 0 : Ib[1]) && void 0 !== Ub ? Ub : "coins";
-        sb.push(`Line ${kb+1} sets the saved "${mb}" back to ${Xb} each time it runs, so a player who rejoins loses what they had. Set it only when api.getCurrencyAmount(playerId, "${mb}") is null.`)
-      })), sb
+    function rY(bb) {
+      const ab = bb.split("\n"),
+        Ub = [];
+      return ab.forEach(((bb, Ab) => {
+        var Mb, Tb, Eb, Yb, Bb;
+        const eb = bb.indexOf("api.setCurrency(");
+        if (-1 === eb) return;
+        const vb = ab.slice(Ab, Ab + 3).join(" ").slice(eb),
+          Lb = vb.slice(0, vb.indexOf("}") + 1 || void 0),
+          Pb = null === (Mb = /amount\s*:\s*(\d+)/.exec(Lb)) || void 0 === Mb ? void 0 : Mb[1];
+        if (!/persistent\s*:\s*true/.test(Lb) || void 0 === Pb) return;
+        const Xb = [null !== (Tb = ab[Ab - 2]) && void 0 !== Tb ? Tb : "", null !== (Eb = ab[Ab - 1]) && void 0 !== Eb ? Eb : "", bb.slice(0, eb)].join(" ");
+        if (/\bif\s*\(|\belse\b|\?\s*$|&&\s*$/.test(Xb)) return;
+        const jb = null !== (Yb = null === (Bb = /api\.setCurrency\(\s*[^,]+,\s*["']([^"']+)["']/.exec(Lb)) || void 0 === Bb ? void 0 : Bb[1]) && void 0 !== Yb ? Yb : "coins";
+        Ub.push(`Line ${Ab+1} sets the saved "${jb}" back to ${Pb} each time it runs, so a player who rejoins loses what they had. Set it only when api.getCurrencyAmount(playerId, "${jb}") is null.`)
+      })), Ub
     }
 
-    function AU(bb) {
-      var cb, sb;
-      const kb = null !== (cb = null === (sb = bb.split("### Parameters:")[1]) || void 0 === sb ? void 0 : sb.split("###")[0]) && void 0 !== cb ? cb : "",
-        Wb = [];
-      for (const ab of kb.split("\n")) {
-        const bb = /^\|\s*([A-Za-z_$][\w$]*)\s*\|(?:\s*`([^`]*)`)?/.exec(ab);
-        bb && "Parameter" !== bb[1] && Wb.push({
+    function KY(bb) {
+      var ab, Ub;
+      const Ab = null !== (ab = null === (Ub = bb.split("### Parameters:")[1]) || void 0 === Ub ? void 0 : Ub.split("###")[0]) && void 0 !== ab ? ab : "",
+        Mb = [];
+      for (const Tb of Ab.split("\n")) {
+        const bb = /^\|\s*([A-Za-z_$][\w$]*)\s*\|(?:\s*`([^`]*)`)?/.exec(Tb);
+        bb && "Parameter" !== bb[1] && Mb.push({
           name: bb[1],
           type: bb[2]
         })
       }
-      return Wb
+      return Mb
     }
 
-    function wU(bb) {
-      return AU(bb).map((bb => bb.name))
+    function oY(bb) {
+      return KY(bb).map((bb => bb.name))
     }
-    const rU = "(\"[^\"\\n]*\"|'[^'\\n]*')";
+    const lY = "(\"[^\"\\n]*\"|'[^'\\n]*')";
 
-    function oU(bb, cb) {
-      const sb = [];
-      let kb = 0,
-        Wb = "",
-        ab = "",
-        Tb = cb;
-      for (let Ub = cb; Ub < bb.length; Ub++) {
-        const cb = bb[Ub];
-        if (Wb) "\\" === cb ? Ub++ : cb === Wb && (Wb = "");
-        else if ("/" === cb && "/" === bb[Ub + 1]) {
-          ab += bb.slice(Tb, Ub);
-          const cb = bb.indexOf("\n", Ub);
-          Ub = -1 === cb ? bb.length : cb, Tb = Ub
-        } else if ('"' === cb || "'" === cb || "`" === cb) Wb = cb;
-        else if ("[" === cb || "{" === cb || "(" === cb) kb++;
-        else if (("]" === cb || "}" === cb || ")" === cb) && kb > 0) kb--;
+    function tY(bb, ab) {
+      const Ub = [];
+      let Ab = 0,
+        Mb = "",
+        Tb = "",
+        Eb = ab;
+      for (let Yb = ab; Yb < bb.length; Yb++) {
+        const ab = bb[Yb];
+        if (Mb) "\\" === ab ? Yb++ : ab === Mb && (Mb = "");
+        else if ("/" === ab && "/" === bb[Yb + 1]) {
+          Tb += bb.slice(Eb, Yb);
+          const ab = bb.indexOf("\n", Yb);
+          Yb = -1 === ab ? bb.length : ab, Eb = Yb
+        } else if ('"' === ab || "'" === ab || "`" === ab) Mb = ab;
+        else if ("[" === ab || "{" === ab || "(" === ab) Ab++;
+        else if (("]" === ab || "}" === ab || ")" === ab) && Ab > 0) Ab--;
         else {
-          if (")" === cb) {
-            const cb = (ab + bb.slice(Tb, Ub)).trim();
-            return "" !== cb || sb.length > 0 ? [...sb, cb] : sb
+          if (")" === ab) {
+            const ab = (Tb + bb.slice(Eb, Yb)).trim();
+            return "" !== ab || Ub.length > 0 ? [...Ub, ab] : Ub
           }
-          "," === cb && 0 === kb && (sb.push((ab + bb.slice(Tb, Ub)).trim()), ab = "", Tb = Ub + 1)
+          "," === ab && 0 === Ab && (Ub.push((Tb + bb.slice(Eb, Yb)).trim()), Tb = "", Eb = Yb + 1)
         }
       }
       return []
     }
 
-    function SU(bb, cb) {
-      var sb;
-      if (!/^[A-Za-z_$][\w$]*$/.test(cb)) return;
-      const kb = cb.replaceAll("$", "\\$"),
-        Wb = `\\((?:[^()]*[\\s,])?${kb}(?![\\w$])[^()]*\\)`,
-        ab = new RegExp(`(?:const|let|var)\\s+${kb}(?![\\w$])|${kb}\\s*(?:\\+?=(?![=>])|=>)|${Wb}\\s*=>|function\\s*[\\w$]*\\s*${Wb}`, "g");
-      return 1 === (0, Mc.e)(bb, ab, Mc.m).length ? null === (sb = new RegExp(`\\b(?:const|let|var)\\s+${kb}\\s*=\\s*${rU}\\s*(?:;|//|$)`, "m").exec(bb)) || void 0 === sb ? void 0 : sb[1] : void 0
+    function wY(bb, ab) {
+      var Ub;
+      if (!/^[A-Za-z_$][\w$]*$/.test(ab)) return;
+      const Ab = ab.replaceAll("$", "\\$"),
+        Mb = `\\((?:[^()]*[\\s,])?${Ab}(?![\\w$])[^()]*\\)`,
+        Tb = new RegExp(`(?:const|let|var)\\s+${Ab}(?![\\w$])|${Ab}\\s*(?:\\+?=(?![=>])|=>)|${Mb}\\s*=>|function\\s*[\\w$]*\\s*${Mb}`, "g");
+      return 1 === (0, La.f)(bb, Tb, La.l).length ? null === (Ub = new RegExp(`\\b(?:const|let|var)\\s+${Ab}\\s*=\\s*${lY}\\s*(?:;|//|$)`, "m").exec(bb)) || void 0 === Ub ? void 0 : Ub[1] : void 0
     }
 
-    function RU(bb, cb, sb) {
-      let kb;
-      const Wb = function(bb) {
-        const cb = bb.split("\n").slice(1).map((bb => bb.trim())).find((bb => "" !== bb && !bb.startsWith("#") && !bb.startsWith("|") && !bb.startsWith("**") && !bb.startsWith("```")));
-        if (!cb) return "";
-        const sb = cb.search(/\.\s/),
-          kb = -1 === sb ? cb : cb.slice(0, sb + 1);
-        return kb.length > 110 ? `${kb.slice(0,107)}...` : kb
-      }(sb);
-      return kb = "api" === bb ? `api.${cb}(${wU(sb).join(", ")})${Wb?` \u2014 ${Wb}`:""}` : "callback" === bb ? `${cb}(${wU(sb).join(", ")})${Wb?` \u2014 ${Wb}`:""}` : "clientOption" === bb ? `${cb}: ${function(bb){var cb,sb;return null!==(cb=null===(sb=/\*\*Type:\*\*\s*`([^`]+)`/.exec(bb))||void 0===sb?void 0:sb[1])&&void 0!==cb?cb:""}(sb)}${Wb?` \u2014 ${Wb}`:""}`:cb,{kind:bb,name:cb,text:sb,line:kb,nameWords:KU(cb),textWords:KU(sb)}}function vU(bb){return bb.toLowerCase().split(/[^a-z0-9]+/).filter((bb=>""!==bb&&"of"!==bb&&"the"!==bb)).sort().join(" ")}const FU=new Set(["block","item"]);function xU(bb){let{names:cb,isSure:sb}=bb;return 0===cb.length?"":1!==cb.length||sb?`
+    function sY(bb, ab, Ub) {
+      let Ab;
+      const Mb = function(bb) {
+        const ab = bb.split("\n").slice(1).map((bb => bb.trim())).find((bb => "" !== bb && !bb.startsWith("#") && !bb.startsWith("|") && !bb.startsWith("**") && !bb.startsWith("```")));
+        if (!ab) return "";
+        const Ub = ab.search(/\.\s/),
+          Ab = -1 === Ub ? ab : ab.slice(0, Ub + 1);
+        return Ab.length > 110 ? `${Ab.slice(0,107)}...` : Ab
+      }(Ub);
+      return Ab = "api" === bb ? `api.${ab}(${oY(Ub).join(", ")})${Mb?` \u2014 ${Mb}`:""}` : "callback" === bb ? `${ab}(${oY(Ub).join(", ")})${Mb?` \u2014 ${Mb}`:""}` : "clientOption" === bb ? `${ab}: ${function(bb){var ab,Ub;return null!==(ab=null===(Ub=/\*\*Type:\*\*\s*`([^`]+)`/.exec(bb))||void 0===Ub?void 0:Ub[1])&&void 0!==ab?ab:""}(Ub)}${Mb?` \u2014 ${Mb}`:""}`:ab,{kind:bb,name:ab,text:Ub,line:Ab,nameWords:GY(ab),textWords:GY(Ub)}}function gY(bb){return bb.toLowerCase().split(/[^a-z0-9]+/).filter((bb=>""!==bb&&"of"!==bb&&"the"!==bb)).sort().join(" ")}const CY=new Set(["block","item"]);function VY(bb){let{names:ab,isSure:Ub}=bb;return 0===ab.length?"":1!==ab.length||Ub?`
       Did you mean $ {
-        cb.map((bb => `"${bb}"`)).join(" or ")
+        ab.map((bb => `"${bb}"`)).join(" or ")
       } ? `:`
-      The closest name is "${cb[0]}", which may be something
+      The closest name is "${ab[0]}", which may be something
       else.
-      `}function jU(bb){return bb.split("\n").slice(1).map((bb=>bb.replace(/\s*\[[A-Z]+(?:,[A-Z]+)*\]\s*$/,"").trim())).filter((bb=>""!==bb&&!bb.startsWith("#")))}class pU{constructor(bb){this.sections=void 0,this.mobTypes=void 0,this.byName=new Map,this.itemAndBlockNames=void 0,this.blockNames=void 0,this.namesByLowerCase=void 0,this.wordCounts=new Map,this.realName=(bb,cb)=>{if("mob"===bb){var sb;const bb=cb.trim().toLowerCase();return null!==(sb=this.mobTypes.find((cb=>cb.toLowerCase()===bb)))&&void 0!==sb?sb:null}const kb=this.suggestNames(cb),Wb=kb.isSure?kb.names[0]:void 0;return void 0===Wb||"item"!==bb&&!this.blockNames.has(Wb)?null:Wb};const cb=[],sb=(bb,sb)=>{for(const{name:kb,text:Wb}of function(bb){const cb=[],sb=bb.split(/^## /m).slice(1);for(const kb of sb){const bb=kb.indexOf("\n"),sb=(-1===bb?kb:kb.slice(0,bb)).trim(),Wb=`
+      `}function OY(bb){return bb.split("\n").slice(1).map((bb=>bb.replace(/\s*\[[A-Z]+(?:,[A-Z]+)*\]\s*$/,"").trim())).filter((bb=>""!==bb&&!bb.startsWith("#")))}class cY{constructor(bb){this.sections=void 0,this.mobTypes=void 0,this.byName=new Map,this.itemAndBlockNames=void 0,this.blockNames=void 0,this.namesByLowerCase=void 0,this.wordCounts=new Map,this.realName=(bb,ab)=>{if("mob"===bb){var Ub;const bb=ab.trim().toLowerCase();return null!==(Ub=this.mobTypes.find((ab=>ab.toLowerCase()===bb)))&&void 0!==Ub?Ub:null}const Ab=this.suggestNames(ab),Mb=Ab.isSure?Ab.names[0]:void 0;return void 0===Mb||"item"!==bb&&!this.blockNames.has(Mb)?null:Mb};const ab=[],Ub=(bb,Ub)=>{for(const{name:Ab,text:Mb}of function(bb){const ab=[],Ub=bb.split(/^## /m).slice(1);for(const Ab of Ub){const bb=Ab.indexOf("\n"),Ub=(-1===bb?Ab:Ab.slice(0,bb)).trim(),Mb=`
       # # $ {
-        kb
+        Ab
       }
-      `.replace(/\n\s*\n(\s*\n)+/g,"\n\n").trim();cb.push({name:sb,text:Wb})}return cb}(sb))cb.push(RU(bb,kb,Wb))};sb("api",bb.apiReference),sb("callback",bb.callbacks),sb("clientOption",bb.clientOptions),sb("snippet",bb.snippets),sb("howTo",bb.howTo);const kb=function(){const bb=Wk.map((bb=>`
+      `.replace(/\n\s*\n(\s*\n)+/g,"\n\n").trim();ab.push({name:Ub,text:Mb})}return ab}(Ub))ab.push(sY(bb,Ab,Mb))};Ub("api",bb.apiReference),Ub("callback",bb.callbacks),Ub("clientOption",bb.clientOptions),Ub("snippet",bb.snippets),Ub("howTo",bb.howTo);const Ab=function(){const bb=UA.map((bb=>`
       # # $ {
         bb.name
       }\
@@ -8638,33 +8638,33 @@ export const modules = {
         bb.about
       }\
       n\ nUsage: \`${bb.signature}\`\n\n\`\`\`js\n${bb.example}\n\`\`\``)),
-  cb = Xk.map((bb => `## ${bb.name}\nPrefab (${bb.kind}, ${bb.category}): put in with use_prefab. ${Bk(bb,!1)}`));
+  ab = vA.map((bb => `## ${bb.name}\nPrefab (${bb.kind}, ${bb.category}): put in with use_prefab. ${pA(bb,!1)}`));
   return {
     helpers: `# Ready-made functions\n\n${bb.join("\n\n")}\n`,
-    prefabs: `# Prefabs\n\n${cb.join("\n\n")}\n`
+    prefabs: `# Prefabs\n\n${ab.join("\n\n")}\n`
   }
 }();
-sb("helper", kb.helpers), sb("prefab", kb.prefabs), this.sections = cb;
-for (const ab of cb) {
-  this.byName.has(ab.name) || this.byName.set(ab.name, ab);
-  for (const bb of ab.textWords) {
-    var Wb;
-    this.wordCounts.set(bb, (null !== (Wb = this.wordCounts.get(bb)) && void 0 !== Wb ? Wb : 0) + 1)
+Ub("helper", Ab.helpers), Ub("prefab", Ab.prefabs), this.sections = ab;
+for (const Tb of ab) {
+  this.byName.has(Tb.name) || this.byName.set(Tb.name, Tb);
+  for (const bb of Tb.textWords) {
+    var Mb;
+    this.wordCounts.set(bb, (null !== (Mb = this.wordCounts.get(bb)) && void 0 !== Mb ? Mb : 0) + 1)
   }
 }
-this.itemAndBlockNames = [...new Set([...jU(bb.itemNames), ...jU(bb.blockNames)])], this.blockNames = new Set(jU(bb.blockNames)), this.namesByLowerCase = new Map(this.itemAndBlockNames.map((bb => [bb.toLowerCase(), bb]))), this.mobTypes = function(bb) {
-  var cb, sb;
-  const kb = null !== (cb = null === (sb = bb.split("## Mob Variations")[1]) || void 0 === sb ? void 0 : sb.split("```")[1]) && void 0 !== cb ? cb : "",
-    Wb = [];
-  for (const ab of kb.split("\n")) {
-    const bb = /^([A-Z][\w ]*?):\s*"/.exec(ab.trim());
-    bb && Wb.push(bb[1])
+this.itemAndBlockNames = [...new Set([...OY(bb.itemNames), ...OY(bb.blockNames)])], this.blockNames = new Set(OY(bb.blockNames)), this.namesByLowerCase = new Map(this.itemAndBlockNames.map((bb => [bb.toLowerCase(), bb]))), this.mobTypes = function(bb) {
+  var ab, Ub;
+  const Ab = null !== (ab = null === (Ub = bb.split("## Mob Variations")[1]) || void 0 === Ub ? void 0 : Ub.split("```")[1]) && void 0 !== ab ? ab : "",
+    Mb = [];
+  for (const Tb of Ab.split("\n")) {
+    const bb = /^([A-Z][\w ]*?):\s*"/.exec(Tb.trim());
+    bb && Mb.push(bb[1])
   }
-  return Wb
+  return Mb
 }(bb.mobSettings)
 }
 index(bb) {
-  return this.sections.filter((cb => cb.kind === bb)).map((bb => bb.line)).join("\n")
+  return this.sections.filter((ab => ab.kind === bb)).map((bb => bb.line)).join("\n")
 }
 callbackNames() {
   return this.sections.filter((bb => "callback" === bb.kind)).map((bb => bb.name))
@@ -8673,998 +8673,998 @@ get(bb) {
   return this.byName.get(bb)
 }
 unprefixedApiCalls(bb) {
-  const cb = zU(bb),
-    sb = cb.join("\n"),
-    kb = new Set([...sb.matchAll(/\b(?:function\s+|(?:const|let|var)\s+)([\w$]+)|^([\w$]+)\s*=/gm)].map((bb => {
-      var cb;
-      return null !== (cb = bb[1]) && void 0 !== cb ? cb : bb[2]
+  const ab = qY(bb),
+    Ub = ab.join("\n"),
+    Ab = new Set([...Ub.matchAll(/\b(?:function\s+|(?:const|let|var)\s+)([\w$]+)|^([\w$]+)\s*=/gm)].map((bb => {
+      var ab;
+      return null !== (ab = bb[1]) && void 0 !== ab ? ab : bb[2]
     }))),
-    Wb = [...sb.matchAll(/\b(?:const|let|var)\s*([{[][^=]*?[}\]])\s*=/g), ...sb.matchAll(/\bimport\s+([\w$\s{},*]+?)\s+from\b/g)];
-  for (const Tb of Wb)
-    for (const bb of Tb[1].matchAll(/([\w$]+)\s*(?=[,}\]=]|$)/g)) kb.add(bb[1]);
-  const ab = new Map;
-  return cb.forEach(((bb, cb) => {
-    for (const Wb of (0, Mc.e)(bb, /([\w$]+)\s*\(/g, Mc.m)) {
-      var sb;
-      const Tb = Wb[1],
-        Ub = /^\s*(?:async\s+)?$/.test(bb.slice(0, Wb.index)) && /^[\w$]+\s*\([^()]*\)\s*\{/.test(bb.slice(Wb.index));
-      ab.has(Tb) || kb.has(Tb) || Ub || "api" !== (null === (sb = this.byName.get(Tb)) || void 0 === sb ? void 0 : sb.kind) || ab.set(Tb, `Line ${cb+1} calls ${Tb} without "api.", so it throws there. Did you mean api.${Tb}?`)
+    Mb = [...Ub.matchAll(/\b(?:const|let|var)\s*([{[][^=]*?[}\]])\s*=/g), ...Ub.matchAll(/\bimport\s+([\w$\s{},*]+?)\s+from\b/g)];
+  for (const Eb of Mb)
+    for (const bb of Eb[1].matchAll(/([\w$]+)\s*(?=[,}\]=]|$)/g)) Ab.add(bb[1]);
+  const Tb = new Map;
+  return ab.forEach(((bb, ab) => {
+    for (const Mb of (0, La.f)(bb, /([\w$]+)\s*\(/g, La.l)) {
+      var Ub;
+      const Eb = Mb[1],
+        Yb = /^\s*(?:async\s+)?$/.test(bb.slice(0, Mb.index)) && /^[\w$]+\s*\([^()]*\)\s*\{/.test(bb.slice(Mb.index));
+      Tb.has(Eb) || Ab.has(Eb) || Yb || "api" !== (null === (Ub = this.byName.get(Eb)) || void 0 === Ub ? void 0 : Ub.kind) || Tb.set(Eb, `Line ${ab+1} calls ${Eb} without "api.", so it throws there. Did you mean api.${Eb}?`)
     }
-  })), [...ab.values()]
+  })), [...Tb.values()]
 }
 unknownApiMethods(bb) {
   return [...new Set([...bb.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)].map((bb => bb[1])))].filter((bb => {
-    var cb;
-    return "api" !== (null === (cb = this.byName.get(bb)) || void 0 === cb ? void 0 : cb.kind)
+    var ab;
+    return "api" !== (null === (ab = this.byName.get(bb)) || void 0 === ab ? void 0 : ab.kind)
   })).map((bb => {
-    const cb = this.find(bb.replace(/([a-z])([A-Z])/g, "$1 $2"), "", 20).filter((bb => "api" === bb.kind)).slice(0, 2).map((bb => `api.${bb.name}`));
-    return `api.${bb} doesn't exist.${cb.length?` Did you mean ${cb.join(" or ")}?`:""}`
+    const ab = this.find(bb.replace(/([a-z])([A-Z])/g, "$1 $2"), "", 20).filter((bb => "api" === bb.kind)).slice(0, 2).map((bb => `api.${bb.name}`));
+    return `api.${bb} doesn't exist.${ab.length?` Did you mean ${ab.join(" or ")}?`:""}`
   }))
 }
 unknownItemNames(bb) {
-  const cb = new Set([...this.itemAndBlockNames, "Air"]),
-    sb = new Set;
-  for (const kb of bb.matchAll(/\bapi\.([A-Za-z_$][\w$]*)\(/g)) {
-    const Wb = this.byName.get(kb[1]);
-    if ("api" !== (null === Wb || void 0 === Wb ? void 0 : Wb.kind)) continue;
-    const ab = AU(Wb.text).map((bb => {
+  const ab = new Set([...this.itemAndBlockNames, "Air"]),
+    Ub = new Set;
+  for (const Ab of bb.matchAll(/\bapi\.([A-Za-z_$][\w$]*)\(/g)) {
+    const Mb = this.byName.get(Ab[1]);
+    if ("api" !== (null === Mb || void 0 === Mb ? void 0 : Mb.kind)) continue;
+    const Tb = KY(Mb.text).map((bb => {
         let {
-          type: cb
+          type: ab
         } = bb;
-        return void 0 !== cb && /^(ItemName|BlockName)\b/.test(cb)
+        return void 0 !== ab && /^(ItemName|BlockName)\b/.test(ab)
       })),
-      Tb = oU(bb, kb.index + kb[0].length);
-    Tb.forEach(((kb, Wb) => {
-      var Ub, Ib, Hb, fb;
-      if (!ab[Wb] && (Wb !== Tb.length - 1 || !ab[ab.length - 1])) return;
-      const Mb = null === (Ub = /^CONFIG\.([\w$]+)$/.exec(kb)) || void 0 === Ub ? void 0 : Ub[1],
-        Xb = Mb ? null === (Ib = new RegExp(`(?:^|[{,])\\s*${Mb.replaceAll("$","\\$")}\\s*:\\s*${rU}`, "m").exec(bb)) || void 0 === Ib ? void 0 : Ib[1] : void 0,
-        nb = SU(bb, kb),
-        mb = null !== (Hb = null === (fb = new RegExp(`\\?\\s*${rU}\\s*:\\s*${rU}$`).exec(kb)) || void 0 === fb ? void 0 : fb.slice(1)) && void 0 !== Hb ? Hb : [];
-      for (const bb of [null !== (lb = null !== Xb && void 0 !== Xb ? Xb : nb) && void 0 !== lb ? lb : kb, ...mb]) {
-        var lb;
-        const kb = /^(["'`])([^"'`]+)\1$/.exec(bb),
-          Wb = "`" === (null === kb || void 0 === kb ? void 0 : kb[1]) && kb[2].includes("${");
-        !kb || Wb || cb.has(kb[2]) || sb.add(kb[2])
+      Eb = tY(bb, Ab.index + Ab[0].length);
+    Eb.forEach(((Ab, Mb) => {
+      var Yb, Bb, eb, vb;
+      if (!Tb[Mb] && (Mb !== Eb.length - 1 || !Tb[Tb.length - 1])) return;
+      const Lb = null === (Yb = /^CONFIG\.([\w$]+)$/.exec(Ab)) || void 0 === Yb ? void 0 : Yb[1],
+        Pb = Lb ? null === (Bb = new RegExp(`(?:^|[{,])\\s*${Lb.replaceAll("$","\\$")}\\s*:\\s*${lY}`, "m").exec(bb)) || void 0 === Bb ? void 0 : Bb[1] : void 0,
+        Xb = wY(bb, Ab),
+        jb = null !== (eb = null === (vb = new RegExp(`\\?\\s*${lY}\\s*:\\s*${lY}$`).exec(Ab)) || void 0 === vb ? void 0 : vb.slice(1)) && void 0 !== eb ? eb : [];
+      for (const bb of [null !== (Rb = null !== Pb && void 0 !== Pb ? Pb : Xb) && void 0 !== Rb ? Rb : Ab, ...jb]) {
+        var Rb;
+        const Ab = /^(["'`])([^"'`]+)\1$/.exec(bb),
+          Mb = "`" === (null === Ab || void 0 === Ab ? void 0 : Ab[1]) && Ab[2].includes("${");
+        !Ab || Mb || ab.has(Ab[2]) || Ub.add(Ab[2])
       }
     }))
   }
-  return [...sb].map((bb => `"${bb}" isn't an item or block name.${xU(this.suggestNames(bb))}`))
+  return [...Ub].map((bb => `"${bb}" isn't an item or block name.${VY(this.suggestNames(bb))}`))
 }
 reorderedComparedNames(bb) {
-  const cb = new Set([...this.itemAndBlockNames, "Air", "Unloaded"]),
-    sb = new Map(this.itemAndBlockNames.map((bb => [vU(bb), bb]))),
-    kb = new Map,
-    Wb = [/[!=]==?\s*(["'])([^"'\n]{3,40})\1/g, /(["'])([^"'\n]{3,40})\1\s*[!=]==?/g, /\bcase\s+(["'])([^"'\n]{3,40})\1\s*:/g, /\.includes\(\s*(["'])([^"'\n]{3,40})\1\s*\)/g];
-  for (const Ub of Wb)
-    for (const Wb of bb.matchAll(Ub)) {
-      const bb = Wb[2],
-        ab = cb.has(bb) || !/\s/.test(bb.trim()) ? void 0 : sb.get(vU(bb));
-      ab && kb.set(bb, ab)
+  const ab = new Set([...this.itemAndBlockNames, "Air", "Unloaded"]),
+    Ub = new Map(this.itemAndBlockNames.map((bb => [gY(bb), bb]))),
+    Ab = new Map,
+    Mb = [/[!=]==?\s*(["'])([^"'\n]{3,40})\1/g, /(["'])([^"'\n]{3,40})\1\s*[!=]==?/g, /\bcase\s+(["'])([^"'\n]{3,40})\1\s*:/g, /\.includes\(\s*(["'])([^"'\n]{3,40})\1\s*\)/g];
+  for (const Yb of Mb)
+    for (const Mb of bb.matchAll(Yb)) {
+      const bb = Mb[2],
+        Tb = ab.has(bb) || !/\s/.test(bb.trim()) ? void 0 : Ub.get(gY(bb));
+      Tb && Ab.set(bb, Tb)
     }
-  const ab = [...kb].map((bb => {
-      let [cb, sb] = bb;
-      return `"${cb}" isn't a block or item name, so comparing with it is never true. Did you mean "${sb}"?`
+  const Tb = [...Ab].map((bb => {
+      let [ab, Ub] = bb;
+      return `"${ab}" isn't a block or item name, so comparing with it is never true. Did you mean "${Ub}"?`
     })),
-    Tb = new Map;
-  for (const Ub of bb.matchAll(/\b\w*block\w*\s*[!=]==?\s*(["'])([^"'\n]+)\1/gi)) {
-    const cb = Ub[2],
-      sb = this.blockNames.has(cb) || !this.itemAndBlockNames.includes(cb) ? void 0 : [`Block of ${cb}`, `${cb} Block`].find((bb => this.blockNames.has(bb)));
-    !sb || bb.includes(`"${sb}"`) || bb.includes(`'${sb}'`) || Tb.set(cb, sb)
+    Eb = new Map;
+  for (const Yb of bb.matchAll(/\b\w*block\w*\s*[!=]==?\s*(["'])([^"'\n]+)\1/gi)) {
+    const ab = Yb[2],
+      Ub = this.blockNames.has(ab) || !this.itemAndBlockNames.includes(ab) ? void 0 : [`Block of ${ab}`, `${ab} Block`].find((bb => this.blockNames.has(bb)));
+    !Ub || bb.includes(`"${Ub}"`) || bb.includes(`'${Ub}'`) || Eb.set(ab, Ub)
   }
-  return [...ab, ...[...Tb].map((bb => {
-    let [cb, sb] = bb;
-    return `"${cb}" is an item, not a block, so no block is ever called that. Did you mean "${sb}"?`
+  return [...Tb, ...[...Eb].map((bb => {
+    let [ab, Ub] = bb;
+    return `"${ab}" is an item, not a block, so no block is ever called that. Did you mean "${Ub}"?`
   }))]
 }
 unknownComparedBlockNames(bb) {
-  const cb = new Set([...this.itemAndBlockNames, "Air", "Unloaded"]),
-    sb = new Set(this.itemAndBlockNames.map((bb => vU(bb)))),
-    kb = new Set;
-  for (const Wb of bb.matchAll(/\b\w*block(?:name|type)?\s*[!=]==?\s*(["'])([^"'\n]+)\1/gi)) kb.add(Wb[2]);
-  for (const Wb of bb.matchAll(/(["'])([^"'\n]+)\1\s*[!=]==?\s*\w*block(?:name|type)?\b/gi)) kb.add(Wb[2]);
-  return [...kb].filter((bb => !cb.has(bb) && !(/\s/.test(bb.trim()) && sb.has(vU(bb))))).map((bb => {
-    const cb = this.itemAndBlockNames.filter((cb => vU(cb) === vU(bb))),
-      sb = this.itemAndBlockNames.filter((cb => OU(cb).includes(bb.toLowerCase()))),
-      kb = this.suggestNames(bb),
-      Wb = cb.length > 0 ? {
-        names: cb,
-        isSure: 1 === cb.length,
+  const ab = new Set([...this.itemAndBlockNames, "Air", "Unloaded"]),
+    Ub = new Set(this.itemAndBlockNames.map((bb => gY(bb)))),
+    Ab = new Set;
+  for (const Mb of bb.matchAll(/\b\w*block(?:name|type)?\s*[!=]==?\s*(["'])([^"'\n]+)\1/gi)) Ab.add(Mb[2]);
+  for (const Mb of bb.matchAll(/(["'])([^"'\n]+)\1\s*[!=]==?\s*\w*block(?:name|type)?\b/gi)) Ab.add(Mb[2]);
+  return [...Ab].filter((bb => !ab.has(bb) && !(/\s/.test(bb.trim()) && Ub.has(gY(bb))))).map((bb => {
+    const ab = this.itemAndBlockNames.filter((ab => gY(ab) === gY(bb))),
+      Ub = this.itemAndBlockNames.filter((ab => FY(ab).includes(bb.toLowerCase()))),
+      Ab = this.suggestNames(bb),
+      Mb = ab.length > 0 ? {
+        names: ab,
+        isSure: 1 === ab.length,
         isDecided: !0
-      } : kb.names.length > 0 || kb.isDecided ? kb : {
-        names: sb.length <= 2 ? sb : [],
-        isSure: 1 === sb.length,
+      } : Ab.names.length > 0 || Ab.isDecided ? Ab : {
+        names: Ub.length <= 2 ? Ub : [],
+        isSure: 1 === Ub.length,
         isDecided: !1
       };
-    return `"${bb}" isn't a block or item name, so comparing a block with it is never true.${xU(Wb)}`
+    return `"${bb}" isn't a block or item name, so comparing a block with it is never true.${VY(Mb)}`
   }))
 }
 madeUpStopValues(bb) {
-  const cb = new Set;
+  const ab = new Set;
   for (const {
-      name: sb,
-      body: kb
+      name: Ub,
+      body: Ab
     }
     of
     function(bb) {
-      const cb = [...bb.matchAll(ZU)];
-      return cb.map(((sb, kb) => {
-        var Wb, ab, Tb;
+      const ab = [...bb.matchAll(QY)];
+      return ab.map(((Ub, Ab) => {
+        var Mb, Tb, Eb;
         return {
-          name: null !== (Wb = sb[1]) && void 0 !== Wb ? Wb : sb[2],
-          body: bb.slice(sb.index, null !== (ab = null === (Tb = cb[kb + 1]) || void 0 === Tb ? void 0 : Tb.index) && void 0 !== ab ? ab : bb.length)
+          name: null !== (Mb = Ub[1]) && void 0 !== Mb ? Mb : Ub[2],
+          body: bb.slice(Ub.index, null !== (Tb = null === (Eb = ab[Ab + 1]) || void 0 === Eb ? void 0 : Eb.index) && void 0 !== Tb ? Tb : bb.length)
         }
       }))
     }(bb)) {
-    const bb = this.byName.get(sb);
+    const bb = this.byName.get(Ub);
     if ("callback" === (null === bb || void 0 === bb ? void 0 : bb.kind))
-      for (const Wb of kb.matchAll(/\breturn\s+["']((?:[Pp]revent|[Cc]ancel|[Ss]top|[Bb]lock|[Dd]eny)\w*)["']/g)) {
-        const kb = Wb[1];
-        if (bb.text.includes(`"${kb}"`)) continue;
-        const ab = [...new Set([...bb.text.matchAll(/Return "(prevent[A-Za-z]*)"/g)].map((bb => bb[1])))],
-          Tb = ab.length > 0 ? `Did you mean ${ab.map((bb=>`"${bb}"`)).join(" or ")}?` : /Return false/i.test(bb.text) ? `To stop it, return false instead of "${kb}".` : "Check Show Docs for what it can return.";
-        cb.add(`${sb} can't use "${kb}" to stop anything. ${Tb}`)
+      for (const Mb of Ab.matchAll(/\breturn\s+["']((?:[Pp]revent|[Cc]ancel|[Ss]top|[Bb]lock|[Dd]eny)\w*)["']/g)) {
+        const Ab = Mb[1];
+        if (bb.text.includes(`"${Ab}"`)) continue;
+        const Tb = [...new Set([...bb.text.matchAll(/Return "(prevent[A-Za-z]*)"/g)].map((bb => bb[1])))],
+          Eb = Tb.length > 0 ? `Did you mean ${Tb.map((bb=>`"${bb}"`)).join(" or ")}?` : /Return false/i.test(bb.text) ? `To stop it, return false instead of "${Ab}".` : "Check Show Docs for what it can return.";
+        ab.add(`${Ub} can't use "${Ab}" to stop anything. ${Eb}`)
       }
   }
-  return [...cb]
+  return [...ab]
 }
 codeWarnings(bb) {
-  let cb = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-  return [...this.unknownApiMethods(bb), ...this.unprefixedApiCalls(bb), ...this.unknownItemNames(bb), ...this.reorderedComparedNames(bb), ...this.unknownComparedBlockNames(bb), ...this.madeUpStopValues(bb), ...dU(bb), ...qU(bb, cb)]
+  let ab = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+  return [...this.unknownApiMethods(bb), ...this.unprefixedApiCalls(bb), ...this.unknownItemNames(bb), ...this.reorderedComparedNames(bb), ...this.unknownComparedBlockNames(bb), ...this.madeUpStopValues(bb), ...rY(bb), ...uY(bb, ab)]
 }
 suggestNames(bb) {
-  var cb;
-  const sb = bb.trim().toLowerCase().replace(/\s+/g, " "),
-    kb = Object.hasOwn(PU, sb) ? PU[sb] : void 0;
-  if (kb) {
-    const bb = kb.filter((bb => this.namesByLowerCase.has(bb.toLowerCase())));
+  var ab;
+  const Ub = bb.trim().toLowerCase().replace(/\s+/g, " "),
+    Ab = Object.hasOwn(WY, Ub) ? WY[Ub] : void 0;
+  if (Ab) {
+    const bb = Ab.filter((bb => this.namesByLowerCase.has(bb.toLowerCase())));
     return {
       names: bb,
       isSure: 1 === bb.length,
       isDecided: !0
     }
   }
-  const Wb = bb.trim().replace(/([a-z])([A-Z])/g, "$1 $2").toLowerCase().split(/\s+/).map((bb => Object.hasOwn(DU, bb) ? DU[bb] : bb)).filter(Boolean).join(" "),
-    ab = null !== (cb = this.namesByLowerCase.get(sb)) && void 0 !== cb ? cb : this.namesByLowerCase.get(Wb);
-  if (ab) return {
-    names: [ab],
+  const Mb = bb.trim().replace(/([a-z])([A-Z])/g, "$1 $2").toLowerCase().split(/\s+/).map((bb => Object.hasOwn(HY, bb) ? HY[bb] : bb)).filter(Boolean).join(" "),
+    Tb = null !== (ab = this.namesByLowerCase.get(Ub)) && void 0 !== ab ? ab : this.namesByLowerCase.get(Mb);
+  if (Tb) return {
+    names: [Tb],
     isSure: !0,
     isDecided: !0
   };
-  const Tb = this.closestItemAndBlockNames(Wb),
-    Ub = bb => OU(bb).filter((bb => !iU.has(bb) && !FU.has(bb))).map(GU),
-    Ib = 1 === Tb.length ? Ub(Tb[0]) : [];
+  const Eb = this.closestItemAndBlockNames(Mb),
+    Yb = bb => FY(bb).filter((bb => !dY.has(bb) && !CY.has(bb))).map(hY),
+    Bb = 1 === Eb.length ? Yb(Eb[0]) : [];
   return {
-    names: Tb,
-    isSure: 1 === Tb.length && Ub(Wb).every((bb => Ib.includes(bb))),
+    names: Eb,
+    isSure: 1 === Eb.length && Yb(Mb).every((bb => Bb.includes(bb))),
     isDecided: !1
   }
 }
 closestItemAndBlockNames(bb) {
-  const cb = new Set(OU(bb).filter((bb => !iU.has(bb))).map(GU)),
-    sb = this.itemAndBlockNames.map((bb => {
-      const sb = OU(bb).filter((bb => !iU.has(bb))).map(GU),
-        kb = sb.filter((bb => cb.has(bb))).length;
+  const ab = new Set(FY(bb).filter((bb => !dY.has(bb))).map(hY)),
+    Ub = this.itemAndBlockNames.map((bb => {
+      const Ub = FY(bb).filter((bb => !dY.has(bb))).map(hY),
+        Ab = Ub.filter((bb => ab.has(bb))).length;
       return {
         candidate: bb,
-        score: 2 * kb - (sb.length - kb)
+        score: 2 * Ab - (Ub.length - Ab)
       }
     })).filter((bb => bb.score > 0)),
-    kb = Math.max(...sb.map((bb => bb.score)));
-  return sb.filter((bb => bb.score === kb)).slice(0, 2).map((bb => bb.candidate))
+    Ab = Math.max(...Ub.map((bb => bb.score)));
+  return Ub.filter((bb => bb.score === Ab)).slice(0, 2).map((bb => bb.candidate))
 }
-find(bb, cb, sb) {
-  const kb = new Map,
-    Wb = (bb, cb) => {
-      var sb;
-      bb && kb.set(bb, (null !== (sb = kb.get(bb)) && void 0 !== sb ? sb : 0) + cb)
+find(bb, ab, Ub) {
+  const Ab = new Map,
+    Mb = (bb, ab) => {
+      var Ub;
+      bb && Ab.set(bb, (null !== (Ub = Ab.get(bb)) && void 0 !== Ub ? Ub : 0) + ab)
     },
-    ab = OU(bb),
-    Tb = ab.filter((bb => !iU.has(bb)));
-  for (const Mb of ab)
-    for (const bb of Object.hasOwn(EU, Mb) ? EU[Mb] : []) Wb(this.byName.get(bb), 6);
-  for (const Mb of `${bb}\n${cb}`.matchAll(/\bapi\.(\w+)|\b(on[A-Z]\w+|tick|playerCommand)\b|"(\w+)"/g)) {
-    var Ub, Ib;
-    Wb(this.byName.get(null !== (Ub = null !== (Ib = Mb[1]) && void 0 !== Ib ? Ib : Mb[2]) && void 0 !== Ub ? Ub : Mb[3]), Mb[1] || Mb[2] ? 4 : 2)
+    Tb = FY(bb),
+    Eb = Tb.filter((bb => !dY.has(bb)));
+  for (const Lb of Tb)
+    for (const bb of Object.hasOwn(IY, Lb) ? IY[Lb] : []) Mb(this.byName.get(bb), 6);
+  for (const Lb of `${bb}\n${ab}`.matchAll(/\bapi\.(\w+)|\b(on[A-Z]\w+|tick|playerCommand)\b|"(\w+)"/g)) {
+    var Yb, Bb;
+    Mb(this.byName.get(null !== (Yb = null !== (Bb = Lb[1]) && void 0 !== Bb ? Bb : Lb[2]) && void 0 !== Yb ? Yb : Lb[3]), Lb[1] || Lb[2] ? 4 : 2)
   }
-  for (const Mb of (0, Mc.e)(cb, /([A-Za-z_$][\w$]*)\s*\(/g, Mc.m)) {
-    const bb = this.byName.get(Mb[1]);
-    "helper" === (null === bb || void 0 === bb ? void 0 : bb.kind) && Wb(bb, 3)
+  for (const Lb of (0, La.f)(ab, /([A-Za-z_$][\w$]*)\s*\(/g, La.l)) {
+    const bb = this.byName.get(Lb[1]);
+    "helper" === (null === bb || void 0 === bb ? void 0 : bb.kind) && Mb(bb, 3)
   }
-  const Hb = new Set(Tb.map(GU));
-  for (const Mb of this.sections) {
+  const eb = new Set(Eb.map(hY));
+  for (const Lb of this.sections) {
     let bb = 0;
-    for (const cb of Hb) {
-      var fb;
-      const sb = 1 / Math.log2(2 + (null !== (fb = this.wordCounts.get(cb)) && void 0 !== fb ? fb : 0));
-      Mb.nameWords.has(cb) ? bb += 3 * sb : Mb.textWords.has(cb) && (bb += sb)
+    for (const ab of eb) {
+      var vb;
+      const Ub = 1 / Math.log2(2 + (null !== (vb = this.wordCounts.get(ab)) && void 0 !== vb ? vb : 0));
+      Lb.nameWords.has(ab) ? bb += 3 * Ub : Lb.textWords.has(ab) && (bb += Ub)
     }
-    Wb(Mb, bb)
+    Mb(Lb, bb)
   }
-  return [...kb.entries()].filter((bb => {
-    let [cb, sb] = bb;
-    return sb > .5 && "prefab" !== cb.kind
-  })).sort(((bb, cb) => cb[1] - bb[1])).slice(0, sb).map((bb => {
-    let [cb] = bb;
-    return cb
+  return [...Ab.entries()].filter((bb => {
+    let [ab, Ub] = bb;
+    return Ub > .5 && "prefab" !== ab.kind
+  })).sort(((bb, ab) => ab[1] - bb[1])).slice(0, Ub).map((bb => {
+    let [ab] = bb;
+    return ab
   }))
 }
 section(bb) {
-  var cb, sb;
-  const kb = bb.trim().replace(/^api\./, "").replace(/\(.*$/, ""),
-    Wb = kb.toLowerCase();
-  return null !== (cb = null !== (sb = this.byName.get(kb)) && void 0 !== sb ? sb : this.sections.find((bb => bb.name.toLowerCase() === Wb))) && void 0 !== cb ? cb : null
+  var ab, Ub;
+  const Ab = bb.trim().replace(/^api\./, "").replace(/\(.*$/, ""),
+    Mb = Ab.toLowerCase();
+  return null !== (ab = null !== (Ub = this.byName.get(Ab)) && void 0 !== Ub ? Ub : this.sections.find((bb => bb.name.toLowerCase() === Mb))) && void 0 !== ab ? ab : null
 }
-searchNames(bb, cb) {
-  const sb = OU(bb).filter((bb => !iU.has(bb))).map(GU);
-  if (0 === sb.length) return [];
-  const kb = [...this.itemAndBlockNames, ...this.mobTypes].flatMap((bb => {
-      const cb = new Set(OU(bb).map(GU)),
-        kb = sb.filter((bb => cb.has(bb))).length;
-      return 0 === kb ? [] : [{
+searchNames(bb, ab) {
+  const Ub = FY(bb).filter((bb => !dY.has(bb))).map(hY);
+  if (0 === Ub.length) return [];
+  const Ab = [...this.itemAndBlockNames, ...this.mobTypes].flatMap((bb => {
+      const ab = new Set(FY(bb).map(hY)),
+        Ab = Ub.filter((bb => ab.has(bb))).length;
+      return 0 === Ab ? [] : [{
         name: bb,
-        found: kb,
-        length: cb.size
+        found: Ab,
+        length: ab.size
       }]
     })),
-    Wb = Math.max(0, ...kb.map((bb => bb.found)));
-  return [...new Set(kb.filter((bb => bb.found === Wb)).sort(((bb, cb) => bb.length - cb.length || bb.name.localeCompare(cb.name))).map((bb => bb.name)))].slice(0, cb)
+    Mb = Math.max(0, ...Ab.map((bb => bb.found)));
+  return [...new Set(Ab.filter((bb => bb.found === Mb)).sort(((bb, ab) => bb.length - ab.length || bb.name.localeCompare(ab.name))).map((bb => bb.name)))].slice(0, ab)
 }
-matchItemAndBlockNames(bb, cb) {
-  const sb = new Set(OU(bb).map(GU)),
-    kb = [];
-  for (const Wb of this.itemAndBlockNames) {
-    const bb = OU(Wb).filter((bb => !iU.has(bb))).map(GU);
-    bb.length > 0 && bb.every((bb => sb.has(bb))) && kb.push({
-      name: Wb,
+matchItemAndBlockNames(bb, ab) {
+  const Ub = new Set(FY(bb).map(hY)),
+    Ab = [];
+  for (const Mb of this.itemAndBlockNames) {
+    const bb = FY(Mb).filter((bb => !dY.has(bb))).map(hY);
+    bb.length > 0 && bb.every((bb => Ub.has(bb))) && Ab.push({
+      name: Mb,
       length: bb.length
     })
   }
-  return kb.sort(((bb, cb) => cb.length - bb.length)).slice(0, cb).map((bb => bb.name))
+  return Ab.sort(((bb, ab) => ab.length - bb.length)).slice(0, ab).map((bb => bb.name))
 }
 }
 
-function bI(bb, cb) {
-  var sb;
-  const kb = cI(bb, !0),
-    Wb = null === (sb = /^([\w$.]+) (?:needs|couldn't|didn't|isn't a function)/.exec(kb)) || void 0 === sb ? void 0 : sb[1],
-    ab = Wb && void 0 !== cb ? function(bb, cb) {
-      const sb = cb.replace(/[$.]/g, "\\$&"),
-        kb = new RegExp(`(^|[^\\w$.])${sb}\\s*\\(`),
-        Wb = bb.split("\n").flatMap(((bb, cb) => kb.test(bb) ? [cb + 1] : []));
-      return 1 === Wb.length ? Wb[0] : void 0
-    }(cb, Wb) : void 0;
-  return ab ? {
-    text: cI(bb, !1),
-    line: ab
+function JY(bb, ab) {
+  var Ub;
+  const Ab = nY(bb, !0),
+    Mb = null === (Ub = /^([\w$.]+) (?:needs|couldn't|didn't|isn't a function)/.exec(Ab)) || void 0 === Ub ? void 0 : Ub[1],
+    Tb = Mb && void 0 !== ab ? function(bb, ab) {
+      const Ub = ab.replace(/[$.]/g, "\\$&"),
+        Ab = new RegExp(`(^|[^\\w$.])${Ub}\\s*\\(`),
+        Mb = bb.split("\n").flatMap(((bb, ab) => Ab.test(bb) ? [ab + 1] : []));
+      return 1 === Mb.length ? Mb[0] : void 0
+    }(ab, Mb) : void 0;
+  return Tb ? {
+    text: nY(bb, !1),
+    line: Tb
   } : {
-    text: kb
+    text: Ab
   }
 }
 
-function cI(bb, cb) {
-  const sb = bb.replace(/^Logging too many errors\n/, "").replace(/^(First|Last) error of \d+ errors:\n/, ""),
-    [kb, ...Wb] = sb.split("\n"),
+function nY(bb, ab) {
+  const Ub = bb.replace(/^Logging too many errors\n/, "").replace(/^(First|Last) error of \d+ errors:\n/, ""),
+    [Ab, ...Mb] = Ub.split("\n"),
     {
-      when: ab,
-      rest: Tb
+      when: Tb,
+      rest: Eb
     } = function(bb) {
-      const cb = /^Error in world code init:\s*/.exec(bb);
-      if (cb) return {
+      const ab = /^Error in world code init:\s*/.exec(bb);
+      if (ab) return {
         when: "when your world started",
-        rest: bb.slice(cb[0].length)
+        rest: bb.slice(ab[0].length)
       };
-      const sb = /^Error in (?:callback )?(\w+):\s*/.exec(bb);
-      return sb ? {
-        when: `in ${sb[1]}`,
-        rest: bb.slice(sb[0].length)
+      const Ub = /^Error in (?:callback )?(\w+):\s*/.exec(bb);
+      return Ub ? {
+        when: `in ${Ub[1]}`,
+        rest: bb.slice(Ub[0].length)
       } : {
         when: "",
         rest: bb
       }
-    }(kb.trim()),
-    Ub = ab && cb ? ` ${ab}` : "",
-    Ib = /(?:ApiError:\s*)?(\w+) didn't work/.exec(Tb);
-  if (Ib) {
-    var Hb, fb, Mb, Xb, nb;
-    const bb = /^Invalid argument #(\d+)(?:\s*\(([^)]*)\))?:?\s*(.*)$/.exec(null !== (Hb = null === (fb = Wb[0]) || void 0 === fb ? void 0 : fb.trim()) && void 0 !== Hb ? Hb : ""),
-      cb = null === (Mb = /^Expected(?: type)?:?\s*(.*)$/.exec(null !== (Xb = null === (nb = Wb[1]) || void 0 === nb ? void 0 : nb.trim()) && void 0 !== Xb ? Xb : "")) || void 0 === Mb ? void 0 : Mb[1],
-      sb = cb ? function(bb) {
-        const cb = bb.split(/\s+or\s+/)[0].trim();
-        return /^(a|an|the)\s/i.test(cb) || !/^[a-z]/i.test(cb) ? cb : `${/^[aeiou]/i.test(cb)?"an":"a"} ${cb}`
-      }(cb) : void 0;
-    return sb && null !== bb && void 0 !== bb && bb[3] ? `api.${Ib[1]} needs ${sb}, but it got ${bb[3]}${Ub}.` : bb ? `api.${Ib[1]} couldn't use its ${mb=Number(bb[1]),1===mb?"first":2===mb?"second":3===mb?"third":4===mb?"fourth":`#${mb}`} argument${Ub}.${sb?` It needs ${sb}.`:""}` : `api.${Ib[1]} didn't work${Ub}.`
+    }(Ab.trim()),
+    Yb = Tb && ab ? ` ${Tb}` : "",
+    Bb = /(?:ApiError:\s*)?(\w+) didn't work/.exec(Eb);
+  if (Bb) {
+    var eb, vb, Lb, Pb, Xb;
+    const bb = /^Invalid argument #(\d+)(?:\s*\(([^)]*)\))?:?\s*(.*)$/.exec(null !== (eb = null === (vb = Mb[0]) || void 0 === vb ? void 0 : vb.trim()) && void 0 !== eb ? eb : ""),
+      ab = null === (Lb = /^Expected(?: type)?:?\s*(.*)$/.exec(null !== (Pb = null === (Xb = Mb[1]) || void 0 === Xb ? void 0 : Xb.trim()) && void 0 !== Pb ? Pb : "")) || void 0 === Lb ? void 0 : Lb[1],
+      Ub = ab ? function(bb) {
+        const ab = bb.split(/\s+or\s+/)[0].trim();
+        return /^(a|an|the)\s/i.test(ab) || !/^[a-z]/i.test(ab) ? ab : `${/^[aeiou]/i.test(ab)?"an":"a"} ${ab}`
+      }(ab) : void 0;
+    return Ub && null !== bb && void 0 !== bb && bb[3] ? `api.${Bb[1]} needs ${Ub}, but it got ${bb[3]}${Yb}.` : bb ? `api.${Bb[1]} couldn't use its ${jb=Number(bb[1]),1===jb?"first":2===jb?"second":3===jb?"third":4===jb?"fourth":`#${jb}`} argument${Yb}.${Ub?` It needs ${Ub}.`:""}` : `api.${Bb[1]} didn't work${Yb}.`
   }
-  var mb;
-  const lb = /TypeError:\s*(?:(.+?) is )?not a function/.exec(Tb);
-  if (lb) return lb[1] ? `${lb[1]} isn't a function${Ub}. Check its name is spelt exactly right.` : `Your code called something that isn't a function${Ub}. Check each name it calls is spelt exactly right.`;
-  const Qb = /ReferenceError:\s*'?([^'\s]+)'? is not defined/.exec(Tb);
-  if (Qb) return `${Qb[1]} isn't defined${Ub}. Check the spelling, or create it before using it.`;
-  const eb = /TypeError:\s*[Cc]annot read propert(?:y|ies) (?:'([^']+)' )?of (undefined|null)(?: \(reading '([^']+)'\))?/.exec(Tb);
-  if (eb) {
-    var Cb;
-    const bb = null !== (Cb = eb[1]) && void 0 !== Cb ? Cb : eb[3];
-    return `Your code tried to read${bb?` .${bb}`:" something"} from ${eb[2]}${Ub}: a value it expected wasn't there.`
+  var jb;
+  const Rb = /TypeError:\s*(?:(.+?) is )?not a function/.exec(Eb);
+  if (Rb) return Rb[1] ? `${Rb[1]} isn't a function${Yb}. Check its name is spelt exactly right.` : `Your code called something that isn't a function${Yb}. Check each name it calls is spelt exactly right.`;
+  const kb = /ReferenceError:\s*'?([^'\s]+)'? is not defined/.exec(Eb);
+  if (kb) return `${kb[1]} isn't defined${Yb}. Check the spelling, or create it before using it.`;
+  const yb = /TypeError:\s*[Cc]annot read propert(?:y|ies) (?:'([^']+)' )?of (undefined|null)(?: \(reading '([^']+)'\))?/.exec(Eb);
+  if (yb) {
+    var Zb;
+    const bb = null !== (Zb = yb[1]) && void 0 !== Zb ? Zb : yb[3];
+    return `Your code tried to read${bb?` .${bb}`:" something"} from ${yb[2]}${Yb}: a value it expected wasn't there.`
   }
-  return `Your code hit an error${Ub}: ${Tb.replace(/^\w*Error:\s*/,"")}`
+  return `Your code hit an error${Yb}: ${Eb.replace(/^\w*Error:\s*/,"")}`
 }
-const sI = /^"([^"]+)" isn't an item or block name\..*Did you mean "([^"]+)"\?$/,
-  kI = /^"([^"]+)" isn't a block or item name, so comparing with it\b.*Did you mean "([^"]+)"\?$/,
-  WI = /^"([^"]+)" (?:is an item, not a block|isn't a block or item name, so comparing a block with it)\b.*Did you mean "([^"]+)"\?$/,
-  aI = /^([\w$]+) can't use "([^"]+)" to stop anything\. Did you mean "([^"]+)"\?$/,
-  TI = /^Line \d+ calls ([\w$]+) without "api\.", so it throws there\. Did you mean (api\.[\w$]+)\?$/,
-  UI = /^Line \d+ uses "([\w$]+)", which is never set, so it throws there\. Did you mean "([\w$]+)"\?$/,
-  II = /^Line \d+ uses "global", which World Code doesn't have\b/,
-  HI = /^[ \t]*global\.([\w$]+)[ \t]*=[ \t]*\1[ \t]*;?[ \t]*(?:\/\/.*)?(?:\r?\n|$)/gm,
-  fI = /^([ \t]*)global\.([\w$]+)([ \t]*=(?!=))/gm;
+const SY = /^"([^"]+)" isn't an item or block name\..*Did you mean "([^"]+)"\?$/,
+  bB = /^"([^"]+)" isn't a block or item name, so comparing with it\b.*Did you mean "([^"]+)"\?$/,
+  aB = /^"([^"]+)" (?:is an item, not a block|isn't a block or item name, so comparing a block with it)\b.*Did you mean "([^"]+)"\?$/,
+  UB = /^([\w$]+) can't use "([^"]+)" to stop anything\. Did you mean "([^"]+)"\?$/,
+  AB = /^Line \d+ calls ([\w$]+) without "api\.", so it throws there\. Did you mean (api\.[\w$]+)\?$/,
+  MB = /^Line \d+ uses "([\w$]+)", which is never set, so it throws there\. Did you mean "([\w$]+)"\?$/,
+  TB = /^Line \d+ uses "global", which World Code doesn't have\b/,
+  EB = /^[ \t]*global\.([\w$]+)[ \t]*=[ \t]*\1[ \t]*;?[ \t]*(?:\/\/.*)?(?:\r?\n|$)/gm,
+  YB = /^([ \t]*)global\.([\w$]+)([ \t]*=(?!=))/gm;
 
-function MI(bb) {
-  const cb = TI.exec(bb);
-  if (cb) return {
-    from: cb[1],
-    to: cb[2],
+function BB(bb) {
+  const ab = AB.exec(bb);
+  if (ab) return {
+    from: ab[1],
+    to: ab[2],
     kind: "call"
   };
-  const sb = UI.exec(bb);
-  if (sb) return {
-    from: sb[1],
-    to: sb[2],
+  const Ub = MB.exec(bb);
+  if (Ub) return {
+    from: Ub[1],
+    to: Ub[2],
     kind: "variable"
   };
-  if (II.test(bb)) return {
+  if (TB.test(bb)) return {
     from: "global",
     to: "",
     kind: "export"
   };
-  const kb = aI.exec(bb);
-  if (kb) return {
-    from: kb[2],
-    to: kb[3],
-    callback: kb[1]
+  const Ab = UB.exec(bb);
+  if (Ab) return {
+    from: Ab[2],
+    to: Ab[3],
+    callback: Ab[1]
   };
-  const Wb = kI.exec(bb);
-  if (Wb) return {
-    from: Wb[1],
-    to: Wb[2],
+  const Mb = bB.exec(bb);
+  if (Mb) return {
+    from: Mb[1],
+    to: Mb[2],
     kind: "compared"
   };
-  const ab = WI.exec(bb);
-  if (ab) return {
-    from: ab[1],
-    to: ab[2],
+  const Tb = aB.exec(bb);
+  if (Tb) return {
+    from: Tb[1],
+    to: Tb[2],
     kind: "comparedBlock"
   };
-  const Tb = sI.exec(bb);
-  return Tb ? {
-    from: Tb[1],
-    to: Tb[2]
+  const Eb = SY.exec(bb);
+  return Eb ? {
+    from: Eb[1],
+    to: Eb[2]
   } : void 0
 }
 
-function XI(bb) {
-  const cb = bb.map(MI);
-  return cb.length > 0 && !cb.includes(void 0) ? cb : void 0
+function eB(bb) {
+  const ab = bb.map(BB);
+  return ab.length > 0 && !ab.includes(void 0) ? ab : void 0
 }
 
-function nI(bb, cb, sb) {
-  return bb.replaceAll(`"${cb}"`, `"${sb}"`).replaceAll(`'${cb}'`, `'${sb}'`)
+function vB(bb, ab, Ub) {
+  return bb.replaceAll(`"${ab}"`, `"${Ub}"`).replaceAll(`'${ab}'`, `'${Ub}'`)
 }
 
-function mI(bb, cb) {
-  const sb = bb => hb().isIdentifier(bb) ? bb.text === cb : bb.elements.some((bb => !hb().isOmittedExpression(bb) && sb(bb.name))),
-    kb = bb => void 0 !== bb && hb().isVariableDeclarationList(bb) && bb.declarations.some((bb => sb(bb.name))),
-    Wb = bb => {
-      const cb = bb => !hb().isFunctionLike(bb) && !hb().isClassStaticBlockDeclaration(bb) && (!(!hb().isVariableDeclarationList(bb) || 0 !== (bb.flags & hb().NodeFlags.BlockScoped) || !kb(bb)) || !0 === hb().forEachChild(bb, cb));
-      return void 0 !== bb && !0 === hb().forEachChild(bb, cb)
+function LB(bb, ab) {
+  const Ub = bb => mb().isIdentifier(bb) ? bb.text === ab : bb.elements.some((bb => !mb().isOmittedExpression(bb) && Ub(bb.name))),
+    Ab = bb => void 0 !== bb && mb().isVariableDeclarationList(bb) && bb.declarations.some((bb => Ub(bb.name))),
+    Mb = bb => {
+      const ab = bb => !mb().isFunctionLike(bb) && !mb().isClassStaticBlockDeclaration(bb) && (!(!mb().isVariableDeclarationList(bb) || 0 !== (bb.flags & mb().NodeFlags.BlockScoped) || !Ab(bb)) || !0 === mb().forEachChild(bb, ab));
+      return void 0 !== bb && !0 === mb().forEachChild(bb, ab)
     };
-  var ab;
-  if (hb().isFunctionLike(bb)) return bb.parameters.some((bb => sb(bb.name))) || hb().isFunctionExpression(bb) && (null === (ab = bb.name) || void 0 === ab ? void 0 : ab.text) === cb || "body" in bb && Wb(bb.body);
-  return !(!hb().isSourceFile(bb) || !Wb(bb)) || (hb().isSourceFile(bb) || hb().isBlock(bb) || hb().isCaseClause(bb) || hb().isDefaultClause(bb) ? bb.statements.some((bb => {
-    var sb;
-    return hb().isVariableStatement(bb) && kb(bb.declarationList) || (hb().isFunctionDeclaration(bb) || hb().isClassDeclaration(bb)) && (null === (sb = bb.name) || void 0 === sb ? void 0 : sb.text) === cb || hb().isImportDeclaration(bb) && (bb => {
-      var sb;
-      const kb = null === bb || void 0 === bb ? void 0 : bb.namedBindings;
-      return (null === bb || void 0 === bb || null === (sb = bb.name) || void 0 === sb ? void 0 : sb.text) === cb || void 0 !== kb && (hb().isNamespaceImport(kb) ? kb.name.text === cb : kb.elements.some((bb => bb.name.text === cb)))
+  var Tb;
+  if (mb().isFunctionLike(bb)) return bb.parameters.some((bb => Ub(bb.name))) || mb().isFunctionExpression(bb) && (null === (Tb = bb.name) || void 0 === Tb ? void 0 : Tb.text) === ab || "body" in bb && Mb(bb.body);
+  return !(!mb().isSourceFile(bb) || !Mb(bb)) || (mb().isSourceFile(bb) || mb().isBlock(bb) || mb().isCaseClause(bb) || mb().isDefaultClause(bb) ? bb.statements.some((bb => {
+    var Ub;
+    return mb().isVariableStatement(bb) && Ab(bb.declarationList) || (mb().isFunctionDeclaration(bb) || mb().isClassDeclaration(bb)) && (null === (Ub = bb.name) || void 0 === Ub ? void 0 : Ub.text) === ab || mb().isImportDeclaration(bb) && (bb => {
+      var Ub;
+      const Ab = null === bb || void 0 === bb ? void 0 : bb.namedBindings;
+      return (null === bb || void 0 === bb || null === (Ub = bb.name) || void 0 === Ub ? void 0 : Ub.text) === ab || void 0 !== Ab && (mb().isNamespaceImport(Ab) ? Ab.name.text === ab : Ab.elements.some((bb => bb.name.text === ab)))
     })(bb.importClause)
-  })) : hb().isForStatement(bb) || hb().isForInStatement(bb) || hb().isForOfStatement(bb) ? kb(bb.initializer) : hb().isCatchClause(bb) && void 0 !== bb.variableDeclaration && sb(bb.variableDeclaration.name))
+  })) : mb().isForStatement(bb) || mb().isForInStatement(bb) || mb().isForOfStatement(bb) ? Ab(bb.initializer) : mb().isCatchClause(bb) && void 0 !== bb.variableDeclaration && Ub(bb.variableDeclaration.name))
 }
 
-function lI(bb, cb) {
-  return cb.reduce(((bb, cb) => {
+function PB(bb, ab) {
+  return ab.reduce(((bb, ab) => {
     let {
-      from: sb,
-      to: kb,
-      kind: Wb,
-      callback: ab
-    } = cb;
-    if ("export" === Wb) return bb.replace(HI, "").replace(fI, "$1$2$3");
-    if ("call" === Wb || "variable" === Wb) return function(bb, cb, sb, kb) {
-      const Wb = hb().createSourceFile("worldCode.js", bb, hb().ScriptTarget.Latest, !0, hb().ScriptKind.JS),
-        ab = [],
-        Tb = (bb, Ub) => {
-          const Ib = Ub || mI(bb, cb),
-            Hb = bb.parent;
-          if (hb().isIdentifier(bb) && bb.text === cb && !Ib && Hb) {
-            const Tb = hb().isBindingElement(Hb) && Hb.propertyName === bb || (hb().isPropertyAccessExpression(Hb) || hb().isPropertyAssignment(Hb) || hb().isMethodDeclaration(Hb) || hb().isPropertyDeclaration(Hb) || hb().isGetAccessorDeclaration(Hb) || hb().isSetAccessorDeclaration(Hb)) && Hb.name === bb,
-              Ub = hb().isCallExpression(Hb) && Hb.expression === bb;
-            Tb || kb && !Ub || ab.push({
-              at: bb.getStart(Wb),
-              text: hb().isShorthandPropertyAssignment(Hb) ? `${cb}: ${sb}` : sb
+      from: Ub,
+      to: Ab,
+      kind: Mb,
+      callback: Tb
+    } = ab;
+    if ("export" === Mb) return bb.replace(EB, "").replace(YB, "$1$2$3");
+    if ("call" === Mb || "variable" === Mb) return function(bb, ab, Ub, Ab) {
+      const Mb = mb().createSourceFile("worldCode.js", bb, mb().ScriptTarget.Latest, !0, mb().ScriptKind.JS),
+        Tb = [],
+        Eb = (bb, Yb) => {
+          const Bb = Yb || LB(bb, ab),
+            eb = bb.parent;
+          if (mb().isIdentifier(bb) && bb.text === ab && !Bb && eb) {
+            const Eb = mb().isBindingElement(eb) && eb.propertyName === bb || (mb().isPropertyAccessExpression(eb) || mb().isPropertyAssignment(eb) || mb().isMethodDeclaration(eb) || mb().isPropertyDeclaration(eb) || mb().isGetAccessorDeclaration(eb) || mb().isSetAccessorDeclaration(eb)) && eb.name === bb,
+              Yb = mb().isCallExpression(eb) && eb.expression === bb;
+            Eb || Ab && !Yb || Tb.push({
+              at: bb.getStart(Mb),
+              text: mb().isShorthandPropertyAssignment(eb) ? `${ab}: ${Ub}` : Ub
             })
           }
-          hb().forEachChild(bb, (bb => {
-            Tb(bb, Ib)
+          mb().forEachChild(bb, (bb => {
+            Eb(bb, Bb)
           }))
         };
-      return Tb(Wb, !1), ab.reduceRight(((bb, sb) => bb.slice(0, sb.at) + sb.text + bb.slice(sb.at + cb.length)), bb)
-    }(bb, sb, kb, "call" === Wb);
-    if ("compared" === Wb || "comparedBlock" === Wb) {
-      const cb = `(["'])${function(bb){return bb.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")}(sb)}\\1`;
-      return ("comparedBlock" === Wb ? [`\\b\\w*[Bb]lock\\w*\\s*[!=]==?\\s*${cb}`, `${cb}\\s*[!=]==?\\s*\\w*[Bb]lock\\w*\\b`] : [`[!=]==?\\s*${cb}`, `${cb}\\s*[!=]==?`, `\\bcase\\s+${cb}\\s*:`, `\\.includes\\(\\s*${cb}\\s*\\)`]).reduce(((bb, cb) => bb.replace(new RegExp(cb, "g"), (bb => nI(bb, sb, kb)))), bb)
+      return Eb(Mb, !1), Tb.reduceRight(((bb, Ub) => bb.slice(0, Ub.at) + Ub.text + bb.slice(Ub.at + ab.length)), bb)
+    }(bb, Ub, Ab, "call" === Mb);
+    if ("compared" === Mb || "comparedBlock" === Mb) {
+      const ab = `(["'])${function(bb){return bb.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")}(Ub)}\\1`;
+      return ("comparedBlock" === Mb ? [`\\b\\w*[Bb]lock\\w*\\s*[!=]==?\\s*${ab}`, `${ab}\\s*[!=]==?\\s*\\w*[Bb]lock\\w*\\b`] : [`[!=]==?\\s*${ab}`, `${ab}\\s*[!=]==?`, `\\bcase\\s+${ab}\\s*:`, `\\.includes\\(\\s*${ab}\\s*\\)`]).reduce(((bb, ab) => bb.replace(new RegExp(ab, "g"), (bb => vB(bb, Ub, Ab)))), bb)
     }
-    if (void 0 !== ab) {
-      return db(bb).filter((bb => bb.name === ab && bb.topLevel)).reduceRight(((bb, cb) => bb.slice(0, cb.from) + nI(bb.slice(cb.from, cb.to), sb, kb) + bb.slice(cb.to)), bb)
+    if (void 0 !== Tb) {
+      return lb(bb).filter((bb => bb.name === Tb && bb.topLevel)).reduceRight(((bb, ab) => bb.slice(0, ab.from) + vB(bb.slice(ab.from, ab.to), Ub, Ab) + bb.slice(ab.to)), bb)
     }
-    return nI(bb, sb, kb)
+    return vB(bb, Ub, Ab)
   }), bb)
 }
 
-function QI(bb) {
+function XB(bb) {
   let {
-    from: cb,
-    to: sb,
-    kind: kb
+    from: ab,
+    to: Ub,
+    kind: Ab
   } = bb;
-  return "export" === kb ? 'The "global." lines are gone: World Code finds your callbacks by their names.' : `"${cb}" is now "${sb}".`
+  return "export" === Ab ? 'The "global." lines are gone: World Code finds your callbacks by their names.' : `"${ab}" is now "${Ub}".`
 }
-var eI = sb(40877);
+var jB = Ub(40581);
 
-function CI() {
-  return (0, Tb.jsxs)("svg", {
+function RB() {
+  return (0, Eb.jsxs)("svg", {
     className: "WorldCodeAiKeyIcon",
     viewBox: "0 0 16 16",
     "aria-hidden": "true",
-    children: [(0, Tb.jsx)("circle", {
+    children: [(0, Eb.jsx)("circle", {
       cx: "4.5",
       cy: "8",
       r: "3"
-    }), (0, Tb.jsx)("path", {
+    }), (0, Eb.jsx)("path", {
       d: "M7.5 8h7.5M12.5 8v3M15 8v2.5"
     })]
   })
 }
 
-function NI(bb) {
+function kB(bb) {
   let {
-    detail: cb,
-    onOpen: sb
+    detail: ab,
+    onOpen: Ub
   } = bb;
-  return (0, Tb.jsxs)("details", {
+  return (0, Eb.jsxs)("details", {
     className: "WorldCodeAiKeyDetails",
     onToggle: bb => {
-      bb.currentTarget.open && (null === sb || void 0 === sb || sb())
+      bb.currentTarget.open && (null === Ub || void 0 === Ub || Ub())
     },
-    children: [(0, Tb.jsx)("summary", {
+    children: [(0, Eb.jsx)("summary", {
       children: "Details"
-    }), (0, Tb.jsx)("p", {
-      children: cb
+    }), (0, Eb.jsx)("p", {
+      children: ab
     })]
   })
 }
 
-function VI(bb) {
+function yB(bb) {
   let {
-    answeredBy: cb
+    answeredBy: ab
   } = bb;
-  return "free" === cb ? (0, Tb.jsx)("div", {
+  return "free" === ab ? (0, Eb.jsx)("div", {
     className: "WorldCodeAiAnsweredBy",
     children: "Bot.xd (free)"
-  }) : (0, Tb.jsxs)("div", {
-    className: cb.isSuperBot ? "WorldCodeAiAnsweredBy" : "WorldCodeAiAnsweredBy WorldCodeAiAnsweredBy-key",
-    children: [!cb.isSuperBot && (0, Tb.jsx)(CI, {}), cb.model]
+  }) : (0, Eb.jsxs)("div", {
+    className: ab.isSuperBot ? "WorldCodeAiAnsweredBy" : "WorldCodeAiAnsweredBy WorldCodeAiAnsweredBy-key",
+    children: [!ab.isSuperBot && (0, Eb.jsx)(RB, {}), ab.model]
   })
 }
 
-function LI(bb) {
+function ZB(bb) {
   let {
-    notice: cb,
-    model: sb,
-    company: kb,
-    isServer: Wb
+    notice: ab,
+    model: Ub,
+    company: Ab,
+    isServer: Mb
   } = bb;
-  switch (cb) {
+  switch (ab) {
     case "badKey":
-      return Wb ? `${kb} didn't accept your key: it may be wrong or deleted.` : `${kb} didn't accept your key: it may be wrong or deleted. Check it on ${kb}'s website.`;
+      return Mb ? `${Ab} didn't accept your key: it may be wrong or deleted.` : `${Ab} didn't accept your key: it may be wrong or deleted. Check it on ${Ab}'s website.`;
     case "noCredit":
-      return Wb ? `${kb} stopped your key for now: it has used all it can.` : `${kb} stopped your key for now: it has used all it can. Check it on ${kb}'s website.`;
+      return Mb ? `${Ab} stopped your key for now: it has used all it can.` : `${Ab} stopped your key for now: it has used all it can. Check it on ${Ab}'s website.`;
     case "busy":
-      return `Too many requests to ${sb} right now. Wait a minute and try again.`;
+      return `Too many requests to ${Ub} right now. Wait a minute and try again.`;
     case "noModel":
-      return `${kb} can't find ${sb}. Pick another model, or press Check for new models in AI settings.`;
+      return `${Ab} can't find ${Ub}. Pick another model, or press Check for new models in AI settings.`;
     case "timeout":
-      return `${sb} took too long to answer.`;
+      return `${Ub} took too long to answer.`;
     case "unreachable":
-      return Wb ? `Couldn't reach ${kb}. Check the server is running. Your server must allow web pages to use it. In LM Studio turn on CORS; for Ollama see its help.` : `Couldn't reach ${kb}. Check your internet and your key.`;
+      return Mb ? `Couldn't reach ${Ab}. Check the server is running. Your server must allow web pages to use it. In LM Studio turn on CORS; for Ollama see its help.` : `Couldn't reach ${Ab}. Check your internet and your key.`;
     case "blocked":
-      return `${kb} doesn't work from where you are.`;
+      return `${Ab} doesn't work from where you are.`;
     case "unchecked":
       return "Bloxd's safety check didn't answer, so your key wasn't used.";
     default:
-      return `${sb} can't be used right now. Try again in a minute.`
+      return `${Ub} can't be used right now. Try again in a minute.`
   }
 }
 
-function uI(bb) {
+function DB(bb) {
   let {
-    notice: cb,
-    model: sb,
-    company: kb
+    notice: ab,
+    model: Ub,
+    company: Ab
   } = bb;
-  switch (cb) {
+  switch (ab) {
     case "badKey":
-      return `Not answered: ${kb} didn't accept your key.`;
+      return `Not answered: ${Ab} didn't accept your key.`;
     case "noModel":
-      return `Not answered: ${kb} couldn't find ${sb}.`;
+      return `Not answered: ${Ab} couldn't find ${Ub}.`;
     case "noCredit":
-      return `Not answered: ${kb} stopped your key for now.`;
+      return `Not answered: ${Ab} stopped your key for now.`;
     case "busy":
-      return `Not answered: too many requests to ${sb}.`;
+      return `Not answered: too many requests to ${Ub}.`;
     case "timeout":
-      return `Not answered: ${sb} took too long.`;
+      return `Not answered: ${Ub} took too long.`;
     case "unreachable":
-      return `Not answered: couldn't reach ${kb}.`;
+      return `Not answered: couldn't reach ${Ab}.`;
     case "blocked":
-      return `Not answered: ${kb} doesn't work from where you are.`;
+      return `Not answered: ${Ab} doesn't work from where you are.`;
     case "unchecked":
       return "Not answered: the safety check didn't answer.";
     default:
-      return `Not answered: ${sb} couldn't be used.`
+      return `Not answered: ${Ub} couldn't be used.`
   }
 }
 
-function YI(bb) {
+function zB(bb) {
   return "busy" === bb || "timeout" === bb || "failed" === bb || "unchecked" === bb
 }
 
-function hI(bb) {
+function xB(bb) {
   let {
-    notice: cb,
-    onRetry: sb,
-    onUseFree: kb,
-    onCheckKey: Wb
+    notice: ab,
+    onRetry: Ub,
+    onUseFree: Ab,
+    onCheckKey: Mb
   } = bb;
-  return (0, Tb.jsxs)("div", {
+  return (0, Eb.jsxs)("div", {
     className: "WorldCodeAiKeyNoticeActions",
-    children: [(0, Tb.jsx)("button", {
-      ...eI.e,
+    children: [(0, Eb.jsx)("button", {
+      ...jB.g,
       className: "WorldCodeAiPrimaryButton",
-      onClick: kb,
+      onClick: Ab,
       children: "Use Bot.xd for this one"
-    }), YI(cb) && (0, Tb.jsx)("button", {
+    }), zB(ab) && (0, Eb.jsx)("button", {
       className: "WorldCodeAiSecondaryButton",
-      onClick: sb,
+      onClick: Ub,
       children: "Try again"
-    }), "unchecked" !== cb && (0, Tb.jsx)("button", {
+    }), "unchecked" !== ab && (0, Eb.jsx)("button", {
       className: "WorldCodeAiSecondaryButton",
-      onClick: Wb,
+      onClick: Mb,
       children: "Open AI settings"
     })]
   })
 }
 
-function JI(bb) {
+function iB(bb) {
   let {
-    hasCode: cb,
-    canFinish: sb,
-    onFinish: kb
+    hasCode: ab,
+    canFinish: Ub,
+    onFinish: Ab
   } = bb;
-  return (0, Tb.jsxs)("div", {
+  return (0, Eb.jsxs)("div", {
     className: "WorldCodeAiCutShort",
-    children: [(0, Tb.jsx)("p", {
-      children: cb ? "The answer was cut short because it was too long." : "The answer was cut short before its code because it was too long."
-    }), sb && (0, Tb.jsx)("button", {
+    children: [(0, Eb.jsx)("p", {
+      children: ab ? "The answer was cut short because it was too long." : "The answer was cut short before its code because it was too long."
+    }), Ub && (0, Eb.jsx)("button", {
       className: "WorldCodeAiSecondaryButton",
-      onClick: kb,
+      onClick: Ab,
       children: "Finish the answer"
     })]
   })
 }
-const gI = "worldCodeAiAllowEdits";
+const fB = "worldCodeAiAllowEdits";
 
-function BI() {
+function mB() {
   try {
-    return "false" !== localStorage.getItem(gI)
+    return "false" !== localStorage.getItem(fB)
   } catch {
     return !0
   }
 }
 
-function tI(bb) {
+function pB(bb) {
   let {
-    allow: cb,
-    onChange: sb
+    allow: ab,
+    onChange: Ub
   } = bb;
-  return (0, Tb.jsxs)("label", {
+  return (0, Eb.jsxs)("label", {
     className: "WorldCodeAiAllowEdits",
-    children: [(0, Tb.jsx)("input", {
+    children: [(0, Eb.jsx)("input", {
       type: "checkbox",
       role: "switch",
-      checked: cb,
+      checked: ab,
       onChange: bb => {
-        sb(bb.target.checked)
+        Ub(bb.target.checked)
       }
-    }), (0, Tb.jsx)("span", {
+    }), (0, Eb.jsx)("span", {
       children: "Allow AI to make edits to my code"
     })]
   })
 }
-const yI = {
+const NB = {
   keyId: "bloxd",
   modelId: "superbotxd"
 };
 
-function PI(bb, cb) {
-  const sb = Array.from(bb.querySelectorAll(".WorldCodeAiModelGroup")),
-    kb = sb.findIndex((bb => bb.contains(cb)));
-  if (kb < 0) return !1;
-  const Wb = bb.getBoundingClientRect(),
-    ab = cb => bb.scrollTop + cb.top - Wb.top,
-    Tb = ab(cb.getBoundingClientRect()) + cb.getBoundingClientRect().height,
-    Ub = bb.scrollHeight - bb.clientHeight,
-    Ib = sb.slice(0, kb + 1).map((bb => ab(bb.getBoundingClientRect()))).filter((bb => Tb - bb <= Wb.height + 1));
-  if (0 === Ib.length) return !1;
-  const Hb = Ib.filter((bb => bb <= Ub + 1)),
-    fb = Hb.length > 0 ? Math.max(...Hb) : Math.min(...Ib);
-  return fb > Ub && (bb.style.paddingBottom = (parseFloat(getComputedStyle(bb).paddingBottom) || 0) + fb - Ub + "px"), bb.scrollTop = fb, !0
+function WB(bb, ab) {
+  const Ub = Array.from(bb.querySelectorAll(".WorldCodeAiModelGroup")),
+    Ab = Ub.findIndex((bb => bb.contains(ab)));
+  if (Ab < 0) return !1;
+  const Mb = bb.getBoundingClientRect(),
+    Tb = ab => bb.scrollTop + ab.top - Mb.top,
+    Eb = Tb(ab.getBoundingClientRect()) + ab.getBoundingClientRect().height,
+    Yb = bb.scrollHeight - bb.clientHeight,
+    Bb = Ub.slice(0, Ab + 1).map((bb => Tb(bb.getBoundingClientRect()))).filter((bb => Eb - bb <= Mb.height + 1));
+  if (0 === Bb.length) return !1;
+  const eb = Bb.filter((bb => bb <= Yb + 1)),
+    vb = eb.length > 0 ? Math.max(...eb) : Math.min(...Bb);
+  return vb > Yb && (bb.style.paddingBottom = (parseFloat(getComputedStyle(bb).paddingBottom) || 0) + vb - Yb + "px"), bb.scrollTop = vb, !0
 }
 
-function DI(bb) {
+function HB(bb) {
   let {
-    keyName: cb,
-    placeholder: sb,
-    onDone: Wb
+    keyName: ab,
+    placeholder: Ub,
+    onDone: Mb
   } = bb;
-  const [ab, Ub] = (0, kb.useState)(cb);
-  return (0, Tb.jsxs)("form", {
+  const [Tb, Yb] = (0, Ab.useState)(ab);
+  return (0, Eb.jsxs)("form", {
     className: "WorldCodeAiKeyRename",
     onSubmit: bb => {
-      bb.preventDefault(), Wb(ab)
+      bb.preventDefault(), Mb(Tb)
     },
-    children: [(0, Tb.jsx)("input", {
+    children: [(0, Eb.jsx)("input", {
       className: "WorldCodeAiAddKeyInput",
       "aria-label": "Name for this key",
-      value: ab,
+      value: Tb,
       maxLength: 30,
-      placeholder: sb,
+      placeholder: Ub,
       autoFocus: !0,
       onChange: bb => {
-        Ub(bb.target.value)
+        Yb(bb.target.value)
       },
       onKeyDown: bb => {
-        bb.stopPropagation(), "Escape" === bb.key && (bb.preventDefault(), Wb(null))
+        bb.stopPropagation(), "Escape" === bb.key && (bb.preventDefault(), Mb(null))
       }
-    }), (0, Tb.jsx)("button", {
+    }), (0, Eb.jsx)("button", {
       type: "submit",
       className: "WorldCodeAiLinkButton",
       children: "Save"
-    }), (0, Tb.jsx)("button", {
+    }), (0, Eb.jsx)("button", {
       type: "button",
       className: "WorldCodeAiKeyLearnMore",
       onClick: () => {
-        Wb(null)
+        Mb(null)
       },
       children: "Cancel"
     })]
   })
 }
 
-function EI(bb) {
+function IB(bb) {
   let {
-    savedKey: cb,
-    isInUse: sb,
-    onRename: kb,
-    onEdit: Wb
+    savedKey: ab,
+    isInUse: Ub,
+    onRename: Ab,
+    onEdit: Mb
   } = bb;
-  const ab = rT(cb),
-    Ub = eT(cb.provider, cb.baseUrl, !0),
-    Ib = function(bb, cb) {
-      var sb, kb;
-      return "" === bb ? "no key needed" : bb.length <= 12 ? "\u2022\u2022\u2022\u2022" : "custom" === cb ? `key \u2026${bb.slice(-4)}` : `${(null!==(sb=null===(kb=/^[a-zA-Z]+-/.exec(bb))||void 0===kb?void 0:kb[0])&&void 0!==sb?sb:bb.slice(0,4)).slice(0,6)}\u2026${bb.slice(-4)}`
-    }(cb.key, cb.provider);
-  return (0, Tb.jsxs)("span", {
+  const Tb = lE(ab),
+    Yb = jE(ab.provider, ab.baseUrl, !0),
+    Bb = function(bb, ab) {
+      var Ub, Ab;
+      return "" === bb ? "no key needed" : bb.length <= 12 ? "\u2022\u2022\u2022\u2022" : "custom" === ab ? `key \u2026${bb.slice(-4)}` : `${(null!==(Ub=null===(Ab=/^[a-zA-Z]+-/.exec(bb))||void 0===Ab?void 0:Ab[0])&&void 0!==Ub?Ub:bb.slice(0,4)).slice(0,6)}\u2026${bb.slice(-4)}`
+    }(ab.key, ab.provider);
+  return (0, Eb.jsxs)("span", {
     className: "WorldCodeAiModelGroupName",
-    title: cb.baseUrl,
-    children: [ab, " ", cb.name && (0, Tb.jsxs)("span", {
+    title: ab.baseUrl,
+    children: [Tb, " ", ab.name && (0, Eb.jsxs)("span", {
       className: "WorldCodeAiModelHint",
-      children: ["\xb7 ", Ub, " "]
-    }), "" === cb.key ? (0, Tb.jsx)("span", {
+      children: ["\xb7 ", Yb, " "]
+    }), "" === ab.key ? (0, Eb.jsx)("span", {
       className: "WorldCodeAiModelHint",
-      children: Ib
-    }) : (0, Tb.jsx)("code", {
-      children: Ib
-    }), sb && (0, Tb.jsxs)(Tb.Fragment, {
-      children: [" ", (0, Tb.jsx)("span", {
+      children: Bb
+    }) : (0, Eb.jsx)("code", {
+      children: Bb
+    }), Ub && (0, Eb.jsxs)(Eb.Fragment, {
+      children: [" ", (0, Eb.jsx)("span", {
         className: "WorldCodeAiInUseTag",
         children: "In use"
       })]
-    }), (Wb || kb) && (0, Tb.jsxs)("span", {
+    }), (Mb || Ab) && (0, Eb.jsxs)("span", {
       className: "WorldCodeAiKeyLinks",
-      children: [Wb && (0, Tb.jsx)("button", {
+      children: [Mb && (0, Eb.jsx)("button", {
         className: "WorldCodeAiKeyLearnMore",
-        "aria-label": `Edit ${ab} key`,
-        onClick: Wb,
+        "aria-label": `Edit ${Tb} key`,
+        onClick: Mb,
         children: "Edit"
-      }), kb && (0, Tb.jsx)("button", {
+      }), Ab && (0, Eb.jsx)("button", {
         className: "WorldCodeAiKeyLearnMore",
-        "aria-label": `Rename ${ab} key`,
-        onClick: kb,
+        "aria-label": `Rename ${Tb} key`,
+        onClick: Ab,
         children: "Rename"
       })]
     })]
   })
 }
 
-function iI(bb) {
-  var cb, sb, Wb, Ub;
+function dB(bb) {
+  var ab, Ub, Mb, Yb;
   let {
-    name: Ib,
-    hint: Hb,
-    choice: fb,
-    selected: Mb,
-    radioName: Xb,
-    onSelect: nb,
-    onChosen: mb,
-    disabledWhy: lb
+    name: Bb,
+    hint: eb,
+    choice: vb,
+    selected: Lb,
+    radioName: Pb,
+    onSelect: Xb,
+    onChosen: jb,
+    disabledWhy: Rb
   } = bb;
-  const Qb = (0, kb.useRef)(!1),
-    eb = `${Xb}-${null!==(cb=null===fb||void 0===fb?void 0:fb.keyId)&&void 0!==cb?cb:"botxd"}-${null!==(sb=null===fb||void 0===fb?void 0:fb.modelId)&&void 0!==sb?sb:"botxd"}`.replace(/[^\w-]/g, "_"),
-    Cb = !!lb;
-  return (0, Tb.jsxs)("label", {
-    className: ab()("WorldCodeAiModelRow", Mb && "Selected", Cb && "Disabled"),
-    "data-key-id": null !== (Wb = null === fb || void 0 === fb ? void 0 : fb.keyId) && void 0 !== Wb ? Wb : "botxd",
-    "data-model-id": null !== (Ub = null === fb || void 0 === fb ? void 0 : fb.modelId) && void 0 !== Ub ? Ub : "botxd",
-    title: null !== lb && void 0 !== lb ? lb : void 0,
+  const kb = (0, Ab.useRef)(!1),
+    yb = `${Pb}-${null!==(ab=null===vb||void 0===vb?void 0:vb.keyId)&&void 0!==ab?ab:"botxd"}-${null!==(Ub=null===vb||void 0===vb?void 0:vb.modelId)&&void 0!==Ub?Ub:"botxd"}`.replace(/[^\w-]/g, "_"),
+    Zb = !!Rb;
+  return (0, Eb.jsxs)("label", {
+    className: Tb()("WorldCodeAiModelRow", Lb && "Selected", Zb && "Disabled"),
+    "data-key-id": null !== (Mb = null === vb || void 0 === vb ? void 0 : vb.keyId) && void 0 !== Mb ? Mb : "botxd",
+    "data-model-id": null !== (Yb = null === vb || void 0 === vb ? void 0 : vb.modelId) && void 0 !== Yb ? Yb : "botxd",
+    title: null !== Rb && void 0 !== Rb ? Rb : void 0,
     onPointerDown: () => {
-      Qb.current = !Cb
+      kb.current = !Zb
     },
-    children: [(0, Tb.jsx)("input", {
+    children: [(0, Eb.jsx)("input", {
       type: "radio",
-      name: Xb,
-      "aria-label": Ib,
-      "aria-describedby": Hb ? eb : void 0,
-      checked: Mb,
-      disabled: Cb,
-      onChange: nb,
+      name: Pb,
+      "aria-label": Bb,
+      "aria-describedby": eb ? yb : void 0,
+      checked: Lb,
+      disabled: Zb,
+      onChange: Xb,
       onClick: () => {
-        Qb.current && (null === mb || void 0 === mb || mb()), Qb.current = !1
+        kb.current && (null === jb || void 0 === jb || jb()), kb.current = !1
       },
       onKeyDown: bb => {
-        "Enter" === bb.key && (null === mb || void 0 === mb || mb())
+        "Enter" === bb.key && (null === jb || void 0 === jb || jb())
       }
-    }), (0, Tb.jsx)("span", {
+    }), (0, Eb.jsx)("span", {
       className: "WorldCodeAiModelName",
-      children: Ib
-    }), Hb && (0, Tb.jsx)("span", {
-      id: eb,
+      children: Bb
+    }), eb && (0, Eb.jsx)("span", {
+      id: yb,
       className: "WorldCodeAiModelHint",
-      children: Hb
+      children: eb
     })]
   })
 }
 
-function OI(bb) {
+function FB(bb) {
   let {
-    labelledBy: cb,
-    onPicked: Wb,
-    canRename: ab = !1,
-    onEdit: Ub,
-    wL: Ib,
-    onRefresh: Hb,
-    refreshingIds: fb,
-    keyNote: Mb
+    labelledBy: ab,
+    onPicked: Mb,
+    canRename: Tb = !1,
+    onEdit: Yb,
+    kp: Bb,
+    onRefresh: eb,
+    refreshingIds: vb,
+    keyNote: Lb
   } = bb;
   const {
-    keys: Xb,
-    isSelected: nb,
-    select: mb,
-    renameKey: lb
-  } = jT(), Qb = HU();
-  (0, kb.useEffect)((() => {
-    IU.refresh(), gU()
+    keys: Pb,
+    isSelected: Xb,
+    select: jb,
+    renameKey: Rb
+  } = OE(), kb = EY();
+  (0, Ab.useEffect)((() => {
+    TY.refresh(), fY()
   }), []);
-  const eb = mU(Qb),
-    [Cb, Nb] = (0, kb.useState)(null),
-    [Vb, Lb] = (0, kb.useState)(null),
-    [ub, Yb] = (0, kb.useState)({}),
-    [hb] = (0, kb.useState)((() => function(bb) {
-      const cb = bb.map(((bb, cb) => {
-        var sb;
+  const yb = LY(kb),
+    [Zb, Db] = (0, Ab.useState)(null),
+    [zb, xb] = (0, Ab.useState)(null),
+    [ib, fb] = (0, Ab.useState)({}),
+    [mb] = (0, Ab.useState)((() => function(bb) {
+      const ab = bb.map(((bb, ab) => {
+        var Ub;
         return {
           id: bb.id,
-          at: null !== (sb = bb.usedAt) && void 0 !== sb ? sb : 0,
-          i: cb
+          at: null !== (Ub = bb.usedAt) && void 0 !== Ub ? Ub : 0,
+          i: ab
         }
-      })).sort(((bb, cb) => cb.at - bb.at || cb.i - bb.i));
-      return new Set(cb.slice(0, 2).map((bb => {
+      })).sort(((bb, ab) => ab.at - bb.at || ab.i - bb.i));
+      return new Set(ab.slice(0, 2).map((bb => {
         let {
-          id: cb
+          id: ab
         } = bb;
-        return cb
+        return ab
       })))
-    }(Xb))),
-    [Jb, gb] = (0, kb.useState)(new Set),
-    Bb = bb => bb.models.some((cb => nb({
+    }(Pb))),
+    [pb, Nb] = (0, Ab.useState)(new Set),
+    Wb = bb => bb.models.some((ab => Xb({
       keyId: bb.id,
-      modelId: cb.id
+      modelId: ab.id
     }))),
-    tb = bb => {
-      const cb = bb.closest(".WorldCodeAiModelGroupHeader");
-      Lb(null), setTimeout((() => {
+    Hb = bb => {
+      const ab = bb.closest(".WorldCodeAiModelGroupHeader");
+      xb(null), setTimeout((() => {
         var bb;
-        null === cb || void 0 === cb || null === (bb = cb.querySelector(".WorldCodeAiModelRemove")) || void 0 === bb || bb.focus()
+        null === ab || void 0 === ab || null === (bb = ab.querySelector(".WorldCodeAiModelRemove")) || void 0 === bb || bb.focus()
       }))
     },
-    yb = `${cb}-model`,
-    Pb = (bb, cb, sb) => {
-      var kb;
-      return (0, Tb.jsx)(iI, {
+    Ib = `${ab}-model`,
+    db = (bb, ab, Ub) => {
+      var Ab;
+      return (0, Eb.jsx)(dB, {
         name: bb,
-        hint: cb,
-        choice: sb,
-        selected: nb(sb) && !(null === sb && Qb.picked && null === eb),
-        radioName: yb,
+        hint: ab,
+        choice: Ub,
+        selected: Xb(Ub) && !(null === Ub && kb.picked && null === yb),
+        radioName: Ib,
         onSelect: () => {
-          mb(sb), IU.unpick()
+          jb(Ub), TY.unpick()
         },
-        onChosen: Wb
-      }, null !== (kb = null === sb || void 0 === sb ? void 0 : sb.modelId) && void 0 !== kb ? kb : "botxd")
+        onChosen: Mb
+      }, null !== (Ab = null === Ub || void 0 === Ub ? void 0 : Ub.modelId) && void 0 !== Ab ? Ab : "botxd")
     };
-  return (0, Tb.jsxs)("div", {
+  return (0, Eb.jsxs)("div", {
     className: "WorldCodeAiModelList",
     role: "radiogroup",
-    "aria-labelledby": cb,
-    children: [Pb("Bot.xd (free)", "Bloxd's own AI.", null), (0, Tb.jsx)(iI, {
-      name: sU,
-      hint: null !== eb && void 0 !== eb ? eb : `Bloxd's better AI. ${Qb.status?eU(Qb.status):""}`.trim(),
-      choice: yI,
-      selected: Qb.picked && null === eb,
-      radioName: yb,
+    "aria-labelledby": ab,
+    children: [db("Bot.xd (free)", "Bloxd's own AI.", null), (0, Eb.jsx)(dB, {
+      name: SE,
+      hint: null !== yb && void 0 !== yb ? yb : `Bloxd's better AI. ${kb.status?jY(kb.status):""}`.trim(),
+      choice: NB,
+      selected: kb.picked && null === yb,
+      radioName: Ib,
       onSelect: () => {
-        var bb, cb;
-        TU(null !== (bb = null === (cb = Qb.status) || void 0 === cb ? void 0 : cb.provider) && void 0 !== bb ? bb : "ovh") && IU.Wn()
+        var bb, ab;
+        AY(null !== (bb = null === (ab = kb.status) || void 0 === ab ? void 0 : ab.provider) && void 0 !== bb ? bb : "ovh") && TY.GP()
       },
       onChosen: () => {
         (async function(bb) {
-          var cb;
-          if (TU(null !== (cb = null === bb || void 0 === bb ? void 0 : bb.provider) && void 0 !== cb ? cb : "ovh")) return IU.Wn(), !0;
-          if (GI) return !1;
-          GI = !0;
+          var ab;
+          if (AY(null !== (ab = null === bb || void 0 === bb ? void 0 : bb.provider) && void 0 !== ab ? ab : "ovh")) return TY.GP(), !0;
+          if (hB) return !1;
+          hB = !0;
           try {
             const [{
               NotificationProvider: bb
             }, {
-              WorldCodeAiDeepSeekNotice: cb
-            }] = await Promise.all([Promise.resolve().then((() => sb(1332))), sb.e(347).then((() => sb(60606)))]), kb = bb.showPromptPopup({
+              WorldCodeAiDeepSeekNotice: ab
+            }] = await Promise.all([Promise.resolve().then((() => Ub(1260))), Ub.e(347).then((() => Ub(60277)))]), Ab = bb.showPromptPopup({
               title: "superBotXd:deepSeekTitle",
-              subtitle: (0, Tb.jsx)(cb, {}),
+              subtitle: (0, Eb.jsx)(ab, {}),
               confirmText: "superBotXd:use",
               cancelText: "general:cancel"
             });
-            KI = kb.tearDownNotification;
-            return !0 === await kb.getResult() && (function() {
+            GB = Ab.tearDownNotification;
+            return !0 === await Ab.getResult() && (function() {
               try {
-                window.localStorage.setItem(aU, "1")
+                window.localStorage.setItem(UY, "1")
               } catch {}
-            }(), IU.Wn(), !0)
+            }(), TY.GP(), !0)
           } finally {
-            GI = !1, KI = null
+            hB = !1, GB = null
           }
-        })(Qb.status).then((bb => {
-          bb && (null === Wb || void 0 === Wb || Wb())
+        })(kb.status).then((bb => {
+          bb && (null === Mb || void 0 === Mb || Mb())
         }))
       },
-      disabledWhy: eb
-    }), Xb.map((bb => {
-      var cb, sb, kb, Wb, mb;
-      const Qb = rT(bb),
-        eb = Xb.length >= 4 && !Bb(bb) && !hb.has(bb.id) && !Jb.has(bb.id),
-        yb = eb ? null !== (cb = bb.models.find((cb => cb.id === bb.usedModelId))) && void 0 !== cb ? cb : wT(bb.models) : void 0,
-        Db = null !== (sb = null === (kb = ub[bb.id]) || void 0 === kb ? void 0 : kb.trim().toLowerCase()) && void 0 !== sb ? sb : "",
-        Eb = yb ? [yb] : "" === Db ? bb.models : bb.models.filter((cb => cb.name.toLowerCase().includes(Db) || nb({
+      disabledWhy: yb
+    }), Pb.map((bb => {
+      var ab, Ub, Ab, Mb, jb;
+      const kb = lE(bb),
+        yb = Pb.length >= 4 && !Wb(bb) && !mb.has(bb.id) && !pb.has(bb.id),
+        Ib = yb ? null !== (ab = bb.models.find((ab => ab.id === bb.usedModelId))) && void 0 !== ab ? ab : oE(bb.models) : void 0,
+        Fb = null !== (Ub = null === (Ab = ib[bb.id]) || void 0 === Ab ? void 0 : Ab.trim().toLowerCase()) && void 0 !== Ub ? Ub : "",
+        hb = Ib ? [Ib] : "" === Fb ? bb.models : bb.models.filter((ab => ab.name.toLowerCase().includes(Fb) || Xb({
           keyId: bb.id,
-          modelId: cb.id
+          modelId: ab.id
         })));
-      return (0, Tb.jsxs)("div", {
+      return (0, Eb.jsxs)("div", {
         className: "WorldCodeAiModelGroup",
         role: "group",
-        "aria-label": Qb,
+        "aria-label": kb,
         "data-key-id": bb.id,
-        children: [(0, Tb.jsxs)("div", {
+        children: [(0, Eb.jsxs)("div", {
           className: "WorldCodeAiModelGroupHeader",
-          children: [Cb === bb.id ? (0, Tb.jsx)(DI, {
-            keyName: null !== (Wb = bb.name) && void 0 !== Wb ? Wb : "",
-            placeholder: eT(bb.provider, bb.baseUrl),
-            onDone: cb => {
-              null !== cb && lb(bb.id, cb), Nb(null)
+          children: [Zb === bb.id ? (0, Eb.jsx)(HB, {
+            keyName: null !== (Mb = bb.name) && void 0 !== Mb ? Mb : "",
+            placeholder: jE(bb.provider, bb.baseUrl),
+            onDone: ab => {
+              null !== ab && Rb(bb.id, ab), Db(null)
             }
-          }) : (0, Tb.jsx)(EI, {
+          }) : (0, Eb.jsx)(IB, {
             savedKey: bb,
-            isInUse: Bb(bb),
-            onEdit: Ub ? () => {
-              Ub(bb)
+            isInUse: Wb(bb),
+            onEdit: Yb ? () => {
+              Yb(bb)
             } : void 0,
-            onRename: ab ? () => {
-              Nb(bb.id)
+            onRename: Tb ? () => {
+              Db(bb.id)
             } : void 0
-          }), Hb && Vb !== bb.id && (0, Tb.jsx)("button", {
+          }), eb && zb !== bb.id && (0, Eb.jsx)("button", {
             className: "WorldCodeAiLinkButton WorldCodeAiModelRefresh",
-            "aria-label": `Check ${Qb} for new models`,
-            disabled: null === fb || void 0 === fb ? void 0 : fb.has(bb.id),
+            "aria-label": `Check ${kb} for new models`,
+            disabled: null === vb || void 0 === vb ? void 0 : vb.has(bb.id),
             onClick: () => {
-              Hb(bb)
+              eb(bb)
             },
-            children: null !== fb && void 0 !== fb && fb.has(bb.id) ? "Checking\u2026" : "Check for new models"
-          }), Ib && Vb !== bb.id && (0, Tb.jsx)("button", {
+            children: null !== vb && void 0 !== vb && vb.has(bb.id) ? "Checking\u2026" : "Check for new models"
+          }), Bb && zb !== bb.id && (0, Eb.jsx)("button", {
             className: "WorldCodeAiLinkButton WorldCodeAiModelRemove",
-            "aria-label": `Remove ${Qb} key`,
+            "aria-label": `Remove ${kb} key`,
             onClick: () => {
-              Lb(bb.id)
+              xb(bb.id)
             },
             children: "Remove"
-          }), Ib && Vb === bb.id && (0, Tb.jsxs)("span", {
+          }), Bb && zb === bb.id && (0, Eb.jsxs)("span", {
             className: "WorldCodeAiKeyConfirm",
             role: "group",
-            "aria-label": `Remove ${Qb} key?`,
+            "aria-label": `Remove ${kb} key?`,
             onKeyDown: bb => {
-              "Escape" === bb.key && (bb.stopPropagation(), bb.preventDefault(), tb(bb.currentTarget))
+              "Escape" === bb.key && (bb.stopPropagation(), bb.preventDefault(), Hb(bb.currentTarget))
             },
-            children: ["Remove key?", (0, Tb.jsx)("button", {
+            children: ["Remove key?", (0, Eb.jsx)("button", {
               className: "WorldCodeAiLinkButton WorldCodeAiModelRemove",
-              "aria-label": `Yes, remove ${Qb} key`,
+              "aria-label": `Yes, remove ${kb} key`,
               onClick: () => {
-                Lb(null), Ib(bb)
+                xb(null), Bb(bb)
               },
               children: "Yes"
-            }), (0, Tb.jsx)("button", {
+            }), (0, Eb.jsx)("button", {
               className: "WorldCodeAiLinkButton",
-              "aria-label": `No, keep ${Qb} key`,
+              "aria-label": `No, keep ${kb} key`,
               autoFocus: !0,
               onClick: bb => {
-                tb(bb.currentTarget)
+                Hb(bb.currentTarget)
               },
               children: "No"
             })]
           })]
-        }), (null === Mb || void 0 === Mb ? void 0 : Mb.keyId) === bb.id && (0, Tb.jsx)("p", {
+        }), (null === Lb || void 0 === Lb ? void 0 : Lb.keyId) === bb.id && (0, Eb.jsx)("p", {
           className: "WorldCodeAiAiSettingsNote",
           role: "status",
-          children: Mb.text
-        }), !eb && bb.models.length > 12 && (0, Tb.jsx)("input", {
+          children: Lb.text
+        }), !yb && bb.models.length > 12 && (0, Eb.jsx)("input", {
           className: "WorldCodeAiAddKeyInput WorldCodeAiModelFilter",
-          "aria-label": `Find a model from ${Qb}`,
+          "aria-label": `Find a model from ${kb}`,
           placeholder: `Find a model (${bb.models.length})`,
-          value: null !== (mb = ub[bb.id]) && void 0 !== mb ? mb : "",
+          value: null !== (jb = ib[bb.id]) && void 0 !== jb ? jb : "",
           onKeyDown: bb => {
             bb.stopPropagation()
           },
-          onChange: cb => {
-            const sb = cb.target.value;
-            Yb((cb => ({
-              ...cb,
-              [bb.id]: sb
+          onChange: ab => {
+            const Ub = ab.target.value;
+            fb((ab => ({
+              ...ab,
+              [bb.id]: Ub
             })))
           }
-        }), Eb.map((cb => Pb(cb.name, cb.tier ? KT[cb.tier] : "", {
+        }), hb.map((ab => db(ab.name, ab.tier ? GE[ab.tier] : "", {
           keyId: bb.id,
-          modelId: cb.id
-        }))), eb && bb.models.length > 1 && (0, Tb.jsxs)("button", {
+          modelId: ab.id
+        }))), yb && bb.models.length > 1 && (0, Eb.jsxs)("button", {
           className: "WorldCodeAiKeyLearnMore WorldCodeAiModelUnfold",
-          "aria-label": `Show all ${Qb} models`,
-          onClick: cb => {
-            const sb = cb.currentTarget.closest(".WorldCodeAiModelGroup");
-            gb((cb => new Set(cb).add(bb.id))), setTimeout((() => {
+          "aria-label": `Show all ${kb} models`,
+          onClick: ab => {
+            const Ub = ab.currentTarget.closest(".WorldCodeAiModelGroup");
+            Nb((ab => new Set(ab).add(bb.id))), setTimeout((() => {
               var bb;
-              null === sb || void 0 === sb || null === (bb = sb.querySelector("input")) || void 0 === bb || bb.focus()
+              null === Ub || void 0 === Ub || null === (bb = Ub.querySelector("input")) || void 0 === bb || bb.focus()
             }))
           },
           children: ["Show all ", bb.models.length, " models"]
@@ -9673,71 +9673,71 @@ function OI(bb) {
     }))]
   })
 }
-let GI = !1,
-  KI = null;
+let hB = !1,
+  GB = null;
 
-function ZI(bb) {
+function QB(bb) {
   let {
-    checked: cb,
-    onChange: sb,
-    title: kb,
-    onNote: Wb,
-    offNote: ab
+    checked: ab,
+    onChange: Ub,
+    title: Ab,
+    onNote: Mb,
+    offNote: Tb
   } = bb;
-  return (0, Tb.jsxs)("label", {
+  return (0, Eb.jsxs)("label", {
     className: "WorldCodeAiSettingSwitch",
-    children: [(0, Tb.jsx)("input", {
+    children: [(0, Eb.jsx)("input", {
       type: "checkbox",
-      checked: cb,
+      checked: ab,
       onChange: bb => {
-        sb(bb.target.checked)
+        Ub(bb.target.checked)
       }
-    }), (0, Tb.jsxs)("span", {
-      children: [kb, (0, Tb.jsx)("span", {
+    }), (0, Eb.jsxs)("span", {
+      children: [Ab, (0, Eb.jsx)("span", {
         className: "WorldCodeAiAiSettingsNote",
-        children: cb ? Wb : ab
+        children: ab ? Mb : Tb
       })]
     })]
   })
 }
 
-function zI() {
+function qB() {
   const {
     remember: bb,
-    setRemember: cb
-  } = jT();
-  return (0, Tb.jsx)(ZI, {
+    setRemember: ab
+  } = OE();
+  return (0, Eb.jsx)(QB, {
     checked: bb,
-    onChange: cb,
+    onChange: ab,
     title: "Remember my keys in this browser",
     onNote: "On: saved only in this browser, not synced, for all your keys. Not for shared computers.",
     offNote: "Off: you'll paste your keys again next time. Best on shared computers."
   })
 }
 
-function qI() {
+function uB() {
   const {
     answer: bb,
-    hasPlayer: cb
+    hasPlayer: ab
   } = function() {
     const bb = () => ({
-        answer: wa.get(),
-        hasPlayer: null !== wa.getPlayer()
+        answer: oT.get(),
+        hasPlayer: null !== oT.getPlayer()
       }),
-      [cb, sb] = (0, kb.useState)(bb);
-    return (0, kb.useEffect)((() => {
-      const cb = wa.subscribe((() => {
-        sb(bb())
+      [ab, Ub] = (0, Ab.useState)(bb);
+    return (0, Ab.useEffect)((() => {
+      const ab = oT.subscribe((() => {
+        Ub(bb())
       }));
-      return wa.refresh(), cb
-    }), []), cb
+      return oT.refresh(), ab
+    }), []), ab
   }();
-  return cb ? (0, Tb.jsx)("div", {
+  return ab ? (0, Eb.jsx)("div", {
     className: "WorldCodeAiAiSettingsSection",
-    children: (0, Tb.jsx)(ZI, {
+    children: (0, Eb.jsx)(QB, {
       checked: "yes" === bb,
       onChange: bb => {
-        wa.set(bb ? "yes" : "no")
+        oT.set(bb ? "yes" : "no")
       },
       title: "Help make the AI Helper better",
       onNote: "On: Bloxd keeps your questions, code and the AI's answers for 30 days to improve the AI Helper.",
@@ -9746,258 +9746,258 @@ function qI() {
   }) : null
 }
 
-function dI(bb) {
+function rB(bb) {
   let {
-    allowEdits: cb,
-    onAllowEditsChange: sb,
-    onAddKey: Wb,
-    onEditKey: ab
+    allowEdits: ab,
+    onAllowEditsChange: Ub,
+    onAddKey: Mb,
+    onEditKey: Tb
   } = bb;
   const {
-    keys: Ub,
-    removeKey: Ib
-  } = jT(), [Hb, fb] = (0, kb.useState)(null), [Mb, Xb] = (0, kb.useState)(!1), [nb, mb] = (0, kb.useState)(!1), lb = (0, kb.useRef)(null);
-  (0, kb.useEffect)((() => {
-    var bb, cb;
-    (Hb || nb) && (null === (bb = lb.current) || void 0 === bb || bb.scrollIntoView({
+    keys: Yb,
+    removeKey: Bb
+  } = OE(), [eb, vb] = (0, Ab.useState)(null), [Lb, Pb] = (0, Ab.useState)(!1), [Xb, jb] = (0, Ab.useState)(!1), Rb = (0, Ab.useRef)(null);
+  (0, Ab.useEffect)((() => {
+    var bb, ab;
+    (eb || Xb) && (null === (bb = Rb.current) || void 0 === bb || bb.scrollIntoView({
       block: "nearest"
-    }), null === (cb = lb.current) || void 0 === cb || cb.focus({
+    }), null === (ab = Rb.current) || void 0 === ab || ab.focus({
       preventScroll: !0
     }))
-  }), [Hb, nb]);
-  const Qb = (0, kb.useRef)(null),
-    eb = () => {
-      Xb(!1), setTimeout((() => {
+  }), [eb, Xb]);
+  const kb = (0, Ab.useRef)(null),
+    yb = () => {
+      Pb(!1), setTimeout((() => {
         var bb;
-        null === (bb = Qb.current) || void 0 === bb || bb.focus()
+        null === (bb = kb.current) || void 0 === bb || bb.focus()
       }))
     },
-    [Cb, Nb] = (0, kb.useState)(new Set),
-    [Vb, Lb] = (0, kb.useState)(null);
-  return (0, Tb.jsxs)("div", {
+    [Zb, Db] = (0, Ab.useState)(new Set),
+    [zb, xb] = (0, Ab.useState)(null);
+  return (0, Eb.jsxs)("div", {
     className: "WorldCodeAiAiSettings",
-    children: [sb && (0, Tb.jsxs)("div", {
+    children: [Ub && (0, Eb.jsxs)("div", {
       className: "WorldCodeAiAiSettingsSection",
-      children: [(0, Tb.jsx)(tI, {
-        allow: cb,
+      children: [(0, Eb.jsx)(pB, {
+        allow: ab,
         onChange: bb => {
-          fb(null), sb(bb)
+          vb(null), Ub(bb)
         }
-      }), (0, Tb.jsx)("p", {
+      }), (0, Eb.jsx)("p", {
         className: "WorldCodeAiAiSettingsNote",
-        children: cb ? "On: the AI changes this game's code right away, without asking; Undo is under each change. It can't touch other games or your account." : "Off: the AI shows each change to this game's code first, and you press Apply."
+        children: ab ? "On: the AI changes this game's code right away, without asking; Undo is under each change. It can't touch other games or your account." : "Off: the AI shows each change to this game's code first, and you press Apply."
       })]
-    }), (0, Tb.jsxs)("div", {
+    }), (0, Eb.jsxs)("div", {
       className: "WorldCodeAiAiSettingsSection",
-      children: [(0, Tb.jsxs)("div", {
+      children: [(0, Eb.jsxs)("div", {
         className: "WorldCodeAiAiSettingsHeading",
-        children: [(0, Tb.jsx)("h3", {
+        children: [(0, Eb.jsx)("h3", {
           id: "WorldCodeAiModelTitle",
           className: "WorldCodeAiAiSettingsTitle",
           children: "AI model"
-        }), (0, Tb.jsxs)("button", {
+        }), (0, Eb.jsxs)("button", {
           className: "WorldCodeAiSecondaryButton WorldCodeAiAddKeyButton",
-          onClick: Wb,
-          children: [(0, Tb.jsx)("span", {
+          onClick: Mb,
+          children: [(0, Eb.jsx)("span", {
             "aria-hidden": "true",
             children: "+ "
           }), "Add API key"]
         })]
-      }), 0 === Ub.length && (0, Tb.jsx)("p", {
+      }), 0 === Yb.length && (0, Eb.jsx)("p", {
         className: "WorldCodeAiAiSettingsNote",
         children: "Use a stronger AI with your own key."
-      }), (0, Tb.jsx)(zI, {}), Ub.length > 0 && (0, Tb.jsx)("p", {
+      }), (0, Eb.jsx)(qB, {}), Yb.length > 0 && (0, Eb.jsx)("p", {
         className: "WorldCodeAiAiSettingsNote WorldCodeAiForgetAll",
-        children: Mb ? (0, Tb.jsxs)("span", {
+        children: Lb ? (0, Eb.jsxs)("span", {
           className: "WorldCodeAiKeyConfirm",
           role: "group",
           "aria-label": "Forget all keys?",
           onKeyDown: bb => {
-            "Escape" === bb.key && (bb.stopPropagation(), bb.preventDefault(), eb())
+            "Escape" === bb.key && (bb.stopPropagation(), bb.preventDefault(), yb())
           },
-          children: [1 === Ub.length ? "Forget your key" : `Forget all ${Ub.length} keys`, " in this browser?", (0, Tb.jsx)("button", {
+          children: [1 === Yb.length ? "Forget your key" : `Forget all ${Yb.length} keys`, " in this browser?", (0, Eb.jsx)("button", {
             className: "WorldCodeAiLinkButton WorldCodeAiModelRemove",
             onClick: () => {
-              xT.removeAll(), Xb(!1), fb(null), mb(!0)
+              VE.removeAll(), Pb(!1), vb(null), jb(!0)
             },
             children: "Yes"
-          }), (0, Tb.jsx)("button", {
+          }), (0, Eb.jsx)("button", {
             className: "WorldCodeAiLinkButton",
             autoFocus: !0,
-            onClick: eb,
+            onClick: yb,
             children: "No"
           })]
-        }) : (0, Tb.jsx)("button", {
-          ref: Qb,
+        }) : (0, Eb.jsx)("button", {
+          ref: kb,
           className: "WorldCodeAiKeyLearnMore",
           onClick: () => {
-            Xb(!0)
+            Pb(!0)
           },
           children: "Forget all keys"
         })
-      }), 0 === Ub.length && nb && (0, Tb.jsx)("p", {
-        ref: lb,
+      }), 0 === Yb.length && Xb && (0, Eb.jsx)("p", {
+        ref: Rb,
         className: "WorldCodeAiAiSettingsNote WorldCodeAiKeyRemoved",
         tabIndex: -1,
         children: "All keys forgotten in this browser. Bot.xd answers now. To stop a key working everywhere, delete it on its company's website."
-      }), Hb && (0, Tb.jsxs)("p", {
-        ref: lb,
+      }), eb && (0, Eb.jsxs)("p", {
+        ref: Rb,
         className: "WorldCodeAiAiSettingsNote WorldCodeAiKeyRemoved",
         tabIndex: -1,
-        children: [Hb.name, " removed.", Hb.wasInUse && " Bot.xd answers now.", Hb.keyPage && (0, Tb.jsxs)(Tb.Fragment, {
-          children: [" ", "To stop it working everywhere, delete it on", " ", (0, Tb.jsxs)("a", {
-            href: Hb.keyPage,
+        children: [eb.name, " removed.", eb.wasInUse && " Bot.xd answers now.", eb.keyPage && (0, Eb.jsxs)(Eb.Fragment, {
+          children: [" ", "To stop it working everywhere, delete it on", " ", (0, Eb.jsxs)("a", {
+            href: eb.keyPage,
             target: "_blank",
             rel: "noreferrer noopener",
-            children: [Hb.label, "'s website"]
+            children: [eb.label, "'s website"]
           }), "."]
-        }), " ", (0, Tb.jsx)("button", {
+        }), " ", (0, Eb.jsx)("button", {
           className: "WorldCodeAiLinkButton WorldCodeAiModelUndo",
           onClick: () => {
-            Hb.undo(), fb(null)
+            eb.undo(), vb(null)
           },
           children: "Undo"
         })]
-      }), (0, Tb.jsx)(OI, {
+      }), (0, Eb.jsx)(FB, {
         labelledBy: "WorldCodeAiModelTitle",
         onPicked: () => {
-          fb(null), Lb(null)
+          vb(null), xb(null)
         },
         canRename: !0,
-        onEdit: ab,
-        refreshingIds: Cb,
-        keyNote: Vb,
+        onEdit: Tb,
+        refreshingIds: Zb,
+        keyNote: zb,
         onRefresh: bb => {
           (async bb => {
-            const cb = eT(bb.provider, bb.baseUrl, !0);
-            Nb((cb => new Set(cb).add(bb.id))), Lb(null);
+            const ab = jE(bb.provider, bb.baseUrl, !0);
+            Db((ab => new Set(ab).add(bb.id))), xb(null);
             try {
-              const sb = await pT({
+              const Ub = await cE({
                 provider: bb.provider,
                 key: bb.key,
                 baseUrl: bb.baseUrl
               });
-              0 === sb.length ? Lb({
+              0 === Ub.length ? xb({
                 keyId: bb.id,
-                text: `${cb} listed no models, so your models stay as they were.`
-              }) : xT.refreshModels(bb.id, sb, {
+                text: `${ab} listed no models, so your models stay as they were.`
+              }) : VE.refreshModels(bb.id, Ub, {
                 key: bb.key,
                 baseUrl: bb.baseUrl
-              }) && Lb({
+              }) && xb({
                 keyId: bb.id,
-                text: `${cb}'s models are up to date.`
+                text: `${ab}'s models are up to date.`
               })
-            } catch (sb) {
-              Lb({
+            } catch (Ub) {
+              xb({
                 keyId: bb.id,
-                text: VT(sb instanceof CT ? sb.problem : "failed", bb.provider)
+                text: yE(Ub instanceof RE ? Ub.problem : "failed", bb.provider)
               })
             }
-            Nb((cb => {
-              const sb = new Set(cb);
-              return sb.delete(bb.id), sb
+            Db((ab => {
+              const Ub = new Set(ab);
+              return Ub.delete(bb.id), Ub
             }))
           })(bb)
         },
-        wL: bb => {
-          var cb;
-          const sb = (null === (cb = xT.activeKey()) || void 0 === cb ? void 0 : cb.id) === bb.id,
-            kb = Ib(bb.id);
-          fb({
-            name: rT(bb, !0),
-            label: eT(bb.provider, bb.baseUrl, !0),
-            keyPage: MT[bb.provider].keyPage,
-            wasInUse: sb,
-            undo: kb
+        kp: bb => {
+          var ab;
+          const Ub = (null === (ab = VE.activeKey()) || void 0 === ab ? void 0 : ab.id) === bb.id,
+            Ab = Bb(bb.id);
+          vb({
+            name: lE(bb, !0),
+            label: jE(bb.provider, bb.baseUrl, !0),
+            keyPage: BE[bb.provider].keyPage,
+            wasInUse: Ub,
+            undo: Ab
           })
         }
       })]
-    }), (0, Tb.jsx)(qI, {})]
+    }), (0, Eb.jsx)(uB, {})]
   })
 }
-const AI = ["anthropic", "openai", "gemini", "openrouter"];
+const KB = ["anthropic", "openai", "gemini", "openrouter"];
 
-function wI(bb) {
+function oB(bb) {
   let {
-    provider: cb,
-    children: sb
+    provider: ab,
+    children: Ub
   } = bb;
-  return (0, Tb.jsx)("a", {
-    href: MT[cb].keyPage,
+  return (0, Eb.jsx)("a", {
+    href: BE[ab].keyPage,
     target: "_blank",
     rel: "noreferrer noopener",
-    children: sb
+    children: Ub
   })
 }
 
-function rI() {
-  return (0, Tb.jsxs)(Tb.Fragment, {
-    children: [AI.map(((bb, cb) => {
-      const sb = 0 === cb ? "" : cb === AI.length - 1 ? " or " : ", ";
-      return (0, Tb.jsxs)("span", {
-        children: [sb, (0, Tb.jsx)(wI, {
+function lB() {
+  return (0, Eb.jsxs)(Eb.Fragment, {
+    children: [KB.map(((bb, ab) => {
+      const Ub = 0 === ab ? "" : ab === KB.length - 1 ? " or " : ", ";
+      return (0, Eb.jsxs)("span", {
+        children: [Ub, (0, Eb.jsx)(oB, {
           provider: bb,
-          children: MT[bb].shortName
+          children: BE[bb].shortName
         })]
       }, bb)
     })), "'s website"]
   })
 }
 
-function oI(bb) {
-  var cb;
+function tB(bb) {
+  var ab;
   let {
-    provider: sb
+    provider: Ub
   } = bb;
-  const [Wb, ab] = (0, kb.useState)(!1), Ub = (0, kb.useRef)(null);
-  if ((0, kb.useEffect)((() => {
-      if (Wb) {
-        var bb, cb, sb;
-        const kb = null === (bb = Ub.current) || void 0 === bb || null === (cb = bb.closest("form")) || void 0 === cb ? void 0 : cb.querySelector(".WorldCodeAiAddKeyActions");
-        null === (sb = null !== kb && void 0 !== kb ? kb : Ub.current) || void 0 === sb || sb.scrollIntoView({
+  const [Mb, Tb] = (0, Ab.useState)(!1), Yb = (0, Ab.useRef)(null);
+  if ((0, Ab.useEffect)((() => {
+      if (Mb) {
+        var bb, ab, Ub;
+        const Ab = null === (bb = Yb.current) || void 0 === bb || null === (ab = bb.closest("form")) || void 0 === ab ? void 0 : ab.querySelector(".WorldCodeAiAddKeyActions");
+        null === (Ub = null !== Ab && void 0 !== Ab ? Ab : Yb.current) || void 0 === Ub || Ub.scrollIntoView({
           block: "nearest",
           behavior: "smooth"
         })
       }
-    }), [Wb]), "custom" === sb) return (0, Tb.jsx)("div", {
+    }), [Mb]), "custom" === Ub) return (0, Eb.jsx)("div", {
     className: "WorldCodeAiKeyExplainer",
-    children: (0, Tb.jsx)("p", {
+    children: (0, Eb.jsx)("p", {
       className: "WorldCodeAiAiSettingsNote",
       children: "Paste the key for that server, or leave it empty if it doesn't need one. It goes only to that server, never to Bloxd."
     })
   });
-  const Ib = sb ? MT[sb] : null;
-  return (0, Tb.jsxs)("div", {
+  const Bb = Ub ? BE[Ub] : null;
+  return (0, Eb.jsxs)("div", {
     className: "WorldCodeAiKeyExplainer",
-    children: [(0, Tb.jsxs)("ul", {
-      ref: Ub,
+    children: [(0, Eb.jsxs)("ul", {
+      ref: Yb,
       id: "WorldCodeAiKeyExplainerLines",
       className: "WorldCodeAiKeyExplainerLines",
-      children: [(0, Tb.jsx)("li", {
-        children: Ib ? `An API key works like a password for ${Ib.shortName}'s AI (it isn't your ${Ib.shortName} login password). Keep it secret.` : "An API key works like a password for an AI company's AI (it isn't your login password). Keep it secret."
-      }), (0, Tb.jsxs)("li", {
-        children: ["You make it on ", Ib ? `${Ib.shortName}'s website` : (0, Tb.jsx)(rI, {}), ", and see how much you've used or delete it there."]
-      }), Wb && (0, Tb.jsxs)("li", {
-        children: ["Your key stays in this browser and only goes to ", null !== (cb = null === Ib || void 0 === Ib ? void 0 : Ib.shortName) && void 0 !== cb ? cb : "that company", ", never to Bloxd."]
-      }), (0, Tb.jsx)("li", {
+      children: [(0, Eb.jsx)("li", {
+        children: Bb ? `An API key works like a password for ${Bb.shortName}'s AI (it isn't your ${Bb.shortName} login password). Keep it secret.` : "An API key works like a password for an AI company's AI (it isn't your login password). Keep it secret."
+      }), (0, Eb.jsxs)("li", {
+        children: ["You make it on ", Bb ? `${Bb.shortName}'s website` : (0, Eb.jsx)(lB, {}), ", and see how much you've used or delete it there."]
+      }), Mb && (0, Eb.jsxs)("li", {
+        children: ["Your key stays in this browser and only goes to ", null !== (ab = null === Bb || void 0 === Bb ? void 0 : Bb.shortName) && void 0 !== ab ? ab : "that company", ", never to Bloxd."]
+      }), (0, Eb.jsx)("li", {
         className: "WorldCodeAiKeyExplainerMore",
-        children: (0, Tb.jsx)("button", {
+        children: (0, Eb.jsx)("button", {
           type: "button",
           className: "WorldCodeAiKeyLearnMore",
-          "aria-expanded": Wb,
+          "aria-expanded": Mb,
           "aria-controls": "WorldCodeAiKeyExplainerLines",
           onClick: () => {
-            ab(!Wb)
+            Tb(!Mb)
           },
-          children: Wb ? "Less about keys" : "More about keys"
+          children: Mb ? "Less about keys" : "More about keys"
         })
       })]
-    }), Ib && (0, Tb.jsxs)("a", {
+    }), Bb && (0, Eb.jsxs)("a", {
       className: "WorldCodeAiKeyPageLink",
-      href: Ib.keyPage,
+      href: Bb.keyPage,
       target: "_blank",
       rel: "noreferrer noopener",
-      children: ["Get a key on ", Ib.shortName, "'s website ", (0, Tb.jsx)("span", {
+      children: ["Get a key on ", Bb.shortName, "'s website ", (0, Eb.jsx)("span", {
         "aria-hidden": "true",
         children: "\u2197"
       })]
@@ -10005,473 +10005,473 @@ function oI(bb) {
   })
 }
 
-function SI() {
-  const [bb, cb] = (0, kb.useState)(!1);
-  return (0, Tb.jsxs)("span", {
+function wB() {
+  const [bb, ab] = (0, Ab.useState)(!1);
+  return (0, Eb.jsxs)("span", {
     className: "WorldCodeAiAiSettingsNote",
-    children: ["Any server that works like OpenAI's, such as LM Studio or Ollama.", " ", (0, Tb.jsx)("button", {
+    children: ["Any server that works like OpenAI's, such as LM Studio or Ollama.", " ", (0, Eb.jsx)("button", {
       type: "button",
       className: "WorldCodeAiKeyLearnMore",
       "aria-expanded": bb,
       onClick: () => {
-        cb(!bb)
+        ab(!bb)
       },
       children: bb ? "Hide tips" : "Server tips"
-    }), bb && (0, Tb.jsx)("span", {
+    }), bb && (0, Eb.jsx)("span", {
       className: "WorldCodeAiServerTips",
       children: "Use https://, or http:// for one on this computer, like http://localhost:1234/v1. It must allow web pages to use it: in LM Studio turn on CORS; for Ollama see its help."
     })]
   })
 }
 
-function RI(bb) {
+function sB(bb) {
   bb.stopPropagation()
 }
 
-function vI(bb) {
-  var cb, sb, Wb, ab, Ub;
+function gB(bb) {
+  var ab, Ub, Mb, Tb, Yb;
   let {
-    editing: Ib,
-    onAdded: Hb,
-    onOpenSettings: fb
+    editing: Bb,
+    onAdded: eb,
+    onOpenSettings: vb
   } = bb;
   const {
-    remember: Mb
-  } = jT(), [Xb, nb] = (0, kb.useState)(null !== (cb = null === Ib || void 0 === Ib ? void 0 : Ib.provider) && void 0 !== cb ? cb : null), [mb, lb] = (0, kb.useState)(!!Ib), [Qb, eb] = (0, kb.useState)(""), Cb = null !== (sb = null === Ib || void 0 === Ib ? void 0 : Ib.key) && void 0 !== sb ? sb : "", [Nb, Vb] = (0, kb.useState)(!1), [Lb, ub] = (0, kb.useState)(null !== (Wb = null === Ib || void 0 === Ib ? void 0 : Ib.baseUrl) && void 0 !== Wb ? Wb : ""), Yb = bb => {
-    var cb, sb;
-    return bb === (null === Ib || void 0 === Ib ? void 0 : Ib.provider) && ("custom" !== bb || (null !== (cb = QT(Lb)) && void 0 !== cb ? cb : "") === (null !== (sb = Ib.baseUrl) && void 0 !== sb ? sb : ""))
-  }, hb = "" !== Cb && Yb(Xb), Jb = function(bb) {
-    let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : mT(Qb);
-    return "" === cb && "" !== Cb && Yb(bb) ? Cb : cb
-  }, [gb, Bb] = (0, kb.useState)(""), [tb, yb] = (0, kb.useState)(null !== (ab = null === Ib || void 0 === Ib ? void 0 : Ib.name) && void 0 !== ab ? ab : ""), [Pb, Db] = (0, kb.useState)(!1), [Eb, ib] = (0, kb.useState)(null), [Ob, Gb] = (0, kb.useState)(""), [Kb, Zb] = (0, kb.useState)(!1), [zb, qb] = (0, kb.useState)(null), [db, Ab] = (0, kb.useState)(null), wb = "custom" === Xb && "" === Jb(Xb), rb = (0, kb.useRef)(null), ob = (0, kb.useRef)(null), Sb = (0, kb.useRef)(null);
-  (0, kb.useEffect)((() => {
-    var bb, cb;
-    Eb && (null === (bb = ob.current) || void 0 === bb || bb.scrollIntoView({
+    remember: Lb
+  } = OE(), [Pb, Xb] = (0, Ab.useState)(null !== (ab = null === Bb || void 0 === Bb ? void 0 : Bb.provider) && void 0 !== ab ? ab : null), [jb, Rb] = (0, Ab.useState)(!!Bb), [kb, yb] = (0, Ab.useState)(""), Zb = null !== (Ub = null === Bb || void 0 === Bb ? void 0 : Bb.key) && void 0 !== Ub ? Ub : "", [Db, zb] = (0, Ab.useState)(!1), [xb, ib] = (0, Ab.useState)(null !== (Mb = null === Bb || void 0 === Bb ? void 0 : Bb.baseUrl) && void 0 !== Mb ? Mb : ""), fb = bb => {
+    var ab, Ub;
+    return bb === (null === Bb || void 0 === Bb ? void 0 : Bb.provider) && ("custom" !== bb || (null !== (ab = XE(xb)) && void 0 !== ab ? ab : "") === (null !== (Ub = Bb.baseUrl) && void 0 !== Ub ? Ub : ""))
+  }, mb = "" !== Zb && fb(Pb), pb = function(bb) {
+    let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : LE(kb);
+    return "" === ab && "" !== Zb && fb(bb) ? Zb : ab
+  }, [Nb, Wb] = (0, Ab.useState)(""), [Hb, Ib] = (0, Ab.useState)(null !== (Tb = null === Bb || void 0 === Bb ? void 0 : Bb.name) && void 0 !== Tb ? Tb : ""), [db, Fb] = (0, Ab.useState)(!1), [hb, Gb] = (0, Ab.useState)(null), [Qb, qb] = (0, Ab.useState)(""), [ub, rb] = (0, Ab.useState)(!1), [Kb, ob] = (0, Ab.useState)(null), [lb, tb] = (0, Ab.useState)(null), wb = "custom" === Pb && "" === pb(Pb), sb = (0, Ab.useRef)(null), gb = (0, Ab.useRef)(null), Cb = (0, Ab.useRef)(null);
+  (0, Ab.useEffect)((() => {
+    var bb, ab;
+    hb && (null === (bb = gb.current) || void 0 === bb || bb.scrollIntoView({
       block: "start"
-    }), null === (cb = Sb.current) || void 0 === cb || cb.scrollIntoView({
+    }), null === (ab = Cb.current) || void 0 === ab || ab.scrollIntoView({
       block: "nearest"
     }))
-  }), [Eb]), (0, kb.useEffect)((() => () => {
+  }), [hb]), (0, Ab.useEffect)((() => () => {
     var bb;
-    null === (bb = rb.current) || void 0 === bb || bb.abort()
-  }), []), (0, kb.useEffect)((() => {
+    null === (bb = sb.current) || void 0 === bb || bb.abort()
+  }), []), (0, Ab.useEffect)((() => {
     var bb;
-    zb && (null === (bb = Sb.current) || void 0 === bb || bb.scrollIntoView({
+    Kb && (null === (bb = Cb.current) || void 0 === bb || bb.scrollIntoView({
       block: "nearest"
     }))
-  }), [zb]);
-  const Rb = () => {
+  }), [Kb]);
+  const Vb = () => {
       var bb;
-      null === (bb = rb.current) || void 0 === bb || bb.abort(), Zb(!1), ib(null), qb(null), Ab(null)
+      null === (bb = sb.current) || void 0 === bb || bb.abort(), rb(!1), Gb(null), ob(null), tb(null)
     },
-    vb = null === Eb || void 0 === Eb ? void 0 : Eb.find((bb => bb.id === Ob));
-  return (0, Tb.jsxs)("form", {
+    Ob = null === hb || void 0 === hb ? void 0 : hb.find((bb => bb.id === Qb));
+  return (0, Eb.jsxs)("form", {
     className: "WorldCodeAiAddKey",
     onSubmit: bb => {
-      bb.preventDefault(), Eb ? (() => {
+      bb.preventDefault(), hb ? (() => {
         var bb;
-        if (!Xb || !Eb) return;
-        const cb = xT.addKey({
-          provider: Xb,
-          key: Jb(Xb),
-          baseUrl: "custom" === Xb && null !== (bb = QT(Lb)) && void 0 !== bb ? bb : void 0,
-          models: Eb
-        }, Ob, null === Ib || void 0 === Ib ? void 0 : Ib.id);
-        ("" !== tb.trim() || Ib) && xT.renameKey(cb, tb), Hb()
+        if (!Pb || !hb) return;
+        const ab = VE.addKey({
+          provider: Pb,
+          key: pb(Pb),
+          baseUrl: "custom" === Pb && null !== (bb = XE(xb)) && void 0 !== bb ? bb : void 0,
+          models: hb
+        }, Qb, null === Bb || void 0 === Bb ? void 0 : Bb.id);
+        ("" !== Hb.trim() || Bb) && VE.renameKey(ab, Hb), eb()
       })() : (async () => {
-        const cb = mT(Qb);
-        eb(cb), Ab(null);
-        const sb = null !== Xb && void 0 !== Xb ? Xb : lT(cb),
-          kb = Jb(sb, cb);
-        if ("" === kb && "custom" !== sb) return void qb("Paste your key first.");
-        if (!sb) return void qb("Pick the company your key is from.");
-        const Wb = "custom" === sb ? QT(Lb) : null;
-        if ("custom" === sb && null === Wb) return void qb("That address doesn't look right. It should start with https://");
-        if (Pb && "" === gb.trim()) return void qb("Type the name of the model to use.");
-        nb(sb), Zb(!0), qb(null);
-        const ab = new AbortController;
-        rb.current = ab;
+        const ab = LE(kb);
+        yb(ab), tb(null);
+        const Ub = null !== Pb && void 0 !== Pb ? Pb : PE(ab),
+          Ab = pb(Ub, ab);
+        if ("" === Ab && "custom" !== Ub) return void ob("Paste your key first.");
+        if (!Ub) return void ob("Pick the company your key is from.");
+        const Mb = "custom" === Ub ? XE(xb) : null;
+        if ("custom" === Ub && null === Mb) return void ob("That address doesn't look right. It should start with https://");
+        if (db && "" === Nb.trim()) return void ob("Type the name of the model to use.");
+        Xb(Ub), rb(!0), ob(null);
+        const Tb = new AbortController;
+        sb.current = Tb;
         try {
-          var Tb, Ub;
-          const bb = await pT({
-            provider: sb,
-            key: kb,
-            baseUrl: null !== Wb && void 0 !== Wb ? Wb : void 0,
-            modelName: Pb ? gb : void 0
-          }, ab.signal);
-          if (Zb(!1), 0 === bb.length) return Db(!0), void qb("custom" === sb ? "This address doesn't list its models. Type the name of the model to use." : "Type the name of the model to use.");
-          ib(bb);
-          const cb = xT.getState().selected,
-            Hb = Ib && (null === cb || void 0 === cb ? void 0 : cb.keyId) === Ib.id ? bb.find((bb => bb.id === cb.modelId)) : void 0;
-          Gb(null !== (Tb = null === (Ub = null !== Hb && void 0 !== Hb ? Hb : wT(bb)) || void 0 === Ub ? void 0 : Ub.id) && void 0 !== Tb ? Tb : "")
+          var Eb, Yb;
+          const bb = await cE({
+            provider: Ub,
+            key: Ab,
+            baseUrl: null !== Mb && void 0 !== Mb ? Mb : void 0,
+            modelName: db ? Nb : void 0
+          }, Tb.signal);
+          if (rb(!1), 0 === bb.length) return Fb(!0), void ob("custom" === Ub ? "This address doesn't list its models. Type the name of the model to use." : "Type the name of the model to use.");
+          Gb(bb);
+          const ab = VE.getState().selected,
+            eb = Bb && (null === ab || void 0 === ab ? void 0 : ab.keyId) === Bb.id ? bb.find((bb => bb.id === ab.modelId)) : void 0;
+          qb(null !== (Eb = null === (Yb = null !== eb && void 0 !== eb ? eb : oE(bb)) || void 0 === Yb ? void 0 : Yb.id) && void 0 !== Eb ? Eb : "")
         } catch (bb) {
-          if (ab.signal.aborted) return;
-          Zb(!1);
-          const Wb = bb instanceof CT ? bb.problem : "failed";
-          if (Ab(bb instanceof CT && bb.detail ? NT(bb.detail, kb) : null), "badKey" === Wb && "" === kb) return void qb("This address needs a key.");
-          const Tb = "badKey" !== Wb || mb ? "" : ` If it isn't from ${MT[sb].shortName}, pick the company it's from.`;
-          qb(`${VT(Wb,sb)}${Tb}`)
+          if (Tb.signal.aborted) return;
+          rb(!1);
+          const Mb = bb instanceof RE ? bb.problem : "failed";
+          if (tb(bb instanceof RE && bb.detail ? kE(bb.detail, Ab) : null), "badKey" === Mb && "" === Ab) return void ob("This address needs a key.");
+          const Eb = "badKey" !== Mb || jb ? "" : ` If it isn't from ${BE[Ub].shortName}, pick the company it's from.`;
+          ob(`${yE(Mb,Ub)}${Eb}`)
         }
       })()
     },
-    children: [(0, Tb.jsxs)("label", {
+    children: [(0, Eb.jsxs)("label", {
       className: "WorldCodeAiAddKeyField",
-      children: [(0, Tb.jsx)("span", {
+      children: [(0, Eb.jsx)("span", {
         children: "Company"
-      }), (0, Tb.jsxs)("select", {
+      }), (0, Eb.jsxs)("select", {
         className: "WorldCodeAiAddKeyInput WorldCodeAiAddKeyCompany",
-        value: null !== Xb && void 0 !== Xb ? Xb : "",
+        value: null !== Pb && void 0 !== Pb ? Pb : "",
         onChange: bb => {
-          nb(bb.target.value), lb(!0), Db(!1), Rb()
+          Xb(bb.target.value), Rb(!0), Fb(!1), Vb()
         },
-        onKeyDown: RI,
-        children: [null === Xb && (0, Tb.jsx)("option", {
+        onKeyDown: sB,
+        children: [null === Pb && (0, Eb.jsx)("option", {
           value: "",
           disabled: !0,
           children: "Pick one, or paste your key below"
-        }), XT.map((bb => (0, Tb.jsx)("option", {
+        }), eE.map((bb => (0, Eb.jsx)("option", {
           value: bb,
-          children: MT[bb].name
+          children: BE[bb].name
         }, bb)))]
       })]
-    }), "custom" === Xb && (0, Tb.jsxs)("label", {
+    }), "custom" === Pb && (0, Eb.jsxs)("label", {
       className: "WorldCodeAiAddKeyField",
-      children: [(0, Tb.jsx)("span", {
+      children: [(0, Eb.jsx)("span", {
         children: "Server address"
-      }), (0, Tb.jsx)("input", {
+      }), (0, Eb.jsx)("input", {
         className: "WorldCodeAiAddKeyInput WorldCodeAiAddKeyEndpoint",
-        value: Lb,
+        value: xb,
         placeholder: "https://ai.example.com/v1",
         autoComplete: "off",
         spellCheck: !1,
         onChange: bb => {
-          ub(bb.target.value), Db(!1), Rb()
+          ib(bb.target.value), Fb(!1), Vb()
         },
-        onKeyDown: RI
-      }), (!Ib || Lb !== (null !== (Ub = Ib.baseUrl) && void 0 !== Ub ? Ub : "")) && (0, Tb.jsx)(SI, {})]
-    }), (0, Tb.jsxs)("div", {
+        onKeyDown: sB
+      }), (!Bb || xb !== (null !== (Yb = Bb.baseUrl) && void 0 !== Yb ? Yb : "")) && (0, Eb.jsx)(wB, {})]
+    }), (0, Eb.jsxs)("div", {
       className: "WorldCodeAiAddKeyField",
-      children: [hb && (0, Tb.jsxs)("span", {
+      children: [mb && (0, Eb.jsxs)("span", {
         className: "WorldCodeAiAddKeySavedKey",
-        children: ["Key ends ", (0, Tb.jsxs)("code", {
-          children: ["\u2026", Cb.slice(-4)]
+        children: ["Key ends ", (0, Eb.jsxs)("code", {
+          children: ["\u2026", Zb.slice(-4)]
         })]
-      }), (0, Tb.jsx)("label", {
+      }), (0, Eb.jsx)("label", {
         htmlFor: "WorldCodeAiAddKeyKey",
-        children: hb ? "Paste a new key to replace it (optional)" : "Your key"
-      }), (0, Tb.jsxs)("span", {
+        children: mb ? "Paste a new key to replace it (optional)" : "Your key"
+      }), (0, Eb.jsxs)("span", {
         className: "WorldCodeAiAddKeyPaste",
-        children: [(0, Tb.jsx)("input", {
+        children: [(0, Eb.jsx)("input", {
           id: "WorldCodeAiAddKeyKey",
           className: "WorldCodeAiAddKeyInput WorldCodeAiAddKeyKey",
-          type: Nb ? "text" : "password",
-          value: Qb,
-          placeholder: hb ? "Leave empty to keep it" : "custom" === Xb ? "Paste the key, or leave empty" : "Paste the key here",
+          type: Db ? "text" : "password",
+          value: kb,
+          placeholder: mb ? "Leave empty to keep it" : "custom" === Pb ? "Paste the key, or leave empty" : "Paste the key here",
           autoComplete: "off",
           spellCheck: !1,
           onChange: bb => {
-            eb(bb.target.value), mb || nb(lT(mT(bb.target.value))), Rb()
+            yb(bb.target.value), jb || Xb(PE(LE(bb.target.value))), Vb()
           },
-          onKeyDown: RI
-        }), (0, Tb.jsx)("button", {
+          onKeyDown: sB
+        }), (0, Eb.jsx)("button", {
           type: "button",
           className: "WorldCodeAiSecondaryButton",
           onClick: () => {
-            Vb(!Nb)
+            zb(!Db)
           },
-          children: Nb ? "Hide" : "Show"
+          children: Db ? "Hide" : "Show"
         })]
-      }), (0, Tb.jsx)(oI, {
-        provider: Xb
+      }), (0, Eb.jsx)(tB, {
+        provider: Pb
       })]
-    }), !Ib && (0, Tb.jsxs)("p", {
+    }), !Bb && (0, Eb.jsxs)("p", {
       className: "WorldCodeAiAiSettingsNote WorldCodeAiAddKeyRemember",
-      children: [Mb ? "Your keys are remembered in this browser. Change it in " : "Your keys are kept until you close this tab. To remember them, see ", (0, Tb.jsx)("button", {
+      children: [Lb ? "Your keys are remembered in this browser. Change it in " : "Your keys are kept until you close this tab. To remember them, see ", (0, Eb.jsx)("button", {
         type: "button",
         className: "WorldCodeAiKeyLearnMore",
-        onClick: fb,
+        onClick: vb,
         children: "AI settings"
       }), "."]
-    }), Pb && (0, Tb.jsxs)("label", {
+    }), db && (0, Eb.jsxs)("label", {
       className: "WorldCodeAiAddKeyField",
-      children: [(0, Tb.jsx)("span", {
+      children: [(0, Eb.jsx)("span", {
         children: "Model name"
-      }), (0, Tb.jsx)("input", {
+      }), (0, Eb.jsx)("input", {
         className: "WorldCodeAiAddKeyInput WorldCodeAiAddKeyModel",
-        value: gb,
+        value: Nb,
         placeholder: "llama-3.3-70b-versatile",
         autoComplete: "off",
         spellCheck: !1,
         onChange: bb => {
-          Bb(bb.target.value), Rb()
+          Wb(bb.target.value), Vb()
         },
-        onKeyDown: RI
+        onKeyDown: sB
       })]
-    }), Eb && (0, Tb.jsxs)("div", {
-      ref: ob,
+    }), hb && (0, Eb.jsxs)("div", {
+      ref: gb,
       className: "WorldCodeAiModelList WorldCodeAiAddKeyModels",
       role: "radiogroup",
       "aria-labelledby": "WorldCodeAiAddKeyModelsTitle",
-      children: [(0, Tb.jsxs)("p", {
+      children: [(0, Eb.jsxs)("p", {
         id: "WorldCodeAiAddKeyModelsTitle",
         className: "WorldCodeAiAddKeyWorks",
-        children: ["" === Jb(Xb) ? "It works." : "Your key works.", " Pick a model:"]
-      }), Eb.map((bb => (0, Tb.jsx)(iI, {
+        children: ["" === pb(Pb) ? "It works." : "Your key works.", " Pick a model:"]
+      }), hb.map((bb => (0, Eb.jsx)(dB, {
         name: bb.name,
-        hint: bb.tier ? KT[bb.tier] : "",
+        hint: bb.tier ? GE[bb.tier] : "",
         choice: {
-          keyId: null !== Xb && void 0 !== Xb ? Xb : "",
+          keyId: null !== Pb && void 0 !== Pb ? Pb : "",
           modelId: bb.id
         },
-        selected: bb.id === Ob,
+        selected: bb.id === Qb,
         radioName: "WorldCodeAiAddKeyModelPick",
         onSelect: () => {
-          Gb(bb.id)
+          qb(bb.id)
         }
-      }, bb.id))), (0, Tb.jsx)("button", {
+      }, bb.id))), (0, Eb.jsx)("button", {
         type: "button",
         className: "WorldCodeAiKeyLearnMore",
         onClick: () => {
-          Db(!0), Rb()
+          Fb(!0), Vb()
         },
         children: "Type a model name yourself"
       })]
-    }), Eb && (0, Tb.jsxs)("label", {
+    }), hb && (0, Eb.jsxs)("label", {
       className: "WorldCodeAiAddKeyField",
-      children: [(0, Tb.jsx)("span", {
+      children: [(0, Eb.jsx)("span", {
         children: "Name it (optional)"
-      }), (0, Tb.jsx)("input", {
+      }), (0, Eb.jsx)("input", {
         className: "WorldCodeAiAddKeyInput WorldCodeAiAddKeyName",
-        value: tb,
+        value: Hb,
         maxLength: 30,
-        placeholder: Xb && "custom" !== Xb ? `Like My ${MT[Xb].shortName}` : "Like Home server",
+        placeholder: Pb && "custom" !== Pb ? `Like My ${BE[Pb].shortName}` : "Like Home server",
         autoComplete: "off",
         onChange: bb => {
-          yb(bb.target.value)
+          Ib(bb.target.value)
         },
-        onKeyDown: RI
+        onKeyDown: sB
       })]
-    }), (0, Tb.jsxs)("div", {
-      ref: Sb,
+    }), (0, Eb.jsxs)("div", {
+      ref: Cb,
       className: "WorldCodeAiAddKeyActions",
-      children: [zb && (0, Tb.jsx)("p", {
+      children: [Kb && (0, Eb.jsx)("p", {
         className: "WorldCodeAiAddKeyError",
         role: "alert",
-        children: zb
-      }), zb && db && (0, Tb.jsx)(NI, {
-        detail: db,
+        children: Kb
+      }), Kb && lb && (0, Eb.jsx)(kB, {
+        detail: lb,
         onOpen: () => {
-          var bb, cb;
-          null === (bb = Sb.current) || void 0 === bb || null === (cb = bb.querySelector(".WorldCodeAiAddKeySave")) || void 0 === cb || cb.scrollIntoView({
+          var bb, ab;
+          null === (bb = Cb.current) || void 0 === bb || null === (ab = bb.querySelector(".WorldCodeAiAddKeySave")) || void 0 === ab || ab.scrollIntoView({
             block: "nearest"
           })
         }
-      }), (0, Tb.jsx)("button", {
+      }), (0, Eb.jsx)("button", {
         type: "submit",
         className: "WorldCodeAiPrimaryButton WorldCodeAiAddKeySave",
-        disabled: Kb,
-        children: Kb ? wb ? "Testing the connection\u2026" : "Testing your key\u2026" : vb ? `Save and use ${vb.name}` : wb ? "Test connection" : "Test key"
+        disabled: ub,
+        children: ub ? wb ? "Testing the connection\u2026" : "Testing your key\u2026" : Ob ? `Save and use ${Ob.name}` : wb ? "Test connection" : "Test key"
       })]
     })]
   })
 }
-var FI = sb(1197),
-  xI = sb(36455),
-  jI = sb(36452);
+var CB = Ub(1134),
+  VB = Ub(36214),
+  OB = Ub(36209);
 
-function pI(bb) {
+function cB(bb) {
   let {
-    step: cb,
-    placement: sb = "left",
-    onPrevious: kb,
-    children: Wb
+    step: ab,
+    placement: Ub = "left",
+    onPrevious: Ab,
+    children: Mb
   } = bb;
   const {
-    t: ab
-  } = (0, FI.E)();
-  return (0, Tb.jsx)(jI.g, {
+    t: Tb
+  } = (0, CB.A)();
+  return (0, Eb.jsx)(OB.j, {
     tutorial: "aiHelperOverview",
-    step: cb,
-    text: ab(`codeEditorAiTutorial:${cb}`),
-    placement: sb,
-    onPrevious: kb,
-    children: Wb
+    step: ab,
+    text: Tb(`codeEditorAiTutorial:${ab}`),
+    placement: Ub,
+    onPrevious: Ab,
+    children: Mb
   })
 }
 
-function bH(bb, cb) {
-  if (bb.scrollHeight <= bb.clientHeight + 1) cH(bb);
+function JB(bb, ab) {
+  if (bb.scrollHeight <= bb.clientHeight + 1) nB(bb);
   else {
-    if (!PI(bb, cb)) {
-      const sb = cb.getBoundingClientRect().bottom - bb.getBoundingClientRect().bottom;
-      sb > 0 && (bb.scrollTop += sb),
-        function(bb, cb) {
-          const sb = bb.getBoundingClientRect(),
-            kb = Math.max(sb.top, ...Array.from(bb.querySelectorAll(".WorldCodeAiModelGroupHeader"), (bb => {
-              const cb = bb.getBoundingClientRect();
-              return cb.top <= sb.top + 1 ? cb.bottom : sb.top
+    if (!WB(bb, ab)) {
+      const Ub = ab.getBoundingClientRect().bottom - bb.getBoundingClientRect().bottom;
+      Ub > 0 && (bb.scrollTop += Ub),
+        function(bb, ab) {
+          const Ub = bb.getBoundingClientRect(),
+            Ab = Math.max(Ub.top, ...Array.from(bb.querySelectorAll(".WorldCodeAiModelGroupHeader"), (bb => {
+              const ab = bb.getBoundingClientRect();
+              return ab.top <= Ub.top + 1 ? ab.bottom : Ub.top
             })));
-          if (kb <= sb.top) return;
-          const Wb = cb.closest(".WorldCodeAiModelGroup"),
-            ab = Wb && parseFloat(getComputedStyle(Wb).rowGap) || 6,
-            Tb = Array.from(bb.querySelectorAll(".WorldCodeAiModelRow, .WorldCodeAiModelUnfold")).find((bb => {
-              const cb = bb.getBoundingClientRect();
-              return cb.top < kb + ab - 1 && cb.bottom > kb - ab
+          if (Ab <= Ub.top) return;
+          const Mb = ab.closest(".WorldCodeAiModelGroup"),
+            Tb = Mb && parseFloat(getComputedStyle(Mb).rowGap) || 6,
+            Eb = Array.from(bb.querySelectorAll(".WorldCodeAiModelRow, .WorldCodeAiModelUnfold")).find((bb => {
+              const ab = bb.getBoundingClientRect();
+              return ab.top < Ab + Tb - 1 && ab.bottom > Ab - Tb
             }));
-          if (!Tb || Tb === cb) return;
-          const Ub = bb.scrollTop;
-          bb.scrollTop -= kb + ab - Tb.getBoundingClientRect().top, cb.getBoundingClientRect().bottom > sb.bottom && (bb.scrollTop = Ub, bb.scrollTop += Math.max(0, Tb.getBoundingClientRect().bottom - kb))
-        }(bb, cb)
+          if (!Eb || Eb === ab) return;
+          const Yb = bb.scrollTop;
+          bb.scrollTop -= Ab + Tb - Eb.getBoundingClientRect().top, ab.getBoundingClientRect().bottom > Ub.bottom && (bb.scrollTop = Yb, bb.scrollTop += Math.max(0, Eb.getBoundingClientRect().bottom - Ab))
+        }(bb, ab)
     }
-    cH(bb)
+    nB(bb)
   }
 }
 
-function cH(bb) {
-  const cb = bb.getBoundingClientRect().top;
-  for (const sb of Array.from(bb.querySelectorAll(".WorldCodeAiModelGroup"))) {
-    const bb = sb.querySelector(".WorldCodeAiModelGroupHeader");
+function nB(bb) {
+  const ab = bb.getBoundingClientRect().top;
+  for (const Ub of Array.from(bb.querySelectorAll(".WorldCodeAiModelGroup"))) {
+    const bb = Ub.querySelector(".WorldCodeAiModelGroupHeader");
     if (!bb) continue;
-    const kb = cb + bb.offsetHeight,
-      Wb = Array.from(sb.querySelectorAll(".WorldCodeAiModelRow")).some((bb => bb.getBoundingClientRect().bottom > kb + 2));
-    bb.classList.toggle("Unpinned", !Wb)
+    const Ab = ab + bb.offsetHeight,
+      Mb = Array.from(Ub.querySelectorAll(".WorldCodeAiModelRow")).some((bb => bb.getBoundingClientRect().bottom > Ab + 2));
+    bb.classList.toggle("Unpinned", !Mb)
   }
 }
 
-function sH(bb) {
-  const cb = rT(bb, !0);
-  return bb.model.name.toLowerCase().startsWith(cb.toLowerCase()) ? bb.model.name : `${cb} \xb7 ${bb.model.name}`
+function SB(bb) {
+  const ab = lE(bb, !0);
+  return bb.model.name.toLowerCase().startsWith(ab.toLowerCase()) ? bb.model.name : `${ab} \xb7 ${bb.model.name}`
 }
 
-function kH(bb) {
+function be(bb) {
   let {
-    onAddKey: cb,
-    editsOn: sb,
-    freeOnce: Wb = !1,
-    onFreeOnce: Ub,
-    children: Ib
+    onAddKey: ab,
+    editsOn: Ub,
+    freeOnce: Mb = !1,
+    onFreeOnce: Yb,
+    children: Bb
   } = bb;
   const {
-    active: Hb,
-    select: fb
-  } = jT(), Mb = lU(HU());
-  (0, kb.useEffect)((() => {
-    IU.refresh(), gU()
+    active: eb,
+    select: vb
+  } = OE(), Lb = PY(EY());
+  (0, Ab.useEffect)((() => {
+    TY.refresh(), fY()
   }), []);
-  const [Xb, nb] = (0, kb.useState)(!1), mb = (0, kb.useRef)(null), lb = (0, kb.useRef)(null), Qb = (0, kb.useRef)(null), eb = () => {
+  const [Pb, Xb] = (0, Ab.useState)(!1), jb = (0, Ab.useRef)(null), Rb = (0, Ab.useRef)(null), kb = (0, Ab.useRef)(null), yb = () => {
     var bb;
-    nb(!1), null === (bb = lb.current) || void 0 === bb || bb.focus()
+    Xb(!1), null === (bb = Rb.current) || void 0 === bb || bb.focus()
   };
-  (0, kb.useEffect)((() => {
-    var bb, cb;
-    if (!Xb) return;
-    const sb = null === (bb = Qb.current) || void 0 === bb ? void 0 : bb.querySelector("input:checked");
-    null === sb || void 0 === sb || sb.focus({
+  (0, Ab.useEffect)((() => {
+    var bb, ab;
+    if (!Pb) return;
+    const Ub = null === (bb = kb.current) || void 0 === bb ? void 0 : bb.querySelector("input:checked");
+    null === Ub || void 0 === Ub || Ub.focus({
       preventScroll: !0
     });
-    const kb = null === (cb = Qb.current) || void 0 === cb ? void 0 : cb.querySelector(".WorldCodeAiModelMenuList"),
-      Wb = null === sb || void 0 === sb ? void 0 : sb.closest(".WorldCodeAiModelRow");
-    kb && Wb && bH(kb, Wb);
-    const ab = () => {
-      kb && cH(kb)
+    const Ab = null === (ab = kb.current) || void 0 === ab ? void 0 : ab.querySelector(".WorldCodeAiModelMenuList"),
+      Mb = null === Ub || void 0 === Ub ? void 0 : Ub.closest(".WorldCodeAiModelRow");
+    Ab && Mb && JB(Ab, Mb);
+    const Tb = () => {
+      Ab && nB(Ab)
     };
-    null === kb || void 0 === kb || kb.addEventListener("scroll", ab, {
+    null === Ab || void 0 === Ab || Ab.addEventListener("scroll", Tb, {
       passive: !0
     });
-    const Tb = bb => {
-        var cb;
-        null !== (cb = mb.current) && void 0 !== cb && cb.contains(bb.target) || nb(!1)
+    const Eb = bb => {
+        var ab;
+        null !== (ab = jb.current) && void 0 !== ab && ab.contains(bb.target) || Xb(!1)
       },
-      Ub = bb => {
-        "Escape" === bb.key && (bb.stopPropagation(), bb.preventDefault(), KI && (KI(), 1) || eb())
+      Yb = bb => {
+        "Escape" === bb.key && (bb.stopPropagation(), bb.preventDefault(), GB && (GB(), 1) || yb())
       };
-    return document.addEventListener("pointerdown", Tb), document.addEventListener("keydown", Ub, !0), () => {
-      null === kb || void 0 === kb || kb.removeEventListener("scroll", ab), document.removeEventListener("pointerdown", Tb), document.removeEventListener("keydown", Ub, !0)
+    return document.addEventListener("pointerdown", Eb), document.addEventListener("keydown", Yb, !0), () => {
+      null === Ab || void 0 === Ab || Ab.removeEventListener("scroll", Tb), document.removeEventListener("pointerdown", Eb), document.removeEventListener("keydown", Yb, !0)
     }
-  }), [Xb]);
-  const Cb = Wb && null !== Hb,
-    Nb = Cb ? "Bot.xd (free) \xb7 once" : Hb ? sH(Hb) : Mb ? sU : "Bot.xd (free)";
-  return (0, Tb.jsxs)("div", {
-    ref: mb,
+  }), [Pb]);
+  const Zb = Mb && null !== eb,
+    Db = Zb ? "Bot.xd (free) \xb7 once" : eb ? SB(eb) : Lb ? SE : "Bot.xd (free)";
+  return (0, Eb.jsxs)("div", {
+    ref: jb,
     className: "WorldCodeAiModelChipRow",
     onBlur: bb => {
-      var cb;
-      !Xb || !bb.relatedTarget || null !== (cb = mb.current) && void 0 !== cb && cb.contains(bb.relatedTarget) || nb(!1)
+      var ab;
+      !Pb || !bb.relatedTarget || null !== (ab = jb.current) && void 0 !== ab && ab.contains(bb.relatedTarget) || Xb(!1)
     },
-    children: [(0, Tb.jsxs)("button", {
-      ref: lb,
-      className: ab()("WorldCodeAiModelChip", Xb && "Open"),
-      "aria-expanded": Xb,
-      "aria-label": `AI model: ${Nb}`,
+    children: [(0, Eb.jsxs)("button", {
+      ref: Rb,
+      className: Tb()("WorldCodeAiModelChip", Pb && "Open"),
+      "aria-expanded": Pb,
+      "aria-label": `AI model: ${Db}`,
       title: "Change AI model",
       onClick: () => {
-        nb(!Xb)
+        Xb(!Pb)
       },
-      children: [Hb && !Cb && "" !== Hb.key && (0, Tb.jsx)(CI, {}), (0, Tb.jsx)("span", {
+      children: [eb && !Zb && "" !== eb.key && (0, Eb.jsx)(RB, {}), (0, Eb.jsx)("span", {
         className: "WorldCodeAiModelChipName",
-        children: Nb
-      }), (0, Tb.jsx)("span", {
+        children: Db
+      }), (0, Eb.jsx)("span", {
         className: "WorldCodeAiModelChipCaret",
         "aria-hidden": "true",
         children: "\u25be"
       })]
-    }), null !== sb && (0, Tb.jsx)(pI, {
+    }), null !== Ub && (0, Eb.jsx)(cB, {
       step: "aiEdits",
       placement: "top",
-      children: (0, Tb.jsx)("span", {
-        className: ab()("WorldCodeAiEditsTag", !sb && "WorldCodeAiEditsTag-off"),
-        title: `Allow AI to make edits to my code is ${sb?"on":"off"}, in AI settings`,
-        children: sb ? "Edits on" : "Edits off"
+      children: (0, Eb.jsx)("span", {
+        className: Tb()("WorldCodeAiEditsTag", !Ub && "WorldCodeAiEditsTag-off"),
+        title: `Allow AI to make edits to my code is ${Ub?"on":"off"}, in AI settings`,
+        children: Ub ? "Edits on" : "Edits off"
       })
-    }), (0, Tb.jsx)("span", {
+    }), (0, Eb.jsx)("span", {
       className: "WorldCodeAiModelChipStatus",
-      children: Ib
-    }), Xb && (0, Tb.jsxs)("div", {
-      ref: Qb,
+      children: Bb
+    }), Pb && (0, Eb.jsxs)("div", {
+      ref: kb,
       className: "WorldCodeAiModelMenu",
       role: "dialog",
       "aria-labelledby": "WorldCodeAiModelMenuTitle",
-      children: [(0, Tb.jsx)("h3", {
+      children: [(0, Eb.jsx)("h3", {
         id: "WorldCodeAiModelMenuTitle",
         className: "WorldCodeAiAiSettingsTitle",
         children: "AI model"
-      }), (0, Tb.jsx)("div", {
+      }), (0, Eb.jsx)("div", {
         className: "WorldCodeAiModelMenuList",
-        children: (0, Tb.jsx)(OI, {
+        children: (0, Eb.jsx)(FB, {
           labelledBy: "WorldCodeAiModelMenuTitle",
           onPicked: () => {
-            null === Ub || void 0 === Ub || Ub(!1), eb()
+            null === Yb || void 0 === Yb || Yb(!1), yb()
           }
         })
-      }), (0, Tb.jsxs)("div", {
+      }), (0, Eb.jsxs)("div", {
         className: "WorldCodeAiModelMenuActions",
-        children: [(0, Tb.jsxs)("button", {
+        children: [(0, Eb.jsxs)("button", {
           className: "WorldCodeAiSecondaryButton WorldCodeAiAddKeyButton",
           onClick: () => {
-            nb(!1), cb()
+            Xb(!1), ab()
           },
-          children: [(0, Tb.jsx)("span", {
+          children: [(0, Eb.jsx)("span", {
             "aria-hidden": "true",
             children: "+ "
           }), "Add API key"]
-        }), Hb && (0, Tb.jsxs)("span", {
+        }), eb && (0, Eb.jsxs)("span", {
           className: "WorldCodeAiModelMenuBotxd",
-          children: [Ub && (Cb ? (0, Tb.jsxs)("button", {
+          children: [Yb && (Zb ? (0, Eb.jsxs)("button", {
             className: "WorldCodeAiKeyLearnMore",
             onClick: () => {
-              Ub(!1), eb()
+              Yb(!1), yb()
             },
-            children: ["Back to ", Hb.model.name]
-          }) : (0, Tb.jsx)("button", {
+            children: ["Back to ", eb.model.name]
+          }) : (0, Eb.jsx)("button", {
             className: "WorldCodeAiKeyLearnMore",
             onClick: () => {
-              Ub(!0), eb()
+              Yb(!0), yb()
             },
             children: "Ask Bot.xd once"
-          })), (0, Tb.jsx)("button", {
+          })), (0, Eb.jsx)("button", {
             className: "WorldCodeAiKeyLearnMore",
             onClick: () => {
-              fb(null), eb()
+              vb(null), yb()
             },
             children: "Use Bot.xd from now on"
           })]
@@ -10480,243 +10480,243 @@ function kH(bb) {
     })]
   })
 }
-const WH = "kv";
+const ae = "kv";
 
-function aH(bb) {
-  return new Promise(((cb, sb) => {
+function Ue(bb) {
+  return new Promise(((ab, Ub) => {
     bb.oncomplete = () => {
-      cb()
+      ab()
     }, bb.onerror = () => {
-      var cb;
-      sb(null !== (cb = bb.error) && void 0 !== cb ? cb : new Error("IndexedDB transaction failed"))
+      var ab;
+      Ub(null !== (ab = bb.error) && void 0 !== ab ? ab : new Error("IndexedDB transaction failed"))
     }, bb.onabort = () => {
-      var cb;
-      sb(null !== (cb = bb.error) && void 0 !== cb ? cb : new Error("IndexedDB transaction aborted"))
+      var ab;
+      Ub(null !== (ab = bb.error) && void 0 !== ab ? ab : new Error("IndexedDB transaction aborted"))
     }
   }))
 }
-var TH = sb(36486);
-const UH = (0, kb.memo)((function(bb) {
+var Ae = Ub(36242);
+const Me = (0, Ab.memo)((function(bb) {
   let {
-    change: cb,
-    marked: sb
+    change: ab,
+    marked: Ub
   } = bb;
-  const Wb = (0, kb.useMemo)((() => Fk(cb.before, cb.after)), [cb]),
-    Ub = [];
-  for (let kb = 0; kb < Wb.length; kb++) {
-    if ("same" !== Wb[kb].kind) {
-      Ub.push(Wb[kb]);
+  const Mb = (0, Ab.useMemo)((() => CA(ab.before, ab.after)), [ab]),
+    Yb = [];
+  for (let Ab = 0; Ab < Mb.length; Ab++) {
+    if ("same" !== Mb[Ab].kind) {
+      Yb.push(Mb[Ab]);
       continue
     }
-    let bb = kb;
-    for (; bb + 1 < Wb.length && "same" === Wb[bb + 1].kind;) bb++;
-    const cb = Wb.slice(kb, bb + 1),
-      sb = 0 === kb ? 0 : 2,
-      ab = bb === Wb.length - 1 ? 0 : 2;
-    cb.length > sb + ab + 1 ? Ub.push(...cb.slice(0, sb), {
+    let bb = Ab;
+    for (; bb + 1 < Mb.length && "same" === Mb[bb + 1].kind;) bb++;
+    const ab = Mb.slice(Ab, bb + 1),
+      Ub = 0 === Ab ? 0 : 2,
+      Tb = bb === Mb.length - 1 ? 0 : 2;
+    ab.length > Ub + Tb + 1 ? Yb.push(...ab.slice(0, Ub), {
       kind: "fold",
-      count: cb.length - sb - ab
-    }, ...cb.slice(cb.length - ab)) : Ub.push(...cb), kb = bb
+      count: ab.length - Ub - Tb
+    }, ...ab.slice(ab.length - Tb)) : Yb.push(...ab), Ab = bb
   }
-  return (0, Tb.jsx)("pre", {
+  return (0, Eb.jsx)("pre", {
     className: "WorldCodeAiDiff",
-    children: Ub.map(((bb, cb) => {
-      if ("fold" === bb.kind) return (0, Tb.jsxs)("div", {
+    children: Yb.map(((bb, ab) => {
+      if ("fold" === bb.kind) return (0, Eb.jsxs)("div", {
         className: "WorldCodeAiDiffFold",
         children: ["\u22ef ", bb.count, " unchanged lines"]
-      }, cb);
-      const kb = "added" === bb.kind ? function(bb, cb) {
-          if (cb) return bb.includes(`"${cb}"`) ? `"${cb}"` : bb.includes(cb) ? cb : void 0
-        }(bb.text, sb) : void 0,
-        Wb = kb ? bb.text.indexOf(kb) : -1;
-      return (0, Tb.jsxs)("div", {
-        className: ab()("WorldCodeAiDiffLine", `WorldCodeAiDiff-${bb.kind}`, kb && "WorldCodeAiDiff-marked"),
-        children: [(0, Tb.jsx)("span", {
+      }, ab);
+      const Ab = "added" === bb.kind ? function(bb, ab) {
+          if (ab) return bb.includes(`"${ab}"`) ? `"${ab}"` : bb.includes(ab) ? ab : void 0
+        }(bb.text, Ub) : void 0,
+        Mb = Ab ? bb.text.indexOf(Ab) : -1;
+      return (0, Eb.jsxs)("div", {
+        className: Tb()("WorldCodeAiDiffLine", `WorldCodeAiDiff-${bb.kind}`, Ab && "WorldCodeAiDiff-marked"),
+        children: [(0, Eb.jsx)("span", {
           className: "WorldCodeAiDiffMark",
           children: "added" === bb.kind ? "+" : "removed" === bb.kind ? "\u2212" : " "
-        }), (0, Tb.jsx)("span", {
+        }), (0, Eb.jsx)("span", {
           className: "WorldCodeAiDiffText",
-          children: kb ? (0, Tb.jsxs)(Tb.Fragment, {
-            children: [bb.text.slice(0, Wb), (0, Tb.jsx)("mark", {
-              children: kb
-            }), bb.text.slice(Wb + kb.length)]
+          children: Ab ? (0, Eb.jsxs)(Eb.Fragment, {
+            children: [bb.text.slice(0, Mb), (0, Eb.jsx)("mark", {
+              children: Ab
+            }), bb.text.slice(Mb + Ab.length)]
           }) : bb.text || " "
         })]
-      }, cb)
+      }, ab)
     }))
   })
 }));
 
-function IH(bb) {
-  var cb, sb;
+function Te(bb) {
+  var ab, Ub;
   if ("undefined" === typeof BroadcastChannel) return;
-  const kb = new BroadcastChannel(bb);
-  return null === (cb = (sb = kb).unref) || void 0 === cb || cb.call(sb), {
+  const Ab = new BroadcastChannel(bb);
+  return null === (ab = (Ub = Ab).unref) || void 0 === ab || ab.call(Ub), {
     post: bb => {
-      kb.postMessage(bb)
+      Ab.postMessage(bb)
     },
     listen: bb => {
-      const cb = cb => {
-        "string" === typeof cb.data && bb(cb.data)
+      const ab = ab => {
+        "string" === typeof ab.data && bb(ab.data)
       };
-      return kb.addEventListener("message", cb), () => {
-        kb.removeEventListener("message", cb)
+      return Ab.addEventListener("message", ab), () => {
+        Ab.removeEventListener("message", ab)
       }
     }
   }
 }
 
-function HH(bb) {
+function Ee(bb) {
   return Array.isArray(bb) && bb.every((bb => {
     if ("object" !== typeof bb || null === bb || !("id" in bb) || !("at" in bb) || !("label" in bb) || !("files" in bb)) return !1;
-    const cb = bb.files;
-    return "object" === typeof cb && null !== cb && Object.values(cb).every((bb => "string" === typeof bb))
+    const ab = bb.files;
+    return "object" === typeof ab && null !== ab && Object.values(ab).every((bb => "string" === typeof bb))
   }))
 }
 
-function fH(bb, cb) {
-  return cb ? function(bb, cb) {
-    if (!cb) return [...bb];
-    const sb = new Map;
-    for (const kb of [...cb, ...bb]) sb.set(kb.id, kb);
-    return [...sb.values()].sort(((bb, cb) => bb.at - cb.at || bb.id - cb.id)).slice(-30)
-  }(cb, bb) : [...bb]
+function Ye(bb, ab) {
+  return ab ? function(bb, ab) {
+    if (!ab) return [...bb];
+    const Ub = new Map;
+    for (const Ab of [...ab, ...bb]) Ub.set(Ab.id, Ab);
+    return [...Ub.values()].sort(((bb, ab) => bb.at - ab.at || bb.id - ab.id)).slice(-30)
+  }(ab, bb) : [...bb]
 }
 
-function MH(bb, cb) {
-  let sb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-  const kb = new Date(bb).toLocaleTimeString("en-US", {
+function Be(bb, ab) {
+  let Ub = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+  const Ab = new Date(bb).toLocaleTimeString("en-US", {
       hour: "numeric",
       minute: "2-digit",
-      ...sb ? {
+      ...Ub ? {
         second: "2-digit"
       } : {}
     }).toLowerCase(),
-    Wb = bb => new Date(bb).toDateString();
-  return Wb(bb) === Wb(cb) ? kb : Wb(bb) === Wb(cb - 864e5) ? `yesterday ${kb}` : function(bb, cb) {
-    const sb = Math.floor((cb - bb) / 6e4);
-    if (sb < 1) return "just now";
-    if (sb < 60) return `${sb} min ago`;
-    const kb = Math.floor(sb / 60);
-    if (kb < 24) return `${kb} h ago`;
-    const Wb = Math.floor(kb / 24);
-    return 1 === Wb ? "1 day ago" : `${Wb} days ago`
-  }(bb, cb)
+    Mb = bb => new Date(bb).toDateString();
+  return Mb(bb) === Mb(ab) ? Ab : Mb(bb) === Mb(ab - 864e5) ? `yesterday ${Ab}` : function(bb, ab) {
+    const Ub = Math.floor((ab - bb) / 6e4);
+    if (Ub < 1) return "just now";
+    if (Ub < 60) return `${Ub} min ago`;
+    const Ab = Math.floor(Ub / 60);
+    if (Ab < 24) return `${Ab} h ago`;
+    const Mb = Math.floor(Ab / 24);
+    return 1 === Mb ? "1 day ago" : `${Mb} days ago`
+  }(bb, ab)
 }
 
-function XH(bb, cb) {
-  return [...new Set([...Object.keys(cb), ...Object.keys(bb.files)])].flatMap((sb => {
-    var kb, Wb;
-    const ab = null !== (kb = bb.files[sb]) && void 0 !== kb ? kb : "";
-    return (null !== (Wb = cb[sb]) && void 0 !== Wb ? Wb : "") === ab ? [] : [{
-      path: sb,
-      text: ab
+function ee(bb, ab) {
+  return [...new Set([...Object.keys(ab), ...Object.keys(bb.files)])].flatMap((Ub => {
+    var Ab, Mb;
+    const Tb = null !== (Ab = bb.files[Ub]) && void 0 !== Ab ? Ab : "";
+    return (null !== (Mb = ab[Ub]) && void 0 !== Mb ? Mb : "") === Tb ? [] : [{
+      path: Ub,
+      text: Tb
     }]
   }))
 }
 
-function nH(bb) {
-  let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 120;
-  if (bb.length <= cb) return null;
-  const sb = bb.slice(0, cb),
-    kb = sb.lastIndexOf(" ");
-  return `${(kb>cb/2?sb.slice(0,kb):sb).replace(/[\s,;:.]+$/,"")}\u2026`
+function ve(bb) {
+  let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 120;
+  if (bb.length <= ab) return null;
+  const Ub = bb.slice(0, ab),
+    Ab = Ub.lastIndexOf(" ");
+  return `${(Ab>ab/2?Ub.slice(0,Ab):Ub).replace(/[\s,;:.]+$/,"")}\u2026`
 }
 
-function mH(bb) {
+function Le(bb) {
   let {
-    snapshot: cb,
-    files: sb,
-    now: Wb,
-    withSeconds: Ub,
-    onRestore: Ib
+    snapshot: ab,
+    files: Ub,
+    now: Mb,
+    withSeconds: Yb,
+    onRestore: Bb
   } = bb;
-  const [Hb, fb] = (0, kb.useState)(!1), [Mb, Xb] = (0, kb.useState)(!1), nb = cb.did ? `Before: ${cb.did}` : cb.label, mb = nH(nb), lb = cb.did && cb.label.startsWith('Before "') ? cb.label.slice(7) : null, Qb = null === lb ? null : nH(lb, 50), eb = null !== Qb && null !== lb && void 0 !== lb && lb.startsWith('"') ? `${Qb}"` : Qb, Cb = (0, kb.useRef)(null);
-  (0, kb.useEffect)((() => {
-    const bb = Cb.current,
-      cb = null === bb || void 0 === bb ? void 0 : bb.closest(".WorldCodeAiMessages");
-    if (!Hb || !bb || !cb) return;
-    const sb = cb.getBoundingClientRect(),
-      kb = bb.getBoundingClientRect(),
-      Wb = kb.bottom - (sb.bottom - 28),
-      ab = kb.top - (sb.top + 16);
-    Wb > 0 && cb.scrollBy({
-      top: Math.min(Wb, ab),
+  const [eb, vb] = (0, Ab.useState)(!1), [Lb, Pb] = (0, Ab.useState)(!1), Xb = ab.did ? `Before: ${ab.did}` : ab.label, jb = ve(Xb), Rb = ab.did && ab.label.startsWith('Before "') ? ab.label.slice(7) : null, kb = null === Rb ? null : ve(Rb, 50), yb = null !== kb && null !== Rb && void 0 !== Rb && Rb.startsWith('"') ? `${kb}"` : kb, Zb = (0, Ab.useRef)(null);
+  (0, Ab.useEffect)((() => {
+    const bb = Zb.current,
+      ab = null === bb || void 0 === bb ? void 0 : bb.closest(".WorldCodeAiMessages");
+    if (!eb || !bb || !ab) return;
+    const Ub = ab.getBoundingClientRect(),
+      Ab = bb.getBoundingClientRect(),
+      Mb = Ab.bottom - (Ub.bottom - 28),
+      Tb = Ab.top - (Ub.top + 16);
+    Mb > 0 && ab.scrollBy({
+      top: Math.min(Mb, Tb),
       behavior: "smooth"
     })
-  }), [Hb]);
-  const Nb = (0, kb.useRef)(null),
-    [Vb, Lb] = (0, kb.useState)(!1),
-    ub = (0, kb.useCallback)((() => {
-      const bb = Nb.current;
-      Lb(null !== bb && bb.scrollTop + bb.clientHeight >= bb.scrollHeight - 24)
+  }), [eb]);
+  const Db = (0, Ab.useRef)(null),
+    [zb, xb] = (0, Ab.useState)(!1),
+    ib = (0, Ab.useCallback)((() => {
+      const bb = Db.current;
+      xb(null !== bb && bb.scrollTop + bb.clientHeight >= bb.scrollHeight - 24)
     }), []);
-  (0, kb.useEffect)((() => {
-    Hb && ub()
-  }), [Hb, ub]);
-  const Yb = (0, kb.useMemo)((() => [...new Set([...Object.keys(cb.files), ...Object.keys(sb)])].flatMap((bb => {
-    var kb, Wb;
-    const ab = null !== (kb = cb.files[bb]) && void 0 !== kb ? kb : "",
-      Tb = null !== (Wb = sb[bb]) && void 0 !== Wb ? Wb : "";
-    return ab === Tb ? [] : [{
+  (0, Ab.useEffect)((() => {
+    eb && ib()
+  }), [eb, ib]);
+  const fb = (0, Ab.useMemo)((() => [...new Set([...Object.keys(ab.files), ...Object.keys(Ub)])].flatMap((bb => {
+    var Ab, Mb;
+    const Tb = null !== (Ab = ab.files[bb]) && void 0 !== Ab ? Ab : "",
+      Eb = null !== (Mb = Ub[bb]) && void 0 !== Mb ? Mb : "";
+    return Tb === Eb ? [] : [{
       path: bb,
-      before: ab,
-      after: Tb
+      before: Tb,
+      after: Eb
     }]
-  }))), [cb, sb]);
-  return (0, Tb.jsxs)("li", {
-    ref: Cb,
+  }))), [ab, Ub]);
+  return (0, Eb.jsxs)("li", {
+    ref: Zb,
     className: "WorldCodeAiSnapshot",
-    children: [(0, Tb.jsxs)("div", {
+    children: [(0, Eb.jsxs)("div", {
       className: "WorldCodeAiSnapshotRow",
-      children: [(0, Tb.jsxs)("span", {
+      children: [(0, Eb.jsxs)("span", {
         className: "WorldCodeAiSnapshotLabel",
-        children: [Mb || !mb ? nb : mb, (mb || eb) && (0, Tb.jsx)("button", {
+        children: [Lb || !jb ? Xb : jb, (jb || yb) && (0, Eb.jsx)("button", {
           className: "WorldCodeAiLinkButton WorldCodeAiSnapshotMore",
-          "aria-expanded": Mb,
+          "aria-expanded": Lb,
           onClick: () => {
-            Xb(!Mb)
+            Pb(!Lb)
           },
-          children: Mb ? "less" : "more"
-        }), (0, Tb.jsxs)("span", {
+          children: Lb ? "less" : "more"
+        }), (0, Eb.jsxs)("span", {
           className: "WorldCodeAiSnapshotAge",
-          children: [" \xb7 ", MH(cb.at, Wb, Ub)]
-        }), null !== lb && (0, Tb.jsxs)("span", {
+          children: [" \xb7 ", Be(ab.at, Mb, Yb)]
+        }), null !== Rb && (0, Eb.jsxs)("span", {
           className: "WorldCodeAiSnapshotAsked",
-          children: ["You asked: ", Mb || !eb ? lb : eb]
+          children: ["You asked: ", Lb || !yb ? Rb : yb]
         })]
-      }), Yb.length > 0 && (0, Tb.jsx)("button", {
+      }), fb.length > 0 && (0, Eb.jsx)("button", {
         className: "WorldCodeAiLinkButton",
         onClick: () => {
-          fb(!Hb)
+          vb(!eb)
         },
-        children: Hb ? "Hide" : "Compare"
-      }), Yb.length > 0 && Ib && (0, Tb.jsx)("button", {
+        children: eb ? "Hide" : "Compare"
+      }), fb.length > 0 && Bb && (0, Eb.jsx)("button", {
         className: "WorldCodeAiSecondaryButton",
-        onClick: Ib,
+        onClick: Bb,
         children: "Go back to this code"
-      }), 0 === Yb.length && (0, Tb.jsx)("span", {
+      }), 0 === fb.length && (0, Eb.jsx)("span", {
         className: "WorldCodeAiSnapshotNow",
         children: "Same as your code now"
       })]
-    }), Hb && (0, Tb.jsxs)("div", {
+    }), eb && (0, Eb.jsxs)("div", {
       className: "WorldCodeAiChanges",
-      children: [(0, Tb.jsx)("p", {
+      children: [(0, Eb.jsx)("p", {
         className: "WorldCodeAiSnapshotCompareNote",
         children: "What changed since then:"
-      }), (0, Tb.jsx)("div", {
-        ref: Nb,
-        className: ab()("WorldCodeAiSnapshotCompare", Vb && "WorldCodeAiSnapshotCompare-end"),
-        onScroll: ub,
-        children: Yb.map((bb => (0, Tb.jsxs)("div", {
+      }), (0, Eb.jsx)("div", {
+        ref: Db,
+        className: Tb()("WorldCodeAiSnapshotCompare", zb && "WorldCodeAiSnapshotCompare-end"),
+        onScroll: ib,
+        children: fb.map((bb => (0, Eb.jsxs)("div", {
           className: "WorldCodeAiChange",
-          children: [(0, Tb.jsx)("div", {
+          children: [(0, Eb.jsx)("div", {
             className: "WorldCodeAiChangeHeader",
-            children: (0, Tb.jsx)("span", {
+            children: (0, Eb.jsx)("span", {
               className: "WorldCodeAiChangePath",
               children: bb.path
             })
-          }), (0, Tb.jsx)(UH, {
+          }), (0, Eb.jsx)(Me, {
             change: bb
           })]
         }, bb.path)))
@@ -10725,34 +10725,34 @@ function mH(bb) {
   })
 }
 
-function lH(bb) {
+function Pe(bb) {
   let {
-    snapshots: cb,
-    files: sb,
-    now: kb,
-    onRestore: Wb
+    snapshots: ab,
+    files: Ub,
+    now: Ab,
+    onRestore: Mb
   } = bb;
-  return (0, Tb.jsxs)("div", {
+  return (0, Eb.jsxs)("div", {
     className: "WorldCodeAiHistory",
-    children: [(0, Tb.jsx)("div", {
+    children: [(0, Eb.jsx)("div", {
       className: "WorldCodeAiHistoryTitle",
-      children: (0, Tb.jsx)("span", {
+      children: (0, Eb.jsx)("span", {
         children: "Your code before each change"
       })
-    }), 0 === cb.length ? (0, Tb.jsx)("p", {
+    }), 0 === ab.length ? (0, Eb.jsx)("p", {
       className: "WorldCodeAiHint",
       children: "Nothing here yet. Each time a change goes into your code, your code from before it is kept here."
-    }) : (0, Tb.jsx)("ul", {
+    }) : (0, Eb.jsx)("ul", {
       className: "WorldCodeAiSnapshots",
-      children: [...cb].reverse().map((bb => {
-        const ab = cb.some((cb => cb.id !== bb.id && MH(cb.at, kb) === MH(bb.at, kb)));
-        return (0, Tb.jsx)(mH, {
+      children: [...ab].reverse().map((bb => {
+        const Tb = ab.some((ab => ab.id !== bb.id && Be(ab.at, Ab) === Be(bb.at, Ab)));
+        return (0, Eb.jsx)(Le, {
           snapshot: bb,
-          files: sb,
-          now: kb,
-          withSeconds: ab,
-          onRestore: Wb && (() => {
-            Wb(bb)
+          files: Ub,
+          now: Ab,
+          withSeconds: Tb,
+          onRestore: Mb && (() => {
+            Mb(bb)
           })
         }, bb.id)
       }))
@@ -10760,99 +10760,99 @@ function lH(bb) {
   })
 }
 
-function QH(bb) {
+function Xe(bb) {
   let {
-    notes: cb,
-    outline: sb,
-    ZN: Wb,
-    onDelete: ab
+    notes: ab,
+    outline: Ub,
+    uZ: Mb,
+    onDelete: Tb
   } = bb;
-  const [Ub, Ib] = (0, kb.useState)(""), [Hb, fb] = (0, kb.useState)(null), [Mb, Xb] = (0, kb.useState)(!1), nb = cb.length >= 8, mb = sb.callbacks.length + sb.commands.length + sb.functions.length > 0;
-  return (0, Tb.jsxs)("div", {
+  const [Yb, Bb] = (0, Ab.useState)(""), [eb, vb] = (0, Ab.useState)(null), [Lb, Pb] = (0, Ab.useState)(!1), Xb = ab.length >= 8, jb = Ub.callbacks.length + Ub.commands.length + Ub.functions.length > 0;
+  return (0, Eb.jsxs)("div", {
     className: "WorldCodeAiHistory WorldCodeAiAbout",
-    children: [(0, Tb.jsx)("div", {
+    children: [(0, Eb.jsx)("div", {
       className: "WorldCodeAiHistoryTitle",
-      children: (0, Tb.jsx)("span", {
+      children: (0, Eb.jsx)("span", {
         children: "AI notes"
       })
-    }), (0, Tb.jsx)("p", {
+    }), (0, Eb.jsx)("p", {
       className: "WorldCodeAiAboutNote",
       children: "The AI reads these notes with every request, so it remembers what your game is."
-    }), 0 === cb.length && (0, Tb.jsx)("p", {
+    }), 0 === ab.length && (0, Eb.jsx)("p", {
       className: "WorldCodeAiHint",
       children: 'No notes yet. Add one, like "Two teams, red and blue, race to the flag".'
-    }), (0, Tb.jsx)("ul", {
+    }), (0, Eb.jsx)("ul", {
       className: "WorldCodeAiAboutList",
-      children: cb.map((bb => (0, Tb.jsxs)("li", {
-        children: [(0, Tb.jsx)("span", {
+      children: ab.map((bb => (0, Eb.jsxs)("li", {
+        children: [(0, Eb.jsx)("span", {
           children: bb
-        }), (0, Tb.jsx)("button", {
+        }), (0, Eb.jsx)("button", {
           className: "WorldCodeAiLinkButton",
           "aria-label": `Delete note: ${bb}`,
           onClick: () => {
-            ab(bb)
+            Tb(bb)
           },
           children: "Delete"
         })]
       }, bb)))
-    }), Wb && !nb && (0, Tb.jsxs)("form", {
+    }), Mb && !Xb && (0, Eb.jsxs)("form", {
       className: "WorldCodeAiQuestionOther",
       onSubmit: bb => {
-        bb.preventDefault(), "" === Ub.trim() || Mb || (Xb(!0), fb(null), Wb(Ub).then((bb => {
-          fb(bb), null === bb && Ib("")
+        bb.preventDefault(), "" === Yb.trim() || Lb || (Pb(!0), vb(null), Mb(Yb).then((bb => {
+          vb(bb), null === bb && Bb("")
         })).catch((() => {
-          fb("That note couldn't be kept. Try again.")
+          vb("That note couldn't be kept. Try again.")
         })).finally((() => {
-          Xb(!1)
+          Pb(!1)
         })))
       },
-      children: [(0, Tb.jsx)("input", {
+      children: [(0, Eb.jsx)("input", {
         className: "WorldCodeAiInput WorldCodeAiQuestionInput",
-        value: Ub,
-        maxLength: jb,
+        value: Yb,
+        maxLength: nb,
         placeholder: "Add a note about your game",
         "aria-label": "Add a note about your game",
         onChange: bb => {
-          Ib(bb.target.value)
+          Bb(bb.target.value)
         },
         onKeyDown: bb => {
           bb.stopPropagation()
         }
-      }), (0, Tb.jsx)("button", {
+      }), (0, Eb.jsx)("button", {
         className: "WorldCodeAiSecondaryButton",
         type: "submit",
-        disabled: "" === Ub.trim() || Mb,
-        children: Mb ? "Adding\u2026" : "Add"
+        disabled: "" === Yb.trim() || Lb,
+        children: Lb ? "Adding\u2026" : "Add"
       })]
-    }), nb && (0, Tb.jsxs)("p", {
+    }), Xb && (0, Eb.jsxs)("p", {
       className: "WorldCodeAiHint",
       children: ["That's ", 8, " notes, the most it keeps: delete one to add another."]
-    }), Hb && (0, Tb.jsx)("p", {
+    }), eb && (0, Eb.jsx)("p", {
       className: "WorldCodeAiAboutError",
-      children: Hb
-    }), (0, Tb.jsx)("p", {
+      children: eb
+    }), (0, Eb.jsx)("p", {
       className: "WorldCodeAiAboutHeading",
       children: "In your code now"
-    }), mb ? (0, Tb.jsxs)("ul", {
+    }), jb ? (0, Eb.jsxs)("ul", {
       className: "WorldCodeAiOutline",
-      children: [sb.callbacks.map((bb => (0, Tb.jsxs)("li", {
-        children: [ac(bb), " ", (0, Tb.jsx)("code", {
+      children: [Ub.callbacks.map((bb => (0, Eb.jsxs)("li", {
+        children: [Ta(bb), " ", (0, Eb.jsx)("code", {
           children: bb
         })]
-      }, bb))), sb.commands.length > 0 && (0, Tb.jsxs)("li", {
-        children: ["Chat commands: ", sb.commands.join(", ")]
-      }), sb.functions.length > 0 && (0, Tb.jsxs)("li", {
-        children: ["Your own functions: ", (0, Tb.jsx)("code", {
-          children: sb.functions.join(", ")
+      }, bb))), Ub.commands.length > 0 && (0, Eb.jsxs)("li", {
+        children: ["Chat commands: ", Ub.commands.join(", ")]
+      }), Ub.functions.length > 0 && (0, Eb.jsxs)("li", {
+        children: ["Your own functions: ", (0, Eb.jsx)("code", {
+          children: Ub.functions.join(", ")
         })]
       })]
-    }) : (0, Tb.jsx)("p", {
+    }) : (0, Eb.jsx)("p", {
       className: "WorldCodeAiHint",
       children: "Nothing yet. Ask the AI to make something."
     })]
   })
 }
-const eH = {
+const je = {
   asked: "Remember this about your game?",
   pending: "A note to remember, once the change is in",
   checking: "Saving a note\u2026",
@@ -10861,42 +10861,42 @@ const eH = {
   refused: "Note not saved"
 };
 
-function CH(bb) {
+function Re(bb) {
   let {
-    note: cb,
-    status: sb,
-    onAnswer: kb,
-    isPartLeftOut: Wb = !1,
-    defaultOpen: ab
+    note: ab,
+    status: Ub,
+    onAnswer: Ab,
+    isPartLeftOut: Mb = !1,
+    defaultOpen: Tb
   } = bb;
-  const Ib = Wb && ("asked" === sb || "pending" === sb);
-  return (0, Tb.jsxs)("div", {
+  const Bb = Mb && ("asked" === Ub || "pending" === Ub);
+  return (0, Eb.jsxs)("div", {
     className: "WorldCodeAiToolCard",
-    children: [(0, Tb.jsxs)(Ub, {
-      title: eH[sb],
-      isCalm: "refused" !== sb,
-      defaultOpen: ab,
-      children: [Ib && (0, Tb.jsx)("p", {
+    children: [(0, Eb.jsxs)(Yb, {
+      title: je[Ub],
+      isCalm: "refused" !== Ub,
+      defaultOpen: Tb,
+      children: [Bb && (0, Eb.jsx)("p", {
         children: "The note to remember is hidden while a part is unticked. Tick every part to see it."
-      }), !Ib && (0, Tb.jsxs)("p", {
-        children: ['"', cb, '"']
-      }), !Ib && "pending" === sb && (0, Tb.jsx)("p", {
+      }), !Bb && (0, Eb.jsxs)("p", {
+        children: ['"', ab, '"']
+      }), !Bb && "pending" === Ub && (0, Eb.jsx)("p", {
         children: "It goes into AI notes once the change is in."
-      }), "refused" === sb && (0, Tb.jsx)("p", {
+      }), "refused" === Ub && (0, Eb.jsx)("p", {
         children: "This note can't be saved. Notes are only about your game."
       })]
-    }), !Ib && "asked" === sb && kb && (0, Tb.jsxs)("div", {
+    }), !Bb && "asked" === Ub && Ab && (0, Eb.jsxs)("div", {
       className: "WorldCodeAiChangeActions",
-      children: [(0, Tb.jsx)("button", {
+      children: [(0, Eb.jsx)("button", {
         className: "WorldCodeAiPrimaryButton",
         onClick: () => {
-          kb(!0)
+          Ab(!0)
         },
         children: "Yes, remember it"
-      }), (0, Tb.jsx)("button", {
+      }), (0, Eb.jsx)("button", {
         className: "WorldCodeAiSecondaryButton",
         onClick: () => {
-          kb(!1)
+          Ab(!1)
         },
         children: "No"
       })]
@@ -10904,148 +10904,148 @@ function CH(bb) {
   })
 }
 
-function NH(bb) {
+function ke(bb) {
   let {
-    steps: cb,
-    built: sb,
-    done: kb,
-    onBuild: Wb
+    steps: ab,
+    built: Ub,
+    done: Ab,
+    onBuild: Mb
   } = bb;
-  return (0, Tb.jsxs)("div", {
+  return (0, Eb.jsxs)("div", {
     className: "WorldCodeAiQuestion WorldCodeAiPlan",
-    children: [(0, Tb.jsx)("p", {
+    children: [(0, Eb.jsx)("p", {
       className: "WorldCodeAiQuestionText",
       children: "The plan: one step at a time"
-    }), (0, Tb.jsx)("ol", {
+    }), (0, Eb.jsx)("ol", {
       className: "WorldCodeAiPlanSteps",
-      children: cb.map(((bb, cb) => (0, Tb.jsxs)("li", {
-        className: cb < kb ? "WorldCodeAiPlanStep-built" : void 0,
-        children: [cb < kb && (0, Tb.jsx)("span", {
+      children: ab.map(((bb, ab) => (0, Eb.jsxs)("li", {
+        className: ab < Ab ? "WorldCodeAiPlanStep-built" : void 0,
+        children: [ab < Ab && (0, Eb.jsx)("span", {
           className: "WorldCodeAiPlanTick",
           children: "\u2713 "
-        }), bb, cb < sb && cb >= kb && (0, Tb.jsx)("span", {
+        }), bb, ab < Ub && ab >= Ab && (0, Eb.jsx)("span", {
           className: "WorldCodeAiPlanAsked",
           children: " (apply it to tick it off)"
         })]
-      }, `${cb}:${bb}`)))
-    }), sb < cb.length && kb < sb && (0, Tb.jsxs)("span", {
+      }, `${ab}:${bb}`)))
+    }), Ub < ab.length && Ab < Ub && (0, Eb.jsxs)("span", {
       className: "WorldCodeAiHint",
-      children: ["Apply ", sb - kb > 1 ? `steps ${kb+1} to ${sb}` : `step ${sb}`, " to your code and try it, then build step ", sb + 1, "."]
-    }), sb < cb.length && Wb && (0, Tb.jsx)("button", {
-      ...eI.e,
-      className: kb < sb ? "WorldCodeAiLinkButton" : "WorldCodeAiPrimaryButton",
+      children: ["Apply ", Ub - Ab > 1 ? `steps ${Ab+1} to ${Ub}` : `step ${Ub}`, " to your code and try it, then build step ", Ub + 1, "."]
+    }), Ub < ab.length && Mb && (0, Eb.jsx)("button", {
+      ...jB.g,
+      className: Ab < Ub ? "WorldCodeAiLinkButton" : "WorldCodeAiPrimaryButton",
       onClick: () => {
-        Wb(sb)
+        Mb(Ub)
       },
-      children: kb < sb ? `Build step ${sb+1} anyway` : `Build step ${sb+1}`
-    }), sb < cb.length && sb > 0 && kb >= sb && (0, Tb.jsx)("span", {
+      children: Ab < Ub ? `Build step ${Ub+1} anyway` : `Build step ${Ub+1}`
+    }), Ub < ab.length && Ub > 0 && Ab >= Ub && (0, Eb.jsx)("span", {
       className: "WorldCodeAiHint",
       children: "Try each step in your world before the next."
-    }), sb === cb.length && (0, Tb.jsx)("span", {
+    }), Ub === ab.length && (0, Eb.jsx)("span", {
       className: "WorldCodeAiHint",
       children: "Every step is asked for."
     })]
   })
 }
 
-function VH(bb, cb, sb) {
-  return `${bb}\n\nYou asked me: "${cb}" ${null===sb?"I don't mind: choose what works best.":`My answer: ${sb.replace(/\.$/,"")}.`} Build it now, without asking again.`
+function ye(bb, ab, Ub) {
+  return `${bb}\n\nYou asked me: "${ab}" ${null===Ub?"I don't mind: choose what works best.":`My answer: ${Ub.replace(/\.$/,"")}.`} Build it now, without asking again.`
 }
 
-function LH(bb) {
+function Ze(bb) {
   let {
-    question: cb,
-    onAnswer: sb,
-    ownAnswerBelow: Wb = !1
+    question: ab,
+    onAnswer: Ub,
+    ownAnswerBelow: Mb = !1
   } = bb;
-  const [ab, Ub] = (0, kb.useState)("");
-  return (0, Tb.jsxs)("div", {
+  const [Tb, Yb] = (0, Ab.useState)("");
+  return (0, Eb.jsxs)("div", {
     className: "WorldCodeAiQuestion",
-    children: [(0, Tb.jsx)("p", {
+    children: [(0, Eb.jsx)("p", {
       className: "WorldCodeAiQuestionText",
-      children: cb.question
-    }), sb && (0, Tb.jsxs)(Tb.Fragment, {
-      children: [(0, Tb.jsx)("div", {
+      children: ab.question
+    }), Ub && (0, Eb.jsxs)(Eb.Fragment, {
+      children: [(0, Eb.jsx)("div", {
         className: "WorldCodeAiQuestionChoices",
-        children: cb.choices.map(((bb, cb) => (0, kb.createElement)("button", {
-          ...eI.e,
-          key: `${cb}:${bb}`,
+        children: ab.choices.map(((bb, ab) => (0, Ab.createElement)("button", {
+          ...jB.g,
+          key: `${ab}:${bb}`,
           className: "WorldCodeAiQuestionChoice",
           onClick: () => {
-            sb(bb, !1)
+            Ub(bb, !1)
           }
         }, bb)))
-      }), cb.allowOther && Wb && (0, Tb.jsx)("span", {
+      }), ab.allowOther && Mb && (0, Eb.jsx)("span", {
         className: "WorldCodeAiHint",
         children: "Or type your own answer in the box below."
-      }), cb.allowOther && !Wb && (0, Tb.jsxs)("form", {
+      }), ab.allowOther && !Mb && (0, Eb.jsxs)("form", {
         className: "WorldCodeAiQuestionOther",
         onSubmit: bb => {
-          bb.preventDefault(), "" !== ab.trim() && sb(ab.trim(), !0)
+          bb.preventDefault(), "" !== Tb.trim() && Ub(Tb.trim(), !0)
         },
-        children: [(0, Tb.jsx)("input", {
+        children: [(0, Eb.jsx)("input", {
           className: "WorldCodeAiInput",
-          value: ab,
+          value: Tb,
           maxLength: 200,
           placeholder: "Or type your own answer",
           "aria-label": "Your own answer",
           onChange: bb => {
-            Ub(bb.target.value)
+            Yb(bb.target.value)
           },
           onKeyDown: bb => {
             bb.stopPropagation()
           }
-        }), (0, Tb.jsx)("button", {
+        }), (0, Eb.jsx)("button", {
           className: "WorldCodeAiSecondaryButton",
           type: "submit",
-          disabled: "" === ab.trim(),
+          disabled: "" === Tb.trim(),
           children: "Send"
         })]
-      }), (0, Tb.jsx)("button", {
-        ...eI.e,
+      }), (0, Eb.jsx)("button", {
+        ...jB.g,
         className: "WorldCodeAiSecondaryButton WorldCodeAiQuestionAiPicks",
         onClick: () => {
-          sb(null, !1)
+          Ub(null, !1)
         },
         children: "Let the AI pick"
       })]
     })]
   })
 }
-const uH = /^(?:const|let|var)\s+CONFIG\s*=\s*\{/gm;
+const De = /^(?:const|let|var)\s+CONFIG\s*=\s*\{/gm;
 
-function YH(bb, cb) {
-  let sb = 0;
-  for (; sb < cb;) {
-    const kb = bb[sb],
-      Wb = bb[sb + 1];
-    let ab = sb + 1;
-    if ("/" === kb && "/" === Wb) {
-      const cb = bb.indexOf("\n", sb);
-      ab = -1 === cb ? bb.length : cb
-    } else if ("/" === kb && "*" === Wb) {
-      const cb = bb.indexOf("*/", sb + 2);
-      ab = -1 === cb ? bb.length : cb + 2
-    } else if ('"' === kb || "'" === kb || "`" === kb) {
-      for (ab = sb + 1; ab < bb.length && bb[ab] !== kb && ("`" === kb || "\n" !== bb[ab]);) ab += "\\" === bb[ab] ? 2 : 1;
-      ab++
+function ze(bb, ab) {
+  let Ub = 0;
+  for (; Ub < ab;) {
+    const Ab = bb[Ub],
+      Mb = bb[Ub + 1];
+    let Tb = Ub + 1;
+    if ("/" === Ab && "/" === Mb) {
+      const ab = bb.indexOf("\n", Ub);
+      Tb = -1 === ab ? bb.length : ab
+    } else if ("/" === Ab && "*" === Mb) {
+      const ab = bb.indexOf("*/", Ub + 2);
+      Tb = -1 === ab ? bb.length : ab + 2
+    } else if ('"' === Ab || "'" === Ab || "`" === Ab) {
+      for (Tb = Ub + 1; Tb < bb.length && bb[Tb] !== Ab && ("`" === Ab || "\n" !== bb[Tb]);) Tb += "\\" === bb[Tb] ? 2 : 1;
+      Tb++
     }
-    if (ab > cb) return !0;
-    sb = ab
+    if (Tb > ab) return !0;
+    Ub = Tb
   }
   return !1
 }
 
-function hH(bb) {
-  const cb = bb.slice(1, -1);
-  let sb = "";
-  for (let kb = 0; kb < cb.length; kb++) {
-    if ("\\" !== cb[kb]) {
-      sb += cb[kb];
+function xe(bb) {
+  const ab = bb.slice(1, -1);
+  let Ub = "";
+  for (let Ab = 0; Ab < ab.length; Ab++) {
+    if ("\\" !== ab[Ab]) {
+      Ub += ab[Ab];
       continue
     }
-    const bb = cb[++kb],
-      Wb = {
+    const bb = ab[++Ab],
+      Mb = {
         n: "\n",
         t: "\t",
         r: "\r",
@@ -11053,223 +11053,223 @@ function hH(bb) {
         '"': '"',
         "'": "'"
       },
-      ab = "u" === bb ? cb.slice(kb + 1, kb + 5) : "x" === bb ? cb.slice(kb + 1, kb + 3) : "";
-    if (bb in Wb) sb += Wb[bb];
+      Tb = "u" === bb ? ab.slice(Ab + 1, Ab + 5) : "x" === bb ? ab.slice(Ab + 1, Ab + 3) : "";
+    if (bb in Mb) Ub += Mb[bb];
     else {
-      if ("" === ab || !/^[\da-f]+$/i.test(ab) || ab.length !== ("u" === bb ? 4 : 2)) return null;
-      sb += String.fromCharCode(parseInt(ab, 16)), kb += ab.length
+      if ("" === Tb || !/^[\da-f]+$/i.test(Tb) || Tb.length !== ("u" === bb ? 4 : 2)) return null;
+      Ub += String.fromCharCode(parseInt(Tb, 16)), Ab += Tb.length
     }
   }
-  return sb
+  return Ub
 }
 
-function JH(bb) {
-  const cb = function(bb) {
-    uH.lastIndex = 0;
-    for (let cb = uH.exec(bb); cb; cb = uH.exec(bb))
-      if (!YH(bb, cb.index)) return cb;
+function ie(bb) {
+  const ab = function(bb) {
+    De.lastIndex = 0;
+    for (let ab = De.exec(bb); ab; ab = De.exec(bb))
+      if (!ze(bb, ab.index)) return ab;
     return null
   }(bb);
-  if (!cb) return [];
-  const sb = function(bb, cb) {
-    const sb = [];
-    let kb = 0,
-      Wb = cb;
-    for (; Wb < bb.length;) {
-      var ab;
-      const cb = bb[Wb];
-      if (/\s/.test(cb)) {
-        Wb++;
+  if (!ab) return [];
+  const Ub = function(bb, ab) {
+    const Ub = [];
+    let Ab = 0,
+      Mb = ab;
+    for (; Mb < bb.length;) {
+      var Tb;
+      const ab = bb[Mb];
+      if (/\s/.test(ab)) {
+        Mb++;
         continue
       }
-      const Tb = Wb;
-      if ("/" === cb && "/" === bb[Wb + 1]) {
-        const cb = bb.indexOf("\n", Wb);
-        Wb = -1 === cb ? bb.length : cb, sb.push({
+      const Eb = Mb;
+      if ("/" === ab && "/" === bb[Mb + 1]) {
+        const ab = bb.indexOf("\n", Mb);
+        Mb = -1 === ab ? bb.length : ab, Ub.push({
           type: "comment",
-          text: bb.slice(Tb + 2, Wb).trim(),
-          start: Tb,
-          end: Wb
+          text: bb.slice(Eb + 2, Mb).trim(),
+          start: Eb,
+          end: Mb
         });
         continue
       }
-      if ("/" === cb && "*" === bb[Wb + 1]) {
-        const cb = bb.indexOf("*/", Wb + 2);
-        if (-1 === cb) return null;
-        Wb = cb + 2, sb.push({
+      if ("/" === ab && "*" === bb[Mb + 1]) {
+        const ab = bb.indexOf("*/", Mb + 2);
+        if (-1 === ab) return null;
+        Mb = ab + 2, Ub.push({
           type: "comment",
-          text: bb.slice(Tb + 2, cb).trim(),
-          start: Tb,
-          end: Wb
+          text: bb.slice(Eb + 2, ab).trim(),
+          start: Eb,
+          end: Mb
         });
         continue
       }
-      if ('"' === cb || "'" === cb || "`" === cb) {
-        for (Wb++; Wb < bb.length && bb[Wb] !== cb;) {
-          if ("\\" === bb[Wb]) Wb++;
-          else if ("\n" === bb[Wb] && "`" !== cb) return null;
-          Wb++
+      if ('"' === ab || "'" === ab || "`" === ab) {
+        for (Mb++; Mb < bb.length && bb[Mb] !== ab;) {
+          if ("\\" === bb[Mb]) Mb++;
+          else if ("\n" === bb[Mb] && "`" !== ab) return null;
+          Mb++
         }
-        if (Wb >= bb.length) return null;
-        Wb++, sb.push({
-          type: "`" === cb ? "template" : "string",
-          text: bb.slice(Tb, Wb),
-          start: Tb,
-          end: Wb
+        if (Mb >= bb.length) return null;
+        Mb++, Ub.push({
+          type: "`" === ab ? "template" : "string",
+          text: bb.slice(Eb, Mb),
+          start: Eb,
+          end: Mb
         });
         continue
       }
-      const Ub = /^-?(?:\d[\d_]*(?:\.\d+)?|\.\d+)(?:e[+-]?\d+)?\b/i.exec(bb.slice(Wb, Wb + 40));
-      if (Ub && ("-" !== cb || ":" === (null === (ab = sb[sb.length - 1]) || void 0 === ab ? void 0 : ab.text))) {
-        Wb += Ub[0].length, sb.push({
+      const Yb = /^-?(?:\d[\d_]*(?:\.\d+)?|\.\d+)(?:e[+-]?\d+)?\b/i.exec(bb.slice(Mb, Mb + 40));
+      if (Yb && ("-" !== ab || ":" === (null === (Tb = Ub[Ub.length - 1]) || void 0 === Tb ? void 0 : Tb.text))) {
+        Mb += Yb[0].length, Ub.push({
           type: "number",
-          text: Ub[0],
-          start: Tb,
-          end: Wb
+          text: Yb[0],
+          start: Eb,
+          end: Mb
         });
         continue
       }
-      const Ib = /^[A-Za-z_$][\w$]*/.exec(bb.slice(Wb, Wb + 80));
-      if (Ib) Wb += Ib[0].length, sb.push({
+      const Bb = /^[A-Za-z_$][\w$]*/.exec(bb.slice(Mb, Mb + 80));
+      if (Bb) Mb += Bb[0].length, Ub.push({
         type: "word",
-        text: Ib[0],
-        start: Tb,
-        end: Wb
+        text: Bb[0],
+        start: Eb,
+        end: Mb
       });
-      else if (Wb++, sb.push({
+      else if (Mb++, Ub.push({
           type: "punct",
-          text: cb,
-          start: Tb,
-          end: Wb
-        }), "{[(".includes(cb)) kb++;
-      else if ("}])".includes(cb) && (kb--, 0 === kb)) return sb
+          text: ab,
+          start: Eb,
+          end: Mb
+        }), "{[(".includes(ab)) Ab++;
+      else if ("}])".includes(ab) && (Ab--, 0 === Ab)) return Ub
     }
     return null
-  }(bb, cb.index + cb[0].length - 1);
-  if (!sb) return [];
-  const kb = [];
-  let Wb, ab = 1;
-  for (; ab < sb.length - 1;) {
-    var Tb, Ub, Ib, Hb, fb, Mb;
-    const cb = sb[ab];
-    if ("comment" === cb.type) {
-      Wb = cb.text, ab++;
+  }(bb, ab.index + ab[0].length - 1);
+  if (!Ub) return [];
+  const Ab = [];
+  let Mb, Tb = 1;
+  for (; Tb < Ub.length - 1;) {
+    var Eb, Yb, Bb, eb, vb, Lb;
+    const ab = Ub[Tb];
+    if ("comment" === ab.type) {
+      Mb = ab.text, Tb++;
       continue
     }
-    if ("," === cb.text) {
-      ab++;
+    if ("," === ab.text) {
+      Tb++;
       continue
     }
-    const Xb = cb,
-      nb = "word" === Xb.type ? Xb.text : "string" === Xb.type ? hH(Xb.text) : null;
-    if (null === nb || ":" !== (null === (Tb = sb[ab + 1]) || void 0 === Tb ? void 0 : Tb.text)) return [];
-    let mb = ab + 2,
-      lb = 0;
-    const Qb = [];
-    for (; mb < sb.length - 1;) {
-      const bb = sb[mb];
-      if (0 === lb && "," === bb.text) break;
-      "punct" === bb.type && "{[(".includes(bb.text) ? lb++ : "punct" === bb.type && "}])".includes(bb.text) && lb--, "comment" !== bb.type && Qb.push(bb), mb++
+    const Pb = ab,
+      Xb = "word" === Pb.type ? Pb.text : "string" === Pb.type ? xe(Pb.text) : null;
+    if (null === Xb || ":" !== (null === (Eb = Ub[Tb + 1]) || void 0 === Eb ? void 0 : Eb.text)) return [];
+    let jb = Tb + 2,
+      Rb = 0;
+    const kb = [];
+    for (; jb < Ub.length - 1;) {
+      const bb = Ub[jb];
+      if (0 === Rb && "," === bb.text) break;
+      "punct" === bb.type && "{[(".includes(bb.text) ? Rb++ : "punct" === bb.type && "}])".includes(bb.text) && Rb--, "comment" !== bb.type && kb.push(bb), jb++
     }
-    const eb = Qb.at(-1),
-      Cb = "," === (null === (Ub = sb[mb]) || void 0 === Ub ? void 0 : Ub.text) ? sb[mb + 1] : sb.slice(ab + 2, mb).find((bb => "comment" === bb.type && void 0 !== eb && bb.start >= eb.end)),
-      Nb = "comment" !== (null === Cb || void 0 === Cb ? void 0 : Cb.type) || void 0 === eb || bb.slice(eb.end, Cb.start).includes("\n") ? void 0 : Cb.text,
-      Vb = 1 === Qb.length ? Qb[0] : void 0,
-      Lb = null !== Nb && void 0 !== Nb ? Nb : Wb;
-    Wb = void 0;
-    const ub = {
-      key: nb,
-      raw: null !== (Ib = null === Vb || void 0 === Vb ? void 0 : Vb.text) && void 0 !== Ib ? Ib : "",
-      start: null !== (Hb = null === Vb || void 0 === Vb ? void 0 : Vb.start) && void 0 !== Hb ? Hb : 0,
-      end: null !== (fb = null === Vb || void 0 === Vb ? void 0 : Vb.end) && void 0 !== fb ? fb : 0,
-      ...Lb ? {
-        comment: Lb
+    const yb = kb.at(-1),
+      Zb = "," === (null === (Yb = Ub[jb]) || void 0 === Yb ? void 0 : Yb.text) ? Ub[jb + 1] : Ub.slice(Tb + 2, jb).find((bb => "comment" === bb.type && void 0 !== yb && bb.start >= yb.end)),
+      Db = "comment" !== (null === Zb || void 0 === Zb ? void 0 : Zb.type) || void 0 === yb || bb.slice(yb.end, Zb.start).includes("\n") ? void 0 : Zb.text,
+      zb = 1 === kb.length ? kb[0] : void 0,
+      xb = null !== Db && void 0 !== Db ? Db : Mb;
+    Mb = void 0;
+    const ib = {
+      key: Xb,
+      raw: null !== (Bb = null === zb || void 0 === zb ? void 0 : zb.text) && void 0 !== Bb ? Bb : "",
+      start: null !== (eb = null === zb || void 0 === zb ? void 0 : zb.start) && void 0 !== eb ? eb : 0,
+      end: null !== (vb = null === zb || void 0 === zb ? void 0 : zb.end) && void 0 !== vb ? vb : 0,
+      ...xb ? {
+        comment: xb
       } : {}
     };
-    if ("number" === (null === Vb || void 0 === Vb ? void 0 : Vb.type)) {
-      const bb = Number(Vb.text.replace(/_/g, ""));
-      Number.isFinite(bb) && kb.push({
-        ...ub,
+    if ("number" === (null === zb || void 0 === zb ? void 0 : zb.type)) {
+      const bb = Number(zb.text.replace(/_/g, ""));
+      Number.isFinite(bb) && Ab.push({
+        ...ib,
         kind: "number",
         value: bb
       })
-    } else if ("string" === (null === Vb || void 0 === Vb ? void 0 : Vb.type)) {
-      const bb = hH(Vb.text);
-      null !== bb && kb.push({
-        ...ub,
+    } else if ("string" === (null === zb || void 0 === zb ? void 0 : zb.type)) {
+      const bb = xe(zb.text);
+      null !== bb && Ab.push({
+        ...ib,
         kind: "string",
         value: bb
       })
-    } else "word" !== (null === Vb || void 0 === Vb ? void 0 : Vb.type) || "true" !== Vb.text && "false" !== Vb.text || kb.push({
-      ...ub,
+    } else "word" !== (null === zb || void 0 === zb ? void 0 : zb.type) || "true" !== zb.text && "false" !== zb.text || Ab.push({
+      ...ib,
       kind: "boolean",
-      value: "true" === Vb.text
+      value: "true" === zb.text
     });
-    ab = mb, Nb && "," === (null === (Mb = sb[ab]) || void 0 === Mb ? void 0 : Mb.text) && (ab += 2)
+    Tb = jb, Db && "," === (null === (Lb = Ub[Tb]) || void 0 === Lb ? void 0 : Lb.text) && (Tb += 2)
   }
-  return kb.slice(0, 30)
+  return Ab.slice(0, 30)
 }
 
-function gH(bb, cb, sb) {
-  const kb = JH(bb).find((bb => bb.key === cb.key));
-  if (!kb || kb.kind !== cb.kind || kb.raw !== cb.raw) return null;
-  let Wb;
-  if ("number" === cb.kind) {
-    if ("number" !== typeof sb || !Number.isFinite(sb)) return null;
-    Wb = String(Number(sb.toPrecision(12)))
-  } else if ("boolean" === cb.kind) {
-    if ("boolean" !== typeof sb) return null;
-    Wb = sb ? "true" : "false"
+function fe(bb, ab, Ub) {
+  const Ab = ie(bb).find((bb => bb.key === ab.key));
+  if (!Ab || Ab.kind !== ab.kind || Ab.raw !== ab.raw) return null;
+  let Mb;
+  if ("number" === ab.kind) {
+    if ("number" !== typeof Ub || !Number.isFinite(Ub)) return null;
+    Mb = String(Number(Ub.toPrecision(12)))
+  } else if ("boolean" === ab.kind) {
+    if ("boolean" !== typeof Ub) return null;
+    Mb = Ub ? "true" : "false"
   } else {
-    if ("string" !== typeof sb) return null;
-    const bb = cb.raw.startsWith("'") ? "'" : '"',
-      kb = "'" === bb ? '"' : "'";
-    ab = sb, Wb = `${Tb=sb.includes(bb)&&!sb.includes(kb)?kb:bb}${ab.slice(0,200).replace(/\\/g,"\\\\").replace('"'===Tb?/"/g:/'/g,`\\${Tb}`).replace(/\n/g,"\\n").replace(/\r/g,"\\r").replace(/\t/g,"\\t").replace(/\u2028/g,"\\u2028").replace(/\u2029/g,"\\u2029").replace(/[\u0000-\u001f\u007f]/g,(bb=>`\\u${bb.charCodeAt(0).toString(16).padStart(4,"0")}`))}${Tb}`
+    if ("string" !== typeof Ub) return null;
+    const bb = ab.raw.startsWith("'") ? "'" : '"',
+      Ab = "'" === bb ? '"' : "'";
+    Tb = Ub, Mb = `${Eb=Ub.includes(bb)&&!Ub.includes(Ab)?Ab:bb}${Tb.slice(0,200).replace(/\\/g,"\\\\").replace('"'===Eb?/"/g:/'/g,`\\${Eb}`).replace(/\n/g,"\\n").replace(/\r/g,"\\r").replace(/\t/g,"\\t").replace(/\u2028/g,"\\u2028").replace(/\u2029/g,"\\u2029").replace(/[\u0000-\u001f\u007f]/g,(bb=>`\\u${bb.charCodeAt(0).toString(16).padStart(4,"0")}`))}${Eb}`
   }
-  var ab, Tb;
-  return bb.slice(0, kb.start) + Wb + bb.slice(kb.end)
+  var Tb, Eb;
+  return bb.slice(0, Ab.start) + Mb + bb.slice(Ab.end)
 }
 
-function BH(bb) {
+function me(bb) {
   if (!Number.isInteger(bb)) {
-    var cb;
-    const sb = Math.min(3, (null !== (cb = String(bb).split(".")[1]) && void 0 !== cb ? cb : "").length);
-    return 10 ** -Math.max(1, sb)
+    var ab;
+    const Ub = Math.min(3, (null !== (ab = String(bb).split(".")[1]) && void 0 !== ab ? ab : "").length);
+    return 10 ** -Math.max(1, Ub)
   }
-  const sb = Math.abs(bb);
-  return sb >= 100 ? 10 ** (Math.floor(Math.log10(sb)) - 1) : 1
+  const Ub = Math.abs(bb);
+  return Ub >= 100 ? 10 ** (Math.floor(Math.log10(Ub)) - 1) : 1
 }
 
-function tH(bb) {
+function pe(bb) {
   return bb.comment ? bb.comment.charAt(0).toUpperCase() + bb.comment.slice(1) : function(bb) {
-    const cb = bb.replace(/_/g, " ").replace(/([a-z\d])([A-Z])/g, "$1 $2").trim().toLowerCase();
-    return cb.charAt(0).toUpperCase() + cb.slice(1)
+    const ab = bb.replace(/_/g, " ").replace(/([a-z\d])([A-Z])/g, "$1 $2").trim().toLowerCase();
+    return ab.charAt(0).toUpperCase() + ab.slice(1)
   }(bb.key)
 }
 
-function yH(bb) {
+function Ne(bb) {
   return "boolean" === typeof bb ? bb ? "on" : "off" : "number" === typeof bb ? String(bb) : bb.length > 20 ? `\u201c${bb.slice(0,19)}\u2026\u201d` : `\u201c${bb}\u201d`
 }
 
-function PH(bb) {
-  let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "changing";
-  if (0 === bb.length) return `Before ${cb} settings`;
-  const sb = 3 === bb.length ? 3 : 2,
-    kb = bb.slice(0, sb).map((bb => `${bb.name} ${bb.from} \u2192 ${bb.to}`)),
-    Wb = bb.length > sb ? ` and ${bb.length-sb} more` : "";
-  return `Before ${cb} settings: ${kb.join(", ")}${Wb}`
+function We(bb) {
+  let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "changing";
+  if (0 === bb.length) return `Before ${ab} settings`;
+  const Ub = 3 === bb.length ? 3 : 2,
+    Ab = bb.slice(0, Ub).map((bb => `${bb.name} ${bb.from} \u2192 ${bb.to}`)),
+    Mb = bb.length > Ub ? ` and ${bb.length-Ub} more` : "";
+  return `Before ${ab} settings: ${Ab.join(", ")}${Mb}`
 }
-const DH = /^(?:(?:async\s+)?function\s*\*?\s*([A-Za-z_$][\w$]*)|(?:const|let|var)\s+([A-Za-z_$][\w$]*)|([A-Za-z_$][\w$]*)\s*=(?!=))/gm;
+const He = /^(?:(?:async\s+)?function\s*\*?\s*([A-Za-z_$][\w$]*)|(?:const|let|var)\s+([A-Za-z_$][\w$]*)|([A-Za-z_$][\w$]*)\s*=(?!=))/gm;
 
-function EH(bb) {
-  const cb = new Set;
-  for (const Wb of bb.matchAll(DH)) {
-    var sb, kb;
-    cb.add(null !== (sb = null !== (kb = Wb[1]) && void 0 !== kb ? kb : Wb[2]) && void 0 !== sb ? sb : Wb[3])
+function Ie(bb) {
+  const ab = new Set;
+  for (const Mb of bb.matchAll(He)) {
+    var Ub, Ab;
+    ab.add(null !== (Ub = null !== (Ab = Mb[1]) && void 0 !== Ab ? Ab : Mb[2]) && void 0 !== Ub ? Ub : Mb[3])
   }
-  return cb
+  return ab
 }
-const iH = new Map([
+const de = new Map([
     ["tick", ["second", "minute", "timer", "time", "every", "countdown", "wave", "always", "clock"]],
     ["playerCommand", ["command", "/"]],
     ["onPlayerJoin", ["join", "start", "welcome", "spawn", "enter", "arrive"]],
@@ -11292,27 +11292,27 @@ const iH = new Map([
     ["onPlayerDropItem", ["drop"]],
     ["CONFIG", ["setting", "config", "number", "value"]]
   ]),
-  OH = new Set("a an and the to of in on at for with from by as is are be it its it's this that these those my your their our me you they them we i so if then than when while each all any some more most less make makes made let lets get gets add adds added put puts change changes changed use uses using new now also just only can could should would will want like say says said tell tells told show shows game player players someone everyone people thing things code function part bit way one two three".split(" "));
+  Fe = new Set("a an and the to of in on at for with from by as is are be it its it's this that these those my your their our me you they them we i so if then than when while each all any some more most less make makes made let lets get gets add adds added put puts change changes changed use uses using new now also just only can could should would will want like say says said tell tells told show shows game player players someone everyone people thing things code function part bit way one two three".split(" "));
 
-function GH(bb) {
-  return bb.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z0-9/]+/).filter((bb => bb.length >= 3 && !OH.has(bb)))
+function he(bb) {
+  return bb.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z0-9/]+/).filter((bb => bb.length >= 3 && !Fe.has(bb)))
 }
 
-function KH(bb, cb) {
-  return bb.some((bb => cb.some((cb => function(bb, cb) {
-    return bb.startsWith(cb) || cb.startsWith(bb)
-  }(bb, cb)))))
+function Ge(bb, ab) {
+  return bb.some((bb => ab.some((ab => function(bb, ab) {
+    return bb.startsWith(ab) || ab.startsWith(bb)
+  }(bb, ab)))))
 }
 
-function ZH(bb, cb, sb) {
-  const kb = cb.toLowerCase();
-  return bb.names.some((cb => {
-    var Wb;
-    const ab = null !== (Wb = iH.get(cb)) && void 0 !== Wb ? Wb : [];
-    return !!(kb.includes(cb.toLowerCase()) || ab.includes("/") && kb.includes("/")) || KH(sb, [...ab.flatMap(GH), ...GH(bb.plainWords.join(" ")), ...bb.configKeys.flatMap(GH)])
+function Qe(bb, ab, Ub) {
+  const Ab = ab.toLowerCase();
+  return bb.names.some((ab => {
+    var Mb;
+    const Tb = null !== (Mb = de.get(ab)) && void 0 !== Mb ? Mb : [];
+    return !!(Ab.includes(ab.toLowerCase()) || Tb.includes("/") && Ab.includes("/")) || Ge(Ub, [...Tb.flatMap(he), ...he(bb.plainWords.join(" ")), ...bb.configKeys.flatMap(he)])
   }))
 }
-const zH = new Map([
+const qe = new Map([
   ["tick", "Runs all the time"],
   ["playerCommand", "Chat commands like /help"],
   ["onPlayerJoin", "When a player joins"],
@@ -11358,382 +11358,382 @@ const zH = new Map([
   ["onClose", "When the game closes"]
 ]);
 
-function qH(bb) {
-  var cb;
-  return null !== (cb = zH.get(bb)) && void 0 !== cb ? cb : "CONFIG" === bb ? "Settings" : void 0
+function ue(bb) {
+  var ab;
+  return null !== (ab = qe.get(bb)) && void 0 !== ab ? ab : "CONFIG" === bb ? "Settings" : void 0
 }
-zH.keys();
-const dH = /^(?:export\s+)?(?:async\s+)?function\b|^(?:(?:const|let|var)\s+)?\w+\s*=\s*(?:async\s+)?(?:function\b|\([^)]*\)\s*=>|\w+\s*=>)/;
+qe.keys();
+const re = /^(?:export\s+)?(?:async\s+)?function\b|^(?:(?:const|let|var)\s+)?\w+\s*=\s*(?:async\s+)?(?:function\b|\([^)]*\)\s*=>|\w+\s*=>)/;
 
-function AH(bb) {
-  const cb = bb.trim();
-  return "" === cb || /^(?:\/\/|\/\*|\*)/.test(cb)
+function Ke(bb) {
+  const ab = bb.trim();
+  return "" === ab || /^(?:\/\/|\/\*|\*)/.test(ab)
 }
 
-function wH(bb) {
-  const cb = bb.map((bb => bb.replace(/(["'`])(?:\\.|(?!\1).)*\1/g, "").replace(/\/\/.*$/, ""))).join("\n");
+function oe(bb) {
+  const ab = bb.map((bb => bb.replace(/(["'`])(?:\\.|(?!\1).)*\1/g, "").replace(/\/\/.*$/, ""))).join("\n");
   return ["{}", "()", "[]"].every((bb => {
-    let [sb, kb] = bb;
-    return cb.split(sb).length === cb.split(kb).length
+    let [Ub, Ab] = bb;
+    return ab.split(Ub).length === ab.split(Ab).length
   }))
 }
 
-function rH(bb) {
-  const cb = [];
-  let sb = 0;
-  const kb = kb => {
-    if (kb > sb) {
-      var Wb;
-      const ab = bb.slice(sb, kb).find((bb => dH.test(bb)));
-      cb.push({
-        name: void 0 === ab ? null : null !== (Wb = RH(ab)) && void 0 !== Wb ? Wb : null,
-        lines: bb.slice(sb, kb)
-      }), sb = kb
+function le(bb) {
+  const ab = [];
+  let Ub = 0;
+  const Ab = Ab => {
+    if (Ab > Ub) {
+      var Mb;
+      const Tb = bb.slice(Ub, Ab).find((bb => re.test(bb)));
+      ab.push({
+        name: void 0 === Tb ? null : null !== (Mb = se(Tb)) && void 0 !== Mb ? Mb : null,
+        lines: bb.slice(Ub, Ab)
+      }), Ub = Ab
     }
   };
-  for (let Wb = 1; Wb < bb.length; Wb++)
-    if (dH.test(bb[Wb])) {
-      let cb = Wb;
-      for (; cb > sb && AH(bb[cb - 1]);) cb--;
-      kb(cb)
-    } return kb(bb.length), cb
+  for (let Mb = 1; Mb < bb.length; Mb++)
+    if (re.test(bb[Mb])) {
+      let ab = Mb;
+      for (; ab > Ub && Ke(bb[ab - 1]);) ab--;
+      Ab(ab)
+    } return Ab(bb.length), ab
 }
 
-function oH(bb) {
-  const cb = rH(bb.removed),
-    sb = rH(bb.added);
-  if (cb.length + sb.length <= 1) return [bb];
-  const kb = [];
-  let Wb = 0,
-    ab = 0;
-  const Tb = (bb, cb, sb) => cb.slice(sb).some((cb => cb.name === bb));
-  for (; Wb < cb.length || ab < sb.length;)
-    if (Wb < cb.length && ab < sb.length && cb[Wb].name === sb[ab].name) kb.push({
-      removed: cb[Wb++].lines,
-      added: sb[ab++].lines
+function te(bb) {
+  const ab = le(bb.removed),
+    Ub = le(bb.added);
+  if (ab.length + Ub.length <= 1) return [bb];
+  const Ab = [];
+  let Mb = 0,
+    Tb = 0;
+  const Eb = (bb, ab, Ub) => ab.slice(Ub).some((ab => ab.name === bb));
+  for (; Mb < ab.length || Tb < Ub.length;)
+    if (Mb < ab.length && Tb < Ub.length && ab[Mb].name === Ub[Tb].name) Ab.push({
+      removed: ab[Mb++].lines,
+      added: Ub[Tb++].lines
     });
-    else if (Wb < cb.length && !Tb(cb[Wb].name, sb, ab)) kb.push({
-    removed: cb[Wb++].lines,
+    else if (Mb < ab.length && !Eb(ab[Mb].name, Ub, Tb)) Ab.push({
+    removed: ab[Mb++].lines,
     added: []
   });
   else {
-    if (!(ab < sb.length) || Tb(sb[ab].name, cb, Wb)) {
-      kb.push({
-        removed: cb.slice(Wb).flatMap((bb => bb.lines)),
-        added: sb.slice(ab).flatMap((bb => bb.lines))
+    if (!(Tb < Ub.length) || Eb(Ub[Tb].name, ab, Mb)) {
+      Ab.push({
+        removed: ab.slice(Mb).flatMap((bb => bb.lines)),
+        added: Ub.slice(Tb).flatMap((bb => bb.lines))
       });
       break
     }
-    kb.push({
+    Ab.push({
       removed: [],
-      added: sb[ab++].lines
+      added: Ub[Tb++].lines
     })
   }
-  const Ub = [];
-  for (const Ib of kb) {
-    const bb = Ub[Ub.length - 1],
-      cb = [...Ib.removed, ...Ib.added].every(AH);
-    bb && (cb || [...bb.removed, ...bb.added].every(AH)) ? Ub[Ub.length - 1] = {
-      removed: [...bb.removed, ...Ib.removed],
-      added: [...bb.added, ...Ib.added]
-    } : Ub.push(Ib)
+  const Yb = [];
+  for (const Bb of Ab) {
+    const bb = Yb[Yb.length - 1],
+      ab = [...Bb.removed, ...Bb.added].every(Ke);
+    bb && (ab || [...bb.removed, ...bb.added].every(Ke)) ? Yb[Yb.length - 1] = {
+      removed: [...bb.removed, ...Bb.removed],
+      added: [...bb.added, ...Bb.added]
+    } : Yb.push(Bb)
   }
-  return Ub.every((bb => wH(bb.removed) && wH(bb.added))) ? Ub : [bb]
+  return Yb.every((bb => oe(bb.removed) && oe(bb.added))) ? Yb : [bb]
 }
 
-function SH(bb, cb) {
-  const sb = [];
-  for (const ab of Fk(bb, cb)) {
-    const bb = sb[sb.length - 1];
-    "same" === ab.kind ? sb.push({
+function we(bb, ab) {
+  const Ub = [];
+  for (const Tb of CA(bb, ab)) {
+    const bb = Ub[Ub.length - 1];
+    "same" === Tb.kind ? Ub.push({
       kind: "same",
-      text: ab.text
-    }) : "hunk" === (null === bb || void 0 === bb ? void 0 : bb.kind) ? bb[ab.kind].push(ab.text) : sb.push({
+      text: Tb.text
+    }) : "hunk" === (null === bb || void 0 === bb ? void 0 : bb.kind) ? bb[Tb.kind].push(Tb.text) : Ub.push({
       kind: "hunk",
-      removed: "removed" === ab.kind ? [ab.text] : [],
-      added: "added" === ab.kind ? [ab.text] : []
+      removed: "removed" === Tb.kind ? [Tb.text] : [],
+      added: "added" === Tb.kind ? [Tb.text] : []
     })
   }
-  const kb = [];
-  let Wb = 0;
-  for (let ab = 0; ab < sb.length; ab++) {
-    const bb = sb[ab];
+  const Ab = [];
+  let Mb = 0;
+  for (let Tb = 0; Tb < Ub.length; Tb++) {
+    const bb = Ub[Tb];
     if ("same" === bb.kind) {
-      kb.push(bb);
+      Ab.push(bb);
       continue
     }
-    let cb = oH(bb);
-    if (1 === cb.length) {
-      let kb = ab + 1;
-      const Wb = [];
-      for (; kb < sb.length; kb++) {
-        const bb = sb[kb];
+    let ab = te(bb);
+    if (1 === ab.length) {
+      let Ab = Tb + 1;
+      const Mb = [];
+      for (; Ab < Ub.length; Ab++) {
+        const bb = Ub[Ab];
         if ("same" !== bb.kind || !/^[\s})\];,]+$/.test(bb.text)) break;
-        Wb.push(bb.text)
+        Mb.push(bb.text)
       }
-      const Tb = Wb.length > 0 ? oH({
-        removed: [...bb.removed, ...Wb],
-        added: [...bb.added, ...Wb]
-      }) : cb;
-      Tb.length > 1 && (cb = Tb, ab = kb - 1)
+      const Eb = Mb.length > 0 ? te({
+        removed: [...bb.removed, ...Mb],
+        added: [...bb.added, ...Mb]
+      }) : ab;
+      Eb.length > 1 && (ab = Eb, Tb = Ab - 1)
     }
-    for (const sb of cb) kb.push({
+    for (const Ub of ab) Ab.push({
       kind: "hunk",
-      index: Wb++,
-      removed: sb.removed,
-      added: sb.added
+      index: Mb++,
+      removed: Ub.removed,
+      added: Ub.added
     })
   }
-  return kb
+  return Ab
 }
 
-function RH(bb) {
-  var cb, sb;
-  const kb = /^\s*(?:export\s+)?(?:async\s+)?function\s*\*?\s*(\w+)|^\s*(?:export\s+)?(?:const|let|var|class)\s+(\w+)|^(\w+)\s*=(?!=)/.exec(bb);
-  return kb ? null !== (cb = null !== (sb = kb[1]) && void 0 !== sb ? sb : kb[2]) && void 0 !== cb ? cb : kb[3] : void 0
+function se(bb) {
+  var ab, Ub;
+  const Ab = /^\s*(?:export\s+)?(?:async\s+)?function\s*\*?\s*(\w+)|^\s*(?:export\s+)?(?:const|let|var|class)\s+(\w+)|^(\w+)\s*=(?!=)/.exec(bb);
+  return Ab ? null !== (ab = null !== (Ub = Ab[1]) && void 0 !== Ub ? Ub : Ab[2]) && void 0 !== ab ? ab : Ab[3] : void 0
 }
 
-function vH(bb) {
-  const cb = RH(bb);
-  if (!cb || /^\s/.test(bb)) return;
-  return /^(?:export\s+)?(?:async\s+)?function\b/.test(bb) || /=\s*(?:async\s+)?(?:function\b|\(|\w+\s*=>)/.test(bb) || "CONFIG" === cb ? qH(cb) : void 0
+function ge(bb) {
+  const ab = se(bb);
+  if (!ab || /^\s/.test(bb)) return;
+  return /^(?:export\s+)?(?:async\s+)?function\b/.test(bb) || /=\s*(?:async\s+)?(?:function\b|\(|\w+\s*=>)/.test(bb) || "CONFIG" === ab ? ue(ab) : void 0
 }
 
-function FH(bb) {
-  const cb = new Map;
-  for (const sb of bb) {
-    const bb = vH(sb),
-      kb = RH(sb);
-    bb && kb && cb.set(kb, bb)
+function Ce(bb) {
+  const ab = new Map;
+  for (const Ub of bb) {
+    const bb = ge(Ub),
+      Ab = se(Ub);
+    bb && Ab && ab.set(Ab, bb)
   }
-  return cb
+  return ab
 }
 
-function xH(bb) {
+function Ve(bb) {
   return [...new Set(bb.flatMap((bb => {
-    const cb = /^\s/.test(bb) ? void 0 : RH(bb);
-    return cb ? [cb] : []
+    const ab = /^\s/.test(bb) ? void 0 : se(bb);
+    return ab ? [ab] : []
   })))]
 }
 
-function jH(bb) {
-  var cb;
-  return bb.length <= 1 ? null !== (cb = bb[0]) && void 0 !== cb ? cb : "" : `${bb.slice(0,-1).join(", ")} and ${bb[bb.length-1]}`
+function Oe(bb) {
+  var ab;
+  return bb.length <= 1 ? null !== (ab = bb[0]) && void 0 !== ab ? ab : "" : `${bb.slice(0,-1).join(", ")} and ${bb[bb.length-1]}`
 }
 
-function pH(bb) {
+function ce(bb) {
   return bb.replace(/_/g, " ").replace(/([a-z\d])([A-Z])/g, "$1 $2").trim().toLowerCase()
 }
 
-function bf(bb) {
+function Je(bb) {
   return bb.charAt(0).toUpperCase() + bb.slice(1)
 }
-const sf = new Set("api const let var function return if else for of in new true false null undefined this typeof while break continue playerId attacker killed damaged command ms Math Date JSON String Number Object Array console length push".split(" "));
+const ne = new Set("api const let var function return if else for of in new true false null undefined this typeof while break continue playerId attacker killed damaged command ms Math Date JSON String Number Object Array console length push".split(" "));
 
-function kf(bb) {
+function Se(bb) {
   return [...new Set(bb.flatMap((bb => {
-    const cb = bb.replace(/(["'`])(?:\\.|(?!\1).)*\1/g, "");
-    return (0, Mc.e)(cb, /[A-Za-z_$][\w$]{2,}(?!\s*:(?!:))/g, Mc.m).map((bb => bb[0])).filter((bb => !sf.has(bb)))
+    const ab = bb.replace(/(["'`])(?:\\.|(?!\1).)*\1/g, "");
+    return (0, La.f)(ab, /[A-Za-z_$][\w$]{2,}(?!\s*:(?!:))/g, La.l).map((bb => bb[0])).filter((bb => !ne.has(bb)))
   })))]
 }
 
-function Wf(bb, cb) {
-  var sb;
-  const kb = (null !== (sb = bb.parts) && void 0 !== sb ? sb : []).map((bb => {
+function bv(bb, ab) {
+  var Ub;
+  const Ab = (null !== (Ub = bb.parts) && void 0 !== Ub ? Ub : []).map((bb => {
       return {
         why: bb.why,
-        lines: (cb = bb.code, new Set(cb.split("\n").map((bb => bb.trim())).filter((bb => bb.length > 1))))
+        lines: (ab = bb.code, new Set(ab.split("\n").map((bb => bb.trim())).filter((bb => bb.length > 1))))
       };
-      var cb
+      var ab
     })),
-    Wb = SH(bb.before, bb.after);
-  let ab = 1;
-  const Tb = Wb.flatMap(((bb, cb) => {
-      if ("hunk" !== bb.kind) return ab++, [];
-      let sb;
-      for (const Wb of kb) {
-        const cb = bb.added.filter((bb => Wb.lines.has(bb.trim()))).length;
-        cb > 0 && (!sb || cb > sb.score) && (sb = {
-          why: Wb.why,
-          score: cb
+    Mb = we(bb.before, bb.after);
+  let Tb = 1;
+  const Eb = Mb.flatMap(((bb, ab) => {
+      if ("hunk" !== bb.kind) return Tb++, [];
+      let Ub;
+      for (const Mb of Ab) {
+        const ab = bb.added.filter((bb => Mb.lines.has(bb.trim()))).length;
+        ab > 0 && (!Ub || ab > Ub.score) && (Ub = {
+          why: Mb.why,
+          score: ab
         })
       }
-      const Tb = function(bb, cb, sb) {
-          const kb = xH(bb.added),
-            Wb = xH(bb.removed),
-            ab = kb.filter((bb => Wb.includes(bb))),
-            Tb = kb.filter((bb => !ab.includes(bb))),
-            Ub = Wb.filter((bb => !ab.includes(bb))),
-            Ib = new Map([...FH(bb.removed), ...FH(bb.added)]),
-            Hb = [...ab, ...Tb].filter((bb => Ib.has(bb))),
-            fb = (cb, sb) => {
+      const Eb = function(bb, ab, Ub) {
+          const Ab = Ve(bb.added),
+            Mb = Ve(bb.removed),
+            Tb = Ab.filter((bb => Mb.includes(bb))),
+            Eb = Ab.filter((bb => !Tb.includes(bb))),
+            Yb = Mb.filter((bb => !Tb.includes(bb))),
+            Bb = new Map([...Ce(bb.removed), ...Ce(bb.added)]),
+            eb = [...Tb, ...Eb].filter((bb => Bb.has(bb))),
+            vb = (ab, Ub) => {
               return {
-                names: cb,
-                configKeys: cb.includes("CONFIG") ? (kb = bb.added, kb.flatMap((bb => {
-                  const cb = /^\s+(\w+)\s*:/.exec(bb);
-                  return cb ? [cb[1]] : []
+                names: ab,
+                configKeys: ab.includes("CONFIG") ? (Ab = bb.added, Ab.flatMap((bb => {
+                  const ab = /^\s+(\w+)\s*:/.exec(bb);
+                  return ab ? [ab[1]] : []
                 }))) : [],
-                plainWords: cb.flatMap((bb => {
-                  const cb = Ib.get(bb);
-                  return cb ? [cb] : []
+                plainWords: ab.flatMap((bb => {
+                  const ab = Bb.get(bb);
+                  return ab ? [ab] : []
                 })),
-                onlyAdds: sb,
-                uses: kf(bb.added),
-                takesOut: Ub,
-                removedUses: kf(bb.removed)
+                onlyAdds: Ub,
+                uses: Se(bb.added),
+                takesOut: Yb,
+                removedUses: Se(bb.removed)
               };
-              var kb
+              var Ab
             },
-            Mb = new Set([...bb.added, ...bb.removed].flatMap((bb => {
-              var cb;
-              const sb = /^\s*(?:export\s+)?(?:async\s+)?function\s*\*?\s*(\w+)|^(\w+)\s*=\s*(?:async\s+)?(?:function\b|\([^)]*\)\s*=>|\w+\s*=>)/.exec(bb);
-              return sb ? [null !== (cb = sb[1]) && void 0 !== cb ? cb : sb[2]] : []
+            Lb = new Set([...bb.added, ...bb.removed].flatMap((bb => {
+              var ab;
+              const Ub = /^\s*(?:export\s+)?(?:async\s+)?function\s*\*?\s*(\w+)|^(\w+)\s*=\s*(?:async\s+)?(?:function\b|\([^)]*\)\s*=>|\w+\s*=>)/.exec(bb);
+              return Ub ? [null !== (ab = Ub[1]) && void 0 !== ab ? ab : Ub[2]] : []
             }))),
-            Xb = bb => {
-              const cb = pH(bb);
-              return Mb.has(bb) ? `"${cb}"` : cb
+            Pb = bb => {
+              const ab = ce(bb);
+              return Lb.has(bb) ? `"${ab}"` : ab
             },
-            nb = [...ab, ...Tb, ...Ub];
-          if (nb.some((bb => Ib.has(bb)))) {
+            Xb = [...Tb, ...Eb, ...Yb];
+          if (Xb.some((bb => Bb.has(bb)))) {
             const bb = bb => {
-                const cb = bb.filter((bb => Ib.has(bb)));
-                return jH(cb.length > 0 ? cb.map((bb => {
-                  var cb;
-                  return null !== (cb = Ib.get(bb)) && void 0 !== cb ? cb : bb
-                })) : bb.map(Xb))
+                const ab = bb.filter((bb => Bb.has(bb)));
+                return Oe(ab.length > 0 ? ab.map((bb => {
+                  var ab;
+                  return null !== (ab = Bb.get(bb)) && void 0 !== ab ? ab : bb
+                })) : bb.map(Pb))
               },
-              cb = [ab.length > 0 ? `${bb(ab)} \u2014 changed` : "", Tb.length > 0 ? `${bb(Tb)} \u2014 added` : "", Ub.length > 0 ? `${bb(Ub)} \u2014 taken out` : ""].filter(Boolean),
-              sb = [...nb.filter((bb => Ib.has(bb))), ...nb.filter((bb => !Ib.has(bb)))],
-              kb = Hb.every((bb => Tb.includes(bb)));
+              ab = [Tb.length > 0 ? `${bb(Tb)} \u2014 changed` : "", Eb.length > 0 ? `${bb(Eb)} \u2014 added` : "", Yb.length > 0 ? `${bb(Yb)} \u2014 taken out` : ""].filter(Boolean),
+              Ub = [...Xb.filter((bb => Bb.has(bb))), ...Xb.filter((bb => !Bb.has(bb)))],
+              Ab = eb.every((bb => Eb.includes(bb)));
             return {
-              named: bf(cb.join("; ")),
-              codeNames: sb,
-              takesOut: Ub,
+              named: Je(ab.join("; ")),
+              codeNames: Ub,
+              takesOut: Yb,
               isPlain: !0,
-              about: fb(Hb, kb)
+              about: vb(eb, Ab)
             }
           }
-          const mb = [ab.length > 0 ? `changes ${jH(ab.map(Xb))}` : "", Tb.length > 0 ? `adds ${jH(Tb.map(Xb))}` : "", Ub.length > 0 ? `takes out ${jH(Ub.map(Xb))}` : ""].filter(Boolean);
-          if (mb.length > 0) return {
-            named: bf(mb.join(", ")),
-            codeNames: nb,
-            takesOut: Ub,
+          const jb = [Tb.length > 0 ? `changes ${Oe(Tb.map(Pb))}` : "", Eb.length > 0 ? `adds ${Oe(Eb.map(Pb))}` : "", Yb.length > 0 ? `takes out ${Oe(Yb.map(Pb))}` : ""].filter(Boolean);
+          if (jb.length > 0) return {
+            named: Je(jb.join(", ")),
+            codeNames: Xb,
+            takesOut: Yb,
             isPlain: !1,
-            about: fb([], !1)
+            about: vb([], !1)
           };
-          const lb = cb.flatMap((bb => "same" === bb.kind ? [bb.text] : bb.added));
-          for (let Qb = lb.length - 1; Qb >= 0; Qb--) {
-            const bb = lb[Qb],
-              cb = /^\s/.test(bb) ? void 0 : RH(bb);
-            if (!cb && "" !== bb.trim() && !/^\s/.test(bb) && !/^(?:\/\/|\/\*|\*)/.test(bb.trim())) break;
-            if (cb) {
-              const sb = vH(bb);
-              return sb ? (Ib.set(cb, sb), {
-                named: `${sb} \u2014 changed`,
-                codeNames: [cb],
+          const Rb = ab.flatMap((bb => "same" === bb.kind ? [bb.text] : bb.added));
+          for (let kb = Rb.length - 1; kb >= 0; kb--) {
+            const bb = Rb[kb],
+              ab = /^\s/.test(bb) ? void 0 : se(bb);
+            if (!ab && "" !== bb.trim() && !/^\s/.test(bb) && !/^(?:\/\/|\/\*|\*)/.test(bb.trim())) break;
+            if (ab) {
+              const Ub = ge(bb);
+              return Ub ? (Bb.set(ab, Ub), {
+                named: `${Ub} \u2014 changed`,
+                codeNames: [ab],
                 takesOut: [],
                 isPlain: !0,
-                about: fb([cb], !1)
+                about: vb([ab], !1)
               }) : {
-                named: `Changes ${/\bfunction\b|=>/.test(bb)?`"${pH(cb)}"`:pH(cb)}`,
-                codeNames: [cb],
+                named: `Changes ${/\bfunction\b|=>/.test(bb)?`"${ce(ab)}"`:ce(ab)}`,
+                codeNames: [ab],
                 takesOut: [],
                 isPlain: !1,
-                about: fb([], !1)
+                about: vb([], !1)
               }
             }
           }
           return {
-            named: 0 === bb.added.length ? `Takes out lines from line ${sb}` : `Changes line ${sb}`,
+            named: 0 === bb.added.length ? `Takes out lines from line ${Ub}` : `Changes line ${Ub}`,
             codeNames: [],
             takesOut: [],
             isPlain: !1,
-            about: fb([], !1)
+            about: vb([], !1)
           }
-        }(bb, Wb.slice(0, cb), ab),
-        Ub = ab;
-      return ab += bb.added.length, [{
+        }(bb, Mb.slice(0, ab), Tb),
+        Yb = Tb;
+      return Tb += bb.added.length, [{
         index: bb.index,
         removed: bb.removed,
         added: bb.added,
-        line: Ub,
-        ...Tb,
-        ...sb ? {
-          why: sb.why
+        line: Yb,
+        ...Eb,
+        ...Ub ? {
+          why: Ub.why
         } : {}
       }]
     })),
-    Ub = function(bb, cb) {
-      const sb = cb ? GH(cb) : [];
-      if (!cb || 0 === sb.length) return bb.map((() => {}));
-      const kb = bb.map((bb => ZH(bb, cb, sb) || void 0 !== bb.why && KH(sb, GH(bb.why)))),
-        Wb = new Set(bb.flatMap(((bb, cb) => {
-          var sb;
-          return kb[cb] && null !== (sb = bb.uses) && void 0 !== sb ? sb : []
+    Yb = function(bb, ab) {
+      const Ub = ab ? he(ab) : [];
+      if (!ab || 0 === Ub.length) return bb.map((() => {}));
+      const Ab = bb.map((bb => Qe(bb, ab, Ub) || void 0 !== bb.why && Ge(Ub, he(bb.why)))),
+        Mb = new Set(bb.flatMap(((bb, ab) => {
+          var Ub;
+          return Ab[ab] && null !== (Ub = bb.uses) && void 0 !== Ub ? Ub : []
         }))),
-        ab = bb.map(((bb, cb) => {
-          var sb;
-          return kb[cb] || (null !== (sb = bb.uses) && void 0 !== sb ? sb : []).some((bb => Wb.has(bb)))
+        Tb = bb.map(((bb, ab) => {
+          var Ub;
+          return Ab[ab] || (null !== (Ub = bb.uses) && void 0 !== Ub ? Ub : []).some((bb => Mb.has(bb)))
         }));
-      if (!kb.includes(!0)) return bb.map((() => {}));
-      const Tb = new Set(bb.flatMap((bb => bb.names)));
-      return bb.map(((bb, kb) => {
+      if (!Ab.includes(!0)) return bb.map((() => {}));
+      const Eb = new Set(bb.flatMap((bb => bb.names)));
+      return bb.map(((bb, Ab) => {
         if (0 === bb.names.length) {
-          var Ub, Ib;
-          const kb = (null !== (Ub = bb.takesOut) && void 0 !== Ub ? Ub : []).filter((bb => ("CONFIG" === bb || iH.has(bb)) && !Tb.has(bb)));
-          return 0 === kb.length || ZH({
+          var Yb, Bb;
+          const Ab = (null !== (Yb = bb.takesOut) && void 0 !== Yb ? Yb : []).filter((bb => ("CONFIG" === bb || de.has(bb)) && !Eb.has(bb)));
+          return 0 === Ab.length || Qe({
             ...bb,
-            names: kb
-          }, cb, sb) || void 0 !== bb.why && KH(sb, GH(bb.why)) || (null !== (Ib = bb.removedUses) && void 0 !== Ib ? Ib : []).some((bb => Wb.has(bb))) ? void 0 : "takesOut"
+            names: Ab
+          }, ab, Ub) || void 0 !== bb.why && Ge(Ub, he(bb.why)) || (null !== (Bb = bb.removedUses) && void 0 !== Bb ? Bb : []).some((bb => Mb.has(bb))) ? void 0 : "takesOut"
         }
-        if (!ab[kb]) return bb.onlyAdds ? "adds" : "changes"
+        if (!Tb[Ab]) return bb.onlyAdds ? "adds" : "changes"
       }))
-    }(Tb.map((bb => ({
+    }(Eb.map((bb => ({
       ...bb.about,
       ...bb.why ? {
         why: bb.why
       } : {}
-    }))), cb),
-    Ib = Tb.map(((bb, cb) => {
+    }))), ab),
+    Bb = Eb.map(((bb, ab) => {
       let {
-        named: sb,
-        codeNames: kb,
-        isPlain: Wb,
-        about: ab,
-        ...Ib
+        named: Ub,
+        codeNames: Ab,
+        isPlain: Mb,
+        about: Tb,
+        ...Bb
       } = bb;
-      const Hb = void 0 !== Ib.why && 1 === Tb.filter((bb => bb.why === Ib.why)).length && Ib.why ? Ib.why.charAt(0).toUpperCase() + Ib.why.slice(1) : void 0,
-        fb = !Wb && Hb ? Hb : sb,
-        Mb = Ub[cb],
-        Xb = Mb ? fb.replace(/ \u2014 (added|changed|taken out)$/, "") : fb;
+      const eb = void 0 !== Bb.why && 1 === Eb.filter((bb => bb.why === Bb.why)).length && Bb.why ? Bb.why.charAt(0).toUpperCase() + Bb.why.slice(1) : void 0,
+        vb = !Mb && eb ? eb : Ub,
+        Lb = Yb[ab],
+        Pb = Lb ? vb.replace(/ \u2014 (added|changed|taken out)$/, "") : vb;
       return {
-        ...Ib,
-        label: Xb,
-        codeNames: kb,
-        ...Wb && Hb ? {
-          detail: Hb
+        ...Bb,
+        label: Pb,
+        codeNames: Ab,
+        ...Mb && eb ? {
+          detail: eb
         } : {},
-        ...Mb ? {
-          also: Mb
+        ...Lb ? {
+          also: Lb
         } : {}
       }
     })),
-    Hb = bb => {
-      var cb, sb;
-      return `${null!==(cb=bb.also)&&void 0!==cb?cb:""}|${bb.label}|${null!==(sb=bb.detail)&&void 0!==sb?sb:""}`
+    eb = bb => {
+      var ab, Ub;
+      return `${null!==(ab=bb.also)&&void 0!==ab?ab:""}|${bb.label}|${null!==(Ub=bb.detail)&&void 0!==Ub?Ub:""}`
     };
-  return Ib.map((bb => {
+  return Bb.map((bb => {
     let {
-      line: cb,
-      ...sb
+      line: ab,
+      ...Ub
     } = bb;
-    return Ib.filter((bb => Hb(bb) === Hb(sb))).length > 1 ? {
-      ...sb,
-      label: `${sb.label} (line ${cb})`
-    } : sb
+    return Bb.filter((bb => eb(bb) === eb(Ub))).length > 1 ? {
+      ...Ub,
+      label: `${Ub.label} (line ${ab})`
+    } : Ub
   }))
 }
-const af = {
+const av = {
     added: "adds",
     changed: "changes",
     updated: "updates",
@@ -11745,1301 +11745,1301 @@ const af = {
     gave: "gives",
     moved: "moves"
   },
-  Tf = Object.keys(af).join("|"),
-  Uf = new Set(["is", "its", "this", "was", "as", "us", "always", "less", "plus", "across", "yours", "theirs"]),
-  If = /(?:^|[,;:(]|\b(?:and|so|but|or|then|right|because|until|since|just|even))\s*$/i;
-const Hf = /```[\s\S]*?(?:```|$)|`[^`\n]*`|"[^"\n]*"|\u201c[^\u201d\n]*\u201d|['\u2018][^'\u2019\n]*['\u2019](?![\w])/g;
+  Uv = Object.keys(av).join("|"),
+  Av = new Set(["is", "its", "this", "was", "as", "us", "always", "less", "plus", "across", "yours", "theirs"]),
+  Mv = /(?:^|[,;:(]|\b(?:and|so|but|or|then|right|because|until|since|just|even))\s*$/i;
+const Tv = /```[\s\S]*?(?:```|$)|`[^`\n]*`|"[^"\n]*"|\u201c[^\u201d\n]*\u201d|['\u2018][^'\u2019\n]*['\u2019](?![\w])/g;
 
-function ff(bb) {
-  return !/^['\u2018]/.test(bb[0]) || !(0, Mc.d)(bb, "\\w\u2019'")
+function Ev(bb) {
+  return !/^['\u2018]/.test(bb[0]) || !(0, La.d)(bb, "\\w\u2019'")
 }
-const Mf = /\b(?:last time|before|earlier|previous(?:ly)?|already|in my last|a mistake|an error|wrong)\b/i;
+const Yv = /\b(?:last time|before|earlier|previous(?:ly)?|already|in my last|a mistake|an error|wrong)\b/i;
 
-function Xf(bb) {
-  const cb = function(bb) {
-      return (0, Mc.e)(bb, Hf, ff).map((bb => [bb.index, bb.index + bb[0].length]))
+function Bv(bb) {
+  const ab = function(bb) {
+      return (0, La.f)(bb, Tv, Ev).map((bb => [bb.index, bb.index + bb[0].length]))
     }(bb),
-    sb = bb => cb.some((cb => {
-      let [sb, kb] = cb;
-      return bb >= sb && bb < kb
+    Ub = bb => ab.some((ab => {
+      let [Ub, Ab] = ab;
+      return bb >= Ub && bb < Ab
     })),
-    kb = [];
-  for (const ab of bb.matchAll(new RegExp(`(^|[.!?]\\s+|\\n\\s*)I(?:'ve|\u2019ve| have)?( also)? (${Tf})\\b`, "g"))) {
-    const cb = ab.index + ab[1].length,
-      Wb = ab.index + ab[0].length,
-      Tb = bb.slice(Wb),
-      Ub = /[.!?](?=\s|$)|\n/.exec(Tb),
-      Ib = Ub ? Tb.slice(0, Ub.index) : Tb;
-    if (!sb(cb) && !Mf.test(Ib)) {
-      kb.push({
-        at: cb,
-        length: Wb - cb,
-        words: `${ab[2]?"It also":"This"} ${af[ab[3]]}`
+    Ab = [];
+  for (const Tb of bb.matchAll(new RegExp(`(^|[.!?]\\s+|\\n\\s*)I(?:'ve|\u2019ve| have)?( also)? (${Uv})\\b`, "g"))) {
+    const ab = Tb.index + Tb[1].length,
+      Mb = Tb.index + Tb[0].length,
+      Eb = bb.slice(Mb),
+      Yb = /[.!?](?=\s|$)|\n/.exec(Eb),
+      Bb = Yb ? Eb.slice(0, Yb.index) : Eb;
+    if (!Ub(ab) && !Yv.test(Bb)) {
+      Ab.push({
+        at: ab,
+        length: Mb - ab,
+        words: `${Tb[2]?"It also":"This"} ${av[Tb[3]]}`
       });
-      for (const bb of Ib.matchAll(new RegExp(`\\b(and|then|also) (${Tf})\\b(?!\\s+(?:of|by|from|with|when|if|in|on|at|to|for|so|as|after|before|into)\\b)`, "g"))) sb(Wb + bb.index) || kb.push({
-        at: Wb + bb.index,
+      for (const bb of Bb.matchAll(new RegExp(`\\b(and|then|also) (${Uv})\\b(?!\\s+(?:of|by|from|with|when|if|in|on|at|to|for|so|as|after|before|into)\\b)`, "g"))) Ub(Mb + bb.index) || Ab.push({
+        at: Mb + bb.index,
         length: bb[0].length,
-        words: `${bb[1]} ${af[bb[2]]}`
+        words: `${bb[1]} ${av[bb[2]]}`
       })
     }
   }
-  for (const ab of bb.matchAll(/\bnow ([a-z]{2,}s)\b/g)) {
-    const cb = Math.max(bb.lastIndexOf(".", ab.index), bb.lastIndexOf("\n", ab.index)) + 1,
-      Tb = /[.!?](?=\s|$)|\n/.exec(bb.slice(ab.index)),
-      Ub = bb.slice(cb, Tb ? ab.index + Tb.index : bb.length),
-      Ib = kb.some((bb => ab.index < bb.at + bb.length && bb.at < ab.index + ab[0].length)),
-      Hb = If.test(bb.slice(cb, ab.index));
-    Uf.has(ab[1]) || Hb || sb(ab.index) || Mf.test(Ub) || Ib || kb.push({
-      at: ab.index,
-      length: ab[0].length,
-      words: `will ${Wb=ab[1],"has"===Wb?"have":Wb.endsWith("ies")?`${Wb.slice(0,-3)}y`:/(?:ch|sh|x|zz|o|ss)es$/.test(Wb)?Wb.slice(0,-2):Wb.slice(0,-1)}`
+  for (const Tb of bb.matchAll(/\bnow ([a-z]{2,}s)\b/g)) {
+    const ab = Math.max(bb.lastIndexOf(".", Tb.index), bb.lastIndexOf("\n", Tb.index)) + 1,
+      Eb = /[.!?](?=\s|$)|\n/.exec(bb.slice(Tb.index)),
+      Yb = bb.slice(ab, Eb ? Tb.index + Eb.index : bb.length),
+      Bb = Ab.some((bb => Tb.index < bb.at + bb.length && bb.at < Tb.index + Tb[0].length)),
+      eb = Mv.test(bb.slice(ab, Tb.index));
+    Av.has(Tb[1]) || eb || Ub(Tb.index) || Yv.test(Yb) || Bb || Ab.push({
+      at: Tb.index,
+      length: Tb[0].length,
+      words: `will ${Mb=Tb[1],"has"===Mb?"have":Mb.endsWith("ies")?`${Mb.slice(0,-3)}y`:/(?:ch|sh|x|zz|o|ss)es$/.test(Mb)?Mb.slice(0,-2):Mb.slice(0,-1)}`
     })
   }
-  var Wb;
-  return kb.sort(((bb, cb) => cb.at - bb.at)).reduce(((bb, cb) => bb.slice(0, cb.at) + cb.words + bb.slice(cb.at + cb.length)), bb)
+  var Mb;
+  return Ab.sort(((bb, ab) => ab.at - bb.at)).reduce(((bb, ab) => bb.slice(0, ab.at) + ab.words + bb.slice(ab.at + ab.length)), bb)
 }
 
-function nf(bb) {
+function ev(bb) {
   let {
-    path: cb,
-    field: sb,
-    onWrite: Wb,
-    isChanged: ab
+    path: ab,
+    field: Ub,
+    onWrite: Mb,
+    isChanged: Tb
   } = bb;
-  const [Ub, Ib] = (0, kb.useState)(null), [Hb, fb] = (0, kb.useState)(null), Mb = tH(sb), [Xb, nb] = (0, kb.useState)(!1), mb = (0, kb.useRef)(null), lb = async bb => {
-    if (Wb && !Xb) {
-      Ib(null), nb(!0);
+  const [Yb, Bb] = (0, Ab.useState)(null), [eb, vb] = (0, Ab.useState)(null), Lb = pe(Ub), [Pb, Xb] = (0, Ab.useState)(!1), jb = (0, Ab.useRef)(null), Rb = async bb => {
+    if (Mb && !Pb) {
+      Bb(null), Xb(!0);
       try {
-        const Tb = await Wb(cb, sb, bb);
-        var kb, ab;
-        if (fb(Tb ? null : "Your code changed here. Look at it again."), Tb) null === (kb = mb.current) || void 0 === kb || null === (ab = kb.scrollIntoView) || void 0 === ab || ab.call(kb, {
+        const Eb = await Mb(ab, Ub, bb);
+        var Ab, Tb;
+        if (vb(Eb ? null : "Your code changed here. Look at it again."), Eb) null === (Ab = jb.current) || void 0 === Ab || null === (Tb = Ab.scrollIntoView) || void 0 === Tb || Tb.call(Ab, {
           block: "nearest"
         })
       } finally {
-        nb(!1)
+        Xb(!1)
       }
     }
-  }, Qb = () => {
-    if (null !== Ub)
-      if ("number" === sb.kind) {
-        const bb = Number(Ub.trim());
-        if ("" === Ub.trim() || !Number.isFinite(bb)) return fb("That needs to be a number."), void Ib(null);
-        lb(bb)
-      } else lb(Ub)
-  }, eb = `WorldCodeAiSetting-${cb}-${sb.key}`;
-  return (0, Tb.jsxs)("li", {
-    ref: mb,
+  }, kb = () => {
+    if (null !== Yb)
+      if ("number" === Ub.kind) {
+        const bb = Number(Yb.trim());
+        if ("" === Yb.trim() || !Number.isFinite(bb)) return vb("That needs to be a number."), void Bb(null);
+        Rb(bb)
+      } else Rb(Yb)
+  }, yb = `WorldCodeAiSetting-${ab}-${Ub.key}`;
+  return (0, Eb.jsxs)("li", {
+    ref: jb,
     className: "WorldCodeAiSetting",
-    children: [(0, Tb.jsxs)("label", {
+    children: [(0, Eb.jsxs)("label", {
       className: "WorldCodeAiSettingLabel",
-      htmlFor: eb,
-      children: [Mb, sb.comment && (0, Tb.jsx)("code", {
-        children: sb.key
+      htmlFor: yb,
+      children: [Lb, Ub.comment && (0, Eb.jsx)("code", {
+        children: Ub.key
       })]
-    }), "boolean" === sb.kind ? (0, Tb.jsxs)("label", {
+    }), "boolean" === Ub.kind ? (0, Eb.jsxs)("label", {
       className: "WorldCodeAiSwitch",
-      children: [(0, Tb.jsx)("input", {
-        id: eb,
+      children: [(0, Eb.jsx)("input", {
+        id: yb,
         type: "checkbox",
         role: "switch",
-        checked: !0 === sb.value,
-        disabled: !Wb,
+        checked: !0 === Ub.value,
+        disabled: !Mb,
         onChange: bb => {
-          lb(bb.target.checked)
+          Rb(bb.target.checked)
         }
-      }), (0, Tb.jsx)("span", {
-        children: sb.value ? "On" : "Off"
+      }), (0, Eb.jsx)("span", {
+        children: Ub.value ? "On" : "Off"
       })]
-    }) : (0, Tb.jsxs)("div", {
+    }) : (0, Eb.jsxs)("div", {
       className: "WorldCodeAiSettingControl",
-      children: ["number" === sb.kind && (0, Tb.jsx)("button", {
+      children: ["number" === Ub.kind && (0, Eb.jsx)("button", {
         className: "WorldCodeAiSecondaryButton WorldCodeAiStepper",
-        "aria-label": `Less ${Mb}`,
-        disabled: !Wb,
+        "aria-label": `Less ${Lb}`,
+        disabled: !Mb,
         onClick: () => {
-          lb(sb.value - BH(sb.value))
+          Rb(Ub.value - me(Ub.value))
         },
         children: "\u2212"
-      }), (0, Tb.jsx)("input", {
-        id: eb,
+      }), (0, Eb.jsx)("input", {
+        id: yb,
         className: "WorldCodeAiInput WorldCodeAiSettingInput",
-        type: "number" === sb.kind ? "number" : "text",
-        inputMode: "number" === sb.kind ? "decimal" : void 0,
-        maxLength: "string" === sb.kind ? 200 : void 0,
-        value: null !== Ub && void 0 !== Ub ? Ub : String(sb.value),
-        disabled: !Wb,
+        type: "number" === Ub.kind ? "number" : "text",
+        inputMode: "number" === Ub.kind ? "decimal" : void 0,
+        maxLength: "string" === Ub.kind ? 200 : void 0,
+        value: null !== Yb && void 0 !== Yb ? Yb : String(Ub.value),
+        disabled: !Mb,
         onChange: bb => {
-          Ib(bb.target.value)
+          Bb(bb.target.value)
         },
-        onBlur: Qb,
+        onBlur: kb,
         onKeyDown: bb => {
-          bb.stopPropagation(), "Enter" === bb.key ? Qb() : "Escape" === bb.key && Ib(null)
+          bb.stopPropagation(), "Enter" === bb.key ? kb() : "Escape" === bb.key && Bb(null)
         }
-      }), "number" === sb.kind && (0, Tb.jsx)("button", {
+      }), "number" === Ub.kind && (0, Eb.jsx)("button", {
         className: "WorldCodeAiSecondaryButton WorldCodeAiStepper",
-        "aria-label": `More ${Mb}`,
-        disabled: !Wb,
+        "aria-label": `More ${Lb}`,
+        disabled: !Mb,
         onClick: () => {
-          lb(sb.value + BH(sb.value))
+          Rb(Ub.value + me(Ub.value))
         },
         children: "+"
       })]
-    }), Hb && (0, Tb.jsx)("span", {
+    }), eb && (0, Eb.jsx)("span", {
       className: "WorldCodeAiAboutError",
-      children: Hb
-    }), ab && !Hb && (0, Tb.jsx)("span", {
+      children: eb
+    }), Tb && !eb && (0, Eb.jsx)("span", {
       className: "WorldCodeAiSettingDone",
       children: "\u2713 Changed in your code"
     })]
   })
 }
 
-function mf(bb) {
+function vv(bb) {
   let {
-    files: cb,
-    onWrite: sb,
-    onTryIt: kb,
-    onUndo: Wb,
-    before: ab
+    files: ab,
+    onWrite: Ub,
+    onTryIt: Ab,
+    onUndo: Mb,
+    before: Tb
   } = bb;
-  const Ub = Object.entries(cb).flatMap((bb => {
-    let [cb, sb] = bb;
-    const kb = JH(sb);
-    return kb.length > 0 ? [{
-      path: cb,
-      fields: kb
+  const Yb = Object.entries(ab).flatMap((bb => {
+    let [ab, Ub] = bb;
+    const Ab = ie(Ub);
+    return Ab.length > 0 ? [{
+      path: ab,
+      fields: Ab
     }] : []
   }));
-  return (0, Tb.jsxs)("div", {
+  return (0, Eb.jsxs)("div", {
     className: "WorldCodeAiHistory WorldCodeAiSettings",
-    children: [(0, Tb.jsx)("div", {
+    children: [(0, Eb.jsx)("div", {
       className: "WorldCodeAiHistoryTitle",
-      children: (0, Tb.jsx)("span", {
+      children: (0, Eb.jsx)("span", {
         children: "Settings of my game"
       })
-    }), 0 === Ub.length ? (0, Tb.jsx)("p", {
+    }), 0 === Yb.length ? (0, Eb.jsx)("p", {
       className: "WorldCodeAiHint",
       children: "Your code has no settings yet. Settings are the numbers and messages at the top of your code, in CONFIG."
-    }) : (0, Tb.jsxs)(Tb.Fragment, {
-      children: [(0, Tb.jsx)("p", {
+    }) : (0, Eb.jsxs)(Eb.Fragment, {
+      children: [(0, Eb.jsx)("p", {
         className: "WorldCodeAiAboutNote",
         children: "Changes go into your code straight away. Try them in your world."
-      }), (kb || Wb) && (0, Tb.jsxs)("div", {
+      }), (Ab || Mb) && (0, Eb.jsxs)("div", {
         className: "WorldCodeAiSettingActions",
-        children: [kb && (0, Tb.jsx)("button", {
+        children: [Ab && (0, Eb.jsx)("button", {
           className: "WorldCodeAiPrimaryButton",
-          onClick: kb,
+          onClick: Ab,
           children: "Try it in my world"
-        }), Wb && (0, Tb.jsx)("button", {
+        }), Mb && (0, Eb.jsx)("button", {
           className: "WorldCodeAiLinkButton",
-          onClick: Wb,
+          onClick: Mb,
           children: "Undo these changes"
         })]
-      }), Ub.map((bb => {
+      }), Yb.map((bb => {
         let {
-          path: cb,
-          fields: kb
+          path: ab,
+          fields: Ab
         } = bb;
-        return (0, Tb.jsxs)("div", {
-          children: [Ub.length > 1 && (0, Tb.jsx)("p", {
+        return (0, Eb.jsxs)("div", {
+          children: [Yb.length > 1 && (0, Eb.jsx)("p", {
             className: "WorldCodeAiAboutHeading",
-            children: cb
-          }), (0, Tb.jsx)("ul", {
+            children: ab
+          }), (0, Eb.jsx)("ul", {
             className: "WorldCodeAiSettingList",
-            children: kb.map((bb => {
-              const kb = void 0 === (null === ab || void 0 === ab ? void 0 : ab[cb]) ? void 0 : JH(ab[cb]).find((cb => cb.key === bb.key));
-              return (0, Tb.jsx)(nf, {
-                isChanged: !!ab && (null === kb || void 0 === kb ? void 0 : kb.value) !== bb.value,
-                path: cb,
+            children: Ab.map((bb => {
+              const Ab = void 0 === (null === Tb || void 0 === Tb ? void 0 : Tb[ab]) ? void 0 : ie(Tb[ab]).find((ab => ab.key === bb.key));
+              return (0, Eb.jsx)(ev, {
+                isChanged: !!Tb && (null === Ab || void 0 === Ab ? void 0 : Ab.value) !== bb.value,
+                path: ab,
                 field: bb,
-                onWrite: sb
+                onWrite: Ub
               }, bb.key)
             }))
           })]
-        }, cb)
+        }, ab)
       }))]
     })]
   })
 }
-const lf = /<tool_call\b|<function=|```|^\s*\{|<\|/m;
-const Qf = ["Reading your code", "Planning", "Writing", "Safety check"];
+const Lv = /<tool_call\b|<function=|```|^\s*\{|<\|/m;
+const Pv = ["Reading your code", "Planning", "Writing", "Safety check"];
 
-function ef(bb) {
+function Xv(bb) {
   if (bb <= 1e4) return "It starts in a few seconds.";
-  const cb = 10 * Math.ceil(bb / 1e4);
-  return cb >= 60 ? "It starts in about a minute." : `It starts in about ${cb} seconds.`
+  const ab = 10 * Math.ceil(bb / 1e4);
+  return ab >= 60 ? "It starts in about a minute." : `It starts in about ${ab} seconds.`
 }
-var Cf = sb(1770);
+var jv = Ub(1710);
 
-function Nf(bb, cb) {
-  const sb = new Map;
-  for (const Wb of zW(bb)) {
-    var kb;
-    sb.set(Wb, (null !== (kb = sb.get(Wb)) && void 0 !== kb ? kb : 0) + 1)
+function Rv(bb, ab) {
+  const Ub = new Map;
+  for (const Mb of qM(bb)) {
+    var Ab;
+    Ub.set(Mb, (null !== (Ab = Ub.get(Mb)) && void 0 !== Ab ? Ab : 0) + 1)
   }
-  return zW(cb).filter((bb => {
-    var cb;
-    const kb = null !== (cb = sb.get(bb)) && void 0 !== cb ? cb : 0;
-    return sb.set(bb, kb - 1), kb <= 0
+  return qM(ab).filter((bb => {
+    var ab;
+    const Ab = null !== (ab = Ub.get(bb)) && void 0 !== ab ? ab : 0;
+    return Ub.set(bb, Ab - 1), Ab <= 0
   }))
 }
 
-function Vf(bb, cb) {
-  return new Promise(((sb, kb) => {
-    if (null !== cb && void 0 !== cb && cb.aborted) return void kb((0, Cf.f)(cb));
-    const Wb = setTimeout(sb, bb);
-    null === cb || void 0 === cb || cb.addEventListener("abort", (() => {
-      clearTimeout(Wb), kb((0, Cf.f)(cb))
+function kv(bb, ab) {
+  return new Promise(((Ub, Ab) => {
+    if (null !== ab && void 0 !== ab && ab.aborted) return void Ab((0, jv.e)(ab));
+    const Mb = setTimeout(Ub, bb);
+    null === ab || void 0 === ab || ab.addEventListener("abort", (() => {
+      clearTimeout(Mb), Ab((0, jv.e)(ab))
     }), {
       once: !0
     })
   }))
 }
-async function Lf(bb, cb, sb, kb, Wb) {
-  const ab = new Set;
-  for (; Date.now() < sb;) {
-    var Tb;
-    const Ub = EW.filter((bb => !ab.has(bb)));
-    if (0 === Ub.length) return null;
-    const Ib = ca.firstFreeAt(Ub);
-    if (Ib > Date.now()) {
-      if (Ib > sb) return null;
-      null === Wb || void 0 === Wb || Wb(Ib), await Vf(Ib - Date.now(), kb)
+async function yv(bb, ab, Ub, Ab, Mb) {
+  const Tb = new Set;
+  for (; Date.now() < Ub;) {
+    var Eb;
+    const Yb = IM.filter((bb => !Tb.has(bb)));
+    if (0 === Yb.length) return null;
+    const Bb = nM.firstFreeAt(Yb);
+    if (Bb > Date.now()) {
+      if (Bb > Ub) return null;
+      null === Mb || void 0 === Mb || Mb(Bb), await kv(Bb - Date.now(), Ab)
     }
-    const Hb = null !== (Tb = Ub.find((bb => ca.freeAt(bb) <= Date.now()))) && void 0 !== Tb ? Tb : Ub[0],
-      fb = await za(Hb, [{
+    const eb = null !== (Eb = Yb.find((bb => nM.freeAt(bb) <= Date.now()))) && void 0 !== Eb ? Eb : Yb[0],
+      vb = await qT(eb, [{
         role: "user",
         content: bb
       }, {
         role: "assistant",
-        content: cb
-      }], kb);
-    if (null === fb) ab.add(Hb);
-    else if ("busy" !== fb) return fb
+        content: ab
+      }], Ab);
+    if (null === vb) Tb.add(eb);
+    else if ("busy" !== vb) return vb
   }
   return null
 }
-async function uf(bb, cb, sb, kb) {
-  const Wb = function(bb) {
-    const cb = [bb.text, ...bb.question ? [bb.question.question, ...bb.question.choices] : [], ...bb.plan, ...bb.notes, ...bb.actions.flatMap((bb => "switchToWorldCode" === bb.kind && bb.request ? [bb.request] : [])), ...bb.lookups.flatMap((bb => Object.values(bb.args).filter((bb => void 0 !== bb)))), ...bb.changes.flatMap((bb => {
-      var cb, sb;
-      return [...null !== (cb = bb.why) && void 0 !== cb ? cb : [], ...(null !== (sb = bb.parts) && void 0 !== sb ? sb : []).map((bb => bb.why)), ...Nf(bb.before, bb.after)]
-    })), ...bb.worldCode.flatMap((bb => zW(bb)))];
-    return cb.map((bb => bb.trim())).filter((bb => "" !== bb)).join("\n")
-  }(cb);
-  if ("" === Wb) return "ok";
-  const ab = Date.now() + 75e3;
-  for (const Tb of function(bb) {
-      const cb = [];
-      let sb = bb;
-      for (; sb.length > iW;) {
-        const bb = sb.lastIndexOf("\n", iW),
-          kb = bb > 6e3 ? bb : iW;
-        cb.push(sb.slice(0, kb)), sb = sb.slice(kb)
+async function Zv(bb, ab, Ub, Ab) {
+  const Mb = function(bb) {
+    const ab = [bb.text, ...bb.question ? [bb.question.question, ...bb.question.choices] : [], ...bb.plan, ...bb.notes, ...bb.actions.flatMap((bb => "switchToWorldCode" === bb.kind && bb.request ? [bb.request] : [])), ...bb.lookups.flatMap((bb => Object.values(bb.args).filter((bb => void 0 !== bb)))), ...bb.changes.flatMap((bb => {
+      var ab, Ub;
+      return [...null !== (ab = bb.why) && void 0 !== ab ? ab : [], ...(null !== (Ub = bb.parts) && void 0 !== Ub ? Ub : []).map((bb => bb.why)), ...Rv(bb.before, bb.after)]
+    })), ...bb.worldCode.flatMap((bb => qM(bb)))];
+    return ab.map((bb => bb.trim())).filter((bb => "" !== bb)).join("\n")
+  }(ab);
+  if ("" === Mb) return "ok";
+  const Tb = Date.now() + 75e3;
+  for (const Eb of function(bb) {
+      const ab = [];
+      let Ub = bb;
+      for (; Ub.length > dM;) {
+        const bb = Ub.lastIndexOf("\n", dM),
+          Ab = bb > 6e3 ? bb : dM;
+        ab.push(Ub.slice(0, Ab)), Ub = Ub.slice(Ab)
       }
-      return [...cb, sb]
-    }(Wb)) {
-    const cb = await ZW(Tb, (cb => Lf(bb, cb, ab, sb, kb)));
-    if ("ok" !== cb) return cb
+      return [...ab, Ub]
+    }(Mb)) {
+    const ab = await QM(Eb, (ab => yv(bb, ab, Tb, Ub, Ab)));
+    if ("ok" !== ab) return ab
   }
   return "ok"
 }
-const Yf = "worldCodeAiAnswerTimes";
+const Dv = "worldCodeAiAnswerTimes";
 
-function hf(bb, cb) {
-  var sb;
-  const kb = cb && null !== (sb = bb[cb]) && void 0 !== sb ? sb : [],
-    Wb = kb.length >= 2 ? kb : Object.values(bb).flat();
-  return Wb.length < 2 ? "Usually under a minute." : `Usually ${function(bb){const cb=Math.max(5,5*Math.round(bb/5e3));if(cb<60)return`about ${cb} seconds`;const sb=10*Math.round(bb/1e4),kb=Math.floor(sb/60),Wb=sb%60,ab=`${kb} ${1===kb?"minute":"minutes"}`;return 0===Wb?`about ${ab}`:`about ${ab} ${Wb} seconds`}(function(bb){const cb=[...bb].sort(((bb,cb)=>bb-cb)),sb=Math.floor(cb.length/2);return cb.length%2===1?cb[sb]:(cb[sb-1]+cb[sb])/2}(Wb))}.`
+function zv(bb, ab) {
+  var Ub;
+  const Ab = ab && null !== (Ub = bb[ab]) && void 0 !== Ub ? Ub : [],
+    Mb = Ab.length >= 2 ? Ab : Object.values(bb).flat();
+  return Mb.length < 2 ? "Usually under a minute." : `Usually ${function(bb){const ab=Math.max(5,5*Math.round(bb/5e3));if(ab<60)return`about ${ab} seconds`;const Ub=10*Math.round(bb/1e4),Ab=Math.floor(Ub/60),Mb=Ub%60,Tb=`${Ab} ${1===Ab?"minute":"minutes"}`;return 0===Mb?`about ${Tb}`:`about ${Tb} ${Mb} seconds`}(function(bb){const ab=[...bb].sort(((bb,ab)=>bb-ab)),Ub=Math.floor(ab.length/2);return ab.length%2===1?ab[Ub]:(ab[Ub-1]+ab[Ub])/2}(Mb))}.`
 }
-var Jf = sb(36494);
+var xv = Ub(36247);
 
-function gf(bb, cb) {
-  const sb = bb.split("\n"),
-    kb = cb.split("\n"),
-    Wb = kb.findIndex(((bb, cb) => bb !== sb[cb]));
-  return (-1 === Wb ? Math.min(sb.length, kb.length) - 1 : Wb) + 1
+function iv(bb, ab) {
+  const Ub = bb.split("\n"),
+    Ab = ab.split("\n"),
+    Mb = Ab.findIndex(((bb, ab) => bb !== Ub[ab]));
+  return (-1 === Mb ? Math.min(Ub.length, Ab.length) - 1 : Mb) + 1
 }
 
-function Bf(bb, cb) {
-  return bb.filter((bb => bb.path !== cb)).map((bb => ({
+function fv(bb, ab) {
+  return bb.filter((bb => bb.path !== ab)).map((bb => ({
     path: bb.path,
-    line: gf(bb.before, bb.after)
+    line: iv(bb.before, bb.after)
   })))
 }
 
-function tf(bb) {
+function mv(bb) {
   return `Moving to ${bb} code\u2026`
 }
 
-function yf(bb) {
+function pv(bb) {
   return bb.fromLine === bb.toLine ? `line ${bb.fromLine}` : `lines ${bb.fromLine}-${bb.toLine}`
 }
 
-function Pf(bb) {
-  const cb = bb.text.length > 4e3 ? `${bb.text.slice(0,4e3)}\n...` : bb.text;
-  return `The part I picked (${bb.path}, ${yf(bb)}):\n\`\`\`\n${cb}\n\`\`\``
+function Nv(bb) {
+  const ab = bb.text.length > 4e3 ? `${bb.text.slice(0,4e3)}\n...` : bb.text;
+  return `The part I picked (${bb.path}, ${pv(bb)}):\n\`\`\`\n${ab}\n\`\`\``
 }
 
-function Df(bb) {
-  let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+function Wv(bb) {
+  let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
   switch (bb.action) {
     case "explain":
-      return `Explain what this part of my code does, in 2 or 3 short sentences. Don't change any code.\n\n${Pf(bb)}`;
+      return `Explain what this part of my code does, in 2 or 3 short sentences. Don't change any code.\n\n${Nv(bb)}`;
     case "fix":
-      return `Fix what is wrong in this part of my code. Change only what it needs.\n\n${Pf(bb)}`;
+      return `Fix what is wrong in this part of my code. Change only what it needs.\n\n${Nv(bb)}`;
     case "change":
-      return `${cb.trim()}\n\nChange only this part of my code, unless more is needed for it to work.\n\n${Pf(bb)}`
+      return `${ab.trim()}\n\nChange only this part of my code, unless more is needed for it to work.\n\n${Nv(bb)}`
   }
 }
 
-function Ef(bb) {
-  let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-  const sb = yf(bb);
+function Hv(bb) {
+  let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+  const Ub = pv(bb);
   switch (bb.action) {
     case "explain":
-      return `Explain ${sb}`;
+      return `Explain ${Ub}`;
     case "fix":
-      return `Fix ${sb}`;
+      return `Fix ${Ub}`;
     case "change":
-      return `${cb.trim()} (${sb})`
+      return `${ab.trim()} (${Ub})`
   }
 }
-var Of = sb(40810),
-  Gf = sb(4482),
-  Kf = sb(40794),
-  Zf = sb(40804),
-  zf = sb(40801);
+var Iv = Ub(40487),
+  dv = Ub(4446),
+  Fv = Ub(40469),
+  hv = Ub(40483),
+  Gv = Ub(40475);
 
-function qf(bb) {
+function Qv(bb) {
   return bb ? "/worldCodeAiCheck.ts" : "/worldCodeAiCheck.js"
 }
-const df = new Set([2345, 2559, 2353, 2554, 2322, 2820]),
-  Af = new Set([2304, 2552]),
-  wf = new Set(["Date", "isNaN", "isFinite", "parseInt", "parseFloat"]),
-  rf = {};
+const qv = new Set([2345, 2559, 2353, 2554, 2322, 2820]),
+  uv = new Set([2304, 2552]),
+  rv = new Set(["Date", "isNaN", "isFinite", "parseInt", "parseFloat"]),
+  Kv = {};
 
-function of() {
+function ov() {
   let bb = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-  const cb = bb ? "codeBlock" : arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? "worldCodeTs" : "worldCode";
-  let sb = rf[cb];
-  if (!sb) {
-    const kb = qf("worldCodeTs" === cb),
-      Wb = new Map(bb ? [
-        [kb, "\n"],
-        ["/globals.d.ts", Kf.e],
-        ["/lib.d.ts", Zf.e]
+  const ab = bb ? "codeBlock" : arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? "worldCodeTs" : "worldCode";
+  let Ub = Kv[ab];
+  if (!Ub) {
+    const Ab = Qv("worldCodeTs" === ab),
+      Mb = new Map(bb ? [
+        [Ab, "\n"],
+        ["/globals.d.ts", Fv.e],
+        ["/lib.d.ts", hv.e]
       ] : [
-        [kb, "\n"],
-        ["/node_modules/@bloxd/index.d.ts", Gf.default],
-        ["/globals.d.ts", zf.e],
-        ["/lib.d.ts", Zf.e]
+        [Ab, "\n"],
+        ["/node_modules/@bloxd/index.d.ts", dv.default],
+        ["/globals.d.ts", Gv.d],
+        ["/lib.d.ts", hv.e]
       ]);
-    sb = Of.d(Of.c(Wb), [...Wb.keys()], hb(), {
+    Ub = Iv.g(Iv.c(Mb), [...Mb.keys()], mb(), {
       allowJs: !0,
       checkJs: !0,
       noLib: !0,
       strict: !1,
-      module: hb().ModuleKind.ESNext,
-      moduleResolution: hb().ModuleResolutionKind.Bundler,
-      target: hb().ScriptTarget.ES2015,
+      module: mb().ModuleKind.ESNext,
+      moduleResolution: mb().ModuleResolutionKind.Bundler,
+      target: mb().ScriptTarget.ES2015,
       allowUnreachableCode: !1,
       paths: {
         "@bloxd": ["/node_modules/@bloxd/index.d.ts"]
       }
-    }), rf[cb] = sb
+    }), Kv[ab] = Ub
   }
-  return sb
+  return Ub
 }
 
-function Sf(bb, cb, sb) {
-  let kb;
-  const Wb = ab => {
-    cb < ab.getStart(bb) || cb >= ab.getEnd() || (hb().isFunctionLike(ab) && cb > ab.getStart(bb) && (kb = void 0), hb().isCallExpression(ab) && (cb >= ab.expression.getEnd() || sb <= ab.expression.getEnd()) && (kb = ab), hb().forEachChild(ab, Wb))
+function lv(bb, ab, Ub) {
+  let Ab;
+  const Mb = Tb => {
+    ab < Tb.getStart(bb) || ab >= Tb.getEnd() || (mb().isFunctionLike(Tb) && ab > Tb.getStart(bb) && (Ab = void 0), mb().isCallExpression(Tb) && (ab >= Tb.expression.getEnd() || Ub <= Tb.expression.getEnd()) && (Ab = Tb), mb().forEachChild(Tb, Mb))
   };
-  return Wb(bb), kb && ws(kb, bb) ? kb : void 0
+  return Mb(bb), Ab && tU(Ab, bb) ? Ab : void 0
 }
 
-function Rf(bb, cb, sb) {
-  let kb;
-  const Wb = ab => {
-    cb < ab.getStart(bb) || sb > ab.getEnd() || (kb = ab, hb().forEachChild(ab, Wb))
+function tv(bb, ab, Ub) {
+  let Ab;
+  const Mb = Tb => {
+    ab < Tb.getStart(bb) || Ub > Tb.getEnd() || (Ab = Tb, mb().forEachChild(Tb, Mb))
   };
-  return Wb(bb), kb
+  return Mb(bb), Ab
 }
 
-function vf(bb) {
+function wv(bb) {
   return bb.toLowerCase().replace(/[^a-z0-9]/g, "")
 }
 
-function Ff(bb, cb) {
-  const sb = vf(bb);
-  if (!sb) return;
-  const kb = cb.find((bb => vf(bb) === sb));
-  if (kb) return `"${kb}"`;
-  const Wb = cb.filter((bb => {
-    const cb = vf(bb);
-    return cb.includes(sb) || sb.includes(cb)
-  })).sort(((bb, cb) => bb.length - cb.length));
-  if (Wb.length > 0) return Wb.slice(0, 2).map((bb => `"${bb}"`)).join(" or ");
-  const ab = new Set(bb.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean));
-  let Tb;
-  for (const Ub of cb) {
-    const bb = Ub.toLowerCase().split(/[^a-z0-9]+/).filter((bb => ab.has(bb))).length;
-    bb > 0 && (!Tb || bb > Tb.shared) && (Tb = {
-      option: Ub,
+function sv(bb, ab) {
+  const Ub = wv(bb);
+  if (!Ub) return;
+  const Ab = ab.find((bb => wv(bb) === Ub));
+  if (Ab) return `"${Ab}"`;
+  const Mb = ab.filter((bb => {
+    const ab = wv(bb);
+    return ab.includes(Ub) || Ub.includes(ab)
+  })).sort(((bb, ab) => bb.length - ab.length));
+  if (Mb.length > 0) return Mb.slice(0, 2).map((bb => `"${bb}"`)).join(" or ");
+  const Tb = new Set(bb.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean));
+  let Eb;
+  for (const Yb of ab) {
+    const bb = Yb.toLowerCase().split(/[^a-z0-9]+/).filter((bb => Tb.has(bb))).length;
+    bb > 0 && (!Eb || bb > Eb.shared) && (Eb = {
+      option: Yb,
       shared: bb
     })
   }
-  return Tb ? `"${Tb.option}"` : void 0
+  return Eb ? `"${Eb.option}"` : void 0
 }
 
-function xf(bb) {
-  for (let cb = bb; cb && !hb().isSourceFile(cb); cb = cb.parent)
-    if (hb().isExpressionWithTypeArguments(cb)) {
-      if (hb().isHeritageClause(cb.parent) && cb.parent.token === hb().SyntaxKind.ImplementsKeyword) return !0
-    } else if (hb().isTypeNode(cb)) return !0;
+function gv(bb) {
+  for (let ab = bb; ab && !mb().isSourceFile(ab); ab = ab.parent)
+    if (mb().isExpressionWithTypeArguments(ab)) {
+      if (mb().isHeritageClause(ab.parent) && ab.parent.token === mb().SyntaxKind.ImplementsKeyword) return !0
+    } else if (mb().isTypeNode(ab)) return !0;
   return !1
 }
 
-function jf(bb) {
-  var cb;
-  let sb = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-    kb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-  const Wb = qf(kb && !sb),
-    ab = of(sb, kb);
-  ab.updateFile(Wb, bb || "\n");
-  const Tb = ab.getSourceFile(Wb),
-    Ub = null === (cb = ab.languageService.getProgram()) || void 0 === cb ? void 0 : cb.getTypeChecker();
-  if (!Tb || !Ub) return [];
-  const Ib = new Set,
-    Hb = ab.languageService.getSyntacticDiagnostics(Wb)[0];
-  if (void 0 !== (null === Hb || void 0 === Hb ? void 0 : Hb.start)) {
-    var fb, Mb;
-    const cb = Tb.getLineAndCharacterOfPosition(Hb.start).line,
-      sb = null !== (fb = null === (Mb = bb.split("\n")[cb]) || void 0 === Mb ? void 0 : Mb.trim()) && void 0 !== fb ? fb : "",
-      kb = sb.length > 40 ? `${sb.slice(0,37)}...` : sb,
-      Wb = hb().flattenDiagnosticMessageText(Hb.messageText, " ").replace(/\.$/, "");
-    Ib.add(`Line ${cb+1} stops all of this code from running: "${kb}" (${Wb}).`)
+function Cv(bb) {
+  var ab;
+  let Ub = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+    Ab = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+  const Mb = Qv(Ab && !Ub),
+    Tb = ov(Ub, Ab);
+  Tb.updateFile(Mb, bb || "\n");
+  const Eb = Tb.getSourceFile(Mb),
+    Yb = null === (ab = Tb.languageService.getProgram()) || void 0 === ab ? void 0 : ab.getTypeChecker();
+  if (!Eb || !Yb) return [];
+  const Bb = new Set,
+    eb = Tb.languageService.getSyntacticDiagnostics(Mb)[0];
+  if (void 0 !== (null === eb || void 0 === eb ? void 0 : eb.start)) {
+    var vb, Lb;
+    const ab = Eb.getLineAndCharacterOfPosition(eb.start).line,
+      Ub = null !== (vb = null === (Lb = bb.split("\n")[ab]) || void 0 === Lb ? void 0 : Lb.trim()) && void 0 !== vb ? vb : "",
+      Ab = Ub.length > 40 ? `${Ub.slice(0,37)}...` : Ub,
+      Mb = mb().flattenDiagnosticMessageText(eb.messageText, " ").replace(/\.$/, "");
+    Bb.add(`Line ${ab+1} stops all of this code from running: "${Ab}" (${Mb}).`)
   }
-  const Xb = new Set;
-  for (const Ob of ab.languageService.getSemanticDiagnostics(Wb)) {
-    var nb, mb, lb, Qb, eb, Cb, Nb, Vb;
-    if (7027 === Ob.code && void 0 !== Ob.start) {
-      var Lb, ub;
-      const cb = Tb.getLineAndCharacterOfPosition(Ob.start).line,
-        sb = null !== (Lb = null === (ub = bb.split("\n")[cb]) || void 0 === ub ? void 0 : ub.trim()) && void 0 !== Lb ? Lb : "",
-        kb = sb.length > 40 ? `${sb.slice(0,37)}...` : sb;
-      Ib.add(`Line ${cb+1} never runs: "${kb}" comes after a return, which ends the function first.`);
+  const Pb = new Set;
+  for (const Qb of Tb.languageService.getSemanticDiagnostics(Mb)) {
+    var Xb, jb, Rb, kb, yb, Zb, Db, zb;
+    if (7027 === Qb.code && void 0 !== Qb.start) {
+      var xb, ib;
+      const ab = Eb.getLineAndCharacterOfPosition(Qb.start).line,
+        Ub = null !== (xb = null === (ib = bb.split("\n")[ab]) || void 0 === ib ? void 0 : ib.trim()) && void 0 !== xb ? xb : "",
+        Ab = Ub.length > 40 ? `${Ub.slice(0,37)}...` : Ub;
+      Bb.add(`Line ${ab+1} never runs: "${Ab}" comes after a return, which ends the function first.`);
       continue
     }
-    if (Af.has(Ob.code) && void 0 !== Ob.start) {
-      var Yb, Jb;
-      const cb = Ob.start + (null !== (Yb = Ob.length) && void 0 !== Yb ? Yb : 0),
-        sb = bb.slice(Ob.start, cb),
-        kb = /^\s*\(/.test(bb.slice(cb)),
-        Wb = new RegExp(`^${sb.replaceAll("$","\\$")}\\s*=[^=]`, "m").test(bb),
-        ab = bb.slice(0, Ob.start),
-        Ub = ab.lastIndexOf("/*") > ab.lastIndexOf("*/") || ab.slice(ab.lastIndexOf("\n")).includes("//"),
-        fb = new RegExp(`//\\s*(?:const|let|var)\\s+${sb.replaceAll("$","\\$")}\\b`).test(bb),
-        Mb = new RegExp(`typeof\\s+${sb.replaceAll("$","\\$")}\\b`).test(bb);
-      if (wf.has(sb) || Xb.has(sb) || kb || Wb || Ub || fb || Mb || Hb || xf(Rf(Tb, Ob.start, cb))) continue;
-      Xb.add(sb);
-      const nb = Tb.getLineAndCharacterOfPosition(Ob.start).line,
-        mb = null === (Jb = /Did you mean '([\w$]+)'\?/.exec(hb().flattenDiagnosticMessageText(Ob.messageText, " "))) || void 0 === Jb ? void 0 : Jb[1];
-      Ib.add(mb ? `Line ${nb+1} uses "${sb}", which is never set, so it throws there. Did you mean "${mb}"?` : `Line ${nb+1} uses "${sb}", which isn't set there, so it throws when that line runs.`);
+    if (uv.has(Qb.code) && void 0 !== Qb.start) {
+      var fb, pb;
+      const ab = Qb.start + (null !== (fb = Qb.length) && void 0 !== fb ? fb : 0),
+        Ub = bb.slice(Qb.start, ab),
+        Ab = /^\s*\(/.test(bb.slice(ab)),
+        Mb = new RegExp(`^${Ub.replaceAll("$","\\$")}\\s*=[^=]`, "m").test(bb),
+        Tb = bb.slice(0, Qb.start),
+        Yb = Tb.lastIndexOf("/*") > Tb.lastIndexOf("*/") || Tb.slice(Tb.lastIndexOf("\n")).includes("//"),
+        vb = new RegExp(`//\\s*(?:const|let|var)\\s+${Ub.replaceAll("$","\\$")}\\b`).test(bb),
+        Lb = new RegExp(`typeof\\s+${Ub.replaceAll("$","\\$")}\\b`).test(bb);
+      if (rv.has(Ub) || Pb.has(Ub) || Ab || Mb || Yb || vb || Lb || eb || gv(tv(Eb, Qb.start, ab))) continue;
+      Pb.add(Ub);
+      const Xb = Eb.getLineAndCharacterOfPosition(Qb.start).line,
+        jb = null === (pb = /Did you mean '([\w$]+)'\?/.exec(mb().flattenDiagnosticMessageText(Qb.messageText, " "))) || void 0 === pb ? void 0 : pb[1];
+      Bb.add(jb ? `Line ${Xb+1} uses "${Ub}", which is never set, so it throws there. Did you mean "${jb}"?` : `Line ${Xb+1} uses "${Ub}", which isn't set there, so it throws when that line runs.`);
       continue
     }
-    if (!df.has(Ob.code) || void 0 === Ob.start) continue;
-    const cb = hb().flattenDiagnosticMessageText(Ob.messageText, " ");
-    if (cb.includes("'string | number'")) continue;
-    const sb = Ob.start + (null !== (nb = Ob.length) && void 0 !== nb ? nb : 0),
-      kb = Sf(Tb, Ob.start, sb);
-    if (!kb) continue;
-    const Wb = Rf(Tb, Ob.start, sb),
-      ab = kb.expression.getText(Tb),
-      fb = null !== Wb && void 0 !== Wb && Wb.parent && hb().isPropertyAssignment(Wb.parent) && Wb.parent.name === Wb ? Wb.parent : void 0,
-      Mb = (fb ? fb.getText(Tb) : bb.slice(Ob.start, sb)).replace(/\s+/g, " "),
-      Gb = Mb.length > 40 ? `${Mb.slice(0,37)}...` : Mb;
-    if (2554 === Ob.code) {
-      var gb, Bb, tb;
-      const bb = cb.match(/Expected (\S+) arguments?, but got (\d+)/),
-        sb = null !== (gb = null === bb || void 0 === bb || null === (Bb = bb[1]) || void 0 === Bb ? void 0 : Bb.replace("-", " to ")) && void 0 !== gb ? gb : "a different number of",
-        Wb = Number(null !== (tb = null === bb || void 0 === bb ? void 0 : bb[2]) && void 0 !== tb ? tb : kb.arguments.length);
-      Ib.add(`${ab} needs ${sb} ${"1"===sb?"value":"values"}, but this line gives it ${Wb}.`);
+    if (!qv.has(Qb.code) || void 0 === Qb.start) continue;
+    const ab = mb().flattenDiagnosticMessageText(Qb.messageText, " ");
+    if (ab.includes("'string | number'")) continue;
+    const Ub = Qb.start + (null !== (Xb = Qb.length) && void 0 !== Xb ? Xb : 0),
+      Ab = lv(Eb, Qb.start, Ub);
+    if (!Ab) continue;
+    const Mb = tv(Eb, Qb.start, Ub),
+      Tb = Ab.expression.getText(Eb),
+      vb = null !== Mb && void 0 !== Mb && Mb.parent && mb().isPropertyAssignment(Mb.parent) && Mb.parent.name === Mb ? Mb.parent : void 0,
+      Lb = (vb ? vb.getText(Eb) : bb.slice(Qb.start, Ub)).replace(/\s+/g, " "),
+      qb = Lb.length > 40 ? `${Lb.slice(0,37)}...` : Lb;
+    if (2554 === Qb.code) {
+      var Nb, Wb, Hb;
+      const bb = ab.match(/Expected (\S+) arguments?, but got (\d+)/),
+        Ub = null !== (Nb = null === bb || void 0 === bb || null === (Wb = bb[1]) || void 0 === Wb ? void 0 : Wb.replace("-", " to ")) && void 0 !== Nb ? Nb : "a different number of",
+        Mb = Number(null !== (Hb = null === bb || void 0 === bb ? void 0 : bb[2]) && void 0 !== Hb ? Hb : Ab.arguments.length);
+      Bb.add(`${Tb} needs ${Ub} ${"1"===Ub?"value":"values"}, but this line gives it ${Mb}.`);
       continue
     }
-    if (2353 === Ob.code) {
-      var yb, Pb;
-      const bb = null !== (yb = null === (Pb = cb.match(/'([^']*)' does not exist/)) || void 0 === Pb ? void 0 : Pb[1]) && void 0 !== yb ? yb : Gb,
-        sb = null !== Wb && void 0 !== Wb && Wb.parent && hb().isPropertyAssignment(Wb.parent) ? Wb.parent.parent : null === Wb || void 0 === Wb ? void 0 : Wb.parent,
-        kb = sb && hb().isObjectLiteralExpression(sb) ? Ub.getContextualType(sb) : void 0,
-        Tb = Ff(bb, kb && !Ub.isArrayType(Ub.getNonNullableType(kb)) ? Ub.getPropertiesOfType(Ub.getNonNullableType(kb)).map((bb => bb.name)) : []),
-        Hb = kb ? ` It takes ${Ss(Ub,kb)}.` : " Check Show Docs for its settings.";
-      Ib.add(`${ab} has no setting called "${bb}".${Tb?` Did you mean ${Tb}?`:Hb}`);
+    if (2353 === Qb.code) {
+      var Ib, db;
+      const bb = null !== (Ib = null === (db = ab.match(/'([^']*)' does not exist/)) || void 0 === db ? void 0 : db[1]) && void 0 !== Ib ? Ib : qb,
+        Ub = null !== Mb && void 0 !== Mb && Mb.parent && mb().isPropertyAssignment(Mb.parent) ? Mb.parent.parent : null === Mb || void 0 === Mb ? void 0 : Mb.parent,
+        Ab = Ub && mb().isObjectLiteralExpression(Ub) ? Yb.getContextualType(Ub) : void 0,
+        Eb = sv(bb, Ab && !Yb.isArrayType(Yb.getNonNullableType(Ab)) ? Yb.getPropertiesOfType(Yb.getNonNullableType(Ab)).map((bb => bb.name)) : []),
+        eb = Ab ? ` It takes ${gU(Yb,Ab)}.` : " Check Show Docs for its settings.";
+      Bb.add(`${Tb} has no setting called "${bb}".${Eb?` Did you mean ${Eb}?`:eb}`);
       continue
     }
-    const Kb = null !== (mb = null === fb || void 0 === fb ? void 0 : fb.initializer) && void 0 !== mb ? mb : Wb,
-      Zb = Kb && hb().isExpression(Kb) ? Ub.getContextualType(Kb) : void 0,
-      zb = (null !== (ib = Zb) && void 0 !== ib && ib.isUnion() ? ib.types : ib ? [ib] : []).filter((bb => bb.isStringLiteral())).map((bb => bb.value)),
-      qb = cb.includes("keyof ") ? "setting" : "name",
-      db = null !== (lb = null === Kb || void 0 === Kb ? void 0 : Kb.getText(Tb)) && void 0 !== lb ? lb : Mb,
-      Ab = zb.length > 0 ? null === (Qb = /^CONFIG\.([\w$]+)$/.exec(db)) || void 0 === Qb ? void 0 : Qb[1] : void 0;
-    if (void 0 !== Ab) {
-      var Db;
-      const cb = null === (Db = new RegExp(`(?:^|[{,])\\s*${Ab.replaceAll("$","\\$")}\\s*:\\s*(["'])([^"'\\n]*)\\1`, "m").exec(bb)) || void 0 === Db ? void 0 : Db[2];
-      if (void 0 !== cb && !zb.includes(cb)) {
-        const bb = Ff(cb, zb);
-        Ib.add(`${ab} has no ${qb} called "${cb}" (${db}).${bb?` Did you mean ${bb}?`:""}`)
+    const ub = null !== (jb = null === vb || void 0 === vb ? void 0 : vb.initializer) && void 0 !== jb ? jb : Mb,
+      rb = ub && mb().isExpression(ub) ? Yb.getContextualType(ub) : void 0,
+      Kb = (null !== (Gb = rb) && void 0 !== Gb && Gb.isUnion() ? Gb.types : Gb ? [Gb] : []).filter((bb => bb.isStringLiteral())).map((bb => bb.value)),
+      ob = ab.includes("keyof ") ? "setting" : "name",
+      lb = null !== (Rb = null === ub || void 0 === ub ? void 0 : ub.getText(Eb)) && void 0 !== Rb ? Rb : Lb,
+      tb = Kb.length > 0 ? null === (kb = /^CONFIG\.([\w$]+)$/.exec(lb)) || void 0 === kb ? void 0 : kb[1] : void 0;
+    if (void 0 !== tb) {
+      var Fb;
+      const ab = null === (Fb = new RegExp(`(?:^|[{,])\\s*${tb.replaceAll("$","\\$")}\\s*:\\s*(["'])([^"'\\n]*)\\1`, "m").exec(bb)) || void 0 === Fb ? void 0 : Fb[2];
+      if (void 0 !== ab && !Kb.includes(ab)) {
+        const bb = sv(ab, Kb);
+        Bb.add(`${Tb} has no ${ob} called "${ab}" (${lb}).${bb?` Did you mean ${bb}?`:""}`)
       }
       continue
     }
-    if (Zb && Kb && Rs(Ub, Ub.getTypeAtLocation(Kb), Zb)) continue;
-    if (zb.length > 0) {
-      const bb = Kb && hb().isStringLiteral(Kb) ? Kb : void 0,
-        cb = bb ? Ff(bb.text, zb) : void 0,
-        sb = bb && !fb ? `${ab} has no ${qb} called ${Eb=Gb,Eb.startsWith('"')?Eb:`"${Eb}"`}.` : `${ab} can't take ${Gb} there.`;
-      Ib.add(`${sb}${cb?` Did you mean ${cb}?`:" Check Show Docs for what it takes."}`);
+    if (rb && ub && CU(Yb, Yb.getTypeAtLocation(ub), rb)) continue;
+    if (Kb.length > 0) {
+      const bb = ub && mb().isStringLiteral(ub) ? ub : void 0,
+        ab = bb ? sv(bb.text, Kb) : void 0,
+        Ub = bb && !vb ? `${Tb} has no ${ob} called ${hb=qb,hb.startsWith('"')?hb:`"${hb}"`}.` : `${Tb} can't take ${qb} there.`;
+      Bb.add(`${Ub}${ab?` Did you mean ${ab}?`:" Check Show Docs for what it takes."}`);
       continue
     }
-    if (Zb && Kb && os(Ub.getTypeAtLocation(Kb))) {
-      Ib.add(`${ab} can't take ${Gb} there: it takes ${Ss(Ub,Zb)}.`);
+    if (rb && ub && sU(Yb.getTypeAtLocation(ub))) {
+      Bb.add(`${Tb} can't take ${qb} there: it takes ${gU(Yb,rb)}.`);
       continue
     }
-    const wb = Zb && Ub.getNonNullableType(Zb);
-    if (wb && os(wb) && !Ub.isArrayType(wb) && !Ub.isTupleType(wb)) {
-      const bb = rs(Ub, Zb);
-      Ib.add(`${ab} needs settings in { } there${bb?`, like ${bb}`:""}, not ${Gb}.`);
+    const wb = rb && Yb.getNonNullableType(rb);
+    if (wb && sU(wb) && !Yb.isArrayType(wb) && !Yb.isTupleType(wb)) {
+      const bb = wU(Yb, rb);
+      Bb.add(`${Tb} needs settings in { } there${bb?`, like ${bb}`:""}, not ${qb}.`);
       continue
     }
-    const rb = null === (eb = cb.match(/parameter of type '([^']*)'/)) || void 0 === eb ? void 0 : eb[1],
-      ob = kb.arguments.findIndex((bb => bb.getStart(Tb) <= Ob.start && Ob.start < bb.getEnd())),
-      Sb = null !== (Cb = null === (Nb = Ub.getResolvedSignature(kb)) || void 0 === Nb || null === (Vb = Nb.parameters[ob]) || void 0 === Vb ? void 0 : Vb.name) && void 0 !== Cb ? Cb : "that part",
-      Rb = Wb ? Ub.typeToString(Ub.getTypeAtLocation(Wb)) : "",
-      vb = "number" === Rb ? "a number" : "string" === Rb ? "text" : "something else";
-    "string" === rb ? Ib.add(`${ab} needs ${Sb} as text, but ${Gb} is ${vb} here.`) : "number" === rb ? Ib.add(`${ab} needs ${Sb} as a number, but ${Gb} is ${vb} here.`) : Ib.add(`${ab} can't take ${Gb} there${Zb?`: it takes ${Ss(Ub,Zb)}`:". Check Show Docs for what it takes"}.`)
+    const sb = null === (yb = ab.match(/parameter of type '([^']*)'/)) || void 0 === yb ? void 0 : yb[1],
+      gb = Ab.arguments.findIndex((bb => bb.getStart(Eb) <= Qb.start && Qb.start < bb.getEnd())),
+      Cb = null !== (Zb = null === (Db = Yb.getResolvedSignature(Ab)) || void 0 === Db || null === (zb = Db.parameters[gb]) || void 0 === zb ? void 0 : zb.name) && void 0 !== Zb ? Zb : "that part",
+      Vb = Mb ? Yb.typeToString(Yb.getTypeAtLocation(Mb)) : "",
+      Ob = "number" === Vb ? "a number" : "string" === Vb ? "text" : "something else";
+    "string" === sb ? Bb.add(`${Tb} needs ${Cb} as text, but ${qb} is ${Ob} here.`) : "number" === sb ? Bb.add(`${Tb} needs ${Cb} as a number, but ${qb} is ${Ob} here.`) : Bb.add(`${Tb} can't take ${qb} there${rb?`: it takes ${gU(Yb,rb)}`:". Check Show Docs for what it takes"}.`)
   }
-  var Eb, ib;
-  return [...Ib, ...Fs(Tb, Ub)]
+  var hb, Gb;
+  return [...Bb, ...OU(Eb, Yb)]
 }
 
-function pf(bb) {
+function Vv(bb) {
   return bb.replace(/^Line \d+ /, "")
 }
 
-function bM(bb) {
-  const cb = new Map;
-  for (const Wb of bb.split("\n")) {
-    var sb;
-    const bb = /^(?:async\s+)?function\s*\*?\s*(\w+)\s*\(|^(\w+)\s*=\s*(?:async\s*)?(?:\([^()]*\)\s*=>|function\b|\w+\s*=>)/.exec(Wb),
-      ab = null !== (sb = null === bb || void 0 === bb ? void 0 : bb[1]) && void 0 !== sb ? sb : null === bb || void 0 === bb ? void 0 : bb[2];
-    var kb;
-    if (ab) cb.set(ab, (null !== (kb = cb.get(ab)) && void 0 !== kb ? kb : 0) + 1)
+function Ov(bb) {
+  const ab = new Map;
+  for (const Mb of bb.split("\n")) {
+    var Ub;
+    const bb = /^(?:async\s+)?function\s*\*?\s*(\w+)\s*\(|^(\w+)\s*=\s*(?:async\s*)?(?:\([^()]*\)\s*=>|function\b|\w+\s*=>)/.exec(Mb),
+      Tb = null !== (Ub = null === bb || void 0 === bb ? void 0 : bb[1]) && void 0 !== Ub ? Ub : null === bb || void 0 === bb ? void 0 : bb[2];
+    var Ab;
+    if (Tb) ab.set(Tb, (null !== (Ab = ab.get(Tb)) && void 0 !== Ab ? Ab : 0) + 1)
   }
-  return [...cb].flatMap((bb => {
-    let [cb, sb] = bb;
-    return sb > 1 ? [`${cb} is in the code ${sb} times, so only the last one runs. Put them together in one ${cb}.`] : []
+  return [...ab].flatMap((bb => {
+    let [ab, Ub] = bb;
+    return Ub > 1 ? [`${ab} is in the code ${Ub} times, so only the last one runs. Put them together in one ${ab}.`] : []
   }))
 }
 
-function cM(bb, cb) {
-  var sb, kb, Wb, ab;
-  const Tb = cb.after.split("\n"),
-    Ub = bb => {
-      var cb, sb;
-      const kb = null !== (cb = null === (sb = Tb[bb]) || void 0 === sb ? void 0 : sb.trim()) && void 0 !== cb ? cb : "";
-      return "" === kb ? void 0 : {
+function cv(bb, ab) {
+  var Ub, Ab, Mb, Tb;
+  const Eb = ab.after.split("\n"),
+    Yb = bb => {
+      var ab, Ub;
+      const Ab = null !== (ab = null === (Ub = Eb[bb]) || void 0 === Ub ? void 0 : Ub.trim()) && void 0 !== ab ? ab : "";
+      return "" === Ab ? void 0 : {
         line: bb + 1,
-        text: kb.length > 50 ? `${kb.slice(0,47)}...` : kb
+        text: Ab.length > 50 ? `${Ab.slice(0,47)}...` : Ab
       }
     },
-    Ib = /^Line (\d+) /.exec(bb);
-  if (Ib) return Ub(Number(Ib[1]) - 1);
-  const Hb = /^([\w$]+) is in the code \d+ times\b/.exec(bb);
-  if (Hb) {
-    const bb = Hb[1].replaceAll("$", "\\$"),
-      cb = new RegExp(`^(?:async\\s+)?function\\s*\\*?\\s*${bb}\\s*\\(|^${bb}\\s*=`),
-      sb = Tb.findIndex((bb => cb.test(bb)));
-    return sb >= 0 ? Ub(sb) : void 0
+    Bb = /^Line (\d+) /.exec(bb);
+  if (Bb) return Yb(Number(Bb[1]) - 1);
+  const eb = /^([\w$]+) is in the code \d+ times\b/.exec(bb);
+  if (eb) {
+    const bb = eb[1].replaceAll("$", "\\$"),
+      ab = new RegExp(`^(?:async\\s+)?function\\s*\\*?\\s*${bb}\\s*\\(|^${bb}\\s*=`),
+      Ub = Eb.findIndex((bb => ab.test(bb)));
+    return Ub >= 0 ? Yb(Ub) : void 0
   }
-  const fb = null !== (sb = null === (kb = /"([^"]+)"/.exec(bb)) || void 0 === kb ? void 0 : kb[1]) && void 0 !== sb ? sb : null === (Wb = /^api\.[\w$]+/.exec(bb)) || void 0 === Wb ? void 0 : Wb[0];
-  if (!fb) return;
-  const Mb = new Set(cb.before.split("\n")),
-    Xb = Tb.flatMap(((bb, cb) => bb.includes(fb) ? [cb] : [])),
-    nb = null !== (ab = Xb.find((bb => !Mb.has(Tb[bb])))) && void 0 !== ab ? ab : Xb[0];
-  return void 0 === nb ? void 0 : Ub(nb)
+  const vb = null !== (Ub = null === (Ab = /"([^"]+)"/.exec(bb)) || void 0 === Ab ? void 0 : Ab[1]) && void 0 !== Ub ? Ub : null === (Mb = /^api\.[\w$]+/.exec(bb)) || void 0 === Mb ? void 0 : Mb[0];
+  if (!vb) return;
+  const Lb = new Set(ab.before.split("\n")),
+    Pb = Eb.flatMap(((bb, ab) => bb.includes(vb) ? [ab] : [])),
+    Xb = null !== (Tb = Pb.find((bb => !Lb.has(Eb[bb])))) && void 0 !== Tb ? Tb : Pb[0];
+  return void 0 === Xb ? void 0 : Yb(Xb)
 }
 
-function sM(bb) {
+function Jv(bb) {
   return /^Line \d+ stops all of this code from running: "/.test(bb)
 }
 
-function kM(bb) {
+function nv(bb) {
   return /^Line \d+ (?:stops all of this code from running|never runs): "/.test(bb)
 }
 
-function WM(bb) {
-  return bb.replace(/^Line \d+ (\w)/, ((bb, cb) => cb.toUpperCase()))
+function Sv(bb) {
+  return bb.replace(/^Line \d+ (\w)/, ((bb, ab) => ab.toUpperCase()))
 }
-const aM = new Set([hb().SyntaxKind.EqualsToken, hb().SyntaxKind.QuestionQuestionEqualsToken, hb().SyntaxKind.BarBarEqualsToken]);
+const bL = new Set([mb().SyntaxKind.EqualsToken, mb().SyntaxKind.QuestionQuestionEqualsToken, mb().SyntaxKind.BarBarEqualsToken]);
 
-function TM(bb) {
-  const cb = hb().createSourceFile("worldCode.js", bb, hb().ScriptTarget.Latest, !0, hb().ScriptKind.JS),
-    sb = cb.statements.flatMap((bb => hb().isVariableStatement(bb) ? bb.declarationList.declarations.filter((bb => hb().isIdentifier(bb.name) && "CONFIG" === bb.name.text)) : [])),
-    kb = 1 === sb.length ? sb[0].initializer : void 0;
-  if (!kb || !hb().isObjectLiteralExpression(kb)) return [];
-  const Wb = new Set;
-  for (const Ib of kb.properties) {
-    if (!hb().isPropertyAssignment(Ib) && !hb().isShorthandPropertyAssignment(Ib) && !hb().isMethodDeclaration(Ib)) return [];
-    if (hb().isComputedPropertyName(Ib.name)) return [];
-    Wb.add(Ib.name.text)
+function aL(bb) {
+  const ab = mb().createSourceFile("worldCode.js", bb, mb().ScriptTarget.Latest, !0, mb().ScriptKind.JS),
+    Ub = ab.statements.flatMap((bb => mb().isVariableStatement(bb) ? bb.declarationList.declarations.filter((bb => mb().isIdentifier(bb.name) && "CONFIG" === bb.name.text)) : [])),
+    Ab = 1 === Ub.length ? Ub[0].initializer : void 0;
+  if (!Ab || !mb().isObjectLiteralExpression(Ab)) return [];
+  const Mb = new Set;
+  for (const Bb of Ab.properties) {
+    if (!mb().isPropertyAssignment(Bb) && !mb().isShorthandPropertyAssignment(Bb) && !mb().isMethodDeclaration(Bb)) return [];
+    if (mb().isComputedPropertyName(Bb.name)) return [];
+    Mb.add(Bb.name.text)
   }
-  const ab = [],
-    Tb = bb => {
-      if (hb().isPropertyAccessExpression(bb) && hb().isIdentifier(bb.expression) && "CONFIG" === bb.expression.text) {
-        const sb = bb.name.text,
-          kb = bb.parent;
-        hb().isBinaryExpression(kb) && kb.left === bb && aM.has(kb.operatorToken.kind) ? Wb.add(sb) : ab.push({
-          name: sb,
-          at: bb.getStart(cb)
+  const Tb = [],
+    Eb = bb => {
+      if (mb().isPropertyAccessExpression(bb) && mb().isIdentifier(bb.expression) && "CONFIG" === bb.expression.text) {
+        const Ub = bb.name.text,
+          Ab = bb.parent;
+        mb().isBinaryExpression(Ab) && Ab.left === bb && bL.has(Ab.operatorToken.kind) ? Mb.add(Ub) : Tb.push({
+          name: Ub,
+          at: bb.getStart(ab)
         })
       }
-      hb().forEachChild(bb, Tb)
+      mb().forEachChild(bb, Eb)
     };
-  Tb(cb);
-  const Ub = new Set;
-  return ab.flatMap((bb => {
-    if (Wb.has(bb.name) || Ub.has(bb.name)) return [];
-    Ub.add(bb.name);
-    return [`Line ${cb.getLineAndCharacterOfPosition(bb.at).line+1} uses "CONFIG.${bb.name}", but CONFIG has no ${bb.name}, so it is undefined there. Add ${bb.name} to CONFIG.`]
+  Eb(ab);
+  const Yb = new Set;
+  return Tb.flatMap((bb => {
+    if (Mb.has(bb.name) || Yb.has(bb.name)) return [];
+    Yb.add(bb.name);
+    return [`Line ${ab.getLineAndCharacterOfPosition(bb.at).line+1} uses "CONFIG.${bb.name}", but CONFIG has no ${bb.name}, so it is undefined there. Add ${bb.name} to CONFIG.`]
   }))
 }
 
-function UM(bb, cb) {
-  var sb;
-  const kb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2] && !(void 0 !== cb.path && (0, mb.e)(cb.path)),
-    Wb = !0 === (null === (sb = cb.path) || void 0 === sb ? void 0 : sb.endsWith(".ts")),
-    ab = cb => [...bb.codeWarnings(cb, kb), ...jf(cb, kb, Wb), ...bM(cb), ...TM(cb)],
-    Tb = new Set(ab(cb.before).map(pf));
-  return ab(cb.after).filter((bb => !Tb.has(pf(bb))))
+function UL(bb, ab) {
+  var Ub;
+  const Ab = arguments.length > 2 && void 0 !== arguments[2] && arguments[2] && !(void 0 !== ab.path && (0, jb.f)(ab.path)),
+    Mb = !0 === (null === (Ub = ab.path) || void 0 === Ub ? void 0 : Ub.endsWith(".ts")),
+    Tb = ab => [...bb.codeWarnings(ab, Ab), ...Cv(ab, Ab, Mb), ...Ov(ab), ...aL(ab)],
+    Eb = new Set(Tb(ab.before).map(Vv));
+  return Tb(ab.after).filter((bb => !Eb.has(Vv(bb))))
 }
-const IM = "Looking up";
+const AL = "Looking up";
 
-function HM(bb) {
+function ML(bb) {
   return {
     ...bb,
     call: void 0
   }
 }
-const fM = 15e3,
-  MM = new Map;
-const XM = function(bb) {
-    let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "bloxd_worldCodeAi";
+const TL = 15e3,
+  EL = new Map;
+const YL = function(bb) {
+    let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "bloxd_worldCodeAi";
     if ("undefined" === typeof indexedDB) return bb;
-    let sb = "unknown",
-      kb = null;
-    const Wb = () => (kb ??= new Promise(((bb, sb) => {
-        const Wb = indexedDB.open(cb, 1);
-        Wb.onupgradeneeded = () => {
-          Wb.result.createObjectStore(WH)
-        }, Wb.onsuccess = () => {
-          const cb = Wb.result;
-          cb.onversionchange = () => {
-            cb.close(), kb = null
-          }, cb.onclose = () => {
-            kb = null
-          }, bb(cb)
-        }, Wb.onerror = () => {
+    let Ub = "unknown",
+      Ab = null;
+    const Mb = () => (Ab ??= new Promise(((bb, Ub) => {
+        const Mb = indexedDB.open(ab, 1);
+        Mb.onupgradeneeded = () => {
+          Mb.result.createObjectStore(ae)
+        }, Mb.onsuccess = () => {
+          const ab = Mb.result;
+          ab.onversionchange = () => {
+            ab.close(), Ab = null
+          }, ab.onclose = () => {
+            Ab = null
+          }, bb(ab)
+        }, Mb.onerror = () => {
           var bb;
-          sb(null !== (bb = Wb.error) && void 0 !== bb ? bb : new Error("IndexedDB didn't open"))
-        }, Wb.onblocked = () => {
-          sb(new Error("IndexedDB is blocked"))
+          Ub(null !== (bb = Mb.error) && void 0 !== bb ? bb : new Error("IndexedDB didn't open"))
+        }, Mb.onblocked = () => {
+          Ub(new Error("IndexedDB is blocked"))
         }
       })).catch((bb => {
-        throw kb = null, bb
-      })), kb),
-      ab = async bb => {
+        throw Ab = null, bb
+      })), Ab),
+      Tb = async bb => {
         try {
-          return (await Wb()).transaction(WH, bb)
-        } catch (cb) {
-          if ("indexedDB" !== sb) throw cb;
-          return kb = null, (await Wb()).transaction(WH, bb)
+          return (await Mb()).transaction(ae, bb)
+        } catch (ab) {
+          if ("indexedDB" !== Ub) throw ab;
+          return Ab = null, (await Mb()).transaction(ae, bb)
         }
-      }, Tb = async () => {
-        if ("unknown" === sb) try {
-          await Wb(), sb = "indexedDB"
+      }, Eb = async () => {
+        if ("unknown" === Ub) try {
+          await Mb(), Ub = "indexedDB"
         } catch {
-          sb = "fallback"
+          Ub = "fallback"
         }
-        return "indexedDB" === sb
+        return "indexedDB" === Ub
       };
     return {
-      getItem: async cb => {
-        if (!await Tb()) return bb.getItem(cb);
-        const sb = await (async bb => {
-          const cb = await ab("readonly"),
-            sb = cb.objectStore(WH).get(bb);
-          return await aH(cb), sb.result
-        })(cb);
-        return void 0 === sb ? bb.getItem(cb) : sb
+      getItem: async ab => {
+        if (!await Eb()) return bb.getItem(ab);
+        const Ub = await (async bb => {
+          const ab = await Tb("readonly"),
+            Ub = ab.objectStore(ae).get(bb);
+          return await Ue(ab), Ub.result
+        })(ab);
+        return void 0 === Ub ? bb.getItem(ab) : Ub
       },
-      setItem: async (cb, sb) => {
-        if (!await Tb()) return bb.setItem(cb, sb);
+      setItem: async (ab, Ub) => {
+        if (!await Eb()) return bb.setItem(ab, Ub);
         try {
-          const bb = await ab("readwrite");
-          return bb.objectStore(WH).put(sb, cb), await aH(bb), !0
+          const bb = await Tb("readwrite");
+          return bb.objectStore(ae).put(Ub, ab), await Ue(bb), !0
         } catch {
           return !1
         }
       },
-      update: async (cb, sb) => {
-        if (!await Tb()) throw new Error("No IndexedDB: read and write localforage instead");
-        const kb = await bb.getItem(cb).catch((() => null)),
-          Wb = await ab("readwrite"),
-          Ub = Wb.objectStore(WH);
-        let Ib;
-        const Hb = Ub.get(cb);
-        return Hb.onsuccess = () => {
-          Ib = sb(void 0 === Hb.result ? kb : Hb.result), Ub.put(Ib, cb)
-        }, await aH(Wb), Ib
+      update: async (ab, Ub) => {
+        if (!await Eb()) throw new Error("No IndexedDB: read and write localforage instead");
+        const Ab = await bb.getItem(ab).catch((() => null)),
+          Mb = await Tb("readwrite"),
+          Yb = Mb.objectStore(ae);
+        let Bb;
+        const eb = Yb.get(ab);
+        return eb.onsuccess = () => {
+          Bb = Ub(void 0 === eb.result ? Ab : eb.result), Yb.put(Bb, ab)
+        }, await Ue(Mb), Bb
       }
     }
-  }(qa.d),
-  nM = new class {
-    constructor(bb, cb) {
-      this.store = bb, this.signal = cb, this.vn = new Map
+  }(uT.c),
+  BL = new class {
+    constructor(bb, ab) {
+      this.store = bb, this.signal = ab, this.RX = new Map
     }
-    watch(bb, cb) {
-      var sb, kb;
-      return null !== (sb = null === (kb = this.signal) || void 0 === kb ? void 0 : kb.listen((sb => {
-        if (sb !== bb) return;
-        const kb = this.load(bb).then((async cb => fH(cb, await this.read(bb))));
-        this.vn.set(bb, kb), kb.then(cb)
-      }))) && void 0 !== sb ? sb : () => {}
+    watch(bb, ab) {
+      var Ub, Ab;
+      return null !== (Ub = null === (Ab = this.signal) || void 0 === Ab ? void 0 : Ab.listen((Ub => {
+        if (Ub !== bb) return;
+        const Ab = this.load(bb).then((async ab => Ye(ab, await this.read(bb))));
+        this.RX.set(bb, Ab), Ab.then(ab)
+      }))) && void 0 !== Ub ? Ub : () => {}
     }
     list(bb) {
       return this.load(bb)
     }
-    async add(bb, cb, sb) {
-      let kb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Date.now(),
-        Wb = arguments.length > 4 ? arguments[4] : void 0;
-      const ab = (bb, ab) => {
-          const Tb = fH(bb, ab),
-            Ub = Tb[Tb.length - 1];
-          if (Ub && function(bb, cb) {
-              const sb = Object.keys(bb);
-              return sb.length === Object.keys(cb).length && sb.every((sb => bb[sb] === cb[sb]))
-            }(Ub.files, sb)) return Tb;
-          const Ib = Math.max(kb, ...Tb.map((bb => bb.id + 1)));
-          return [...Tb, {
-            id: Ib,
-            at: kb,
-            label: cb,
-            ...Wb ? {
-              did: Wb
+    async add(bb, ab, Ub) {
+      let Ab = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Date.now(),
+        Mb = arguments.length > 4 ? arguments[4] : void 0;
+      const Tb = (bb, Tb) => {
+          const Eb = Ye(bb, Tb),
+            Yb = Eb[Eb.length - 1];
+          if (Yb && function(bb, ab) {
+              const Ub = Object.keys(bb);
+              return Ub.length === Object.keys(ab).length && Ub.every((Ub => bb[Ub] === ab[Ub]))
+            }(Yb.files, Ub)) return Eb;
+          const Bb = Math.max(Ab, ...Eb.map((bb => bb.id + 1)));
+          return [...Eb, {
+            id: Bb,
+            at: Ab,
+            label: ab,
+            ...Mb ? {
+              did: Mb
             } : {},
             files: {
-              ...sb
+              ...Ub
             }
           }].slice(-30)
         },
-        Tb = this.load(bb).then((async cb => this.save(bb, (bb => ab(cb, bb)))));
-      this.vn.set(bb, Tb.then((bb => {
+        Eb = this.load(bb).then((async ab => this.save(bb, (bb => Tb(ab, bb)))));
+      this.RX.set(bb, Eb.then((bb => {
         let {
-          snapshots: cb
+          snapshots: ab
         } = bb;
-        return cb
+        return ab
       })));
       const {
-        snapshots: Ub,
-        isSaved: Ib
-      } = await Tb;
-      var Hb;
-      Ib && (null === (Hb = this.signal) || void 0 === Hb || Hb.post(bb));
-      return Ub
+        snapshots: Yb,
+        isSaved: Bb
+      } = await Eb;
+      var eb;
+      Bb && (null === (eb = this.signal) || void 0 === eb || eb.post(bb));
+      return Yb
     }
-    async relabel(bb, cb, sb) {
-      const kb = this.load(bb).then((async kb => this.save(bb, (bb => fH(kb, bb).map((bb => bb.id === cb ? {
+    async relabel(bb, ab, Ub) {
+      const Ab = this.load(bb).then((async Ab => this.save(bb, (bb => Ye(Ab, bb).map((bb => bb.id === ab ? {
         ...bb,
-        label: sb
+        label: Ub
       } : bb))))));
-      this.vn.set(bb, kb.then((bb => {
+      this.RX.set(bb, Ab.then((bb => {
         let {
-          snapshots: cb
+          snapshots: ab
         } = bb;
-        return cb
+        return ab
       })));
       const {
-        snapshots: Wb,
-        isSaved: ab
-      } = await kb;
-      var Tb;
-      ab && (null === (Tb = this.signal) || void 0 === Tb || Tb.post(bb));
-      return Wb
+        snapshots: Mb,
+        isSaved: Tb
+      } = await Ab;
+      var Eb;
+      Tb && (null === (Eb = this.signal) || void 0 === Eb || Eb.post(bb));
+      return Mb
     }
-    async save(bb, cb) {
+    async save(bb, ab) {
       if (this.store.update) try {
         return {
-          snapshots: await this.store.update(this.storeKey(bb), (bb => cb(HH(bb) ? bb : null))),
+          snapshots: await this.store.update(this.storeKey(bb), (bb => ab(Ee(bb) ? bb : null))),
           isSaved: !0
         }
       } catch {}
-      const sb = cb(await this.read(bb));
+      const Ub = ab(await this.read(bb));
       return {
-        snapshots: sb,
-        isSaved: await this.store.setItem(this.storeKey(bb), sb).catch((() => !1))
+        snapshots: Ub,
+        isSaved: await this.store.setItem(this.storeKey(bb), Ub).catch((() => !1))
       }
     }
     read(bb) {
-      return this.store.getItem(this.storeKey(bb)).then((bb => HH(bb) ? bb : null)).catch((() => null))
+      return this.store.getItem(this.storeKey(bb)).then((bb => Ee(bb) ? bb : null)).catch((() => null))
     }
     load(bb) {
-      let cb = this.vn.get(bb);
-      return cb || (cb = this.store.getItem(this.storeKey(bb)).then((bb => HH(bb) ? bb : [])).catch((() => [])), this.vn.set(bb, cb)), cb
+      let ab = this.RX.get(bb);
+      return ab || (ab = this.store.getItem(this.storeKey(bb)).then((bb => Ee(bb) ? bb : [])).catch((() => [])), this.RX.set(bb, ab)), ab
     }
     storeKey(bb) {
       return `worldCodeAiHistory:${bb}`
     }
-  }(XM, IH("bloxd-worldCodeAiHistory")),
-  mM = new class {
-    constructor(bb, cb) {
-      this.store = bb, this.signal = cb, this.vn = new Map
+  }(YL, Te("bloxd-worldCodeAiHistory")),
+  eL = new class {
+    constructor(bb, ab) {
+      this.store = bb, this.signal = ab, this.RX = new Map
     }
-    watch(bb, cb) {
-      var sb, kb;
-      return null !== (sb = null === (kb = this.signal) || void 0 === kb ? void 0 : kb.listen((sb => {
-        if (sb !== bb) return;
-        const kb = this.load(bb).then((async cb => {
-          var sb;
-          return null !== (sb = await this.read(bb)) && void 0 !== sb ? sb : cb
+    watch(bb, ab) {
+      var Ub, Ab;
+      return null !== (Ub = null === (Ab = this.signal) || void 0 === Ab ? void 0 : Ab.listen((Ub => {
+        if (Ub !== bb) return;
+        const Ab = this.load(bb).then((async ab => {
+          var Ub;
+          return null !== (Ub = await this.read(bb)) && void 0 !== Ub ? Ub : ab
         }));
-        this.vn.set(bb, kb), kb.then(cb)
-      }))) && void 0 !== sb ? sb : () => {}
+        this.RX.set(bb, Ab), Ab.then(ab)
+      }))) && void 0 !== Ub ? Ub : () => {}
     }
     list(bb) {
       return this.load(bb)
     }
-    add(bb, cb) {
-      return this.update(bb, (bb => bb.includes(cb) || bb.length >= 8 ? bb : [...bb, cb]))
+    add(bb, ab) {
+      return this.update(bb, (bb => bb.includes(ab) || bb.length >= 8 ? bb : [...bb, ab]))
     }
-    remove(bb, cb) {
-      return this.update(bb, (bb => bb.filter((bb => bb !== cb))))
+    remove(bb, ab) {
+      return this.update(bb, (bb => bb.filter((bb => bb !== ab))))
     }
-    async update(bb, cb) {
-      var sb;
-      const kb = this.load(bb).then((async sb => {
-        var kb;
+    async update(bb, ab) {
+      var Ub;
+      const Ab = this.load(bb).then((async Ub => {
+        var Ab;
         if (this.store.update) try {
-          return await this.store.update(this.storeKey(bb), (bb => cb(Tc(bb) ? bb.slice(0, 8) : sb)))
+          return await this.store.update(this.storeKey(bb), (bb => ab(Ea(bb) ? bb.slice(0, 8) : Ub)))
         } catch {}
-        const Wb = cb(null !== (kb = await this.read(bb)) && void 0 !== kb ? kb : sb);
-        return await this.store.setItem(this.storeKey(bb), Wb).catch((() => !1)), Wb
+        const Mb = ab(null !== (Ab = await this.read(bb)) && void 0 !== Ab ? Ab : Ub);
+        return await this.store.setItem(this.storeKey(bb), Mb).catch((() => !1)), Mb
       }));
-      this.vn.set(bb, kb);
-      const Wb = await kb;
-      return null === (sb = this.signal) || void 0 === sb || sb.post(bb), Wb
+      this.RX.set(bb, Ab);
+      const Mb = await Ab;
+      return null === (Ub = this.signal) || void 0 === Ub || Ub.post(bb), Mb
     }
     read(bb) {
-      return this.store.getItem(this.storeKey(bb)).then((bb => Tc(bb) ? bb.slice(0, 8) : null)).catch((() => null))
+      return this.store.getItem(this.storeKey(bb)).then((bb => Ea(bb) ? bb.slice(0, 8) : null)).catch((() => null))
     }
     load(bb) {
-      let cb = this.vn.get(bb);
-      return cb || (cb = this.read(bb).then((bb => null !== bb && void 0 !== bb ? bb : [])), this.vn.set(bb, cb)), cb
+      let ab = this.RX.get(bb);
+      return ab || (ab = this.read(bb).then((bb => null !== bb && void 0 !== bb ? bb : [])), this.RX.set(bb, ab)), ab
     }
     storeKey(bb) {
       return `worldCodeAiNotes:${bb}`
     }
-  }(XM, IH("bloxd-worldCodeAiNotes"));
-const lM = ["Next in line", "2nd in line", "3rd in line"];
-let QM = null;
+  }(YL, Te("bloxd-worldCodeAiNotes"));
+const vL = ["Next in line", "2nd in line", "3rd in line"];
+let LL = null;
 
-function eM() {
-  if (!QM) {
-    var bb, cb, sb, kb;
-    const Wb = bb => nb.c.find((cb => cb.id === bb)),
-      ab = bb => {
-        var cb, sb;
-        return null !== (cb = null === (sb = Wb(bb)) || void 0 === sb ? void 0 : sb.content) && void 0 !== cb ? cb : ""
+function PL() {
+  if (!LL) {
+    var bb, ab, Ub, Ab;
+    const Mb = bb => Xb.d.find((ab => ab.id === bb)),
+      Tb = bb => {
+        var ab, Ub;
+        return null !== (ab = null === (Ub = Mb(bb)) || void 0 === Ub ? void 0 : Ub.content) && void 0 !== ab ? ab : ""
       };
-    QM = new pU({
-      apiReference: ab("apiReference"),
-      callbacks: ab("callbacks"),
-      clientOptions: ab("clientOptions"),
-      snippets: ab("snippets"),
-      howTo: ab("howTo"),
-      itemNames: null !== (bb = null === (cb = Wb("itemNames")) || void 0 === cb ? void 0 : cb.raw) && void 0 !== bb ? bb : "",
-      blockNames: null !== (sb = null === (kb = Wb("blockNames")) || void 0 === kb ? void 0 : kb.raw) && void 0 !== sb ? sb : "",
-      mobSettings: ab("mobSettings")
+    LL = new cY({
+      apiReference: Tb("apiReference"),
+      callbacks: Tb("callbacks"),
+      clientOptions: Tb("clientOptions"),
+      snippets: Tb("snippets"),
+      howTo: Tb("howTo"),
+      itemNames: null !== (bb = null === (ab = Mb("itemNames")) || void 0 === ab ? void 0 : ab.raw) && void 0 !== bb ? bb : "",
+      blockNames: null !== (Ub = null === (Ab = Mb("blockNames")) || void 0 === Ab ? void 0 : Ab.raw) && void 0 !== Ub ? Ub : "",
+      mobSettings: Tb("mobSettings")
     })
   }
-  return QM
+  return LL
 }
-const CM = ["Welcome players when they join", "Give everyone a sword when they join", "Make a /spawn command", "Show a timer on the screen"],
-  NM = ["Give me a diamond sword", "Teleport me onto this block", "Make me jump really high", "Tell everyone I clicked it"],
-  VM = ["Explain these changes", "Make it simpler"],
-  LM = ["Make the change"],
-  uM = ["Explain how it works", "Add a sound or effect", "Make it harder to play"],
-  YM = ["It didn't work: nothing happened in my world.", "It didn't work: an error showed up.", "It didn't work: it did something different from what I asked."];
+const XL = ["Welcome players when they join", "Give everyone a sword when they join", "Make a /spawn command", "Show a timer on the screen"],
+  jL = ["Give me a diamond sword", "Teleport me onto this block", "Make me jump really high", "Tell everyone I clicked it"],
+  RL = ["Explain these changes", "Make it simpler"],
+  kL = ["Make the change"],
+  yL = ["Explain how it works", "Add a sound or effect", "Make it harder to play"],
+  ZL = ["It didn't work: nothing happened in my world.", "It didn't work: an error showed up.", "It didn't work: it did something different from what I asked."];
 
-function hM(bb) {
+function DL(bb) {
   let {
-    requests: cb,
-    onPick: sb
+    requests: ab,
+    onPick: Ub
   } = bb;
-  const Wb = (0, kb.useRef)(null);
-  var ab;
-  return ab = Wb, (0, kb.useLayoutEffect)((() => {
-    const bb = ab.current,
-      cb = null === bb || void 0 === bb ? void 0 : bb.closest(".WorldCodeAiMessages");
-    if (!bb || !cb) return;
-    const sb = () => {
-      const sb = cb.getBoundingClientRect().bottom;
-      for (const cb of Array.from(bb.children)) {
-        const bb = cb.getBoundingClientRect();
-        cb.style.visibility = bb.top < sb && bb.bottom > sb + 1 ? "hidden" : ""
+  const Mb = (0, Ab.useRef)(null);
+  var Tb;
+  return Tb = Mb, (0, Ab.useLayoutEffect)((() => {
+    const bb = Tb.current,
+      ab = null === bb || void 0 === bb ? void 0 : bb.closest(".WorldCodeAiMessages");
+    if (!bb || !ab) return;
+    const Ub = () => {
+      const Ub = ab.getBoundingClientRect().bottom;
+      for (const ab of Array.from(bb.children)) {
+        const bb = ab.getBoundingClientRect();
+        ab.style.visibility = bb.top < Ub && bb.bottom > Ub + 1 ? "hidden" : ""
       }
     };
-    sb(), cb.addEventListener("scroll", sb, {
+    Ub(), ab.addEventListener("scroll", Ub, {
       passive: !0
     });
-    const kb = "function" === typeof ResizeObserver ? new ResizeObserver(sb) : null;
-    return null === kb || void 0 === kb || kb.observe(cb), null === kb || void 0 === kb || kb.observe(bb), () => {
-      cb.removeEventListener("scroll", sb), null === kb || void 0 === kb || kb.disconnect()
+    const Ab = "function" === typeof ResizeObserver ? new ResizeObserver(Ub) : null;
+    return null === Ab || void 0 === Ab || Ab.observe(ab), null === Ab || void 0 === Ab || Ab.observe(bb), () => {
+      ab.removeEventListener("scroll", Ub), null === Ab || void 0 === Ab || Ab.disconnect()
     }
-  }), [ab]), (0, Tb.jsx)("div", {
-    ref: Wb,
+  }), [Tb]), (0, Eb.jsx)("div", {
+    ref: Mb,
     className: "WorldCodeAiChips WorldCodeAiFollowUps",
-    children: cb.map((bb => (0, kb.createElement)("button", {
-      ...eI.e,
+    children: ab.map((bb => (0, Ab.createElement)("button", {
+      ...jB.g,
       key: bb,
       className: "WorldCodeAiChip",
       onClick: () => {
-        sb(bb)
+        Ub(bb)
       }
     }, function(bb) {
-      const cb = bb.replace(/^It didn't work: /, "").replace(/\.$/, "");
-      return cb.charAt(0).toUpperCase() + cb.slice(1)
+      const ab = bb.replace(/^It didn't work: /, "").replace(/\.$/, "");
+      return ab.charAt(0).toUpperCase() + ab.slice(1)
     }(bb))))
   })
 }
 
-function JM(bb) {
+function zL(bb) {
   let {
-    useFree: cb,
-    retryOf: sb,
-    isAutoFix: kb,
-    lookupOf: Wb
+    useFree: ab,
+    retryOf: Ub,
+    isAutoFix: Ab,
+    lookupOf: Mb
   } = bb;
-  return !0 !== cb && (void 0 !== sb || !0 !== kb && void 0 === Wb)
+  return !0 !== ab && (void 0 !== Ub || !0 !== Ab && void 0 === Mb)
 }
 
-function gM() {
+function xL() {
   return "The world's blocks can't be seen from here."
 }
 
-function BM() {
+function iL() {
   return "The world can't be seen from here."
 }
-const tM = "Try the missing change again",
-  yM = 1e4,
-  PM = "I can only help with your game's code. Try asking about something in your world.";
+const fL = "Try the missing change again",
+  mL = 1e4,
+  pL = "I can only help with your game's code. Try asking about something in your world.";
 
-function DM(bb) {
+function NL(bb) {
   return bb ? "Apply this change first, then press Switch to World Code." : "Apply this change first, then ask me again to go to World Code."
 }
-const EM = 1500;
+const WL = 1500;
 
-function iM(bb, cb) {
-  var sb;
-  return Object.entries(null !== (sb = bb.leftFiles) && void 0 !== sb ? sb : {}).every((bb => {
-    var sb;
-    let [kb, Wb] = bb;
-    return (null !== (sb = cb[kb]) && void 0 !== sb ? sb : "") === Wb
+function HL(bb, ab) {
+  var Ub;
+  return Object.entries(null !== (Ub = bb.leftFiles) && void 0 !== Ub ? Ub : {}).every((bb => {
+    var Ub;
+    let [Ab, Mb] = bb;
+    return (null !== (Ub = ab[Ab]) && void 0 !== Ub ? Ub : "") === Mb
   }))
 }
-const OM = "Check your code: go through my request part by part and play it in your head as each player, from the start: what do they see and when, and what happens the first time, the last time, and with things that shouldn't count? Only something that stops my request working is wrong: keep everything else as it is (numbers, starting values, how it works) and add no new rules or limits. If anything is wrong, send the fixed file, after playing the normal case through once more with your change. If it's all right, say in one sentence that you played it through and found no mistakes, that they should still try it in their world because you can miss things, and send no file.";
+const IL = "Check your code: go through my request part by part and play it in your head as each player, from the start: what do they see and when, and what happens the first time, the last time, and with things that shouldn't count? Only something that stops my request working is wrong: keep everything else as it is (numbers, starting values, how it works) and add no new rules or limits. If anything is wrong, send the fixed file, after playing the normal case through once more with your change. If it's all right, say in one sentence that you played it through and found no mistakes, that they should still try it in their world because you can miss things, and send no file.";
 
-function GM(bb) {
-  var cb, sb, Wb, Ib, Hb, fb, Mb, Xb;
+function dL(bb) {
+  var ab, Ub, Mb, Bb, eb, vb, Lb, Pb;
   let {
-    entry: nb,
-    isOutOfDate: mb = !1,
-    canEdit: lb,
-    onApply: Qb,
-    onUndo: eb,
-    onTryIt: Cb,
-    isLatest: Nb,
-    canUndo: Vb,
-    onFixWarnings: Lb,
-    onCheck: ub,
-    busy: Yb,
-    checkPicked: hb,
-    onPickedChange: Jb,
-    request: gb,
-    elsewhere: Bb,
-    defaultOpen: tb
+    entry: Xb,
+    isOutOfDate: jb = !1,
+    canEdit: Rb,
+    onApply: kb,
+    onUndo: yb,
+    onTryIt: Zb,
+    isLatest: Db,
+    canUndo: zb,
+    onFixWarnings: xb,
+    onCheck: ib,
+    busy: fb,
+    checkPicked: mb,
+    onPickedChange: pb,
+    request: Nb,
+    elsewhere: Wb,
+    defaultOpen: Hb
   } = bb;
-  const yb = "offered" === nb.status && mb ? "stale" : nb.status,
-    [Pb, Db] = (0, kb.useState)(tb),
-    [Eb, ib] = (0, kb.useState)(!1),
-    Ob = null !== (cb = nb.warnings) && void 0 !== cb ? cb : [],
-    Gb = Nb && ("offered" === yb || "applied" === yb) && lb && Ob.length > 0 && !nb.warningsSentBack,
-    Kb = "applied" === yb,
-    Zb = null !== (sb = null === (Wb = nb.swappedTo) || void 0 === Wb ? void 0 : Wb[0]) && void 0 !== sb ? sb : Gb ? null !== (Ib = null === (Hb = /"([^"]+)"/.exec(Ob[0])) || void 0 === Hb ? void 0 : Hb[1]) && void 0 !== Ib ? Ib : null === (fb = /^api\.[\w$]+/.exec(Ob[0])) || void 0 === fb ? void 0 : fb[0] : void 0,
-    zb = Ob.every((bb => /never true|no block is ever called that/.test(bb))),
-    qb = (0, kb.useMemo)((() => {
+  const Ib = "offered" === Xb.status && jb ? "stale" : Xb.status,
+    [db, Fb] = (0, Ab.useState)(Hb),
+    [hb, Gb] = (0, Ab.useState)(!1),
+    Qb = null !== (ab = Xb.warnings) && void 0 !== ab ? ab : [],
+    qb = Db && ("offered" === Ib || "applied" === Ib) && Rb && Qb.length > 0 && !Xb.warningsSentBack,
+    ub = "applied" === Ib,
+    rb = null !== (Ub = null === (Mb = Xb.swappedTo) || void 0 === Mb ? void 0 : Mb[0]) && void 0 !== Ub ? Ub : qb ? null !== (Bb = null === (eb = /"([^"]+)"/.exec(Qb[0])) || void 0 === eb ? void 0 : eb[1]) && void 0 !== Bb ? Bb : null === (vb = /^api\.[\w$]+/.exec(Qb[0])) || void 0 === vb ? void 0 : vb[0] : void 0,
+    Kb = Qb.every((bb => /never true|no block is ever called that/.test(bb))),
+    ob = (0, Ab.useMemo)((() => {
       var bb;
-      const [cb] = nb.changes;
-      return new Map((null !== (bb = nb.warnings) && void 0 !== bb ? bb : []).map((bb => [bb, 1 === nb.changes.length && cb ? cM(bb, cb) : void 0])))
-    }), [nb.warnings, nb.changes]),
-    db = 1 === Ob.length ? qb.get(Ob[0]) : void 0,
-    [Ab, wb] = (0, kb.useState)(new Set),
-    rb = Ab.size > 0;
-  (0, kb.useEffect)((() => {
-    null === Jb || void 0 === Jb || Jb(rb)
-  }), [rb, Jb]), (0, kb.useEffect)((() => {
+      const [ab] = Xb.changes;
+      return new Map((null !== (bb = Xb.warnings) && void 0 !== bb ? bb : []).map((bb => [bb, 1 === Xb.changes.length && ab ? cv(bb, ab) : void 0])))
+    }), [Xb.warnings, Xb.changes]),
+    lb = 1 === Qb.length ? ob.get(Qb[0]) : void 0,
+    [tb, wb] = (0, Ab.useState)(new Set),
+    sb = tb.size > 0;
+  (0, Ab.useEffect)((() => {
+    null === pb || void 0 === pb || pb(sb)
+  }), [sb, pb]), (0, Ab.useEffect)((() => {
     wb((bb => 0 === bb.size ? bb : new Set))
-  }), [nb.changes]);
-  const ob = "offered" === yb && lb && nb.id >= 0,
-    Sb = (0, kb.useMemo)((() => new Map(nb.changes.map((bb => [bb.path, Wf(bb, gb)])))), [nb.changes, gb]),
-    Rb = [...Sb.values()].reduce(((bb, cb) => bb + cb.length), 0),
-    vb = ob && Rb >= 2,
-    [Fb, xb] = (0, kb.useState)(!1),
-    jb = "applied" === yb && Rb >= 2,
-    pb = Rb - Ab.size,
-    bc = (0, kb.useMemo)((() => {
-      if (0 !== Ab.size) return nb.changes.flatMap((bb => {
-        var cb;
-        const sb = new Set((null !== (cb = Sb.get(bb.path)) && void 0 !== cb ? cb : []).filter((cb => !Ab.has(`${bb.path}:${cb.index}`))).map((bb => bb.index))),
-          kb = function(bb, cb) {
-            const sb = SH(bb.before, bb.after),
-              kb = sb.flatMap((bb => "same" === bb.kind ? [bb.text] : cb.has(bb.index) ? bb.added : bb.removed));
-            if (0 === kb.length) return "";
-            const Wb = (sb.every((bb => "same" === bb.kind || cb.has(bb.index))) ? bb.after : bb.before).endsWith("\n") ? "\n" : "";
-            return `${kb.join("\n")}${Wb}`
-          }(bb, sb);
-        return kb === bb.before ? [] : [{
+  }), [Xb.changes]);
+  const gb = "offered" === Ib && Rb && Xb.id >= 0,
+    Cb = (0, Ab.useMemo)((() => new Map(Xb.changes.map((bb => [bb.path, bv(bb, Nb)])))), [Xb.changes, Nb]),
+    Vb = [...Cb.values()].reduce(((bb, ab) => bb + ab.length), 0),
+    Ob = gb && Vb >= 2,
+    [cb, Jb] = (0, Ab.useState)(!1),
+    nb = "applied" === Ib && Vb >= 2,
+    Sb = Vb - tb.size,
+    ba = (0, Ab.useMemo)((() => {
+      if (0 !== tb.size) return Xb.changes.flatMap((bb => {
+        var ab;
+        const Ub = new Set((null !== (ab = Cb.get(bb.path)) && void 0 !== ab ? ab : []).filter((ab => !tb.has(`${bb.path}:${ab.index}`))).map((bb => bb.index))),
+          Ab = function(bb, ab) {
+            const Ub = we(bb.before, bb.after),
+              Ab = Ub.flatMap((bb => "same" === bb.kind ? [bb.text] : ab.has(bb.index) ? bb.added : bb.removed));
+            if (0 === Ab.length) return "";
+            const Mb = (Ub.every((bb => "same" === bb.kind || ab.has(bb.index))) ? bb.after : bb.before).endsWith("\n") ? "\n" : "";
+            return `${Ab.join("\n")}${Mb}`
+          }(bb, Ub);
+        return Ab === bb.before ? [] : [{
           ...bb,
-          after: kb
+          after: Ab
         }]
       }))
-    }), [nb.changes, Sb, Ab]),
-    cc = (0, kb.useMemo)((() => bc && hb ? hb(bc) : []), [bc, hb]);
-  (0, kb.useEffect)((() => {
-    "applied" === yb && Db(!1)
-  }), [yb]);
-  const sc = !!nb.editedInPlace;
-  (0, kb.useEffect)((() => {
-    sc || "offered" !== nb.status || Db(!0)
-  }), [sc, nb.status]);
-  const kc = nb.changes.map((bb => bb.path)).join(", "),
-    Wc = !sc || Gb || cc.length > 0 || "undone" === yb || "stale" === yb;
-  return (0, Tb.jsxs)("div", {
+    }), [Xb.changes, Cb, tb]),
+    aa = (0, Ab.useMemo)((() => ba && mb ? mb(ba) : []), [ba, mb]);
+  (0, Ab.useEffect)((() => {
+    "applied" === Ib && Fb(!1)
+  }), [Ib]);
+  const Ua = !!Xb.editedInPlace;
+  (0, Ab.useEffect)((() => {
+    Ua || "offered" !== Xb.status || Fb(!0)
+  }), [Ua, Xb.status]);
+  const Aa = Xb.changes.map((bb => bb.path)).join(", "),
+    Ma = !Ua || qb || aa.length > 0 || "undone" === Ib || "stale" === Ib;
+  return (0, Eb.jsxs)("div", {
     className: "WorldCodeAiToolCard",
-    children: [(0, Tb.jsx)(Ub, {
+    children: [(0, Eb.jsx)(Yb, {
       className: "WorldCodeAiChangeLog",
-      title: sc ? `Editing code: ${kc}` : `Code change: ${kc}`,
+      title: Ua ? `Editing code: ${Aa}` : `Code change: ${Aa}`,
       isCalm: !0,
-      isElsewhere: !!Bb,
-      isOpen: Pb,
-      onToggle: Db,
-      children: (0, Tb.jsx)("div", {
+      isElsewhere: !!Wb,
+      isOpen: db,
+      onToggle: Fb,
+      children: (0, Eb.jsx)("div", {
         className: "WorldCodeAiChanges",
-        children: nb.changes.map((bb => {
-          var cb, sb;
+        children: Xb.changes.map((bb => {
+          var ab, Ub;
           const {
-            added: kb,
-            removed: Wb
+            added: Ab,
+            removed: Mb
           } = function(bb) {
-            let cb = 0,
-              sb = 0;
-            for (const kb of Fk(bb.before, bb.after)) "added" === kb.kind ? cb++ : "removed" === kb.kind && sb++;
+            let ab = 0,
+              Ub = 0;
+            for (const Ab of CA(bb.before, bb.after)) "added" === Ab.kind ? ab++ : "removed" === Ab.kind && Ub++;
             return {
-              added: cb,
-              removed: sb
+              added: ab,
+              removed: Ub
             }
-          }(bc ? null !== (cb = bc.find((cb => cb.path === bb.path))) && void 0 !== cb ? cb : {
+          }(ba ? null !== (ab = ba.find((ab => ab.path === bb.path))) && void 0 !== ab ? ab : {
             ...bb,
             after: bb.before
-          } : bb), ab = null !== (sb = Sb.get(bb.path)) && void 0 !== sb ? sb : [], Ub = "offered" !== yb && "applied" !== yb || "" === bb.before ? [] : function(bb, cb) {
-            const sb = EH(cb);
-            return [...EH(bb)].filter((bb => !sb.has(bb)))
+          } : bb), Tb = null !== (Ub = Cb.get(bb.path)) && void 0 !== Ub ? Ub : [], Yb = "offered" !== Ib && "applied" !== Ib || "" === bb.before ? [] : function(bb, ab) {
+            const Ub = Ie(ab);
+            return [...Ie(bb)].filter((bb => !Ub.has(bb)))
           }(bb.before, bb.after);
-          return (0, Tb.jsxs)("div", {
+          return (0, Eb.jsxs)("div", {
             className: "WorldCodeAiChange",
-            children: [(0, Tb.jsxs)("div", {
+            children: [(0, Eb.jsxs)("div", {
               className: "WorldCodeAiChangeHeader",
-              children: [(0, Tb.jsx)("span", {
+              children: [(0, Eb.jsx)("span", {
                 className: "WorldCodeAiChangePath",
                 children: bb.path
-              }), kb > 0 && (0, Tb.jsx)("span", {
+              }), Ab > 0 && (0, Eb.jsx)("span", {
                 className: "WorldCodeAiAdded",
-                children: 1 === kb ? "1 line added" : `${kb} lines added`
-              }), Wb > 0 && (0, Tb.jsxs)("span", {
+                children: 1 === Ab ? "1 line added" : `${Ab} lines added`
+              }), Mb > 0 && (0, Eb.jsxs)("span", {
                 className: "WorldCodeAiRemoved",
-                children: [Wb, " removed"]
+                children: [Mb, " removed"]
               })]
-            }), vb && (0, Tb.jsx)("ul", {
+            }), Ob && (0, Eb.jsx)("ul", {
               className: "WorldCodeAiHunks",
-              children: ab.map((cb => {
-                const sb = `${bb.path}:${cb.index}`,
-                  kb = [cb.added.length > 0 ? `+${cb.added.length}` : "", cb.removed.length > 0 ? `\u2212${cb.removed.length}` : ""].filter(Boolean).join(" "),
-                  Wb = [cb.added.length > 0 ? `${cb.added.length} ${1===cb.added.length?"line":"lines"} added` : "", cb.removed.length > 0 ? `${cb.removed.length} taken out` : ""].filter(Boolean).join(", ");
-                return (0, Tb.jsx)("li", {
-                  children: (0, Tb.jsxs)("label", {
-                    children: [(0, Tb.jsx)("input", {
+              children: Tb.map((ab => {
+                const Ub = `${bb.path}:${ab.index}`,
+                  Ab = [ab.added.length > 0 ? `+${ab.added.length}` : "", ab.removed.length > 0 ? `\u2212${ab.removed.length}` : ""].filter(Boolean).join(" "),
+                  Mb = [ab.added.length > 0 ? `${ab.added.length} ${1===ab.added.length?"line":"lines"} added` : "", ab.removed.length > 0 ? `${ab.removed.length} taken out` : ""].filter(Boolean).join(", ");
+                return (0, Eb.jsx)("li", {
+                  children: (0, Eb.jsxs)("label", {
+                    children: [(0, Eb.jsx)("input", {
                       type: "checkbox",
-                      checked: !Ab.has(sb),
+                      checked: !tb.has(Ub),
                       onChange: bb => {
-                        const cb = new Set(Ab);
-                        bb.target.checked ? cb.delete(sb) : cb.add(sb), wb(cb)
+                        const ab = new Set(tb);
+                        bb.target.checked ? ab.delete(Ub) : ab.add(Ub), wb(ab)
                       }
-                    }), (0, Tb.jsxs)("span", {
-                      children: [cb.also && (0, Tb.jsx)("span", {
+                    }), (0, Eb.jsxs)("span", {
+                      children: [ab.also && (0, Eb.jsx)("span", {
                         className: "WorldCodeAiHunkAlso",
                         title: "You didn't ask for this. Untick it to leave it out.",
-                        children: "adds" === cb.also ? "Also adds" : "changes" === cb.also ? "Also changes" : "Also takes out"
-                      }), cb.label, cb.codeNames.length > 0 && (0, Tb.jsx)("code", {
+                        children: "adds" === ab.also ? "Also adds" : "changes" === ab.also ? "Also changes" : "Also takes out"
+                      }), ab.label, ab.codeNames.length > 0 && (0, Eb.jsx)("code", {
                         className: "WorldCodeAiHunkCode",
-                        children: cb.codeNames.join(", ")
-                      }), cb.detail && (0, Tb.jsx)("span", {
+                        children: ab.codeNames.join(", ")
+                      }), ab.detail && (0, Eb.jsx)("span", {
                         className: "WorldCodeAiHunkDetail",
-                        children: cb.detail
+                        children: ab.detail
                       })]
-                    }), (0, Tb.jsx)("span", {
+                    }), (0, Eb.jsx)("span", {
                       className: "WorldCodeAiHunkCount",
-                      title: Wb,
-                      "aria-label": Wb,
-                      children: `${kb} ${cb.added.length+cb.removed.length===1?"line":"lines"}`
+                      title: Mb,
+                      "aria-label": Mb,
+                      children: `${Ab} ${ab.added.length+ab.removed.length===1?"line":"lines"}`
                     })]
                   })
-                }, sb)
+                }, Ub)
               }))
-            }), vb && (ab.some((bb => void 0 !== bb.also)) ? (0, Tb.jsx)("p", {
+            }), Ob && (Tb.some((bb => void 0 !== bb.also)) ? (0, Eb.jsx)("p", {
               className: "WorldCodeAiHint WorldCodeAiHunksHint",
               children: 'You didn\'t ask for the parts marked "Also". Untick one to leave it out.'
-            }) : ab.some((bb => bb.takesOut.length > 0 || 0 === bb.added.length)) && (0, Tb.jsx)("p", {
+            }) : Tb.some((bb => bb.takesOut.length > 0 || 0 === bb.added.length)) && (0, Eb.jsx)("p", {
               className: "WorldCodeAiHint WorldCodeAiHunksHint",
               children: "Untick a part to keep that bit of your code as it is."
-            })), jb && ab.length >= 2 && (0, Tb.jsx)("button", {
+            })), nb && Tb.length >= 2 && (0, Eb.jsx)("button", {
               className: "WorldCodeAiLinkButton WorldCodeAiPartsToggle",
               onClick: () => {
-                xb(!Fb)
+                Jb(!cb)
               },
-              children: Fb ? `Hide the ${ab.length} parts` : `Show the ${ab.length} parts that went in`
-            }), jb && Fb && (0, Tb.jsx)("ul", {
+              children: cb ? `Hide the ${Tb.length} parts` : `Show the ${Tb.length} parts that went in`
+            }), nb && cb && (0, Eb.jsx)("ul", {
               className: "WorldCodeAiHunks WorldCodeAiHunks-done",
-              children: ab.map((cb => (0, Tb.jsx)("li", {
-                children: (0, Tb.jsxs)("span", {
-                  children: [cb.label, cb.codeNames.length > 0 && (0, Tb.jsx)("code", {
+              children: Tb.map((ab => (0, Eb.jsx)("li", {
+                children: (0, Eb.jsxs)("span", {
+                  children: [ab.label, ab.codeNames.length > 0 && (0, Eb.jsx)("code", {
                     className: "WorldCodeAiHunkCode",
-                    children: cb.codeNames.join(", ")
-                  }), cb.detail && (0, Tb.jsx)("span", {
+                    children: ab.codeNames.join(", ")
+                  }), ab.detail && (0, Eb.jsx)("span", {
                     className: "WorldCodeAiHunkDetail",
-                    children: cb.detail
+                    children: ab.detail
                   })]
                 })
-              }, `${bb.path}:${cb.index}`)))
-            }), bb.why && !vb && !(jb && Fb) && (0, Tb.jsx)("ul", {
+              }, `${bb.path}:${ab.index}`)))
+            }), bb.why && !Ob && !(nb && cb) && (0, Eb.jsx)("ul", {
               className: "WorldCodeAiChangeWhy",
-              children: bb.why.map((bb => (0, Tb.jsx)("li", {
+              children: bb.why.map((bb => (0, Eb.jsx)("li", {
                 children: bb.charAt(0).toUpperCase() + bb.slice(1)
               }, bb)))
-            }), Ub.length > 0 && !(vb && Ub.every((bb => ab.some((cb => cb.takesOut.includes(bb)))))) && (0, Tb.jsxs)("p", {
+            }), Yb.length > 0 && !(Ob && Yb.every((bb => Tb.some((ab => ab.takesOut.includes(bb)))))) && (0, Eb.jsxs)("p", {
               className: "WorldCodeAiChangeTakenOut",
-              children: ["applied" === yb ? "It took out " : "It also takes out ", Ub.slice(0, 6).map((bb => {
-                var cb;
-                const sb = null !== (cb = qH(bb)) && void 0 !== cb ? cb : pH(bb);
-                return sb.charAt(0).toLowerCase() + sb.slice(1)
-              })).join(", "), Ub.length > 6 ? ` and ${Ub.length-6} more` : "", ".", " ", (0, Tb.jsx)("code", {
+              children: ["applied" === Ib ? "It took out " : "It also takes out ", Yb.slice(0, 6).map((bb => {
+                var ab;
+                const Ub = null !== (ab = ue(bb)) && void 0 !== ab ? ab : ce(bb);
+                return Ub.charAt(0).toLowerCase() + Ub.slice(1)
+              })).join(", "), Yb.length > 6 ? ` and ${Yb.length-6} more` : "", ".", " ", (0, Eb.jsx)("code", {
                 className: "WorldCodeAiHunkCode",
-                children: Ub.slice(0, 6).join(", ")
+                children: Yb.slice(0, 6).join(", ")
               })]
-            }), (0, Tb.jsx)(UH, {
+            }), (0, Eb.jsx)(Me, {
               change: bb,
-              marked: Zb
+              marked: rb
             })]
           }, bb.path)
         }))
       })
-    }), Wc && (0, Tb.jsxs)("div", {
-      className: ab()("WorldCodeAiChangeActions", Nb && "WorldCodeAiChangeActions-sticky"),
-      children: [cc.length > 0 && (0, Tb.jsxs)("div", {
+    }), Ma && (0, Eb.jsxs)("div", {
+      className: Tb()("WorldCodeAiChangeActions", Db && "WorldCodeAiChangeActions-sticky"),
+      children: [aa.length > 0 && (0, Eb.jsxs)("div", {
         className: "WorldCodeAiWarning",
-        children: [(0, Tb.jsx)("p", {
+        children: [(0, Eb.jsx)("p", {
           className: "WorldCodeAiWarningTitle",
           children: "Leaving that part out breaks this:"
-        }), (0, Tb.jsx)("p", {
-          children: cc[0]
+        }), (0, Eb.jsx)("p", {
+          children: aa[0]
         })]
-      }), Gb && (0, Tb.jsxs)("div", {
+      }), qb && (0, Eb.jsxs)("div", {
         className: "WorldCodeAiWarning",
-        children: [(0, Tb.jsx)("p", {
+        children: [(0, Eb.jsx)("p", {
           className: "WorldCodeAiWarningTitle",
-          children: zb ? 1 === Ob.length ? `${db?`Line ${db.line}`:"This line"} ${Kb?"will":"would"} never work:` : `${Ob.length} lines ${Kb?"will":"would"} never work:` : 1 === Ob.length ? `${db?`Line ${db.line}`:"This line"} ${Kb?"will":"would"} break:` : `${Ob.length} lines ${Kb?"will":"would"} break:`
-        }), (Eb ? Ob : Ob.slice(0, 1)).map((bb => {
-          const cb = qb.get(bb);
-          return (0, Tb.jsxs)(kb.Fragment, {
-            children: [cb && !kM(bb) && (0, Tb.jsxs)("p", {
+          children: Kb ? 1 === Qb.length ? `${lb?`Line ${lb.line}`:"This line"} ${ub?"will":"would"} never work:` : `${Qb.length} lines ${ub?"will":"would"} never work:` : 1 === Qb.length ? `${lb?`Line ${lb.line}`:"This line"} ${ub?"will":"would"} break:` : `${Qb.length} lines ${ub?"will":"would"} break:`
+        }), (hb ? Qb : Qb.slice(0, 1)).map((bb => {
+          const ab = ob.get(bb);
+          return (0, Eb.jsxs)(Ab.Fragment, {
+            children: [ab && !nv(bb) && (0, Eb.jsxs)("p", {
               className: "WorldCodeAiWarningWhere",
-              children: [Ob.length > 1 && `Line ${cb.line}: `, (0, Tb.jsx)("code", {
-                children: cb.text
+              children: [Qb.length > 1 && `Line ${ab.line}: `, (0, Eb.jsx)("code", {
+                children: ab.text
               })]
-            }), (0, Tb.jsx)("p", {
-              children: !cb || 1 !== Ob.length && kM(bb) ? bb : WM(bb)
+            }), (0, Eb.jsx)("p", {
+              children: !ab || 1 !== Qb.length && nv(bb) ? bb : Sv(bb)
             })]
           }, bb)
-        })), !Eb && Ob.length > 1 && (0, Tb.jsxs)("button", {
+        })), !hb && Qb.length > 1 && (0, Eb.jsxs)("button", {
           className: "WorldCodeAiLinkButton",
           onClick: () => {
-            ib(!0)
+            Gb(!0)
           },
-          children: ["Show ", Ob.length - 1, " more"]
+          children: ["Show ", Qb.length - 1, " more"]
         })]
-      }), Gb && (0, Tb.jsx)("button", {
-        ...XI(null !== (Mb = nb.warnings) && void 0 !== Mb ? Mb : []) ? {} : eI.e,
+      }), qb && (0, Eb.jsx)("button", {
+        ...eB(null !== (Lb = Xb.warnings) && void 0 !== Lb ? Lb : []) ? {} : jB.g,
         className: "WorldCodeAiPrimaryButton",
-        disabled: Yb,
-        onClick: Lb,
-        children: 1 === (null === (Xb = nb.warnings) || void 0 === Xb ? void 0 : Xb.length) ? "Fix this line" : "Fix these lines"
-      }), "offered" === yb && lb && !sc && (0, Tb.jsx)("button", {
-        className: Gb ? "WorldCodeAiLinkButton" : "WorldCodeAiPrimaryButton",
-        disabled: vb && 0 === pb || !!Bb && Yb,
-        title: Bb && Yb ? "You can apply it once the AI is done." : void 0,
+        disabled: fb,
+        onClick: xb,
+        children: 1 === (null === (Pb = Xb.warnings) || void 0 === Pb ? void 0 : Pb.length) ? "Fix this line" : "Fix these lines"
+      }), "offered" === Ib && Rb && !Ua && (0, Eb.jsx)("button", {
+        className: qb ? "WorldCodeAiLinkButton" : "WorldCodeAiPrimaryButton",
+        disabled: Ob && 0 === Sb || !!Wb && fb,
+        title: Wb && fb ? "You can apply it once the AI is done." : void 0,
         onClick: () => {
-          Qb(bc)
+          kb(ba)
         },
-        children: Bb ? Bb.codeBlock ? "Apply in that code block" : "Apply in World Code" : vb && pb < Rb ? `Apply ${pb} of ${Rb} changes` : Gb ? "Apply anyway" : "Apply to my code"
-      }), "offered" === yb && !lb && (0, Tb.jsx)("span", {
+        children: Wb ? Wb.codeBlock ? "Apply in that code block" : "Apply in World Code" : Ob && Sb < Vb ? `Apply ${Sb} of ${Vb} changes` : qb ? "Apply anyway" : "Apply to my code"
+      }), "offered" === Ib && !Rb && (0, Eb.jsx)("span", {
         className: "WorldCodeAiHint",
-        children: null !== Bb && void 0 !== Bb && Bb.codeBlock ? "You can't edit that code block." : "You can't edit this world's code."
-      }), "applied" === yb && !sc && (0, Tb.jsxs)("div", {
+        children: null !== Wb && void 0 !== Wb && Wb.codeBlock ? "You can't edit that code block." : "You can't edit this world's code."
+      }), "applied" === Ib && !Ua && (0, Eb.jsxs)("div", {
         className: "WorldCodeAiAppliedRow",
-        children: [(0, Tb.jsx)("span", {
+        children: [(0, Eb.jsx)("span", {
           className: "WorldCodeAiAppliedNote",
           children: "Applied."
-        }), Nb && (0, Tb.jsx)("button", {
+        }), Db && (0, Eb.jsx)("button", {
           className: "WorldCodeAiPrimaryButton",
-          onClick: Cb,
+          onClick: Zb,
           children: "Try it in my world"
-        }), Nb && (0, Tb.jsx)("button", {
-          ...eI.e,
+        }), Db && (0, Eb.jsx)("button", {
+          ...jB.g,
           className: "WorldCodeAiSecondaryButton",
-          disabled: Yb,
-          onClick: ub,
+          disabled: fb,
+          onClick: ib,
           children: "Check for mistakes"
-        }), Vb && (0, Tb.jsx)("button", {
+        }), zb && (0, Eb.jsx)("button", {
           className: "WorldCodeAiLinkButton WorldCodeAiUndoButton",
-          onClick: eb,
+          onClick: yb,
           children: "Undo"
         })]
-      }), "applied" === yb && !sc && !Vb && !Bb && (0, Tb.jsx)("span", {
+      }), "applied" === Ib && !Ua && !zb && !Wb && (0, Eb.jsx)("span", {
         className: "WorldCodeAiHint WorldCodeAiUndoOff",
         children: "You've changed this code since, so Undo is off. History can still go back."
-      }), "undone" === yb && (0, Tb.jsx)("span", {
+      }), "undone" === Ib && (0, Eb.jsx)("span", {
         className: "WorldCodeAiHint",
-        children: nb.wentBack ? "You went back, so this change is gone." : "Undone."
-      }), "stale" === yb && (0, Tb.jsx)("span", {
+        children: Xb.wentBack ? "You went back, so this change is gone." : "Undone."
+      }), "stale" === Ib && (0, Eb.jsx)("span", {
         className: "WorldCodeAiHint",
         children: "Your code changed since this answer, so ask again to get an up-to-date change."
       })]
@@ -13047,104 +13047,104 @@ function GM(bb) {
   })
 }
 
-function KM(bb) {
+function FL(bb) {
   let {
-    target: cb,
-    isOpen: sb
+    target: ab,
+    isOpen: Ub
   } = bb;
-  return (0, Tb.jsxs)("div", {
-    className: ab()("WorldCodeAiTargetLabel", sb && "WorldCodeAiTargetLabel-open"),
-    children: [(0, Tb.jsx)("span", {
-      children: cb.label
-    }), sb && (0, Tb.jsx)("span", {
+  return (0, Eb.jsxs)("div", {
+    className: Tb()("WorldCodeAiTargetLabel", Ub && "WorldCodeAiTargetLabel-open"),
+    children: [(0, Eb.jsx)("span", {
+      children: ab.label
+    }), Ub && (0, Eb.jsx)("span", {
       className: "WorldCodeAiTargetLabelNote",
       children: "Open now"
     })]
   })
 }
 
-function ZM(bb) {
+function hL(bb) {
   let {
-    code: cb,
-    onSwitch: sb,
-    defaultOpen: Wb,
-    isElsewhere: ab
+    code: ab,
+    onSwitch: Ub,
+    defaultOpen: Mb,
+    isElsewhere: Tb
   } = bb;
-  const [Ib, Hb] = (0, kb.useState)(!1), fb = (0, kb.useMemo)((() => ({
+  const [Bb, eb] = (0, Ab.useState)(!1), vb = (0, Ab.useMemo)((() => ({
     path: "World Code",
     before: "",
-    after: cb
-  })), [cb]);
-  return (0, Tb.jsxs)("div", {
+    after: ab
+  })), [ab]);
+  return (0, Eb.jsxs)("div", {
     className: "WorldCodeAiToolCard WorldCodeAiWorldCodePart",
-    children: [(0, Tb.jsx)(Ub, {
+    children: [(0, Eb.jsx)(Yb, {
       className: "WorldCodeAiChangeLog",
       title: "Code for World Code",
       isCalm: !0,
-      isElsewhere: ab,
-      defaultOpen: Wb,
-      children: (0, Tb.jsx)("div", {
+      isElsewhere: Tb,
+      defaultOpen: Mb,
+      children: (0, Eb.jsx)("div", {
         className: "WorldCodeAiChanges",
-        children: (0, Tb.jsx)(UH, {
-          change: fb
+        children: (0, Eb.jsx)(Me, {
+          change: vb
         })
       })
-    }), (0, Tb.jsxs)("div", {
+    }), (0, Eb.jsxs)("div", {
       className: "WorldCodeAiChangeActions",
-      children: [(0, Tb.jsx)("span", {
+      children: [(0, Eb.jsx)("span", {
         className: "WorldCodeAiHint",
         children: "A code block only runs when clicked, so this part goes in World Code."
-      }), sb && (0, Tb.jsx)("button", {
+      }), Ub && (0, Eb.jsx)("button", {
         className: "WorldCodeAiPrimaryButton",
-        onClick: sb,
+        onClick: Ub,
         children: "Switch to World Code"
-      }), (0, Tb.jsx)("button", {
+      }), (0, Eb.jsx)("button", {
         className: "WorldCodeAiLinkButton",
         onClick: () => {
-          navigator.clipboard.writeText(cb).then((() => {
-            Hb(!0)
+          navigator.clipboard.writeText(ab).then((() => {
+            eb(!0)
           })).catch((() => {}))
         },
-        children: Ib ? "Copied" : "Copy"
+        children: Bb ? "Copied" : "Copy"
       })]
     })]
   })
 }
 
-function zM(bb) {
-  var cb;
+function GL(bb) {
+  var ab;
   let {
-    failed: sb,
-    nothingChanged: kb,
-    onRetry: Wb,
-    defaultOpen: ab,
-    isElsewhere: Ib
+    failed: Ub,
+    nothingChanged: Ab,
+    onRetry: Mb,
+    defaultOpen: Tb,
+    isElsewhere: Bb
   } = bb;
-  const Hb = null === (cb = sb.find((bb => null !== bb.closest))) || void 0 === cb ? void 0 : cb.closest;
-  return (0, Tb.jsxs)("div", {
+  const eb = null === (ab = Ub.find((bb => null !== bb.closest))) || void 0 === ab ? void 0 : ab.closest;
+  return (0, Eb.jsxs)("div", {
     className: "WorldCodeAiFailedEdits",
-    children: [(0, Tb.jsxs)(Ub, {
-      title: kb ? "That change didn't work, so your code is the same." : 1 === sb.length ? "One part didn't work, so it's left out." : `${sb.length} parts didn't work, so they're left out.`,
-      defaultOpen: ab,
-      isElsewhere: Ib,
-      children: [Hb && (0, Tb.jsxs)(Tb.Fragment, {
-        children: [(0, Tb.jsx)("p", {
+    children: [(0, Eb.jsxs)(Yb, {
+      title: Ab ? "That change didn't work, so your code is the same." : 1 === Ub.length ? "One part didn't work, so it's left out." : `${Ub.length} parts didn't work, so they're left out.`,
+      defaultOpen: Tb,
+      isElsewhere: Bb,
+      children: [eb && (0, Eb.jsxs)(Eb.Fragment, {
+        children: [(0, Eb.jsx)("p", {
           children: "The closest bit in your code:"
-        }), (0, Tb.jsx)("pre", {
+        }), (0, Eb.jsx)("pre", {
           className: "WorldCodeAiFailedLines",
-          children: Hb.text.split("\n").length > 4 ? `${Hb.text.split("\n").slice(0,4).join("\n")}\n\u2026` : Hb.text
+          children: eb.text.split("\n").length > 4 ? `${eb.text.split("\n").slice(0,4).join("\n")}\n\u2026` : eb.text
         })]
-      }), !Hb && (0, Tb.jsx)("p", {
+      }), !eb && (0, Eb.jsx)("p", {
         children: "Try asking for it again, maybe in a different way."
       })]
-    }), Wb && (0, Tb.jsxs)("div", {
+    }), Mb && (0, Eb.jsxs)("div", {
       className: "WorldCodeAiFailedRetry",
-      children: [(0, Tb.jsx)("button", {
-        ...eI.e,
+      children: [(0, Eb.jsx)("button", {
+        ...jB.g,
         className: "WorldCodeAiSecondaryButton",
-        onClick: Wb,
+        onClick: Mb,
         children: "Ask the AI to try again"
-      }), (0, Tb.jsx)("span", {
+      }), (0, Eb.jsx)("span", {
         className: "WorldCodeAiHint",
         children: "It asks the AI once more."
       })]
@@ -13152,860 +13152,860 @@ function zM(bb) {
   })
 }
 
-function qM(bb) {
+function QL(bb) {
   let {
-    lookups: cb,
-    words: sb,
-    defaultOpen: kb,
-    isElsewhere: Wb
+    lookups: ab,
+    words: Ub,
+    defaultOpen: Ab,
+    isElsewhere: Mb
   } = bb;
-  return (0, Tb.jsxs)(Ub, {
-    title: IM,
+  return (0, Eb.jsxs)(Yb, {
+    title: AL,
     isCalm: !0,
-    isElsewhere: Wb,
-    defaultOpen: kb,
-    children: [sb && (0, Tb.jsx)("p", {
-      children: sb
-    }), (0, Tb.jsx)("p", {
+    isElsewhere: Mb,
+    defaultOpen: Ab,
+    children: [Ub && (0, Eb.jsx)("p", {
+      children: Ub
+    }), (0, Eb.jsx)("p", {
       children: "It looks at:"
-    }), (0, Tb.jsx)("ul", {
+    }), (0, Eb.jsx)("ul", {
       className: "WorldCodeAiLookupList",
-      children: cb.map(((bb, cb) => (0, Tb.jsx)("li", {
-        children: YW(bb)
-      }, cb)))
+      children: ab.map(((bb, ab) => (0, Eb.jsx)("li", {
+        children: zM(bb)
+      }, ab)))
     })]
   })
 }
 
-function dM(bb) {
+function qL(bb) {
   return `Add this to my World Code:\n\`\`\`js\n${bb.join("\n").replace(/\s*$/,"\n")}\`\`\``
 }
 
-function AM(bb) {
-  const cb = Math.ceil(bb / 1e3);
-  return `${Math.floor(cb/60)}:${String(cb%60).padStart(2,"0")}`
+function uL(bb) {
+  const ab = Math.ceil(bb / 1e3);
+  return `${Math.floor(ab/60)}:${String(ab%60).padStart(2,"0")}`
 }
 
-function wM(bb) {
+function rL(bb) {
   return "waiting" === bb.phase ? "You're next" : bb.playingThrough && "writing" !== bb.phase && "screening" !== bb.phase ? "Playing your code through as each player\u2026" : null
 }
 
-function rM(bb) {
-  var cb;
+function KL(bb) {
+  var ab;
   let {
-    busy: sb
+    busy: Ub
   } = bb;
-  const kb = (Wb = sb.phase, Ub = null !== (cb = sb.reasoningChars) && void 0 !== cb ? cb : 0, "screening" === Wb ? 3 : "writing" === Wb ? 2 : "thinking" === Wb && Ub >= 400 ? 1 : 0);
-  var Wb, Ub;
-  return (0, Tb.jsx)("ol", {
+  const Ab = (Mb = Ub.phase, Yb = null !== (ab = Ub.reasoningChars) && void 0 !== ab ? ab : 0, "screening" === Mb ? 3 : "writing" === Mb ? 2 : "thinking" === Mb && Yb >= 400 ? 1 : 0);
+  var Mb, Yb;
+  return (0, Eb.jsx)("ol", {
     className: "WorldCodeAiSteps",
-    children: Qf.map(((bb, cb) => (0, Tb.jsx)("li", {
-      className: ab()(cb < kb && "WorldCodeAiStep-done", cb === kb && "WorldCodeAiStep-current"),
-      children: cb < kb ? `\u2713 ${bb}` : bb
+    children: Pv.map(((bb, ab) => (0, Eb.jsx)("li", {
+      className: Tb()(ab < Ab && "WorldCodeAiStep-done", ab === Ab && "WorldCodeAiStep-current"),
+      children: ab < Ab ? `\u2713 ${bb}` : bb
     }, bb)))
   })
 }
-const oM = (0, kb.memo)((function(bb) {
-    var cb, Wb, nb, Cb, Vb, Lb, ub, Yb, hb, Jb, gb, Bb, tb;
+const oL = (0, Ab.memo)((function(bb) {
+    var ab, Mb, Xb, Zb, zb, xb, ib, fb, mb, pb, Nb, Wb, Hb;
     let {
-      files: yb,
-      activePath: Pb,
-      canEdit: Db,
-      errors: Eb,
-      errorCount: ib,
-      applyFiles: Ob,
-      submit: Gb,
-      testRun: Kb,
-      close: Zb,
-      goToLine: zb,
-      target: qb,
-      chatKey: db,
-      historyKey: Ab,
+      files: Ib,
+      activePath: db,
+      canEdit: Fb,
+      errors: hb,
+      errorCount: Gb,
+      applyFiles: Qb,
+      submit: qb,
+      testRun: ub,
+      close: rb,
+      goToLine: Kb,
+      target: ob,
+      chatKey: lb,
+      historyKey: tb,
       openWorldCode: wb,
-      readWorldCode: rb,
-      viewChunk: ob,
-      viewGameState: Sb,
-      openTarget: Rb,
-      isLoaded: vb = !0,
-      draft: Fb,
-      onDraftUsed: xb,
-      selection: jb,
-      onSelectionUsed: pb
+      readWorldCode: sb,
+      viewChunk: gb,
+      viewGameState: Cb,
+      openTarget: Vb,
+      isLoaded: Ob = !0,
+      draft: cb,
+      onDraftUsed: Jb,
+      selection: nb,
+      onSelectionUsed: Sb
     } = bb;
-    const cc = qb.codeBlock,
-      sc = qb.key,
-      Wc = function(bb) {
-        let cb = MM.get(bb);
-        return cb || (cb = {
+    const aa = ob.codeBlock,
+      Ua = ob.key,
+      Ma = function(bb) {
+        let ab = EL.get(bb);
+        return ab || (ab = {
           entries: [],
           nextId: 1,
           dismissedErrorCounts: new Map,
-          turns: new sT
-        }, MM.set(bb, cb)), cb
-      }(db),
-      [ac, Tc] = (0, kb.useState)((() => Wc.entries)),
-      Uc = (0, kb.useRef)(!0),
-      Ic = (0, kb.useCallback)((bb => {
-        const cb = "function" === typeof bb ? bb : () => bb;
-        Uc.current ? Tc(cb) : Wc.setEntries ? Wc.setEntries(cb) : Wc.entries = cb(Wc.entries)
-      }), [Wc]);
-    (0, kb.useEffect)((() => (Uc.current = !0, Wc.setEntries = Tc, () => {
-      Uc.current = !1, Wc.setEntries === Tc && (Wc.setEntries = void 0)
-    })), [Wc]);
-    const [Hc, fc] = (0, kb.useState)(null), [Mc, Xc] = (0, kb.useState)([]), [nc, mc] = (0, kb.useState)(!1), [lc, Qc] = (0, kb.useState)([]), [ec, Cc] = (0, kb.useState)(!1), [Nc, Vc] = (0, kb.useState)(!1), [Lc, uc] = (0, kb.useState)(null), [Yc, hc] = (0, kb.useState)(!1), Jc = (0, kb.useRef)("settings"), [gc, Bc] = (0, kb.useState)(null), tc = (0, kb.useRef)(function() {
+          turns: new ST
+        }, EL.set(bb, ab)), ab
+      }(lb),
+      [Ta, Ea] = (0, Ab.useState)((() => Ma.entries)),
+      Ya = (0, Ab.useRef)(!0),
+      Ba = (0, Ab.useCallback)((bb => {
+        const ab = "function" === typeof bb ? bb : () => bb;
+        Ya.current ? Ea(ab) : Ma.setEntries ? Ma.setEntries(ab) : Ma.entries = ab(Ma.entries)
+      }), [Ma]);
+    (0, Ab.useEffect)((() => (Ya.current = !0, Ma.setEntries = Ea, () => {
+      Ya.current = !1, Ma.setEntries === Ea && (Ma.setEntries = void 0)
+    })), [Ma]);
+    const [ea, va] = (0, Ab.useState)(null), [La, Pa] = (0, Ab.useState)([]), [Xa, ja] = (0, Ab.useState)(!1), [Ra, ka] = (0, Ab.useState)([]), [ya, Za] = (0, Ab.useState)(!1), [Da, za] = (0, Ab.useState)(!1), [xa, ia] = (0, Ab.useState)(null), [fa, ma] = (0, Ab.useState)(!1), pa = (0, Ab.useRef)("settings"), [Na, Wa] = (0, Ab.useState)(null), Ha = (0, Ab.useRef)(function() {
       try {
         var bb;
-        const cb = JSON.parse(null !== (bb = localStorage.getItem(Yf)) && void 0 !== bb ? bb : "{}");
-        return "object" !== typeof cb || null === cb ? {} : Object.fromEntries(Object.entries(cb).filter((bb => {
-          let [, cb] = bb;
-          return Array.isArray(cb) && cb.every((bb => "number" === typeof bb))
+        const ab = JSON.parse(null !== (bb = localStorage.getItem(Dv)) && void 0 !== bb ? bb : "{}");
+        return "object" !== typeof ab || null === ab ? {} : Object.fromEntries(Object.entries(ab).filter((bb => {
+          let [, ab] = bb;
+          return Array.isArray(ab) && ab.every((bb => "number" === typeof bb))
         })))
       } catch {
         return {}
       }
-    }()), [yc, Pc] = (0, kb.useState)(BI), Dc = (0, kb.useRef)(yc);
-    Dc.current = yc;
-    const Ec = yc && Db,
-      ic = (0, kb.useRef)(!1),
-      [Oc, Gc] = (0, kb.useState)(null),
-      [Kc, Zc] = (0, kb.useState)(""),
-      [zc, qc] = (0, kb.useState)([]),
-      [dc, Ac] = (0, kb.useState)(null),
-      [wc, rc] = (0, kb.useState)(new Set),
-      [oc, Sc] = (0, kb.useState)(null !== (cb = Wc.dismissedErrorCounts.get(qb.key)) && void 0 !== cb ? cb : 0),
-      [Rc, vc] = (0, kb.useState)(!1),
-      [Fc, xc] = (0, kb.useState)(Date.now),
-      jc = (0, kb.useRef)(null),
-      pc = (0, kb.useRef)(null),
-      bs = (0, kb.useRef)([]),
-      [cs, ss] = (0, kb.useState)(0),
-      [ks, Ws] = (0, kb.useState)(null),
-      as = (0, TH.q)(db),
-      Ts = null !== ks && void 0 !== ks ? ks : null === as || void 0 === as ? void 0 : as.entryId,
-      Us = ac.find((bb => bb.id === Ts)),
-      Is = (null === Us || void 0 === Us ? void 0 : Us.target.key) === qb.key && (null !== ks || void 0 === (null === as || void 0 === as ? void 0 : as.endedAt)),
-      Hs = (bb, cb) => {
-        const sb = setTimeout((() => {
-          bs.current = bs.current.filter((bb => bb !== sb)), ss(bs.current.length), bb()
-        }), cb);
-        bs.current.push(sb), ss(bs.current.length)
+    }()), [Ia, da] = (0, Ab.useState)(mB), Fa = (0, Ab.useRef)(Ia);
+    Fa.current = Ia;
+    const ha = Ia && Fb,
+      Ga = (0, Ab.useRef)(!1),
+      [Qa, qa] = (0, Ab.useState)(null),
+      [ua, ra] = (0, Ab.useState)(""),
+      [Ka, oa] = (0, Ab.useState)([]),
+      [la, ta] = (0, Ab.useState)(null),
+      [wa, sa] = (0, Ab.useState)(new Set),
+      [ga, Ca] = (0, Ab.useState)(null !== (ab = Ma.dismissedErrorCounts.get(ob.key)) && void 0 !== ab ? ab : 0),
+      [Va, Oa] = (0, Ab.useState)(!1),
+      [ca, Ja] = (0, Ab.useState)(Date.now),
+      na = (0, Ab.useRef)(null),
+      Sa = (0, Ab.useRef)(null),
+      bU = (0, Ab.useRef)([]),
+      [aU, UU] = (0, Ab.useState)(0),
+      [AU, MU] = (0, Ab.useState)(null),
+      TU = (0, Ae.p)(lb),
+      EU = null !== AU && void 0 !== AU ? AU : null === TU || void 0 === TU ? void 0 : TU.entryId,
+      YU = Ta.find((bb => bb.id === EU)),
+      BU = (null === YU || void 0 === YU ? void 0 : YU.target.key) === ob.key && (null !== AU || void 0 === (null === TU || void 0 === TU ? void 0 : TU.endedAt)),
+      eU = (bb, ab) => {
+        const Ub = setTimeout((() => {
+          bU.current = bU.current.filter((bb => bb !== Ub)), UU(bU.current.length), bb()
+        }), ab);
+        bU.current.push(Ub), UU(bU.current.length)
       },
-      Ms = () => {
-        for (const bb of bs.current) clearTimeout(bb);
-        bs.current = [], ss(0), Ws(null)
+      LU = () => {
+        for (const bb of bU.current) clearTimeout(bb);
+        bU.current = [], UU(0), MU(null)
       },
-      Xs = (0, kb.useRef)(null),
-      ns = (0, kb.useRef)(null),
-      ms = () => Wc.nextId++,
-      ls = (0, kb.useRef)(0),
-      Qs = (0, kb.useRef)(yb);
-    Qs.current = yb;
-    const es = (0, kb.useCallback)((bb => {
+      PU = (0, Ab.useRef)(null),
+      XU = (0, Ab.useRef)(null),
+      jU = () => Ma.nextId++,
+      RU = (0, Ab.useRef)(0),
+      kU = (0, Ab.useRef)(Ib);
+    kU.current = Ib;
+    const yU = (0, Ab.useCallback)((bb => {
         null === bb || void 0 === bb || bb.focus()
       }), []),
-      Cs = (0, kb.useRef)(ib);
-    Cs.current = ib;
-    const Ns = (0, kb.useRef)(zc);
-    Ns.current = zc;
-    const Vs = (0, kb.useRef)(ac.length);
-    (0, kb.useEffect)((() => {
-      const bb = Xs.current;
+      ZU = (0, Ab.useRef)(Gb);
+    ZU.current = Gb;
+    const DU = (0, Ab.useRef)(Ka);
+    DU.current = Ka;
+    const zU = (0, Ab.useRef)(Ta.length);
+    (0, Ab.useEffect)((() => {
+      const bb = PU.current;
       if (!bb) return;
-      if (nc) return void bb.scrollTo({
+      if (Xa) return void bb.scrollTo({
         top: 0
       });
-      if (Lc) return;
-      const cb = ac[ac.length - 1],
-        sb = (null === cb || void 0 === cb ? void 0 : cb.target.key) === sc;
-      ac.length > Vs.current && "assistant" === (null === cb || void 0 === cb ? void 0 : cb.role) && !cb.isNotice && sb && (Wc.heldAnswerId = cb.id), Vs.current = ac.length;
-      const kb = void 0 !== cb && sb && cb.id === Wc.heldAnswerId && "offered" === cb.status && void 0 === cb.trial,
-        Wb = bb.querySelectorAll(".WorldCodeAiEntry"),
-        ab = Wb[Wb.length - 1];
-      if (kb && ab) {
-        var Tb;
-        const sb = bb.getBoundingClientRect().top,
-          kb = cb => bb.scrollTop + cb.getBoundingClientRect().top - sb;
-        let Wb = kb(ab);
-        const Ub = ab.querySelector(".WorldCodeAiDiff-added, .WorldCodeAiDiff-removed"),
-          Ib = ab.querySelector(".WorldCodeAiChangeHeader"),
-          Hb = ab.querySelector(".WorldCodeAiChangeActions-sticky");
-        if (null !== (Tb = cb.warnings) && void 0 !== Tb && Tb.length && Ub && Ib && Hb) {
-          const cb = ab.querySelector(".WorldCodeAiDiff-marked"),
-            sb = Ub.getBoundingClientRect().height,
-            Tb = cb ? kb(cb) + 2 * sb + Hb.offsetHeight - bb.clientHeight : kb(Ub) + 3 * sb + Hb.offsetHeight - bb.clientHeight;
-          Wb = Math.max(Wb, Math.min(Tb, cb ? kb(cb) - sb : kb(Ib)))
-        } else if (Ib && Hb) {
-          const cb = ab.querySelectorAll(".WorldCodeAiChangeWhy li"),
-            sb = cb[cb.length - 1];
-          if (sb) {
-            const cb = kb(sb) + sb.getBoundingClientRect().height + Hb.offsetHeight - bb.clientHeight;
-            Wb = Math.max(Wb, Math.min(cb, kb(Ib)))
+      if (xa) return;
+      const ab = Ta[Ta.length - 1],
+        Ub = (null === ab || void 0 === ab ? void 0 : ab.target.key) === Ua;
+      Ta.length > zU.current && "assistant" === (null === ab || void 0 === ab ? void 0 : ab.role) && !ab.isNotice && Ub && (Ma.heldAnswerId = ab.id), zU.current = Ta.length;
+      const Ab = void 0 !== ab && Ub && ab.id === Ma.heldAnswerId && "offered" === ab.status && void 0 === ab.trial,
+        Mb = bb.querySelectorAll(".WorldCodeAiEntry"),
+        Tb = Mb[Mb.length - 1];
+      if (Ab && Tb) {
+        var Eb;
+        const Ub = bb.getBoundingClientRect().top,
+          Ab = ab => bb.scrollTop + ab.getBoundingClientRect().top - Ub;
+        let Mb = Ab(Tb);
+        const Yb = Tb.querySelector(".WorldCodeAiDiff-added, .WorldCodeAiDiff-removed"),
+          Bb = Tb.querySelector(".WorldCodeAiChangeHeader"),
+          eb = Tb.querySelector(".WorldCodeAiChangeActions-sticky");
+        if (null !== (Eb = ab.warnings) && void 0 !== Eb && Eb.length && Yb && Bb && eb) {
+          const ab = Tb.querySelector(".WorldCodeAiDiff-marked"),
+            Ub = Yb.getBoundingClientRect().height,
+            Eb = ab ? Ab(ab) + 2 * Ub + eb.offsetHeight - bb.clientHeight : Ab(Yb) + 3 * Ub + eb.offsetHeight - bb.clientHeight;
+          Mb = Math.max(Mb, Math.min(Eb, ab ? Ab(ab) - Ub : Ab(Bb)))
+        } else if (Bb && eb) {
+          const ab = Tb.querySelectorAll(".WorldCodeAiChangeWhy li"),
+            Ub = ab[ab.length - 1];
+          if (Ub) {
+            const ab = Ab(Ub) + Ub.getBoundingClientRect().height + eb.offsetHeight - bb.clientHeight;
+            Mb = Math.max(Mb, Math.min(ab, Ab(Bb)))
           }
         }
         bb.scrollTo({
-          top: Wb
+          top: Mb
         })
       } else bb.scrollTo({
         top: bb.scrollHeight
       })
-    }), [Wc, ac, Hc, nc, sc, Lc]), (0, kb.useEffect)((() => {
-      Wc.entries = ac, Wc.dismissedErrorCounts.set(qb.key, oc)
-    }), [Wc, ac, oc, qb.key]), (0, kb.useEffect)((() => () => {
+    }), [Ma, Ta, ea, Xa, Ua, xa]), (0, Ab.useEffect)((() => {
+      Ma.entries = Ta, Ma.dismissedErrorCounts.set(ob.key, ga)
+    }), [Ma, Ta, ga, ob.key]), (0, Ab.useEffect)((() => () => {
       var bb;
-      null === (bb = jc.current) || void 0 === bb || bb.abort(), Ms(),
+      null === (bb = na.current) || void 0 === bb || bb.abort(), LU(),
         function() {
           var bb;
-          null === (bb = ra) || void 0 === bb || bb.tearDownNotification()
+          null === (bb = lT) || void 0 === bb || bb.tearDownNotification()
         }()
-    }), []), (0, kb.useEffect)((() => {
+    }), []), (0, Ab.useEffect)((() => {
       var bb;
-      Fb && (Fb.send ? vb && (null === xb || void 0 === xb || xb(), Ss.current(Fb.text, Fb.text, {
+      cb && (cb.send ? Ob && (null === Jb || void 0 === Jb || Jb(), gU.current(cb.text, cb.text, {
         check: !1,
         useFree: !1
-      })) : (Zc(Fb.text), null === (bb = ns.current) || void 0 === bb || bb.focus(), null === xb || void 0 === xb || xb()))
-    }), [Fb, xb, vb]), (0, kb.useEffect)((() => function() {
+      })) : (ra(cb.text), null === (bb = XU.current) || void 0 === bb || bb.focus(), null === Jb || void 0 === Jb || Jb()))
+    }), [cb, Jb, Ob]), (0, Ab.useEffect)((() => function() {
       let bb = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      const cb = setTimeout((() => {
-        of(bb)
+      const ab = setTimeout((() => {
+        ov(bb)
       }), 1e3);
       return () => {
-        clearTimeout(cb)
+        clearTimeout(ab)
       }
-    }(cc)), [cc]), (0, kb.useEffect)((() => {
+    }(aa)), [aa]), (0, Ab.useEffect)((() => {
       let bb = !0;
-      nM.list(Ab).then((cb => {
-        bb && Xc(cb)
+      BL.list(tb).then((ab => {
+        bb && Pa(ab)
       })).catch((bb => {
         console.error("World Code AI: couldn't read the version history", bb)
       }));
-      const cb = nM.watch(Ab, Xc);
+      const ab = BL.watch(tb, Pa);
       return () => {
-        bb = !1, cb()
+        bb = !1, ab()
       }
-    }), [Ab]), (0, kb.useEffect)((() => {
+    }), [tb]), (0, Ab.useEffect)((() => {
       let bb = !0;
-      mM.list(Ab).then((cb => {
-        bb && Qc(cb)
+      eL.list(tb).then((ab => {
+        bb && ka(ab)
       })).catch((bb => {
         console.error("World Code AI: couldn't read the notes about the game", bb)
       }));
-      const cb = mM.watch(Ab, Qc);
+      const ab = eL.watch(tb, ka);
       return () => {
-        bb = !1, cb()
+        bb = !1, ab()
       }
-    }), [Ab]);
-    const Ls = null !== (Wb = null === (nb = ac.findLast((bb => bb.target.key === qb.key))) || void 0 === nb ? void 0 : nb.retryAt) && void 0 !== Wb ? Wb : 0,
-      us = ya(Fc),
-      Ys = null !== Hc || Ls > Fc || us > Fc;
-    (0, kb.useEffect)((() => {
-      if (!Ys) return;
+    }), [tb]);
+    const xU = null !== (Mb = null === (Xb = Ta.findLast((bb => bb.target.key === ob.key))) || void 0 === Xb ? void 0 : Xb.retryAt) && void 0 !== Mb ? Mb : 0,
+      iU = NT(ca),
+      fU = null !== ea || xU > ca || iU > ca;
+    (0, Ab.useEffect)((() => {
+      if (!fU) return;
       const bb = setInterval((() => {
-        xc(Date.now())
+        Ja(Date.now())
       }), 1e3);
       return () => {
         clearInterval(bb)
       }
-    }), [Ys]);
-    const hs = ib > oc && Eb.length > 0 ? Eb[Eb.length - 1] : null,
-      gs = (0, kb.useMemo)((() => hs ? function(bb, cb) {
-        var sb;
-        let kb;
-        for (const [Wb, ab] of Object.entries(cb)) {
+    }), [fU]);
+    const mU = Gb > ga && hb.length > 0 ? hb[hb.length - 1] : null,
+      pU = (0, Ab.useMemo)((() => mU ? function(bb, ab) {
+        var Ub;
+        let Ab;
+        for (const [Mb, Tb] of Object.entries(ab)) {
           const {
-            text: cb,
-            line: sb
-          } = bI(bb, ab);
-          if (void 0 !== sb) {
-            if (kb) return bI(bb);
-            kb = {
-              text: cb,
-              path: Wb,
-              line: sb
+            text: ab,
+            line: Ub
+          } = JY(bb, Tb);
+          if (void 0 !== Ub) {
+            if (Ab) return JY(bb);
+            Ab = {
+              text: ab,
+              path: Mb,
+              line: Ub
             }
           }
         }
-        return null !== (sb = kb) && void 0 !== sb ? sb : bI(bb)
-      }(hs, yb) : {
+        return null !== (Ub = Ab) && void 0 !== Ub ? Ub : JY(bb)
+      }(mU, Ib) : {
         text: ""
-      }), [hs, yb]),
-      Bs = function(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : qb;
-        const sb = ms();
-        return mc(!1), Cc(!1), Ic((kb => [...kb, {
+      }), [mU, Ib]),
+      NU = function(bb) {
+        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ob;
+        const Ub = jU();
+        return ja(!1), Za(!1), Ba((Ab => [...Ab, {
           ...bb,
-          id: sb,
-          target: cb
-        }])), sb
+          id: Ub,
+          target: ab
+        }])), Ub
       },
-      ts = bb => bb.target.key === qb.key,
-      ys = (bb, cb) => {
-        Ic((sb => sb.map((sb => sb.id === bb ? {
-          ...sb,
-          ...cb
-        } : sb))))
+      WU = bb => bb.target.key === ob.key,
+      HU = (bb, ab) => {
+        Ba((Ub => Ub.map((Ub => Ub.id === bb ? {
+          ...Ub,
+          ...ab
+        } : Ub))))
       },
-      Ps = (bb, cb) => {
-        ys(bb, {
-          status: cb
+      IU = (bb, ab) => {
+        HU(bb, {
+          status: ab
         })
       },
-      Ds = HU();
+      dU = EY();
 
-    function Es(bb) {
-      return !!QU(IU.getState()) && (yU().then((cb => {
-        cb || bb()
+    function FU(bb) {
+      return !!XY(TY.getState()) && (NY().then((ab => {
+        ab || bb()
       })), !0)
     }
-    const is = bb => {
-        !Yc && Es(bb) || bb()
+    const hU = bb => {
+        !fa && FU(bb) || bb()
       },
-      Os = async function(bb, cb) {
-        let kb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      GU = async function(bb, ab) {
+        let Ab = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         const {
-          check: Wb = void 0 === cb,
-          about: ab = (null !== cb && void 0 !== cb ? cb : bb.trim()),
-          planStep: Tb,
-          wordsOnly: Ub = !1,
-          asked: Ib,
-          failedEdits: Hb,
-          isAutoFix: fb = !1,
-          autoFixRound: Mb = 0,
-          useFree: Xb,
-          retryOf: nb,
-          continueFrom: lb,
-          lookups: Qb = [],
-          lookupRound: Cb = 0,
-          worldCodeFiles: Nb,
-          viewedPaths: Vb = [],
-          lookupOf: Lb,
-          insertsInto: ub,
-          guardWords: Yb
-        } = kb, hb = bb.trim();
-        if ("" === hb || Hc) return;
-        null === wa.get() && (oa || (oa = !0, (async () => {
+          check: Mb = void 0 === ab,
+          about: Tb = (null !== ab && void 0 !== ab ? ab : bb.trim()),
+          planStep: Eb,
+          wordsOnly: Yb = !1,
+          asked: Bb,
+          failedEdits: eb,
+          isAutoFix: vb = !1,
+          autoFixRound: Lb = 0,
+          useFree: Pb,
+          retryOf: Xb,
+          continueFrom: Rb,
+          lookups: kb = [],
+          lookupRound: Zb = 0,
+          worldCodeFiles: Db,
+          viewedPaths: zb = [],
+          lookupOf: xb,
+          insertsInto: ib,
+          guardWords: fb
+        } = Ab, mb = bb.trim();
+        if ("" === mb || ea) return;
+        null === oT.get() && (tT || (tT = !0, (async () => {
           try {
-            if (null !== await wa.refresh() || null === wa.getPlayer()) return;
+            if (null !== await oT.refresh() || null === oT.getPlayer()) return;
             const {
               NotificationProvider: bb
-            } = await Promise.resolve().then((() => sb(1332)));
-            ra = bb.showPromptPopup({
+            } = await Promise.resolve().then((() => Ub(1260)));
+            lT = bb.showPromptPopup({
               title: "aiHelperDataSharing:title",
               subtitle: "aiHelperDataSharing:subtitle",
               confirmText: "aiHelperDataSharing:yes",
               cancelText: "aiHelperDataSharing:no"
             });
-            const cb = await ra.getResult();
-            "notificationTornDown" !== cb && wa.set(cb ? "yes" : "no")
+            const ab = await lT.getResult();
+            "notificationTornDown" !== ab && oT.set(ab ? "yes" : "no")
           } catch (bb) {
             console.warn("AI Helper: couldn't ask about sharing chats", bb)
           } finally {
-            ra = null, oa = !1
+            lT = null, tT = !1
           }
         })()));
-        const Jb = null !== Xb && void 0 !== Xb ? Xb : Yc && !fb && void 0 === nb && void 0 === lb;
-        if (!Jb && JM(kb) && Es((() => {
-            zs.current(bb, cb, kb)
+        const pb = null !== Pb && void 0 !== Pb ? Pb : fa && !vb && void 0 === Xb && void 0 === Rb;
+        if (!pb && zL(Ab) && FU((() => {
+            rU.current(bb, ab, Ab)
           }))) return;
-        const gb = null !== ub && void 0 !== ub ? ub : Pb;
-        void 0 === Xb && Jb && hc(!1), Ms();
-        const Bb = xT.activeKey(),
-          tb = Jb ? null : Bb,
-          yb = null !== tb,
-          ib = null !== Bb && Jb,
-          Ob = !tb && !Jb && IU.isAnswering(),
-          Gb = void 0 === nb ? -1 : ((bb, cb) => {
-            for (let sb = bb.findIndex((bb => bb.id === cb)) - 1; sb >= 0; sb--)
-              if ("user" === bb[sb].role) return sb;
+        const Nb = null !== ib && void 0 !== ib ? ib : db;
+        void 0 === Pb && pb && ma(!1), LU();
+        const Wb = VE.activeKey(),
+          Hb = pb ? null : Wb,
+          Ib = null !== Hb,
+          Gb = null !== Wb && pb,
+          Qb = !Hb && !pb && TY.isAnswering(),
+          qb = void 0 === Xb ? -1 : ((bb, ab) => {
+            for (let Ub = bb.findIndex((bb => bb.id === ab)) - 1; Ub >= 0; Ub--)
+              if ("user" === bb[Ub].role) return Ub;
             return -1
-          })(ac, nb),
-          Kb = (Gb < 0 ? ac : ac.slice(0, Gb)).filter((bb => !bb.isNotice && !bb.leftOut && ts(bb))).slice(-4).map((bb => ({
+          })(Ta, Xb),
+          ub = (qb < 0 ? Ta : Ta.slice(0, qb)).filter((bb => !bb.isNotice && !bb.leftOut && WU(bb))).slice(-4).map((bb => ({
             role: bb.role,
             text: bb.question ? `${bb.text}\n${bb.question.question}` : bb.text
           }))),
-          Zb = void 0 === cb,
-          qb = void 0 === Ib ? void 0 === cb ? hb : void 0 : null !== Ib && void 0 !== Ib ? Ib : void 0,
-          db = void 0 !== nb && void 0 !== lb,
-          Ab = db ? ac.find((bb => bb.id === nb)) : void 0;
-        let rb;
-        if (db) rb = Gb >= 0 ? ac[Gb].id : -1;
-        else if (void 0 !== Lb && Gb < 0) rb = Lb;
-        else if (Gb >= 0) rb = ac[Gb].id, Ic((bb => bb.filter((bb => bb.id !== nb)).map((bb => bb.id === rb ? {
+          rb = void 0 === ab,
+          ob = void 0 === Bb ? void 0 === ab ? mb : void 0 : null !== Bb && void 0 !== Bb ? Bb : void 0,
+          lb = void 0 !== Xb && void 0 !== Rb,
+          tb = lb ? Ta.find((bb => bb.id === Xb)) : void 0;
+        let sb;
+        if (lb) sb = qb >= 0 ? Ta[qb].id : -1;
+        else if (void 0 !== xb && qb < 0) sb = xb;
+        else if (qb >= 0) sb = Ta[qb].id, Ba((bb => bb.filter((bb => bb.id !== Xb)).map((bb => bb.id === sb ? {
           ...bb,
           isNotice: void 0
         } : bb))));
         else {
-          const bb = fb && Mb > 0;
-          rb = Bs({
+          const bb = vb && Lb > 0;
+          sb = NU({
             role: "user",
-            text: bb ? hb : null !== cb && void 0 !== cb ? cb : hb,
+            text: bb ? mb : null !== ab && void 0 !== ab ? ab : mb,
             changes: [],
             status: "offered",
-            about: ab,
-            planStep: Tb,
-            ...qb ? {
-              asked: qb
+            about: Tb,
+            planStep: Eb,
+            ...ob ? {
+              asked: ob
             } : {},
             ...bb ? {
-              logTitle: Hb ? "Part of the AI's change didn't go in, so it was asked to make it again" : "The AI's code had an error, so it was sent back to the AI to fix"
+              logTitle: eb ? "Part of the AI's change didn't go in, so it was asked to make it again" : "The AI's code had an error, so it was sent back to the AI to fix"
             } : {}
           })
         }
-        const ob = {
-            lookups: Qb,
-            lookupRound: Cb,
-            worldCodeFiles: Nb,
-            viewedPaths: Vb
+        const gb = {
+            lookups: kb,
+            lookupRound: Zb,
+            worldCodeFiles: Db,
+            viewedPaths: zb
           },
-          Sb = {
-            retry: hb,
-            retryShown: cb,
+          Cb = {
+            retry: mb,
+            retryShown: ab,
             retryOptions: {
-              check: Wb,
-              about: ab,
-              planStep: Tb,
-              wordsOnly: Ub,
-              useFree: Jb,
-              asked: Ib,
-              failedEdits: Hb,
-              isAutoFix: fb,
-              autoFixRound: Mb,
-              insertsInto: ub,
-              guardWords: Yb,
-              ...ob
+              check: Mb,
+              about: Tb,
+              planStep: Eb,
+              wordsOnly: Yb,
+              useFree: pb,
+              asked: Bb,
+              failedEdits: eb,
+              isAutoFix: vb,
+              autoFixRound: Lb,
+              insertsInto: ib,
+              guardWords: fb,
+              ...gb
             }
           },
-          vb = new AbortController;
-        jc.current = vb;
-        const Fb = Wc.turns;
-        Fb.requestStarted(rb, void 0 !== Lb);
-        const xb = Dc.current ? "direct" : "offer";
-        var jb, pb, bc, sc, Tc;
+          Ob = new AbortController;
+        na.current = Ob;
+        const cb = Ma.turns;
+        cb.requestStarted(sb, void 0 !== xb);
+        const Jb = Fa.current ? "direct" : "offer";
+        var nb, Sb, ba, Ua, Ea;
         try {
-          var Uc;
+          var Ya;
           const bb = Date.now(),
-            sb = hb.startsWith(OM),
-            kb = null === tb || void 0 === tb ? void 0 : tb.model.name;
-          xc(bb), fc(Ob ? {
+            Ub = mb.startsWith(IL),
+            Ab = null === Hb || void 0 === Hb ? void 0 : Hb.model.name;
+          Ja(bb), va(Qb ? {
             phase: "thinking",
             startedAt: bb,
-            playingThrough: sb,
+            playingThrough: Ub,
             isSuperBot: !0
           } : {
             phase: "checking",
             startedAt: bb,
-            playingThrough: sb,
-            keyModel: kb
+            playingThrough: Ub,
+            keyModel: Ab
           });
-          const Ib = bb => {
-              ys(rb, {
+          const Bb = bb => {
+              HU(sb, {
                 isNotice: !0
-              }), Bs({
+              }), NU({
                 role: "assistant",
-                text: "personalInfo" === bb ? "Please don't share personal details like names, addresses or schools. Ask again without them." : PM,
+                text: "personalInfo" === bb ? "Please don't share personal details like names, addresses or schools. Ask again without them." : pL,
                 changes: [],
                 status: "offered",
                 isNotice: !0
               })
             },
-            Xb = async () => {
-              if (!Wb && !tb) return null !== Yb && void 0 !== Yb ? Yb : hb;
+            Pb = async () => {
+              if (!Mb && !Hb) return null !== fb && void 0 !== fb ? fb : mb;
               const bb = Date.now();
-              xc(bb), fc({
+              Ja(bb), va({
                 phase: "checking",
                 startedAt: bb,
-                playingThrough: sb,
-                keyModel: kb
+                playingThrough: Ub,
+                keyModel: Ab
               });
               const {
-                safety: cb,
-                request: ab
-              } = await async function(bb, cb) {
-                let sb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                const kb = await Za(bb, cb, sb),
-                  Wb = yW(bb);
-                if ("unsafe" !== kb || Wb === bb) return {
-                  safety: kb,
+                safety: ab,
+                request: Tb
+              } = await async function(bb, ab) {
+                let Ub = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+                const Ab = await QT(bb, ab, Ub),
+                  Mb = NM(bb);
+                if ("unsafe" !== Ab || Mb === bb) return {
+                  safety: Ab,
                   request: bb
                 };
-                const ab = await Za(Wb, cb, !0);
-                return "unchecked" === ab ? {
-                  safety: kb,
+                const Tb = await QT(Mb, ab, !0);
+                return "unchecked" === Tb ? {
+                  safety: Ab,
                   request: bb
                 } : {
-                  safety: ab,
-                  request: Wb
+                  safety: Tb,
+                  request: Mb
                 }
-              }(hb, vb.signal, yb);
-              return "unchecked" === cb && tb ? (Bs({
+              }(mb, Ob.signal, Ib);
+              return "unchecked" === ab && Hb ? (NU({
                 role: "assistant",
                 text: "",
                 changes: [],
                 status: "offered",
                 isNotice: !0,
-                ...Sb,
+                ...Cb,
                 keyNotice: {
                   notice: "unchecked",
-                  model: tb.model.name,
-                  company: eT(tb.provider, tb.baseUrl, !0)
+                  model: Hb.model.name,
+                  company: jE(Hb.provider, Hb.baseUrl, !0)
                 }
-              }), null) : "personalInfo" === cb || "unsafe" === cb ? (Ib(cb), null) : ab
+              }), null) : "personalInfo" === ab || "unsafe" === ab ? (Bb(ab), null) : Tb
             };
-          let Bb = Ob ? null !== Yb && void 0 !== Yb ? Yb : hb : await Xb();
-          if (null === Bb) return;
-          const Pb = Nb ? {
-              ...Qs.current,
-              ...Nb
-            } : Qs.current,
-            qb = {
-              request: hb,
-              files: Pb,
-              activePath: gb,
-              errors: Eb.slice(-5),
-              history: Kb,
-              codeBlock: cc,
-              failedEdits: Hb,
-              canAsk: Zb,
-              lookups: Qb,
-              canLookUp: Cb < 3 && !Ub,
-              canChangeWorldCode: Wk(xb),
-              looksUpDocs: yb,
-              about: cc ? void 0 : {
-                notes: lc,
-                outline: (Tc = kc(Pb, new Set(eM().callbackNames())), [Tc.callbacks.length > 0 ? `Callbacks: ${Tc.callbacks.join(", ")}` : "", Tc.commands.length > 0 ? `Commands: ${Tc.commands.join(", ")}` : "", Tc.functions.length > 0 ? `Functions: ${Tc.functions.join(", ")}` : ""].filter((bb => "" !== bb)).join("\n")),
-                canRemember: lc.length < 8
+          let Wb = Qb ? null !== fb && void 0 !== fb ? fb : mb : await Pb();
+          if (null === Wb) return;
+          const db = Db ? {
+              ...kU.current,
+              ...Db
+            } : kU.current,
+            ob = {
+              request: mb,
+              files: db,
+              activePath: Nb,
+              errors: hb.slice(-5),
+              history: ub,
+              codeBlock: aa,
+              failedEdits: eb,
+              canAsk: rb,
+              lookups: kb,
+              canLookUp: Zb < 3 && !Yb,
+              canChangeWorldCode: UA(Jb),
+              looksUpDocs: Ib,
+              about: aa ? void 0 : {
+                notes: Ra,
+                outline: (Ea = Aa(db, new Set(PL().callbackNames())), [Ea.callbacks.length > 0 ? `Callbacks: ${Ea.callbacks.join(", ")}` : "", Ea.commands.length > 0 ? `Commands: ${Ea.commands.join(", ")}` : "", Ea.functions.length > 0 ? `Functions: ${Ea.functions.join(", ")}` : ""].filter((bb => "" !== bb)).join("\n")),
+                canRemember: Ra.length < 8
               }
             },
-            Wc = new Map,
-            Hc = bb => {
-              var cb;
-              const sb = `${bb.format} ${bb.nativeTools}`,
-                kb = null !== (cb = Wc.get(sb)) && void 0 !== cb ? cb : LW(eM(), qb, bb);
-              return Wc.set(sb, kb), kb
+            Ma = new Map,
+            ea = bb => {
+              var ab;
+              const Ub = `${bb.format} ${bb.nativeTools}`,
+                Ab = null !== (ab = Ma.get(Ub)) && void 0 !== ab ? ab : ZM(PL(), ob, bb);
+              return Ma.set(Ub, Ab), Ab
             },
-            Qc = bb => Hc(Ha(bb)),
-            ec = NW(qb);
-          let Cc = 0,
-            Nc = null;
-          const Vc = async () => {
-            const cb = ya();
-            var kb, Wb;
-            cb > Date.now() && (xc(Date.now()), fc({
+            ka = bb => ea(ET(bb)),
+            ya = kM(ob);
+          let Za = 0,
+            Da = null;
+          const za = async () => {
+            const ab = NT();
+            var Ab, Mb;
+            ab > Date.now() && (Ja(Date.now()), va({
               phase: "waiting",
               startedAt: bb,
-              until: cb,
-              playingThrough: sb
-            }), await (kb = cb - Date.now(), Wb = vb.signal, new Promise(((bb, cb) => {
-              const sb = setTimeout(bb, kb);
-              Wb.addEventListener("abort", (() => {
-                clearTimeout(sb), cb(new DOMException("The World Code AI request was stopped", "AbortError"))
+              until: ab,
+              playingThrough: Ub
+            }), await (Ab = ab - Date.now(), Mb = Ob.signal, new Promise(((bb, ab) => {
+              const Ub = setTimeout(bb, Ab);
+              Mb.addEventListener("abort", (() => {
+                clearTimeout(Ub), ab(new DOMException("The World Code AI request was stopped", "AbortError"))
               }), {
                 once: !0
               })
             }))));
-            const ab = Date.now();
-            return xc(ab), fc({
+            const Tb = Date.now();
+            return Ja(Tb), va({
               phase: "thinking",
-              startedAt: ab,
-              playingThrough: sb
+              startedAt: Tb,
+              playingThrough: Ub
             }), async function(bb) {
-              var cb, sb;
-              let kb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-              const Wb = Date.now(),
-                ab = new AbortController,
-                Tb = () => {
-                  ab.abort()
+              var ab, Ub;
+              let Ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+              const Mb = Date.now(),
+                Tb = new AbortController,
+                Eb = () => {
+                  Tb.abort()
                 };
-              null !== (cb = kb.signal) && void 0 !== cb && cb.aborted && Tb(), null === (sb = kb.signal) || void 0 === sb || sb.addEventListener("abort", Tb, {
+              null !== (ab = Ab.signal) && void 0 !== ab && ab.aborted && Eb(), null === (Ub = Ab.signal) || void 0 === Ub || Ub.addEventListener("abort", Eb, {
                 once: !0
               });
-              const Ub = (0, eb.b)(3e4, ab.signal);
-              let Ib = !1;
+              const Yb = (0, yb.b)(3e4, Tb.signal);
+              let Bb = !1;
               try {
-                const cb = await ha(Ta, Ka(fa(bb, Ta)), Ub.signal, (bb => {
-                  if (!Ib) {
-                    if (Oa(bb.answer)) return Ib = !0, void Tb();
-                    var cb;
-                    (!0 === bb.isCalling || Ga(bb.answer)) && (null === (cb = kb.onProgress) || void 0 === cb || cb.call(kb, bb))
+                const ab = await xT(AT, GT(YT(bb, AT)), Yb.signal, (bb => {
+                  if (!Bb) {
+                    if (FT(bb.answer)) return Bb = !0, void Eb();
+                    var ab;
+                    (!0 === bb.isCalling || hT(bb.answer)) && (null === (ab = Ab.onProgress) || void 0 === ab || ab.call(Ab, bb))
                   }
-                }), kb.tools);
-                if (Ya(cb) && !Oa(cb.answer)) {
-                  const sb = !1 !== kb.canNudge ? await ia(Ta, Ka(fa(bb, Ta)), cb, ab.signal, (bb => {
-                    if (!Ib) {
-                      if (Oa(bb.answer)) return Ib = !0, void Tb();
-                      var cb;
-                      (!0 === bb.isCalling || Ga(bb.answer)) && (null === (cb = kb.onProgress) || void 0 === cb || cb.call(kb, bb))
+                }), Ab.tools);
+                if (zT(ab) && !FT(ab.answer)) {
+                  const Ub = !1 !== Ab.canNudge ? await dT(AT, GT(YT(bb, AT)), ab, Tb.signal, (bb => {
+                    if (!Bb) {
+                      if (FT(bb.answer)) return Bb = !0, void Eb();
+                      var ab;
+                      (!0 === bb.isCalling || hT(bb.answer)) && (null === (ab = Ab.onProgress) || void 0 === ab || ab.call(Ab, bb))
                     }
-                  }), kb.tools, 3e4) : cb;
-                  if (!Oa(sb.answer)) return {
-                    ...sb,
-                    ms: Date.now() - Wb
+                  }), Ab.tools, 3e4) : ab;
+                  if (!FT(Ub.answer)) return {
+                    ...Ub,
+                    ms: Date.now() - Mb
                   }
                 }
-              } catch (Mb) {
-                var Hb;
-                if (null !== (Hb = kb.signal) && void 0 !== Hb && Hb.aborted) throw Mb;
-                Ib || console.warn(`World Code AI: ${Ta.name} couldn't be reached`, Mb)
+              } catch (Lb) {
+                var eb;
+                if (null !== (eb = Ab.signal) && void 0 !== eb && eb.aborted) throw Lb;
+                Bb || console.warn(`World Code AI: ${AT.name} couldn't be reached`, Lb)
               } finally {
-                var fb;
-                Ub.clear(), null === (fb = kb.signal) || void 0 === fb || fb.removeEventListener("abort", Tb)
+                var vb;
+                Yb.clear(), null === (vb = Ab.signal) || void 0 === vb || vb.removeEventListener("abort", Eb)
               }
               return {
-                ...await Pa(bb, kb),
-                ms: Date.now() - Wb
+                ...await WT(bb, Ab),
+                ms: Date.now() - Mb
               }
-            }(Qc, {
-              signal: vb.signal,
-              tools: ec,
-              canNudge: !Ub,
+            }(ka, {
+              signal: Ob.signal,
+              tools: ya,
+              canNudge: !Yb,
               onProgress: bb => {
-                const cb = Date.now(),
-                  kb = bb.model !== Nc;
-                if (Nc = bb.model, !kb && cb - Cc < 150) return;
-                Cc = cb;
-                const Wb = function(bb, cb) {
-                  const sb = function(bb) {
+                const ab = Date.now(),
+                  Ab = bb.model !== Da;
+                if (Da = bb.model, !Ab && ab - Za < 150) return;
+                Za = ab;
+                const Mb = function(bb, ab) {
+                  const Ub = function(bb) {
                       return bb.replace(/<think>[\s\S]*?(?:<\/think>|$)/g, "")
                     }(bb),
-                    kb = lf.exec(sb);
-                  let Wb = kb ? sb.slice(0, kb.index) : sb;
-                  Wb = Wb.replace(/<[\w_]*$/, "").trim();
-                  const ab = sb.trimEnd(),
-                    Tb = fs(sb, cb).filter((bb => !/^<(?:tool_call|function=)/.test(bb.source) || /<\/(?:tool_call|invoke|function)>\s*$/.test(bb.source) || !ab.endsWith(bb.source.trimEnd()))),
-                    Ub = Tb.flatMap((bb => {
-                      var cb;
-                      const sb = null === (cb = bb.args.why) || void 0 === cb ? void 0 : cb.trim();
-                      return sb ? [sb.charAt(0).toUpperCase() + sb.slice(1)] : []
+                    Ab = Lv.exec(Ub);
+                  let Mb = Ab ? Ub.slice(0, Ab.index) : Ub;
+                  Mb = Mb.replace(/<[\w_]*$/, "").trim();
+                  const Tb = Ub.trimEnd(),
+                    Eb = vU(Ub, ab).filter((bb => !/^<(?:tool_call|function=)/.test(bb.source) || /<\/(?:tool_call|invoke|function)>\s*$/.test(bb.source) || !Tb.endsWith(bb.source.trimEnd()))),
+                    Yb = Eb.flatMap((bb => {
+                      var ab;
+                      const Ub = null === (ab = bb.args.why) || void 0 === ab ? void 0 : ab.trim();
+                      return Ub ? [Ub.charAt(0).toUpperCase() + Ub.slice(1)] : []
                     }));
                   return {
-                    text: Wb,
-                    whys: [...new Set(Ub)],
-                    isWritingCode: null !== kb,
-                    calls: Tb.length
+                    text: Mb,
+                    whys: [...new Set(Yb)],
+                    isWritingCode: null !== Ab,
+                    calls: Eb.length
                   }
-                }(bb.answer, Ia(bb.model));
-                fc({
-                  phase: "" !== Wb.text || Wb.isWritingCode ? "writing" : "thinking",
-                  startedAt: ab,
-                  playingThrough: sb,
+                }(bb.answer, TT(bb.model));
+                va({
+                  phase: "" !== Mb.text || Mb.isWritingCode ? "writing" : "thinking",
+                  startedAt: Tb,
+                  playingThrough: Ub,
                   reasoningChars: bb.reasoningChars,
                   model: bb.model
                 })
               }
             })
-          }, Lc = (sc = null === (Uc = IU.getState().status) || void 0 === Uc ? void 0 : Uc.provider, kU[null !== sc && void 0 !== sc ? sc : "ovh"]), uc = bb => {
-            pc.current = null, Fb.drop(rb), ys(rb, {
+          }, xa = (Ua = null === (Ya = TY.getState().status) || void 0 === Ya ? void 0 : Ya.provider, bY[null !== Ua && void 0 !== Ua ? Ua : "ovh"]), ia = bb => {
+            Sa.current = null, cb.drop(sb), HU(sb, {
               isNotice: !0
-            }), Bs({
+            }), NU({
               role: "assistant",
               text: "unsafe" === bb ? "That answer didn't pass Bloxd's safety check, so it isn't shown. Try again, or ask in a different way." : "Bloxd's safety check couldn't look at that answer, so it isn't shown. Try again in a minute.",
               changes: [],
               status: "offered",
               isNotice: !0,
-              ...Sb
+              ...Cb
             })
-          }, Yc = async () => {
+          }, fa = async () => {
             var bb;
-            const cb = Date.now();
-            xc(cb), fc({
+            const ab = Date.now();
+            Ja(ab), va({
               phase: "thinking",
-              startedAt: cb,
-              playingThrough: sb,
+              startedAt: ab,
+              playingThrough: Ub,
               isSuperBot: !0
             });
-            const kb = Gb < 0 ? ac : ac.slice(0, Gb),
-              ab = kb.findLastIndex((bb => "assistant" === bb.role && !bb.isNotice && !bb.leftOut && ts(bb))),
-              Tb = kb[ab],
-              Ub = kb.findIndex((bb => bb.id === Lb)),
-              fb = kb.slice(0, Math.max(0, ab)).findLastIndex((bb => "user" === bb.role)),
-              Mb = void 0 === nb && (void 0 === Lb || Ub >= 0 && Ub < ab && Ub >= fb) && "object" === typeof(null === Tb || void 0 === Tb ? void 0 : Tb.answeredBy) && !0 === Tb.answeredBy.isSuperBot,
-              Xb = Ha(Lc),
-              mb = LW(eM(), qb, Xb, {
+            const Ab = qb < 0 ? Ta : Ta.slice(0, qb),
+              Tb = Ab.findLastIndex((bb => "assistant" === bb.role && !bb.isNotice && !bb.leftOut && WU(bb))),
+              Eb = Ab[Tb],
+              Yb = Ab.findIndex((bb => bb.id === xb)),
+              vb = Ab.slice(0, Math.max(0, Tb)).findLastIndex((bb => "user" === bb.role)),
+              Lb = void 0 === Xb && (void 0 === xb || Yb >= 0 && Yb < Tb && Yb >= vb) && "object" === typeof(null === Eb || void 0 === Eb ? void 0 : Eb.answeredBy) && !0 === Eb.answeredBy.isSuperBot,
+              Pb = ET(xa),
+              jb = ZM(PL(), ob, Pb, {
                 docsInTurn: !0
               }),
-              lb = NW(qb, Xb.format),
-              Qb = "deepseek" === Xb.format ? {
-                tQ: LW(eM(), qb, Xb, {
+              Rb = kM(ob, Pb.format),
+              kb = "deepseek" === Pb.format ? {
+                qR: ZM(PL(), ob, Pb, {
                   docsInTurn: !0,
-                  tQ: !0
+                  qR: !0
                 }).at(-1),
-                toolResults: [...(null !== Hb && void 0 !== Hb ? Hb : []).flatMap((bb => bb.call ? [{
+                toolResults: [...(null !== eb && void 0 !== eb ? eb : []).flatMap((bb => bb.call ? [{
                   ...bb.call,
-                  text: sW(bb)
-                }] : [])), ...(null !== (bb = qb.lookups) && void 0 !== bb ? bb : []).flatMap((bb => bb.call ? [{
+                  text: SA(bb)
+                }] : [])), ...(null !== (bb = ob.lookups) && void 0 !== bb ? bb : []).flatMap((bb => bb.call ? [{
                   ...bb.call,
                   text: `${bb.about}:\n${bb.text}`
                 }] : []))].slice(-20)
               } : {};
-            let eb;
+            let yb;
             try {
-              eb = await async function(bb, cb, sb, kb, Wb) {
-                var ab;
+              yb = await async function(bb, ab, Ub, Ab, Mb) {
+                var Tb;
                 let {
-                  tQ: Tb,
-                  toolResults: Ub,
-                  request: Ib,
-                  code: Hb
+                  qR: Eb,
+                  toolResults: Yb,
+                  request: Bb,
+                  code: eb
                 } = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : {};
-                const fb = Date.now(),
-                  Mb = "system" === (null === (ab = cb[0]) || void 0 === ab ? void 0 : ab.role) ? cb[0].content : "",
-                  Xb = JSON.stringify(ua(sb)),
-                  nb = null !== kb && kb.system === Mb && kb.toolsJson === Xb,
-                  mb = null !== Tb && void 0 !== Tb ? Tb : cb[cb.length - 1],
-                  lb = Ub && Ub.length > 0 ? {
-                    toolResults: Ub
+                const vb = Date.now(),
+                  Lb = "system" === (null === (Tb = ab[0]) || void 0 === Tb ? void 0 : Tb.role) ? ab[0].content : "",
+                  Pb = JSON.stringify(DT(Ub)),
+                  Xb = null !== Ab && Ab.system === Lb && Ab.toolsJson === Pb,
+                  jb = null !== Eb && void 0 !== Eb ? Eb : ab[ab.length - 1],
+                  Rb = Yb && Yb.length > 0 ? {
+                    toolResults: Yb
                   } : {},
-                  Qb = {
-                    ...Ib ? {
-                      request: Ib
+                  kb = {
+                    ...Bb ? {
+                      request: Bb
                     } : {},
-                    ...Hb ? {
-                      code: Hb
+                    ...eb ? {
+                      code: eb
                     } : {}
                   };
-                let eb = await LU(VU(nb ? {
-                  chatId: kb.chatId,
-                  messages: [mb],
-                  ...lb,
-                  ...Qb
+                let yb = await ZY(yY(Xb ? {
+                  chatId: Ab.chatId,
+                  messages: [jb],
+                  ...Rb,
+                  ...kb
                 } : {
-                  messages: cb,
-                  toolsJson: Xb,
-                  ...Qb
-                }), Wb);
-                if ("newChat" === eb.outcome && nb && (eb = await LU(VU({
-                    messages: cb,
-                    toolsJson: Xb,
-                    ...Qb
-                  }), Wb)), "status" in eb && IU.setStatus(eb.status), "refused" === eb.outcome) return {
+                  messages: ab,
+                  toolsJson: Pb,
+                  ...kb
+                }), Mb);
+                if ("newChat" === yb.outcome && Xb && (yb = await ZY(yY({
+                    messages: ab,
+                    toolsJson: Pb,
+                    ...kb
+                  }), Mb)), "status" in yb && TY.setStatus(yb.status), "refused" === yb.outcome) return {
                   kind: "refused",
-                  safety: eb.safety
+                  safety: yb.safety
                 };
-                if ("blocked" === eb.outcome) return {
+                if ("blocked" === yb.outcome) return {
                   kind: "blocked",
-                  safety: eb.safety
+                  safety: yb.safety
                 };
-                if ("answered" !== eb.outcome) return {
-                  kind: "newChat" === eb.outcome ? "failed" : eb.outcome
+                if ("answered" !== yb.outcome) return {
+                  kind: "newChat" === yb.outcome ? "failed" : yb.outcome
                 };
-                const Cb = Ja(bb, eb.answer, eb.reasoning, eb.toolCalls, eb.isCutShort);
-                return null === Cb ? {
+                const Zb = iT(bb, yb.answer, yb.reasoning, yb.toolCalls, yb.isCutShort);
+                return null === Zb ? {
                   kind: "failed"
                 } : {
                   kind: "answered",
                   reply: {
-                    ...Cb,
-                    ms: Date.now() - fb
+                    ...Zb,
+                    ms: Date.now() - vb
                   },
                   chat: {
-                    chatId: eb.chatId,
-                    system: Mb,
-                    toolsJson: Xb
+                    chatId: yb.chatId,
+                    system: Lb,
+                    toolsJson: Pb
                   }
                 }
-              }(Lc, mb, lb, Mb ? pc.current : null, vb.signal, {
-                ...Qb,
-                ...Wb ? {
-                  request: hb
+              }(xa, jb, Rb, Lb ? Sa.current : null, Ob.signal, {
+                ...kb,
+                ...Mb ? {
+                  request: mb
                 } : {},
-                code: QW(qb, Xb.format)
+                code: XM(ob, Pb.format)
               })
-            } catch (Vb) {
-              if (vb.signal.aborted) throw Vb;
-              console.warn("AI Helper: Super Bot.xd couldn't be reached", Vb), eb = {
+            } catch (zb) {
+              if (Ob.signal.aborted) throw zb;
+              console.warn("AI Helper: Super Bot.xd couldn't be reached", zb), yb = {
                 kind: "failed"
               }
             }
-            if ("answered" === eb.kind) return pc.current = eb.chat, {
-              ...eb.reply,
-              promptVersion: pa(mb)
+            if ("answered" === yb.kind) return Sa.current = yb.chat, {
+              ...yb.reply,
+              promptVersion: cT(jb)
             };
-            if ("refused" === eb.kind) return Ib(eb.safety), "stopped";
-            if ("blocked" === eb.kind) return uc(eb.safety), "stopped";
-            pc.current = null, yc = "free";
-            const Cb = IU.getState(),
-              Nb = "unavailable" === eb.kind && QU(Cb);
-            return Nb && yU(), {
-              fallbackNotice: Nb ? "You don't have any Super Bot.xd usage left, so Bot.xd is answering this one." : NU(eb.kind, Cb.status)
+            if ("refused" === yb.kind) return Bb(yb.safety), "stopped";
+            if ("blocked" === yb.kind) return ia(yb.safety), "stopped";
+            Sa.current = null, Ia = "free";
+            const Zb = TY.getState(),
+              Db = "unavailable" === yb.kind && XY(Zb);
+            return Db && NY(), {
+              fallbackNotice: Db ? "You don't have any Super Bot.xd usage left, so Bot.xd is answering this one." : kY(yb.kind, Zb.status)
             }
           };
-          let hc, Jc, gc, Bc, yc = Jb || xT.getState().keys.length > 0 ? "free" : void 0,
-            Pc = !1;
-          if (tb) {
-            const cb = {
-              format: Ca(tb.model.callFormat),
-              nativeTools: !0 === tb.model.nativeTools
+          let ma, pa, Na, Wa, Ia = pb || VE.getState().keys.length > 0 ? "free" : void 0,
+            da = !1;
+          if (Hb) {
+            const ab = {
+              format: RT(Hb.model.callFormat),
+              nativeTools: !0 === Hb.model.nativeTools
             };
-            Jc = cb.format;
-            const Wb = [...Hc(cb)];
-            var Mc;
-            if (Bc = {
+            pa = ab.format;
+            const Mb = [...ea(ab)];
+            var La;
+            if (Wa = {
                 responder: "key",
-                model: tb.model.name,
-                promptVersion: pa(Wb)
-              }, void 0 !== lb) "" !== lb && Wb.push({
+                model: Hb.model.name,
+                promptVersion: cT(Mb)
+              }, void 0 !== Rb) "" !== Rb && Mb.push({
               role: "assistant",
-              content: lb
-            }), Wb.push({
+              content: Rb
+            }), Mb.push({
               role: "user",
-              content: (bc = null === Ab || void 0 === Ab || null === (Mc = Ab.cutShort) || void 0 === Mc ? void 0 : Mc.cutCall, "Your answer was cut short. Continue exactly where you stopped, from the next character: don't repeat anything or start again, and add nothing before it." + (bc ? ` Your ${bc.name} call${bc.path?` for ${bc.path}`:""} was cut off part way and didn't come through: make that call again in full.` : ""))
+              content: (ba = null === tb || void 0 === tb || null === (La = tb.cutShort) || void 0 === La ? void 0 : La.cutCall, "Your answer was cut short. Continue exactly where you stopped, from the next character: don't repeat anything or start again, and add nothing before it." + (ba ? ` Your ${ba.name} call${ba.path?` for ${ba.path}`:""} was cut off part way and didn't come through: make that call again in full.` : ""))
             });
-            fc({
+            va({
               phase: "thinking",
               startedAt: bb,
-              playingThrough: sb,
-              keyModel: kb
+              playingThrough: Ub,
+              keyModel: Ab
             });
-            const ab = cb => {
-              fc({
-                phase: "" === cb.answer ? "thinking" : "writing",
+            const Tb = ab => {
+              va({
+                phase: "" === ab.answer ? "thinking" : "writing",
                 startedAt: bb,
-                playingThrough: sb,
-                keyModel: kb
+                playingThrough: Ub,
+                keyModel: Ab
               })
             };
             try {
-              const bb = await bU(tb, Wb, {
-                signal: vb.signal,
-                onProgress: ab,
-                tools: ec,
-                continueFrom: lb
+              const bb = await JE(Hb, Mb, {
+                signal: Ob.signal,
+                onProgress: Tb,
+                tools: ya,
+                continueFrom: Rb
               });
-              hc = bb, yc = {
-                model: tb.name ? `${tb.name} \xb7 ${tb.model.name}` : tb.model.name
-              }, bb.isCutShort && (gc = function(bb, cb, sb) {
+              ma = bb, Ia = {
+                model: Hb.name ? `${Hb.name} \xb7 ${Hb.model.name}` : Hb.model.name
+              }, bb.isCutShort && (Na = function(bb, ab, Ub) {
                 return {
-                  request: sb,
-                  written: cb.written,
-                  cutCall: cb.cutCall,
+                  request: Ub,
+                  written: ab.written,
+                  cutCall: ab.cutCall,
                   keyId: bb.id,
                   modelId: bb.model.id
                 }
-              }(tb, bb, hb))
-            } catch (mc) {
-              if (!(mc instanceof CT) || vb.signal.aborted) throw mc;
-              return void Gs(mc, tb, rb, Sb)
+              }(Hb, bb, mb))
+            } catch (ja) {
+              if (!(ja instanceof RE) || Ob.signal.aborted) throw ja;
+              return void QU(ja, Hb, sb, Cb)
             }
           } else {
-            const bb = Ob ? await Yc() : null;
+            const bb = Qb ? await fa() : null;
             if ("stopped" === bb) return;
             if (bb && !("fallbackNotice" in bb)) {
-              var Xc;
-              hc = bb, Bc = {
+              var Pa;
+              ma = bb, Wa = {
                 responder: "super_bot_xd",
-                model: Lc.name,
+                model: xa.name,
                 promptVersion: bb.promptVersion
-              }, Jc = null !== (Xc = Lc.callFormat) && void 0 !== Xc ? Xc : "simple", yc = {
-                model: sU,
+              }, pa = null !== (Pa = xa.callFormat) && void 0 !== Pa ? Pa : "simple", Ia = {
+                model: SE,
                 isSuperBot: !0
-              }, Pc = !0
+              }, da = !0
             } else {
-              if (Ob) {
-                const bb = await Xb();
+              if (Qb) {
+                const bb = await Pb();
                 if (null === bb) return;
-                Bb = bb
+                Wb = bb
               }
-              let cb;
-              bb && "fallbackNotice" in bb && Bs({
+              let ab;
+              bb && "fallbackNotice" in bb && NU({
                 role: "assistant",
                 text: bb.fallbackNotice,
                 changes: [],
@@ -14013,198 +14013,198 @@ const oM = (0, kb.memo)((function(bb) {
                 isNotice: !0
               });
               try {
-                cb = await Vc()
-              } catch (mc) {
-                if (!(mc instanceof la && "busy" === mc.reason)) throw mc;
-                cb = await Vc()
+                ab = await za()
+              } catch (ja) {
+                if (!(ja instanceof PT && "busy" === ja.reason)) throw ja;
+                ab = await za()
               }
-              tc.current = function(bb, cb, sb) {
-                  var kb;
-                  return !Number.isFinite(sb) || sb <= 0 ? bb : {
+              Ha.current = function(bb, ab, Ub) {
+                  var Ab;
+                  return !Number.isFinite(Ub) || Ub <= 0 ? bb : {
                     ...bb,
-                    [cb]: [...null !== (kb = bb[cb]) && void 0 !== kb ? kb : [], sb].slice(-10)
+                    [ab]: [...null !== (Ab = bb[ab]) && void 0 !== Ab ? Ab : [], Ub].slice(-10)
                   }
-                }(tc.current, cb.model, cb.ms),
+                }(Ha.current, ab.model, ab.ms),
                 function(bb) {
                   try {
-                    localStorage.setItem(Yf, JSON.stringify(bb))
+                    localStorage.setItem(Dv, JSON.stringify(bb))
                   } catch {}
-                }(tc.current), hc = cb, Jc = Ia(cb.model);
-              const sb = Ua(cb.model);
-              Bc = {
+                }(Ha.current), ma = ab, pa = TT(ab.model);
+              const Ub = MT(ab.model);
+              Wa = {
                 responder: "bot_xd",
-                model: cb.model,
-                promptVersion: sb ? pa(Qc(sb)) : ""
+                model: ab.model,
+                promptVersion: Ub ? cT(ka(Ub)) : ""
               }
             }
           }
-          const Dc = eM(),
-            Ec = vk(hc.answer, Jc, Pb, gb, Dc.callbackNames(), cc ? mb.d : void 0, xb, new Set([mW(Pb, gb, cc), gb, ...Vb, ...Object.keys(null !== Nb && void 0 !== Nb ? Nb : {})].filter((bb => null !== bb))), Dc.realName),
-            ic = Ub ? {
-              ...Ec,
+          const Fa = PL(),
+            ha = gA(ma.answer, pa, db, Nb, Fa.callbackNames(), aa ? jb.b : void 0, Jb, new Set([LM(db, Nb, aa), Nb, ...zb, ...Object.keys(null !== Db && void 0 !== Db ? Db : {})].filter((bb => null !== bb))), Fa.realName),
+            Ga = Yb ? {
+              ...ha,
               changes: [],
               failedEdits: [],
               inPlace: !1,
               worldCode: [],
               plan: [],
               actions: []
-            } : Ec;
-          if (!Pc) {
+            } : ha;
+          if (!da) {
             const bb = Date.now();
-            xc(bb), fc({
+            Ja(bb), va({
               phase: "screening",
               startedAt: bb,
-              playingThrough: sb,
-              keyModel: kb
+              playingThrough: Ub,
+              keyModel: Ab
             });
-            const cb = await uf(Bb, ic, vb.signal, (cb => {
-              xc(Date.now()), fc({
+            const ab = await Zv(Wb, Ga, Ob.signal, (ab => {
+              Ja(Date.now()), va({
                 phase: "screening",
                 startedAt: bb,
-                playingThrough: sb,
-                keyModel: kb,
-                until: cb
+                playingThrough: Ub,
+                keyModel: Ab,
+                until: ab
               })
             }));
-            if ("ok" !== cb) return void uc(cb)
+            if ("ok" !== ab) return void ia(ab)
           }
-          Fb.answered(rb, {
-            input: qb,
-            responder: Bc.responder,
-            promptVersion: Bc.promptVersion
+          cb.answered(sb, {
+            input: ob,
+            responder: Wa.responder,
+            promptVersion: Wa.promptVersion
           }, {
-            model: Bc.model,
-            text: hc.answer
+            model: Wa.model,
+            text: ma.answer
           });
-          const Oc = function(bb) {
-              let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : cc;
-              return bb.flatMap((bb => UM(Dc, bb, cb && !(0, mb.e)(bb.path))))
+          const Qa = function(bb) {
+              let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : aa;
+              return bb.flatMap((bb => UL(Fa, bb, ab && !(0, jb.f)(bb.path))))
             },
-            Gc = Oc(ic.changes),
-            Kc = "direct" === xb ? function(bb) {
+            qa = Qa(Ga.changes),
+            ua = "direct" === Jb ? function(bb) {
               return bb.flatMap((bb => {
-                var cb;
-                return null !== (cb = MI(bb)) && void 0 !== cb ? cb : []
+                var ab;
+                return null !== (ab = BB(bb)) && void 0 !== ab ? ab : []
               }))
-            }(Gc) : [],
-            Zc = Kc.length > 0 ? {
-              ...ic,
-              changes: ic.changes.map((bb => ({
+            }(qa) : [],
+            ra = ua.length > 0 ? {
+              ...Ga,
+              changes: Ga.changes.map((bb => ({
                 ...bb,
-                after: lI(bb.after, Kc)
+                after: PB(bb.after, ua)
               })))
-            } : ic,
-            zc = Zc.changes.filter((bb => cc && (0, mb.e)(bb.path))).map((bb => ({
+            } : Ga,
+            Ka = ra.changes.filter((bb => aa && (0, jb.f)(bb.path))).map((bb => ({
               ...bb,
-              path: (0, mb.g)(bb.path)
+              path: (0, jb.j)(bb.path)
             }))),
-            dc = Zc.changes.filter((bb => !cc || !(0, mb.e)(bb.path))),
-            Ac = zc.length > 0 ? {
-              ...Zc,
-              changes: dc,
-              inPlace: Zc.inPlace && dc.length > 0
-            } : Zc,
-            wc = zc.length > 0 || Kc.length > 0 ? Oc(Ac.changes) : Gc,
-            rc = wc.filter(sM),
-            oc = Ac.inPlace && Db && rc.length > 0 && Mb < 3 && !hc.isCutShort && !hc.hasCallsFromReasoning,
-            Sc = "direct" === xb && Db,
-            Rc = Ac.failedEdits.filter((bb => "unread" === bb.reason)),
-            vc = !Sc || Ub || void 0 !== ub || cc ? [] : Rc.flatMap((bb => null !== bb.path && void 0 !== bb.code ? [{
+            la = ra.changes.filter((bb => !aa || !(0, jb.f)(bb.path))),
+            ta = Ka.length > 0 ? {
+              ...ra,
+              changes: la,
+              inPlace: ra.inPlace && la.length > 0
+            } : ra,
+            wa = Ka.length > 0 || ua.length > 0 ? Qa(ta.changes) : qa,
+            sa = wa.filter(Jv),
+            ga = ta.inPlace && Fb && sa.length > 0 && Lb < 3 && !ma.isCutShort && !ma.hasCallsFromReasoning,
+            Ca = "direct" === Jb && Fb,
+            Va = ta.failedEdits.filter((bb => "unread" === bb.reason)),
+            Oa = !Ca || Yb || void 0 !== ib || aa ? [] : Va.flatMap((bb => null !== bb.path && void 0 !== bb.code ? [{
               path: bb.path,
               code: bb.code
             }] : [])),
-            Fc = bb => "unread" === bb.reason && vc.some((cb => cb.path === bb.path)),
-            jc = Ac.failedEdits.filter((bb => !Fc(bb))),
-            bs = Rc.filter((bb => !Fc(bb))),
-            cs = Wk(xb) && Ac.worldCode.length > 0 && !Ub && 0 === zc.length,
-            ss = Cb < 3 && !Ub && !hc.isCutShort,
-            ks = new Set([...ec.map((bb => bb.name)), ...bs.length > 0 ? ["view_file", "view_world_code"] : []]),
-            Ws = !ss || vc.length > 0 || zc.length > 0 || oc ? [] : Ac.lookups.filter((bb => ks.has(bb.name))),
-            as = {
-              request: hb,
-              shown: cb,
-              userEntryId: rb,
+            ca = bb => "unread" === bb.reason && Oa.some((ab => ab.path === bb.path)),
+            na = ta.failedEdits.filter((bb => !ca(bb))),
+            bU = Va.filter((bb => !ca(bb))),
+            aU = UA(Jb) && ta.worldCode.length > 0 && !Yb && 0 === Ka.length,
+            UU = Zb < 3 && !Yb && !ma.isCutShort,
+            AU = new Set([...ya.map((bb => bb.name)), ...bU.length > 0 ? ["view_file", "view_world_code"] : []]),
+            MU = !UU || Oa.length > 0 || Ka.length > 0 || ga ? [] : ta.lookups.filter((bb => AU.has(bb.name))),
+            TU = {
+              request: mb,
+              shown: ab,
+              userEntryId: sb,
               options: {
                 check: !1,
-                about: ab,
-                planStep: Tb,
-                wordsOnly: Ub,
-                useFree: Jb,
-                isAutoFix: fb,
-                autoFixRound: Mb,
-                failedEdits: [...(null !== Hb && void 0 !== Hb ? Hb : []).map(HM), ...bs],
-                ...ob,
-                lookupRound: Cb + 1,
-                lookupOf: rb,
-                insertsInto: ub,
-                guardWords: Bb
+                about: Tb,
+                planStep: Eb,
+                wordsOnly: Yb,
+                useFree: pb,
+                isAutoFix: vb,
+                autoFixRound: Lb,
+                failedEdits: [...(null !== eb && void 0 !== eb ? eb : []).map(ML), ...bU],
+                ...gb,
+                lookupRound: Zb + 1,
+                lookupOf: sb,
+                insertsInto: ib,
+                guardWords: Wb
               }
             },
-            Ts = 0 === Ac.changes.length && 0 === Ac.worldCode.length,
-            Us = Ws.length > 0 && ("direct" === xb || yb && Ts && Ws.every(gW)),
-            Is = Us && Ts && 0 === Ac.notes.length,
-            Ms = Zb ? Ac.question : null,
-            Xs = hc.isCutShort ? Ac.text.replace(/(<tool_call|<function=|<\|channel\||\{\s*"jsonrpc")[\s\S]*$/, "").trim() : Ac.text,
-            ns = hc.isCutShort && !gc ? "\n\nThe answer got too long and was cut off, so part of it is missing. Try asking for one thing at a time." : "",
-            ls = jc.length > 0 && Ac.changes.length > 0 && !hc.isCutShort ? "\n\nPart of this answer couldn't go in, so it isn't in the change." : "",
-            es = () => Ac.changes.length > 0 ? "Here's a change for your code." : zc.length > 0 ? "This changes your World Code." : Ac.worldCode.length > 0 ? "This needs World Code." : vc.length > 0 ? `I'll put it into ${vc.map((bb=>bb.path)).join(" and ")}.` : Ms ? "Quick question before I build it:" : Ac.plan.length > 0 ? "That's a big one, so here's a plan to build it a step at a time." : Ws.length > 0 ? `I'll look at ${function(bb){var cb;const sb=bb.map(YW);return sb.length<=1?null!==(cb=sb[0])&&void 0!==cb?cb:"":`${sb.slice(0,-1).join(", ")} and ${sb[sb.length-1]}`}(Ws)} first.` : Ac.notes.length > 0 ? "Here's something to remember about your game." : Ac.actions.length > 0 ? "Sure!" : hc.isCutShort ? "Sorry, that was too much for one answer." : "Sorry, I couldn't work that out. Try asking in a different way.",
-            Cs = {
+            EU = 0 === ta.changes.length && 0 === ta.worldCode.length,
+            YU = MU.length > 0 && ("direct" === Jb || Ib && EU && MU.every(fM)),
+            BU = YU && EU && 0 === ta.notes.length,
+            LU = rb ? ta.question : null,
+            PU = ma.isCutShort ? ta.text.replace(/(<tool_call|<function=|<\|channel\||\{\s*"jsonrpc")[\s\S]*$/, "").trim() : ta.text,
+            XU = ma.isCutShort && !Na ? "\n\nThe answer got too long and was cut off, so part of it is missing. Try asking for one thing at a time." : "",
+            RU = na.length > 0 && ta.changes.length > 0 && !ma.isCutShort ? "\n\nPart of this answer couldn't go in, so it isn't in the change." : "",
+            yU = () => ta.changes.length > 0 ? "Here's a change for your code." : Ka.length > 0 ? "This changes your World Code." : ta.worldCode.length > 0 ? "This needs World Code." : Oa.length > 0 ? `I'll put it into ${Oa.map((bb=>bb.path)).join(" and ")}.` : LU ? "Quick question before I build it:" : ta.plan.length > 0 ? "That's a big one, so here's a plan to build it a step at a time." : MU.length > 0 ? `I'll look at ${function(bb){var ab;const Ub=bb.map(zM);return Ub.length<=1?null!==(ab=Ub[0])&&void 0!==ab?ab:"":`${Ub.slice(0,-1).join(", ")} and ${Ub[Ub.length-1]}`}(MU)} first.` : ta.notes.length > 0 ? "Here's something to remember about your game." : ta.actions.length > 0 ? "Sure!" : ma.isCutShort ? "Sorry, that was too much for one answer." : "Sorry, I couldn't work that out. Try asking in a different way.",
+            ZU = {
               role: "assistant",
-              text: (Xs || es()) + ns + ls,
-              changes: Ac.changes,
+              text: (PU || yU()) + XU + RU,
+              changes: ta.changes,
               status: "offered",
-              warnings: wc,
-              worldCode: Ac.worldCode.length > 0 && !cs ? Ac.worldCode : void 0,
-              editedInPlace: Ac.inPlace && !oc || void 0,
-              failedEdits: jc.length > 0 ? jc : void 0,
-              question: null !== Ms && void 0 !== Ms ? Ms : void 0,
-              askedFor: Ms ? {
-                request: hb,
-                guardWords: Bb
+              warnings: wa,
+              worldCode: ta.worldCode.length > 0 && !aU ? ta.worldCode : void 0,
+              editedInPlace: ta.inPlace && !ga || void 0,
+              failedEdits: na.length > 0 ? na : void 0,
+              question: null !== LU && void 0 !== LU ? LU : void 0,
+              askedFor: LU ? {
+                request: mb,
+                guardWords: Wb
               } : void 0,
-              note: Ac.notes[0],
-              plan: Ac.plan.length > 0 ? Ac.plan : void 0,
-              noteStatus: Ac.notes.length > 0 ? Sc ? "pending" : "asked" : void 0,
-              answeredBy: yc,
-              oneOff: ib || void 0,
-              cutShort: gc,
-              byItself: Sc || void 0,
-              ...gc ? {
-                retryShown: Sb.retryShown,
-                retryOptions: Sb.retryOptions
+              note: ta.notes[0],
+              plan: ta.plan.length > 0 ? ta.plan : void 0,
+              noteStatus: ta.notes.length > 0 ? Ca ? "pending" : "asked" : void 0,
+              answeredBy: Ia,
+              oneOff: Gb || void 0,
+              cutShort: Na,
+              byItself: Ca || void 0,
+              ...Na ? {
+                retryShown: Cb.retryShown,
+                retryOptions: Cb.retryOptions
               } : {},
-              ...Is ? {
-                logTitle: IM,
+              ...BU ? {
+                logTitle: AL,
                 isCalm: !0
               } : {},
-              ...Ws.length > 0 ? {
+              ...MU.length > 0 ? {
                 lookups: {
-                  lookups: Ws,
-                  followUp: as
+                  lookups: MU,
+                  followUp: TU
                 },
-                lookedAt: Us || void 0
+                lookedAt: YU || void 0
               } : {}
             },
-            Ns = db && void 0 !== nb ? (jb = nb, pb = Cs, Ic((bb => bb.map((bb => bb.id === jb ? {
-              ...pb,
-              id: jb,
+            DU = lb && void 0 !== Xb ? (nb = Xb, Sb = ZU, Ba((bb => bb.map((bb => bb.id === nb ? {
+              ...Sb,
+              id: nb,
               target: bb.target
-            } : bb)))), jb) : Bs(Cs),
-            Vs = Ac.inPlace && Db && !oc && !hc.isCutShort && !hc.hasCallsFromReasoning,
-            Ls = Vs && await Fs({
-              id: Ns,
-              changes: Ac.changes
-            }, ab);
-          !Ac.inPlace || oc || Ls || ys(Ns, {
+            } : bb)))), nb) : NU(ZU),
+            zU = ta.inPlace && Fb && !ga && !ma.isCutShort && !ma.hasCallsFromReasoning,
+            xU = zU && await OU({
+              id: DU,
+              changes: ta.changes
+            }, Tb);
+          !ta.inPlace || ga || xU || HU(DU, {
             editedInPlace: void 0
           });
-          const us = 0 === Ac.changes.length && 0 === jc.length && 0 === vc.length && 0 === zc.length && 0 === Ac.worldCode.length;
-          if (Sc && void 0 !== Cs.note && ((Ls || oc || us) && !vb.signal.aborted ? Jk({
-              id: Ns,
-              note: Cs.note,
+          const iU = 0 === ta.changes.length && 0 === na.length && 0 === Oa.length && 0 === Ka.length && 0 === ta.worldCode.length;
+          if (Ca && void 0 !== ZU.note && ((xU || ga || iU) && !Ob.signal.aborted ? fA({
+              id: DU,
+              note: ZU.note,
               changes: [],
               status: "applied"
-            }, !0) : Vs && !vb.signal.aborted ? hk(Ns, "declined") : hk(Ns, "asked")), vb.signal.aborted) return void Bs({
+            }, !0) : zU && !Ob.signal.aborted ? iA(DU, "declined") : iA(DU, "asked")), Ob.signal.aborted) return void NU({
             role: "assistant",
             text: "Stopped.",
             changes: [],
@@ -14212,56 +14212,56 @@ const oM = (0, kb.memo)((function(bb) {
             isNotice: !0,
             isCalm: !0
           });
-          oc && (ys(Ns, {
+          ga && (HU(DU, {
             warningsSentBack: !0
-          }), qc((bb => [{
-            id: ms(),
-            text: (0, TH.w)(rc),
+          }), oa((bb => [{
+            id: jU(),
+            text: (0, Ae.u)(sa),
             shown: "Fix this line",
             check: !1,
             isAutoFix: !0,
-            autoFixRound: Mb + 1
-          }, ...bb]))), Ls && Bf(Ac.changes, gb).forEach(((bb, cb) => {
-            const sb = () => {
-              Bs({
+            autoFixRound: Lb + 1
+          }, ...bb]))), xU && fv(ta.changes, Nb).forEach(((bb, ab) => {
+            const Ub = () => {
+              NU({
                 role: "assistant",
-                text: tf(bb.path),
+                text: mv(bb.path),
                 changes: [],
                 status: "offered",
                 isNotice: !0,
                 isCalm: !0
-              }), zb(bb.path, bb.line)
+              }), Kb(bb.path, bb.line)
             };
-            0 === cb ? sb() : Hs(sb, 1200 * cb)
+            0 === ab ? Ub() : eU(Ub, 1200 * ab)
           }));
-          const Ys = 0 === Ws.length && Ac.actions.some((bb => "exportGame" === bb.kind));
-          Db && Ys && "direct" === xb ? ck(Ac.changes.length > 0 && !Ls) : Db && (Ys || jk(Bb) && !cc) && ys(Ns, {
+          const fU = 0 === MU.length && ta.actions.some((bb => "exportGame" === bb.kind));
+          Fb && fU && "direct" === Jb ? SU(ta.changes.length > 0 && !xU) : Fb && (fU || OA(Wb) && !aa) && HU(DU, {
             offerExport: !0
           });
-          const hs = 0 === Ws.length ? Ac.actions.find((bb => "switchToWorldCode" === bb.kind)) : void 0,
-            gs = Ac.changes.length > 0 && !Ls && Db,
-            Ps = Ls ? Ac.changes.map((bb => ({
+          const mU = 0 === MU.length ? ta.actions.find((bb => "switchToWorldCode" === bb.kind)) : void 0,
+            pU = ta.changes.length > 0 && !xU && Fb,
+            IU = xU ? ta.changes.map((bb => ({
               path: bb.path,
               text: bb.before
             }))) : void 0,
-            Ds = zc.length > 0 && Sc && !!Rb,
-            Es = Ds && !gs;
-          if (zc.length > 0) {
-            const bb = Bs({
+            dU = Ka.length > 0 && Ca && !!Vb,
+            FU = dU && !pU;
+          if (Ka.length > 0) {
+            const bb = NU({
               role: "assistant",
               text: "This is the part of the change that goes in World Code.",
-              changes: zc,
+              changes: Ka,
               status: "offered",
-              warnings: Oc(zc, !1),
-              answeredBy: yc,
-              byItself: Es || void 0
-            }, Jf.g);
-            Ds && kk(bb, gs)
+              warnings: Qa(Ka, !1),
+              answeredBy: Ia,
+              byItself: FU || void 0
+            }, xv.d);
+            dU && aA(bb, pU)
           }
-          if ("stopped" === (Us ? await Tk(Ws, as, {
-              replaced: Ps,
-              signal: vb.signal
-            }) : "none")) return void Bs({
+          if ("stopped" === (YU ? await MA(MU, TU, {
+              replaced: IU,
+              signal: Ob.signal
+            }) : "none")) return void NU({
             role: "assistant",
             text: "Stopped.",
             changes: [],
@@ -14269,108 +14269,108 @@ const oM = (0, kb.memo)((function(bb) {
             isNotice: !0,
             isCalm: !0
           });
-          const is = bb => ({
-            request: bb(hb),
-            guardWords: bb(Bb)
+          const hU = bb => ({
+            request: bb(mb),
+            guardWords: bb(Wb)
           });
-          vc.length > 0 && qc((bb => [...vc.map((bb => {
+          Oa.length > 0 && oa((bb => [...Oa.map((bb => {
             const {
-              request: cb,
-              guardWords: sb
-            } = is((cb => function(bb, cb, sb) {
-              return `They asked: "${bb}"\nYour last answer wrote this for ${cb}, but you hadn't seen that file, so it didn't go in. ${cb} is open now, its code above. Put your code into it, keeping everything it already has and changing only what the request needs:\n\`\`\`js\n${sb.replace(/\s*$/,"")}\n\`\`\``
-            }(cb, bb.path, bb.code)));
+              request: ab,
+              guardWords: Ub
+            } = hU((ab => function(bb, ab, Ub) {
+              return `They asked: "${bb}"\nYour last answer wrote this for ${ab}, but you hadn't seen that file, so it didn't go in. ${ab} is open now, its code above. Put your code into it, keeping everything it already has and changing only what the request needs:\n\`\`\`js\n${Ub.replace(/\s*$/,"")}\n\`\`\``
+            }(ab, bb.path, bb.code)));
             return {
-              id: ms(),
-              text: cb,
+              id: jU(),
+              text: ab,
               shown: "Put the code in",
               followUp: {
                 check: !1,
-                about: ab,
-                planStep: Tb,
-                useFree: Jb,
-                lookupRound: Cb,
-                lookupOf: rb,
+                about: Tb,
+                planStep: Eb,
+                useFree: pb,
+                lookupRound: Zb,
+                lookupOf: sb,
                 insertsInto: bb.path,
-                guardWords: sb
+                guardWords: Ub
               },
               opensPath: bb.path,
-              ...Ps ? {
-                replaced: Ps,
-                until: Date.now() + yM
+              ...IU ? {
+                replaced: IU,
+                until: Date.now() + mL
               } : {}
             }
           })), ...bb]));
-          const Os = Sc && !!Rb && cc && 0 === zc.length && (cs || "switchToWorldCode" === (null === hs || void 0 === hs ? void 0 : hs.kind) && !Ub);
-          if (Os && gs) Ic((bb => bb.map((bb => bb.id === Ns && Ac.worldCode.length > 0 ? {
+          const GU = Ca && !!Vb && aa && 0 === Ka.length && (aU || "switchToWorldCode" === (null === mU || void 0 === mU ? void 0 : mU.kind) && !Yb);
+          if (GU && pU) Ba((bb => bb.map((bb => bb.id === DU && ta.worldCode.length > 0 ? {
             ...bb,
-            worldCode: Ac.worldCode
-          } : bb)))), Bs({
+            worldCode: ta.worldCode
+          } : bb)))), NU({
             role: "assistant",
-            text: DM(Ac.worldCode.length > 0),
+            text: NL(ta.worldCode.length > 0),
             changes: [],
             status: "offered",
             isNotice: !0
           });
-          else if (Os) {
-            var nc;
-            const bb = Ac.worldCode.join("\n\n"),
-              cb = "switchToWorldCode" === (null === hs || void 0 === hs ? void 0 : hs.kind) ? hs.request : null,
-              sb = cs ? is((cb => function(bb, cb) {
-                return `In a code block, they asked: "${bb}"\nThe code block's answer needs this part in World Code, which is open now, its code above. Put it in, keeping everything World Code already has: a callback it already defines is changed, with what it does kept, never defined twice:\n\`\`\`js\n${cb.replace(/\s*$/,"")}\n\`\`\``
-              }(cb, bb))) : null;
-            ak(null !== (nc = null === sb || void 0 === sb ? void 0 : sb.request) && void 0 !== nc ? nc : cb ? function(bb) {
+          else if (GU) {
+            var Xa;
+            const bb = ta.worldCode.join("\n\n"),
+              ab = "switchToWorldCode" === (null === mU || void 0 === mU ? void 0 : mU.kind) ? mU.request : null,
+              Ub = aU ? hU((ab => function(bb, ab) {
+                return `In a code block, they asked: "${bb}"\nThe code block's answer needs this part in World Code, which is open now, its code above. Put it in, keeping everything World Code already has: a callback it already defines is changed, with what it does kept, never defined twice:\n\`\`\`js\n${ab.replace(/\s*$/,"")}\n\`\`\``
+              }(ab, bb))) : null;
+            AA(null !== (Xa = null === Ub || void 0 === Ub ? void 0 : Ub.request) && void 0 !== Xa ? Xa : ab ? function(bb) {
               return `In a code block, they asked for this in World Code, which is open now: ${bb}`
-            }(cb) : null, {
+            }(ab) : null, {
               check: !1,
-              about: ab,
-              useFree: Jb,
-              lookupOf: rb,
-              ...sb ? {
-                guardWords: sb.guardWords
+              about: Tb,
+              useFree: pb,
+              lookupOf: sb,
+              ...Ub ? {
+                guardWords: Ub.guardWords
               } : {}
-            }, cs ? bb : void 0)
+            }, aU ? bb : void 0)
           }
-          const Ks = !!wb && 0 === zc.length && !Os && ("switchToWorldCode" === (null === hs || void 0 === hs ? void 0 : hs.kind) || Sc && Ac.worldCode.length > 0);
-          if (Ks) {
-            const bb = "switchToWorldCode" === (null === hs || void 0 === hs ? void 0 : hs.kind) ? hs.request : null;
-            sk(null !== bb && void 0 !== bb ? bb : Ac.worldCode.length > 0 ? dM(Ac.worldCode) : "", {
-              leavesChangeBehind: gs,
-              hasWorldCodePart: Ac.worldCode.length > 0
+          const qU = !!wb && 0 === Ka.length && !GU && ("switchToWorldCode" === (null === mU || void 0 === mU ? void 0 : mU.kind) || Ca && ta.worldCode.length > 0);
+          if (qU) {
+            const bb = "switchToWorldCode" === (null === mU || void 0 === mU ? void 0 : mU.kind) ? mU.request : null;
+            bA(null !== bb && void 0 !== bb ? bb : ta.worldCode.length > 0 ? qL(ta.worldCode) : "", {
+              leavesChangeBehind: pU,
+              hasWorldCodePart: ta.worldCode.length > 0
             })
           }
-          if (Ls && wc.length > 0 && Mb < 3 && (!(Ks || Ds || Os) || gs) && (ys(Ns, {
+          if (xU && wa.length > 0 && Lb < 3 && (!(qU || dU || GU) || pU) && (HU(DU, {
               warningsSentBack: !0
-            }), qc((bb => [{
-              id: ms(),
-              text: (0, TH.F)(wc),
-              shown: 1 === wc.length ? "Fix this line" : "Fix these lines",
+            }), oa((bb => [{
+              id: jU(),
+              text: (0, Ae.G)(wa),
+              shown: 1 === wa.length ? "Fix this line" : "Fix these lines",
               check: !1,
               isAutoFix: !0,
-              autoFixRound: Mb + 1,
-              replaced: Ps,
-              until: Date.now() + yM
-            }, ...bb]))), Sc && jc.length > 0 && (Ls || 0 === Ac.changes.length && !hc.isCutShort && !oc && !hc.hasCallsFromReasoning) && !Ms && 0 === wc.length && 0 === Ws.length && 0 === vc.length && Mb < 3 && !Ks && !Ds && !Os && qc((bb => [{
-              id: ms(),
-              text: TH.u,
-              shown: tM,
-              replaced: Ps,
-              until: Date.now() + yM,
+              autoFixRound: Lb + 1,
+              replaced: IU,
+              until: Date.now() + mL
+            }, ...bb]))), Ca && na.length > 0 && (xU || 0 === ta.changes.length && !ma.isCutShort && !ga && !ma.hasCallsFromReasoning) && !LU && 0 === wa.length && 0 === MU.length && 0 === Oa.length && Lb < 3 && !qU && !dU && !GU && oa((bb => [{
+              id: jU(),
+              text: Ae.q,
+              shown: fL,
+              replaced: IU,
+              until: Date.now() + mL,
               followUp: {
                 check: !1,
-                about: ab,
-                planStep: Tb,
-                useFree: Jb,
+                about: Tb,
+                planStep: Eb,
+                useFree: pb,
                 isAutoFix: !0,
-                autoFixRound: Mb + 1,
-                failedEdits: jc
+                autoFixRound: Lb + 1,
+                failedEdits: na
               }
-            }, ...bb])), Ls && "direct" === xb && 0 === wc.length && 0 === jc.length && 0 === Ws.length && 0 === vc.length && 0 === zc.length && !Os && !Ks) {
-            const bb = Bf(Ac.changes, gb).length;
-            Ik(Ns, Mb, bb > 1 ? 1200 * (bb - 1) + 1500 : 0)
+            }, ...bb])), xU && "direct" === Jb && 0 === wa.length && 0 === na.length && 0 === MU.length && 0 === Oa.length && 0 === Ka.length && !GU && !qU) {
+            const bb = fv(ta.changes, Nb).length;
+            EA(DU, Lb, bb > 1 ? 1200 * (bb - 1) + 1500 : 0)
           }
-        } catch (mc) {
-          if (vb.signal.aborted) pc.current = null, Bs({
+        } catch (ja) {
+          if (Ob.signal.aborted) Sa.current = null, NU({
             role: "assistant",
             text: "Stopped.",
             changes: [],
@@ -14379,276 +14379,276 @@ const oM = (0, kb.memo)((function(bb) {
             isCalm: !0
           });
           else {
-            const bb = mc instanceof la ? mc.reason : "failed";
-            Bs({
+            const bb = ja instanceof PT ? ja.reason : "failed";
+            NU({
               role: "assistant",
-              text: Qa(bb),
+              text: XT(bb),
               changes: [],
               status: "offered",
               isNotice: !0,
-              ...Sb,
+              ...Cb,
               retryAt: "busy" === bb ? Date.now() + 6e4 : void 0
-            }), xc(Date.now())
+            }), Ja(Date.now())
           }
         } finally {
-          jc.current = null, fc(null), Fb.requestEnded(rb)
+          na.current = null, va(null), cb.requestEnded(sb)
         }
-      }, Gs = (bb, cb, sb, kb) => {
-        const Wb = function(bb, cb) {
+      }, QU = (bb, ab, Ub, Ab) => {
+        const Mb = function(bb, ab) {
           return "refused" === bb.problem ? null : {
             notice: bb.problem,
-            model: cb.model.name,
-            company: eT(cb.provider, cb.baseUrl, !0),
-            isServer: "custom" === cb.provider,
-            detail: bb.detail && NT(bb.detail, cb.key)
+            model: ab.model.name,
+            company: jE(ab.provider, ab.baseUrl, !0),
+            isServer: "custom" === ab.provider,
+            detail: bb.detail && kE(bb.detail, ab.key)
           }
-        }(bb, cb);
-        if (!Wb) return (bb => {
-          ys(bb, {
+        }(bb, ab);
+        if (!Mb) return (bb => {
+          HU(bb, {
             leftOut: !0
           })
-        })(sb), void Bs({
+        })(Ub), void NU({
           role: "assistant",
-          text: PM,
+          text: pL,
           changes: [],
           status: "offered",
           isNotice: !0
         });
-        Bs({
+        NU({
           role: "assistant",
           text: "",
           changes: [],
           status: "offered",
           isNotice: !0,
-          ...kb,
-          keyNotice: Wb
+          ...Ab,
+          keyNotice: Mb
         })
-      }, Ks = () => {
-        const bb = Kc.trim();
-        if ("" === bb || Hc && zc.length >= 3) return;
-        const cb = Yc && null !== zk;
-        if (cb || !Es((() => {
-            Zs.current()
+      }, qU = () => {
+        const bb = ua.trim();
+        if ("" === bb || ea && Ka.length >= 3) return;
+        const ab = fa && null !== uA;
+        if (ab || !FU((() => {
+            uU.current()
           }))) {
-          if (hc(!1), dc) return os(Df(dc, bb), Ef(dc, bb), {
+          if (ma(!1), la) return sU(Wv(la, bb), Hv(la, bb), {
             check: !0,
-            useFree: cb
-          }), Ac(null), void Zc("");
-          if (Hc || null === Ok || void 0 === Ok || !Ok.question) {
-            if (!Hc) return Zc(""), void Os(bb, void 0, {
-              useFree: cb
+            useFree: ab
+          }), ta(null), void ra("");
+          if (ea || null === hA || void 0 === hA || !hA.question) {
+            if (!ea) return ra(""), void GU(bb, void 0, {
+              useFree: ab
             });
-            zc.length < 3 && (qc([...zc, {
-              id: ms(),
+            Ka.length < 3 && (oa([...Ka, {
+              id: jU(),
               text: bb,
-              useFree: cb
-            }]), Zc(""))
+              useFree: ab
+            }]), ra(""))
           } else {
-            var sb, kb, Wb;
-            Zc("");
-            const ab = null !== (sb = null === (kb = Ok.askedFor) || void 0 === kb ? void 0 : kb.request) && void 0 !== sb ? sb : "",
-              Tb = VH(ab, Ok.question.question, bb);
-            Os(Tb, bb, {
+            var Ub, Ab, Mb;
+            ra("");
+            const Tb = null !== (Ub = null === (Ab = hA.askedFor) || void 0 === Ab ? void 0 : Ab.request) && void 0 !== Ub ? Ub : "",
+              Eb = ye(Tb, hA.question.question, bb);
+            GU(Eb, bb, {
               check: !0,
-              about: null === (Wb = Ok.askedFor) || void 0 === Wb ? void 0 : Wb.request,
-              asked: `${ab} ${bb}`,
-              useFree: cb
+              about: null === (Mb = hA.askedFor) || void 0 === Mb ? void 0 : Mb.request,
+              asked: `${Tb} ${bb}`,
+              useFree: ab
             })
           }
         }
-      }, Zs = (0, kb.useRef)(Ks);
-    Zs.current = Ks;
-    const zs = (0, kb.useRef)(Os);
-    zs.current = Os;
-    const qs = (0, kb.useRef)(Bs);
-    qs.current = Bs;
-    const ds = (0, kb.useRef)(null),
-      [As, ws] = (0, kb.useState)(null),
-      rs = zc.filter((bb => void 0 === bb.followUp));
+      }, uU = (0, Ab.useRef)(qU);
+    uU.current = qU;
+    const rU = (0, Ab.useRef)(GU);
+    rU.current = GU;
+    const KU = (0, Ab.useRef)(NU);
+    KU.current = NU;
+    const oU = (0, Ab.useRef)(null),
+      [lU, tU] = (0, Ab.useState)(null),
+      wU = Ka.filter((bb => void 0 === bb.followUp));
 
-    function os(bb, cb, sb) {
-      if (Hc) {
-        if (zc.length < 3) {
-          var kb;
-          const Wb = null !== (kb = sb.useFree) && void 0 !== kb ? kb : Yc && null !== zk;
-          Wb && hc(!1), qc([...zc, {
-            id: ms(),
+    function sU(bb, ab, Ub) {
+      if (ea) {
+        if (Ka.length < 3) {
+          var Ab;
+          const Mb = null !== (Ab = Ub.useFree) && void 0 !== Ab ? Ab : fa && null !== uA;
+          Mb && ma(!1), oa([...Ka, {
+            id: jU(),
             text: bb,
-            shown: cb,
-            ...sb,
-            useFree: Wb
+            shown: ab,
+            ...Ub,
+            useFree: Mb
           }])
         }
-      } else Os(bb, cb, sb)
-    }(0, kb.useEffect)((() => {
-      var bb, cb, sb;
-      const [kb, ...Wb] = zc;
-      if (Hc || !kb || cs > 0) return;
-      const ab = null === (bb = kb.followUp) || void 0 === bb ? void 0 : bb.lookupOf;
-      if (void 0 !== ab && !ac.some((bb => bb.id === ab))) return void qc(Wb);
-      if (null === (cb = kb.replaced) || void 0 === cb ? void 0 : cb.some((bb => {
-          var cb;
+      } else GU(bb, ab, Ub)
+    }(0, Ab.useEffect)((() => {
+      var bb, ab, Ub;
+      const [Ab, ...Mb] = Ka;
+      if (ea || !Ab || aU > 0) return;
+      const Tb = null === (bb = Ab.followUp) || void 0 === bb ? void 0 : bb.lookupOf;
+      if (void 0 !== Tb && !Ta.some((bb => bb.id === Tb))) return void oa(Mb);
+      if (null === (ab = Ab.replaced) || void 0 === ab ? void 0 : ab.some((bb => {
+          var ab;
           let {
-            path: sb,
-            text: kb
+            path: Ub,
+            text: Ab
           } = bb;
-          return (null !== (cb = yb[sb]) && void 0 !== cb ? cb : "") === kb
+          return (null !== (ab = Ib[Ub]) && void 0 !== ab ? ab : "") === Ab
         }))) {
-        var Tb;
-        const bb = (null !== (Tb = kb.until) && void 0 !== Tb ? Tb : 0) - Date.now();
-        if (bb <= 0) return void qc(Wb);
-        const cb = setTimeout((() => {
-          qc((bb => [...bb]))
+        var Eb;
+        const bb = (null !== (Eb = Ab.until) && void 0 !== Eb ? Eb : 0) - Date.now();
+        if (bb <= 0) return void oa(Mb);
+        const ab = setTimeout((() => {
+          oa((bb => [...bb]))
         }), bb);
         return () => {
-          clearTimeout(cb)
+          clearTimeout(ab)
         }
       }
-      if (void 0 !== kb.opensPath && kb.opensPath !== Pb) {
-        var Ub;
-        (null === (Ub = ds.current) || void 0 === Ub ? void 0 : Ub.id) !== kb.id && (ds.current = {
-          id: kb.id,
+      if (void 0 !== Ab.opensPath && Ab.opensPath !== db) {
+        var Yb;
+        (null === (Yb = oU.current) || void 0 === Yb ? void 0 : Yb.id) !== Ab.id && (oU.current = {
+          id: Ab.id,
           until: Date.now() + 3e3
-        }, qs.current({
+        }, KU.current({
           role: "assistant",
-          text: tf(kb.opensPath),
+          text: mv(Ab.opensPath),
           changes: [],
           status: "offered",
           isNotice: !0,
           isCalm: !0
-        }), zb(kb.opensPath, 1));
-        const bb = ds.current.until - Date.now();
+        }), Kb(Ab.opensPath, 1));
+        const bb = oU.current.until - Date.now();
         if (bb > 0) {
-          const cb = setTimeout((() => {
-            qc((bb => [...bb]))
+          const ab = setTimeout((() => {
+            oa((bb => [...bb]))
           }), bb);
           return () => {
-            clearTimeout(cb)
+            clearTimeout(ab)
           }
         }
       }
-      const Ib = null !== (sb = kb.followUp) && void 0 !== sb ? sb : {
-        ...void 0 === kb.shown ? {} : {
-          check: kb.check,
-          wordsOnly: kb.wordsOnly,
-          isAutoFix: kb.isAutoFix,
-          autoFixRound: kb.autoFixRound
+      const Bb = null !== (Ub = Ab.followUp) && void 0 !== Ub ? Ub : {
+        ...void 0 === Ab.shown ? {} : {
+          check: Ab.check,
+          wordsOnly: Ab.wordsOnly,
+          isAutoFix: Ab.isAutoFix,
+          autoFixRound: Ab.autoFixRound
         },
-        useFree: kb.useFree
+        useFree: Ab.useFree
       };
-      JM(Ib) && QU(IU.getState()) ? As !== kb.id && (ws(kb.id), yU()) : (qc(Wb), zs.current(kb.text, kb.shown, Ib))
-    }), [Hc, zc, cs, yb, ac, Pb, zb, Ds, As]);
-    const Ss = (0, kb.useRef)(os);
-    Ss.current = os, (0, kb.useEffect)((() => {
-      if (jb) {
+      zL(Bb) && XY(TY.getState()) ? lU !== Ab.id && (tU(Ab.id), NY()) : (oa(Mb), rU.current(Ab.text, Ab.shown, Bb))
+    }), [ea, Ka, aU, Ib, Ta, db, Kb, dU, lU]);
+    const gU = (0, Ab.useRef)(sU);
+    gU.current = sU, (0, Ab.useEffect)((() => {
+      if (nb) {
         var bb;
-        if (null === pb || void 0 === pb || pb(), "change" === jb.action) return Ac(jb), void(null === (bb = ns.current) || void 0 === bb || bb.focus());
-        Ac(null), Ss.current(Df(jb), Ef(jb), {
+        if (null === Sb || void 0 === Sb || Sb(), "change" === nb.action) return ta(nb), void(null === (bb = XU.current) || void 0 === bb || bb.focus());
+        ta(null), gU.current(Wv(nb), Hv(nb), {
           check: !1,
-          wordsOnly: "explain" === jb.action
+          wordsOnly: "explain" === nb.action
         })
       }
-    }), [jb, pb]);
-    const Rs = (bb, cb, sb) => {
-        nM.add(Ab, bb, cb, Date.now(), sb).then(Xc).catch((bb => {
+    }), [nb, Sb]);
+    const CU = (bb, ab, Ub) => {
+        BL.add(tb, bb, ab, Date.now(), Ub).then(Pa).catch((bb => {
           console.error("World Code AI: couldn't keep a version of the code", bb)
         }))
       },
-      vs = (0, kb.useRef)(new Set),
-      Fs = async function(bb, cb) {
+      VU = (0, Ab.useRef)(new Set),
+      OU = async function(bb, ab) {
         let {
-          tryAgainLater: sb = !1
+          tryAgainLater: Ub = !1
         } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const kb = Qs.current;
+        const Ab = kU.current;
         if (bb.changes.some((bb => {
-            var cb;
-            return (null !== (cb = kb[bb.path]) && void 0 !== cb ? cb : "") !== bb.before
-          }))) return Ps(bb.id, "stale"), !1;
-        vs.current.add(bb.id);
-        if (!await Ob(bb.changes.map((bb => ({
+            var ab;
+            return (null !== (ab = Ab[bb.path]) && void 0 !== ab ? ab : "") !== bb.before
+          }))) return IU(bb.id, "stale"), !1;
+        VU.current.add(bb.id);
+        if (!await Qb(bb.changes.map((bb => ({
             path: bb.path,
             text: bb.after
           })))).finally((() => {
-            vs.current.delete(bb.id)
-          }))) return sb || Ps(bb.id, "stale"), !1;
-        Rs(function(bb) {
-          const cb = bb.replace(/\s+/g, " ").trim();
-          return `Before "${cb.length>200?`${cb.slice(0,200).trimEnd()}\u2026`:cb}"`
-        }(cb), kb, function(bb) {
-          const cb = [...new Set(bb.flatMap((bb => {
-            var cb;
-            return null !== (cb = bb.why) && void 0 !== cb ? cb : []
+            VU.current.delete(bb.id)
+          }))) return Ub || IU(bb.id, "stale"), !1;
+        CU(function(bb) {
+          const ab = bb.replace(/\s+/g, " ").trim();
+          return `Before "${ab.length>200?`${ab.slice(0,200).trimEnd()}\u2026`:ab}"`
+        }(ab), Ab, function(bb) {
+          const ab = [...new Set(bb.flatMap((bb => {
+            var ab;
+            return null !== (ab = bb.why) && void 0 !== ab ? ab : []
           })))];
-          if (0 === cb.length) return;
-          const sb = cb.map(((bb, cb) => 0 === cb ? bb.charAt(0).toUpperCase() + bb.slice(1) : bb.charAt(0).toLowerCase() + bb.slice(1))).join(", ");
-          return sb.length > 400 ? `${sb.slice(0,400).trimEnd()}\u2026` : sb
-        }(bb.changes)), Ps(bb.id, "applied"), bb.isPartial && ys(bb.id, {
+          if (0 === ab.length) return;
+          const Ub = ab.map(((bb, ab) => 0 === ab ? bb.charAt(0).toUpperCase() + bb.slice(1) : bb.charAt(0).toLowerCase() + bb.slice(1))).join(", ");
+          return Ub.length > 400 ? `${Ub.slice(0,400).trimEnd()}\u2026` : Ub
+        }(bb.changes)), IU(bb.id, "applied"), bb.isPartial && HU(bb.id, {
           changes: bb.changes
         });
-        const Wb = ac.find((cb => cb.id === bb.id && "pending" === cb.noteStatus));
-        return Wb && bb.isPartial ? hk(bb.id, "asked") : Wb && Jk({
-          ...Wb,
+        const Mb = Ta.find((ab => ab.id === bb.id && "pending" === ab.noteStatus));
+        return Mb && bb.isPartial ? iA(bb.id, "asked") : Mb && fA({
+          ...Mb,
           status: "applied"
-        }, !0), Ic((cb => {
-          var sb;
-          const kb = null === (sb = cb.findLast((cb => "user" === cb.role && cb.id < bb.id))) || void 0 === sb ? void 0 : sb.planStep;
-          return kb ? cb.map((bb => {
-            var cb;
-            return bb.id === kb.planId ? {
+        }, !0), Ba((ab => {
+          var Ub;
+          const Ab = null === (Ub = ab.findLast((ab => "user" === ab.role && ab.id < bb.id))) || void 0 === Ub ? void 0 : Ub.planStep;
+          return Ab ? ab.map((bb => {
+            var ab;
+            return bb.id === Ab.planId ? {
               ...bb,
-              planDone: Math.max(null !== (cb = bb.planDone) && void 0 !== cb ? cb : 0, kb.index + 1)
+              planDone: Math.max(null !== (ab = bb.planDone) && void 0 !== ab ? ab : 0, Ab.index + 1)
             } : bb
-          })) : cb
-        })), ls.current = Date.now(), !0
-      }, xs = !Hc && 0 === cs && (0 === zc.length || zc[0].id === As), ps = (0, kb.useRef)((() => Promise.resolve(!0)));
-    ps.current = async () => {
+          })) : ab
+        })), RU.current = Date.now(), !0
+      }, cU = !ea && 0 === aU && (0 === Ka.length || Ka[0].id === lU), JU = (0, Ab.useRef)((() => Promise.resolve(!0)));
+    JU.current = async () => {
       var bb;
-      const cb = Wc.pendingApply;
-      if (!cb || cb.targetKey !== qb.key) return !0;
-      const sb = ac.find((bb => bb.id === cb.entryId));
-      if (!sb || "offered" !== sb.status) return Wc.pendingApply = void 0, !0;
-      const kb = null !== (bb = cb.picked) && void 0 !== bb ? bb : sb.changes,
-        Wb = vb && Db && kb.every((bb => {
-          var cb;
-          return (null !== (cb = Qs.current[bb.path]) && void 0 !== cb ? cb : "") === bb.before
+      const ab = Ma.pendingApply;
+      if (!ab || ab.targetKey !== ob.key) return !0;
+      const Ub = Ta.find((bb => bb.id === ab.entryId));
+      if (!Ub || "offered" !== Ub.status) return Ma.pendingApply = void 0, !0;
+      const Ab = null !== (bb = ab.picked) && void 0 !== bb ? bb : Ub.changes,
+        Mb = Ob && Fb && Ab.every((bb => {
+          var ab;
+          return (null !== (ab = kU.current[bb.path]) && void 0 !== ab ? ab : "") === bb.before
         }));
-      if (Date.now() > cb.until) return Wc.pendingApply = void 0, Wb && Bs({
+      if (Date.now() > ab.until) return Ma.pendingApply = void 0, Mb && NU({
         role: "assistant",
         text: "That change couldn't go in. Press Apply to try again.",
         changes: [],
         status: "offered",
         isNotice: !0
       }), !0;
-      if (!Wb || vs.current.has(sb.id)) return !1;
-      const ab = await Fs({
-        id: sb.id,
-        changes: kb,
-        isPartial: void 0 !== cb.picked
-      }, tk(sb.id), {
+      if (!Mb || VU.current.has(Ub.id)) return !1;
+      const Tb = await OU({
+        id: Ub.id,
+        changes: Ab,
+        isPartial: void 0 !== ab.picked
+      }, NA(Ub.id), {
         tryAgainLater: !0
       });
-      ab && Wc.pendingApply === cb && (Wc.pendingApply = void 0), ab && cb.byItself && ys(sb.id, {
+      Tb && Ma.pendingApply === ab && (Ma.pendingApply = void 0), Tb && ab.byItself && HU(Ub.id, {
         editedInPlace: !0
       });
-      const Tb = kb[0];
-      return ab && Tb && zb(Tb.path, gf(Tb.before, Tb.after)), ab
-    }, (0, kb.useEffect)((() => {
+      const Eb = Ab[0];
+      return Tb && Eb && Kb(Eb.path, iv(Eb.before, Eb.after)), Tb
+    }, (0, Ab.useEffect)((() => {
       var bb;
-      if ((null === (bb = Wc.pendingApply) || void 0 === bb ? void 0 : bb.targetKey) !== qb.key) return;
-      const cb = setInterval((() => {
-        ps.current().then((bb => {
-          bb && clearInterval(cb)
+      if ((null === (bb = Ma.pendingApply) || void 0 === bb ? void 0 : bb.targetKey) !== ob.key) return;
+      const ab = setInterval((() => {
+        JU.current().then((bb => {
+          bb && clearInterval(ab)
         }))
       }), 250);
       return () => {
-        clearInterval(cb)
+        clearInterval(ab)
       }
-    }), [Wc, qb.key, vb, yb]);
-    const bk = (0, kb.useRef)((() => !0));
-    bk.current = () => {
-      const bb = Wc.pendingInsert;
-      if (!bb || bb.targetKey !== qb.key) return !0;
-      if (Date.now() > bb.until) return Wc.pendingInsert = void 0, Bs({
+    }), [Ma, ob.key, Ob, Ib]);
+    const nU = (0, Ab.useRef)((() => !0));
+    nU.current = () => {
+      const bb = Ma.pendingInsert;
+      if (!bb || bb.targetKey !== ob.key) return !0;
+      if (Date.now() > bb.until) return Ma.pendingInsert = void 0, NU({
         role: "assistant",
         text: void 0 === bb.code ? "World Code didn't open in time, so that wasn't asked here. Ask again." : "World Code didn't open in time, so the code block's World Code part isn't in. Here it is to add.",
         changes: [],
@@ -14656,33 +14656,33 @@ const oM = (0, kb.memo)((function(bb) {
         worldCode: void 0 === bb.code ? void 0 : [bb.code],
         isNotice: void 0 === bb.code
       }), !0;
-      const cb = Object.values(Qs.current).some((bb => "" !== bb.trim()));
-      return !(!vb || !Db || !cb && Date.now() < bb.readyBy) && (Wc.pendingInsert = void 0, qc((cb => [{
-        id: ms(),
+      const ab = Object.values(kU.current).some((bb => "" !== bb.trim()));
+      return !(!Ob || !Fb || !ab && Date.now() < bb.readyBy) && (Ma.pendingInsert = void 0, oa((ab => [{
+        id: jU(),
         text: bb.request,
         shown: "Put the code in",
         followUp: {
           ...bb.options,
-          insertsInto: Pb
+          insertsInto: db
         }
-      }, ...cb])), !0)
-    }, (0, kb.useEffect)((() => {
+      }, ...ab])), !0)
+    }, (0, Ab.useEffect)((() => {
       var bb;
-      if ((null === (bb = Wc.pendingInsert) || void 0 === bb ? void 0 : bb.targetKey) !== qb.key) return;
-      const cb = setInterval((() => {
-        bk.current() && clearInterval(cb)
+      if ((null === (bb = Ma.pendingInsert) || void 0 === bb ? void 0 : bb.targetKey) !== ob.key) return;
+      const ab = setInterval((() => {
+        nU.current() && clearInterval(ab)
       }), 250);
       return () => {
-        clearInterval(cb)
+        clearInterval(ab)
       }
-    }), [Wc, qb.key, vb, yb]);
-    const ck = bb => {
-        Hs((() => {
-          Ib.gameBridge.send("sendChatMessage", {
-            jT: "//export",
+    }), [Ma, ob.key, Ob, Ib]);
+    const SU = bb => {
+        eU((() => {
+          Bb.gameBridge.send("sendChatMessage", {
+            fE: "//export",
             channelName: null
           })
-        }), Math.max(0, ls.current + 600 - Date.now())), Bs({
+        }), Math.max(0, RU.current + 600 - Date.now())), NU({
           role: "assistant",
           text: bb ? "Saving your game with //export, without this change. Apply it and ask me to save again to keep it too." : "Saving your game with //export. The chat says when it's saved.",
           changes: [],
@@ -14691,44 +14691,44 @@ const oM = (0, kb.memo)((function(bb) {
           isCalm: !bb || void 0
         })
       },
-      sk = (bb, cb) => {
+      bA = (bb, ab) => {
         let {
-          leavesChangeBehind: sb,
-          hasWorldCodePart: kb
-        } = cb;
-        sb ? Bs({
+          leavesChangeBehind: Ub,
+          hasWorldCodePart: Ab
+        } = ab;
+        Ub ? NU({
           role: "assistant",
-          text: DM(kb),
+          text: NL(Ab),
           changes: [],
           status: "offered",
           isNotice: !0
-        }) : (Bs({
+        }) : (NU({
           role: "assistant",
           text: "Taking you to World Code\u2026",
           changes: [],
           status: "offered",
           isNotice: !0,
           isCalm: !0
-        }), Hs((() => {
+        }), eU((() => {
           null === wb || void 0 === wb || wb(bb, !1)
-        }), EM))
+        }), WL))
       },
-      kk = (bb, cb) => {
-        !cb && Rb ? (Bs({
+      aA = (bb, ab) => {
+        !ab && Vb ? (NU({
           role: "assistant",
           text: "Moving to World Code\u2026",
           changes: [],
           status: "offered",
           isNotice: !0,
           isCalm: !0
-        }), Hs((() => {
-          Wc.pendingApply = {
+        }), eU((() => {
+          Ma.pendingApply = {
             entryId: bb,
-            targetKey: Jf.g.key,
-            until: Date.now() + fM,
+            targetKey: xv.d.key,
+            until: Date.now() + TL,
             byItself: !0
-          }, Rb(Jf.g)
-        }), EM)) : Bs({
+          }, Vb(xv.d)
+        }), WL)) : NU({
           role: "assistant",
           text: "Apply this change first, then apply the World Code part.",
           changes: [],
@@ -14736,1439 +14736,1439 @@ const oM = (0, kb.memo)((function(bb) {
           isNotice: !0
         })
       },
-      Wk = bb => cc && "direct" === bb && Db && !!Rb,
-      ak = (bb, cb, sb) => {
-        Rb && (Bs({
+      UA = bb => aa && "direct" === bb && Fb && !!Vb,
+      AA = (bb, ab, Ub) => {
+        Vb && (NU({
           role: "assistant",
           text: "Moving to World Code\u2026",
           changes: [],
           status: "offered",
           isNotice: !0,
           isCalm: !0
-        }), Hs((() => {
-          null !== bb && (Wc.pendingInsert = {
-            targetKey: Jf.g.key,
+        }), eU((() => {
+          null !== bb && (Ma.pendingInsert = {
+            targetKey: xv.d.key,
             request: bb,
-            options: cb,
-            code: sb,
+            options: ab,
+            code: Ub,
             readyBy: Date.now() + 4e3,
-            until: Date.now() + fM
-          }), Rb(Jf.g)
-        }), EM))
+            until: Date.now() + TL
+          }), Vb(xv.d)
+        }), WL))
       },
-      Tk = async function(bb, cb) {
-        var sb, kb, Wb;
+      MA = async function(bb, ab) {
+        var Ub, Ab, Mb;
         let {
-          replaced: ab,
-          signal: Tb
+          replaced: Tb,
+          signal: Eb
         } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const Ub = await async function(bb, cb) {
-          const sb = [];
-          let kb = null;
-          for (const ab of bb) {
-            var Wb;
-            const bb = await BW(ab, cb);
-            sb.push(ab.call ? {
+        const Yb = await async function(bb, ab) {
+          const Ub = [];
+          let Ab = null;
+          for (const Tb of bb) {
+            var Mb;
+            const bb = await mM(Tb, ab);
+            Ub.push(Tb.call ? {
               ...bb.result,
-              call: ab.call
-            } : bb.result), kb = null !== (Wb = bb.worldCodeFiles) && void 0 !== Wb ? Wb : kb
+              call: Tb.call
+            } : bb.result), Ab = null !== (Mb = bb.worldCodeFiles) && void 0 !== Mb ? Mb : Ab
           }
           return {
-            results: sb,
-            worldCodeFiles: kb
+            results: Ub,
+            worldCodeFiles: Ab
           }
         }(bb, {
-          files: Qs.current,
-          docs: eM(),
-          errors: Eb,
-          viewChunk: null !== ob && void 0 !== ob ? ob : gM,
-          viewGameState: null !== Sb && void 0 !== Sb ? Sb : BM,
-          readWorldCode: rb,
-          fetchDocsPage: bb => async function(bb, cb, sb) {
-            if ("" === bb.trim()) return `No url was given: give ${Qb.m}, or a page it links to.`;
-            const kb = Nb(bb);
-            if (null === kb) return bb.includes(Qb.h) ? `${bb} is every page at once, too long to read: read ${Qb.m}, then the page you need.` : `Only Bloxd's docs can be read: ${Qb.m} and the pages it links to.`;
-            const Wb = `There is no docs page at ${bb}. ${Qb.m} lists every page with its link.`,
-              ab = `${bb} couldn't be read just now. Use get_docs instead.`,
-              Tb = (0, eb.b)(2e4, sb);
-            let Ub;
+          files: kU.current,
+          docs: PL(),
+          errors: hb,
+          viewChunk: null !== gb && void 0 !== gb ? gb : xL,
+          viewGameState: null !== Cb && void 0 !== Cb ? Cb : iL,
+          readWorldCode: sb,
+          fetchDocsPage: bb => async function(bb, ab, Ub) {
+            if ("" === bb.trim()) return `No url was given: give ${kb.n}, or a page it links to.`;
+            const Ab = Db(bb);
+            if (null === Ab) return bb.includes(kb.f) ? `${bb} is every page at once, too long to read: read ${kb.n}, then the page you need.` : `Only Bloxd's docs can be read: ${kb.n} and the pages it links to.`;
+            const Mb = `There is no docs page at ${bb}. ${kb.n} lists every page with its link.`,
+              Tb = `${bb} couldn't be read just now. Use get_docs instead.`,
+              Eb = (0, yb.b)(2e4, Ub);
+            let Yb;
             try {
-              var Ib;
-              const bb = await fetch(`${cb}${kb}`, {
-                signal: Tb.signal
+              var Bb;
+              const bb = await fetch(`${ab}${Ab}`, {
+                signal: Eb.signal
               });
-              if (404 === bb.status) return Wb;
-              if (!bb.ok) return console.warn("AI Helper: a docs page couldn't be read", kb, bb.status), ab;
-              if (null !== (Ib = bb.headers.get("content-type")) && void 0 !== Ib && Ib.startsWith("text/html")) return Wb;
-              Ub = await bb.text()
-            } catch (fb) {
-              return !0 !== (null === sb || void 0 === sb ? void 0 : sb.aborted) && console.warn("AI Helper: a docs page couldn't be read", kb, fb), ab
+              if (404 === bb.status) return Mb;
+              if (!bb.ok) return console.warn("AI Helper: a docs page couldn't be read", Ab, bb.status), Tb;
+              if (null !== (Bb = bb.headers.get("content-type")) && void 0 !== Bb && Bb.startsWith("text/html")) return Mb;
+              Yb = await bb.text()
+            } catch (vb) {
+              return !0 !== (null === Ub || void 0 === Ub ? void 0 : Ub.aborted) && console.warn("AI Helper: a docs page couldn't be read", Ab, vb), Tb
             } finally {
-              Tb.clear()
+              Eb.clear()
             }
-            const Hb = (0, Qb.B)(kb);
-            return null !== Hb && null === Hb.part && Ub.length > Qb.e ? `${bb} is too long to read whole: read the part you need. Its parts start at ${lb.e}${(0,Qb.x)(Hb.name,0)}, and ${Qb.m} says what each part has.` : Ub.length <= 4e4 ? Ub : (console.warn("AI Helper: a docs file is longer than any should be", kb, Ub.length), `${Ub.slice(0,4e4)}\n\n(The rest of this page is cut off.)`)
-          }(bb, window.location.origin, Tb)
+            const eb = (0, kb.C)(Ab);
+            return null !== eb && null === eb.part && Yb.length > kb.d ? `${bb} is too long to read whole: read the part you need. Its parts start at ${Rb.d}${(0,kb.x)(eb.name,0)}, and ${kb.n} says what each part has.` : Yb.length <= 4e4 ? Yb : (console.warn("AI Helper: a docs file is longer than any should be", Ab, Yb.length), `${Yb.slice(0,4e4)}\n\n(The rest of this page is cut off.)`)
+          }(bb, window.location.origin, Eb)
         });
-        if (null !== Tb && void 0 !== Tb && Tb.aborted) return "stopped";
-        const Ib = Ub.results,
-          Hb = bb.flatMap((bb => "view_file" === bb.name && void 0 !== bb.args.path && bb.args.path in Qs.current ? [bb.args.path] : [])),
-          fb = {
-            ...cb.options,
-            lookups: [...(null !== (sb = cb.options.lookups) && void 0 !== sb ? sb : []).map(HM), ...Ib],
-            worldCodeFiles: null !== (kb = Ub.worldCodeFiles) && void 0 !== kb ? kb : cb.options.worldCodeFiles,
-            viewedPaths: [...null !== (Wb = cb.options.viewedPaths) && void 0 !== Wb ? Wb : [], ...Hb]
+        if (null !== Eb && void 0 !== Eb && Eb.aborted) return "stopped";
+        const Bb = Yb.results,
+          eb = bb.flatMap((bb => "view_file" === bb.name && void 0 !== bb.args.path && bb.args.path in kU.current ? [bb.args.path] : [])),
+          vb = {
+            ...ab.options,
+            lookups: [...(null !== (Ub = ab.options.lookups) && void 0 !== Ub ? Ub : []).map(ML), ...Bb],
+            worldCodeFiles: null !== (Ab = Yb.worldCodeFiles) && void 0 !== Ab ? Ab : ab.options.worldCodeFiles,
+            viewedPaths: [...null !== (Mb = ab.options.viewedPaths) && void 0 !== Mb ? Mb : [], ...eb]
           };
-        return qc((bb => [{
-          id: ms(),
-          text: cb.request,
-          shown: cb.shown,
-          followUp: fb,
-          ...ab ? {
-            replaced: ab,
-            until: Date.now() + yM
+        return oa((bb => [{
+          id: jU(),
+          text: ab.request,
+          shown: ab.shown,
+          followUp: vb,
+          ...Tb ? {
+            replaced: Tb,
+            until: Date.now() + mL
           } : {}
         }, ...bb])), "asked"
-      }, Uk = (bb, cb, sb) => {
-        Ic((kb => kb.map((kb => kb.id === bb ? {
-          ...kb,
-          trial: cb,
-          trialErrors: null !== sb && void 0 !== sb ? sb : kb.trialErrors
-        } : kb))))
-      }, Ik = function(bb, cb) {
-        let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        Kb && (Ws(bb), Hs((() => {
-          var sb;
-          Ws(null), jc.current || Ns.current.length > 0 || null !== (sb = ns.current) && void 0 !== sb && sb.value.trim() || (Sc(Cs.current), Kb({
-            chatKey: db,
+      }, TA = (bb, ab, Ub) => {
+        Ba((Ab => Ab.map((Ab => Ab.id === bb ? {
+          ...Ab,
+          trial: ab,
+          trialErrors: null !== Ub && void 0 !== Ub ? Ub : Ab.trialErrors
+        } : Ab))))
+      }, EA = function(bb, ab) {
+        let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        ub && (MU(bb), eU((() => {
+          var Ub;
+          MU(null), na.current || DU.current.length > 0 || null !== (Ub = XU.current) && void 0 !== Ub && Ub.value.trim() || (Ca(ZU.current), ub({
+            chatKey: lb,
             entryId: bb,
-            autoFixRound: cb
+            autoFixRound: ab
           }))
-        }), Math.max(sb, ls.current + 1500 - Date.now())))
-      }, Hk = () => {
-        Ms(), (0, TH.b)(db)
+        }), Math.max(Ub, RU.current + 1500 - Date.now())))
+      }, YA = () => {
+        LU(), (0, Ae.c)(lb)
       };
-    (0, kb.useEffect)((() => {
-      if (!vb || void 0 === (null === as || void 0 === as ? void 0 : as.endedAt) || (null === Us || void 0 === Us ? void 0 : Us.target.key) !== qb.key) return void(void 0 === (null === as || void 0 === as ? void 0 : as.endedAt) || Us || (0, TH.m)(db));
-      const bb = (0, TH.m)(db);
+    (0, Ab.useEffect)((() => {
+      if (!Ob || void 0 === (null === TU || void 0 === TU ? void 0 : TU.endedAt) || (null === YU || void 0 === YU ? void 0 : YU.target.key) !== ob.key) return void(void 0 === (null === TU || void 0 === TU ? void 0 : TU.endedAt) || YU || (0, Ae.n)(lb));
+      const bb = (0, Ae.n)(lb);
       if (!bb) return;
-      const cb = (0, TH.A)(bb);
-      qs.current({
+      const ab = (0, Ae.A)(bb);
+      KU.current({
         role: "assistant",
-        text: cb.text,
+        text: ab.text,
         changes: [],
         status: "offered",
         isNotice: !0,
         isCalm: 0 === bb.errors.length && void 0 !== bb.ranAt,
-        logTitle: cb.title
-      }), void 0 !== bb.ranAt && (0 !== bb.errors.length ? bb.autoFixRound >= 3 || (Sc(Cs.current), qc((cb => [{
-        id: ms(),
-        text: (0, TH.y)(bb.errors),
+        logTitle: ab.title
+      }), void 0 !== bb.ranAt && (0 !== bb.errors.length ? bb.autoFixRound >= 3 || (Ca(ZU.current), oa((ab => [{
+        id: jU(),
+        text: (0, Ae.w)(bb.errors),
         shown: 1 === bb.errors.length ? "Fix the error" : "Fix these errors",
         check: !1,
         isAutoFix: !0,
         autoFixRound: bb.autoFixRound + 1
-      }, ...cb]))) : Uk(bb.entryId, "ask", Cs.current))
-    }), [as, vb, Us, qb.key, db]);
-    const fk = async (bb, cb) => {
-      if (ys(bb.id, {
-          forgetStatus: cb ? "forgotten" : "vn"
-        }), cb) try {
-        for (const cb of null !== (sb = bb.forgetNotes) && void 0 !== sb ? sb : []) {
-          var sb;
-          Qc(await mM.remove(Ab, cb))
+      }, ...ab]))) : TA(bb.entryId, "ask", ZU.current))
+    }), [TU, Ob, YU, ob.key, lb]);
+    const BA = async (bb, ab) => {
+      if (HU(bb.id, {
+          forgetStatus: ab ? "forgotten" : "RX"
+        }), ab) try {
+        for (const ab of null !== (Ub = bb.forgetNotes) && void 0 !== Ub ? Ub : []) {
+          var Ub;
+          ka(await eL.remove(tb, ab))
         }
-      } catch (kb) {
-        console.error("World Code AI: couldn't forget a note", kb), ys(bb.id, {
+      } catch (Ab) {
+        console.error("World Code AI: couldn't forget a note", Ab), HU(bb.id, {
           forgetStatus: void 0
         })
       }
-    }, Mk = (0, kb.useCallback)((bb => bb.flatMap((bb => UM(eM(), bb, cc)))), [cc]), Xk = (0, kb.useRef)({}), nk = (0, kb.useRef)({}), mk = (0, kb.useRef)(Promise.resolve()), lk = (0, kb.useRef)([]), Qk = (0, kb.useRef)(new Map), ek = (0, kb.useRef)(new Map), Ck = (0, kb.useRef)(null), Nk = () => {
-      ic.current = !1, lk.current = [], Qk.current = new Map, ek.current = new Map, Ck.current = null, Xk.current = {}, nk.current = {}, Gc(null)
-    }, Vk = async () => {
-      if (!Oc) return;
-      const bb = Qs.current,
-        cb = function(bb, cb, sb) {
-          return Object.entries(cb).flatMap((cb => {
-            var kb;
-            let [Wb, ab] = cb;
-            const Tb = sb[Wb];
-            if (void 0 === Tb) return [];
-            const Ub = new Map(JH(null !== (kb = bb[Wb]) && void 0 !== kb ? kb : "").map((bb => [bb.key, bb.value]))),
-              Ib = new Map(JH(ab).map((bb => [bb.key, bb.value])));
-            let Hb = Tb;
-            for (const [bb, sb] of Ub) {
-              var fb;
-              const cb = JH(Hb).find((cb => cb.key === bb));
-              cb && cb.value !== sb && Ib.get(bb) === cb.value && (Hb = null !== (fb = gH(Hb, cb, sb)) && void 0 !== fb ? fb : Hb)
+    }, eA = (0, Ab.useCallback)((bb => bb.flatMap((bb => UL(PL(), bb, aa)))), [aa]), vA = (0, Ab.useRef)({}), LA = (0, Ab.useRef)({}), PA = (0, Ab.useRef)(Promise.resolve()), XA = (0, Ab.useRef)([]), jA = (0, Ab.useRef)(new Map), RA = (0, Ab.useRef)(new Map), kA = (0, Ab.useRef)(null), yA = () => {
+      Ga.current = !1, XA.current = [], jA.current = new Map, RA.current = new Map, kA.current = null, vA.current = {}, LA.current = {}, qa(null)
+    }, ZA = async () => {
+      if (!Qa) return;
+      const bb = kU.current,
+        ab = function(bb, ab, Ub) {
+          return Object.entries(ab).flatMap((ab => {
+            var Ab;
+            let [Mb, Tb] = ab;
+            const Eb = Ub[Mb];
+            if (void 0 === Eb) return [];
+            const Yb = new Map(ie(null !== (Ab = bb[Mb]) && void 0 !== Ab ? Ab : "").map((bb => [bb.key, bb.value]))),
+              Bb = new Map(ie(Tb).map((bb => [bb.key, bb.value])));
+            let eb = Eb;
+            for (const [bb, Ub] of Yb) {
+              var vb;
+              const ab = ie(eb).find((ab => ab.key === bb));
+              ab && ab.value !== Ub && Bb.get(bb) === ab.value && (eb = null !== (vb = fe(eb, ab, Ub)) && void 0 !== vb ? vb : eb)
             }
-            return Hb === Tb ? [] : [{
-              path: Wb,
-              text: Hb
+            return eb === Eb ? [] : [{
+              path: Mb,
+              text: eb
             }]
           }))
-        }(Oc, Xk.current, bb);
-      if (cb.length > 0) {
-        if (!await Ob(cb)) return;
-        Rs(function(bb) {
-          const cb = (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : []).filter((cb => bb.includes(cb.name))).map((bb => ({
+        }(Qa, vA.current, bb);
+      if (ab.length > 0) {
+        if (!await Qb(ab)) return;
+        CU(function(bb) {
+          const ab = (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : []).filter((ab => bb.includes(ab.name))).map((bb => ({
             name: bb.name,
             from: bb.to,
             to: bb.from
           })));
-          return cb.length > 0 ? PH(cb, "undoing") : 0 === bb.length ? "Before undoing settings" : `Before undoing settings: ${(bb.length>3?[...bb.slice(0,3),bb.length-3+" more"]:bb).join(", ")}`
-        }(lk.current, [...Qk.current.values()]), bb), ls.current = Date.now()
+          return ab.length > 0 ? We(ab, "undoing") : 0 === bb.length ? "Before undoing settings" : `Before undoing settings: ${(bb.length>3?[...bb.slice(0,3),bb.length-3+" more"]:bb).join(", ")}`
+        }(XA.current, [...jA.current.values()]), bb), RU.current = Date.now()
       }
-      Nk()
-    }, Lk = !cc && Object.values(yb).some((bb => JH(bb).length > 0)), uk = function(bb) {
+      yA()
+    }, DA = !aa && Object.values(Ib).some((bb => ie(bb).length > 0)), zA = function(bb) {
       let {
-        codeBlock: cb,
-        hasSettings: sb,
-        canEdit: Wb
+        codeBlock: ab,
+        hasSettings: Ub,
+        canEdit: Mb
       } = bb;
-      return (0, kb.useEffect)((() => {
-        (0, xI.F)("aiNotes", !cb)
-      }), [cb]), (0, kb.useEffect)((() => {
-        (0, xI.F)("aiGameSettings", sb)
-      }), [sb]), (0, kb.useEffect)((() => {
-        (0, xI.F)("aiEdits", Wb)
-      }), [Wb]), (0, jI.i)("aiHelperOverview")
+      return (0, Ab.useEffect)((() => {
+        (0, VB.G)("aiNotes", !ab)
+      }), [ab]), (0, Ab.useEffect)((() => {
+        (0, VB.G)("aiGameSettings", Ub)
+      }), [Ub]), (0, Ab.useEffect)((() => {
+        (0, VB.G)("aiEdits", Mb)
+      }), [Mb]), (0, OB.k)("aiHelperOverview")
     }({
-      codeBlock: cc,
-      hasSettings: Lk,
-      canEdit: Db
+      codeBlock: aa,
+      hasSettings: DA,
+      canEdit: Fb
     });
-    (0, kb.useEffect)((() => {
-      uk && (mc(!1), Cc(!1), Vc(!1), uc(null))
-    }), [uk]);
-    const Yk = async bb => {
-      const cb = bc(bb);
-      return null === cb ? "Notes are only about your game, never personal details." : "ok" !== await Za(cb) ? "This note can't be saved. Notes are only about your game." : (Qc(await mM.add(Ab, cb)), null)
-    }, hk = (bb, cb) => {
-      ys(bb, {
-        noteStatus: cb
+    (0, Ab.useEffect)((() => {
+      zA && (ja(!1), Za(!1), za(!1), ia(null))
+    }), [zA]);
+    const xA = async bb => {
+      const ab = ba(bb);
+      return null === ab ? "Notes are only about your game, never personal details." : "ok" !== await QT(ab) ? "This note can't be saved. Notes are only about your game." : (ka(await eL.add(tb, ab)), null)
+    }, iA = (bb, ab) => {
+      HU(bb, {
+        noteStatus: ab
       })
-    }, Jk = async (bb, cb) => {
-      if (cb && void 0 !== bb.note)
-        if (bb.changes.length > 0 && "offered" === bb.status) hk(bb.id, "pending");
+    }, fA = async (bb, ab) => {
+      if (ab && void 0 !== bb.note)
+        if (bb.changes.length > 0 && "offered" === bb.status) iA(bb.id, "pending");
         else {
-          hk(bb.id, "checking");
+          iA(bb.id, "checking");
           try {
-            hk(bb.id, null === await Yk(bb.note) ? "saved" : "refused")
-          } catch (sb) {
-            console.error("World Code AI: couldn't keep a note", sb), hk(bb.id, "asked")
+            iA(bb.id, null === await xA(bb.note) ? "saved" : "refused")
+          } catch (Ub) {
+            console.error("World Code AI: couldn't keep a note", Ub), iA(bb.id, "asked")
           }
         }
-      else hk(bb.id, "declined")
-    }, gk = bb => {
-      var cb;
-      const sb = null === (cb = ac.find((cb => cb.id === bb))) || void 0 === cb ? void 0 : cb.target.key;
-      return ac.findLast((cb => "user" === cb.role && cb.id < bb && cb.target.key === sb))
-    }, Bk = bb => {
-      var cb;
-      return null === (cb = gk(bb)) || void 0 === cb ? void 0 : cb.asked
-    }, tk = bb => {
-      var cb, sb;
-      const kb = gk(bb);
-      return null !== (cb = null !== (sb = null === kb || void 0 === kb ? void 0 : kb.about) && void 0 !== sb ? sb : null === kb || void 0 === kb ? void 0 : kb.text) && void 0 !== cb ? cb : "a change"
-    }, yk = ac.filter(ts), Pk = null === (Cb = yk[yk.length - 1]) || void 0 === Cb ? void 0 : Cb.id, Dk = null !== (Vb = null === (Lb = yk.findLast((bb => "user" === bb.role))) || void 0 === Lb ? void 0 : Lb.id) && void 0 !== Vb ? Vb : 0, Ek = yk.length < ac.length, ik = yk[yk.length - 1], Ok = null !== ik && void 0 !== ik && null !== (ub = ik.question) && void 0 !== ub && ub.allowOther && !Hc ? ik : void 0, Gk = (0, kb.useRef)(!1), Kk = () => {
-      Gk.current = !0, uc("settings")
-    }, Zk = () => {
-      mc(!1), Cc(!1), Vc(!1), Jc.current = null, Bc(null), uc("addKey")
+      else iA(bb.id, "declined")
+    }, mA = bb => {
+      var ab;
+      const Ub = null === (ab = Ta.find((ab => ab.id === bb))) || void 0 === ab ? void 0 : ab.target.key;
+      return Ta.findLast((ab => "user" === ab.role && ab.id < bb && ab.target.key === Ub))
+    }, pA = bb => {
+      var ab;
+      return null === (ab = mA(bb)) || void 0 === ab ? void 0 : ab.asked
+    }, NA = bb => {
+      var ab, Ub;
+      const Ab = mA(bb);
+      return null !== (ab = null !== (Ub = null === Ab || void 0 === Ab ? void 0 : Ab.about) && void 0 !== Ub ? Ub : null === Ab || void 0 === Ab ? void 0 : Ab.text) && void 0 !== ab ? ab : "a change"
+    }, WA = Ta.filter(WU), HA = null === (Zb = WA[WA.length - 1]) || void 0 === Zb ? void 0 : Zb.id, IA = null !== (zb = null === (xb = WA.findLast((bb => "user" === bb.role))) || void 0 === xb ? void 0 : xb.id) && void 0 !== zb ? zb : 0, dA = WA.length < Ta.length, FA = WA[WA.length - 1], hA = null !== FA && void 0 !== FA && null !== (ib = FA.question) && void 0 !== ib && ib.allowOther && !ea ? FA : void 0, GA = (0, Ab.useRef)(!1), QA = () => {
+      GA.current = !0, ia("settings")
+    }, qA = () => {
+      ja(!1), Za(!1), za(!1), pa.current = null, Wa(null), ia("addKey")
     }, {
-      activeKey: zk,
-      cutShortActions: qk,
-      noticeActions: dk
+      activeKey: uA,
+      cutShortActions: rA,
+      noticeActions: KA
     } = function(bb) {
-      var cb;
+      var ab;
       let {
-        entries: sb,
-        busy: kb,
-        send: Wb,
-        onCheckKey: ab
+        entries: Ub,
+        busy: Ab,
+        send: Mb,
+        onCheckKey: Tb
       } = bb;
       const {
-        active: Tb
-      } = jT(), Ub = null === (cb = sb.findLast((bb => "assistant" === bb.role && !bb.isNotice))) || void 0 === cb ? void 0 : cb.id;
+        active: Eb
+      } = OE(), Yb = null === (ab = Ub.findLast((bb => "assistant" === bb.role && !bb.isNotice))) || void 0 === ab ? void 0 : ab.id;
       return {
-        activeKey: Tb,
-        cutShortActions: (bb, cb) => ({
-          canFinish: !kb && bb === Ub && (null === Tb || void 0 === Tb ? void 0 : Tb.id) === cb.keyId && Tb.model.id === cb.modelId,
+        activeKey: Eb,
+        cutShortActions: (bb, ab) => ({
+          canFinish: !Ab && bb === Yb && (null === Eb || void 0 === Eb ? void 0 : Eb.id) === ab.keyId && Eb.model.id === ab.modelId,
           onFinish: () => {
-            Wb(cb.request, {
+            Mb(ab.request, {
               retryOf: bb,
-              continueFrom: cb.written
+              continueFrom: ab.written
             })
           }
         }),
-        noticeActions: (bb, cb, sb) => ({
-          notice: sb.notice,
+        noticeActions: (bb, ab, Ub) => ({
+          notice: Ub.notice,
           onRetry: () => {
-            Wb(cb, {
+            Mb(ab, {
               retryOf: bb
             })
           },
           onUseFree: () => {
-            Wb(cb, {
+            Mb(ab, {
               useFree: !0,
               retryOf: bb
             })
           },
-          onCheckKey: ab
+          onCheckKey: Tb
         })
       }
     }({
-      entries: yk,
-      busy: !!Hc,
-      send: (bb, cb) => {
+      entries: WA,
+      busy: !!ea,
+      send: (bb, ab) => {
         let {
-          useFree: sb,
-          retryOf: kb,
-          continueFrom: Wb
-        } = cb;
-        const ab = ac.find((bb => bb.id === kb));
-        return Os(bb, null === ab || void 0 === ab ? void 0 : ab.retryShown, {
-          ...null === ab || void 0 === ab ? void 0 : ab.retryOptions,
-          useFree: sb,
-          retryOf: kb,
-          continueFrom: Wb
+          useFree: Ub,
+          retryOf: Ab,
+          continueFrom: Mb
+        } = ab;
+        const Tb = Ta.find((bb => bb.id === Ab));
+        return GU(bb, null === Tb || void 0 === Tb ? void 0 : Tb.retryShown, {
+          ...null === Tb || void 0 === Tb ? void 0 : Tb.retryOptions,
+          useFree: Ub,
+          retryOf: Ab,
+          continueFrom: Mb
         })
       },
-      onCheckKey: Kk
-    }), Ak = lU(Ds) ? Ds.status : null, wk = null !== Ak && void 0 !== Ak && Ak.isSuper ? Ak.resetsAt : null, rk = (0, kb.useRef)({
+      onCheckKey: QA
+    }), oA = PY(dU) ? dU.status : null, lA = null !== oA && void 0 !== oA && oA.isSuper ? oA.resetsAt : null, tA = (0, Ab.useRef)({
       resetsAt: 0,
       count: 0,
       nextAt: 0
     });
-    (0, kb.useEffect)((() => {
-      if (null === wk) return;
-      if (wk <= Fc) {
-        rk.current.resetsAt !== wk && (rk.current = {
-          resetsAt: wk,
+    (0, Ab.useEffect)((() => {
+      if (null === lA) return;
+      if (lA <= ca) {
+        tA.current.resetsAt !== lA && (tA.current = {
+          resetsAt: lA,
           count: 0,
           nextAt: 0
         });
-        const bb = rk.current,
-          cb = [15e3, 6e4, 24e4];
-        if (bb.count > cb.length) return;
-        let sb = !1;
-        const kb = setTimeout((() => {
-          var kb;
-          bb.nextAt = Date.now() + (null !== (kb = cb[bb.count]) && void 0 !== kb ? kb : 0), bb.count++, IU.refresh().then((() => {
-            sb || xc(Date.now())
+        const bb = tA.current,
+          ab = [15e3, 6e4, 24e4];
+        if (bb.count > ab.length) return;
+        let Ub = !1;
+        const Ab = setTimeout((() => {
+          var Ab;
+          bb.nextAt = Date.now() + (null !== (Ab = ab[bb.count]) && void 0 !== Ab ? Ab : 0), bb.count++, TY.refresh().then((() => {
+            Ub || Ja(Date.now())
           }))
         }), Math.max(0, bb.nextAt - Date.now()));
         return () => {
-          sb = !0, clearTimeout(kb)
+          Ub = !0, clearTimeout(Ab)
         }
       }
       const bb = setTimeout((() => {
-        xc(Date.now())
-      }), Math.max(0, (wk - Fc - 1) % 6e4 + 1 - (Date.now() - Fc)));
+        Ja(Date.now())
+      }), Math.max(0, (lA - ca - 1) % 6e4 + 1 - (Date.now() - ca)));
       return () => {
         clearTimeout(bb)
       }
-    }), [wk, Fc]);
-    const Sk = zk ? `${zk.id}/${zk.model.id}` : null;
-    (0, kb.useEffect)((() => {
-      hc(!1)
-    }), [Sk]);
-    const Rk = Object.values(yb).some((bb => "" !== bb.trim())),
-      Fk = nc || ec || Nc || null !== Lc,
-      xk = "aiAnswer" === uk || ("aiNotes" === uk || "aiGameSettings" === uk || "aiGear" === uk) && Fk ? uk : "aiPanel",
-      pk = (0, kb.useRef)(null),
-      bW = (0, kb.useRef)(null),
-      cW = (0, kb.useRef)(Lc);
-    (0, kb.useEffect)((() => {
-      if (cW.current === Lc) return;
-      cW.current = Lc;
+    }), [lA, ca]);
+    const wA = uA ? `${uA.id}/${uA.model.id}` : null;
+    (0, Ab.useEffect)((() => {
+      ma(!1)
+    }), [wA]);
+    const sA = Object.values(Ib).some((bb => "" !== bb.trim())),
+      CA = Xa || ya || Da || null !== xa,
+      VA = "aiAnswer" === zA || ("aiNotes" === zA || "aiGameSettings" === zA || "aiGear" === zA) && CA ? zA : "aiPanel",
+      cA = (0, Ab.useRef)(null),
+      JA = (0, Ab.useRef)(null),
+      nA = (0, Ab.useRef)(xa);
+    (0, Ab.useEffect)((() => {
+      if (nA.current === xa) return;
+      nA.current = xa;
       if (!document.activeElement || document.activeElement === document.body) {
         var bb;
-        null === (bb = (Lc ? pk : bW).current) || void 0 === bb || bb.focus()
+        null === (bb = (xa ? cA : JA).current) || void 0 === bb || bb.focus()
       }
-    }), [Lc]), (0, kb.useEffect)((() => {
-      const bb = Xs.current;
-      if (!Lc || !bb) return;
+    }), [xa]), (0, Ab.useEffect)((() => {
+      const bb = PU.current;
+      if (!xa || !bb) return;
       bb.scrollTo({
         top: 0
       });
-      const cb = "settings" === Lc && Gk.current ? bb.querySelector(".WorldCodeAiModelRow.Selected") : null;
-      if (cb && cb.getBoundingClientRect().bottom > bb.getBoundingClientRect().bottom && !PI(bb, cb)) {
-        const sb = bb.getBoundingClientRect(),
-          kb = cb.getBoundingClientRect();
-        bb.scrollTop += kb.top - sb.top - (sb.height - kb.height) / 2
+      const ab = "settings" === xa && GA.current ? bb.querySelector(".WorldCodeAiModelRow.Selected") : null;
+      if (ab && ab.getBoundingClientRect().bottom > bb.getBoundingClientRect().bottom && !WB(bb, ab)) {
+        const Ub = bb.getBoundingClientRect(),
+          Ab = ab.getBoundingClientRect();
+        bb.scrollTop += Ab.top - Ub.top - (Ub.height - Ab.height) / 2
       }
       return () => {
         bb.style.paddingBottom = ""
       }
-    }), [Lc]);
+    }), [xa]);
     const {
-      disclosureRef: kW,
-      gearLabelRef: WW,
-      hasGearLabel: aW
-    } = function(bb, cb) {
-      const sb = (0, kb.useRef)(null),
-        Wb = (0, kb.useRef)(null),
-        ab = (0, kb.useRef)(0),
-        [Tb, Ub] = (0, kb.useState)(!0);
-      return (0, kb.useLayoutEffect)((() => {
-        const cb = sb.current;
-        if (!cb || "undefined" === typeof ResizeObserver) return;
-        const kb = () => {
-          const sb = document.createRange();
-          if (sb.selectNodeContents(cb), "function" !== typeof sb.getBoundingClientRect) return;
-          const kb = sb.getBoundingClientRect().width,
-            Tb = Wb.current;
-          if (Tb) {
-            const sb = bb.current,
-              Wb = sb && parseFloat(getComputedStyle(sb).columnGap) || 0;
-            ab.current = Tb.getBoundingClientRect().width + Wb, kb > cb.clientWidth + 1 && Ub(!1)
-          } else cb.clientWidth - kb >= ab.current && Ub(!0)
+      disclosureRef: bM,
+      gearLabelRef: aM,
+      hasGearLabel: UM
+    } = function(bb, ab) {
+      const Ub = (0, Ab.useRef)(null),
+        Mb = (0, Ab.useRef)(null),
+        Tb = (0, Ab.useRef)(0),
+        [Eb, Yb] = (0, Ab.useState)(!0);
+      return (0, Ab.useLayoutEffect)((() => {
+        const ab = Ub.current;
+        if (!ab || "undefined" === typeof ResizeObserver) return;
+        const Ab = () => {
+          const Ub = document.createRange();
+          if (Ub.selectNodeContents(ab), "function" !== typeof Ub.getBoundingClientRect) return;
+          const Ab = Ub.getBoundingClientRect().width,
+            Eb = Mb.current;
+          if (Eb) {
+            const Ub = bb.current,
+              Mb = Ub && parseFloat(getComputedStyle(Ub).columnGap) || 0;
+            Tb.current = Eb.getBoundingClientRect().width + Mb, Ab > ab.clientWidth + 1 && Yb(!1)
+          } else ab.clientWidth - Ab >= Tb.current && Yb(!0)
         };
-        kb();
-        const Tb = new ResizeObserver(kb);
-        return Tb.observe(cb), () => {
-          Tb.disconnect()
+        Ab();
+        const Eb = new ResizeObserver(Ab);
+        return Eb.observe(ab), () => {
+          Eb.disconnect()
         }
-      }), [bb, cb]), {
-        disclosureRef: sb,
-        gearLabelRef: Wb,
-        hasGearLabel: Tb
+      }), [bb, ab]), {
+        disclosureRef: Ub,
+        gearLabelRef: Mb,
+        hasGearLabel: Eb
       }
-    }(bW, Fk), TW = () => {
+    }(JA, CA), AM = () => {
       var bb;
-      qc([]), null === (bb = jc.current) || void 0 === bb || bb.abort(), Ms()
-    }, UW = (0, Tb.jsxs)("div", {
-      className: ab()("WorldCodeAiPanel", Lc && "WorldCodeAiPanel-aiView"),
-      children: [(0, Tb.jsxs)("div", {
+      oa([]), null === (bb = na.current) || void 0 === bb || bb.abort(), LU()
+    }, MM = (0, Eb.jsxs)("div", {
+      className: Tb()("WorldCodeAiPanel", xa && "WorldCodeAiPanel-aiView"),
+      children: [(0, Eb.jsxs)("div", {
         className: "WorldCodeAiHeader",
-        children: [(0, Tb.jsx)("span", {
+        children: [(0, Eb.jsx)("span", {
           className: "WorldCodeAiTitle",
           children: "AI Helper"
-        }), (0, Tb.jsx)("span", {
-          ref: kW,
+        }), (0, Eb.jsx)("span", {
+          ref: bM,
           className: "WorldCodeAiDisclosure",
           title: "AI can be wrong. Check its changes.",
           children: "AI can be wrong."
-        }), Fk && (0, Tb.jsx)("button", {
-          ref: pk,
+        }), CA && (0, Eb.jsx)("button", {
+          ref: cA,
           className: "WorldCodeAiLinkButton WorldCodeAiBackButton",
           onClick: () => {
-            mc(!1), Cc(!1), Vc(!1), uc("addKey" === Lc ? Jc.current : null)
+            ja(!1), Za(!1), za(!1), ia("addKey" === xa ? pa.current : null)
           },
-          children: "addKey" === Lc && Jc.current ? "Back" : "Back to chat"
-        }), Lc && (0, Tb.jsx)("h3", {
+          children: "addKey" === xa && pa.current ? "Back" : "Back to chat"
+        }), xa && (0, Eb.jsx)("h3", {
           className: "WorldCodeAiViewTitle",
-          children: "settings" === Lc ? "AI settings" : gc ? `Edit ${rT(gc)} key` : "Add an API key"
-        }), "settings" === Lc && (0, Tb.jsxs)("span", {
+          children: "settings" === xa ? "AI settings" : Na ? `Edit ${lE(Na)} key` : "Add an API key"
+        }), "settings" === xa && (0, Eb.jsxs)("span", {
           className: "WorldCodeAiViewUsing",
-          children: [(0, Tb.jsxs)("span", {
+          children: [(0, Eb.jsxs)("span", {
             className: "WorldCodeAiViewUsingModel",
-            children: ["Using:", " ", zk ? Yc ? "Bot.xd (free) for the next question" : sH(zk) : Ak ? sU : "Bot.xd (free)"]
-          }), (0, Tb.jsxs)("span", {
+            children: ["Using:", " ", uA ? fa ? "Bot.xd (free) for the next question" : SB(uA) : oA ? SE : "Bot.xd (free)"]
+          }), (0, Eb.jsxs)("span", {
             className: "WorldCodeAiViewUsingEdits",
-            children: ["Edits: ", Ec ? "On" : "Off"]
+            children: ["Edits: ", ha ? "On" : "Off"]
           })]
-        }), Fk && Hc && (0, Tb.jsx)("button", {
+        }), CA && ea && (0, Eb.jsx)("button", {
           className: "WorldCodeAiStop WorldCodeAiHeaderStop",
-          onClick: TW,
+          onClick: AM,
           children: "Stop answer"
-        }), !Fk && !cc && (0, Tb.jsx)(pI, {
+        }), !CA && !aa && (0, Eb.jsx)(cB, {
           step: "aiNotes",
           placement: "bottom",
-          children: (0, Tb.jsx)("button", {
-            className: ab()("WorldCodeAiLinkButton", ec && "WorldCodeAiLinkButton-active"),
-            "aria-pressed": ec,
+          children: (0, Eb.jsx)("button", {
+            className: Tb()("WorldCodeAiLinkButton", ya && "WorldCodeAiLinkButton-active"),
+            "aria-pressed": ya,
             onClick: () => {
-              mc(!1), Vc(!1), Cc(!ec)
+              ja(!1), za(!1), Za(!ya)
             },
             children: "AI notes"
           })
-        }), !Fk && Lk && (0, Tb.jsx)(pI, {
+        }), !CA && DA && (0, Eb.jsx)(cB, {
           step: "aiGameSettings",
           placement: "bottom",
-          children: (0, Tb.jsx)("button", {
-            className: ab()("WorldCodeAiLinkButton", Nc && "WorldCodeAiLinkButton-active"),
-            "aria-pressed": Nc,
+          children: (0, Eb.jsx)("button", {
+            className: Tb()("WorldCodeAiLinkButton", Da && "WorldCodeAiLinkButton-active"),
+            "aria-pressed": Da,
             onClick: () => {
-              Nk(), mc(!1), Cc(!1), Vc(!Nc)
+              yA(), ja(!1), Za(!1), za(!Da)
             },
             children: "Game settings"
           })
-        }), !Fk && Mc.length > 0 && (0, Tb.jsx)("button", {
-          className: ab()("WorldCodeAiLinkButton", nc && "WorldCodeAiLinkButton-active"),
-          "aria-pressed": nc,
+        }), !CA && La.length > 0 && (0, Eb.jsx)("button", {
+          className: Tb()("WorldCodeAiLinkButton", Xa && "WorldCodeAiLinkButton-active"),
+          "aria-pressed": Xa,
           onClick: () => {
-            xc(Date.now()), Cc(!1), Vc(!1), mc(!nc)
+            Ja(Date.now()), Za(!1), za(!1), ja(!Xa)
           },
           children: "History"
-        }), !Fk && ac.length > 0 && (0, Tb.jsx)("button", {
+        }), !CA && Ta.length > 0 && (0, Eb.jsx)("button", {
           className: "WorldCodeAiLinkButton",
-          disabled: !!Hc,
+          disabled: !!ea,
           onClick: () => {
-            Hk(), qc([]), Ic([]), Wc.turns = new sT
+            YA(), oa([]), Ba([]), Ma.turns = new ST
           },
           children: "New chat"
-        }), !Fk && (0, Tb.jsx)(pI, {
+        }), !CA && (0, Eb.jsx)(cB, {
           step: "aiGear",
           placement: "bottom",
-          children: (0, Tb.jsxs)("button", {
-            ref: bW,
+          children: (0, Eb.jsxs)("button", {
+            ref: JA,
             className: "WorldCodeAiLinkButton WorldCodeAiGear",
             "aria-label": "AI Helper settings",
             title: "AI Helper settings",
             onClick: () => {
-              Gk.current = !1, uc("settings")
+              GA.current = !1, ia("settings")
             },
-            children: [(0, Tb.jsx)(Xb.b, {
+            children: [(0, Eb.jsx)(Pb.e, {
               name: "gear"
-            }), aW && (0, Tb.jsx)("span", {
-              ref: WW,
+            }), UM && (0, Eb.jsx)("span", {
+              ref: aM,
               className: "WorldCodeAiGearLabel",
               children: "Settings"
             })]
           })
         })]
-      }), (0, Tb.jsxs)("div", {
+      }), (0, Eb.jsxs)("div", {
         className: "WorldCodeAiMessages",
-        ref: Xs,
-        role: Fk ? void 0 : "log",
-        "aria-live": Fk ? void 0 : "polite",
-        children: [nc && (0, Tb.jsx)(lH, {
-          snapshots: Mc,
-          files: yb,
-          now: Fc,
-          onRestore: Db && !Hc ? bb => {
+        ref: PU,
+        role: CA ? void 0 : "log",
+        "aria-live": CA ? void 0 : "polite",
+        children: [Xa && (0, Eb.jsx)(Pe, {
+          snapshots: La,
+          files: Ib,
+          now: ca,
+          onRestore: Fb && !ea ? bb => {
             (async bb => {
-              const cb = Qs.current,
-                sb = XH(bb, cb);
-              if (0 === sb.length) return;
-              if (!await Ob(sb)) return;
-              Rs("Before going back", cb), mc(!1), null !== ks && Hk();
-              const kb = {};
-              for (const Tb of sb) kb[Tb.path] = Tb.text;
-              const Wb = bb => ts(bb) && "applied" === bb.status && bb.changes.some((bb => bb.path in kb && kb[bb.path] !== bb.after)),
-                ab = ac.filter((bb => Wb(bb) && "saved" === bb.noteStatus && void 0 !== bb.note && lc.includes(bb.note))).map((bb => {
-                  var cb;
-                  return null !== (cb = bb.note) && void 0 !== cb ? cb : ""
+              const ab = kU.current,
+                Ub = ee(bb, ab);
+              if (0 === Ub.length) return;
+              if (!await Qb(Ub)) return;
+              CU("Before going back", ab), ja(!1), null !== AU && YA();
+              const Ab = {};
+              for (const Eb of Ub) Ab[Eb.path] = Eb.text;
+              const Mb = bb => WU(bb) && "applied" === bb.status && bb.changes.some((bb => bb.path in Ab && Ab[bb.path] !== bb.after)),
+                Tb = Ta.filter((bb => Mb(bb) && "saved" === bb.noteStatus && void 0 !== bb.note && Ra.includes(bb.note))).map((bb => {
+                  var ab;
+                  return null !== (ab = bb.note) && void 0 !== ab ? ab : ""
                 }));
-              Ic((bb => bb.map((bb => Wb(bb) ? {
+              Ba((bb => bb.map((bb => Mb(bb) ? {
                 ...bb,
                 status: "undone",
                 wentBack: !0,
                 noteStatus: "asked" === bb.noteStatus ? void 0 : bb.noteStatus
-              } : bb)))), Bs({
+              } : bb)))), NU({
                 role: "assistant",
                 text: "Your code is back to how it was.",
                 changes: [],
                 status: "offered",
                 isNotice: !0,
                 isCalm: !0,
-                undoFiles: cb,
-                leftFiles: Object.fromEntries(sb.map((bb => [bb.path, bb.text]))),
-                forgetNotes: ab.length > 0 ? ab : void 0
+                undoFiles: ab,
+                leftFiles: Object.fromEntries(Ub.map((bb => [bb.path, bb.text]))),
+                forgetNotes: Tb.length > 0 ? Tb : void 0
               })
             })(bb)
           } : void 0
-        }), Nc && (0, Tb.jsx)(mf, {
-          files: yb,
-          before: Oc,
-          onWrite: Db ? (bb, cb, sb) => {
-            const kb = mk.current.then((async () => {
-              var kb, Wb, ab, Tb;
-              const Ub = Qs.current,
-                Ib = Xk.current[bb],
-                Hb = void 0 !== Ib && (null !== (kb = Ub[bb]) && void 0 !== kb ? kb : "") === nk.current[bb] ? {
-                  ...Ub,
-                  [bb]: Ib
-                } : Ub,
-                fb = gH(null !== (Wb = Hb[bb]) && void 0 !== Wb ? Wb : "", cb, sb);
-              if (null === fb) return !1;
-              if (fb === Hb[bb]) return !0;
-              if (!await Ob([{
+        }), Da && (0, Eb.jsx)(vv, {
+          files: Ib,
+          before: Qa,
+          onWrite: Fb ? (bb, ab, Ub) => {
+            const Ab = PA.current.then((async () => {
+              var Ab, Mb, Tb, Eb;
+              const Yb = kU.current,
+                Bb = vA.current[bb],
+                eb = void 0 !== Bb && (null !== (Ab = Yb[bb]) && void 0 !== Ab ? Ab : "") === LA.current[bb] ? {
+                  ...Yb,
+                  [bb]: Bb
+                } : Yb,
+                vb = fe(null !== (Mb = eb[bb]) && void 0 !== Mb ? Mb : "", ab, Ub);
+              if (null === vb) return !1;
+              if (vb === eb[bb]) return !0;
+              if (!await Qb([{
                   path: bb,
-                  text: fb
+                  text: vb
                 }])) return !1;
-              const Mb = tH(cb),
-                Xb = `${bb}:${cb.key}`,
-                nb = null !== (ab = ek.current.get(Xb)) && void 0 !== ab ? ab : cb.value;
-              ek.current.set(Xb, nb), nb === sb ? Qk.current.delete(Xb) : Qk.current.set(Xb, {
-                name: Mb,
-                from: yH(nb),
-                to: yH(sb)
+              const Lb = pe(ab),
+                Pb = `${bb}:${ab.key}`,
+                Xb = null !== (Tb = RA.current.get(Pb)) && void 0 !== Tb ? Tb : ab.value;
+              RA.current.set(Pb, Xb), Xb === Ub ? jA.current.delete(Pb) : jA.current.set(Pb, {
+                name: Lb,
+                from: Ne(Xb),
+                to: Ne(Ub)
               });
-              const mb = PH([...Qk.current.values()]);
-              if (ic.current) {
-                var lb;
-                null === (lb = Ck.current) || void 0 === lb || lb.then((async bb => {
-                  void 0 !== bb && Xc(await nM.relabel(Ab, bb, mb))
+              const jb = We([...jA.current.values()]);
+              if (Ga.current) {
+                var Rb;
+                null === (Rb = kA.current) || void 0 === Rb || Rb.then((async bb => {
+                  void 0 !== bb && Pa(await BL.relabel(tb, bb, jb))
                 })).catch((bb => {
                   console.error("World Code AI: couldn't rename a version of the code", bb)
                 }))
               } else {
-                ic.current = !0;
+                Ga.current = !0;
                 const bb = Date.now();
-                Ck.current = nM.add(Ab, mb, Hb, bb).then((cb => {
-                  var sb;
-                  return Xc(cb), null === (sb = cb.find((cb => cb.at === bb && cb.label === mb))) || void 0 === sb ? void 0 : sb.id
+                kA.current = BL.add(tb, jb, eb, bb).then((ab => {
+                  var Ub;
+                  return Pa(ab), null === (Ub = ab.find((ab => ab.at === bb && ab.label === jb))) || void 0 === Ub ? void 0 : Ub.id
                 })).catch((bb => {
                   console.error("World Code AI: couldn't keep a version of the code", bb)
-                })), Gc(Hb)
+                })), qa(eb)
               }
-              return lk.current.includes(Mb) || lk.current.push(Mb), nk.current[bb] = null !== (Tb = Hb[bb]) && void 0 !== Tb ? Tb : "", Xk.current[bb] = fb, ls.current = Date.now(), !0
+              return XA.current.includes(Lb) || XA.current.push(Lb), LA.current[bb] = null !== (Eb = eb[bb]) && void 0 !== Eb ? Eb : "", vA.current[bb] = vb, RU.current = Date.now(), !0
             }));
-            return mk.current = kb.catch((() => !1)), kb
+            return PA.current = Ab.catch((() => !1)), Ab
           } : void 0,
-          onTryIt: Oc ? () => {
-            Hs(Gb, Math.max(0, ls.current + 600 - Date.now()))
+          onTryIt: Qa ? () => {
+            eU(qb, Math.max(0, RU.current + 600 - Date.now()))
           } : void 0,
-          onUndo: Oc && Db ? () => {
-            Vk()
+          onUndo: Qa && Fb ? () => {
+            ZA()
           } : void 0
-        }), "settings" === Lc && (0, Tb.jsx)(dI, {
-          allowEdits: yc,
-          onAllowEditsChange: Db ? bb => {
-            Pc(bb),
+        }), "settings" === xa && (0, Eb.jsx)(rB, {
+          allowEdits: Ia,
+          onAllowEditsChange: Fb ? bb => {
+            da(bb),
               function(bb) {
                 try {
-                  localStorage.setItem(gI, String(bb))
+                  localStorage.setItem(fB, String(bb))
                 } catch {}
               }(bb)
           } : void 0,
           onAddKey: () => {
-            Jc.current = "settings", Bc(null), uc("addKey")
+            pa.current = "settings", Wa(null), ia("addKey")
           },
           onEditKey: bb => {
-            Jc.current = "settings", Bc(bb), uc("addKey")
+            pa.current = "settings", Wa(bb), ia("addKey")
           }
-        }), "addKey" === Lc && (0, Tb.jsx)(vI, {
-          editing: null !== gc && void 0 !== gc ? gc : void 0,
+        }), "addKey" === xa && (0, Eb.jsx)(gB, {
+          editing: null !== Na && void 0 !== Na ? Na : void 0,
           onAdded: () => {
-            Gk.current = !0, uc(Jc.current)
+            GA.current = !0, ia(pa.current)
           },
           onOpenSettings: () => {
-            Gk.current = !1, uc("settings")
+            GA.current = !1, ia("settings")
           }
-        }, null !== (Yb = null === gc || void 0 === gc ? void 0 : gc.id) && void 0 !== Yb ? Yb : "new"), ec && (0, Tb.jsx)(QH, {
-          notes: lc,
-          outline: kc(yb, new Set(eM().callbackNames())),
-          ZN: Yk,
+        }, null !== (fb = null === Na || void 0 === Na ? void 0 : Na.id) && void 0 !== fb ? fb : "new"), ya && (0, Eb.jsx)(Xe, {
+          notes: Ra,
+          outline: Aa(Ib, new Set(PL().callbackNames())),
+          uZ: xA,
           onDelete: bb => {
-            mM.remove(Ab, bb).then(Qc).catch((bb => {
+            eL.remove(tb, bb).then(ka).catch((bb => {
               console.error("World Code AI: couldn't delete a note", bb)
             }))
           }
-        }), !Fk && ac.map(((bb, cb) => {
-          var sb, Wb, Ib, fb, Mb, Xb, nb, mb;
-          const lb = ts(bb),
-            Qb = Ek && (null === (sb = ac[cb - 1]) || void 0 === sb ? void 0 : sb.target.key) !== bb.target.key,
-            eb = 0 === bb.changes.length,
-            Cb = eb && !!bb.failedEdits && !bb.question && !bb.worldCode,
-            Nb = bb.failedEdits && (0, Tb.jsx)(zM, {
+        }), !CA && Ta.map(((bb, ab) => {
+          var Ub, Mb, Bb, vb, Lb, Pb, Xb, jb;
+          const Rb = WU(bb),
+            kb = dA && (null === (Ub = Ta[ab - 1]) || void 0 === Ub ? void 0 : Ub.target.key) !== bb.target.key,
+            yb = 0 === bb.changes.length,
+            Zb = yb && !!bb.failedEdits && !bb.question && !bb.worldCode,
+            Db = bb.failedEdits && (0, Eb.jsx)(GL, {
               failed: bb.failedEdits,
-              nothingChanged: eb,
+              nothingChanged: yb,
               defaultOpen: !bb.byItself,
-              isElsewhere: !lb,
-              onRetry: bb.id !== Pk || Hc || 0 !== zc.length ? void 0 : () => {
-                Os(TH.u, tM, {
-                  about: tk(bb.id),
+              isElsewhere: !Rb,
+              onRetry: bb.id !== HA || ea || 0 !== Ka.length ? void 0 : () => {
+                GU(Ae.q, fL, {
+                  about: NA(bb.id),
                   failedEdits: bb.failedEdits
                 })
               }
             });
-          var Vb;
-          return void 0 === bb.logTitle && (!bb.isNotice || "assistant" !== bb.role || "" === bb.text || void 0 !== bb.retry || bb.keyNotice || bb.undoFiles || bb.failedEdits || bb.cutShort || bb.question || bb.worldCode || 0 !== bb.changes.length) ? (0, Tb.jsxs)(kb.Fragment, {
-            children: [Qb && (0, Tb.jsx)(KM, {
+          var zb;
+          return void 0 === bb.logTitle && (!bb.isNotice || "assistant" !== bb.role || "" === bb.text || void 0 !== bb.retry || bb.keyNotice || bb.undoFiles || bb.failedEdits || bb.cutShort || bb.question || bb.worldCode || 0 !== bb.changes.length) ? (0, Eb.jsxs)(Ab.Fragment, {
+            children: [kb && (0, Eb.jsx)(FL, {
               target: bb.target,
-              isOpen: lb
-            }), (0, Tb.jsxs)("div", {
-              className: ab()("WorldCodeAiEntry", `WorldCodeAiEntry-${bb.role}`, {
-                "WorldCodeAiEntry-elsewhere": !lb,
+              isOpen: Rb
+            }), (0, Eb.jsxs)("div", {
+              className: Tb()("WorldCodeAiEntry", `WorldCodeAiEntry-${bb.role}`, {
+                "WorldCodeAiEntry-elsewhere": !Rb,
                 WorldCodeAiNotice: bb.isNotice,
                 "WorldCodeAiNotice-calm": bb.isNotice && bb.isCalm,
-                "WorldCodeAiNotice-past": bb.isNotice && void 0 !== bb.retry && (bb.id !== Pk || !!hs)
+                "WorldCodeAiNotice-past": bb.isNotice && void 0 !== bb.retry && (bb.id !== HA || !!mU)
               }),
-              children: [eb && Nb, Cb ? null : bb.isNotice && void 0 !== bb.retry && (bb.id !== Pk || hs) ? (0, Tb.jsx)("p", {
-                children: bb.keyNotice ? uI(bb.keyNotice) : void 0 !== bb.retryAt ? "Not answered: Bot.xd was busy." : "Not answered: the AI had a problem."
-              }) : bb.keyNotice ? (0, Tb.jsxs)(Tb.Fragment, {
-                children: [(0, Tb.jsx)("p", {
-                  children: LI(bb.keyNotice)
-                }), bb.keyNotice.detail && (0, Tb.jsx)(NI, {
+              children: [yb && Db, Zb ? null : bb.isNotice && void 0 !== bb.retry && (bb.id !== HA || mU) ? (0, Eb.jsx)("p", {
+                children: bb.keyNotice ? DB(bb.keyNotice) : void 0 !== bb.retryAt ? "Not answered: Bot.xd was busy." : "Not answered: the AI had a problem."
+              }) : bb.keyNotice ? (0, Eb.jsxs)(Eb.Fragment, {
+                children: [(0, Eb.jsx)("p", {
+                  children: ZB(bb.keyNotice)
+                }), bb.keyNotice.detail && (0, Eb.jsx)(kB, {
                   detail: bb.keyNotice.detail
                 })]
-              }) : bb.undoFiles ? (0, Tb.jsxs)("div", {
+              }) : bb.undoFiles ? (0, Eb.jsxs)("div", {
                 className: "WorldCodeAiWentBack",
-                children: [(0, Tb.jsx)("span", {
+                children: [(0, Eb.jsx)("span", {
                   children: "undone" === bb.status ? "Undone: your code is as it was before going back." : bb.text
-                }), lb && "undone" !== bb.status && iM(bb, yb) && Db && (0, Tb.jsx)("button", {
+                }), Rb && "undone" !== bb.status && HL(bb, Ib) && Fb && (0, Eb.jsx)("button", {
                   className: "WorldCodeAiLinkButton WorldCodeAiNoticeUndo",
-                  disabled: !!Hc,
-                  title: Hc ? "You can undo once the answer is in." : void 0,
+                  disabled: !!ea,
+                  title: ea ? "You can undo once the answer is in." : void 0,
                   onClick: () => {
                     (async bb => {
-                      var cb;
-                      const sb = Qs.current;
-                      if (!iM(bb, sb)) return;
-                      const kb = XH({
+                      var ab;
+                      const Ub = kU.current;
+                      if (!HL(bb, Ub)) return;
+                      const Ab = ee({
                         id: 0,
                         at: 0,
                         label: "",
-                        files: null !== (cb = bb.undoFiles) && void 0 !== cb ? cb : {}
-                      }, sb).filter((cb => void 0 !== bb.leftFiles && cb.path in bb.leftFiles));
-                      if (kb.length > 0) {
-                        if (!await Ob(kb)) return;
-                        Rs("Before undoing going back", sb)
+                        files: null !== (ab = bb.undoFiles) && void 0 !== ab ? ab : {}
+                      }, Ub).filter((ab => void 0 !== bb.leftFiles && ab.path in bb.leftFiles));
+                      if (Ab.length > 0) {
+                        if (!await Qb(Ab)) return;
+                        CU("Before undoing going back", Ub)
                       }
-                      const Wb = {
-                        ...sb
+                      const Mb = {
+                        ...Ub
                       };
-                      for (const ab of kb) Wb[ab.path] = ab.text;
-                      Ic((cb => cb.map((cb => cb.id === bb.id ? {
-                        ...cb,
+                      for (const Tb of Ab) Mb[Tb.path] = Tb.text;
+                      Ba((ab => ab.map((ab => ab.id === bb.id ? {
+                        ...ab,
                         status: "undone"
-                      } : ts(cb) && cb.wentBack && cb.changes.every((bb => {
-                        var cb;
-                        return (null !== (cb = Wb[bb.path]) && void 0 !== cb ? cb : "") === bb.after
+                      } : WU(ab) && ab.wentBack && ab.changes.every((bb => {
+                        var ab;
+                        return (null !== (ab = Mb[bb.path]) && void 0 !== ab ? ab : "") === bb.after
                       })) ? {
-                        ...cb,
+                        ...ab,
                         status: "applied",
                         wentBack: void 0
-                      } : cb))))
+                      } : ab))))
                     })(bb)
                   },
-                  children: Hc ? "Undo going back after this answer" : "Undo going back"
+                  children: ea ? "Undo going back after this answer" : "Undo going back"
                 })]
-              }) : "assistant" === bb.role ? (0, Tb.jsx)(Hb.d, {
-                markdown: "applied" !== bb.status && !bb.editedInPlace && (bb.changes.length > 0 || null !== (Wb = bb.failedEdits) && void 0 !== Wb && Wb.length) ? Xf(bb.text) : bb.text
-              }) : (0, Tb.jsx)("p", {
+              }) : "assistant" === bb.role ? (0, Eb.jsx)(eb.e, {
+                markdown: "applied" !== bb.status && !bb.editedInPlace && (bb.changes.length > 0 || null !== (Mb = bb.failedEdits) && void 0 !== Mb && Mb.length) ? Bv(bb.text) : bb.text
+              }) : (0, Eb.jsx)("p", {
                 children: bb.text
-              }), bb.answeredBy && (0, Tb.jsx)(VI, {
+              }), bb.answeredBy && (0, Eb.jsx)(yB, {
                 answeredBy: bb.answeredBy
-              }), bb.oneOff && zk && bb.id === Pk && !Hc && (0, Tb.jsxs)("p", {
+              }), bb.oneOff && uA && bb.id === HA && !ea && (0, Eb.jsxs)("p", {
                 className: "WorldCodeAiBackTo",
-                children: ["Your next question goes back to ", zk.model.name, "."]
-              }), bb.cutShort && (0, Tb.jsx)(JI, {
+                children: ["Your next question goes back to ", uA.model.name, "."]
+              }), bb.cutShort && (0, Eb.jsx)(iB, {
                 hasCode: bb.changes.length > 0 || !!bb.worldCode,
-                ...qk(bb.id, bb.cutShort)
-              }), bb.forgetNotes && (0, Tb.jsx)("div", {
+                ...rA(bb.id, bb.cutShort)
+              }), bb.forgetNotes && (0, Eb.jsx)("div", {
                 className: "WorldCodeAiForget",
-                children: lb && void 0 === bb.forgetStatus && bb.id > Dk ? (0, Tb.jsxs)(Tb.Fragment, {
-                  children: [(0, Tb.jsxs)("span", {
+                children: Rb && void 0 === bb.forgetStatus && bb.id > IA ? (0, Eb.jsxs)(Eb.Fragment, {
+                  children: [(0, Eb.jsxs)("span", {
                     className: "WorldCodeAiForgetAsk",
-                    children: [1 === bb.forgetNotes.length ? "Forget this note in AI notes too? " : "Forget these notes in AI notes too? ", (0, Tb.jsx)("span", {
+                    children: [1 === bb.forgetNotes.length ? "Forget this note in AI notes too? " : "Forget these notes in AI notes too? ", (0, Eb.jsx)("span", {
                       className: "WorldCodeAiForgetNote",
                       children: bb.forgetNotes.map((bb => `"${bb}"`)).join(", ")
                     })]
-                  }), (0, Tb.jsxs)("div", {
+                  }), (0, Eb.jsxs)("div", {
                     className: "WorldCodeAiNoteButtons",
-                    children: [(0, Tb.jsx)("button", {
+                    children: [(0, Eb.jsx)("button", {
                       className: "WorldCodeAiSecondaryButton",
                       onClick: () => {
-                        fk(bb, !0)
+                        BA(bb, !0)
                       },
                       children: "Forget it"
-                    }), (0, Tb.jsx)("button", {
+                    }), (0, Eb.jsx)("button", {
                       className: "WorldCodeAiLinkButton",
                       onClick: () => {
-                        fk(bb, !1)
+                        BA(bb, !1)
                       },
                       children: "Keep it"
                     })]
                   })]
-                }) : (0, Tb.jsx)("span", {
+                }) : (0, Eb.jsx)("span", {
                   className: "WorldCodeAiHint",
                   children: "forgotten" === bb.forgetStatus ? "Taken out of AI notes." : "Kept in AI notes."
                 })
-              }), bb.changes.length > 0 && (0, Tb.jsx)(GM, {
+              }), bb.changes.length > 0 && (0, Eb.jsx)(dL, {
                 entry: bb,
                 defaultOpen: !bb.byItself,
-                elsewhere: lb ? void 0 : bb.target,
-                isOutOfDate: lb && !vs.current.has(bb.id) && bb.changes.some((bb => {
-                  var cb;
-                  return (null !== (cb = yb[bb.path]) && void 0 !== cb ? cb : "") !== bb.before
+                elsewhere: Rb ? void 0 : bb.target,
+                isOutOfDate: Rb && !VU.current.has(bb.id) && bb.changes.some((bb => {
+                  var ab;
+                  return (null !== (ab = Ib[bb.path]) && void 0 !== ab ? ab : "") !== bb.before
                 })),
-                canEdit: lb ? Db : !!Rb && (!bb.target.codeBlock || bb.target.canChangePos),
-                request: Bk(bb.id),
-                onApply: cb => {
-                  lb ? Fs(cb ? {
+                canEdit: Rb ? Fb : !!Vb && (!bb.target.codeBlock || bb.target.canChangePos),
+                request: pA(bb.id),
+                onApply: ab => {
+                  Rb ? OU(ab ? {
                     id: bb.id,
-                    changes: cb,
+                    changes: ab,
                     isPartial: !0
-                  } : bb, tk(bb.id)) : ((bb, cb) => {
-                    Rb && xs && (Wc.pendingApply = {
+                  } : bb, NA(bb.id)) : ((bb, ab) => {
+                    Vb && cU && (Ma.pendingApply = {
                       entryId: bb.id,
                       targetKey: bb.target.key,
-                      picked: cb,
-                      until: Date.now() + fM
-                    }, Rb(bb.target))
-                  })(bb, cb)
+                      picked: ab,
+                      until: Date.now() + TL
+                    }, Vb(bb.target))
+                  })(bb, ab)
                 },
-                checkPicked: lb ? Mk : void 0,
-                onPickedChange: cb => {
-                  rc((sb => {
-                    if (sb.has(bb.id) === cb) return sb;
-                    const kb = new Set(sb);
-                    return cb ? kb.add(bb.id) : kb.delete(bb.id), kb
+                checkPicked: Rb ? eA : void 0,
+                onPickedChange: ab => {
+                  sa((Ub => {
+                    if (Ub.has(bb.id) === ab) return Ub;
+                    const Ab = new Set(Ub);
+                    return ab ? Ab.add(bb.id) : Ab.delete(bb.id), Ab
                   }))
                 },
                 onUndo: () => {
                   (async bb => {
-                    const cb = Qs.current;
+                    const ab = kU.current;
                     if (bb.changes.some((bb => {
-                        var sb;
-                        return (null !== (sb = cb[bb.path]) && void 0 !== sb ? sb : "") !== bb.after
+                        var Ub;
+                        return (null !== (Ub = ab[bb.path]) && void 0 !== Ub ? Ub : "") !== bb.after
                       }))) return;
-                    await Ob(bb.changes.map((bb => ({
+                    await Qb(bb.changes.map((bb => ({
                       path: bb.path,
                       text: bb.before
-                    })))) && (Ps(bb.id, "undone"), null !== ks && Hk())
+                    })))) && (IU(bb.id, "undone"), null !== AU && YA())
                   })(bb)
                 },
                 onTryIt: () => {
                   (bb => {
-                    const cb = Cs.current;
-                    Sc(cb), Uk(bb.id, "ask", cb), Hs(Gb, Math.max(0, ls.current + 600 - Date.now()))
+                    const ab = ZU.current;
+                    Ca(ab), TA(bb.id, "ask", ab), eU(qb, Math.max(0, RU.current + 600 - Date.now()))
                   })(bb)
                 },
-                isLatest: lb && bb.id > Dk,
-                canUndo: lb && bb.changes.every((bb => {
-                  var cb;
-                  return (null !== (cb = yb[bb.path]) && void 0 !== cb ? cb : "") === bb.after
+                isLatest: Rb && bb.id > IA,
+                canUndo: Rb && bb.changes.every((bb => {
+                  var ab;
+                  return (null !== (ab = Ib[bb.path]) && void 0 !== ab ? ab : "") === bb.after
                 })),
                 onFixWarnings: () => {
                   (bb => {
-                    var cb;
-                    const sb = XI(null !== (cb = bb.warnings) && void 0 !== cb ? cb : []);
-                    var kb;
-                    if (!sb) return void Os(`Fix this in your change: ${null===(kb=bb.warnings)||void 0===kb?void 0:kb.join(" ")}`);
-                    const Wb = eM(),
-                      ab = bb.changes.map((cb => ({
-                        ...cb,
-                        before: "applied" === bb.status ? cb.after : cb.before,
-                        after: lI(cb.after, sb)
+                    var ab;
+                    const Ub = eB(null !== (ab = bb.warnings) && void 0 !== ab ? ab : []);
+                    var Ab;
+                    if (!Ub) return void GU(`Fix this in your change: ${null===(Ab=bb.warnings)||void 0===Ab?void 0:Ab.join(" ")}`);
+                    const Mb = PL(),
+                      Tb = bb.changes.map((ab => ({
+                        ...ab,
+                        before: "applied" === bb.status ? ab.after : ab.before,
+                        after: PB(ab.after, Ub)
                       })));
-                    Bs({
+                    NU({
                       role: "user",
-                      text: 1 === sb.length ? "Fix this line" : "Fix these lines",
+                      text: 1 === Ub.length ? "Fix this line" : "Fix these lines",
                       changes: [],
                       status: "offered"
-                    }), Bs({
+                    }), NU({
                       role: "assistant",
-                      text: `Fixed without asking the AI: ${sb.map(QI).join(" ")}`,
-                      changes: ab,
+                      text: `Fixed without asking the AI: ${Ub.map(XB).join(" ")}`,
+                      changes: Tb,
                       status: "offered",
-                      swappedTo: sb.flatMap((bb => {
+                      swappedTo: Ub.flatMap((bb => {
                         let {
-                          to: cb
+                          to: ab
                         } = bb;
-                        return cb ? [cb] : []
+                        return ab ? [ab] : []
                       })),
-                      warnings: ab.flatMap((bb => UM(Wb, bb, cc)))
+                      warnings: Tb.flatMap((bb => UL(Mb, bb, aa)))
                     })
                   })(bb)
                 },
                 onCheck: () => {
-                  Os(function(bb) {
-                    const cb = [...new Set(bb)];
-                    return cb.length > 0 ? `${OM} These names were checked against the game and are right, so keep them: ${cb.map((bb=>`"${bb}"`)).join(", ")}.` : OM
-                  }(yk.flatMap((bb => {
-                    var cb;
-                    return null !== (cb = bb.swappedTo) && void 0 !== cb ? cb : []
+                  GU(function(bb) {
+                    const ab = [...new Set(bb)];
+                    return ab.length > 0 ? `${IL} These names were checked against the game and are right, so keep them: ${ab.map((bb=>`"${bb}"`)).join(", ")}.` : IL
+                  }(WA.flatMap((bb => {
+                    var ab;
+                    return null !== (ab = bb.swappedTo) && void 0 !== ab ? ab : []
                   }))), "Check it for mistakes")
                 },
-                busy: lb ? !!Hc : !xs
-              }), bb.question && (0, Tb.jsx)(LH, {
+                busy: Rb ? !!ea : !cU
+              }), bb.question && (0, Eb.jsx)(Ze, {
                 ownAnswerBelow: !0,
                 question: bb.question,
-                onAnswer: bb.id !== Pk || Hc ? void 0 : (cb, sb) => {
-                  var kb, Wb, ab, Tb, Ub, Ib, Hb;
-                  const fb = null !== (kb = null === (Wb = bb.question) || void 0 === Wb ? void 0 : Wb.question) && void 0 !== kb ? kb : "",
-                    Mb = null !== (ab = null === (Tb = bb.askedFor) || void 0 === Tb ? void 0 : Tb.request) && void 0 !== ab ? ab : "";
-                  Os(VH(Mb, fb, cb), null !== cb && void 0 !== cb ? cb : "Let the AI pick", {
-                    check: sb,
-                    about: null === (Ub = bb.askedFor) || void 0 === Ub ? void 0 : Ub.request,
-                    asked: sb && cb ? `${Mb} ${cb}` : null,
-                    guardWords: VH(null !== (Ib = null === (Hb = bb.askedFor) || void 0 === Hb ? void 0 : Hb.guardWords) && void 0 !== Ib ? Ib : "", fb, cb)
+                onAnswer: bb.id !== HA || ea ? void 0 : (ab, Ub) => {
+                  var Ab, Mb, Tb, Eb, Yb, Bb, eb;
+                  const vb = null !== (Ab = null === (Mb = bb.question) || void 0 === Mb ? void 0 : Mb.question) && void 0 !== Ab ? Ab : "",
+                    Lb = null !== (Tb = null === (Eb = bb.askedFor) || void 0 === Eb ? void 0 : Eb.request) && void 0 !== Tb ? Tb : "";
+                  GU(ye(Lb, vb, ab), null !== ab && void 0 !== ab ? ab : "Let the AI pick", {
+                    check: Ub,
+                    about: null === (Yb = bb.askedFor) || void 0 === Yb ? void 0 : Yb.request,
+                    asked: Ub && ab ? `${Lb} ${ab}` : null,
+                    guardWords: ye(null !== (Bb = null === (eb = bb.askedFor) || void 0 === eb ? void 0 : eb.guardWords) && void 0 !== Bb ? Bb : "", vb, ab)
                   })
                 }
-              }), lb && bb.offerExport && (0, Tb.jsx)("button", {
+              }), Rb && bb.offerExport && (0, Eb.jsx)("button", {
                 className: "WorldCodeAiSecondaryButton WorldCodeAiSaveGame",
                 onClick: () => {
-                  ys(bb.id, {
+                  HU(bb.id, {
                     offerExport: !1
-                  }), ck("offered" === bb.status && bb.changes.length > 0)
+                  }), SU("offered" === bb.status && bb.changes.length > 0)
                 },
                 children: "Save my game"
-              }), bb.plan && (0, Tb.jsx)(NH, {
+              }), bb.plan && (0, Eb.jsx)(ke, {
                 steps: bb.plan,
-                built: null !== (Ib = bb.planBuilt) && void 0 !== Ib ? Ib : 0,
-                done: null !== (fb = bb.planDone) && void 0 !== fb ? fb : 0,
-                onBuild: lb && !Hc && Db ? cb => {
-                  var sb;
-                  const kb = null !== (sb = bb.plan) && void 0 !== sb ? sb : [];
-                  is((() => {
-                    ys(bb.id, {
-                      planBuilt: cb + 1
-                    }), zs.current(function(bb, cb) {
-                      const sb = bb.map(((bb, sb) => `${sb+1}. ${bb}${sb<cb?" (built)":""}`)).join("\n");
-                      return `Build step ${cb+1} of our plan now: ${bb[cb]}\nThe whole plan:\n${sb}\nBuild only step ${cb+1}, keeping what earlier steps built, so I can try it before the next.`
-                    }(kb, cb), `Build step ${cb+1}: ${kb[cb]}`, {
-                      about: kb[cb],
-                      asked: kb[cb],
+                built: null !== (Bb = bb.planBuilt) && void 0 !== Bb ? Bb : 0,
+                done: null !== (vb = bb.planDone) && void 0 !== vb ? vb : 0,
+                onBuild: Rb && !ea && Fb ? ab => {
+                  var Ub;
+                  const Ab = null !== (Ub = bb.plan) && void 0 !== Ub ? Ub : [];
+                  hU((() => {
+                    HU(bb.id, {
+                      planBuilt: ab + 1
+                    }), rU.current(function(bb, ab) {
+                      const Ub = bb.map(((bb, Ub) => `${Ub+1}. ${bb}${Ub<ab?" (built)":""}`)).join("\n");
+                      return `Build step ${ab+1} of our plan now: ${bb[ab]}\nThe whole plan:\n${Ub}\nBuild only step ${ab+1}, keeping what earlier steps built, so I can try it before the next.`
+                    }(Ab, ab), `Build step ${ab+1}: ${Ab[ab]}`, {
+                      about: Ab[ab],
+                      asked: Ab[ab],
                       planStep: {
                         planId: bb.id,
-                        index: cb
+                        index: ab
                       }
                     })
                   }))
                 } : void 0
-              }), lb && bb.note && bb.noteStatus && !(bb.wentBack && "saved" === bb.noteStatus) && (0, Tb.jsx)(CH, {
+              }), Rb && bb.note && bb.noteStatus && !(bb.wentBack && "saved" === bb.noteStatus) && (0, Eb.jsx)(Re, {
                 note: bb.note,
                 status: bb.noteStatus,
-                isPartLeftOut: "offered" === bb.status && wc.has(bb.id),
+                isPartLeftOut: "offered" === bb.status && wa.has(bb.id),
                 defaultOpen: !bb.byItself || "asked" === bb.noteStatus,
-                onAnswer: cb => {
-                  Jk(bb, cb)
+                onAnswer: ab => {
+                  fA(bb, ab)
                 }
-              }, "asked" === bb.noteStatus ? "asked" : "vn"), !eb && Nb, bb.lookups && (0, Tb.jsx)(qM, {
+              }, "asked" === bb.noteStatus ? "asked" : "RX"), !yb && Db, bb.lookups && (0, Eb.jsx)(QL, {
                 lookups: bb.lookups.lookups,
                 defaultOpen: !bb.lookedAt,
-                isElsewhere: !lb
-              }), lb && bb.lookups && !bb.lookedAt && (0, Tb.jsx)("div", {
+                isElsewhere: !Rb
+              }), Rb && bb.lookups && !bb.lookedAt && (0, Eb.jsx)("div", {
                 className: "WorldCodeAiLookups",
-                children: (0, Tb.jsx)("button", {
+                children: (0, Eb.jsx)("button", {
                   className: "WorldCodeAiSecondaryButton",
-                  disabled: !!Hc,
+                  disabled: !!ea,
                   onClick: () => {
                     (async bb => {
-                      if (!bb.lookups || bb.lookedAt || Hc) return;
-                      ys(bb.id, {
+                      if (!bb.lookups || bb.lookedAt || ea) return;
+                      HU(bb.id, {
                         lookedAt: !0
                       });
-                      const cb = new AbortController;
-                      jc.current = cb;
-                      const sb = Date.now();
-                      xc(sb), fc({
+                      const ab = new AbortController;
+                      na.current = ab;
+                      const Ub = Date.now();
+                      Ja(Ub), va({
                         phase: "thinking",
-                        startedAt: sb
+                        startedAt: Ub
                       });
                       try {
-                        "stopped" === await Tk(bb.lookups.lookups, bb.lookups.followUp, {
-                          signal: cb.signal
-                        }) && ys(bb.id, {
+                        "stopped" === await MA(bb.lookups.lookups, bb.lookups.followUp, {
+                          signal: ab.signal
+                        }) && HU(bb.id, {
                           lookedAt: !1
                         })
                       } finally {
-                        jc.current = null, fc(null)
+                        na.current = null, va(null)
                       }
                     })(bb)
                   },
                   children: "Let the AI look"
                 })
-              }), bb.worldCode && (0, Tb.jsx)(ZM, {
+              }), bb.worldCode && (0, Eb.jsx)(hL, {
                 code: bb.worldCode.join("\n"),
                 defaultOpen: !bb.byItself,
-                isElsewhere: !lb,
-                onSwitch: lb && wb ? () => {
-                  var cb;
-                  wb(dM(null !== (cb = bb.worldCode) && void 0 !== cb ? cb : []))
+                isElsewhere: !Rb,
+                onSwitch: Rb && wb ? () => {
+                  var ab;
+                  wb(qL(null !== (ab = bb.worldCode) && void 0 !== ab ? ab : []))
                 } : void 0
-              }), lb && "ask" === bb.trial && bb.id > Dk && ib <= (null !== (Mb = bb.trialErrors) && void 0 !== Mb ? Mb : 0) && (0, Tb.jsxs)("div", {
+              }), Rb && "ask" === bb.trial && bb.id > IA && Gb <= (null !== (Lb = bb.trialErrors) && void 0 !== Lb ? Lb : 0) && (0, Eb.jsxs)("div", {
                 className: "WorldCodeAiTrial",
-                children: [(0, Tb.jsx)("span", {
+                children: [(0, Eb.jsx)("span", {
                   children: "Did your world do what you wanted?"
-                }), (0, Tb.jsxs)("div", {
+                }), (0, Eb.jsxs)("div", {
                   className: "WorldCodeAiTrialButtons",
-                  children: [(0, Tb.jsx)("button", {
-                    ref: es,
+                  children: [(0, Eb.jsx)("button", {
+                    ref: yU,
                     className: "WorldCodeAiSecondaryButton",
                     onClick: () => {
-                      Uk(bb.id, "worked")
+                      TA(bb.id, "worked")
                     },
                     children: "Yes"
-                  }), (0, Tb.jsx)("button", {
+                  }), (0, Eb.jsx)("button", {
                     className: "WorldCodeAiSecondaryButton",
                     onClick: () => {
-                      var cb;
-                      Uk(bb.id, "notQuite"), Zc("It didn't work because "), null === (cb = ns.current) || void 0 === cb || cb.focus()
+                      var ab;
+                      TA(bb.id, "notQuite"), ra("It didn't work because "), null === (ab = XU.current) || void 0 === ab || ab.focus()
                     },
                     children: "Not quite"
                   })]
                 })]
-              }), lb && "worked" === bb.trial && bb.id > Dk && (0, Tb.jsxs)("div", {
+              }), Rb && "worked" === bb.trial && bb.id > IA && (0, Eb.jsxs)("div", {
                 className: "WorldCodeAiTrial",
-                children: [(0, Tb.jsx)("span", {
+                children: [(0, Eb.jsx)("span", {
                   children: "Nice! What next?"
-                }), (0, Tb.jsx)(hM, {
-                  requests: uM,
+                }), (0, Eb.jsx)(DL, {
+                  requests: yL,
                   onPick: bb => {
-                    Os(bb, void 0, {
+                    GU(bb, void 0, {
                       asked: null
                     })
                   }
                 })]
-              }), lb && "notQuite" === bb.trial && bb.id > Dk && (0, Tb.jsxs)("div", {
+              }), Rb && "notQuite" === bb.trial && bb.id > IA && (0, Eb.jsxs)("div", {
                 className: "WorldCodeAiTrial WorldCodeAiTrial-wrong",
-                children: [(0, Tb.jsx)("span", {
+                children: [(0, Eb.jsx)("span", {
                   children: "What went wrong? Pick one, or say it in your own words below."
-                }), (0, Tb.jsx)(hM, {
-                  requests: YM,
+                }), (0, Eb.jsx)(DL, {
+                  requests: ZL,
                   onPick: bb => {
-                    Os(bb, void 0, {
+                    GU(bb, void 0, {
                       asked: null
                     })
                   }
                 })]
-              }), "assistant" === bb.role && bb.changes.length > 0 && "offered" === bb.status && bb.id === Pk && !Hc && (0, Tb.jsx)(hM, {
-                requests: VM,
+              }), "assistant" === bb.role && bb.changes.length > 0 && "offered" === bb.status && bb.id === HA && !ea && (0, Eb.jsx)(DL, {
+                requests: RL,
                 onPick: bb => {
-                  Os(bb, void 0, {
+                  GU(bb, void 0, {
                     asked: null
                   })
                 }
-              }), "assistant" === bb.role && void 0 !== bb.answeredBy && "free" !== bb.answeredBy && 0 === bb.changes.length && !bb.worldCode && !bb.cutShort && bb.id === Pk && !Hc && Ea(bb.text) && (0, Tb.jsx)(hM, {
-                requests: LM,
+              }), "assistant" === bb.role && void 0 !== bb.answeredBy && "free" !== bb.answeredBy && 0 === bb.changes.length && !bb.worldCode && !bb.cutShort && bb.id === HA && !ea && IT(bb.text) && (0, Eb.jsx)(DL, {
+                requests: kL,
                 onPick: () => {
-                  Os("You said what you'd change but made no change. Make it now, with the code in full.", "Make the change", {
+                  GU("You said what you'd change but made no change. Make it now, with the code in full.", "Make the change", {
                     asked: null
                   })
                 }
-              }), bb.keyNotice && void 0 !== bb.retry && bb.id === Pk && !Hc && (0, Tb.jsx)(hI, {
-                ...dk(bb.id, bb.retry, bb.keyNotice)
-              }), void 0 !== bb.retry && !bb.keyNotice && bb.id === Pk && !Hc && (0, Tb.jsxs)("div", {
+              }), bb.keyNotice && void 0 !== bb.retry && bb.id === HA && !ea && (0, Eb.jsx)(xB, {
+                ...KA(bb.id, bb.retry, bb.keyNotice)
+              }), void 0 !== bb.retry && !bb.keyNotice && bb.id === HA && !ea && (0, Eb.jsxs)("div", {
                 className: "WorldCodeAiRetry",
-                children: [(0, Tb.jsx)("button", {
-                  ...eI.e,
+                children: [(0, Eb.jsx)("button", {
+                  ...jB.g,
                   className: "WorldCodeAiSecondaryButton",
-                  disabled: (null !== (Xb = bb.retryAt) && void 0 !== Xb ? Xb : 0) > Fc,
+                  disabled: (null !== (Pb = bb.retryAt) && void 0 !== Pb ? Pb : 0) > ca,
                   onClick: () => {
-                    var cb;
-                    Os(null !== (cb = bb.retry) && void 0 !== cb ? cb : "", bb.retryShown, {
+                    var ab;
+                    GU(null !== (ab = bb.retry) && void 0 !== ab ? ab : "", bb.retryShown, {
                       ...bb.retryOptions,
                       retryOf: bb.id
                     })
                   },
-                  children: (null !== (nb = bb.retryAt) && void 0 !== nb ? nb : 0) > Fc ? `Try again in ${AM((null!==(mb=bb.retryAt)&&void 0!==mb?mb:0)-Fc)}` : "Try again"
-                }), zk && (0, Tb.jsxs)("button", {
+                  children: (null !== (Xb = bb.retryAt) && void 0 !== Xb ? Xb : 0) > ca ? `Try again in ${uL((null!==(jb=bb.retryAt)&&void 0!==jb?jb:0)-ca)}` : "Try again"
+                }), uA && (0, Eb.jsxs)("button", {
                   className: "WorldCodeAiPrimaryButton",
                   onClick: () => {
-                    var cb;
-                    Os(null !== (cb = bb.retry) && void 0 !== cb ? cb : "", bb.retryShown, {
+                    var ab;
+                    GU(null !== (ab = bb.retry) && void 0 !== ab ? ab : "", bb.retryShown, {
                       ...bb.retryOptions,
                       retryOf: bb.id,
                       useFree: !1
                     })
                   },
-                  children: ["Ask ", zk.model.name, " instead"]
-                }), !zk && (0, Tb.jsx)("button", {
+                  children: ["Ask ", uA.model.name, " instead"]
+                }), !uA && (0, Eb.jsx)("button", {
                   className: "WorldCodeAiLinkButton",
-                  onClick: Kk,
+                  onClick: QA,
                   children: "Choose another AI"
                 })]
               })]
             })]
-          }, bb.id) : (0, Tb.jsxs)(kb.Fragment, {
-            children: [Qb && (0, Tb.jsx)(KM, {
+          }, bb.id) : (0, Eb.jsxs)(Ab.Fragment, {
+            children: [kb && (0, Eb.jsx)(FL, {
               target: bb.target,
-              isOpen: lb
-            }), bb.lookups && (0, Tb.jsx)(qM, {
+              isOpen: Rb
+            }), bb.lookups && (0, Eb.jsx)(QL, {
               lookups: bb.lookups.lookups,
               words: bb.text,
               defaultOpen: !bb.lookedAt,
-              isElsewhere: !lb
-            }), !bb.lookups && (0, Tb.jsx)(Ub, {
-              title: null !== (Vb = bb.logTitle) && void 0 !== Vb ? Vb : bb.isCalm ? "Update" : "Problem",
+              isElsewhere: !Rb
+            }), !bb.lookups && (0, Eb.jsx)(Yb, {
+              title: null !== (zb = bb.logTitle) && void 0 !== zb ? zb : bb.isCalm ? "Update" : "Problem",
               isCalm: bb.isCalm || "user" === bb.role,
-              isElsewhere: !lb,
-              children: (0, Tb.jsx)("p", {
+              isElsewhere: !Rb,
+              children: (0, Eb.jsx)("p", {
                 children: bb.text
               })
             })]
           }, bb.id)
-        })), !Fk && Ek && (null === (hb = ac[ac.length - 1]) || void 0 === hb ? void 0 : hb.target.key) !== qb.key && (0, Tb.jsx)(KM, {
-          target: qb,
+        })), !CA && dA && (null === (mb = Ta[Ta.length - 1]) || void 0 === mb ? void 0 : mb.target.key) !== ob.key && (0, Eb.jsx)(FL, {
+          target: ob,
           isOpen: !0
-        }), !Fk && 0 === yk.length && (0, Tb.jsxs)("div", {
+        }), !CA && 0 === WA.length && (0, Eb.jsxs)("div", {
           className: "WorldCodeAiEmpty",
-          children: [(0, Tb.jsx)("p", {
-            children: cc ? "What should happen when someone clicks this block? Ask in your own words." : "What do you want your world to do? Ask in your own words."
-          }), (0, Tb.jsxs)("div", {
+          children: [(0, Eb.jsx)("p", {
+            children: aa ? "What should happen when someone clicks this block? Ask in your own words." : "What do you want your world to do? Ask in your own words."
+          }), (0, Eb.jsxs)("div", {
             className: "WorldCodeAiChips",
-            children: [Rk && (0, Tb.jsx)("button", {
-              ...eI.e,
+            children: [sA && (0, Eb.jsx)("button", {
+              ...jB.g,
               className: "WorldCodeAiChip",
               onClick: () => {
-                Os("Explain what my code does")
+                GU("Explain what my code does")
               },
               children: "Explain my code"
-            }), Rk && !cc && !Lk && Db && (0, Tb.jsx)("button", {
-              ...eI.e,
+            }), sA && !aa && !DA && Fb && (0, Eb.jsx)("button", {
+              ...jB.g,
               className: "WorldCodeAiChip",
               onClick: () => {
-                Os("Put the numbers and messages in my code that I might want to change (times, amounts, messages) in CONFIG settings at the top, and use them from there. Change nothing else.", "Make settings I can change")
+                GU("Put the numbers and messages in my code that I might want to change (times, amounts, messages) in CONFIG settings at the top, and use them from there. Change nothing else.", "Make settings I can change")
               },
               children: "Make settings I can change"
-            }), (Db ? cc ? NM : CM : []).map((bb => (0, kb.createElement)("button", {
-              ...eI.e,
+            }), (Fb ? aa ? jL : XL : []).map((bb => (0, Ab.createElement)("button", {
+              ...jB.g,
               key: bb,
               className: "WorldCodeAiChip",
               onClick: () => {
-                Os(bb)
+                GU(bb)
               }
             }, bb)))]
-          }), (0, Tb.jsxs)("p", {
+          }), (0, Eb.jsxs)("p", {
             className: "WorldCodeAiPrivacy",
-            children: [zk ? `Bloxd's safety check first makes sure your request is about your game, then it goes with your code to ${zk.model.name} with your key.` : Ak ? "deepseek" === Ak.provider ? "Your request and code go through Bloxd to Super Bot.xd, run by DeepSeek, which stores them on its servers in China." : "Your request and code go through Bloxd to Super Bot.xd." : "Your request and code go to Bot.xd, which doesn't keep them.", " ", "Never type personal details, like your name, address or school."]
-          }), !zk && (0, Tb.jsxs)("p", {
+            children: [uA ? `Bloxd's safety check first makes sure your request is about your game, then it goes with your code to ${uA.model.name} with your key.` : oA ? "deepseek" === oA.provider ? "Your request and code go through Bloxd to Super Bot.xd, run by DeepSeek, which stores them on its servers in China." : "Your request and code go through Bloxd to Super Bot.xd." : "Your request and code go to Bot.xd, which doesn't keep them.", " ", "Never type personal details, like your name, address or school."]
+          }), !uA && (0, Eb.jsxs)("p", {
             className: "WorldCodeAiPrivacy",
-            children: ["Want a stronger AI?", " ", (0, Tb.jsx)("button", {
+            children: ["Want a stronger AI?", " ", (0, Eb.jsx)("button", {
               className: "WorldCodeAiKeyLearnMore",
-              onClick: Zk,
+              onClick: qA,
               children: "Add your own API key"
             })]
           })]
-        }), !Fk && Hc && (0, Tb.jsx)("div", {
+        }), !CA && ea && (0, Eb.jsx)("div", {
           className: "WorldCodeAiEntry WorldCodeAiEntry-assistant WorldCodeAiBusyEntry",
-          children: (0, Tb.jsxs)("div", {
+          children: (0, Eb.jsxs)("div", {
             className: "WorldCodeAiBusy",
             role: "status",
-            children: [(0, Tb.jsx)("span", {
+            children: [(0, Eb.jsx)("span", {
               className: "WorldCodeAiSpinner"
-            }), (0, Tb.jsx)("span", {
+            }), (0, Eb.jsx)("span", {
               className: "WorldCodeAiBusyText",
-              children: (0, Tb.jsx)(Ub, {
-                title: null !== (Jb = wM(Hc)) && void 0 !== Jb ? Jb : "Thinking\u2026",
+              children: (0, Eb.jsx)(Yb, {
+                title: null !== (pb = rL(ea)) && void 0 !== pb ? pb : "Thinking\u2026",
                 isCalm: !0,
-                children: "waiting" === Hc.phase ? (0, Tb.jsxs)("span", {
+                children: "waiting" === ea.phase ? (0, Eb.jsxs)("span", {
                   className: "WorldCodeAiBusyHint",
-                  children: [ef((null !== (gb = Hc.until) && void 0 !== gb ? gb : Fc) - Fc), " Lots of people share Bot.xd."]
-                }) : (0, Tb.jsxs)(Tb.Fragment, {
-                  children: [(0, Tb.jsx)(rM, {
-                    busy: Hc
-                  }), "screening" === Hc.phase && (null !== (Bb = Hc.until) && void 0 !== Bb ? Bb : 0) > Fc && (0, Tb.jsxs)("span", {
+                  children: [Xv((null !== (Nb = ea.until) && void 0 !== Nb ? Nb : ca) - ca), " Lots of people share Bot.xd."]
+                }) : (0, Eb.jsxs)(Eb.Fragment, {
+                  children: [(0, Eb.jsx)(KL, {
+                    busy: ea
+                  }), "screening" === ea.phase && (null !== (Wb = ea.until) && void 0 !== Wb ? Wb : 0) > ca && (0, Eb.jsxs)("span", {
                     className: "WorldCodeAiBusyHint",
-                    children: [ef((null !== (tb = Hc.until) && void 0 !== tb ? tb : Fc) - Fc), " Lots of people share the safety check."]
-                  }), "checking" !== Hc.phase && "screening" !== Hc.phase && (0, Tb.jsx)("span", {
+                    children: [Xv((null !== (Hb = ea.until) && void 0 !== Hb ? Hb : ca) - ca), " Lots of people share the safety check."]
+                  }), "checking" !== ea.phase && "screening" !== ea.phase && (0, Eb.jsx)("span", {
                     className: "WorldCodeAiBusyHint",
-                    children: Hc.keyModel ? `${Hc.keyModel} is answering with your key.` : Hc.isSuperBot ? `${sU} is answering from your usage.` : hf(tc.current, Hc.model)
+                    children: ea.keyModel ? `${ea.keyModel} is answering with your key.` : ea.isSuperBot ? `${SE} is answering from your usage.` : zv(Ha.current, ea.model)
                   })]
                 })
               })
-            }), (0, Tb.jsx)("button", {
+            }), (0, Eb.jsx)("button", {
               className: "WorldCodeAiSecondaryButton WorldCodeAiStop",
-              onClick: TW,
+              onClick: AM,
               children: "Stop"
             })]
           })
-        }), !Fk && !Hc && Is && (0, Tb.jsx)("div", {
+        }), !CA && !ea && BU && (0, Eb.jsx)("div", {
           className: "WorldCodeAiEntry WorldCodeAiEntry-assistant WorldCodeAiBusyEntry",
-          children: (0, Tb.jsxs)("div", {
+          children: (0, Eb.jsxs)("div", {
             className: "WorldCodeAiBusy",
             role: "status",
-            children: [(0, Tb.jsx)("span", {
+            children: [(0, Eb.jsx)("span", {
               className: "WorldCodeAiSpinner"
-            }), (0, Tb.jsx)("span", {
+            }), (0, Eb.jsx)("span", {
               className: "WorldCodeAiBusyText",
-              children: (0, Tb.jsx)(Ub, {
+              children: (0, Eb.jsx)(Yb, {
                 title: "Testing\u2026",
                 isCalm: !0,
-                children: (0, Tb.jsx)("span", {
+                children: (0, Eb.jsx)("span", {
                   className: "WorldCodeAiBusyHint",
-                  children: cc ? "Your code block runs once in your world, as if you clicked it. If it shows an error, the AI fixes it." : `Your change runs in your world for ${TH.D/1e3} seconds. If it shows an error, the AI fixes it.`
+                  children: aa ? "Your code block runs once in your world, as if you clicked it. If it shows an error, the AI fixes it." : `Your change runs in your world for ${Ae.D/1e3} seconds. If it shows an error, the AI fixes it.`
                 })
               })
-            }), (0, Tb.jsx)("button", {
+            }), (0, Eb.jsx)("button", {
               className: "WorldCodeAiSecondaryButton WorldCodeAiStop",
-              onClick: Hk,
+              onClick: YA,
               children: "Stop"
             })]
           })
-        }), !Fk && rs.map(((bb, cb) => {
-          var sb, kb;
-          return (0, Tb.jsxs)("div", {
+        }), !CA && wU.map(((bb, ab) => {
+          var Ub, Ab;
+          return (0, Eb.jsxs)("div", {
             className: "WorldCodeAiEntry WorldCodeAiEntry-user WorldCodeAiQueued",
-            children: [(0, Tb.jsx)("p", {
-              children: null !== (sb = bb.shown) && void 0 !== sb ? sb : bb.text
-            }), (0, Tb.jsxs)("span", {
+            children: [(0, Eb.jsx)("p", {
+              children: null !== (Ub = bb.shown) && void 0 !== Ub ? Ub : bb.text
+            }), (0, Eb.jsxs)("span", {
               className: "WorldCodeAiQueuedNote",
-              children: [bb.id === As ? "Pick Bot.xd to send it" : null !== (kb = lM[cb]) && void 0 !== kb ? kb : "In line", (0, Tb.jsx)("button", {
+              children: [bb.id === lU ? "Pick Bot.xd to send it" : null !== (Ab = vL[ab]) && void 0 !== Ab ? Ab : "In line", (0, Eb.jsx)("button", {
                 className: "WorldCodeAiLinkButton",
                 onClick: () => {
-                  qc((cb => cb.filter((cb => cb.id !== bb.id))))
+                  oa((ab => ab.filter((ab => ab.id !== bb.id))))
                 },
                 children: "Delete"
               })]
             })]
           }, bb.id)
         }))]
-      }), hs && !Hc && (0, Tb.jsxs)("div", {
+      }), mU && !ea && (0, Eb.jsxs)("div", {
         className: "WorldCodeAiErrorBanner",
-        children: [(0, Tb.jsxs)("div", {
+        children: [(0, Eb.jsxs)("div", {
           className: "WorldCodeAiErrorPlain",
-          children: [void 0 !== gs.line && (0, Tb.jsxs)(Tb.Fragment, {
-            children: [(0, Tb.jsxs)("button", {
+          children: [void 0 !== pU.line && (0, Eb.jsxs)(Eb.Fragment, {
+            children: [(0, Eb.jsxs)("button", {
               className: "WorldCodeAiLinkButton",
               title: "Show this line in your code",
               onClick: () => {
-                var bb, cb;
-                zb(null !== (bb = gs.path) && void 0 !== bb ? bb : Pb, null !== (cb = gs.line) && void 0 !== cb ? cb : 1), (0, Mb.e)() && Zb()
+                var bb, ab;
+                Kb(null !== (bb = pU.path) && void 0 !== bb ? bb : db, null !== (ab = pU.line) && void 0 !== ab ? ab : 1), (0, Lb.g)() && rb()
               },
-              children: [gs.path && gs.path !== Pb ? `${gs.path} line` : "Line", " ", gs.line]
+              children: [pU.path && pU.path !== db ? `${pU.path} line` : "Line", " ", pU.line]
             }), ":", " "]
-          }), gs.text]
-        }), Rc && (0, Tb.jsx)("div", {
+          }), pU.text]
+        }), Va && (0, Eb.jsx)("div", {
           className: "WorldCodeAiErrorText",
-          children: hs
-        }), (0, Tb.jsxs)("div", {
+          children: mU
+        }), (0, Eb.jsxs)("div", {
           className: "WorldCodeAiErrorActions",
-          children: [(0, Tb.jsx)("button", {
-            ...eI.e,
+          children: [(0, Eb.jsx)("button", {
+            ...jB.g,
             className: "WorldCodeAiPrimaryButton",
             onClick: () => {
-              is((() => {
-                Sc(ib), zs.current(`Fix this error: ${hs}`)
+              hU((() => {
+                Ca(Gb), rU.current(`Fix this error: ${mU}`)
               }))
             },
             children: "Fix the error"
-          }), (0, Tb.jsx)("button", {
-            ...eI.e,
+          }), (0, Eb.jsx)("button", {
+            ...jB.g,
             className: "WorldCodeAiSecondaryButton",
             onClick: () => {
-              is((() => {
-                Sc(ib), zs.current(`Explain this error in simple words, and where it is in my code: ${hs}`)
+              hU((() => {
+                Ca(Gb), rU.current(`Explain this error in simple words, and where it is in my code: ${mU}`)
               }))
             },
             children: "Explain it"
-          }), (0, Tb.jsx)("button", {
+          }), (0, Eb.jsx)("button", {
             className: "WorldCodeAiLinkButton",
             onClick: () => {
-              Sc(ib)
+              Ca(Gb)
             },
             children: "Dismiss"
-          }), (0, Tb.jsx)("button", {
+          }), (0, Eb.jsx)("button", {
             className: "WorldCodeAiLinkButton WorldCodeAiErrorDetailsToggle",
             onClick: () => {
-              vc(!Rc)
+              Oa(!Va)
             },
-            children: Rc ? "Hide details" : "Show details"
+            children: Va ? "Hide details" : "Show details"
           })]
-        }), (0, Tb.jsx)("div", {
+        }), (0, Eb.jsx)("div", {
           className: "WorldCodeAiErrorNote",
           children: "Fix the error and Explain it send this error and your code to the AI."
         })]
-      }), dc && (0, Tb.jsxs)("div", {
+      }), la && (0, Eb.jsxs)("div", {
         className: "WorldCodeAiPicked",
-        children: [(0, Tb.jsxs)("span", {
-          children: ["Changing ", yf(dc), " of ", dc.path]
-        }), (0, Tb.jsx)("button", {
+        children: [(0, Eb.jsxs)("span", {
+          children: ["Changing ", pv(la), " of ", la.path]
+        }), (0, Eb.jsx)("button", {
           className: "WorldCodeAiLinkButton",
           onClick: () => {
-            Ac(null)
+            ta(null)
           },
           children: "Cancel"
         })]
-      }), (0, Tb.jsx)(pI, {
+      }), (0, Eb.jsx)(cB, {
         step: "aiAskBox",
-        children: (0, Tb.jsx)("form", {
+        children: (0, Eb.jsx)("form", {
           className: "WorldCodeAiInputRow",
           onSubmit: bb => {
-            bb.preventDefault(), Ks()
+            bb.preventDefault(), qU()
           },
-          children: (0, Tb.jsxs)("div", {
+          children: (0, Eb.jsxs)("div", {
             className: "WorldCodeAiAsk",
-            children: [(0, Tb.jsx)("textarea", {
-              ref: ns,
+            children: [(0, Eb.jsx)("textarea", {
+              ref: XU,
               className: "WorldCodeAiAskInput",
-              value: Kc,
+              value: ua,
               maxLength: 1e3,
               rows: 2,
-              placeholder: dc ? `How should ${yf(dc)} change?` : Ok ? "Or type your own answer here" : "Ask AI",
+              placeholder: la ? `How should ${pv(la)} change?` : hA ? "Or type your own answer here" : "Ask AI",
               onChange: bb => {
-                Zc(bb.target.value)
+                ra(bb.target.value)
               },
               onKeyDown: bb => {
-                bb.stopPropagation(), "Enter" !== bb.key || bb.shiftKey || bb.nativeEvent.isComposing || 229 === bb.nativeEvent.keyCode || (bb.preventDefault(), Ks())
+                bb.stopPropagation(), "Enter" !== bb.key || bb.shiftKey || bb.nativeEvent.isComposing || 229 === bb.nativeEvent.keyCode || (bb.preventDefault(), qU())
               }
-            }), (0, Tb.jsx)(fb.n, {
+            }), (0, Eb.jsx)(vb.m, {
               className: "WorldCodeAiSend",
               ariaLabel: "Send",
-              disabled: "" === Kc.trim() || !!Hc && zc.length >= 3,
-              onClick: Ks,
-              children: (0, Tb.jsx)(Xb.b, {
+              disabled: "" === ua.trim() || !!ea && Ka.length >= 3,
+              onClick: qU,
+              children: (0, Eb.jsx)(Pb.e, {
                 name: "arrow-up"
               })
             })]
           })
         })
-      }), (0, Tb.jsx)(pI, {
+      }), (0, Eb.jsx)(cB, {
         step: "aiModelChip",
-        children: (0, Tb.jsx)("div", {
-          className: ab()("WorldCodeAiLimit", Hc && "WorldCodeAiLimit-busy"),
-          children: (0, Tb.jsx)(kH, {
-            editsOn: Db ? yc : null,
-            freeOnce: Yc,
-            onFreeOnce: hc,
-            onAddKey: Zk,
+        children: (0, Eb.jsx)("div", {
+          className: Tb()("WorldCodeAiLimit", ea && "WorldCodeAiLimit-busy"),
+          children: (0, Eb.jsx)(be, {
+            editsOn: Fb ? Ia : null,
+            freeOnce: fa,
+            onFreeOnce: ma,
+            onAddKey: qA,
             children: (() => {
-              if (Hc) return 0 === rs.length ? "You can type your next request: it sends when this answer is done." : 1 === rs.length ? "1 request waiting: it sends when this answer is done." : `${rs.length} requests waiting: they send one at a time.`;
-              if (zk && Yc) return `Your next question goes to Bot.xd, then back to ${zk.model.name}.`;
-              if (zk) return `Your question and code go to ${eT(zk.provider,zk.baseUrl,!0)}.`;
-              if (Ak) {
-                const bb = null === wk ? null : function(bb, cb) {
-                  return bb <= cb ? null : `Limit resets in ${(0,cU.e)(Math.ceil((bb-cb)/6e4))}`
-                }(wk, Fc);
-                return null === bb ? eU(Ak) : (0, Tb.jsxs)(Tb.Fragment, {
-                  children: [(0, Tb.jsx)("span", {
+              if (ea) return 0 === wU.length ? "You can type your next request: it sends when this answer is done." : 1 === wU.length ? "1 request waiting: it sends when this answer is done." : `${wU.length} requests waiting: they send one at a time.`;
+              if (uA && fa) return `Your next question goes to Bot.xd, then back to ${uA.model.name}.`;
+              if (uA) return `Your question and code go to ${jE(uA.provider,uA.baseUrl,!0)}.`;
+              if (oA) {
+                const bb = null === lA ? null : function(bb, ab) {
+                  return bb <= ab ? null : `Limit resets in ${(0,nE.b)(Math.ceil((bb-ab)/6e4))}`
+                }(lA, ca);
+                return null === bb ? jY(oA) : (0, Eb.jsxs)(Eb.Fragment, {
+                  children: [(0, Eb.jsx)("span", {
                     className: "WorldCodeAiModelChipStatusLine",
-                    children: eU(Ak)
-                  }), (0, Tb.jsx)("span", {
+                    children: jY(oA)
+                  }), (0, Eb.jsx)("span", {
                     className: "WorldCodeAiModelChipStatusLine",
                     children: bb
                   })]
                 })
               }
-              return us > Fc ? `Send now and it starts by itself. ${ef(us-Fc)}` : null
+              return iU > ca ? `Send now and it starts by itself. ${Xv(iU-ca)}` : null
             })()
           })
         })
       })]
     });
-    return (0, Tb.jsx)(pI, {
-      step: xk,
-      onPrevious: "aiPanel" === xk ? Zb : void 0,
-      children: UW
+    return (0, Eb.jsx)(cB, {
+      step: VA,
+      onPrevious: "aiPanel" === VA ? rb : void 0,
+      children: MM
     })
   })),
-  SM = oM
-}, 39208: (bb, cb, sb) => {
-  sb.d(cb, {
-    c: () => Ib,
-    e: () => ab,
-    i: () => Wb
+  lL = oL
+}, 38856: (bb, ab, Ub) => {
+  Ub.d(ab, {
+    e: () => Bb,
+    f: () => Tb,
+    g: () => Mb
   });
-  const kb = 6e3;
+  const Ab = 6e3;
 
-  function Wb(bb, cb) {
-    return [Math.floor(bb[0] / cb) * cb, Math.floor(bb[1] / cb) * cb, Math.floor(bb[2] / cb) * cb]
+  function Mb(bb, ab) {
+    return [Math.floor(bb[0] / ab) * ab, Math.floor(bb[1] / ab) * ab, Math.floor(bb[2] / ab) * ab]
   }
 
-  function ab(bb) {
-    const cb = (null !== bb && void 0 !== bb ? bb : "").match(/-?\d+(?:\.\d+)?/g);
-    return cb && cb.length >= 3 ? [Number(cb[0]), Number(cb[1]), Number(cb[2])] : null
+  function Tb(bb) {
+    const ab = (null !== bb && void 0 !== bb ? bb : "").match(/-?\d+(?:\.\d+)?/g);
+    return ab && ab.length >= 3 ? [Number(ab[0]), Number(ab[1]), Number(ab[2])] : null
   }
 
-  function Tb(bb, cb) {
-    return bb === cb ? String(bb) : `${bb}-${cb}`
+  function Eb(bb, ab) {
+    return bb === ab ? String(bb) : `${bb}-${ab}`
   }
 
-  function Ub(bb, cb, sb, kb) {
-    const Wb = [];
-    let ab = new Map;
-    for (let Tb = bb[2]; Tb < bb[2] + cb; Tb++) {
-      const Ub = new Map;
-      let Ib = bb[0];
-      for (; Ib < bb[0] + cb;) {
-        const Wb = kb(Ib, sb, Tb);
-        let Hb = Ib;
-        for (; Hb + 1 < bb[0] + cb && kb(Hb + 1, sb, Tb) === Wb;) Hb++;
-        if (null !== Wb) {
-          const bb = `${Ib} ${Hb} ${Wb}`,
-            cb = ab.get(bb);
-          cb ? (cb.z1 = Tb, ab.delete(bb), Ub.set(bb, cb)) : Ub.set(bb, {
-            x0: Ib,
-            x1: Hb,
-            z0: Tb,
-            z1: Tb,
-            name: Wb
+  function Yb(bb, ab, Ub, Ab) {
+    const Mb = [];
+    let Tb = new Map;
+    for (let Eb = bb[2]; Eb < bb[2] + ab; Eb++) {
+      const Yb = new Map;
+      let Bb = bb[0];
+      for (; Bb < bb[0] + ab;) {
+        const Mb = Ab(Bb, Ub, Eb);
+        let eb = Bb;
+        for (; eb + 1 < bb[0] + ab && Ab(eb + 1, Ub, Eb) === Mb;) eb++;
+        if (null !== Mb) {
+          const bb = `${Bb} ${eb} ${Mb}`,
+            ab = Tb.get(bb);
+          ab ? (ab.z1 = Eb, Tb.delete(bb), Yb.set(bb, ab)) : Yb.set(bb, {
+            x0: Bb,
+            x1: eb,
+            z0: Eb,
+            z1: Eb,
+            name: Mb
           })
         }
-        Ib = Hb + 1
+        Bb = eb + 1
       }
-      Wb.push(...ab.values()), ab = Ub
+      Mb.push(...Tb.values()), Tb = Yb
     }
-    return Wb.push(...ab.values()), Wb.sort(((bb, cb) => bb.z0 - cb.z0 || bb.x0 - cb.x0)).map((bb => `x${Tb(bb.x0,bb.x1)} z${Tb(bb.z0,bb.z1)} ${bb.name}`))
+    return Mb.push(...Tb.values()), Mb.sort(((bb, ab) => bb.z0 - ab.z0 || bb.x0 - ab.x0)).map((bb => `x${Eb(bb.x0,bb.x1)} z${Eb(bb.z0,bb.z1)} ${bb.name}`))
   }
 
-  function Ib(bb, cb, sb, Wb) {
-    let ab = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : kb;
-    const Ib = [bb[0] + cb - 1, bb[1] + cb - 1, bb[2] + cb - 1],
-      Hb = null !== Wb && Wb.every(((cb, sb) => Math.floor(cb) >= bb[sb] && Math.floor(cb) <= Ib[sb])),
-      fb = [`The chunk from ${bb.join(" ")} to ${Ib.join(" ")}. Each line is one layer (y), with boxes of one block: x from-to, z from-to, then the block. Air is left out.`];
-    null !== Wb && fb.push(`The player's feet are at ${Wb.map(Math.floor).join(" ")}, ${Hb?"in this chunk":"outside this chunk"}.`);
-    const Mb = [];
-    for (let kb = bb[1]; kb <= Ib[1]; kb++) {
-      const Wb = Ub(bb, cb, kb, sb).join("; "),
-        ab = Mb[Mb.length - 1];
-      (null === ab || void 0 === ab ? void 0 : ab.boxes) === Wb ? ab.to = kb : Mb.push({
-        from: kb,
-        to: kb,
-        boxes: Wb
+  function Bb(bb, ab, Ub, Mb) {
+    let Tb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Ab;
+    const Bb = [bb[0] + ab - 1, bb[1] + ab - 1, bb[2] + ab - 1],
+      eb = null !== Mb && Mb.every(((ab, Ub) => Math.floor(ab) >= bb[Ub] && Math.floor(ab) <= Bb[Ub])),
+      vb = [`The chunk from ${bb.join(" ")} to ${Bb.join(" ")}. Each line is one layer (y), with boxes of one block: x from-to, z from-to, then the block. Air is left out.`];
+    null !== Mb && vb.push(`The player's feet are at ${Mb.map(Math.floor).join(" ")}, ${eb?"in this chunk":"outside this chunk"}.`);
+    const Lb = [];
+    for (let Ab = bb[1]; Ab <= Bb[1]; Ab++) {
+      const Mb = Yb(bb, ab, Ab, Ub).join("; "),
+        Tb = Lb[Lb.length - 1];
+      (null === Tb || void 0 === Tb ? void 0 : Tb.boxes) === Mb ? Tb.to = Ab : Lb.push({
+        from: Ab,
+        to: Ab,
+        boxes: Mb
       })
     }
-    const Xb = Mb.filter((bb => "" !== bb.boxes));
-    0 === Xb.length && fb.push("It is all air.");
-    let nb = fb.join("\n").length;
-    for (const kb of Xb) {
-      const bb = `y${Tb(kb.from,kb.to)}: ${kb.boxes}`;
-      if (nb += bb.length + 1, nb > ab) {
-        fb.push(`Cut short: the layers from y${kb.from} up aren't shown, as there are too many blocks.`);
+    const Pb = Lb.filter((bb => "" !== bb.boxes));
+    0 === Pb.length && vb.push("It is all air.");
+    let Xb = vb.join("\n").length;
+    for (const Ab of Pb) {
+      const bb = `y${Eb(Ab.from,Ab.to)}: ${Ab.boxes}`;
+      if (Xb += bb.length + 1, Xb > Tb) {
+        vb.push(`Cut short: the layers from y${Ab.from} up aren't shown, as there are too many blocks.`);
         break
       }
-      fb.push(bb)
+      vb.push(bb)
     }
-    return fb.join("\n")
+    return vb.join("\n")
   }
-}, 4545: (bb, cb, sb) => {
-  sb.d(cb, {
-    B: () => nb,
-    e: () => Wb,
-    h: () => Ib,
-    j: () => ab,
-    m: () => Tb,
-    n: () => Ub,
-    r: () => Qb,
-    v: () => fb,
-    x: () => Mb,
-    z: () => lb
+}, 4509: (bb, ab, Ub) => {
+  Ub.d(ab, {
+    B: () => Rb,
+    C: () => Xb,
+    d: () => Mb,
+    f: () => Bb,
+    j: () => Tb,
+    n: () => Eb,
+    q: () => Yb,
+    t: () => kb,
+    v: () => vb,
+    x: () => Lb
   });
-  var kb = sb(1572);
-  const Wb = 24e3,
-    ab = "/docs/llms.txt",
-    Tb = `${kb.e}${ab}`,
-    Ub = "/llms.txt",
-    Ib = "/docs/llms-full.txt";
+  var Ab = Ub(1505);
+  const Mb = 24e3,
+    Tb = "/docs/llms.txt",
+    Eb = `${Ab.d}${Tb}`,
+    Yb = "/llms.txt",
+    Bb = "/docs/llms-full.txt";
 
-  function Hb(bb) {
+  function eb(bb) {
     return bb || "index"
   }
 
-  function fb(bb) {
-    return `/docs/${Hb(bb)}.md`
+  function vb(bb) {
+    return `/docs/${eb(bb)}.md`
   }
 
-  function Mb(bb, cb) {
-    return `/docs/${Hb(bb)}/${cb+1}.md`
+  function Lb(bb, ab) {
+    return `/docs/${eb(bb)}/${ab+1}.md`
   }
-  const Xb = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
+  const Pb = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
 
-  function nb(bb) {
-    const cb = Xb.exec(bb);
-    return null === cb ? null : {
-      name: cb[1],
-      part: void 0 === cb[2] ? null : Number(cb[2])
+  function Xb(bb) {
+    const ab = Pb.exec(bb);
+    return null === ab ? null : {
+      name: ab[1],
+      part: void 0 === ab[2] ? null : Number(ab[2])
     }
   }
-  const mb = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
+  const jb = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
 
-  function lb(bb) {
-    const cb = mb.exec(bb);
-    if (null === cb) return null;
-    const [, sb = "", kb] = cb;
-    return void 0 === kb ? fb(sb) : Mb(sb, Number(kb) - 1)
+  function Rb(bb) {
+    const ab = jb.exec(bb);
+    if (null === ab) return null;
+    const [, Ub = "", Ab] = ab;
+    return void 0 === Ab ? vb(Ub) : Lb(Ub, Number(Ab) - 1)
   }
 
-  function Qb(bb) {
-    return `/docsHtml/${Hb(bb)}.html`
+  function kb(bb) {
+    return `/docsHtml/${eb(bb)}.html`
   }
 }
 };

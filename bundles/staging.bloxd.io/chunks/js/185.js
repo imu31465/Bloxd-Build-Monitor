@@ -1,43 +1,43 @@
 export const id = 185;
 export const ids = [185];
 export const modules = {
-  8819: (bb, cb, sb) => {
-    sb.r(cb), sb.d(cb, {
-      ALL_DEV_TOOLS: () => Tb,
-      coreDevTools: () => Hb,
-      devTools: () => Ib
+  8794: (bb, ab, Ub) => {
+    Ub.r(ab), Ub.d(ab, {
+      ALL_DEV_TOOLS: () => Eb,
+      coreDevTools: () => eb,
+      devTools: () => Bb
     });
-    var kb = sb(649),
-      Wb = sb(1291),
-      ab = sb(8827);
-    const Tb = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
-    async function Ub() {
+    var Ab = Ub(603),
+      Mb = Ub(1227),
+      Tb = Ub(8797);
+    const Eb = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
+    async function Yb() {
       const {
         noaDevTools: bb
-      } = await sb.e(230).then((() => sb(40495)));
+      } = await Ub.e(230).then((() => Ub(40174)));
       return bb
     }
-    const Ib = new class {
+    const Bb = new class {
         constructor() {
-          this.loadHost = Ub, this.tools = Tb
+          this.loadHost = Yb, this.tools = Eb
         }
         setHost(bb) {
-          this.tools = null === bb ? Tb : bb.tools, this.loadHost = null === bb ? Ub : async () => bb
+          this.tools = null === bb ? Eb : bb.tools, this.loadHost = null === bb ? Yb : async () => bb
         }
         supports(bb) {
           return this.tools.has(bb)
         }
-        async downloadScene(bb, cb) {
-          const sb = await this.loadHost();
-          await sb.downloadScene(bb, cb)
+        async downloadScene(bb, ab) {
+          const Ub = await this.loadHost();
+          await Ub.downloadScene(bb, ab)
         }
         async setAmbientLightIntensity(bb) {
-          const cb = await this.loadHost();
-          await cb.setAmbientLightIntensity(bb)
+          const ab = await this.loadHost();
+          await ab.setAmbientLightIntensity(bb)
         }
       },
-      Hb = {
-        tools: ab.c,
+      eb = {
+        tools: Tb.e,
         downloadScene: async () => {
           throw new Error("This client can't download the scene")
         },
@@ -45,8 +45,8 @@ export const modules = {
           throw new Error("This client can't set the ambient light")
         }
       };
-    kb.s && Ib.setHost(Hb), (0, Wb.o)((() => {
-      Ib.setHost(Hb)
+    Ab.o && Bb.setHost(eb), (0, Mb.p)((() => {
+      Bb.setHost(eb)
     }))
   }
 };

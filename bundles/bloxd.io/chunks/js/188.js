@@ -1,170 +1,170 @@
 export const id = 188;
 export const ids = [188];
 export const modules = {
-  38680: (bb, cb, sb) => {
-    sb.d(cb, {
-      d: () => Ub,
-      f: () => ab
+  38392: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      c: () => Yb,
+      e: () => Tb
     });
-    var kb = sb(3876);
-    let Wb = null;
+    var Ab = Ub(3804);
+    let Mb = null;
 
-    function ab(bb) {
-      return null !== Wb && bb === Wb
+    function Tb(bb) {
+      return null !== Mb && bb === Mb
     }
 
-    function Tb() {
-      this.mG = !1, this.stopPropagation = !1, this.lG = !1, this.disabled = !1
+    function Eb() {
+      this.Yu = !1, this.stopPropagation = !1, this.Xu = !1, this.disabled = !1
     }
-    class Ub {
-      constructor(bb, cb) {
+    class Yb {
+      constructor(bb, ab) {
         this.version = "0.7.0";
-        var sb = Object.assign({}, new Tb, cb || {});
-        this.element = bb || document, this.mG = !!sb.mG, this.stopPropagation = !!sb.stopPropagation, this.lG = !!sb.lG, this.disabled = !!sb.disabled, this.filterEvents = (bb, cb) => !0, this.down = new kb.EventEmitter, this.up = new kb.EventEmitter, this.state = {}, this.YG = {
+        var Ub = Object.assign({}, new Eb, ab || {});
+        this.element = bb || document, this.Yu = !!Ub.Yu, this.stopPropagation = !!Ub.stopPropagation, this.Xu = !!Ub.Xu, this.disabled = !!Ub.disabled, this.filterEvents = (bb, ab) => !0, this.down = new Ab.EventEmitter, this.up = new Ab.EventEmitter, this.state = {}, this.Hr = {
           dx: 0,
           dy: 0,
-          ubb: 0,
-          Ybb: 0,
-          hbb: 0
+          Dbb: 0,
+          zbb: 0,
+          ibb: 0
         }, this.pressCount = {}, this.releaseCount = {}, this._keyBindmap = {}, this._keyStates = {}, this._bindPressCount = {}, this._touches = {
           lastX: 0,
           lastY: 0,
           currID: null
-        }, "loading" !== document.readyState ? Hb(this) : document.addEventListener("DOMContentLoaded", (bb => {
-          Hb(this)
+        }, "loading" !== document.readyState ? eb(this) : document.addEventListener("DOMContentLoaded", (bb => {
+          eb(this)
         }), {
           once: !0
         })
       }
       bind(bb) {
-        for (var cb = arguments.length, sb = new Array(cb > 1 ? cb - 1 : 0), kb = 1; kb < cb; kb++) sb[kb - 1] = arguments[kb];
-        sb.forEach((cb => {
-          var sb = this._keyBindmap[cb] || [];
-          sb.includes(bb) || (sb.push(bb), this._keyBindmap[cb] = sb)
+        for (var ab = arguments.length, Ub = new Array(ab > 1 ? ab - 1 : 0), Ab = 1; Ab < ab; Ab++) Ub[Ab - 1] = arguments[Ab];
+        Ub.forEach((ab => {
+          var Ub = this._keyBindmap[ab] || [];
+          Ub.includes(bb) || (Ub.push(bb), this._keyBindmap[ab] = Ub)
         })), this.state[bb] = !!this.state[bb], this.pressCount[bb] = this.pressCount[bb] || 0, this.releaseCount[bb] = this.releaseCount[bb] || 0
       }
       unbind(bb) {
-        for (var cb in this._keyBindmap) {
-          var sb = this._keyBindmap[cb],
-            kb = sb.indexOf(bb);
-          kb > -1 && sb.splice(kb, 1)
+        for (var ab in this._keyBindmap) {
+          var Ub = this._keyBindmap[ab],
+            Ab = Ub.indexOf(bb);
+          Ab > -1 && Ub.splice(Ab, 1)
         }
       }
       getBindings() {
         var bb = {};
-        for (var cb in this._keyBindmap) {
-          this._keyBindmap[cb].forEach((sb => {
-            bb[sb] = bb[sb] || [], bb[sb].push(cb)
+        for (var ab in this._keyBindmap) {
+          this._keyBindmap[ab].forEach((Ub => {
+            bb[Ub] = bb[Ub] || [], bb[Ub].push(ab)
           }))
         }
         return bb
       }
-      aX() {
-        Ib(this.YG), Ib(this.pressCount), Ib(this.releaseCount)
+      qL() {
+        Bb(this.Hr), Bb(this.pressCount), Bb(this.releaseCount)
       }
     }
 
-    function Ib(bb) {
-      for (var cb in bb) bb[cb] = 0
+    function Bb(bb) {
+      for (var ab in bb) bb[ab] = 0
     }
 
-    function Hb(bb) {
-      window.addEventListener("keydown", Qb.bind(null, bb, !0), !1), window.addEventListener("keyup", Qb.bind(null, bb, !1), !1);
-      var cb = {
+    function eb(bb) {
+      window.addEventListener("keydown", kb.bind(null, bb, !0), !1), window.addEventListener("keyup", kb.bind(null, bb, !1), !1);
+      var ab = {
         passive: !0
       };
-      bb.element.addEventListener("touchstart", nb.bind(void 0, bb), {
+      bb.element.addEventListener("touchstart", Xb.bind(void 0, bb), {
         passive: !1
-      }), bb.element.addEventListener("touchend", lb.bind(void 0, bb), cb), bb.element.addEventListener("mousedown", eb.bind(null, bb, !0), cb), window.document.addEventListener("mouseup", eb.bind(null, bb, !1), cb), bb.element.addEventListener("touchmove", Cb.bind(null, bb), cb), bb.element.addEventListener("mousemove", Cb.bind(null, bb), cb), window.PointerEvent, bb.element.addEventListener("wheel", Nb.bind(null, bb), cb), bb.element.addEventListener("contextmenu", Vb.bind(null, bb), !1), window.addEventListener("blur", Yb.bind(null, bb), !1)
+      }), bb.element.addEventListener("touchend", Rb.bind(void 0, bb), ab), bb.element.addEventListener("mousedown", yb.bind(null, bb, !0), ab), window.document.addEventListener("mouseup", yb.bind(null, bb, !1), ab), bb.element.addEventListener("touchmove", Zb.bind(null, bb), ab), bb.element.addEventListener("mousemove", Zb.bind(null, bb), ab), window.PointerEvent, bb.element.addEventListener("wheel", Db.bind(null, bb), ab), bb.element.addEventListener("contextmenu", zb.bind(null, bb), !1), window.addEventListener("blur", fb.bind(null, bb), !1)
     }
-    var fb = 0,
-      Mb = 0,
-      Xb = null;
+    var vb = 0,
+      Lb = 0,
+      Pb = null;
 
-    function nb(bb, cb) {
-      cb.preventDefault(), mb(cb)
+    function Xb(bb, ab) {
+      ab.preventDefault(), jb(ab)
     }
 
-    function mb(bb) {
-      let cb = !1;
-      for (let sb = 0; sb < bb.touches.length; ++sb)
-        if (bb.touches[sb].identifier === Xb) {
-          cb = !0;
+    function jb(bb) {
+      let ab = !1;
+      for (let Ub = 0; Ub < bb.touches.length; ++Ub)
+        if (bb.touches[Ub].identifier === Pb) {
+          ab = !0;
           break
-        } if (!cb) {
-        const cb = bb.changedTouches[0];
-        fb = cb.clientX, Mb = cb.clientY, Xb = cb.identifier
+        } if (!ab) {
+        const ab = bb.changedTouches[0];
+        vb = ab.clientX, Lb = ab.clientY, Pb = ab.identifier
       }
     }
 
-    function lb(bb, cb) {
-      for (var sb = cb.changedTouches, kb = 0; kb < sb.length; ++kb) sb[kb].identifier === Xb && (Xb = null)
+    function Rb(bb, ab) {
+      for (var Ub = ab.changedTouches, Ab = 0; Ab < Ub.length; ++Ab) Ub[Ab].identifier === Pb && (Pb = null)
     }
 
-    function Qb(bb, cb, sb) {
+    function kb(bb, ab, Ub) {
       try {
-        hb(bb, sb), cb && sb.isTrusted && !sb.repeat && bb._keyStates[sb.code] && Jb(bb, sb.code)
+        mb(bb, Ub), ab && Ub.isTrusted && !Ub.repeat && bb._keyStates[Ub.code] && pb(bb, Ub.code)
       } finally {
-        gb(sb.code, cb, bb, sb)
+        Nb(Ub.code, ab, bb, Ub)
       }
     }
 
-    function eb(bb, cb, sb) {
+    function yb(bb, ab, Ub) {
       try {
-        hb(bb, sb)
+        mb(bb, Ub)
       } finally {
-        ! function(bb, cb, sb) {
-          if ("pointerId" in sb)
-            if (cb) {
+        ! function(bb, ab, Ub) {
+          if ("pointerId" in Ub)
+            if (ab) {
               if (null !== bb._touches.currID) return;
-              bb._touches.currID = sb.pointerId
+              bb._touches.currID = Ub.pointerId
             } else {
-              if (bb._touches.currID !== sb.pointerId) return;
+              if (bb._touches.currID !== Ub.pointerId) return;
               bb._touches.currID = null
-            } var kb = "button" in sb ? sb.button + 1 : 1;
-          gb("Mouse" + kb, cb, bb, sb)
-        }(bb, cb, sb)
+            } var Ab = "button" in Ub ? Ub.button + 1 : 1;
+          Nb("Mouse" + Ab, ab, bb, Ub)
+        }(bb, ab, Ub)
       }
     }
 
-    function Cb(bb, cb) {
-      var sb = cb.movementX || cb.mozMovementX || 0,
-        kb = cb.movementY || cb.mozMovementY || 0;
-      if (cb.touches && 0 === (sb | kb)) {
-        var Wb = function(bb) {
-          mb(bb);
-          for (let cb = 0; cb < bb.changedTouches.length; ++cb)
-            if (bb.changedTouches[cb].identifier == Xb) {
-              const sb = bb.changedTouches[cb],
-                kb = [sb.clientX - fb, sb.clientY - Mb];
-              return fb = sb.clientX, Mb = sb.clientY, kb
-            } return console.error(`Did not find touch id ${Xb}`), [0, 0]
-        }(cb);
-        sb = Wb[0], kb = Wb[1]
+    function Zb(bb, ab) {
+      var Ub = ab.movementX || ab.mozMovementX || 0,
+        Ab = ab.movementY || ab.mozMovementY || 0;
+      if (ab.touches && 0 === (Ub | Ab)) {
+        var Mb = function(bb) {
+          jb(bb);
+          for (let ab = 0; ab < bb.changedTouches.length; ++ab)
+            if (bb.changedTouches[ab].identifier == Pb) {
+              const Ub = bb.changedTouches[ab],
+                Ab = [Ub.clientX - vb, Ub.clientY - Lb];
+              return vb = Ub.clientX, Lb = Ub.clientY, Ab
+            } return console.error(`Did not find touch id ${Pb}`), [0, 0]
+        }(ab);
+        Ub = Mb[0], Ab = Mb[1]
       }
-      bb.YG.dx += sb, bb.YG.dy += kb
+      bb.Hr.dx += Ub, bb.Hr.dy += Ab
     }
 
-    function Nb(bb, cb) {
-      hb(bb, cb);
-      var sb = 1;
-      switch (cb.deltaMode) {
+    function Db(bb, ab) {
+      mb(bb, ab);
+      var Ub = 1;
+      switch (ab.deltaMode) {
         case 0:
-          sb = 1;
+          Ub = 1;
           break;
         case 1:
-          sb = 12;
+          Ub = 12;
           break;
         case 2:
-          sb = bb.element.clientHeight || window.innerHeight
+          Ub = bb.element.clientHeight || window.innerHeight
       }
-      bb.YG.ubb += (cb.deltaX || 0) * sb, bb.YG.Ybb += (cb.deltaY || 0) * sb, bb.YG.hbb += (cb.deltaZ || 0) * sb
+      bb.Hr.Dbb += (ab.deltaX || 0) * Ub, bb.Hr.zbb += (ab.deltaY || 0) * Ub, bb.Hr.ibb += (ab.deltaZ || 0) * Ub
     }
 
-    function Vb(bb, cb) {
-      if (!bb.lG) return cb.preventDefault(), !1
+    function zb(bb, ab) {
+      if (!bb.Xu) return ab.preventDefault(), !1
     }
-    var Lb = {
+    var xb = {
       AltLeft: "altKey",
       AltRight: "altKey",
       ControlLeft: "ctrlKey",
@@ -175,13 +175,13 @@ export const modules = {
       MetaRight: "metaKey"
     };
 
-    function ub(bb, cb) {
-      return !!bb[Lb[cb]] || ("AltRight" === cb || "ControlLeft" === cb) && "function" === typeof bb.getModifierState && !0 === bb.getModifierState("AltGraph")
+    function ib(bb, ab) {
+      return !!bb[xb[ab]] || ("AltRight" === ab || "ControlLeft" === ab) && "function" === typeof bb.getModifierState && !0 === bb.getModifierState("AltGraph")
     }
 
-    function Yb(bb, cb) {
-      for (var sb in bb._modifiersHeldThroughBlur = {}, Lb) bb._keyStates[sb] && (bb._modifiersHeldThroughBlur[sb] = !0);
-      cb && cb.isTrusted && function() {
+    function fb(bb, ab) {
+      for (var Ub in bb._modifiersHeldThroughBlur = {}, xb) bb._keyStates[Ub] && (bb._modifiersHeldThroughBlur[Ub] = !0);
+      ab && ab.isTrusted && function() {
         try {
           return window.self !== window.top
         } catch (bb) {
@@ -189,232 +189,232 @@ export const modules = {
         }
       }() && (clearTimeout(bb._blurRelease), bb._blurRelease = setTimeout((function() {
         if (!document.hasFocus())
-          for (var cb in bb._modifiersHeldThroughBlur = {}, bb._keyStates) bb._keyStates[cb] && !/^Mouse\d/.test(cb) && Jb(bb, cb)
+          for (var ab in bb._modifiersHeldThroughBlur = {}, bb._keyStates) bb._keyStates[ab] && !/^Mouse\d/.test(ab) && pb(bb, ab)
       }), 0))
     }
 
-    function hb(bb, cb) {
-      var sb = bb._modifiersHeldThroughBlur;
-      if (sb && cb.isTrusted && document.hasFocus())
-        for (var kb in sb) delete sb[kb], bb._keyStates[kb] && kb !== cb.code && (ub(cb, kb) || Jb(bb, kb))
+    function mb(bb, ab) {
+      var Ub = bb._modifiersHeldThroughBlur;
+      if (Ub && ab.isTrusted && document.hasFocus())
+        for (var Ab in Ub) delete Ub[Ab], bb._keyStates[Ab] && Ab !== ab.code && (ib(ab, Ab) || pb(bb, Ab))
     }
 
-    function Jb(bb, cb) {
-      const sb = {
-          code: cb,
+    function pb(bb, ab) {
+      const Ub = {
+          code: ab,
           preventDefault: () => {},
           stopPropagation: () => {}
         },
-        kb = Wb;
-      Wb = sb;
+        Ab = Mb;
+      Mb = Ub;
       try {
-        gb(cb, !1, bb, sb)
+        Nb(ab, !1, bb, Ub)
       } finally {
-        Wb = kb
+        Mb = Ab
       }
     }
 
-    function gb(bb, cb, sb, kb) {
-      var Wb = sb._keyBindmap[bb];
-      Wb && (Bb(sb._keyStates[bb], cb) && (sb._keyStates[bb] = cb, Wb.forEach((bb => {
-        (!sb.filterEvents || sb.filterEvents(kb, bb)) && function(bb, cb, sb, kb) {
-          var Wb = cb ? sb.pressCount : sb.releaseCount;
-          Wb[bb] = (Wb[bb] || 0) + 1;
-          var ab = sb._bindPressCount[bb] || 0;
-          (ab += cb ? 1 : -1) < 0 && (ab = 0);
-          sb._bindPressCount[bb] = ab;
-          var Tb = sb.state[bb];
-          if (Bb(Tb, ab)) {
-            sb.state[bb] = ab > 0;
-            var Ub = cb ? sb.down : sb.up;
-            sb.disabled || Ub.emit(bb, kb)
+    function Nb(bb, ab, Ub, Ab) {
+      var Mb = Ub._keyBindmap[bb];
+      Mb && (Wb(Ub._keyStates[bb], ab) && (Ub._keyStates[bb] = ab, Mb.forEach((bb => {
+        (!Ub.filterEvents || Ub.filterEvents(Ab, bb)) && function(bb, ab, Ub, Ab) {
+          var Mb = ab ? Ub.pressCount : Ub.releaseCount;
+          Mb[bb] = (Mb[bb] || 0) + 1;
+          var Tb = Ub._bindPressCount[bb] || 0;
+          (Tb += ab ? 1 : -1) < 0 && (Tb = 0);
+          Ub._bindPressCount[bb] = Tb;
+          var Eb = Ub.state[bb];
+          if (Wb(Eb, Tb)) {
+            Ub.state[bb] = Tb > 0;
+            var Yb = ab ? Ub.down : Ub.up;
+            Ub.disabled || Yb.emit(bb, Ab)
           }
-        }(bb, cb, sb, kb)
-      }))), "button" in kb || (sb.mG && !kb.defaultPrevented && kb.preventDefault(), sb.stopPropagation && kb.stopPropagation()))
+        }(bb, ab, Ub, Ab)
+      }))), "button" in Ab || (Ub.Yu && !Ab.defaultPrevented && Ab.preventDefault(), Ub.stopPropagation && Ab.stopPropagation()))
     }
 
-    function Bb(bb, cb) {
-      return bb ? !cb : cb
+    function Wb(bb, ab) {
+      return bb ? !ab : ab
     }
   },
-  36323: (bb, cb, sb) => {
-    sb.d(cb, {
-      c: () => nb,
-      d: () => mb
+  36083: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      d: () => Xb,
+      f: () => jb
     });
-    var kb = sb(64),
-      Wb = sb(2749),
-      ab = sb(1423),
-      Tb = sb(1912),
-      Ub = sb(36263),
-      Ib = sb(628),
-      Hb = sb(1033),
-      fb = sb.n(Hb),
-      Mb = sb(1087);
-    const Xb = {},
-      nb = (0, kb.memo)((function() {
-        const bb = (0, Wb.b)();
-        return (0, ab.f)("damagedByOtherPlayer", (cb => {
+    var Ab = Ub(52),
+      Mb = Ub(2708),
+      Tb = Ub(1345),
+      Eb = Ub(1858),
+      Yb = Ub(36038),
+      Bb = Ub(591),
+      eb = Ub(984),
+      vb = Ub.n(eb),
+      Lb = Ub(1023);
+    const Pb = {},
+      Xb = (0, Ab.memo)((function() {
+        const bb = (0, Mb.d)();
+        return (0, Tb.f)("damagedByOtherPlayer", (ab => {
           let {
-            Vk: sb,
-            direction: kb
-          } = cb;
-          const Wb = sb || "nonDirectional";
-          if (Xb[Wb]) {
-            const cb = Xb[Wb];
-            clearTimeout(cb.timeout), cb.direction = kb, cb.timeout = setTimeout((() => {
-              delete Xb[Wb], bb()
+            nU: Ub,
+            direction: Ab
+          } = ab;
+          const Mb = Ub || "nonDirectional";
+          if (Pb[Mb]) {
+            const ab = Pb[Mb];
+            clearTimeout(ab.timeout), ab.direction = Ab, ab.timeout = setTimeout((() => {
+              delete Pb[Mb], bb()
             }), 800)
-          } else Xb[Wb] = {
-            direction: kb,
-            Wy: null,
+          } else Pb[Mb] = {
+            direction: Ab,
+            JI: null,
             timeout: setTimeout((() => {
-              delete Xb[Wb], bb()
+              delete Pb[Mb], bb()
             }), 800)
           };
           bb()
-        })), (0, Tb.c)("kill", (cb => {
+        })), (0, Eb.c)("kill", (ab => {
           let {
-            killer: sb,
-            victim: kb
-          } = cb;
-          const Wb = kb.id;
-          sb.local && Wb && Wb in Xb && (clearTimeout(Xb[Wb].timeout), delete Xb[Wb], bb())
-        })), (0, kb.useEffect)((() => {
-          const bb = (0, Ub.i)("turnDamageIndicators", mb);
+            killer: Ub,
+            victim: Ab
+          } = ab;
+          const Mb = Ab.id;
+          Ub.local && Mb && Mb in Pb && (clearTimeout(Pb[Mb].timeout), delete Pb[Mb], bb())
+        })), (0, Ab.useEffect)((() => {
+          const bb = (0, Yb.g)("turnDamageIndicators", jb);
           return () => {
             bb();
-            for (const bb in Xb) clearTimeout(Xb[bb].timeout), delete Xb[bb]
+            for (const bb in Pb) clearTimeout(Pb[bb].timeout), delete Pb[bb]
           }
-        }), []), (0, Mb.jsx)("div", {
+        }), []), (0, Lb.jsx)("div", {
           className: "DirectionalDamage",
-          children: Object.entries(Xb).map((bb => {
-            let [cb, sb] = bb;
-            const kb = (0, Ib.L)(sb.direction);
-            return (0, Mb.jsx)("div", {
+          children: Object.entries(Pb).map((bb => {
+            let [ab, Ub] = bb;
+            const Ab = (0, Bb.I)(Ub.direction);
+            return (0, Lb.jsx)("div", {
               ref: bb => {
-                Xb[cb] && (Xb[cb].Wy = bb)
+                Pb[ab] && (Pb[ab].JI = bb)
               },
-              className: fb()("DamageIndicator", {
-                DamageIndicatorFullCircle: kb
+              className: vb()("DamageIndicator", {
+                DamageIndicatorFullCircle: Ab
               })
-            }, cb)
+            }, ab)
           }))
         })
       }));
 
-    function mb(bb) {
-      for (const cb in Xb) {
+    function jb(bb) {
+      for (const ab in Pb) {
         const {
-          direction: sb,
-          Wy: kb
-        } = Xb[cb];
-        if ((0, Ib.L)(sb)) continue;
-        const Wb = sb - bb;
-        kb.style.rotate = `${Wb}rad`
+          direction: Ub,
+          JI: Ab
+        } = Pb[ab];
+        if ((0, Bb.I)(Ub)) continue;
+        const Mb = Ub - bb;
+        Ab.style.rotate = `${Mb}rad`
       }
     }
   },
-  36151: (bb, cb, sb) => {
-    sb.d(cb, {
-      b: () => Wb,
-      c: () => ab
+  35935: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      e: () => Mb,
+      i: () => Tb
     });
-    let kb = !1;
+    let Ab = !1;
 
-    function Wb() {
-      return kb
+    function Mb() {
+      return Ab
     }
 
-    function ab(bb) {
-      return kb !== bb && (kb = bb, !0)
+    function Tb(bb) {
+      return Ab !== bb && (Ab = bb, !0)
     }
   },
-  8867: (bb, cb, sb) => {
-    sb.d(cb, {
-      c: () => ab,
-      f: () => Wb
+  8836: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      e: () => Tb,
+      f: () => Mb
     });
-    var kb = sb(19);
+    var Ab = Ub(19);
 
-    function Wb(bb, cb) {
-      return bb && !cb
+    function Mb(bb, ab) {
+      return bb && !ab
     }
 
-    function ab() {
-      return Wb(kb.d.get("isTouchScreen"), kb.d.get("clientEscMenuOptions").touchActionButtons)
+    function Tb() {
+      return Mb(Ab.c.get("isTouchScreen"), Ab.c.get("clientEscMenuOptions").touchActionButtons)
     }
   },
-  40103: (bb, cb, sb) => {
-    sb.r(cb), sb.d(cb, {
-      startPadGameplay: () => Vb
+  39789: (bb, ab, Ub) => {
+    Ub.r(ab), Ub.d(ab, {
+      startPadGameplay: () => zb
     });
-    sb(39969);
-    var kb = sb(39971),
-      Wb = sb(3565),
-      ab = sb(19),
-      Tb = sb(38644),
-      Ub = sb(3470),
-      Ib = sb(38665),
-      Hb = sb(26),
-      fb = sb(2612),
-      Mb = sb(38036),
-      Xb = sb(8468),
-      nb = sb(39977);
-    const mb = {
+    Ub(39663);
+    var Ab = Ub(39671),
+      Mb = Ub(3433),
+      Tb = Ub(19),
+      Eb = Ub(38366),
+      Yb = Ub(3347),
+      Bb = Ub(38379),
+      eb = Ub(22),
+      vb = Ub(2549),
+      Lb = Ub(37763),
+      Pb = Ub(8423),
+      Xb = Ub(39679);
+    const jb = {
       yawRadPerSec: 0,
       pitchRadPerSec: 0
     };
-    var lb = sb(39998),
-      Qb = sb(8442);
-    const eb = bb => bb.padSneakToggled || !!ab.d.get("clientEscMenuOptions").crouchIsToggle && bb.crouchToggled,
-      Cb = () => {
+    var Rb = Ub(39695),
+      kb = Ub(8394);
+    const yb = bb => bb.padSneakToggled || !!Tb.c.get("clientEscMenuOptions").crouchIsToggle && bb.crouchToggled,
+      Zb = () => {
         const bb = (() => {
-          const bb = (0, Xb.d)();
-          let cb = mb;
-          const sb = new nb.c;
-          let kb = !1,
-            Wb = 0;
-          const ab = () => {
-            const sb = performance.now(),
-              ab = 0 === Wb ? 0 : sb - Wb;
-            if (Wb = sb, !kb) return bb.discardPending(), null;
-            const Tb = (0, nb.j)(cb, ab),
-              Ub = bb.drainLookDelta(),
-              Ib = (0, Mb.i)();
+          const bb = (0, Pb.b)();
+          let ab = jb;
+          const Ub = new Xb.c;
+          let Ab = !1,
+            Mb = 0;
+          const Tb = () => {
+            const Ub = performance.now(),
+              Tb = 0 === Mb ? 0 : Ub - Mb;
+            if (Mb = Ub, !Ab) return bb.discardPending(), null;
+            const Eb = (0, Xb.p)(ab, Tb),
+              Yb = bb.drainLookDelta(),
+              Bb = (0, Lb.i)();
             return {
-              Eu: (Tb.Eu + Ub.Eu) * Ib,
-              bY: (Tb.bY + Ub.bY) * Ib
+              XN: (Eb.XN + Yb.XN) * Bb,
+              kN: (Eb.kN + Yb.kN) * Bb
             }
           };
           return {
-            update: (bb, Wb, Tb, Ub) => {
-              bb.camera.xZ !== ab && (bb.camera.xZ = ab), kb = !0, cb = (0, nb.m)(sb, Wb, Tb, Ub, performance.now())
+            update: (bb, Mb, Eb, Yb) => {
+              bb.camera.Kw !== Tb && (bb.camera.Kw = Tb), Ab = !0, ab = (0, Xb.s)(Ub, Mb, Eb, Yb, performance.now())
             },
             release: () => {
-              kb = !1, cb = mb, sb.reset()
+              Ab = !1, ab = jb, Ub.reset()
             },
             uninstall: bb => {
-              bb.camera.xZ === ab && (bb.camera.xZ = null)
+              bb.camera.Kw === Tb && (bb.camera.Kw = null)
             }
           }
         })();
         return {
-          update: (cb, sb, kb) => {
-            bb.update((0, fb.e)(), cb, sb, kb)
+          update: (ab, Ub, Ab) => {
+            bb.update((0, vb.h)(), ab, Ub, Ab)
           },
           release: bb.release,
           uninstall: () => {
-            const cb = (0, fb.e)();
-            cb && bb.uninstall(cb)
+            const ab = (0, vb.h)();
+            ab && bb.uninstall(ab)
           }
         }
       };
-    var Nb = sb(39989);
-    sb(37250), sb(8345);
-    sb(8359).e;
-    const Vb = () => {
-      const bb = (0, Nb.d)((() => {
+    var Db = Ub(39689);
+    Ub(37021), Ub(8293);
+    Ub(8311).b;
+    const zb = () => {
+      const bb = (0, Db.b)((() => {
           const bb = {
             x: 0,
             y: 0,
@@ -427,24 +427,24 @@ export const modules = {
             sprintHeld: !1
           };
           return {
-            bodies: () => (0, Tb.b)(),
-            look: Cb(),
-            move: (cb, sb) => {
-              const kb = (0, fb.e)(),
-                Wb = kb.zN.ecb();
-              if (bb.x = cb.x, bb.y = cb.y, bb.magnitude = cb.magnitude, bb.headingOffset = cb.headingOffset, bb.jumpHeld = cb.jumpHeld, cb.jumpPressed && (bb.jumpPressedSinceTick = !0), bb.running = cb.running, bb.sprintHeld = cb.sprintHeld, sb) {
-                const cb = (0, lb.f)({
-                  ...sb,
-                  descending: kb.zN.Cbb(kb.yJ).shouldIgnoreCrouchingSpeedReduction(),
-                  canCrouch: !!kb.iN.canCrouch,
-                  toggled: eb(Wb)
+            bodies: () => (0, Eb.d)(),
+            look: Zb(),
+            move: (ab, Ub) => {
+              const Ab = (0, vb.h)(),
+                Mb = Ab.wZ.kab();
+              if (bb.x = ab.x, bb.y = ab.y, bb.magnitude = ab.magnitude, bb.headingOffset = ab.headingOffset, bb.jumpHeld = ab.jumpHeld, ab.jumpPressed && (bb.jumpPressedSinceTick = !0), bb.running = ab.running, bb.sprintHeld = ab.sprintHeld, Ub) {
+                const ab = (0, Rb.g)({
+                  ...Ub,
+                  descending: Ab.wZ.Rbb(Ab.ZH).shouldIgnoreCrouchingSpeedReduction(),
+                  canCrouch: !!Ab.HZ.canCrouch,
+                  toggled: yb(Mb)
                 });
-                bb.crouchHeld = cb.crouchHeld, Wb.padSneakToggled = cb.toggled, Wb.crouchToggled = !1, (0, Qb.h)(cb.toggled)
+                bb.crouchHeld = ab.crouchHeld, Mb.padSneakToggled = ab.toggled, Mb.crouchToggled = !1, (0, kb.f)(ab.toggled)
               }
-              Wb.gamepad = bb
+              Mb.gamepad = bb
             },
             stopMoving: () => {
-              var cb;
+              var ab;
               Object.assign(bb, {
                 x: 0,
                 y: 0,
@@ -456,614 +456,614 @@ export const modules = {
                 running: !1,
                 sprintHeld: !1
               });
-              const sb = null === (cb = (0, fb.e)()) || void 0 === cb ? void 0 : cb.zN.ecb();
-              (null === sb || void 0 === sb ? void 0 : sb.gamepad) === bb && (sb.gamepad = null)
+              const Ub = null === (ab = (0, vb.h)()) || void 0 === ab ? void 0 : ab.wZ.kab();
+              (null === Ub || void 0 === Ub ? void 0 : Ub.gamepad) === bb && (Ub.gamepad = null)
             },
             uninstall: () => {},
             deviceChanged: bb => {
-              const cb = (0, fb.e)(),
-                sb = null === cb || void 0 === cb ? void 0 : cb.zN.ecb();
-              "touch" === bb ? ((0, Qb.h)(!1), null !== sb && void 0 !== sb && sb.padSneakToggled && (sb.padSneakToggled = !1, sb.isTouchscreen && !sb.gamepad && cb.zN.qbb(cb.yJ).setCrouching(!!cb.iN.canCrouch && sb.touchCrouch))) : "gamepad" === bb && sb && (0, Qb.h)(eb(sb))
+              const ab = (0, vb.h)(),
+                Ub = null === ab || void 0 === ab ? void 0 : ab.wZ.kab();
+              "touch" === bb ? ((0, kb.f)(!1), null !== Ub && void 0 !== Ub && Ub.padSneakToggled && (Ub.padSneakToggled = !1, Ub.isTouchscreen && !Ub.gamepad && ab.wZ.Kbb(ab.ZH).setCrouching(!!ab.HZ.canCrouch && Ub.touchCrouch))) : "gamepad" === bb && Ub && (0, kb.f)(yb(Ub))
             },
             hasPlayer: () => {
               var bb;
-              return !(null === (bb = (0, fb.e)()) || void 0 === bb || !bb.yJ)
+              return !(null === (bb = (0, vb.h)()) || void 0 === bb || !bb.ZH)
             },
             isPlayerDead: () => {
               var bb;
-              const cb = (0, fb.e)();
-              return !1 === (null === (bb = cb.zN.fcb(cb.yJ)) || void 0 === bb ? void 0 : bb.isAlive)
+              const ab = (0, vb.h)();
+              return !1 === (null === (bb = ab.wZ.Bab(ab.ZH)) || void 0 === bb ? void 0 : bb.isAlive)
             },
             isReplayMode: () => {
-              var bb, cb;
-              return !(null === (bb = (0, fb.d)()) || void 0 === bb || null === (cb = bb.client) || void 0 === cb || !cb.isReplayMode())
+              var bb, ab;
+              return !(null === (bb = (0, vb.e)()) || void 0 === bb || null === (ab = bb.client) || void 0 === ab || !ab.isReplayMode())
             },
             isFreeCameraOn: () => {
-              var bb, cb, sb;
-              return !(null === (bb = (0, fb.d)()) || void 0 === bb || null === (cb = bb.client) || void 0 === cb || null === (sb = cb.freeCameraController) || void 0 === sb || !sb.isEnabled())
+              var bb, ab, Ub;
+              return !(null === (bb = (0, vb.e)()) || void 0 === bb || null === (ab = bb.client) || void 0 === ab || null === (Ub = ab.freeCameraController) || void 0 === Ub || !Ub.isEnabled())
             },
-            targetsBlock: () => !!(0, fb.e)().E_,
+            targetsBlock: () => !!(0, vb.h)().i_,
             selectedSlotEmpty: () => {
               var bb;
-              const cb = (0, fb.e)();
-              return !(null !== (bb = cb.zN.wbb(cb.yJ)) && void 0 !== bb && bb.getItemAtSelectedSlot())
+              const ab = (0, vb.h)();
+              return !(null !== (bb = ab.wZ.lbb(ab.ZH)) && void 0 !== bb && bb.getItemAtSelectedSlot())
             },
             pickBlockAllowed: () => {
-              const bb = (0, fb.e)().iN;
+              const bb = (0, vb.h)().HZ;
               return !!bb.creative && !!bb.canPickBlocks
             },
             scrollHotbar: bb => {
-              Hb.j.QQ("ScrollInventorySlot", bb)
+              eb.m.IR("ScrollInventorySlot", bb)
             },
-            hasFullInventory: () => (0, Ib.c)((0, fb.e)()),
-            hasLobbyLeaderboard: () => !!(0, fb.e)().iN.lobbyLeaderboardInfo,
+            hasFullInventory: () => (0, Bb.e)((0, vb.h)()),
+            hasLobbyLeaderboard: () => !!(0, vb.h)().HZ.lobbyLeaderboardInfo,
             contextActionInputs: () => {
-              var bb, cb, sb, kb;
-              const Wb = (0, fb.e)();
+              var bb, ab, Ub, Ab;
+              const Mb = (0, vb.h)();
               return {
-                holdingGun: !(null === (bb = Wb.zN.Mcb(Wb.yJ)) || void 0 === bb || null === (cb = bb.VV) || void 0 === cb || !cb.isGun()),
-                customButtons: null !== (sb = Wb.iN.customButtons) && void 0 !== sb ? sb : null,
-                touchscreenActionButton: null !== (kb = Wb.iN.touchscreenActionButton) && void 0 !== kb ? kb : null
+                holdingGun: !(null === (bb = Mb.wZ.eab(Mb.ZH)) || void 0 === bb || null === (ab = bb.dD) || void 0 === ab || !ab.isGun()),
+                customButtons: null !== (Ub = Mb.HZ.customButtons) && void 0 !== Ub ? Ub : null,
+                touchscreenActionButton: null !== (Ab = Mb.HZ.touchscreenActionButton) && void 0 !== Ab ? Ab : null
               }
             },
             pressTouchButton: bb => {
-              (0, Ub.sendColyMessage)(Wb.Qj, bb)
+              (0, Yb.sendColyMessage)(Mb.xj, bb)
             }
           }
         })()),
-        cb = (0, kb.e)(),
-        sb = null,
-        ab = null;
+        ab = (0, Ab.b)(),
+        Ub = null,
+        Tb = null;
       return () => {
-        bb(), cb(), null === sb || void 0 === sb || sb(), null === ab || void 0 === ab || ab()
+        bb(), ab(), null === Ub || void 0 === Ub || Ub(), null === Tb || void 0 === Tb || Tb()
       }
     }
   },
-  36247: (bb, cb, sb) => {
-    sb.d(cb, {
-      e: () => ab,
-      g: () => lb,
-      i: () => Qb,
-      l: () => Ub,
-      n: () => Xb,
-      o: () => eb,
-      q: () => Mb,
-      s: () => Nb,
-      v: () => mb,
-      z: () => Cb
+  36023: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      e: () => Tb,
+      i: () => Rb,
+      j: () => kb,
+      l: () => Yb,
+      n: () => Pb,
+      p: () => yb,
+      s: () => Lb,
+      u: () => Db,
+      v: () => jb,
+      x: () => Zb
     });
-    var kb = sb(19),
-      Wb = sb(26);
-    const ab = "clientGameInventoryButtonsChanged",
-      Tb = new Map;
+    var Ab = Ub(19),
+      Mb = Ub(22);
+    const Tb = "clientGameInventoryButtonsChanged",
+      Eb = new Map;
 
-    function Ub() {
-      return [...Tb.values()].sort(((bb, cb) => {
-        var sb, kb;
-        return (null !== (sb = bb.order) && void 0 !== sb ? sb : 0) - (null !== (kb = cb.order) && void 0 !== kb ? kb : 0)
+    function Yb() {
+      return [...Eb.values()].sort(((bb, ab) => {
+        var Ub, Ab;
+        return (null !== (Ub = bb.order) && void 0 !== Ub ? Ub : 0) - (null !== (Ab = ab.order) && void 0 !== Ab ? Ab : 0)
       }))
     }
-    let Ib = null;
+    let Bb = null;
 
-    function Hb(bb) {
-      Ib = bb
+    function eb(bb) {
+      Bb = bb
     }
-    let fb = !1;
+    let vb = !1;
 
-    function Mb(bb) {
-      fb = !0;
+    function Lb(bb) {
+      vb = !0;
       try {
         bb.onClick()
       } finally {
-        fb = !1
+        vb = !1
       }
-      bb.panel && "clientGame" === kb.d.get("openInGameMenuName") && Hb(bb.id)
+      bb.panel && "clientGame" === Ab.c.get("openInGameMenuName") && eb(bb.id)
+    }
+
+    function Pb() {
+      return vb
     }
 
     function Xb() {
-      return fb
+      return Yb().filter((bb => bb.panel && !bb.disabled))
     }
 
-    function nb() {
-      return Ub().filter((bb => bb.panel && !bb.disabled))
+    function jb(bb) {
+      const ab = Xb(),
+        Ub = ab.findIndex((bb => bb.id === Bb));
+      return !(Ub < 0 || ab.length < 2) && (Lb(ab[(Ub + bb + ab.length) % ab.length]), !0)
     }
 
-    function mb(bb) {
-      const cb = nb(),
-        sb = cb.findIndex((bb => bb.id === Ib));
-      return !(sb < 0 || cb.length < 2) && (Mb(cb[(sb + bb + cb.length) % cb.length]), !0)
+    function Rb() {
+      return null !== Bb && Xb().length > 1
     }
 
-    function lb() {
-      return null !== Ib && nb().length > 1
+    function kb() {
+      eb(null)
     }
 
-    function Qb() {
-      Hb(null)
+    function yb() {
+      "inventory" !== Ab.c.get("openInGameMenuName") && eb(null)
     }
 
-    function eb() {
-      "inventory" !== kb.d.get("openInGameMenuName") && Hb(null)
+    function Zb() {
+      const bb = Bb;
+      return eb(null), bb
     }
 
-    function Cb() {
-      const bb = Ib;
-      return Hb(null), bb
-    }
-
-    function Nb(bb) {
-      return Tb.set(bb.id, bb), Wb.j.QQ(ab, Ub(), !0), () => {
-        Tb.get(bb.id) === bb && (Tb.delete(bb.id), Wb.j.QQ(ab, Ub()))
+    function Db(bb) {
+      return Eb.set(bb.id, bb), Mb.m.IR(Tb, Yb(), !0), () => {
+        Eb.get(bb.id) === bb && (Eb.delete(bb.id), Mb.m.IR(Tb, Yb()))
       }
     }
   },
-  36240: (bb, cb, sb) => {
-    sb.d(cb, {
-      c: () => Ub,
-      e: () => Qb,
-      g: () => eb,
-      i: () => Xb,
-      l: () => Hb,
-      m: () => lb,
-      p: () => nb,
-      s: () => fb
+  36017: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      c: () => Yb,
+      g: () => kb,
+      i: () => yb,
+      j: () => Pb,
+      l: () => eb,
+      o: () => Rb,
+      s: () => Xb,
+      w: () => vb
     });
-    var kb = sb(19),
-      Wb = sb(26),
-      ab = sb(1287),
-      Tb = sb(36247);
-    const Ub = "clientGameUiChanged";
-    let Ib = null;
+    var Ab = Ub(19),
+      Mb = Ub(22),
+      Tb = Ub(1216),
+      Eb = Ub(36023);
+    const Yb = "clientGameUiChanged";
+    let Bb = null;
 
-    function Hb() {
-      return Ib
+    function eb() {
+      return Bb
     }
 
-    function fb(bb, cb) {
-      const sb = {
+    function vb(bb, ab) {
+      const Ub = {
         content: bb,
-        menu: cb
+        menu: ab
       };
-      return Ib = sb, Wb.j.QQ(Ub, Ib, !0), () => {
-        Ib === sb && (Ib = null, mb = !1, Qb(), Wb.j.QQ(Ub, null))
+      return Bb = Ub, Mb.m.IR(Yb, Bb, !0), () => {
+        Bb === Ub && (Bb = null, jb = !1, kb(), Mb.m.IR(Yb, null))
       }
     }
-    let Mb = null;
+    let Lb = null;
 
-    function Xb() {
-      return Mb
+    function Pb() {
+      return Lb
     }
 
-    function nb(bb) {
-      return Mb = bb, () => {
-        Mb === bb && (Mb = null)
+    function Xb(bb) {
+      return Lb = bb, () => {
+        Lb === bb && (Lb = null)
       }
     }
-    let mb = !1;
+    let jb = !1;
 
-    function lb() {
-      const bb = kb.d.get("openInGameMenuName");
-      "clientGame" !== bb && (mb = "inventory" === bb), (0, Tb.n)() || (0, Tb.i)(), (0, ab.n)(ab.b), kb.d.set({
+    function Rb() {
+      const bb = Ab.c.get("openInGameMenuName");
+      "clientGame" !== bb && (jb = "inventory" === bb), (0, Eb.n)() || (0, Eb.j)(), (0, Tb.h)(Tb.b), Ab.c.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function Qb() {
-      Cb(!1)
+    function kb() {
+      Zb(!1)
     }
 
-    function eb() {
-      Cb(mb)
+    function yb() {
+      Zb(jb)
     }
 
-    function Cb(bb) {
-      "clientGame" === kb.d.get("openInGameMenuName") && kb.d.set({
+    function Zb(bb) {
+      "clientGame" === Ab.c.get("openInGameMenuName") && Ab.c.set({
         openInGameMenuName: bb ? "inventory" : null
-      }), bb || (0, Tb.i)(), mb = !1
+      }), bb || (0, Eb.j)(), jb = !1
     }
   },
-  36142: (bb, cb, sb) => {
-    sb.d(cb, {
-      e: () => Ib
+  35929: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      c: () => Bb
     });
-    var kb = sb(334),
-      Wb = sb(19),
-      ab = sb(36151),
-      Tb = sb(1626),
-      Ub = sb(1917);
+    var Ab = Ub(307),
+      Mb = Ub(19),
+      Tb = Ub(35935),
+      Eb = Ub(1548),
+      Yb = Ub(1874);
 
-    function Ib(bb, cb) {
-      var sb, Ib, Hb;
-      if (!Wb.d.get("isKeydownEnabled") || bb.repeat) return;
-      const fb = bb.code;
-      "Escape" === bb.key ? (0, Tb.i)(bb) : null !== (sb = Ub.v.OpenSettings) && void 0 !== sb && sb.includes(fb) ? (0, Tb.v)(bb, kb.r.SETTINGS) : null !== (Ib = Ub.v.OpenCharacterCustomization) && void 0 !== Ib && Ib.includes(fb) ? (0, ab.b)() || (0, Tb.v)(bb, kb.r.CUSTOMISATION, cb()) : null !== (Hb = Ub.v.ShowDebugOverlay) && void 0 !== Hb && Hb.includes(fb) && Wb.d.set({
-        showDebugOverlay: !Wb.d.get("showDebugOverlay")
+    function Bb(bb, ab) {
+      var Ub, Bb, eb;
+      if (!Mb.c.get("isKeydownEnabled") || bb.repeat) return;
+      const vb = bb.code;
+      "Escape" === bb.key ? (0, Eb.f)(bb) : null !== (Ub = Yb.x.OpenSettings) && void 0 !== Ub && Ub.includes(vb) ? (0, Eb.q)(bb, Ab.j.SETTINGS) : null !== (Bb = Yb.x.OpenCharacterCustomization) && void 0 !== Bb && Bb.includes(vb) ? (0, Tb.e)() || (0, Eb.q)(bb, Ab.j.CUSTOMISATION, ab()) : null !== (eb = Yb.x.ShowDebugOverlay) && void 0 !== eb && eb.includes(vb) && Mb.c.set({
+        showDebugOverlay: !Mb.c.get("showDebugOverlay")
       })
     }
   },
-  36120: (bb, cb, sb) => {
-    sb.d(cb, {
-      e: () => Xb,
-      i: () => fb,
-      m: () => nb,
-      n: () => Mb
+  35909: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      e: () => Pb,
+      i: () => vb,
+      l: () => Xb,
+      m: () => Lb
     });
-    var kb = sb(344),
-      Wb = sb(664),
-      ab = sb(670),
-      Tb = sb(37);
-    const Ub = {
+    var Ab = Ub(325),
+      Mb = Ub(619),
+      Tb = Ub(631),
+      Eb = Ub(31);
+    const Yb = {
         idStorageKey: "playSessionId",
         lastActivityStorageKey: "playSessionLastActivityMs",
         expiryMs: 3e5
       },
-      Ib = "playSessionGameNameWithVariation",
-      Hb = "wasMatchmakePlayer";
+      Bb = "playSessionGameNameWithVariation",
+      eb = "wasMatchmakePlayer";
 
-    function fb() {
-      let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Tb.i;
-      (0, ab.j)(bb, Ub)
+    function vb() {
+      let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Eb.j;
+      (0, Tb.e)(bb, Yb)
     }
 
-    function Mb() {
-      (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Tb.i).setItem(Hb, !0)
+    function Lb() {
+      (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Eb.j).setItem(eb, !0)
     }
 
-    function Xb() {
-      let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Tb.i;
-      return (0, ab.d)(bb, Ub)
+    function Pb() {
+      let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Eb.j;
+      return (0, Tb.b)(bb, Yb)
     }
 
-    function nb(bb) {
-      let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Tb.i;
-      const sb = (0, ab.d)(cb, Ub),
-        fb = function(bb) {
-          const cb = bb.getItem(Ib);
-          return "string" !== typeof cb ? null : cb
-        }(cb),
-        Mb = function() {
-          return !0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Tb.i).getItem(Hb)
-        }(cb);
-      let Xb;
-      return Xb = null !== sb && null !== fb && (0, ab.f)(cb, Ub) && function(bb, cb, sb) {
-          const Wb = (0, kb.Wb)(bb),
-            ab = (0, kb.Wb)(cb),
-            Tb = (0, kb.Qb)(bb),
-            Ub = (0, kb.Qb)(cb);
-          return !(Wb !== ab || !sb) || Wb === ab && Tb === Ub
-        }(fb, bb, Mb) ? sb : (0, Wb.d)(), (0, ab.n)(cb, Ub, Xb), cb.setItem(Ib, bb),
+    function Xb(bb) {
+      let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Eb.j;
+      const Ub = (0, Tb.b)(ab, Yb),
+        vb = function(bb) {
+          const ab = bb.getItem(Bb);
+          return "string" !== typeof ab ? null : ab
+        }(ab),
+        Lb = function() {
+          return !0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Eb.j).getItem(eb)
+        }(ab);
+      let Pb;
+      return Pb = null !== Ub && null !== vb && (0, Tb.c)(ab, Yb) && function(bb, ab, Ub) {
+          const Mb = (0, Ab.Gb)(bb),
+            Tb = (0, Ab.Gb)(ab),
+            Eb = (0, Ab.Bb)(bb),
+            Yb = (0, Ab.Bb)(ab);
+          return !(Mb !== Tb || !Ub) || Mb === Tb && Eb === Yb
+        }(vb, bb, Lb) ? Ub : (0, Mb.c)(), (0, Tb.i)(ab, Yb, Pb), ab.setItem(Bb, bb),
         function() {
-          (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Tb.i).removeItem(Hb)
-        }(cb), Xb
+          (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Eb.j).removeItem(eb)
+        }(ab), Pb
     }
   },
-  36112: (bb, cb, sb) => {
-    sb.d(cb, {
-      e: () => Cb,
-      i: () => Nb
+  35900: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      e: () => Zb,
+      i: () => Db
     });
-    var kb = sb(1008),
-      Wb = sb(635),
-      ab = sb(344),
-      Tb = sb(1013),
-      Ub = sb(649),
-      Ib = sb(683),
-      Hb = sb(4257),
-      fb = sb(117),
-      Mb = sb(167),
-      Xb = sb(1704),
-      nb = sb(137),
-      mb = sb(36120),
-      lb = sb(37),
-      Qb = sb(667),
-      eb = sb(36127);
+    var Ab = Ub(950),
+      Mb = Ub(595),
+      Tb = Ub(325),
+      Eb = Ub(954),
+      Yb = Ub(603),
+      Bb = Ub(644),
+      eb = Ub(4201),
+      vb = Ub(101),
+      Lb = Ub(137),
+      Pb = Ub(1639),
+      Xb = Ub(116),
+      jb = Ub(35909),
+      Rb = Ub(31),
+      kb = Ub(622),
+      yb = Ub(35911);
 
-    function Cb() {
-      var bb, cb;
-      return [...null !== (bb = navigator.languages) && void 0 !== bb ? bb : [null !== (cb = navigator.language) && void 0 !== cb ? cb : "none"], "en-Gb"]
+    function Zb() {
+      var bb, ab;
+      return [...null !== (bb = navigator.languages) && void 0 !== bb ? bb : [null !== (ab = navigator.language) && void 0 !== ab ? ab : "none"], "en-Gb"]
     }
 
-    function Nb(bb, cb, sb, Nb, Vb) {
-      const Lb = (0, kb.k)(cb) ? (0, kb.s)(cb) : null,
-        ub = {
-          cookies: (0, Xb.getAllCookiesForGameNameWithVariation)(cb),
-          isMobile: (0, fb.isMobile)(),
-          isUsingCustomGameTexturePack: null !== Lb && Vb(Lb),
+    function Db(bb, ab, Ub, Db, zb) {
+      const xb = (0, Ab.l)(ab) ? (0, Ab.p)(ab) : null,
+        ib = {
+          cookies: (0, Pb.getAllCookiesForGameNameWithVariation)(ab),
+          isMobile: (0, vb.isMobile)(),
+          isUsingCustomGameTexturePack: null !== xb && zb(xb),
           generalCookies: {
-            joinDiscord: !!lb.h.getItem("DiscordPressed"),
-            newGo: Hb.b,
+            joinDiscord: !!Rb.f.getItem("DiscordPressed"),
+            newGo: eb.d,
             ...bb.getMetricsCookies(),
-            trafficCode: Nb,
-            compliance: fb.compliance
+            trafficCode: Db,
+            compliance: vb.compliance
           },
           browserInfo: {
             ua: window.navigator.userAgent,
-            name: (0, fb.getBrowserName)(),
-            version: (0, fb.getBrowserVersion)(),
+            name: (0, vb.getBrowserName)(),
+            version: (0, vb.getBrowserVersion)(),
             platform: navigator.platform,
-            platformType: (0, fb.getPlatformType)(),
-            deviceType: (0, nb.c)()
+            platformType: (0, vb.getPlatformType)(),
+            deviceType: (0, Xb.b)()
           },
           isLoggedIn: bb.isLoggedIn(),
-          lobbyName: sb,
-          languages: Cb(),
-          version: Wb.d,
-          siteUsed: Mb.r,
-          subsiteUsed: Mb.y,
-          playSessionId: (0, mb.m)(cb),
-          visitSessionId: (0, Qb.c)(),
-          clientReason: Ub.n.reason,
-          budgetBasis: (0, eb.f)(),
-          ...null !== Ib.l && {
-            diagClaim: Ib.l.claimId
+          lobbyName: Ub,
+          languages: Zb(),
+          version: Mb.b,
+          siteUsed: Lb.p,
+          subsiteUsed: Lb.s,
+          playSessionId: (0, jb.l)(ab),
+          visitSessionId: (0, kb.e)(),
+          clientReason: Yb.j.reason,
+          budgetBasis: (0, yb.g)(),
+          ...null !== Bb.q && {
+            diagClaim: Bb.q.claimId
           }
         };
-      return null !== Lb && (0, ab.Fc)(Lb) ? (ub.lobbyName = (0, kb.i)(Lb, (0, kb.o)(cb), sb), {
-        roomName: `classic_${Tb.f}`,
-        joinOptions: ub
+      return null !== xb && (0, Tb.oc)(xb) ? (ib.lobbyName = (0, Ab.i)(xb, (0, Ab.m)(ab), Ub), {
+        roomName: `classic_${Eb.e}`,
+        joinOptions: ib
       }) : {
-        roomName: cb,
-        joinOptions: ub
+        roomName: ab,
+        joinOptions: ib
       }
     }
   },
-  36139: (bb, cb, sb) => {
-    sb.d(cb, {
-      d: () => kb,
-      h: () => Wb,
-      k: () => ab
+  35921: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      e: () => Ab,
+      g: () => Mb,
+      j: () => Tb
     });
-    const kb = 1024,
-      Wb = 1024 * kb;
+    const Ab = 1024,
+      Mb = 1024 * Ab;
 
-    function ab(bb) {
-      return (bb / Wb).toFixed(1)
+    function Tb(bb) {
+      return (bb / Mb).toFixed(1)
     }
   },
-  36134: (bb, cb, sb) => {
-    sb.d(cb, {
-      c: () => ab,
-      d: () => Ub,
+  35913: (bb, ab, Ub) => {
+    Ub.d(ab, {
       e: () => Tb,
-      g: () => Ib,
-      h: () => Hb
+      g: () => Yb,
+      h: () => Eb,
+      l: () => Bb,
+      n: () => eb
     });
-    var kb = sb(223);
-    const Wb = 32 * sb(36139).h,
-      ab = 6144,
-      Tb = 4608,
-      Ub = 512;
+    var Ab = Ub(205);
+    const Mb = 32 * Ub(35921).g,
+      Tb = 6144,
+      Eb = 4608,
+      Yb = 512;
 
-    function Ib(bb) {
-      return Math.floor(Wb * bb / ab)
+    function Bb(bb) {
+      return Math.floor(Mb * bb / Tb)
     }
 
-    function Hb(bb) {
-      const cb = bb - Math.floor(bb / 6);
-      let sb = kb.e.maxChunkHorizAddDistance,
-        Wb = kb.e.maxChunkVertAddDistance;
-      if (fb(sb + 1, Wb + 1) <= cb) return null;
-      for (; fb(sb + 1, Wb + 1) > cb && (sb > 0 || Wb > 0);) sb > Wb ? sb-- : Wb--;
+    function eb(bb) {
+      const ab = bb - Math.floor(bb / 6);
+      let Ub = Ab.c.maxChunkHorizAddDistance,
+        Mb = Ab.c.maxChunkVertAddDistance;
+      if (vb(Ub + 1, Mb + 1) <= ab) return null;
+      for (; vb(Ub + 1, Mb + 1) > ab && (Ub > 0 || Mb > 0);) Ub > Mb ? Ub-- : Mb--;
       return {
-        horizontal: sb,
-        vertical: Wb
+        horizontal: Ub,
+        vertical: Mb
       }
     }
 
-    function fb(bb, cb) {
-      const sb = Math.max(bb, cb);
-      let kb = 0;
-      for (let Wb = -sb; Wb <= sb; Wb++)
-        for (let ab = -sb; ab <= sb; ab++)
-          for (let Tb = -sb; Tb <= sb; Tb++) Mb(bb, cb, Wb, ab, Tb) && kb++;
-      return kb
+    function vb(bb, ab) {
+      const Ub = Math.max(bb, ab);
+      let Ab = 0;
+      for (let Mb = -Ub; Mb <= Ub; Mb++)
+        for (let Tb = -Ub; Tb <= Ub; Tb++)
+          for (let Eb = -Ub; Eb <= Ub; Eb++) Lb(bb, ab, Mb, Tb, Eb) && Ab++;
+      return Ab
     }
 
-    function Mb(bb, cb, sb, kb, Wb) {
-      const ab = sb * sb + Wb * Wb;
-      return bb === cb ? ab + kb * kb <= bb * bb : bb > cb ? Math.abs(kb) <= cb && ab + kb * kb <= bb * bb : ab <= bb * bb && ab + kb * kb <= cb * cb
+    function Lb(bb, ab, Ub, Ab, Mb) {
+      const Tb = Ub * Ub + Mb * Mb;
+      return bb === ab ? Tb + Ab * Ab <= bb * bb : bb > ab ? Math.abs(Ab) <= ab && Tb + Ab * Ab <= bb * bb : Tb <= bb * bb && Tb + Ab * Ab <= ab * ab
     }
   },
-  36127: (bb, cb, sb) => {
-    sb.d(cb, {
-      c: () => ub,
-      f: () => Lb,
-      g: () => Vb
+  35911: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      e: () => ib,
+      g: () => xb,
+      k: () => zb
     });
-    var kb = sb(223),
-      Wb = sb(117),
-      ab = sb(2693),
-      Tb = sb(4146),
-      Ub = sb(656),
-      Ib = sb(36134);
-    const Hb = 1048576,
-      fb = 1024 * Hb,
-      Mb = 400 * Hb,
-      Xb = 147456,
-      nb = .5,
-      mb = 1.5 * fb,
-      lb = 768 * Hb;
+    var Ab = Ub(205),
+      Mb = Ub(101),
+      Tb = Ub(2630),
+      Eb = Ub(4072),
+      Yb = Ub(610),
+      Bb = Ub(35913);
+    const eb = 1048576,
+      vb = 1024 * eb,
+      Lb = 400 * eb,
+      Pb = 147456,
+      Xb = .5,
+      jb = 1.5 * vb,
+      Rb = 768 * eb;
 
-    function Qb(bb) {
-      return Mb + bb * Xb
+    function kb(bb) {
+      return Lb + bb * Pb
     }
 
-    function eb(bb, cb, sb) {
-      var Wb, Tb;
+    function yb(bb, ab, Ub) {
+      var Mb, Eb;
       let {
-        footprintBytes: Ub,
-        basis: Hb,
-        namesLimit: eb
+        footprintBytes: Yb,
+        basis: eb,
+        namesLimit: yb
       } = function(bb) {
         const {
-          os: cb,
-          deviceMemory: sb
+          os: ab,
+          deviceMemory: Ub
         } = bb;
-        if ("ios" === cb) switch ((0, ab.g)(bb)) {
+        if ("ios" === ab) switch ((0, Tb.h)(bb)) {
           case "ipad_m":
             return {
-              footprintBytes: Qb(Ib.c), basis: "ipad-m", namesLimit: !1
+              footprintBytes: kb(Bb.e), basis: "ipad-m", namesLimit: !1
             };
           case "ipad":
             return {
-              footprintBytes: lb, basis: "ipad", namesLimit: !0
+              footprintBytes: Rb, basis: "ipad", namesLimit: !0
             };
           case "iphone_6gb":
             return {
-              footprintBytes: mb, basis: "iphone-6gb", namesLimit: !0
+              footprintBytes: jb, basis: "iphone-6gb", namesLimit: !0
             };
           case "iphone":
             return {
-              footprintBytes: lb, basis: "iphone", namesLimit: !0
+              footprintBytes: Rb, basis: "iphone", namesLimit: !0
             }
         }
-        return "number" === typeof sb && Number.isFinite(sb) && sb > 0 ? {
-          footprintBytes: sb * fb * nb,
-          basis: `memory-${sb}`,
+        return "number" === typeof Ub && Number.isFinite(Ub) && Ub > 0 ? {
+          footprintBytes: Ub * vb * Xb,
+          basis: `memory-${Ub}`,
           namesLimit: !0
-        } : "android" === cb ? {
-          footprintBytes: lb,
+        } : "android" === ab ? {
+          footprintBytes: Rb,
           basis: "android",
           namesLimit: !0
         } : {
-          footprintBytes: Qb(Ib.e),
+          footprintBytes: kb(Bb.h),
           basis: "unreported",
           namesLimit: !1
         }
       }(bb);
-      if (sb) {
-        const bb = Math.min(Ub, Qb(Ib.c));
-        Ub = Mb + Math.max(0, bb - Mb) / 2, Hb += "+killed", eb = !0
+      if (Ub) {
+        const bb = Math.min(Yb, kb(Bb.e));
+        Yb = Lb + Math.max(0, bb - Lb) / 2, eb += "+killed", yb = !0
       }
-      null !== cb && Qb(cb) < Ub && (Ub = Qb(cb), Hb += "+learned", eb = !0);
-      const Cb = function(bb) {
-          const cb = Math.floor((bb - Mb) / Xb);
-          return Math.min(Ib.c, Math.max(Ib.d, cb))
-        }(Ub),
-        Nb = (0, Ib.h)(Cb);
+      null !== ab && kb(ab) < Yb && (Yb = kb(ab), eb += "+learned", yb = !0);
+      const Zb = function(bb) {
+          const ab = Math.floor((bb - Lb) / Pb);
+          return Math.min(Bb.e, Math.max(Bb.g, ab))
+        }(Yb),
+        Db = (0, Bb.n)(Zb);
       return {
-        footprintBytes: Ub,
-        shedFootprintBytes: eb ? Math.max(Ub, Qb(Cb)) : null,
-        chunkCap: Cb,
-        maxHorizDistance: null !== (Wb = null === Nb || void 0 === Nb ? void 0 : Nb.horizontal) && void 0 !== Wb ? Wb : kb.e.maxChunkHorizAddDistance,
-        maxVertDistance: null !== (Tb = null === Nb || void 0 === Nb ? void 0 : Nb.vertical) && void 0 !== Tb ? Tb : kb.e.maxChunkVertAddDistance,
-        basis: Hb
+        footprintBytes: Yb,
+        shedFootprintBytes: yb ? Math.max(Yb, kb(Zb)) : null,
+        chunkCap: Zb,
+        maxHorizDistance: null !== (Mb = null === Db || void 0 === Db ? void 0 : Db.horizontal) && void 0 !== Mb ? Mb : Ab.c.maxChunkHorizAddDistance,
+        maxVertDistance: null !== (Eb = null === Db || void 0 === Db ? void 0 : Db.vertical) && void 0 !== Eb ? Eb : Ab.c.maxChunkVertAddDistance,
+        basis: eb
       }
     }
-    let Cb = null;
+    let Zb = null;
 
-    function Nb() {
-      return eb({
-        os: (0, Wb.getOperatingSystem)(),
+    function Db() {
+      return yb({
+        os: (0, Mb.getOperatingSystem)(),
         deviceMemory: navigator.deviceMemory,
-        ...(0, ab.k)()
-      }, (0, Tb.d)(), (0, Ub.A)("wasm").length > 0)
+        ...(0, Tb.k)()
+      }, (0, Eb.f)(), (0, Yb.J)("wasm").length > 0)
     }
 
-    function Vb() {
-      return Cb ??= Nb(), Cb
+    function zb() {
+      return Zb ??= Db(), Zb
     }
 
-    function Lb() {
+    function xb() {
       var bb;
-      return (null !== (bb = Cb) && void 0 !== bb ? bb : Nb()).basis
+      return (null !== (bb = Zb) && void 0 !== bb ? bb : Db()).basis
     }
 
-    function ub(bb, cb) {
-      return bb.setChunkCap(cb.chunkCap)
+    function ib(bb, ab) {
+      return bb.setChunkCap(ab.chunkCap)
     }
   },
-  36434: (bb, cb, sb) => {
-    sb.d(cb, {
-      b: () => Wb,
-      e: () => ab,
-      f: () => Xb,
-      j: () => Ub,
-      l: () => Ib,
-      o: () => Hb,
-      r: () => Mb,
-      t: () => fb,
-      v: () => Tb
+  36195: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      e: () => Mb,
+      i: () => Tb,
+      l: () => Pb,
+      m: () => Yb,
+      o: () => Bb,
+      r: () => eb,
+      s: () => Lb,
+      u: () => vb,
+      x: () => Eb
     });
-    var kb = sb(1253);
-    let Wb = function(bb) {
+    var Ab = Ub(1189);
+    let Mb = function(bb) {
         return bb[bb.Join = 0] = "Join", bb[bb.Leave = 1] = "Leave", bb[bb.Push = 2] = "Push", bb[bb.Cursor = 3] = "Cursor", bb[bb.Submit = 4] = "Submit", bb[bb.ReloadAsVariation = 5] = "ReloadAsVariation", bb[bb.CreateFile = 6] = "CreateFile", bb[bb.RenameFile = 7] = "RenameFile", bb[bb.DeleteFile = 8] = "DeleteFile", bb[bb.SetEngine = 9] = "SetEngine", bb[bb.RenameFolder = 10] = "RenameFolder", bb
       }({}),
-      ab = function(bb) {
+      Tb = function(bb) {
         return bb[bb.Joined = 0] = "Joined", bb[bb.Updates = 1] = "Updates", bb[bb.Presence = 2] = "Presence", bb[bb.RemoteCursor = 3] = "RemoteCursor", bb[bb.ForceClose = 4] = "ForceClose", bb[bb.LobbyFilesChanged = 5] = "LobbyFilesChanged", bb[bb.EngineSettings = 6] = "EngineSettings", bb
       }({});
 
-    function Tb(bb) {
+    function Eb(bb) {
       return "lobby" === bb.kind ? `lobby:${bb.path}` : `codeBlock:${bb.pos[0]},${bb.pos[1]},${bb.pos[2]}`
     }
 
-    function Ub(bb) {
+    function Yb(bb) {
       if ("lobby" === bb) return {
         kind: "lobby",
-        path: kb.f
+        path: Ab.h
       };
       if (bb.startsWith("lobby:")) {
-        const cb = bb.slice(6);
-        return Mb(cb) ? {
+        const ab = bb.slice(6);
+        return Lb(ab) ? {
           kind: "lobby",
-          path: cb
+          path: ab
         } : null
       }
-      const cb = bb.match(/^codeBlock:(-?\d+),(-?\d+),(-?\d+)$/);
-      return cb ? {
+      const ab = bb.match(/^codeBlock:(-?\d+),(-?\d+),(-?\d+)$/);
+      return ab ? {
         kind: "codeBlock",
-        pos: [parseInt(cb[1]), parseInt(cb[2]), parseInt(cb[3])]
+        pos: [parseInt(ab[1]), parseInt(ab[2]), parseInt(ab[3])]
       } : null
     }
 
-    function Ib(bb) {
+    function Bb(bb) {
       return bb.endsWith(".d.ts")
     }
 
-    function Hb(bb) {
-      return bb.endsWith(".ts") && !Ib(bb)
+    function eb(bb) {
+      return bb.endsWith(".ts") && !Bb(bb)
     }
-    const fb = 64;
+    const vb = 64;
 
-    function Mb(bb) {
+    function Lb(bb) {
       if (!bb || bb !== bb.trim()) return !1;
-      if (bb.length > fb) return !1;
+      if (bb.length > vb) return !1;
       if (bb.startsWith("/") || bb.includes("\\") || bb.includes("\0")) return !1;
-      if (!Ib(bb) && !Hb(bb) && ! function(bb) {
+      if (!Bb(bb) && !eb(bb) && ! function(bb) {
           return bb.endsWith(".js") && !bb.endsWith(".min.js") && !bb.endsWith(".bundle.js")
         }(bb)) return !1;
-      const cb = bb.split("/");
-      for (const sb of cb)
-        if ("" === sb || "." === sb || ".." === sb) return !1;
+      const ab = bb.split("/");
+      for (const Ub of ab)
+        if ("" === Ub || "." === Ub || ".." === Ub) return !1;
       return !0
     }
-    const Xb = 14e3
+    const Pb = 14e3
   },
-  38599: (bb, cb, sb) => {
-    function kb(bb, cb, sb, kb, Wb) {
-      var ab = {};
-      return Object.keys(kb).forEach((function(bb) {
-        ab[bb] = kb[bb]
-      })), ab.enumerable = !!ab.enumerable, ab.configurable = !!ab.configurable, ("value" in ab || ab.initializer) && (ab.writable = !0), ab = sb.slice().reverse().reduce((function(sb, kb) {
-        return kb(bb, cb, sb) || sb
-      }), ab), Wb && void 0 !== ab.initializer && (ab.value = ab.initializer ? ab.initializer.call(Wb) : void 0, ab.initializer = void 0), void 0 === ab.initializer && (Object.defineProperty(bb, cb, ab), ab = null), ab
+  38325: (bb, ab, Ub) => {
+    function Ab(bb, ab, Ub, Ab, Mb) {
+      var Tb = {};
+      return Object.keys(Ab).forEach((function(bb) {
+        Tb[bb] = Ab[bb]
+      })), Tb.enumerable = !!Tb.enumerable, Tb.configurable = !!Tb.configurable, ("value" in Tb || Tb.initializer) && (Tb.writable = !0), Tb = Ub.slice().reverse().reduce((function(Ub, Ab) {
+        return Ab(bb, ab, Ub) || Ub
+      }), Tb), Mb && void 0 !== Tb.initializer && (Tb.value = Tb.initializer ? Tb.initializer.call(Mb) : void 0, Tb.initializer = void 0), void 0 === Tb.initializer && (Object.defineProperty(bb, ab, Tb), Tb = null), Tb
     }
-    sb.d(cb, {
-      b: () => kb
+    Ub.d(ab, {
+      d: () => Ab
     })
   },
-  38594: (bb, cb, sb) => {
-    function kb(bb, cb, sb, kb) {
-      sb && Object.defineProperty(bb, cb, {
-        enumerable: sb.enumerable,
-        configurable: sb.configurable,
-        writable: sb.writable,
-        value: sb.initializer ? sb.initializer.call(kb) : void 0
+  38323: (bb, ab, Ub) => {
+    function Ab(bb, ab, Ub, Ab) {
+      Ub && Object.defineProperty(bb, ab, {
+        enumerable: Ub.enumerable,
+        configurable: Ub.configurable,
+        writable: Ub.writable,
+        value: Ub.initializer ? Ub.initializer.call(Ab) : void 0
       })
     }
-    sb.d(cb, {
-      b: () => kb
+    Ub.d(ab, {
+      c: () => Ab
     })
   }
 };

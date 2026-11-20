@@ -1,76 +1,76 @@
 export const id = 239;
 export const ids = [239];
 export const modules = {
-  39221: (bb, cb, sb) => {
-    sb.r(cb), sb.d(cb, {
-      playDocsSound: () => Ub
+  38880: (bb, ab, Ub) => {
+    Ub.r(ab), Ub.d(ab, {
+      playDocsSound: () => Yb
     });
-    var kb = sb(4579),
-      Wb = sb(36359),
-      ab = sb(1208);
-    const Tb = new Map;
+    var Ab = Ub(4546),
+      Mb = Ub(36108),
+      Tb = Ub(1142);
+    const Eb = new Map;
 
-    function Ub(bb, cb, sb, Ub, Ib) {
-      let Hb, fb = null,
-        Mb = 0,
-        Xb = 0;
-      if (cb) Hb = new kb.Howl({
-        src: [`${ab.clientSideServerUrls.staticUrl}/sounds/music/${bb}.mp3`],
+    function Yb(bb, ab, Ub, Yb, Bb) {
+      let eb, vb = null,
+        Lb = 0,
+        Pb = 0;
+      if (ab) eb = new Ab.Howl({
+        src: [`${Tb.clientSideServerUrls.staticUrl}/sounds/music/${bb}.mp3`],
         html5: !0,
-        volume: sb
+        volume: Ub
       });
       else {
-        var nb;
-        fb = (0, Wb.g)(bb);
-        const cb = (0, Wb.f)(fb),
-          sb = null !== (nb = cb.sprite[bb]) && void 0 !== nb ? nb : null;
-        if (!sb) throw new Error(`Docs sound ${bb} is not in sprite sheet ${fb}`);
-        Mb = sb[0] / 1e3, Xb = sb[1] / 1e3, Hb = Tb.get(fb), Hb || (Hb = new kb.Howl({
-          ...cb,
+        var Xb;
+        vb = (0, Mb.k)(bb);
+        const ab = (0, Mb.i)(vb),
+          Ub = null !== (Xb = ab.sprite[bb]) && void 0 !== Xb ? Xb : null;
+        if (!Ub) throw new Error(`Docs sound ${bb} is not in sprite sheet ${vb}`);
+        Lb = Ub[0] / 1e3, Pb = Ub[1] / 1e3, eb = Eb.get(vb), eb || (eb = new Ab.Howl({
+          ...ab,
           volume: 1
-        }), Tb.set(fb, Hb))
+        }), Eb.set(vb, eb))
       }
-      const mb = cb ? Hb.play() : Hb.play(bb);
-      Hb.volume(sb, mb), Ub > 0 && Hb.seek(Mb + Ub, mb);
-      const lb = () => cb ? Hb.duration() : Xb;
-      let Qb = !1;
-      const eb = bb => {
-          Qb || (Qb = !0, Hb.off("play", Cb, mb), Hb.off("end", Nb, mb), Hb.off("loaderror", Lb), Hb.off("playerror", Vb, mb), cb && Hb.unload(), Ib.onEnd(bb))
+      const jb = ab ? eb.play() : eb.play(bb);
+      eb.volume(Ub, jb), Yb > 0 && eb.seek(Lb + Yb, jb);
+      const Rb = () => ab ? eb.duration() : Pb;
+      let kb = !1;
+      const yb = bb => {
+          kb || (kb = !0, eb.off("play", Zb, jb), eb.off("end", Db, jb), eb.off("loaderror", xb), eb.off("playerror", zb, jb), ab && eb.unload(), Bb.onEnd(bb))
         },
-        Cb = () => {
-          Ib.onPlay(lb())
+        Zb = () => {
+          Bb.onPlay(Rb())
         },
-        Nb = () => {
-          eb(!1)
+        Db = () => {
+          yb(!1)
         },
-        Vb = (cb, sb) => {
-          console.error(`Could not play docs sound ${bb}`, sb), eb(!0)
+        zb = (ab, Ub) => {
+          console.error(`Could not play docs sound ${bb}`, Ub), yb(!0)
         },
-        Lb = (bb, cb) => {
-          null !== fb && Tb.get(fb) === Hb && (Tb.delete(fb), Hb.unload()), Vb(bb, cb)
+        xb = (bb, ab) => {
+          null !== vb && Eb.get(vb) === eb && (Eb.delete(vb), eb.unload()), zb(bb, ab)
         };
-      return Hb.on("play", Cb, mb), Hb.once("end", Nb, mb), Hb.once("loaderror", Lb), Hb.once("playerror", Vb, mb), {
+      return eb.on("play", Zb, jb), eb.once("end", Db, jb), eb.once("loaderror", xb), eb.once("playerror", zb, jb), {
         pause: () => {
-          Hb.pause(mb)
+          eb.pause(jb)
         },
         resume: () => {
-          Hb.play(mb)
+          eb.play(jb)
         },
         seek: bb => {
-          const cb = lb(),
-            sb = Math.max(bb, 0);
-          Hb.seek(Mb + (cb > 0 ? Math.min(sb, cb) : sb), mb)
+          const ab = Rb(),
+            Ub = Math.max(bb, 0);
+          eb.seek(Lb + (ab > 0 ? Math.min(Ub, ab) : Ub), jb)
         },
-        aN: () => {
-          const bb = Hb.seek(mb);
-          return "number" === typeof bb ? Math.max(0, bb - Mb) : 0
+        eZ: () => {
+          const bb = eb.seek(jb);
+          return "number" === typeof bb ? Math.max(0, bb - Lb) : 0
         },
-        getDuration: lb,
+        getDuration: Rb,
         setVolume: bb => {
-          Hb.volume(bb, mb)
+          eb.volume(bb, jb)
         },
         stop: () => {
-          Qb || (Hb.stop(mb), eb(!1))
+          kb || (eb.stop(jb), yb(!1))
         }
       }
     }

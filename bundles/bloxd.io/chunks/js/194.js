@@ -1,159 +1,159 @@
 export const id = 194;
 export const ids = [194];
 export const modules = {
-  8993: (bb, cb, sb) => {
-    sb.r(cb), sb.d(cb, {
-      packDisplayName: () => mb,
-      packModelMessage: () => lb,
-      packModelSummary: () => eb,
-      refusedPackModels: () => Qb
+  8979: (bb, ab, Ub) => {
+    Ub.r(ab), Ub.d(ab, {
+      packDisplayName: () => jb,
+      packModelMessage: () => Rb,
+      packModelSummary: () => yb,
+      refusedPackModels: () => kb
     });
-    var kb = sb(8995),
-      Wb = sb(8999);
-    const ab = "DRACO",
-      Tb = 0,
-      Ub = 1,
-      Ib = 0,
-      Hb = 1,
-      fb = 32768;
+    var Ab = Ub(8982),
+      Mb = Ub(8985);
+    const Tb = "DRACO",
+      Eb = 0,
+      Yb = 1,
+      Bb = 0,
+      eb = 1,
+      vb = 32768;
 
-    function Mb(bb) {
-      const cb = new DataView(bb.buffer, bb.byteOffset, bb.byteLength);
-      let sb = 0;
-      const kb = () => {
-          if (sb >= bb.byteLength) throw new RangeError("past the stream");
-          return bb[sb++]
-        },
-        Wb = () => {
-          if (sb + 4 > bb.byteLength) throw new RangeError("past the stream");
-          const kb = cb.getUint32(sb, !0);
-          return sb += 4, kb
+    function Lb(bb) {
+      const ab = new DataView(bb.buffer, bb.byteOffset, bb.byteLength);
+      let Ub = 0;
+      const Ab = () => {
+          if (Ub >= bb.byteLength) throw new RangeError("past the stream");
+          return bb[Ub++]
         },
         Mb = () => {
+          if (Ub + 4 > bb.byteLength) throw new RangeError("past the stream");
+          const Ab = ab.getUint32(Ub, !0);
+          return Ub += 4, Ab
+        },
+        Lb = () => {
           let bb = 0;
-          for (let cb = 0; cb < 35; cb += 7) {
-            const sb = kb();
-            if (bb += (127 & sb) * 2 ** cb, 0 === (128 & sb)) return bb
+          for (let ab = 0; ab < 35; ab += 7) {
+            const Ub = Ab();
+            if (bb += (127 & Ub) * 2 ** ab, 0 === (128 & Ub)) return bb
           }
           throw new RangeError("varint too long")
         };
       try {
-        for (let bb = 0; bb < ab.length; bb++)
-          if (kb() !== ab.charCodeAt(bb)) return null;
-        const cb = kb(),
-          Xb = kb(),
-          nb = kb(),
-          mb = kb(),
-          lb = kb() | kb() << 8;
-        if (2 !== cb) return null;
-        0 !== (lb & fb) && function(bb, cb, sb) {
-          const kb = () => {
-              cb(sb())
+        for (let bb = 0; bb < Tb.length; bb++)
+          if (Ab() !== Tb.charCodeAt(bb)) return null;
+        const ab = Ab(),
+          Pb = Ab(),
+          Xb = Ab(),
+          jb = Ab(),
+          Rb = Ab() | Ab() << 8;
+        if (2 !== ab) return null;
+        0 !== (Rb & vb) && function(bb, ab, Ub) {
+          const Ab = () => {
+              ab(Ub())
             },
-            Wb = () => {
-              let sb = 1,
-                Wb = !0;
-              for (; sb > 0;) {
-                sb--, Wb || kb(), Wb = !1;
-                const ab = bb();
-                for (let sb = 0; sb < ab; sb++) kb(), cb(bb());
-                sb += bb()
+            Mb = () => {
+              let Ub = 1,
+                Mb = !0;
+              for (; Ub > 0;) {
+                Ub--, Mb || Ab(), Mb = !1;
+                const Tb = bb();
+                for (let Ub = 0; Ub < Tb; Ub++) Ab(), ab(bb());
+                Ub += bb()
               }
             },
-            ab = bb();
-          for (let Tb = 0; Tb < ab; Tb++) bb(), Wb();
-          Wb()
-        }(Mb, (cb => {
-          if (sb + cb > bb.byteLength) throw new RangeError("past the stream");
-          sb += cb
-        }), kb);
-        const Qb = Xb < 2 ? Wb : Mb;
-        if (nb === Tb) return {
+            Tb = bb();
+          for (let Eb = 0; Eb < Tb; Eb++) bb(), Mb();
+          Mb()
+        }(Lb, (ab => {
+          if (Ub + ab > bb.byteLength) throw new RangeError("past the stream");
+          Ub += ab
+        }), Ab);
+        const kb = Pb < 2 ? Mb : Lb;
+        if (Xb === Eb) return {
           faces: 0,
-          vertices: Wb()
+          vertices: Mb()
         };
-        if (nb !== Ub) return null;
-        if (mb === Ib) {
+        if (Xb !== Yb) return null;
+        if (jb === Bb) {
           return {
-            faces: Qb(),
-            vertices: Qb()
+            faces: kb(),
+            vertices: kb()
           }
         }
-        if (mb !== Hb) return null;
-        kb(), Xb < 2 && Mb();
-        const eb = Mb();
+        if (jb !== eb) return null;
+        Ab(), Pb < 2 && Lb();
+        const yb = Lb();
         return {
-          faces: Mb(),
-          vertices: eb
+          faces: Lb(),
+          vertices: yb
         }
       } catch {
         return null
       }
     }
 
-    function Xb(bb, cb, sb) {
-      var kb, Wb;
-      if (null === (kb = null === (Wb = bb.extensionsUsed) || void 0 === Wb ? void 0 : Wb.includes("KHR_draco_mesh_compression")) || void 0 === kb || !kb) return null;
-      for (const mb of null !== (ab = bb.meshes) && void 0 !== ab ? ab : []) {
-        var ab;
-        for (const kb of mb.primitives) {
-          var Tb, Ub, Ib, Hb, fb, Xb;
-          const Wb = null === (Tb = kb.extensions) || void 0 === Tb ? void 0 : Tb.KHR_draco_mesh_compression;
-          if ("object" !== typeof Wb || null === Wb) continue;
-          const ab = null === (Ub = bb.bufferViews) || void 0 === Ub ? void 0 : Ub[Wb.bufferView];
-          if (null === cb || void 0 === ab) return nb;
-          const mb = null !== (Ib = ab.byteOffset) && void 0 !== Ib ? Ib : 0,
-            lb = Mb(cb.subarray(mb, mb + ab.byteLength));
-          if (null === lb && !sb) continue;
-          const Qb = null !== (Hb = bb.accessors) && void 0 !== Hb ? Hb : [],
-            eb = null === (fb = Qb[kb.attributes.POSITION]) || void 0 === fb ? void 0 : fb.count,
-            Cb = void 0 === kb.indices ? 0 : null === (Xb = Qb[kb.indices]) || void 0 === Xb ? void 0 : Xb.count;
-          if (null === lb || void 0 === eb || void 0 === Cb || 3 * lb.faces !== Cb || lb.vertices > eb) return nb
+    function Pb(bb, ab, Ub) {
+      var Ab, Mb;
+      if (null === (Ab = null === (Mb = bb.extensionsUsed) || void 0 === Mb ? void 0 : Mb.includes("KHR_draco_mesh_compression")) || void 0 === Ab || !Ab) return null;
+      for (const jb of null !== (Tb = bb.meshes) && void 0 !== Tb ? Tb : []) {
+        var Tb;
+        for (const Ab of jb.primitives) {
+          var Eb, Yb, Bb, eb, vb, Pb;
+          const Mb = null === (Eb = Ab.extensions) || void 0 === Eb ? void 0 : Eb.KHR_draco_mesh_compression;
+          if ("object" !== typeof Mb || null === Mb) continue;
+          const Tb = null === (Yb = bb.bufferViews) || void 0 === Yb ? void 0 : Yb[Mb.bufferView];
+          if (null === ab || void 0 === Tb) return Xb;
+          const jb = null !== (Bb = Tb.byteOffset) && void 0 !== Bb ? Bb : 0,
+            Rb = Lb(ab.subarray(jb, jb + Tb.byteLength));
+          if (null === Rb && !Ub) continue;
+          const kb = null !== (eb = bb.accessors) && void 0 !== eb ? eb : [],
+            yb = null === (vb = kb[Ab.attributes.POSITION]) || void 0 === vb ? void 0 : vb.count,
+            Zb = void 0 === Ab.indices ? 0 : null === (Pb = kb[Ab.indices]) || void 0 === Pb ? void 0 : Pb.count;
+          if (null === Rb || void 0 === yb || void 0 === Zb || 3 * Rb.faces !== Zb || Rb.vertices > yb) return Xb
         }
       }
       return null
     }
-    const nb = "has a Draco stream whose counts don't match its accessors";
+    const Xb = "has a Draco stream whose counts don't match its accessors";
 
-    function mb(bb) {
-      var cb;
-      return null !== (cb = bb.name) && void 0 !== cb ? cb : bb.fromFolderName || bb.id
+    function jb(bb) {
+      var ab;
+      return null !== (ab = bb.name) && void 0 !== ab ? ab : bb.fromFolderName || bb.id
     }
 
-    function lb(bb, cb, sb) {
-      return `Texture pack "${bb}": model "${cb}" was not loaded because it ${sb}. The default model is used instead.`
+    function Rb(bb, ab, Ub) {
+      return `Texture pack "${bb}": model "${ab}" was not loaded because it ${Ub}. The default model is used instead.`
     }
 
-    function Qb(bb, cb, sb) {
+    function kb(bb, ab, Ub) {
       let {
-        strictDraco: ab = !1
+        strictDraco: Tb = !1
       } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const Tb = {};
-      for (const [Ub, Ib] of Object.entries(cb)) {
-        let cb;
-        if (Ib.startsWith("data:")) try {
-          const bb = new Uint8Array((0, Wb.u)(Ib));
-          if (cb = (0, kb.d)(bb), null === cb) {
+      const Eb = {};
+      for (const [Yb, Bb] of Object.entries(ab)) {
+        let ab;
+        if (Bb.startsWith("data:")) try {
+          const bb = new Uint8Array((0, Mb.n)(Bb));
+          if (ab = (0, Ab.c)(bb), null === ab) {
             const {
-              json: sb,
-              bin: kb
-            } = (0, Wb.z)(bb);
-            cb = Xb(sb, kb, ab)
+              json: Ub,
+              bin: Ab
+            } = (0, Mb.v)(bb);
+            ab = Pb(Ub, Ab, Tb)
           }
         } catch {
-          cb = "is not a binary glTF 2.0 file"
-        } else cb = "loads data from outside the file";
-        cb && (Tb[Ub] = cb, sb && console.warn(lb(bb, Ub, cb)))
+          ab = "is not a binary glTF 2.0 file"
+        } else ab = "loads data from outside the file";
+        ab && (Eb[Yb] = ab, Ub && console.warn(Rb(bb, Yb, ab)))
       }
-      return Tb
+      return Eb
     }
 
-    function eb(bb, cb) {
-      const sb = Object.keys(cb);
-      if (0 === sb.length) return null;
-      if (1 === sb.length) return lb(bb, sb[0], cb[sb[0]]);
-      const kb = sb.map((bb => `"${bb}" ${cb[bb]}`)).join("; ");
-      return `Texture pack "${bb}": ${sb.length} models were not loaded (${kb}). The default models are used instead.`
+    function yb(bb, ab) {
+      const Ub = Object.keys(ab);
+      if (0 === Ub.length) return null;
+      if (1 === Ub.length) return Rb(bb, Ub[0], ab[Ub[0]]);
+      const Ab = Ub.map((bb => `"${bb}" ${ab[bb]}`)).join("; ");
+      return `Texture pack "${bb}": ${Ub.length} models were not loaded (${Ab}). The default models are used instead.`
     }
   }
 };

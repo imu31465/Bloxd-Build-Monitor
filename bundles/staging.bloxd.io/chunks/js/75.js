@@ -1,153 +1,153 @@
 export const id = 75;
 export const ids = [75, 91];
 export const modules = {
-    4553: (bb, cb, sb) => {
-      sb.d(cb, {
-        d: () => Qb,
-        e: () => eb
+    4516: (bb, ab, Ub) => {
+      Ub.d(ab, {
+        c: () => kb,
+        f: () => yb
       });
-      var kb = sb(1033),
-        Wb = sb.n(kb),
-        ab = sb(64),
-        Tb = sb(1197),
-        Ub = sb(4556),
-        Ib = sb(1839),
-        Hb = sb(2337),
-        fb = sb(4561),
-        Mb = sb(1087);
-      const Xb = new WeakMap;
-      let nb = 0;
+      var Ab = Ub(984),
+        Mb = Ub.n(Ab),
+        Tb = Ub(52),
+        Eb = Ub(1134),
+        Yb = Ub(4522),
+        Bb = Ub(1794),
+        eb = Ub(2268),
+        vb = Ub(4531),
+        Lb = Ub(1023);
+      const Pb = new WeakMap;
+      let Xb = 0;
 
-      function mb(bb) {
-        let cb = Xb.get(bb);
-        return void 0 === cb && (cb = nb++, Xb.set(bb, cb)), cb
+      function jb(bb) {
+        let ab = Pb.get(bb);
+        return void 0 === ab && (ab = Xb++, Pb.set(bb, ab)), ab
       }
 
-      function lb(bb) {
+      function Rb(bb) {
         let {
-          piece: cb
+          piece: ab
         } = bb;
-        return "space" === cb.kind ? (0, Mb.jsx)(Mb.Fragment, {
-          children: cb.text
-        }) : (0, Mb.jsx)("span", {
+        return "space" === ab.kind ? (0, Lb.jsx)(Lb.Fragment, {
+          children: ab.text
+        }) : (0, Lb.jsx)("span", {
           className: "DialogueWord",
           style: {
-            "--word-delay": `${cb.delayMs}ms`
+            "--word-delay": `${ab.delayMs}ms`
           },
-          children: (0, Mb.jsx)(Ub.b, {
-            text: "icon" === cb.kind ? `[[${cb.icon}]]` : cb.text
+          children: (0, Lb.jsx)(Yb.c, {
+            text: "icon" === ab.kind ? `[[${ab.icon}]]` : ab.text
           })
         })
       }
 
-      function Qb(bb) {
+      function kb(bb) {
         let {
-          display: cb
+          display: ab
         } = bb;
         const {
-          selectedLanguage: sb
-        } = (0, Tb.E)(), kb = (0, ab.useMemo)((() => (0, fb.e)((0, fb.h)(cb).plan.pieces)), [cb, sb.code]);
-        return (0, Mb.jsxs)("div", {
-          className: Wb()("Dialogue", {
-            DialogueAnimateIn: !1 !== cb.animateIn
+          selectedLanguage: Ub
+        } = (0, Eb.A)(), Ab = (0, Tb.useMemo)((() => (0, vb.e)((0, vb.g)(ab).plan.pieces)), [ab, Ub.code]);
+        return (0, Lb.jsxs)("div", {
+          className: Mb()("Dialogue", {
+            DialogueAnimateIn: !1 !== ab.animateIn
           }),
-          children: [cb.speakerName && (0, Mb.jsx)(Ib.d, {
-            text: cb.speakerName,
+          children: [ab.speakerName && (0, Lb.jsx)(Bb.c, {
+            text: ab.speakerName,
             className: "DialogueSpeaker"
-          }), (0, Mb.jsx)("p", {
+          }), (0, Lb.jsx)("p", {
             className: "DialogueLine",
-            children: kb.map(((bb, cb) => 1 === bb.length && "space" === bb[0].kind ? bb[0].text : (0, Mb.jsx)("span", {
+            children: Ab.map(((bb, ab) => 1 === bb.length && "space" === bb[0].kind ? bb[0].text : (0, Lb.jsx)("span", {
               className: "DialogueGlue",
-              children: bb.map(((bb, cb) => (0, Mb.jsx)(lb, {
+              children: bb.map(((bb, ab) => (0, Lb.jsx)(Rb, {
                 piece: bb
-              }, cb)))
-            }, cb)))
+              }, ab)))
+            }, ab)))
           })]
         })
       }
-      const eb = (0, ab.memo)((function() {
-        const bb = (0, Hb.d)("dialogue");
-        return (0, Mb.jsx)("div", {
+      const yb = (0, Tb.memo)((function() {
+        const bb = (0, eb.h)("dialogue");
+        return (0, Lb.jsx)("div", {
           className: "DialogueAnchor",
           "data-camera-keeper": "",
           role: "status",
           "aria-live": "polite",
           "aria-atomic": "true",
-          children: bb && (0, Mb.jsx)(Qb, {
+          children: bb && (0, Lb.jsx)(kb, {
             display: bb
-          }, mb(bb))
+          }, jb(bb))
         })
       }))
     },
-    4436: (bb, cb, sb) => {
-        sb.r(cb), sb.d(cb, {
-          default: () => cT
+    4392: (bb, ab, Ub) => {
+        Ub.r(ab), Ub.d(ab, {
+          default: () => nT
         });
-        var kb = sb(64),
-          Wb = sb(1033),
-          ab = sb.n(Wb),
-          Tb = sb(1504),
-          Ub = sb(1511),
-          Ib = sb(19),
-          Hb = sb(89),
-          fb = sb(4441),
-          Mb = sb(4451),
-          Xb = sb(4456),
-          nb = sb(4124),
-          mb = sb(1087);
-        const lb = "/textures/docs/icons";
+        var Ab = Ub(52),
+          Mb = Ub(984),
+          Tb = Ub.n(Mb),
+          Eb = Ub(1438),
+          Yb = Ub(1446),
+          Bb = Ub(19),
+          eb = Ub(75),
+          vb = Ub(4399),
+          Lb = Ub(4405),
+          Pb = Ub(4413),
+          Xb = Ub(4047),
+          jb = Ub(1023);
+        const Rb = "/textures/docs/icons";
 
-        function Qb(bb) {
+        function kb(bb) {
           let {
-            name: cb,
-            isTinted: sb,
-            className: kb,
-            style: Wb
+            name: ab,
+            isTinted: Ub,
+            className: Ab,
+            style: Mb
           } = bb;
-          const Tb = `${lb}/${cb}.png`;
-          return sb ? (0, mb.jsxs)("span", {
-            className: ab()("DocsPixelIcon", "Tinted", kb),
+          const Eb = `${Rb}/${ab}.png`;
+          return Ub ? (0, jb.jsxs)("span", {
+            className: Tb()("DocsPixelIcon", "Tinted", Ab),
             "aria-hidden": "true",
-            style: Wb,
-            children: [(0, mb.jsx)("span", {
+            style: Mb,
+            children: [(0, jb.jsx)("span", {
               className: "DocsPixelIconTint",
               style: {
-                maskImage: `url("${Tb}")`,
-                WebkitMaskImage: `url("${Tb}")`
+                maskImage: `url("${Eb}")`,
+                WebkitMaskImage: `url("${Eb}")`
               }
-            }), (0, mb.jsx)("img", {
-              src: Tb,
+            }), (0, jb.jsx)("img", {
+              src: Eb,
               alt: ""
             })]
-          }) : (0, mb.jsx)("img", {
-            className: ab()("DocsPixelIcon", kb),
-            src: Tb,
+          }) : (0, jb.jsx)("img", {
+            className: Tb()("DocsPixelIcon", Ab),
+            src: Eb,
             alt: "",
             "aria-hidden": "true",
-            style: Wb
+            style: Mb
           })
         }
-        const eb = 1500;
+        const yb = 1500;
 
-        function Cb() {
-          const [bb, cb] = (0, kb.useState)(null);
-          (0, kb.useEffect)((() => {
+        function Zb() {
+          const [bb, ab] = (0, Ab.useState)(null);
+          (0, Ab.useEffect)((() => {
             if (null === bb) return;
-            const sb = setTimeout((() => {
-              cb(null)
-            }), eb);
+            const Ub = setTimeout((() => {
+              ab(null)
+            }), yb);
             return () => {
-              clearTimeout(sb)
+              clearTimeout(Ub)
             }
           }), [bb]);
           return [bb, bb => {
-            (0, nb.b)(bb).then((() => {
-              cb({
+            (0, Xb.b)(bb).then((() => {
+              ab({
                 text: bb,
                 failed: !1
               })
-            }), (sb => {
-              console.error("Could not copy to the clipboard", sb), cb({
+            }), (Ub => {
+              console.error("Could not copy to the clipboard", Ub), ab({
                 text: bb,
                 failed: !0
               })
@@ -155,118 +155,118 @@ export const modules = {
           }]
         }
 
-        function Nb(bb) {
+        function Db(bb) {
           let {
-            text: cb,
-            label: sb,
-            className: kb
+            text: ab,
+            label: Ub,
+            className: Ab
           } = bb;
-          const [Wb, Tb] = Cb(), Ub = !1 === (null === Wb || void 0 === Wb ? void 0 : Wb.failed);
-          return (0, mb.jsxs)("button", {
+          const [Mb, Eb] = Zb(), Yb = !1 === (null === Mb || void 0 === Mb ? void 0 : Mb.failed);
+          return (0, jb.jsxs)("button", {
             type: "button",
-            className: ab()("DocsCopyButton", kb, {
-              Copied: Ub
+            className: Tb()("DocsCopyButton", Ab, {
+              Copied: Yb
             }),
-            title: `Copy ${cb.length>40?"to clipboard":cb}`,
-            "aria-label": sb ? void 0 : `Copy ${cb}`,
+            title: `Copy ${ab.length>40?"to clipboard":ab}`,
+            "aria-label": Ub ? void 0 : `Copy ${ab}`,
             onClick: bb => {
-              bb.stopPropagation(), Tb(cb)
+              bb.stopPropagation(), Eb(ab)
             },
-            children: [(0, mb.jsx)(Qb, {
-              name: Ub ? "check" : "copy"
-            }), sb && (0, mb.jsx)("span", {
-              children: Ub ? "Copied" : null !== Wb && void 0 !== Wb && Wb.failed ? "Copy failed" : sb
+            children: [(0, jb.jsx)(kb, {
+              name: Yb ? "check" : "copy"
+            }), Ub && (0, jb.jsx)("span", {
+              children: Yb ? "Copied" : null !== Mb && void 0 !== Mb && Mb.failed ? "Copy failed" : Ub
             })]
           })
         }
-        fb.d.registerLanguage("javascript", Mb.d), fb.d.registerLanguage("typescript", Xb.c);
-        const Vb = {
+        vb.d.registerLanguage("javascript", Lb.c), vb.d.registerLanguage("typescript", Pb.d);
+        const zb = {
             js: "javascript",
             ts: "typescript",
             javascript: "javascript",
             typescript: "typescript"
           },
-          Lb = {
+          xb = {
             javascript: "JavaScript",
             typescript: "TypeScript"
           },
-          ub = 24;
+          ib = 24;
 
-        function Yb(bb) {
+        function fb(bb) {
           let {
-            code: cb,
-            lang: sb,
-            compact: Wb = !1
+            code: ab,
+            lang: Ub,
+            compact: Mb = !1
           } = bb;
-          const Tb = (0, kb.useMemo)((() => function(bb, cb) {
-              const sb = Vb[cb];
-              return sb ? fb.d.highlight(bb, {
-                language: sb
+          const Eb = (0, Ab.useMemo)((() => function(bb, ab) {
+              const Ub = zb[ab];
+              return Ub ? vb.d.highlight(bb, {
+                language: Ub
               }).value : bb.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-            }(cb, sb)), [cb, sb]),
-            Ub = cb.split("\n").length,
-            Ib = !Wb && Ub > ub + 6,
-            [Hb, Mb] = (0, kb.useState)(!1),
-            Xb = Vb[sb];
-          return (0, mb.jsxs)("div", {
-            className: ab()("DocsCodeBlock", {
-              Compact: Wb,
-              Collapsed: Ib && !Hb
+            }(ab, Ub)), [ab, Ub]),
+            Yb = ab.split("\n").length,
+            Bb = !Mb && Yb > ib + 6,
+            [eb, Lb] = (0, Ab.useState)(!1),
+            Pb = zb[Ub];
+          return (0, jb.jsxs)("div", {
+            className: Tb()("DocsCodeBlock", {
+              Compact: Mb,
+              Collapsed: Bb && !eb
             }),
-            children: [!Wb && (0, mb.jsxs)("div", {
+            children: [!Mb && (0, jb.jsxs)("div", {
               className: "DocsCodeBlockHeader",
-              children: [(0, mb.jsx)("span", {
+              children: [(0, jb.jsx)("span", {
                 className: "DocsCodeBlockLanguage",
-                children: Xb ? Lb[Xb] : "Text"
-              }), (0, mb.jsx)(Nb, {
-                text: cb,
+                children: Pb ? xb[Pb] : "Text"
+              }), (0, jb.jsx)(Db, {
+                text: ab,
                 label: "Copy"
               })]
-            }), (0, mb.jsx)("pre", {
-              children: (0, mb.jsx)("code", {
+            }), (0, jb.jsx)("pre", {
+              children: (0, jb.jsx)("code", {
                 className: "hljs",
                 dangerouslySetInnerHTML: {
-                  __html: Tb
+                  __html: Eb
                 }
               })
-            }), Ib && (0, mb.jsxs)("button", {
+            }), Bb && (0, jb.jsxs)("button", {
               type: "button",
               className: "DocsCodeBlockExpand",
-              "aria-expanded": Hb,
+              "aria-expanded": eb,
               onClick: () => {
-                Mb(!Hb)
+                Lb(!eb)
               },
-              children: [(0, mb.jsx)(Qb, {
-                name: Hb ? "chevron-up" : "chevron-down"
-              }), Hb ? "Show less" : `Show all ${Ub} lines`]
+              children: [(0, jb.jsx)(kb, {
+                name: eb ? "chevron-up" : "chevron-down"
+              }), eb ? "Show less" : `Show all ${Yb} lines`]
             })]
           })
         }
-        var hb = sb(4461);
-        var Jb = sb(4469);
-        const gb = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
+        var mb = Ub(4420);
+        var pb = Ub(4428);
+        const Nb = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
 
-        function Bb(bb) {
-          const cb = new Map;
-          let sb, kb = [],
-            Wb = !1;
-          const ab = () => {
-            sb && cb.set(sb.name, sb.lines.join("\n").trimEnd())
+        function Wb(bb) {
+          const ab = new Map;
+          let Ub, Ab = [],
+            Mb = !1;
+          const Tb = () => {
+            Ub && ab.set(Ub.name, Ub.lines.join("\n").trimEnd())
           };
-          for (const Tb of bb.split("\n")) {
-            const bb = Tb.match(gb);
-            Wb || Tb.startsWith("/*") ? (Wb || (ab(), sb = void 0), kb.push(Tb), Wb = !Tb.includes("*/")) : bb ? (ab(), sb = {
+          for (const Eb of bb.split("\n")) {
+            const bb = Eb.match(Nb);
+            Mb || Eb.startsWith("/*") ? (Mb || (Tb(), Ub = void 0), Ab.push(Eb), Mb = !Eb.includes("*/")) : bb ? (Tb(), Ub = {
               name: bb[1],
-              lines: [...kb, Tb]
-            }, kb = []) : sb && (Tb.startsWith(" ") || Tb.startsWith("\t") || /^[}\])|]/.test(Tb)) ? sb.lines.push(Tb) : sb && "" !== Tb.trim() && (ab(), sb = void 0)
+              lines: [...Ab, Eb]
+            }, Ab = []) : Ub && (Eb.startsWith(" ") || Eb.startsWith("\t") || /^[}\])|]/.test(Eb)) ? Ub.lines.push(Eb) : Ub && "" !== Eb.trim() && (Tb(), Ub = void 0)
           }
-          return ab(), cb
+          return Tb(), ab
         }
 
-        function tb(bb) {
+        function Hb(bb) {
           return "methods" === bb || "callbacks" === bb || "settings" === bb
         }
-        const yb = {
+        const Ib = {
             readme: {
               icon: "code-block",
               summary: "Code blocks, boards and World Code, and the globals your code can use.",
@@ -302,25 +302,25 @@ export const modules = {
               icon: "player",
               summary: "Per-player options such as speed, health and camera.",
               layout: "settings",
-              setterSnippet: (bb, cb) => `api.setClientOption(playerId, "${bb}", ${cb})`
+              setterSnippet: (bb, ab) => `api.setClientOption(playerId, "${bb}", ${ab})`
             },
             entitySettings: {
               icon: "eye",
               summary: "How one player sees and interacts with another entity.",
               layout: "settings",
-              setterSnippet: (bb, cb) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${bb}", ${cb})`
+              setterSnippet: (bb, ab) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${bb}", ${ab})`
             },
             mobSettings: {
               icon: "mob",
               summary: "Health, movement, combat and AI settings for mobs.",
               layout: "settings",
-              setterSnippet: (bb, cb) => `api.setMobSetting(mobId, "${bb}", ${cb})`
+              setterSnippet: (bb, ab) => `api.setMobSetting(mobId, "${bb}", ${ab})`
             },
             vehicleSettings: {
               icon: "car",
               summary: "Movement, physics and camera settings for vehicles.",
               layout: "settings",
-              setterSnippet: (bb, cb) => `api.setVehicleSetting(vehicleId, "${bb}", ${cb})`
+              setterSnippet: (bb, ab) => `api.setVehicleSetting(vehicleId, "${bb}", ${ab})`
             },
             meshEntities: {
               icon: "mesh",
@@ -377,7 +377,7 @@ export const modules = {
               gallery: "items"
             }
           },
-          Pb = {
+          db = {
             Variations: {
               icon: "layers",
               summary: "Alternate versions of a custom game, and matchmaking players between them."
@@ -404,20 +404,20 @@ export const modules = {
             }
           };
 
-        function Db(bb) {
+        function Fb(bb) {
           return bb.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
         }
 
-        function Eb(bb) {
-          let cb = !1;
-          return bb.split("\n").map((bb => (bb.startsWith("```") && (cb = !cb), !cb && /^#{3,} /.test(bb) ? bb.slice(1) : bb))).join("\n")
+        function hb(bb) {
+          let ab = !1;
+          return bb.split("\n").map((bb => (bb.startsWith("```") && (ab = !ab), !ab && /^#{3,} /.test(bb) ? bb.slice(1) : bb))).join("\n")
         }
 
-        function ib(bb) {
-          return "readme" === bb ? "getting-started" : Db(bb)
+        function Gb(bb) {
+          return "readme" === bb ? "getting-started" : Fb(bb)
         }
-        const Ob = "## Glossary of Referenced Types";
-        const Gb = [{
+        const Qb = "## Glossary of Referenced Types";
+        const qb = [{
             id: "welcome",
             slug: "",
             title: "Welcome",
@@ -425,28 +425,28 @@ export const modules = {
             summary: "Run JavaScript in Bloxd, from a single block to a whole custom game.",
             layout: "article",
             markdown: "# Welcome to the Bloxd Code API\n\nWrite JavaScript that runs inside Bloxd: make a block launch players into the sky, give your world its own shop, or build a whole custom game with rounds, teams and a winner.\n\n## New to coding in Bloxd?\n\nStart with [Getting started](#readme), which explains code blocks, boards and World Code, and where each one runs. Then copy something from [Snippets](#snippets) into a code block and change it to see what happens.\n\n## Building a game\n\n[Callbacks](#callbacks) let your World Code react to players joining, chatting, breaking blocks and more. The [How-Tos](#howTo) walk through bigger features step by step, from plugins to a complete team game.\n\n## Looking something up\n\nThe [API Reference](#apiReference) lists every method on `api`. Settings for players, entities, mobs and vehicles each have their own page, and the Assets pages list every block, item, sound, particle, icon and skin name you can use. Press Ctrl K, or \u2318 K on a Mac, to search all of it.\n\n## What's new\n\nThe [Changelog](#changelog) lists what has changed in the Code API, newest first.\n\n## Get help\n\nAsk questions, report problems and suggest features on [our Discord](https://discord.gg/playbloxd)."
-          }, ...Jb.c.flatMap((bb => {
-            const cb = {
+          }, ...pb.d.flatMap((bb => {
+            const ab = {
               id: bb.id,
-              slug: ib(bb.id),
+              slug: Gb(bb.id),
               title: bb.title,
               markdown: bb.content,
-              ...yb[bb.id]
+              ...Ib[bb.id]
             };
             if ("readme" === bb.id) return function(bb) {
-              const cb = bb.markdown.indexOf(Ob),
-                sb = bb.markdown.indexOf("\n```", cb),
-                kb = bb.markdown.indexOf("\n```", sb + 1);
-              if (-1 === cb || -1 === sb || -1 === kb) throw new Error(`Getting started has no "${Ob}" section with a code block`);
-              const Wb = bb.markdown.slice(cb + 31, sb).trim(),
-                ab = [...Bb(bb.markdown.slice(bb.markdown.indexOf("\n", sb + 1) + 1, kb))].map((bb => {
-                  let [cb, sb] = bb;
-                  return `## ${cb}\n\n\`\`\`ts\n${sb}\n\`\`\`\n`
+              const ab = bb.markdown.indexOf(Qb),
+                Ub = bb.markdown.indexOf("\n```", ab),
+                Ab = bb.markdown.indexOf("\n```", Ub + 1);
+              if (-1 === ab || -1 === Ub || -1 === Ab) throw new Error(`Getting started has no "${Qb}" section with a code block`);
+              const Mb = bb.markdown.slice(ab + 31, Ub).trim(),
+                Tb = [...Wb(bb.markdown.slice(bb.markdown.indexOf("\n", Ub + 1) + 1, Ab))].map((bb => {
+                  let [ab, Ub] = bb;
+                  return `## ${ab}\n\n\`\`\`ts\n${Ub}\n\`\`\`\n`
                 })),
-                Tb = bb.markdown.slice(bb.markdown.indexOf("\n", kb + 1) + 1);
+                Eb = bb.markdown.slice(bb.markdown.indexOf("\n", Ab + 1) + 1);
               return [{
                 ...bb,
-                markdown: `${bb.markdown.slice(0,cb)}${Tb}`
+                markdown: `${bb.markdown.slice(0,ab)}${Eb}`
               }, {
                 id: "types",
                 slug: "types",
@@ -454,57 +454,57 @@ export const modules = {
                 icon: "tag",
                 summary: "The types the API Reference's parameters and return values refer to.",
                 layout: "article",
-                markdown: `# Types\n\n${Wb}\n\n${ab.join("\n")}`
+                markdown: `# Types\n\n${Mb}\n\n${Tb.join("\n")}`
               }]
-            }(cb);
+            }(ab);
             if ("howTo" === bb.id) {
               const {
                 parent: bb,
-                guides: sb
+                guides: Ub
               } = function(bb) {
-                const [cb, ...sb] = bb.markdown.split(/^(?=## )/m), kb = [cb], Wb = [];
-                for (const Tb of sb) {
-                  var ab;
-                  const cb = Tb.indexOf("\n"),
-                    sb = Tb.slice(3, cb).trim(),
-                    Ub = Tb.slice(cb + 1);
-                  if (!Ub.includes("```")) {
-                    kb.push(Tb);
+                const [ab, ...Ub] = bb.markdown.split(/^(?=## )/m), Ab = [ab], Mb = [];
+                for (const Eb of Ub) {
+                  var Tb;
+                  const ab = Eb.indexOf("\n"),
+                    Ub = Eb.slice(3, ab).trim(),
+                    Yb = Eb.slice(ab + 1);
+                  if (!Yb.includes("```")) {
+                    Ab.push(Eb);
                     continue
                   }
-                  const Ib = null !== (ab = Pb[sb]) && void 0 !== ab ? ab : {
+                  const Bb = null !== (Tb = db[Ub]) && void 0 !== Tb ? Tb : {
                     icon: "lightbulb",
-                    summary: `How to use ${sb.toLowerCase()} in World Code.`
+                    summary: `How to use ${Ub.toLowerCase()} in World Code.`
                   };
-                  Wb.push({
-                    id: `${bb.id}${sb.split(/[^A-Za-z0-9]+/).map((bb=>bb.charAt(0).toUpperCase()+bb.slice(1))).join("")}`,
-                    slug: `${bb.slug}-${Db(sb)}`,
-                    title: sb,
+                  Mb.push({
+                    id: `${bb.id}${Ub.split(/[^A-Za-z0-9]+/).map((bb=>bb.charAt(0).toUpperCase()+bb.slice(1))).join("")}`,
+                    slug: `${bb.slug}-${Fb(Ub)}`,
+                    title: Ub,
                     layout: "article",
-                    sourceAnchor: (0, hb.x)(sb),
-                    markdown: `# ${sb}\n\n${Eb(Ub)}`,
-                    ...Ib
+                    sourceAnchor: (0, mb.r)(Ub),
+                    markdown: `# ${Ub}\n\n${hb(Yb)}`,
+                    ...Bb
                   })
                 }
                 return {
                   parent: {
                     ...bb,
-                    markdown: kb.join(""),
-                    childPageIds: Wb.map((bb => bb.id))
+                    markdown: Ab.join(""),
+                    childPageIds: Mb.map((bb => bb.id))
                   },
-                  guides: Wb
+                  guides: Mb
                 }
-              }(cb);
-              return [bb, ...sb]
+              }(ab);
+              return [bb, ...Ub]
             }
-            return [cb]
+            return [ab]
           }))],
-          Kb = [{
+          ub = [{
             title: "Get started",
             pageIds: ["welcome", "readme", "snippets", "changelog"]
           }, {
             title: "How-Tos",
-            pageIds: ["howTo", ...Gb.filter((bb => void 0 !== bb.sourceAnchor)).map((bb => bb.id))]
+            pageIds: ["howTo", ...qb.filter((bb => void 0 !== bb.sourceAnchor)).map((bb => bb.id))]
           }, {
             title: "Reference",
             pageIds: ["apiReference", "callbacks", "clientOptions", "types"]
@@ -519,39 +519,39 @@ export const modules = {
             pageIds: ["particles", "sounds", "icons", "skins", "blockNames", "itemNames"]
           }];
 
-        function Zb(bb) {
-          return Gb.find((cb => cb.id === bb))
+        function rb(bb) {
+          return qb.find((ab => ab.id === bb))
         }
-        const zb = new Map;
+        const Kb = new Map;
 
-        function qb(bb) {
-          let cb = zb.get(bb.id);
-          return cb || (cb = (0, hb.D)(bb.markdown, "changelog" === bb.layout ? 3 : 2), zb.set(bb.id, cb)), cb
-        }
-
-        function db(bb, cb) {
-          return qb(bb).sections.some((bb => bb.heading.anchor === cb || bb.blocks.some((bb => "heading" === bb.kind && bb.anchor === cb))))
+        function ob(bb) {
+          let ab = Kb.get(bb.id);
+          return ab || (ab = (0, mb.v)(bb.markdown, "changelog" === bb.layout ? 3 : 2), Kb.set(bb.id, ab)), ab
         }
 
-        function Ab(bb) {
-          const [cb, ...sb] = bb.replace(/^#/, "").split("-"), kb = Gb.find((bb => bb.id === cb));
-          if (!kb) return null;
-          const Wb = sb.length > 0 ? (0, hb.x)(sb.join("-")) : "";
-          for (const Tb of null !== (ab = kb.childPageIds) && void 0 !== ab ? ab : []) {
-            var ab;
-            const bb = Zb(Tb);
-            if (bb.sourceAnchor === Wb) return {
+        function lb(bb, ab) {
+          return ob(bb).sections.some((bb => bb.heading.anchor === ab || bb.blocks.some((bb => "heading" === bb.kind && bb.anchor === ab))))
+        }
+
+        function tb(bb) {
+          const [ab, ...Ub] = bb.replace(/^#/, "").split("-"), Ab = qb.find((bb => bb.id === ab));
+          if (!Ab) return null;
+          const Mb = Ub.length > 0 ? (0, mb.r)(Ub.join("-")) : "";
+          for (const Eb of null !== (Tb = Ab.childPageIds) && void 0 !== Tb ? Tb : []) {
+            var Tb;
+            const bb = rb(Eb);
+            if (bb.sourceAnchor === Mb) return {
               page: bb,
               anchor: ""
             };
-            if (db(bb, Wb)) return {
+            if (lb(bb, Mb)) return {
               page: bb,
-              anchor: Wb
+              anchor: Mb
             }
           }
           return {
-            page: kb,
-            anchor: Wb
+            page: Ab,
+            anchor: Mb
           }
         }
         const wb = {
@@ -569,182 +569,182 @@ export const modules = {
           }
         };
 
-        function rb(bb, cb) {
-          let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-          const kb = cb.slug ? `${bb}/${cb.slug}` : bb;
-          return sb ? `${kb}#${sb}` : kb
+        function sb(bb, ab) {
+          let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+          const Ab = ab.slug ? `${bb}/${ab.slug}` : bb;
+          return Ub ? `${Ab}#${Ub}` : Ab
         }
-        var ob = sb(4482);
-        const Sb = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
-          Rb = new Set(["GameApi", "Console", "_TypeOf"]),
-          vb = 4;
+        var gb = Ub(4446);
+        const Cb = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
+          Vb = new Set(["GameApi", "Console", "_TypeOf"]),
+          Ob = 4;
 
-        function Fb(bb) {
-          let cb = bb.length;
-          for (; cb > 0 && "" === bb[cb - 1].trim();) cb--;
-          return bb.slice(0, cb)
+        function cb(bb) {
+          let ab = bb.length;
+          for (; ab > 0 && "" === bb[ab - 1].trim();) ab--;
+          return bb.slice(0, ab)
         }
 
-        function xb(bb) {
-          var cb;
-          const sb = Fb(bb);
-          if (null === (cb = sb.at(-1)) || void 0 === cb || !cb.trimEnd().endsWith("*/")) return {
-            lines: sb,
+        function Jb(bb) {
+          var ab;
+          const Ub = cb(bb);
+          if (null === (ab = Ub.at(-1)) || void 0 === ab || !ab.trimEnd().endsWith("*/")) return {
+            lines: Ub,
             doc: ""
           };
-          const kb = sb.findLastIndex((bb => bb.startsWith("/**")));
-          return -1 === kb ? {
-            lines: sb,
+          const Ab = Ub.findLastIndex((bb => bb.startsWith("/**")));
+          return -1 === Ab ? {
+            lines: Ub,
             doc: ""
           } : {
-            lines: Fb(sb.slice(0, kb)),
-            doc: sb.slice(kb).join("\n")
+            lines: cb(Ub.slice(0, Ab)),
+            doc: Ub.slice(Ab).join("\n")
           }
         }
 
-        function jb(bb) {
-          var cb;
-          const sb = bb.split("\n"),
-            kb = sb.flatMap(((bb, cb) => Sb.test(bb) ? [cb] : []));
-          let Wb = xb(sb.slice(0, null !== (cb = kb[0]) && void 0 !== cb ? cb : sb.length)).doc;
-          return kb.map(((bb, cb) => {
-            var ab;
-            const Tb = xb(sb.slice(bb, null !== (ab = kb[cb + 1]) && void 0 !== ab ? ab : sb.length)),
-              Ub = {
-                name: sb[bb].match(Sb)[1],
-                doc: Wb,
-                lines: Tb.lines
+        function nb(bb) {
+          var ab;
+          const Ub = bb.split("\n"),
+            Ab = Ub.flatMap(((bb, ab) => Cb.test(bb) ? [ab] : []));
+          let Mb = Jb(Ub.slice(0, null !== (ab = Ab[0]) && void 0 !== ab ? ab : Ub.length)).doc;
+          return Ab.map(((bb, ab) => {
+            var Tb;
+            const Eb = Jb(Ub.slice(bb, null !== (Tb = Ab[ab + 1]) && void 0 !== Tb ? Tb : Ub.length)),
+              Yb = {
+                name: Ub[bb].match(Cb)[1],
+                doc: Mb,
+                lines: Eb.lines
               };
-            return Wb = Tb.doc, Ub
+            return Mb = Eb.doc, Yb
           }))
         }
 
-        function pb(bb) {
-          var cb;
-          const sb = bb.match(/^readonly \[([\s\S]*)\]$/);
-          return sb ? null !== (cb = sb[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== cb ? cb : [] : null
+        function Sb(bb) {
+          var ab;
+          const Ub = bb.match(/^readonly \[([\s\S]*)\]$/);
+          return Ub ? null !== (ab = Ub[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== ab ? ab : [] : null
         }
 
-        function bc(bb) {
+        function ba(bb) {
           if (!bb.startsWith("{") || !bb.endsWith("}")) return null;
-          const cb = {
+          const ab = {
               keys: [],
               values: []
             },
-            sb = bb => {
-              const sb = bb.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
-              sb && (cb.keys.push(sb[1].startsWith('"') ? sb[1] : `"${sb[1]}"`), cb.values.push(sb[2].trim()))
+            Ub = bb => {
+              const Ub = bb.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
+              Ub && (ab.keys.push(Ub[1].startsWith('"') ? Ub[1] : `"${Ub[1]}"`), ab.values.push(Ub[2].trim()))
             };
-          let kb = 0,
-            Wb = "";
-          for (const ab of bb.slice(1, -1)) "{[(".includes(ab) ? kb++ : "}])".includes(ab) && kb--, ";" === ab && 0 === kb ? (sb(Wb), Wb = "") : Wb += ab;
-          return sb(Wb), cb
+          let Ab = 0,
+            Mb = "";
+          for (const Tb of bb.slice(1, -1)) "{[(".includes(Tb) ? Ab++ : "}])".includes(Tb) && Ab--, ";" === Tb && 0 === Ab ? (Ub(Mb), Mb = "") : Mb += Tb;
+          return Ub(Mb), ab
         }
 
-        function cc(bb) {
-          return bb.length > vb ? `\n\t| ${bb.join("\n\t| ")}` : bb.join(" | ")
+        function aa(bb) {
+          return bb.length > Ob ? `\n\t| ${bb.join("\n\t| ")}` : bb.join(" | ")
         }
 
-        function sc(bb, cb) {
-          const sb = function(bb, cb) {
-            return bb.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((bb, sb) => {
-              var kb;
-              const Wb = null === (kb = cb.get(sb)) || void 0 === kb ? void 0 : kb.object;
-              return Wb ? cc(Wb.values) : bb
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((bb, sb) => {
-              var kb, Wb;
-              const ab = null === (kb = cb.get(sb)) || void 0 === kb || null === (Wb = kb.object) || void 0 === Wb ? void 0 : Wb.values.map(pb);
-              return null !== ab && void 0 !== ab && ab.every((bb => null !== bb)) ? cc([...new Set(ab.flat())]) : bb
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((bb, sb) => {
-              var kb;
-              const Wb = null === (kb = cb.get(sb)) || void 0 === kb ? void 0 : kb.members;
-              return Wb ? cc(Wb) : bb
-            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((bb, sb) => {
-              var kb;
-              const Wb = null === (kb = cb.get(sb)) || void 0 === kb ? void 0 : kb.object;
-              return Wb ? cc(Wb.keys) : bb
-            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((bb, sb) => {
-              var kb, Wb;
-              return null !== (kb = null === (Wb = cb.get(sb)) || void 0 === Wb ? void 0 : Wb.text) && void 0 !== kb ? kb : bb
+        function Ua(bb, ab) {
+          const Ub = function(bb, ab) {
+            return bb.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((bb, Ub) => {
+              var Ab;
+              const Mb = null === (Ab = ab.get(Ub)) || void 0 === Ab ? void 0 : Ab.object;
+              return Mb ? aa(Mb.values) : bb
+            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((bb, Ub) => {
+              var Ab, Mb;
+              const Tb = null === (Ab = ab.get(Ub)) || void 0 === Ab || null === (Mb = Ab.object) || void 0 === Mb ? void 0 : Mb.values.map(Sb);
+              return null !== Tb && void 0 !== Tb && Tb.every((bb => null !== bb)) ? aa([...new Set(Tb.flat())]) : bb
+            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((bb, Ub) => {
+              var Ab;
+              const Mb = null === (Ab = ab.get(Ub)) || void 0 === Ab ? void 0 : Ab.members;
+              return Mb ? aa(Mb) : bb
+            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((bb, Ub) => {
+              var Ab;
+              const Mb = null === (Ab = ab.get(Ub)) || void 0 === Ab ? void 0 : Ab.object;
+              return Mb ? aa(Mb.keys) : bb
+            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((bb, Ub) => {
+              var Ab, Mb;
+              return null !== (Ab = null === (Mb = ab.get(Ub)) || void 0 === Mb ? void 0 : Mb.text) && void 0 !== Ab ? Ab : bb
             }))
-          }(bb.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), cb);
-          return [bb.doc, sb].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
+          }(bb.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), ab);
+          return [bb.doc, Ub].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
         }
 
-        function kc(bb) {
-          const cb = jb(bb),
-            sb = function(bb) {
-              const cb = new Map,
-                sb = bb.find((bb => "_TypeOf" === bb.name));
-              let kb = null;
-              const Wb = () => {
-                if (kb) {
-                  const bb = kb.lines.join("\n");
-                  cb.set(kb.name, {
+        function Aa(bb) {
+          const ab = nb(bb),
+            Ub = function(bb) {
+              const ab = new Map,
+                Ub = bb.find((bb => "_TypeOf" === bb.name));
+              let Ab = null;
+              const Mb = () => {
+                if (Ab) {
+                  const bb = Ab.lines.join("\n");
+                  ab.set(Ab.name, {
                     text: bb,
-                    members: pb(bb),
-                    object: bc(bb)
+                    members: Sb(bb),
+                    object: ba(bb)
                   })
                 }
               };
-              for (const ab of sb.lines.slice(1, -1)) {
-                const bb = ab.match(/^\t([\w$]+): (.+)$/);
-                bb ? (Wb(), kb = {
+              for (const Tb of Ub.lines.slice(1, -1)) {
+                const bb = Tb.match(/^\t([\w$]+): (.+)$/);
+                bb ? (Mb(), Ab = {
                   name: bb[1],
                   lines: [bb[2]]
-                }) : kb && kb.lines.push(ab.replace(/^\t/, ""))
+                }) : Ab && Ab.lines.push(Tb.replace(/^\t/, ""))
               }
-              return Wb(), cb
-            }(cb),
-            kb = new Map;
-          for (const Wb of cb) Rb.has(Wb.name) || kb.has(Wb.name) || kb.set(Wb.name, sc(Wb, sb));
-          return kb
+              return Mb(), ab
+            }(ab),
+            Ab = new Map;
+          for (const Mb of ab) Vb.has(Mb.name) || Ab.has(Mb.name) || Ab.set(Mb.name, Ua(Mb, Ub));
+          return Ab
         }
-        let Wc, ac, Tc;
+        let Ma, Ta, Ea;
 
-        function Uc() {
-          return ac ??= function(bb) {
-            const cb = jb(bb).find((bb => "GameApi" === bb.name)),
-              sb = new Map,
-              kb = cb.lines;
-            for (let ab = 0; ab < kb.length; ab++) {
-              var Wb;
-              if (!kb[ab].trimStart().startsWith("/**")) continue;
-              const bb = ab;
-              for (; ab < kb.length && !kb[ab].includes("*/");) ab++;
-              const cb = null === (Wb = kb[ab + 1]) || void 0 === Wb ? void 0 : Wb.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
-              if (!cb) continue;
-              let Tb = null;
-              const Ub = [];
-              let Ib = "description",
-                Hb = !1;
-              for (const sb of kb.slice(bb, ab + 1).join("\n").split("\n").map((bb => bb.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
-                const bb = sb.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
-                bb ? (Tb = bb[1].trim(), Ib = "deprecation") : sb.startsWith("@") ? (Ib = "otherTag", Hb = !0) : "" === sb.trim() ? Hb || (Ib = "description", Ub.push(sb)) : "deprecation" !== Ib || /^[A-Z]/.test(sb.trim()) ? "otherTag" !== Ib && (Ib = "description", Ub.push(sb)) : Tb = `${Tb} ${sb.trim()}`.trim()
+        function Ya() {
+          return Ta ??= function(bb) {
+            const ab = nb(bb).find((bb => "GameApi" === bb.name)),
+              Ub = new Map,
+              Ab = ab.lines;
+            for (let Tb = 0; Tb < Ab.length; Tb++) {
+              var Mb;
+              if (!Ab[Tb].trimStart().startsWith("/**")) continue;
+              const bb = Tb;
+              for (; Tb < Ab.length && !Ab[Tb].includes("*/");) Tb++;
+              const ab = null === (Mb = Ab[Tb + 1]) || void 0 === Mb ? void 0 : Mb.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
+              if (!ab) continue;
+              let Eb = null;
+              const Yb = [];
+              let Bb = "description",
+                eb = !1;
+              for (const Ub of Ab.slice(bb, Tb + 1).join("\n").split("\n").map((bb => bb.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
+                const bb = Ub.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
+                bb ? (Eb = bb[1].trim(), Bb = "deprecation") : Ub.startsWith("@") ? (Bb = "otherTag", eb = !0) : "" === Ub.trim() ? eb || (Bb = "description", Yb.push(Ub)) : "deprecation" !== Bb || /^[A-Z]/.test(Ub.trim()) ? "otherTag" !== Bb && (Bb = "description", Yb.push(Ub)) : Eb = `${Eb} ${Ub.trim()}`.trim()
               }
-              sb.set(cb[1], {
-                deprecation: Tb,
-                description: Ub.join("\n").trim()
+              Ub.set(ab[1], {
+                deprecation: Eb,
+                description: Yb.join("\n").trim()
               })
             }
-            return sb
-          }(ob.default), ac
+            return Ub
+          }(gb.default), Ta
         }
 
-        function Ic() {
-          if (!Tc) {
-            Tc = new Map;
-            for (const bb of Gb) {
-              const cb = (0, hb.z)(qb(bb)).flatMap((bb => bb.blocks));
-              for (const bb of (0, hb.o)(cb))
+        function Ba() {
+          if (!Ea) {
+            Ea = new Map;
+            for (const bb of qb) {
+              const ab = (0, mb.u)(ob(bb)).flatMap((bb => bb.blocks));
+              for (const bb of (0, mb.m)(ab))
                 if ("ts" === bb.lang || "typescript" === bb.lang)
-                  for (const [cb, sb] of Bb(bb.code)) Tc.set(cb, sb)
+                  for (const [ab, Ub] of Wb(bb.code)) Ea.set(ab, Ub)
             }
-            for (const [bb, cb] of(Wc ??= kc(ob.default), Wc)) Tc.has(bb) || Tc.set(bb, cb)
+            for (const [bb, ab] of(Ma ??= Aa(gb.default), Ma)) Ea.has(bb) || Ea.set(bb, ab)
           }
-          return Tc
+          return Ea
         }
-        const Hc = {
+        const ea = {
           BlockName: "blockNames",
           BlockNameOrId: "blockNames",
           ItemName: "itemNames",
@@ -761,332 +761,332 @@ export const modules = {
           VehicleSetting: "vehicleSettings",
           SettableVehicleSetting: "vehicleSettings"
         };
-        let fc;
+        let va;
 
-        function Mc() {
-          if (!fc) {
-            fc = new Map;
-            for (const bb of Gb)
-              if (tb(bb.layout))
-                for (const cb of qb(bb).sections) fc.has(cb.heading.text) || fc.set(cb.heading.text, {
+        function La() {
+          if (!va) {
+            va = new Map;
+            for (const bb of qb)
+              if (Hb(bb.layout))
+                for (const ab of ob(bb).sections) va.has(ab.heading.text) || va.set(ab.heading.text, {
                   pageId: bb.id,
-                  anchor: cb.heading.anchor
+                  anchor: ab.heading.anchor
                 })
           }
-          return fc
+          return va
         }
 
-        function Xc(bb) {
-          const cb = bb.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
-          return cb ? Mc().get(cb[1]) : void 0
+        function Pa(bb) {
+          const ab = bb.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
+          return ab ? La().get(ab[1]) : void 0
         }
-        const nc = (0, kb.createContext)("/docs"),
-          mc = (0, kb.createContext)(null),
-          lc = (0, kb.createContext)(!1),
-          Qc = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
+        const Xa = (0, Ab.createContext)("/docs"),
+          ja = (0, Ab.createContext)(null),
+          Ra = (0, Ab.createContext)(!1),
+          ka = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
 
-        function ec(bb) {
-          const cb = bb.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
-          return cb ? cb[1] : null
+        function ya(bb) {
+          const ab = bb.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
+          return ab ? ab[1] : null
         }
 
-        function Cc(bb) {
+        function Za(bb) {
           let {
-            colour: cb
+            colour: ab
           } = bb;
-          return (0, mb.jsx)("span", {
+          return (0, jb.jsx)("span", {
             className: "DocsColourSwatch",
             style: {
-              background: cb
+              background: ab
             },
             "aria-hidden": "true"
           })
         }
 
-        function Nc(bb) {
-          const cb = [];
-          let sb = 0;
-          for (const kb of bb.matchAll(Qc)) cb.push(bb.slice(sb, kb.index), (0, mb.jsx)(Cc, {
-            colour: kb[0]
-          }), kb[0]), sb = kb.index + kb[0].length;
-          return cb.push(bb.slice(sb)), cb
+        function Da(bb) {
+          const ab = [];
+          let Ub = 0;
+          for (const Ab of bb.matchAll(ka)) ab.push(bb.slice(Ub, Ab.index), (0, jb.jsx)(Za, {
+            colour: Ab[0]
+          }), Ab[0]), Ub = Ab.index + Ab[0].length;
+          return ab.push(bb.slice(Ub)), ab
         }
 
-        function Vc(bb) {
+        function za(bb) {
           let {
-            href: cb,
-            children: sb
+            href: ab,
+            children: Ub
           } = bb;
-          const Wb = (0, kb.useContext)(nc);
-          if (cb.startsWith("#")) {
-            const bb = Ab(cb);
-            if (bb) return (0, mb.jsx)(Tb.d, {
-              to: rb(Wb, bb.page, bb.anchor),
-              children: (0, mb.jsx)(lc.Provider, {
+          const Mb = (0, Ab.useContext)(Xa);
+          if (ab.startsWith("#")) {
+            const bb = tb(ab);
+            if (bb) return (0, jb.jsx)(Eb.c, {
+              to: sb(Mb, bb.page, bb.anchor),
+              children: (0, jb.jsx)(Ra.Provider, {
                 value: !0,
-                children: sb
+                children: Ub
               })
             })
           }
-          return (0, mb.jsx)("a", {
-            href: cb,
+          return (0, jb.jsx)("a", {
+            href: ab,
             target: "_blank",
             rel: "noopener noreferrer",
-            children: (0, mb.jsx)(lc.Provider, {
+            children: (0, jb.jsx)(Ra.Provider, {
               value: !0,
-              children: sb
+              children: Ub
             })
           })
         }
 
-        function Lc(bb) {
+        function xa(bb) {
           let {
-            code: cb
+            code: ab
           } = bb;
-          const sb = (0, kb.useContext)(nc);
-          if ((0, kb.useContext)(lc)) return (0, mb.jsx)("code", {
+          const Ub = (0, Ab.useContext)(Xa);
+          if ((0, Ab.useContext)(Ra)) return (0, jb.jsx)("code", {
             className: "DocsInlineCode",
-            children: cb
+            children: ab
           });
-          if (Ic().has(cb)) return (0, mb.jsx)(Jc, {
-            type: cb
+          if (Ba().has(ab)) return (0, jb.jsx)(pa, {
+            type: ab
           });
-          const Wb = Xc(cb);
-          if (Wb) return (0, mb.jsx)(Tb.d, {
+          const Mb = Pa(ab);
+          if (Mb) return (0, jb.jsx)(Eb.c, {
             className: "DocsInlineCode DocsSymbolLink",
-            to: rb(sb, Zb(Wb.pageId), Wb.anchor),
-            children: cb
+            to: sb(Ub, rb(Mb.pageId), Mb.anchor),
+            children: ab
           });
-          const ab = ec(cb);
-          return (0, mb.jsxs)("code", {
+          const Tb = ya(ab);
+          return (0, jb.jsxs)("code", {
             className: "DocsInlineCode",
-            children: [ab && (0, mb.jsx)(Cc, {
-              colour: ab
-            }), cb]
+            children: [Tb && (0, jb.jsx)(Za, {
+              colour: Tb
+            }), ab]
           })
         }
 
-        function uc(bb) {
+        function ia(bb) {
           let {
-            text: cb
+            text: ab
           } = bb;
-          const sb = [];
-          let Wb = 0;
-          for (const kb of cb.matchAll(hb.h)) {
-            kb.index > Wb && sb.push(...Nc(cb.slice(Wb, kb.index)));
-            const [, bb, ab, Tb, Ub, Ib] = kb;
-            bb ? sb.push((0, mb.jsx)(Lc, {
-              code: (0, hb.s)(bb, ab)
-            })) : Tb ? sb.push((0, mb.jsx)("strong", {
-              children: (0, mb.jsx)(uc, {
-                text: Tb
+          const Ub = [];
+          let Mb = 0;
+          for (const Ab of ab.matchAll(mb.e)) {
+            Ab.index > Mb && Ub.push(...Da(ab.slice(Mb, Ab.index)));
+            const [, bb, Tb, Eb, Yb, Bb] = Ab;
+            bb ? Ub.push((0, jb.jsx)(xa, {
+              code: (0, mb.o)(bb, Tb)
+            })) : Eb ? Ub.push((0, jb.jsx)("strong", {
+              children: (0, jb.jsx)(ia, {
+                text: Eb
               })
-            })) : sb.push((0, mb.jsx)(Vc, {
-              href: Ib,
-              children: (0, mb.jsx)(uc, {
-                text: Ub
+            })) : Ub.push((0, jb.jsx)(za, {
+              href: Bb,
+              children: (0, jb.jsx)(ia, {
+                text: Yb
               })
-            })), Wb = kb.index + kb[0].length
+            })), Mb = Ab.index + Ab[0].length
           }
-          return Wb < cb.length && sb.push(...Nc(cb.slice(Wb))), (0, mb.jsx)(mb.Fragment, {
-            children: sb.map(((bb, cb) => (0, mb.jsx)(kb.Fragment, {
+          return Mb < ab.length && Ub.push(...Da(ab.slice(Mb))), (0, jb.jsx)(jb.Fragment, {
+            children: Ub.map(((bb, ab) => (0, jb.jsx)(Ab.Fragment, {
               children: bb
-            }, cb)))
+            }, ab)))
           })
         }
-        const Yc = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
-          hc = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
+        const fa = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
+          ma = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
 
-        function Jc(bb) {
+        function pa(bb) {
           let {
-            type: cb
+            type: ab
           } = bb;
-          const sb = Ic(),
-            Wb = [];
-          for (const kb of cb.trim().matchAll(Yc)) {
-            const [bb, cb, ab, Tb, Ub] = kb;
-            cb ? Wb.push((0, mb.jsx)("span", {
+          const Ub = Ba(),
+            Mb = [];
+          for (const Ab of ab.trim().matchAll(fa)) {
+            const [bb, ab, Tb, Eb, Yb] = Ab;
+            ab ? Mb.push((0, jb.jsx)("span", {
               className: "DocsTypeString",
               children: bb
-            })) : ab && sb.has(ab) ? Wb.push((0, mb.jsx)(Pc, {
-              name: ab,
-              definition: sb.get(ab)
-            })) : ab ? Wb.push((0, mb.jsx)("span", {
-              className: hc.has(ab) ? "DocsTypeKeyword" : "DocsTypeName",
+            })) : Tb && Ub.has(Tb) ? Mb.push((0, jb.jsx)(da, {
+              name: Tb,
+              definition: Ub.get(Tb)
+            })) : Tb ? Mb.push((0, jb.jsx)("span", {
+              className: ma.has(Tb) ? "DocsTypeKeyword" : "DocsTypeName",
               children: bb
-            })) : Tb ? Wb.push((0, mb.jsx)("span", {
+            })) : Eb ? Mb.push((0, jb.jsx)("span", {
               className: "DocsTypeNumber",
               children: bb
-            })) : Ub ? Wb.push(" ") : Wb.push((0, mb.jsx)("span", {
+            })) : Yb ? Mb.push(" ") : Mb.push((0, jb.jsx)("span", {
               className: "DocsTypePunctuation",
               children: bb
             }))
           }
-          return (0, mb.jsx)("code", {
+          return (0, jb.jsx)("code", {
             className: "DocsInlineCode DocsTypeText",
-            children: Wb.map(((bb, cb) => (0, mb.jsx)(kb.Fragment, {
+            children: Mb.map(((bb, ab) => (0, jb.jsx)(Ab.Fragment, {
               children: bb
-            }, cb)))
+            }, ab)))
           })
         }
-        const gc = 480,
-          Bc = 6,
-          tc = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
-        let yc = 0;
+        const Na = 480,
+          Wa = 6,
+          Ha = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
+        let Ia = 0;
 
-        function Pc(bb) {
+        function da(bb) {
           let {
-            name: cb,
-            definition: sb
+            name: ab,
+            definition: Ub
           } = bb;
-          const Wb = (0, kb.useContext)(nc),
-            ab = Hc[cb],
-            Ub = (0, kb.useRef)(null),
-            Ib = (0, kb.useRef)(null),
-            fb = (0, kb.useRef)(null),
-            [Mb, Xb] = (0, kb.useState)(!1),
-            [nb, lb] = (0, kb.useState)(null),
-            eb = (0, kb.useRef)(),
-            Cb = (0, kb.useContext)(mc),
-            [Nb] = (0, kb.useState)((() => "DocsTypePopover-" + yc++)),
-            Vb = () => {
-              clearTimeout(eb.current), Xb(!0)
+          const Mb = (0, Ab.useContext)(Xa),
+            Tb = ea[ab],
+            Yb = (0, Ab.useRef)(null),
+            Bb = (0, Ab.useRef)(null),
+            vb = (0, Ab.useRef)(null),
+            [Lb, Pb] = (0, Ab.useState)(!1),
+            [Xb, Rb] = (0, Ab.useState)(null),
+            yb = (0, Ab.useRef)(),
+            Zb = (0, Ab.useContext)(ja),
+            [Db] = (0, Ab.useState)((() => "DocsTypePopover-" + Ia++)),
+            zb = () => {
+              clearTimeout(yb.current), Pb(!0)
             },
-            Lb = () => {
-              clearTimeout(eb.current), eb.current = setTimeout((() => {
-                Xb(!1)
+            xb = () => {
+              clearTimeout(yb.current), yb.current = setTimeout((() => {
+                Pb(!1)
               }), 120)
             };
-          return (0, kb.useEffect)((() => {
-            if (!Mb) return;
+          return (0, Ab.useEffect)((() => {
+            if (!Lb) return;
             const bb = bb => {
               if ("Escape" === bb.key) {
-                var cb, sb;
-                if (null !== (cb = Ib.current) && void 0 !== cb && cb.contains(document.activeElement)) null === (sb = Ub.current) || void 0 === sb || sb.focus();
-                Xb(!1)
+                var ab, Ub;
+                if (null !== (ab = Bb.current) && void 0 !== ab && ab.contains(document.activeElement)) null === (Ub = Yb.current) || void 0 === Ub || Ub.focus();
+                Pb(!1)
               }
             };
             return document.addEventListener("keydown", bb), () => {
               document.removeEventListener("keydown", bb)
             }
-          }), [Mb]), (0, kb.useEffect)((() => () => {
-            clearTimeout(eb.current)
-          }), []), (0, kb.useLayoutEffect)((() => {
-            if (!Mb || !Ub.current || !Ib.current) return void lb(null);
-            const bb = Ub.current.getBoundingClientRect(),
-              cb = Ib.current.offsetHeight,
-              sb = Math.min(gc, window.innerWidth - 32),
-              kb = Math.min(Math.max(16, bb.left), window.innerWidth - sb - 16),
-              Wb = bb.bottom + Bc + cb < window.innerHeight;
-            lb({
-              left: kb,
-              top: Wb ? bb.bottom + Bc : Math.max(16, bb.top - Bc - cb)
+          }), [Lb]), (0, Ab.useEffect)((() => () => {
+            clearTimeout(yb.current)
+          }), []), (0, Ab.useLayoutEffect)((() => {
+            if (!Lb || !Yb.current || !Bb.current) return void Rb(null);
+            const bb = Yb.current.getBoundingClientRect(),
+              ab = Bb.current.offsetHeight,
+              Ub = Math.min(Na, window.innerWidth - 32),
+              Ab = Math.min(Math.max(16, bb.left), window.innerWidth - Ub - 16),
+              Mb = bb.bottom + Wa + ab < window.innerHeight;
+            Rb({
+              left: Ab,
+              top: Mb ? bb.bottom + Wa : Math.max(16, bb.top - Wa - ab)
             })
-          }), [Mb]), (0, mb.jsxs)(mb.Fragment, {
-            children: [(0, mb.jsx)("button", {
+          }), [Lb]), (0, jb.jsxs)(jb.Fragment, {
+            children: [(0, jb.jsx)("button", {
               type: "button",
-              ref: Ub,
+              ref: Yb,
               className: "DocsTypeLink",
-              "aria-expanded": Mb,
-              "aria-describedby": Mb ? Nb : void 0,
-              onMouseEnter: Vb,
-              onMouseLeave: Lb,
-              onFocus: Vb,
-              onBlur: Lb,
+              "aria-expanded": Lb,
+              "aria-describedby": Lb ? Db : void 0,
+              onMouseEnter: zb,
+              onMouseLeave: xb,
+              onFocus: zb,
+              onBlur: xb,
               onKeyDown: bb => {
-                "Tab" === bb.key && !bb.shiftKey && fb.current && (bb.preventDefault(), fb.current.focus())
+                "Tab" === bb.key && !bb.shiftKey && vb.current && (bb.preventDefault(), vb.current.focus())
               },
-              onClick: Vb,
-              children: cb
-            }), Mb && (0, Hb.createPortal)((0, mb.jsxs)("span", {
-              ref: Ib,
-              id: Nb,
+              onClick: zb,
+              children: ab
+            }), Lb && (0, eb.createPortal)((0, jb.jsxs)("span", {
+              ref: Bb,
+              id: Db,
               className: "DocsTypePopover",
               role: "tooltip",
-              style: nb ? {
-                left: nb.left,
-                top: nb.top,
-                maxWidth: gc
+              style: Xb ? {
+                left: Xb.left,
+                top: Xb.top,
+                maxWidth: Na
               } : {
                 visibility: "hidden"
               },
-              onMouseEnter: Vb,
-              onMouseLeave: Lb,
-              onFocus: Vb,
-              onBlur: Lb,
-              children: [(0, mb.jsxs)("span", {
+              onMouseEnter: zb,
+              onMouseLeave: xb,
+              onFocus: zb,
+              onBlur: xb,
+              children: [(0, jb.jsxs)("span", {
                 className: "DocsTypePopoverHeader",
-                children: [(0, mb.jsx)("span", {
+                children: [(0, jb.jsx)("span", {
                   className: "DocsTypePopoverTitle",
-                  children: cb
-                }), ab && (0, mb.jsxs)(Tb.d, {
-                  ref: fb,
+                  children: ab
+                }), Tb && (0, jb.jsxs)(Eb.c, {
+                  ref: vb,
                   className: "DocsTypePopoverLink",
-                  to: rb(Wb, Zb(ab)),
+                  to: sb(Mb, rb(Tb)),
                   onClick: () => {
-                    Xb(!1)
+                    Pb(!1)
                   },
                   onKeyDown: bb => {
                     if ("Tab" === bb.key) {
-                      var cb;
-                      if (bb.preventDefault(), bb.shiftKey || !Ub.current || ! function(bb, cb) {
-                          const sb = [...document.querySelectorAll(tc)],
-                            kb = sb.slice(sb.indexOf(bb) + 1).find((bb => bb.getClientRects().length > 0 && !(null !== cb && void 0 !== cb && cb.contains(bb))));
-                          return null === kb || void 0 === kb || kb.focus(), void 0 !== kb
-                        }(Ub.current, Ib.current)) null === (cb = Ub.current) || void 0 === cb || cb.focus();
-                      bb.shiftKey || Xb(!1)
+                      var ab;
+                      if (bb.preventDefault(), bb.shiftKey || !Yb.current || ! function(bb, ab) {
+                          const Ub = [...document.querySelectorAll(Ha)],
+                            Ab = Ub.slice(Ub.indexOf(bb) + 1).find((bb => bb.getClientRects().length > 0 && !(null !== ab && void 0 !== ab && ab.contains(bb))));
+                          return null === Ab || void 0 === Ab || Ab.focus(), void 0 !== Ab
+                        }(Yb.current, Bb.current)) null === (ab = Yb.current) || void 0 === ab || ab.focus();
+                      bb.shiftKey || Pb(!1)
                     }
                   },
-                  children: [Zb(ab).title, (0, mb.jsx)(Qb, {
+                  children: [rb(Tb).title, (0, jb.jsx)(kb, {
                     name: "arrow-right"
                   })]
                 })]
-              }), (0, mb.jsx)(Yb, {
+              }), (0, jb.jsx)(fb, {
                 lang: "ts",
-                code: sb,
+                code: Ub,
                 compact: !0
               })]
-            }), null !== Cb && void 0 !== Cb ? Cb : document.body)]
+            }), null !== Zb && void 0 !== Zb ? Zb : document.body)]
           })
         }
-        var Dc = sb(223),
-          Ec = sb(4484),
-          ic = sb(4486),
-          Oc = sb(4493);
-        const Gc = {
+        var Fa = Ub(205),
+          ha = Ub(4455),
+          Ga = Ub(4457),
+          Qa = Ub(4462);
+        const qa = {
           progressBar: {
-            Gb: 30,
-            Kb: .075,
-            Zb: 5,
-            zb: !1,
+            qb: 30,
+            ub: .075,
+            Kb: 5,
+            ob: !1,
             description: [{
               str: "Click repeatedly to complete!"
             }],
-            ob: "fa-solid fa-computer-mouse",
+            gb: "fa-solid fa-computer-mouse",
             scale: 3,
             rotation: 15
           },
           timedClick: {
-            Rb: 3e3,
+            Vb: 3e3,
             icon: "fa-solid fa-computer-mouse",
             label: [{
               str: "Click to complete the QTE!"
             }],
-            Fb: !0,
+            Ob: !0,
             scale: 3,
             rotation: 15,
-            xb: !1
+            cb: !1
           },
           gravityBar: {
-            Gb: 30,
-            pb: .25,
-            bc: 3,
-            sc: .8,
+            qb: 30,
+            Sb: .25,
+            ba: 3,
+            aa: .8,
             gravity: 1,
-            kc: 1.5,
-            Wc: 8,
-            ac: 4,
-            zb: !1,
+            Ua: 1.5,
+            Aa: 8,
+            Ma: 4,
+            ob: !1,
             description: [{
               str: "Hold to catch!"
             }],
@@ -1094,7 +1094,7 @@ export const modules = {
           },
           precisionBar: {
             speed: .5,
-            Uc: .15,
+            Ea: .15,
             label: [{
               str: "Click when the marker is within the green zone."
             }],
@@ -1103,30 +1103,30 @@ export const modules = {
             rotation: 0
           },
           rhythmClick: {
-            Hc: 5,
-            fc: 1200,
-            Mc: .15,
-            Xc: 3,
+            Ba: 5,
+            ea: 1200,
+            va: .15,
+            La: 3,
             label: [{
               str: "Click when the circles align!"
             }],
             icon: ""
           }
         };
-        var Kc = sb(334),
-          Zc = sb(1927);
+        var ua = Ub(307),
+          ra = Ub(1889);
 
-        function zc(bb) {
+        function Ka(bb) {
           return bb.startsWith("fa-")
         }
-        const qc = {
+        const oa = {
             text: "Text",
             icon: "Icon",
             progressBar: "Progress bar",
             keyBinding: "Key binding",
             other: "Other"
           },
-          dc = {
+          la = {
             text: "Text",
             icon: {
               icon: "Pixelated Heart"
@@ -1141,10 +1141,10 @@ export const modules = {
             }
           };
 
-        function Ac(bb) {
-          return "string" === typeof bb ? "text" : "entityName" in bb || "translationKey" in bb ? "other" : (0, Kc.Bb)(bb) ? "progressBar" : (0, Kc.Ab)(bb) ? "keyBinding" : "icon" in bb ? "icon" : "str" in bb && "string" === typeof bb.str ? "text" : "other"
+        function ta(bb) {
+          return "string" === typeof bb ? "text" : "entityName" in bb || "translationKey" in bb ? "other" : (0, ua.qb)(bb) ? "progressBar" : (0, ua.ob)(bb) ? "keyBinding" : "icon" in bb ? "icon" : "str" in bb && "string" === typeof bb.str ? "text" : "other"
         }
-        const wc = [{
+        const wa = [{
             path: ["style", "color"],
             label: "Colour",
             field: {
@@ -1182,7 +1182,7 @@ export const modules = {
             },
             defaultText: "1"
           }],
-          rc = {
+          sa = {
             text: [{
               path: ["str"],
               label: "Text",
@@ -1191,7 +1191,7 @@ export const modules = {
                 multiline: !0
               },
               isRequired: !0
-            }, ...wc],
+            }, ...wa],
             icon: [{
               path: ["icon"],
               label: "Icon",
@@ -1262,360 +1262,360 @@ export const modules = {
               label: "Action",
               field: {
                 kind: "choice",
-                options: Zc.m
+                options: ra.m
               },
               isRequired: !0
-            }, ...wc],
+            }, ...wa],
             other: []
           };
 
-        function oc(bb) {
+        function ga(bb) {
           return "string" === typeof bb ? {
             str: bb
           } : bb
         }
 
-        function Sc(bb, cb) {
-          let sb = oc(bb);
-          for (const kb of cb) sb = sb && "object" === typeof sb ? sb[kb] : void 0;
-          return sb
+        function Ca(bb, ab) {
+          let Ub = ga(bb);
+          for (const Ab of ab) Ub = Ub && "object" === typeof Ub ? Ub[Ab] : void 0;
+          return Ub
         }
 
-        function Rc(bb, cb, sb) {
-          const kb = (bb, Wb) => {
-            var ab;
-            const Tb = cb[Wb],
-              Ub = {
+        function Va(bb, ab, Ub) {
+          const Ab = (bb, Mb) => {
+            var Tb;
+            const Eb = ab[Mb],
+              Yb = {
                 ...bb
               };
-            if (Wb === cb.length - 1) return void 0 === sb ? delete Ub[Tb] : Ub[Tb] = sb, Ub;
-            const Ib = kb(null !== (ab = bb[Tb]) && void 0 !== ab ? ab : {}, Wb + 1);
-            return 0 === Object.keys(Ib).length ? delete Ub[Tb] : Ub[Tb] = Ib, Ub
+            if (Mb === ab.length - 1) return void 0 === Ub ? delete Yb[Eb] : Yb[Eb] = Ub, Yb;
+            const Bb = Ab(null !== (Tb = bb[Eb]) && void 0 !== Tb ? Tb : {}, Mb + 1);
+            return 0 === Object.keys(Bb).length ? delete Yb[Eb] : Yb[Eb] = Bb, Yb
           };
           return function(bb) {
-            const cb = Object.keys(bb);
-            return "string" === typeof bb.str && 1 === cb.length ? bb.str : bb
-          }(kb(oc(bb), 0))
+            const ab = Object.keys(bb);
+            return "string" === typeof bb.str && 1 === ab.length ? bb.str : bb
+          }(Ab(ga(bb), 0))
         }
 
-        function vc(bb, cb) {
-          const sb = Ac(bb),
-            kb = rc[sb].find((bb => bb.path.join(".") === cb.join("."))),
-            Wb = null !== kb && void 0 !== kb && kb.isRequired && "other" !== sb ? Sc(dc[sb], cb) : void 0;
-          return Rc(bb, cb, Wb)
+        function Oa(bb, ab) {
+          const Ub = ta(bb),
+            Ab = sa[Ub].find((bb => bb.path.join(".") === ab.join("."))),
+            Mb = null !== Ab && void 0 !== Ab && Ab.isRequired && "other" !== Ub ? Ca(la[Ub], ab) : void 0;
+          return Va(bb, ab, Mb)
         }
 
-        function Fc(bb) {
-          switch (Ac(bb)) {
+        function ca(bb) {
+          switch (ta(bb)) {
             case "text":
-              return String(Sc(bb, ["str"]));
+              return String(Ca(bb, ["str"]));
             case "icon":
-              return String(Sc(bb, ["icon"]));
+              return String(Ca(bb, ["icon"]));
             case "progressBar":
-              return `${Math.round(100*Number(Sc(bb,["progress"])))}%`;
+              return `${Math.round(100*Number(Ca(bb,["progress"])))}%`;
             case "keyBinding":
-              return String(Sc(bb, ["action"]));
+              return String(Ca(bb, ["action"]));
             case "other":
               return JSON.stringify(bb)
           }
         }
-        const xc = /^[A-Za-z_$][\w$]*$/;
+        const Ja = /^[A-Za-z_$][\w$]*$/;
 
-        function jc(bb) {
-          if (Array.isArray(bb)) return `[${bb.map(jc).join(", ")}]`;
+        function na(bb) {
+          if (Array.isArray(bb)) return `[${bb.map(na).join(", ")}]`;
           if (bb && "object" === typeof bb) {
-            const cb = Object.entries(bb).map((bb => {
-              let [cb, sb] = bb;
-              return `${xc.test(cb)?cb:JSON.stringify(cb)}: ${jc(sb)}`
+            const ab = Object.entries(bb).map((bb => {
+              let [ab, Ub] = bb;
+              return `${Ja.test(ab)?ab:JSON.stringify(ab)}: ${na(Ub)}`
             }));
-            return 0 === cb.length ? "{}" : `{ ${cb.join(", ")} }`
+            return 0 === ab.length ? "{}" : `{ ${ab.join(", ")} }`
           }
           return JSON.stringify(bb)
         }
 
-        function pc(bb) {
-          const cb = bb.map(jc),
-            sb = `[${cb.join(", ")}]`;
-          return sb.length <= 60 ? sb : `[\n${cb.map((bb=>`    ${bb},`)).join("\n")}\n]`
+        function Sa(bb) {
+          const ab = bb.map(na),
+            Ub = `[${ab.join(", ")}]`;
+          return Ub.length <= 60 ? Ub : `[\n${ab.map((bb=>`    ${bb},`)).join("\n")}\n]`
         }
-        const bs = {
+        const bU = {
           "\n": "\\n",
           "\r": "\\r",
           "\t": "\\t"
         };
 
-        function cs(bb) {
-          let cb = "";
-          for (let Wb = 0; Wb < bb.length; Wb++) {
-            const ab = bb[Wb];
-            if ("\\" === ab) {
-              var sb;
-              const kb = null !== (sb = bb[Wb + 1]) && void 0 !== sb ? sb : "";
-              cb += "'" === kb ? "'" : ab + kb, Wb++
-            } else if ('"' === ab) cb += '\\"';
+        function aU(bb) {
+          let ab = "";
+          for (let Mb = 0; Mb < bb.length; Mb++) {
+            const Tb = bb[Mb];
+            if ("\\" === Tb) {
+              var Ub;
+              const Ab = null !== (Ub = bb[Mb + 1]) && void 0 !== Ub ? Ub : "";
+              ab += "'" === Ab ? "'" : Tb + Ab, Mb++
+            } else if ('"' === Tb) ab += '\\"';
             else {
-              var kb;
-              cb += null !== (kb = bs[ab]) && void 0 !== kb ? kb : ab
+              var Ab;
+              ab += null !== (Ab = bU[Tb]) && void 0 !== Ab ? Ab : Tb
             }
           }
-          return `"${cb}"`
+          return `"${ab}"`
         }
 
-        function ss(bb) {
+        function UU(bb) {
           if ("string" === typeof bb) return !0;
           if (!bb || "object" !== typeof bb || Array.isArray(bb)) return !1;
-          const cb = bb;
-          return "ProgressBar" === cb.type ? "number" === typeof cb.progress : "StyledKeyBinding" === cb.type ? Zc.m.includes(cb.action) : "string" === typeof cb.icon || "string" === typeof cb.str || "string" === typeof cb.entityName || "string" === typeof cb.translationKey
+          const ab = bb;
+          return "ProgressBar" === ab.type ? "number" === typeof ab.progress : "StyledKeyBinding" === ab.type ? ra.m.includes(ab.action) : "string" === typeof ab.icon || "string" === typeof ab.str || "string" === typeof ab.entityName || "string" === typeof ab.translationKey
         }
 
-        function ks(bb) {
-          let cb;
+        function AU(bb) {
+          let ab;
           try {
-            cb = function(bb) {
-              let cb = "",
-                sb = "",
-                kb = 0;
-              const Wb = () => {
-                cb += sb.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), sb = ""
+            ab = function(bb) {
+              let ab = "",
+                Ub = "",
+                Ab = 0;
+              const Mb = () => {
+                ab += Ub.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), Ub = ""
               };
-              for (; kb < bb.length;) {
-                const ab = bb.slice(kb).search(/["'`]|\/\//);
-                if (-1 === ab) {
-                  sb += bb.slice(kb);
+              for (; Ab < bb.length;) {
+                const Tb = bb.slice(Ab).search(/["'`]|\/\//);
+                if (-1 === Tb) {
+                  Ub += bb.slice(Ab);
                   break
                 }
-                sb += bb.slice(kb, kb + ab);
-                const Tb = kb + ab,
-                  Ub = bb[Tb];
-                if ("/" === Ub) {
-                  const cb = bb.indexOf("\n", Tb);
-                  kb = -1 === cb ? bb.length : cb;
+                Ub += bb.slice(Ab, Ab + Tb);
+                const Eb = Ab + Tb,
+                  Yb = bb[Eb];
+                if ("/" === Yb) {
+                  const ab = bb.indexOf("\n", Eb);
+                  Ab = -1 === ab ? bb.length : ab;
                   continue
                 }
-                if (Wb(), "`" === Ub) throw new Error("Use quotes rather than template strings.");
-                let Ib = Tb + 1;
-                for (; Ib < bb.length && bb[Ib] !== Ub;) Ib += "\\" === bb[Ib] ? 2 : 1;
-                if (Ib >= bb.length) throw new Error("A string is missing its closing quote.");
-                const Hb = bb.slice(Tb + 1, Ib);
-                cb += cs(Hb), kb = Ib + 1
+                if (Mb(), "`" === Yb) throw new Error("Use quotes rather than template strings.");
+                let Bb = Eb + 1;
+                for (; Bb < bb.length && bb[Bb] !== Yb;) Bb += "\\" === bb[Bb] ? 2 : 1;
+                if (Bb >= bb.length) throw new Error("A string is missing its closing quote.");
+                const eb = bb.slice(Eb + 1, Bb);
+                ab += aU(eb), Ab = Bb + 1
               }
-              return Wb(), JSON.parse(cb)
+              return Mb(), JSON.parse(ab)
             }(bb.trim())
-          } catch (kb) {
+          } catch (Ab) {
             return {
               parts: null,
-              error: kb instanceof SyntaxError ? "This isn't a valid array yet." : kb.message
+              error: Ab instanceof SyntaxError ? "This isn't a valid array yet." : Ab.message
             }
           }
-          if (!Array.isArray(cb)) return {
+          if (!Array.isArray(ab)) return {
             parts: null,
             error: 'Styled text is an array, e.g. ["Hello ", { str: "world" }]'
           };
-          const sb = cb.findIndex((bb => !ss(bb)));
-          return -1 !== sb ? {
+          const Ub = ab.findIndex((bb => !UU(bb)));
+          return -1 !== Ub ? {
             parts: null,
-            error: `Part ${sb+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
+            error: `Part ${Ub+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
           } : {
-            parts: cb,
+            parts: ab,
             error: null
           }
         }
-        const Ws = 1 / Dc.e.clientTicksPerSecond,
-          as = 700,
-          Ts = {
+        const MU = 1 / Fa.c.clientTicksPerSecond,
+          TU = 700,
+          EU = {
             type: null,
             parameters: null,
             state: null,
             isActive: !1
           },
-          Us = {
-            progressBar: Gc.progressBar.ob,
-            timedClick: Gc.timedClick.icon,
-            gravityBar: Gc.gravityBar.icon,
-            precisionBar: Gc.precisionBar.icon,
-            rhythmClick: Gc.rhythmClick.icon
+          YU = {
+            progressBar: qa.progressBar.gb,
+            timedClick: qa.timedClick.icon,
+            gravityBar: qa.gravityBar.icon,
+            precisionBar: qa.precisionBar.icon,
+            rhythmClick: qa.rhythmClick.icon
           };
 
-        function Is(bb) {
+        function BU(bb) {
           let {
-            type: cb
+            type: ab
           } = bb;
-          const [sb, Wb] = (0, kb.useState)("ready"), [Tb, Ub] = (0, kb.useState)(1), [Ib, Hb] = (0, kb.useState)(!0), fb = (0, kb.useRef)(null), Mb = (0, kb.useRef)(null), Xb = (0, kb.useRef)(null), nb = (0, kb.useRef)(new Set), lb = (0, kb.useRef)(!1), eb = Us[cb], Cb = (0, kb.useMemo)((() => ({
+          const [Ub, Mb] = (0, Ab.useState)("ready"), [Eb, Yb] = (0, Ab.useState)(1), [Bb, eb] = (0, Ab.useState)(!0), vb = (0, Ab.useRef)(null), Lb = (0, Ab.useRef)(null), Pb = (0, Ab.useRef)(null), Xb = (0, Ab.useRef)(new Set), Rb = (0, Ab.useRef)(!1), yb = YU[ab], Zb = (0, Ab.useMemo)((() => ({
             getState: () => {
-              var bb, cb;
-              return null !== (bb = null === (cb = Xb.current) || void 0 === cb ? void 0 : cb.getState()) && void 0 !== bb ? bb : Ts
+              var bb, ab;
+              return null !== (bb = null === (ab = Pb.current) || void 0 === ab ? void 0 : ab.getState()) && void 0 !== bb ? bb : EU
             },
-            onFrame: bb => (nb.current.add(bb), () => {
-              nb.current.delete(bb)
+            onFrame: bb => (Xb.current.add(bb), () => {
+              Xb.current.delete(bb)
             })
           })), []);
-          (0, kb.useEffect)((() => {
-            const bb = fb.current,
-              cb = Mb.current;
-            if (!bb || !cb) return;
-            const sb = new ResizeObserver((() => {
-              Ub(bb.clientWidth / Math.max(1, cb.offsetWidth))
+          (0, Ab.useEffect)((() => {
+            const bb = vb.current,
+              ab = Lb.current;
+            if (!bb || !ab) return;
+            const Ub = new ResizeObserver((() => {
+              Yb(bb.clientWidth / Math.max(1, ab.offsetWidth))
             }));
-            return sb.observe(bb), () => {
-              sb.disconnect()
+            return Ub.observe(bb), () => {
+              Ub.disconnect()
             }
-          }), []), (0, kb.useEffect)((() => {
+          }), []), (0, Ab.useEffect)((() => {
             var bb;
-            if ("playing" !== sb) return;
-            let kb = !1;
-            const ab = new Oc.g[cb](Gc[cb], (bb => {
-              kb = !0, Hb(!1), Wb(bb ? "succeeded" : "failed")
+            if ("playing" !== Ub) return;
+            let Ab = !1;
+            const Tb = new Qa.f[ab](qa[ab], (bb => {
+              Ab = !0, eb(!1), Mb(bb ? "succeeded" : "failed")
             }), (() => {}));
-            Xb.current = ab;
-            let Tb = 0,
-              Ub = performance.now(),
-              Ib = requestAnimationFrame((function bb(cb) {
-                for (Tb += Math.min(.25, (cb - Ub) / 1e3), Ub = cb; Tb >= Ws && !kb;) Tb -= Ws, ab.handleTick(Ws);
-                for (const sb of nb.current) sb();
-                kb || (Ib = requestAnimationFrame(bb))
+            Pb.current = Tb;
+            let Eb = 0,
+              Yb = performance.now(),
+              Bb = requestAnimationFrame((function bb(ab) {
+                for (Eb += Math.min(.25, (ab - Yb) / 1e3), Yb = ab; Eb >= MU && !Ab;) Eb -= MU, Tb.handleTick(MU);
+                for (const Ub of Xb.current) Ub();
+                Ab || (Bb = requestAnimationFrame(bb))
               }));
-            return null === (bb = fb.current) || void 0 === bb || bb.focus({
+            return null === (bb = vb.current) || void 0 === bb || bb.focus({
               preventScroll: !0
             }), () => {
-              cancelAnimationFrame(Ib), ab.tearDown(), Xb.current = null, lb.current = !1
+              cancelAnimationFrame(Bb), Tb.tearDown(), Pb.current = null, Rb.current = !1
             }
-          }), [sb, cb]), (0, kb.useEffect)((() => {
-            if (Ib) return;
+          }), [Ub, ab]), (0, Ab.useEffect)((() => {
+            if (Bb) return;
             const bb = setTimeout((() => {
-              Hb(!0)
-            }), as);
+              eb(!0)
+            }), TU);
             return () => {
               clearTimeout(bb)
             }
-          }), [Ib]);
-          const Nb = bb => {
-            var cb;
-            "playing" === sb && lb.current !== bb && (lb.current = bb, null === (cb = Xb.current) || void 0 === cb || cb.handleMouseInput(bb))
+          }), [Bb]);
+          const Db = bb => {
+            var ab;
+            "playing" === Ub && Rb.current !== bb && (Rb.current = bb, null === (ab = Pb.current) || void 0 === ab || ab.handleMouseInput(bb))
           };
-          return (0, mb.jsxs)("div", {
+          return (0, jb.jsxs)("div", {
             className: "DocsQteDemo",
-            children: [(0, mb.jsxs)("div", {
-              ref: fb,
-              className: ab()("DocsQteStage", {
-                Playing: "playing" === sb
+            children: [(0, jb.jsxs)("div", {
+              ref: vb,
+              className: Tb()("DocsQteStage", {
+                Playing: "playing" === Ub
               }),
-              tabIndex: "playing" === sb ? 0 : -1,
-              role: "playing" === sb ? "button" : void 0,
-              "aria-label": "playing" === sb ? `${cb} quick time event: click or press Space` : void 0,
+              tabIndex: "playing" === Ub ? 0 : -1,
+              role: "playing" === Ub ? "button" : void 0,
+              "aria-label": "playing" === Ub ? `${ab} quick time event: click or press Space` : void 0,
               onPointerDown: bb => {
-                0 === bb.button && Nb(!0)
+                0 === bb.button && Db(!0)
               },
               onPointerUp: () => {
-                Nb(!1)
+                Db(!1)
               },
               onPointerLeave: () => {
-                Nb(!1)
+                Db(!1)
               },
               onPointerCancel: () => {
-                Nb(!1)
+                Db(!1)
               },
               onKeyDown: bb => {
-                "playing" !== sb || " " !== bb.key && "Enter" !== bb.key || (bb.preventDefault(), Nb(!0))
+                "playing" !== Ub || " " !== bb.key && "Enter" !== bb.key || (bb.preventDefault(), Db(!0))
               },
               onKeyUp: bb => {
-                "playing" !== sb || " " !== bb.key && "Enter" !== bb.key || Nb(!1)
+                "playing" !== Ub || " " !== bb.key && "Enter" !== bb.key || Db(!1)
               },
-              children: [(0, mb.jsx)("div", {
-                ref: Mb,
+              children: [(0, jb.jsx)("div", {
+                ref: Lb,
                 className: "DocsQteScreen",
                 style: {
-                  transform: `scale(${Tb})`
+                  transform: `scale(${Eb})`
                 },
-                children: "playing" === sb && (0, mb.jsx)(ic.d.Provider, {
-                  value: Cb,
-                  children: (0, mb.jsx)(Ec.c, {
+                children: "playing" === Ub && (0, jb.jsx)(Ga.c.Provider, {
+                  value: Zb,
+                  children: (0, jb.jsx)(ha.e, {
                     qte: {
-                      type: cb,
-                      parameters: Gc[cb]
+                      type: ab,
+                      parameters: qa[ab]
                     }
                   })
                 })
-              }), "playing" !== sb && (0, mb.jsxs)("div", {
+              }), "playing" !== Ub && (0, jb.jsxs)("div", {
                 className: "DocsQteOverlay",
-                children: ["ready" !== sb && (0, mb.jsxs)("div", {
-                  className: ab()("DocsQteResult", "succeeded" === sb ? "Succeeded" : "Failed"),
-                  children: [(0, mb.jsx)(Qb, {
-                    name: "succeeded" === sb ? "check" : "cross",
+                children: ["ready" !== Ub && (0, jb.jsxs)("div", {
+                  className: Tb()("DocsQteResult", "succeeded" === Ub ? "Succeeded" : "Failed"),
+                  children: [(0, jb.jsx)(kb, {
+                    name: "succeeded" === Ub ? "check" : "cross",
                     isTinted: !0
-                  }), (0, mb.jsx)("span", {
-                    children: "succeeded" === sb ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
+                  }), (0, jb.jsx)("span", {
+                    children: "succeeded" === Ub ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
                   })]
-                }), (0, mb.jsxs)("button", {
+                }), (0, jb.jsxs)("button", {
                   type: "button",
                   className: "DocsQtePlay",
-                  disabled: !Ib,
+                  disabled: !Bb,
                   onClick: () => {
-                    Wb("playing")
+                    Mb("playing")
                   },
-                  children: [(0, mb.jsx)(Qb, {
-                    name: "ready" === sb ? "play" : "replay"
-                  }), (0, mb.jsx)("span", {
-                    children: "ready" === sb ? `Try ${cb}` : "Play again"
+                  children: [(0, jb.jsx)(kb, {
+                    name: "ready" === Ub ? "play" : "replay"
+                  }), (0, jb.jsx)("span", {
+                    children: "ready" === Ub ? `Try ${ab}` : "Play again"
                   })]
                 })]
               })]
-            }), eb && !zc(eb) && (0, mb.jsxs)("p", {
+            }), yb && !Ka(yb) && (0, jb.jsxs)("p", {
               className: "DocsQteCaption",
-              children: ["The ", (0, mb.jsx)("code", {
-                children: eb
+              children: ["The ", (0, jb.jsx)("code", {
+                children: yb
               }), " icon is a Bloxd item, so it shows in game only."]
             })]
           })
         }
 
-        function Hs(bb) {
+        function eU(bb) {
           let {
-            level: cb,
-            text: sb,
-            anchor: kb,
-            className: Wb
+            level: ab,
+            text: Ub,
+            anchor: Ab,
+            className: Mb
           } = bb;
-          const Tb = `h${Math.min(cb,6)}`;
-          return (0, mb.jsxs)(Tb, {
-                id: kb,
-                className: ab()("DocsHeading", Wb),
-                children: [(0, mb.jsx)(uc, {
-                      text: sb
-                    }), (0, mb.jsx)("a", {
+          const Eb = `h${Math.min(ab,6)}`;
+          return (0, jb.jsxs)(Eb, {
+                id: Ab,
+                className: Tb()("DocsHeading", Mb),
+                children: [(0, jb.jsx)(ia, {
+                      text: Ub
+                    }), (0, jb.jsx)("a", {
                         className: "DocsHeadingAnchor",
-                        href: `#${kb}`,
-                        "aria-label": `Link to ${sb.replace(/`/g,"")}`,children:"#"})]})}function fs(bb){let{items:cb,ordered:sb}=bb;const kb=sb?"ol":"ul";return(0,mb.jsx)(kb,{className:"DocsList",children:cb.map(((bb,cb)=>(0,mb.jsxs)("li",{children:[(0,mb.jsx)(uc,{text:bb.text}),bb.children.length>0&&(0,mb.jsx)(fs,{items:bb.children,ordered:sb})]},cb)))})}function Ms(bb){const cb=bb[0],sb="paragraph"===(null===cb||void 0===cb?void 0:cb.kind)?cb.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(sb)?"warning":/^\*\*(tip|prefer)/.test(sb)?"tip":"note"}function Xs(bb){let{block:cb}=bb;switch(cb.kind){case"heading":return(0,mb.jsx)(Hs,{level:cb.level,text:cb.text,anchor:cb.anchor});case"paragraph":return(0,mb.jsx)("p",{children:(0,mb.jsx)(uc,{text:cb.text})});case"code":{const bb="ts"===cb.lang?function(bb){const cb=bb.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return cb&&Object.hasOwn(Gc,cb[1])?cb[1]:null}(cb.code):null;return(0,mb.jsxs)(mb.Fragment,{children:[(0,mb.jsx)(Yb,{code:cb.code,lang:cb.lang}),bb&&(0,mb.jsx)(Is,{type:bb})]})}case"table":return(0,mb.jsx)("div",{className:"DocsTableScroll",children:(0,mb.jsxs)("table",{className:"DocsTable",children:[(0,mb.jsx)("thead",{children:(0,mb.jsx)("tr",{children:cb.header.map(((bb,cb)=>(0,mb.jsx)("th",{children:(0,mb.jsx)(uc,{text:bb})},cb)))})}),(0,mb.jsx)("tbody",{children:cb.rows.map(((bb,cb)=>(0,mb.jsx)("tr",{children:bb.map(((bb,cb)=>(0,mb.jsx)("td",{children:(0,mb.jsx)(uc,{text:bb})},cb)))},cb)))})]})});case"list":return(0,mb.jsx)(fs,{items:cb.items,ordered:cb.ordered});case"quote":return(0,mb.jsx)("aside",{className:ab()("DocsCallout",Ms(cb.blocks)),children:(0,mb.jsx)(ns,{blocks:cb.blocks})});case"rule":return(0,mb.jsx)("hr",{className:"DocsRule"})}}function ns(bb){let{blocks:cb}=bb;return(0,mb.jsx)(mb.Fragment,{children:cb.map(((bb,cb)=>(0,mb.jsx)(Xs,{block:bb},cb)))})}var ms=sb(4476),ls=sb(4479);function Qs(bb){return"blocks"===bb||"items"===bb}const es=new Map;function Cs(bb){let cb=es.get(bb);return cb||(cb=function(bb){const cb={entries:[],legend:[],notes:[],examples:[]};let sb=!1;for(const ab of bb.split(/\r?\n/).slice(1)){if(ab.startsWith("#")){const bb=ab.replace(/^# ?/,""),kb=bb.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);kb?cb.legend.push({code:kb[1],meaning:kb[2],usage:kb[3].trim()}):/^Examples:/.test(bb.trim())?sb=!0:sb&&bb.trim()?cb.examples.push(bb.trim()):bb.trim()&&!/^\s/.test(bb)&&cb.notes.push(bb.trim());continue}const bb=ab.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var kb,Wb;bb&&cb.entries.push({name:bb[1],variants:null!==(kb=null===(Wb=bb[2])||void 0===Wb?void 0:Wb.split(","))&&void 0!==kb?kb:[]})}return cb}("blocks"===bb?ms:ls),es.set(bb,cb)),cb}function Ns(bb){let{className:cb,value:sb,placeholder:kb,label:Wb,onChange:ab,count:Tb,children:Ub}=bb;return(0,mb.jsxs)("div",{className:cb,children:[(0,mb.jsx)(Qb,{name:"magnifying-glass"}),(0,mb.jsx)("input",{type:"search",value:sb,placeholder:kb,"aria-label":Wb,onChange:bb=>{ab(bb.target.value)}}),Ub,Tb&&(0,mb.jsxs)("span",{className:"DocsFilterCount",children:[Tb.visible," of ",Tb.total]})]})}var Vs=sb(1039);function Ls(bb){const cb=bb.trim().match(/^(` {
+                        href: `#${Ab}`,
+                        "aria-label": `Link to ${Ub.replace(/`/g,"")}`,children:"#"})]})}function vU(bb){let{items:ab,ordered:Ub}=bb;const Ab=Ub?"ol":"ul";return(0,jb.jsx)(Ab,{className:"DocsList",children:ab.map(((bb,ab)=>(0,jb.jsxs)("li",{children:[(0,jb.jsx)(ia,{text:bb.text}),bb.children.length>0&&(0,jb.jsx)(vU,{items:bb.children,ordered:Ub})]},ab)))})}function LU(bb){const ab=bb[0],Ub="paragraph"===(null===ab||void 0===ab?void 0:ab.kind)?ab.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(Ub)?"warning":/^\*\*(tip|prefer)/.test(Ub)?"tip":"note"}function PU(bb){let{block:ab}=bb;switch(ab.kind){case"heading":return(0,jb.jsx)(eU,{level:ab.level,text:ab.text,anchor:ab.anchor});case"paragraph":return(0,jb.jsx)("p",{children:(0,jb.jsx)(ia,{text:ab.text})});case"code":{const bb="ts"===ab.lang?function(bb){const ab=bb.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return ab&&Object.hasOwn(qa,ab[1])?ab[1]:null}(ab.code):null;return(0,jb.jsxs)(jb.Fragment,{children:[(0,jb.jsx)(fb,{code:ab.code,lang:ab.lang}),bb&&(0,jb.jsx)(BU,{type:bb})]})}case"table":return(0,jb.jsx)("div",{className:"DocsTableScroll",children:(0,jb.jsxs)("table",{className:"DocsTable",children:[(0,jb.jsx)("thead",{children:(0,jb.jsx)("tr",{children:ab.header.map(((bb,ab)=>(0,jb.jsx)("th",{children:(0,jb.jsx)(ia,{text:bb})},ab)))})}),(0,jb.jsx)("tbody",{children:ab.rows.map(((bb,ab)=>(0,jb.jsx)("tr",{children:bb.map(((bb,ab)=>(0,jb.jsx)("td",{children:(0,jb.jsx)(ia,{text:bb})},ab)))},ab)))})]})});case"list":return(0,jb.jsx)(vU,{items:ab.items,ordered:ab.ordered});case"quote":return(0,jb.jsx)("aside",{className:Tb()("DocsCallout",LU(ab.blocks)),children:(0,jb.jsx)(XU,{blocks:ab.blocks})});case"rule":return(0,jb.jsx)("hr",{className:"DocsRule"})}}function XU(bb){let{blocks:ab}=bb;return(0,jb.jsx)(jb.Fragment,{children:ab.map(((bb,ab)=>(0,jb.jsx)(PU,{block:bb},ab)))})}var jU=Ub(4437),RU=Ub(4439);function kU(bb){return"blocks"===bb||"items"===bb}const yU=new Map;function ZU(bb){let ab=yU.get(bb);return ab||(ab=function(bb){const ab={entries:[],legend:[],notes:[],examples:[]};let Ub=!1;for(const Tb of bb.split(/\r?\n/).slice(1)){if(Tb.startsWith("#")){const bb=Tb.replace(/^# ?/,""),Ab=bb.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);Ab?ab.legend.push({code:Ab[1],meaning:Ab[2],usage:Ab[3].trim()}):/^Examples:/.test(bb.trim())?Ub=!0:Ub&&bb.trim()?ab.examples.push(bb.trim()):bb.trim()&&!/^\s/.test(bb)&&ab.notes.push(bb.trim());continue}const bb=Tb.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var Ab,Mb;bb&&ab.entries.push({name:bb[1],variants:null!==(Ab=null===(Mb=bb[2])||void 0===Mb?void 0:Mb.split(","))&&void 0!==Ab?Ab:[]})}return ab}("blocks"===bb?jU:RU),yU.set(bb,ab)),ab}function DU(bb){let{className:ab,value:Ub,placeholder:Ab,label:Mb,onChange:Tb,count:Eb,children:Yb}=bb;return(0,jb.jsxs)("div",{className:ab,children:[(0,jb.jsx)(kb,{name:"magnifying-glass"}),(0,jb.jsx)("input",{type:"search",value:Ub,placeholder:Ab,"aria-label":Mb,onChange:bb=>{Tb(bb.target.value)}}),Yb,Eb&&(0,jb.jsxs)("span",{className:"DocsFilterCount",children:[Eb.visible," of ",Eb.total]})]})}var zU=Ub(990);function xU(bb){const ab=bb.trim().match(/^(` {
                           1,
                           2
-                        })\ s * ([ ^ `]+?)\s*\1$/);return cb?cb[2]:null}function us(bb){return"paragraph"===bb.kind&&""===bb.text.trim()}function Ys(bb){const cb={name:bb.heading.text,description:[],params:[],returns:null};let sb="description";for(const Wb of bb.blocks)if(!us(Wb))if("heading"===Wb.kind&&/^Parameters:?$/.test(Wb.text))sb="params";else if("heading"===Wb.kind&&/^Returns:?$/.test(Wb.text))sb="returns",cb.returns={type:"",description:[]};else if("params"!==sb||"table"!==Wb.kind){if("returns"===sb&&"paragraph"===Wb.kind&&""===cb.returns.type){const bb=Ls(Wb.text);if(null!==bb){cb.returns.type=bb.replaceAll("\\|","|");continue}}"returns"===sb?cb.returns.description.push(Wb):cb.description.push(Wb)}else for(const[bb,sb,ab]of Wb.rows){var kb;cb.params.push({name:bb,type:null!==(kb=Ls(sb))&&void 0!==kb?kb:sb,description:null!==ab&&void 0!==ab?ab:""})}return cb}const hs=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function gs(bb){return bb.filter((bb=>!us(bb)))}const Bs=/^[\w][\w .'&!:()-]*$/,ts=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function ys(bb){var cb;if("code"===bb.kind&&"text"===bb.lang){const cb=bb.code.split("\n").map((bb=>bb.trim())).filter(Boolean);return cb.length>0&&cb.every((bb=>Bs.test(bb)))?cb.map((bb=>({name:bb}))):null}return"paragraph"===bb.kind&&ts.test(bb.text.trim())?[...bb.text.matchAll(/`([ ^ `]+)` / g)].flatMap((bb => bb[1].split(/,\s*/).map((bb => ({
+                        })\ s * ([ ^ `]+?)\s*\1$/);return ab?ab[2]:null}function iU(bb){return"paragraph"===bb.kind&&""===bb.text.trim()}function fU(bb){const ab={name:bb.heading.text,description:[],params:[],returns:null};let Ub="description";for(const Mb of bb.blocks)if(!iU(Mb))if("heading"===Mb.kind&&/^Parameters:?$/.test(Mb.text))Ub="params";else if("heading"===Mb.kind&&/^Returns:?$/.test(Mb.text))Ub="returns",ab.returns={type:"",description:[]};else if("params"!==Ub||"table"!==Mb.kind){if("returns"===Ub&&"paragraph"===Mb.kind&&""===ab.returns.type){const bb=xU(Mb.text);if(null!==bb){ab.returns.type=bb.replaceAll("\\|","|");continue}}"returns"===Ub?ab.returns.description.push(Mb):ab.description.push(Mb)}else for(const[bb,Ub,Tb]of Mb.rows){var Ab;ab.params.push({name:bb,type:null!==(Ab=xU(Ub))&&void 0!==Ab?Ab:Ub,description:null!==Tb&&void 0!==Tb?Tb:""})}return ab}const mU=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function pU(bb){return bb.filter((bb=>!iU(bb)))}const NU=/^[\w][\w .'&!:()-]*$/,WU=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function HU(bb){var ab;if("code"===bb.kind&&"text"===bb.lang){const ab=bb.code.split("\n").map((bb=>bb.trim())).filter(Boolean);return ab.length>0&&ab.every((bb=>NU.test(bb)))?ab.map((bb=>({name:bb}))):null}return"paragraph"===bb.kind&&WU.test(bb.text.trim())?[...bb.text.matchAll(/`([ ^ `]+)` / g)].flatMap((bb => bb[1].split(/,\s*/).map((bb => ({
                               name: bb.trim()
-                            }))))): "table" === bb.kind && null !== (cb = bb.header[0]) && void 0 !== cb && cb.startsWith("Song") ? bb.rows.map((bb => {
-                              let [cb, sb] = bb;
+                            }))))): "table" === bb.kind && null !== (ab = bb.header[0]) && void 0 !== ab && ab.startsWith("Song") ? bb.rows.map((bb => {
+                              let [ab, Ub] = bb;
                               return {
-                                name: cb.replace(/`/g, ""),
-                                caption: sb
+                                name: ab.replace(/`/g, ""),
+                                caption: Ub
                               }
                             })) : null
                           }
 
-                          function Ps(bb) {
-                            const cb = [];
-                            for (const sb of bb) {
-                              const bb = ys(sb),
-                                kb = cb.at(-1),
-                                Wb = "table" === sb.kind;
-                              bb ? "names" === (null === kb || void 0 === kb ? void 0 : kb.kind) && kb.isSongs === Wb ? kb.names.push(...bb) : cb.push({
+                          function IU(bb) {
+                            const ab = [];
+                            for (const Ub of bb) {
+                              const bb = HU(Ub),
+                                Ab = ab.at(-1),
+                                Mb = "table" === Ub.kind;
+                              bb ? "names" === (null === Ab || void 0 === Ab ? void 0 : Ab.kind) && Ab.isSongs === Mb ? Ab.names.push(...bb) : ab.push({
                                 kind: "names",
                                 names: bb,
-                                isSongs: Wb
-                              }) : cb.push({
+                                isSongs: Mb
+                              }) : ab.push({
                                 kind: "block",
-                                block: sb
+                                block: Ub
                               })
                             }
-                            return cb
+                            return ab
                           }
-                          const Ds = {
+                          const dU = {
                             icons: "icon",
                             particles: "particle",
                             sounds: "sound",
@@ -1624,58 +1624,58 @@ export const modules = {
                             items: "item"
                           };
 
-                          function Es(bb, cb) {
-                            return `${Ds[bb]}-${(0,hb.x)(cb)}`
+                          function FU(bb, ab) {
+                            return `${dU[bb]}-${(0,mb.r)(ab)}`
                           }
-                          const is = new WeakMap;
+                          const hU = new WeakMap;
 
-                          function Os(bb, cb, sb) {
-                            let kb = is.get(cb);
-                            if (!kb) {
-                              kb = new Map;
-                              const sb = new Set;
-                              for (const Wb of (0, hb.z)(cb)) {
-                                const cb = Ps(gs(Wb.blocks)).map((cb => {
-                                  if ("block" === cb.kind) return cb;
+                          function GU(bb, ab, Ub) {
+                            let Ab = hU.get(ab);
+                            if (!Ab) {
+                              Ab = new Map;
+                              const Ub = new Set;
+                              for (const Mb of (0, mb.u)(ab)) {
+                                const ab = IU(pU(Mb.blocks)).map((ab => {
+                                  if ("block" === ab.kind) return ab;
                                   return {
                                     kind: "names",
-                                    names: cb.names.map((cb => {
-                                      var kb, ab;
-                                      const Tb = Es(bb, cb.name);
-                                      let Ub = Tb;
-                                      for (let bb = 2; sb.has(Ub); bb++) Ub = `${Tb}-${bb}`;
-                                      return sb.add(Ub), {
-                                        ...cb,
-                                        anchor: Ub,
-                                        heading: null !== (kb = null === (ab = Wb.heading) || void 0 === ab ? void 0 : ab.text) && void 0 !== kb ? kb : ""
+                                    names: ab.names.map((ab => {
+                                      var Ab, Tb;
+                                      const Eb = FU(bb, ab.name);
+                                      let Yb = Eb;
+                                      for (let bb = 2; Ub.has(Yb); bb++) Yb = `${Eb}-${bb}`;
+                                      return Ub.add(Yb), {
+                                        ...ab,
+                                        anchor: Yb,
+                                        heading: null !== (Ab = null === (Tb = Mb.heading) || void 0 === Tb ? void 0 : Tb.text) && void 0 !== Ab ? Ab : ""
                                       }
                                     })),
-                                    isSongs: cb.isSongs
+                                    isSongs: ab.isSongs
                                   }
                                 }));
-                                kb.set(Wb.blocks, cb)
+                                Ab.set(Mb.blocks, ab)
                               }
-                              is.set(cb, kb)
+                              hU.set(ab, Ab)
                             }
-                            const Wb = kb.get(sb);
-                            if (!Wb) throw new Error("Gallery blocks must be the page's intro or one of its sections");
-                            return Wb
+                            const Mb = Ab.get(Ub);
+                            if (!Mb) throw new Error("Gallery blocks must be the page's intro or one of its sections");
+                            return Mb
                           }
-                          const Gs = "/textures/docs/skinPreviews",
-                            Ks = [{
+                          const QU = "/textures/docs/skinPreviews",
+                            qU = [{
                               heading: "NPC Skins",
                               prefix: "npc"
                             }, {
                               heading: "Poses",
                               prefix: "pose"
                             }];
-                          var Zs = sb(4003),
-                            zs = sb(4023);
+                          var uU = Ub(3942),
+                            rU = Ub(3959);
 
-                          function qs(bb) {
-                            return Object.hasOwn(Zs.f, bb) ? Zs.f[bb] : null
+                          function KU(bb) {
+                            return Object.hasOwn(uU.f, bb) ? uU.f[bb] : null
                           }
-                          const ds = {
+                          const oU = {
                             dir1: [-1, -1, -1],
                             dir2: [1, 1, 1],
                             texture: "bubble",
@@ -1697,429 +1697,429 @@ export const modules = {
                               factor: 1,
                               factor2: 1
                             }],
-                            blendMode: zs.f.Standard
+                            blendMode: rU.f.Standard
                           };
 
-                          function As(bb, cb, sb) {
-                            return cb + (sb - cb) * bb()
+                          function lU(bb, ab, Ub) {
+                            return ab + (Ub - ab) * bb()
                           }
 
-                          function ws(bb, cb, sb) {
-                            return bb + (cb - bb) * sb
+                          function tU(bb, ab, Ub) {
+                            return bb + (ab - bb) * Ub
                           }
 
-                          function rs(bb) {
+                          function wU(bb) {
                             return bb.length > 0 && "timeFraction" in bb[0]
                           }
 
-                          function os(bb, cb) {
+                          function sU(bb, ab) {
                             if (0 === bb.colorGradients.length) return [{
                               at: 0,
                               colour: [1, 1, 1, 1]
                             }];
-                            if (!rs(bb.colorGradients)) {
-                              const sb = bb.colorGradients,
+                            if (!wU(bb.colorGradients)) {
+                              const Ub = bb.colorGradients,
                                 {
-                                  color: kb
-                                } = sb[Math.floor(cb() * sb.length) % sb.length];
+                                  color: Ab
+                                } = Ub[Math.floor(ab() * Ub.length) % Ub.length];
                               return [{
                                 at: 0,
-                                colour: [kb[0] / 255, kb[1] / 255, kb[2] / 255, 1]
+                                colour: [Ab[0] / 255, Ab[1] / 255, Ab[2] / 255, 1]
                               }]
                             }
-                            return [...bb.colorGradients].sort(((bb, cb) => bb.timeFraction - cb.timeFraction)).map((bb => {
-                              var sb, kb, Wb;
-                              const ab = bb.minColor,
-                                Tb = null !== (sb = bb.maxColor) && void 0 !== sb ? sb : ab,
-                                Ub = cb(),
-                                Ib = [ws(ab[0], Tb[0], Ub) / 255, ws(ab[1], Tb[1], Ub) / 255, ws(ab[2], Tb[2], Ub) / 255, ws(null !== (kb = ab[3]) && void 0 !== kb ? kb : 1, null !== (Wb = Tb[3]) && void 0 !== Wb ? Wb : 1, Ub)];
+                            return [...bb.colorGradients].sort(((bb, ab) => bb.timeFraction - ab.timeFraction)).map((bb => {
+                              var Ub, Ab, Mb;
+                              const Tb = bb.minColor,
+                                Eb = null !== (Ub = bb.maxColor) && void 0 !== Ub ? Ub : Tb,
+                                Yb = ab(),
+                                Bb = [tU(Tb[0], Eb[0], Yb) / 255, tU(Tb[1], Eb[1], Yb) / 255, tU(Tb[2], Eb[2], Yb) / 255, tU(null !== (Ab = Tb[3]) && void 0 !== Ab ? Ab : 1, null !== (Mb = Eb[3]) && void 0 !== Mb ? Mb : 1, Yb)];
                               return {
                                 at: bb.timeFraction,
-                                colour: Ib
+                                colour: Bb
                               }
                             }))
                           }
 
-                          function Ss(bb, cb, sb, kb) {
-                            const Wb = As(kb, bb.minEmitPower, bb.maxEmitPower),
-                              ab = cb => As(kb, Math.min(bb.dir1[cb], bb.dir2[cb]), Math.max(bb.dir1[cb], bb.dir2[cb])) * Wb,
-                              Tb = [...bb.velocityGradients].sort(((bb, cb) => bb.timeFraction - cb.timeFraction)).map((bb => ({
+                          function gU(bb, ab, Ub, Ab) {
+                            const Mb = lU(Ab, bb.minEmitPower, bb.maxEmitPower),
+                              Tb = ab => lU(Ab, Math.min(bb.dir1[ab], bb.dir2[ab]), Math.max(bb.dir1[ab], bb.dir2[ab])) * Mb,
+                              Eb = [...bb.velocityGradients].sort(((bb, ab) => bb.timeFraction - ab.timeFraction)).map((bb => ({
                                 at: bb.timeFraction,
-                                factor: As(kb, bb.factor, bb.factor2)
+                                factor: lU(Ab, bb.factor, bb.factor2)
                               })));
                             return {
-                              pos: [As(kb, cb[0], sb[0]), As(kb, cb[1], sb[1]), As(kb, cb[2], sb[2])],
-                              dir: [ab(0), ab(1), ab(2)],
+                              pos: [lU(Ab, ab[0], Ub[0]), lU(Ab, ab[1], Ub[1]), lU(Ab, ab[2], Ub[2])],
+                              dir: [Tb(0), Tb(1), Tb(2)],
                               age: 0,
-                              life: As(kb, bb.minLifeTime, bb.maxLifeTime),
-                              size: As(kb, bb.minSize, bb.maxSize),
-                              colours: os(bb, kb),
-                              velocityFactors: Tb
+                              life: lU(Ab, bb.minLifeTime, bb.maxLifeTime),
+                              size: lU(Ab, bb.minSize, bb.maxSize),
+                              colours: sU(bb, Ab),
+                              velocityFactors: Eb
                             }
                           }
 
-                          function Rs(bb, cb, sb, kb) {
-                            if (cb < bb[0].at) return sb(Math.min(1, bb.length - 1));
-                            for (let Wb = 0; Wb < bb.length - 1; Wb++)
-                              if (cb <= bb[Wb + 1].at) {
-                                const ab = bb[Wb + 1].at - bb[Wb].at;
-                                return kb(sb(Wb), sb(Wb + 1), ab > 0 ? (cb - bb[Wb].at) / ab : 1)
-                              } return sb(bb.length - 1)
+                          function CU(bb, ab, Ub, Ab) {
+                            if (ab < bb[0].at) return Ub(Math.min(1, bb.length - 1));
+                            for (let Mb = 0; Mb < bb.length - 1; Mb++)
+                              if (ab <= bb[Mb + 1].at) {
+                                const Tb = bb[Mb + 1].at - bb[Mb].at;
+                                return Ab(Ub(Mb), Ub(Mb + 1), Tb > 0 ? (ab - bb[Mb].at) / Tb : 1)
+                              } return Ub(bb.length - 1)
                           }
 
-                          function vs(bb) {
-                            return Rs(bb.colours, bb.age / bb.life, (cb => bb.colours[cb].colour), ((bb, cb, sb) => [ws(bb[0], cb[0], sb), ws(bb[1], cb[1], sb), ws(bb[2], cb[2], sb), ws(bb[3], cb[3], sb)]))
+                          function VU(bb) {
+                            return CU(bb.colours, bb.age / bb.life, (ab => bb.colours[ab].colour), ((bb, ab, Ub) => [tU(bb[0], ab[0], Ub), tU(bb[1], ab[1], Ub), tU(bb[2], ab[2], Ub), tU(bb[3], ab[3], Ub)]))
                           }
 
-                          function Fs(bb, cb, sb) {
-                            if (bb.age += sb, bb.age >= bb.life) return !1;
-                            const kb = function(bb) {
-                              return 0 === bb.velocityFactors.length ? 1 : Rs(bb.velocityFactors, bb.age / bb.life, (cb => bb.velocityFactors[cb].factor), ws)
-                            }(bb) * sb;
-                            for (let ab = 0; ab < 3; ab++) {
-                              var Wb;
-                              bb.pos[ab] += bb.dir[ab] * kb, bb.dir[ab] += (null !== (Wb = cb[ab]) && void 0 !== Wb ? Wb : 0) * sb
+                          function OU(bb, ab, Ub) {
+                            if (bb.age += Ub, bb.age >= bb.life) return !1;
+                            const Ab = function(bb) {
+                              return 0 === bb.velocityFactors.length ? 1 : CU(bb.velocityFactors, bb.age / bb.life, (ab => bb.velocityFactors[ab].factor), tU)
+                            }(bb) * Ub;
+                            for (let Tb = 0; Tb < 3; Tb++) {
+                              var Mb;
+                              bb.pos[Tb] += bb.dir[Tb] * Ab, bb.dir[Tb] += (null !== (Mb = ab[Tb]) && void 0 !== Mb ? Mb : 0) * Ub
                             }
                             return !0
                           }
 
-                          function xs(bb) {
+                          function cU(bb) {
                             return String(Math.round(1e6 * bb) / 1e6)
                           }
 
-                          function ps(bb) {
-                            return `[${bb.map(xs).join(", ")}]`
+                          function JU(bb) {
+                            return `[${bb.map(cU).join(", ")}]`
                           }
 
-                          function bk(bb, cb) {
-                            const sb = `${cb}    `;
-                            return `[\n${(rs(bb)?bb.map((bb=>{const cb=[`${sb}    timeFraction: ${xs(bb.timeFraction)},`,`${sb}    minColor: ${ps(bb.minColor)},`];return bb.maxColor&&cb.push(`${sb}    maxColor: ${ps(bb.maxColor)},`),`${sb}{\n${cb.join("\n")}\n${sb}},`})):bb.map((bb=>`
+                          function nU(bb, ab) {
+                            const Ub = `${ab}    `;
+                            return `[\n${(wU(bb)?bb.map((bb=>{const ab=[`${Ub}    timeFraction: ${cU(bb.timeFraction)},`,`${Ub}    minColor: ${JU(bb.minColor)},`];return bb.maxColor&&ab.push(`${Ub}    maxColor: ${JU(bb.maxColor)},`),`${Ub}{\n${ab.join("\n")}\n${Ub}},`})):bb.map((bb=>`
                             $ {
-                              sb
+                              Ub
                             } {
                               color: $ {
-                                ps(bb.color)
+                                JU(bb.color)
                               }
-                            }, `))).join("\n")}\n${cb}]`
+                            }, `))).join("\n")}\n${ab}]`
                           }
-                          const ck = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
-                            sk = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
-                          const kk = .6;
+                          const SU = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
+                            bA = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
+                          const aA = .6;
 
-                          function Wk(bb, cb) {
-                            return `${cb?"song":"sound"}:${bb}`
+                          function UA(bb, ab) {
+                            return `${ab?"song":"sound"}:${bb}`
                           }
-                          let ak = {
+                          let AA = {
                               track: null,
-                              volume: kk
+                              volume: aA
                             },
-                            Tk = null,
-                            Uk = 0,
-                            Ik = 0;
-                          const Hk = new Set;
+                            MA = null,
+                            TA = 0,
+                            EA = 0;
+                          const YA = new Set;
 
-                          function fk(bb) {
-                            ak = {
-                              ...ak,
+                          function BA(bb) {
+                            AA = {
+                              ...AA,
                               ...bb
-                            }, Hk.forEach((bb => {
+                            }, YA.forEach((bb => {
                               bb()
                             }))
                           }
 
-                          function Mk(bb) {
-                            ak.track && fk({
+                          function eA(bb) {
+                            AA.track && BA({
                               track: {
-                                ...ak.track,
+                                ...AA.track,
                                 ...bb
                               }
                             })
                           }
 
-                          function Xk(bb) {
-                            const [cb, sb] = (0, kb.useState)((() => bb(ak))), Wb = (0, kb.useRef)(bb);
-                            return Wb.current = bb, (0, kb.useEffect)((() => {
+                          function vA(bb) {
+                            const [ab, Ub] = (0, Ab.useState)((() => bb(AA))), Mb = (0, Ab.useRef)(bb);
+                            return Mb.current = bb, (0, Ab.useEffect)((() => {
                               const bb = () => {
-                                sb((() => Wb.current(ak)))
+                                Ub((() => Mb.current(AA)))
                               };
-                              return Hk.add(bb), bb(), () => {
-                                Hk.delete(bb)
+                              return YA.add(bb), bb(), () => {
+                                YA.delete(bb)
                               }
-                            }), []), cb
+                            }), []), ab
                           }
 
-                          function nk() {
-                            Uk++;
-                            const bb = Tk;
-                            Tk = null, null === bb || void 0 === bb || bb.stop()
+                          function LA() {
+                            TA++;
+                            const bb = MA;
+                            MA = null, null === bb || void 0 === bb || bb.stop()
                           }
 
-                          function mk(bb, cb) {
-                            let kb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-                            nk();
-                            const Wb = Uk,
+                          function PA(bb, ab) {
+                            let Ab = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+                            LA();
+                            const Mb = TA,
                               {
-                                track: ab
-                              } = ak,
-                              Tb = ab && ab.name === bb && ab.isSong === cb ? ab.duration : 0;
-                            Ik = kb, fk({
+                                track: Tb
+                              } = AA,
+                              Eb = Tb && Tb.name === bb && Tb.isSong === ab ? Tb.duration : 0;
+                            EA = Ab, BA({
                               track: {
                                 name: bb,
-                                isSong: cb,
+                                isSong: ab,
                                 status: "loading",
-                                duration: Tb
+                                duration: Eb
                               }
-                            }), Promise.all([sb.e(215), sb.e(239)]).then((() => sb(39221))).then((sb => {
+                            }), Promise.all([Ub.e(215), Ub.e(239)]).then((() => Ub(38880))).then((Ub => {
                               let {
-                                playDocsSound: ab
-                              } = sb;
-                              Wb === Uk && (Tk = ab(bb, cb, ak.volume, kb, {
+                                playDocsSound: Tb
+                              } = Ub;
+                              Mb === TA && (MA = Tb(bb, ab, AA.volume, Ab, {
                                 onPlay: bb => {
-                                  Wb === Uk && Mk({
+                                  Mb === TA && eA({
                                     status: "playing",
                                     duration: bb
                                   })
                                 },
                                 onEnd: bb => {
-                                  var cb, sb;
-                                  Wb === Uk && (Tk = null, bb ? fk({
+                                  var ab, Ub;
+                                  Mb === TA && (MA = null, bb ? BA({
                                     track: null
-                                  }) : (Ik = null !== (cb = null === (sb = ak.track) || void 0 === sb ? void 0 : sb.duration) && void 0 !== cb ? cb : 0, Mk({
+                                  }) : (EA = null !== (ab = null === (Ub = AA.track) || void 0 === Ub ? void 0 : Ub.duration) && void 0 !== ab ? ab : 0, eA({
                                     status: "paused"
                                   })))
                                 }
                               }))
-                            })).catch((cb => {
-                              console.error(`Could not play docs sound ${bb}`, cb), Wb === Uk && fk({
+                            })).catch((ab => {
+                              console.error(`Could not play docs sound ${bb}`, ab), Mb === TA && BA({
                                 track: null
                               })
                             }))
                           }
 
-                          function lk() {
+                          function XA() {
                             const {
                               track: bb
-                            } = ak;
+                            } = AA;
                             if (!bb) return;
-                            if ("playing" === bb.status && Tk) return Ik = Tk.aN(), Tk.pause(), void Mk({
+                            if ("playing" === bb.status && MA) return EA = MA.eZ(), MA.pause(), void eA({
                               status: "paused"
                             });
-                            if ("loading" === bb.status) return nk(), void Mk({
+                            if ("loading" === bb.status) return LA(), void eA({
                               status: "paused"
                             });
-                            if (Tk) return void Tk.resume();
-                            const cb = bb.duration > 0 && Ik >= bb.duration - .05;
-                            mk(bb.name, bb.isSong, cb ? 0 : Ik)
+                            if (MA) return void MA.resume();
+                            const ab = bb.duration > 0 && EA >= bb.duration - .05;
+                            PA(bb.name, bb.isSong, ab ? 0 : EA)
                           }
 
-                          function Qk() {
+                          function jA() {
                             var bb;
-                            return Tk && "playing" === (null === (bb = ak.track) || void 0 === bb ? void 0 : bb.status) ? Tk.aN() : Ik
+                            return MA && "playing" === (null === (bb = AA.track) || void 0 === bb ? void 0 : bb.status) ? MA.eZ() : EA
                           }
 
-                          function ek(bb) {
-                            var cb;
-                            null === (cb = Tk) || void 0 === cb || cb.setVolume(bb), fk({
+                          function RA(bb) {
+                            var ab;
+                            null === (ab = MA) || void 0 === ab || ab.setVolume(bb), BA({
                               volume: bb
                             })
                           }
 
-                          function Ck() {
-                            nk(), Ik = 0, fk({
+                          function kA() {
+                            LA(), EA = 0, BA({
                               track: null
                             })
                           }
-                          const Nk = (0, kb.createContext)(null);
-                          let Vk = null;
+                          const yA = (0, Ab.createContext)(null);
+                          let ZA = null;
 
-                          function Lk() {
-                            const [bb, cb] = (0, kb.useState)(null);
-                            return (0, kb.useEffect)((() => {
+                          function DA() {
+                            const [bb, ab] = (0, Ab.useState)(null);
+                            return (0, Ab.useEffect)((() => {
                               let bb = !1;
-                              return Vk ??= Promise.all([sb.e(69), sb.e(72), sb.e(71), sb.e(70), sb.e(196), sb.e(96), sb.e(220)]).then((() => sb(39219))), Vk.then((sb => {
-                                bb || cb(sb)
+                              return ZA ??= Promise.all([Ub.e(69), Ub.e(72), Ub.e(71), Ub.e(70), Ub.e(196), Ub.e(96), Ub.e(220)]).then((() => Ub(38878))), ZA.then((Ub => {
+                                bb || ab(Ub)
                               }), (bb => {
-                                console.error("Could not load the docs gallery's textures", bb), Vk = null
+                                console.error("Could not load the docs gallery's textures", bb), ZA = null
                               })), () => {
                                 bb = !0
                               }
                             }), []), bb
                           }
-                          const uk = 24,
-                            Yk = /^[a-z]+_(\d+(_\d+)?|none)$/;
+                          const zA = 24,
+                            xA = /^[a-z]+_(\d+(_\d+)?|none)$/;
 
-                          function hk(bb, cb) {
-                            const sb = "skins" === bb ? function(bb, cb) {
-                              const sb = Ks.find((cb => bb.startsWith(cb.heading)));
-                              return sb ? function(bb, cb) {
-                                return `${bb}-${cb}`
-                              }(sb.prefix, cb) : null
-                            }(cb.heading, cb.name) : null;
-                            return null === sb ? null : `${Gs}/${sb}.webp`
+                          function iA(bb, ab) {
+                            const Ub = "skins" === bb ? function(bb, ab) {
+                              const Ub = qU.find((ab => bb.startsWith(ab.heading)));
+                              return Ub ? function(bb, ab) {
+                                return `${bb}-${ab}`
+                              }(Ub.prefix, ab) : null
+                            }(ab.heading, ab.name) : null;
+                            return null === Ub ? null : `${QU}/${Ub}.webp`
                           }
 
-                          function Jk(bb) {
+                          function fA(bb) {
                             let {
-                              kind: cb,
-                              entry: sb,
-                              assets: Wb,
-                              renderedUrl: Tb
+                              kind: ab,
+                              entry: Ub,
+                              assets: Mb,
+                              renderedUrl: Eb
                             } = bb;
                             const {
-                              name: Ub
-                            } = sb, [Ib, Hb] = (0, kb.useState)(!1);
-                            if ("icons" === cb && zc(Ub)) return (0, mb.jsx)(Vs.b, {
+                              name: Yb
+                            } = Ub, [Bb, eb] = (0, Ab.useState)(!1);
+                            if ("icons" === ab && Ka(Yb)) return (0, jb.jsx)(zU.e, {
                               className: "DocsTileIcon",
-                              name: Ub
+                              name: Yb
                             });
-                            let fb = null;
-                            var Mb;
-                            if ("icons" === cb) fb = null !== (Mb = null === Wb || void 0 === Wb ? void 0 : Wb.getIngameIconUrl(Ub)) && void 0 !== Mb ? Mb : null;
-                            else if ("particles" === cb) {
-                              var Xb, nb, lb;
-                              fb = null !== (Xb = null === Wb || void 0 === Wb ? void 0 : Wb.getParticleTextureUrl(null !== (nb = null === (lb = qs(Ub)) || void 0 === lb ? void 0 : lb.texture) && void 0 !== nb ? nb : Ub)) && void 0 !== Xb ? Xb : null
-                            } else "skins" === cb && (fb = null !== Tb && void 0 !== Tb ? Tb : Yk.test(Ub) ? `/textures/charSkins/previews/${Ub}_preview.png` : null);
-                            return !fb || Ib ? (0, mb.jsx)(Qb, {
+                            let vb = null;
+                            var Lb;
+                            if ("icons" === ab) vb = null !== (Lb = null === Mb || void 0 === Mb ? void 0 : Mb.getIngameIconUrl(Yb)) && void 0 !== Lb ? Lb : null;
+                            else if ("particles" === ab) {
+                              var Pb, Xb, Rb;
+                              vb = null !== (Pb = null === Mb || void 0 === Mb ? void 0 : Mb.getParticleTextureUrl(null !== (Xb = null === (Rb = KU(Yb)) || void 0 === Rb ? void 0 : Rb.texture) && void 0 !== Xb ? Xb : Yb)) && void 0 !== Pb ? Pb : null
+                            } else "skins" === ab && (vb = null !== Eb && void 0 !== Eb ? Eb : xA.test(Yb) ? `/textures/charSkins/previews/${Yb}_preview.png` : null);
+                            return !vb || Bb ? (0, jb.jsx)(kb, {
                               className: "DocsTileIcon Placeholder",
-                              name: "skins" === cb ? "person" : "image"
-                            }) : (0, mb.jsx)("img", {
-                              className: ab()("DocsTileImage", {
-                                Pixelated: "skins" !== cb
+                              name: "skins" === ab ? "person" : "image"
+                            }) : (0, jb.jsx)("img", {
+                              className: Tb()("DocsTileImage", {
+                                Pixelated: "skins" !== ab
                               }),
-                              src: fb,
-                              srcSet: fb === Tb ? `${fb} 2x` : void 0,
+                              src: vb,
+                              srcSet: vb === Eb ? `${vb} 2x` : void 0,
                               alt: "",
                               loading: "lazy",
                               onError: () => {
-                                console.warn(`Docs gallery: could not load ${fb}`), Hb(!0)
+                                console.warn(`Docs gallery: could not load ${vb}`), eb(!0)
                               }
                             })
                           }
 
-                          function gk(bb) {
+                          function mA(bb) {
                             let {
-                              entry: cb,
-                              isSong: sb
+                              entry: ab,
+                              isSong: Ub
                             } = bb;
-                            const kb = Xk((bb => {
+                            const Ab = vA((bb => {
                                 let {
-                                  track: kb
+                                  track: Ab
                                 } = bb;
-                                return (null === kb || void 0 === kb ? void 0 : kb.name) === cb.name && kb.isSong === sb ? kb.status : null
+                                return (null === Ab || void 0 === Ab ? void 0 : Ab.name) === ab.name && Ab.isSong === Ub ? Ab.status : null
                               })),
-                              Wb = null !== kb && "paused" !== kb;
-                            return (0, mb.jsxs)("button", {
+                              Mb = null !== Ab && "paused" !== Ab;
+                            return (0, jb.jsxs)("button", {
                               type: "button",
-                              id: cb.anchor,
-                              className: ab()("DocsSoundTile", {
-                                Playing: Wb
+                              id: ab.anchor,
+                              className: Tb()("DocsSoundTile", {
+                                Playing: Mb
                               }),
-                              "data-docs-track": Wk(cb.name, sb),
-                              "aria-label": Wb ? `Pause ${cb.name}` : `Play ${cb.name}`,
+                              "data-docs-track": UA(ab.name, Ub),
+                              "aria-label": Mb ? `Pause ${ab.name}` : `Play ${ab.name}`,
                               onClick: () => {
-                                null !== kb ? lk() : mk(cb.name, sb)
+                                null !== Ab ? XA() : PA(ab.name, Ub)
                               },
-                              children: [(0, mb.jsx)("span", {
+                              children: [(0, jb.jsx)("span", {
                                 className: "DocsSoundPlay",
-                                children: (0, mb.jsx)(Qb, {
-                                  name: Wb ? "pause" : "play"
+                                children: (0, jb.jsx)(kb, {
+                                  name: Mb ? "pause" : "play"
                                 })
-                              }), (0, mb.jsx)("code", {
+                              }), (0, jb.jsx)("code", {
                                 className: "DocsSoundName",
-                                children: cb.name
-                              }), cb.caption && (0, mb.jsx)("span", {
+                                children: ab.name
+                              }), ab.caption && (0, jb.jsx)("span", {
                                 className: "DocsSoundCaption",
-                                children: cb.caption
+                                children: ab.caption
                               })]
                             })
                           }
 
-                          function Bk(bb) {
+                          function pA(bb) {
                             let {
-                              kind: cb,
-                              names: sb,
-                              isSongs: Wb
+                              kind: ab,
+                              names: Ub,
+                              isSongs: Mb
                             } = bb;
-                            const Tb = Lk(),
-                              [Ub, Ib] = Cb(),
-                              Hb = !1 === (null === Ub || void 0 === Ub ? void 0 : Ub.failed) ? Ub.text : null,
-                              fb = (0, kb.useContext)(Nk),
-                              [Mb, Xb] = (0, kb.useState)(""),
-                              nb = Mb.trim().toLowerCase(),
-                              lb = nb ? sb.filter((bb => bb.name.toLowerCase().includes(nb))) : sb;
-                            return (0, mb.jsxs)("div", {
+                            const Eb = DA(),
+                              [Yb, Bb] = Zb(),
+                              eb = !1 === (null === Yb || void 0 === Yb ? void 0 : Yb.failed) ? Yb.text : null,
+                              vb = (0, Ab.useContext)(yA),
+                              [Lb, Pb] = (0, Ab.useState)(""),
+                              Xb = Lb.trim().toLowerCase(),
+                              Rb = Xb ? Ub.filter((bb => bb.name.toLowerCase().includes(Xb))) : Ub;
+                            return (0, jb.jsxs)("div", {
                               className: "DocsGallery",
-                              children: [sb.length > uk && (0, mb.jsx)(Ns, {
+                              children: [Ub.length > zA && (0, jb.jsx)(DU, {
                                 className: "DocsGalleryFilter",
-                                value: Mb,
-                                placeholder: `Filter ${sb.length} names\u2026`,
+                                value: Lb,
+                                placeholder: `Filter ${Ub.length} names\u2026`,
                                 label: "Filter names",
-                                onChange: Xb,
-                                count: nb ? {
-                                  visible: lb.length,
-                                  total: sb.length
+                                onChange: Pb,
+                                count: Xb ? {
+                                  visible: Rb.length,
+                                  total: Ub.length
                                 } : null
-                              }), (0, mb.jsx)("div", {
-                                className: ab()("DocsGalleryGrid", `Kind-${cb}`, {
-                                  Songs: Wb
+                              }), (0, jb.jsx)("div", {
+                                className: Tb()("DocsGalleryGrid", `Kind-${ab}`, {
+                                  Songs: Mb
                                 }),
-                                children: lb.map((bb => {
-                                  if ("sounds" === cb) return (0, mb.jsx)(gk, {
+                                children: Rb.map((bb => {
+                                  if ("sounds" === ab) return (0, jb.jsx)(mA, {
                                     entry: bb,
-                                    isSong: Wb
+                                    isSong: Mb
                                   }, bb.anchor);
-                                  if (fb && "particles" === cb && qs(bb.name)) return (0, mb.jsxs)("button", {
+                                  if (vb && "particles" === ab && KU(bb.name)) return (0, jb.jsxs)("button", {
                                     type: "button",
                                     id: bb.anchor,
-                                    className: ab()("DocsTile Previewable", {
-                                      Copied: Hb === bb.name
+                                    className: Tb()("DocsTile Previewable", {
+                                      Copied: eb === bb.name
                                     }),
                                     title: `Play "${bb.name}" in the playground and copy its name`,
                                     onClick: () => {
-                                      fb(bb.name), Ib(bb.name)
+                                      vb(bb.name), Bb(bb.name)
                                     },
-                                    children: [(0, mb.jsxs)("span", {
+                                    children: [(0, jb.jsxs)("span", {
                                       className: "DocsTilePreview",
-                                      children: [(0, mb.jsx)(Jk, {
-                                        kind: cb,
+                                      children: [(0, jb.jsx)(fA, {
+                                        kind: ab,
                                         entry: bb,
-                                        assets: Tb,
+                                        assets: Eb,
                                         renderedUrl: null
-                                      }), (0, mb.jsx)("span", {
+                                      }), (0, jb.jsx)("span", {
                                         className: "DocsTilePlayBadge",
-                                        children: (0, mb.jsx)(Qb, {
+                                        children: (0, jb.jsx)(kb, {
                                           name: "play"
                                         })
                                       })]
-                                    }), (0, mb.jsx)("span", {
+                                    }), (0, jb.jsx)("span", {
                                       className: "DocsTileName",
-                                      children: Hb === bb.name ? "Copied!" : bb.name
+                                      children: eb === bb.name ? "Copied!" : bb.name
                                     })]
                                   }, bb.anchor);
-                                  const sb = hk(cb, bb);
-                                  return (0, mb.jsxs)("button", {
+                                  const Ub = iA(ab, bb);
+                                  return (0, jb.jsxs)("button", {
                                     type: "button",
                                     id: bb.anchor,
-                                    className: ab()("DocsTile", {
-                                      Copied: Hb === bb.name
+                                    className: Tb()("DocsTile", {
+                                      Copied: eb === bb.name
                                     }),
                                     title: `Copy "${bb.name}"`,
                                     onClick: () => {
-                                      Ib(bb.name)
+                                      Bb(bb.name)
                                     },
-                                    children: [(0, mb.jsx)("span", {
-                                      className: ab()("DocsTilePreview", {
-                                        Rendered: null !== sb
+                                    children: [(0, jb.jsx)("span", {
+                                      className: Tb()("DocsTilePreview", {
+                                        Rendered: null !== Ub
                                       }),
-                                      children: (0, mb.jsx)(Jk, {
-                                        kind: cb,
+                                      children: (0, jb.jsx)(fA, {
+                                        kind: ab,
                                         entry: bb,
-                                        assets: Tb,
-                                        renderedUrl: sb
+                                        assets: Eb,
+                                        renderedUrl: Ub
                                       })
-                                    }), (0, mb.jsx)("span", {
+                                    }), (0, jb.jsx)("span", {
                                       className: "DocsTileName",
-                                      children: Hb === bb.name ? "Copied!" : bb.name
+                                      children: eb === bb.name ? "Copied!" : bb.name
                                     })]
                                   }, bb.anchor)
                                 }))
@@ -2127,23 +2127,23 @@ export const modules = {
                             })
                           }
 
-                          function tk(bb) {
+                          function NA(bb) {
                             let {
-                              kind: cb,
-                              content: sb,
-                              blocks: kb
+                              kind: ab,
+                              content: Ub,
+                              blocks: Ab
                             } = bb;
-                            return (0, mb.jsx)(mb.Fragment, {
-                              children: Os(cb, sb, kb).map(((bb, sb) => "block" === bb.kind ? (0, mb.jsx)(Xs, {
+                            return (0, jb.jsx)(jb.Fragment, {
+                              children: GU(ab, Ub, Ab).map(((bb, Ub) => "block" === bb.kind ? (0, jb.jsx)(PU, {
                                 block: bb.block
-                              }, sb) : (0, mb.jsx)(Bk, {
-                                kind: cb,
+                              }, Ub) : (0, jb.jsx)(pA, {
+                                kind: ab,
                                 names: bb.names,
                                 isSongs: bb.isSongs
-                              }, sb)))
+                              }, Ub)))
                             })
                           }
-                          const yk = [{
+                          const WA = [{
                             pageId: "readme"
                           }, {
                             pageId: "snippets",
@@ -2161,154 +2161,154 @@ export const modules = {
                             countNoun: "options"
                           }];
 
-                          function Pk(bb) {
+                          function HA(bb) {
                             let {
-                              cards: cb = yk,
-                              label: sb = "Start here"
+                              cards: ab = WA,
+                              label: Ub = "Start here"
                             } = bb;
-                            const Wb = (0, kb.useContext)(nc);
-                            return (0, mb.jsx)("nav", {
+                            const Mb = (0, Ab.useContext)(Xa);
+                            return (0, jb.jsx)("nav", {
                               className: "DocsLandingCards",
-                              "aria-label": sb,
-                              children: cb.map((bb => {
+                              "aria-label": Ub,
+                              children: ab.map((bb => {
                                 let {
-                                  pageId: cb,
-                                  countNoun: sb
+                                  pageId: ab,
+                                  countNoun: Ub
                                 } = bb;
-                                const kb = Zb(cb);
-                                return (0, mb.jsxs)(Tb.d, {
-                                  to: rb(Wb, kb),
+                                const Ab = rb(ab);
+                                return (0, jb.jsxs)(Eb.c, {
+                                  to: sb(Mb, Ab),
                                   className: "DocsLandingCard",
-                                  children: [(0, mb.jsx)("span", {
+                                  children: [(0, jb.jsx)("span", {
                                     className: "DocsLandingCardIcon",
-                                    children: (0, mb.jsx)(Qb, {
-                                      name: kb.icon
+                                    children: (0, jb.jsx)(kb, {
+                                      name: Ab.icon
                                     })
-                                  }), (0, mb.jsx)("span", {
+                                  }), (0, jb.jsx)("span", {
                                     className: "DocsLandingCardTitle",
-                                    children: kb.title
-                                  }), (0, mb.jsx)("span", {
+                                    children: Ab.title
+                                  }), (0, jb.jsx)("span", {
                                     className: "DocsLandingCardSummary",
-                                    children: kb.summary
-                                  }), sb && (0, mb.jsxs)("span", {
+                                    children: Ab.summary
+                                  }), Ub && (0, jb.jsxs)("span", {
                                     className: "DocsLandingCardCount",
-                                    children: [qb(kb).sections.length, " ", sb]
+                                    children: [ob(Ab).sections.length, " ", Ub]
                                   })]
-                                }, cb)
+                                }, ab)
                               }))
                             })
                           }
-                          const Dk = 240;
+                          const IA = 240;
 
-                          function Ek(bb) {
+                          function dA(bb) {
                             let {
-                              faces: cb
+                              faces: ab
                             } = bb;
-                            return (0, mb.jsxs)("span", {
+                            return (0, jb.jsxs)("span", {
                               className: "DocsCube",
                               "aria-hidden": "true",
-                              children: [(0, mb.jsx)("span", {
+                              children: [(0, jb.jsx)("span", {
                                 className: "DocsCubeFace Top",
                                 style: {
-                                  backgroundImage: `url("${cb.top}")`
+                                  backgroundImage: `url("${ab.top}")`
                                 }
-                              }), (0, mb.jsx)("span", {
+                              }), (0, jb.jsx)("span", {
                                 className: "DocsCubeFace Left",
                                 style: {
-                                  backgroundImage: `url("${cb.left}")`
+                                  backgroundImage: `url("${ab.left}")`
                                 }
-                              }), (0, mb.jsx)("span", {
+                              }), (0, jb.jsx)("span", {
                                 className: "DocsCubeFace Right",
                                 style: {
-                                  backgroundImage: `url("${cb.right}")`
+                                  backgroundImage: `url("${ab.right}")`
                                 }
                               })]
                             })
                           }
 
-                          function ik(bb) {
+                          function FA(bb) {
                             let {
-                              src: cb
+                              src: ab
                             } = bb;
-                            const [sb, Wb] = (0, kb.useState)(!1);
-                            return sb ? null : (0, mb.jsx)("img", {
-                              src: cb,
+                            const [Ub, Mb] = (0, Ab.useState)(!1);
+                            return Ub ? null : (0, jb.jsx)("img", {
+                              src: ab,
                               alt: "",
                               loading: "lazy",
                               onError: () => {
-                                console.warn(`Docs catalogue: could not load ${cb}`), Wb(!0)
+                                console.warn(`Docs catalogue: could not load ${ab}`), Mb(!0)
                               }
                             })
                           }
 
-                          function Ok(bb) {
+                          function hA(bb) {
                             let {
-                              kind: cb
+                              kind: ab
                             } = bb;
-                            const sb = Cs(cb),
-                              Wb = Lk(),
-                              Tb = (0, Ub.r)(),
-                              [Ib, Hb] = (0, kb.useState)(""),
-                              [fb, Mb] = (0, kb.useState)(null),
-                              [Xb, nb] = (0, kb.useState)(Dk),
-                              [lb, eb] = (0, kb.useState)(null),
-                              Cb = (0, kb.useRef)(null),
-                              Vb = Ib.trim().toLowerCase();
-                            (0, kb.useEffect)((() => {
-                              const bb = (0, hb.v)(Tb.hash),
-                                kb = sb.entries.find((sb => Es(cb, sb.name) === bb));
-                              if (kb) Cb.current = kb.name, Hb(kb.name), Mb(null), eb(kb.name);
-                              else if (null !== Cb.current) {
-                                const bb = Cb.current;
-                                Cb.current = null, Hb((cb => cb === bb ? "" : cb)), eb(null)
+                            const Ub = ZU(ab),
+                              Mb = DA(),
+                              Eb = (0, Yb.v)(),
+                              [Bb, eb] = (0, Ab.useState)(""),
+                              [vb, Lb] = (0, Ab.useState)(null),
+                              [Pb, Xb] = (0, Ab.useState)(IA),
+                              [Rb, yb] = (0, Ab.useState)(null),
+                              Zb = (0, Ab.useRef)(null),
+                              zb = Bb.trim().toLowerCase();
+                            (0, Ab.useEffect)((() => {
+                              const bb = (0, mb.p)(Eb.hash),
+                                Ab = Ub.entries.find((Ub => FU(ab, Ub.name) === bb));
+                              if (Ab) Zb.current = Ab.name, eb(Ab.name), Lb(null), yb(Ab.name);
+                              else if (null !== Zb.current) {
+                                const bb = Zb.current;
+                                Zb.current = null, eb((ab => ab === bb ? "" : ab)), yb(null)
                               }
-                            }), [sb, cb, Tb.hash, Tb.key]), (0, kb.useEffect)((() => {
+                            }), [Ub, ab, Eb.hash, Eb.key]), (0, Ab.useEffect)((() => {
                               var bb;
-                              null !== lb && (null === (bb = document.getElementById(Es(cb, lb))) || void 0 === bb || bb.scrollIntoView({
+                              null !== Rb && (null === (bb = document.getElementById(FU(ab, Rb))) || void 0 === bb || bb.scrollIntoView({
                                 block: "center"
                               }))
-                            }), [cb, lb]);
-                            const Lb = sb.entries.filter((bb => (!Vb || bb.name.toLowerCase().includes(Vb)) && (!fb || bb.variants.includes(fb))));
-                            return (0, mb.jsxs)("div", {
+                            }), [ab, Rb]);
+                            const xb = Ub.entries.filter((bb => (!zb || bb.name.toLowerCase().includes(zb)) && (!vb || bb.variants.includes(vb))));
+                            return (0, jb.jsxs)("div", {
                               className: "DocsCatalogue",
-                              children: [sb.notes.length > 0 && (0, mb.jsx)("div", {
+                              children: [Ub.notes.length > 0 && (0, jb.jsx)("div", {
                                 className: "DocsProse",
-                                children: sb.notes.map((bb => (0, mb.jsx)("p", {
+                                children: Ub.notes.map((bb => (0, jb.jsx)("p", {
                                   children: bb
                                 }, bb)))
-                              }), sb.legend.length > 0 && (0, mb.jsx)("div", {
+                              }), Ub.legend.length > 0 && (0, jb.jsx)("div", {
                                 className: "DocsTableScroll",
-                                children: (0, mb.jsxs)("table", {
+                                children: (0, jb.jsxs)("table", {
                                   className: "DocsTable DocsVariantLegend",
-                                  children: [(0, mb.jsx)("thead", {
-                                    children: (0, mb.jsxs)("tr", {
-                                      children: [(0, mb.jsx)("th", {
+                                  children: [(0, jb.jsx)("thead", {
+                                    children: (0, jb.jsxs)("tr", {
+                                      children: [(0, jb.jsx)("th", {
                                         children: "Code"
-                                      }), (0, mb.jsx)("th", {
+                                      }), (0, jb.jsx)("th", {
                                         children: "Variant"
-                                      }), (0, mb.jsx)("th", {
+                                      }), (0, jb.jsx)("th", {
                                         children: "Name to use"
                                       })]
                                     })
-                                  }), (0, mb.jsx)("tbody", {
-                                    children: sb.legend.map((bb => (0, mb.jsxs)("tr", {
-                                      children: [(0, mb.jsx)("td", {
-                                        children: (0, mb.jsx)("button", {
+                                  }), (0, jb.jsx)("tbody", {
+                                    children: Ub.legend.map((bb => (0, jb.jsxs)("tr", {
+                                      children: [(0, jb.jsx)("td", {
+                                        children: (0, jb.jsx)("button", {
                                           type: "button",
-                                          className: ab()("DocsVariantChip", {
-                                            Active: fb === bb.code
+                                          className: Tb()("DocsVariantChip", {
+                                            Active: vb === bb.code
                                           }),
-                                          "aria-pressed": fb === bb.code,
-                                          title: `Show only ${cb} with ${bb.meaning} variants`,
+                                          "aria-pressed": vb === bb.code,
+                                          title: `Show only ${ab} with ${bb.meaning} variants`,
                                           onClick: () => {
-                                            Mb(fb === bb.code ? null : bb.code)
+                                            Lb(vb === bb.code ? null : bb.code)
                                           },
                                           children: bb.code
                                         })
-                                      }), (0, mb.jsx)("td", {
+                                      }), (0, jb.jsx)("td", {
                                         children: bb.meaning
-                                      }), (0, mb.jsx)("td", {
-                                        children: (0, mb.jsx)("code", {
+                                      }), (0, jb.jsx)("td", {
+                                        children: (0, jb.jsx)("code", {
                                           className: "DocsInlineCode",
                                           children: bb.usage
                                         })
@@ -2316,168 +2316,168 @@ export const modules = {
                                     }, bb.code)))
                                   })]
                                 })
-                              }), sb.examples.length > 0 && (0, mb.jsx)(Yb, {
+                              }), Ub.examples.length > 0 && (0, jb.jsx)(fb, {
                                 lang: "text",
-                                code: sb.examples.join("\n")
-                              }), (0, mb.jsx)(Ns, {
+                                code: Ub.examples.join("\n")
+                              }), (0, jb.jsx)(DU, {
                                 className: "DocsFilterBar",
-                                value: Ib,
-                                placeholder: `Search ${sb.entries.length} ${cb}\u2026`,
-                                label: `Search ${cb}`,
+                                value: Bb,
+                                placeholder: `Search ${Ub.entries.length} ${ab}\u2026`,
+                                label: `Search ${ab}`,
                                 onChange: bb => {
-                                  Hb(bb), nb(Dk)
+                                  eb(bb), Xb(IA)
                                 },
-                                count: Vb || fb ? {
-                                  visible: Lb.length,
-                                  total: sb.entries.length
+                                count: zb || vb ? {
+                                  visible: xb.length,
+                                  total: Ub.entries.length
                                 } : null,
-                                children: fb && (0, mb.jsxs)("button", {
+                                children: vb && (0, jb.jsxs)("button", {
                                   type: "button",
                                   className: "DocsVariantChip Active",
                                   onClick: () => {
-                                    Mb(null)
+                                    Lb(null)
                                   },
-                                  children: [fb, " ", (0, mb.jsx)(Qb, {
+                                  children: [vb, " ", (0, jb.jsx)(kb, {
                                     name: "cross"
                                   })]
                                 })
-                              }), (0, mb.jsx)("div", {
+                              }), (0, jb.jsx)("div", {
                                 className: "DocsCatalogueGrid",
-                                children: Lb.slice(0, Xb).map((bb => {
-                                  const sb = "blocks" === cb ? null === Wb || void 0 === Wb ? void 0 : Wb.getBlockFaces(bb.name) : null,
-                                    kb = Wb && !sb ? Wb.getItemTextureUrl(bb.name) : null;
-                                  return (0, mb.jsxs)("div", {
-                                    id: Es(cb, bb.name),
-                                    className: ab()("DocsCatalogueTile", {
-                                      Linked: bb.name === lb
+                                children: xb.slice(0, Pb).map((bb => {
+                                  const Ub = "blocks" === ab ? null === Mb || void 0 === Mb ? void 0 : Mb.getBlockFaces(bb.name) : null,
+                                    Ab = Mb && !Ub ? Mb.getItemTextureUrl(bb.name) : null;
+                                  return (0, jb.jsxs)("div", {
+                                    id: FU(ab, bb.name),
+                                    className: Tb()("DocsCatalogueTile", {
+                                      Linked: bb.name === Rb
                                     }),
-                                    children: [(0, mb.jsxs)("span", {
+                                    children: [(0, jb.jsxs)("span", {
                                       className: "DocsCatalogueTexture",
-                                      children: [sb && (0, mb.jsx)(Ek, {
-                                        faces: sb
-                                      }), kb && (0, mb.jsx)(ik, {
-                                        src: kb
+                                      children: [Ub && (0, jb.jsx)(dA, {
+                                        faces: Ub
+                                      }), Ab && (0, jb.jsx)(FA, {
+                                        src: Ab
                                       })]
-                                    }), (0, mb.jsx)("span", {
+                                    }), (0, jb.jsx)("span", {
                                       className: "DocsCatalogueName",
                                       children: bb.name
-                                    }), bb.variants.length > 0 && (0, mb.jsx)("span", {
+                                    }), bb.variants.length > 0 && (0, jb.jsx)("span", {
                                       className: "DocsCatalogueVariants",
-                                      children: bb.variants.map((bb => (0, mb.jsx)("span", {
+                                      children: bb.variants.map((bb => (0, jb.jsx)("span", {
                                         children: bb
                                       }, bb)))
-                                    }), (0, mb.jsx)(Nb, {
+                                    }), (0, jb.jsx)(Db, {
                                       text: bb.name,
                                       className: "DocsCatalogueCopy"
                                     })]
                                   }, bb.name)
                                 }))
-                              }), Lb.length > Xb && (0, mb.jsxs)("button", {
+                              }), xb.length > Pb && (0, jb.jsxs)("button", {
                                 type: "button",
                                 className: "DocsShowMore",
                                 onClick: () => {
-                                  nb(Lb.length)
+                                  Xb(xb.length)
                                 },
-                                children: ["Show all ", Lb.length]
-                              }), 0 === Lb.length && (0, mb.jsxs)("p", {
+                                children: ["Show all ", xb.length]
+                              }), 0 === xb.length && (0, jb.jsxs)("p", {
                                 className: "DocsEmpty",
-                                children: ["No ", cb, " match."]
+                                children: ["No ", ab, " match."]
                               })]
                             })
                           }
-                          var Gk = sb(4545),
-                            Kk = sb(1572);
-                          const Zk = .95 * Gk.e;
+                          var GA = Ub(4509),
+                            QA = Ub(1505);
+                          const qA = .95 * GA.d;
 
-                          function zk(bb) {
+                          function uA(bb) {
                             return /^\s*```/.test(bb)
                           }
 
-                          function qk(bb, cb) {
-                            const sb = [
+                          function rA(bb, ab) {
+                            const Ub = [
                               []
                             ];
-                            let kb = !1;
-                            for (const Wb of bb.split("\n")) !kb && cb(Wb) && sb.at(-1).length > 0 && sb.push([]), zk(Wb) && (kb = !kb), sb.at(-1).push(Wb);
-                            return sb.map((bb => bb.join("\n").trim())).filter(Boolean)
+                            let Ab = !1;
+                            for (const Mb of bb.split("\n")) !Ab && ab(Mb) && Ub.at(-1).length > 0 && Ub.push([]), uA(Mb) && (Ab = !Ab), Ub.at(-1).push(Mb);
+                            return Ub.map((bb => bb.join("\n").trim())).filter(Boolean)
                           }
 
-                          function dk(bb, cb) {
-                            const sb = `${"#".repeat(cb)} `,
-                              kb = [];
-                            let Wb = !1;
-                            for (const ab of bb.split("\n")) zk(ab) ? Wb = !Wb : !Wb && ab.startsWith(sb) && kb.push(ab.slice(sb.length).trim());
-                            return kb
+                          function KA(bb, ab) {
+                            const Ub = `${"#".repeat(ab)} `,
+                              Ab = [];
+                            let Mb = !1;
+                            for (const Tb of bb.split("\n")) uA(Tb) ? Mb = !Mb : !Mb && Tb.startsWith(Ub) && Ab.push(Tb.slice(Ub.length).trim());
+                            return Ab
                           }
 
-                          function Ak(bb) {
+                          function oA(bb) {
                             return bb.markdown.replace(/^\s*# .*\n/, "").trim()
                           }
-                          class wk {
-                            constructor(bb, cb) {
-                              this.origin = cb, this.pages = void 0, this.partPaths = new Map;
-                              const sb = bb.map((bb => {
-                                const cb = cb => this.resolveLinks(bb, cb).length,
-                                  sb = function(bb, cb) {
-                                    const sb = bb.map((bb => cb(bb.markdown) + 2)),
-                                      kb = sb.reduce(((bb, cb) => bb + cb), 0),
-                                      Wb = kb / Math.ceil(kb / Zk),
-                                      ab = [];
-                                    let Tb = 0;
-                                    return bb.forEach(((bb, cb) => {
-                                      const kb = sb[cb];
-                                      (0 === ab.length || Tb + kb > Zk || Tb + kb / 2 > Wb) && (ab.push([]), Tb = 0), ab.at(-1).push(bb), Tb += kb
-                                    })), ab
-                                  }(function(bb, cb) {
-                                    return qk(bb, (bb => bb.startsWith("## "))).flatMap((bb => {
-                                      var sb;
-                                      const kb = null !== (sb = dk(bb, 2)[0]) && void 0 !== sb ? sb : "";
-                                      if (cb(bb) <= Zk) return [{
+                          class lA {
+                            constructor(bb, ab) {
+                              this.origin = ab, this.pages = void 0, this.partPaths = new Map;
+                              const Ub = bb.map((bb => {
+                                const ab = ab => this.resolveLinks(bb, ab).length,
+                                  Ub = function(bb, ab) {
+                                    const Ub = bb.map((bb => ab(bb.markdown) + 2)),
+                                      Ab = Ub.reduce(((bb, ab) => bb + ab), 0),
+                                      Mb = Ab / Math.ceil(Ab / qA),
+                                      Tb = [];
+                                    let Eb = 0;
+                                    return bb.forEach(((bb, ab) => {
+                                      const Ab = Ub[ab];
+                                      (0 === Tb.length || Eb + Ab > qA || Eb + Ab / 2 > Mb) && (Tb.push([]), Eb = 0), Tb.at(-1).push(bb), Eb += Ab
+                                    })), Tb
+                                  }(function(bb, ab) {
+                                    return rA(bb, (bb => bb.startsWith("## "))).flatMap((bb => {
+                                      var Ub;
+                                      const Ab = null !== (Ub = KA(bb, 2)[0]) && void 0 !== Ub ? Ub : "";
+                                      if (ab(bb) <= qA) return [{
                                         markdown: bb,
-                                        section: kb
+                                        section: Ab
                                       }];
-                                      let Wb = !1,
-                                        ab = "";
-                                      return qk(bb, (bb => {
-                                        const cb = Wb && "" !== bb.trim();
-                                        return Wb = "" === bb.trim(), cb
+                                      let Mb = !1,
+                                        Tb = "";
+                                      return rA(bb, (bb => {
+                                        const ab = Mb && "" !== bb.trim();
+                                        return Mb = "" === bb.trim(), ab
                                       })).map((bb => {
-                                        var cb;
-                                        const sb = dk(bb, 3),
-                                          Wb = bb.startsWith("### ") ? sb[0] : ab;
-                                        return ab = null !== (cb = sb.at(-1)) && void 0 !== cb ? cb : ab, {
+                                        var ab;
+                                        const Ub = KA(bb, 3),
+                                          Mb = bb.startsWith("### ") ? Ub[0] : Tb;
+                                        return Tb = null !== (ab = Ub.at(-1)) && void 0 !== ab ? ab : Tb, {
                                           markdown: bb,
-                                          section: kb || Wb
+                                          section: Ab || Mb
                                         }
                                       }))
                                     }))
-                                  }(Ak(bb), cb), cb);
+                                  }(oA(bb), ab), ab);
                                 return {
                                   page: bb,
-                                  groups: sb.length > 1 ? sb : []
+                                  groups: Ub.length > 1 ? Ub : []
                                 }
                               }));
                               for (const {
-                                  page: kb,
-                                  groups: Wb
+                                  page: Ab,
+                                  groups: Mb
                                 }
-                                of sb) Wb.forEach(((bb, cb) => {
-                                const sb = (0, Gk.x)(kb.slug, cb);
-                                for (const Wb of bb.flatMap((bb => [...dk(bb.markdown, 2), ...dk(bb.markdown, 3)]))) {
-                                  const bb = `${kb.id}#${(0,hb.x)(Wb)}`;
-                                  this.partPaths.has(bb) || this.partPaths.set(bb, sb)
+                                of Ub) Mb.forEach(((bb, ab) => {
+                                const Ub = (0, GA.x)(Ab.slug, ab);
+                                for (const Mb of bb.flatMap((bb => [...KA(bb.markdown, 2), ...KA(bb.markdown, 3)]))) {
+                                  const bb = `${Ab.id}#${(0,mb.r)(Mb)}`;
+                                  this.partPaths.has(bb) || this.partPaths.set(bb, Ub)
                                 }
                               }));
-                              this.pages = sb.map((bb => {
+                              this.pages = Ub.map((bb => {
                                 let {
-                                  page: cb,
-                                  groups: sb
+                                  page: ab,
+                                  groups: Ub
                                 } = bb;
                                 return {
-                                  page: cb,
-                                  path: (0, Gk.v)(cb.slug),
-                                  markdown: `# ${cb.title}\n\n${this.resolveLinks(cb,Ak(cb))}\n`,
-                                  parts: sb.map(((bb, kb) => this.renderPart(cb, bb, kb, sb.length)))
+                                  page: ab,
+                                  path: (0, GA.v)(ab.slug),
+                                  markdown: `# ${ab.title}\n\n${this.resolveLinks(ab,oA(ab))}\n`,
+                                  parts: Ub.map(((bb, Ab) => this.renderPart(ab, bb, Ab, Ub.length)))
                                 }
                               }))
                             }
@@ -2485,96 +2485,96 @@ export const modules = {
                               return `${this.origin}${bb}`
                             }
                             getPage(bb) {
-                              return this.pages.find((cb => cb.page.id === bb))
+                              return this.pages.find((ab => ab.page.id === bb))
                             }
                             oversizedFiles() {
                               return this.pages.flatMap((bb => (bb.parts.length > 0 ? bb.parts : [{
                                 path: bb.path,
                                 label: "",
                                 markdown: bb.markdown
-                              }]).filter((bb => bb.markdown.length > Gk.e))))
+                              }]).filter((bb => bb.markdown.length > GA.d))))
                             }
-                            markdownUrl(bb, cb) {
-                              const sb = cb && this.partPaths.get(`${bb.id}#${cb}`) || (0, Gk.v)(bb.slug);
-                              return this.url(cb ? `${sb}#${cb}` : sb)
+                            markdownUrl(bb, ab) {
+                              const Ub = ab && this.partPaths.get(`${bb.id}#${ab}`) || (0, GA.v)(bb.slug);
+                              return this.url(ab ? `${Ub}#${ab}` : Ub)
                             }
-                            resolveLinks(bb, cb) {
-                              return cb.replace(/\]\((#[^)]+)\)/g, ((cb, sb) => {
-                                var kb;
-                                const Wb = null !== (kb = Ab(sb)) && void 0 !== kb ? kb : this.samePageTarget(bb, sb);
-                                return Wb ? `](${this.markdownUrl(Wb.page,Wb.anchor)})` : cb
+                            resolveLinks(bb, ab) {
+                              return ab.replace(/\]\((#[^)]+)\)/g, ((ab, Ub) => {
+                                var Ab;
+                                const Mb = null !== (Ab = tb(Ub)) && void 0 !== Ab ? Ab : this.samePageTarget(bb, Ub);
+                                return Mb ? `](${this.markdownUrl(Mb.page,Mb.anchor)})` : ab
                               }))
                             }
-                            samePageTarget(bb, cb) {
-                              const sb = (0, hb.x)(cb.slice(1));
-                              return db(bb, sb) ? {
+                            samePageTarget(bb, ab) {
+                              const Ub = (0, mb.r)(ab.slice(1));
+                              return lb(bb, Ub) ? {
                                 page: bb,
-                                anchor: sb
+                                anchor: Ub
                               } : null
                             }
-                            renderPart(bb, cb, sb, kb) {
-                              const Wb = function(bb) {
-                                  const cb = bb.map((bb => bb.section)).filter(Boolean);
-                                  if (0 === cb.length) return "";
-                                  const sb = cb[0],
-                                    kb = cb.at(-1);
-                                  return sb === kb ? sb : `${sb} to ${kb}`
-                                }(cb),
-                                ab = cb.map((bb => bb.markdown)).join("\n\n"),
-                                Tb = Wb ? `It covers ${Wb}. ` : "",
-                                Ub = `Part ${sb+1} of ${kb} of [${bb.title}](${this.url((0,Gk.v)(bb.slug))}). ${Tb}[llms.txt](${this.url(Gk.j)}) lists every part.`;
+                            renderPart(bb, ab, Ub, Ab) {
+                              const Mb = function(bb) {
+                                  const ab = bb.map((bb => bb.section)).filter(Boolean);
+                                  if (0 === ab.length) return "";
+                                  const Ub = ab[0],
+                                    Ab = ab.at(-1);
+                                  return Ub === Ab ? Ub : `${Ub} to ${Ab}`
+                                }(ab),
+                                Tb = ab.map((bb => bb.markdown)).join("\n\n"),
+                                Eb = Mb ? `It covers ${Mb}. ` : "",
+                                Yb = `Part ${Ub+1} of ${Ab} of [${bb.title}](${this.url((0,GA.v)(bb.slug))}). ${Eb}[llms.txt](${this.url(GA.j)}) lists every part.`;
                               return {
-                                path: (0, Gk.x)(bb.slug, sb),
-                                label: Wb,
-                                markdown: `# ${bb.title}, part ${sb+1} of ${kb}\n\n${Ub}\n\n${this.resolveLinks(bb,ab)}\n`
+                                path: (0, GA.x)(bb.slug, Ub),
+                                label: Mb,
+                                markdown: `# ${bb.title}, part ${Ub+1} of ${Ab}\n\n${Yb}\n\n${this.resolveLinks(bb,Tb)}\n`
                               }
                             }
                             llmsTxt(bb) {
-                              const cb = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${rk(Gk.e)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
-                              for (const sb of Kb) {
-                                cb.push("", `## ${sb.title}`, "");
-                                for (const bb of sb.pageIds) {
-                                  const sb = this.getPage(bb),
+                              const ab = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${tA(GA.d)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
+                              for (const Ub of ub) {
+                                ab.push("", `## ${Ub.title}`, "");
+                                for (const bb of Ub.pageIds) {
+                                  const Ub = this.getPage(bb),
                                     {
-                                      page: kb,
-                                      parts: Wb
-                                    } = sb,
-                                    ab = `About ${rk(sb.markdown.length)} tokens${Wb.length>0?`, in ${Wb.length} parts:`:"."}`;
-                                  cb.push(`- [${kb.title}](${this.url(sb.path)}): ${kb.summary} ${ab}`), Wb.forEach(((bb, sb) => {
-                                    cb.push(`  - [Part ${sb+1}${bb.label?`: ${bb.label}`:""}](${this.url(bb.path)})`)
+                                      page: Ab,
+                                      parts: Mb
+                                    } = Ub,
+                                    Tb = `About ${tA(Ub.markdown.length)} tokens${Mb.length>0?`, in ${Mb.length} parts:`:"."}`;
+                                  ab.push(`- [${Ab.title}](${this.url(Ub.path)}): ${Ab.summary} ${Tb}`), Mb.forEach(((bb, Ub) => {
+                                    ab.push(`  - [Part ${Ub+1}${bb.label?`: ${bb.label}`:""}](${this.url(bb.path)})`)
                                   }))
                                 }
                               }
-                              return cb.push("", "## Optional", "", `- [Every page in one file](${this.url(Gk.h)}): About ${rk(bb.length)} tokens, for a model with a large context window.`, ""), cb.join("\n")
+                              return ab.push("", "## Optional", "", `- [Every page in one file](${this.url(GA.f)}): About ${tA(bb.length)} tokens, for a model with a large context window.`, ""), ab.join("\n")
                             }
                             llmsFullTxt() {
-                              return Kb.flatMap((bb => bb.pageIds.map((bb => this.getPage(bb).markdown)))).join("\n---\n\n")
+                              return ub.flatMap((bb => bb.pageIds.map((bb => this.getPage(bb).markdown)))).join("\n---\n\n")
                             }
                             files() {
                               const bb = this.llmsFullTxt(),
-                                cb = this.llmsTxt(bb),
-                                sb = new Map([
-                                  [Gk.n, cb],
-                                  [Gk.j, cb],
-                                  [Gk.h, bb]
+                                ab = this.llmsTxt(bb),
+                                Ub = new Map([
+                                  [GA.q, ab],
+                                  [GA.j, ab],
+                                  [GA.f, bb]
                                 ]);
-                              for (const kb of this.pages) {
-                                sb.set(kb.path, kb.markdown);
-                                for (const bb of kb.parts) sb.set(bb.path, bb.markdown)
+                              for (const Ab of this.pages) {
+                                Ub.set(Ab.path, Ab.markdown);
+                                for (const bb of Ab.parts) Ub.set(bb.path, bb.markdown)
                               }
-                              return sb
+                              return Ub
                             }
                           }
 
-                          function rk(bb) {
+                          function tA(bb) {
                             return `${Math.max(1,Math.round(bb/4e3))}K`
                           }
-                          let Sk = null;
+                          let wA = null;
 
-                          function Rk() {
-                            return Sk ??= new wk(Gb, Kk.e), Sk
+                          function sA() {
+                            return wA ??= new lA(qb, QA.d), wA
                           }
-                          const vk = [{
+                          const gA = [{
                             name: "ChatGPT",
                             url: "https://chatgpt.com/?hints=search&q="
                           }, {
@@ -2582,373 +2582,373 @@ export const modules = {
                             url: "https://claude.ai/new?q="
                           }];
 
-                          function Fk(bb) {
-                            return Rk().getPage(bb.id).parts.length > 0 ? `Read ${Gk.m}, then the parts of the Bloxd Code API's ${bb.title} page it lists, so I can ask questions about it.` : `Read ${Kk.e}${(0,Gk.v)(bb.slug)} so I can ask questions about it. ${Gk.m} lists every page of the Bloxd Code API docs.`
+                          function CA(bb) {
+                            return sA().getPage(bb.id).parts.length > 0 ? `Read ${GA.n}, then the parts of the Bloxd Code API's ${bb.title} page it lists, so I can ask questions about it.` : `Read ${QA.d}${(0,GA.v)(bb.slug)} so I can ask questions about it. ${GA.n} lists every page of the Bloxd Code API docs.`
                           }
 
-                          function xk(bb) {
+                          function VA(bb) {
                             let {
-                              page: cb
+                              page: ab
                             } = bb;
-                            const [sb, kb] = Cb();
-                            return (0, mb.jsxs)("div", {
+                            const [Ub, Ab] = Zb();
+                            return (0, jb.jsxs)("div", {
                               className: "DocsPageAgentActions",
-                              children: [(0, mb.jsxs)("button", {
+                              children: [(0, jb.jsxs)("button", {
                                 type: "button",
                                 className: "DocsPageAgentAction",
                                 onClick: () => {
-                                  kb(Rk().getPage(cb.id).markdown)
+                                  Ab(sA().getPage(ab.id).markdown)
                                 },
-                                children: [(0, mb.jsx)(Qb, {
-                                  name: !1 === (null === sb || void 0 === sb ? void 0 : sb.failed) ? "check" : "copy"
-                                }), (0, mb.jsx)("span", {
-                                  children: sb ? sb.failed ? "Copy failed" : "Copied" : "Copy page"
+                                children: [(0, jb.jsx)(kb, {
+                                  name: !1 === (null === Ub || void 0 === Ub ? void 0 : Ub.failed) ? "check" : "copy"
+                                }), (0, jb.jsx)("span", {
+                                  children: Ub ? Ub.failed ? "Copy failed" : "Copied" : "Copy page"
                                 })]
-                              }), vk.map((bb => (0, mb.jsxs)("a", {
+                              }), gA.map((bb => (0, jb.jsxs)("a", {
                                 className: "DocsPageAgentAction",
-                                href: `${bb.url}${encodeURIComponent(Fk(cb))}`,
+                                href: `${bb.url}${encodeURIComponent(CA(ab))}`,
                                 target: "_blank",
                                 rel: "noreferrer",
-                                children: [(0, mb.jsx)(Qb, {
+                                children: [(0, jb.jsx)(kb, {
                                   name: "external-link"
-                                }), (0, mb.jsxs)("span", {
+                                }), (0, jb.jsxs)("span", {
                                   children: ["Open in ", bb.name]
                                 })]
                               }, bb.name)))]
                             })
                           }
 
-                          function jk(bb) {
-                            return `#${[0,1,2].map((cb=>Math.round(Math.min(255,Math.max(0,bb[cb]))).toString(16).padStart(2,"0"))).join("")}`
+                          function OA(bb) {
+                            return `#${[0,1,2].map((ab=>Math.round(Math.min(255,Math.max(0,bb[ab]))).toString(16).padStart(2,"0"))).join("")}`
                           }
 
-                          function pk(bb) {
+                          function cA(bb) {
                             return [parseInt(bb.slice(1, 3), 16), parseInt(bb.slice(3, 5), 16), parseInt(bb.slice(5, 7), 16)]
                           }
 
-                          function bW(bb) {
+                          function JA(bb) {
                             let {
-                              label: cb,
-                              min: sb,
-                              max: kb,
-                              step: Wb,
-                              low: ab,
-                              high: Tb,
-                              onChange: Ub
+                              label: ab,
+                              min: Ub,
+                              max: Ab,
+                              step: Mb,
+                              low: Tb,
+                              high: Eb,
+                              onChange: Yb
                             } = bb;
-                            return (0, mb.jsxs)("div", {
+                            return (0, jb.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, mb.jsxs)("div", {
+                              children: [(0, jb.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, mb.jsx)("span", {
-                                  children: cb
-                                }), (0, mb.jsx)("span", {
+                                children: [(0, jb.jsx)("span", {
+                                  children: ab
+                                }), (0, jb.jsx)("span", {
                                   className: "DocsControlValue",
-                                  children: ab === Tb ? ab : `${ab}\u2013${Tb}`
+                                  children: Tb === Eb ? Tb : `${Tb}\u2013${Eb}`
                                 })]
-                              }), (0, mb.jsxs)("div", {
+                              }), (0, jb.jsxs)("div", {
                                 className: "DocsParticleRange",
-                                children: [(0, mb.jsx)("input", {
+                                children: [(0, jb.jsx)("input", {
                                   type: "range",
-                                  min: sb,
-                                  max: kb,
-                                  step: Wb,
-                                  value: Math.min(kb, ab),
-                                  "aria-label": `Minimum ${cb.toLowerCase()}`,
+                                  min: Ub,
+                                  max: Ab,
+                                  step: Mb,
+                                  value: Math.min(Ab, Tb),
+                                  "aria-label": `Minimum ${ab.toLowerCase()}`,
                                   onChange: bb => {
-                                    const cb = Number(bb.target.value);
-                                    Ub(cb, Math.max(cb, Tb))
+                                    const ab = Number(bb.target.value);
+                                    Yb(ab, Math.max(ab, Eb))
                                   }
-                                }), (0, mb.jsx)("input", {
+                                }), (0, jb.jsx)("input", {
                                   type: "range",
-                                  min: sb,
-                                  max: kb,
-                                  step: Wb,
-                                  value: Math.min(kb, Tb),
-                                  "aria-label": `Maximum ${cb.toLowerCase()}`,
+                                  min: Ub,
+                                  max: Ab,
+                                  step: Mb,
+                                  value: Math.min(Ab, Eb),
+                                  "aria-label": `Maximum ${ab.toLowerCase()}`,
                                   onChange: bb => {
-                                    const cb = Number(bb.target.value);
-                                    Ub(Math.min(cb, ab), cb)
+                                    const ab = Number(bb.target.value);
+                                    Yb(Math.min(ab, Tb), ab)
                                   }
                                 })]
                               })]
                             })
                           }
 
-                          function cW(bb) {
+                          function nA(bb) {
                             let {
-                              label: cb,
-                              min: sb,
-                              max: kb,
-                              step: Wb,
-                              value: ab,
-                              onChange: Tb,
-                              format: Ub = String
+                              label: ab,
+                              min: Ub,
+                              max: Ab,
+                              step: Mb,
+                              value: Tb,
+                              onChange: Eb,
+                              format: Yb = String
                             } = bb;
-                            return (0, mb.jsxs)("div", {
+                            return (0, jb.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, mb.jsxs)("div", {
+                              children: [(0, jb.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, mb.jsx)("span", {
-                                  children: cb
-                                }), (0, mb.jsx)("span", {
+                                children: [(0, jb.jsx)("span", {
+                                  children: ab
+                                }), (0, jb.jsx)("span", {
                                   className: "DocsControlValue",
-                                  children: Ub(ab)
+                                  children: Yb(Tb)
                                 })]
-                              }), (0, mb.jsx)("input", {
+                              }), (0, jb.jsx)("input", {
                                 type: "range",
-                                min: sb,
-                                max: kb,
-                                step: Wb,
-                                value: Math.min(kb, Math.max(sb, ab)),
-                                "aria-label": cb,
+                                min: Ub,
+                                max: Ab,
+                                step: Mb,
+                                value: Math.min(Ab, Math.max(Ub, Tb)),
+                                "aria-label": ab,
                                 onChange: bb => {
-                                  Tb(Number(bb.target.value))
+                                  Eb(Number(bb.target.value))
                                 }
                               })]
                             })
                           }
 
-                          function sW(bb) {
+                          function SA(bb) {
                             let {
-                              opts: cb,
-                              onChange: sb
+                              opts: ab,
+                              onChange: Ub
                             } = bb;
-                            const kb = cb.colorGradients;
-                            if (!rs(kb)) return (0, mb.jsxs)("div", {
+                            const Ab = ab.colorGradients;
+                            if (!wU(Ab)) return (0, jb.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, mb.jsx)("div", {
+                              children: [(0, jb.jsx)("div", {
                                 className: "DocsControlLabel",
-                                children: (0, mb.jsx)("span", {
+                                children: (0, jb.jsx)("span", {
                                   children: "Colours, one per particle"
                                 })
-                              }), (0, mb.jsx)("div", {
+                              }), (0, jb.jsx)("div", {
                                 className: "DocsParticleSwatches",
-                                children: kb.map(((bb, cb) => (0, mb.jsx)("input", {
+                                children: Ab.map(((bb, ab) => (0, jb.jsx)("input", {
                                   type: "color",
-                                  value: jk(bb.color),
-                                  "aria-label": `Colour ${cb+1}`,
+                                  value: OA(bb.color),
+                                  "aria-label": `Colour ${ab+1}`,
                                   onChange: bb => {
-                                    const Wb = [...kb];
-                                    Wb[cb] = {
-                                      color: pk(bb.target.value)
-                                    }, sb(Wb)
+                                    const Mb = [...Ab];
+                                    Mb[ab] = {
+                                      color: cA(bb.target.value)
+                                    }, Ub(Mb)
                                   }
-                                }, cb)))
+                                }, ab)))
                               })]
                             });
-                            const Wb = (bb, cb) => {
-                              const Wb = [...kb];
-                              Wb[bb] = cb, sb(Wb)
+                            const Mb = (bb, ab) => {
+                              const Mb = [...Ab];
+                              Mb[bb] = ab, Ub(Mb)
                             };
-                            return (0, mb.jsxs)("div", {
+                            return (0, jb.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, mb.jsxs)("div", {
+                              children: [(0, jb.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, mb.jsx)("span", {
+                                children: [(0, jb.jsx)("span", {
                                   children: "Colour over lifetime"
-                                }), (0, mb.jsx)("span", {
+                                }), (0, jb.jsx)("span", {
                                   className: "DocsControlValue",
                                   children: "min \xb7 max"
                                 })]
-                              }), kb.map(((bb, cb) => {
-                                var sb;
-                                const kb = null !== (sb = bb.maxColor) && void 0 !== sb ? sb : bb.minColor;
-                                return (0, mb.jsxs)("div", {
+                              }), Ab.map(((bb, ab) => {
+                                var Ub;
+                                const Ab = null !== (Ub = bb.maxColor) && void 0 !== Ub ? Ub : bb.minColor;
+                                return (0, jb.jsxs)("div", {
                                   className: "DocsParticleStop",
-                                  children: [(0, mb.jsxs)("span", {
+                                  children: [(0, jb.jsxs)("span", {
                                     className: "DocsParticleStopTime",
                                     children: [Math.round(100 * bb.timeFraction), "%"]
-                                  }), (0, mb.jsx)("span", {
+                                  }), (0, jb.jsx)("span", {
                                     className: "DocsParticleStopBar",
                                     style: {
-                                      background: `linear-gradient(90deg, ${jk(bb.minColor)}, ${jk(kb)})`
+                                      background: `linear-gradient(90deg, ${OA(bb.minColor)}, ${OA(Ab)})`
                                     }
-                                  }), (0, mb.jsx)("input", {
+                                  }), (0, jb.jsx)("input", {
                                     type: "color",
-                                    value: jk(bb.minColor),
+                                    value: OA(bb.minColor),
                                     "aria-label": `Minimum colour at ${Math.round(100*bb.timeFraction)}%`,
-                                    onChange: sb => {
-                                      Wb(cb, {
+                                    onChange: Ub => {
+                                      Mb(ab, {
                                         ...bb,
-                                        minColor: [...pk(sb.target.value), bb.minColor[3]]
+                                        minColor: [...cA(Ub.target.value), bb.minColor[3]]
                                       })
                                     }
-                                  }), (0, mb.jsx)("input", {
+                                  }), (0, jb.jsx)("input", {
                                     type: "color",
-                                    value: jk(kb),
+                                    value: OA(Ab),
                                     "aria-label": `Maximum colour at ${Math.round(100*bb.timeFraction)}%`,
-                                    onChange: sb => {
-                                      Wb(cb, {
+                                    onChange: Ub => {
+                                      Mb(ab, {
                                         ...bb,
-                                        maxColor: [...pk(sb.target.value), kb[3]]
+                                        maxColor: [...cA(Ub.target.value), Ab[3]]
                                       })
                                     }
                                   })]
-                                }, cb)
+                                }, ab)
                               }))]
                             })
                           }
-                          const kW = [-.5, -.5, -.5],
-                            WW = [.5, .5, .5],
-                            aW = [0, 1, 2, 3, 4, 5, 6, 7].map((bb => [1 & bb ? WW[0] : kW[0], 2 & bb ? WW[1] : kW[1], 4 & bb ? WW[2] : kW[2]]));class TW {
+                          const bM = [-.5, -.5, -.5],
+                            aM = [.5, .5, .5],
+                            UM = [0, 1, 2, 3, 4, 5, 6, 7].map((bb => [1 & bb ? aM[0] : bM[0], 2 & bb ? aM[1] : bM[1], 4 & bb ? aM[2] : bM[2]]));class AM {
                             constructor() {
                               this.tints = new WeakMap
                             }
-                            get(bb, cb, sb, kb) {
-                              const Wb = Math.round(31 * cb),
-                                ab = Math.round(31 * sb),
-                                Tb = Math.round(31 * kb),
-                                Ub = `${Wb}|${ab}|${Tb}`;
-                              let Ib = this.tints.get(bb);
-                              (!Ib || Ib.size > 2e3) && (Ib = new Map, this.tints.set(bb, Ib));
-                              let Hb = Ib.get(Ub);
-                              if (Hb) return Hb;
-                              Hb = document.createElement("canvas"), Hb.width = bb.naturalWidth || 16, Hb.height = bb.naturalHeight || 16;
-                              const fb = Hb.getContext("2d");
-                              return fb ? (fb.imageSmoothingEnabled = !1, fb.drawImage(bb, 0, 0, Hb.width, Hb.height), fb.globalCompositeOperation = "multiply", fb.fillStyle = `rgb(${Wb/31*255}, ${ab/31*255}, ${Tb/31*255})`, fb.fillRect(0, 0, Hb.width, Hb.height), fb.globalCompositeOperation = "destination-in", fb.drawImage(bb, 0, 0, Hb.width, Hb.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), Ib.set(Ub, Hb), Hb
+                            get(bb, ab, Ub, Ab) {
+                              const Mb = Math.round(31 * ab),
+                                Tb = Math.round(31 * Ub),
+                                Eb = Math.round(31 * Ab),
+                                Yb = `${Mb}|${Tb}|${Eb}`;
+                              let Bb = this.tints.get(bb);
+                              (!Bb || Bb.size > 2e3) && (Bb = new Map, this.tints.set(bb, Bb));
+                              let eb = Bb.get(Yb);
+                              if (eb) return eb;
+                              eb = document.createElement("canvas"), eb.width = bb.naturalWidth || 16, eb.height = bb.naturalHeight || 16;
+                              const vb = eb.getContext("2d");
+                              return vb ? (vb.imageSmoothingEnabled = !1, vb.drawImage(bb, 0, 0, eb.width, eb.height), vb.globalCompositeOperation = "multiply", vb.fillStyle = `rgb(${Mb/31*255}, ${Tb/31*255}, ${Eb/31*255})`, vb.fillRect(0, 0, eb.width, eb.height), vb.globalCompositeOperation = "destination-in", vb.drawImage(bb, 0, 0, eb.width, eb.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), Bb.set(Yb, eb), eb
                             }
                           }
 
-                          function UW(bb) {
+                          function MM(bb) {
                             let {
-                              opts: cb,
-                              textureUrl: sb,
-                              burst: Wb,
-                              paused: ab
+                              opts: ab,
+                              textureUrl: Ub,
+                              burst: Mb,
+                              paused: Tb
                             } = bb;
-                            const Tb = (0, kb.useRef)(null),
-                              Ub = (0, kb.useRef)(cb);
-                            Ub.current = cb;
-                            const Ib = (0, kb.useRef)(ab);
-                            Ib.current = ab;
-                            const Hb = (0, kb.useRef)(null),
-                              fb = (0, kb.useRef)(null),
-                              Mb = (0, kb.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(bb) {
-                                let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
-                                const sb = [-.5, -.5, -.5],
-                                  kb = [.5, .5, .5];
-                                let Wb = .5;
-                                for (let ab = 0; ab < 40; ab++) {
-                                  const ab = Ss(bb, sb, kb, cb),
-                                    Tb = Math.max(ab.life / 30, .001);
-                                  for (; Fs(ab, bb.gravity, Tb);) Wb = Math.max(Wb, Math.hypot(ab.pos[0], ab.pos[1], ab.pos[2]) + ab.size / 2)
+                            const Eb = (0, Ab.useRef)(null),
+                              Yb = (0, Ab.useRef)(ab);
+                            Yb.current = ab;
+                            const Bb = (0, Ab.useRef)(Tb);
+                            Bb.current = Tb;
+                            const eb = (0, Ab.useRef)(null),
+                              vb = (0, Ab.useRef)(null),
+                              Lb = (0, Ab.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(bb) {
+                                let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
+                                const Ub = [-.5, -.5, -.5],
+                                  Ab = [.5, .5, .5];
+                                let Mb = .5;
+                                for (let Tb = 0; Tb < 40; Tb++) {
+                                  const Tb = gU(bb, Ub, Ab, ab),
+                                    Eb = Math.max(Tb.life / 30, .001);
+                                  for (; OU(Tb, bb.gravity, Eb);) Mb = Math.max(Mb, Math.hypot(Tb.pos[0], Tb.pos[1], Tb.pos[2]) + Tb.size / 2)
                                 }
-                                return Wb
-                              }(cb)))), [cb]),
-                              Xb = (0, kb.useRef)(Mb);
-                            return Xb.current = Mb, (0, kb.useEffect)((() => {
-                              if (Hb.current = null, !sb) return;
+                                return Mb
+                              }(ab)))), [ab]),
+                              Pb = (0, Ab.useRef)(Lb);
+                            return Pb.current = Lb, (0, Ab.useEffect)((() => {
+                              if (eb.current = null, !Ub) return;
                               const bb = new Image;
-                              let cb = !1;
+                              let ab = !1;
                               return bb.onload = () => {
-                                cb || (Hb.current = bb)
+                                ab || (eb.current = bb)
                               }, bb.onerror = () => {
-                                console.warn(`Particle preview: could not load the texture ${sb}`)
-                              }, bb.src = sb, () => {
-                                cb = !0
+                                console.warn(`Particle preview: could not load the texture ${Ub}`)
+                              }, bb.src = Ub, () => {
+                                ab = !0
                               }
-                            }), [sb]), (0, kb.useEffect)((() => {
+                            }), [Ub]), (0, Ab.useEffect)((() => {
                               var bb;
-                              null === (bb = fb.current) || void 0 === bb || bb.call(fb)
-                            }), [cb, Wb]), (0, kb.useEffect)((() => {
-                              const bb = Tb.current,
-                                cb = null === bb || void 0 === bb ? void 0 : bb.getContext("2d");
-                              if (!bb || !cb) return void console.warn("Particle preview: no 2D canvas context to draw on");
-                              const sb = new TW;
-                              let kb = [],
-                                Wb = 0,
-                                ab = -.7,
-                                Mb = Xb.current,
-                                nb = performance.now(),
-                                mb = 0,
-                                lb = !0,
-                                Qb = null;
-                              const eb = () => {
-                                const bb = Ub.current,
-                                  cb = Math.min(400, Math.max(0, Math.ceil(bb.manualEmitCount)));
-                                kb = [];
-                                for (let sb = 0; sb < cb; sb++) kb.push(Ss(bb, kW, WW, Math.random));
-                                Wb = 0
+                              null === (bb = vb.current) || void 0 === bb || bb.call(vb)
+                            }), [ab, Mb]), (0, Ab.useEffect)((() => {
+                              const bb = Eb.current,
+                                ab = null === bb || void 0 === bb ? void 0 : bb.getContext("2d");
+                              if (!bb || !ab) return void console.warn("Particle preview: no 2D canvas context to draw on");
+                              const Ub = new AM;
+                              let Ab = [],
+                                Mb = 0,
+                                Tb = -.7,
+                                Lb = Pb.current,
+                                Xb = performance.now(),
+                                jb = 0,
+                                Rb = !0,
+                                kb = null;
+                              const yb = () => {
+                                const bb = Yb.current,
+                                  ab = Math.min(400, Math.max(0, Math.ceil(bb.manualEmitCount)));
+                                Ab = [];
+                                for (let Ub = 0; Ub < ab; Ub++) Ab.push(gU(bb, bM, aM, Math.random));
+                                Mb = 0
                               };
-                              fb.current = eb, eb();
-                              const Cb = Tb => {
-                                mb = requestAnimationFrame(Cb);
-                                const fb = Math.min(.05, (Tb - nb) / 1e3);
-                                if (nb = Tb, !lb) return;
-                                const Nb = window.devicePixelRatio || 1,
-                                  Vb = Math.round(bb.clientWidth * Nb),
-                                  Lb = Math.round(bb.clientHeight * Nb);
-                                if (0 === Vb || 0 === Lb) return;
-                                bb.width === Vb && bb.height === Lb || (bb.width = Vb, bb.height = Lb);
-                                const ub = Ub.current;
-                                null === Qb && (ab += .18 * fb), Mb += (Xb.current - Mb) * Math.min(1, 4 * fb);
-                                const Yb = .6 * fb;
-                                kb = kb.filter((bb => Fs(bb, ub.gravity, Yb))), 0 !== kb.length || Ib.current || (Wb += fb, Wb > .6 && eb());
-                                const hb = function(bb, cb, sb, kb) {
-                                  const Wb = 3.2 * kb,
-                                    ab = .44 * Math.min(bb, cb) * Wb / kb,
-                                    Tb = Math.cos(sb),
-                                    Ub = Math.sin(sb),
-                                    Ib = Math.cos(.42),
-                                    Hb = Math.sin(.42);
-                                  return (sb, kb, fb) => {
-                                    const Mb = sb * Ub + fb * Tb,
-                                      Xb = Wb - (kb * Hb + Mb * Ib);
-                                    if (Xb < .05) return null;
-                                    const nb = ab / Xb;
+                              vb.current = yb, yb();
+                              const Zb = Eb => {
+                                jb = requestAnimationFrame(Zb);
+                                const vb = Math.min(.05, (Eb - Xb) / 1e3);
+                                if (Xb = Eb, !Rb) return;
+                                const Db = window.devicePixelRatio || 1,
+                                  zb = Math.round(bb.clientWidth * Db),
+                                  xb = Math.round(bb.clientHeight * Db);
+                                if (0 === zb || 0 === xb) return;
+                                bb.width === zb && bb.height === xb || (bb.width = zb, bb.height = xb);
+                                const ib = Yb.current;
+                                null === kb && (Tb += .18 * vb), Lb += (Pb.current - Lb) * Math.min(1, 4 * vb);
+                                const fb = .6 * vb;
+                                Ab = Ab.filter((bb => OU(bb, ib.gravity, fb))), 0 !== Ab.length || Bb.current || (Mb += vb, Mb > .6 && yb());
+                                const mb = function(bb, ab, Ub, Ab) {
+                                  const Mb = 3.2 * Ab,
+                                    Tb = .44 * Math.min(bb, ab) * Mb / Ab,
+                                    Eb = Math.cos(Ub),
+                                    Yb = Math.sin(Ub),
+                                    Bb = Math.cos(.42),
+                                    eb = Math.sin(.42);
+                                  return (Ub, Ab, vb) => {
+                                    const Lb = Ub * Yb + vb * Eb,
+                                      Pb = Mb - (Ab * eb + Lb * Bb);
+                                    if (Pb < .05) return null;
+                                    const Xb = Tb / Pb;
                                     return {
-                                      x: bb / 2 + (sb * Tb - fb * Ub) * nb,
-                                      y: cb / 2 - (kb * Ib - Mb * Hb) * nb,
-                                      scale: nb,
-                                      depth: Xb
+                                      x: bb / 2 + (Ub * Eb - vb * Yb) * Xb,
+                                      y: ab / 2 - (Ab * Bb - Lb * eb) * Xb,
+                                      scale: Xb,
+                                      depth: Pb
                                     }
                                   }
-                                }(Vb, Lb, ab, Mb);
-                                ! function(bb, cb, sb, kb, Wb) {
-                                  const ab = bb.createLinearGradient(0, 0, 0, sb);
-                                  ab.addColorStop(0, "#23262d"), ab.addColorStop(1, "#16181c"), bb.globalCompositeOperation = "source-over", bb.globalAlpha = 1, bb.fillStyle = ab, bb.fillRect(0, 0, cb, sb);
-                                  const Tb = (cb, sb) => {
-                                      const Wb = kb(cb[0], cb[1], cb[2]),
-                                        ab = kb(sb[0], sb[1], sb[2]);
-                                      Wb && ab && (bb.beginPath(), bb.moveTo(Wb.x, Wb.y), bb.lineTo(ab.x, ab.y), bb.stroke())
+                                }(zb, xb, Tb, Lb);
+                                ! function(bb, ab, Ub, Ab, Mb) {
+                                  const Tb = bb.createLinearGradient(0, 0, 0, Ub);
+                                  Tb.addColorStop(0, "#23262d"), Tb.addColorStop(1, "#16181c"), bb.globalCompositeOperation = "source-over", bb.globalAlpha = 1, bb.fillStyle = Tb, bb.fillRect(0, 0, ab, Ub);
+                                  const Eb = (ab, Ub) => {
+                                      const Mb = Ab(ab[0], ab[1], ab[2]),
+                                        Tb = Ab(Ub[0], Ub[1], Ub[2]);
+                                      Mb && Tb && (bb.beginPath(), bb.moveTo(Mb.x, Mb.y), bb.lineTo(Tb.x, Tb.y), bb.stroke())
                                     },
-                                    Ub = Math.ceil(Wb) + 1,
-                                    Ib = kW[1];
+                                    Yb = Math.ceil(Mb) + 1,
+                                    Bb = bM[1];
                                   bb.lineWidth = 1, bb.strokeStyle = "rgba(255, 255, 255, 0.07)";
-                                  for (let Hb = -Ub; Hb <= Ub; Hb++) Tb([Hb + .5, Ib, .5 - Ub], [Hb + .5, Ib, Ub + .5]), Tb([.5 - Ub, Ib, Hb + .5], [Ub + .5, Ib, Hb + .5]);
+                                  for (let eb = -Yb; eb <= Yb; eb++) Eb([eb + .5, Bb, .5 - Yb], [eb + .5, Bb, Yb + .5]), Eb([.5 - Yb, Bb, eb + .5], [Yb + .5, Bb, eb + .5]);
                                   bb.strokeStyle = "rgba(255, 255, 255, 0.28)", bb.setLineDash([4, 4]);
-                                  for (const Hb of aW)
-                                    for (const bb of aW) {
-                                      const cb = [0, 1, 2].filter((cb => Hb[cb] !== bb[cb]));
-                                      1 === cb.length && Hb[cb[0]] < bb[cb[0]] && Tb(Hb, bb)
+                                  for (const eb of UM)
+                                    for (const bb of UM) {
+                                      const ab = [0, 1, 2].filter((ab => eb[ab] !== bb[ab]));
+                                      1 === ab.length && eb[ab[0]] < bb[ab[0]] && Eb(eb, bb)
                                     }
                                   bb.setLineDash([])
-                                }(cb, Vb, Lb, hb, Mb);
-                                const Jb = Hb.current,
-                                  gb = kb.map((bb => ({
+                                }(ab, zb, xb, mb, Lb);
+                                const pb = eb.current,
+                                  Nb = Ab.map((bb => ({
                                     particle: bb,
-                                    at: hb(bb.pos[0], bb.pos[1], bb.pos[2])
-                                  }))).filter((bb => null !== bb.at)).sort(((bb, cb) => cb.at.depth - bb.at.depth));
-                                cb.imageSmoothingEnabled = !1;
+                                    at: mb(bb.pos[0], bb.pos[1], bb.pos[2])
+                                  }))).filter((bb => null !== bb.at)).sort(((bb, ab) => ab.at.depth - bb.at.depth));
+                                ab.imageSmoothingEnabled = !1;
                                 for (const bb of function(bb) {
                                     switch (bb) {
-                                      case zs.f.OneOne:
+                                      case rU.f.OneOne:
                                         return [{
                                           operation: "lighter",
                                           usesAlpha: !1
                                         }];
-                                      case zs.f.Add:
+                                      case rU.f.Add:
                                         return [{
                                           operation: "lighter",
                                           usesAlpha: !0
                                         }];
-                                      case zs.f.Multiply:
+                                      case rU.f.Multiply:
                                         return [{
                                           operation: "multiply",
                                           usesAlpha: !0
                                         }];
-                                      case zs.f.MultiplyAdd:
+                                      case rU.f.MultiplyAdd:
                                         return [{
                                           operation: "multiply",
                                           usesAlpha: !0
@@ -2962,665 +2962,665 @@ export const modules = {
                                           usesAlpha: !0
                                         }]
                                     }
-                                  }(ub.blendMode)) {
-                                  cb.globalCompositeOperation = bb.operation;
+                                  }(ib.blendMode)) {
+                                  ab.globalCompositeOperation = bb.operation;
                                   for (const {
-                                      particle: kb,
-                                      at: Wb
+                                      particle: Ab,
+                                      at: Mb
                                     }
-                                    of gb) {
-                                    const [ab, Tb, Ub, Ib] = vs(kb), Hb = Math.max(1, kb.size * Wb.scale);
-                                    cb.globalAlpha = bb.usesAlpha ? Math.min(1, Math.max(0, Ib)) : 1, Jb ? cb.drawImage(sb.get(Jb, ab, Tb, Ub), Wb.x - Hb / 2, Wb.y - Hb / 2, Hb, Hb) : (cb.fillStyle = `rgb(${255*ab}, ${255*Tb}, ${255*Ub})`, cb.fillRect(Wb.x - Hb / 2, Wb.y - Hb / 2, Hb, Hb))
+                                    of Nb) {
+                                    const [Tb, Eb, Yb, Bb] = VU(Ab), eb = Math.max(1, Ab.size * Mb.scale);
+                                    ab.globalAlpha = bb.usesAlpha ? Math.min(1, Math.max(0, Bb)) : 1, pb ? ab.drawImage(Ub.get(pb, Tb, Eb, Yb), Mb.x - eb / 2, Mb.y - eb / 2, eb, eb) : (ab.fillStyle = `rgb(${255*Tb}, ${255*Eb}, ${255*Yb})`, ab.fillRect(Mb.x - eb / 2, Mb.y - eb / 2, eb, eb))
                                   }
                                 }
-                                cb.globalCompositeOperation = "source-over", cb.globalAlpha = 1
+                                ab.globalCompositeOperation = "source-over", ab.globalAlpha = 1
                               };
-                              mb = requestAnimationFrame(Cb);
-                              const Nb = new IntersectionObserver((bb => {
-                                let [cb] = bb;
-                                lb = cb.isIntersecting
+                              jb = requestAnimationFrame(Zb);
+                              const Db = new IntersectionObserver((bb => {
+                                let [ab] = bb;
+                                Rb = ab.isIntersecting
                               }));
-                              Nb.observe(bb);
-                              const Vb = cb => {
-                                  Qb = cb.clientX, bb.setPointerCapture(cb.pointerId)
+                              Db.observe(bb);
+                              const zb = ab => {
+                                  kb = ab.clientX, bb.setPointerCapture(ab.pointerId)
                                 },
-                                Lb = bb => {
-                                  null !== Qb && (ab += .01 * (bb.clientX - Qb), Qb = bb.clientX)
+                                xb = bb => {
+                                  null !== kb && (Tb += .01 * (bb.clientX - kb), kb = bb.clientX)
                                 },
-                                ub = () => {
-                                  Qb = null
+                                ib = () => {
+                                  kb = null
                                 };
-                              return bb.addEventListener("pointerdown", Vb), bb.addEventListener("pointermove", Lb), bb.addEventListener("pointerup", ub), bb.addEventListener("pointercancel", ub), () => {
-                                cancelAnimationFrame(mb), Nb.disconnect(), fb.current = null, bb.removeEventListener("pointerdown", Vb), bb.removeEventListener("pointermove", Lb), bb.removeEventListener("pointerup", ub), bb.removeEventListener("pointercancel", ub)
+                              return bb.addEventListener("pointerdown", zb), bb.addEventListener("pointermove", xb), bb.addEventListener("pointerup", ib), bb.addEventListener("pointercancel", ib), () => {
+                                cancelAnimationFrame(jb), Db.disconnect(), vb.current = null, bb.removeEventListener("pointerdown", zb), bb.removeEventListener("pointermove", xb), bb.removeEventListener("pointerup", ib), bb.removeEventListener("pointercancel", ib)
                               }
-                            }), []), (0, mb.jsx)("canvas", {
-                              ref: Tb,
+                            }), []), (0, jb.jsx)("canvas", {
+                              ref: Eb,
                               className: "DocsParticleCanvas",
                               role: "img",
-                              "aria-label": `Preview of a ${cb.texture} particle effect. Drag to turn the view.`
+                              "aria-label": `Preview of a ${ab.texture} particle effect. Drag to turn the view.`
                             })
                           }
-                          const IW = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
-                            HW = [{
-                              mode: zs.f.OneOne,
+                          const TM = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
+                            EM = [{
+                              mode: rU.f.OneOne,
                               label: "0 \xb7 OneOne (glow)"
                             }, {
-                              mode: zs.f.Standard,
+                              mode: rU.f.Standard,
                               label: "1 \xb7 Standard"
                             }, {
-                              mode: zs.f.Add,
+                              mode: rU.f.Add,
                               label: "2 \xb7 Add"
                             }, {
-                              mode: zs.f.Multiply,
+                              mode: rU.f.Multiply,
                               label: "3 \xb7 Multiply"
                             }, {
-                              mode: zs.f.MultiplyAdd,
+                              mode: rU.f.MultiplyAdd,
                               label: "4 \xb7 MultiplyAdd"
                             }],
-                            fW = (0, kb.forwardRef)((function(bb, cb) {
-                              var sb, Wb;
+                            YM = (0, Ab.forwardRef)((function(bb, ab) {
+                              var Ub, Mb;
                               let {
-                                textures: Tb
+                                textures: Eb
                               } = bb;
-                              const Ub = Lk(),
-                                Ib = (0, kb.useRef)(null),
-                                [Hb, fb] = (0, kb.useState)(ds),
-                                [Mb, Xb] = (0, kb.useState)("example"),
-                                [nb, lb] = (0, kb.useState)(0),
-                                [eb, Cb] = (0, kb.useState)(!1),
-                                Vb = bb => {
-                                  const cb = "example" === bb ? ds : qs(bb);
-                                  cb && (fb(cb), Xb(bb))
+                              const Yb = DA(),
+                                Bb = (0, Ab.useRef)(null),
+                                [eb, vb] = (0, Ab.useState)(oU),
+                                [Lb, Pb] = (0, Ab.useState)("example"),
+                                [Xb, Rb] = (0, Ab.useState)(0),
+                                [yb, Zb] = (0, Ab.useState)(!1),
+                                zb = bb => {
+                                  const ab = "example" === bb ? oU : KU(bb);
+                                  ab && (vb(ab), Pb(bb))
                                 };
-                              (0, kb.useImperativeHandle)(cb, (() => ({
+                              (0, Ab.useImperativeHandle)(ab, (() => ({
                                 preview: bb => {
-                                  var cb;
-                                  Vb(bb), null === (cb = Ib.current) || void 0 === cb || cb.scrollIntoView({
+                                  var ab;
+                                  zb(bb), null === (ab = Bb.current) || void 0 === ab || ab.scrollIntoView({
                                     behavior: "smooth",
                                     block: "start"
                                   })
                                 }
                               })));
-                              const Lb = bb => {
-                                  fb({
-                                    ...Hb,
+                              const xb = bb => {
+                                  vb({
+                                    ...eb,
                                     ...bb
-                                  }), Xb(null)
+                                  }), Pb(null)
                                 },
-                                ub = function(bb, cb) {
-                                  if (null !== cb) return `${ck}    presetId: "${cb}",\n${sk}\n})`;
-                                  const sb = bb.velocityGradients.map((bb => `        {\n            timeFraction: ${xs(bb.timeFraction)},\n            factor: ${xs(bb.factor)},\n            factor2: ${xs(bb.factor2)},\n        },`)),
-                                    kb = [`    dir1: ${ps(bb.dir1)},`, `    dir2: ${ps(bb.dir2)},`, sk, `    texture: "${bb.texture}",`, `    minLifeTime: ${xs(bb.minLifeTime)},`, `    maxLifeTime: ${xs(bb.maxLifeTime)},`, `    minEmitPower: ${xs(bb.minEmitPower)},`, `    maxEmitPower: ${xs(bb.maxEmitPower)},`, `    minSize: ${xs(bb.minSize)},`, `    maxSize: ${xs(bb.maxSize)},`, `    manualEmitCount: ${xs(bb.manualEmitCount)},`, `    gravity: ${ps(bb.gravity)},`, `    colorGradients: ${bk(bb.colorGradients,"    ")},`, `    velocityGradients: ${sb.length>0?`[\n${sb.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${xs(bb.blendMode)},`];
-                                  return void 0 !== bb.hideDist && kb.push(`    hideDist: ${xs(bb.hideDist)},`), `${ck}${kb.join("\n")}\n})`
-                                }(Hb, null === Mb || "example" === Mb ? null : Mb),
-                                hb = Tb.includes(Hb.texture) ? Tb : [...Tb, Hb.texture];
-                              return (0, mb.jsxs)("section", {
-                                ref: Ib,
+                                ib = function(bb, ab) {
+                                  if (null !== ab) return `${SU}    presetId: "${ab}",\n${bA}\n})`;
+                                  const Ub = bb.velocityGradients.map((bb => `        {\n            timeFraction: ${cU(bb.timeFraction)},\n            factor: ${cU(bb.factor)},\n            factor2: ${cU(bb.factor2)},\n        },`)),
+                                    Ab = [`    dir1: ${JU(bb.dir1)},`, `    dir2: ${JU(bb.dir2)},`, bA, `    texture: "${bb.texture}",`, `    minLifeTime: ${cU(bb.minLifeTime)},`, `    maxLifeTime: ${cU(bb.maxLifeTime)},`, `    minEmitPower: ${cU(bb.minEmitPower)},`, `    maxEmitPower: ${cU(bb.maxEmitPower)},`, `    minSize: ${cU(bb.minSize)},`, `    maxSize: ${cU(bb.maxSize)},`, `    manualEmitCount: ${cU(bb.manualEmitCount)},`, `    gravity: ${JU(bb.gravity)},`, `    colorGradients: ${nU(bb.colorGradients,"    ")},`, `    velocityGradients: ${Ub.length>0?`[\n${Ub.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${cU(bb.blendMode)},`];
+                                  return void 0 !== bb.hideDist && Ab.push(`    hideDist: ${cU(bb.hideDist)},`), `${SU}${Ab.join("\n")}\n})`
+                                }(eb, null === Lb || "example" === Lb ? null : Lb),
+                                mb = Eb.includes(eb.texture) ? Eb : [...Eb, eb.texture];
+                              return (0, jb.jsxs)("section", {
+                                ref: Bb,
                                 className: "DocsPlayground DocsParticlePlayground",
                                 "aria-label": "Particle effect playground",
-                                children: [(0, mb.jsxs)("header", {
+                                children: [(0, jb.jsxs)("header", {
                                   className: "DocsPlaygroundHeader",
-                                  children: [(0, mb.jsxs)("div", {
-                                    children: [(0, mb.jsx)("div", {
+                                  children: [(0, jb.jsxs)("div", {
+                                    children: [(0, jb.jsx)("div", {
                                       className: "DocsPlaygroundTitle",
                                       children: "Try it: particle effects"
-                                    }), (0, mb.jsx)("div", {
+                                    }), (0, jb.jsx)("div", {
                                       className: "DocsPlaygroundHint",
                                       children: "Pick a preset or change the settings, and the burst replays. Drag the preview to turn it."
                                     })]
-                                  }), (0, mb.jsx)(Nb, {
-                                    text: ub,
+                                  }), (0, jb.jsx)(Db, {
+                                    text: ib,
                                     label: "Copy code"
                                   })]
-                                }), (0, mb.jsxs)("div", {
+                                }), (0, jb.jsxs)("div", {
                                   className: "DocsPlaygroundPresets",
-                                  children: [(0, mb.jsx)("button", {
+                                  children: [(0, jb.jsx)("button", {
                                     type: "button",
-                                    className: ab()("DocsVariantChip", {
-                                      Active: "example" === Mb
+                                    className: Tb()("DocsVariantChip", {
+                                      Active: "example" === Lb
                                     }),
                                     onClick: () => {
-                                      Vb("example")
+                                      zb("example")
                                     },
                                     children: "Example"
-                                  }), IW.filter((bb => null !== qs(bb))).map((bb => (0, mb.jsx)("button", {
+                                  }), TM.filter((bb => null !== KU(bb))).map((bb => (0, jb.jsx)("button", {
                                     type: "button",
-                                    className: ab()("DocsVariantChip", {
-                                      Active: Mb === bb
+                                    className: Tb()("DocsVariantChip", {
+                                      Active: Lb === bb
                                     }),
                                     onClick: () => {
-                                      Vb(bb)
+                                      zb(bb)
                                     },
                                     children: bb
-                                  }, bb))), (0, mb.jsxs)("select", {
+                                  }, bb))), (0, jb.jsxs)("select", {
                                     className: "DocsParticleSelect",
-                                    value: null !== Mb && void 0 !== Mb ? Mb : "custom",
+                                    value: null !== Lb && void 0 !== Lb ? Lb : "custom",
                                     "aria-label": "Preset",
                                     onChange: bb => {
-                                      Vb(bb.target.value)
+                                      zb(bb.target.value)
                                     },
-                                    children: [(0, mb.jsx)("option", {
+                                    children: [(0, jb.jsx)("option", {
                                       value: "example",
                                       children: "Example effect"
-                                    }), null === Mb && (0, mb.jsx)("option", {
+                                    }), null === Lb && (0, jb.jsx)("option", {
                                       value: "custom",
                                       children: "Custom"
-                                    }), Zs.e.map((bb => (0, mb.jsx)("option", {
+                                    }), uU.d.map((bb => (0, jb.jsx)("option", {
                                       value: bb,
                                       children: bb
                                     }, bb)))]
                                   })]
-                                }), (0, mb.jsxs)("div", {
+                                }), (0, jb.jsxs)("div", {
                                   className: "DocsParticleBody",
-                                  children: [(0, mb.jsxs)("div", {
+                                  children: [(0, jb.jsxs)("div", {
                                     className: "DocsParticleStageWrap",
-                                    children: [(0, mb.jsx)(UW, {
-                                      opts: Hb,
-                                      textureUrl: null !== (sb = null === Ub || void 0 === Ub ? void 0 : Ub.getParticleTextureUrl(Hb.texture)) && void 0 !== sb ? sb : null,
-                                      burst: nb,
-                                      paused: eb
-                                    }), (0, mb.jsxs)("div", {
+                                    children: [(0, jb.jsx)(MM, {
+                                      opts: eb,
+                                      textureUrl: null !== (Ub = null === Yb || void 0 === Yb ? void 0 : Yb.getParticleTextureUrl(eb.texture)) && void 0 !== Ub ? Ub : null,
+                                      burst: Xb,
+                                      paused: yb
+                                    }), (0, jb.jsxs)("div", {
                                       className: "DocsParticleStageButtons",
-                                      children: [(0, mb.jsxs)("button", {
+                                      children: [(0, jb.jsxs)("button", {
                                         type: "button",
                                         className: "DocsParticleStageButton",
                                         onClick: () => {
-                                          lb(nb + 1)
+                                          Rb(Xb + 1)
                                         },
-                                        children: [(0, mb.jsx)(Qb, {
+                                        children: [(0, jb.jsx)(kb, {
                                           name: "replay"
-                                        }), (0, mb.jsx)("span", {
+                                        }), (0, jb.jsx)("span", {
                                           children: "Replay"
                                         })]
-                                      }), (0, mb.jsxs)("button", {
+                                      }), (0, jb.jsxs)("button", {
                                         type: "button",
                                         className: "DocsParticleStageButton",
-                                        "aria-pressed": eb,
+                                        "aria-pressed": yb,
                                         onClick: () => {
-                                          Cb(!eb)
+                                          Zb(!yb)
                                         },
-                                        children: [(0, mb.jsx)(Qb, {
-                                          name: eb ? "play" : "pause"
-                                        }), (0, mb.jsx)("span", {
-                                          children: eb ? "Loop" : "Stop looping"
+                                        children: [(0, jb.jsx)(kb, {
+                                          name: yb ? "play" : "pause"
+                                        }), (0, jb.jsx)("span", {
+                                          children: yb ? "Loop" : "Stop looping"
                                         })]
                                       })]
                                     })]
-                                  }), (0, mb.jsxs)("div", {
+                                  }), (0, jb.jsxs)("div", {
                                     className: "DocsParticleControls",
-                                    children: [(0, mb.jsxs)("div", {
+                                    children: [(0, jb.jsxs)("div", {
                                       className: "DocsControl",
-                                      children: [(0, mb.jsxs)("div", {
+                                      children: [(0, jb.jsxs)("div", {
                                         className: "DocsControlLabel",
-                                        children: [(0, mb.jsx)("span", {
+                                        children: [(0, jb.jsx)("span", {
                                           children: "Texture"
-                                        }), (0, mb.jsx)("code", {
+                                        }), (0, jb.jsx)("code", {
                                           className: "DocsControlValue",
-                                          children: Hb.texture
+                                          children: eb.texture
                                         })]
-                                      }), (0, mb.jsx)("div", {
+                                      }), (0, jb.jsx)("div", {
                                         className: "DocsParticleTextures",
-                                        children: hb.map((bb => {
-                                          var cb;
-                                          const sb = null !== (cb = null === Ub || void 0 === Ub ? void 0 : Ub.getParticleTextureUrl(bb)) && void 0 !== cb ? cb : null;
-                                          return (0, mb.jsx)("button", {
+                                        children: mb.map((bb => {
+                                          var ab;
+                                          const Ub = null !== (ab = null === Yb || void 0 === Yb ? void 0 : Yb.getParticleTextureUrl(bb)) && void 0 !== ab ? ab : null;
+                                          return (0, jb.jsx)("button", {
                                             type: "button",
-                                            className: ab()("DocsParticleTexture", {
-                                              Active: Hb.texture === bb
+                                            className: Tb()("DocsParticleTexture", {
+                                              Active: eb.texture === bb
                                             }),
                                             title: bb,
                                             "aria-label": bb,
-                                            "aria-pressed": Hb.texture === bb,
+                                            "aria-pressed": eb.texture === bb,
                                             onClick: () => {
-                                              Lb({
+                                              xb({
                                                 texture: bb
                                               })
                                             },
-                                            children: sb ? (0, mb.jsx)("img", {
-                                              src: sb,
+                                            children: Ub ? (0, jb.jsx)("img", {
+                                              src: Ub,
                                               alt: ""
-                                            }) : (0, mb.jsx)(Qb, {
+                                            }) : (0, jb.jsx)(kb, {
                                               name: "image"
                                             })
                                           }, bb)
                                         }))
                                       })]
-                                    }), (0, mb.jsx)(cW, {
+                                    }), (0, jb.jsx)(nA, {
                                       label: "Particles",
                                       min: 1,
                                       max: 400,
                                       step: 1,
-                                      value: Hb.manualEmitCount,
+                                      value: eb.manualEmitCount,
                                       onChange: bb => {
-                                        Lb({
+                                        xb({
                                           manualEmitCount: bb
                                         })
                                       }
-                                    }), (0, mb.jsx)(bW, {
+                                    }), (0, jb.jsx)(JA, {
                                       label: "Lifetime",
                                       min: .05,
                                       max: 3,
                                       step: .05,
-                                      low: Hb.minLifeTime,
-                                      high: Hb.maxLifeTime,
-                                      onChange: (bb, cb) => {
-                                        Lb({
+                                      low: eb.minLifeTime,
+                                      high: eb.maxLifeTime,
+                                      onChange: (bb, ab) => {
+                                        xb({
                                           minLifeTime: bb,
-                                          maxLifeTime: cb
+                                          maxLifeTime: ab
                                         })
                                       }
-                                    }), (0, mb.jsx)(bW, {
+                                    }), (0, jb.jsx)(JA, {
                                       label: "Emit power",
                                       min: 0,
                                       max: 40,
                                       step: .5,
-                                      low: Hb.minEmitPower,
-                                      high: Hb.maxEmitPower,
-                                      onChange: (bb, cb) => {
-                                        Lb({
+                                      low: eb.minEmitPower,
+                                      high: eb.maxEmitPower,
+                                      onChange: (bb, ab) => {
+                                        xb({
                                           minEmitPower: bb,
-                                          maxEmitPower: cb
+                                          maxEmitPower: ab
                                         })
                                       }
-                                    }), (0, mb.jsx)(bW, {
+                                    }), (0, jb.jsx)(JA, {
                                       label: "Size",
                                       min: .05,
                                       max: 2,
                                       step: .05,
-                                      low: Hb.minSize,
-                                      high: Hb.maxSize,
-                                      onChange: (bb, cb) => {
-                                        Lb({
+                                      low: eb.minSize,
+                                      high: eb.maxSize,
+                                      onChange: (bb, ab) => {
+                                        xb({
                                           minSize: bb,
-                                          maxSize: cb
+                                          maxSize: ab
                                         })
                                       }
-                                    }), (0, mb.jsx)(cW, {
+                                    }), (0, jb.jsx)(nA, {
                                       label: "Gravity (up)",
                                       min: -40,
                                       max: 40,
                                       step: 1,
-                                      value: null !== (Wb = Hb.gravity[1]) && void 0 !== Wb ? Wb : 0,
+                                      value: null !== (Mb = eb.gravity[1]) && void 0 !== Mb ? Mb : 0,
                                       onChange: bb => {
-                                        var cb, sb;
-                                        Lb({
-                                          gravity: [null !== (cb = Hb.gravity[0]) && void 0 !== cb ? cb : 0, bb, null !== (sb = Hb.gravity[2]) && void 0 !== sb ? sb : 0]
+                                        var ab, Ub;
+                                        xb({
+                                          gravity: [null !== (ab = eb.gravity[0]) && void 0 !== ab ? ab : 0, bb, null !== (Ub = eb.gravity[2]) && void 0 !== Ub ? Ub : 0]
                                         })
                                       }
-                                    }), (0, mb.jsxs)("div", {
+                                    }), (0, jb.jsxs)("div", {
                                       className: "DocsControl",
-                                      children: [(0, mb.jsx)("div", {
+                                      children: [(0, jb.jsx)("div", {
                                         className: "DocsControlLabel",
-                                        children: (0, mb.jsx)("span", {
+                                        children: (0, jb.jsx)("span", {
                                           children: "Blend mode"
                                         })
-                                      }), (0, mb.jsx)("select", {
+                                      }), (0, jb.jsx)("select", {
                                         className: "DocsParticleSelect",
-                                        value: Hb.blendMode,
+                                        value: eb.blendMode,
                                         "aria-label": "Blend mode",
                                         onChange: bb => {
-                                          Lb({
+                                          xb({
                                             blendMode: Number(bb.target.value)
                                           })
                                         },
-                                        children: HW.map((bb => {
+                                        children: EM.map((bb => {
                                           let {
-                                            mode: cb,
-                                            label: sb
+                                            mode: ab,
+                                            label: Ub
                                           } = bb;
-                                          return (0, mb.jsx)("option", {
-                                            value: cb,
-                                            children: sb
-                                          }, cb)
+                                          return (0, jb.jsx)("option", {
+                                            value: ab,
+                                            children: Ub
+                                          }, ab)
                                         }))
                                       })]
-                                    }), (0, mb.jsx)(sW, {
-                                      opts: Hb,
+                                    }), (0, jb.jsx)(SA, {
+                                      opts: eb,
                                       onChange: bb => {
-                                        Lb({
+                                        xb({
                                           colorGradients: bb
                                         })
                                       }
                                     })]
                                   })]
-                                }), (0, mb.jsx)(Yb, {
-                                  code: ub,
+                                }), (0, jb.jsx)(fb, {
+                                  code: ib,
                                   lang: "ts"
                                 })]
                               })
                             }));
-                          var MW = sb(4210),
-                            XW = sb(1839);
+                          var BM = Ub(4150),
+                            eM = Ub(1794);
 
-                          function nW(bb, cb) {
-                            return bb ? MW.d.includes(cb) ? bb.getIngameIconUrl(cb) : bb.getItemIconUrl(cb) : null
+                          function vM(bb, ab) {
+                            return bb ? BM.b.includes(ab) ? bb.getIngameIconUrl(ab) : bb.getItemIconUrl(ab) : null
                           }
 
-                          function mW(bb) {
-                            var cb, sb, kb;
+                          function LM(bb) {
+                            var ab, Ub, Ab;
                             let {
-                              part: Wb,
-                              assets: Tb
+                              part: Mb,
+                              assets: Eb
                             } = bb;
-                            const Ub = nW(Tb, Wb.icon),
-                              Ib = null !== (cb = null === (sb = Wb.style) || void 0 === sb ? void 0 : sb.fontSize) && void 0 !== cb ? cb : "1.8em",
-                              Hb = (0, Kc.ac)(Wb.style);
-                            return (0, mb.jsxs)("span", {
-                              className: ab()("DocsBloxdTextIcon", {
-                                Missing: !Ub
+                            const Yb = vM(Eb, Mb.icon),
+                              Bb = null !== (ab = null === (Ub = Mb.style) || void 0 === Ub ? void 0 : Ub.fontSize) && void 0 !== ab ? ab : "1.8em",
+                              eb = (0, ua.Vb)(Mb.style);
+                            return (0, jb.jsxs)("span", {
+                              className: Tb()("DocsBloxdTextIcon", {
+                                Missing: !Yb
                               }),
                               style: {
-                                width: Ib,
-                                height: Ib,
-                                opacity: null === (kb = Wb.style) || void 0 === kb ? void 0 : kb.opacity
+                                width: Bb,
+                                height: Bb,
+                                opacity: null === (Ab = Mb.style) || void 0 === Ab ? void 0 : Ab.opacity
                               },
-                              title: Ub ? void 0 : `No Bloxd icon, item or block is called "${Wb.icon}"`,
-                              children: [Ub && Hb && (0, mb.jsx)("span", {
+                              title: Yb ? void 0 : `No Bloxd icon, item or block is called "${Mb.icon}"`,
+                              children: [Yb && eb && (0, jb.jsx)("span", {
                                 className: "DocsBloxdTextIconTint",
                                 style: {
-                                  background: Hb,
-                                  maskImage: `url("${Ub}")`,
-                                  WebkitMaskImage: `url("${Ub}")`
+                                  background: eb,
+                                  maskImage: `url("${Yb}")`,
+                                  WebkitMaskImage: `url("${Yb}")`
                                 }
-                              }), Ub ? (0, mb.jsx)("img", {
-                                src: Ub,
+                              }), Yb ? (0, jb.jsx)("img", {
+                                src: Yb,
                                 alt: "",
-                                className: ab()({
-                                  Tinted: Hb
+                                className: Tb()({
+                                  Tinted: eb
                                 })
-                              }) : (0, mb.jsx)(Qb, {
+                              }) : (0, jb.jsx)(kb, {
                                 name: "image"
                               })]
                             })
                           }
 
-                          function lW(bb) {
+                          function PM(bb) {
                             let {
-                              parts: cb,
-                              className: sb
+                              parts: ab,
+                              className: Ub
                             } = bb;
-                            const kb = Lk(),
-                              Wb = [];
-                            let Tb = [];
-                            const Ub = bb => {
-                              Tb.length > 0 && (Wb.push((0, mb.jsx)(XW.d, {
-                                text: Tb
-                              }, `run-${bb}`)), Tb = [])
+                            const Ab = DA(),
+                              Mb = [];
+                            let Eb = [];
+                            const Yb = bb => {
+                              Eb.length > 0 && (Mb.push((0, jb.jsx)(eM.c, {
+                                text: Eb
+                              }, `run-${bb}`)), Eb = [])
                             };
-                            return cb.forEach(((bb, cb) => {
-                              "icon" !== Ac(bb) || zc(bb.icon) ? Tb.push(bb) : (Ub(cb), Wb.push((0, mb.jsx)(mW, {
+                            return ab.forEach(((bb, ab) => {
+                              "icon" !== ta(bb) || Ka(bb.icon) ? Eb.push(bb) : (Yb(ab), Mb.push((0, jb.jsx)(LM, {
                                 part: bb,
-                                assets: kb
-                              }, `icon-${cb}`)))
-                            })), Ub(cb.length), (0, mb.jsx)("div", {
-                              className: ab()("DocsStyledTextPreview", sb),
-                              children: Wb
+                                assets: Ab
+                              }, `icon-${ab}`)))
+                            })), Yb(ab.length), (0, jb.jsx)("div", {
+                              className: Tb()("DocsStyledTextPreview", Ub),
+                              children: Mb
                             })
                           }
-                          const QW = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
-                          let eW = null;
+                          const XM = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
+                          let jM = null;
 
-                          function CW(bb) {
-                            if (eW ??= document.createElement("canvas").getContext("2d"), !eW) return "#000000";
-                            eW.fillStyle = "#000000", eW.fillStyle = bb;
-                            const cb = eW.fillStyle;
-                            return cb.startsWith("#") ? cb : "#000000"
+                          function RM(bb) {
+                            if (jM ??= document.createElement("canvas").getContext("2d"), !jM) return "#000000";
+                            jM.fillStyle = "#000000", jM.fillStyle = bb;
+                            const ab = jM.fillStyle;
+                            return ab.startsWith("#") ? ab : "#000000"
                           }
 
-                          function NW(bb) {
+                          function kM(bb) {
                             let {
-                              value: cb,
-                              label: sb,
-                              onChange: kb
+                              value: ab,
+                              label: Ub,
+                              onChange: Ab
                             } = bb;
-                            return (0, mb.jsxs)("span", {
+                            return (0, jb.jsxs)("span", {
                               className: "DocsColourInput",
-                              children: [(0, mb.jsx)("input", {
+                              children: [(0, jb.jsx)("input", {
                                 type: "color",
-                                value: CW(cb),
-                                "aria-label": `${sb} picker`,
+                                value: RM(ab),
+                                "aria-label": `${Ub} picker`,
                                 onChange: bb => {
-                                  kb(bb.target.value)
+                                  Ab(bb.target.value)
                                 }
-                              }), (0, mb.jsx)("input", {
+                              }), (0, jb.jsx)("input", {
                                 type: "text",
-                                value: cb,
+                                value: ab,
                                 placeholder: "#ffb914 or gold",
-                                "aria-label": sb,
+                                "aria-label": Ub,
                                 spellCheck: !1,
                                 onChange: bb => {
-                                  kb(bb.target.value)
+                                  Ab(bb.target.value)
                                 }
                               })]
                             })
                           }
 
-                          function VW(bb) {
+                          function yM(bb) {
                             let {
-                              value: cb,
-                              fontAwesomeIcons: sb,
-                              onChange: Wb
+                              value: ab,
+                              fontAwesomeIcons: Ub,
+                              onChange: Mb
                             } = bb;
-                            const Tb = Lk(),
-                              [Ub, Ib] = (0, kb.useState)(zc(cb) ? "fontAwesome" : "bloxd"),
-                              [Hb, fb] = (0, kb.useState)(""),
-                              Mb = Hb.trim().toLowerCase(),
-                              Xb = "bloxd" === Ub ? MW.d : sb,
-                              nb = Mb ? Xb.filter((bb => bb.toLowerCase().includes(Mb))) : Xb;
-                            return (0, mb.jsxs)("div", {
+                            const Eb = DA(),
+                              [Yb, Bb] = (0, Ab.useState)(Ka(ab) ? "fontAwesome" : "bloxd"),
+                              [eb, vb] = (0, Ab.useState)(""),
+                              Lb = eb.trim().toLowerCase(),
+                              Pb = "bloxd" === Yb ? BM.b : Ub,
+                              Xb = Lb ? Pb.filter((bb => bb.toLowerCase().includes(Lb))) : Pb;
+                            return (0, jb.jsxs)("div", {
                               className: "DocsIconPicker",
-                              children: [(0, mb.jsx)("input", {
+                              children: [(0, jb.jsx)("input", {
                                 type: "text",
-                                value: cb,
+                                value: ab,
                                 "aria-label": "Icon name",
                                 spellCheck: !1,
                                 onChange: bb => {
-                                  Wb(bb.target.value)
+                                  Mb(bb.target.value)
                                 }
-                              }), (0, mb.jsx)("p", {
+                              }), (0, jb.jsx)("p", {
                                 className: "DocsTextFieldHint",
                                 children: "Pick one below, or type any item or block name."
-                              }), (0, mb.jsxs)("div", {
+                              }), (0, jb.jsxs)("div", {
                                 className: "DocsIconPickerTabs",
                                 role: "tablist",
                                 children: [
-                                  ["bloxd", "fontAwesome"].map((bb => (0, mb.jsx)("button", {
+                                  ["bloxd", "fontAwesome"].map((bb => (0, jb.jsx)("button", {
                                     type: "button",
                                     role: "tab",
-                                    "aria-selected": Ub === bb,
-                                    className: ab()("DocsVariantChip", {
-                                      Active: Ub === bb
+                                    "aria-selected": Yb === bb,
+                                    className: Tb()("DocsVariantChip", {
+                                      Active: Yb === bb
                                     }),
                                     onClick: () => {
-                                      Ib(bb)
+                                      Bb(bb)
                                     },
-                                    children: "bloxd" === bb ? `Bloxd icons (${MW.d.length})` : `Font Awesome (${sb.length})`
-                                  }, bb))), (0, mb.jsx)("input", {
+                                    children: "bloxd" === bb ? `Bloxd icons (${BM.b.length})` : `Font Awesome (${Ub.length})`
+                                  }, bb))), (0, jb.jsx)("input", {
                                     type: "search",
-                                    value: Hb,
+                                    value: eb,
                                     placeholder: "Filter\u2026",
                                     "aria-label": "Filter icons",
                                     onChange: bb => {
-                                      fb(bb.target.value)
+                                      vb(bb.target.value)
                                     }
                                   })
                                 ]
-                              }), (0, mb.jsxs)("div", {
+                              }), (0, jb.jsxs)("div", {
                                 className: "DocsIconPickerGrid",
                                 role: "tabpanel",
-                                children: [nb.map((bb => {
-                                  const sb = "bloxd" === Ub ? nW(Tb, bb) : null;
-                                  return (0, mb.jsx)("button", {
+                                children: [Xb.map((bb => {
+                                  const Ub = "bloxd" === Yb ? vM(Eb, bb) : null;
+                                  return (0, jb.jsx)("button", {
                                     type: "button",
                                     title: bb,
                                     "aria-label": bb,
-                                    "aria-pressed": bb === cb,
-                                    className: ab()("DocsIconPickerOption", {
-                                      Active: bb === cb
+                                    "aria-pressed": bb === ab,
+                                    className: Tb()("DocsIconPickerOption", {
+                                      Active: bb === ab
                                     }),
                                     onClick: () => {
-                                      Wb(bb)
+                                      Mb(bb)
                                     },
-                                    children: "fontAwesome" === Ub ? (0, mb.jsx)(Vs.b, {
+                                    children: "fontAwesome" === Yb ? (0, jb.jsx)(zU.e, {
                                       name: bb
-                                    }) : sb ? (0, mb.jsx)("img", {
-                                      src: sb,
+                                    }) : Ub ? (0, jb.jsx)("img", {
+                                      src: Ub,
                                       alt: ""
-                                    }) : (0, mb.jsx)(Qb, {
+                                    }) : (0, jb.jsx)(kb, {
                                       name: "image"
                                     })
                                   }, bb)
-                                })), 0 === nb.length && (0, mb.jsxs)("p", {
+                                })), 0 === Xb.length && (0, jb.jsxs)("p", {
                                   className: "DocsTextFieldHint",
-                                  children: ["No icons match \u201c", Hb, "\u201d."]
+                                  children: ["No icons match \u201c", eb, "\u201d."]
                                 })]
                               })]
                             })
                           }
 
-                          function LW(bb) {
+                          function ZM(bb) {
                             let {
-                              property: cb,
-                              value: sb,
-                              fontAwesomeIcons: kb,
-                              onChange: Wb
+                              property: ab,
+                              value: Ub,
+                              fontAwesomeIcons: Ab,
+                              onChange: Mb
                             } = bb;
                             const {
-                              field: ab,
-                              label: Tb
-                            } = cb, Ub = bb => "" !== bb || cb.isRequired ? bb : void 0;
-                            switch (ab.kind) {
+                              field: Tb,
+                              label: Eb
+                            } = ab, Yb = bb => "" !== bb || ab.isRequired ? bb : void 0;
+                            switch (Tb.kind) {
                               case "text":
-                                return ab.multiline ? (0, mb.jsx)("textarea", {
-                                  value: String(null !== sb && void 0 !== sb ? sb : ""),
+                                return Tb.multiline ? (0, jb.jsx)("textarea", {
+                                  value: String(null !== Ub && void 0 !== Ub ? Ub : ""),
                                   rows: 2,
-                                  "aria-label": Tb,
+                                  "aria-label": Eb,
                                   onChange: bb => {
-                                    Wb(bb.target.value)
+                                    Mb(bb.target.value)
                                   }
-                                }) : (0, mb.jsx)("input", {
+                                }) : (0, jb.jsx)("input", {
                                   type: "text",
-                                  value: String(null !== sb && void 0 !== sb ? sb : ""),
-                                  "aria-label": Tb,
+                                  value: String(null !== Ub && void 0 !== Ub ? Ub : ""),
+                                  "aria-label": Eb,
                                   onChange: bb => {
-                                    Wb(Ub(bb.target.value))
+                                    Mb(Yb(bb.target.value))
                                   }
                                 });
                               case "size":
-                                return (0, mb.jsx)("input", {
+                                return (0, jb.jsx)("input", {
                                   type: "text",
-                                  value: String(null !== sb && void 0 !== sb ? sb : ""),
-                                  placeholder: cb.defaultText,
+                                  value: String(null !== Ub && void 0 !== Ub ? Ub : ""),
+                                  placeholder: ab.defaultText,
                                   list: "DocsTextSizeSuggestions",
-                                  "aria-label": Tb,
+                                  "aria-label": Eb,
                                   spellCheck: !1,
                                   onChange: bb => {
-                                    Wb(Ub(bb.target.value.trim()))
+                                    Mb(Yb(bb.target.value.trim()))
                                   }
                                 });
                               case "colour":
-                                return (0, mb.jsx)(NW, {
-                                  value: String(null !== sb && void 0 !== sb ? sb : ""),
-                                  label: Tb,
+                                return (0, jb.jsx)(kM, {
+                                  value: String(null !== Ub && void 0 !== Ub ? Ub : ""),
+                                  label: Eb,
                                   onChange: bb => {
-                                    Wb(Ub(bb))
+                                    Mb(Yb(bb))
                                   }
                                 });
                               case "colours": {
-                                const bb = Array.isArray(sb) ? sb : [],
-                                  cb = bb => {
-                                    Wb(bb.length > 0 ? bb : void 0)
+                                const bb = Array.isArray(Ub) ? Ub : [],
+                                  ab = bb => {
+                                    Mb(bb.length > 0 ? bb : void 0)
                                   };
-                                return (0, mb.jsxs)("div", {
+                                return (0, jb.jsxs)("div", {
                                   className: "DocsColourList",
-                                  children: [bb.map(((sb, kb) => (0, mb.jsxs)("span", {
+                                  children: [bb.map(((Ub, Ab) => (0, jb.jsxs)("span", {
                                     className: "DocsColourListRow",
-                                    children: [(0, mb.jsx)(NW, {
-                                      value: sb,
-                                      label: `${Tb} ${kb+1}`,
-                                      onChange: sb => {
-                                        cb(bb.map(((bb, cb) => cb === kb ? sb : bb)))
+                                    children: [(0, jb.jsx)(kM, {
+                                      value: Ub,
+                                      label: `${Eb} ${Ab+1}`,
+                                      onChange: Ub => {
+                                        ab(bb.map(((bb, ab) => ab === Ab ? Ub : bb)))
                                       }
-                                    }), (0, mb.jsx)("button", {
+                                    }), (0, jb.jsx)("button", {
                                       type: "button",
                                       className: "DocsTextIconButton",
-                                      "aria-label": `Remove colour ${kb+1}`,
+                                      "aria-label": `Remove colour ${Ab+1}`,
                                       onClick: () => {
-                                        cb(bb.filter(((bb, cb) => cb !== kb)))
+                                        ab(bb.filter(((bb, ab) => ab !== Ab)))
                                       },
-                                      children: (0, mb.jsx)(Qb, {
+                                      children: (0, jb.jsx)(kb, {
                                         name: "cross"
                                       })
                                     })]
-                                  }, kb))), (0, mb.jsxs)("button", {
+                                  }, Ab))), (0, jb.jsxs)("button", {
                                     type: "button",
                                     className: "DocsTextAddButton",
                                     onClick: () => {
-                                      var sb;
-                                      cb([...bb, null !== (sb = bb.at(-1)) && void 0 !== sb ? sb : "#ffffff"])
+                                      var Ub;
+                                      ab([...bb, null !== (Ub = bb.at(-1)) && void 0 !== Ub ? Ub : "#ffffff"])
                                     },
-                                    children: [(0, mb.jsx)(Qb, {
+                                    children: [(0, jb.jsx)(kb, {
                                       name: "plus"
                                     }), 0 === bb.length ? "Add a colour" : "Add a colour to the gradient"]
                                   })]
                                 })
                               }
                               case "fraction": {
-                                var Ib;
-                                const bb = "number" === typeof sb ? sb : Number(null !== (Ib = cb.defaultText) && void 0 !== Ib ? Ib : 0);
-                                return (0, mb.jsxs)("span", {
+                                var Bb;
+                                const bb = "number" === typeof Ub ? Ub : Number(null !== (Bb = ab.defaultText) && void 0 !== Bb ? Bb : 0);
+                                return (0, jb.jsxs)("span", {
                                   className: "DocsFractionInput",
-                                  children: [(0, mb.jsx)("input", {
+                                  children: [(0, jb.jsx)("input", {
                                     type: "range",
                                     min: 0,
                                     max: 1,
                                     step: .01,
                                     value: bb,
-                                    "aria-label": Tb,
+                                    "aria-label": Eb,
                                     onChange: bb => {
-                                      Wb(Number(bb.target.value))
+                                      Mb(Number(bb.target.value))
                                     }
-                                  }), (0, mb.jsx)("output", {
+                                  }), (0, jb.jsx)("output", {
                                     children: bb.toFixed(2)
                                   })]
                                 })
                               }
                               case "choice":
-                                return (0, mb.jsxs)("select", {
-                                  value: String(null !== sb && void 0 !== sb ? sb : ""),
-                                  "aria-label": Tb,
+                                return (0, jb.jsxs)("select", {
+                                  value: String(null !== Ub && void 0 !== Ub ? Ub : ""),
+                                  "aria-label": Eb,
                                   onChange: bb => {
-                                    Wb(Ub(bb.target.value))
+                                    Mb(Yb(bb.target.value))
                                   },
-                                  children: [!cb.isRequired && (0, mb.jsxs)("option", {
+                                  children: [!ab.isRequired && (0, jb.jsxs)("option", {
                                     value: "",
-                                    children: ["Default (", cb.defaultText, ")"]
-                                  }), ab.options.map((bb => (0, mb.jsx)("option", {
+                                    children: ["Default (", ab.defaultText, ")"]
+                                  }), Tb.options.map((bb => (0, jb.jsx)("option", {
                                     value: bb,
                                     children: bb
                                   }, bb)))]
                                 });
                               case "icon":
-                                return (0, mb.jsx)(VW, {
-                                  value: String(null !== sb && void 0 !== sb ? sb : ""),
-                                  fontAwesomeIcons: kb,
-                                  onChange: Wb
+                                return (0, jb.jsx)(yM, {
+                                  value: String(null !== Ub && void 0 !== Ub ? Ub : ""),
+                                  fontAwesomeIcons: Ab,
+                                  onChange: Mb
                                 })
                             }
                           }
 
-                          function uW(bb) {
-                            let cb;
+                          function DM(bb) {
+                            let ab;
                             try {
-                              cb = JSON.parse(bb)
-                            } catch (sb) {
+                              ab = JSON.parse(bb)
+                            } catch (Ub) {
                               return {
                                 part: null,
-                                error: `Not valid JSON yet: ${sb.message}`
+                                error: `Not valid JSON yet: ${Ub.message}`
                               }
                             }
-                            return ss(cb) ? {
-                              part: cb,
+                            return UU(ab) ? {
+                              part: ab,
                               error: null
                             } : {
                               part: null,
@@ -3628,150 +3628,150 @@ export const modules = {
                             }
                           }
 
-                          function YW(bb) {
+                          function zM(bb) {
                             let {
-                              parts: cb,
-                              index: sb,
-                              fontAwesomeIcons: Wb,
-                              onChange: ab,
-                              wL: Tb,
-                              onClose: Ub
+                              parts: ab,
+                              index: Ub,
+                              fontAwesomeIcons: Mb,
+                              onChange: Tb,
+                              kp: Eb,
+                              onClose: Yb
                             } = bb;
-                            const Ib = (0, kb.useContext)(mc),
-                              fb = (0, kb.useRef)(null),
-                              Mb = cb[sb],
-                              Xb = Ac(Mb),
-                              [nb, lb] = (0, kb.useState)((() => JSON.stringify(Mb, null, 2))),
-                              eb = (0, kb.useMemo)((() => "other" === Xb ? uW(nb).error : null), [Xb, nb]);
-                            (0, kb.useEffect)((() => {
+                            const Bb = (0, Ab.useContext)(ja),
+                              vb = (0, Ab.useRef)(null),
+                              Lb = ab[Ub],
+                              Pb = ta(Lb),
+                              [Xb, Rb] = (0, Ab.useState)((() => JSON.stringify(Lb, null, 2))),
+                              yb = (0, Ab.useMemo)((() => "other" === Pb ? DM(Xb).error : null), [Pb, Xb]);
+                            (0, Ab.useEffect)((() => {
                               var bb;
-                              null === (bb = fb.current) || void 0 === bb || bb.focus()
+                              null === (bb = vb.current) || void 0 === bb || bb.focus()
                             }), []);
-                            const Cb = (0, mb.jsx)("div", {
+                            const Zb = (0, jb.jsx)("div", {
                               className: "DocsTextDialogOverlay",
                               onMouseDown: bb => {
-                                bb.target === bb.currentTarget && Ub()
+                                bb.target === bb.currentTarget && Yb()
                               },
-                              children: (0, mb.jsxs)("div", {
-                                ref: fb,
+                              children: (0, jb.jsxs)("div", {
+                                ref: vb,
                                 className: "DocsTextDialog",
                                 role: "dialog",
                                 "aria-modal": "true",
-                                "aria-label": `Edit part ${sb+1}: ${qc[Xb]}`,
+                                "aria-label": `Edit part ${Ub+1}: ${oa[Pb]}`,
                                 tabIndex: -1,
                                 onKeyDown: bb => {
-                                  "Escape" === bb.key ? (bb.stopPropagation(), Ub()) : "Tab" === bb.key && fb.current && function(bb, cb) {
-                                    const sb = Array.from(bb.querySelectorAll(tc)),
-                                      kb = sb[0],
-                                      Wb = sb.at(-1);
-                                    if (!kb || !Wb) return;
-                                    const ab = document.activeElement;
-                                    !cb.shiftKey || ab !== kb && ab !== bb ? cb.shiftKey || ab !== Wb || (cb.preventDefault(), kb.focus()) : (cb.preventDefault(), Wb.focus())
-                                  }(fb.current, bb)
+                                  "Escape" === bb.key ? (bb.stopPropagation(), Yb()) : "Tab" === bb.key && vb.current && function(bb, ab) {
+                                    const Ub = Array.from(bb.querySelectorAll(Ha)),
+                                      Ab = Ub[0],
+                                      Mb = Ub.at(-1);
+                                    if (!Ab || !Mb) return;
+                                    const Tb = document.activeElement;
+                                    !ab.shiftKey || Tb !== Ab && Tb !== bb ? ab.shiftKey || Tb !== Mb || (ab.preventDefault(), Ab.focus()) : (ab.preventDefault(), Mb.focus())
+                                  }(vb.current, bb)
                                 },
-                                children: [(0, mb.jsxs)("header", {
+                                children: [(0, jb.jsxs)("header", {
                                   className: "DocsTextDialogHeader",
-                                  children: [(0, mb.jsxs)("div", {
-                                    children: [(0, mb.jsxs)("div", {
+                                  children: [(0, jb.jsxs)("div", {
+                                    children: [(0, jb.jsxs)("div", {
                                       className: "DocsTextDialogKind",
-                                      children: ["Part ", sb + 1]
-                                    }), (0, mb.jsx)("div", {
+                                      children: ["Part ", Ub + 1]
+                                    }), (0, jb.jsx)("div", {
                                       className: "DocsTextDialogTitle",
-                                      children: qc[Xb]
+                                      children: oa[Pb]
                                     })]
-                                  }), (0, mb.jsx)("button", {
+                                  }), (0, jb.jsx)("button", {
                                     type: "button",
                                     className: "DocsTextIconButton",
                                     "aria-label": "Close",
-                                    onClick: Ub,
-                                    children: (0, mb.jsx)(Qb, {
+                                    onClick: Yb,
+                                    children: (0, jb.jsx)(kb, {
                                       name: "cross"
                                     })
                                   })]
-                                }), (0, mb.jsx)(lW, {
-                                  parts: cb,
+                                }), (0, jb.jsx)(PM, {
+                                  parts: ab,
                                   className: "DocsTextDialogPreview"
-                                }), (0, mb.jsx)("div", {
+                                }), (0, jb.jsx)("div", {
                                   className: "DocsTextDialogFields",
-                                  children: "other" === Xb ? (0, mb.jsxs)("label", {
+                                  children: "other" === Pb ? (0, jb.jsxs)("label", {
                                     className: "DocsTextField",
-                                    children: [(0, mb.jsx)("span", {
+                                    children: [(0, jb.jsx)("span", {
                                       className: "DocsTextFieldLabel",
                                       children: "JSON"
-                                    }), (0, mb.jsx)("textarea", {
+                                    }), (0, jb.jsx)("textarea", {
                                       className: "DocsTextJson",
-                                      value: nb,
+                                      value: Xb,
                                       rows: 6,
                                       spellCheck: !1,
                                       onChange: bb => {
-                                        lb(bb.target.value);
-                                        const cb = uW(bb.target.value);
-                                        null !== cb.part && ab(cb.part)
+                                        Rb(bb.target.value);
+                                        const ab = DM(bb.target.value);
+                                        null !== ab.part && Tb(ab.part)
                                       }
-                                    }), eb && (0, mb.jsx)("span", {
+                                    }), yb && (0, jb.jsx)("span", {
                                       className: "DocsTextFieldError",
-                                      children: eb
+                                      children: yb
                                     })]
-                                  }) : rc[Xb].map((bb => {
-                                    const cb = Sc(Mb, bb.path),
-                                      sb = bb.isRequired ? JSON.stringify(vc(Mb, bb.path)) === JSON.stringify(Mb) : void 0 === cb;
-                                    return (0, mb.jsxs)("div", {
+                                  }) : sa[Pb].map((bb => {
+                                    const ab = Ca(Lb, bb.path),
+                                      Ub = bb.isRequired ? JSON.stringify(Oa(Lb, bb.path)) === JSON.stringify(Lb) : void 0 === ab;
+                                    return (0, jb.jsxs)("div", {
                                       className: "DocsTextField",
-                                      children: [(0, mb.jsxs)("div", {
+                                      children: [(0, jb.jsxs)("div", {
                                         className: "DocsTextFieldLabel",
-                                        children: [(0, mb.jsx)("span", {
+                                        children: [(0, jb.jsx)("span", {
                                           children: bb.label
-                                        }), (0, mb.jsxs)("button", {
+                                        }), (0, jb.jsxs)("button", {
                                           type: "button",
                                           className: "DocsTextResetButton",
-                                          disabled: sb,
+                                          disabled: Ub,
                                           "aria-label": `Reset ${bb.label.toLowerCase()} to default`,
                                           onClick: () => {
-                                            ab(vc(Mb, bb.path))
+                                            Tb(Oa(Lb, bb.path))
                                           },
-                                          children: [(0, mb.jsx)(Qb, {
+                                          children: [(0, jb.jsx)(kb, {
                                             name: "replay"
                                           }), "Reset"]
                                         })]
-                                      }), (0, mb.jsx)(LW, {
+                                      }), (0, jb.jsx)(ZM, {
                                         property: bb,
-                                        value: cb,
-                                        fontAwesomeIcons: Wb,
-                                        onChange: cb => {
-                                          ab(Rc(Mb, bb.path, cb))
+                                        value: ab,
+                                        fontAwesomeIcons: Mb,
+                                        onChange: ab => {
+                                          Tb(Va(Lb, bb.path, ab))
                                         }
-                                      }), !bb.isRequired && (0, mb.jsxs)("span", {
+                                      }), !bb.isRequired && (0, jb.jsxs)("span", {
                                         className: "DocsTextFieldHint",
                                         children: ["Default: ", bb.defaultText]
                                       })]
                                     }, bb.path.join("."))
                                   }))
-                                }), (0, mb.jsxs)("footer", {
+                                }), (0, jb.jsxs)("footer", {
                                   className: "DocsTextDialogFooter",
-                                  children: [(0, mb.jsxs)("button", {
+                                  children: [(0, jb.jsxs)("button", {
                                     type: "button",
                                     className: "DocsTextRemoveButton",
-                                    onClick: Tb,
-                                    children: [(0, mb.jsx)(Qb, {
+                                    onClick: Eb,
+                                    children: [(0, jb.jsx)(kb, {
                                       name: "trash"
                                     }), "Remove part"]
-                                  }), (0, mb.jsx)("button", {
+                                  }), (0, jb.jsx)("button", {
                                     type: "button",
                                     className: "DocsTextDoneButton",
-                                    onClick: Ub,
+                                    onClick: Yb,
                                     children: "Done"
                                   })]
-                                }), (0, mb.jsx)("datalist", {
+                                }), (0, jb.jsx)("datalist", {
                                   id: "DocsTextSizeSuggestions",
-                                  children: QW.map((bb => (0, mb.jsx)("option", {
+                                  children: XM.map((bb => (0, jb.jsx)("option", {
                                     value: bb
                                   }, bb)))
                                 })]
                               })
                             });
-                            return Ib ? (0, Hb.createPortal)(Cb, Ib) : Cb
+                            return Bb ? (0, eb.createPortal)(Zb, Bb) : Zb
                           }
-                          const hW = [{
+                          const xM = [{
                               label: "Icon and text",
                               parts: [{
                                 icon: "Pixelated Heart"
@@ -3815,265 +3815,265 @@ export const modules = {
                                 action: "jump"
                               }]
                             }],
-                            JW = Object.keys(dc);
+                            iM = Object.keys(la);
 
-                          function gW(bb) {
+                          function fM(bb) {
                             let {
-                              fontAwesomeIcons: cb
+                              fontAwesomeIcons: ab
                             } = bb;
-                            const [sb, Wb] = (0, kb.useState)(hW[0].parts), [Tb, Ub] = (0, kb.useState)((() => pc(hW[0].parts))), [Ib, Hb] = (0, kb.useState)(null), [fb, Mb] = (0, kb.useState)(!1), [Xb, nb] = (0, kb.useState)(null), [lb, eb] = (0, kb.useState)(!1), [Cb, Nb] = (0, kb.useState)(null), Vb = (0, kb.useRef)(null), Lb = pc(sb);
-                            (0, kb.useLayoutEffect)((() => {
+                            const [Ub, Mb] = (0, Ab.useState)(xM[0].parts), [Eb, Yb] = (0, Ab.useState)((() => Sa(xM[0].parts))), [Bb, eb] = (0, Ab.useState)(null), [vb, Lb] = (0, Ab.useState)(!1), [Pb, Xb] = (0, Ab.useState)(null), [Rb, yb] = (0, Ab.useState)(!1), [Zb, Db] = (0, Ab.useState)(null), zb = (0, Ab.useRef)(null), xb = Sa(Ub);
+                            (0, Ab.useLayoutEffect)((() => {
                               var bb;
-                              if (!Cb) return;
-                              const cb = bb => {
-                                  var cb;
-                                  return null === (cb = Vb.current) || void 0 === cb ? void 0 : cb.querySelector(`[data-focus-key="${bb}"]`)
+                              if (!Zb) return;
+                              const ab = bb => {
+                                  var ab;
+                                  return null === (ab = zb.current) || void 0 === ab ? void 0 : ab.querySelector(`[data-focus-key="${bb}"]`)
                                 },
-                                sb = cb(Cb.key);
-                              null === (bb = sb && !sb.disabled ? sb : cb(Cb.fallback)) || void 0 === bb || bb.focus(), Nb(null)
-                            }), [Cb]);
-                            const ub = bb => {
-                                Wb(bb), Ub(pc(bb)), Hb(null)
+                                Ub = ab(Zb.key);
+                              null === (bb = Ub && !Ub.disabled ? Ub : ab(Zb.fallback)) || void 0 === bb || bb.focus(), Db(null)
+                            }), [Zb]);
+                            const ib = bb => {
+                                Mb(bb), Yb(Sa(bb)), eb(null)
                               },
-                              hb = bb => {
-                                ub(sb.filter(((cb, sb) => sb !== bb))), Nb({
-                                  key: `edit-${Math.min(bb,sb.length-2)}`,
+                              mb = bb => {
+                                ib(Ub.filter(((ab, Ub) => Ub !== bb))), Db({
+                                  key: `edit-${Math.min(bb,Ub.length-2)}`,
                                   fallback: "add"
                                 })
                               },
-                              Jb = (bb, cb) => {
-                                const kb = [...sb],
-                                  [Wb] = kb.splice(bb, 1);
-                                kb.splice(bb + cb, 0, Wb), ub(kb);
-                                Nb({
-                                  key: `${cb<0?"up":"down"}-${bb+cb}`,
-                                  fallback: `edit-${bb+cb}`
+                              pb = (bb, ab) => {
+                                const Ab = [...Ub],
+                                  [Mb] = Ab.splice(bb, 1);
+                                Ab.splice(bb + ab, 0, Mb), ib(Ab);
+                                Db({
+                                  key: `${ab<0?"up":"down"}-${bb+ab}`,
+                                  fallback: `edit-${bb+ab}`
                                 })
                               };
-                            return (0, mb.jsxs)("section", {
-                              ref: Vb,
+                            return (0, jb.jsxs)("section", {
+                              ref: zb,
                               className: "DocsPlayground DocsTextEditor",
                               "aria-label": "Styled text editor",
-                              children: [(0, mb.jsx)("header", {
+                              children: [(0, jb.jsx)("header", {
                                 className: "DocsPlaygroundHeader",
-                                children: (0, mb.jsxs)("div", {
-                                  children: [(0, mb.jsx)("div", {
+                                children: (0, jb.jsxs)("div", {
+                                  children: [(0, jb.jsx)("div", {
                                     className: "DocsPlaygroundTitle",
                                     children: "Styled text editor"
-                                  }), (0, mb.jsx)("div", {
+                                  }), (0, jb.jsx)("div", {
                                     className: "DocsPlaygroundHint",
                                     children: "Add parts, click one to style it, and copy the code. The preview draws it as the game does."
                                   })]
                                 })
-                              }), (0, mb.jsx)("div", {
+                              }), (0, jb.jsx)("div", {
                                 className: "DocsPlaygroundPresets",
-                                children: hW.map((bb => (0, mb.jsx)("button", {
+                                children: xM.map((bb => (0, jb.jsx)("button", {
                                   type: "button",
-                                  className: ab()("DocsVariantChip", {
-                                    Active: Lb === pc(bb.parts)
+                                  className: Tb()("DocsVariantChip", {
+                                    Active: xb === Sa(bb.parts)
                                   }),
                                   onClick: () => {
-                                    ub(bb.parts)
+                                    ib(bb.parts)
                                   },
                                   children: bb.label
                                 }, bb.label)))
-                              }), (0, mb.jsx)(lW, {
-                                parts: sb,
+                              }), (0, jb.jsx)(PM, {
+                                parts: Ub,
                                 className: "DocsTextEditorPreview"
-                              }), (0, mb.jsxs)("div", {
+                              }), (0, jb.jsxs)("div", {
                                 className: "DocsTextEditorBody",
-                                children: [(0, mb.jsxs)("div", {
+                                children: [(0, jb.jsxs)("div", {
                                   className: "DocsTextEditorPanel",
-                                  children: [(0, mb.jsx)("div", {
+                                  children: [(0, jb.jsx)("div", {
                                     className: "DocsTextEditorPanelTitle",
                                     children: "Parts"
-                                  }), (0, mb.jsxs)("ol", {
+                                  }), (0, jb.jsxs)("ol", {
                                     className: "DocsTextParts",
-                                    children: [sb.map(((bb, cb) => {
-                                      const kb = Ac(bb);
-                                      return (0, mb.jsxs)("li", {
+                                    children: [Ub.map(((bb, ab) => {
+                                      const Ab = ta(bb);
+                                      return (0, jb.jsxs)("li", {
                                         className: "DocsTextPart",
-                                        children: [(0, mb.jsxs)("button", {
+                                        children: [(0, jb.jsxs)("button", {
                                           type: "button",
                                           className: "DocsTextPartMain",
-                                          "data-focus-key": `edit-${cb}`,
-                                          "aria-label": `Edit part ${cb+1}, ${qc[kb]}`,
+                                          "data-focus-key": `edit-${ab}`,
+                                          "aria-label": `Edit part ${ab+1}, ${oa[Ab]}`,
                                           onClick: () => {
-                                            nb(cb)
+                                            Xb(ab)
                                           },
-                                          children: [(0, mb.jsx)("span", {
+                                          children: [(0, jb.jsx)("span", {
                                             className: "DocsTextPartKind",
-                                            children: qc[kb]
-                                          }), (0, mb.jsx)(lW, {
+                                            children: oa[Ab]
+                                          }), (0, jb.jsx)(PM, {
                                             parts: [bb],
                                             className: "DocsTextPartPreview"
-                                          }), "text" !== kb && (0, mb.jsx)("code", {
+                                          }), "text" !== Ab && (0, jb.jsx)("code", {
                                             className: "DocsTextPartName",
-                                            children: Fc(bb)
+                                            children: ca(bb)
                                           })]
-                                        }), (0, mb.jsxs)("span", {
+                                        }), (0, jb.jsxs)("span", {
                                           className: "DocsTextPartActions",
-                                          children: [(0, mb.jsx)("button", {
+                                          children: [(0, jb.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${cb+1} up`,
-                                            "data-focus-key": `up-${cb}`,
-                                            disabled: 0 === cb,
+                                            "aria-label": `Move part ${ab+1} up`,
+                                            "data-focus-key": `up-${ab}`,
+                                            disabled: 0 === ab,
                                             onClick: () => {
-                                              Jb(cb, -1)
+                                              pb(ab, -1)
                                             },
-                                            children: (0, mb.jsx)(Qb, {
+                                            children: (0, jb.jsx)(kb, {
                                               name: "chevron-up"
                                             })
-                                          }), (0, mb.jsx)("button", {
+                                          }), (0, jb.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${cb+1} down`,
-                                            "data-focus-key": `down-${cb}`,
-                                            disabled: cb === sb.length - 1,
+                                            "aria-label": `Move part ${ab+1} down`,
+                                            "data-focus-key": `down-${ab}`,
+                                            disabled: ab === Ub.length - 1,
                                             onClick: () => {
-                                              Jb(cb, 1)
+                                              pb(ab, 1)
                                             },
-                                            children: (0, mb.jsx)(Qb, {
+                                            children: (0, jb.jsx)(kb, {
                                               name: "chevron-down"
                                             })
-                                          }), (0, mb.jsx)("button", {
+                                          }), (0, jb.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Remove part ${cb+1}`,
+                                            "aria-label": `Remove part ${ab+1}`,
                                             onClick: () => {
-                                              hb(cb)
+                                              mb(ab)
                                             },
-                                            children: (0, mb.jsx)(Qb, {
+                                            children: (0, jb.jsx)(kb, {
                                               name: "cross"
                                             })
                                           })]
                                         })]
-                                      }, cb)
-                                    })), 0 === sb.length && (0, mb.jsx)("li", {
+                                      }, ab)
+                                    })), 0 === Ub.length && (0, jb.jsx)("li", {
                                       className: "DocsTextPartsEmpty",
                                       children: "No parts yet. Add one below."
                                     })]
-                                  }), (0, mb.jsxs)("div", {
+                                  }), (0, jb.jsxs)("div", {
                                     className: "DocsTextAddPart",
                                     onKeyDown: bb => {
-                                      "Escape" === bb.key && lb && (bb.stopPropagation(), eb(!1), Nb({
+                                      "Escape" === bb.key && Rb && (bb.stopPropagation(), yb(!1), Db({
                                         key: "add",
                                         fallback: "add"
                                       }))
                                     },
-                                    children: [(0, mb.jsxs)("button", {
+                                    children: [(0, jb.jsxs)("button", {
                                       type: "button",
                                       className: "DocsTextAddPartButton",
                                       "data-focus-key": "add",
-                                      "aria-expanded": lb,
+                                      "aria-expanded": Rb,
                                       "aria-controls": "DocsTextAddPartMenu",
                                       onClick: () => {
-                                        eb(!lb)
+                                        yb(!Rb)
                                       },
-                                      children: [(0, mb.jsx)(Qb, {
+                                      children: [(0, jb.jsx)(kb, {
                                         name: "plus"
-                                      }), "Add a part", (0, mb.jsx)(Qb, {
-                                        name: lb ? "chevron-up" : "chevron-down"
+                                      }), "Add a part", (0, jb.jsx)(kb, {
+                                        name: Rb ? "chevron-up" : "chevron-down"
                                       })]
-                                    }), lb && (0, mb.jsx)("ul", {
+                                    }), Rb && (0, jb.jsx)("ul", {
                                       id: "DocsTextAddPartMenu",
                                       className: "DocsTextAddPartMenu",
-                                      children: JW.map((bb => (0, mb.jsx)("li", {
-                                        children: (0, mb.jsx)("button", {
+                                      children: iM.map((bb => (0, jb.jsx)("li", {
+                                        children: (0, jb.jsx)("button", {
                                           type: "button",
                                           onClick: () => {
                                             (bb => {
-                                              ub([...sb, dc[bb]]), eb(!1), nb(sb.length)
+                                              ib([...Ub, la[bb]]), yb(!1), Xb(Ub.length)
                                             })(bb)
                                           },
-                                          children: qc[bb]
+                                          children: oa[bb]
                                         })
                                       }, bb)))
                                     })]
                                   })]
-                                }), (0, mb.jsxs)("div", {
+                                }), (0, jb.jsxs)("div", {
                                   className: "DocsTextEditorPanel",
-                                  children: [(0, mb.jsxs)("div", {
+                                  children: [(0, jb.jsxs)("div", {
                                     className: "DocsTextEditorPanelTitle",
-                                    children: ["Code", (0, mb.jsxs)("button", {
+                                    children: ["Code", (0, jb.jsxs)("button", {
                                       type: "button",
                                       className: "DocsTextEditCodeButton",
-                                      "aria-pressed": fb,
+                                      "aria-pressed": vb,
                                       onClick: () => {
-                                        Mb(!fb)
+                                        Lb(!vb)
                                       },
-                                      children: [(0, mb.jsx)(Qb, {
-                                        name: fb ? "check" : "pencil"
-                                      }), fb ? "Done" : "Edit"]
+                                      children: [(0, jb.jsx)(kb, {
+                                        name: vb ? "check" : "pencil"
+                                      }), vb ? "Done" : "Edit"]
                                     })]
-                                  }), fb ? (0, mb.jsxs)(mb.Fragment, {
-                                    children: [(0, mb.jsx)("textarea", {
+                                  }), vb ? (0, jb.jsxs)(jb.Fragment, {
+                                    children: [(0, jb.jsx)("textarea", {
                                       className: "DocsPlaygroundInput",
-                                      value: Tb,
+                                      value: Eb,
                                       spellCheck: !1,
                                       "aria-label": "Styled text as code",
                                       onChange: bb => {
-                                        Ub(bb.target.value);
-                                        const cb = ks(bb.target.value);
-                                        Hb(cb.error), cb.parts && Wb(cb.parts)
+                                        Yb(bb.target.value);
+                                        const ab = AU(bb.target.value);
+                                        eb(ab.error), ab.parts && Mb(ab.parts)
                                       }
-                                    }), Ib && (0, mb.jsx)("p", {
+                                    }), Bb && (0, jb.jsx)("p", {
                                       className: "DocsPlaygroundError",
-                                      children: Ib
+                                      children: Bb
                                     })]
-                                  }) : (0, mb.jsx)(Yb, {
+                                  }) : (0, jb.jsx)(fb, {
                                     lang: "js",
-                                    code: `api.sendMessage(playerId, ${Lb})`
+                                    code: `api.sendMessage(playerId, ${xb})`
                                   })]
                                 })]
-                              }), null !== Xb && Xb < sb.length && (0, mb.jsx)(YW, {
-                                parts: sb,
-                                index: Xb,
-                                fontAwesomeIcons: cb,
+                              }), null !== Pb && Pb < Ub.length && (0, jb.jsx)(zM, {
+                                parts: Ub,
+                                index: Pb,
+                                fontAwesomeIcons: ab,
                                 onChange: bb => {
-                                  ((bb, cb) => {
-                                    ub(sb.map(((sb, kb) => kb === bb ? cb : sb)))
-                                  })(Xb, bb)
+                                  ((bb, ab) => {
+                                    ib(Ub.map(((Ub, Ab) => Ab === bb ? ab : Ub)))
+                                  })(Pb, bb)
                                 },
-                                wL: () => {
-                                  hb(Xb), nb(null)
+                                kp: () => {
+                                  mb(Pb), Xb(null)
                                 },
                                 onClose: () => {
-                                  nb(null), Nb({
-                                    key: `edit-${Xb}`,
+                                  Xb(null), Db({
+                                    key: `edit-${Pb}`,
                                     fallback: "add"
                                   })
                                 }
                               })]
                             })
                           }
-                          var BW = sb(4569),
-                            tW = sb(4553),
-                            yW = sb(4561),
-                            PW = sb(4576);
-                          const DW = 40,
-                            EW = 800,
-                            iW = 150,
-                            OW = 8e3,
-                            GW = 2e3;
+                          var mM = Ub(4536),
+                            pM = Ub(4516),
+                            NM = Ub(4531),
+                            WM = Ub(4541);
+                          const HM = 40,
+                            IM = 800,
+                            dM = 150,
+                            FM = 8e3,
+                            hM = 2e3;
 
-                          function KW(bb, cb) {
-                            return 12 * Math.log2(cb / bb)
+                          function GM(bb, ab) {
+                            return 12 * Math.log2(ab / bb)
                           }
 
-                          function ZW(bb, cb) {
-                            return Math.round(bb * 2 ** (cb / 12) * 10) / 10
+                          function QM(bb, ab) {
+                            return Math.round(bb * 2 ** (ab / 12) * 10) / 10
                           }
 
-                          function zW(bb) {
+                          function qM(bb) {
                             return `${bb} ms`
                           }
 
-                          function qW(bb) {
+                          function uM(bb) {
                             return `${bb} st`
                           }
-                          const dW = [{
+                          const rM = [{
                             key: "variationSemitones",
                             label: "Word variation",
                             max: 6
@@ -4091,769 +4091,769 @@ export const modules = {
                             max: 12
                           }];
 
-                          function AW(bb) {
+                          function KM(bb) {
                             let {
-                              synth: cb,
-                              onChange: sb
+                              synth: ab,
+                              onChange: Ub
                             } = bb;
-                            const kb = (0, BW.g)(cb);
-                            return (0, mb.jsxs)("div", {
+                            const Ab = (0, mM.k)(ab);
+                            return (0, jb.jsxs)("div", {
                               className: "DocsVoiceControls",
-                              children: [(0, mb.jsxs)("div", {
+                              children: [(0, jb.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, mb.jsx)("div", {
+                                children: [(0, jb.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Voice"
-                                }), (0, mb.jsxs)("div", {
+                                }), (0, jb.jsxs)("div", {
                                   className: "DocsControl",
-                                  children: [(0, mb.jsx)("div", {
+                                  children: [(0, jb.jsx)("div", {
                                     className: "DocsControlLabel",
-                                    children: (0, mb.jsx)("span", {
+                                    children: (0, jb.jsx)("span", {
                                       children: "Tone"
                                     })
-                                  }), (0, mb.jsx)("div", {
+                                  }), (0, jb.jsx)("div", {
                                     className: "DocsVoiceWaveforms",
-                                    children: BW.e.map((bb => (0, mb.jsx)("button", {
+                                    children: mM.e.map((bb => (0, jb.jsx)("button", {
                                       type: "button",
-                                      className: ab()("DocsVariantChip", {
-                                        Active: cb.waveform === bb
+                                      className: Tb()("DocsVariantChip", {
+                                        Active: ab.waveform === bb
                                       }),
-                                      "aria-pressed": cb.waveform === bb,
+                                      "aria-pressed": ab.waveform === bb,
                                       onClick: () => {
-                                        sb({
+                                        Ub({
                                           waveform: bb
                                         })
                                       },
                                       children: bb
                                     }, bb)))
                                   })]
-                                }), (0, mb.jsx)(cW, {
+                                }), (0, jb.jsx)(nA, {
                                   label: "Pitch",
                                   min: 0,
-                                  max: KW(DW, EW),
+                                  max: GM(HM, IM),
                                   step: .1,
-                                  value: KW(DW, cb.pitchHz),
-                                  format: () => `${cb.pitchHz} Hz`,
+                                  value: GM(HM, ab.pitchHz),
+                                  format: () => `${ab.pitchHz} Hz`,
                                   onChange: bb => {
-                                    sb({
-                                      pitchHz: ZW(DW, bb)
+                                    Ub({
+                                      pitchHz: QM(HM, bb)
                                     })
                                   }
-                                }), (0, mb.jsx)(cW, {
+                                }), (0, jb.jsx)(nA, {
                                   label: "Time per syllable",
                                   min: 25,
                                   max: 200,
                                   step: 1,
-                                  value: cb.syllableMs,
-                                  format: zW,
+                                  value: ab.syllableMs,
+                                  format: qM,
                                   onChange: bb => {
-                                    sb({
+                                    Ub({
                                       syllableMs: bb
                                     })
                                   }
-                                }), (0, mb.jsx)(cW, {
+                                }), (0, jb.jsx)(nA, {
                                   label: "Volume",
                                   min: 0,
                                   max: 2,
                                   step: .05,
-                                  value: cb.volume,
+                                  value: ab.volume,
                                   onChange: bb => {
-                                    sb({
+                                    Ub({
                                       volume: bb
                                     })
                                   }
                                 })]
-                              }), (0, mb.jsxs)("div", {
+                              }), (0, jb.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, mb.jsx)("div", {
+                                children: [(0, jb.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Each blip"
-                                }), (0, mb.jsx)(cW, {
+                                }), (0, jb.jsx)(nA, {
                                   label: "Length",
                                   min: 10,
                                   max: 300,
                                   step: 1,
-                                  value: cb.durationMs,
-                                  format: zW,
+                                  value: ab.durationMs,
+                                  format: qM,
                                   onChange: bb => {
-                                    sb({
+                                    Ub({
                                       durationMs: bb
                                     })
                                   }
-                                }), (0, mb.jsx)(cW, {
+                                }), (0, jb.jsx)(nA, {
                                   label: "Fade in",
                                   min: 0,
-                                  max: kb.durationMs,
+                                  max: Ab.durationMs,
                                   step: 1,
-                                  value: kb.attackMs,
-                                  format: zW,
+                                  value: Ab.attackMs,
+                                  format: qM,
                                   onChange: bb => {
-                                    sb({
+                                    Ub({
                                       attackMs: bb
                                     })
                                   }
-                                }), (0, mb.jsx)(cW, {
+                                }), (0, jb.jsx)(nA, {
                                   label: "Fade out",
                                   min: 0,
-                                  max: kb.durationMs - kb.attackMs,
+                                  max: Ab.durationMs - Ab.attackMs,
                                   step: 1,
-                                  value: kb.releaseMs,
-                                  format: zW,
+                                  value: Ab.releaseMs,
+                                  format: qM,
                                   onChange: bb => {
-                                    sb({
+                                    Ub({
                                       releaseMs: bb
                                     })
                                   }
-                                }), (0, mb.jsx)(cW, {
+                                }), (0, jb.jsx)(nA, {
                                   label: "Glide",
                                   min: -12,
                                   max: 12,
                                   step: .1,
-                                  value: cb.glideSemitones,
-                                  format: qW,
+                                  value: ab.glideSemitones,
+                                  format: uM,
                                   onChange: bb => {
-                                    sb({
+                                    Ub({
                                       glideSemitones: bb
                                     })
                                   }
-                                }), (0, mb.jsxs)("label", {
+                                }), (0, jb.jsxs)("label", {
                                   className: "DocsVoiceToggle",
-                                  children: [(0, mb.jsx)("input", {
+                                  children: [(0, jb.jsx)("input", {
                                     type: "checkbox",
-                                    checked: null !== cb.lowpassHz,
+                                    checked: null !== ab.lowpassHz,
                                     onChange: bb => {
-                                      sb({
-                                        lowpassHz: bb.target.checked ? GW : null
+                                      Ub({
+                                        lowpassHz: bb.target.checked ? hM : null
                                       })
                                     }
-                                  }), (0, mb.jsx)("span", {
+                                  }), (0, jb.jsx)("span", {
                                     children: "Muffle with a filter"
                                   })]
-                                }), null !== cb.lowpassHz && (0, mb.jsx)(cW, {
+                                }), null !== ab.lowpassHz && (0, jb.jsx)(nA, {
                                   label: "Filter",
                                   min: 0,
-                                  max: KW(iW, OW),
+                                  max: GM(dM, FM),
                                   step: .1,
-                                  value: KW(iW, cb.lowpassHz),
-                                  format: () => `${cb.lowpassHz} Hz`,
+                                  value: GM(dM, ab.lowpassHz),
+                                  format: () => `${ab.lowpassHz} Hz`,
                                   onChange: bb => {
-                                    sb({
-                                      lowpassHz: ZW(iW, bb)
+                                    Ub({
+                                      lowpassHz: QM(dM, bb)
                                     })
                                   }
                                 })]
-                              }), (0, mb.jsxs)("div", {
+                              }), (0, jb.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, mb.jsx)("div", {
+                                children: [(0, jb.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Intonation"
-                                }), dW.map((bb => {
+                                }), rM.map((bb => {
                                   let {
-                                    key: kb,
-                                    label: Wb,
-                                    max: ab
+                                    key: Ab,
+                                    label: Mb,
+                                    max: Tb
                                   } = bb;
-                                  return (0, mb.jsx)(cW, {
-                                    label: Wb,
+                                  return (0, jb.jsx)(nA, {
+                                    label: Mb,
                                     min: 0,
-                                    max: ab,
+                                    max: Tb,
                                     step: .1,
-                                    value: cb.intonation[kb],
-                                    format: qW,
+                                    value: ab.intonation[Ab],
+                                    format: uM,
                                     onChange: bb => {
-                                      sb({
+                                      Ub({
                                         intonation: {
-                                          ...cb.intonation,
-                                          [kb]: bb
+                                          ...ab.intonation,
+                                          [Ab]: bb
                                         }
                                       })
                                     }
-                                  }, kb)
+                                  }, Ab)
                                 }))]
                               })]
                             })
                           }
-                          const wW = Object.keys(BW.f),
-                            rW = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
+                          const oM = Object.keys(mM.i),
+                            lM = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
 
-                          function oW(bb) {
-                            var cb;
-                            const sb = JSON.stringify((0, BW.g)(bb));
-                            return null !== (cb = wW.find((bb => JSON.stringify((0, BW.g)(BW.f[bb])) === sb))) && void 0 !== cb ? cb : null
+                          function tM(bb) {
+                            var ab;
+                            const Ub = JSON.stringify((0, mM.k)(bb));
+                            return null !== (ab = oM.find((bb => JSON.stringify((0, mM.k)(mM.i[bb])) === Ub))) && void 0 !== ab ? ab : null
                           }
 
-                          function SW(bb) {
-                            let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+                          function wM(bb) {
+                            let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
                             if ("object" !== typeof bb || null === bb) return JSON.stringify(bb);
-                            return `{\n${Object.entries(bb).map((bb=>{let[sb,kb]=bb;return`${cb}    ${sb}: ${SW(kb,`${cb}    `)},`})).join("\n")}\n${cb}}`
+                            return `{\n${Object.entries(bb).map((bb=>{let[Ub,Ab]=bb;return`${ab}    ${Ub}: ${wM(Ab,`${ab}    `)},`})).join("\n")}\n${ab}}`
                           }
 
-                          function RW(bb, cb, sb) {
-                            const kb = oW(bb),
-                              Wb = [`    line: ${JSON.stringify(cb)},`];
-                            return sb && Wb.push(`    speakerName: ${JSON.stringify(sb)},`), Wb.push("    voice,"), `const voice = ${kb?JSON.stringify(kb):SW((0,BW.g)(bb))}\n\napi.setClientOption(playerId, "dialogue", {\n${Wb.join("\n")}\n})`
+                          function sM(bb, ab, Ub) {
+                            const Ab = tM(bb),
+                              Mb = [`    line: ${JSON.stringify(ab)},`];
+                            return Ub && Mb.push(`    speakerName: ${JSON.stringify(Ub)},`), Mb.push("    voice,"), `const voice = ${Ab?JSON.stringify(Ab):wM((0,mM.k)(bb))}\n\napi.setClientOption(playerId, "dialogue", {\n${Mb.join("\n")}\n})`
                           }
-                          const vW = 400,
-                            FW = 90;
-                          let xW = null;
+                          const gM = 400,
+                            CM = 90;
+                          let VM = null;
 
-                          function jW(bb, cb, sb) {
-                            return xW ??= new AudioContext, xW.resume(), (0, PW.d)(xW, xW.destination, bb, cb, sb, (() => {}))
+                          function OM(bb, ab, Ub) {
+                            return VM ??= new AudioContext, VM.resume(), (0, WM.c)(VM, VM.destination, bb, ab, Ub, (() => {}))
                           }
 
-                          function pW() {
-                            const [bb, cb] = (0, kb.useState)(BW.f.regular), [sb, Wb] = (0, kb.useState)(rW[0]), [Tb, Ub] = (0, kb.useState)("Innkeeper"), [Ib, Hb] = (0, kb.useState)(0), fb = Xk((bb => bb.volume)), Mb = (0, kb.useRef)(null), Xb = (0, kb.useRef)(0), nb = (0, kb.useRef)(0), lb = () => {
+                          function cM() {
+                            const [bb, ab] = (0, Ab.useState)(mM.i.regular), [Ub, Mb] = (0, Ab.useState)(lM[0]), [Eb, Yb] = (0, Ab.useState)("Innkeeper"), [Bb, eb] = (0, Ab.useState)(0), vb = vA((bb => bb.volume)), Lb = (0, Ab.useRef)(null), Pb = (0, Ab.useRef)(0), Xb = (0, Ab.useRef)(0), Rb = () => {
                               var bb;
-                              null === (bb = Mb.current) || void 0 === bb || bb.call(Mb), Mb.current = null
+                              null === (bb = Lb.current) || void 0 === bb || bb.call(Lb), Lb.current = null
                             };
-                            (0, kb.useEffect)((() => () => {
+                            (0, Ab.useEffect)((() => () => {
                               var bb;
-                              null === (bb = Mb.current) || void 0 === bb || bb.call(Mb), window.clearTimeout(Xb.current)
+                              null === (bb = Lb.current) || void 0 === bb || bb.call(Lb), window.clearTimeout(Pb.current)
                             }), []);
-                            const eb = (0, kb.useMemo)((() => ({
-                                line: sb,
-                                speakerName: Tb || void 0,
+                            const yb = (0, Ab.useMemo)((() => ({
+                                line: Ub,
+                                speakerName: Eb || void 0,
                                 voice: bb
-                              })), [sb, Tb, bb]),
-                              Cb = (0, kb.useRef)(eb);
-                            Cb.current = eb;
-                            const Vb = oW(bb),
-                              Lb = bb => {
-                                window.clearTimeout(Xb.current), lb();
+                              })), [Ub, Eb, bb]),
+                              Zb = (0, Ab.useRef)(yb);
+                            Zb.current = yb;
+                            const zb = tM(bb),
+                              xb = bb => {
+                                window.clearTimeout(Pb.current), Rb();
                                 const {
-                                  plan: cb,
-                                  synth: sb
-                                } = (0, yW.h)(bb);
-                                sb && (Mb.current = jW(sb, cb.blips, fb)), Hb((bb => bb + 1))
+                                  plan: ab,
+                                  synth: Ub
+                                } = (0, NM.g)(bb);
+                                Ub && (Lb.current = OM(Ub, ab.blips, vb)), eb((bb => bb + 1))
                               },
-                              ub = RW(bb, sb, Tb);
-                            return (0, mb.jsxs)("section", {
+                              ib = sM(bb, Ub, Eb);
+                            return (0, jb.jsxs)("section", {
                               className: "DocsPlayground DocsVoicePlayground",
                               "aria-label": "Voice playground",
-                              children: [(0, mb.jsxs)("header", {
+                              children: [(0, jb.jsxs)("header", {
                                 className: "DocsPlaygroundHeader",
-                                children: [(0, mb.jsxs)("div", {
-                                  children: [(0, mb.jsx)("div", {
+                                children: [(0, jb.jsxs)("div", {
+                                  children: [(0, jb.jsx)("div", {
                                     className: "DocsPlaygroundTitle",
                                     children: "Try it: voices"
-                                  }), (0, mb.jsx)("div", {
+                                  }), (0, jb.jsx)("div", {
                                     className: "DocsPlaygroundHint",
                                     children: "Start from a preset and change it to suit your character. The line replays as you go."
                                   })]
-                                }), (0, mb.jsx)(Nb, {
-                                  text: ub,
+                                }), (0, jb.jsx)(Db, {
+                                  text: ib,
                                   label: "Copy code"
                                 })]
-                              }), (0, mb.jsxs)("div", {
+                              }), (0, jb.jsxs)("div", {
                                 className: "DocsPlaygroundPresets",
-                                children: [wW.map((bb => (0, mb.jsx)("button", {
+                                children: [oM.map((bb => (0, jb.jsx)("button", {
                                   type: "button",
-                                  className: ab()("DocsVariantChip", {
-                                    Active: Vb === bb
+                                  className: Tb()("DocsVariantChip", {
+                                    Active: zb === bb
                                   }),
-                                  "aria-pressed": Vb === bb,
+                                  "aria-pressed": zb === bb,
                                   onClick: () => {
                                     (bb => {
-                                      const sb = BW.f[bb];
-                                      cb(sb), Lb({
-                                        ...eb,
-                                        voice: sb
+                                      const Ub = mM.i[bb];
+                                      ab(Ub), xb({
+                                        ...yb,
+                                        voice: Ub
                                       })
                                     })(bb)
                                   },
                                   children: bb
-                                }, bb))), !Vb && (0, mb.jsx)("span", {
+                                }, bb))), !zb && (0, jb.jsx)("span", {
                                   className: "DocsVariantChip Active DocsVoiceCustomChip",
                                   children: "custom"
                                 })]
-                              }), (0, mb.jsxs)("div", {
+                              }), (0, jb.jsxs)("div", {
                                 className: "DocsVoiceBody",
-                                children: [(0, mb.jsxs)("div", {
+                                children: [(0, jb.jsxs)("div", {
                                   className: "DocsVoiceScene",
-                                  children: [(0, mb.jsx)("div", {
+                                  children: [(0, jb.jsx)("div", {
                                     className: "DocsVoiceStage",
-                                    children: (0, mb.jsx)(tW.d, {
-                                      display: eb
-                                    }, Ib)
-                                  }), (0, mb.jsxs)("form", {
+                                    children: (0, jb.jsx)(pM.c, {
+                                      display: yb
+                                    }, Bb)
+                                  }), (0, jb.jsxs)("form", {
                                     className: "DocsVoiceLineRow",
                                     onSubmit: bb => {
-                                      bb.preventDefault(), Lb(eb)
+                                      bb.preventDefault(), xb(yb)
                                     },
-                                    children: [(0, mb.jsx)("input", {
-                                      value: sb,
+                                    children: [(0, jb.jsx)("input", {
+                                      value: Ub,
                                       "aria-label": "Line",
                                       placeholder: "Type a line to hear it",
                                       onChange: bb => {
-                                        Wb(bb.target.value)
+                                        Mb(bb.target.value)
                                       }
-                                    }), (0, mb.jsxs)("button", {
+                                    }), (0, jb.jsxs)("button", {
                                       type: "submit",
                                       className: "DocsVoiceSpeakButton",
-                                      children: [(0, mb.jsx)(Qb, {
+                                      children: [(0, jb.jsx)(kb, {
                                         name: "play"
-                                      }), (0, mb.jsx)("span", {
+                                      }), (0, jb.jsx)("span", {
                                         children: "Speak"
                                       })]
                                     })]
-                                  }), (0, mb.jsx)("div", {
+                                  }), (0, jb.jsx)("div", {
                                     className: "DocsVoiceSamples",
-                                    children: rW.map((bb => (0, mb.jsx)("button", {
+                                    children: lM.map((bb => (0, jb.jsx)("button", {
                                       type: "button",
-                                      className: ab()("DocsVariantChip", {
-                                        Active: sb === bb
+                                      className: Tb()("DocsVariantChip", {
+                                        Active: Ub === bb
                                       }),
                                       onClick: () => {
-                                        var cb;
-                                        Wb(cb = bb), Lb({
-                                          ...eb,
-                                          line: cb
+                                        var ab;
+                                        Mb(ab = bb), xb({
+                                          ...yb,
+                                          line: ab
                                         })
                                       },
                                       children: bb
                                     }, bb)))
-                                  }), (0, mb.jsxs)("label", {
+                                  }), (0, jb.jsxs)("label", {
                                     className: "DocsVoiceSpeaker",
-                                    children: [(0, mb.jsx)("span", {
+                                    children: [(0, jb.jsx)("span", {
                                       children: "Speaker"
-                                    }), (0, mb.jsx)("input", {
-                                      value: Tb,
+                                    }), (0, jb.jsx)("input", {
+                                      value: Eb,
                                       placeholder: "No name",
                                       onChange: bb => {
-                                        Ub(bb.target.value)
+                                        Yb(bb.target.value)
                                       }
                                     })]
                                   })]
-                                }), (0, mb.jsx)(AW, {
+                                }), (0, jb.jsx)(KM, {
                                   synth: bb,
-                                  onChange: sb => {
-                                    const kb = {
+                                  onChange: Ub => {
+                                    const Ab = {
                                       ...bb,
-                                      ...sb
+                                      ...Ub
                                     };
-                                    cb(kb);
-                                    const Wb = {
-                                        ...eb,
-                                        voice: kb
+                                    ab(Ab);
+                                    const Mb = {
+                                        ...yb,
+                                        voice: Ab
                                       },
-                                      ab = performance.now();
-                                    if (ab - nb.current >= FW) {
-                                      nb.current = ab, lb();
-                                      const bb = (0, yW.h)(Wb).plan.blips[0];
-                                      bb && (Mb.current = jW((0, BW.g)(kb), [{
+                                      Tb = performance.now();
+                                    if (Tb - Xb.current >= CM) {
+                                      Xb.current = Tb, Rb();
+                                      const bb = (0, NM.g)(Mb).plan.blips[0];
+                                      bb && (Lb.current = OM((0, mM.k)(Ab), [{
                                         ...bb,
                                         atMs: 0
-                                      }], fb))
+                                      }], vb))
                                     }
-                                    window.clearTimeout(Xb.current), Xb.current = window.setTimeout((() => {
-                                      Lb(Cb.current)
-                                    }), vW)
+                                    window.clearTimeout(Pb.current), Pb.current = window.setTimeout((() => {
+                                      xb(Zb.current)
+                                    }), gM)
                                   }
                                 })]
-                              }), (0, mb.jsx)(Yb, {
-                                code: ub,
+                              }), (0, jb.jsx)(fb, {
+                                code: ib,
                                 lang: "ts"
                               })]
                             })
                           }
-                          var ba = sb(4588);
-                          const ca = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
-                            sa = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
-                            ka = [
-                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${sa}`, "g"), ba.m],
+                          var JM = Ub(4553);
+                          const nM = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
+                            SM = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
+                            bT = [
+                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${SM}`, "g"), JM.l],
                               [/\bfunction\s+([A-Za-z_$][\w$]*)\s*\(/g],
-                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, ba.m]
+                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, JM.l]
                             ];
 
-                          function Wa(bb) {
+                          function aT(bb) {
                             return `${bb.pageId}#${bb.anchor}`
                           }
-                          let aa, Ta, Ua;
+                          let UT, AT, MT;
 
-                          function Ia(bb) {
-                            const cb = (0, hb.k)(bb),
-                              sb = new Set;
-                            for (const [, , kb] of cb.matchAll(hb.e)) {
-                              const bb = kb.startsWith("#") ? Ab(kb) : null,
-                                cb = bb ? Wa({
+                          function TT(bb) {
+                            const ab = (0, mb.i)(bb),
+                              Ub = new Set;
+                            for (const [, , Ab] of ab.matchAll(mb.b)) {
+                              const bb = Ab.startsWith("#") ? tb(Ab) : null,
+                                ab = bb ? aT({
                                   pageId: bb.page.id,
                                   anchor: bb.anchor
                                 }) : null;
-                              null !== cb && (aa || (aa = new Set(Gb.flatMap((bb => tb(bb.layout) ? qb(bb).sections.map((cb => Wa({
+                              null !== ab && (UT || (UT = new Set(qb.flatMap((bb => Hb(bb.layout) ? ob(bb).sections.map((ab => aT({
                                 pageId: bb.id,
-                                anchor: cb.heading.anchor
-                              }))) : [])))), aa).has(cb) && sb.add(cb)
+                                anchor: ab.heading.anchor
+                              }))) : [])))), UT).has(ab) && Ub.add(ab)
                             }
-                            for (const [, , kb] of cb.matchAll(ca)) {
-                              const bb = Xc(kb);
-                              bb && sb.add(Wa(bb))
+                            for (const [, , Ab] of ab.matchAll(nM)) {
+                              const bb = Pa(Ab);
+                              bb && Ub.add(aT(bb))
                             }
-                            return sb
+                            return Ub
                           }
 
-                          function Ha(bb, cb) {
-                            const sb = new Set,
-                              kb = function(bb) {
+                          function ET(bb, ab) {
+                            const Ub = new Set,
+                              Ab = function(bb) {
                                 return bb.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "").replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, '""')
                               }(bb);
-                            for (const [, Wb] of kb.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) sb.add(Wb);
-                            for (const [Wb, ab] of ka)
-                              for (const [, bb] of(0, ba.e)(kb, Wb, ab)) cb.has(bb) && sb.add(bb);
-                            return sb
+                            for (const [, Mb] of Ab.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) Ub.add(Mb);
+                            for (const [Mb, Tb] of bT)
+                              for (const [, bb] of(0, JM.f)(Ab, Mb, Tb)) ab.has(bb) && Ub.add(bb);
+                            return Ub
                           }
 
-                          function fa(bb, cb, sb, kb) {
-                            const Wb = bb.get(cb);
-                            Wb ? !kb && Wb.some((bb => bb.pageId === sb.pageId)) || Wb.push(sb) : bb.set(cb, [sb])
+                          function YT(bb, ab, Ub, Ab) {
+                            const Mb = bb.get(ab);
+                            Mb ? !Ab && Mb.some((bb => bb.pageId === Ub.pageId)) || Mb.push(Ub) : bb.set(ab, [Ub])
                           }
-                          const Ma = /^[A-Za-z_$][\w$]*$/;
+                          const BT = /^[A-Za-z_$][\w$]*$/;
 
-                          function Xa(bb) {
-                            return Ma.test(bb.name) ? bb.name : "options"
-                          }
-
-                          function na(bb, cb) {
-                            const sb = bb.params.map(Xa).join(", ");
-                            return cb ? `${bb.name} = (${sb}) => {\n\t\n}` : `api.${bb.name}(${sb})`
+                          function eT(bb) {
+                            return BT.test(bb.name) ? bb.name : "options"
                           }
 
-                          function ma(bb) {
+                          function vT(bb, ab) {
+                            const Ub = bb.params.map(eT).join(", ");
+                            return ab ? `${bb.name} = (${Ub}) => {\n\t\n}` : `api.${bb.name}(${Ub})`
+                          }
+
+                          function LT(bb) {
                             let {
-                              method: cb,
-                              isCallback: sb
+                              method: ab,
+                              isCallback: Ub
                             } = bb;
-                            return (0, mb.jsxs)("div", {
+                            return (0, jb.jsxs)("div", {
                               className: "DocsSignature",
-                              children: [(0, mb.jsxs)("span", {
+                              children: [(0, jb.jsxs)("span", {
                                 className: "DocsSignatureCode",
-                                children: [sb ? (0, mb.jsxs)(mb.Fragment, {
-                                  children: [(0, mb.jsx)("span", {
+                                children: [Ub ? (0, jb.jsxs)(jb.Fragment, {
+                                  children: [(0, jb.jsx)("span", {
                                     className: "DocsSignatureName",
-                                    children: cb.name
-                                  }), (0, mb.jsx)("span", {
+                                    children: ab.name
+                                  }), (0, jb.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: " = ("
                                   })]
-                                }) : (0, mb.jsxs)(mb.Fragment, {
-                                  children: [(0, mb.jsx)("span", {
+                                }) : (0, jb.jsxs)(jb.Fragment, {
+                                  children: [(0, jb.jsx)("span", {
                                     className: "DocsSignatureObject",
                                     children: "api."
-                                  }), (0, mb.jsx)("span", {
+                                  }), (0, jb.jsx)("span", {
                                     className: "DocsSignatureName",
-                                    children: cb.name
-                                  }), (0, mb.jsx)("span", {
+                                    children: ab.name
+                                  }), (0, jb.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: "("
                                   })]
-                                }), cb.params.map(((bb, sb) => (0, mb.jsxs)(kb.Fragment, {
-                                  children: [sb > 0 && (0, mb.jsx)("span", {
+                                }), ab.params.map(((bb, Ub) => (0, jb.jsxs)(Ab.Fragment, {
+                                  children: [Ub > 0 && (0, jb.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: ", "
-                                  }), (0, mb.jsx)("a", {
+                                  }), (0, jb.jsx)("a", {
                                     className: "DocsSignatureParam",
-                                    href: `#${cb.name}-${Xa(bb)}`,
+                                    href: `#${ab.name}-${eT(bb)}`,
                                     children: bb.name
                                   })]
-                                }, bb.name))), (0, mb.jsx)("span", {
+                                }, bb.name))), (0, jb.jsx)("span", {
                                   className: "DocsTypePunctuation",
-                                  children: sb ? ") => " : ")"
-                                }), sb && !cb.returns && (0, mb.jsx)("span", {
+                                  children: Ub ? ") => " : ")"
+                                }), Ub && !ab.returns && (0, jb.jsx)("span", {
                                   className: "DocsTypeKeyword",
                                   children: "void"
                                 })]
-                              }), cb.returns && cb.returns.type && (0, mb.jsxs)("span", {
+                              }), ab.returns && ab.returns.type && (0, jb.jsxs)("span", {
                                 className: "DocsSignatureReturns",
-                                children: [!sb && (0, mb.jsx)("span", {
+                                children: [!Ub && (0, jb.jsx)("span", {
                                   className: "DocsSignatureArrow",
                                   children: "\u2192"
-                                }), (0, mb.jsx)(Jc, {
-                                  type: cb.returns.type
+                                }), (0, jb.jsx)(pa, {
+                                  type: ab.returns.type
                                 })]
                               })]
                             })
                           }
 
-                          function la(bb) {
+                          function PT(bb) {
                             let {
-                              title: cb,
-                              references: sb
+                              title: ab,
+                              references: Ub
                             } = bb;
-                            const Wb = (0, kb.useContext)(nc);
-                            return (0, mb.jsxs)("div", {
+                            const Mb = (0, Ab.useContext)(Xa);
+                            return (0, jb.jsxs)("div", {
                               className: "DocsCardReferences",
-                              children: [(0, mb.jsx)("span", {
+                              children: [(0, jb.jsx)("span", {
                                 className: "DocsCardReferencesTitle",
-                                children: cb
-                              }), sb.map((bb => (0, mb.jsx)(Tb.d, {
-                                to: rb(Wb, Zb(bb.pageId), bb.anchor),
+                                children: ab
+                              }), Ub.map((bb => (0, jb.jsx)(Eb.c, {
+                                to: sb(Mb, rb(bb.pageId), bb.anchor),
                                 children: bb.label
                               }, `${bb.pageId}#${bb.anchor}`)))]
                             })
                           }
 
-                          function Qa(bb) {
-                            var cb, sb;
+                          function XT(bb) {
+                            var ab, Ub;
                             let {
-                              pageId: kb,
-                              anchor: Wb
+                              pageId: Ab,
+                              anchor: Mb
                             } = bb;
-                            const ab = Wa({
-                                pageId: kb,
-                                anchor: Wb
+                            const Tb = aT({
+                                pageId: Ab,
+                                anchor: Mb
                               }),
-                              Tb = null !== (cb = function() {
-                                if (!Ua) {
-                                  Ua = new Map;
-                                  const kb = new Set(Gb.filter((bb => "callbacks" === bb.layout)).flatMap((bb => qb(bb).sections.map((bb => bb.heading.text)))));
-                                  for (const Wb of Gb)
-                                    if ("article" === Wb.layout || "snippets" === Wb.layout)
-                                      for (const ab of (0, hb.z)(qb(Wb)))
+                              Eb = null !== (ab = function() {
+                                if (!MT) {
+                                  MT = new Map;
+                                  const Ab = new Set(qb.filter((bb => "callbacks" === bb.layout)).flatMap((bb => ob(bb).sections.map((bb => bb.heading.text)))));
+                                  for (const Mb of qb)
+                                    if ("article" === Mb.layout || "snippets" === Mb.layout)
+                                      for (const Tb of (0, mb.u)(ob(Mb)))
                                         for (const {
-                                            code: Tb
+                                            code: Eb
                                           }
-                                          of(0, hb.o)(ab.blocks))
-                                          for (const Ub of Ha(Tb, kb)) {
-                                            const kb = Mc().get(Ub);
-                                            if (kb) {
-                                              var bb, cb, sb;
-                                              const Tb = {
-                                                pageId: Wb.id,
-                                                anchor: null !== (bb = null === (cb = ab.heading) || void 0 === cb ? void 0 : cb.anchor) && void 0 !== bb ? bb : "",
-                                                label: null !== (sb = Wb.navTitle) && void 0 !== sb ? sb : Wb.title
+                                          of(0, mb.m)(Tb.blocks))
+                                          for (const Yb of ET(Eb, Ab)) {
+                                            const Ab = La().get(Yb);
+                                            if (Ab) {
+                                              var bb, ab, Ub;
+                                              const Eb = {
+                                                pageId: Mb.id,
+                                                anchor: null !== (bb = null === (ab = Tb.heading) || void 0 === ab ? void 0 : ab.anchor) && void 0 !== bb ? bb : "",
+                                                label: null !== (Ub = Mb.navTitle) && void 0 !== Ub ? Ub : Mb.title
                                               };
-                                              fa(Ua, Wa(kb), Tb, !1)
+                                              YT(MT, aT(Ab), Eb, !1)
                                             }
                                           }
                                 }
-                                return Ua
-                              }().get(ab)) && void 0 !== cb ? cb : [],
-                              Ub = null !== (sb = function() {
-                                if (!Ta) {
-                                  Ta = new Map;
-                                  const bb = Zb("changelog");
-                                  for (const cb of qb(bb).sections) {
-                                    const sb = new Set(cb.blocks.flatMap((bb => [...Ia(bb)])));
-                                    for (const kb of sb) {
-                                      const sb = {
+                                return MT
+                              }().get(Tb)) && void 0 !== ab ? ab : [],
+                              Yb = null !== (Ub = function() {
+                                if (!AT) {
+                                  AT = new Map;
+                                  const bb = rb("changelog");
+                                  for (const ab of ob(bb).sections) {
+                                    const Ub = new Set(ab.blocks.flatMap((bb => [...TT(bb)])));
+                                    for (const Ab of Ub) {
+                                      const Ub = {
                                         pageId: bb.id,
-                                        anchor: cb.heading.anchor,
-                                        label: cb.heading.text
+                                        anchor: ab.heading.anchor,
+                                        label: ab.heading.text
                                       };
-                                      fa(Ta, kb, sb, !0)
+                                      YT(AT, Ab, Ub, !0)
                                     }
                                   }
                                 }
-                                return Ta
-                              }().get(ab)) && void 0 !== sb ? sb : [];
-                            return 0 === Tb.length && 0 === Ub.length ? null : (0, mb.jsxs)("footer", {
+                                return AT
+                              }().get(Tb)) && void 0 !== Ub ? Ub : [];
+                            return 0 === Eb.length && 0 === Yb.length ? null : (0, jb.jsxs)("footer", {
                               className: "DocsCardFooter",
-                              children: [Tb.length > 0 && (0, mb.jsx)(la, {
+                              children: [Eb.length > 0 && (0, jb.jsx)(PT, {
                                 title: "Used in",
-                                references: Tb
-                              }), Ub.length > 0 && (0, mb.jsx)(la, {
+                                references: Eb
+                              }), Yb.length > 0 && (0, jb.jsx)(PT, {
                                 title: "Changelog",
-                                references: Ub
+                                references: Yb
                               })]
                             })
                           }
 
-                          function ea(bb) {
+                          function jT(bb) {
                             let {
-                              method: cb,
-                              pageId: sb,
-                              anchor: kb,
-                              isCallback: Wb
+                              method: ab,
+                              pageId: Ub,
+                              anchor: Ab,
+                              isCallback: Mb
                             } = bb;
-                            const ab = Wb ? void 0 : Uc().get(cb.name),
-                              Tb = cb.description.length > 0 || null === ab || void 0 === ab || !ab.description ? cb.description : (0, hb.G)(ab.description);
-                            return (0, mb.jsxs)("article", {
+                            const Tb = Mb ? void 0 : Ya().get(ab.name),
+                              Eb = ab.description.length > 0 || null === Tb || void 0 === Tb || !Tb.description ? ab.description : (0, mb.z)(Tb.description);
+                            return (0, jb.jsxs)("article", {
                               className: "DocsCard DocsMethodCard",
-                              children: [(0, mb.jsxs)("header", {
+                              children: [(0, jb.jsxs)("header", {
                                 className: "DocsCardHeader",
-                                children: [(0, mb.jsx)(Hs, {
+                                children: [(0, jb.jsx)(eU, {
                                   level: 2,
-                                  text: cb.name,
-                                  anchor: kb,
+                                  text: ab.name,
+                                  anchor: Ab,
                                   className: "DocsCardTitle"
-                                }), (0, mb.jsx)(Nb, {
-                                  text: na(cb, Wb),
-                                  label: Wb ? "Copy handler" : "Copy call",
+                                }), (0, jb.jsx)(Db, {
+                                  text: vT(ab, Mb),
+                                  label: Mb ? "Copy handler" : "Copy call",
                                   className: "DocsCardCopy"
                                 })]
-                              }), (0, mb.jsx)(ma, {
-                                method: cb,
-                                isCallback: Wb
-                              }), ab && null !== ab.deprecation && (0, mb.jsxs)("aside", {
+                              }), (0, jb.jsx)(LT, {
+                                method: ab,
+                                isCallback: Mb
+                              }), Tb && null !== Tb.deprecation && (0, jb.jsxs)("aside", {
                                 className: "DocsCallout warning DocsDeprecation",
-                                children: [(0, mb.jsx)("strong", {
+                                children: [(0, jb.jsx)("strong", {
                                   children: "Deprecated"
-                                }), ab.deprecation && (0, mb.jsxs)(mb.Fragment, {
-                                  children: [": ", (0, mb.jsx)(uc, {
-                                    text: (Ub = ab.deprecation, (0, ba.t)(Ub, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, ba.i)("`\\w"), (bb => {
-                                      let [cb] = bb;
-                                      return Mc().has(cb) ? `\`${cb}\`` : cb
+                                }), Tb.deprecation && (0, jb.jsxs)(jb.Fragment, {
+                                  children: [": ", (0, jb.jsx)(ia, {
+                                    text: (Yb = Tb.deprecation, (0, JM.s)(Yb, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, JM.h)("`\\w"), (bb => {
+                                      let [ab] = bb;
+                                      return La().has(ab) ? `\`${ab}\`` : ab
                                     })))
                                   })]
                                 })]
-                              }), Tb.length > 0 && (0, mb.jsx)("div", {
+                              }), Eb.length > 0 && (0, jb.jsx)("div", {
                                 className: "DocsProse DocsCardBody",
-                                children: (0, mb.jsx)(ns, {
-                                  blocks: Tb
+                                children: (0, jb.jsx)(XU, {
+                                  blocks: Eb
                                 })
-                              }), cb.params.length > 0 && (0, mb.jsxs)("section", {
+                              }), ab.params.length > 0 && (0, jb.jsxs)("section", {
                                 className: "DocsCardPart",
-                                children: [(0, mb.jsx)("h3", {
+                                children: [(0, jb.jsx)("h3", {
                                   className: "DocsCardPartTitle",
                                   children: "Parameters"
-                                }), (0, mb.jsx)("dl", {
+                                }), (0, jb.jsx)("dl", {
                                   className: "DocsParamList",
-                                  children: cb.params.map((bb => (0, mb.jsxs)("div", {
-                                    id: `${cb.name}-${Xa(bb)}`,
+                                  children: ab.params.map((bb => (0, jb.jsxs)("div", {
+                                    id: `${ab.name}-${eT(bb)}`,
                                     className: "DocsParam",
-                                    children: [(0, mb.jsxs)("dt", {
-                                      children: [(0, mb.jsx)("code", {
+                                    children: [(0, jb.jsxs)("dt", {
+                                      children: [(0, jb.jsx)("code", {
                                         className: "DocsParamName",
                                         children: bb.name
-                                      }), (0, mb.jsx)(Jc, {
+                                      }), (0, jb.jsx)(pa, {
                                         type: bb.type
                                       })]
-                                    }), bb.description && (0, mb.jsx)("dd", {
-                                      children: (0, mb.jsx)(uc, {
+                                    }), bb.description && (0, jb.jsx)("dd", {
+                                      children: (0, jb.jsx)(ia, {
                                         text: bb.description
                                       })
                                     })]
                                   }, bb.name)))
                                 })]
-                              }), cb.returns && (cb.returns.type || cb.returns.description.length > 0) && (0, mb.jsxs)("section", {
+                              }), ab.returns && (ab.returns.type || ab.returns.description.length > 0) && (0, jb.jsxs)("section", {
                                 className: "DocsCardPart",
-                                children: [(0, mb.jsx)("h3", {
+                                children: [(0, jb.jsx)("h3", {
                                   className: "DocsCardPartTitle",
                                   children: "Returns"
-                                }), (0, mb.jsxs)("div", {
+                                }), (0, jb.jsxs)("div", {
                                   className: "DocsReturns",
-                                  children: [cb.returns.type && (0, mb.jsx)(Jc, {
-                                    type: cb.returns.type
-                                  }), cb.returns.description.length > 0 && (0, mb.jsx)("div", {
+                                  children: [ab.returns.type && (0, jb.jsx)(pa, {
+                                    type: ab.returns.type
+                                  }), ab.returns.description.length > 0 && (0, jb.jsx)("div", {
                                     className: "DocsProse",
-                                    children: (0, mb.jsx)(ns, {
-                                      blocks: cb.returns.description
+                                    children: (0, jb.jsx)(XU, {
+                                      blocks: ab.returns.description
                                     })
                                   })]
                                 })]
-                              }), (0, mb.jsx)(Qa, {
-                                pageId: sb,
-                                anchor: kb
+                              }), (0, jb.jsx)(XT, {
+                                pageId: Ub,
+                                anchor: Ab
                               })]
                             });
-                            var Ub
+                            var Yb
                           }
 
-                          function Ca(bb) {
-                            var cb;
-                            return null !== bb.defaultValue && "undefined" !== bb.defaultValue ? bb.defaultValue : null !== (cb = bb.example) && void 0 !== cb ? cb : "value"
+                          function RT(bb) {
+                            var ab;
+                            return null !== bb.defaultValue && "undefined" !== bb.defaultValue ? bb.defaultValue : null !== (ab = bb.example) && void 0 !== ab ? ab : "value"
                           }
 
-                          function Na(bb) {
+                          function kT(bb) {
                             let {
-                              setting: cb,
-                              pageId: sb,
-                              anchor: kb,
-                              setterSnippet: Wb
+                              setting: ab,
+                              pageId: Ub,
+                              anchor: Ab,
+                              setterSnippet: Mb
                             } = bb;
-                            const ab = null === cb.defaultValue ? null : ec(cb.defaultValue);
-                            return (0, mb.jsxs)("article", {
+                            const Tb = null === ab.defaultValue ? null : ya(ab.defaultValue);
+                            return (0, jb.jsxs)("article", {
                               className: "DocsCard DocsSettingCard",
-                              children: [(0, mb.jsxs)("header", {
+                              children: [(0, jb.jsxs)("header", {
                                 className: "DocsCardHeader",
-                                children: [(0, mb.jsx)(Hs, {
+                                children: [(0, jb.jsx)(eU, {
                                   level: 2,
-                                  text: cb.name,
-                                  anchor: kb,
+                                  text: ab.name,
+                                  anchor: Ab,
                                   className: "DocsCardTitle"
-                                }), (0, mb.jsx)(Nb, {
-                                  text: Wb(cb.name, Ca(cb)),
+                                }), (0, jb.jsx)(Db, {
+                                  text: Mb(ab.name, RT(ab)),
                                   label: "Copy setter",
                                   className: "DocsCardCopy"
                                 })]
-                              }), (0, mb.jsxs)("dl", {
+                              }), (0, jb.jsxs)("dl", {
                                 className: "DocsSettingFacts",
-                                children: [(0, mb.jsxs)("div", {
-                                  children: [(0, mb.jsx)("dt", {
+                                children: [(0, jb.jsxs)("div", {
+                                  children: [(0, jb.jsx)("dt", {
                                     children: "Type"
-                                  }), (0, mb.jsx)("dd", {
-                                    children: (0, mb.jsx)(Jc, {
-                                      type: cb.type
+                                  }), (0, jb.jsx)("dd", {
+                                    children: (0, jb.jsx)(pa, {
+                                      type: ab.type
                                     })
                                   })]
-                                }), null !== cb.defaultValue && (0, mb.jsxs)("div", {
-                                  children: [(0, mb.jsx)("dt", {
+                                }), null !== ab.defaultValue && (0, jb.jsxs)("div", {
+                                  children: [(0, jb.jsx)("dt", {
                                     children: "Default"
-                                  }), (0, mb.jsx)("dd", {
-                                    children: (0, mb.jsxs)("code", {
+                                  }), (0, jb.jsx)("dd", {
+                                    children: (0, jb.jsxs)("code", {
                                       className: "DocsInlineCode DocsDefaultValue",
-                                      children: [ab && (0, mb.jsx)(Cc, {
-                                        colour: ab
-                                      }), cb.defaultValue]
+                                      children: [Tb && (0, jb.jsx)(Za, {
+                                        colour: Tb
+                                      }), ab.defaultValue]
                                     })
                                   })]
-                                }), null !== cb.example && (0, mb.jsxs)("div", {
-                                  children: [(0, mb.jsx)("dt", {
+                                }), null !== ab.example && (0, jb.jsxs)("div", {
+                                  children: [(0, jb.jsx)("dt", {
                                     children: "Example"
-                                  }), (0, mb.jsx)("dd", {
-                                    children: (0, mb.jsx)("code", {
+                                  }), (0, jb.jsx)("dd", {
+                                    children: (0, jb.jsx)("code", {
                                       className: "DocsInlineCode",
-                                      children: cb.example
+                                      children: ab.example
                                     })
                                   })]
                                 })]
-                              }), cb.description.length > 0 && (0, mb.jsx)("div", {
+                              }), ab.description.length > 0 && (0, jb.jsx)("div", {
                                 className: "DocsProse DocsCardBody",
-                                children: (0, mb.jsx)(ns, {
-                                  blocks: cb.description
+                                children: (0, jb.jsx)(XU, {
+                                  blocks: ab.description
                                 })
-                              }), (0, mb.jsx)(Qa, {
-                                pageId: sb,
-                                anchor: kb
+                              }), (0, jb.jsx)(XT, {
+                                pageId: Ub,
+                                anchor: Ab
                               })]
                             })
                           }
 
-                          function Va(bb) {
+                          function yT(bb) {
                             let {
-                              section: cb
+                              section: ab
                             } = bb;
-                            return (0, mb.jsxs)("article", {
+                            return (0, jb.jsxs)("article", {
                               className: "DocsCard DocsSnippetCard",
-                              children: [(0, mb.jsx)(Hs, {
+                              children: [(0, jb.jsx)(eU, {
                                 level: 2,
-                                text: cb.heading.text,
-                                anchor: cb.heading.anchor,
+                                text: ab.heading.text,
+                                anchor: ab.heading.anchor,
                                 className: "DocsCardTitle"
-                              }), (0, mb.jsx)("div", {
+                              }), (0, jb.jsx)("div", {
                                 className: "DocsProse",
-                                children: (0, mb.jsx)(ns, {
-                                  blocks: cb.blocks
+                                children: (0, jb.jsx)(XU, {
+                                  blocks: ab.blocks
                                 })
                               })]
                             })
                           }
 
-                          function La(bb) {
+                          function ZT(bb) {
                             let {
-                              section: cb
+                              section: ab
                             } = bb;
-                            return (0, mb.jsxs)("section", {
+                            return (0, jb.jsxs)("section", {
                               className: "DocsProse DocsArticleSection",
-                              children: [(0, mb.jsx)(Hs, {
-                                level: cb.heading.level,
-                                text: cb.heading.text,
-                                anchor: cb.heading.anchor
-                              }), (0, mb.jsx)(ns, {
-                                blocks: cb.blocks
+                              children: [(0, jb.jsx)(eU, {
+                                level: ab.heading.level,
+                                text: ab.heading.text,
+                                anchor: ab.heading.anchor
+                              }), (0, jb.jsx)(XU, {
+                                blocks: ab.blocks
                               })]
                             })
                           }
-                          const ua = {
+                          const DT = {
                             methods: "methods",
                             callbacks: "callbacks",
                             settings: "settings",
@@ -4862,118 +4862,118 @@ export const modules = {
                             article: "sections"
                           };
 
-                          function Ya(bb) {
+                          function zT(bb) {
                             let {
-                              page: cb,
-                              section: sb
+                              page: ab,
+                              section: Ub
                             } = bb;
-                            if ("methods" === cb.layout || "callbacks" === cb.layout) return (0, mb.jsx)(ea, {
-                              method: Ys(sb),
-                              pageId: cb.id,
-                              anchor: sb.heading.anchor,
-                              isCallback: "callbacks" === cb.layout
+                            if ("methods" === ab.layout || "callbacks" === ab.layout) return (0, jb.jsx)(jT, {
+                              method: fU(Ub),
+                              pageId: ab.id,
+                              anchor: Ub.heading.anchor,
+                              isCallback: "callbacks" === ab.layout
                             });
-                            if ("settings" === cb.layout) {
+                            if ("settings" === ab.layout) {
                               const bb = function(bb) {
-                                const cb = {
+                                const ab = {
                                   name: bb.heading.text,
                                   type: "",
                                   defaultValue: null,
                                   example: null,
                                   description: []
                                 };
-                                for (const kb of bb.blocks) {
-                                  var sb;
-                                  if (us(kb)) continue;
-                                  const bb = "paragraph" === kb.kind ? kb.text.match(hs) : null;
+                                for (const Ab of bb.blocks) {
+                                  var Ub;
+                                  if (iU(Ab)) continue;
+                                  const bb = "paragraph" === Ab.kind ? Ab.text.match(mU) : null;
                                   if (!bb) {
-                                    cb.description.push(kb);
+                                    ab.description.push(Ab);
                                     continue
                                   }
-                                  const Wb = null !== (sb = Ls(bb[2])) && void 0 !== sb ? sb : bb[2];
-                                  "Type" === bb[1] ? cb.type = Wb : "Default" === bb[1] ? cb.defaultValue = Wb : "" !== Wb && (cb.example = Wb)
+                                  const Mb = null !== (Ub = xU(bb[2])) && void 0 !== Ub ? Ub : bb[2];
+                                  "Type" === bb[1] ? ab.type = Mb : "Default" === bb[1] ? ab.defaultValue = Mb : "" !== Mb && (ab.example = Mb)
                                 }
-                                return cb.type ? cb : null
-                              }(sb);
-                              if (bb) return (0, mb.jsx)(Na, {
+                                return ab.type ? ab : null
+                              }(Ub);
+                              if (bb) return (0, jb.jsx)(kT, {
                                 setting: bb,
-                                pageId: cb.id,
-                                anchor: sb.heading.anchor,
-                                setterSnippet: cb.setterSnippet
+                                pageId: ab.id,
+                                anchor: Ub.heading.anchor,
+                                setterSnippet: ab.setterSnippet
                               })
                             }
-                            return "snippets" === cb.layout ? (0, mb.jsx)(Va, {
-                              section: sb
-                            }) : "changelog" === cb.layout ? (0, mb.jsxs)("section", {
+                            return "snippets" === ab.layout ? (0, jb.jsx)(yT, {
+                              section: Ub
+                            }) : "changelog" === ab.layout ? (0, jb.jsxs)("section", {
                               className: "DocsChangelogEntry",
-                              children: [(0, mb.jsx)("div", {
+                              children: [(0, jb.jsx)("div", {
                                 className: "DocsChangelogDate",
-                                children: (0, mb.jsx)(Hs, {
+                                children: (0, jb.jsx)(eU, {
                                   level: 2,
-                                  text: sb.heading.text,
-                                  anchor: sb.heading.anchor
+                                  text: Ub.heading.text,
+                                  anchor: Ub.heading.anchor
                                 })
-                              }), (0, mb.jsx)("div", {
+                              }), (0, jb.jsx)("div", {
                                 className: "DocsProse DocsChangelogBody",
-                                children: (0, mb.jsx)(ns, {
-                                  blocks: gs(sb.blocks)
+                                children: (0, jb.jsx)(XU, {
+                                  blocks: pU(Ub.blocks)
                                 })
                               })]
-                            }) : cb.gallery ? (0, mb.jsxs)("section", {
+                            }) : ab.gallery ? (0, jb.jsxs)("section", {
                               className: "DocsProse DocsArticleSection",
-                              children: [(0, mb.jsx)(Hs, {
-                                level: sb.heading.level,
-                                text: sb.heading.text,
-                                anchor: sb.heading.anchor
-                              }), (0, mb.jsx)(tk, {
-                                kind: cb.gallery,
-                                content: qb(cb),
-                                blocks: sb.blocks
+                              children: [(0, jb.jsx)(eU, {
+                                level: Ub.heading.level,
+                                text: Ub.heading.text,
+                                anchor: Ub.heading.anchor
+                              }), (0, jb.jsx)(NA, {
+                                kind: ab.gallery,
+                                content: ob(ab),
+                                blocks: Ub.blocks
                               })]
-                            }) : (0, mb.jsx)(La, {
-                              section: sb
+                            }) : (0, jb.jsx)(ZT, {
+                              section: Ub
                             })
                           }
 
-                          function ha(bb) {
+                          function xT(bb) {
                             let {
-                              page: cb,
-                              onTocChange: sb
+                              page: ab,
+                              onTocChange: Ub
                             } = bb;
-                            const Wb = qb(cb),
-                              [ab, Tb] = (0, kb.useState)(""),
-                              Ub = "article" !== cb.layout,
-                              Ib = Qs(cb.gallery) ? cb.gallery : null,
-                              Hb = null !== Ib,
-                              fb = ab.trim().toLowerCase(),
-                              Mb = (0, kb.useRef)(null),
-                              Xb = (0, kb.useCallback)((bb => {
-                                var cb;
-                                null === (cb = Mb.current) || void 0 === cb || cb.preview(bb)
+                            const Mb = ob(ab),
+                              [Tb, Eb] = (0, Ab.useState)(""),
+                              Yb = "article" !== ab.layout,
+                              Bb = kU(ab.gallery) ? ab.gallery : null,
+                              eb = null !== Bb,
+                              vb = Tb.trim().toLowerCase(),
+                              Lb = (0, Ab.useRef)(null),
+                              Pb = (0, Ab.useCallback)((bb => {
+                                var ab;
+                                null === (ab = Lb.current) || void 0 === ab || ab.preview(bb)
                               }), []),
-                              nb = (0, kb.useMemo)((() => {
-                                if (!cb.hasParticlePlayground) return [];
-                                const bb = Ps(Wb.intro).find((bb => "names" === bb.kind && !bb.names.some((bb => null !== qs(bb.name)))));
+                              Xb = (0, Ab.useMemo)((() => {
+                                if (!ab.hasParticlePlayground) return [];
+                                const bb = IU(Mb.intro).find((bb => "names" === bb.kind && !bb.names.some((bb => null !== KU(bb.name)))));
                                 return "names" === (null === bb || void 0 === bb ? void 0 : bb.kind) ? bb.names.map((bb => bb.name)) : []
-                              }), [cb, Wb]),
-                              lb = (0, kb.useMemo)((() => {
-                                if (!cb.hasTextPlayground) return [];
-                                const bb = Wb.sections.flatMap((bb => bb.blocks.flatMap((bb => {
-                                  var cb;
-                                  return (null !== (cb = ys(bb)) && void 0 !== cb ? cb : []).flatMap((bb => zc(bb.name) ? [bb.name] : []))
+                              }), [ab, Mb]),
+                              Rb = (0, Ab.useMemo)((() => {
+                                if (!ab.hasTextPlayground) return [];
+                                const bb = Mb.sections.flatMap((bb => bb.blocks.flatMap((bb => {
+                                  var ab;
+                                  return (null !== (ab = HU(bb)) && void 0 !== ab ? ab : []).flatMap((bb => Ka(bb.name) ? [bb.name] : []))
                                 }))));
                                 return [...new Set(bb)]
-                              }), [cb, Wb]),
-                              Qb = (0, kb.useMemo)((() => fb ? Wb.sections.filter((bb => function(bb, cb) {
-                                return !!bb.heading.text.toLowerCase().includes(cb) || bb.blocks.some((bb => (0, hb.k)(bb).toLowerCase().includes(cb)))
-                              }(bb, fb))) : Wb.sections), [Wb, fb]),
-                              eb = (0, kb.useMemo)((() => function(bb, cb) {
-                                return "article" !== bb.layout ? cb.map((bb => ({
+                              }), [ab, Mb]),
+                              kb = (0, Ab.useMemo)((() => vb ? Mb.sections.filter((bb => function(bb, ab) {
+                                return !!bb.heading.text.toLowerCase().includes(ab) || bb.blocks.some((bb => (0, mb.i)(bb).toLowerCase().includes(ab)))
+                              }(bb, vb))) : Mb.sections), [Mb, vb]),
+                              yb = (0, Ab.useMemo)((() => function(bb, ab) {
+                                return "article" !== bb.layout ? ab.map((bb => ({
                                   anchor: bb.heading.anchor,
                                   text: bb.heading.text,
                                   level: 2
-                                }))) : cb.flatMap((bb => {
-                                  const cb = bb.blocks.flatMap((bb => "heading" === bb.kind && 3 === bb.level ? [{
+                                }))) : ab.flatMap((bb => {
+                                  const ab = bb.blocks.flatMap((bb => "heading" === bb.kind && 3 === bb.level ? [{
                                     anchor: bb.anchor,
                                     text: bb.text,
                                     level: 3
@@ -4982,217 +4982,217 @@ export const modules = {
                                     anchor: bb.heading.anchor,
                                     text: bb.heading.text,
                                     level: 2
-                                  }, ...cb]
+                                  }, ...ab]
                                 }))
-                              }(cb, Qb)), [cb, Qb]);
-                            return (0, kb.useEffect)((() => {
-                              sb(eb)
-                            }), [eb, sb]), (0, mb.jsxs)("article", {
+                              }(ab, kb)), [ab, kb]);
+                            return (0, Ab.useEffect)((() => {
+                              Ub(yb)
+                            }), [yb, Ub]), (0, jb.jsxs)("article", {
                               className: "DocsPage",
-                              children: [(0, mb.jsxs)("header", {
+                              children: [(0, jb.jsxs)("header", {
                                 className: "DocsPageHeader",
-                                children: [(0, mb.jsx)("h1", {
+                                children: [(0, jb.jsx)("h1", {
                                   className: "DocsPageTitle",
-                                  children: Wb.title || cb.title
-                                }), (0, mb.jsx)("p", {
+                                  children: Mb.title || ab.title
+                                }), (0, jb.jsx)("p", {
                                   className: "DocsPageSummary",
-                                  children: cb.summary
-                                }), (0, mb.jsx)(xk, {
-                                  page: cb
-                                }), Ub && (0, mb.jsx)("div", {
+                                  children: ab.summary
+                                }), (0, jb.jsx)(VA, {
+                                  page: ab
+                                }), Yb && (0, jb.jsx)("div", {
                                   className: "DocsPageStats",
-                                  children: (0, mb.jsxs)("span", {
-                                    children: [(0, mb.jsx)("strong", {
-                                      children: Wb.sections.length
-                                    }), " ", ua[cb.layout]]
+                                  children: (0, jb.jsxs)("span", {
+                                    children: [(0, jb.jsx)("strong", {
+                                      children: Mb.sections.length
+                                    }), " ", DT[ab.layout]]
                                   })
                                 })]
-                              }), "" === cb.slug && (0, mb.jsx)(Pk, {}), Ib && (0, mb.jsx)(Ok, {
-                                kind: Ib
-                              }, Ib), cb.hasParticlePlayground && (0, mb.jsx)(fW, {
-                                ref: Mb,
-                                textures: nb
-                              }), !Hb && Wb.intro.length > 0 && (0, mb.jsx)("div", {
+                              }), "" === ab.slug && (0, jb.jsx)(HA, {}), Bb && (0, jb.jsx)(hA, {
+                                kind: Bb
+                              }, Bb), ab.hasParticlePlayground && (0, jb.jsx)(YM, {
+                                ref: Lb,
+                                textures: Xb
+                              }), !eb && Mb.intro.length > 0 && (0, jb.jsx)("div", {
                                 className: "DocsProse DocsPageIntro",
-                                children: cb.gallery ? (0, mb.jsx)(Nk.Provider, {
-                                  value: cb.hasParticlePlayground ? Xb : null,
-                                  children: (0, mb.jsx)(tk, {
-                                    kind: cb.gallery,
-                                    content: Wb,
-                                    blocks: Wb.intro
+                                children: ab.gallery ? (0, jb.jsx)(yA.Provider, {
+                                  value: ab.hasParticlePlayground ? Pb : null,
+                                  children: (0, jb.jsx)(NA, {
+                                    kind: ab.gallery,
+                                    content: Mb,
+                                    blocks: Mb.intro
                                   })
-                                }) : (0, mb.jsx)(ns, {
-                                  blocks: gs(Wb.intro)
+                                }) : (0, jb.jsx)(XU, {
+                                  blocks: pU(Mb.intro)
                                 })
-                              }), cb.hasTextPlayground && (0, mb.jsx)(gW, {
-                                fontAwesomeIcons: lb
-                              }), cb.hasVoicePlayground && (0, mb.jsx)(pW, {}), cb.childPageIds && (0, mb.jsx)(Pk, {
-                                cards: cb.childPageIds.map((bb => ({
+                              }), ab.hasTextPlayground && (0, jb.jsx)(fM, {
+                                fontAwesomeIcons: Rb
+                              }), ab.hasVoicePlayground && (0, jb.jsx)(cM, {}), ab.childPageIds && (0, jb.jsx)(HA, {
+                                cards: ab.childPageIds.map((bb => ({
                                   pageId: bb
                                 }))),
-                                label: cb.title
-                              }), Ub && (0, mb.jsx)(Ns, {
+                                label: ab.title
+                              }), Yb && (0, jb.jsx)(DU, {
                                 className: "DocsFilterBar",
-                                value: ab,
-                                placeholder: `Filter ${Wb.sections.length} ${ua[cb.layout]}\u2026`,
-                                label: `Filter ${ua[cb.layout]}`,
-                                onChange: Tb,
-                                count: fb ? {
-                                  visible: Qb.length,
-                                  total: Wb.sections.length
+                                value: Tb,
+                                placeholder: `Filter ${Mb.sections.length} ${DT[ab.layout]}\u2026`,
+                                label: `Filter ${DT[ab.layout]}`,
+                                onChange: Eb,
+                                count: vb ? {
+                                  visible: kb.length,
+                                  total: Mb.sections.length
                                 } : null
-                              }), !Hb && (0, mb.jsxs)("div", {
-                                className: `DocsSections Layout-${cb.layout}`,
-                                children: [Qb.map((bb => (0, mb.jsx)(Ya, {
-                                  page: cb,
+                              }), !eb && (0, jb.jsxs)("div", {
+                                className: `DocsSections Layout-${ab.layout}`,
+                                children: [kb.map((bb => (0, jb.jsx)(zT, {
+                                  page: ab,
                                   section: bb
-                                }, bb.heading.anchor))), 0 === Qb.length && (0, mb.jsxs)("p", {
+                                }, bb.heading.anchor))), 0 === kb.length && (0, jb.jsxs)("p", {
                                   className: "DocsEmpty",
-                                  children: ["No ", ua[cb.layout], " match \u201c", ab, "\u201d."]
+                                  children: ["No ", DT[ab.layout], " match \u201c", Tb, "\u201d."]
                                 })]
                               })]
                             })
                           }
-                          const Ja = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
+                          const iT = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
 
-                          function ga(bb) {
+                          function fT(bb) {
                             let {
-                              entry: cb,
-                              isActive: sb,
-                              onNavigate: kb,
-                              label: Wb,
-                              children: Tb
+                              entry: ab,
+                              isActive: Ub,
+                              onNavigate: Ab,
+                              label: Mb,
+                              children: Eb
                             } = bb;
-                            return (0, mb.jsx)("a", {
-                              href: `#${cb.anchor}`,
-                              "aria-label": Wb,
-                              className: ab()(`Level${cb.level}`, {
-                                Active: sb
+                            return (0, jb.jsx)("a", {
+                              href: `#${ab.anchor}`,
+                              "aria-label": Mb,
+                              className: Tb()(`Level${ab.level}`, {
+                                Active: Ub
                               }),
-                              "aria-current": sb ? "location" : void 0,
+                              "aria-current": Ub ? "location" : void 0,
                               onClick: bb => {
-                                bb.preventDefault(), kb(cb.anchor)
+                                bb.preventDefault(), Ab(ab.anchor)
                               },
-                              children: Tb
+                              children: Eb
                             })
                           }
 
-                          function Ba(bb) {
+                          function mT(bb) {
                             let {
-                              toc: cb,
-                              activeAnchor: sb,
-                              onNavigate: Wb
+                              toc: ab,
+                              activeAnchor: Ub,
+                              onNavigate: Mb
                             } = bb;
-                            const Tb = Math.max(0, cb.findIndex((bb => bb.anchor === sb))),
-                              Ub = (0, kb.useRef)(null),
-                              Ib = (0, kb.useRef)(!1);
-                            (0, kb.useEffect)((() => {
-                              var bb, sb;
-                              const kb = null === (bb = Ub.current) || void 0 === bb ? void 0 : bb.closest(".DocsToc"),
-                                Wb = null === (sb = Ub.current) || void 0 === sb ? void 0 : sb.querySelector(".DocsTimelineNotch.Active");
-                              if (!kb || !Wb) return;
-                              let ab = 0;
-                              if (Tb === cb.length - 1) ab = kb.scrollHeight;
-                              else if (Tb > 0) {
-                                const bb = kb.getBoundingClientRect(),
-                                  cb = Wb.getBoundingClientRect();
-                                ab = kb.scrollTop + cb.top + cb.height / 2 - (bb.top + kb.clientHeight / 2)
+                            const Eb = Math.max(0, ab.findIndex((bb => bb.anchor === Ub))),
+                              Yb = (0, Ab.useRef)(null),
+                              Bb = (0, Ab.useRef)(!1);
+                            (0, Ab.useEffect)((() => {
+                              var bb, Ub;
+                              const Ab = null === (bb = Yb.current) || void 0 === bb ? void 0 : bb.closest(".DocsToc"),
+                                Mb = null === (Ub = Yb.current) || void 0 === Ub ? void 0 : Ub.querySelector(".DocsTimelineNotch.Active");
+                              if (!Ab || !Mb) return;
+                              let Tb = 0;
+                              if (Eb === ab.length - 1) Tb = Ab.scrollHeight;
+                              else if (Eb > 0) {
+                                const bb = Ab.getBoundingClientRect(),
+                                  ab = Mb.getBoundingClientRect();
+                                Tb = Ab.scrollTop + ab.top + ab.height / 2 - (bb.top + Ab.clientHeight / 2)
                               }
-                              kb.scrollTo({
-                                top: ab,
-                                behavior: Ib.current ? "smooth" : "auto"
-                              }), Ib.current = !0
-                            }), [Tb, cb.length]);
-                            const Hb = [];
-                            return cb.forEach(((bb, cb) => {
-                              var sb, kb, Wb;
-                              const ab = function(bb) {
-                                  const cb = bb.trim().match(Ja);
-                                  return cb ? {
-                                    day: cb[1],
-                                    month: `${cb[2]} ${cb[3]}`
+                              Ab.scrollTo({
+                                top: Tb,
+                                behavior: Bb.current ? "smooth" : "auto"
+                              }), Bb.current = !0
+                            }), [Eb, ab.length]);
+                            const eb = [];
+                            return ab.forEach(((bb, ab) => {
+                              var Ub, Ab, Mb;
+                              const Tb = function(bb) {
+                                  const ab = bb.trim().match(iT);
+                                  return ab ? {
+                                    day: ab[1],
+                                    month: `${ab[2]} ${ab[3]}`
                                   } : null
                                 }(bb.text),
-                                Tb = null !== (sb = null === ab || void 0 === ab ? void 0 : ab.month) && void 0 !== sb ? sb : null;
-                              null !== Tb && (null === (kb = Hb.at(-1)) || void 0 === kb ? void 0 : kb.month) === Tb || Hb.push({
-                                month: Tb,
+                                Eb = null !== (Ub = null === Tb || void 0 === Tb ? void 0 : Tb.month) && void 0 !== Ub ? Ub : null;
+                              null !== Eb && (null === (Ab = eb.at(-1)) || void 0 === Ab ? void 0 : Ab.month) === Eb || eb.push({
+                                month: Eb,
                                 entries: []
-                              }), Hb.at(-1).entries.push({
+                              }), eb.at(-1).entries.push({
                                 entry: bb,
-                                day: null !== (Wb = null === ab || void 0 === ab ? void 0 : ab.day) && void 0 !== Wb ? Wb : null,
-                                index: cb
+                                day: null !== (Mb = null === Tb || void 0 === Tb ? void 0 : Tb.day) && void 0 !== Mb ? Mb : null,
+                                index: ab
                               })
-                            })), (0, mb.jsx)("ol", {
-                              ref: Ub,
+                            })), (0, jb.jsx)("ol", {
+                              ref: Yb,
                               className: "DocsTimeline",
-                              children: Hb.map((bb => {
+                              children: eb.map((bb => {
                                 let {
-                                  month: cb,
-                                  entries: sb
+                                  month: ab,
+                                  entries: Ub
                                 } = bb;
-                                return (0, mb.jsxs)("li", {
+                                return (0, jb.jsxs)("li", {
                                   className: "DocsTimelineMonth",
-                                  children: [cb && (0, mb.jsx)("span", {
+                                  children: [ab && (0, jb.jsx)("span", {
                                     className: "DocsTimelineMonthName",
-                                    children: cb
-                                  }), (0, mb.jsx)("ol", {
-                                    children: sb.map((bb => {
+                                    children: ab
+                                  }), (0, jb.jsx)("ol", {
+                                    children: Ub.map((bb => {
                                       let {
-                                        entry: cb,
-                                        day: sb,
-                                        index: kb
+                                        entry: ab,
+                                        day: Ub,
+                                        index: Ab
                                       } = bb;
-                                      return (0, mb.jsx)("li", {
-                                        className: ab()("DocsTimelineNotch", {
-                                          Passed: kb < Tb,
-                                          Active: kb === Tb
+                                      return (0, jb.jsx)("li", {
+                                        className: Tb()("DocsTimelineNotch", {
+                                          Passed: Ab < Eb,
+                                          Active: Ab === Eb
                                         }),
-                                        children: (0, mb.jsx)(ga, {
-                                          entry: cb,
-                                          isActive: kb === Tb,
-                                          onNavigate: Wb,
-                                          label: cb.text,
-                                          children: (0, mb.jsx)("span", {
+                                        children: (0, jb.jsx)(fT, {
+                                          entry: ab,
+                                          isActive: Ab === Eb,
+                                          onNavigate: Mb,
+                                          label: ab.text,
+                                          children: (0, jb.jsx)("span", {
                                             className: "DocsTimelineDay",
-                                            children: null !== sb && void 0 !== sb ? sb : cb.text
+                                            children: null !== Ub && void 0 !== Ub ? Ub : ab.text
                                           })
                                         })
-                                      }, cb.anchor)
+                                      }, ab.anchor)
                                     }))
                                   })]
-                                }, sb[0].entry.anchor)
+                                }, Ub[0].entry.anchor)
                               }))
                             })
                           }
 
-                          function ta(bb) {
+                          function pT(bb) {
                             let {
-                              isChangelog: cb,
-                              toc: sb,
-                              activeAnchor: kb,
-                              onNavigate: Wb
+                              isChangelog: ab,
+                              toc: Ub,
+                              activeAnchor: Ab,
+                              onNavigate: Mb
                             } = bb;
-                            return 0 === sb.length ? null : (0, mb.jsxs)(mb.Fragment, {
-                              children: [(0, mb.jsx)("div", {
+                            return 0 === Ub.length ? null : (0, jb.jsxs)(jb.Fragment, {
+                              children: [(0, jb.jsx)("div", {
                                 className: "DocsTocTitle",
-                                children: cb ? "Updates" : "On this page"
-                              }), cb ? (0, mb.jsx)(Ba, {
-                                toc: sb,
-                                activeAnchor: kb,
-                                onNavigate: Wb
-                              }) : (0, mb.jsx)("ul", {
-                                children: sb.map((bb => (0, mb.jsx)("li", {
-                                  children: (0, mb.jsx)(ga, {
+                                children: ab ? "Updates" : "On this page"
+                              }), ab ? (0, jb.jsx)(mT, {
+                                toc: Ub,
+                                activeAnchor: Ab,
+                                onNavigate: Mb
+                              }) : (0, jb.jsx)("ul", {
+                                children: Ub.map((bb => (0, jb.jsx)("li", {
+                                  children: (0, jb.jsx)(fT, {
                                     entry: bb,
-                                    isActive: bb.anchor === kb,
-                                    onNavigate: Wb,
+                                    isActive: bb.anchor === Ab,
+                                    onNavigate: Mb,
                                     children: bb.text.replace(/`/g, "")
                                   })
                                 }, bb.anchor)))
                               })]
                             })
                           }
-                          const ya = {
+                          const NT = {
                               methods: "Method",
                               callbacks: "Callback",
                               settings: "Setting",
@@ -5200,7 +5200,7 @@ export const modules = {
                               snippets: "Snippet",
                               article: "Section"
                             },
-                            Pa = {
+                            WT = {
                               icons: "Icon",
                               particles: "Particle",
                               sounds: "Sound",
@@ -5208,711 +5208,711 @@ export const modules = {
                               blocks: "Block",
                               items: "Item"
                             },
-                            Da = 20,
-                            Ea = 10,
-                            ia = 40,
-                            Oa = 120;
-                          let Ga;
+                            HT = 20,
+                            IT = 10,
+                            dT = 40,
+                            FT = 120;
+                          let hT;
 
-                          function Ka(bb) {
-                            const cb = bb.gallery;
-                            if (!cb) return [];
-                            if (Qs(cb)) return function(bb) {
-                              return Cs(bb).entries.map((bb => bb.name))
-                            }(cb).map((sb => ({
+                          function GT(bb) {
+                            const ab = bb.gallery;
+                            if (!ab) return [];
+                            if (kU(ab)) return function(bb) {
+                              return ZU(bb).entries.map((bb => bb.name))
+                            }(ab).map((Ub => ({
                               page: bb,
-                              anchor: Es(cb, sb),
-                              title: sb,
-                              kind: Pa[cb],
+                              anchor: FU(ab, Ub),
+                              title: Ub,
+                              kind: WT[ab],
                               text: "",
                               listedUnder: bb.title
                             })));
-                            const sb = qb(bb);
-                            return (0, hb.z)(sb).flatMap((kb => {
-                              const Wb = kb.heading ? `${bb.title} \u203a ${kb.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : bb.title;
-                              return Os(cb, sb, kb.blocks).flatMap((sb => "names" !== sb.kind ? [] : sb.names.map((kb => {
-                                const ab = sb.isSongs ? "Song" : Pa[cb];
+                            const Ub = ob(bb);
+                            return (0, mb.u)(Ub).flatMap((Ab => {
+                              const Mb = Ab.heading ? `${bb.title} \u203a ${Ab.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : bb.title;
+                              return GU(ab, Ub, Ab.blocks).flatMap((Ub => "names" !== Ub.kind ? [] : Ub.names.map((Ab => {
+                                const Tb = Ub.isSongs ? "Song" : WT[ab];
                                 return {
                                   page: bb,
-                                  anchor: kb.anchor,
-                                  title: kb.name,
-                                  kind: ab,
+                                  anchor: Ab.anchor,
+                                  title: Ab.name,
+                                  kind: Tb,
                                   text: "",
-                                  listedUnder: Wb
+                                  listedUnder: Mb
                                 }
                               }))))
                             }))
                           }
 
-                          function Za(bb, cb, sb) {
-                            const kb = bb.title.toLowerCase();
-                            let Wb = 0;
-                            if (kb === cb) Wb = 100;
-                            else if (kb.startsWith(cb)) Wb = 80;
-                            else if (kb.includes(cb)) Wb = 60;
-                            else if (sb.every((bb => kb.includes(bb)))) Wb = 45;
+                          function QT(bb, ab, Ub) {
+                            const Ab = bb.title.toLowerCase();
+                            let Mb = 0;
+                            if (Ab === ab) Mb = 100;
+                            else if (Ab.startsWith(ab)) Mb = 80;
+                            else if (Ab.includes(ab)) Mb = 60;
+                            else if (Ub.every((bb => Ab.includes(bb)))) Mb = 45;
                             else {
-                              if (!bb.text.toLowerCase().includes(cb)) return 0;
-                              Wb = 20
+                              if (!bb.text.toLowerCase().includes(ab)) return 0;
+                              Mb = 20
                             }
-                            return Wb - Math.min(kb.length / 10, 9) + ("Page" === bb.kind ? 8 : "Method" === bb.kind ? 3 : 0) - (bb.listedUnder ? Da : 0)
+                            return Mb - Math.min(Ab.length / 10, 9) + ("Page" === bb.kind ? 8 : "Method" === bb.kind ? 3 : 0) - (bb.listedUnder ? HT : 0)
                           }
 
-                          function za(bb, cb) {
-                            const sb = bb.toLowerCase().indexOf(cb),
-                              kb = Math.max(0, sb - Oa / 3);
-                            return `${kb>0?"\u2026":""}${bb.slice(kb,kb+Oa)}${kb+Oa<bb.length?"\u2026":""}`
+                          function qT(bb, ab) {
+                            const Ub = bb.toLowerCase().indexOf(ab),
+                              Ab = Math.max(0, Ub - FT / 3);
+                            return `${Ab>0?"\u2026":""}${bb.slice(Ab,Ab+FT)}${Ab+FT<bb.length?"\u2026":""}`
                           }
 
-                          function qa(bb) {
+                          function uT(bb) {
                             let {
-                              text: cb,
-                              query: sb
+                              text: ab,
+                              query: Ub
                             } = bb;
-                            const kb = sb ? cb.toLowerCase().indexOf(sb) : -1;
-                            return -1 === kb ? (0, mb.jsx)(mb.Fragment, {
-                              children: cb
-                            }) : (0, mb.jsxs)(mb.Fragment, {
-                              children: [cb.slice(0, kb), (0, mb.jsx)("mark", {
-                                children: cb.slice(kb, kb + sb.length)
-                              }), cb.slice(kb + sb.length)]
+                            const Ab = Ub ? ab.toLowerCase().indexOf(Ub) : -1;
+                            return -1 === Ab ? (0, jb.jsx)(jb.Fragment, {
+                              children: ab
+                            }) : (0, jb.jsxs)(jb.Fragment, {
+                              children: [ab.slice(0, Ab), (0, jb.jsx)("mark", {
+                                children: ab.slice(Ab, Ab + Ub.length)
+                              }), ab.slice(Ab + Ub.length)]
                             })
                           }
 
-                          function da(bb) {
+                          function rT(bb) {
                             let {
-                              basePath: cb,
-                              onClose: sb
+                              basePath: ab,
+                              onClose: Ub
                             } = bb;
-                            const Wb = (0, Ub.v)(),
-                              [Tb, Ib] = (0, kb.useState)(""),
-                              [Hb, fb] = (0, kb.useState)(0),
-                              Mb = (0, kb.useRef)(null),
-                              Xb = (0, kb.useRef)(null),
-                              nb = Tb.trim().toLowerCase(),
-                              lb = (0, kb.useMemo)((() => {
-                                const bb = (Ga || (Ga = Gb.flatMap((bb => {
-                                  const cb = qb(bb);
+                            const Mb = (0, Yb.x)(),
+                              [Eb, Bb] = (0, Ab.useState)(""),
+                              [eb, vb] = (0, Ab.useState)(0),
+                              Lb = (0, Ab.useRef)(null),
+                              Pb = (0, Ab.useRef)(null),
+                              Xb = Eb.trim().toLowerCase(),
+                              Rb = (0, Ab.useMemo)((() => {
+                                const bb = (hT || (hT = qb.flatMap((bb => {
+                                  const ab = ob(bb);
                                   return [{
                                     page: bb,
                                     anchor: "",
                                     title: bb.title,
                                     kind: "Page",
                                     text: bb.summary
-                                  }, ...cb.sections.flatMap((cb => {
-                                    const sb = cb.blocks.filter((bb => "paragraph" === bb.kind)).map(hb.k).join(" ").replace(/[`*]/g, ""),
-                                      kb = {
+                                  }, ...ab.sections.flatMap((ab => {
+                                    const Ub = ab.blocks.filter((bb => "paragraph" === bb.kind)).map(mb.i).join(" ").replace(/[`*]/g, ""),
+                                      Ab = {
                                         page: bb,
-                                        anchor: cb.heading.anchor,
-                                        title: cb.heading.text.replace(/`/g, ""),
-                                        kind: ya[bb.layout],
-                                        text: sb
+                                        anchor: ab.heading.anchor,
+                                        title: ab.heading.text.replace(/`/g, ""),
+                                        kind: NT[bb.layout],
+                                        text: Ub
                                       },
-                                      Wb = cb.blocks.flatMap((cb => "article" === bb.layout && "heading" === cb.kind && 3 === cb.level ? [{
+                                      Mb = ab.blocks.flatMap((ab => "article" === bb.layout && "heading" === ab.kind && 3 === ab.level ? [{
                                         page: bb,
-                                        anchor: cb.anchor,
-                                        title: cb.text.replace(/`/g, ""),
+                                        anchor: ab.anchor,
+                                        title: ab.text.replace(/`/g, ""),
                                         kind: "Section",
-                                        text: kb.title
+                                        text: Ab.title
                                       }] : []));
-                                    return [kb, ...Wb]
-                                  })), ...Ka(bb)]
-                                }))), Ga);
-                                if (!nb) return bb.filter((bb => "Page" === bb.kind));
-                                const cb = nb.split(/\s+/);
-                                let sb = 0;
+                                    return [Ab, ...Mb]
+                                  })), ...GT(bb)]
+                                }))), hT);
+                                if (!Xb) return bb.filter((bb => "Page" === bb.kind));
+                                const ab = Xb.split(/\s+/);
+                                let Ub = 0;
                                 return bb.map((bb => ({
                                   entry: bb,
-                                  score: Za(bb, nb, cb)
-                                }))).filter((bb => bb.score > 0)).sort(((bb, cb) => cb.score - bb.score)).filter((bb => !bb.entry.listedUnder || (sb++, sb <= Ea))).slice(0, ia).map((bb => bb.entry))
-                              }), [nb]);
-                            (0, kb.useEffect)((() => {
-                              fb(0)
-                            }), [nb]), (0, kb.useEffect)((() => {
+                                  score: QT(bb, Xb, ab)
+                                }))).filter((bb => bb.score > 0)).sort(((bb, ab) => ab.score - bb.score)).filter((bb => !bb.entry.listedUnder || (Ub++, Ub <= IT))).slice(0, dT).map((bb => bb.entry))
+                              }), [Xb]);
+                            (0, Ab.useEffect)((() => {
+                              vb(0)
+                            }), [Xb]), (0, Ab.useEffect)((() => {
                               const bb = document.activeElement instanceof HTMLElement ? document.activeElement : null;
                               return () => {
                                 null === bb || void 0 === bb || bb.focus()
                               }
-                            }), []), (0, kb.useEffect)((() => {
-                              var bb, cb;
-                              null === (bb = Mb.current) || void 0 === bb || null === (cb = bb.querySelector(".Active")) || void 0 === cb || cb.scrollIntoView({
+                            }), []), (0, Ab.useEffect)((() => {
+                              var bb, ab;
+                              null === (bb = Lb.current) || void 0 === bb || null === (ab = bb.querySelector(".Active")) || void 0 === ab || ab.scrollIntoView({
                                 block: "nearest"
                               })
-                            }), [Hb]);
-                            const eb = bb => {
-                              Wb(rb(cb, bb.page, bb.anchor)), sb()
+                            }), [eb]);
+                            const yb = bb => {
+                              Mb(sb(ab, bb.page, bb.anchor)), Ub()
                             };
-                            return (0, mb.jsx)("div", {
+                            return (0, jb.jsx)("div", {
                               className: "DocsSearchOverlay",
                               onMouseDown: bb => {
-                                bb.target === bb.currentTarget && sb()
+                                bb.target === bb.currentTarget && Ub()
                               },
-                              children: (0, mb.jsxs)("div", {
+                              children: (0, jb.jsxs)("div", {
                                 className: "DocsSearchDialog",
                                 role: "dialog",
                                 "aria-modal": "true",
                                 "aria-label": "Search the docs",
                                 onMouseDown: bb => {
-                                  bb.target !== Xb.current && bb.preventDefault()
+                                  bb.target !== Pb.current && bb.preventDefault()
                                 },
                                 onKeyDown: bb => {
-                                  if ("Escape" === bb.key) sb();
+                                  if ("Escape" === bb.key) Ub();
                                   else if ("Tab" === bb.key) {
-                                    var cb;
-                                    bb.preventDefault(), null === (cb = Xb.current) || void 0 === cb || cb.focus()
+                                    var ab;
+                                    bb.preventDefault(), null === (ab = Pb.current) || void 0 === ab || ab.focus()
                                   }
                                 },
-                                children: [(0, mb.jsxs)("div", {
+                                children: [(0, jb.jsxs)("div", {
                                   className: "DocsSearchInputRow",
-                                  children: [(0, mb.jsx)(Qb, {
+                                  children: [(0, jb.jsx)(kb, {
                                     name: "magnifying-glass"
-                                  }), (0, mb.jsx)("input", {
-                                    ref: Xb,
+                                  }), (0, jb.jsx)("input", {
+                                    ref: Pb,
                                     autoFocus: !0,
-                                    value: Tb,
+                                    value: Eb,
                                     placeholder: "Search methods, callbacks, settings and guides\u2026",
                                     "aria-label": "Search the docs",
                                     "aria-controls": "DocsSearchResults",
-                                    "aria-activedescendant": lb.length > 0 ? `DocsSearchResult-${Hb}` : void 0,
+                                    "aria-activedescendant": Rb.length > 0 ? `DocsSearchResult-${eb}` : void 0,
                                     onChange: bb => {
-                                      Ib(bb.target.value)
+                                      Bb(bb.target.value)
                                     },
                                     onKeyDown: bb => {
                                       if ("ArrowDown" === bb.key || "ArrowUp" === bb.key) {
                                         bb.preventDefault();
-                                        const cb = "ArrowDown" === bb.key ? 1 : -1;
-                                        fb((Hb + cb + lb.length) % Math.max(lb.length, 1))
-                                      } else "Enter" === bb.key && lb[Hb] && eb(lb[Hb])
+                                        const ab = "ArrowDown" === bb.key ? 1 : -1;
+                                        vb((eb + ab + Rb.length) % Math.max(Rb.length, 1))
+                                      } else "Enter" === bb.key && Rb[eb] && yb(Rb[eb])
                                     }
-                                  }), (0, mb.jsx)("kbd", {
+                                  }), (0, jb.jsx)("kbd", {
                                     children: "Esc"
                                   })]
-                                }), (0, mb.jsxs)("ul", {
+                                }), (0, jb.jsxs)("ul", {
                                   id: "DocsSearchResults",
-                                  ref: Mb,
+                                  ref: Lb,
                                   className: "DocsSearchResults",
                                   role: "listbox",
-                                  children: [!nb && (0, mb.jsx)("li", {
+                                  children: [!Xb && (0, jb.jsx)("li", {
                                     className: "DocsSearchHint",
                                     children: "Jump to a page"
-                                  }), lb.map(((bb, cb) => {
-                                    var sb;
-                                    return (0, mb.jsxs)("li", {
-                                      id: `DocsSearchResult-${cb}`,
+                                  }), Rb.map(((bb, ab) => {
+                                    var Ub;
+                                    return (0, jb.jsxs)("li", {
+                                      id: `DocsSearchResult-${ab}`,
                                       role: "option",
-                                      "aria-selected": cb === Hb,
-                                      className: ab()("DocsSearchResult", {
-                                        Active: cb === Hb
+                                      "aria-selected": ab === eb,
+                                      className: Tb()("DocsSearchResult", {
+                                        Active: ab === eb
                                       }),
                                       onMouseMove: () => {
-                                        fb(cb)
+                                        vb(ab)
                                       },
                                       onClick: () => {
-                                        eb(bb)
+                                        yb(bb)
                                       },
-                                      children: [(0, mb.jsx)(Qb, {
+                                      children: [(0, jb.jsx)(kb, {
                                         name: bb.page.icon
-                                      }), (0, mb.jsxs)("div", {
+                                      }), (0, jb.jsxs)("div", {
                                         className: "DocsSearchResultText",
-                                        children: [(0, mb.jsx)("div", {
+                                        children: [(0, jb.jsx)("div", {
                                           className: "DocsSearchResultTitle",
-                                          children: (0, mb.jsx)(qa, {
+                                          children: (0, jb.jsx)(uT, {
                                             text: bb.title,
-                                            query: nb
+                                            query: Xb
                                           })
-                                        }), bb.text && (0, mb.jsx)("div", {
+                                        }), bb.text && (0, jb.jsx)("div", {
                                           className: "DocsSearchResultSnippet",
-                                          children: (0, mb.jsx)(qa, {
-                                            text: za(bb.text, nb),
-                                            query: nb
+                                          children: (0, jb.jsx)(uT, {
+                                            text: qT(bb.text, Xb),
+                                            query: Xb
                                           })
                                         })]
-                                      }), (0, mb.jsx)("span", {
+                                      }), (0, jb.jsx)("span", {
                                         className: "DocsSearchResultMeta",
-                                        children: "Page" === bb.kind ? "Page" : null !== (sb = bb.listedUnder) && void 0 !== sb ? sb : `${bb.kind} \xb7 ${bb.page.title}`
+                                        children: "Page" === bb.kind ? "Page" : null !== (Ub = bb.listedUnder) && void 0 !== Ub ? Ub : `${bb.kind} \xb7 ${bb.page.title}`
                                       })]
                                     }, `${bb.page.id}#${bb.anchor}`)
-                                  })), nb && 0 === lb.length && (0, mb.jsxs)("li", {
+                                  })), Xb && 0 === Rb.length && (0, jb.jsxs)("li", {
                                     className: "DocsSearchHint",
-                                    children: ["Nothing matches \u201c", Tb, "\u201d."]
+                                    children: ["Nothing matches \u201c", Eb, "\u201d."]
                                   })]
                                 })]
                               })
                             })
                           }
 
-                          function Aa(bb, cb) {
-                            if (cb < 10) return `${bb.toFixed(1)}s`;
-                            const sb = Math.floor(bb);
-                            return `${Math.floor(sb/60)}:${String(sb%60).padStart(2,"0")}`
+                          function KT(bb, ab) {
+                            if (ab < 10) return `${bb.toFixed(1)}s`;
+                            const Ub = Math.floor(bb);
+                            return `${Math.floor(Ub/60)}:${String(Ub%60).padStart(2,"0")}`
                           }
 
-                          function wa() {
-                            const bb = Xk((bb => bb.track)),
-                              cb = Xk((bb => bb.volume)),
-                              [sb, Wb] = (0, kb.useState)(0),
-                              Tb = (0, kb.useRef)(kk);
-                            if ((0, kb.useEffect)((() => {
+                          function oT() {
+                            const bb = vA((bb => bb.track)),
+                              ab = vA((bb => bb.volume)),
+                              [Ub, Mb] = (0, Ab.useState)(0),
+                              Eb = (0, Ab.useRef)(aA);
+                            if ((0, Ab.useEffect)((() => {
                                 if (!bb) return;
-                                if (Wb(Qk()), "playing" !== bb.status) return;
-                                let cb = 0;
-                                const sb = () => {
-                                  Wb(Qk()), cb = requestAnimationFrame(sb)
+                                if (Mb(jA()), "playing" !== bb.status) return;
+                                let ab = 0;
+                                const Ub = () => {
+                                  Mb(jA()), ab = requestAnimationFrame(Ub)
                                 };
-                                return cb = requestAnimationFrame(sb), () => {
-                                  cancelAnimationFrame(cb)
+                                return ab = requestAnimationFrame(Ub), () => {
+                                  cancelAnimationFrame(ab)
                                 }
                               }), [bb]), !bb) return null;
-                            const Ub = "paused" !== bb.status,
-                              Ib = Math.min(sb, bb.duration);
-                            return (0, mb.jsx)("div", {
+                            const Yb = "paused" !== bb.status,
+                              Bb = Math.min(Ub, bb.duration);
+                            return (0, jb.jsx)("div", {
                               className: "DocsSoundPlayerDock",
-                              children: (0, mb.jsxs)("section", {
+                              children: (0, jb.jsxs)("section", {
                                 className: "DocsSoundPlayer",
                                 "aria-label": "Sound player",
-                                children: [(0, mb.jsx)("button", {
+                                children: [(0, jb.jsx)("button", {
                                   type: "button",
                                   className: "DocsSoundPlayerToggle",
-                                  "aria-label": Ub ? `Pause ${bb.name}` : `Play ${bb.name}`,
-                                  onClick: lk,
-                                  children: (0, mb.jsx)(Qb, {
-                                    name: Ub ? "pause" : "play"
+                                  "aria-label": Yb ? `Pause ${bb.name}` : `Play ${bb.name}`,
+                                  onClick: XA,
+                                  children: (0, jb.jsx)(kb, {
+                                    name: Yb ? "pause" : "play"
                                   })
-                                }), (0, mb.jsxs)("div", {
+                                }), (0, jb.jsxs)("div", {
                                   className: "DocsSoundPlayerTrack",
-                                  children: [(0, mb.jsxs)("div", {
+                                  children: [(0, jb.jsxs)("div", {
                                     className: "DocsSoundPlayerTitle",
-                                    children: [(0, mb.jsx)("code", {
+                                    children: [(0, jb.jsx)("code", {
                                       children: bb.name
-                                    }), (0, mb.jsx)("span", {
+                                    }), (0, jb.jsx)("span", {
                                       children: bb.isSong ? "Song" : "Sound"
                                     })]
-                                  }), (0, mb.jsxs)("div", {
+                                  }), (0, jb.jsxs)("div", {
                                     className: "DocsSoundPlayerScrubber",
-                                    children: [(0, mb.jsx)("span", {
-                                      children: Aa(Ib, bb.duration)
-                                    }), (0, mb.jsx)("input", {
+                                    children: [(0, jb.jsx)("span", {
+                                      children: KT(Bb, bb.duration)
+                                    }), (0, jb.jsx)("input", {
                                       type: "range",
                                       min: 0,
                                       max: bb.duration || 1,
                                       step: .01,
-                                      value: Ib,
+                                      value: Bb,
                                       disabled: 0 === bb.duration,
                                       "aria-label": "Position",
-                                      "aria-valuetext": `${Aa(Ib,bb.duration)} of ${Aa(bb.duration,bb.duration)}`,
+                                      "aria-valuetext": `${KT(Bb,bb.duration)} of ${KT(bb.duration,bb.duration)}`,
                                       onChange: bb => {
-                                        const cb = Number(bb.target.value);
+                                        const ab = Number(bb.target.value);
                                         ! function(bb) {
-                                          var cb;
-                                          Ik = bb, null === (cb = Tk) || void 0 === cb || cb.seek(bb)
-                                        }(cb), Wb(cb)
+                                          var ab;
+                                          EA = bb, null === (ab = MA) || void 0 === ab || ab.seek(bb)
+                                        }(ab), Mb(ab)
                                       }
-                                    }), (0, mb.jsx)("span", {
-                                      children: bb.duration > 0 ? Aa(bb.duration, bb.duration) : "\u2013"
+                                    }), (0, jb.jsx)("span", {
+                                      children: bb.duration > 0 ? KT(bb.duration, bb.duration) : "\u2013"
                                     })]
                                   })]
-                                }), (0, mb.jsxs)("div", {
+                                }), (0, jb.jsxs)("div", {
                                   className: "DocsSoundPlayerVolume",
-                                  children: [(0, mb.jsx)("button", {
+                                  children: [(0, jb.jsx)("button", {
                                     type: "button",
-                                    "aria-label": 0 === cb ? "Unmute" : "Mute",
+                                    "aria-label": 0 === ab ? "Unmute" : "Mute",
                                     onClick: () => {
-                                      0 === cb ? ek(Tb.current) : (Tb.current = cb, ek(0))
+                                      0 === ab ? RA(Eb.current) : (Eb.current = ab, RA(0))
                                     },
-                                    children: (0, mb.jsx)(Qb, {
+                                    children: (0, jb.jsx)(kb, {
                                       name: "volume",
-                                      className: ab()({
-                                        Muted: 0 === cb
+                                      className: Tb()({
+                                        Muted: 0 === ab
                                       })
                                     })
-                                  }), (0, mb.jsx)("input", {
+                                  }), (0, jb.jsx)("input", {
                                     type: "range",
                                     min: 0,
                                     max: 1,
                                     step: .01,
-                                    value: cb,
+                                    value: ab,
                                     "aria-label": "Volume",
                                     onChange: bb => {
-                                      ek(Number(bb.target.value))
+                                      RA(Number(bb.target.value))
                                     }
                                   })]
-                                }), (0, mb.jsx)("button", {
+                                }), (0, jb.jsx)("button", {
                                   type: "button",
                                   className: "DocsSoundPlayerClose",
                                   "aria-label": "Close the player",
                                   onClick: () => {
-                                    var cb;
-                                    null === (cb = document.querySelector(`[data-docs-track="${CSS.escape(Wk(bb.name,bb.isSong))}"]`)) || void 0 === cb || cb.focus(), Ck()
+                                    var ab;
+                                    null === (ab = document.querySelector(`[data-docs-track="${CSS.escape(UA(bb.name,bb.isSong))}"]`)) || void 0 === ab || ab.focus(), kA()
                                   },
-                                  children: (0, mb.jsx)(Qb, {
+                                  children: (0, jb.jsx)(kb, {
                                     name: "cross"
                                   })
                                 })]
                               })
                             })
                           }
-                          var ra = sb(37);
-                          const oa = "docsTheme",
-                            Sa = window.matchMedia("(prefers-color-scheme: light)");
+                          var lT = Ub(31);
+                          const tT = "docsTheme",
+                            wT = window.matchMedia("(prefers-color-scheme: light)");
 
-                          function Ra(bb) {
+                          function sT(bb) {
                             let {
-                              theme: cb,
-                              onChange: sb
+                              theme: ab,
+                              onChange: Ub
                             } = bb;
-                            const kb = "dark" === cb ? "light" : "dark";
-                            return (0, mb.jsx)("button", {
+                            const Ab = "dark" === ab ? "light" : "dark";
+                            return (0, jb.jsx)("button", {
                               type: "button",
                               className: "DocsIconButton DocsThemeToggle",
-                              "aria-label": `Switch to ${kb} theme`,
-                              title: `Switch to ${kb} theme`,
+                              "aria-label": `Switch to ${Ab} theme`,
+                              title: `Switch to ${Ab} theme`,
                               onClick: () => {
-                                sb(kb)
+                                Ub(Ab)
                               },
-                              children: (0, mb.jsx)(Qb, {
-                                name: "dark" === cb ? "moon" : "sun"
+                              children: (0, jb.jsx)(kb, {
+                                name: "dark" === ab ? "moon" : "sun"
                               })
                             })
                           }
-                          const va = "https://github.com/Bloxdy/code-api",
-                            Fa = "https://discord.gg/playbloxd",
-                            xa = 180,
-                            ja = /Mac|iPhone|iPad/.test(navigator.userAgent);
+                          const gT = "https://github.com/Bloxdy/code-api",
+                            CT = "https://discord.gg/playbloxd",
+                            VT = 180,
+                            OT = /Mac|iPhone|iPad/.test(navigator.userAgent);
 
-                          function pa(bb) {
+                          function cT(bb) {
                             let {
-                              basePath: cb,
-                              activePageId: sb,
-                              onNavigate: kb
+                              basePath: ab,
+                              activePageId: Ub,
+                              onNavigate: Ab
                             } = bb;
-                            return (0, mb.jsx)("nav", {
+                            return (0, jb.jsx)("nav", {
                               className: "DocsNav",
                               "aria-label": "Documentation",
-                              children: Kb.map((bb => (0, mb.jsxs)("div", {
+                              children: ub.map((bb => (0, jb.jsxs)("div", {
                                 className: "DocsNavGroup",
-                                children: [(0, mb.jsx)("div", {
+                                children: [(0, jb.jsx)("div", {
                                   className: "DocsNavGroupTitle",
                                   children: bb.title
                                 }), bb.pageIds.map((bb => {
-                                  var Wb;
-                                  const Ub = Zb(bb);
-                                  return (0, mb.jsxs)(Tb.d, {
-                                    to: rb(cb, Ub),
-                                    className: ab()("DocsNavLink", {
-                                      Active: Ub.id === sb
+                                  var Mb;
+                                  const Yb = rb(bb);
+                                  return (0, jb.jsxs)(Eb.c, {
+                                    to: sb(ab, Yb),
+                                    className: Tb()("DocsNavLink", {
+                                      Active: Yb.id === Ub
                                     }),
-                                    "aria-current": Ub.id === sb ? "page" : void 0,
-                                    onClick: kb,
-                                    children: [(0, mb.jsx)(Qb, {
-                                      name: Ub.icon
-                                    }), (0, mb.jsx)("span", {
-                                      children: null !== (Wb = Ub.navTitle) && void 0 !== Wb ? Wb : Ub.title
+                                    "aria-current": Yb.id === Ub ? "page" : void 0,
+                                    onClick: Ab,
+                                    children: [(0, jb.jsx)(kb, {
+                                      name: Yb.icon
+                                    }), (0, jb.jsx)("span", {
+                                      children: null !== (Mb = Yb.navTitle) && void 0 !== Mb ? Mb : Yb.title
                                     })]
-                                  }, Ub.id)
+                                  }, Yb.id)
                                 }))]
                               }, bb.title)))
                             })
                           }
 
-                          function bT(bb) {
+                          function JT(bb) {
                             let {
-                              basePath: cb,
-                              pageId: sb
+                              basePath: ab,
+                              pageId: Ub
                             } = bb;
-                            const kb = Kb.flatMap((bb => bb.pageIds)),
-                              Wb = kb.indexOf(sb),
-                              ab = Wb > 0 ? Zb(kb[Wb - 1]) : null,
-                              Ub = Wb < kb.length - 1 ? Zb(kb[Wb + 1]) : null;
-                            return (0, mb.jsxs)("nav", {
+                            const Ab = ub.flatMap((bb => bb.pageIds)),
+                              Mb = Ab.indexOf(Ub),
+                              Tb = Mb > 0 ? rb(Ab[Mb - 1]) : null,
+                              Yb = Mb < Ab.length - 1 ? rb(Ab[Mb + 1]) : null;
+                            return (0, jb.jsxs)("nav", {
                               className: "DocsPager",
                               "aria-label": "Pages",
-                              children: [ab ? (0, mb.jsxs)(Tb.d, {
+                              children: [Tb ? (0, jb.jsxs)(Eb.c, {
                                 className: "DocsPagerLink Previous",
-                                to: rb(cb, ab),
-                                children: [(0, mb.jsx)("span", {
+                                to: sb(ab, Tb),
+                                children: [(0, jb.jsx)("span", {
                                   className: "DocsPagerLabel",
                                   children: "Previous"
-                                }), (0, mb.jsx)("span", {
+                                }), (0, jb.jsx)("span", {
                                   className: "DocsPagerTitle",
-                                  children: ab.title
+                                  children: Tb.title
                                 })]
-                              }) : (0, mb.jsx)("span", {}), Ub && (0, mb.jsxs)(Tb.d, {
+                              }) : (0, jb.jsx)("span", {}), Yb && (0, jb.jsxs)(Eb.c, {
                                 className: "DocsPagerLink Next",
-                                to: rb(cb, Ub),
-                                children: [(0, mb.jsx)("span", {
+                                to: sb(ab, Yb),
+                                children: [(0, jb.jsx)("span", {
                                   className: "DocsPagerLabel",
                                   children: "Next"
-                                }), (0, mb.jsx)("span", {
+                                }), (0, jb.jsx)("span", {
                                   className: "DocsPagerTitle",
-                                  children: Ub.title
+                                  children: Yb.title
                                 })]
                               })]
                             })
                           }
 
-                          function cT(bb) {
+                          function nT(bb) {
                             let {
-                              basePath: cb,
-                              embedded: sb = !1
+                              basePath: ab,
+                              embedded: Ub = !1
                             } = bb;
                             const {
-                              pageSlug: Wb = ""
-                            } = (0, Ub.D)(), Hb = (0, Ub.r)(), fb = (0, Ub.v)(), Mb = (Xb = Wb, Gb.find((bb => bb.slug === Xb)));
-                            var Xb;
-                            const [nb, lb] = function() {
-                              const [bb, cb] = (0, kb.useState)((() => {
-                                const bb = ra.h.getItem(oa);
+                              pageSlug: Mb = ""
+                            } = (0, Yb.F)(), eb = (0, Yb.v)(), vb = (0, Yb.x)(), Lb = (Pb = Mb, qb.find((bb => bb.slug === Pb)));
+                            var Pb;
+                            const [Xb, Rb] = function() {
+                              const [bb, ab] = (0, Ab.useState)((() => {
+                                const bb = lT.f.getItem(tT);
                                 return "dark" === bb || "light" === bb ? bb : null
-                              })), [sb, Wb] = (0, kb.useState)(Sa.matches ? "light" : "dark");
-                              return (0, kb.useEffect)((() => {
+                              })), [Ub, Mb] = (0, Ab.useState)(wT.matches ? "light" : "dark");
+                              return (0, Ab.useEffect)((() => {
                                 const bb = () => {
-                                  Wb(Sa.matches ? "light" : "dark")
+                                  Mb(wT.matches ? "light" : "dark")
                                 };
-                                return Sa.addEventListener("change", bb), () => {
-                                  Sa.removeEventListener("change", bb)
+                                return wT.addEventListener("change", bb), () => {
+                                  wT.removeEventListener("change", bb)
                                 }
-                              }), []), [null !== bb && void 0 !== bb ? bb : sb, bb => {
-                                ra.h.setItem(oa, bb), cb(bb)
+                              }), []), [null !== bb && void 0 !== bb ? bb : Ub, bb => {
+                                lT.f.setItem(tT, bb), ab(bb)
                               }]
-                            }(), [eb, Cb] = (0, kb.useState)(null), [Nb, Vb] = (0, kb.useState)(!1), [Lb, ub] = (0, kb.useState)(!1), [Yb, Jb] = (0, kb.useState)([]), gb = function(bb, cb) {
-                              const [sb, Wb] = (0, kb.useState)("");
-                              return (0, kb.useEffect)((() => {
-                                if (!cb) return;
-                                let sb = 0;
-                                const kb = () => {
-                                    var kb, ab;
-                                    sb = 0;
-                                    const Tb = cb.getBoundingClientRect().top + xa;
-                                    let Ub = null !== (kb = null === (ab = bb[0]) || void 0 === ab ? void 0 : ab.anchor) && void 0 !== kb ? kb : "";
-                                    for (const cb of bb) {
-                                      const bb = document.getElementById(cb.anchor);
-                                      bb && bb.getBoundingClientRect().top <= Tb && (Ub = cb.anchor)
+                            }(), [yb, Zb] = (0, Ab.useState)(null), [Db, zb] = (0, Ab.useState)(!1), [xb, ib] = (0, Ab.useState)(!1), [fb, pb] = (0, Ab.useState)([]), Nb = function(bb, ab) {
+                              const [Ub, Mb] = (0, Ab.useState)("");
+                              return (0, Ab.useEffect)((() => {
+                                if (!ab) return;
+                                let Ub = 0;
+                                const Ab = () => {
+                                    var Ab, Tb;
+                                    Ub = 0;
+                                    const Eb = ab.getBoundingClientRect().top + VT;
+                                    let Yb = null !== (Ab = null === (Tb = bb[0]) || void 0 === Tb ? void 0 : Tb.anchor) && void 0 !== Ab ? Ab : "";
+                                    for (const ab of bb) {
+                                      const bb = document.getElementById(ab.anchor);
+                                      bb && bb.getBoundingClientRect().top <= Eb && (Yb = ab.anchor)
                                     }
-                                    cb.scrollTop + cb.clientHeight >= cb.scrollHeight - 2 && cb.scrollTop > 0 && bb.length > 0 && (Ub = bb[bb.length - 1].anchor), Wb(Ub)
+                                    ab.scrollTop + ab.clientHeight >= ab.scrollHeight - 2 && ab.scrollTop > 0 && bb.length > 0 && (Yb = bb[bb.length - 1].anchor), Mb(Yb)
                                   },
-                                  ab = () => {
-                                    sb || (sb = requestAnimationFrame(kb))
+                                  Tb = () => {
+                                    Ub || (Ub = requestAnimationFrame(Ab))
                                   };
-                                return kb(), cb.addEventListener("scroll", ab, {
+                                return Ab(), ab.addEventListener("scroll", Tb, {
                                   passive: !0
                                 }), () => {
-                                  cancelAnimationFrame(sb), cb.removeEventListener("scroll", ab)
+                                  cancelAnimationFrame(Ub), ab.removeEventListener("scroll", Tb)
                                 }
-                              }), [bb, cb]), sb
-                            }(Yb, eb), Bb = "" === Wb && Hb.hash ? function(bb) {
-                              const cb = (0, hb.v)(bb);
-                              if (db(Zb("welcome"), cb)) return null;
-                              const sb = Object.hasOwn(wb, cb) ? wb[cb] : null;
-                              if (sb) return {
-                                page: Zb(sb.pageId),
-                                anchor: sb.anchor
+                              }), [bb, ab]), Ub
+                            }(fb, yb), Wb = "" === Mb && eb.hash ? function(bb) {
+                              const ab = (0, mb.p)(bb);
+                              if (lb(rb("welcome"), ab)) return null;
+                              const Ub = Object.hasOwn(wb, ab) ? wb[ab] : null;
+                              if (Ub) return {
+                                page: rb(Ub.pageId),
+                                anchor: Ub.anchor
                               };
-                              const kb = Zb("readme");
-                              return db(kb, cb) ? {
-                                page: kb,
-                                anchor: cb
-                              } : Ab(`#${cb}`)
-                            }(Hb.hash) : null;
-                            (0, kb.useEffect)((() => (Ib.d.set({
+                              const Ab = rb("readme");
+                              return lb(Ab, ab) ? {
+                                page: Ab,
+                                anchor: ab
+                              } : tb(`#${ab}`)
+                            }(eb.hash) : null;
+                            (0, Ab.useEffect)((() => (Bb.c.set({
                               musicOnFromPage: !1
                             }), () => {
-                              Ib.d.set({
+                              Bb.c.set({
                                 musicOnFromPage: !0
-                              }), Ck()
-                            })), []), (0, kb.useEffect)((() => {
+                              }), kA()
+                            })), []), (0, Ab.useEffect)((() => {
                               const bb = bb => {
-                                const cb = bb.target;
-                                if (cb.closest(".DocsTextDialog")) return;
-                                const sb = cb.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(cb.tagName);
-                                "k" === bb.key && (bb.metaKey || bb.ctrlKey) || "/" === bb.key && !sb ? (bb.preventDefault(), ub(!0)) : "Escape" === bb.key && Vb(!1)
+                                const ab = bb.target;
+                                if (ab.closest(".DocsTextDialog")) return;
+                                const Ub = ab.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(ab.tagName);
+                                "k" === bb.key && (bb.metaKey || bb.ctrlKey) || "/" === bb.key && !Ub ? (bb.preventDefault(), ib(!0)) : "Escape" === bb.key && zb(!1)
                               };
                               return window.addEventListener("keydown", bb), () => {
                                 window.removeEventListener("keydown", bb)
                               }
                             }), []);
-                            const tb = (0, kb.useRef)(null);
-                            (0, kb.useLayoutEffect)((() => {
-                              var bb, cb;
-                              if (!eb) return;
-                              const sb = tb.current === Hb.pathname;
-                              tb.current = Hb.pathname;
-                              const kb = (0, hb.v)(Hb.hash),
-                                Wb = kb ? document.getElementById(kb) : null;
-                              if (null === (bb = eb.querySelector(".DocsTargeted")) || void 0 === bb || bb.classList.remove("DocsTargeted"), null === Wb || void 0 === Wb || null === (cb = Wb.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === cb || cb.classList.add("DocsTargeted"), Wb) {
-                                var ab;
-                                const bb = Wb.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
-                                (null !== (ab = Wb.closest(".DocsChangelogEntry")) && void 0 !== ab ? ab : Wb).scrollIntoView({
+                            const Hb = (0, Ab.useRef)(null);
+                            (0, Ab.useLayoutEffect)((() => {
+                              var bb, ab;
+                              if (!yb) return;
+                              const Ub = Hb.current === eb.pathname;
+                              Hb.current = eb.pathname;
+                              const Ab = (0, mb.p)(eb.hash),
+                                Mb = Ab ? document.getElementById(Ab) : null;
+                              if (null === (bb = yb.querySelector(".DocsTargeted")) || void 0 === bb || bb.classList.remove("DocsTargeted"), null === Mb || void 0 === Mb || null === (ab = Mb.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === ab || ab.classList.add("DocsTargeted"), Mb) {
+                                var Tb;
+                                const bb = Mb.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
+                                (null !== (Tb = Mb.closest(".DocsChangelogEntry")) && void 0 !== Tb ? Tb : Mb).scrollIntoView({
                                   block: bb ? "center" : "start",
-                                  behavior: sb ? "smooth" : "auto"
+                                  behavior: Ub ? "smooth" : "auto"
                                 })
-                              } else sb || eb.scrollTo({
+                              } else Ub || yb.scrollTo({
                                 top: 0
                               })
-                            }), [eb, Hb.pathname, Hb.hash, Hb.key]);
-                            const yb = (0, kb.useCallback)((() => {
-                                Vb(!1)
+                            }), [yb, eb.pathname, eb.hash, eb.key]);
+                            const Ib = (0, Ab.useCallback)((() => {
+                                zb(!1)
                               }), []),
-                              Pb = (0, kb.useCallback)((bb => {
-                                fb({
+                              db = (0, Ab.useCallback)((bb => {
+                                vb({
                                   hash: bb
                                 })
-                              }), [fb]);
-                            if (Bb) return (0, mb.jsx)(Ub.d, {
+                              }), [vb]);
+                            if (Wb) return (0, jb.jsx)(Yb.e, {
                               replace: !0,
-                              to: rb(cb, Bb.page, Bb.anchor)
+                              to: sb(ab, Wb.page, Wb.anchor)
                             });
-                            if (!Mb) return (0, mb.jsx)(Ub.d, {
+                            if (!Lb) return (0, jb.jsx)(Yb.e, {
                               replace: !0,
-                              to: cb
+                              to: ab
                             });
-                            const Db = sb ? "div" : "main";
-                            return (0, mb.jsx)(nc.Provider, {
-                              value: cb,
-                              children: (0, mb.jsx)(mc.Provider, {
-                                value: eb,
-                                children: (0, mb.jsxs)("div", {
-                                  ref: Cb,
-                                  className: ab()("DocsSite", {
-                                    Embedded: sb,
-                                    NavOpen: Nb
+                            const Fb = Ub ? "div" : "main";
+                            return (0, jb.jsx)(Xa.Provider, {
+                              value: ab,
+                              children: (0, jb.jsx)(ja.Provider, {
+                                value: yb,
+                                children: (0, jb.jsxs)("div", {
+                                  ref: Zb,
+                                  className: Tb()("DocsSite", {
+                                    Embedded: Ub,
+                                    NavOpen: Db
                                   }),
-                                  "data-theme": nb,
-                                  children: [(0, mb.jsxs)("header", {
+                                  "data-theme": Xb,
+                                  children: [(0, jb.jsxs)("header", {
                                     className: "DocsTopBar",
-                                    children: [(0, mb.jsx)("button", {
+                                    children: [(0, jb.jsx)("button", {
                                       type: "button",
                                       className: "DocsIconButton DocsMenuButton",
-                                      "aria-label": Nb ? "Close menu" : "Open menu",
-                                      "aria-expanded": Nb,
+                                      "aria-label": Db ? "Close menu" : "Open menu",
+                                      "aria-expanded": Db,
                                       onClick: () => {
-                                        Vb(!Nb)
+                                        zb(!Db)
                                       },
-                                      children: (0, mb.jsx)(Qb, {
-                                        name: Nb ? "cross" : "menu"
+                                      children: (0, jb.jsx)(kb, {
+                                        name: Db ? "cross" : "menu"
                                       })
-                                    }), (0, mb.jsxs)(Tb.d, {
-                                      to: cb,
+                                    }), (0, jb.jsxs)(Eb.c, {
+                                      to: ab,
                                       className: "DocsBrand",
-                                      children: [(0, mb.jsx)("img", {
+                                      children: [(0, jb.jsx)("img", {
                                         src: "/favicon.svg",
                                         alt: "",
                                         width: 28,
                                         height: 28
-                                      }), (0, mb.jsx)("span", {
+                                      }), (0, jb.jsx)("span", {
                                         className: "DocsBrandName",
                                         children: "Bloxd"
-                                      }), (0, mb.jsx)("span", {
+                                      }), (0, jb.jsx)("span", {
                                         className: "DocsBrandTag",
                                         children: "Code API"
                                       })]
-                                    }), (0, mb.jsxs)("button", {
+                                    }), (0, jb.jsxs)("button", {
                                       type: "button",
                                       className: "DocsSearchTrigger",
                                       onClick: () => {
-                                        ub(!0)
+                                        ib(!0)
                                       },
-                                      children: [(0, mb.jsx)(Qb, {
+                                      children: [(0, jb.jsx)(kb, {
                                         name: "magnifying-glass"
-                                      }), (0, mb.jsx)("span", {
+                                      }), (0, jb.jsx)("span", {
                                         className: "DocsSearchTriggerLabel",
                                         children: "Search docs"
-                                      }), (0, mb.jsxs)("kbd", {
-                                        children: [ja ? "\u2318" : "Ctrl", " K"]
+                                      }), (0, jb.jsxs)("kbd", {
+                                        children: [OT ? "\u2318" : "Ctrl", " K"]
                                       })]
-                                    }), (0, mb.jsxs)("div", {
+                                    }), (0, jb.jsxs)("div", {
                                       className: "DocsTopBarLinks",
-                                      children: [(0, mb.jsxs)("a", {
-                                        href: Fa,
+                                      children: [(0, jb.jsxs)("a", {
+                                        href: CT,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "DocsTopBarLink",
-                                        children: [(0, mb.jsx)(Qb, {
+                                        children: [(0, jb.jsx)(kb, {
                                           name: "discord"
-                                        }), (0, mb.jsx)("span", {
+                                        }), (0, jb.jsx)("span", {
                                           children: "Discord"
                                         })]
-                                      }), (0, mb.jsxs)("a", {
-                                        href: va,
+                                      }), (0, jb.jsxs)("a", {
+                                        href: gT,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "DocsTopBarLink",
-                                        children: [(0, mb.jsx)(Qb, {
+                                        children: [(0, jb.jsx)(kb, {
                                           name: "external-link"
-                                        }), (0, mb.jsx)("span", {
+                                        }), (0, jb.jsx)("span", {
                                           children: "GitHub"
                                         })]
-                                      }), !sb && (0, mb.jsxs)(Tb.d, {
+                                      }), !Ub && (0, jb.jsxs)(Eb.c, {
                                         to: "/",
                                         className: "DocsTopBarLink DocsPlayLink",
-                                        children: [(0, mb.jsx)(Qb, {
+                                        children: [(0, jb.jsx)(kb, {
                                           name: "play"
-                                        }), (0, mb.jsx)("span", {
+                                        }), (0, jb.jsx)("span", {
                                           children: "Play Bloxd"
                                         })]
-                                      }), (0, mb.jsx)(Ra, {
-                                        theme: nb,
-                                        onChange: lb
+                                      }), (0, jb.jsx)(sT, {
+                                        theme: Xb,
+                                        onChange: Rb
                                       })]
                                     })]
-                                  }), (0, mb.jsxs)("div", {
+                                  }), (0, jb.jsxs)("div", {
                                     className: "DocsSiteBody",
-                                    children: [(0, mb.jsx)("aside", {
+                                    children: [(0, jb.jsx)("aside", {
                                       className: "DocsSidebar",
-                                      children: (0, mb.jsx)(pa, {
-                                        basePath: cb,
-                                        activePageId: Mb.id,
-                                        onNavigate: yb
+                                      children: (0, jb.jsx)(cT, {
+                                        basePath: ab,
+                                        activePageId: Lb.id,
+                                        onNavigate: Ib
                                       })
-                                    }), (0, mb.jsx)("div", {
+                                    }), (0, jb.jsx)("div", {
                                       className: "DocsNavScrim",
-                                      onClick: yb
-                                    }), (0, mb.jsxs)(Db, {
+                                      onClick: Ib
+                                    }), (0, jb.jsxs)(Fb, {
                                       className: "DocsMain",
-                                      children: [(0, mb.jsx)(ha, {
-                                        page: Mb,
-                                        onTocChange: Jb
-                                      }, Mb.id), (0, mb.jsx)(bT, {
-                                        basePath: cb,
-                                        pageId: Mb.id
+                                      children: [(0, jb.jsx)(xT, {
+                                        page: Lb,
+                                        onTocChange: pb
+                                      }, Lb.id), (0, jb.jsx)(JT, {
+                                        basePath: ab,
+                                        pageId: Lb.id
                                       })]
-                                    }), (0, mb.jsx)("aside", {
-                                      className: ab()("DocsToc", {
-                                        Timeline: "changelog" === Mb.layout
+                                    }), (0, jb.jsx)("aside", {
+                                      className: Tb()("DocsToc", {
+                                        Timeline: "changelog" === Lb.layout
                                       }),
                                       "aria-label": "On this page",
-                                      children: (0, mb.jsx)(ta, {
-                                        isChangelog: "changelog" === Mb.layout,
-                                        toc: Yb,
-                                        activeAnchor: gb,
-                                        onNavigate: Pb
+                                      children: (0, jb.jsx)(pT, {
+                                        isChangelog: "changelog" === Lb.layout,
+                                        toc: fb,
+                                        activeAnchor: Nb,
+                                        onNavigate: db
                                       })
                                     })]
-                                  }), (0, mb.jsx)(wa, {}), Lb && (0, mb.jsx)(da, {
-                                    basePath: cb,
+                                  }), (0, jb.jsx)(oT, {}), xb && (0, jb.jsx)(rT, {
+                                    basePath: ab,
                                     onClose: () => {
-                                      ub(!1)
+                                      ib(!1)
                                     }
                                   })]
                                 })
                               })
                             })
                           }
-                        }, 4461: (bb, cb, sb) => {
-                          sb.d(cb, {
-                            D: () => nb,
-                            G: () => Xb,
-                            e: () => kb,
-                            h: () => Tb,
-                            k: () => Qb,
-                            o: () => lb,
-                            s: () => Ub,
-                            v: () => Wb,
-                            x: () => ab,
-                            z: () => mb
+                        }, 4420: (bb, ab, Ub) => {
+                          Ub.d(ab, {
+                            b: () => Ab,
+                            e: () => Eb,
+                            i: () => kb,
+                            m: () => Rb,
+                            o: () => Yb,
+                            p: () => Mb,
+                            r: () => Tb,
+                            u: () => jb,
+                            v: () => Xb,
+                            z: () => Pb
                           });
-                          const kb = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
+                          const Ab = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
 
-                          function Wb(bb) {
+                          function Mb(bb) {
                             try {
                               return decodeURIComponent(bb.slice(1))
                             } catch {
@@ -5920,175 +5920,175 @@ export const modules = {
                             }
                           }
 
-                          function ab(bb) {
+                          function Tb(bb) {
                             return bb.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
                           }
-                          const Tb = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${kb.source}`, "g");
+                          const Eb = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${Ab.source}`, "g");
 
-                          function Ub(bb, cb) {
-                            return 2 === bb.length ? cb.replace(/^ (.*) $/, "$1") : cb
+                          function Yb(bb, ab) {
+                            return 2 === bb.length ? ab.replace(/^ (.*) $/, "$1") : ab
                           }
 
-                          function Ib(bb) {
+                          function Bb(bb) {
                             return "" === bb.trim()
                           }
 
-                          function Hb(bb) {
-                            const cb = [];
-                            for (const sb of bb.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) cb.length > 0 && cb[cb.length - 1].endsWith("\\") ? cb[cb.length - 1] += `|${sb}` : cb.push(sb);
-                            return cb.map((bb => bb.trim().replaceAll("\\|", "|")))
+                          function eb(bb) {
+                            const ab = [];
+                            for (const Ub of bb.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) ab.length > 0 && ab[ab.length - 1].endsWith("\\") ? ab[ab.length - 1] += `|${Ub}` : ab.push(Ub);
+                            return ab.map((bb => bb.trim().replaceAll("\\|", "|")))
                           }
-                          const fb = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
+                          const vb = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
 
-                          function Mb(bb) {
-                            const cb = [],
-                              sb = [{
+                          function Lb(bb) {
+                            const ab = [],
+                              Ub = [{
                                 indent: -1,
-                                items: cb
+                                items: ab
                               }];
-                            let kb = null;
-                            for (const Wb of bb) {
-                              const bb = Wb.match(fb);
+                            let Ab = null;
+                            for (const Mb of bb) {
+                              const bb = Mb.match(vb);
                               if (!bb) {
-                                kb && (kb.text += ` ${Wb.trim()}`);
+                                Ab && (Ab.text += ` ${Mb.trim()}`);
                                 continue
                               }
-                              const cb = bb[1].replace(/\t/g, "  ").length;
-                              for (; cb <= sb[sb.length - 1].indent;) sb.pop();
-                              kb = {
+                              const ab = bb[1].replace(/\t/g, "  ").length;
+                              for (; ab <= Ub[Ub.length - 1].indent;) Ub.pop();
+                              Ab = {
                                 text: bb[3].trim(),
                                 children: []
-                              }, sb[sb.length - 1].items.push(kb), sb.push({
-                                indent: cb,
-                                items: kb.children
+                              }, Ub[Ub.length - 1].items.push(Ab), Ub.push({
+                                indent: ab,
+                                items: Ab.children
                               })
                             }
-                            return cb
+                            return ab
                           }
 
-                          function Xb(bb) {
-                            const cb = bb.replace(/\r\n/g, "\n").split("\n"),
-                              sb = [];
-                            let kb = 0;
-                            for (; kb < cb.length;) {
-                              const bb = cb[kb];
-                              if (Ib(bb)) {
-                                kb++;
+                          function Pb(bb) {
+                            const ab = bb.replace(/\r\n/g, "\n").split("\n"),
+                              Ub = [];
+                            let Ab = 0;
+                            for (; Ab < ab.length;) {
+                              const bb = ab[Ab];
+                              if (Bb(bb)) {
+                                Ab++;
                                 continue
                               }
-                              const Wb = bb.match(/^\s*```\s*(\w*)\s*$/);
-                              if (Wb) {
+                              const Mb = bb.match(/^\s*```\s*(\w*)\s*$/);
+                              if (Mb) {
                                 const bb = [];
-                                for (kb++; kb < cb.length && !/^\s*```\s*$/.test(cb[kb]);) bb.push(cb[kb]), kb++;
-                                kb++, sb.push({
+                                for (Ab++; Ab < ab.length && !/^\s*```\s*$/.test(ab[Ab]);) bb.push(ab[Ab]), Ab++;
+                                Ab++, Ub.push({
                                   kind: "code",
-                                  lang: Wb[1] || "text",
+                                  lang: Mb[1] || "text",
                                   code: bb.join("\n").replace(/\s+$/, "")
                                 });
                                 continue
                               }
-                              const Tb = bb.match(/^(#{1,6})\s+(.+?)\s*#*$/);
-                              if (Tb) {
-                                const bb = Tb[2].trim();
-                                sb.push({
+                              const Eb = bb.match(/^(#{1,6})\s+(.+?)\s*#*$/);
+                              if (Eb) {
+                                const bb = Eb[2].trim();
+                                Ub.push({
                                   kind: "heading",
-                                  level: Tb[1].length,
+                                  level: Eb[1].length,
                                   text: bb,
-                                  anchor: ab(bb)
-                                }), kb++;
+                                  anchor: Tb(bb)
+                                }), Ab++;
                                 continue
                               }
                               if (/^\s*(-{3,}|\*{3,})\s*$/.test(bb)) {
-                                sb.push({
+                                Ub.push({
                                   kind: "rule"
-                                }), kb++;
+                                }), Ab++;
                                 continue
                               }
-                              if (bb.trim().startsWith("|") && kb + 1 < cb.length && /^\s*\|[\s:|-]+\|\s*$/.test(cb[kb + 1])) {
-                                const Wb = Hb(bb),
-                                  ab = [];
-                                for (kb += 2; kb < cb.length && cb[kb].trim().startsWith("|");) ab.push(Hb(cb[kb])), kb++;
-                                sb.push({
+                              if (bb.trim().startsWith("|") && Ab + 1 < ab.length && /^\s*\|[\s:|-]+\|\s*$/.test(ab[Ab + 1])) {
+                                const Mb = eb(bb),
+                                  Tb = [];
+                                for (Ab += 2; Ab < ab.length && ab[Ab].trim().startsWith("|");) Tb.push(eb(ab[Ab])), Ab++;
+                                Ub.push({
                                   kind: "table",
-                                  header: Wb,
-                                  rows: ab
+                                  header: Mb,
+                                  rows: Tb
                                 });
                                 continue
                               }
                               if (bb.startsWith(">")) {
                                 const bb = [];
-                                for (; kb < cb.length && cb[kb].startsWith(">");) bb.push(cb[kb].replace(/^>\s?/, "")), kb++;
-                                sb.push({
+                                for (; Ab < ab.length && ab[Ab].startsWith(">");) bb.push(ab[Ab].replace(/^>\s?/, "")), Ab++;
+                                Ub.push({
                                   kind: "quote",
-                                  blocks: Xb(bb.join("\n"))
+                                  blocks: Pb(bb.join("\n"))
                                 });
                                 continue
                               }
-                              if (fb.test(bb)) {
-                                const Wb = [],
-                                  ab = /^\s*\d+\./.test(bb);
-                                for (; kb < cb.length && !Ib(cb[kb]) && (fb.test(cb[kb]) || /^\s+\S/.test(cb[kb]));) Wb.push(cb[kb]), kb++;
-                                sb.push({
+                              if (vb.test(bb)) {
+                                const Mb = [],
+                                  Tb = /^\s*\d+\./.test(bb);
+                                for (; Ab < ab.length && !Bb(ab[Ab]) && (vb.test(ab[Ab]) || /^\s+\S/.test(ab[Ab]));) Mb.push(ab[Ab]), Ab++;
+                                Ub.push({
                                   kind: "list",
-                                  ordered: ab,
-                                  items: Mb(Wb)
+                                  ordered: Tb,
+                                  items: Lb(Mb)
                                 });
                                 continue
                               }
-                              const Ub = [];
-                              for (; kb < cb.length && !Ib(cb[kb]) && !/^\s*```/.test(cb[kb]) && !/^#{1,6}\s/.test(cb[kb]) && !cb[kb].startsWith(">") && !fb.test(cb[kb]) && (!cb[kb].trim().startsWith("|") || 0 !== Ub.length);) Ub.push(cb[kb].trim()), kb++;
-                              0 === Ub.length && (Ub.push(cb[kb].trim()), kb++), sb.push({
+                              const Yb = [];
+                              for (; Ab < ab.length && !Bb(ab[Ab]) && !/^\s*```/.test(ab[Ab]) && !/^#{1,6}\s/.test(ab[Ab]) && !ab[Ab].startsWith(">") && !vb.test(ab[Ab]) && (!ab[Ab].trim().startsWith("|") || 0 !== Yb.length);) Yb.push(ab[Ab].trim()), Ab++;
+                              0 === Yb.length && (Yb.push(ab[Ab].trim()), Ab++), Ub.push({
                                 kind: "paragraph",
-                                text: Ub.join(" ")
+                                text: Yb.join(" ")
                               })
                             }
-                            return sb
+                            return Ub
                           }
 
-                          function nb(bb) {
-                            let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-                            const sb = Xb(bb);
-                            let kb = "";
-                            const Wb = [],
-                              ab = [],
-                              Tb = new Map;
-                            for (const Hb of sb) {
-                              if ("heading" === Hb.kind) {
-                                var Ub;
-                                const bb = (null !== (Ub = Tb.get(Hb.anchor)) && void 0 !== Ub ? Ub : 0) + 1;
-                                Tb.set(Hb.anchor, bb), bb > 1 && (Hb.anchor = `${Hb.anchor}-${bb}`)
+                          function Xb(bb) {
+                            let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+                            const Ub = Pb(bb);
+                            let Ab = "";
+                            const Mb = [],
+                              Tb = [],
+                              Eb = new Map;
+                            for (const eb of Ub) {
+                              if ("heading" === eb.kind) {
+                                var Yb;
+                                const bb = (null !== (Yb = Eb.get(eb.anchor)) && void 0 !== Yb ? Yb : 0) + 1;
+                                Eb.set(eb.anchor, bb), bb > 1 && (eb.anchor = `${eb.anchor}-${bb}`)
                               }
-                              if ("heading" === Hb.kind && 1 === Hb.level && !kb) {
-                                kb = Hb.text;
+                              if ("heading" === eb.kind && 1 === eb.level && !Ab) {
+                                Ab = eb.text;
                                 continue
                               }
-                              if ("heading" === Hb.kind && Hb.level <= cb) {
-                                ab.push({
-                                  heading: Hb,
+                              if ("heading" === eb.kind && eb.level <= ab) {
+                                Tb.push({
+                                  heading: eb,
                                   blocks: []
                                 });
                                 continue
                               }
-                              const bb = ab.at(-1);
-                              bb ? bb.blocks.push(Hb) : Wb.push(Hb)
+                              const bb = Tb.at(-1);
+                              bb ? bb.blocks.push(eb) : Mb.push(eb)
                             }
-                            const Ib = bb => {
+                            const Bb = bb => {
                               for (;
-                                "rule" === (null === (cb = bb.at(-1)) || void 0 === cb ? void 0 : cb.kind);) {
-                                var cb;
+                                "rule" === (null === (ab = bb.at(-1)) || void 0 === ab ? void 0 : ab.kind);) {
+                                var ab;
                                 bb.pop()
                               }
                             };
-                            Ib(Wb);
-                            for (const Hb of ab) Ib(Hb.blocks);
+                            Bb(Mb);
+                            for (const eb of Tb) Bb(eb.blocks);
                             return {
-                              title: kb,
-                              intro: Wb,
-                              sections: ab
+                              title: Ab,
+                              intro: Mb,
+                              sections: Tb
                             }
                           }
 
-                          function mb(bb) {
+                          function jb(bb) {
                             return [{
                               heading: null,
                               blocks: bb.intro
@@ -6098,11 +6098,11 @@ export const modules = {
                             })))]
                           }
 
-                          function lb(bb) {
-                            return bb.flatMap((bb => "code" === bb.kind ? [bb] : "quote" === bb.kind ? lb(bb.blocks) : []))
+                          function Rb(bb) {
+                            return bb.flatMap((bb => "code" === bb.kind ? [bb] : "quote" === bb.kind ? Rb(bb.blocks) : []))
                           }
 
-                          function Qb(bb) {
+                          function kb(bb) {
                             switch (bb.kind) {
                               case "heading":
                               case "paragraph":
@@ -6112,182 +6112,182 @@ export const modules = {
                               case "table":
                                 return [bb.header, ...bb.rows].map((bb => bb.join(" "))).join(" ");
                               case "list": {
-                                const cb = bb => bb.map((bb => `${bb.text} ${cb(bb.children)}`)).join(" ");
-                                return cb(bb.items)
+                                const ab = bb => bb.map((bb => `${bb.text} ${ab(bb.children)}`)).join(" ");
+                                return ab(bb.items)
                               }
                               case "quote":
-                                return bb.blocks.map(Qb).join(" ");
+                                return bb.blocks.map(kb).join(" ");
                               case "rule":
                                 return ""
                             }
                           }
-                        }, 4556: (bb, cb, sb) => {
-                          sb.d(cb, {
-                            b: () => Ub
+                        }, 4522: (bb, ab, Ub) => {
+                          Ub.d(ab, {
+                            c: () => Yb
                           });
-                          var kb = sb(64),
-                            Wb = sb(334),
-                            ab = sb(1858),
-                            Tb = sb(1087);
+                          var Ab = Ub(52),
+                            Mb = Ub(307),
+                            Tb = Ub(1812),
+                            Eb = Ub(1023);
 
-                          function Ub(bb) {
+                          function Yb(bb) {
                             let {
-                              text: cb
+                              text: ab
                             } = bb;
-                            const sb = [];
-                            let Ub = "";
-                            return (0, Wb.ic)(cb).forEach(((bb, cb) => {
-                              if ("string" === typeof bb || !(0, ab.e)(bb.icon)) return void(Ub += "string" === typeof bb ? bb : bb.icon);
-                              const Wb = Math.max(0, Ub.trimEnd().search(/\S{1,12}$/));
-                              sb.push((0, Tb.jsxs)(kb.Fragment, {
-                                children: [Ub.slice(0, Wb), (0, Tb.jsxs)("span", {
+                            const Ub = [];
+                            let Yb = "";
+                            return (0, Mb.cc)(ab).forEach(((bb, ab) => {
+                              if ("string" === typeof bb || !(0, Tb.f)(bb.icon)) return void(Yb += "string" === typeof bb ? bb : bb.icon);
+                              const Mb = Math.max(0, Yb.trimEnd().search(/\S{1,12}$/));
+                              Ub.push((0, Eb.jsxs)(Ab.Fragment, {
+                                children: [Yb.slice(0, Mb), (0, Eb.jsxs)("span", {
                                   className: "InlineIconTextGlue",
-                                  children: [Ub.slice(Wb), (0, Tb.jsx)("span", {
+                                  children: [Yb.slice(Mb), (0, Eb.jsx)("span", {
                                     className: "InlineIconTextIcon",
                                     role: "img",
                                     "aria-label": bb.icon,
-                                    children: (0, Tb.jsx)(ab.d, {
+                                    children: (0, Eb.jsx)(Tb.c, {
                                       itemName: bb.icon,
                                       amount: 0
                                     })
                                   })]
                                 })]
-                              }, cb)), Ub = ""
-                            })), sb.push(Ub), (0, Tb.jsx)(Tb.Fragment, {
-                              children: sb
+                              }, ab)), Yb = ""
+                            })), Ub.push(Yb), (0, Eb.jsx)(Eb.Fragment, {
+                              children: Ub
                             })
                           }
-                        }, 4484: (bb, cb, sb) => {
-                          sb.d(cb, {
-                            f: () => Cb,
-                            c: () => eb
+                        }, 4455: (bb, ab, Ub) => {
+                          Ub.d(ab, {
+                            g: () => Zb,
+                            e: () => yb
                           });
-                          var kb = sb(64),
-                            Wb = sb(1423),
-                            ab = sb(1839),
-                            Tb = sb(4486),
-                            Ub = sb(1087);
-                          const Ib = (0, kb.memo)((function(bb) {
+                          var Ab = Ub(52),
+                            Mb = Ub(1345),
+                            Tb = Ub(1794),
+                            Eb = Ub(4457),
+                            Yb = Ub(1023);
+                          const Bb = (0, Ab.memo)((function(bb) {
                             let {
-                              initialParameters: cb
+                              initialParameters: ab
                             } = bb;
-                            const sb = (0, kb.useRef)(null),
-                              Wb = (0, kb.useRef)(null),
-                              Ib = (0, kb.useRef)(0),
-                              Hb = (0, kb.useRef)(null),
-                              fb = cb.description,
-                              Mb = cb.ob,
+                            const Ub = (0, Ab.useRef)(null),
+                              Mb = (0, Ab.useRef)(null),
+                              Bb = (0, Ab.useRef)(0),
+                              eb = (0, Ab.useRef)(null),
+                              vb = ab.description,
+                              Lb = ab.gb,
                               {
-                                scale: Xb,
-                                rotation: nb
-                              } = null !== cb && void 0 !== cb ? cb : {},
-                              mb = (0, Tb.f)();
-                            return (0, kb.useEffect)((() => {
-                              const bb = mb.onFrame((() => {
-                                const bb = mb.getState();
-                                if (!bb.isActive || !sb.current || !Wb.current) return;
-                                const cb = bb.state;
-                                if (sb.current.value = cb.progress, cb.clickCount > Ib.current) {
-                                  Ib.current = cb.clickCount;
-                                  const bb = Wb.current;
-                                  bb.classList.add("pulse"), Hb.current = setTimeout((() => {
+                                scale: Pb,
+                                rotation: Xb
+                              } = null !== ab && void 0 !== ab ? ab : {},
+                              jb = (0, Eb.f)();
+                            return (0, Ab.useEffect)((() => {
+                              const bb = jb.onFrame((() => {
+                                const bb = jb.getState();
+                                if (!bb.isActive || !Ub.current || !Mb.current) return;
+                                const ab = bb.state;
+                                if (Ub.current.value = ab.progress, ab.clickCount > Bb.current) {
+                                  Bb.current = ab.clickCount;
+                                  const bb = Mb.current;
+                                  bb.classList.add("pulse"), eb.current = setTimeout((() => {
                                     bb.classList.remove("pulse")
                                   }), 100)
                                 }
                               }));
                               return () => {
-                                clearTimeout(Hb.current), bb()
+                                clearTimeout(eb.current), bb()
                               }
-                            }), [mb]), (0, Ub.jsx)(Ub.Fragment, {
-                              children: (0, Ub.jsxs)("div", {
+                            }), [jb]), (0, Yb.jsx)(Yb.Fragment, {
+                              children: (0, Yb.jsxs)("div", {
                                 className: "QTEProgressBarWrapper",
                                 style: {
-                                  ...null !== Xb && {
-                                    "--scale": Xb
+                                  ...null !== Pb && {
+                                    "--scale": Pb
                                   },
-                                  ...null !== nb && {
-                                    "--rotation": `${nb}deg`
+                                  ...null !== Xb && {
+                                    "--rotation": `${Xb}deg`
                                   }
                                 },
-                                children: [(0, Ub.jsx)("progress", {
+                                children: [(0, Yb.jsx)("progress", {
                                   id: "catch",
                                   max: 100,
                                   className: "QTEProgressBar",
-                                  ref: sb
-                                }), (0, Ub.jsx)("span", {
+                                  ref: Ub
+                                }), (0, Yb.jsx)("span", {
                                   className: "QTEProgressBarInteractionIndicator",
-                                  ref: Wb,
-                                  children: (0, Ub.jsx)(ab.d, {
+                                  ref: Mb,
+                                  children: (0, Yb.jsx)(Tb.c, {
                                     text: [{
-                                      icon: Mb
+                                      icon: Lb
                                     }]
                                   })
-                                }), (0, Ub.jsx)("div", {
+                                }), (0, Yb.jsx)("div", {
                                   className: "QTEProgressBarDescription",
-                                  children: (0, Ub.jsx)(ab.d, {
-                                    text: fb
+                                  children: (0, Yb.jsx)(Tb.c, {
+                                    text: vb
                                   })
                                 })]
                               })
                             })
                           }));
-                          var Hb = sb(1033),
-                            fb = sb.n(Hb);
-                          const Mb = 2 * Math.PI * 90,
-                            Xb = (0, kb.memo)((function(bb) {
+                          var eb = Ub(984),
+                            vb = Ub.n(eb);
+                          const Lb = 2 * Math.PI * 90,
+                            Pb = (0, Ab.memo)((function(bb) {
                               let {
-                                initialParameters: cb
+                                initialParameters: ab
                               } = bb;
-                              const sb = (0, kb.useRef)(null),
-                                Wb = (0, kb.useRef)(null),
-                                Ib = (0, kb.useRef)(null),
-                                Hb = cb.label,
-                                Xb = cb.icon,
-                                nb = cb.Fb,
+                              const Ub = (0, Ab.useRef)(null),
+                                Mb = (0, Ab.useRef)(null),
+                                Bb = (0, Ab.useRef)(null),
+                                eb = ab.label,
+                                Pb = ab.icon,
+                                Xb = ab.Ob,
                                 {
-                                  scale: mb,
-                                  rotation: lb,
-                                  xb: Qb
-                                } = null !== cb && void 0 !== cb ? cb : {},
-                                eb = (0, Tb.f)();
-                              return (0, kb.useEffect)((() => {
-                                const bb = eb.onFrame((() => {
-                                  var bb, cb;
-                                  const kb = eb.getState();
-                                  if (!kb.isActive || !Wb.current) return;
-                                  const ab = kb.state,
-                                    Tb = null !== (bb = ab.timeRemaining) && void 0 !== bb ? bb : 0,
-                                    Ub = null !== (cb = ab.Rb) && void 0 !== cb ? cb : 1,
-                                    Hb = Mb * (1 - Tb / Ub);
-                                  Wb.current.style.strokeDashoffset = `${Hb}`, sb.current && (sb.current.style.opacity = Tb > 0 ? "1" : "0"), Ib.current && nb && (Ib.current.textContent = `${(Tb/1e3).toFixed(1)}s`)
+                                  scale: jb,
+                                  rotation: Rb,
+                                  cb: kb
+                                } = null !== ab && void 0 !== ab ? ab : {},
+                                yb = (0, Eb.f)();
+                              return (0, Ab.useEffect)((() => {
+                                const bb = yb.onFrame((() => {
+                                  var bb, ab;
+                                  const Ab = yb.getState();
+                                  if (!Ab.isActive || !Mb.current) return;
+                                  const Tb = Ab.state,
+                                    Eb = null !== (bb = Tb.timeRemaining) && void 0 !== bb ? bb : 0,
+                                    Yb = null !== (ab = Tb.Vb) && void 0 !== ab ? ab : 1,
+                                    eb = Lb * (1 - Eb / Yb);
+                                  Mb.current.style.strokeDashoffset = `${eb}`, Ub.current && (Ub.current.style.opacity = Eb > 0 ? "1" : "0"), Bb.current && Xb && (Bb.current.textContent = `${(Eb/1e3).toFixed(1)}s`)
                                 }));
                                 return () => {
                                   bb()
                                 }
-                              }), [eb, nb]), (0, Ub.jsxs)("div", {
+                              }), [yb, Xb]), (0, Yb.jsxs)("div", {
                                 className: "QTETimedClick",
-                                ref: sb,
+                                ref: Ub,
                                 style: {
-                                  ...null !== mb && {
-                                    "--scale": mb
+                                  ...null !== jb && {
+                                    "--scale": jb
                                   },
-                                  ...null !== lb && {
-                                    "--rotation": `${lb}deg`
+                                  ...null !== Rb && {
+                                    "--rotation": `${Rb}deg`
                                   }
                                 },
-                                children: [(0, Ub.jsxs)("div", {
+                                children: [(0, Yb.jsxs)("div", {
                                   className: "QTETimedClickCircleContainer",
-                                  children: [(0, Ub.jsxs)("svg", {
+                                  children: [(0, Yb.jsxs)("svg", {
                                     className: "QTETimedClickCircularProgress",
                                     viewBox: "0 0 200 200",
-                                    children: [(0, Ub.jsx)("circle", {
+                                    children: [(0, Yb.jsx)("circle", {
                                       className: "QTETimedClickProgressTrack",
                                       cx: "100",
                                       cy: "100",
                                       r: 90,
                                       fill: "none",
                                       strokeWidth: "12"
-                                    }), (0, Ub.jsx)("circle", {
+                                    }), (0, Yb.jsx)("circle", {
                                       className: "QTETimedClickProgressArc",
                                       cx: "100",
                                       cy: "100",
@@ -6295,80 +6295,80 @@ export const modules = {
                                       fill: "none",
                                       strokeWidth: "12",
                                       strokeLinecap: "square",
-                                      strokeDasharray: Mb,
-                                      ref: Wb
+                                      strokeDasharray: Lb,
+                                      ref: Mb
                                     })]
-                                  }), (0, Ub.jsx)("div", {
+                                  }), (0, Yb.jsx)("div", {
                                     className: "QTETimedClickCenterContent",
-                                    children: (0, Ub.jsx)(ab.d, {
+                                    children: (0, Yb.jsx)(Tb.c, {
                                       text: [{
-                                        icon: Xb
+                                        icon: Pb
                                       }],
-                                      className: fb()("QTETimedClickInnerText", {
-                                        QTETimedClickBreathe: Qb
+                                      className: vb()("QTETimedClickInnerText", {
+                                        QTETimedClickBreathe: kb
                                       })
                                     })
                                   })]
-                                }), (0, Ub.jsxs)("div", {
+                                }), (0, Yb.jsxs)("div", {
                                   className: "QTETimedClickRightTextContainer",
-                                  children: [(0, Ub.jsx)(ab.d, {
-                                    text: Hb,
+                                  children: [(0, Yb.jsx)(Tb.c, {
+                                    text: eb,
                                     className: "QTETimedClickLabelText"
-                                  }), nb && (0, Ub.jsx)("span", {
+                                  }), Xb && (0, Yb.jsx)("span", {
                                     className: "QTETimedClickTimeText",
-                                    ref: Ib
+                                    ref: Bb
                                   })]
                                 })]
                               })
                             })),
-                            nb = (0, kb.memo)((function(bb) {
+                            Xb = (0, Ab.memo)((function(bb) {
                               let {
-                                initialParameters: cb
+                                initialParameters: ab
                               } = bb;
-                              const sb = (0, kb.useRef)(null),
-                                Wb = (0, kb.useRef)(null),
-                                Ib = (0, kb.useRef)(null),
-                                Hb = (0, kb.useRef)(!1),
-                                fb = cb.description,
-                                Mb = null === cb || void 0 === cb ? void 0 : cb.icon,
-                                Xb = (0, Tb.f)();
-                              return (0, kb.useEffect)((() => {
-                                const bb = Xb.onFrame((() => {
-                                  const bb = Xb.getState();
+                              const Ub = (0, Ab.useRef)(null),
+                                Mb = (0, Ab.useRef)(null),
+                                Bb = (0, Ab.useRef)(null),
+                                eb = (0, Ab.useRef)(!1),
+                                vb = ab.description,
+                                Lb = null === ab || void 0 === ab ? void 0 : ab.icon,
+                                Pb = (0, Eb.f)();
+                              return (0, Ab.useEffect)((() => {
+                                const bb = Pb.onFrame((() => {
+                                  const bb = Pb.getState();
                                   if (!bb.isActive) return;
-                                  const cb = bb.state;
-                                  if (sb.current) {
-                                    const bb = 100 * (cb.catchZonePosition - cb.pb / 2);
-                                    sb.current.style.left = `${bb}%`, sb.current.style.width = 100 * cb.pb + "%", cb.isCatching !== Hb.current && (Hb.current = cb.isCatching, cb.isCatching ? sb.current.classList.add("catching") : sb.current.classList.remove("catching"))
+                                  const ab = bb.state;
+                                  if (Ub.current) {
+                                    const bb = 100 * (ab.catchZonePosition - ab.Sb / 2);
+                                    Ub.current.style.left = `${bb}%`, Ub.current.style.width = 100 * ab.Sb + "%", ab.isCatching !== eb.current && (eb.current = ab.isCatching, ab.isCatching ? Ub.current.classList.add("catching") : Ub.current.classList.remove("catching"))
                                   }
-                                  Wb.current && (Wb.current.style.left = 100 * cb.moverPosition + "%"), Ib.current && (Ib.current.value = cb.progress)
+                                  Mb.current && (Mb.current.style.left = 100 * ab.moverPosition + "%"), Bb.current && (Bb.current.value = ab.progress)
                                 }));
                                 return () => {
                                   bb()
                                 }
-                              }), [Xb]), (0, Ub.jsxs)("div", {
+                              }), [Pb]), (0, Yb.jsxs)("div", {
                                 className: "QTEGravityBar",
-                                children: [(0, Ub.jsx)("div", {
+                                children: [(0, Yb.jsx)("div", {
                                   className: "QTEGravityBarDescription",
-                                  children: (0, Ub.jsx)(ab.d, {
-                                    text: fb
+                                  children: (0, Yb.jsx)(Tb.c, {
+                                    text: vb
                                   })
-                                }), (0, Ub.jsx)("progress", {
+                                }), (0, Yb.jsx)("progress", {
                                   max: 100,
                                   className: "QTEGravityBarProgress",
-                                  ref: Ib
-                                }), (0, Ub.jsxs)("div", {
+                                  ref: Bb
+                                }), (0, Yb.jsxs)("div", {
                                   className: "QTEGravityBarTrack",
-                                  children: [(0, Ub.jsx)("div", {
+                                  children: [(0, Yb.jsx)("div", {
                                     className: "QTEGravityBarCatchZone",
-                                    ref: sb
-                                  }), (0, Ub.jsx)("div", {
+                                    ref: Ub
+                                  }), (0, Yb.jsx)("div", {
                                     className: "QTEGravityBarMover",
-                                    ref: Wb,
-                                    children: (0, Ub.jsx)("span", {
-                                      children: Mb && (0, Ub.jsx)(ab.d, {
+                                    ref: Mb,
+                                    children: (0, Yb.jsx)("span", {
+                                      children: Lb && (0, Yb.jsx)(Tb.c, {
                                         text: [{
-                                          icon: Mb,
+                                          icon: Lb,
                                           style: {
                                             fontSize: "4rem"
                                           }
@@ -6379,374 +6379,374 @@ export const modules = {
                                 })]
                               })
                             }));
-                          var mb = sb(628);
-                          const lb = (0, kb.memo)((function(bb) {
+                          var jb = Ub(591);
+                          const Rb = (0, Ab.memo)((function(bb) {
                               let {
-                                initialParameters: cb
+                                initialParameters: ab
                               } = bb;
-                              const sb = (0, kb.useRef)(null),
-                                Wb = cb.label,
-                                Ib = cb.Uc,
+                              const Ub = (0, Ab.useRef)(null),
+                                Mb = ab.label,
+                                Bb = ab.Ea,
                                 {
-                                  icon: Hb,
-                                  scale: fb,
-                                  rotation: Mb
-                                } = null !== cb && void 0 !== cb ? cb : {},
-                                Xb = 100 * (.5 - Ib / 2),
-                                nb = 100 * Ib,
-                                lb = (0, Tb.f)();
-                              return (0, kb.useEffect)((() => {
-                                const bb = lb.onFrame((() => {
-                                  const bb = lb.getState();
-                                  if (!bb.isActive || !sb.current) return;
-                                  const cb = bb.state;
-                                  sb.current.style.left = 100 * cb.markerPosition + "%"
+                                  icon: eb,
+                                  scale: vb,
+                                  rotation: Lb
+                                } = null !== ab && void 0 !== ab ? ab : {},
+                                Pb = 100 * (.5 - Bb / 2),
+                                Xb = 100 * Bb,
+                                Rb = (0, Eb.f)();
+                              return (0, Ab.useEffect)((() => {
+                                const bb = Rb.onFrame((() => {
+                                  const bb = Rb.getState();
+                                  if (!bb.isActive || !Ub.current) return;
+                                  const ab = bb.state;
+                                  Ub.current.style.left = 100 * ab.markerPosition + "%"
                                 }));
                                 return () => {
                                   bb()
                                 }
-                              }), [lb]), (0, Ub.jsxs)("div", {
+                              }), [Rb]), (0, Yb.jsxs)("div", {
                                 className: "QTEPrecisionBarWrapper",
                                 style: {
-                                  ...!(0, mb.L)(fb) && {
-                                    "--scale": fb
+                                  ...!(0, jb.I)(vb) && {
+                                    "--scale": vb
                                   },
-                                  ...!(0, mb.L)(Mb) && {
-                                    "--rotation": `${Mb}deg`
+                                  ...!(0, jb.I)(Lb) && {
+                                    "--rotation": `${Lb}deg`
                                   }
                                 },
-                                children: [Hb && (0, Ub.jsx)(ab.d, {
+                                children: [eb && (0, Yb.jsx)(Tb.c, {
                                   text: [{
-                                    icon: Hb
+                                    icon: eb
                                   }],
                                   className: "QTEPrecisionBarIcon"
-                                }), (0, Ub.jsxs)("div", {
+                                }), (0, Yb.jsxs)("div", {
                                   className: "QTEPrecisionBarTrack",
-                                  children: [(0, Ub.jsx)("div", {
+                                  children: [(0, Yb.jsx)("div", {
                                     className: "QTEPrecisionBarSuccessZone",
                                     style: {
-                                      left: `${Xb}%`,
-                                      width: `${nb}%`
+                                      left: `${Pb}%`,
+                                      width: `${Xb}%`
                                     }
-                                  }), (0, Ub.jsx)("div", {
+                                  }), (0, Yb.jsx)("div", {
                                     className: "QTEPrecisionBarMarker",
-                                    ref: sb
+                                    ref: Ub
                                   })]
-                                }), (0, Ub.jsx)("div", {
+                                }), (0, Yb.jsx)("div", {
                                   className: "QTEPrecisionBarLabel",
-                                  children: (0, Ub.jsx)(ab.d, {
-                                    text: Wb
+                                  children: (0, Yb.jsx)(Tb.c, {
+                                    text: Mb
                                   })
                                 })]
                               })
                             })),
-                            Qb = (0, kb.memo)((function(bb) {
+                            kb = (0, Ab.memo)((function(bb) {
                               let {
-                                initialParameters: cb
+                                initialParameters: ab
                               } = bb;
-                              const sb = (0, kb.useRef)(null),
-                                [Wb, Ib] = (0, kb.useState)((() => new Array(cb.Hc).fill("pending"))),
-                                [Hb, fb] = (0, kb.useState)((() => {
-                                  const bb = cb.Xc;
-                                  return (0, mb.L)(bb) || bb <= 0 ? [] : new Array(bb).fill("pending")
+                              const Ub = (0, Ab.useRef)(null),
+                                [Mb, Bb] = (0, Ab.useState)((() => new Array(ab.Ba).fill("pending"))),
+                                [eb, vb] = (0, Ab.useState)((() => {
+                                  const bb = ab.La;
+                                  return (0, jb.I)(bb) || bb <= 0 ? [] : new Array(bb).fill("pending")
                                 })),
-                                Mb = cb.label,
+                                Lb = ab.label,
                                 {
-                                  icon: Xb
-                                } = cb,
-                                nb = (0, kb.useRef)(0),
-                                lb = (0, kb.useRef)(0),
-                                Qb = (0, kb.useRef)([]),
-                                eb = (0, Tb.f)();
-                              return (0, kb.useEffect)((() => {
-                                const bb = eb.onFrame((() => {
-                                  const bb = eb.getState();
-                                  if (!bb.isActive || !sb.current) return;
-                                  const cb = bb.state,
-                                    kb = 30 + 60 * cb.outerCircleProgress;
-                                  if (sb.current.setAttribute("r", String(kb)), !0 === cb.lastClickResult && cb.successes > nb.current) {
-                                    sb.current.classList.remove("QTERhythmClickOuterCircle--miss"), sb.current.classList.add("QTERhythmClickOuterCircle--hit");
+                                  icon: Pb
+                                } = ab,
+                                Xb = (0, Ab.useRef)(0),
+                                Rb = (0, Ab.useRef)(0),
+                                kb = (0, Ab.useRef)([]),
+                                yb = (0, Eb.f)();
+                              return (0, Ab.useEffect)((() => {
+                                const bb = yb.onFrame((() => {
+                                  const bb = yb.getState();
+                                  if (!bb.isActive || !Ub.current) return;
+                                  const ab = bb.state,
+                                    Ab = 30 + 60 * ab.outerCircleProgress;
+                                  if (Ub.current.setAttribute("r", String(Ab)), !0 === ab.lastClickResult && ab.successes > Xb.current) {
+                                    Ub.current.classList.remove("QTERhythmClickOuterCircle--miss"), Ub.current.classList.add("QTERhythmClickOuterCircle--hit");
                                     const bb = setTimeout((() => {
                                       var bb;
-                                      null === (bb = sb.current) || void 0 === bb || bb.classList.remove("QTERhythmClickOuterCircle--hit")
+                                      null === (bb = Ub.current) || void 0 === bb || bb.classList.remove("QTERhythmClickOuterCircle--hit")
                                     }), 200);
-                                    Qb.current.push(bb)
-                                  } else if (!1 === cb.lastClickResult && cb.misses > lb.current) {
-                                    sb.current.classList.remove("QTERhythmClickOuterCircle--hit"), sb.current.classList.add("QTERhythmClickOuterCircle--miss");
+                                    kb.current.push(bb)
+                                  } else if (!1 === ab.lastClickResult && ab.misses > Rb.current) {
+                                    Ub.current.classList.remove("QTERhythmClickOuterCircle--hit"), Ub.current.classList.add("QTERhythmClickOuterCircle--miss");
                                     const bb = setTimeout((() => {
                                       var bb;
-                                      null === (bb = sb.current) || void 0 === bb || bb.classList.remove("QTERhythmClickOuterCircle--miss")
+                                      null === (bb = Ub.current) || void 0 === bb || bb.classList.remove("QTERhythmClickOuterCircle--miss")
                                     }), 200);
-                                    Qb.current.push(bb)
+                                    kb.current.push(bb)
                                   }
-                                  cb.successes === nb.current && cb.misses === lb.current || (nb.current = cb.successes, lb.current = cb.misses, Ib((bb => {
-                                    const sb = [...bb];
-                                    for (let kb = 0; kb < cb.Hc; kb++) sb[kb] = kb < cb.successes ? "success" : "pending";
-                                    return sb
-                                  })), fb((bb => {
+                                  ab.successes === Xb.current && ab.misses === Rb.current || (Xb.current = ab.successes, Rb.current = ab.misses, Bb((bb => {
+                                    const Ub = [...bb];
+                                    for (let Ab = 0; Ab < ab.Ba; Ab++) Ub[Ab] = Ab < ab.successes ? "success" : "pending";
+                                    return Ub
+                                  })), vb((bb => {
                                     if (0 === bb.length) return bb;
-                                    const sb = [...bb];
-                                    for (let kb = 0; kb < sb.length; kb++) sb[kb] = kb < cb.misses ? "miss" : "pending";
-                                    return sb
+                                    const Ub = [...bb];
+                                    for (let Ab = 0; Ab < Ub.length; Ab++) Ub[Ab] = Ab < ab.misses ? "miss" : "pending";
+                                    return Ub
                                   })))
                                 }));
                                 return () => {
                                   bb();
-                                  for (const bb of Qb.current) clearTimeout(bb);
-                                  Qb.current = []
+                                  for (const bb of kb.current) clearTimeout(bb);
+                                  kb.current = []
                                 }
-                              }), [eb]), (0, Ub.jsxs)("div", {
+                              }), [yb]), (0, Yb.jsxs)("div", {
                                 className: "QTERhythmClickWrapper",
-                                children: [(0, Ub.jsx)("div", {
+                                children: [(0, Yb.jsx)("div", {
                                   className: "QTERhythmClickProgress",
-                                  children: Wb.map(((bb, cb) => (0, Ub.jsx)("div", {
+                                  children: Mb.map(((bb, ab) => (0, Yb.jsx)("div", {
                                     className: "QTERhythmClickDot" + ("success" === bb ? " QTERhythmClickDot--success" : " QTERhythmClickDot--pendingSuccess")
-                                  }, cb)))
-                                }), (0, Ub.jsxs)("div", {
+                                  }, ab)))
+                                }), (0, Yb.jsxs)("div", {
                                   className: "QTERhythmClickCircleContainer",
-                                  children: [(0, Ub.jsxs)("svg", {
+                                  children: [(0, Yb.jsxs)("svg", {
                                     className: "QTERhythmClickSvg",
                                     viewBox: "0 0 200 200",
-                                    children: [(0, Ub.jsx)("circle", {
+                                    children: [(0, Yb.jsx)("circle", {
                                       className: "QTERhythmClickInnerCircle",
                                       cx: "100",
                                       cy: "100",
                                       r: 30
-                                    }), (0, Ub.jsx)("circle", {
+                                    }), (0, Yb.jsx)("circle", {
                                       className: "QTERhythmClickOuterCircle",
                                       cx: "100",
                                       cy: "100",
                                       r: 90,
-                                      ref: sb
+                                      ref: Ub
                                     })]
-                                  }), Xb && (0, Ub.jsx)("div", {
+                                  }), Pb && (0, Yb.jsx)("div", {
                                     className: "QTERhythmClickCenterContent",
-                                    children: (0, Ub.jsx)(ab.d, {
+                                    children: (0, Yb.jsx)(Tb.c, {
                                       text: [{
-                                        icon: Xb
+                                        icon: Pb
                                       }],
                                       className: "QTERhythmClickIcon"
                                     })
                                   })]
-                                }), Hb.length > 0 && (0, Ub.jsx)("div", {
+                                }), eb.length > 0 && (0, Yb.jsx)("div", {
                                   className: "QTERhythmClickProgress",
-                                  children: Hb.map(((bb, cb) => (0, Ub.jsx)("div", {
+                                  children: eb.map(((bb, ab) => (0, Yb.jsx)("div", {
                                     className: "QTERhythmClickDot" + ("miss" === bb ? " QTERhythmClickDot--miss" : " QTERhythmClickDot--pendingMiss")
-                                  }, cb)))
-                                }), (0, Ub.jsx)("div", {
+                                  }, ab)))
+                                }), (0, Yb.jsx)("div", {
                                   className: "QTERhythmClickLabel",
-                                  children: (0, Ub.jsx)(ab.d, {
-                                    text: Mb
+                                  children: (0, Yb.jsx)(Tb.c, {
+                                    text: Lb
                                   })
                                 })]
                               })
                             }));
 
-                          function eb(bb) {
+                          function yb(bb) {
                             let {
-                              qte: cb
+                              qte: ab
                             } = bb;
-                            switch (cb.type) {
+                            switch (ab.type) {
                               case "progressBar":
-                                return (0, Ub.jsx)(Ib, {
-                                  initialParameters: cb.parameters
+                                return (0, Yb.jsx)(Bb, {
+                                  initialParameters: ab.parameters
                                 });
                               case "timedClick":
-                                return (0, Ub.jsx)(Xb, {
-                                  initialParameters: cb.parameters
+                                return (0, Yb.jsx)(Pb, {
+                                  initialParameters: ab.parameters
                                 });
                               case "gravityBar":
-                                return (0, Ub.jsx)(nb, {
-                                  initialParameters: cb.parameters
+                                return (0, Yb.jsx)(Xb, {
+                                  initialParameters: ab.parameters
                                 });
                               case "precisionBar":
-                                return (0, Ub.jsx)(lb, {
-                                  initialParameters: cb.parameters
+                                return (0, Yb.jsx)(Rb, {
+                                  initialParameters: ab.parameters
                                 });
                               case "rhythmClick":
-                                return (0, Ub.jsx)(Qb, {
-                                  initialParameters: cb.parameters
+                                return (0, Yb.jsx)(kb, {
+                                  initialParameters: ab.parameters
                                 });
                               default:
                                 return console.warn("Unknown QTE type"), null
                             }
                           }
-                          const Cb = (0, kb.memo)((function() {
-                            const [bb, cb] = (0, kb.useState)({
+                          const Zb = (0, Ab.memo)((function() {
+                            const [bb, ab] = (0, Ab.useState)({
                               type: null,
                               parameters: null,
                               state: null,
                               isActive: !1
                             });
-                            return (0, Wb.f)("qteStateUpdated", (bb => {
-                              cb(bb)
-                            })), bb.isActive && bb.type ? (0, Ub.jsx)("div", {
+                            return (0, Mb.f)("qteStateUpdated", (bb => {
+                              ab(bb)
+                            })), bb.isActive && bb.type ? (0, Yb.jsx)("div", {
                               className: "QTE",
                               "data-camera-keeper": "",
-                              children: (0, Ub.jsx)(eb, {
+                              children: (0, Yb.jsx)(yb, {
                                 qte: bb
                               })
                             }) : null
                           }))
-                        }, 4486: (bb, cb, sb) => {
-                          sb.d(cb, {
-                            d: () => Ub,
-                            f: () => Ib
+                        }, 4457: (bb, ab, Ub) => {
+                          Ub.d(ab, {
+                            c: () => Yb,
+                            f: () => Bb
                           });
-                          var kb = sb(64),
-                            Wb = sb(1291),
-                            ab = sb(4493);
-                          const Tb = {
-                              getState: () => ab.c.getCurrentState(),
-                              onFrame: Wb.k
+                          var Ab = Ub(52),
+                            Mb = Ub(1227),
+                            Tb = Ub(4462);
+                          const Eb = {
+                              getState: () => Tb.e.getCurrentState(),
+                              onFrame: Mb.j
                             },
-                            Ub = (0, kb.createContext)(Tb);
+                            Yb = (0, Ab.createContext)(Eb);
 
-                          function Ib() {
-                            return (0, kb.useContext)(Ub)
+                          function Bb() {
+                            return (0, Ab.useContext)(Yb)
                           }
-                        }, 4561: (bb, cb, sb) => {
-                          sb.d(cb, {
-                            e: () => ib,
-                            h: () => Eb
+                        }, 4531: (bb, ab, Ub) => {
+                          Ub.d(ab, {
+                            e: () => Gb,
+                            g: () => hb
                           });
-                          var kb = sb(4569),
-                            Wb = sb(334);
-                          const ab = 120,
-                            Tb = 260,
-                            Ub = 1.15,
-                            Ib = 1.2,
-                            Hb = 2,
-                            fb = 1.08,
-                            Mb = .8,
-                            Xb = .95,
-                            nb = 8,
-                            mb = "[\"')\\]\u300d\u300f\uff09]*",
-                            lb = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${mb}$`),
-                            Qb = new RegExp(`[?\uff1f]${mb}$`),
-                            eb = new RegExp(`[!\uff01]${mb}$`),
-                            Cb = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-                            Nb = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-                            Vb = new RegExp(`[${Nb}]`),
-                            Lb = new RegExp(`[${Nb}]|[^${Nb}]+`, "g"),
-                            ub = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+                          var Ab = Ub(4536),
+                            Mb = Ub(307);
+                          const Tb = 120,
+                            Eb = 260,
+                            Yb = 1.15,
+                            Bb = 1.2,
+                            eb = 2,
+                            vb = 1.08,
+                            Lb = .8,
+                            Pb = .95,
+                            Xb = 8,
+                            jb = "[\"')\\]\u300d\u300f\uff09]*",
+                            Rb = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${jb}$`),
+                            kb = new RegExp(`[?\uff1f]${jb}$`),
+                            yb = new RegExp(`[!\uff01]${jb}$`),
+                            Zb = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+                            Db = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+                            zb = new RegExp(`[${Db}]`),
+                            xb = new RegExp(`[${Db}]|[^${Db}]+`, "g"),
+                            ib = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-                          function Yb(bb) {
-                            let cb = 2166136261;
-                            for (let sb = 0; sb < bb.length; sb++) cb ^= bb.charCodeAt(sb), cb = Math.imul(cb, 16777619);
-                            return (cb >>> 0) / 4294967295 * 2 - 1
+                          function fb(bb) {
+                            let ab = 2166136261;
+                            for (let Ub = 0; Ub < bb.length; Ub++) ab ^= bb.charCodeAt(Ub), ab = Math.imul(ab, 16777619);
+                            return (ab >>> 0) / 4294967295 * 2 - 1
                           }
 
-                          function hb(bb) {
-                            var cb;
-                            if (Vb.test(bb)) return 1;
-                            const sb = bb.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-                              kb = sb.replace(/[^0-9]/g, "");
-                            if (kb.length > 0 && !/\p{L}/u.test(sb)) return Math.min(kb.length, 4);
-                            const Wb = null !== (cb = sb.match(ub)) && void 0 !== cb ? cb : [];
-                            if (0 === Wb.length) {
-                              var ab, Tb;
-                              const bb = null !== (ab = null === (Tb = sb.match(/\p{L}/gu)) || void 0 === Tb ? void 0 : Tb.length) && void 0 !== ab ? ab : 0;
-                              return 0 === bb ? 0 : Math.min(Math.max(1, Math.round(bb / 2.5)), nb)
+                          function mb(bb) {
+                            var ab;
+                            if (zb.test(bb)) return 1;
+                            const Ub = bb.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+                              Ab = Ub.replace(/[^0-9]/g, "");
+                            if (Ab.length > 0 && !/\p{L}/u.test(Ub)) return Math.min(Ab.length, 4);
+                            const Mb = null !== (ab = Ub.match(ib)) && void 0 !== ab ? ab : [];
+                            if (0 === Mb.length) {
+                              var Tb, Eb;
+                              const bb = null !== (Tb = null === (Eb = Ub.match(/\p{L}/gu)) || void 0 === Eb ? void 0 : Eb.length) && void 0 !== Tb ? Tb : 0;
+                              return 0 === bb ? 0 : Math.min(Math.max(1, Math.round(bb / 2.5)), Xb)
                             }
-                            const Ub = sb.replace(/[^\p{L}]/gu, ""),
-                              Ib = Wb.length > 1 && "e" === Wb.at(-1) && Ub.endsWith("e") && !Ub.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(bb.replace(/[^\p{L}]/gu, ""));
-                            return Math.min(Wb.length - (Ib ? 1 : 0), nb)
+                            const Yb = Ub.replace(/[^\p{L}]/gu, ""),
+                              Bb = Mb.length > 1 && "e" === Mb.at(-1) && Yb.endsWith("e") && !Yb.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(bb.replace(/[^\p{L}]/gu, ""));
+                            return Math.min(Mb.length - (Bb ? 1 : 0), Xb)
                           }
 
-                          function Jb(bb) {
+                          function pb(bb) {
                             return bb.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
                           }
 
-                          function gb(bb) {
-                            const cb = bb.replace(/[^\p{L}]/gu, "");
-                            return cb.length >= 2 && cb === cb.toUpperCase() && cb !== cb.toLowerCase()
+                          function Nb(bb) {
+                            const ab = bb.replace(/[^\p{L}]/gu, "");
+                            return ab.length >= 2 && ab === ab.toUpperCase() && ab !== ab.toLowerCase()
                           }
 
-                          function Bb(bb, cb) {
-                            var sb;
-                            const nb = cb && (0, kb.g)(cb),
-                              mb = null !== (sb = null === nb || void 0 === nb ? void 0 : nb.syllableMs) && void 0 !== sb ? sb : kb.b,
-                              Nb = function(bb) {
-                                const cb = [];
-                                for (const kb of (0, Wb.ic)(bb))
-                                  if ("string" === typeof kb)
-                                    for (const bb of kb.split(/(\s+)/)) {
+                          function Wb(bb, ab) {
+                            var Ub;
+                            const Xb = ab && (0, Ab.k)(ab),
+                              jb = null !== (Ub = null === Xb || void 0 === Xb ? void 0 : Xb.syllableMs) && void 0 !== Ub ? Ub : Ab.b,
+                              Db = function(bb) {
+                                const ab = [];
+                                for (const Ab of (0, Mb.cc)(bb))
+                                  if ("string" === typeof Ab)
+                                    for (const bb of Ab.split(/(\s+)/)) {
                                       if ("" === bb) continue;
                                       if (/^\s+$/.test(bb)) {
-                                        cb.push({
+                                        ab.push({
                                           kind: "space",
                                           text: bb
                                         });
                                         continue
                                       }
-                                      if (!Vb.test(bb)) {
-                                        cb.push({
+                                      if (!zb.test(bb)) {
+                                        ab.push({
                                           kind: "word",
                                           text: bb,
                                           delayMs: 0
                                         });
                                         continue
                                       }
-                                      let kb = !0;
-                                      for (const Wb of null !== (sb = bb.match(Lb)) && void 0 !== sb ? sb : []) {
-                                        var sb;
-                                        const bb = cb.at(-1);
-                                        kb || "word" !== (null === bb || void 0 === bb ? void 0 : bb.kind) || Vb.test(Wb) || /[\p{L}\p{N}]/u.test(Wb) ? (kb || cb.push({
+                                      let Ab = !0;
+                                      for (const Mb of null !== (Ub = bb.match(xb)) && void 0 !== Ub ? Ub : []) {
+                                        var Ub;
+                                        const bb = ab.at(-1);
+                                        Ab || "word" !== (null === bb || void 0 === bb ? void 0 : bb.kind) || zb.test(Mb) || /[\p{L}\p{N}]/u.test(Mb) ? (Ab || ab.push({
                                           kind: "space",
                                           text: "\u200b"
-                                        }), cb.push({
+                                        }), ab.push({
                                           kind: "word",
-                                          text: Wb,
+                                          text: Mb,
                                           delayMs: 0
-                                        }), kb = !1) : bb.text += Wb
+                                        }), Ab = !1) : bb.text += Mb
                                       }
-                                    } else cb.push({
+                                    } else ab.push({
                                       kind: "icon",
-                                      text: kb.icon,
+                                      text: Ab.icon,
                                       delayMs: 0
                                     });
-                                return cb
+                                return ab
                               }(bb),
-                              ub = [];
-                            let Bb = [];
-                            for (const kb of Nb) "space" !== kb.kind && (Bb.push(kb), lb.test(kb.text) && (ub.push(Bb), Bb = []));
-                            ub.push(Bb);
-                            const tb = [];
-                            let yb = 0;
-                            for (const kb of ub) {
-                              var Pb, Db;
-                              const bb = null !== (Pb = null === (Db = kb.at(-1)) || void 0 === Db ? void 0 : Db.text) && void 0 !== Pb ? Pb : "",
-                                cb = Qb.test(bb),
-                                sb = eb.test(bb),
-                                Wb = kb.map((bb => "word" === bb.kind ? hb(bb.text) : 1)),
-                                Nb = Wb.findLastIndex((bb => bb > 0));
-                              for (const [Qb, eb] of kb.entries()) {
-                                const bb = "word" === eb.kind,
-                                  kb = Wb[Qb];
-                                eb.delayMs = yb;
-                                for (let Wb = 0; nb && Wb < kb; Wb++) {
+                              ib = [];
+                            let Wb = [];
+                            for (const Ab of Db) "space" !== Ab.kind && (Wb.push(Ab), Rb.test(Ab.text) && (ib.push(Wb), Wb = []));
+                            ib.push(Wb);
+                            const Hb = [];
+                            let Ib = 0;
+                            for (const Ab of ib) {
+                              var db, Fb;
+                              const bb = null !== (db = null === (Fb = Ab.at(-1)) || void 0 === Fb ? void 0 : Fb.text) && void 0 !== db ? db : "",
+                                ab = kb.test(bb),
+                                Ub = yb.test(bb),
+                                Mb = Ab.map((bb => "word" === bb.kind ? mb(bb.text) : 1)),
+                                Db = Mb.findLastIndex((bb => bb > 0));
+                              for (const [kb, yb] of Ab.entries()) {
+                                const bb = "word" === yb.kind,
+                                  Ab = Mb[kb];
+                                yb.delayMs = Ib;
+                                for (let Mb = 0; Xb && Mb < Ab; Mb++) {
                                   const {
-                                    intonation: ab
-                                  } = nb;
-                                  let Tb = Nb > 0 ? -ab.declineSemitones * (Qb / Nb) : 0;
-                                  Tb += Yb(`${Jb(eb.text)}|${Wb}`) * ab.variationSemitones;
-                                  const lb = Math.min(1, ab.variationSemitones);
-                                  let Cb = nb.glideSemitones,
-                                    Vb = 1;
-                                  sb && (Tb += ab.exclaimLiftSemitones, Vb *= Ub), cb && Qb === Nb && (Tb += ab.questionRiseSemitones * (kb > 1 ? .5 + .5 * Wb / (kb - 1) : 1), Wb === kb - 1 && (Cb = Math.abs(Cb) + ab.questionRiseSemitones / 2)), bb && gb(eb.text) && (Tb += Hb * lb, Vb *= Ib), kb > 1 && 0 === Wb && (Tb += Mb * lb, Vb *= fb), tb.push({
-                                    atMs: yb + Wb * mb,
-                                    semitones: Tb,
-                                    glideSemitones: Cb,
-                                    durationMs: Wb < kb - 1 ? Math.min(nb.durationMs, mb * Xb) : nb.durationMs,
-                                    level: Vb
+                                    intonation: Tb
+                                  } = Xb;
+                                  let Eb = Db > 0 ? -Tb.declineSemitones * (kb / Db) : 0;
+                                  Eb += fb(`${pb(yb.text)}|${Mb}`) * Tb.variationSemitones;
+                                  const Rb = Math.min(1, Tb.variationSemitones);
+                                  let Zb = Xb.glideSemitones,
+                                    zb = 1;
+                                  Ub && (Eb += Tb.exclaimLiftSemitones, zb *= Yb), ab && kb === Db && (Eb += Tb.questionRiseSemitones * (Ab > 1 ? .5 + .5 * Mb / (Ab - 1) : 1), Mb === Ab - 1 && (Zb = Math.abs(Zb) + Tb.questionRiseSemitones / 2)), bb && Nb(yb.text) && (Eb += eb * Rb, zb *= Bb), Ab > 1 && 0 === Mb && (Eb += Lb * Rb, zb *= vb), Hb.push({
+                                    atMs: Ib + Mb * jb,
+                                    semitones: Eb,
+                                    glideSemitones: Zb,
+                                    durationMs: Mb < Ab - 1 ? Math.min(Xb.durationMs, jb * Pb) : Xb.durationMs,
+                                    level: zb
                                   })
                                 }
-                                yb += kb * mb + (lb.test(eb.text) ? Tb : Cb.test(eb.text) ? ab : 0)
+                                Ib += Ab * jb + (Rb.test(yb.text) ? Eb : Zb.test(yb.text) ? Tb : 0)
                               }
                             }
                             return {
-                              pieces: Nb.map((bb => "space" === bb.kind ? bb : "icon" === bb.kind ? {
+                              pieces: Db.map((bb => "space" === bb.kind ? bb : "icon" === bb.kind ? {
                                 kind: "icon",
                                 icon: bb.text,
                                 delayMs: bb.delayMs
@@ -6755,327 +6755,327 @@ export const modules = {
                                 text: bb.text,
                                 delayMs: bb.delayMs
                               })),
-                              blips: tb
+                              blips: Hb
                             }
                           }
-                          var tb = sb(1197),
-                            yb = sb(1258),
-                            Pb = sb(1876);
+                          var Hb = Ub(1134),
+                            Ib = Ub(1198),
+                            db = Ub(1829);
 
-                          function Db(bb) {
+                          function Fb(bb) {
                             if ("string" === typeof bb) return bb;
-                            const cb = yb.e.get().getCurrentLanguageCode();
-                            return (0, tb.q)(cb, bb.translationKey, (0, tb.p)(bb.params, Pb.b.shown))
+                            const ab = Ib.f.get().getCurrentLanguageCode();
+                            return (0, Hb.p)(ab, bb.translationKey, (0, Hb.m)(bb.params, db.c.shown))
                           }
 
-                          function Eb(bb) {
-                            const cb = void 0 === bb.voice ? null : (0, kb.i)(bb.voice),
-                              sb = cb && (0, kb.g)(cb);
+                          function hb(bb) {
+                            const ab = void 0 === bb.voice ? null : (0, Ab.n)(bb.voice),
+                              Ub = ab && (0, Ab.k)(ab);
                             return {
-                              plan: Bb(Db(bb.line), sb),
-                              synth: sb
+                              plan: Wb(Fb(bb.line), Ub),
+                              synth: Ub
                             }
                           }
 
-                          function ib(bb) {
-                            const cb = [];
-                            let sb = [];
-                            for (const [Wb, ab] of bb.entries()) {
-                              var kb;
-                              "space" === ab.kind && (" " !== ab.text || "icon" !== (null === (kb = bb[Wb + 1]) || void 0 === kb ? void 0 : kb.kind)) ? (sb.length > 0 && cb.push(sb), cb.push([ab]), sb = []) : sb.push(ab)
+                          function Gb(bb) {
+                            const ab = [];
+                            let Ub = [];
+                            for (const [Mb, Tb] of bb.entries()) {
+                              var Ab;
+                              "space" === Tb.kind && (" " !== Tb.text || "icon" !== (null === (Ab = bb[Mb + 1]) || void 0 === Ab ? void 0 : Ab.kind)) ? (Ub.length > 0 && ab.push(Ub), ab.push([Tb]), Ub = []) : Ub.push(Tb)
                             }
-                            return sb.length > 0 && cb.push(sb), cb
+                            return Ub.length > 0 && ab.push(Ub), ab
                           }
-                        }, 4576: (bb, cb, sb) => {
-                          sb.d(cb, {
-                            d: () => fb,
-                            g: () => Mb
+                        }, 4541: (bb, ab, Ub) => {
+                          Ub.d(ab, {
+                            c: () => vb,
+                            g: () => Lb
                           });
-                          var kb = sb(4579),
-                            Wb = sb(19);
-                          const ab = .25,
-                            Tb = .85,
-                            Ub = .02,
-                            Ib = .01;
+                          var Ab = Ub(4546),
+                            Mb = Ub(19);
+                          const Tb = .25,
+                            Eb = .85,
+                            Yb = .02,
+                            Bb = .01;
 
-                          function Hb(bb, cb, sb, kb, Wb, ab, Ub) {
+                          function eb(bb, ab, Ub, Ab, Mb, Tb, Yb) {
                             const {
-                              waveform: Ib,
-                              pitchHz: Hb,
-                              attackMs: fb,
-                              releaseMs: Mb,
-                              lowpassHz: Xb
-                            } = sb, nb = Wb + kb.durationMs / 1e3, mb = Hb * 2 ** (kb.semitones / 12), lb = bb.createOscillator();
-                            lb.type = Ib, lb.frequency.setValueAtTime(mb, Wb), lb.frequency.exponentialRampToValueAtTime(mb * 2 ** (kb.glideSemitones / 12), nb);
-                            const Qb = Wb + Math.min(fb, kb.durationMs) / 1e3,
-                              eb = bb.createGain();
-                            eb.gain.setValueAtTime(0, Wb), eb.gain.linearRampToValueAtTime(ab, Qb), eb.gain.linearRampToValueAtTime(ab * Tb, Math.max(Qb, nb - Mb / 1e3)), eb.gain.linearRampToValueAtTime(0, nb);
-                            const Cb = [lb];
-                            if (null !== Xb) {
-                              const cb = bb.createBiquadFilter();
-                              cb.type = "lowpass", cb.frequency.value = Xb, Cb.push(cb)
+                              waveform: Bb,
+                              pitchHz: eb,
+                              attackMs: vb,
+                              releaseMs: Lb,
+                              lowpassHz: Pb
+                            } = Ub, Xb = Mb + Ab.durationMs / 1e3, jb = eb * 2 ** (Ab.semitones / 12), Rb = bb.createOscillator();
+                            Rb.type = Bb, Rb.frequency.setValueAtTime(jb, Mb), Rb.frequency.exponentialRampToValueAtTime(jb * 2 ** (Ab.glideSemitones / 12), Xb);
+                            const kb = Mb + Math.min(vb, Ab.durationMs) / 1e3,
+                              yb = bb.createGain();
+                            yb.gain.setValueAtTime(0, Mb), yb.gain.linearRampToValueAtTime(Tb, kb), yb.gain.linearRampToValueAtTime(Tb * Eb, Math.max(kb, Xb - Lb / 1e3)), yb.gain.linearRampToValueAtTime(0, Xb);
+                            const Zb = [Rb];
+                            if (null !== Pb) {
+                              const ab = bb.createBiquadFilter();
+                              ab.type = "lowpass", ab.frequency.value = Pb, Zb.push(ab)
                             }
-                            Cb.push(eb, cb);
-                            for (let Tb = 1; Tb < Cb.length; Tb++) Cb[Tb - 1].connect(Cb[Tb]);
-                            return lb.onended = () => {
-                              for (const bb of Cb.slice(0, -1)) bb.disconnect();
-                              Ub()
-                            }, lb.start(Wb), lb.stop(nb), lb
+                            Zb.push(yb, ab);
+                            for (let Eb = 1; Eb < Zb.length; Eb++) Zb[Eb - 1].connect(Zb[Eb]);
+                            return Rb.onended = () => {
+                              for (const bb of Zb.slice(0, -1)) bb.disconnect();
+                              Yb()
+                            }, Rb.start(Mb), Rb.stop(Xb), Rb
                           }
 
-                          function fb(bb, cb, sb, kb, Wb, Tb) {
-                            if (0 === kb.length) return Tb(), () => {};
-                            const fb = ab * sb.volume * Wb,
-                              Mb = bb.createGain();
-                            Mb.connect(cb);
-                            const Xb = bb.currentTime + Ub,
-                              nb = new Set;
-                            for (const ab of kb) {
-                              const cb = Hb(bb, Mb, sb, ab, Xb + ab.atMs / 1e3, fb * ab.level, (() => {
-                                nb.delete(cb), 0 === nb.size && (Mb.disconnect(), Tb())
+                          function vb(bb, ab, Ub, Ab, Mb, Eb) {
+                            if (0 === Ab.length) return Eb(), () => {};
+                            const vb = Tb * Ub.volume * Mb,
+                              Lb = bb.createGain();
+                            Lb.connect(ab);
+                            const Pb = bb.currentTime + Yb,
+                              Xb = new Set;
+                            for (const Tb of Ab) {
+                              const ab = eb(bb, Lb, Ub, Tb, Pb + Tb.atMs / 1e3, vb * Tb.level, (() => {
+                                Xb.delete(ab), 0 === Xb.size && (Lb.disconnect(), Eb())
                               }));
-                              nb.add(cb)
+                              Xb.add(ab)
                             }
                             return () => {
-                              const cb = bb.currentTime;
-                              Mb.gain.setTargetAtTime(0, cb, Ib);
-                              for (const bb of nb) try {
-                                bb.stop(cb + 5 * Ib)
+                              const ab = bb.currentTime;
+                              Lb.gain.setTargetAtTime(0, ab, Bb);
+                              for (const bb of Xb) try {
+                                bb.stop(ab + 5 * Bb)
                               } catch {}
                             }
                           }
 
-                          function Mb(bb, cb) {
-                            var sb;
-                            const ab = kb.Howler.ctx,
-                              Tb = kb.Howler.masterGain;
-                            if (!ab || !Tb || !Wb.d.get("soundOnFromAd")) return () => {};
-                            const Ub = kb.Howler;
-                            return null === (sb = Ub._autoResume) || void 0 === sb || sb.call(Ub), fb(ab, Tb, bb, cb, Wb.d.get("soundVolume"), (() => {
+                          function Lb(bb, ab) {
+                            var Ub;
+                            const Tb = Ab.Howler.ctx,
+                              Eb = Ab.Howler.masterGain;
+                            if (!Tb || !Eb || !Mb.c.get("soundOnFromAd")) return () => {};
+                            const Yb = Ab.Howler;
+                            return null === (Ub = Yb._autoResume) || void 0 === Ub || Ub.call(Yb), vb(Tb, Eb, bb, ab, Mb.c.get("soundVolume"), (() => {
                               var bb;
-                              null === (bb = Ub._autoSuspend) || void 0 === bb || bb.call(Ub)
+                              null === (bb = Yb._autoSuspend) || void 0 === bb || bb.call(Yb)
                             }))
                           }
-                        }, 4579: (bb, cb, sb) => {
-                          sb.r(cb), sb.d(cb, {
-                            Howl: () => Wb.Howl,
-                            Howler: () => Wb.Howler,
-                            iosAudio: () => Ib,
-                            musicOutput: () => Qb,
-                            readyAudioContext: () => eb
+                        }, 4546: (bb, ab, Ub) => {
+                          Ub.r(ab), Ub.d(ab, {
+                            Howl: () => Mb.Howl,
+                            Howler: () => Mb.Howler,
+                            iosAudio: () => Bb,
+                            musicOutput: () => kb,
+                            readyAudioContext: () => yb
                           });
-                          var kb, Wb = sb(4585),
-                            ab = sb(117);
-                          const Tb = Wb.Howler;
-                          let Ub;
+                          var Ab, Mb = Ub(4551),
+                            Tb = Ub(101);
+                          const Eb = Mb.Howler;
+                          let Yb;
 
-                          function Ib() {
-                            return Ub ??= "ios" === (0, ab.getOperatingSystem)(), Ub
+                          function Bb() {
+                            return Yb ??= "ios" === (0, Tb.getOperatingSystem)(), Yb
                           }
 
-                          function Hb() {
-                            var bb, cb;
-                            if (Tb.ctx || !Tb.usingWebAudio || "undefined" === typeof AudioContext || !Ib()) return;
-                            const sb = navigator.audioSession;
-                            let kb;
-                            "auto" === (null === sb || void 0 === sb ? void 0 : sb.type) && (sb.type = "ambient");
+                          function eb() {
+                            var bb, ab;
+                            if (Eb.ctx || !Eb.usingWebAudio || "undefined" === typeof AudioContext || !Bb()) return;
+                            const Ub = navigator.audioSession;
+                            let Ab;
+                            "auto" === (null === Ub || void 0 === Ub ? void 0 : Ub.type) && (Ub.type = "ambient");
                             try {
-                              kb = new AudioContext({
+                              Ab = new AudioContext({
                                 sampleRate: 44100
                               })
                             } catch {
                               return
                             }
-                            const Wb = kb.createGain();
-                            Wb.gain.setValueAtTime(Tb._muted ? 0 : null !== (bb = Tb._volume) && void 0 !== bb ? bb : 1, kb.currentTime), Wb.connect(kb.destination), Tb.ctx = kb, Tb.masterGain = Wb, null === (cb = Tb._setup) || void 0 === cb || cb.call(Tb)
+                            const Mb = Ab.createGain();
+                            Mb.gain.setValueAtTime(Eb._muted ? 0 : null !== (bb = Eb._volume) && void 0 !== bb ? bb : 1, Ab.currentTime), Mb.connect(Ab.destination), Eb.ctx = Ab, Eb.masterGain = Mb, null === (ab = Eb._setup) || void 0 === ab || ab.call(Eb)
                           }
-                          Tb._mobileUnloaded = !0;
-                          const fb = Tb.volume.bind(Wb.Howler);
-                          Tb.volume = function() {
-                            return Hb(), fb(...arguments)
+                          Eb._mobileUnloaded = !0;
+                          const vb = Eb.volume.bind(Mb.Howler);
+                          Eb.volume = function() {
+                            return eb(), vb(...arguments)
                           };
-                          const Mb = Tb.mute.bind(Wb.Howler);
-                          Tb.mute = bb => (Hb(), Mb(bb));
-                          const Xb = Wb.Howl.prototype,
-                            nb = Xb.init;
-                          Xb.init = function(bb) {
-                            return Hb(), nb.call(this, bb)
+                          const Lb = Eb.mute.bind(Mb.Howler);
+                          Eb.mute = bb => (eb(), Lb(bb));
+                          const Pb = Mb.Howl.prototype,
+                            Xb = Pb.init;
+                          Pb.init = function(bb) {
+                            return eb(), Xb.call(this, bb)
                           };
-                          let mb = 0;
-                          const lb = null === (kb = Tb._autoSuspend) || void 0 === kb ? void 0 : kb.bind(Wb.Howler);
+                          let jb = 0;
+                          const Rb = null === (Ab = Eb._autoSuspend) || void 0 === Ab ? void 0 : Ab.bind(Mb.Howler);
 
-                          function Qb() {
-                            eb();
+                          function kb() {
+                            yb();
                             const {
                               ctx: bb,
-                              masterGain: cb
-                            } = Tb;
-                            return bb && cb ? {
+                              masterGain: ab
+                            } = Eb;
+                            return bb && ab ? {
                               ctx: bb,
-                              destination: cb,
+                              destination: ab,
                               holdAwake: bb => {
-                                var cb, sb;
-                                (mb += bb ? 1 : -1, bb) ? null === (cb = Tb._autoResume) || void 0 === cb || cb.call(Tb): null === (sb = Tb._autoSuspend) || void 0 === sb || sb.call(Tb)
+                                var ab, Ub;
+                                (jb += bb ? 1 : -1, bb) ? null === (ab = Eb._autoResume) || void 0 === ab || ab.call(Eb): null === (Ub = Eb._autoSuspend) || void 0 === Ub || Ub.call(Eb)
                               },
                               wake: () => {
-                                var cb;
-                                "running" !== bb.state && (null === (cb = Tb._autoResume) || void 0 === cb || cb.call(Tb), bb.resume().catch((() => {})))
+                                var ab;
+                                "running" !== bb.state && (null === (ab = Eb._autoResume) || void 0 === ab || ab.call(Eb), bb.resume().catch((() => {})))
                               }
                             } : null
                           }
 
-                          function eb() {
+                          function yb() {
                             var bb;
-                            (Tb.volume(), Tb.ctx && Tb.autoUnlock) && (null === (bb = Tb._unlockAudio) || void 0 === bb || bb.call(Tb))
+                            (Eb.volume(), Eb.ctx && Eb.autoUnlock) && (null === (bb = Eb._unlockAudio) || void 0 === bb || bb.call(Eb))
                           }
-                          lb && (Tb._autoSuspend = () => mb > 0 ? Wb.Howler : lb())
-                        }, 4588: (bb, cb, sb) => {
-                          function kb(bb) {
+                          Rb && (Eb._autoSuspend = () => jb > 0 ? Mb.Howler : Rb())
+                        }, 4553: (bb, ab, Ub) => {
+                          function Ab(bb) {
                             return {
                               notAfter: bb
                             }
                           }
-                          sb.d(cb, {
-                            d: () => Ib,
-                            e: () => Hb,
-                            h: () => Ub,
-                            i: () => kb,
-                            m: () => Wb,
-                            o: () => ab,
-                            q: () => Tb,
-                            t: () => fb,
-                            u: () => Mb
+                          Ub.d(ab, {
+                            d: () => Bb,
+                            f: () => eb,
+                            g: () => Yb,
+                            h: () => Ab,
+                            l: () => Mb,
+                            m: () => Tb,
+                            p: () => Eb,
+                            s: () => vb,
+                            w: () => Lb
                           });
-                          const Wb = kb("\\w$."),
-                            ab = kb("\\w.,");
+                          const Mb = Ab("\\w$."),
+                            Tb = Ab("\\w.,");
 
-                          function Tb(bb) {
-                            return cb => Ib(cb, bb)
+                          function Eb(bb) {
+                            return ab => Bb(ab, bb)
                           }
 
-                          function Ub(bb) {
-                            return cb => !bb.test(cb.input.slice(0, cb.index))
+                          function Yb(bb) {
+                            return ab => !bb.test(ab.input.slice(0, ab.index))
                           }
 
-                          function Ib(bb, cb) {
-                            return bb.index > 0 && new RegExp(`[${cb}]`).test(bb.input[bb.index - 1])
+                          function Bb(bb, ab) {
+                            return bb.index > 0 && new RegExp(`[${ab}]`).test(bb.input[bb.index - 1])
                           }
 
-                          function Hb(bb, cb, sb) {
+                          function eb(bb, ab, Ub) {
                             return function(bb) {
                               return void 0 !== bb && "function" !== typeof bb
-                            }(sb) ? function(bb, cb, sb) {
-                              const kb = cb.flags.replace(/[gy]/g, ""),
-                                Wb = new RegExp(`[^${sb}](?:${cb.source})`, `${kb}g`),
-                                ab = [],
-                                Tb = sb => {
-                                  const kb = sb.index + sb[0].length;
-                                  return ("" === sb[0] ? Xb(bb, cb, kb) : kb) - 1
+                            }(Ub) ? function(bb, ab, Ub) {
+                              const Ab = ab.flags.replace(/[gy]/g, ""),
+                                Mb = new RegExp(`[^${Ub}](?:${ab.source})`, `${Ab}g`),
+                                Tb = [],
+                                Eb = Ub => {
+                                  const Ab = Ub.index + Ub[0].length;
+                                  return ("" === Ub[0] ? Pb(bb, ab, Ab) : Ab) - 1
                                 },
-                                Ub = new RegExp(`(?:${cb.source})`, `${kb}y`).exec(bb);
-                              if (Ub) {
-                                if (ab.push(Ub), !cb.global) return ab;
-                                Wb.lastIndex = Tb(Ub)
+                                Yb = new RegExp(`(?:${ab.source})`, `${Ab}y`).exec(bb);
+                              if (Yb) {
+                                if (Tb.push(Yb), !ab.global) return Tb;
+                                Mb.lastIndex = Eb(Yb)
                               }
-                              for (let Ib = Wb.exec(bb); Ib; Ib = Wb.exec(bb)) {
-                                const sb = Xb(bb, cb, Ib.index) - Ib.index;
-                                if (Ib[0] = Ib[0].slice(sb), Ib.index += sb, ab.push(Ib), !cb.global) break;
-                                Wb.lastIndex = Tb(Ib)
+                              for (let Bb = Mb.exec(bb); Bb; Bb = Mb.exec(bb)) {
+                                const Ub = Pb(bb, ab, Bb.index) - Bb.index;
+                                if (Bb[0] = Bb[0].slice(Ub), Bb.index += Ub, Tb.push(Bb), !ab.global) break;
+                                Mb.lastIndex = Eb(Bb)
                               }
-                              return ab
-                            }(bb, cb, sb.notAfter) : function(bb, cb, sb) {
-                              const kb = new RegExp(cb.source, `${cb.flags.replace(/[gy]/g,"")}g`),
-                                Wb = [];
-                              for (let ab = kb.exec(bb); ab; ab = kb.exec(bb))
-                                if (!sb || sb(ab)) {
-                                  if (Wb.push(ab), !cb.global) break;
-                                  "" === ab[0] && (kb.lastIndex = Xb(bb, cb, kb.lastIndex))
-                                } else kb.lastIndex = Xb(bb, cb, ab.index);
-                              return Wb
-                            }(bb, cb, sb)
+                              return Tb
+                            }(bb, ab, Ub.notAfter) : function(bb, ab, Ub) {
+                              const Ab = new RegExp(ab.source, `${ab.flags.replace(/[gy]/g,"")}g`),
+                                Mb = [];
+                              for (let Tb = Ab.exec(bb); Tb; Tb = Ab.exec(bb))
+                                if (!Ub || Ub(Tb)) {
+                                  if (Mb.push(Tb), !ab.global) break;
+                                  "" === Tb[0] && (Ab.lastIndex = Pb(bb, ab, Ab.lastIndex))
+                                } else Ab.lastIndex = Pb(bb, ab, Tb.index);
+                              return Mb
+                            }(bb, ab, Ub)
                           }
 
-                          function fb(bb, cb, sb, kb) {
-                            let Wb = "",
-                              ab = 0;
-                            for (const Tb of Hb(bb, cb, sb)) Wb += bb.slice(ab, Tb.index) + kb(Tb), ab = Tb.index + Tb[0].length;
-                            return Wb + bb.slice(ab)
+                          function vb(bb, ab, Ub, Ab) {
+                            let Mb = "",
+                              Tb = 0;
+                            for (const Eb of eb(bb, ab, Ub)) Mb += bb.slice(Tb, Eb.index) + Ab(Eb), Tb = Eb.index + Eb[0].length;
+                            return Mb + bb.slice(Tb)
                           }
 
-                          function Mb(bb, cb, sb) {
-                            const kb = [];
-                            let Wb = 0;
-                            for (const ab of Hb(bb, cb, sb)) kb.push(bb.slice(Wb, ab.index)), Wb = ab.index + ab[0].length;
-                            return [...kb, bb.slice(Wb)]
+                          function Lb(bb, ab, Ub) {
+                            const Ab = [];
+                            let Mb = 0;
+                            for (const Tb of eb(bb, ab, Ub)) Ab.push(bb.slice(Mb, Tb.index)), Mb = Tb.index + Tb[0].length;
+                            return [...Ab, bb.slice(Mb)]
                           }
 
-                          function Xb(bb, cb, sb) {
-                            var kb;
-                            return sb + (cb.unicode && (null !== (kb = bb.codePointAt(sb)) && void 0 !== kb ? kb : 0) > 65535 ? 2 : 1)
+                          function Pb(bb, ab, Ub) {
+                            var Ab;
+                            return Ub + (ab.unicode && (null !== (Ab = bb.codePointAt(Ub)) && void 0 !== Ab ? Ab : 0) > 65535 ? 2 : 1)
                           }
-                        }, 4545: (bb, cb, sb) => {
-                          sb.d(cb, {
-                            B: () => nb,
-                            e: () => Wb,
-                            h: () => Ib,
-                            j: () => ab,
-                            m: () => Tb,
-                            n: () => Ub,
-                            r: () => Qb,
-                            v: () => fb,
-                            x: () => Mb,
-                            z: () => lb
+                        }, 4509: (bb, ab, Ub) => {
+                          Ub.d(ab, {
+                            B: () => Rb,
+                            C: () => Xb,
+                            d: () => Mb,
+                            f: () => Bb,
+                            j: () => Tb,
+                            n: () => Eb,
+                            q: () => Yb,
+                            t: () => kb,
+                            v: () => vb,
+                            x: () => Lb
                           });
-                          var kb = sb(1572);
-                          const Wb = 24e3,
-                            ab = "/docs/llms.txt",
-                            Tb = `${kb.e}${ab}`,
-                            Ub = "/llms.txt",
-                            Ib = "/docs/llms-full.txt";
+                          var Ab = Ub(1505);
+                          const Mb = 24e3,
+                            Tb = "/docs/llms.txt",
+                            Eb = `${Ab.d}${Tb}`,
+                            Yb = "/llms.txt",
+                            Bb = "/docs/llms-full.txt";
 
-                          function Hb(bb) {
+                          function eb(bb) {
                             return bb || "index"
                           }
 
-                          function fb(bb) {
-                            return `/docs/${Hb(bb)}.md`
+                          function vb(bb) {
+                            return `/docs/${eb(bb)}.md`
                           }
 
-                          function Mb(bb, cb) {
-                            return `/docs/${Hb(bb)}/${cb+1}.md`
+                          function Lb(bb, ab) {
+                            return `/docs/${eb(bb)}/${ab+1}.md`
                           }
-                          const Xb = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
+                          const Pb = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
 
-                          function nb(bb) {
-                            const cb = Xb.exec(bb);
-                            return null === cb ? null : {
-                              name: cb[1],
-                              part: void 0 === cb[2] ? null : Number(cb[2])
+                          function Xb(bb) {
+                            const ab = Pb.exec(bb);
+                            return null === ab ? null : {
+                              name: ab[1],
+                              part: void 0 === ab[2] ? null : Number(ab[2])
                             }
                           }
-                          const mb = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
+                          const jb = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
 
-                          function lb(bb) {
-                            const cb = mb.exec(bb);
-                            if (null === cb) return null;
-                            const [, sb = "", kb] = cb;
-                            return void 0 === kb ? fb(sb) : Mb(sb, Number(kb) - 1)
+                          function Rb(bb) {
+                            const ab = jb.exec(bb);
+                            if (null === ab) return null;
+                            const [, Ub = "", Ab] = ab;
+                            return void 0 === Ab ? vb(Ub) : Lb(Ub, Number(Ab) - 1)
                           }
 
-                          function Qb(bb) {
-                            return `/docsHtml/${Hb(bb)}.html`
+                          function kb(bb) {
+                            return `/docsHtml/${eb(bb)}.html`
                           }
-                        }, 4569: (bb, cb, sb) => {
-                          sb.d(cb, {
-                            b: () => Wb,
-                            e: () => kb,
-                            f: () => ab,
-                            g: () => Ib,
-                            i: () => Tb
+                        }, 4536: (bb, ab, Ub) => {
+                          Ub.d(ab, {
+                            b: () => Mb,
+                            e: () => Ab,
+                            i: () => Tb,
+                            k: () => Bb,
+                            n: () => Eb
                           });
-                          const kb = ["sine", "triangle", "square", "sawtooth"],
-                            Wb = 55,
-                            ab = {
+                          const Ab = ["sine", "triangle", "square", "sawtooth"],
+                            Mb = 55,
+                            Tb = {
                               soft: {
                                 waveform: "sine",
                                 pitchHz: 300,
@@ -7214,36 +7214,36 @@ export const modules = {
                               }
                             };
 
-                          function Tb(bb) {
-                            return "string" !== typeof bb ? bb : Object.hasOwn(ab, bb) ? ab[bb] : null
+                          function Eb(bb) {
+                            return "string" !== typeof bb ? bb : Object.hasOwn(Tb, bb) ? Tb[bb] : null
                           }
 
-                          function Ub(bb, cb, sb) {
-                            return Math.min(sb, Math.max(cb, bb))
+                          function Yb(bb, ab, Ub) {
+                            return Math.min(Ub, Math.max(ab, bb))
                           }
 
-                          function Ib(bb) {
-                            const cb = Ub(bb.durationMs, 10, 500),
-                              sb = Ub(bb.attackMs, 0, cb),
+                          function Bb(bb) {
+                            const ab = Yb(bb.durationMs, 10, 500),
+                              Ub = Yb(bb.attackMs, 0, ab),
                               {
-                                intonation: Wb
+                                intonation: Mb
                               } = bb;
                             return {
-                              waveform: kb.includes(bb.waveform) ? bb.waveform : "sine",
-                              pitchHz: Ub(bb.pitchHz, 20, 4e3),
-                              glideSemitones: Ub(bb.glideSemitones, -24, 24),
-                              durationMs: cb,
-                              attackMs: sb,
-                              releaseMs: Ub(bb.releaseMs, 0, cb - sb),
-                              lowpassHz: null === bb.lowpassHz ? null : Ub(bb.lowpassHz, 20, 2e4),
-                              volume: Ub(bb.volume, 0, 2),
+                              waveform: Ab.includes(bb.waveform) ? bb.waveform : "sine",
+                              pitchHz: Yb(bb.pitchHz, 20, 4e3),
+                              glideSemitones: Yb(bb.glideSemitones, -24, 24),
+                              durationMs: ab,
+                              attackMs: Ub,
+                              releaseMs: Yb(bb.releaseMs, 0, ab - Ub),
+                              lowpassHz: null === bb.lowpassHz ? null : Yb(bb.lowpassHz, 20, 2e4),
+                              volume: Yb(bb.volume, 0, 2),
                               intonation: {
-                                variationSemitones: Ub(Wb.variationSemitones, 0, 6),
-                                declineSemitones: Ub(Wb.declineSemitones, 0, 12),
-                                questionRiseSemitones: Ub(Wb.questionRiseSemitones, 0, 12),
-                                exclaimLiftSemitones: Ub(Wb.exclaimLiftSemitones, 0, 12)
+                                variationSemitones: Yb(Mb.variationSemitones, 0, 6),
+                                declineSemitones: Yb(Mb.declineSemitones, 0, 12),
+                                questionRiseSemitones: Yb(Mb.questionRiseSemitones, 0, 12),
+                                exclaimLiftSemitones: Yb(Mb.exclaimLiftSemitones, 0, 12)
                               },
-                              syllableMs: Ub(bb.syllableMs, 25, 200)
+                              syllableMs: Yb(bb.syllableMs, 25, 200)
                             }
                           }
                         }

@@ -1,128 +1,128 @@
 export const id = 60;
 export const ids = [60];
 export const modules = {
-  39213: (bb, cb, sb) => {
-    sb.d(cb, {
-      e: () => kb,
-      f: () => Wb
+  38865: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      e: () => Ab,
+      f: () => Mb
     });
-    const kb = "The world isn't loaded, so no blocks can be seen.",
-      Wb = "The world isn't loaded, so nothing in it can be seen."
+    const Ab = "The world isn't loaded, so no blocks can be seen.",
+      Mb = "The world isn't loaded, so nothing in it can be seen."
   },
-  38672: (bb, cb, sb) => {
-    sb.d(cb, {
-      b: () => lb,
-      f: () => Qb,
-      j: () => mb
+  38384: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      b: () => Rb,
+      f: () => kb,
+      i: () => jb
     });
-    var kb = sb(2680);
-    const Wb = 0,
-      ab = 2,
-      Tb = 3,
-      Ub = 4;
-    class Ib {
-      constructor(bb, cb) {
-        this.width = bb, this.GM = cb, this.data = void 0, this.next = 0, this.size = 0, this.data = new Float64Array(bb * cb)
+    var Ab = Ub(2621);
+    const Mb = 0,
+      Tb = 2,
+      Eb = 3,
+      Yb = 4;
+    class Bb {
+      constructor(bb, ab) {
+        this.width = bb, this.PL = ab, this.data = void 0, this.next = 0, this.size = 0, this.data = new Float64Array(bb * ab)
       }
       push(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const sb = this.data.subarray(this.next * this.width, (this.next + 1) * this.width);
-        for (let kb = 0; kb < this.width; kb++) sb[kb] = bb[cb + kb];
-        return this.next = (this.next + 1) % this.GM, this.size = Math.min(this.size + 1, this.GM), sb
+        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const Ub = this.data.subarray(this.next * this.width, (this.next + 1) * this.width);
+        for (let Ab = 0; Ab < this.width; Ab++) Ub[Ab] = bb[ab + Ab];
+        return this.next = (this.next + 1) % this.PL, this.size = Math.min(this.size + 1, this.PL), Ub
       }
       lines() {
         const bb = [],
-          cb = (this.next - this.size + this.GM) % this.GM;
-        for (let sb = 0; sb < this.size; sb++) {
-          const kb = (cb + sb) % this.GM * this.width;
-          bb.push(Array.from(this.data.subarray(kb, kb + this.width)).join(","))
+          ab = (this.next - this.size + this.PL) % this.PL;
+        for (let Ub = 0; Ub < this.size; Ub++) {
+          const Ab = (ab + Ub) % this.PL * this.width;
+          bb.push(Array.from(this.data.subarray(Ab, Ab + this.width)).join(","))
         }
         return bb
       }
     }
 
-    function Hb(bb) {
+    function eb(bb) {
       return Number.isFinite(bb) ? String(Math.round(10 * bb) / 10) : String(bb)
     }
 
-    function fb(bb) {
+    function vb(bb) {
       return Number.isFinite(bb) ? bb.toFixed(1) : String(bb)
     }
-    class Mb {
+    class Lb {
       constructor() {
-        this.frames = 0, this.looked = 0, this.idle = 0, this.yE = 0, this.pastLimit = 0, this.lockSkips = 0, this.tQ = 0, this.lost = 0, this.dropped = 0, this.longFrames = 0, this.dtMin = 1 / 0, this.dtMax = 0, this.dtSum = 0, this.raw = [0, 0], this.turned = [0, 0], this.peakRate = 0, this.events = 0, this.eventMax = 0, this.bigEvents = 0, this.outliers = 0, this.eventLines = 0, this.suppressed = 0
+        this.frames = 0, this.looked = 0, this.idle = 0, this.Iq = 0, this.pastLimit = 0, this.lockSkips = 0, this.qR = 0, this.lost = 0, this.dropped = 0, this.longFrames = 0, this.dtMin = 1 / 0, this.dtMax = 0, this.dtSum = 0, this.raw = [0, 0], this.turned = [0, 0], this.peakRate = 0, this.events = 0, this.eventMax = 0, this.bigEvents = 0, this.outliers = 0, this.eventLines = 0, this.suppressed = 0
       }
     }
-    class Xb {
+    class Pb {
       constructor() {
         var bb = this;
-        this.tally = new Mb, this.records = new Ib(10, 3600), this.events = new Ib(4, 12e3), this.event = new Float64Array(4), this.take = null, this.client = "js", this.started = !1, this.record = function(cb) {
-          let sb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-          const [kb, Ib, Mb, Xb, nb, mb, lb, Qb, eb, Cb] = bb.records.push(cb, sb), Nb = bb.tally;
-          switch (Nb.frames++, lb) {
-            case Wb:
-              return void Nb.idle++;
-            case Ub:
-              return void Nb.tQ++;
-            case Tb:
-              return Nb.lockSkips++, void(0 === Mb && 0 === Xb || bb.outlier(`lock skip dropped raw (${Hb(Mb)}, ${Hb(Xb)}) at ${fb(kb)} ms`))
+        this.tally = new Lb, this.records = new Bb(10, 3600), this.events = new Bb(4, 12e3), this.event = new Float64Array(4), this.take = null, this.client = "js", this.started = !1, this.record = function(ab) {
+          let Ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+          const [Ab, Bb, Lb, Pb, Xb, jb, Rb, kb, yb, Zb] = bb.records.push(ab, Ub), Db = bb.tally;
+          switch (Db.frames++, Rb) {
+            case Mb:
+              return void Db.idle++;
+            case Yb:
+              return void Db.qR++;
+            case Eb:
+              return Db.lockSkips++, void(0 === Lb && 0 === Pb || bb.outlier(`lock skip dropped raw (${eb(Lb)}, ${eb(Pb)}) at ${vb(Ab)} ms`))
           }
-          Nb.looked++, Number.isFinite(Ib) && (Nb.dtMin = Math.min(Nb.dtMin, Ib), Nb.dtMax = Math.max(Nb.dtMax, Ib), Nb.dtSum += Ib, Ib > 0 && (Nb.peakRate = Math.max(Nb.peakRate, Math.hypot(nb, mb) / Ib))), Nb.raw[0] += Mb, Nb.raw[1] += Xb, Nb.turned[0] += nb, Nb.turned[1] += mb;
-          const Vb = Math.abs(Mb) > Cb || Math.abs(Xb) > Cb,
-            Lb = `raw (${Hb(Mb)}, ${Hb(Xb)}) over ${fb(Ib)} ms, limit ${Hb(Cb)}, filter v (${Qb.toFixed(3)}, ${eb.toFixed(3)}) px/ms, at ${fb(kb)} ms`;
-          lb === ab ? (Nb.yE++, bb.outlier(`spike put right: ${Lb} -> turned (${Hb(nb)}, ${Hb(mb)})`)) : Vb ? (Nb.pastLimit++, bb.outlier(`kept past limit: ${Lb}`)) : Ib > 50 && (Nb.longFrames++, bb.outlier(`long frame: ${Lb}, turned in full`))
+          Db.looked++, Number.isFinite(Bb) && (Db.dtMin = Math.min(Db.dtMin, Bb), Db.dtMax = Math.max(Db.dtMax, Bb), Db.dtSum += Bb, Bb > 0 && (Db.peakRate = Math.max(Db.peakRate, Math.hypot(Xb, jb) / Bb))), Db.raw[0] += Lb, Db.raw[1] += Pb, Db.turned[0] += Xb, Db.turned[1] += jb;
+          const zb = Math.abs(Lb) > Zb || Math.abs(Pb) > Zb,
+            xb = `raw (${eb(Lb)}, ${eb(Pb)}) over ${vb(Bb)} ms, limit ${eb(Zb)}, filter v (${kb.toFixed(3)}, ${yb.toFixed(3)}) px/ms, at ${vb(Ab)} ms`;
+          Rb === Tb ? (Db.Iq++, bb.outlier(`spike put right: ${xb} -> turned (${eb(Xb)}, ${eb(jb)})`)) : zb ? (Db.pastLimit++, bb.outlier(`kept past limit: ${xb}`)) : Bb > 50 && (Db.longFrames++, bb.outlier(`long frame: ${xb}, turned in full`))
         }, this.onMouseMove = bb => {
-          const cb = this.tally,
+          const ab = this.tally,
             {
-              movementX: sb,
-              movementY: kb
+              movementX: Ub,
+              movementY: Ab
             } = bb;
-          cb.events++;
-          const Wb = Math.max(Math.abs(sb), Math.abs(kb));
-          cb.eventMax = Math.max(cb.eventMax, Wb);
-          const ab = null !== document.pointerLockElement,
-            Tb = this.event;
-          Tb[0] = bb.timeStamp, Tb[1] = sb, Tb[2] = kb, Tb[3] = ab ? 1 : 0, this.events.push(Tb), Wb >= 200 && (cb.bigEvents++, this.eventOutlier(`big mousemove (${sb}, ${kb}) at ${fb(bb.timeStamp)} ms, lock ${ab?"qU":"free"}`))
+          ab.events++;
+          const Mb = Math.max(Math.abs(Ub), Math.abs(Ab));
+          ab.eventMax = Math.max(ab.eventMax, Mb);
+          const Tb = null !== document.pointerLockElement,
+            Eb = this.event;
+          Eb[0] = bb.timeStamp, Eb[1] = Ub, Eb[2] = Ab, Eb[3] = Tb ? 1 : 0, this.events.push(Eb), Mb >= 200 && (ab.bigEvents++, this.eventOutlier(`big mousemove (${Ub}, ${Ab}) at ${vb(bb.timeStamp)} ms, lock ${Tb?"PY":"free"}`))
         }, this.onLockChange = () => {
           const bb = document.pointerLockElement;
-          (0, kb.m)("look", `pointer lock ${bb?`gained (${bb.tagName.toLowerCase()})`:"lost"} at ${fb(performance.now())} ms`)
+          (0, Ab.n)("look", `pointer lock ${bb?`gained (${bb.tagName.toLowerCase()})`:"lost"} at ${vb(performance.now())} ms`)
         }, this.onLockError = () => {
-          (0, kb.m)("look", `pointer lock request failed at ${fb(performance.now())} ms`)
+          (0, Ab.n)("look", `pointer lock request failed at ${vb(performance.now())} ms`)
         }, this.onVisibility = () => {
-          (0, kb.m)("look", `page ${document.visibilityState} at ${fb(performance.now())} ms`)
+          (0, Ab.n)("look", `page ${document.visibilityState} at ${vb(performance.now())} ms`)
         }, this.flush = () => {
           this.takeRecords();
           const bb = this.tally;
-          if (this.tally = new Mb, 0 === bb.events && 0 === bb.raw[0] && 0 === bb.raw[1] && 0 === bb.lockSkips && 0 === bb.yE && 0 === bb.dropped) return;
-          const cb = bb.looked > 0 ? bb.dtSum / bb.looked : NaN,
-            sb = [`${bb.frames} frames (${bb.looked} looked, ${bb.idle} idle${"wasm"===this.client?`, ${bb.tQ} carried`:""})`, `dt avg ${fb(cb)} min ${fb(bb.dtMin)} max ${fb(bb.dtMax)}, ${bb.longFrames} long`, `${bb.events} mousemoves (max ${Hb(bb.eventMax)} px, ${bb.bigEvents} big)`, `raw (${Hb(bb.raw[0])}, ${Hb(bb.raw[1])}) turned (${Hb(bb.turned[0])}, ${Hb(bb.turned[1])})`, `peak ${bb.peakRate.toFixed(2)} px/ms`, `put right ${bb.yE}, past limit ${bb.pastLimit}, lock skips ${bb.lockSkips}`, "lock " + (document.pointerLockElement ? "qU" : "free")];
-          bb.dropped > 0 && sb.push(`${bb.dropped} doubled spike copies dropped`), bb.lost > 0 && sb.push(`${bb.lost} records lost`), bb.suppressed > 0 && sb.push(`${bb.suppressed} outlier lines not shown`), (0, kb.m)("look", `1s: ${sb.join("; ")}`)
+          if (this.tally = new Lb, 0 === bb.events && 0 === bb.raw[0] && 0 === bb.raw[1] && 0 === bb.lockSkips && 0 === bb.Iq && 0 === bb.dropped) return;
+          const ab = bb.looked > 0 ? bb.dtSum / bb.looked : NaN,
+            Ub = [`${bb.frames} frames (${bb.looked} looked, ${bb.idle} idle${"wasm"===this.client?`, ${bb.qR} carried`:""})`, `dt avg ${vb(ab)} min ${vb(bb.dtMin)} max ${vb(bb.dtMax)}, ${bb.longFrames} long`, `${bb.events} mousemoves (max ${eb(bb.eventMax)} px, ${bb.bigEvents} big)`, `raw (${eb(bb.raw[0])}, ${eb(bb.raw[1])}) turned (${eb(bb.turned[0])}, ${eb(bb.turned[1])})`, `peak ${bb.peakRate.toFixed(2)} px/ms`, `put right ${bb.Iq}, past limit ${bb.pastLimit}, lock skips ${bb.lockSkips}`, "lock " + (document.pointerLockElement ? "PY" : "free")];
+          bb.dropped > 0 && Ub.push(`${bb.dropped} doubled spike copies dropped`), bb.lost > 0 && Ub.push(`${bb.lost} records lost`), bb.suppressed > 0 && Ub.push(`${bb.suppressed} outlier lines not shown`), (0, Ab.n)("look", `1s: ${Ub.join("; ")}`)
         }, this.dump = () => [`look records (${this.client}): nowMs,dtMs,rawX,rawY,turnedX,turnedY,outcome,vX,vY,limit`, ...this.records.lines(), "mousemove events: timeStamp,movementX,movementY,locked", ...this.events.lines()].join("\n")
       }
-      start(bb, cb) {
-        this.client = bb, this.take = cb;
+      start(bb, ab) {
+        this.client = bb, this.take = ab;
         const {
-          screen: sb
+          screen: Ub
         } = window;
-        (0, kb.m)("look", `start: ${bb} client, dpr ${window.devicePixelRatio}, screen ${sb.width}x${sb.height}, pointer lock ${document.pointerLockElement?"qU":"free"}`), this.started || (this.started = !0, window.addEventListener("mousemove", this.onMouseMove, {
+        (0, Ab.n)("look", `start: ${bb} client, dpr ${window.devicePixelRatio}, screen ${Ub.width}x${Ub.height}, pointer lock ${document.pointerLockElement?"PY":"free"}`), this.started || (this.started = !0, window.addEventListener("mousemove", this.onMouseMove, {
           capture: !0,
           passive: !0
-        }), document.addEventListener("pointerlockchange", this.onLockChange), document.addEventListener("pointerlockerror", this.onLockError), document.addEventListener("visibilitychange", this.onVisibility), setInterval(this.flush, 1e3), (0, kb.k)("look", this.dump))
+        }), document.addEventListener("pointerlockchange", this.onLockChange), document.addEventListener("pointerlockerror", this.onLockError), document.addEventListener("visibilitychange", this.onVisibility), setInterval(this.flush, 1e3), (0, Ab.j)("look", this.dump))
       }
       outlier(bb) {
-        const cb = this.tally;
-        cb.outliers >= 20 ? cb.suppressed++ : (cb.outliers++, (0, kb.m)("look", bb))
+        const ab = this.tally;
+        ab.outliers >= 20 ? ab.suppressed++ : (ab.outliers++, (0, Ab.n)("look", bb))
       }
       eventOutlier(bb) {
-        const cb = this.tally;
-        cb.eventLines >= 10 ? cb.suppressed++ : (cb.eventLines++, (0, kb.m)("look", bb))
+        const ab = this.tally;
+        ab.eventLines >= 10 ? ab.suppressed++ : (ab.eventLines++, (0, Ab.n)("look", bb))
       }
       takeRecords() {
         var bb;
-        const cb = null === (bb = this.take) || void 0 === bb ? void 0 : bb.call(this);
-        if (cb && cb.length >= 2) {
-          this.tally.lost += cb[0], this.tally.dropped += cb[1];
-          for (let bb = 2; bb + 10 <= cb.length; bb += 10) this.record(cb, bb)
+        const ab = null === (bb = this.take) || void 0 === bb ? void 0 : bb.call(this);
+        if (ab && ab.length >= 2) {
+          this.tally.lost += ab[0], this.tally.dropped += ab[1];
+          for (let bb = 2; bb + 10 <= ab.length; bb += 10) this.record(ab, bb)
         }
       }
       droppedCopy() {
@@ -132,89 +132,89 @@ export const modules = {
         this.takeRecords(), this.take = null
       }
     }
-    let nb = null;
+    let Xb = null;
 
-    function mb(bb) {
-      let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      return nb ??= new Xb, nb.start(bb, cb), nb.record
+    function jb(bb) {
+      let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      return Xb ??= new Pb, Xb.start(bb, ab), Xb.record
     }
 
-    function lb() {
+    function Rb() {
       var bb;
-      null === (bb = nb) || void 0 === bb || bb.endTake()
+      null === (bb = Xb) || void 0 === bb || bb.endTake()
     }
 
-    function Qb() {
+    function kb() {
       var bb;
-      null === (bb = nb) || void 0 === bb || bb.droppedCopy()
+      null === (bb = Xb) || void 0 === bb || bb.droppedCopy()
     }
   },
-  8827: (bb, cb, sb) => {
-    sb.d(cb, {
-      c: () => kb
+  8797: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      e: () => Ab
     });
-    const kb = new Set(["chunkBorders"])
+    const Ab = new Set(["chunkBorders"])
   },
-  8960: (bb, cb, sb) => {
-    sb.d(cb, {
-      c: () => Tb,
-      e: () => Wb,
-      h: () => fb
+  8951: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      d: () => Eb,
+      h: () => Mb,
+      l: () => vb
     });
-    var kb = sb(1544);
+    var Ab = Ub(1485);
 
-    function Wb(bb) {
-      var cb;
+    function Mb(bb) {
+      var ab;
       return {
-        ...Tb.store,
-        yaw: Tb.store.yaw + (null !== (cb = kb.b[bb].previewYaw) && void 0 !== cb ? cb : 0)
+        ...Eb.store,
+        yaw: Eb.store.yaw + (null !== (ab = Ab.d[bb].previewYaw) && void 0 !== ab ? ab : 0)
       }
     }
-    const ab = {
+    const Tb = {
         yaw: .61 * Math.PI,
         pitch: Math.PI / 2.05,
         radius: 30,
         target: [0, 0, 0]
       },
-      Tb = {
-        player: ab,
+      Eb = {
+        player: Tb,
         store: {
-          ...ab,
+          ...Tb,
           radius: 33,
           target: [0, 3.9, 0]
         }
       };
 
-    function Ub(bb, cb) {
-      bb instanceof Promise ? bb.then(cb).catch((bb => {
+    function Yb(bb, ab) {
+      bb instanceof Promise ? bb.then(ab).catch((bb => {
         console.error("Couldn't open the preview", bb)
-      })) : cb(bb)
+      })) : ab(bb)
     }
-    class Ib {
+    class Bb {
       constructor(bb) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, Ub(bb, (bb => {
+        this.opened = null, this.view = null, this.size = null, this.closed = !1, Yb(bb, (bb => {
           this.closed ? bb.close() : (this.opened = bb, null !== this.size && bb.resize(this.size.width, this.size.height), null !== this.view && bb.show(this.view))
         }))
       }
       show(bb) {
-        var cb;
-        this.view = bb, null === (cb = this.opened) || void 0 === cb || cb.show(bb)
+        var ab;
+        this.view = bb, null === (ab = this.opened) || void 0 === ab || ab.show(bb)
       }
-      resize(bb, cb) {
-        var sb;
+      resize(bb, ab) {
+        var Ub;
         this.size = {
           width: bb,
-          height: cb
-        }, null === (sb = this.opened) || void 0 === sb || sb.resize(bb, cb)
+          height: ab
+        }, null === (Ub = this.opened) || void 0 === Ub || Ub.resize(bb, ab)
       }
       close() {
         var bb;
         this.closed = !0, null === (bb = this.opened) || void 0 === bb || bb.close(), this.opened = null
       }
     }
-    class Hb {
+    class eb {
       constructor(bb) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(bb).then((bb => bb.ready)), Ub(bb, (bb => {
+        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(bb).then((bb => bb.ready)), Yb(bb, (bb => {
           this.closed ? bb.close() : (this.opened = bb, null !== this.size && bb.resize(this.size.width, this.size.height))
         }))
       }
@@ -222,42 +222,42 @@ export const modules = {
         return this.opened.dev
       }
       isReady() {
-        var bb, cb;
-        return null !== (bb = null === (cb = this.opened) || void 0 === cb ? void 0 : cb.isReady()) && void 0 !== bb && bb
+        var bb, ab;
+        return null !== (bb = null === (ab = this.opened) || void 0 === ab ? void 0 : ab.isReady()) && void 0 !== bb && bb
       }
-      setCosmetic(bb, cb) {
-        var sb;
-        null === (sb = this.opened) || void 0 === sb || sb.setCosmetic(bb, cb)
+      setCosmetic(bb, ab) {
+        var Ub;
+        null === (Ub = this.opened) || void 0 === Ub || Ub.setCosmetic(bb, ab)
       }
       playEmote(bb) {
-        var cb;
-        null === (cb = this.opened) || void 0 === cb || cb.playEmote(bb)
+        var ab;
+        null === (ab = this.opened) || void 0 === ab || ab.playEmote(bb)
       }
       setOrbit(bb) {
-        var cb;
-        null === (cb = this.opened) || void 0 === cb || cb.setOrbit(bb)
+        var ab;
+        null === (ab = this.opened) || void 0 === ab || ab.setOrbit(bb)
       }
       resetCamera() {
         var bb;
         null === (bb = this.opened) || void 0 === bb || bb.resetCamera()
       }
       async untilDrawn(bb) {
-        var cb;
-        await this.ready, await (null === (cb = this.opened) || void 0 === cb ? void 0 : cb.untilDrawn(bb))
+        var ab;
+        await this.ready, await (null === (ab = this.opened) || void 0 === ab ? void 0 : ab.untilDrawn(bb))
       }
-      resize(bb, cb) {
-        var sb;
+      resize(bb, ab) {
+        var Ub;
         this.size = {
           width: bb,
-          height: cb
-        }, null === (sb = this.opened) || void 0 === sb || sb.resize(bb, cb)
+          height: ab
+        }, null === (Ub = this.opened) || void 0 === Ub || Ub.resize(bb, ab)
       }
       close() {
         var bb;
         this.closed = !0, null === (bb = this.opened) || void 0 === bb || bb.close(), this.opened = null
       }
     }
-    const fb = new class {
+    const vb = new class {
       constructor() {
         this.host = null, this.makeDefault = null
       }
@@ -275,78 +275,78 @@ export const modules = {
         return this.host
       }
       openMob(bb) {
-        return new Ib(this.current().openMob(bb))
+        return new Bb(this.current().openMob(bb))
       }
       openPet(bb) {
-        return new Ib(this.current().openPet(bb))
+        return new Bb(this.current().openPet(bb))
       }
       openMobLineup(bb) {
-        return new Ib(this.current().openMobLineup(bb))
+        return new Bb(this.current().openMobLineup(bb))
       }
-      openCharacter(bb, cb) {
-        return new Hb(this.current().openCharacter(bb, cb))
+      openCharacter(bb, ab) {
+        return new eb(this.current().openCharacter(bb, ab))
       }
     }
   },
-  38812: (bb, cb, sb) => {
-    sb.d(cb, {
-      d: () => Mb,
-      e: () => Xb
+  38523: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      e: () => Lb,
+      h: () => Pb
     });
-    var kb = sb(195),
-      Wb = sb(214),
-      ab = sb(1464),
-      Tb = sb(2984),
-      Ub = sb(1474),
-      Ib = sb(36120),
-      Hb = sb(667),
-      fb = sb(38787);
+    var Ab = Ub(166),
+      Mb = Ub(195),
+      Tb = Ub(1400),
+      Eb = Ub(2653),
+      Yb = Ub(1413),
+      Bb = Ub(35909),
+      eb = Ub(622),
+      vb = Ub(38489);
 
-    function Mb(bb) {
-      (0, Tb.d)("matchmake_failed", bb, kb.k[kb.k.SHADER_PACK])
+    function Lb(bb) {
+      (0, Eb.e)("matchmake_failed", bb, Ab.k[Ab.k.SHADER_PACK])
     }
-    async function Xb(bb, cb) {
-      var sb;
-      const kb = null === (sb = await fb.shaderPackPage.preload()) || void 0 === sb ? void 0 : sb.listing,
-        Tb = (0, Ib.e)();
-      kb && null !== Tb && await Ub.b.reportShaderPackSession(bb, {
-        packId: kb.packId,
-        sourceHash: kb.sourceHash,
-        game: (0, ab.e)(cb, Wb.B, "other"),
-        playSessionId: Tb,
-        visitSessionId: (0, Hb.c)()
+    async function Pb(bb, ab) {
+      var Ub;
+      const Ab = null === (Ub = await vb.shaderPackPage.preload()) || void 0 === Ub ? void 0 : Ub.listing,
+        Eb = (0, Bb.e)();
+      Ab && null !== Eb && await Yb.b.reportShaderPackSession(bb, {
+        packId: Ab.packId,
+        sourceHash: Ab.sourceHash,
+        game: (0, Tb.h)(ab, Mb.w, "other"),
+        playSessionId: Eb,
+        visitSessionId: (0, eb.e)()
       })
     }
   },
-  38611: (bb, cb, sb) => {
-    sb.d(cb, {
-      d: () => Ub
+  38334: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      d: () => Yb
     });
-    var kb = sb(26),
-      Wb = sb(1287),
-      ab = sb(3243);
-    const Tb = "Reconnecting";
-    class Ub {
+    var Ab = Ub(22),
+      Mb = Ub(1216),
+      Tb = Ub(3144);
+    const Eb = "Reconnecting";
+    class Yb {
       constructor(bb) {
         this.hooks = bb, this.graceMs = 0, this.sessionBased = !1, this.controller = void 0, this.frozen = !1, this.stopped = !1, this.listening = !1, this.ended = !1, this.retryNow = () => {
           "visible" === document.visibilityState && this.controller.retryNow()
         }, this.onPageHide = bb => {
           bb.persisted || this.leave()
-        }, this.controller = new ab.b((cb => bb.reconnect(cb)), {
+        }, this.controller = new Tb.c((ab => bb.reconnect(ab)), {
           isSessionLive: () => !this.ended && bb.isLive(),
           onPhaseChanged: bb => {
             this.onPhaseChanged(bb)
           },
-          onReconnected: cb => {
-            bb.onReconnected(cb)
+          onReconnected: ab => {
+            bb.onReconnected(ab)
           },
-          onGaveUp: cb => {
-            !this.ended && bb.isLive() && bb.onGaveUp(this.sessionBased, cb)
+          onGaveUp: ab => {
+            !this.ended && bb.isLive() && bb.onGaveUp(this.sessionBased, ab)
           }
         })
       }
-      onInitialInfo(bb, cb) {
-        this.graceMs = bb, this.sessionBased = cb
+      onInitialInfo(bb, ab) {
+        this.graceMs = bb, this.sessionBased = ab
       }
       canHoldSeat() {
         return this.graceMs > 0 && !this.ended
@@ -365,37 +365,37 @@ export const modules = {
       }
       leave() {
         const bb = this.isResuming() && !this.controller.awaitingResumeOnRoom,
-          cb = this.controller.heldToken;
-        this.end(), bb && "" !== cb && this.hooks.releaseSeat(cb)
+          ab = this.controller.heldToken;
+        this.end(), bb && "" !== ab && this.hooks.releaseSeat(ab)
       }
       end() {
         this.ended = !0, this.controller.stop()
       }
       onPhaseChanged(bb) {
-        const cb = "frozen" === bb || "resuming" === bb;
-        cb !== this.stopped && (this.stopped = cb, this.hooks.freeze(cb));
-        const sb = "frozen" === bb || "resuming" === bb && this.frozen;
-        sb && !this.frozen ? (0, Wb.n)(Tb) : !sb && this.frozen && (0, Wb.k)(Tb), this.frozen = sb, this.setListening("connected" !== bb), kb.j.QQ(ab.m, sb ? "frozen" : bb)
+        const ab = "frozen" === bb || "resuming" === bb;
+        ab !== this.stopped && (this.stopped = ab, this.hooks.freeze(ab));
+        const Ub = "frozen" === bb || "resuming" === bb && this.frozen;
+        Ub && !this.frozen ? (0, Mb.h)(Eb) : !Ub && this.frozen && (0, Mb.g)(Eb), this.frozen = Ub, this.setListening("connected" !== bb), Ab.m.IR(Tb.j, Ub ? "frozen" : bb)
       }
       setListening(bb) {
         bb !== this.listening && (this.listening = bb, bb ? (window.addEventListener("online", this.retryNow), document.addEventListener("visibilitychange", this.retryNow), window.addEventListener("pagehide", this.onPageHide)) : (window.removeEventListener("online", this.retryNow), document.removeEventListener("visibilitychange", this.retryNow), window.removeEventListener("pagehide", this.onPageHide)))
       }
     }
   },
-  38620: (bb, cb, sb) => {
-    sb.d(cb, {
-      c: () => kb
+  38342: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      c: () => Ab
     });
-    class kb {
+    class Ab {
       constructor(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
-        this.onSilent = bb, this.now = cb, this.lastHeardAt = void 0, this.resumedAt = void 0, this.lastCheckAt = void 0, this.wasVisible = "visible" === document.visibilityState, this.interval = void 0, this.check = () => {
+        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
+        this.onSilent = bb, this.now = ab, this.lastHeardAt = void 0, this.resumedAt = void 0, this.lastCheckAt = void 0, this.wasVisible = "visible" === document.visibilityState, this.interval = void 0, this.check = () => {
           const bb = this.now(),
-            cb = bb - this.lastCheckAt <= 2e3;
+            ab = bb - this.lastCheckAt <= 2e3;
           this.lastCheckAt = bb;
-          const sb = "visible" === document.visibilityState;
-          !sb || cb && this.wasVisible || (this.resumedAt = bb), this.wasVisible = sb, sb && bb - this.lastHeardAt > 12e3 && bb - this.resumedAt > 2e3 && this.onSilent()
-        }, this.lastHeardAt = cb(), this.resumedAt = this.lastHeardAt, this.lastCheckAt = this.lastHeardAt, this.interval = setInterval(this.check, 1e3), document.addEventListener("visibilitychange", this.check), window.addEventListener("online", this.check)
+          const Ub = "visible" === document.visibilityState;
+          !Ub || ab && this.wasVisible || (this.resumedAt = bb), this.wasVisible = Ub, Ub && bb - this.lastHeardAt > 12e3 && bb - this.resumedAt > 2e3 && this.onSilent()
+        }, this.lastHeardAt = ab(), this.resumedAt = this.lastHeardAt, this.lastCheckAt = this.lastHeardAt, this.interval = setInterval(this.check, 1e3), document.addEventListener("visibilitychange", this.check), window.addEventListener("online", this.check)
       }
       heard() {
         this.lastHeardAt = this.now()
@@ -405,28 +405,28 @@ export const modules = {
       }
     }
   },
-  8862: (bb, cb, sb) => {
-    sb.d(cb, {
-      b: () => ab
+  8834: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      b: () => Tb
     });
-    var kb = sb(1058);
+    var Ab = Ub(1003);
 
-    function Wb() {
-      var bb, cb;
-      return null !== (bb = null === (cb = screen.orientation) || void 0 === cb ? void 0 : cb.type) && void 0 !== bb ? bb : innerWidth > innerHeight ? "landscape" : "portrait"
+    function Mb() {
+      var bb, ab;
+      return null !== (bb = null === (ab = screen.orientation) || void 0 === ab ? void 0 : ab.type) && void 0 !== bb ? bb : innerWidth > innerHeight ? "landscape" : "portrait"
     }
-    const ab = new class {
+    const Tb = new class {
       constructor() {
         this.holding = !1, this.heldOrientation = "", this.releaseTimer = void 0, this.longHoldTimer = void 0, this.resizers = new Set, this.releaseWhenShown = () => {
           document.hidden || (document.removeEventListener("visibilitychange", this.releaseWhenShown), this.release())
         }
       }
       isHeld() {
-        return this.holding && Wb() !== this.heldOrientation && (this.holding = !1), this.holding
+        return this.holding && Mb() !== this.heldOrientation && (this.holding = !1), this.holding
       }
       hold() {
-        this.heldOrientation = Wb(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
-          this.holding && (0, kb.dl)(new Error("Game view size held for 60 s"))
+        this.heldOrientation = Mb(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
+          this.holding && (0, Ab.UR)(new Error("Game view size held for 60 s"))
         }), 6e4)
       }
       release() {
@@ -439,11 +439,11 @@ export const modules = {
         }), 1e3)
       }
       heldSizer(bb) {
-        let cb = !1;
+        let ab = !1;
         return () => {
-          if (cb && this.isHeld()) return null;
-          const sb = bb();
-          return cb ||= null !== sb, sb
+          if (ab && this.isHeld()) return null;
+          const Ub = bb();
+          return ab ||= null !== Ub, Ub
         }
       }
       onRelease(bb) {
@@ -453,321 +453,321 @@ export const modules = {
       }
     }
   },
-  38805: (bb, cb, sb) => {
-    sb.d(cb, {
-      c: () => Wb
+  38511: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      c: () => Mb
     });
-    let kb = !1;
-    async function Wb(bb, cb) {
-      if (!kb) {
-        kb = !0;
+    let Ab = !1;
+    async function Mb(bb, ab) {
+      if (!Ab) {
+        Ab = !0;
         try {
           const [{
-            reloadBloxd: kb
+            reloadBloxd: Ab
           }, {
-            NotificationProvider: Wb
-          }] = await Promise.all([Promise.resolve().then((() => sb(1704))), Promise.resolve().then((() => sb(1332)))]);
-          if (!bb || !0 === await Wb.showPromptPopup({
+            NotificationProvider: Mb
+          }] = await Promise.all([Promise.resolve().then((() => Ub(1639))), Promise.resolve().then((() => Ub(1260)))]);
+          if (!bb || !0 === await Mb.showPromptPopup({
               title: "Unsaved changes",
               subtitle: "Exit and lose your unsaved changes?",
               confirmText: "Exit",
               destructive: !0,
               cancelText: "Cancel",
               unlockPointerKey: "replayExitUnsavedChanges"
-            }).getResult()) return void kb(cb)
-        } catch (Wb) {
-          console.error("Leaving the replay failed", Wb)
+            }).getResult()) return void Ab(ab)
+        } catch (Mb) {
+          console.error("Leaving the replay failed", Mb)
         }
-        kb = !1
+        Ab = !1
       }
     }
   },
-  38633: (bb, cb, sb) => {
-    sb.d(cb, {
-      c: () => Hb,
-      f: () => fb
+  38350: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      b: () => eb,
+      e: () => vb
     });
-    var kb = sb(1694),
-      Wb = sb(223),
-      ab = sb(1670),
-      Tb = sb(1750),
-      Ub = sb(1208),
-      Ib = sb(1126);
-    async function Hb(bb, cb) {
+    var Ab = Ub(1629),
+      Mb = Ub(205),
+      Tb = Ub(1605),
+      Eb = Ub(1683),
+      Yb = Ub(1142),
+      Bb = Ub(1065);
+    async function eb(bb, ab) {
       return function(bb) {
-        return "object" === typeof bb && null !== bb && bb.code === Wb.d.VpnIp.code
-      }(cb) && function(bb) {
-        return ab.b.supports("appCheck") && bb.isLoggedIn() && !bb.hasTriedAppAttestation()
+        return "object" === typeof bb && null !== bb && bb.code === Mb.b.VpnIp.code
+      }(ab) && function(bb) {
+        return Tb.d.supports("appCheck") && bb.isLoggedIn() && !bb.hasTriedAppAttestation()
       }(bb) && await async function(bb) {
         try {
           const {
-            token: cb
-          } = await (0, Tb.e)(), {
-            "3PSIDMCPP": sb
-          } = await (0, Ib.postJsonWithMetricsCookiesAndJsonResponse)(`${Ub.clientSideServerUrls.indexUrl}/index/app-attestation`, {
-            appCheckToken: cb
+            token: ab
+          } = await (0, Eb.d)(), {
+            "3PSIDMCPP": Ub
+          } = await (0, Bb.postJsonWithMetricsCookiesAndJsonResponse)(`${Yb.clientSideServerUrls.indexUrl}/index/app-attestation`, {
+            appCheckToken: ab
           }, {
             retries: 0
           }, bb.getMetricsCookies());
-          return bb.setAppAttestedAuthJwt(sb), !0
-        } catch (cb) {
-          return cb instanceof kb.b && "failed" === cb.code ? (console.warn("The app couldn't get an App Check token:", cb), bb.markAppAttestationTried()) : console.error("Failed to attest the app:", cb), !1
+          return bb.setAppAttestedAuthJwt(Ub), !0
+        } catch (ab) {
+          return ab instanceof Ab.b && "failed" === ab.code ? (console.warn("The app couldn't get an App Check token:", ab), bb.markAppAttestationTried()) : console.error("Failed to attest the app:", ab), !1
         }
       }(bb)
     }
-    async function fb(bb, cb) {
+    async function vb(bb, ab) {
       try {
-        return await cb()
-      } catch (sb) {
-        if (!await Hb(bb, sb)) throw sb
+        return await ab()
+      } catch (Ub) {
+        if (!await eb(bb, Ub)) throw Ub
       }
-      return cb()
+      return ab()
     }
   },
-  40474: (bb, cb, sb) => {
-    sb.d(cb, {
-      e: () => Ib
+  40153: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      e: () => Bb
     });
-    var kb = sb(1721);
-    const Wb = 33177600,
-      ab = 3e4;
-    let Tb = !1;
+    var Ab = Ub(1655);
+    const Mb = 33177600,
+      Tb = 3e4;
+    let Eb = !1;
 
-    function Ub(bb, cb, sb) {
+    function Yb(bb, ab, Ub) {
       if (!bb.drawing()) return Promise.reject(new Error("Screenshots need a game to be running"));
-      if (Tb) return Promise.reject(new Error("A screenshot is already being taken"));
-      Tb = !0;
-      const kb = function(bb, cb, sb) {
-        const kb = Math.max(1, bb),
-          ab = Math.max(1, cb),
-          Tb = Math.min(1, sb / Math.max(kb, ab), Math.sqrt(Wb / (kb * ab)));
+      if (Eb) return Promise.reject(new Error("A screenshot is already being taken"));
+      Eb = !0;
+      const Ab = function(bb, ab, Ub) {
+        const Ab = Math.max(1, bb),
+          Tb = Math.max(1, ab),
+          Eb = Math.min(1, Ub / Math.max(Ab, Tb), Math.sqrt(Mb / (Ab * Tb)));
         return {
-          width: Math.max(1, Math.floor(kb * Tb)),
-          height: Math.max(1, Math.floor(ab * Tb))
+          width: Math.max(1, Math.floor(Ab * Eb)),
+          height: Math.max(1, Math.floor(Tb * Eb))
         }
-      }(cb, sb, bb.maxTextureSize);
-      return bb.resize(kb.width, kb.height), new Promise(((cb, sb) => {
-        let kb, Wb = 2,
-          Ub = null;
-        const Ib = () => {
-          var cb;
-          Tb = !1, null === (cb = Ub) || void 0 === cb || cb(), clearTimeout(kb), bb.restoreSize()
+      }(ab, Ub, bb.maxTextureSize);
+      return bb.resize(Ab.width, Ab.height), new Promise(((ab, Ub) => {
+        let Ab, Mb = 2,
+          Yb = null;
+        const Bb = () => {
+          var ab;
+          Eb = !1, null === (ab = Yb) || void 0 === ab || ab(), clearTimeout(Ab), bb.restoreSize()
         };
-        kb = setTimeout((() => {
-          Ib(), sb(new Error("No frame was drawn to capture"))
-        }), ab), Ub = bb.onFrameDrawn((() => {
-          if (Wb--, Wb > 0) return;
+        Ab = setTimeout((() => {
+          Bb(), Ub(new Error("No frame was drawn to capture"))
+        }), Tb), Yb = bb.onFrameDrawn((() => {
+          if (Mb--, Mb > 0) return;
           const {
-            canvas: kb
-          } = bb, ab = {
-            width: kb.width,
-            height: kb.height
+            canvas: Ab
+          } = bb, Tb = {
+            width: Ab.width,
+            height: Ab.height
           };
           try {
-            kb.toBlob((bb => {
-              bb ? cb({
+            Ab.toBlob((bb => {
+              bb ? ab({
                 blob: bb,
-                ...ab
-              }) : sb(new Error("The canvas gave no image"))
+                ...Tb
+              }) : Ub(new Error("The canvas gave no image"))
             }), "image/png")
-          } catch (Tb) {
-            sb(Tb)
+          } catch (Eb) {
+            Ub(Eb)
           } finally {
-            Ib()
+            Bb()
           }
         }))
       }))
     }
-    async function Ib(bb, cb, sb) {
+    async function Bb(bb, ab, Ub) {
       try {
-        const Wb = await Ub(bb, cb, sb);
-        (0, kb.c)(Wb.blob, `bloxd-screenshot-${Wb.width}x${Wb.height}-${Date.now()}.png`)
-      } catch (Wb) {
-        console.error("Error taking screenshot:", Wb)
+        const Mb = await Yb(bb, ab, Ub);
+        (0, Ab.c)(Mb.blob, `bloxd-screenshot-${Mb.width}x${Mb.height}-${Date.now()}.png`)
+      } catch (Mb) {
+        console.error("Error taking screenshot:", Mb)
       }
     }
   },
-  38625: (bb, cb, sb) => {
-    sb.d(cb, {
-      b: () => Xb,
-      d: () => fb
+  38345: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      d: () => Pb,
+      h: () => vb
     });
-    var kb = sb(223),
-      Wb = sb(1767),
-      ab = sb(1770),
-      Tb = sb(8506);
-    const Ub = [250, 500, 1e3, 2e3, 1250],
-      Ib = 406;
+    var Ab = Ub(205),
+      Mb = Ub(1704),
+      Tb = Ub(1710),
+      Eb = Ub(8463);
+    const Yb = [250, 500, 1e3, 2e3, 1250],
+      Bb = 406;
 
-    function Hb(bb) {
+    function eb(bb) {
       if ("object" !== typeof bb || null === bb) return !1;
       const {
-        code: cb,
-        message: sb
-      } = bb, Wb = kb.d.duplicateLobbyNameError;
-      return (cb === Wb.code || cb === Ib) && (sb === Wb.text || sb === Wb.text + kb.j)
+        code: ab,
+        message: Ub
+      } = bb, Mb = Ab.b.duplicateLobbyNameError;
+      return (ab === Mb.code || ab === Bb) && (Ub === Mb.text || Ub === Mb.text + Ab.h)
     }
-    async function fb(bb, cb) {
-      let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Wb.e;
-      for (let Wb = 0;; Wb++) {
-        let Tb;
-        (0, ab.j)(cb);
+    async function vb(bb, ab) {
+      let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Mb.b;
+      for (let Mb = 0;; Mb++) {
+        let Eb;
+        (0, Tb.h)(ab);
         try {
           return await bb()
-        } catch (kb) {
-          if (Tb = Ub[Wb], void 0 === Tb || !Hb(kb)) throw kb
+        } catch (Ab) {
+          if (Eb = Yb[Mb], void 0 === Eb || !eb(Ab)) throw Ab
         }
-        await sb(Tb, cb)
+        await Ub(Eb, ab)
       }
     }
-    const Mb = new Set([kb.d.duplicateLobbyNameError.code, kb.d.lobbyCantBeCreated.code, kb.d.roomDisposedEarlyError.code, kb.d.roomDisposedLateError.code, kb.d.serverRoomLimitReached.code]);
+    const Lb = new Set([Ab.b.duplicateLobbyNameError.code, Ab.b.lobbyCantBeCreated.code, Ab.b.roomDisposedEarlyError.code, Ab.b.roomDisposedLateError.code, Ab.b.serverRoomLimitReached.code]);
 
-    function Xb(bb) {
-      if (Hb(bb)) return !0;
-      const cb = (0, Tb.g)(bb);
-      return "number" === typeof cb && Mb.has(cb)
+    function Pb(bb) {
+      if (eb(bb)) return !0;
+      const ab = (0, Eb.h)(bb);
+      return "number" === typeof ab && Lb.has(ab)
     }
   },
-  8506: (bb, cb, sb) => {
-    sb.d(cb, {
-      d: () => ab,
-      g: () => Tb,
-      h: () => Ub,
-      j: () => Hb,
-      m: () => Ib
+  8463: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      d: () => Tb,
+      h: () => Eb,
+      l: () => Yb,
+      p: () => eb,
+      t: () => Bb
     });
-    var kb = sb(223),
-      Wb = sb(4371);
-
-    function ab(bb) {
-      return Tb(bb) === kb.d.gameOrPluginOnPlayerAuthRejected.code
-    }
+    var Ab = Ub(205),
+      Mb = Ub(4317);
 
     function Tb(bb) {
+      return Eb(bb) === Ab.b.gameOrPluginOnPlayerAuthRejected.code
+    }
+
+    function Eb(bb) {
       return "object" === typeof bb && null !== bb ? bb.code : void 0
     }
 
-    function Ub(bb) {
-      var cb;
-      return null !== (cb = Object.keys(Wb.d).find((cb => Wb.d[cb] === bb))) && void 0 !== cb ? cb : null
+    function Yb(bb) {
+      var ab;
+      return null !== (ab = Object.keys(Mb.e).find((ab => Mb.e[ab] === bb))) && void 0 !== ab ? ab : null
     }
 
-    function Ib(bb) {
+    function Bb(bb) {
       return "notWhitelisted" === bb ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
     }
-    const Hb = {
+    const eb = {
       private: "customLobby:cantJoinPrivate",
       notWhitelisted: "customLobby:cantJoinNotWhitelisted",
       banned: "customLobby:cantJoinBanned",
       adminLocked: "customLobby:cantJoinAdminLocked"
     }
   },
-  38728: (bb, cb, sb) => {
-    sb.d(cb, {
-      c: () => Tb
+  38448: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      e: () => Eb
     });
-    var kb = sb(334),
-      Wb = sb(167),
-      ab = sb(37);
+    var Ab = Ub(307),
+      Mb = Ub(137),
+      Tb = Ub(31);
 
-    function Tb() {
-      ab.h.setItem(kb.Ob, ab.h.getItem(kb.Ob) + 1), (0, Wb.k)() && ab.h.setItem(kb.Nb, ab.h.getItem(kb.Nb) + 1)
+    function Eb() {
+      Tb.f.setItem(Ab.Gb, Tb.f.getItem(Ab.Gb) + 1), (0, Mb.j)() && Tb.f.setItem(Ab.Db, Tb.f.getItem(Ab.Db) + 1)
     }
   },
-  36112: (bb, cb, sb) => {
-    sb.d(cb, {
-      e: () => Cb,
-      i: () => Nb
+  35900: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      e: () => Zb,
+      i: () => Db
     });
-    var kb = sb(1008),
-      Wb = sb(635),
-      ab = sb(344),
-      Tb = sb(1013),
-      Ub = sb(649),
-      Ib = sb(683),
-      Hb = sb(4257),
-      fb = sb(117),
-      Mb = sb(167),
-      Xb = sb(1704),
-      nb = sb(137),
-      mb = sb(36120),
-      lb = sb(37),
-      Qb = sb(667),
-      eb = sb(36127);
+    var Ab = Ub(950),
+      Mb = Ub(595),
+      Tb = Ub(325),
+      Eb = Ub(954),
+      Yb = Ub(603),
+      Bb = Ub(644),
+      eb = Ub(4201),
+      vb = Ub(101),
+      Lb = Ub(137),
+      Pb = Ub(1639),
+      Xb = Ub(116),
+      jb = Ub(35909),
+      Rb = Ub(31),
+      kb = Ub(622),
+      yb = Ub(35911);
 
-    function Cb() {
-      var bb, cb;
-      return [...null !== (bb = navigator.languages) && void 0 !== bb ? bb : [null !== (cb = navigator.language) && void 0 !== cb ? cb : "none"], "en-Gb"]
+    function Zb() {
+      var bb, ab;
+      return [...null !== (bb = navigator.languages) && void 0 !== bb ? bb : [null !== (ab = navigator.language) && void 0 !== ab ? ab : "none"], "en-Gb"]
     }
 
-    function Nb(bb, cb, sb, Nb, Vb) {
-      const Lb = (0, kb.k)(cb) ? (0, kb.s)(cb) : null,
-        ub = {
-          cookies: (0, Xb.getAllCookiesForGameNameWithVariation)(cb),
-          isMobile: (0, fb.isMobile)(),
-          isUsingCustomGameTexturePack: null !== Lb && Vb(Lb),
+    function Db(bb, ab, Ub, Db, zb) {
+      const xb = (0, Ab.l)(ab) ? (0, Ab.p)(ab) : null,
+        ib = {
+          cookies: (0, Pb.getAllCookiesForGameNameWithVariation)(ab),
+          isMobile: (0, vb.isMobile)(),
+          isUsingCustomGameTexturePack: null !== xb && zb(xb),
           generalCookies: {
-            joinDiscord: !!lb.h.getItem("DiscordPressed"),
-            newGo: Hb.b,
+            joinDiscord: !!Rb.f.getItem("DiscordPressed"),
+            newGo: eb.d,
             ...bb.getMetricsCookies(),
-            trafficCode: Nb,
-            compliance: fb.compliance
+            trafficCode: Db,
+            compliance: vb.compliance
           },
           browserInfo: {
             ua: window.navigator.userAgent,
-            name: (0, fb.getBrowserName)(),
-            version: (0, fb.getBrowserVersion)(),
+            name: (0, vb.getBrowserName)(),
+            version: (0, vb.getBrowserVersion)(),
             platform: navigator.platform,
-            platformType: (0, fb.getPlatformType)(),
-            deviceType: (0, nb.c)()
+            platformType: (0, vb.getPlatformType)(),
+            deviceType: (0, Xb.b)()
           },
           isLoggedIn: bb.isLoggedIn(),
-          lobbyName: sb,
-          languages: Cb(),
-          version: Wb.d,
-          siteUsed: Mb.r,
-          subsiteUsed: Mb.y,
-          playSessionId: (0, mb.m)(cb),
-          visitSessionId: (0, Qb.c)(),
-          clientReason: Ub.n.reason,
-          budgetBasis: (0, eb.f)(),
-          ...null !== Ib.l && {
-            diagClaim: Ib.l.claimId
+          lobbyName: Ub,
+          languages: Zb(),
+          version: Mb.b,
+          siteUsed: Lb.p,
+          subsiteUsed: Lb.s,
+          playSessionId: (0, jb.l)(ab),
+          visitSessionId: (0, kb.e)(),
+          clientReason: Yb.j.reason,
+          budgetBasis: (0, yb.g)(),
+          ...null !== Bb.q && {
+            diagClaim: Bb.q.claimId
           }
         };
-      return null !== Lb && (0, ab.Fc)(Lb) ? (ub.lobbyName = (0, kb.i)(Lb, (0, kb.o)(cb), sb), {
-        roomName: `classic_${Tb.f}`,
-        joinOptions: ub
+      return null !== xb && (0, Tb.oc)(xb) ? (ib.lobbyName = (0, Ab.i)(xb, (0, Ab.m)(ab), Ub), {
+        roomName: `classic_${Eb.e}`,
+        joinOptions: ib
       }) : {
-        roomName: cb,
-        joinOptions: ub
+        roomName: ab,
+        joinOptions: ib
       }
     }
   },
-  40090: (bb, cb, sb) => {
-    sb.d(cb, {
-      b: () => Ub
+  39778: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      d: () => Yb
     });
-    var kb = sb(39213);
+    var Ab = Ub(38865);
 
-    function Wb(bb) {
+    function Mb(bb) {
       return {
         current: () => bb,
         watch: () => () => {}
       }
     }
 
-    function ab() {}
-    const Tb = Object.freeze([0, 0, 0]),
-      Ub = {
+    function Tb() {}
+    const Eb = Object.freeze([0, 0, 0]),
+      Yb = {
         states: {
-          health: Wb({
+          health: Mb({
             health: null,
             maxHealth: null,
             shield: null,
             maxShield: null
           }),
-          inventory: Wb({
+          inventory: Mb({
             player: [],
             chestOrCreative: [],
             chest: null,
@@ -775,63 +775,63 @@ export const modules = {
             selectedSlot: 0,
             freeSlots: 0
           }),
-          hotbar: Wb({
+          hotbar: Mb({
             items: [],
             ammo: 0,
             selectedSlot: null
           }),
-          stationItems: Wb({
+          stationItems: Mb({
             enchantable: {},
             salvageable: {}
           }),
-          itemInfo: Wb({}),
-          creativeVisibility: Wb({
+          itemInfo: Mb({}),
+          creativeVisibility: Mb({
             publicLobby: !1,
             shownInGame: {}
           }),
-          aura: Wb(null),
-          heldItemAim: Wb({
+          aura: Mb(null),
+          heldItemAim: Mb({
             gun: !1,
             aimable: !1,
             chargeName: null
           }),
-          crouching: Wb(!1),
-          gliderBoostFuel: Wb(0),
-          flight: Wb({
+          crouching: Mb(!1),
+          gliderBoostFuel: Mb(0),
+          flight: Mb({
             canFly: !1,
             flying: !1
           }),
-          crafting: Wb({
+          crafting: Mb({
             focus: null,
             recipes: [],
             detail: null
           }),
-          players: Wb({
+          players: Mb({
             ids: [],
             byId: {},
             localId: null
           }),
-          lobbyLeaderboardRows: Wb({}),
-          fullInventory: Wb(!1),
-          crosshairTarget: Wb({
+          lobbyLeaderboardRows: Mb({}),
+          fullInventory: Mb(!1),
+          crosshairTarget: Mb({
             interactPrompt: null,
             blockText: null,
             neededTool: null
           }),
-          localPlayerAlive: Wb(!0),
-          freeCamera: Wb({
+          localPlayerAlive: Mb(!0),
+          freeCamera: Mb({
             allowed: !1,
             movesFly: !1
           }),
-          replay: Wb(null),
-          replayEdits: Wb(null),
-          replayRecorder: Wb({
+          replay: Mb(null),
+          replayEdits: Mb(null),
+          replayRecorder: Mb({
             recording: !1,
             clipping: !1,
             hasClipBuffer: !1,
             seconds: 0
           }),
-          replayVideoExporting: Wb(!1)
+          replayVideoExporting: Mb(!1)
         },
         events: {
           hotbarSlotRequested: {
@@ -893,86 +893,86 @@ export const modules = {
           }
         },
         commands: {
-          selectHotbarSlot: ab,
+          selectHotbarSlot: Tb,
           removeInventoryItem: () => !1,
           swapInventorySlots: () => !1,
           moveInventoryItem: () => !1,
           quickMoveInventoryItem: () => null,
-          closeChest: ab,
-          setInventoryOpen: ab,
-          changeIronChestPasskey: ab,
-          dragReplayCamera: ab,
-          applyTemporaryThirdPerson: ab,
-          holdEmoteWheel: ab,
-          recordFlyingMiddleText: ab,
-          focusCrafting: ab,
+          closeChest: Tb,
+          setInventoryOpen: Tb,
+          changeIronChestPasskey: Tb,
+          dragReplayCamera: Tb,
+          applyTemporaryThirdPerson: Tb,
+          holdEmoteWheel: Tb,
+          recordFlyingMiddleText: Tb,
+          focusCrafting: Tb,
           craftRecipe: () => ({
-            tf: 0,
-            TM: null,
+            Ev: 0,
+            Qv: null,
             amountAddedToSlot: 0
           }),
           salvageItem: () => !1,
-          enchantItem: ab,
-          setShopOpen: ab,
-          buyShopItem: ab,
-          sendChatMessage: ab,
-          ignorePlayer: ab,
-          reportPlayer: ab,
-          reportWorldCodeChat: ab,
-          requestDiscordReportKey: ab,
-          reportLobbyOrGame: ab,
-          playEmote: ab,
-          updateMyCosmetic: ab,
-          writeOnBoard: ab,
-          writeBook: ab,
-          writeNameTag: ab,
-          setCustomLobbyBlock: ab,
-          openIronChest: ab,
-          sendCodeCollab: ab,
-          clickCodeBlock: ab,
-          bindCustomButtonKeys: ab,
-          pressCustomButton: ab,
-          moveReplayFreecam: ab,
-          holdReplayFreecamVertical: ab,
-          respawn: ab,
-          wakeUp: ab,
-          requestLeaderboard: ab,
-          completeTask: ab,
-          setServerCookie: ab,
-          answerUiRequest: ab,
-          chooseRewardedAd: ab,
-          setCameraZoom: ab,
-          setFreeCameraMovesFly: ab,
-          setBlockHighlight: ab,
-          setCrosshairInteractPrompt: ab,
-          setLookSensitivity: ab,
-          replayAction: ab,
-          setReplayPlaying: ab,
-          seekReplay: ab,
-          setReplayCameraMode: ab,
-          syncReplayCameraMode: ab,
-          setReplayCameraKeyframe: ab,
-          moveReplayCameraKeyframe: ab,
-          deleteReplayCameraKeyframes: ab,
-          setReplayPlaybackMark: ab,
+          enchantItem: Tb,
+          setShopOpen: Tb,
+          buyShopItem: Tb,
+          sendChatMessage: Tb,
+          ignorePlayer: Tb,
+          reportPlayer: Tb,
+          reportWorldCodeChat: Tb,
+          requestDiscordReportKey: Tb,
+          reportLobbyOrGame: Tb,
+          playEmote: Tb,
+          updateMyCosmetic: Tb,
+          writeOnBoard: Tb,
+          writeBook: Tb,
+          writeNameTag: Tb,
+          setCustomLobbyBlock: Tb,
+          openIronChest: Tb,
+          sendCodeCollab: Tb,
+          clickCodeBlock: Tb,
+          bindCustomButtonKeys: Tb,
+          pressCustomButton: Tb,
+          moveReplayFreecam: Tb,
+          holdReplayFreecamVertical: Tb,
+          respawn: Tb,
+          wakeUp: Tb,
+          requestLeaderboard: Tb,
+          completeTask: Tb,
+          setServerCookie: Tb,
+          answerUiRequest: Tb,
+          chooseRewardedAd: Tb,
+          setCameraZoom: Tb,
+          setFreeCameraMovesFly: Tb,
+          setBlockHighlight: Tb,
+          setCrosshairInteractPrompt: Tb,
+          setLookSensitivity: Tb,
+          replayAction: Tb,
+          setReplayPlaying: Tb,
+          seekReplay: Tb,
+          setReplayCameraMode: Tb,
+          syncReplayCameraMode: Tb,
+          setReplayCameraKeyframe: Tb,
+          moveReplayCameraKeyframe: Tb,
+          deleteReplayCameraKeyframes: Tb,
+          setReplayPlaybackMark: Tb,
           cropReplay: () => !1,
-          holdReplayForShaderPackFailure: ab,
-          exportReplayVideo: ab,
-          toggleRecording: ab,
-          saveClip: ab,
-          setRecorderPrefs: ab,
-          setReplayViewerOpen: ab
+          holdReplayForShaderPackFailure: Tb,
+          exportReplayVideo: Tb,
+          toggleRecording: Tb,
+          saveClip: Tb,
+          setRecorderPrefs: Tb,
+          setReplayViewerOpen: Tb
         },
         queries: {
           enchantingOffer: () => ({
             perks: [],
             options: []
           }),
-          worldCodeAiChunk: () => kb.e,
-          worldCodeAiGameState: () => kb.f
+          worldCodeAiChunk: () => Ab.e,
+          worldCodeAiGameState: () => Ab.f
         },
         lookups: {
-          localPos: () => Tb,
+          localPos: () => Eb,
           targetedBlockPos: () => null,
           blockAtViewPoint: () => null,
           momentumFrac: () => 0,
@@ -990,222 +990,222 @@ export const modules = {
         }
       }
   },
-  36127: (bb, cb, sb) => {
-    sb.d(cb, {
-      c: () => ub,
-      f: () => Lb,
-      g: () => Vb
+  35911: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      e: () => ib,
+      g: () => xb,
+      k: () => zb
     });
-    var kb = sb(223),
-      Wb = sb(117),
-      ab = sb(2693),
-      Tb = sb(4146),
-      Ub = sb(656),
-      Ib = sb(36134);
-    const Hb = 1048576,
-      fb = 1024 * Hb,
-      Mb = 400 * Hb,
-      Xb = 147456,
-      nb = .5,
-      mb = 1.5 * fb,
-      lb = 768 * Hb;
+    var Ab = Ub(205),
+      Mb = Ub(101),
+      Tb = Ub(2630),
+      Eb = Ub(4072),
+      Yb = Ub(610),
+      Bb = Ub(35913);
+    const eb = 1048576,
+      vb = 1024 * eb,
+      Lb = 400 * eb,
+      Pb = 147456,
+      Xb = .5,
+      jb = 1.5 * vb,
+      Rb = 768 * eb;
 
-    function Qb(bb) {
-      return Mb + bb * Xb
+    function kb(bb) {
+      return Lb + bb * Pb
     }
 
-    function eb(bb, cb, sb) {
-      var Wb, Tb;
+    function yb(bb, ab, Ub) {
+      var Mb, Eb;
       let {
-        footprintBytes: Ub,
-        basis: Hb,
-        namesLimit: eb
+        footprintBytes: Yb,
+        basis: eb,
+        namesLimit: yb
       } = function(bb) {
         const {
-          os: cb,
-          deviceMemory: sb
+          os: ab,
+          deviceMemory: Ub
         } = bb;
-        if ("ios" === cb) switch ((0, ab.g)(bb)) {
+        if ("ios" === ab) switch ((0, Tb.h)(bb)) {
           case "ipad_m":
             return {
-              footprintBytes: Qb(Ib.c), basis: "ipad-m", namesLimit: !1
+              footprintBytes: kb(Bb.e), basis: "ipad-m", namesLimit: !1
             };
           case "ipad":
             return {
-              footprintBytes: lb, basis: "ipad", namesLimit: !0
+              footprintBytes: Rb, basis: "ipad", namesLimit: !0
             };
           case "iphone_6gb":
             return {
-              footprintBytes: mb, basis: "iphone-6gb", namesLimit: !0
+              footprintBytes: jb, basis: "iphone-6gb", namesLimit: !0
             };
           case "iphone":
             return {
-              footprintBytes: lb, basis: "iphone", namesLimit: !0
+              footprintBytes: Rb, basis: "iphone", namesLimit: !0
             }
         }
-        return "number" === typeof sb && Number.isFinite(sb) && sb > 0 ? {
-          footprintBytes: sb * fb * nb,
-          basis: `memory-${sb}`,
+        return "number" === typeof Ub && Number.isFinite(Ub) && Ub > 0 ? {
+          footprintBytes: Ub * vb * Xb,
+          basis: `memory-${Ub}`,
           namesLimit: !0
-        } : "android" === cb ? {
-          footprintBytes: lb,
+        } : "android" === ab ? {
+          footprintBytes: Rb,
           basis: "android",
           namesLimit: !0
         } : {
-          footprintBytes: Qb(Ib.e),
+          footprintBytes: kb(Bb.h),
           basis: "unreported",
           namesLimit: !1
         }
       }(bb);
-      if (sb) {
-        const bb = Math.min(Ub, Qb(Ib.c));
-        Ub = Mb + Math.max(0, bb - Mb) / 2, Hb += "+killed", eb = !0
+      if (Ub) {
+        const bb = Math.min(Yb, kb(Bb.e));
+        Yb = Lb + Math.max(0, bb - Lb) / 2, eb += "+killed", yb = !0
       }
-      null !== cb && Qb(cb) < Ub && (Ub = Qb(cb), Hb += "+learned", eb = !0);
-      const Cb = function(bb) {
-          const cb = Math.floor((bb - Mb) / Xb);
-          return Math.min(Ib.c, Math.max(Ib.d, cb))
-        }(Ub),
-        Nb = (0, Ib.h)(Cb);
+      null !== ab && kb(ab) < Yb && (Yb = kb(ab), eb += "+learned", yb = !0);
+      const Zb = function(bb) {
+          const ab = Math.floor((bb - Lb) / Pb);
+          return Math.min(Bb.e, Math.max(Bb.g, ab))
+        }(Yb),
+        Db = (0, Bb.n)(Zb);
       return {
-        footprintBytes: Ub,
-        shedFootprintBytes: eb ? Math.max(Ub, Qb(Cb)) : null,
-        chunkCap: Cb,
-        maxHorizDistance: null !== (Wb = null === Nb || void 0 === Nb ? void 0 : Nb.horizontal) && void 0 !== Wb ? Wb : kb.e.maxChunkHorizAddDistance,
-        maxVertDistance: null !== (Tb = null === Nb || void 0 === Nb ? void 0 : Nb.vertical) && void 0 !== Tb ? Tb : kb.e.maxChunkVertAddDistance,
-        basis: Hb
+        footprintBytes: Yb,
+        shedFootprintBytes: yb ? Math.max(Yb, kb(Zb)) : null,
+        chunkCap: Zb,
+        maxHorizDistance: null !== (Mb = null === Db || void 0 === Db ? void 0 : Db.horizontal) && void 0 !== Mb ? Mb : Ab.c.maxChunkHorizAddDistance,
+        maxVertDistance: null !== (Eb = null === Db || void 0 === Db ? void 0 : Db.vertical) && void 0 !== Eb ? Eb : Ab.c.maxChunkVertAddDistance,
+        basis: eb
       }
     }
-    let Cb = null;
+    let Zb = null;
 
-    function Nb() {
-      return eb({
-        os: (0, Wb.getOperatingSystem)(),
+    function Db() {
+      return yb({
+        os: (0, Mb.getOperatingSystem)(),
         deviceMemory: navigator.deviceMemory,
-        ...(0, ab.k)()
-      }, (0, Tb.d)(), (0, Ub.A)("wasm").length > 0)
+        ...(0, Tb.k)()
+      }, (0, Eb.f)(), (0, Yb.J)("wasm").length > 0)
     }
 
-    function Vb() {
-      return Cb ??= Nb(), Cb
+    function zb() {
+      return Zb ??= Db(), Zb
     }
 
-    function Lb() {
+    function xb() {
       var bb;
-      return (null !== (bb = Cb) && void 0 !== bb ? bb : Nb()).basis
+      return (null !== (bb = Zb) && void 0 !== bb ? bb : Db()).basis
     }
 
-    function ub(bb, cb) {
-      return bb.setChunkCap(cb.chunkCap)
+    function ib(bb, ab) {
+      return bb.setChunkCap(ab.chunkCap)
     }
   },
-  40465: (bb, cb, sb) => {
-    sb.d(cb, {
-      d: () => Tb,
-      h: () => ab
+  40149: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      c: () => Eb,
+      g: () => Tb
     });
-    var kb = sb(2916),
-      Wb = sb(1008);
+    var Ab = Ub(2890),
+      Mb = Ub(950);
 
-    function ab(bb, cb) {
-      return null !== bb.gameSource && (0, kb.m)(cb, bb.gameSource)
+    function Tb(bb, ab) {
+      return null !== bb.gameSource && (0, Ab.n)(ab, bb.gameSource)
     }
 
-    function Tb(bb, cb) {
-      if (null === bb.gameSource || "" === bb.gameSource || null === cb) return !0;
-      const sb = (0, Wb.k)(cb) ? (0, Wb.s)(cb) : null;
-      return null !== sb && ab(bb, sb)
+    function Eb(bb, ab) {
+      if (null === bb.gameSource || "" === bb.gameSource || null === ab) return !0;
+      const Ub = (0, Mb.l)(ab) ? (0, Mb.p)(ab) : null;
+      return null !== Ub && Tb(bb, Ub)
     }
   },
-  40439: (bb, cb, sb) => {
-    sb.d(cb, {
-      c: () => Ub
+  40133: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      e: () => Yb
     });
-    var kb = sb(620),
-      Wb = sb(40447),
-      ab = sb(40406);
-    async function Tb(bb) {
-      const cb = await (0, Wb.j)({
-        Helmet: sb(37547),
-        Chestplate: sb(37549),
-        Gauntlets: sb(37572),
-        Leggings: sb(37558),
-        Boots: sb(37566)
-      } [kb.e[bb]]);
+    var Ab = Ub(580),
+      Mb = Ub(40136),
+      Tb = Ub(40092);
+    async function Eb(bb) {
+      const ab = await (0, Mb.j)({
+        Helmet: Ub(37312),
+        Chestplate: Ub(37314),
+        Gauntlets: Ub(37331),
+        Leggings: Ub(37318),
+        Boots: Ub(37323)
+      } [Ab.b[bb]]);
       try {
-        return (0, ab.m)(cb)
+        return (0, Tb.q)(ab)
       } finally {
-        cb.close()
+        ab.close()
       }
     }
-    const Ub = new class {
+    const Yb = new class {
       constructor() {
-        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Tb,
-          cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Wb.n;
-        this.decode = bb, this.register = cb, this.decoded = new Map
+        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Eb,
+          ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Mb.o;
+        this.decode = bb, this.register = ab, this.decoded = new Map
       }
       warm() {
-        for (let bb = 0; bb < kb.e.length; bb++) this.part(bb).catch((cb => {
-          console.warn(`The grayscale armour ${kb.e[bb]} image didn't decode ahead of use`, cb)
+        for (let bb = 0; bb < Ab.b.length; bb++) this.part(bb).catch((ab => {
+          console.warn(`The grayscale armour ${Ab.b[bb]} image didn't decode ahead of use`, ab)
         }))
       }
-      async load(bb, cb) {
+      async load(bb, ab) {
         const {
-          width: sb,
-          height: ab,
-          pixels: Tb
-        } = await this.part(bb), Ub = new ImageData(function(bb, cb) {
-          const sb = new Uint8ClampedArray(bb.length);
-          for (let kb = 0; kb < bb.length; kb += 4) sb[kb] = Math.round(bb[kb] * cb[0] / 255), sb[kb + 1] = Math.round(bb[kb + 1] * cb[1] / 255), sb[kb + 2] = Math.round(bb[kb + 2] * cb[2] / 255), sb[kb + 3] = bb[kb + 3];
-          return sb
-        }(Tb, function(bb) {
+          width: Ub,
+          height: Tb,
+          pixels: Eb
+        } = await this.part(bb), Yb = new ImageData(function(bb, ab) {
+          const Ub = new Uint8ClampedArray(bb.length);
+          for (let Ab = 0; Ab < bb.length; Ab += 4) Ub[Ab] = Math.round(bb[Ab] * ab[0] / 255), Ub[Ab + 1] = Math.round(bb[Ab + 1] * ab[1] / 255), Ub[Ab + 2] = Math.round(bb[Ab + 2] * ab[2] / 255), Ub[Ab + 3] = bb[Ab + 3];
+          return Ub
+        }(Eb, function(bb) {
           return [bb >>> 16 & 255, bb >>> 8 & 255, 255 & bb]
-        }(cb)), sb, ab);
-        let Ib;
+        }(ab)), Ub, Tb);
+        let Bb;
         try {
-          Ib = await createImageBitmap(Ub, {
+          Bb = await createImageBitmap(Yb, {
             premultiplyAlpha: "none",
             colorSpaceConversion: "none"
           })
-        } catch (Hb) {
-          throw new Wb.e("decode", `grayscale armour ${kb.e[bb]}`, {
-            cause: Hb
+        } catch (eb) {
+          throw new Mb.e("decode", `grayscale armour ${Ab.b[bb]}`, {
+            cause: eb
           })
         }
         return {
-          id: this.register(Ib),
-          width: sb,
-          height: ab
+          id: this.register(Bb),
+          width: Ub,
+          height: Tb
         }
       }
       part(bb) {
-        const cb = this.decoded.get(bb);
-        if (void 0 !== cb) return cb;
-        const sb = this.decode(bb).catch((cb => {
-          throw this.decoded.delete(bb), cb instanceof Wb.e ? cb : new Wb.e("decode", `grayscale armour ${kb.e[bb]}`, {
-            cause: cb
+        const ab = this.decoded.get(bb);
+        if (void 0 !== ab) return ab;
+        const Ub = this.decode(bb).catch((ab => {
+          throw this.decoded.delete(bb), ab instanceof Mb.e ? ab : new Mb.e("decode", `grayscale armour ${Ab.b[bb]}`, {
+            cause: ab
           })
         }));
-        return this.decoded.set(bb, sb), sb
+        return this.decoded.set(bb, Ub), Ub
       }
     }
   },
-  40433: (bb, cb, sb) => {
-    sb.d(cb, {
-      e: () => Tb,
-      g: () => Qb,
-      j: () => fb,
-      l: () => Mb,
-      p: () => lb
+  40126: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      b: () => Eb,
+      d: () => kb,
+      f: () => vb,
+      h: () => Lb,
+      l: () => Rb
     });
-    var kb = sb(40391),
-      Wb = sb(40439),
-      ab = sb(40447);
-    const Tb = 396,
-      Ub = 1,
-      Ib = 2,
-      Hb = 3,
-      fb = {
+    var Ab = Ub(40073),
+      Mb = Ub(40133),
+      Tb = Ub(40136);
+    const Eb = 396,
+      Yb = 1,
+      Bb = 2,
+      eb = 3,
+      vb = {
         Glb: 1,
         LifeformAtlas: 2,
         ArmourAtlas: 3,
@@ -1216,37 +1216,37 @@ export const modules = {
         BlockImage: 8,
         GreyscaleArmour: 9
       },
-      Mb = {
+      Lb = {
         File: 0,
         Item: 1
       },
-      Xb = 0,
-      nb = 1,
-      mb = 2;
+      Pb = 0,
+      Xb = 1,
+      jb = 2;
 
-    function lb(bb) {
-      const cb = (0, kb.m)();
-      cb.catch((() => {}));
-      let Wb = null;
+    function Rb(bb) {
+      const ab = (0, Ab.o)();
+      ab.catch((() => {}));
+      let Mb = null;
       return {
         glbUrl: bb,
-        lifeformAtlasUrl: async bb => (await cb).lifeformAtlasUrl(bb),
-        armourAtlasUrl: async () => (await sb.e(201).then((() => sb(33944)))).armourAtlasUrl,
-        capeUrl: async bb => (await cb).capeUrl(bb),
-        attachmentImageUrl: async bb => (await cb).attachmentImageUrl(bb),
-        blockImageUrl: async bb => (await cb).blockImageUrl(bb),
-        groupAtlasUrl: async bb => (await cb).groupAtlasUrl(bb),
-        particleTextureUrl: async bb => (await cb).particleTextureUrl(bb),
-        particleItemUrl: async bb => (Wb ??= sb.e(38).then((() => sb(51096))).catch((bb => {
-          throw Wb = null, bb
-        })), (await Wb).particleItemUrl(bb))
+        lifeformAtlasUrl: async bb => (await ab).lifeformAtlasUrl(bb),
+        armourAtlasUrl: async () => (await Ub.e(201).then((() => Ub(33702)))).armourAtlasUrl,
+        capeUrl: async bb => (await ab).capeUrl(bb),
+        attachmentImageUrl: async bb => (await ab).attachmentImageUrl(bb),
+        blockImageUrl: async bb => (await ab).blockImageUrl(bb),
+        groupAtlasUrl: async bb => (await ab).groupAtlasUrl(bb),
+        particleTextureUrl: async bb => (await ab).particleTextureUrl(bb),
+        particleItemUrl: async bb => (Mb ??= Ub.e(38).then((() => Ub(50737))).catch((bb => {
+          throw Mb = null, bb
+        })), (await Mb).particleItemUrl(bb))
       }
     }
-    class Qb {
-      constructor(bb, cb) {
-        var sb, Tb, Ub, Ib;
-        let Hb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        this.sources = bb, this.onFailure = cb, this.loading = new Map, this.glbImages = new Map, this.glbWrittenImages = new Map, this.glbTakenCount = new Map, this.answered = new Map, this.ready = [], this.load = void 0, this.release = void 0, this.fetchFile = void 0, this.greyscaleArmour = void 0, this.Em = !1, this.load = null !== (sb = Hb.load) && void 0 !== sb ? sb : (bb, cb) => (0, ab.m)(bb, Hb.fetchImage, cb), this.release = null !== (Tb = Hb.release) && void 0 !== Tb ? Tb : ab.o, this.fetchFile = null !== (Ub = Hb.fetchFile) && void 0 !== Ub ? Ub : bb => (0, kb.j)(bb), this.greyscaleArmour = null !== (Ib = Hb.greyscaleArmour) && void 0 !== Ib ? Ib : Wb.c
+    class kb {
+      constructor(bb, ab) {
+        var Ub, Eb, Yb, Bb;
+        let eb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        this.sources = bb, this.onFailure = ab, this.loading = new Map, this.glbImages = new Map, this.glbWrittenImages = new Map, this.glbTakenCount = new Map, this.answered = new Map, this.ready = [], this.load = void 0, this.release = void 0, this.fetchFile = void 0, this.greyscaleArmour = void 0, this.cX = !1, this.load = null !== (Ub = eb.load) && void 0 !== Ub ? Ub : (bb, ab) => (0, Tb.k)(bb, eb.fetchImage, ab), this.release = null !== (Eb = eb.release) && void 0 !== Eb ? Eb : Tb.s, this.fetchFile = null !== (Yb = eb.fetchFile) && void 0 !== Yb ? Yb : bb => (0, Ab.i)(bb), this.greyscaleArmour = null !== (Bb = eb.greyscaleArmour) && void 0 !== Bb ? Bb : Mb.e
       }
       get waiting() {
         return this.ready.length
@@ -1254,93 +1254,93 @@ export const modules = {
       get inFlight() {
         return this.loading.size
       }
-      glbWritten(bb, cb) {
-        this.glbWrittenImages.set(bb, Yb(cb))
+      glbWritten(bb, ab) {
+        this.glbWrittenImages.set(bb, fb(ab))
       }
-      glbTaken(bb, cb) {
-        const sb = this.glbWrittenImages.get(bb);
-        this.glbWrittenImages.delete(bb), cb && this.setGlbImages(bb, void 0 !== sb && sb.length > 0 ? sb : void 0)
+      glbTaken(bb, ab) {
+        const Ub = this.glbWrittenImages.get(bb);
+        this.glbWrittenImages.delete(bb), ab && this.setGlbImages(bb, void 0 !== Ub && Ub.length > 0 ? Ub : void 0)
       }
-      setGlbImages(bb, cb) {
-        var sb;
-        this.glbTakenCount.set(bb, (null !== (sb = this.glbTakenCount.get(bb)) && void 0 !== sb ? sb : 0) + 1), void 0 === cb ? this.glbImages.delete(bb) : this.glbImages.set(bb, cb);
-        const kb = [];
+      setGlbImages(bb, ab) {
+        var Ub;
+        this.glbTakenCount.set(bb, (null !== (Ub = this.glbTakenCount.get(bb)) && void 0 !== Ub ? Ub : 0) + 1), void 0 === ab ? this.glbImages.delete(bb) : this.glbImages.set(bb, ab);
+        const Ab = [];
         for (const {
-            key: Wb
+            key: Mb
           }
-          of this.loading.values()) Wb.kind === fb.Glb && Wb.word === bb && kb.push(Wb);
-        for (let Wb = this.ready.length - 1; Wb >= 0; Wb--) {
+          of this.loading.values()) Mb.kind === vb.Glb && Mb.word === bb && Ab.push(Mb);
+        for (let Mb = this.ready.length - 1; Mb >= 0; Mb--) {
           const {
-            key: cb,
-            id: sb
-          } = this.ready[Wb];
-          cb.kind === fb.Glb && cb.word === bb && (this.ready.splice(Wb, 1), null !== sb && (this.answered.delete(sb), this.release(sb)), kb.push(cb))
+            key: ab,
+            id: Ub
+          } = this.ready[Mb];
+          ab.kind === vb.Glb && ab.word === bb && (this.ready.splice(Mb, 1), null !== Ub && (this.answered.delete(Ub), this.release(Ub)), Ab.push(ab))
         }
-        this.loadAgain(kb)
+        this.loadAgain(Ab)
       }
       onEvent(bb) {
-        if (this.Em) return;
-        const cb = new DataView(bb.buffer, bb.byteOffset, bb.byteLength);
-        for (let sb = 0; sb + 8 <= bb.byteLength; sb += 8) {
-          const bb = cb.getUint8(sb),
-            kb = cb.getUint32(sb + 4, !0);
-          if (bb === Hb) {
-            this.answered.delete(kb), this.release(kb);
+        if (this.cX) return;
+        const ab = new DataView(bb.buffer, bb.byteOffset, bb.byteLength);
+        for (let Ub = 0; Ub + 8 <= bb.byteLength; Ub += 8) {
+          const bb = ab.getUint8(Ub),
+            Ab = ab.getUint32(Ub + 4, !0);
+          if (bb === eb) {
+            this.answered.delete(Ab), this.release(Ab);
             continue
           }
-          const Wb = {
-            kind: cb.getUint8(sb + 1),
-            index: cb.getUint8(sb + 2),
-            word: kb
+          const Mb = {
+            kind: ab.getUint8(Ub + 1),
+            index: ab.getUint8(Ub + 2),
+            word: Ab
           };
-          bb === Ub ? this.want(Wb) : bb === Ib && this.loading.delete(eb(Wb))
+          bb === Yb ? this.want(Mb) : bb === Bb && this.loading.delete(yb(Mb))
         }
       }
-      reload(bb, cb) {
-        const sb = sb => bb.includes(sb.kind) && (void 0 === cb || cb(sb)),
-          kb = new Map;
-        for (const Wb of this.answered.values()) sb(Wb) && kb.set(eb(Wb), Wb);
-        for (const [Wb, {
-            key: ab
-          }] of this.loading) sb(ab) && kb.set(Wb, ab);
-        this.loadAgain(kb.values())
+      reload(bb, ab) {
+        const Ub = Ub => bb.includes(Ub.kind) && (void 0 === ab || ab(Ub)),
+          Ab = new Map;
+        for (const Mb of this.answered.values()) Ub(Mb) && Ab.set(yb(Mb), Mb);
+        for (const [Mb, {
+            key: Tb
+          }] of this.loading) Ub(Tb) && Ab.set(Mb, Tb);
+        this.loadAgain(Ab.values())
       }
       loadAgain(bb) {
-        for (const cb of bb) this.loading.delete(eb(cb)), this.want(cb)
+        for (const ab of bb) this.loading.delete(yb(ab)), this.want(ab)
       }
       drain(bb) {
         if (null !== bb)
           for (; this.ready.length > 0;) {
-            if (!bb(Tb, 0, this.ready[0].record)) return;
+            if (!bb(Eb, 0, this.ready[0].record)) return;
             this.ready.shift()
           }
       }
       dispose() {
-        this.Em = !0, this.loading.clear(), this.ready.length = 0;
+        this.cX = !0, this.loading.clear(), this.ready.length = 0;
         for (const bb of this.answered.keys()) this.release(bb);
         this.answered.clear()
       }
       want(bb) {
-        const cb = eb(bb);
-        if (this.loading.has(cb)) return;
-        const sb = {
+        const ab = yb(bb);
+        if (this.loading.has(ab)) return;
+        const Ub = {
           key: bb
         };
-        this.loading.set(cb, sb), this.loadKey(bb).then((kb => {
-          this.Em || this.loading.get(cb) !== sb ? this.release(kb.id) : (this.loading.delete(cb), this.answered.set(kb.id, bb), this.ready.push({
-            record: Nb(bb, Xb, kb),
+        this.loading.set(ab, Ub), this.loadKey(bb).then((Ab => {
+          this.cX || this.loading.get(ab) !== Ub ? this.release(Ab.id) : (this.loading.delete(ab), this.answered.set(Ab.id, bb), this.ready.push({
+            record: Db(bb, Pb, Ab),
             key: bb,
-            id: kb.id
+            id: Ab.id
           }))
-        }), (kb => {
-          if (this.Em || this.loading.get(cb) !== sb) return;
-          this.loading.delete(cb), this.onFailure({
+        }), (Ab => {
+          if (this.cX || this.loading.get(ab) !== Ub) return;
+          this.loading.delete(ab), this.onFailure({
             key: bb,
-            error: kb
+            error: Ab
           });
-          const Wb = kb instanceof ab.e && "decode" === kb.stage ? nb : mb;
+          const Mb = Ab instanceof Tb.e && "decode" === Ab.stage ? Xb : jb;
           this.ready.push({
-            record: Nb(bb, Wb, null),
+            record: Db(bb, Mb, null),
             key: bb,
             id: null
           })
@@ -1348,144 +1348,144 @@ export const modules = {
       }
       async loadKey(bb) {
         switch (bb.kind) {
-          case fb.Glb:
+          case vb.Glb:
             return this.load(await this.glbImage(bb), "none");
-          case fb.LifeformAtlas:
-            return this.load(Cb(await this.sources.lifeformAtlasUrl(bb.word), bb), "none");
-          case fb.ArmourAtlas:
-            return this.load(Cb(await this.sources.armourAtlasUrl(), bb), "none");
-          case fb.Cape:
-            return this.load(Cb(await this.sources.capeUrl(bb.word), bb), "none");
-          case fb.AttachmentImage:
-            return this.load(Cb(await this.sources.attachmentImageUrl(bb.word), bb), "none");
-          case fb.GroupAtlas:
-            return this.load(Cb(await this.sources.groupAtlasUrl(bb.word), bb), "none");
-          case fb.BlockImage:
-            return this.load(Cb(await this.sources.blockImageUrl(bb.word), bb), "none");
-          case fb.Particle: {
-            const cb = await (bb.index === Mb.Item ? this.sources.particleItemUrl(bb.word) : this.sources.particleTextureUrl(bb.word));
-            return this.load(Cb(cb, bb), "flipY")
+          case vb.LifeformAtlas:
+            return this.load(Zb(await this.sources.lifeformAtlasUrl(bb.word), bb), "none");
+          case vb.ArmourAtlas:
+            return this.load(Zb(await this.sources.armourAtlasUrl(), bb), "none");
+          case vb.Cape:
+            return this.load(Zb(await this.sources.capeUrl(bb.word), bb), "none");
+          case vb.AttachmentImage:
+            return this.load(Zb(await this.sources.attachmentImageUrl(bb.word), bb), "none");
+          case vb.GroupAtlas:
+            return this.load(Zb(await this.sources.groupAtlasUrl(bb.word), bb), "none");
+          case vb.BlockImage:
+            return this.load(Zb(await this.sources.blockImageUrl(bb.word), bb), "none");
+          case vb.Particle: {
+            const ab = await (bb.index === Lb.Item ? this.sources.particleItemUrl(bb.word) : this.sources.particleTextureUrl(bb.word));
+            return this.load(Zb(ab, bb), "flipY")
           }
-          case fb.GreyscaleArmour:
+          case vb.GreyscaleArmour:
             return this.greyscaleArmour.load(bb.index, bb.word);
           default:
-            throw new ab.e("fetch", `image kind ${bb.kind}`, {
+            throw new Tb.e("fetch", `image kind ${bb.kind}`, {
               cause: null
             })
         }
       }
       async glbImage(bb) {
-        var cb;
-        let sb = this.glbImages.get(bb.word);
-        if (void 0 === sb) {
-          const cb = this.glbTakenCount.get(bb.word),
-            kb = Cb(await this.sources.glbUrl(bb.word), bb);
+        var ab;
+        let Ub = this.glbImages.get(bb.word);
+        if (void 0 === Ub) {
+          const ab = this.glbTakenCount.get(bb.word),
+            Ab = Zb(await this.sources.glbUrl(bb.word), bb);
           try {
-            sb = Yb(await this.fetchFile(kb))
-          } catch (Wb) {
-            throw new ab.e("fetch", kb, {
-              cause: Wb
+            Ub = fb(await this.fetchFile(Ab))
+          } catch (Mb) {
+            throw new Tb.e("fetch", Ab, {
+              cause: Mb
             })
           }
-          this.glbTakenCount.get(bb.word) === cb && this.glbImages.set(bb.word, sb)
+          this.glbTakenCount.get(bb.word) === ab && this.glbImages.set(bb.word, Ub)
         }
-        const kb = null === (cb = sb) || void 0 === cb ? void 0 : cb[bb.index];
-        if (!kb) throw new ab.e("decode", `image ${bb.index} of file ${2147483647&bb.word}`, {
+        const Ab = null === (ab = Ub) || void 0 === ab ? void 0 : ab[bb.index];
+        if (!Ab) throw new Tb.e("decode", `image ${bb.index} of file ${2147483647&bb.word}`, {
           cause: null
         });
-        return kb
+        return Ab
       }
     }
 
-    function eb(bb) {
+    function yb(bb) {
       let {
-        kind: cb,
-        index: sb,
-        word: kb
+        kind: ab,
+        index: Ub,
+        word: Ab
       } = bb;
-      return `${cb}:${sb}:${kb}`
+      return `${ab}:${Ub}:${Ab}`
     }
 
-    function Cb(bb, cb) {
-      if (null === bb) throw new ab.e("fetch", `no URL for image ${eb(cb)}`, {
+    function Zb(bb, ab) {
+      if (null === bb) throw new Tb.e("fetch", `no URL for image ${yb(ab)}`, {
         cause: null
       });
       return bb
     }
 
-    function Nb(bb, cb, sb) {
-      var kb, Wb, ab;
-      const Tb = new Uint8Array(16),
-        Ub = new DataView(Tb.buffer);
-      return Ub.setUint8(0, bb.kind), Ub.setUint8(1, bb.index), Ub.setUint8(2, cb), Ub.setUint32(4, bb.word, !0), Ub.setUint32(8, null !== (kb = null === sb || void 0 === sb ? void 0 : sb.id) && void 0 !== kb ? kb : 0, !0), Ub.setUint16(12, Math.min(null !== (Wb = null === sb || void 0 === sb ? void 0 : sb.width) && void 0 !== Wb ? Wb : 0, 65535), !0), Ub.setUint16(14, Math.min(null !== (ab = null === sb || void 0 === sb ? void 0 : sb.height) && void 0 !== ab ? ab : 0, 65535), !0), Tb
+    function Db(bb, ab, Ub) {
+      var Ab, Mb, Tb;
+      const Eb = new Uint8Array(16),
+        Yb = new DataView(Eb.buffer);
+      return Yb.setUint8(0, bb.kind), Yb.setUint8(1, bb.index), Yb.setUint8(2, ab), Yb.setUint32(4, bb.word, !0), Yb.setUint32(8, null !== (Ab = null === Ub || void 0 === Ub ? void 0 : Ub.id) && void 0 !== Ab ? Ab : 0, !0), Yb.setUint16(12, Math.min(null !== (Mb = null === Ub || void 0 === Ub ? void 0 : Ub.width) && void 0 !== Mb ? Mb : 0, 65535), !0), Yb.setUint16(14, Math.min(null !== (Tb = null === Ub || void 0 === Ub ? void 0 : Ub.height) && void 0 !== Tb ? Tb : 0, 65535), !0), Eb
     }
-    const Vb = 1179937895,
-      Lb = 1313821514,
-      ub = 5130562;
+    const zb = 1179937895,
+      xb = 1313821514,
+      ib = 5130562;
 
-    function Yb(bb) {
-      var cb;
-      const sb = new DataView(bb.buffer, bb.byteOffset, bb.byteLength);
-      if (bb.byteLength < 20 || sb.getUint32(0, !0) !== Vb || sb.getUint32(16, !0) !== Lb) return [];
-      let kb, Wb = 20 + sb.getUint32(12, !0);
+    function fb(bb) {
+      var ab;
+      const Ub = new DataView(bb.buffer, bb.byteOffset, bb.byteLength);
+      if (bb.byteLength < 20 || Ub.getUint32(0, !0) !== zb || Ub.getUint32(16, !0) !== xb) return [];
+      let Ab, Mb = 20 + Ub.getUint32(12, !0);
       try {
-        kb = JSON.parse((new TextDecoder).decode(bb.subarray(20, Wb)))
+        Ab = JSON.parse((new TextDecoder).decode(bb.subarray(20, Mb)))
       } catch {
         return []
       }
-      for (; Wb + 8 <= bb.byteLength && sb.getUint32(Wb + 4, !0) !== ub;) Wb += 8 + sb.getUint32(Wb, !0);
-      const ab = null !== (cb = kb.images) && void 0 !== cb ? cb : [];
-      if (0 === ab.length || Wb + 8 > bb.byteLength) return ab.map((() => null));
-      const Tb = bb.subarray(Wb + 8, Math.min(bb.byteLength, Wb + 8 + sb.getUint32(Wb, !0)));
-      return ab.map((bb => {
-        var cb, sb, Wb;
-        const ab = void 0 === bb.bufferView || null === (cb = kb.bufferViews) || void 0 === cb ? void 0 : cb[bb.bufferView];
-        if (!ab || 0 !== (null !== (sb = ab.buffer) && void 0 !== sb ? sb : 0) || void 0 === ab.byteLength) return null;
-        const Ub = null !== (Wb = ab.byteOffset) && void 0 !== Wb ? Wb : 0,
-          Ib = Ub + ab.byteLength;
-        return Ib <= Tb.byteLength ? Tb.slice(Ub, Ib) : null
+      for (; Mb + 8 <= bb.byteLength && Ub.getUint32(Mb + 4, !0) !== ib;) Mb += 8 + Ub.getUint32(Mb, !0);
+      const Tb = null !== (ab = Ab.images) && void 0 !== ab ? ab : [];
+      if (0 === Tb.length || Mb + 8 > bb.byteLength) return Tb.map((() => null));
+      const Eb = bb.subarray(Mb + 8, Math.min(bb.byteLength, Mb + 8 + Ub.getUint32(Mb, !0)));
+      return Tb.map((bb => {
+        var ab, Ub, Mb;
+        const Tb = void 0 === bb.bufferView || null === (ab = Ab.bufferViews) || void 0 === ab ? void 0 : ab[bb.bufferView];
+        if (!Tb || 0 !== (null !== (Ub = Tb.buffer) && void 0 !== Ub ? Ub : 0) || void 0 === Tb.byteLength) return null;
+        const Yb = null !== (Mb = Tb.byteOffset) && void 0 !== Mb ? Mb : 0,
+          Bb = Yb + Tb.byteLength;
+        return Bb <= Eb.byteLength ? Eb.slice(Yb, Bb) : null
       }))
     }
   },
-  40099: (bb, cb, sb) => {
-    sb.d(cb, {
-      e: () => Tb,
-      h: () => ab,
-      l: () => Wb
+  39780: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      b: () => Eb,
+      c: () => Tb,
+      f: () => Mb
     });
-    let kb = null;
+    let Ab = null;
 
-    function Wb(bb) {
-      kb = bb
+    function Mb(bb) {
+      Ab = bb
     }
 
-    function ab(bb) {
-      kb === bb && (kb = null)
+    function Tb(bb) {
+      Ab === bb && (Ab = null)
     }
 
-    function Tb() {
+    function Eb() {
       var bb;
-      null === (bb = kb) || void 0 === bb || bb()
+      null === (bb = Ab) || void 0 === bb || bb()
     }
   },
-  36233: (bb, cb, sb) => {
-    sb.d(cb, {
-      e: () => fb,
-      i: () => Xb,
-      k: () => eb,
-      l: () => Hb
+  36008: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      b: () => vb,
+      e: () => Pb,
+      g: () => yb,
+      i: () => eb
     });
-    var kb = sb(19),
-      Wb = sb(2305),
-      ab = sb(2310),
-      Tb = sb(2319),
-      Ub = sb(2367),
-      Ib = sb(26);
+    var Ab = Ub(19),
+      Mb = Ub(2254),
+      Tb = Ub(2260),
+      Eb = Ub(2262),
+      Yb = Ub(2313),
+      Bb = Ub(22);
 
-    function Hb(bb, cb) {
-      return (!(0, Tb.e)() || 0 === bb && 0 === cb) && (0, ab.r)(Wb.h.Joystick, 0, bb, cb, 0)
+    function eb(bb, ab) {
+      return (!(0, Eb.d)() || 0 === bb && 0 === ab) && (0, Tb.o)(Mb.g.Joystick, 0, bb, ab, 0)
     }
-    const fb = {
+    const vb = {
       Action1: 1,
       Action2: 2,
       Action3: 3,
@@ -1495,52 +1495,52 @@ export const modules = {
       Boost: 7
     };
 
-    function Mb(bb) {
-      return bb.classList.contains("TouchKeyHit") && nb() ? null : bb.firstElementChild
+    function Lb(bb) {
+      return bb.classList.contains("TouchKeyHit") && Xb() ? null : bb.firstElementChild
     }
 
-    function Xb(bb) {
+    function Pb(bb) {
       return bb.classList.contains("TouchKeyHit") && !bb.classList.contains("CanvasZone") ? {
-        whole: !nb(),
+        whole: !Xb(),
         keyBox: null
       } : {
         whole: !1,
-        keyBox: mb(Mb(bb))
+        keyBox: jb(Lb(bb))
       }
     }
 
-    function nb() {
-      return document.documentElement.classList.contains(Ub.j)
+    function Xb() {
+      return document.documentElement.classList.contains(Yb.m)
     }
 
-    function mb(bb) {
+    function jb(bb) {
       return !(bb instanceof HTMLElement) || bb.offsetWidth <= 0 || bb.offsetHeight <= 0 ? null : {
         width: bb.offsetWidth,
         height: bb.offsetHeight
       }
     }
 
-    function lb(bb, cb) {
-      const sb = bb => Math.min(65535, Math.round(4 * bb));
-      return (sb(bb) | sb(cb) << 16) >>> 0
+    function Rb(bb, ab) {
+      const Ub = bb => Math.min(65535, Math.round(4 * bb));
+      return (Ub(bb) | Ub(ab) << 16) >>> 0
     }
 
-    function Qb(bb) {
+    function kb(bb) {
       return {
         x: bb.left + bb.width / 2,
         y: bb.top + bb.height / 2,
         radius: Math.min(bb.width, bb.height) / 2
       }
     }
-    const eb = new class {
+    const yb = new class {
       constructor(bb) {
         this.write = bb, this.elements = new Map, this.canvasLeft = 0, this.canvasTop = 0
       }
-      set(bb, cb) {
-        let sb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        cb ? this.elements.set(bb, {
-          element: cb,
-          hidden: sb
+      set(bb, ab) {
+        let Ub = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        ab ? this.elements.set(bb, {
+          element: ab,
+          hidden: Ub
         }) : this.elements.delete(bb), this.measureOne(bb)
       }
       measure() {
@@ -1549,132 +1549,132 @@ export const modules = {
           top: this.canvasTop
         };
         this.canvasLeft = bb.left, this.canvasTop = bb.top;
-        for (const cb of this.elements.keys()) this.measureOne(cb)
+        for (const ab of this.elements.keys()) this.measureOne(ab)
       }
-      hitZone(bb, cb) {
-        let sb = null,
-          kb = 1;
-        for (const Wb of this.elements.keys()) {
-          const ab = this.shown(Wb);
-          if (!ab) continue;
+      hitZone(bb, ab) {
+        let Ub = null,
+          Ab = 1;
+        for (const Mb of this.elements.keys()) {
+          const Tb = this.shown(Mb);
+          if (!Tb) continue;
           const {
-            rect: Tb,
-            element: Ub
-          } = ab, Ib = Qb(Tb), Hb = Math.max(0, Tb.width / 2 - Ib.radius), fb = Math.max(0, Tb.height / 2 - Ib.radius), Xb = Math.max(0, Math.abs(bb - Ib.x) - Hb), nb = Math.max(0, Math.abs(cb - Ib.y) - fb), lb = Ub.firstElementChild;
-          let eb = Math.hypot(Xb, nb) / Ib.radius;
-          const Cb = mb(Mb(Ub));
-          Cb && (eb = Math.min(eb, Math.max(2 * Math.abs(bb - Ib.x) / Cb.width, 2 * Math.abs(cb - Ib.y) / Cb.height))), eb < kb && (sb = {
-            code: Wb,
-            element: Ub,
-            key: lb,
-            ...Ib
-          }, kb = eb)
+            rect: Eb,
+            element: Yb
+          } = Tb, Bb = kb(Eb), eb = Math.max(0, Eb.width / 2 - Bb.radius), vb = Math.max(0, Eb.height / 2 - Bb.radius), Pb = Math.max(0, Math.abs(bb - Bb.x) - eb), Xb = Math.max(0, Math.abs(ab - Bb.y) - vb), Rb = Yb.firstElementChild;
+          let yb = Math.hypot(Pb, Xb) / Bb.radius;
+          const Zb = jb(Lb(Yb));
+          Zb && (yb = Math.min(yb, Math.max(2 * Math.abs(bb - Bb.x) / Zb.width, 2 * Math.abs(ab - Bb.y) / Zb.height))), yb < Ab && (Ub = {
+            code: Mb,
+            element: Yb,
+            key: Rb,
+            ...Bb
+          }, Ab = yb)
         }
-        return sb
+        return Ub
       }
       measureOne(bb) {
-        const cb = this.shown(bb);
-        if (!cb) return void this.write(Wb.h.TouchZone, bb, 0, 0, 0);
+        const ab = this.shown(bb);
+        if (!ab) return void this.write(Mb.g.TouchZone, bb, 0, 0, 0);
         const {
-          rect: sb,
-          element: kb
-        } = cb, ab = Qb(sb);
-        this.write(Wb.h.TouchZone, bb, ab.x - this.canvasLeft, ab.y - this.canvasTop, lb(sb.width, sb.height));
-        const Tb = mb(Mb(kb));
-        this.write(Wb.h.TouchZone, 256 | bb, 0, 0, Tb ? lb(Tb.width, Tb.height) : 0)
+          rect: Ub,
+          element: Ab
+        } = ab, Tb = kb(Ub);
+        this.write(Mb.g.TouchZone, bb, Tb.x - this.canvasLeft, Tb.y - this.canvasTop, Rb(Ub.width, Ub.height));
+        const Eb = jb(Lb(Ab));
+        this.write(Mb.g.TouchZone, 256 | bb, 0, 0, Eb ? Rb(Eb.width, Eb.height) : 0)
       }
       shown(bb) {
-        const cb = this.elements.get(bb),
-          sb = kb.d.get("worldPanelHud");
-        if (!cb || cb.hidden || "none" === sb) return null;
-        const Wb = cb.element.getBoundingClientRect();
-        return Wb.width <= 0 || Wb.height <= 0 ? null : {
-          rect: Wb,
-          element: cb.element
+        const ab = this.elements.get(bb),
+          Ub = Ab.c.get("worldPanelHud");
+        if (!ab || ab.hidden || "none" === Ub) return null;
+        const Mb = ab.element.getBoundingClientRect();
+        return Mb.width <= 0 || Mb.height <= 0 ? null : {
+          rect: Mb,
+          element: ab.element
         }
       }
-    }(ab.r);
-    (0, Ib.l)(Ub.g, (() => {
-      eb.measure()
+    }(Tb.o);
+    (0, Bb.n)(Yb.i, (() => {
+      yb.measure()
     }))
   },
-  40314: (bb, cb, sb) => {
-    sb.d(cb, {
-      d: () => Ib,
-      e: () => Hb
+  40009: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      b: () => Bb,
+      e: () => eb
     });
-    var kb = sb(40323),
-      Wb = sb(38633),
-      ab = sb(36112),
-      Tb = sb(40238),
-      Ub = sb(40291);
-    const Ib = kb.e.timeForPlayerToConnect - 1e4;
-    async function Hb(bb, cb, sb, kb) {
-      let Ib;
+    var Ab = Ub(40012),
+      Mb = Ub(38350),
+      Tb = Ub(35900),
+      Eb = Ub(39940),
+      Yb = Ub(39992);
+    const Bb = Ab.b.timeForPlayerToConnect - 1e4;
+    async function eb(bb, ab, Ub, Ab) {
+      let Bb;
       try {
-        Ib = await bb.getTrafficCode()
-      } catch (mb) {
-        throw console.error("[bloxd-wasm-client] could not get a traffic code", mb), new Ub.w(mb)
+        Bb = await bb.getTrafficCode()
+      } catch (jb) {
+        throw console.error("[bloxd-wasm-client] could not get a traffic code", jb), new Yb.A(jb)
       }
       const {
-        gameNameWithVariation: Hb,
-        lobbyName: fb
-      } = cb, Mb = () => {
-        const cb = (0, ab.i)(bb, Hb, fb, Ib, (bb => {
-          var cb;
-          return null !== (cb = null === sb || void 0 === sb ? void 0 : sb.isUsingCustomGameTexturePack(bb)) && void 0 !== cb && cb
+        gameNameWithVariation: eb,
+        lobbyName: vb
+      } = ab, Lb = () => {
+        const ab = (0, Tb.i)(bb, eb, vb, Bb, (bb => {
+          var ab;
+          return null !== (ab = null === Ub || void 0 === Ub ? void 0 : Ub.isUsingCustomGameTexturePack(bb)) && void 0 !== ab && ab
         }));
-        cb.joinOptions.wasmClient = !0;
-        const Wb = (0, Tb.D)();
-        return null !== Wb && (cb.joinOptions.renderBackend = Wb), cb.joinOptions.joinAdHold = kb, cb
+        ab.joinOptions.wasmClient = !0;
+        const Mb = (0, Eb.G)();
+        return null !== Mb && (ab.joinOptions.renderBackend = Mb), ab.joinOptions.joinAdHold = Ab, ab
       }, {
-        roomName: Xb,
-        joinOptions: nb
-      } = Mb();
+        roomName: Pb,
+        joinOptions: Xb
+      } = Lb();
       return {
-        endpoint: cb.endpoint,
-        roomName: Xb,
-        joinOptions: nb,
+        endpoint: ab.endpoint,
+        roomName: Pb,
+        joinOptions: Xb,
         session: {
-          gameNameWithVariation: Hb,
-          lobbyName: fb,
+          gameNameWithVariation: eb,
+          lobbyName: vb,
           playerDbId: bb.whamm
         },
-        optionsAfterRefusal: async cb => await (0, Wb.c)(bb, cb) ? Mb().joinOptions : null
+        optionsAfterRefusal: async ab => await (0, Mb.b)(bb, ab) ? Lb().joinOptions : null
       }
     }
   },
-  4739: (bb, cb, sb) => {
-    sb.d(cb, {
-      b: () => Ub,
-      c: () => Tb
+  4709: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      c: () => Yb,
+      e: () => Eb
     });
-    var kb = sb(2916),
-      Wb = sb(4747);
-    let ab = null;
+    var Ab = Ub(2890),
+      Mb = Ub(4711);
+    let Tb = null;
 
-    function Tb(bb, cb) {
-      ab = {
-        pack: bb.metaData.id === kb.c ? null : bb,
-        prompt: cb
+    function Eb(bb, ab) {
+      Tb = {
+        pack: bb.metaData.id === Ab.b ? null : bb,
+        prompt: ab
       }
     }
 
-    function Ub(bb, cb) {
-      const sb = ab;
-      null !== sb && (0, Wb.b)(sb.pack, bb) && (ab = null, cb && sb.prompt())
+    function Yb(bb, ab) {
+      const Ub = Tb;
+      null !== Ub && (0, Mb.c)(Ub.pack, bb) && (Tb = null, ab && Ub.prompt())
     }
   },
-  40453: (bb, cb, sb) => {
-    sb.d(cb, {
-      e: () => fb,
-      h: () => ab,
-      k: () => Mb,
-      o: () => Tb
+  40140: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      d: () => vb,
+      g: () => Tb,
+      i: () => Lb,
+      j: () => Eb
     });
-    var kb = sb(40433),
-      Wb = sb(40391);
-    const ab = new class {
+    var Ab = Ub(40126),
+      Mb = Ub(40073);
+    const Tb = new class {
       constructor() {
         this.page = null, this.session = void 0, this.follower = null, this.isWanted = !1, this.listeners = new Set, this.pageListeners = new Set, this.wantedListeners = new Set
       }
@@ -1687,11 +1687,11 @@ export const modules = {
         }))
       }
       setSessionFiles(bb) {
-        const cb = void 0 !== this.session && void 0 === bb;
+        const ab = void 0 !== this.session && void 0 === bb;
         if (this.change((() => {
             this.session = bb
-          })), cb)
-          for (const sb of [...this.pageListeners]) sb()
+          })), ab)
+          for (const Ub of [...this.pageListeners]) Ub()
       }
       showsPage() {
         return void 0 === this.session
@@ -1726,115 +1726,115 @@ export const modules = {
         })))
       }
       change(bb) {
-        const cb = this.current;
-        if (bb(), this.current !== cb)
-          for (const sb of this.listeners) sb()
+        const ab = this.current;
+        if (bb(), this.current !== ab)
+          for (const Ub of this.listeners) Ub()
       }
     };
 
-    function Tb(bb, cb) {
+    function Eb(bb, ab) {
       return {
         ...bb,
         armourAtlasUrl: () => {
-          var sb, kb;
-          return null !== (sb = null === (kb = cb()) || void 0 === kb ? void 0 : kb.armourAtlasUrl()) && void 0 !== sb ? sb : bb.armourAtlasUrl()
+          var Ub, Ab;
+          return null !== (Ub = null === (Ab = ab()) || void 0 === Ab ? void 0 : Ab.armourAtlasUrl()) && void 0 !== Ub ? Ub : bb.armourAtlasUrl()
         },
-        lifeformAtlasUrl: sb => Ib(cb(), (bb => bb.LIFEFORM_ATLAS_PATHS[sb]), (() => bb.lifeformAtlasUrl(sb))),
-        groupAtlasUrl: sb => Ib(cb(), (bb => bb.GROUP_ATLAS_PATHS[sb]), (() => bb.groupAtlasUrl(sb))),
-        particleItemUrl: kb => Hb(cb(), (async () => {
-          const bb = await sb.e(38).then((() => sb(51096))).catch((() => null));
-          return (null === bb || void 0 === bb ? void 0 : bb.particleItemSprite(kb)) || null
-        }), (() => bb.particleItemUrl(kb))),
-        blockImageUrl: sb => Hb(cb(), (async () => {
-          var bb, cb;
-          return null !== (bb = null === (cb = await Ub()) || void 0 === cb ? void 0 : cb.blockImageName(sb)) && void 0 !== bb ? bb : null
-        }), (() => bb.blockImageUrl(sb)))
+        lifeformAtlasUrl: Ub => Bb(ab(), (bb => bb.LIFEFORM_ATLAS_PATHS[Ub]), (() => bb.lifeformAtlasUrl(Ub))),
+        groupAtlasUrl: Ub => Bb(ab(), (bb => bb.GROUP_ATLAS_PATHS[Ub]), (() => bb.groupAtlasUrl(Ub))),
+        particleItemUrl: Ab => eb(ab(), (async () => {
+          const bb = await Ub.e(38).then((() => Ub(50737))).catch((() => null));
+          return (null === bb || void 0 === bb ? void 0 : bb.particleItemSprite(Ab)) || null
+        }), (() => bb.particleItemUrl(Ab))),
+        blockImageUrl: Ub => eb(ab(), (async () => {
+          var bb, ab;
+          return null !== (bb = null === (ab = await Yb()) || void 0 === ab ? void 0 : ab.blockImageName(Ub)) && void 0 !== bb ? bb : null
+        }), (() => bb.blockImageUrl(Ub)))
       }
     }
 
-    function Ub() {
-      return (0, Wb.m)().catch((() => null))
+    function Yb() {
+      return (0, Mb.o)().catch((() => null))
     }
 
-    function Ib(bb, cb, sb) {
-      return Hb(bb, (async () => {
+    function Bb(bb, ab, Ub) {
+      return eb(bb, (async () => {
         var bb;
-        const sb = await Ub(),
-          kb = null === sb ? null : cb(sb),
-          Wb = null !== (bb = null === kb || void 0 === kb ? void 0 : kb.slice(kb.lastIndexOf("/") + 1)) && void 0 !== bb ? bb : null;
-        return "Player_Atlas" === Wb ? null : Wb
-      }), sb)
+        const Ub = await Yb(),
+          Ab = null === Ub ? null : ab(Ub),
+          Mb = null !== (bb = null === Ab || void 0 === Ab ? void 0 : Ab.slice(Ab.lastIndexOf("/") + 1)) && void 0 !== bb ? bb : null;
+        return "Player_Atlas" === Mb ? null : Mb
+      }), Ub)
     }
-    async function Hb(bb, cb, sb) {
+    async function eb(bb, ab, Ub) {
       if (null !== bb) {
-        const sb = await cb(),
-          kb = null === sb ? null : bb.textureUrl(sb);
-        if (null !== kb) return kb
+        const Ub = await ab(),
+          Ab = null === Ub ? null : bb.textureUrl(Ub);
+        if (null !== Ab) return Ab
       }
-      return sb()
+      return Ub()
     }
-    const fb = 0;
+    const vb = 0;
 
-    function Mb(bb) {
-      const cb = [kb.j.ArmourAtlas, kb.j.LifeformAtlas, kb.j.GroupAtlas, kb.j.BlockImage, kb.j.Particle];
-      bb.reload(cb, (bb => {
+    function Lb(bb) {
+      const ab = [Ab.f.ArmourAtlas, Ab.f.LifeformAtlas, Ab.f.GroupAtlas, Ab.f.BlockImage, Ab.f.Particle];
+      bb.reload(ab, (bb => {
         switch (bb.kind) {
-          case kb.j.Particle:
-            return bb.index === kb.l.Item;
-          case kb.j.LifeformAtlas:
-            return bb.word !== fb;
+          case Ab.f.Particle:
+            return bb.index === Ab.h.Item;
+          case Ab.f.LifeformAtlas:
+            return bb.word !== vb;
           default:
             return !0
         }
       }))
     }
   },
-  40332: (bb, cb, sb) => {
-    sb.d(cb, {
-      b: () => kb,
-      d: () => Ub,
-      e: () => Tb,
-      i: () => Wb,
-      l: () => ab
+  40015: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      e: () => Ab,
+      g: () => Yb,
+      k: () => Eb,
+      n: () => Mb,
+      q: () => Tb
     });
-    const kb = 1e3;
+    const Ab = 1e3;
 
-    function Wb() {
-      Ib((() => {
+    function Mb() {
+      Bb((() => {
         window.location.reload()
       }))
     }
 
-    function ab() {
+    function Tb() {
       return new Promise((() => {}))
     }
 
-    function Tb(bb) {
-      Ib((() => {
+    function Eb(bb) {
+      Bb((() => {
         window.location.replace(bb(window.location.href))
       }))
     }
 
-    function Ub(bb) {
-      Promise.resolve().then((() => sb(131))).then((cb => {
+    function Yb(bb) {
+      Promise.resolve().then((() => Ub(109))).then((ab => {
         let {
-          currentUrl: sb
-        } = cb;
-        Tb((() => sb.mergeSearchParamsInto(bb)))
+          currentUrl: Ub
+        } = ab;
+        Eb((() => Ub.mergeSearchParamsInto(bb)))
       }), (() => {
-        Tb((() => bb))
+        Eb((() => bb))
       }))
     }
 
-    function Ib(bb) {
-      null !== window.onbeforeunload ? Promise.resolve().then((() => sb(1704))).then((cb => {
+    function Bb(bb) {
+      null !== window.onbeforeunload ? Promise.resolve().then((() => Ub(1639))).then((ab => {
         let {
-          prepareForUnloadWithoutConfirmation: sb
-        } = cb;
+          prepareForUnloadWithoutConfirmation: Ub
+        } = ab;
         try {
-          sb()
-        } catch (kb) {
-          console.warn("[bloxd-wasm-client] prepareForUnloadWithoutConfirmation threw: leaving plainly", kb), window.onbeforeunload = null
+          Ub()
+        } catch (Ab) {
+          console.warn("[bloxd-wasm-client] prepareForUnloadWithoutConfirmation threw: leaving plainly", Ab), window.onbeforeunload = null
         }
         bb()
       }), (() => {
@@ -1842,245 +1842,245 @@ export const modules = {
       })) : bb()
     }
   },
-  4747: (bb, cb, sb) => {
-    function kb(bb, cb) {
-      return Wb(bb, cb)
+  4711: (bb, ab, Ub) => {
+    function Ab(bb, ab) {
+      return Mb(bb, ab)
     }
 
-    function Wb(bb, cb) {
-      if (bb === cb) return !0;
-      if ("object" !== typeof bb || "object" !== typeof cb || null === bb || null === cb || Array.isArray(bb) !== Array.isArray(cb)) return !1;
-      const sb = bb,
-        kb = cb,
-        ab = Object.keys(sb);
-      return ab.length === Object.keys(kb).length && ab.every((bb => Object.prototype.hasOwnProperty.call(kb, bb) && Wb(sb[bb], kb[bb])))
+    function Mb(bb, ab) {
+      if (bb === ab) return !0;
+      if ("object" !== typeof bb || "object" !== typeof ab || null === bb || null === ab || Array.isArray(bb) !== Array.isArray(ab)) return !1;
+      const Ub = bb,
+        Ab = ab,
+        Tb = Object.keys(Ub);
+      return Tb.length === Object.keys(Ab).length && Tb.every((bb => Object.prototype.hasOwnProperty.call(Ab, bb) && Mb(Ub[bb], Ab[bb])))
     }
-    sb.d(cb, {
-      b: () => kb
+    Ub.d(ab, {
+      c: () => Ab
     })
   },
-  40368: (bb, cb, sb) => {
-    sb.d(cb, {
-      e: () => Yb,
-      h: () => Lb,
-      k: () => Qb,
-      n: () => lb
+  40046: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      c: () => fb,
+      f: () => xb,
+      g: () => kb,
+      k: () => Rb
     });
-    var kb = sb(1767),
-      Wb = sb(1770),
-      ab = sb(38625),
-      Tb = sb(38639),
-      Ub = sb(1753),
-      Ib = sb(40282),
-      Hb = sb(40291);
-    const fb = {
+    var Ab = Ub(1704),
+      Mb = Ub(1710),
+      Tb = Ub(38345),
+      Eb = Ub(38357),
+      Yb = Ub(1687),
+      Bb = Ub(39985),
+      eb = Ub(39992);
+    const vb = {
         "X-Requested-With": "XMLHtttpRequest"
       },
-      Mb = 3,
-      Xb = [500, 1500];
+      Lb = 3,
+      Pb = [500, 1500];
 
-    function nb(bb) {
-      const cb = new URL(bb);
+    function Xb(bb) {
+      const ab = new URL(bb);
       return {
-        secure: "https:" === cb.protocol || "wss:" === cb.protocol,
-        host: cb.host,
-        pathname: cb.pathname.replace(/\/+$/, ""),
-        search: cb.searchParams.toString()
+        secure: "https:" === ab.protocol || "wss:" === ab.protocol,
+        host: ab.host,
+        pathname: ab.pathname.replace(/\/+$/, ""),
+        search: ab.searchParams.toString()
       }
     }
 
-    function mb(bb, cb, sb) {
+    function jb(bb, ab, Ub) {
       const {
-        secure: kb,
-        host: Wb,
-        pathname: ab,
-        search: Tb
-      } = nb(bb);
-      return `${kb?"https":"http"}://${Wb}${ab}/matchmake/${cb}/${encodeURIComponent(sb)}${Tb?`?${Tb}`:""}`
+        secure: Ab,
+        host: Mb,
+        pathname: Tb,
+        search: Eb
+      } = Xb(bb);
+      return `${Ab?"https":"http"}://${Mb}${Tb}/matchmake/${ab}/${encodeURIComponent(Ub)}${Eb?`?${Eb}`:""}`
     }
 
-    function lb(bb, cb) {
-      var sb;
-      const kb = null !== (sb = cb.protocol) && void 0 !== sb ? sb : "ws";
-      if ("ws" !== kb) throw new Error(`seat reservation asks for the ${kb} transport`);
+    function Rb(bb, ab) {
+      var Ub;
+      const Ab = null !== (Ub = ab.protocol) && void 0 !== Ub ? Ub : "ws";
+      if ("ws" !== Ab) throw new Error(`seat reservation asks for the ${Ab} transport`);
       const {
-        secure: Wb,
-        host: ab,
-        pathname: Tb,
-        search: Ub
-      } = nb(bb), Ib = new URLSearchParams(Ub);
-      Ib.append("sessionId", cb.sessionId), cb.reconnectionToken && Ib.append("reconnectionToken", cb.reconnectionToken);
-      return `${Wb?"wss":"ws"}://${cb.room.publicAddress||`${ab}${Tb}`}/${cb.room.processId}/${cb.room.roomId}?${Ib.toString()}`
+        secure: Mb,
+        host: Tb,
+        pathname: Eb,
+        search: Yb
+      } = Xb(bb), Bb = new URLSearchParams(Yb);
+      Bb.append("sessionId", ab.sessionId), ab.reconnectionToken && Bb.append("reconnectionToken", ab.reconnectionToken);
+      return `${Mb?"wss":"ws"}://${ab.room.publicAddress||`${Tb}${Eb}`}/${ab.room.processId}/${ab.room.roomId}?${Bb.toString()}`
     }
-    async function Qb(bb, cb, sb) {
-      var Ib;
-      let fb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const nb = null !== (Ib = fb.sleep) && void 0 !== Ib ? Ib : kb.e,
-        lb = new Wb.b(fb.signal),
-        Qb = new Ub.e(Tb.e, (() => {
-          (0, Wb.h)(lb.controller, new Tb.i)
+    async function kb(bb, ab, Ub) {
+      var Bb;
+      let vb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+      const Xb = null !== (Bb = vb.sleep) && void 0 !== Bb ? Bb : Ab.b,
+        Rb = new Mb.b(vb.signal),
+        kb = new Yb.e(Eb.e, (() => {
+          (0, Mb.f)(Rb.controller, new Eb.i)
         })),
         {
-          signal: Vb
-        } = lb;
+          signal: zb
+        } = Rb;
       try {
-        return await (0, ab.d)((() => async function(bb, cb, sb, kb) {
-          var ab;
+        return await (0, Tb.h)((() => async function(bb, ab, Ub, Ab) {
+          var Tb;
           const {
-            signal: Tb,
-            sleep: Ub
-          } = kb, Ib = mb(bb, "joinOrCreate", cb), fb = JSON.stringify(sb);
-          let nb = null;
-          for (let mb = 0; mb < Mb; mb++) {
-            var lb;
-            if (mb > 0) await Ub(null !== (lb = Xb[mb - 1]) && void 0 !== lb ? lb : 1500, Tb);
+            signal: Eb,
+            sleep: Yb
+          } = Ab, Bb = jb(bb, "joinOrCreate", ab), vb = JSON.stringify(Ub);
+          let Xb = null;
+          for (let jb = 0; jb < Lb; jb++) {
+            var Rb;
+            if (jb > 0) await Yb(null !== (Rb = Pb[jb - 1]) && void 0 !== Rb ? Rb : 1500, Eb);
             let bb;
-            (0, Wb.j)(Tb);
+            (0, Mb.h)(Eb);
             try {
-              bb = await Cb(Ib, fb, kb)
-            } catch (Qb) {
-              (0, Wb.j)(Tb), nb = eb(Qb);
+              bb = await Zb(Bb, vb, Ab)
+            } catch (kb) {
+              (0, Mb.h)(Eb), Xb = yb(kb);
               continue
             }
             const {
-              response: cb,
-              answer: sb,
-              refusal: ab,
-              lost: Mb
+              response: ab,
+              answer: Ub,
+              refusal: Tb,
+              lost: Lb
             } = bb;
-            if (null === Mb) {
-              if (null !== ab) throw Nb(ab, sb);
-              if (cb.ok && null !== sb && hb(sb)) return sb;
-              nb = new Hb.u(`seat request answered HTTP ${cb.status}${null===sb?" without JSON":" without a seat"}`, !1)
-            } else nb = eb(Mb.error)
+            if (null === Lb) {
+              if (null !== Tb) throw Db(Tb, Ub);
+              if (ab.ok && null !== Ub && mb(Ub)) return Ub;
+              Xb = new eb.x(`seat request answered HTTP ${ab.status}${null===Ub?" without JSON":" without a seat"}`, !1)
+            } else Xb = yb(Lb.error)
           }
-          throw null !== (ab = nb) && void 0 !== ab ? ab : new Hb.u("seat request made no attempt", !1)
-        }(bb, cb, sb, {
-          ...fb,
-          signal: Vb,
-          sleep: nb
-        })), Vb, nb)
+          throw null !== (Tb = Xb) && void 0 !== Tb ? Tb : new eb.x("seat request made no attempt", !1)
+        }(bb, ab, Ub, {
+          ...vb,
+          signal: zb,
+          sleep: Xb
+        })), zb, Xb)
       } finally {
-        Qb.stop(), lb.unfollow()
+        kb.stop(), Rb.unfollow()
       }
     }
 
-    function eb(bb) {
-      return new Hb.u(bb instanceof Error ? bb.message : String(bb), !0, bb)
+    function yb(bb) {
+      return new eb.x(bb instanceof Error ? bb.message : String(bb), !0, bb)
     }
-    async function Cb(bb, cb, sb) {
-      var kb;
+    async function Zb(bb, ab, Ub) {
+      var Ab;
       const {
-        signal: ab
-      } = sb, Tb = null !== (kb = sb.fetch) && void 0 !== kb ? kb : fetch, Ub = await Tb(bb, {
+        signal: Tb
+      } = Ub, Eb = null !== (Ab = Ub.fetch) && void 0 !== Ab ? Ab : fetch, Yb = await Eb(bb, {
         method: "POST",
         headers: {
-          ...fb,
+          ...vb,
           Accept: "application/json",
           "Content-Type": "application/json"
         },
-        body: cb,
+        body: ab,
         credentials: "include",
-        signal: ab
+        signal: Tb
       }), {
-        answer: Ib,
-        lost: Hb
+        answer: Bb,
+        lost: eb
       } = await async function(bb) {
         try {
-          const cb = await bb.json();
+          const ab = await bb.json();
           return {
-            answer: "object" === typeof cb && null !== cb ? cb : null,
+            answer: "object" === typeof ab && null !== ab ? ab : null,
             lost: null
           }
-        } catch (cb) {
+        } catch (ab) {
           return {
             answer: null,
-            lost: cb instanceof SyntaxError ? null : {
-              error: cb
+            lost: ab instanceof SyntaxError ? null : {
+              error: ab
             }
           }
         }
-      }(Ub), Mb = null !== Ib && "string" === typeof Ib.error ? Ib.error : null;
-      var Xb;
-      null !== Mb && (null === (Xb = sb.onRefusal) || void 0 === Xb || Xb.call(sb));
-      return (0, Wb.j)(ab), {
-        response: Ub,
-        answer: Ib,
-        refusal: Mb,
-        lost: Hb
+      }(Yb), Lb = null !== Bb && "string" === typeof Bb.error ? Bb.error : null;
+      var Pb;
+      null !== Lb && (null === (Pb = Ub.onRefusal) || void 0 === Pb || Pb.call(Ub));
+      return (0, Mb.h)(Tb), {
+        response: Yb,
+        answer: Bb,
+        refusal: Lb,
+        lost: eb
       }
     }
 
-    function Nb(bb, cb) {
-      return new Hb.k(bb, "number" === typeof(null === cb || void 0 === cb ? void 0 : cb.code) ? cb.code : 0, (0, Ib.t)(bb).text)
+    function Db(bb, ab) {
+      return new eb.n(bb, "number" === typeof(null === ab || void 0 === ab ? void 0 : ab.code) ? ab.code : 0, (0, Bb.r)(bb).text)
     }
-    class Vb extends Error {
-      constructor(bb, cb) {
-        super(bb), this.code = cb, this.name = "SeatHttpError"
+    class zb extends Error {
+      constructor(bb, ab) {
+        super(bb), this.code = ab, this.name = "SeatHttpError"
       }
     }
-    async function Lb(bb, cb, sb) {
-      let kb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    async function xb(bb, ab, Ub) {
+      let Ab = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
       const {
-        response: Wb,
-        answer: ab,
-        refusal: Tb,
-        lost: Ub
-      } = await Cb(mb(bb, "reconnect", cb), JSON.stringify({
-        reconnectionToken: sb
-      }), kb);
-      if (null !== Ub) throw Ub.error;
-      if (!Wb.ok) {
-        const bb = null !== ab && "number" === typeof ab.code && 0 !== ab.code ? ab.code : Wb.status;
-        throw new Vb(`the seat's reconnect was refused: ${null!==Tb&&void 0!==Tb?Tb:`HTTP ${Wb.status}`}`, bb)
+        response: Mb,
+        answer: Tb,
+        refusal: Eb,
+        lost: Yb
+      } = await Zb(jb(bb, "reconnect", ab), JSON.stringify({
+        reconnectionToken: Ub
+      }), Ab);
+      if (null !== Yb) throw Yb.error;
+      if (!Mb.ok) {
+        const bb = null !== Tb && "number" === typeof Tb.code && 0 !== Tb.code ? Tb.code : Mb.status;
+        throw new zb(`the seat's reconnect was refused: ${null!==Eb&&void 0!==Eb?Eb:`HTTP ${Mb.status}`}`, bb)
       }
-      if (null !== Tb) throw Nb(Tb, ab);
-      if (null === ab || !hb(ab)) throw new Error("the seat's reconnect answered " + (null === ab ? "without JSON" : "without a seat"));
+      if (null !== Eb) throw Db(Eb, Tb);
+      if (null === Tb || !mb(Tb)) throw new Error("the seat's reconnect answered " + (null === Tb ? "without JSON" : "without a seat"));
       return {
-        ...ab,
-        reconnectionToken: sb
+        ...Tb,
+        reconnectionToken: Ub
       }
     }
-    const ub = 10;
+    const ib = 10;
 
-    function Yb(bb) {
-      if (bb.byteLength < 2 || bb[0] !== ub) return null;
-      const cb = 2 + bb[1];
-      return cb > bb.byteLength ? null : (new TextDecoder).decode(bb.subarray(2, cb))
+    function fb(bb) {
+      if (bb.byteLength < 2 || bb[0] !== ib) return null;
+      const ab = 2 + bb[1];
+      return ab > bb.byteLength ? null : (new TextDecoder).decode(bb.subarray(2, ab))
     }
 
-    function hb(bb) {
-      const cb = bb.room;
-      return "string" === typeof bb.sessionId && "object" === typeof cb && null !== cb && "string" === typeof cb.roomId && "string" === typeof cb.processId && "string" === typeof cb.name
+    function mb(bb) {
+      const ab = bb.room;
+      return "string" === typeof bb.sessionId && "object" === typeof ab && null !== ab && "string" === typeof ab.roomId && "string" === typeof ab.processId && "string" === typeof ab.name
     }
   },
-  40020: (bb, cb, sb) => {
-    sb.d(cb, {
-      B: () => yb,
-      E: () => Vb,
-      H: () => Lb,
-      J: () => Qb,
-      N: () => gb,
-      R: () => Db,
-      S: () => mb,
-      T: () => ib,
-      X: () => Cb,
-      Z: () => eb,
-      ab: () => Nb,
-      c: () => Wb,
-      db: () => ub,
-      e: () => Eb,
-      i: () => Pb,
-      m: () => nb,
-      p: () => lb,
-      q: () => tb,
-      s: () => hb,
-      u: () => Bb,
-      y: () => Jb,
-      z: () => Yb
+  39716: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      $: () => ib,
+      C: () => fb,
+      E: () => Ib,
+      G: () => zb,
+      H: () => xb,
+      K: () => kb,
+      N: () => Nb,
+      O: () => Fb,
+      Q: () => jb,
+      R: () => Gb,
+      V: () => Zb,
+      W: () => yb,
+      Z: () => Db,
+      c: () => Mb,
+      f: () => hb,
+      i: () => db,
+      m: () => Xb,
+      q: () => Rb,
+      s: () => Hb,
+      t: () => mb,
+      v: () => Wb,
+      y: () => pb
     });
-    var kb = sb(2740);
-    const Wb = {
+    var Ab = Ub(2698);
+    const Mb = {
       Chat: 49,
       UiRequestResponded: 91,
       CodeCollab: 89,
@@ -2108,141 +2108,141 @@ export const modules = {
       UpdateNameTag: 53
     };
 
-    function ab(bb, cb) {
-      return !ArrayBuffer.isView(bb) || bb instanceof DataView ? Array.isArray(bb) ? bb.map((bb => cb(bb))) : bb : Array.from(bb, (bb => cb(bb)))
-    }
-
-    function Tb(bb) {
-      if ("string" !== typeof bb) return bb;
-      for (let cb = 0; cb < bb.length; cb++) {
-        const sb = bb.charCodeAt(cb);
-        if (sb >= 55296 && sb <= 57343) return Ib.decode(Ub.encode(bb))
-      }
-      return bb
-    }
-    const Ub = new TextEncoder,
-      Ib = new TextDecoder;
-
-    function Hb(bb) {
-      return bb
-    }
-    let fb;
-
-    function Mb(bb) {
-      return null === bb || "object" !== typeof bb ? bb : [Tb(bb.YT), Tb(bb.hT)]
-    }
-
-    function Xb(bb) {
-      return null === bb || "object" !== typeof bb ? bb : [ab(bb.XT, Hb), ab(bb.OH, Hb)]
-    }
-
-    function nb(bb) {
-      return null === (cb = bb) || "object" !== typeof cb ? cb : [Tb(cb.jT), Tb(cb.pT)];
-      var cb
-    }
-
-    function mb(bb) {
-      return null === (cb = bb) || "object" !== typeof cb ? cb : [cb.id, cb.ET];
-      var cb
-    }
-
-    function lb(bb) {
-      return null === (cb = bb) || "object" !== typeof cb ? cb : [cb.Jc, Tb(cb.gc), cb.Bc, Tb(cb.Pc), cb.Gc, cb.Kc, cb.vT, Tb(cb.FT), Tb(cb.xT)];
-      var cb
-    }
-
-    function Qb(bb) {
-      return null === (cb = bb) || "object" !== typeof cb ? cb : [ab(cb.hf, Hb), cb.Jf];
-      var cb
-    }
-
-    function eb(bb) {
-      return null === (cb = bb) || "object" !== typeof cb ? cb : [ab(cb.GU, (bb => Tb(bb))), Tb(cb.KU), cb.ZU];
-      var cb
-    }
-
-    function Cb(bb) {
-      return null === (cb = bb) || "object" !== typeof cb ? cb : [ab(cb.iT, Hb), Tb(cb.OT), cb.GT];
-      var cb
-    }
-
-    function Nb(bb) {
-      return null === (cb = bb) || "object" !== typeof cb ? cb : [Tb(cb.mk), Tb(cb.lk)];
-      var cb
-    }
-
-    function Vb(bb) {
-      return null === (cb = bb) || "object" !== typeof cb ? cb : [Tb(cb.yU)];
-      var cb
-    }
-
-    function Lb(bb) {
-      return Tb(bb)
-    }
-
-    function ub(bb) {
-      return null === (cb = bb) || "object" !== typeof cb ? cb : [Tb(cb.kM), Tb(cb.WM), Tb(cb.YT), Tb(cb.hT)];
-      var cb
-    }
-
-    function Yb(bb) {
-      return Mb(bb)
-    }
-
-    function hb(bb) {
-      return Mb(bb)
-    }
-
-    function Jb(bb) {
-      return null === (cb = bb) || "object" !== typeof cb ? cb : [Tb(cb.bU)];
-      var cb
-    }
-
-    function gb(bb) {
-      return bb
-    }
-
-    function Bb(bb) {
-      return null === (cb = bb) || "object" !== typeof cb ? cb : [Tb(cb.BT), Tb(cb.tT)];
-      var cb
-    }
-
-    function tb(bb) {
-      return Tb(bb)
-    }
-
-    function yb(bb) {
-      return Xb(bb)
-    }
-
-    function Pb(bb) {
-      return Xb(bb)
-    }
-
-    function Db(bb) {
-      return null === (cb = bb) || "object" !== typeof cb ? cb : [Tb(cb.iU)];
-      var cb
+    function Tb(bb, ab) {
+      return !ArrayBuffer.isView(bb) || bb instanceof DataView ? Array.isArray(bb) ? bb.map((bb => ab(bb))) : bb : Array.from(bb, (bb => ab(bb)))
     }
 
     function Eb(bb) {
-      return (fb ??= (0, kb.e)().map((bb => bb.name)), fb).map((cb => {
-        return "string" === typeof(sb = bb[cb]) ? Tb(sb) : ab(sb, Hb);
-        var sb
-      }))
+      if ("string" !== typeof bb) return bb;
+      for (let ab = 0; ab < bb.length; ab++) {
+        const Ub = bb.charCodeAt(ab);
+        if (Ub >= 55296 && Ub <= 57343) return Bb.decode(Yb.encode(bb))
+      }
+      return bb
+    }
+    const Yb = new TextEncoder,
+      Bb = new TextDecoder;
+
+    function eb(bb) {
+      return bb
+    }
+    let vb;
+
+    function Lb(bb) {
+      return null === bb || "object" !== typeof bb ? bb : [Eb(bb.OT), Eb(bb.cT)]
+    }
+
+    function Pb(bb) {
+      return null === bb || "object" !== typeof bb ? bb : [Tb(bb.uT, eb), Tb(bb.ve, eb)]
+    }
+
+    function Xb(bb) {
+      return null === (ab = bb) || "object" !== typeof ab ? ab : [Eb(ab.fE), Eb(ab.mE)];
+      var ab
+    }
+
+    function jb(bb) {
+      return null === (ab = bb) || "object" !== typeof ab ? ab : [ab.id, ab.ME];
+      var ab
+    }
+
+    function Rb(bb) {
+      return null === (ab = bb) || "object" !== typeof ab ? ab : [ab.fa, Eb(ab.ma), ab.Na, Eb(ab.Ia), ab.Ga, ab.Qa, ab.zE, Eb(ab.xE), Eb(ab.iE)];
+      var ab
+    }
+
+    function kb(bb) {
+      return null === (ab = bb) || "object" !== typeof ab ? ab : [Tb(ab.Uv, eb), ab.Av];
+      var ab
+    }
+
+    function yb(bb) {
+      return null === (ab = bb) || "object" !== typeof ab ? ab : [Tb(ab.BY, (bb => Eb(bb))), Eb(ab.eY), ab.vY];
+      var ab
+    }
+
+    function Zb(bb) {
+      return null === (ab = bb) || "object" !== typeof ab ? ab : [Tb(ab.TE, eb), Eb(ab.EE), ab.YE];
+      var ab
+    }
+
+    function Db(bb) {
+      return null === (ab = bb) || "object" !== typeof ab ? ab : [Eb(ab.CU), Eb(ab.VU)];
+      var ab
+    }
+
+    function zb(bb) {
+      return null === (ab = bb) || "object" !== typeof ab ? ab : [Eb(ab.UY)];
+      var ab
+    }
+
+    function xb(bb) {
+      return Eb(bb)
     }
 
     function ib(bb) {
-      return null === (cb = bb) || "object" !== typeof cb ? cb : [cb.AU, cb.wU, cb.rU];
-      var cb
+      return null === (ab = bb) || "object" !== typeof ab ? ab : [Eb(ab.Fv), Eb(ab.hv), Eb(ab.OT), Eb(ab.cT)];
+      var ab
+    }
+
+    function fb(bb) {
+      return Lb(bb)
+    }
+
+    function mb(bb) {
+      return Lb(bb)
+    }
+
+    function pb(bb) {
+      return null === (ab = bb) || "object" !== typeof ab ? ab : [Eb(ab.pE)];
+      var ab
+    }
+
+    function Nb(bb) {
+      return bb
+    }
+
+    function Wb(bb) {
+      return null === (ab = bb) || "object" !== typeof ab ? ab : [Eb(ab.ST), Eb(ab.bE)];
+      var ab
+    }
+
+    function Hb(bb) {
+      return Eb(bb)
+    }
+
+    function Ib(bb) {
+      return Pb(bb)
+    }
+
+    function db(bb) {
+      return Pb(bb)
+    }
+
+    function Fb(bb) {
+      return null === (ab = bb) || "object" !== typeof ab ? ab : [Eb(ab.EY)];
+      var ab
+    }
+
+    function hb(bb) {
+      return (vb ??= (0, Ab.g)().map((bb => bb.name)), vb).map((ab => {
+        return "string" === typeof(Ub = bb[ab]) ? Eb(Ub) : Tb(Ub, eb);
+        var Ub
+      }))
+    }
+
+    function Gb(bb) {
+      return null === (ab = bb) || "object" !== typeof ab ? ab : [ab.jY, ab.RY, ab.kY];
+      var ab
     }
   },
-  40461: (bb, cb, sb) => {
-    sb.d(cb, {
-      b: () => ab
+  40143: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      b: () => Tb
     });
-    var kb = sb(40465),
-      Wb = sb(40453);
-    const ab = new class {
+    var Ab = Ub(40149),
+      Mb = Ub(40140);
+    const Tb = new class {
       constructor(bb) {
         this.pack = bb, this.game = void 0, this.settle = null, this.hold = null, this.endedWhileHeld = !1, this.gameListeners = new Set, bb.onWanted((() => {
           this.release()
@@ -2251,9 +2251,9 @@ export const modules = {
       setGame(bb) {
         if (void 0 === bb && null !== this.hold) return void(this.endedWhileHeld = !0);
         this.hold = null, this.endedWhileHeld = !1;
-        const cb = this.inGame();
-        if (this.game = bb, this.update(), this.inGame() !== cb)
-          for (const sb of this.gameListeners) sb()
+        const ab = this.inGame();
+        if (this.game = bb, this.update(), this.inGame() !== ab)
+          for (const Ub of this.gameListeners) Ub()
       }
       inGame() {
         return void 0 !== this.game
@@ -2283,43 +2283,43 @@ export const modules = {
         this.settle = bb, this.update()
       }
       update() {
-        void 0 === this.game ? this.pack.setSessionFiles(void 0) : null !== this.settle && (0, kb.d)(this.settle.state, this.game) && this.pack.setSessionFiles(this.settle.files)
+        void 0 === this.game ? this.pack.setSessionFiles(void 0) : null !== this.settle && (0, Ab.c)(this.settle.state, this.game) && this.pack.setSessionFiles(this.settle.files)
       }
-    }(Wb.h)
+    }(Mb.g)
   },
-  40275: (bb, cb, sb) => {
-    sb.r(cb), sb.d(cb, {
-      followPageUiPack: () => PH,
-      packForGame: () => yH,
-      playWasmGame: () => wH,
-      prefetchWasmPreviews: () => wU,
-      setGamePackConfirm: () => xI,
-      startWasmPlay: () => GH,
-      startWasmPreviews: () => AU
+  39981: (bb, ab, Ub) => {
+    Ub.r(ab), Ub.d(ab, {
+      followPageUiPack: () => Ne,
+      packForGame: () => pe,
+      playWasmGame: () => Ke,
+      prefetchWasmPreviews: () => KY,
+      setGamePackConfirm: () => CB,
+      startWasmPlay: () => Fe,
+      startWasmPreviews: () => rY
     });
-    var kb = sb(223),
-      Wb = sb(1255),
-      ab = sb(195),
-      Tb = sb(38648),
-      Ub = sb(1870),
-      Ib = sb(26),
-      Hb = sb(4408),
-      fb = sb(1302),
-      Mb = sb(1702),
-      Xb = sb(1312),
-      nb = sb(38805),
-      mb = sb(38812),
-      lb = sb(38728),
-      Qb = sb(36120),
-      eb = sb(38625),
-      Cb = sb(8506),
-      Nb = sb(38639),
-      Vb = sb(40120),
-      Lb = sb(4498),
-      ub = sb(40014),
-      Yb = sb(40090),
-      hb = sb(40020);
-    const Jb = {
+    var Ab = Ub(205),
+      Mb = Ub(1192),
+      Tb = Ub(166),
+      Eb = Ub(38370),
+      Yb = Ub(1824),
+      Bb = Ub(22),
+      eb = Ub(4357),
+      vb = Ub(1238),
+      Lb = Ub(1635),
+      Pb = Ub(1242),
+      Xb = Ub(38511),
+      jb = Ub(38523),
+      Rb = Ub(38448),
+      kb = Ub(35909),
+      yb = Ub(38345),
+      Zb = Ub(8463),
+      Db = Ub(38357),
+      zb = Ub(39803),
+      xb = Ub(4469),
+      ib = Ub(39714),
+      fb = Ub(39778),
+      mb = Ub(39716);
+    const pb = {
       states: {
         health: !0,
         aura: !0,
@@ -2441,230 +2441,230 @@ export const modules = {
       }
     };
 
-    function gb(bb) {
-      const cb = {
-        ...Yb.b[bb]
+    function Nb(bb) {
+      const ab = {
+        ...fb.d[bb]
       };
-      for (const sb of Object.keys(Jb[bb])) delete cb[sb];
-      return cb
+      for (const Ub of Object.keys(pb[bb])) delete ab[Ub];
+      return ab
     }
 
-    function Bb() {
-      var bb, cb;
-      return null === (bb = null === (cb = (0, ub.h)()) || void 0 === cb ? void 0 : cb.localPlayerAlive()) || void 0 === bb || bb
+    function Wb() {
+      var bb, ab;
+      return null === (bb = null === (ab = (0, ib.i)()) || void 0 === ab ? void 0 : ab.localPlayerAlive()) || void 0 === bb || bb
     }
 
-    function tb() {
-      var bb, cb;
-      return null !== (bb = null === (cb = (0, ub.h)()) || void 0 === cb ? void 0 : cb.localDeaths()) && void 0 !== bb ? bb : null
+    function Hb() {
+      var bb, ab;
+      return null !== (bb = null === (ab = (0, ib.i)()) || void 0 === ab ? void 0 : ab.localDeaths()) && void 0 !== bb ? bb : null
     }
-    const yb = {
-        current: Bb,
+    const Ib = {
+        current: Wb,
         watch: bb => {
-          let cb = Bb(),
-            sb = tb();
-          return (0, Lb.C)((() => {
-            const kb = Bb(),
-              Wb = tb(),
-              ab = null !== Wb && null !== sb && Wb !== sb;
-            sb = Wb, ab ? (cb || bb(!0), bb(!1), kb && bb(!0), cb = kb) : kb !== cb && (cb = kb, bb(kb))
+          let ab = Wb(),
+            Ub = Hb();
+          return (0, xb.x)((() => {
+            const Ab = Wb(),
+              Mb = Hb(),
+              Tb = null !== Mb && null !== Ub && Mb !== Ub;
+            Ub = Mb, Tb ? (ab || bb(!0), bb(!1), Ab && bb(!0), ab = Ab) : Ab !== ab && (ab = Ab, bb(Ab))
           }))
         }
       },
-      Pb = {
+      db = {
         states: {
-          ...gb("states"),
-          localPlayerAlive: yb
+          ...Nb("states"),
+          localPlayerAlive: Ib
         },
         events: {
-          ...gb("events"),
+          ...Nb("events"),
           localPlayerAliveSet: {
-            watch: yb.watch
+            watch: Ib.watch
           }
         },
         commands: {
-          ...gb("commands"),
+          ...Nb("commands"),
           respawn: () => {
             var bb;
-            null === (bb = (0, ub.h)()) || void 0 === bb || bb.respawn()
+            null === (bb = (0, ib.i)()) || void 0 === bb || bb.respawn()
           },
           playEmote: bb => {
-            var cb;
-            null === (cb = (0, ub.h)()) || void 0 === cb || cb.send(hb.c.PlayEmote, (0, hb.E)({
-              yU: bb
+            var ab;
+            null === (ab = (0, ib.i)()) || void 0 === ab || ab.send(mb.c.PlayEmote, (0, mb.G)({
+              UY: bb
             }))
           },
           applyTemporaryThirdPerson: bb => {
-            var cb;
+            var ab;
             let {
-              durationMs: sb
+              durationMs: Ub
             } = bb;
-            null === (cb = (0, ub.h)()) || void 0 === cb || cb.thirdPersonFor(sb)
+            null === (ab = (0, ib.i)()) || void 0 === ab || ab.thirdPersonFor(Ub)
           },
           bindCustomButtonKeys: bb => {
-            var cb;
-            null === (cb = (0, ub.h)()) || void 0 === cb || cb.bindCustomButtonKeys(bb)
+            var ab;
+            null === (ab = (0, ib.i)()) || void 0 === ab || ab.bindCustomButtonKeys(bb)
           },
           pressCustomButton: bb => {
-            var cb;
+            var ab;
             let {
-              id: sb,
-              down: kb
+              id: Ub,
+              down: Ab
             } = bb;
-            null === (cb = (0, ub.h)()) || void 0 === cb || cb.pressCustomButton(sb, kb)
+            null === (ab = (0, ib.i)()) || void 0 === ab || ab.pressCustomButton(Ub, Ab)
           },
           setLookSensitivity: () => {},
           wakeUp: bb => {
-            const cb = (0, hb.R)({
-                iU: bb
+            const ab = (0, mb.O)({
+                EY: bb
               }),
-              sb = () => {
-                const bb = (0, ub.h)();
-                return !(null !== bb && void 0 !== bb && bb.isSessionLive) || bb.send(hb.c.StopSleeping, cb)
+              Ub = () => {
+                const bb = (0, ib.i)();
+                return !(null !== bb && void 0 !== bb && bb.isSessionLive) || bb.send(mb.c.StopSleeping, ab)
               };
-            if (!sb()) {
-              const bb = (0, Lb.C)((() => {
-                sb() && bb()
+            if (!Ub()) {
+              const bb = (0, xb.x)((() => {
+                Ub() && bb()
               }))
             }
           },
           setCameraZoom: bb => {
-            var cb;
-            null === (cb = (0, ub.h)()) || void 0 === cb || cb.setCameraZoom(bb)
+            var ab;
+            null === (ab = (0, ib.i)()) || void 0 === ab || ab.setCameraZoom(bb)
           }
         },
-        queries: gb("queries"),
+        queries: Nb("queries"),
         lookups: {
-          ...gb("lookups"),
+          ...Nb("lookups"),
           cameraZoom: () => {
-            var bb, cb;
-            return null !== (bb = null === (cb = (0, ub.h)()) || void 0 === cb ? void 0 : cb.cameraZoom()) && void 0 !== bb ? bb : 0
+            var bb, ab;
+            return null !== (bb = null === (ab = (0, ib.i)()) || void 0 === ab ? void 0 : ab.cameraZoom()) && void 0 !== bb ? bb : 0
           }
         }
       };
-    var Db = sb(40282),
-      Eb = sb(40291),
-      ib = sb(40294),
-      Ob = sb(40314),
-      Gb = sb(1266),
-      Kb = sb(131),
-      Zb = sb(4257),
-      zb = sb(3531),
-      qb = sb(1170);
-    const db = {
-      Yf: () => (0, Gb.d)(),
-      inbuiltOverwritten: () => Zb.f,
-      reflectApplyHit: () => qb.b,
-      definerHit: () => Kb.currentUrl.c,
-      emitReplaced: () => (0, Ib.c)(),
-      confirmMesh: () => (0, zb.c)()
+    var Fb = Ub(39985),
+      hb = Ub(39992),
+      Gb = Ub(39998),
+      Qb = Ub(40009),
+      qb = Ub(1201),
+      ub = Ub(109),
+      rb = Ub(4201),
+      Kb = Ub(3405),
+      ob = Ub(1109);
+    const lb = {
+      av: () => (0, qb.b)(),
+      inbuiltOverwritten: () => rb.g,
+      reflectApplyHit: () => ob.b,
+      definerHit: () => ub.currentUrl.c,
+      emitReplaced: () => (0, Bb.e)(),
+      confirmMesh: () => (0, Kb.e)()
     };
-    var Ab = sb(40301),
-      wb = sb(40332);
-    var rb = sb(19),
-      ob = sb(1876),
-      Sb = sb(1917),
-      Rb = sb(1629),
-      vb = sb(1965),
-      Fb = sb(1197),
-      xb = sb(1258),
-      jb = sb(40259);
+    var tb = Ub(40001),
+      wb = Ub(40015);
+    var sb = Ub(19),
+      gb = Ub(1829),
+      Cb = Ub(1874),
+      Vb = Ub(1552),
+      Ob = Ub(1929),
+      cb = Ub(1134),
+      Jb = Ub(1198),
+      nb = Ub(39961);
 
-    function pb() {
-      return xb.e.get().getCurrentLanguageCode()
+    function Sb() {
+      return Jb.f.get().getCurrentLanguageCode()
     }
 
-    function bc(bb) {
-      const cb = () => {
+    function ba(bb) {
+      const ab = () => {
         bb({
-          translate: (bb, cb) => (0, Fb.u)(pb(), bb, cb),
+          translate: (bb, ab) => (0, cb.t)(Sb(), bb, ab),
           keyBindingText: bb => {
-            const cb = (0, Sb.s)(bb, rb.d.get("isTouchScreen"));
-            return null !== cb ? (0, Fb.y)(pb(), cb.translationKey, cb.params) : (0, Sb.n)((0, Sb.o)(bb))
+            const ab = (0, Cb.w)(bb, sb.c.get("isTouchScreen"));
+            return null !== ab ? (0, cb.w)(Sb(), ab.translationKey, ab.params) : (0, Cb.o)((0, Cb.s)(bb))
           },
-          isFriend: vb.e,
-          hiddenNames: ob.b.shown,
-          loadsFontRest: (0, jb.e)(pb())
+          isFriend: Ob.g,
+          hiddenNames: gb.c.shown,
+          loadsFontRest: (0, nb.e)(Sb())
         })
       };
-      let sb = !1;
-      const kb = () => {
-          const bb = pb();
-          (0, Fb.k)(bb).then((() => {
-            sb || bb !== pb() || cb()
+      let Ub = !1;
+      const Ab = () => {
+          const bb = Sb();
+          (0, cb.h)(bb).then((() => {
+            Ub || bb !== Sb() || ab()
           }))
         },
-        Wb = () => Rb.c.getSocialState().friends.map((bb => bb.name.toLowerCase())).sort().join(" ");
-      let ab = Wb();
-      cb(), kb();
-      const Tb = [(0, xb.g)((() => {
-        cb(), kb()
-      })), (0, Ib.l)("customBindingsChanged", cb), (0, Ib.l)("appManagerUpdated|isTouchScreen", cb), (0, vb.d)((() => {
-        const bb = Wb();
-        bb !== ab && (ab = bb, cb())
-      })), ob.b.subscribe(cb)];
+        Mb = () => Vb.d.getSocialState().friends.map((bb => bb.name.toLowerCase())).sort().join(" ");
+      let Tb = Mb();
+      ab(), Ab();
+      const Eb = [(0, Jb.h)((() => {
+        ab(), Ab()
+      })), (0, Bb.n)("customBindingsChanged", ab), (0, Bb.n)("appManagerUpdated|isTouchScreen", ab), (0, Ob.c)((() => {
+        const bb = Mb();
+        bb !== Tb && (Tb = bb, ab())
+      })), gb.c.subscribe(ab)];
       return () => {
-        sb = !0;
-        for (const bb of Tb) bb()
+        Ub = !0;
+        for (const bb of Eb) bb()
       }
     }
-    var cc = sb(635),
-      sc = sb(1008),
-      kc = sb(1902),
-      Wc = sb(334),
-      ac = sb(3500),
-      Tc = sb(35976),
-      Uc = sb(3505),
-      Ic = sb(38335),
-      Hc = sb(4425),
-      fc = sb(40189),
-      Mc = sb(649),
-      Xc = sb(696),
-      nc = sb(701),
-      mc = sb(1895),
-      lc = sb(3535),
-      Qc = sb(3043);
-    let ec = null;
-    var Cc = sb(1208),
-      Nc = sb(1770),
-      Vc = sb(4174),
-      Lc = sb(3220),
-      uc = sb(56),
-      Yc = sb(326),
-      hc = sb(312),
-      Jc = sb(40150),
-      gc = sb(4507);
-    var Bc = sb(40335);
-    class tc {
-      constructor(bb, cb) {
-        this.showView = bb, this.holdForAd = cb
+    var aa = Ub(595),
+      Ua = Ub(950),
+      Aa = Ub(1846),
+      Ma = Ub(307),
+      Ta = Ub(3376),
+      Ea = Ub(35776),
+      Ya = Ub(3382),
+      Ba = Ub(38042),
+      ea = Ub(4376),
+      va = Ub(39882),
+      La = Ub(603),
+      Pa = Ub(653),
+      Xa = Ub(660),
+      ja = Ub(1844),
+      Ra = Ub(3408),
+      ka = Ub(2981);
+    let ya = null;
+    var Za = Ub(1142),
+      Da = Ub(1710),
+      za = Ub(4101),
+      xa = Ub(3129),
+      ia = Ub(43),
+      fa = Ub(299),
+      ma = Ub(292),
+      pa = Ub(39834),
+      Na = Ub(4477);
+    var Wa = Ub(40020);
+    class Ha {
+      constructor(bb, ab) {
+        this.showView = bb, this.holdForAd = ab
       }
       pointerUnlockRequestsChanged() {
-        (0, Jc.G)()
+        (0, pa.B)()
       }
       pointerLockDebugEntries() {
         return [{
           label: "Locked to the canvas",
-          value: String((0, Jc.u)())
+          value: String((0, pa.w)())
         }]
       }
       setGameViewShown(bb) {
         this.showView(bb)
       }
       setGameView(bb) {
-        (0, Bc.i)(bb)
+        (0, Wa.n)(bb)
       }
-      videoAdHold(bb, cb) {
-        this.holdForAd(bb, cb)
+      videoAdHold(bb, ab) {
+        this.holdForAd(bb, ab)
       }
     }
-    class yc {
+    class Ia {
       leave(bb) {
         ! function(bb) {
-          if (null !== (0, Xb.d)().websocketUrl) try {
-            (0, Lb.N)().leaveGame(bb)
+          if (null !== (0, Pb.e)().websocketUrl) try {
+            (0, xb.K)().leaveGame(bb)
           } finally {
-            (0, Xb.o)({
+            (0, Pb.r)({
               websocketUrl: null
             })
           }
@@ -2674,114 +2674,114 @@ export const modules = {
         return !1
       }
     }
-    class Pc {
+    class da {
       watchFrameStarts(bb) {
-        return (0, Lb.v)(bb)
+        return (0, xb.r)(bb)
       }
       watchFrames(bb) {
-        return (0, Lb.u)(bb)
+        return (0, xb.o)(bb)
       }
       watchTicks(bb) {
-        return (0, Lb.C)(bb)
+        return (0, xb.x)(bb)
       }
     }
-    var Dc = sb(1291),
-      Ec = sb(40342);
+    var Fa = Ub(1227),
+      ha = Ub(40024);
 
-    function ic(bb) {
+    function Ga(bb) {
       return bb >= 0 ? Math.min(1, bb) : 0
     }
 
-    function Oc(bb, cb) {
+    function Qa(bb, ab) {
       const {
-        fade: sb
+        fade: Ub
       } = bb;
-      return null === sb || cb - sb.at >= sb.ms ? bb.volume : sb.from + (bb.volume - sb.from) * Math.max(0, (cb - sb.at) / sb.ms)
+      return null === Ub || ab - Ub.at >= Ub.ms ? bb.volume : Ub.from + (bb.volume - Ub.from) * Math.max(0, (ab - Ub.at) / Ub.ms)
     }
 
-    function Gc(bb) {
-      const cb = Object.entries(bb),
-        sb = new Uint32Array(cb.length);
-      let kb = 0;
-      for (const [Tb, [, Ub]] of cb.entries()) sb[Tb] = Ub.length, kb += Ub.length;
-      const Wb = new Float64Array(3 * kb);
-      let ab = 0;
-      for (const [, Tb] of cb)
-        for (const bb of Tb) Wb.set(bb, ab), ab += 3;
+    function qa(bb) {
+      const ab = Object.entries(bb),
+        Ub = new Uint32Array(ab.length);
+      let Ab = 0;
+      for (const [Eb, [, Yb]] of ab.entries()) Ub[Eb] = Yb.length, Ab += Yb.length;
+      const Mb = new Float64Array(3 * Ab);
+      let Tb = 0;
+      for (const [, Eb] of ab)
+        for (const bb of Eb) Mb.set(bb, Tb), Tb += 3;
       return {
-        blocks: cb.map((bb => {
-          let [cb] = bb;
-          return cb
+        blocks: ab.map((bb => {
+          let [ab] = bb;
+          return ab
         })).join("\0"),
-        counts: sb,
-        values: Wb
+        counts: Ub,
+        values: Mb
       }
     }
-    class Kc {
-      constructor(bb, cb) {
-        this.core = bb, this.warn = cb, this.latest = 0
+    class ua {
+      constructor(bb, ab) {
+        this.core = bb, this.warn = ab, this.latest = 0
       }
       async feed() {
-        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Zc;
-        const cb = ++this.latest;
-        let sb;
+        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : ra;
+        const ab = ++this.latest;
+        let Ub;
         try {
-          sb = await bb()
-        } catch (kb) {
-          return void(this.core.isStopped || cb !== this.latest || this.warn("the block colours didn't load, so block particles draw grey", kb))
+          Ub = await bb()
+        } catch (Ab) {
+          return void(this.core.isStopped || ab !== this.latest || this.warn("the block colours didn't load, so block particles draw grey", Ab))
         }
-        cb === this.latest && (this.core.setBlockColours(sb) || this.core.isStopped || this.warn("the core refused the block colours: block particles draw grey"))
+        ab === this.latest && (this.core.setBlockColours(Ub) || this.core.isStopped || this.warn("the core refused the block colours: block particles draw grey"))
       }
     }
-    async function Zc() {
-      return Gc((await sb.e(201).then((() => sb(33944)))).averageColors)
+    async function ra() {
+      return qa((await Ub.e(201).then((() => Ub(33702)))).averageColors)
     }
-    var zc = sb(4512),
-      qc = sb(4517),
-      dc = sb(40070),
-      Ac = sb(35941),
-      wc = sb(40240),
-      rc = sb(624),
-      oc = sb(36614),
-      Sc = sb(620),
-      Rc = sb(344),
-      vc = sb(40221);
-    const Fc = [3e4, 12e4, 3e5];
-    class xc extends Error {}
-    const jc = {
-      mobTypes: rc.l,
-      vehicleTypes: oc.e,
-      mobAiStates: rc.i,
-      playerPoses: Sc.s
+    var Ka = Ub(4479),
+      oa = Ub(4485),
+      la = Ub(39764),
+      ta = Ub(35739),
+      wa = Ub(39942),
+      sa = Ub(583),
+      ga = Ub(36364),
+      Ca = Ub(580),
+      Va = Ub(325),
+      Oa = Ub(39916);
+    const ca = [3e4, 12e4, 3e5];
+    class Ja extends Error {}
+    const na = {
+      mobTypes: sa.n,
+      vehicleTypes: ga.c,
+      mobAiStates: sa.l,
+      playerPoses: Ca.t
     };
-    var pc = sb(40207),
-      bs = sb(40350),
-      cs = sb(40359),
-      ss = sb(40363),
-      ks = sb(3243),
-      Ws = sb(38611),
-      as = sb(4536),
-      Ts = sb(2305);
-    const Us = Ts.z.KeysDisabled | Ts.z.LookFrozen | Ts.z.ClicksSuppressed,
-      Is = ks.d;
-    var Hs = (0, ss.c)("resumingConn");
-    class fs {
+    var Sa = Ub(39902),
+      bU = Ub(40032),
+      aU = Ub(40039),
+      UU = Ub(40044),
+      AU = Ub(3144),
+      MU = Ub(38334),
+      TU = Ub(4501),
+      EU = Ub(2254);
+    const YU = EU.v.KeysDisabled | EU.v.LookFrozen | EU.v.ClicksSuppressed,
+      BU = AU.d;
+    var eU = (0, UU.e)("resumingConn");
+    class vU {
       constructor(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
-        this.shell = bb, this.now = cb, this.session = void 0, this.attempt = null, this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, Object.defineProperty(this, Hs, {
+        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
+        this.shell = bb, this.now = ab, this.session = void 0, this.attempt = null, this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, Object.defineProperty(this, eU, {
           writable: !0,
           value: 0
-        }), this.drops = 0, this.session = new Ws.d({
+        }), this.drops = 0, this.session = new MU.d({
           reconnect: bb => this.reconnect(bb),
           isLive: () => bb.isLive(),
-          onReconnected: cb => {
-            this.landed = cb, bb.onReconnected(cb), this.landIfResumed()
+          onReconnected: ab => {
+            this.landed = ab, bb.onReconnected(ab), this.landIfResumed()
           },
-          onGaveUp: (cb, sb) => {
-            this.abortAttempt(), bb.onGaveUp(cb, sb)
+          onGaveUp: (ab, Ub) => {
+            this.abortAttempt(), bb.onGaveUp(ab, Ub)
           },
-          freeze: cb => {
-            bb.fL(cb), (0, as.d)(Us, cb ? Us : 0, "reconnectFreeze")
+          freeze: ab => {
+            bb.Wm(ab), (0, TU.l)(YU, ab ? YU : 0, "reconnectFreeze")
           },
           releaseSeat: bb => {
             this.releaseSeat(bb)
@@ -2792,119 +2792,119 @@ export const modules = {
         return this.session.isResuming()
       }
       get resumingConn() {
-        return (0, cs.e)(this, Hs)[Hs]
+        return (0, aU.c)(this, eU)[eU]
       }
       canHoldSeat() {
         return this.session.canHoldSeat()
       }
       onInitialInfo(bb) {
         let {
-          conn: cb,
-          graceMs: sb,
-          sessionBased: kb,
-          replayOffer: Wb
+          conn: ab,
+          graceMs: Ub,
+          sessionBased: Ab,
+          replayOffer: Mb
         } = bb;
-        this.session.onInitialInfo(sb, kb), this.isResuming() && (this.initialInfoConn = cb, this.initialInfoOffer = Wb, this.landIfResumed())
+        this.session.onInitialInfo(Ub, Ab), this.isResuming() && (this.initialInfoConn = ab, this.initialInfoOffer = Mb, this.landIfResumed())
       }
       onResumeComplete(bb) {
-        0 !== bb && (bb === (0, cs.e)(this, Hs)[Hs] ? ((0, cs.e)(this, Hs)[Hs] = 0, this.session.onResumed()) : this.isResuming() && (this.completedEarlyConn = bb))
+        0 !== bb && (bb === (0, aU.c)(this, eU)[eU] ? ((0, aU.c)(this, eU)[eU] = 0, this.session.onResumed()) : this.isResuming() && (this.completedEarlyConn = bb))
       }
       onDropped(bb) {
-        this.drops++, this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, (0, cs.e)(this, Hs)[Hs] = 0, this.session.onConnectionLost(bb)
+        this.drops++, this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, (0, aU.c)(this, eU)[eU] = 0, this.session.onConnectionLost(bb)
       }
       leave() {
         this.session.leave(), this.dispose()
       }
       dispose() {
-        this.abortAttempt(), this.landed = null, this.completedEarlyConn = 0, (0, cs.e)(this, Hs)[Hs] = 0, this.session.end()
+        this.abortAttempt(), this.landed = null, this.completedEarlyConn = 0, (0, aU.c)(this, eU)[eU] = 0, this.session.end()
       }
       reconnect(bb) {
-        const cb = this.attempt;
-        if (null !== cb && this.awaitingJoinRoom(cb)) return cb.result;
+        const ab = this.attempt;
+        if (null !== ab && this.awaitingJoinRoom(ab)) return ab.result;
         this.abortAttempt();
-        const sb = new AbortController,
-          kb = this.drops,
-          Wb = {
+        const Ub = new AbortController,
+          Ab = this.drops,
+          Mb = {
             attachedAt: null
           },
-          ab = this.shell.reconnect(bb, sb.signal, (() => {
-            Wb.attachedAt = this.now()
+          Tb = this.shell.reconnect(bb, Ub.signal, (() => {
+            Mb.attachedAt = this.now()
           })).then((bb => {
-            if (this.clearAttempt(Tb), this.drops !== kb) throw new Error("the resumed room dropped before its attempt settled");
+            if (this.clearAttempt(Eb), this.drops !== Ab) throw new Error("the resumed room dropped before its attempt settled");
             return bb
           }), (bb => {
-            throw this.clearAttempt(Tb), bb
+            throw this.clearAttempt(Eb), bb
           })),
-          Tb = {
-            abort: sb,
-            socket: Wb,
-            result: ab
+          Eb = {
+            abort: Ub,
+            socket: Mb,
+            result: Tb
           };
-        return this.attempt = Tb, ab
+        return this.attempt = Eb, Tb
       }
       clearAttempt(bb) {
         this.attempt === bb && (this.attempt = null)
       }
       abortAttempt() {
         let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : new DOMException("the reconnect attempt was given up", "AbortError");
-        const cb = this.attempt;
-        this.attempt = null, null === cb || void 0 === cb || cb.abort.abort(bb)
+        const ab = this.attempt;
+        this.attempt = null, null === ab || void 0 === ab || ab.abort.abort(bb)
       }
       awaitingJoinRoom(bb) {
-        const cb = bb.socket.attachedAt;
-        return null !== cb && this.now() - cb < Is
+        const ab = bb.socket.attachedAt;
+        return null !== ab && this.now() - ab < BU
       }
       releaseSeat(bb) {
-        const cb = this.attempt,
-          sb = null !== cb && this.awaitingJoinRoom(cb);
-        this.abortAttempt(new Eb.r), sb || this.shell.releaseSeat(bb)
+        const ab = this.attempt,
+          Ub = null !== ab && this.awaitingJoinRoom(ab);
+        this.abortAttempt(new hb.t), Ub || this.shell.releaseSeat(bb)
       }
       landIfResumed() {
         const bb = this.landed;
         if (null !== bb && bb.conn === this.initialInfoConn) {
-          const cb = this.initialInfoOffer && this.completedEarlyConn !== bb.conn;
-          if (this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, this.abortAttempt(), !cb) return void this.session.onResumed();
-          (0, cs.e)(this, Hs)[Hs] = bb.conn, this.session.onResuming()
+          const ab = this.initialInfoOffer && this.completedEarlyConn !== bb.conn;
+          if (this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, this.abortAttempt(), !ab) return void this.session.onResumed();
+          (0, aU.c)(this, eU)[eU] = bb.conn, this.session.onResuming()
         }
       }
     }
-    var Ms = sb(38620),
-      Xs = sb(40368),
-      ns = sb(36134),
-      ms = sb(36127),
-      ls = sb(4739),
-      Qs = sb(4161),
-      es = sb(3029),
-      Cs = sb(40160),
-      Ns = sb(656),
-      Vs = sb(4239),
-      Ls = sb(37),
-      us = sb(40373),
-      Ys = sb(40402),
-      hs = sb(4189),
-      gs = sb(2310),
-      Bs = sb(1626),
-      ts = sb(1651),
-      ys = sb(1287),
-      Ps = sb(137),
-      Ds = sb(2654),
-      Es = sb(2319),
-      is = sb(4530);
-    const Os = new Set([zc.qb.KeyDown, zc.qb.MouseMove, zc.qb.MouseDown, zc.qb.Wheel, zc.qb.TouchStart, zc.qb.TouchMove]);
+    var LU = Ub(38342),
+      PU = Ub(40046),
+      XU = Ub(35913),
+      jU = Ub(35911),
+      RU = Ub(4709),
+      kU = Ub(4088),
+      yU = Ub(2972),
+      ZU = Ub(39848),
+      DU = Ub(610),
+      zU = Ub(4183),
+      xU = Ub(31),
+      iU = Ub(40052),
+      fU = Ub(40084),
+      mU = Ub(4119),
+      pU = Ub(2260),
+      NU = Ub(1548),
+      WU = Ub(1578),
+      HU = Ub(1216),
+      IU = Ub(116),
+      dU = Ub(2586),
+      FU = Ub(2262),
+      hU = Ub(4494);
+    const GU = new Set([Ka.rb.KeyDown, Ka.rb.MouseMove, Ka.rb.MouseDown, Ka.rb.Wheel, Ka.rb.TouchStart, Ka.rb.TouchMove]);
 
-    function Gs(bb) {
-      return (bb.shiftKey ? zc.Fb.Shift : 0) | (bb.ctrlKey ? zc.Fb.Ctrl : 0) | (bb.altKey ? zc.Fb.Alt : 0) | (bb.metaKey ? zc.Fb.Meta : 0) | ("repeat" in bb && bb.repeat ? zc.Fb.Repeat : 0) | (bb.isTrusted ? 0 : zc.Fb.Untrusted)
+    function QU(bb) {
+      return (bb.shiftKey ? Ka.Ab.Shift : 0) | (bb.ctrlKey ? Ka.Ab.Ctrl : 0) | (bb.altKey ? Ka.Ab.Alt : 0) | (bb.metaKey ? Ka.Ab.Meta : 0) | ("repeat" in bb && bb.repeat ? Ka.Ab.Repeat : 0) | (bb.isTrusted ? 0 : Ka.Ab.Untrusted)
     }
 
-    function Ks(bb) {
-      return "touchOnly" !== (0, Ps.c)() && "function" === typeof bb.requestPointerLock
+    function qU(bb) {
+      return "touchOnly" !== (0, IU.b)() && "function" === typeof bb.requestPointerLock
     }
 
-    function Zs(bb) {
-      return 0 === bb.button ? bb.altKey ? is.i["Alt+Left Click"] : is.i.Mouse1 : 1 === bb.button ? is.i.Mouse2 : is.i.Mouse3
+    function uU(bb) {
+      return 0 === bb.button ? bb.altKey ? hU.h["Alt+Left Click"] : hU.h.Mouse1 : 1 === bb.button ? hU.h.Mouse2 : hU.h.Mouse3
     }
-    const zs = new Set(["AltLeft", "AltRight", "ArrowUp", "ArrowDown"]),
-      qs = new Map([
+    const rU = new Set(["AltLeft", "AltRight", "ArrowUp", "ArrowDown"]),
+      KU = new Map([
         ["AltLeft", "altKey"],
         ["AltRight", "altKey"],
         ["ControlLeft", "ctrlKey"],
@@ -2914,290 +2914,290 @@ export const modules = {
         ["MetaLeft", "metaKey"],
         ["MetaRight", "metaKey"]
       ]),
-      ds = 32768,
-      As = 1;
+      oU = 32768,
+      lU = 1;
 
-    function ws(bb) {
+    function tU(bb) {
       return Math.min(Math.max(Math.round(bb), 0), 65535)
     }
 
-    function rs(bb, cb, sb) {
-      const kb = [],
-        Wb = (bb, cb, sb, Wb) => {
-          const ab = bb => {
-            (0, ts.p)(bb) || sb(bb)
+    function wU(bb, ab, Ub) {
+      const Ab = [],
+        Mb = (bb, ab, Ub, Mb) => {
+          const Tb = bb => {
+            (0, WU.l)(bb) || Ub(bb)
           };
-          bb.addEventListener(cb, ab, Wb), kb.push((() => {
-            bb.removeEventListener(cb, ab, Wb)
+          bb.addEventListener(ab, Tb, Mb), Ab.push((() => {
+            bb.removeEventListener(ab, Tb, Mb)
           }))
         },
-        ab = {
+        Tb = {
           capture: !0,
           passive: !0
         },
-        Tb = (bb, sb, kb, Wb, ab) => (!(0, Es.e)() || !Os.has(bb)) && (cb(bb, sb, kb, Wb, ab), !0),
-        Ub = () => document.pointerLockElement === bb,
-        Ib = (0, Ds.b)(),
-        Hb = bb => {
-          bb.ctrlKey && sb.ctrlCombosAreGames() && !(0, as.c)(bb.target) && bb.preventDefault()
+        Eb = (bb, Ub, Ab, Mb, Tb) => (!(0, FU.d)() || !GU.has(bb)) && (ab(bb, Ub, Ab, Mb, Tb), !0),
+        Yb = () => document.pointerLockElement === bb,
+        Bb = (0, dU.d)(),
+        eb = bb => {
+          bb.ctrlKey && Ub.ctrlCombosAreGames() && !(0, TU.h)(bb.target) && bb.preventDefault()
         },
-        fb = (bb, kb, Wb) => {
-          sb.inspect(bb, kb, !1), cb(zc.qb.KeyUp, kb, 0, 0, (0, gs.m)(Wb, bb.timeStamp)), sb.keyReleased(kb)
+        vb = (bb, Ab, Mb) => {
+          Ub.inspect(bb, Ab, !1), ab(Ka.rb.KeyUp, Ab, 0, 0, (0, pU.l)(Mb, bb.timeStamp)), Ub.keyReleased(Ab)
         },
-        Mb = new Map,
-        Xb = (bb, cb, sb) => bb[sb] || ("AltRight" === cb || "ControlLeft" === cb) && bb.getModifierState("AltGraph"),
-        nb = new Map,
-        mb = () => {
-          Mb.clear(), nb.clear()
+        Lb = new Map,
+        Pb = (bb, ab, Ub) => bb[Ub] || ("AltRight" === ab || "ControlLeft" === ab) && bb.getModifierState("AltGraph"),
+        Xb = new Map,
+        jb = () => {
+          Lb.clear(), Xb.clear()
         },
-        lb = bb => {
+        Rb = bb => {
           if (document.hasFocus())
-            for (const [cb, sb] of nb) nb.delete(cb), Xb(bb, cb, sb) || (Mb.delete(cb), fb(bb, is.i[cb], Gs(bb)))
+            for (const [ab, Ub] of Xb) Xb.delete(ab), Pb(bb, ab, Ub) || (Lb.delete(ab), vb(bb, hU.h[ab], QU(bb)))
         };
       bb.tabIndex = -1;
-      let Qb = 0,
-        eb = 0;
-      const Cb = () => {
-        const cb = bb.getBoundingClientRect();
-        Qb = cb.left, eb = cb.top
+      let kb = 0,
+        yb = 0;
+      const Zb = () => {
+        const ab = bb.getBoundingClientRect();
+        kb = ab.left, yb = ab.top
       };
-      let Nb = "mouse";
-      const Vb = () => !Ub() && ("mouse" === Nb || !sb.touchUiShown()),
-        Lb = (bb, cb, sb) => {
-          const kb = (ws(bb.clientX - Qb) | ws(bb.clientY - eb) << 16) >>> 0;
-          Tb(zc.qb.MouseMove, zc.Ib.Point, cb, sb, kb)
+      let Db = "mouse";
+      const zb = () => !Yb() && ("mouse" === Db || !Ub.touchUiShown()),
+        xb = (bb, ab, Ub) => {
+          const Ab = (tU(bb.clientX - kb) | tU(bb.clientY - yb) << 16) >>> 0;
+          Eb(Ka.rb.MouseMove, Ka.Eb.Point, ab, Ub, Ab)
         };
-      let ub = !1,
-        Yb = 0;
-      const hb = () => {
-        ub && (ub = !1, sb.viewShown() && (0, Jc.V)())
+      let ib = !1,
+        fb = 0;
+      const mb = () => {
+        ib && (ib = !1, Ub.viewShown() && (0, pa.O)())
       };
-      kb.push((() => {
-        clearTimeout(Yb)
-      })), Wb(window, "keydown", (bb => {
-        "Escape" === bb.key ? (0, Jc.K)(!0) : bb.repeat || (0, as.c)(bb.target) || (ub = !0, clearTimeout(Yb), Yb = window.setTimeout(hb, 0))
-      }), ab), Wb(window, "keydown", (bb => {
-        hb(), Hb(bb), lb(bb);
-        const cb = is.i[bb.code];
-        if ("number" !== typeof cb || !sb.viewShown()) return;
-        const kb = (0, as.c)(bb.target);
-        kb || !sb.prevents(cb) && !zs.has(bb.code) || bb.preventDefault(), bb.repeat || sb.inspect(bb, cb, !0), Tb(zc.qb.KeyDown, cb, 0, 0, (0, gs.m)(Gs(bb), bb.timeStamp)) && Mb.set(bb.code, cb), kb || sb.keyPressed(cb)
+      Ab.push((() => {
+        clearTimeout(fb)
+      })), Mb(window, "keydown", (bb => {
+        "Escape" === bb.key ? (0, pa.G)(!0) : bb.repeat || (0, TU.h)(bb.target) || (ib = !0, clearTimeout(fb), fb = window.setTimeout(mb, 0))
+      }), Tb), Mb(window, "keydown", (bb => {
+        mb(), eb(bb), Rb(bb);
+        const ab = hU.h[bb.code];
+        if ("number" !== typeof ab || !Ub.viewShown()) return;
+        const Ab = (0, TU.h)(bb.target);
+        Ab || !Ub.prevents(ab) && !rU.has(bb.code) || bb.preventDefault(), bb.repeat || Ub.inspect(bb, ab, !0), Eb(Ka.rb.KeyDown, ab, 0, 0, (0, pU.l)(QU(bb), bb.timeStamp)) && Lb.set(bb.code, ab), Ab || Ub.keyPressed(ab)
       }), {
         capture: !1,
         passive: !1
-      }), Wb(window, "keyup", (bb => {
-        "Escape" === bb.key && (0, Jc.K)(!1), Hb(bb), Mb.delete(bb.code), nb.delete(bb.code), lb(bb);
-        const cb = is.i[bb.code];
-        "number" === typeof cb && fb(bb, cb, Gs(bb))
+      }), Mb(window, "keyup", (bb => {
+        "Escape" === bb.key && (0, pa.G)(!1), eb(bb), Lb.delete(bb.code), Xb.delete(bb.code), Rb(bb);
+        const ab = hU.h[bb.code];
+        "number" === typeof ab && vb(bb, ab, QU(bb))
       }), {
         capture: !0,
         passive: !1
-      }), Wb(window, "mousemove", (bb => {
-        "mouse" === Nb && Vb() ? Lb(bb, bb.movementX, bb.movementY) : Ub() ? Tb(zc.qb.MouseMove, zc.Ib.Stamped, bb.movementX, bb.movementY, (0, gs.m)(0, bb.timeStamp)) : Tb(zc.qb.MouseMove, 0, bb.movementX, bb.movementY, 0)
-      }), ab);
-      let Jb = 0,
-        gb = 0;
-      const Bb = [];
-      let tb = !1,
-        yb = !1;
-      Wb(bb, "mousedown", (bb => {
-        if ((0, Es.e)()) return;
-        lb(bb);
-        const kb = 1 << bb.button;
-        if (!Ub() && (0, Jc.R)() && (0, Jc.h)() && (yb = !0, !tb)) return void(Jb |= kb);
-        Jb &= ~kb;
-        const Wb = bb.button <= 2 ? Zs(bb) : void 0;
-        void 0 !== Wb && (Bb[bb.button] = Wb, sb.inspect(bb, Wb, !0)), Vb() && Lb(bb, 0, 0), cb(zc.qb.MouseDown, bb.button, bb.clientX, bb.clientY, (0, gs.m)(Gs(bb), bb.timeStamp)), gb |= kb, void 0 !== Wb && sb.keyPressed(Wb)
-      }), ab), Wb(window, "mouseup", (bb => {
-        var kb;
-        lb(bb);
-        const Wb = 1 << bb.button,
-          ab = 0 !== (Jb & ~gb & Wb);
-        if (Jb &= ~Wb, gb &= ~Wb, ab) return;
-        const Tb = bb.button <= 2 ? null !== (kb = Bb[bb.button]) && void 0 !== kb ? kb : Zs(bb) : void 0;
-        void 0 !== Tb && sb.inspect(bb, Tb, !1), cb(zc.qb.MouseUp, bb.button, bb.clientX, bb.clientY, (0, gs.m)(Gs(bb), bb.timeStamp)), void 0 !== Tb && sb.keyReleased(Tb)
-      }), ab), Wb(bb, "contextmenu", (bb => {
+      }), Mb(window, "mousemove", (bb => {
+        "mouse" === Db && zb() ? xb(bb, bb.movementX, bb.movementY) : Yb() ? Eb(Ka.rb.MouseMove, Ka.Eb.Stamped, bb.movementX, bb.movementY, (0, pU.l)(0, bb.timeStamp)) : Eb(Ka.rb.MouseMove, 0, bb.movementX, bb.movementY, 0)
+      }), Tb);
+      let pb = 0,
+        Nb = 0;
+      const Wb = [];
+      let Hb = !1,
+        Ib = !1;
+      Mb(bb, "mousedown", (bb => {
+        if ((0, FU.d)()) return;
+        Rb(bb);
+        const Ab = 1 << bb.button;
+        if (!Yb() && (0, pa.N)() && (0, pa.g)() && (Ib = !0, !Hb)) return void(pb |= Ab);
+        pb &= ~Ab;
+        const Mb = bb.button <= 2 ? uU(bb) : void 0;
+        void 0 !== Mb && (Wb[bb.button] = Mb, Ub.inspect(bb, Mb, !0)), zb() && xb(bb, 0, 0), ab(Ka.rb.MouseDown, bb.button, bb.clientX, bb.clientY, (0, pU.l)(QU(bb), bb.timeStamp)), Nb |= Ab, void 0 !== Mb && Ub.keyPressed(Mb)
+      }), Tb), Mb(window, "mouseup", (bb => {
+        var Ab;
+        Rb(bb);
+        const Mb = 1 << bb.button,
+          Tb = 0 !== (pb & ~Nb & Mb);
+        if (pb &= ~Mb, Nb &= ~Mb, Tb) return;
+        const Eb = bb.button <= 2 ? null !== (Ab = Wb[bb.button]) && void 0 !== Ab ? Ab : uU(bb) : void 0;
+        void 0 !== Eb && Ub.inspect(bb, Eb, !1), ab(Ka.rb.MouseUp, bb.button, bb.clientX, bb.clientY, (0, pU.l)(QU(bb), bb.timeStamp)), void 0 !== Eb && Ub.keyReleased(Eb)
+      }), Tb), Mb(bb, "contextmenu", (bb => {
         bb.preventDefault()
       }), {
         passive: !1
       });
-      const Pb = bb => {
-        (Ub() || (0, Jc.q)() && (0, ys.r)()) && (bb.ctrlKey || Ib && !document.fullscreenElement) && bb.preventDefault()
+      const db = bb => {
+        (Yb() || (0, pa.s)() && (0, HU.i)()) && (bb.ctrlKey || Bb && !document.fullscreenElement) && bb.preventDefault()
       };
-      Wb(bb, "wheel", (bb => {
-        Pb(bb), lb(bb), Tb(zc.qb.Wheel, bb.deltaMode, bb.deltaX, bb.deltaY, 0)
+      Mb(bb, "wheel", (bb => {
+        db(bb), Rb(bb), Eb(Ka.rb.Wheel, bb.deltaMode, bb.deltaX, bb.deltaY, 0)
       }), {
         capture: !0,
         passive: !1
       });
-      const Db = {
+      const Fb = {
           capture: !0,
           passive: !1
         },
-        Eb = bb => {
-          bb ? window.addEventListener("wheel", Pb, Db) : window.removeEventListener("wheel", Pb, Db)
+        hb = bb => {
+          bb ? window.addEventListener("wheel", db, Fb) : window.removeEventListener("wheel", db, Fb)
         };
-      Eb((0, Jc.q)()), kb.push((0, Jc.z)(Eb)), kb.push((() => {
-        Eb(!1)
+      hb((0, pa.s)()), Ab.push((0, pa.z)(hb)), Ab.push((() => {
+        hb(!1)
       }));
-      const ib = new Map,
-        Ob = new Set,
-        Gb = bb => {
-          const cb = "stylus" === bb.touchType;
-          for (const sb of ib.values())
-            if (!sb.touched && (cb || Math.abs(bb.clientX - sb.x) <= As && Math.abs(bb.clientY - sb.y) <= As)) return sb.touched = !0, !0;
+      const Gb = new Map,
+        Qb = new Set,
+        qb = bb => {
+          const ab = "stylus" === bb.touchType;
+          for (const Ub of Gb.values())
+            if (!Ub.touched && (ab || Math.abs(bb.clientX - Ub.x) <= lU && Math.abs(bb.clientY - Ub.y) <= lU)) return Ub.touched = !0, !0;
           return !1
         },
-        Kb = bb => 32767 & bb,
-        Zb = new Set,
-        zb = bb => sb => {
-          const kb = (0, gs.m)(Gs(sb), sb.timeStamp);
-          bb !== zc.qb.TouchStart && bb !== zc.qb.TouchMove || ((bb, sb) => {
-            const kb = bb.touches;
-            if (kb)
-              for (const Wb of Zb) {
+        ub = bb => 32767 & bb,
+        rb = new Set,
+        Kb = bb => Ub => {
+          const Ab = (0, pU.l)(QU(Ub), Ub.timeStamp);
+          bb !== Ka.rb.TouchStart && bb !== Ka.rb.TouchMove || ((bb, Ub) => {
+            const Ab = bb.touches;
+            if (Ab)
+              for (const Mb of rb) {
                 let bb = !1;
-                for (let cb = 0; cb < kb.length && !bb; cb++) bb = Kb(kb[cb].identifier) === Wb;
-                bb || (Zb.delete(Wb), cb(zc.qb.TouchCancel, Wb, 0, 0, sb))
+                for (let ab = 0; ab < Ab.length && !bb; ab++) bb = ub(Ab[ab].identifier) === Mb;
+                bb || (rb.delete(Mb), ab(Ka.rb.TouchCancel, Mb, 0, 0, Ub))
               }
-          })(sb, kb);
-          const Wb = sb.changedTouches;
-          for (let cb = 0; cb < Wb.length; cb++) {
-            const sb = Wb[cb];
-            if (bb === zc.qb.TouchStart && Gb(sb) && Ob.add(sb.identifier), Ob.has(sb.identifier)) {
-              bb !== zc.qb.TouchEnd && bb !== zc.qb.TouchCancel || Ob.delete(sb.identifier);
+          })(Ub, Ab);
+          const Mb = Ub.changedTouches;
+          for (let ab = 0; ab < Mb.length; ab++) {
+            const Ub = Mb[ab];
+            if (bb === Ka.rb.TouchStart && qb(Ub) && Qb.add(Ub.identifier), Qb.has(Ub.identifier)) {
+              bb !== Ka.rb.TouchEnd && bb !== Ka.rb.TouchCancel || Qb.delete(Ub.identifier);
               continue
             }
-            const ab = Kb(sb.identifier),
-              Ub = Tb(bb, ab, sb.clientX - Qb, sb.clientY - eb, kb);
-            bb === zc.qb.TouchStart ? Ub && Zb.add(ab) : bb !== zc.qb.TouchMove && Zb.delete(ab)
+            const Tb = ub(Ub.identifier),
+              Yb = Eb(bb, Tb, Ub.clientX - kb, Ub.clientY - yb, Ab);
+            bb === Ka.rb.TouchStart ? Yb && rb.add(Tb) : bb !== Ka.rb.TouchMove && rb.delete(Tb)
           }
         },
-        qb = zb(zc.qb.TouchStart);
-      Wb(bb, "touchstart", (bb => {
-        bb.preventDefault(), (0, Es.e)() || (sb.touchStarting(), qb(bb))
+        ob = Kb(Ka.rb.TouchStart);
+      Mb(bb, "touchstart", (bb => {
+        bb.preventDefault(), (0, FU.d)() || (Ub.touchStarting(), ob(bb))
       }), {
         passive: !1
-      }), Wb(bb, "touchmove", zb(zc.qb.TouchMove), ab), Wb(bb, "touchend", zb(zc.qb.TouchEnd), ab), Wb(bb, "touchcancel", zb(zc.qb.TouchCancel), ab);
-      const db = bb => ds | 32767 & bb,
-        Ab = (bb, cb) => {
-          Tb(bb, db(cb.pointerId), cb.clientX - Qb, cb.clientY - eb, (0, gs.m)(Gs(cb), cb.timeStamp))
+      }), Mb(bb, "touchmove", Kb(Ka.rb.TouchMove), Tb), Mb(bb, "touchend", Kb(Ka.rb.TouchEnd), Tb), Mb(bb, "touchcancel", Kb(Ka.rb.TouchCancel), Tb);
+      const lb = bb => oU | 32767 & bb,
+        tb = (bb, ab) => {
+          Eb(bb, lb(ab.pointerId), ab.clientX - kb, ab.clientY - yb, (0, pU.l)(QU(ab), ab.timeStamp))
         };
-      Wb(window, "pointerdown", (cb => {
-        Nb = cb.pointerType, "mouse" === cb.pointerType && cb.target !== bb && sb.viewShown() && (0, Jc.Y)()
-      }), ab), Wb(bb, "pointerdown", (bb => {
-        "pen" === bb.pointerType && 0 === bb.button && (0, Jc.q)() && (0, ys.r)() && (bb.preventDefault(), (0, Es.e)() || (ib.set(bb.pointerId, {
+      Mb(window, "pointerdown", (ab => {
+        Db = ab.pointerType, "mouse" === ab.pointerType && ab.target !== bb && Ub.viewShown() && (0, pa.P)()
+      }), Tb), Mb(bb, "pointerdown", (bb => {
+        "pen" === bb.pointerType && 0 === bb.button && (0, pa.s)() && (0, HU.i)() && (bb.preventDefault(), (0, FU.d)() || (Gb.set(bb.pointerId, {
           x: bb.clientX,
           y: bb.clientY,
           touched: !1
-        }), sb.touchStarting(), Ab(zc.qb.TouchStart, bb)))
+        }), Ub.touchStarting(), tb(Ka.rb.TouchStart, bb)))
       }), {
         passive: !1
-      }), Wb(window, "pointermove", (bb => {
-        Nb = bb.pointerType, ib.has(bb.pointerId) && Ab(zc.qb.TouchMove, bb), "mouse" !== bb.pointerType && Vb() && Lb(bb, 0, 0)
-      }), ab);
-      const wb = bb => cb => {
-        ib.delete(cb.pointerId) && Ab(bb, cb)
+      }), Mb(window, "pointermove", (bb => {
+        Db = bb.pointerType, Gb.has(bb.pointerId) && tb(Ka.rb.TouchMove, bb), "mouse" !== bb.pointerType && zb() && xb(bb, 0, 0)
+      }), Tb);
+      const wb = bb => ab => {
+        Gb.delete(ab.pointerId) && tb(bb, ab)
       };
-      Wb(window, "pointerup", wb(zc.qb.TouchEnd), ab), Wb(window, "pointercancel", wb(zc.qb.TouchCancel), ab);
-      let rb = 0;
-      const ob = () => {
-          rb = 0, Cb(), sb.resized()
+      Mb(window, "pointerup", wb(Ka.rb.TouchEnd), Tb), Mb(window, "pointercancel", wb(Ka.rb.TouchCancel), Tb);
+      let sb = 0;
+      const gb = () => {
+          sb = 0, Zb(), Ub.resized()
         },
-        Sb = () => {
-          const bb = sb.sizeCanvas();
-          null !== bb && cb(zc.qb.Resize, 0, bb.cssWidth, bb.cssHeight, (0, gs.j)(bb.renderScale)), Cb(), sb.resized(), 0 === rb && (rb = requestAnimationFrame(ob))
+        Cb = () => {
+          const bb = Ub.sizeCanvas();
+          null !== bb && ab(Ka.rb.Resize, 0, bb.cssWidth, bb.cssHeight, (0, pU.f)(bb.renderScale)), Zb(), Ub.resized(), 0 === sb && (sb = requestAnimationFrame(gb))
         };
-      Wb(window, "resize", Sb, ab), kb.push(sb.watchRenderScale(Sb)), kb.push((() => {
-        cancelAnimationFrame(rb)
-      })), Wb(window, "focus", (bb => {
-        bb.isTrusted && (cb(zc.qb.Focus, 0, 0, 0, 0), sb.viewShown() && (0, Jc.Y)())
+      Mb(window, "resize", Cb, Tb), Ab.push(Ub.watchRenderScale(Cb)), Ab.push((() => {
+        cancelAnimationFrame(sb)
+      })), Mb(window, "focus", (bb => {
+        bb.isTrusted && (ab(Ka.rb.Focus, 0, 0, 0, 0), Ub.viewShown() && (0, pa.P)())
       }), {
         passive: !0
       });
-      const Rb = () => {
-          (0, Jc.K)(!1), Jb = 0
+      const Vb = () => {
+          (0, pa.G)(!1), pb = 0
         },
-        vb = () => {
-          Zb.clear(), ib.clear(), Ob.clear()
+        Ob = () => {
+          rb.clear(), Gb.clear(), Qb.clear()
         };
-      let Fb = 0,
-        xb = 0;
-      Wb(window, "blur", (kb => {
-        Rb(), (0, Jc.m)();
-        for (const bb of Mb.keys()) {
-          const cb = qs.get(bb);
-          void 0 !== cb && nb.set(bb, cb)
+      let cb = 0,
+        Jb = 0;
+      Mb(window, "blur", (Ab => {
+        Vb(), (0, pa.o)();
+        for (const bb of Lb.keys()) {
+          const ab = KU.get(bb);
+          void 0 !== ab && Xb.set(bb, ab)
         }
-        kb.isTrusted && ((bb => {
-          for (const [sb, kb] of ib) cb(zc.qb.TouchCancel, db(sb), kb.x, kb.y, (0, gs.m)(0, bb));
-          ib.clear()
-        })(kb.timeStamp), cb(zc.qb.Blur, zc.n.KeepTouches, 0, 0, 0)), Ib && kb.isTrusted && (clearTimeout(xb), xb = window.setTimeout((() => {
+        Ab.isTrusted && ((bb => {
+          for (const [Ub, Ab] of Gb) ab(Ka.rb.TouchCancel, lb(Ub), Ab.x, Ab.y, (0, pU.l)(0, bb));
+          Gb.clear()
+        })(Ab.timeStamp), ab(Ka.rb.Blur, Ka.o.KeepTouches, 0, 0, 0)), Bb && Ab.isTrusted && (clearTimeout(Jb), Jb = window.setTimeout((() => {
           if (!document.hasFocus()) {
-            for (const bb of Mb.values()) fb(kb, bb, 0);
-            mb()
+            for (const bb of Lb.values()) vb(Ab, bb, 0);
+            jb()
           }
-        }), 0)), clearTimeout(Fb), Fb = window.setTimeout((() => {
-          document.activeElement instanceof HTMLIFrameElement && (0, ys.r)() && sb.viewShown() && bb.focus({
+        }), 0)), clearTimeout(cb), cb = window.setTimeout((() => {
+          document.activeElement instanceof HTMLIFrameElement && (0, HU.i)() && Ub.viewShown() && bb.focus({
             preventScroll: !0
           })
         }), 0)
       }), {
         passive: !0
-      }), kb.push((() => {
-        clearTimeout(Fb), clearTimeout(xb)
-      })), Wb(window, "mousedown", (cb => {
-        Ib && cb.isTrusted && !document.hasFocus() && (0, ys.r)() && sb.viewShown() && (window.focus(), bb.focus({
+      }), Ab.push((() => {
+        clearTimeout(cb), clearTimeout(Jb)
+      })), Mb(window, "mousedown", (ab => {
+        Bb && ab.isTrusted && !document.hasFocus() && (0, HU.i)() && Ub.viewShown() && (window.focus(), bb.focus({
           preventScroll: !0
         }))
-      }), ab), Wb(document, "visibilitychange", (() => {
-        document.hidden ? (cb(zc.qb.Blur, 0, 0, 0, 0), vb()) : document.hasFocus() && cb(zc.qb.Focus, 0, 0, 0, 0)
+      }), Tb), Mb(document, "visibilitychange", (() => {
+        document.hidden ? (ab(Ka.rb.Blur, 0, 0, 0, 0), Ob()) : document.hasFocus() && ab(Ka.rb.Focus, 0, 0, 0, 0)
       }), {
         passive: !0
-      }), kb.push((0, Es.l)((() => {
-        Rb(), cb(zc.qb.Blur, zc.n.Release, 0, 0, 0), sb.keysReleased(), mb(), gb = 0, vb(), cb(zc.qb.Joystick, 0, 0, 0, 0), document.hasFocus() && cb(zc.qb.Focus, 0, 0, 0, 0)
+      }), Ab.push((0, FU.h)((() => {
+        Vb(), ab(Ka.rb.Blur, Ka.o.Release, 0, 0, 0), Ub.keysReleased(), jb(), Nb = 0, Ob(), ab(Ka.rb.Joystick, 0, 0, 0, 0), document.hasFocus() && ab(Ka.rb.Focus, 0, 0, 0, 0)
       })));
-      const jb = !sb.canLock(),
-        pb = () => jb && !(0, Jc.q)() ? zc.pc.Lockless : zc.pc.Released,
-        bc = () => {
-          Ub() && (tb = !1, yb = !1), cb(zc.qb.PointerLock, Ub() ? zc.pc.Locked : pb(), 0, 0, 0), (0, Jc.N)(Ub())
+      const nb = !Ub.canLock(),
+        Sb = () => nb && !(0, pa.s)() ? Ka.ac.Lockless : Ka.ac.Released,
+        ba = () => {
+          Yb() && (Hb = !1, Ib = !1), ab(Ka.rb.PointerLock, Yb() ? Ka.ac.Locked : Sb(), 0, 0, 0), (0, pa.L)(Yb())
         };
-      return Wb(document, "pointerlockchange", bc, {
+      return Mb(document, "pointerlockchange", ba, {
         passive: !0
-      }), Wb(document, "pointerlockerror", (() => {
-        tb ||= yb, yb = !1, (0, Jc.x)()
+      }), Mb(document, "pointerlockerror", (() => {
+        Hb ||= Ib, Ib = !1, (0, pa.x)()
       }), {
         passive: !0
-      }), jb && kb.push((0, Jc.z)((() => {
-        cb(zc.qb.PointerLock, pb(), 0, 0, 0)
-      }))), Sb(), cb(document.hasFocus() ? zc.qb.Focus : zc.qb.Blur, 0, 0, 0, 0), bc(), () => {
-        for (const bb of kb.splice(0)) bb()
+      }), nb && Ab.push((0, pa.z)((() => {
+        ab(Ka.rb.PointerLock, Sb(), 0, 0, 0)
+      }))), Cb(), ab(document.hasFocus() ? Ka.rb.Focus : Ka.rb.Blur, 0, 0, 0, 0), ba(), () => {
+        for (const bb of Ab.splice(0)) bb()
       }
     }
-    var os = sb(8862),
-      Ss = sb(8849),
-      Rs = sb(1921);
-    const vs = new Map(is.b.map(((bb, cb) => [bb, cb]))),
-      Fs = ["jump", "primary-fire", "alt-fire"],
-      xs = ["primary-fire", "alt-fire"];
+    var sU = Ub(8834),
+      gU = Ub(8822),
+      CU = Ub(1880);
+    const VU = new Map(hU.c.map(((bb, ab) => [bb, ab]))),
+      OU = ["jump", "primary-fire", "alt-fire"],
+      cU = ["primary-fire", "alt-fire"];
 
-    function ps(bb) {
-      return `${Rs.c}${bb}`
+    function JU(bb) {
+      return `${CU.c}${bb}`
     }
-    const bk = ["forward", "backward", "left", "right", "sprint", "jump"];
+    const nU = ["forward", "backward", "left", "right", "sprint", "jump"];
 
-    function ck(bb) {
-      const cb = [];
-      for (const sb of bb) {
-        const bb = "string" === typeof sb ? is.i[sb] : void 0;
-        "number" === typeof bb && cb.push(bb)
+    function SU(bb) {
+      const ab = [];
+      for (const Ub of bb) {
+        const bb = "string" === typeof Ub ? hU.h[Ub] : void 0;
+        "number" === typeof bb && ab.push(bb)
       }
-      return cb
+      return ab
     }
-    class sk {
+    class bA {
       constructor() {
         this.keys = new Map, this.preventKeys = new Set, this.movementKeys = new Set, this.checkedDown = new Set, this.checkedUp = new Set;
-        for (const [bb, cb] of Object.entries(is.f)) this.keys.set(bb, cb);
+        for (const [bb, ab] of Object.entries(hU.d)) this.keys.set(bb, ab);
         this.updateKeySets()
       }
       prevents(bb) {
@@ -3206,78 +3206,78 @@ export const modules = {
       moves(bb) {
         return this.movementKeys.has(bb)
       }
-      checks(bb, cb) {
-        return (cb ? this.checkedDown : this.checkedUp).has(bb)
+      checks(bb, ab) {
+        return (ab ? this.checkedDown : this.checkedUp).has(bb)
       }
-      sync(bb, cb) {
-        for (const [sb, kb] of this.keys) {
-          const Wb = bb(ps(sb)),
-            ab = Array.isArray(Wb) ? ck(Wb) : is.f[sb];
-          (ab.length !== kb.length || ab.some(((bb, cb) => bb !== kb[cb]))) && this.bind(sb, ab, cb)
+      sync(bb, ab) {
+        for (const [Ub, Ab] of this.keys) {
+          const Mb = bb(JU(Ub)),
+            Tb = Array.isArray(Mb) ? SU(Mb) : hU.d[Ub];
+          (Tb.length !== Ab.length || Tb.some(((bb, ab) => bb !== Ab[ab]))) && this.bind(Ub, Tb, ab)
         }
       }
-      bind(bb, cb, sb) {
-        const kb = vs.get(bb);
-        if (void 0 !== kb) {
-          sb(zc.qb.Binding, 0, 0, 0, kb | zc.m.Clear << 8);
-          for (const ab of [...cb, ...null !== (Wb = is.h[bb]) && void 0 !== Wb ? Wb : []]) {
-            var Wb;
-            sb(zc.qb.Binding, ab, 0, 0, kb | zc.m.Add << 8)
+      bind(bb, ab, Ub) {
+        const Ab = VU.get(bb);
+        if (void 0 !== Ab) {
+          Ub(Ka.rb.Binding, 0, 0, 0, Ab | Ka.m.Clear << 8);
+          for (const Tb of [...ab, ...null !== (Mb = hU.f[bb]) && void 0 !== Mb ? Mb : []]) {
+            var Mb;
+            Ub(Ka.rb.Binding, Tb, 0, 0, Ab | Ka.m.Add << 8)
           }
-          this.keys.set(bb, cb), this.updateKeySets()
+          this.keys.set(bb, ab), this.updateKeySets()
         }
       }
       updateKeySets() {
         this.preventKeys.clear();
-        for (const kb of is.m)
-          for (const cb of null !== (bb = this.keys.get(is.b[kb])) && void 0 !== bb ? bb : []) {
+        for (const Ab of hU.l)
+          for (const ab of null !== (bb = this.keys.get(hU.c[Ab])) && void 0 !== bb ? bb : []) {
             var bb;
-            this.preventKeys.add(cb)
+            this.preventKeys.add(ab)
           }
         this.movementKeys.clear();
-        for (const kb of bk)
-          for (const bb of null !== (cb = this.keys.get(kb)) && void 0 !== cb ? cb : []) {
-            var cb;
+        for (const Ab of nU)
+          for (const bb of null !== (ab = this.keys.get(Ab)) && void 0 !== ab ? ab : []) {
+            var ab;
             this.movementKeys.add(bb)
           }
-        for (const [kb, Wb] of [
-            [this.checkedDown, Fs],
-            [this.checkedUp, xs]
+        for (const [Ab, Mb] of [
+            [this.checkedDown, OU],
+            [this.checkedUp, cU]
           ]) {
-          kb.clear();
-          for (const bb of Wb)
-            for (const cb of null !== (sb = this.keys.get(bb)) && void 0 !== sb ? sb : []) {
-              var sb;
-              kb.add(cb)
+          Ab.clear();
+          for (const bb of Mb)
+            for (const ab of null !== (Ub = this.keys.get(bb)) && void 0 !== Ub ? Ub : []) {
+              var Ub;
+              Ab.add(ab)
             }
         }
       }
     }
-    var kk = sb(4523),
-      Wk = sb(36233);
-    const ak = "[bloxd-wasm-client]";
+    var aA = Ub(4487),
+      UA = Ub(36008);
+    const AA = "[bloxd-wasm-client]";
 
-    function Tk() {
-      return "inGame" === rb.d.get("gameState") && !(0, Bs.r)()
+    function MA() {
+      return "inGame" === sb.c.get("gameState") && !(0, NU.p)()
     }
-    let Uk = null;
+    let TA = null;
 
-    function Ik(bb, cb) {
-      Uk && cb.writePendingInput() && Uk.push(function(bb, cb) {
-        let sb = "";
-        for (const kb of cb) sb += kb.toString(16).padStart(2, "0");
-        return sb ? `${bb} ${sb}` : String(bb)
-      }(bb, cb.rings.input.written()))
+    function EA(bb, ab) {
+      TA && ab.writePendingInput() && TA.push(function(bb, ab) {
+        let Ub = "";
+        for (const Ab of ab) Ub += Ab.toString(16).padStart(2, "0");
+        return Ub ? `${bb} ${Ub}` : String(bb)
+      }(bb, ab.rings.input.written()))
     }
-    const Hk = [];
+    const YA = [];
 
-    function fk(bb, cb, sb, kb) {
-      bb === zc.P.InputAction && kb === zc.jb && Hk.push(cb.getUint32(sb, !0))
+    function BA(bb, ab, Ub, Ab) {
+      bb === Ka.V.InputAction && Ab === Ka.lb && YA.push(ab.getUint32(Ub, !0))
     }
-    var Mk = sb(40420),
-      Xk = sb(1203),
-      nk = sb(36423);
-    const mk = {
+    var eA = Ub(40110),
+      vA = Ub(1140),
+      LA = Ub(36186);
+    const PA = {
       general: {
         ok: "OK",
         tryAgain: "Try Again",
@@ -3285,390 +3285,174 @@ export const modules = {
         reload: "Reload",
         reconnect: "Rejoin"
       },
-      wasmScreens: Xk.wasmScreens
+      wasmScreens: vA.wasmScreens
     };
 
-    function lk(bb) {
-      var cb, sb;
-      let kb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      const [Wb, ab] = bb.split(":");
-      return (null !== (cb = null === (sb = mk[Wb]) || void 0 === sb ? void 0 : sb[ab]) && void 0 !== cb ? cb : bb).replace(/\{\{(\w+)\}\}/g, ((bb, cb) => {
-        var sb;
-        return null !== (sb = kb[cb]) && void 0 !== sb ? sb : bb
+    function XA(bb) {
+      var ab, Ub;
+      let Ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      const [Mb, Tb] = bb.split(":");
+      return (null !== (ab = null === (Ub = PA[Mb]) || void 0 === Ub ? void 0 : Ub[Tb]) && void 0 !== ab ? ab : bb).replace(/\{\{(\w+)\}\}/g, ((bb, ab) => {
+        var Ub;
+        return null !== (Ub = Ab[ab]) && void 0 !== Ub ? Ub : bb
       }))
     }
 
-    function Qk(bb, cb) {
-      (0, hs.c)();
-      const sb = document.createElement("div");
-      sb.setAttribute("role", "alertdialog"), sb.style.cssText = "position:fixed;top:0;right:0;bottom:0;left:0;z-index:100;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.7);font:16px sans-serif;color:#fff";
-      const kb = document.createElement("div");
-      kb.style.cssText = "max-width:28rem;padding:1.5rem;background:#1c2333;text-align:center";
-      const Wb = document.createElement("h2");
-      Wb.textContent = lk(bb.title);
-      const ab = document.createElement("p");
-      if (ab.textContent = lk(bb.help, bb.helpValues), ab.style.whiteSpace = "pre-line", kb.append(Wb, ab), bb.discordLink) {
+    function jA(bb, ab) {
+      (0, mU.d)();
+      const Ub = document.createElement("div");
+      Ub.setAttribute("role", "alertdialog"), Ub.style.cssText = "position:fixed;top:0;right:0;bottom:0;left:0;z-index:100;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.7);font:16px sans-serif;color:#fff";
+      const Ab = document.createElement("div");
+      Ab.style.cssText = "max-width:28rem;padding:1.5rem;background:#1c2333;text-align:center";
+      const Mb = document.createElement("h2");
+      Mb.textContent = XA(bb.title);
+      const Tb = document.createElement("p");
+      if (Tb.textContent = XA(bb.help, bb.helpValues), Tb.style.whiteSpace = "pre-line", Ab.append(Mb, Tb), bb.discordLink) {
         const bb = document.createElement("a");
-        bb.href = nk.b, bb.target = "_blank", bb.rel = "noreferrer", bb.style.color = "#8ab4ff", bb.textContent = lk("wasmScreens:reportOnDiscord"), kb.append(bb)
+        bb.href = LA.b, bb.target = "_blank", bb.rel = "noreferrer", bb.style.color = "#8ab4ff", bb.textContent = XA("wasmScreens:reportOnDiscord"), Ab.append(bb)
       }
-      const Tb = document.createElement("div");
-      return Tb.style.cssText = "display:flex;gap:1rem;justify-content:center;margin-top:1.5rem", kb.append(Tb), sb.append(kb), document.body.append(sb), new Promise((kb => {
-        const Wb = bb => {
-            null === cb || void 0 === cb || cb.removeEventListener("abort", ab), sb.remove(), kb(bb)
+      const Eb = document.createElement("div");
+      return Eb.style.cssText = "display:flex;gap:1rem;justify-content:center;margin-top:1.5rem", Ab.append(Eb), Ub.append(Ab), document.body.append(Ub), new Promise((Ab => {
+        const Mb = bb => {
+            null === ab || void 0 === ab || ab.removeEventListener("abort", Tb), Ub.remove(), Ab(bb)
           },
-          ab = () => {
-            Wb(!1)
+          Tb = () => {
+            Mb(!1)
           };
-        null === cb || void 0 === cb || cb.addEventListener("abort", ab, {
+        null === ab || void 0 === ab || ab.addEventListener("abort", Tb, {
           once: !0
         });
-        const Ub = (bb, cb) => {
-          const sb = document.createElement("button");
-          sb.textContent = lk(bb), sb.style.cssText = "padding:0.5rem 1.25rem;font:inherit", sb.addEventListener("click", (() => {
-            Wb(cb)
-          })), Tb.append(sb)
+        const Yb = (bb, ab) => {
+          const Ub = document.createElement("button");
+          Ub.textContent = XA(bb), Ub.style.cssText = "padding:0.5rem 1.25rem;font:inherit", Ub.addEventListener("click", (() => {
+            Mb(ab)
+          })), Eb.append(Ub)
         };
-        null !== bb.cancel && Ub(bb.cancel, !1), Ub(bb.confirm, !0)
+        null !== bb.cancel && Yb(bb.cancel, !1), Yb(bb.confirm, !0)
       }))
     }
-    var ek = sb(40235);
-    const Ck = 6e4,
-      Nk = 3e5;
-    var Vk = sb(3433);
-    var Lk = sb(40152),
-      uk = sb(664),
-      Yk = sb(13);
+    var RA = Ub(39932);
+    const kA = 6e4,
+      yA = 3e5;
+    var ZA = Ub(3317);
+    var DA = Ub(39839),
+      zA = Ub(619),
+      xA = Ub(10);
 
-    function hk(bb, cb) {
-      const sb = Yk.bb.encode(cb);
-      ! function(bb, cb) {
-        let sb = cb >= 0 ? 2 * cb : 2 * -cb - 1;
-        for (; sb >= 128;) bb.push(sb % 128 | 128), sb = Math.floor(sb / 128);
-        bb.push(sb)
-      }(bb, sb.length);
-      for (const kb of sb) bb.push(kb)
+    function iA(bb, ab) {
+      const Ub = xA.bb.encode(ab);
+      ! function(bb, ab) {
+        let Ub = ab >= 0 ? 2 * ab : 2 * -ab - 1;
+        for (; Ub >= 128;) bb.push(Ub % 128 | 128), Ub = Math.floor(Ub / 128);
+        bb.push(Ub)
+      }(bb, Ub.length);
+      for (const Ab of Ub) bb.push(Ab)
     }
-    let Jk, gk, Bk;
+    let fA, mA, pA;
     (() => {
-      const bb = [0, "s", "resolv", "e", "then", "postCo", "okies", 3, "length", 2, 1, void 0, "b", 117, 4, 206, 1023, "a", 208, 65536, 10, 55296, 56320, 6, 12, 63, 128, 145, 175, 176, 148, 192, "c", "d", "Invalid byte index", 149, 255, 224, 31, "Invalid continuation byte", 240, 15, 179, 7, 18, !1, 16, 8, 60, "mSTUdB", 512, "012345", 205, 244, 55, "f", 5, 124, 106, 56319, 57343, 170, 65535, 247, 32, 24, 19, 64, 219, 42, 173, "/", 68, 64512, 74, 166, "Lone s", "urroga", "te U+", " is no", "t a sc", "alar v", "alue", 4294967168, 4294965248, 4294901760, 4292870144, 72, "h", 163, 2048, 248, 1114111, "Invalid UTF-8 detected", "3.0.0", "undefi", "ned"];
+      const bb = [0, "r", "e", "resolv", "then", "length", null, "postCo", "okies", 3, void 0, 2, 1, "b", "c", 188, 40, "a", 20, 6, "f", 209, 10, 124, 161, 150, 126];
 
-      function cb() {}
-      const kb = (0, Yk[bb[1]])("aGFyZHdhcmVDb25jdXJyZW5jeQ=="),
-        Wb = (0, Yk[bb[1]])("QkFCWUxPTg=="),
-        ab = (0, Yk[bb[1]])("QW5kZXNpdGU="),
-        Tb = (0, Yk[bb[1]])("U21vb3RoIEdyYW5pdGU="),
-        Ub = (0, Yk[bb[1]])("RGlvcml0ZQ=="),
-        Ib = async (cb, kb, Wb, ab) => {
+      function ab() {}
+      const Ab = (bb[0], xA[bb[1]])("aGFyZHdhcmVDb25jdXJyZW5jeQ=="),
+        Mb = (bb[0], xA[bb[1]])("QkFCWUxPTg=="),
+        Tb = (bb[0], xA[bb[1]])("QW5kZXNpdGU="),
+        Eb = (bb[0], xA[bb[1]])("U21vb3RoIEdyYW5pdGU="),
+        Yb = (bb[0], xA[bb[1]])("RGlvcml0ZQ=="),
+        Bb = async (Ab, Mb, Tb, Eb) => {
           const [{
-            clientSideServerUrls: Tb
+            clientSideServerUrls: Yb
           }, {
-            postJsonWithMetricsCookiesAndJsonResponse: Ub
-          }] = await Promise.all([Promise[bb[2] + bb[3]]()[bb[4]]((() => sb(1208))), Promise[bb[2] + bb[3]]()[bb[4]]((() => sb(1126)))]), Ib = Tb.getHttpUrlFromWebSocketUrl(cb.endpoint), Hb = null === cb[bb[5] + bb[6]] ? bb[11] : await cb[bb[5] + bb[6]]();
-          await Ub("" + Ib + kb, Wb, {
-            ["retrie" + bb[1]]: ab
-          }, Hb)
+            ["postJsonWithMetricsCookiesAndJsonRespons" + bb[2]]: Bb
+          }] = await Promise.all([Promise[bb[3] + bb[2]]()[bb[4]]((() => Ub(1142))), Promise[bb[3] + bb[2]]()[bb[4]](((...Ab) => (Ab[bb[5]] = bb[0], "q_PMvi" in ab && function(...ab) {
+            ab[bb[5]] = bb[0]
+          }(), Ub(1065))))]), eb = Yb.getHttpUrlFromWebSocketUrl(Ab.endpoint), vb = Ab[bb[7] + bb[8]] === bb[6] ? bb[10] : await Ab[bb[7] + bb[8]]();
+          await Bb("" + eb + Mb, Tb, {
+            retries: Eb
+          }, vb)
         };
-      Jk = async (cb, sb) => {
-        const Wb = function(bb, cb, sb, kb) {
-          const Wb = [];
-          hk(Wb, bb), hk(Wb, cb), hk(Wb, sb);
-          for (const ab of kb) Wb.push(ab);
-          return Wb
-        }(cb.game, cb.lobby, (0, uk[bb[33]])(), sb);
+      fA = async (Ub, Ab) => {
+        const Mb = function(bb, ab, Ub, Ab) {
+          const Mb = [];
+          iA(Mb, bb), iA(Mb, ab), iA(Mb, Ub);
+          for (const Tb of Ab) Mb.push(Tb);
+          return Mb
+        }(Ub.game, Ub.lobby, (bb[0], zA[bb[14]])(), Ab);
         try {
-          await Ib(cb, "/persisted/keep-alive", {
-            type: "Dm",
-            data: Wb
-          }, bb[7])
-        } catch (kb) {
-          console.warn(kb)
+          await Bb(Ub, "/persisted/keep-alive", {
+            type: "OX",
+            data: Mb
+          }, bb[9])
+        } catch (Tb) {
+          function Yb(...ab) {
+            ab[bb[5]] = bb[0]
+          }
+          "XHK7shz" in ab && Yb(), console.warn(Tb)
         }
       };
-      const Hb = (...sb) => (sb[bb[8]] = bb[9], "jQvhrHN" in cb && function() {
-        ! function(...cb) {
-          function sb(...cb) {
-            for (fb(cb[bb[8]] = bb[10], cb[bb[15]] = [], cb[bb[12]] = bb[0], cb[bb[13]] = cb[bb[0]].length, cb[bb[14]] = bb[11], cb[bb[3]] = bb[11]); cb[bb[12]] < cb[bb[13]];) fb(cb[bb[14]] = cb[bb[0]].charCodeAt(cb[bb[12]]++), cb[bb[14]] >= bb[21] && cb[bb[14]] <= bb[59] && cb[bb[12]] < cb[bb[13]] ? (cb[bb[3]] = cb[bb[0]].charCodeAt(cb[bb[12]]++), (cb[bb[3]] & bb[73]) == bb[22] ? cb[bb[15]].push(((cb[bb[14]] & bb[16]) << bb[20]) + (cb[bb[3]] & bb[16]) + bb[19]) : (cb[bb[15]].push(cb[bb[14]]), cb[bb[12]]--)) : cb[bb[15]].push(cb[bb[14]]));
-            return cb[bb[15]]
-          }
+      const eb = (...ab) => (ab[bb[5]] = bb[11], Object.getOwnPropertyDescriptor(ab[bb[0]], ab[bb[12]]));
 
-          function kb(...sb) {
-            for (fb(sb[bb[8]] = bb[10], sb[bb[17]] = sb[bb[0]].length, sb[bb[18]] = -bb[10], sb[bb[7]] = bb[11], sb[bb[14]] = ""); ++sb[bb[18]] < sb[bb[17]];) sb[bb[7]] = sb[bb[0]][sb[bb[18]]], sb[bb[7]] > bb[62] && fb(sb[bb[7]] -= bb[19], sb[bb[14]] += cb[bb[17]](sb[bb[7]] >>> bb[20] & bb[16] | bb[21]), sb[bb[7]] = bb[22] | sb[bb[7]] & bb[16]), sb[bb[14]] += cb[bb[17]](sb[bb[7]]);
-            return sb[bb[14]]
-          }
-
-          function Wb(...cb) {
-            if (cb[bb[8]] = bb[10], cb[bb[0]] >= bb[21] && cb[bb[0]] <= bb[60]) throw Error(bb[76] + bb[77] + bb[78] + cb[bb[0]].toString(bb[46]).toUpperCase() + (bb[79] + bb[80] + bb[81] + bb[82]))
-          }
-
-          function ab(...sb) {
-            return sb[bb[8]] = bb[9], cb[bb[17]](sb[bb[0]] >> sb[bb[10]] & bb[25] | bb[26])
-          }
-
-          function Tb(...sb) {
-            return sb[bb[8]] = bb[10], (sb[bb[0]] & bb[83]) == bb[0] ? cb[bb[17]](sb[bb[0]]) : (sb[bb[17]] = "", (sb[bb[0]] & bb[84]) == bb[0] ? sb[bb[17]] = cb[bb[17]](sb[bb[0]] >> bb[23] & bb[38] | bb[31]) : (sb[bb[0]] & bb[85]) == bb[0] ? fb(Wb(sb[bb[0]]), sb[bb[17]] = cb[bb[17]](sb[bb[0]] >> bb[24] & bb[41] | bb[37]), sb[bb[17]] += ab(sb[bb[0]], bb[23])) : (sb[bb[0]] & bb[86]) == bb[0] && fb(sb[bb[17]] = cb[bb[17]](sb[bb[0]] >> bb[44] & bb[43] | bb[40]), sb[bb[17]] += ab(sb[bb[0]], bb[24]), sb[bb[17]] += ab(sb[bb[0]], bb[23])), sb[bb[17]] += cb[bb[17]](sb[bb[0]] & bb[25] | bb[26]), sb[bb[17]])
-          }
-
-          function Ub(...cb) {
-            for (fb(cb[bb[8]] = bb[10], cb[bb[27]] = sb(cb[bb[0]]), cb[bb[9]] = cb[bb[27]].length, cb[-bb[28]] = -bb[10], cb[bb[14]] = bb[11], cb[-bb[29]] = ""); ++cb[-bb[28]] < cb[bb[9]];) fb(cb[bb[14]] = cb[bb[27]][cb[-bb[28]]], cb[-bb[29]] += Tb(cb[bb[14]]));
-            return cb[-bb[29]]
-          }
-
-          function Ib(...sb) {
-            if (sb[bb[8]] = bb[0], cb[bb[9]] >= cb[bb[32]]) throw Error(bb[34]);
-            if (fb(sb[bb[30]] = cb[bb[14]][cb[bb[9]]] & bb[36], cb[bb[9]]++), (sb[bb[30]] & bb[31]) == bb[26]) return sb[bb[30]] & bb[25];
-            throw Error(bb[39])
-          }
-
-          function Hb(...sb) {
-            if (fb(sb[bb[8]] = bb[0], sb[bb[35]] = bb[11], sb[bb[32]] = bb[11], sb[bb[33]] = bb[11], sb[-bb[42]] = bb[11], sb[bb[14]] = bb[11]), cb[bb[9]] > cb[bb[32]]) throw Error(bb[34]);
-            if (cb[bb[9]] == cb[bb[32]]) return bb[45];
-            if (fb(sb[bb[35]] = cb[bb[14]][cb[bb[9]]] & bb[36], cb[bb[9]]++), (sb[bb[35]] & bb[26]) == bb[0]) return sb[bb[35]];
-            if ((sb[bb[35]] & bb[37]) == bb[31]) {
-              if (fb(sb[bb[32]] = Ib(), sb[bb[14]] = (sb[bb[35]] & bb[38]) << bb[23] | sb[bb[32]]), sb[bb[14]] >= bb[26]) return sb[bb[14]];
-              throw Error(bb[39])
-            }
-            if ((sb[bb[35]] & bb[40]) == bb[37]) {
-              if (fb(sb[bb[32]] = Ib(), sb[bb[33]] = Ib(), sb[bb[14]] = (sb[bb[35]] & bb[41]) << bb[24] | sb[bb[32]] << bb[23] | sb[bb[33]]), sb[bb[14]] >= bb[90]) return Wb(sb[bb[14]]), sb[bb[14]];
-              throw Error(bb[39])
-            }
-            if ((sb[bb[35]] & bb[91]) == bb[40] && (fb(sb[bb[32]] = Ib(), sb[bb[33]] = Ib(), sb[-bb[42]] = Ib(), sb[bb[14]] = (sb[bb[35]] & bb[43]) << bb[44] | sb[bb[32]] << bb[24] | sb[bb[33]] << bb[23] | sb[-bb[42]]), sb[bb[14]] >= bb[19] && sb[bb[14]] <= bb[92])) return sb[bb[14]];
-            throw Error(bb[93])
-          }
-
-          function Mb(...Wb) {
-            for (fb(Wb[bb[8]] = bb[10], cb[bb[14]] = sb(Wb[bb[0]]), cb[bb[32]] = cb[bb[14]].length, cb[bb[9]] = bb[0], Wb[bb[17]] = [], Wb[bb[12]] = bb[11]);
-              (Wb[bb[12]] = Hb()) !== bb[45];) Wb[bb[17]].push(Wb[bb[12]]);
-            return kb(Wb[bb[17]])
-          }
-          fb(cb[bb[8]] = bb[10], cb[bb[17]] = String.fromCharCode), fb(cb[bb[14]] = bb[11], cb[bb[32]] = bb[11], cb[bb[9]] = bb[11]), fb(cb[bb[0]].version = bb[94], cb[bb[0]].encode = Ub, cb[bb[0]].decode = Mb)
-        }(typeof exports === bb[95] + bb[96] ? this.utf8 = {} : exports)
-      }(), Object.getOwnPropertyDescriptor(sb[bb[0]], sb[bb[10]]));
-
-      function fb() {
-        fb = function() {}
+      function vb() {
+        vb = function() {}
       }
-      gk = (...sb) => {
-        if (sb[bb[8]] = bb[0], "Kh2Z4vV" in cb && function(...cb) {
-            fb(cb[bb[8]] = bb[0], cb[bb[69]] = function(...cb) {
-              function sb(...cb) {
-                return cb[bb[8]] = bb[10], Ib(Tb(Xb(cb[bb[0]])))
+      mA = () => {
+        if ((bb[0], xA.K)(), eb(navigator, Ab) !== bb[10]) {
+          function Ub(...ab) {
+            vb(ab[bb[5]] = bb[0], ab[bb[13]] = function(...ab) {
+              for (vb(ab[bb[5]] = bb[12], ab[bb[12]] = ab[bb[0]].length, ab[bb[13]] = [], ab[bb[14]] = bb[0], ab[bb[16]] = bb[0], ab[bb[0]].sort(((bb, ab) => bb - ab))), ab[bb[15]] = bb[0]; ab[bb[15]] < ab[bb[12]]; ab[bb[15]]++)
+                if (!(ab[bb[15]] > bb[0] && ab[bb[0]][ab[bb[15]]] === ab[bb[0]][ab[bb[15]] - bb[12]]))
+                  for (vb(ab[bb[14]] = ab[bb[15]] + bb[12], ab[bb[16]] = ab[bb[12]] - bb[12]); ab[bb[14]] < ab[bb[16]];)
+                    if (ab[bb[0]][ab[bb[15]]] + ab[bb[0]][ab[bb[14]]] + ab[bb[0]][ab[bb[16]]] < bb[0]) ab[bb[14]]++;
+                    else if (ab[bb[0]][ab[bb[15]]] + ab[bb[0]][ab[bb[14]]] + ab[bb[0]][ab[bb[16]]] > bb[0]) ab[bb[16]]--;
+              else {
+                for (ab[bb[13]].push([ab[bb[0]][ab[bb[15]]], ab[bb[0]][ab[bb[14]]], ab[bb[0]][ab[bb[16]]]]); ab[bb[14]] < ab[bb[16]] && ab[bb[0]][ab[bb[14]]] === ab[bb[0]][ab[bb[14]] + bb[12]];) ab[bb[14]]++;
+                for (; ab[bb[14]] < ab[bb[16]] && ab[bb[0]][ab[bb[16]]] === ab[bb[0]][ab[bb[16]] - bb[12]];) ab[bb[16]]--;
+                vb(ab[bb[14]]++, ab[bb[16]]--)
               }
-
-              function kb(...cb) {
-                return cb[bb[8]] = bb[9], Ib(Ub(Xb(cb[bb[0]]), Xb(cb[bb[10]])))
-              }
-
-              function Wb(...cb) {
-                return cb[bb[8]] = bb[9], Hb(Ub(Xb(cb[bb[0]]), Xb(cb[bb[10]])))
-              }
-
-              function ab(...cb) {
-                return cb[bb[8]] = bb[7], Mb(Ub(Xb(cb[bb[0]]), Xb(cb[bb[10]])), cb[bb[9]])
-              }
-
-              function Tb(...cb) {
-                return cb[bb[8]] = bb[10], mb(Yb(nb(cb[bb[0]]), cb[bb[0]].length * bb[47]))
-              }
-
-              function Ub(...cb) {
-                fb(cb[bb[8]] = bb[9], cb[bb[17]] = nb(cb[bb[0]])), cb[bb[17]].length > bb[46] && (cb[bb[17]] = Yb(cb[bb[17]], cb[bb[0]].length * bb[47]));
-                var sb = Array(bb[46]),
-                  kb = Array(bb[46]);
-                for (cb[bb[12]] = bb[0]; cb[bb[12]] < bb[46]; cb[bb[12]]++) fb(sb[cb[bb[12]]] = 909522486 ^ cb[bb[17]][cb[bb[12]]], kb[cb[bb[12]]] = 1549556828 ^ cb[bb[17]][cb[bb[12]]]);
-                return cb[-bb[48]] = Yb(sb.concat(nb(cb[bb[10]])), bb[50] + cb[bb[10]].length * bb[47]), mb(Yb(kb.concat(cb[-bb[48]]), function(...cb) {
-                  if (cb[bb[8]] = bb[7], cb[bb[0]] === bb[49]) return cb[bb[10]] + cb[bb[9]]
-                }(bb[49], bb[50], 256)))
-              }
-
-              function Ib(...sb) {
-                sb[bb[8]] = bb[10];
-                try {
-                  cb[bb[12]]
-                } catch (kb) {
-                  cb[bb[12]] = bb[0]
-                }
-                for (fb(sb[bb[10]] = cb[bb[12]] ? bb[51] + "6789ABCDEF" : bb[51] + "6789abcdef", sb[bb[9]] = "", sb[bb[53]] = bb[11]), sb[bb[52]] = bb[0]; sb[bb[52]] < sb[bb[0]].length; sb[bb[52]]++) fb(sb[bb[53]] = sb[bb[0]].charCodeAt(sb[bb[52]]), sb[bb[9]] += sb[bb[10]].charAt(sb[bb[53]] >>> bb[14] & bb[41]) + sb[bb[10]].charAt(sb[bb[53]] & bb[41]));
-                return sb[bb[9]]
-              }
-
-              function Hb(...sb) {
-                sb[bb[8]] = bb[10];
-                try {
-                  cb[bb[54]]
-                } catch (kb) {
-                  cb[bb[54]] = ""
-                }
-                for (fb(sb[bb[17]] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+" + bb[71], sb[bb[12]] = "", sb[bb[32]] = sb[bb[0]].length), sb[bb[14]] = bb[0]; sb[bb[14]] < sb[bb[32]]; sb[bb[14]] += bb[7])
-                  for (sb[bb[56]] = sb[bb[0]].charCodeAt(sb[bb[14]]) << bb[46] | (sb[bb[14]] + bb[10] < sb[bb[32]] ? sb[bb[0]].charCodeAt(sb[bb[14]] + bb[10]) << bb[47] : bb[0]) | (sb[bb[14]] + bb[9] < sb[bb[32]] ? sb[bb[0]].charCodeAt(sb[bb[14]] + bb[9]) : bb[0]), sb[bb[55]] = bb[0]; sb[bb[55]] < bb[14]; sb[bb[55]]++) sb[bb[14]] * bb[47] + sb[bb[55]] * bb[23] > sb[bb[0]].length * bb[47] ? sb[bb[12]] += cb[bb[54]] : sb[bb[12]] += sb[bb[17]].charAt(sb[bb[56]] >>> bb[23] * (bb[7] - sb[bb[55]]) & bb[25]);
-                return sb[bb[12]]
-              }
-
-              function Mb(...cb) {
-                var sb, kb, Wb, ab;
-                for (fb(cb[bb[8]] = bb[9], cb[bb[57]] = cb[bb[10]].length, cb[bb[12]] = Array()), cb[bb[14]] = Array(Math.ceil(cb[bb[0]].length / bb[9])), sb = bb[0]; sb < cb[bb[14]].length; sb++) cb[bb[14]][sb] = cb[bb[0]].charCodeAt(sb * bb[9]) << bb[47] | cb[bb[0]].charCodeAt(sb * bb[9] + bb[10]);
-                for (; cb[bb[14]].length > bb[0];) {
-                  for (fb(ab = Array(), Wb = bb[0]), sb = bb[0]; sb < cb[bb[14]].length; sb++) fb(Wb = (Wb << bb[46]) + cb[bb[14]][sb], kb = Math.floor(Wb / cb[bb[57]]), Wb -= kb * cb[bb[57]]), (ab.length > bb[0] || kb > bb[0]) && (ab[ab.length] = kb);
-                  fb(cb[bb[12]][cb[bb[12]].length] = Wb, cb[bb[14]] = ab)
-                }
-                for (cb[bb[56]] = "", sb = cb[bb[12]].length - bb[10]; sb >= bb[0]; sb--) cb[bb[56]] += cb[bb[10]].charAt(cb[bb[12]][sb]);
-                for (cb[-bb[58]] = Math.ceil(cb[bb[0]].length * bb[47] / (Math.log(cb[bb[10]].length) / Math.log(bb[9]))), sb = cb[bb[56]].length; sb < cb[-bb[58]]; sb++) cb[bb[56]] = cb[bb[10]][bb[0]] + cb[bb[56]];
-                return cb[bb[56]]
-              }
-
-              function Xb(...cb) {
-                var sb, kb;
-                for (fb(cb[bb[8]] = bb[10], cb[bb[61]] = "", cb[bb[9]] = -bb[10]); ++cb[bb[9]] < cb[bb[0]].length;) fb(sb = cb[bb[0]].charCodeAt(cb[bb[9]]), kb = cb[bb[9]] + bb[10] < cb[bb[0]].length ? cb[bb[0]].charCodeAt(cb[bb[9]] + bb[10]) : bb[0]), bb[21] <= sb && sb <= bb[59] && bb[22] <= kb && kb <= bb[60] && fb(sb = bb[19] + ((sb & bb[16]) << bb[20]) + (kb & bb[16]), cb[bb[9]]++), sb <= 127 ? cb[bb[61]] += String.fromCharCode(sb) : sb <= 2047 ? cb[bb[61]] += String.fromCharCode(bb[31] | sb >>> bb[23] & bb[38], bb[26] | sb & bb[25]) : sb <= bb[62] ? cb[bb[61]] += String.fromCharCode(bb[37] | sb >>> bb[24] & bb[41], bb[26] | sb >>> bb[23] & bb[25], bb[26] | sb & bb[25]) : sb <= 2097151 && (cb[bb[61]] += String.fromCharCode(bb[40] | sb >>> bb[44] & bb[43], bb[26] | sb >>> bb[24] & bb[25], bb[26] | sb >>> bb[23] & bb[25], bb[26] | sb & bb[25]));
-                return cb[bb[61]]
-              }
-
-              function nb(...cb) {
-                for (fb(cb[bb[8]] = bb[10], cb[bb[10]] = Array(cb[bb[0]].length >> bb[9])), cb[bb[9]] = bb[0]; cb[bb[9]] < cb[bb[10]].length; cb[bb[9]]++) cb[bb[10]][cb[bb[9]]] = bb[0];
-                for (cb[bb[9]] = bb[0]; cb[bb[9]] < cb[bb[0]].length * bb[47]; cb[bb[9]] += bb[47]) cb[bb[10]][cb[bb[9]] >> bb[56]] |= (cb[bb[0]].charCodeAt(cb[bb[9]] / bb[47]) & bb[36]) << bb[65] - cb[bb[9]] % bb[64];
-                return cb[bb[10]]
-              }
-
-              function mb(...cb) {
-                for (fb(cb[bb[8]] = bb[10], cb[bb[10]] = ""), cb[bb[30]] = bb[0]; cb[bb[30]] < cb[bb[0]].length * bb[64]; cb[bb[30]] += bb[47]) cb[bb[10]] += String.fromCharCode(cb[bb[0]][cb[bb[30]] >> bb[56]] >>> bb[65] - cb[bb[30]] % bb[64] & bb[36]);
-                return cb[bb[10]]
-              }
-
-              function lb(...cb) {
-                return cb[bb[8]] = bb[9], cb[bb[0]] >>> cb[bb[10]] | cb[bb[0]] << bb[64] - cb[bb[10]]
-              }
-
-              function Qb(...cb) {
-                return cb[bb[8]] = bb[9], cb[bb[0]] >>> cb[bb[10]]
-              }
-
-              function eb(...cb) {
-                return cb[bb[8]] = bb[7], cb[bb[0]] & cb[bb[10]] ^ ~cb[bb[0]] & cb[bb[9]]
-              }
-
-              function Cb(...cb) {
-                return cb[bb[8]] = bb[7], cb[bb[0]] & cb[bb[10]] ^ cb[bb[0]] & cb[bb[9]] ^ cb[bb[10]] & cb[bb[9]]
-              }
-
-              function Nb(...cb) {
-                return cb[bb[8]] = bb[10], lb(cb[bb[0]], bb[9]) ^ lb(cb[bb[0]], 13) ^ lb(cb[bb[0]], 22)
-              }
-
-              function Vb(...cb) {
-                return cb[bb[8]] = bb[10], lb(cb[bb[0]], bb[23]) ^ lb(cb[bb[0]], 11) ^ lb(cb[bb[0]], 25)
-              }
-
-              function Lb(...cb) {
-                return cb[bb[8]] = bb[10], lb(cb[bb[0]], bb[43]) ^ lb(cb[bb[0]], bb[44]) ^ Qb(cb[bb[0]], bb[7])
-              }
-
-              function ub(...cb) {
-                return cb[bb[8]] = bb[10], lb(cb[bb[0]], 17) ^ lb(cb[bb[0]], bb[66]) ^ Qb(cb[bb[0]], bb[20])
-              }
-
-              function Yb(...sb) {
-                var kb, Wb, ab, Tb, Ub, Ib, Hb, Mb, Xb, nb, mb, lb;
-                for (fb(sb[bb[8]] = bb[9], sb[bb[17]] = new Array(1779033703, -1150833019, 1013904242, -1521486534, 1359893119, -1694144372, 528734635, 1541459225), sb[bb[7]] = new Array(bb[67])), fb(sb[bb[0]][sb[bb[10]] >> bb[56]] |= bb[26] << bb[65] - sb[bb[10]] % bb[64], sb[bb[0]][(sb[bb[10]] + bb[67] >> 9 << bb[14]) + bb[41]] = sb[bb[10]]), Xb = bb[0]; Xb < sb[bb[0]].length; Xb += bb[46]) {
-                  for (fb(kb = sb[bb[17]][bb[0]], Wb = sb[bb[17]][bb[10]], ab = sb[bb[17]][bb[9]], Tb = sb[bb[17]][bb[7]], Ub = sb[bb[17]][bb[14]], Ib = sb[bb[17]][bb[56]], Hb = sb[bb[17]][bb[23]], Mb = sb[bb[17]][bb[43]]), nb = bb[0]; nb < bb[67]; nb++) fb(sb[bb[7]][nb] = nb < bb[46] ? sb[bb[0]][nb + Xb] : hb(hb(hb(ub(sb[bb[7]][nb - bb[9]]), sb[bb[7]][nb - bb[43]]), Lb(sb[bb[7]][nb - bb[41]])), sb[bb[7]][nb - bb[46]]), mb = hb(hb(hb(hb(Mb, Vb(Ub)), eb(Ub, Ib, Hb)), cb[bb[9]][nb]), sb[bb[7]][nb]), lb = hb(Nb(kb), Cb(kb, Wb, ab)), Mb = Hb, Hb = Ib, Ib = Ub, Ub = hb(Tb, mb), Tb = ab, ab = Wb, Wb = kb, kb = hb(mb, lb));
-                  fb(sb[bb[17]][bb[0]] = hb(kb, sb[bb[17]][bb[0]]), sb[bb[17]][bb[10]] = hb(Wb, sb[bb[17]][bb[10]]), sb[bb[17]][bb[9]] = hb(ab, sb[bb[17]][bb[9]]), sb[bb[17]][bb[7]] = hb(Tb, sb[bb[17]][bb[7]]), sb[bb[17]][bb[14]] = hb(Ub, sb[bb[17]][bb[14]]), sb[bb[17]][bb[56]] = hb(Ib, sb[bb[17]][bb[56]]), sb[bb[17]][bb[23]] = hb(Hb, sb[bb[17]][bb[23]]), sb[bb[17]][bb[43]] = hb(Mb, sb[bb[17]][bb[43]]))
-                }
-                return sb[bb[17]]
-              }
-
-              function hb(...cb) {
-                return fb(cb[bb[8]] = bb[9], cb[bb[68]] = (cb[bb[0]] & bb[62]) + (cb[bb[10]] & bb[62]), cb[bb[7]] = (cb[bb[0]] >> bb[46]) + (cb[bb[10]] >> bb[46]) + (cb[bb[68]] >> bb[46])), cb[bb[7]] << bb[46] | cb[bb[68]] & bb[62]
-              }
-              return fb(cb[bb[8]] = bb[0], cb[bb[12]] = bb[0], cb[bb[54]] = ""), cb[bb[9]] = new Array(1116352408, 1899447441, -1245643825, -373957723, 961987163, 1508970993, -1841331548, -1424204075, -670586216, 310598401, 607225278, 1426881987, 1925078388, -2132889090, -1680079193, -1046744716, -459576895, -272742522, 264347078, 604807628, 770255983, 1249150122, 1555081692, 1996064986, -1740746414, -1473132947, -1341970488, -1084653625, -958395405, -710438585, 113926993, 338241895, 666307205, 773529912, 1294757372, 1396182291, 1695183700, 1986661051, -2117940946, -1838011259, -1564481375, -1474664885, -1035236496, -949202525, -778901479, -694614492, -200395387, 275423344, 430227734, 506948616, 659060556, 883997877, 958139571, 1322822218, 1537002063, 1747873779, 1955562222, 2024104815, -2067236844, -1933114872, -1866530822, -1538233109, -1090935817, -965641998), {
-                hex: sb,
-                b64: Wb,
-                any: ab,
-                hex_hmac: kb,
-                b64_hmac: Wb,
-                any_hmac: ab
-              }
-            }(), console.log(cb[bb[69]]))
-          }(), (0, Yk.L)(), Hb(navigator, kb) !== bb[11]) {
-          function Ib(...cb) {
-            cb[bb[8]] = bb[0]
+              return ab[bb[13]]
+            }, console.log(ab[bb[13]]))
           }
-          return "fz27Ub" in cb && Ib(), ab
+          return "UiGhQm" in ab && Ub(), Tb
         }
-        return Hb(window, Wb) === bb[11] ? Tb : Ub
-      }, Bk = async sb => {
+        if (eb(window, Mb) === bb[10]) {
+          function Bb(...ab) {
+            function Ub() {}
+            ab[bb[5]] = bb[0], vb(ab[bb[17]] = function(...ab) {
+              for (vb(ab[bb[5]] = bb[11], ab[bb[17]] = bb[0], ab[bb[13]] = bb[0], ab[bb[18]] = new Ub(bb[0]), ab[bb[21]] = ab[bb[18]], ab[bb[19]] = ab[bb[0]], ab[bb[20]] = ab[bb[12]]); ab[bb[19]] !== bb[6] || ab[bb[20]] !== bb[6];) vb(ab[bb[13]] = (ab[bb[19]] ? ab[bb[19]].val : bb[0]) + (ab[bb[20]] ? ab[bb[20]].val : bb[0]) + ab[bb[17]], ab[bb[17]] = Math.floor(ab[bb[13]] / bb[22]), ab[bb[21]].next = new Ub(ab[bb[13]] % bb[22]), ab[bb[21]] = ab[bb[21]].next, ab[bb[19]] = ab[bb[19]] ? ab[bb[19]].next : bb[6], ab[bb[20]] = ab[bb[20]] ? ab[bb[20]].next : bb[6]);
+              return ab[bb[17]] && (ab[bb[21]].next = new Ub(ab[bb[17]])), ab[bb[18]].next
+            }, console.log(ab[bb[17]]))
+          }
+          return "X4ME9I" in ab && Bb(), Eb
+        }
+        return Yb
+      }, pA = async Ub => {
+        "quJnqs" in ab && function(...ab) {
+          vb(ab[bb[5]] = bb[0], ab[-bb[26]] = function(...ab) {
+            for (vb(ab[bb[5]] = bb[12], ab[bb[17]] = ab[bb[0]].length, ab[-bb[24]] = [], ab[bb[14]] = bb[0]), ab[bb[23]] = bb[0]; ab[bb[23]] < ab[bb[17]]; ab[bb[23]]++) ab[-bb[24]].push(ab[bb[23]] !== bb[0] && ab[bb[0]][ab[bb[23]]] > ab[bb[0]][ab[bb[23]] - bb[12]] ? ab[-bb[24]][ab[bb[23]] - bb[12]] + bb[12] : bb[12]);
+            for (ab[bb[25]] = ab[bb[17]] - bb[12]; ab[bb[25]] >= bb[0]; ab[bb[25]]--) ab[bb[25]] !== ab[bb[17]] - bb[12] && ab[bb[0]][ab[bb[25]]] > ab[bb[0]][ab[bb[25]] + bb[12]] && (ab[-bb[24]][ab[bb[25]]] = Math.max(ab[-bb[24]][ab[bb[25]]], ab[-bb[24]][ab[bb[25]] + bb[12]] + bb[12])), ab[bb[14]] += ab[-bb[24]][ab[bb[25]]];
+            return ab[bb[14]]
+          }, console.log(ab[-bb[26]]))
+        }();
         try {
-          const kb = gk();
-          await Ib(sb, "/images/" + kb + ".png", {
-            block: kb
+          const ab = mA();
+          await Bb(Ub, "/images/" + ab + ".png", {
+            block: ab
           }, bb[0])
-        } catch {
-          function Wb() {
-            ! function(...cb) {
-              function sb(...cb) {
-                for (fb(cb[bb[8]] = bb[10], cb[-bb[74]] = [], cb[bb[9]] = bb[0], cb[bb[72]] = cb[bb[0]].length, cb[bb[14]] = bb[11], cb[bb[56]] = bb[11]); cb[bb[9]] < cb[bb[72]];) fb(cb[bb[14]] = cb[bb[0]].charCodeAt(cb[bb[9]]++), cb[bb[14]] >= bb[21] && cb[bb[14]] <= bb[59] && cb[bb[9]] < cb[bb[72]] ? (cb[bb[56]] = cb[bb[0]].charCodeAt(cb[bb[9]]++), (cb[bb[56]] & bb[73]) == bb[22] ? cb[-bb[74]].push(((cb[bb[14]] & bb[16]) << bb[20]) + (cb[bb[56]] & bb[16]) + bb[19]) : (cb[-bb[74]].push(cb[bb[14]]), cb[bb[9]]--)) : cb[-bb[74]].push(cb[bb[14]]));
-                return cb[-bb[74]]
-              }
-
-              function kb(...cb) {
-                if (cb[bb[8]] = bb[10], cb[bb[0]] >= bb[21] && cb[bb[0]] <= bb[60]) throw Error(bb[76] + bb[77] + bb[78] + cb[bb[0]].toString(bb[46]).toUpperCase() + (bb[79] + bb[80] + bb[81] + bb[82]))
-              }
-
-              function Wb(sb, kb) {
-                return cb[bb[17]](sb >> kb & bb[25] | bb[26])
-              }
-
-              function ab(...sb) {
-                return sb[bb[8]] = bb[10], (sb[bb[0]] & bb[83]) == bb[0] ? cb[bb[17]](sb[bb[0]]) : (sb[bb[17]] = "", (sb[bb[0]] & bb[84]) == bb[0] ? sb[bb[17]] = cb[bb[17]](sb[bb[0]] >> bb[23] & bb[38] | bb[31]) : (sb[bb[0]] & bb[85]) == bb[0] ? fb(kb(sb[bb[0]]), sb[bb[17]] = cb[bb[17]](sb[bb[0]] >> bb[24] & bb[41] | bb[37]), sb[bb[17]] += Wb(sb[bb[0]], bb[23])) : (sb[bb[0]] & bb[86]) == bb[0] && fb(sb[bb[17]] = cb[bb[17]](sb[bb[0]] >> bb[44] & bb[43] | bb[40]), sb[bb[17]] += Wb(sb[bb[0]], bb[24]), sb[bb[17]] += Wb(sb[bb[0]], bb[23])), sb[bb[17]] += cb[bb[17]](sb[bb[0]] & bb[25] | bb[26]), sb[bb[17]])
-              }
-
-              function Tb(...sb) {
-                if (sb[bb[8]] = bb[0], cb[bb[12]] >= cb[-bb[52]]) throw Error(bb[34]);
-                if (fb(sb[bb[17]] = cb[bb[14]][cb[bb[12]]] & bb[36], cb[bb[12]]++), (sb[bb[17]] & bb[31]) == bb[26]) return sb[bb[17]] & bb[25];
-                throw Error(bb[39])
-              }
-
-              function Ub(...sb) {
-                if (fb(sb[bb[8]] = bb[0], sb[bb[33]] = bb[11], sb[bb[10]] = bb[11], sb[-bb[89]] = bb[11], sb[bb[7]] = bb[11], sb[bb[88]] = bb[11]), cb[bb[12]] > cb[-bb[52]]) throw Error(bb[34]);
-                if (cb[bb[12]] == cb[-bb[52]]) return bb[45];
-                if (fb(sb[bb[33]] = cb[bb[14]][cb[bb[12]]] & bb[36], cb[bb[12]]++), (sb[bb[33]] & bb[26]) == bb[0]) return sb[bb[33]];
-                if ((sb[bb[33]] & bb[37]) == bb[31]) {
-                  if (fb(sb[bb[10]] = Tb(), sb[bb[88]] = (sb[bb[33]] & bb[38]) << bb[23] | sb[bb[10]]), sb[bb[88]] >= bb[26]) return sb[bb[88]];
-                  throw Error(bb[39])
-                }
-                if ((sb[bb[33]] & bb[40]) == bb[37]) {
-                  if (fb(sb[bb[10]] = Tb(), sb[-bb[89]] = Tb(), sb[bb[88]] = (sb[bb[33]] & bb[41]) << bb[24] | sb[bb[10]] << bb[23] | sb[-bb[89]]), sb[bb[88]] >= bb[90]) return kb(sb[bb[88]]), sb[bb[88]];
-                  throw Error(bb[39])
-                }
-                if ((sb[bb[33]] & bb[91]) == bb[40] && (fb(sb[bb[10]] = Tb(), sb[-bb[89]] = Tb(), sb[bb[7]] = Tb(), sb[bb[88]] = (sb[bb[33]] & bb[43]) << bb[44] | sb[bb[10]] << bb[24] | sb[-bb[89]] << bb[23] | sb[bb[7]]), sb[bb[88]] >= bb[19] && sb[bb[88]] <= bb[92])) return sb[bb[88]];
-                throw Error(bb[93])
-              }
-              fb(cb[bb[8]] = bb[10], cb[bb[17]] = String.fromCharCode), fb(cb[bb[14]] = bb[11], cb[-bb[52]] = bb[11], cb[bb[12]] = bb[11]), fb(cb[bb[0]].version = bb[94], cb[bb[0]].encode = function(...cb) {
-                for (fb(cb[bb[8]] = bb[10], cb[bb[17]] = sb(cb[bb[0]]), cb[bb[12]] = cb[bb[17]].length, cb[bb[7]] = -bb[10], cb[bb[33]] = bb[11], cb[bb[87]] = ""); ++cb[bb[7]] < cb[bb[12]];) fb(cb[bb[33]] = cb[bb[17]][cb[bb[7]]], cb[bb[87]] += ab(cb[bb[33]]));
-                return cb[bb[87]]
-              }, cb[bb[0]].decode = function(...kb) {
-                for (fb(kb[bb[8]] = bb[10], cb[bb[14]] = sb(kb[bb[0]]), cb[-bb[52]] = cb[bb[14]].length, cb[bb[12]] = bb[0], kb[bb[17]] = [], kb[bb[12]] = bb[11]);
-                  (kb[bb[12]] = Ub()) !== bb[45];) kb[bb[17]].push(kb[bb[12]]);
-                return function(...sb) {
-                  for (fb(sb[bb[8]] = bb[10], sb[bb[10]] = sb[bb[0]].length, sb[bb[9]] = -bb[10], sb[bb[32]] = bb[11], sb[bb[75]] = ""); ++sb[bb[9]] < sb[bb[10]];) sb[bb[32]] = sb[bb[0]][sb[bb[9]]], sb[bb[32]] > bb[62] && fb(sb[bb[32]] -= bb[19], sb[bb[75]] += cb[bb[17]](sb[bb[32]] >>> bb[20] & bb[16] | bb[21]), sb[bb[32]] = bb[22] | sb[bb[32]] & bb[16]), sb[bb[75]] += cb[bb[17]](sb[bb[32]]);
-                  return sb[bb[75]]
-                }(kb[bb[17]])
-              })
-            }(typeof exports === bb[95] + bb[96] ? this.utf8 = {} : exports)
-          }
-          "uAFiQr" in cb && Wb()
-        }
+        } catch {}
       }
     })();
-    var tk = sb(40323),
-      yk = sb(1767);
-    const Pk = 1e3 * tk.e.seatReservationSeconds - 3e3;
-    class Dk {
+    var NA = Ub(40012),
+      WA = Ub(1704);
+    const HA = 1e3 * NA.b.seatReservationSeconds - 3e3;
+    class IA {
       constructor(bb) {
-        var cb, sb, kb, Wb;
-        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this.seat = void 0, this.follow = void 0, this.wallNow = void 0, this.monoNow = void 0, this.wallAt = void 0, this.monoAt = void 0, this.sleep = void 0, this.answeredAt = null, this.posts = 0, this.refusals = 0, this.request = "pending", this.use = "unused", this.wallNow = null !== (cb = ab.wallNow) && void 0 !== cb ? cb : Date.now, this.monoNow = null !== (sb = ab.monoNow) && void 0 !== sb ? sb : () => performance.now(), this.wallAt = this.wallNow(), this.monoAt = this.monoNow(), this.sleep = null !== (kb = ab.sleep) && void 0 !== kb ? kb : yk.e, this.follow = new Nc.b(ab.signal);
-        const Tb = null !== (Wb = ab.fetch) && void 0 !== Wb ? Wb : fetch;
-        this.seat = (0, Xs.k)(bb.endpoint, bb.roomName, bb.joinOptions, {
+        var ab, Ub, Ab, Mb;
+        let Tb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this.seat = void 0, this.follow = void 0, this.wallNow = void 0, this.monoNow = void 0, this.wallAt = void 0, this.monoAt = void 0, this.sleep = void 0, this.answeredAt = null, this.posts = 0, this.refusals = 0, this.request = "pending", this.use = "unused", this.wallNow = null !== (ab = Tb.wallNow) && void 0 !== ab ? ab : Date.now, this.monoNow = null !== (Ub = Tb.monoNow) && void 0 !== Ub ? Ub : () => performance.now(), this.wallAt = this.wallNow(), this.monoAt = this.monoNow(), this.sleep = null !== (Ab = Tb.sleep) && void 0 !== Ab ? Ab : WA.b, this.follow = new Da.b(Tb.signal);
+        const Eb = null !== (Mb = Tb.fetch) && void 0 !== Mb ? Mb : fetch;
+        this.seat = (0, PU.g)(bb.endpoint, bb.roomName, bb.joinOptions, {
           sleep: this.sleep,
           signal: this.follow.signal,
-          fetch: (bb, cb) => (this.posts++, this.wallAt = this.wallNow(), this.monoAt = this.monoNow(), Tb(bb, cb)),
+          fetch: (bb, ab) => (this.posts++, this.wallAt = this.wallNow(), this.monoAt = this.monoNow(), Eb(bb, ab)),
           onRefusal: () => {
             this.refusals++
           }
@@ -3686,42 +3470,42 @@ export const modules = {
       }
       async take(bb) {
         if ("rematched" === this.use) return;
-        (0, Nc.j)(bb);
-        const cb = "pending" !== this.request,
-          sb = () => {
-            this.abort((0, Nc.f)(bb))
+        (0, Da.h)(bb);
+        const ab = "pending" !== this.request,
+          Ub = () => {
+            this.abort((0, Da.e)(bb))
           };
-        let kb;
-        null === bb || void 0 === bb || bb.addEventListener("abort", sb, {
+        let Ab;
+        null === bb || void 0 === bb || bb.addEventListener("abort", Ub, {
           once: !0
         });
         try {
-          kb = await this.seat
-        } catch (Wb) {
-          if ((0, Nc.j)(bb), !cb) throw Wb;
+          Ab = await this.seat
+        } catch (Mb) {
+          if ((0, Da.h)(bb), !ab) throw Mb;
           return void(this.use = "lost")
         } finally {
-          null === bb || void 0 === bb || bb.removeEventListener("abort", sb)
+          null === bb || void 0 === bb || bb.removeEventListener("abort", Ub)
         }
-        if ((0, Nc.j)(bb), !(this.ageMs() > Pk)) return this.use = "taken", kb;
+        if ((0, Da.h)(bb), !(this.ageMs() > HA)) return this.use = "taken", Ab;
         this.use = "renewed"
       }
-      async reserveInstead(bb, cb) {
+      async reserveInstead(bb, ab) {
         try {
           return await bb()
-        } catch (sb) {
-          const Wb = this.holdLeftMs();
-          if (!(sb instanceof Eb.k) || sb.code !== kb.d.duplicateLobbyNameError.code || 0 === Wb) throw sb;
-          return await this.sleep(Wb + 500, cb), bb()
+        } catch (Ub) {
+          const Mb = this.holdLeftMs();
+          if (!(Ub instanceof hb.n) || Ub.code !== Ab.b.duplicateLobbyNameError.code || 0 === Mb) throw Ub;
+          return await this.sleep(Mb + 500, ab), bb()
         }
       }
       release() {
         const {
           request: bb,
-          use: cb
-        } = this, sb = this.holdsNoSeat();
-        return this.abort(), "taken" === cb || sb ? null : {
-          unused: "unused" === cb ? "abandoned" : cb,
+          use: ab
+        } = this, Ub = this.holdsNoSeat();
+        return this.abort(), "taken" === ab || Ub ? null : {
+          unused: "unused" === ab ? "abandoned" : ab,
           answered: "answered" === bb,
           heldMs: Math.round(this.ageMs())
         }
@@ -3732,34 +3516,34 @@ export const modules = {
       holdLeftMs() {
         var bb;
         if ("taken" === this.use || this.holdsNoSeat()) return 0;
-        const cb = null !== (bb = this.answeredAt) && void 0 !== bb ? bb : {
+        const ab = null !== (bb = this.answeredAt) && void 0 !== bb ? bb : {
             wall: this.wallAt,
             mono: this.monoAt
           },
-          sb = Math.max(this.wallNow() - cb.wall, this.monoNow() - cb.mono);
-        return Math.max(0, 1e3 * tk.e.seatReservationSeconds - sb)
+          Ub = Math.max(this.wallNow() - ab.wall, this.monoNow() - ab.mono);
+        return Math.max(0, 1e3 * NA.b.seatReservationSeconds - Ub)
       }
       ageMs() {
         return Math.max(this.wallNow() - this.wallAt, this.monoNow() - this.monoAt)
       }
       abort(bb) {
-        (0, Nc.h)(this.follow.controller, bb)
+        (0, Da.f)(this.follow.controller, bb)
       }
     }
-    var Ek = sb(1832),
-      ik = sb(40428);
-    const Ok = new Uint8Array(0);
-    class Gk {
+    var dA = Ub(1786),
+      FA = Ub(40117);
+    const hA = new Uint8Array(0);
+    class GA {
       constructor(bb) {
         if (this.options = bb, this.slots = [], this.createWorker = null, this.stopped = !1, this.pool = [], this.failedJobs = 0, this.memoryFailureCounted = !1, this.faultsReported = new Set, this.refusals = new Map, this.heapRefusals = 0, null === bb.module) return this.stopped = !0, void bb.fail("no wasm module for the meshing workers");
         bb.loadWorkers().then((bb => {
           let {
-            create: cb,
-            count: sb
+            create: ab,
+            count: Ub
           } = bb;
           if (!this.stopped) {
-            this.createWorker = cb;
-            for (let bb = 0; bb < sb; bb++) this.slots.push({
+            this.createWorker = ab;
+            for (let bb = 0; bb < Ub; bb++) this.slots.push({
               worker: null,
               started: !1,
               watch: null,
@@ -3769,29 +3553,29 @@ export const modules = {
               gone: !1,
               goneFor: null
             });
-            for (let bb = 0; bb < sb; bb++) this.start(bb)
+            for (let bb = 0; bb < Ub; bb++) this.start(bb)
           }
         }), (bb => {
           this.stopped || (this.stop(), this.options.fail("the meshing workers' code could not load", bb))
         }))
       }
-      take(bb, cb, sb) {
-        const kb = this.slots[cb];
-        if (bb === zc.$d.Retire) {
-          var Wb, ab, Tb;
-          if (kb && !kb.gone) null === (Wb = kb.worker) || void 0 === Wb || Wb.terminate(), kb.worker = null, kb.started = !1, null === (ab = (Tb = this.options).onMemoryGone) || void 0 === ab || ab.call(Tb, cb), this.giveUp(cb, "had its tables trap twice", "every meshing worker's tables trapped twice");
+      take(bb, ab, Ub) {
+        const Ab = this.slots[ab];
+        if (bb === Ka.Dd.Retire) {
+          var Mb, Tb, Eb;
+          if (Ab && !Ab.gone) null === (Mb = Ab.worker) || void 0 === Mb || Mb.terminate(), Ab.worker = null, Ab.started = !1, null === (Tb = (Eb = this.options).onMemoryGone) || void 0 === Tb || Tb.call(Eb, ab), this.giveUp(ab, "had its tables trap twice", "every meshing worker's tables trapped twice");
           return
         }
-        const Ub = null === kb || void 0 === kb ? void 0 : kb.worker;
-        if (!Ub || !kb.started) return;
-        const Ib = sb.byteLength;
-        let Hb = null;
-        bb === zc.$d.Mesh && kb.heapRetries > 0 && (kb.heapRetries--, Hb = this.pooled(Ib, !0)), Hb ??= this.buffer(Ib), new Uint8Array(Hb, 0, Ib).set(sb), Ub.postMessage({
+        const Yb = null === Ab || void 0 === Ab ? void 0 : Ab.worker;
+        if (!Yb || !Ab.started) return;
+        const Bb = Ub.byteLength;
+        let eb = null;
+        bb === Ka.Dd.Mesh && Ab.heapRetries > 0 && (Ab.heapRetries--, eb = this.pooled(Bb, !0)), eb ??= this.buffer(Bb), new Uint8Array(eb, 0, Bb).set(Ub), Yb.postMessage({
           type: "job",
           kind: bb,
-          bytes: Hb,
-          len: Ib
-        }, [Hb])
+          bytes: eb,
+          len: Bb
+        }, [eb])
       }
       takeFailedMeshJobs() {
         const bb = this.failedJobs;
@@ -3802,278 +3586,278 @@ export const modules = {
       }
       stop() {
         this.stopped = !0;
-        for (const cb of this.slots) {
+        for (const ab of this.slots) {
           var bb;
-          Kk(cb), null === (bb = cb.worker) || void 0 === bb || bb.terminate(), cb.worker = null, cb.started = !1
+          QA(ab), null === (bb = ab.worker) || void 0 === bb || bb.terminate(), ab.worker = null, ab.started = !1
         }
       }
       start(bb) {
-        const cb = this.slots[bb],
+        const ab = this.slots[bb],
           {
-            module: sb
+            module: Ub
           } = this.options,
-          kb = this.createWorker;
-        if (this.stopped || cb.gone || null === sb || null === kb) return;
-        if (cb.startsWithoutResult >= 3) return void this.giveUp(bb, "failed to start 3 times in a row", "no meshing worker would start");
-        let Wb;
-        cb.startsWithoutResult++;
+          Ab = this.createWorker;
+        if (this.stopped || ab.gone || null === Ub || null === Ab) return;
+        if (ab.startsWithoutResult >= 3) return void this.giveUp(bb, "failed to start 3 times in a row", "no meshing worker would start");
+        let Mb;
+        ab.startsWithoutResult++;
         try {
-          Wb = kb()
-        } catch (ab) {
-          return console.warn(`[bloxd-wasm-client] meshing worker ${bb} did not start`, ab), void this.start(bb)
+          Mb = Ab()
+        } catch (Tb) {
+          return console.warn(`[bloxd-wasm-client] meshing worker ${bb} did not start`, Tb), void this.start(bb)
         }
-        cb.worker = Wb, Wb.onmessage = sb => {
+        ab.worker = Mb, Mb.onmessage = Ub => {
           let {
-            data: kb
-          } = sb;
-          cb.worker === Wb && this.onReply(bb, kb)
-        }, Wb.onmessageerror = () => {
-          cb.worker === Wb && this.lose(bb, "a reply could not be read")
-        }, Wb.onerror = sb => {
-          sb.preventDefault(), cb.worker === Wb && this.lose(bb, sb.message || "its script failed")
+            data: Ab
+          } = Ub;
+          ab.worker === Mb && this.onReply(bb, Ab)
+        }, Mb.onmessageerror = () => {
+          ab.worker === Mb && this.lose(bb, "a reply could not be read")
+        }, Mb.onerror = Ub => {
+          Ub.preventDefault(), ab.worker === Mb && this.lose(bb, Ub.message || "its script failed")
         };
         try {
-          Wb.postMessage({
+          Mb.postMessage({
             type: "start",
-            module: sb
+            module: Ub
           })
-        } catch (ab) {
-          return console.warn(`[bloxd-wasm-client] meshing worker ${bb} could not be sent the module`, ab), Wb.terminate(), cb.worker = null, void this.start(bb)
+        } catch (Tb) {
+          return console.warn(`[bloxd-wasm-client] meshing worker ${bb} could not be sent the module`, Tb), Mb.terminate(), ab.worker = null, void this.start(bb)
         }
-        cb.watch = new ik.g(ik.c, (cb => {
-          this.lose(bb, (0, ik.i)(cb), (() => {
-            this.options.onStartTimeout(cb)
+        ab.watch = new FA.l(FA.e, (ab => {
+          this.lose(bb, (0, FA.o)(ab), (() => {
+            this.options.onStartTimeout(ab)
           }))
         }), void 0, this.options.visibility)
       }
-      onReply(bb, cb) {
-        const sb = this.slots[bb];
-        switch (cb.type) {
+      onReply(bb, ab) {
+        const Ub = this.slots[bb];
+        switch (ab.type) {
           case "started":
-            Kk(sb), sb.started = !0, this.options.write(0, zc.Zd.WorkerStarted, 0, bb, 0, Ok);
+            QA(Ub), Ub.started = !0, this.options.write(0, Ka.Cd.WorkerStarted, 0, bb, 0, hA);
             break;
           case "lost":
-            this.lose(bb, cb.reason);
+            this.lose(bb, ab.reason);
             break;
           case "memory":
-            var kb, Wb;
-            null === (kb = (Wb = this.options).onMemoryStats) || void 0 === kb || kb.call(Wb, bb, cb.stats);
+            var Ab, Mb;
+            null === (Ab = (Mb = this.options).onMemoryStats) || void 0 === Ab || Ab.call(Mb, bb, ab.stats);
             break;
           case "result": {
-            const kb = cb.status === zc.tb.Trapped;
-            if (0 !== cb.jobId) {
-              if (kb) this.countFailedJob(cb.outOfMemory, "light_trap", cb.trap);
-              else if (sb.startsWithoutResult = 0, sb.trapsWithoutResult = 0, cb.status === zc.tb.Refused) {
-                const sb = function(bb) {
+            const Ab = ab.status === Ka.sb.Trapped;
+            if (0 !== ab.jobId) {
+              if (Ab) this.countFailedJob(ab.outOfMemory, "light_trap", ab.trap);
+              else if (Ub.startsWithoutResult = 0, Ub.trapsWithoutResult = 0, ab.status === Ka.sb.Refused) {
+                const Ub = function(bb) {
                   if (bb.byteLength < 32) return "(no reason)";
-                  const cb = new DataView(bb.buffer, bb.byteOffset, bb.byteLength),
-                    sb = Math.min(cb.getUint32(28, !0), bb.byteLength - 28 - 4);
-                  return (new TextDecoder).decode(bb.subarray(32, 32 + sb)).slice(0, 200)
-                }(new Uint8Array(cb.bytes, 0, cb.len));
-                this.countFailedJob(Ac.c.test(sb), "light_refused_input", sb), this.logRefusal(bb, sb)
+                  const ab = new DataView(bb.buffer, bb.byteOffset, bb.byteLength),
+                    Ub = Math.min(ab.getUint32(28, !0), bb.byteLength - 28 - 4);
+                  return (new TextDecoder).decode(bb.subarray(32, 32 + Ub)).slice(0, 200)
+                }(new Uint8Array(ab.bytes, 0, ab.len));
+                this.countFailedJob(ta.b.test(Ub), "light_refused_input", Ub), this.logRefusal(bb, Ub)
               }
-              cb.status === zc.tb.HeapRefused && (sb.heapRetries = Math.min(sb.heapRetries + 1, 4), this.logHeapRefusal(bb))
+              ab.status === Ka.sb.HeapRefused && (Ub.heapRetries = Math.min(Ub.heapRetries + 1, 4), this.logHeapRefusal(bb))
             }
-            if (this.options.write(cb.jobId, zc.Zd.JobResult, cb.status, bb, cb.workerUs, new Uint8Array(cb.bytes, 0, cb.len)), this.recycle(cb.bytes), cb.spare && this.recycle(cb.spare), !kb) break;
-            if (sb.startsWithoutResult = 0, 0 === cb.jobId) {
-              this.lose(bb, `the tables trapped its wasm: ${cb.trap}`);
+            if (this.options.write(ab.jobId, Ka.Cd.JobResult, ab.status, bb, ab.workerUs, new Uint8Array(ab.bytes, 0, ab.len)), this.recycle(ab.bytes), ab.spare && this.recycle(ab.spare), !Ab) break;
+            if (Ub.startsWithoutResult = 0, 0 === ab.jobId) {
+              this.lose(bb, `the tables trapped its wasm: ${ab.trap}`);
               break
             }
-            sb.trapsWithoutResult++;
-            const Wb = sb.trapsWithoutResult > 6;
-            sb.gone ||= Wb, this.lose(bb, `a job trapped its wasm: ${cb.trap}`), Wb && this.giveUp(bb, `trapped ${sb.trapsWithoutResult} jobs in a row`, "every meshing worker kept trapping");
+            Ub.trapsWithoutResult++;
+            const Mb = Ub.trapsWithoutResult > 6;
+            Ub.gone ||= Mb, this.lose(bb, `a job trapped its wasm: ${ab.trap}`), Mb && this.giveUp(bb, `trapped ${Ub.trapsWithoutResult} jobs in a row`, "every meshing worker kept trapping");
             break
           }
         }
       }
-      countFailedJob(bb, cb, sb) {
+      countFailedJob(bb, ab, Ub) {
         if (bb) {
           if (this.memoryFailureCounted) return;
           this.memoryFailureCounted = !0
-        } else this.faultsReported.has(cb) || (this.faultsReported.add(cb), this.options.onLightFault(cb, sb));
+        } else this.faultsReported.has(ab) || (this.faultsReported.add(ab), this.options.onLightFault(ab, Ub));
         this.failedJobs++
       }
-      logRefusal(bb, cb) {
-        var sb;
-        !this.refusals.has(cb) && this.refusals.size >= 16 && (cb = "(other reasons)");
-        const kb = (null !== (sb = this.refusals.get(cb)) && void 0 !== sb ? sb : 0) + 1;
-        this.refusals.set(cb, kb), (0, Ek.q)(kb) && console.warn(`[bloxd-wasm-client] meshing worker ${bb} refused a chunk (${kb} so far for this reason): ${cb}`)
+      logRefusal(bb, ab) {
+        var Ub;
+        !this.refusals.has(ab) && this.refusals.size >= 16 && (ab = "(other reasons)");
+        const Ab = (null !== (Ub = this.refusals.get(ab)) && void 0 !== Ub ? Ub : 0) + 1;
+        this.refusals.set(ab, Ab), (0, dA.w)(Ab) && console.warn(`[bloxd-wasm-client] meshing worker ${bb} refused a chunk (${Ab} so far for this reason): ${ab}`)
       }
       logHeapRefusal(bb) {
-        this.heapRefusals++, (0, Ek.q)(this.heapRefusals) && console.warn(`[bloxd-wasm-client] meshing worker ${bb} was refused memory for a chunk's mesh (${this.heapRefusals} so far)`)
+        this.heapRefusals++, (0, dA.w)(this.heapRefusals) && console.warn(`[bloxd-wasm-client] meshing worker ${bb} was refused memory for a chunk's mesh (${this.heapRefusals} so far)`)
       }
-      giveUp(bb, cb, sb) {
-        const kb = this.slots[bb];
-        if (kb.gone = !0, kb.goneFor = {
-            why: cb,
-            failure: sb
-          }, console.warn(`[bloxd-wasm-client] meshing worker ${bb} ${cb}: giving up on it`), this.slots.every((bb => bb.gone))) {
+      giveUp(bb, ab, Ub) {
+        const Ab = this.slots[bb];
+        if (Ab.gone = !0, Ab.goneFor = {
+            why: ab,
+            failure: Ub
+          }, console.warn(`[bloxd-wasm-client] meshing worker ${bb} ${ab}: giving up on it`), this.slots.every((bb => bb.gone))) {
           this.stop();
           const bb = new Set(this.slots.map((bb => {
-              var cb;
-              return null === (cb = bb.goneFor) || void 0 === cb ? void 0 : cb.failure
+              var ab;
+              return null === (ab = bb.goneFor) || void 0 === ab ? void 0 : ab.failure
             }))),
-            cb = this.slots.map(((bb, cb) => {
-              var sb, kb;
-              return `worker ${cb} ${null!==(sb=null===(kb=bb.goneFor)||void 0===kb?void 0:kb.why)&&void 0!==sb?sb:"went"}`
+            ab = this.slots.map(((bb, ab) => {
+              var Ub, Ab;
+              return `worker ${ab} ${null!==(Ub=null===(Ab=bb.goneFor)||void 0===Ab?void 0:Ab.why)&&void 0!==Ub?Ub:"went"}`
             }));
-          this.options.fail(1 === bb.size ? sb : `no meshing worker is left (${cb.join(", ")})`)
+          this.options.fail(1 === bb.size ? Ub : `no meshing worker is left (${ab.join(", ")})`)
         }
       }
-      lose(bb, cb, sb) {
-        var kb, Wb, ab;
-        const Tb = this.slots[bb];
-        console.warn(`[bloxd-wasm-client] meshing worker ${bb} was lost: ${cb}`), Kk(Tb), null === (kb = Tb.worker) || void 0 === kb || kb.terminate(), Tb.worker = null, Tb.heapRetries = 0, null === (Wb = (ab = this.options).onMemoryGone) || void 0 === Wb || Wb.call(ab, bb), this.stopped || (sb ? sb() : this.options.onWorkerLost(cb), Tb.started && (Tb.started = !1, this.options.write(0, zc.Zd.WorkerLost, 0, bb, 0, Ok)), this.start(bb))
+      lose(bb, ab, Ub) {
+        var Ab, Mb, Tb;
+        const Eb = this.slots[bb];
+        console.warn(`[bloxd-wasm-client] meshing worker ${bb} was lost: ${ab}`), QA(Eb), null === (Ab = Eb.worker) || void 0 === Ab || Ab.terminate(), Eb.worker = null, Eb.heapRetries = 0, null === (Mb = (Tb = this.options).onMemoryGone) || void 0 === Mb || Mb.call(Tb, bb), this.stopped || (Ub ? Ub() : this.options.onWorkerLost(ab), Eb.started && (Eb.started = !1, this.options.write(0, Ka.Cd.WorkerLost, 0, bb, 0, hA)), this.start(bb))
       }
       buffer(bb) {
-        var cb;
-        return null !== (cb = this.pooled(bb)) && void 0 !== cb ? cb : new ArrayBuffer(Math.max(16384, bb))
+        var ab;
+        return null !== (ab = this.pooled(bb)) && void 0 !== ab ? ab : new ArrayBuffer(Math.max(16384, bb))
       }
       pooled(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          sb = -1;
-        for (let Wb = 0; Wb < this.pool.length; Wb++) {
-          const kb = this.pool[Wb].byteLength;
-          kb >= bb && (sb < 0 || (cb ? kb > this.pool[sb].byteLength : kb < this.pool[sb].byteLength)) && (sb = Wb)
+        let ab = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          Ub = -1;
+        for (let Mb = 0; Mb < this.pool.length; Mb++) {
+          const Ab = this.pool[Mb].byteLength;
+          Ab >= bb && (Ub < 0 || (ab ? Ab > this.pool[Ub].byteLength : Ab < this.pool[Ub].byteLength)) && (Ub = Mb)
         }
-        if (sb < 0) return null;
-        const kb = this.pool[sb];
-        return this.pool[sb] = this.pool[this.pool.length - 1], this.pool.pop(), kb
+        if (Ub < 0) return null;
+        const Ab = this.pool[Ub];
+        return this.pool[Ub] = this.pool[this.pool.length - 1], this.pool.pop(), Ab
       }
       recycle(bb) {
         this.pool.length < 4 * this.slots.length && bb.byteLength > 0 && bb.byteLength <= 1048576 && this.pool.push(bb)
       }
     }
 
-    function Kk(bb) {
-      var cb;
-      null === (cb = bb.watch) || void 0 === cb || cb.cancel(), bb.watch = null
+    function QA(bb) {
+      var ab;
+      null === (ab = bb.watch) || void 0 === ab || ab.cancel(), bb.watch = null
     }
-    var Zk = sb(40383),
-      zk = sb(40375),
-      qk = sb(40433),
-      dk = sb(40439),
-      Ak = (sb(40223), sb(40447)),
-      wk = sb(40406);
+    var qA = Ub(40062),
+      uA = Ub(40054),
+      rA = Ub(40126),
+      KA = Ub(40133),
+      oA = (Ub(39921), Ub(40136)),
+      lA = Ub(40092);
 
-    function rk(bb) {
-      const cb = new Uint8Array(bb.length >> 2);
-      for (let sb = 0; sb < cb.length; sb++) cb[sb] = bb[4 * sb + 3];
-      return cb
+    function tA(bb) {
+      const ab = new Uint8Array(bb.length >> 2);
+      for (let Ub = 0; Ub < ab.length; Ub++) ab[Ub] = bb[4 * Ub + 3];
+      return ab
     }
-    async function Sk(bb) {
-      const cb = await (0, Ak.j)(bb);
+    async function wA(bb) {
+      const ab = await (0, oA.j)(bb);
       try {
         const {
           width: bb,
-          height: sb,
-          pixels: kb
-        } = (0, wk.m)(cb);
+          height: Ub,
+          pixels: Ab
+        } = (0, lA.q)(ab);
         return {
           width: bb,
-          height: sb,
-          alpha: rk(kb)
+          height: Ub,
+          alpha: tA(Ab)
         }
       } finally {
-        cb.close()
+        ab.close()
       }
     }
-    class Rk {
-      constructor(bb, cb, sb) {
-        let kb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Sk;
-        this.session = bb, this.sources = cb, this.warn = sb, this.load = kb, this.nextPoll = 0, this.Em = !1, this.warned = new Set
+    class sA {
+      constructor(bb, ab, Ub) {
+        let Ab = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : wA;
+        this.session = bb, this.sources = ab, this.warn = Ub, this.load = Ab, this.nextPoll = 0, this.cX = !1, this.warned = new Set
       }
       drain(bb) {
         if (bb < this.nextPoll) return;
         this.nextPoll = bb + 250;
-        const cb = this.session.sunShadowWantedTextures();
-        if (cb)
-          for (let sb = 0; sb + 1 < cb.length; sb += 2) this.hand(cb[sb], cb[sb + 1]);
-        for (const sb of this.session.takeSunShadowWarnings()) this.warn(sb)
+        const ab = this.session.sunShadowWantedTextures();
+        if (ab)
+          for (let Ub = 0; Ub + 1 < ab.length; Ub += 2) this.hand(ab[Ub], ab[Ub + 1]);
+        for (const Ub of this.session.takeSunShadowWarnings()) this.warn(Ub)
       }
       dispose() {
-        this.Em = !0
+        this.cX = !0
       }
-      async hand(bb, cb) {
-        var sb, kb, Wb, ab, Tb;
-        let Ub, Ib = null;
+      async hand(bb, ab) {
+        var Ub, Ab, Mb, Tb, Eb;
+        let Yb, Bb = null;
         try {
-          if (Ib = await this.sources.blockImageUrl(bb), null === Ib) throw new Error(`block image ${bb} has no URL`);
-          Ub = await this.load(Ib)
-        } catch (fb) {
-          var Hb;
-          const cb = null !== (Hb = Ib) && void 0 !== Hb ? Hb : `block image ${bb}`;
-          this.warned.has(cb) || (this.warned.add(cb), this.warn(`sun shadow plane texture ${cb} didn't load: its blocks cast no shadow`, fb))
+          if (Bb = await this.sources.blockImageUrl(bb), null === Bb) throw new Error(`block image ${bb} has no URL`);
+          Yb = await this.load(Bb)
+        } catch (vb) {
+          var eb;
+          const ab = null !== (eb = Bb) && void 0 !== eb ? eb : `block image ${bb}`;
+          this.warned.has(ab) || (this.warned.add(ab), this.warn(`sun shadow plane texture ${ab} didn't load: its blocks cast no shadow`, vb))
         }
-        this.Em || this.session.setSunShadowTexture(bb, cb, null !== (sb = null === (kb = Ub) || void 0 === kb ? void 0 : kb.width) && void 0 !== sb ? sb : 0, null !== (Wb = null === (ab = Ub) || void 0 === ab ? void 0 : ab.height) && void 0 !== Wb ? Wb : 0, null === (Tb = Ub) || void 0 === Tb ? void 0 : Tb.alpha)
+        this.cX || this.session.setSunShadowTexture(bb, ab, null !== (Ub = null === (Ab = Yb) || void 0 === Ab ? void 0 : Ab.width) && void 0 !== Ub ? Ub : 0, null !== (Mb = null === (Tb = Yb) || void 0 === Tb ? void 0 : Tb.height) && void 0 !== Mb ? Mb : 0, null === (Eb = Yb) || void 0 === Eb ? void 0 : Eb.alpha)
       }
     }
-    var vk = sb(40388),
-      Fk = sb(40453),
-      xk = sb(40461),
-      jk = sb(40391),
-      pk = sb(40396),
-      bW = sb(8960),
-      cW = sb(8827),
-      sW = sb(40474);
-    const kW = 8192,
-      WW = new Set;
-    const aW = new Set([...cW.c, "sceneDownload"]);
-    var TW = sb(40238),
-      UW = sb(40129);
-    const IW = new Uint8Array(0);
-    let HW = null;
+    var gA = Ub(40066),
+      CA = Ub(40140),
+      VA = Ub(40143),
+      OA = Ub(40073),
+      cA = Ub(40076),
+      JA = Ub(8951),
+      nA = Ub(8797),
+      SA = Ub(40153);
+    const bM = 8192,
+      aM = new Set;
+    const UM = new Set([...nA.e, "sceneDownload"]);
+    var AM = Ub(39940),
+      MM = Ub(39812);
+    const TM = new Uint8Array(0);
+    let EM = null;
 
-    function fW(bb) {
+    function YM(bb) {
       return {
-        aux: zc.cc.AdStart | (bb ? zc.cc.PreventMovement : 0),
-        payload: IW
+        aux: Ka.Qb.AdStart | (bb ? Ka.Qb.PreventMovement : 0),
+        payload: TM
       }
     }
-    var MW = sb(2644),
-      XW = sb(2647);
-    const nW = "__bloxdSceneCapture";
-    var mW = sb(1760),
-      lW = sb(2706);
-    let QW = null,
-      eW = null,
-      CW = null,
-      NW = !1;
+    var BM = Ub(2579),
+      eM = Ub(2583);
+    const vM = "__bloxdSceneCapture";
+    var LM = Ub(1692),
+      PM = Ub(2643);
+    let XM = null,
+      jM = null,
+      RM = null,
+      kM = !1;
 
-    function VW() {
-      QW ??= performance.now()
+    function yM() {
+      XM ??= performance.now()
     }
-    var LW = sb(40482);
-    class uW {
+    var ZM = Ub(40161);
+    class DM {
       constructor(bb) {
-        var cb, sb;
+        var ab, Ub;
         this.host = bb, this.requested = null, this.landed = null, this.confirm = null, this.channel = void 0, this.oneShotStored = !0, this.startRead = void 0, this.landRequest = () => {}, this.landing = new Promise((bb => {
           this.landRequest = bb
         })), this.follow = bb => {
-          let cb = bb;
+          let ab = bb;
           return Promise.race([this.startRead, this.landing]).then((async () => {
-            const bb = null === this.requested && null !== cb;
-            var sb;
-            bb && (null === (sb = cb) || void 0 === sb || sb(null));
-            const kb = await this.landing;
-            var Wb;
-            null === kb && bb || (null === (Wb = cb) || void 0 === Wb || Wb(kb))
+            const bb = null === this.requested && null !== ab;
+            var Ub;
+            bb && (null === (Ub = ab) || void 0 === Ub || Ub(null));
+            const Ab = await this.landing;
+            var Mb;
+            null === Ab && bb || (null === (Mb = ab) || void 0 === Mb || Mb(Ab))
           })), () => {
-            cb = null
+            ab = null
           }
-        }, this.startRead = (sb = bb.store, sb.keys().then((bb => ({
-          own: bb.includes(es.b),
-          oneShot: bb.includes(es.f)
+        }, this.startRead = (Ub = bb.store, Ub.keys().then((bb => ({
+          own: bb.includes(yU.b),
+          oneShot: bb.includes(yU.e)
         })), (() => ({
           own: !0,
           oneShot: !0
         })))).then((bb => {
           let {
-            own: cb,
-            oneShot: sb
+            own: ab,
+            oneShot: Ub
           } = bb;
-          this.oneShotStored = sb, (cb || sb) && this.request()
-        })), this.channel = (null !== (cb = bb.openChannel) && void 0 !== cb ? cb : es.q)(), null !== this.channel && (this.channel.onmessage = () => {
+          this.oneShotStored = Ub, (ab || Ub) && this.request()
+        })), this.channel = (null !== (ab = bb.openChannel) && void 0 !== ab ? ab : yU.r)(), null !== this.channel && (this.channel.onmessage = () => {
           this.request()
         })
       }
@@ -4081,12 +3865,12 @@ export const modules = {
         var bb;
         if (null !== this.requested) return this.requested;
         null === (bb = this.channel) || void 0 === bb || bb.close(), this.channel = null;
-        const cb = this.oneShotStored;
-        return this.requested = function(bb, cb, sb) {
-          return new Promise((cb => {
-            cb(bb())
-          })).catch((bb => (null !== cb && (0, es.m)(cb), sb(bb), null)))
-        }((() => this.host.load(cb).then((bb => (bb.setGamePackConfirm(this.confirm), this.landed = bb, bb)))), cb ? this.host.store : null, this.host.lm), this.landRequest(this.requested), this.requested
+        const ab = this.oneShotStored;
+        return this.requested = function(bb, ab, Ub) {
+          return new Promise((ab => {
+            ab(bb())
+          })).catch((bb => (null !== ab && (0, yU.m)(ab), Ub(bb), null)))
+        }((() => this.host.load(ab).then((bb => (bb.setGamePackConfirm(this.confirm), this.landed = bb, bb)))), ab ? this.host.store : null, this.host.GX), this.landRequest(this.requested), this.requested
       }
       loaded() {
         return this.landed
@@ -4098,36 +3882,36 @@ export const modules = {
         }))
       }
       setGamePackConfirm(bb) {
-        var cb;
-        this.confirm = bb, null === (cb = this.landed) || void 0 === cb || cb.setGamePackConfirm(bb)
+        var ab;
+        this.confirm = bb, null === (ab = this.landed) || void 0 === ab || ab.setGamePackConfirm(bb)
       }
     }
-    var YW = sb(36139);
-    const hW = 216 * YW.h,
-      JW = 92 * YW.d,
-      gW = 64 * YW.h,
-      BW = 16 * YW.h;
+    var zM = Ub(35921);
+    const xM = 216 * zM.g,
+      iM = 92 * zM.e,
+      fM = 64 * zM.g,
+      mM = 16 * zM.g;
 
-    function tW() {
-      var bb, cb;
-      return null !== (bb = null === (cb = performance.memory) || void 0 === cb ? void 0 : cb.yC) && void 0 !== bb ? bb : null
+    function pM() {
+      var bb, ab;
+      return null !== (bb = null === (ab = performance.memory) || void 0 === ab ? void 0 : ab.Iy) && void 0 !== bb ? bb : null
     }
-    class yW {
-      constructor(bb, cb) {
-        this.budgetBytes = bb, this.reads = cb, this.estimate = null, this.shedAt = null
+    class NM {
+      constructor(bb, ab) {
+        this.budgetBytes = bb, this.reads = ab, this.estimate = null, this.shedAt = null
       }
       read(bb) {
-        var cb;
-        const sb = this.reads.storedChunks(),
-          kb = this.reads.gpuBytes(),
-          Wb = Math.max(null !== (cb = this.reads.jsHeapBytes()) && void 0 !== cb ? cb : 0, gW),
-          ab = hW + bb + Wb + kb + sb * JW;
+        var ab;
+        const Ub = this.reads.storedChunks(),
+          Ab = this.reads.gpuBytes(),
+          Mb = Math.max(null !== (ab = this.reads.jsHeapBytes()) && void 0 !== ab ? ab : 0, fM),
+          Tb = xM + bb + Mb + Ab + Ub * iM;
         this.estimate = {
           wasmBytes: bb,
-          jsHeapBytes: Wb,
-          gpuBytes: kb,
-          storedChunks: sb,
-          totalBytes: ab
+          jsHeapBytes: Mb,
+          gpuBytes: Ab,
+          storedChunks: Ub,
+          totalBytes: Tb
         }
       }
       last() {
@@ -4136,145 +3920,145 @@ export const modules = {
       takeShed() {
         const {
           estimate: bb,
-          budgetBytes: cb,
-          shedAt: sb
+          budgetBytes: ab,
+          shedAt: Ub
         } = this;
-        return !(null === bb || null === cb || bb.totalBytes < cb || null !== sb && bb.totalBytes < sb + BW) && (this.shedAt = bb.totalBytes, !0)
+        return !(null === bb || null === ab || bb.totalBytes < ab || null !== Ub && bb.totalBytes < Ub + mM) && (this.shedAt = bb.totalBytes, !0)
       }
       describe() {
         const {
           estimate: bb,
-          budgetBytes: cb
+          budgetBytes: ab
         } = this;
-        return null === bb ? null : `estimate ${(0,YW.k)(bb.totalBytes)} MiB of budget ${null===cb?"none":(0,YW.k)(cb)}: wasm ${(0,YW.k)(bb.wasmBytes)} js ${(0,YW.k)(bb.jsHeapBytes)} gpu ${(0,YW.k)(bb.gpuBytes)} chunks ${bb.storedChunks}`
+        return null === bb ? null : `estimate ${(0,zM.j)(bb.totalBytes)} MiB of budget ${null===ab?"none":(0,zM.j)(ab)}: wasm ${(0,zM.j)(bb.wasmBytes)} js ${(0,zM.j)(bb.jsHeapBytes)} gpu ${(0,zM.j)(bb.gpuBytes)} chunks ${bb.storedChunks}`
       }
       snapshot() {
         const {
           estimate: bb,
-          budgetBytes: cb
+          budgetBytes: ab
         } = this;
         return {
           ...null === bb ? {} : {
-            footprintMiB: Number((0, YW.k)(bb.totalBytes)),
-            gpuMiB: Number((0, YW.k)(bb.gpuBytes)),
+            footprintMiB: Number((0, zM.j)(bb.totalBytes)),
+            gpuMiB: Number((0, zM.j)(bb.gpuBytes)),
             storedChunks: bb.storedChunks
           },
-          footprintBudgetMiB: null === cb ? -1 : Number((0, YW.k)(cb))
+          footprintBudgetMiB: null === ab ? -1 : Number((0, zM.j)(ab))
         }
       }
     }
-    var PW = sb(2680),
-      DW = sb(4254),
-      EW = sb(38672),
-      iW = sb(37532);
-    const OW = qc.S + 1,
-      GW = 4096 * OW;
-    class KW {
-      constructor(bb, cb) {
-        this.log = bb, this.take = cb, this.qU = [], this.unshown = new Map, this.latest = new Map
+    var WM = Ub(2621),
+      HM = Ub(4198),
+      IM = Ub(38384),
+      dM = Ub(37290);
+    const FM = oa.S + 1,
+      hM = 4096 * FM;
+    class GM {
+      constructor(bb, ab) {
+        this.log = bb, this.take = ab, this.PY = [], this.unshown = new Map, this.latest = new Map
       }
-      afterFrame(bb, cb) {
-        const sb = this.take();
-        sb.length >= qc.O && sb[0] > 0 && (0, PW.m)("remesh", `${sb[0]} core records lost to a full log`);
-        const kb = this.qU;
-        for (let Wb = qc.O; Wb + qc.S <= sb.length; Wb += qc.S) {
-          for (let bb = Wb; bb < Wb + qc.S; bb++) kb.push(sb[bb]);
-          kb.push(bb)
+      afterFrame(bb, ab) {
+        const Ub = this.take();
+        Ub.length >= oa.P && Ub[0] > 0 && (0, WM.n)("remesh", `${Ub[0]} core records lost to a full log`);
+        const Ab = this.PY;
+        for (let Mb = oa.P; Mb + oa.S <= Ub.length; Mb += oa.S) {
+          for (let bb = Mb; bb < Mb + oa.S; bb++) Ab.push(Ub[bb]);
+          Ab.push(bb)
         }
-        if (cb || !(kb.length < GW)) {
-          for (let cb = 0; cb < kb.length; cb += OW) this.feed(cb, bb);
-          kb.length = 0, cb && this.log.frame(bb)
+        if (ab || !(Ab.length < hM)) {
+          for (let ab = 0; ab < Ab.length; ab += FM) this.feed(ab, bb);
+          Ab.length = 0, ab && this.log.frame(bb)
         }
       }
-      feed(bb, cb) {
-        var sb;
-        const kb = this.qU,
-          Wb = (0, iW.f)(kb[bb + 1], kb[bb + 2], kb[bb + 3]),
-          ab = kb[bb + 4],
-          Tb = kb[bb + qc.S];
-        switch (kb[bb]) {
-          case qc.vb.Edit:
-            this.log.edit(Wb, Tb);
+      feed(bb, ab) {
+        var Ub;
+        const Ab = this.PY,
+          Mb = (0, dM.c)(Ab[bb + 1], Ab[bb + 2], Ab[bb + 3]),
+          Tb = Ab[bb + 4],
+          Eb = Ab[bb + oa.S];
+        switch (Ab[bb]) {
+          case oa.ub.Edit:
+            this.log.edit(Mb, Eb);
             break;
-          case qc.vb.Sent:
-            this.latest.set(Wb, ab), this.log.sent(Wb, ab, kb[bb + 5], kb[bb + 6], kb[bb + 7], null !== (sb = this.unshown.get(Wb)) && void 0 !== sb ? sb : iW.b, Tb);
+          case oa.ub.Sent:
+            this.latest.set(Mb, Tb), this.log.sent(Mb, Tb, Ab[bb + 5], Ab[bb + 6], Ab[bb + 7], null !== (Ub = this.unshown.get(Mb)) && void 0 !== Ub ? Ub : dM.b, Eb);
             break;
-          case qc.vb.Done: {
-            this.log.received(ab, kb[bb + 5] / 1e3, Tb);
-            const cb = this.unshown.get(Wb);
-            void 0 === cb ? this.unshown.set(Wb, [ab]) : cb.push(ab);
+          case oa.ub.Done: {
+            this.log.received(Tb, Ab[bb + 5] / 1e3, Eb);
+            const ab = this.unshown.get(Mb);
+            void 0 === ab ? this.unshown.set(Mb, [Tb]) : ab.push(Tb);
             break
           }
-          case qc.vb.Failed: {
-            const bb = this.latest.get(Wb);
-            void 0 !== bb && bb !== ab ? this.log.reassign(Wb, ab, bb) : this.log.failed(ab), this.ended(Wb, ab);
+          case oa.ub.Failed: {
+            const bb = this.latest.get(Mb);
+            void 0 !== bb && bb !== Tb ? this.log.reassign(Mb, Tb, bb) : this.log.failed(Tb), this.ended(Mb, Tb);
             break
           }
-          case qc.vb.Shown:
-            this.log.applied(Wb, ab, cb), this.ended(Wb, ab);
+          case oa.ub.Shown:
+            this.log.applied(Mb, Tb, ab), this.ended(Mb, Tb);
             break;
-          case qc.vb.Replaced:
-            this.log.reassign(Wb, ab, kb[bb + 5]), this.ended(Wb, ab);
+          case oa.ub.Replaced:
+            this.log.reassign(Mb, Tb, Ab[bb + 5]), this.ended(Mb, Tb);
             break;
-          case qc.vb.Emptied:
-            this.log.emptied(Wb, cb);
+          case oa.ub.Emptied:
+            this.log.emptied(Mb, ab);
             break;
           default:
-            console.warn(`[debug:remesh] unknown core record kind ${kb[bb]}`)
+            console.warn(`[debug:remesh] unknown core record kind ${Ab[bb]}`)
         }
       }
-      ended(bb, cb) {
-        this.latest.get(bb) === cb && this.latest.delete(bb);
-        const sb = this.unshown.get(bb);
-        if (void 0 === sb) return;
-        const kb = sb.indexOf(cb);
-        kb >= 0 && sb.splice(kb, 1), 0 === sb.length && this.unshown.delete(bb)
+      ended(bb, ab) {
+        this.latest.get(bb) === ab && this.latest.delete(bb);
+        const Ub = this.unshown.get(bb);
+        if (void 0 === Ub) return;
+        const Ab = Ub.indexOf(ab);
+        Ab >= 0 && Ub.splice(Ab, 1), 0 === Ub.length && this.unshown.delete(bb)
       }
     }
-    let ZW = null;
-    var zW = sb(3007);
-    const qW = new Uint8Array(0);
-    class dW {
+    let QM = null;
+    var qM = Ub(2956);
+    const uM = new Uint8Array(0);
+    class rM {
       constructor(bb) {
-        this.options = bb, this.worker = null, this.watch = null, this.createWorker = null, this.loading = !1, this.qU = [], this.startsWithoutResult = 0, this.lastLoss = "", this.seed = null, this.gone = !1, this.pool = [], null !== bb.module ? bb.write(0, zc.Zd.WorldgenStarted, 0, 0, qW) : this.giveUp()
+        this.options = bb, this.worker = null, this.watch = null, this.createWorker = null, this.loading = !1, this.PY = [], this.startsWithoutResult = 0, this.lastLoss = "", this.seed = null, this.gone = !1, this.pool = [], null !== bb.module ? bb.write(0, Ka.Cd.WorldgenStarted, 0, 0, uM) : this.giveUp()
       }
-      take(bb, cb) {
-        if (!(this.gone || null === this.worker && null === this.qU))
-          if (bb === zc.$d.WorldgenSeed) {
-            const bb = 0 === cb.byteLength ? null : this.options.decodeSettings(cb);
-            null === bb || function(bb, cb) {
-              if ((null === bb || void 0 === bb ? void 0 : bb.byteLength) !== cb.byteLength) return !1;
-              for (let sb = 0; sb < bb.byteLength; sb++)
-                if (bb[sb] !== cb[sb]) return !1;
+      take(bb, ab) {
+        if (!(this.gone || null === this.worker && null === this.PY))
+          if (bb === Ka.Dd.WorldgenSeed) {
+            const bb = 0 === ab.byteLength ? null : this.options.decodeSettings(ab);
+            null === bb || function(bb, ab) {
+              if ((null === bb || void 0 === bb ? void 0 : bb.byteLength) !== ab.byteLength) return !1;
+              for (let Ub = 0; Ub < bb.byteLength; Ub++)
+                if (bb[Ub] !== ab[Ub]) return !1;
               return !0
-            }(this.seed, cb) || (this.seed = cb.slice(), this.startsWithoutResult = null === this.worker ? 0 : 1), this.dropHeld(), this.post({
+            }(this.seed, ab) || (this.seed = ab.slice(), this.startsWithoutResult = null === this.worker ? 0 : 1), this.dropHeld(), this.post({
               type: "seed",
               settings: bb
             }, []), null !== bb ? this.load() : this.loading || this.options.onMapWithoutWorldgen()
-          } else if (bb === zc.$d.Generate) {
-          var sb;
-          const bb = new DataView(cb.buffer, cb.byteOffset, zc.Vd),
-            kb = null !== (sb = this.pool.pop()) && void 0 !== sb ? sb : new ArrayBuffer(8192);
+          } else if (bb === Ka.Dd.Generate) {
+          var Ub;
+          const bb = new DataView(ab.buffer, ab.byteOffset, Ka.xd),
+            Ab = null !== (Ub = this.pool.pop()) && void 0 !== Ub ? Ub : new ArrayBuffer(8192);
           this.post({
             type: "generate",
             ticket: bb.getUint32(0, !0),
             x: bb.getInt32(4, !0),
             y: bb.getInt32(8, !0),
             z: bb.getInt32(12, !0),
-            bytes: kb
-          }, [kb])
+            bytes: Ab
+          }, [Ab])
         }
       }
       stop() {
         var bb;
         this.gone = !0, this.dropHeld(), this.endWatch(), null === (bb = this.worker) || void 0 === bb || bb.terminate(), this.worker = null
       }
-      post(bb, cb) {
-        var sb;
-        null !== this.qU ? this.qU.push({
+      post(bb, ab) {
+        var Ub;
+        null !== this.PY ? this.PY.push({
           message: bb,
-          transfer: cb
-        }) : null === (sb = this.worker) || void 0 === sb || sb.postMessage(bb, cb)
+          transfer: ab
+        }) : null === (Ub = this.worker) || void 0 === Ub || Ub.postMessage(bb, ab)
       }
       load() {
         this.loading || (this.loading = !0, this.options.loadWorker().then((bb => {
@@ -4286,196 +4070,196 @@ export const modules = {
       start() {
         const {
           module: bb
-        } = this.options, cb = this.createWorker;
-        if (this.gone || null === bb || null === cb) return;
+        } = this.options, ab = this.createWorker;
+        if (this.gone || null === bb || null === ab) return;
         if (this.startsWithoutResult >= 3) return this.giveUp(), void this.options.onGaveUp(this.lastLoss);
-        let sb;
+        let Ub;
         this.startsWithoutResult++;
         try {
-          sb = cb()
-        } catch (Wb) {
-          return console.warn("[bloxd-wasm-client] the world-gen worker did not start", Wb), this.lastLoss = `it did not start (${String(Wb)})`, void this.start()
+          Ub = ab()
+        } catch (Mb) {
+          return console.warn("[bloxd-wasm-client] the world-gen worker did not start", Mb), this.lastLoss = `it did not start (${String(Mb)})`, void this.start()
         }
-        this.worker = sb, sb.onmessage = bb => {
+        this.worker = Ub, Ub.onmessage = bb => {
           let {
-            data: cb
+            data: ab
           } = bb;
-          this.worker === sb && this.onReply(sb, cb)
-        }, sb.onerror = bb => {
-          bb.preventDefault(), this.worker === sb && this.lose(bb.message || "its script failed")
+          this.worker === Ub && this.onReply(Ub, ab)
+        }, Ub.onerror = bb => {
+          bb.preventDefault(), this.worker === Ub && this.lose(bb.message || "its script failed")
         };
         try {
-          sb.postMessage({
+          Ub.postMessage({
             type: "start",
             module: bb,
-            qm: kb.e.qm
+            Mj: Ab.c.Mj
           })
-        } catch (Wb) {
-          return console.warn("[bloxd-wasm-client] the world-gen worker could not be sent the module", Wb), this.lastLoss = `it could not be sent the module (${String(Wb)})`, sb.terminate(), this.worker = null, void this.start()
+        } catch (Mb) {
+          return console.warn("[bloxd-wasm-client] the world-gen worker could not be sent the module", Mb), this.lastLoss = `it could not be sent the module (${String(Mb)})`, Ub.terminate(), this.worker = null, void this.start()
         }
-        this.watch = new ik.g(ik.f, (bb => {
-          this.lose((0, ik.i)(bb), (() => {
+        this.watch = new FA.l(FA.h, (bb => {
+          this.lose((0, FA.o)(bb), (() => {
             this.options.onStartTimeout(bb)
           }))
         }), void 0, this.options.visibility)
       }
-      onReply(bb, cb) {
-        switch (cb.type) {
+      onReply(bb, ab) {
+        switch (ab.type) {
           case "started": {
             this.endWatch();
-            const cb = this.qU;
-            if (null === cb) {
-              this.options.write(0, zc.Zd.WorldgenStarted, 0, 0, qW);
+            const ab = this.PY;
+            if (null === ab) {
+              this.options.write(0, Ka.Cd.WorldgenStarted, 0, 0, uM);
               break
             }
-            this.qU = null;
+            this.PY = null;
             for (const {
-                message: sb,
-                transfer: kb
+                message: Ub,
+                transfer: Ab
               }
-              of cb) bb.postMessage(sb, kb);
+              of ab) bb.postMessage(Ub, Ab);
             break
           }
           case "lost":
-            this.lose(cb.reason);
+            this.lose(ab.reason);
             break;
           case "memory":
-            var sb, kb;
-            null === (sb = (kb = this.options).onMemoryStats) || void 0 === sb || sb.call(kb, cb.stats);
+            var Ub, Ab;
+            null === (Ub = (Ab = this.options).onMemoryStats) || void 0 === Ub || Ub.call(Ab, ab.stats);
             break;
           case "result":
-            cb.status !== zc.tb.Trapped && (this.startsWithoutResult = 0), this.options.write(cb.ticket, zc.Zd.WorldgenResult, cb.status, cb.workerUs, new Uint8Array(cb.bytes, 0, cb.len)), this.recycle(cb.bytes), cb.spare && this.recycle(cb.spare)
+            ab.status !== Ka.sb.Trapped && (this.startsWithoutResult = 0), this.options.write(ab.ticket, Ka.Cd.WorldgenResult, ab.status, ab.workerUs, new Uint8Array(ab.bytes, 0, ab.len)), this.recycle(ab.bytes), ab.spare && this.recycle(ab.spare)
         }
       }
-      lose(bb, cb) {
-        var sb, kb, Wb;
-        console.warn(`[bloxd-wasm-client] the world-gen worker was lost: ${bb}`), this.lastLoss = bb, this.endWatch(), null === (sb = this.worker) || void 0 === sb || sb.terminate(), this.worker = null, null === (kb = (Wb = this.options).onMemoryGone) || void 0 === kb || kb.call(Wb), this.gone || (cb ? cb() : this.options.onWorkerLost(bb), this.dropHeld(), this.qU = null, this.options.write(0, zc.Zd.WorldgenLost, zc.ce.Lost, 0, qW), this.start())
+      lose(bb, ab) {
+        var Ub, Ab, Mb;
+        console.warn(`[bloxd-wasm-client] the world-gen worker was lost: ${bb}`), this.lastLoss = bb, this.endWatch(), null === (Ub = this.worker) || void 0 === Ub || Ub.terminate(), this.worker = null, null === (Ab = (Mb = this.options).onMemoryGone) || void 0 === Ab || Ab.call(Mb), this.gone || (ab ? ab() : this.options.onWorkerLost(bb), this.dropHeld(), this.PY = null, this.options.write(0, Ka.Cd.WorldgenLost, Ka.Ed.Lost, 0, uM), this.start())
       }
       giveUp() {
-        this.gone = !0, this.dropHeld(), this.options.write(0, zc.Zd.WorldgenLost, zc.ce.Gone, 0, qW)
+        this.gone = !0, this.dropHeld(), this.options.write(0, Ka.Cd.WorldgenLost, Ka.Ed.Gone, 0, uM)
       }
       endWatch() {
         var bb;
         null === (bb = this.watch) || void 0 === bb || bb.cancel(), this.watch = null
       }
       dropHeld() {
-        if (null !== this.qU) {
+        if (null !== this.PY) {
           for (const {
               message: bb
             }
-            of this.qU) "generate" === bb.type && this.recycle(bb.bytes);
-          this.qU.length = 0
+            of this.PY) "generate" === bb.type && this.recycle(bb.bytes);
+          this.PY.length = 0
         }
       }
       recycle(bb) {
         this.pool.length < 16 && bb.byteLength > 0 && bb.byteLength <= 16384 && this.pool.push(bb)
       }
     }
-    var AW = sb(37340),
-      wW = sb(3525),
-      rW = sb(40099),
-      oW = sb(40488),
-      SW = sb(40352);
-    const RW = /[(@\s]([^\s(@]+)$/,
-      vW = /:\d/;
+    var KM = Ub(37092),
+      oM = Ub(3399),
+      lM = Ub(39780),
+      tM = Ub(40168),
+      wM = Ub(40036);
+    const sM = /[(@\s]([^\s(@]+)$/,
+      gM = /:\d/;
 
-    function FW(bb, cb) {
-      for (let sb = 0; sb + cb.length <= bb.length; sb++) {
-        let kb = 0;
-        for (; kb < cb.length && bb[sb + kb] === cb[kb];) kb++;
-        if (kb === cb.length) return sb
+    function CM(bb, ab) {
+      for (let Ub = 0; Ub + ab.length <= bb.length; Ub++) {
+        let Ab = 0;
+        for (; Ab < ab.length && bb[Ub + Ab] === ab[Ab];) Ab++;
+        if (Ab === ab.length) return Ub
       }
       return -1
     }
 
-    function xW(bb) {
+    function VM(bb) {
       return "(" === bb || ")" === bb || "@" === bb || "," === bb || " " === bb || "\t" === bb
     }
 
-    function jW(bb, cb) {
-      let sb = cb;
-      for (; sb > 0 && !xW(bb[sb - 1]);) sb--;
-      let kb = cb;
-      for (; kb < bb.length && !xW(bb[kb]);) kb++;
-      let Wb = "";
-      for (let ab = sb; ab < kb; ab++) Wb += bb[ab];
-      return Wb
+    function OM(bb, ab) {
+      let Ub = ab;
+      for (; Ub > 0 && !VM(bb[Ub - 1]);) Ub--;
+      let Ab = ab;
+      for (; Ab < bb.length && !VM(bb[Ab]);) Ab++;
+      let Mb = "";
+      for (let Tb = Ub; Tb < Ab; Tb++) Mb += bb[Tb];
+      return Mb
     }
-    const pW = (bb, cb) => bb.includes(cb),
-      ba = bb => {
+    const cM = (bb, ab) => bb.includes(ab),
+      JM = bb => {
         try {
           return bb()
         } catch {
           return !1
         }
       },
-      ca = -1,
-      sa = bb => {
+      nM = -1,
+      SM = bb => {
         try {
           return bb()
         } catch {
-          return ca
+          return nM
         }
       };
 
-    function ka(bb, cb) {
+    function bT(bb, ab) {
       return {
-        probe: (sb, kb, Wb) => {
+        probe: (Ub, Ab, Mb) => {
           try {
-            return ((sb, kb, Wb) => {
-              switch (sb) {
-                case zc.rc.StackCheck:
-                  return cb.stackCheck() ? 1 : 0;
-                case zc.rc.ConfirmMesh:
-                  return cb.confirmMesh();
-                case zc.rc.IndexPassReplaced:
-                  return cb.indexPassReplaced() ? 1 : 0;
-                case zc.rc.ProductSubChanged:
-                  return cb.productSubChanged() ? 1 : 0;
-                case zc.rc.RenderStatus:
-                  return cb.RH();
-                case zc.rc.Held:
-                  return cb.qU();
-                case zc.rc.PlayerKilledSubs:
-                  return cb.playerKilledSubs();
-                case zc.bb: {
-                  const sb = cb.getComplete();
-                  return null === sb ? 0 : (0, Yk.l)(Yk.y, Yk.bb, [sb, new Yk.e((0, Yk.H)(bb()), kb, Wb)]).written
+            return ((Ub, Ab, Mb) => {
+              switch (Ub) {
+                case Ka.dc.StackCheck:
+                  return ab.stackCheck() ? 1 : 0;
+                case Ka.dc.ConfirmMesh:
+                  return ab.confirmMesh();
+                case Ka.dc.IndexPassReplaced:
+                  return ab.indexPassReplaced() ? 1 : 0;
+                case Ka.dc.ProductSubChanged:
+                  return ab.productSubChanged() ? 1 : 0;
+                case Ka.dc.RenderStatus:
+                  return ab.fe();
+                case Ka.dc.Held:
+                  return ab.PY();
+                case Ka.dc.PlayerKilledSubs:
+                  return ab.playerKilledSubs();
+                case Ka.ab: {
+                  const Ub = ab.getComplete();
+                  return null === Ub ? 0 : (0, xA.n)(xA.z, xA.bb, [Ub, new xA.c((0, xA.J)(bb()), Ab, Mb)]).written
                 }
                 default:
                   return 0
               }
-            })(sb, kb, Wb)
+            })(Ub, Ab, Mb)
           } catch {
-            return zc.jc
+            return Ka.Wb
           }
         }
       }
     }
-    class Wa {
+    class aT {
       constructor(bb) {
-        this.write = bb, this.flagsWritten = 0, this.written = (0, Yk.o)(null)
+        this.write = bb, this.flagsWritten = 0, this.written = (0, xA.q)(null)
       }
-      aX(bb) {
+      qL(bb) {
         let {
-          flags: cb,
-          values: sb
+          flags: ab,
+          values: Ub
         } = bb;
-        for (let kb = 0; kb < sb.length; kb++) this.value(sb[kb][0], sb[kb][1]);
-        this.setFlags(cb | zc.f.Ready)
+        for (let Ab = 0; Ab < Ub.length; Ab++) this.value(Ub[Ab][0], Ub[Ab][1]);
+        this.setFlags(ab | Ka.e.Ready)
       }
-      value(bb, cb) {
-        this.written[bb] !== cb && this.write(bb, cb, 0) && (this.written[bb] = cb)
+      value(bb, ab) {
+        this.written[bb] !== ab && this.write(bb, ab, 0) && (this.written[bb] = ab)
       }
       setFlags(bb) {
-        const cb = bb & ~this.flagsWritten;
-        0 !== cb && this.write(zc.g.Flags, cb, cb) && (this.flagsWritten |= cb)
+        const ab = bb & ~this.flagsWritten;
+        0 !== ab && this.write(Ka.h.Flags, ab, ab) && (this.flagsWritten |= ab)
       }
       originStackHit() {
-        return this.write(zc.g.Flags, zc.f.OriginStackHit, zc.f.OriginStackHit)
+        return this.write(Ka.h.Flags, Ka.e.OriginStackHit, Ka.e.OriginStackHit)
       }
     }
-    const aa = {
+    const UT = {
         InputListeners: 0,
         InputWriter: 1,
         CoreFrame: 2,
@@ -4487,1086 +4271,901 @@ export const modules = {
         PerformanceNow: 8,
         DateNow: 9
       },
-      Ta = 1e3;
+      AT = 1e3;
 
-    function Ua(bb, cb) {
-      const sb = new Wa(cb);
-      let kb = !1;
-      sb.aX(bb.aX());
-      const Wb = (0, Yk.W)((() => {
-          sb.aX(bb.aX())
-        }), Ta),
-        ab = () => {
-          bb.checks.stackCheck() && (kb = !0)
+    function MT(bb, ab) {
+      const Ub = new aT(ab);
+      let Ab = !1;
+      Ub.qL(bb.qL());
+      const Mb = (0, xA.W)((() => {
+          Ub.qL(bb.qL())
+        }), AT),
+        Tb = () => {
+          bb.checks.stackCheck() && (Ab = !0)
         };
-      (0, oW.j)(ab);
-      const Tb = () => {
-        const cb = bb.checkPadCall();
-        0 !== cb && sb.setFlags(cb)
+      (0, tM.i)(Tb);
+      const Eb = () => {
+        const ab = bb.checkPadCall();
+        0 !== ab && Ub.setFlags(ab)
       };
-      return (0, rW.l)(Tb), {
-        onInput: cb => {
+      return (0, lM.f)(Eb), {
+        onInput: ab => {
           (function(bb) {
             switch (bb) {
-              case zc.qb.KeyDown:
-              case zc.qb.KeyUp:
-              case zc.qb.MouseDown:
-              case zc.qb.MouseUp:
-              case zc.qb.Wheel:
-              case zc.qb.TouchStart:
-              case zc.qb.TouchEnd:
-              case zc.qb.TouchButton:
-              case zc.qb.PadAction:
+              case Ka.rb.KeyDown:
+              case Ka.rb.KeyUp:
+              case Ka.rb.MouseDown:
+              case Ka.rb.MouseUp:
+              case Ka.rb.Wheel:
+              case Ka.rb.TouchStart:
+              case Ka.rb.TouchEnd:
+              case Ka.rb.TouchButton:
+              case Ka.rb.PadAction:
                 return !0;
               default:
                 return !1
             }
-          })(cb) && bb.checks.stackCheck() && (kb = !0)
+          })(ab) && bb.checks.stackCheck() && (Ab = !0)
         },
-        onSend: ab,
+        onSend: Tb,
         beforeFrame: () => {
-          kb && sb.originStackHit() && (kb = !1)
+          Ab && Ub.originStackHit() && (Ab = !1)
         },
-        onEvent: cb => {
-          const kb = bb.checkEvent(cb);
-          sb.value(zc.g.ProbeUsedProp, bb.usedProp()), 0 !== kb && sb.setFlags(kb)
+        onEvent: ab => {
+          const Ab = bb.checkEvent(ab);
+          Ub.value(Ka.h.ProbeUsedProp, bb.usedProp()), 0 !== Ab && Ub.setFlags(Ab)
         },
         stop: () => {
-          (0, Yk.Z)(Wb), (0, oW.g)(ab), (0, rW.h)(Tb)
+          (0, xA.Y)(Mb), (0, tM.g)(Tb), (0, lM.c)(Eb)
         }
       }
     }
-    let Ia;
-    const Ha = ["length", 0, 2, 1, 39, 5, 189, 3, 4, 123, "c", null, void 0, "s", "c3RhY2", "cw==", 8, 16, 14, "rmY5QQ", "w", 512, 163, "012345", 234, 94, "a", 15, 41, 6, 75, 54, "d", 32, 1023, 63, 128, 12, 46, 255, "b", 37, 45, 241, 24, 7, 18, 10, 19, 64, 243, 25, 65535, 217, 1e5, 256, 50, "stack", "name", !0, 245, 190, 38, 109, !1, 210, "g", 117, 207, 226, 248, "o", 70, "string", 212, 84, 120, "e", "j", "k", "i", 164, "f", 9, "l", 28, 58, "functi", "on", 246, "abc", 200, 909522486, 1549556828, 233, "6789AB", "CDEF", "6789ab", "cdef", 172, 103, 192, 55296, 56319, 56320, 57343, 65536, 127, 60, 2047, 31, 224, 2097151, 240, 13, 22, 11, 17, 34, 61, 1116352408, 1899447441, 1245643825, 373957723, 961987163, 1508970993, 1841331548, 1424204075, 670586216, 310598401, 607225278, 1426881987, 1925078388, 2132889090, 1680079193, 1046744716, 459576895, 272742522, 264347078, 604807628, 770255983, 1249150122, 1555081692, 1996064986, 1740746414, 1473132947, 1341970488, 1084653625, 958395405, 710438585, 113926993, 338241895, 666307205, 773529912, 1294757372, 1396182291, 1695183700, 1986661051, 2117940946, 1838011259, 1564481375, 1474664885, 1035236496, 949202525, 778901479, 694614492, 200395387, 275423344, 430227734, 506948616, 659060556, 883997877, 958139571, 1322822218, 1537002063, 1747873779, 1955562222, 2024104815, 2067236844, 1933114872, 1866530822, 1538233109, 1090935817, 965641998, 1779033703, 1150833019, 1013904242, 1521486534, 1359893119, 1694144372, 528734635, 1541459225, 232, 218, 216, 86, "Q", 229, 115, 92, "Invalid byte index", "Invalid continuation byte", 150, 213, "protot", "ype", "decode", "4", "I=", "eTR5bm", "u", "q", "t", "r", "C", "Kd", "chEven", "dispat", "now", 236, "confir", "mMesh", "produc", "player", "Killed", "number", "toString", "get", "v", "m", "None", "En", "tOverw", "ritten", "plete", "p"];
+    let TT;
+    const ET = ["length", 0, 2, 185, 1, "e", "f", null, 18, 5, 10, void 0, 3, "r", "cw==", 8, 16, "WYDp0O", 512, "a", "012345", 4, 50, 15, "b", 187, 6, 1023, 63, 128, 12, 216, 255, 168, 120, 32, 24, 7, 19, 64, "c", 65535, 159, 1e5, 60, "s=", "/", "string", "stack", "name", !1, 1e3, "expire", "=", ";", ";path=", !0, 95, "Invalid data key provided (not type string)", "Invalid data key provided (empty string)", "Serialization error for data '", "': ", "__GLOB", "AL__HE", "LPERS_", "_", "q", 43, 139, "h", 167, "i", "j", 33554432, 67108864, 193, 170, 208, 256, "?", ")", 84, "n", 136, "functi", "on", 211, "protot", "ype", "decode", "4", "I=", "eTR5bm", "t", "v", "G", "kd", "s", "chEven", "dispat", "now", "confir", "mMesh", "produc", "m", "player", "Killed", "number", "toString", "get", "d", 235, "None", 11, 13, "En", "tOverw", "ritten", "plete", "p"];
 
-    function fa(...bb) {
-      if (bb[Ha[0]] = Ha[7], bb[Ha[1]] === Ha[19] + Ha[20]) return bb[Ha[3]] + bb[Ha[2]]
+    function YT() {}
+
+    function BT() {
+      BT = function() {}
     }
-
-    function Ma() {}
-
-    function Xa() {
-      Xa = function() {}
-    }
-    Ia = function(bb) {
-      let cb = arguments[Ha[0]] > Ha[3] && arguments[Ha[3]] !== Ha[12] ? arguments[Ha[3]] : () => Ha[11],
-        sb = arguments[Ha[0]] > Ha[2] && arguments[Ha[2]] !== Ha[12] ? arguments[Ha[2]] : Ha[11],
-        kb = arguments[Ha[0]] > Ha[7] && arguments[Ha[7]] !== Ha[12] ? arguments[Ha[7]] : "";
-      const Wb = window,
-        ab = (Ha[1], Yk[Ha[13]])("RXJyb3" + Ha[208]),
-        Tb = (Ha[1], Yk[Ha[13]])(Ha[14] + "s="),
-        Ub = (Ha[1], Yk[Ha[13]])("Y2FwdHVyZVN0YWNrVHJhY2U="),
-        Hb = (Ha[1], Yk[Ha[13]])(Ha[14] + "tUcmFjZUxpbWl0"),
-        fb = (Ha[1], Yk[Ha[13]])("bmF0aXZl"),
-        Mb = [(Ha[1], Yk[Ha[13]])("bWFpbi5qcw=="), (Ha[1], Yk[Ha[13]])("aW5kZXguanM="), (Ha[1], Yk[Ha[13]])("dXNlcnNjcmlwdA=="), (Ha[1], Yk[Ha[13]])("Y29udGVudC5q" + Ha[15]), (Ha[1], Yk[Ha[13]])("b3B0aW9ucy5q" + Ha[15]), (Ha[1], Yk[Ha[13]])("cG9wdXAuanM="), (Ha[1], Yk[Ha[13]])("LnVzZXIuanM="), (Ha[1], Yk[Ha[13]])("Y2hyb21lLWV4dGVuc2lvbg==")],
-        Xb = (...bb) => {
-          bb[Ha[0]] = Ha[3];
-          const cb = Wb[ab],
-            sb = cb;
-          if (sb[Hb] < Ha[54]) {
-            function lb(...bb) {
-              Xa(bb[Ha[0]] = Ha[1], bb[Ha[40]] = function(...bb) {
-                function cb(...bb) {
-                  return bb[Ha[0]] = Ha[2], Tb(Wb(Ub(bb[Ha[1]]), Ub(bb[Ha[3]])))
-                }
-
-                function kb(...bb) {
-                  return bb[Ha[0]] = Ha[7],
-                    function(...bb) {
-                      var cb, sb, kb, Wb;
-                      for (Xa(bb[Ha[0]] = Ha[2], bb[Ha[26]] = bb[Ha[3]].length, bb[Ha[7]] = Array()), bb[Ha[8]] = Array(Math.ceil(bb[Ha[1]].length / Ha[2])), cb = Ha[1]; cb < bb[Ha[8]].length; cb++) bb[Ha[8]][cb] = bb[Ha[1]].charCodeAt(cb * Ha[2]) << Ha[16] | bb[Ha[1]].charCodeAt(cb * Ha[2] + Ha[3]);
-                      for (; bb[Ha[8]].length > Ha[1];) {
-                        for (Xa(Wb = Array(), kb = Ha[1]), cb = Ha[1]; cb < bb[Ha[8]].length; cb++) Xa(kb = (kb << Ha[17]) + bb[Ha[8]][cb], sb = Math.floor(kb / bb[Ha[26]]), kb -= sb * bb[Ha[26]]), (Wb.length > Ha[1] || sb > Ha[1]) && (Wb[Wb.length] = sb);
-                        Xa(bb[Ha[7]][bb[Ha[7]].length] = kb, bb[Ha[8]] = Wb)
-                      }
-                      for (bb[Ha[32]] = "", cb = bb[Ha[7]].length - Ha[3]; cb >= Ha[1]; cb--) bb[Ha[32]] += bb[Ha[3]].charAt(bb[Ha[7]][cb]);
-                      for (bb[Ha[33]] = Math.ceil(bb[Ha[1]].length * Ha[16] / (Math.log(bb[Ha[3]].length) / Math.log(Ha[2]))), cb = bb[Ha[32]].length; cb < bb[Ha[33]]; cb++) bb[Ha[32]] = bb[Ha[3]][Ha[1]] + bb[Ha[32]];
-                      return bb[Ha[32]]
-                    }(Wb(Ub(bb[Ha[1]]), Ub(bb[Ha[3]])), bb[Ha[2]])
-                }
-
-                function Wb(...bb) {
-                  Xa(bb[Ha[0]] = Ha[2], bb[Ha[2]] = Ib(bb[Ha[1]])), bb[Ha[2]].length > Ha[17] && (bb[Ha[2]] = Cb(bb[Ha[2]], bb[Ha[1]].length * Ha[16]));
-                  var cb = Array(Ha[17]),
-                    sb = Array(Ha[17]);
-                  for (bb[Ha[18]] = Ha[1]; bb[Ha[18]] < Ha[17]; bb[Ha[18]]++) Xa(cb[bb[Ha[18]]] = bb[Ha[2]][bb[Ha[18]]] ^ Ha[92], sb[bb[Ha[18]]] = bb[Ha[2]][bb[Ha[18]]] ^ Ha[93]);
-                  return bb[Ha[8]] = Cb(cb.concat(Ib(bb[Ha[3]])), Ha[21] + bb[Ha[3]].length * Ha[16]), Hb(Cb(sb.concat(bb[Ha[8]]), fa(Ha[19] + Ha[20], Ha[21], Ha[55])))
-                }
-
-                function ab(...cb) {
-                  cb[Ha[0]] = Ha[3];
-                  try {
-                    bb[-Ha[22]]
-                  } catch (sb) {
-                    bb[-Ha[22]] = Ha[1]
-                  }
-                  for (Xa(cb[Ha[26]] = bb[-Ha[22]] ? Ha[23] + Ha[95] + Ha[96] : Ha[23] + Ha[97] + Ha[98], cb[-Ha[25]] = "", cb[-Ha[24]] = Ha[12]), cb[Ha[8]] = Ha[1]; cb[Ha[8]] < cb[Ha[1]].length; cb[Ha[8]]++) Xa(cb[-Ha[24]] = cb[Ha[1]].charCodeAt(cb[Ha[8]]), cb[-Ha[25]] += cb[Ha[26]].charAt(cb[-Ha[24]] >>> Ha[8] & Ha[27]) + cb[Ha[26]].charAt(cb[-Ha[24]] & Ha[27]));
-                  return cb[-Ha[25]]
-                }
-
-                function Tb(...cb) {
-                  cb[Ha[0]] = Ha[3];
-                  try {
-                    bb[Ha[3]]
-                  } catch (sb) {
-                    bb[Ha[3]] = ""
-                  }
-                  for (Xa(cb[Ha[3]] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/", cb[-Ha[30]] = "", cb[Ha[7]] = cb[Ha[1]].length), cb[Ha[8]] = Ha[1]; cb[Ha[8]] < cb[Ha[7]]; cb[Ha[8]] += Ha[7])
-                    for (cb[Ha[31]] = cb[Ha[1]].charCodeAt(cb[Ha[8]]) << Ha[17] | (cb[Ha[8]] + Ha[3] < cb[Ha[7]] ? cb[Ha[1]].charCodeAt(cb[Ha[8]] + Ha[3]) << Ha[16] : Ha[1]) | (cb[Ha[8]] + Ha[2] < cb[Ha[7]] ? cb[Ha[1]].charCodeAt(cb[Ha[8]] + Ha[2]) : Ha[1]), cb[-Ha[28]] = Ha[1]; cb[-Ha[28]] < Ha[8]; cb[-Ha[28]]++) cb[Ha[8]] * Ha[16] + cb[-Ha[28]] * Ha[29] > cb[Ha[1]].length * Ha[16] ? cb[-Ha[30]] += bb[Ha[3]] : cb[-Ha[30]] += cb[Ha[3]].charAt(cb[Ha[31]] >>> Ha[29] * (Ha[7] - cb[-Ha[28]]) & Ha[35]);
-                  return cb[-Ha[30]]
-                }
-
-                function Ub(bb) {
-                  var cb, sb, kb, Wb = "";
-                  for (cb = -Ha[3]; ++cb < bb.length;) Xa(sb = bb.charCodeAt(cb), kb = cb + Ha[3] < bb.length ? bb.charCodeAt(cb + Ha[3]) : Ha[1]), Ha[102] <= sb && sb <= Ha[103] && Ha[104] <= kb && kb <= Ha[105] && Xa(sb = Ha[106] + ((sb & Ha[34]) << Ha[47]) + (kb & Ha[34]), cb++), sb <= Ha[107] ? Wb += String.fromCharCode(sb) : sb <= Ha[109] ? Wb += String.fromCharCode(Ha[101] | sb >>> Ha[29] & Ha[110], Ha[36] | sb & Ha[35]) : sb <= Ha[52] ? Wb += String.fromCharCode(Ha[111] | sb >>> Ha[37] & Ha[27], Ha[36] | sb >>> Ha[29] & Ha[35], Ha[36] | sb & Ha[35]) : sb <= Ha[112] && (Wb += String.fromCharCode(Ha[113] | sb >>> Ha[46] & Ha[45], Ha[36] | sb >>> Ha[37] & Ha[35], Ha[36] | sb >>> Ha[29] & Ha[35], Ha[36] | sb & Ha[35]));
-                  return Wb
-                }
-
-                function Ib(...bb) {
-                  for (Xa(bb[Ha[0]] = Ha[3], bb[Ha[41]] = Array(bb[Ha[1]].length >> Ha[2])), bb[Ha[40]] = Ha[1]; bb[Ha[40]] < bb[Ha[41]].length; bb[Ha[40]]++) bb[Ha[41]][bb[Ha[40]]] = Ha[1];
-                  for (bb[Ha[40]] = Ha[1]; bb[Ha[40]] < bb[Ha[1]].length * Ha[16]; bb[Ha[40]] += Ha[16]) bb[Ha[41]][bb[Ha[40]] >> Ha[5]] |= (bb[Ha[1]].charCodeAt(bb[Ha[40]] / Ha[16]) & Ha[39]) << Ha[44] - bb[Ha[40]] % Ha[33];
-                  return bb[Ha[41]]
-                }
-
-                function Hb(...bb) {
-                  for (Xa(bb[Ha[0]] = Ha[3], bb[-Ha[43]] = ""), bb[Ha[42]] = Ha[1]; bb[Ha[42]] < bb[Ha[1]].length * Ha[33]; bb[Ha[42]] += Ha[16]) bb[-Ha[43]] += String.fromCharCode(bb[Ha[1]][bb[Ha[42]] >> Ha[5]] >>> Ha[44] - bb[Ha[42]] % Ha[33] & Ha[39]);
-                  return bb[-Ha[43]]
-                }
-
-                function fb(...bb) {
-                  return bb[Ha[0]] = Ha[2], bb[Ha[1]] >>> bb[Ha[3]] | bb[Ha[1]] << Ha[33] - bb[Ha[3]]
-                }
-
-                function Mb(...bb) {
-                  return bb[Ha[0]] = Ha[2], bb[Ha[1]] >>> bb[Ha[3]]
-                }
-
-                function Xb(...bb) {
-                  return bb[Ha[0]] = Ha[7], bb[Ha[1]] & bb[Ha[3]] ^ ~bb[Ha[1]] & bb[Ha[2]]
-                }
-
-                function nb(...bb) {
-                  return bb[Ha[0]] = Ha[7], bb[Ha[1]] & bb[Ha[3]] ^ bb[Ha[1]] & bb[Ha[2]] ^ bb[Ha[3]] & bb[Ha[2]]
-                }
-
-                function mb(...bb) {
-                  return bb[Ha[0]] = Ha[3], fb(bb[Ha[1]], Ha[2]) ^ fb(bb[Ha[1]], Ha[114]) ^ fb(bb[Ha[1]], Ha[115])
-                }
-
-                function lb(...bb) {
-                  return bb[Ha[0]] = Ha[3], fb(bb[Ha[1]], Ha[29]) ^ fb(bb[Ha[1]], Ha[116]) ^ fb(bb[Ha[1]], Ha[51])
-                }
-
-                function Qb(...bb) {
-                  return bb[Ha[0]] = Ha[3], fb(bb[Ha[1]], Ha[45]) ^ fb(bb[Ha[1]], Ha[46]) ^ Mb(bb[Ha[1]], Ha[7])
-                }
-
-                function eb(...bb) {
-                  return bb[Ha[0]] = Ha[3], fb(bb[Ha[1]], Ha[117]) ^ fb(bb[Ha[1]], Ha[48]) ^ Mb(bb[Ha[1]], Ha[47])
-                }
-
-                function Cb(...cb) {
-                  var sb, kb, Wb, ab, Tb, Ub, Ib, Hb, fb, Mb, Cb, Vb;
-                  for (Xa(cb[Ha[0]] = Ha[2], cb[Ha[26]] = new Array(Ha[184], -Ha[185], Ha[186], -Ha[187], Ha[188], -Ha[189], Ha[190], Ha[191]), cb[Ha[40]] = new Array(Ha[49])), Xa(cb[Ha[1]][cb[Ha[3]] >> Ha[5]] |= Ha[36] << Ha[44] - cb[Ha[3]] % Ha[33], cb[Ha[1]][(cb[Ha[3]] + Ha[49] >> Ha[83] << Ha[8]) + Ha[27]] = cb[Ha[3]]), fb = Ha[1]; fb < cb[Ha[1]].length; fb += Ha[17]) {
-                    for (Xa(sb = cb[Ha[26]][Ha[1]], kb = cb[Ha[26]][Ha[3]], Wb = cb[Ha[26]][Ha[2]], ab = cb[Ha[26]][Ha[7]], Tb = cb[Ha[26]][Ha[8]], Ub = cb[Ha[26]][Ha[5]], Ib = cb[Ha[26]][Ha[29]], Hb = cb[Ha[26]][Ha[45]]), Mb = Ha[1]; Mb < Ha[49]; Mb++) Xa(Mb < Ha[17] ? cb[Ha[40]][Mb] = cb[Ha[1]][Mb + fb] : cb[Ha[40]][Mb] = Nb(Nb(Nb(eb(cb[Ha[40]][Mb - Ha[2]]), cb[Ha[40]][Mb - Ha[45]]), Qb(cb[Ha[40]][Mb - Ha[27]])), cb[Ha[40]][Mb - Ha[17]]), Cb = Nb(Nb(Nb(Nb(Hb, lb(Tb)), Xb(Tb, Ub, Ib)), bb[Ha[50]][Mb]), cb[Ha[40]][Mb]), Vb = Nb(mb(sb), nb(sb, kb, Wb)), Hb = Ib, Ib = Ub, Ub = Tb, Tb = Nb(ab, Cb), ab = Wb, Wb = kb, kb = sb, sb = Nb(Cb, Vb));
-                    Xa(cb[Ha[26]][Ha[1]] = Nb(sb, cb[Ha[26]][Ha[1]]), cb[Ha[26]][Ha[3]] = Nb(kb, cb[Ha[26]][Ha[3]]), cb[Ha[26]][Ha[2]] = Nb(Wb, cb[Ha[26]][Ha[2]]), cb[Ha[26]][Ha[7]] = Nb(ab, cb[Ha[26]][Ha[7]]), cb[Ha[26]][Ha[8]] = Nb(Tb, cb[Ha[26]][Ha[8]]), cb[Ha[26]][Ha[5]] = Nb(Ub, cb[Ha[26]][Ha[5]]), cb[Ha[26]][Ha[29]] = Nb(Ib, cb[Ha[26]][Ha[29]]), cb[Ha[26]][Ha[45]] = Nb(Hb, cb[Ha[26]][Ha[45]]))
-                  }
-                  return cb[Ha[26]]
-                }
-
-                function Nb(...bb) {
-                  return Xa(bb[Ha[0]] = Ha[2], bb[Ha[51]] = (bb[Ha[1]] & Ha[52]) + (bb[Ha[3]] & Ha[52]), bb[Ha[53]] = (bb[Ha[1]] >> Ha[17]) + (bb[Ha[3]] >> Ha[17]) + (bb[Ha[51]] >> Ha[17])), bb[Ha[53]] << Ha[17] | bb[Ha[51]] & Ha[52]
-                }
-                return Xa(bb[Ha[0]] = Ha[1], bb[-Ha[22]] = Ha[1], bb[Ha[3]] = ""), bb[Ha[50]] = new Array(Ha[120], Ha[121], -Ha[122], -Ha[123], Ha[124], Ha[125], -Ha[126], -Ha[127], -Ha[128], Ha[129], Ha[130], Ha[131], Ha[132], -Ha[133], -Ha[134], -Ha[135], -Ha[136], -Ha[137], Ha[138], Ha[139], Ha[140], Ha[141], Ha[142], Ha[143], -Ha[144], -Ha[145], -Ha[146], -Ha[147], -Ha[148], -Ha[149], Ha[150], Ha[151], Ha[152], Ha[153], Ha[154], Ha[155], Ha[156], Ha[157], -Ha[158], -Ha[159], -Ha[160], -Ha[161], -Ha[162], -Ha[163], -Ha[164], -Ha[165], -Ha[166], Ha[167], Ha[168], Ha[169], Ha[170], Ha[171], Ha[172], Ha[173], Ha[174], Ha[175], Ha[176], Ha[177], -Ha[178], -Ha[179], -Ha[180], -Ha[181], -Ha[182], -Ha[183]), {
-                  hex: function(...bb) {
-                    return bb[Ha[0]] = Ha[3], ab(function(...bb) {
-                      return bb[Ha[0]] = Ha[3], Hb(Cb(Ib(bb[Ha[1]]), bb[Ha[1]].length * Ha[16]))
-                    }(Ub(bb[Ha[1]])))
-                  },
-                  b64: cb,
-                  any: kb,
-                  hex_hmac: function(...bb) {
-                    return bb[Ha[0]] = Ha[2], ab(Wb(Ub(bb[Ha[1]]), Ub(bb[Ha[3]])))
-                  },
-                  b64_hmac: cb,
-                  any_hmac: kb
-                }
-              }(), console.log(bb[Ha[40]]))
-            }
-            "P7zE713" in Ma && lb(), sb[Hb] = Ha[54]
-          }
-          const kb = "string" === typeof(Xb = (new cb)[Tb]) ? Xb : `${Xb}`,
-            Ib = {},
-            fb = sb[Ub];
-          var Xb;
-          if (typeof fb === Ha[87] + Ha[88]) {
-            function Qb(...bb) {
-              bb[Ha[0]] = Ha[1];
-              const cb = require("big-integer");
-              Xa(bb[Ha[40]] = class {
-                static randomPrime(...bb) {
-                  bb[Ha[0]] = Ha[3];
-                  const sb = cb.one.shiftLeft(bb[Ha[1]] - Ha[3]),
-                    kb = cb.one.shiftLeft(bb[Ha[1]]).prev();
-                  for (; Ha[59];) {
-                    let bb = cb.randBetween(sb, kb);
-                    if (bb.isProbablePrime(Ha[55])) return bb
-                  }
-                }
-                static generate(...bb) {
-                  bb[Ha[0]] = Ha[3];
-                  const sb = cb(65537);
-                  let kb, Wb;
-                  bb[Ha[26]] = Ha[12];
-                  do {
-                    Xa(kb = this.randomPrime(bb[Ha[1]] / Ha[2]), Wb = this.randomPrime(bb[Ha[1]] / Ha[2]), bb[Ha[26]] = cb.lcm(kb.prev(), Wb.prev()))
-                  } while (cb.gcd(sb, bb[Ha[26]]).notEquals(Ha[3]) || kb.minus(Wb).abs().shiftRight(bb[Ha[1]] / Ha[2] - 100).isZero());
-                  return {
-                    e: sb,
-                    n: kb.multiply(Wb),
-                    d: sb.modInv(bb[Ha[26]])
-                  }
-                }
-                static encrypt(...bb) {
-                  return bb[Ha[0]] = Ha[7], cb(bb[Ha[1]]).modPow(bb[Ha[2]], bb[Ha[3]])
-                }
-                static decrypt(...bb) {
-                  return bb[Ha[0]] = Ha[7], cb(bb[Ha[1]]).modPow(bb[Ha[3]], bb[Ha[2]])
-                }
-                static encode(...bb) {
-                  bb[Ha[0]] = Ha[3];
-                  const sb = bb[Ha[1]].split("").map((bb => bb.charCodeAt())).join("");
-                  return cb(sb)
-                }
-                static decode(...bb) {
-                  bb[Ha[0]] = Ha[3];
-                  const cb = bb[Ha[1]].toString();
-                  bb[Ha[56]] = "";
-                  for (let sb = Ha[1]; sb < cb.length; sb += Ha[2]) {
-                    let kb = Number(cb.substr(sb, Ha[2]));
-                    kb <= 30 ? (bb[Ha[56]] += String.fromCharCode(Number(cb.substr(sb, Ha[7]))), sb++) : bb[Ha[56]] += String.fromCharCode(kb)
-                  }
-                  return bb[Ha[56]]
-                }
-              }, module.exports = bb[Ha[40]])
-            }
-            "jgDUSKR" in Ma && Qb(), (Ha[1], Yk[Ha[84]])(fb, cb, [Ib])
-          }
-          const nb = Ib[Tb],
-            mb = bb[Ha[1]] ? Mb[Ha[0]] : Mb[Ha[0]] - Ha[3];
-          for (let eb = Ha[1]; eb < mb; eb++) {
-            if (pW(kb, Mb[eb])) return {
-              [Ha[57]]: kb,
-              [Ha[58]]: Mb[eb]
-            };
-            if (typeof nb === Ha[73] && pW(nb, Mb[eb])) return {
-              [Ha[57]]: nb,
-              [Ha[58]]: Mb[eb]
-            }
-          }
-          return Ha[11]
-        },
-        nb = (...bb) => (bb[Ha[0]] = Ha[3], Xb(bb[Ha[1]]) !== Ha[11]);
-      let mb = Ha[11],
-        lb = Ha[11];
-      const Qb = (...bb) => {
-        bb[Ha[0]] = Ha[3];
-        try {
-          return bb[Ha[1]]()
-        } catch {
-          function cb(...bb) {
-            bb[Ha[0]] = Ha[1];
-            const cb = require("path"),
-              {
-                version: sb
-              } = require("../../package"),
-              {
-                version: kb
-              } = require("@redacted/enterprise-plugin/package"),
-              {
-                version: Wb
-              } = require("@redacted/components/package"),
-              {
-                sdkVersion: ab
-              } = require("@redacted/enterprise-plugin");
-            require("../utils/isStandaloneExecutable"), require("./resolve-local-redacted-path"), cb.resolve(__dirname, "../redacted.js")
-          }
-          return "VcXNCw" in Ma && cb(), Ha[59]
-        }
-      };
-      let eb = Ha[64];
-      const Cb = () => {
-          !eb && (Ha[1], Yk[Ha[210]])() && (eb = Ha[59])
-        },
-        Nb = (...bb) => {
-          bb[Ha[0]] = Ha[3];
-          try {
-            return bb[Ha[1]]()
-          } catch {
-            function cb(...bb) {
-              Xa(bb[Ha[0]] = Ha[1], bb[Ha[65]] = function(...cb) {
-                return Xa(cb[Ha[0]] = Ha[3], cb[-Ha[60]] = []), (cb[Ha[1]] === Ha[3] || cb[Ha[1]] >= Ha[8]) && bb[Ha[3]](cb[-Ha[60]], [], cb[Ha[1]], Ha[1]), cb[-Ha[60]]
-              }, bb[Ha[3]] = function(...cb) {
-                for (cb[Ha[0]] = Ha[8], cb[Ha[26]] = cb[Ha[7]]; cb[Ha[26]] < cb[Ha[2]]; cb[Ha[26]]++) {
-                  if (cb[Ha[3]].length !== cb[Ha[26]]) return;
-                  for (cb[Ha[5]] = Ha[1]; cb[Ha[5]] < cb[Ha[2]]; cb[Ha[5]]++) bb[Ha[10]](cb[Ha[3]], [cb[Ha[26]], cb[Ha[5]]]) && (Xa(cb[Ha[3]].push([cb[Ha[26]], cb[Ha[5]]]), bb[Ha[3]](cb[Ha[1]], cb[Ha[3]], cb[Ha[2]], cb[Ha[26]] + Ha[3])), cb[Ha[3]].length === cb[Ha[2]] && cb[Ha[1]].push(bb[Ha[32]](cb[Ha[3]])), cb[Ha[3]].pop())
-                }
-              }, bb[Ha[32]] = function(...bb) {
-                for (Xa(bb[Ha[0]] = Ha[3], bb[Ha[61]] = [], bb[Ha[40]] = bb[Ha[1]].length), bb[Ha[10]] = Ha[1]; bb[Ha[10]] < bb[Ha[40]]; bb[Ha[10]]++)
-                  for (bb[Ha[61]][bb[Ha[10]]] = "", bb[-Ha[62]] = Ha[1]; bb[-Ha[62]] < bb[Ha[40]]; bb[-Ha[62]]++) bb[Ha[61]][bb[Ha[10]]] += bb[Ha[1]][bb[Ha[10]]][Ha[3]] === bb[-Ha[62]] ? Ha[196] : ".";
-                return bb[Ha[61]]
-              }, bb[Ha[10]] = function(...bb) {
-                for (Xa(bb[Ha[0]] = Ha[2], bb[Ha[63]] = bb[Ha[1]].length), bb[Ha[7]] = Ha[1]; bb[Ha[7]] < bb[Ha[63]]; bb[Ha[7]]++) {
-                  if (bb[Ha[1]][bb[Ha[7]]][Ha[1]] === bb[Ha[3]][Ha[1]] || bb[Ha[1]][bb[Ha[7]]][Ha[3]] === bb[Ha[3]][Ha[3]]) return Ha[64];
-                  if (Math.abs((bb[Ha[1]][bb[Ha[7]]][Ha[1]] - bb[Ha[3]][Ha[1]]) / (bb[Ha[1]][bb[Ha[7]]][Ha[3]] - bb[Ha[3]][Ha[3]])) === Ha[3]) return Ha[64]
-                }
-                return Ha[59]
-              }, console.log(bb[Ha[65]]))
-            }
-            return "EVnoDD" in Ma && cb(), Ha[12]
-          }
-        },
-        Vb = (...bb) => {
-          bb[Ha[0]] = Ha[3];
-          try {
-            function cb(...bb) {
-              Xa(bb[Ha[0]] = Ha[1], bb[Ha[70]] = function(...bb) {
-                for (Xa(bb[Ha[0]] = Ha[3], bb[Ha[3]] = Ha[1], bb[Ha[68]] = {}, bb[Ha[69]] = Ha[1], bb[Ha[32]] = Ha[1], bb[Ha[5]] = Ha[1], bb[-Ha[67]] = bb[Ha[1]].length), bb[Ha[66]] = Ha[1]; bb[Ha[66]] < bb[-Ha[67]]; bb[Ha[66]]++) {
-                  for (Xa(bb[Ha[68]] = {}, bb[Ha[69]] = Ha[1], bb[Ha[32]] = Ha[3]), bb[Ha[16]] = bb[Ha[66]] + Ha[3]; bb[Ha[16]] < bb[-Ha[67]]; bb[Ha[16]]++) bb[Ha[1]][bb[Ha[66]]].x !== bb[Ha[1]][bb[Ha[16]]].x || bb[Ha[1]][bb[Ha[66]]].y !== bb[Ha[1]][bb[Ha[16]]].y ? (bb[Ha[1]][bb[Ha[66]]].y === bb[Ha[1]][bb[Ha[16]]].y ? bb[Ha[5]] = Number.MAX_SAFE_INTEGER : bb[Ha[5]] = (bb[Ha[1]][bb[Ha[66]]].x - bb[Ha[1]][bb[Ha[16]]].x) / (bb[Ha[1]][bb[Ha[66]]].y - bb[Ha[1]][bb[Ha[16]]].y), bb[Ha[68]][bb[Ha[5]]] || (bb[Ha[68]][bb[Ha[5]]] = Ha[1]), Xa(bb[Ha[68]][bb[Ha[5]]]++, bb[Ha[69]] = Math.max(bb[Ha[69]], bb[Ha[68]][bb[Ha[5]]]))) : bb[Ha[32]]++;
-                  Xa(bb[Ha[69]] += bb[Ha[32]], bb[Ha[3]] = Math.max(bb[Ha[3]], bb[Ha[69]]))
-                }
-                return bb[Ha[3]]
-              }, console.log(bb[Ha[70]]))
-            }
-            return "U8_BKh" in Ma && cb(), bb[Ha[1]](), Ha[59]
-          } catch {
-            return Ha[64]
-          }
-        },
-        Lb = (Ha[1], Yk[Ha[13]])("a29qbzYzb25i"),
-        ub = (Ha[1], Yk[Ha[71]])(Ha[11]);
-      let Yb = Ha[11],
-        hb = Ha[64],
-        Jb = Ha[64];
-      const gb = (Ha[1], Yk[Ha[71]])(Ha[11]);
-      let Bb = Ha[1];
-      const tb = (Ha[1], Yk[Ha[71]])(Ha[11]);
-      let yb = Ha[1];
-      const Pb = (Ha[1], Yk[Ha[71]])(Ha[11]);
-      let Db = Ha[64],
-        Eb = Ha[64];
-      const ib = (...cb) => {
-          if (cb[Ha[0]] = Ha[2], cb[Ha[1]] === bb) {
-            function Wb(...bb) {
-              Xa(bb[Ha[0]] = Ha[1], bb[Ha[72]] = function(...cb) {
-                return cb[Ha[0]] = Ha[2], bb[Ha[10]]({}, cb[Ha[1]], cb[Ha[3]])
-              }, bb[Ha[10]] = function(...cb) {
-                if (Xa(cb[Ha[0]] = Ha[7], cb[Ha[26]] = {}), cb[Ha[1]][cb[Ha[3]] + cb[Ha[2]]] !== Ha[12]) return cb[Ha[1]][cb[Ha[3]] + cb[Ha[2]]];
-                if (cb[Ha[3]] === cb[Ha[2]]) return Ha[59];
-                for (cb[Ha[8]] = Ha[1]; cb[Ha[8]] < cb[Ha[3]].length; cb[Ha[8]]++) cb[Ha[26]][cb[Ha[3]][cb[Ha[8]]]] === Ha[12] && (cb[Ha[26]][cb[Ha[3]][cb[Ha[8]]]] = Ha[1]), cb[Ha[26]][cb[Ha[2]][cb[Ha[8]]]] === Ha[12] && (cb[Ha[26]][cb[Ha[2]][cb[Ha[8]]]] = Ha[1]), Xa(cb[Ha[26]][cb[Ha[3]][cb[Ha[8]]]]++, cb[Ha[26]][cb[Ha[2]][cb[Ha[8]]]]--);
-                for (cb[Ha[10]] in cb[Ha[26]])
-                  if (cb[Ha[26]][cb[Ha[10]]] !== Ha[1]) return cb[Ha[1]][cb[Ha[3]] + cb[Ha[2]]] = Ha[64], Ha[64];
-                for (cb[Ha[29]] = Ha[3]; cb[Ha[29]] < cb[Ha[3]].length; cb[Ha[29]]++)
-                  if (bb[Ha[10]](cb[Ha[1]], cb[Ha[3]].substr(Ha[1], cb[Ha[29]]), cb[Ha[2]].substr(Ha[1], cb[Ha[29]])) && bb[Ha[10]](cb[Ha[1]], cb[Ha[3]].substr(cb[Ha[29]]), cb[Ha[2]].substr(cb[Ha[29]])) || bb[Ha[10]](cb[Ha[1]], cb[Ha[3]].substr(Ha[1], cb[Ha[29]]), cb[Ha[2]].substr(cb[Ha[2]].length - cb[Ha[29]])) && bb[Ha[10]](cb[Ha[1]], cb[Ha[3]].substr(cb[Ha[29]]), cb[Ha[2]].substr(Ha[1], cb[Ha[2]].length - cb[Ha[29]]))) return cb[Ha[1]][cb[Ha[3]] + cb[Ha[2]]] = Ha[59], Ha[59];
-                return cb[Ha[1]][cb[Ha[3]] + cb[Ha[2]]] = Ha[64], Ha[64]
-              }, console.log(bb[Ha[72]]))
-            }
-            if ("OyDb_AT" in Ma && Wb(), Yb === Ha[11]) Yb = typeof cb[Ha[3]] === Ha[225] ? cb[Ha[3]] : -Ha[3];
-            else {
+    TT = function(bb) {
+      let ab = arguments[ET[0]] > ET[4] && arguments[ET[4]] !== ET[11] ? arguments[ET[4]] : () => ET[7],
+        Ub = arguments[ET[0]] > ET[2] && arguments[ET[2]] !== ET[11] ? arguments[ET[2]] : ET[7],
+        Ab = arguments[ET[0]] > ET[12] && arguments[ET[12]] !== ET[11] ? arguments[ET[12]] : "";
+      const Mb = window,
+        Tb = (0, xA[ET[13]])("RXJyb3" + ET[91]),
+        Eb = (0, xA[ET[13]])("c3RhY2" + ET[45]),
+        Yb = (0, xA[ET[13]])("Y2FwdHVyZVN0YWNrVHJhY2U="),
+        eb = (0, xA[ET[13]])("c3RhY2tUcmFjZUxpbWl0"),
+        vb = (0, xA[ET[13]])("bmF0aXZl"),
+        Lb = [(0, xA[ET[13]])("bWFpbi5qcw=="), (0, xA[ET[13]])("aW5kZXguanM="), (0, xA[ET[13]])("dXNlcnNjcmlwdA=="), (0, xA[ET[13]])("Y29udGVudC5q" + ET[14]), (0, xA[ET[13]])("b3B0aW9ucy5q" + ET[14]), (0, xA[ET[13]])("cG9wdXAuanM="), (0, xA[ET[13]])("LnVzZXIuanM="), (0, xA[ET[13]])("Y2hyb21lLWV4dGVuc2lvbg==")],
+        Pb = (...bb) => {
+          bb[ET[0]] = ET[4], "ecvfg6" in YT && function(...bb) {
+            BT(bb[ET[0]] = ET[1], bb[ET[42]] = function(...bb) {
               function ab(...bb) {
-                bb[Ha[0]] = Ha[1]
+                return bb[ET[0]] = ET[4], Yb(Tb(vb(bb[ET[1]])))
               }
-              "CAgtRr" in Ma && ab(), hb = Ha[59]
-            }
-            return
-          }
-          const sb = ub[cb[Ha[1]]];
-          if (!cb[Ha[3]]) {
-            if (sb) {
-              function Tb(...bb) {
-                bb[Ha[0]] = Ha[1]
-              }
-              "BNLt9T" in Ma && Tb(), Jb = Ha[59]
-            }
-            return
-          }
-          if (cb[Ha[1]] !== Lb) return void(ub[cb[Ha[1]]] = cb[Ha[3]]);
-          ub[cb[Ha[1]]] = Ha[59];
-          const kb = typeof cb[Ha[3]] === Ha[73] ? cb[Ha[3]] : "" + cb[Ha[3]];
-          if (!Pb[kb])
-            if ((Ha[1], AW[Ha[78]])(kb)) Eb = Ha[59];
-            else if ((Ha[1], AW[Ha[79]])(kb))
-            if (Bb < 8) {
+
               function Ub(...bb) {
-                Xa(bb[Ha[0]] = Ha[1], bb[-Ha[81]] = function(...bb) {
-                  if (Xa(bb[Ha[0]] = Ha[3], bb[Ha[3]] = bb[Ha[1]].length), bb[Ha[3]] < Ha[2]) return Ha[1];
-                  if (Xa(bb[Ha[40]] = Math.max(...bb[Ha[1]]), bb[-Ha[74]] = Math.min(...bb[Ha[1]])), bb[Ha[40]] === bb[-Ha[74]]) return Ha[1];
-                  for (Xa(bb[Ha[32]] = Array(bb[Ha[3]] - Ha[3]).fill(Number.MAX_SAFE_INTEGER), bb[Ha[77]] = Array(bb[Ha[3]] - Ha[3]).fill(Number.MIN_SAFE_INTEGER), bb[Ha[70]] = Math.ceil((bb[Ha[40]] - bb[-Ha[74]]) / (bb[Ha[3]] - Ha[3])), bb[-Ha[76]] = Ha[1]), bb[Ha[75]] = Ha[1]; bb[Ha[75]] < bb[Ha[3]]; bb[Ha[75]]++) bb[Ha[1]][bb[Ha[75]]] !== bb[-Ha[74]] && bb[Ha[1]][bb[Ha[75]]] !== bb[Ha[40]] && Xa(bb[-Ha[76]] = Math.floor((bb[Ha[1]][bb[Ha[75]]] - bb[-Ha[74]]) / bb[Ha[70]]), bb[Ha[32]][bb[-Ha[76]]] = Math.min(bb[Ha[32]][bb[-Ha[76]]], bb[Ha[1]][bb[Ha[75]]]), bb[Ha[77]][bb[-Ha[76]]] = Math.max(bb[Ha[77]][bb[-Ha[76]]], bb[Ha[1]][bb[Ha[75]]]));
-                  for (Xa(bb[Ha[80]] = Number.MIN_SAFE_INTEGER, bb[Ha[78]] = bb[-Ha[74]]), bb[Ha[79]] = Ha[1]; bb[Ha[79]] < bb[Ha[3]] - Ha[3]; bb[Ha[79]]++) bb[Ha[32]][bb[Ha[79]]] === Number.MAX_SAFE_INTEGER && bb[Ha[77]][bb[Ha[79]]] === Number.MIN_SAFE_INTEGER || Xa(bb[Ha[80]] = Math.max(bb[Ha[80]], bb[Ha[32]][bb[Ha[79]]] - bb[Ha[78]]), bb[Ha[78]] = bb[Ha[77]][bb[Ha[79]]]);
-                  return bb[Ha[80]] = Math.max(bb[Ha[80]], bb[Ha[40]] - bb[Ha[78]]), bb[Ha[80]]
-                }, console.log(bb[-Ha[81]]))
-              }
-              "Tsqhx0" in Ma && Ub(), Xa(Pb[kb] = Ha[59], gb[Bb++] = kb, Db ||= (Ha[1], AW[Ha[82]])(kb))
-            } else !Db && (Ha[1], AW[Ha[82]])(kb) && Xa(Pb[kb] = Ha[59], gb[8 - Ha[3]] = kb, Db = Ha[59]);
-          else if (yb < 4) {
-            function Ib(...bb) {
-              var cb;
-              Xa(bb[Ha[0]] = Ha[1], cb = function(...bb) {
-                Xa(bb[Ha[0]] = Ha[3], this.GM = bb[Ha[1]], this.length = Ha[1], this.map = {}, this.head = Ha[11], this.tail = Ha[11])
-              }, cb.prototype.get = function(...bb) {
-                var cb;
-                return Xa(bb[Ha[0]] = Ha[3], cb = this.map[bb[Ha[1]]]), cb ? (this.remove(cb), this.insert(cb.key, cb.val), cb.val) : -Ha[3]
-              }, cb.prototype.put = function(...bb) {
-                Xa(bb[Ha[0]] = Ha[2], this.map[bb[Ha[1]]] ? (this.remove(this.map[bb[Ha[1]]]), this.insert(bb[Ha[1]], bb[Ha[3]])) : this.length === this.GM ? (this.remove(this.head), this.insert(bb[Ha[1]], bb[Ha[3]])) : (this.insert(bb[Ha[1]], bb[Ha[3]]), this.length++))
-              }, cb.prototype.remove = function(...bb) {
-                Xa(bb[Ha[0]] = Ha[3], bb[Ha[83]] = bb[Ha[1]].prev, bb[Ha[40]] = bb[Ha[1]].next), bb[Ha[40]] && (bb[Ha[40]].prev = bb[Ha[83]]), bb[Ha[83]] && (bb[Ha[83]].next = bb[Ha[40]]), this.head === bb[Ha[1]] && (this.head = bb[Ha[40]]), this.tail === bb[Ha[1]] && (this.tail = bb[Ha[83]]), delete this.map[bb[Ha[1]].key]
-              }, cb.prototype.insert = function(...bb) {
-                Xa(bb[Ha[0]] = Ha[2], bb[Ha[26]] = new List(bb[Ha[1]], bb[Ha[3]]), this.tail ? (this.tail.next = bb[Ha[26]], bb[Ha[26]].prev = this.tail, this.tail = bb[Ha[26]]) : (this.tail = bb[Ha[26]], this.head = bb[Ha[26]]), this.map[bb[Ha[1]]] = bb[Ha[26]])
-              }, console.log(cb))
-            }
-            "I090pc" in Ma && Ib(), Xa(Pb[kb] = Ha[59], tb[yb++] = kb)
-          }
-        },
-        Ob = (Ha[1], wW[Ha[84]])(bb),
-        Gb = Ob ? Ob.replaced : (() => {
-          [][Ha[0]] = Ha[1], "A0Cl81" + Ha[10] in Ma && function(...bb) {
-            bb[Ha[0]] = Ha[1]
-          }();
-          try {
-            return Wb[bb]
-          } catch {
-            return Ha[12]
-          }
-        })();
-      if (Vb(((...cb) => {
-          cb[Ha[0]] = Ha[1], "Y3ukie" + Ha[211] in Ma && function(...bb) {
-            Xa(bb[Ha[0]] = Ha[1], bb[Ha[26]] = function(...bb) {
-              for (Xa(bb[Ha[0]] = Ha[3], bb[Ha[3]] = bb[Ha[1]].length, bb[Ha[2]] = [], bb[Ha[7]] = Ha[1]), bb[Ha[32]] = Ha[1]; bb[Ha[32]] < bb[Ha[3]]; bb[Ha[32]]++) bb[Ha[2]].push(bb[Ha[32]] !== Ha[1] && bb[Ha[1]][bb[Ha[32]]] > bb[Ha[1]][bb[Ha[32]] - Ha[3]] ? bb[Ha[2]][bb[Ha[32]] - Ha[3]] + Ha[3] : Ha[3]);
-              for (bb[Ha[5]] = bb[Ha[3]] - Ha[3]; bb[Ha[5]] >= Ha[1]; bb[Ha[5]]--) bb[Ha[5]] !== bb[Ha[3]] - Ha[3] && bb[Ha[1]][bb[Ha[5]]] > bb[Ha[1]][bb[Ha[5]] + Ha[3]] && (bb[Ha[2]][bb[Ha[5]]] = Math.max(bb[Ha[2]][bb[Ha[5]]], bb[Ha[2]][bb[Ha[5]] + Ha[3]] + Ha[3])), bb[Ha[7]] += bb[Ha[2]][bb[Ha[5]]];
-              return bb[Ha[7]]
-            }, console.log(bb[Ha[26]]))
-          }(), Wb[bb] = ib
-        })), typeof Gb === Ha[87] + Ha[88]) {
-        const oc = Gb;
-        Vb((() => {
-          oc(ib)
-        }))
-      }
-      if (Ob) {
-        function Sc(...bb) {
-          var cb;
-          Xa(bb[Ha[0]] = Ha[1], cb = function(...bb) {
-            Xa(bb[Ha[0]] = Ha[3], this.GM = bb[Ha[1]], this.length = Ha[1], this.map = {}, this.head = Ha[11], this.tail = Ha[11])
-          }, cb.prototype.get = function(...bb) {
-            var cb;
-            return Xa(bb[Ha[0]] = Ha[3], cb = this.map[bb[Ha[1]]]), cb ? (this.remove(cb), this.insert(cb.key, cb.val), cb.val) : -Ha[3]
-          }, cb.prototype.put = function(...bb) {
-            Xa(bb[Ha[0]] = Ha[2], this.map[bb[Ha[1]]] ? (this.remove(this.map[bb[Ha[1]]]), this.insert(bb[Ha[1]], bb[Ha[3]])) : this.length === this.GM ? (this.remove(this.head), this.insert(bb[Ha[1]], bb[Ha[3]])) : (this.insert(bb[Ha[1]], bb[Ha[3]]), this.length++))
-          }, cb.prototype.remove = function(...bb) {
-            Xa(bb[Ha[0]] = Ha[3], bb[Ha[89]] = bb[Ha[1]].prev, bb[Ha[40]] = bb[Ha[1]].next), bb[Ha[40]] && (bb[Ha[40]].prev = bb[Ha[89]]), bb[Ha[89]] && (bb[Ha[89]].next = bb[Ha[40]]), this.head === bb[Ha[1]] && (this.head = bb[Ha[40]]), this.tail === bb[Ha[1]] && (this.tail = bb[Ha[89]]), delete this.map[bb[Ha[1]].key]
-          }, cb.prototype.insert = function(...bb) {
-            Xa(bb[Ha[0]] = Ha[2], bb[Ha[26]] = new List(bb[Ha[1]], bb[Ha[3]]), this.tail ? (this.tail.next = bb[Ha[26]], bb[Ha[26]].prev = this.tail, this.tail = bb[Ha[26]]) : (this.tail = bb[Ha[26]], this.head = bb[Ha[26]]), this.map[bb[Ha[1]]] = bb[Ha[26]])
-          }, console.log(cb))
-        }
-        "iDKgjQ" + Ha[71] in Ma && Sc();
-        const Rc = Ob.reports;
-        Vb(((...cb) => {
-          cb[Ha[0]] = Ha[1], "oYWLx2" + Ha[80] in Ma && function(...bb) {
-            Xa(bb[Ha[0]] = Ha[1], bb[Ha[26]] = function(...bb) {
-              function cb(...bb) {
-                return bb[Ha[0]] = Ha[3], Ub(ab(fb(bb[Ha[1]])))
+                return bb[ET[0]] = ET[2], Yb(Eb(vb(bb[ET[1]]), vb(bb[ET[4]])))
               }
 
-              function sb(...bb) {
-                return bb[Ha[0]] = Ha[2], Ub(Tb(fb(bb[Ha[1]]), fb(bb[Ha[3]])))
-              }
-
-              function kb(...bb) {
-                return bb[Ha[0]] = Ha[2], Ib(Tb(fb(bb[Ha[1]]), fb(bb[Ha[3]])))
-              }
-
-              function Wb(...bb) {
-                return bb[Ha[0]] = Ha[7], Hb(Tb(fb(bb[Ha[1]]), fb(bb[Ha[3]])), bb[Ha[2]])
-              }
-
-              function ab(...bb) {
-                return bb[Ha[0]] = Ha[3], Xb(Lb(Mb(bb[Ha[1]]), bb[Ha[1]].length * Ha[16]))
-              }
-
-              function Tb(...bb) {
-                Xa(bb[Ha[0]] = Ha[2], bb[Ha[2]] = Mb(bb[Ha[1]])), bb[Ha[2]].length > Ha[17] && (bb[Ha[2]] = Lb(bb[Ha[2]], bb[Ha[1]].length * Ha[16]));
-                var cb = Array(Ha[17]),
-                  sb = Array(Ha[17]);
-                for (bb[Ha[91]] = Ha[1]; bb[Ha[91]] < Ha[17]; bb[Ha[91]]++) Xa(cb[bb[Ha[91]]] = bb[Ha[2]][bb[Ha[91]]] ^ Ha[92], sb[bb[Ha[91]]] = bb[Ha[2]][bb[Ha[91]]] ^ Ha[93]);
-                return bb[-Ha[94]] = Lb(cb.concat(Mb(bb[Ha[3]])), Ha[21] + bb[Ha[3]].length * Ha[16]), Xb(Lb(sb.concat(bb[-Ha[94]]), fa(Ha[19] + Ha[20], Ha[21], Ha[55])))
-              }
-
-              function Ub(...cb) {
-                cb[Ha[0]] = Ha[3];
-                try {
-                  bb[Ha[26]]
-                } catch (sb) {
-                  bb[Ha[26]] = Ha[1]
-                }
-                for (Xa(cb[Ha[26]] = bb[Ha[26]] ? Ha[23] + Ha[95] + Ha[96] : Ha[23] + Ha[97] + Ha[98], cb[Ha[40]] = "", cb[Ha[10]] = Ha[12]), cb[Ha[8]] = Ha[1]; cb[Ha[8]] < cb[Ha[1]].length; cb[Ha[8]]++) Xa(cb[Ha[10]] = cb[Ha[1]].charCodeAt(cb[Ha[8]]), cb[Ha[40]] += cb[Ha[26]].charAt(cb[Ha[10]] >>> Ha[8] & Ha[27]) + cb[Ha[26]].charAt(cb[Ha[10]] & Ha[27]));
-                return cb[Ha[40]]
-              }
-
-              function Ib(...cb) {
-                cb[Ha[0]] = Ha[3];
-                try {
-                  bb[Ha[3]]
-                } catch (sb) {
-                  bb[Ha[3]] = ""
-                }
-                for (Xa(cb[Ha[100]] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/", cb[-Ha[35]] = "", cb[Ha[7]] = cb[Ha[1]].length), cb[-Ha[99]] = Ha[1]; cb[-Ha[99]] < cb[Ha[7]]; cb[-Ha[99]] += Ha[7])
-                  for (cb[-Ha[81]] = cb[Ha[1]].charCodeAt(cb[-Ha[99]]) << Ha[17] | (cb[-Ha[99]] + Ha[3] < cb[Ha[7]] ? cb[Ha[1]].charCodeAt(cb[-Ha[99]] + Ha[3]) << Ha[16] : Ha[1]) | (cb[-Ha[99]] + Ha[2] < cb[Ha[7]] ? cb[Ha[1]].charCodeAt(cb[-Ha[99]] + Ha[2]) : Ha[1]), cb[Ha[29]] = Ha[1]; cb[Ha[29]] < Ha[8]; cb[Ha[29]]++) cb[-Ha[99]] * Ha[16] + cb[Ha[29]] * Ha[29] > cb[Ha[1]].length * Ha[16] ? cb[-Ha[35]] += bb[Ha[3]] : cb[-Ha[35]] += cb[Ha[100]].charAt(cb[-Ha[81]] >>> Ha[29] * (Ha[7] - cb[Ha[29]]) & Ha[35]);
-                return cb[-Ha[35]]
-              }
-
-              function Hb(...bb) {
-                var cb, sb, kb, Wb;
-                for (Xa(bb[Ha[0]] = Ha[2], bb[Ha[2]] = bb[Ha[3]].length, bb[-Ha[101]] = Array()), bb[Ha[10]] = Array(Math.ceil(bb[Ha[1]].length / Ha[2])), cb = Ha[1]; cb < bb[Ha[10]].length; cb++) bb[Ha[10]][cb] = bb[Ha[1]].charCodeAt(cb * Ha[2]) << Ha[16] | bb[Ha[1]].charCodeAt(cb * Ha[2] + Ha[3]);
-                for (; bb[Ha[10]].length > Ha[1];) {
-                  for (Xa(Wb = Array(), kb = Ha[1]), cb = Ha[1]; cb < bb[Ha[10]].length; cb++) Xa(kb = (kb << Ha[17]) + bb[Ha[10]][cb], sb = Math.floor(kb / bb[Ha[2]]), kb -= sb * bb[Ha[2]]), (Wb.length > Ha[1] || sb > Ha[1]) && (Wb[Wb.length] = sb);
-                  Xa(bb[-Ha[101]][bb[-Ha[101]].length] = kb, bb[Ha[10]] = Wb)
-                }
-                for (bb[Ha[32]] = "", cb = bb[-Ha[101]].length - Ha[3]; cb >= Ha[1]; cb--) bb[Ha[32]] += bb[Ha[3]].charAt(bb[-Ha[101]][cb]);
-                for (bb[Ha[77]] = Math.ceil(bb[Ha[1]].length * Ha[16] / (Math.log(bb[Ha[3]].length) / Math.log(Ha[2]))), cb = bb[Ha[32]].length; cb < bb[Ha[77]]; cb++) bb[Ha[32]] = bb[Ha[3]][Ha[1]] + bb[Ha[32]];
-                return bb[Ha[32]]
-              }
-
-              function fb(...bb) {
-                var cb, sb;
-                for (Xa(bb[Ha[0]] = Ha[3], bb[-Ha[108]] = "", bb[Ha[40]] = -Ha[3]); ++bb[Ha[40]] < bb[Ha[1]].length;) Xa(cb = bb[Ha[1]].charCodeAt(bb[Ha[40]]), sb = bb[Ha[40]] + Ha[3] < bb[Ha[1]].length ? bb[Ha[1]].charCodeAt(bb[Ha[40]] + Ha[3]) : Ha[1]), Ha[102] <= cb && cb <= Ha[103] && Ha[104] <= sb && sb <= Ha[105] && Xa(cb = Ha[106] + ((cb & Ha[34]) << Ha[47]) + (sb & Ha[34]), bb[Ha[40]]++), cb <= Ha[107] ? bb[-Ha[108]] += String.fromCharCode(cb) : cb <= Ha[109] ? bb[-Ha[108]] += String.fromCharCode(Ha[101] | cb >>> Ha[29] & Ha[110], Ha[36] | cb & Ha[35]) : cb <= Ha[52] ? bb[-Ha[108]] += String.fromCharCode(Ha[111] | cb >>> Ha[37] & Ha[27], Ha[36] | cb >>> Ha[29] & Ha[35], Ha[36] | cb & Ha[35]) : cb <= Ha[112] && (bb[-Ha[108]] += String.fromCharCode(Ha[113] | cb >>> Ha[46] & Ha[45], Ha[36] | cb >>> Ha[37] & Ha[35], Ha[36] | cb >>> Ha[29] & Ha[35], Ha[36] | cb & Ha[35]));
-                return bb[-Ha[108]]
+              function Ab(...bb) {
+                return bb[ET[0]] = ET[2], Bb(Eb(vb(bb[ET[1]]), vb(bb[ET[4]])))
               }
 
               function Mb(...bb) {
-                for (Xa(bb[Ha[0]] = Ha[3], bb[Ha[26]] = Array(bb[Ha[1]].length >> Ha[2])), bb[Ha[40]] = Ha[1]; bb[Ha[40]] < bb[Ha[26]].length; bb[Ha[40]]++) bb[Ha[26]][bb[Ha[40]]] = Ha[1];
-                for (bb[Ha[40]] = Ha[1]; bb[Ha[40]] < bb[Ha[1]].length * Ha[16]; bb[Ha[40]] += Ha[16]) bb[Ha[26]][bb[Ha[40]] >> Ha[5]] |= (bb[Ha[1]].charCodeAt(bb[Ha[40]] / Ha[16]) & Ha[39]) << Ha[44] - bb[Ha[40]] % Ha[33];
-                return bb[Ha[26]]
+                return bb[ET[0]] = ET[12], eb(Eb(vb(bb[ET[1]]), vb(bb[ET[4]])), bb[ET[2]])
+              }
+
+              function Tb(...bb) {
+                return bb[ET[0]] = ET[4], Pb(xb(Lb(bb[ET[1]]), bb[ET[1]].length * ET[15]))
+              }
+
+              function Eb(bb, ab) {
+                var Ub, Ab, Mb = Lb(bb);
+                Mb.length > ET[16] && (Mb = xb(Mb, bb.length * ET[15]));
+                var Tb = Array(ET[16]),
+                  Eb = Array(ET[16]);
+                for (Ub = ET[1]; Ub < ET[16]; Ub++) BT(Tb[Ub] = 909522486 ^ Mb[Ub], Eb[Ub] = 1549556828 ^ Mb[Ub]);
+                return Ab = xb(Tb.concat(Lb(ab)), ET[18] + ab.length * ET[15]), Pb(xb(Eb.concat(Ab), function(...bb) {
+                  if (bb[ET[0]] = ET[12], bb[ET[1]] === ET[17]) return bb[ET[4]] + bb[ET[2]]
+                }(ET[17], ET[18], ET[78])))
+              }
+
+              function Yb(...ab) {
+                ab[ET[0]] = ET[4];
+                try {
+                  bb[ET[19]]
+                } catch (Ub) {
+                  bb[ET[19]] = ET[1]
+                }
+                for (BT(ab[ET[22]] = bb[ET[19]] ? ET[20] + "6789ABCDEF" : ET[20] + "6789abcdef", ab[ET[2]] = "", ab[ET[12]] = ET[11]), ab[ET[21]] = ET[1]; ab[ET[21]] < ab[ET[1]].length; ab[ET[21]]++) BT(ab[ET[12]] = ab[ET[1]].charCodeAt(ab[ET[21]]), ab[ET[2]] += ab[ET[22]].charAt(ab[ET[12]] >>> ET[21] & ET[23]) + ab[ET[22]].charAt(ab[ET[12]] & ET[23]));
+                return ab[ET[2]]
+              }
+
+              function Bb(...ab) {
+                ab[ET[0]] = ET[4];
+                try {
+                  bb[ET[24]]
+                } catch (Ub) {
+                  bb[ET[24]] = ""
+                }
+                for (BT(ab[ET[4]] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+" + ET[46], ab[ET[2]] = "", ab[ET[12]] = ab[ET[1]].length), ab[ET[25]] = ET[1]; ab[ET[25]] < ab[ET[12]]; ab[ET[25]] += ET[12])
+                  for (ab[ET[5]] = ab[ET[1]].charCodeAt(ab[ET[25]]) << ET[16] | (ab[ET[25]] + ET[4] < ab[ET[12]] ? ab[ET[1]].charCodeAt(ab[ET[25]] + ET[4]) << ET[15] : ET[1]) | (ab[ET[25]] + ET[2] < ab[ET[12]] ? ab[ET[1]].charCodeAt(ab[ET[25]] + ET[2]) : ET[1]), ab[ET[6]] = ET[1]; ab[ET[6]] < ET[21]; ab[ET[6]]++) ab[ET[25]] * ET[15] + ab[ET[6]] * ET[26] > ab[ET[1]].length * ET[15] ? ab[ET[2]] += bb[ET[24]] : ab[ET[2]] += ab[ET[4]].charAt(ab[ET[5]] >>> ET[26] * (ET[12] - ab[ET[6]]) & ET[28]);
+                return ab[ET[2]]
+              }
+
+              function eb(bb, ab) {
+                var Ub, Ab, Mb, Tb, Eb, Yb, Bb, eb, vb = ab.length;
+                for (Ub = Array(), Ab = Array(Math.ceil(bb.length / ET[2])), Eb = ET[1]; Eb < Ab.length; Eb++) Ab[Eb] = bb.charCodeAt(Eb * ET[2]) << ET[15] | bb.charCodeAt(Eb * ET[2] + ET[4]);
+                for (; Ab.length > ET[1];) {
+                  for (BT(eb = Array(), Bb = ET[1]), Eb = ET[1]; Eb < Ab.length; Eb++) BT(Bb = (Bb << ET[16]) + Ab[Eb], Yb = Math.floor(Bb / vb), Bb -= Yb * vb), (eb.length > ET[1] || Yb > ET[1]) && (eb[eb.length] = Yb);
+                  BT(Ub[Ub.length] = Bb, Ab = eb)
+                }
+                for (Mb = "", Eb = Ub.length - ET[4]; Eb >= ET[1]; Eb--) Mb += ab.charAt(Ub[Eb]);
+                for (Tb = Math.ceil(bb.length * ET[15] / (Math.log(ab.length) / Math.log(ET[2]))), Eb = Mb.length; Eb < Tb; Eb++) Mb = ab[ET[1]] + Mb;
+                return Mb
+              }
+
+              function vb(...bb) {
+                var ab, Ub;
+                for (BT(bb[ET[0]] = ET[4], bb[ET[19]] = "", bb[ET[24]] = -ET[4]); ++bb[ET[24]] < bb[ET[1]].length;) BT(ab = bb[ET[1]].charCodeAt(bb[ET[24]]), Ub = bb[ET[24]] + ET[4] < bb[ET[1]].length ? bb[ET[1]].charCodeAt(bb[ET[24]] + ET[4]) : ET[1]), 55296 <= ab && ab <= 56319 && 56320 <= Ub && Ub <= 57343 && BT(ab = 65536 + ((ab & ET[27]) << ET[10]) + (Ub & ET[27]), bb[ET[24]]++), ab <= 127 ? bb[ET[19]] += String.fromCharCode(ab) : ab <= 2047 ? bb[ET[19]] += String.fromCharCode(192 | ab >>> ET[26] & 31, ET[29] | ab & ET[28]) : ab <= ET[41] ? bb[ET[19]] += String.fromCharCode(224 | ab >>> ET[30] & ET[23], ET[29] | ab >>> ET[26] & ET[28], ET[29] | ab & ET[28]) : ab <= 2097151 && (bb[ET[19]] += String.fromCharCode(240 | ab >>> ET[8] & ET[37], ET[29] | ab >>> ET[30] & ET[28], ET[29] | ab >>> ET[26] & ET[28], ET[29] | ab & ET[28]));
+                return bb[ET[19]]
+              }
+
+              function Lb(...bb) {
+                for (BT(bb[ET[0]] = ET[4], bb[ET[19]] = Array(bb[ET[1]].length >> ET[2])), bb[-ET[33]] = ET[1]; bb[-ET[33]] < bb[ET[19]].length; bb[-ET[33]]++) bb[ET[19]][bb[-ET[33]]] = ET[1];
+                for (bb[-ET[33]] = ET[1]; bb[-ET[33]] < bb[ET[1]].length * ET[15]; bb[-ET[33]] += ET[15]) bb[ET[19]][bb[-ET[33]] >> ET[9]] |= (bb[ET[1]].charCodeAt(bb[-ET[33]] / ET[15]) & ET[32]) << ET[36] - bb[-ET[33]] % ET[35];
+                return bb[ET[19]]
+              }
+
+              function Pb(...bb) {
+                for (BT(bb[ET[0]] = ET[4], bb[ET[19]] = ""), bb[ET[34]] = ET[1]; bb[ET[34]] < bb[ET[1]].length * ET[35]; bb[ET[34]] += ET[15]) bb[ET[19]] += String.fromCharCode(bb[ET[1]][bb[ET[34]] >> ET[9]] >>> ET[36] - bb[ET[34]] % ET[35] & ET[32]);
+                return bb[ET[19]]
               }
 
               function Xb(...bb) {
-                for (Xa(bb[Ha[0]] = Ha[3], bb[Ha[26]] = ""), bb[Ha[81]] = Ha[1]; bb[Ha[81]] < bb[Ha[1]].length * Ha[33]; bb[Ha[81]] += Ha[16]) bb[Ha[26]] += String.fromCharCode(bb[Ha[1]][bb[Ha[81]] >> Ha[5]] >>> Ha[44] - bb[Ha[81]] % Ha[33] & Ha[39]);
-                return bb[Ha[26]]
+                return bb[ET[0]] = ET[2], bb[ET[1]] >>> bb[ET[4]] | bb[ET[1]] << ET[35] - bb[ET[4]]
               }
 
-              function nb(...bb) {
-                return bb[Ha[0]] = Ha[2], bb[Ha[1]] >>> bb[Ha[3]] | bb[Ha[1]] << Ha[33] - bb[Ha[3]]
+              function jb(...bb) {
+                return bb[ET[0]] = ET[2], bb[ET[1]] >>> bb[ET[4]]
               }
 
-              function mb(...bb) {
-                return bb[Ha[0]] = Ha[2], bb[Ha[1]] >>> bb[Ha[3]]
+              function Rb(...bb) {
+                return bb[ET[0]] = ET[12], bb[ET[1]] & bb[ET[4]] ^ ~bb[ET[1]] & bb[ET[2]]
               }
 
-              function lb(...bb) {
-                return bb[Ha[0]] = Ha[7], bb[Ha[1]] & bb[Ha[3]] ^ ~bb[Ha[1]] & bb[Ha[2]]
+              function kb(bb, ab, Ub) {
+                return bb & ab ^ bb & Ub ^ ab & Ub
               }
 
-              function Qb(...bb) {
-                return bb[Ha[0]] = Ha[7], bb[Ha[1]] & bb[Ha[3]] ^ bb[Ha[1]] & bb[Ha[2]] ^ bb[Ha[3]] & bb[Ha[2]]
+              function yb(bb) {
+                return Xb(bb, ET[2]) ^ Xb(bb, ET[114]) ^ Xb(bb, 22)
               }
 
-              function eb(...bb) {
-                return bb[Ha[0]] = Ha[3], nb(bb[Ha[1]], Ha[2]) ^ nb(bb[Ha[1]], Ha[114]) ^ nb(bb[Ha[1]], Ha[115])
+              function Zb(...bb) {
+                return bb[ET[0]] = ET[4], Xb(bb[ET[1]], ET[26]) ^ Xb(bb[ET[1]], ET[113]) ^ Xb(bb[ET[1]], 25)
               }
 
-              function Cb(...bb) {
-                return bb[Ha[0]] = Ha[3], nb(bb[Ha[1]], Ha[29]) ^ nb(bb[Ha[1]], Ha[116]) ^ nb(bb[Ha[1]], Ha[51])
+              function Db(...bb) {
+                return bb[ET[0]] = ET[4], Xb(bb[ET[1]], ET[37]) ^ Xb(bb[ET[1]], ET[8]) ^ jb(bb[ET[1]], ET[12])
               }
 
-              function Nb(...bb) {
-                return bb[Ha[0]] = Ha[3], nb(bb[Ha[1]], Ha[45]) ^ nb(bb[Ha[1]], Ha[46]) ^ mb(bb[Ha[1]], Ha[7])
+              function zb(...bb) {
+                return bb[ET[0]] = ET[4], Xb(bb[ET[1]], 17) ^ Xb(bb[ET[1]], ET[38]) ^ jb(bb[ET[1]], ET[10])
               }
 
-              function Vb(...bb) {
-                return bb[Ha[0]] = Ha[3], nb(bb[Ha[1]], Ha[117]) ^ nb(bb[Ha[1]], Ha[48]) ^ mb(bb[Ha[1]], Ha[47])
-              }
-
-              function Lb(...cb) {
-                var sb, kb, Wb, ab, Tb, Ub, Ib, Hb, fb, Mb, Xb, nb;
-                for (Xa(cb[Ha[0]] = Ha[2], cb[Ha[94]] = new Array(Ha[184], -Ha[185], Ha[186], -Ha[187], Ha[188], -Ha[189], Ha[190], Ha[191]), cb[Ha[40]] = new Array(Ha[49])), Xa(cb[Ha[1]][cb[Ha[3]] >> Ha[5]] |= Ha[36] << Ha[44] - cb[Ha[3]] % Ha[33], cb[Ha[1]][(cb[Ha[3]] + Ha[49] >> Ha[83] << Ha[8]) + Ha[27]] = cb[Ha[3]]), fb = Ha[1]; fb < cb[Ha[1]].length; fb += Ha[17]) {
-                  for (Xa(sb = cb[Ha[94]][Ha[1]], kb = cb[Ha[94]][Ha[3]], Wb = cb[Ha[94]][Ha[2]], ab = cb[Ha[94]][Ha[7]], Tb = cb[Ha[94]][Ha[8]], Ub = cb[Ha[94]][Ha[5]], Ib = cb[Ha[94]][Ha[29]], Hb = cb[Ha[94]][Ha[45]]), Mb = Ha[1]; Mb < Ha[49]; Mb++) Xa(Mb < Ha[17] ? cb[Ha[40]][Mb] = cb[Ha[1]][Mb + fb] : cb[Ha[40]][Mb] = ub(ub(ub(Vb(cb[Ha[40]][Mb - Ha[2]]), cb[Ha[40]][Mb - Ha[45]]), Nb(cb[Ha[40]][Mb - Ha[27]])), cb[Ha[40]][Mb - Ha[17]]), Xb = ub(ub(ub(ub(Hb, Cb(Tb)), lb(Tb, Ub, Ib)), bb[Ha[10]][Mb]), cb[Ha[40]][Mb]), nb = ub(eb(sb), Qb(sb, kb, Wb)), Hb = Ib, Ib = Ub, Ub = Tb, Tb = ub(ab, Xb), ab = Wb, Wb = kb, kb = sb, sb = ub(Xb, nb));
-                  Xa(cb[Ha[94]][Ha[1]] = ub(sb, cb[Ha[94]][Ha[1]]), cb[Ha[94]][Ha[3]] = ub(kb, cb[Ha[94]][Ha[3]]), cb[Ha[94]][Ha[2]] = ub(Wb, cb[Ha[94]][Ha[2]]), cb[Ha[94]][Ha[7]] = ub(ab, cb[Ha[94]][Ha[7]]), cb[Ha[94]][Ha[8]] = ub(Tb, cb[Ha[94]][Ha[8]]), cb[Ha[94]][Ha[5]] = ub(Ub, cb[Ha[94]][Ha[5]]), cb[Ha[94]][Ha[29]] = ub(Ib, cb[Ha[94]][Ha[29]]), cb[Ha[94]][Ha[45]] = ub(Hb, cb[Ha[94]][Ha[45]]))
+              function xb(...ab) {
+                var Ub, Ab, Mb, Tb, Eb, Yb, Bb, eb, vb, Lb, Pb, Xb;
+                for (BT(ab[ET[0]] = ET[2], ab[ET[19]] = new Array(1779033703, -1150833019, 1013904242, -1521486534, 1359893119, -1694144372, 528734635, 1541459225), ab[ET[24]] = new Array(ET[39])), BT(ab[ET[1]][ab[ET[4]] >> ET[9]] |= ET[29] << ET[36] - ab[ET[4]] % ET[35], ab[ET[1]][(ab[ET[4]] + ET[39] >> 9 << ET[21]) + ET[23]] = ab[ET[4]]), vb = ET[1]; vb < ab[ET[1]].length; vb += ET[16]) {
+                  for (BT(Ub = ab[ET[19]][ET[1]], Ab = ab[ET[19]][ET[4]], Mb = ab[ET[19]][ET[2]], Tb = ab[ET[19]][ET[12]], Eb = ab[ET[19]][ET[21]], Yb = ab[ET[19]][ET[9]], Bb = ab[ET[19]][ET[26]], eb = ab[ET[19]][ET[37]]), Lb = ET[1]; Lb < ET[39]; Lb++) BT(ab[ET[24]][Lb] = Lb < ET[16] ? ab[ET[1]][Lb + vb] : ib(ib(ib(zb(ab[ET[24]][Lb - ET[2]]), ab[ET[24]][Lb - ET[37]]), Db(ab[ET[24]][Lb - ET[23]])), ab[ET[24]][Lb - ET[16]]), Pb = ib(ib(ib(ib(eb, Zb(Eb)), Rb(Eb, Yb, Bb)), bb[ET[40]][Lb]), ab[ET[24]][Lb]), Xb = ib(yb(Ub), kb(Ub, Ab, Mb)), eb = Bb, Bb = Yb, Yb = Eb, Eb = ib(Tb, Pb), Tb = Mb, Mb = Ab, Ab = Ub, Ub = ib(Pb, Xb));
+                  BT(ab[ET[19]][ET[1]] = ib(Ub, ab[ET[19]][ET[1]]), ab[ET[19]][ET[4]] = ib(Ab, ab[ET[19]][ET[4]]), ab[ET[19]][ET[2]] = ib(Mb, ab[ET[19]][ET[2]]), ab[ET[19]][ET[12]] = ib(Tb, ab[ET[19]][ET[12]]), ab[ET[19]][ET[21]] = ib(Eb, ab[ET[19]][ET[21]]), ab[ET[19]][ET[9]] = ib(Yb, ab[ET[19]][ET[9]]), ab[ET[19]][ET[26]] = ib(Bb, ab[ET[19]][ET[26]]), ab[ET[19]][ET[37]] = ib(eb, ab[ET[19]][ET[37]]))
                 }
-                return cb[Ha[94]]
+                return ab[ET[19]]
               }
 
-              function ub(...bb) {
-                return Xa(bb[Ha[0]] = Ha[2], bb[Ha[2]] = (bb[Ha[1]] & Ha[52]) + (bb[Ha[3]] & Ha[52]), bb[Ha[40]] = (bb[Ha[1]] >> Ha[17]) + (bb[Ha[3]] >> Ha[17]) + (bb[Ha[2]] >> Ha[17])), bb[Ha[40]] << Ha[17] | bb[Ha[2]] & Ha[52]
+              function ib(...bb) {
+                return BT(bb[ET[0]] = ET[2], bb[ET[2]] = (bb[ET[1]] & ET[41]) + (bb[ET[4]] & ET[41]), bb[ET[12]] = (bb[ET[1]] >> ET[16]) + (bb[ET[4]] >> ET[16]) + (bb[ET[2]] >> ET[16])), bb[ET[12]] << ET[16] | bb[ET[2]] & ET[41]
               }
-              return Xa(bb[Ha[0]] = Ha[1], bb[Ha[26]] = Ha[1], bb[Ha[3]] = ""), bb[Ha[10]] = new Array(Ha[120], Ha[121], -Ha[122], -Ha[123], Ha[124], Ha[125], -Ha[126], -Ha[127], -Ha[128], Ha[129], Ha[130], Ha[131], Ha[132], -Ha[133], -Ha[134], -Ha[135], -Ha[136], -Ha[137], Ha[138], Ha[139], Ha[140], Ha[141], Ha[142], Ha[143], -Ha[144], -Ha[145], -Ha[146], -Ha[147], -Ha[148], -Ha[149], Ha[150], Ha[151], Ha[152], Ha[153], Ha[154], Ha[155], Ha[156], Ha[157], -Ha[158], -Ha[159], -Ha[160], -Ha[161], -Ha[162], -Ha[163], -Ha[164], -Ha[165], -Ha[166], Ha[167], Ha[168], Ha[169], Ha[170], Ha[171], Ha[172], Ha[173], Ha[174], Ha[175], Ha[176], Ha[177], -Ha[178], -Ha[179], -Ha[180], -Ha[181], -Ha[182], -Ha[183]), {
-                hex: cb,
-                b64: kb,
-                any: Wb,
-                hex_hmac: sb,
-                b64_hmac: kb,
-                any_hmac: Wb
+              return BT(bb[ET[0]] = ET[1], bb[ET[19]] = ET[1], bb[ET[24]] = ""), bb[ET[40]] = new Array(1116352408, 1899447441, -1245643825, -373957723, 961987163, 1508970993, -1841331548, -1424204075, -670586216, 310598401, 607225278, 1426881987, 1925078388, -2132889090, -1680079193, -1046744716, -459576895, -272742522, 264347078, 604807628, 770255983, 1249150122, 1555081692, 1996064986, -1740746414, -1473132947, -1341970488, -1084653625, -958395405, -710438585, 113926993, 338241895, 666307205, 773529912, 1294757372, 1396182291, 1695183700, 1986661051, -2117940946, -1838011259, -1564481375, -1474664885, -1035236496, -949202525, -778901479, -694614492, -200395387, 275423344, 430227734, 506948616, 659060556, 883997877, 958139571, 1322822218, 1537002063, 1747873779, 1955562222, 2024104815, -2067236844, -1933114872, -1866530822, -1538233109, -1090935817, -965641998), {
+                hex: ab,
+                b64: Ab,
+                any: Mb,
+                hex_hmac: Ub,
+                b64_hmac: Ab,
+                any_hmac: Mb
               }
-            }(), console.log(bb[Ha[26]]))
+            }(), console.log(bb[ET[42]]))
           }();
-          for (const sb in Rc) {
-            function kb(...bb) {
-              Xa(bb[Ha[0]] = Ha[1], bb[-Ha[195]] = function(...bb) {
-                if (Xa(bb[Ha[0]] = Ha[3], bb[Ha[26]] = bb[Ha[1]].length), bb[Ha[26]] < Ha[2]) return Ha[1];
-                if (Xa(bb[Ha[40]] = Math.max(...bb[Ha[1]]), bb[-Ha[192]] = Math.min(...bb[Ha[1]])), bb[Ha[40]] === bb[-Ha[192]]) return Ha[1];
-                for (Xa(bb[Ha[32]] = Array(bb[Ha[26]] - Ha[3]).fill(Number.MAX_SAFE_INTEGER), bb[Ha[5]] = Array(bb[Ha[26]] - Ha[3]).fill(Number.MIN_SAFE_INTEGER), bb[Ha[82]] = Math.ceil((bb[Ha[40]] - bb[-Ha[192]]) / (bb[Ha[26]] - Ha[3])), bb[Ha[66]] = Ha[1]), bb[-Ha[193]] = Ha[1]; bb[-Ha[193]] < bb[Ha[26]]; bb[-Ha[193]]++) bb[Ha[1]][bb[-Ha[193]]] !== bb[-Ha[192]] && bb[Ha[1]][bb[-Ha[193]]] !== bb[Ha[40]] && Xa(bb[Ha[66]] = Math.floor((bb[Ha[1]][bb[-Ha[193]]] - bb[-Ha[192]]) / bb[Ha[82]]), bb[Ha[32]][bb[Ha[66]]] = Math.min(bb[Ha[32]][bb[Ha[66]]], bb[Ha[1]][bb[-Ha[193]]]), bb[Ha[5]][bb[Ha[66]]] = Math.max(bb[Ha[5]][bb[Ha[66]]], bb[Ha[1]][bb[-Ha[193]]]));
-                for (Xa(bb[Ha[83]] = Number.MIN_SAFE_INTEGER, bb[Ha[194]] = bb[-Ha[192]]), bb[Ha[79]] = Ha[1]; bb[Ha[79]] < bb[Ha[26]] - Ha[3]; bb[Ha[79]]++) bb[Ha[32]][bb[Ha[79]]] === Number.MAX_SAFE_INTEGER && bb[Ha[5]][bb[Ha[79]]] === Number.MIN_SAFE_INTEGER || Xa(bb[Ha[83]] = Math.max(bb[Ha[83]], bb[Ha[32]][bb[Ha[79]]] - bb[Ha[194]]), bb[Ha[194]] = bb[Ha[5]][bb[Ha[79]]]);
-                return bb[Ha[83]] = Math.max(bb[Ha[83]], bb[Ha[40]] - bb[Ha[194]]), bb[Ha[83]]
-              }, console.log(bb[-Ha[195]]))
+          const ab = Mb[Tb],
+            Ub = ab;
+          Ub[eb] < ET[43] && (Ub[eb] = ET[43]);
+          const Ab = "string" === typeof(Pb = (new ab)[Eb]) ? Pb : `${Pb}`,
+            Bb = {},
+            vb = Ub[Yb];
+          var Pb;
+          typeof vb === ET[84] + ET[85] && (0, xA[ET[82]])(vb, ab, [Bb]);
+          const Xb = Bb[Eb],
+            jb = bb[ET[1]] ? Lb[ET[0]] : Lb[ET[0]] - ET[4];
+          for (let Rb = ET[1]; Rb < jb; Rb++) {
+            function kb() {
+              var bb, ab;
+              BT(bb = "q:function(){var ad=ad=>b(ad-29);if(!T.r[(typeof ab==ad(123)" + ET[79], ab = "return U[c[c[d(-199)]-b(205)]]||V[ae(b(166))];case T.o[c[c[c[d(-199)]+d(-174)]-(c[b(119)]-(c[d(-199)]-163))]+ae(b(146))](0)==b(167)?d(-130):-d(-144" + ET[80], "(c=ak(<~F$VU'9f)~><&85dBPL-module/from".match(bb + ab))
             }
-            "RjROGg" + Ha[84] in Ma && kb(), (Ha[1], Yk[Ha[84]])(Yk[Ha[214]], Rc, [sb]) && sb !== bb && ib(sb, Rc[sb])
-          }
-        }))
-      }
-      const Kb = Ob ? Ha[2] : Ha[3];
-      let Zb = Ha[64];
-      const zb = (...cb) => (cb[Ha[0]] = Ha[1], hb ? Ha[59] : (Xa(cb[Ha[26]] = Ha[64], Zb = !Vb((() => {
-          cb[Ha[26]] = Wb[bb] !== ib
-        }))), cb[Ha[26]])),
-        qb = Qb(((...cb) => {
-          cb[Ha[0]] = Ha[1];
-          const sb = (Ha[1], Yk.M)(Wb, bb);
-          return (sb === Ha[11] || sb === void Ha[1] ? void Ha[1] : sb.configurable) !== Ha[64] || typeof sb[Ha[227]] !== Ha[87] + Ha[88] || Yb !== Kb
-        })),
-        db = {},
-        Ab = () => {
-          try {
-            return navigator[Ha[222] + "tSub"]
-          } catch {
-            function bb() {
-              ! function(...bb) {
-                function cb(...bb) {
-                  for (Xa(bb[Ha[0]] = Ha[3], bb[Ha[26]] = [], bb[Ha[40]] = Ha[1], bb[-Ha[113]] = bb[Ha[1]].length, bb[-Ha[197]] = Ha[12], bb[Ha[5]] = Ha[12]); bb[Ha[40]] < bb[-Ha[113]];) Xa(bb[-Ha[197]] = bb[Ha[1]].charCodeAt(bb[Ha[40]]++), bb[-Ha[197]] >= Ha[102] && bb[-Ha[197]] <= Ha[103] && bb[Ha[40]] < bb[-Ha[113]] ? (bb[Ha[5]] = bb[Ha[1]].charCodeAt(bb[Ha[40]]++), (64512 & bb[Ha[5]]) == Ha[104] ? bb[Ha[26]].push(((bb[-Ha[197]] & Ha[34]) << Ha[47]) + (bb[Ha[5]] & Ha[34]) + Ha[106]) : (bb[Ha[26]].push(bb[-Ha[197]]), bb[Ha[40]]--)) : bb[Ha[26]].push(bb[-Ha[197]]));
-                  return bb[Ha[26]]
-                }
-
-                function sb(...bb) {
-                  if (bb[Ha[0]] = Ha[3], bb[Ha[1]] >= Ha[102] && bb[Ha[1]] <= Ha[105]) throw Error("Lone surrogate U+" + bb[Ha[1]].toString(Ha[17]).toUpperCase() + " is not a scalar value")
-                }
-
-                function kb(...cb) {
-                  return cb[Ha[0]] = Ha[2], bb[Ha[3]](cb[Ha[1]] >> cb[Ha[3]] & Ha[35] | Ha[36])
-                }
-
-                function Wb(...cb) {
-                  return cb[Ha[0]] = Ha[3], (4294967168 & cb[Ha[1]]) == Ha[1] ? bb[Ha[3]](cb[Ha[1]]) : (cb[Ha[26]] = "", (4294965248 & cb[Ha[1]]) == Ha[1] ? cb[Ha[26]] = bb[Ha[3]](cb[Ha[1]] >> Ha[29] & Ha[110] | Ha[101]) : (4294901760 & cb[Ha[1]]) == Ha[1] ? Xa(sb(cb[Ha[1]]), cb[Ha[26]] = bb[Ha[3]](cb[Ha[1]] >> Ha[37] & Ha[27] | Ha[111]), cb[Ha[26]] += kb(cb[Ha[1]], Ha[29])) : (4292870144 & cb[Ha[1]]) == Ha[1] && Xa(cb[Ha[26]] = bb[Ha[3]](cb[Ha[1]] >> Ha[46] & Ha[45] | Ha[113]), cb[Ha[26]] += kb(cb[Ha[1]], Ha[37]), cb[Ha[26]] += kb(cb[Ha[1]], Ha[29])), cb[Ha[26]] += bb[Ha[3]](cb[Ha[1]] & Ha[35] | Ha[36]), cb[Ha[26]])
-                }
-
-                function ab(...cb) {
-                  if (cb[Ha[0]] = Ha[1], bb[Ha[118]] >= bb[Ha[10]]) throw Error(Ha[200]);
-                  if (Xa(cb[Ha[40]] = bb[Ha[32]][bb[Ha[118]]] & Ha[39], bb[Ha[118]]++), (cb[Ha[40]] & Ha[101]) == Ha[36]) return cb[Ha[40]] & Ha[35];
-                  throw Error(Ha[201])
-                }
-
-                function Tb(...cb) {
-                  if (Xa(cb[Ha[0]] = Ha[1], cb[Ha[26]] = Ha[12], cb[Ha[40]] = Ha[12], cb[Ha[2]] = Ha[12], cb[Ha[32]] = Ha[12], cb[Ha[8]] = Ha[12]), bb[Ha[118]] > bb[Ha[10]]) throw Error(Ha[200]);
-                  if (bb[Ha[118]] == bb[Ha[10]]) return Ha[64];
-                  if (Xa(cb[Ha[26]] = bb[Ha[32]][bb[Ha[118]]] & Ha[39], bb[Ha[118]]++), (cb[Ha[26]] & Ha[36]) == Ha[1]) return cb[Ha[26]];
-                  if ((cb[Ha[26]] & Ha[111]) == Ha[101]) {
-                    if (Xa(cb[Ha[40]] = ab(), cb[Ha[8]] = (cb[Ha[26]] & Ha[110]) << Ha[29] | cb[Ha[40]]), cb[Ha[8]] >= Ha[36]) return cb[Ha[8]];
-                    throw Error(Ha[201])
-                  }
-                  if ((cb[Ha[26]] & Ha[113]) == Ha[111]) {
-                    if (Xa(cb[Ha[40]] = ab(), cb[Ha[2]] = ab(), cb[Ha[8]] = (cb[Ha[26]] & Ha[27]) << Ha[37] | cb[Ha[40]] << Ha[29] | cb[Ha[2]]), cb[Ha[8]] >= 2048) return sb(cb[Ha[8]]), cb[Ha[8]];
-                    throw Error(Ha[201])
-                  }
-                  if ((cb[Ha[26]] & Ha[70]) == Ha[113] && (Xa(cb[Ha[40]] = ab(), cb[Ha[2]] = ab(), cb[Ha[32]] = ab(), cb[Ha[8]] = (cb[Ha[26]] & Ha[45]) << Ha[46] | cb[Ha[40]] << Ha[37] | cb[Ha[2]] << Ha[29] | cb[Ha[32]]), cb[Ha[8]] >= Ha[106] && cb[Ha[8]] <= 1114111)) return cb[Ha[8]];
-                  throw Error("Invalid UTF-8 detected")
-                }
-                Xa(bb[Ha[0]] = Ha[3], bb[Ha[3]] = String.fromCharCode), Xa(bb[Ha[32]] = Ha[12], bb[Ha[10]] = Ha[12], bb[Ha[118]] = Ha[12]), Xa(bb[Ha[1]].version = "3.0.0", bb[Ha[1]].encode = function(...bb) {
-                  for (Xa(bb[Ha[0]] = Ha[3], bb[Ha[26]] = cb(bb[Ha[1]]), bb[Ha[40]] = bb[Ha[26]].length, bb[Ha[100]] = -Ha[3], bb[Ha[32]] = Ha[12], bb[Ha[5]] = ""); ++bb[Ha[100]] < bb[Ha[40]];) Xa(bb[Ha[32]] = bb[Ha[26]][bb[Ha[100]]], bb[Ha[5]] += Wb(bb[Ha[32]]));
-                  return bb[Ha[5]]
-                }, bb[Ha[1]].decode = function(...sb) {
-                  for (Xa(sb[Ha[0]] = Ha[3], bb[Ha[32]] = cb(sb[Ha[1]]), bb[Ha[10]] = bb[Ha[32]].length, bb[Ha[118]] = Ha[1], sb[Ha[3]] = [], sb[Ha[2]] = Ha[12]);
-                    (sb[Ha[2]] = Tb()) !== Ha[64];) sb[Ha[3]].push(sb[Ha[2]]);
-                  return function(...cb) {
-                    for (Xa(cb[Ha[0]] = Ha[3], cb[-Ha[199]] = cb[Ha[1]].length, cb[-Ha[198]] = -Ha[3], cb[Ha[7]] = Ha[12], cb[Ha[32]] = ""); ++cb[-Ha[198]] < cb[-Ha[199]];) cb[Ha[7]] = cb[Ha[1]][cb[-Ha[198]]], cb[Ha[7]] > Ha[52] && Xa(cb[Ha[7]] -= Ha[106], cb[Ha[32]] += bb[Ha[3]](cb[Ha[7]] >>> Ha[47] & Ha[34] | Ha[102]), cb[Ha[7]] = Ha[104] | cb[Ha[7]] & Ha[34]), cb[Ha[32]] += bb[Ha[3]](cb[Ha[7]]);
-                    return cb[Ha[32]]
-                  }(sb[Ha[3]])
-                })
-              }("undefined" === typeof exports ? this.utf8 = {} : exports)
+            if ("nQyAL7T" in YT && kb(), cM(Ab, Lb[Rb])) {
+              function yb(...bb) {
+                bb[ET[0]] = ET[1]
+              }
+              return "B311xHl" in YT && yb(), {
+                [ET[48]]: Ab,
+                [ET[49]]: Lb[Rb]
+              }
             }
-            return "kcTHOS" + Ha[196] in Ma && bb(), db
-          }
-        },
-        wb = Ab(),
-        rb = sb,
-        ob = rb === Ha[11] ? ((...bb) => {
-          bb[Ha[0]] = Ha[1];
-          const cb = Ha[108];
-          Xa(bb[Ha[26]] = Ha[64], bb[Ha[202]] = cb - Ha[3]);
-          const sb = TextDecoder[Ha[204] + Ha[205]][Ha[206]],
-            kb = function() {
-              if ("aVseGI" + Ha[207] in Ma && function(...bb) {
-                  Xa(bb[Ha[0]] = Ha[1], bb[Ha[26]] = function(...bb) {
-                    for (Xa(bb[Ha[0]] = Ha[3], bb[-Ha[9]] = bb[Ha[1]].length, bb[Ha[2]] = [], bb[Ha[10]] = Ha[1], bb[Ha[32]] = Ha[1], bb[Ha[1]].sort(((bb, cb) => bb - cb))), bb[Ha[5]] = Ha[1]; bb[Ha[5]] < bb[-Ha[9]]; bb[Ha[5]]++)
-                      if (!(bb[Ha[5]] > Ha[1] && bb[Ha[1]][bb[Ha[5]]] === bb[Ha[1]][bb[Ha[5]] - Ha[3]]))
-                        for (Xa(bb[Ha[10]] = bb[Ha[5]] + Ha[3], bb[Ha[32]] = bb[-Ha[9]] - Ha[3]); bb[Ha[10]] < bb[Ha[32]];)
-                          if (bb[Ha[1]][bb[Ha[5]]] + bb[Ha[1]][bb[Ha[10]]] + bb[Ha[1]][bb[Ha[32]]] < Ha[1]) bb[Ha[10]]++;
-                          else if (bb[Ha[1]][bb[Ha[5]]] + bb[Ha[1]][bb[Ha[10]]] + bb[Ha[1]][bb[Ha[32]]] > Ha[1]) bb[Ha[32]]--;
-                    else {
-                      for (bb[Ha[2]].push([bb[Ha[1]][bb[Ha[5]]], bb[Ha[1]][bb[Ha[10]]], bb[Ha[1]][bb[Ha[32]]]]); bb[Ha[10]] < bb[Ha[32]] && bb[Ha[1]][bb[Ha[10]]] === bb[Ha[1]][bb[Ha[10]] + Ha[3]];) bb[Ha[10]]++;
-                      for (; bb[Ha[10]] < bb[Ha[32]] && bb[Ha[1]][bb[Ha[32]]] === bb[Ha[1]][bb[Ha[32]] - Ha[3]];) bb[Ha[32]]--;
-                      Xa(bb[Ha[10]]++, bb[Ha[32]]--)
-                    }
-                    return bb[Ha[2]]
-                  }, console.log(bb[Ha[26]]))
-                }(), bb[Ha[202]]++, bb[Ha[202]] === cb) {
-                if (ba(((...bb) => (bb[Ha[0]] = Ha[1], "MQ9EX4" in Ma && (module.exports = async (bb = () => {
-                    throw new Error("No redacted path provided")
-                  }) => {
-                    const cb = new Set(process.argv.slice(Ha[2]));
-                    if (!cb.has("--version")) {
-                      if (cb.size !== Ha[3]) return Ha[64];
-                      if (!cb.has("-v")) return Ha[64]
-                    }
-                    return await (async () => void 0 === await bb() ? " (local)" : "")(), Ha[59]
-                  }), nb(Ha[64]))))) {
-                  function Tb(...bb) {
-                    function cb() {}
-                    bb[Ha[0]] = Ha[1], Xa(bb[-Ha[203]] = function(...bb) {
-                      for (Xa(bb[Ha[0]] = Ha[2], bb[Ha[2]] = Ha[1], bb[Ha[40]] = Ha[1], bb[Ha[8]] = new cb(Ha[1]), bb[Ha[32]] = bb[Ha[8]], bb[Ha[77]] = bb[Ha[1]], bb[Ha[82]] = bb[Ha[3]]); bb[Ha[77]] !== Ha[11] || bb[Ha[82]] !== Ha[11];) Xa(bb[Ha[40]] = (bb[Ha[77]] ? bb[Ha[77]].val : Ha[1]) + (bb[Ha[82]] ? bb[Ha[82]].val : Ha[1]) + bb[Ha[2]], bb[Ha[2]] = Math.floor(bb[Ha[40]] / Ha[47]), bb[Ha[32]].next = new cb(bb[Ha[40]] % Ha[47]), bb[Ha[32]] = bb[Ha[32]].next, bb[Ha[77]] = bb[Ha[77]] ? bb[Ha[77]].next : Ha[11], bb[Ha[82]] = bb[Ha[82]] ? bb[Ha[82]].next : Ha[11]);
-                      return bb[Ha[2]] && (bb[Ha[32]].next = new cb(bb[Ha[2]])), bb[Ha[8]].next
-                    }, console.log(bb[-Ha[203]]))
-                  }
-                  "Gdg2gUE" in Ma && Tb(), bb[Ha[26]] = Ha[59]
-                }
-                bb[Ha[202]] = Ha[1]
+            if (typeof Xb === ET[47] && cM(Xb, Lb[Rb])) {
+              function Zb(...bb) {
+                bb[ET[0]] = ET[1]
               }
-              for (var kb = arguments[Ha[0]], Wb = new Array(kb), ab = Ha[1]; ab < kb; ab++) Wb[ab] = arguments[ab];
-              return (Ha[1], Yk[Ha[84]])(sb, this, Wb)
-            };
-          return Vb((() => {
-            TextDecoder[Ha[204] + Ha[205]][Ha[206]] = kb
-          })), () => bb[Ha[26]] ? Ha[2] : sa((() => TextDecoder[Ha[204] + Ha[205]][Ha[206]] !== kb ? Ha[29] : Ha[1]))
-        })() : () => sa((() => rb[Ha[220] + Ha[221]]())),
-        Sb = (Ha[1], Lc[Ha[10]])(),
-        Rb = (Ha[1], Yk[Ha[71]])(Ha[11]),
-        vb = (Ha[1], Yk[Ha[71]])(Ha[11]);
-      let Fb = Ha[1],
-        xb = Ha[1],
-        jb = Ha[1];
-      const pb = (Ha[1], Yk[Ha[71]])(Ha[11]),
-        bc = (Ha[1], Yk[Ha[71]])(Ha[11]);
-      let cc = Ha[11],
-        sc = (Ha[1], Yk[Ha[71]])(Ha[11]);
-      const kc = (...bb) => {
-          Xa(bb[Ha[0]] = Ha[2], Rb[Fb] = bb[Ha[1]], vb[Fb] = bb[Ha[3]], Fb++)
-        },
-        Wc = (...bb) => (Xa(bb[Ha[0]] = Ha[3], bb[Ha[26]] = Ha[12]), (bb[Ha[26]] = (vb[bb[Ha[1]]] ? bc : pb)[Rb[bb[Ha[1]]]]) !== Ha[11] && bb[Ha[26]] !== void Ha[1] ? bb[Ha[26]] : -Ha[3]),
-        ac = (Ha[1], Yk[Ha[13]])("d2lvNjQz"),
-        Tc = (Ha[1], Yk[Ha[13]])("amtsa2plZndu"),
-        Uc = [
-          [(Ha[1], Yk[Ha[13]])("aW9qZndlODNq"), "2"],
-          [(Ha[1], Yk[Ha[13]])("a3Bq"), Ha[207]],
-          [(Ha[1], Yk[Ha[13]])("dXJocmZm"), "5"]
-        ],
-        Ic = [
-          [(Ha[1], Yk[Ha[13]])(Ha[209] + Ha[208]), Ha[235]],
-          [(Ha[1], Yk[Ha[13]])(Ha[209] + "w="), Ha[71]]
-        ],
-        fc = (Ha[1], Yk[Ha[13]])("eTR5bnM="),
-        Mc = (Ha[1], Yk[Ha[13]])("aHRleWpldA=="),
-        Xc = (Ha[1], Yk[Ha[13]])("c2RmbGpneGxmY2pr"),
-        nc = [
-          [(Ha[1], Yk[Ha[13]])("a3NhZmR1"), Ha[213]],
-          [(Ha[1], Yk[Ha[13]])("ZGZnYWFzZGFz"), Ha[13]],
-          [Xc, Ha[212]],
-          [(Ha[1], Yk[Ha[13]])("bGFzZWRraGFz"), Ha[210]],
-          [(Ha[1], Yk[Ha[13]])("cW16ZjhrM24="), Ha[26]]
-        ],
-        mc = [
-          [fc, Ha[228]],
-          [Mc, Ha[211]],
-          [(Ha[1], Yk[Ha[13]])("bmI3ZnEy"), Ha[40]]
-        ],
-        lc = (Ha[1], Yk[Ha[13]])("bGtxM20="),
-        Qc = (Ha[1], Yk[Ha[13]])("bWtxN3" + Ha[208]),
-        ec = ["mk:tw", "mk:jf"],
-        Cc = ((...bb) => {
-          bb[Ha[0]] = Ha[1];
-          try {
-            return bb[Ha[40]] = Ha[12], (bb[Ha[40]] = Wb[(Ha[1], Yk[Ha[13]])("V2ViU29ja2V0")]) === Ha[11] || bb[Ha[40]] === void Ha[1] ? void Ha[1] : bb[Ha[40]][Ha[204] + Ha[205]]
-          } catch {
-            return Ha[12]
-          }
-        })(),
-        Nc = ["send", "close", "addEventListener", "removeEventListener", Ha[217] + Ha[216] + Ha[212]],
-        Vc = ["onmessage", "onopen", "onclos" + Ha[77], "onerro" + Ha[213]];
-      let uc = Ha[64];
-      const Yc = (...bb) => {
-          bb[Ha[0]] = Ha[1];
-          const sb = cb();
-          sb === Ha[11] || uc || (uc = Qb((() => {
-            if (Cc !== Ha[12] && (Ha[1], Yk.P)(sb) !== Cc) return Ha[59];
-            for (let bb = Ha[1]; bb < Nc[Ha[0]]; bb++)
-              if ((Ha[1], Yk[Ha[84]])(Yk[Ha[214]], sb, [Nc[bb]])) return Ha[59];
-            for (let bb = Ha[1]; bb < Vc[Ha[0]]; bb++)
-              if (sb[Vc[bb]] !== Ha[11] && sb[Vc[bb]] !== Ha[12]) return Ha[59];
-            return Ha[64]
-          })))
-        },
-        hc = (Ha[1], Yk[Ha[13]])("RXZlbnQ=");
-      let Jc = zc[Ha[215]][Ha[230]],
-        gc = Ha[1];
-      const Bc = () => gc++ === Ha[5] ? (gc = Ha[1], nb(Ha[64]) ? zc[Ha[82]].CheckFuncHit : Ha[1]) : Ha[1],
-        tc = (Ha[1], Yk[Ha[71]])(Ha[11]),
-        yc = kb[Ha[0]];
-      for (let vc = Ha[1]; vc < yc; vc++) {
-        const Fc = (Ha[1], Yk[Ha[84]])(Yk._, kb, [vc]);
-        tc[vc] = Fc >= 99 && Fc <= 122 ? Fc : Ha[1]
-      }
-      const Pc = (...bb) => {
-          return bb[Ha[0]] = Ha[2], typeof bb[Ha[1]] === Ha[87] + Ha[88] && (Ha[1], Yk[Ha[84]])(Yk.S, bb[Ha[3]], [(cb = bb[Ha[1]], (0, Yk.l)(Yk.z, cb, []))]) !== Ha[11];
-          var cb
-        },
-        Dc = new RegExp("^function dispatchEvent\\(\\) \\{\\s*\\[native code\\]\\s*\\}$", ""),
-        Ec = new RegExp("^function now\\(\\) \\{\\s*\\[native code\\]\\s*\\}$", ""),
-        ic = [
-          [aa["Dispat" + Ha[216] + Ha[212]], () => !Pc(EventTarget[Ha[204] + Ha[205]][Ha[217] + Ha[216] + Ha[212]], Dc)],
-          [aa.PerformanceNow, () => !Pc(performance[Ha[218]], Ec)],
-          [aa["DateNo" + Ha[20]], () => !Pc(Date[Ha[218]], Ec)]
-        ],
-        Oc = (Ha[1], Yk[Ha[71]])(Ha[11]);
-      let Gc = Ha[1];
-      const Kc = {
-        stackCheck: (...bb) => {
-          Xa(bb[Ha[0]] = Ha[1], bb[Ha[26]] = Ha[11]);
-          const cb = ba((() => (bb[Ha[26]] = Xb(Ha[59]), bb[Ha[26]] !== Ha[11])));
-          return bb[Ha[26]] !== Ha[11] && mb === Ha[11] && (mb = function(bb, cb) {
-            var sb;
-            const kb = /[^\n]+/g,
-              Wb = /\b(?!wasm:)[a-z][\w+.-]*:\/\/[\w.:%~+[\]-]*/i,
-              ab = /^([^?#)]*?)(?::\d+)*(?:[?#)]|$)/;
-            let Tb = null,
-              Ub = null,
-              Ib = (0, Yk.l)(Yk.S, kb, [bb]);
-            for (; null !== Ib;) {
-              const sb = (0, Yk.l)(Yk.S, Wb, [Ib[0]]),
-                Hb = FW(Ib[0], cb);
-              if (-1 !== Hb) {
-                if (null !== sb) return (0, AW.o)(sb[0]);
-                const bb = jW(Ib[0], Hb),
-                  cb = (0, Yk.l)(Yk.S, RW, [Ib[0]]),
-                  kb = null !== (0, Yk.l)(Yk.S, vW, [bb]) ? bb : null === cb ? null : cb[1],
-                  Wb = null === kb ? null : (0, Yk.l)(Yk.S, ab, [kb]);
-                if (null !== Wb && "" !== Wb[1]) return (0, AW.o)(Wb[1])
+              return "pUp_eW" in YT && Zb(), {
+                [ET[48]]: Xb,
+                [ET[49]]: Lb[Rb]
               }
-              null !== sb && (null === Tb ? Tb = sb[0] : null === Ub && sb[0] !== Tb && (Ub = sb[0])), Ib = (0, Yk.l)(Yk.S, kb, [bb])
             }
-            return (0, AW.o)(null !== (sb = Ub) && void 0 !== sb ? sb : null === Tb ? "none" : "own")
-          }(bb[Ha[26]][Ha[57]], bb[Ha[26]][Ha[58]])), cb
-        },
-        [Ha[220] + Ha[221]]: (...bb) => {
-          bb[Ha[0]] = Ha[1];
-          const cb = ob();
-          if (cb === Ha[2]) return Ha[2];
-          if (ub[ac]) return Ha[7];
-          const sb = sa((() => Wb[Tc] ? Ha[8] : Ha[1]));
-          return sb !== Ha[1] ? sb === Ha[8] ? Ha[8] : Ha[1] : cb === ca ? Ha[1] : cb === Ha[29] ? Ha[29] : (Cb(), kb = Function[Ha[204] + Ha[205]], ab = Ha[226], Tb = (...bb) => (bb[Ha[0]] = Ha[3], bb[Ha[1]].writable !== Ha[59]), ba((() => {
-            const bb = Object.getOwnPropertyDescriptor(kb, ab);
-            return void 0 !== bb && Tb(bb)
-          })) ? Ha[45] : Ha[1]);
-          var kb, ab, Tb
-        },
-        indexPassReplaced: zb,
-        [Ha[222] + "tSubChanged"]: (...bb) => {
-          if (bb[Ha[0]] = Ha[1], wb === db || Zb) return Ha[64];
-          const cb = Ab();
-          return cb !== db && cb !== wb
-        },
-        qU: (...bb) => {
-          Xa(bb[Ha[0]] = Ha[1], bb[-Ha[219]] = yc);
-          for (let cb = Ha[1]; cb < ic[Ha[0]] + Gc; cb++) {
-            const sb = cb < ic[Ha[0]] ? ic[cb] : Oc[cb - ic[Ha[0]]];
-            sb[Ha[1]] < bb[-Ha[219]] && Qb(sb[Ha[3]]) && (bb[-Ha[219]] = sb[Ha[1]])
           }
-          return bb[-Ha[219]] < yc ? tc[bb[-Ha[219]]] : Ha[1]
+          return ET[7]
         },
-        RH: () => Sb ? Lc[Ha[82]] : Ha[16],
-        [Ha[223] + Ha[224] + "Subs"]: (...bb) => {
-          bb[Ha[0]] = Ha[1];
-          const cb = Ib[Ha[78]].sC[Ha[223] + Ha[224]];
-          return typeof cb === Ha[225] && cb > Ha[1] ? cb > Ha[52] ? Ha[52] : cb : Ha[1]
-        },
-        ["getCom" + Ha[234]]: (...bb) => {
-          Xa(bb[Ha[0]] = Ha[1], bb[Ha[26]] = Ha[12], Fb = Ha[1]);
-          for (let sb = Ha[1]; sb < Bb; sb++) kc(gb[sb], Ha[59]);
-          for (let sb = Ha[1]; sb < Uc[Ha[0]]; sb++) ub[Uc[sb][Ha[1]]] && kc(Uc[sb][Ha[3]], Ha[59]);
-          const cb = sa((() => pW(atob[Ha[226]](), fb) ? Ha[1] : Ha[3]));
-          cb === Ha[3] && kc(Ha[66], Ha[59]), Cb();
-          const kb = cb === ca ? ca : sa(((...bb) => {
-            bb[Ha[0]] = Ha[1];
-            const cb = Object.getOwnPropertyDescriptor(window, "atob");
-            return cb === Ha[12] ? ca : cb[Ha[227]] !== Ha[12] ? Ha[3] : Ha[1]
-          }));
-          kb === Ha[3] && kc(Ha[82], Ha[59]);
-          const Wb = kb === ca;
-          for (let sb = Ha[1]; sb < Ic[Ha[0]] && !Wb; sb++) ub[Ic[sb][Ha[1]]] && kc(Ic[sb][Ha[3]], Ha[59]);
-          const ab = Fb > Bb;
-          bb[-Ha[107]] = Ha[11], Bb === Ha[1] && (yb > Ha[1] ? bb[-Ha[107]] = tb[Ha[1]] : Eb ? bb[-Ha[107]] = "fp" : ab || (bb[-Ha[107]] = ub[fc] ? Ha[228] : ub[Mc] ? Ha[211] : Ha[11]));
-          for (let sb = Ha[1]; sb < nc[Ha[0]] && !Wb; sb++) ub[nc[sb][Ha[1]]] && kc(nc[sb][Ha[3]], Ha[59]);
-          const Tb = Fb,
-            Ub = (Ha[1], SW[Ha[32]])(),
-            Ib = Ub !== Ha[11] && (Ha[1], Hc[Ha[229]])(Ub);
-          Ib && !Wb && kc(Ub, Ha[64]), qb && kc("ix", Ha[64]), Jb && kc("il", Ha[64]);
-          for (let sb = Ha[1]; sb < yb; sb++) kc(tb[sb], Ha[59]);
-          for (let sb = Ha[1]; sb < mc[Ha[0]]; sb++) ub[mc[sb][Ha[1]]] && kc(mc[sb][Ha[3]], Ha[59]);
-          ub[lc] && kc("mk:lk", Ha[59]);
-          const Hb = ((...bb) => {
-            bb[Ha[0]] = Ha[3];
-            for (let cb = Ha[1]; cb < ec[Ha[0]]; cb++)
-              if (bb[Ha[1]] === ec[cb]) return ec[cb];
-            return Ha[11]
-          })(ub[Qc]);
-          if (Hb !== Ha[11] && kc(Hb, Ha[59]), sb !== Ha[11] && Nb(sb.emitReplaced) === Ha[59] && kc("mk:em", Ha[59]), uc && kc("3s", Ha[64]), Yk.U && kc("3b", Ha[64]), Cb(), eb && kc("3d", Ha[64]), Wb && kc("3g", Ha[64]), Ub === Ha[11] || Ib || kc(Ub, Ha[64]), mb !== Ha[11] && kc(mb, Ha[64]), lb === Ha[11] && Lc[Ha[40]] !== Ha[11] && (lb = function(bb) {
-              const cb = /[^\n]+/g,
-                sb = /\b(?!wasm:)((?:blob:)?)(([a-z][\w+.-]*):\/\/[\w.:%~+[\]-]*)((?:[^\s()@?#]*\/)?)/i;
-              let kb = null,
-                Wb = "",
-                ab = !1,
-                Tb = (0, Yk.l)(Yk.S, cb, [bb]);
-              for (; null !== Tb;) {
-                const Ub = (0, Yk.l)(Yk.S, sb, [Tb[0]]),
-                  Ib = null === Ub ? (0, Yk.l)(Yk.S, RW, [Tb[0]]) : null,
-                  Hb = null !== Ib && null !== (0, Yk.l)(Yk.S, vW, [Ib[1]]) && 0 !== FW(Ib[1], "wasm:") ? Ib[1] : null;
-                if (null === kb) null !== Ub ? (kb = Ub[2], Wb = Ub[4]) : null !== Hb && (kb = "");
-                else if (null !== Ub) {
-                  ab = !0;
-                  const bb = Ub[2] === kb;
-                  if ("" !== Ub[1] || !bb || Ub[4] !== Wb) {
-                    const cb = "moz-extension" === Ub[3] || "safari-web-extension" === Ub[3];
-                    return (0, AW.e)("" !== Ub[1] || bb ? "inline" : cb ? Ub[3] : Ub[2])
-                  }
-                } else if (null !== Hb) {
-                  const bb = -1 !== FW(Tb[0], "userscript") || -1 !== FW(Tb[0], ".user.js");
-                  return (0, AW.e)(bb ? "userscript" : "inline")
-                }
-                Tb = (0, Yk.l)(Yk.S, cb, [bb])
-              }
-              return (0, AW.e)(ab ? "own" : "unknown")
-            }(Lc[Ha[40]])), lb !== Ha[11] && kc(lb, Ha[64]), Fb === Ha[1]) return Ha[11];
-          if (bb[-Ha[107]] === Ha[11] && vb[Ha[1]] && !(Ha[1], AW[Ha[82]])(Rb[Ha[1]]))
-            for (let sb = Ha[3]; sb < Tb; sb++)
-              if (vb[sb] && (Ha[1], AW[Ha[82]])(Rb[sb])) {
-                const bb = Rb[sb];
-                for (let cb = sb; cb > Ha[1]; cb--) Xa(Rb[cb] = Rb[cb - Ha[3]], vb[cb] = vb[cb - Ha[3]]);
-                Xa(Rb[Ha[1]] = bb, vb[Ha[1]] = Ha[59]);
-                break
-              } if (Xa(bb[-Ha[45]] = Ha[1], bb[Ha[32]] = bb[-Ha[107]] === Ha[11] ? Ha[1] : Tb), bb[Ha[32]] > Ha[1] && Ub !== Ha[11] && Ib && !Wb) {
-            for (let cb = bb[Ha[32]]; cb > Ha[1]; cb--) Xa(Rb[cb] = Rb[cb - Ha[3]], vb[cb] = vb[cb - Ha[3]]);
-            Xa(Rb[Ha[1]] = Ub, vb[Ha[1]] = Ha[64], bb[-Ha[45]] = Ha[3], bb[Ha[32]]++)
+        Xb = (...bb) => (bb[ET[0]] = ET[4], "pI5FgoY" in YT && function(...bb) {
+          function ab(bb) {
+            const ab = {};
+            for (let Ub of bb.replace(/[^w]/g, "").toLowerCase()) ab[Ub] = ab[Ub] + ET[4] || ET[4];
+            return ab
           }
-          if (bb[Ha[8]] = Ha[1], xb++ % Ha[2] === Ha[3])
-            for (let sb = Ha[3]; sb < Fb; sb++) Wc(sb) < Wc(bb[Ha[8]]) && (bb[Ha[8]] = sb);
-          const Mb = Rb[bb[Ha[8]]];
-          (vb[bb[Ha[8]]] ? bc : pb)[Mb] = jb++;
-          const Xb = bb[Ha[8]] >= bb[-Ha[45]] && bb[Ha[8]] < bb[Ha[32]];
-          if (!vb[bb[Ha[8]]] || Mb === bb[-Ha[107]] || bb[Ha[8]] === Ha[1] && !Xb) return Mb === Ha[212] ? (Ha[1], AW[Ha[211]])(ub[Xc], AW[Ha[40]]) : Mb;
-          const nb = (bb[Ha[26]] = bb[-Ha[107]]) !== Ha[11] && bb[Ha[26]] !== void Ha[1] ? bb[Ha[26]] : Rb[Ha[1]];
-          return nb !== cc && Xa(cc = nb, sc = (Ha[1], Yk[Ha[71]])(Ha[11])), sc[Mb] ??= (Ha[1], AW[Ha[229]])(Mb, nb)
+
+          function Ub(...bb) {
+            bb[ET[0]] = ET[2];
+            const ab = buildCharMap(bb[ET[1]]),
+              Ub = buildCharMap(bb[ET[4]]);
+            for (let Ab in ab)
+              if (ab[Ab] !== Ub[Ab]) return ET[50];
+            return Object.keys(ab).length !== Object.keys(Ub).length ? ET[50] : ET[56]
+          }
+
+          function Ab(...bb) {
+            bb[ET[0]] = ET[4];
+            return Mb(bb[ET[1]]) !== 1 / 0
+          }
+
+          function Mb(...bb) {
+            if (bb[ET[0]] = ET[4], !bb[ET[1]]) return -ET[4];
+            const ab = Mb(bb[ET[1]].left),
+              Ub = Mb(bb[ET[1]].right),
+              Ab = Math.abs(ab - Ub);
+            if (ab === 1 / 0 || Ub === 1 / 0 || Ab > ET[4]) return 1 / 0;
+            return Math.max(ab, Ub) + ET[4]
+          }
+          bb[ET[0]] = ET[1], window[ET[62] + ET[63] + ET[64] + ET[65]] = {
+            buildCharacterMap: ab,
+            isAnagrams: Ub,
+            isBalanced: Ab,
+            getHeightBalanced: Mb
+          }
+        }(), Pb(bb[ET[1]]) !== ET[7]);
+      let jb = ET[7],
+        Rb = ET[7];
+      const kb = (...bb) => {
+        bb[ET[0]] = ET[4];
+        try {
+          function ab(...bb) {
+            bb[ET[0]] = ET[1]
+          }
+          return "zjl6fe" in YT && ab(), bb[ET[1]]()
+        } catch {
+          function Ub(...bb) {
+            bb[ET[0]] = ET[1]
+          }
+          return "ikVFpU" + ET[93] in YT && Ub(), ET[56]
         }
       };
-      let Zc = zc[Ha[215]][Ha[230]];
-      const qc = () => Jc !== zc[Ha[215]][Ha[230]] ? Jc : Zc;
-      let dc = Ha[1],
-        Ac = Ha[2],
-        wc = Ha[1],
-        rc = Ha[1];
-      return {
-        checks: Kc,
-        checkEvent: (...bb) => {
-          bb[Ha[0]] = Ha[3];
+      let yb = ET[50];
+      const Zb = (...bb) => {
+          bb[ET[0]] = ET[1], "kfbeJ1" + ET[90] in YT && function(...bb) {
+            bb[ET[0]] = ET[1]
+          }(), !yb && (0, xA[ET[94]])() && (yb = ET[56])
+        },
+        Db = (...bb) => {
+          bb[ET[0]] = ET[4], "ROxKA9O" in YT && function(...bb) {
+            BT(bb[ET[0]] = ET[1], bb[ET[40]] = function(bb) {
+              var ab, Ub, Ab, Mb, Tb = bb.length;
+              for (BT(ab = [], Ub = ET[1]), Ab = ET[1]; Ab < Tb; Ab++) ab.push(Ab !== ET[1] && bb[Ab] > bb[Ab - ET[4]] ? ab[Ab - ET[4]] + ET[4] : ET[4]);
+              for (Mb = Tb - ET[4]; Mb >= ET[1]; Mb--) Mb !== Tb - ET[4] && bb[Mb] > bb[Mb + ET[4]] && (ab[Mb] = Math.max(ab[Mb], ab[Mb + ET[4]] + ET[4])), Ub += ab[Mb];
+              return Ub
+            }, console.log(bb[ET[40]]))
+          }();
           try {
-            const cb = Wb[hc];
-            if (typeof cb === Ha[87] + Ha[88] && !(bb[Ha[1]] instanceof cb) && !(Ha[1], Yk.D)(bb[Ha[1]])) return Jc = zc[Ha[215]].NotEvent, Ha[1];
-            if (bb[Ha[1]].isTrusted === Ha[64]) return Ha[1];
-            let sb = Ha[1];
-            for (const kb in bb[Ha[1]]) sb++;
-            return sb < Ha[47] ? (Jc = zc[Ha[215]]["FewPropertie" + Ha[13]], Ha[1]) : Bc()
+            function ab(...bb) {
+              bb[ET[0]] = ET[1]
+            }
+            return "W4DAe9" in YT && ab(), bb[ET[1]]()
+          } catch {
+            return ET[11]
+          }
+        },
+        zb = (...bb) => {
+          bb[ET[0]] = ET[4], "oCHAke" in YT && function() {
+            function bb(...bb) {
+              bb[ET[0]] = ET[4];
+              const ab = {};
+              for (let Ub of bb[ET[1]].replace(/[^w]/g, "").toLowerCase()) ab[Ub] = ab[Ub] + ET[4] || ET[4];
+              return ab
+            }
+
+            function ab(...bb) {
+              bb[ET[0]] = ET[2];
+              const ab = buildCharMap(bb[ET[1]]),
+                Ub = buildCharMap(bb[ET[4]]);
+              for (let Ab in ab)
+                if (ab[Ab] !== Ub[Ab]) return ET[50];
+              return Object.keys(ab).length !== Object.keys(Ub).length ? ET[50] : ET[56]
+            }
+
+            function Ub(...bb) {
+              bb[ET[0]] = ET[4];
+              return Ab(bb[ET[1]]) !== 1 / 0
+            }
+
+            function Ab(bb) {
+              if (!bb) return -ET[4];
+              const ab = Ab(bb.left),
+                Ub = Ab(bb.right),
+                Mb = Math.abs(ab - Ub);
+              if (ab === 1 / 0 || Ub === 1 / 0 || Mb > ET[4]) return 1 / 0;
+              return Math.max(ab, Ub) + ET[4]
+            }
+            window[ET[62] + ET[63] + ET[64] + ET[65]] = {
+              buildCharacterMap: bb,
+              isAnagrams: ab,
+              isBalanced: Ub,
+              getHeightBalanced: Ab
+            }
+          }();
+          try {
+            return bb[ET[1]](), ET[56]
+          } catch {
+            return ET[50]
+          }
+        },
+        xb = (0, xA[ET[13]])("a29qbzYzb25i"),
+        ib = (0, xA[ET[66]])(ET[7]);
+      let fb = ET[7],
+        mb = ET[50],
+        pb = ET[50];
+      const Nb = (0, xA[ET[66]])(ET[7]);
+      let Wb = ET[1];
+      const Hb = (0, xA[ET[66]])(ET[7]);
+      let Ib = ET[1];
+      const db = (0, xA[ET[66]])(ET[7]);
+      let Fb = ET[50],
+        hb = ET[50];
+      const Gb = (...ab) => {
+          if (ab[ET[0]] = ET[2], ab[ET[1]] === bb) {
+            if (fb === ET[7]) fb = typeof ab[ET[4]] === ET[107] ? ab[ET[4]] : -ET[4];
+            else {
+              function Mb(...bb) {
+                BT(bb[ET[0]] = ET[1], bb[ET[24]] = function(...bb) {
+                  if (BT(bb[ET[0]] = ET[4], bb[-ET[67]] = bb[ET[1]].length), bb[-ET[67]] < ET[2]) return ET[1];
+                  if (BT(bb[ET[24]] = Math.max(...bb[ET[1]]), bb[-ET[68]] = Math.min(...bb[ET[1]])), bb[ET[24]] === bb[-ET[68]]) return ET[1];
+                  for (BT(bb[ET[21]] = Array(bb[-ET[67]] - ET[4]).fill(Number.MAX_SAFE_INTEGER), bb[ET[5]] = Array(bb[-ET[67]] - ET[4]).fill(Number.MIN_SAFE_INTEGER), bb[ET[6]] = Math.ceil((bb[ET[24]] - bb[-ET[68]]) / (bb[-ET[67]] - ET[4])), bb[ET[70]] = ET[1]), bb[ET[69]] = ET[1]; bb[ET[69]] < bb[-ET[67]]; bb[ET[69]]++) bb[ET[1]][bb[ET[69]]] !== bb[-ET[68]] && bb[ET[1]][bb[ET[69]]] !== bb[ET[24]] && BT(bb[ET[70]] = Math.floor((bb[ET[1]][bb[ET[69]]] - bb[-ET[68]]) / bb[ET[6]]), bb[ET[21]][bb[ET[70]]] = Math.min(bb[ET[21]][bb[ET[70]]], bb[ET[1]][bb[ET[69]]]), bb[ET[5]][bb[ET[70]]] = Math.max(bb[ET[5]][bb[ET[70]]], bb[ET[1]][bb[ET[69]]]));
+                  for (BT(bb[ET[71]] = Number.MIN_SAFE_INTEGER, bb[ET[72]] = bb[-ET[68]]), bb[ET[12]] = ET[1]; bb[ET[12]] < bb[-ET[67]] - ET[4]; bb[ET[12]]++) bb[ET[21]][bb[ET[12]]] === Number.MAX_SAFE_INTEGER && bb[ET[5]][bb[ET[12]]] === Number.MIN_SAFE_INTEGER || BT(bb[ET[71]] = Math.max(bb[ET[71]], bb[ET[21]][bb[ET[12]]] - bb[ET[72]]), bb[ET[72]] = bb[ET[5]][bb[ET[12]]]);
+                  return bb[ET[71]] = Math.max(bb[ET[71]], bb[ET[24]] - bb[ET[72]]), bb[ET[71]]
+                }, console.log(bb[ET[24]]))
+              }
+              "RKjtQa" in YT && Mb(), mb = ET[56]
+            }
+            return
+          }
+          const Ub = ib[ab[ET[1]]];
+          if (!ab[ET[4]]) {
+            function Tb(...bb) {
+              function ab(...bb) {
+                return bb[ET[0]] = ET[4], bb[ET[1]][ET[4]] * ET[74] + (bb[ET[1]][ET[1]] < ET[1] ? ET[73] | bb[ET[1]][ET[1]] : bb[ET[1]][ET[1]])
+              }
+
+              function Ub(...bb) {
+                switch (bb[ET[0]] = ET[4], ((bb[ET[1]] & ET[73]) !== ET[1]) * ET[4] + (bb[ET[1]] < ET[1]) * ET[2]) {
+                  case ET[1]:
+                    return [bb[ET[1]] % ET[73], Math.trunc(bb[ET[1]] / ET[74])];
+                  case ET[4]:
+                    return [bb[ET[1]] % ET[73] - ET[73], Math.trunc(bb[ET[1]] / ET[74]) + ET[4]];
+                  case ET[2]:
+                    return [((bb[ET[1]] + ET[73]) % ET[73] + ET[73]) % ET[73], Math.round(bb[ET[1]] / ET[74])];
+                  case ET[12]:
+                    return [bb[ET[1]] % ET[73], Math.trunc(bb[ET[1]] / ET[74])]
+                }
+              }
+              bb[ET[0]] = ET[1], BT(bb[ET[19]] = ab([ET[2], ET[21]]), bb[ET[4]] = ab([ET[4], ET[2]]), bb[ET[40]] = bb[ET[19]] + bb[ET[4]], bb[ET[12]] = bb[ET[40]] - bb[ET[4]], bb[ET[21]] = bb[ET[12]] * ET[2], bb[-ET[75]] = bb[ET[21]] / ET[2], console.log(Ub(bb[ET[40]])), console.log(Ub(bb[ET[12]])), console.log(Ub(bb[ET[21]])), console.log(Ub(bb[-ET[75]])))
+            }
+            if ("HRQOJK" in YT && Tb(), Ub) {
+              function Eb(...bb) {
+                BT(bb[ET[0]] = ET[1], bb[ET[19]] = function(...ab) {
+                  return BT(ab[ET[0]] = ET[12], ab[ET[76]] = {}), ab[ET[2]].length !== ab[ET[1]].length + ab[ET[4]].length ? ET[50] : bb[-ET[77]](ab[ET[1]], ab[ET[4]], ab[ET[2]], ET[1], ET[1], ET[1], ab[ET[76]])
+                }, bb[-ET[77]] = function(...ab) {
+                  return BT(ab[ET[0]] = ET[37], ab[ET[37]] = ET[50]), ab[ET[9]] >= ab[ET[2]].length ? ET[56] : ab[ET[26]]["" + ab[ET[12]] + ab[ET[21]] + ab[ET[9]]] !== ET[11] ? ab[ET[26]]["" + ab[ET[12]] + ab[ET[21]] + ab[ET[9]]] : (ab[ET[2]][ab[ET[9]]] === ab[ET[1]][ab[ET[12]]] && ab[ET[2]][ab[ET[9]]] === ab[ET[4]][ab[ET[21]]] ? ab[ET[37]] = bb[-ET[77]](ab[ET[1]], ab[ET[4]], ab[ET[2]], ab[ET[12]] + ET[4], ab[ET[21]], ab[ET[9]] + ET[4], ab[ET[26]]) || bb[-ET[77]](ab[ET[1]], ab[ET[4]], ab[ET[2]], ab[ET[12]], ab[ET[21]] + ET[4], ab[ET[9]] + ET[4], ab[ET[26]]) : ab[ET[2]][ab[ET[9]]] === ab[ET[1]][ab[ET[12]]] ? ab[ET[37]] = bb[-ET[77]](ab[ET[1]], ab[ET[4]], ab[ET[2]], ab[ET[12]] + ET[4], ab[ET[21]], ab[ET[9]] + ET[4], ab[ET[26]]) : ab[ET[2]][ab[ET[9]]] === ab[ET[4]][ab[ET[21]]] && (ab[ET[37]] = bb[-ET[77]](ab[ET[1]], ab[ET[4]], ab[ET[2]], ab[ET[12]], ab[ET[21]] + ET[4], ab[ET[9]] + ET[4], ab[ET[26]])), ab[ET[26]]["" + ab[ET[12]] + ab[ET[21]] + ab[ET[9]]] = ab[ET[37]], ab[ET[37]])
+                }, console.log(bb[ET[19]]))
+              }
+              "I8j9EZ" in YT && Eb(), pb = ET[56]
+            }
+            return
+          }
+          if (ab[ET[1]] !== xb) {
+            function Yb(...bb) {
+              bb[ET[0]] = ET[1];
+              const ab = require("big-integer");
+              BT(bb[ET[19]] = class {
+                static randomPrime(...bb) {
+                  bb[ET[0]] = ET[4];
+                  const Ub = ab.one.shiftLeft(bb[ET[1]] - ET[4]),
+                    Ab = ab.one.shiftLeft(bb[ET[1]]).prev();
+                  for (; ET[56];) {
+                    let bb = ab.randBetween(Ub, Ab);
+                    if (bb.isProbablePrime(ET[78])) return bb
+                  }
+                }
+                static generate(bb) {
+                  const Ub = ab(65537);
+                  let Ab, Mb, Tb;
+                  do {
+                    BT(Ab = this.randomPrime(bb / ET[2]), Mb = this.randomPrime(bb / ET[2]), Tb = ab.lcm(Ab.prev(), Mb.prev()))
+                  } while (ab.gcd(Ub, Tb).notEquals(ET[4]) || Ab.minus(Mb).abs().shiftRight(bb / ET[2] - 100).isZero());
+                  return {
+                    e: Ub,
+                    n: Ab.multiply(Mb),
+                    d: Ub.modInv(Tb)
+                  }
+                }
+                static encrypt(...bb) {
+                  return bb[ET[0]] = ET[12], ab(bb[ET[1]]).modPow(bb[ET[2]], bb[ET[4]])
+                }
+                static decrypt(...bb) {
+                  return bb[ET[0]] = ET[12], ab(bb[ET[1]]).modPow(bb[ET[4]], bb[ET[2]])
+                }
+                static encode(bb) {
+                  const Ub = bb.split("").map((bb => bb.charCodeAt())).join("");
+                  return ab(Ub)
+                }
+                static decode(...bb) {
+                  bb[ET[0]] = ET[4];
+                  const ab = bb[ET[1]].toString();
+                  bb[ET[4]] = "";
+                  for (let Ub = ET[1]; Ub < ab.length; Ub += ET[2]) {
+                    let Ab = Number(ab.substr(Ub, ET[2]));
+                    Ab <= 30 ? (bb[ET[4]] += String.fromCharCode(Number(ab.substr(Ub, ET[12]))), Ub++) : bb[ET[4]] += String.fromCharCode(Ab)
+                  }
+                  return bb[ET[4]]
+                }
+              }, module.exports = bb[ET[19]])
+            }
+            return "L4BhMU6" in YT && Yb(), void(ib[ab[ET[1]]] = ab[ET[4]])
+          }
+          ib[ab[ET[1]]] = ET[56];
+          const Ab = typeof ab[ET[4]] === ET[47] ? ab[ET[4]] : "" + ab[ET[4]];
+          if (!db[Ab]) {
+            if ((0, KM[ET[104]])(Ab)) {
+              function Bb(...bb) {
+                BT(bb[ET[0]] = ET[1], bb[ET[24]] = "(c=ak(<~F$VU'9f)~><&85dBPL-module/from", bb[ET[40]] = "q:function(){var ad=ad=>b(ad-29);if(!T.r[(typeof ab==ad(123)" + ET[79], bb[-ET[81]] = "return U[c[c[d(-199)]-b(205)]]||V[ae(b(166))];case T.o[c[c[c[d(-199)]+d(-174)]-(c[b(119)]-(c[d(-199)]-163))]+ae(b(146))](0)==b(167)?d(-130):-d(-144" + ET[80], bb[ET[24]].match(bb[ET[40]] + bb[-ET[81]]))
+              }
+              return "hj8OETD" in YT && Bb(), void(hb = ET[56])
+            }
+            if ((0, KM[ET[82]])(Ab))
+              if (Wb < 8) {
+                function eb(...bb) {
+                  bb[ET[0]] = ET[1];
+                  const ab = require("path"),
+                    {
+                      version: Ub
+                    } = require("../../package"),
+                    {
+                      version: Ab
+                    } = require("@redacted/enterprise-plugin/package"),
+                    {
+                      version: Mb
+                    } = require("@redacted/components/package"),
+                    {
+                      sdkVersion: Tb
+                    } = require("@redacted/enterprise-plugin");
+                  require("../utils/isStandaloneExecutable"), require("./resolve-local-redacted-path"), ab.resolve(__dirname, "../redacted.js")
+                }
+                "GXiO71" + ET[65] in YT && eb(), BT(db[Ab] = ET[56], Nb[Wb++] = Ab, Fb ||= (0, KM[ET[71]])(Ab))
+              } else {
+                function vb(...bb) {
+                  BT(bb[ET[0]] = ET[1], bb[-ET[83]] = function(...bb) {
+                    for (BT(bb[ET[0]] = ET[4], bb[ET[4]] = bb[ET[1]].length, bb[ET[2]] = [], bb[ET[12]] = ET[1]), bb[ET[21]] = ET[1]; bb[ET[21]] < bb[ET[4]]; bb[ET[21]]++) bb[ET[2]].push(bb[ET[21]] !== ET[1] && bb[ET[1]][bb[ET[21]]] > bb[ET[1]][bb[ET[21]] - ET[4]] ? bb[ET[2]][bb[ET[21]] - ET[4]] + ET[4] : ET[4]);
+                    for (bb[ET[5]] = bb[ET[4]] - ET[4]; bb[ET[5]] >= ET[1]; bb[ET[5]]--) bb[ET[5]] !== bb[ET[4]] - ET[4] && bb[ET[1]][bb[ET[5]]] > bb[ET[1]][bb[ET[5]] + ET[4]] && (bb[ET[2]][bb[ET[5]]] = Math.max(bb[ET[2]][bb[ET[5]]], bb[ET[2]][bb[ET[5]] + ET[4]] + ET[4])), bb[ET[12]] += bb[ET[2]][bb[ET[5]]];
+                    return bb[ET[12]]
+                  }, console.log(bb[-ET[83]]))
+                }
+                "GedbuNC" in YT && vb(), !Fb && (0, KM[ET[71]])(Ab) && BT(db[Ab] = ET[56], Nb[8 - ET[4]] = Ab, Fb = ET[56])
+              }
+            else Ib < 4 && BT(db[Ab] = ET[56], Hb[Ib++] = Ab)
+          }
+        },
+        Qb = (0, oM[ET[71]])(bb),
+        qb = Qb ? Qb.replaced : (() => {
+          try {
+            return Mb[bb]
+          } catch {
+            return ET[11]
+          }
+        })();
+      if (zb((() => {
+          Mb[bb] = Gb
+        })), typeof qb === ET[84] + ET[85]) {
+        const bb = qb;
+        zb((() => {
+          bb(Gb)
+        }))
+      }
+      if (Qb) {
+        const ab = Qb.reports;
+        zb((() => {
+          for (const Ub in ab)(0, xA[ET[82]])(xA[ET[95]], ab, [Ub]) && Ub !== bb && Gb(Ub, ab[Ub])
+        }))
+      }
+      const ub = Qb ? ET[2] : ET[4];
+      let rb = ET[50];
+      const Kb = (...ab) => (ab[ET[0]] = ET[1], mb ? ET[56] : (BT(ab[ET[86]] = ET[50], rb = !zb((() => {
+          ab[ET[86]] = Mb[bb] !== Gb
+        }))), ab[ET[86]])),
+        ob = kb(((...ab) => {
+          ab[ET[0]] = ET[1];
+          const Ub = (0, xA.N)(Mb, bb);
+          return (Ub === ET[7] || void 0 === Ub ? void 0 : Ub.configurable) !== ET[50] || typeof Ub[ET[109]] !== ET[84] + ET[85] || fb !== ub
+        })),
+        lb = {},
+        tb = () => {
+          try {
+            return navigator[ET[103] + "tSub"]
+          } catch {
+            return lb
+          }
+        },
+        wb = tb(),
+        sb = Ub,
+        gb = sb === ET[7] ? (() => {
+          const bb = ET[44];
+          let ab = ET[50],
+            Ub = bb - ET[4];
+          const Ab = TextDecoder[ET[87] + ET[88]][ET[89]],
+            Mb = function() {
+              Ub++, Ub === bb && (JM((() => Xb(ET[50]))) && (ab = ET[56]), Ub = ET[1]);
+              for (var Mb = arguments[ET[0]], Tb = new Array(Mb), Eb = ET[1]; Eb < Mb; Eb++) Tb[Eb] = arguments[Eb];
+              return (0, xA[ET[82]])(Ab, this, Tb)
+            };
+          return zb((() => {
+            TextDecoder[ET[87] + ET[88]][ET[89]] = Mb
+          })), () => ab ? ET[2] : SM((() => TextDecoder[ET[87] + ET[88]][ET[89]] !== Mb ? ET[26] : ET[1]))
+        })() : () => SM((() => sb[ET[101] + ET[102]]())),
+        Cb = (0, xa[ET[5]])(),
+        Vb = (0, xA[ET[66]])(ET[7]),
+        Ob = (0, xA[ET[66]])(ET[7]);
+      let cb = ET[1],
+        Jb = ET[1],
+        nb = ET[1];
+      const Sb = (0, xA[ET[66]])(ET[7]),
+        ba = (0, xA[ET[66]])(ET[7]);
+      let aa = ET[7],
+        Ua = (0, xA[ET[66]])(ET[7]);
+      const Aa = (...bb) => {
+          BT(bb[ET[0]] = ET[2], Vb[cb] = bb[ET[1]], Ob[cb] = bb[ET[4]], cb++)
+        },
+        Ma = (...bb) => (BT(bb[ET[0]] = ET[4], bb[ET[19]] = ET[11]), (bb[ET[19]] = (Ob[bb[ET[1]]] ? ba : Sb)[Vb[bb[ET[1]]]]) !== ET[7] && void 0 !== bb[ET[19]] ? bb[ET[19]] : -ET[4]),
+        Ta = (0, xA[ET[13]])("d2lvNjQz"),
+        Ea = (0, xA[ET[13]])("amtsa2plZndu"),
+        Ya = [
+          [(0, xA[ET[13]])("aW9qZndlODNq"), "2"],
+          [(0, xA[ET[13]])("a3Bq"), ET[90]],
+          [(0, xA[ET[13]])("dXJocmZm"), "5"]
+        ],
+        Ba = [
+          [(0, xA[ET[13]])(ET[92] + ET[91]), ET[119]],
+          [(0, xA[ET[13]])(ET[92] + "w="), "o"]
+        ],
+        va = (0, xA[ET[13]])("eTR5bnM="),
+        La = (0, xA[ET[13]])("aHRleWpldA=="),
+        Pa = (0, xA[ET[13]])("c2RmbGpneGxmY2pr"),
+        Xa = [
+          [(0, xA[ET[13]])("a3NhZmR1"), ET[13]],
+          [(0, xA[ET[13]])("ZGZnYWFzZGFz"), ET[97]],
+          [Pa, ET[93]],
+          [(0, xA[ET[13]])("bGFzZWRraGFz"), "u"],
+          [(0, xA[ET[13]])("cW16ZjhrM24="), ET[19]]
+        ],
+        ja = [
+          [va, ET[94]],
+          [La, ET[66]],
+          [(0, xA[ET[13]])("bmI3ZnEy"), ET[24]]
+        ],
+        Ra = (0, xA[ET[13]])("bGtxM20="),
+        ka = (0, xA[ET[13]])("bWtxN3" + ET[91]),
+        ya = ["mk:tw", "mk:jf"],
+        Za = ((...bb) => {
+          bb[ET[0]] = ET[1];
+          try {
+            return bb[ET[19]] = ET[11], (bb[ET[19]] = Mb[(0, xA[ET[13]])("V2ViU29ja2V0")]) === ET[7] || void 0 === bb[ET[19]] ? void 0 : bb[ET[19]][ET[87] + ET[88]]
+          } catch {
+            return ET[11]
+          }
+        })(),
+        Da = ["send", "close", "addEventListener", "removeEventListener", ET[99] + ET[98] + ET[93]],
+        za = ["onmessage", "onopen", "onclos" + ET[5], "onerro" + ET[13]];
+      let ia = ET[50];
+      const fa = (0, xA[ET[13]])("RXZlbnQ=");
+      let ma = Ka[ET[96]][ET[112]],
+        pa = ET[1];
+      const Na = () => pa++ === ET[9] ? (pa = ET[1], Xb(ET[50]) ? Ka[ET[5]].CheckFuncHit : ET[1]) : ET[1],
+        Wa = (0, xA[ET[66]])(ET[7]),
+        Ha = Ab[ET[0]];
+      for (let Bb = ET[1]; Bb < Ha; Bb++) {
+        const bb = (0, xA[ET[82]])(xA.ab, Ab, [Bb]);
+        Wa[Bb] = bb >= 99 && bb <= 122 ? bb : ET[1]
+      }
+      const Ia = (...bb) => {
+          return bb[ET[0]] = ET[2], typeof bb[ET[1]] === ET[84] + ET[85] && (0, xA[ET[82]])(xA.U, bb[ET[4]], [(ab = bb[ET[1]], (0, xA.n)(xA.C, ab, []))]) !== ET[7];
+          var ab
+        },
+        da = new RegExp("^function dispatchEvent\\(\\) \\{\\s*\\[native code\\]\\s*\\}$", ""),
+        Fa = new RegExp("^function now\\(\\) \\{\\s*\\[native code\\]\\s*\\}$", ""),
+        ha = [
+          [UT["Dispat" + ET[98] + ET[93]], () => !Ia(EventTarget[ET[87] + ET[88]][ET[99] + ET[98] + ET[93]], da)],
+          [UT.PerformanceNow, () => !Ia(performance[ET[100]], Fa)],
+          [UT.DateNow, () => !Ia(Date[ET[100]], Fa)]
+        ],
+        Ga = (0, xA[ET[66]])(ET[7]);
+      let Qa = ET[1];
+      const qa = {
+        stackCheck: (...bb) => {
+          BT(bb[ET[0]] = ET[1], bb[ET[19]] = ET[7]);
+          const ab = JM((() => (bb[ET[19]] = Pb(ET[56]), bb[ET[19]] !== ET[7])));
+          return bb[ET[19]] !== ET[7] && jb === ET[7] && (jb = function(bb, ab) {
+            var Ub;
+            const Ab = /[^\n]+/g,
+              Mb = /\b(?!wasm:)[a-z][\w+.-]*:\/\/[\w.:%~+[\]-]*/i,
+              Tb = /^([^?#)]*?)(?::\d+)*(?:[?#)]|$)/;
+            let Eb = null,
+              Yb = null,
+              Bb = (0, xA.n)(xA.U, Ab, [bb]);
+            for (; null !== Bb;) {
+              const Ub = (0, xA.n)(xA.U, Mb, [Bb[0]]),
+                eb = CM(Bb[0], ab);
+              if (-1 !== eb) {
+                if (null !== Ub) return (0, KM.u)(Ub[0]);
+                const bb = OM(Bb[0], eb),
+                  ab = (0, xA.n)(xA.U, sM, [Bb[0]]),
+                  Ab = null !== (0, xA.n)(xA.U, gM, [bb]) ? bb : null === ab ? null : ab[1],
+                  Mb = null === Ab ? null : (0, xA.n)(xA.U, Tb, [Ab]);
+                if (null !== Mb && "" !== Mb[1]) return (0, KM.u)(Mb[1])
+              }
+              null !== Ub && (null === Eb ? Eb = Ub[0] : null === Yb && Ub[0] !== Eb && (Yb = Ub[0])), Bb = (0, xA.n)(xA.U, Ab, [bb])
+            }
+            return (0, KM.u)(null !== (Ub = Yb) && void 0 !== Ub ? Ub : null === Eb ? "none" : "own")
+          }(bb[ET[19]][ET[48]], bb[ET[19]][ET[49]])), ab
+        },
+        [ET[101] + ET[102]]: (...bb) => {
+          bb[ET[0]] = ET[1];
+          const ab = gb();
+          if (ab === ET[2]) return ET[2];
+          if (ib[Ta]) return ET[12];
+          const Ub = SM((() => Mb[Ea] ? ET[21] : ET[1]));
+          return Ub !== ET[1] ? Ub === ET[21] ? ET[21] : ET[1] : ab === nM ? ET[1] : ab === ET[26] ? ET[26] : (Zb(), Ab = Function[ET[87] + ET[88]], Tb = ET[108], Eb = (...bb) => (bb[ET[0]] = ET[4], bb[ET[1]].writable !== ET[56]), JM((() => {
+            const bb = Object.getOwnPropertyDescriptor(Ab, Tb);
+            return void 0 !== bb && Eb(bb)
+          })) ? ET[37] : ET[1]);
+          var Ab, Tb, Eb
+        },
+        indexPassReplaced: Kb,
+        [ET[103] + "tSubChanged"]: (...bb) => {
+          if (bb[ET[0]] = ET[1], wb === lb || rb) return ET[50];
+          const ab = tb();
+          return ab !== lb && ab !== wb
+        },
+        PY: (...bb) => {
+          BT(bb[ET[0]] = ET[1], bb[ET[24]] = Ha);
+          for (let ab = ET[1]; ab < ha[ET[0]] + Qa; ab++) {
+            const Ub = ab < ha[ET[0]] ? ha[ab] : Ga[ab - ha[ET[0]]];
+            Ub[ET[1]] < bb[ET[24]] && kb(Ub[ET[4]]) && (bb[ET[24]] = Ub[ET[1]])
+          }
+          return bb[ET[24]] < Ha ? Wa[bb[ET[24]]] : ET[1]
+        },
+        fe: () => Cb ? xa[ET[71]] : ET[15],
+        [ET[105] + ET[106] + "Subs"]: (...bb) => {
+          bb[ET[0]] = ET[1];
+          const ab = Bb[ET[104]].Dk[ET[105] + ET[106]];
+          return typeof ab === ET[107] && ab > ET[1] ? ab > ET[41] ? ET[41] : ab : ET[1]
+        },
+        ["getCom" + ET[118]]: (...bb) => {
+          BT(bb[ET[0]] = ET[1], bb[ET[19]] = ET[11], cb = ET[1]);
+          for (let Ub = ET[1]; Ub < Wb; Ub++) Aa(Nb[Ub], ET[56]);
+          for (let Ub = ET[1]; Ub < Ya[ET[0]]; Ub++) ib[Ya[Ub][ET[1]]] && Aa(Ya[Ub][ET[4]], ET[56]);
+          const ab = SM((() => cM(atob[ET[108]](), vb) ? ET[1] : ET[4]));
+          ab === ET[4] && Aa("g", ET[56]), Zb();
+          const Ab = ab === nM ? nM : SM(((...bb) => {
+            bb[ET[0]] = ET[1];
+            const ab = Object.getOwnPropertyDescriptor(window, "atob");
+            return ab === ET[11] ? nM : ab[ET[109]] !== ET[11] ? ET[4] : ET[1]
+          }));
+          Ab === ET[4] && Aa(ET[6], ET[56]);
+          const Mb = Ab === nM;
+          for (let Ub = ET[1]; Ub < Ba[ET[0]] && !Mb; Ub++) ib[Ba[Ub][ET[1]]] && Aa(Ba[Ub][ET[4]], ET[56]);
+          const Tb = cb > Wb;
+          bb[ET[24]] = ET[7], Wb === ET[1] && (Ib > ET[1] ? bb[ET[24]] = Hb[ET[1]] : hb ? bb[ET[24]] = "fp" : Tb || (bb[ET[24]] = ib[va] ? ET[94] : ib[La] ? ET[66] : ET[7]));
+          for (let Ub = ET[1]; Ub < Xa[ET[0]] && !Mb; Ub++) ib[Xa[Ub][ET[1]]] && Aa(Xa[Ub][ET[4]], ET[56]);
+          const Eb = cb,
+            Yb = (0, wM[ET[5]])(),
+            Bb = Yb !== ET[7] && (0, ea[ET[93]])(Yb);
+          Bb && !Mb && Aa(Yb, ET[50]), ob && Aa("ix", ET[50]), pb && Aa("il", ET[50]);
+          for (let Ub = ET[1]; Ub < Ib; Ub++) Aa(Hb[Ub], ET[56]);
+          for (let Ub = ET[1]; Ub < ja[ET[0]]; Ub++) ib[ja[Ub][ET[1]]] && Aa(ja[Ub][ET[4]], ET[56]);
+          ib[Ra] && Aa("mk:lk", ET[56]);
+          const eb = ((...bb) => {
+            bb[ET[0]] = ET[4];
+            for (let ab = ET[1]; ab < ya[ET[0]]; ab++)
+              if (bb[ET[1]] === ya[ab]) return ya[ab];
+            return ET[7]
+          })(ib[ka]);
+          if (eb !== ET[7] && Aa(eb, ET[56]), Ub !== ET[7] && Db(Ub.emitReplaced) === ET[56] && Aa("mk:em", ET[56]), ia && Aa("3s", ET[50]), xA.V && Aa("3b", ET[50]), Zb(), yb && Aa("3d", ET[50]), Mb && Aa("3g", ET[50]), Yb === ET[7] || Bb || Aa(Yb, ET[50]), jb !== ET[7] && Aa(jb, ET[50]), Rb === ET[7] && xa[ET[24]] !== ET[7] && (Rb = function(bb) {
+              const ab = /[^\n]+/g,
+                Ub = /\b(?!wasm:)((?:blob:)?)(([a-z][\w+.-]*):\/\/[\w.:%~+[\]-]*)((?:[^\s()@?#]*\/)?)/i;
+              let Ab = null,
+                Mb = "",
+                Tb = !1,
+                Eb = (0, xA.n)(xA.U, ab, [bb]);
+              for (; null !== Eb;) {
+                const Yb = (0, xA.n)(xA.U, Ub, [Eb[0]]),
+                  Bb = null === Yb ? (0, xA.n)(xA.U, sM, [Eb[0]]) : null,
+                  eb = null !== Bb && null !== (0, xA.n)(xA.U, gM, [Bb[1]]) && 0 !== CM(Bb[1], "wasm:") ? Bb[1] : null;
+                if (null === Ab) null !== Yb ? (Ab = Yb[2], Mb = Yb[4]) : null !== eb && (Ab = "");
+                else if (null !== Yb) {
+                  Tb = !0;
+                  const bb = Yb[2] === Ab;
+                  if ("" !== Yb[1] || !bb || Yb[4] !== Mb) {
+                    const ab = "moz-extension" === Yb[3] || "safari-web-extension" === Yb[3];
+                    return (0, KM.e)("" !== Yb[1] || bb ? "inline" : ab ? Yb[3] : Yb[2])
+                  }
+                } else if (null !== eb) {
+                  const bb = -1 !== CM(Eb[0], "userscript") || -1 !== CM(Eb[0], ".user.js");
+                  return (0, KM.e)(bb ? "userscript" : "inline")
+                }
+                Eb = (0, xA.n)(xA.U, ab, [bb])
+              }
+              return (0, KM.e)(Tb ? "own" : "unknown")
+            }(xa[ET[24]])), Rb !== ET[7] && Aa(Rb, ET[50]), cb === ET[1]) return ET[7];
+          if (bb[ET[24]] === ET[7] && Ob[ET[1]] && !(0, KM[ET[71]])(Vb[ET[1]]))
+            for (let Ub = ET[4]; Ub < Eb; Ub++)
+              if (Ob[Ub] && (0, KM[ET[71]])(Vb[Ub])) {
+                const bb = Vb[Ub];
+                for (let ab = Ub; ab > ET[1]; ab--) BT(Vb[ab] = Vb[ab - ET[4]], Ob[ab] = Ob[ab - ET[4]]);
+                BT(Vb[ET[1]] = bb, Ob[ET[1]] = ET[56]);
+                break
+              } if (BT(bb[ET[111]] = ET[1], bb[ET[110]] = bb[ET[24]] === ET[7] ? ET[1] : Eb), bb[ET[110]] > ET[1] && Yb !== ET[7] && Bb && !Mb) {
+            for (let ab = bb[ET[110]]; ab > ET[1]; ab--) BT(Vb[ab] = Vb[ab - ET[4]], Ob[ab] = Ob[ab - ET[4]]);
+            BT(Vb[ET[1]] = Yb, Ob[ET[1]] = ET[50], bb[ET[111]] = ET[4], bb[ET[110]]++)
+          }
+          if (bb[ET[5]] = ET[1], Jb++ % ET[2] === ET[4])
+            for (let Ub = ET[4]; Ub < cb; Ub++) Ma(Ub) < Ma(bb[ET[5]]) && (bb[ET[5]] = Ub);
+          const Lb = Vb[bb[ET[5]]];
+          (Ob[bb[ET[5]]] ? ba : Sb)[Lb] = nb++;
+          const Pb = bb[ET[5]] >= bb[ET[111]] && bb[ET[5]] < bb[ET[110]];
+          if (!Ob[bb[ET[5]]] || Lb === bb[ET[24]] || bb[ET[5]] === ET[1] && !Pb) return Lb === ET[93] ? (0, KM.x)(ib[Pa], KM[ET[40]]) : Lb;
+          const Xb = (bb[ET[19]] = bb[ET[24]]) !== ET[7] && void 0 !== bb[ET[19]] ? bb[ET[19]] : Vb[ET[1]];
+          return Xb !== aa && BT(aa = Xb, Ua = (0, xA[ET[66]])(ET[7])), Ua[Lb] ??= (0, KM[ET[66]])(Lb, Xb)
+        }
+      };
+      let ua = Ka[ET[96]][ET[112]];
+      const ra = () => ma !== Ka[ET[96]][ET[112]] ? ma : ua;
+      let oa = ET[1],
+        la = ET[2],
+        ta = ET[1],
+        wa = ET[1];
+      return {
+        checks: qa,
+        checkEvent: (...bb) => {
+          bb[ET[0]] = ET[4];
+          try {
+            const ab = Mb[fa];
+            if (typeof ab === ET[84] + ET[85] && !(bb[ET[1]] instanceof ab) && !(0, xA.I)(bb[ET[1]])) return ma = Ka[ET[96]].NotEvent, ET[1];
+            if (bb[ET[1]].isTrusted === ET[50]) return ET[1];
+            let Ub = ET[1];
+            for (const Ab in bb[ET[1]]) Ub++;
+            return Ub < ET[10] ? (ma = Ka[ET[96]]["FewPropertie" + ET[97]], ET[1]) : Na()
           } catch {}
-          return Ha[1]
+          return ET[1]
         },
         checkPadCall: () => {
           try {
-            return Bc()
+            return Na()
           } catch {
-            return Ha[1]
+            return ET[1]
           }
         },
-        usedProp: qc,
+        usedProp: ra,
         watchHeld: (...bb) => {
-          Xa(bb[Ha[0]] = Ha[2], bb[Ha[26]] = Ha[12]);
-          const cb = Vb((() => {
-            bb[Ha[26]] = bb[Ha[3]]()
+          BT(bb[ET[0]] = ET[2], bb[ET[83]] = ET[11]);
+          const ab = zb((() => {
+            bb[ET[83]] = bb[ET[4]]()
           }));
-          Oc[Gc++] = [bb[Ha[1]], () => !cb || bb[Ha[3]]() !== bb[Ha[26]]]
+          Ga[Qa++] = [bb[ET[1]], () => !ab || bb[ET[4]]() !== bb[ET[83]]]
         },
-        aX: (...bb) => {
-          bb[Ha[0]] = Ha[1];
-          const cb = zb();
+        qL: () => {
+          const bb = Kb();
           return ((...bb) => {
-            if (Xa(bb[Ha[0]] = Ha[3], bb[Ha[3]] = Ha[12], bb[Ha[2]] = Ha[12]), sb !== Ha[11]) {
-              const cb = Nb(sb.Yf),
-                kb = "v3" === cb ? Ha[7] : "v5" === cb ? Ha[5] : "v6" === cb ? Ha[29] : Ha[2];
-              kb !== Ha[2] && (Ac = kb);
-              const Wb = Nb(sb["inbuil" + Ha[232] + Ha[233]]);
-              typeof Wb === Ha[225] && Wb >= Ha[1] && Wb <= Ha[116] && (Wb | Ha[1]) === Wb && (wc = Wb), Xa(bb[Ha[3]] = Nb(sb.reflectApplyHit), bb[Ha[2]] = Nb(sb.definerHit))
+            if (BT(bb[ET[0]] = ET[4], bb[ET[19]] = ET[11], bb[ET[24]] = ET[11]), Ub !== ET[7]) {
+              const ab = Db(Ub.av),
+                Ab = "v3" === ab ? ET[12] : "v5" === ab ? ET[9] : "v6" === ab ? ET[26] : ET[2];
+              Ab !== ET[2] && (la = Ab);
+              const Mb = Db(Ub["inbuil" + ET[116] + ET[117]]);
+              typeof Mb === ET[107] && Mb >= ET[1] && Mb <= ET[113] && (Mb | ET[1]) === Mb && (ta = Mb), BT(bb[ET[19]] = Db(Ub.reflectApplyHit), bb[ET[24]] = Db(Ub.definerHit))
             }
-            const cb = bb[Ha[1]] ? Ha[27] : "11" === bb[Ha[2]] ? Ha[116] : "13" === bb[Ha[2]] ? Ha[114] : bb[Ha[3]] !== Ha[12] && bb[Ha[3]] !== Ha[11] ? Ha[2] : "10" === bb[Ha[2]] ? Ha[47] : "12" === bb[Ha[2]] ? Ha[37] : Ha[1];
-            cb !== Ha[1] && (rc = cb)
-          })(cb), dc++ % 10 === Ha[1] && (Yc(), ba((() => !pW(Wb[ab][Ha[226]][Ha[226]](), fb))) && (Zc = Zc === zc[Ha[215]][Ha[231]] ? zc[Ha[215]][Ha[231]] : zc[Ha[215]].Fr), ba((() => !pW(Wb[ab][Ha[226]](), fb))) && (Zc = zc[Ha[215]][Ha[231]])), {
-            flags: cb ? zc[Ha[82]].Butto : Ha[1],
+            const ab = bb[ET[1]] ? ET[23] : "11" === bb[ET[24]] ? ET[113] : "13" === bb[ET[24]] ? ET[114] : bb[ET[19]] !== ET[11] && bb[ET[19]] !== ET[7] ? ET[2] : "10" === bb[ET[24]] ? ET[10] : "12" === bb[ET[24]] ? ET[30] : ET[1];
+            ab !== ET[1] && (wa = ab)
+          })(bb), oa++ % 10 === ET[1] && ((() => {
+            const bb = ab();
+            bb === ET[7] || ia || (ia = kb((() => {
+              if (Za !== ET[11] && (0, xA.Q)(bb) !== Za) return ET[56];
+              for (let ab = ET[1]; ab < Da[ET[0]]; ab++)
+                if ((0, xA[ET[82]])(xA[ET[95]], bb, [Da[ab]])) return ET[56];
+              for (let ab = ET[1]; ab < za[ET[0]]; ab++)
+                if (bb[za[ab]] !== ET[7] && bb[za[ab]] !== ET[11]) return ET[56];
+              return ET[50]
+            })))
+          })(), JM((() => !cM(Mb[Tb][ET[108]][ET[108]](), vb))) && (ua = ua === Ka[ET[96]][ET[115]] ? Ka[ET[96]][ET[115]] : Ka[ET[96]].Fr), JM((() => !cM(Mb[Tb][ET[108]](), vb))) && (ua = Ka[ET[96]][ET[115]])), {
+            flags: bb ? Ka[ET[5]].Butto : ET[1],
             values: [
-              [zc[Ha[66]].PhysicsVersion, Ac],
-              [zc[Ha[66]]["Inbuil" + Ha[232] + Ha[233]], wc],
-              [zc[Ha[66]]["AltCom" + Ha[234]], rc],
-              [zc[Ha[66]]["ProbeUsedPro" + Ha[235]], qc()]
+              [Ka[ET[69]].PhysicsVersion, la],
+              [Ka[ET[69]]["Inbuil" + ET[116] + ET[117]], ta],
+              [Ka[ET[69]]["AltCom" + ET[118]], wa],
+              [Ka[ET[69]]["ProbeUsedPro" + ET[119]], ra()]
             ]
           }
         }
       }
     };
-    const na = "[bloxd-wasm-client]",
-      ma = "bloxdWasmDownloadFailed",
-      la = pc.d,
-      Qa = "boot",
-      ea = "playSources",
-      Ca = "wasmBuild",
-      Na = "bloxd-wasm-joined",
-      Va = "bloxd-wasm-first-view",
-      La = "bloxd-wasm-playable-legacy",
-      ua = 1048576,
-      Ya = 8 * ua,
-      ha = 8,
-      Ja = 1006,
-      ga = 1e3,
-      Ba = "You lost connection to the server.",
-      ta = "general:lostConnection",
-      ya = 1048576,
-      Pa = 5e3,
-      Da = 100,
-      Ea = [2e3, 1e4, 3e4],
-      ia = 3e4;
-    let Oa = null,
-      Ga = null,
-      Ka = !1,
-      Za = !1,
-      za = !1,
-      qa = null,
-      da = null,
-      Aa = null,
-      wa = null,
-      ra = null,
-      oa = null,
-      Sa = null;
-    const Ra = new class {
-      constructor(bb, cb) {
-        let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => performance.now();
-        this.master = bb, this.soundOn = cb, this.now = sb, this.player = null, this.local = [], this.stopped = !1
+    const eT = "[bloxd-wasm-client]",
+      vT = "bloxdWasmDownloadFailed",
+      LT = Sa.e,
+      PT = "boot",
+      XT = "playSources",
+      jT = "wasmBuild",
+      RT = "bloxd-wasm-joined",
+      kT = "bloxd-wasm-first-view",
+      yT = "bloxd-wasm-playable-legacy",
+      ZT = 1048576,
+      DT = 8 * ZT,
+      zT = 8,
+      xT = 1006,
+      iT = 1e3,
+      fT = "You lost connection to the server.",
+      mT = "general:lostConnection",
+      pT = 1048576,
+      NT = 5e3,
+      WT = 100,
+      HT = [2e3, 1e4, 3e4],
+      IT = 3e4;
+    let dT = null,
+      FT = null,
+      hT = !1,
+      GT = !1,
+      QT = !1,
+      qT = null,
+      uT = null,
+      rT = null,
+      KT = null,
+      oT = null,
+      lT = null,
+      tT = null;
+    const wT = new class {
+      constructor(bb, ab) {
+        let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => performance.now();
+        this.master = bb, this.soundOn = ab, this.now = Ub, this.player = null, this.local = [], this.stopped = !1
       }
       get loaded() {
         return null !== this.player
@@ -5579,8 +5178,8 @@ export const modules = {
         null === (bb = this.player) || void 0 === bb || bb.prepare()
       }
       preload(bb) {
-        var cb;
-        this.stopped || (null === (cb = this.player) || void 0 === cb || cb.preload(bb))
+        var ab;
+        this.stopped || (null === (ab = this.player) || void 0 === ab || ab.preload(bb))
       }
       cancelPreload() {
         var bb;
@@ -5589,200 +5188,200 @@ export const modules = {
       load(bb) {
         if (null !== this.player || this.stopped) return;
         this.player = bb, bb.setMaster(this.master, this.soundOn);
-        const cb = this.now(),
-          sb = this.local;
+        const ab = this.now(),
+          Ub = this.local;
         this.local = [];
-        for (const Wb of sb)
-          if (!(Wb.stopped || !Wb.loop && cb - Wb.at >= 300)) try {
-            this.start(Wb, bb, cb)
-          } catch (kb) {
-            console.error("[bloxd-wasm-client] a queued sound wouldn't start", kb)
+        for (const Mb of Ub)
+          if (!(Mb.stopped || !Mb.loop && ab - Mb.at >= 300)) try {
+            this.start(Mb, bb, ab)
+          } catch (Ab) {
+            console.error("[bloxd-wasm-client] a queued sound wouldn't start", Ab)
           }
       }
-      start(bb, cb, sb) {
+      start(bb, ab, Ub) {
         const {
-          name: kb,
-          pos: Wb,
-          ear: ab,
-          maxHearDist: Tb,
-          refDistance: Ub,
-          loop: Ib,
-          fade: Hb
-        } = bb, fb = cb.playGame(kb, Oc(bb, sb), Wb, ab, Tb, Ub, Ib);
-        if (bb.sound = fb, 1 !== bb.rate && fb.rate(bb.rate), null !== bb.panner && fb.setPannerAttr(bb.panner), null !== bb.moved && fb.setPosition(bb.moved), null !== Hb && sb - Hb.at < Hb.ms) {
-          const cb = ic(this.master);
-          cb > 0 ? fb.fade(0, bb.volume * cb, Hb.at + Hb.ms - sb) : fb.setRelativeVolume(bb.volume)
+          name: Ab,
+          pos: Mb,
+          ear: Tb,
+          maxHearDist: Eb,
+          refDistance: Yb,
+          loop: Bb,
+          fade: eb
+        } = bb, vb = ab.playGame(Ab, Qa(bb, Ub), Mb, Tb, Eb, Yb, Bb);
+        if (bb.sound = vb, 1 !== bb.rate && vb.rate(bb.rate), null !== bb.panner && vb.setPannerAttr(bb.panner), null !== bb.moved && vb.setPosition(bb.moved), null !== eb && Ub - eb.at < eb.ms) {
+          const ab = Ga(this.master);
+          ab > 0 ? vb.fade(0, bb.volume * ab, eb.at + eb.ms - Ub) : vb.setRelativeVolume(bb.volume)
         }
       }
-      onAudioEvent(bb, cb, sb, kb) {
-        var Wb, ab;
-        return null === (Wb = null === (ab = this.player) || void 0 === ab ? void 0 : ab.onAudioEvent(bb, cb, sb, kb)) || void 0 === Wb || Wb
+      onAudioEvent(bb, ab, Ub, Ab) {
+        var Mb, Tb;
+        return null === (Mb = null === (Tb = this.player) || void 0 === Tb ? void 0 : Tb.onAudioEvent(bb, ab, Ub, Ab)) || void 0 === Mb || Mb
       }
       applyListener(bb) {
-        var cb;
-        null === (cb = this.player) || void 0 === cb || cb.applyListener(bb)
+        var ab;
+        null === (ab = this.player) || void 0 === ab || ab.applyListener(bb)
       }
-      playGame(bb, cb, sb, kb, Wb, ab, Tb) {
-        if (this.stopped) return Ec.b;
-        if (this.player) return this.player.playGame(bb, cb, sb, kb, Wb, ab, Tb);
-        const Ub = this.now();
-        this.local = this.local.filter((bb => !bb.stopped && (bb.loop || Ub - bb.at < 300)));
-        const Ib = {
+      playGame(bb, ab, Ub, Ab, Mb, Tb, Eb) {
+        if (this.stopped) return ha.b;
+        if (this.player) return this.player.playGame(bb, ab, Ub, Ab, Mb, Tb, Eb);
+        const Yb = this.now();
+        this.local = this.local.filter((bb => !bb.stopped && (bb.loop || Yb - bb.at < 300)));
+        const Bb = {
           name: bb,
-          volume: ic(cb),
+          volume: Ga(ab),
           fade: null,
-          pos: sb && [sb[0], sb[1], sb[2]],
-          ear: kb && [kb[0], kb[1], kb[2]],
-          maxHearDist: Wb,
-          refDistance: ab,
-          loop: Tb,
+          pos: Ub && [Ub[0], Ub[1], Ub[2]],
+          ear: Ab && [Ab[0], Ab[1], Ab[2]],
+          maxHearDist: Mb,
+          refDistance: Tb,
+          loop: Eb,
           rate: 1,
           panner: null,
           moved: null,
-          at: Ub,
+          at: Yb,
           stopped: !1,
           sound: null
         };
-        this.local.push(Ib);
-        const Hb = {
+        this.local.push(Bb);
+        const eb = {
           stop: () => {
             var bb;
-            return Ib.stopped = !0, null === (bb = Ib.sound) || void 0 === bb || bb.stop(), Hb
+            return Bb.stopped = !0, null === (bb = Bb.sound) || void 0 === bb || bb.stop(), eb
           },
-          fade: (bb, cb, sb) => {
-            if (Ib.sound) return Ib.sound.fade(bb, cb, sb), Hb;
-            const kb = ic(this.master),
-              Wb = ic(kb > 0 ? cb / kb : cb > 0 ? Ib.volume : 0),
-              ab = this.now(),
-              Tb = Oc(Ib, ab);
-            return Ib.volume = Wb, Ib.fade = sb > 0 && Tb !== Wb ? {
-              from: Tb,
-              at: ab,
-              ms: sb
-            } : null, Hb
+          fade: (bb, ab, Ub) => {
+            if (Bb.sound) return Bb.sound.fade(bb, ab, Ub), eb;
+            const Ab = Ga(this.master),
+              Mb = Ga(Ab > 0 ? ab / Ab : ab > 0 ? Bb.volume : 0),
+              Tb = this.now(),
+              Eb = Qa(Bb, Tb);
+            return Bb.volume = Mb, Bb.fade = Ub > 0 && Eb !== Mb ? {
+              from: Eb,
+              at: Tb,
+              ms: Ub
+            } : null, eb
           },
-          rate: bb => (Ib.sound ? Ib.sound.rate(bb) : Ib.rate = bb, Hb),
-          getVolume: () => Ib.sound ? Ib.sound.getVolume() : Ib.volume * ic(this.master),
-          getRelativeVolume: () => Ib.sound ? Ib.sound.getRelativeVolume() : Ib.volume,
-          setRelativeVolume: bb => (Ib.sound ? Ib.sound.setRelativeVolume(bb) : (Ib.volume = ic(bb), Ib.fade = null), Hb),
-          setPannerAttr: bb => (Ib.sound ? Ib.sound.setPannerAttr(bb) : Ib.panner = {
+          rate: bb => (Bb.sound ? Bb.sound.rate(bb) : Bb.rate = bb, eb),
+          getVolume: () => Bb.sound ? Bb.sound.getVolume() : Bb.volume * Ga(this.master),
+          getRelativeVolume: () => Bb.sound ? Bb.sound.getRelativeVolume() : Bb.volume,
+          setRelativeVolume: bb => (Bb.sound ? Bb.sound.setRelativeVolume(bb) : (Bb.volume = Ga(bb), Bb.fade = null), eb),
+          setPannerAttr: bb => (Bb.sound ? Bb.sound.setPannerAttr(bb) : Bb.panner = {
             ...bb
-          }, Hb),
-          setPosition: bb => (Ib.sound ? Ib.sound.setPosition(bb) : Ib.moved = [bb[0], bb[1], bb[2]], Hb)
+          }, eb),
+          setPosition: bb => (Bb.sound ? Bb.sound.setPosition(bb) : Bb.moved = [bb[0], bb[1], bb[2]], eb)
         };
-        return Hb
+        return eb
       }
-      setMaster(bb, cb) {
-        var sb;
-        this.master = bb, this.soundOn = cb, null === (sb = this.player) || void 0 === sb || sb.setMaster(bb, cb)
+      setMaster(bb, ab) {
+        var Ub;
+        this.master = bb, this.soundOn = ab, null === (Ub = this.player) || void 0 === Ub || Ub.setMaster(bb, ab)
       }
       stop() {
         var bb;
         this.stopped = !0, null === (bb = this.player) || void 0 === bb || bb.stopAll();
-        for (const cb of this.local) cb.stopped = !0;
+        for (const ab of this.local) ab.stopped = !0;
         this.local = []
       }
-    }((0, uc.d)(), !0);
-    let va = {
+    }((0, ia.b)(), !0);
+    let sT = {
         wasm: "unknown",
-        client: String(cc.d)
+        client: String(aa.b)
       },
-      Fa = null,
-      xa = () => {};
-    const ja = new Promise((bb => {
-      xa = bb
+      gT = null,
+      CT = () => {};
+    const VT = new Promise((bb => {
+      CT = bb
     }));
-    let pa = () => {};
-    const bT = new Promise((bb => {
-      pa = bb
+    let OT = () => {};
+    const cT = new Promise((bb => {
+      OT = bb
     }));
-    let cT, sT = null,
-      kT = null,
-      WT = null,
-      aT = null,
-      TT = null,
-      UT = null,
-      IT = null,
-      HT = null,
-      fT = null,
-      MT = null,
-      XT = null,
-      nT = null,
-      mT = null,
-      lT = null,
-      QT = null,
-      eT = null,
-      CT = null,
-      NT = null,
-      VT = !1,
-      LT = null;
-    const uT = new Set,
-      YT = new Set;
+    let JT, nT = null,
+      ST = null,
+      bE = null,
+      aE = null,
+      UE = null,
+      AE = null,
+      ME = null,
+      TE = null,
+      EE = null,
+      YE = null,
+      BE = null,
+      eE = null,
+      vE = null,
+      LE = null,
+      PE = null,
+      XE = null,
+      jE = null,
+      RE = null,
+      kE = !1,
+      yE = null;
+    const ZE = new Set,
+      DE = new Set;
 
-    function hT(bb) {
-      if (!uT.has(bb)) {
-        uT.add(bb);
-        for (const sb of YT) try {
-          sb(bb)
-        } catch (cb) {
-          console.error(`${na} a startup listener threw`, cb)
+    function zE(bb) {
+      if (!ZE.has(bb)) {
+        ZE.add(bb);
+        for (const Ub of DE) try {
+          Ub(bb)
+        } catch (ab) {
+          console.error(`${eT} a startup listener threw`, ab)
         }
       }
     }
 
-    function JT(bb) {
-      VT = !0, bb.isStopped || hT("texturesIn")
+    function xE(bb) {
+      kE = !0, bb.isStopped || zE("texturesIn")
     }
-    let gT = 1,
-      BT = -1 / 0,
-      tT = !1,
-      yT = !1,
-      PT = 0,
-      DT = null,
-      ET = !1;
-    const iT = {
+    let iE = 1,
+      fE = -1 / 0,
+      mE = !1,
+      pE = !1,
+      NE = 0,
+      WE = null,
+      HE = !1;
+    const IE = {
       dropped: -1 / 0,
       pause: -1 / 0
     };
-    let OT = 0,
-      GT = 0,
-      KT = null,
-      ZT = null,
-      zT = null,
-      qT = null;
-    const dT = new WeakMap;
-    let AT = null,
-      wT = null,
-      rT = null,
-      oT = null,
-      ST = null,
-      RT = null,
-      vT = null,
-      FT = 0,
-      xT = null,
-      jT = null,
-      pT = null,
-      bU = null,
-      cU = -1 / 0,
-      sU = null;
-    const kU = new Set;
-    let WU = !1,
-      aU = null;
-    const TU = new Map,
-      UU = new Set;
-    let IU = !1;
-    const HU = {
+    let dE = 0,
+      FE = 0,
+      hE = null,
+      GE = null,
+      QE = null,
+      qE = null;
+    const uE = new WeakMap;
+    let rE = null,
+      KE = null,
+      oE = null,
+      lE = null,
+      tE = null,
+      wE = null,
+      sE = null,
+      gE = 0,
+      CE = null,
+      VE = null,
+      OE = null,
+      cE = null,
+      JE = -1 / 0,
+      nE = null;
+    const SE = new Set;
+    let bY = !1,
+      aY = null;
+    const UY = new Map,
+      AY = new Set;
+    let MY = !1;
+    const TY = {
       adapter: null,
       boundAtMs: null,
       indirectHangs: null
     };
-    let fU = null,
-      MU = () => [0, 0],
-      XU = () => {},
-      nU = () => {},
-      mU = null,
-      lU = null;
-    const QU = new class {
+    let EY = null,
+      YY = () => [0, 0],
+      BY = () => {},
+      eY = () => {},
+      vY = null,
+      LY = null;
+    const PY = new class {
       constructor(bb) {
         this.reached = bb, this.next = 1
       }
@@ -5793,2252 +5392,2252 @@ export const modules = {
         }
       }
     }((bb => {
-      console.warn(`${na} chunk cancels from the server this session: ${bb}`)
+      console.warn(`${eT} chunk cancels from the server this session: ${bb}`)
     }));
-    let eU = 1,
-      CU = null,
-      NU = null,
-      VU = null,
-      LU = null,
-      uU = null,
-      YU = !1,
-      hU = !1,
-      JU = 0,
-      gU = null,
-      BU = !1,
-      tU = null,
-      yU = null,
-      PU = !1;
-    const DU = new class {
+    let XY = 1,
+      jY = null,
+      RY = null,
+      kY = null,
+      yY = null,
+      ZY = null,
+      DY = !1,
+      zY = !1,
+      xY = 0,
+      iY = null,
+      fY = !1,
+      mY = null,
+      pY = null,
+      NY = !1;
+    const WY = new class {
       constructor(bb) {
-        this.QQ = bb, this.lossPending = !1, this.undrawnSinceMs = null, this.lastFrameMs = 0, this.shown = !1
+        this.IR = bb, this.lossPending = !1, this.undrawnSinceMs = null, this.lastFrameMs = 0, this.shown = !1
       }
       deviceLost() {
         this.lossPending = !0
       }
-      frame(bb, cb, sb) {
-        (0, gc.d)(bb) && (this.lossPending = !1);
-        const kb = sb - this.lastFrameMs;
-        this.lastFrameMs = sb, this.lossPending && cb && (0, gc.h)(bb) ? (null === this.undrawnSinceMs || kb > 1e3) && (this.undrawnSinceMs = sb) : this.undrawnSinceMs = null, this.show(null !== this.undrawnSinceMs && sb - this.undrawnSinceMs >= 2e3)
+      frame(bb, ab, Ub) {
+        (0, Na.d)(bb) && (this.lossPending = !1);
+        const Ab = Ub - this.lastFrameMs;
+        this.lastFrameMs = Ub, this.lossPending && ab && (0, Na.g)(bb) ? (null === this.undrawnSinceMs || Ab > 1e3) && (this.undrawnSinceMs = Ub) : this.undrawnSinceMs = null, this.show(null !== this.undrawnSinceMs && Ub - this.undrawnSinceMs >= 2e3)
       }
       stop() {
         this.lossPending = !1, this.undrawnSinceMs = null, this.show(!1)
       }
       show(bb) {
-        bb !== this.shown && (this.shown = bb, this.QQ(bb))
+        bb !== this.shown && (this.shown = bb, this.IR(bb))
       }
     }((bb => {
-      Ib.j.QQ(Dc.b, bb)
+      Bb.m.IR(Fa.b, bb)
     }));
-    let EU = !1,
-      iU = !0,
-      OU = null,
-      GU = !1,
-      KU = !1,
-      ZU = !1;
+    let HY = !1,
+      IY = !0,
+      dY = null,
+      FY = !1,
+      hY = !1,
+      GY = !1;
 
-    function zU() {
-      return Aa ??= Promise.all([sb.e(189), sb.e(136), sb.e(56)]).then((() => sb(42639))).then((bb => (da = bb, Object.assign(globalThis, {
+    function QY() {
+      return rT ??= Promise.all([Ub.e(189), Ub.e(136), Ub.e(56)]).then((() => Ub(42386))).then((bb => (uT = bb, Object.assign(globalThis, {
         bloxdPreviewPage: bb.pagePreviews()
       }), bb)), (bb => {
-        throw Aa = null, bb
-      })), Aa
+        throw rT = null, bb
+      })), rT
     }
 
-    function qU() {
-      return qa ??= sb.e(54).then((() => sb(42658))).catch((bb => {
-        throw qa = null, new ub.b(bb)
-      })), qa
+    function qY() {
+      return qT ??= Ub.e(54).then((() => Ub(42403))).catch((bb => {
+        throw qT = null, new ib.e(bb)
+      })), qT
     }
-    class dU {
+    class uY {
       constructor() {
         this.host = null
       }
       open(bb) {
-        return null !== this.host ? bb(this.host) : zU().then((cb => (this.host ??= new cb.WasmPreviewHost(cb.pagePreviews()), bb(this.host))))
+        return null !== this.host ? bb(this.host) : QY().then((ab => (this.host ??= new ab.WasmPreviewHost(ab.pagePreviews()), bb(this.host))))
       }
       openMob(bb) {
-        return this.open((cb => cb.openMob(bb)))
+        return this.open((ab => ab.openMob(bb)))
       }
       openPet(bb) {
-        return this.open((cb => cb.openPet(bb)))
+        return this.open((ab => ab.openPet(bb)))
       }
       openMobLineup(bb) {
-        return this.open((cb => cb.openMobLineup(bb)))
+        return this.open((ab => ab.openMobLineup(bb)))
       }
-      openCharacter(bb, cb) {
-        return this.open((sb => sb.openCharacter(bb, cb)))
+      openCharacter(bb, ab) {
+        return this.open((Ub => Ub.openCharacter(bb, ab)))
       }
     }
 
-    function AU() {
-      za || (za = !0, bW.h.setHost(new dU), (0, es.l)(), Fk.h.setFollower(wI), Object.assign(globalThis, {
-        bloxdPreviews: bW.h
+    function rY() {
+      QT || (QT = !0, JA.l.setHost(new uY), (0, yU.j)(), CA.g.setFollower(KB), Object.assign(globalThis, {
+        bloxdPreviews: JA.l
       }))
     }
 
-    function wU() {
-      zU().then((bb => {
+    function KY() {
+      QY().then((bb => {
         bb.pagePreviews().prefetch()
       }), (() => {}))
     }
 
-    function rU() {
+    function oY() {
       let bb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      if (Za) return;
-      Za = !0, EU = "play" === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "shell"), iU = !EU, console.info(`${na} starting`), Ka || (Ka = !0, (0, Dc.G)(new tc(II, QI)), (0, Xb.m)(new yc), (0, Dc.E)(new Pc), (0, Dc.w)()), AU(), (0, us.setCrashScreen)((bb => {
+      if (GT) return;
+      GT = !0, HY = "play" === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "shell"), IY = !HY, console.info(`${eT} starting`), hT || (hT = !0, (0, Fa.I)(new Ha(MB, PB)), (0, Pb.n)(new Ia), (0, Fa.E)(new da), (0, Fa.w)()), rY(), (0, iU.setCrashScreen)((bb => {
         let {
-          text: cb,
-          reload: sb
+          text: ab,
+          reload: Ub
         } = bb;
-        ! function(bb, cb) {
-          var sb, kb;
-          if (GU) return;
-          GU = !0, (0, Ns.e)(), null === (sb = sU) || void 0 === sb || sb.abort(), sU = null, xk.b.release();
-          const Wb = EU ? null !== (kb = bb.cancel) && void 0 !== kb ? kb : "general:back" : null;
-          Qk({
+        ! function(bb, ab) {
+          var Ub, Ab;
+          if (FY) return;
+          FY = !0, (0, DU.g)(), null === (Ub = nE) || void 0 === Ub || Ub.abort(), nE = null, VA.b.release();
+          const Mb = HY ? null !== (Ab = bb.cancel) && void 0 !== Ab ? Ab : "general:back" : null;
+          jA({
             ...bb,
-            cancel: Wb
+            cancel: Mb
           }).then((bb => {
-            bb && cb && KU ? ((0, Mc.p)("reloadOntoJs"), (0, wb.e)(Mc.w)) : bb && cb ? (0, wb.i)() : EU && (0, wb.d)("/")
+            bb && ab && hY ? ((0, La.k)("reloadOntoJs"), (0, wb.k)(La.q)) : bb && ab ? (0, wb.n)() : HY && (0, wb.g)("/")
           }))
-        }(cb, sb)
-      })), (0, zk.f)(), (0, Lc.c)();
-      let cb = null;
+        }(ab, Ub)
+      })), (0, uA.m)(), (0, xa.e)();
+      let ab = null;
       try {
-        cb = Ia("lj7djh2hzxd", (() => {
-          var bb, cb;
-          return null !== (bb = null === (cb = sT) || void 0 === cb ? void 0 : cb.ws) && void 0 !== bb ? bb : null
+        ab = TT("2u0r0kqvvkt", (() => {
+          var bb, ab;
+          return null !== (bb = null === (ab = nT) || void 0 === ab ? void 0 : ab.ws) && void 0 !== bb ? bb : null
         }), bb, "zmnluctdxq")
-      } catch (Wb) {
-        console.error(`${na} probes`, Wb)
+      } catch (Mb) {
+        console.error(`${eT} probes`, Mb)
       }
-      const kb = function() {
-        const bb = (0, Vk.m)(),
-          cb = (0, Vk.j)();
-        let sb = !1;
-        return kb => {
-          bb && !sb && (sb = !0, (0, us.reportStaleBuildReload)(bb, cb, kb))
+      const Ab = function() {
+        const bb = (0, ZA.p)(),
+          ab = (0, ZA.h)();
+        let Ub = !1;
+        return Ab => {
+          bb && !Ub && (Ub = !0, (0, iU.reportStaleBuildReload)(bb, ab, Ab))
         }
       }();
-      oI(), EU || function() {
+      lB(), HY || function() {
         const bb = function(bb) {
-          var cb;
-          const sb = new URLSearchParams(bb),
-            kb = sb.get("game");
-          return kb ? {
-            game: kb,
-            lobby: null !== (cb = sb.get("lobby")) && void 0 !== cb ? cb : null
+          var ab;
+          const Ub = new URLSearchParams(bb),
+            Ab = Ub.get("game");
+          return Ab ? {
+            game: Ab,
+            lobby: null !== (ab = Ub.get("lobby")) && void 0 !== ab ? ab : null
           } : null
         }(window.location.search);
-        if (bb) return (0, sc.k)(bb.game) && oI().request(), void RU(bb.game, bb.lobby);
-        const cb = new URLSearchParams(window.location.search).get("ws");
-        if (!cb) return;
-        ja.then((bb => {
-          bb && async function(bb, cb) {
+        if (bb) return (0, Ua.l)(bb.game) && lB().request(), void wY(bb.game, bb.lobby);
+        const ab = new URLSearchParams(window.location.search).get("ws");
+        if (!ab) return;
+        VT.then((bb => {
+          bb && async function(bb, ab) {
             try {
-              await (0, ub.l)(bb), wT = LI(new WebSocket(cb)), null !== wT && xk.b.setGame(null), oU()
-            } catch (Wb) {
-              console.error(`${na} ?ws=${cb} did not attach`, Wb)
+              await (0, ib.j)(bb), KE = yB(new WebSocket(ab)), null !== KE && VA.b.setGame(null), lY()
+            } catch (Mb) {
+              console.error(`${eT} ?ws=${ab} did not attach`, Mb)
             }
-          }(bb, cb)
+          }(bb, ab)
         }))
       }(), async function(bb) {
-        var cb, kb, ab, Tb, Ub;
-        if ("undefined" === typeof WebAssembly) return GI("noWebAssembly", "This browser has no WebAssembly"), null;
-        const Hb = await (0, TW.I)();
-        if ((0, us.setCrashBackend)((0, pc.l)(Hb) ? "unsupported" : null !== (cb = null === Hb || void 0 === Hb ? void 0 : Hb.backend) && void 0 !== cb ? cb : "none"), (0, pc.l)(Hb)) return GI("browser", `No WebGPU or WebGL2, and WebGL1 lacks ${Hb.missing.join(", ")}`, {
-          missing: Hb.missing.join(",")
+        var ab, Ab, Tb, Eb, Yb;
+        if ("undefined" === typeof WebAssembly) return FB("noWebAssembly", "This browser has no WebAssembly"), null;
+        const eb = await (0, AM.R)();
+        if ((0, iU.setCrashBackend)((0, Sa.p)(eb) ? "unsupported" : null !== (ab = null === eb || void 0 === eb ? void 0 : eb.backend) && void 0 !== ab ? ab : "none"), (0, Sa.p)(eb)) return FB("browser", `No WebGPU or WebGL2, and WebGL1 lacks ${eb.missing.join(", ")}`, {
+          missing: eb.missing.join(",")
         }), null;
-        if ((0, PW.q)("render")) try {
+        if ((0, WM.s)("render")) try {
           const {
             startRenderDebug: bb
-          } = await Promise.all([sb.e(74), sb.e(47)]).then((() => sb(4414)));
-          bb(Hb)
-        } catch (Yc) {
-          console.warn("The render debug topic didn't load", Yc)
+          } = await Promise.all([Ub.e(74), Ub.e(47)]).then((() => Ub(4363)));
+          bb(eb)
+        } catch (fa) {
+          console.warn("The render debug topic didn't load", fa)
         }
-        if ((0, PW.q)("renderlite")) try {
+        if ((0, WM.s)("renderlite")) try {
           const {
             startRenderLite: bb
-          } = await Promise.all([sb.e(259), sb.e(48)]).then((() => sb(42670)));
-          VU = bb(Hb)
-        } catch (Yc) {
-          console.warn("The renderlite debug topic didn't load", Yc)
+          } = await Promise.all([Ub.e(259), Ub.e(48)]).then((() => Ub(42424)));
+          kY = bb(eb)
+        } catch (fa) {
+          console.warn("The renderlite debug topic didn't load", fa)
         }
-        let fb = null;
-        if (null !== Hb && KI()) {
-          const bb = (0, ek.e)(Hb, !0);
-          "webgl" === Hb.backend && null !== bb && (0, nc.o)(bb, us.reportGpuWasmPopulation), null !== bb && (0, Xc.t)(bb), fb = (0, ek.b)(Hb, bb)
+        let vb = null;
+        if (null !== eb && hB()) {
+          const bb = (0, RA.d)(eb, !0);
+          "webgl" === eb.backend && null !== bb && (0, Xa.o)(bb, iU.reportGpuWasmPopulation), null !== bb && (0, Pa.n)(bb), vb = (0, RA.b)(eb, bb)
         }
-        if (null !== Hb && null !== fb) return (0, us.reportGpuFallback)(fb, Hb.backend), ZI(`the wasm client's renderer plays this GPU (${fb}) on ${Hb.backend} worse than the JS client`, "gpu"), null;
-        const Mb = null !== (kb = null === Hb || void 0 === Hb ? void 0 : Hb.backend) && void 0 !== kb ? kb : null;
-        HU.adapter = null !== (ab = null === Hb || void 0 === Hb ? void 0 : Hb.adapter) && void 0 !== ab ? ab : null, HU.boundAtMs = null, HU.indirectHangs = null;
-        const Xb = !(0, pc.N)();
-        null !== Hb && "none" !== Hb.reason && console.info(`${na} drawing with ${Hb.backend}: ${Hb.reason}`);
-        const nb = (0, TW.C)();
-        pa(!0), (0, ub.w)((bb => {
+        if (null !== eb && null !== vb) return (0, iU.reportGpuFallback)(vb, eb.backend), GB(`the wasm client's renderer plays this GPU (${vb}) on ${eb.backend} worse than the JS client`, "gpu"), null;
+        const Lb = null !== (Ab = null === eb || void 0 === eb ? void 0 : eb.backend) && void 0 !== Ab ? Ab : null;
+        TY.adapter = null !== (Tb = null === eb || void 0 === eb ? void 0 : eb.adapter) && void 0 !== Tb ? Tb : null, TY.boundAtMs = null, TY.indirectHangs = null;
+        const Pb = !(0, Sa.T)();
+        null !== eb && "none" !== eb.reason && console.info(`${eT} drawing with ${eb.backend}: ${eb.reason}`);
+        const Xb = (0, AM.C)();
+        OT(!0), (0, ib.u)((bb => {
           try {
-            null !== Mb && (mU = bb.startSkyFeed, qI(), function(bb) {
-              var cb, sb;
-              MU = bb.rasterText, oT = bb.setTextLocalPlayer, bb.setTextLocalPlayer(null !== (cb = null === (sb = rT) || void 0 === sb ? void 0 : sb.info.playerDbId) && void 0 !== cb ? cb : null), XU = bb.drainTextRerasters, nU = bb.loadTextIcons, bb.warmText((() => YU)), bb.textChanged(), YU && setTimeout(nU, 0)
-            }(bb), lU = bb.startShellAnalytics, jI())
+            null !== Lb && (vY = bb.startSkyFeed, qB(), function(bb) {
+              var ab, Ub;
+              YY = bb.rasterText, lE = bb.setTextLocalPlayer, bb.setTextLocalPlayer(null !== (ab = null === (Ub = oE) || void 0 === Ub ? void 0 : Ub.info.playerDbId) && void 0 !== ab ? ab : null), BY = bb.drainTextRerasters, eY = bb.loadTextIcons, bb.warmText((() => DY)), bb.textChanged(), DY && setTimeout(eY, 0)
+            }(bb), LY = bb.startShellAnalytics, VB())
           } finally {
-            ZU || (LU = bb.followMenuPrefs({
-              setSoundPrefs: CI,
-              setEnvPrefs: NI,
-              setUiPrefs: eI,
-              setLookPrefs: VI
+            GY || (yY = bb.followMenuPrefs({
+              setSoundPrefs: jB,
+              setEnvPrefs: RB,
+              setUiPrefs: XB,
+              setLookPrefs: kB
             }))
           }
-        })), (0, ub.p)(Ra).catch((bb => {
-          console.warn(`${na} the game code did not load: a join asks again`, bb)
+        })), (0, ib.m)(wT).catch((bb => {
+          console.warn(`${eT} the game code did not load: a join asks again`, bb)
         }));
-        const mb = (0, TW.l)(Hb);
-        let lb, Qb;
-        mb.catch((() => {})), "loading" === (0, ac.C)() && VW();
+        const jb = (0, AM.h)(eb);
+        let Rb, kb;
+        jb.catch((() => {})), "loading" === (0, Ta.v)() && yM();
         try {
-          lb = function(bb) {
-            const cb = null !== bb && void 0 !== bb ? bb : document.createElement("canvas");
-            cb.id = "wasm-game-canvas", (0, XW.i)();
-            const sb = (0, Bc.d)(),
-              kb = (0, Bc.g)(sb);
-            return cb.style.cssText = "position:fixed;top:0;left:0;display:block;touch-action:none;outline:none;background:#000", (0, MW.f)(cb, kb), (0, Bc.b)(cb, sb), cb.width = kb.bufferWidth, cb.height = kb.bufferHeight, HI(cb, iU), OU = cb, document.body.append(cb), cb
-          }(null === Mb ? null : await (await zU()).pagePreviews().beginSession())
-        } catch (Wb) {
-          return await BH({
-            site: Ca,
-            error: Wb
+          Rb = function(bb) {
+            const ab = null !== bb && void 0 !== bb ? bb : document.createElement("canvas");
+            ab.id = "wasm-game-canvas", (0, eM.i)();
+            const Ub = (0, Wa.h)(),
+              Ab = (0, Wa.l)(Ub);
+            return ab.style.cssText = "position:fixed;top:0;left:0;display:block;touch-action:none;outline:none;background:#000", (0, BM.e)(ab, Ab), (0, Wa.e)(ab, Ub), ab.width = Ab.bufferWidth, ab.height = Ab.bufferHeight, TB(ab, IY), dY = ab, document.body.append(ab), ab
+          }(null === Lb ? null : await (await QY()).pagePreviews().beginSession())
+        } catch (Mb) {
+          return await fe({
+            site: jT,
+            error: Mb
           }, (() => {
-            (0, us.showUnsupported)((0, nk.m)("fetch"), zW.e.fetch, `the previews did not load: ${String(Wb)}`)
+            (0, iU.showUnsupported)((0, LA.o)("fetch"), qM.e.fetch, `the previews did not load: ${String(Mb)}`)
           })), null
         }
-        VW();
+        yM();
         try {
-          Qb = await mb
-        } catch (Wb) {
-          return await BH({
-            site: Ca,
-            error: Wb
+          kb = await jb
+        } catch (Mb) {
+          return await fe({
+            site: jT,
+            error: Mb
           }, (() => {
-            (0, us.showUnsupported)((0, nk.m)("fetch"), zW.e.fetch, `the ${null!==Mb&&void 0!==Mb?Mb:"client"} build did not load: ${String(Wb)}`)
+            (0, iU.showUnsupported)((0, LA.o)("fetch"), qM.e.fetch, `the ${null!==Lb&&void 0!==Lb?Lb:"client"} build did not load: ${String(Mb)}`)
           })), null
         }
-        const eb = (0, TW.g)(),
-          Cb = !eb && !0 !== Ls.i.getItem(ma),
-          Nb = !eb && "loading" === (0, ac.C)();
-        await (0, Tc.j)(Qb, fc.f, {
-          reloadFailedDownload: Cb
-        }), Nb && !(0, ac.M)() && await (0, Tc.j)(Qb, fc.f, {
-          reloadFailedDownload: Cb
+        const yb = (0, AM.d)(),
+          Zb = !yb && !0 !== xU.j.getItem(vT),
+          Db = !yb && "loading" === (0, Ta.v)();
+        await (0, Ea.k)(kb, va.g, {
+          reloadFailedDownload: Zb
+        }), Db && !(0, Ta.H)() && await (0, Ea.k)(kb, va.g, {
+          reloadFailedDownload: Zb
         });
-        eW = performance.now();
-        const Vb = va;
-        if (!(0, ac.M)()) {
-          (0, ac.L)() && Ls.i.setItem(ma, !0);
-          const bb = (0, ac.o)();
-          if ("call" === bb) eH({
-            site: bs.t,
-            error: (0, ac.n)(),
+        jM = performance.now();
+        const zb = sT;
+        if (!(0, Ta.H)()) {
+          (0, Ta.G)() && xU.j.setItem(vT, !0);
+          const bb = (0, Ta.l)();
+          if ("call" === bb) Xe({
+            site: bU.o,
+            error: (0, Ta.k)(),
             header: null
-          }, Vb);
+          }, zb);
           else {
-            const cb = null !== bb && void 0 !== bb ? bb : "instantiate",
-              sb = () => {
-                (0, us.showUnsupported)((0, nk.m)(cb), zW.e[cb], (0, ac.i)())
+            const ab = null !== bb && void 0 !== bb ? bb : "instantiate",
+              Ub = () => {
+                (0, iU.showUnsupported)((0, LA.o)(ab), qM.e[ab], (0, Ta.e)())
               };
-            if ("compile" !== bb && "instantiate" !== bb || !KI())
-              if ("fetch" === cb) {
-                const bb = [Qb.url().href, fc.f.url().href];
-                await BH({
-                  site: Ca,
-                  error: (0, ac.i)(),
+            if ("compile" !== bb && "instantiate" !== bb || !hB())
+              if ("fetch" === ab) {
+                const bb = [kb.url().href, va.g.url().href];
+                await fe({
+                  site: jT,
+                  error: (0, Ta.e)(),
                   urls: bb
-                }, sb)
-              } else sb();
+                }, Ub)
+              } else Ub();
             else {
-              const cb = (0, ac.i)(),
-                sb = (0, dc.l)((0, ac.n)());
-              (0, us.reportCountedLoadFallback)((0, nk.m)(bb), zW.e[bb], cb, sb), ZI(`the wasm client did not ${bb} here (${cb})`, sb ? "oom" : null)
+              const ab = (0, Ta.e)(),
+                Ub = (0, la.h)((0, Ta.k)());
+              (0, iU.reportCountedLoadFallback)((0, LA.o)(bb), qM.e[bb], ab, Ub), GB(`the wasm client did not ${bb} here (${ab})`, Ub ? "oom" : null)
             }
           }
           return null
-        }(0, Uc.H)(Qb.url()) && (0, us.reportUnstreamedCoreLoad)();
-        const Yb = (0, ac.G)();
-        let hb, Jb = Vb;
+        }(0, Ya.N)(kb.url()) && (0, iU.reportUnstreamedCoreLoad)();
+        const fb = (0, Ta.x)();
+        let mb, pb = zb;
         try {
-          Jb = {
-            ...Vb,
-            wasm: Yb.EM()
+          pb = {
+            ...zb,
+            wasm: fb.eL()
           };
           const {
-            DQ: bb
-          } = Qb.bindings, cb = bb.gsb();
-          if (cb !== zc.u) return eH({
-            site: bs.e,
-            error: `core ABI ${cb}, page ABI ${zc.u}`,
+            Tk: bb
+          } = kb.bindings, ab = bb.WUb();
+          if (ab !== Ka.z) return Xe({
+            site: bU.c,
+            error: `core ABI ${ab}, page ABI ${Ka.z}`,
             header: null
-          }, Jb), null;
-          const [sb, kb] = (0, zc.xe)();
-          hb = new bb(sb, kb)
-        } catch (Wb) {
-          return eH({
-            site: bs.e,
-            error: Wb,
+          }, pb), null;
+          const [Ub, Ab] = (0, Ka.Yd)();
+          mb = new bb(Ub, Ab)
+        } catch (Mb) {
+          return Xe({
+            site: bU.c,
+            error: Mb,
             header: null
-          }, Jb), null
+          }, pb), null
         }
-        va = Jb, Fa = Qb.bindings;
-        const gb = new bs.h(hb, ac.u, {
+        sT = pb, gT = kb.bindings;
+        const Nb = new bU.e(mb, Ta.q, {
           onCrash: bb => {
-            var cb;
-            null === (cb = VU) || void 0 === cb || cb.crashed(bb), Xb && function(bb, cb, sb) {
-              if ("webgpu" !== cb || (0, TW.e)()) return !1;
-              const kb = function(bb) {
-                if (bb.site === bs.g && (0, pc.o)(bb.error)) return "frames_refused";
-                return bb.site === la && (0, pc.p)(bb.error) ? "start_failed" : null
+            var ab;
+            null === (ab = kY) || void 0 === ab || ab.crashed(bb), Pb && function(bb, ab, Ub) {
+              if ("webgpu" !== ab || (0, AM.c)()) return !1;
+              const Ab = function(bb) {
+                if (bb.site === bU.d && (0, Sa.s)(bb.error)) return "frames_refused";
+                return bb.site === LT && (0, Sa.u)(bb.error) ? "start_failed" : null
               }(bb);
-              if (null === kb || !(0, pc.I)(kb)) return !1;
-              return (0, us.reportRenderReload)("webgpu", "start_failed" === kb ? 0 : 1, sb, {
-                cause: kb,
+              if (null === Ab || !(0, Sa.P)(Ab)) return !1;
+              return (0, iU.reportRenderReload)("webgpu", "start_failed" === Ab ? 0 : 1, Ub, {
+                cause: Ab,
                 error: bb.error,
-                context: HU,
-                session: VH(null)
-              }), kH(), !0
-            }(bb, Mb, Jb) || eH(bb, Jb)
+                context: TY,
+                session: ke(null)
+              }), SB(), !0
+            }(bb, Lb, pb) || Xe(bb, pb)
           },
-          onNetEvent: sH,
-          onReconnectGrace: EI,
-          onCoreErrors: (bb, cb) => {
-            var sb, kb;
+          onNetEvent: nB,
+          onReconnectGrace: HB,
+          onCoreErrors: (bb, ab) => {
+            var Ub, Ab;
             bb.some((bb => {
               let {
-                code: cb
+                code: ab
               } = bb;
-              return cb === zc.C.RenderDeviceLost
-            })) && ((0, TW.y)(), DU.deviceLost()), null === (sb = VU) || void 0 === sb || sb.coreErrors(bb), (0, us.reportCoreErrors)(bb, cb, Jb, ((bb, cb) => {
-              var sb;
-              return null === (sb = fU) || void 0 === sb ? void 0 : sb.Bsb(bb, cb)
-            })), null === (kb = LT) || void 0 === kb || kb.coreErrors(bb)
+              return ab === Ka.H.RenderDeviceLost
+            })) && ((0, AM.x)(), WY.deviceLost()), null === (Ub = kY) || void 0 === Ub || Ub.coreErrors(bb), (0, iU.reportCoreErrors)(bb, ab, pb, ((bb, ab) => {
+              var Ub;
+              return null === (Ub = EY) || void 0 === Ub ? void 0 : Ub.HUb(bb, ab)
+            })), null === (Ab = yE) || void 0 === Ab || Ab.coreErrors(bb)
           },
-          onRenderReload: (bb, cb, sb) => {
-            ! function(bb, cb, sb, kb, Wb, ab) {
-              var Tb;
-              if ((0, TW.e)()) return;
-              const Ub = cb === zc.cd.WEBGPU,
-                Ib = kb === zc.cd.PIPELINE_FAILED ? "pipeline_failed" : "lost",
-                Hb = (0, pc.M)(fU);
-              null === (Tb = VU) || void 0 === Tb || Tb.reload(Ub, sb, Ib, null === Hb || void 0 === Hb ? void 0 : Hb.message);
-              const fb = Ub ? (0, pc.G)(Ib, Wb) : null;
-              if (null !== fb) {
-                const cb = void 0 === Hb ? "" : ` (${Hb.message})`;
-                return void bb.crash(us.RENDER_RELOAD_SITE, new Error(`${(0,us.renderReloadMessage)("webgpu",Ib,sb)} and ${fb}${cb}`))
+          onRenderReload: (bb, ab, Ub) => {
+            ! function(bb, ab, Ub, Ab, Mb, Tb) {
+              var Eb;
+              if ((0, AM.c)()) return;
+              const Yb = ab === Ka.Pc.WEBGPU,
+                Bb = Ab === Ka.Pc.PIPELINE_FAILED ? "pipeline_failed" : "lost",
+                eb = (0, Sa.S)(EY);
+              null === (Eb = kY) || void 0 === Eb || Eb.reload(Yb, Ub, Bb, null === eb || void 0 === eb ? void 0 : eb.message);
+              const vb = Yb ? (0, Sa.O)(Bb, Mb) : null;
+              if (null !== vb) {
+                const ab = void 0 === eb ? "" : ` (${eb.message})`;
+                return void bb.crash(iU.RENDER_RELOAD_SITE, new Error(`${(0,iU.renderReloadMessage)("webgpu",Bb,Ub)} and ${vb}${ab}`))
               }
-              const Mb = Ub ? "webgpu" : "webgl1" === ab ? "webgl1" : "webgl";
-              "lost" === Ib && (0, TW.y)();
-              (0, us.reportRenderReload)(Mb, sb, va, {
-                cause: Ib,
-                error: Hb,
-                context: HU,
-                session: VH(bb.sunShadowsHeld())
-              }), kH()
-            }(gb, bb, cb, sb, Xb, Mb)
+              const Lb = Yb ? "webgpu" : "webgl1" === Tb ? "webgl1" : "webgl";
+              "lost" === Bb && (0, AM.x)();
+              (0, iU.reportRenderReload)(Lb, Ub, sT, {
+                cause: Bb,
+                error: eb,
+                context: TY,
+                session: ke(bb.sunShadowsHeld())
+              }), SB()
+            }(Nb, bb, ab, Ub, Pb, Lb)
           },
           onEnvEvent: bb => {
-            var cb;
-            bb.kind === zc.P.SkyImages && (null === (cb = eT) || void 0 === cb || cb.onEvent(bb.payload))
+            var ab;
+            bb.kind === Ka.V.SkyImages && (null === (ab = XE) || void 0 === ab || ab.onEvent(bb.payload))
           },
           onImages: bb => {
-            var cb;
-            null === (cb = CT) || void 0 === cb || cb.onEvent(bb)
+            var ab;
+            null === (ab = jE) || void 0 === ab || ab.onEvent(bb)
           },
           onModelRequest: bb => {
-            var cb;
-            null === (cb = mT) || void 0 === cb || cb.request(bb)
+            var ab;
+            null === (ab = vE) || void 0 === ab || ab.request(bb)
           },
-          onModelTaken: (bb, cb) => {
-            var sb;
-            null === (sb = mT) || void 0 === sb || sb.taken(bb, cb)
+          onModelTaken: (bb, ab) => {
+            var Ub;
+            null === (Ub = vE) || void 0 === Ub || Ub.taken(bb, ab)
           },
           onTerrainTexturesWanted: () => {
             queueMicrotask((() => {
-              ! function(bb, cb) {
-                const sb = Sa;
-                if (null === sb || bb.isStopped) return;
-                sb.restore((bb => {
-                  (0, us.reportTerrainTextureFailure)(bb, cb)
-                })).then((cb => {
-                  !1 !== cb || bb.isStopped ? !0 === cb && console.info(`${na} terrain textures handed over again after the renderer lost them`) : console.warn(`${na} the terrain textures couldn't be handed over again: the terrain draws blank`)
+              ! function(bb, ab) {
+                const Ub = tT;
+                if (null === Ub || bb.isStopped) return;
+                Ub.restore((bb => {
+                  (0, iU.reportTerrainTextureFailure)(bb, ab)
+                })).then((ab => {
+                  !1 !== ab || bb.isStopped ? !0 === ab && console.info(`${eT} terrain textures handed over again after the renderer lost them`) : console.warn(`${eT} the terrain textures couldn't be handed over again: the terrain draws blank`)
                 }))
-              }(gb, Jb)
+              }(Nb, pb)
             }))
           },
           onKeepAlive: bb => {
-            const cb = null === qT ? void 0 : dT.get(qT);
-            void 0 !== cb && Jk(cb, bb)
+            const ab = null === qE ? void 0 : uE.get(qE);
+            void 0 !== ab && fA(ab, bb)
           }
         });
-        if (wa = gb, null !== bb) {
-          gb.setAntiCheatProbes(ka(ac.u, bb.checks)), bb.watchHeld(aa.CoreFrame, (() => gb.frame)), bb.watchHeld(aa.GlueFrame, (() => hb.frame));
-          const cb = Ua(bb, ((bb, cb, sb) => {
-            let kb = !1;
-            return YH(gb, (() => {
-              kb = gb.rings.input.writeRecord(zc.qb.AntiCheat, bb, cb, sb, 0)
-            })), kb
+        if (KT = Nb, null !== bb) {
+          Nb.setAntiCheatProbes(bT(Ta.q, bb.checks)), bb.watchHeld(UT.CoreFrame, (() => Nb.frame)), bb.watchHeld(UT.GlueFrame, (() => mb.frame));
+          const ab = MT(bb, ((bb, ab, Ub) => {
+            let Ab = !1;
+            return De(Nb, (() => {
+              Ab = Nb.rings.input.writeRecord(Ka.rb.AntiCheat, bb, ab, Ub, 0)
+            })), Ab
           }));
-          gb.isStopped ? cb.stop() : XT = cb
+          Nb.isStopped ? ab.stop() : BE = ab
         }
-        Oa = (bb, cb, sb) => gb.rings.cmd.writeCmd(bb, cb, sb), Ga = bb => gb.rings.cmd.growForCmd(bb), ET = !1, qI(), (0, ub.y)(gb, {
-          core: hb,
-          memory: ac.u,
-          staleOr: (bb, cb, sb) => BH({
+        dT = (bb, ab, Ub) => Nb.rings.cmd.writeCmd(bb, ab, Ub), FT = bb => Nb.rings.cmd.growForCmd(bb), HE = !1, qB(), (0, ib.v)(Nb, {
+          core: mb,
+          memory: Ta.q,
+          staleOr: (bb, ab, Ub) => fe({
             site: bb,
-            error: cb
-          }, sb),
-          reportReplayFault: (bb, cb) => {
-            (0, us.reportReplayFault)(bb, cb, va)
+            error: ab
+          }, Ub),
+          reportReplayFault: (bb, ab) => {
+            (0, iU.reportReplayFault)(bb, ab, sT)
           },
-          audio: Ra,
-          options: mc.e,
-          onNetEvent: sH,
+          audio: wT,
+          options: ja.e,
+          onNetEvent: nB,
           sessionInfo: bb => {
-            var cb;
-            return (null === (cb = rT) || void 0 === cb ? void 0 : cb.conn) === bb ? rT.info : null
+            var ab;
+            return (null === (ab = oE) || void 0 === ab ? void 0 : ab.conn) === bb ? oE.info : null
           },
-          onEventOverflow: TI,
+          onEventOverflow: UB,
           replayShaderPack: bb => {
-            var cb;
-            null === (cb = LT) || void 0 === cb || cb.replay(bb)
+            var ab;
+            null === (ab = yE) || void 0 === ab || ab.replay(bb)
           },
           hasPackModel: bb => {
-            var cb, sb;
-            return null !== (null !== (cb = null === (sb = dI()) || void 0 === sb ? void 0 : sb.modelUrl(bb)) && void 0 !== cb ? cb : null)
+            var ab, Ub;
+            return null !== (null !== (ab = null === (Ub = uB()) || void 0 === Ub ? void 0 : Ub.modelUrl(bb)) && void 0 !== ab ? ab : null)
           },
-          beforeWrite: () => (!tT && gb.rings.net.cursor > 0 && TH(gb, !1, "all"), !gb.isStopped),
-          beforeOp: () => (!tT && gb.netWrittenSinceFrame > 0 && TH(gb, !1, "budget"), !gb.isStopped)
-        }), (0, Lb.M)({
+          beforeWrite: () => (!mE && Nb.rings.net.cursor > 0 && Ue(Nb, !1, "all"), !Nb.isStopped),
+          beforeOp: () => (!mE && Nb.netWrittenSinceFrame > 0 && Ue(Nb, !1, "budget"), !Nb.isStopped)
+        }), (0, xb.J)({
           lockPointer: () => {
-            if (!Ks(lb)) return !1;
+            if (!qU(Rb)) return !1;
             try {
-              Promise.resolve(lb.requestPointerLock()).catch((() => {}))
+              Promise.resolve(Rb.requestPointerLock()).catch((() => {}))
             } catch {
               return !1
             }
             return !0
           },
           unlockPointer: () => {
-            (0, hs.c)()
+            (0, mU.d)()
           },
           leaveGame: () => {
-            aI()
+            aB()
           },
-          canvas: () => lb
-        }), nT = (0, Lb.C)((() => {
+          canvas: () => Rb
+        }), eE = (0, xb.x)((() => {
           var bb;
-          const cb = (0, ub.h)();
-          null === (bb = (0, ub.s)()) || void 0 === bb || bb.followCursorAim(!0 === (null === cb || void 0 === cb ? void 0 : cb.isSessionLive) ? cb : null)
-        })), KT && gb.setUiPrefs(KT);
-        ZT && gb.setEnvPrefs(ZT);
-        zT && gb.setLookPrefs(zT);
-        const Bb = HW ? fW(HW.preventMovement) : null;
-        Bb && lI(Bb);
-        const tb = (0, ms.g)(),
-          yb = (0, ms.c)(gb, tb);
-        fT = tb.basis, (0, Vs.e)(null === yb ? null : (0, ns.h)(yb)), HT = yb;
-        const Pb = (0, Ic.c)();
-        let Db = 1 / 0,
-          Eb = !0,
-          ib = tb.shedFootprintBytes;
-        const Ob = new Zk.c(Pb, (() => hb.zQ()), (bb => {
-          gb.crash(bs.k, bb)
+          const ab = (0, ib.i)();
+          null === (bb = (0, ib.r)()) || void 0 === bb || bb.followCursorAim(!0 === (null === ab || void 0 === ab ? void 0 : ab.isSessionLive) ? ab : null)
+        })), hE && Nb.setUiPrefs(hE);
+        GE && Nb.setEnvPrefs(GE);
+        QE && Nb.setLookPrefs(QE);
+        const Wb = EM ? YM(EM.preventMovement) : null;
+        Wb && LB(Wb);
+        const Hb = (0, jU.k)(),
+          Ib = (0, jU.e)(Nb, Hb);
+        EE = Hb.basis, (0, zU.g)(null === Ib ? null : (0, XU.n)(Ib)), TE = Ib;
+        const db = (0, Ba.b)();
+        let Fb = 1 / 0,
+          hb = !0,
+          Gb = Hb.shedFootprintBytes;
+        const Qb = new qA.e(db, (() => mb.Pk()), (bb => {
+          Nb.crash(bU.l, bb)
         }));
-        UT = Ob, IT = Ob, null !== yb && Ob.setCeiling(Math.min((0, Zk.k)(yb), Db));
-        if (Eb) {
-          Ob.setShed((bb => {
-            const cb = gb.shedMemory("joinReserve" !== bb);
-            return null !== cb && (null === HT || cb < HT) && (HT = cb, (0, Vs.e)((0, ns.h)(cb))), cb
-          }), ((bb, cb, sb) => {
-            1 === cb ? (0, us.reportMemoryShed)(bb, sb, va) : console.warn(`${na} wasm memory: shed again (${bb}): shed ${cb}`, sb.wasmMemoryShed)
-          }), (() => gb.addDistanceInUse()));
-          const bb = (0, pc.z)(Yb);
-          Ob.setFootprint(new yW(ib, {
-            storedChunks: () => hb.tsb(),
+        AE = Qb, ME = Qb, null !== Ib && Qb.setCeiling(Math.min((0, qA.k)(Ib), Fb));
+        if (hb) {
+          Qb.setShed((bb => {
+            const ab = Nb.shedMemory("joinReserve" !== bb);
+            return null !== ab && (null === TE || ab < TE) && (TE = ab, (0, zU.g)((0, XU.n)(ab))), ab
+          }), ((bb, ab, Ub) => {
+            1 === ab ? (0, iU.reportMemoryShed)(bb, Ub, sT) : console.warn(`${eT} wasm memory: shed again (${bb}): shed ${ab}`, Ub.wasmMemoryShed)
+          }), (() => Nb.addDistanceInUse()));
+          const bb = (0, Sa.G)(fb);
+          Qb.setFootprint(new NM(Gb, {
+            storedChunks: () => mb.IUb(),
             gpuBytes: () => {
-              var cb;
-              return null !== (cb = null === bb || void 0 === bb ? void 0 : bb.ysb()) && void 0 !== cb ? cb : 0
+              var ab;
+              return null !== (ab = null === bb || void 0 === bb ? void 0 : bb.dUb()) && void 0 !== ab ? ab : 0
             },
-            jsHeapBytes: tW
+            jsHeapBytes: pM
           }))
         }
         window.addEventListener("pagehide", (() => {
-          UT === Ob && (Ob.refreshStats(), uH(Ob))
-        })), window.addEventListener("pagehide", WH), window.addEventListener("pagehide", aH), !1;
-        const [Gb, Kb] = (0, Qs.d)();
-        uU = (0, Cs.f)((bb => gb.setChunkAddDistance(bb.horizontal, bb.vertical)), {
-          horizontal: Gb,
-          vertical: Kb
-        }), gb.setAmbientOcclusion(!0 !== Ls.h.getItem("disableAmbientOcclusion")), gb.setPoseLod(!0 !== Ls.h.getItem(Wc.V)), (0, PW.q)("look") && (gb.setDebugLog(zc.I.Look, !0), (0, EW.j)("wasm", (() => gb.takeDebugLog(zc.I.Look))));
-        (0, PW.q)("remesh") && (gb.setDebugLog(zc.I.Remesh, !0), Zb = () => gb.takeDebugLog(zc.I.Remesh), ZW = new KW((0, iW.l)(), Zb));
-        var Zb;
-        const zb = function(bb, cb, sb, kb) {
-          const Wb = new sk,
-            ab = bb => Ls.h.getItem(bb);
-          Wb.sync(ab, cb), (0, Jc.$)();
-          const Tb = (0, Ib.l)("customBindingsChanged", (() => {
-            Wb.sync(ab, cb)
+          AE === Qb && (Qb.refreshStats(), Ze(Qb))
+        })), window.addEventListener("pagehide", be), window.addEventListener("pagehide", ae), !1;
+        const [qb, ub] = (0, kU.e)();
+        ZY = (0, ZU.h)((bb => Nb.setChunkAddDistance(bb.horizontal, bb.vertical)), {
+          horizontal: qb,
+          vertical: ub
+        }), Nb.setAmbientOcclusion(!0 !== xU.f.getItem("disableAmbientOcclusion")), Nb.setPoseLod(!0 !== xU.f.getItem(Ma.J)), (0, WM.s)("look") && (Nb.setDebugLog(Ka.M.Look, !0), (0, IM.i)("wasm", (() => Nb.takeDebugLog(Ka.M.Look))));
+        (0, WM.s)("remesh") && (Nb.setDebugLog(Ka.M.Remesh, !0), rb = () => Nb.takeDebugLog(Ka.M.Remesh), QM = new GM((0, dM.k)(), rb));
+        var rb;
+        const Kb = function(bb, ab, Ub, Ab) {
+          const Mb = new bA,
+            Tb = bb => xU.f.getItem(bb);
+          Mb.sync(Tb, ab), (0, pa.S)();
+          const Eb = (0, Bb.n)("customBindingsChanged", (() => {
+            Mb.sync(Tb, ab)
           }));
-          (0, gs.l)(cb);
-          const Ub = new Set,
-            Hb = (0, Lb.C)((() => {
+          (0, pU.i)(ab);
+          const Yb = new Set,
+            eb = (0, xb.x)((() => {
               var bb;
-              Ub.size > 0 && Tk() && !0 === (null === (bb = (0, ub.h)()) || void 0 === bb ? void 0 : bb.localPlayerAlive()) && Ib.j.QQ("usedKeyboard")
+              Yb.size > 0 && MA() && !0 === (null === (bb = (0, ib.i)()) || void 0 === bb ? void 0 : bb.localPlayerAlive()) && Bb.m.IR("usedKeyboard")
             })),
-            fb = os.b.heldSizer((() => (0, Bc.l)(bb))),
-            Mb = rs(bb, cb, {
-              prevents: bb => Wb.prevents(bb),
+            vb = sU.b.heldSizer((() => (0, Wa.r)(bb))),
+            Lb = wU(bb, ab, {
+              prevents: bb => Mb.prevents(bb),
               keyPressed: bb => {
-                Wb.moves(bb) && (Ub.add(bb), Tk() && Ib.j.QQ("usedKeyboard"))
+                Mb.moves(bb) && (Yb.add(bb), MA() && Bb.m.IR("usedKeyboard"))
               },
               keyReleased: bb => {
-                Ub.delete(bb)
+                Yb.delete(bb)
               },
               keysReleased: () => {
-                Ub.clear()
+                Yb.clear()
               },
               resized: () => {
-                Wk.k.measure(bb.getBoundingClientRect()), (0, Ss.j)()
+                UA.g.measure(bb.getBoundingClientRect()), (0, gU.k)()
               },
-              sizeCanvas: fb,
-              watchRenderScale: cb => {
-                const sb = (0, Bc.o)(bb, cb),
-                  kb = os.b.onRelease(cb);
+              sizeCanvas: vb,
+              watchRenderScale: ab => {
+                const Ub = (0, Wa.v)(bb, ab),
+                  Ab = sU.b.onRelease(ab);
                 return () => {
-                  sb(), kb()
+                  Ub(), Ab()
                 }
               },
               touchStarting: () => {
-                Wk.k.measure(bb.getBoundingClientRect())
+                UA.g.measure(bb.getBoundingClientRect())
               },
-              viewShown: sb,
-              touchUiShown: () => rb.d.get("isTouchScreen"),
-              ctrlCombosAreGames: Tk,
-              inspect: (bb, cb, sb) => {
-                Wb.checks(cb, sb) && kb(bb)
+              viewShown: Ub,
+              touchUiShown: () => sb.c.get("isTouchScreen"),
+              ctrlCombosAreGames: MA,
+              inspect: (bb, ab, Ub) => {
+                Mb.checks(ab, Ub) && Ab(bb)
               },
-              canLock: () => Ks(bb)
+              canLock: () => qU(bb)
             }),
-            Xb = (0, as.b)(cb);
+            Pb = (0, TU.e)(ab);
           return () => {
-            Tb(), Hb(), (0, gs.l)(null), Xb(), Mb()
+            Eb(), eb(), (0, pU.i)(null), Pb(), Lb()
           }
-        }(lb, ((bb, cb, sb, kb, Wb) => {
-          var ab;
-          YH(gb, (() => {
-            gb.rings.input.writeRecord(bb, cb, sb, kb, Wb)
-          })), null === (ab = XT) || void 0 === ab || ab.onInput(bb), !yT && (0, Mk.e)(bb, Wb) && (0, Mk.b)((() => {
-            wa !== gb || ZU || gb.isStopped || !XH() || TH(gb, !1, "budget", !1)
+        }(Rb, ((bb, ab, Ub, Ab, Mb) => {
+          var Tb;
+          De(Nb, (() => {
+            Nb.rings.input.writeRecord(bb, ab, Ub, Ab, Mb)
+          })), null === (Tb = BE) || void 0 === Tb || Tb.onInput(bb), !pE && (0, eA.g)(bb, Mb) && (0, eA.d)((() => {
+            KT !== Nb || GY || Nb.isStopped || !Be() || Ue(Nb, !1, "budget", !1)
           }))
-        }), (() => iU), (bb => {
-          var cb;
-          null === (cb = XT) || void 0 === cb || cb.onEvent(bb)
+        }), (() => IY), (bb => {
+          var ab;
+          null === (ab = BE) || void 0 === ab || ab.onEvent(bb)
         }));
-        if (gb.isStopped) return zb(), null;
-        kT = zb;
-        const qb = () => !gb.isStopped && !GU;
-        if (gb.isStopped) return null;
-        (0, ac.T)((() => {
-          "call" === (0, ac.o)() && gb.crash(bs.t, (0, ac.n)())
+        if (Nb.isStopped) return Kb(), null;
+        ST = Kb;
+        const ob = () => !Nb.isStopped && !FY;
+        if (Nb.isStopped) return null;
+        (0, Ta.M)((() => {
+          "call" === (0, Ta.l)() && Nb.crash(bU.o, (0, Ta.k)())
         }));
-        const db = (0, bs.R)(gb.rings.worker, (() => {
-          TH(gb, !1, "budget")
+        const lb = (0, bU.H)(Nb.rings.worker, (() => {
+          Ue(Nb, !1, "budget")
         }));
-        WT = function(bb, cb) {
-          return hH().then((bb => {
+        bE = function(bb, ab) {
+          return ze().then((bb => {
             let {
-              prefetchWorldgenWorker: cb
+              prefetchWorldgenWorker: ab
             } = bb;
-            cb()
-          }), (() => {})), new dW({
-            module: (0, ac.y)(),
+            ab()
+          }), (() => {})), new rM({
+            module: (0, Ta.u)(),
             decodeSettings: bb => {
-              const cb = (0, ub.s)();
-              if (null === cb) throw new Error("no game code to decode the world-gen seed with");
-              return cb.decodeMapSettings(bb)
+              const ab = (0, ib.r)();
+              if (null === ab) throw new Error("no game code to decode the world-gen seed with");
+              return ab.decodeMapSettings(bb)
             },
-            loadWorker: JH,
+            loadWorker: xe,
             onMapWithoutWorldgen: () => {
-              gH((bb => {
+              ie((bb => {
                 let {
-                  stopWorldgenWorkerPrefetch: cb
+                  stopWorldgenWorkerPrefetch: ab
                 } = bb;
-                cb()
+                ab()
               }))
             },
             onLoadFailed: bb => {
-              (0, us.reportWorldgenLoadFailure)(bb, va)
+              (0, iU.reportWorldgenLoadFailure)(bb, sT)
             },
             onWorkerLost: bb => {
-              (0, us.reportWorkerLost)(bs.E, bb, va)
+              (0, iU.reportWorkerLost)(bU.x, bb, sT)
             },
             onStartTimeout: bb => {
-              (0, us.reportWorkerStartTimeout)(bs.E, bb, va)
+              (0, iU.reportWorkerStartTimeout)(bU.x, bb, sT)
             },
             onGaveUp: bb => {
-              (0, us.reportWorldgenGaveUp)(bb, va)
+              (0, iU.reportWorldgenGaveUp)(bb, sT)
             },
             onMemoryStats: bb => {
-              var cb;
-              null === (cb = UT) || void 0 === cb || cb.noteWorldgen(bb)
+              var ab;
+              null === (ab = AE) || void 0 === ab || ab.noteWorldgen(bb)
             },
             onMemoryGone: () => {
               var bb;
-              null === (bb = UT) || void 0 === bb || bb.worldgenGone()
+              null === (bb = AE) || void 0 === bb || bb.worldgenGone()
             },
-            write: (sb, kb, Wb, ab, Tb) => {
-              YH(bb, (() => {
-                bb.rings.worker.writeWorkerRecord(sb, kb, Wb, 0, ab, Tb) || bb.crash(bs.E, `a world-gen record of kind ${kb} did not fit the worker-in ring`)
-              })), cb()
+            write: (Ub, Ab, Mb, Tb, Eb) => {
+              De(bb, (() => {
+                bb.rings.worker.writeWorkerRecord(Ub, Ab, Mb, 0, Tb, Eb) || bb.crash(bU.x, `a world-gen record of kind ${Ab} did not fit the worker-in ring`)
+              })), ab()
             }
           })
-        }(gb, db), TT = function(bb, cb) {
-          return new Gk({
-            module: (0, ac.y)(),
+        }(Nb, lb), UE = function(bb, ab) {
+          return new GA({
+            module: (0, Ta.u)(),
             loadWorkers: async () => {
               const [{
                 createMeshWorker: bb
-              }, cb] = await Promise.all([sb.e(40).then((() => sb(42713))), Promise.resolve().then((() => sb(117))).then((bb => {
+              }, ab] = await Promise.all([Ub.e(40).then((() => Ub(42466))), Promise.resolve().then((() => Ub(101))).then((bb => {
                 let {
-                  isMobile: cb
+                  isMobile: ab
                 } = bb;
-                return cb()
+                return ab()
               }), (() => !1))]);
               return {
                 create: bb,
-                count: (0, Vc.c)(navigator.hardwareConcurrency, cb)
+                count: (0, za.e)(navigator.hardwareConcurrency, ab)
               }
             },
-            write: (sb, kb, Wb, ab, Tb, Ub) => {
-              (0, Ss.i)(), YH(bb, (() => {
-                bb.rings.worker.writeWorkerRecord(sb, kb, Wb, ab, Tb, Ub) || bb.crash(bs.n, `a meshing record of kind ${kb} did not fit the worker-in ring`)
-              })), cb()
+            write: (Ub, Ab, Mb, Tb, Eb, Yb) => {
+              (0, gU.j)(), De(bb, (() => {
+                bb.rings.worker.writeWorkerRecord(Ub, Ab, Mb, Tb, Eb, Yb) || bb.crash(bU.m, `a meshing record of kind ${Ab} did not fit the worker-in ring`)
+              })), ab()
             },
             onWorkerLost: bb => {
-              (0, us.reportWorkerLost)(bs.n, bb, va)
+              (0, iU.reportWorkerLost)(bU.m, bb, sT)
             },
-            onLightFault: (bb, cb) => {
-              (0, us.reportLightFault)(bb, cb, va)
+            onLightFault: (bb, ab) => {
+              (0, iU.reportLightFault)(bb, ab, sT)
             },
             onStartTimeout: bb => {
-              (0, us.reportWorkerStartTimeout)(bs.n, bb, va)
+              (0, iU.reportWorkerStartTimeout)(bU.m, bb, sT)
             },
-            onMemoryStats: (bb, cb) => {
-              var sb;
-              null === (sb = UT) || void 0 === sb || sb.noteMeshWorker(bb, cb)
+            onMemoryStats: (bb, ab) => {
+              var Ub;
+              null === (Ub = AE) || void 0 === Ub || Ub.noteMeshWorker(bb, ab)
             },
             onMemoryGone: bb => {
-              var cb;
-              null === (cb = UT) || void 0 === cb || cb.meshWorkerGone(bb)
+              var ab;
+              null === (ab = AE) || void 0 === ab || ab.meshWorkerGone(bb)
             },
-            fail: (cb, sb) => {
-              const kb = () => {
-                bb.crash(bs.n, void 0 === sb ? cb : new Error(cb, {
-                  cause: sb
+            fail: (ab, Ub) => {
+              const Ab = () => {
+                bb.crash(bU.m, void 0 === Ub ? ab : new Error(ab, {
+                  cause: Ub
                 }))
               };
-              void 0 !== sb ? BH({
-                site: bs.n,
-                error: sb
-              }, kb) : kb()
+              void 0 !== Ub ? fe({
+                site: bU.m,
+                error: Ub
+              }, Ab) : Ab()
             }
           })
-        }(gb, db);
-        const ob = (0, jk.n)(Cc.clientSideServerUrls.staticUrl, {
+        }(Nb, lb);
+        const gb = (0, OA.q)(Za.clientSideServerUrls.staticUrl, {
             onTableFailed: bb => {
-              BH({
-                site: us.MODEL_FEED_SITE,
+              fe({
+                site: iU.MODEL_FEED_SITE,
                 error: bb
-              }, (() => {}), qb)
+              }, (() => {}), ob)
             },
             packUrl: bb => {
-              var cb, sb;
-              return null !== (cb = null === (sb = dI()) || void 0 === sb ? void 0 : sb.modelUrl(bb)) && void 0 !== cb ? cb : null
+              var ab, Ub;
+              return null !== (ab = null === (Ub = uB()) || void 0 === Ub ? void 0 : Ub.modelUrl(bb)) && void 0 !== ab ? ab : null
             }
           }),
-          Sb = function(bb, cb, sb) {
-            const kb = sb => {
-              var kb, Wb;
-              return null !== (kb = null === (Wb = cb()) || void 0 === Wb ? void 0 : Wb.drawnUrl(sb)) && void 0 !== kb ? kb : bb.url(sb)
+          Cb = function(bb, ab, Ub) {
+            const Ab = Ub => {
+              var Ab, Mb;
+              return null !== (Ab = null === (Mb = ab()) || void 0 === Mb ? void 0 : Mb.drawnUrl(Ub)) && void 0 !== Ab ? Ab : bb.url(Ub)
             };
-            return (0, Fk.o)((0, qk.p)(kb), sb)
-          }(ob, (() => mT), dI),
-          Rb = new qk.g(Sb, (bb => {
-            console.warn(`${na} image ${bb.key.kind}:${bb.key.index}:${bb.key.word} failed`, bb.error)
+            return (0, CA.j)((0, rA.l)(Ab), Ub)
+          }(gb, (() => vE), uB),
+          Vb = new rA.d(Cb, (bb => {
+            console.warn(`${eT} image ${bb.key.kind}:${bb.key.index}:${bb.key.word} failed`, bb.error)
           }));
-        CT = Rb, NT = new Rk(gb, Sb, ((bb, cb) => {
-          void 0 === cb ? console.warn(`${na} ${bb}`) : rI(bb, cb)
+        jE = Vb, RE = new sA(Nb, Cb, ((bb, ab) => {
+          void 0 === ab ? console.warn(`${eT} ${bb}`) : oB(bb, ab)
         }));
-        const vb = new vk.i(ob, function(bb, cb) {
-          let kb = !1,
-            Wb = null,
-            ab = null;
-          const Tb = {
-              onUnavailable: (sb, kb) => {
-                ab ??= BH({
-                  site: us.MODEL_POOL_SITE,
-                  error: sb,
-                  urls: kb
+        const Ob = new gA.i(gb, function(bb, ab) {
+          let Ab = !1,
+            Mb = null,
+            Tb = null;
+          const Eb = {
+              onUnavailable: (Ub, Ab) => {
+                Tb ??= fe({
+                  site: iU.MODEL_POOL_SITE,
+                  error: Ub,
+                  urls: Ab
                 }, (() => {
-                  (0, us.reportModelPoolFailure)(sb, bb)
-                }), cb)
+                  (0, iU.reportModelPoolFailure)(Ub, bb)
+                }), ab)
               },
-              onDecoderFailed: (sb, kb) => {
-                const Wb = () => {
-                  (0, us.reportDracoDecoderFailure)(sb, bb)
+              onDecoderFailed: (Ub, Ab) => {
+                const Mb = () => {
+                  (0, iU.reportDracoDecoderFailure)(Ub, bb)
                 };
-                void 0 !== kb ? BH({
-                  site: us.MODEL_POOL_SITE,
-                  error: sb,
-                  urls: kb
-                }, Wb, cb) : Wb()
+                void 0 !== Ab ? fe({
+                  site: iU.MODEL_POOL_SITE,
+                  error: Ub,
+                  urls: Ab
+                }, Mb, ab) : Mb()
               },
-              onWorkerLost: cb => {
-                (0, us.reportWorkerLost)(us.MODEL_POOL_SITE, cb, bb)
+              onWorkerLost: ab => {
+                (0, iU.reportWorkerLost)(iU.MODEL_POOL_SITE, ab, bb)
               },
-              onModuleRetry: (cb, sb) => {
-                (0, us.reportModelsModuleRetry)(cb, sb, bb)
+              onModuleRetry: (ab, Ub) => {
+                (0, iU.reportModelsModuleRetry)(ab, Ub, bb)
               }
             },
-            Ub = sb.e(42).then((() => sb(42721))).then((bb => {
+            Yb = Ub.e(42).then((() => Ub(42469))).then((bb => {
               let {
-                pageModelPool: cb
+                pageModelPool: ab
               } = bb;
-              if (kb) return null;
-              const sb = cb(Tb);
-              return Wb = sb.unlisten, lT = sb.pool, sb.pool
-            }), (bb => (kb || Tb.onUnavailable(bb, void 0), null)));
-          return QT = () => {
+              if (Ab) return null;
+              const Ub = ab(Eb);
+              return Mb = Ub.unlisten, LE = Ub.pool, Ub.pool
+            }), (bb => (Ab || Eb.onUnavailable(bb, void 0), null)));
+          return PE = () => {
             var bb;
-            kb = !0, null === (bb = Wb) || void 0 === bb || bb(), lT = null
-          }, (bb, cb) => Ub.then((sb => {
-            var kb;
-            return null !== (kb = null === sb || void 0 === sb ? void 0 : sb.build(bb, cb)) && void 0 !== kb ? kb : (0, pk.t)(bb, "the model workers did not load")
-          })).then((bb => null !== ab && (0, pk.k)(bb) ? ab.then((() => bb)) : bb))
-        }(Jb, qb), (bb => {
-          bb.startup ? (QH(), BH({
-            site: us.MODEL_FEED_SITE,
+            Ab = !0, null === (bb = Mb) || void 0 === bb || bb(), LE = null
+          }, (bb, ab) => Yb.then((Ub => {
+            var Ab;
+            return null !== (Ab = null === Ub || void 0 === Ub ? void 0 : Ub.build(bb, ab)) && void 0 !== Ab ? Ab : (0, cA.w)(bb, "the model workers did not load")
+          })).then((bb => null !== Tb && (0, cA.k)(bb) ? Tb.then((() => bb)) : bb))
+        }(pb, ob), (bb => {
+          bb.startup ? (Pe(), fe({
+            site: iU.MODEL_FEED_SITE,
             error: bb.error,
             urls: "" === bb.url ? void 0 : [bb.url]
           }, (() => {
-            (0, us.reportModelFailure)(bb, Jb)
-          }))) : (0, us.reportModelFailure)(bb, Jb)
+            (0, iU.reportModelFailure)(bb, pb)
+          }))) : (0, iU.reportModelFailure)(bb, pb)
         }), {
-          onWritten: (bb, cb) => {
-            Rb.glbWritten(bb, cb)
+          onWritten: (bb, ab) => {
+            Vb.glbWritten(bb, ab)
           },
-          onTaken: (bb, cb) => {
-            Rb.glbTaken(bb, cb)
+          onTaken: (bb, ab) => {
+            Vb.glbTaken(bb, ab)
           },
-          onPackFileFailed: (bb, cb) => {
-            console.warn(`${na} the texture pack's model file ${bb} failed: the shipped one loads`, cb)
+          onPackFileFailed: (bb, ab) => {
+            console.warn(`${eT} the texture pack's model file ${bb} failed: the shipped one loads`, ab)
           }
         });
-        mT = vb;
-        const Fb = new wk.c(gb);
-        Sa = Fb, Fb.swap((bb => {
-          const cb = () => {
-            (0, us.reportTerrainTextureFailure)(bb, Jb)
+        vE = Ob;
+        const cb = new lA.d(Nb);
+        tT = cb, cb.swap((bb => {
+          const ab = () => {
+            (0, iU.reportTerrainTextureFailure)(bb, pb)
           };
-          if (YU) return void cb();
-          const sb = () => !YU,
-            kb = null === bb.url ? void 0 : [bb.url];
-          BH({
-            site: bs.C,
+          if (DY) return void ab();
+          const Ub = () => !DY,
+            Ab = null === bb.url ? void 0 : [bb.url];
+          fe({
+            site: bU.v,
             error: bb.error,
-            urls: kb
-          }, cb, sb)
+            urls: Ab
+          }, ab, Ub)
         })).then((bb => {
-          null !== bb && (bb || gb.isStopped || console.warn(`${na} the core refused the terrain textures: terrain draws untextured`), JT(gb))
+          null !== bb && (bb || Nb.isStopped || console.warn(`${eT} the core refused the terrain textures: terrain draws untextured`), xE(Nb))
         }));
-        const xb = new Kc(gb, ((bb, cb) => {
-          console.warn(`${na} ${bb}`, ...void 0 === cb ? [] : [cb])
+        const Jb = new ua(Nb, ((bb, ab) => {
+          console.warn(`${eT} ${bb}`, ...void 0 === ab ? [] : [ab])
         }));
-        xb.feed(), null !== Mb && function(bb, cb, kb, Wb, ab, Tb) {
-          let Ub = null,
-            Ib = null,
-            Hb = !1;
-          const fb = {
+        Jb.feed(), null !== Lb && function(bb, ab, Ab, Mb, Tb, Eb) {
+          let Yb = null,
+            Bb = null,
+            eb = !1;
+          const vb = {
             textures: null,
             stop: () => {
-              var bb, cb;
-              Hb = !0, null === (bb = Ib) || void 0 === bb || bb(), null === (cb = Ub) || void 0 === cb || cb(), xk.b.setSettled(null), null !== Fa && SU.clear(Fa)
+              var bb, ab;
+              eb = !0, null === (bb = Bb) || void 0 === bb || bb(), null === (ab = Yb) || void 0 === ab || ab(), VA.b.setSettled(null), null !== gT && tY.clear(gT)
             }
           };
-          oa = fb, Ib = oI().follow((Ib => {
-            null !== Ib && Promise.all([sb.e(193), sb.e(45)]).then((() => sb(42676))).then((sb => {
+          lT = vb, Bb = lB().follow((Bb => {
+            null !== Bb && Promise.all([Ub.e(193), Ub.e(45)]).then((() => Ub(42427))).then((Ub => {
               let {
-                PackTextures: Mb
-              } = sb;
-              if (Hb || bb.isStopped) return;
-              const Xb = new Mb({
-                feed: Ib,
-                terrain: cb,
-                backend: kb,
+                PackTextures: Lb
+              } = Ub;
+              if (eb || bb.isStopped) return;
+              const Pb = new Lb({
+                feed: Bb,
+                terrain: ab,
+                backend: Ab,
                 stopped: () => bb.isStopped,
                 landed: () => {
-                  JT(bb)
+                  xE(bb)
                 },
                 packSwapped: () => {
-                  (0, Fk.k)(Wb), Tb.feed((() => async function(bb) {
-                    const cb = null === bb ? null : await bb.averageColours;
-                    return null === cb ? Zc() : Gc(cb)
-                  }(Xb.assets))), AI(Xb.iconOverrides()), ab.refresh().then((bb => {
-                    null !== bb && console.info(`${na} texture pack models: ${bb.resent} of ${bb.delivered} files written again, ${bb.refetched} refetched`)
+                  (0, CA.i)(Mb), Eb.feed((() => async function(bb) {
+                    const ab = null === bb ? null : await bb.averageColours;
+                    return null === ab ? ra() : qa(ab)
+                  }(Pb.assets))), rB(Pb.iconOverrides()), Tb.refresh().then((bb => {
+                    null !== bb && console.info(`${eT} texture pack models: ${bb.resent} of ${bb.delivered} files written again, ${bb.refetched} refetched`)
                   }))
                 },
-                settled: (bb, cb, sb) => {
-                  var kb;
-                  (xk.b.setSettled({
+                settled: (bb, ab, Ub) => {
+                  var Ab;
+                  (VA.b.setSettled({
                     state: bb,
-                    files: cb
-                  }), null === bb.gameSource && (0, ls.b)(bb.pack, sb), sb) || function(bb) {
-                    const cb = Fa;
-                    null !== cb && SU.apply(cb, bb).then((cb => {
-                      cb && bb && console.info(`${na} the texture pack's animations are in (${Object.keys(bb).length} files)`)
+                    files: ab
+                  }), null === bb.gameSource && (0, RU.c)(bb.pack, Ub), Ub) || function(bb) {
+                    const ab = gT;
+                    null !== ab && tY.apply(ab, bb).then((ab => {
+                      ab && bb && console.info(`${eT} the texture pack's animations are in (${Object.keys(bb).length} files)`)
                     }))
-                  }(null === (kb = bb.pack) || void 0 === kb ? void 0 : kb.animations)
+                  }(null === (Ab = bb.pack) || void 0 === Ab ? void 0 : Ab.animations)
                 },
                 settling: () => {
-                  xk.b.setSettled(null)
+                  VA.b.setSettled(null)
                 },
-                warn: rI,
-                maxTextureSize: () => Promise.resolve((0, pc.R)(document.createElement("canvas")))
+                warn: oB,
+                maxTextureSize: () => Promise.resolve((0, Sa.U)(document.createElement("canvas")))
               });
-              fb.textures = Xb, Ub = Xb.start()
+              vb.textures = Pb, Yb = Pb.start()
             }), (bb => {
-              console.warn(`${na} the texture pack's terrain didn't load: the built atlas stays`, bb)
+              console.warn(`${eT} the texture pack's terrain didn't load: the built atlas stays`, bb)
             }))
           }))
-        }(gb, Fb, Mb, Rb, vb, xb);
-        const jb = () => {
-            gb.setTextureLayers("")
+        }(Nb, cb, Lb, Vb, Ob, Jb);
+        const nb = () => {
+            Nb.setTextureLayers("")
           },
-          pb = bb => {
-            (ec ??= sb.e(50).then((() => sb(42727))).then((bb => {
+          Sb = bb => {
+            (ya ??= Ub.e(50).then((() => Ub(42477))).then((bb => {
               let {
-                TEXTURE_NAMES: cb
+                TEXTURE_NAMES: ab
               } = bb;
-              return cb
+              return ab
             }), (bb => {
-              throw ec = null, bb
-            })), ec).then((bb => {
-              gb.setTextureLayers(bb) || gb.isStopped || (console.warn(`${na} the core refused the texture names: textured Boxes draw textureNotFound`), jb())
-            }), (cb => {
-              if (gb.isStopped) return;
-              const [sb, ...kb] = bb;
-              void 0 === sb ? BH({
-                site: us.TEXTURE_NAMES_SITE,
-                error: cb
+              throw ya = null, bb
+            })), ya).then((bb => {
+              Nb.setTextureLayers(bb) || Nb.isStopped || (console.warn(`${eT} the core refused the texture names: textured Boxes draw textureNotFound`), nb())
+            }), (ab => {
+              if (Nb.isStopped) return;
+              const [Ub, ...Ab] = bb;
+              void 0 === Ub ? fe({
+                site: iU.TEXTURE_NAMES_SITE,
+                error: ab
               }, (() => {
-                console.warn(`${na} the texture names didn't load, so textured Boxes draw textureNotFound`, cb), jb()
-              }), qb) : setTimeout((() => {
-                pb(kb)
-              }), sb)
+                console.warn(`${eT} the texture names didn't load, so textured Boxes draw textureNotFound`, ab), nb()
+              }), ob) : setTimeout((() => {
+                Sb(Ab)
+              }), Ub)
             }))
           };
-        if (pb(Ea), null !== Mb && !await async function(bb, cb, sb, kb, ab, Tb) {
-            var Ub;
-            const Ib = (0, pc.z)(sb);
-            if (null === Ib) return bb.crash(la, new Error(`this ${kb} build has no openRenderer`)), !1;
-            let Hb;
-            fU = Ib;
+        if (Sb(HT), null !== Lb && !await async function(bb, ab, Ub, Ab, Tb, Eb) {
+            var Yb;
+            const Bb = (0, Sa.G)(Ub);
+            if (null === Bb) return bb.crash(LT, new Error(`this ${Ab} build has no openRenderer`)), !1;
+            let eb;
+            EY = Bb;
             try {
-              var fb, Mb, Xb, nb;
-              const Wb = null !== (fb = null === (Mb = da) || void 0 === Mb ? void 0 : Mb.pagePreviews()) && void 0 !== fb ? fb : null,
-                Ub = null !== (Xb = null === (nb = da) || void 0 === nb ? void 0 : nb.previewModule(sb)) && void 0 !== Xb ? Xb : null;
-              if (null === Wb || null === Ub) {
-                null === Wb || void 0 === Wb || Wb.endSession(!1), Hb = (0, Bc.d)().sampleCount, await (0, pc.e)(cb, Ib, Tb, zI, Hb, await ab);
-                const bb = (0, pc.h)(sb);
-                null === bb && console.warn(`${na} this ${kb} build has no image registry: sky and model images won't show`), (0, Ak.h)(bb)
+              var vb, Lb, Pb, Xb;
+              const Mb = null !== (vb = null === (Lb = uT) || void 0 === Lb ? void 0 : Lb.pagePreviews()) && void 0 !== vb ? vb : null,
+                Yb = null !== (Pb = null === (Xb = uT) || void 0 === Xb ? void 0 : Xb.previewModule(Ub)) && void 0 !== Pb ? Pb : null;
+              if (null === Mb || null === Yb) {
+                null === Mb || void 0 === Mb || Mb.endSession(!1), eb = (0, Wa.h)().sampleCount, await (0, Sa.g)(ab, Bb, Eb, QB, eb, await Tb);
+                const bb = (0, Sa.n)(Ub);
+                null === bb && console.warn(`${eT} this ${Ab} build has no image registry: sky and model images won't show`), (0, oA.h)(bb)
               } else {
-                (0, TW.e)() && await (0, wb.l)();
-                const sb = (0, TW.E)();
-                if (null !== sb) {
-                  const cb = (0, pc.M)(Ib);
-                  return bb.crash(us.RENDER_RELOAD_SITE, new Error(`${sb}${void 0===cb?"":` (${cb.message})`}`)), !1
+                (0, AM.c)() && await (0, wb.q)();
+                const Ub = (0, AM.K)();
+                if (null !== Ub) {
+                  const ab = (0, Sa.S)(Bb);
+                  return bb.crash(iU.RENDER_RELOAD_SITE, new Error(`${Ub}${void 0===ab?"":` (${ab.message})`}`)), !1
                 }
-                Hb = await Wb.bindSession(Ub, cb, (async bb => (0, pc.q)(Ib, la, Tb, bb, zI, await ab)))
+                eb = await Mb.bindSession(Yb, ab, (async bb => (0, Sa.x)(Bb, LT, Eb, bb, QB, await Tb)))
               }
-            } catch (Wb) {
-              return bb.crash(la, Wb), !1
-            }(function(bb, cb) {
-              const sb = bb,
+            } catch (Mb) {
+              return bb.crash(LT, Mb), !1
+            }(function(bb, ab) {
+              const Ub = bb,
                 {
-                  requestCapture: kb,
-                  takeCapture: Wb
-                } = sb;
-              if ("function" !== typeof kb || "function" !== typeof Wb) return;
-              const ab = {
+                  requestCapture: Ab,
+                  takeCapture: Mb
+                } = Ub;
+              if ("function" !== typeof Ab || "function" !== typeof Mb) return;
+              const Tb = {
                 request() {
-                  kb.call(sb, cb)
+                  Ab.call(Ub, ab)
                 },
                 take() {
                   var bb;
-                  return null !== (bb = Wb.call(sb)) && void 0 !== bb ? bb : null
+                  return null !== (bb = Mb.call(Ub)) && void 0 !== bb ? bb : null
                 }
               };
-              window[nW] = ab
-            })(cb, Hb), eU = Hb, IU = !0;
-            const mb = performance.now();
-            return HU.boundAtMs = null !== (Ub = (0, TW.G)()) && void 0 !== Ub ? Ub : mb, HU.indirectHangs = (0, TW.A)(), console.info(`${na} ${kb} renderer bound at ${Math.round(mb)} ms`), !bb.isStopped
-          }(gb, hb, Yb, Mb, nb, lb)) return null;
-        if (null !== Mb) {
-          var bc, cc, sc;
-          (0, Hc.B)(Mb);
-          const bb = () => !gb.isStopped && MH();
-          sb.e(185).then((() => sb(8819))).then((cb => {
+              window[vM] = Tb
+            })(ab, eb), XY = eb, MY = !0;
+            const jb = performance.now();
+            return TY.boundAtMs = null !== (Yb = (0, AM.O)()) && void 0 !== Yb ? Yb : jb, TY.indirectHangs = (0, AM.y)(), console.info(`${eT} ${Ab} renderer bound at ${Math.round(jb)} ms`), !bb.isStopped
+          }(Nb, mb, fb, Lb, Xb, Rb)) return null;
+        if (null !== Lb) {
+          var ba, aa, Ua;
+          (0, ea.N)(Lb);
+          const bb = () => !Nb.isStopped && Ye();
+          Ub.e(185).then((() => Ub(8794))).then((ab => {
             let {
-              devTools: sb
-            } = cb;
-            gb.isStopped || sb.setHost(function(bb) {
+              devTools: Ub
+            } = ab;
+            Nb.isStopped || Ub.setHost(function(bb) {
               return {
-                tools: aW,
-                async downloadScene(cb, sb) {
+                tools: UM,
+                async downloadScene(ab, Ub) {
                   let {
-                    width: kb,
-                    height: Wb,
-                    colouring: ab
-                  } = sb;
-                  "screenshot" === cb && null === ab ? await (0, sW.e)(bb, kb, Wb) : console.warn("The Rust client's developer tools take uncoloured screenshots only")
+                    width: Ab,
+                    height: Mb,
+                    colouring: Tb
+                  } = Ub;
+                  "screenshot" === ab && null === Tb ? await (0, SA.e)(bb, Ab, Mb) : console.warn("The Rust client's developer tools take uncoloured screenshots only")
                 },
                 setAmbientLightIntensity: () => (console.warn("The Rust client's renderer has no ambient light setting"), Promise.resolve())
               }
-            }(function(bb, cb) {
+            }(function(bb, ab) {
               return {
                 canvas: bb,
-                maxTextureSize: kW,
-                drawing: cb,
-                resize: (bb, cb) => {
-                  (0, gs.r)(zc.qb.Resize, 0, bb, cb, (0, gs.j)(1))
+                maxTextureSize: bM,
+                drawing: ab,
+                resize: (bb, ab) => {
+                  (0, pU.o)(Ka.rb.Resize, 0, bb, ab, (0, pU.f)(1))
                 },
                 restoreSize: () => {
-                  const cb = (0, Bc.l)(bb);
-                  null !== cb && (0, gs.r)(zc.qb.Resize, 0, cb.cssWidth, cb.cssHeight, (0, gs.j)(cb.renderScale))
+                  const ab = (0, Wa.r)(bb);
+                  null !== ab && (0, pU.o)(Ka.rb.Resize, 0, ab.cssWidth, ab.cssHeight, (0, pU.f)(ab.renderScale))
                 },
-                onFrameDrawn: bb => (WW.add(bb), () => {
-                  WW.delete(bb)
+                onFrameDrawn: bb => (aM.add(bb), () => {
+                  aM.delete(bb)
                 })
               }
-            }(lb, bb)))
+            }(Rb, bb)))
           }), (bb => {
-            console.warn(`${na} the developer tools didn't load: no captures this session`, bb)
+            console.warn(`${eT} the developer tools didn't load: no captures this session`, bb)
           }));
-          const cb = "webgpu" === Mb && null !== (bc = null === Hb || void 0 === Hb || null === (cc = Hb.adapter) || void 0 === cc ? void 0 : cc.vendor) && void 0 !== bc ? bc : null;
-          CU = {
-            backend: Mb,
-            canvas: lb,
-            fallbackReason: null !== (sc = null === Hb || void 0 === Hb ? void 0 : Hb.reason) && void 0 !== sc ? sc : null,
-            adapterVendor: cb
-          }, jI();
+          const ab = "webgpu" === Lb && null !== (ba = null === eb || void 0 === eb || null === (aa = eb.adapter) || void 0 === aa ? void 0 : aa.vendor) && void 0 !== ba ? ba : null;
+          jY = {
+            backend: Lb,
+            canvas: Rb,
+            fallbackReason: null !== (Ua = null === eb || void 0 === eb ? void 0 : eb.reason) && void 0 !== Ua ? Ua : null,
+            adapterVendor: ab
+          }, VB();
           try {
-            (0, Ss.s)(Mb, lb, cb)
-          } catch (Wb) {
-            (0, Ss.t)(), console.error(`${na} the quality steps didn't start`, Wb)
+            (0, gU.t)(Lb, Rb, ab)
+          } catch (Mb) {
+            (0, gU.v)(), console.error(`${eT} the quality steps didn't start`, Mb)
           }
         }
         const {
-          storagePullBreaks: kc,
-          splitPassBreaks: Mc
-        } = await nb;
-        Mc && console.warn(`${na} split_pass_breaks on: Windows Adreno 7xx (N-103) or ?sceneDepth=off`);
-        const lc = kc ? Ab.e : (0, Ab.i)(Hb, (0, hc.g)());
-        if ((0, PW.q)("webgpuloss")) {
-          var Qc, Nc;
+          storagePullBreaks: Aa,
+          splitPassBreaks: La
+        } = await Xb;
+        La && console.warn(`${eT} split_pass_breaks on: Windows Adreno 7xx (N-103) or ?sceneDepth=off`);
+        const Ra = Aa ? tb.c : (0, tb.i)(eb, (0, ma.f)());
+        if ((0, WM.s)("webgpuloss")) {
+          var ka, Da;
           const bb = {
-            backend: Mb,
-            reason: null !== (Qc = null === Hb || void 0 === Hb ? void 0 : Hb.reason) && void 0 !== Qc ? Qc : null,
-            source: null !== (Nc = null === Hb || void 0 === Hb ? void 0 : Hb.source) && void 0 !== Nc ? Nc : null,
-            storagePullBreaks: kc,
-            noWebGpu: lc.messageKey
+            backend: Lb,
+            reason: null !== (ka = null === eb || void 0 === eb ? void 0 : eb.reason) && void 0 !== ka ? ka : null,
+            source: null !== (Da = null === eb || void 0 === eb ? void 0 : eb.source) && void 0 !== Da ? Da : null,
+            storagePullBreaks: Aa,
+            noWebGpu: Ra.messageKey
           };
-          (0, DW.b)((cb => {
-            cb.noteWasmPick(bb)
+          (0, HM.e)((ab => {
+            ab.noteWasmPick(bb)
           }))
         }
-        const Lc = "webgpu" === Mb && !kc;
-        if (LT = (0, Ab.m)(Lc ? gb : null, Lc && null !== (Tb = null === (Ub = da) || void 0 === Ub ? void 0 : Ub.pagePreviews().Qm) && void 0 !== Tb ? Tb : null, lc, rI), ZU) return null;
-        if (Ob.reserveAtJoin((0, Zk.i)(null !== yb && void 0 !== yb ? yb : ns.d)), gb.isStopped) return null;
-        const uc = bb => {
-          if (null !== NU) try {
-            NU.animationFrame(bb)
-          } catch (Wb) {
-            cH(Wb)
+        const xa = "webgpu" === Lb && !Aa;
+        if (yE = (0, tb.l)(xa ? Nb : null, xa && null !== (Eb = null === (Yb = uT) || void 0 === Yb ? void 0 : Yb.pagePreviews().QX) && void 0 !== Eb ? Eb : null, Ra, oB), GY) return null;
+        if (Qb.reserveAtJoin((0, qA.j)(null !== Ib && void 0 !== Ib ? Ib : XU.g)), Nb.isStopped) return null;
+        const ia = bb => {
+          if (null !== RY) try {
+            RY.animationFrame(bb)
+          } catch (Mb) {
+            JB(Mb)
           }
-          if (function(bb, cb) {
-              return cb && !ZU && !yT && XH() && MH() && bb.framePaces(performance.now())
-            }(gb, iU)) return gb.writePendingInput(), (0, Lb.g)(bb, UH), pI(!1, bb), void requestAnimationFrame(uc);
-          TH(gb, iU, "budget") && ((0, gc.h)(gb.lastFrameKind) && MH() && (0, Lb.g)(bb, UH), pI(iU && PU, bb), DU.frame(gb.lastFrameKind, iU && MH(), bb), CH(gb), Ob.afterFrame(), requestAnimationFrame(uc))
+          if (function(bb, ab) {
+              return ab && !GY && !pE && Be() && Ye() && bb.framePaces(performance.now())
+            }(Nb, IY)) return Nb.writePendingInput(), (0, xb.f)(bb, Ae), OB(!1, bb), void requestAnimationFrame(ia);
+          Ue(Nb, IY, "budget") && ((0, Na.g)(Nb.lastFrameKind) && Ye() && (0, xb.f)(bb, Ae), OB(IY && NY, bb), WY.frame(Nb.lastFrameKind, IY && Ye(), bb), je(Nb), Qb.afterFrame(), requestAnimationFrame(ia))
         };
-        requestAnimationFrame(uc);
+        requestAnimationFrame(ia);
         return function(bb) {
-          if (bb.has("inputLog") && (0, kk.i)((bb => {
+          if (bb.has("inputLog") && (0, aA.l)((bb => {
               let {
-                action: cb,
-                down: sb,
-                press: kb
+                action: ab,
+                down: Ub,
+                press: Ab
               } = bb;
-              console.info(`${ak} input ${cb} ${sb?"down":"up"} press ${kb} at ${performance.now().toFixed(1)}`)
+              console.info(`${AA} input ${ab} ${Ub?"down":"up"} press ${Ab} at ${performance.now().toFixed(1)}`)
             })), bb.has("inputDump")) {
             const bb = [];
-            Uk = bb, Object.assign(window, {
+            TA = bb, Object.assign(window, {
               bloxdInputDump: () => bb.join("\n")
             })
           }
-        }(new URLSearchParams(window.location.search)), MT = function(bb, cb) {
-          let sb = null;
-          const kb = () => {
-              null !== sb && (clearInterval(sb), sb = null)
+        }(new URLSearchParams(window.location.search)), YE = function(bb, ab) {
+          let Ub = null;
+          const Ab = () => {
+              null !== Ub && (clearInterval(Ub), Ub = null)
             },
-            Wb = () => {
-              document.hidden ? sb ??= setInterval((() => {
-                TH(bb, !1, "budget") ? (CH(bb), cb.afterFrame()) : kb()
-              }), Da) : kb()
+            Mb = () => {
+              document.hidden ? Ub ??= setInterval((() => {
+                Ue(bb, !1, "budget") ? (je(bb), ab.afterFrame()) : Ab()
+              }), WT) : Ab()
             };
-          return document.addEventListener("visibilitychange", Wb), Wb(), () => {
-            kb(), document.removeEventListener("visibilitychange", Wb)
+          return document.addEventListener("visibilitychange", Mb), Mb(), () => {
+            Ab(), document.removeEventListener("visibilitychange", Mb)
           }
-        }(gb, Ob), gb
-      }(cb).then((bb => {
-        var cb;
-        (kb(va), pa(null !== bb), null !== bb && (CW = performance.now()), xa(bb), null === bb) ? null === (cb = da) || void 0 === cb || cb.pagePreviews().endSession(null === (0, ac.o)()): hT("booted")
+        }(Nb, Qb), Nb
+      }(ab).then((bb => {
+        var ab;
+        (Ab(sT), OT(null !== bb), null !== bb && (RM = performance.now()), CT(bb), null === bb) ? null === (ab = uT) || void 0 === ab || ab.pagePreviews().endSession(null === (0, Ta.l)()): zE("booted")
       }), (bb => {
-        kb(va), pa(!1), xa(null), eH({
-          site: Qa,
+        Ab(sT), OT(!1), CT(null), Xe({
+          site: PT,
           error: bb,
           header: null
-        }, va)
+        }, sT)
       }))
     }
 
-    function oU() {
-      const bb = Fa;
-      null !== bb && zU().then((cb => {
+    function lY() {
+      const bb = gT;
+      null !== bb && QY().then((ab => {
         let {
-          pageBuiltInAnimationPack: sb
-        } = cb;
-        sb().provide(bb)
+          pageBuiltInAnimationPack: Ub
+        } = ab;
+        Ub().provide(bb)
       }), (bb => {
-        console.warn(`${na} the built-in animation pack's chunk did not load: lifeforms stay in their rest pose`, bb)
+        console.warn(`${eT} the built-in animation pack's chunk did not load: lifeforms stay in their rest pose`, bb)
       }))
     }
-    const SU = new class {
+    const tY = new class {
       constructor(bb) {
-        this.deps = bb, this.latest = 0, this.qU = null
+        this.deps = bb, this.latest = 0, this.PY = null
       }
-      apply(bb, cb) {
-        return this.load(bb, cb, 0)
+      apply(bb, ab) {
+        return this.load(bb, ab, 0)
       }
-      async load(bb, cb, sb) {
-        var kb;
-        const Wb = ++this.latest,
-          ab = this.deps.compiler;
-        if (void 0 === cb || null === cb || "object" !== typeof cb || 0 === Object.keys(cb).length || null === ab) return this.drop(bb), !1;
-        if ((null === (kb = this.qU) || void 0 === kb ? void 0 : kb.module) === bb && (0, Rc.qe)(this.qU.files, cb)) return !1;
+      async load(bb, ab, Ub) {
+        var Ab;
+        const Mb = ++this.latest,
+          Tb = this.deps.compiler;
+        if (void 0 === ab || null === ab || "object" !== typeof ab || 0 === Object.keys(ab).length || null === Tb) return this.drop(bb), !1;
+        if ((null === (Ab = this.PY) || void 0 === Ab ? void 0 : Ab.module) === bb && (0, Va.Td)(this.PY.files, ab)) return !1;
         try {
-          const [sb, kb] = await Promise.all([ab(), this.deps.builtIns()]);
-          if (Wb !== this.latest) return !1;
-          const Tb = await sb(cb, jc, {
-            builtIns: kb
+          const [Ub, Ab] = await Promise.all([Tb(), this.deps.builtIns()]);
+          if (Mb !== this.latest) return !1;
+          const Eb = await Ub(ab, na, {
+            builtIns: Ab
           });
-          if (Wb !== this.latest) return !1;
-          const Ub = this.call(bb, Tb);
-          if (void 0 === Ub) throw new xc("the compiled animations didn't read against the built-in pack");
-          return this.qU = {
+          if (Mb !== this.latest) return !1;
+          const Yb = this.call(bb, Eb);
+          if (void 0 === Yb) throw new Ja("the compiled animations didn't read against the built-in pack");
+          return this.PY = {
               module: bb,
-              files: cb
+              files: ab
             },
             function(bb) {
-              for (let cb = 0; cb + 2 < bb.length; cb += 3) {
-                ("error" === bb[cb] ? console.error : console.warn)(`Animation for the texture pack: ${bb[cb+1]}: ${bb[cb+2]}`)
+              for (let ab = 0; ab + 2 < bb.length; ab += 3) {
+                ("error" === bb[ab] ? console.error : console.warn)(`Animation for the texture pack: ${bb[ab+1]}: ${bb[ab+2]}`)
               }
-            }(Ub), !0
-        } catch (Ub) {
-          var Tb;
-          if (Wb !== this.latest) return !1;
-          this.drop(bb), 0 === sb && this.deps.warn("the texture pack's animations didn't load: lifeforms play the built-in ones", Ub);
-          const kb = (null !== (Tb = this.deps.retryAfterMs) && void 0 !== Tb ? Tb : Fc)[sb];
-          return void 0 === kb || Ub instanceof xc || (0, vc.j)(bb) || setTimeout((() => {
-            Wb === this.latest && this.load(bb, cb, sb + 1)
-          }), kb), !1
+            }(Yb), !0
+        } catch (Yb) {
+          var Eb;
+          if (Mb !== this.latest) return !1;
+          this.drop(bb), 0 === Ub && this.deps.warn("the texture pack's animations didn't load: lifeforms play the built-in ones", Yb);
+          const Ab = (null !== (Eb = this.deps.retryAfterMs) && void 0 !== Eb ? Eb : ca)[Ub];
+          return void 0 === Ab || Yb instanceof Ja || (0, Oa.l)(bb) || setTimeout((() => {
+            Mb === this.latest && this.load(bb, ab, Ub + 1)
+          }), Ab), !1
         }
       }
-      call(bb, cb) {
+      call(bb, ab) {
         try {
-          return bb.Jsb(cb)
-        } catch (sb) {
-          throw (0, vc.k)(bb, sb), sb
+          return bb.NUb(ab)
+        } catch (Ub) {
+          throw (0, Oa.n)(bb, Ub), Ub
         }
       }
       clear(bb) {
         this.latest++, this.drop(bb)
       }
       drop(bb) {
-        const cb = this.qU;
-        if (this.qU = null, (null === cb || void 0 === cb ? void 0 : cb.module) === bb && !(0, vc.j)(bb)) try {
+        const ab = this.PY;
+        if (this.PY = null, (null === ab || void 0 === ab ? void 0 : ab.module) === bb && !(0, Oa.l)(bb)) try {
           this.call(bb, null)
         } catch {}
       }
     }({
-      compiler: wc.d,
+      compiler: wa.b,
       builtIns: async () => {
         const {
           pageBuiltInAnimationPack: bb
-        } = await zU();
+        } = await QY();
         return bb().whenSet()
       },
-      warn: rI
+      warn: oB
     });
-    async function RU(bb, cb) {
-      let kb = !1;
-      await vU({
+    async function wY(bb, ab) {
+      let Ab = !1;
+      await sY({
         matchmake: async () => {
           const {
-            guestJoinTarget: Wb,
-            guestJoinWithPack: ab
-          } = await sb.e(342).then((() => sb(42664)));
-          return kb ? Wb(bb, cb, RI()) : (kb = !0, ab(bb, cb, (cb => vI(bb, cb)), RI))
+            guestJoinTarget: Mb,
+            guestJoinWithPack: Tb
+          } = await Ub.e(342).then((() => Ub(42410)));
+          return Ab ? Mb(bb, ab, wB()) : (Ab = !0, Tb(bb, ab, (ab => sB(bb, ab)), wB))
         },
         onFailure: bb => {
-          (0, us.showJoinFailure)(bb, va)
+          (0, iU.showJoinFailure)(bb, sT)
         },
-        rejoin: fI,
-        invalidateTrafficCode: MI
+        rejoin: EB,
+        invalidateTrafficCode: YB
       })
     }
-    async function vU(bb) {
+    async function sY(bb) {
       let {
-        matchmake: cb,
-        onFailure: sb,
-        rejoin: Wb,
-        invalidateTrafficCode: ab,
-        pageReady: Tb,
-        signal: Ub
+        matchmake: ab,
+        onFailure: Ub,
+        rejoin: Mb,
+        invalidateTrafficCode: Tb,
+        pageReady: Eb,
+        signal: Yb
       } = bb;
-      const Ib = () => !0 === (null === Ub || void 0 === Ub ? void 0 : Ub.aborted);
-      let Hb;
-      const fb = xk.b.rejoinHold(),
-        Mb = (0, Ns.I)("wasm", LH);
-      let Xb = !1,
-        nb = performance.now();
+      const Bb = () => !0 === (null === Yb || void 0 === Yb ? void 0 : Yb.aborted);
+      let eb;
+      const vb = VA.b.rejoinHold(),
+        Lb = (0, DU.U)("wasm", ye);
+      let Pb = !1,
+        Xb = performance.now();
       try {
-        if (!await bT) return {
+        if (!await cT) return {
           kind: "stopped"
         };
-        if (Ib()) return {
-          kind: "Gs"
+        if (Bb()) return {
+          kind: "xU"
         };
-        qU().catch((() => {}));
-        let bb = await cb();
-        nb = performance.now();
-        const sb = () => performance.now() - bb.matchedAt <= bb.freshMs,
-          kb = xU(bb.target).catch((() => {}));
-        sb() && !Ib() && (Hb = new Dk(bb.target, {
-          signal: Ub
+        qY().catch((() => {}));
+        let bb = await ab();
+        Xb = performance.now();
+        const Ub = () => performance.now() - bb.matchedAt <= bb.freshMs,
+          Ab = CY(bb.target).catch((() => {}));
+        Ub() && !Bb() && (eb = new IA(bb.target, {
+          signal: Yb
         }));
-        const ab = performance.now();
-        if (null === await ja) return {
+        const Tb = performance.now();
+        if (null === await VT) return {
           kind: "stopped"
         };
-        var mb;
+        var jb;
         if (function(bb) {
-            var cb, sb;
-            if (mW.e.markGameEngineConstructed(), NW) return;
-            NW = !0;
-            const kb = Math.max(bb, null !== (cb = QW) && void 0 !== cb ? cb : bb);
-            (0, lW.h)("ready", Math.max(0, (null !== (sb = eW) && void 0 !== sb ? sb : kb) - kb) / 1e3)
-          }(ab), Ib() || (null !== eW && null !== CW ? ((0, Dc.i)("wasm_loaded", eW), (0, Dc.i)("wasm_core_ready", CW)) : console.warn("[bloxd-wasm-client] a join found the core before boot marked its steps")), await kb, !sb() && !Ib()) null === (mb = Hb) || void 0 === mb || mb.rematched(), bb = await cb(), nb = performance.now();
-        if (Ib()) return {
-          kind: "Gs"
+            var ab, Ub;
+            if (LM.b.markGameEngineConstructed(), kM) return;
+            kM = !0;
+            const Ab = Math.max(bb, null !== (ab = XM) && void 0 !== ab ? ab : bb);
+            (0, PM.i)("ready", Math.max(0, (null !== (Ub = jM) && void 0 !== Ub ? Ub : Ab) - Ab) / 1e3)
+          }(Tb), Bb() || (null !== jM && null !== RM ? ((0, Fa.i)("wasm_loaded", jM), (0, Fa.i)("wasm_core_ready", RM)) : console.warn("[bloxd-wasm-client] a join found the core before boot marked its steps")), await Ab, !Ub() && !Bb()) null === (jb = eb) || void 0 === jb || jb.rematched(), bb = await ab(), Xb = performance.now();
+        if (Bb()) return {
+          kind: "xU"
         };
-        const fb = await async function(bb) {
-          var cb, sb, kb;
+        const vb = await async function(bb) {
+          var ab, Ub, Ab;
           let {
-            signal: Wb,
-            rejoin: ab = null,
-            early: Tb,
-            pageReady: Ub
+            signal: Mb,
+            rejoin: Tb = null,
+            early: Eb,
+            pageReady: Yb
           } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          if (null !== Wb && void 0 !== Wb && Wb.aborted) throw new DOMException("the join was left", "AbortError");
-          const Ib = (Hb = jT, fb = performance.now(), null !== Hb && fb - Hb < Ck);
-          var Hb, fb;
-          jT = null;
-          const Mb = new AbortController;
-          bI({
-            controller: Mb,
-            game: null !== (cb = null === (sb = bb.session) || void 0 === sb ? void 0 : sb.gameNameWithVariation) && void 0 !== cb ? cb : null
-          }), pT = null, null === (kb = sU) || void 0 === kb || kb.abort(), sU = null, WU = !1, aU = null, TU.clear();
-          const Xb = () => {
-            (0, Nc.h)(Mb, (0, Nc.f)(Wb))
+          if (null !== Mb && void 0 !== Mb && Mb.aborted) throw new DOMException("the join was left", "AbortError");
+          const Bb = (eb = VE, vb = performance.now(), null !== eb && vb - eb < kA);
+          var eb, vb;
+          VE = null;
+          const Lb = new AbortController;
+          cY({
+            controller: Lb,
+            game: null !== (ab = null === (Ub = bb.session) || void 0 === Ub ? void 0 : Ub.gameNameWithVariation) && void 0 !== ab ? ab : null
+          }), OE = null, null === (Ab = nE) || void 0 === Ab || Ab.abort(), nE = null, bY = !1, aY = null, UY.clear();
+          const Pb = () => {
+            (0, Da.f)(Lb, (0, Da.e)(Mb))
           };
-          null === Wb || void 0 === Wb || Wb.addEventListener("abort", Xb, {
+          null === Mb || void 0 === Mb || Mb.addEventListener("abort", Pb, {
             once: !0
           });
           try {
-            var nb, mb, lb;
-            const cb = await ja;
-            if (null === cb || cb.isStopped || ZU) throw new Error("no core is running to join a game with");
-            if (bb.session && null !== LT) {
-              const cb = await jU(LT.join(bb.session.gameNameWithVariation), Mb.signal);
-              if ((0, PW.q)("webgpuloss")) {
-                const sb = bb.session.gameNameWithVariation,
-                  kb = LT.couldntRunInJoinedGame();
-                (0, DW.b)((bb => bb.noteWasmJoin(sb, cb, kb)))
+            var Xb, jb, Rb;
+            const ab = await VT;
+            if (null === ab || ab.isStopped || GY) throw new Error("no core is running to join a game with");
+            if (bb.session && null !== yE) {
+              const ab = await VY(yE.join(bb.session.gameNameWithVariation), Lb.signal);
+              if ((0, WM.s)("webgpuloss")) {
+                const Ub = bb.session.gameNameWithVariation,
+                  Ab = yE.couldntRunInJoinedGame();
+                (0, HM.e)((bb => bb.noteWasmJoin(Ub, ab, Ab)))
               }
-              if (null !== cb) throw new Ab.f(cb)
+              if (null !== ab) throw new tb.g(ab)
             }
             const [, , , {
-              joinRoom: sb
-            }] = await jU(Promise.all([(0, ub.l)(cb), xU(bb), null === Ub || void 0 === Ub ? void 0 : Ub(), qU()]), Mb.signal), kb = bb.session, Wb = kb ? {
-              ...mI,
-              attachSocket: cb => {
-                const sb = LI(cb, bb.endpoint);
-                var Wb;
-                null !== sb && (rT = {
-                  conn: sb,
-                  info: kb
-                }, null === (Wb = oT) || void 0 === Wb || Wb(kb.playerDbId));
-                return sb
+              joinRoom: Ub
+            }] = await VY(Promise.all([(0, ib.j)(ab), CY(bb), null === Yb || void 0 === Yb ? void 0 : Yb(), qY()]), Lb.signal), Ab = bb.session, Mb = Ab ? {
+              ...vB,
+              attachSocket: ab => {
+                const Ub = yB(ab, bb.endpoint);
+                var Mb;
+                null !== Ub && (oE = {
+                  conn: Ub,
+                  info: Ab
+                }, null === (Mb = lE) || void 0 === Mb || Mb(Ab.playerDbId));
+                return Ub
               }
-            } : mI, Hb = await sb(Wb, bb, {
-              signal: Mb.signal,
-              early: Tb
+            } : vB, eb = await Ub(Mb, bb, {
+              signal: Lb.signal,
+              early: Eb
             }).catch((bb => {
               throw function(bb) {
-                if (!(bb instanceof Eb.d)) return bb;
-                if ("roomError" === bb.stage && null !== aU) return FU(new Eb.d(bb.message, bb.stage, bb.code, aU), bb);
-                const cb = "closed" === bb.stage && null !== bU ? TU.get(bU.conn) : void 0;
-                return void 0 === cb ? bb : FU(new Eb.d(bb.message, bb.stage, cb.code), bb)
+                if (!(bb instanceof hb.b)) return bb;
+                if ("roomError" === bb.stage && null !== aY) return gY(new hb.b(bb.message, bb.stage, bb.code, aY), bb);
+                const ab = "closed" === bb.stage && null !== cE ? UY.get(cE.conn) : void 0;
+                return void 0 === ab ? bb : gY(new hb.b(bb.message, bb.stage, ab.code), bb)
               }(bb)
             }));
-            if (AT !== Mb) throw Hb.leave(), new DOMException("the join was left", "AbortError");
-            sI(Hb), null === (nb = TT) || void 0 === nb || nb.newGame();
-            const fb = function(bb) {
-              var cb, sb;
+            if (rE !== Lb) throw eb.leave(), new DOMException("the join was left", "AbortError");
+            nY(eb), null === (Xb = UE) || void 0 === Xb || Xb.newGame();
+            const vb = function(bb) {
+              var ab, Ub;
               const {
-                session: kb
-              } = bb, Wb = void 0 === kb ? bb.joinOptions.lobbyName : kb.lobbyName;
+                session: Ab
+              } = bb, Mb = void 0 === Ab ? bb.joinOptions.lobbyName : Ab.lobbyName;
               return {
                 endpoint: bb.endpoint,
-                game: null !== (cb = null === kb || void 0 === kb ? void 0 : kb.gameNameWithVariation) && void 0 !== cb ? cb : bb.roomName,
-                lobby: String(null !== Wb && void 0 !== Wb ? Wb : null),
-                postCookies: null !== (sb = bb.postCookies) && void 0 !== sb ? sb : null
+                game: null !== (ab = null === Ab || void 0 === Ab ? void 0 : Ab.gameNameWithVariation) && void 0 !== ab ? ab : bb.roomName,
+                lobby: String(null !== Mb && void 0 !== Mb ? Mb : null),
+                postCookies: null !== (Ub = bb.postCookies) && void 0 !== Ub ? Ub : null
               }
             }(bb);
-            dT.set(Hb, fb), Bk(fb);
-            const Xb = performance.now(),
-              Qb = {
-                conn: Hb.conn,
-                rejoin: ab,
-                game: null !== (mb = null === (lb = bb.session) || void 0 === lb ? void 0 : lb.gameNameWithVariation) && void 0 !== mb ? mb : "",
-                joinedAt: Xb,
-                rejoinedAt: Ib ? Xb : null,
+            uE.set(eb, vb), pA(vb);
+            const Pb = performance.now(),
+              kb = {
+                conn: eb.conn,
+                rejoin: Tb,
+                game: null !== (jb = null === (Rb = bb.session) || void 0 === Rb ? void 0 : Rb.gameNameWithVariation) && void 0 !== jb ? jb : "",
+                joinedAt: Pb,
+                rejoinedAt: Bb ? Pb : null,
                 overflow: null
               };
-            ST = Qb,
-              function(bb, cb) {
-                yI();
-                const sb = {
-                  endpoint: cb,
+            tE = kb,
+              function(bb, ab) {
+                pB();
+                const Ub = {
+                  endpoint: ab,
                   roomId: bb.seat.room.roomId,
                   heldConn: 0,
                   dropCode: 0,
                   pendingHold: null,
-                  resume: new fs({
-                    reconnect: (bb, cb, kb) => async function(bb, cb, sb, kb) {
+                  resume: new vU({
+                    reconnect: (bb, ab, Ab) => async function(bb, ab, Ub, Ab) {
                       const {
-                        roomId: Wb,
-                        roomToken: ab
-                      } = DI(bb, cb), Tb = wa;
-                      if (null === Tb || Tb.isStopped || ZU) throw new Error("no core is running to resume the game on");
+                        roomId: Mb,
+                        roomToken: Tb
+                      } = WB(bb, ab), Eb = KT;
+                      if (null === Eb || Eb.isStopped || GY) throw new Error("no core is running to resume the game on");
                       const {
-                        resumeRoom: Ub
-                      } = await jU(qU(), sb), Ib = {
-                        ...mI,
-                        attachSocket: cb => RT !== bb || 0 === bb.heldConn ? (cb.close(), null) : LI(cb, bb.endpoint, !0)
+                        resumeRoom: Yb
+                      } = await VY(qY(), Ub), Bb = {
+                        ...vB,
+                        attachSocket: ab => wE !== bb || 0 === bb.heldConn ? (ab.close(), null) : yB(ab, bb.endpoint, !0)
                       };
-                      return Ub(Ib, bb.endpoint, Wb, ab, {
-                        signal: sb,
-                        onAttached: kb
+                      return Yb(Bb, bb.endpoint, Mb, Tb, {
+                        signal: Ub,
+                        onAttached: Ab
                       })
-                    }(sb, bb, cb, kb),
+                    }(Ub, bb, ab, Ab),
                     releaseSeat: bb => {
-                      !async function(bb, cb) {
+                      !async function(bb, ab) {
                         const {
-                          roomId: sb,
-                          roomToken: kb
-                        } = DI(bb, cb);
+                          roomId: Ub,
+                          roomToken: Ab
+                        } = WB(bb, ab);
                         try {
                           const {
-                            leaveHeldSeat: cb
-                          } = await qU();
-                          await cb(bb.endpoint, sb, kb)
-                        } catch (Wb) {
-                          console.warn(`${na} the held seat of a game left while it reconnected couldn't be released`, Wb)
+                            leaveHeldSeat: ab
+                          } = await qY();
+                          await ab(bb.endpoint, Ub, Ab)
+                        } catch (Mb) {
+                          console.warn(`${eT} the held seat of a game left while it reconnected couldn't be released`, Mb)
                         }
-                      }(sb, bb)
+                      }(Ub, bb)
                     },
-                    isLive: () => RT === sb && null !== ST && !ZU,
-                    fL: bb => {
-                      xT = bb, tI()
+                    isLive: () => wE === Ub && null !== tE && !GY,
+                    Wm: bb => {
+                      CE = bb, mB()
                     },
                     onReconnected: bb => {
                       ! function(bb) {
-                        const cb = qT;
-                        if (null !== cb && cb !== bb) {
-                          const sb = dT.get(cb);
-                          void 0 !== sb && dT.set(bb, sb), yU === cb && (yU = bb), cb.detach()
+                        const ab = qE;
+                        if (null !== ab && ab !== bb) {
+                          const Ub = uE.get(ab);
+                          void 0 !== Ub && uE.set(bb, Ub), pY === ab && (pY = bb), ab.detach()
                         }
-                        sI(bb)
+                        nY(bb)
                       }(bb)
                     },
-                    onGaveUp: (bb, cb) => {
-                      ! function(bb, cb, sb) {
-                        var kb, Wb;
-                        console.warn(`${na} gave up reconnecting (${sb.reason}, ${sb.attempts} attempts)`, sb.lastError), (0, us.reportReconnectGaveUp)(sb, va);
-                        const ab = null !== (kb = null === (Wb = ST) || void 0 === Wb ? void 0 : Wb.rejoin) && void 0 !== kb ? kb : null;
-                        PI(bb, "gaveUp"), WI();
-                        const Tb = {
+                    onGaveUp: (bb, ab) => {
+                      ! function(bb, ab, Ub) {
+                        var Ab, Mb;
+                        console.warn(`${eT} gave up reconnecting (${Ub.reason}, ${Ub.attempts} attempts)`, Ub.lastError), (0, iU.reportReconnectGaveUp)(Ub, sT);
+                        const Tb = null !== (Ab = null === (Mb = tE) || void 0 === Mb ? void 0 : Mb.rejoin) && void 0 !== Ab ? Ab : null;
+                        NB(bb, "gaveUp"), bB();
+                        const Eb = {
                           code: bb.dropCode,
                           name: null,
-                          reason: Ba,
-                          canReconnect: !cb,
+                          reason: fT,
+                          canReconnect: !ab,
                           automaticallyReconnect: !1,
                           requiresRefresh: !1
                         };
-                        nI(Tb, cb ? null : ab, !1, {
-                          reasonKey: ta,
-                          canPlayAgain: cb
+                        eB(Eb, ab ? null : Tb, !1, {
+                          reasonKey: mT,
+                          canPlayAgain: ab
                         })
-                      }(sb, bb, cb)
+                      }(Ub, bb, ab)
                     }
                   })
                 };
-                RT = sb, null !== vT && vT.conn === bb.conn && sb.resume.onInitialInfo(vT)
-              }(Hb, bb.endpoint), performance.mark(Na), (0, Dc.i)("wasm_joined", Xb), setTimeout((() => {
-                qT === Hb && (0, Dc.c)()
-              }), 0), oU(), console.info(`${na} joined ${bb.roomName} as ${Hb.seat.sessionId} at ${Math.round(performance.now())} ms`);
-            const eb = pT;
-            pT = null, null !== eb && UI(Qb, eb.mask, eb.frames);
-            const Cb = TU.get(Hb.conn);
-            return TU.clear(), void 0 !== Cb && (sI(null), XI(Hb.conn, Cb.code, Cb.reason)), Hb
+                wE = Ub, null !== sE && sE.conn === bb.conn && Ub.resume.onInitialInfo(sE)
+              }(eb, bb.endpoint), performance.mark(RT), (0, Fa.i)("wasm_joined", Pb), setTimeout((() => {
+                qE === eb && (0, Fa.f)()
+              }), 0), lY(), console.info(`${eT} joined ${bb.roomName} as ${eb.seat.sessionId} at ${Math.round(performance.now())} ms`);
+            const yb = OE;
+            OE = null, null !== yb && AB(kb, yb.mask, yb.frames);
+            const Zb = UY.get(eb.conn);
+            return UY.clear(), void 0 !== Zb && (nY(null), BB(eb.conn, Zb.code, Zb.reason)), eb
           } finally {
-            var Qb;
-            null === Wb || void 0 === Wb || Wb.removeEventListener("abort", Xb), AT === Mb && cI(qT, null), (null === (Qb = bU) || void 0 === Qb ? void 0 : Qb.join) === Mb && (bU = null)
+            var kb;
+            null === Mb || void 0 === Mb || Mb.removeEventListener("abort", Pb), rE === Lb && JY(qE, null), (null === (kb = cE) || void 0 === kb ? void 0 : kb.join) === Lb && (cE = null)
           }
         }(bb.target, {
-          signal: Ub,
-          rejoin: Wb(bb.target),
-          early: Hb,
-          pageReady: Tb
+          signal: Yb,
+          rejoin: Mb(bb.target),
+          early: eb,
+          pageReady: Eb
         });
-        return Xb = !0, {
+        return Pb = !0, {
           kind: "joined",
-          game: fb
+          game: vb
         }
-      } catch (Qb) {
-        if (Qb instanceof DOMException && "AbortError" === Qb.name || Ib()) return {
-          kind: "Gs"
+      } catch (kb) {
+        if (kb instanceof DOMException && "AbortError" === kb.name || Bb()) return {
+          kind: "xU"
         };
-        if (ZU) return {
+        if (GY) return {
           kind: "stopped"
         };
-        if (WU && (WU = !1, await ab().catch((bb => {
-            console.warn(`${na} the cached traffic code could not be dropped`, bb)
-          }))), null === await ja) return {
+        if (bY && (bY = !1, await Tb().catch((bb => {
+            console.warn(`${eT} the cached traffic code could not be dropped`, bb)
+          }))), null === await VT) return {
           kind: "stopped"
         };
-        if (Qb instanceof Ab.f) return sb(Qb, performance.now() - nb), {
+        if (kb instanceof tb.g) return Ub(kb, performance.now() - Xb), {
           kind: "failed",
-          error: Qb,
+          error: kb,
           reloading: !1
         };
-        if (Qb instanceof Eb.d && Qb.code === kb.d.wasmClientNotAllowed.code && EU) return ZI("this server refused the wasm client to this account", "refused"), {
+        if (kb instanceof hb.b && kb.code === Ab.b.wasmClientNotAllowed.code && HY) return GB("this server refused the wasm client to this account", "refused"), {
           kind: "failed",
-          error: Qb,
+          error: kb,
           reloading: !0
         };
-        const bb = Qb instanceof Eb.d && Qb.code === kb.d.outdatedVersion.code,
-          cb = () => null === qT,
-          Wb = await BH({
-            site: us.JOIN_SITE,
-            error: Qb,
+        const bb = kb instanceof hb.b && kb.code === Ab.b.outdatedVersion.code,
+          ab = () => null === qE,
+          Mb = await fe({
+            site: iU.JOIN_SITE,
+            error: kb,
             outdated: bb
           }, (() => {
-            sb(Qb, performance.now() - nb)
-          }), cb);
+            Ub(kb, performance.now() - Xb)
+          }), ab);
         return {
           kind: "failed",
-          error: Qb,
-          reloading: Wb
+          error: kb,
+          reloading: Mb
         }
       } finally {
-        var lb;
-        Xb || Mb.end(), xk.b.releaseHold(fb);
-        const bb = null === (lb = Hb) || void 0 === lb ? void 0 : lb.release();
-        bb && (0, us.reportUnusedSeat)(bb, va)
+        var Rb;
+        Pb || Lb.end(), VA.b.releaseHold(vb);
+        const bb = null === (Rb = eb) || void 0 === Rb ? void 0 : Rb.release();
+        bb && (0, iU.reportUnusedSeat)(bb, sT)
       }
     }
 
-    function FU(bb, cb) {
-      return bb.stack = cb.stack, bb
+    function gY(bb, ab) {
+      return bb.stack = ab.stack, bb
     }
 
-    function xU(bb) {
-      return bb.session ? (0, ub.q)(Ra, bb.session.gameNameWithVariation) : Promise.resolve()
+    function CY(bb) {
+      return bb.session ? (0, ib.p)(wT, bb.session.gameNameWithVariation) : Promise.resolve()
     }
 
-    function jU(bb, cb) {
-      return (0, Nc.j)(cb), new Promise(((sb, kb) => {
-        const Wb = () => {
-          kb((0, Nc.f)(cb))
+    function VY(bb, ab) {
+      return (0, Da.h)(ab), new Promise(((Ub, Ab) => {
+        const Mb = () => {
+          Ab((0, Da.e)(ab))
         };
-        cb.addEventListener("abort", Wb, {
+        ab.addEventListener("abort", Mb, {
           once: !0
         }), bb.then((bb => {
-          cb.removeEventListener("abort", Wb), sb(bb)
+          ab.removeEventListener("abort", Mb), Ub(bb)
         }), (bb => {
-          cb.removeEventListener("abort", Wb), kb(bb)
+          ab.removeEventListener("abort", Mb), Ab(bb)
         }))
       }))
     }
 
-    function pU() {
-      bI(null)
+    function OY() {
+      cY(null)
     }
 
-    function bI(bb) {
-      var cb, sb, kb;
+    function cY(bb) {
+      var ab, Ub, Ab;
       (function() {
-        const bb = RT;
-        null !== bb && PI(bb, "left")
-      }(), null === sT || sT.left) || (sT.left = !0, null === (kb = (0, ub.h)()) || void 0 === kb || kb.socketLeft(), (0, Xb.o)({
+        const bb = wE;
+        null !== bb && NB(bb, "left")
+      }(), null === nT || nT.left) || (nT.left = !0, null === (Ab = (0, ib.i)()) || void 0 === Ab || Ab.socketLeft(), (0, Pb.r)({
         websocketUrl: null
       }));
-      AT && (0, Nc.h)(AT, new DOMException("the join was left", "AbortError")), WI(null !== bb), null === (cb = LT) || void 0 === cb || cb.leave();
-      const Wb = qT;
-      null !== bb && xk.b.setGame(bb.game), cI(null, null !== (sb = null === bb || void 0 === bb ? void 0 : bb.controller) && void 0 !== sb ? sb : null), null === Wb || void 0 === Wb || Wb.leave(), kI(0), (0, lc.h)()
+      rE && (0, Da.f)(rE, new DOMException("the join was left", "AbortError")), bB(null !== bb), null === (ab = yE) || void 0 === ab || ab.leave();
+      const Mb = qE;
+      null !== bb && VA.b.setGame(bb.game), JY(null, null !== (Ub = null === bb || void 0 === bb ? void 0 : bb.controller) && void 0 !== Ub ? Ub : null), null === Mb || void 0 === Mb || Mb.leave(), SY(0), (0, Ra.g)()
     }
 
-    function cI(bb, cb) {
-      qT = bb, AT = cb, null === qT && null === AT && xk.b.setGame(void 0)
+    function JY(bb, ab) {
+      qE = bb, rE = ab, null === qE && null === rE && VA.b.setGame(void 0)
     }
 
-    function sI(bb) {
-      cI(bb, AT)
+    function nY(bb) {
+      JY(bb, rE)
     }
 
-    function kI(bb) {
-      const cb = wa;
-      return null !== Oa && !ZU && null !== cb && !cb.isStopped && (!!Oa(Eb.g, 0, (0, Eb.x)(bb)) && (ET = !0, 0 === bb || yT || TH(cb, !1, "all"), !0))
+    function SY(bb) {
+      const ab = KT;
+      return null !== dT && !GY && null !== ab && !ab.isStopped && (!!dT(hb.i, 0, (0, hb.C)(bb)) && (HE = !0, 0 === bb || pE || Ue(ab, !1, "all"), !0))
     }
 
-    function WI() {
-      var bb, cb;
-      arguments.length > 0 && void 0 !== arguments[0] && arguments[0] || (0, Ns.e)();
-      const sb = null !== (bb = null === (cb = ST) || void 0 === cb ? void 0 : cb.overflow) && void 0 !== bb ? bb : null;
-      ST = null, null !== sb && (0, us.reportEventOverflow)(sb, va)
+    function bB() {
+      var bb, ab;
+      arguments.length > 0 && void 0 !== arguments[0] && arguments[0] || (0, DU.g)();
+      const Ub = null !== (bb = null === (ab = tE) || void 0 === ab ? void 0 : ab.overflow) && void 0 !== bb ? bb : null;
+      tE = null, null !== Ub && (0, iU.reportEventOverflow)(Ub, sT)
     }
 
-    function aI() {
-      null !== qT || null !== AT ? pU() : uI()
+    function aB() {
+      null !== qE || null !== rE ? OY() : ZB()
     }
 
-    function TI(bb, cb) {
-      console.warn(`${na} the event buffer refused records in ${cb} frames (categories ${bb})`), ZU || (null !== ST ? UI(ST, bb, cb) : null !== AT && function(bb, cb, sb) {
-        var kb;
-        const Wb = function(bb, cb) {
-          return null === bb ? "drop" : bb.activated ? "keep" : 0 !== (cb & qc.l.NetSession) ? "fail" : "drop"
-        }((null === (kb = bU) || void 0 === kb ? void 0 : kb.join) === bb ? bU : null, cb);
-        "keep" === Wb ? pT = {
-          mask: cb,
-          frames: sb
-        } : "fail" === Wb && (0, Nc.h)(bb, new Error("the join's net session was lost to an event overflow"))
-      }(AT, bb, cb))
+    function UB(bb, ab) {
+      console.warn(`${eT} the event buffer refused records in ${ab} frames (categories ${bb})`), GY || (null !== tE ? AB(tE, bb, ab) : null !== rE && function(bb, ab, Ub) {
+        var Ab;
+        const Mb = function(bb, ab) {
+          return null === bb ? "drop" : bb.activated ? "keep" : 0 !== (ab & oa.r.NetSession) ? "fail" : "drop"
+        }((null === (Ab = cE) || void 0 === Ab ? void 0 : Ab.join) === bb ? cE : null, ab);
+        "keep" === Mb ? OE = {
+          mask: ab,
+          frames: Ub
+        } : "fail" === Mb && (0, Da.f)(bb, new Error("the join's net session was lost to an event overflow"))
+      }(rE, bb, ab))
     }
 
-    function UI(bb, cb, sb) {
-      const kb = bb.overflow ??= {
+    function AB(bb, ab, Ub) {
+      const Ab = bb.overflow ??= {
         frames: 0,
         acks: 0,
         mask: 0,
         outcome: null
       };
-      kb.frames += sb, kb.acks++, kb.mask |= cb;
-      const Wb = function(bb, cb, sb) {
-        if (0 === (bb & qc.l.NetSession)) return "none";
-        const kb = null !== cb.rejoinedAt && sb - cb.rejoinedAt < Nk;
-        return null === cb.rejoin || kb ? "fail" : "rejoin"
-      }(cb, bb, performance.now());
-      "none" !== Wb && queueMicrotask((() => {
-        if (ST !== bb) return;
-        const cb = "rejoin" === Wb && performance.now() - cU >= Db.f;
-        kb.outcome = cb ? "rejoined" : "failed", nI(function(bb, cb) {
+      Ab.frames += Ub, Ab.acks++, Ab.mask |= ab;
+      const Mb = function(bb, ab, Ub) {
+        if (0 === (bb & oa.r.NetSession)) return "none";
+        const Ab = null !== ab.rejoinedAt && Ub - ab.rejoinedAt < yA;
+        return null === ab.rejoin || Ab ? "fail" : "rejoin"
+      }(ab, bb, performance.now());
+      "none" !== Mb && queueMicrotask((() => {
+        if (tE !== bb) return;
+        const ab = "rejoin" === Mb && performance.now() - JE >= Fb.e;
+        Ab.outcome = ab ? "rejoined" : "failed", eB(function(bb, ab) {
           return {
             code: 0,
             name: "eventOverflow",
             reason: "Your game fell behind the server.",
             canReconnect: bb,
-            automaticallyReconnect: cb,
+            automaticallyReconnect: ab,
             requiresRefresh: !1
           }
-        }(null !== bb.rejoin, cb), bb.rejoin, cb), pU(), cb && (jT = performance.now())
+        }(null !== bb.rejoin, ab), bb.rejoin, ab), OY(), ab && (VE = performance.now())
       }))
     }
 
-    function II(bb) {
-      iU = bb, OU && HI(OU, bb)
+    function MB(bb) {
+      IY = bb, dY && TB(dY, bb)
     }
 
-    function HI(bb, cb) {
-      bb.style.visibility = cb ? "visible" : "hidden"
+    function TB(bb, ab) {
+      bb.style.visibility = ab ? "visible" : "hidden"
     }
 
-    function fI(bb) {
-      var cb;
-      const sb = bb.roomName,
-        kb = null !== (cb = bb.joinOptions.lobbyName) && void 0 !== cb ? cb : null;
+    function EB(bb) {
+      var ab;
+      const Ub = bb.roomName,
+        Ab = null !== (ab = bb.joinOptions.lobbyName) && void 0 !== ab ? ab : null;
       return () => {
-        RU(sb, kb)
+        wY(Ub, Ab)
       }
     }
 
-    function MI() {
-      return sb.e(342).then((() => sb(42664))).then((bb => {
+    function YB() {
+      return Ub.e(342).then((() => Ub(42410))).then((bb => {
         let {
-          invalidateGuestTrafficCode: cb
+          invalidateGuestTrafficCode: ab
         } = bb;
-        return cb()
+        return ab()
       })).catch((bb => {
-        console.warn(`${na} the cached traffic code could not be dropped`, bb)
+        console.warn(`${eT} the cached traffic code could not be dropped`, bb)
       }))
     }
 
-    function XI(bb, cb, sb) {
-      var Wb, ab;
-      let Tb = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      if (ZU) return;
-      if ((null === (Wb = ST) || void 0 === Wb ? void 0 : Wb.conn) !== bb) return void(null !== AT && TU.set(bb, {
-        code: cb,
-        reason: sb
+    function BB(bb, ab, Ub) {
+      var Mb, Tb;
+      let Eb = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      if (GY) return;
+      if ((null === (Mb = tE) || void 0 === Mb ? void 0 : Mb.conn) !== bb) return void(null !== rE && UY.set(bb, {
+        code: ab,
+        reason: Ub
       }));
       const {
-        rejoin: Ub,
-        game: Ib,
-        joinedAt: Hb
-      } = ST;
-      WI(), yI();
-      const fb = (0, Db.m)(cb, (0, Lk.g)(bb));
-      if (console.info(`${na} the game's connection closed with code ${cb} (${null!==(ab=fb.name)&&void 0!==ab?ab:"unrecognised"})`), cb === kb.d.gameOrPluginKick.code || Tb || (0, us.reportDisconnect)(fb, va, {
-          closeReason: sb,
-          sinceJoinedMs: performance.now() - Hb,
-          game: Ib
-        }), fb.requiresRefresh) {
-        const bb = "outdatedVersion" === fb.name,
-          sb = new Error(`the game's connection closed with code ${cb}`),
-          kb = () => null === ST && null === AT;
-        return void BH({
-          site: us.JOIN_SITE,
-          error: sb,
+        rejoin: Yb,
+        game: Bb,
+        joinedAt: eb
+      } = tE;
+      bB(), pB();
+      const vb = (0, Fb.j)(ab, (0, DA.h)(bb));
+      if (console.info(`${eT} the game's connection closed with code ${ab} (${null!==(Tb=vb.name)&&void 0!==Tb?Tb:"unrecognised"})`), ab === Ab.b.gameOrPluginKick.code || Eb || (0, iU.reportDisconnect)(vb, sT, {
+          closeReason: Ub,
+          sinceJoinedMs: performance.now() - eb,
+          game: Bb
+        }), vb.requiresRefresh) {
+        const bb = "outdatedVersion" === vb.name,
+          Ub = new Error(`the game's connection closed with code ${ab}`),
+          Ab = () => null === tE && null === rE;
+        return void fe({
+          site: iU.JOIN_SITE,
+          error: Ub,
           outdated: bb
         }, (() => {
-          kb() && nI(fb, null, !1)
-        }), kb)
+          Ab() && eB(vb, null, !1)
+        }), Ab)
       }
-      const Mb = fb.canReconnect ? Ub : null,
-        Xb = null !== Mb && fb.automaticallyReconnect && performance.now() - cU >= Db.f;
-      nI(fb, Mb, Xb)
+      const Lb = vb.canReconnect ? Yb : null,
+        Pb = null !== Lb && vb.automaticallyReconnect && performance.now() - JE >= Fb.e;
+      eB(vb, Lb, Pb)
     }
 
-    function nI(bb, cb, sb) {
-      var kb;
-      let Wb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
+    function eB(bb, ab, Ub) {
+      var Ab;
+      let Mb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
         reasonKey: null,
         canPlayAgain: !1
       };
-      if (GU) return;
-      xk.b.unwantedLeave(sb && null !== cb && 0 === kU.size), null === (kb = sU) || void 0 === kb || kb.abort();
-      const ab = new AbortController;
-      sU = ab;
-      const Tb = null === cb ? null : () => {
-        ab.signal.aborted || (ab.abort(), cb())
+      if (FY) return;
+      VA.b.unwantedLeave(Ub && null !== ab && 0 === SE.size), null === (Ab = nE) || void 0 === Ab || Ab.abort();
+      const Tb = new AbortController;
+      nE = Tb;
+      const Eb = null === ab ? null : () => {
+        Tb.signal.aborted || (Tb.abort(), ab())
       };
-      if (sb && null !== Tb) {
-        cU = performance.now();
-        const bb = setTimeout(Tb, Db.c);
-        ab.signal.addEventListener("abort", (() => {
+      if (Ub && null !== Eb) {
+        JE = performance.now();
+        const bb = setTimeout(Eb, Fb.d);
+        Tb.signal.addEventListener("abort", (() => {
           clearTimeout(bb)
         }))
       }
-      const Ub = {
+      const Yb = {
         code: bb.code,
         name: bb.name,
         reason: bb.reason,
-        reasonKey: Wb.reasonKey,
-        reconnect: Tb,
-        reconnecting: sb,
+        reasonKey: Mb.reasonKey,
+        reconnect: Eb,
+        reconnecting: Ub,
         requiresRefresh: bb.requiresRefresh,
-        canPlayAgain: Wb.canPlayAgain
+        canPlayAgain: Mb.canPlayAgain
       };
-      if (kU.size > 0)
-        for (const Hb of [...kU]) try {
-          Hb(Ub)
-        } catch (Ib) {
-          console.error(`${na} an unwanted-leave listener threw`, Ib)
-        } else Qk((0, nk.h)(bb, null !== Tb, sb), ab.signal).then((cb => {
-          cb && (null !== Tb ? Tb() : bb.requiresRefresh && (0, wb.i)())
+      if (SE.size > 0)
+        for (const eb of [...SE]) try {
+          eb(Yb)
+        } catch (Bb) {
+          console.error(`${eT} an unwanted-leave listener threw`, Bb)
+        } else jA((0, LA.j)(bb, null !== Eb, Ub), Tb.signal).then((ab => {
+          ab && (null !== Eb ? Eb() : bb.requiresRefresh && (0, wb.n)())
         }))
     }
-    const mI = {
-      attachSocket: bb => LI(bb),
-      onConnection: bb => (UU.add(bb), () => {
-        UU.delete(bb)
+    const vB = {
+      attachSocket: bb => yB(bb),
+      onConnection: bb => (AY.add(bb), () => {
+        AY.delete(bb)
       }),
-      sendRaw: (bb, cb) => {
-        const sb = sT;
-        return null !== sb && sb.conn === bb && lH(sb, cb)
+      sendRaw: (bb, ab) => {
+        const Ub = nT;
+        return null !== Ub && Ub.conn === bb && Le(Ub, ab)
       },
-      leaveRoom: kI,
+      leaveRoom: SY,
       closeSocket: bb => {
-        var cb;
-        (null === (cb = sT) || void 0 === cb ? void 0 : cb.conn) === bb && uI()
+        var ab;
+        (null === (ab = nT) || void 0 === ab ? void 0 : ab.conn) === bb && ZB()
       },
-      flushNet: YI
+      flushNet: DB
     };
 
-    function lI(bb) {
-      var cb;
+    function LB(bb) {
+      var ab;
       let {
-        aux: sb,
-        payload: kb
+        aux: Ub,
+        payload: Ab
       } = bb;
-      null === (cb = wa) || void 0 === cb || cb.queueOptions(sb, kb)
+      null === (ab = KT) || void 0 === ab || ab.queueOptions(Ub, Ab)
     }
 
-    function QI(bb, cb) {
-      lI(function(bb, cb) {
-        return HW = bb ? {
-          preventMovement: cb
-        } : null, bb ? fW(cb) : {
-          aux: zc.cc.AdEnd,
-          payload: IW
+    function PB(bb, ab) {
+      LB(function(bb, ab) {
+        return EM = bb ? {
+          preventMovement: ab
+        } : null, bb ? YM(ab) : {
+          aux: Ka.Qb.AdEnd,
+          payload: TM
         }
-      }(bb, cb))
+      }(bb, ab))
     }
 
-    function eI(bb) {
-      var cb;
-      KT = bb, null === (cb = wa) || void 0 === cb || cb.setUiPrefs(bb)
+    function XB(bb) {
+      var ab;
+      hE = bb, null === (ab = KT) || void 0 === ab || ab.setUiPrefs(bb)
     }
 
-    function CI(bb, cb) {
-      Ra.setMaster(bb, cb)
+    function jB(bb, ab) {
+      wT.setMaster(bb, ab)
     }
 
-    function NI(bb) {
-      var cb;
-      ZT = bb, null === (cb = wa) || void 0 === cb || cb.setEnvPrefs(bb)
+    function RB(bb) {
+      var ab;
+      GE = bb, null === (ab = KT) || void 0 === ab || ab.setEnvPrefs(bb)
     }
 
-    function VI(bb) {
-      var cb;
-      zT = bb, null === (cb = wa) || void 0 === cb || cb.setLookPrefs(bb)
+    function kB(bb) {
+      var ab;
+      QE = bb, null === (ab = KT) || void 0 === ab || ab.setLookPrefs(bb)
     }
 
-    function LI(bb) {
-      var cb;
-      let sb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new URL(bb.url).origin,
-        kb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      if (bb.readyState === WebSocket.CLOSING || bb.readyState === WebSocket.CLOSED) return console.warn(`${na} a closing or closed socket can't be attached`), null;
-      const Wb = wa;
-      if (!Wb || Wb.isStopped) return console.warn(`${na} no core is running to attach a socket to`), bb.close(), null;
-      if (null === (0, ub.h)()) return console.warn(`${na} the game has not started to attach a socket to`), bb.close(), null;
-      if (gT > zc.t) return console.warn(`${na} this core has attached all the sockets it can; reload to play on`), bb.close(), null;
-      if (ET && !yT && (TH(Wb, !1, "all"), Wb.isStopped || ZU)) return bb.close(), null;
-      uI();
-      const ab = gT++;
-      if (!OI(Wb, "open", ab, kb ? zc._b.Resume : 0)) return bb.close(), null;
-      kb || mc.e.reset(), bU = null === AT ? null : {
-        join: AT,
-        conn: ab,
+    function yB(bb) {
+      var ab;
+      let Ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new URL(bb.url).origin,
+        Ab = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      if (bb.readyState === WebSocket.CLOSING || bb.readyState === WebSocket.CLOSED) return console.warn(`${eT} a closing or closed socket can't be attached`), null;
+      const Mb = KT;
+      if (!Mb || Mb.isStopped) return console.warn(`${eT} no core is running to attach a socket to`), bb.close(), null;
+      if (null === (0, ib.i)()) return console.warn(`${eT} the game has not started to attach a socket to`), bb.close(), null;
+      if (iE > Ka.x) return console.warn(`${eT} this core has attached all the sockets it can; reload to play on`), bb.close(), null;
+      if (HE && !pE && (Ue(Mb, !1, "all"), Mb.isStopped || GY)) return bb.close(), null;
+      ZB();
+      const Tb = iE++;
+      if (!dB(Mb, "open", Tb, Ab ? Ka.Ob.Resume : 0)) return bb.close(), null;
+      Ab || ja.e.reset(), cE = null === rE ? null : {
+        join: rE,
+        conn: Tb,
         activated: !1
       }, bb.binaryType = "arraybuffer";
-      const Tb = new Ms.c((() => {
-          ! function(bb, cb) {
-            if (sT !== cb || bb.isStopped || null === gI(cb, Ja)) return;
-            cb.detach(), sT = null, JI(bb, cb, Ja, "", !0), cb.ws.close()
-          }(Wb, Ub)
+      const Eb = new LU.c((() => {
+          ! function(bb, ab) {
+            if (nT !== ab || bb.isStopped || null === iB(ab, xT)) return;
+            ab.detach(), nT = null, xB(bb, ab, xT, "", !0), ab.ws.close()
+          }(Mb, Yb)
         })),
-        Ub = {
+        Yb = {
           ws: bb,
-          conn: ab,
+          conn: Tb,
           pending: [],
           pendingBytes: 0,
           left: !1,
-          resume: kb,
+          resume: Ab,
           token: null,
           detach: () => {
-            Tb.dispose(), bb.removeEventListener("message", Ib), bb.removeEventListener("open", Hb), bb.removeEventListener("close", fb)
+            Eb.dispose(), bb.removeEventListener("message", Bb), bb.removeEventListener("open", eb), bb.removeEventListener("close", vb)
           }
         },
-        Ib = bb => {
+        Bb = bb => {
           if (bb.data instanceof ArrayBuffer) {
-            var cb;
-            const sb = new Uint8Array(bb.data);
-            Tb.heard(), Ub.token = null !== (cb = (0, Xs.e)(sb)) && void 0 !== cb ? cb : Ub.token,
-              function(bb, cb, sb) {
-                YH(bb, (() => {
-                  bb.rings.net.writeFrame(cb, sb) || bb.crash(bs.q, `a socket frame of ${sb.byteLength} bytes did not fit the net-in ring`)
+            var ab;
+            const Ub = new Uint8Array(bb.data);
+            Eb.heard(), Yb.token = null !== (ab = (0, PU.c)(Ub)) && void 0 !== ab ? ab : Yb.token,
+              function(bb, ab, Ub) {
+                De(bb, (() => {
+                  bb.rings.net.writeFrame(ab, Ub) || bb.crash(bU.n, `a socket frame of ${Ub.byteLength} bytes did not fit the net-in ring`)
                 }));
-                const kb = bb.rings.net.cursor >= Ya;
-                (kb || bb.netWrittenSinceFrame >= ua || document.hidden && performance.now() - BT >= Da) && TH(bb, !1, "budget")
-              }(Wb, ab, sb)
+                const Ab = bb.rings.net.cursor >= DT;
+                (Ab || bb.netWrittenSinceFrame >= ZT || document.hidden && performance.now() - fE >= WT) && Ue(bb, !1, "budget")
+              }(Mb, Tb, Ub)
           }
         },
-        Hb = () => {
-          kb || (0, Dc.i)("wasm_socket_open", performance.now());
-          for (const cb of Ub.pending.splice(0)) bb.send(cb);
-          Ub.pendingBytes = 0
+        eb = () => {
+          Ab || (0, Fa.i)("wasm_socket_open", performance.now());
+          for (const ab of Yb.pending.splice(0)) bb.send(ab);
+          Yb.pendingBytes = 0
         },
-        fb = bb => {
-          if (sT === Ub && Wb.rings.net.cursor > 0 && TH(Wb, !1, "all"), sT === Ub) {
-            if (Ub.detach(), sT = null, JI(Wb, Ub, bb.code, bb.reason) || hI(Wb, Ub)) return;
-            OI(Wb, "close", ab), BI(ab, Ub.left), XI(ab, bb.code, bb.reason)
+        vb = bb => {
+          if (nT === Yb && Mb.rings.net.cursor > 0 && Ue(Mb, !1, "all"), nT === Yb) {
+            if (Yb.detach(), nT = null, xB(Mb, Yb, bb.code, bb.reason) || zB(Mb, Yb)) return;
+            dB(Mb, "close", Tb), fB(Tb, Yb.left), BB(Tb, bb.code, bb.reason)
           }
         };
-      return bb.addEventListener("message", Ib), bb.addEventListener("open", Hb), bb.addEventListener("close", fb), sT = Ub, null === (cb = (0, ub.h)()) || void 0 === cb || cb.socketAttached(ab), (0, Xb.o)({
-        websocketUrl: sb
-      }), ab
+      return bb.addEventListener("message", Bb), bb.addEventListener("open", eb), bb.addEventListener("close", vb), nT = Yb, null === (ab = (0, ib.i)()) || void 0 === ab || ab.socketAttached(Tb), (0, Pb.r)({
+        websocketUrl: Ub
+      }), Tb
     }
 
-    function uI() {
-      const bb = sT;
+    function ZB() {
+      const bb = nT;
       if (!bb) return;
-      const cb = wa,
-        sb = bb.resume;
-      sb && (YI(), sT !== bb) || (sT = null, bb.detach(), bb.ws.close(), null !== cb && (hI(cb, bb) || sb && JI(cb, bb, ga)) || (null !== cb && OI(cb, "close", bb.conn), BI(bb.conn, bb.left)))
+      const ab = KT,
+        Ub = bb.resume;
+      Ub && (DB(), nT !== bb) || (nT = null, bb.detach(), bb.ws.close(), null !== ab && (zB(ab, bb) || Ub && xB(ab, bb, iT)) || (null !== ab && dB(ab, "close", bb.conn), fB(bb.conn, bb.left)))
     }
 
-    function YI() {
-      const bb = wa;
-      null !== bb && !bb.isStopped && !ZU && !yT && bb.rings.net.cursor > 0 && TH(bb, !1, "all")
+    function DB() {
+      const bb = KT;
+      null !== bb && !bb.isStopped && !GY && !pE && bb.rings.net.cursor > 0 && Ue(bb, !1, "all")
     }
 
-    function hI(bb, cb) {
-      var sb;
-      if (!cb.resume) return !1;
-      const kb = RT;
-      return null !== kb && null !== cb.token && "" !== cb.token && (kb.pendingHold = {
-        conn: cb.conn,
-        token: `${kb.roomId}:${cb.token}`
-      }), OI(bb, "close", cb.conn), null === (sb = (0, ub.h)()) || void 0 === sb || sb.socketDetached(cb.conn), !0
+    function zB(bb, ab) {
+      var Ub;
+      if (!ab.resume) return !1;
+      const Ab = wE;
+      return null !== Ab && null !== ab.token && "" !== ab.token && (Ab.pendingHold = {
+        conn: ab.conn,
+        token: `${Ab.roomId}:${ab.token}`
+      }), dB(bb, "close", ab.conn), null === (Ub = (0, ib.i)()) || void 0 === Ub || Ub.socketDetached(ab.conn), !0
     }
 
-    function JI(bb, cb, sb) {
-      let kb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "",
-        Wb = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-      const ab = gI(cb, sb);
-      if (null === ab) return !1;
+    function xB(bb, ab, Ub) {
+      let Ab = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "",
+        Mb = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+      const Tb = iB(ab, Ub);
+      if (null === Tb) return !1;
       const {
-        qU: Tb,
-        token: Ub,
-        game: Ib,
-        joinedAt: Hb
-      } = ab;
-      if (!OI(bb, "close", cb.conn, zc.v.Held)) return !0;
-      console.warn(`${na} the game's connection ${Wb?"went silent":`dropped with code ${sb}`}, holding it`);
-      const fb = {
-        closeReason: kb,
-        sinceJoinedMs: performance.now() - Hb,
-        game: Ib
+        PY: Eb,
+        token: Yb,
+        game: Bb,
+        joinedAt: eb
+      } = Tb;
+      if (!dB(bb, "close", ab.conn, Ka.B.Held)) return !0;
+      console.warn(`${eT} the game's connection ${Mb?"went silent":`dropped with code ${Ub}`}, holding it`);
+      const vb = {
+        closeReason: Ab,
+        sinceJoinedMs: performance.now() - eb,
+        game: Bb
       };
-      return (0, us.reportDisconnect)((0, Db.m)(sb), va, fb, Wb ? "silent" : void 0), Tb.heldConn = cb.conn, Tb.dropCode = sb, Tb.pendingHold = {
-        conn: cb.conn,
-        token: `${Tb.roomId}:${Ub}`
-      }, yT || TH(bb, !1, "all"), !0
+      return (0, iU.reportDisconnect)((0, Fb.j)(Ub), sT, vb, Mb ? "silent" : void 0), Eb.heldConn = ab.conn, Eb.dropCode = Ub, Eb.pendingHold = {
+        conn: ab.conn,
+        token: `${Eb.roomId}:${Yb}`
+      }, pE || Ue(bb, !1, "all"), !0
     }
 
-    function gI(bb, cb) {
-      const sb = RT,
-        Wb = ST,
-        ab = bb.token;
-      return null === sb || null === Wb || ZU || bb.left || Wb.conn !== bb.conn || null === ab || "" === ab ? null : (0, kb.g)(cb) && sb.resume.canHoldSeat() ? {
-        qU: sb,
-        token: ab,
-        game: Wb.game,
-        joinedAt: Wb.joinedAt
+    function iB(bb, ab) {
+      const Ub = wE,
+        Mb = tE,
+        Tb = bb.token;
+      return null === Ub || null === Mb || GY || bb.left || Mb.conn !== bb.conn || null === Tb || "" === Tb ? null : (0, Ab.f)(ab) && Ub.resume.canHoldSeat() ? {
+        PY: Ub,
+        token: Tb,
+        game: Mb.game,
+        joinedAt: Mb.joinedAt
       } : null
     }
 
-    function BI(bb, cb) {
-      var sb;
-      null === (sb = (0, ub.h)()) || void 0 === sb || sb.closeGame(bb), (0, UW.c)().close(bb), cb || (0, Xb.o)({
+    function fB(bb, ab) {
+      var Ub;
+      null === (Ub = (0, ib.i)()) || void 0 === Ub || Ub.closeGame(bb), (0, MM.b)().close(bb), ab || (0, Pb.r)({
         websocketUrl: null
       })
     }
 
-    function tI() {
-      const bb = xT;
+    function mB() {
+      const bb = CE;
       if (null === bb) return;
-      const cb = (0, ub.h)();
-      ZU || null === cb || cb.fL(bb) ? xT = null : performance.now() - iT.pause >= Pa && (iT.pause = performance.now(), console.warn(`${na} the cmd ring had no room for SetPaused(${bb}): written before the next frame`))
+      const ab = (0, ib.i)();
+      GY || null === ab || ab.Wm(bb) ? CE = null : performance.now() - IE.pause >= NT && (IE.pause = performance.now(), console.warn(`${eT} the cmd ring had no room for SetPaused(${bb}): written before the next frame`))
     }
 
-    function yI() {
-      const bb = RT;
-      RT = null, null === bb || void 0 === bb || bb.resume.dispose()
+    function pB() {
+      const bb = wE;
+      wE = null, null === bb || void 0 === bb || bb.resume.dispose()
     }
 
-    function PI(bb, cb) {
-      var sb, kb;
+    function NB(bb, ab) {
+      var Ub, Ab;
       const {
-        heldConn: Wb
-      } = bb, ab = bb.resume.resumingConn;
-      bb.heldConn = 0, bb.pendingHold = null, RT === bb && (RT = null), "left" === cb ? bb.resume.leave() : bb.resume.dispose(), 0 === FT || (null === (sb = sT) || void 0 === sb ? void 0 : sb.conn) !== FT || "left" === cb && (null === (kb = qT) || void 0 === kb ? void 0 : kb.conn) === FT || iI(FT), "gaveUp" === cb && 0 !== ab && iI(ab), 0 !== Wb && "refused" !== cb && (console.info(`${na} the game held through its drop ${"left"===cb?"was left":"is given up"}`), null === wa || wa.isStopped || OI(wa, "close", Wb), BI(Wb, !1))
+        heldConn: Mb
+      } = bb, Tb = bb.resume.resumingConn;
+      bb.heldConn = 0, bb.pendingHold = null, wE === bb && (wE = null), "left" === ab ? bb.resume.leave() : bb.resume.dispose(), 0 === gE || (null === (Ub = nT) || void 0 === Ub ? void 0 : Ub.conn) !== gE || "left" === ab && (null === (Ab = qE) || void 0 === Ab ? void 0 : Ab.conn) === gE || IB(gE), "gaveUp" === ab && 0 !== Tb && IB(Tb), 0 !== Mb && "refused" !== ab && (console.info(`${eT} the game held through its drop ${"left"===ab?"was left":"is given up"}`), null === KT || KT.isStopped || dB(KT, "close", Mb), fB(Mb, !1))
     }
 
-    function DI(bb, cb) {
-      const sb = cb.indexOf(":");
+    function WB(bb, ab) {
+      const Ub = ab.indexOf(":");
       return {
-        roomId: sb < 0 ? bb.roomId : cb.slice(0, sb),
-        roomToken: cb.slice(sb + 1)
+        roomId: Ub < 0 ? bb.roomId : ab.slice(0, Ub),
+        roomToken: ab.slice(Ub + 1)
       }
     }
 
-    function EI(bb) {
-      var cb;
-      vT = bb, bb.conn === FT && (FT = 0);
-      const sb = RT;
-      null !== sb && (null === (cb = ST) || void 0 === cb ? void 0 : cb.conn) === bb.conn && sb.resume.onInitialInfo(bb)
+    function HB(bb) {
+      var ab;
+      sE = bb, bb.conn === gE && (gE = 0);
+      const Ub = wE;
+      null !== Ub && (null === (ab = tE) || void 0 === ab ? void 0 : ab.conn) === bb.conn && Ub.resume.onInitialInfo(bb)
     }
 
-    function iI(bb) {
-      var cb;
-      const sb = sT;
-      (null === sb || void 0 === sb ? void 0 : sb.conn) === bb && (sb.left = !0, null === (cb = (0, ub.h)()) || void 0 === cb || cb.socketLeft(), (0, Xb.o)({
+    function IB(bb) {
+      var ab;
+      const Ub = nT;
+      (null === Ub || void 0 === Ub ? void 0 : Ub.conn) === bb && (Ub.left = !0, null === (ab = (0, ib.i)()) || void 0 === ab || ab.socketLeft(), (0, Pb.r)({
         websocketUrl: null
-      }), kI(bb) ? setTimeout((() => {
-        sT === sb && uI()
-      }), Eb.e) : uI())
+      }), SY(bb) ? setTimeout((() => {
+        nT === Ub && ZB()
+      }), hb.f) : ZB())
     }
 
-    function OI(bb, cb, sb) {
-      let kb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-        Wb = !1;
-      return YH(bb, (() => {
+    function dB(bb, ab, Ub) {
+      let Ab = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+        Mb = !1;
+      return De(bb, (() => {
         const {
-          net: ab
+          net: Tb
         } = bb.rings;
-        Wb = "open" === cb ? ab.writeOpen(sb, kb) : ab.writeClose(sb, kb), Wb || bb.crash(bs.q, `a socket ${cb} did not fit the net-in ring`)
-      })), Wb
+        Mb = "open" === ab ? Tb.writeOpen(Ub, Ab) : Tb.writeClose(Ub, Ab), Mb || bb.crash(bU.n, `a socket ${ab} did not fit the net-in ring`)
+      })), Mb
     }
 
-    function GI(bb, cb) {
-      let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      if (KI()) {
-        const kb = "browser" === bb && (0, TW.Q)() ? "blockedAfterLoss" : "unsupported";
-        return (0, us.reportUnsupportedFallback)(bb, kb, cb, sb), void ZI(`the wasm client can't run here (${cb}; ${kb})`, kb)
-      }(0, us.showUnsupported)(bb, "unsupported", cb, sb)
+    function FB(bb, ab) {
+      let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      if (hB()) {
+        const Ab = "browser" === bb && (0, AM.W)() ? "blockedAfterLoss" : "unsupported";
+        return (0, iU.reportUnsupportedFallback)(bb, Ab, ab, Ub), void GB(`the wasm client can't run here (${ab}; ${Ab})`, Ab)
+      }(0, iU.showUnsupported)(bb, "unsupported", ab, Ub)
     }
 
-    function KI() {
-      return EU && "wasm" !== (0, Mc.f)(window.location.search)
+    function hB() {
+      return HY && "wasm" !== (0, La.e)(window.location.search)
     }
 
-    function ZI(bb, cb) {
-      console.warn(`${na} ${bb}: reloading on the JS client`), null !== cb && (0, Mc.q)(cb), (0, Mc.p)(null === cb ? "reloadOntoJs" : "decline");
-      const sb = () => {
-        (0, wb.e)(Mc.w)
+    function GB(bb, ab) {
+      console.warn(`${eT} ${bb}: reloading on the JS client`), null !== ab && (0, La.n)(ab), (0, La.k)(null === ab ? "reloadOntoJs" : "decline");
+      const Ub = () => {
+        (0, wb.k)(La.q)
       };
-      (0, us.flushCrashReports)(wb.b).then(sb, sb)
+      (0, iU.flushCrashReports)(wb.e).then(Ub, Ub)
     }
 
-    function zI(bb, cb, sb, kb) {
-      return MU(bb, cb, sb, kb)
+    function QB(bb, ab, Ub, Ab) {
+      return YY(bb, ab, Ub, Ab)
     }
 
-    function qI() {
-      null === mU || null === wa || wa.isStopped || ZU || null !== eT || null === Oa || (eT = mU(Oa, rI, oI().follow))
+    function qB() {
+      null === vY || null === KT || KT.isStopped || GY || null !== XE || null === dT || (XE = vY(dT, oB, lB().follow))
     }
 
-    function dI() {
-      var bb, cb, sb;
-      return null !== (bb = null === (cb = oa) || void 0 === cb || null === (sb = cb.textures) || void 0 === sb ? void 0 : sb.files()) && void 0 !== bb ? bb : null
+    function uB() {
+      var bb, ab, Ub;
+      return null !== (bb = null === (ab = lT) || void 0 === ab || null === (Ub = ab.textures) || void 0 === Ub ? void 0 : Ub.files()) && void 0 !== bb ? bb : null
     }
 
-    function AI(bb) {
-      sb.e(260).then((() => sb(40166))).then((cb => {
+    function rB(bb) {
+      Ub.e(260).then((() => Ub(39857))).then((ab => {
         let {
-          setIconFileOverrides: sb
-        } = cb;
-        sb(bb)
+          setIconFileOverrides: Ub
+        } = ab;
+        Ub(bb)
       }), (bb => {
-        console.warn(`${na} the item icons couldn't take the texture pack's files`, bb)
+        console.warn(`${eT} the item icons couldn't take the texture pack's files`, bb)
       }))
     }
 
-    function wI(bb) {
-      oI().follow((cb => {
-        null !== cb && Promise.all([Promise.all([sb.e(193), sb.e(45)]).then((() => sb(42692))), (0, TW.I)()]).then((bb => {
+    function KB(bb) {
+      lB().follow((ab => {
+        null !== ab && Promise.all([Promise.all([Ub.e(193), Ub.e(45)]).then((() => Ub(42446))), (0, AM.R)()]).then((bb => {
           let [{
-            followPagePackFiles: sb
-          }, kb] = bb;
-          const Wb = null === kb || (0, pc.l)(kb) ? "webgl" : kb.backend;
-          sb(cb, Fk.h, Wb, (bb => {
-            Fk.h.setPageFiles(bb)
-          }), rI)
-        }), (cb => {
-          console.warn(`${na} the texture pack's files didn't load: the previews draw the shipped ones until the next opens`, cb), bb()
+            followPagePackFiles: Ub
+          }, Ab] = bb;
+          const Mb = null === Ab || (0, Sa.p)(Ab) ? "webgl" : Ab.backend;
+          Ub(ab, CA.g, Mb, (bb => {
+            CA.g.setPageFiles(bb)
+          }), oB)
+        }), (ab => {
+          console.warn(`${eT} the texture pack's files didn't load: the previews draw the shipped ones until the next opens`, ab), bb()
         }))
       }))
     }
 
-    function rI(bb, cb) {
-      console.warn(`${na} ${bb}`, cb)
+    function oB(bb, ab) {
+      console.warn(`${eT} ${bb}`, ab)
     }
 
-    function oI() {
-      return ra ??= new uW({
-        load: bb => Promise.all([sb.e(193), sb.e(51)]).then((() => sb(42701))).then((cb => {
+    function lB() {
+      return oT ??= new DM({
+        load: bb => Promise.all([Ub.e(193), Ub.e(51)]).then((() => Ub(42454))).then((ab => {
           let {
-            startPageTexturePackFeed: sb
-          } = cb;
-          return sb(rI, bb)
+            startPageTexturePackFeed: Ub
+          } = ab;
+          return Ub(oB, bb)
         })),
-        store: Ls.d,
-        lm: bb => {
-          ja.then((() => {
-            (0, us.reportTexturePackFeedLoadFailure)(bb, va)
+        store: xU.c,
+        GX: bb => {
+          VT.then((() => {
+            (0, iU.reportTexturePackFeedLoadFailure)(bb, sT)
           }))
         }
-      }), ra
+      }), oT
     }
-    const SI = bb => oI().follow(bb);
+    const tB = bb => lB().follow(bb);
 
-    function RI() {
-      return oI().loaded()
+    function wB() {
+      return lB().loaded()
     }
-    const vI = function(bb, cb, sb) {
-        let kb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => performance.now(),
-          Wb = 0;
-        return async function(ab, Tb) {
-          let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => !0;
-          const Ib = ++Wb,
-            Hb = kb() + cb,
-            fb = await
-          function(bb, cb) {
-            let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {};
-            return new Promise((kb => {
-              const Wb = setTimeout((() => {
-                kb(null), bb.then((bb => {
-                  null !== bb && (bb.joinedWithout(), sb(bb))
+    const sB = function(bb, ab, Ub) {
+        let Ab = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => performance.now(),
+          Mb = 0;
+        return async function(Tb, Eb) {
+          let Yb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => !0;
+          const Bb = ++Mb,
+            eb = Ab() + ab,
+            vb = await
+          function(bb, ab) {
+            let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {};
+            return new Promise((Ab => {
+              const Mb = setTimeout((() => {
+                Ab(null), bb.then((bb => {
+                  null !== bb && (bb.joinedWithout(), Ub(bb))
                 }))
-              }), cb);
+              }), ab);
               bb.then((bb => {
-                clearTimeout(Wb), kb(bb)
+                clearTimeout(Mb), Ab(bb)
               }))
             }))
-          }(bb(ab), cb, (bb => {
-            Ib === Wb && Ub() && Tb(bb, kb() + cb).catch((bb => {
-              sb("the texture pack step after the join failed", bb)
+          }(bb(Tb), ab, (bb => {
+            Bb === Mb && Yb() && Eb(bb, Ab() + ab).catch((bb => {
+              Ub("the texture pack step after the join failed", bb)
             }))
           }));
-          return null === fb ? null : Tb(fb, Hb)
+          return null === vb ? null : Eb(vb, eb)
         }
-      }((bb => (0, sc.k)(bb) ? oI().request() : oI().forJoin()), LW.d, rI),
-      FI = function(bb, cb) {
-        let sb = !1;
+      }((bb => (0, Ua.l)(bb) ? lB().request() : lB().forJoin()), ZM.b, oB),
+      gB = function(bb, ab) {
+        let Ub = !1;
         return {
           setGamePackConfirm: bb => {
-            sb = null !== bb, cb(bb)
+            Ub = null !== bb, ab(bb)
           },
-          packStep: (cb, kb, Wb) => bb(cb, kb, (() => sb && Wb()))
+          packStep: (ab, Ab, Mb) => bb(ab, Ab, (() => Ub && Mb()))
         }
-      }(vI, (bb => {
-        oI().setGamePackConfirm(bb)
+      }(sB, (bb => {
+        lB().setGamePackConfirm(bb)
       }));
 
-    function xI(bb) {
-      FI.setGamePackConfirm(bb)
+    function CB(bb) {
+      gB.setGamePackConfirm(bb)
     }
 
-    function jI() {
-      if (ZU || null !== NU || null === lU || null === CU) return;
+    function VB() {
+      if (GY || null !== RY || null === LY || null === jY) return;
       const {
         backend: bb,
-        canvas: cb,
-        fallbackReason: sb,
-        adapterVendor: kb
-      } = CU, Wb = lU;
-      lU = null;
+        canvas: ab,
+        fallbackReason: Ub,
+        adapterVendor: Ab
+      } = jY, Mb = LY;
+      LY = null;
       try {
-        NU = Wb({
+        RY = Mb({
           backend: bb,
-          canvas: cb,
-          fallbackReason: sb,
-          adapterVendor: kb,
-          joinedGame: () => ZU ? null : qT,
-          inGame: bH,
+          canvas: ab,
+          fallbackReason: Ub,
+          adapterVendor: Ab,
+          joinedGame: () => GY ? null : qE,
+          inGame: cB,
           shaderPackReach: () => {
-            var bb, cb;
-            return null !== (bb = null === (cb = LT) || void 0 === cb ? void 0 : cb.reachInJoinedGame()) && void 0 !== bb ? bb : null
+            var bb, ab;
+            return null !== (bb = null === (ab = yE) || void 0 === ab ? void 0 : ab.reachInJoinedGame()) && void 0 !== bb ? bb : null
           },
-          msaa: () => eU > 1,
-          writeCmd: (bb, cb, sb) => null !== Oa && Oa(bb, cb, sb),
+          msaa: () => XY > 1,
+          writeCmd: (bb, ab, Ub) => null !== dT && dT(bb, ab, Ub),
           takeFailedMeshJobs: () => {
-            var bb, cb;
-            return null !== (bb = null === (cb = TT) || void 0 === cb ? void 0 : cb.takeFailedMeshJobs()) && void 0 !== bb ? bb : 0
+            var bb, ab;
+            return null !== (bb = null === (ab = UE) || void 0 === ab ? void 0 : ab.takeFailedMeshJobs()) && void 0 !== bb ? bb : 0
           }
         })
-      } catch (ab) {
-        console.error(`${na} the frame telemetry didn't start`, ab)
+      } catch (Tb) {
+        console.error(`${eT} the frame telemetry didn't start`, Tb)
       }
     }
 
-    function pI(bb, cb) {
+    function OB(bb, ab) {
       try {
-        var sb, kb, Wb;
-        const ab = IU && null !== (sb = null === (kb = wa) || void 0 === kb || null === (Wb = kb.lastHeader) || void 0 === Wb ? void 0 : Wb.renderPending) && void 0 !== sb ? sb : 0;
-        (0, Ss.h)(cb, bb, bH() && !(null !== HW), ab)
-      } catch (ab) {
-        (0, Ss.t)(), console.error(`${na} the quality steps stopped`, ab)
+        var Ub, Ab, Mb;
+        const Tb = MY && null !== (Ub = null === (Ab = KT) || void 0 === Ab || null === (Mb = Ab.lastHeader) || void 0 === Mb ? void 0 : Mb.renderPending) && void 0 !== Ub ? Ub : 0;
+        (0, gU.h)(ab, bb, cB() && !(null !== EM), Tb)
+      } catch (Tb) {
+        (0, gU.v)(), console.error(`${eT} the quality steps stopped`, Tb)
       }
     }
 
-    function bH() {
-      return null !== qT && yU === qT && !ZU
+    function cB() {
+      return null !== qE && pY === qE && !GY
     }
 
-    function cH(bb) {
-      const cb = NU;
-      NU = null;
+    function JB(bb) {
+      const ab = RY;
+      RY = null;
       try {
-        null === cb || void 0 === cb || cb.stop()
+        null === ab || void 0 === ab || ab.stop()
       } catch {}
-      console.error(`${na} the frame telemetry threw: it stops`, bb)
+      console.error(`${eT} the frame telemetry threw: it stops`, bb)
     }
 
-    function sH(bb) {
-      var cb, sb, kb, Wb;
-      if ((0, UW.c)().fire(bb), "message" === bb.type) {
-        if (PT++, bb.jT === zc.Pc.ERROR && null !== AT) {
-          var ab;
-          const {
-            text: cb,
-            dropsCache: sb
-          } = (0, Db.t)((new TextDecoder).decode(bb.payload));
-          WU ||= sb, (null === (ab = bU) || void 0 === ab ? void 0 : ab.conn) === bb.conn && (aU = cb)
-        } else if (bb.jT === qc.Yb.ResumeComplete) {
+    function nB(bb) {
+      var ab, Ub, Ab, Mb;
+      if ((0, MM.b)().fire(bb), "message" === bb.type) {
+        if (NE++, bb.fE === Ka.zc.ERROR && null !== rE) {
           var Tb;
-          null === (Tb = RT) || void 0 === Tb || Tb.resume.onResumeComplete(bb.conn)
+          const {
+            text: ab,
+            dropsCache: Ub
+          } = (0, Fb.r)((new TextDecoder).decode(bb.payload));
+          bY ||= Ub, (null === (Tb = cE) || void 0 === Tb ? void 0 : Tb.conn) === bb.conn && (aY = ab)
+        } else if (bb.fE === oa.Tb.ResumeComplete) {
+          var Eb;
+          null === (Eb = wE) || void 0 === Eb || Eb.resume.onResumeComplete(bb.conn)
         }
         return
       }
-      bb.phase === zc.x.Left ? DT = bb.conn : bb.phase === zc.x.Activated && (null === (cb = bU) || void 0 === cb ? void 0 : cb.conn) === bb.conn ? bU.activated = !0 : bb.phase === zc.x.Resumed ? function(bb) {
-        var cb, sb;
-        FT = bb;
-        const kb = RT;
-        if (null === kb || 0 === kb.heldConn || (null === (cb = sT) || void 0 === cb ? void 0 : cb.conn) !== bb || !sT.resume || null === ST) return;
-        console.info(`${na} the game resumed on conn ${bb}, waiting for its InitialInfo`);
-        const Wb = kb.heldConn;
-        kb.heldConn = 0, sT.resume = !1, ST.conn = bb, (null === (sb = rT) || void 0 === sb ? void 0 : sb.conn) === Wb && (rT = {
+      bb.phase === Ka.C.Left ? WE = bb.conn : bb.phase === Ka.C.Activated && (null === (ab = cE) || void 0 === ab ? void 0 : ab.conn) === bb.conn ? cE.activated = !0 : bb.phase === Ka.C.Resumed ? function(bb) {
+        var ab, Ub;
+        gE = bb;
+        const Ab = wE;
+        if (null === Ab || 0 === Ab.heldConn || (null === (ab = nT) || void 0 === ab ? void 0 : ab.conn) !== bb || !nT.resume || null === tE) return;
+        console.info(`${eT} the game resumed on conn ${bb}, waiting for its InitialInfo`);
+        const Mb = Ab.heldConn;
+        Ab.heldConn = 0, nT.resume = !1, tE.conn = bb, (null === (Ub = oE) || void 0 === Ub ? void 0 : Ub.conn) === Mb && (oE = {
           conn: bb,
-          info: rT.info
-        }), mc.e.apply({
+          info: oE.info
+        }), ja.e.apply({
           shopInfo: null,
-          _shopVersion: kc.b
+          _shopVersion: Aa.b
         })
-      }(bb.conn) : bb.phase === zc.x.Held ? function(bb) {
-        var cb;
-        const sb = RT,
-          kb = null !== (cb = null === sb || void 0 === sb ? void 0 : sb.pendingHold) && void 0 !== cb ? cb : null;
-        if (null !== sb && null !== kb && kb.conn === bb) return sb.pendingHold = null, sb.heldConn = bb, FT = 0, console.warn(`${na} the core holds the game, reconnecting`), void sb.resume.onDropped(kb.token);
-        if (bb === FT) {
-          FT = 0;
-          const cb = wa;
-          null === cb || cb.isStopped || (console.info(`${na} the core held again a resumed game the shell ended before its InitialInfo: closing it again`), OI(cb, "close", bb))
+      }(bb.conn) : bb.phase === Ka.C.Held ? function(bb) {
+        var ab;
+        const Ub = wE,
+          Ab = null !== (ab = null === Ub || void 0 === Ub ? void 0 : Ub.pendingHold) && void 0 !== ab ? ab : null;
+        if (null !== Ub && null !== Ab && Ab.conn === bb) return Ub.pendingHold = null, Ub.heldConn = bb, gE = 0, console.warn(`${eT} the core holds the game, reconnecting`), void Ub.resume.onDropped(Ab.token);
+        if (bb === gE) {
+          gE = 0;
+          const ab = KT;
+          null === ab || ab.isStopped || (console.info(`${eT} the core held again a resumed game the shell ended before its InitialInfo: closing it again`), dB(ab, "close", bb))
         }
-      }(bb.conn) : bb.phase === zc.x.Closed && (null === (sb = RT) || void 0 === sb || null === (kb = sb.pendingHold) || void 0 === kb ? void 0 : kb.conn) === bb.conn && (RT.heldConn === bb.conn ? function(bb) {
-        const cb = bb.heldConn,
-          sb = bb.dropCode;
-        PI(bb, "refused"), console.info(`${na} the core didn't hold the game through its drop: it hadn't started`), queueMicrotask((() => {
-          BI(cb, !1), XI(cb, sb, "", !0)
+      }(bb.conn) : bb.phase === Ka.C.Closed && (null === (Ub = wE) || void 0 === Ub || null === (Ab = Ub.pendingHold) || void 0 === Ab ? void 0 : Ab.conn) === bb.conn && (wE.heldConn === bb.conn ? function(bb) {
+        const ab = bb.heldConn,
+          Ub = bb.dropCode;
+        NB(bb, "refused"), console.info(`${eT} the core didn't hold the game through its drop: it hadn't started`), queueMicrotask((() => {
+          fB(ab, !1), BB(ab, Ub, "", !0)
         }))
-      }(RT) : RT.pendingHold = null);
-      const Ub = Object.keys(zc.x).find((cb => zc.x[cb] === bb.phase)),
-        Ib = 0 === bb.code ? "" : ` (code ${bb.code})`;
-      console.info(`${na} conn ${bb.conn}: ${null!==Ub&&void 0!==Ub?Ub:bb.phase}${Ib}, ${PT} raw messages so far`), (null === (Wb = qT) || void 0 === Wb ? void 0 : Wb.conn) !== bb.conn || bb.phase !== zc.x.Left && bb.phase !== zc.x.Closed || sI(null), wT !== bb.conn || bb.phase !== zc.x.Left && bb.phase !== zc.x.Closed || (wT = null, null === qT && null === AT && xk.b.setGame(void 0));
-      for (const fb of [...UU]) try {
-        fb(bb.conn, bb.phase, bb.code)
-      } catch (Hb) {
-        (0, dc.t)(Hb, `${na} a connection listener threw`)
+      }(wE) : wE.pendingHold = null);
+      const Yb = Object.keys(Ka.C).find((ab => Ka.C[ab] === bb.phase)),
+        Bb = 0 === bb.code ? "" : ` (code ${bb.code})`;
+      console.info(`${eT} conn ${bb.conn}: ${null!==Yb&&void 0!==Yb?Yb:bb.phase}${Bb}, ${NE} raw messages so far`), (null === (Mb = qE) || void 0 === Mb ? void 0 : Mb.conn) !== bb.conn || bb.phase !== Ka.C.Left && bb.phase !== Ka.C.Closed || nY(null), KE !== bb.conn || bb.phase !== Ka.C.Left && bb.phase !== Ka.C.Closed || (KE = null, null === qE && null === rE && VA.b.setGame(void 0));
+      for (const vb of [...AY]) try {
+        vb(bb.conn, bb.phase, bb.code)
+      } catch (eb) {
+        (0, la.o)(eb, `${eT} a connection listener threw`)
       }
     }
 
-    function kH() {
-      (0, TW.r)(), queueMicrotask((() => {
+    function SB() {
+      (0, AM.o)(), queueMicrotask((() => {
         try {
-          QH()
+          Pe()
         } catch (bb) {
-          console.warn(`${na} stopping before the reload threw`, bb)
-        }(0, us.flushCrashReports)(wb.b).then(wb.i, wb.i)
+          console.warn(`${eT} stopping before the reload threw`, bb)
+        }(0, iU.flushCrashReports)(wb.e).then(wb.n, wb.n)
       }))
     }
 
-    function WH() {
-      const bb = wa;
-      null === bb || bb.isStopped || null === sT || yT || !bb.hasPendingCommands() || TH(bb, !1, "budget")
+    function be() {
+      const bb = KT;
+      null === bb || bb.isStopped || null === nT || pE || !bb.hasPendingCommands() || Ue(bb, !1, "budget")
     }
 
-    function aH(bb) {
-      var cb;
-      const sb = qT;
-      bb.persisted || null === sb || (null === (cb = sT) || void 0 === cb ? void 0 : cb.conn) !== sb.conn || sT.left || sb.leave()
+    function ae(bb) {
+      var ab;
+      const Ub = qE;
+      bb.persisted || null === Ub || (null === (ab = nT) || void 0 === ab ? void 0 : ab.conn) !== Ub.conn || nT.left || Ub.leave()
     }
 
-    function TH(bb, cb, kb) {
-      let Wb = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-      const ab = yT;
-      yT = !0;
+    function Ue(bb, ab, Ab) {
+      let Mb = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+      const Tb = pE;
+      pE = !0;
       try {
-        return function(bb, cb, kb, Wb) {
-          var ab, Tb, Ub, Ib;
-          if (ZU) return !1;
-          if (YH(bb, IH), ZU || bb.isStopped) return !1;
-          nH() && hT("modelsIn");
-          tI(), BT = performance.now(), DT = null, ET = !1, (0, Lb.P)(), null === (ab = XT) || void 0 === ab || ab.beforeFrame(), Ik(BT, bb), (0, Lb.L)(BT, HH), tT = !0;
-          const Hb = cb && XH();
-          let fb;
+        return function(bb, ab, Ab, Mb) {
+          var Tb, Eb, Yb, Bb;
+          if (GY) return !1;
+          if (De(bb, Me), GY || bb.isStopped) return !1;
+          ee() && zE("modelsIn");
+          mB(), fE = performance.now(), WE = null, HE = !1, (0, xb.O)(), null === (Tb = BE) || void 0 === Tb || Tb.beforeFrame(), EA(fE, bb), (0, xb.H)(fE, Te), mE = !0;
+          const eb = ab && Be();
+          let vb;
           try {
-            fb = bb.frame(BT, Hb, kb)
+            vb = bb.frame(fE, eb, Ab)
           } finally {
-            tT = !1
+            mE = !1
           }
-          if (!fb) return !1;
-          QU.observe(null !== (Tb = null === (Ub = bb.lastHeader) || void 0 === Ub ? void 0 : Ub.chunksCancelled) && void 0 !== Tb ? Tb : 0);
-          const Mb = bb.lastFrameKind,
-            Xb = (0, gc.d)(Mb);
+          if (!vb) return !1;
+          PY.observe(null !== (Eb = null === (Yb = bb.lastHeader) || void 0 === Yb ? void 0 : Yb.chunksCancelled) && void 0 !== Eb ? Eb : 0);
+          const Lb = bb.lastFrameKind,
+            Pb = (0, Na.d)(Lb);
           (function(bb) {
-            null !== ZW && ZW.afterFrame(performance.now(), bb)
-          })(Xb), null === (Ib = VU) || void 0 === Ib || Ib.frame(bb, BT, Mb), cb && (PU = Xb);
-          Xb && (0, Yc.c)(BT);
-          if (null !== NU) try {
-            NU.frameRan(bb, BT, performance.now(), Mb)
-          } catch (mb) {
-            cH(mb)
+            null !== QM && QM.afterFrame(performance.now(), bb)
+          })(Pb), null === (Bb = kY) || void 0 === Bb || Bb.frame(bb, fE, Lb), ab && (NY = Pb);
+          Pb && (0, fa.b)(fE);
+          if (null !== RY) try {
+            RY.frameRan(bb, fE, performance.now(), Lb)
+          } catch (jb) {
+            JB(jb)
           }
-          "drawn" === Mb && MH() && function() {
-            for (const bb of [...WW]) bb()
+          "drawn" === Lb && Ye() && function() {
+            for (const bb of [...aM]) bb()
           }();
-          bb.forEachNetOut(mH);
-          const nb = sT;
-          null !== DT && (null === nb || void 0 === nb ? void 0 : nb.conn) === DT && lH(nb, Eb.h);
+          bb.forEachNetOut(ve);
+          const Xb = nT;
+          null !== WE && (null === Xb || void 0 === Xb ? void 0 : Xb.conn) === WE && Le(Xb, hb.m);
           (function(bb) {
-            var cb;
-            if (YU) return;
-            null === gU && XH() && (gU = performance.now());
-            if (null === AT && null === qT) return;
-            null === gU || BU || (BU = !0, (0, Dc.i)("wasm_startup_loaded", gU));
-            let sb = 0;
-            null !== qT ? sb = -1 : !0 === (null === (cb = bU) || void 0 === cb ? void 0 : cb.activated) && (sb = ~qc.G.TerrainDrawn);
-            const kb = bb.headerWord(qc.y.LoadSteps) & sb & ~JU;
-            if (0 === kb) return;
-            JU |= kb;
-            const Wb = performance.now();
-            for (const [ab, Tb] of Object.entries(fH)) 0 !== (kb & qc.G[ab]) && (0, Dc.i)(Tb, Wb)
-          })(bb), cb && function(bb) {
-            var cb, kb, Wb;
-            if (null === qT || !XH()) return;
-            null === tU || yU === qT && !tU.frame(BT, 0 !== (bb.headerWord(qc.y.LoadSteps) & qc.G.TerrainDrawn)) || (tU = null);
-            const ab = bb.lastHeader,
-              Tb = !IU || 0 === (null === ab || void 0 === ab ? void 0 : ab.renderPending);
-            !hU && Tb && (hU = !0, performance.mark(La));
-            if (yU === qT) return;
-            const Ub = null !== (cb = null === ab || void 0 === ab ? void 0 : ab.firstView) && void 0 !== cb ? cb : zc.T.NotYet;
-            if (IU && Ub === zc.T.NotYet) return;
-            if (YU && (!0 !== (null === (kb = (0, ub.h)()) || void 0 === kb ? void 0 : kb.isSessionLive) || !Tb)) return;
-            yU = qT;
-            const Ib = qT;
+            var ab;
+            if (DY) return;
+            null === iY && Be() && (iY = performance.now());
+            if (null === rE && null === qE) return;
+            null === iY || fY || (fY = !0, (0, Fa.i)("wasm_startup_loaded", iY));
+            let Ub = 0;
+            null !== qE ? Ub = -1 : !0 === (null === (ab = cE) || void 0 === ab ? void 0 : ab.activated) && (Ub = ~oa.M.TerrainDrawn);
+            const Ab = bb.headerWord(oa.F.LoadSteps) & Ub & ~xY;
+            if (0 === Ab) return;
+            xY |= Ab;
+            const Mb = performance.now();
+            for (const [Tb, Eb] of Object.entries(Ee)) 0 !== (Ab & oa.M[Tb]) && (0, Fa.i)(Eb, Mb)
+          })(bb), ab && function(bb) {
+            var ab, Ab, Mb;
+            if (null === qE || !Be()) return;
+            null === mY || pY === qE && !mY.frame(fE, 0 !== (bb.headerWord(oa.F.LoadSteps) & oa.M.TerrainDrawn)) || (mY = null);
+            const Tb = bb.lastHeader,
+              Eb = !MY || 0 === (null === Tb || void 0 === Tb ? void 0 : Tb.renderPending);
+            !zY && Eb && (zY = !0, performance.mark(yT));
+            if (pY === qE) return;
+            const Yb = null !== (ab = null === Tb || void 0 === Tb ? void 0 : Tb.firstView) && void 0 !== ab ? ab : Ka.W.NotYet;
+            if (MY && Yb === Ka.W.NotYet) return;
+            if (DY && (!0 !== (null === (Ab = (0, ib.i)()) || void 0 === Ab ? void 0 : Ab.isSessionLive) || !Eb)) return;
+            pY = qE;
+            const Bb = qE;
             if (setTimeout((() => {
-                qT === Ib && (0, Dc.f)()
-              }), 0), null === (Wb = LT) || void 0 === Wb || Wb.playable(), function() {
-                clearTimeout(cT), cT = setTimeout((() => {
-                  bH() && gH((bb => {
+                qE === Bb && (0, Fa.g)()
+              }), 0), null === (Mb = yE) || void 0 === Mb || Mb.playable(), function() {
+                clearTimeout(JT), JT = setTimeout((() => {
+                  cB() && ie((bb => {
                     let {
-                      prefetchWorldgenWorker: cb
+                      prefetchWorldgenWorker: ab
                     } = bb;
-                    cb()
+                    ab()
                   }))
-                }), ia)
-              }(), YU) return;
-            YU = !0, performance.mark(Va), (0, PW.q)("render") && Promise.all([sb.e(74), sb.e(47)]).then((() => sb(4414))).then((bb => {
+                }), IT)
+              }(), DY) return;
+            DY = !0, performance.mark(kT), (0, WM.s)("render") && Promise.all([Ub.e(74), Ub.e(47)]).then((() => Ub(4363))).then((bb => {
               let {
-                renderDebugPlayable: cb
+                renderDebugPlayable: ab
               } = bb;
-              cb()
+              ab()
             }), (bb => {
               console.warn("The render debug topic didn't load", bb)
             }));
-            const Hb = Math.round(performance.now());
-            if (IU && Ub !== zc.T.Drawn) {
-              const bb = Ub === zc.T.HeldBackstop ? "held_draws" : "long";
-              if (console.warn(`${na} playable at ${Hb} ms on the first view's ${bb} backstop: it wasn't drawn whole in time`), (0, Dc.i)("wasm_view_backstop", Hb, bb), "long" === bb) {
-                var fb, Mb;
-                const bb = null !== (fb = null === (Mb = ST) || void 0 === Mb ? void 0 : Mb.game) && void 0 !== fb ? fb : "";
-                tU = new Ys.c((() => {
-                  (0, us.reportFirstViewNoTerrain)(bb, va)
+            const eb = Math.round(performance.now());
+            if (MY && Yb !== Ka.W.Drawn) {
+              const bb = Yb === Ka.W.HeldBackstop ? "held_draws" : "long";
+              if (console.warn(`${eT} playable at ${eb} ms on the first view's ${bb} backstop: it wasn't drawn whole in time`), (0, Fa.i)("wasm_view_backstop", eb, bb), "long" === bb) {
+                var vb, Lb;
+                const bb = null !== (vb = null === (Lb = tE) || void 0 === Lb ? void 0 : Lb.game) && void 0 !== vb ? vb : "";
+                mY = new fU.e((() => {
+                  (0, iU.reportFirstViewNoTerrain)(bb, sT)
                 }))
               }
-            } else console.info(`${na} playable at ${Hb} ms${IU?"":" (no renderer)"}`);
-            setTimeout(nU, 0), (0, Qc.g)().catch((bb => {
-              console.error(`${na} item sprites didn't load, so item particles show the missing texture`, bb)
-            })), dk.c.warm()
+            } else console.info(`${eT} playable at ${eb} ms${MY?"":" (no renderer)"}`);
+            setTimeout(eY, 0), (0, ka.f)().catch((bb => {
+              console.error(`${eT} item sprites didn't load, so item particles show the missing texture`, bb)
+            })), KA.e.warm()
           }(bb);
-          (0, bs.P)(bb, {
-            worldgen: WT,
-            mesh: TT
+          (0, bU.E)(bb, {
+            worldgen: bE,
+            mesh: UE
           }),
           function(bb) {
-            bb.forEachEvent(fk);
-            for (const cb of Hk) try {
-              (0, kk.e)(cb)
-            } catch (mb) {
-              if ((0, dc.i)(mb)) {
-                bb.crashOn(bs.j, mb);
+            bb.forEachEvent(BA);
+            for (const ab of YA) try {
+              (0, aA.e)(ab)
+            } catch (jb) {
+              if ((0, la.g)(jb)) {
+                bb.crashOn(bU.h, jb);
                 break
               }
-              console.error(`${ak} an input action listener threw`, mb)
+              console.error(`${AA} an input action listener threw`, jb)
             }
-            Hk.length = 0
-          }(bb), Wb && (0, Jc.d)();
+            YA.length = 0
+          }(bb), Mb && (0, pa.d)();
           return !bb.isStopped
-        }(bb, cb, "all" === kb || bb.rings.net.cursor >= Ya || bb.netKeptFrames >= ha, Wb)
+        }(bb, ab, "all" === Ab || bb.rings.net.cursor >= DT || bb.netKeptFrames >= zT, Mb)
       } finally {
-        yT = ab
+        pE = Tb
       }
     }
 
-    function UH(bb) {
-      console.error(`${na} a frame-start listener threw`, bb)
+    function Ae(bb) {
+      console.error(`${eT} a frame-start listener threw`, bb)
     }
 
-    function IH() {
-      var bb, cb, sb, kb;
-      null === (bb = mT) || void 0 === bb || bb.drain(Oa, Ga), null === (cb = CT) || void 0 === cb || cb.drain(Oa), null === (sb = NT) || void 0 === sb || sb.drain(performance.now()), XU(Oa), null === (kb = eT) || void 0 === kb || kb.drain()
+    function Me() {
+      var bb, ab, Ub, Ab;
+      null === (bb = vE) || void 0 === bb || bb.drain(dT, FT), null === (ab = jE) || void 0 === ab || ab.drain(dT), null === (Ub = RE) || void 0 === Ub || Ub.drain(performance.now()), BY(dT), null === (Ab = XE) || void 0 === Ab || Ab.drain()
     }
 
-    function HH(bb) {
-      console.error(`${na} a before-frame listener threw`, bb)
+    function Te(bb) {
+      console.error(`${eT} a before-frame listener threw`, bb)
     }
-    const fH = {
+    const Ee = {
       ChunkRequested: "wasm_chunk_requested",
       ChunkStored: "wasm_chunk_stored",
       MeshLanded: "wasm_mesh_landed",
@@ -8046,452 +7645,452 @@ export const modules = {
       TerrainDrawn: "wasm_terrain_drawn"
     };
 
-    function MH() {
-      return IU && XH()
+    function Ye() {
+      return MY && Be()
     }
 
-    function XH() {
-      return VT && nH()
+    function Be() {
+      return kE && ee()
     }
 
-    function nH() {
-      return null === mT || mT.startupDone
+    function ee() {
+      return null === vE || vE.startupDone
     }
 
-    function mH(bb, cb) {
-      const sb = sT;
-      (null === sb || void 0 === sb ? void 0 : sb.conn) === bb ? lH(sb, cb) : GT++
+    function ve(bb, ab) {
+      const Ub = nT;
+      (null === Ub || void 0 === Ub ? void 0 : Ub.conn) === bb ? Le(Ub, ab) : FE++
     }
 
-    function lH(bb, cb) {
+    function Le(bb, ab) {
       const {
-        ws: sb
+        ws: Ub
       } = bb;
-      return sb.readyState === WebSocket.OPEN ? (sb.send(cb), !0) : sb.readyState === WebSocket.CONNECTING && bb.pendingBytes + cb.byteLength <= ya ? (bb.pending.push(cb.slice()), bb.pendingBytes += cb.byteLength, !0) : (GT++, !1)
+      return Ub.readyState === WebSocket.OPEN ? (Ub.send(ab), !0) : Ub.readyState === WebSocket.CONNECTING && bb.pendingBytes + ab.byteLength <= pT ? (bb.pending.push(ab.slice()), bb.pendingBytes += ab.byteLength, !0) : (FE++, !1)
     }
 
-    function QH() {
-      var bb, cb, sb, kb, Wb, ab, Tb, Ub, Ib, Hb, fb, Mb, Xb, nb, mb, lb, Qb;
-      ZU = !0, DU.stop(), (0, EW.b)(), ZW = null, yI(), (0, Lb.N)().unlockPointer(), (0, Lb.M)(null), null === (bb = nT) || void 0 === bb || bb(), nT = null, null === (cb = (0, ub.s)()) || void 0 === cb || cb.followCursorAim(null), (0, Jc.H)(), (0, ub.e)(), Ra.stop(), null === (sb = LU) || void 0 === sb || sb(), LU = null, null === (kb = uU) || void 0 === kb || kb(), uU = null, null === (Wb = NU) || void 0 === Wb || Wb.stop(), NU = null, (0, gs.l)(null), null === (ab = kT) || void 0 === ab || ab(), kT = null, null === (Tb = WT) || void 0 === Tb || Tb.stop(), WT = null, null === (Ub = TT) || void 0 === Ub || Ub.stop(), TT = null, null !== (Ib = oa) && void 0 !== Ib && null !== (Hb = Ib.textures) && void 0 !== Hb && Hb.assets && AI(null), null === (fb = oa) || void 0 === fb || fb.stop(), oa = null, Sa = null;
-      const eb = UT;
-      UT = null, eb && (eb.stop(), uH(eb)), null === (Mb = CT) || void 0 === Mb || Mb.dispose(), CT = null, null === (Xb = NT) || void 0 === Xb || Xb.dispose(), NT = null, mT = null, null === (nb = QT) || void 0 === nb || nb(), QT = null, null === (mb = MT) || void 0 === mb || mb(), MT = null, null === (lb = XT) || void 0 === lb || lb.stop(), XT = null, pU(), xk.b.release(), uI();
-      const Cb = eT;
-      eT = null;
+    function Pe() {
+      var bb, ab, Ub, Ab, Mb, Tb, Eb, Yb, Bb, eb, vb, Lb, Pb, Xb, jb, Rb, kb;
+      GY = !0, WY.stop(), (0, IM.b)(), QM = null, pB(), (0, xb.K)().unlockPointer(), (0, xb.J)(null), null === (bb = eE) || void 0 === bb || bb(), eE = null, null === (ab = (0, ib.r)()) || void 0 === ab || ab.followCursorAim(null), (0, pa.D)(), (0, ib.f)(), wT.stop(), null === (Ub = yY) || void 0 === Ub || Ub(), yY = null, null === (Ab = ZY) || void 0 === Ab || Ab(), ZY = null, null === (Mb = RY) || void 0 === Mb || Mb.stop(), RY = null, (0, pU.i)(null), null === (Tb = ST) || void 0 === Tb || Tb(), ST = null, null === (Eb = bE) || void 0 === Eb || Eb.stop(), bE = null, null === (Yb = UE) || void 0 === Yb || Yb.stop(), UE = null, null !== (Bb = lT) && void 0 !== Bb && null !== (eb = Bb.textures) && void 0 !== eb && eb.assets && rB(null), null === (vb = lT) || void 0 === vb || vb.stop(), lT = null, tT = null;
+      const yb = AE;
+      AE = null, yb && (yb.stop(), Ze(yb)), null === (Lb = jE) || void 0 === Lb || Lb.dispose(), jE = null, null === (Pb = RE) || void 0 === Pb || Pb.dispose(), RE = null, vE = null, null === (Xb = PE) || void 0 === Xb || Xb(), PE = null, null === (jb = YE) || void 0 === jb || jb(), YE = null, null === (Rb = BE) || void 0 === Rb || Rb.stop(), BE = null, OY(), VA.b.release(), ZB();
+      const Zb = XE;
+      XE = null;
       try {
-        null === Cb || void 0 === Cb || Cb.dispose()
-      } catch (Nb) {
-        console.warn(`${na} the sky's images didn't release`, Nb)
-      }(0, Ak.h)(null), null === (Qb = da) || void 0 === Qb || Qb.pagePreviews().endSession(null === (0, ac.o)())
+        null === Zb || void 0 === Zb || Zb.dispose()
+      } catch (Db) {
+        console.warn(`${eT} the sky's images didn't release`, Db)
+      }(0, oA.h)(null), null === (kb = uT) || void 0 === kb || kb.pagePreviews().endSession(null === (0, Ta.l)())
     }
 
-    function eH(bb, cb) {
-      var sb, kb;
-      const Wb = null !== (sb = null === (kb = UT) || void 0 === kb ? void 0 : kb.details()) && void 0 !== sb ? sb : {},
-        ab = bb.site === la || bb.site === Qa || bb.site === us.RENDER_RELOAD_SITE || bb.site === ea ? bb.error instanceof WebAssembly.RuntimeError || bb.error instanceof vc.e : !(0, pc.o)(bb.error) && (0, bs.I)(bb);
-      ab && bb.error instanceof Error && (0, ac.Q)(bb.error);
-      const Tb = ab || bb.site === bs.t ? (0, us.readTrap)(bb.error) : null,
-        Ub = null !== Tb && (0, Ac.g)(Tb.kind, Tb.refusedBytes) ? Tb.refusedBytes : 0,
-        Ib = null === IT ? (0, Zk.l)(function() {
+    function Xe(bb, ab) {
+      var Ub, Ab;
+      const Mb = null !== (Ub = null === (Ab = AE) || void 0 === Ab ? void 0 : Ab.details()) && void 0 !== Ub ? Ub : {},
+        Tb = bb.site === LT || bb.site === PT || bb.site === iU.RENDER_RELOAD_SITE || bb.site === XT ? bb.error instanceof WebAssembly.RuntimeError || bb.error instanceof Oa.d : !(0, Sa.s)(bb.error) && (0, bU.z)(bb);
+      Tb && bb.error instanceof Error && (0, Ta.I)(bb.error);
+      const Eb = Tb || bb.site === bU.o ? (0, iU.readTrap)(bb.error) : null,
+        Yb = null !== Eb && (0, ta.e)(Eb.kind, Eb.refusedBytes) ? Eb.refusedBytes : 0,
+        Bb = null === ME ? (0, qA.m)(function() {
           try {
-            return (0, ac.u)().buffer.byteLength
+            return (0, Ta.q)().buffer.byteLength
           } catch {
             return 0
           }
-        }(), Ub, null) : IT.ceilingMayRefuse(Ub),
-        Hb = Ub > 0 && !Ib && KI();
-      var fb;
-      if (Hb && ((0, Mc.q)("oom"), (0, Mc.p)("decline"), KU = !0), QH(), (0, TW.e)()) return console.warn(`${na} the session stopped at ${bb.site} as the page reloads`, bb.error), void((0, pc.o)(bb.error) || (null === (fb = bb.header) || void 0 === fb ? void 0 : fb.lastError) === zc.C.CoreBusy || (0, us.reportStoppedCore)(bb, cb, Tb, {
-        memoryDetails: Wb,
-        declined: Hb
+        }(), Yb, null) : ME.ceilingMayRefuse(Yb),
+        eb = Yb > 0 && !Bb && hB();
+      var vb;
+      if (eb && ((0, La.n)("oom"), (0, La.k)("decline"), hY = !0), Pe(), (0, AM.c)()) return console.warn(`${eT} the session stopped at ${bb.site} as the page reloads`, bb.error), void((0, Sa.s)(bb.error) || (null === (vb = bb.header) || void 0 === vb ? void 0 : vb.lastError) === Ka.H.CoreBusy || (0, iU.reportStoppedCore)(bb, ab, Eb, {
+        memoryDetails: Mb,
+        declined: eb
       }));
-      (0, us.showCrash)(bb, cb, Tb, {
-        memoryDetails: Wb,
-        declined: Hb
+      (0, iU.showCrash)(bb, ab, Eb, {
+        memoryDetails: Mb,
+        declined: eb
       })
     }
 
-    function CH(bb) {
+    function je(bb) {
       const {
-        input: cb,
-        net: sb,
-        worker: kb
-      } = bb.rings, Wb = bb.optionsDropped, ab = cb.dropped + Wb + sb.dropped + kb.dropped + GT;
-      ab !== OT && function(bb, cb) {
-        const sb = performance.now();
-        return !(sb - iT[bb] < Pa) && (iT[bb] = sb, console.warn(`${na} ${cb}`), !0)
-      }("dropped", `${ab} records dropped so far (input ${cb.dropped}, options ${Wb}, net ${sb.dropped}, worker ${kb.dropped}, net-out ${GT})`) && (OT = ab)
+        input: ab,
+        net: Ub,
+        worker: Ab
+      } = bb.rings, Mb = bb.optionsDropped, Tb = ab.dropped + Mb + Ub.dropped + Ab.dropped + FE;
+      Tb !== dE && function(bb, ab) {
+        const Ub = performance.now();
+        return !(Ub - IE[bb] < NT) && (IE[bb] = Ub, console.warn(`${eT} ${ab}`), !0)
+      }("dropped", `${Tb} records dropped so far (input ${ab.dropped}, options ${Mb}, net ${Ub.dropped}, worker ${Ab.dropped}, net-out ${FE})`) && (dE = Tb)
     }
 
-    function NH() {
-      var bb, cb;
-      const sb = (0, Cs.c)();
-      if (null === sb) return null;
-      const kb = (0, Vs.g)(sb);
+    function Re() {
+      var bb, ab;
+      const Ub = (0, ZU.d)();
+      if (null === Ub) return null;
+      const Ab = (0, zU.h)(Ub);
       return {
-        ...kb,
-        horizontal: Math.min(kb.horizontal, null !== (bb = null === (cb = UT) || void 0 === cb ? void 0 : cb.shedDistanceInUse()) && void 0 !== bb ? bb : 1 / 0)
+        ...Ab,
+        horizontal: Math.min(Ab.horizontal, null !== (bb = null === (ab = AE) || void 0 === ab ? void 0 : ab.shedDistanceInUse()) && void 0 !== bb ? bb : 1 / 0)
       }
     }
 
-    function VH(bb) {
-      var cb, sb;
+    function ke(bb) {
+      var ab, Ub;
       return {
-        samples: IU ? eU : null,
+        samples: MY ? XY : null,
         sunShadows: bb,
-        renderDistance: null !== (cb = null === (sb = NH()) || void 0 === sb ? void 0 : sb.horizontal) && void 0 !== cb ? cb : null
+        renderDistance: null !== (ab = null === (Ub = Re()) || void 0 === Ub ? void 0 : Ub.horizontal) && void 0 !== ab ? ab : null
       }
     }
 
-    function LH() {
-      var bb, cb, sb;
-      const kb = NH();
+    function ye() {
+      var bb, ab, Ub;
+      const Ab = Re();
       return {
-        ...null === (bb = UT) || void 0 === bb ? void 0 : bb.pageKillSnapshot(),
-        renderDistance: null !== (cb = null === kb || void 0 === kb ? void 0 : kb.horizontal) && void 0 !== cb ? cb : null,
-        renderDistanceVertical: null !== (sb = null === kb || void 0 === kb ? void 0 : kb.vertical) && void 0 !== sb ? sb : null,
-        chunkCap: HT,
-        budgetBasis: fT,
-        renderBackend: (0, TW.D)()
+        ...null === (bb = AE) || void 0 === bb ? void 0 : bb.pageKillSnapshot(),
+        renderDistance: null !== (ab = null === Ab || void 0 === Ab ? void 0 : Ab.horizontal) && void 0 !== ab ? ab : null,
+        renderDistanceVertical: null !== (Ub = null === Ab || void 0 === Ab ? void 0 : Ab.vertical) && void 0 !== Ub ? Ub : null,
+        chunkCap: TE,
+        budgetBasis: EE,
+        renderBackend: (0, AM.G)()
       }
     }
 
-    function uH(bb) {
-      console.info(`${na} wasm memory at the session's end`, bb.details())
+    function Ze(bb) {
+      console.info(`${eT} wasm memory at the session's end`, bb.details())
     }
 
-    function YH(bb, cb) {
+    function De(bb, ab) {
       if (!bb.isStopped) try {
-        cb()
-      } catch (sb) {
-        bb.crash(bs.x, sb)
+        ab()
+      } catch (Ub) {
+        bb.crash(bU.q, Ub)
       }
     }
 
-    function hH() {
-      return aT ??= sb.e(68).then((() => sb(42709))).catch((bb => {
-        throw aT = null, bb
-      })), aT
+    function ze() {
+      return aE ??= Ub.e(68).then((() => Ub(42463))).catch((bb => {
+        throw aE = null, bb
+      })), aE
     }
-    async function JH() {
+    async function xe() {
       const {
         createWorldgenWorker: bb,
-        worldgenWorkerReady: cb
-      } = await hH();
-      return await cb(), bb
+        worldgenWorkerReady: ab
+      } = await ze();
+      return await ab(), bb
     }
 
-    function gH(bb) {
-      var cb;
-      null === (cb = aT) || void 0 === cb || cb.then(bb, (() => {}))
+    function ie(bb) {
+      var ab;
+      null === (ab = aE) || void 0 === ab || ab.then(bb, (() => {}))
     }
 
-    function BH(bb, cb, sb) {
-      return async function(bb, cb, sb) {
+    function fe(bb, ab, Ub) {
+      return async function(bb, ab, Ub) {
         let {
-          stop: kb,
-          stillWanted: Wb
-        } = sb;
-        const ab = await (0, Vk.k)(bb, {
-          stillWanted: Wb,
+          stop: Ab,
+          stillWanted: Mb
+        } = Ub;
+        const Tb = await (0, ZA.l)(bb, {
+          stillWanted: Mb,
           beforeReload: async () => {
-            kb(), await (0, us.flushCrashReports)(wb.b)
+            Ab(), await (0, iU.flushCrashReports)(wb.e)
           },
-          reload: wb.i
+          reload: wb.n
         });
-        return ab || cb(), ab
-      }(bb, cb, {
-        stop: QH,
-        stillWanted: sb
+        return Tb || ab(), Tb
+      }(bb, ab, {
+        stop: Pe,
+        stillWanted: Ub
       })
     }
-    let tH = !1;
+    let me = !1;
 
-    function yH() {
-      return tH = !0, async function(bb, cb, kb) {
+    function pe() {
+      return me = !0, async function(bb, ab, Ab) {
         const {
-          gamePackSource: Wb
-        } = await sb.e(343).then((() => sb(42668)));
-        await FI.packStep(bb, ((sb, kb) => sb.packForGame(bb, Wb(cb), kb)), kb)
+          gamePackSource: Mb
+        } = await Ub.e(343).then((() => Ub(42416)));
+        await gB.packStep(bb, ((Ub, Ab) => Ub.packForGame(bb, Mb(ab), Ab)), Ab)
       }(...arguments)
     }
 
-    function PH(bb) {
-      ! function(bb, cb) {
+    function Ne(bb) {
+      ! function(bb, ab) {
         bb((bb => {
           null === bb || void 0 === bb || bb.subscribe((bb => {
             let {
-              pack: sb,
-              gameSource: kb
+              pack: Ub,
+              gameSource: Ab
             } = bb;
-            cb(null === kb || null === sb ? null : {
-              pack: sb,
-              source: "" === kb ? null : kb
+            ab(null === Ab || null === Ub ? null : {
+              pack: Ub,
+              source: "" === Ab ? null : Ab
             })
           }))
         }))
-      }(SI, bb)
+      }(tB, bb)
     }
-    let DH = !1,
-      EH = null,
-      iH = !1,
-      OH = !1;
+    let We = !1,
+      He = null,
+      Ie = !1,
+      de = !1;
 
-    function GH() {
+    function Fe() {
       var bb;
-      DH || (DH = !0, rU("play", db), (0, Xb.m)(new vH), Ub.gameBridge.attach(Pb), AH().catch((() => {})), (0, ub.w)((bb => {
-        bc(bb.setTextHost)
-      })), bb = zH, kU.add(bb), function(bb) {
-        for (const cb of uT) bb(cb);
-        YT.add(bb)
+      We || (We = !0, oY("play", lb), (0, Pb.n)(new se), Yb.gameBridge.attach(db), re().catch((() => {})), (0, ib.u)((bb => {
+        ba(bb.setTextHost)
+      })), bb = Qe, SE.add(bb), function(bb) {
+        for (const ab of ZE) bb(ab);
+        DE.add(bb)
       }((bb => {
-        ZH(KH[bb])
+        Ge(he[bb])
       })))
     }
-    const KH = {
-      booted: ab.k.INITIALISE_NOA,
-      texturesIn: ab.k.REGISTRATION,
-      modelsIn: ab.k.SETUP_LIFEFORMS
+    const he = {
+      booted: Tb.k.INITIALISE_NOA,
+      texturesIn: Tb.k.REGISTRATION,
+      modelsIn: Tb.k.SETUP_LIFEFORMS
     };
 
-    function ZH(bb) {
-      Ib.j.QQ("matchmakeAndPlayStepCompleted", {
+    function Ge(bb) {
+      Bb.m.IR("matchmakeAndPlayStepCompleted", {
         step: bb,
         totalSubSteps: 1
       })
     }
 
-    function zH(bb) {
-      if (!iH) return;
+    function Qe(bb) {
+      if (!Ie) return;
       const {
-        gameNameWithVariation: cb,
-        lobbyName: sb
-      } = (0, Xb.d)();
-      if (bb.code === kb.d.serverUpdating.code) return (new vH).leaveLive(), void dH(cb, sb);
-      Ib.j.QQ("unwantedLeftGame", {
-        reason: qH(bb),
+        gameNameWithVariation: ab,
+        lobbyName: Ub
+      } = (0, Pb.e)();
+      if (bb.code === Ab.b.serverUpdating.code) return (new se).leaveLive(), void ue(ab, Ub);
+      Bb.m.IR("unwantedLeftGame", {
+        reason: qe(bb),
         requiresRefresh: bb.requiresRefresh,
         canReconnect: null !== bb.reconnect,
         automaticallyReconnect: bb.reconnecting,
         canPlayAgain: bb.canPlayAgain,
-        gameNameWithVariation: cb,
-        lobbyName: sb
-      }), (new vH).leaveLive()
+        gameNameWithVariation: ab,
+        lobbyName: Ub
+      }), (new se).leaveLive()
     }
 
-    function qH(bb) {
+    function qe(bb) {
       return null !== bb.reasonKey ? {
         translationKey: bb.reasonKey
       } : "gameOrPluginKick" === bb.name ? bb.reason : `You have disconnected from the server.\n${bb.reason}`
     }
 
-    function dH(bb, cb) {
-      var kb;
-      kb = (0, Hb.z)(bb, cb), Promise.resolve().then((() => sb(1495))).then((bb => {
+    function ue(bb, ab) {
+      var Ab;
+      Ab = (0, eb.y)(bb, ab), Promise.resolve().then((() => Ub(1433))).then((bb => {
         let {
-          navigatePreserveSearch: cb
+          navigatePreserveSearch: ab
         } = bb;
-        cb(kb)
+        ab(Ab)
       })).catch((bb => {
-        console.warn("[bloxd-wasm-client] the page's router didn't navigate: loading the page instead", bb), (0, wb.d)(kb)
+        console.warn("[bloxd-wasm-client] the page's router didn't navigate: loading the page instead", bb), (0, wb.g)(Ab)
       }))
     }
 
-    function AH() {
-      return EH ??= Promise.all([sb.e(69), sb.e(72), sb.e(71), sb.e(70), sb.e(83), sb.e(259), sb.e(199), sb.e(216), sb.e(237), sb.e(212), sb.e(46)]).then((() => sb(40112))).then((bb => {
+    function re() {
+      return He ??= Promise.all([Ub.e(69), Ub.e(72), Ub.e(71), Ub.e(70), Ub.e(83), Ub.e(259), Ub.e(199), Ub.e(216), Ub.e(237), Ub.e(212), Ub.e(46)]).then((() => Ub(39798))).then((bb => {
         try {
           bb.attachPlayGameSources()
-        } catch (cb) {
-          throw console.error("[bloxd-wasm-client] the play sources did not attach", cb),
+        } catch (ab) {
+          throw console.error("[bloxd-wasm-client] the play sources did not attach", ab),
             function(bb) {
-              ja.then((cb => {
-                null === cb || cb.isStopped || ZU ? console.warn(`${na} the play sources threw as they attached, after the client stopped`, bb) : eH({
-                  site: ea,
+              VT.then((ab => {
+                null === ab || ab.isStopped || GY ? console.warn(`${eT} the play sources threw as they attached, after the client stopped`, bb) : Xe({
+                  site: XT,
                   error: bb,
                   header: null
-                }, va)
+                }, sT)
               }))
-            }(cb), cb
+            }(ab), ab
         }
       }), (bb => {
-        throw EH = null, new ub.b(bb)
-      })), EH
+        throw He = null, new ib.e(bb)
+      })), He
     }
-    async function wH(bb, cb) {
-      GH(), tH = !0, iH = !0;
-      let sb = {
+    async function Ke(bb, ab) {
+      Fe(), me = !0, Ie = !0;
+      let Ub = {
           place: bb.place,
           matchedAt: bb.matchedAt
         },
-        Tb = bb.place.gameNameWithVariation;
-      const Ub = (0, Mb.g)();
-      let Ib = null;
-      const Hb = await vU({
+        Eb = bb.place.gameNameWithVariation;
+      const Yb = (0, Lb.f)();
+      let Bb = null;
+      const eb = await sY({
         matchmake: async () => {
-          let cb = sb;
-          if (sb = null, null === cb) {
-            const sb = await bb.rematch();
-            if (sb.isError()) throw Ib = sb.asError().forward(), new Error(sb.asError().message);
-            cb = {
-              place: sb.getValue(),
+          let ab = Ub;
+          if (Ub = null, null === ab) {
+            const Ub = await bb.rematch();
+            if (Ub.isError()) throw Bb = Ub.asError().forward(), new Error(Ub.asError().message);
+            ab = {
+              place: Ub.getValue(),
               matchedAt: performance.now()
             }
           }
-          Tb = cb.place.gameNameWithVariation;
+          Eb = ab.place.gameNameWithVariation;
           return {
-            target: await (0, Ob.e)(bb.userContext, cb.place, RI(), Ub),
-            matchedAt: cb.matchedAt,
-            freshMs: Ob.d
+            target: await (0, Qb.e)(bb.userContext, ab.place, wB(), Yb),
+            matchedAt: ab.matchedAt,
+            freshMs: Qb.b
           }
         },
-        pageReady: AH,
-        onFailure: (bb, cb) => {
-          null === Ib && function(bb, cb) {
-            (0, us.reportPageJoinFailure)(bb, va, cb)
+        pageReady: re,
+        onFailure: (bb, ab) => {
+          null === Bb && function(bb, ab) {
+            (0, iU.reportPageJoinFailure)(bb, sT, ab)
           }(bb, {
-            sinceJoinStartMs: cb,
-            game: Tb
+            sinceJoinStartMs: ab,
+            game: Eb
           })
         },
         rejoin: () => () => {},
         invalidateTrafficCode: () => bb.userContext.invalidateTrafficCode(),
-        signal: cb
+        signal: ab
       });
-      switch (Hb.kind) {
+      switch (eb.kind) {
         case "joined":
-          if (Ub) {
+          if (Yb) {
             const {
               game: bb
-            } = Hb;
-            (0, Mb.s)((() => {
+            } = eb;
+            (0, Lb.o)((() => {
               bb.endJoinAd()
             }))
           }
-          return OH || (OH = !0, (0, lb.c)()), iH ? (ZH(ab.k.CONNECT_TO_GAME_SERVER), ZH(ab.k.SHADER_PACK), function() {
-            var bb, cb;
-            return null !== (bb = null === (cb = LT) || void 0 === cb ? void 0 : cb.runsInJoinedGame()) && void 0 !== bb && bb
-          }() && (0, mb.e)(bb.userContext, Tb).catch((bb => {
+          return de || (de = !0, (0, Rb.e)()), Ie ? (Ge(Tb.k.CONNECT_TO_GAME_SERVER), Ge(Tb.k.SHADER_PACK), function() {
+            var bb, ab;
+            return null !== (bb = null === (ab = yE) || void 0 === ab ? void 0 : ab.runsInJoinedGame()) && void 0 !== bb && bb
+          }() && (0, jb.h)(bb.userContext, Eb).catch((bb => {
             console.error("Failed to report the shader pack session", bb)
           })), function() {
             const bb = function() {
-              var bb, cb;
-              return null !== (bb = null === (cb = LT) || void 0 === cb ? void 0 : cb.couldntRunInJoinedGame()) && void 0 !== bb ? bb : null
+              var bb, ab;
+              return null !== (bb = null === (ab = yE) || void 0 === ab ? void 0 : ab.couldntRunInJoinedGame()) && void 0 !== bb ? bb : null
             }();
-            null !== bb && (0, mb.d)(bb)
-          }(), Wb.d.value(void 0)) : RH("The server ended the game as it joined");
+            null !== bb && (0, jb.e)(bb)
+          }(), Mb.e.value(void 0)) : we("The server ended the game as it joined");
         case "failed":
-          if (!Hb.reloading) {
-            if (null !== Ib) return Ib;
-            if ((Hb.error instanceof Eb.k || Hb.error instanceof Eb.d) && Hb.error.code === kb.d.serverUpdating.code) {
-              if (cb.aborted) return RH("Left the game while it loaded");
+          if (!eb.reloading) {
+            if (null !== Bb) return Bb;
+            if ((eb.error instanceof hb.n || eb.error instanceof hb.b) && eb.error.code === Ab.b.serverUpdating.code) {
+              if (ab.aborted) return we("Left the game while it loaded");
               const {
                 gameNameWithVariation: bb,
-                lobbyName: sb
-              } = (0, Xb.d)();
-              return dH(bb, sb), RH("The server is updating")
+                lobbyName: Ub
+              } = (0, Pb.e)();
+              return ue(bb, Ub), we("The server is updating")
             }
-            return Hb.error instanceof Ab.f ? Wb.d.errorWithCode(Hb.error.messageKey, ab.k.SHADER_PACK, {
+            return eb.error instanceof tb.g ? Mb.e.errorWithCode(eb.error.messageKey, Tb.k.SHADER_PACK, {
               severity: "medium"
-            }) : Wb.d.errorWithCode(function(bb) {
-              if (bb instanceof Eb.w || bb instanceof Nb.i) return bb.message;
-              if (rH(bb)) return (0, Db.p)(bb.code, bb.serverText);
-              return Db.j
-            }(Hb.error), ab.k.CONNECT_TO_GAME_SERVER, {
-              error: oH(Hb.error) ? Hb.error : void 0,
-              severity: SH(Hb.error),
-              gameServerUnreachable: (0, ib.b)(Hb.error),
-              rematch: (0, eb.b)(Hb.error),
-              gameRefused: (0, Cb.d)(Hb.error)
+            }) : Mb.e.errorWithCode(function(bb) {
+              if (bb instanceof hb.A || bb instanceof Db.i) return bb.message;
+              if (oe(bb)) return (0, Fb.n)(bb.code, bb.serverText);
+              return Fb.h
+            }(eb.error), Tb.k.CONNECT_TO_GAME_SERVER, {
+              error: le(eb.error) ? eb.error : void 0,
+              severity: te(eb.error),
+              gameServerUnreachable: (0, Gb.b)(eb.error),
+              rematch: (0, yb.d)(eb.error),
+              gameRefused: (0, Zb.d)(eb.error)
             })
           }
-          return RH("Reloading into the new build");
+          return we("Reloading into the new build");
         case "stopped":
-          return RH("The game client stopped, and shows why");
-        case "Gs":
-          return RH("Left the game while it loaded")
+          return we("The game client stopped, and shows why");
+        case "xU":
+          return we("Left the game while it loaded")
       }
     }
 
-    function rH(bb) {
-      return bb instanceof Eb.k || bb instanceof Eb.d && "attach" !== bb.stage
+    function oe(bb) {
+      return bb instanceof hb.n || bb instanceof hb.b && "attach" !== bb.stage
     }
 
-    function oH(bb) {
-      return !(bb instanceof Eb.w) && !rH(bb) && void 0 === (0, ib.b)(bb)
+    function le(bb) {
+      return !(bb instanceof hb.A) && !oe(bb) && void 0 === (0, Gb.b)(bb)
     }
 
-    function SH(bb) {
-      return rH(bb) ? bb instanceof Eb.d && (0, Db.m)(bb.code).requiresRefresh ? "medium" : "low" : oH(bb) || bb instanceof Eb.w ? "medium" : "low"
+    function te(bb) {
+      return oe(bb) ? bb instanceof hb.b && (0, Fb.j)(bb.code).requiresRefresh ? "medium" : "low" : le(bb) || bb instanceof hb.A ? "medium" : "low"
     }
 
-    function RH(bb) {
-      return Wb.d.errorWithCode(bb, ab.k.CONNECT_TO_GAME_SERVER, {
+    function we(bb) {
+      return Mb.e.errorWithCode(bb, Tb.k.CONNECT_TO_GAME_SERVER, {
         severity: "low",
-        Gs: !0
+        xU: !0
       })
     }
-    class vH {
+    class se {
       leave(bb) {
-        if ((0, Vb.b)()) {
-          var cb, sb;
-          if ((0, Tb.b)()) return;
-          (0, nb.c)(!0 === (null === (cb = (0, Vb.l)()) || void 0 === cb || null === (sb = cb.currentViewer) || void 0 === sb ? void 0 : sb.unsavedChanges), bb)
+        if ((0, zb.c)()) {
+          var ab, Ub;
+          if ((0, Eb.c)()) return;
+          (0, Xb.c)(!0 === (null === (ab = (0, zb.k)()) || void 0 === ab || null === (Ub = ab.currentViewer) || void 0 === Ub ? void 0 : Ub.unsavedChanges), bb)
         } else this.leaveLive()
       }
       leaveLive() {
         var bb;
-        tH && (null === (bb = RI()) || void 0 === bb || bb.endGamePack());
-        if (!iH) return;
-        iH = !1, (0, Qb.i)();
+        me && (null === (bb = wB()) || void 0 === bb || bb.endGamePack());
+        if (!Ie) return;
+        Ie = !1, (0, kb.i)();
         try {
-          var cb;
-          null === (cb = (0, ub.s)()) || void 0 === cb || cb.clearWasmCameraScreen()
-        } catch (kb) {
-          console.error("[bloxd-wasm-client] the camera screen didn't clear", kb)
+          var ab;
+          null === (ab = (0, ib.r)()) || void 0 === ab || ab.clearWasmCameraScreen()
+        } catch (Ab) {
+          console.error("[bloxd-wasm-client] the camera screen didn't clear", Ab)
         }
         const {
-          gameNameWithVariation: sb
-        } = (0, Xb.d)();
+          gameNameWithVariation: Ub
+        } = (0, Pb.e)();
         try {
-          aI()
+          aB()
         } finally {
-          (0, Xb.o)({
+          (0, Pb.r)({
             websocketUrl: null
-          }), Ib.j.QQ("leaveGame", {
-            gameNameWithVariation: sb
-          }), (0, fb.L)()
+          }), Bb.m.IR("leaveGame", {
+            gameNameWithVariation: Ub
+          }), (0, vb.P)()
         }
       }
       isReplay() {
-        return (0, Vb.b)()
+        return (0, zb.c)()
       }
     }
   },
-  40428: (bb, cb, sb) => {
-    sb.d(cb, {
-      c: () => Wb,
-      f: () => kb,
-      g: () => Ub,
-      i: () => Tb
+  40117: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      e: () => Mb,
+      h: () => Ab,
+      l: () => Yb,
+      o: () => Eb
     });
-    const kb = 12e4,
-      Wb = 3e4,
-      ab = {
+    const Ab = 12e4,
+      Mb = 3e4,
+      Tb = {
         hidden: () => "undefined" !== typeof document && document.hidden,
         listen: bb => "undefined" === typeof document ? () => {} : (document.addEventListener("visibilitychange", bb), () => {
           document.removeEventListener("visibilitychange", bb)
         })
       };
 
-    function Tb(bb) {
+    function Eb(bb) {
       return `it sent no start within ${Math.round(bb)} ms`
     }
-    class Ub {
-      constructor(bb, cb) {
-        let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => performance.now(),
-          kb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : ab;
-        this.timeoutMs = bb, this.onTimeout = cb, this.now = sb, this.visibility = kb, this.timer = null, this.counted = 0, this.step = null, this.unlisten = void 0, this.unlisten = kb.listen((() => {
+    class Yb {
+      constructor(bb, ab) {
+        let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => performance.now(),
+          Ab = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Tb;
+        this.timeoutMs = bb, this.onTimeout = ab, this.now = Ub, this.visibility = Ab, this.timer = null, this.counted = 0, this.step = null, this.unlisten = void 0, this.unlisten = Ab.listen((() => {
           this.onVisibility()
-        })), kb.hidden() || this.next()
+        })), Ab.hidden() || this.next()
       }
       cancel() {
         this.pause(), this.unlisten()
@@ -8511,26 +8110,26 @@ export const modules = {
         if (bb <= 0) return void this.arm(1e3, (() => {
           this.cancel(), this.onTimeout(this.counted)
         }));
-        const cb = Math.min(bb, 5e3);
+        const ab = Math.min(bb, 5e3);
         this.step = {
           at: this.now(),
-          ms: cb
-        }, this.arm(cb, (() => {
+          ms: ab
+        }, this.arm(ab, (() => {
           this.counted += this.credit(), this.step = null, this.next()
         }))
       }
-      arm(bb, cb) {
+      arm(bb, ab) {
         this.timer = setTimeout((() => {
-          this.timer = null, cb()
+          this.timer = null, ab()
         }), bb)
       }
     }
   },
-  40323: (bb, cb, sb) => {
-    sb.d(cb, {
-      e: () => kb
+  40012: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      b: () => Ab
     });
-    const kb = {
+    const Ab = {
       roomsPerServerMax: 30,
       timeForPlayerToConnect: 3e4,
       seatReservationSeconds: 15,
@@ -8554,48 +8153,48 @@ export const modules = {
       drainingSessionLobbyFillMs: 3e5
     }
   },
-  38335: (bb, cb, sb) => {
-    sb.d(cb, {
-      c: () => ab
+  38042: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      b: () => Tb
     });
-    var kb = sb(3500);
-    const Wb = ["none", "idle", "now"];
+    var Ab = Ub(3376);
+    const Mb = ["none", "idle", "now"];
 
-    function ab() {
-      const bb = () => (0, kb.G)();
+    function Tb() {
+      const bb = () => (0, Ab.x)();
       return {
-        memoryBytes: () => (0, kb.u)().buffer.byteLength,
-        reserveUpFront: cb => bb().uM(cb),
-        reserveAhead: cb => bb().LM(cb),
-        setCeiling: cb => {
-          bb().YM(cb)
+        memoryBytes: () => (0, Ab.q)().buffer.byteLength,
+        reserveUpFront: ab => bb().Sv(ab),
+        reserveAhead: ab => bb().nv(ab),
+        setCeiling: ab => {
+          bb().bL(ab)
         },
-        lowWater: () => Wb[bb().VM()] ?? "none",
+        lowWater: () => Mb[bb().Jv()] ?? "none",
         stats: () => function(bb) {
-          const cb = new Uint32Array((0, kb.u)().buffer, bb, 17),
-            sb = bb => cb[bb] ?? 0,
-            Wb = bb => ({
-              upFront: sb(bb),
-              ahead: sb(bb + 1),
-              onDemandInFrame: sb(bb + 2),
-              onDemand: sb(bb + 3)
+          const ab = new Uint32Array((0, Ab.q)().buffer, bb, 17),
+            Ub = bb => ab[bb] ?? 0,
+            Mb = bb => ({
+              upFront: Ub(bb),
+              ahead: Ub(bb + 1),
+              onDemandInFrame: Ub(bb + 2),
+              onDemand: Ub(bb + 3)
             });
           return {
-            memoryBytes: sb(0),
-            initialBytes: sb(1),
-            liveBytes: sb(2),
-            peakLiveBytes: sb(3),
-            headroomBytes: sb(4),
-            unusedBytes: sb(5),
-            ceilingBytes: sb(6),
-            reservesRefused: sb(7),
-            grows: Wb(8),
-            grownBytes: Wb(12),
-            allocationsRefused: sb(16)
+            memoryBytes: Ub(0),
+            initialBytes: Ub(1),
+            liveBytes: Ub(2),
+            peakLiveBytes: Ub(3),
+            headroomBytes: Ub(4),
+            unusedBytes: Ub(5),
+            ceilingBytes: Ub(6),
+            reservesRefused: Ub(7),
+            grows: Mb(8),
+            grownBytes: Mb(12),
+            allocationsRefused: Ub(16)
           }
-        }(bb().hM()),
-        takeBallast: () => bb().JM(),
-        takePressure: () => bb().gM()
+        }(bb().aL()),
+        takeBallast: () => bb().UL(),
+        takePressure: () => bb().AL()
       }
     }
   }

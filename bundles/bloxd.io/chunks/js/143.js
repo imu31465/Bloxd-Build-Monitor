@@ -1,58 +1,58 @@
 export const id = 143;
 export const ids = [143];
 export const modules = {
-  7729: (bb, cb, sb) => {
-    sb.r(cb), sb.d(cb, {
-      GameDistributionSdkAdaptor: () => ab
+  7693: (bb, ab, Ub) => {
+    Ub.r(ab), Ub.d(ab, {
+      GameDistributionSdkAdaptor: () => Tb
     });
-    var kb = sb(1307),
-      Wb = sb(1185);
-    class ab extends kb.c {
+    var Ab = Ub(1240),
+      Mb = Ub(1118);
+    class Tb extends Ab.d {
       constructor(bb) {
         super(), this.setOnEndCb = bb, this.name = "gamedistribution"
       }
       static async setup() {
         let bb;
-        let cb;
+        let ab;
         return window.GD_OPTIONS = {
           gameId: "b35b336d21654aa5a378480d13ed7225",
-          onEvent: sb => {
-            const kb = () => {
-              cb && (window.adCompleteSoResume(), cb = !1), bb && (bb(), bb = null)
+          onEvent: Ub => {
+            const Ab = () => {
+              ab && (window.adCompleteSoResume(), ab = !1), bb && (bb(), bb = null)
             };
-            switch (sb.name) {
+            switch (Ub.name) {
               case "SDK_GAME_START":
-                console.log("Gamedis SDK_GAME_START"), cb = !1, bb ? (bb(), bb = null, window.adCompleteSoResume()) : console.error("onEndCb is not defined during SDK_GAME_START for gamedis sdk. Probably means error happened before.");
+                console.log("Gamedis SDK_GAME_START"), ab = !1, bb ? (bb(), bb = null, window.adCompleteSoResume()) : console.error("onEndCb is not defined during SDK_GAME_START for gamedis sdk. Probably means error happened before.");
                 break;
               case "SDK_GAME_PAUSE":
                 console.log("Gamedis SDK_GAME_PAUSE"), window.adStartSoPause(null, {
                   preventMovement: !0
-                }), cb = !0;
+                }), ab = !0;
                 break;
               case "SDK_ERROR":
-                console.error("Gamedis SDK_ERROR fired"), kb();
+                console.error("Gamedis SDK_ERROR fired"), Ab();
                 break;
               case "SDK_GDPR_TRACKING":
               case "SDK_GDPR_TARGETING":
               default:
                 break;
               case "AD_ERROR":
-                console.error("Gamedis AD_ERROR fired"), kb();
+                console.error("Gamedis AD_ERROR fired"), Ab();
                 break;
               case "AD_IS_ALREADY_RUNNING":
-                console.error("Gamedis AD_IS_ALREADY_RUNNING fired"), kb();
+                console.error("Gamedis AD_IS_ALREADY_RUNNING fired"), Ab();
                 break;
               case "DISPLAYAD_ERROR":
-                console.error("Gamedis DISPLAYAD_ERROR fired"), console.error(sb)
+                console.error("Gamedis DISPLAYAD_ERROR fired"), console.error(Ub)
             }
           }
-        }, await (0, Wb.d)("https://html5.api.gamedistribution.com/main.min.js", {
+        }, await (0, Mb.b)("https://html5.api.gamedistribution.com/main.min.js", {
           id: "gamedistribution-jssdk"
-        }), new ab((cb => {
-          bb = cb
+        }), new Tb((ab => {
+          bb = ab
         }))
       }
-      playVideoAd(bb, cb) {
+      playVideoAd(bb, ab) {
         this.setOnEndCb(bb), console.log("Requesting gamedis preroll"), window.gdsdk.showAd()
       }
       renderBanner(bb) {

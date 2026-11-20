@@ -1,40 +1,40 @@
 export const id = 119;
 export const ids = [119];
 export const modules = {
-  6190: (bb, cb, sb) => {
-    sb.r(cb), sb.d(cb, {
-      default: () => Xb
+  6149: (bb, ab, Ub) => {
+    Ub.r(ab), Ub.d(ab, {
+      default: () => Pb
     });
-    var kb = sb(1327),
-      Wb = sb(64),
-      ab = sb(131),
-      Tb = sb(1511),
-      Ub = sb(1241),
-      Ib = sb(334),
-      Hb = sb(649);
-    const fb = new URL(Ub.q[Ib.c.PRODUCTION]).origin;
-    var Mb = sb(1087);
+    var Ab = Ub(1254),
+      Mb = Ub(52),
+      Tb = Ub(109),
+      Eb = Ub(1446),
+      Yb = Ub(1171),
+      Bb = Ub(307),
+      eb = Ub(603);
+    const vb = new URL(Yb.k[Bb.b.PRODUCTION]).origin;
+    var Lb = Ub(1023);
 
-    function Xb() {
-      const bb = (0, Tb.D)();
-      return (0, Wb.useEffect)((() => {
-        const cb = ab.currentUrl.getSearchParam("code");
-        ab.currentUrl.removeSearchParam("code"), null === cb && (console.error("No authorization code found in the URL"), window.close());
-        const sb = {
+    function Pb() {
+      const bb = (0, Eb.F)();
+      return (0, Mb.useEffect)((() => {
+        const ab = Tb.currentUrl.getSearchParam("code");
+        Tb.currentUrl.removeSearchParam("code"), null === ab && (console.error("No authorization code found in the URL"), window.close());
+        const Ub = {
           type: `oauth_authentication_${bb.providerName}`,
-          code: cb
+          code: ab
         };
-        for (const bb of (Wb = window.location.origin) === fb ? [Wb, `https://${Hb.d}`] : [Wb]) {
-          var kb;
-          null === (kb = window.opener) || void 0 === kb || kb.postMessage(sb, bb)
+        for (const bb of (Mb = window.location.origin) === vb ? [Mb, `https://${eb.c}`] : [Mb]) {
+          var Ab;
+          null === (Ab = window.opener) || void 0 === Ab || Ab.postMessage(Ub, bb)
         }
-        var Wb;
+        var Mb;
         setTimeout((() => {
           window.close()
         }), 1e3)
-      })), (0, Mb.jsx)("div", {
+      })), (0, Lb.jsx)("div", {
         className: "AuthCallback",
-        children: (0, Mb.jsx)(kb.d, {
+        children: (0, Lb.jsx)(Ab.b, {
           showFace: !0,
           loading: !0
         })

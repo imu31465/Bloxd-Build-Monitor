@@ -1,79 +1,79 @@
 export const id = 100;
 export const ids = [100];
 export const modules = {
-  4615: (bb, cb, sb) => {
-    sb.d(cb, {
-      c: () => Xb
+  4595: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      e: () => Pb
     });
-    var kb = sb(1033),
-      Wb = sb.n(kb),
-      ab = sb(1039),
-      Tb = sb(1327),
-      Ub = sb(3294),
-      Ib = sb(167),
-      Hb = sb(3335),
-      fb = sb(3329),
-      Mb = sb(1087);
+    var Ab = Ub(984),
+      Mb = Ub.n(Ab),
+      Tb = Ub(990),
+      Eb = Ub(1254),
+      Yb = Ub(3180),
+      Bb = Ub(137),
+      eb = Ub(3211),
+      vb = Ub(3200),
+      Lb = Ub(1023);
 
-    function Xb(bb) {
+    function Pb(bb) {
       let {
-        game: cb
+        game: ab
       } = bb;
-      const sb = (0, Ib.k)() ? "large" : "small",
-        kb = (0, Hb.f)(cb, sb),
-        Xb = (0, Ub.f)(kb),
-        nb = void 0 !== Xb.blurhash;
-      return (0, Mb.jsxs)("div", {
+      const Ub = (0, Bb.j)() ? "large" : "small",
+        Ab = (0, eb.c)(ab, Ub),
+        Pb = (0, Yb.f)(Ab),
+        Xb = void 0 !== Pb.blurhash;
+      return (0, Lb.jsxs)("div", {
         className: "SchematicImageContainer",
-        children: [Xb.isLoading && !nb && (0, Mb.jsx)(Tb.d, {
+        children: [Pb.isLoading && !Xb && (0, Lb.jsx)(Eb.b, {
           loaderType: "Secondary"
-        }), !Xb.failed && (null !== Xb.src || nb) && (0, Mb.jsx)("div", {
-          className: Wb()("SchematicImage", fb.h, {
-            SchematicImageFadeIn: Xb.fadeIn && !nb
+        }), !Pb.failed && (null !== Pb.src || Xb) && (0, Lb.jsx)("div", {
+          className: Mb()("SchematicImage", vb.f, {
+            SchematicImageFadeIn: Pb.fadeIn && !Xb
           }),
-          style: (0, fb.e)(Xb),
-          children: (0, Mb.jsx)(fb.c, {
-            image: Xb
+          style: (0, vb.d)(Pb),
+          children: (0, Lb.jsx)(vb.c, {
+            image: Pb
           })
-        }), Xb.failed && (0, Mb.jsx)("div", {
+        }), Pb.failed && (0, Lb.jsx)("div", {
           className: "SchematicImageError",
-          children: (0, Mb.jsx)(ab.b, {
+          children: (0, Lb.jsx)(Tb.e, {
             name: "face-dizzy"
           })
         })]
       })
     }
   },
-  6167: (bb, cb, sb) => {
-    sb.r(cb), sb.d(cb, {
-      default: () => Zb
+  6117: (bb, ab, Ub) => {
+    Ub.r(ab), Ub.d(ab, {
+      default: () => rb
     });
-    sb(4608);
-    var kb = sb(64),
-      Wb = sb(1033),
-      ab = sb.n(Wb),
-      Tb = sb(334),
-      Ub = sb(1015),
-      Ib = sb(1235),
-      Hb = sb(1001),
-      fb = sb(1197),
-      Mb = sb(1474),
-      Xb = sb(3349),
-      nb = sb(1117),
-      mb = sb(4615),
-      lb = sb(2441),
-      Qb = sb(1431),
-      eb = sb(4304),
-      Cb = sb(4622),
-      Nb = sb(1327),
-      Vb = sb(1495),
-      Lb = sb(4295),
-      ub = sb(2396),
-      Yb = sb(4625),
-      hb = sb(6084),
-      Jb = sb(1528),
-      gb = sb(1087);
-    const Bb = [{
+    Ub(4589);
+    var Ab = Ub(52),
+      Mb = Ub(984),
+      Tb = Ub.n(Mb),
+      Eb = Ub(307),
+      Yb = Ub(963),
+      Bb = Ub(1162),
+      eb = Ub(945),
+      vb = Ub(1134),
+      Lb = Ub(1413),
+      Pb = Ub(3220),
+      Xb = Ub(1060),
+      jb = Ub(4595),
+      Rb = Ub(2397),
+      kb = Ub(1352),
+      yb = Ub(4244),
+      Zb = Ub(4598),
+      Db = Ub(1254),
+      zb = Ub(1433),
+      xb = Ub(4239),
+      ib = Ub(2348),
+      fb = Ub(4607),
+      mb = Ub(6022),
+      pb = Ub(1458),
+      Nb = Ub(1023);
+    const Wb = [{
         scope: "customGames",
         title: "studio:leaderboardCustomGames"
       }, {
@@ -83,311 +83,311 @@ export const modules = {
         scope: "dormantGames",
         title: "studio:leaderboardDormantGames"
       }],
-      tb = 25,
-      yb = "scope",
-      Pb = "category",
-      Db = "customGames";
-    const Eb = 7,
-      ib = {
+      Hb = 25,
+      Ib = "scope",
+      db = "category",
+      Fb = "customGames";
+    const hb = 7,
+      Gb = {
         playsPerDay: null,
         avgPlaytimeMinutes: null,
         retention: null
       };
 
-    function Ob(bb) {
+    function Qb(bb) {
       let {
-        position: cb
+        position: ab
       } = bb;
-      const sb = hb.c[cb];
-      return (0, gb.jsxs)("td", {
-        className: ab()("StudioLeaderboardPosition", {
-          StudioLeaderboardTopPosition: void 0 !== sb,
-          [`StudioLeaderboardTopPosition${cb}`]: void 0 !== sb
+      const Ub = mb.b[ab];
+      return (0, Nb.jsxs)("td", {
+        className: Tb()("StudioLeaderboardPosition", {
+          StudioLeaderboardTopPosition: void 0 !== Ub,
+          [`StudioLeaderboardTopPosition${ab}`]: void 0 !== Ub
         }),
-        children: [void 0 !== sb && (0, gb.jsx)("img", {
+        children: [void 0 !== Ub && (0, Nb.jsx)("img", {
           className: "StudioLeaderboardPositionItem",
-          src: sb,
+          src: Ub,
           alt: ""
-        }), cb]
+        }), ab]
       })
     }
 
-    function Gb(bb) {
+    function qb(bb) {
       let {
-        discoverability: cb
+        discoverability: ab
       } = bb;
       const {
-        playsPerDay: sb,
-        avgPlaytimeMinutes: Wb,
-        retention: ab
-      } = null === cb ? ib : (0, Xb.k)(cb);
-      return (0, gb.jsxs)(kb.Fragment, {
-        children: [(0, gb.jsx)("td", {
-          children: null !== sb ? (0, Xb.d)(sb) : "-"
-        }), (0, gb.jsx)("td", {
-          children: null !== Wb ? (0, Xb.f)(Wb) : "-"
-        }), (0, gb.jsx)("td", {
-          children: null !== ab ? (0, Xb.j)(ab) : "-"
+        playsPerDay: Ub,
+        avgPlaytimeMinutes: Mb,
+        retention: Tb
+      } = null === ab ? Gb : (0, Pb.m)(ab);
+      return (0, Nb.jsxs)(Ab.Fragment, {
+        children: [(0, Nb.jsx)("td", {
+          children: null !== Ub ? (0, Pb.d)(Ub) : "-"
+        }), (0, Nb.jsx)("td", {
+          children: null !== Mb ? (0, Pb.e)(Mb) : "-"
+        }), (0, Nb.jsx)("td", {
+          children: null !== Tb ? (0, Pb.i)(Tb) : "-"
         })]
       })
     }
 
-    function Kb(bb) {
+    function ub(bb) {
       let {
-        discoverability: cb
+        discoverability: ab
       } = bb;
-      return (0, gb.jsx)("td", {
+      return (0, Nb.jsx)("td", {
         className: "StudioLeaderboardEngagementScore",
-        children: void 0 !== (null === cb || void 0 === cb ? void 0 : cb.engagementScore) ? (0, Ib.K)(Math.round(cb.engagementScore)) : "-"
+        children: void 0 !== (null === ab || void 0 === ab ? void 0 : ab.engagementScore) ? (0, Bb.T)(Math.round(ab.engagementScore)) : "-"
       })
     }
 
-    function Zb() {
-      var bb, cb;
+    function rb() {
+      var bb, ab;
       const {
-        t: sb
-      } = (0, fb.E)(), Wb = (0, Vb.useNavigatePreserveSearch)(), {
-        userContext: ab,
-        isUserContextUpdating: hb
-      } = (0, nb.c)(), ib = (0, ub.p)(), [Zb, zb] = (0, Lb.m)(), qb = (db = Zb.get(yb), Bb.some((bb => bb.scope === db)) ? db : Db);
-      var db;
-      const Ab = function(bb) {
-          return Tb._.includes(bb) ? bb : null
-        }(Zb.get(Pb)),
-        wb = (0, Lb.d)(Zb.get(Lb.b)),
-        [rb, ob] = (0, kb.useState)(null),
-        [Sb, Rb] = (0, kb.useState)(!1);
+        t: Ub
+      } = (0, vb.A)(), Mb = (0, zb.useNavigatePreserveSearch)(), {
+        userContext: Tb,
+        isUserContextUpdating: mb
+      } = (0, Xb.c)(), Gb = (0, ib.m)(), [rb, Kb] = (0, xb.l)(), ob = (lb = rb.get(Ib), Wb.some((bb => bb.scope === lb)) ? lb : Fb);
+      var lb;
+      const tb = function(bb) {
+          return Eb.N.includes(bb) ? bb : null
+        }(rb.get(db)),
+        wb = (0, xb.e)(rb.get(xb.b)),
+        [sb, gb] = (0, Ab.useState)(null),
+        [Cb, Vb] = (0, Ab.useState)(!1);
 
-      function vb(bb) {
-        zb((cb => {
-          (0, Lb.g)(cb, yb, bb.scope === Db ? null : bb.scope), (0, Lb.g)(cb, Pb, bb.category), (0, Lb.k)(cb, bb.page)
+      function Ob(bb) {
+        Kb((ab => {
+          (0, xb.f)(ab, Ib, bb.scope === Fb ? null : bb.scope), (0, xb.f)(ab, db, bb.category), (0, xb.h)(ab, bb.page)
         }))
       }
-      const Fb = !hb && ab.playerHasRank("developer"),
-        xb = Fb && "allGames" === qb,
-        jb = Fb && "dormantGames" === qb;
-      (0, kb.useEffect)((() => {
-        if (hb) return;
+      const cb = !mb && Tb.playerHasRank("developer"),
+        Jb = cb && "allGames" === ob,
+        nb = cb && "dormantGames" === ob;
+      (0, Ab.useEffect)((() => {
+        if (mb) return;
         let bb = !1;
-        return ob(null), Rb(!1), Mb.b.getPublishedGamePreviews(ab, {
+        return gb(null), Vb(!1), Lb.b.getPublishedGamePreviews(Tb, {
           searchQuery: null,
           pageNumber: wb,
-          pageSize: tb,
+          pageSize: Hb,
           onlyFavouriteGames: !1,
           onlyOwnedGames: !1,
           onlyApprovedGames: !1,
           schematicIdsToExclude: [],
-          gameCategories: null !== Ab ? [Ab] : [],
+          gameCategories: null !== tb ? [tb] : [],
           upAndComing: !1,
-          dormantGames: jb,
+          dormantGames: nb,
           sortByEngagementScore: !0,
-          firstPartyGameNames: xb ? Hb.c : void 0,
+          firstPartyGameNames: Jb ? eb.c : void 0,
           includeOwners: !0
-        }).then((cb => {
-          bb || ob(cb)
-        })).catch((cb => {
-          console.error("Failed to load the studio leaderboard", cb), bb || Rb(!0)
+        }).then((ab => {
+          bb || gb(ab)
+        })).catch((ab => {
+          console.error("Failed to load the studio leaderboard", ab), bb || Vb(!0)
         })), () => {
           bb = !0
         }
-      }), [hb, xb, jb, Ab, wb, ab]);
-      const pb = null !== (bb = null === rb || void 0 === rb ? void 0 : rb.results) && void 0 !== bb ? bb : null,
-        bc = function(bb, cb, sb) {
-          const [Wb, ab] = (0, kb.useState)({}), Tb = sb ? (null !== bb && void 0 !== bb ? bb : []).flatMap((bb => "firstPartyGame" === bb.type ? [(0, Ub.f)(bb.gameNameWithVariation, !0)] : [])).join(",") : "", Ib = (0, kb.useMemo)((() => "" === Tb ? [] : Tb.split(",")), [Tb]);
-          return (0, kb.useEffect)((() => {
-            if (0 === Ib.length) return void ab({});
+      }), [mb, Jb, nb, tb, wb, Tb]);
+      const Sb = null !== (bb = null === sb || void 0 === sb ? void 0 : sb.results) && void 0 !== bb ? bb : null,
+        ba = function(bb, ab, Ub) {
+          const [Mb, Tb] = (0, Ab.useState)({}), Eb = Ub ? (null !== bb && void 0 !== bb ? bb : []).flatMap((bb => "firstPartyGame" === bb.type ? [(0, Yb.h)(bb.gameNameWithVariation, !0)] : [])).join(",") : "", Bb = (0, Ab.useMemo)((() => "" === Eb ? [] : Eb.split(",")), [Eb]);
+          return (0, Ab.useEffect)((() => {
+            if (0 === Bb.length) return void Tb({});
             let bb = !1;
-            return Mb.b.getGamesByAnalyticsIds(cb, Ib).then((cb => {
-              bb || ab(cb)
+            return Lb.b.getGamesByAnalyticsIds(ab, Bb).then((ab => {
+              bb || Tb(ab)
             })).catch((bb => {
               console.error("Failed to load first party discoverability for the studio leaderboard", bb)
             })), () => {
               bb = !0
             }
-          }), [Ib, cb]), Wb
-        }(pb, ab, Fb),
-        cc = null !== pb ? function(bb, cb, sb, kb, Wb) {
-          return bb.map(((bb, ab) => {
-            var Tb;
-            const Ib = kb + ab + 1;
+          }), [Bb, ab]), Mb
+        }(Sb, Tb, cb),
+        aa = null !== Sb ? function(bb, ab, Ub, Ab, Mb) {
+          return bb.map(((bb, Tb) => {
+            var Eb;
+            const Bb = Ab + Tb + 1;
             if ("customGame" === bb.type) {
-              const cb = bb.preview;
+              const ab = bb.preview;
               return {
-                key: cb.schematicId,
-                position: Ib,
-                thumbnail: (0, gb.jsx)(mb.c, {
-                  game: cb
+                key: ab.schematicId,
+                position: Bb,
+                thumbnail: (0, Nb.jsx)(jb.e, {
+                  game: ab
                 }),
-                name: cb.name,
+                name: ab.name,
                 owner: bb.owner,
-                category: cb.gameCategory,
-                ccu: cb.ccu,
-                favourites: cb.favourites,
-                discoverability: (0, Xb.n)(cb) ? cb : null,
-                url: (0, Jb.l)((0, Ub.c)(cb.schematicId))
+                category: ab.gameCategory,
+                ccu: ab.ccu,
+                favourites: ab.favourites,
+                discoverability: (0, Pb.o)(ab) ? ab : null,
+                url: (0, pb.i)((0, Yb.d)(ab.schematicId))
               }
             }
-            const Hb = bb.gameNameWithVariation,
-              fb = (0, Ub.f)(Hb, !0);
+            const eb = bb.gameNameWithVariation,
+              vb = (0, Yb.h)(eb, !0);
             return {
-              key: Hb,
-              position: Ib,
-              thumbnail: (0, gb.jsx)(Yb.e, {
-                game: Hb
+              key: eb,
+              position: Bb,
+              thumbnail: (0, Nb.jsx)(fb.d, {
+                game: eb
               }),
-              name: (0, Jb.i)(Hb, Wb),
+              name: (0, pb.h)(eb, Mb),
               owner: null,
-              category: (0, Jb.b)(Hb),
-              ccu: (0, ub.d)(Hb, cb),
+              category: (0, pb.d)(eb),
+              ccu: (0, ib.e)(eb, ab),
               favourites: null,
-              discoverability: null !== (Tb = sb[fb]) && void 0 !== Tb ? Tb : null,
-              url: (0, Jb.l)(fb)
+              discoverability: null !== (Eb = Ub[vb]) && void 0 !== Eb ? Eb : null,
+              url: (0, pb.i)(vb)
             }
           }))
-        }(pb, ib, bc, (wb - 1) * tb, sb) : [],
-        sc = !Sb && null === rb,
-        kc = !sc && !Sb && 0 === cc.length,
-        Wc = null !== (cb = null === rb || void 0 === rb ? void 0 : rb.totalPages) && void 0 !== cb ? cb : 1;
-      return (0, gb.jsxs)("div", {
+        }(Sb, Gb, ba, (wb - 1) * Hb, Ub) : [],
+        Ua = !Cb && null === sb,
+        Aa = !Ua && !Cb && 0 === aa.length,
+        Ma = null !== (ab = null === sb || void 0 === sb ? void 0 : sb.totalPages) && void 0 !== ab ? ab : 1;
+      return (0, Nb.jsxs)("div", {
         className: "StudioPage StudioLeaderboard",
-        children: [(0, gb.jsx)("div", {
+        children: [(0, Nb.jsx)("div", {
           className: "StudioPageHeader",
-          children: (0, gb.jsx)("h1", {
+          children: (0, Nb.jsx)("h1", {
             className: "StudioPageTitle",
-            children: sb("studio:leaderboard")
+            children: Ub("studio:leaderboard")
           })
-        }), (0, gb.jsxs)("div", {
+        }), (0, Nb.jsxs)("div", {
           className: "StudioLeaderboardBanner",
-          children: [!jb && (0, gb.jsx)("div", {
-            children: sb("studio:leaderboardBanner")
-          }), jb && (0, gb.jsx)("div", {
-            children: sb("studio:leaderboardDormantBanner")
-          }), (0, gb.jsx)("div", {
-            children: sb("studio:leaderboardMetricsBanner", {
-              days: Eb
+          children: [!nb && (0, Nb.jsx)("div", {
+            children: Ub("studio:leaderboardBanner")
+          }), nb && (0, Nb.jsx)("div", {
+            children: Ub("studio:leaderboardDormantBanner")
+          }), (0, Nb.jsx)("div", {
+            children: Ub("studio:leaderboardMetricsBanner", {
+              days: hb
             })
           })]
-        }), Fb && (0, gb.jsx)("div", {
+        }), cb && (0, Nb.jsx)("div", {
           className: "StudioLeaderboardScopes",
-          children: Bb.map((bb => (0, gb.jsx)(Qb.M, {
-            active: qb === bb.scope,
+          children: Wb.map((bb => (0, Nb.jsx)(kb.M, {
+            active: ob === bb.scope,
             onClick: () => {
-              vb({
+              Ob({
                 scope: bb.scope,
-                category: Ab,
+                category: tb,
                 page: 1
               })
             },
-            children: sb(bb.title)
+            children: Ub(bb.title)
           }, bb.scope)))
-        }), (0, gb.jsxs)("div", {
+        }), (0, Nb.jsxs)("div", {
           className: "StudioLeaderboardCategories",
-          children: [(0, gb.jsx)(Qb.M, {
-            active: null === Ab,
+          children: [(0, Nb.jsx)(kb.M, {
+            active: null === tb,
             onClick: () => {
-              vb({
-                scope: qb,
+              Ob({
+                scope: ob,
                 category: null,
                 page: 1
               })
             },
-            children: sb("studio:leaderboardAllCategories")
-          }), Tb._.map((bb => (0, gb.jsx)(Qb.M, {
-            active: Ab === bb,
+            children: Ub("studio:leaderboardAllCategories")
+          }), Eb.N.map((bb => (0, Nb.jsx)(kb.M, {
+            active: tb === bb,
             onClick: () => {
-              vb({
-                scope: qb,
+              Ob({
+                scope: ob,
                 category: bb,
                 page: 1
               })
             },
-            children: (0, Tb.lb)(bb)
+            children: (0, Eb._)(bb)
           }, bb)))]
-        }), sc && (0, gb.jsx)("div", {
+        }), Ua && (0, Nb.jsx)("div", {
           className: "StudioPageLoader AnimFadeIn",
-          children: (0, gb.jsx)(Nb.d, {})
-        }), Sb && (0, gb.jsx)("div", {
+          children: (0, Nb.jsx)(Db.b, {})
+        }), Cb && (0, Nb.jsx)("div", {
           className: "StudioPageMessage AnimFadeIn",
-          children: sb("studio:failedToLoadLeaderboard")
-        }), kc && (0, gb.jsx)("div", {
+          children: Ub("studio:failedToLoadLeaderboard")
+        }), Aa && (0, Nb.jsx)("div", {
           className: "StudioPageMessage AnimFadeIn",
-          children: sb("studio:leaderboardEmpty")
-        }), !sc && !Sb && !kc && (0, gb.jsx)("div", {
+          children: Ub("studio:leaderboardEmpty")
+        }), !Ua && !Cb && !Aa && (0, Nb.jsx)("div", {
           className: "StudioLeaderboardTableScroll AnimFadeIn",
-          children: (0, gb.jsx)(Cb.e, {
+          children: (0, Nb.jsx)(Zb.b, {
             className: "StudioTable",
             columns: [{
               key: "position",
               header: "#"
             }, {
               key: "game",
-              header: sb("general:game")
+              header: Ub("general:game")
             }, {
               key: "owner",
-              header: sb("general:owner")
-            }, ...null === Ab ? [{
+              header: Ub("general:owner")
+            }, ...null === tb ? [{
               key: "category",
-              header: sb("general:category")
-            }] : [], ...Fb ? [{
+              header: Ub("general:category")
+            }] : [], ...cb ? [{
               key: "engagementScore",
               header: "engagementScore"
             }] : [], {
               key: "playsPerDay",
-              header: sb("studio:leaderboardPlaysPerDay")
+              header: Ub("studio:leaderboardPlaysPerDay")
             }, {
               key: "sessionLength",
-              header: sb("studio:leaderboardSessionLength")
+              header: Ub("studio:leaderboardSessionLength")
             }, {
               key: "retention",
-              header: sb("studio:leaderboardSessionsPerPlayer")
-            }, ...jb ? [] : [{
+              header: Ub("studio:leaderboardSessionsPerPlayer")
+            }, ...nb ? [] : [{
               key: "ccu",
-              header: sb("studio:metricCcu")
+              header: Ub("studio:metricCcu")
             }], {
               key: "favourites",
-              header: sb("general:favourites")
+              header: Ub("general:favourites")
             }],
-            rows: cc,
+            rows: aa,
             getRowKey: bb => bb.key,
-            renderRow: bb => (0, gb.jsxs)("tr", {
+            renderRow: bb => (0, Nb.jsxs)("tr", {
               onClick: () => {
-                Wb(bb.url)
+                Mb(bb.url)
               },
-              children: [(0, gb.jsx)(Ob, {
+              children: [(0, Nb.jsx)(Qb, {
                 position: bb.position
-              }), (0, gb.jsx)("td", {
-                children: (0, gb.jsx)(Yb.h, {
+              }), (0, Nb.jsx)("td", {
+                children: (0, Nb.jsx)(fb.h, {
                   thumbnail: bb.thumbnail,
                   name: bb.name
                 })
-              }), (0, gb.jsxs)("td", {
+              }), (0, Nb.jsxs)("td", {
                 className: "StudioLeaderboardOwner",
-                children: [null === bb.owner && "-", null !== bb.owner && (0, gb.jsx)(lb.h, {
+                children: [null === bb.owner && "-", null !== bb.owner && (0, Nb.jsx)(Rb.h, {
                   playerSocialPreview: bb.owner,
                   showLocation: !1,
                   opensProfileCard: !1
                 })]
-              }), null === Ab && (0, gb.jsx)("td", {
-                children: (0, Tb.lb)(bb.category)
-              }), Fb && (0, gb.jsx)(Kb, {
+              }), null === tb && (0, Nb.jsx)("td", {
+                children: (0, Eb._)(bb.category)
+              }), cb && (0, Nb.jsx)(ub, {
                 discoverability: bb.discoverability
-              }), (0, gb.jsx)(Gb, {
+              }), (0, Nb.jsx)(qb, {
                 discoverability: bb.discoverability
-              }), !jb && (0, gb.jsx)("td", {
-                children: null !== bb.ccu ? (0, Ib.K)(bb.ccu) : "-"
-              }), (0, gb.jsx)("td", {
-                children: null !== bb.favourites ? (0, Ib.K)(bb.favourites) : "-"
+              }), !nb && (0, Nb.jsx)("td", {
+                children: null !== bb.ccu ? (0, Bb.T)(bb.ccu) : "-"
+              }), (0, Nb.jsx)("td", {
+                children: null !== bb.favourites ? (0, Bb.T)(bb.favourites) : "-"
               })]
             })
           })
-        }), !Sb && (0, gb.jsx)(eb.d, {
+        }), !Cb && (0, Nb.jsx)(yb.e, {
           className: "AnimFadeIn",
           page: wb,
-          totalPages: Wc,
+          totalPages: Ma,
           onSetPage: bb => {
-            vb({
-              scope: qb,
-              category: Ab,
+            Ob({
+              scope: ob,
+              category: tb,
               page: bb
             })
           }
@@ -395,93 +395,93 @@ export const modules = {
       })
     }
   },
-  4625: (bb, cb, sb) => {
-    sb.d(cb, {
-      e: () => Tb,
-      h: () => ab
+  4607: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      d: () => Eb,
+      h: () => Tb
     });
-    var kb = sb(1528),
-      Wb = sb(1087);
+    var Ab = Ub(1458),
+      Mb = Ub(1023);
 
-    function ab(bb) {
+    function Tb(bb) {
       let {
-        thumbnail: cb,
-        name: sb
+        thumbnail: ab,
+        name: Ub
       } = bb;
-      return (0, Wb.jsxs)("div", {
+      return (0, Mb.jsxs)("div", {
         className: "StudioTableGameCell",
-        children: [(0, Wb.jsx)("div", {
+        children: [(0, Mb.jsx)("div", {
           className: "StudioTableThumbnail",
-          children: cb
-        }), (0, Wb.jsx)("span", {
+          children: ab
+        }), (0, Mb.jsx)("span", {
           className: "StudioTableGameName",
-          children: sb
+          children: Ub
         })]
       })
     }
 
-    function Tb(bb) {
+    function Eb(bb) {
       let {
-        game: cb
+        game: ab
       } = bb;
-      return (0, Wb.jsx)("img", {
+      return (0, Mb.jsx)("img", {
         className: "StudioTableThumbnailImage",
-        src: (0, kb.h)(cb),
+        src: (0, Ab.g)(ab),
         alt: ""
       })
     }
   },
-  6084: (bb, cb, sb) => {
-    sb.d(cb, {
-      c: () => kb
+  6022: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      b: () => Ab
     });
-    const kb = {
-      1: sb(6091),
-      2: sb(6094),
-      3: sb(6096)
+    const Ab = {
+      1: Ub(6025),
+      2: Ub(6033),
+      3: Ub(6041)
     }
   },
-  4622: (bb, cb, sb) => {
-    sb.d(cb, {
-      e: () => Ub
+  4598: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      b: () => Yb
     });
-    var kb = sb(64),
-      Wb = sb(1033),
-      ab = sb.n(Wb),
-      Tb = sb(1087);
+    var Ab = Ub(52),
+      Mb = Ub(984),
+      Tb = Ub.n(Mb),
+      Eb = Ub(1023);
 
-    function Ub(bb) {
+    function Yb(bb) {
       let {
-        columns: cb,
-        rows: sb,
-        getRowKey: Wb,
-        renderRow: Ub,
-        className: Ib
+        columns: ab,
+        rows: Ub,
+        getRowKey: Mb,
+        renderRow: Yb,
+        className: Bb
       } = bb;
-      return (0, Tb.jsxs)("table", {
-        className: ab()("Table", Ib),
-        children: [(0, Tb.jsx)("thead", {
-          children: (0, Tb.jsx)("tr", {
-            children: cb.map((bb => (0, Tb.jsx)("th", {
+      return (0, Eb.jsxs)("table", {
+        className: Tb()("Table", Bb),
+        children: [(0, Eb.jsx)("thead", {
+          children: (0, Eb.jsx)("tr", {
+            children: ab.map((bb => (0, Eb.jsx)("th", {
               children: bb.header
             }, bb.key)))
           })
-        }), (0, Tb.jsx)("tbody", {
-          children: sb.map((bb => (0, Tb.jsx)(kb.Fragment, {
-            children: Ub(bb)
-          }, Wb(bb))))
+        }), (0, Eb.jsx)("tbody", {
+          children: Ub.map((bb => (0, Eb.jsx)(Ab.Fragment, {
+            children: Yb(bb)
+          }, Mb(bb))))
         })]
       })
     }
   },
-  4608: () => {},
-  6091: bb => {
+  4589: () => {},
+  6025: bb => {
     bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAGVJREFUGJVjYKAZ4LF0YGBgYPiPhrErsn9/8v/Tv5//P/37+b/9+5NYFaMowqaYCaby2Z4fDAwMDAwO684xOKw7hyLGwMDAwIhmKlxSyoWD4aCgOVwNskK4YgYGBhRFuAB2HxMLAPX+QYFf3uJZAAAAAElFTkSuQmCC"
   },
-  6094: bb => {
+  6033: bb => {
     bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAKhJREFUOI1jYBhxgJGQAntrHgYGBgaGg0e//EcWDw0NZWRgYGBYvXo1inom6rkNAjBciMtFv18bQhhCEBexMqtgdSlNXYjXRbgAzKUws6juQhZ0AUIu+7HWA6+BtA9DuAthLtr/GatG3rA7WM2iXRiG+AkwMjAwMLCKnsfqUnQX2WhxMjIwMDAcufYdRZz2OSXET4CBgYGBYc2mDyjpEpeL0AHVXTgCAQAJXjDPnoKDuAAAAABJRU5ErkJggg=="
   },
-  6096: bb => {
+  6041: bb => {
     bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAK9JREFUOI3l0zEKwjAYhuE3QY+hWEWQ4lwovYE4WY+pDg7iBURwlrYgWtGD1EGCtk3aJZn6jV9+fh5CAp2LaBuY+zMArklW/PfreCUANttdaV7as31TE5pEyf0BwNQbAdCXUit1KmwUmaKkapd1Ya9atMn2h2PjQvdClVv+BCBNM+15vFxoe3fCKAwEgD8ZF/C7S5PIGw4EQP56uxXWfkoUBgCczpfSuzSJqrEu7GA+v28v0x7vVwcAAAAASUVORK5CYII="
   }
 };

@@ -1,14 +1,14 @@
 export const id = 137;
 export const ids = [137];
 export const modules = {
-  7698: (bb, cb, sb) => {
-    sb.d(cb, {
-      encodeBinaryMessageWithMetricsCookies: () => Wb
+  7653: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      encodeBinaryMessageWithMetricsCookies: () => Mb
     });
-    var kb = sb(3565);
+    var Ab = Ub(3433);
 
-    function Wb(bb) {
-      return kb.m.toBuffer(bb)
+    function Mb(bb) {
+      return Ab.k.toBuffer(bb)
     }
   }
 };

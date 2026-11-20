@@ -1,257 +1,257 @@
 export const id = 84;
 export const ids = [84];
 export const modules = {
-  39964: (bb, cb, sb) => {
-    sb.r(cb), sb.d(cb, {
-      startWasmPadGameplay: () => Kb
+  39660: (bb, ab, Ub) => {
+    Ub.r(ab), Ub.d(ab, {
+      startWasmPadGameplay: () => ub
     });
-    sb(39969);
-    var kb = sb(39971),
-      Wb = sb(39989),
-      ab = sb(1895),
-      Tb = sb(40002),
-      Ub = sb(4517),
-      Ib = sb(4498),
-      Hb = sb(40005),
-      fb = sb(40014),
-      Mb = sb(4530),
-      Xb = sb(40099),
-      nb = sb(2310),
-      mb = sb(8468),
-      lb = sb(39977),
-      Qb = sb(8442);
-    const eb = bb => {
-        const cb = Mb.b.indexOf(bb);
-        if (cb < 0) throw new Error(`No core action "${bb}"`);
-        return cb
+    Ub(39663);
+    var Ab = Ub(39671),
+      Mb = Ub(39689),
+      Tb = Ub(1844),
+      Eb = Ub(39701),
+      Yb = Ub(4485),
+      Bb = Ub(4469),
+      eb = Ub(39705),
+      vb = Ub(39714),
+      Lb = Ub(4494),
+      Pb = Ub(39780),
+      Xb = Ub(2260),
+      jb = Ub(8423),
+      Rb = Ub(39679),
+      kb = Ub(8394);
+    const yb = bb => {
+        const ab = Lb.c.indexOf(bb);
+        if (ab < 0) throw new Error(`No core action "${bb}"`);
+        return ab
       },
-      Cb = eb("primary-fire"),
-      Nb = eb("alt-fire"),
-      Vb = eb("mid-fire"),
-      Lb = eb("jump"),
-      ub = eb("ReloadGun"),
-      Yb = eb("SwapCameraZoom"),
-      hb = eb("TouchAction1"),
-      Jb = {
-        SpecialAction1: eb("SpecialAction1"),
-        SpecialAction2: eb("SpecialAction2")
+      Zb = yb("primary-fire"),
+      Db = yb("alt-fire"),
+      zb = yb("mid-fire"),
+      xb = yb("jump"),
+      ib = yb("ReloadGun"),
+      fb = yb("SwapCameraZoom"),
+      mb = yb("TouchAction1"),
+      pb = {
+        SpecialAction1: yb("SpecialAction1"),
+        SpecialAction2: yb("SpecialAction2")
       },
-      gb = (bb, cb) => {
-        (0, nb.o)(Ub.B.PadAction, bb, 0, 0, (0, nb.m)(cb, performance.now()))
+      Nb = (bb, ab) => {
+        (0, Xb.n)(Yb.J.PadAction, bb, 0, 0, (0, Xb.l)(ab, performance.now()))
       },
-      Bb = bb => {
-        gb(bb, Tb.yd.Down)
+      Wb = bb => {
+        Nb(bb, Eb.pd.Down)
       },
-      tb = bb => {
-        gb(bb, 0)
+      Hb = bb => {
+        Nb(bb, 0)
       },
-      yb = bb => {
-        Bb(bb), tb(bb)
+      Ib = bb => {
+        Wb(bb), Hb(bb)
       },
-      Pb = () => {
-        const bb = (0, fb.h)();
+      db = () => {
+        const bb = (0, vb.i)();
         return null !== bb && void 0 !== bb && bb.isCoreRunning ? bb : null
       },
-      Db = bb => Tb.n.playerFlags(bb.api.apiView, 0),
-      Eb = bb => null !== bb && Tb.n.targetBlockId(bb.api.apiView, 0) !== Tb.cd,
-      ib = () => {
-        const bb = (0, mb.d)(),
-          cb = new lb.c;
-        let sb = !1;
-        const kb = (bb, cb) => {
-            (0, nb.o)(Ub.B.PadLook, Tb.Jd.Rate, bb, cb, 0)
+      Fb = bb => Eb.t.playerFlags(bb.api.apiView, 0),
+      hb = bb => null !== bb && Eb.t.targetBlockId(bb.api.apiView, 0) !== Eb.Wc,
+      Gb = () => {
+        const bb = (0, jb.b)(),
+          ab = new Rb.c;
+        let Ub = !1;
+        const Ab = (bb, ab) => {
+            (0, Xb.n)(Yb.J.PadLook, Eb.xd.Rate, bb, ab, 0)
           },
-          Wb = () => {
-            sb = !1, cb.reset(), kb(0, 0)
+          Mb = () => {
+            Ub = !1, ab.reset(), Ab(0, 0)
           };
         return {
-          update: (Wb, ab, Ib) => {
-            sb || (bb.discardPending(), sb = !0);
-            const Hb = (0, lb.m)(cb, Wb, ab, Ib, performance.now());
-            kb(Hb.yawRadPerSec, Hb.pitchRadPerSec);
-            const fb = bb.drainLookDelta();
-            0 === fb.Eu && 0 === fb.bY || (0, nb.o)(Ub.B.PadLook, Tb.Jd.Gyro, fb.Eu, fb.bY, 0)
+          update: (Mb, Tb, Bb) => {
+            Ub || (bb.discardPending(), Ub = !0);
+            const eb = (0, Rb.s)(ab, Mb, Tb, Bb, performance.now());
+            Ab(eb.yawRadPerSec, eb.pitchRadPerSec);
+            const vb = bb.drainLookDelta();
+            0 === vb.XN && 0 === vb.kN || (0, Xb.n)(Yb.J.PadLook, Eb.xd.Gyro, vb.XN, vb.kN, 0)
           },
-          release: Wb,
-          uninstall: Wb
+          release: Mb,
+          uninstall: Mb
         }
       },
-      Ob = () => {
-        const bb = Pb();
-        return null !== bb && 0 !== (Db(bb) & Tb.Nd.PadSneakToggled)
+      Qb = () => {
+        const bb = db();
+        return null !== bb && 0 !== (Fb(bb) & Eb.Ed.PadSneakToggled)
       },
-      Gb = () => {
+      qb = () => {
         const bb = (bb => {
-          const cb = bb => function() {
-            return (0, Xb.e)(), bb(...arguments)
+          const ab = bb => function() {
+            return (0, Pb.b)(), bb(...arguments)
           };
           return {
-            primaryFireDown: cb((() => (Bb(Cb), 0))),
-            primaryFireUp: cb((() => {
-              tb(Cb)
+            primaryFireDown: ab((() => (Wb(Zb), 0))),
+            primaryFireUp: ab((() => {
+              Hb(Zb)
             })),
-            altFireDown: cb((() => (Bb(Nb), 0))),
-            altFireUp: cb((() => {
-              tb(Nb)
+            altFireDown: ab((() => (Wb(Db), 0))),
+            altFireUp: ab((() => {
+              Hb(Db)
             })),
-            jumpDown: cb((() => {
-              yb(Lb)
+            jumpDown: ab((() => {
+              Ib(xb)
             })),
-            specialActionDown: cb((bb => {
-              Bb(Jb[bb])
+            specialActionDown: ab((bb => {
+              Wb(pb[bb])
             })),
-            specialActionUp: cb((bb => {
-              tb(Jb[bb])
+            specialActionUp: ab((bb => {
+              Hb(pb[bb])
             })),
-            reloadGun: cb((() => {
-              yb(ub)
+            reloadGun: ab((() => {
+              Ib(ib)
             })),
-            dropItem: cb((bb => {
-              gb(Tb.Cd.Drop, Tb.yd.Down | (bb ? Tb.yd.Stack : 0))
+            dropItem: ab((bb => {
+              Nb(Eb.sd.Drop, Eb.pd.Down | (bb ? Eb.pd.Stack : 0))
             })),
-            swapCameraZoom: cb((() => {
-              yb(Yb)
+            swapCameraZoom: ab((() => {
+              Ib(fb)
             })),
-            pickBlock: cb((() => (yb(Vb), Eb(bb()))))
+            pickBlock: ab((() => (Ib(zb), hb(bb()))))
           }
-        })(Pb);
-        let cb = !1,
-          sb = null;
-        const kb = () => {
+        })(db);
+        let ab = !1,
+          Ub = null;
+        const Ab = () => {
           var bb;
-          null === (bb = sb) || void 0 === bb || bb(), sb = null
+          null === (bb = Ub) || void 0 === bb || bb(), Ub = null
         };
         return {
           bodies: () => bb,
-          look: ib(),
-          move: (bb, sb) => {
-            var Wb;
-            kb();
+          look: Gb(),
+          move: (bb, Ub) => {
+            var Mb;
+            Ab();
             const {
-              bits: ab,
-              flips: Ub
+              bits: Tb,
+              flips: Yb
             } = (bb => {
               if (null === bb) return {
-                bits: Tb.Fd.Peek,
+                bits: Eb.wd.Peek,
                 flips: 0
               };
-              const cb = bb.sneakHeld ? Tb.Fd.SneakHeld : 0;
+              const ab = bb.sneakHeld ? Eb.wd.SneakHeld : 0;
               return "hold" === bb.mode ? {
-                bits: cb | Tb.Fd.SneakHoldMode,
+                bits: ab | Eb.wd.SneakHoldMode,
                 flips: bb.sneakTogglePressed ? 1 : 0
               } : {
-                bits: cb,
+                bits: ab,
                 flips: bb.sneakPressed || bb.sneakTogglePressed ? 1 : 0
               }
-            })(sb);
-            null !== (Wb = Pb()) && void 0 !== Wb && Wb.padMove(bb.x, bb.y, bb.magnitude, bb.headingOffset, (bb => Tb.Fd.Active | (bb.jumpHeld ? Tb.Fd.JumpHeld : 0) | (bb.jumpPressed ? Tb.Fd.JumpPressed : 0) | (bb.running ? Tb.Fd.Running : 0) | (bb.sprintHeld ? Tb.Fd.SprintHeld : 0))(bb) | ab, Ub) && (cb = !0), (0, Qb.h)(Ob())
+            })(Ub);
+            null !== (Mb = db()) && void 0 !== Mb && Mb.padMove(bb.x, bb.y, bb.magnitude, bb.headingOffset, (bb => Eb.wd.Active | (bb.jumpHeld ? Eb.wd.JumpHeld : 0) | (bb.jumpPressed ? Eb.wd.JumpPressed : 0) | (bb.running ? Eb.wd.Running : 0) | (bb.sprintHeld ? Eb.wd.SprintHeld : 0))(bb) | Tb, Yb) && (ab = !0), (0, kb.f)(Qb())
           },
           stopMoving: () => {
             var bb;
-            cb && (cb = !(null !== (bb = Pb()) && void 0 !== bb && bb.padMove(0, 0, 0, 0, 0, 0)), kb(), sb = (0, Ib.C)((() => {
-              kb(), (0, Qb.h)(Ob())
+            ab && (ab = !(null !== (bb = db()) && void 0 !== bb && bb.padMove(0, 0, 0, 0, 0, 0)), Ab(), Ub = (0, Bb.x)((() => {
+              Ab(), (0, kb.f)(Qb())
             })))
           },
-          uninstall: kb,
+          uninstall: Ab,
           deviceChanged: bb => {
-            var sb;
-            "touch" === bb ? ((0, Qb.h)(!1), null !== (sb = Pb()) && void 0 !== sb && sb.padMove(0, 0, 0, 0, Tb.Fd.EndToggle, 0) && (cb = !1)) : "gamepad" === bb && (0, Qb.h)(Ob())
+            var Ub;
+            "touch" === bb ? ((0, kb.f)(!1), null !== (Ub = db()) && void 0 !== Ub && Ub.padMove(0, 0, 0, 0, Eb.wd.EndToggle, 0) && (ab = !1)) : "gamepad" === bb && (0, kb.f)(Qb())
           },
-          hasPlayer: () => null !== Pb(),
+          hasPlayer: () => null !== db(),
           isPlayerDead: () => {
             var bb;
-            return !1 === (null === (bb = Pb()) || void 0 === bb ? void 0 : bb.localPlayerAlive())
+            return !1 === (null === (bb = db()) || void 0 === bb ? void 0 : bb.localPlayerAlive())
           },
           isReplayMode: () => {
-            const bb = Pb();
-            return null !== bb && 0 !== (Db(bb) & Tb.Nd.Replay)
+            const bb = db();
+            return null !== bb && 0 !== (Fb(bb) & Eb.Ed.Replay)
           },
           isFreeCameraOn: () => {
-            const bb = Pb();
-            return null !== bb && 0 !== (Db(bb) & Tb.Nd.FreeCam)
+            const bb = db();
+            return null !== bb && 0 !== (Fb(bb) & Eb.Ed.FreeCam)
           },
-          targetsBlock: () => Eb(Pb()),
+          targetsBlock: () => hb(db()),
           selectedSlotEmpty: () => {
             var bb;
-            return !(null !== (bb = Pb()) && void 0 !== bb && bb.items.qU())
+            return !(null !== (bb = db()) && void 0 !== bb && bb.items.PY())
           },
-          pickBlockAllowed: () => !!ab.e.get("creative") && !!ab.e.get("canPickBlocks"),
+          pickBlockAllowed: () => !!Tb.e.get("creative") && !!Tb.e.get("canPickBlocks"),
           scrollHotbar: bb => {
-            gb(Tb.Cd.Hotbar, Tb.yd.Down | (bb > 0 ? Tb.yd.Next : 0))
+            Nb(Eb.sd.Hotbar, Eb.pd.Down | (bb > 0 ? Eb.pd.Next : 0))
           },
-          hasFullInventory: Hb.o,
-          hasLobbyLeaderboard: () => !!ab.e.get("lobbyLeaderboardInfo"),
+          hasFullInventory: eb.m,
+          hasLobbyLeaderboard: () => !!Tb.e.get("lobbyLeaderboardInfo"),
           contextActionInputs: () => {
-            var bb, cb, sb, kb;
-            const Wb = Pb();
+            var bb, ab, Ub, Ab;
+            const Mb = db();
             return {
-              holdingGun: !1 !== (null === Wb || void 0 === Wb ? void 0 : Wb.localPlayerAlive()) && "Gun" === (null === Wb || void 0 === Wb || null === (bb = Wb.items.qU()) || void 0 === bb || null === (cb = bb.typeObj) || void 0 === cb ? void 0 : cb.type),
-              customButtons: null !== (sb = ab.e.get("customButtons")) && void 0 !== sb ? sb : null,
-              touchscreenActionButton: null !== (kb = ab.e.get("touchscreenActionButton")) && void 0 !== kb ? kb : null
+              holdingGun: !1 !== (null === Mb || void 0 === Mb ? void 0 : Mb.localPlayerAlive()) && "Gun" === (null === Mb || void 0 === Mb || null === (bb = Mb.items.PY()) || void 0 === bb || null === (ab = bb.typeObj) || void 0 === ab ? void 0 : ab.type),
+              customButtons: null !== (Ub = Tb.e.get("customButtons")) && void 0 !== Ub ? Ub : null,
+              touchscreenActionButton: null !== (Ab = Tb.e.get("touchscreenActionButton")) && void 0 !== Ab ? Ab : null
             }
           },
           pressTouchButton: bb => {
-            bb ? Bb(hb) : tb(hb)
+            bb ? Wb(mb) : Hb(mb)
           }
         }
       },
-      Kb = () => {
-        const bb = (0, Wb.d)(Gb()),
-          cb = (0, kb.e)(),
-          sb = null;
+      ub = () => {
+        const bb = (0, Mb.b)(qb()),
+          ab = (0, Ab.b)(),
+          Ub = null;
         return () => {
-          bb(), cb(), null === sb || void 0 === sb || sb()
+          bb(), ab(), null === Ub || void 0 === Ub || Ub()
         }
       }
   },
-  4517: (bb, cb, sb) => {
-    sb.d(cb, {
-      Ab: () => Lb,
-      B: () => mb,
-      D: () => ob,
-      Db: () => Pb,
-      Eb: () => Zb,
-      G: () => Hb,
-      Gb: () => Eb,
-      I: () => lb,
-      Ib: () => Ob,
-      L: () => Ib,
-      Lb: () => Gb,
-      Nb: () => Nb,
-      O: () => Xb,
-      Rb: () => Vb,
-      S: () => Mb,
-      U: () => Yb,
-      Vb: () => qb,
-      X: () => Jb,
-      Xb: () => Wb,
-      Yb: () => rb,
-      _: () => gb,
-      ab: () => hb,
-      d: () => wb,
-      db: () => Bb,
-      f: () => Ab,
-      fb: () => zb,
-      h: () => fb,
-      hb: () => Kb,
-      i: () => Cb,
-      jb: () => ib,
-      k: () => db,
-      l: () => eb,
-      n: () => Qb,
-      nb: () => tb,
-      p: () => Tb,
-      rb: () => Db,
-      sb: () => yb,
-      t: () => Ub,
-      v: () => kb,
-      vb: () => nb,
-      xb: () => ub,
-      y: () => ab
+  4485: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      $: () => mb,
+      B: () => Yb,
+      Cb: () => db,
+      Db: () => rb,
+      E: () => Ab,
+      F: () => Tb,
+      Fb: () => hb,
+      Gb: () => Qb,
+      J: () => jb,
+      Jb: () => qb,
+      L: () => gb,
+      Lb: () => Db,
+      M: () => eb,
+      Mb: () => zb,
+      N: () => Rb,
+      O: () => Bb,
+      P: () => Pb,
+      Pb: () => ob,
+      Rb: () => Mb,
+      S: () => Lb,
+      Tb: () => sb,
+      V: () => fb,
+      Z: () => pb,
+      _: () => Nb,
+      db: () => Wb,
+      e: () => wb,
+      gb: () => Kb,
+      h: () => tb,
+      jb: () => ub,
+      l: () => vb,
+      lb: () => Gb,
+      m: () => Zb,
+      nb: () => Hb,
+      p: () => lb,
+      qb: () => Fb,
+      r: () => yb,
+      tb: () => Ib,
+      u: () => kb,
+      ub: () => Xb,
+      x: () => Eb,
+      xb: () => ib,
+      yb: () => xb
     });
-    const kb = 32,
-      Wb = 33.333333333333336,
-      ab = {
+    const Ab = 32,
+      Mb = 33.333333333333336,
+      Tb = {
         AbiVersion: 0,
         Status: 1,
         LastError: 2,
@@ -285,18 +285,18 @@ export const modules = {
         PacingLagUs: 30,
         LoadSteps: 31
       },
-      Tb = {
+      Eb = {
         NotYet: 0,
         Drawn: 1,
         Backstop: 2,
         HeldBackstop: 3
       },
-      Ub = {
+      Yb = {
         NotDrawn: 0,
         Drawn: 1,
         Paced: 2
       },
-      Ib = {
+      Bb = {
         AheadMask: 15,
         Joining: 64,
         Tiered: 128,
@@ -304,20 +304,20 @@ export const modules = {
         SwitchesShift: 20,
         CountMask: 4095
       },
-      Hb = {
+      eb = {
         TerrainDrawn: 1,
         ChunkRequested: 2,
         ChunkStored: 4,
         MeshLanded: 8,
         PlayerChunk: 16
       },
-      fb = {
+      vb = {
         Look: 0,
         Remesh: 1
       },
-      Mb = 8,
-      Xb = 1,
-      nb = {
+      Lb = 8,
+      Pb = 1,
+      Xb = {
         Edit: 0,
         Sent: 1,
         Done: 2,
@@ -326,7 +326,7 @@ export const modules = {
         Replaced: 5,
         Emptied: 6
       },
-      mb = {
+      jb = {
         KeyDown: 1,
         KeyUp: 2,
         MouseMove: 3,
@@ -354,12 +354,12 @@ export const modules = {
         PadLook: 25,
         EnvPrefs: 32
       },
-      lb = {
+      Rb = {
         Frame: 1,
         Open: 2,
         Close: 3
       },
-      Qb = {
+      kb = {
         RawMessage: 1,
         CoreErrors: 2,
         LocalHurt: 16,
@@ -411,7 +411,7 @@ export const modules = {
         RenderReload: 3,
         TerrainTexturesWanted: 4
       },
-      eb = {
+      yb = {
         EntityInfo: 1,
         EntityTable: 2,
         CoreErrors: 4,
@@ -421,10 +421,10 @@ export const modules = {
         PlayerHud: 64,
         GameCalls: 128
       },
-      Cb = 4,
-      Nb = 4,
-      Vb = 65535,
-      Lb = {
+      Zb = 4,
+      Db = 4,
+      zb = 65535,
+      xb = {
         Open: 1,
         TooLarge: 2,
         NothingStaged: 3,
@@ -437,7 +437,7 @@ export const modules = {
         ModuleTrap: 10,
         Port: 11
       },
-      ub = {
+      ib = {
         Busy: 0,
         Range: 1,
         OtherBody: 2,
@@ -445,12 +445,12 @@ export const modules = {
         Corrupt: 4,
         Ended: 5
       },
-      Yb = 88,
-      hb = 0,
-      Jb = 24,
-      gb = 48,
-      Bb = 80,
-      tb = {
+      fb = 88,
+      mb = 0,
+      pb = 24,
+      Nb = 48,
+      Wb = 80,
+      Hb = {
         FilePartDone: 526,
         FileDone: 527,
         Control: 528,
@@ -461,18 +461,18 @@ export const modules = {
         Killfeed: 533,
         Session: 534
       },
-      yb = {
+      Ib = {
         ToggleRecording: 0,
         SaveClip: 1,
         ViewerOpened: 2,
         ViewerClosed: 3
       },
-      Pb = {
+      db = {
         Clip: 0,
         Recording: 1,
         Edited: 2
       },
-      Db = {
+      Fb = {
         RecordingStarted: 0,
         RecordingStopped: 1,
         RecordingDiscarded: 2,
@@ -490,34 +490,34 @@ export const modules = {
         SaveFailed: 14,
         RecordingTurnedOff: 15
       },
-      Eb = {
+      hb = {
         Cleared: 0,
         Text: 1,
         Int: 2,
         Double: 3
       },
-      ib = 65535,
-      Ob = {
+      Gb = 65535,
+      Qb = {
         FlyingText: 1,
         PlayerKilled: 2,
         Killfeed: 3
       },
-      Gb = {
+      qb = {
         None: 0,
         Paused: 1,
         Playing: 2,
         Cropping: 3,
         Loading: 4
       },
-      Kb = 2,
-      Zb = {
+      ub = 2,
+      rb = {
         UiText: 0,
         Environment: 6,
         Hud: 12,
         Count: 19
       },
-      zb = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
-      qb = {
+      Kb = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
+      ob = {
         SkyTable: 600,
         SkyImagesReady: 601,
         SkyTableHeaderBytes: 8,
@@ -529,7 +529,7 @@ export const modules = {
         CubeFaces: 6,
         Failed: 0
       },
-      db = {
+      lb = {
         Bytes: 88,
         Inclination: 0,
         Turbidity: 1,
@@ -556,7 +556,7 @@ export const modules = {
         PresentAt: 80,
         FlagsAt: 84
       },
-      Ab = {
+      tb = {
         None: 0,
         InputOverCapacity: 1,
         InputTruncated: 2,
@@ -715,7 +715,7 @@ export const modules = {
         ReplayRecorderDrops: 304
       },
       wb = 8,
-      rb = {
+      sb = {
         GameCodeMessage: 4,
         NewOtherEntitySettings: 23,
         NewClientOptions: 37,
@@ -740,289 +740,289 @@ export const modules = {
         WorldVariation: 5,
         EditItemCraftingRecipes: 78
       },
-      ob = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
+      gb = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
   },
-  4498: (bb, cb, sb) => {
-    sb.d(cb, {
-      C: () => gb,
-      G: () => Bb,
-      H: () => tb,
-      L: () => Cb,
-      M: () => Tb,
-      N: () => Ub,
-      P: () => Jb,
-      c: () => hb,
-      g: () => Vb,
-      k: () => Pb,
-      o: () => yb,
-      r: () => eb,
-      u: () => ub,
-      v: () => Nb,
-      y: () => Lb
+  4469: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      B: () => Wb,
+      E: () => Hb,
+      H: () => Zb,
+      J: () => Eb,
+      K: () => Yb,
+      O: () => pb,
+      e: () => mb,
+      f: () => zb,
+      h: () => db,
+      k: () => Ib,
+      n: () => yb,
+      o: () => ib,
+      r: () => Db,
+      v: () => xb,
+      x: () => Nb
     });
-    var kb = sb(4507);
-    const Wb = {
+    var Ab = Ub(4477);
+    const Mb = {
       lockPointer: () => !1,
       unlockPointer: () => {},
       leaveGame: () => {}
     };
-    let ab = Wb;
+    let Tb = Mb;
 
-    function Tb(bb) {
-      ab = null !== bb && void 0 !== bb ? bb : Wb
+    function Eb(bb) {
+      Tb = null !== bb && void 0 !== bb ? bb : Mb
     }
 
-    function Ub() {
-      return ab
+    function Yb() {
+      return Tb
     }
-    const Ib = new Set,
-      Hb = new Set;
-    let fb = -1;
-    const Mb = new Set,
-      Xb = new Set;
-    let nb = 0,
-      mb = 0;
-    const lb = new Set,
-      Qb = new Set;
+    const Bb = new Set,
+      eb = new Set;
+    let vb = -1;
+    const Lb = new Set,
+      Pb = new Set;
+    let Xb = 0,
+      jb = 0;
+    const Rb = new Set,
+      kb = new Set;
 
-    function eb(bb) {
-      return Ib.add(bb), () => {
-        Ib.delete(bb)
+    function yb(bb) {
+      return Bb.add(bb), () => {
+        Bb.delete(bb)
       }
     }
 
-    function Cb(bb, cb) {
-      for (const kb of Ib) try {
-        kb(bb)
-      } catch (sb) {
-        cb(sb)
+    function Zb(bb, ab) {
+      for (const Ab of Bb) try {
+        Ab(bb)
+      } catch (Ub) {
+        ab(Ub)
       }
+    }
+
+    function Db(bb) {
+      return eb.add(bb), () => {
+        eb.delete(bb)
+      }
+    }
+
+    function zb(bb, ab) {
+      const Ub = vb < 0 ? 0 : bb - vb;
+      vb = bb;
+      for (const Mb of eb) try {
+        Mb(Ub)
+      } catch (Ab) {
+        ab(Ab)
+      }
+    }
+
+    function xb(bb) {
+      return Lb.add(bb), () => {
+        Lb.delete(bb)
+      }
+    }
+
+    function ib(bb) {
+      return Pb.add(bb), () => {
+        Pb.delete(bb)
+      }
+    }
+    let fb = 0;
+
+    function mb(bb) {
+      fb += bb
+    }
+
+    function pb() {
+      const bb = fb;
+      return fb = 0, bb
     }
 
     function Nb(bb) {
-      return Hb.add(bb), () => {
-        Hb.delete(bb)
+      return Rb.add(bb), () => {
+        Rb.delete(bb)
       }
     }
 
-    function Vb(bb, cb) {
-      const sb = fb < 0 ? 0 : bb - fb;
-      fb = bb;
-      for (const Wb of Hb) try {
-        Wb(sb)
-      } catch (kb) {
-        cb(kb)
+    function Wb(bb) {
+      return kb.add(bb), () => {
+        kb.delete(bb)
       }
     }
 
-    function Lb(bb) {
-      return Mb.add(bb), () => {
-        Mb.delete(bb)
-      }
+    function Hb() {
+      Xb = 0, jb = 0, vb = -1
     }
 
-    function ub(bb) {
-      return Xb.add(bb), () => {
-        Xb.delete(bb)
-      }
-    }
-    let Yb = 0;
-
-    function hb(bb) {
-      Yb += bb
-    }
-
-    function Jb() {
-      const bb = Yb;
-      return Yb = 0, bb
-    }
-
-    function gb(bb) {
-      return lb.add(bb), () => {
-        lb.delete(bb)
-      }
-    }
-
-    function Bb(bb) {
-      return Qb.add(bb), () => {
-        Qb.delete(bb)
-      }
-    }
-
-    function tb() {
-      nb = 0, mb = 0, fb = -1
-    }
-
-    function yb(bb, cb) {
-      if ("paced" === bb) return mb += cb, null;
+    function Ib(bb, ab) {
+      if ("paced" === bb) return jb += ab, null;
       if ("drawn" !== bb && "skipped" !== bb) return null;
-      const sb = cb + mb;
-      return mb = 0, sb
+      const Ub = ab + jb;
+      return jb = 0, Ub
     }
 
-    function Pb(bb, cb, sb, Wb) {
-      const ab = (0, kb.h)(cb),
-        Tb = bb > 0 ? performance.now() : 0;
-      for (let kb = 0; kb < bb; kb++)
-        for (const bb of lb) try {
+    function db(bb, ab, Ub, Mb) {
+      const Tb = (0, Ab.g)(ab),
+        Eb = bb > 0 ? performance.now() : 0;
+      for (let Ab = 0; Ab < bb; Ab++)
+        for (const bb of Rb) try {
           bb()
-        } catch (Ub) {
-          Wb(Ub)
+        } catch (Yb) {
+          Mb(Yb)
         }
-      if (bb > 0 && hb(performance.now() - Tb), null !== sb) {
-        for (const bb of Mb) try {
-          bb(sb)
-        } catch (Ub) {
-          Wb(Ub)
+      if (bb > 0 && mb(performance.now() - Eb), null !== Ub) {
+        for (const bb of Lb) try {
+          bb(Ub)
+        } catch (Yb) {
+          Mb(Yb)
         }
-        nb += sb
+        Xb += Ub
       }
-      if ("drawn" === cb) {
-        const bb = nb;
-        nb = 0;
-        for (const cb of Xb) try {
-          cb(bb)
-        } catch (Ub) {
-          Wb(Ub)
+      if ("drawn" === ab) {
+        const bb = Xb;
+        Xb = 0;
+        for (const ab of Pb) try {
+          ab(bb)
+        } catch (Yb) {
+          Mb(Yb)
         }
       }
-      for (const kb of Qb) try {
-        kb(bb, ab)
-      } catch (Ub) {
-        Wb(Ub)
+      for (const Ab of kb) try {
+        Ab(bb, Tb)
+      } catch (Yb) {
+        Mb(Yb)
       }
     }
   },
-  4512: (bb, cb, sb) => {
-    sb.d(cb, {
-      $c: () => kb.sb,
-      $d: () => Sb,
-      Bb: () => cc,
-      Bc: () => kb._,
-      Bd: () => kb.Nb,
-      C: () => kb.f,
-      Cd: () => kb.Rb,
-      Ce: () => lc,
-      F: () => Hb,
-      Fb: () => Wb.e,
-      Fc: () => kb.ab,
-      Fe: () => nb,
-      Gd: () => kb.Xb,
-      Hc: () => kb.db,
-      Hd: () => ab,
-      I: () => kb.h,
-      Ib: () => hb,
-      K: () => kb.i,
-      Kd: () => Qb,
-      Lc: () => kb.jb,
-      Ld: () => Uc,
-      M: () => vb,
-      Mb: () => Kb,
-      Nc: () => nc,
-      Od: () => zb,
-      P: () => kb.n,
-      Pb: () => yb,
-      Pc: () => Hc,
-      Qd: () => db,
-      Sd: () => Zb,
-      T: () => kb.p,
-      Tb: () => Bb,
-      Tc: () => kc,
-      Vc: () => kb.nb,
-      Vd: () => rb,
-      W: () => kb.t,
-      Xb: () => kb.I,
-      Xc: () => kb.rb,
-      Zd: () => Ab,
-      _: () => Mb,
-      _b: () => Pb,
-      bb: () => Cb,
-      c: () => bc,
-      cb: () => kb.v,
-      cc: () => Lb,
-      cd: () => jb,
-      ce: () => ob,
-      f: () => lb,
-      fc: () => ac,
-      fd: () => kb.xb,
-      fe: () => Tc,
-      g: () => mb,
-      gb: () => kb.y,
-      ge: () => mc,
-      he: () => Vb,
-      i: () => Ic,
-      ib: () => qb,
-      id: () => kb.Ab,
-      jb: () => Wc,
-      jc: () => Nb,
-      ke: () => Rb,
-      lc: () => fc,
-      m: () => Jb,
-      mb: () => fb,
-      md: () => kb.Db,
-      n: () => Yb,
-      oe: () => Ob,
-      pc: () => Wb.i,
-      pd: () => kb.Gb,
-      q: () => kb.d,
-      qb: () => kb.B,
-      r: () => Mc,
-      rc: () => eb,
-      sc: () => sc,
-      se: () => ib,
-      t: () => tb,
-      tb: () => wb,
-      td: () => kb.Ib,
-      u: () => Tb,
-      ud: () => kb.Lb,
-      v: () => Db,
-      vb: () => Fb,
-      ve: () => Eb,
-      wc: () => kb.U,
-      x: () => Xc,
-      xd: () => gb,
-      xe: () => Ib,
-      yb: () => pb,
-      yc: () => kb.X,
-      z: () => xb,
-      ze: () => Gb
+  4479: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      $c: () => Ab.Jb,
+      Ab: () => Mb.c,
+      B: () => Fb,
+      C: () => Pa,
+      Cd: () => tb,
+      Dc: () => Aa,
+      Dd: () => Cb,
+      Eb: () => mb,
+      Ed: () => gb,
+      Fc: () => Ab.nb,
+      G: () => Jb,
+      Gd: () => Ea,
+      H: () => Ab.h,
+      Hb: () => ub,
+      I: () => eb,
+      Ic: () => Ab.qb,
+      Jd: () => ja,
+      Kb: () => Ib,
+      Lb: () => Wb,
+      M: () => Ab.l,
+      Mb: () => Ab.N,
+      Mc: () => Ab.tb,
+      Md: () => zb,
+      Ob: () => db,
+      P: () => Ab.m,
+      Pc: () => nb,
+      Qb: () => xb,
+      Qd: () => Vb,
+      R: () => Ob,
+      Rc: () => Ab.xb,
+      Rd: () => Qb,
+      Sc: () => Ab.yb,
+      Tb: () => Ta,
+      Td: () => Gb,
+      V: () => Ab.u,
+      Vc: () => Ab.Cb,
+      Vd: () => hb,
+      W: () => Ab.x,
+      Wb: () => Db,
+      Wc: () => Ab.Fb,
+      X: () => Ab.B,
+      Yd: () => Bb,
+      _: () => Lb,
+      _b: () => va,
+      _c: () => Ab.Gb,
+      ab: () => Zb,
+      ac: () => Mb.h,
+      ae: () => qb,
+      bd: () => Nb,
+      be: () => Ra,
+      c: () => ba,
+      cb: () => Ab.E,
+      cd: () => Ab.Lb,
+      ce: () => Xb,
+      dc: () => yb,
+      e: () => Rb,
+      ed: () => Ab.Mb,
+      fc: () => Ua,
+      gb: () => Ab.F,
+      gd: () => Ab.Rb,
+      h: () => jb,
+      ib: () => ob,
+      ic: () => Ab.V,
+      id: () => Tb,
+      j: () => Ba,
+      kc: () => Ab.Z,
+      kd: () => kb,
+      lb: () => Ma,
+      m: () => pb,
+      nd: () => Ya,
+      o: () => fb,
+      ob: () => vb,
+      oc: () => Ab._,
+      od: () => Kb,
+      p: () => Ab.e,
+      qc: () => Ab.$,
+      rb: () => Ab.J,
+      sb: () => wb,
+      sc: () => Ab.db,
+      sd: () => lb,
+      t: () => La,
+      td: () => rb,
+      vb: () => cb,
+      vc: () => Ab.lb,
+      wb: () => Sb,
+      x: () => Hb,
+      xb: () => aa,
+      xc: () => Xa,
+      xd: () => sb,
+      z: () => Eb,
+      zc: () => ea
     });
-    var kb = sb(4517),
-      Wb = sb(2305);
-    const ab = Math.round(1e3 / kb.Xb),
-      Tb = 4,
-      Ub = 2;
+    var Ab = Ub(4485),
+      Mb = Ub(2254);
+    const Tb = Math.round(1e3 / Ab.Rb),
+      Eb = 4,
+      Yb = 2;
 
-    function Ib() {
-      return crypto.getRandomValues(new Uint32Array(Ub))
+    function Bb() {
+      return crypto.getRandomValues(new Uint32Array(Yb))
     }
-    const Hb = {
+    const eb = {
         Ok: 0,
         Errors: 1,
         Fatal: 2
       },
-      fb = 16,
-      Mb = {
+      vb = 16,
+      Lb = {
         Draws: 1,
         NetAll: 2
       },
-      Xb = {
+      Pb = {
         ShowFog: 1,
         Lighting: 2,
         ChunkFade: 4
       };
 
-    function nb(bb) {
-      return (bb.nametagsHidden ? ub.NametagsHidden : 0) | (bb.crouchToggle ? ub.CrouchToggle : 0) | (bb.bhopDisabled ? ub.BhopDisabled : 0) | (bb.disableBobbing ? ub.DisableBobbing : 0) | (bb.ezTowering ? ub.EzTowering : 0) | (bb.ezBridging ? ub.EzBridging : 0) | (bb.showChunkBorders ? ub.ShowChunkBorders : 0)
+    function Xb(bb) {
+      return (bb.nametagsHidden ? ib.NametagsHidden : 0) | (bb.crouchToggle ? ib.CrouchToggle : 0) | (bb.bhopDisabled ? ib.BhopDisabled : 0) | (bb.disableBobbing ? ib.DisableBobbing : 0) | (bb.ezTowering ? ib.EzTowering : 0) | (bb.ezBridging ? ib.EzBridging : 0) | (bb.showChunkBorders ? ib.ShowChunkBorders : 0)
     }
-    const mb = {
+    const jb = {
         Flags: 0,
         PhysicsVersion: 1,
         InbuiltOverwritten: 2,
         AltComplete: 3,
         ProbeUsedProp: 4
       },
-      lb = {
+      Rb = {
         Ready: 1,
         SendFnReplaced: 2,
         Butto: 4,
@@ -1030,7 +1030,7 @@ export const modules = {
         CheckFuncHit: 128,
         OriginStackHit: 256
       },
-      Qb = {
+      kb = {
         None: 0,
         Untrusted: 2,
         FewProperties: 3,
@@ -1039,7 +1039,7 @@ export const modules = {
         En: 6,
         Fr: 7
       },
-      eb = {
+      yb = {
         StackCheck: 0,
         ConfirmMesh: 1,
         IndexPassReplaced: 2,
@@ -1048,20 +1048,20 @@ export const modules = {
         Held: 6,
         PlayerKilledSubs: 7
       },
-      Cb = 5,
-      Nb = 4294967295;
+      Zb = 5,
+      Db = 4294967295;
 
-    function Vb(bb) {
-      return (bb.showFog ? Xb.ShowFog : 0) | (bb.lighting ? Xb.Lighting : 0) | (bb.chunkFade ? Xb.ChunkFade : 0)
+    function zb(bb) {
+      return (bb.showFog ? Pb.ShowFog : 0) | (bb.lighting ? Pb.Lighting : 0) | (bb.chunkFade ? Pb.ChunkFade : 0)
     }
-    const Lb = {
+    const xb = {
         ResetFirst: 1,
         AdStart: 2,
         PreventMovement: 4,
         AdEnd: 8,
         PayloadMaxBytes: 1 << 20
       },
-      ub = {
+      ib = {
         NametagsHidden: 1,
         CrouchToggle: 2,
         BhopDisabled: 4,
@@ -1071,50 +1071,50 @@ export const modules = {
         ShowChunkBorders: 64,
         All: 127
       },
-      Yb = {
+      fb = {
         Release: 1,
         KeepTouches: 2
       },
-      hb = {
+      mb = {
         Point: 1,
         Stamped: 2
       },
-      Jb = {
+      pb = {
         Add: 1,
         Clear: 2
       },
-      gb = 1,
-      Bb = 8,
-      tb = 16777215,
-      yb = 4,
-      Pb = {
+      Nb = 1,
+      Wb = 8,
+      Hb = 16777215,
+      Ib = 4,
+      db = {
         Resume: 1
       },
-      Db = {
+      Fb = {
         Held: 1
       };
 
-    function Eb(bb, cb) {
-      return (bb | cb << 8) >>> 0
-    }
-
-    function ib(bb) {
-      return 255 & bb
-    }
-
-    function Ob(bb) {
-      return bb >>> 8
+    function hb(bb, ab) {
+      return (bb | ab << 8) >>> 0
     }
 
     function Gb(bb) {
+      return 255 & bb
+    }
+
+    function Qb(bb) {
+      return bb >>> 8
+    }
+
+    function qb(bb) {
       return bb + 3 & -4
     }
-    const Kb = 16777216,
-      Zb = 20;
-    const zb = 8,
-      qb = 8,
-      db = 16777216,
-      Ab = {
+    const ub = 16777216,
+      rb = 20;
+    const Kb = 8,
+      ob = 8,
+      lb = 16777216,
+      tb = {
         JobResult: 1,
         WorkerStarted: 2,
         WorkerLost: 3,
@@ -1129,12 +1129,12 @@ export const modules = {
         NotHeld: 3,
         HeapRefused: 4
       },
-      rb = 16,
-      ob = {
+      sb = 16,
+      gb = {
         Lost: 0,
         Gone: 1
       },
-      Sb = {
+      Cb = {
         Init: 1,
         Mesh: 2,
         WorldgenSeed: 3,
@@ -1142,18 +1142,18 @@ export const modules = {
         Retire: 5
       };
 
-    function Rb(bb) {
-      return bb === Sb.WorldgenSeed || bb === Sb.Generate
+    function Vb(bb) {
+      return bb === Cb.WorldgenSeed || bb === Cb.Generate
     }
-    const vb = 4,
-      Fb = 99,
-      xb = {
+    const Ob = 4,
+      cb = 99,
+      Jb = {
         PAIRS_MAX: 16,
         FIXED_WORDS: 2,
         PAIR_WORDS: 2,
         WORDS_MAX: 34
       },
-      jb = {
+      nb = {
         BYTES: 12,
         WEBGPU: 1,
         GL: 2,
@@ -1161,40 +1161,40 @@ export const modules = {
         LOST: 0,
         PIPELINE_FAILED: 1
       },
-      pb = 12,
-      bc = 16,
-      cc = 4,
-      sc = 12,
-      kc = {
+      Sb = 12,
+      ba = 16,
+      aa = 4,
+      Ua = 12,
+      Aa = {
         SessionBased: 1,
         ReplayOffer: 2
       },
-      Wc = 4,
-      ac = 8,
-      Tc = 8,
-      Uc = {
+      Ma = 4,
+      Ta = 8,
+      Ea = 8,
+      Ya = {
         HEAD_BYTES: 28,
         UPDATE: 1,
         REMOVE: 2
       },
-      Ic = {
+      Ba = {
         Crit: 1,
         HitSelf: 2
       },
-      Hc = {
+      ea = {
         BYTES: 16,
         STRING_TYPE_BYTES: 24,
         STRING_TYPE: 65535,
         ERROR: 65534
       },
-      fc = {
+      va = {
         None: 0,
         Bytes: 1,
         Msgpack: 2,
         MsgpackBin: 3
       },
-      Mc = 12,
-      Xc = {
+      La = 12,
+      Pa = {
         Activated: 1,
         Error: 2,
         Left: 3,
@@ -1203,65 +1203,65 @@ export const modules = {
         Resumed: 6,
         ResumeRefused: 7
       },
-      nc = 67108864;
+      Xa = 67108864;
 
-    function mc(bb) {
-      for (const [cb, sb] of Object.entries(kb.f))
-        if (sb === bb) return cb;
+    function ja(bb) {
+      for (const [ab, Ub] of Object.entries(Ab.h))
+        if (Ub === bb) return ab;
       return `Unknown${bb}`
     }
 
-    function lc(bb) {
+    function Ra(bb) {
       return {
-        status: bb[kb.y.Status],
-        lastError: bb[kb.y.LastError],
-        lastErrorDetail: bb[kb.y.LastErrorDetail],
-        errorCount: bb[kb.y.ErrorCount],
-        frameIndex: bb[kb.y.FrameIndex],
-        tickIndex: bb[kb.y.TickIndex],
-        renderPending: bb[kb.y.RenderPending],
-        firstView: bb[kb.y.FirstView],
-        chunksCancelled: bb[kb.y.ChunksCancelled]
+        status: bb[Ab.F.Status],
+        lastError: bb[Ab.F.LastError],
+        lastErrorDetail: bb[Ab.F.LastErrorDetail],
+        errorCount: bb[Ab.F.ErrorCount],
+        frameIndex: bb[Ab.F.FrameIndex],
+        tickIndex: bb[Ab.F.TickIndex],
+        renderPending: bb[Ab.F.RenderPending],
+        firstView: bb[Ab.F.FirstView],
+        chunksCancelled: bb[Ab.F.ChunksCancelled]
       }
     }
   },
-  4507: (bb, cb, sb) => {
-    sb.d(cb, {
-      d: () => Tb,
-      g: () => ab,
-      h: () => Wb
+  4477: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      d: () => Eb,
+      f: () => Tb,
+      g: () => Mb
     });
-    var kb = sb(4512);
+    var Ab = Ub(4479);
 
-    function Wb(bb) {
+    function Mb(bb) {
       return "none" !== bb
     }
 
-    function ab(bb, cb) {
+    function Tb(bb, ab) {
       if (!bb) return "none";
-      switch (cb) {
-        case kb.W.Drawn:
+      switch (ab) {
+        case Ab.X.Drawn:
           return "drawn";
-        case kb.W.Paced:
+        case Ab.X.Paced:
           return "paced";
         default:
           return "skipped"
       }
     }
 
-    function Tb(bb) {
+    function Eb(bb) {
       return "drawn" === bb
     }
   },
-  4530: (bb, cb, sb) => {
-    sb.d(cb, {
-      b: () => Wb,
-      f: () => ab,
-      h: () => Tb,
-      i: () => kb,
-      m: () => Ub
+  4494: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      c: () => Mb,
+      d: () => Tb,
+      f: () => Eb,
+      h: () => Ab,
+      l: () => Yb
     });
-    const kb = {
+    const Ab = {
         Mouse1: 1,
         Mouse2: 2,
         Mouse3: 3,
@@ -1458,8 +1458,8 @@ export const modules = {
         TouchAttack: 194,
         TouchUse: 195
       },
-      Wb = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
-      ab = {
+      Mb = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
+      Tb = {
         forward: [21, 46],
         backward: [31, 49],
         left: [30, 47],
@@ -1522,157 +1522,157 @@ export const modules = {
         replayRecordKeyframe: [24],
         replayExportVideo: [40]
       },
-      Tb = {
+      Eb = {
         jump: [188],
         crouch: [189],
         SwapCameraZoom: [190],
         "primary-fire": [194],
         "alt-fire": [195]
       },
-      Ub = [16]
+      Yb = [16]
   },
-  40099: (bb, cb, sb) => {
-    sb.d(cb, {
-      e: () => Tb,
-      h: () => ab,
-      l: () => Wb
-    });
-    let kb = null;
-
-    function Wb(bb) {
-      kb = bb
-    }
-
-    function ab(bb) {
-      kb === bb && (kb = null)
-    }
-
-    function Tb() {
-      var bb;
-      null === (bb = kb) || void 0 === bb || bb()
-    }
-  },
-  4536: (bb, cb, sb) => {
-    sb.d(cb, {
-      b: () => Ub,
+  39780: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      b: () => Eb,
       c: () => Tb,
-      d: () => Hb
+      f: () => Mb
     });
-    var kb = sb(2305),
-      Wb = sb(2310);
-    const ab = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
+    let Ab = null;
+
+    function Mb(bb) {
+      Ab = bb
+    }
 
     function Tb(bb) {
-      return bb instanceof HTMLElement && (!!(bb.isContentEditable || bb instanceof HTMLTextAreaElement || bb instanceof HTMLSelectElement) || bb instanceof HTMLInputElement && !ab.has(bb.type))
+      Ab === bb && (Ab = null)
     }
 
-    function Ub(bb) {
-      let cb = null;
-      const sb = sb => {
-          const Wb = Tb(sb);
-          Wb !== cb && (cb = Wb, bb(kb.h.UiCapture, kb.z.Keyboard, 0, 0, Wb ? kb.z.Keyboard : 0))
+    function Eb() {
+      var bb;
+      null === (bb = Ab) || void 0 === bb || bb()
+    }
+  },
+  4501: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      e: () => Yb,
+      h: () => Eb,
+      l: () => eb
+    });
+    var Ab = Ub(2254),
+      Mb = Ub(2260);
+    const Tb = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
+
+    function Eb(bb) {
+      return bb instanceof HTMLElement && (!!(bb.isContentEditable || bb instanceof HTMLTextAreaElement || bb instanceof HTMLSelectElement) || bb instanceof HTMLInputElement && !Tb.has(bb.type))
+    }
+
+    function Yb(bb) {
+      let ab = null;
+      const Ub = Ub => {
+          const Mb = Eb(Ub);
+          Mb !== ab && (ab = Mb, bb(Ab.g.UiCapture, Ab.v.Keyboard, 0, 0, Mb ? Ab.v.Keyboard : 0))
         },
-        Wb = bb => {
-          sb(bb.target)
+        Mb = bb => {
+          Ub(bb.target)
         },
-        ab = bb => {
-          sb(bb.relatedTarget)
+        Tb = bb => {
+          Ub(bb.relatedTarget)
         },
-        Ub = () => {
-          sb(document.activeElement)
+        Yb = () => {
+          Ub(document.activeElement)
         },
-        Ib = {
+        Bb = {
           capture: !0,
           passive: !0
         };
-      return document.addEventListener("focusin", Wb, Ib), document.addEventListener("focusout", ab, Ib), document.addEventListener("keydown", Ub, Ib), sb(document.activeElement), () => {
-        document.removeEventListener("focusin", Wb, Ib), document.removeEventListener("focusout", ab, Ib), document.removeEventListener("keydown", Ub, Ib)
+      return document.addEventListener("focusin", Mb, Bb), document.addEventListener("focusout", Tb, Bb), document.addEventListener("keydown", Yb, Bb), Ub(document.activeElement), () => {
+        document.removeEventListener("focusin", Mb, Bb), document.removeEventListener("focusout", Tb, Bb), document.removeEventListener("keydown", Yb, Bb)
       }
     }
-    const Ib = new Map;
+    const Bb = new Map;
 
-    function Hb(bb, cb) {
-      var sb;
-      let kb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
-      Ib.set(kb, (null !== (sb = Ib.get(kb)) && void 0 !== sb ? sb : 0) & ~bb | cb & bb);
-      let ab = 0;
-      for (const Wb of Ib.values()) ab |= Wb;
-      return (0, Wb.w)(bb, ab & bb)
+    function eb(bb, ab) {
+      var Ub;
+      let Ab = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
+      Bb.set(Ab, (null !== (Ub = Bb.get(Ab)) && void 0 !== Ub ? Ub : 0) & ~bb | ab & bb);
+      let Tb = 0;
+      for (const Mb of Bb.values()) Tb |= Mb;
+      return (0, Mb.u)(bb, Tb & bb)
     }
   },
-  36505: (bb, cb, sb) => {
-    function kb(bb) {
+  36263: (bb, ab, Ub) => {
+    function Ab(bb) {
       return bb.includes("Leaf Bed")
     }
 
-    function Wb(bb) {
-      return / Bed(?: Head)?(?:\||$)/.test(bb) && !kb(bb)
-    }
-
-    function ab(bb) {
-      return bb.includes(" Strongbed")
+    function Mb(bb) {
+      return / Bed(?: Head)?(?:\||$)/.test(bb) && !Ab(bb)
     }
 
     function Tb(bb) {
-      return kb(bb) || Wb(bb) || ab(bb)
+      return bb.includes(" Strongbed")
     }
-    sb.d(cb, {
-      e: () => Tb,
-      f: () => kb,
-      h: () => ab,
-      j: () => Wb
+
+    function Eb(bb) {
+      return Ab(bb) || Mb(bb) || Tb(bb)
+    }
+    Ub.d(ab, {
+      d: () => Eb,
+      g: () => Ab,
+      h: () => Tb,
+      i: () => Mb
     })
   },
-  36502: (bb, cb, sb) => {
-    sb.d(cb, {
-      d: () => Hb
+  36260: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      d: () => eb
     });
-    var kb = sb(36505),
-      Wb = sb(9017);
-    const ab = [],
-      Tb = [],
-      Ub = [],
-      Ib = [];
-    for (const fb of Object.keys(Wb.k))(0, kb.f)(fb) ? ab.push(fb) : (0, kb.j)(fb) && Tb.push(fb), (0, kb.h)(fb) && Ub.push(fb), (fb.includes(" Bed Head") || fb.includes(" Strongbed Head")) && Ib.push(fb);
-    const Hb = {
-      leafBeds: ab,
-      woolBeds: Tb,
-      strongBeds: Ub,
-      beds: [...ab, ...Tb, ...Ub],
-      bedHeads: Ib,
+    var Ab = Ub(36263),
+      Mb = Ub(9007);
+    const Tb = [],
+      Eb = [],
+      Yb = [],
+      Bb = [];
+    for (const vb of Object.keys(Mb.p))(0, Ab.g)(vb) ? Tb.push(vb) : (0, Ab.i)(vb) && Eb.push(vb), (0, Ab.h)(vb) && Yb.push(vb), (vb.includes(" Bed Head") || vb.includes(" Strongbed Head")) && Bb.push(vb);
+    const eb = {
+      leafBeds: Tb,
+      woolBeds: Eb,
+      strongBeds: Yb,
+      beds: [...Tb, ...Eb, ...Yb],
+      bedHeads: Bb,
       blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
     }
   },
-  6134: (bb, cb, sb) => {
-    sb.d(cb, {
-      e: () => Tb,
-      i: () => Wb,
-      m: () => Ib,
-      q: () => ab,
-      r: () => Hb,
-      t: () => kb,
-      w: () => Ub
+  6091: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      b: () => Eb,
+      e: () => Mb,
+      i: () => Bb,
+      l: () => Tb,
+      o: () => eb,
+      p: () => Ab,
+      r: () => Yb
     });
-    let kb = function(bb) {
+    let Ab = function(bb) {
         return bb[bb.DEFAULT = 0] = "DEFAULT", bb[bb.BOAT = 1] = "BOAT", bb[bb.GLIDER = 2] = "GLIDER", bb[bb.BALLOON = 3] = "BALLOON", bb[bb.SLEEPING = 4] = "SLEEPING", bb[bb.RIDING_MOB = 5] = "RIDING_MOB", bb[bb.CAR = 6] = "CAR", bb[bb.HOVERCRAFT = 7] = "HOVERCRAFT", bb
       }({}),
-      Wb = function(bb) {
+      Mb = function(bb) {
         return bb[bb.WOOD = 0] = "WOOD", bb[bb.OBSIDIAN = 1] = "OBSIDIAN", bb[bb.SPEED = 2] = "SPEED", bb
       }({}),
-      ab = function(bb) {
+      Tb = function(bb) {
         return bb[bb.WOOD = 0] = "WOOD", bb[bb.IRON = 1] = "IRON", bb[bb.GOLD = 2] = "GOLD", bb[bb.DIAMOND = 3] = "DIAMOND", bb
       }({}),
-      Tb = function(bb) {
+      Eb = function(bb) {
         return bb[bb.YELLOW = 0] = "YELLOW", bb[bb.WHITE = 1] = "WHITE", bb[bb.RED = 2] = "RED", bb[bb.PURPLE = 3] = "PURPLE", bb[bb.PINK = 4] = "PINK", bb[bb.ORANGE = 5] = "ORANGE", bb[bb.MAGENTA = 6] = "MAGENTA", bb[bb.LIME = 7] = "LIME", bb[bb.LIGHT_GRAY = 8] = "LIGHT_GRAY", bb[bb.LIGHT_BLUE = 9] = "LIGHT_BLUE", bb[bb.GREEN = 10] = "GREEN", bb[bb.GRAY = 11] = "GRAY", bb[bb.CYAN = 12] = "CYAN", bb[bb.BROWN = 13] = "BROWN", bb[bb.BLUE = 14] = "BLUE", bb[bb.BLACK = 15] = "BLACK", bb
       }({}),
-      Ub = function(bb) {
+      Yb = function(bb) {
         return bb[bb.ROTATION_1 = 0] = "ROTATION_1", bb[bb.ROTATION_2 = 1] = "ROTATION_2", bb[bb.ROTATION_3 = 2] = "ROTATION_3", bb[bb.ROTATION_4 = 3] = "ROTATION_4", bb
       }({}),
-      Ib = function(bb) {
+      Bb = function(bb) {
         return bb[bb.KART = 0] = "KART", bb[bb.OFF_ROADER = 1] = "OFF_ROADER", bb[bb.CAR = 2] = "CAR", bb[bb.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", bb[bb.ARMORED_CAR = 4] = "ARMORED_CAR", bb[bb.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", bb[bb.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", bb[bb.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", bb
       }({});
-    kb.DEFAULT, kb.BOAT, Wb.SPEED, kb.GLIDER, ab.DIAMOND, kb.BALLOON, Tb.BLACK, kb.SLEEPING, Ub.ROTATION_4, kb.RIDING_MOB, kb.CAR, Ib.MOONSTONE_MINING_DRILL, kb.HOVERCRAFT;
-    let Hb = function(bb) {
+    Ab.DEFAULT, Ab.BOAT, Mb.SPEED, Ab.GLIDER, Tb.DIAMOND, Ab.BALLOON, Eb.BLACK, Ab.SLEEPING, Yb.ROTATION_4, Ab.RIDING_MOB, Ab.CAR, Bb.MOONSTONE_MINING_DRILL, Ab.HOVERCRAFT;
+    let eb = function(bb) {
       return bb[bb.NORMAL = 0] = "NORMAL", bb[bb.GLIDING = 1] = "GLIDING", bb[bb.FLOATING = 2] = "FLOATING", bb
     }({})
   }

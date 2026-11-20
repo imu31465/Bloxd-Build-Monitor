@@ -1,25 +1,25 @@
 export const id = 346;
 export const ids = [346];
 export const modules = {
-  60602: (bb, cb, sb) => {
-    sb.r(cb), sb.d(cb, {
-      WorldCodeAiOutOfUsage: () => ab
+  60270: (bb, ab, Ub) => {
+    Ub.r(ab), Ub.d(ab, {
+      WorldCodeAiOutOfUsage: () => Tb
     });
-    var kb = sb(1431),
-      Wb = sb(1087);
+    var Ab = Ub(1352),
+      Mb = Ub(1023);
 
-    function ab(bb) {
+    function Tb(bb) {
       let {
-        onGetSuperRank: cb
+        onGetSuperRank: ab
       } = bb;
-      return (0, Wb.jsxs)("div", {
+      return (0, Mb.jsxs)("div", {
         className: "WorldCodeAiOutOfUsage",
-        children: [(0, Wb.jsx)("p", {
+        children: [(0, Mb.jsx)("p", {
           className: "WorldCodeAiOutOfUsageText",
           children: "You don't have any Super Bot.xd usage left - use Bot.xd or get Super Rank for more usage!"
-        }), (0, Wb.jsx)(kb.n, {
+        }), (0, Mb.jsx)(Ab.m, {
           className: "WorldCodeAiOutOfUsageButton",
-          onClick: cb,
+          onClick: ab,
           children: "Get Super Rank"
         })]
       })

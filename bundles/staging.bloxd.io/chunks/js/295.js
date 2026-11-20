@@ -1,261 +1,261 @@
 export const id = 295;
 export const ids = [295];
 export const modules = {
-  41105: (bb, cb, sb) => {
-    sb.d(cb, {
-      e: () => Xb,
-      i: () => eb,
-      j: () => nb,
-      m: () => mb,
-      n: () => Nb,
-      p: () => Cb
+  40825: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      e: () => Pb,
+      i: () => yb,
+      l: () => Xb,
+      o: () => jb,
+      p: () => Db,
+      r: () => Zb
     });
-    var kb = sb(41061);
-    var Wb = "Babylon Lite v1.32.0",
-      ab = sb(41114);
+    var Ab = Ub(40782);
+    var Mb = "Babylon Lite v1.32.0",
+      Tb = Ub(40830);
 
-    function Tb(bb) {
+    function Eb(bb) {
       return "clientWidth" in bb
     }
-    var Ub = 1;
+    var Yb = 1;
 
-    function Ib(bb, cb, sb) {
-      const Ib = cb.getContext("webgpu");
-      Ib || (0, kb.d)(54), Tb(cb) && cb.setAttribute("data-engine", Wb);
-      const Hb = sb?.format ?? navigator.gpu.getPreferredCanvasFormat(),
-        fb = sb?.srgb ? (Mb = Hb).endsWith("-srgb") ? Mb : `${Mb}-srgb` : Hb;
-      var Mb;
-      const Xb = sb?.alphaMode ?? "opaque";
-      Ib.configure({
+    function Bb(bb, ab, Ub) {
+      const Bb = ab.getContext("webgpu");
+      Bb || (0, Ab.e)(54), Eb(ab) && ab.setAttribute("data-engine", Mb);
+      const eb = Ub?.format ?? navigator.gpu.getPreferredCanvasFormat(),
+        vb = Ub?.srgb ? (Lb = eb).endsWith("-srgb") ? Lb : `${Lb}-srgb` : eb;
+      var Lb;
+      const Pb = Ub?.alphaMode ?? "opaque";
+      Bb.configure({
         device: bb._device,
-        format: Hb,
-        alphaMode: Xb,
-        viewFormats: [fb]
+        format: eb,
+        alphaMode: Pb,
+        viewFormats: [vb]
       });
-      const nb = 1 === sb?.msaaSamples ? 1 : 4,
-        mb = (0, ab.b)({
+      const Xb = 1 === Ub?.msaaSamples ? 1 : 4,
+        jb = (0, Tb.b)({
           lbl: "swapchain",
-          format: fb,
+          format: vb,
           samples: 1,
           size: {
             width: 0,
             height: 0
           }
         });
-      return mb._eager = !0, {
+      return jb._eager = !0, {
         engine: bb,
-        canvas: cb,
-        format: fb,
-        msaaSamples: nb,
-        scRT: mb,
-        maxDevicePixelRatio: sb?.maxDevicePixelRatio ?? 1 / 0,
-        _uniqueId: Ub++,
-        _context: Ib,
-        _configureFormat: Hb,
-        _alphaMode: Xb,
+        canvas: ab,
+        format: vb,
+        msaaSamples: Xb,
+        scRT: jb,
+        maxDevicePixelRatio: Ub?.maxDevicePixelRatio ?? 1 / 0,
+        _uniqueId: Yb++,
+        _context: Bb,
+        _configureFormat: eb,
+        _alphaMode: Pb,
         _renderingContexts: []
       }
     }
 
-    function Hb(bb) {
-      const cb = bb._context.getCurrentTexture(),
-        sb = bb.scRT;
-      sb._colorTexture = cb, sb._colorView = cb.createView({
+    function eb(bb) {
+      const ab = bb._context.getCurrentTexture(),
+        Ub = bb.scRT;
+      Ub._colorTexture = ab, Ub._colorView = ab.createView({
         format: bb.format
-      }), sb._width = cb.width, sb._height = cb.height
+      }), Ub._width = ab.width, Ub._height = ab.height
     }
 
-    function fb(bb) {
-      const cb = bb.canvas;
-      if (!Tb(cb)) return;
-      const sb = bb._w ?? cb.clientWidth,
-        kb = bb._h ?? cb.clientHeight;
-      if (!(sb > 0 && kb > 0)) return;
-      const Wb = Math.min(globalThis.devicePixelRatio || 1, bb.maxDevicePixelRatio);
-      Mb(bb, sb * Wb | 0, kb * Wb | 0)
+    function vb(bb) {
+      const ab = bb.canvas;
+      if (!Eb(ab)) return;
+      const Ub = bb._w ?? ab.clientWidth,
+        Ab = bb._h ?? ab.clientHeight;
+      if (!(Ub > 0 && Ab > 0)) return;
+      const Mb = Math.min(globalThis.devicePixelRatio || 1, bb.maxDevicePixelRatio);
+      Lb(bb, Ub * Mb | 0, Ab * Mb | 0)
     }
 
-    function Mb(bb, cb, sb) {
-      const kb = bb.canvas,
-        Wb = 0 | cb,
-        ab = 0 | sb;
-      if (Wb > 0 && ab > 0 && (Wb !== kb.width || ab !== kb.height)) {
-        kb.width = Wb, kb.height = ab, bb.scRT._width = Wb, bb.scRT._height = ab;
-        for (const cb of bb._renderingContexts) cb._resize?.()
+    function Lb(bb, ab, Ub) {
+      const Ab = bb.canvas,
+        Mb = 0 | ab,
+        Tb = 0 | Ub;
+      if (Mb > 0 && Tb > 0 && (Mb !== Ab.width || Tb !== Ab.height)) {
+        Ab.width = Mb, Ab.height = Tb, bb.scRT._width = Mb, bb.scRT._height = Tb;
+        for (const ab of bb._renderingContexts) ab._resize?.()
       }
     }
-    var Xb = 0;
+    var Pb = 0;
 
-    function nb(bb, cb) {
-      return -1 !== bb._renderingContexts.indexOf(cb)
+    function Xb(bb, ab) {
+      return -1 !== bb._renderingContexts.indexOf(ab)
     }
 
-    function mb(bb, cb) {
-      return -1 === bb._renderingContexts.indexOf(cb) && (bb._renderingContexts.push(cb), !0)
+    function jb(bb, ab) {
+      return -1 === bb._renderingContexts.indexOf(ab) && (bb._renderingContexts.push(ab), !0)
     }
-    var lb = null;
-    var Qb = ["float32-filterable", "texture-compression-astc", "texture-compression-bc", "texture-compression-etc2", "texture-compression-unaligned", "timestamp-query", "primitive-index"];
-    async function eb(bb, cb) {
-      const ab = await navigator.gpu.requestAdapter({
+    var Rb = null;
+    var kb = ["float32-filterable", "texture-compression-astc", "texture-compression-bc", "texture-compression-etc2", "texture-compression-unaligned", "timestamp-query", "primitive-index"];
+    async function yb(bb, ab) {
+      const Tb = await navigator.gpu.requestAdapter({
         powerPreference: "high-performance",
-        ...lb ? lb() : {}
+        ...Rb ? Rb() : {}
       });
-      ab || (0, kb.d)(47);
-      const Tb = lb?.deviceFeatures?.(ab, cb) ?? function(bb) {
-          return Qb.filter((cb => bb.features.has(cb)))
-        }(ab),
-        Ub = await ab.requestDevice({
-          requiredFeatures: Tb,
-          requiredLimits: cb?.requiredLimits
+      Tb || (0, Ab.e)(47);
+      const Eb = Rb?.deviceFeatures?.(Tb, ab) ?? function(bb) {
+          return kb.filter((ab => bb.features.has(ab)))
+        }(Tb),
+        Yb = await Tb.requestDevice({
+          requiredFeatures: Eb,
+          requiredLimits: ab?.requiredLimits
         });
-      console.log(`${Wb} - WebGPU engine`);
-      const Mb = !!cb?.useHighPrecisionMatrix,
-        Xb = !!cb?.useFloatingOrigin;
-      if (Xb && !Mb && (0, kb.d)(48), Mb) {
+      console.log(`${Mb} - WebGPU engine`);
+      const Lb = !!ab?.useHighPrecisionMatrix,
+        Pb = !!ab?.useFloatingOrigin;
+      if (Pb && !Lb && (0, Ab.e)(48), Lb) {
         const {
           allocateF64Mat4: bb
-        } = await sb.e(349).then((() => sb(60657)));
+        } = await Ub.e(349).then((() => Ub(60329)));
         0
       }
-      let nb, mb, eb, Cb;
-      if (Xb) {
+      let Xb, jb, yb, Zb;
+      if (Pb) {
         const [{
           wrapRenderableForFO: bb,
-          lightFoVersion: cb,
-          applyLightFoOffset: kb
+          lightFoVersion: ab,
+          applyLightFoOffset: Ab
         }, {
-          makePackMeshWorld: Wb
-        }] = await Promise.all([sb.e(350).then((() => sb(60661))), sb.e(351).then((() => sb(60669)))]);
-        nb = bb, mb = Wb, eb = cb, Cb = kb
+          makePackMeshWorld: Mb
+        }] = await Promise.all([Ub.e(350).then((() => Ub(60338))), Ub.e(351).then((() => Ub(60340)))]);
+        Xb = bb, jb = Mb, yb = ab, Zb = Ab
       }
-      const Nb = {
-          _device: Ub
+      const Db = {
+          _device: Yb
         },
-        Vb = [Nb];
-      return Object.assign(Nb, {
-        engine: Nb,
-        surfaces: Vb,
-        _surfaces: Vb,
-        _device: Ub,
-        _options: cb,
+        zb = [Db];
+      return Object.assign(Db, {
+        engine: Db,
+        surfaces: zb,
+        _surfaces: zb,
+        _device: Yb,
+        _options: ab,
         drawCallCount: 0,
         gpuFrameTimeMs: 0,
-        useHighPrecisionMatrix: Mb,
-        useFloatingOrigin: Xb,
+        useHighPrecisionMatrix: Lb,
+        useFloatingOrigin: Pb,
         _animFrameId: 0,
         _renderFn: null,
         _currentEncoder: void 0,
         _currentDelta: 0,
         _cbs: [],
-        _wrapRenderableForFO: nb,
-        _makePackMeshWorld: mb,
-        _lightFoVersion: eb,
-        _applyLightFoOffset: Cb
-      }, Ib(Nb, bb, cb)), fb(Nb), Hb(Nb), Nb
+        _wrapRenderableForFO: Xb,
+        _makePackMeshWorld: jb,
+        _lightFoVersion: yb,
+        _applyLightFoOffset: Zb
+      }, Bb(Db, bb, ab)), vb(Db), eb(Db), Db
     }
 
-    function Cb(bb, cb, sb) {
-      Mb(bb, cb, sb)
+    function Zb(bb, ab, Ub) {
+      Lb(bb, ab, Ub)
     }
 
-    function Nb(bb, cb) {
-      let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : bb.surfaces;
-      if (sb !== bb.surfaces)
-        for (let Wb = sb.length; Wb--;) sb[Wb].engine !== bb && (0, kb.d)(49);
-      Vb(bb, cb, sb)
+    function Db(bb, ab) {
+      let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : bb.surfaces;
+      if (Ub !== bb.surfaces)
+        for (let Mb = Ub.length; Mb--;) Ub[Mb].engine !== bb && (0, Ab.e)(49);
+      zb(bb, ab, Ub)
     }
 
-    function Vb(bb, cb) {
-      let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : bb._surfaces,
-        kb = 0;
-      for (let ab = sb.length; ab--;) kb += sb[ab]._renderingContexts.length;
-      if (!kb) return bb.drawCallCount = 0, bb._flushGpuRetirements?.(bb);
-      const Wb = bb._device.createCommandEncoder({
+    function zb(bb, ab) {
+      let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : bb._surfaces,
+        Ab = 0;
+      for (let Tb = Ub.length; Tb--;) Ab += Ub[Tb]._renderingContexts.length;
+      if (!Ab) return bb.drawCallCount = 0, bb._flushGpuRetirements?.(bb);
+      const Mb = bb._device.createCommandEncoder({
         label: "frame"
       });
-      bb._currentEncoder = Wb, bb._currentDelta = cb;
+      bb._currentEncoder = Mb, bb._currentDelta = ab;
       try {
-        bb._gpuTimerBegin?.(Wb), kb = 0;
-        for (let bb = 0; bb < sb.length; bb++) {
-          const cb = sb[bb];
-          cb._capturePreFrame?.(cb), Hb(cb);
-          const Wb = cb._renderingContexts;
-          for (let bb = 0; bb < Wb.length; bb++) {
-            const cb = Wb[bb];
-            cb._update(), kb += cb._drawCallsPre + cb._record()
+        bb._gpuTimerBegin?.(Mb), Ab = 0;
+        for (let bb = 0; bb < Ub.length; bb++) {
+          const ab = Ub[bb];
+          ab._capturePreFrame?.(ab), eb(ab);
+          const Mb = ab._renderingContexts;
+          for (let bb = 0; bb < Mb.length; bb++) {
+            const ab = Mb[bb];
+            ab._update(), Ab += ab._drawCallsPre + ab._record()
           }
         }
-        const cb = bb._currentEncoder;
-        for (let bb = 0; bb < sb.length; bb++) {
-          const kb = sb[bb];
-          kb._captureService?.(kb, cb)
+        const ab = bb._currentEncoder;
+        for (let bb = 0; bb < Ub.length; bb++) {
+          const Ab = Ub[bb];
+          Ab._captureService?.(Ab, ab)
         }
-        bb._gpuTimerEnd?.(cb), bb._cbs[0] = cb.finish(), bb._device.queue.submit(bb._cbs), bb._flushGpuRetirements?.(bb), bb.drawCallCount = kb, bb._gpuTimerResolve?.()
+        bb._gpuTimerEnd?.(ab), bb._cbs[0] = ab.finish(), bb._device.queue.submit(bb._cbs), bb._flushGpuRetirements?.(bb), bb.drawCallCount = Ab, bb._gpuTimerResolve?.()
       } finally {
         bb._currentEncoder = void 0
       }
     }
   },
-  41069: (bb, cb, sb) => {
-    sb.d(cb, {
-      b: () => Wb,
-      d: () => ab,
-      g: () => kb
+  40784: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      e: () => Mb,
+      i: () => Tb,
+      m: () => Ab
     });
-    var kb = globalThis.GPUTextureUsage,
-      Wb = globalThis.GPUBufferUsage,
-      ab = globalThis.GPUShaderStage;
+    var Ab = globalThis.GPUTextureUsage,
+      Mb = globalThis.GPUBufferUsage,
+      Tb = globalThis.GPUShaderStage;
     globalThis.GPUColorWrite
   },
-  41130: (bb, cb, sb) => {
-    function kb(bb) {
-      Wb(bb.splice(0))
+  40849: (bb, ab, Ub) => {
+    function Ab(bb) {
+      Mb(bb.splice(0))
     }
 
-    function Wb(bb) {
-      for (const sb of bb) try {
-        sb()
-      } catch (cb) {
-        console.error("GPU resource retirement failed.", cb)
+    function Mb(bb) {
+      for (const Ub of bb) try {
+        Ub()
+      } catch (ab) {
+        console.error("GPU resource retirement failed.", ab)
       }
     }
 
-    function ab(bb, cb) {
-      bb._flushGpuRetirements ??= Tb, (bb._retirements ??= []).push(cb)
+    function Tb(bb, ab) {
+      bb._flushGpuRetirements ??= Eb, (bb._retirements ??= []).push(ab)
     }
 
-    function Tb(bb) {
-      const cb = bb._retirements;
-      if (!cb) return;
+    function Eb(bb) {
+      const ab = bb._retirements;
+      if (!ab) return;
       bb._retirements = null;
-      const sb = bb._retiring ??= new Set;
-      sb.add(cb), queueMicrotask((() => {
+      const Ub = bb._retiring ??= new Set;
+      Ub.add(ab), queueMicrotask((() => {
         bb._device.queue.onSubmittedWorkDone().then((() => {
-          sb.delete(cb), kb(cb)
+          Ub.delete(ab), Ab(ab)
         })).catch((() => {}))
       }))
     }
-    sb.d(cb, {
-      b: () => ab
+    Ub.d(ab, {
+      b: () => Tb
     })
   },
-  41114: (bb, cb, sb) => {
-    sb.d(cb, {
-      b: () => ab,
-      c: () => Tb,
-      d: () => Ub
+  40830: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      b: () => Tb,
+      c: () => Eb,
+      g: () => Yb
     });
-    var kb = sb(41069);
+    var Ab = Ub(40784);
 
-    function Wb(bb) {
-      const cb = bb.size;
-      return "canvas" in cb ? cb.canvas : cb
+    function Mb(bb) {
+      const ab = bb.size;
+      return "canvas" in ab ? ab.canvas : ab
     }
 
-    function ab(bb) {
+    function Tb(bb) {
       return {
         _descriptor: bb,
-        _resolveSize: Wb,
+        _resolveSize: Mb,
         _colorTexture: null,
         _colorView: null,
         _depthTexture: null,
@@ -265,525 +265,525 @@ export const modules = {
       }
     }
 
-    function Tb(bb, cb) {
-      if (bb._eager) return void bb._syncEager?.(cb);
-      Ub(bb);
-      const sb = bb._descriptor,
+    function Eb(bb, ab) {
+      if (bb._eager) return void bb._syncEager?.(ab);
+      Yb(bb);
+      const Ub = bb._descriptor,
         {
-          width: ab,
-          height: Tb
-        } = (bb._resolveSize ?? Wb)(sb);
-      bb._width = ab, bb._height = Tb;
-      const Ib = cb._device;
-      sb.format && (bb._colorTexture = Ib.createTexture({
-        label: sb.lbl,
+          width: Tb,
+          height: Eb
+        } = (bb._resolveSize ?? Mb)(Ub);
+      bb._width = Tb, bb._height = Eb;
+      const Bb = ab._device;
+      Ub.format && (bb._colorTexture = Bb.createTexture({
+        label: Ub.lbl,
         size: {
-          width: ab,
-          height: Tb
+          width: Tb,
+          height: Eb
         },
-        format: sb.format,
-        sampleCount: sb.samples,
-        usage: kb.g.RENDER_ATTACHMENT | kb.g.TEXTURE_BINDING | kb.g.COPY_SRC | kb.g.COPY_DST
-      }), bb._colorView = bb._colorTexture.createView()), sb.dFormat && (bb._depthTexture = Ib.createTexture({
-        label: sb.lbl,
+        format: Ub.format,
+        sampleCount: Ub.samples,
+        usage: Ab.m.RENDER_ATTACHMENT | Ab.m.TEXTURE_BINDING | Ab.m.COPY_SRC | Ab.m.COPY_DST
+      }), bb._colorView = bb._colorTexture.createView()), Ub.dFormat && (bb._depthTexture = Bb.createTexture({
+        label: Ub.lbl,
         size: {
-          width: ab,
-          height: Tb
+          width: Tb,
+          height: Eb
         },
-        format: sb.dFormat,
-        sampleCount: sb.samples,
-        usage: kb.g.RENDER_ATTACHMENT | kb.g.TEXTURE_BINDING
+        format: Ub.dFormat,
+        sampleCount: Ub.samples,
+        usage: Ab.m.RENDER_ATTACHMENT | Ab.m.TEXTURE_BINDING
       }), bb._depthView = bb._depthTexture.createView())
     }
 
-    function Ub(bb) {
+    function Yb(bb) {
       if (!bb || bb._eager && !bb._disposeAttachments) return;
-      const cb = bb._colorTexture,
-        sb = bb._depthTexture;
-      if (bb._colorTexture = bb._depthTexture = null, bb._colorView = bb._depthView = null, bb._width = bb._height = 0, bb._disposeAttachments) bb._disposeAttachments(cb, sb);
+      const ab = bb._colorTexture,
+        Ub = bb._depthTexture;
+      if (bb._colorTexture = bb._depthTexture = null, bb._colorView = bb._depthView = null, bb._width = bb._height = 0, bb._disposeAttachments) bb._disposeAttachments(ab, Ub);
       else try {
-        cb?.destroy()
+        ab?.destroy()
       } finally {
-        !1 !== bb._ownsDepthTexture && sb?.destroy()
+        !1 !== bb._ownsDepthTexture && Ub?.destroy()
       }
     }
   },
-  41128: (bb, cb, sb) => {
-    sb.d(cb, {
-      b: () => kb,
-      c: () => Wb,
-      e: () => ab
+  40840: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      d: () => Ab,
+      e: () => Mb,
+      f: () => Tb
     });
-    var kb = Float32Array,
-      Wb = Float64Array,
-      ab = Uint32Array
+    var Ab = Float32Array,
+      Mb = Float64Array,
+      Tb = Uint32Array
   },
-  41133: (bb, cb, sb) => {
-    sb.d(cb, {
-      c: () => kb
+  40854: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      b: () => Ab
     });
-    var kb = 16
+    var Ab = 16
   },
-  41061: (bb, cb, sb) => {
-    sb.d(cb, {
-      d: () => Wb
+  40782: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      e: () => Mb
     });
-    var kb = null;
+    var Ab = null;
 
-    function Wb(bb) {
-      for (var cb = arguments.length, sb = new Array(cb > 1 ? cb - 1 : 0), Wb = 1; Wb < cb; Wb++) sb[Wb - 1] = arguments[Wb];
-      const ab = new Error(kb?.(bb, sb) ?? `#${bb}`);
-      throw ab.lite = sb, ab
+    function Mb(bb) {
+      for (var ab = arguments.length, Ub = new Array(ab > 1 ? ab - 1 : 0), Mb = 1; Mb < ab; Mb++) Ub[Mb - 1] = arguments[Mb];
+      const Tb = new Error(Ab?.(bb, Ub) ?? `#${bb}`);
+      throw Tb.lite = Ub, Tb
     }
   },
-  41097: (bb, cb, sb) => {
-    sb.d(cb, {
-      b: () => Wb
+  40810: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      b: () => Mb
     });
-    var kb = sb(41086);
+    var Ab = Ub(40797);
 
-    function Wb(bb) {
-      let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      const sb = cb.compare,
-        Wb = cb.lodMinClamp ?? 0,
-        ab = cb.lodMaxClamp ?? 32,
-        Tb = void 0 !== sb || 0 !== Wb || 32 !== ab ? `${sb??""}:${Wb}:${ab}` : "";
-      return (0, kb.b)(bb, cb, Tb)
+    function Mb(bb) {
+      let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      const Ub = ab.compare,
+        Mb = ab.lodMinClamp ?? 0,
+        Tb = ab.lodMaxClamp ?? 32,
+        Eb = void 0 !== Ub || 0 !== Mb || 32 !== Tb ? `${Ub??""}:${Mb}:${Tb}` : "";
+      return (0, Ab.d)(bb, ab, Eb)
     }
   },
-  41077: (bb, cb, sb) => {
-    sb.d(cb, {
-      b: () => ab
+  40790: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      c: () => Tb
     });
-    var kb = null;
+    var Ab = null;
 
-    function Wb(bb) {
-      const cb = kb ??= new WeakMap;
-      cb.set(bb, (cb.get(bb) ?? 0) + 1)
+    function Mb(bb) {
+      const ab = Ab ??= new WeakMap;
+      ab.set(bb, (ab.get(bb) ?? 0) + 1)
     }
 
-    function ab(bb) {
-      Wb(bb.texture)
+    function Tb(bb) {
+      Mb(bb.texture)
     }
   },
-  41086: (bb, cb, sb) => {
-    sb.d(cb, {
-      b: () => Ub
+  40797: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      d: () => Yb
     });
-    var kb = null,
-      Wb = "nearest",
-      ab = "clamp-to-edge",
-      Tb = {
-        minFilter: Wb,
-        magFilter: Wb,
-        mipmapFilter: Wb,
-        addressModeU: ab,
-        addressModeV: ab,
-        addressModeW: ab,
+    var Ab = null,
+      Mb = "nearest",
+      Tb = "clamp-to-edge",
+      Eb = {
+        minFilter: Mb,
+        magFilter: Mb,
+        mipmapFilter: Mb,
+        addressModeU: Tb,
+        addressModeV: Tb,
+        addressModeW: Tb,
         maxAnisotropy: 1
       };
 
-    function Ub(bb) {
-      let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-      const Wb = bb._device,
-        ab = kb ??= new WeakMap;
-      let Ub = ab.get(Wb);
-      Ub || ab.set(Wb, Ub = new Map);
-      let Ib = sb;
-      for (const kb in Tb) {
-        const bb = kb;
-        Ib += `:${cb[bb]??Tb[bb]}`
+    function Yb(bb) {
+      let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+      const Mb = bb._device,
+        Tb = Ab ??= new WeakMap;
+      let Yb = Tb.get(Mb);
+      Yb || Tb.set(Mb, Yb = new Map);
+      let Bb = Ub;
+      for (const Ab in Eb) {
+        const bb = Ab;
+        Bb += `:${ab[bb]??Eb[bb]}`
       }
-      let Hb = Ub.get(Ib);
-      return Hb || Ub.set(Ib, Hb = Wb.createSampler(cb)), Hb
+      let eb = Yb.get(Bb);
+      return eb || Yb.set(Bb, eb = Mb.createSampler(ab)), eb
     }
   },
-  41121: (bb, cb, sb) => {
-    sb.d(cb, {
-      d: () => Kb,
-      g: () => qb
+  40832: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      d: () => ub,
+      h: () => ob
     });
-    var kb = sb(41114),
-      Wb = sb(41105);
+    var Ab = Ub(40830),
+      Mb = Ub(40825);
 
-    function ab(bb, cb) {
-      cb._passes.length = 0, bb._currentProcessedTask = cb;
+    function Tb(bb, ab) {
+      ab._passes.length = 0, bb._currentProcessedTask = ab;
       try {
-        cb.record()
+        ab.record()
       } finally {
         bb._currentProcessedTask = null
       }
     }
-    var Tb = sb(41128);
+    var Eb = Ub(40840);
 
-    function Ub(bb) {
-      const cb = bb.worldMatrixVersion;
-      if (bb._viewVer === cb) return bb._viewCache;
-      const sb = bb._viewCache,
-        kb = bb.worldMatrix,
-        Wb = bb._useFloatingOrigin,
-        ab = Wb ? 0 : kb[12],
-        Tb = Wb ? 0 : kb[13],
-        Ub = Wb ? 0 : kb[14];
-      return sb[0] = kb[0], sb[1] = kb[4], sb[2] = kb[8], sb[3] = 0, sb[4] = kb[1], sb[5] = kb[5], sb[6] = kb[9], sb[7] = 0, sb[8] = kb[2], sb[9] = kb[6], sb[10] = kb[10], sb[11] = 0, sb[12] = -(kb[0] * ab + kb[1] * Tb + kb[2] * Ub), sb[13] = -(kb[4] * ab + kb[5] * Tb + kb[6] * Ub), sb[14] = -(kb[8] * ab + kb[9] * Tb + kb[10] * Ub), sb[15] = 1, bb._viewVer = cb, sb
+    function Yb(bb) {
+      const ab = bb.worldMatrixVersion;
+      if (bb._viewVer === ab) return bb._viewCache;
+      const Ub = bb._viewCache,
+        Ab = bb.worldMatrix,
+        Mb = bb._useFloatingOrigin,
+        Tb = Mb ? 0 : Ab[12],
+        Eb = Mb ? 0 : Ab[13],
+        Yb = Mb ? 0 : Ab[14];
+      return Ub[0] = Ab[0], Ub[1] = Ab[4], Ub[2] = Ab[8], Ub[3] = 0, Ub[4] = Ab[1], Ub[5] = Ab[5], Ub[6] = Ab[9], Ub[7] = 0, Ub[8] = Ab[2], Ub[9] = Ab[6], Ub[10] = Ab[10], Ub[11] = 0, Ub[12] = -(Ab[0] * Tb + Ab[1] * Eb + Ab[2] * Yb), Ub[13] = -(Ab[4] * Tb + Ab[5] * Eb + Ab[6] * Yb), Ub[14] = -(Ab[8] * Tb + Ab[9] * Eb + Ab[10] * Yb), Ub[15] = 1, bb._viewVer = ab, Ub
     }
-    var Ib = null;
+    var Bb = null;
 
-    function Hb(bb) {
+    function eb(bb) {
       return bb._projFov === bb.fov && bb._projNear === bb.nearPlane && bb._projFar === bb.farPlane || (bb._projFov = bb.fov, bb._projNear = bb.nearPlane, bb._projFar = bb.farPlane, bb._projRev = (bb._projRev ?? 0) + 1), bb.worldMatrixVersion + (bb._projRev ?? 0)
     }
 
-    function fb(bb, cb) {
-      const sb = Hb(bb);
-      if (bb._projVer === sb && bb._projAspect === cb) return bb._projCache;
-      const kb = bb._projCache;
-      return null !== Ib && bb.ortho ? Ib(bb, cb, kb) : function(bb, cb, sb, kb, Wb) {
-        const ab = 1 / Math.tan(.5 * cb),
-          Tb = Wb - kb;
-        bb[0] = ab / sb, bb[5] = ab, bb[10] = -kb / Tb, bb[11] = 1, bb[14] = Wb * kb / Tb
-      }(kb, bb.fov, cb, bb.nearPlane, bb.farPlane), bb._projVer = sb, bb._projAspect = cb, kb
+    function vb(bb, ab) {
+      const Ub = eb(bb);
+      if (bb._projVer === Ub && bb._projAspect === ab) return bb._projCache;
+      const Ab = bb._projCache;
+      return null !== Bb && bb.ortho ? Bb(bb, ab, Ab) : function(bb, ab, Ub, Ab, Mb) {
+        const Tb = 1 / Math.tan(.5 * ab),
+          Eb = Mb - Ab;
+        bb[0] = Tb / Ub, bb[5] = Tb, bb[10] = -Ab / Eb, bb[11] = 1, bb[14] = Mb * Ab / Eb
+      }(Ab, bb.fov, ab, bb.nearPlane, bb.farPlane), bb._projVer = Ub, bb._projAspect = ab, Ab
     }
-    var Mb = sb(41069);
+    var Lb = Ub(40784);
 
-    function Xb(bb, cb, sb) {
+    function Pb(bb, ab, Ub) {
       return bb._device.createBuffer({
-        label: sb,
-        size: (kb = cb, Wb = 16, Math.ceil(kb / Wb) * Wb),
-        usage: Mb.b.UNIFORM | Mb.b.COPY_DST
+        label: Ub,
+        size: (Ab = ab, Mb = 16, Math.ceil(Ab / Mb) * Mb),
+        usage: Lb.e.UNIFORM | Lb.e.COPY_DST
       });
-      var kb, Wb
+      var Ab, Mb
     }
-    var nb = sb(41130),
-      mb = null;
+    var Xb = Ub(40849),
+      jb = null;
 
-    function lb(bb) {
-      const cb = bb._device,
-        sb = mb ??= new WeakMap;
-      let kb = sb.get(cb);
-      return kb || (kb = cb.createBindGroupLayout({
-        label: "aQ",
+    function Rb(bb) {
+      const ab = bb._device,
+        Ub = jb ??= new WeakMap;
+      let Ab = Ub.get(ab);
+      return Ab || (Ab = ab.createBindGroupLayout({
+        label: "ZR",
         entries: [{
           binding: 0,
-          visibility: Mb.d.VERTEX | Mb.d.FRAGMENT,
+          visibility: Lb.i.VERTEX | Lb.i.FRAGMENT,
           buffer: {
             type: "uniform"
           }
         }, {
           binding: 1,
-          visibility: Mb.d.FRAGMENT,
+          visibility: Lb.i.FRAGMENT,
           buffer: {
             type: "uniform"
           }
         }]
-      }), sb.set(cb, kb)), kb
+      }), Ub.set(ab, Ab)), Ab
     }
 
-    function Qb(bb, cb, sb) {
-      const kb = bb._device,
-        Wb = Xb(bb, cb.byteLength, sb);
+    function kb(bb, ab, Ub) {
+      const Ab = bb._device,
+        Mb = Pb(bb, ab.byteLength, Ub);
       try {
-        kb.queue.writeBuffer(Wb, 0, cb.buffer, cb.byteOffset, cb.byteLength)
-      } catch (ab) {
-        throw Wb.destroy(), ab
+        Ab.queue.writeBuffer(Mb, 0, ab.buffer, ab.byteOffset, ab.byteLength)
+      } catch (Tb) {
+        throw Mb.destroy(), Tb
       }
-      return Wb
+      return Mb
     }
-    var eb = sb(41133),
-      Cb = new Tb.e(1),
-      Nb = new Tb.b(Cb.buffer);
+    var yb = Ub(40854),
+      Zb = new Eb.f(1),
+      Db = new Eb.d(Zb.buffer);
 
-    function Vb(bb) {
-      let cb = 0;
-      for (const sb of bb) cb += sb._lightVersion ?? 0;
-      return cb
+    function zb(bb) {
+      let ab = 0;
+      for (const Ub of bb) ab += Ub._lightVersion ?? 0;
+      return ab
     }
 
-    function Lb(bb, cb) {
+    function xb(bb, ab) {
       bb.fill(0);
-      let sb = 0;
-      for (const kb of cb) {
-        if (sb >= eb.c) break;
-        kb._writeLightUbo && (kb._writeLightUbo(bb, 4 + 16 * sb), sb++)
+      let Ub = 0;
+      for (const Ab of ab) {
+        if (Ub >= yb.b) break;
+        Ab._writeLightUbo && (Ab._writeLightUbo(bb, 4 + 16 * Ub), Ub++)
       }
-      Cb[0] = sb, bb[0] = Nb[0]
+      Zb[0] = Ub, bb[0] = Db[0]
     }
 
-    function ub(bb, cb) {
-      let sb = cb._lightGpuState;
-      const kb = 16 + 16 * eb.c * 4;
-      if (sb && sb._byteSize === kb) return sb;
-      const Wb = !sb;
-      sb?._buffer.destroy();
-      const ab = new Tb.b(kb / 4);
-      return Lb(ab, cb.lights), bb._applyLightFoOffset?.(ab, cb), sb = {
-        _buffer: Qb(bb, ab),
-        _scratch: ab,
-        nD: Vb(cb.lights) + (bb._lightFoVersion?.(cb) ?? 0),
-        _listVersion: cb._lightListVersion ?? 0,
-        _lightCount: cb.lights.length,
-        _byteSize: kb
-      }, cb._lightGpuState = sb, Wb && cb._disposables.push((() => {
-        cb._lightGpuState?._buffer.destroy(), cb._lightGpuState = void 0
-      })), sb
+    function ib(bb, ab) {
+      let Ub = ab._lightGpuState;
+      const Ab = 16 + 16 * yb.b * 4;
+      if (Ub && Ub._byteSize === Ab) return Ub;
+      const Mb = !Ub;
+      Ub?._buffer.destroy();
+      const Tb = new Eb.d(Ab / 4);
+      return xb(Tb, ab.lights), bb._applyLightFoOffset?.(Tb, ab), Ub = {
+        _buffer: kb(bb, Tb),
+        _scratch: Tb,
+        aG: zb(ab.lights) + (bb._lightFoVersion?.(ab) ?? 0),
+        _listVersion: ab._lightListVersion ?? 0,
+        _lightCount: ab.lights.length,
+        _byteSize: Ab
+      }, ab._lightGpuState = Ub, Mb && ab._disposables.push((() => {
+        ab._lightGpuState?._buffer.destroy(), ab._lightGpuState = void 0
+      })), Ub
     }
 
-    function Yb(bb, cb) {
-      let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        kb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-      const Wb = cb;
-      if (0 === kb && 16 === Wb.length) return void bb.set(Wb, sb);
-      const ab = kb,
-        Tb = sb;
-      bb[Tb + 0] = Wb[ab + 0], bb[Tb + 1] = Wb[ab + 1], bb[Tb + 2] = Wb[ab + 2], bb[Tb + 3] = Wb[ab + 3], bb[Tb + 4] = Wb[ab + 4], bb[Tb + 5] = Wb[ab + 5], bb[Tb + 6] = Wb[ab + 6], bb[Tb + 7] = Wb[ab + 7], bb[Tb + 8] = Wb[ab + 8], bb[Tb + 9] = Wb[ab + 9], bb[Tb + 10] = Wb[ab + 10], bb[Tb + 11] = Wb[ab + 11], bb[Tb + 12] = Wb[ab + 12], bb[Tb + 13] = Wb[ab + 13], bb[Tb + 14] = Wb[ab + 14], bb[Tb + 15] = Wb[ab + 15]
+    function fb(bb, ab) {
+      let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        Ab = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+      const Mb = ab;
+      if (0 === Ab && 16 === Mb.length) return void bb.set(Mb, Ub);
+      const Tb = Ab,
+        Eb = Ub;
+      bb[Eb + 0] = Mb[Tb + 0], bb[Eb + 1] = Mb[Tb + 1], bb[Eb + 2] = Mb[Tb + 2], bb[Eb + 3] = Mb[Tb + 3], bb[Eb + 4] = Mb[Tb + 4], bb[Eb + 5] = Mb[Tb + 5], bb[Eb + 6] = Mb[Tb + 6], bb[Eb + 7] = Mb[Tb + 7], bb[Eb + 8] = Mb[Tb + 8], bb[Eb + 9] = Mb[Tb + 9], bb[Eb + 10] = Mb[Tb + 10], bb[Eb + 11] = Mb[Tb + 11], bb[Eb + 12] = Mb[Tb + 12], bb[Eb + 13] = Mb[Tb + 13], bb[Eb + 14] = Mb[Tb + 14], bb[Eb + 15] = Mb[Tb + 15]
     }
 
-    function hb(bb, cb, sb, kb, Wb) {
+    function mb(bb, ab, Ub, Ab, Mb) {
       bb.fill(0);
-      const ab = function(bb, cb) {
-          const sb = Hb(bb);
-          if (bb._vpVer === sb && bb._vpAspect === cb) return bb._vpCache;
-          const kb = bb._vpCache;
-          return function(bb, cb, sb, kb, Wb, ab) {
-            const Tb = sb[kb],
-              Ub = sb[kb + 1],
-              Ib = sb[kb + 2],
-              Hb = sb[kb + 3],
-              fb = sb[kb + 4],
-              Mb = sb[kb + 5],
-              Xb = sb[kb + 6],
-              nb = sb[kb + 7],
-              mb = sb[kb + 8],
-              lb = sb[kb + 9],
-              Qb = sb[kb + 10],
-              eb = sb[kb + 11],
-              Cb = sb[kb + 12],
-              Nb = sb[kb + 13],
-              Vb = sb[kb + 14],
-              Lb = sb[kb + 15];
-            let ub = Wb[ab],
-              Yb = Wb[ab + 1],
-              hb = Wb[ab + 2],
-              Jb = Wb[ab + 3];
-            bb[cb] = Tb * ub + fb * Yb + mb * hb + Cb * Jb, bb[cb + 1] = Ub * ub + Mb * Yb + lb * hb + Nb * Jb, bb[cb + 2] = Ib * ub + Xb * Yb + Qb * hb + Vb * Jb, bb[cb + 3] = Hb * ub + nb * Yb + eb * hb + Lb * Jb, ub = Wb[ab + 4], Yb = Wb[ab + 5], hb = Wb[ab + 6], Jb = Wb[ab + 7], bb[cb + 4] = Tb * ub + fb * Yb + mb * hb + Cb * Jb, bb[cb + 5] = Ub * ub + Mb * Yb + lb * hb + Nb * Jb, bb[cb + 6] = Ib * ub + Xb * Yb + Qb * hb + Vb * Jb, bb[cb + 7] = Hb * ub + nb * Yb + eb * hb + Lb * Jb, ub = Wb[ab + 8], Yb = Wb[ab + 9], hb = Wb[ab + 10], Jb = Wb[ab + 11], bb[cb + 8] = Tb * ub + fb * Yb + mb * hb + Cb * Jb, bb[cb + 9] = Ub * ub + Mb * Yb + lb * hb + Nb * Jb, bb[cb + 10] = Ib * ub + Xb * Yb + Qb * hb + Vb * Jb, bb[cb + 11] = Hb * ub + nb * Yb + eb * hb + Lb * Jb, ub = Wb[ab + 12], Yb = Wb[ab + 13], hb = Wb[ab + 14], Jb = Wb[ab + 15], bb[cb + 12] = Tb * ub + fb * Yb + mb * hb + Cb * Jb, bb[cb + 13] = Ub * ub + Mb * Yb + lb * hb + Nb * Jb, bb[cb + 14] = Ib * ub + Xb * Yb + Qb * hb + Vb * Jb, bb[cb + 15] = Hb * ub + nb * Yb + eb * hb + Lb * Jb
-          }(kb, 0, fb(bb, cb), 0, Ub(bb), 0), bb._vpVer = sb, bb._vpAspect = cb, kb
-        }(kb, Wb),
-        Tb = Ub(kb),
-        Ib = kb.worldMatrix;
-      Yb(bb, ab, 0), Yb(bb, Tb, 16), cb.useFloatingOrigin ? (bb[32] = 0, bb[33] = 0, bb[34] = 0) : (bb[32] = Ib[12], bb[33] = Ib[13], bb[34] = Ib[14]), bb[87] = cb.canvas.width;
-      const Mb = sb.imageProcessing;
-      bb[76] = Mb.exposure, bb[77] = Mb.contrast, bb[78] = sb._envTextures?.lodGenerationScale ?? .8, bb[79] = +Mb.toneMappingEnabled, bb[37] = cb.canvas.height
+      const Tb = function(bb, ab) {
+          const Ub = eb(bb);
+          if (bb._vpVer === Ub && bb._vpAspect === ab) return bb._vpCache;
+          const Ab = bb._vpCache;
+          return function(bb, ab, Ub, Ab, Mb, Tb) {
+            const Eb = Ub[Ab],
+              Yb = Ub[Ab + 1],
+              Bb = Ub[Ab + 2],
+              eb = Ub[Ab + 3],
+              vb = Ub[Ab + 4],
+              Lb = Ub[Ab + 5],
+              Pb = Ub[Ab + 6],
+              Xb = Ub[Ab + 7],
+              jb = Ub[Ab + 8],
+              Rb = Ub[Ab + 9],
+              kb = Ub[Ab + 10],
+              yb = Ub[Ab + 11],
+              Zb = Ub[Ab + 12],
+              Db = Ub[Ab + 13],
+              zb = Ub[Ab + 14],
+              xb = Ub[Ab + 15];
+            let ib = Mb[Tb],
+              fb = Mb[Tb + 1],
+              mb = Mb[Tb + 2],
+              pb = Mb[Tb + 3];
+            bb[ab] = Eb * ib + vb * fb + jb * mb + Zb * pb, bb[ab + 1] = Yb * ib + Lb * fb + Rb * mb + Db * pb, bb[ab + 2] = Bb * ib + Pb * fb + kb * mb + zb * pb, bb[ab + 3] = eb * ib + Xb * fb + yb * mb + xb * pb, ib = Mb[Tb + 4], fb = Mb[Tb + 5], mb = Mb[Tb + 6], pb = Mb[Tb + 7], bb[ab + 4] = Eb * ib + vb * fb + jb * mb + Zb * pb, bb[ab + 5] = Yb * ib + Lb * fb + Rb * mb + Db * pb, bb[ab + 6] = Bb * ib + Pb * fb + kb * mb + zb * pb, bb[ab + 7] = eb * ib + Xb * fb + yb * mb + xb * pb, ib = Mb[Tb + 8], fb = Mb[Tb + 9], mb = Mb[Tb + 10], pb = Mb[Tb + 11], bb[ab + 8] = Eb * ib + vb * fb + jb * mb + Zb * pb, bb[ab + 9] = Yb * ib + Lb * fb + Rb * mb + Db * pb, bb[ab + 10] = Bb * ib + Pb * fb + kb * mb + zb * pb, bb[ab + 11] = eb * ib + Xb * fb + yb * mb + xb * pb, ib = Mb[Tb + 12], fb = Mb[Tb + 13], mb = Mb[Tb + 14], pb = Mb[Tb + 15], bb[ab + 12] = Eb * ib + vb * fb + jb * mb + Zb * pb, bb[ab + 13] = Yb * ib + Lb * fb + Rb * mb + Db * pb, bb[ab + 14] = Bb * ib + Pb * fb + kb * mb + zb * pb, bb[ab + 15] = eb * ib + Xb * fb + yb * mb + xb * pb
+          }(Ab, 0, vb(bb, ab), 0, Yb(bb), 0), bb._vpVer = Ub, bb._vpAspect = ab, Ab
+        }(Ab, Mb),
+        Eb = Yb(Ab),
+        Bb = Ab.worldMatrix;
+      fb(bb, Tb, 0), fb(bb, Eb, 16), ab.useFloatingOrigin ? (bb[32] = 0, bb[33] = 0, bb[34] = 0) : (bb[32] = Bb[12], bb[33] = Bb[13], bb[34] = Bb[14]), bb[87] = ab.canvas.width;
+      const Lb = Ub.imageProcessing;
+      bb[76] = Lb.exposure, bb[77] = Lb.contrast, bb[78] = Ub._envTextures?.lodGenerationScale ?? .8, bb[79] = +Lb.toneMappingEnabled, bb[37] = ab.canvas.height
     }
 
-    function Jb(bb, cb) {
+    function pb(bb, ab) {
       return {
         _renderables: bb,
         _opaqueBindings: [],
         _directBindings: [],
         _transparentBindings: [],
         _ob: [],
-        _lastVersion: cb
+        _lastVersion: ab
       }
     }
 
-    function gb(bb, cb, sb) {
+    function Nb(bb, ab, Ub) {
       bb.clr ??= !0;
-      const Wb = bb.rt._descriptor,
-        ab = bb.depth?._descriptor,
-        Ib = {
-          _colorFormat: Wb.format,
-          _depthStencilFormat: ab?.dFormat ?? Wb.dFormat,
-          _depthCompare: Wb.depthCompare ?? ab?.depthCompare,
-          _sampleCount: Wb.samples
+      const Mb = bb.rt._descriptor,
+        Tb = bb.depth?._descriptor,
+        Bb = {
+          _colorFormat: Mb.format,
+          _depthStencilFormat: Tb?.dFormat ?? Mb.dFormat,
+          _depthCompare: Mb.depthCompare ?? Tb?.depthCompare,
+          _sampleCount: Mb.samples
         },
-        fb = {
+        vb = {
           loadOp: "clear",
           storeOp: "store"
         },
-        Mb = {
-          ...Jb([], -1),
+        Lb = {
+          ...pb([], -1),
           name: bb.name,
           _config: bb,
           _ownsTargets: !bb.sharedRt,
-          engine: cb,
-          aQ: sb,
+          engine: ab,
+          ZR: Ub,
           _passes: [],
           _renderPassDescriptor: {
-            colorAttachments: [fb]
+            colorAttachments: [vb]
           },
-          _colorAttachment: fb,
-          _sceneUBO: Xb(cb, 368),
-          _suData: new Tb.b(92),
+          _colorAttachment: vb,
+          _sceneUBO: Pb(ab, 368),
+          _suData: new Eb.d(92),
           _sceneUboCacheKey: [],
-          _targetSignature: Ib,
+          _targetSignature: Bb,
           _updateContext: {
             targetWidth: 0,
             targetHeight: 0
           },
           record() {
-            if (Mb._disposed) throw new Error("RenderTask has been disposed.");
-            Mb._recordExplicit ? Mb._recordExplicit(Mb, !0) : yb(Mb, !1 !== bb.autoMirror ? sb._renderables.slice() : Mb._renderables, !0)
+            if (Lb._disposed) throw new Error("RenderTask has been disposed.");
+            Lb._recordExplicit ? Lb._recordExplicit(Lb, !0) : Ib(Lb, !1 !== bb.autoMirror ? Ub._renderables.slice() : Lb._renderables, !0)
           },
-          execute: () => function(bb, cb, sb) {
+          execute: () => function(bb, ab, Ub) {
             if (!1 === bb.enabled) return 0;
-            const kb = bb.aQ;
-            ! function(bb, cb, sb) {
-              const kb = bb.aQ;
-              !1 !== bb._config.autoMirror && bb._lastVersion !== kb._renderableVersion && yb(bb, kb._renderables.slice());
-              Db(bb, cb);
-              const Wb = bb._updateContext,
-                ab = bb._config.cam ?? kb.camera;
-              sb._colorFormat && (bb._config._skipClusteredLights || kb._clusteredLightUpdater?.(ab, Wb.targetWidth, Wb.targetHeight), function(bb, cb) {
-                const sb = ub(bb, cb),
-                  kb = Vb(cb.lights) + (bb._lightFoVersion?.(cb) ?? 0),
-                  Wb = cb._lightListVersion ?? 0;
-                kb === sb.nD && Wb === sb._listVersion && cb.lights.length === sb._lightCount || (sb.nD = kb, sb._listVersion = Wb, sb._lightCount = cb.lights.length, Lb(sb._scratch, cb.lights), bb._applyLightFoOffset?.(sb._scratch, cb), bb._device.queue.writeBuffer(sb._buffer, 0, sb._scratch)), sb._buffer
-              }(cb, kb));
-              (function(bb, cb, sb, kb) {
-                if (!kb) return;
-                const Wb = kb.viewport,
-                  ab = bb._config.rt,
-                  Tb = (bb._config.cs ? cb.canvas.width / cb.canvas.height : ab._width / ab._height) * (Wb ? Wb.width / Wb.height : 1),
-                  Ub = sb.fog,
-                  Ib = sb.imageProcessing,
-                  fb = Hb(kb),
-                  Mb = sb._envTextures,
-                  Xb = bb._sceneUboCacheKey;
-                if (Xb[0] === kb && Xb[1] === Ub && Xb[2] === fb && Xb[3] === Tb && Xb[4] === Ib.exposure && Xb[5] === Ib.contrast && Xb[6] === Mb) return;
-                Xb[0] = kb, Xb[1] = Ub, Xb[2] = fb, Xb[3] = Tb, Xb[4] = Ib.exposure, Xb[5] = Ib.contrast, Xb[6] = Mb;
-                const nb = bb._suData;
-                hb(nb, cb, sb, kb, Tb);
-                const mb = sb._sceneUboContributors;
-                if (mb)
-                  for (const Hb of mb) Hb(nb, sb);
-                cb._device.queue.writeBuffer(bb._sceneUBO, 0, nb)
-              })(bb, cb, kb, ab), Wb.Xw = ab, bb._batchState?._reset(), Eb(bb._opaqueBindings, Wb), Eb(bb._directBindings, Wb), Eb(bb._transparentBindings, Wb), bb._batchState?._flush(cb),
-                function(bb, cb) {
-                  const sb = bb._transparentBindings;
-                  if (sb.length <= 1 || !cb) return;
-                  const kb = Ub(cb);
-                  for (const Wb of sb) {
-                    const bb = Wb.renderable._worldCenter;
-                    Wb._sortDistance = bb ? bb[0] * kb[2] + bb[1] * kb[6] + bb[2] * kb[10] + kb[14] : 0
+            const Ab = bb.ZR;
+            ! function(bb, ab, Ub) {
+              const Ab = bb.ZR;
+              !1 !== bb._config.autoMirror && bb._lastVersion !== Ab._renderableVersion && Ib(bb, Ab._renderables.slice());
+              Fb(bb, ab);
+              const Mb = bb._updateContext,
+                Tb = bb._config.cam ?? Ab.camera;
+              Ub._colorFormat && (bb._config._skipClusteredLights || Ab._clusteredLightUpdater?.(Tb, Mb.targetWidth, Mb.targetHeight), function(bb, ab) {
+                const Ub = ib(bb, ab),
+                  Ab = zb(ab.lights) + (bb._lightFoVersion?.(ab) ?? 0),
+                  Mb = ab._lightListVersion ?? 0;
+                Ab === Ub.aG && Mb === Ub._listVersion && ab.lights.length === Ub._lightCount || (Ub.aG = Ab, Ub._listVersion = Mb, Ub._lightCount = ab.lights.length, xb(Ub._scratch, ab.lights), bb._applyLightFoOffset?.(Ub._scratch, ab), bb._device.queue.writeBuffer(Ub._buffer, 0, Ub._scratch)), Ub._buffer
+              }(ab, Ab));
+              (function(bb, ab, Ub, Ab) {
+                if (!Ab) return;
+                const Mb = Ab.viewport,
+                  Tb = bb._config.rt,
+                  Eb = (bb._config.cs ? ab.canvas.width / ab.canvas.height : Tb._width / Tb._height) * (Mb ? Mb.width / Mb.height : 1),
+                  Yb = Ub.fog,
+                  Bb = Ub.imageProcessing,
+                  vb = eb(Ab),
+                  Lb = Ub._envTextures,
+                  Pb = bb._sceneUboCacheKey;
+                if (Pb[0] === Ab && Pb[1] === Yb && Pb[2] === vb && Pb[3] === Eb && Pb[4] === Bb.exposure && Pb[5] === Bb.contrast && Pb[6] === Lb) return;
+                Pb[0] = Ab, Pb[1] = Yb, Pb[2] = vb, Pb[3] = Eb, Pb[4] = Bb.exposure, Pb[5] = Bb.contrast, Pb[6] = Lb;
+                const Xb = bb._suData;
+                mb(Xb, ab, Ub, Ab, Eb);
+                const jb = Ub._sceneUboContributors;
+                if (jb)
+                  for (const eb of jb) eb(Xb, Ub);
+                ab._device.queue.writeBuffer(bb._sceneUBO, 0, Xb)
+              })(bb, ab, Ab, Tb), Mb.lC = Tb, bb._batchState?._reset(), hb(bb._opaqueBindings, Mb), hb(bb._directBindings, Mb), hb(bb._transparentBindings, Mb), bb._batchState?._flush(ab),
+                function(bb, ab) {
+                  const Ub = bb._transparentBindings;
+                  if (Ub.length <= 1 || !ab) return;
+                  const Ab = Yb(ab);
+                  for (const Mb of Ub) {
+                    const bb = Mb.renderable._worldCenter;
+                    Mb._sortDistance = bb ? bb[0] * Ab[2] + bb[1] * Ab[6] + bb[2] * Ab[10] + Ab[14] : 0
                   }
-                  sb.sort(Bb)
-                }(bb, ab)
-            }(bb, cb, sb);
-            const Wb = bb._colorAttachment,
-              ab = bb._config;
-            ab.rt._colorView && (ab.rt === kb.surface.scRT && (Wb.view = ab.rt._colorView), Wb.resolveTarget = ab.rst?._colorView ?? void 0, Wb.clearValue = ab.clrColor ?? kb.clearColor, Wb.loadOp = ab.clr ? "clear" : "load");
-            if (bb._executeWithTransmission) return bb._executeWithTransmission(sb._sampleCount);
-            const Tb = cb._currentEncoder.beginRenderPass(bb._renderPassDescriptor),
-              Ib = Pb(bb, Tb);
-            return Tb.end(), Ib
-          }(Mb, cb, Ib),
+                  Ub.sort(Wb)
+                }(bb, Tb)
+            }(bb, ab, Ub);
+            const Mb = bb._colorAttachment,
+              Tb = bb._config;
+            Tb.rt._colorView && (Tb.rt === Ab.surface.scRT && (Mb.view = Tb.rt._colorView), Mb.resolveTarget = Tb.rst?._colorView ?? void 0, Mb.clearValue = Tb.clrColor ?? Ab.clearColor, Mb.loadOp = Tb.clr ? "clear" : "load");
+            if (bb._executeWithTransmission) return bb._executeWithTransmission(Ub._sampleCount);
+            const Eb = ab._currentEncoder.beginRenderPass(bb._renderPassDescriptor),
+              Bb = db(bb, Eb);
+            return Eb.end(), Bb
+          }(Lb, ab, Bb),
           dispose() {
-            if (Mb._disposed) return;
-            Mb._disposed = !0;
-            const cb = Mb._pendingMeshes;
-            cb && (cb.length = 0);
-            for (const bb of Mb._renderables) Mb._retireRenderable?.(Mb.engine, bb);
-            Mb._passes.length = Mb._opaqueBindings.length = Mb._directBindings.length = 0, Mb._transparentBindings.length = Mb._renderables.length = Mb._ob.length = 0, Mb._ownsTargets && ((0, kb.d)(bb.rt), (0, kb.d)(bb.rst)), bb.depth?._eager || (0, kb.d)(bb.depth);
-            const sb = Mb._sceneUBO;
-            (0, nb.b)(Mb.engine, (() => sb.destroy())), Mb._batchState?._release(Mb.engine), Mb._batchState = void 0
+            if (Lb._disposed) return;
+            Lb._disposed = !0;
+            const ab = Lb._pendingMeshes;
+            ab && (ab.length = 0);
+            for (const bb of Lb._renderables) Lb._retireRenderable?.(Lb.engine, bb);
+            Lb._passes.length = Lb._opaqueBindings.length = Lb._directBindings.length = 0, Lb._transparentBindings.length = Lb._renderables.length = Lb._ob.length = 0, Lb._ownsTargets && ((0, Ab.g)(bb.rt), (0, Ab.g)(bb.rst)), bb.depth?._eager || (0, Ab.g)(bb.depth);
+            const Ub = Lb._sceneUBO;
+            (0, Xb.b)(Lb.engine, (() => Ub.destroy())), Lb._batchState?._release(Lb.engine), Lb._batchState = void 0
           }
         };
-      return Mb
+      return Lb
     }
 
-    function Bb(bb, cb) {
-      return cb._sortDistance - bb._sortDistance || bb.renderable.order - cb.renderable.order
+    function Wb(bb, ab) {
+      return ab._sortDistance - bb._sortDistance || bb.renderable.order - ab.renderable.order
     }
 
-    function tb(bb, cb) {
-      return bb.renderable.order - cb.renderable.order
+    function Hb(bb, ab) {
+      return bb.renderable.order - ab.renderable.order
     }
 
-    function yb(bb) {
-      let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : bb._renderables,
-        sb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        Wb = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
-        ab = arguments.length > 4 ? arguments[4] : void 0;
-      const Tb = bb._config,
-        Ub = Tb.rt,
-        Ib = bb._batchState,
-        Hb = Jb(cb, bb.aQ._renderableVersion);
-      if (sb) {
-        const cb = (cb, sb) => {
-          cb && (sb || bb._ownsTargets || cb._eager) && (0, kb.c)(cb, bb.engine)
+    function Ib(bb) {
+      let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : bb._renderables,
+        Ub = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        Mb = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
+        Tb = arguments.length > 4 ? arguments[4] : void 0;
+      const Eb = bb._config,
+        Yb = Eb.rt,
+        Bb = bb._batchState,
+        eb = pb(ab, bb.ZR._renderableVersion);
+      if (Ub) {
+        const ab = (ab, Ub) => {
+          ab && (Ub || bb._ownsTargets || ab._eager) && (0, Ab.c)(ab, bb.engine)
         };
-        cb(Ub), Ub._descriptor.samples > 1 && cb(Tb.rst), cb(Tb.depth, !0)
+        ab(Yb), Yb._descriptor.samples > 1 && ab(Eb.rst), ab(Eb.depth, !0)
       }
       const {
-        _opaqueBindings: fb,
-        _directBindings: Mb,
-        _transparentBindings: Xb
-      } = Hb;
+        _opaqueBindings: vb,
+        _directBindings: Lb,
+        _transparentBindings: Pb
+      } = eb;
       try {
-        for (const sb of cb) {
-          const cb = sb.bind(bb.engine, bb._targetSignature);
-          Hb._batchState = bb._targetSignature._collectBatches?.(Hb._batchState, cb), sb.isTransparent || sb._transmissive ? Xb.push(cb) : sb._direct ? Mb.push(cb) : fb.push(cb)
+        for (const Ub of ab) {
+          const ab = Ub.bind(bb.engine, bb._targetSignature);
+          eb._batchState = bb._targetSignature._collectBatches?.(eb._batchState, ab), Ub.isTransparent || Ub._transmissive ? Pb.push(ab) : Ub._direct ? Lb.push(ab) : vb.push(ab)
         }
-        fb.sort(tb), Mb.sort(tb), sb && Db(bb, bb.engine, !1)
-      } catch (nb) {
-        throw Hb._batchState?._release(void 0, ab ?? [Ib]), nb
+        vb.sort(Hb), Lb.sort(Hb), Ub && Fb(bb, bb.engine, !1)
+      } catch (Xb) {
+        throw eb._batchState?._release(void 0, Tb ?? [Bb]), Xb
       }
-      return sb && (! function(bb, cb) {
-        const sb = bb._config,
-          kb = bb._colorAttachment;
-        kb.view = cb._colorView, bb._renderPassDescriptor.colorAttachments = cb._colorView ? [kb] : [];
-        const Wb = sb.depth ?? cb,
-          ab = Wb._depthView;
-        let Tb;
-        if (ab) {
-          const bb = Wb._descriptor,
-            cb = (sb.depth ? Wb._eager : !1 === sb.depthClear) ? "load" : "clear";
-          Tb = {
-            view: ab,
+      return Ub && (! function(bb, ab) {
+        const Ub = bb._config,
+          Ab = bb._colorAttachment;
+        Ab.view = ab._colorView, bb._renderPassDescriptor.colorAttachments = ab._colorView ? [Ab] : [];
+        const Mb = Ub.depth ?? ab,
+          Tb = Mb._depthView;
+        let Eb;
+        if (Tb) {
+          const bb = Mb._descriptor,
+            ab = (Ub.depth ? Mb._eager : !1 === Ub.depthClear) ? "load" : "clear";
+          Eb = {
+            view: Tb,
             depthClearValue: bb.depthClearValue ?? 0,
-            depthLoadOp: cb,
+            depthLoadOp: ab,
             depthStoreOp: "store"
-          }, bb.dFormat?.includes("stencil") && (Tb.stencilClearValue = 0, Tb.stencilLoadOp = cb, Tb.stencilStoreOp = "store")
+          }, bb.dFormat?.includes("stencil") && (Eb.stencilClearValue = 0, Eb.stencilLoadOp = ab, Eb.stencilStoreOp = "store")
         }
-        bb._renderPassDescriptor.depthStencilAttachment = Tb
-      }(bb, Ub), bb._updateContext.targetWidth = Ub._width, bb._updateContext.targetHeight = Ub._height), Wb && (Object.assign(bb, Hb), Ib?._release(bb.engine, [Hb._batchState])), Hb
+        bb._renderPassDescriptor.depthStencilAttachment = Eb
+      }(bb, Yb), bb._updateContext.targetWidth = Yb._width, bb._updateContext.targetHeight = Yb._height), Mb && (Object.assign(bb, eb), Bb?._release(bb.engine, [eb._batchState])), eb
     }
 
-    function Pb(bb, cb) {
-      const sb = bb.engine,
-        kb = bb._config,
-        ab = kb.rt,
-        Tb = bb.aQ,
-        Ub = bb._opaqueBindings,
-        Ib = bb._ob,
-        Hb = bb._sceneBG;
-      if (function(bb, cb, sb, kb) {
-          const Wb = cb?.viewport;
-          if (!Wb) return;
-          const ab = Math.floor(Wb.x * sb),
-            Tb = Math.floor((1 - Wb.y - Wb.height) * kb),
-            Ub = Math.ceil((Wb.x + Wb.width) * sb) - ab,
-            Ib = Math.ceil((1 - Wb.y) * kb) - Tb;
-          bb.setViewport(ab, Tb, Ub, Ib, 0, 1), bb.setScissorRect(ab, Tb, Ub, Ib)
-        }(cb, kb.cam ?? Tb.camera, ab._width, ab._height), cb.setBindGroup(0, Hb), bb._lastVis !== Wb.e || !Ib.length) {
-        const cb = ab._descriptor,
-          kb = sb._device.createRenderBundleEncoder({
-            colorFormats: cb.format ? [cb.format] : [],
+    function db(bb, ab) {
+      const Ub = bb.engine,
+        Ab = bb._config,
+        Tb = Ab.rt,
+        Eb = bb.ZR,
+        Yb = bb._opaqueBindings,
+        Bb = bb._ob,
+        eb = bb._sceneBG;
+      if (function(bb, ab, Ub, Ab) {
+          const Mb = ab?.viewport;
+          if (!Mb) return;
+          const Tb = Math.floor(Mb.x * Ub),
+            Eb = Math.floor((1 - Mb.y - Mb.height) * Ab),
+            Yb = Math.ceil((Mb.x + Mb.width) * Ub) - Tb,
+            Bb = Math.ceil((1 - Mb.y) * Ab) - Eb;
+          bb.setViewport(Tb, Eb, Yb, Bb, 0, 1), bb.setScissorRect(Tb, Eb, Yb, Bb)
+        }(ab, Ab.cam ?? Eb.camera, Tb._width, Tb._height), ab.setBindGroup(0, eb), bb._lastVis !== Mb.e || !Bb.length) {
+        const ab = Tb._descriptor,
+          Ab = Ub._device.createRenderBundleEncoder({
+            colorFormats: ab.format ? [ab.format] : [],
             depthStencilFormat: bb._targetSignature._depthStencilFormat,
-            sampleCount: cb.samples
+            sampleCount: ab.samples
           });
-        kb.setBindGroup(0, Hb), ib(kb, Ub, sb), Ib[0] = kb.finish(), bb._lastVis = Wb.e
+        Ab.setBindGroup(0, eb), Gb(Ab, Yb, Ub), Bb[0] = Ab.finish(), bb._lastVis = Mb.e
       }
-      let fb = Ub.length;
-      return cb.executeBundles(Ib), cb.setBindGroup(0, Hb), fb += ib(cb, bb._directBindings, sb), fb += ib(cb, bb._transparentBindings, sb), fb
+      let vb = Yb.length;
+      return ab.executeBundles(Bb), ab.setBindGroup(0, eb), vb += Gb(ab, bb._directBindings, Ub), vb += Gb(ab, bb._transparentBindings, Ub), vb
     }
 
-    function Db(bb, cb) {
-      let sb = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-      const kb = ub(cb, bb.aQ)._buffer;
-      if (kb === bb._lightsUBO) return;
-      const Wb = cb._device.createBindGroup({
-        layout: lb(cb),
+    function Fb(bb, ab) {
+      let Ub = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+      const Ab = ib(ab, bb.ZR)._buffer;
+      if (Ab === bb._lightsUBO) return;
+      const Mb = ab._device.createBindGroup({
+        layout: Rb(ab),
         entries: [{
           binding: 0,
           resource: {
@@ -792,81 +792,81 @@ export const modules = {
         }, {
           binding: 1,
           resource: {
-            buffer: kb
+            buffer: Ab
           }
         }]
       });
-      bb._lightsUBO = kb, bb._sceneBG = Wb, sb && (bb._ob = [])
+      bb._lightsUBO = Ab, bb._sceneBG = Mb, Ub && (bb._ob = [])
     }
 
-    function Eb(bb, cb) {
-      for (const sb of bb) sb.update?.(cb)
+    function hb(bb, ab) {
+      for (const Ub of bb) Ub.update?.(ab)
     }
 
-    function ib(bb, cb, sb) {
-      let kb = null,
-        Wb = 0;
-      for (const ab of cb) {
-        const cb = ab.renderable.mesh;
-        cb && !1 === cb.visible || (ab.pipeline !== kb && (bb.setPipeline(ab.pipeline), kb = ab.pipeline), Wb += ab.draw(bb, sb))
+    function Gb(bb, ab, Ub) {
+      let Ab = null,
+        Mb = 0;
+      for (const Tb of ab) {
+        const ab = Tb.renderable.mesh;
+        ab && !1 === ab.visible || (Tb.pipeline !== Ab && (bb.setPipeline(Tb.pipeline), Ab = Tb.pipeline), Mb += Tb.draw(bb, Ub))
       }
-      return Wb
+      return Mb
     }
 
-    function Ob(bb) {
-      const cb = bb._materialSwapQueue;
-      if (!cb[0] || bb._runtimeBuilds?.w) return;
-      let kb, Wb, ab;
-      const Tb = bb._renderables;
-      for (const sb of cb) {
-        const cb = sb.material;
-        if (!cb) continue;
-        const Ub = sb._runtimeThinBuild;
-        if (Ub) {
-          Wb = Ub(bb, sb, Wb);
+    function Qb(bb) {
+      const ab = bb._materialSwapQueue;
+      if (!ab[0] || bb._runtimeBuilds?.w) return;
+      let Ab, Mb, Tb;
+      const Eb = bb._renderables;
+      for (const Ub of ab) {
+        const ab = Ub.material;
+        if (!ab) continue;
+        const Yb = Ub._runtimeThinBuild;
+        if (Yb) {
+          Mb = Yb(bb, Ub, Mb);
           continue
         }
-        const Ib = bb._groups.get(cb._buildGroup),
-          Hb = Ib?.r;
-        if (!Hb) {
-          (ab ??= []).push(sb);
+        const Bb = bb._groups.get(ab._buildGroup),
+          eb = Bb?.r;
+        if (!eb) {
+          (Tb ??= []).push(Ub);
           continue
         }
-        if (Ib._w?.(sb)) {
-          (ab ??= []).push([sb, cb]);
+        if (Bb._w?.(Ub)) {
+          (Tb ??= []).push([Ub, ab]);
           continue
         }
-        const fb = bb._meshDisposables.get(sb);
-        fb && (bb._meshDisposables.delete(sb), (0, nb.b)(bb.surface.engine, (() => fb.forEach((bb => bb())))));
-        const Mb = Ib.o;
-        let Xb;
-        for (let bb = Tb.length; bb--;) Tb[bb].mesh === sb && (Xb = Tb.splice(bb, 1)[0]);
-        cb._csmGen = -~cb._csmGen;
-        const mb = Hb(bb, sb);
-        if (Mb) {
-          const bb = Mb.indexOf(Xb);
-          bb < 0 ? Mb.push(mb) : Mb[bb] = mb
+        const vb = bb._meshDisposables.get(Ub);
+        vb && (bb._meshDisposables.delete(Ub), (0, Xb.b)(bb.surface.engine, (() => vb.forEach((bb => bb())))));
+        const Lb = Bb.o;
+        let Pb;
+        for (let bb = Eb.length; bb--;) Eb[bb].mesh === Ub && (Pb = Eb.splice(bb, 1)[0]);
+        ab._csmGen = -~ab._csmGen;
+        const jb = eb(bb, Ub);
+        if (Lb) {
+          const bb = Lb.indexOf(Pb);
+          bb < 0 ? Lb.push(jb) : Lb[bb] = jb
         }
-        kb = Tb.push(mb)
+        Ab = Eb.push(jb)
       }
-      if (kb && (Tb.sort(((bb, cb) => bb.order - cb.order)), bb._renderableVersion++, bb._materialEpoch++), cb.length = 0, !ab) return Wb;
-      const Ub = ab;
-      return sb.e(355).then((() => sb(60691))).then((cb => {
+      if (Ab && (Eb.sort(((bb, ab) => bb.order - ab.order)), bb._renderableVersion++, bb._materialEpoch++), ab.length = 0, !Tb) return Mb;
+      const Yb = Tb;
+      return Ub.e(355).then((() => Ub(60359))).then((ab => {
         let {
-          C: sb
-        } = cb;
-        return sb(bb, Ub, Wb)
-      }), (cb => {
-        const sb = bb._runtimeBuilds;
-        sb ? sb._x(cb) : console.error(cb)
+          C: Ub
+        } = ab;
+        return Ub(bb, Yb, Mb)
+      }), (ab => {
+        const Ub = bb._runtimeBuilds;
+        Ub ? Ub._x(ab) : console.error(ab)
       }))
     }
-    var Gb = null;
+    var qb = null;
 
-    function Kb(bb, cb) {
-      const sb = bb.engine,
-        Wb = {
-          _kind: "aQ",
+    function ub(bb, ab) {
+      const Ub = bb.engine,
+        Mb = {
+          _kind: "ZR",
           surface: bb,
           clearColor: {
             r: .2,
@@ -902,365 +902,365 @@ export const modules = {
           _built: !1,
           _drawCallsPre: 0,
           _update() {
-            sb.useFloatingOrigin && Wb.camera && !Wb.camera._useFloatingOrigin && (Wb.camera._useFloatingOrigin = !0, Wb.camera._viewVer = -1, Wb.camera._vpVer = -1);
-            const bb = Wb.fixedDeltaMs > 0 ? Wb.fixedDeltaMs : sb._currentDelta,
-              cb = sb._currentEncoder;
-            let kb = 0;
-            for (const sb of Wb._beforeRender) sb(bb);
-            Wb._materialSwapQueue.length && Ob(Wb);
-            for (const ab of Wb._prePasses) kb += ab.execute(cb, sb);
-            for (const ab of Wb._uniformUpdaters) ab.update(sb);
-            Wb._drawCallsPre = kb
+            Ub.useFloatingOrigin && Mb.camera && !Mb.camera._useFloatingOrigin && (Mb.camera._useFloatingOrigin = !0, Mb.camera._viewVer = -1, Mb.camera._vpVer = -1);
+            const bb = Mb.fixedDeltaMs > 0 ? Mb.fixedDeltaMs : Ub._currentDelta,
+              ab = Ub._currentEncoder;
+            let Ab = 0;
+            for (const Ub of Mb._beforeRender) Ub(bb);
+            Mb._materialSwapQueue.length && Qb(Mb);
+            for (const Tb of Mb._prePasses) Ab += Tb.execute(ab, Ub);
+            for (const Tb of Mb._uniformUpdaters) Tb.update(Ub);
+            Mb._drawCallsPre = Ab
           },
-          _record: () => Wb._frameGraph.execute(),
+          _record: () => Mb._frameGraph.execute(),
           _resize() {
-            Wb._frameGraph.build()
+            Mb._frameGraph.build()
           }
         },
-        Tb = function() {
+        Eb = function() {
           const bb = {
             _tasks: [],
             _currentProcessedTask: null,
             build() {
-              for (let cb = 0; cb < bb._tasks.length; cb++) ab(bb, bb._tasks[cb]);
-              for (const cb of bb._tasks)
-                for (const bb of cb._passes) bb._initialize()
+              for (let ab = 0; ab < bb._tasks.length; ab++) Tb(bb, bb._tasks[ab]);
+              for (const ab of bb._tasks)
+                for (const bb of ab._passes) bb._initialize()
             },
             execute() {
-              let cb = 0;
-              for (const sb of bb._tasks)
-                if (!1 !== sb.executionEnabled)
-                  if (sb.execute) cb += sb.execute();
+              let ab = 0;
+              for (const Ub of bb._tasks)
+                if (!1 !== Ub.executionEnabled)
+                  if (Ub.execute) ab += Ub.execute();
                   else
-                    for (const bb of sb._passes) cb += bb._execute();
-              return cb
+                    for (const bb of Ub._passes) ab += bb._execute();
+              return ab
             },
             dispose() {
-              for (const cb of bb._tasks) cb.dispose();
+              for (const ab of bb._tasks) ab.dispose();
               bb._tasks.length = 0, bb._currentProcessedTask = null
             }
           };
           return bb
         }();
-      if (Wb._frameGraph = Tb, !1 !== cb?.defaultRenderTask) {
-        const cb = bb.msaaSamples > 1,
-          ab = cb ? (0, kb.b)({
+      if (Mb._frameGraph = Eb, !1 !== ab?.defaultRenderTask) {
+        const ab = bb.msaaSamples > 1,
+          Tb = ab ? (0, Ab.b)({
             lbl: "scene-color",
             format: bb.format,
             dFormat: "depth24plus-stencil8",
             samples: bb.msaaSamples,
             size: bb
           }) : bb.scRT,
-          Ub = cb ? void 0 : (0, kb.b)({
+          Yb = ab ? void 0 : (0, Ab.b)({
             lbl: "scene-depth",
             dFormat: "depth24plus-stencil8",
             samples: 1,
             size: bb
           });
-        ! function(bb, cb) {
-          bb._tasks.push(cb)
-        }(Tb, gb({
-          name: "aQ",
-          rt: ab,
-          rst: cb ? bb.scRT : void 0,
-          depth: Ub
-        }, sb, Wb))
+        ! function(bb, ab) {
+          bb._tasks.push(ab)
+        }(Eb, Nb({
+          name: "ZR",
+          rt: Tb,
+          rst: ab ? bb.scRT : void 0,
+          depth: Yb
+        }, Ub, Mb))
       }
-      return Wb._disposables.push((() => Tb.dispose())), Wb
+      return Mb._disposables.push((() => Eb.dispose())), Mb
     }
-    async function Zb(bb) {
-      const cb = bb;
-      for (cb._built || (cb._materialSwapQueue.length = 0); cb._deferredBuilders.length;) {
-        const bb = cb._deferredBuilders.splice(0);
+    async function rb(bb) {
+      const ab = bb;
+      for (ab._built || (ab._materialSwapQueue.length = 0); ab._deferredBuilders.length;) {
+        const bb = ab._deferredBuilders.splice(0);
         await Promise.all(bb.map((bb => bb())))
       }
-      await Ob(cb), Gb?.get(cb)?.() || (cb._runtimeBuilds?._e(), cb._renderableVersion++, cb._built = !0), await (cb._rebuildHook?.(cb))
+      await Qb(ab), qb?.get(ab)?.() || (ab._runtimeBuilds?._e(), ab._renderableVersion++, ab._built = !0), await (ab._rebuildHook?.(ab))
     }
-    var zb = null;
-    async function qb(bb) {
-      const cb = bb,
-        kb = cb.surface;
-      (0, Wb.j)(kb, cb) || (await Zb(bb), cb._renderables.sort(db), await Promise.all(cb._frameGraph._tasks.map((bb => bb._preload?.()))), zb && await zb(cb), cb._frameGraph.build(), kb._renderingContexts[0] && (await sb.e(353).then((() => sb(60680)))).configureSwapchainOverlayScene(kb, cb), Gb?.get(cb)?.() || (0, Wb.m)(kb, cb))
+    var Kb = null;
+    async function ob(bb) {
+      const ab = bb,
+        Ab = ab.surface;
+      (0, Mb.l)(Ab, ab) || (await rb(bb), ab._renderables.sort(lb), await Promise.all(ab._frameGraph._tasks.map((bb => bb._preload?.()))), Kb && await Kb(ab), ab._frameGraph.build(), Ab._renderingContexts[0] && (await Ub.e(353).then((() => Ub(60348)))).configureSwapchainOverlayScene(Ab, ab), qb?.get(ab)?.() || (0, Mb.o)(Ab, ab))
     }
-    var db = (bb, cb) => bb.order - cb.order
+    var lb = (bb, ab) => bb.order - ab.order
   },
-  41102: (bb, cb, sb) => {
-    sb.d(cb, {
-      d: () => Hb,
-      g: () => fb
+  40822: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      b: () => eb,
+      e: () => vb
     });
-    var kb = sb(41061),
-      Wb = sb(41069),
-      ab = sb(41077),
-      Tb = sb(41086),
-      Ub = sb(41092),
-      Ib = sb(41094);
+    var Ab = Ub(40782),
+      Mb = Ub(40784),
+      Tb = Ub(40790),
+      Eb = Ub(40797),
+      Yb = Ub(40800),
+      Bb = Ub(40807);
 
-    function Hb(bb, cb, sb) {
-      let Ub = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      (cb < 1 || sb < 1) && (0, kb.d)(676, cb, sb);
-      const Hb = bb._device,
-        fb = Ub.mipMaps ?? !1,
-        Mb = Ub.srgb ? "rgba8unorm-srgb" : "rgba8unorm",
-        Xb = fb ? (0, Ib.d)(cb, sb) : 1,
-        nb = Hb.createTexture({
+    function eb(bb, ab, Ub) {
+      let Yb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+      (ab < 1 || Ub < 1) && (0, Ab.e)(676, ab, Ub);
+      const eb = bb._device,
+        vb = Yb.mipMaps ?? !1,
+        Lb = Yb.srgb ? "rgba8unorm-srgb" : "rgba8unorm",
+        Pb = vb ? (0, Bb.c)(ab, Ub) : 1,
+        Xb = eb.createTexture({
           size: {
-            width: cb,
-            height: sb
+            width: ab,
+            height: Ub
           },
-          format: Mb,
-          mipLevelCount: Xb,
-          usage: Wb.g.TEXTURE_BINDING | Wb.g.COPY_DST | Wb.g.RENDER_ATTACHMENT
+          format: Lb,
+          mipLevelCount: Pb,
+          usage: Mb.m.TEXTURE_BINDING | Mb.m.COPY_DST | Mb.m.RENDER_ATTACHMENT
         }),
-        mb = {
-          addressModeU: Ub.addressModeU ?? "clamp-to-edge",
-          addressModeV: Ub.addressModeV ?? "clamp-to-edge",
-          minFilter: Ub.minFilter ?? "linear",
-          magFilter: Ub.magFilter ?? "linear",
-          mipmapFilter: fb ? "linear" : "nearest"
+        jb = {
+          addressModeU: Yb.addressModeU ?? "clamp-to-edge",
+          addressModeV: Yb.addressModeV ?? "clamp-to-edge",
+          minFilter: Yb.minFilter ?? "linear",
+          magFilter: Yb.magFilter ?? "linear",
+          mipmapFilter: vb ? "linear" : "nearest"
         },
-        lb = (0, Tb.b)(bb, mb),
-        Qb = {
-          texture: nb,
-          view: nb.createView(),
-          sampler: lb,
-          width: cb,
-          height: sb
+        Rb = (0, Eb.d)(bb, jb),
+        kb = {
+          texture: Xb,
+          view: Xb.createView(),
+          sampler: Rb,
+          width: ab,
+          height: Ub
         };
-      return (0, ab.b)(Qb), bb._dlr && bb._dlr.t(Qb, {
+      return (0, Tb.c)(kb), bb._dlr && bb._dlr.t(kb, {
         kind: "dynamic",
-        width: cb,
-        height: sb,
-        format: Mb,
-        levels: Xb,
-        samplerDesc: mb,
+        width: ab,
+        height: Ub,
+        format: Lb,
+        levels: Pb,
+        samplerDesc: jb,
         source: null,
         flipY: !0,
         premultipliedAlpha: !1
-      }), Qb
+      }), kb
     }
 
-    function fb(bb, cb, sb) {
-      let kb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const Wb = kb.invertY ?? !0,
-        ab = kb.premultiplyAlpha ?? !1;
+    function vb(bb, ab, Ub) {
+      let Ab = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+      const Mb = Ab.invertY ?? !0,
+        Tb = Ab.premultiplyAlpha ?? !1;
       bb._device.queue.copyExternalImageToTexture({
-        source: sb,
-        flipY: Wb
+        source: Ub,
+        flipY: Mb
       }, {
-        texture: cb.texture,
-        premultipliedAlpha: ab
-      }, [cb.width, cb.height]);
-      const Tb = cb._recoverySource;
-      Tb && "dynamic" === Tb.kind && (Tb.source = sb, Tb.flipY = Wb, Tb.premultipliedAlpha = ab), cb.texture.mipLevelCount > 1 && (0, Ub.generateMipmaps)(bb, cb.texture)
+        texture: ab.texture,
+        premultipliedAlpha: Tb
+      }, [ab.width, ab.height]);
+      const Eb = ab._recoverySource;
+      Eb && "dynamic" === Eb.kind && (Eb.source = Ub, Eb.flipY = Mb, Eb.premultipliedAlpha = Tb), ab.texture.mipLevelCount > 1 && (0, Yb.generateMipmaps)(bb, ab.texture)
     }
   },
-  41099: (bb, cb, sb) => {
-    sb.d(cb, {
-      c: () => Ib
+  40816: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      e: () => Bb
     });
-    var kb = sb(41061),
-      Wb = sb(41069),
-      ab = sb(41077),
-      Tb = sb(41086),
-      Ub = sb(41094);
-    async function Ib(bb, cb) {
-      let Ib = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const [Hb, fb] = function(bb) {
-        const cb = bb,
-          sb = [
-            [cb.displayWidth, cb.displayHeight],
-            [cb.videoWidth, cb.videoHeight],
-            [cb.naturalWidth, cb.naturalHeight],
-            [cb.width, cb.height]
+    var Ab = Ub(40782),
+      Mb = Ub(40784),
+      Tb = Ub(40790),
+      Eb = Ub(40797),
+      Yb = Ub(40807);
+    async function Bb(bb, ab) {
+      let Bb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const [eb, vb] = function(bb) {
+        const ab = bb,
+          Ub = [
+            [ab.displayWidth, ab.displayHeight],
+            [ab.videoWidth, ab.videoHeight],
+            [ab.naturalWidth, ab.naturalHeight],
+            [ab.width, ab.height]
           ];
-        for (const [kb, Wb] of sb)
-          if (void 0 !== kb && void 0 !== Wb && Number.isInteger(kb) && Number.isInteger(Wb) && kb > 0 && Wb > 0) return [kb, Wb];
+        for (const [Ab, Mb] of Ub)
+          if (void 0 !== Ab && void 0 !== Mb && Number.isInteger(Ab) && Number.isInteger(Mb) && Ab > 0 && Mb > 0) return [Ab, Mb];
         throw new TypeError("createTexture2DFromExternalImage: source has no supported positive intrinsic dimensions")
-      }(cb), [Mb, Xb] = function(bb, cb, sb) {
-        if (void 0 === sb) return [bb, cb];
-        if (!Number.isInteger(sb) || sb < 1) throw new TypeError(`createTexture2DFromExternalImage: maxDimension must be a positive integer (got ${sb})`);
-        if (Math.max(bb, cb) <= sb) return [bb, cb];
-        const kb = sb / Math.max(bb, cb);
-        return bb >= cb ? [sb, Math.max(1, Math.round(cb * kb))] : [Math.max(1, Math.round(bb * kb)), sb]
-      }(Hb, fb, Ib.maxDimension), nb = Ib.mipMaps ?? !0, mb = Ib.premultiplyAlpha ?? !1;
-      let lb = cb,
-        Qb = null;
-      const eb = {
+      }(ab), [Lb, Pb] = function(bb, ab, Ub) {
+        if (void 0 === Ub) return [bb, ab];
+        if (!Number.isInteger(Ub) || Ub < 1) throw new TypeError(`createTexture2DFromExternalImage: maxDimension must be a positive integer (got ${Ub})`);
+        if (Math.max(bb, ab) <= Ub) return [bb, ab];
+        const Ab = Ub / Math.max(bb, ab);
+        return bb >= ab ? [Ub, Math.max(1, Math.round(ab * Ab))] : [Math.max(1, Math.round(bb * Ab)), Ub]
+      }(eb, vb, Bb.maxDimension), Xb = Bb.mipMaps ?? !0, jb = Bb.premultiplyAlpha ?? !1;
+      let Rb = ab,
+        kb = null;
+      const yb = {
         texture: null
       };
       try {
-        Mb === Hb && Xb === fb || (Qb = await createImageBitmap(cb, {
-          resizeWidth: Mb,
-          resizeHeight: Xb,
+        Lb === eb && Pb === vb || (kb = await createImageBitmap(ab, {
+          resizeWidth: Lb,
+          resizeHeight: Pb,
           resizeQuality: "high",
-          premultiplyAlpha: mb ? "premultiply" : "none",
+          premultiplyAlpha: jb ? "premultiply" : "none",
           colorSpaceConversion: "none"
-        }), lb = Qb);
-        const Cb = bb._device,
-          Nb = Ib.srgb ? "rgba8unorm-srgb" : "rgba8unorm",
-          Vb = nb ? (0, Ub.d)(Mb, Xb) : 1,
-          Lb = Vb > 1 ? (await Promise.resolve().then((() => sb(41092)))).generateMipmaps : null,
-          ub = {
-            addressModeU: Ib.addressModeU ?? "repeat",
-            addressModeV: Ib.addressModeV ?? "repeat",
-            minFilter: Ib.minFilter ?? "linear",
-            magFilter: Ib.magFilter ?? "linear",
-            mipmapFilter: nb ? "linear" : "nearest"
+        }), Rb = kb);
+        const Zb = bb._device,
+          Db = Bb.srgb ? "rgba8unorm-srgb" : "rgba8unorm",
+          zb = Xb ? (0, Yb.c)(Lb, Pb) : 1,
+          xb = zb > 1 ? (await Promise.resolve().then((() => Ub(40800)))).generateMipmaps : null,
+          ib = {
+            addressModeU: Bb.addressModeU ?? "repeat",
+            addressModeV: Bb.addressModeV ?? "repeat",
+            minFilter: Bb.minFilter ?? "linear",
+            magFilter: Bb.magFilter ?? "linear",
+            mipmapFilter: Xb ? "linear" : "nearest"
           };
-        ub.maxAnisotropy = "linear" === ub.minFilter && "linear" === ub.magFilter && "linear" === ub.mipmapFilter ? 4 : 1;
-        const Yb = Ib.invertY ?? !0,
-          hb = async cb => {
-            let sb;
-            Cb.pushErrorScope("validation"), Cb.pushErrorScope("out-of-memory");
-            let ab = null;
+        ib.maxAnisotropy = "linear" === ib.minFilter && "linear" === ib.magFilter && "linear" === ib.mipmapFilter ? 4 : 1;
+        const fb = Bb.invertY ?? !0,
+          mb = async ab => {
+            let Ub;
+            Zb.pushErrorScope("validation"), Zb.pushErrorScope("out-of-memory");
+            let Tb = null;
             try {
-              const sb = eb.texture = Cb.createTexture({
+              const Ub = yb.texture = Zb.createTexture({
                 size: {
-                  width: Mb,
-                  height: Xb
+                  width: Lb,
+                  height: Pb
                 },
-                format: Nb,
-                mipLevelCount: Vb,
-                usage: Wb.g.TEXTURE_BINDING | Wb.g.COPY_DST | Wb.g.RENDER_ATTACHMENT
+                format: Db,
+                mipLevelCount: zb,
+                usage: Mb.m.TEXTURE_BINDING | Mb.m.COPY_DST | Mb.m.RENDER_ATTACHMENT
               });
-              Cb.queue.copyExternalImageToTexture({
-                source: cb,
-                flipY: Yb
+              Zb.queue.copyExternalImageToTexture({
+                source: ab,
+                flipY: fb
               }, {
-                texture: sb,
-                premultipliedAlpha: mb
+                texture: Ub,
+                premultipliedAlpha: jb
               }, {
-                width: Mb,
-                height: Xb
-              }), Lb && Lb(bb, sb), ab = (0, Tb.b)(bb, ub)
-            } catch (nb) {
-              sb = nb
+                width: Lb,
+                height: Pb
+              }), xb && xb(bb, Ub), Tb = (0, Eb.d)(bb, ib)
+            } catch (Xb) {
+              Ub = Xb
             }
-            const [Ub, Ib] = await Promise.all([Cb.popErrorScope(), Cb.popErrorScope()]);
-            if (sb) throw sb;
-            const Hb = Ib ?? Ub;
-            if (Hb) throw new Error(`createTexture2DFromExternalImage: GPU upload failed: ${Hb.message}`, {
-              cause: Hb
+            const [Yb, Bb] = await Promise.all([Zb.popErrorScope(), Zb.popErrorScope()]);
+            if (Ub) throw Ub;
+            const eb = Bb ?? Yb;
+            if (eb) throw new Error(`createTexture2DFromExternalImage: GPU upload failed: ${eb.message}`, {
+              cause: eb
             });
-            const fb = eb.texture;
-            return fb && ab || (0, kb.d)(677), {
-              texture: fb,
-              view: fb.createView(),
-              sampler: ab,
-              width: Mb,
-              height: Xb
+            const vb = yb.texture;
+            return vb && Tb || (0, Ab.e)(677), {
+              texture: vb,
+              view: vb.createView(),
+              sampler: Tb,
+              width: Lb,
+              height: Pb
             }
-          }, Jb = await (bb._dlr?.x(lb, Mb, Xb, Nb, Vb, ub, Yb, mb, hb)) ?? await hb(lb);
-        return (0, ab.b)(Jb), Jb
-      } catch (Cb) {
-        throw eb.texture?.destroy(), Cb
+          }, pb = await (bb._dlr?.x(Rb, Lb, Pb, Db, zb, ib, fb, jb, mb)) ?? await mb(Rb);
+        return (0, Tb.c)(pb), pb
+      } catch (Zb) {
+        throw yb.texture?.destroy(), Zb
       } finally {
-        Qb?.close()
+        kb?.close()
       }
     }
   },
-  41092: (bb, cb, sb) => {
-    sb.r(cb), sb.d(cb, {
-      generateMipmaps: () => nb,
-      recordMipmaps: () => mb
+  40800: (bb, ab, Ub) => {
+    Ub.r(ab), Ub.d(ab, {
+      generateMipmaps: () => Xb,
+      recordMipmaps: () => jb
     });
-    var kb = sb(41069),
-      Wb = sb(41086),
-      ab = {
+    var Ab = Ub(40784),
+      Mb = Ub(40797),
+      Tb = {
         magFilter: "linear",
         minFilter: "linear"
       };
-    var Tb = "@group(0)@binding(0)var t:texture_2d<f32>;@group(0)@binding(1)var s:sampler;struct V{@builtin(position)p:vec4f,@location(0)u:vec2f};@vertex fn vs(@builtin(vertex_index)i:u32)->V{let p=array<vec2f,3>(vec2f(-1,-1),vec2f(3,-1),vec2f(-1,3))[i];return V(vec4f(p,0,1),p*vec2f(.5,-.5)+.5);}@fragment fn fs(v:V)->@location(0)vec4f{return textureSample(t,s,v.u);}",
-      Ub = null,
-      Ib = null,
-      Hb = null,
-      fb = null,
-      Mb = null;
+    var Eb = "@group(0)@binding(0)var t:texture_2d<f32>;@group(0)@binding(1)var s:sampler;struct V{@builtin(position)p:vec4f,@location(0)u:vec2f};@vertex fn vs(@builtin(vertex_index)i:u32)->V{let p=array<vec2f,3>(vec2f(-1,-1),vec2f(3,-1),vec2f(-1,3))[i];return V(vec4f(p,0,1),p*vec2f(.5,-.5)+.5);}@fragment fn fs(v:V)->@location(0)vec4f{return textureSample(t,s,v.u);}",
+      Yb = null,
+      Bb = null,
+      eb = null,
+      vb = null,
+      Lb = null;
 
-    function Xb(bb) {
-      const cb = bb._device;
-      cb !== Mb && (Ub?.clear(), Ub = null, Ib = null, Hb = null, fb = null, Mb = null, Mb = cb), Ib ??= cb.createShaderModule({
-        code: Tb
-      }), Hb ??= function(bb) {
-        return (0, Wb.b)(bb, ab)
-      }(bb), fb ??= cb.createBindGroupLayout({
+    function Pb(bb) {
+      const ab = bb._device;
+      ab !== Lb && (Yb?.clear(), Yb = null, Bb = null, eb = null, vb = null, Lb = null, Lb = ab), Bb ??= ab.createShaderModule({
+        code: Eb
+      }), eb ??= function(bb) {
+        return (0, Mb.d)(bb, Tb)
+      }(bb), vb ??= ab.createBindGroupLayout({
         entries: [{
           binding: 0,
-          visibility: kb.d.FRAGMENT,
+          visibility: Ab.i.FRAGMENT,
           texture: {
             sampleType: "float"
           }
         }, {
           binding: 1,
-          visibility: kb.d.FRAGMENT,
+          visibility: Ab.i.FRAGMENT,
           sampler: {}
         }]
       })
     }
 
-    function nb(bb, cb, sb) {
-      const kb = bb._device,
-        Wb = kb.createCommandEncoder();
-      mb(bb, cb, Wb, sb), kb.queue.submit([Wb.finish()])
+    function Xb(bb, ab, Ub) {
+      const Ab = bb._device,
+        Mb = Ab.createCommandEncoder();
+      jb(bb, ab, Mb, Ub), Ab.queue.submit([Mb.finish()])
     }
 
-    function mb(bb, cb, sb, kb) {
-      if (cb.mipLevelCount <= 1) return;
-      const Wb = bb._device,
-        ab = function(bb, cb) {
-          const sb = bb._device;
-          Xb(bb), Ub ??= new Map;
-          let kb = Ub.get(cb);
-          return kb || (kb = sb.createRenderPipeline({
-            layout: sb.createPipelineLayout({
-              bindGroupLayouts: [fb]
+    function jb(bb, ab, Ub, Ab) {
+      if (ab.mipLevelCount <= 1) return;
+      const Mb = bb._device,
+        Tb = function(bb, ab) {
+          const Ub = bb._device;
+          Pb(bb), Yb ??= new Map;
+          let Ab = Yb.get(ab);
+          return Ab || (Ab = Ub.createRenderPipeline({
+            layout: Ub.createPipelineLayout({
+              bindGroupLayouts: [vb]
             }),
             vertex: {
-              module: Ib,
+              module: Bb,
               entryPoint: "vs"
             },
             fragment: {
-              module: Ib,
+              module: Bb,
               entryPoint: "fs",
               targets: [{
-                format: cb
+                format: ab
               }]
             },
             primitive: {
               topology: "triangle-list"
             }
-          }), Ub.set(cb, kb)), kb
-        }(bb, cb.format),
-        Tb = null != kb ? {
+          }), Yb.set(ab, Ab)), Ab
+        }(bb, ab.format),
+        Eb = null != Ab ? {
           dimension: "2d",
-          baseArrayLayer: kb,
+          baseArrayLayer: Ab,
           arrayLayerCount: 1
         } : {};
-      for (let Ub = 1; Ub < cb.mipLevelCount; Ub++) {
-        const bb = cb.createView({
-            baseMipLevel: Ub - 1,
+      for (let Yb = 1; Yb < ab.mipLevelCount; Yb++) {
+        const bb = ab.createView({
+            baseMipLevel: Yb - 1,
             mipLevelCount: 1,
-            ...Tb
+            ...Eb
           }),
-          kb = cb.createView({
-            baseMipLevel: Ub,
+          Ab = ab.createView({
+            baseMipLevel: Yb,
             mipLevelCount: 1,
-            ...Tb
+            ...Eb
           }),
-          Ib = Wb.createBindGroup({
-            layout: fb,
+          Bb = Mb.createBindGroup({
+            layout: vb,
             entries: [{
               binding: 0,
               resource: bb
             }, {
               binding: 1,
-              resource: Hb
+              resource: eb
             }]
           }),
-          Mb = sb.beginRenderPass({
+          Lb = Ub.beginRenderPass({
             colorAttachments: [{
-              view: kb,
+              view: Ab,
               loadOp: "clear",
               storeOp: "store",
               clearValue: {
@@ -1271,80 +1271,80 @@ export const modules = {
               }
             }]
           });
-        Mb.setPipeline(ab), Mb.setBindGroup(0, Ib), Mb.draw(3), Mb.end()
+        Lb.setPipeline(Tb), Lb.setBindGroup(0, Bb), Lb.draw(3), Lb.end()
       }
     }
   },
-  41094: (bb, cb, sb) => {
-    function kb(bb, cb) {
-      return Math.floor(Math.log2(Math.max(bb, cb))) + 1
+  40807: (bb, ab, Ub) => {
+    function Ab(bb, ab) {
+      return Math.floor(Math.log2(Math.max(bb, ab))) + 1
     }
-    sb.d(cb, {
-      d: () => kb
+    Ub.d(ab, {
+      c: () => Ab
     })
   },
-  41058: (bb, cb, sb) => {
-    sb.d(cb, {
-      d: () => Hb,
-      e: () => fb
+  40779: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      e: () => eb,
+      g: () => vb
     });
-    var kb = sb(41061),
-      Wb = sb(41069),
-      ab = sb(41077),
-      Tb = sb(41086),
-      Ub = sb(41092),
-      Ib = sb(41094);
+    var Ab = Ub(40782),
+      Mb = Ub(40784),
+      Tb = Ub(40790),
+      Eb = Ub(40797),
+      Yb = Ub(40800),
+      Bb = Ub(40807);
 
-    function Hb(bb, cb, sb, Ub) {
-      let Hb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
-      (cb < 1 || sb < 1 || Ub < 1) && (0, kb.d)(722, cb, sb, Ub);
-      const fb = bb._device,
-        Mb = Hb.mipMaps ?? !0,
-        Xb = Hb.srgb ? "rgba8unorm-srgb" : "rgba8unorm",
-        nb = fb.createTexture({
+    function eb(bb, ab, Ub, Yb) {
+      let eb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+      (ab < 1 || Ub < 1 || Yb < 1) && (0, Ab.e)(722, ab, Ub, Yb);
+      const vb = bb._device,
+        Lb = eb.mipMaps ?? !0,
+        Pb = eb.srgb ? "rgba8unorm-srgb" : "rgba8unorm",
+        Xb = vb.createTexture({
           size: {
-            width: cb,
-            height: sb,
-            depthOrArrayLayers: Ub
+            width: ab,
+            height: Ub,
+            depthOrArrayLayers: Yb
           },
           dimension: "2d",
-          format: Xb,
-          mipLevelCount: Mb ? (0, Ib.d)(cb, sb) : 1,
-          usage: Wb.g.TEXTURE_BINDING | Wb.g.COPY_DST | Wb.g.RENDER_ATTACHMENT
+          format: Pb,
+          mipLevelCount: Lb ? (0, Bb.c)(ab, Ub) : 1,
+          usage: Mb.m.TEXTURE_BINDING | Mb.m.COPY_DST | Mb.m.RENDER_ATTACHMENT
         }),
-        mb = (0, Tb.b)(bb, {
-          addressModeU: Hb.addressModeU ?? "repeat",
-          addressModeV: Hb.addressModeV ?? "repeat",
-          minFilter: Hb.minFilter ?? "linear",
-          magFilter: Hb.magFilter ?? "linear",
-          mipmapFilter: Mb ? "linear" : "nearest"
+        jb = (0, Eb.d)(bb, {
+          addressModeU: eb.addressModeU ?? "repeat",
+          addressModeV: eb.addressModeV ?? "repeat",
+          minFilter: eb.minFilter ?? "linear",
+          magFilter: eb.magFilter ?? "linear",
+          mipmapFilter: Lb ? "linear" : "nearest"
         }),
-        lb = {
-          texture: nb,
-          view: nb.createView({
+        Rb = {
+          texture: Xb,
+          view: Xb.createView({
             dimension: "2d-array"
           }),
-          sampler: mb,
-          width: cb,
-          height: sb,
-          layers: Ub
+          sampler: jb,
+          width: ab,
+          height: Ub,
+          layers: Yb
         };
-      return (0, ab.b)(lb), lb
+      return (0, Tb.c)(Rb), Rb
     }
 
-    function fb(bb, cb, sb, Wb) {
-      let ab = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
-      (sb < 0 || sb >= cb.layers || (0 | sb) !== sb) && (0, kb.d)(723, cb.layers, sb);
-      const Tb = ab.invertY ?? !0,
-        Ib = ab.premultiplyAlpha ?? !1;
+    function vb(bb, ab, Ub, Mb) {
+      let Tb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+      (Ub < 0 || Ub >= ab.layers || (0 | Ub) !== Ub) && (0, Ab.e)(723, ab.layers, Ub);
+      const Eb = Tb.invertY ?? !0,
+        Bb = Tb.premultiplyAlpha ?? !1;
       bb._device.queue.copyExternalImageToTexture({
-        source: Wb,
-        flipY: Tb
+        source: Mb,
+        flipY: Eb
       }, {
-        texture: cb.texture,
-        origin: [0, 0, sb],
-        premultipliedAlpha: Ib
-      }, [cb.width, cb.height, 1]), cb.texture.mipLevelCount > 1 && (0, Ub.generateMipmaps)(bb, cb.texture, sb)
+        texture: ab.texture,
+        origin: [0, 0, Ub],
+        premultipliedAlpha: Bb
+      }, [ab.width, ab.height, 1]), ab.texture.mipLevelCount > 1 && (0, Yb.generateMipmaps)(bb, ab.texture, Ub)
     }
   }
 };

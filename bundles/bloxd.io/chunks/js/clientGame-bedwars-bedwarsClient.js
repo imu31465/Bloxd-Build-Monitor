@@ -1,74 +1,74 @@
 export const id = 9;
 export const ids = [9];
 export const modules = {
-  38826: (bb, cb, sb) => {
-    sb.r(cb), sb.d(cb, {
-      default: () => Wb
+  38530: (bb, ab, Ub) => {
+    Ub.r(ab), Ub.d(ab, {
+      default: () => Mb
     });
-    var kb = sb(37630);
-    const Wb = function(bb, cb, sb) {
-      let Wb;
+    var Ab = Ub(37374);
+    const Mb = function(bb, ab, Ub) {
+      let Mb;
       return {
         plugins: {
-          placeAgainstBeds: (0, kb.e)()
+          placeAgainstBeds: (0, Ab.c)()
         },
         onCreate: bb => {
-          Wb = bb
+          Mb = bb
         },
-        onPlayerAltAction: (bb, cb, sb, kb, ab, Tb) => {
-          ((bb, cb) => {
-            if (!cb || "Mesh" !== Wb.getEntityType(cb)) return;
-            const sb = Wb.getEntityName(cb);
-            "Upgrades" === sb ? Wb.openShop(bb, !1, "Upgrades") : "Items" === sb && Wb.openShop(bb, !1, "Recommended")
-          })(bb, Tb)
+        onPlayerAltAction: (bb, ab, Ub, Ab, Tb, Eb) => {
+          ((bb, ab) => {
+            if (!ab || "Mesh" !== Mb.getEntityType(ab)) return;
+            const Ub = Mb.getEntityName(ab);
+            "Upgrades" === Ub ? Mb.openShop(bb, !1, "Upgrades") : "Items" === Ub && Mb.openShop(bb, !1, "Recommended")
+          })(bb, Eb)
         }
       }
     }
   },
-  37630: (bb, cb, sb) => {
-    sb.d(cb, {
-      e: () => Ub
+  37374: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      c: () => Yb
     });
-    var kb = sb(344),
-      Wb = sb(36505),
-      ab = sb(4218);
-    const Tb = ["Leaf Bed", "_Leaf Bed Head", ...kb.Hc.flatMap((bb => [`${bb} Bed`, `_${bb} Bed Head`, `${bb} Strongbed`, `_${bb} Strongbed Head`]))];
+    var Ab = Ub(325),
+      Mb = Ub(36263),
+      Tb = Ub(4156);
+    const Eb = ["Leaf Bed", "_Leaf Bed Head", ...Ab.qc.flatMap((bb => [`${bb} Bed`, `_${bb} Bed Head`, `${bb} Strongbed`, `_${bb} Strongbed Head`]))];
 
-    function Ub() {
+    function Yb() {
       let bb;
       return {
-        onCreate(cb) {
-          bb = cb
+        onCreate(ab) {
+          bb = ab
         },
-        altVetoBlocks: Tb,
-        onPlayerAttemptAltAction(cb, sb, kb, Tb, Ub, Ib) {
-          var Hb;
-          if ((0, Wb.e)(bb.getMetaInfo(Ub).rootName) && !bb.isEntityInteractable(Ib) && (0, ab.h)(null === (Hb = bb.Xcb(cb)) || void 0 === Hb ? void 0 : Hb.typeObj.type)) return "preventAction"
+        altVetoBlocks: Eb,
+        onPlayerAttemptAltAction(ab, Ub, Ab, Eb, Yb, Bb) {
+          var eb;
+          if ((0, Mb.d)(bb.getMetaInfo(Yb).rootName) && !bb.isEntityInteractable(Bb) && (0, Tb.e)(null === (eb = bb.vab(ab)) || void 0 === eb ? void 0 : eb.typeObj.type)) return "preventAction"
         }
       }
     }
   },
-  36505: (bb, cb, sb) => {
-    function kb(bb) {
+  36263: (bb, ab, Ub) => {
+    function Ab(bb) {
       return bb.includes("Leaf Bed")
     }
 
-    function Wb(bb) {
-      return / Bed(?: Head)?(?:\||$)/.test(bb) && !kb(bb)
-    }
-
-    function ab(bb) {
-      return bb.includes(" Strongbed")
+    function Mb(bb) {
+      return / Bed(?: Head)?(?:\||$)/.test(bb) && !Ab(bb)
     }
 
     function Tb(bb) {
-      return kb(bb) || Wb(bb) || ab(bb)
+      return bb.includes(" Strongbed")
     }
-    sb.d(cb, {
-      e: () => Tb,
-      f: () => kb,
-      h: () => ab,
-      j: () => Wb
+
+    function Eb(bb) {
+      return Ab(bb) || Mb(bb) || Tb(bb)
+    }
+    Ub.d(ab, {
+      d: () => Eb,
+      g: () => Ab,
+      h: () => Tb,
+      i: () => Mb
     })
   }
 };

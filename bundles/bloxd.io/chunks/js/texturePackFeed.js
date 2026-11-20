@@ -1,28 +1,28 @@
 export const id = 51;
 export const ids = [51];
 export const modules = {
-  42701: (bb, cb, sb) => {
-    sb.r(cb), sb.d(cb, {
-      startPageTexturePackFeed: () => Tb
+  42454: (bb, ab, Ub) => {
+    Ub.r(ab), Ub.d(ab, {
+      startPageTexturePackFeed: () => Eb
     });
-    var kb = sb(1208),
-      Wb = sb(37),
-      ab = sb(42683);
+    var Ab = Ub(1142),
+      Mb = Ub(31),
+      Tb = Ub(42438);
 
-    function Tb(bb, cb) {
-      const sb = new ab.c({
-        store: Wb.d,
+    function Eb(bb, ab) {
+      const Ub = new Tb.b({
+        store: Mb.c,
         warn: bb,
-        oneShot: cb,
+        oneShot: ab,
         fetchLatest: async bb => {
-          const cb = await fetch(`${kb.clientSideServerUrls.texturePackUrl}/${bb}.json`, {
+          const ab = await fetch(`${Ab.clientSideServerUrls.texturePackUrl}/${bb}.json`, {
             cache: "reload"
           });
-          if (!cb.ok) throw new Error(`fetching texture pack ${bb} answered HTTP ${cb.status}`);
-          return await cb.json()
+          if (!ab.ok) throw new Error(`fetching texture pack ${bb} answered HTTP ${ab.status}`);
+          return await ab.json()
         }
       });
-      return (0, ab.d)(sb), sb
+      return (0, Tb.f)(Ub), Ub
     }
   }
 };

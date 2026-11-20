@@ -1,13 +1,13 @@
 export const id = 352;
 export const ids = [352];
 export const modules = {
-  60675: (bb, cb, sb) => {
-    function kb(bb) {
+  60346: (bb, ab, Ub) => {
+    function Ab(bb) {
       return bb.features.has("timestamp-query")
     }
 
-    function Wb(bb) {
-      return kb(bb) ? {
+    function Mb(bb) {
+      return Ab(bb) ? {
         device: bb,
         markerPipeline: bb.createComputePipeline({
           layout: "auto",
@@ -32,55 +32,55 @@ export const modules = {
       } : null
     }
 
-    function ab(bb, cb) {
-      const sb = cb.beginComputePass({
+    function Tb(bb, ab) {
+      const Ub = ab.beginComputePass({
         timestampWrites: {
           querySet: bb.querySet,
           beginningOfPassWriteIndex: 0
         }
       });
-      sb.setPipeline(bb.markerPipeline), sb.dispatchWorkgroups(1), sb.end()
+      Ub.setPipeline(bb.markerPipeline), Ub.dispatchWorkgroups(1), Ub.end()
     }
 
-    function Tb(bb, cb) {
-      const sb = cb.beginComputePass({
+    function Eb(bb, ab) {
+      const Ub = ab.beginComputePass({
         timestampWrites: {
           querySet: bb.querySet,
           endOfPassWriteIndex: 1
         }
       });
-      sb.setPipeline(bb.markerPipeline), sb.dispatchWorkgroups(1), sb.end()
+      Ub.setPipeline(bb.markerPipeline), Ub.dispatchWorkgroups(1), Ub.end()
     }
 
-    function Ub(bb) {
+    function Yb(bb) {
       if (bb.inFlight > 3) return;
-      const cb = bb.device,
-        sb = bb.pool.pop() ?? cb.createBuffer({
+      const ab = bb.device,
+        Ub = bb.pool.pop() ?? ab.createBuffer({
           size: 16,
           usage: GPUBufferUsage.COPY_DST | GPUBufferUsage.MAP_READ
         }),
-        kb = cb.createCommandEncoder();
-      kb.resolveQuerySet(bb.querySet, 0, 2, bb.resolveBuf, 0), kb.copyBufferToBuffer(bb.resolveBuf, 0, sb, 0, 16), cb.queue.submit([kb.finish()]), bb.inFlight++, sb.mapAsync(GPUMapMode.READ).then((() => {
-        const cb = new BigInt64Array(sb.getMappedRange()),
-          kb = Number(cb[1] - cb[0]) / 1e6;
-        kb >= 0 && kb < 5e3 && (bb.lastMs = bb.lastMs > 0 ? .8 * bb.lastMs + .2 * kb : kb), sb.unmap(), bb.pool.push(sb), bb.inFlight--
+        Ab = ab.createCommandEncoder();
+      Ab.resolveQuerySet(bb.querySet, 0, 2, bb.resolveBuf, 0), Ab.copyBufferToBuffer(bb.resolveBuf, 0, Ub, 0, 16), ab.queue.submit([Ab.finish()]), bb.inFlight++, Ub.mapAsync(GPUMapMode.READ).then((() => {
+        const ab = new BigInt64Array(Ub.getMappedRange()),
+          Ab = Number(ab[1] - ab[0]) / 1e6;
+        Ab >= 0 && Ab < 5e3 && (bb.lastMs = bb.lastMs > 0 ? .8 * bb.lastMs + .2 * Ab : Ab), Ub.unmap(), bb.pool.push(Ub), bb.inFlight--
       }), (() => {
         bb.inFlight--
       }))
     }
 
-    function Ib(bb) {
+    function Bb(bb) {
       bb.querySet.destroy(), bb.resolveBuf.destroy();
-      for (const cb of bb.pool) cb.destroy();
+      for (const ab of bb.pool) ab.destroy();
       bb.pool.length = 0
     }
-    sb.r(cb), sb.d(cb, {
-      createGpuFrameTimer: () => Wb,
-      destroyGpuFrameTimer: () => Ib,
-      gpuFrameTimerBegin: () => ab,
-      gpuFrameTimerEnd: () => Tb,
-      gpuFrameTimerResolve: () => Ub,
-      gpuTimingSupportedFor: () => kb
+    Ub.r(ab), Ub.d(ab, {
+      createGpuFrameTimer: () => Mb,
+      destroyGpuFrameTimer: () => Bb,
+      gpuFrameTimerBegin: () => Tb,
+      gpuFrameTimerEnd: () => Eb,
+      gpuFrameTimerResolve: () => Yb,
+      gpuTimingSupportedFor: () => Ab
     })
   }
 };

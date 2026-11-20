@@ -1,17 +1,17 @@
 export const id = 343;
 export const ids = [343];
 export const modules = {
-  42668: (bb, cb, sb) => {
-    sb.d(cb, {
-      gamePackSource: () => ab
+  42416: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      gamePackSource: () => Tb
     });
-    var kb = sb(4688),
-      Wb = sb(1474);
+    var Ab = Ub(4659),
+      Mb = Ub(1413);
 
-    function ab(bb) {
+    function Tb(bb) {
       return {
-        packKey: async cb => (await Wb.b.getGame(bb, cb, !0)).customTexturePackKey,
-        fetchPack: kb.e
+        packKey: async ab => (await Mb.b.getGame(bb, ab, !0)).customTexturePackKey,
+        fetchPack: Ab.e
       }
     }
   }

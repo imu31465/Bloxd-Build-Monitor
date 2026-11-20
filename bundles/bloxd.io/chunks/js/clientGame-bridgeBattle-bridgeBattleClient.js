@@ -1,18 +1,18 @@
 export const id = 10;
 export const ids = [10];
 export const modules = {
-  38835: (bb, cb, sb) => {
-    sb.r(cb), sb.d(cb, {
-      default: () => kb
+  38532: (bb, ab, Ub) => {
+    Ub.r(ab), Ub.d(ab, {
+      default: () => Ab
     });
-    const kb = function(bb, cb, sb) {
-      let kb;
+    const Ab = function(bb, ab, Ub) {
+      let Ab;
       return {
         onCreate: bb => {
-          kb = bb
+          Ab = bb
         },
-        onPlayerAltAction: (bb, cb, sb, Wb, ab, Tb) => {
-          Tb && "Mesh" === kb.getEntityType(Tb) && ("Permanent Upgrades" === kb.getEntityName(Tb) ? kb.openShop(bb, !1, "Upgrades") : "Items" === kb.getEntityName(Tb) ? kb.openShop(bb, !1, "Items") : "Prestige" === kb.getEntityName(Tb) && kb.openShop(bb, !1, "Prestige"))
+        onPlayerAltAction: (bb, ab, Ub, Mb, Tb, Eb) => {
+          Eb && "Mesh" === Ab.getEntityType(Eb) && ("Permanent Upgrades" === Ab.getEntityName(Eb) ? Ab.openShop(bb, !1, "Upgrades") : "Items" === Ab.getEntityName(Eb) ? Ab.openShop(bb, !1, "Items") : "Prestige" === Ab.getEntityName(Eb) && Ab.openShop(bb, !1, "Prestige"))
         }
       }
     }

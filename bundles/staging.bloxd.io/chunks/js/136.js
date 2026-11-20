@@ -1,257 +1,257 @@
 export const id = 136;
 export const ids = [136];
 export const modules = {
-  7695: (bb, cb) => {
-    var sb = "youtube",
-      kb = [61802],
-      Wb = "f167",
-      ab = "M549.7 124.1C543.5 100.4 524.9 81.8 501.4 75.5 458.9 64 288.1 64 288.1 64S117.3 64 74.7 75.5C51.2 81.8 32.7 100.4 26.4 124.1 15 167 15 256.4 15 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8 42.6 11.5 213.4 11.5 213.4 11.5s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.2 337.6l0-162.4 142.7 81.2-142.7 81.2z";
-    cb.b = {
+  7647: (bb, ab) => {
+    var Ub = "youtube",
+      Ab = [61802],
+      Mb = "f167",
+      Tb = "M549.7 124.1C543.5 100.4 524.9 81.8 501.4 75.5 458.9 64 288.1 64 288.1 64S117.3 64 74.7 75.5C51.2 81.8 32.7 100.4 26.4 124.1 15 167 15 256.4 15 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8 42.6 11.5 213.4 11.5 213.4 11.5s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.2 337.6l0-162.4 142.7 81.2-142.7 81.2z";
+    ab.d = {
       prefix: "fab",
-      iconName: sb,
-      icon: [576, 512, kb, Wb, ab]
-    }, cb.f = cb.b
+      iconName: Ub,
+      icon: [576, 512, Ab, Mb, Tb]
+    }, ab.e = ab.d
   },
-  6503: (bb, cb) => {
-    Object.defineProperty(cb, "__esModule", {
+  6477: (bb, ab) => {
+    Object.defineProperty(ab, "__esModule", {
       value: !0
     });
-    var sb = "bolt",
-      kb = [9889, "zap"],
-      Wb = "f0e7",
-      ab = "M338.8-9.9c11.9 8.6 16.3 24.2 10.9 37.8L271.3 224 416 224c13.5 0 25.5 8.4 30.1 21.1s.7 26.9-9.6 35.5l-288 240c-11.3 9.4-27.4 9.9-39.3 1.3s-16.3-24.2-10.9-37.8L176.7 288 32 288c-13.5 0-25.5-8.4-30.1-21.1s-.7-26.9 9.6-35.5l288-240c11.3-9.4 27.4-9.9 39.3-1.3z";
-    cb.definition = {
+    var Ub = "bolt",
+      Ab = [9889, "zap"],
+      Mb = "f0e7",
+      Tb = "M338.8-9.9c11.9 8.6 16.3 24.2 10.9 37.8L271.3 224 416 224c13.5 0 25.5 8.4 30.1 21.1s.7 26.9-9.6 35.5l-288 240c-11.3 9.4-27.4 9.9-39.3 1.3s-16.3-24.2-10.9-37.8L176.7 288 32 288c-13.5 0-25.5-8.4-30.1-21.1s-.7-26.9 9.6-35.5l288-240c11.3-9.4 27.4-9.9 39.3-1.3z";
+    ab.definition = {
       prefix: "fas",
-      iconName: sb,
-      icon: [448, 512, kb, Wb, ab]
-    }, cb.faBolt = cb.definition, cb.prefix = "fas", cb.iconName = sb, cb.width = 448, cb.height = 512, cb.ligatures = kb, cb.unicode = Wb, cb.svgPathData = ab, cb.aliases = kb
+      iconName: Ub,
+      icon: [448, 512, Ab, Mb, Tb]
+    }, ab.faBolt = ab.definition, ab.prefix = "fas", ab.iconName = Ub, ab.width = 448, ab.height = 512, ab.ligatures = Ab, ab.unicode = Mb, ab.svgPathData = Tb, ab.aliases = Ab
   },
-  7182: (bb, cb) => {
-    var sb = "person-military-pointing",
-      kb = [],
-      Wb = "e54a",
-      ab = "M214.9 14.1C202 15.2 192 26 192 39 192 52.8 203.2 64 217 64l151 0c8.8 0 16-7.2 16-16l0-30.6C384 8 376 .7 366.7 1.4L214.9 14.1zM208 112c0 44.2 35.8 80 80 80s80-35.8 80-80c0-5.5-.6-10.8-1.6-16L209.6 96c-1 5.2-1.6 10.5-1.6 16zM40 224c-22.1 0-40 17.9-40 40s17.9 40 40 40l152 0 0 89.4 162.8-162.8c-13.3-4.3-27.3-6.5-41.6-6.5L40 224zm345.7 20.9l-171.1 171.1 169.4 0 0-46.3 53.6 90.6c11.2 19 35.8 25.3 54.8 14.1s25.3-35.8 14.1-54.8L430.3 290.8c-11.2-19-26.6-34.5-44.6-45.9zM192 448l0 32c0 17.7 14.3 32 32 32l128 0c17.7 0 32-14.3 32-32l0-32-192 0z";
-    cb.d = {
+  7146: (bb, ab) => {
+    var Ub = "person-military-pointing",
+      Ab = [],
+      Mb = "e54a",
+      Tb = "M214.9 14.1C202 15.2 192 26 192 39 192 52.8 203.2 64 217 64l151 0c8.8 0 16-7.2 16-16l0-30.6C384 8 376 .7 366.7 1.4L214.9 14.1zM208 112c0 44.2 35.8 80 80 80s80-35.8 80-80c0-5.5-.6-10.8-1.6-16L209.6 96c-1 5.2-1.6 10.5-1.6 16zM40 224c-22.1 0-40 17.9-40 40s17.9 40 40 40l152 0 0 89.4 162.8-162.8c-13.3-4.3-27.3-6.5-41.6-6.5L40 224zm345.7 20.9l-171.1 171.1 169.4 0 0-46.3 53.6 90.6c11.2 19 35.8 25.3 54.8 14.1s25.3-35.8 14.1-54.8L430.3 290.8c-11.2-19-26.6-34.5-44.6-45.9zM192 448l0 32c0 17.7 14.3 32 32 32l128 0c17.7 0 32-14.3 32-32l0-32-192 0z";
+    ab.e = {
       prefix: "fas",
-      iconName: sb,
-      icon: [512, 512, kb, Wb, ab]
-    }, cb.g = cb.d
+      iconName: Ub,
+      icon: [512, 512, Ab, Mb, Tb]
+    }, ab.f = ab.e
   },
-  7330: (bb, cb) => {
-    var sb = "sparkle",
-      kb = [],
-      Wb = "e5d6",
-      ab = "M278.5 15.6C275 6.2 266 0 256 0s-19 6.2-22.5 15.6L174.2 174.2 15.6 233.5C6.2 237 0 246 0 256s6.2 19 15.6 22.5l158.6 59.4 59.4 158.6C237 505.8 246 512 256 512s19-6.2 22.5-15.6l59.4-158.6 158.6-59.4C505.8 275 512 266 512 256s-6.2-19-15.6-22.5L337.8 174.2 278.5 15.6z";
-    cb.c = {
+  7285: (bb, ab) => {
+    var Ub = "sparkle",
+      Ab = [],
+      Mb = "e5d6",
+      Tb = "M278.5 15.6C275 6.2 266 0 256 0s-19 6.2-22.5 15.6L174.2 174.2 15.6 233.5C6.2 237 0 246 0 256s6.2 19 15.6 22.5l158.6 59.4 59.4 158.6C237 505.8 246 512 256 512s19-6.2 22.5-15.6l59.4-158.6 158.6-59.4C505.8 275 512 266 512 256s-6.2-19-15.6-22.5L337.8 174.2 278.5 15.6z";
+    ab.b = {
       prefix: "fas",
-      iconName: sb,
-      icon: [512, 512, kb, Wb, ab]
-    }, cb.f = cb.c
+      iconName: Ub,
+      icon: [512, 512, Ab, Mb, Tb]
+    }, ab.f = ab.b
   },
-  7413: (bb, cb) => {
-    var sb = "user",
-      kb = [128100, 62144, 62470, "user-alt", "user-large"],
-      Wb = "f007",
-      ab = "M224 248a120 120 0 1 0 0-240 120 120 0 1 0 0 240zm-29.7 56C95.8 304 16 383.8 16 482.3 16 498.7 29.3 512 45.7 512l356.6 0c16.4 0 29.7-13.3 29.7-29.7 0-98.5-79.8-178.3-178.3-178.3l-59.4 0z";
-    cb.c = {
+  7367: (bb, ab) => {
+    var Ub = "user",
+      Ab = [128100, 62144, 62470, "user-alt", "user-large"],
+      Mb = "f007",
+      Tb = "M224 248a120 120 0 1 0 0-240 120 120 0 1 0 0 240zm-29.7 56C95.8 304 16 383.8 16 482.3 16 498.7 29.3 512 45.7 512l356.6 0c16.4 0 29.7-13.3 29.7-29.7 0-98.5-79.8-178.3-178.3-178.3l-59.4 0z";
+    ab.c = {
       prefix: "fas",
-      iconName: sb,
-      icon: [448, 512, kb, Wb, ab]
-    }, cb.f = cb.c
+      iconName: Ub,
+      icon: [448, 512, Ab, Mb, Tb]
+    }, ab.d = ab.c
   },
-  7543: (bb, cb) => {
-    var sb = "wrench",
-      kb = [128295],
-      Wb = "f0ad",
-      ab = "M509.4 98.6c7.6-7.6 20.3-5.7 24.1 4.3 6.8 17.7 10.5 37 10.5 57.1 0 88.4-71.6 160-160 160-17.5 0-34.4-2.8-50.2-8L146.9 498.9c-28.1 28.1-73.7 28.1-101.8 0s-28.1-73.7 0-101.8L232 210.2c-5.2-15.8-8-32.6-8-50.2 0-88.4 71.6-160 160-160 20.1 0 39.4 3.7 57.1 10.5 10 3.8 11.8 16.5 4.3 24.1l-88.7 88.7c-3 3-4.7 7.1-4.7 11.3l0 41.4c0 8.8 7.2 16 16 16l41.4 0c4.2 0 8.3-1.7 11.3-4.7l88.7-88.7z";
-    cb.b = {
+  7499: (bb, ab) => {
+    var Ub = "wrench",
+      Ab = [128295],
+      Mb = "f0ad",
+      Tb = "M509.4 98.6c7.6-7.6 20.3-5.7 24.1 4.3 6.8 17.7 10.5 37 10.5 57.1 0 88.4-71.6 160-160 160-17.5 0-34.4-2.8-50.2-8L146.9 498.9c-28.1 28.1-73.7 28.1-101.8 0s-28.1-73.7 0-101.8L232 210.2c-5.2-15.8-8-32.6-8-50.2 0-88.4 71.6-160 160-160 20.1 0 39.4 3.7 57.1 10.5 10 3.8 11.8 16.5 4.3 24.1l-88.7 88.7c-3 3-4.7 7.1-4.7 11.3l0 41.4c0 8.8 7.2 16 16 16l41.4 0c4.2 0 8.3-1.7 11.3-4.7l88.7-88.7z";
+    ab.b = {
       prefix: "fas",
-      iconName: sb,
-      icon: [576, 512, kb, Wb, ab]
-    }, cb.c = cb.b
+      iconName: Ub,
+      icon: [576, 512, Ab, Mb, Tb]
+    }, ab.f = ab.b
   },
-  7557: (bb, cb, sb) => {
-    var kb = sb(6503);
-    cb.d = {
-      prefix: kb.prefix,
-      iconName: kb.iconName,
-      icon: [kb.width, kb.height, kb.aliases, kb.unicode, kb.svgPathData]
-    }, cb.g = cb.d, kb.prefix, kb.iconName, kb.width, kb.height, kb.aliases, kb.unicode, kb.svgPathData, kb.aliases
+  7520: (bb, ab, Ub) => {
+    var Ab = Ub(6477);
+    ab.d = {
+      prefix: Ab.prefix,
+      iconName: Ab.iconName,
+      icon: [Ab.width, Ab.height, Ab.aliases, Ab.unicode, Ab.svgPathData]
+    }, ab.f = ab.d, Ab.prefix, Ab.iconName, Ab.width, Ab.height, Ab.aliases, Ab.unicode, Ab.svgPathData, Ab.aliases
   },
-  40178: (bb, cb, sb) => {
-    sb.d(cb, {
-      e: () => Ub,
-      i: () => Tb
+  39870: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      c: () => Yb,
+      g: () => Eb
     });
-    var kb = sb(3058);
-    let Wb = null,
-      ab = null;
+    var Ab = Ub(2991);
+    let Mb = null,
+      Tb = null;
 
-    function Tb() {
-      return ab ??= sb.e(208).then((() => sb(35987))).then((bb => {
+    function Eb() {
+      return Tb ??= Ub.e(208).then((() => Ub(35785))).then((bb => {
         let {
-          ITEM_SPRITES: cb,
-          ITEM_SPRITES_WITHOUT_FILE: sb,
-          ITEM_FILES_WITHOUT_SPRITE: ab
+          ITEM_SPRITES: ab,
+          ITEM_SPRITES_WITHOUT_FILE: Ub,
+          ITEM_FILES_WITHOUT_SPRITE: Tb
         } = bb;
-        Wb = function(bb, cb, sb) {
-          const Wb = new Set,
-            ab = (0, kb.z)(cb);
-          let Tb = 0;
-          for (const [kb, Ub] of bb.entries()) kb === ab[Tb] ? Tb++ : Wb.add(Ub);
-          if ("" !== sb)
-            for (const Ub of sb.split(kb.r)) Wb.add(Ub);
-          return Wb
-        }(cb.split(kb.r), sb, ab)
+        Mb = function(bb, ab, Ub) {
+          const Mb = new Set,
+            Tb = (0, Ab.C)(ab);
+          let Eb = 0;
+          for (const [Ab, Yb] of bb.entries()) Ab === Tb[Eb] ? Eb++ : Mb.add(Yb);
+          if ("" !== Ub)
+            for (const Yb of Ub.split(Ab.u)) Mb.add(Yb);
+          return Mb
+        }(ab.split(Ab.u), Ub, Tb)
       }), (bb => {
-        throw ab = null, bb
-      })), ab
+        throw Tb = null, bb
+      })), Tb
     }
 
-    function Ub(bb) {
-      var cb, sb;
-      return null !== (cb = null === (sb = Wb) || void 0 === sb ? void 0 : sb.has(bb)) && void 0 !== cb && cb
+    function Yb(bb) {
+      var ab, Ub;
+      return null !== (ab = null === (Ub = Mb) || void 0 === Ub ? void 0 : Ub.has(bb)) && void 0 !== ab && ab
     }
   },
-  40176: (bb, cb, sb) => {
-    sb.d(cb, {
-      c: () => Tb,
-      e: () => Ub
+  39864: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      d: () => Eb,
+      h: () => Yb
     });
-    var kb = sb(40178);
-    let Wb = null,
-      ab = null;
+    var Ab = Ub(39870);
+    let Mb = null,
+      Tb = null;
 
-    function Tb() {
-      return Wb ??= sb.e(58).then((() => sb(41981))).catch((bb => {
-        throw Wb = null, bb
-      })), Wb
+    function Eb() {
+      return Mb ??= Ub.e(58).then((() => Ub(41714))).catch((bb => {
+        throw Mb = null, bb
+      })), Mb
     }
 
-    function Ub() {
-      return ab ??= Promise.all([Tb(), (0, kb.i)()]).then((bb => {
-        let [cb] = bb;
-        return cb
+    function Yb() {
+      return Tb ??= Promise.all([Eb(), (0, Ab.g)()]).then((bb => {
+        let [ab] = bb;
+        return ab
       }), (bb => {
-        throw ab = null, bb
-      })), ab
+        throw Tb = null, bb
+      })), Tb
     }
   },
-  41947: (bb, cb, sb) => {
-    sb.d(cb, {
-      b: () => rb,
-      f: () => Fb,
-      g: () => db,
-      j: () => Ab,
+  41682: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      d: () => sb,
+      g: () => cb,
+      i: () => lb,
+      l: () => tb,
       n: () => wb,
-      o: () => pb,
-      p: () => qb,
-      t: () => zb
+      p: () => Sb,
+      s: () => ob,
+      v: () => Kb
     });
-    var kb = sb(4210),
-      Wb = sb(4232),
-      ab = sb(8942),
-      Tb = sb(3050),
-      Ub = sb(3043),
-      Ib = sb(1078),
-      Hb = sb(40411),
-      fb = sb(117),
-      Mb = sb(1269),
-      Xb = sb(40176),
-      nb = sb(7695),
-      mb = sb(7182),
-      lb = sb(7330),
-      Qb = sb(7413),
-      eb = sb(7543),
-      Cb = sb(7557);
-    const Nb = {
-      youtube: nb.f,
-      "person-military-pointing": mb.g,
-      sparkle: lb.f,
-      user: Qb.f,
-      wrench: eb.c,
-      zap: Cb.g
+    var Ab = Ub(4150),
+      Mb = Ub(4174),
+      Tb = Ub(8922),
+      Eb = Ub(2989),
+      Yb = Ub(2981),
+      Bb = Ub(1018),
+      eb = Ub(40101),
+      vb = Ub(101),
+      Lb = Ub(1203),
+      Pb = Ub(39864),
+      Xb = Ub(7647),
+      jb = Ub(7146),
+      Rb = Ub(7285),
+      kb = Ub(7367),
+      yb = Ub(7499),
+      Zb = Ub(7520);
+    const Db = {
+      youtube: Xb.e,
+      "person-military-pointing": jb.f,
+      sparkle: Rb.f,
+      user: kb.d,
+      wrench: yb.f,
+      zap: Zb.f
     };
 
-    function Vb(bb) {
-      const [cb, sb, , , kb] = bb.icon;
+    function zb(bb) {
+      const [ab, Ub, , , Ab] = bb.icon;
       return {
-        width: cb,
-        height: sb,
-        path: "string" === typeof kb ? kb : kb.join(" ")
+        width: ab,
+        height: Ub,
+        path: "string" === typeof Ab ? Ab : Ab.join(" ")
       }
     }
-    const Lb = new Map(Object.entries(Nb).map((bb => {
-      let [cb, sb] = bb;
-      return [cb, Vb(sb)]
+    const xb = new Map(Object.entries(Db).map((bb => {
+      let [ab, Ub] = bb;
+      return [ab, zb(Ub)]
     })));
-    let ub = !1;
-    const Yb = new Set;
-    var hb = sb(40259);
-    const Jb = "Jetbrains Mono",
-      gb = "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2190-2193,U+2212,U+2215,U+2248,U+26A1,U+2713,U+FEFF,U+FFFD",
-      Bb = "U+0100-0130,U+0132-0151,U+0154-017F,U+018F-0190,U+0192,U+019B,U+01A0-01A1,U+01AF-01B0,U+01CD-01CE,U+01D0,U+01D2,U+01D4,U+01D6,U+01D8,U+01DA,U+01DC,U+01E6-01E7,U+01EA-01EB,U+01F4-01F5,U+01FC-01FF,U+0218-021B,U+0232-0233,U+0237,U+0259,U+02B9-02BA,U+02C7,U+02C9,U+02D8-02D9,U+02DB,U+02DD,U+02F3,U+02F7,U+0300-0303,U+0306-0307,U+0309-030C,U+030F,U+0312,U+031B,U+0323,U+0325-0328,U+0336-0338,U+0374-0375,U+037E,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03CF,U+03D5-03D7,U+0401-040C,U+040E-044F,U+0451-045C,U+045E-045F,U+0490-0493,U+049A-049B,U+04A2-04A3,U+04AE-04B1,U+04B6-04B7,U+04BA-04BB,U+04D8-04D9,U+04DC-04DF,U+04E4-04E9,U+04F4-04F5,U+0AEA,U+1E80-1E85,U+1E9E,U+1EA0-1EF9,U+2070,U+2074-207A,U+207C,U+2080-2089,U+20AB,U+20AE,U+20B4,U+20BD,U+20BF,U+2102,U+210D,U+2113,U+2115-2116,U+2119-211A,U+211D,U+2124,U+212E,U+2140,U+218A-218B,U+2194-2199,U+219D-219E,U+21A0,U+21A2-21A3,U+21A5-21A7,U+21A9-21AA,U+21AD,U+21BE,U+21C9,U+21D0-21D4,U+21DB,U+21DE-21DF,U+21E5,U+21E7-21E8,U+21EA,U+2200-220C,U+220E-2211,U+2213,U+2218-221A,U+221E,U+2223-2225,U+2227-222B,U+2234-2239,U+223C,U+223E,U+2243,U+2245,U+2247,U+2249,U+224B,U+224D,U+2254,U+2257,U+225F-2265,U+226A-2273,U+227A-227C,U+2282-2289,U+228E-2299,U+229B-22A5,U+22B4,U+22B8,U+22BB-22BD,U+22C2-22C4,U+22C6,U+22C8-22CA,U+22CE,U+22D0,U+22E2,U+22EE-22F1,U+2302-2305,U+2308-230B,U+2318,U+231C-231F,U+2324-2326,U+2328,U+232B,U+2336-237A,U+2389-238B,U+2395,U+239B-23AD,U+23CE,U+23FB-23FE,U+2400-2421,U+2423-2424,U+2500-25A1,U+25AA-25AB,U+25B2-25CC,U+25CE-25CF,U+25D4-25D5,U+25E6-25EB,U+25EF,U+25F6,U+266D,U+266F,U+2687,U+26A0,U+2715,U+2717,U+2736,U+276E-2771,U+2794,U+279C-279E,U+27C5-27C6,U+27DC,U+27E6-27EB,U+27F5-27F7,U+2916,U+294A,U+2987-2988,U+2A00,U+2A05-2A06,U+2B58,U+E0A0-E0A2,U+E0B0-E0B3,U+FE62,U+FF5B,U+FF5D,U+16910,U+1D538-1D539,U+1D53B-1D53E,U+1D540-1D544,U+1D546,U+1D54A-1D550,U+1D552-1D56B";
+    let ib = !1;
+    const fb = new Set;
+    var mb = Ub(39961);
+    const pb = "Jetbrains Mono",
+      Nb = "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2190-2193,U+2212,U+2215,U+2248,U+26A1,U+2713,U+FEFF,U+FFFD",
+      Wb = "U+0100-0130,U+0132-0151,U+0154-017F,U+018F-0190,U+0192,U+019B,U+01A0-01A1,U+01AF-01B0,U+01CD-01CE,U+01D0,U+01D2,U+01D4,U+01D6,U+01D8,U+01DA,U+01DC,U+01E6-01E7,U+01EA-01EB,U+01F4-01F5,U+01FC-01FF,U+0218-021B,U+0232-0233,U+0237,U+0259,U+02B9-02BA,U+02C7,U+02C9,U+02D8-02D9,U+02DB,U+02DD,U+02F3,U+02F7,U+0300-0303,U+0306-0307,U+0309-030C,U+030F,U+0312,U+031B,U+0323,U+0325-0328,U+0336-0338,U+0374-0375,U+037E,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03CF,U+03D5-03D7,U+0401-040C,U+040E-044F,U+0451-045C,U+045E-045F,U+0490-0493,U+049A-049B,U+04A2-04A3,U+04AE-04B1,U+04B6-04B7,U+04BA-04BB,U+04D8-04D9,U+04DC-04DF,U+04E4-04E9,U+04F4-04F5,U+0AEA,U+1E80-1E85,U+1E9E,U+1EA0-1EF9,U+2070,U+2074-207A,U+207C,U+2080-2089,U+20AB,U+20AE,U+20B4,U+20BD,U+20BF,U+2102,U+210D,U+2113,U+2115-2116,U+2119-211A,U+211D,U+2124,U+212E,U+2140,U+218A-218B,U+2194-2199,U+219D-219E,U+21A0,U+21A2-21A3,U+21A5-21A7,U+21A9-21AA,U+21AD,U+21BE,U+21C9,U+21D0-21D4,U+21DB,U+21DE-21DF,U+21E5,U+21E7-21E8,U+21EA,U+2200-220C,U+220E-2211,U+2213,U+2218-221A,U+221E,U+2223-2225,U+2227-222B,U+2234-2239,U+223C,U+223E,U+2243,U+2245,U+2247,U+2249,U+224B,U+224D,U+2254,U+2257,U+225F-2265,U+226A-2273,U+227A-227C,U+2282-2289,U+228E-2299,U+229B-22A5,U+22B4,U+22B8,U+22BB-22BD,U+22C2-22C4,U+22C6,U+22C8-22CA,U+22CE,U+22D0,U+22E2,U+22EE-22F1,U+2302-2305,U+2308-230B,U+2318,U+231C-231F,U+2324-2326,U+2328,U+232B,U+2336-237A,U+2389-238B,U+2395,U+239B-23AD,U+23CE,U+23FB-23FE,U+2400-2421,U+2423-2424,U+2500-25A1,U+25AA-25AB,U+25B2-25CC,U+25CE-25CF,U+25D4-25D5,U+25E6-25EB,U+25EF,U+25F6,U+266D,U+266F,U+2687,U+26A0,U+2715,U+2717,U+2736,U+276E-2771,U+2794,U+279C-279E,U+27C5-27C6,U+27DC,U+27E6-27EB,U+27F5-27F7,U+2916,U+294A,U+2987-2988,U+2A00,U+2A05-2A06,U+2B58,U+E0A0-E0A2,U+E0B0-E0B3,U+FE62,U+FF5B,U+FF5D,U+16910,U+1D538-1D539,U+1D53B-1D53E,U+1D540-1D544,U+1D546,U+1D54A-1D550,U+1D552-1D56B";
 
-    function tb(bb) {
+    function Hb(bb) {
       return bb.split(",").map((bb => {
-        const [cb, sb = cb] = bb.slice(2).split("-");
-        return [parseInt(cb, 16), parseInt(sb, 16)]
+        const [ab, Ub = ab] = bb.slice(2).split("-");
+        return [parseInt(ab, 16), parseInt(Ub, 16)]
       }))
     }
-    const yb = {
-        latin: tb(gb),
-        rest: tb(Bb)
+    const Ib = {
+        latin: Hb(Nb),
+        rest: Hb(Wb)
       },
-      Pb = new RegExp(`[${yb.rest.map((bb=>{let[cb,sb]=bb;return`\\u{${cb.toString(16)}}-\\u{${sb.toString(16)}}`})).join("")}]`, "u");
+      db = new RegExp(`[${Ib.rest.map((bb=>{let[ab,Ub]=bb;return`\\u{${ab.toString(16)}}-\\u{${Ub.toString(16)}}`})).join("")}]`, "u");
 
-    function Db(bb) {
-      return cb => {
-        console.warn(`[bloxd-wasm-client] the text font's ${bb} file did not load`, cb)
+    function Fb(bb) {
+      return ab => {
+        console.warn(`[bloxd-wasm-client] the text font's ${bb} file did not load`, ab)
       }
     }
-    const Eb = 397,
-      ib = 1,
-      Ob = {
+    const hb = 397,
+      Gb = 1,
+      Qb = {
         translate: bb => [bb],
         keyBindingText: bb => bb,
         isFriend: () => !1,
         hiddenNames: {},
         loadsFontRest: !1
       };
-    let Gb = null,
-      Kb = 0,
-      Zb = "none";
+    let qb = null,
+      ub = 0,
+      rb = "none";
 
-    function zb() {
-      return Kb
+    function Kb() {
+      return ub
     }
 
-    function qb() {
-      Kb++, !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0] ? Zb = "all" : "none" === Zb && (Zb = "notBoards")
-    }(0, Ib.q)((() => {
+    function ob() {
+      ub++, !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0] ? rb = "all" : "none" === rb && (rb = "notBoards")
+    }(0, Bb.s)((() => {
       (function() {
-        const bb = ub;
-        return ub = !1, bb
-      })() && qb(!1)
+        const bb = ib;
+        return ib = !1, bb
+      })() && ob(!1)
     }));
-    const db = new class {
+    const lb = new class {
       constructor(bb) {
         this.loaded = bb, this.latin = null, this.rest = null, this.restWanted = !1
       }
       load() {
         if (null === this.latin) {
-          this.latin = new FontFace(Jb, `url(${(0,hb.f)()}) format("woff2")`, {
-            unicodeRange: gb
+          this.latin = new FontFace(pb, `url(${(0,mb.g)()}) format("woff2")`, {
+            unicodeRange: Nb
           }).load().then((bb => {
             document.fonts.add(bb), this.loaded()
-          }), Db("Latin"));
-          const bb = new FontFace(Jb, `url(${(0,hb.g)()}) format("woff2")`, {
-            unicodeRange: Bb,
+          }), Fb("Latin"));
+          const bb = new FontFace(pb, `url(${(0,mb.k)()}) format("woff2")`, {
+            unicodeRange: Wb,
             display: "swap"
           });
           document.fonts.add(bb), bb.loaded.then((() => {
             this.loaded()
-          }), Db("rest")), this.rest = bb, this.restWanted && bb.load()
+          }), Fb("rest")), this.rest = bb, this.restWanted && bb.load()
         }
         return this.latin
       }
@@ -260,129 +260,129 @@ export const modules = {
         this.restWanted || (this.restWanted = !0, null === (bb = this.rest) || void 0 === bb || bb.load())
       }
       loadFor(bb) {
-        !this.restWanted && Pb.test(bb) && this.loadRest()
+        !this.restWanted && db.test(bb) && this.loadRest()
       }
-    }(qb);
+    }(ob);
 
-    function Ab(bb) {
-      Object.assign(Ob, bb), Ob.loadsFontRest && db.loadRest(), qb(!1)
+    function tb(bb) {
+      Object.assign(Qb, bb), Qb.loadsFontRest && lb.loadRest(), ob(!1)
     }
 
     function wb(bb) {
-      bb !== Gb && (Gb = bb, qb())
+      bb !== qb && (qb = bb, ob())
     }
 
-    function rb(bb) {
-      if ("none" === Zb || null === bb) return;
-      bb(Eb, "all" === Zb ? 0 : ib, new Uint8Array(0)) && (Zb = "none")
+    function sb(bb) {
+      if ("none" === rb || null === bb) return;
+      bb(hb, "all" === rb ? 0 : Gb, new Uint8Array(0)) && (rb = "none")
     }
-    const ob = new Map;
+    const gb = new Map;
 
-    function Sb(bb, cb, sb) {
-      const kb = sb ? `${bb}#${sb.join(",")}` : bb,
-        Wb = ob.get(kb);
-      if (Wb) return Wb.image;
-      const ab = {
+    function Cb(bb, ab, Ub) {
+      const Ab = Ub ? `${bb}#${Ub.join(",")}` : bb,
+        Mb = gb.get(Ab);
+      if (Mb) return Mb.image;
+      const Tb = {
         image: null
       };
-      return ob.set(kb, ab), cb().then((async bb => {
+      return gb.set(Ab, Tb), ab().then((async bb => {
         if (null === bb) return null;
-        const cb = new Image;
-        cb.crossOrigin = "anonymous", cb.src = bb, await cb.decode();
-        const kb = await createImageBitmap(cb);
-        if (!sb) return kb;
+        const ab = new Image;
+        ab.crossOrigin = "anonymous", ab.src = bb, await ab.decode();
+        const Ab = await createImageBitmap(ab);
+        if (!Ub) return Ab;
         try {
-          return function(bb, cb) {
-            let [sb, kb, Wb] = cb;
-            const ab = (0, Hb.d)(bb.width, bb.height),
+          return function(bb, ab) {
+            let [Ub, Ab, Mb] = ab;
+            const Tb = (0, eb.f)(bb.width, bb.height),
               {
-                canvas: Tb
-              } = ab;
-            return ab.drawImage(bb, 0, 0), ab.globalCompositeOperation = "multiply", ab.fillStyle = `rgb(${sb}, ${kb}, ${Wb})`, ab.fillRect(0, 0, Tb.width, Tb.height), ab.globalCompositeOperation = "destination-in", ab.drawImage(bb, 0, 0), Tb
-          }(kb, sb)
+                canvas: Eb
+              } = Tb;
+            return Tb.drawImage(bb, 0, 0), Tb.globalCompositeOperation = "multiply", Tb.fillStyle = `rgb(${Ub}, ${Ab}, ${Mb})`, Tb.fillRect(0, 0, Eb.width, Eb.height), Tb.globalCompositeOperation = "destination-in", Tb.drawImage(bb, 0, 0), Eb
+          }(Ab, Ub)
         } finally {
-          kb.close()
+          Ab.close()
         }
       })).then((bb => {
-        null !== bb && (ab.image = bb, qb(!1))
-      }), (cb => {
-        console.warn(`[bloxd-wasm-client] text icon ${bb} did not load`, cb), ob.get(kb) === ab && ob.delete(kb)
+        null !== bb && (Tb.image = bb, ob(!1))
+      }), (ab => {
+        console.warn(`[bloxd-wasm-client] text icon ${bb} did not load`, ab), gb.get(Ab) === Tb && gb.delete(Ab)
       })), null
     }
-    const Rb = new Set(kb.d),
-      vb = new Set(["CubeBlock", "SlabBlock", "StairsBlock"]);
+    const Vb = new Set(Ab.b),
+      Ob = new Set(["CubeBlock", "SlabBlock", "StairsBlock"]);
 
-    function Fb() {
-      (0, Xb.e)().catch((() => {}))
+    function cb() {
+      (0, Pb.h)().catch((() => {}))
     }
 
-    function xb(bb) {
-      return Rb.has(bb) ? Sb(`icon:${bb}`, (async () => (await (0, Xb.c)()).ingameIconUrl(bb))) : null
+    function Jb(bb) {
+      return Vb.has(bb) ? Cb(`icon:${bb}`, (async () => (await (0, Pb.d)()).ingameIconUrl(bb))) : null
     }
-    let jb = "unasked";
-    const pb = {
+    let nb = "unasked";
+    const Sb = {
       get canSeeRealPlayerNames() {
-        return fb.featureFlags.canSeeRealPlayerNames
+        return vb.featureFlags.canSeeRealPlayerNames
       },
       get canSeePlayerWrittenText() {
-        return fb.featureFlags.canSeePlayerWrittenText
+        return vb.featureFlags.canSeePlayerWrittenText
       },
       get localPlayerDbId() {
-        return Gb
+        return qb
       },
-      shownPlayerName: bb => (0, Mb.e)(bb, Ob.hiddenNames),
-      translate: (bb, cb) => {
-        const sb = "object" === typeof cb && null !== cb ? cb : void 0;
-        return Ob.translate(bb, (0, Mb.g)(sb, Ob.hiddenNames))
+      shownPlayerName: bb => (0, Lb.d)(bb, Qb.hiddenNames),
+      translate: (bb, ab) => {
+        const Ub = "object" === typeof ab && null !== ab ? ab : void 0;
+        return Qb.translate(bb, (0, Lb.e)(Ub, Qb.hiddenNames))
       },
-      keyBindingText: bb => Ob.keyBindingText(bb),
-      isFriend: bb => Ob.isFriend(bb, Ob.hiddenNames),
+      keyBindingText: bb => Qb.keyBindingText(bb),
+      isFriend: bb => Qb.isFriend(bb, Qb.hiddenNames),
       iconImage: function(bb) {
-        if (Rb.has(bb)) return xb(bb);
-        if ("unasked" === jb && (jb = "loading", (0, Ub.g)().then((() => {
-            jb = "in", qb(!1)
+        if (Vb.has(bb)) return Jb(bb);
+        if ("unasked" === nb && (nb = "loading", (0, Yb.f)().then((() => {
+            nb = "in", ob(!1)
           }), (bb => {
-            jb = "failed", console.warn("[bloxd-wasm-client] the item sprite table did not load, so text item icons stay blank", bb)
-          }))), "in" !== jb) return null;
-        const cb = (0, Tb.b)(bb),
-          sb = void 0 === cb ? void 0 : (0, ab.itemTypeNameOf)(cb);
-        if ("Gun" === sb) return null;
-        const kb = (0, Ub.e)(bb),
-          Ib = void 0 !== sb && vb.has(sb);
-        if (Ib && void 0 === kb) return null;
-        const Hb = void 0 !== cb && "GrayscaleArmour" === (0, ab.itemTypeOf)(cb) || Object.hasOwn(Wb.b, bb),
-          fb = null !== kb && void 0 !== kb ? kb : bb;
-        return Sb(Ib ? `block:${fb}` : `item:${fb}`, (async () => {
+            nb = "failed", console.warn("[bloxd-wasm-client] the item sprite table did not load, so text item icons stay blank", bb)
+          }))), "in" !== nb) return null;
+        const ab = (0, Eb.d)(bb),
+          Ub = void 0 === ab ? void 0 : (0, Tb.itemTypeNameOf)(ab);
+        if ("Gun" === Ub) return null;
+        const Ab = (0, Yb.c)(bb),
+          Bb = void 0 !== Ub && Ob.has(Ub);
+        if (Bb && void 0 === Ab) return null;
+        const eb = void 0 !== ab && "GrayscaleArmour" === (0, Tb.itemTypeOf)(ab) || Object.hasOwn(Mb.b, bb),
+          vb = null !== Ab && void 0 !== Ab ? Ab : bb;
+        return Cb(Bb ? `block:${vb}` : `item:${vb}`, (async () => {
           var bb;
-          const cb = await (0, Xb.e)();
-          return null !== (bb = cb.itemSpriteUrl(fb)) && void 0 !== bb ? bb : Ib ? null : cb.notFoundUrl()
-        }), Hb ? (0, Wb.c)(bb) : void 0)
+          const ab = await (0, Pb.h)();
+          return null !== (bb = ab.itemSpriteUrl(vb)) && void 0 !== bb ? bb : Bb ? null : ab.notFoundUrl()
+        }), eb ? (0, Mb.c)(bb) : void 0)
       },
-      effectImage: xb,
+      effectImage: Jb,
       rankIcon: function(bb) {
-        const cb = Lb.get(bb);
-        if (cb) return cb;
-        const sb = (0, Ib.f)(bb, (0, Ib.k)(bb));
-        if (!sb) return (0, Ib.i)("brands") && (0, Ib.i)("solid") ? Yb.has(bb) || (Yb.add(bb), console.warn(`[bloxd-wasm-client] unknown rank icon "${bb}": not in the bundled Font Awesome subset, so its tag draws no icon`)) : ub = !0, null;
-        const kb = Vb(sb);
-        return Lb.set(bb, kb), kb
+        const ab = xb.get(bb);
+        if (ab) return ab;
+        const Ub = (0, Bb.h)(bb, (0, Bb.m)(bb));
+        if (!Ub) return (0, Bb.l)("brands") && (0, Bb.l)("solid") ? fb.has(bb) || (fb.add(bb), console.warn(`[bloxd-wasm-client] unknown rank icon "${bb}": not in the bundled Font Awesome subset, so its tag draws no icon`)) : ib = !0, null;
+        const Ab = zb(Ub);
+        return xb.set(bb, Ab), Ab
       },
       glyphsShown: bb => {
-        db.loadFor(bb)
+        lb.loadFor(bb)
       }
     }
   },
-  41941: (bb, cb, sb) => {
-    sb.d(cb, {
-      c: () => uc,
-      d: () => lc
+  41673: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      d: () => ia,
+      g: () => Ra
     });
-    var kb = sb(36351),
-      Wb = sb(40411),
-      ab = sb(38451),
-      Tb = sb(613),
-      Ub = sb(334);
-    const Ib = {
+    var Ab = Ub(36098),
+      Mb = Ub(40101),
+      Tb = Ub(38175),
+      Eb = Ub(574),
+      Yb = Ub(307);
+    const Bb = {
         DEFAULT_FONT_SIZE: 47,
         DEFAULT_SUBTITLE_FONT_SIZE: 30,
         HORIZONTAL_PADDING: 30,
@@ -391,220 +391,220 @@ export const modules = {
         LINE_SPACING: 8,
         EFFECT_ICON_SIZE: 70
       },
-      Hb = 41;
+      eb = 41;
 
-    function fb(bb) {
+    function vb(bb) {
       return `bolder ${bb}px 'Jetbrains Mono'`
     }
 
-    function Mb(bb) {
+    function Lb(bb) {
       return "object" === typeof bb && null !== bb
     }
 
-    function Xb(bb, cb) {
-      const sb = "number" === typeof bb ? bb : "string" === typeof bb ? Number(bb.replace("px", "")) : NaN;
-      return Number.isFinite(sb) && sb > 0 ? sb : cb
+    function Pb(bb, ab) {
+      const Ub = "number" === typeof bb ? bb : "string" === typeof bb ? Number(bb.replace("px", "")) : NaN;
+      return Number.isFinite(Ub) && Ub > 0 ? Ub : ab
     }
 
-    function nb(bb) {
-      return Mb(bb) ? bb : void 0
+    function Xb(bb) {
+      return Lb(bb) ? bb : void 0
     }
 
-    function mb(bb) {
-      const cb = "number" === typeof bb ? Tb.w[bb] : bb;
-      return "string" === typeof cb && Object.hasOwn(Tb.h, cb) ? Tb.h[cb] : void 0
+    function jb(bb) {
+      const ab = "number" === typeof bb ? Eb.v[bb] : bb;
+      return "string" === typeof ab && Object.hasOwn(Eb.m, ab) ? Eb.m[ab] : void 0
     }
 
-    function lb(bb, cb) {
-      return "string" === typeof bb ? bb : Mb(bb) ? "string" === typeof bb.translationKey ? cb.translate(bb.translationKey, bb.params).map((bb => "string" === typeof bb ? bb : bb.icon)).join("") : "string" === typeof bb.entityName ? cb.shownPlayerName(bb.entityName) : "" : void 0 === bb || null === bb ? "" : String(bb)
+    function Rb(bb, ab) {
+      return "string" === typeof bb ? bb : Lb(bb) ? "string" === typeof bb.translationKey ? ab.translate(bb.translationKey, bb.params).map((bb => "string" === typeof bb ? bb : bb.icon)).join("") : "string" === typeof bb.entityName ? ab.shownPlayerName(bb.entityName) : "" : void 0 === bb || null === bb ? "" : String(bb)
     }
 
-    function Qb(bb, cb, sb, kb) {
+    function kb(bb, ab, Ub, Ab) {
       if (!Array.isArray(bb)) return [];
-      const Wb = [];
-      for (const fb of bb) {
-        var ab, Tb;
-        if (Mb(fb) && "chatTag" in fb) {
-          Wb.push({
+      const Mb = [];
+      for (const vb of bb) {
+        var Tb, Eb;
+        if (Lb(vb) && "chatTag" in vb) {
+          Mb.push({
             kind: "rank",
-            rank: fb
+            rank: vb
           });
           continue
         }
-        if (Mb(fb) && "icon" in fb && !("mainRGB" in fb)) {
-          var Hb;
-          Wb.push({
+        if (Lb(vb) && "icon" in vb && !("mainRGB" in vb)) {
+          var eb;
+          Mb.push({
             kind: "icon",
-            icon: String(fb.icon),
-            size: Xb(null === (Hb = nb(fb.style)) || void 0 === Hb ? void 0 : Hb.fontSize, Ib.DEFAULT_FONT_SIZE)
+            icon: String(vb.icon),
+            size: Pb(null === (eb = Xb(vb.style)) || void 0 === eb ? void 0 : eb.fontSize, Bb.DEFAULT_FONT_SIZE)
           });
           continue
         }
-        if (Mb(fb) && (0, Ub.Bb)(fb)) {
-          Wb.push({
+        if (Lb(vb) && (0, Yb.qb)(vb)) {
+          Mb.push({
             kind: "text",
             text: "",
-            size: cb,
-            colour: kb
+            size: ab,
+            colour: Ab
           });
           continue
         }
-        let bb, mb;
-        Mb(fb) && (0, Ub.Ab)(fb) ? (bb = sb.keyBindingText(String(fb.action)), mb = nb(fb.style)) : Mb(fb) && "str" in fb ? (bb = fb.str, mb = nb(fb.style)) : bb = fb;
-        const Qb = Xb(null === (ab = mb) || void 0 === ab ? void 0 : ab.fontSize, cb),
-          eb = null !== (Tb = (0, Ub.ac)(mb)) && void 0 !== Tb ? Tb : kb;
-        if (Mb(bb) && "string" === typeof bb.translationKey) {
-          const cb = sb.translate(bb.translationKey, bb.params);
-          if (cb.some((bb => "string" !== typeof bb))) {
-            for (const bb of cb) Wb.push("string" === typeof bb ? {
+        let bb, jb;
+        Lb(vb) && (0, Yb.ob)(vb) ? (bb = Ub.keyBindingText(String(vb.action)), jb = Xb(vb.style)) : Lb(vb) && "str" in vb ? (bb = vb.str, jb = Xb(vb.style)) : bb = vb;
+        const kb = Pb(null === (Tb = jb) || void 0 === Tb ? void 0 : Tb.fontSize, ab),
+          yb = null !== (Eb = (0, Yb.Vb)(jb)) && void 0 !== Eb ? Eb : Ab;
+        if (Lb(bb) && "string" === typeof bb.translationKey) {
+          const ab = Ub.translate(bb.translationKey, bb.params);
+          if (ab.some((bb => "string" !== typeof bb))) {
+            for (const bb of ab) Mb.push("string" === typeof bb ? {
               kind: "text",
               text: bb,
-              size: Qb,
-              colour: eb
+              size: kb,
+              colour: yb
             } : {
               kind: "icon",
               icon: bb.icon,
-              size: Qb
+              size: kb
             });
             continue
           }
         }
-        Wb.push({
+        Mb.push({
           kind: "text",
-          text: lb(bb, sb),
-          size: Qb,
-          colour: eb
+          text: Rb(bb, Ub),
+          size: kb,
+          colour: yb
         })
       }
-      return Wb
+      return Mb
     }
 
-    function eb(bb) {
+    function yb(bb) {
       return void 0 !== bb && "rank" !== bb.kind
     }
 
-    function Cb(bb, cb) {
-      const sb = eb(bb),
-        kb = eb(cb);
-      return void 0 === bb && !kb || !sb && void 0 === cb ? 0 : sb !== kb ? .5 * Ib.HORIZONTAL_PADDING : 0
+    function Zb(bb, ab) {
+      const Ub = yb(bb),
+        Ab = yb(ab);
+      return void 0 === bb && !Ab || !Ub && void 0 === ab ? 0 : Ub !== Ab ? .5 * Bb.HORIZONTAL_PADDING : 0
     }
 
-    function Nb(bb) {
-      return "rank" === bb.kind ? Ib.DEFAULT_FONT_SIZE : bb.size
+    function Db(bb) {
+      return "rank" === bb.kind ? Bb.DEFAULT_FONT_SIZE : bb.size
     }
 
-    function Vb(bb, cb, sb) {
-      return "icon" === bb.kind ? bb.size : "rank" === bb.kind ? function(bb, cb) {
-        const sb = cb.rankIcon(bb.rank.icon);
-        return sb ? Hb * (sb.width / sb.height) : Hb
-      }(bb, sb) + Ib.HORIZONTAL_PADDING : (sb.glyphsShown(bb.text), cb.font = fb(bb.size), cb.measureText(bb.text).width)
+    function zb(bb, ab, Ub) {
+      return "icon" === bb.kind ? bb.size : "rank" === bb.kind ? function(bb, ab) {
+        const Ub = ab.rankIcon(bb.rank.icon);
+        return Ub ? eb * (Ub.width / Ub.height) : eb
+      }(bb, Ub) + Bb.HORIZONTAL_PADDING : (Ub.glyphsShown(bb.text), ab.font = vb(bb.size), ab.measureText(bb.text).width)
     }
 
-    function Lb(bb, cb, sb) {
+    function xb(bb, ab, Ub) {
       if (0 === bb.length) return {
         width: 0,
         height: 0,
         sizes: []
       };
-      let kb = 0;
-      for (const Tb of bb) kb = Math.max(kb, Nb(Tb));
-      const Wb = [];
-      let ab = Cb(void 0, bb[0]);
-      for (let Tb = 0; Tb < bb.length; Tb++) {
-        const kb = ab;
-        ab += Vb(bb[Tb], cb, sb), ab += Cb(bb[Tb], bb[Tb + 1]), Wb.push({
-          x: kb,
-          width: ab - kb
+      let Ab = 0;
+      for (const Eb of bb) Ab = Math.max(Ab, Db(Eb));
+      const Mb = [];
+      let Tb = Zb(void 0, bb[0]);
+      for (let Eb = 0; Eb < bb.length; Eb++) {
+        const Ab = Tb;
+        Tb += zb(bb[Eb], ab, Ub), Tb += Zb(bb[Eb], bb[Eb + 1]), Mb.push({
+          x: Ab,
+          width: Tb - Ab
         })
       }
       return {
-        width: ab,
-        height: kb + Ib.VERTICAL_PADDING,
-        sizes: Wb
+        width: Tb,
+        height: Ab + Bb.VERTICAL_PADDING,
+        sizes: Mb
       }
     }
 
-    function ub(bb, cb, sb, kb, Wb, ab, Tb) {
-      cb += Cb(void 0, bb[0]);
-      for (let Ub = 0; Ub < bb.length; Ub++) {
-        const Ib = Yb(bb[Ub], cb, sb, kb, Wb, ab, Tb);
-        cb += 0 === Ib ? 0 : Ib + Cb(bb[Ub], bb[Ub + 1])
+    function ib(bb, ab, Ub, Ab, Mb, Tb, Eb) {
+      ab += Zb(void 0, bb[0]);
+      for (let Yb = 0; Yb < bb.length; Yb++) {
+        const Bb = fb(bb[Yb], ab, Ub, Ab, Mb, Tb, Eb);
+        ab += 0 === Bb ? 0 : Bb + Zb(bb[Yb], bb[Yb + 1])
       }
     }
 
-    function Yb(bb, cb, sb, kb, Wb, ab, Tb, Ub) {
-      var Mb;
+    function fb(bb, ab, Ub, Ab, Mb, Tb, Eb, Yb) {
+      var Lb;
       if ("icon" === bb.kind) {
-        const kb = ab.iconImage(bb.icon);
-        return kb && Tb.push({
-          image: kb,
-          x: cb,
-          y: sb + Ib.VERTICAL_PADDING / 2,
+        const Ab = Tb.iconImage(bb.icon);
+        return Ab && Eb.push({
+          image: Ab,
+          x: ab,
+          y: Ub + Bb.VERTICAL_PADDING / 2,
           size: bb.size
         }), bb.size
       }
       if ("rank" === bb.kind) {
-        const Tb = null !== Ub && void 0 !== Ub ? Ub : Vb(bb, Wb, ab);
-        return function(bb, cb, sb, kb, Wb, ab, Tb) {
-          var Ub, fb;
+        const Eb = null !== Yb && void 0 !== Yb ? Yb : zb(bb, Mb, Tb);
+        return function(bb, ab, Ub, Ab, Mb, Tb, Eb) {
+          var Yb, vb;
           const {
-            rank: Mb
+            rank: Lb
           } = bb;
-          ab.fillStyle = Mb.mainRGB, ab.fillRect(cb, sb, kb, Wb);
-          const Xb = Tb.rankIcon(Mb.icon);
-          if (!Xb) return;
-          const nb = Hb / Xb.height,
-            mb = cb + (kb - Xb.width * nb) / 2,
-            lb = sb + (Wb - Hb) / 2,
-            Qb = new Path2D(Xb.path),
-            eb = Ib.TEXT_SHADOW_WIDTH,
-            Cb = (null === (Ub = Mb.nameTag) || void 0 === Ub ? void 0 : Ub.iconShadowRGB) || "black";
-          for (const Ib of [-1, 1])
-            for (const bb of [-1, 1]) Jb(ab, Qb, mb + eb * Ib, lb + eb * bb, nb, Cb);
-          Jb(ab, Qb, mb, lb, nb, (null === (fb = Mb.nameTag) || void 0 === fb ? void 0 : fb.iconRGB) || "white")
-        }(bb, cb, sb, Tb, kb, Wb, ab), Tb
+          Tb.fillStyle = Lb.mainRGB, Tb.fillRect(ab, Ub, Ab, Mb);
+          const Pb = Eb.rankIcon(Lb.icon);
+          if (!Pb) return;
+          const Xb = eb / Pb.height,
+            jb = ab + (Ab - Pb.width * Xb) / 2,
+            Rb = Ub + (Mb - eb) / 2,
+            kb = new Path2D(Pb.path),
+            yb = Bb.TEXT_SHADOW_WIDTH,
+            Zb = (null === (Yb = Lb.nameTag) || void 0 === Yb ? void 0 : Yb.iconShadowRGB) || "black";
+          for (const Bb of [-1, 1])
+            for (const bb of [-1, 1]) pb(Tb, kb, jb + yb * Bb, Rb + yb * bb, Xb, Zb);
+          pb(Tb, kb, jb, Rb, Xb, (null === (vb = Lb.nameTag) || void 0 === vb ? void 0 : vb.iconRGB) || "white")
+        }(bb, ab, Ub, Eb, Ab, Mb, Tb), Eb
       }
       if (0 === bb.text.length) return 0;
-      const Xb = fb(bb.size);
-      Wb.font = Xb;
-      const nb = null !== Ub && void 0 !== Ub ? Ub : Wb.measureText(bb.text).width;
-      return function(bb, cb, sb, kb, Wb, ab) {
-        const Tb = Ib.TEXT_SHADOW_WIDTH;
-        ab.font = kb, ab.fillStyle = "black";
-        for (const Ub of [-1, 1])
-          for (const kb of [-1, 1]) ab.fillText(bb, cb + Tb * Ub, sb + Tb * kb);
-        ab.fillStyle = Wb, ab.fillText(bb, cb, sb)
-      }(bb.text, cb, sb + kb - Ib.VERTICAL_PADDING + 5, Xb, null !== (Mb = bb.colour) && void 0 !== Mb ? Mb : "white", Wb), nb
+      const Pb = vb(bb.size);
+      Mb.font = Pb;
+      const Xb = null !== Yb && void 0 !== Yb ? Yb : Mb.measureText(bb.text).width;
+      return function(bb, ab, Ub, Ab, Mb, Tb) {
+        const Eb = Bb.TEXT_SHADOW_WIDTH;
+        Tb.font = Ab, Tb.fillStyle = "black";
+        for (const Yb of [-1, 1])
+          for (const Ab of [-1, 1]) Tb.fillText(bb, ab + Eb * Yb, Ub + Eb * Ab);
+        Tb.fillStyle = Mb, Tb.fillText(bb, ab, Ub)
+      }(bb.text, ab, Ub + Ab - Bb.VERTICAL_PADDING + 5, Pb, null !== (Lb = bb.colour) && void 0 !== Lb ? Lb : "white", Mb), Xb
     }
 
-    function hb(bb, cb) {
+    function mb(bb, ab) {
       for (const {
-          image: sb,
-          x: kb,
-          y: Wb,
-          size: ab
+          image: Ub,
+          x: Ab,
+          y: Mb,
+          size: Tb
         }
-        of bb) cb.imageSmoothingEnabled = !1, cb.drawImage(sb, kb, Wb, ab, ab)
+        of bb) ab.imageSmoothingEnabled = !1, ab.drawImage(Ub, Ab, Mb, Tb, Tb)
     }
 
-    function Jb(bb, cb, sb, kb, Wb, ab) {
-      bb.save(), bb.translate(sb, kb), bb.scale(Wb, Wb), bb.fillStyle = ab, bb.fill(cb), bb.restore()
+    function pb(bb, ab, Ub, Ab, Mb, Tb) {
+      bb.save(), bb.translate(Ub, Ab), bb.scale(Mb, Mb), bb.fillStyle = Tb, bb.fill(ab), bb.restore()
     }
 
-    function gb(bb, cb, sb) {
-      const kb = "object" === typeof bb && null !== bb ? bb : {},
-        Wb = function(bb, cb, sb) {
+    function Nb(bb, ab, Ub) {
+      const Ab = "object" === typeof bb && null !== bb ? bb : {},
+        Mb = function(bb, ab, Ub) {
           if (!Array.isArray(bb) || 0 === bb.length) return [];
-          const kb = [{
+          const Ab = [{
             width: 0,
             height: 0,
             y: 0,
             items: []
           }];
-          for (const Tb of Qb(bb, Ib.DEFAULT_FONT_SIZE, sb)) {
-            if ("text" !== Tb.kind) {
-              kb[kb.length - 1].items.push({
-                content: Tb,
+          for (const Eb of kb(bb, Bb.DEFAULT_FONT_SIZE, Ub)) {
+            if ("text" !== Eb.kind) {
+              Ab[Ab.length - 1].items.push({
+                content: Eb,
                 chars: 1,
                 size: {
                   x: 0,
@@ -613,17 +613,17 @@ export const modules = {
               });
               continue
             }
-            if (0 === Tb.text.length) continue;
-            const bb = kb[kb.length - 1].items.reduce(((bb, cb) => bb + ("text" === cb.content.kind ? (0, ab.e)(cb.content.text) : cb.chars)), 0);
-            (0, ab.g)(Tb.text, bb).forEach(((bb, cb) => {
-              cb > 0 && kb.push({
+            if (0 === Eb.text.length) continue;
+            const bb = Ab[Ab.length - 1].items.reduce(((bb, ab) => bb + ("text" === ab.content.kind ? (0, Tb.d)(ab.content.text) : ab.chars)), 0);
+            (0, Tb.f)(Eb.text, bb).forEach(((bb, ab) => {
+              ab > 0 && Ab.push({
                 width: 0,
                 height: 0,
                 y: 0,
                 items: []
-              }), bb.length > 0 && kb[kb.length - 1].items.push({
+              }), bb.length > 0 && Ab[Ab.length - 1].items.push({
                 content: {
-                  ...Tb,
+                  ...Eb,
                   text: bb
                 },
                 chars: bb.length,
@@ -634,58 +634,58 @@ export const modules = {
               })
             }))
           }
-          let Wb = Ib.VERTICAL_PADDING / 2;
-          for (const ab of kb) {
-            if (0 === ab.items.length) continue;
+          let Mb = Bb.VERTICAL_PADDING / 2;
+          for (const Tb of Ab) {
+            if (0 === Tb.items.length) continue;
             const {
               width: bb,
-              height: kb,
-              sizes: Tb
-            } = Lb(ab.items.map((bb => bb.content)), cb, sb);
-            ab.items.forEach(((bb, cb) => {
-              bb.size = Tb[cb]
-            })), ab.width = bb, ab.height = kb, ab.y = Wb, Wb += kb + Ib.LINE_SPACING
+              height: Ab,
+              sizes: Eb
+            } = xb(Tb.items.map((bb => bb.content)), ab, Ub);
+            Tb.items.forEach(((bb, ab) => {
+              bb.size = Eb[ab]
+            })), Tb.width = bb, Tb.height = Ab, Tb.y = Mb, Mb += Ab + Bb.LINE_SPACING
           }
-          return kb
-        }(kb.content, cb, sb);
-      let Tb = 0,
-        Ub = Ib.VERTICAL_PADDING,
-        Hb = 0;
-      for (const ab of Wb) {
-        Tb = Math.max(Tb, ab.width + 2 * Ib.HORIZONTAL_PADDING), Ub += ab.height + Ib.LINE_SPACING;
-        for (const bb of ab.items) Hb += bb.chars
+          return Ab
+        }(Ab.content, ab, Ub);
+      let Eb = 0,
+        Yb = Bb.VERTICAL_PADDING,
+        eb = 0;
+      for (const Tb of Mb) {
+        Eb = Math.max(Eb, Tb.width + 2 * Bb.HORIZONTAL_PADDING), Yb += Tb.height + Bb.LINE_SPACING;
+        for (const bb of Tb.items) eb += bb.chars
       }
-      const fb = "string" === typeof kb.backgroundColor ? kb.backgroundColor : "#22283b";
+      const vb = "string" === typeof Ab.backgroundColor ? Ab.backgroundColor : "#22283b";
       return {
-        width: Tb,
-        height: Ub,
-        chars: Hb,
-        draw: (bb, cb) => {
-          const kb = [];
-          if (bb.fillStyle = fb, bb.fillRect(0, 0, Tb, Ub), null === cb)
-            for (const ab of Wb) ab.items.length > 0 && ub(ab.items.map((bb => bb.content)), 0, ab.y, ab.height, bb, sb, kb);
+        width: Eb,
+        height: Yb,
+        chars: eb,
+        draw: (bb, ab) => {
+          const Ab = [];
+          if (bb.fillStyle = vb, bb.fillRect(0, 0, Eb, Yb), null === ab)
+            for (const Tb of Mb) Tb.items.length > 0 && ib(Tb.items.map((bb => bb.content)), 0, Tb.y, Tb.height, bb, Ub, Ab);
           else {
-            let ab = 0;
-            for (const Tb of Wb)
-              for (const Wb of Tb.items) {
-                if (ab >= cb) break;
-                Yb("text" === Wb.content.kind ? {
-                  ...Wb.content,
-                  text: Wb.content.text.substring(0, cb - ab)
-                } : Wb.content, Wb.size.x, Tb.y, Tb.height, bb, sb, kb, Wb.size.width), ab += Wb.chars
+            let Tb = 0;
+            for (const Eb of Mb)
+              for (const Mb of Eb.items) {
+                if (Tb >= ab) break;
+                fb("text" === Mb.content.kind ? {
+                  ...Mb.content,
+                  text: Mb.content.text.substring(0, ab - Tb)
+                } : Mb.content, Mb.size.x, Eb.y, Eb.height, bb, Ub, Ab, Mb.size.width), Tb += Mb.chars
               }
           }
-          hb(kb, bb)
+          mb(Ab, bb)
         }
       }
     }
-    var Bb = sb(4210),
-      tb = sb(1271),
-      yb = sb(1968);
-    const Pb = 10,
-      Db = 3,
-      Eb = 3,
-      ib = [{
+    var Wb = Ub(4150),
+      Hb = Ub(1208),
+      Ib = Ub(1934);
+    const db = 10,
+      Fb = 3,
+      hb = 3,
+      Gb = [{
         healthFraction: .25,
         colour: "#ff0000"
       }, {
@@ -695,10 +695,10 @@ export const modules = {
         healthFraction: 1,
         colour: "#00ff00"
       }],
-      Ob = 64,
-      Gb = 69,
-      Kb = {
-        icon: yb.e,
+      Qb = 64,
+      qb = 69,
+      ub = {
+        icon: Ib.b,
         mainRGB: "transparent",
         chatTag: [],
         nameTag: {
@@ -708,386 +708,386 @@ export const modules = {
         visible: !0
       };
 
-    function Zb(bb) {
+    function rb(bb) {
       return "object" !== typeof bb || null === bb || Array.isArray(bb) ? void 0 : bb
     }
-    const zb = new Set(Bb.d);
+    const Kb = new Set(Wb.b);
 
-    function qb(bb, cb) {
-      return "string" === typeof bb ? Xb(bb, cb) : cb
+    function ob(bb, ab) {
+      return "string" === typeof bb ? Pb(bb, ab) : ab
     }
 
-    function db(bb) {
-      return qb(bb.width, Db)
+    function lb(bb) {
+      return ob(bb.width, Fb)
     }
 
-    function Ab(bb, cb) {
-      var sb;
-      const kb = null !== (sb = bb.applyTo) && void 0 !== sb ? sb : "both";
-      return "both" === kb || kb === cb
+    function tb(bb, ab) {
+      var Ub;
+      const Ab = null !== (Ub = bb.applyTo) && void 0 !== Ub ? Ub : "both";
+      return "both" === Ab || Ab === ab
     }
 
     function wb(bb) {
-      const cb = db(bb);
-      return "glow" === bb.style ? cb * Eb : Math.ceil(cb / 2) + 1
+      const ab = lb(bb);
+      return "glow" === bb.style ? ab * hb : Math.ceil(ab / 2) + 1
     }
 
-    function rb(bb, cb, sb) {
-      var kb, Wb;
-      const ab = null !== (kb = Zb(bb.info)) && void 0 !== kb ? kb : {},
-        Ub = "string" === typeof bb.name ? bb.name : "",
-        Hb = ab.subtitle;
-      if (Array.isArray(ab.content) && 0 === ab.content.length && !(Array.isArray(Hb) && Hb.length > 0)) return null;
-      const fb = "number" === typeof bb.hideNameSeed ? bb.hideNameSeed : null,
-        Mb = "" === Ub || !0 === bb.mesh ? Ub : (0, tb.d)(Ub, !sb.canSeeRealPlayerNames, fb);
-      if (!Mb && !ab.content) return null;
-      const Xb = "string" === typeof bb.colour ? bb.colour : "default",
-        nb = Object.hasOwn(Tb.s, Xb) ? Tb.s[Xb] : void 0,
-        lb = ab.content ? Qb(ab.content, Ib.DEFAULT_FONT_SIZE, sb, nb) : [{
+    function sb(bb, ab, Ub) {
+      var Ab, Mb;
+      const Tb = null !== (Ab = rb(bb.info)) && void 0 !== Ab ? Ab : {},
+        Yb = "string" === typeof bb.name ? bb.name : "",
+        eb = Tb.subtitle;
+      if (Array.isArray(Tb.content) && 0 === Tb.content.length && !(Array.isArray(eb) && eb.length > 0)) return null;
+      const vb = "number" === typeof bb.hideNameSeed ? bb.hideNameSeed : null,
+        Lb = "" === Yb || !0 === bb.mesh ? Yb : (0, Hb.d)(Yb, !Ub.canSeeRealPlayerNames, vb);
+      if (!Lb && !Tb.content) return null;
+      const Pb = "string" === typeof bb.colour ? bb.colour : "default",
+        Xb = Object.hasOwn(Eb.t, Pb) ? Eb.t[Pb] : void 0,
+        Rb = Tb.content ? kb(Tb.content, Bb.DEFAULT_FONT_SIZE, Ub, Xb) : [{
           kind: "text",
-          text: Mb,
-          size: Ib.DEFAULT_FONT_SIZE,
-          colour: nb
+          text: Lb,
+          size: Bb.DEFAULT_FONT_SIZE,
+          colour: Xb
         }],
-        eb = [];
-      for (const Tb of Array.isArray(bb.ranks) ? bb.ranks : []) {
-        const bb = mb(Tb);
-        null !== bb && void 0 !== bb && bb.nameTag && bb.visible && eb.push({
+        yb = [];
+      for (const Eb of Array.isArray(bb.ranks) ? bb.ranks : []) {
+        const bb = jb(Eb);
+        null !== bb && void 0 !== bb && bb.nameTag && bb.visible && yb.push({
           kind: "rank",
           rank: bb
         })
       }
-      eb.push(...lb);
-      ("boolean" === typeof bb.player ? bb.player : Array.isArray(bb.ranks)) && "" !== Ub && sb.isFriend(Ub) && eb.push({
+      yb.push(...Rb);
+      ("boolean" === typeof bb.player ? bb.player : Array.isArray(bb.ranks)) && "" !== Yb && Ub.isFriend(Yb) && yb.push({
         kind: "rank",
-        rank: Kb
-      }), "number" === typeof bb.VU && eb.push({
+        rank: ub
+      }), "number" === typeof bb.CE && yb.push({
         kind: "text",
-        text: ` ${bb.VU}m`,
-        size: Ib.DEFAULT_FONT_SIZE,
+        text: ` ${bb.CE}m`,
+        size: Bb.DEFAULT_FONT_SIZE,
         colour: "#cef3ff"
       });
-      const Cb = Hb ? Qb(Hb, Ib.DEFAULT_SUBTITLE_FONT_SIZE, sb) : null,
-        Nb = "string" === typeof ab.backgroundColor ? ab.backgroundColor : "#22283b",
-        Vb = "string" === typeof ab.subtitleBackgroundColor ? ab.subtitleBackgroundColor : "#1a1e2d",
-        Yb = Zb(ab.healthbar),
-        Jb = Zb(ab.border),
-        gb = Array.isArray(bb.effects) ? bb.effects.filter((bb => "string" === typeof bb && zb.has(bb))) : [],
-        Bb = "number" === typeof bb.health ? Math.max(0, Math.min(1, bb.health)) : null,
-        yb = Lb(eb, cb, sb),
-        Db = Lb(null !== Cb && void 0 !== Cb ? Cb : [], cb, sb),
-        rb = {
-          width: Ib.EFFECT_ICON_SIZE * gb.length,
-          height: gb.length > 0 ? Ib.EFFECT_ICON_SIZE : 0
+      const Zb = eb ? kb(eb, Bb.DEFAULT_SUBTITLE_FONT_SIZE, Ub) : null,
+        Db = "string" === typeof Tb.backgroundColor ? Tb.backgroundColor : "#22283b",
+        zb = "string" === typeof Tb.subtitleBackgroundColor ? Tb.subtitleBackgroundColor : "#1a1e2d",
+        fb = rb(Tb.healthbar),
+        pb = rb(Tb.border),
+        Nb = Array.isArray(bb.effects) ? bb.effects.filter((bb => "string" === typeof bb && Kb.has(bb))) : [],
+        Wb = "number" === typeof bb.health ? Math.max(0, Math.min(1, bb.health)) : null,
+        Ib = xb(yb, ab, Ub),
+        Fb = xb(null !== Zb && void 0 !== Zb ? Zb : [], ab, Ub),
+        sb = {
+          width: Bb.EFFECT_ICON_SIZE * Nb.length,
+          height: Nb.length > 0 ? Bb.EFFECT_ICON_SIZE : 0
         },
-        ob = Jb && Ab(Jb, "nametag") ? wb(Jb) : 0,
-        Sb = qb(null === Yb || void 0 === Yb ? void 0 : Yb.height, Pb),
-        Rb = Jb && Ab(Jb, "healthbar") ? wb(Jb) : 0,
-        vb = "never" === (null !== (Wb = null === Yb || void 0 === Yb ? void 0 : Yb.display) && void 0 !== Wb ? Wb : "onDamage") ? 0 : Sb + Rb,
-        Fb = Math.max(rb.height, ob),
-        xb = Math.max(Ib.VERTICAL_PADDING, vb, ob);
-      let jb = Math.max(yb.width, Db.width, rb.width);
-      if (Jb) {
-        const bb = wb(Jb) + Ib.HORIZONTAL_PADDING / 2;
-        jb = Math.max(jb, Math.max(yb.width, Db.width) + Ib.HORIZONTAL_PADDING + 2 * bb)
+        gb = pb && tb(pb, "nametag") ? wb(pb) : 0,
+        Cb = ob(null === fb || void 0 === fb ? void 0 : fb.height, db),
+        Vb = pb && tb(pb, "healthbar") ? wb(pb) : 0,
+        Ob = "never" === (null !== (Mb = null === fb || void 0 === fb ? void 0 : fb.display) && void 0 !== Mb ? Mb : "onDamage") ? 0 : Cb + Vb,
+        cb = Math.max(sb.height, gb),
+        Jb = Math.max(Bb.VERTICAL_PADDING, Ob, gb);
+      let nb = Math.max(Ib.width, Fb.width, sb.width);
+      if (pb) {
+        const bb = wb(pb) + Bb.HORIZONTAL_PADDING / 2;
+        nb = Math.max(nb, Math.max(Ib.width, Fb.width) + Bb.HORIZONTAL_PADDING + 2 * bb)
       }
-      const pb = yb.height + Db.height + Fb + xb,
-        bc = yb.width + Ib.HORIZONTAL_PADDING,
-        cc = Db.width + Ib.HORIZONTAL_PADDING,
-        sc = Math.max(bc, cc),
-        kc = (jb - sc) / 2,
-        Wc = Math.max(rb.height, ob);
+      const Sb = Ib.height + Fb.height + cb + Jb,
+        ba = Ib.width + Bb.HORIZONTAL_PADDING,
+        aa = Fb.width + Bb.HORIZONTAL_PADDING,
+        Ua = Math.max(ba, aa),
+        Aa = (nb - Ua) / 2,
+        Ma = Math.max(sb.height, gb);
       return {
-        width: jb,
-        height: pb,
+        width: nb,
+        height: Sb,
         draw: bb => {
-          const cb = [];
-          if (bb.fillStyle = Nb, bb.fillRect(kc, Wc, sc, yb.height), ub(eb, (jb - bc) / 2 + Ib.HORIZONTAL_PADDING / 2, Wc, yb.height, bb, sb, cb), Cb) {
-            const kb = Wc + yb.height;
-            bb.fillStyle = Vb, bb.fillRect(kc, kb, sc, Db.height), ub(Cb, (jb - cc) / 2 + Ib.HORIZONTAL_PADDING / 2, kb, Db.height, bb, sb, cb)
+          const ab = [];
+          if (bb.fillStyle = Db, bb.fillRect(Aa, Ma, Ua, Ib.height), ib(yb, (nb - ba) / 2 + Bb.HORIZONTAL_PADDING / 2, Ma, Ib.height, bb, Ub, ab), Zb) {
+            const Ab = Ma + Ib.height;
+            bb.fillStyle = zb, bb.fillRect(Aa, Ab, Ua, Fb.height), ib(Zb, (nb - aa) / 2 + Bb.HORIZONTAL_PADDING / 2, Ab, Fb.height, bb, Ub, ab)
           }
-          let kb = null;
-          if (null !== Bb) {
-            const cb = pb - Sb - Rb;
-            null !== Yb && void 0 !== Yb && Yb.backgroundColour && (bb.fillStyle = Yb.backgroundColour, bb.fillRect(kc, cb, sc, Sb)), bb.fillStyle = function(bb, cb) {
-              const sb = null === bb || void 0 === bb ? void 0 : bb.foregroundColour;
-              if ("string" === typeof sb) return sb;
-              const kb = [...Array.isArray(sb) && sb.length > 0 ? sb : ib].sort(((bb, cb) => bb.healthFraction - cb.healthFraction)),
-                Wb = kb.find((bb => cb <= bb.healthFraction));
-              return (null !== Wb && void 0 !== Wb ? Wb : kb[kb.length - 1]).colour
-            }(Yb, Bb), bb.fillRect(kc, cb, Math.round(sc * Bb), Sb), kb = {
-              x: kc,
-              y: cb,
-              width: sc,
-              height: Sb
+          let Ab = null;
+          if (null !== Wb) {
+            const ab = Sb - Cb - Vb;
+            null !== fb && void 0 !== fb && fb.backgroundColour && (bb.fillStyle = fb.backgroundColour, bb.fillRect(Aa, ab, Ua, Cb)), bb.fillStyle = function(bb, ab) {
+              const Ub = null === bb || void 0 === bb ? void 0 : bb.foregroundColour;
+              if ("string" === typeof Ub) return Ub;
+              const Ab = [...Array.isArray(Ub) && Ub.length > 0 ? Ub : Gb].sort(((bb, ab) => bb.healthFraction - ab.healthFraction)),
+                Mb = Ab.find((bb => ab <= bb.healthFraction));
+              return (null !== Mb && void 0 !== Mb ? Mb : Ab[Ab.length - 1]).colour
+            }(fb, Wb), bb.fillRect(Aa, ab, Math.round(Ua * Wb), Cb), Ab = {
+              x: Aa,
+              y: ab,
+              width: Ua,
+              height: Cb
             }
           }
-          if (Jb) {
-            const cb = [];
-            Ab(Jb, "nametag") && cb.push({
-              x: kc,
-              y: Wc,
-              width: sc,
-              height: yb.height + (Cb ? Db.height : 0)
-            }), kb && Ab(Jb, "healthbar") && cb.push(kb), cb.length > 0 && function(bb, cb, sb) {
-              const kb = db(cb),
-                Wb = kb / 2,
-                ab = bb => bb.width > 0 && bb.height > 0,
-                Tb = sb.map((bb => ({
-                  x: bb.x + Wb,
-                  y: bb.y + Wb,
-                  width: bb.width - kb,
-                  height: bb.height - kb
-                }))).filter(ab);
-              if (0 === Tb.length) return;
-              const Ub = cb => {
-                const sb = cb.filter(ab);
-                if (0 !== sb.length) {
+          if (pb) {
+            const ab = [];
+            tb(pb, "nametag") && ab.push({
+              x: Aa,
+              y: Ma,
+              width: Ua,
+              height: Ib.height + (Zb ? Fb.height : 0)
+            }), Ab && tb(pb, "healthbar") && ab.push(Ab), ab.length > 0 && function(bb, ab, Ub) {
+              const Ab = lb(ab),
+                Mb = Ab / 2,
+                Tb = bb => bb.width > 0 && bb.height > 0,
+                Eb = Ub.map((bb => ({
+                  x: bb.x + Mb,
+                  y: bb.y + Mb,
+                  width: bb.width - Ab,
+                  height: bb.height - Ab
+                }))).filter(Tb);
+              if (0 === Eb.length) return;
+              const Yb = ab => {
+                const Ub = ab.filter(Tb);
+                if (0 !== Ub.length) {
                   bb.beginPath();
-                  for (const cb of sb) bb.rect(cb.x, cb.y, cb.width, cb.height);
+                  for (const ab of Ub) bb.rect(ab.x, ab.y, ab.width, ab.height);
                   bb.stroke()
                 }
               };
-              if (bb.save(), bb.strokeStyle = cb.colour, bb.lineWidth = kb, bb.lineJoin = "round", "glow" === cb.style) bb.shadowColor = cb.colour, bb.shadowBlur = kb * Eb, Ub(Tb), Ub(Tb);
-              else if ("double" === cb.style) {
-                Ub(Tb);
-                const bb = kb + 2;
-                Ub(Tb.map((cb => ({
-                  x: cb.x + bb,
-                  y: cb.y + bb,
-                  width: cb.width - 2 * bb,
-                  height: cb.height - 2 * bb
+              if (bb.save(), bb.strokeStyle = ab.colour, bb.lineWidth = Ab, bb.lineJoin = "round", "glow" === ab.style) bb.shadowColor = ab.colour, bb.shadowBlur = Ab * hb, Yb(Eb), Yb(Eb);
+              else if ("double" === ab.style) {
+                Yb(Eb);
+                const bb = Ab + 2;
+                Yb(Eb.map((ab => ({
+                  x: ab.x + bb,
+                  y: ab.y + bb,
+                  width: ab.width - 2 * bb,
+                  height: ab.height - 2 * bb
                 }))))
-              } else Ub(Tb);
+              } else Yb(Eb);
               bb.restore()
-            }(bb, Jb, cb)
+            }(bb, pb, ab)
           }
-          hb(cb, bb);
-          for (let Wb = 0; Wb < gb.length; Wb++) {
-            const cb = sb.effectImage(gb[Wb]);
-            cb && (bb.imageSmoothingEnabled = !1, bb.drawImage(cb, 5 + Gb * Wb, 5, Ob, Ob))
+          mb(ab, bb);
+          for (let Mb = 0; Mb < Nb.length; Mb++) {
+            const ab = Ub.effectImage(Nb[Mb]);
+            ab && (bb.imageSmoothingEnabled = !1, bb.drawImage(ab, 5 + qb * Mb, 5, Qb, Qb))
           }
         }
       }
     }
-    var ob = sb(38263);
-    const Sb = 256,
-      Rb = 1024,
-      vb = {
+    var gb = Ub(37964);
+    const Cb = 256,
+      Vb = 1024,
+      Ob = {
         width: 1,
         height: 7 / 8
       };
-    var Fb = sb(38267);
-    const xb = {
+    var cb = Ub(37973);
+    const Jb = {
       leaderboard: ""
     };
-    var jb = sb(41947);
-    const pb = {
+    var nb = Ub(41682);
+    const Sb = {
         Nametag: 1,
         MultilineText: 2,
         Board: 3,
         Leaderboard: 4
       },
-      bc = 2048,
-      cc = 256,
-      sc = 10,
-      kc = 4,
-      Wc = 65536,
-      ac = new TextDecoder;
-    let Tc = jb.o,
-      Uc = -1;
-    const Ic = new Map,
-      Hc = new Map;
-    let fc = 0;
-    const Mc = new TextEncoder;
+      ba = 2048,
+      aa = 256,
+      Ua = 10,
+      Aa = 4,
+      Ma = 65536,
+      Ta = new TextDecoder;
+    let Ea = nb.p,
+      Ya = -1;
+    const Ba = new Map,
+      ea = new Map;
+    let va = 0;
+    const La = new TextEncoder;
 
-    function Xc(bb, cb) {
-      const sb = Mc.encode(JSON.stringify(cb)),
-        kb = new Uint8Array(sb.length + 1);
-      return kb[0] = bb, kb.set(sb, 1), kb
+    function Pa(bb, ab) {
+      const Ub = La.encode(JSON.stringify(ab)),
+        Ab = new Uint8Array(Ub.length + 1);
+      return Ab[0] = bb, Ab.set(Ub, 1), Ab
     }
-    const nc = {
+    const Xa = {
         name: "Ag",
         info: null,
         colour: "default",
         ranks: [],
         effects: [],
         health: .5,
-        VU: null,
+        CE: null,
         hideNameSeed: null
       },
-      mc = [Xc(pb.Nametag, nc), Xc(pb.Nametag, {
-        ...nc,
+      ja = [Pa(Sb.Nametag, Xa), Pa(Sb.Nametag, {
+        ...Xa,
         info: {
           content: [{
             str: "Ag"
           }],
           subtitle: ["Ag"]
         }
-      }), Xc(pb.MultilineText, {
+      }), Pa(Sb.MultilineText, {
         box: {
           content: ["Ag"]
         },
         shown: null
-      }), ...kb.b.map(((bb, cb) => Xc(pb.Board, {
+      }), ...Ab.c.map(((bb, ab) => Pa(Sb.Board, {
         shared: {
           text: "Ag",
-          textSize: cb
+          textSize: ab
         },
         w: 0,
         h: 0
       })))];
 
-    function lc(bb) {
-      jb.g.load().then((() => {
+    function Ra(bb) {
+      nb.i.load().then((() => {
         if (bb()) return;
-        const cb = (0, Wb.d)(1, 1, {
+        const ab = (0, Mb.f)(1, 1, {
           willReadFrequently: !0
         });
-        var sb;
-        cb && (sb = cb.canvas, mc.map((bb => uc(bb, sb))))
+        var Ub;
+        ab && (Ub = ab.canvas, ja.map((bb => ia(bb, Ub))))
       }))
     }
-    let Qc = jb.t;
+    let ka = nb.v;
 
-    function ec() {
-      Ic.clear(), Hc.clear()
+    function ya() {
+      Ba.clear(), ea.clear()
     }
 
-    function Cc(bb, cb) {
-      const sb = bb.get(cb);
-      return void 0 !== sb && (bb.delete(cb), bb.set(cb, sb)), sb
+    function Za(bb, ab) {
+      const Ub = bb.get(ab);
+      return void 0 !== Ub && (bb.delete(ab), bb.set(ab, Ub)), Ub
     }
 
-    function Nc(bb, cb, sb) {
-      bb.set(cb, sb), bb.size > cc && bb.delete(bb.keys().next().value)
+    function Da(bb, ab, Ub) {
+      bb.set(ab, Ub), bb.size > aa && bb.delete(bb.keys().next().value)
     }
 
-    function Vc(bb, cb, sb) {
-      if (bb === pb.Nametag) {
-        let bb = Cc(Ic, cb);
-        return void 0 === bb && (bb = rb(JSON.parse(cb), sb, Tc), Nc(Ic, cb, bb)), bb
+    function za(bb, ab, Ub) {
+      if (bb === Sb.Nametag) {
+        let bb = Za(Ba, ab);
+        return void 0 === bb && (bb = sb(JSON.parse(ab), Ub, Ea), Da(Ba, ab, bb)), bb
       }
-      if (bb === pb.MultilineText) {
-        var Wb;
-        const bb = JSON.parse(cb),
-          kb = JSON.stringify(null !== (Wb = bb.box) && void 0 !== Wb ? Wb : null),
-          ab = "number" === typeof bb.shown ? bb.shown : null;
-        let Tb = Cc(Hc, kb);
-        void 0 === Tb && (Tb = gb(bb.box, sb, Tc), Nc(Hc, kb, Tb));
-        const Ub = null === ab ? null : Math.min(Math.max(0, Math.floor(ab)), Tb.chars),
-          Ib = Tb;
+      if (bb === Sb.MultilineText) {
+        var Mb;
+        const bb = JSON.parse(ab),
+          Ab = JSON.stringify(null !== (Mb = bb.box) && void 0 !== Mb ? Mb : null),
+          Tb = "number" === typeof bb.shown ? bb.shown : null;
+        let Eb = Za(ea, Ab);
+        void 0 === Eb && (Eb = Nb(bb.box, Ub, Ea), Da(ea, Ab, Eb));
+        const Yb = null === Tb ? null : Math.min(Math.max(0, Math.floor(Tb)), Eb.chars),
+          Bb = Eb;
         return {
-          width: Ib.width,
-          height: Ib.height,
+          width: Bb.width,
+          height: Bb.height,
           draw: bb => {
-            Ib.draw(bb, Ub)
+            Bb.draw(bb, Yb)
           }
         }
       }
-      if (bb === pb.Board) return function(bb, cb) {
-        var sb;
-        if (!cb.canSeePlayerWrittenText) return null;
+      if (bb === Sb.Board) return function(bb, ab) {
+        var Ub;
+        if (!ab.canSeePlayerWrittenText) return null;
         const {
-          shared: Wb,
-          w: ab = 0,
-          h: Tb = 0
-        } = bb, Ub = !ab;
-        let Ib;
-        if (Ub) {
-          var Hb, fb;
-          Ib = null !== (Hb = null === Wb || void 0 === Wb || null === (fb = Wb.text) || void 0 === fb ? void 0 : fb.toString()) && void 0 !== Hb ? Hb : ""
+          shared: Mb,
+          w: Tb = 0,
+          h: Eb = 0
+        } = bb, Yb = !Tb;
+        let Bb;
+        if (Yb) {
+          var eb, vb;
+          Bb = null !== (eb = null === Mb || void 0 === Mb || null === (vb = Mb.text) || void 0 === vb ? void 0 : vb.toString()) && void 0 !== eb ? eb : ""
         } else {
-          if ("string" !== typeof(null === Wb || void 0 === Wb ? void 0 : Wb.text)) return null;
-          Ib = Wb.text
+          if ("string" !== typeof(null === Mb || void 0 === Mb ? void 0 : Mb.text)) return null;
+          Bb = Mb.text
         }
-        if ("" === Ib.trim()) return null;
-        const Mb = null !== (sb = null === Wb || void 0 === Wb ? void 0 : Wb.textSize) && void 0 !== sb ? sb : 0,
-          Xb = kb.b[Mb].ingameFontSize;
-        let nb = vb,
-          mb = Sb;
-        Ub || (Ib = (0, kb.o)(Ib, Mb, ab, Tb), nb = (0, kb.t)(ab, Tb), mb = Math.min(Sb, Rb / Math.max(nb.width, nb.height)));
-        const lb = Math.round(mb * nb.width),
-          Qb = Math.round(mb * nb.height),
-          eb = mb / Sb;
+        if ("" === Bb.trim()) return null;
+        const Lb = null !== (Ub = null === Mb || void 0 === Mb ? void 0 : Mb.textSize) && void 0 !== Ub ? Ub : 0,
+          Pb = Ab.c[Lb].ingameFontSize;
+        let Xb = Ob,
+          jb = Cb;
+        Yb || (Bb = (0, Ab.m)(Bb, Lb, Tb, Eb), Xb = (0, Ab.u)(Tb, Eb), jb = Math.min(Cb, Vb / Math.max(Xb.width, Xb.height)));
+        const Rb = Math.round(jb * Xb.width),
+          kb = Math.round(jb * Xb.height),
+          yb = jb / Cb;
         return {
-          width: lb,
-          height: Qb,
+          width: Rb,
+          height: kb,
           draw: bb => {
-            ob.d.fontSize = Xb * eb, ob.d.fontWeight = "bold", ob.d.font = "'Jetbrains Mono', monospace", ob.d.drawText(bb, Ib, 0, (-10 - 7 * Mb) * eb, lb, Qb)
+            gb.e.fontSize = Pb * yb, gb.e.fontWeight = "bold", gb.e.font = "'Jetbrains Mono', monospace", gb.e.drawText(bb, Bb, 0, (-10 - 7 * Lb) * yb, Rb, kb)
           }
         }
-      }(JSON.parse(cb), Tc);
-      if (bb === pb.Leaderboard) return function(bb, cb, sb) {
-        var kb;
-        const Wb = (0, Fb.k)(bb.opts, xb),
-          ab = (0, Fb.g)(Wb, sb),
-          Tb = {
-            top: (0, Fb.i)(Wb, (0, Fb.o)(bb.top)),
-            around: null !== (kb = bb.around) && void 0 !== kb ? kb : null,
-            showPlayerText: cb.canSeePlayerWrittenText,
-            localPlayerDbId: cb.localPlayerDbId
+      }(JSON.parse(ab), Ea);
+      if (bb === Sb.Leaderboard) return function(bb, ab, Ub) {
+        var Ab;
+        const Mb = (0, cb.j)(bb.opts, Jb),
+          Tb = (0, cb.d)(Mb, Ub),
+          Eb = {
+            top: (0, cb.g)(Mb, (0, cb.n)(bb.top)),
+            around: null !== (Ab = bb.around) && void 0 !== Ab ? Ab : null,
+            showPlayerText: ab.canSeePlayerWrittenText,
+            localPlayerDbId: ab.localPlayerDbId
           };
         return {
-          width: ab.pixelWidth,
-          height: ab.pixelHeight,
+          width: Tb.pixelWidth,
+          height: Tb.pixelHeight,
           draw: bb => {
             const {
-              a: cb,
-              d: sb
+              a: ab,
+              d: Ub
             } = bb.getTransform();
-            (0, Fb.d)(bb, Math.round(ab.pixelWidth * cb), Math.round(ab.pixelHeight * sb), ab, Wb, Tb)
+            (0, cb.b)(bb, Math.round(Tb.pixelWidth * ab), Math.round(Tb.pixelHeight * Ub), Tb, Mb, Eb)
           }
         }
-      }(JSON.parse(cb), Tc, bc);
+      }(JSON.parse(ab), Ea, ba);
       throw new Error(`unknown text plane kind ${bb}`)
     }
-    const Lc = 2 ** Math.floor(Math.log2(bc));
+    const xa = 2 ** Math.floor(Math.log2(ba));
 
-    function uc(bb, cb) {
-      let sb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        kb = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+    function ia(bb, ab) {
+      let Ub = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        Ab = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
       try {
         if (bb.length < 2) return [0, 0];
-        const ab = (0, Wb.c)(cb);
-        if (!ab) return [0, 0];
-        const Tb = Qc();
-        Tb !== Uc && (Uc = Tb, ec());
-        const [Ub] = bb, Ib = ac.decode(bb.subarray(1));
-        let Hb;
-        Ub !== pb.Board && Ub !== pb.Leaderboard || !Tc.canSeePlayerWrittenText || Tc.glyphsShown(Ib), ab.save();
+        const Tb = (0, Mb.c)(ab);
+        if (!Tb) return [0, 0];
+        const Eb = ka();
+        Eb !== Ya && (Ya = Eb, ya());
+        const [Yb] = bb, Bb = Ta.decode(bb.subarray(1));
+        let eb;
+        Yb !== Sb.Board && Yb !== Sb.Leaderboard || !Ea.canSeePlayerWrittenText || Ea.glyphsShown(Bb), Tb.save();
         try {
-          Hb = Vc(Ub, Ib, ab)
+          eb = za(Yb, Bb, Tb)
         } finally {
-          ab.restore()
+          Tb.restore()
         }
-        if (null === Hb || !(Hb.width > 0 && Hb.height > 0)) return [0, 0];
-        const fb = Math.min(1, bc / Hb.width, bc / Hb.height),
-          Mb = bb => kb ? function(bb) {
-            const cb = 2 ** Math.ceil(Math.log2(bb));
-            return Math.min(Lc, cb - bb > bb - cb / 2 ? cb / 2 : cb)
-          }(bb) : Math.min(bc, Math.ceil(bb * fb)),
-          [Xb, nb] = [Mb(Hb.width), Mb(Hb.height)];
-        ! function(bb, cb, sb, kb, Wb) {
-          const ab = Math.max(bb.width, sb),
-            Tb = Math.max(bb.height, kb),
-            Ub = Wb || ab * Tb > Math.max(kc * sb * kb, Wc),
-            [Ib, Hb] = Ub ? [sb, kb] : [ab, Tb];
-          Ib === bb.width && Hb === bb.height ? cb.clearRect(0, 0, Ib, Hb) : (bb.width = Ib, bb.height = Hb)
-        }(cb, ab, Xb, nb, sb), ab.save();
+        if (null === eb || !(eb.width > 0 && eb.height > 0)) return [0, 0];
+        const vb = Math.min(1, ba / eb.width, ba / eb.height),
+          Lb = bb => Ab ? function(bb) {
+            const ab = 2 ** Math.ceil(Math.log2(bb));
+            return Math.min(xa, ab - bb > bb - ab / 2 ? ab / 2 : ab)
+          }(bb) : Math.min(ba, Math.ceil(bb * vb)),
+          [Pb, Xb] = [Lb(eb.width), Lb(eb.height)];
+        ! function(bb, ab, Ub, Ab, Mb) {
+          const Tb = Math.max(bb.width, Ub),
+            Eb = Math.max(bb.height, Ab),
+            Yb = Mb || Tb * Eb > Math.max(Aa * Ub * Ab, Ma),
+            [Bb, eb] = Yb ? [Ub, Ab] : [Tb, Eb];
+          Bb === bb.width && eb === bb.height ? ab.clearRect(0, 0, Bb, eb) : (bb.width = Bb, bb.height = eb)
+        }(ab, Tb, Pb, Xb, Ub), Tb.save();
         try {
-          const [bb, cb] = kb ? [Xb / Hb.width, nb / Hb.height] : [fb, fb];
-          1 === bb && 1 === cb || ab.scale(bb, cb), Hb.draw(ab)
+          const [bb, ab] = Ab ? [Pb / eb.width, Xb / eb.height] : [vb, vb];
+          1 === bb && 1 === ab || Tb.scale(bb, ab), eb.draw(Tb)
         } finally {
-          ab.restore()
+          Tb.restore()
         }
-        return [Xb, nb]
-      } catch (ab) {
-        ! function(bb, cb) {
-          fc < sc && (fc++, console.warn(`[bloxd-wasm-client] ${bb}`, cb))
-        }("could not raster a text plane", ab);
+        return [Pb, Xb]
+      } catch (Tb) {
+        ! function(bb, ab) {
+          va < Ua && (va++, console.warn(`[bloxd-wasm-client] ${bb}`, ab))
+        }("could not raster a text plane", Tb);
         try {
-          cb.width = 1
+          ab.width = 1
         } catch {}
         return [0, 0]
       }

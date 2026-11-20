@@ -1,23 +1,23 @@
 export const id = 68;
 export const ids = [68];
 export const modules = {
-  36068: (bb, cb, sb) => {
-    sb.d(cb, {
-      b: () => Wb
+  35850: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      d: () => Mb
     });
-    const kb = {
+    const Ab = {
       wait: function(bb) {
-        return new Promise((cb => {
-          setTimeout(cb, bb)
+        return new Promise((ab => {
+          setTimeout(ab, bb)
         }))
       },
       stallMs: 2e4
     };
-    class Wb {
+    class Mb {
       constructor(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : kb;
-        this.url = bb, this.options = cb, this.timing = sb, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = bb
+        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Ab;
+        this.url = bb, this.options = ab, this.timing = Ub, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = bb
       }
       ready() {
         if (null === this.fetched) {
@@ -35,78 +35,78 @@ export const modules = {
         return new Worker(this.scriptUrl, this.options)
       }
       async fetchWithRetries(bb) {
-        for (let cb = 0;; cb++) {
-          const sb = new URL(this.url);
-          if (cb > 0 && sb.searchParams.set("cache-bust", `${Date.now()}-${cb}`), await this.fetchWhole(sb, bb)) return void(this.scriptUrl = sb);
-          if (cb >= 3 || bb.aborted) return;
-          if (await this.timing.wait(500 * 2 ** cb), bb.aborted) return
+        for (let ab = 0;; ab++) {
+          const Ub = new URL(this.url);
+          if (ab > 0 && Ub.searchParams.set("cache-bust", `${Date.now()}-${ab}`), await this.fetchWhole(Ub, bb)) return void(this.scriptUrl = Ub);
+          if (ab >= 3 || bb.aborted) return;
+          if (await this.timing.wait(500 * 2 ** ab), bb.aborted) return
         }
       }
-      async fetchWhole(bb, cb) {
-        const sb = new AbortController;
-        let kb;
-        const Wb = () => {
-            clearTimeout(kb), kb = setTimeout((() => {
-              sb.abort()
+      async fetchWhole(bb, ab) {
+        const Ub = new AbortController;
+        let Ab;
+        const Mb = () => {
+            clearTimeout(Ab), Ab = setTimeout((() => {
+              Ub.abort()
             }), this.timing.stallMs)
           },
-          ab = () => {
-            sb.abort()
+          Tb = () => {
+            Ub.abort()
           };
-        cb.addEventListener("abort", ab, {
+        ab.addEventListener("abort", Tb, {
           once: !0
-        }), Wb();
+        }), Mb();
         try {
-          var Tb;
-          const cb = await fetch(bb, {
-            signal: sb.signal
+          var Eb;
+          const ab = await fetch(bb, {
+            signal: Ub.signal
           });
-          if (!cb.ok) return !1;
-          const kb = null === (Tb = cb.body) || void 0 === Tb ? void 0 : Tb.getReader();
-          if (!kb) return !1;
+          if (!ab.ok) return !1;
+          const Ab = null === (Eb = ab.body) || void 0 === Eb ? void 0 : Eb.getReader();
+          if (!Ab) return !1;
           for (;;) {
             const {
               done: bb
-            } = await kb.read();
+            } = await Ab.read();
             if (bb) return !0;
-            Wb()
+            Mb()
           }
         } catch {
           return !1
         } finally {
-          clearTimeout(kb), cb.removeEventListener("abort", ab)
+          clearTimeout(Ab), ab.removeEventListener("abort", Tb)
         }
       }
     }
   },
-  42709: (bb, cb, sb) => {
-    sb.r(cb), sb.d(cb, {
-      createWorldgenWorker: () => Hb,
-      prefetchWorldgenWorker: () => Ub,
-      stopWorldgenWorkerPrefetch: () => Ib,
-      worldgenWorkerReady: () => Tb
+  42463: (bb, ab, Ub) => {
+    Ub.r(ab), Ub.d(ab, {
+      createWorldgenWorker: () => eb,
+      prefetchWorldgenWorker: () => Yb,
+      stopWorldgenWorkerPrefetch: () => Bb,
+      worldgenWorkerReady: () => Eb
     });
-    const kb = new(sb(36068).b)(new URL(sb.p + sb.u(67), sb.b), {
+    const Ab = new(Ub(35850).d)(new URL(Ub.p + Ub.u(67), Ub.b), {
       name: "worldgenWorker",
       type: "module"
     });
-    let Wb = !1,
-      ab = !1;
+    let Mb = !1,
+      Tb = !1;
 
-    function Tb() {
-      return Wb = !0, kb.ready()
+    function Eb() {
+      return Mb = !0, Ab.ready()
     }
 
-    function Ub() {
-      kb.ready()
+    function Yb() {
+      Ab.ready()
     }
 
-    function Ib() {
-      Wb || ab || (ab = !0, kb.cancel())
+    function Bb() {
+      Mb || Tb || (Tb = !0, Ab.cancel())
     }
 
-    function Hb() {
-      return kb.start()
+    function eb() {
+      return Ab.start()
     }
   }
 };

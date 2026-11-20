@@ -1,228 +1,228 @@
 export const id = 93;
 export const ids = [91, 93];
 export const modules = {
-  36258: (bb, cb, sb) => {
-    function kb(bb, cb, sb, kb) {
-      return !(sb && !bb.aimable) && (!cb || bb.gun && "head" !== kb)
+  36034: (bb, ab, Ub) => {
+    function Ab(bb, ab, Ub, Ab) {
+      return !(Ub && !bb.aimable) && (!ab || bb.gun && "head" !== Ab)
     }
 
-    function Wb(bb) {
+    function Mb(bb) {
       return Math.max(.1 * bb, 1)
     }
 
-    function ab(bb, cb) {
-      return !bb && cb
+    function Tb(bb, ab) {
+      return !bb && ab
     }
-    sb.d(cb, {
-      e: () => ab,
-      g: () => Wb,
-      k: () => kb
+    Ub.d(ab, {
+      e: () => Tb,
+      i: () => Mb,
+      k: () => Ab
     })
   },
-  36263: (bb, cb, sb) => {
-    sb.d(cb, {
-      e: () => Ub,
-      i: () => Tb
+  36038: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      c: () => Yb,
+      g: () => Eb
     });
-    let kb = null;
-    const Wb = {
+    let Ab = null;
+    const Mb = {
         crosshairAccuracy: [],
         turnDamageIndicators: []
       },
-      ab = {
+      Tb = {
         crosshairAccuracy: bb => {
-          const cb = Wb.crosshairAccuracy.at(-1);
-          cb ? cb.hook(bb) : kb = bb
+          const ab = Mb.crosshairAccuracy.at(-1);
+          ab ? ab.hook(bb) : Ab = bb
         },
         turnDamageIndicators: bb => {
-          var cb;
-          null === (cb = Wb.turnDamageIndicators.at(-1)) || void 0 === cb || cb.hook(bb)
+          var ab;
+          null === (ab = Mb.turnDamageIndicators.at(-1)) || void 0 === ab || ab.hook(bb)
         }
       };
 
-    function Tb(bb, cb) {
-      const sb = {
-          hook: cb
+    function Eb(bb, ab) {
+      const Ub = {
+          hook: ab
         },
-        Tb = Wb[bb];
-      if (Tb.push(sb), "crosshairAccuracy" === bb && null !== kb) {
-        const bb = kb;
-        kb = null, ab.crosshairAccuracy(bb)
+        Eb = Mb[bb];
+      if (Eb.push(Ub), "crosshairAccuracy" === bb && null !== Ab) {
+        const bb = Ab;
+        Ab = null, Tb.crosshairAccuracy(bb)
       }
       return () => {
-        const bb = Tb.indexOf(sb); - 1 !== bb && Tb.splice(bb, 1)
+        const bb = Eb.indexOf(Ub); - 1 !== bb && Eb.splice(bb, 1)
       }
     }
 
-    function Ub() {
-      return ab
+    function Yb() {
+      return Tb
     }
   },
-  4579: (bb, cb, sb) => {
-    sb.r(cb), sb.d(cb, {
-      Howl: () => Wb.Howl,
-      Howler: () => Wb.Howler,
-      iosAudio: () => Ib,
-      musicOutput: () => Qb,
-      readyAudioContext: () => eb
+  4546: (bb, ab, Ub) => {
+    Ub.r(ab), Ub.d(ab, {
+      Howl: () => Mb.Howl,
+      Howler: () => Mb.Howler,
+      iosAudio: () => Bb,
+      musicOutput: () => kb,
+      readyAudioContext: () => yb
     });
-    var kb, Wb = sb(4585),
-      ab = sb(117);
-    const Tb = Wb.Howler;
-    let Ub;
+    var Ab, Mb = Ub(4551),
+      Tb = Ub(101);
+    const Eb = Mb.Howler;
+    let Yb;
 
-    function Ib() {
-      return Ub ??= "ios" === (0, ab.getOperatingSystem)(), Ub
+    function Bb() {
+      return Yb ??= "ios" === (0, Tb.getOperatingSystem)(), Yb
     }
 
-    function Hb() {
-      var bb, cb;
-      if (Tb.ctx || !Tb.usingWebAudio || "undefined" === typeof AudioContext || !Ib()) return;
-      const sb = navigator.audioSession;
-      let kb;
-      "auto" === (null === sb || void 0 === sb ? void 0 : sb.type) && (sb.type = "ambient");
+    function eb() {
+      var bb, ab;
+      if (Eb.ctx || !Eb.usingWebAudio || "undefined" === typeof AudioContext || !Bb()) return;
+      const Ub = navigator.audioSession;
+      let Ab;
+      "auto" === (null === Ub || void 0 === Ub ? void 0 : Ub.type) && (Ub.type = "ambient");
       try {
-        kb = new AudioContext({
+        Ab = new AudioContext({
           sampleRate: 44100
         })
       } catch {
         return
       }
-      const Wb = kb.createGain();
-      Wb.gain.setValueAtTime(Tb._muted ? 0 : null !== (bb = Tb._volume) && void 0 !== bb ? bb : 1, kb.currentTime), Wb.connect(kb.destination), Tb.ctx = kb, Tb.masterGain = Wb, null === (cb = Tb._setup) || void 0 === cb || cb.call(Tb)
+      const Mb = Ab.createGain();
+      Mb.gain.setValueAtTime(Eb._muted ? 0 : null !== (bb = Eb._volume) && void 0 !== bb ? bb : 1, Ab.currentTime), Mb.connect(Ab.destination), Eb.ctx = Ab, Eb.masterGain = Mb, null === (ab = Eb._setup) || void 0 === ab || ab.call(Eb)
     }
-    Tb._mobileUnloaded = !0;
-    const fb = Tb.volume.bind(Wb.Howler);
-    Tb.volume = function() {
-      return Hb(), fb(...arguments)
+    Eb._mobileUnloaded = !0;
+    const vb = Eb.volume.bind(Mb.Howler);
+    Eb.volume = function() {
+      return eb(), vb(...arguments)
     };
-    const Mb = Tb.mute.bind(Wb.Howler);
-    Tb.mute = bb => (Hb(), Mb(bb));
-    const Xb = Wb.Howl.prototype,
-      nb = Xb.init;
-    Xb.init = function(bb) {
-      return Hb(), nb.call(this, bb)
+    const Lb = Eb.mute.bind(Mb.Howler);
+    Eb.mute = bb => (eb(), Lb(bb));
+    const Pb = Mb.Howl.prototype,
+      Xb = Pb.init;
+    Pb.init = function(bb) {
+      return eb(), Xb.call(this, bb)
     };
-    let mb = 0;
-    const lb = null === (kb = Tb._autoSuspend) || void 0 === kb ? void 0 : kb.bind(Wb.Howler);
+    let jb = 0;
+    const Rb = null === (Ab = Eb._autoSuspend) || void 0 === Ab ? void 0 : Ab.bind(Mb.Howler);
 
-    function Qb() {
-      eb();
+    function kb() {
+      yb();
       const {
         ctx: bb,
-        masterGain: cb
-      } = Tb;
-      return bb && cb ? {
+        masterGain: ab
+      } = Eb;
+      return bb && ab ? {
         ctx: bb,
-        destination: cb,
+        destination: ab,
         holdAwake: bb => {
-          var cb, sb;
-          (mb += bb ? 1 : -1, bb) ? null === (cb = Tb._autoResume) || void 0 === cb || cb.call(Tb): null === (sb = Tb._autoSuspend) || void 0 === sb || sb.call(Tb)
+          var ab, Ub;
+          (jb += bb ? 1 : -1, bb) ? null === (ab = Eb._autoResume) || void 0 === ab || ab.call(Eb): null === (Ub = Eb._autoSuspend) || void 0 === Ub || Ub.call(Eb)
         },
         wake: () => {
-          var cb;
-          "running" !== bb.state && (null === (cb = Tb._autoResume) || void 0 === cb || cb.call(Tb), bb.resume().catch((() => {})))
+          var ab;
+          "running" !== bb.state && (null === (ab = Eb._autoResume) || void 0 === ab || ab.call(Eb), bb.resume().catch((() => {})))
         }
       } : null
     }
 
-    function eb() {
+    function yb() {
       var bb;
-      (Tb.volume(), Tb.ctx && Tb.autoUnlock) && (null === (bb = Tb._unlockAudio) || void 0 === bb || bb.call(Tb))
+      (Eb.volume(), Eb.ctx && Eb.autoUnlock) && (null === (bb = Eb._unlockAudio) || void 0 === bb || bb.call(Eb))
     }
-    lb && (Tb._autoSuspend = () => mb > 0 ? Wb.Howler : lb())
+    Rb && (Eb._autoSuspend = () => jb > 0 ? Mb.Howler : Rb())
   },
-  36367: (bb, cb, sb) => {
-    sb.d(cb, {
-      c: () => Tb,
-      d: () => Wb,
-      e: () => kb
+  36117: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      c: () => Eb,
+      g: () => Mb,
+      i: () => Ab
     });
 
-    function kb(bb) {
+    function Ab(bb) {
       return bb.replace(/[_\-\s]*\d+$/, "") || bb
     }
 
-    function Wb(bb, cb, sb) {
-      return sb <= 0 ? 0 : bb * sb / Math.max(cb, sb)
+    function Mb(bb, ab, Ub) {
+      return Ub <= 0 ? 0 : bb * Ub / Math.max(ab, Ub)
     }
 
-    function ab(bb, cb) {
-      const sb = bb.getDurationMs();
-      return sb > 0 ? bb.loudness * Math.max(0, 1 - (cb - bb.startMs) / sb) : 0
+    function Tb(bb, ab) {
+      const Ub = bb.getDurationMs();
+      return Ub > 0 ? bb.loudness * Math.max(0, 1 - (ab - bb.startMs) / Ub) : 0
     }
-    class Tb {
+    class Eb {
       constructor() {
         let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24,
-          cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
-        this.maxVoices = bb, this.maxPerGroup = cb, this.voices = []
+          ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
+        this.maxVoices = bb, this.maxPerGroup = ab, this.voices = []
       }
       admit(bb) {
         if (this.voices = this.voices.filter((bb => bb.isAlive())), null !== bb.group) {
-          const cb = this.voices.filter((cb => cb.group === bb.group));
-          if (cb.length >= this.maxPerGroup && !this.dropLeastWorth(cb, bb)) return !1
+          const ab = this.voices.filter((ab => ab.group === bb.group));
+          if (ab.length >= this.maxPerGroup && !this.dropLeastWorth(ab, bb)) return !1
         }
         return !(this.voices.length >= this.maxVoices && !this.dropLeastWorth(this.voices, bb)) && (this.voices.push(bb), !0)
       }
-      dropLeastWorth(bb, cb) {
-        let sb = null,
-          kb = 1 / 0;
-        for (const Wb of bb) {
-          if (!Wb.canStop()) continue;
-          const bb = ab(Wb, cb.startMs);
-          bb < kb && (sb = Wb, kb = bb)
+      dropLeastWorth(bb, ab) {
+        let Ub = null,
+          Ab = 1 / 0;
+        for (const Mb of bb) {
+          if (!Mb.canStop()) continue;
+          const bb = Tb(Mb, ab.startMs);
+          bb < Ab && (Ub = Mb, Ab = bb)
         }
-        return !(!sb || cb.loudness < kb) && (this.voices.splice(this.voices.indexOf(sb), 1), sb.stop(), !0)
+        return !(!Ub || ab.loudness < Ab) && (this.voices.splice(this.voices.indexOf(Ub), 1), Ub.stop(), !0)
       }
     }
   },
-  36374: (bb, cb, sb) => {
-    sb.d(cb, {
-      c: () => ab,
-      e: () => Tb,
-      h: () => kb
+  36125: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      d: () => Tb,
+      e: () => Eb,
+      i: () => Ab
     });
-    class kb {
+    class Ab {
       constructor(bb) {
         this.multipliers = {}, this._onUpdate = void 0, this._onUpdate = bb
       }
-      setMultiplierType(bb, cb) {
-        var sb;
-        this.multipliers[bb] = cb, null === (sb = this._onUpdate) || void 0 === sb || sb.call(this)
+      setMultiplierType(bb, ab) {
+        var Ub;
+        this.multipliers[bb] = ab, null === (Ub = this._onUpdate) || void 0 === Ub || Ub.call(this)
       }
       removeMultiplier(bb) {
-        var cb;
-        delete this.multipliers[bb], null === (cb = this._onUpdate) || void 0 === cb || cb.call(this)
+        var ab;
+        delete this.multipliers[bb], null === (ab = this._onUpdate) || void 0 === ab || ab.call(this)
       }
       getMultiplierType(bb) {
         return this.multipliers[bb]
       }
       getTotalMultipliedVal() {
         let bb = 1;
-        for (const cb in this.multipliers) bb *= this.multipliers[cb];
+        for (const ab in this.multipliers) bb *= this.multipliers[ab];
         return bb
       }
     }
-    class Wb {
+    class Mb {
       constructor() {
         let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
         this.booleans = {}, this._onUpdate = void 0, this._onUpdate = bb
       }
-      setBooleanType(bb, cb) {
-        const sb = this._getTotalBooleanVal();
-        this.booleans[bb] = !!cb;
-        const kb = this.getTotalBooleanVal();
-        var Wb;
-        kb !== sb && (null === (Wb = this._onUpdate) || void 0 === Wb || Wb.call(this, kb, this.booleans));
-        return kb
+      setBooleanType(bb, ab) {
+        const Ub = this._getTotalBooleanVal();
+        this.booleans[bb] = !!ab;
+        const Ab = this.getTotalBooleanVal();
+        var Mb;
+        Ab !== Ub && (null === (Mb = this._onUpdate) || void 0 === Mb || Mb.call(this, Ab, this.booleans));
+        return Ab
       }
       removeBoolean(bb) {
-        const cb = this._getTotalBooleanVal();
+        const ab = this._getTotalBooleanVal();
         delete this.booleans[bb];
-        const sb = this._getTotalBooleanVal();
-        var kb;
-        null !== sb && sb !== cb && (null === (kb = this._onUpdate) || void 0 === kb || kb.call(this, sb, this.booleans));
-        return null !== sb && void 0 !== sb && sb
+        const Ub = this._getTotalBooleanVal();
+        var Ab;
+        null !== Ub && Ub !== ab && (null === (Ab = this._onUpdate) || void 0 === Ab || Ab.call(this, Ub, this.booleans));
+        return null !== Ub && void 0 !== Ub && Ub
       }
       getBooleanType(bb) {
         return this.booleans[bb]
@@ -238,7 +238,7 @@ export const modules = {
         throw new Error("This is an abstract class, use BooleanAndCombinator")
       }
     }
-    class ab extends Wb {
+    class Tb extends Mb {
       getTotalBooleanVal() {
         const bb = this._getTotalBooleanVal();
         if (null === bb) throw new Error("Should not be gotten before at least 1 type has been initialised");
@@ -246,12 +246,12 @@ export const modules = {
       }
       _getTotalBooleanVal() {
         let bb = !1,
-          cb = !0;
-        for (const sb in this.booleans) bb = !0, cb &&= this.booleans[sb];
-        return bb ? cb : null
+          ab = !0;
+        for (const Ub in this.booleans) bb = !0, ab &&= this.booleans[Ub];
+        return bb ? ab : null
       }
     }
-    class Tb extends Wb {
+    class Eb extends Mb {
       getTotalBooleanVal() {
         const bb = this._getTotalBooleanVal();
         if (null === bb) throw new Error("Should not be gotten before at least 1 type has been initialised");
@@ -259,21 +259,21 @@ export const modules = {
       }
       _getTotalBooleanVal() {
         let bb = !1,
-          cb = !1;
-        for (const sb in this.booleans) bb = !0, cb ||= this.booleans[sb];
-        return bb ? cb : null
+          ab = !1;
+        for (const Ub in this.booleans) bb = !0, ab ||= this.booleans[Ub];
+        return bb ? ab : null
       }
     }
   },
-  37403: (bb, cb, sb) => {
-    sb.d(cb, {
-      d: () => Mb,
-      f: () => Tb
+  37155: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      d: () => Lb,
+      h: () => Eb
     });
-    var kb = sb(9044),
-      Wb = sb(9017),
-      ab = sb(344);
-    const Tb = {
+    var Ab = Ub(9028),
+      Mb = Ub(9007),
+      Tb = Ub(325);
+    const Eb = {
       "Maple Door": {
         positions: [{
           block: "Maple Door",
@@ -3212,52 +3212,52 @@ export const modules = {
           z: 0
         }]
       },
-      ...Ub("White"),
-      ...Ub("Orange"),
-      ...Ub("Magenta"),
-      ...Ub("Light Blue"),
-      ...Ub("Yellow"),
-      ...Ub("Lime"),
-      ...Ub("Pink"),
-      ...Ub("Gray"),
-      ...Ub("Light Gray"),
-      ...Ub("Cyan"),
-      ...Ub("Purple"),
-      ...Ub("Blue"),
-      ...Ub("Brown"),
-      ...Ub("Green"),
-      ...Ub("Red"),
-      ...Ub("Black"),
-      ...Ub("Draugr"),
-      ...Ub("Skull"),
-      ...Ub("Rainbow"),
-      ...Ib("Sheep"),
-      ...Ib("Cow"),
-      ...Ib("Pig"),
-      ...Ib("Horse"),
-      ...Ib("Camel"),
-      ...Ib("Wolf"),
-      ...Ib("Deer"),
-      ...Ib("Wildcat"),
-      ...Hb("Radar"),
-      ...Hb("Inactive Radar"),
-      ...Hb("Active Radar"),
-      ...fb("Magenta"),
-      ...fb("Light Gray"),
-      ...fb("Red"),
-      ...fb("White"),
-      ...fb("Orange"),
-      ...fb("Light Blue"),
-      ...fb("Yellow"),
-      ...fb("Lime"),
-      ...fb("Pink"),
-      ...fb("Gray"),
-      ...fb("Cyan"),
-      ...fb("Purple"),
-      ...fb("Blue"),
-      ...fb("Brown"),
-      ...fb("Green"),
-      ...fb("Black"),
+      ...Yb("White"),
+      ...Yb("Orange"),
+      ...Yb("Magenta"),
+      ...Yb("Light Blue"),
+      ...Yb("Yellow"),
+      ...Yb("Lime"),
+      ...Yb("Pink"),
+      ...Yb("Gray"),
+      ...Yb("Light Gray"),
+      ...Yb("Cyan"),
+      ...Yb("Purple"),
+      ...Yb("Blue"),
+      ...Yb("Brown"),
+      ...Yb("Green"),
+      ...Yb("Red"),
+      ...Yb("Black"),
+      ...Yb("Draugr"),
+      ...Yb("Skull"),
+      ...Yb("Rainbow"),
+      ...Bb("Sheep"),
+      ...Bb("Cow"),
+      ...Bb("Pig"),
+      ...Bb("Horse"),
+      ...Bb("Camel"),
+      ...Bb("Wolf"),
+      ...Bb("Deer"),
+      ...Bb("Wildcat"),
+      ...eb("Radar"),
+      ...eb("Inactive Radar"),
+      ...eb("Active Radar"),
+      ...vb("Magenta"),
+      ...vb("Light Gray"),
+      ...vb("Red"),
+      ...vb("White"),
+      ...vb("Orange"),
+      ...vb("Light Blue"),
+      ...vb("Yellow"),
+      ...vb("Lime"),
+      ...vb("Pink"),
+      ...vb("Gray"),
+      ...vb("Cyan"),
+      ...vb("Purple"),
+      ...vb("Blue"),
+      ...vb("Brown"),
+      ...vb("Green"),
+      ...vb("Black"),
       "Auto Miner": {
         positions: [{
           block: "Auto Miner",
@@ -3506,53 +3506,53 @@ export const modules = {
               z: 0
             })
           },
-          cb = {};
-        for (let sb = 1; sb <= 4; sb++) {
-          const Wb = 1 === sb ? "" : `|meta|rot${sb}`;
-          cb[`${kb.b[0].block}${Wb}`] = {
-            positions: kb.b.map((cb => {
+          ab = {};
+        for (let Ub = 1; Ub <= 4; Ub++) {
+          const Mb = 1 === Ub ? "" : `|meta|rot${Ub}`;
+          ab[`${Ab.b[0].block}${Mb}`] = {
+            positions: Ab.b.map((ab => {
               let {
-                block: kb,
-                y: ab,
-                z: Tb
-              } = cb;
+                block: Ab,
+                y: Tb,
+                z: Eb
+              } = ab;
               return {
-                block: `${kb}${Wb}`,
-                y: ab,
-                ...bb[sb](Tb)
+                block: `${Ab}${Mb}`,
+                y: Tb,
+                ...bb[Ub](Eb)
               }
             }))
           }
         }
-        return cb
+        return ab
       }(),
       ... function() {
         const bb = {};
-        for (let cb = 1; cb <= kb.i; cb++) {
-          const sb = (0, kb._b)(cb),
-            Wb = kb.m[cb - 1],
-            ab = [{
-              block: sb,
+        for (let ab = 1; ab <= Ab.l; ab++) {
+          const Ub = (0, Ab.gc)(ab),
+            Mb = Ab.o[ab - 1],
+            Tb = [{
+              block: Ub,
               x: 0,
               y: 0,
               z: 0
             }];
-          for (const bb of kb.e)
-            for (let cb = 1; cb <= Wb; cb++) {
-              if ("southwest" === bb && 1 === cb) continue;
+          for (const bb of Ab.f)
+            for (let ab = 1; ab <= Mb; ab++) {
+              if ("southwest" === bb && 1 === ab) continue;
               const {
-                x: sb,
-                z: Wb
-              } = kb.f[bb];
-              ab.push({
-                block: (0, kb.Wb)(bb, cb),
-                x: sb,
-                y: cb - 1,
-                z: Wb
+                x: Ub,
+                z: Mb
+              } = Ab.j[bb];
+              Tb.push({
+                block: (0, Ab.ec)(bb, ab),
+                x: Ub,
+                y: ab - 1,
+                z: Mb
               })
             }
-          bb[sb] = {
-            positions: ab
+          bb[Ub] = {
+            positions: Tb
           }
         }
         return bb
@@ -3669,7 +3669,7 @@ export const modules = {
       }
     };
 
-    function Ub(bb) {
+    function Yb(bb) {
       return {
         [`${bb} Banner`]: {
           positions: [{
@@ -3830,96 +3830,96 @@ export const modules = {
       }
     }
 
-    function Ib(bb) {
-      const cb = (0, ab.Xb)(bb);
+    function Bb(bb) {
+      const ab = (0, Tb.Kb)(bb);
       return {
-        [cb]: {
+        [ab]: {
           positions: [{
-            block: cb,
+            block: ab,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${cb} Top Left`,
+            block: `_${ab} Top Left`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${cb} Top Right`,
+            block: `_${ab} Top Right`,
             x: -1,
             y: 1,
             z: 0
           }, {
-            block: `_${cb} Bottom Right`,
+            block: `_${ab} Bottom Right`,
             x: -1,
             y: 0,
             z: 0
           }]
         },
-        [`${cb}|meta|rot2`]: {
+        [`${ab}|meta|rot2`]: {
           positions: [{
-            block: `${cb}|meta|rot2`,
+            block: `${ab}|meta|rot2`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${cb} Top Left|meta|rot2`,
+            block: `_${ab} Top Left|meta|rot2`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${cb} Top Right|meta|rot2`,
+            block: `_${ab} Top Right|meta|rot2`,
             x: 0,
             y: 1,
             z: 1
           }, {
-            block: `_${cb} Bottom Right|meta|rot2`,
+            block: `_${ab} Bottom Right|meta|rot2`,
             x: 0,
             y: 0,
             z: 1
           }]
         },
-        [`${cb}|meta|rot3`]: {
+        [`${ab}|meta|rot3`]: {
           positions: [{
-            block: `${cb}|meta|rot3`,
+            block: `${ab}|meta|rot3`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${cb} Top Left|meta|rot3`,
+            block: `_${ab} Top Left|meta|rot3`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${cb} Top Right|meta|rot3`,
+            block: `_${ab} Top Right|meta|rot3`,
             x: 1,
             y: 1,
             z: 0
           }, {
-            block: `_${cb} Bottom Right|meta|rot3`,
+            block: `_${ab} Bottom Right|meta|rot3`,
             x: 1,
             y: 0,
             z: 0
           }]
         },
-        [`${cb}|meta|rot4`]: {
+        [`${ab}|meta|rot4`]: {
           positions: [{
-            block: `${cb}|meta|rot4`,
+            block: `${ab}|meta|rot4`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${cb} Top Left|meta|rot4`,
+            block: `_${ab} Top Left|meta|rot4`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${cb} Top Right|meta|rot4`,
+            block: `_${ab} Top Right|meta|rot4`,
             x: 0,
             y: 1,
             z: -1
           }, {
-            block: `_${cb} Bottom Right|meta|rot4`,
+            block: `_${ab} Bottom Right|meta|rot4`,
             x: 0,
             y: 0,
             z: -1
@@ -3928,9 +3928,9 @@ export const modules = {
       }
     }
 
-    function Hb(bb) {
-      const cb = `_${bb} Back`,
-        sb = `_${bb} Dish`;
+    function eb(bb) {
+      const ab = `_${bb} Back`,
+        Ub = `_${bb} Dish`;
       return {
         [bb]: {
           positions: [{
@@ -3939,12 +3939,12 @@ export const modules = {
             y: 0,
             z: 0
           }, {
-            block: cb,
+            block: ab,
             x: 0,
             y: 0,
             z: -1
           }, {
-            block: sb,
+            block: Ub,
             x: 0,
             y: 1,
             z: -1
@@ -3957,12 +3957,12 @@ export const modules = {
             y: 0,
             z: 0
           }, {
-            block: `${cb}|meta|rot2`,
+            block: `${ab}|meta|rot2`,
             x: -1,
             y: 0,
             z: 0
           }, {
-            block: `${sb}|meta|rot2`,
+            block: `${Ub}|meta|rot2`,
             x: -1,
             y: 1,
             z: 0
@@ -3975,12 +3975,12 @@ export const modules = {
             y: 0,
             z: 0
           }, {
-            block: `${cb}|meta|rot3`,
+            block: `${ab}|meta|rot3`,
             x: 0,
             y: 0,
             z: 1
           }, {
-            block: `${sb}|meta|rot3`,
+            block: `${Ub}|meta|rot3`,
             x: 0,
             y: 1,
             z: 1
@@ -3993,12 +3993,12 @@ export const modules = {
             y: 0,
             z: 0
           }, {
-            block: `${cb}|meta|rot4`,
+            block: `${ab}|meta|rot4`,
             x: 1,
             y: 0,
             z: 0
           }, {
-            block: `${sb}|meta|rot4`,
+            block: `${Ub}|meta|rot4`,
             x: 1,
             y: 1,
             z: 0
@@ -4007,12 +4007,12 @@ export const modules = {
       }
     }
 
-    function fb(bb) {
-      const cb = `Small ${bb} Pod`;
+    function vb(bb) {
+      const ab = `Small ${bb} Pod`;
       return {
-        [cb]: {
+        [ab]: {
           positions: [{
-            block: cb,
+            block: ab,
             x: 0,
             y: 0,
             z: 0
@@ -4030,289 +4030,289 @@ export const modules = {
         }
       }
     }
-    for (const Xb in Tb) {
-      for (const bb of Tb[Xb].positions)
-        if (bb.id = Wb.g[bb.block].id, Xb === bb.block && (0 !== bb.x || 0 !== bb.y || 0 !== bb.z)) throw new Error(`Multiblock "${Xb}" has main block "${bb.block}" at non-origin position (${bb.x}, ${bb.y}, ${bb.z}) - if you need to do something like this, you'll need to rethink your approach: Banners are a good template to follow.`);
-      Tb[Wb.g[Xb].id] = Tb[Xb]
+    for (const Pb in Eb) {
+      for (const bb of Eb[Pb].positions)
+        if (bb.id = Mb.h[bb.block].id, Pb === bb.block && (0 !== bb.x || 0 !== bb.y || 0 !== bb.z)) throw new Error(`Multiblock "${Pb}" has main block "${bb.block}" at non-origin position (${bb.x}, ${bb.y}, ${bb.z}) - if you need to do something like this, you'll need to rethink your approach: Banners are a good template to follow.`);
+      Eb[Mb.h[Pb].id] = Eb[Pb]
     }
-    const Mb = {};
-    for (const Xb in Tb)
+    const Lb = {};
+    for (const Pb in Eb)
       for (const {
           block: bb,
-          x: cb,
-          y: sb,
-          z: kb
+          x: ab,
+          y: Ub,
+          z: Ab
         }
-        of Tb[Xb].positions) {
-        const ab = {
-          mainMultiblock: Xb,
-          compX: cb,
-          compY: sb,
-          compZ: kb
+        of Eb[Pb].positions) {
+        const Tb = {
+          mainMultiblock: Pb,
+          compX: ab,
+          compY: Ub,
+          compZ: Ab
         };
-        Mb[bb] = ab, Mb[Wb.g[bb].id] = ab
+        Lb[bb] = Tb, Lb[Mb.h[bb].id] = Tb
       }
   },
-  37832: (bb, cb, sb) => {
-    sb.d(cb, {
-      e: () => Ib,
-      f: () => Ub
+  37556: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      e: () => Bb,
+      g: () => Yb
     });
-    var kb = sb(9017),
-      Wb = sb(9067),
-      ab = sb(9070);
-    const Tb = Wb.p.map((bb => {
+    var Ab = Ub(9007),
+      Mb = Ub(9048),
+      Tb = Ub(9055);
+    const Eb = Mb.s.map((bb => {
       let {
-        dx: cb,
-        dz: sb
+        dx: ab,
+        dz: Ub
       } = bb;
-      return [cb, 0, sb]
+      return [ab, 0, Ub]
     }));
 
-    function Ub(bb) {
-      const cb = kb.g[bb];
-      return !!cb && bb !== kb.d && !cb.model && !cb.Nn && !1 !== cb.solid && !cb.hQ
+    function Yb(bb) {
+      const ab = Ab.h[bb];
+      return !!ab && bb !== Ab.d && !ab.model && !ab.CP && !1 !== ab.solid && !ab.FR
     }
-    class Ib {
+    class Bb {
       constructor(bb) {
-        this.model = bb, this.reshapeOffsets = [...Tb, [0, -1, 0]]
+        this.model = bb, this.reshapeOffsets = [...Eb, [0, -1, 0]]
       }
       handles(bb) {
-        const cb = kb.g[bb];
-        return (null === cb || void 0 === cb ? void 0 : cb.model) === this.model && void 0 !== cb.attachedTop
+        const ab = Ab.h[bb];
+        return (null === ab || void 0 === ab ? void 0 : ab.model) === this.model && void 0 !== ab.attachedTop
       }
       affects(bb) {
-        return this.handles(bb) || Ub(bb) || (0, ab.t)(kb.g[bb])
+        return this.handles(bb) || Yb(bb) || (0, Tb.B)(Ab.h[bb])
       }
-      shape(bb, cb, sb, Tb, Ib) {
-        let Hb = this.handles(bb(cb, sb + 1, Tb)) ? Wb.f : 0;
-        return Wb.p.forEach(((Ib, fb) => {
+      shape(bb, ab, Ub, Eb, Bb) {
+        let eb = this.handles(bb(ab, Ub + 1, Eb)) ? Mb.i : 0;
+        return Mb.s.forEach(((Bb, vb) => {
           let {
-            dx: Mb,
-            dz: Xb
-          } = Ib;
-          const nb = bb(cb + Mb, sb, Tb + Xb);
-          (this.handles(nb) || Ub(nb) || function(bb, cb) {
-            const sb = kb.g[bb];
-            return (0, ab.t)(sb) && (0, ab.o)(sb.meta.rot) === (0 !== Wb.p[cb].dx)
-          }(nb, fb)) && (Hb |= 1 << fb)
-        })), (0, kb.j)((0, Wb.i)(kb.g[Ib].meta.rootName, Hb))
+            dx: Lb,
+            dz: Pb
+          } = Bb;
+          const Xb = bb(ab + Lb, Ub, Eb + Pb);
+          (this.handles(Xb) || Yb(Xb) || function(bb, ab) {
+            const Ub = Ab.h[bb];
+            return (0, Tb.B)(Ub) && (0, Tb.u)(Ub.meta.rot) === (0 !== Mb.s[ab].dx)
+          }(Xb, vb)) && (eb |= 1 << vb)
+        })), (0, Ab.l)((0, Mb.k)(Ab.h[Bb].meta.rootName, eb))
       }
     }
   },
-  37591: (bb, cb, sb) => {
-    function kb(bb, cb) {
-      var sb;
-      cb || (cb = {});
-      const kb = null !== (sb = cb.customAttributes) && void 0 !== sb ? sb : {};
-      var Wb, ab, Tb;
-      "Gun" === (null === bb || void 0 === bb ? void 0 : bb.type) && (kb.shotsLeft = null !== (Wb = null !== (ab = kb.shotsLeft) && void 0 !== ab ? ab : null === (Tb = kb.gunStats) || void 0 === Tb ? void 0 : Tb.clipSize) && void 0 !== Wb ? Wb : bb.clipSize);
-      if (kb.enchantmentTier && (kb.enchantmentTier = kb.enchantmentTier.toString()), kb.enchantments)
-        for (const Mb in kb.enchantments) {
-          const bb = kb.enchantments[Mb];
+  37343: (bb, ab, Ub) => {
+    function Ab(bb, ab) {
+      var Ub;
+      ab || (ab = {});
+      const Ab = null !== (Ub = ab.customAttributes) && void 0 !== Ub ? Ub : {};
+      var Mb, Tb, Eb;
+      "Gun" === (null === bb || void 0 === bb ? void 0 : bb.type) && (Ab.shotsLeft = null !== (Mb = null !== (Tb = Ab.shotsLeft) && void 0 !== Tb ? Tb : null === (Eb = Ab.gunStats) || void 0 === Eb ? void 0 : Eb.clipSize) && void 0 !== Mb ? Mb : bb.clipSize);
+      if (Ab.enchantmentTier && (Ab.enchantmentTier = Ab.enchantmentTier.toString()), Ab.enchantments)
+        for (const Lb in Ab.enchantments) {
+          const bb = Ab.enchantments[Lb];
           if ("number" !== typeof bb) {
-            const cb = parseInt(bb);
-            isNaN(cb) || cb < 0 ? kb.enchantments[Mb] = void 0 : kb.enchantments[Mb] = cb > 1e9 ? 1e9 : cb
+            const ab = parseInt(bb);
+            isNaN(ab) || ab < 0 ? Ab.enchantments[Lb] = void 0 : Ab.enchantments[Lb] = ab > 1e9 ? 1e9 : ab
           }
         }
-      if (kb.enchantmentData)
-        for (const Mb in kb.enchantmentData) {
-          const bb = kb.enchantmentData[Mb];
+      if (Ab.enchantmentData)
+        for (const Lb in Ab.enchantmentData) {
+          const bb = Ab.enchantmentData[Lb];
           if (!bb) continue;
           if ("object" !== typeof bb) {
-            kb.enchantmentData[Mb] = void 0;
+            Ab.enchantmentData[Lb] = void 0;
             continue
           }
-          const cb = bb.icon,
-            sb = bb.description;
-          var Ub, Ib, Hb, fb;
-          if ("string" !== typeof cb) kb.enchantmentData[Mb].icon = null !== (Ub = null === cb || void 0 === cb || null === (Ib = cb.toString) || void 0 === Ib ? void 0 : Ib.call(cb)) && void 0 !== Ub ? Ub : void 0;
-          if ("string" !== typeof sb) kb.enchantmentData[Mb].description = null !== (Hb = null === sb || void 0 === sb || null === (fb = sb.toString) || void 0 === fb ? void 0 : fb.call(sb)) && void 0 !== Hb ? Hb : void 0
+          const ab = bb.icon,
+            Ub = bb.description;
+          var Yb, Bb, eb, vb;
+          if ("string" !== typeof ab) Ab.enchantmentData[Lb].icon = null !== (Yb = null === ab || void 0 === ab || null === (Bb = ab.toString) || void 0 === Bb ? void 0 : Bb.call(ab)) && void 0 !== Yb ? Yb : void 0;
+          if ("string" !== typeof Ub) Ab.enchantmentData[Lb].description = null !== (eb = null === Ub || void 0 === Ub || null === (vb = Ub.toString) || void 0 === vb ? void 0 : vb.call(Ub)) && void 0 !== eb ? eb : void 0
         }
-      return cb.customAttributes = kb, cb
+      return ab.customAttributes = Ab, ab
     }
-    sb.d(cb, {
-      d: () => kb
+    Ub.d(ab, {
+      e: () => Ab
     })
   },
-  37825: (bb, cb, sb) => {
-    sb.d(cb, {
-      d: () => Yb,
-      g: () => eb,
-      i: () => Ib,
-      l: () => Mb,
-      m: () => hb
+  37547: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      b: () => fb,
+      e: () => yb,
+      h: () => Bb,
+      i: () => Lb,
+      k: () => mb
     });
-    var kb = sb(9017),
-      Wb = sb(9057),
-      ab = sb(37832);
-    const Tb = (0, kb.j)("Noticeboard"),
-      Ub = (0, kb.j)("Standing Noticeboard|meta|rot4|lrud");
+    var Ab = Ub(9007),
+      Mb = Ub(9036),
+      Tb = Ub(37556);
+    const Eb = (0, Ab.l)("Noticeboard"),
+      Yb = (0, Ab.l)("Standing Noticeboard|meta|rot4|lrud");
 
-    function Ib(bb) {
-      return Tb <= bb && bb <= Ub
+    function Bb(bb) {
+      return Eb <= bb && bb <= Yb
     }
-    const Hb = new Uint8Array(Ub - Tb + 1);
-    for (let Jb = Tb; Jb <= Ub; Jb++) Hb[Jb - Tb] = (0, Wb.u)(kb.g[Jb].meta.metaStr);
-    const fb = 64,
-      Mb = fb * fb,
-      [Xb, nb, mb, lb] = [0, 1, 2, 3];
+    const eb = new Uint8Array(Yb - Eb + 1);
+    for (let pb = Eb; pb <= Yb; pb++) eb[pb - Eb] = (0, Mb.n)(Ab.h[pb].meta.metaStr);
+    const vb = 64,
+      Lb = vb * vb,
+      [Pb, Xb, jb, Rb] = [0, 1, 2, 3];
 
-    function Qb(bb) {
-      var cb, sb;
-      return "string" === typeof(null === bb || void 0 === bb || null === (cb = bb.persisted) || void 0 === cb || null === (sb = cb.shared) || void 0 === sb ? void 0 : sb.text)
-    }
-
-    function eb(bb) {
-      return Qb(bb) && "" !== bb.persisted.shared.text.trim()
+    function kb(bb) {
+      var ab, Ub;
+      return "string" === typeof(null === bb || void 0 === bb || null === (ab = bb.persisted) || void 0 === ab || null === (Ub = ab.shared) || void 0 === Ub ? void 0 : Ub.text)
     }
 
-    function Cb(bb, cb) {
-      let [sb, , kb] = cb;
-      const [ab, , Tb] = Wb.z[bb][nb];
-      return sb * ab + kb * Tb
+    function yb(bb) {
+      return kb(bb) && "" !== bb.persisted.shared.text.trim()
     }
 
-    function Nb(bb, cb, sb) {
-      return sb[1] - cb[1] || Cb(bb, cb) - Cb(bb, sb)
+    function Zb(bb, ab) {
+      let [Ub, , Ab] = ab;
+      const [Tb, , Eb] = Mb.v[bb][Xb];
+      return Ub * Tb + Ab * Eb
     }
 
-    function Vb(bb, cb, sb, ab, Ub) {
-      var Ib;
-      let fb = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : bb(cb[0], cb[1], cb[2]);
-      if (!(Hb[fb - Tb] & 1 << sb)) return null;
-      const [Mb, Xb, nb] = Wb.z[Ub][sb], mb = [cb[0] + Mb, cb[1] + Xb, cb[2] + nb], lb = bb(mb[0], mb[1], mb[2]), Qb = null === (Ib = kb.g[lb]) || void 0 === Ib ? void 0 : Ib.meta;
-      return (null === Qb || void 0 === Qb ? void 0 : Qb.rootId) === ab && Qb.rot === Ub && Hb[lb - Tb] & 1 << (1 ^ sb) ? mb : null
+    function Db(bb, ab, Ub) {
+      return Ub[1] - ab[1] || Zb(bb, ab) - Zb(bb, Ub)
     }
 
-    function Lb(bb, cb, sb, ab) {
-      const Tb = bb(cb, sb, ab);
-      if (!Ib(Tb)) return null;
+    function zb(bb, ab, Ub, Tb, Yb) {
+      var Bb;
+      let vb = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : bb(ab[0], ab[1], ab[2]);
+      if (!(eb[vb - Eb] & 1 << Ub)) return null;
+      const [Lb, Pb, Xb] = Mb.v[Yb][Ub], jb = [ab[0] + Lb, ab[1] + Pb, ab[2] + Xb], Rb = bb(jb[0], jb[1], jb[2]), kb = null === (Bb = Ab.h[Rb]) || void 0 === Bb ? void 0 : Bb.meta;
+      return (null === kb || void 0 === kb ? void 0 : kb.rootId) === Tb && kb.rot === Yb && eb[Rb - Eb] & 1 << (1 ^ Ub) ? jb : null
+    }
+
+    function xb(bb, ab, Ub, Tb) {
+      const Eb = bb(ab, Ub, Tb);
+      if (!Bb(Eb)) return null;
       const {
-        rootId: Ub,
-        rot: Hb
-      } = kb.g[Tb].meta, Mb = (cb, sb) => {
-        let kb = cb,
-          Wb = 1;
-        for (let ab = Vb(bb, kb, sb, Ub, Hb); ab && Wb < fb; ab = Vb(bb, kb, sb, Ub, Hb)) kb = ab, Wb++;
+        rootId: Yb,
+        rot: eb
+      } = Ab.h[Eb].meta, Lb = (ab, Ub) => {
+        let Ab = ab,
+          Mb = 1;
+        for (let Tb = zb(bb, Ab, Ub, Yb, eb); Tb && Mb < vb; Tb = zb(bb, Ab, Ub, Yb, eb)) Ab = Tb, Mb++;
         return {
-          end: kb,
-          cells: Wb
+          end: Ab,
+          cells: Mb
         }
-      }, Qb = Mb(Mb([cb, sb, ab], Xb).end, mb).end, eb = Mb(Qb, nb).cells, [Cb, , Nb] = Wb.z[Hb][nb];
-      let Lb = 1;
-      bb: for (; Lb < fb; Lb++)
-        for (let cb = 0; cb < eb; cb++)
-          if (!Vb(bb, [Qb[0] + Cb * cb, Qb[1] - Lb + 1, Qb[2] + Nb * cb], lb, Ub, Hb)) break bb;
+      }, kb = Lb(Lb([ab, Ub, Tb], Pb).end, jb).end, yb = Lb(kb, Xb).cells, [Zb, , Db] = Mb.v[eb][Xb];
+      let xb = 1;
+      bb: for (; xb < vb; xb++)
+        for (let ab = 0; ab < yb; ab++)
+          if (!zb(bb, [kb[0] + Zb * ab, kb[1] - xb + 1, kb[2] + Db * ab], Rb, Yb, eb)) break bb;
       return {
-        anchor: Qb,
-        rootId: Ub,
-        rot: Hb,
-        width: eb,
-        height: Lb
+        anchor: kb,
+        rootId: Yb,
+        rot: eb,
+        width: yb,
+        height: xb
       }
     }
 
-    function ub(bb, cb) {
-      for (const sb of function(bb) {
+    function ib(bb, ab) {
+      for (const Ub of function(bb) {
           let {
-            anchor: cb,
-            rot: sb,
-            width: kb,
-            height: ab
+            anchor: ab,
+            rot: Ub,
+            width: Ab,
+            height: Tb
           } = bb;
-          const [Tb, , Ub] = Wb.z[sb][nb], Ib = [];
-          for (let Wb = 0; Wb < ab; Wb++)
-            for (let bb = 0; bb < kb; bb++) Ib.push([cb[0] + Tb * bb, cb[1] - Wb, cb[2] + Ub * bb]);
-          return Ib
+          const [Eb, , Yb] = Mb.v[Ub][Xb], Bb = [];
+          for (let Mb = 0; Mb < Tb; Mb++)
+            for (let bb = 0; bb < Ab; bb++) Bb.push([ab[0] + Eb * bb, ab[1] - Mb, ab[2] + Yb * bb]);
+          return Bb
         }(bb))
-        if (Qb(cb(sb[0], sb[1], sb[2]))) return sb;
+        if (kb(ab(Ub[0], Ub[1], Ub[2]))) return Ub;
       return null
     }
 
-    function Yb(bb, cb, sb, Wb, ab) {
-      const Tb = bb(sb, Wb, ab);
-      if (!Ib(Tb)) return null;
+    function fb(bb, ab, Ub, Mb, Tb) {
+      const Eb = bb(Ub, Mb, Tb);
+      if (!Bb(Eb)) return null;
       const {
-        rootId: Ub,
-        rot: Hb
-      } = kb.g[Tb].meta, fb = [
-        [sb, Wb, ab]
-      ], Xb = new Set([fb[0].join()]);
-      let nb = fb[0],
-        mb = null;
-      for (let kb = 0; kb < fb.length; kb++) {
-        const sb = fb[kb];
-        if (Nb(Hb, sb, nb) < 0 && (nb = sb), Qb(cb(sb[0], sb[1], sb[2]))) {
-          const cb = Lb(bb, sb[0], sb[1], sb[2]);
-          (!mb || Nb(Hb, cb.anchor, mb.anchor) < 0) && (mb = cb)
+        rootId: Yb,
+        rot: eb
+      } = Ab.h[Eb].meta, vb = [
+        [Ub, Mb, Tb]
+      ], Pb = new Set([vb[0].join()]);
+      let Xb = vb[0],
+        jb = null;
+      for (let Ab = 0; Ab < vb.length; Ab++) {
+        const Ub = vb[Ab];
+        if (Db(eb, Ub, Xb) < 0 && (Xb = Ub), kb(ab(Ub[0], Ub[1], Ub[2]))) {
+          const ab = xb(bb, Ub[0], Ub[1], Ub[2]);
+          (!jb || Db(eb, ab.anchor, jb.anchor) < 0) && (jb = ab)
         }
-        for (let cb = 0; cb < 4 && fb.length < Mb; cb++) {
-          const kb = Vb(bb, sb, cb, Ub, Hb);
-          kb && !Xb.has(kb.join()) && (Xb.add(kb.join()), fb.push(kb))
+        for (let ab = 0; ab < 4 && vb.length < Lb; ab++) {
+          const Ab = zb(bb, Ub, ab, Yb, eb);
+          Ab && !Pb.has(Ab.join()) && (Pb.add(Ab.join()), vb.push(Ab))
         }
       }
-      return mb ??= Lb(bb, nb[0], nb[1], nb[2]), {
-        cells: fb,
-        topLeft: nb,
-        rect: mb,
-        textCell: ub(mb, cb)
+      return jb ??= xb(bb, Xb[0], Xb[1], Xb[2]), {
+        cells: vb,
+        topLeft: Xb,
+        rect: jb,
+        textCell: ib(jb, ab)
       }
     }
 
-    function hb(bb, cb, sb, Tb, Ub) {
-      if (null !== sb && Ib(sb)) {
+    function mb(bb, ab, Ub, Eb, Yb) {
+      if (null !== Ub && Bb(Ub)) {
         const {
           rootName: bb,
-          rot: cb
-        } = kb.g[sb].meta;
-        if (Wb.z[cb].some((bb => {
-            let [cb, sb, kb] = bb;
-            return cb === Tb[0] && sb === Tb[1] && kb === Tb[2]
+          rot: ab
+        } = Ab.h[Ub].meta;
+        if (Mb.v[ab].some((bb => {
+            let [ab, Ub, Ab] = bb;
+            return ab === Eb[0] && Ub === Eb[1] && Ab === Eb[2]
           }))) return {
           root: bb,
-          rot: cb
+          rot: ab
         }
       }
-      const [Hb, fb] = Wb.p[Ub], Mb = bb(cb[0] - Hb, cb[1], cb[2] - fb);
+      const [eb, vb] = Mb.j[Yb], Lb = bb(ab[0] - eb, ab[1], ab[2] - vb);
       return {
-        root: (0, ab.f)(Mb) ? Wb.E : Wb.A,
-        rot: Ub
+        root: (0, Tb.g)(Lb) ? Mb.D : Mb.z,
+        rot: Yb
       }
     }
   },
-  36372: (bb, cb, sb) => {
-    sb.d(cb, {
-      e: () => ab,
-      h: () => kb,
-      l: () => Wb
+  36122: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      e: () => Tb,
+      g: () => Ab,
+      i: () => Mb
     });
-    const kb = 15,
-      Wb = 3,
-      ab = 30
+    const Ab = 15,
+      Mb = 3,
+      Tb = 30
   },
-  37838: (bb, cb, sb) => {
-    sb.d(cb, {
-      c: () => ab,
-      d: () => Tb,
-      e: () => Wb,
-      f: () => Ub
+  37562: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      b: () => Tb,
+      c: () => Eb,
+      d: () => Mb,
+      f: () => Yb
     });
-    var kb = sb(353);
-    const Wb = ["Snowball", "Snowball Launcher", "Pebble", "Reinforced Pebble", "Ball", "Reinforced Ball", "Mango", "Moonstone Orb", ...sb(624).t.map((bb => `${bb} Spawn Orb`)), "Fireball", "RPG", "Obby RPG", "Super RPG", "Grenade Launcher", "Iceball", "Bouncy Bomb", "Coconut", "Splash Speed Potion", "Splash Speed Potion II", "Splash Defense Potion", "Splash Defense Potion II", "Splash Strength Potion", "Splash Strength Potion II", "Splash Invisibility Potion", "Splash Jump Potion", "Splash Jump Potion II", "Splash Knockback Potion", "Splash Knockback Potion II", "Splash Poison Potion", "Splash Poison Potion II", "Splash Slowness Potion", "Splash Slowness Potion II", "Splash Weakness Potion", "Splash Weakness Potion II", "Splash Milk Potion", "Splash Instant Damage Potion", "Splash Instant Damage Potion II", "Splash Regeneration Potion", "Splash Regeneration Potion II", "Splash Instant Healing Potion", "Splash Instant Healing Potion II", "Splash Haste Potion", "Splash Haste Potion II", "Splash Shield Potion", "Splash Shield Potion II", "Splash Double Jump Potion", "Splash Heat Resistance Potion", "Splash X-Ray Vision Potion", "Splash Mining Yield Potion", "Splash Mining Yield Potion II", "Splash Brain Rot Potion", "Yellow Paintball Gun", "White Paintball Gun", "Red Paintball Gun", "Purple Paintball Gun", "Pink Paintball Gun", "Orange Paintball Gun", "Magenta Paintball Gun", "Lime Paintball Gun", "Light Gray Paintball Gun", "Light Blue Paintball Gun", "Green Paintball Gun", "Gray Paintball Gun", "Cyan Paintball Gun", "Brown Paintball Gun", "Blue Paintball Gun", "Black Paintball Gun", "Yellow Heavy Paintball Gun", "White Heavy Paintball Gun", "Red Heavy Paintball Gun", "Purple Heavy Paintball Gun", "Pink Heavy Paintball Gun", "Orange Heavy Paintball Gun", "Magenta Heavy Paintball Gun", "Lime Heavy Paintball Gun", "Light Gray Heavy Paintball Gun", "Light Blue Heavy Paintball Gun", "Green Heavy Paintball Gun", "Gray Heavy Paintball Gun", "Cyan Heavy Paintball Gun", "Brown Heavy Paintball Gun", "Blue Heavy Paintball Gun", "Black Heavy Paintball Gun", "Toxin Ball", "Splash Aura XP Potion", "Splash Aura XP Potion II", "Firecracker", "Rainbow Firecracker", "White Firecracker", "Orange Firecracker", "Magenta Firecracker", "Light Blue Firecracker", "Yellow Firecracker", "Lime Firecracker", "Pink Firecracker", "Gray Firecracker", "Light Gray Firecracker", "Cyan Firecracker", "Purple Firecracker", "Blue Firecracker", "Brown Firecracker", "Green Firecracker", "Red Firecracker", "Black Firecracker", "Firecracker Pebble", "Rainbow Firecracker Pebble", "White Firecracker Pebble", "Orange Firecracker Pebble", "Magenta Firecracker Pebble", "Light Blue Firecracker Pebble", "Yellow Firecracker Pebble", "Lime Firecracker Pebble", "Pink Firecracker Pebble", "Gray Firecracker Pebble", "Light Gray Firecracker Pebble", "Cyan Firecracker Pebble", "Purple Firecracker Pebble", "Blue Firecracker Pebble", "Brown Firecracker Pebble", "Green Firecracker Pebble", "Red Firecracker Pebble", "Black Firecracker Pebble", "Blinding Pebble", "Poop", "Wood Boomerang", "Stone Boomerang", "Iron Boomerang", "Gold Boomerang", "Diamond Boomerang", "Moonstone Boomerang", ...kb.g, "67 Base Projectile", "67 Boosted Projectile", "Capitano Grenade", "Scatter Pellet", "Lucky Bomb", "Unlucky Bomb", "Swap Orb"],
-      ab = ["Obby RPG"];
+    var Ab = Ub(329);
+    const Mb = ["Snowball", "Snowball Launcher", "Pebble", "Reinforced Pebble", "Ball", "Reinforced Ball", "Mango", "Moonstone Orb", ...Ub(583).t.map((bb => `${bb} Spawn Orb`)), "Fireball", "RPG", "Obby RPG", "Super RPG", "Grenade Launcher", "Iceball", "Bouncy Bomb", "Coconut", "Splash Speed Potion", "Splash Speed Potion II", "Splash Defense Potion", "Splash Defense Potion II", "Splash Strength Potion", "Splash Strength Potion II", "Splash Invisibility Potion", "Splash Jump Potion", "Splash Jump Potion II", "Splash Knockback Potion", "Splash Knockback Potion II", "Splash Poison Potion", "Splash Poison Potion II", "Splash Slowness Potion", "Splash Slowness Potion II", "Splash Weakness Potion", "Splash Weakness Potion II", "Splash Milk Potion", "Splash Instant Damage Potion", "Splash Instant Damage Potion II", "Splash Regeneration Potion", "Splash Regeneration Potion II", "Splash Instant Healing Potion", "Splash Instant Healing Potion II", "Splash Haste Potion", "Splash Haste Potion II", "Splash Shield Potion", "Splash Shield Potion II", "Splash Double Jump Potion", "Splash Heat Resistance Potion", "Splash X-Ray Vision Potion", "Splash Mining Yield Potion", "Splash Mining Yield Potion II", "Splash Brain Rot Potion", "Yellow Paintball Gun", "White Paintball Gun", "Red Paintball Gun", "Purple Paintball Gun", "Pink Paintball Gun", "Orange Paintball Gun", "Magenta Paintball Gun", "Lime Paintball Gun", "Light Gray Paintball Gun", "Light Blue Paintball Gun", "Green Paintball Gun", "Gray Paintball Gun", "Cyan Paintball Gun", "Brown Paintball Gun", "Blue Paintball Gun", "Black Paintball Gun", "Yellow Heavy Paintball Gun", "White Heavy Paintball Gun", "Red Heavy Paintball Gun", "Purple Heavy Paintball Gun", "Pink Heavy Paintball Gun", "Orange Heavy Paintball Gun", "Magenta Heavy Paintball Gun", "Lime Heavy Paintball Gun", "Light Gray Heavy Paintball Gun", "Light Blue Heavy Paintball Gun", "Green Heavy Paintball Gun", "Gray Heavy Paintball Gun", "Cyan Heavy Paintball Gun", "Brown Heavy Paintball Gun", "Blue Heavy Paintball Gun", "Black Heavy Paintball Gun", "Toxin Ball", "Splash Aura XP Potion", "Splash Aura XP Potion II", "Firecracker", "Rainbow Firecracker", "White Firecracker", "Orange Firecracker", "Magenta Firecracker", "Light Blue Firecracker", "Yellow Firecracker", "Lime Firecracker", "Pink Firecracker", "Gray Firecracker", "Light Gray Firecracker", "Cyan Firecracker", "Purple Firecracker", "Blue Firecracker", "Brown Firecracker", "Green Firecracker", "Red Firecracker", "Black Firecracker", "Firecracker Pebble", "Rainbow Firecracker Pebble", "White Firecracker Pebble", "Orange Firecracker Pebble", "Magenta Firecracker Pebble", "Light Blue Firecracker Pebble", "Yellow Firecracker Pebble", "Lime Firecracker Pebble", "Pink Firecracker Pebble", "Gray Firecracker Pebble", "Light Gray Firecracker Pebble", "Cyan Firecracker Pebble", "Purple Firecracker Pebble", "Blue Firecracker Pebble", "Brown Firecracker Pebble", "Green Firecracker Pebble", "Red Firecracker Pebble", "Black Firecracker Pebble", "Blinding Pebble", "Poop", "Wood Boomerang", "Stone Boomerang", "Iron Boomerang", "Gold Boomerang", "Diamond Boomerang", "Moonstone Boomerang", ...Ab.g, "67 Base Projectile", "67 Boosted Projectile", "Capitano Grenade", "Scatter Pellet", "Lucky Bomb", "Unlucky Bomb", "Swap Orb"],
+      Tb = ["Obby RPG"];
 
-    function Tb(bb) {
-      const cb = bb.indexOf("|");
-      return -1 === cb ? {
+    function Eb(bb) {
+      const ab = bb.indexOf("|");
+      return -1 === ab ? {
         item: bb,
         clientPredictedThrower: null
       } : {
-        item: bb.slice(0, cb),
-        clientPredictedThrower: bb.slice(cb + 1)
+        item: bb.slice(0, ab),
+        clientPredictedThrower: bb.slice(ab + 1)
       }
     }
-    const Ub = [...Wb, "Arrow", "Arrow of Speed", "Arrow of Slowness", "Arrow of Poison", "Arrow of Weakness", "Arrow of Knockback", "Arrow of Strength", "Arrow of Defense", "Arrow of Invisibility", "Arrow of Jumping", "Arrow of Milk", "Arrow of Instant Damage", "Arrow of Regeneration", "Arrow of Instant Healing", "Arrow of Haste", "Arrow of Shield", "Arrow of Double Jump", "Arrow of Heat Resistance", "Arrow of X-Ray Vision", "Arrow of Mining Yield", "Arrow of Brain Rot", "Arrow of Aura XP", "Bullet"]
+    const Yb = [...Mb, "Arrow", "Arrow of Speed", "Arrow of Slowness", "Arrow of Poison", "Arrow of Weakness", "Arrow of Knockback", "Arrow of Strength", "Arrow of Defense", "Arrow of Invisibility", "Arrow of Jumping", "Arrow of Milk", "Arrow of Instant Damage", "Arrow of Regeneration", "Arrow of Instant Healing", "Arrow of Haste", "Arrow of Shield", "Arrow of Double Jump", "Arrow of Heat Resistance", "Arrow of X-Ray Vision", "Arrow of Mining Yield", "Arrow of Brain Rot", "Arrow of Aura XP", "Bullet"]
   }
 };
 Object.freeze(modules);

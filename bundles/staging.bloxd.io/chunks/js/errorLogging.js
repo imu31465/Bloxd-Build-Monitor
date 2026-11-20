@@ -1,128 +1,128 @@
 export const id = 31;
 export const ids = [31];
 export const modules = {
-  6365: (bb, cb, sb) => {
-    sb.r(cb), sb.d(cb, {
-      BaseExtension: () => bs,
-      BaseInstrumentation: () => cs,
-      BaseTransport: () => ba,
-      CSPInstrumentation: () => BW,
-      ConsoleInstrumentation: () => Es,
-      ConsoleTransport: () => aa,
-      EVENT_CLICK: () => Nc,
-      EVENT_NAVIGATION: () => Vc,
-      EVENT_ROUTE_CHANGE: () => gc,
-      EVENT_SESSION_EXTEND: () => hc,
-      EVENT_SESSION_RESUME: () => Yc,
-      EVENT_SESSION_START: () => uc,
-      EVENT_VIEW_CHANGED: () => Lc,
-      ErrorsInstrumentation: () => Os,
-      FetchTransport: () => Ya,
-      InternalLoggerLevel: () => rc,
-      LogLevel: () => Ns,
-      MAX_SESSION_PERSISTENCE_TIME: () => Ib,
-      NavigationInstrumentation: () => wW,
-      Observable: () => Cs,
-      PerformanceInstrumentation: () => Fk,
-      PersistentSessionsManager: () => Kc,
-      SESSION_EXPIRATION_TIME: () => ab,
-      SESSION_INACTIVITY_TIME: () => Tb,
-      STORAGE_KEY: () => Wb,
-      SessionInstrumentation: () => ks,
-      TransportItemType: () => ca,
-      UserActionInstrumentation: () => gW,
-      UserActionState: () => eW,
-      VERSION: () => ss,
-      ViewInstrumentation: () => Ks,
-      VolatileSessionsManager: () => Zc,
-      WebVitalsInstrumentation: () => Ok,
-      allLogLevels: () => Ls,
-      browserMeta: () => FW,
-      buildStackFrame: () => Ws,
-      captureMetas: () => za,
-      createInternalLogger: () => ta,
-      createPromiseBuffer: () => la,
-      createSession: () => jW,
-      deepEqual: () => Cc,
-      defaultEventDomain: () => kb,
-      defaultExceptionType: () => gs,
-      defaultGlobalObjectKey: () => ya,
-      defaultInternalLoggerLevel: () => Sc,
-      defaultLogLevel: () => Vs,
-      faro: () => lb,
-      genShortID: () => ec,
-      getCurrentTimestamp: () => mc,
-      getDataFromSafariExtensions: () => Xs,
-      getIgnoreUrls: () => Rb,
-      getInternalFaroFromGlobalObject: () => Xb,
-      getStackFramesFromError: () => ms,
-      getTransportBody: () => Wa,
-      getUrlFromResource: () => Fb,
-      getWebInstrumentations: () => rW,
-      globalObject: () => fb,
-      initializeFaro: () => bT,
-      internalGlobalObjectKey: () => Mb,
-      isArray: () => yb,
-      isBoolean: () => Jb,
-      isDomError: () => zb,
-      isDomException: () => qb,
-      isElement: () => Ab,
-      isElementDefined: () => db,
-      Ym: () => Sb,
-      isError: () => Kb,
-      isErrorDefined: () => Gb,
-      isErrorEvent: () => Zb,
-      isEvent: () => Ob,
-      isEventDefined: () => ib,
-      isFunction: () => tb,
-      isInstanceOf: () => Nb,
-      isInt: () => hb,
-      isInternalFaroOnGlobalObject: () => mb,
-      isMap: () => rb,
+  6334: (bb, ab, Ub) => {
+    Ub.r(ab), Ub.d(ab, {
+      BaseExtension: () => bU,
+      BaseInstrumentation: () => aU,
+      BaseTransport: () => JM,
+      CSPInstrumentation: () => mM,
+      ConsoleInstrumentation: () => FU,
+      ConsoleTransport: () => UT,
+      EVENT_CLICK: () => Da,
+      EVENT_NAVIGATION: () => za,
+      EVENT_ROUTE_CHANGE: () => Na,
+      EVENT_SESSION_EXTEND: () => ma,
+      EVENT_SESSION_RESUME: () => fa,
+      EVENT_SESSION_START: () => ia,
+      EVENT_VIEW_CHANGED: () => xa,
+      ErrorsInstrumentation: () => GU,
+      FetchTransport: () => zT,
+      InternalLoggerLevel: () => sa,
+      LogLevel: () => DU,
+      MAX_SESSION_PERSISTENCE_TIME: () => Bb,
+      NavigationInstrumentation: () => oM,
+      Observable: () => ZU,
+      PerformanceInstrumentation: () => CA,
+      PersistentSessionsManager: () => ua,
+      SESSION_EXPIRATION_TIME: () => Tb,
+      SESSION_INACTIVITY_TIME: () => Eb,
+      STORAGE_KEY: () => Mb,
+      SessionInstrumentation: () => AU,
+      TransportItemType: () => nM,
+      UserActionInstrumentation: () => fM,
+      UserActionState: () => jM,
+      VERSION: () => UU,
+      ViewInstrumentation: () => qU,
+      VolatileSessionsManager: () => ra,
+      WebVitalsInstrumentation: () => hA,
+      allLogLevels: () => xU,
+      browserMeta: () => CM,
+      buildStackFrame: () => MU,
+      captureMetas: () => qT,
+      createInternalLogger: () => pT,
+      createPromiseBuffer: () => PT,
+      createSession: () => OM,
+      deepEqual: () => Za,
+      defaultEventDomain: () => Ab,
+      defaultExceptionType: () => pU,
+      defaultGlobalObjectKey: () => NT,
+      defaultInternalLoggerLevel: () => Ca,
+      defaultLogLevel: () => zU,
+      faro: () => Rb,
+      genShortID: () => ya,
+      getCurrentTimestamp: () => ja,
+      getDataFromSafariExtensions: () => PU,
+      getIgnoreUrls: () => Vb,
+      getInternalFaroFromGlobalObject: () => Pb,
+      getStackFramesFromError: () => jU,
+      getTransportBody: () => aT,
+      getUrlFromResource: () => cb,
+      getWebInstrumentations: () => lM,
+      globalObject: () => vb,
+      initializeFaro: () => JT,
+      internalGlobalObjectKey: () => Lb,
+      isArray: () => Ib,
+      isBoolean: () => pb,
+      isDomError: () => Kb,
+      isDomException: () => ob,
+      isElement: () => tb,
+      isElementDefined: () => lb,
+      lX: () => Cb,
+      isError: () => ub,
+      isErrorDefined: () => qb,
+      isErrorEvent: () => rb,
+      isEvent: () => Qb,
+      isEventDefined: () => Gb,
+      isFunction: () => Hb,
+      isInstanceOf: () => Db,
+      isInt: () => mb,
+      isInternalFaroOnGlobalObject: () => jb,
+      isMap: () => sb,
       isMapDefined: () => wb,
-      isNull: () => Lb,
-      isNumber: () => Yb,
-      isObject: () => Bb,
-      isPrimitive: () => Eb,
-      isRegExp: () => Pb,
-      isString: () => ub,
-      isSymbol: () => gb,
-      isSyntheticEvent: () => ob,
-      isThenable: () => Db,
-      isToString: () => Cb,
-      isTypeof: () => eb,
-      isUndefined: () => Vb,
-      makeCoreConfig: () => Ea,
-      noop: () => wc,
-      osMeta: () => xW,
-      parseStacktrace: () => ls,
-      sdkMeta: () => pW,
-      setInternalFaroOnGlobalObject: () => nb,
-      transportItemTypeToBodyKey: () => sa,
-      unknownString: () => Gs,
-      userActionDataAttribute: () => xk,
-      userActionTimeoutDataAttribute: () => jk
+      isNull: () => xb,
+      isNumber: () => fb,
+      isObject: () => Wb,
+      isPrimitive: () => hb,
+      isRegExp: () => db,
+      isString: () => ib,
+      isSymbol: () => Nb,
+      isSyntheticEvent: () => gb,
+      isThenable: () => Fb,
+      isToString: () => Zb,
+      isTypeof: () => yb,
+      isUndefined: () => zb,
+      makeCoreConfig: () => IT,
+      noop: () => wa,
+      osMeta: () => VM,
+      parseStacktrace: () => RU,
+      sdkMeta: () => cM,
+      setInternalFaroOnGlobalObject: () => Xb,
+      transportItemTypeToBodyKey: () => SM,
+      unknownString: () => QU,
+      userActionDataAttribute: () => VA,
+      userActionTimeoutDataAttribute: () => OA
     });
-    const kb = "browser",
-      Wb = "com.grafana.faro.session",
-      ab = 144e5,
-      Tb = 9e5,
-      Ub = 1e3,
-      Ib = Tb,
-      Hb = {
+    const Ab = "browser",
+      Mb = "com.grafana.faro.session",
+      Tb = 144e5,
+      Eb = 9e5,
+      Yb = 1e3,
+      Bb = Eb,
+      eb = {
         enabled: !0,
         persistent: !1,
-        maxSessionPersistenceTime: Ib
+        maxSessionPersistenceTime: Bb
       };
-    const fb = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof sb.g ? sb.g : "undefined" !== typeof self ? self : void 0;
-    const Mb = "_faroInternal";
+    const vb = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof Ub.g ? Ub.g : "undefined" !== typeof self ? self : void 0;
+    const Lb = "_faroInternal";
 
-    function Xb() {
-      return fb[Mb]
+    function Pb() {
+      return vb[Lb]
     }
 
-    function nb(bb) {
-      bb.config.isolate ? bb.internalLogger.debug("Skipping registering internal Faro instance on global object") : (bb.internalLogger.debug("Registering internal Faro instance on global object"), Object.defineProperty(fb, Mb, {
+    function Xb(bb) {
+      bb.config.isolate ? bb.internalLogger.debug("Skipping registering internal Faro instance on global object") : (bb.internalLogger.debug("Registering internal Faro instance on global object"), Object.defineProperty(vb, Lb, {
         configurable: !1,
         enumerable: !1,
         writable: !1,
@@ -130,10 +130,10 @@ export const modules = {
       }))
     }
 
-    function mb() {
-      return Mb in fb
+    function jb() {
+      return Lb in vb
     }
-    let lb = {
+    let Rb = {
       api: {
         pushLog: () => {},
         pushError: () => {},
@@ -160,445 +160,445 @@ export const modules = {
       }
     };
 
-    function Qb(bb, cb, sb, kb, Wb, ab, Tb) {
-      return cb.debug("Initializing Faro"), lb = {
-          api: ab,
-          config: sb,
-          instrumentations: Tb,
-          internalLogger: cb,
-          metas: kb,
-          pause: Wb.pause,
-          transports: Wb,
+    function kb(bb, ab, Ub, Ab, Mb, Tb, Eb) {
+      return ab.debug("Initializing Faro"), Rb = {
+          api: Tb,
+          config: Ub,
+          instrumentations: Eb,
+          internalLogger: ab,
+          metas: Ab,
+          pause: Mb.pause,
+          transports: Mb,
           unpatchedConsole: bb,
-          unpause: Wb.unpause
-        }, nb(lb),
+          unpause: Mb.unpause
+        }, Xb(Rb),
         function(bb) {
           if (bb.config.preventGlobalExposure) bb.internalLogger.debug("Skipping registering public Faro instance in the global scope");
           else {
-            if (bb.internalLogger.debug(`Registering public faro reference in the global scope using "${bb.config.globalObjectKey}" key`), bb.config.globalObjectKey in fb) return void bb.internalLogger.warn(`Skipping global registration due to key "${bb.config.globalObjectKey}" being used already. Please set "globalObjectKey" to something else or set "preventGlobalExposure" to "true"`);
-            Object.defineProperty(fb, bb.config.globalObjectKey, {
+            if (bb.internalLogger.debug(`Registering public faro reference in the global scope using "${bb.config.globalObjectKey}" key`), bb.config.globalObjectKey in vb) return void bb.internalLogger.warn(`Skipping global registration due to key "${bb.config.globalObjectKey}" being used already. Please set "globalObjectKey" to something else or set "preventGlobalExposure" to "true"`);
+            Object.defineProperty(vb, bb.config.globalObjectKey, {
               configurable: !1,
               writable: !1,
               value: bb
             })
           }
-        }(lb), lb
+        }(Rb), Rb
     }
 
-    function eb(bb, cb) {
-      return typeof bb === cb
+    function yb(bb, ab) {
+      return typeof bb === ab
     }
 
-    function Cb(bb, cb) {
-      return Object.prototype.toString.call(bb) === `[object ${cb}]`
+    function Zb(bb, ab) {
+      return Object.prototype.toString.call(bb) === `[object ${ab}]`
     }
 
-    function Nb(bb, cb) {
+    function Db(bb, ab) {
       try {
-        return bb instanceof cb
-      } catch (sb) {
+        return bb instanceof ab
+      } catch (Ub) {
         return !1
       }
     }
-    const Vb = bb => eb(bb, "undefined"),
-      Lb = bb => eb(bb, "null"),
-      ub = bb => eb(bb, "string"),
-      Yb = bb => eb(bb, "number") && !isNaN(bb) || eb(bb, "bigint"),
-      hb = bb => Yb(bb) && Number.isInteger(bb),
-      Jb = bb => eb(bb, "boolean"),
-      gb = bb => eb(bb, "symbol"),
-      Bb = bb => !Lb(bb) && eb(bb, "object"),
-      tb = bb => eb(bb, "function"),
-      yb = bb => Cb(bb, "Array"),
-      Pb = bb => Cb(bb, "RegExp"),
-      Db = bb => tb(null === bb || void 0 === bb ? void 0 : bb.then),
-      Eb = bb => !Bb(bb) && !tb(bb),
-      ib = "undefined" !== typeof Event,
-      Ob = bb => ib && Nb(bb, Event),
-      Gb = "undefined" !== typeof Error,
-      Kb = bb => Gb && Nb(bb, Error),
-      Zb = bb => Cb(bb, "ErrorEvent"),
-      zb = bb => Cb(bb, "DOMError"),
-      qb = bb => Cb(bb, "DOMException"),
-      db = "undefined" !== typeof Element,
-      Ab = bb => db && Nb(bb, Element),
+    const zb = bb => yb(bb, "undefined"),
+      xb = bb => yb(bb, "null"),
+      ib = bb => yb(bb, "string"),
+      fb = bb => yb(bb, "number") && !isNaN(bb) || yb(bb, "bigint"),
+      mb = bb => fb(bb) && Number.isInteger(bb),
+      pb = bb => yb(bb, "boolean"),
+      Nb = bb => yb(bb, "symbol"),
+      Wb = bb => !xb(bb) && yb(bb, "object"),
+      Hb = bb => yb(bb, "function"),
+      Ib = bb => Zb(bb, "Array"),
+      db = bb => Zb(bb, "RegExp"),
+      Fb = bb => Hb(null === bb || void 0 === bb ? void 0 : bb.then),
+      hb = bb => !Wb(bb) && !Hb(bb),
+      Gb = "undefined" !== typeof Event,
+      Qb = bb => Gb && Db(bb, Event),
+      qb = "undefined" !== typeof Error,
+      ub = bb => qb && Db(bb, Error),
+      rb = bb => Zb(bb, "ErrorEvent"),
+      Kb = bb => Zb(bb, "DOMError"),
+      ob = bb => Zb(bb, "DOMException"),
+      lb = "undefined" !== typeof Element,
+      tb = bb => lb && Db(bb, Element),
       wb = "undefined" !== typeof Map,
-      rb = bb => wb && Nb(bb, Map),
-      ob = bb => Bb(bb) && "nativeEvent" in bb && "preventDefault" in bb && "stopPropagation" in bb;
+      sb = bb => wb && Db(bb, Map),
+      gb = bb => Wb(bb) && "nativeEvent" in bb && "preventDefault" in bb && "stopPropagation" in bb;
+
+    function Cb(bb) {
+      return null == bb || (Ib(bb) || ib(bb) ? 0 === bb.length : !!Wb(bb) && 0 === Object.keys(bb).length)
+    }
+
+    function Vb() {
+      return Rb.transports.transports.flatMap((bb => bb.getIgnoreUrls()))
+    }
+
+    function Ob() {
+      let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+      return Vb().some((ab => bb && null != bb.match(ab)))
+    }
+
+    function cb(bb) {
+      return ib(bb) ? bb : bb instanceof URL ? bb.href : !Cb(bb) && Hb(null === bb || void 0 === bb ? void 0 : bb.toString) ? bb.toString() : void 0
+    }
+    const Jb = "sessionStorage",
+      nb = "localStorage";
 
     function Sb(bb) {
-      return null == bb || (yb(bb) || ub(bb) ? 0 === bb.length : !!Bb(bb) && 0 === Object.keys(bb).length)
-    }
-
-    function Rb() {
-      return lb.transports.transports.flatMap((bb => bb.getIgnoreUrls()))
-    }
-
-    function vb() {
-      let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-      return Rb().some((cb => bb && null != bb.match(cb)))
-    }
-
-    function Fb(bb) {
-      return ub(bb) ? bb : bb instanceof URL ? bb.href : !Sb(bb) && tb(null === bb || void 0 === bb ? void 0 : bb.toString) ? bb.toString() : void 0
-    }
-    const xb = "sessionStorage",
-      jb = "localStorage";
-
-    function pb(bb) {
       try {
-        let cb;
-        cb = window[bb];
-        const sb = "__faro_storage_test__";
-        return cb.setItem(sb, sb), cb.removeItem(sb), !0
-      } catch (sb) {
-        var cb;
-        return null === (cb = lb.internalLogger) || void 0 === cb || cb.info(`Web storage of type ${bb} is not available. Reason: ${sb}`), !1
+        let ab;
+        ab = window[bb];
+        const Ub = "__faro_storage_test__";
+        return ab.setItem(Ub, Ub), ab.removeItem(Ub), !0
+      } catch (Ub) {
+        var ab;
+        return null === (ab = Rb.internalLogger) || void 0 === ab || ab.info(`Web storage of type ${bb} is not available. Reason: ${Ub}`), !1
       }
     }
 
-    function bc(bb, cb) {
-      return ac(cb) ? window[cb].getItem(bb) : null
+    function ba(bb, ab) {
+      return Ta(ab) ? window[ab].getItem(bb) : null
     }
 
-    function cc(bb, cb, sb) {
-      if (ac(sb)) try {
-        window[sb].setItem(bb, cb)
-      } catch (kb) {}
+    function aa(bb, ab, Ub) {
+      if (Ta(Ub)) try {
+        window[Ub].setItem(bb, ab)
+      } catch (Ab) {}
     }
 
-    function sc(bb, cb) {
-      ac(cb) && window[cb].removeItem(bb)
+    function Ua(bb, ab) {
+      Ta(ab) && window[ab].removeItem(bb)
     }
-    const kc = pb(jb),
-      Wc = pb(xb);
+    const Aa = Sb(nb),
+      Ma = Sb(Jb);
 
-    function ac(bb) {
-      return bb === jb ? kc : bb === xb && Wc
+    function Ta(bb) {
+      return bb === nb ? Aa : bb === Jb && Ma
     }
 
-    function Tc(bb) {
-      return Tc = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(bb) {
+    function Ea(bb) {
+      return Ea = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(bb) {
         return typeof bb
       } : function(bb) {
         return bb && "function" == typeof Symbol && bb.constructor === Symbol && bb !== Symbol.prototype ? "symbol" : typeof bb
-      }, Tc(bb)
+      }, Ea(bb)
     }
 
-    function Uc(bb) {
-      var cb = function(bb, cb) {
-        if ("object" != Tc(bb) || !bb) return bb;
-        var sb = bb[Symbol.toPrimitive];
-        if (void 0 !== sb) {
-          var kb = sb.call(bb, cb || "default");
-          if ("object" != Tc(kb)) return kb;
+    function Ya(bb) {
+      var ab = function(bb, ab) {
+        if ("object" != Ea(bb) || !bb) return bb;
+        var Ub = bb[Symbol.toPrimitive];
+        if (void 0 !== Ub) {
+          var Ab = Ub.call(bb, ab || "default");
+          if ("object" != Ea(Ab)) return Ab;
           throw new TypeError("@@toPrimitive must return a primitive value.")
         }
-        return ("string" === cb ? String : Number)(bb)
+        return ("string" === ab ? String : Number)(bb)
       }(bb, "string");
-      return "symbol" == Tc(cb) ? cb : cb + ""
+      return "symbol" == Ea(ab) ? ab : ab + ""
     }
 
-    function Ic(bb, cb, sb) {
-      return (cb = Uc(cb)) in bb ? Object.defineProperty(bb, cb, {
-        value: sb,
+    function Ba(bb, ab, Ub) {
+      return (ab = Ya(ab)) in bb ? Object.defineProperty(bb, ab, {
+        value: Ub,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : bb[cb] = sb, bb
+      }) : bb[ab] = Ub, bb
     }
 
-    function Hc(bb, cb) {
-      var sb = Object.keys(bb);
+    function ea(bb, ab) {
+      var Ub = Object.keys(bb);
       if (Object.getOwnPropertySymbols) {
-        var kb = Object.getOwnPropertySymbols(bb);
-        cb && (kb = kb.filter((function(cb) {
-          return Object.getOwnPropertyDescriptor(bb, cb).enumerable
-        }))), sb.push.apply(sb, kb)
+        var Ab = Object.getOwnPropertySymbols(bb);
+        ab && (Ab = Ab.filter((function(ab) {
+          return Object.getOwnPropertyDescriptor(bb, ab).enumerable
+        }))), Ub.push.apply(Ub, Ab)
       }
-      return sb
+      return Ub
     }
 
-    function fc(bb) {
-      for (var cb = 1; cb < arguments.length; cb++) {
-        var sb = null != arguments[cb] ? arguments[cb] : {};
-        cb % 2 ? Hc(Object(sb), !0).forEach((function(cb) {
-          Ic(bb, cb, sb[cb])
-        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(bb, Object.getOwnPropertyDescriptors(sb)) : Hc(Object(sb)).forEach((function(cb) {
-          Object.defineProperty(bb, cb, Object.getOwnPropertyDescriptor(sb, cb))
+    function va(bb) {
+      for (var ab = 1; ab < arguments.length; ab++) {
+        var Ub = null != arguments[ab] ? arguments[ab] : {};
+        ab % 2 ? ea(Object(Ub), !0).forEach((function(ab) {
+          Ba(bb, ab, Ub[ab])
+        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(bb, Object.getOwnPropertyDescriptors(Ub)) : ea(Object(Ub)).forEach((function(ab) {
+          Object.defineProperty(bb, ab, Object.getOwnPropertyDescriptor(Ub, ab))
         }))
       }
       return bb
     }
 
-    function Mc() {
-      let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : lb;
-      var cb, sb, kb;
-      const Wb = bb.config.sessionTracking,
-        ab = null !== (cb = null !== (sb = null === Wb || void 0 === Wb || null === (kb = Wb.sampler) || void 0 === kb ? void 0 : kb.call(Wb, {
+    function La() {
+      let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Rb;
+      var ab, Ub, Ab;
+      const Mb = bb.config.sessionTracking,
+        Tb = null !== (ab = null !== (Ub = null === Mb || void 0 === Mb || null === (Ab = Mb.sampler) || void 0 === Ab ? void 0 : Ab.call(Mb, {
           metas: bb.metas.value
-        })) && void 0 !== sb ? sb : null === Wb || void 0 === Wb ? void 0 : Wb.samplingRate) && void 0 !== cb ? cb : 1,
-        Tb = "number" === typeof ab ? function(bb) {
+        })) && void 0 !== Ub ? Ub : null === Mb || void 0 === Mb ? void 0 : Mb.samplingRate) && void 0 !== ab ? ab : 1,
+        Eb = "number" === typeof Tb ? function(bb) {
           return Math.min(1, Math.max(0, bb))
-        }(ab) : 0;
-      if (!(Tb > 0)) return !1;
-      if (1 === Tb) return !0;
+        }(Tb) : 0;
+      if (!(Eb > 0)) return !1;
+      if (1 === Eb) return !0;
       try {
         const bb = "undefined" !== typeof window ? window.crypto : void 0;
         if ("function" === typeof(null === bb || void 0 === bb ? void 0 : bb.getRandomValues)) {
-          const cb = new Uint32Array(1);
-          return bb.getRandomValues(cb), cb[0] / Math.pow(2, 32) < Tb
+          const ab = new Uint32Array(1);
+          return bb.getRandomValues(ab), ab[0] / Math.pow(2, 32) < Eb
         }
-      } catch (Ub) {}
-      return Math.random() < Tb
+      } catch (Yb) {}
+      return Math.random() < Eb
     }
 
-    function Xc() {
+    function Pa() {
       return Date.now()
     }
 
-    function nc() {
+    function Xa() {
       return "undefined" !== typeof performance && "function" === typeof performance.now ? performance.now() : Date.now()
     }
 
-    function mc() {
+    function ja() {
       return (new Date).toISOString()
     }
 
-    function lc(bb) {
+    function Ra(bb) {
       return new Date(bb).toISOString()
     }
-    const Qc = "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ0123456789";
+    const ka = "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ0123456789";
 
-    function ec() {
+    function ya() {
       let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
-      const cb = new Uint32Array(bb),
-        sb = "undefined" !== typeof globalThis ? globalThis.crypto : void 0;
-      if (null === sb || void 0 === sb ? void 0 : sb.getRandomValues) sb.getRandomValues(cb);
+      const ab = new Uint32Array(bb),
+        Ub = "undefined" !== typeof globalThis ? globalThis.crypto : void 0;
+      if (null === Ub || void 0 === Ub ? void 0 : Ub.getRandomValues) Ub.getRandomValues(ab);
       else
-        for (let Wb = 0; Wb < bb; Wb++) cb[Wb] = Math.floor(4294967296 * Math.random());
-      let kb = "";
-      for (let Wb = 0; Wb < bb; Wb++) kb += Qc[cb[Wb] % 59];
-      return kb
+        for (let Mb = 0; Mb < bb; Mb++) ab[Mb] = Math.floor(4294967296 * Math.random());
+      let Ab = "";
+      for (let Mb = 0; Mb < bb; Mb++) Ab += ka[ab[Mb] % 59];
+      return Ab
     }
 
-    function Cc(bb, cb) {
-      if (bb === cb) return !0;
-      if (eb(bb, "number") && isNaN(bb)) return eb(cb, "number") && isNaN(cb);
-      const sb = yb(bb),
-        kb = yb(cb);
-      if (sb !== kb) return !1;
-      if (sb && kb) {
-        const sb = bb.length;
-        if (sb !== cb.length) return !1;
-        for (let kb = sb; 0 !== kb--;)
-          if (!Cc(bb[kb], cb[kb])) return !1;
+    function Za(bb, ab) {
+      if (bb === ab) return !0;
+      if (yb(bb, "number") && isNaN(bb)) return yb(ab, "number") && isNaN(ab);
+      const Ub = Ib(bb),
+        Ab = Ib(ab);
+      if (Ub !== Ab) return !1;
+      if (Ub && Ab) {
+        const Ub = bb.length;
+        if (Ub !== ab.length) return !1;
+        for (let Ab = Ub; 0 !== Ab--;)
+          if (!Za(bb[Ab], ab[Ab])) return !1;
         return !0
       }
-      const Wb = Bb(bb),
-        ab = Bb(cb);
-      if (Wb !== ab) return !1;
-      if (bb && cb && Wb && ab) {
-        const sb = Object.keys(bb),
-          kb = Object.keys(cb);
-        if (sb.length !== kb.length) return !1;
-        for (let bb of sb)
-          if (!kb.includes(bb)) return !1;
-        for (let Wb of sb)
-          if (!Cc(bb[Wb], cb[Wb])) return !1;
+      const Mb = Wb(bb),
+        Tb = Wb(ab);
+      if (Mb !== Tb) return !1;
+      if (bb && ab && Mb && Tb) {
+        const Ub = Object.keys(bb),
+          Ab = Object.keys(ab);
+        if (Ub.length !== Ab.length) return !1;
+        for (let bb of Ub)
+          if (!Ab.includes(bb)) return !1;
+        for (let Mb of Ub)
+          if (!Za(bb[Mb], ab[Mb])) return !1;
         return !0
       }
       return !1
     }
-    const Nc = "click",
-      Vc = "navigation",
-      Lc = "view_changed",
-      uc = "session_start",
-      Yc = "session_resume",
-      hc = "session_extend",
-      Jc = "service_name_override",
-      gc = "route_change";
+    const Da = "click",
+      za = "navigation",
+      xa = "view_changed",
+      ia = "session_start",
+      fa = "session_resume",
+      ma = "session_extend",
+      pa = "service_name_override",
+      Na = "route_change";
 
-    function Bc() {
+    function Wa() {
       let {
         sessionId: bb,
-        started: cb,
-        lastActivity: sb,
-        isSampled: kb = !0
-      } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, Wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : lb;
-      var ab;
-      const Tb = Xc(),
-        Ub = null === (ab = Wb.config) || void 0 === ab || null === (ab = ab.sessionTracking) || void 0 === ab ? void 0 : ab.generateSessionId;
-      return null == bb && (bb = "function" === typeof Ub ? Ub() : ec()), {
+        started: ab,
+        lastActivity: Ub,
+        isSampled: Ab = !0
+      } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, Mb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Rb;
+      var Tb;
+      const Eb = Pa(),
+        Yb = null === (Tb = Mb.config) || void 0 === Tb || null === (Tb = Tb.sessionTracking) || void 0 === Tb ? void 0 : Tb.generateSessionId;
+      return null == bb && (bb = "function" === typeof Yb ? Yb() : ya()), {
         sessionId: bb,
-        lastActivity: null !== sb && void 0 !== sb ? sb : Tb,
-        started: null !== cb && void 0 !== cb ? cb : Tb,
-        isSampled: kb
+        lastActivity: null !== Ub && void 0 !== Ub ? Ub : Eb,
+        started: null !== ab && void 0 !== ab ? ab : Eb,
+        isSampled: Ab
       }
     }
 
-    function tc(bb) {
+    function Ha(bb) {
       if (null == bb) return !1;
-      const cb = Xc();
-      return cb - bb.started < 144e5 && cb - bb.lastActivity < Tb
+      const ab = Pa();
+      return ab - bb.started < 144e5 && ab - bb.lastActivity < Eb
     }
 
-    function yc(bb) {
+    function Ia(bb) {
       let {
-        fetchUserSession: cb,
-        storeUserSession: sb,
-        adoptSession: kb,
-        updateInterval: Wb = 0
-      } = bb, Ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : lb, Ib = 0;
+        fetchUserSession: ab,
+        storeUserSession: Ub,
+        adoptSession: Ab,
+        updateInterval: Mb = 0
+      } = bb, Yb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Rb, Bb = 0;
       return function() {
         let {
           forceSessionExtend: bb = !1,
-          refreshActivity: Hb = !0
+          refreshActivity: eb = !0
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        var fb, Mb;
-        if (!cb || !sb) return;
-        const Xb = Xc();
-        if (!bb && Xb < Ib && Ib - Xb <= Wb) return;
-        const nb = Ub.config.sessionTracking,
-          mb = null === nb || void 0 === nb ? void 0 : nb.persistent;
-        if (mb && !kc || !mb && !Wc) return;
-        const lb = cb();
-        if (Ib = Math.min(Xb + Wb, (null !== (fb = null === lb || void 0 === lb ? void 0 : lb.started) && void 0 !== fb ? fb : Xb) + ab, (null !== (Mb = null === lb || void 0 === lb ? void 0 : lb.lastActivity) && void 0 !== Mb ? Mb : Xb) + Tb), !1 === bb && tc(lb)) {
-          var Qb;
-          Hb && sb(fc(fc({}, lb), {}, {
-            lastActivity: Xb
+        var vb, Lb;
+        if (!ab || !Ub) return;
+        const Pb = Pa();
+        if (!bb && Pb < Bb && Bb - Pb <= Mb) return;
+        const Xb = Yb.config.sessionTracking,
+          jb = null === Xb || void 0 === Xb ? void 0 : Xb.persistent;
+        if (jb && !Aa || !jb && !Ma) return;
+        const Rb = ab();
+        if (Bb = Math.min(Pb + Mb, (null !== (vb = null === Rb || void 0 === Rb ? void 0 : Rb.started) && void 0 !== vb ? vb : Pb) + Tb, (null !== (Lb = null === Rb || void 0 === Rb ? void 0 : Rb.lastActivity) && void 0 !== Lb ? Lb : Pb) + Eb), !1 === bb && Ha(Rb)) {
+          var kb;
+          eb && Ub(va(va({}, Rb), {}, {
+            lastActivity: Pb
           }));
-          const bb = null === (Qb = Ub.metas.value.session) || void 0 === Qb ? void 0 : Qb.id;
-          null != kb && null != lb.sessionMeta && lb.sessionId !== bb && kb(lb.sessionMeta)
+          const bb = null === (kb = Yb.metas.value.session) || void 0 === kb ? void 0 : kb.id;
+          null != Ab && null != Rb.sessionMeta && Rb.sessionId !== bb && Ab(Rb.sessionMeta)
         } else {
-          var eb, Cb, Nb;
-          let bb = Dc(Bc({
-            isSampled: Mc(Ub)
-          }, Ub), lb, Ub);
-          Ib = Xb + Wb, sb(bb), null === (eb = Ub.api) || void 0 === eb || eb.setSession(bb.sessionMeta), null === nb || void 0 === nb || null === (Cb = nb.onSessionChange) || void 0 === Cb || Cb.call(nb, null !== (Nb = null === lb || void 0 === lb ? void 0 : lb.sessionMeta) && void 0 !== Nb ? Nb : null, bb.sessionMeta)
+          var yb, Zb, Db;
+          let bb = Fa(Wa({
+            isSampled: La(Yb)
+          }, Yb), Rb, Yb);
+          Bb = Pb + Mb, Ub(bb), null === (yb = Yb.api) || void 0 === yb || yb.setSession(bb.sessionMeta), null === Xb || void 0 === Xb || null === (Zb = Xb.onSessionChange) || void 0 === Zb || Zb.call(Xb, null !== (Db = null === Rb || void 0 === Rb ? void 0 : Rb.sessionMeta) && void 0 !== Db ? Db : null, bb.sessionMeta)
         }
       }
     }
 
-    function Pc(bb) {
-      let cb, {
-          fetchUserSession: sb,
-          storeUserSession: kb,
-          updateInterval: Wb = 0
+    function da(bb) {
+      let ab, {
+          fetchUserSession: Ub,
+          storeUserSession: Ab,
+          updateInterval: Mb = 0
         } = bb,
-        ab = 0;
+        Tb = 0;
       return bb => {
-        const Tb = Xc();
-        if (bb === cb && Tb < ab && ab - Tb <= Wb) return;
-        cb = bb, ab = Tb + Wb;
-        const Ub = sb();
-        (null === Ub || void 0 === Ub ? void 0 : Ub.sessionId) === bb && tc(Ub) && kb(fc(fc({}, Ub), {}, {
-          lastActivity: Tb
+        const Eb = Pa();
+        if (bb === ab && Eb < Tb && Tb - Eb <= Mb) return;
+        ab = bb, Tb = Eb + Mb;
+        const Yb = Ub();
+        (null === Yb || void 0 === Yb ? void 0 : Yb.sessionId) === bb && Ha(Yb) && Ab(va(va({}, Yb), {}, {
+          lastActivity: Eb
         }))
       }
     }
 
-    function Dc(bb, cb) {
-      let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : lb;
-      var kb, Wb, ab, Tb, Ub, Ib;
-      const Hb = fc(fc({}, bb), {}, {
+    function Fa(bb, ab) {
+      let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Rb;
+      var Ab, Mb, Tb, Eb, Yb, Bb;
+      const eb = va(va({}, bb), {}, {
           sessionMeta: {
             id: bb.sessionId,
-            attributes: ic(fc(fc(fc({}, null === (kb = sb.config.sessionTracking) || void 0 === kb || null === (kb = kb.session) || void 0 === kb ? void 0 : kb.attributes), null !== (Wb = null === (ab = sb.metas.value.session) || void 0 === ab ? void 0 : ab.attributes) && void 0 !== Wb ? Wb : {}), {}, {
+            attributes: Ga(va(va(va({}, null === (Ab = Ub.config.sessionTracking) || void 0 === Ab || null === (Ab = Ab.session) || void 0 === Ab ? void 0 : Ab.attributes), null !== (Mb = null === (Tb = Ub.metas.value.session) || void 0 === Tb ? void 0 : Tb.attributes) && void 0 !== Mb ? Mb : {}), {}, {
               isSampled: bb.isSampled.toString()
             }))
           }
         }),
-        fb = null !== (Tb = null === (Ub = sb.metas.value.session) || void 0 === Ub ? void 0 : Ub.overrides) && void 0 !== Tb ? Tb : null === cb || void 0 === cb || null === (Ib = cb.sessionMeta) || void 0 === Ib ? void 0 : Ib.overrides;
-      Sb(fb) || (Hb.sessionMeta.overrides = fb);
-      const Mb = null === cb || void 0 === cb ? void 0 : cb.sessionId;
-      return null != Mb && (Hb.sessionMeta.attributes.previousSession = Mb), Hb
+        vb = null !== (Eb = null === (Yb = Ub.metas.value.session) || void 0 === Yb ? void 0 : Yb.overrides) && void 0 !== Eb ? Eb : null === ab || void 0 === ab || null === (Bb = ab.sessionMeta) || void 0 === Bb ? void 0 : Bb.overrides;
+      Cb(vb) || (eb.sessionMeta.overrides = vb);
+      const Lb = null === ab || void 0 === ab ? void 0 : ab.sessionId;
+      return null != Lb && (eb.sessionMeta.attributes.previousSession = Lb), eb
     }
 
-    function Ec(bb) {
+    function ha(bb) {
       let {
-        fetchUserSession: cb,
-        storeUserSession: sb
-      } = bb, kb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : lb, Wb = !1;
+        fetchUserSession: ab,
+        storeUserSession: Ub
+      } = bb, Ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Rb, Mb = !1;
       return function(bb) {
-        if (Wb) return;
-        const ab = bb.session,
-          Tb = cb();
-        let Ub = null === ab || void 0 === ab ? void 0 : ab.id;
-        const Ib = null === ab || void 0 === ab ? void 0 : ab.attributes,
-          Hb = null === ab || void 0 === ab ? void 0 : ab.overrides,
-          fb = null === Tb || void 0 === Tb ? void 0 : Tb.sessionMeta,
-          Mb = null === fb || void 0 === fb ? void 0 : fb.overrides,
-          Xb = !!Hb && !Cc(Hb, Mb),
-          nb = !!Ib && !Cc(Ib, null === fb || void 0 === fb ? void 0 : fb.attributes);
-        if (ab && Ub !== (null === Tb || void 0 === Tb ? void 0 : Tb.sessionId) || nb || Xb) {
-          var mb, lb;
-          const bb = null != Tb && Ub === Tb.sessionId,
-            cb = Dc(bb ? Tb : Bc({
-              sessionId: Ub,
-              isSampled: Mc(kb)
-            }, kb), Tb, kb),
-            ab = null === Tb || void 0 === Tb || null === (mb = Tb.sessionMeta) || void 0 === mb || null === (mb = mb.attributes) || void 0 === mb ? void 0 : mb.previousSession;
-          bb && null != ab && ab !== cb.sessionId && (cb.sessionMeta.attributes.previousSession = ab), (null === (lb = cb.sessionMeta.attributes) || void 0 === lb ? void 0 : lb.previousSession) === cb.sessionId && delete cb.sessionMeta.attributes.previousSession, sb(cb),
-            function(bb, cb) {
-              let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                kb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-              var Wb, ab, Tb;
-              if (!cb) return;
-              const Ub = sb.serviceName,
-                Ib = null !== (Wb = null !== (ab = kb.serviceName) && void 0 !== ab ? ab : null === (Tb = bb.metas.value.app) || void 0 === Tb ? void 0 : Tb.name) && void 0 !== Wb ? Wb : "";
-              Ub && Ub !== Ib && bb.api.pushEvent(Jc, {
-                serviceName: Ub,
-                previousServiceName: Ib
+        if (Mb) return;
+        const Tb = bb.session,
+          Eb = ab();
+        let Yb = null === Tb || void 0 === Tb ? void 0 : Tb.id;
+        const Bb = null === Tb || void 0 === Tb ? void 0 : Tb.attributes,
+          eb = null === Tb || void 0 === Tb ? void 0 : Tb.overrides,
+          vb = null === Eb || void 0 === Eb ? void 0 : Eb.sessionMeta,
+          Lb = null === vb || void 0 === vb ? void 0 : vb.overrides,
+          Pb = !!eb && !Za(eb, Lb),
+          Xb = !!Bb && !Za(Bb, null === vb || void 0 === vb ? void 0 : vb.attributes);
+        if (Tb && Yb !== (null === Eb || void 0 === Eb ? void 0 : Eb.sessionId) || Xb || Pb) {
+          var jb, Rb;
+          const bb = null != Eb && Yb === Eb.sessionId,
+            ab = Fa(bb ? Eb : Wa({
+              sessionId: Yb,
+              isSampled: La(Ab)
+            }, Ab), Eb, Ab),
+            Tb = null === Eb || void 0 === Eb || null === (jb = Eb.sessionMeta) || void 0 === jb || null === (jb = jb.attributes) || void 0 === jb ? void 0 : jb.previousSession;
+          bb && null != Tb && Tb !== ab.sessionId && (ab.sessionMeta.attributes.previousSession = Tb), (null === (Rb = ab.sessionMeta.attributes) || void 0 === Rb ? void 0 : Rb.previousSession) === ab.sessionId && delete ab.sessionMeta.attributes.previousSession, Ub(ab),
+            function(bb, ab) {
+              let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+                Ab = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+              var Mb, Tb, Eb;
+              if (!ab) return;
+              const Yb = Ub.serviceName,
+                Bb = null !== (Mb = null !== (Tb = Ab.serviceName) && void 0 !== Tb ? Tb : null === (Eb = bb.metas.value.app) || void 0 === Eb ? void 0 : Eb.name) && void 0 !== Mb ? Mb : "";
+              Yb && Yb !== Bb && bb.api.pushEvent(pa, {
+                serviceName: Yb,
+                previousServiceName: Bb
               })
-            }(kb, Xb, Hb, Mb), Wb = !0;
+            }(Ab, Pb, eb, Lb), Mb = !0;
           try {
-            kb.api.setSession(cb.sessionMeta)
+            Ab.api.setSession(ab.sessionMeta)
           } finally {
-            Wb = !1
+            Mb = !1
           }
         }
       }
     }
 
-    function ic(bb) {
-      const cb = {};
-      for (const sb of Object.keys(bb)) {
-        const kb = bb[sb];
-        void 0 !== kb && (cb[sb] = kb)
+    function Ga(bb) {
+      const ab = {};
+      for (const Ub of Object.keys(bb)) {
+        const Ab = bb[Ub];
+        void 0 !== Ab && (ab[Ub] = Ab)
       }
-      return cb
+      return ab
     }
 
-    function Oc() {
+    function Qa() {
       let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
       return JSON.stringify(null !== bb && void 0 !== bb ? bb : {}, function() {
         const bb = new WeakSet;
-        return function(cb, sb) {
-          if (Bb(sb) && null !== sb) {
-            if (bb.has(sb)) return null;
-            bb.add(sb)
+        return function(ab, Ub) {
+          if (Wb(Ub) && null !== Ub) {
+            if (bb.has(Ub)) return null;
+            bb.add(Ub)
           }
-          return sb
+          return Ub
         }
       }())
     }
 
-    function Gc() {
+    function qa() {
       let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      const cb = {};
-      for (const [sb, kb] of Object.entries(bb)) cb[sb] = Bb(kb) && null !== kb ? Oc(kb) : String(kb);
-      return cb
+      const ab = {};
+      for (const [Ub, Ab] of Object.entries(bb)) ab[Ub] = Wb(Ab) && null !== Ab ? Qa(Ab) : String(Ab);
+      return ab
     }
-    var Kc = class bb {
+    var ua = class bb {
       constructor() {
-        var cb = this;
-        let sb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : lb;
-        this.context = sb, this.adopting = !1, this.isAdopting = () => this.adopting, this.adoptSession = bb => {
+        var ab = this;
+        let Ub = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Rb;
+        this.context = Ub, this.adopting = !1, this.isAdopting = () => this.adopting, this.adoptSession = bb => {
           this.adopting = !0;
           try {
-            var cb;
-            null === (cb = this.context.api) || void 0 === cb || cb.setSession(bb)
+            var ab;
+            null === (ab = this.context.api) || void 0 === ab || ab.setSession(bb)
           } finally {
             this.adopting = !1
           }
@@ -606,29 +606,29 @@ export const modules = {
           let {
             refreshActivity: bb = !0
           } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          return cb.updateUserSession({
+          return ab.updateUserSession({
             refreshActivity: bb
           })
-        }, this.recordActivity = Pc({
+        }, this.recordActivity = da({
           fetchUserSession: bb.fetchUserSession,
           storeUserSession: bb.storeUserSession,
-          updateInterval: Ub
-        }), this.updateUserSession = yc({
+          updateInterval: Yb
+        }), this.updateUserSession = Ia({
           fetchUserSession: bb.fetchUserSession,
           storeUserSession: bb.storeUserSession,
           adoptSession: this.adoptSession,
-          updateInterval: Ub
-        }, sb), this.init()
+          updateInterval: Yb
+        }, Ub), this.init()
       }
       static removeUserSession() {
-        sc(Wb, bb.storageTypeLocal)
+        Ua(Mb, bb.storageTypeLocal)
       }
-      static storeUserSession(cb) {
-        cc(Wb, Oc(cb), bb.storageTypeLocal)
+      static storeUserSession(ab) {
+        aa(Mb, Qa(ab), bb.storageTypeLocal)
       }
       static fetchUserSession() {
-        const cb = bc(Wb, bb.storageTypeLocal);
-        return cb ? JSON.parse(cb) : null
+        const ab = ba(Mb, bb.storageTypeLocal);
+        return ab ? JSON.parse(ab) : null
       }
       init() {
         document.addEventListener("visibilitychange", (() => {
@@ -637,46 +637,46 @@ export const modules = {
             this.updateSession({
               refreshActivity: !1
             });
-            const cb = null === (bb = this.context.api) || void 0 === bb || null === (bb = bb.getSession()) || void 0 === bb ? void 0 : bb.id;
-            cb && this.recordActivity(cb)
+            const ab = null === (bb = this.context.api) || void 0 === bb || null === (bb = bb.getSession()) || void 0 === bb ? void 0 : bb.id;
+            ab && this.recordActivity(ab)
           }
-        })), this.context.metas.addListener(Ec({
+        })), this.context.metas.addListener(ha({
           fetchUserSession: bb.fetchUserSession,
           storeUserSession: bb.storeUserSession
         }, this.context))
       }
     };
-    Kc.storageTypeLocal = jb;
-    var Zc = class bb {
+    ua.storageTypeLocal = nb;
+    var ra = class bb {
       constructor() {
-        var cb = this;
-        let sb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : lb;
-        this.context = sb, this.isAdopting = () => !1, this.updateSession = function() {
+        var ab = this;
+        let Ub = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Rb;
+        this.context = Ub, this.isAdopting = () => !1, this.updateSession = function() {
           let {
             refreshActivity: bb = !0
           } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          return cb.updateUserSession({
+          return ab.updateUserSession({
             refreshActivity: bb
           })
-        }, this.recordActivity = Pc({
+        }, this.recordActivity = da({
           fetchUserSession: bb.fetchUserSession,
           storeUserSession: bb.storeUserSession,
-          updateInterval: Ub
-        }), this.updateUserSession = yc({
+          updateInterval: Yb
+        }), this.updateUserSession = Ia({
           fetchUserSession: bb.fetchUserSession,
           storeUserSession: bb.storeUserSession,
-          updateInterval: Ub
-        }, sb), this.init()
+          updateInterval: Yb
+        }, Ub), this.init()
       }
       static removeUserSession() {
-        sc(Wb, bb.storageTypeSession)
+        Ua(Mb, bb.storageTypeSession)
       }
-      static storeUserSession(cb) {
-        cc(Wb, Oc(cb), bb.storageTypeSession)
+      static storeUserSession(ab) {
+        aa(Mb, Qa(ab), bb.storageTypeSession)
       }
       static fetchUserSession() {
-        const cb = bc(Wb, bb.storageTypeSession);
-        return cb ? JSON.parse(cb) : null
+        const ab = ba(Mb, bb.storageTypeSession);
+        return ab ? JSON.parse(ab) : null
       }
       init() {
         document.addEventListener("visibilitychange", (() => {
@@ -685,67 +685,67 @@ export const modules = {
             this.updateSession({
               refreshActivity: !1
             });
-            const cb = null === (bb = this.context.api) || void 0 === bb || null === (bb = bb.getSession()) || void 0 === bb ? void 0 : bb.id;
-            cb && this.recordActivity(cb)
+            const ab = null === (bb = this.context.api) || void 0 === bb || null === (bb = bb.getSession()) || void 0 === bb ? void 0 : bb.id;
+            ab && this.recordActivity(ab)
           }
-        })), this.context.metas.addListener(Ec({
+        })), this.context.metas.addListener(ha({
           fetchUserSession: bb.fetchUserSession,
           storeUserSession: bb.storeUserSession
         }, this.context))
       }
     };
-    Zc.storageTypeSession = xb;
-    const zc = new WeakMap;
+    ra.storageTypeSession = Jb;
+    const Ka = new WeakMap;
 
-    function qc(bb) {
-      let cb = zc.get(bb);
-      if (!cb) {
-        let sb = [],
-          kb = [];
-        cb = {
+    function oa(bb) {
+      let ab = Ka.get(bb);
+      if (!ab) {
+        let Ub = [],
+          Ab = [];
+        ab = {
           addSessionUpdateListener: bb => {
-            sb.push(bb)
+            Ub.push(bb)
           },
           removeSessionUpdateListener: bb => {
-            sb = sb.filter((cb => cb !== bb))
+            Ub = Ub.filter((ab => ab !== bb))
           },
           notifySessionUpdate: bb => {
-            sb.forEach((cb => cb(bb)))
+            Ub.forEach((ab => ab(bb)))
           },
-          shouldCapture: () => kb.every((bb => bb())),
+          shouldCapture: () => Ab.every((bb => bb())),
           addCaptureFilter: bb => {
-            kb.push(bb)
+            Ab.push(bb)
           },
           removeCaptureFilter: bb => {
-            kb = kb.filter((cb => cb !== bb))
+            Ab = Ab.filter((ab => ab !== bb))
           }
-        }, zc.set(bb, cb)
+        }, Ka.set(bb, ab)
       }
-      return cb
+      return ab
     }
-    var dc = class {
-      constructor(bb, cb, sb) {
-        this.metas = bb, this.transports = cb, this.onActivate = sb, this.waiting = !1, this.shouldCapture = () => !document.prerendering, this.discard = () => null, this.recordUpdate = bb => {
-          var cb, sb, kb;
-          const Wb = this.pending;
-          var ab, Tb;
+    var la = class {
+      constructor(bb, ab, Ub) {
+        this.metas = bb, this.transports = ab, this.onActivate = Ub, this.waiting = !1, this.shouldCapture = () => !document.prerendering, this.discard = () => null, this.recordUpdate = bb => {
+          var ab, Ub, Ab;
+          const Mb = this.pending;
+          var Tb, Eb;
           if ("overrides" === bb.type) return void(this.pending = {
-            reset: null !== (ab = null === Wb || void 0 === Wb ? void 0 : Wb.reset) && void 0 !== ab && ab,
-            inheritOverrides: null === (Tb = null === Wb || void 0 === Wb ? void 0 : Wb.inheritOverrides) || void 0 === Tb || Tb,
-            session: fc(fc({}, null === Wb || void 0 === Wb ? void 0 : Wb.session), {}, {
-              overrides: fc(fc({}, null === Wb || void 0 === Wb ? void 0 : Wb.session.overrides), bb.overrides)
+            reset: null !== (Tb = null === Mb || void 0 === Mb ? void 0 : Mb.reset) && void 0 !== Tb && Tb,
+            inheritOverrides: null === (Eb = null === Mb || void 0 === Mb ? void 0 : Mb.inheritOverrides) || void 0 === Eb || Eb,
+            session: va(va({}, null === Mb || void 0 === Mb ? void 0 : Mb.session), {}, {
+              overrides: va(va({}, null === Mb || void 0 === Mb ? void 0 : Mb.session.overrides), bb.overrides)
             })
           });
-          const Ub = bb.session,
-            Ib = Sb(Ub) || null != Ub && "id" in Ub && !Ub.id,
-            Hb = null !== (cb = null === Ub || void 0 === Ub ? void 0 : Ub.overrides) && void 0 !== cb ? cb : null === Wb || void 0 === Wb ? void 0 : Wb.session.overrides;
+          const Yb = bb.session,
+            Bb = Cb(Yb) || null != Yb && "id" in Yb && !Yb.id,
+            eb = null !== (ab = null === Yb || void 0 === Yb ? void 0 : Yb.overrides) && void 0 !== ab ? ab : null === Mb || void 0 === Mb ? void 0 : Mb.session.overrides;
           this.pending = {
-            reset: Ib || !(null === Ub || void 0 === Ub ? void 0 : Ub.id) && null !== (sb = null === Wb || void 0 === Wb ? void 0 : Wb.reset) && void 0 !== sb && sb,
-            inheritOverrides: !(!bb.overrides && void 0 !== (null === Ub || void 0 === Ub ? void 0 : Ub.overrides)) && (null === (kb = null === Wb || void 0 === Wb ? void 0 : Wb.inheritOverrides) || void 0 === kb || kb),
+            reset: Bb || !(null === Yb || void 0 === Yb ? void 0 : Yb.id) && null !== (Ub = null === Mb || void 0 === Mb ? void 0 : Mb.reset) && void 0 !== Ub && Ub,
+            inheritOverrides: !(!bb.overrides && void 0 !== (null === Yb || void 0 === Yb ? void 0 : Yb.overrides)) && (null === (Ab = null === Mb || void 0 === Mb ? void 0 : Mb.inheritOverrides) || void 0 === Ab || Ab),
             session: {
-              id: null === Ub || void 0 === Ub ? void 0 : Ub.id,
-              attributes: (null === Ub || void 0 === Ub ? void 0 : Ub.attributes) && fc({}, Ub.attributes),
-              overrides: bb.overrides ? fc(fc({}, null === Wb || void 0 === Wb ? void 0 : Wb.session.overrides), bb.overrides) : Hb && fc({}, Hb)
+              id: null === Yb || void 0 === Yb ? void 0 : Yb.id,
+              attributes: (null === Yb || void 0 === Yb ? void 0 : Yb.attributes) && va({}, Yb.attributes),
+              overrides: bb.overrides ? va(va({}, null === Mb || void 0 === Mb ? void 0 : Mb.session.overrides), bb.overrides) : eb && va({}, eb)
             }
           }
         }, this.activate = () => {
@@ -753,302 +753,302 @@ export const modules = {
         }
       }
       initialize() {
-        var bb, cb;
-        this.waiting = !0, qc(this.metas).addSessionUpdateListener(this.recordUpdate), qc(this.metas).addCaptureFilter(this.shouldCapture), this.transports.addBeforeSendHooks(this.discard), document.addEventListener("prerenderingchange", this.activate), null === (bb = (cb = this.metas).addCaptureListener) || void 0 === bb || bb.call(cb, this.activate), this.activate()
+        var bb, ab;
+        this.waiting = !0, oa(this.metas).addSessionUpdateListener(this.recordUpdate), oa(this.metas).addCaptureFilter(this.shouldCapture), this.transports.addBeforeSendHooks(this.discard), document.addEventListener("prerenderingchange", this.activate), null === (bb = (ab = this.metas).addCaptureListener) || void 0 === bb || bb.call(ab, this.activate), this.activate()
       }
       destroy() {
-        var bb, cb;
-        this.waiting = !1, document.removeEventListener("prerenderingchange", this.activate), qc(this.metas).removeSessionUpdateListener(this.recordUpdate), null === (bb = (cb = this.metas).removeCaptureListener) || void 0 === bb || bb.call(cb, this.activate), qc(this.metas).removeCaptureFilter(this.shouldCapture), this.transports.removeBeforeSendHooks(this.discard)
+        var bb, ab;
+        this.waiting = !1, document.removeEventListener("prerenderingchange", this.activate), oa(this.metas).removeSessionUpdateListener(this.recordUpdate), null === (bb = (ab = this.metas).removeCaptureListener) || void 0 === bb || bb.call(ab, this.activate), oa(this.metas).removeCaptureFilter(this.shouldCapture), this.transports.removeBeforeSendHooks(this.discard)
       }
     };
 
-    function Ac(bb) {
-      return (null === bb || void 0 === bb ? void 0 : bb.persistent) ? Kc : Zc
+    function ta(bb) {
+      return (null === bb || void 0 === bb ? void 0 : bb.persistent) ? ua : ra
     }
 
-    function wc() {}
-    let rc = function(bb) {
+    function wa() {}
+    let sa = function(bb) {
       return bb[bb.OFF = 0] = "OFF", bb[bb.ERROR = 1] = "ERROR", bb[bb.WARN = 2] = "WARN", bb[bb.INFO = 3] = "INFO", bb[bb.VERBOSE = 4] = "VERBOSE", bb
     }({});
-    const oc = {
-        debug: wc,
-        error: wc,
-        info: wc,
+    const ga = {
+        debug: wa,
+        error: wa,
+        info: wa,
         prefix: "Faro",
-        warn: wc
+        warn: wa
       },
-      Sc = 1;
+      Ca = 1;
 
-    function Rc(bb) {
-      return Rc = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(bb) {
+    function Va(bb) {
+      return Va = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(bb) {
         return typeof bb
       } : function(bb) {
         return bb && "function" == typeof Symbol && bb.constructor === Symbol && bb !== Symbol.prototype ? "symbol" : typeof bb
-      }, Rc(bb)
+      }, Va(bb)
     }
 
-    function vc(bb) {
-      var cb = function(bb, cb) {
-        if ("object" != Rc(bb) || !bb) return bb;
-        var sb = bb[Symbol.toPrimitive];
-        if (void 0 !== sb) {
-          var kb = sb.call(bb, cb || "default");
-          if ("object" != Rc(kb)) return kb;
+    function Oa(bb) {
+      var ab = function(bb, ab) {
+        if ("object" != Va(bb) || !bb) return bb;
+        var Ub = bb[Symbol.toPrimitive];
+        if (void 0 !== Ub) {
+          var Ab = Ub.call(bb, ab || "default");
+          if ("object" != Va(Ab)) return Ab;
           throw new TypeError("@@toPrimitive must return a primitive value.")
         }
-        return ("string" === cb ? String : Number)(bb)
+        return ("string" === ab ? String : Number)(bb)
       }(bb, "string");
-      return "symbol" == Rc(cb) ? cb : cb + ""
+      return "symbol" == Va(ab) ? ab : ab + ""
     }
 
-    function Fc(bb, cb, sb) {
-      return (cb = vc(cb)) in bb ? Object.defineProperty(bb, cb, {
-        value: sb,
+    function ca(bb, ab, Ub) {
+      return (ab = Oa(ab)) in bb ? Object.defineProperty(bb, ab, {
+        value: Ub,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : bb[cb] = sb, bb
+      }) : bb[ab] = Ub, bb
     }
 
-    function xc(bb, cb) {
-      var sb = Object.keys(bb);
+    function Ja(bb, ab) {
+      var Ub = Object.keys(bb);
       if (Object.getOwnPropertySymbols) {
-        var kb = Object.getOwnPropertySymbols(bb);
-        cb && (kb = kb.filter((function(cb) {
-          return Object.getOwnPropertyDescriptor(bb, cb).enumerable
-        }))), sb.push.apply(sb, kb)
+        var Ab = Object.getOwnPropertySymbols(bb);
+        ab && (Ab = Ab.filter((function(ab) {
+          return Object.getOwnPropertyDescriptor(bb, ab).enumerable
+        }))), Ub.push.apply(Ub, Ab)
       }
-      return sb
+      return Ub
     }
 
-    function jc(bb) {
-      for (var cb = 1; cb < arguments.length; cb++) {
-        var sb = null != arguments[cb] ? arguments[cb] : {};
-        cb % 2 ? xc(Object(sb), !0).forEach((function(cb) {
-          Fc(bb, cb, sb[cb])
-        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(bb, Object.getOwnPropertyDescriptors(sb)) : xc(Object(sb)).forEach((function(cb) {
-          Object.defineProperty(bb, cb, Object.getOwnPropertyDescriptor(sb, cb))
+    function na(bb) {
+      for (var ab = 1; ab < arguments.length; ab++) {
+        var Ub = null != arguments[ab] ? arguments[ab] : {};
+        ab % 2 ? Ja(Object(Ub), !0).forEach((function(ab) {
+          ca(bb, ab, Ub[ab])
+        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(bb, Object.getOwnPropertyDescriptors(Ub)) : Ja(Object(Ub)).forEach((function(ab) {
+          Object.defineProperty(bb, ab, Object.getOwnPropertyDescriptor(Ub, ab))
         }))
       }
       return bb
     }
-    const pc = jc({}, console);
-    var bs = class {
+    const Sa = na({}, console);
+    var bU = class {
         constructor() {
-          this.unpatchedConsole = pc, this.internalLogger = oc, this.config = {}, this.metas = {}
+          this.unpatchedConsole = Sa, this.internalLogger = ga, this.config = {}, this.metas = {}
         }
         logDebug() {
-          for (var bb = arguments.length, cb = new Array(bb), sb = 0; sb < bb; sb++) cb[sb] = arguments[sb];
-          this.internalLogger.debug(`${this.name}\n`, ...cb)
+          for (var bb = arguments.length, ab = new Array(bb), Ub = 0; Ub < bb; Ub++) ab[Ub] = arguments[Ub];
+          this.internalLogger.debug(`${this.name}\n`, ...ab)
         }
         logInfo() {
-          for (var bb = arguments.length, cb = new Array(bb), sb = 0; sb < bb; sb++) cb[sb] = arguments[sb];
-          this.internalLogger.info(`${this.name}\n`, ...cb)
+          for (var bb = arguments.length, ab = new Array(bb), Ub = 0; Ub < bb; Ub++) ab[Ub] = arguments[Ub];
+          this.internalLogger.info(`${this.name}\n`, ...ab)
         }
         logWarn() {
-          for (var bb = arguments.length, cb = new Array(bb), sb = 0; sb < bb; sb++) cb[sb] = arguments[sb];
-          this.internalLogger.warn(`${this.name}\n`, ...cb)
+          for (var bb = arguments.length, ab = new Array(bb), Ub = 0; Ub < bb; Ub++) ab[Ub] = arguments[Ub];
+          this.internalLogger.warn(`${this.name}\n`, ...ab)
         }
         logError() {
-          for (var bb = arguments.length, cb = new Array(bb), sb = 0; sb < bb; sb++) cb[sb] = arguments[sb];
-          this.internalLogger.error(`${this.name}\n`, ...cb)
+          for (var bb = arguments.length, ab = new Array(bb), Ub = 0; Ub < bb; Ub++) ab[Ub] = arguments[Ub];
+          this.internalLogger.error(`${this.name}\n`, ...ab)
         }
       },
-      cs = class extends bs {
+      aU = class extends bU {
         constructor() {
           super(...arguments), this.api = {}, this.transports = {}
         }
       };
-    const ss = "2.12.1";
-    var ks = class extends cs {
+    const UU = "2.12.1";
+    var AU = class extends aU {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-session", this.version = ss, this.isAdoptingSession = () => !1
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-session", this.version = UU, this.isAdoptingSession = () => !1
       }
       sendSessionStartEvent(bb) {
-        var cb;
-        const sb = bb.session;
-        if (sb && sb.id !== (null === (cb = this.notifiedSession) || void 0 === cb ? void 0 : cb.id)) {
-          var kb;
-          if (this.isAdoptingSession()) return void(this.notifiedSession = sb);
-          if (this.notifiedSession && this.notifiedSession.id === (null === (kb = sb.attributes) || void 0 === kb ? void 0 : kb.previousSession)) return this.api.pushEvent(hc, {}, void 0, {
+        var ab;
+        const Ub = bb.session;
+        if (Ub && Ub.id !== (null === (ab = this.notifiedSession) || void 0 === ab ? void 0 : ab.id)) {
+          var Ab;
+          if (this.isAdoptingSession()) return void(this.notifiedSession = Ub);
+          if (this.notifiedSession && this.notifiedSession.id === (null === (Ab = Ub.attributes) || void 0 === Ab ? void 0 : Ab.previousSession)) return this.api.pushEvent(ma, {}, void 0, {
             skipDedupe: !0
-          }), void(this.notifiedSession = sb);
-          this.notifiedSession = sb, this.api.pushEvent(uc, {}, void 0, {
+          }), void(this.notifiedSession = Ub);
+          this.notifiedSession = Ub, this.api.pushEvent(ia, {}, void 0, {
             skipDedupe: !0
           })
         }
       }
-      createInitialSession(bb, cb, sb) {
-        const kb = null === sb || void 0 === sb ? void 0 : sb.session;
-        let Wb, ab, Tb = bb.fetchUserSession();
-        if (cb.persistent && cb.maxSessionPersistenceTime && Tb) {
-          const bb = Xc();
-          Tb.lastActivity < bb - cb.maxSessionPersistenceTime && (Kc.removeUserSession(), Tb = null)
+      createInitialSession(bb, ab, Ub) {
+        const Ab = null === Ub || void 0 === Ub ? void 0 : Ub.session;
+        let Mb, Tb, Eb = bb.fetchUserSession();
+        if (ab.persistent && ab.maxSessionPersistenceTime && Eb) {
+          const bb = Pa();
+          Eb.lastActivity < bb - ab.maxSessionPersistenceTime && (ua.removeUserSession(), Eb = null)
         }
-        const Ub = tc(Tb);
-        if ((null === sb || void 0 === sb ? void 0 : sb.reset) || !Ub || (null === kb || void 0 === kb ? void 0 : kb.id) && kb.id !== (null === Tb || void 0 === Tb ? void 0 : Tb.sessionId)) {
-          var Ib, Hb, fb, Mb, Xb, nb;
-          ab = Bc({
-            sessionId: (null === sb || void 0 === sb ? void 0 : sb.reset) ? void 0 : null !== (Ib = null === kb || void 0 === kb ? void 0 : kb.id) && void 0 !== Ib ? Ib : null === (Hb = cb.session) || void 0 === Hb ? void 0 : Hb.id,
-            isSampled: Mc(this)
+        const Yb = Ha(Eb);
+        if ((null === Ub || void 0 === Ub ? void 0 : Ub.reset) || !Yb || (null === Ab || void 0 === Ab ? void 0 : Ab.id) && Ab.id !== (null === Eb || void 0 === Eb ? void 0 : Eb.sessionId)) {
+          var Bb, eb, vb, Lb, Pb, Xb;
+          Tb = Wa({
+            sessionId: (null === Ub || void 0 === Ub ? void 0 : Ub.reset) ? void 0 : null !== (Bb = null === Ab || void 0 === Ab ? void 0 : Ab.id) && void 0 !== Bb ? Bb : null === (eb = ab.session) || void 0 === eb ? void 0 : eb.id,
+            isSampled: La(this)
           }, this);
-          const bb = ab.sessionId,
-            mb = sb && Ub ? null === Tb || void 0 === Tb || null === (fb = Tb.sessionMeta) || void 0 === fb ? void 0 : fb.overrides : void 0,
-            lb = mb ? fc(fc({}, null === (Mb = cb.session) || void 0 === Mb ? void 0 : Mb.overrides), mb) : null === (Xb = cb.session) || void 0 === Xb ? void 0 : Xb.overrides;
-          ab.sessionMeta = fc({
+          const bb = Tb.sessionId,
+            jb = Ub && Yb ? null === Eb || void 0 === Eb || null === (vb = Eb.sessionMeta) || void 0 === vb ? void 0 : vb.overrides : void 0,
+            Rb = jb ? va(va({}, null === (Lb = ab.session) || void 0 === Lb ? void 0 : Lb.overrides), jb) : null === (Pb = ab.session) || void 0 === Pb ? void 0 : Pb.overrides;
+          Tb.sessionMeta = va({
             id: bb,
-            attributes: fc({
-              isSampled: ab.isSampled.toString()
-            }, null === (nb = cb.session) || void 0 === nb ? void 0 : nb.attributes)
-          }, lb ? {
-            overrides: lb
-          } : {}), Wb = uc
+            attributes: va({
+              isSampled: Tb.isSampled.toString()
+            }, null === (Xb = ab.session) || void 0 === Xb ? void 0 : Xb.attributes)
+          }, Rb ? {
+            overrides: Rb
+          } : {}), Mb = ia
         } else {
-          var mb, lb;
-          const bb = null === Tb || void 0 === Tb ? void 0 : Tb.sessionId;
-          ab = Bc({
+          var jb, Rb;
+          const bb = null === Eb || void 0 === Eb ? void 0 : Eb.sessionId;
+          Tb = Wa({
             sessionId: bb,
-            isSampled: Tb.isSampled || !1,
-            started: null === Tb || void 0 === Tb ? void 0 : Tb.started
+            isSampled: Eb.isSampled || !1,
+            started: null === Eb || void 0 === Eb ? void 0 : Eb.started
           }, this);
-          const sb = null === Tb || void 0 === Tb ? void 0 : Tb.sessionMeta,
-            kb = fc(fc({}, null === (mb = cb.session) || void 0 === mb ? void 0 : mb.overrides), null === sb || void 0 === sb ? void 0 : sb.overrides);
-          ab.sessionMeta = fc(fc({}, cb.session), {}, {
+          const Ub = null === Eb || void 0 === Eb ? void 0 : Eb.sessionMeta,
+            Ab = va(va({}, null === (jb = ab.session) || void 0 === jb ? void 0 : jb.overrides), null === Ub || void 0 === Ub ? void 0 : Ub.overrides);
+          Tb.sessionMeta = va(va({}, ab.session), {}, {
             id: bb,
-            attributes: fc(fc(fc({}, null === (lb = cb.session) || void 0 === lb ? void 0 : lb.attributes), null === sb || void 0 === sb ? void 0 : sb.attributes), {}, {
-              isSampled: ab.isSampled.toString()
+            attributes: va(va(va({}, null === (Rb = ab.session) || void 0 === Rb ? void 0 : Rb.attributes), null === Ub || void 0 === Ub ? void 0 : Ub.attributes), {}, {
+              isSampled: Tb.isSampled.toString()
             }),
-            overrides: kb
-          }), Wb = Yc
+            overrides: Ab
+          }), Mb = fa
         }
-        var Qb;
-        if (kb && (ab.sessionMeta = fc(fc({}, ab.sessionMeta), {}, {
-            attributes: fc(fc(fc({}, null === (Qb = ab.sessionMeta) || void 0 === Qb ? void 0 : Qb.attributes), kb.attributes), {}, {
-              isSampled: ab.isSampled.toString()
+        var kb;
+        if (Ab && (Tb.sessionMeta = va(va({}, Tb.sessionMeta), {}, {
+            attributes: va(va(va({}, null === (kb = Tb.sessionMeta) || void 0 === kb ? void 0 : kb.attributes), Ab.attributes), {}, {
+              isSampled: Tb.isSampled.toString()
             })
-          }), kb.overrides)) {
-          const bb = (null === sb || void 0 === sb ? void 0 : sb.inheritOverrides) ? fc(fc({}, ab.sessionMeta.overrides), kb.overrides) : kb.overrides;
-          Object.keys(bb).length > 0 ? ab.sessionMeta.overrides = bb : delete ab.sessionMeta.overrides
+          }), Ab.overrides)) {
+          const bb = (null === Ub || void 0 === Ub ? void 0 : Ub.inheritOverrides) ? va(va({}, Tb.sessionMeta.overrides), Ab.overrides) : Ab.overrides;
+          Object.keys(bb).length > 0 ? Tb.sessionMeta.overrides = bb : delete Tb.sessionMeta.overrides
         }
         return {
-          initialSession: ab,
-          lifecycleType: Wb
+          initialSession: Tb,
+          lifecycleType: Mb
         }
       }
       registerBeforeSendHook(bb) {
-        var cb;
-        this.beforeSendHook = cb => {
-          var sb, kb;
-          const Wb = null === (sb = cb.meta.session) || void 0 === sb ? void 0 : sb.id;
-          Wb && !this.transports.isPaused() && bb(Wb);
-          const ab = null === (kb = cb.meta.session) || void 0 === kb ? void 0 : kb.attributes;
-          if (ab && "true" === (null === ab || void 0 === ab ? void 0 : ab.isSampled)) {
-            var Tb;
-            let bb = JSON.parse(JSON.stringify(cb));
-            const sb = null === (Tb = bb.meta.session) || void 0 === Tb ? void 0 : Tb.attributes;
-            var Ub;
-            if (null === sb || void 0 === sb || delete sb.isSampled, 0 === Object.keys(null !== sb && void 0 !== sb ? sb : {}).length) null === (Ub = bb.meta.session) || void 0 === Ub || delete Ub.attributes;
+        var ab;
+        this.beforeSendHook = ab => {
+          var Ub, Ab;
+          const Mb = null === (Ub = ab.meta.session) || void 0 === Ub ? void 0 : Ub.id;
+          Mb && !this.transports.isPaused() && bb(Mb);
+          const Tb = null === (Ab = ab.meta.session) || void 0 === Ab ? void 0 : Ab.attributes;
+          if (Tb && "true" === (null === Tb || void 0 === Tb ? void 0 : Tb.isSampled)) {
+            var Eb;
+            let bb = JSON.parse(JSON.stringify(ab));
+            const Ub = null === (Eb = bb.meta.session) || void 0 === Eb ? void 0 : Eb.attributes;
+            var Yb;
+            if (null === Ub || void 0 === Ub || delete Ub.isSampled, 0 === Object.keys(null !== Ub && void 0 !== Ub ? Ub : {}).length) null === (Yb = bb.meta.session) || void 0 === Yb || delete Yb.attributes;
             return bb
           }
           return null
-        }, null === (cb = this.transports) || void 0 === cb || cb.addBeforeSendHooks(this.beforeSendHook)
+        }, null === (ab = this.transports) || void 0 === ab || ab.addBeforeSendHooks(this.beforeSendHook)
       }
       initialize() {
         var bb;
         this.logDebug("init session instrumentation");
-        const cb = document.prerendering;
-        var sb;
-        if ((null === (bb = this.config.sessionTracking) || void 0 === bb ? void 0 : bb.enabled) && (cb || this.prerenderSession)) return null !== (sb = this.prerenderSession) && void 0 !== sb || (this.prerenderSession = new dc(this.metas, this.transports, (bb => {
+        const ab = document.prerendering;
+        var Ub;
+        if ((null === (bb = this.config.sessionTracking) || void 0 === bb ? void 0 : bb.enabled) && (ab || this.prerenderSession)) return null !== (Ub = this.prerenderSession) && void 0 !== Ub || (this.prerenderSession = new la(this.metas, this.transports, (bb => {
           this.prerenderSession = void 0, this.initializeSession(bb)
         }))), void this.prerenderSession.initialize();
         this.initializeSession()
       }
       initializeSession(bb) {
-        const cb = this.config.sessionTracking;
-        if (null === cb || void 0 === cb ? void 0 : cb.enabled) {
-          var sb, kb;
-          const Wb = Ac(cb),
-            ab = new Wb(this);
-          this.isAdoptingSession = ab.isAdopting, this.registerBeforeSendHook(ab.recordActivity);
+        const ab = this.config.sessionTracking;
+        if (null === ab || void 0 === ab ? void 0 : ab.enabled) {
+          var Ub, Ab;
+          const Mb = ta(ab),
+            Tb = new Mb(this);
+          this.isAdoptingSession = Tb.isAdopting, this.registerBeforeSendHook(Tb.recordActivity);
           const {
-            initialSession: Tb,
-            lifecycleType: Ub
-          } = this.createInitialSession(Wb, cb, bb);
-          Wb.storeUserSession(Tb);
-          const Ib = Tb.sessionMeta;
-          this.notifiedSession = Ib, this.api.setSession(Ib), this.captureListener = () => {
-            this.transports.isPaused() || ab.updateSession({
+            initialSession: Eb,
+            lifecycleType: Yb
+          } = this.createInitialSession(Mb, ab, bb);
+          Mb.storeUserSession(Eb);
+          const Bb = Eb.sessionMeta;
+          this.notifiedSession = Bb, this.api.setSession(Bb), this.captureListener = () => {
+            this.transports.isPaused() || Tb.updateSession({
               refreshActivity: !1
             })
-          }, null === (sb = (kb = this.metas).addCaptureListener) || void 0 === sb || sb.call(kb, this.captureListener), Ub === uc && this.api.pushEvent(uc, {}, void 0, {
+          }, null === (Ub = (Ab = this.metas).addCaptureListener) || void 0 === Ub || Ub.call(Ab, this.captureListener), Yb === ia && this.api.pushEvent(ia, {}, void 0, {
             skipDedupe: !0
-          }), Ub === Yc && this.api.pushEvent(Yc, {}, void 0, {
+          }), Yb === fa && this.api.pushEvent(fa, {}, void 0, {
             skipDedupe: !0
           })
         }
         this.sessionStartListener = this.sendSessionStartEvent.bind(this), this.metas.addListener(this.sessionStartListener)
       }
       destroy() {
-        var bb, cb, sb;
-        (null === (bb = this.prerenderSession) || void 0 === bb || bb.destroy(), this.captureListener) && (null === (cb = (sb = this.metas).removeCaptureListener) || void 0 === cb || cb.call(sb, this.captureListener), this.captureListener = void 0);
+        var bb, ab, Ub;
+        (null === (bb = this.prerenderSession) || void 0 === bb || bb.destroy(), this.captureListener) && (null === (ab = (Ub = this.metas).removeCaptureListener) || void 0 === ab || ab.call(Ub, this.captureListener), this.captureListener = void 0);
         this.beforeSendHook && (this.transports.removeBeforeSendHooks(this.beforeSendHook), this.beforeSendHook = void 0), this.sessionStartListener && (this.metas.removeListener(this.sessionStartListener), this.sessionStartListener = void 0)
       }
     };
 
-    function Ws(bb, cb, sb, kb) {
-      const Wb = {
+    function MU(bb, ab, Ub, Ab) {
+      const Mb = {
         filename: bb || document.location.href,
-        function: cb || "?"
+        function: ab || "?"
       };
-      return void 0 !== sb && (Wb.lineno = sb), void 0 !== kb && (Wb.colno = kb), Wb
+      return void 0 !== Ub && (Mb.lineno = Ub), void 0 !== Ab && (Mb.colno = Ab), Mb
     }
-    const as = /^\s*at (?:(?![a-z]+:\/\/)([^(]+?) ?\((?:address at )?)?((?:file|https?|blob|chrome-extension|address|native|eval|webpack|<anonymous>|[-a-z]+:|.*bundle|\/)?.*?)(?::(\d+))?(?::(\d+))?\)?\s*$/i,
-      Ts = /\((\S*)(?::(\d+))(?::(\d+))\)/,
-      Us = /^(?=[\s\S]*?(?:\/|bundle|\.js|\[native code]))\s*(.*?)(?:\((.*?)\))?(?:^|@)?((?:file|https?|blob|chrome|webpack|resource|moz-extension|safari-extension|safari-web-extension|capacitor)?:\/.*?|\[native code]|[^@]*(?:bundle|\d+\.js)|\/[\w\-. /=]+)(?::(\d+))?(?::(\d+))?\s*$/i,
-      Is = /(\S+) line (\d+)(?: > eval line \d+)* > eval/i,
-      Hs = "safari-extension",
-      fs = "safari-web-extension",
-      Ms = /Minified React error #\d+;/i;
+    const TU = /^\s*at (?:(?![a-z]+:\/\/)([^(]+?) ?\((?:address at )?)?((?:file|https?|blob|chrome-extension|address|native|eval|webpack|<anonymous>|[-a-z]+:|.*bundle|\/)?.*?)(?::(\d+))?(?::(\d+))?\)?\s*$/i,
+      EU = /\((\S*)(?::(\d+))(?::(\d+))\)/,
+      YU = /^(?=[\s\S]*?(?:\/|bundle|\.js|\[native code]))\s*(.*?)(?:\((.*?)\))?(?:^|@)?((?:file|https?|blob|chrome|webpack|resource|moz-extension|safari-extension|safari-web-extension|capacitor)?:\/.*?|\[native code]|[^@]*(?:bundle|\d+\.js)|\/[\w\-. /=]+)(?::(\d+))?(?::(\d+))?\s*$/i,
+      BU = /(\S+) line (\d+)(?: > eval line \d+)* > eval/i,
+      eU = "safari-extension",
+      vU = "safari-web-extension",
+      LU = /Minified React error #\d+;/i;
 
-    function Xs(bb, cb) {
-      const sb = null === bb || void 0 === bb ? void 0 : bb.includes(Hs),
-        kb = !sb && (null === bb || void 0 === bb ? void 0 : bb.includes("safari-web-extension"));
-      return sb || kb ? [(null === bb || void 0 === bb ? void 0 : bb.includes("@")) ? bb.split("@")[0] : bb, sb ? `${Hs}:${cb}` : `${fs}:${cb}`] : [bb, cb]
+    function PU(bb, ab) {
+      const Ub = null === bb || void 0 === bb ? void 0 : bb.includes(eU),
+        Ab = !Ub && (null === bb || void 0 === bb ? void 0 : bb.includes("safari-web-extension"));
+      return Ub || Ab ? [(null === bb || void 0 === bb ? void 0 : bb.includes("@")) ? bb.split("@")[0] : bb, Ub ? `${eU}:${ab}` : `${vU}:${ab}`] : [bb, ab]
     }
-    const ns = 1024;
+    const XU = 1024;
 
-    function ms(bb) {
-      let cb = [];
-      bb.stacktrace ? cb = bb.stacktrace.split("\n").filter(((bb, cb) => cb % 2 === 0)) : bb.stack && (cb = bb.stack.split("\n"));
-      const sb = cb.reduce(((cb, sb, kb) => {
-        if (sb.length > ns) return cb;
-        let Wb, ab, Tb, Ub, Ib;
-        if (Wb = as.exec(sb)) {
-          if (ab = Wb[1], Tb = Wb[2], Ub = Wb[3], Ib = Wb[4], null === Tb || void 0 === Tb ? void 0 : Tb.startsWith("eval")) {
-            const bb = Ts.exec(Tb);
-            bb && (Tb = bb[1], Ub = bb[2], Ib = bb[3])
+    function jU(bb) {
+      let ab = [];
+      bb.stacktrace ? ab = bb.stacktrace.split("\n").filter(((bb, ab) => ab % 2 === 0)) : bb.stack && (ab = bb.stack.split("\n"));
+      const Ub = ab.reduce(((ab, Ub, Ab) => {
+        if (Ub.length > XU) return ab;
+        let Mb, Tb, Eb, Yb, Bb;
+        if (Mb = TU.exec(Ub)) {
+          if (Tb = Mb[1], Eb = Mb[2], Yb = Mb[3], Bb = Mb[4], null === Eb || void 0 === Eb ? void 0 : Eb.startsWith("eval")) {
+            const bb = EU.exec(Eb);
+            bb && (Eb = bb[1], Yb = bb[2], Bb = bb[3])
           }
-          Tb = (null === Tb || void 0 === Tb ? void 0 : Tb.startsWith("address at ")) ? Tb.substring(11) : Tb, [ab, Tb] = Xs(ab, Tb)
-        } else if (Wb = Us.exec(sb)) {
-          if (ab = Wb[1], Tb = Wb[3], Ub = Wb[4], Ib = Wb[5], Tb && Tb.includes(" > eval")) {
-            const bb = Is.exec(Tb);
-            bb && (ab = ab || "eval", Tb = bb[1], Ub = bb[2])
-          } else 0 === kb && !Ib && Yb(bb.columnNumber) && (Ib = String(bb.columnNumber + 1));
-          [ab, Tb] = Xs(ab, Tb)
+          Eb = (null === Eb || void 0 === Eb ? void 0 : Eb.startsWith("address at ")) ? Eb.substring(11) : Eb, [Tb, Eb] = PU(Tb, Eb)
+        } else if (Mb = YU.exec(Ub)) {
+          if (Tb = Mb[1], Eb = Mb[3], Yb = Mb[4], Bb = Mb[5], Eb && Eb.includes(" > eval")) {
+            const bb = BU.exec(Eb);
+            bb && (Tb = Tb || "eval", Eb = bb[1], Yb = bb[2])
+          } else 0 === Ab && !Bb && fb(bb.columnNumber) && (Bb = String(bb.columnNumber + 1));
+          [Tb, Eb] = PU(Tb, Eb)
         }
-        return (Tb || ab) && cb.push(Ws(Tb, ab, Ub ? Number(Ub) : void 0, Ib ? Number(Ib) : void 0)), cb
+        return (Eb || Tb) && ab.push(MU(Eb, Tb, Yb ? Number(Yb) : void 0, Bb ? Number(Bb) : void 0)), ab
       }), []);
-      return Ms.test(bb.message) ? sb.slice(1) : sb
+      return LU.test(bb.message) ? Ub.slice(1) : Ub
     }
 
-    function ls(bb) {
+    function RU(bb) {
       return {
-        frames: ms(bb)
+        frames: jU(bb)
       }
     }
-    const Qs = "http-request-start",
-      es = "http-request-end";
-    var Cs = class bb {
+    const kU = "http-request-start",
+      yU = "http-request-end";
+    var ZU = class bb {
       constructor() {
         this.subscribers = []
       }
@@ -1058,178 +1058,178 @@ export const modules = {
         }
       }
       unsubscribe(bb) {
-        this.subscribers = this.subscribers.filter((cb => cb !== bb))
+        this.subscribers = this.subscribers.filter((ab => ab !== bb))
       }
       notify(bb) {
-        this.subscribers.forEach((cb => cb(bb)))
+        this.subscribers.forEach((ab => ab(bb)))
       }
       first() {
-        const cb = new bb,
-          sb = bb => {
-            cb.notify(bb), kb.unsubscribe()
+        const ab = new bb,
+          Ub = bb => {
+            ab.notify(bb), Ab.unsubscribe()
           },
-          kb = this.subscribe(sb),
-          Wb = cb.unsubscribe.bind(cb);
-        return this.withUnsubscribeOverride(cb, Wb, sb)
+          Ab = this.subscribe(Ub),
+          Mb = ab.unsubscribe.bind(ab);
+        return this.withUnsubscribeOverride(ab, Mb, Ub)
       }
-      takeWhile(cb) {
-        const sb = new bb,
-          kb = bb => {
-            cb(bb) ? sb.notify(bb) : sb.unsubscribe(kb)
+      takeWhile(ab) {
+        const Ub = new bb,
+          Ab = bb => {
+            ab(bb) ? Ub.notify(bb) : Ub.unsubscribe(Ab)
           };
-        this.subscribe(kb);
-        const Wb = sb.unsubscribe.bind(sb);
-        return this.withUnsubscribeOverride(sb, Wb, kb)
+        this.subscribe(Ab);
+        const Mb = Ub.unsubscribe.bind(Ub);
+        return this.withUnsubscribeOverride(Ub, Mb, Ab)
       }
-      filter(cb) {
-        const sb = new bb,
-          kb = bb => {
-            cb(bb) && sb.notify(bb)
+      filter(ab) {
+        const Ub = new bb,
+          Ab = bb => {
+            ab(bb) && Ub.notify(bb)
           };
-        this.subscribe(kb);
-        const Wb = sb.unsubscribe.bind(sb);
-        return this.withUnsubscribeOverride(sb, Wb, kb)
+        this.subscribe(Ab);
+        const Mb = Ub.unsubscribe.bind(Ub);
+        return this.withUnsubscribeOverride(Ub, Mb, Ab)
       }
       merge() {
-        const cb = new bb,
-          sb = [];
-        for (var kb = arguments.length, Wb = new Array(kb), ab = 0; ab < kb; ab++) Wb[ab] = arguments[ab];
-        Wb.forEach((bb => {
-          const kb = bb.subscribe((bb => {
-            cb.notify(bb)
+        const ab = new bb,
+          Ub = [];
+        for (var Ab = arguments.length, Mb = new Array(Ab), Tb = 0; Tb < Ab; Tb++) Mb[Tb] = arguments[Tb];
+        Mb.forEach((bb => {
+          const Ab = bb.subscribe((bb => {
+            ab.notify(bb)
           }));
-          sb.push(kb)
+          Ub.push(Ab)
         }));
-        const Tb = cb.unsubscribeAll.bind(cb);
-        return cb.unsubscribe = () => {
-          sb.forEach((bb => bb.unsubscribe())), Tb()
-        }, cb
+        const Eb = ab.unsubscribeAll.bind(ab);
+        return ab.unsubscribe = () => {
+          Ub.forEach((bb => bb.unsubscribe())), Eb()
+        }, ab
       }
-      withUnsubscribeOverride(bb, cb, sb) {
+      withUnsubscribeOverride(bb, ab, Ub) {
         return bb.unsubscribe = bb => {
-          cb(bb), this.unsubscribe(sb)
+          ab(bb), this.unsubscribe(Ub)
         }, bb
       }
       unsubscribeAll() {
         this.subscribers = []
       }
     };
-    let Ns = function(bb) {
+    let DU = function(bb) {
       return bb.TRACE = "trace", bb.DEBUG = "debug", bb.INFO = "info", bb.LOG = "log", bb.WARN = "warn", bb.ERROR = "error", bb
     }({});
-    const Vs = "log",
-      Ls = ["trace", "debug", "info", "log", "warn", "error"];
-    let us, Ys = !1;
-    const hs = /^(?:[Uu]ncaught (?:exception: )?)?(?:((?:Eval|Internal|Range|Reference|Syntax|Type|URI|)Error): )?(.*)$/i,
-      gs = "Error",
-      Bs = bb => bb.map((bb => Bb(bb) ? Oc(bb) : String(bb))).join(" ");
+    const zU = "log",
+      xU = ["trace", "debug", "info", "log", "warn", "error"];
+    let iU, fU = !1;
+    const mU = /^(?:[Uu]ncaught (?:exception: )?)?(?:((?:Eval|Internal|Range|Reference|Syntax|Type|URI|)Error): )?(.*)$/i,
+      pU = "Error",
+      NU = bb => bb.map((bb => Wb(bb) ? Qa(bb) : String(bb))).join(" ");
 
-    function ts(bb) {
-      let cb, sb, kb, Wb, ab = [];
-      if (Zb(bb) && bb.error) cb = bb.error.message, sb = bb.error.name, ab = ms(bb.error);
-      else if ((kb = zb(bb)) || qb(bb)) {
+    function WU(bb) {
+      let ab, Ub, Ab, Mb, Tb = [];
+      if (rb(bb) && bb.error) ab = bb.error.message, Ub = bb.error.name, Tb = jU(bb.error);
+      else if ((Ab = Kb(bb)) || ob(bb)) {
         const {
-          name: Wb,
-          message: ab
+          name: Mb,
+          message: Tb
         } = bb;
-        sb = null !== Wb && void 0 !== Wb ? Wb : kb ? "DOMError" : "DOMException", cb = ab ? `${sb}: ${ab}` : sb
-      } else Kb(bb) ? (sb = bb.name, cb = bb.message, ab = ms(bb)) : (Bb(bb) || (Wb = Ob(bb))) && (sb = Wb ? bb.constructor.name : void 0, cb = `Non-Error exception captured with keys: ${Object.keys(bb)}`);
-      return [cb, sb, ab]
+        Ub = null !== Mb && void 0 !== Mb ? Mb : Ab ? "DOMError" : "DOMException", ab = Tb ? `${Ub}: ${Tb}` : Ub
+      } else ub(bb) ? (Ub = bb.name, ab = bb.message, Tb = jU(bb)) : (Wb(bb) || (Mb = Qb(bb))) && (Ub = Mb ? bb.constructor.name : void 0, ab = `Non-Error exception captured with keys: ${Object.keys(bb)}`);
+      return [ab, Ub, Tb]
     }
 
-    function ys(bb) {
-      const [cb, sb, kb, Wb, ab] = bb;
-      let Tb, Ub, Ib = [];
-      const Hb = ub(cb),
-        fb = Ws(sb, "?", kb, Wb);
-      return ab || !Hb ? ([Tb, Ub, Ib] = ts(null !== ab && void 0 !== ab ? ab : cb), 0 === Ib.length && (Ib = [fb])) : Hb && ([Tb, Ub] = function(bb) {
-        var cb, sb;
-        const kb = bb.match(hs),
-          Wb = null !== (cb = null === kb || void 0 === kb ? void 0 : kb[1]) && void 0 !== cb ? cb : gs;
-        return [null !== (sb = null === kb || void 0 === kb ? void 0 : kb[2]) && void 0 !== sb ? sb : bb, Wb]
-      }(cb), Ib = [fb]), {
-        value: Tb,
-        type: Ub,
-        stackFrames: Ib
+    function HU(bb) {
+      const [ab, Ub, Ab, Mb, Tb] = bb;
+      let Eb, Yb, Bb = [];
+      const eb = ib(ab),
+        vb = MU(Ub, "?", Ab, Mb);
+      return Tb || !eb ? ([Eb, Yb, Bb] = WU(null !== Tb && void 0 !== Tb ? Tb : ab), 0 === Bb.length && (Bb = [vb])) : eb && ([Eb, Yb] = function(bb) {
+        var ab, Ub;
+        const Ab = bb.match(mU),
+          Mb = null !== (ab = null === Ab || void 0 === Ab ? void 0 : Ab[1]) && void 0 !== ab ? ab : pU;
+        return [null !== (Ub = null === Ab || void 0 === Ab ? void 0 : Ab[2]) && void 0 !== Ub ? Ub : bb, Mb]
+      }(ab), Bb = [vb]), {
+        value: Eb,
+        type: Yb,
+        stackFrames: Bb
       }
     }
 
-    function Ps(bb, cb) {
-      return Kb(bb[0]) ? ys(bb) : {
-        value: cb(bb)
+    function IU(bb, ab) {
+      return ub(bb[0]) ? HU(bb) : {
+        value: ab(bb)
       }
     }
-    const Ds = bb => bb.map((bb => {
+    const dU = bb => bb.map((bb => {
       try {
         return String(bb)
-      } catch (cb) {
+      } catch (ab) {
         return ""
       }
     })).join(" ");
-    var Es = class bb extends cs {
+    var FU = class bb extends aU {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-console", this.version = ss, this.errorSerializer = Ds
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-console", this.version = UU, this.errorSerializer = dU
       }
       initialize() {
-        var cb, sb;
-        const kb = this.config.consoleInstrumentation,
-          Wb = (null === kb || void 0 === kb ? void 0 : kb.serializeErrors) || !!(null === kb || void 0 === kb ? void 0 : kb.errorSerializer);
-        this.errorSerializer = Wb ? null !== (cb = null === kb || void 0 === kb ? void 0 : kb.errorSerializer) && void 0 !== cb ? cb : Bs : Ds;
-        const ab = null !== (sb = null === kb || void 0 === kb ? void 0 : kb.disabledLevels) && void 0 !== sb ? sb : bb.defaultDisabledLevels,
-          Tb = function(bb) {
-            if (us || (us = new Cs), !Ys) {
-              const cb = null !== bb && void 0 !== bb ? bb : pc;
-              Ls.forEach((bb => {
+        var ab, Ub;
+        const Ab = this.config.consoleInstrumentation,
+          Mb = (null === Ab || void 0 === Ab ? void 0 : Ab.serializeErrors) || !!(null === Ab || void 0 === Ab ? void 0 : Ab.errorSerializer);
+        this.errorSerializer = Mb ? null !== (ab = null === Ab || void 0 === Ab ? void 0 : Ab.errorSerializer) && void 0 !== ab ? ab : NU : dU;
+        const Tb = null !== (Ub = null === Ab || void 0 === Ab ? void 0 : Ab.disabledLevels) && void 0 !== Ub ? Ub : bb.defaultDisabledLevels,
+          Eb = function(bb) {
+            if (iU || (iU = new ZU), !fU) {
+              const ab = null !== bb && void 0 !== bb ? bb : Sa;
+              xU.forEach((bb => {
                 console[bb] = function() {
-                  for (var sb, kb = arguments.length, Wb = new Array(kb), ab = 0; ab < kb; ab++) Wb[ab] = arguments[ab];
-                  us.notify({
+                  for (var Ub, Ab = arguments.length, Mb = new Array(Ab), Tb = 0; Tb < Ab; Tb++) Mb[Tb] = arguments[Tb];
+                  iU.notify({
                     type: "console",
                     level: bb,
-                    args: Wb
-                  }), null === (sb = cb[bb]) || void 0 === sb || sb.apply(console, Wb)
+                    args: Mb
+                  }), null === (Ub = ab[bb]) || void 0 === Ub || Ub.apply(console, Mb)
                 }
-              })), Ys = !0
+              })), fU = !0
             }
-            return us
+            return iU
           }(this.unpatchedConsole);
-        this.subscription = Tb.subscribe((cb => {
+        this.subscription = Eb.subscribe((ab => {
           let {
-            level: sb,
-            args: Wb
-          } = cb;
-          if (!ab.includes(sb)) try {
-            if (sb !== Ns.ERROR || (null === kb || void 0 === kb ? void 0 : kb.consoleErrorAsLog))
-              if (sb === Ns.ERROR && (null === kb || void 0 === kb ? void 0 : kb.consoleErrorAsLog)) {
+            level: Ub,
+            args: Mb
+          } = ab;
+          if (!Tb.includes(Ub)) try {
+            if (Ub !== DU.ERROR || (null === Ab || void 0 === Ab ? void 0 : Ab.consoleErrorAsLog))
+              if (Ub === DU.ERROR && (null === Ab || void 0 === Ab ? void 0 : Ab.consoleErrorAsLog)) {
                 const {
-                  value: cb,
-                  type: kb,
-                  stackFrames: ab
-                } = Ps(Wb, this.errorSerializer);
-                this.api.pushLog(cb ? [bb.consoleErrorPrefix + cb] : Wb, {
-                  level: sb,
+                  value: ab,
+                  type: Ab,
+                  stackFrames: Tb
+                } = IU(Mb, this.errorSerializer);
+                this.api.pushLog(ab ? [bb.consoleErrorPrefix + ab] : Mb, {
+                  level: Ub,
                   context: {
-                    value: null !== cb && void 0 !== cb ? cb : "",
-                    type: null !== kb && void 0 !== kb ? kb : "",
-                    stackFrames: (null === ab || void 0 === ab ? void 0 : ab.length) ? Bs(ab) : ""
+                    value: null !== ab && void 0 !== ab ? ab : "",
+                    type: null !== Ab && void 0 !== Ab ? Ab : "",
+                    stackFrames: (null === Tb || void 0 === Tb ? void 0 : Tb.length) ? NU(Tb) : ""
                   }
                 })
-              } else this.api.pushLog(Wb, {
-                level: sb
+              } else this.api.pushLog(Mb, {
+                level: Ub
               });
             else {
               const {
-                value: cb,
-                type: sb,
-                stackFrames: kb
-              } = Ps(Wb, this.errorSerializer);
-              if (cb && !sb && !kb) return void this.api.pushError(new Error(bb.consoleErrorPrefix + cb));
-              this.api.pushError(new Error(bb.consoleErrorPrefix + cb), {
-                type: sb,
-                stackFrames: kb
+                value: ab,
+                type: Ub,
+                stackFrames: Ab
+              } = IU(Mb, this.errorSerializer);
+              if (ab && !Ub && !Ab) return void this.api.pushError(new Error(bb.consoleErrorPrefix + ab));
+              this.api.pushError(new Error(bb.consoleErrorPrefix + ab), {
+                type: Ub,
+                stackFrames: Ab
               })
             }
-          } catch (Tb) {
-            this.logError(Tb)
+          } catch (Eb) {
+            this.logError(Eb)
           }
         }))
       }
@@ -1238,68 +1238,68 @@ export const modules = {
         null === (bb = this.subscription) || void 0 === bb || bb.unsubscribe(), this.subscription = void 0
       }
     };
-    Es.defaultDisabledLevels = [Ns.DEBUG, Ns.TRACE, Ns.LOG], Es.consoleErrorPrefix = "console.error: ";
-    const is = [];
-    var Os = class extends cs {
+    FU.defaultDisabledLevels = [DU.DEBUG, DU.TRACE, DU.LOG], FU.consoleErrorPrefix = "console.error: ";
+    const hU = [];
+    var GU = class extends aU {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-errors", this.version = ss
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-errors", this.version = UU
       }
       initialize() {
         this.logDebug("Initializing"),
           function(bb) {
-            const cb = window.onerror;
+            const ab = window.onerror;
             window.onerror = function() {
-              for (var sb = arguments.length, kb = new Array(sb), Wb = 0; Wb < sb; Wb++) kb[Wb] = arguments[Wb];
+              for (var Ub = arguments.length, Ab = new Array(Ub), Mb = 0; Mb < Ub; Mb++) Ab[Mb] = arguments[Mb];
               try {
                 const {
-                  value: cb,
-                  type: sb,
-                  stackFrames: Wb
-                } = ys(kb), ab = kb[4];
-                if (cb) {
-                  const kb = {
-                    type: sb,
-                    stackFrames: Wb
+                  value: ab,
+                  type: Ub,
+                  stackFrames: Mb
+                } = HU(Ab), Tb = Ab[4];
+                if (ab) {
+                  const Ab = {
+                    type: Ub,
+                    stackFrames: Mb
                   };
-                  null != ab && (kb.originalError = ab), bb.pushError(new Error(cb), kb)
+                  null != Tb && (Ab.originalError = Tb), bb.pushError(new Error(ab), Ab)
                 }
               } finally {
-                null === cb || void 0 === cb || cb.apply(window, kb)
+                null === ab || void 0 === ab || ab.apply(window, Ab)
               }
             }
           }(this.api),
           function(bb) {
-            const cb = cb => {
-              var sb;
-              let kb, Wb, ab = cb;
-              if (ab.reason) ab = cb.reason;
-              else if (null === (sb = cb.detail) || void 0 === sb ? void 0 : sb.reason) {
-                var Tb;
-                ab = null === (Tb = cb.detail) || void 0 === Tb ? void 0 : Tb.reason
+            const ab = ab => {
+              var Ub;
+              let Ab, Mb, Tb = ab;
+              if (Tb.reason) Tb = ab.reason;
+              else if (null === (Ub = ab.detail) || void 0 === Ub ? void 0 : Ub.reason) {
+                var Eb;
+                Tb = null === (Eb = ab.detail) || void 0 === Eb ? void 0 : Eb.reason
               }
-              let Ub = [];
-              Eb(ab) ? (kb = `Non-Error promise rejection captured with value: ${String(ab)}`, Wb = "UnhandledRejection") : [kb, Wb, Ub] = ts(ab), kb && bb.pushError(new Error(kb), {
-                type: Wb,
-                stackFrames: Ub
+              let Yb = [];
+              hb(Tb) ? (Ab = `Non-Error promise rejection captured with value: ${String(Tb)}`, Mb = "UnhandledRejection") : [Ab, Mb, Yb] = WU(Tb), Ab && bb.pushError(new Error(Ab), {
+                type: Mb,
+                stackFrames: Yb
               })
             };
-            window.addEventListener("unhandledrejection", cb), is.push(cb)
+            window.addEventListener("unhandledrejection", ab), hU.push(ab)
           }(this.api)
       }
     };
-    const Gs = "unknown";
-    var Ks = class extends cs {
+    const QU = "unknown";
+    var qU = class extends aU {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-view", this.version = ss, this.waitingForActivation = !1, this.sendViewChangedEvent = bb => {
-          var cb;
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-view", this.version = UU, this.waitingForActivation = !1, this.sendViewChangedEvent = bb => {
+          var ab;
           if (this.waitingForActivation || document.prerendering) return;
-          const sb = bb.view;
-          if (sb && sb.name !== (null === (cb = this.notifiedView) || void 0 === cb ? void 0 : cb.name)) {
-            var kb, Wb, ab;
-            const bb = null !== (kb = null === (Wb = this.notifiedView) || void 0 === Wb ? void 0 : Wb.name) && void 0 !== kb ? kb : Gs;
-            this.notifiedView = sb, this.api.pushEvent(Lc, {
+          const Ub = bb.view;
+          if (Ub && Ub.name !== (null === (ab = this.notifiedView) || void 0 === ab ? void 0 : ab.name)) {
+            var Ab, Mb, Tb;
+            const bb = null !== (Ab = null === (Mb = this.notifiedView) || void 0 === Mb ? void 0 : Mb.name) && void 0 !== Ab ? Ab : QU;
+            this.notifiedView = Ub, this.api.pushEvent(xa, {
               fromView: bb,
-              toView: null !== (ab = sb.name) && void 0 !== ab ? ab : Gs
+              toView: null !== (Tb = Ub.name) && void 0 !== Tb ? Tb : QU
             }, void 0, {
               skipDedupe: !0
             })
@@ -1319,213 +1319,213 @@ export const modules = {
         this.waitingForActivation = !1, this.metas.removeListener(this.sendViewChangedEvent), document.removeEventListener("prerenderingchange", this.prerenderListener)
       }
     };
-    class Zs {
+    class uU {
       t;
       o = 0;
       i = [];
       l(bb) {
         if (bb.hadRecentInput) return;
-        const cb = this.i[0],
-          sb = this.i.at(-1);
-        this.o && cb && sb && bb.startTime - sb.startTime < 1e3 && bb.startTime - cb.startTime < 5e3 ? (this.o += bb.value, this.i.push(bb)) : (this.o = bb.value, this.i = [bb]), this.t?.(bb)
+        const ab = this.i[0],
+          Ub = this.i.at(-1);
+        this.o && ab && Ub && bb.startTime - Ub.startTime < 1e3 && bb.startTime - ab.startTime < 5e3 ? (this.o += bb.value, this.i.push(bb)) : (this.o = bb.value, this.i = [bb]), this.t?.(bb)
       }
     }
-    const zs = () => {
+    const rU = () => {
         const bb = performance.getEntriesByType("navigation")[0];
         if (bb && bb.responseStart > 0 && bb.responseStart < performance.now()) return bb
       },
-      qs = bb => {
+      KU = bb => {
         if ("loading" === document.readyState) return "loading";
-        const cb = zs();
-        if (cb) {
-          if (bb < cb.domInteractive) return "loading";
-          if (0 === cb.domContentLoadedEventStart || bb < cb.domContentLoadedEventStart) return "dom-interactive";
-          if (0 === cb.domComplete || bb < cb.domComplete) return "dom-content-loaded"
+        const ab = rU();
+        if (ab) {
+          if (bb < ab.domInteractive) return "loading";
+          if (0 === ab.domContentLoadedEventStart || bb < ab.domContentLoadedEventStart) return "dom-interactive";
+          if (0 === ab.domComplete || bb < ab.domComplete) return "dom-content-loaded"
         }
         return "complete"
       },
-      ds = bb => {
-        const cb = bb.nodeName;
-        return 1 === bb.nodeType ? cb.toLowerCase() : cb.toUpperCase().replace(/^#/, "")
+      oU = bb => {
+        const ab = bb.nodeName;
+        return 1 === bb.nodeType ? ab.toLowerCase() : ab.toUpperCase().replace(/^#/, "")
       },
-      As = bb => {
-        let cb = "";
+      lU = bb => {
+        let ab = "";
         try {
           for (; 9 !== bb?.nodeType;) {
-            const sb = bb,
-              kb = sb.id ? "#" + sb.id : [ds(sb), ...Array.from(sb.classList ?? []).sort()].join(".");
-            if (cb.length + kb.length > 99) return cb || kb;
-            if (cb = cb ? kb + ">" + cb : kb, sb.id) break;
-            bb = sb.parentNode
+            const Ub = bb,
+              Ab = Ub.id ? "#" + Ub.id : [oU(Ub), ...Array.from(Ub.classList ?? []).sort()].join(".");
+            if (ab.length + Ab.length > 99) return ab || Ab;
+            if (ab = ab ? Ab + ">" + ab : Ab, Ub.id) break;
+            bb = Ub.parentNode
           }
         } catch {}
-        return cb
+        return ab
       },
-      ws = new WeakMap;
+      tU = new WeakMap;
 
-    function rs(bb, cb) {
-      let sb = ws.get(cb);
-      return sb || (sb = new WeakMap, ws.set(cb, sb)), sb.get(bb) || sb.set(bb, new cb), sb.get(bb)
+    function wU(bb, ab) {
+      let Ub = tU.get(ab);
+      return Ub || (Ub = new WeakMap, tU.set(ab, Ub)), Ub.get(bb) || Ub.set(bb, new ab), Ub.get(bb)
     }
-    let os = -1;
-    const Ss = () => os,
-      Rs = bb => {
-        addEventListener("pageshow", (cb => {
-          cb.persisted && (os = cb.timeStamp, bb(cb))
+    let sU = -1;
+    const gU = () => sU,
+      CU = bb => {
+        addEventListener("pageshow", (ab => {
+          ab.persisted && (sU = ab.timeStamp, bb(ab))
         }), !0)
       },
-      vs = (bb, cb, sb, kb) => {
-        let Wb, ab;
-        return Tb => {
-          cb.value >= 0 && (Tb || kb) && (ab = cb.value - (Wb ?? 0), (ab || void 0 === Wb) && (Wb = cb.value, cb.delta = ab, cb.rating = ((bb, cb) => bb > cb[1] ? "poor" : bb > cb[0] ? "needs-improvement" : "good")(cb.value, sb), bb(cb)))
+      VU = (bb, ab, Ub, Ab) => {
+        let Mb, Tb;
+        return Eb => {
+          ab.value >= 0 && (Eb || Ab) && (Tb = ab.value - (Mb ?? 0), (Tb || void 0 === Mb) && (Mb = ab.value, ab.delta = Tb, ab.rating = ((bb, ab) => bb > ab[1] ? "poor" : bb > ab[0] ? "needs-improvement" : "good")(ab.value, Ub), bb(ab)))
         }
       },
-      Fs = bb => {
+      OU = bb => {
         requestAnimationFrame((() => requestAnimationFrame((() => bb()))))
       },
-      xs = () => zs()?.activationStart ?? 0;
-    let ps = -1;
-    const bk = new Set,
-      ck = () => "hidden" !== document.visibilityState || document.prerendering ? 1 / 0 : 0,
-      sk = bb => {
+      cU = () => rU()?.activationStart ?? 0;
+    let JU = -1;
+    const nU = new Set,
+      SU = () => "hidden" !== document.visibilityState || document.prerendering ? 1 / 0 : 0,
+      bA = bb => {
         if ("hidden" === document.visibilityState) {
           if ("visibilitychange" === bb.type)
-            for (const bb of bk) bb();
-          isFinite(ps) || (ps = "visibilitychange" === bb.type ? bb.timeStamp : 0, removeEventListener("prerenderingchange", sk, !0))
+            for (const bb of nU) bb();
+          isFinite(JU) || (JU = "visibilitychange" === bb.type ? bb.timeStamp : 0, removeEventListener("prerenderingchange", bA, !0))
         }
       },
-      kk = function() {
-        if (arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && (ps = 1 / 0), ps < 0) {
-          const bb = xs(),
-            cb = document.prerendering ? void 0 : globalThis.performance.getEntriesByType("visibility-state").find((cb => "hidden" === cb.name && cb.startTime >= bb))?.startTime;
-          ps = cb ?? ck(), addEventListener("visibilitychange", sk, !0), addEventListener("prerenderingchange", sk, !0), Rs((() => {
+      aA = function() {
+        if (arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && (JU = 1 / 0), JU < 0) {
+          const bb = cU(),
+            ab = document.prerendering ? void 0 : globalThis.performance.getEntriesByType("visibility-state").find((ab => "hidden" === ab.name && ab.startTime >= bb))?.startTime;
+          JU = ab ?? SU(), addEventListener("visibilitychange", bA, !0), addEventListener("prerenderingchange", bA, !0), CU((() => {
             setTimeout((() => {
-              ps = ck()
+              JU = SU()
             }))
           }))
         }
         return {
           get firstHiddenTime() {
-            return ps
+            return JU
           },
           onHidden(bb) {
-            bk.add(bb)
+            nU.add(bb)
           }
         }
       },
-      Wk = function(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
-          sb = arguments.length > 2 ? arguments[2] : void 0,
-          kb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          Wb = arguments.length > 4 ? arguments[4] : void 0,
-          ab = arguments.length > 5 ? arguments[5] : void 0,
-          Tb = arguments.length > 6 ? arguments[6] : void 0;
-        const Ub = zs(),
-          Ib = Ub?.navigationId || 0;
-        let Hb = "navigate";
-        return sb ? Hb = sb : Ss() >= 0 ? Hb = "back-forward-cache" : Ub && (document.prerendering || xs() > 0 ? Hb = "prerender" : document.wasDiscarded ? Hb = "restore" : Ub.type && (Hb = Ub.type.replace(/_/g, "-"))), {
+      UA = function(bb) {
+        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+          Ub = arguments.length > 2 ? arguments[2] : void 0,
+          Ab = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+          Mb = arguments.length > 4 ? arguments[4] : void 0,
+          Tb = arguments.length > 5 ? arguments[5] : void 0,
+          Eb = arguments.length > 6 ? arguments[6] : void 0;
+        const Yb = rU(),
+          Bb = Yb?.navigationId || 0;
+        let eb = "navigate";
+        return Ub ? eb = Ub : gU() >= 0 ? eb = "back-forward-cache" : Yb && (document.prerendering || cU() > 0 ? eb = "prerender" : document.wasDiscarded ? eb = "restore" : Yb.type && (eb = Yb.type.replace(/_/g, "-"))), {
           name: bb,
-          value: cb,
+          value: ab,
           rating: "good",
           delta: 0,
           entries: [],
           id: `v6-${Date.now()}-${Math.floor(8999999999999*Math.random())+1e12}`,
-          navigationType: Hb,
-          navigationId: kb || Ib,
-          navigationInteractionId: Wb,
-          navigationURL: ab || Ub?.name,
-          navigationStartTime: Tb || 0
+          navigationType: eb,
+          navigationId: Ab || Bb,
+          navigationInteractionId: Mb,
+          navigationURL: Tb || Yb?.name,
+          navigationStartTime: Eb || 0
         }
       },
-      ak = function(bb, cb) {
-        let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      AA = function(bb, ab) {
+        let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         try {
-          const kb = bb.filter((bb => PerformanceObserver.supportedEntryTypes.includes(bb)));
-          if (kb.length > 0) {
+          const Ab = bb.filter((bb => PerformanceObserver.supportedEntryTypes.includes(bb)));
+          if (Ab.length > 0) {
             const bb = new PerformanceObserver((bb => {
               queueMicrotask((() => {
-                const sb = bb.getEntries();
-                kb.length > 1 && sb.sort(((bb, cb) => bb.startTime + bb.duration - (cb.startTime + cb.duration))), cb(sb)
+                const Ub = bb.getEntries();
+                Ab.length > 1 && Ub.sort(((bb, ab) => bb.startTime + bb.duration - (ab.startTime + ab.duration))), ab(Ub)
               }))
             }));
-            for (const cb of kb) bb.observe({
-              type: cb,
+            for (const ab of Ab) bb.observe({
+              type: ab,
               buffered: !0,
-              ...sb
+              ...Ub
             });
             return bb
           }
         } catch {}
       },
-      Tk = bb => globalThis.PerformanceObserver?.supportedEntryTypes?.includes("soft-navigation") && "function" == typeof globalThis.PerformanceSoftNavigation?.prototype?.getLargestInteractionContentfulPaint && bb && bb.reportSoftNavs,
-      Uk = (bb, cb) => {
-        if (bb.set(cb.navigationId, cb), bb.size > 2) {
-          const cb = bb.keys().next().value;
-          void 0 !== cb && bb.delete(cb)
+      MA = bb => globalThis.PerformanceObserver?.supportedEntryTypes?.includes("soft-navigation") && "function" == typeof globalThis.PerformanceSoftNavigation?.prototype?.getLargestInteractionContentfulPaint && bb && bb.reportSoftNavs,
+      TA = (bb, ab) => {
+        if (bb.set(ab.navigationId, ab), bb.size > 2) {
+          const ab = bb.keys().next().value;
+          void 0 !== ab && bb.delete(ab)
         }
       },
-      Ik = bb => {
-        let cb = !1;
+      EA = bb => {
+        let ab = !1;
         return () => {
-          cb || (bb(), cb = !0)
+          ab || (bb(), ab = !0)
         }
       };
-    class Hk {
+    class YA {
       u
     }
-    const fk = bb => {
+    const BA = bb => {
         document.prerendering ? addEventListener("prerenderingchange", bb, !0) : bb()
       },
-      Mk = [1800, 3e3],
-      Xk = function(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const sb = Tk(cb);
-        fk((() => {
-          const kb = rs(cb, Hk),
-            Wb = kk();
-          let ab, Tb = Wk("FCP");
-          const Ub = ak(["paint"], (bb => {
-            for (const cb of bb) "first-contentful-paint" === cb.name && (Ub.disconnect(), cb.startTime < Wb.firstHiddenTime && (Tb.value = Math.max(cb.startTime - xs(), 0), Tb.entries.push(cb), Tb.navigationId = cb.navigationId || Tb.navigationId, ab(!0)))
+      eA = [1800, 3e3],
+      vA = function(bb) {
+        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const Ub = MA(ab);
+        BA((() => {
+          const Ab = wU(ab, YA),
+            Mb = aA();
+          let Tb, Eb = UA("FCP");
+          const Yb = AA(["paint"], (bb => {
+            for (const ab of bb) "first-contentful-paint" === ab.name && (Yb.disconnect(), ab.startTime < Mb.firstHiddenTime && (Eb.value = Math.max(ab.startTime - cU(), 0), Eb.entries.push(ab), Eb.navigationId = ab.navigationId || Eb.navigationId, Tb(!0)))
           }));
-          Ub && (ab = vs(bb, Tb, Mk, cb.reportAllChanges), Rs((sb => {
-            Tb = Wk("FCP", -1, "back-forward-cache", Tb.navigationId, Tb.navigationInteractionId, Tb.navigationURL, Ss()), ab = vs(bb, Tb, Mk, cb.reportAllChanges), Fs((() => {
-              Tb.value = performance.now() - sb.timeStamp, ab(!0)
+          Yb && (Tb = VU(bb, Eb, eA, ab.reportAllChanges), CU((Ub => {
+            Eb = UA("FCP", -1, "back-forward-cache", Eb.navigationId, Eb.navigationInteractionId, Eb.navigationURL, gU()), Tb = VU(bb, Eb, eA, ab.reportAllChanges), OU((() => {
+              Eb.value = performance.now() - Ub.timeStamp, Tb(!0)
             }))
-          }))), sb && ak(["soft-navigation"], (sb => {
-            sb.forEach((sb => {
-              kb.u && sb.navigationId && Uk(kb.u, sb);
-              const Wb = Math.max((sb.presentationTime || sb.paintTime || 0) - sb.startTime, 0);
-              Tb = Wk("FCP", Wb, "soft-navigation", sb.navigationId, sb.interactionId, sb.name, sb.startTime), ab = vs(bb, Tb, Mk, cb.reportAllChanges), ab(!0)
+          }))), Ub && AA(["soft-navigation"], (Ub => {
+            Ub.forEach((Ub => {
+              Ab.u && Ub.navigationId && TA(Ab.u, Ub);
+              const Mb = Math.max((Ub.presentationTime || Ub.paintTime || 0) - Ub.startTime, 0);
+              Eb = UA("FCP", Mb, "soft-navigation", Ub.navigationId, Ub.interactionId, Ub.name, Ub.startTime), Tb = VU(bb, Eb, eA, ab.reportAllChanges), Tb(!0)
             }))
-          }), cb)
+          }), ab)
         }))
       },
-      nk = [.1, .25],
-      mk = bb => bb.find((bb => 1 === bb.node?.nodeType)) || bb[0];
-    let lk = 0,
-      Qk = 1 / 0,
-      ek = 0;
-    const Ck = bb => {
-      for (const cb of bb) cb.interactionId && (Qk = Math.min(Qk, cb.interactionId), ek = Math.max(ek, cb.interactionId), lk = ek ? (ek - Qk) / 7 + 1 : 0)
+      LA = [.1, .25],
+      PA = bb => bb.find((bb => 1 === bb.node?.nodeType)) || bb[0];
+    let XA = 0,
+      jA = 1 / 0,
+      RA = 0;
+    const kA = bb => {
+      for (const ab of bb) ab.interactionId && (jA = Math.min(jA, ab.interactionId), RA = Math.max(RA, ab.interactionId), XA = RA ? (RA - jA) / 7 + 1 : 0)
     };
-    let Nk;
-    const Vk = () => Nk ? lk : performance.interactionCount ?? 0;
-    class Lk {
+    let yA;
+    const ZA = () => yA ? XA : performance.interactionCount ?? 0;
+    class DA {
       h = 0;
       v = [];
       p = new Map;
       m;
       M;
       T() {
-        return Vk() - this.h
+        return ZA() - this.h
       }
       D() {
-        this.h = Vk(), this.v.length = 0, this.p.clear()
+        this.h = ZA(), this.v.length = 0, this.p.clear()
       }
       S(bb) {
-        const cb = this.T(),
-          sb = Math.min(this.v.length - 1, Math.floor(cb / 50));
-        return !cb || -1 !== sb || "soft-navigation" !== bb && "back-forward-cache" !== bb ? this.v[sb] : {
+        const ab = this.T(),
+          Ub = Math.min(this.v.length - 1, Math.floor(ab / 50));
+        return !ab || -1 !== Ub || "soft-navigation" !== bb && "back-forward-cache" !== bb ? this.v[Ub] : {
           k: 8,
           id: -1,
           entries: []
@@ -1533,184 +1533,184 @@ export const modules = {
       }
       l(bb) {
         if (this.m?.(bb), !bb.interactionId) return;
-        const cb = this.v.at(-1);
-        let sb = this.p.get(bb.interactionId);
-        if (sb || this.v.length < 10 || bb.duration > cb.k) {
-          if (sb ? bb.duration > sb.k ? (sb.entries = [bb], sb.k = bb.duration) : bb.duration === sb.k && bb.startTime === sb.entries[0].startTime && sb.entries.push(bb) : (sb = {
+        const ab = this.v.at(-1);
+        let Ub = this.p.get(bb.interactionId);
+        if (Ub || this.v.length < 10 || bb.duration > ab.k) {
+          if (Ub ? bb.duration > Ub.k ? (Ub.entries = [bb], Ub.k = bb.duration) : bb.duration === Ub.k && bb.startTime === Ub.entries[0].startTime && Ub.entries.push(bb) : (Ub = {
               id: bb.interactionId,
               entries: [bb],
               k: bb.duration
-            }, this.p.set(sb.id, sb), this.v.push(sb)), this.v.sort(((bb, cb) => cb.k - bb.k)), this.v.length > 10) {
+            }, this.p.set(Ub.id, Ub), this.v.push(Ub)), this.v.sort(((bb, ab) => ab.k - bb.k)), this.v.length > 10) {
             const bb = this.v.splice(10);
-            for (const cb of bb) this.p.delete(cb.id)
+            for (const ab of bb) this.p.delete(ab.id)
           }
-          this.M?.(sb)
+          this.M?.(Ub)
         }
       }
     }
-    const uk = bb => {
-        const cb = "requestIdleCallback" in globalThis ? 1e3 : 0,
-          sb = globalThis.requestIdleCallback || setTimeout,
-          kb = globalThis.cancelIdleCallback || clearTimeout;
+    const zA = bb => {
+        const ab = "requestIdleCallback" in globalThis ? 1e3 : 0,
+          Ub = globalThis.requestIdleCallback || setTimeout,
+          Ab = globalThis.cancelIdleCallback || clearTimeout;
         if ("hidden" === document.visibilityState) bb();
         else {
-          const Wb = Ik(bb);
-          let ab = -1;
-          const Tb = () => {
-            kb(ab), Wb()
+          const Mb = EA(bb);
+          let Tb = -1;
+          const Eb = () => {
+            Ab(Tb), Mb()
           };
-          addEventListener("visibilitychange", Tb, {
+          addEventListener("visibilitychange", Eb, {
             once: !0,
             capture: !0
-          }), ab = sb((() => {
-            removeEventListener("visibilitychange", Tb, {
+          }), Tb = Ub((() => {
+            removeEventListener("visibilitychange", Eb, {
               capture: !0
-            }), Wb()
+            }), Mb()
           }), {
-            timeout: cb
+            timeout: ab
           })
         }
       },
-      Yk = [200, 500],
-      hk = function(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const sb = rs(cb = Object.assign({}, cb), Lk);
-        let kb = [],
-          Wb = [],
-          ab = 0;
-        const Tb = new WeakMap,
-          Ub = new WeakMap;
-        let Ib = !1;
-        const Hb = () => {
-            Ib || (Ib = !0, uk(fb))
+      xA = [200, 500],
+      iA = function(bb) {
+        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const Ub = wU(ab = Object.assign({}, ab), DA);
+        let Ab = [],
+          Mb = [],
+          Tb = 0;
+        const Eb = new WeakMap,
+          Yb = new WeakMap;
+        let Bb = !1;
+        const eb = () => {
+            Bb || (Bb = !0, zA(vb))
           },
-          fb = () => {
-            const bb = new Set(sb.v.map((bb => Tb.get(bb.entries[0])))),
-              cb = Wb.length - 10;
-            Wb = Wb.filter(((sb, kb) => kb >= cb || bb.has(sb)));
-            const Ub = new Set;
-            for (const sb of Wb) {
-              const bb = Mb(sb.startTime, sb.processingEnd);
-              for (const cb of bb) Ub.add(cb)
+          vb = () => {
+            const bb = new Set(Ub.v.map((bb => Eb.get(bb.entries[0])))),
+              ab = Mb.length - 10;
+            Mb = Mb.filter(((Ub, Ab) => Ab >= ab || bb.has(Ub)));
+            const Yb = new Set;
+            for (const Ub of Mb) {
+              const bb = Lb(Ub.startTime, Ub.processingEnd);
+              for (const ab of bb) Yb.add(ab)
             }
-            const Hb = kb.length - 10;
-            kb = kb.filter(((bb, cb) => Ub.has(bb) || cb >= Hb && bb.startTime > ab)), Ib = !1
+            const eb = Ab.length - 10;
+            Ab = Ab.filter(((bb, ab) => Yb.has(bb) || ab >= eb && bb.startTime > Tb)), Bb = !1
           };
-        sb.m = bb => {
-          const sb = bb.startTime + bb.duration;
-          let kb;
-          ab = Math.max(ab, bb.processingEnd);
-          for (let ab = Wb.length - 1; ab >= 0; ab--) {
-            const Tb = Wb[ab];
-            if (Math.abs(sb - Tb.renderTime) <= 8) {
-              kb = Tb, kb.startTime = Math.min(bb.startTime, kb.startTime), kb.processingStart = Math.min(bb.processingStart, kb.processingStart), kb.processingEnd = Math.max(bb.processingEnd, kb.processingEnd), cb.includeProcessedEventEntries && kb.entries.push(bb);
+        Ub.m = bb => {
+          const Ub = bb.startTime + bb.duration;
+          let Ab;
+          Tb = Math.max(Tb, bb.processingEnd);
+          for (let Tb = Mb.length - 1; Tb >= 0; Tb--) {
+            const Eb = Mb[Tb];
+            if (Math.abs(Ub - Eb.renderTime) <= 8) {
+              Ab = Eb, Ab.startTime = Math.min(bb.startTime, Ab.startTime), Ab.processingStart = Math.min(bb.processingStart, Ab.processingStart), Ab.processingEnd = Math.max(bb.processingEnd, Ab.processingEnd), ab.includeProcessedEventEntries && Ab.entries.push(bb);
               break
             }
           }
-          kb || (kb = {
+          Ab || (Ab = {
             startTime: bb.startTime,
             processingStart: bb.processingStart,
             processingEnd: bb.processingEnd,
-            renderTime: sb,
-            entries: cb.includeProcessedEventEntries ? [bb] : []
-          }, Wb.push(kb)), bb.interactionId && Tb.set(bb, kb), Hb()
-        }, sb.M = bb => {
-          if (!Ub.get(bb)) {
-            const sb = bb.entries.find((bb => bb.target))?.target;
-            if (sb) {
-              const kb = cb.generateTarget?.(sb) ?? As(sb);
-              Ub.set(bb, kb)
+            renderTime: Ub,
+            entries: ab.includeProcessedEventEntries ? [bb] : []
+          }, Mb.push(Ab)), bb.interactionId && Eb.set(bb, Ab), eb()
+        }, Ub.M = bb => {
+          if (!Yb.get(bb)) {
+            const Ub = bb.entries.find((bb => bb.target))?.target;
+            if (Ub) {
+              const Ab = ab.generateTarget?.(Ub) ?? lU(Ub);
+              Yb.set(bb, Ab)
             } else {
-              const cb = bb.entries.find((bb => bb.targetSelector))?.targetSelector;
-              cb && Ub.set(bb, cb)
+              const ab = bb.entries.find((bb => bb.targetSelector))?.targetSelector;
+              ab && Yb.set(bb, ab)
             }
           }
         };
-        const Mb = (bb, cb) => {
-          const sb = [];
-          for (const Wb of kb)
-            if (!(Wb.startTime + Wb.duration < bb)) {
-              if (Wb.startTime > cb) break;
-              sb.push(Wb)
-            } return sb
+        const Lb = (bb, ab) => {
+          const Ub = [];
+          for (const Mb of Ab)
+            if (!(Mb.startTime + Mb.duration < bb)) {
+              if (Mb.startTime > ab) break;
+              Ub.push(Mb)
+            } return Ub
         };
-        ak(["long-animation-frame"], (bb => {
-            kb = kb.concat(bb), Hb()
-          }), cb),
+        AA(["long-animation-frame"], (bb => {
+            Ab = Ab.concat(bb), eb()
+          }), ab),
           function(bb) {
-            let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             if (!globalThis.PerformanceEventTiming || !("interactionId" in PerformanceEventTiming.prototype)) return;
-            const sb = kk();
-            fk((() => {
-              "interactionCount" in performance || Nk || (Nk = ak(["event"], Ck, {
+            const Ub = aA();
+            BA((() => {
+              "interactionCount" in performance || yA || (yA = AA(["event"], kA, {
                 durationThreshold: 0
               }));
-              let kb, Wb = Wk("INP");
-              const ab = rs(cb, Lk),
-                Tb = (sb, Tb, Ub, Ib, Hb) => {
-                  ab.D(), Wb = Wk("INP", -1, sb, Tb, Ub, Ib, Hb), kb = vs(bb, Wb, Yk, cb.reportAllChanges)
+              let Ab, Mb = UA("INP");
+              const Tb = wU(ab, DA),
+                Eb = (Ub, Eb, Yb, Bb, eb) => {
+                  Tb.D(), Mb = UA("INP", -1, Ub, Eb, Yb, Bb, eb), Ab = VU(bb, Mb, xA, ab.reportAllChanges)
                 },
-                Ub = () => {
-                  const bb = ab.S(Wb.navigationType);
-                  bb && bb.k !== Wb.value && (Wb.value = bb.k, Wb.entries = bb.entries, kb())
+                Yb = () => {
+                  const bb = Tb.S(Mb.navigationType);
+                  bb && bb.k !== Mb.value && (Mb.value = bb.k, Mb.entries = bb.entries, Ab())
                 },
-                Ib = bb => {
-                  Ub(), kb(!0), Tb("soft-navigation", bb.navigationId, bb.interactionId, bb.name, bb.startTime)
+                Bb = bb => {
+                  Yb(), Ab(!0), Eb("soft-navigation", bb.navigationId, bb.interactionId, bb.name, bb.startTime)
                 },
-                Hb = function(bb) {
-                  let cb = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                  uk((() => {
-                    for (const cb of bb) "soft-navigation" !== cb.entryType ? ab.l(cb) : Ib(cb);
-                    Ub(), cb && kb(!0)
+                eb = function(bb) {
+                  let ab = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+                  zA((() => {
+                    for (const ab of bb) "soft-navigation" !== ab.entryType ? Tb.l(ab) : Bb(ab);
+                    Yb(), ab && Ab(!0)
                   }))
                 },
-                fb = ["event", "first-input"];
-              Tk(cb) && fb.push("soft-navigation");
-              const Mb = ak(fb, Hb, {
-                ...cb,
-                durationThreshold: cb.durationThreshold ?? 40
+                vb = ["event", "first-input"];
+              MA(ab) && vb.push("soft-navigation");
+              const Lb = AA(vb, eb, {
+                ...ab,
+                durationThreshold: ab.durationThreshold ?? 40
               });
-              kb = vs(bb, Wb, Yk, cb.reportAllChanges), Mb && (sb.onHidden((() => {
-                Hb(Mb.takeRecords(), !0)
-              })), Rs((() => {
-                Tb("back-forward-cache", Wb.navigationId, Wb.navigationInteractionId, Wb.navigationURL, Ss())
+              Ab = VU(bb, Mb, xA, ab.reportAllChanges), Lb && (Ub.onHidden((() => {
+                eb(Lb.takeRecords(), !0)
+              })), CU((() => {
+                Eb("back-forward-cache", Mb.navigationId, Mb.navigationInteractionId, Mb.navigationURL, gU())
               })))
             }))
-          }((cb => {
+          }((ab => {
             bb((bb => {
               if (0 === bb.entries.length) {
-                const cb = bb.navigationStartTime || 0,
-                  sb = {
+                const ab = bb.navigationStartTime || 0,
+                  Ub = {
                     processedEventEntries: [],
                     longAnimationFrameEntries: [],
                     inputDelay: 0,
                     processingDuration: 0,
                     presentationDelay: bb.value,
-                    loadState: qs(cb)
+                    loadState: KU(ab)
                   };
                 return Object.assign(bb, {
-                  attribution: sb
+                  attribution: Ub
                 })
               }
-              const cb = bb.entries[0],
-                kb = Tb.get(cb),
-                Wb = Math.max(kb.processingStart, cb.startTime),
-                ab = Math.max(cb.startTime + cb.duration, Wb),
-                Ib = Math.min(kb.processingEnd, ab),
-                Hb = kb.entries.sort(((bb, cb) => bb.processingStart - cb.processingStart)),
-                fb = Mb(cb.startTime, Ib),
-                Xb = sb.p.get(cb.interactionId),
-                nb = {
-                  interactionTarget: Ub.get(Xb),
-                  interactionType: cb.name.startsWith("key") ? "keyboard" : "pointer",
-                  interactionTime: cb.startTime,
-                  nextPaintTime: ab,
-                  processedEventEntries: Hb,
-                  longAnimationFrameEntries: fb,
-                  inputDelay: Wb - cb.startTime,
-                  processingDuration: Ib - Wb,
-                  presentationDelay: ab - Ib,
-                  loadState: qs(cb.startTime),
+              const ab = bb.entries[0],
+                Ab = Eb.get(ab),
+                Mb = Math.max(Ab.processingStart, ab.startTime),
+                Tb = Math.max(ab.startTime + ab.duration, Mb),
+                Bb = Math.min(Ab.processingEnd, Tb),
+                eb = Ab.entries.sort(((bb, ab) => bb.processingStart - ab.processingStart)),
+                vb = Lb(ab.startTime, Bb),
+                Pb = Ub.p.get(ab.interactionId),
+                Xb = {
+                  interactionTarget: Yb.get(Pb),
+                  interactionType: ab.name.startsWith("key") ? "keyboard" : "pointer",
+                  interactionTime: ab.startTime,
+                  nextPaintTime: Tb,
+                  processedEventEntries: eb,
+                  longAnimationFrameEntries: vb,
+                  inputDelay: Mb - ab.startTime,
+                  processingDuration: Bb - Mb,
+                  presentationDelay: Tb - Bb,
+                  loadState: KU(ab.startTime),
                   longestScript: void 0,
                   totalScriptDuration: void 0,
                   totalStyleAndLayoutDuration: void 0,
@@ -1718,60 +1718,60 @@ export const modules = {
                   totalUnattributedDuration: void 0
                 };
               return (bb => {
-                const cb = bb.interactionTime,
-                  sb = bb.nextPaintTime;
-                if (!bb.longAnimationFrameEntries?.length || !cb || !sb) return;
-                const kb = bb.inputDelay,
-                  Wb = bb.processingDuration;
-                let ab, Tb, Ub = 0,
-                  Ib = 0,
-                  Hb = 0,
-                  fb = 0;
-                for (const nb of bb.longAnimationFrameEntries) {
-                  Ib = Ib + nb.startTime + nb.duration - nb.styleAndLayoutStart;
-                  for (const bb of nb.scripts) {
-                    const sb = bb.startTime + bb.duration;
-                    if (sb < cb) continue;
-                    const Hb = sb - Math.max(cb, bb.startTime),
-                      Mb = bb.duration ? Hb / bb.duration * bb.forcedStyleAndLayoutDuration : 0;
-                    Ub += Hb - Mb, Ib += Mb, Hb > fb && (Tb = bb.startTime < cb + kb ? "input-delay" : bb.startTime >= cb + kb + Wb ? "presentation-delay" : "processing-duration", ab = bb, fb = Hb)
+                const ab = bb.interactionTime,
+                  Ub = bb.nextPaintTime;
+                if (!bb.longAnimationFrameEntries?.length || !ab || !Ub) return;
+                const Ab = bb.inputDelay,
+                  Mb = bb.processingDuration;
+                let Tb, Eb, Yb = 0,
+                  Bb = 0,
+                  eb = 0,
+                  vb = 0;
+                for (const Xb of bb.longAnimationFrameEntries) {
+                  Bb = Bb + Xb.startTime + Xb.duration - Xb.styleAndLayoutStart;
+                  for (const bb of Xb.scripts) {
+                    const Ub = bb.startTime + bb.duration;
+                    if (Ub < ab) continue;
+                    const eb = Ub - Math.max(ab, bb.startTime),
+                      Lb = bb.duration ? eb / bb.duration * bb.forcedStyleAndLayoutDuration : 0;
+                    Yb += eb - Lb, Bb += Lb, eb > vb && (Eb = bb.startTime < ab + Ab ? "input-delay" : bb.startTime >= ab + Ab + Mb ? "presentation-delay" : "processing-duration", Tb = bb, vb = eb)
                   }
                 }
-                const Mb = bb.longAnimationFrameEntries.at(-1),
-                  Xb = Mb ? Mb.startTime + Mb.duration : 0;
-                Xb >= cb + kb + Wb && (Hb = sb - Xb), ab && Tb && (bb.longestScript = {
-                  entry: ab,
-                  subpart: Tb,
-                  intersectingDuration: fb
-                }), bb.totalScriptDuration = Ub, bb.totalStyleAndLayoutDuration = Ib, bb.totalPaintDuration = Hb, bb.totalUnattributedDuration = sb - cb - Ub - Ib - Hb
-              })(nb), Object.assign(bb, {
-                attribution: nb
+                const Lb = bb.longAnimationFrameEntries.at(-1),
+                  Pb = Lb ? Lb.startTime + Lb.duration : 0;
+                Pb >= ab + Ab + Mb && (eb = Ub - Pb), Tb && Eb && (bb.longestScript = {
+                  entry: Tb,
+                  subpart: Eb,
+                  intersectingDuration: vb
+                }), bb.totalScriptDuration = Yb, bb.totalStyleAndLayoutDuration = Bb, bb.totalPaintDuration = eb, bb.totalUnattributedDuration = Ub - ab - Yb - Bb - eb
+              })(Xb), Object.assign(bb, {
+                attribution: Xb
               })
-            })(cb))
-          }), cb)
+            })(ab))
+          }), ab)
       };
-    class Jk {
+    class fA {
       m;
       u;
       l(bb) {
         this.m?.(bb)
       }
     }
-    const gk = [2500, 4e3];
-    let Bk = 50;
-    const tk = [];
-    ak(["resource"], (bb => {
-      for (const cb of bb) tk.push(cb), tk.length > Bk && tk.shift()
+    const mA = [2500, 4e3];
+    let pA = 50;
+    const NA = [];
+    AA(["resource"], (bb => {
+      for (const ab of bb) NA.push(ab), NA.length > pA && NA.shift()
     }));
-    const yk = [800, 1800],
-      Pk = bb => {
-        document.prerendering ? fk((() => Pk(bb))) : "complete" !== document.readyState ? addEventListener("load", (() => Pk(bb)), !0) : setTimeout(bb)
+    const WA = [800, 1800],
+      HA = bb => {
+        document.prerendering ? BA((() => HA(bb))) : "complete" !== document.readyState ? addEventListener("load", (() => HA(bb)), !0) : setTimeout(bb)
       },
-      Dk = "load_state",
-      Ek = "time_to_first_byte";
-    var ik = class {
-        constructor(bb, cb) {
-          this.corePushMeasurement = bb, this.webVitalConfig = cb
+      IA = "load_state",
+      dA = "time_to_first_byte";
+    var FA = class {
+        constructor(bb, ab) {
+          this.corePushMeasurement = bb, this.webVitalConfig = ab
         }
         initialize() {
           this.measureCLS(), this.measureFCP(), this.measureINP(), this.measureLCP(), this.measureTTFB()
@@ -1779,80 +1779,80 @@ export const modules = {
         measureCLS() {
           var bb;
           ! function(bb) {
-            let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            const sb = rs(cb = Object.assign({}, cb), Zs),
-              kb = new WeakMap;
-            sb.t = bb => {
+            let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            const Ub = wU(ab = Object.assign({}, ab), uU),
+              Ab = new WeakMap;
+            Ub.t = bb => {
                 if (bb?.sources?.length) {
-                  const sb = mk(bb.sources),
-                    Wb = sb?.node;
-                  if (Wb) {
-                    const bb = cb.generateTarget?.(Wb) ?? As(Wb);
-                    kb.set(sb, bb)
+                  const Ub = PA(bb.sources),
+                    Mb = Ub?.node;
+                  if (Mb) {
+                    const bb = ab.generateTarget?.(Mb) ?? lU(Mb);
+                    Ab.set(Ub, bb)
                   }
                 }
               },
               function(bb) {
-                let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                const sb = kk();
-                Xk(Ik((() => {
-                  let kb, Wb = Wk("CLS", 0);
-                  const ab = rs(cb, Zs),
-                    Tb = (sb, Tb, Ub, Ib, Hb) => {
-                      Wb = Wk("CLS", 0, sb, Tb, Ub, Ib, Hb), ab.o = 0, kb = vs(bb, Wb, nk, cb.reportAllChanges)
+                let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+                const Ub = aA();
+                vA(EA((() => {
+                  let Ab, Mb = UA("CLS", 0);
+                  const Tb = wU(ab, uU),
+                    Eb = (Ub, Eb, Yb, Bb, eb) => {
+                      Mb = UA("CLS", 0, Ub, Eb, Yb, Bb, eb), Tb.o = 0, Ab = VU(bb, Mb, LA, ab.reportAllChanges)
                     },
-                    Ub = function() {
+                    Yb = function() {
                       let bb = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                      ab.o > Wb.value && (Wb.value = ab.o, Wb.entries = ab.i), kb(bb)
+                      Tb.o > Mb.value && (Mb.value = Tb.o, Mb.entries = Tb.i), Ab(bb)
                     },
-                    Ib = bb => {
-                      Ub(!0), Tb("soft-navigation", bb.navigationId, bb.interactionId, bb.name, bb.startTime)
+                    Bb = bb => {
+                      Yb(!0), Eb("soft-navigation", bb.navigationId, bb.interactionId, bb.name, bb.startTime)
                     },
-                    Hb = bb => {
-                      for (const cb of bb) "soft-navigation" !== cb.entryType ? ab.l(cb) : Ib(cb);
-                      Ub()
+                    eb = bb => {
+                      for (const ab of bb) "soft-navigation" !== ab.entryType ? Tb.l(ab) : Bb(ab);
+                      Yb()
                     },
-                    fb = ["layout-shift"];
-                  Tk(cb) && fb.push("soft-navigation");
-                  const Mb = ak(fb, Hb);
-                  Mb && (kb = vs(bb, Wb, nk, cb.reportAllChanges), sb.onHidden((() => {
-                    Hb(Mb.takeRecords()), kb(!0)
-                  })), Rs((() => {
-                    Tb("back-forward-cache", Wb.navigationId, Wb.navigationInteractionId, Wb.navigationURL, Ss()), Fs(kb)
-                  })), setTimeout(kb))
+                    vb = ["layout-shift"];
+                  MA(ab) && vb.push("soft-navigation");
+                  const Lb = AA(vb, eb);
+                  Lb && (Ab = VU(bb, Mb, LA, ab.reportAllChanges), Ub.onHidden((() => {
+                    eb(Lb.takeRecords()), Ab(!0)
+                  })), CU((() => {
+                    Eb("back-forward-cache", Mb.navigationId, Mb.navigationInteractionId, Mb.navigationURL, gU()), OU(Ab)
+                  })), setTimeout(Ab))
                 })))
-              }((cb => {
+              }((ab => {
                 bb((bb => {
-                  let cb = {};
+                  let ab = {};
                   if (bb.entries.length) {
-                    const sb = bb.entries.reduce(((bb, cb) => bb.value > cb.value ? bb : cb));
-                    if (sb?.sources?.length) {
-                      const bb = mk(sb.sources);
-                      bb && (cb = {
-                        largestShiftTarget: kb.get(bb),
-                        largestShiftTime: sb.startTime,
-                        largestShiftValue: sb.value,
+                    const Ub = bb.entries.reduce(((bb, ab) => bb.value > ab.value ? bb : ab));
+                    if (Ub?.sources?.length) {
+                      const bb = PA(Ub.sources);
+                      bb && (ab = {
+                        largestShiftTarget: Ab.get(bb),
+                        largestShiftTime: Ub.startTime,
+                        largestShiftValue: Ub.value,
                         largestShiftSource: bb,
-                        largestShiftEntry: sb,
-                        loadState: qs(sb.startTime)
+                        largestShiftEntry: Ub,
+                        loadState: KU(Ub.startTime)
                       })
                     }
                   }
                   return Object.assign(bb, {
-                    attribution: cb
+                    attribution: ab
                   })
-                })(cb))
-              }), cb)
+                })(ab))
+              }), ab)
           }((bb => {
             const {
-              loadState: cb,
-              largestShiftValue: sb,
-              largestShiftTime: kb,
-              largestShiftTarget: Wb
-            } = bb.attribution, ab = this.buildInitialValues(bb);
-            this.addIfPresent(ab, "largest_shift_value", sb), this.addIfPresent(ab, "largest_shift_time", kb);
-            const Tb = this.buildInitialContext(bb);
-            this.addIfPresent(Tb, Dk, cb), this.addIfPresent(Tb, "largest_shift_target", Wb), this.pushMeasurement(ab, Tb)
+              loadState: ab,
+              largestShiftValue: Ub,
+              largestShiftTime: Ab,
+              largestShiftTarget: Mb
+            } = bb.attribution, Tb = this.buildInitialValues(bb);
+            this.addIfPresent(Tb, "largest_shift_value", Ub), this.addIfPresent(Tb, "largest_shift_time", Ab);
+            const Eb = this.buildInitialContext(bb);
+            this.addIfPresent(Eb, IA, ab), this.addIfPresent(Eb, "largest_shift_target", Mb), this.pushMeasurement(Tb, Eb)
           }), {
             reportAllChanges: null === (bb = this.webVitalConfig) || void 0 === bb ? void 0 : bb.reportAllChanges
           })
@@ -1860,81 +1860,81 @@ export const modules = {
         measureFCP() {
           var bb;
           ! function(bb) {
-            let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            const sb = rs(cb = Object.assign({}, cb), Hk);
-            Tk(cb) && (sb.u = new Map), Xk((cb => {
+            let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            const Ub = wU(ab = Object.assign({}, ab), YA);
+            MA(ab) && (Ub.u = new Map), vA((ab => {
               bb((bb => {
-                let cb = {
+                let ab = {
                   timeToFirstByte: 0,
                   firstByteToFCP: bb.value,
-                  loadState: qs(Ss())
+                  loadState: KU(gU())
                 };
                 if ("soft-navigation" !== bb.navigationType) {
                   if (bb.entries.length) {
-                    const sb = zs(),
-                      kb = bb.entries.at(-1);
-                    if (sb) {
-                      const Wb = sb.responseStart,
-                        ab = sb.activationStart || 0,
-                        Tb = Math.max(0, Wb - ab);
-                      cb = {
-                        timeToFirstByte: Tb,
-                        firstByteToFCP: bb.value - Tb,
-                        loadState: qs(bb.entries[0].startTime),
-                        navigationEntry: sb,
-                        fcpEntry: kb
+                    const Ub = rU(),
+                      Ab = bb.entries.at(-1);
+                    if (Ub) {
+                      const Mb = Ub.responseStart,
+                        Tb = Ub.activationStart || 0,
+                        Eb = Math.max(0, Mb - Tb);
+                      ab = {
+                        timeToFirstByte: Eb,
+                        firstByteToFCP: bb.value - Eb,
+                        loadState: KU(bb.entries[0].startTime),
+                        navigationEntry: Ub,
+                        fcpEntry: Ab
                       }
                     }
                   }
                 } else {
-                  const kb = sb.u?.get(bb.navigationId);
-                  kb && (cb = {
+                  const Ab = Ub.u?.get(bb.navigationId);
+                  Ab && (ab = {
                     timeToFirstByte: 0,
                     firstByteToFCP: bb.value,
                     loadState: "complete",
-                    navigationEntry: kb
+                    navigationEntry: Ab
                   })
                 }
                 return Object.assign(bb, {
-                  attribution: cb
+                  attribution: ab
                 })
-              })(cb))
-            }), cb)
+              })(ab))
+            }), ab)
           }((bb => {
             const {
-              firstByteToFCP: cb,
-              timeToFirstByte: sb,
-              loadState: kb
-            } = bb.attribution, Wb = this.buildInitialValues(bb);
-            this.addIfPresent(Wb, "first_byte_to_fcp", cb), this.addIfPresent(Wb, Ek, sb);
-            const ab = this.buildInitialContext(bb);
-            this.addIfPresent(ab, Dk, kb), this.pushMeasurement(Wb, ab)
+              firstByteToFCP: ab,
+              timeToFirstByte: Ub,
+              loadState: Ab
+            } = bb.attribution, Mb = this.buildInitialValues(bb);
+            this.addIfPresent(Mb, "first_byte_to_fcp", ab), this.addIfPresent(Mb, dA, Ub);
+            const Tb = this.buildInitialContext(bb);
+            this.addIfPresent(Tb, IA, Ab), this.pushMeasurement(Mb, Tb)
           }), {
             reportAllChanges: null === (bb = this.webVitalConfig) || void 0 === bb ? void 0 : bb.reportAllChanges
           })
         }
         measureINP() {
           var bb;
-          hk((bb => {
-            var cb;
+          iA((bb => {
+            var ab;
             const {
-              interactionTime: sb,
-              presentationDelay: kb,
-              inputDelay: Wb,
-              processingDuration: ab,
-              nextPaintTime: Tb,
-              loadState: Ub,
-              interactionTarget: Ib,
-              interactionType: Hb,
-              totalScriptDuration: fb,
-              totalStyleAndLayoutDuration: Mb,
-              totalPaintDuration: Xb,
-              totalUnattributedDuration: nb,
-              longestScript: mb
-            } = bb.attribution, lb = this.buildInitialValues(bb);
-            this.addIfPresent(lb, "interaction_time", sb), this.addIfPresent(lb, "presentation_delay", kb), this.addIfPresent(lb, "input_delay", Wb), this.addIfPresent(lb, "processing_duration", ab), this.addIfPresent(lb, "next_paint_time", Tb), this.addNumberIfDefined(lb, "total_script_duration", fb), this.addNumberIfDefined(lb, "total_style_and_layout_duration", Mb), this.addNumberIfDefined(lb, "total_paint_duration", Xb), this.addNumberIfDefined(lb, "total_unattributed_duration", nb), this.addNumberIfDefined(lb, "longest_script_intersecting_duration", null === mb || void 0 === mb ? void 0 : mb.intersectingDuration);
-            const Qb = this.buildInitialContext(bb);
-            this.addIfPresent(Qb, Dk, Ub), this.addIfPresent(Qb, "interaction_target", Ib), this.addIfPresent(Qb, "interaction_type", Hb), this.addIfPresent(Qb, "longest_script_subpart", null === mb || void 0 === mb ? void 0 : mb.subpart), this.addIfPresent(Qb, "longest_script_invoker_type", null === mb || void 0 === mb ? void 0 : mb.entry.invokerType), (null === (cb = this.webVitalConfig) || void 0 === cb ? void 0 : cb.trackAttributionSources) && (this.addIfPresent(Qb, "longest_script_invoker", null === mb || void 0 === mb ? void 0 : mb.entry.invoker), this.addIfPresent(Qb, "longest_script_source_url", null === mb || void 0 === mb ? void 0 : mb.entry.sourceURL), this.addIfPresent(Qb, "longest_script_source_function_name", null === mb || void 0 === mb ? void 0 : mb.entry.sourceFunctionName), this.addIfPresent(Qb, "longest_script_source_char_position", void 0 !== (null === mb || void 0 === mb ? void 0 : mb.entry.sourceCharPosition) ? String(mb.entry.sourceCharPosition) : void 0)), this.pushMeasurement(lb, Qb)
+              interactionTime: Ub,
+              presentationDelay: Ab,
+              inputDelay: Mb,
+              processingDuration: Tb,
+              nextPaintTime: Eb,
+              loadState: Yb,
+              interactionTarget: Bb,
+              interactionType: eb,
+              totalScriptDuration: vb,
+              totalStyleAndLayoutDuration: Lb,
+              totalPaintDuration: Pb,
+              totalUnattributedDuration: Xb,
+              longestScript: jb
+            } = bb.attribution, Rb = this.buildInitialValues(bb);
+            this.addIfPresent(Rb, "interaction_time", Ub), this.addIfPresent(Rb, "presentation_delay", Ab), this.addIfPresent(Rb, "input_delay", Mb), this.addIfPresent(Rb, "processing_duration", Tb), this.addIfPresent(Rb, "next_paint_time", Eb), this.addNumberIfDefined(Rb, "total_script_duration", vb), this.addNumberIfDefined(Rb, "total_style_and_layout_duration", Lb), this.addNumberIfDefined(Rb, "total_paint_duration", Pb), this.addNumberIfDefined(Rb, "total_unattributed_duration", Xb), this.addNumberIfDefined(Rb, "longest_script_intersecting_duration", null === jb || void 0 === jb ? void 0 : jb.intersectingDuration);
+            const kb = this.buildInitialContext(bb);
+            this.addIfPresent(kb, IA, Yb), this.addIfPresent(kb, "interaction_target", Bb), this.addIfPresent(kb, "interaction_type", eb), this.addIfPresent(kb, "longest_script_subpart", null === jb || void 0 === jb ? void 0 : jb.subpart), this.addIfPresent(kb, "longest_script_invoker_type", null === jb || void 0 === jb ? void 0 : jb.entry.invokerType), (null === (ab = this.webVitalConfig) || void 0 === ab ? void 0 : ab.trackAttributionSources) && (this.addIfPresent(kb, "longest_script_invoker", null === jb || void 0 === jb ? void 0 : jb.entry.invoker), this.addIfPresent(kb, "longest_script_source_url", null === jb || void 0 === jb ? void 0 : jb.entry.sourceURL), this.addIfPresent(kb, "longest_script_source_function_name", null === jb || void 0 === jb ? void 0 : jb.entry.sourceFunctionName), this.addIfPresent(kb, "longest_script_source_char_position", void 0 !== (null === jb || void 0 === jb ? void 0 : jb.entry.sourceCharPosition) ? String(jb.entry.sourceCharPosition) : void 0)), this.pushMeasurement(Rb, kb)
           }), {
             reportAllChanges: null === (bb = this.webVitalConfig) || void 0 === bb ? void 0 : bb.reportAllChanges
           })
@@ -1942,135 +1942,135 @@ export const modules = {
         measureLCP() {
           var bb;
           ! function(bb) {
-            let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            null != (cb = Object.assign({}, cb)).resourceBufferSize && (Bk = cb.resourceBufferSize);
-            const sb = rs(cb, Jk),
-              kb = new WeakMap;
-            Tk(cb) && (sb.u = new Map), sb.m = bb => {
-                const sb = bb.element;
-                if (sb) {
-                  const Wb = cb.generateTarget?.(sb) ?? As(sb);
-                  kb.set(bb, Wb)
-                } else bb.id && kb.set(bb, `#${bb.id}`)
+            let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            null != (ab = Object.assign({}, ab)).resourceBufferSize && (pA = ab.resourceBufferSize);
+            const Ub = wU(ab, fA),
+              Ab = new WeakMap;
+            MA(ab) && (Ub.u = new Map), Ub.m = bb => {
+                const Ub = bb.element;
+                if (Ub) {
+                  const Mb = ab.generateTarget?.(Ub) ?? lU(Ub);
+                  Ab.set(bb, Mb)
+                } else bb.id && Ab.set(bb, `#${bb.id}`)
               },
               function(bb) {
-                let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                  sb = !1;
-                const kb = Tk(cb);
-                fk((() => {
-                  let Wb, ab = kk(),
-                    Tb = Wk("LCP");
-                  const Ub = rs(cb, Jk),
-                    Ib = (kb, Ub, Ib, Hb, fb) => {
-                      Tb = Wk("LCP", -1, kb, Ub, Ib, Hb, fb), Wb = vs(bb, Tb, gk, cb.reportAllChanges), sb = !1, "soft-navigation" === kb && (ab = kk(!0))
+                let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                  Ub = !1;
+                const Ab = MA(ab);
+                BA((() => {
+                  let Mb, Tb = aA(),
+                    Eb = UA("LCP");
+                  const Yb = wU(ab, fA),
+                    Bb = (Ab, Yb, Bb, eb, vb) => {
+                      Eb = UA("LCP", -1, Ab, Yb, Bb, eb, vb), Mb = VU(bb, Eb, mA, ab.reportAllChanges), Ub = !1, "soft-navigation" === Ab && (Tb = aA(!0))
                     },
-                    Hb = bb => {
-                      Ub.u && bb.navigationId && Uk(Ub.u, bb), sb || Wb(!0), Ib("soft-navigation", bb.navigationId, bb.interactionId, bb.name, bb.startTime);
-                      const cb = bb.getLargestInteractionContentfulPaint?.();
-                      cb && fb([cb])
+                    eb = bb => {
+                      Yb.u && bb.navigationId && TA(Yb.u, bb), Ub || Mb(!0), Bb("soft-navigation", bb.navigationId, bb.interactionId, bb.name, bb.startTime);
+                      const ab = bb.getLargestInteractionContentfulPaint?.();
+                      ab && vb([ab])
                     },
-                    fb = bb => {
-                      cb.reportAllChanges || kb || (bb = bb.slice(-1));
-                      for (const cb of bb) {
-                        if (!cb) continue;
-                        if ("soft-navigation" === cb.entryType) {
-                          Hb(cb);
+                    vb = bb => {
+                      ab.reportAllChanges || Ab || (bb = bb.slice(-1));
+                      for (const ab of bb) {
+                        if (!ab) continue;
+                        if ("soft-navigation" === ab.entryType) {
+                          eb(ab);
                           continue
                         }
                         let bb = 0,
-                          sb = [],
-                          kb = cb.startTime;
-                        if ("largest-contentful-paint" === cb.entryType) bb = Math.max(cb.startTime - xs(), 0), Ub.l(cb), sb = [cb];
-                        else if ("interaction-contentful-paint" === cb.entryType) {
-                          const Wb = cb;
-                          if (!Tb.navigationId) continue;
-                          if ("interactionId" in Wb && Wb.interactionId != Tb.navigationInteractionId) continue;
-                          kb = Wb.largestContentfulPaint?.renderTime || 0, bb = Math.max(kb - cb.startTime, 0), Wb.largestContentfulPaint && (Ub.l(Wb.largestContentfulPaint), sb = [Wb.largestContentfulPaint])
+                          Ub = [],
+                          Ab = ab.startTime;
+                        if ("largest-contentful-paint" === ab.entryType) bb = Math.max(ab.startTime - cU(), 0), Yb.l(ab), Ub = [ab];
+                        else if ("interaction-contentful-paint" === ab.entryType) {
+                          const Mb = ab;
+                          if (!Eb.navigationId) continue;
+                          if ("interactionId" in Mb && Mb.interactionId != Eb.navigationInteractionId) continue;
+                          Ab = Mb.largestContentfulPaint?.renderTime || 0, bb = Math.max(Ab - ab.startTime, 0), Mb.largestContentfulPaint && (Yb.l(Mb.largestContentfulPaint), Ub = [Mb.largestContentfulPaint])
                         }
-                        kb < ab.firstHiddenTime && (Tb.value = bb, Tb.entries = sb, Wb())
+                        Ab < Tb.firstHiddenTime && (Eb.value = bb, Eb.entries = Ub, Mb())
                       }
                     },
-                    Mb = ["largest-contentful-paint"];
-                  kb && Mb.push("interaction-contentful-paint", "soft-navigation");
-                  const Xb = ak(Mb, fb);
-                  if (Xb) {
-                    Wb = vs(bb, Tb, gk, cb.reportAllChanges);
-                    const ab = ["keydown", "click", "visibilitychange"],
-                      Ub = bb => {
-                        if (bb.isTrusted && !sb) {
-                          const bb = Tb.id;
-                          uk((() => {
-                            if (!sb) {
-                              if (!kb) {
-                                Xb.disconnect();
-                                for (const bb of ab) removeEventListener(bb, Ub, {
+                    Lb = ["largest-contentful-paint"];
+                  Ab && Lb.push("interaction-contentful-paint", "soft-navigation");
+                  const Pb = AA(Lb, vb);
+                  if (Pb) {
+                    Mb = VU(bb, Eb, mA, ab.reportAllChanges);
+                    const Tb = ["keydown", "click", "visibilitychange"],
+                      Yb = bb => {
+                        if (bb.isTrusted && !Ub) {
+                          const bb = Eb.id;
+                          zA((() => {
+                            if (!Ub) {
+                              if (!Ab) {
+                                Pb.disconnect();
+                                for (const bb of Tb) removeEventListener(bb, Yb, {
                                   capture: !0
                                 })
                               }
-                              bb === Tb.id && (sb = !0, Wb(!0))
+                              bb === Eb.id && (Ub = !0, Mb(!0))
                             }
                           }))
                         }
                       };
-                    for (const bb of ab) addEventListener(bb, Ub, {
+                    for (const bb of Tb) addEventListener(bb, Yb, {
                       capture: !0
                     });
-                    Rs((kb => {
-                      Ib("back-forward-cache", Tb.navigationId, Tb.navigationInteractionId, Tb.navigationURL, Ss()), Wb = vs(bb, Tb, gk, cb.reportAllChanges), Fs((() => {
-                        Tb.value = performance.now() - kb.timeStamp, sb = !0, Wb(!0)
+                    CU((Ab => {
+                      Bb("back-forward-cache", Eb.navigationId, Eb.navigationInteractionId, Eb.navigationURL, gU()), Mb = VU(bb, Eb, mA, ab.reportAllChanges), OU((() => {
+                        Eb.value = performance.now() - Ab.timeStamp, Ub = !0, Mb(!0)
                       }))
                     }))
                   }
                 }))
-              }((cb => {
+              }((ab => {
                 bb((bb => {
-                  let cb = {
+                  let ab = {
                     timeToFirstByte: 0,
                     resourceLoadDelay: 0,
                     resourceLoadDuration: 0,
                     elementRenderDelay: bb.value
                   };
                   if (bb.entries.length) {
-                    const Wb = bb.entries.at(-1),
-                      ab = bb => bb.name === Wb.url && (bb.requestStart || bb.startTime) <= Wb.startTime,
-                      Tb = Wb.url && (tk.findLast(ab) || performance.getEntriesByType("resource").findLast(ab));
-                    let Ub;
-                    cb.target = kb.get(Wb), cb.lcpEntry = Wb, Wb.url && (cb.url = Wb.url), Tb && (cb.lcpResourceEntry = Tb);
-                    let Ib = 0,
-                      Hb = 0;
-                    if ("soft-navigation" !== bb.navigationType ? (Ub = zs(), Ib = Ub?.activationStart ?? 0, Hb = Ub?.responseStart ?? 0) : (Ib = bb.navigationStartTime || 0, Ub = sb.u?.get(bb.navigationId)), Ub) {
-                      const sb = Math.max(0, Hb - Ib),
-                        kb = Math.max(sb, Tb ? (Tb.requestStart || Tb.startTime) - Ib : 0),
-                        Wb = Math.min(bb.value, Math.max(kb, Tb ? Tb.responseEnd - Ib : 0));
-                      cb = {
-                        ...cb,
-                        timeToFirstByte: sb,
-                        resourceLoadDelay: kb - sb,
-                        resourceLoadDuration: Wb - kb,
-                        elementRenderDelay: bb.value - Wb,
-                        navigationEntry: Ub
+                    const Mb = bb.entries.at(-1),
+                      Tb = bb => bb.name === Mb.url && (bb.requestStart || bb.startTime) <= Mb.startTime,
+                      Eb = Mb.url && (NA.findLast(Tb) || performance.getEntriesByType("resource").findLast(Tb));
+                    let Yb;
+                    ab.target = Ab.get(Mb), ab.lcpEntry = Mb, Mb.url && (ab.url = Mb.url), Eb && (ab.lcpResourceEntry = Eb);
+                    let Bb = 0,
+                      eb = 0;
+                    if ("soft-navigation" !== bb.navigationType ? (Yb = rU(), Bb = Yb?.activationStart ?? 0, eb = Yb?.responseStart ?? 0) : (Bb = bb.navigationStartTime || 0, Yb = Ub.u?.get(bb.navigationId)), Yb) {
+                      const Ub = Math.max(0, eb - Bb),
+                        Ab = Math.max(Ub, Eb ? (Eb.requestStart || Eb.startTime) - Bb : 0),
+                        Mb = Math.min(bb.value, Math.max(Ab, Eb ? Eb.responseEnd - Bb : 0));
+                      ab = {
+                        ...ab,
+                        timeToFirstByte: Ub,
+                        resourceLoadDelay: Ab - Ub,
+                        resourceLoadDuration: Mb - Ab,
+                        elementRenderDelay: bb.value - Mb,
+                        navigationEntry: Yb
                       }
                     }
                   }
                   return Object.assign(bb, {
-                    attribution: cb
+                    attribution: ab
                   })
-                })(cb))
-              }), cb)
+                })(ab))
+              }), ab)
           }((bb => {
-            var cb;
+            var ab;
             const {
-              elementRenderDelay: sb,
-              resourceLoadDelay: kb,
-              resourceLoadDuration: Wb,
-              timeToFirstByte: ab,
-              target: Tb,
-              url: Ub,
-              lcpResourceEntry: Ib
-            } = bb.attribution, Hb = this.buildInitialValues(bb);
-            this.addIfPresent(Hb, "element_render_delay", sb), this.addIfPresent(Hb, "resource_load_delay", kb), this.addIfPresent(Hb, "resource_load_duration", Wb), this.addIfPresent(Hb, Ek, ab);
-            const fb = this.buildInitialContext(bb);
-            this.addIfPresent(fb, "element", Tb), (null === (cb = this.webVitalConfig) || void 0 === cb ? void 0 : cb.trackAttributionSources) && (this.addIfPresent(fb, "resource_url", Ub), this.addIfPresent(fb, "resource_delivery_type", null === Ib || void 0 === Ib ? void 0 : Ib.deliveryType), this.addIfPresent(fb, "resource_initiator_type", null === Ib || void 0 === Ib ? void 0 : Ib.initiatorType)), this.pushMeasurement(Hb, fb)
+              elementRenderDelay: Ub,
+              resourceLoadDelay: Ab,
+              resourceLoadDuration: Mb,
+              timeToFirstByte: Tb,
+              target: Eb,
+              url: Yb,
+              lcpResourceEntry: Bb
+            } = bb.attribution, eb = this.buildInitialValues(bb);
+            this.addIfPresent(eb, "element_render_delay", Ub), this.addIfPresent(eb, "resource_load_delay", Ab), this.addIfPresent(eb, "resource_load_duration", Mb), this.addIfPresent(eb, dA, Tb);
+            const vb = this.buildInitialContext(bb);
+            this.addIfPresent(vb, "element", Eb), (null === (ab = this.webVitalConfig) || void 0 === ab ? void 0 : ab.trackAttributionSources) && (this.addIfPresent(vb, "resource_url", Yb), this.addIfPresent(vb, "resource_delivery_type", null === Bb || void 0 === Bb ? void 0 : Bb.deliveryType), this.addIfPresent(vb, "resource_initiator_type", null === Bb || void 0 === Bb ? void 0 : Bb.initiatorType)), this.pushMeasurement(eb, vb)
           }), {
             reportAllChanges: null === (bb = this.webVitalConfig) || void 0 === bb ? void 0 : bb.reportAllChanges
           })
@@ -2079,65 +2079,65 @@ export const modules = {
           var bb;
           ! function(bb) {
             ! function(bb) {
-              let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-              const sb = Tk(cb);
-              let kb = Wk("TTFB"),
-                Wb = vs(bb, kb, yk, cb.reportAllChanges);
-              Pk((() => {
-                const ab = zs();
-                if (ab) {
-                  const Tb = ab.responseStart;
-                  kb.value = Math.max(Tb - xs(), 0), kb.entries = [ab], Wb(!0), Rs((() => {
-                    kb = Wk("TTFB", 0, "back-forward-cache", kb.navigationId, kb.navigationInteractionId, kb.navigationURL, Ss()), Wb = vs(bb, kb, yk, cb.reportAllChanges), Wb(!0)
-                  })), sb && ak(["soft-navigation"], (sb => {
-                    sb.forEach((sb => {
-                      sb.navigationId && (kb = Wk("TTFB", 0, "soft-navigation", sb.navigationId, sb.interactionId, sb.name, sb.startTime), kb.entries = [sb], Wb = vs(bb, kb, yk, cb.reportAllChanges), Wb(!0))
+              let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+              const Ub = MA(ab);
+              let Ab = UA("TTFB"),
+                Mb = VU(bb, Ab, WA, ab.reportAllChanges);
+              HA((() => {
+                const Tb = rU();
+                if (Tb) {
+                  const Eb = Tb.responseStart;
+                  Ab.value = Math.max(Eb - cU(), 0), Ab.entries = [Tb], Mb(!0), CU((() => {
+                    Ab = UA("TTFB", 0, "back-forward-cache", Ab.navigationId, Ab.navigationInteractionId, Ab.navigationURL, gU()), Mb = VU(bb, Ab, WA, ab.reportAllChanges), Mb(!0)
+                  })), Ub && AA(["soft-navigation"], (Ub => {
+                    Ub.forEach((Ub => {
+                      Ub.navigationId && (Ab = UA("TTFB", 0, "soft-navigation", Ub.navigationId, Ub.interactionId, Ub.name, Ub.startTime), Ab.entries = [Ub], Mb = VU(bb, Ab, WA, ab.reportAllChanges), Mb(!0))
                     }))
-                  }), cb)
+                  }), ab)
                 }
               }))
-            }((cb => {
+            }((ab => {
               bb((bb => {
-                const cb = bb.entries[0];
-                let sb = {
+                const ab = bb.entries[0];
+                let Ub = {
                   waitingDuration: 0,
                   cacheDuration: 0,
                   dnsDuration: 0,
                   connectionDuration: 0,
                   requestDuration: 0,
-                  navigationEntry: cb
+                  navigationEntry: ab
                 };
-                if (bb.entries.length && cb instanceof PerformanceNavigationTiming) {
-                  const kb = cb.activationStart || 0,
-                    Wb = Math.max((cb.workerStart || cb.fetchStart || 0) - kb, 0),
-                    ab = Math.max(cb.domainLookupStart - kb, 0),
-                    Tb = Math.max(cb.connectStart - kb, 0),
-                    Ub = Math.max(cb.connectEnd - kb, 0);
-                  sb = {
-                    waitingDuration: Wb,
-                    cacheDuration: ab - Wb,
-                    dnsDuration: Tb - ab,
-                    connectionDuration: Ub - Tb,
-                    requestDuration: bb.value - Ub,
-                    navigationEntry: cb
+                if (bb.entries.length && ab instanceof PerformanceNavigationTiming) {
+                  const Ab = ab.activationStart || 0,
+                    Mb = Math.max((ab.workerStart || ab.fetchStart || 0) - Ab, 0),
+                    Tb = Math.max(ab.domainLookupStart - Ab, 0),
+                    Eb = Math.max(ab.connectStart - Ab, 0),
+                    Yb = Math.max(ab.connectEnd - Ab, 0);
+                  Ub = {
+                    waitingDuration: Mb,
+                    cacheDuration: Tb - Mb,
+                    dnsDuration: Eb - Tb,
+                    connectionDuration: Yb - Eb,
+                    requestDuration: bb.value - Yb,
+                    navigationEntry: ab
                   }
                 }
                 return Object.assign(bb, {
-                  attribution: sb
+                  attribution: Ub
                 })
-              })(cb))
+              })(ab))
             }), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
           }((bb => {
             const {
-              dnsDuration: cb,
-              connectionDuration: sb,
-              requestDuration: kb,
-              waitingDuration: Wb,
-              cacheDuration: ab
-            } = bb.attribution, Tb = this.buildInitialValues(bb);
-            this.addIfPresent(Tb, "dns_duration", cb), this.addIfPresent(Tb, "connection_duration", sb), this.addIfPresent(Tb, "request_duration", kb), this.addIfPresent(Tb, "waiting_duration", Wb), this.addIfPresent(Tb, "cache_duration", ab);
-            const Ub = this.buildInitialContext(bb);
-            this.pushMeasurement(Tb, Ub)
+              dnsDuration: ab,
+              connectionDuration: Ub,
+              requestDuration: Ab,
+              waitingDuration: Mb,
+              cacheDuration: Tb
+            } = bb.attribution, Eb = this.buildInitialValues(bb);
+            this.addIfPresent(Eb, "dns_duration", ab), this.addIfPresent(Eb, "connection_duration", Ub), this.addIfPresent(Eb, "request_duration", Ab), this.addIfPresent(Eb, "waiting_duration", Mb), this.addIfPresent(Eb, "cache_duration", Tb);
+            const Yb = this.buildInitialContext(bb);
+            this.pushMeasurement(Eb, Yb)
           }), {
             reportAllChanges: null === (bb = this.webVitalConfig) || void 0 === bb ? void 0 : bb.reportAllChanges
           })
@@ -2149,462 +2149,462 @@ export const modules = {
           }
         }
         buildInitialContext(bb) {
-          var cb;
-          const sb = null !== (cb = bc("com.grafana.faro.lastNavigationId", xb)) && void 0 !== cb ? cb : Gs;
+          var ab;
+          const Ub = null !== (ab = ba("com.grafana.faro.lastNavigationId", Jb)) && void 0 !== ab ? ab : QU;
           return {
             id: bb.id,
             rating: bb.rating,
             navigation_type: bb.navigationType,
-            navigation_entry_id: sb
+            navigation_entry_id: Ub
           }
         }
-        pushMeasurement(bb, cb) {
+        pushMeasurement(bb, ab) {
           this.corePushMeasurement({
             type: "web-vitals",
             values: bb
           }, {
-            context: cb
+            context: ab
           })
         }
-        addIfPresent(bb, cb, sb) {
-          sb && (bb[cb] = sb)
+        addIfPresent(bb, ab, Ub) {
+          Ub && (bb[ab] = Ub)
         }
-        addNumberIfDefined(bb, cb, sb) {
-          void 0 !== sb && (bb[cb] = sb)
+        addNumberIfDefined(bb, ab, Ub) {
+          void 0 !== Ub && (bb[ab] = Ub)
         }
       },
-      Ok = class extends cs {
+      hA = class extends aU {
         constructor() {
-          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-web-vitals", this.version = ss
+          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-web-vitals", this.version = UU
         }
         initialize() {
-          this.logDebug("Initializing"), new ik(this.api.pushMeasurement, this.config.webVitalsInstrumentation).initialize()
+          this.logDebug("Initializing"), new FA(this.api.pushMeasurement, this.config.webVitalsInstrumentation).initialize()
         }
       };
-    const Gk = /^00-[a-f0-9]{32}-[a-f0-9]{16}-[0-9]{1,2}$/;
+    const GA = /^00-[a-f0-9]{32}-[a-f0-9]{16}-[0-9]{1,2}$/;
 
-    function Kk() {
+    function QA() {
       let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-      for (const cb of bb)
-        if ("traceparent" === cb.name) {
-          if (!Gk.test(cb.description)) continue;
-          const [, bb, sb] = cb.description.split("-");
-          if (null != bb && null != sb) return {
+      for (const ab of bb)
+        if ("traceparent" === ab.name) {
+          if (!GA.test(ab.description)) continue;
+          const [, bb, Ub] = ab.description.split("-");
+          if (null != bb && null != Ub) return {
             traceId: bb,
-            spanId: sb
+            spanId: Ub
           };
           break
         }
     }
 
-    function Zk(bb) {
-      let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+    function qA(bb) {
+      let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
         wallNow: Date.now(),
         monoNow: performance.now()
       };
       const {
-        wallNow: sb,
-        monoNow: kb
-      } = cb;
-      return Math.min(sb, sb - (kb - bb))
+        wallNow: Ub,
+        monoNow: Ab
+      } = ab;
+      return Math.min(Ub, Ub - (Ab - bb))
     }
 
-    function zk(bb) {
-      let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      for (const [sb, kb] of Object.entries(cb)) {
-        const cb = bb[sb];
-        return null != cb && (yb(kb) ? kb.includes(cb) : cb === kb)
+    function uA(bb) {
+      let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      for (const [Ub, Ab] of Object.entries(ab)) {
+        const ab = bb[Ub];
+        return null != ab && (Ib(Ab) ? Ab.includes(ab) : ab === Ab)
       }
       return !0
     }
 
-    function qk(bb) {
+    function rA(bb) {
       const {
-        connectEnd: cb,
-        connectStart: sb,
-        decodedBodySize: kb,
-        domainLookupEnd: Wb,
-        domainLookupStart: ab,
-        duration: Tb,
-        encodedBodySize: Ub,
-        fetchStart: Ib,
-        initiatorType: Hb,
-        name: fb,
-        nextHopProtocol: Mb,
-        redirectEnd: Xb,
-        redirectStart: nb,
-        renderBlockingStatus: mb,
-        requestStart: lb,
-        responseEnd: Qb,
-        responseStart: eb,
-        responseStatus: Cb,
-        secureConnectionStart: Nb,
-        transferSize: Vb,
-        workerStart: Lb
+        connectEnd: ab,
+        connectStart: Ub,
+        decodedBodySize: Ab,
+        domainLookupEnd: Mb,
+        domainLookupStart: Tb,
+        duration: Eb,
+        encodedBodySize: Yb,
+        fetchStart: Bb,
+        initiatorType: eb,
+        name: vb,
+        nextHopProtocol: Lb,
+        redirectEnd: Pb,
+        redirectStart: Xb,
+        renderBlockingStatus: jb,
+        requestStart: Rb,
+        responseEnd: kb,
+        responseStart: yb,
+        responseStatus: Zb,
+        secureConnectionStart: Db,
+        transferSize: zb,
+        workerStart: xb
       } = bb;
       return {
-        name: fb,
-        httpHost: Ak(fb),
-        duration: wk(Tb),
-        tcpHandshakeTime: wk(cb - sb),
-        dnsLookupTime: wk(Wb - ab),
-        tlsNegotiationTime: wk(cb - Nb),
-        responseStatus: wk(Cb),
-        redirectTime: wk(Xb - nb),
-        requestTime: wk(eb - lb),
-        responseTime: wk(Qb - eb),
-        fetchTime: wk(Qb - Ib),
-        serviceWorkerTime: wk(Lb > 0 ? Ib - Lb : 0),
-        decodedBodySize: wk(kb),
-        encodedBodySize: wk(Ub),
+        name: vb,
+        httpHost: oA(vb),
+        duration: lA(Eb),
+        tcpHandshakeTime: lA(ab - Ub),
+        dnsLookupTime: lA(Mb - Tb),
+        tlsNegotiationTime: lA(ab - Db),
+        responseStatus: lA(Zb),
+        redirectTime: lA(Pb - Xb),
+        requestTime: lA(yb - Rb),
+        responseTime: lA(kb - yb),
+        fetchTime: lA(kb - Bb),
+        serviceWorkerTime: lA(xb > 0 ? Bb - xb : 0),
+        decodedBodySize: lA(Ab),
+        encodedBodySize: lA(Yb),
         cacheHitStatus: function() {
           let bb = "fullLoad";
-          0 === Vb ? kb > 0 && (bb = "cache") : null != Cb ? 304 === Cb && (bb = "conditionalFetch") : Ub > 0 && Vb < Ub && (bb = "conditionalFetch");
+          0 === zb ? Ab > 0 && (bb = "cache") : null != Zb ? 304 === Zb && (bb = "conditionalFetch") : Yb > 0 && zb < Yb && (bb = "conditionalFetch");
           return bb
         }(),
-        renderBlockingStatus: wk(mb),
-        protocol: Mb,
-        initiatorType: Hb,
+        renderBlockingStatus: lA(jb),
+        protocol: Lb,
+        initiatorType: eb,
         visibilityState: document.visibilityState,
-        ttfb: wk(eb - lb),
-        transferSize: wk(Vb)
+        ttfb: lA(yb - Rb),
+        transferSize: lA(zb)
       }
     }
 
-    function dk(bb) {
+    function KA(bb) {
       const {
-        activationStart: cb,
-        domComplete: sb,
-        domContentLoadedEventEnd: kb,
-        domContentLoadedEventStart: Wb,
-        domInteractive: ab,
-        fetchStart: Tb,
-        loadEventEnd: Ub,
-        loadEventStart: Ib,
-        responseStart: Hb,
-        type: fb
-      } = bb, Mb = function() {
+        activationStart: ab,
+        domComplete: Ub,
+        domContentLoadedEventEnd: Ab,
+        domContentLoadedEventStart: Mb,
+        domInteractive: Tb,
+        fetchStart: Eb,
+        loadEventEnd: Yb,
+        loadEventStart: Bb,
+        responseStart: eb,
+        type: vb
+      } = bb, Lb = function() {
         var bb;
         return null != (null === (bb = performance.timing) || void 0 === bb ? void 0 : bb.domLoading) ? performance.timing.domLoading - performance.timeOrigin : null
       }();
-      return fc(fc({}, qk(bb)), {}, {
-        pageLoadTime: wk(sb - Tb),
-        documentParsingTime: wk(Mb ? ab - Mb : null),
-        domProcessingTime: wk(sb - ab),
-        domContentLoadHandlerTime: wk(kb - Wb),
-        onLoadTime: wk(Ub - Ib),
-        ttfb: wk(Math.max(Hb - (null !== cb && void 0 !== cb ? cb : 0), 0)),
-        type: fb
+      return va(va({}, rA(bb)), {}, {
+        pageLoadTime: lA(Ub - Eb),
+        documentParsingTime: lA(Lb ? Tb - Lb : null),
+        domProcessingTime: lA(Ub - Tb),
+        domContentLoadHandlerTime: lA(Ab - Mb),
+        onLoadTime: lA(Yb - Bb),
+        ttfb: lA(Math.max(eb - (null !== ab && void 0 !== ab ? ab : 0), 0)),
+        type: vb
       })
     }
 
-    function Ak(bb) {
+    function oA(bb) {
       try {
-        return new URL(bb).host || Gs
-      } catch (cb) {
-        return Gs
+        return new URL(bb).host || QU
+      } catch (ab) {
+        return QU
       }
     }
 
-    function wk(bb) {
-      return null == bb ? Gs : "number" === typeof bb ? Math.round(bb > 0 ? bb : 0).toString() : bb.toString()
+    function lA(bb) {
+      return null == bb ? QU : "number" === typeof bb ? Math.round(bb > 0 ? bb : 0).toString() : bb.toString()
     }
-    const rk = {
+    const tA = {
       initiatorType: ["xmlhttprequest", "fetch"]
     };
 
-    function Sk(bb, cb, sb, kb, Wb, ab, Tb) {
+    function wA(bb, ab, Ub, Ab, Mb, Tb, Eb) {
       try {
-        var Ub = bb[ab](Tb),
-          Ib = Ub.value
+        var Yb = bb[Tb](Eb),
+          Bb = Yb.value
       } catch (bb) {
-        return void sb(bb)
+        return void Ub(bb)
       }
-      Ub.done ? cb(Ib) : Promise.resolve(Ib).then(kb, Wb)
+      Yb.done ? ab(Bb) : Promise.resolve(Bb).then(Ab, Mb)
     }
 
-    function Rk(bb) {
+    function sA(bb) {
       return function() {
-        var cb = this,
-          sb = arguments;
-        return new Promise((function(kb, Wb) {
-          var ab = bb.apply(cb, sb);
+        var ab = this,
+          Ub = arguments;
+        return new Promise((function(Ab, Mb) {
+          var Tb = bb.apply(ab, Ub);
 
-          function Tb(bb) {
-            Sk(ab, kb, Wb, Tb, Ub, "next", bb)
+          function Eb(bb) {
+            wA(Tb, Ab, Mb, Eb, Yb, "next", bb)
           }
 
-          function Ub(bb) {
-            Sk(ab, kb, Wb, Tb, Ub, "throw", bb)
+          function Yb(bb) {
+            wA(Tb, Ab, Mb, Eb, Yb, "throw", bb)
           }
-          Tb(void 0)
+          Eb(void 0)
         }))
       }
     }
-    const vk = new Cs;
-    var Fk = class extends cs {
+    const gA = new ZU;
+    var CA = class extends aU {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-performance", this.version = ss
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-performance", this.version = UU
       }
       initialize() {
         var bb = this;
         if (!("PerformanceObserver" in window)) return void this.logDebug("performance observer not supported. Disable performance instrumentation.");
-        let cb = !1;
-        const sb = () => {
+        let ab = !1;
+        const Ub = () => {
           ! function(bb) {
             if ("complete" === document.readyState) bb();
             else {
-              const cb = () => {
-                "complete" === document.readyState && (bb(), document.removeEventListener("readystatechange", cb))
+              const ab = () => {
+                "complete" === document.readyState && (bb(), document.removeEventListener("readystatechange", ab))
               };
-              document.addEventListener("readystatechange", cb)
+              document.addEventListener("readystatechange", ab)
             }
-          }(Rk((function*() {
-            if (cb) return;
-            const sb = bb.api.pushEvent,
+          }(sA((function*() {
+            if (ab) return;
+            const Ub = bb.api.pushEvent,
               {
-                faroNavigationId: kb
+                faroNavigationId: Ab
               } = yield function(bb) {
-                let cb;
-                const sb = new Promise((bb => {
-                  cb = bb
+                let ab;
+                const Ub = new Promise((bb => {
+                  ab = bb
                 }));
-                return new PerformanceObserver((sb => {
-                  var kb;
-                  const [Wb] = sb.getEntries();
-                  if (null == Wb || vb(Wb.name)) return;
-                  const ab = Wb.toJSON();
-                  let Tb = Kk(null === ab || void 0 === ab ? void 0 : ab.serverTiming);
-                  const Ub = null !== (kb = bc("com.grafana.faro.lastNavigationId", xb)) && void 0 !== kb ? kb : Gs,
-                    Ib = fc(fc({}, dk(ab)), {}, {
-                      faroNavigationId: ec(),
-                      faroPreviousNavigationId: Ub
+                return new PerformanceObserver((Ub => {
+                  var Ab;
+                  const [Mb] = Ub.getEntries();
+                  if (null == Mb || Ob(Mb.name)) return;
+                  const Tb = Mb.toJSON();
+                  let Eb = QA(null === Tb || void 0 === Tb ? void 0 : Tb.serverTiming);
+                  const Yb = null !== (Ab = ba("com.grafana.faro.lastNavigationId", Jb)) && void 0 !== Ab ? Ab : QU,
+                    Bb = va(va({}, KA(Tb)), {}, {
+                      faroNavigationId: ya(),
+                      faroPreviousNavigationId: Yb
                     });
-                  cc("com.grafana.faro.lastNavigationId", Ib.faroNavigationId, xb), bb("faro.performance.navigation", Ib, void 0, {
-                    spanContext: Tb,
-                    timestampOverwriteMs: Zk(ab.startTime)
-                  }), cb(Ib)
+                  aa("com.grafana.faro.lastNavigationId", Bb.faroNavigationId, Jb), bb("faro.performance.navigation", Bb, void 0, {
+                    spanContext: Eb,
+                    timestampOverwriteMs: qA(Tb.startTime)
+                  }), ab(Bb)
                 })).observe({
                   type: "navigation",
                   buffered: !0
-                }), sb
-              }(sb);
-            cb || null == kb || function(bb, cb, sb, kb) {
-              const Wb = kb.trackResources;
-              new PerformanceObserver((kb => {
-                const ab = kb.getEntries(),
-                  Tb = {
+                }), Ub
+              }(Ub);
+            ab || null == Ab || function(bb, ab, Ub, Ab) {
+              const Mb = Ab.trackResources;
+              new PerformanceObserver((Ab => {
+                const Tb = Ab.getEntries(),
+                  Eb = {
                     wallNow: Date.now(),
                     monoNow: performance.now()
                   };
-                for (const Ub of ab) {
-                  if (vb(Ub.name)) continue;
-                  null === sb || void 0 === sb || sb.notify({
+                for (const Yb of Tb) {
+                  if (Ob(Yb.name)) continue;
+                  null === Ub || void 0 === Ub || Ub.notify({
                     type: "resource"
                   });
-                  const kb = Ub.toJSON();
-                  let ab = Kk(null === kb || void 0 === kb ? void 0 : kb.serverTiming);
-                  (null == Wb && zk(kb, rk) || Wb) && cb("faro.performance.resource", fc(fc({}, qk(kb)), {}, {
+                  const Ab = Yb.toJSON();
+                  let Tb = QA(null === Ab || void 0 === Ab ? void 0 : Ab.serverTiming);
+                  (null == Mb && uA(Ab, tA) || Mb) && ab("faro.performance.resource", va(va({}, rA(Ab)), {}, {
                     faroNavigationId: bb,
-                    faroResourceId: ec()
+                    faroResourceId: ya()
                   }), void 0, {
-                    spanContext: ab,
-                    timestampOverwriteMs: Zk(kb.startTime, Tb)
+                    spanContext: Tb,
+                    timestampOverwriteMs: qA(Ab.startTime, Eb)
                   })
                 }
               })).observe({
                 type: "resource",
                 buffered: !0
               })
-            }(kb, sb, vk, bb.config)
+            }(Ab, Ub, gA, bb.config)
           })))
         };
         this.cancelInitialization = () => {
-          cb = !0, document.removeEventListener("prerenderingchange", sb)
-        }, document.prerendering ? document.addEventListener("prerenderingchange", sb, {
+          ab = !0, document.removeEventListener("prerenderingchange", Ub)
+        }, document.prerendering ? document.addEventListener("prerenderingchange", Ub, {
           once: !0
-        }) : sb()
+        }) : Ub()
       }
       destroy() {
         var bb;
         null === (bb = this.cancelInitialization) || void 0 === bb || bb.call(this), this.cancelInitialization = void 0
       }
     };
-    const xk = "data-faro-user-action-name",
-      jk = xk.replace(/-name$/, "-timeout"),
-      pk = 1e3;
+    const VA = "data-faro-user-action-name",
+      OA = VA.replace(/-name$/, "-timeout"),
+      cA = 1e3;
 
-    function bW(bb) {
+    function JA(bb) {
       return `data-${(bb.startsWith("data-")?bb.slice(5):bb).replace(/([a-z0-9])([A-Z])/g,"$1-$2").toLowerCase()}`
     }
 
-    function cW(bb) {
-      let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100,
-        sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : wc;
-      if (void 0 === bb) return cb;
-      let kb = NaN;
+    function nA(bb) {
+      let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100,
+        Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : wa;
+      if (void 0 === bb) return ab;
+      let Ab = NaN;
       try {
-        kb = "string" === typeof bb && "" === bb.trim() ? NaN : Number(bb)
-      } catch (Wb) {}
-      return !Number.isFinite(kb) || kb <= 0 ? (sb(`initialActivityTimeout must be a finite number greater than zero; using ${cb} ms`), cb) : kb > 1e3 ? (sb(`initialActivityTimeout cannot exceed ${pk} ms; clamping to the maximum`), pk) : kb
+        Ab = "string" === typeof bb && "" === bb.trim() ? NaN : Number(bb)
+      } catch (Mb) {}
+      return !Number.isFinite(Ab) || Ab <= 0 ? (Ub(`initialActivityTimeout must be a finite number greater than zero; using ${ab} ms`), ab) : Ab > 1e3 ? (Ub(`initialActivityTimeout cannot exceed ${cA} ms; clamping to the maximum`), cA) : Ab
     }
 
-    function sW(bb, cb, sb) {
+    function SA(bb, ab, Ub) {
       return void 0 !== bb && window.clearTimeout(bb), window.setTimeout((() => {
-        cb()
-      }), sb)
+        ab()
+      }), Ub)
     }
 
-    function kW(bb) {
-      return bb.type === es
+    function bM(bb) {
+      return bb.type === yU
     }
-    let WW, aW;
+    let aM, UM;
 
-    function TW() {
-      return WW || (WW = new Cs), aW || (aW = new MutationObserver(((bb, cb) => {
-        WW.notify({
+    function AM() {
+      return aM || (aM = new ZU), UM || (UM = new MutationObserver(((bb, ab) => {
+        aM.notify({
           type: "dom-mutation"
         })
-      })), aW.observe(document, {
+      })), UM.observe(document, {
         attributes: !0,
         childList: !0,
         subtree: !0,
         characterData: !0
-      })), WW
+      })), aM
     }
-    const UW = "fetch",
-      IW = "xhr";
-    let HW, fW, MW, XW, nW = !1;
+    const MM = "fetch",
+      TM = "xhr";
+    let EM, YM, BM, eM, vM = !1;
 
-    function mW() {
-      if (HW) return HW;
+    function LM() {
+      if (EM) return EM;
 
       function bb(bb) {
-        HW.notify({
-          type: Qs,
+        EM.notify({
+          type: kU,
           request: bb
         })
       }
 
-      function cb(bb) {
-        HW.notify({
-          type: es,
+      function ab(bb) {
+        EM.notify({
+          type: yU,
           request: bb
         })
       }
-      return HW = new Cs, nW || (! function(bb) {
+      return EM = new ZU, vM || (! function(bb) {
         let {
-          onRequestEnd: cb,
-          onRequestStart: sb
+          onRequestEnd: ab,
+          onRequestStart: Ub
         } = bb;
-        MW || (MW = window.fetch);
+        BM || (BM = window.fetch);
         window.fetch = function() {
-          var bb, kb;
-          const Wb = null !== (bb = Fb(arguments[0])) && void 0 !== bb ? bb : "",
-            ab = vb(Wb),
-            Tb = (null !== (kb = arguments[1]) && void 0 !== kb ? kb : {}).method,
-            Ub = ec();
-          return ab || sb({
-            url: Wb,
-            method: Tb,
-            requestId: Ub,
-            apiType: UW
-          }), MW.apply(this, arguments).then((bb => (ab || cb({
-            url: Wb,
-            method: Tb,
-            requestId: Ub,
-            apiType: UW
+          var bb, Ab;
+          const Mb = null !== (bb = cb(arguments[0])) && void 0 !== bb ? bb : "",
+            Tb = Ob(Mb),
+            Eb = (null !== (Ab = arguments[1]) && void 0 !== Ab ? Ab : {}).method,
+            Yb = ya();
+          return Tb || Ub({
+            url: Mb,
+            method: Eb,
+            requestId: Yb,
+            apiType: MM
+          }), BM.apply(this, arguments).then((bb => (Tb || ab({
+            url: Mb,
+            method: Eb,
+            requestId: Yb,
+            apiType: MM
           }), bb))).catch((bb => {
-            throw ab || cb({
-              url: Wb,
-              method: Tb,
-              requestId: Ub,
-              apiType: UW
+            throw Tb || ab({
+              url: Mb,
+              method: Eb,
+              requestId: Yb,
+              apiType: MM
             }), bb
           }))
         }
       }({
         onRequestStart: bb,
-        onRequestEnd: cb
+        onRequestEnd: ab
       }), function(bb) {
         let {
-          onRequestStart: cb,
-          onRequestEnd: sb
+          onRequestStart: ab,
+          onRequestEnd: Ub
         } = bb;
-        fW || (fW = XMLHttpRequest.prototype.open);
+        YM || (YM = XMLHttpRequest.prototype.open);
         XMLHttpRequest.prototype.open = function() {
           const bb = arguments[1],
-            kb = vb(bb),
-            Wb = arguments[0],
-            ab = ec();
+            Ab = Ob(bb),
+            Mb = arguments[0],
+            Tb = ya();
           this.addEventListener("loadstart", (function() {
-            kb || cb({
+            Ab || ab({
               url: bb,
-              method: Wb,
-              requestId: ab,
-              apiType: IW
+              method: Mb,
+              requestId: Tb,
+              apiType: TM
             })
           })), this.addEventListener("load", (function() {
-            kb || sb({
+            Ab || Ub({
               url: bb,
-              method: Wb,
-              requestId: ab,
-              apiType: IW
+              method: Mb,
+              requestId: Tb,
+              apiType: TM
             })
           })), this.addEventListener("error", (function() {
-            kb || sb({
+            Ab || Ub({
               url: bb,
-              method: Wb,
-              requestId: ab,
-              apiType: IW
+              method: Mb,
+              requestId: Tb,
+              apiType: TM
             })
           })), this.addEventListener("abort", (function() {
-            kb || sb({
+            Ab || Ub({
               url: bb,
-              method: Wb,
-              requestId: ab,
-              apiType: IW
+              method: Mb,
+              requestId: Tb,
+              apiType: TM
             })
-          })), fW.apply(this, arguments)
+          })), YM.apply(this, arguments)
         }
       }({
         onRequestStart: bb,
-        onRequestEnd: cb
-      }), nW = !0), HW
+        onRequestEnd: ab
+      }), vM = !0), EM
     }
-    let lW, QW = !1;
-    let eW = function(bb) {
+    let PM, XM = !1;
+    let jM = function(bb) {
       return bb[bb.Started = 0] = "Started", bb[bb.Halted = 1] = "Halted", bb[bb.Cancelled = 2] = "Cancelled", bb[bb.Ended = 3] = "Ended", bb
     }({});
-    var CW = class {
-      constructor(bb, cb) {
-        let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 100;
-        this.userAction = bb, this.logDebug = cb, this.initialActivityTimeout = sb, this.http = mW(), this.dom = TW(), this.perf = (XW || (XW = new Cs), QW || (lW = vk.subscribe((bb => {
-          "resource" === bb.type && XW.notify({
+    var RM = class {
+      constructor(bb, ab) {
+        let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 100;
+        this.userAction = bb, this.logDebug = ab, this.initialActivityTimeout = Ub, this.http = LM(), this.dom = AM(), this.perf = (eM || (eM = new ZU), XM || (PM = gA.subscribe((bb => {
+          "resource" === bb.type && eM.notify({
             type: "resource-entry"
           })
-        })), QW = !0), XW), this.isValid = !1, this.runningRequests = new Map
+        })), XM = !0), eM), this.isValid = !1, this.runningRequests = new Map
       }
       attach() {
-        this.allMonitorsSub = (new Cs).merge(this.http, this.dom, this.perf).takeWhile((() => [eW.Started, eW.Halted].includes(this.userAction.getState()))).filter((bb => !!(this.userAction.getState() !== eW.Halted || kW(bb) && this.runningRequests.has(bb.request.requestId)))).subscribe((bb => {
+        this.allMonitorsSub = (new ZU).merge(this.http, this.dom, this.perf).takeWhile((() => [jM.Started, jM.Halted].includes(this.userAction.getState()))).filter((bb => !!(this.userAction.getState() !== jM.Halted || bM(bb) && this.runningRequests.has(bb.request.requestId)))).subscribe((bb => {
           (function(bb) {
-            return bb.type === Qs
-          })(bb) && this.runningRequests.set(bb.request.requestId, bb.request), kW(bb) && this.runningRequests.delete(bb.request.requestId), kW(bb) ? this.userAction.getState() === eW.Halted && 0 === this.runningRequests.size && this.endAction() : (this.isValid || (this.isValid = !0, this.clearTimer(this.startupTid)), this.scheduleFollowUp())
-        })), this.stateSub = this.userAction.filter((bb => [eW.Ended, eW.Cancelled].includes(bb))).first().subscribe((() => this.cleanup())), this.startupTid = sW(this.startupTid, (() => {
+            return bb.type === kU
+          })(bb) && this.runningRequests.set(bb.request.requestId, bb.request), bM(bb) && this.runningRequests.delete(bb.request.requestId), bM(bb) ? this.userAction.getState() === jM.Halted && 0 === this.runningRequests.size && this.endAction() : (this.isValid || (this.isValid = !0, this.clearTimer(this.startupTid)), this.scheduleFollowUp())
+        })), this.stateSub = this.userAction.filter((bb => [jM.Ended, jM.Cancelled].includes(bb))).first().subscribe((() => this.cleanup())), this.startupTid = SA(this.startupTid, (() => {
           this.logDebug("User action not sent; no DOM, resource, or HTTP activity:", this.userAction.name), this.cancelAction()
         }), this.initialActivityTimeout)
       }
       scheduleFollowUp() {
         this.clearTimer(this.followUpTid), this.followUpTid = window.setTimeout((() => {
-          this.userAction.getState() === eW.Started && this.runningRequests.size > 0 ? this.haltAction() : this.isValid ? this.endAction() : this.cancelAction()
+          this.userAction.getState() === jM.Started && this.runningRequests.size > 0 ? this.haltAction() : this.isValid ? this.endAction() : this.cancelAction()
         }), 100)
       }
       haltAction() {
-        this.userAction.getState() === eW.Started && (this.userAction.halt(), this.startHaltTimeout())
+        this.userAction.getState() === jM.Started && (this.userAction.halt(), this.startHaltTimeout())
       }
       startHaltTimeout() {
-        this.clearTimer(this.haltTid), this.haltTid = sW(this.haltTid, (() => {
-          this.userAction.getState() === eW.Halted && this.endAction()
+        this.clearTimer(this.haltTid), this.haltTid = SA(this.haltTid, (() => {
+          this.userAction.getState() === jM.Halted && this.endAction()
         }), 1e4)
       }
       endAction() {
@@ -2614,71 +2614,71 @@ export const modules = {
         this.userAction.cancel(), this.cleanup()
       }
       cleanup() {
-        var bb, cb;
-        this.clearTimer(this.startupTid), this.clearTimer(this.followUpTid), this.clearTimer(this.haltTid), null === (bb = this.allMonitorsSub) || void 0 === bb || bb.unsubscribe(), null === (cb = this.stateSub) || void 0 === cb || cb.unsubscribe(), this.allMonitorsSub = void 0, this.stateSub = void 0, this.runningRequests.clear()
+        var bb, ab;
+        this.clearTimer(this.startupTid), this.clearTimer(this.followUpTid), this.clearTimer(this.haltTid), null === (bb = this.allMonitorsSub) || void 0 === bb || bb.unsubscribe(), null === (ab = this.stateSub) || void 0 === ab || ab.unsubscribe(), this.allMonitorsSub = void 0, this.stateSub = void 0, this.runningRequests.clear()
       }
       clearTimer(bb) {
         void 0 !== bb && window.clearTimeout(bb)
       }
     };
 
-    function NW(bb) {
-      let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wc;
-      var sb;
+    function kM(bb) {
+      let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wa;
+      var Ub;
       const {
-        api: kb,
-        config: Wb,
-        internalLogger: ab
-      } = bb, Tb = cW(null === (sb = Wb.userActionsInstrumentation) || void 0 === sb ? void 0 : sb.initialActivityTimeout, 100, cb);
+        api: Ab,
+        config: Mb,
+        internalLogger: Tb
+      } = bb, Eb = nA(null === (Ub = Mb.userActionsInstrumentation) || void 0 === Ub ? void 0 : Ub.initialActivityTimeout, 100, ab);
       return {
         processUserEvent: function(bb) {
-          var cb, sb;
-          const ab = null !== (cb = null === (sb = Wb.userActionsInstrumentation) || void 0 === sb ? void 0 : sb.dataAttributeName) && void 0 !== cb ? cb : xk,
-            Tb = bb.target;
-          if (!(Tb instanceof Element)) return;
-          const Ub = function(bb, cb) {
-              let sb = bb;
-              for (; sb;) {
-                if (sb.hasAttribute(cb)) return sb;
-                sb = sb.parentElement
+          var ab, Ub;
+          const Tb = null !== (ab = null === (Ub = Mb.userActionsInstrumentation) || void 0 === Ub ? void 0 : Ub.dataAttributeName) && void 0 !== ab ? ab : VA,
+            Eb = bb.target;
+          if (!(Eb instanceof Element)) return;
+          const Yb = function(bb, ab) {
+              let Ub = bb;
+              for (; Ub;) {
+                if (Ub.hasAttribute(ab)) return Ub;
+                Ub = Ub.parentElement
               }
               return null
-            }(Tb, bW(ab)),
-            Ib = function(bb, cb) {
+            }(Eb, JA(Tb)),
+            Bb = function(bb, ab) {
               if (!bb) return;
-              const sb = function(bb) {
-                  return bW(bb).slice(5).replace(/-(.)/g, ((bb, cb) => cb.toUpperCase()))
-                }(cb),
-                kb = bb.dataset;
-              for (const Wb in kb)
-                if (Wb === sb) return kb[Wb]
-            }(Ub, ab);
-          if (!Ub || !Ib) return;
-          const Hb = function(bb, cb) {
-            const sb = bb.getAttribute(function(bb) {
-              const cb = bW(bb);
-              return cb.endsWith("-name") ? `${cb.slice(0,-5)}-timeout` : `${cb}-timeout`
-            }(cb));
-            return null === sb ? void 0 : Number(sb)
-          }(Ub, ab);
-          kb.startUserAction(Ib, {}, {
+              const Ub = function(bb) {
+                  return JA(bb).slice(5).replace(/-(.)/g, ((bb, ab) => ab.toUpperCase()))
+                }(ab),
+                Ab = bb.dataset;
+              for (const Mb in Ab)
+                if (Mb === Ub) return Ab[Mb]
+            }(Yb, Tb);
+          if (!Yb || !Bb) return;
+          const eb = function(bb, ab) {
+            const Ub = bb.getAttribute(function(bb) {
+              const ab = JA(bb);
+              return ab.endsWith("-name") ? `${ab.slice(0,-5)}-timeout` : `${ab}-timeout`
+            }(ab));
+            return null === Ub ? void 0 : Number(Ub)
+          }(Yb, Tb);
+          Ab.startUserAction(Bb, {}, {
             triggerName: bb.type,
-            initialActivityTimeout: Hb
+            initialActivityTimeout: eb
           })
         },
-        processUserActionStarted: function(bb, sb) {
-          const kb = bb,
-            Wb = cW(sb, Tb, cb);
-          new CW(kb, ab.debug, Wb).attach()
+        processUserActionStarted: function(bb, Ub) {
+          const Ab = bb,
+            Mb = nA(Ub, Eb, ab);
+          new RM(Ab, Tb.debug, Mb).attach()
         }
       }
     }
-    const VW = "user_action_start",
-      LW = {
+    const yM = "user_action_start",
+      ZM = {
         Normal: "normal",
         Critical: "critical"
       };
-    var uW = class {
+    var DM = class {
         constructor() {
           this.buffer = []
         }
@@ -2686,33 +2686,33 @@ export const modules = {
           this.buffer.push(bb)
         }
         flushBuffer(bb) {
-          if (tb(bb))
-            for (const cb of this.buffer) bb(cb);
+          if (Hb(bb))
+            for (const ab of this.buffer) bb(ab);
           this.buffer.length = 0
         }
         size() {
           return this.buffer.length
         }
       },
-      YW = class extends Cs {
+      zM = class extends ZU {
         constructor(bb) {
           let {
-            name: cb,
-            parentId: sb,
-            trigger: kb,
-            transports: Wb,
-            attributes: ab,
-            trackUserActionsExcludeItem: Tb,
-            importance: Ub = LW.Normal,
-            pushEvent: Ib
+            name: ab,
+            parentId: Ub,
+            trigger: Ab,
+            transports: Mb,
+            attributes: Tb,
+            trackUserActionsExcludeItem: Eb,
+            importance: Yb = ZM.Normal,
+            pushEvent: Bb
           } = bb;
-          super(), this.name = cb, this.attributes = ab, this.id = ec(), this.trigger = kb, this.parentId = null !== sb && void 0 !== sb ? sb : this.id, this.trackUserActionsExcludeItem = Tb, this.importance = Ub, this._pushEvent = Ib, this._itemBuffer = new uW, this._transports = Wb, this._state = 0, this._start()
+          super(), this.name = ab, this.attributes = Tb, this.id = ya(), this.trigger = Ab, this.parentId = null !== Ub && void 0 !== Ub ? Ub : this.id, this.trackUserActionsExcludeItem = Eb, this.importance = Yb, this._pushEvent = Bb, this._itemBuffer = new DM, this._transports = Mb, this._state = 0, this._start()
         }
         addItem(bb) {
           return 0 === this._state && (this._itemBuffer.addItem(bb), !0)
         }
         _start() {
-          this._state = 0, 0 === this._state && (this.startTime = Xc(), this._startTimeMono = nc())
+          this._state = 0, 0 === this._state && (this.startTime = Pa(), this._startTimeMono = Xa())
         }
         halt() {
           0 === this._state && (this._state = 1, this.notify(this._state))
@@ -2724,29 +2724,29 @@ export const modules = {
         }
         end() {
           if (2 === this._state) return;
-          const bb = Xc(),
-            cb = nc() - this._startTimeMono;
+          const bb = Pa(),
+            ab = Xa() - this._startTimeMono;
           this._state = 3, this._itemBuffer.flushBuffer((bb => {
-            if (function(bb, cb) {
-                return (null === cb || void 0 === cb ? void 0 : cb(bb)) || "measurement" === bb.type && "web-vitals" === bb.payload.type
+            if (function(bb, ab) {
+                return (null === ab || void 0 === ab ? void 0 : ab(bb)) || "measurement" === bb.type && "web-vitals" === bb.payload.type
               }(bb, this.trackUserActionsExcludeItem)) return void this._transports.execute(bb);
-            const cb = jc(jc({}, bb), {}, {
-              payload: jc(jc({}, bb.payload), {}, {
+            const ab = na(na({}, bb), {}, {
+              payload: na(na({}, bb.payload), {}, {
                 action: {
                   parentId: this.id,
                   name: this.name
                 }
               })
             });
-            this._transports.execute(cb)
-          })), this._state = 3, this.notify(this._state), this._pushEvent("faro.user.action", jc({
+            this._transports.execute(ab)
+          })), this._state = 3, this.notify(this._state), this._pushEvent("faro.user.action", na({
             userActionName: this.name,
             userActionStartTime: this.startTime.toString(),
             userActionEndTime: bb.toString(),
-            userActionDuration: cb.toString(),
+            userActionDuration: ab.toString(),
             userActionTrigger: this.trigger,
             userActionImportance: this.importance
-          }, Gc(this.attributes)), void 0, {
+          }, qa(this.attributes)), void 0, {
             timestampOverwriteMs: this.startTime,
             customPayloadTransformer: bb => (bb.action = {
               id: this.id,
@@ -2758,29 +2758,29 @@ export const modules = {
           return this._state
         }
       };
-    const hW = new Cs;
+    const xM = new ZU;
 
-    function JW(bb, cb) {
-      return !!bb && (0 === (null === bb || void 0 === bb ? void 0 : bb.getState()) && (bb.addItem(cb), !0))
+    function iM(bb, ab) {
+      return !!bb && (0 === (null === bb || void 0 === bb ? void 0 : bb.getState()) && (bb.addItem(ab), !0))
     }
-    var gW = class extends cs {
+    var fM = class extends aU {
         constructor() {
-          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-user-action", this.version = ss
+          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-user-action", this.version = UU
         }
         initialize() {
           const {
             processUserEvent: bb,
-            processUserActionStarted: cb
-          } = NW(lb, (bb => this.logWarn(bb)));
-          this._processUserEvent = bb, this._processKeydown = cb => {
-            [" ", "Enter"].includes(cb.key) && bb(cb)
-          }, window.addEventListener("pointerdown", this._processUserEvent), window.addEventListener("keydown", this._processKeydown), this._userActionSub = hW.subscribe((bb => {
+            processUserActionStarted: ab
+          } = kM(Rb, (bb => this.logWarn(bb)));
+          this._processUserEvent = bb, this._processKeydown = ab => {
+            [" ", "Enter"].includes(ab.key) && bb(ab)
+          }, window.addEventListener("pointerdown", this._processUserEvent), window.addEventListener("keydown", this._processKeydown), this._userActionSub = xM.subscribe((bb => {
             let {
-              type: sb,
-              userAction: kb,
-              initialActivityTimeout: Wb
+              type: Ub,
+              userAction: Ab,
+              initialActivityTimeout: Mb
             } = bb;
-            "user_action_start" === sb && cb(kb, Wb)
+            "user_action_start" === Ub && ab(Ab, Mb)
           }))
         }
         destroy() {
@@ -2788,9 +2788,9 @@ export const modules = {
           this._processUserEvent && window.removeEventListener("pointerdown", this._processUserEvent), this._processKeydown && window.removeEventListener("keydown", this._processKeydown), null === (bb = this._userActionSub) || void 0 === bb || bb.unsubscribe()
         }
       },
-      BW = class extends cs {
+      mM = class extends aU {
         constructor() {
-          super(), this.name = "@grafana/faro-web-sdk:instrumentation-csp", this.version = ss, this.boundSecuritypolicyviolationHandler = this.securitypolicyviolationHandler.bind(this)
+          super(), this.name = "@grafana/faro-web-sdk:instrumentation-csp", this.version = UU, this.boundSecuritypolicyviolationHandler = this.securitypolicyviolationHandler.bind(this)
         }
         initialize() {
           document.addEventListener("securitypolicyviolation", this.boundSecuritypolicyviolationHandler)
@@ -2799,7 +2799,7 @@ export const modules = {
           document.removeEventListener("securitypolicyviolation", this.boundSecuritypolicyviolationHandler)
         }
         securitypolicyviolationHandler(bb) {
-          const cb = {
+          const ab = {
             blockedURI: bb.blockedURI,
             columnNumber: bb.columnNumber,
             disposition: bb.disposition,
@@ -2813,52 +2813,52 @@ export const modules = {
             statusCode: bb.statusCode,
             violatedDirective: bb.violatedDirective
           };
-          this.api.pushEvent("securitypolicyviolation", Gc(cb))
+          this.api.pushEvent("securitypolicyviolation", qa(ab))
         }
       };
-    var tW = class extends Cs {
-      constructor(bb, cb) {
-        var sb, kb, Wb, ab;
+    var pM = class extends ZU {
+      constructor(bb, ab) {
+        var Ub, Ab, Mb, Tb;
         super(), this._tracking = !1, this.eventsObservable = bb, this._options = {
-          inactivityMs: null !== (sb = null === cb || void 0 === cb ? void 0 : cb.inactivityMs) && void 0 !== sb ? sb : 100,
-          drainTimeoutMs: null !== (kb = null === cb || void 0 === cb ? void 0 : cb.drainTimeoutMs) && void 0 !== kb ? kb : 1e4,
-          isOperationStart: null !== (Wb = null === cb || void 0 === cb ? void 0 : cb.isOperationStart) && void 0 !== Wb ? Wb : () => {},
-          isOperationEnd: null !== (ab = null === cb || void 0 === cb ? void 0 : cb.isOperationEnd) && void 0 !== ab ? ab : () => {}
+          inactivityMs: null !== (Ub = null === ab || void 0 === ab ? void 0 : ab.inactivityMs) && void 0 !== Ub ? Ub : 100,
+          drainTimeoutMs: null !== (Ab = null === ab || void 0 === ab ? void 0 : ab.drainTimeoutMs) && void 0 !== Ab ? Ab : 1e4,
+          isOperationStart: null !== (Mb = null === ab || void 0 === ab ? void 0 : ab.isOperationStart) && void 0 !== Mb ? Mb : () => {},
+          isOperationEnd: null !== (Tb = null === ab || void 0 === ab ? void 0 : ab.isOperationEnd) && void 0 !== Tb ? Tb : () => {}
         }, this._initialize()
       }
       _initialize() {
         this.eventsObservable.filter((() => this._tracking)).subscribe((bb => {
-          var cb;
-          this._lastEventTime = nc(), null === (cb = this._currentEvents) || void 0 === cb || cb.push(bb);
-          const sb = this._options.isOperationStart(bb);
-          var kb;
-          sb && (null === (kb = this._activeOperations) || void 0 === kb || kb.set(sb, !0));
-          const Wb = this._options.isOperationEnd(bb);
           var ab;
-          Wb && (null === (ab = this._activeOperations) || void 0 === ab || ab.delete(Wb));
+          this._lastEventTime = Xa(), null === (ab = this._currentEvents) || void 0 === ab || ab.push(bb);
+          const Ub = this._options.isOperationStart(bb);
+          var Ab;
+          Ub && (null === (Ab = this._activeOperations) || void 0 === Ab || Ab.set(Ub, !0));
+          const Mb = this._options.isOperationEnd(bb);
+          var Tb;
+          Mb && (null === (Tb = this._activeOperations) || void 0 === Tb || Tb.delete(Mb));
           this._scheduleInactivityCheck()
         }))
       }
       startTracking() {
-        this._tracking || (this._tracking = !0, this._startTime = nc(), this._lastEventTime = this._startTime, this.notify({
+        this._tracking || (this._tracking = !0, this._startTime = Xa(), this._lastEventTime = this._startTime, this.notify({
           message: "tracking-started"
         }), this._currentEvents = [], this._activeOperations = new Map, this._scheduleInactivityCheck())
       }
       stopTracking() {
         let bb;
-        this._tracking = !1, this._clearTimer(this._inactivityTid), this._clearTimer(this._drainTid), bb = this.hasActiveOperations() ? nc() - this._startTime : this._lastEventTime ? this._lastEventTime - this._startTime : 0, this.notify({
+        this._tracking = !1, this._clearTimer(this._inactivityTid), this._clearTimer(this._drainTid), bb = this.hasActiveOperations() ? Xa() - this._startTime : this._lastEventTime ? this._lastEventTime - this._startTime : 0, this.notify({
           message: "tracking-ended",
           events: this._currentEvents,
           duration: bb
         })
       }
       _scheduleInactivityCheck() {
-        this._inactivityTid = yW(this._inactivityTid, (() => {
+        this._inactivityTid = NM(this._inactivityTid, (() => {
           this.hasActiveOperations() ? this._startDrainTimeout() : this.stopTracking()
         }), this._options.inactivityMs)
       }
       _startDrainTimeout() {
-        this._drainTid = yW(this._drainTid, (() => {
+        this._drainTid = NM(this._drainTid, (() => {
           this.stopTracking()
         }), this._options.drainTimeoutMs)
       }
@@ -2870,167 +2870,167 @@ export const modules = {
       }
     };
 
-    function yW(bb, cb, sb) {
+    function NM(bb, ab, Ub) {
       return bb && clearTimeout(bb), bb = setTimeout((() => {
-        cb()
-      }), sb)
+        ab()
+      }), Ub)
     }
-    let PW;
-    const DW = new Set,
-      EW = new Map;
-    let iW, OW, GW, KW, ZW, zW, qW, dW, AW = !1;
-    var wW = class extends cs {
+    let WM;
+    const HM = new Set,
+      IM = new Map;
+    let dM, FM, hM, GM, QM, qM, uM, rM, KM = !1;
+    var oM = class extends aU {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-navigation", this.version = ss
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-navigation", this.version = UU
       }
       initialize() {
-        const bb = mW(),
-          cb = TW(),
-          sb = function() {
-            function bb(bb, cb) {
-              const sb = null !== cb && void 0 !== cb ? cb : location.href;
-              sb !== OW && (iW.notify({
+        const bb = LM(),
+          ab = AM(),
+          Ub = function() {
+            function bb(bb, ab) {
+              const Ub = null !== ab && void 0 !== ab ? ab : location.href;
+              Ub !== FM && (dM.notify({
                 type: "url-change",
-                from: OW,
-                to: sb,
+                from: FM,
+                to: Ub,
                 trigger: bb
-              }), OW = sb)
+              }), FM = Ub)
             }
-            if (iW || (iW = new Cs, OW = location.href), !AW)
+            if (dM || (dM = new ZU, FM = location.href), !KM)
               if ("navigation" in window && "NavigateEvent" in window) {
-                qW = cb => {
+                uM = ab => {
                   try {
-                    const sb = null === cb || void 0 === cb ? void 0 : cb.destination;
-                    (null === sb || void 0 === sb ? void 0 : sb.sameDocument) && "string" === typeof sb.url && bb("navigate", sb.url)
-                  } catch (sb) {}
-                }, window.navigation.addEventListener("navigate", qW);
-                const cb = window.NavigateEvent;
-                cb && cb.prototype && "function" === typeof cb.prototype.intercept && (dW || (dW = cb.prototype.intercept), cb.prototype.intercept = function(cb) {
+                    const Ub = null === ab || void 0 === ab ? void 0 : ab.destination;
+                    (null === Ub || void 0 === Ub ? void 0 : Ub.sameDocument) && "string" === typeof Ub.url && bb("navigate", Ub.url)
+                  } catch (Ub) {}
+                }, window.navigation.addEventListener("navigate", uM);
+                const ab = window.NavigateEvent;
+                ab && ab.prototype && "function" === typeof ab.prototype.intercept && (rM || (rM = ab.prototype.intercept), ab.prototype.intercept = function(ab) {
                   try {
-                    const cb = !!(null === this || void 0 === this ? void 0 : this.canIntercept),
-                      sb = null === this || void 0 === this ? void 0 : this.destination;
-                    cb && sb && !1 === sb.sameDocument && "string" === typeof sb.url && bb("navigate-intercept", sb.url)
-                  } catch (sb) {}
-                  return dW.call(this, cb)
-                }), AW = !0
-              } else GW || (GW = window.history.pushState), window.history.pushState = function() {
-                for (var cb = arguments.length, sb = new Array(cb), kb = 0; kb < cb; kb++) sb[kb] = arguments[kb];
-                const Wb = GW.apply(window.history, sb);
-                return bb("pushState"), Wb
-              }, KW || (KW = window.history.replaceState), window.history.replaceState = function() {
-                for (var cb = arguments.length, sb = new Array(cb), kb = 0; kb < cb; kb++) sb[kb] = arguments[kb];
-                const Wb = KW.apply(window.history, sb);
-                return bb("replaceState"), Wb
-              }, ZW = () => bb("popstate"), zW = () => bb("hashchange"), window.addEventListener("popstate", ZW), window.addEventListener("hashchange", zW), AW = !0;
-            return iW
+                    const ab = !!(null === this || void 0 === this ? void 0 : this.canIntercept),
+                      Ub = null === this || void 0 === this ? void 0 : this.destination;
+                    ab && Ub && !1 === Ub.sameDocument && "string" === typeof Ub.url && bb("navigate-intercept", Ub.url)
+                  } catch (Ub) {}
+                  return rM.call(this, ab)
+                }), KM = !0
+              } else hM || (hM = window.history.pushState), window.history.pushState = function() {
+                for (var ab = arguments.length, Ub = new Array(ab), Ab = 0; Ab < ab; Ab++) Ub[Ab] = arguments[Ab];
+                const Mb = hM.apply(window.history, Ub);
+                return bb("pushState"), Mb
+              }, GM || (GM = window.history.replaceState), window.history.replaceState = function() {
+                for (var ab = arguments.length, Ub = new Array(ab), Ab = 0; Ab < ab; Ab++) Ub[Ab] = arguments[Ab];
+                const Mb = GM.apply(window.history, Ub);
+                return bb("replaceState"), Mb
+              }, QM = () => bb("popstate"), qM = () => bb("hashchange"), window.addEventListener("popstate", QM), window.addEventListener("hashchange", qM), KM = !0;
+            return dM
           }(),
-          kb = (Wb = ["pointerdown", "keydown"], PW || (PW = new Cs), Wb.forEach((bb => {
-            if (!DW.has(bb)) {
-              const cb = () => {
-                PW.notify({
+          Ab = (Mb = ["pointerdown", "keydown"], WM || (WM = new ZU), Mb.forEach((bb => {
+            if (!HM.has(bb)) {
+              const ab = () => {
+                WM.notify({
                   type: "interaction",
                   name: bb
                 })
               };
-              window.addEventListener(bb, cb), DW.add(bb), EW.set(bb, cb)
+              window.addEventListener(bb, ab), HM.add(bb), IM.set(bb, ab)
             }
-          })), PW);
-        var Wb;
-        const ab = new tW((new Cs).merge(bb, cb, sb), {
+          })), WM);
+        var Mb;
+        const Tb = new pM((new ZU).merge(bb, ab, Ub), {
           inactivityMs: 100,
           drainTimeoutMs: 1e4,
           isOperationStart: bb => function(bb) {
-            return bb.type === Qs
+            return bb.type === kU
           }(bb) ? bb.request.requestId : void 0,
           isOperationEnd: bb => function(bb) {
-            return bb.type === es
+            return bb.type === yU
           }(bb) ? bb.request.requestId : void 0
         });
-        ab.filter((bb => "tracking-ended" === bb.message)).subscribe((bb => {
-          var cb, sb;
-          if ((null === (cb = bb.events) || void 0 === cb ? void 0 : cb.some((bb => "url-change" === bb.type))) && (null === (sb = bb.events) || void 0 === sb ? void 0 : sb.some((bb => "dom-mutation" === bb.type)))) {
-            var kb;
-            const cb = null === (kb = bb.events) || void 0 === kb ? void 0 : kb.find((bb => "url-change" === bb.type));
-            lb.api.pushEvent("faro.navigation", {
-              fromUrl: null === cb || void 0 === cb ? void 0 : cb.from,
-              toUrl: null === cb || void 0 === cb ? void 0 : cb.to,
+        Tb.filter((bb => "tracking-ended" === bb.message)).subscribe((bb => {
+          var ab, Ub;
+          if ((null === (ab = bb.events) || void 0 === ab ? void 0 : ab.some((bb => "url-change" === bb.type))) && (null === (Ub = bb.events) || void 0 === Ub ? void 0 : Ub.some((bb => "dom-mutation" === bb.type)))) {
+            var Ab;
+            const ab = null === (Ab = bb.events) || void 0 === Ab ? void 0 : Ab.find((bb => "url-change" === bb.type));
+            Rb.api.pushEvent("faro.navigation", {
+              fromUrl: null === ab || void 0 === ab ? void 0 : ab.from,
+              toUrl: null === ab || void 0 === ab ? void 0 : ab.to,
               sameDocument: String(!0),
               duration: bb.duration
             })
           }
-        })), kb.subscribe((() => {
-          ab.startTracking()
+        })), Ab.subscribe((() => {
+          Tb.startTracking()
         }))
       }
     };
 
-    function rW() {
+    function lM() {
       let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      const cb = [new gW, new Os, new Ok, new ks, new Ks, new wW];
-      return !1 !== bb.enablePerformanceInstrumentation && cb.unshift(new Fk), !1 !== bb.enableContentSecurityPolicyInstrumentation && cb.push(new BW), !1 !== bb.captureConsole && cb.push(new Es), cb
+      const ab = [new fM, new GU, new hA, new AU, new qU, new oM];
+      return !1 !== bb.enablePerformanceInstrumentation && ab.unshift(new CA), !1 !== bb.enableContentSecurityPolicyInstrumentation && ab.push(new mM), !1 !== bb.captureConsole && ab.push(new FU), ab
     }
-    var oW = sb(6369);
-    let SW, RW;
+    var tM = Ub(6343);
+    let wM, sM;
 
-    function vW() {
+    function gM() {
       const bb = "undefined" !== typeof navigator ? navigator.userAgent : "";
-      return SW === bb && RW || (RW = new oW.UAParser(bb).getResult(), SW = bb), RW
+      return wM === bb && sM || (sM = new tM.UAParser(bb).getResult(), wM = bb), sM
     }
-    const FW = () => {
+    const CM = () => {
         const {
           browser: bb,
-          os: cb,
-          ua: sb
-        } = vW(), {
-          name: kb,
-          version: Wb
+          os: ab,
+          ua: Ub
+        } = gM(), {
+          name: Ab,
+          version: Mb
         } = bb, {
-          name: ab,
-          version: Tb
-        } = cb, Ub = navigator.language, Ib = sb.includes("Mobi"), Hb = function() {
-          if (!kb || !Wb) return;
+          name: Tb,
+          version: Eb
+        } = ab, Yb = navigator.language, Bb = Ub.includes("Mobi"), eb = function() {
+          if (!Ab || !Mb) return;
           if ("userAgentData" in navigator && navigator.userAgentData) return navigator.userAgentData.brands
         }();
         return {
           browser: {
-            name: null !== kb && void 0 !== kb ? kb : Gs,
-            version: null !== Wb && void 0 !== Wb ? Wb : Gs,
-            os: `${null!==ab&&void 0!==ab?ab:Gs} ${null!==Tb&&void 0!==Tb?Tb:Gs}`,
-            userAgent: null !== sb && void 0 !== sb ? sb : Gs,
-            language: null !== Ub && void 0 !== Ub ? Ub : Gs,
-            mobile: Ib,
-            brands: null !== Hb && void 0 !== Hb ? Hb : Gs,
+            name: null !== Ab && void 0 !== Ab ? Ab : QU,
+            version: null !== Mb && void 0 !== Mb ? Mb : QU,
+            os: `${null!==Tb&&void 0!==Tb?Tb:QU} ${null!==Eb&&void 0!==Eb?Eb:QU}`,
+            userAgent: null !== Ub && void 0 !== Ub ? Ub : QU,
+            language: null !== Yb && void 0 !== Yb ? Yb : QU,
+            mobile: Bb,
+            brands: null !== eb && void 0 !== eb ? eb : QU,
             viewportWidth: `${window.innerWidth}`,
             viewportHeight: `${window.innerHeight}`
           }
         }
       },
-      xW = () => {
+      VM = () => {
         const {
           name: bb,
-          version: cb
-        } = vW().os;
-        if (!bb && !cb) return {};
-        const sb = {};
-        return bb && (sb.name = bb), cb && (sb.version = cb), {
-          os: sb
+          version: ab
+        } = gM().os;
+        if (!bb && !ab) return {};
+        const Ub = {};
+        return bb && (Ub.name = bb), ab && (Ub.version = ab), {
+          os: Ub
         }
       };
 
-    function jW(bb) {
-      var cb, sb, kb;
+    function OM(bb) {
+      var ab, Ub, Ab;
       return {
-        id: null !== (cb = null === (sb = lb.config) || void 0 === sb || null === (sb = sb.sessionTracking) || void 0 === sb || null === (kb = sb.generateSessionId) || void 0 === kb ? void 0 : kb.call(sb)) && void 0 !== cb ? cb : ec(),
+        id: null !== (ab = null === (Ub = Rb.config) || void 0 === Ub || null === (Ub = Ub.sessionTracking) || void 0 === Ub || null === (Ab = Ub.generateSessionId) || void 0 === Ab ? void 0 : Ab.call(Ub)) && void 0 !== ab ? ab : ya(),
         attributes: bb
       }
     }
-    const pW = () => ({
+    const cM = () => ({
       sdk: {
         name: "faro-web",
-        version: ss
+        version: UU
       }
     });
-    var ba = class extends bs {
+    var JM = class extends bU {
       isBatched() {
         return !1
       }
@@ -3038,10 +3038,10 @@ export const modules = {
         return []
       }
     };
-    let ca = function(bb) {
+    let nM = function(bb) {
       return bb.EXCEPTION = "exception", bb.LOG = "log", bb.MEASUREMENT = "measurement", bb.TRACE = "trace", bb.EVENT = "event", bb
     }({});
-    const sa = {
+    const SM = {
       exception: "exceptions",
       log: "logs",
       measurement: "measurements",
@@ -3049,80 +3049,80 @@ export const modules = {
       event: "events"
     };
 
-    function ka(bb, cb) {
-      var sb, kb;
-      if (void 0 === cb) return bb;
+    function bT(bb, ab) {
+      var Ub, Ab;
+      if (void 0 === ab) return bb;
       if (void 0 === bb) return {
-        resourceSpans: cb
+        resourceSpans: ab
       };
-      const Wb = null === (sb = bb.resourceSpans) || void 0 === sb ? void 0 : sb[0];
-      if (void 0 === Wb) return bb;
-      const ab = (null === Wb || void 0 === Wb ? void 0 : Wb.scopeSpans) || [],
-        Tb = (null === cb || void 0 === cb || null === (kb = cb[0]) || void 0 === kb ? void 0 : kb.scopeSpans) || [];
-      return jc(jc({}, bb), {}, {
-        resourceSpans: [jc(jc({}, Wb), {}, {
-          scopeSpans: [...ab, ...Tb]
+      const Mb = null === (Ub = bb.resourceSpans) || void 0 === Ub ? void 0 : Ub[0];
+      if (void 0 === Mb) return bb;
+      const Tb = (null === Mb || void 0 === Mb ? void 0 : Mb.scopeSpans) || [],
+        Eb = (null === ab || void 0 === ab || null === (Ab = ab[0]) || void 0 === Ab ? void 0 : Ab.scopeSpans) || [];
+      return na(na({}, bb), {}, {
+        resourceSpans: [na(na({}, Mb), {}, {
+          scopeSpans: [...Tb, ...Eb]
         })]
       })
     }
 
-    function Wa(bb) {
-      let cb = {
+    function aT(bb) {
+      let ab = {
         meta: {}
       };
-      return void 0 !== bb[0] && (cb.meta = bb[0].meta), bb.forEach((bb => {
+      return void 0 !== bb[0] && (ab.meta = bb[0].meta), bb.forEach((bb => {
         switch (bb.type) {
           case "log":
           case "event":
           case "exception":
           case "measurement": {
-            const sb = sa[bb.type],
-              kb = cb[sb];
-            cb = jc(jc({}, cb), {}, {
-              [sb]: void 0 === kb ? [bb.payload] : [...kb, bb.payload]
+            const Ub = SM[bb.type],
+              Ab = ab[Ub];
+            ab = na(na({}, ab), {}, {
+              [Ub]: void 0 === Ab ? [bb.payload] : [...Ab, bb.payload]
             });
             break
           }
           case "trace":
-            cb = jc(jc({}, cb), {}, {
-              traces: ka(cb.traces, bb.payload.resourceSpans)
+            ab = na(na({}, ab), {}, {
+              traces: bT(ab.traces, bb.payload.resourceSpans)
             })
         }
-      })), cb
+      })), ab
     }
-    var aa = class extends ba {
+    var UT = class extends JM {
       constructor() {
         let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        super(), this.options = bb, this.name = "@grafana/faro-web-sdk:transport-console", this.version = ss
+        super(), this.options = bb, this.name = "@grafana/faro-web-sdk:transport-console", this.version = UU
       }
       send(bb) {
-        var cb;
-        return this.unpatchedConsole[null !== (cb = this.options.level) && void 0 !== cb ? cb : Ns.DEBUG]("New event", Wa([bb]))
+        var ab;
+        return this.unpatchedConsole[null !== (ab = this.options.level) && void 0 !== ab ? ab : DU.DEBUG]("New event", aT([bb]))
       }
     };
-    const Ta = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([0-9]{2}) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) ([0-9]{4}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
-      Ua = /^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), ([0-9]{2})-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-([0-9]{2}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
-      Ia = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (?:(?:([0-9]{2}))|(?: ([0-9]))) ([0-9]{2}):([0-9]{2}):([0-9]{2}) ([0-9]{4})$/,
-      Ha = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-      fa = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      Ma = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const AT = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([0-9]{2}) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) ([0-9]{4}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
+      MT = /^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), ([0-9]{2})-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-([0-9]{2}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
+      TT = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (?:(?:([0-9]{2}))|(?: ([0-9]))) ([0-9]{2}):([0-9]{2}):([0-9]{2}) ([0-9]{4})$/,
+      ET = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+      YT = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      BT = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-    function Xa(bb) {
+    function eT(bb) {
       let {
-        weekday: cb,
-        day: sb,
-        month: kb,
-        year: Wb,
-        hour: ab,
-        minute: Tb,
-        second: Ub
+        weekday: ab,
+        day: Ub,
+        month: Ab,
+        year: Mb,
+        hour: Tb,
+        minute: Eb,
+        second: Yb
       } = bb;
-      if (Wb < 1900 || sb < 1 || ab > 23 || Tb > 59 || Ub > 60) return;
-      const Ib = 60 === Ub,
-        Hb = new Date(0);
-      return Hb.setUTCFullYear(Wb, kb, sb), Hb.setUTCHours(ab, Tb, Ib ? 59 : Ub, 0), Hb.getUTCDay() === cb && Hb.getUTCDate() === sb && Hb.getUTCMonth() === kb && Hb.getUTCFullYear() === Wb && Hb.getUTCHours() === ab && Hb.getUTCMinutes() === Tb && Hb.getUTCSeconds() === (Ib ? 59 : Ub) ? Hb.getTime() + (Ib ? 1e3 : 0) : void 0
+      if (Mb < 1900 || Ub < 1 || Tb > 23 || Eb > 59 || Yb > 60) return;
+      const Bb = 60 === Yb,
+        eb = new Date(0);
+      return eb.setUTCFullYear(Mb, Ab, Ub), eb.setUTCHours(Tb, Eb, Bb ? 59 : Yb, 0), eb.getUTCDay() === ab && eb.getUTCDate() === Ub && eb.getUTCMonth() === Ab && eb.getUTCFullYear() === Mb && eb.getUTCHours() === Tb && eb.getUTCMinutes() === Eb && eb.getUTCSeconds() === (Bb ? 59 : Yb) ? eb.getTime() + (Bb ? 1e3 : 0) : void 0
     }
-    var na = class {
+    var vT = class {
       constructor(bb) {
         this.options = bb, this.admitted = 0, this.inProgress = 0, this.sequence = 0, this.nextSendAt = 0, this.attemptQueue = [], this.waiting = [], this.unloading = !1
       }
@@ -3130,61 +3130,61 @@ export const modules = {
         var bb = this;
         if (this.admitted >= this.options.bufferSize) return;
         this.admitted++;
-        const cb = this.sequence++;
-        let sb = !1;
+        const ab = this.sequence++;
+        let Ub = !1;
         return {
           deliver: function() {
-            var sb = Rk((function*(sb) {
-              const kb = bb.options.getNow();
-              let Wb, ab = 0;
+            var Ub = sA((function*(Ub) {
+              const Ab = bb.options.getNow();
+              let Mb, Tb = 0;
               for (;;) {
-                var Tb, Ub, Ib;
-                const Hb = bb.options.retry.maxAttempts - ab,
-                  fb = yield bb.runAttempt((() => sb(Hb, bb.unloading)), ab > 0);
-                if (ab += fb.attemptsMade, "success" === fb.kind) return {
+                var Eb, Yb, Bb;
+                const eb = bb.options.retry.maxAttempts - Tb,
+                  vb = yield bb.runAttempt((() => Ub(eb, bb.unloading)), Tb > 0);
+                if (Tb += vb.attemptsMade, "success" === vb.kind) return {
                   kind: "success",
-                  attempts: ab,
-                  elapsedTimeMs: bb.options.getNow() - kb
+                  attempts: Tb,
+                  elapsedTimeMs: bb.options.getNow() - Ab
                 };
-                if (Wb = fb.failure, "terminal" === fb.kind || bb.unloading) return {
+                if (Mb = vb.failure, "terminal" === vb.kind || bb.unloading) return {
                   kind: "terminal",
-                  attempts: ab,
-                  elapsedTimeMs: bb.options.getNow() - kb,
-                  failure: Wb
+                  attempts: Tb,
+                  elapsedTimeMs: bb.options.getNow() - Ab,
+                  failure: Mb
                 };
-                if (ab >= bb.options.retry.maxAttempts) return {
+                if (Tb >= bb.options.retry.maxAttempts) return {
                   kind: "terminal",
-                  attempts: ab,
-                  elapsedTimeMs: bb.options.getNow() - kb,
-                  failure: Wb,
+                  attempts: Tb,
+                  elapsedTimeMs: bb.options.getNow() - Ab,
+                  failure: Mb,
                   reason: "retries-exhausted"
                 };
-                if (null != fb.retryAfterMs && fb.retryAfterMs > bb.options.retry.maxBackoffMs) return {
+                if (null != vb.retryAfterMs && vb.retryAfterMs > bb.options.retry.maxBackoffMs) return {
                   kind: "terminal",
-                  attempts: ab,
-                  elapsedTimeMs: bb.options.getNow() - kb,
-                  failure: Wb,
+                  attempts: Tb,
+                  elapsedTimeMs: bb.options.getNow() - Ab,
+                  failure: Mb,
                   reason: "retry-after-too-long"
                 };
-                const Mb = Math.min(null !== (Tb = fb.retryAfterMs) && void 0 !== Tb ? Tb : bb.options.retry.initialBackoffMs * Math.pow(bb.options.retry.backoffMultiplier, ab - 1), bb.options.retry.maxBackoffMs);
-                if (null === (Ub = (Ib = bb.options).onRetry) || void 0 === Ub || Ub.call(Ib, Mb, ab + 1), yield bb.waitForTurn(cb, Mb)) {
-                  const cb = bb.options.retry.maxAttempts - ab,
-                    Wb = yield bb.runAttempt((() => sb(cb, !0)));
-                  return ab += Wb.attemptsMade, {
-                    kind: "success" === Wb.kind ? "success" : "terminal",
-                    attempts: ab,
-                    elapsedTimeMs: bb.options.getNow() - kb,
-                    failure: "success" === Wb.kind ? void 0 : Wb.failure
+                const Lb = Math.min(null !== (Eb = vb.retryAfterMs) && void 0 !== Eb ? Eb : bb.options.retry.initialBackoffMs * Math.pow(bb.options.retry.backoffMultiplier, Tb - 1), bb.options.retry.maxBackoffMs);
+                if (null === (Yb = (Bb = bb.options).onRetry) || void 0 === Yb || Yb.call(Bb, Lb, Tb + 1), yield bb.waitForTurn(ab, Lb)) {
+                  const ab = bb.options.retry.maxAttempts - Tb,
+                    Mb = yield bb.runAttempt((() => Ub(ab, !0)));
+                  return Tb += Mb.attemptsMade, {
+                    kind: "success" === Mb.kind ? "success" : "terminal",
+                    attempts: Tb,
+                    elapsedTimeMs: bb.options.getNow() - Ab,
+                    failure: "success" === Mb.kind ? void 0 : Mb.failure
                   }
                 }
               }
             }));
             return function(bb) {
-              return sb.apply(this, arguments)
+              return Ub.apply(this, arguments)
             }
           }(),
           release: () => {
-            sb || (sb = !0, this.admitted--)
+            Ub || (Ub = !0, this.admitted--)
           }
         }
       }
@@ -3192,213 +3192,213 @@ export const modules = {
         this.unloading = !0, this.nextSendAt = 0;
         const bb = this.waiting.splice(0);
         null != this.redeliveryTimer && (clearTimeout(this.redeliveryTimer), this.redeliveryTimer = void 0), null != this.waitingTimer && (clearTimeout(this.waitingTimer), this.waitingTimer = void 0);
-        for (const cb of bb) cb.resolve(!0);
+        for (const ab of bb) ab.resolve(!0);
         this.runNextAttempt()
       }
       resume() {
         this.unloading = !1
       }
       runAttempt(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return new Promise(((sb, kb) => {
+        let ab = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return new Promise(((Ub, Ab) => {
           this.attemptQueue.push({
             run: () => {
               this.inProgress++;
-              const cb = () => {
+              const ab = () => {
                 this.inProgress--, this.runNextAttempt()
               };
               bb().then((bb => {
-                cb(), sb(bb)
+                ab(), Ub(bb)
               }), (bb => {
-                cb(), kb(bb)
+                ab(), Ab(bb)
               }))
             },
-            isRedelivery: cb
+            isRedelivery: ab
           }), this.runNextAttempt()
         }))
       }
       runNextAttempt() {
         for (null != this.redeliveryTimer && (clearTimeout(this.redeliveryTimer), this.redeliveryTimer = void 0); this.inProgress < this.options.concurrency && this.attemptQueue.length > 0;) {
           const bb = this.options.getNow(),
-            cb = this.attemptQueue.findIndex((cb => {
+            ab = this.attemptQueue.findIndex((ab => {
               let {
-                isRedelivery: sb
-              } = cb;
-              return this.unloading || !sb || bb >= this.nextSendAt
+                isRedelivery: Ub
+              } = ab;
+              return this.unloading || !Ub || bb >= this.nextSendAt
             }));
-          if (cb < 0) return void(this.redeliveryTimer = setTimeout((() => {
+          if (ab < 0) return void(this.redeliveryTimer = setTimeout((() => {
             this.redeliveryTimer = void 0, this.runNextAttempt()
           }), Math.max(0, this.nextSendAt - bb)));
-          const [sb] = this.attemptQueue.splice(cb, 1);
-          sb.isRedelivery && !this.unloading && (this.nextSendAt = bb + 1), sb.run()
+          const [Ub] = this.attemptQueue.splice(ab, 1);
+          Ub.isRedelivery && !this.unloading && (this.nextSendAt = bb + 1), Ub.run()
         }
       }
-      waitForTurn(bb, cb) {
-        const sb = Math.min(cb * (1 + .2 * this.options.getRandom()), this.options.retry.maxBackoffMs);
-        return new Promise((cb => {
+      waitForTurn(bb, ab) {
+        const Ub = Math.min(ab * (1 + .2 * this.options.getRandom()), this.options.retry.maxBackoffMs);
+        return new Promise((ab => {
           this.waiting.push({
             sequence: bb,
-            readyAt: this.options.getNow() + sb,
-            resolve: cb
-          }), this.waiting.sort(((bb, cb) => bb.readyAt === cb.readyAt ? bb.sequence - cb.sequence : bb.readyAt - cb.readyAt)), null != this.waitingTimer && (clearTimeout(this.waitingTimer), this.waitingTimer = void 0), this.scheduleNext()
+            readyAt: this.options.getNow() + Ub,
+            resolve: ab
+          }), this.waiting.sort(((bb, ab) => bb.readyAt === ab.readyAt ? bb.sequence - ab.sequence : bb.readyAt - ab.readyAt)), null != this.waitingTimer && (clearTimeout(this.waitingTimer), this.waitingTimer = void 0), this.scheduleNext()
         }))
       }
       scheduleNext() {
         if (null != this.waitingTimer || 0 === this.waiting.length) return;
         const bb = this.waiting[0],
-          cb = bb.readyAt;
+          ab = bb.readyAt;
         this.waitingTimer = setTimeout((() => {
           this.waitingTimer = void 0;
-          const cb = this.waiting.indexOf(bb);
-          cb >= 0 && this.waiting.splice(cb, 1), bb.resolve(!1), this.scheduleNext()
-        }), Math.max(0, cb - this.options.getNow()))
+          const ab = this.waiting.indexOf(bb);
+          ab >= 0 && this.waiting.splice(ab, 1), bb.resolve(!1), this.scheduleNext()
+        }), Math.max(0, ab - this.options.getNow()))
       }
     };
 
-    function ma(bb, cb) {
+    function LT(bb, ab) {
       if (null == bb) return {};
-      var sb, kb, Wb = function(bb, cb) {
+      var Ub, Ab, Mb = function(bb, ab) {
         if (null == bb) return {};
-        var sb = {};
-        for (var kb in bb)
-          if ({}.hasOwnProperty.call(bb, kb)) {
-            if (cb.includes(kb)) continue;
-            sb[kb] = bb[kb]
-          } return sb
-      }(bb, cb);
+        var Ub = {};
+        for (var Ab in bb)
+          if ({}.hasOwnProperty.call(bb, Ab)) {
+            if (ab.includes(Ab)) continue;
+            Ub[Ab] = bb[Ab]
+          } return Ub
+      }(bb, ab);
       if (Object.getOwnPropertySymbols) {
-        var ab = Object.getOwnPropertySymbols(bb);
-        for (kb = 0; kb < ab.length; kb++) sb = ab[kb], cb.includes(sb) || {}.propertyIsEnumerable.call(bb, sb) && (Wb[sb] = bb[sb])
+        var Tb = Object.getOwnPropertySymbols(bb);
+        for (Ab = 0; Ab < Tb.length; Ab++) Ub = Tb[Ab], ab.includes(Ub) || {}.propertyIsEnumerable.call(bb, Ub) && (Mb[Ub] = bb[Ub])
       }
-      return Wb
+      return Mb
     }
 
-    function la(bb) {
+    function PT(bb) {
       const {
-        size: cb,
-        concurrency: sb
-      } = bb, kb = [];
-      let Wb = 0;
-      const ab = () => {
-        if (Wb < sb && kb.length) {
+        size: ab,
+        concurrency: Ub
+      } = bb, Ab = [];
+      let Mb = 0;
+      const Tb = () => {
+        if (Mb < Ub && Ab.length) {
           const {
             producer: bb,
-            resolve: cb,
-            reject: sb
-          } = kb.shift();
-          Wb++, bb().then((bb => {
-            Wb--, ab(), cb(bb)
+            resolve: ab,
+            reject: Ub
+          } = Ab.shift();
+          Mb++, bb().then((bb => {
+            Mb--, Tb(), ab(bb)
           }), (bb => {
-            Wb--, ab(), sb(bb)
+            Mb--, Tb(), Ub(bb)
           }))
         }
       };
       return {
         add: bb => {
-          if (kb.length + Wb >= cb) throw new Error("Task buffer full");
-          return new Promise(((cb, sb) => {
-            kb.push({
+          if (Ab.length + Mb >= ab) throw new Error("Task buffer full");
+          return new Promise(((ab, Ub) => {
+            Ab.push({
               producer: bb,
-              resolve: cb,
-              reject: sb
-            }), ab()
+              resolve: ab,
+              reject: Ub
+            }), Tb()
           }))
         }
       }
     }
-    const Qa = ["headers"],
-      ea = ["keepalive", "signal"],
-      Ca = new Set([408, 425, 429, 500, 502, 503, 504]),
-      Na = new Set([429, 503]);
-    let Va = 0,
-      La = 0;
-    var ua = class extends Error {};
-    var Ya = class extends ba {
+    const XT = ["headers"],
+      jT = ["keepalive", "signal"],
+      RT = new Set([408, 425, 429, 500, 502, 503, 504]),
+      kT = new Set([429, 503]);
+    let yT = 0,
+      ZT = 0;
+    var DT = class extends Error {};
+    var zT = class extends JM {
       constructor(bb) {
-        var cb, sb, kb, Wb, ab, Tb, Ub, Ib, Hb, fb, Mb, Xb, nb, mb, lb, Qb, eb;
-        super(), this.options = bb, this.name = "@grafana/faro-web-sdk:transport-fetch", this.version = ss, this.pendingCustomSends = 0, this.getNow = null !== (cb = bb.getNow) && void 0 !== cb ? cb : Date.now, this.requestTimeoutMs = null !== (sb = bb.requestTimeoutMs) && void 0 !== sb ? sb : 1e4, this.compressionEnabled = null !== (kb = bb.requestCompression) && void 0 !== kb && kb && "undefined" !== typeof CompressionStream, bb.requestCompression && !this.compressionEnabled && this.logWarn("requestCompression is enabled but CompressionStream is not available. Falling back to uncompressed."), this.requestTimeoutMs > 0 && "undefined" === typeof AbortController && this.logWarn("AbortController is unavailable. Requests will be sent without the configured timeout."), this.deliveryQueue = new na({
-          bufferSize: null !== (Wb = bb.bufferSize) && void 0 !== Wb ? Wb : 30,
-          concurrency: null !== (ab = bb.concurrency) && void 0 !== ab ? ab : 5,
+        var ab, Ub, Ab, Mb, Tb, Eb, Yb, Bb, eb, vb, Lb, Pb, Xb, jb, Rb, kb, yb;
+        super(), this.options = bb, this.name = "@grafana/faro-web-sdk:transport-fetch", this.version = UU, this.pendingCustomSends = 0, this.getNow = null !== (ab = bb.getNow) && void 0 !== ab ? ab : Date.now, this.requestTimeoutMs = null !== (Ub = bb.requestTimeoutMs) && void 0 !== Ub ? Ub : 1e4, this.compressionEnabled = null !== (Ab = bb.requestCompression) && void 0 !== Ab && Ab && "undefined" !== typeof CompressionStream, bb.requestCompression && !this.compressionEnabled && this.logWarn("requestCompression is enabled but CompressionStream is not available. Falling back to uncompressed."), this.requestTimeoutMs > 0 && "undefined" === typeof AbortController && this.logWarn("AbortController is unavailable. Requests will be sent without the configured timeout."), this.deliveryQueue = new vT({
+          bufferSize: null !== (Mb = bb.bufferSize) && void 0 !== Mb ? Mb : 30,
+          concurrency: null !== (Tb = bb.concurrency) && void 0 !== Tb ? Tb : 5,
           retry: {
-            maxAttempts: null !== (Tb = null === (Ub = bb.retry) || void 0 === Ub ? void 0 : Ub.maxAttempts) && void 0 !== Tb ? Tb : 3,
-            initialBackoffMs: null !== (Ib = null !== (Hb = null === (fb = bb.retry) || void 0 === fb ? void 0 : fb.initialBackoffMs) && void 0 !== Hb ? Hb : bb.defaultRateLimitBackoffMs) && void 0 !== Ib ? Ib : 1e3,
-            maxBackoffMs: null !== (Mb = null === (Xb = bb.retry) || void 0 === Xb ? void 0 : Xb.maxBackoffMs) && void 0 !== Mb ? Mb : 3e4,
-            backoffMultiplier: null !== (nb = null === (mb = bb.retry) || void 0 === mb ? void 0 : mb.backoffMultiplier) && void 0 !== nb ? nb : 2
+            maxAttempts: null !== (Eb = null === (Yb = bb.retry) || void 0 === Yb ? void 0 : Yb.maxAttempts) && void 0 !== Eb ? Eb : 3,
+            initialBackoffMs: null !== (Bb = null !== (eb = null === (vb = bb.retry) || void 0 === vb ? void 0 : vb.initialBackoffMs) && void 0 !== eb ? eb : bb.defaultRateLimitBackoffMs) && void 0 !== Bb ? Bb : 1e3,
+            maxBackoffMs: null !== (Lb = null === (Pb = bb.retry) || void 0 === Pb ? void 0 : Pb.maxBackoffMs) && void 0 !== Lb ? Lb : 3e4,
+            backoffMultiplier: null !== (Xb = null === (jb = bb.retry) || void 0 === jb ? void 0 : jb.backoffMultiplier) && void 0 !== Xb ? Xb : 2
           },
           getNow: this.getNow,
-          getRandom: null !== (lb = bb.getRandom) && void 0 !== lb ? lb : Math.random,
-          onRetry: (bb, cb) => {
-            this.logDebug(`Retrying failed request after ${bb}ms. Attempt ${cb}.`)
+          getRandom: null !== (Rb = bb.getRandom) && void 0 !== Rb ? Rb : Math.random,
+          onRetry: (bb, ab) => {
+            this.logDebug(`Retrying failed request after ${bb}ms. Attempt ${ab}.`)
           }
-        }), this.customPromiseBuffer = la({
-          size: null !== (Qb = bb.bufferSize) && void 0 !== Qb ? Qb : 30,
-          concurrency: null !== (eb = bb.concurrency) && void 0 !== eb ? eb : 5
+        }), this.customPromiseBuffer = PT({
+          size: null !== (kb = bb.bufferSize) && void 0 !== kb ? kb : 30,
+          concurrency: null !== (yb = bb.concurrency) && void 0 !== yb ? yb : 5
         }), this.defaultPromiseBuffer = {
           add: bb => {
             if (this.promiseBuffer !== this.defaultPromiseBuffer || this.promiseBuffer.add !== this.defaultBufferAdd || this.pendingCustomSends > 0) return this.customPromiseBuffer.add(bb);
-            const cb = this.deliveryQueue.reserve();
-            if (!cb) throw new Error("Task buffer full");
-            return this.runBufferedTask(cb, bb)
+            const ab = this.deliveryQueue.reserve();
+            if (!ab) throw new Error("Task buffer full");
+            return this.runBufferedTask(ab, bb)
           }
         }, this.defaultBufferAdd = this.defaultPromiseBuffer.add, this.promiseBuffer = this.defaultPromiseBuffer, "undefined" !== typeof window && (window.addEventListener("pagehide", (() => this.deliveryQueue.flush())), window.addEventListener("pageshow", (bb => {
           bb.persisted && this.deliveryQueue.resume()
         })))
       }
       send(bb) {
-        var cb = this;
-        return Rk((function*() {
-          const sb = cb.promiseBuffer;
-          if (sb !== cb.defaultPromiseBuffer || sb.add !== cb.defaultBufferAdd) {
-            cb.pendingCustomSends++;
+        var ab = this;
+        return sA((function*() {
+          const Ub = ab.promiseBuffer;
+          if (Ub !== ab.defaultPromiseBuffer || Ub.add !== ab.defaultBufferAdd) {
+            ab.pendingCustomSends++;
             try {
-              yield sb.add((() => cb.deliver(bb)))
-            } catch (kb) {
-              cb.logError("Permanent delivery failure", {
-                error: kb,
+              yield Ub.add((() => ab.deliver(bb)))
+            } catch (Ab) {
+              ab.logError("Permanent delivery failure", {
+                error: Ab,
                 attempts: 0,
                 elapsedTimeMs: 0
               })
             } finally {
-              cb.pendingCustomSends--
+              ab.pendingCustomSends--
             }
-          } else yield cb.deliver(bb)
+          } else yield ab.deliver(bb)
         }))()
       }
-      runBufferedTask(bb, cb) {
-        return Rk((function*() {
-          let sb;
+      runBufferedTask(bb, ab) {
+        return sA((function*() {
+          let Ub;
           try {
-            return yield bb.deliver(Rk((function*() {
-              return sb = yield cb(), {
+            return yield bb.deliver(sA((function*() {
+              return Ub = yield ab(), {
                 kind: "success",
                 attemptsMade: 1
               }
-            }))), sb
+            }))), Ub
           } finally {
             bb.release()
           }
         }))()
       }
       deliver(bb) {
-        var cb = this;
-        return Rk((function*() {
-          const sb = cb.deliveryQueue.reserve();
-          if (sb) try {
-            const kb = yield cb.prepareRequest(bb), Wb = yield sb.deliver(((bb, sb) => cb.performAttempt(kb, bb, sb)));
-            "terminal" === Wb.kind && cb.logError("retries-exhausted" === Wb.reason ? "Delivery retries exhausted" : "Permanent delivery failure", fc(fc({}, Wb.failure), {}, {
-              reason: Wb.reason,
-              attempts: Wb.attempts,
-              elapsedTimeMs: Wb.elapsedTimeMs
+        var ab = this;
+        return sA((function*() {
+          const Ub = ab.deliveryQueue.reserve();
+          if (Ub) try {
+            const Ab = yield ab.prepareRequest(bb), Mb = yield Ub.deliver(((bb, Ub) => ab.performAttempt(Ab, bb, Ub)));
+            "terminal" === Mb.kind && ab.logError("retries-exhausted" === Mb.reason ? "Delivery retries exhausted" : "Permanent delivery failure", va(va({}, Mb.failure), {}, {
+              reason: Mb.reason,
+              attempts: Mb.attempts,
+              elapsedTimeMs: Mb.elapsedTimeMs
             }))
-          } catch (kb) {
-            cb.logError("Permanent delivery failure", {
-              error: kb,
+          } catch (Ab) {
+            ab.logError("Permanent delivery failure", {
+              error: Ab,
               attempts: 0,
               elapsedTimeMs: 0
             })
           } finally {
-            sb.release()
-          } else cb.logError("Permanent delivery failure", {
+            Ub.release()
+          } else ab.logError("Permanent delivery failure", {
             error: "Reliable delivery queue is full",
             attempts: 0,
             elapsedTimeMs: 0
@@ -3413,465 +3413,465 @@ export const modules = {
         return !0
       }
       prepareRequest(bb) {
-        var cb = this;
-        return Rk((function*() {
-          var sb, kb;
-          const Wb = Wa(bb),
-            ab = null === (sb = Wb.meta.session) || void 0 === sb ? void 0 : sb.id,
-            Tb = JSON.stringify(Wb),
-            Ub = null !== (kb = cb.options.requestOptions) && void 0 !== kb ? kb : {},
+        var ab = this;
+        return sA((function*() {
+          var Ub, Ab;
+          const Mb = aT(bb),
+            Tb = null === (Ub = Mb.meta.session) || void 0 === Ub ? void 0 : Ub.id,
+            Eb = JSON.stringify(Mb),
+            Yb = null !== (Ab = ab.options.requestOptions) && void 0 !== Ab ? Ab : {},
             {
-              headers: Ib = {}
-            } = Ub,
-            Hb = ma(Ub, Qa),
+              headers: Bb = {}
+            } = Yb,
+            eb = LT(Yb, XT),
             {
-              keepalive: fb,
-              signal: Mb
-            } = Hb,
-            Xb = ma(Hb, ea),
-            nb = {};
-          for (const [bb, cb] of Object.entries(Ib)) nb[bb] = "function" === typeof cb ? yield cb(): cb;
-          let mb = Tb,
-            lb = function(bb) {
+              keepalive: vb,
+              signal: Lb
+            } = eb,
+            Pb = LT(eb, jT),
+            Xb = {};
+          for (const [bb, ab] of Object.entries(Bb)) Xb[bb] = "function" === typeof ab ? yield ab(): ab;
+          let jb = Eb,
+            Rb = function(bb) {
               return "undefined" === typeof TextEncoder ? bb.length : (new TextEncoder).encode(bb).byteLength
-            }(Tb);
-          const Qb = {};
-          return cb.compressionEnabled && (mb = yield cb.compress(Tb), lb = mb.size, Qb["Content-Encoding"] = "gzip"), {
-            bodySize: lb,
-            sessionId: ab,
-            requestInit: fc({
+            }(Eb);
+          const kb = {};
+          return ab.compressionEnabled && (jb = yield ab.compress(Eb), Rb = jb.size, kb["Content-Encoding"] = "gzip"), {
+            bodySize: Rb,
+            sessionId: Tb,
+            requestInit: va({
               method: "POST",
-              headers: fc(fc(fc(fc(fc({
+              headers: va(va(va(va(va({
                 "Content-Type": "application/json"
-              }, Qb), nb), cb.options.apiKey ? {
-                "x-api-key": cb.options.apiKey
-              } : {}), ab ? {
-                "x-faro-session-id": ab
+              }, kb), Xb), ab.options.apiKey ? {
+                "x-api-key": ab.options.apiKey
+              } : {}), Tb ? {
+                "x-faro-session-id": Tb
               } : {}), {}, {
-                "Idempotency-Key": ec(20)
+                "Idempotency-Key": ya(20)
               }),
-              body: mb
-            }, Xb)
+              body: jb
+            }, Pb)
           }
         }))()
       }
-      performAttempt(bb, cb, sb) {
-        var kb = this;
-        return Rk((function*() {
-          var Wb;
-          const ab = null === (Wb = kb.options.requestOptions) || void 0 === Wb ? void 0 : Wb.signal;
-          if (null === ab || void 0 === ab ? void 0 : ab.aborted) return {
+      performAttempt(bb, ab, Ub) {
+        var Ab = this;
+        return sA((function*() {
+          var Mb;
+          const Tb = null === (Mb = Ab.options.requestOptions) || void 0 === Mb ? void 0 : Mb.signal;
+          if (null === Tb || void 0 === Tb ? void 0 : Tb.aborted) return {
             kind: "terminal",
             failure: {
-              error: ab.reason
+              error: Tb.reason
             },
             attemptsMade: 0
           };
-          let Tb = 0;
+          let Eb = 0;
           try {
-            var Ub;
-            const Wb = yield kb.fetchWithKeepaliveFallback(bb.requestInit, bb.bodySize, !!sb || (null === (Ub = kb.options.requestOptions) || void 0 === Ub ? void 0 : Ub.keepalive), cb, (() => Tb++));
-            if (kb.handleResponse(Wb, bb.sessionId), Wb.status >= 200 && Wb.status < 300) return {
+            var Yb;
+            const Mb = yield Ab.fetchWithKeepaliveFallback(bb.requestInit, bb.bodySize, !!Ub || (null === (Yb = Ab.options.requestOptions) || void 0 === Yb ? void 0 : Yb.keepalive), ab, (() => Eb++));
+            if (Ab.handleResponse(Mb, bb.sessionId), Mb.status >= 200 && Mb.status < 300) return {
               kind: "success",
-              attemptsMade: Tb
+              attemptsMade: Eb
             };
-            const ab = {
-              status: Wb.status
+            const Tb = {
+              status: Mb.status
             };
-            return !Ca.has(Wb.status) || sb ? {
+            return !RT.has(Mb.status) || Ub ? {
               kind: "terminal",
-              failure: ab,
-              attemptsMade: Tb
+              failure: Tb,
+              attemptsMade: Eb
             } : {
               kind: "retry",
-              failure: ab,
-              attemptsMade: Tb,
-              retryAfterMs: Na.has(Wb.status) ? kb.getRetryAfterDelayMs(Wb) : void 0
+              failure: Tb,
+              attemptsMade: Eb,
+              retryAfterMs: kT.has(Mb.status) ? Ab.getRetryAfterDelayMs(Mb) : void 0
             }
-          } catch (Ib) {
+          } catch (Bb) {
             const bb = {
-              error: Ib
+              error: Bb
             };
-            return (null === ab || void 0 === ab ? void 0 : ab.aborted) || !kb.isFetchNetworkError(Ib) || sb ? {
+            return (null === Tb || void 0 === Tb ? void 0 : Tb.aborted) || !Ab.isFetchNetworkError(Bb) || Ub ? {
               kind: "terminal",
               failure: bb,
-              attemptsMade: Tb
+              attemptsMade: Eb
             } : {
               kind: "retry",
               failure: bb,
-              attemptsMade: Tb
+              attemptsMade: Eb
             }
           }
         }))()
       }
-      fetchWithKeepaliveFallback(bb, cb, sb, kb, Wb) {
-        var ab = this;
-        return Rk((function*() {
-          const Tb = ab.getNow(),
-            Ub = ab.reserveKeepalive(cb, sb);
+      fetchWithKeepaliveFallback(bb, ab, Ub, Ab, Mb) {
+        var Tb = this;
+        return sA((function*() {
+          const Eb = Tb.getNow(),
+            Yb = Tb.reserveKeepalive(ab, Ub);
           try {
-            return yield ab.fetchWithTimeout(fc(fc({}, bb), {}, {
-              keepalive: Ub.keepalive
-            }), ab.requestTimeoutMs, Wb)
-          } catch (Hb) {
-            var Ib;
-            if (Ub.keepalive && kb > 1 && ab.isFetchNetworkError(Hb) && !(Hb instanceof ua) && !(null === (Ib = ab.options.requestOptions) || void 0 === Ib || null === (Ib = Ib.signal) || void 0 === Ib ? void 0 : Ib.aborted)) {
-              ab.logDebug("Retrying failed keepalive request with keepalive disabled.");
-              const cb = ab.requestTimeoutMs - (ab.getNow() - Tb);
-              return ab.fetchWithTimeout(fc(fc({}, bb), {}, {
+            return yield Tb.fetchWithTimeout(va(va({}, bb), {}, {
+              keepalive: Yb.keepalive
+            }), Tb.requestTimeoutMs, Mb)
+          } catch (eb) {
+            var Bb;
+            if (Yb.keepalive && Ab > 1 && Tb.isFetchNetworkError(eb) && !(eb instanceof DT) && !(null === (Bb = Tb.options.requestOptions) || void 0 === Bb || null === (Bb = Bb.signal) || void 0 === Bb ? void 0 : Bb.aborted)) {
+              Tb.logDebug("Retrying failed keepalive request with keepalive disabled.");
+              const ab = Tb.requestTimeoutMs - (Tb.getNow() - Eb);
+              return Tb.fetchWithTimeout(va(va({}, bb), {}, {
                 keepalive: !1
-              }), cb, Wb)
+              }), ab, Mb)
             }
-            throw Hb
+            throw eb
           } finally {
-            Ub.release()
+            Yb.release()
           }
         }))()
       }
-      fetchWithTimeout(bb, cb, sb) {
-        var kb = this;
-        return Rk((function*() {
-          var Wb;
-          const ab = null === (Wb = kb.options.requestOptions) || void 0 === Wb ? void 0 : Wb.signal;
-          if (kb.requestTimeoutMs <= 0 || "undefined" === typeof AbortController) return sb(), fetch(kb.options.url, fc(fc({}, bb), {}, {
-            signal: ab
+      fetchWithTimeout(bb, ab, Ub) {
+        var Ab = this;
+        return sA((function*() {
+          var Mb;
+          const Tb = null === (Mb = Ab.options.requestOptions) || void 0 === Mb ? void 0 : Mb.signal;
+          if (Ab.requestTimeoutMs <= 0 || "undefined" === typeof AbortController) return Ub(), fetch(Ab.options.url, va(va({}, bb), {}, {
+            signal: Tb
           }));
-          if (cb <= 0) throw new ua("Request timed out");
-          const Tb = new AbortController,
-            Ub = () => Tb.abort(null === ab || void 0 === ab ? void 0 : ab.reason);
-          null === ab || void 0 === ab || ab.addEventListener("abort", Ub, {
+          if (ab <= 0) throw new DT("Request timed out");
+          const Eb = new AbortController,
+            Yb = () => Eb.abort(null === Tb || void 0 === Tb ? void 0 : Tb.reason);
+          null === Tb || void 0 === Tb || Tb.addEventListener("abort", Yb, {
             once: !0
           });
-          let Ib = !1;
-          const Hb = setTimeout((() => {
-            Ib = !0, Tb.abort()
-          }), cb);
+          let Bb = !1;
+          const eb = setTimeout((() => {
+            Bb = !0, Eb.abort()
+          }), ab);
           try {
-            return sb(), yield fetch(kb.options.url, fc(fc({}, bb), {}, {
-              signal: Tb.signal
+            return Ub(), yield fetch(Ab.options.url, va(va({}, bb), {}, {
+              signal: Eb.signal
             }))
-          } catch (fb) {
-            if (Ib && !(null === ab || void 0 === ab ? void 0 : ab.aborted)) throw new ua("Request timed out");
-            throw fb
+          } catch (vb) {
+            if (Bb && !(null === Tb || void 0 === Tb ? void 0 : Tb.aborted)) throw new DT("Request timed out");
+            throw vb
           } finally {
-            clearTimeout(Hb), null === ab || void 0 === ab || ab.removeEventListener("abort", Ub)
+            clearTimeout(eb), null === Tb || void 0 === Tb || Tb.removeEventListener("abort", Yb)
           }
         }))()
       }
       getRetryAfterDelayMs(bb) {
-        const cb = bb.headers.get("Retry-After");
-        if (!cb) return;
-        if (/^\d+$/.test(cb)) {
-          const bb = 1e3 * Number(cb);
+        const ab = bb.headers.get("Retry-After");
+        if (!ab) return;
+        if (/^\d+$/.test(ab)) {
+          const bb = 1e3 * Number(ab);
           return Number.isFinite(bb) ? bb : Number.POSITIVE_INFINITY
         }
-        const sb = this.getNow(),
-          kb = function(bb, cb) {
-            const sb = Ta.exec(bb);
-            if (sb) {
-              const [, bb, cb, kb, Wb, ab, Tb, Ub] = sb;
-              return Xa({
-                weekday: Ha.indexOf(bb),
-                day: Number(cb),
-                month: Ma.indexOf(kb),
-                year: Number(Wb),
-                hour: Number(ab),
-                minute: Number(Tb),
-                second: Number(Ub)
+        const Ub = this.getNow(),
+          Ab = function(bb, ab) {
+            const Ub = AT.exec(bb);
+            if (Ub) {
+              const [, bb, ab, Ab, Mb, Tb, Eb, Yb] = Ub;
+              return eT({
+                weekday: ET.indexOf(bb),
+                day: Number(ab),
+                month: BT.indexOf(Ab),
+                year: Number(Mb),
+                hour: Number(Tb),
+                minute: Number(Eb),
+                second: Number(Yb)
               })
             }
-            const kb = Ua.exec(bb);
-            if (kb) {
-              const [, bb, sb, Tb, Ub, Ib, Hb, fb] = kb, Mb = new Date(cb);
-              if (Number.isNaN(Mb.getTime())) return;
-              const Xb = Mb.getUTCFullYear();
-              let nb = 100 * Math.floor(Xb / 100) + Number(Ub);
-              nb < Xb && (nb += 100);
-              const mb = Ma.indexOf(Tb),
-                lb = {
-                  month: mb,
-                  day: Number(sb),
-                  hour: Number(Ib),
-                  minute: Number(Hb),
-                  second: Number(fb),
+            const Ab = MT.exec(bb);
+            if (Ab) {
+              const [, bb, Ub, Eb, Yb, Bb, eb, vb] = Ab, Lb = new Date(ab);
+              if (Number.isNaN(Lb.getTime())) return;
+              const Pb = Lb.getUTCFullYear();
+              let Xb = 100 * Math.floor(Pb / 100) + Number(Yb);
+              Xb < Pb && (Xb += 100);
+              const jb = BT.indexOf(Eb),
+                Rb = {
+                  month: jb,
+                  day: Number(Ub),
+                  hour: Number(Bb),
+                  minute: Number(eb),
+                  second: Number(vb),
                   millisecond: 0
                 },
-                Qb = {
-                  month: Mb.getUTCMonth(),
-                  day: Mb.getUTCDate(),
-                  hour: Mb.getUTCHours(),
-                  minute: Mb.getUTCMinutes(),
-                  second: Mb.getUTCSeconds(),
-                  millisecond: Mb.getUTCMilliseconds()
+                kb = {
+                  month: Lb.getUTCMonth(),
+                  day: Lb.getUTCDate(),
+                  hour: Lb.getUTCHours(),
+                  minute: Lb.getUTCMinutes(),
+                  second: Lb.getUTCSeconds(),
+                  millisecond: Lb.getUTCMilliseconds()
                 };
-              return (nb > Xb + 50 || nb === Xb + 50 && (ab = Qb, ((Wb = lb).month - ab.month || Wb.day - ab.day || Wb.hour - ab.hour || Wb.minute - ab.minute || Wb.second - ab.second || Wb.millisecond - ab.millisecond) > 0)) && (nb -= 100), Xa({
-                weekday: fa.indexOf(bb),
-                day: Number(sb),
-                month: mb,
-                year: nb,
-                hour: Number(Ib),
-                minute: Number(Hb),
-                second: Number(fb)
+              return (Xb > Pb + 50 || Xb === Pb + 50 && (Tb = kb, ((Mb = Rb).month - Tb.month || Mb.day - Tb.day || Mb.hour - Tb.hour || Mb.minute - Tb.minute || Mb.second - Tb.second || Mb.millisecond - Tb.millisecond) > 0)) && (Xb -= 100), eT({
+                weekday: YT.indexOf(bb),
+                day: Number(Ub),
+                month: jb,
+                year: Xb,
+                hour: Number(Bb),
+                minute: Number(eb),
+                second: Number(vb)
               })
             }
-            var Wb, ab;
-            const Tb = Ia.exec(bb);
-            if (!Tb) return;
-            const [, Ub, Ib, Hb, fb, Mb, Xb, nb, mb] = Tb;
-            return Xa({
-              weekday: Ha.indexOf(Ub),
-              day: Number(null !== Hb && void 0 !== Hb ? Hb : fb),
-              month: Ma.indexOf(Ib),
-              year: Number(mb),
-              hour: Number(Mb),
-              minute: Number(Xb),
-              second: Number(nb)
+            var Mb, Tb;
+            const Eb = TT.exec(bb);
+            if (!Eb) return;
+            const [, Yb, Bb, eb, vb, Lb, Pb, Xb, jb] = Eb;
+            return eT({
+              weekday: ET.indexOf(Yb),
+              day: Number(null !== eb && void 0 !== eb ? eb : vb),
+              month: BT.indexOf(Bb),
+              year: Number(jb),
+              hour: Number(Lb),
+              minute: Number(Pb),
+              second: Number(Xb)
             })
-          }(cb, sb);
-        return null == kb ? void 0 : Math.max(0, kb - sb)
+          }(ab, Ub);
+        return null == Ab ? void 0 : Math.max(0, Ab - Ub)
       }
-      reserveKeepalive(bb, cb) {
-        if (!1 === cb || bb > 6e4 || Va + bb > 6e4 || La >= 9) return {
+      reserveKeepalive(bb, ab) {
+        if (!1 === ab || bb > 6e4 || yT + bb > 6e4 || ZT >= 9) return {
           keepalive: !1,
-          release: wc
+          release: wa
         };
-        Va += bb, La++;
-        let sb = !1;
+        yT += bb, ZT++;
+        let Ub = !1;
         return {
           keepalive: !0,
           release: () => {
-            sb || (sb = !0, Va -= bb, La--)
+            Ub || (Ub = !0, yT -= bb, ZT--)
           }
         }
       }
-      handleResponse(bb, cb) {
-        202 === bb.status && "invalid" === bb.headers.get("X-Faro-Session-Status") && this.extendFaroSession(this.config, this.logDebug.bind(this), cb), bb.text().catch(wc)
+      handleResponse(bb, ab) {
+        202 === bb.status && "invalid" === bb.headers.get("X-Faro-Session-Status") && this.extendFaroSession(this.config, this.logDebug.bind(this), ab), bb.text().catch(wa)
       }
       isFetchNetworkError(bb) {
-        return bb instanceof TypeError || bb instanceof ua || bb instanceof DOMException && "AbortError" === bb.name
+        return bb instanceof TypeError || bb instanceof DT || bb instanceof DOMException && "AbortError" === bb.name
       }
       compress(bb) {
-        return Rk((function*() {
-          const cb = [],
-            sb = new ReadableStream({
-              start(cb) {
-                cb.enqueue((new TextEncoder).encode(bb)), cb.close()
+        return sA((function*() {
+          const ab = [],
+            Ub = new ReadableStream({
+              start(ab) {
+                ab.enqueue((new TextEncoder).encode(bb)), ab.close()
               }
             }).pipeThrough(new CompressionStream("gzip")).getReader();
           for (;;) {
             const {
               done: bb,
-              value: kb
-            } = yield sb.read();
-            if (bb) return new Blob(cb);
-            cb.push(kb)
+              value: Ab
+            } = yield Ub.read();
+            if (bb) return new Blob(ab);
+            ab.push(Ab)
           }
         }))()
       }
-      extendFaroSession(bb, cb, sb) {
-        var kb, Wb;
-        const ab = bb.sessionTracking;
-        if (!(null === ab || void 0 === ab ? void 0 : ab.enabled)) return void cb("Session expired.");
+      extendFaroSession(bb, ab, Ub) {
+        var Ab, Mb;
+        const Tb = bb.sessionTracking;
+        if (!(null === Tb || void 0 === Tb ? void 0 : Tb.enabled)) return void ab("Session expired.");
         const {
-          fetchUserSession: Tb,
-          storeUserSession: Ub
-        } = Ac(ab), Ib = null === (kb = this.metas.value.session) || void 0 === kb ? void 0 : kb.id, Hb = null === (Wb = Tb()) || void 0 === Wb ? void 0 : Wb.sessionId;
-        sb && sb === Ib && sb === Hb ? (yc({
-          fetchUserSession: Tb,
-          storeUserSession: Ub
+          fetchUserSession: Eb,
+          storeUserSession: Yb
+        } = ta(Tb), Bb = null === (Ab = this.metas.value.session) || void 0 === Ab ? void 0 : Ab.id, eb = null === (Mb = Eb()) || void 0 === Mb ? void 0 : Mb.sessionId;
+        Ub && Ub === Bb && Ub === eb ? (Ia({
+          fetchUserSession: Eb,
+          storeUserSession: Yb
         })({
           forceSessionExtend: !0
-        }), cb("Session expired; created new session.")) : cb("Ignoring stale or cross-tab session-invalid response; request session no longer current.")
+        }), ab("Session expired; created new session.")) : ab("Ignoring stale or cross-tab session-invalid response; request session no longer current.")
       }
     };
-    const ha = () => {
+    const xT = () => {
       const bb = window.k6;
       return {
-        k6: fc({
+        k6: va({
           isK6Browser: !0
         }, (null === bb || void 0 === bb ? void 0 : bb.testRunId) && {
           testRunId: null === bb || void 0 === bb ? void 0 : bb.testRunId
         })
       }
     };
-    let Ja, ga;
+    let iT, fT;
 
-    function Ba() {
+    function mT() {
       let {
         generatePageId: bb,
-        initialPageMeta: cb
+        initialPageMeta: ab
       } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
       return () => {
-        const sb = location.href;
-        return tb(bb) && Ja !== sb && (Ja = sb, ga = bb(location)), {
-          page: fc(fc({
-            url: sb
-          }, ga ? {
-            id: ga
-          } : {}), cb)
+        const Ub = location.href;
+        return Hb(bb) && iT !== Ub && (iT = Ub, fT = bb(location)), {
+          page: va(va({
+            url: Ub
+          }, fT ? {
+            id: fT
+          } : {}), ab)
         }
       }
     }
 
-    function ta() {
-      let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : pc,
-        cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-      const sb = oc;
-      return cb > 0 && (sb.error = cb >= 1 ? function() {
-        for (var cb = arguments.length, kb = new Array(cb), Wb = 0; Wb < cb; Wb++) kb[Wb] = arguments[Wb];
-        bb.error(`${sb.prefix}\n`, ...kb)
-      } : wc, sb.warn = cb >= 2 ? function() {
-        for (var cb = arguments.length, kb = new Array(cb), Wb = 0; Wb < cb; Wb++) kb[Wb] = arguments[Wb];
-        bb.warn(`${sb.prefix}\n`, ...kb)
-      } : wc, sb.info = cb >= 3 ? function() {
-        for (var cb = arguments.length, kb = new Array(cb), Wb = 0; Wb < cb; Wb++) kb[Wb] = arguments[Wb];
-        bb.info(`${sb.prefix}\n`, ...kb)
-      } : wc, sb.debug = cb >= 4 ? function() {
-        for (var cb = arguments.length, kb = new Array(cb), Wb = 0; Wb < cb; Wb++) kb[Wb] = arguments[Wb];
-        bb.debug(`${sb.prefix}\n`, ...kb)
-      } : wc), sb
+    function pT() {
+      let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Sa,
+        ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+      const Ub = ga;
+      return ab > 0 && (Ub.error = ab >= 1 ? function() {
+        for (var ab = arguments.length, Ab = new Array(ab), Mb = 0; Mb < ab; Mb++) Ab[Mb] = arguments[Mb];
+        bb.error(`${Ub.prefix}\n`, ...Ab)
+      } : wa, Ub.warn = ab >= 2 ? function() {
+        for (var ab = arguments.length, Ab = new Array(ab), Mb = 0; Mb < ab; Mb++) Ab[Mb] = arguments[Mb];
+        bb.warn(`${Ub.prefix}\n`, ...Ab)
+      } : wa, Ub.info = ab >= 3 ? function() {
+        for (var ab = arguments.length, Ab = new Array(ab), Mb = 0; Mb < ab; Mb++) Ab[Mb] = arguments[Mb];
+        bb.info(`${Ub.prefix}\n`, ...Ab)
+      } : wa, Ub.debug = ab >= 4 ? function() {
+        for (var ab = arguments.length, Ab = new Array(ab), Mb = 0; Mb < ab; Mb++) Ab[Mb] = arguments[Mb];
+        bb.debug(`${Ub.prefix}\n`, ...Ab)
+      } : wa), Ub
     }
-    const ya = "faro",
-      Pa = {
+    const NT = "faro",
+      WT = {
         enabled: !0,
         sendTimeout: 250,
         itemLimit: 50
       },
-      Da = ["dedupe", "eventDomain", "globalObjectKey", "instrumentations", "internalLoggerLevel", "isolate", "logArgsSerializer", "metas", "paused", "preventGlobalExposure", "unpatchedConsole", "url", "experimental"];
+      HT = ["dedupe", "eventDomain", "globalObjectKey", "instrumentations", "internalLoggerLevel", "isolate", "logArgsSerializer", "metas", "paused", "preventGlobalExposure", "unpatchedConsole", "url", "experimental"];
 
-    function Ea(bb) {
-      var cb, sb, Wb, ab, Tb, Ub;
-      const Ib = [],
-        fb = ta(bb.unpatchedConsole, bb.internalLoggerLevel);
-      bb.transports ? ((bb.url || bb.apiKey) && fb.error('if "transports" is defined, "url" and "apiKey" should not be defined'), Ib.push(...bb.transports)) : bb.url ? Ib.push(new Ya({
+    function IT(bb) {
+      var ab, Ub, Mb, Tb, Eb, Yb;
+      const Bb = [],
+        vb = pT(bb.unpatchedConsole, bb.internalLoggerLevel);
+      bb.transports ? ((bb.url || bb.apiKey) && vb.error('if "transports" is defined, "url" and "apiKey" should not be defined'), Bb.push(...bb.transports)) : bb.url ? Bb.push(new zT({
         url: bb.url,
         apiKey: bb.apiKey,
         requestCompression: bb.requestCompression
-      })) : fb.error('either "url" or "transports" must be defined');
+      })) : vb.error('either "url" or "transports" must be defined');
       const {
-        dedupe: Mb = !0,
-        eventDomain: Xb = kb,
-        globalObjectKey: nb = ya,
-        instrumentations: mb = rW(),
-        internalLoggerLevel: lb = Sc,
-        isolate: Qb = !1,
-        logArgsSerializer: eb = Ds,
-        metas: Cb = Oa(bb),
-        paused: Nb = !1,
-        preventGlobalExposure: Vb = !1,
-        unpatchedConsole: Lb = pc,
-        url: ub,
-        experimental: Yb
-      } = bb, hb = ma(bb, Da), Jb = null !== (cb = null === Yb || void 0 === Yb ? void 0 : Yb.trackNavigation) && void 0 !== cb && cb, gb = {
-        dataAttributeName: bW(null !== (sb = null === (Wb = bb.userActionsInstrumentation) || void 0 === Wb ? void 0 : Wb.dataAttributeName) && void 0 !== sb ? sb : xk),
-        excludeItem: null === (ab = bb.userActionsInstrumentation) || void 0 === ab ? void 0 : ab.excludeItem,
-        initialActivityTimeout: cW(null === (Tb = bb.userActionsInstrumentation) || void 0 === Tb ? void 0 : Tb.initialActivityTimeout, 100, (bb => fb.warn(bb)))
+        dedupe: Lb = !0,
+        eventDomain: Pb = Ab,
+        globalObjectKey: Xb = NT,
+        instrumentations: jb = lM(),
+        internalLoggerLevel: Rb = Ca,
+        isolate: kb = !1,
+        logArgsSerializer: yb = dU,
+        metas: Zb = FT(bb),
+        paused: Db = !1,
+        preventGlobalExposure: zb = !1,
+        unpatchedConsole: xb = Sa,
+        url: ib,
+        experimental: fb
+      } = bb, mb = LT(bb, HT), pb = null !== (ab = null === fb || void 0 === fb ? void 0 : fb.trackNavigation) && void 0 !== ab && ab, Nb = {
+        dataAttributeName: JA(null !== (Ub = null === (Mb = bb.userActionsInstrumentation) || void 0 === Mb ? void 0 : Mb.dataAttributeName) && void 0 !== Ub ? Ub : VA),
+        excludeItem: null === (Tb = bb.userActionsInstrumentation) || void 0 === Tb ? void 0 : Tb.excludeItem,
+        initialActivityTimeout: nA(null === (Eb = bb.userActionsInstrumentation) || void 0 === Eb ? void 0 : Eb.initialActivityTimeout, 100, (bb => vb.warn(bb)))
       };
-      return fc(fc({}, hb), {}, {
-        batching: fc(fc({}, Pa), bb.batching),
-        dedupe: Mb,
-        globalObjectKey: nb,
-        instrumentations: ia(mb, bb),
-        internalLoggerLevel: lb,
-        isolate: Qb,
-        logArgsSerializer: eb,
-        metas: Cb,
-        parseStacktrace: ls,
-        paused: Nb,
-        preventGlobalExposure: Vb,
-        transports: Ib,
-        unpatchedConsole: Lb,
-        eventDomain: Xb,
-        ignoreUrls: [...null !== (Ub = bb.ignoreUrls) && void 0 !== Ub ? Ub : [], ...ub ? [ub] : [], /\/collect(?:\/[\w]*)?$/],
-        sessionTracking: fc(fc(fc({}, Hb), bb.sessionTracking), Ga({
+      return va(va({}, mb), {}, {
+        batching: va(va({}, WT), bb.batching),
+        dedupe: Lb,
+        globalObjectKey: Xb,
+        instrumentations: dT(jb, bb),
+        internalLoggerLevel: Rb,
+        isolate: kb,
+        logArgsSerializer: yb,
+        metas: Zb,
+        parseStacktrace: RU,
+        paused: Db,
+        preventGlobalExposure: zb,
+        transports: Bb,
+        unpatchedConsole: xb,
+        eventDomain: Pb,
+        ignoreUrls: [...null !== (Yb = bb.ignoreUrls) && void 0 !== Yb ? Yb : [], ...ib ? [ib] : [], /\/collect(?:\/[\w]*)?$/],
+        sessionTracking: va(va(va({}, eb), bb.sessionTracking), hT({
           trackGeolocation: bb.trackGeolocation,
           sessionTracking: bb.sessionTracking
         })),
-        userActionsInstrumentation: gb,
+        userActionsInstrumentation: Nb,
         experimental: {
-          trackNavigation: Jb
+          trackNavigation: pb
         }
       })
     }
 
-    function ia(bb, cb) {
+    function dT(bb, ab) {
       let {
-        experimental: sb
-      } = cb;
-      var kb;
-      const Wb = null !== (kb = null === sb || void 0 === sb ? void 0 : sb.trackNavigation) && void 0 !== kb && kb;
-      return bb.filter((bb => !("@grafana/faro-web-sdk:instrumentation-navigation" === bb.name && !Wb)))
+        experimental: Ub
+      } = ab;
+      var Ab;
+      const Mb = null !== (Ab = null === Ub || void 0 === Ub ? void 0 : Ub.trackNavigation) && void 0 !== Ab && Ab;
+      return bb.filter((bb => !("@grafana/faro-web-sdk:instrumentation-navigation" === bb.name && !Mb)))
     }
 
-    function Oa(bb) {
-      var cb, sb, kb;
+    function FT(bb) {
+      var ab, Ub, Ab;
       const {
-        page: Wb,
-        generatePageId: ab
-      } = null !== (cb = null === bb || void 0 === bb ? void 0 : bb.pageTracking) && void 0 !== cb ? cb : {}, Tb = [FW, xW, Ba({
-        generatePageId: ab,
-        initialPageMeta: Wb
-      }), ...null !== (sb = bb.metas) && void 0 !== sb ? sb : [], pW];
-      return Bb(null === (kb = window) || void 0 === kb ? void 0 : kb.k6) ? [...Tb, ha] : Tb
+        page: Mb,
+        generatePageId: Tb
+      } = null !== (ab = null === bb || void 0 === bb ? void 0 : bb.pageTracking) && void 0 !== ab ? ab : {}, Eb = [CM, VM, mT({
+        generatePageId: Tb,
+        initialPageMeta: Mb
+      }), ...null !== (Ub = bb.metas) && void 0 !== Ub ? Ub : [], cM];
+      return Wb(null === (Ab = window) || void 0 === Ab ? void 0 : Ab.k6) ? [...Eb, xT] : Eb
     }
 
-    function Ga(bb) {
+    function hT(bb) {
       let {
-        trackGeolocation: cb,
-        sessionTracking: sb
+        trackGeolocation: ab,
+        sessionTracking: Ub
       } = bb;
-      var kb;
-      const Wb = {};
-      return Jb(cb) && (Wb.geoLocationTrackingEnabled = cb), Sb(Wb) ? {} : {
-        session: fc(fc({}, null !== (kb = null === sb || void 0 === sb ? void 0 : sb.session) && void 0 !== kb ? kb : {}), {}, {
-          overrides: Wb
+      var Ab;
+      const Mb = {};
+      return pb(ab) && (Mb.geoLocationTrackingEnabled = ab), Cb(Mb) ? {} : {
+        session: va(va({}, null !== (Ab = null === Ub || void 0 === Ub ? void 0 : Ub.session) && void 0 !== Ab ? Ab : {}), {}, {
+          overrides: Mb
         })
       }
     }
-    const Ka = new WeakSet;
+    const GT = new WeakSet;
 
-    function Za(bb) {
-      return Ka.add(bb), bb
+    function QT(bb) {
+      return GT.add(bb), bb
     }
 
-    function za(bb, cb) {
-      if (bb.capture) return Za(bb.capture(cb));
-      const sb = Za(bb.value);
-      return null === cb || void 0 === cb || cb(), sb
+    function qT(bb, ab) {
+      if (bb.capture) return QT(bb.capture(ab));
+      const Ub = QT(bb.value);
+      return null === ab || void 0 === ab || ab(), Ub
     }
 
-    function qa(bb) {
-      const cb = `__faroBundleId_${bb}`,
-        sb = null === fb || void 0 === fb ? void 0 : fb[cb];
-      if ("string" === typeof sb && "" !== sb) return sb;
-      const kb = "undefined" !== typeof window ? window[cb] : void 0;
-      return "string" === typeof kb && "" !== kb ? kb : void 0
+    function uT(bb) {
+      const ab = `__faroBundleId_${bb}`,
+        Ub = null === vb || void 0 === vb ? void 0 : vb[ab];
+      if ("string" === typeof Ub && "" !== Ub) return Ub;
+      const Ab = "undefined" !== typeof window ? window[ab] : void 0;
+      return "string" === typeof Ab && "" !== Ab ? Ab : void 0
     }
 
-    function da(bb) {
-      var cb, sb;
-      const kb = bb.config.app.name,
-        Wb = kb ? function(bb) {
-          return null === fb || void 0 === fb ? void 0 : fb[`__faroGitHash_${bb}`]
-        }(kb) : void 0,
-        ab = {
+    function rT(bb) {
+      var ab, Ub;
+      const Ab = bb.config.app.name,
+        Mb = Ab ? function(bb) {
+          return null === vb || void 0 === vb ? void 0 : vb[`__faroGitHash_${bb}`]
+        }(Ab) : void 0,
+        Tb = {
           sdk: {
-            version: ss,
+            version: UU,
             name: "faro"
           },
-          app: jc({
-            bundleId: kb && qa(kb)
-          }, void 0 !== Wb ? {
-            gitHash: Wb
+          app: na({
+            bundleId: Ab && uT(Ab)
+          }, void 0 !== Mb ? {
+            gitHash: Mb
           } : {})
         },
-        Tb = null === (cb = bb.config.sessionTracking) || void 0 === cb ? void 0 : cb.session;
-      Tb && bb.api.setSession(Tb), bb.config.app && (ab.app = jc(jc({}, bb.config.app), ab.app)), bb.config.user && (ab.user = bb.config.user), bb.config.view && (ab.view = bb.config.view), bb.metas.add(ab, ...null !== (sb = bb.config.metas) && void 0 !== sb ? sb : [])
+        Eb = null === (ab = bb.config.sessionTracking) || void 0 === ab ? void 0 : ab.session;
+      Eb && bb.api.setSession(Eb), bb.config.app && (Tb.app = na(na({}, bb.config.app), Tb.app)), bb.config.user && (Tb.user = bb.config.user), bb.config.view && (Tb.view = bb.config.view), bb.metas.add(Tb, ...null !== (Ub = bb.config.metas) && void 0 !== Ub ? Ub : [])
     }
-    var Aa = class {
-      constructor(bb, cb) {
-        var sb, kb;
-        this.signalBuffer = [], this.itemLimit = null !== (sb = null === cb || void 0 === cb ? void 0 : cb.itemLimit) && void 0 !== sb ? sb : 50, this.sendTimeout = null !== (kb = null === cb || void 0 === cb ? void 0 : cb.sendTimeout) && void 0 !== kb ? kb : 250, this.paused = (null === cb || void 0 === cb ? void 0 : cb.paused) || !1, this.sendFn = bb, this.paused || this.start(), "undefined" !== typeof document && document.addEventListener("visibilitychange", (() => {
+    var KT = class {
+      constructor(bb, ab) {
+        var Ub, Ab;
+        this.signalBuffer = [], this.itemLimit = null !== (Ub = null === ab || void 0 === ab ? void 0 : ab.itemLimit) && void 0 !== Ub ? Ub : 50, this.sendTimeout = null !== (Ab = null === ab || void 0 === ab ? void 0 : ab.sendTimeout) && void 0 !== Ab ? Ab : 250, this.paused = (null === ab || void 0 === ab ? void 0 : ab.paused) || !1, this.sendFn = bb, this.paused || this.start(), "undefined" !== typeof document && document.addEventListener("visibilitychange", (() => {
           "hidden" === document.visibilityState && this.flush()
         }))
       }
@@ -3885,12 +3885,12 @@ export const modules = {
         this.paused = !0, clearInterval(this.flushInterval)
       }
       groupItems(bb) {
-        const cb = new Map;
+        const ab = new Map;
         return bb.forEach((bb => {
-          const sb = JSON.stringify(bb.meta);
-          let kb = cb.get(sb);
-          kb = void 0 === kb ? [bb] : [...kb, bb], cb.set(sb, kb)
-        })), Array.from(cb.values())
+          const Ub = JSON.stringify(bb.meta);
+          let Ab = ab.get(Ub);
+          Ab = void 0 === Ab ? [bb] : [...Ab, bb], ab.set(Ub, Ab)
+        })), Array.from(ab.values())
       }
       flush() {
         if (this.paused || 0 === this.signalBuffer.length) return;
@@ -3898,8 +3898,8 @@ export const modules = {
         this.signalBuffer = [];
         try {
           this.groupItems(bb).forEach(this.sendFn)
-        } catch (cb) {
-          throw this.signalBuffer = [...bb, ...this.signalBuffer], this.trimBufferToLimit(), cb
+        } catch (ab) {
+          throw this.signalBuffer = [...bb, ...this.signalBuffer], this.trimBufferToLimit(), ab
         }
       }
       trimBufferToLimit() {
@@ -3907,710 +3907,710 @@ export const modules = {
       }
     };
 
-    function wa(bb, cb, sb, kb) {
-      var Wb;
-      cb.debug("Initializing transports");
-      const ab = [];
-      let Tb = [];
-      const Ub = bb => {
-        let cb = bb;
-        for (const kb of Tb) {
-          const bb = cb.map(kb).filter(Boolean);
+    function oT(bb, ab, Ub, Ab) {
+      var Mb;
+      ab.debug("Initializing transports");
+      const Tb = [];
+      let Eb = [];
+      const Yb = bb => {
+        let ab = bb;
+        for (const Ab of Eb) {
+          const bb = ab.map(Ab).filter(Boolean);
           if (0 === bb.length) return [];
-          cb = ra(bb, sb)
+          ab = lT(bb, Ub)
         }
-        return cb
+        return ab
       };
-      let Ib;
-      (null === (Wb = sb.batching) || void 0 === Wb ? void 0 : Wb.enabled) && (Ib = new Aa((bb => {
-        const sb = Ub(bb);
-        if (0 !== sb.length)
-          for (const kb of ab) cb.debug(`Transporting item using ${kb.name}\n`, sb), kb.isBatched() && kb.send(sb)
+      let Bb;
+      (null === (Mb = Ub.batching) || void 0 === Mb ? void 0 : Mb.enabled) && (Bb = new KT((bb => {
+        const Ub = Yb(bb);
+        if (0 !== Ub.length)
+          for (const Ab of Tb) ab.debug(`Transporting item using ${Ab.name}\n`, Ub), Ab.isBatched() && Ab.send(Ub)
       }), {
-        sendTimeout: sb.batching.sendTimeout,
-        itemLimit: sb.batching.itemLimit,
-        paused: sb.paused
+        sendTimeout: Ub.batching.sendTimeout,
+        itemLimit: Ub.batching.itemLimit,
+        paused: Ub.paused
       }));
       return {
         add: function() {
-          cb.debug("Adding transports");
-          for (var Wb = arguments.length, Tb = new Array(Wb), Ub = 0; Ub < Wb; Ub++) Tb[Ub] = arguments[Ub];
-          Tb.forEach((Wb => {
-            cb.debug(`Adding "${Wb.name}" transport`), ab.some((bb => bb === Wb)) ? cb.warn(`Transport ${Wb.name} is already added`) : (Wb.unpatchedConsole = bb, Wb.internalLogger = cb, Wb.config = sb, Wb.metas = kb, ab.push(Wb))
+          ab.debug("Adding transports");
+          for (var Mb = arguments.length, Eb = new Array(Mb), Yb = 0; Yb < Mb; Yb++) Eb[Yb] = arguments[Yb];
+          Eb.forEach((Mb => {
+            ab.debug(`Adding "${Mb.name}" transport`), Tb.some((bb => bb === Mb)) ? ab.warn(`Transport ${Mb.name} is already added`) : (Mb.unpatchedConsole = bb, Mb.internalLogger = ab, Mb.config = Ub, Mb.metas = Ab, Tb.push(Mb))
           }))
         },
         addBeforeSendHooks: function() {
-          cb.debug("Adding beforeSendHooks\n", Tb);
-          for (var bb = arguments.length, sb = new Array(bb), kb = 0; kb < bb; kb++) sb[kb] = arguments[kb];
-          sb.forEach((bb => {
-            bb && Tb.push(bb)
+          ab.debug("Adding beforeSendHooks\n", Eb);
+          for (var bb = arguments.length, Ub = new Array(bb), Ab = 0; Ab < bb; Ab++) Ub[Ab] = arguments[Ab];
+          Ub.forEach((bb => {
+            bb && Eb.push(bb)
           }))
         },
-        getBeforeSendHooks: () => [...Tb],
+        getBeforeSendHooks: () => [...Eb],
         execute: bb => {
-          var Wb;
-          if (!sb.paused && qc(kb).shouldCapture()) {
-            if (Mb = bb.meta, !Ka.has(Mb)) {
-              var Tb, Hb, fb;
-              const cb = null === (Tb = kb.value.session) || void 0 === Tb ? void 0 : Tb.id,
-                Wb = za(kb);
-              if (sb.paused) return;
-              const ab = jc({}, bb.meta);
-              (null === (Hb = ab.session) || void 0 === Hb ? void 0 : Hb.id) === cb && (null === (fb = Wb.session) || void 0 === fb ? void 0 : fb.id) !== cb && (void 0 === Wb.session ? delete ab.session : ab.session = Wb.session), bb = jc(jc({}, bb), {}, {
-                meta: Za(ab)
+          var Mb;
+          if (!Ub.paused && oa(Ab).shouldCapture()) {
+            if (Lb = bb.meta, !GT.has(Lb)) {
+              var Eb, eb, vb;
+              const ab = null === (Eb = Ab.value.session) || void 0 === Eb ? void 0 : Eb.id,
+                Mb = qT(Ab);
+              if (Ub.paused) return;
+              const Tb = na({}, bb.meta);
+              (null === (eb = Tb.session) || void 0 === eb ? void 0 : eb.id) === ab && (null === (vb = Mb.session) || void 0 === vb ? void 0 : vb.id) !== ab && (void 0 === Mb.session ? delete Tb.session : Tb.session = Mb.session), bb = na(na({}, bb), {}, {
+                meta: QT(Tb)
               })
             }
-            var Mb;
-            (null === (Wb = sb.batching) || void 0 === Wb ? void 0 : Wb.enabled) && (null === Ib || void 0 === Ib || Ib.addItem(bb)), (bb => {
-              var kb;
-              if ((null === (kb = sb.batching) || void 0 === kb ? void 0 : kb.enabled) && ab.every((bb => bb.isBatched()))) return;
-              const [Wb] = Ub([bb]);
-              if (void 0 !== Wb)
-                for (const Ub of ab) {
-                  var Tb;
-                  cb.debug(`Transporting item using ${Ub.name}\n`, Wb), Ub.isBatched() ? (null === (Tb = sb.batching) || void 0 === Tb ? void 0 : Tb.enabled) || Ub.send([Wb]) : Ub.send(Wb)
+            var Lb;
+            (null === (Mb = Ub.batching) || void 0 === Mb ? void 0 : Mb.enabled) && (null === Bb || void 0 === Bb || Bb.addItem(bb)), (bb => {
+              var Ab;
+              if ((null === (Ab = Ub.batching) || void 0 === Ab ? void 0 : Ab.enabled) && Tb.every((bb => bb.isBatched()))) return;
+              const [Mb] = Yb([bb]);
+              if (void 0 !== Mb)
+                for (const Yb of Tb) {
+                  var Eb;
+                  ab.debug(`Transporting item using ${Yb.name}\n`, Mb), Yb.isBatched() ? (null === (Eb = Ub.batching) || void 0 === Eb ? void 0 : Eb.enabled) || Yb.send([Mb]) : Yb.send(Mb)
                 }
             })(bb)
           }
         },
-        isPaused: () => sb.paused,
+        isPaused: () => Ub.paused,
         pause: () => {
-          cb.debug("Pausing transports"), null === Ib || void 0 === Ib || Ib.pause(), sb.paused = !0
+          ab.debug("Pausing transports"), null === Bb || void 0 === Bb || Bb.pause(), Ub.paused = !0
         },
         remove: function() {
-          cb.debug("Removing transports");
-          for (var bb = arguments.length, sb = new Array(bb), kb = 0; kb < bb; kb++) sb[kb] = arguments[kb];
-          sb.forEach((bb => {
-            cb.debug(`Removing "${bb.name}" transport`);
-            const sb = ab.indexOf(bb); - 1 !== sb ? ab.splice(sb, 1) : cb.warn(`Transport "${bb.name}" is not added`)
+          ab.debug("Removing transports");
+          for (var bb = arguments.length, Ub = new Array(bb), Ab = 0; Ab < bb; Ab++) Ub[Ab] = arguments[Ab];
+          Ub.forEach((bb => {
+            ab.debug(`Removing "${bb.name}" transport`);
+            const Ub = Tb.indexOf(bb); - 1 !== Ub ? Tb.splice(Ub, 1) : ab.warn(`Transport "${bb.name}" is not added`)
           }))
         },
         removeBeforeSendHooks: function() {
-          for (var bb = arguments.length, sb = new Array(bb), kb = 0; kb < bb; kb++) sb[kb] = arguments[kb];
-          cb.debug("Removing beforeSendHooks"), Tb = Tb.filter((bb => !sb.includes(bb)))
+          for (var bb = arguments.length, Ub = new Array(bb), Ab = 0; Ab < bb; Ab++) Ub[Ab] = arguments[Ab];
+          ab.debug("Removing beforeSendHooks"), Eb = Eb.filter((bb => !Ub.includes(bb)))
         },
         get transports() {
-          return [...ab]
+          return [...Tb]
         },
         unpause: () => {
-          cb.debug("Unpausing transports"), null === Ib || void 0 === Ib || Ib.start(), sb.paused = !1
+          ab.debug("Unpausing transports"), null === Bb || void 0 === Bb || Bb.start(), Ub.paused = !1
         }
       }
     }
 
-    function ra(bb, cb) {
-      if (cb.preserveOriginalError)
-        for (const sb of bb) "exception" === sb.type && delete sb.payload.originalError;
+    function lT(bb, ab) {
+      if (ab.preserveOriginalError)
+        for (const Ub of bb) "exception" === Ub.type && delete Ub.payload.originalError;
       return bb
     }
-    let oa = pc;
+    let tT = Sa;
 
-    function Sa(bb) {
-      var cb;
-      return oa = null !== (cb = bb.unpatchedConsole) && void 0 !== cb ? cb : oa, oa
+    function wT(bb) {
+      var ab;
+      return tT = null !== (ab = bb.unpatchedConsole) && void 0 !== ab ? ab : tT, tT
     }
-    let Ra, va = oc;
+    let sT, gT = ga;
 
-    function Fa(bb, cb) {
-      return va = ta(bb, cb.internalLoggerLevel), va
+    function CT(bb, ab) {
+      return gT = pT(bb, ab.internalLoggerLevel), gT
     }
 
-    function xa(bb) {
+    function VT(bb) {
       let {
-        internalLogger: cb,
-        config: sb,
-        metas: kb,
-        transports: Wb,
-        tracesApi: ab,
-        userActionsApi: Tb
+        internalLogger: ab,
+        config: Ub,
+        metas: Ab,
+        transports: Mb,
+        tracesApi: Tb,
+        userActionsApi: Eb
       } = bb;
-      var Ub;
-      cb.debug("Initializing exceptions API");
-      let Ib = null;
-      Ra = null !== (Ub = sb.parseStacktrace) && void 0 !== Ub ? Ub : Ra;
-      const Hb = bb => {
-          cb.debug("Changing stacktrace parser"), Ra = null !== bb && void 0 !== bb ? bb : Ra
+      var Yb;
+      ab.debug("Initializing exceptions API");
+      let Bb = null;
+      sT = null !== (Yb = Ub.parseStacktrace) && void 0 !== Yb ? Yb : sT;
+      const eb = bb => {
+          ab.debug("Changing stacktrace parser"), sT = null !== bb && void 0 !== bb ? bb : sT
         },
         {
-          ignoreErrors: fb = [],
-          preserveOriginalError: Mb
-        } = sb;
-      return Hb(sb.parseStacktrace), {
-        changeStacktraceParser: Hb,
-        getStacktraceParser: () => Ra,
+          ignoreErrors: vb = [],
+          preserveOriginalError: Lb
+        } = Ub;
+      return eb(Ub.parseStacktrace), {
+        changeStacktraceParser: eb,
+        getStacktraceParser: () => sT,
         pushError: function(bb) {
           let {
-            skipDedupe: Ub,
-            stackFrames: Hb,
-            type: Xb,
-            context: nb,
-            spanContext: mb,
-            timestampOverwriteMs: lb,
-            originalError: Qb,
-            fingerprint: eb,
-            fatal: Cb
+            skipDedupe: Yb,
+            stackFrames: eb,
+            type: Pb,
+            context: Xb,
+            spanContext: jb,
+            timestampOverwriteMs: Rb,
+            originalError: kb,
+            fingerprint: yb,
+            fatal: Zb
           } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          if (! function(bb, cb) {
+          if (! function(bb, ab) {
               const {
-                message: sb,
-                name: kb,
-                stack: Wb
-              } = cb;
-              return ab = bb, Tb = sb + " " + kb + " " + Wb, ab.some((bb => ub(bb) ? Tb.includes(bb) : !!Tb.match(bb)));
-              var ab, Tb
-            }(fb, null !== Qb && void 0 !== Qb ? Qb : bb)) try {
-            var Nb, Vb;
-            if (!qc(kb).shouldCapture()) return;
-            const fb = Gc(jc(jc({}, function(bb) {
-                let cb = bb.cause;
-                Kb(cb) ? cb = bb.cause.toString() : null !== cb && (Bb(bb.cause) || yb(bb.cause)) ? cb = Oc(bb.cause) : null != cb && (cb = bb.cause.toString());
-                return null == cb ? {} : {
-                  cause: cb
+                message: Ub,
+                name: Ab,
+                stack: Mb
+              } = ab;
+              return Tb = bb, Eb = Ub + " " + Ab + " " + Mb, Tb.some((bb => ib(bb) ? Eb.includes(bb) : !!Eb.match(bb)));
+              var Tb, Eb
+            }(vb, null !== kb && void 0 !== kb ? kb : bb)) try {
+            var Db, zb;
+            if (!oa(Ab).shouldCapture()) return;
+            const vb = qa(na(na({}, function(bb) {
+                let ab = bb.cause;
+                ub(ab) ? ab = bb.cause.toString() : null !== ab && (Wb(bb.cause) || Ib(bb.cause)) ? ab = Qa(bb.cause) : null != ab && (ab = bb.cause.toString());
+                return null == ab ? {} : {
+                  cause: ab
                 }
-              }(null !== Qb && void 0 !== Qb ? Qb : bb)), null !== nb && void 0 !== nb ? nb : {})),
-              ub = jc(jc(jc(jc({
-                type: Xb || bb.name || "Error",
+              }(null !== kb && void 0 !== kb ? kb : bb)), null !== Xb && void 0 !== Xb ? Xb : {})),
+              ib = na(na(na(na({
+                type: Pb || bb.name || "Error",
                 value: bb.message,
-                timestamp: lb ? lc(lb) : mc(),
-                trace: mb ? {
-                  trace_id: mb.traceId,
-                  span_id: mb.spanId
-                } : ab.getTraceContext()
-              }, Sb(fb) ? {} : {
-                context: fb
-              }), Mb ? {
-                originalError: Qb
-              } : {}), eb ? {
-                fingerprint: eb
-              } : {}), void 0 !== Cb ? {
-                fatal: Cb
+                timestamp: Rb ? Ra(Rb) : ja(),
+                trace: jb ? {
+                  trace_id: jb.traceId,
+                  span_id: jb.spanId
+                } : Tb.getTraceContext()
+              }, Cb(vb) ? {} : {
+                context: vb
+              }), Lb ? {
+                originalError: kb
+              } : {}), yb ? {
+                fingerprint: yb
+              } : {}), void 0 !== Zb ? {
+                fatal: Zb
               } : {});
-            Hb = null !== (Nb = Hb) && void 0 !== Nb ? Nb : bb.stack ? null === Ra || void 0 === Ra ? void 0 : Ra(bb).frames : void 0, (null === Hb || void 0 === Hb ? void 0 : Hb.length) && (ub.stacktrace = {
-              frames: Hb
+            eb = null !== (Db = eb) && void 0 !== Db ? Db : bb.stack ? null === sT || void 0 === sT ? void 0 : sT(bb).frames : void 0, (null === eb || void 0 === eb ? void 0 : eb.length) && (ib.stacktrace = {
+              frames: eb
             });
-            const Yb = {
-              type: ub.type,
-              value: ub.value,
-              stacktrace: ub.stacktrace,
-              context: ub.context,
-              fingerprint: ub.fingerprint,
-              fatal: null !== (Vb = ub.fatal) && void 0 !== Vb && Vb
+            const fb = {
+              type: ib.type,
+              value: ib.value,
+              stacktrace: ib.stacktrace,
+              context: ib.context,
+              fingerprint: ib.fingerprint,
+              fatal: null !== (zb = ib.fatal) && void 0 !== zb && zb
             };
-            if (!Ub && sb.dedupe && !Lb(Ib) && Cc(Yb, Ib)) return void cb.debug("Skipping error push because it is the same as the last one\n", ub);
-            const hb = Ib,
-              Jb = za(kb);
-            if (Ib !== hb && !Ub && sb.dedupe && Cc(Yb, Ib)) return;
-            Ib = Yb;
-            const gb = {
-              meta: Jb,
-              payload: ub,
+            if (!Yb && Ub.dedupe && !xb(Bb) && Za(fb, Bb)) return void ab.debug("Skipping error push because it is the same as the last one\n", ib);
+            const mb = Bb,
+              pb = qT(Ab);
+            if (Bb !== mb && !Yb && Ub.dedupe && Za(fb, Bb)) return;
+            Bb = fb;
+            const Nb = {
+              meta: pb,
+              payload: ib,
               type: "exception"
             };
-            cb.debug("Pushing exception\n", gb), JW(Tb.getActiveUserAction(), gb) || Wb.execute(gb)
-          } catch (Yb) {
-            cb.error("Error pushing event", Yb)
+            ab.debug("Pushing exception\n", Nb), iM(Eb.getActiveUserAction(), Nb) || Mb.execute(Nb)
+          } catch (fb) {
+            ab.error("Error pushing event", fb)
           }
         }
       }
     }
 
-    function ja(bb, cb, sb, kb, Wb) {
-      cb.debug("Initializing API");
-      let ab = null;
-      const Tb = function(bb) {
+    function OT(bb, ab, Ub, Ab, Mb) {
+      ab.debug("Initializing API");
+      let Tb = null;
+      const Eb = function(bb) {
           let {
-            transports: cb,
-            internalLogger: sb,
-            config: kb,
-            pushEvent: Wb
+            transports: ab,
+            internalLogger: Ub,
+            config: Ab,
+            pushEvent: Mb
           } = bb;
-          var ab;
-          const Tb = null === (ab = kb.userActionsInstrumentation) || void 0 === ab ? void 0 : ab.excludeItem;
-          let Ub;
-          const Ib = () => Ub;
+          var Tb;
+          const Eb = null === (Tb = Ab.userActionsInstrumentation) || void 0 === Tb ? void 0 : Tb.excludeItem;
+          let Yb;
+          const Bb = () => Yb;
           return {
-            startUserAction: (bb, kb, ab) => {
-              if (void 0 === Ib()) {
-                const sb = new YW({
+            startUserAction: (bb, Ab, Tb) => {
+              if (void 0 === Bb()) {
+                const Ub = new zM({
                   name: bb,
-                  transports: cb,
-                  attributes: kb,
-                  trigger: (null === ab || void 0 === ab ? void 0 : ab.triggerName) || "faroApiCall",
-                  importance: (null === ab || void 0 === ab ? void 0 : ab.importance) || LW.Normal,
-                  trackUserActionsExcludeItem: Tb,
-                  pushEvent: Wb
+                  transports: ab,
+                  attributes: Ab,
+                  trigger: (null === Tb || void 0 === Tb ? void 0 : Tb.triggerName) || "faroApiCall",
+                  importance: (null === Tb || void 0 === Tb ? void 0 : Tb.importance) || ZM.Normal,
+                  trackUserActionsExcludeItem: Eb,
+                  pushEvent: Mb
                 });
-                return sb.filter((bb => [3, 2].includes(bb))).first().subscribe((() => {
-                  Ub = void 0
-                })), hW.notify({
-                  type: VW,
-                  userAction: sb,
-                  initialActivityTimeout: null === ab || void 0 === ab ? void 0 : ab.initialActivityTimeout
-                }), Ub = sb, Ub
+                return Ub.filter((bb => [3, 2].includes(bb))).first().subscribe((() => {
+                  Yb = void 0
+                })), xM.notify({
+                  type: yM,
+                  userAction: Ub,
+                  initialActivityTimeout: null === Tb || void 0 === Tb ? void 0 : Tb.initialActivityTimeout
+                }), Yb = Ub, Yb
               }
-              sb.error("Attempted to create a new user action while one is already running. This is not possible.")
+              Ub.error("Attempted to create a new user action while one is already running. This is not possible.")
             },
-            getActiveUserAction: Ib
+            getActiveUserAction: Bb
           }
         }({
-          transports: Wb,
-          config: sb,
-          internalLogger: cb,
-          pushEvent: (bb, sb, kb, Wb) => {
-            ab ? ab(bb, sb, kb, Wb) : cb.warn("pushEventImpl is not initialized. Event dropped:", {
+          transports: Mb,
+          config: Ub,
+          internalLogger: ab,
+          pushEvent: (bb, Ub, Ab, Mb) => {
+            Tb ? Tb(bb, Ub, Ab, Mb) : ab.warn("pushEventImpl is not initialized. Event dropped:", {
               name: bb,
-              attributes: sb,
-              domain: kb,
-              options: Wb
+              attributes: Ub,
+              domain: Ab,
+              options: Mb
             })
           }
         }),
-        Ub = function(bb, cb, sb, kb, Wb) {
-          let ab;
-          return cb.debug("Initializing traces API"), {
-            getOTEL: () => ab,
+        Yb = function(bb, ab, Ub, Ab, Mb) {
+          let Tb;
+          return ab.debug("Initializing traces API"), {
+            getOTEL: () => Tb,
             getTraceContext: () => {
-              const bb = null === ab || void 0 === ab ? void 0 : ab.trace.getSpanContext(ab.context.active());
+              const bb = null === Tb || void 0 === Tb ? void 0 : Tb.trace.getSpanContext(Tb.context.active());
               return bb ? {
                 trace_id: bb.traceId,
                 span_id: bb.spanId
               } : void 0
             },
-            initOTEL: (bb, sb) => {
-              cb.debug("Initializing OpenTelemetry"), ab = {
+            initOTEL: (bb, Ub) => {
+              ab.debug("Initializing OpenTelemetry"), Tb = {
                 trace: bb,
-                context: sb
+                context: Ub
               }
             },
-            isOTELInitialized: () => !!ab,
+            isOTELInitialized: () => !!Tb,
             pushTraces: bb => {
               try {
-                if (!qc(kb).shouldCapture()) return;
-                const sb = {
+                if (!oa(Ab).shouldCapture()) return;
+                const Ub = {
                   type: "trace",
                   payload: bb,
-                  meta: za(kb)
+                  meta: qT(Ab)
                 };
-                cb.debug("Pushing trace\n", sb), Wb.execute(sb)
-              } catch (sb) {
-                cb.error("Error pushing trace\n", sb)
+                ab.debug("Pushing trace\n", Ub), Mb.execute(Ub)
+              } catch (Ub) {
+                ab.error("Error pushing trace\n", Ub)
               }
             }
           }
-        }(0, cb, 0, kb, Wb),
-        Ib = {
+        }(0, ab, 0, Ab, Mb),
+        Bb = {
           unpatchedConsole: bb,
-          internalLogger: cb,
-          userActionsApi: Tb,
-          config: sb,
-          metas: kb,
-          transports: Wb,
-          tracesApi: Ub
+          internalLogger: ab,
+          userActionsApi: Eb,
+          config: Ub,
+          metas: Ab,
+          transports: Mb,
+          tracesApi: Yb
         },
-        Hb = function(bb) {
+        eb = function(bb) {
           let {
-            internalLogger: cb,
-            config: sb,
-            metas: kb,
-            transports: Wb,
-            tracesApi: ab,
-            userActionsApi: Tb
-          } = bb, Ub = null;
+            internalLogger: ab,
+            config: Ub,
+            metas: Ab,
+            transports: Mb,
+            tracesApi: Tb,
+            userActionsApi: Eb
+          } = bb, Yb = null;
           return {
-            pushEvent: function(bb, Ib, Hb) {
+            pushEvent: function(bb, Bb, eb) {
               let {
-                skipDedupe: fb,
-                spanContext: Mb,
-                timestampOverwriteMs: Xb,
-                customPayloadTransformer: nb = bb => bb
+                skipDedupe: vb,
+                spanContext: Lb,
+                timestampOverwriteMs: Pb,
+                customPayloadTransformer: Xb = bb => bb
               } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
               try {
-                if (!qc(kb).shouldCapture()) return;
-                const mb = Gc(Ib),
-                  lb = nb({
+                if (!oa(Ab).shouldCapture()) return;
+                const jb = qa(Bb),
+                  Rb = Xb({
                     name: bb,
-                    domain: null !== Hb && void 0 !== Hb ? Hb : sb.eventDomain,
-                    attributes: Sb(mb) ? void 0 : mb,
-                    timestamp: Xb ? lc(Xb) : mc(),
-                    trace: Mb ? {
-                      trace_id: Mb.traceId,
-                      span_id: Mb.spanId
-                    } : ab.getTraceContext()
+                    domain: null !== eb && void 0 !== eb ? eb : Ub.eventDomain,
+                    attributes: Cb(jb) ? void 0 : jb,
+                    timestamp: Pb ? Ra(Pb) : ja(),
+                    trace: Lb ? {
+                      trace_id: Lb.traceId,
+                      span_id: Lb.spanId
+                    } : Tb.getTraceContext()
                   }),
-                  Qb = {
-                    name: lb.name,
-                    attributes: lb.attributes,
-                    domain: lb.domain
+                  kb = {
+                    name: Rb.name,
+                    attributes: Rb.attributes,
+                    domain: Rb.domain
                   };
-                if (!fb && sb.dedupe && !Lb(Ub) && Cc(Qb, Ub)) return void cb.debug("Skipping event push because it is the same as the last one\n", lb);
-                const eb = Ub,
-                  Cb = za(kb);
-                if (Ub !== eb && !fb && sb.dedupe && Cc(Qb, Ub)) return;
-                Ub = Qb;
-                const Nb = {
-                  meta: Cb,
-                  payload: lb,
+                if (!vb && Ub.dedupe && !xb(Yb) && Za(kb, Yb)) return void ab.debug("Skipping event push because it is the same as the last one\n", Rb);
+                const yb = Yb,
+                  Zb = qT(Ab);
+                if (Yb !== yb && !vb && Ub.dedupe && Za(kb, Yb)) return;
+                Yb = kb;
+                const Db = {
+                  meta: Zb,
+                  payload: Rb,
                   type: "event"
                 };
-                cb.debug("Pushing event\n", Nb), JW(Tb.getActiveUserAction(), Nb) || Wb.execute(Nb)
-              } catch (mb) {
-                cb.error("Error pushing event", mb)
+                ab.debug("Pushing event\n", Db), iM(Eb.getActiveUserAction(), Db) || Mb.execute(Db)
+              } catch (jb) {
+                ab.error("Error pushing event", jb)
               }
             }
           }
-        }(Ib);
-      return ab = Hb.pushEvent, jc(jc(jc(jc(jc(jc(jc({}, Ub), xa(Ib)), function(bb) {
-        let cb, sb, kb, Wb, {
-          internalLogger: ab,
-          metas: Tb
+        }(Bb);
+      return Tb = eb.pushEvent, na(na(na(na(na(na(na({}, Yb), VT(Bb)), function(bb) {
+        let ab, Ub, Ab, Mb, {
+          internalLogger: Tb,
+          metas: Eb
         } = bb;
-        ab.debug("Initializing meta API");
-        const Ub = bb => {
-            sb && Tb.remove(sb), sb = {
+        Tb.debug("Initializing meta API");
+        const Yb = bb => {
+            Ub && Eb.remove(Ub), Ub = {
               user: bb
-            }, Tb.add(sb)
+            }, Eb.add(Ub)
           },
-          Ib = (bb, sb) => {
-            var kb;
-            const Wb = null === sb || void 0 === sb ? void 0 : sb.overrides,
-              ab = Wb ? {
-                overrides: jc(jc({}, null === cb || void 0 === cb || null === (kb = cb.session) || void 0 === kb ? void 0 : kb.overrides), Wb)
+          Bb = (bb, Ub) => {
+            var Ab;
+            const Mb = null === Ub || void 0 === Ub ? void 0 : Ub.overrides,
+              Tb = Mb ? {
+                overrides: na(na({}, null === ab || void 0 === ab || null === (Ab = ab.session) || void 0 === Ab ? void 0 : Ab.overrides), Mb)
               } : {};
-            cb && Tb.remove(cb), cb = {
-              session: jc(jc({}, Sb(bb) ? void 0 : bb), ab)
-            }, Tb.add(cb)
+            ab && Eb.remove(ab), ab = {
+              session: na(na({}, Cb(bb) ? void 0 : bb), Tb)
+            }, Eb.add(ab)
           },
-          Hb = (bb, cb) => {
-            qc(Tb).notifySessionUpdate({
+          eb = (bb, ab) => {
+            oa(Eb).notifySessionUpdate({
               type: "replace",
               session: bb,
-              overrides: null === cb || void 0 === cb ? void 0 : cb.overrides
-            }), Ib(bb, cb)
+              overrides: null === ab || void 0 === ab ? void 0 : ab.overrides
+            }), Bb(bb, ab)
           },
-          fb = () => Tb.value.session,
-          Mb = () => Tb.value.page;
+          vb = () => Eb.value.session,
+          Lb = () => Eb.value.page;
         return {
-          setUser: Ub,
-          resetUser: Ub,
-          setSession: Hb,
-          resetSession: Hb,
-          getSession: fb,
-          setView: (bb, cb) => {
-            var sb;
-            if ((null === cb || void 0 === cb ? void 0 : cb.overrides) && (qc(Tb).notifySessionUpdate({
+          setUser: Yb,
+          resetUser: Yb,
+          setSession: eb,
+          resetSession: eb,
+          getSession: vb,
+          setView: (bb, ab) => {
+            var Ub;
+            if ((null === ab || void 0 === ab ? void 0 : ab.overrides) && (oa(Eb).notifySessionUpdate({
                 type: "overrides",
-                overrides: cb.overrides
-              }), Ib(fb(), {
-                overrides: cb.overrides
-              })), (null === kb || void 0 === kb || null === (sb = kb.view) || void 0 === sb ? void 0 : sb.name) === (null === bb || void 0 === bb ? void 0 : bb.name)) return;
-            const Wb = kb;
-            kb = {
+                overrides: ab.overrides
+              }), Bb(vb(), {
+                overrides: ab.overrides
+              })), (null === Ab || void 0 === Ab || null === (Ub = Ab.view) || void 0 === Ub ? void 0 : Ub.name) === (null === bb || void 0 === bb ? void 0 : bb.name)) return;
+            const Mb = Ab;
+            Ab = {
               view: bb
-            }, Tb.add(kb), Wb && Tb.remove(Wb)
+            }, Eb.add(Ab), Mb && Eb.remove(Mb)
           },
-          getView: () => Tb.value.view,
+          getView: () => Eb.value.view,
           setPage: bb => {
-            var cb;
-            const sb = ub(bb) ? jc(jc({}, null !== (cb = null === Wb || void 0 === Wb ? void 0 : Wb.page) && void 0 !== cb ? cb : Mb()), {}, {
+            var ab;
+            const Ub = ib(bb) ? na(na({}, null !== (ab = null === Mb || void 0 === Mb ? void 0 : Mb.page) && void 0 !== ab ? ab : Lb()), {}, {
               id: bb
             }) : bb;
-            Wb && Tb.remove(Wb), Wb = {
-              page: sb
-            }, Tb.add(Wb)
+            Mb && Eb.remove(Mb), Mb = {
+              page: Ub
+            }, Eb.add(Mb)
           },
-          getPage: Mb
+          getPage: Lb
         }
-      }(Ib)), function(bb) {
+      }(Bb)), function(bb) {
         let {
-          internalLogger: cb,
-          config: sb,
-          metas: kb,
-          transports: Wb,
-          tracesApi: ab,
-          userActionsApi: Tb
+          internalLogger: ab,
+          config: Ub,
+          metas: Ab,
+          transports: Mb,
+          tracesApi: Tb,
+          userActionsApi: Eb
         } = bb;
-        var Ub;
-        cb.debug("Initializing logs API");
-        let Ib = null;
-        const Hb = null !== (Ub = sb.logArgsSerializer) && void 0 !== Ub ? Ub : Ds;
+        var Yb;
+        ab.debug("Initializing logs API");
+        let Bb = null;
+        const eb = null !== (Yb = Ub.logArgsSerializer) && void 0 !== Yb ? Yb : dU;
         return {
           pushLog: function(bb) {
             let {
-              context: Ub,
-              level: fb,
-              skipDedupe: Mb,
-              spanContext: Xb,
-              timestampOverwriteMs: nb
+              context: Yb,
+              level: vb,
+              skipDedupe: Lb,
+              spanContext: Pb,
+              timestampOverwriteMs: Xb
             } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             try {
-              if (!qc(kb).shouldCapture()) return;
-              const mb = Gc(Ub),
-                lb = {
-                  message: Hb(bb),
-                  level: null !== fb && void 0 !== fb ? fb : "log",
-                  context: Sb(mb) ? void 0 : mb,
-                  timestamp: nb ? lc(nb) : mc(),
-                  trace: Xb ? {
-                    trace_id: Xb.traceId,
-                    span_id: Xb.spanId
-                  } : ab.getTraceContext()
+              if (!oa(Ab).shouldCapture()) return;
+              const jb = qa(Yb),
+                Rb = {
+                  message: eb(bb),
+                  level: null !== vb && void 0 !== vb ? vb : "log",
+                  context: Cb(jb) ? void 0 : jb,
+                  timestamp: Xb ? Ra(Xb) : ja(),
+                  trace: Pb ? {
+                    trace_id: Pb.traceId,
+                    span_id: Pb.spanId
+                  } : Tb.getTraceContext()
                 },
-                Qb = {
-                  message: lb.message,
-                  level: lb.level,
-                  context: lb.context
+                kb = {
+                  message: Rb.message,
+                  level: Rb.level,
+                  context: Rb.context
                 };
-              if (!Mb && sb.dedupe && !Lb(Ib) && Cc(Qb, Ib)) return void cb.debug("Skipping log push because it is the same as the last one\n", lb);
-              const eb = Ib,
-                Cb = za(kb);
-              if (Ib !== eb && !Mb && sb.dedupe && Cc(Qb, Ib)) return;
-              Ib = Qb;
-              const Nb = {
+              if (!Lb && Ub.dedupe && !xb(Bb) && Za(kb, Bb)) return void ab.debug("Skipping log push because it is the same as the last one\n", Rb);
+              const yb = Bb,
+                Zb = qT(Ab);
+              if (Bb !== yb && !Lb && Ub.dedupe && Za(kb, Bb)) return;
+              Bb = kb;
+              const Db = {
                 type: "log",
-                payload: lb,
-                meta: Cb
+                payload: Rb,
+                meta: Zb
               };
-              cb.debug("Pushing log\n", Nb), JW(Tb.getActiveUserAction(), Nb) || Wb.execute(Nb)
-            } catch (mb) {
-              cb.error("Error pushing log\n", mb)
+              ab.debug("Pushing log\n", Db), iM(Eb.getActiveUserAction(), Db) || Mb.execute(Db)
+            } catch (jb) {
+              ab.error("Error pushing log\n", jb)
             }
           }
         }
-      }(Ib)), function(bb) {
+      }(Bb)), function(bb) {
         let {
-          internalLogger: cb,
-          config: sb,
-          metas: kb,
-          transports: Wb,
-          tracesApi: ab,
-          userActionsApi: Tb
+          internalLogger: ab,
+          config: Ub,
+          metas: Ab,
+          transports: Mb,
+          tracesApi: Tb,
+          userActionsApi: Eb
         } = bb;
-        cb.debug("Initializing measurements API");
-        let Ub = null;
+        ab.debug("Initializing measurements API");
+        let Yb = null;
         return {
           pushMeasurement: function(bb) {
             let {
-              skipDedupe: Ib,
-              context: Hb,
-              spanContext: fb,
-              timestampOverwriteMs: Mb
+              skipDedupe: Bb,
+              context: eb,
+              spanContext: vb,
+              timestampOverwriteMs: Lb
             } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             try {
-              if (!qc(kb).shouldCapture()) return;
-              const Xb = Gc(Hb),
-                nb = jc(jc({}, bb), {}, {
-                  trace: fb ? {
-                    trace_id: fb.traceId,
-                    span_id: fb.spanId
-                  } : ab.getTraceContext(),
-                  timestamp: Mb ? lc(Mb) : mc(),
-                  context: Sb(Xb) ? void 0 : Xb
+              if (!oa(Ab).shouldCapture()) return;
+              const Pb = qa(eb),
+                Xb = na(na({}, bb), {}, {
+                  trace: vb ? {
+                    trace_id: vb.traceId,
+                    span_id: vb.spanId
+                  } : Tb.getTraceContext(),
+                  timestamp: Lb ? Ra(Lb) : ja(),
+                  context: Cb(Pb) ? void 0 : Pb
                 }),
-                mb = {
-                  type: nb.type,
-                  values: nb.values,
-                  context: nb.context
+                jb = {
+                  type: Xb.type,
+                  values: Xb.values,
+                  context: Xb.context
                 };
-              if (!Ib && sb.dedupe && !Lb(Ub) && Cc(mb, Ub)) return void cb.debug("Skipping measurement push because it is the same as the last one\n", nb);
-              const lb = Ub,
-                Qb = za(kb);
-              if (Ub !== lb && !Ib && sb.dedupe && Cc(mb, Ub)) return;
-              Ub = mb;
-              const eb = {
+              if (!Bb && Ub.dedupe && !xb(Yb) && Za(jb, Yb)) return void ab.debug("Skipping measurement push because it is the same as the last one\n", Xb);
+              const Rb = Yb,
+                kb = qT(Ab);
+              if (Yb !== Rb && !Bb && Ub.dedupe && Za(jb, Yb)) return;
+              Yb = jb;
+              const yb = {
                 type: "measurement",
-                payload: nb,
-                meta: Qb
+                payload: Xb,
+                meta: kb
               };
-              cb.debug("Pushing measurement\n", eb), JW(Tb.getActiveUserAction(), eb) || Wb.execute(eb)
-            } catch (Xb) {
-              cb.error("Error pushing measurement\n", Xb)
+              ab.debug("Pushing measurement\n", yb), iM(Eb.getActiveUserAction(), yb) || Mb.execute(yb)
+            } catch (Pb) {
+              ab.error("Error pushing measurement\n", Pb)
             }
           }
         }
-      }(Ib)), Hb), Tb)
+      }(Bb)), eb), Eb)
     }
 
-    function pa(bb) {
-      const cb = Sa(bb),
-        sb = Fa(cb, bb);
-      if (mb() && !bb.isolate) return void sb.error('Faro is already registered. Either add instrumentations, transports etc. to the global faro instance or use the "isolate" property');
-      sb.debug("Initializing");
-      const kb = function(bb, cb) {
-          let sb, kb = [],
-            Wb = [],
-            ab = [],
-            Tb = 0,
-            Ub = 0;
-          const Ib = () => kb.reduce(((bb, cb) => Object.assign(bb, tb(cb) ? cb() : cb)), {}),
-            Hb = () => {
-              if (Wb.length) {
-                const bb = Ib();
-                Wb.forEach((cb => cb(bb)))
+    function cT(bb) {
+      const ab = wT(bb),
+        Ub = CT(ab, bb);
+      if (jb() && !bb.isolate) return void Ub.error('Faro is already registered. Either add instrumentations, transports etc. to the global faro instance or use the "isolate" property');
+      Ub.debug("Initializing");
+      const Ab = function(bb, ab) {
+          let Ub, Ab = [],
+            Mb = [],
+            Tb = [],
+            Eb = 0,
+            Yb = 0;
+          const Bb = () => Ab.reduce(((bb, ab) => Object.assign(bb, Hb(ab) ? ab() : ab)), {}),
+            eb = () => {
+              if (Mb.length) {
+                const bb = Bb();
+                Mb.forEach((ab => ab(bb)))
               }
             };
           return {
             add: function() {
-              for (var bb = arguments.length, sb = new Array(bb), Wb = 0; Wb < bb; Wb++) sb[Wb] = arguments[Wb];
-              cb.debug("Adding metas\n", sb), kb.push(...sb), Hb()
+              for (var bb = arguments.length, Ub = new Array(bb), Mb = 0; Mb < bb; Mb++) Ub[Mb] = arguments[Mb];
+              ab.debug("Adding metas\n", Ub), Ab.push(...Ub), eb()
             },
             remove: function() {
-              for (var bb = arguments.length, sb = new Array(bb), Wb = 0; Wb < bb; Wb++) sb[Wb] = arguments[Wb];
-              cb.debug("Removing metas\n", sb), kb = kb.filter((bb => !sb.includes(bb))), Hb()
+              for (var bb = arguments.length, Ub = new Array(bb), Mb = 0; Mb < bb; Mb++) Ub[Mb] = arguments[Mb];
+              ab.debug("Removing metas\n", Ub), Ab = Ab.filter((bb => !Ub.includes(bb))), eb()
             },
             addListener: bb => {
-              cb.debug("Adding metas listener\n", bb), Wb.push(bb)
+              ab.debug("Adding metas listener\n", bb), Mb.push(bb)
             },
             removeListener: bb => {
-              cb.debug("Removing metas listener\n", bb), Wb = Wb.filter((cb => cb !== bb))
+              ab.debug("Removing metas listener\n", bb), Mb = Mb.filter((ab => ab !== bb))
             },
             capture: bb => {
-              var cb;
-              const kb = void 0 !== sb,
-                Wb = null !== (cb = sb) && void 0 !== cb ? cb : ab;
-              kb || (sb = Wb, Tb = 0, Ub = Wb.length);
+              var ab;
+              const Ab = void 0 !== Ub,
+                Mb = null !== (ab = Ub) && void 0 !== ab ? ab : Tb;
+              Ab || (Ub = Mb, Eb = 0, Yb = Mb.length);
               try {
-                for (; Tb < Ub;) {
-                  const bb = Wb[Tb++];
+                for (; Eb < Yb;) {
+                  const bb = Mb[Eb++];
                   null === bb || void 0 === bb || bb()
                 }
-                const cb = Za(Ib());
-                return null === bb || void 0 === bb || bb(), cb
+                const ab = QT(Bb());
+                return null === bb || void 0 === bb || bb(), ab
               } finally {
-                kb || (sb = void 0)
+                Ab || (Ub = void 0)
               }
             },
             addCaptureListener: bb => {
-              ab.push(bb)
+              Tb.push(bb)
             },
             removeCaptureListener: bb => {
-              ab = ab.filter((cb => cb !== bb))
+              Tb = Tb.filter((ab => ab !== bb))
             },
             get value() {
-              return Ib()
+              return Bb()
             }
           }
-        }(0, sb),
-        Wb = wa(cb, sb, bb, kb),
-        ab = ja(cb, sb, bb, kb, Wb),
-        Tb = function(bb, cb, sb, kb, Wb, ab) {
-          cb.debug("Initializing instrumentations");
-          const Tb = [];
+        }(0, Ub),
+        Mb = oT(ab, Ub, bb, Ab),
+        Tb = OT(ab, Ub, bb, Ab, Mb),
+        Eb = function(bb, ab, Ub, Ab, Mb, Tb) {
+          ab.debug("Initializing instrumentations");
+          const Eb = [];
           return {
             add: function() {
-              cb.debug("Adding instrumentations");
-              for (var Ub = arguments.length, Ib = new Array(Ub), Hb = 0; Hb < Ub; Hb++) Ib[Hb] = arguments[Hb];
-              Ib.forEach((Ub => {
-                cb.debug(`Adding "${Ub.name}" instrumentation`), Tb.some((bb => bb.name === Ub.name)) ? cb.warn(`Instrumentation ${Ub.name} is already added`) : (Ub.unpatchedConsole = bb, Ub.internalLogger = cb, Ub.config = sb, Ub.metas = kb, Ub.transports = Wb, Ub.api = ab, Tb.push(Ub), Ub.initialize())
+              ab.debug("Adding instrumentations");
+              for (var Yb = arguments.length, Bb = new Array(Yb), eb = 0; eb < Yb; eb++) Bb[eb] = arguments[eb];
+              Bb.forEach((Yb => {
+                ab.debug(`Adding "${Yb.name}" instrumentation`), Eb.some((bb => bb.name === Yb.name)) ? ab.warn(`Instrumentation ${Yb.name} is already added`) : (Yb.unpatchedConsole = bb, Yb.internalLogger = ab, Yb.config = Ub, Yb.metas = Ab, Yb.transports = Mb, Yb.api = Tb, Eb.push(Yb), Yb.initialize())
               }))
             },
             get instrumentations() {
-              return [...Tb]
+              return [...Eb]
             },
             remove: function() {
-              cb.debug("Removing instrumentations");
-              for (var bb = arguments.length, sb = new Array(bb), kb = 0; kb < bb; kb++) sb[kb] = arguments[kb];
-              sb.forEach((bb => {
-                var sb, kb;
-                cb.debug(`Removing "${bb.name}" instrumentation`);
-                const Wb = Tb.reduce(((cb, sb, kb) => null === cb && sb.name === bb.name ? kb : null), null);
-                null !== Wb ? (null === (sb = (kb = Tb[Wb]).destroy) || void 0 === sb || sb.call(kb), Tb.splice(Wb, 1)) : cb.warn(`Instrumentation "${bb.name}" is not added`)
+              ab.debug("Removing instrumentations");
+              for (var bb = arguments.length, Ub = new Array(bb), Ab = 0; Ab < bb; Ab++) Ub[Ab] = arguments[Ab];
+              Ub.forEach((bb => {
+                var Ub, Ab;
+                ab.debug(`Removing "${bb.name}" instrumentation`);
+                const Mb = Eb.reduce(((ab, Ub, Ab) => null === ab && Ub.name === bb.name ? Ab : null), null);
+                null !== Mb ? (null === (Ub = (Ab = Eb[Mb]).destroy) || void 0 === Ub || Ub.call(Ab), Eb.splice(Mb, 1)) : ab.warn(`Instrumentation "${bb.name}" is not added`)
               }))
             }
           }
-        }(cb, sb, bb, kb, Wb, ab),
-        Ub = Qb(cb, sb, bb, kb, Wb, ab, Tb);
-      return da(Ub),
+        }(ab, Ub, bb, Ab, Mb, Tb),
+        Yb = kb(ab, Ub, bb, Ab, Mb, Tb, Eb);
+      return rT(Yb),
         function(bb) {
           bb.transports.add(...bb.config.transports), bb.transports.addBeforeSendHooks(bb.config.beforeSend)
-        }(Ub),
+        }(Yb),
         function(bb) {
           bb.instrumentations.add(...bb.config.instrumentations)
-        }(Ub), Ub
+        }(Yb), Yb
     }
 
-    function bT(bb) {
-      const cb = Ea(bb);
-      if (cb) return pa(cb)
+    function JT(bb) {
+      const ab = IT(bb);
+      if (ab) return cT(ab)
     }
   },
-  6369: function(bb, cb, sb) {
-    var kb;
-    ! function(Wb, ab) {
-      var Tb = "function",
-        Ub = "undefined",
-        Ib = "object",
-        Hb = "string",
-        fb = "major",
-        Mb = "model",
-        Xb = "name",
-        nb = "type",
-        mb = "vendor",
-        lb = "version",
-        Qb = "architecture",
-        eb = "console",
-        Cb = "mobile",
-        Nb = "tablet",
-        Vb = "smarttv",
-        Lb = "wearable",
-        ub = "embedded",
-        Yb = "Amazon",
-        hb = "Apple",
-        Jb = "ASUS",
-        gb = "BlackBerry",
-        Bb = "Browser",
-        tb = "Chrome",
-        yb = "Firefox",
-        Pb = "Google",
-        Db = "Honor",
-        Eb = "Huawei",
-        ib = "LG",
-        Ob = "Microsoft",
-        Gb = "Motorola",
-        Kb = "Nvidia",
-        Zb = "OnePlus",
-        zb = "Opera",
-        qb = "OPPO",
-        db = "Samsung",
-        Ab = "Sharp",
+  6343: function(bb, ab, Ub) {
+    var Ab;
+    ! function(Mb, Tb) {
+      var Eb = "function",
+        Yb = "undefined",
+        Bb = "object",
+        eb = "string",
+        vb = "major",
+        Lb = "model",
+        Pb = "name",
+        Xb = "type",
+        jb = "vendor",
+        Rb = "version",
+        kb = "architecture",
+        yb = "console",
+        Zb = "mobile",
+        Db = "tablet",
+        zb = "smarttv",
+        xb = "wearable",
+        ib = "embedded",
+        fb = "Amazon",
+        mb = "Apple",
+        pb = "ASUS",
+        Nb = "BlackBerry",
+        Wb = "Browser",
+        Hb = "Chrome",
+        Ib = "Firefox",
+        db = "Google",
+        Fb = "Honor",
+        hb = "Huawei",
+        Gb = "LG",
+        Qb = "Microsoft",
+        qb = "Motorola",
+        ub = "Nvidia",
+        rb = "OnePlus",
+        Kb = "Opera",
+        ob = "OPPO",
+        lb = "Samsung",
+        tb = "Sharp",
         wb = "Sony",
-        rb = "Xiaomi",
-        ob = "Zebra",
-        Sb = "Facebook",
-        Rb = "Chromium OS",
-        vb = "Mac OS",
-        Fb = " Browser",
-        xb = function(bb) {
-          for (var cb = {}, sb = 0; sb < bb.length; sb++) cb[bb[sb].toUpperCase()] = bb[sb];
-          return cb
+        sb = "Xiaomi",
+        gb = "Zebra",
+        Cb = "Facebook",
+        Vb = "Chromium OS",
+        Ob = "Mac OS",
+        cb = " Browser",
+        Jb = function(bb) {
+          for (var ab = {}, Ub = 0; Ub < bb.length; Ub++) ab[bb[Ub].toUpperCase()] = bb[Ub];
+          return ab
         },
-        jb = function(bb, cb) {
-          return typeof bb === Hb && -1 !== pb(cb).indexOf(pb(bb))
+        nb = function(bb, ab) {
+          return typeof bb === eb && -1 !== Sb(ab).indexOf(Sb(bb))
         },
-        pb = function(bb) {
+        Sb = function(bb) {
           return bb.toLowerCase()
         },
-        bc = function(bb, cb) {
-          if (typeof bb === Hb) return bb = bb.replace(/^\s\s*/, ""), typeof cb === Ub ? bb : bb.substring(0, 500)
+        ba = function(bb, ab) {
+          if (typeof bb === eb) return bb = bb.replace(/^\s\s*/, ""), typeof ab === Yb ? bb : bb.substring(0, 500)
         },
-        cc = function(bb, cb) {
-          for (var sb, kb, Wb, Ub, Hb, fb, Mb = 0; Mb < cb.length && !Hb;) {
-            var Xb = cb[Mb],
-              nb = cb[Mb + 1];
-            for (sb = kb = 0; sb < Xb.length && !Hb && Xb[sb];)
-              if (Hb = Xb[sb++].exec(bb))
-                for (Wb = 0; Wb < nb.length; Wb++) fb = Hb[++kb], typeof(Ub = nb[Wb]) === Ib && Ub.length > 0 ? 2 === Ub.length ? typeof Ub[1] == Tb ? this[Ub[0]] = Ub[1].call(this, fb) : this[Ub[0]] = Ub[1] : 3 === Ub.length ? typeof Ub[1] !== Tb || Ub[1].exec && Ub[1].test ? this[Ub[0]] = fb ? fb.replace(Ub[1], Ub[2]) : ab : this[Ub[0]] = fb ? Ub[1].call(this, fb, Ub[2]) : ab : 4 === Ub.length && (this[Ub[0]] = fb ? Ub[3].call(this, fb.replace(Ub[1], Ub[2])) : ab) : this[Ub] = fb || ab;
-            Mb += 2
+        aa = function(bb, ab) {
+          for (var Ub, Ab, Mb, Yb, eb, vb, Lb = 0; Lb < ab.length && !eb;) {
+            var Pb = ab[Lb],
+              Xb = ab[Lb + 1];
+            for (Ub = Ab = 0; Ub < Pb.length && !eb && Pb[Ub];)
+              if (eb = Pb[Ub++].exec(bb))
+                for (Mb = 0; Mb < Xb.length; Mb++) vb = eb[++Ab], typeof(Yb = Xb[Mb]) === Bb && Yb.length > 0 ? 2 === Yb.length ? typeof Yb[1] == Eb ? this[Yb[0]] = Yb[1].call(this, vb) : this[Yb[0]] = Yb[1] : 3 === Yb.length ? typeof Yb[1] !== Eb || Yb[1].exec && Yb[1].test ? this[Yb[0]] = vb ? vb.replace(Yb[1], Yb[2]) : Tb : this[Yb[0]] = vb ? Yb[1].call(this, vb, Yb[2]) : Tb : 4 === Yb.length && (this[Yb[0]] = vb ? Yb[3].call(this, vb.replace(Yb[1], Yb[2])) : Tb) : this[Yb] = vb || Tb;
+            Lb += 2
           }
         },
-        sc = function(bb, cb) {
-          for (var sb in cb)
-            if (typeof cb[sb] === Ib && cb[sb].length > 0) {
-              for (var kb = 0; kb < cb[sb].length; kb++)
-                if (jb(cb[sb][kb], bb)) return "?" === sb ? ab : sb
-            } else if (jb(cb[sb], bb)) return "?" === sb ? ab : sb;
-          return cb.hasOwnProperty("*") ? cb["*"] : bb
+        Ua = function(bb, ab) {
+          for (var Ub in ab)
+            if (typeof ab[Ub] === Bb && ab[Ub].length > 0) {
+              for (var Ab = 0; Ab < ab[Ub].length; Ab++)
+                if (nb(ab[Ub][Ab], bb)) return "?" === Ub ? Tb : Ub
+            } else if (nb(ab[Ub], bb)) return "?" === Ub ? Tb : Ub;
+          return ab.hasOwnProperty("*") ? ab["*"] : bb
         },
-        kc = {
+        Aa = {
           ME: "4.90",
           "NT 3.11": "NT3.51",
           "NT 4.0": "NT4.0",
@@ -4623,110 +4623,110 @@ export const modules = {
           10: ["NT 6.4", "NT 10.0"],
           RT: "ARM"
         },
-        Wc = {
+        Ma = {
           browser: [
             [/\b(?:crmo|crios)\/([\w\.]+)/i],
-            [lb, [Xb, "Chrome"]],
+            [Rb, [Pb, "Chrome"]],
             [/edg(?:e|ios|a)?\/([\w\.]+)/i],
-            [lb, [Xb, "Edge"]],
+            [Rb, [Pb, "Edge"]],
             [/(opera mini)\/([-\w\.]+)/i, /(opera [mobiletab]{3,6})\b.+version\/([-\w\.]+)/i, /(opera)(?:.+version\/|[\/ ]+)([\w\.]+)/i],
-            [Xb, lb],
+            [Pb, Rb],
             [/opios[\/ ]+([\w\.]+)/i],
-            [lb, [Xb, zb + " Mini"]],
+            [Rb, [Pb, Kb + " Mini"]],
             [/\bop(?:rg)?x\/([\w\.]+)/i],
-            [lb, [Xb, zb + " GX"]],
+            [Rb, [Pb, Kb + " GX"]],
             [/\bopr\/([\w\.]+)/i],
-            [lb, [Xb, zb]],
+            [Rb, [Pb, Kb]],
             [/\bb[ai]*d(?:uhd|[ub]*[aekoprswx]{5,6})[\/ ]?([\w\.]+)/i],
-            [lb, [Xb, "Baidu"]],
+            [Rb, [Pb, "Baidu"]],
             [/\b(?:mxbrowser|mxios|myie2)\/?([-\w\.]*)\b/i],
-            [lb, [Xb, "Maxthon"]],
+            [Rb, [Pb, "Maxthon"]],
             [/(kindle)\/([\w\.]+)/i, /(lunascape|maxthon|netfront|jasmine|blazer|sleipnir)[\/ ]?([\w\.]*)/i, /(avant|iemobile|slim(?:browser|boat|jet))[\/ ]?([\d\.]*)/i, /(?:ms|\()(ie) ([\w\.]+)/i, /(flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium|phantomjs|bowser|qupzilla|falkon|rekonq|puffin|brave|whale(?!.+naver)|qqbrowserlite|duckduckgo|klar|helio|(?=comodo_)?dragon)\/([-\w\.]+)/i, /(heytap|ovi|115)browser\/([\d\.]+)/i, /(weibo)__([\d\.]+)/i],
-            [Xb, lb],
+            [Pb, Rb],
             [/quark(?:pc)?\/([-\w\.]+)/i],
-            [lb, [Xb, "Quark"]],
+            [Rb, [Pb, "Quark"]],
             [/\bddg\/([\w\.]+)/i],
-            [lb, [Xb, "DuckDuckGo"]],
+            [Rb, [Pb, "DuckDuckGo"]],
             [/(?:\buc? ?browser|(?:juc.+)ucweb)[\/ ]?([\w\.]+)/i],
-            [lb, [Xb, "UC" + Bb]],
+            [Rb, [Pb, "UC" + Wb]],
             [/microm.+\bqbcore\/([\w\.]+)/i, /\bqbcore\/([\w\.]+).+microm/i, /micromessenger\/([\w\.]+)/i],
-            [lb, [Xb, "WeChat"]],
+            [Rb, [Pb, "WeChat"]],
             [/konqueror\/([\w\.]+)/i],
-            [lb, [Xb, "Konqueror"]],
+            [Rb, [Pb, "Konqueror"]],
             [/trident.+rv[: ]([\w\.]{1,9})\b.+like gecko/i],
-            [lb, [Xb, "IE"]],
+            [Rb, [Pb, "IE"]],
             [/ya(?:search)?browser\/([\w\.]+)/i],
-            [lb, [Xb, "Yandex"]],
+            [Rb, [Pb, "Yandex"]],
             [/slbrowser\/([\w\.]+)/i],
-            [lb, [Xb, "Smart Lenovo " + Bb]],
+            [Rb, [Pb, "Smart Lenovo " + Wb]],
             [/(avast|avg)\/([\w\.]+)/i],
             [
-              [Xb, /(.+)/, "$1 Secure " + Bb], lb
+              [Pb, /(.+)/, "$1 Secure " + Wb], Rb
             ],
             [/\bfocus\/([\w\.]+)/i],
-            [lb, [Xb, yb + " Focus"]],
+            [Rb, [Pb, Ib + " Focus"]],
             [/\bopt\/([\w\.]+)/i],
-            [lb, [Xb, zb + " Touch"]],
+            [Rb, [Pb, Kb + " Touch"]],
             [/coc_coc\w+\/([\w\.]+)/i],
-            [lb, [Xb, "Coc Coc"]],
+            [Rb, [Pb, "Coc Coc"]],
             [/dolfin\/([\w\.]+)/i],
-            [lb, [Xb, "Dolphin"]],
+            [Rb, [Pb, "Dolphin"]],
             [/coast\/([\w\.]+)/i],
-            [lb, [Xb, zb + " Coast"]],
+            [Rb, [Pb, Kb + " Coast"]],
             [/miuibrowser\/([\w\.]+)/i],
-            [lb, [Xb, "MIUI" + Fb]],
+            [Rb, [Pb, "MIUI" + cb]],
             [/fxios\/([\w\.-]+)/i],
-            [lb, [Xb, yb]],
+            [Rb, [Pb, Ib]],
             [/\bqihoobrowser\/?([\w\.]*)/i],
-            [lb, [Xb, "360"]],
+            [Rb, [Pb, "360"]],
             [/\b(qq)\/([\w\.]+)/i],
             [
-              [Xb, /(.+)/, "$1Browser"], lb
+              [Pb, /(.+)/, "$1Browser"], Rb
             ],
             [/(oculus|sailfish|huawei|vivo|pico)browser\/([\w\.]+)/i],
             [
-              [Xb, /(.+)/, "$1" + Fb], lb
+              [Pb, /(.+)/, "$1" + cb], Rb
             ],
             [/samsungbrowser\/([\w\.]+)/i],
-            [lb, [Xb, db + " Internet"]],
+            [Rb, [Pb, lb + " Internet"]],
             [/metasr[\/ ]?([\d\.]+)/i],
-            [lb, [Xb, "Sogou Explorer"]],
+            [Rb, [Pb, "Sogou Explorer"]],
             [/(sogou)mo\w+\/([\d\.]+)/i],
             [
-              [Xb, "Sogou Mobile"], lb
+              [Pb, "Sogou Mobile"], Rb
             ],
             [/(electron)\/([\w\.]+) safari/i, /(tesla)(?: qtcarbrowser|\/(20\d\d\.[-\w\.]+))/i, /m?(qqbrowser|2345(?=browser|chrome|explorer))\w*[\/ ]?v?([\w\.]+)/i],
-            [Xb, lb],
+            [Pb, Rb],
             [/(lbbrowser|rekonq)/i, /\[(linkedin)app\]/i],
-            [Xb],
+            [Pb],
             [/ome\/([\w\.]+) \w* ?(iron) saf/i, /ome\/([\w\.]+).+qihu (360)[es]e/i],
-            [lb, Xb],
+            [Rb, Pb],
             [/((?:fban\/fbios|fb_iab\/fb4a)(?!.+fbav)|;fbav\/([\w\.]+);)/i],
             [
-              [Xb, Sb], lb
+              [Pb, Cb], Rb
             ],
             [/(Klarna)\/([\w\.]+)/i, /(kakao(?:talk|story))[\/ ]([\w\.]+)/i, /(naver)\(.*?(\d+\.[\w\.]+).*\)/i, /(daum)apps[\/ ]([\w\.]+)/i, /safari (line)\/([\w\.]+)/i, /\b(line)\/([\w\.]+)\/iab/i, /(alipay)client\/([\w\.]+)/i, /(twitter)(?:and| f.+e\/([\w\.]+))/i, /(chromium|instagram|snapchat)[\/ ]([-\w\.]+)/i],
-            [Xb, lb],
+            [Pb, Rb],
             [/\bgsa\/([\w\.]+) .*safari\//i],
-            [lb, [Xb, "GSA"]],
+            [Rb, [Pb, "GSA"]],
             [/musical_ly(?:.+app_?version\/|_)([\w\.]+)/i],
-            [lb, [Xb, "TikTok"]],
+            [Rb, [Pb, "TikTok"]],
             [/headlesschrome(?:\/([\w\.]+)| )/i],
-            [lb, [Xb, tb + " Headless"]],
+            [Rb, [Pb, Hb + " Headless"]],
             [/ wv\).+(chrome)\/([\w\.]+)/i],
             [
-              [Xb, tb + " WebView"], lb
+              [Pb, Hb + " WebView"], Rb
             ],
             [/droid.+ version\/([\w\.]+)\b.+(?:mobile safari|safari)/i],
-            [lb, [Xb, "Android " + Bb]],
+            [Rb, [Pb, "Android " + Wb]],
             [/(chrome|omniweb|arora|[tizenoka]{5} ?browser)\/v?([\w\.]+)/i],
-            [Xb, lb],
+            [Pb, Rb],
             [/version\/([\w\.\,]+) .*mobile\/\w+ (safari)/i],
-            [lb, [Xb, "Mobile Safari"]],
+            [Rb, [Pb, "Mobile Safari"]],
             [/version\/([\w(\.|\,)]+) .*(mobile ?safari|safari)/i],
-            [lb, Xb],
+            [Rb, Pb],
             [/webkit.+?(mobile ?safari|safari)(\/[\w\.]+)/i],
-            [Xb, [lb, sc, {
+            [Pb, [Rb, Ua, {
               "1.0": "/8",
               1.2: "/1",
               1.3: "/3",
@@ -4737,638 +4737,638 @@ export const modules = {
               "?": "/"
             }]],
             [/(webkit|khtml)\/([\w\.]+)/i],
-            [Xb, lb],
+            [Pb, Rb],
             [/(navigator|netscape\d?)\/([-\w\.]+)/i],
             [
-              [Xb, "Netscape"], lb
+              [Pb, "Netscape"], Rb
             ],
             [/(wolvic|librewolf)\/([\w\.]+)/i],
-            [Xb, lb],
+            [Pb, Rb],
             [/mobile vr; rv:([\w\.]+)\).+firefox/i],
-            [lb, [Xb, yb + " Reality"]],
+            [Rb, [Pb, Ib + " Reality"]],
             [/ekiohf.+(flow)\/([\w\.]+)/i, /(swiftfox)/i, /(icedragon|iceweasel|camino|chimera|fennec|maemo browser|minimo|conkeror)[\/ ]?([\w\.\+]+)/i, /(seamonkey|k-meleon|icecat|iceape|firebird|phoenix|palemoon|basilisk|waterfox)\/([-\w\.]+)$/i, /(firefox)\/([\w\.]+)/i, /(mozilla)\/([\w\.]+) .+rv\:.+gecko\/\d+/i, /(amaya|dillo|doris|icab|ladybird|lynx|mosaic|netsurf|obigo|polaris|w3m|(?:go|ice|up)[\. ]?browser)[-\/ ]?v?([\w\.]+)/i, /\b(links) \(([\w\.]+)/i],
-            [Xb, [lb, /_/g, "."]],
+            [Pb, [Rb, /_/g, "."]],
             [/(cobalt)\/([\w\.]+)/i],
-            [Xb, [lb, /master.|lts./, ""]]
+            [Pb, [Rb, /master.|lts./, ""]]
           ],
           cpu: [
             [/\b((amd|x|x86[-_]?|wow|win)64)\b/i],
             [
-              [Qb, "amd64"]
+              [kb, "amd64"]
             ],
             [/(ia32(?=;))/i, /\b((i[346]|x)86)(pc)?\b/i],
             [
-              [Qb, "ia32"]
+              [kb, "ia32"]
             ],
             [/\b(aarch64|arm(v?[89]e?l?|_?64))\b/i],
             [
-              [Qb, "arm64"]
+              [kb, "arm64"]
             ],
             [/\b(arm(v[67])?ht?n?[fl]p?)\b/i],
             [
-              [Qb, "armhf"]
+              [kb, "armhf"]
             ],
             [/( (ce|mobile); ppc;|\/[\w\.]+arm\b)/i],
             [
-              [Qb, "arm"]
+              [kb, "arm"]
             ],
             [/((ppc|powerpc)(64)?)( mac|;|\))/i],
             [
-              [Qb, /ower/, "", pb]
+              [kb, /ower/, "", Sb]
             ],
             [/ sun4\w[;\)]/i],
             [
-              [Qb, "sparc"]
+              [kb, "sparc"]
             ],
             [/\b(avr32|ia64(?=;)|68k(?=\))|\barm(?=v([1-7]|[5-7]1)l?|;|eabi)|(irix|mips|sparc)(64)?\b|pa-risc)/i],
             [
-              [Qb, pb]
+              [kb, Sb]
             ]
           ],
           device: [
             [/\b(sch-i[89]0\d|shw-m380s|sm-[ptx]\w{2,4}|gt-[pn]\d{2,4}|sgh-t8[56]9|nexus 10)/i],
-            [Mb, [mb, db],
-              [nb, Nb]
+            [Lb, [jb, lb],
+              [Xb, Db]
             ],
             [/\b((?:s[cgp]h|gt|sm)-(?![lr])\w+|sc[g-]?[\d]+a?|galaxy nexus)/i, /samsung[- ]((?!sm-[lr])[-\w]+)/i, /sec-(sgh\w+)/i],
-            [Mb, [mb, db],
-              [nb, Cb]
+            [Lb, [jb, lb],
+              [Xb, Zb]
             ],
             [/(?:\/|\()(ip(?:hone|od)[\w, ]*)(?:\/|;)/i],
-            [Mb, [mb, hb],
-              [nb, Cb]
+            [Lb, [jb, mb],
+              [Xb, Zb]
             ],
             [/\((ipad);[-\w\),; ]+apple/i, /applecoremedia\/[\w\.]+ \((ipad)/i, /\b(ipad)\d\d?,\d\d?[;\]].+ios/i],
-            [Mb, [mb, hb],
-              [nb, Nb]
+            [Lb, [jb, mb],
+              [Xb, Db]
             ],
             [/(macintosh);/i],
-            [Mb, [mb, hb]],
+            [Lb, [jb, mb]],
             [/\b(sh-?[altvz]?\d\d[a-ekm]?)/i],
-            [Mb, [mb, Ab],
-              [nb, Cb]
+            [Lb, [jb, tb],
+              [Xb, Zb]
             ],
             [/\b((?:brt|eln|hey2?|gdi|jdn)-a?[lnw]09|(?:ag[rm]3?|jdn2|kob2)-a?[lw]0[09]hn)(?: bui|\)|;)/i],
-            [Mb, [mb, Db],
-              [nb, Nb]
+            [Lb, [jb, Fb],
+              [Xb, Db]
             ],
             [/honor([-\w ]+)[;\)]/i],
-            [Mb, [mb, Db],
-              [nb, Cb]
+            [Lb, [jb, Fb],
+              [Xb, Zb]
             ],
             [/\b((?:ag[rs][2356]?k?|bah[234]?|bg[2o]|bt[kv]|cmr|cpn|db[ry]2?|jdn2|got|kob2?k?|mon|pce|scm|sht?|[tw]gr|vrd)-[ad]?[lw][0125][09]b?|605hw|bg2-u03|(?:gem|fdr|m2|ple|t1)-[7a]0[1-4][lu]|t1-a2[13][lw]|mediapad[\w\. ]*(?= bui|\)))\b(?!.+d\/s)/i],
-            [Mb, [mb, Eb],
-              [nb, Nb]
+            [Lb, [jb, hb],
+              [Xb, Db]
             ],
             [/(?:huawei)([-\w ]+)[;\)]/i, /\b(nexus 6p|\w{2,4}e?-[atu]?[ln][\dx][012359c][adn]?)\b(?!.+d\/s)/i],
-            [Mb, [mb, Eb],
-              [nb, Cb]
+            [Lb, [jb, hb],
+              [Xb, Zb]
             ],
             [/oid[^\)]+; (2[\dbc]{4}(182|283|rp\w{2})[cgl]|m2105k81a?c)(?: bui|\))/i, /\b((?:red)?mi[-_ ]?pad[\w- ]*)(?: bui|\))/i],
             [
-              [Mb, /_/g, " "],
-              [mb, rb],
-              [nb, Nb]
+              [Lb, /_/g, " "],
+              [jb, sb],
+              [Xb, Db]
             ],
             [/\b(poco[\w ]+|m2\d{3}j\d\d[a-z]{2})(?: bui|\))/i, /\b; (\w+) build\/hm\1/i, /\b(hm[-_ ]?note?[_ ]?(?:\d\w)?) bui/i, /\b(redmi[\-_ ]?(?:note|k)?[\w_ ]+)(?: bui|\))/i, /oid[^\)]+; (m?[12][0-389][01]\w{3,6}[c-y])( bui|; wv|\))/i, /\b(mi[-_ ]?(?:a\d|one|one[_ ]plus|note lte|max|cc)?[_ ]?(?:\d?\w?)[_ ]?(?:plus|se|lite|pro)?)(?: bui|\))/i, / ([\w ]+) miui\/v?\d/i],
             [
-              [Mb, /_/g, " "],
-              [mb, rb],
-              [nb, Cb]
+              [Lb, /_/g, " "],
+              [jb, sb],
+              [Xb, Zb]
             ],
             [/; (\w+) bui.+ oppo/i, /\b(cph[12]\d{3}|p(?:af|c[al]|d\w|e[ar])[mt]\d0|x9007|a101op)\b/i],
-            [Mb, [mb, qb],
-              [nb, Cb]
+            [Lb, [jb, ob],
+              [Xb, Zb]
             ],
             [/\b(opd2(\d{3}a?))(?: bui|\))/i],
-            [Mb, [mb, sc, {
+            [Lb, [jb, Ua, {
                 OnePlus: ["304", "403", "203"],
-                "*": qb
+                "*": ob
               }],
-              [nb, Nb]
+              [Xb, Db]
             ],
             [/vivo (\w+)(?: bui|\))/i, /\b(v[12]\d{3}\w?[at])(?: bui|;)/i],
-            [Mb, [mb, "Vivo"],
-              [nb, Cb]
+            [Lb, [jb, "Vivo"],
+              [Xb, Zb]
             ],
             [/\b(rmx[1-3]\d{3})(?: bui|;|\))/i],
-            [Mb, [mb, "Realme"],
-              [nb, Cb]
+            [Lb, [jb, "Realme"],
+              [Xb, Zb]
             ],
             [/\b(milestone|droid(?:[2-4x]| (?:bionic|x2|pro|razr))?:?( 4g)?)\b[\w ]+build\//i, /\bmot(?:orola)?[- ](\w*)/i, /((?:moto(?! 360)[\w\(\) ]+|xt\d{3,4}|nexus 6)(?= bui|\)))/i],
-            [Mb, [mb, Gb],
-              [nb, Cb]
+            [Lb, [jb, qb],
+              [Xb, Zb]
             ],
             [/\b(mz60\d|xoom[2 ]{0,2}) build\//i],
-            [Mb, [mb, Gb],
-              [nb, Nb]
+            [Lb, [jb, qb],
+              [Xb, Db]
             ],
             [/((?=lg)?[vl]k\-?\d{3}) bui| 3\.[-\w; ]{10}lg?-([06cv9]{3,4})/i],
-            [Mb, [mb, ib],
-              [nb, Nb]
+            [Lb, [jb, Gb],
+              [Xb, Db]
             ],
             [/(lm(?:-?f100[nv]?|-[\w\.]+)(?= bui|\))|nexus [45])/i, /\blg[-e;\/ ]+((?!browser|netcast|android tv|watch)\w+)/i, /\blg-?([\d\w]+) bui/i],
-            [Mb, [mb, ib],
-              [nb, Cb]
+            [Lb, [jb, Gb],
+              [Xb, Zb]
             ],
             [/(ideatab[-\w ]+|602lv|d-42a|a101lv|a2109a|a3500-hv|s[56]000|pb-6505[my]|tb-?x?\d{3,4}(?:f[cu]|xu|[av])|yt\d?-[jx]?\d+[lfmx])( bui|;|\)|\/)/i, /lenovo ?(b[68]0[08]0-?[hf]?|tab(?:[\w- ]+?)|tb[\w-]{6,7})( bui|;|\)|\/)/i],
-            [Mb, [mb, "Lenovo"],
-              [nb, Nb]
+            [Lb, [jb, "Lenovo"],
+              [Xb, Db]
             ],
             [/(nokia) (t[12][01])/i],
-            [mb, Mb, [nb, Nb]],
+            [jb, Lb, [Xb, Db]],
             [/(?:maemo|nokia).*(n900|lumia \d+|rm-\d+)/i, /nokia[-_ ]?(([-\w\. ]*))/i],
             [
-              [Mb, /_/g, " "],
-              [nb, Cb],
-              [mb, "Nokia"]
+              [Lb, /_/g, " "],
+              [Xb, Zb],
+              [jb, "Nokia"]
             ],
             [/(pixel (c|tablet))\b/i],
-            [Mb, [mb, Pb],
-              [nb, Nb]
+            [Lb, [jb, db],
+              [Xb, Db]
             ],
             [/droid.+; (pixel[\daxl ]{0,6})(?: bui|\))/i],
-            [Mb, [mb, Pb],
-              [nb, Cb]
+            [Lb, [jb, db],
+              [Xb, Zb]
             ],
             [/droid.+; (a?\d[0-2]{2}so|[c-g]\d{4}|so[-gl]\w+|xq-a\w[4-7][12])(?= bui|\).+chrome\/(?![1-6]{0,1}\d\.))/i],
-            [Mb, [mb, wb],
-              [nb, Cb]
+            [Lb, [jb, wb],
+              [Xb, Zb]
             ],
             [/sony tablet [ps]/i, /\b(?:sony)?sgp\w+(?: bui|\))/i],
             [
-              [Mb, "Xperia Tablet"],
-              [mb, wb],
-              [nb, Nb]
+              [Lb, "Xperia Tablet"],
+              [jb, wb],
+              [Xb, Db]
             ],
             [/ (kb2005|in20[12]5|be20[12][59])\b/i, /(?:one)?(?:plus)? (a\d0\d\d)(?: b|\))/i],
-            [Mb, [mb, Zb],
-              [nb, Cb]
+            [Lb, [jb, rb],
+              [Xb, Zb]
             ],
             [/(alexa)webm/i, /(kf[a-z]{2}wi|aeo(?!bc)\w\w)( bui|\))/i, /(kf[a-z]+)( bui|\)).+silk\//i],
-            [Mb, [mb, Yb],
-              [nb, Nb]
+            [Lb, [jb, fb],
+              [Xb, Db]
             ],
             [/((?:sd|kf)[0349hijorstuw]+)( bui|\)).+silk\//i],
             [
-              [Mb, /(.+)/g, "Fire Phone $1"],
-              [mb, Yb],
-              [nb, Cb]
+              [Lb, /(.+)/g, "Fire Phone $1"],
+              [jb, fb],
+              [Xb, Zb]
             ],
             [/(playbook);[-\w\),; ]+(rim)/i],
-            [Mb, mb, [nb, Nb]],
+            [Lb, jb, [Xb, Db]],
             [/\b((?:bb[a-f]|st[hv])100-\d)/i, /\(bb10; (\w+)/i],
-            [Mb, [mb, gb],
-              [nb, Cb]
+            [Lb, [jb, Nb],
+              [Xb, Zb]
             ],
             [/(?:\b|asus_)(transfo[prime ]{4,10} \w+|eeepc|slider \w+|nexus 7|padfone|p00[cj])/i],
-            [Mb, [mb, Jb],
-              [nb, Nb]
+            [Lb, [jb, pb],
+              [Xb, Db]
             ],
             [/ (z[bes]6[027][012][km][ls]|zenfone \d\w?)\b/i],
-            [Mb, [mb, Jb],
-              [nb, Cb]
+            [Lb, [jb, pb],
+              [Xb, Zb]
             ],
             [/(nexus 9)/i],
-            [Mb, [mb, "HTC"],
-              [nb, Nb]
+            [Lb, [jb, "HTC"],
+              [Xb, Db]
             ],
             [/(htc)[-;_ ]{1,2}([\w ]+(?=\)| bui)|\w+)/i, /(zte)[- ]([\w ]+?)(?: bui|\/|\))/i, /(alcatel|geeksphone|nexian|panasonic(?!(?:;|\.))|sony(?!-bra))[-_ ]?([-\w]*)/i],
-            [mb, [Mb, /_/g, " "],
-              [nb, Cb]
+            [jb, [Lb, /_/g, " "],
+              [Xb, Zb]
             ],
             [/droid [\w\.]+; ((?:8[14]9[16]|9(?:0(?:48|60|8[01])|1(?:3[27]|66)|2(?:6[69]|9[56])|466))[gqswx])\w*(\)| bui)/i],
-            [Mb, [mb, "TCL"],
-              [nb, Nb]
+            [Lb, [jb, "TCL"],
+              [Xb, Db]
             ],
             [/(itel) ((\w+))/i],
             [
-              [mb, pb], Mb, [nb, sc, {
+              [jb, Sb], Lb, [Xb, Ua, {
                 tablet: ["p10001l", "w7001"],
                 "*": "mobile"
               }]
             ],
             [/droid.+; ([ab][1-7]-?[0178a]\d\d?)/i],
-            [Mb, [mb, "Acer"],
-              [nb, Nb]
+            [Lb, [jb, "Acer"],
+              [Xb, Db]
             ],
             [/droid.+; (m[1-5] note) bui/i, /\bmz-([-\w]{2,})/i],
-            [Mb, [mb, "Meizu"],
-              [nb, Cb]
+            [Lb, [jb, "Meizu"],
+              [Xb, Zb]
             ],
             [/; ((?:power )?armor(?:[\w ]{0,8}))(?: bui|\))/i],
-            [Mb, [mb, "Ulefone"],
-              [nb, Cb]
+            [Lb, [jb, "Ulefone"],
+              [Xb, Zb]
             ],
             [/; (energy ?\w+)(?: bui|\))/i, /; energizer ([\w ]+)(?: bui|\))/i],
-            [Mb, [mb, "Energizer"],
-              [nb, Cb]
+            [Lb, [jb, "Energizer"],
+              [Xb, Zb]
             ],
             [/; cat (b35);/i, /; (b15q?|s22 flip|s48c|s62 pro)(?: bui|\))/i],
-            [Mb, [mb, "Cat"],
-              [nb, Cb]
+            [Lb, [jb, "Cat"],
+              [Xb, Zb]
             ],
             [/((?:new )?andromax[\w- ]+)(?: bui|\))/i],
-            [Mb, [mb, "Smartfren"],
-              [nb, Cb]
+            [Lb, [jb, "Smartfren"],
+              [Xb, Zb]
             ],
             [/droid.+; (a(?:015|06[35]|142p?))/i],
-            [Mb, [mb, "Nothing"],
-              [nb, Cb]
+            [Lb, [jb, "Nothing"],
+              [Xb, Zb]
             ],
             [/; (x67 5g|tikeasy \w+|ac[1789]\d\w+)( b|\))/i, /archos ?(5|gamepad2?|([\w ]*[t1789]|hello) ?\d+[\w ]*)( b|\))/i],
-            [Mb, [mb, "Archos"],
-              [nb, Nb]
+            [Lb, [jb, "Archos"],
+              [Xb, Db]
             ],
             [/archos ([\w ]+)( b|\))/i, /; (ac[3-6]\d\w{2,8})( b|\))/i],
-            [Mb, [mb, "Archos"],
-              [nb, Cb]
+            [Lb, [jb, "Archos"],
+              [Xb, Zb]
             ],
             [/(imo) (tab \w+)/i, /(infinix) (x1101b?)/i],
-            [mb, Mb, [nb, Nb]],
+            [jb, Lb, [Xb, Db]],
             [/(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus(?! zenw)|dell|jolla|meizu|motorola|polytron|infinix|tecno|micromax|advan)[-_ ]?([-\w]*)/i, /; (hmd|imo) ([\w ]+?)(?: bui|\))/i, /(hp) ([\w ]+\w)/i, /(microsoft); (lumia[\w ]+)/i, /(lenovo)[-_ ]?([-\w ]+?)(?: bui|\)|\/)/i, /(oppo) ?([\w ]+) bui/i],
-            [mb, Mb, [nb, Cb]],
+            [jb, Lb, [Xb, Zb]],
             [/(kobo)\s(ereader|touch)/i, /(hp).+(touchpad(?!.+tablet)|tablet)/i, /(kindle)\/([\w\.]+)/i, /(nook)[\w ]+build\/(\w+)/i, /(dell) (strea[kpr\d ]*[\dko])/i, /(le[- ]+pan)[- ]+(\w{1,9}) bui/i, /(trinity)[- ]*(t\d{3}) bui/i, /(gigaset)[- ]+(q\w{1,9}) bui/i, /(vodafone) ([\w ]+)(?:\)| bui)/i],
-            [mb, Mb, [nb, Nb]],
+            [jb, Lb, [Xb, Db]],
             [/(surface duo)/i],
-            [Mb, [mb, Ob],
-              [nb, Nb]
+            [Lb, [jb, Qb],
+              [Xb, Db]
             ],
             [/droid [\d\.]+; (fp\du?)(?: b|\))/i],
-            [Mb, [mb, "Fairphone"],
-              [nb, Cb]
+            [Lb, [jb, "Fairphone"],
+              [Xb, Zb]
             ],
             [/(u304aa)/i],
-            [Mb, [mb, "AT&T"],
-              [nb, Cb]
+            [Lb, [jb, "AT&T"],
+              [Xb, Zb]
             ],
             [/\bsie-(\w*)/i],
-            [Mb, [mb, "Siemens"],
-              [nb, Cb]
+            [Lb, [jb, "Siemens"],
+              [Xb, Zb]
             ],
             [/\b(rct\w+) b/i],
-            [Mb, [mb, "RCA"],
-              [nb, Nb]
+            [Lb, [jb, "RCA"],
+              [Xb, Db]
             ],
             [/\b(venue[\d ]{2,7}) b/i],
-            [Mb, [mb, "Dell"],
-              [nb, Nb]
+            [Lb, [jb, "Dell"],
+              [Xb, Db]
             ],
             [/\b(q(?:mv|ta)\w+) b/i],
-            [Mb, [mb, "Verizon"],
-              [nb, Nb]
+            [Lb, [jb, "Verizon"],
+              [Xb, Db]
             ],
             [/\b(?:barnes[& ]+noble |bn[rt])([\w\+ ]*) b/i],
-            [Mb, [mb, "Barnes & Noble"],
-              [nb, Nb]
+            [Lb, [jb, "Barnes & Noble"],
+              [Xb, Db]
             ],
             [/\b(tm\d{3}\w+) b/i],
-            [Mb, [mb, "NuVision"],
-              [nb, Nb]
+            [Lb, [jb, "NuVision"],
+              [Xb, Db]
             ],
             [/\b(k88) b/i],
-            [Mb, [mb, "ZTE"],
-              [nb, Nb]
+            [Lb, [jb, "ZTE"],
+              [Xb, Db]
             ],
             [/\b(nx\d{3}j) b/i],
-            [Mb, [mb, "ZTE"],
-              [nb, Cb]
+            [Lb, [jb, "ZTE"],
+              [Xb, Zb]
             ],
             [/\b(gen\d{3}) b.+49h/i],
-            [Mb, [mb, "Swiss"],
-              [nb, Cb]
+            [Lb, [jb, "Swiss"],
+              [Xb, Zb]
             ],
             [/\b(zur\d{3}) b/i],
-            [Mb, [mb, "Swiss"],
-              [nb, Nb]
+            [Lb, [jb, "Swiss"],
+              [Xb, Db]
             ],
             [/\b((zeki)?tb.*\b) b/i],
-            [Mb, [mb, "Zeki"],
-              [nb, Nb]
+            [Lb, [jb, "Zeki"],
+              [Xb, Db]
             ],
             [/\b([yr]\d{2}) b/i, /\b(dragon[- ]+touch |dt)(\w{5}) b/i],
             [
-              [mb, "Dragon Touch"], Mb, [nb, Nb]
+              [jb, "Dragon Touch"], Lb, [Xb, Db]
             ],
             [/\b(ns-?\w{0,9}) b/i],
-            [Mb, [mb, "Insignia"],
-              [nb, Nb]
+            [Lb, [jb, "Insignia"],
+              [Xb, Db]
             ],
             [/\b((nxa|next)-?\w{0,9}) b/i],
-            [Mb, [mb, "NextBook"],
-              [nb, Nb]
+            [Lb, [jb, "NextBook"],
+              [Xb, Db]
             ],
             [/\b(xtreme\_)?(v(1[045]|2[015]|[3469]0|7[05])) b/i],
             [
-              [mb, "Voice"], Mb, [nb, Cb]
+              [jb, "Voice"], Lb, [Xb, Zb]
             ],
             [/\b(lvtel\-)?(v1[12]) b/i],
             [
-              [mb, "LvTel"], Mb, [nb, Cb]
+              [jb, "LvTel"], Lb, [Xb, Zb]
             ],
             [/\b(ph-1) /i],
-            [Mb, [mb, "Essential"],
-              [nb, Cb]
+            [Lb, [jb, "Essential"],
+              [Xb, Zb]
             ],
             [/\b(v(100md|700na|7011|917g).*\b) b/i],
-            [Mb, [mb, "Envizen"],
-              [nb, Nb]
+            [Lb, [jb, "Envizen"],
+              [Xb, Db]
             ],
             [/\b(trio[-\w\. ]+) b/i],
-            [Mb, [mb, "MachSpeed"],
-              [nb, Nb]
+            [Lb, [jb, "MachSpeed"],
+              [Xb, Db]
             ],
             [/\btu_(1491) b/i],
-            [Mb, [mb, "Rotor"],
-              [nb, Nb]
+            [Lb, [jb, "Rotor"],
+              [Xb, Db]
             ],
             [/((?:tegranote|shield t(?!.+d tv))[\w- ]*?)(?: b|\))/i],
-            [Mb, [mb, Kb],
-              [nb, Nb]
+            [Lb, [jb, ub],
+              [Xb, Db]
             ],
             [/(sprint) (\w+)/i],
-            [mb, Mb, [nb, Cb]],
+            [jb, Lb, [Xb, Zb]],
             [/(kin\.[onetw]{3})/i],
             [
-              [Mb, /\./g, " "],
-              [mb, Ob],
-              [nb, Cb]
+              [Lb, /\./g, " "],
+              [jb, Qb],
+              [Xb, Zb]
             ],
             [/droid.+; (cc6666?|et5[16]|mc[239][23]x?|vc8[03]x?)\)/i],
-            [Mb, [mb, ob],
-              [nb, Nb]
+            [Lb, [jb, gb],
+              [Xb, Db]
             ],
             [/droid.+; (ec30|ps20|tc[2-8]\d[kx])\)/i],
-            [Mb, [mb, ob],
-              [nb, Cb]
+            [Lb, [jb, gb],
+              [Xb, Zb]
             ],
             [/smart-tv.+(samsung)/i],
-            [mb, [nb, Vb]],
+            [jb, [Xb, zb]],
             [/hbbtv.+maple;(\d+)/i],
             [
-              [Mb, /^/, "SmartTV"],
-              [mb, db],
-              [nb, Vb]
+              [Lb, /^/, "SmartTV"],
+              [jb, lb],
+              [Xb, zb]
             ],
             [/(nux; netcast.+smarttv|lg (netcast\.tv-201\d|android tv))/i],
             [
-              [mb, ib],
-              [nb, Vb]
+              [jb, Gb],
+              [Xb, zb]
             ],
             [/(apple) ?tv/i],
-            [mb, [Mb, hb + " TV"],
-              [nb, Vb]
+            [jb, [Lb, mb + " TV"],
+              [Xb, zb]
             ],
             [/crkey/i],
             [
-              [Mb, tb + "cast"],
-              [mb, Pb],
-              [nb, Vb]
+              [Lb, Hb + "cast"],
+              [jb, db],
+              [Xb, zb]
             ],
             [/droid.+aft(\w+)( bui|\))/i],
-            [Mb, [mb, Yb],
-              [nb, Vb]
+            [Lb, [jb, fb],
+              [Xb, zb]
             ],
             [/(shield \w+ tv)/i],
-            [Mb, [mb, Kb],
-              [nb, Vb]
+            [Lb, [jb, ub],
+              [Xb, zb]
             ],
             [/\(dtv[\);].+(aquos)/i, /(aquos-tv[\w ]+)\)/i],
-            [Mb, [mb, Ab],
-              [nb, Vb]
+            [Lb, [jb, tb],
+              [Xb, zb]
             ],
             [/(bravia[\w ]+)( bui|\))/i],
-            [Mb, [mb, wb],
-              [nb, Vb]
+            [Lb, [jb, wb],
+              [Xb, zb]
             ],
             [/(mi(tv|box)-?\w+) bui/i],
-            [Mb, [mb, rb],
-              [nb, Vb]
+            [Lb, [jb, sb],
+              [Xb, zb]
             ],
             [/Hbbtv.*(technisat) (.*);/i],
-            [mb, Mb, [nb, Vb]],
+            [jb, Lb, [Xb, zb]],
             [/\b(roku)[\dx]*[\)\/]((?:dvp-)?[\d\.]*)/i, /hbbtv\/\d+\.\d+\.\d+ +\([\w\+ ]*; *([\w\d][^;]*);([^;]*)/i],
             [
-              [mb, bc],
-              [Mb, bc],
-              [nb, Vb]
+              [jb, ba],
+              [Lb, ba],
+              [Xb, zb]
             ],
             [/droid.+; ([\w- ]+) (?:android tv|smart[- ]?tv)/i],
-            [Mb, [nb, Vb]],
+            [Lb, [Xb, zb]],
             [/\b(android tv|smart[- ]?tv|opera tv|tv; rv:)\b/i],
             [
-              [nb, Vb]
+              [Xb, zb]
             ],
             [/(ouya)/i, /(nintendo) ([wids3utch]+)/i],
-            [mb, Mb, [nb, eb]],
+            [jb, Lb, [Xb, yb]],
             [/droid.+; (shield)( bui|\))/i],
-            [Mb, [mb, Kb],
-              [nb, eb]
+            [Lb, [jb, ub],
+              [Xb, yb]
             ],
             [/(playstation \w+)/i],
-            [Mb, [mb, wb],
-              [nb, eb]
+            [Lb, [jb, wb],
+              [Xb, yb]
             ],
             [/\b(xbox(?: one)?(?!; xbox))[\); ]/i],
-            [Mb, [mb, Ob],
-              [nb, eb]
+            [Lb, [jb, Qb],
+              [Xb, yb]
             ],
             [/\b(sm-[lr]\d\d[0156][fnuw]?s?|gear live)\b/i],
-            [Mb, [mb, db],
-              [nb, Lb]
+            [Lb, [jb, lb],
+              [Xb, xb]
             ],
             [/((pebble))app/i, /(asus|google|lg|oppo) ((pixel |zen)?watch[\w ]*)( bui|\))/i],
-            [mb, Mb, [nb, Lb]],
+            [jb, Lb, [Xb, xb]],
             [/(ow(?:19|20)?we?[1-3]{1,3})/i],
-            [Mb, [mb, qb],
-              [nb, Lb]
+            [Lb, [jb, ob],
+              [Xb, xb]
             ],
             [/(watch)(?: ?os[,\/]|\d,\d\/)[\d\.]+/i],
-            [Mb, [mb, hb],
-              [nb, Lb]
+            [Lb, [jb, mb],
+              [Xb, xb]
             ],
             [/(opwwe\d{3})/i],
-            [Mb, [mb, Zb],
-              [nb, Lb]
+            [Lb, [jb, rb],
+              [Xb, xb]
             ],
             [/(moto 360)/i],
-            [Mb, [mb, Gb],
-              [nb, Lb]
+            [Lb, [jb, qb],
+              [Xb, xb]
             ],
             [/(smartwatch 3)/i],
-            [Mb, [mb, wb],
-              [nb, Lb]
+            [Lb, [jb, wb],
+              [Xb, xb]
             ],
             [/(g watch r)/i],
-            [Mb, [mb, ib],
-              [nb, Lb]
+            [Lb, [jb, Gb],
+              [Xb, xb]
             ],
             [/droid.+; (wt63?0{2,3})\)/i],
-            [Mb, [mb, ob],
-              [nb, Lb]
+            [Lb, [jb, gb],
+              [Xb, xb]
             ],
             [/droid.+; (glass) \d/i],
-            [Mb, [mb, Pb],
-              [nb, Lb]
+            [Lb, [jb, db],
+              [Xb, xb]
             ],
             [/(pico) (4|neo3(?: link|pro)?)/i],
-            [mb, Mb, [nb, Lb]],
+            [jb, Lb, [Xb, xb]],
             [/; (quest( \d| pro)?)/i],
-            [Mb, [mb, Sb],
-              [nb, Lb]
+            [Lb, [jb, Cb],
+              [Xb, xb]
             ],
             [/(tesla)(?: qtcarbrowser|\/[-\w\.]+)/i],
-            [mb, [nb, ub]],
+            [jb, [Xb, ib]],
             [/(aeobc)\b/i],
-            [Mb, [mb, Yb],
-              [nb, ub]
+            [Lb, [jb, fb],
+              [Xb, ib]
             ],
             [/(homepod).+mac os/i],
-            [Mb, [mb, hb],
-              [nb, ub]
+            [Lb, [jb, mb],
+              [Xb, ib]
             ],
             [/windows iot/i],
             [
-              [nb, ub]
+              [Xb, ib]
             ],
             [/droid .+?; ([^;]+?)(?: bui|; wv\)|\) applew).+? mobile safari/i],
-            [Mb, [nb, Cb]],
+            [Lb, [Xb, Zb]],
             [/droid .+?; ([^;]+?)(?: bui|\) applew).+?(?! mobile) safari/i],
-            [Mb, [nb, Nb]],
+            [Lb, [Xb, Db]],
             [/\b((tablet|tab)[;\/]|focus\/\d(?!.+mobile))/i],
             [
-              [nb, Nb]
+              [Xb, Db]
             ],
             [/(phone|mobile(?:[;\/]| [ \w\/\.]*safari)|pda(?=.+windows ce))/i],
             [
-              [nb, Cb]
+              [Xb, Zb]
             ],
             [/droid .+?; ([\w\. -]+)( bui|\))/i],
-            [Mb, [mb, "Generic"]]
+            [Lb, [jb, "Generic"]]
           ],
           engine: [
             [/windows.+ edge\/([\w\.]+)/i],
-            [lb, [Xb, "EdgeHTML"]],
+            [Rb, [Pb, "EdgeHTML"]],
             [/(arkweb)\/([\w\.]+)/i],
-            [Xb, lb],
+            [Pb, Rb],
             [/webkit\/537\.36.+chrome\/(?!27)([\w\.]+)/i],
-            [lb, [Xb, "Blink"]],
+            [Rb, [Pb, "Blink"]],
             [/(presto)\/([\w\.]+)/i, /(webkit|trident|netfront|netsurf|amaya|lynx|w3m|goanna|servo)\/([\w\.]+)/i, /ekioh(flow)\/([\w\.]+)/i, /(khtml|tasman|links)[\/ ]\(?([\w\.]+)/i, /(icab)[\/ ]([23]\.[\d\.]+)/i, /\b(libweb)/i],
-            [Xb, lb],
+            [Pb, Rb],
             [/ladybird\//i],
             [
-              [Xb, "LibWeb"]
+              [Pb, "LibWeb"]
             ],
             [/rv\:([\w\.]{1,9})\b.+(gecko)/i],
-            [lb, Xb]
+            [Rb, Pb]
           ],
           os: [
             [/microsoft (windows) (vista|xp)/i],
-            [Xb, lb],
+            [Pb, Rb],
             [/(windows (?:phone(?: os)?|mobile|iot))[\/ ]?([\d\.\w ]*)/i],
-            [Xb, [lb, sc, kc]],
+            [Pb, [Rb, Ua, Aa]],
             [/windows nt 6\.2; (arm)/i, /windows[\/ ]([ntce\d\. ]+\w)(?!.+xbox)/i, /(?:win(?=3|9|n)|win 9x )([nt\d\.]+)/i],
             [
-              [lb, sc, kc],
-              [Xb, "Windows"]
+              [Rb, Ua, Aa],
+              [Pb, "Windows"]
             ],
             [/[adehimnop]{4,7}\b(?:.*os ([\w]+) like mac|; opera)/i, /(?:ios;fbsv\/|iphone.+ios[\/ ])([\d\.]+)/i, /cfnetwork\/.+darwin/i],
             [
-              [lb, /_/g, "."],
-              [Xb, "iOS"]
+              [Rb, /_/g, "."],
+              [Pb, "iOS"]
             ],
             [/(mac os x) ?([\w\. ]*)/i, /(macintosh|mac_powerpc\b)(?!.+haiku)/i],
             [
-              [Xb, vb],
-              [lb, /_/g, "."]
+              [Pb, Ob],
+              [Rb, /_/g, "."]
             ],
             [/droid ([\w\.]+)\b.+(android[- ]x86|harmonyos)/i],
-            [lb, Xb],
+            [Rb, Pb],
             [/(ubuntu) ([\w\.]+) like android/i],
             [
-              [Xb, /(.+)/, "$1 Touch"], lb
+              [Pb, /(.+)/, "$1 Touch"], Rb
             ],
             [/(android|bada|blackberry|kaios|maemo|meego|openharmony|qnx|rim tablet os|sailfish|series40|symbian|tizen|webos)\w*[-\/; ]?([\d\.]*)/i],
-            [Xb, lb],
+            [Pb, Rb],
             [/\(bb(10);/i],
-            [lb, [Xb, gb]],
+            [Rb, [Pb, Nb]],
             [/(?:symbian ?os|symbos|s60(?=;)|series ?60)[-\/ ]?([\w\.]*)/i],
-            [lb, [Xb, "Symbian"]],
+            [Rb, [Pb, "Symbian"]],
             [/mozilla\/[\d\.]+ \((?:mobile|tablet|tv|mobile; [\w ]+); rv:.+ gecko\/([\w\.]+)/i],
-            [lb, [Xb, yb + " OS"]],
+            [Rb, [Pb, Ib + " OS"]],
             [/web0s;.+rt(tv)/i, /\b(?:hp)?wos(?:browser)?\/([\w\.]+)/i],
-            [lb, [Xb, "webOS"]],
+            [Rb, [Pb, "webOS"]],
             [/watch(?: ?os[,\/]|\d,\d\/)([\d\.]+)/i],
-            [lb, [Xb, "watchOS"]],
+            [Rb, [Pb, "watchOS"]],
             [/crkey\/([\d\.]+)/i],
-            [lb, [Xb, tb + "cast"]],
+            [Rb, [Pb, Hb + "cast"]],
             [/(cros) [\w]+(?:\)| ([\w\.]+)\b)/i],
             [
-              [Xb, Rb], lb
+              [Pb, Vb], Rb
             ],
             [/panasonic;(viera)/i, /(netrange)mmh/i, /(nettv)\/(\d+\.[\w\.]+)/i, /(nintendo|playstation) ([wids345portablevuch]+)/i, /(xbox); +xbox ([^\);]+)/i, /\b(joli|palm)\b ?(?:os)?\/?([\w\.]*)/i, /(mint)[\/\(\) ]?(\w*)/i, /(mageia|vectorlinux)[; ]/i, /([kxln]?ubuntu|debian|suse|opensuse|gentoo|arch(?= linux)|slackware|fedora|mandriva|centos|pclinuxos|red ?hat|zenwalk|linpus|raspbian|plan 9|minix|risc os|contiki|deepin|manjaro|elementary os|sabayon|linspire)(?: gnu\/linux)?(?: enterprise)?(?:[- ]linux)?(?:-gnu)?[-\/ ]?(?!chrom|package)([-\w\.]*)/i, /(hurd|linux)(?: arm\w*| x86\w*| ?)([\w\.]*)/i, /(gnu) ?([\w\.]*)/i, /\b([-frentopcghs]{0,5}bsd|dragonfly)[\/ ]?(?!amd|[ix346]{1,2}86)([\w\.]*)/i, /(haiku) (\w+)/i],
-            [Xb, lb],
+            [Pb, Rb],
             [/(sunos) ?([\w\.\d]*)/i],
             [
-              [Xb, "Solaris"], lb
+              [Pb, "Solaris"], Rb
             ],
             [/((?:open)?solaris)[-\/ ]?([\w\.]*)/i, /(aix) ((\d)(?=\.|\)| )[\w\.])*/i, /\b(beos|os\/2|amigaos|morphos|openvms|fuchsia|hp-ux|serenityos)/i, /(unix) ?([\w\.]*)/i],
-            [Xb, lb]
+            [Pb, Rb]
           ]
         },
-        ac = function(bb, cb) {
-          if (typeof bb === Ib && (cb = bb, bb = ab), !(this instanceof ac)) return new ac(bb, cb).getResult();
-          var sb = typeof Wb !== Ub && Wb.navigator ? Wb.navigator : ab,
-            kb = bb || (sb && sb.userAgent ? sb.userAgent : ""),
-            eb = sb && sb.userAgentData ? sb.userAgentData : ab,
-            Vb = cb ? function(bb, cb) {
-              var sb = {};
-              for (var kb in bb) cb[kb] && cb[kb].length % 2 === 0 ? sb[kb] = cb[kb].concat(bb[kb]) : sb[kb] = bb[kb];
-              return sb
-            }(Wc, cb) : Wc,
-            Lb = sb && sb.userAgent == kb;
+        Ta = function(bb, ab) {
+          if (typeof bb === Bb && (ab = bb, bb = Tb), !(this instanceof Ta)) return new Ta(bb, ab).getResult();
+          var Ub = typeof Mb !== Yb && Mb.navigator ? Mb.navigator : Tb,
+            Ab = bb || (Ub && Ub.userAgent ? Ub.userAgent : ""),
+            yb = Ub && Ub.userAgentData ? Ub.userAgentData : Tb,
+            zb = ab ? function(bb, ab) {
+              var Ub = {};
+              for (var Ab in bb) ab[Ab] && ab[Ab].length % 2 === 0 ? Ub[Ab] = ab[Ab].concat(bb[Ab]) : Ub[Ab] = bb[Ab];
+              return Ub
+            }(Ma, ab) : Ma,
+            xb = Ub && Ub.userAgent == Ab;
           return this.getBrowser = function() {
-            var bb, cb = {};
-            return cb[Xb] = ab, cb[lb] = ab, cc.call(cb, kb, Vb.browser), cb[fb] = typeof(bb = cb[lb]) === Hb ? bb.replace(/[^\d\.]/g, "").split(".")[0] : ab, Lb && sb && sb.brave && typeof sb.brave.isBrave == Tb && (cb[Xb] = "Brave"), cb
+            var bb, ab = {};
+            return ab[Pb] = Tb, ab[Rb] = Tb, aa.call(ab, Ab, zb.browser), ab[vb] = typeof(bb = ab[Rb]) === eb ? bb.replace(/[^\d\.]/g, "").split(".")[0] : Tb, xb && Ub && Ub.brave && typeof Ub.brave.isBrave == Eb && (ab[Pb] = "Brave"), ab
           }, this.getCPU = function() {
             var bb = {};
-            return bb[Qb] = ab, cc.call(bb, kb, Vb.cpu), bb
+            return bb[kb] = Tb, aa.call(bb, Ab, zb.cpu), bb
           }, this.getDevice = function() {
             var bb = {};
-            return bb[mb] = ab, bb[Mb] = ab, bb[nb] = ab, cc.call(bb, kb, Vb.device), Lb && !bb[nb] && eb && eb.mobile && (bb[nb] = Cb), Lb && "Macintosh" == bb[Mb] && sb && typeof sb.standalone !== Ub && sb.maxTouchPoints && sb.maxTouchPoints > 2 && (bb[Mb] = "iPad", bb[nb] = Nb), bb
-          }, this.Sm = function() {
+            return bb[jb] = Tb, bb[Lb] = Tb, bb[Xb] = Tb, aa.call(bb, Ab, zb.device), xb && !bb[Xb] && yb && yb.mobile && (bb[Xb] = Zb), xb && "Macintosh" == bb[Lb] && Ub && typeof Ub.standalone !== Yb && Ub.maxTouchPoints && Ub.maxTouchPoints > 2 && (bb[Lb] = "iPad", bb[Xb] = Db), bb
+          }, this.vj = function() {
             var bb = {};
-            return bb[Xb] = ab, bb[lb] = ab, cc.call(bb, kb, Vb.engine), bb
+            return bb[Pb] = Tb, bb[Rb] = Tb, aa.call(bb, Ab, zb.engine), bb
           }, this.getOS = function() {
             var bb = {};
-            return bb[Xb] = ab, bb[lb] = ab, cc.call(bb, kb, Vb.os), Lb && !bb[Xb] && eb && eb.platform && "Unknown" != eb.platform && (bb[Xb] = eb.platform.replace(/chrome os/i, Rb).replace(/macos/i, vb)), bb
+            return bb[Pb] = Tb, bb[Rb] = Tb, aa.call(bb, Ab, zb.os), xb && !bb[Pb] && yb && yb.platform && "Unknown" != yb.platform && (bb[Pb] = yb.platform.replace(/chrome os/i, Vb).replace(/macos/i, Ob)), bb
           }, this.getResult = function() {
             return {
               ua: this.getUA(),
               browser: this.getBrowser(),
-              engine: this.Sm(),
+              engine: this.vj(),
               os: this.getOS(),
               device: this.getDevice(),
               cpu: this.getCPU()
             }
           }, this.getUA = function() {
-            return kb
+            return Ab
           }, this.setUA = function(bb) {
-            return kb = typeof bb === Hb && bb.length > 500 ? bc(bb, 500) : bb, this
-          }, this.setUA(kb), this
+            return Ab = typeof bb === eb && bb.length > 500 ? ba(bb, 500) : bb, this
+          }, this.setUA(Ab), this
         };
-      ac.VERSION = "1.0.41", ac.BROWSER = xb([Xb, lb, fb]), ac.CPU = xb([Qb]), ac.DEVICE = xb([Mb, mb, nb, eb, Cb, Vb, Nb, Lb, ub]), ac.ENGINE = ac.OS = xb([Xb, lb]), typeof cb !== Ub ? (bb.exports && (cb = bb.exports = ac), cb.UAParser = ac) : sb.amdO ? (kb = function() {
-        return ac
-      }.call(cb, sb, cb, bb)) === ab || (bb.exports = kb) : typeof Wb !== Ub && (Wb.UAParser = ac);
-      var Tc = typeof Wb !== Ub && (Wb.jQuery || Wb.Zepto);
-      if (Tc && !Tc.ua) {
-        var Uc = new ac;
-        Tc.ua = Uc.getResult(), Tc.ua.get = function() {
-          return Uc.getUA()
-        }, Tc.ua.set = function(bb) {
-          Uc.setUA(bb);
-          var cb = Uc.getResult();
-          for (var sb in cb) Tc.ua[sb] = cb[sb]
+      Ta.VERSION = "1.0.41", Ta.BROWSER = Jb([Pb, Rb, vb]), Ta.CPU = Jb([kb]), Ta.DEVICE = Jb([Lb, jb, Xb, yb, Zb, zb, Db, xb, ib]), Ta.ENGINE = Ta.OS = Jb([Pb, Rb]), typeof ab !== Yb ? (bb.exports && (ab = bb.exports = Ta), ab.UAParser = Ta) : Ub.amdO ? (Ab = function() {
+        return Ta
+      }.call(ab, Ub, ab, bb)) === Tb || (bb.exports = Ab) : typeof Mb !== Yb && (Mb.UAParser = Ta);
+      var Ea = typeof Mb !== Yb && (Mb.jQuery || Mb.Zepto);
+      if (Ea && !Ea.ua) {
+        var Ya = new Ta;
+        Ea.ua = Ya.getResult(), Ea.ua.get = function() {
+          return Ya.getUA()
+        }, Ea.ua.set = function(bb) {
+          Ya.setUA(bb);
+          var ab = Ya.getResult();
+          for (var Ub in ab) Ea.ua[Ub] = ab[Ub]
         }
       }
     }("object" === typeof window ? window : this)

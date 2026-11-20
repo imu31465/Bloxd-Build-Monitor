@@ -1,59 +1,59 @@
 export const id = 350;
 export const ids = [350];
 export const modules = {
-  60661: (bb, cb, sb) => {
-    sb.r(cb), sb.d(cb, {
-      applyLightFoOffset: () => Tb,
-      getFloatingOriginOffset: () => Wb,
-      lightFoVersion: () => ab,
-      wrapRenderableForFO: () => Ub
+  60338: (bb, ab, Ub) => {
+    Ub.r(ab), Ub.d(ab, {
+      applyLightFoOffset: () => Eb,
+      getFloatingOriginOffset: () => Mb,
+      lightFoVersion: () => Tb,
+      wrapRenderableForFO: () => Yb
     });
-    var kb = sb(41133);
+    var Ab = Ub(40854);
 
-    function Wb(bb) {
-      const cb = bb.camera;
-      if (!cb) return {
+    function Mb(bb) {
+      const ab = bb.camera;
+      if (!ab) return {
         x: 0,
         y: 0,
         z: 0
       };
-      const sb = cb.worldMatrix;
+      const Ub = ab.worldMatrix;
       return {
-        x: sb[12],
-        y: sb[13],
-        z: sb[14]
+        x: Ub[12],
+        y: Ub[13],
+        z: Ub[14]
       }
     }
 
-    function ab(bb) {
+    function Tb(bb) {
       return bb.camera ? bb.camera.worldMatrixVersion : 0
     }
 
-    function Tb(bb, cb) {
-      const sb = cb.camera?.worldMatrix;
-      if (!sb) return;
-      const Wb = sb[12],
-        ab = sb[13],
-        Tb = sb[14];
-      let Ub = 0;
-      for (const Ib of cb.lights) {
-        if (Ub >= kb.c) break;
-        if (!Ib._writeLightUbo) continue;
-        const cb = 4 + 16 * Ub,
-          sb = bb[cb + 3];
-        if (0 === sb || 2 === sb) {
-          const sb = Ib.worldMatrix;
-          bb[cb] = sb[12] - Wb, bb[cb + 1] = sb[13] - ab, bb[cb + 2] = sb[14] - Tb
+    function Eb(bb, ab) {
+      const Ub = ab.camera?.worldMatrix;
+      if (!Ub) return;
+      const Mb = Ub[12],
+        Tb = Ub[13],
+        Eb = Ub[14];
+      let Yb = 0;
+      for (const Bb of ab.lights) {
+        if (Yb >= Ab.b) break;
+        if (!Bb._writeLightUbo) continue;
+        const ab = 4 + 16 * Yb,
+          Ub = bb[ab + 3];
+        if (0 === Ub || 2 === Ub) {
+          const Ub = Bb.worldMatrix;
+          bb[ab] = Ub[12] - Mb, bb[ab + 1] = Ub[13] - Tb, bb[ab + 2] = Ub[14] - Eb
         }
-        Ub++
+        Yb++
       }
     }
 
-    function Ub(bb, cb, sb) {
-      let kb = -1;
+    function Yb(bb, ab, Ub) {
+      let Ab = -1;
       return () => {
-        const Wb = cb.camera ? cb.camera.worldMatrixVersion : -1;
-        Wb !== kb && (sb(), kb = Wb), bb()
+        const Mb = ab.camera ? ab.camera.worldMatrixVersion : -1;
+        Mb !== Ab && (Ub(), Ab = Mb), bb()
       }
     }
   }

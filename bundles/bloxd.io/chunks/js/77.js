@@ -1,22 +1,22 @@
 export const id = 77;
 export const ids = [77];
 export const modules = {
-  4461: (bb, cb, sb) => {
-    sb.d(cb, {
-      D: () => nb,
-      G: () => Xb,
-      e: () => kb,
-      h: () => Tb,
-      k: () => Qb,
-      o: () => lb,
-      s: () => Ub,
-      v: () => Wb,
-      x: () => ab,
-      z: () => mb
+  4420: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      b: () => Ab,
+      e: () => Eb,
+      i: () => kb,
+      m: () => Rb,
+      o: () => Yb,
+      p: () => Mb,
+      r: () => Tb,
+      u: () => jb,
+      v: () => Xb,
+      z: () => Pb
     });
-    const kb = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
+    const Ab = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
 
-    function Wb(bb) {
+    function Mb(bb) {
       try {
         return decodeURIComponent(bb.slice(1))
       } catch {
@@ -24,175 +24,175 @@ export const modules = {
       }
     }
 
-    function ab(bb) {
+    function Tb(bb) {
       return bb.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
     }
-    const Tb = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${kb.source}`, "g");
+    const Eb = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${Ab.source}`, "g");
 
-    function Ub(bb, cb) {
-      return 2 === bb.length ? cb.replace(/^ (.*) $/, "$1") : cb
+    function Yb(bb, ab) {
+      return 2 === bb.length ? ab.replace(/^ (.*) $/, "$1") : ab
     }
 
-    function Ib(bb) {
+    function Bb(bb) {
       return "" === bb.trim()
     }
 
-    function Hb(bb) {
-      const cb = [];
-      for (const sb of bb.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) cb.length > 0 && cb[cb.length - 1].endsWith("\\") ? cb[cb.length - 1] += `|${sb}` : cb.push(sb);
-      return cb.map((bb => bb.trim().replaceAll("\\|", "|")))
+    function eb(bb) {
+      const ab = [];
+      for (const Ub of bb.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) ab.length > 0 && ab[ab.length - 1].endsWith("\\") ? ab[ab.length - 1] += `|${Ub}` : ab.push(Ub);
+      return ab.map((bb => bb.trim().replaceAll("\\|", "|")))
     }
-    const fb = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
+    const vb = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
 
-    function Mb(bb) {
-      const cb = [],
-        sb = [{
+    function Lb(bb) {
+      const ab = [],
+        Ub = [{
           indent: -1,
-          items: cb
+          items: ab
         }];
-      let kb = null;
-      for (const Wb of bb) {
-        const bb = Wb.match(fb);
+      let Ab = null;
+      for (const Mb of bb) {
+        const bb = Mb.match(vb);
         if (!bb) {
-          kb && (kb.text += ` ${Wb.trim()}`);
+          Ab && (Ab.text += ` ${Mb.trim()}`);
           continue
         }
-        const cb = bb[1].replace(/\t/g, "  ").length;
-        for (; cb <= sb[sb.length - 1].indent;) sb.pop();
-        kb = {
+        const ab = bb[1].replace(/\t/g, "  ").length;
+        for (; ab <= Ub[Ub.length - 1].indent;) Ub.pop();
+        Ab = {
           text: bb[3].trim(),
           children: []
-        }, sb[sb.length - 1].items.push(kb), sb.push({
-          indent: cb,
-          items: kb.children
+        }, Ub[Ub.length - 1].items.push(Ab), Ub.push({
+          indent: ab,
+          items: Ab.children
         })
       }
-      return cb
+      return ab
     }
 
-    function Xb(bb) {
-      const cb = bb.replace(/\r\n/g, "\n").split("\n"),
-        sb = [];
-      let kb = 0;
-      for (; kb < cb.length;) {
-        const bb = cb[kb];
-        if (Ib(bb)) {
-          kb++;
+    function Pb(bb) {
+      const ab = bb.replace(/\r\n/g, "\n").split("\n"),
+        Ub = [];
+      let Ab = 0;
+      for (; Ab < ab.length;) {
+        const bb = ab[Ab];
+        if (Bb(bb)) {
+          Ab++;
           continue
         }
-        const Wb = bb.match(/^\s*```\s*(\w*)\s*$/);
-        if (Wb) {
+        const Mb = bb.match(/^\s*```\s*(\w*)\s*$/);
+        if (Mb) {
           const bb = [];
-          for (kb++; kb < cb.length && !/^\s*```\s*$/.test(cb[kb]);) bb.push(cb[kb]), kb++;
-          kb++, sb.push({
+          for (Ab++; Ab < ab.length && !/^\s*```\s*$/.test(ab[Ab]);) bb.push(ab[Ab]), Ab++;
+          Ab++, Ub.push({
             kind: "code",
-            lang: Wb[1] || "text",
+            lang: Mb[1] || "text",
             code: bb.join("\n").replace(/\s+$/, "")
           });
           continue
         }
-        const Tb = bb.match(/^(#{1,6})\s+(.+?)\s*#*$/);
-        if (Tb) {
-          const bb = Tb[2].trim();
-          sb.push({
+        const Eb = bb.match(/^(#{1,6})\s+(.+?)\s*#*$/);
+        if (Eb) {
+          const bb = Eb[2].trim();
+          Ub.push({
             kind: "heading",
-            level: Tb[1].length,
+            level: Eb[1].length,
             text: bb,
-            anchor: ab(bb)
-          }), kb++;
+            anchor: Tb(bb)
+          }), Ab++;
           continue
         }
         if (/^\s*(-{3,}|\*{3,})\s*$/.test(bb)) {
-          sb.push({
+          Ub.push({
             kind: "rule"
-          }), kb++;
+          }), Ab++;
           continue
         }
-        if (bb.trim().startsWith("|") && kb + 1 < cb.length && /^\s*\|[\s:|-]+\|\s*$/.test(cb[kb + 1])) {
-          const Wb = Hb(bb),
-            ab = [];
-          for (kb += 2; kb < cb.length && cb[kb].trim().startsWith("|");) ab.push(Hb(cb[kb])), kb++;
-          sb.push({
+        if (bb.trim().startsWith("|") && Ab + 1 < ab.length && /^\s*\|[\s:|-]+\|\s*$/.test(ab[Ab + 1])) {
+          const Mb = eb(bb),
+            Tb = [];
+          for (Ab += 2; Ab < ab.length && ab[Ab].trim().startsWith("|");) Tb.push(eb(ab[Ab])), Ab++;
+          Ub.push({
             kind: "table",
-            header: Wb,
-            rows: ab
+            header: Mb,
+            rows: Tb
           });
           continue
         }
         if (bb.startsWith(">")) {
           const bb = [];
-          for (; kb < cb.length && cb[kb].startsWith(">");) bb.push(cb[kb].replace(/^>\s?/, "")), kb++;
-          sb.push({
+          for (; Ab < ab.length && ab[Ab].startsWith(">");) bb.push(ab[Ab].replace(/^>\s?/, "")), Ab++;
+          Ub.push({
             kind: "quote",
-            blocks: Xb(bb.join("\n"))
+            blocks: Pb(bb.join("\n"))
           });
           continue
         }
-        if (fb.test(bb)) {
-          const Wb = [],
-            ab = /^\s*\d+\./.test(bb);
-          for (; kb < cb.length && !Ib(cb[kb]) && (fb.test(cb[kb]) || /^\s+\S/.test(cb[kb]));) Wb.push(cb[kb]), kb++;
-          sb.push({
+        if (vb.test(bb)) {
+          const Mb = [],
+            Tb = /^\s*\d+\./.test(bb);
+          for (; Ab < ab.length && !Bb(ab[Ab]) && (vb.test(ab[Ab]) || /^\s+\S/.test(ab[Ab]));) Mb.push(ab[Ab]), Ab++;
+          Ub.push({
             kind: "list",
-            ordered: ab,
-            items: Mb(Wb)
+            ordered: Tb,
+            items: Lb(Mb)
           });
           continue
         }
-        const Ub = [];
-        for (; kb < cb.length && !Ib(cb[kb]) && !/^\s*```/.test(cb[kb]) && !/^#{1,6}\s/.test(cb[kb]) && !cb[kb].startsWith(">") && !fb.test(cb[kb]) && (!cb[kb].trim().startsWith("|") || 0 !== Ub.length);) Ub.push(cb[kb].trim()), kb++;
-        0 === Ub.length && (Ub.push(cb[kb].trim()), kb++), sb.push({
+        const Yb = [];
+        for (; Ab < ab.length && !Bb(ab[Ab]) && !/^\s*```/.test(ab[Ab]) && !/^#{1,6}\s/.test(ab[Ab]) && !ab[Ab].startsWith(">") && !vb.test(ab[Ab]) && (!ab[Ab].trim().startsWith("|") || 0 !== Yb.length);) Yb.push(ab[Ab].trim()), Ab++;
+        0 === Yb.length && (Yb.push(ab[Ab].trim()), Ab++), Ub.push({
           kind: "paragraph",
-          text: Ub.join(" ")
+          text: Yb.join(" ")
         })
       }
-      return sb
+      return Ub
     }
 
-    function nb(bb) {
-      let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-      const sb = Xb(bb);
-      let kb = "";
-      const Wb = [],
-        ab = [],
-        Tb = new Map;
-      for (const Hb of sb) {
-        if ("heading" === Hb.kind) {
-          var Ub;
-          const bb = (null !== (Ub = Tb.get(Hb.anchor)) && void 0 !== Ub ? Ub : 0) + 1;
-          Tb.set(Hb.anchor, bb), bb > 1 && (Hb.anchor = `${Hb.anchor}-${bb}`)
+    function Xb(bb) {
+      let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+      const Ub = Pb(bb);
+      let Ab = "";
+      const Mb = [],
+        Tb = [],
+        Eb = new Map;
+      for (const eb of Ub) {
+        if ("heading" === eb.kind) {
+          var Yb;
+          const bb = (null !== (Yb = Eb.get(eb.anchor)) && void 0 !== Yb ? Yb : 0) + 1;
+          Eb.set(eb.anchor, bb), bb > 1 && (eb.anchor = `${eb.anchor}-${bb}`)
         }
-        if ("heading" === Hb.kind && 1 === Hb.level && !kb) {
-          kb = Hb.text;
+        if ("heading" === eb.kind && 1 === eb.level && !Ab) {
+          Ab = eb.text;
           continue
         }
-        if ("heading" === Hb.kind && Hb.level <= cb) {
-          ab.push({
-            heading: Hb,
+        if ("heading" === eb.kind && eb.level <= ab) {
+          Tb.push({
+            heading: eb,
             blocks: []
           });
           continue
         }
-        const bb = ab.at(-1);
-        bb ? bb.blocks.push(Hb) : Wb.push(Hb)
+        const bb = Tb.at(-1);
+        bb ? bb.blocks.push(eb) : Mb.push(eb)
       }
-      const Ib = bb => {
+      const Bb = bb => {
         for (;
-          "rule" === (null === (cb = bb.at(-1)) || void 0 === cb ? void 0 : cb.kind);) {
-          var cb;
+          "rule" === (null === (ab = bb.at(-1)) || void 0 === ab ? void 0 : ab.kind);) {
+          var ab;
           bb.pop()
         }
       };
-      Ib(Wb);
-      for (const Hb of ab) Ib(Hb.blocks);
+      Bb(Mb);
+      for (const eb of Tb) Bb(eb.blocks);
       return {
-        title: kb,
-        intro: Wb,
-        sections: ab
+        title: Ab,
+        intro: Mb,
+        sections: Tb
       }
     }
 
-    function mb(bb) {
+    function jb(bb) {
       return [{
         heading: null,
         blocks: bb.intro
@@ -202,11 +202,11 @@ export const modules = {
       })))]
     }
 
-    function lb(bb) {
-      return bb.flatMap((bb => "code" === bb.kind ? [bb] : "quote" === bb.kind ? lb(bb.blocks) : []))
+    function Rb(bb) {
+      return bb.flatMap((bb => "code" === bb.kind ? [bb] : "quote" === bb.kind ? Rb(bb.blocks) : []))
     }
 
-    function Qb(bb) {
+    function kb(bb) {
       switch (bb.kind) {
         case "heading":
         case "paragraph":
@@ -216,162 +216,162 @@ export const modules = {
         case "table":
           return [bb.header, ...bb.rows].map((bb => bb.join(" "))).join(" ");
         case "list": {
-          const cb = bb => bb.map((bb => `${bb.text} ${cb(bb.children)}`)).join(" ");
-          return cb(bb.items)
+          const ab = bb => bb.map((bb => `${bb.text} ${ab(bb.children)}`)).join(" ");
+          return ab(bb.items)
         }
         case "quote":
-          return bb.blocks.map(Qb).join(" ");
+          return bb.blocks.map(kb).join(" ");
         case "rule":
           return ""
       }
     }
   },
-  6153: (bb, cb, sb) => {
-    sb.d(cb, {
-      d: () => Mb,
-      h: () => Tb,
-      k: () => Ub
+  6109: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      e: () => Lb,
+      i: () => Eb,
+      l: () => Yb
     });
-    sb(6150);
-    var kb = sb(64),
-      Wb = sb(4461),
-      ab = sb(1087);
-    const Tb = /\[([^\][\n]{1,200})\]\(([^)\s]{1,500})\)|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*\s][^*]*)\*|`([^`]+)`/g;
+    Ub(6106);
+    var Ab = Ub(52),
+      Mb = Ub(4420),
+      Tb = Ub(1023);
+    const Eb = /\[([^\][\n]{1,200})\]\(([^)\s]{1,500})\)|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*\s][^*]*)\*|`([^`]+)`/g;
 
-    function Ub(bb, cb) {
-      return bb === cb ? bb : `${bb} (${cb})`
+    function Yb(bb, ab) {
+      return bb === ab ? bb : `${bb} (${ab})`
     }
 
-    function Ib(bb) {
-      const cb = [];
-      let sb = 0;
-      for (const kb of bb.matchAll(Tb)) {
-        kb.index > sb && cb.push(bb.slice(sb, kb.index));
-        const [, Wb, Tb, Ib, Hb, fb, Mb] = kb;
-        void 0 !== Wb ? cb.push(Ub(Wb, Tb)) : void 0 !== Ib || void 0 !== Hb ? cb.push((0, ab.jsx)("strong", {
-          children: null !== Ib && void 0 !== Ib ? Ib : Hb
-        }, kb.index)) : void 0 !== fb ? cb.push((0, ab.jsx)("em", {
-          children: fb
-        }, kb.index)) : cb.push((0, ab.jsx)("code", {
-          children: Mb
-        }, kb.index)), sb = kb.index + kb[0].length
+    function Bb(bb) {
+      const ab = [];
+      let Ub = 0;
+      for (const Ab of bb.matchAll(Eb)) {
+        Ab.index > Ub && ab.push(bb.slice(Ub, Ab.index));
+        const [, Mb, Eb, Bb, eb, vb, Lb] = Ab;
+        void 0 !== Mb ? ab.push(Yb(Mb, Eb)) : void 0 !== Bb || void 0 !== eb ? ab.push((0, Tb.jsx)("strong", {
+          children: null !== Bb && void 0 !== Bb ? Bb : eb
+        }, Ab.index)) : void 0 !== vb ? ab.push((0, Tb.jsx)("em", {
+          children: vb
+        }, Ab.index)) : ab.push((0, Tb.jsx)("code", {
+          children: Lb
+        }, Ab.index)), Ub = Ab.index + Ab[0].length
       }
-      return sb < bb.length && cb.push(bb.slice(sb)), cb
+      return Ub < bb.length && ab.push(bb.slice(Ub)), ab
     }
 
-    function Hb(bb, cb) {
-      let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      const kb = bb.map(((bb, cb) => (0, ab.jsxs)("li", {
-        children: [Ib(bb.text), bb.children.length > 0 && Hb(bb.children, !1)]
-      }, cb)));
-      return cb ? (0, ab.jsx)("ol", {
-        start: sb,
-        children: kb
-      }) : (0, ab.jsx)("ul", {
-        children: kb
+    function eb(bb, ab) {
+      let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      const Ab = bb.map(((bb, ab) => (0, Tb.jsxs)("li", {
+        children: [Bb(bb.text), bb.children.length > 0 && eb(bb.children, !1)]
+      }, ab)));
+      return ab ? (0, Tb.jsx)("ol", {
+        start: Ub,
+        children: Ab
+      }) : (0, Tb.jsx)("ul", {
+        children: Ab
       })
     }
 
-    function fb(bb, cb) {
+    function vb(bb, ab) {
       switch (bb.kind) {
         case "heading":
-          return bb.level <= 2 ? (0, ab.jsx)("h3", {
-            children: Ib(bb.text)
-          }, cb) : (0, ab.jsx)("h4", {
-            children: Ib(bb.text)
-          }, cb);
+          return bb.level <= 2 ? (0, Tb.jsx)("h3", {
+            children: Bb(bb.text)
+          }, ab) : (0, Tb.jsx)("h4", {
+            children: Bb(bb.text)
+          }, ab);
         case "paragraph":
-          return (0, ab.jsx)("p", {
-            children: Ib(bb.text)
-          }, cb);
+          return (0, Tb.jsx)("p", {
+            children: Bb(bb.text)
+          }, ab);
         case "list":
-          return (0, ab.jsx)(kb.Fragment, {
-            children: Hb(bb.items, bb.ordered)
-          }, cb);
+          return (0, Tb.jsx)(Ab.Fragment, {
+            children: eb(bb.items, bb.ordered)
+          }, ab);
         case "quote":
-          return (0, ab.jsx)("blockquote", {
-            children: bb.blocks.map(((bb, cb) => fb(bb, cb)))
-          }, cb);
+          return (0, Tb.jsx)("blockquote", {
+            children: bb.blocks.map(((bb, ab) => vb(bb, ab)))
+          }, ab);
         case "code":
-          return (0, ab.jsx)("pre", {
-            children: (0, ab.jsx)("code", {
+          return (0, Tb.jsx)("pre", {
+            children: (0, Tb.jsx)("code", {
               children: bb.code
             })
-          }, cb);
+          }, ab);
         case "table":
-          return (0, ab.jsxs)("table", {
-            children: [(0, ab.jsx)("thead", {
-              children: (0, ab.jsx)("tr", {
-                children: bb.header.map(((bb, cb) => (0, ab.jsx)("th", {
-                  children: Ib(bb)
-                }, cb)))
+          return (0, Tb.jsxs)("table", {
+            children: [(0, Tb.jsx)("thead", {
+              children: (0, Tb.jsx)("tr", {
+                children: bb.header.map(((bb, ab) => (0, Tb.jsx)("th", {
+                  children: Bb(bb)
+                }, ab)))
               })
-            }), (0, ab.jsx)("tbody", {
-              children: bb.rows.map(((bb, cb) => (0, ab.jsx)("tr", {
-                children: bb.map(((bb, cb) => (0, ab.jsx)("td", {
-                  children: Ib(bb)
-                }, cb)))
-              }, cb)))
+            }), (0, Tb.jsx)("tbody", {
+              children: bb.rows.map(((bb, ab) => (0, Tb.jsx)("tr", {
+                children: bb.map(((bb, ab) => (0, Tb.jsx)("td", {
+                  children: Bb(bb)
+                }, ab)))
+              }, ab)))
             })]
-          }, cb);
+          }, ab);
         case "rule":
-          return (0, ab.jsx)("hr", {}, cb)
+          return (0, Tb.jsx)("hr", {}, ab)
       }
     }
 
-    function Mb(bb) {
+    function Lb(bb) {
       let {
-        markdown: cb
-      } = bb, sb = 0;
-      return (0, ab.jsx)("div", {
+        markdown: ab
+      } = bb, Ub = 0;
+      return (0, Tb.jsx)("div", {
         className: "StudioAiAnswerText",
-        children: (0, Wb.G)(cb).map(((bb, cb) => {
-          if ("list" !== bb.kind || !bb.ordered) return sb = 0, fb(bb, cb);
-          const Wb = sb + 1;
-          return sb += bb.items.length, (0, ab.jsx)(kb.Fragment, {
-            children: Hb(bb.items, !0, Wb)
-          }, cb)
+        children: (0, Mb.z)(ab).map(((bb, ab) => {
+          if ("list" !== bb.kind || !bb.ordered) return Ub = 0, vb(bb, ab);
+          const Mb = Ub + 1;
+          return Ub += bb.items.length, (0, Tb.jsx)(Ab.Fragment, {
+            children: eb(bb.items, !0, Mb)
+          }, ab)
         }))
       })
     }
   },
-  6142: (bb, cb, sb) => {
-    sb.d(cb, {
-      b: () => Cb,
-      h: () => Nb,
-      d: () => Lb,
-      j: () => mb
+  6104: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      b: () => Zb,
+      h: () => Db,
+      f: () => xb,
+      l: () => jb
     });
-    var kb = sb(1770),
-      Wb = sb(6110),
-      ab = sb(4588);
-    const Tb = /\b(the prompt (says|asks|wants|tells)|the user (wants|asks|said)|my instructions(?! (?:below|above|here|in step))|the instructions (say|ask)|as instructed(?! (?:below|above|here|in step|by (?!the (?:prompt|user|system)\b))))\b/i;
+    var Ab = Ub(1710),
+      Mb = Ub(6052),
+      Tb = Ub(4553);
+    const Eb = /\b(the prompt (says|asks|wants|tells)|the user (wants|asks|said)|my instructions(?! (?:below|above|here|in step))|the instructions (say|ask)|as instructed(?! (?:below|above|here|in step|by (?!the (?:prompt|user|system)\b))))\b/i;
 
-    function Ub(bb) {
-      return (0, ab.e)(bb, Tb, (cb => !/^my/i.test(cb[0]) || !/follow $/i.test(bb.slice(0, cb.index)))).length > 0
+    function Yb(bb) {
+      return (0, Tb.f)(bb, Eb, (ab => !/^my/i.test(ab[0]) || !/follow $/i.test(bb.slice(0, ab.index)))).length > 0
     }
-    const Ib = /\byou(?:r|'re|'ll)?\b/i,
-      Hb = /^(?:[-*]\s+|\d+\.\s+)?(actually,|wait[,.!]|hmm\b|let me (think|re-?read|re-?check|reconsider)\b|let's (assume|think|re-?read|reconsider|go with)\b|i will\b|i'll (suggest|go with|pick)\b|i need to\b|i should\b|i don't have\b|since i (can|cannot|can't|don't)\b|okay,? so\b)/i,
-      fb = 2;
+    const Bb = /\byou(?:r|'re|'ll)?\b/i,
+      eb = /^(?:[-*]\s+|\d+\.\s+)?(actually,|wait[,.!]|hmm\b|let me (think|re-?read|re-?check|reconsider)\b|let's (assume|think|re-?read|reconsider|go with)\b|i will\b|i'll (suggest|go with|pick)\b|i need to\b|i should\b|i don't have\b|since i (can|cannot|can't|don't)\b|okay,? so\b)/i,
+      vb = 2;
 
-    function Mb(bb) {
+    function Lb(bb) {
       return function(bb) {
-        const cb = [];
-        let sb = !1;
-        for (const kb of bb.split("\n")) {
-          if (/^\s*(```|~~~)/.test(kb)) {
-            sb = !sb;
+        const ab = [];
+        let Ub = !1;
+        for (const Ab of bb.split("\n")) {
+          if (/^\s*(```|~~~)/.test(Ab)) {
+            Ub = !Ub;
             continue
           }
-          if (sb || /^\s*>/.test(kb)) continue;
-          const bb = kb.replace(/`[^`]*`/g, "code").replace(/"[^"]*"|\u201c[^\u201d]*\u201d/g, '"quote"').trim();
-          cb.push(...(0, Wb.p)(bb))
+          if (Ub || /^\s*>/.test(Ab)) continue;
+          const bb = Ab.replace(/`[^`]*`/g, "code").replace(/"[^"]*"|\u201c[^\u201d]*\u201d/g, '"quote"').trim();
+          ab.push(...(0, Mb.p)(bb))
         }
-        return cb
-      }(bb).filter((bb => Ub(bb) || Hb.test(bb) && !Ib.test(bb)))
+        return ab
+      }(bb).filter((bb => Yb(bb) || eb.test(bb) && !Bb.test(bb)))
     }
-    const Xb = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
-      nb = [{
+    const Pb = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
+      Xb = [{
         name: "Qwen3.6-27B",
         temperature: .7,
         reasoningEffort: "none"
@@ -384,71 +384,71 @@ export const modules = {
         temperature: .15
       }];
 
-    function mb(bb) {
-      const cb = nb.findIndex((cb => cb.name === bb));
-      return -1 === cb ? nb.length : cb
+    function jb(bb) {
+      const ab = Xb.findIndex((ab => ab.name === bb));
+      return -1 === ab ? Xb.length : ab
     }
-    const lb = 2500,
-      Qb = 12e4;
-    class eb extends Error {
+    const Rb = 2500,
+      kb = 12e4;
+    class yb extends Error {
       constructor(bb) {
         super(`Studio AI chat ${bb}`), this.reason = bb
       }
     }
 
-    function Cb(bb, cb) {
-      const sb = new AbortController,
-        kb = () => {
-          sb.abort()
+    function Zb(bb, ab) {
+      const Ub = new AbortController,
+        Ab = () => {
+          Ub.abort()
         },
-        Wb = setTimeout(kb, bb);
-      return null !== cb && void 0 !== cb && cb.aborted && kb(), null === cb || void 0 === cb || cb.addEventListener("abort", kb, {
+        Mb = setTimeout(Ab, bb);
+      return null !== ab && void 0 !== ab && ab.aborted && Ab(), null === ab || void 0 === ab || ab.addEventListener("abort", Ab, {
         once: !0
       }), {
-        signal: sb.signal,
+        signal: Ub.signal,
         clear: () => {
-          clearTimeout(Wb), null === cb || void 0 === cb || cb.removeEventListener("abort", kb)
+          clearTimeout(Mb), null === ab || void 0 === ab || ab.removeEventListener("abort", Ab)
         }
       }
     }
 
-    function Nb(bb, cb, sb) {
-      return new Promise(((Wb, ab) => {
-        const Tb = new AbortController,
-          Ub = () => {
-            Tb.abort(), ab((0, kb.f)(sb))
+    function Db(bb, ab, Ub) {
+      return new Promise(((Mb, Tb) => {
+        const Eb = new AbortController,
+          Yb = () => {
+            Eb.abort(), Tb((0, Ab.e)(Ub))
           };
-        if (null !== sb && void 0 !== sb && sb.aborted) return void Ub();
-        null === sb || void 0 === sb || sb.addEventListener("abort", Ub, {
+        if (null !== Ub && void 0 !== Ub && Ub.aborted) return void Yb();
+        null === Ub || void 0 === Ub || Ub.addEventListener("abort", Yb, {
           once: !0
         });
-        const Ib = nb.map((() => !1));
-        let Hb = null;
-        const fb = nb.map((() => !1)),
-          Mb = nb.map((() => !1));
-        nb.forEach(((kb, Xb) => {
-          const mb = Cb(Qb, Tb.signal);
-          ub(kb, [{
+        const Bb = Xb.map((() => !1));
+        let eb = null;
+        const vb = Xb.map((() => !1)),
+          Lb = Xb.map((() => !1));
+        Xb.forEach(((Ab, Pb) => {
+          const jb = Zb(kb, Eb.signal);
+          ib(Ab, [{
             role: "user",
             content: bb
-          }], mb.signal).then((bb => {
-            Tb.signal.aborted || ("busy" === bb || "failed" === bb ? (fb[Xb] = "busy" === bb, Mb[Xb] = !0) : null !== bb && (null === Hb || Xb < Hb.rank) && (Hb = {
-              rank: Xb,
+          }], jb.signal).then((bb => {
+            Eb.signal.aborted || ("busy" === bb || "failed" === bb ? (vb[Pb] = "busy" === bb, Lb[Pb] = !0) : null !== bb && (null === eb || Pb < eb.rank) && (eb = {
+              rank: Pb,
               answer: {
                 text: bb.text,
-                model: kb.name
+                model: Ab.name
               }
-            }, cb(Hb.answer)))
+            }, ab(eb.answer)))
           }), (bb => {
-            Tb.signal.aborted || (Mb[Xb] = !0, console.warn(`Studio AI: ${kb.name} couldn't be reached`, bb))
+            Eb.signal.aborted || (Lb[Pb] = !0, console.warn(`Studio AI: ${Ab.name} couldn't be reached`, bb))
           })).finally((() => {
-            mb.clear(), Ib[Xb] = !0, Tb.signal.aborted || (() => {
-              var bb, cb;
-              const kb = null !== (bb = null === (cb = Hb) || void 0 === cb ? void 0 : cb.rank) && void 0 !== bb ? bb : nb.length;
-              Ib.slice(0, kb).includes(!1) || (null === sb || void 0 === sb || sb.removeEventListener("abort", Ub), Tb.abort(), null !== Hb ? Wb({
-                ...Hb.answer,
-                isFinal: !Mb.slice(0, Hb.rank).includes(!0)
-              }) : ab(new eb(fb.includes(!0) ? "busy" : "failed")))
+            jb.clear(), Bb[Pb] = !0, Eb.signal.aborted || (() => {
+              var bb, ab;
+              const Ab = null !== (bb = null === (ab = eb) || void 0 === ab ? void 0 : ab.rank) && void 0 !== bb ? bb : Xb.length;
+              Bb.slice(0, Ab).includes(!1) || (null === Ub || void 0 === Ub || Ub.removeEventListener("abort", Yb), Eb.abort(), null !== eb ? Mb({
+                ...eb.answer,
+                isFinal: !Lb.slice(0, eb.rank).includes(!0)
+              }) : Tb(new yb(vb.includes(!0) ? "busy" : "failed")))
             })()
           })).catch((bb => {
             console.error("Studio AI: showing an answer failed", bb)
@@ -457,244 +457,244 @@ export const modules = {
       }))
     }
 
-    function Vb(bb) {
-      var cb, sb;
-      return "length" === (null === bb || void 0 === bb || null === (cb = bb.choices) || void 0 === cb || null === (sb = cb[0]) || void 0 === sb ? void 0 : sb.finish_reason)
+    function zb(bb) {
+      var ab, Ub;
+      return "length" === (null === bb || void 0 === bb || null === (ab = bb.choices) || void 0 === ab || null === (Ub = ab[0]) || void 0 === Ub ? void 0 : Ub.finish_reason)
     }
-    async function Lb(bb, cb, sb) {
-      const kb = nb.find((cb => cb.name === bb));
-      if (void 0 === kb) return "failed";
-      const Wb = Cb(Qb, sb);
+    async function xb(bb, ab, Ub) {
+      const Ab = Xb.find((ab => ab.name === bb));
+      if (void 0 === Ab) return "failed";
+      const Mb = Zb(kb, Ub);
       try {
-        const bb = await ub(kb, cb, Wb.signal);
-        return null !== bb && "object" === typeof bb ? bb.isCutOff ? (console.warn(`Studio AI: ${kb.name}'s answer was cut off at the token limit`), null) : {
+        const bb = await ib(Ab, ab, Mb.signal);
+        return null !== bb && "object" === typeof bb ? bb.isCutOff ? (console.warn(`Studio AI: ${Ab.name}'s answer was cut off at the token limit`), null) : {
           text: bb.text
         } : bb
       } finally {
-        Wb.clear()
+        Mb.clear()
       }
     }
-    async function ub(bb, cb, sb) {
-      const kb = await fetch(Xb, {
+    async function ib(bb, ab, Ub) {
+      const Ab = await fetch(Pb, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
           model: bb.name,
-          messages: cb,
-          max_tokens: lb,
+          messages: ab,
+          max_tokens: Rb,
           temperature: bb.temperature,
           reasoning_effort: bb.reasoningEffort
         }),
         credentials: "omit",
         referrerPolicy: "no-referrer",
-        signal: sb
+        signal: Ub
       });
-      if (429 === kb.status) return "busy";
-      if (!kb.ok) return console.warn(`Studio AI: ${bb.name} answered ${kb.status}`), "failed";
-      const Wb = await kb.json().catch((() => null)),
-        ab = function(bb) {
-          var cb, sb, kb;
-          const Wb = null === bb || void 0 === bb || null === (cb = bb.choices) || void 0 === cb || null === (sb = cb[0]) || void 0 === sb || null === (kb = sb.message) || void 0 === kb ? void 0 : kb.content;
-          if ("string" !== typeof Wb) return null;
-          const ab = Wb.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
-          return "" === ab ? null : ab
-        }(Wb);
-      return null !== ab && function(bb) {
-        const cb = Mb(bb);
-        return cb.length >= fb || cb.some((bb => Ub(bb)))
-      }(ab) ? (console.warn(`Studio AI: ${bb.name} thought out loud instead of answering`), "failed") : null === ab ? null : {
-        text: ab,
-        isCutOff: Vb(Wb)
+      if (429 === Ab.status) return "busy";
+      if (!Ab.ok) return console.warn(`Studio AI: ${bb.name} answered ${Ab.status}`), "failed";
+      const Mb = await Ab.json().catch((() => null)),
+        Tb = function(bb) {
+          var ab, Ub, Ab;
+          const Mb = null === bb || void 0 === bb || null === (ab = bb.choices) || void 0 === ab || null === (Ub = ab[0]) || void 0 === Ub || null === (Ab = Ub.message) || void 0 === Ab ? void 0 : Ab.content;
+          if ("string" !== typeof Mb) return null;
+          const Tb = Mb.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
+          return "" === Tb ? null : Tb
+        }(Mb);
+      return null !== Tb && function(bb) {
+        const ab = Lb(bb);
+        return ab.length >= vb || ab.some((bb => Yb(bb)))
+      }(Tb) ? (console.warn(`Studio AI: ${bb.name} thought out loud instead of answering`), "failed") : null === Tb ? null : {
+        text: Tb,
+        isCutOff: zb(Mb)
       }
     }
   },
-  6110: (bb, cb, sb) => {
-    sb.d(cb, {
-      C: () => Qb,
-      E: () => Nb,
-      F: () => Lb,
-      H: () => Cb,
-      J: () => Mb,
-      L: () => Hb,
-      M: () => nb,
-      d: () => mb,
-      e: () => Ub,
-      i: () => Tb,
-      k: () => lb,
-      l: () => Xb,
-      p: () => fb,
-      r: () => ab,
-      v: () => Wb,
-      x: () => Vb,
-      y: () => ub
+  6052: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      A: () => xb,
+      C: () => Zb,
+      D: () => Lb,
+      E: () => eb,
+      G: () => Xb,
+      d: () => jb,
+      f: () => Yb,
+      h: () => Eb,
+      k: () => Rb,
+      m: () => Pb,
+      p: () => vb,
+      q: () => Tb,
+      s: () => Mb,
+      v: () => zb,
+      x: () => ib,
+      y: () => kb,
+      z: () => Db
     });
-    var kb = sb(4588);
-    const Wb = 2e3,
-      ab = 2e4;
+    var Ab = Ub(4553);
+    const Mb = 2e3,
+      Tb = 2e4;
 
-    function Tb(bb) {
+    function Eb(bb) {
       return bb.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
     }
 
-    function Ub(bb) {
+    function Yb(bb) {
       return bb.replace(/\$/g, "\\$")
     }
-    const Ib = /[.!?](?=\s|\*|_|$)|\n|$/g;
+    const Bb = /[.!?](?=\s|\*|_|$)|\n|$/g;
 
-    function Hb(bb, cb) {
-      Ib.lastIndex = cb;
-      const sb = Ib.exec(bb);
-      return sb.index + sb[0].length
+    function eb(bb, ab) {
+      Bb.lastIndex = ab;
+      const Ub = Bb.exec(bb);
+      return Ub.index + Ub[0].length
     }
 
-    function fb(bb) {
-      return (0, kb.u)(bb, /\s+/g, (0, kb.q)(".!?")).flatMap((bb => bb.split("\n")))
+    function vb(bb) {
+      return (0, Ab.w)(bb, /\s+/g, (0, Ab.p)(".!?")).flatMap((bb => bb.split("\n")))
     }
 
-    function Mb(bb, cb) {
-      let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : cb;
-      const kb = [...bb.matchAll(/[.!?](?!\d)(?=\s|$)/g)].map((bb => bb.index)),
-        Wb = kb.filter((bb => bb < cb)),
-        ab = kb.find((bb => bb >= sb));
-      return [0 === Wb.length ? 0 : Wb.at(-1) + 1, void 0 === ab ? bb.length : ab + 1]
+    function Lb(bb, ab) {
+      let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : ab;
+      const Ab = [...bb.matchAll(/[.!?](?!\d)(?=\s|$)/g)].map((bb => bb.index)),
+        Mb = Ab.filter((bb => bb < ab)),
+        Tb = Ab.find((bb => bb >= Ub));
+      return [0 === Mb.length ? 0 : Mb.at(-1) + 1, void 0 === Tb ? bb.length : Tb + 1]
     }
 
-    function Xb(bb, cb) {
-      const sb = bb.charCodeAt(cb - 1);
-      return bb.slice(0, cb > 0 && cb < bb.length && sb >= 55296 && sb <= 56319 ? cb - 1 : cb)
+    function Pb(bb, ab) {
+      const Ub = bb.charCodeAt(ab - 1);
+      return bb.slice(0, ab > 0 && ab < bb.length && Ub >= 55296 && Ub <= 56319 ? ab - 1 : ab)
     }
 
-    function nb(bb, cb) {
-      return `${cb}${bb.replace(/\\/g,"\\\\").split(cb).join(`\\${cb}`)}${cb}`
+    function Xb(bb, ab) {
+      return `${ab}${bb.replace(/\\/g,"\\\\").split(ab).join(`\\${ab}`)}${ab}`
     }
 
-    function mb(bb) {
+    function jb(bb) {
       return bb.charAt(0).toUpperCase() + bb.slice(1)
     }
 
-    function lb(bb) {
+    function Rb(bb) {
       return Math.round(bb).toLocaleString("en-US")
     }
 
-    function Qb(bb) {
+    function kb(bb) {
       return bb.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z\d]+/).filter((bb => "" !== bb))
     }
-    const eb = 3;
+    const yb = 3;
 
-    function Cb(bb, cb) {
-      return Qb(bb).filter((bb => bb.length >= eb && !/\d/.test(bb))).map((bb => `${bb} ${cb}`))
+    function Zb(bb, ab) {
+      return kb(bb).filter((bb => bb.length >= yb && !/\d/.test(bb))).map((bb => `${bb} ${ab}`))
     }
 
-    function Nb(bb) {
-      return bb.split(/[\s:_]+/).filter((bb => "" !== bb)).map(Tb).join("[`:_\\s]+")
+    function Db(bb) {
+      return bb.split(/[\s:_]+/).filter((bb => "" !== bb)).map(Eb).join("[`:_\\s]+")
     }
 
-    function Vb(bb) {
-      return Qb(bb.split(".").pop())
+    function zb(bb) {
+      return kb(bb.split(".").pop())
     }
 
-    function Lb(bb) {
+    function xb(bb) {
       return bb.replace(/([a-z0-9])([A-Z])/g, "$1 $2").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim()
     }
 
-    function ub(bb) {
-      let cb = null;
+    function ib(bb) {
+      let ab = null;
       return () => {
-        const sb = cb ??= bb();
-        return sb.catch((() => {
-          cb === sb && (cb = null)
-        })), sb
+        const Ub = ab ??= bb();
+        return Ub.catch((() => {
+          ab === Ub && (ab = null)
+        })), Ub
       }
     }
   },
-  4588: (bb, cb, sb) => {
-    function kb(bb) {
+  4553: (bb, ab, Ub) => {
+    function Ab(bb) {
       return {
         notAfter: bb
       }
     }
-    sb.d(cb, {
-      d: () => Ib,
-      e: () => Hb,
-      h: () => Ub,
-      i: () => kb,
-      m: () => Wb,
-      o: () => ab,
-      q: () => Tb,
-      t: () => fb,
-      u: () => Mb
+    Ub.d(ab, {
+      d: () => Bb,
+      f: () => eb,
+      g: () => Yb,
+      h: () => Ab,
+      l: () => Mb,
+      m: () => Tb,
+      p: () => Eb,
+      s: () => vb,
+      w: () => Lb
     });
-    const Wb = kb("\\w$."),
-      ab = kb("\\w.,");
+    const Mb = Ab("\\w$."),
+      Tb = Ab("\\w.,");
 
-    function Tb(bb) {
-      return cb => Ib(cb, bb)
+    function Eb(bb) {
+      return ab => Bb(ab, bb)
     }
 
-    function Ub(bb) {
-      return cb => !bb.test(cb.input.slice(0, cb.index))
+    function Yb(bb) {
+      return ab => !bb.test(ab.input.slice(0, ab.index))
     }
 
-    function Ib(bb, cb) {
-      return bb.index > 0 && new RegExp(`[${cb}]`).test(bb.input[bb.index - 1])
+    function Bb(bb, ab) {
+      return bb.index > 0 && new RegExp(`[${ab}]`).test(bb.input[bb.index - 1])
     }
 
-    function Hb(bb, cb, sb) {
+    function eb(bb, ab, Ub) {
       return function(bb) {
         return void 0 !== bb && "function" !== typeof bb
-      }(sb) ? function(bb, cb, sb) {
-        const kb = cb.flags.replace(/[gy]/g, ""),
-          Wb = new RegExp(`[^${sb}](?:${cb.source})`, `${kb}g`),
-          ab = [],
-          Tb = sb => {
-            const kb = sb.index + sb[0].length;
-            return ("" === sb[0] ? Xb(bb, cb, kb) : kb) - 1
+      }(Ub) ? function(bb, ab, Ub) {
+        const Ab = ab.flags.replace(/[gy]/g, ""),
+          Mb = new RegExp(`[^${Ub}](?:${ab.source})`, `${Ab}g`),
+          Tb = [],
+          Eb = Ub => {
+            const Ab = Ub.index + Ub[0].length;
+            return ("" === Ub[0] ? Pb(bb, ab, Ab) : Ab) - 1
           },
-          Ub = new RegExp(`(?:${cb.source})`, `${kb}y`).exec(bb);
-        if (Ub) {
-          if (ab.push(Ub), !cb.global) return ab;
-          Wb.lastIndex = Tb(Ub)
+          Yb = new RegExp(`(?:${ab.source})`, `${Ab}y`).exec(bb);
+        if (Yb) {
+          if (Tb.push(Yb), !ab.global) return Tb;
+          Mb.lastIndex = Eb(Yb)
         }
-        for (let Ib = Wb.exec(bb); Ib; Ib = Wb.exec(bb)) {
-          const sb = Xb(bb, cb, Ib.index) - Ib.index;
-          if (Ib[0] = Ib[0].slice(sb), Ib.index += sb, ab.push(Ib), !cb.global) break;
-          Wb.lastIndex = Tb(Ib)
+        for (let Bb = Mb.exec(bb); Bb; Bb = Mb.exec(bb)) {
+          const Ub = Pb(bb, ab, Bb.index) - Bb.index;
+          if (Bb[0] = Bb[0].slice(Ub), Bb.index += Ub, Tb.push(Bb), !ab.global) break;
+          Mb.lastIndex = Eb(Bb)
         }
-        return ab
-      }(bb, cb, sb.notAfter) : function(bb, cb, sb) {
-        const kb = new RegExp(cb.source, `${cb.flags.replace(/[gy]/g,"")}g`),
-          Wb = [];
-        for (let ab = kb.exec(bb); ab; ab = kb.exec(bb))
-          if (!sb || sb(ab)) {
-            if (Wb.push(ab), !cb.global) break;
-            "" === ab[0] && (kb.lastIndex = Xb(bb, cb, kb.lastIndex))
-          } else kb.lastIndex = Xb(bb, cb, ab.index);
-        return Wb
-      }(bb, cb, sb)
+        return Tb
+      }(bb, ab, Ub.notAfter) : function(bb, ab, Ub) {
+        const Ab = new RegExp(ab.source, `${ab.flags.replace(/[gy]/g,"")}g`),
+          Mb = [];
+        for (let Tb = Ab.exec(bb); Tb; Tb = Ab.exec(bb))
+          if (!Ub || Ub(Tb)) {
+            if (Mb.push(Tb), !ab.global) break;
+            "" === Tb[0] && (Ab.lastIndex = Pb(bb, ab, Ab.lastIndex))
+          } else Ab.lastIndex = Pb(bb, ab, Tb.index);
+        return Mb
+      }(bb, ab, Ub)
     }
 
-    function fb(bb, cb, sb, kb) {
-      let Wb = "",
-        ab = 0;
-      for (const Tb of Hb(bb, cb, sb)) Wb += bb.slice(ab, Tb.index) + kb(Tb), ab = Tb.index + Tb[0].length;
-      return Wb + bb.slice(ab)
+    function vb(bb, ab, Ub, Ab) {
+      let Mb = "",
+        Tb = 0;
+      for (const Eb of eb(bb, ab, Ub)) Mb += bb.slice(Tb, Eb.index) + Ab(Eb), Tb = Eb.index + Eb[0].length;
+      return Mb + bb.slice(Tb)
     }
 
-    function Mb(bb, cb, sb) {
-      const kb = [];
-      let Wb = 0;
-      for (const ab of Hb(bb, cb, sb)) kb.push(bb.slice(Wb, ab.index)), Wb = ab.index + ab[0].length;
-      return [...kb, bb.slice(Wb)]
+    function Lb(bb, ab, Ub) {
+      const Ab = [];
+      let Mb = 0;
+      for (const Tb of eb(bb, ab, Ub)) Ab.push(bb.slice(Mb, Tb.index)), Mb = Tb.index + Tb[0].length;
+      return [...Ab, bb.slice(Mb)]
     }
 
-    function Xb(bb, cb, sb) {
-      var kb;
-      return sb + (cb.unicode && (null !== (kb = bb.codePointAt(sb)) && void 0 !== kb ? kb : 0) > 65535 ? 2 : 1)
+    function Pb(bb, ab, Ub) {
+      var Ab;
+      return Ub + (ab.unicode && (null !== (Ab = bb.codePointAt(Ub)) && void 0 !== Ab ? Ab : 0) > 65535 ? 2 : 1)
     }
   },
-  6150: () => {}
+  6106: () => {}
 };
 Object.freeze(modules);
 for (const bb in modules) Object.freeze(modules[bb]);

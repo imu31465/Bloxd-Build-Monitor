@@ -1,11 +1,11 @@
 export const id = 114;
 export const ids = [114];
 export const modules = {
-  6136: (bb, cb, sb) => {
-    sb.d(cb, {
-      b: () => kb
+  6099: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      b: () => Ab
     });
-    const kb = {
+    const Ab = {
       canChange: !0,
       blockReach: 6,
       ezBridging: !0,
@@ -158,7 +158,7 @@ export const modules = {
       _health: null,
       _tasks: null,
       _availableLeaderboards: null,
-      _shopVersion: sb(1902).b,
+      _shopVersion: Ub(1846).b,
       _pendingSpawn: null,
       _totalMaxHealth: null,
       _ignoreBasicBoards: !0,

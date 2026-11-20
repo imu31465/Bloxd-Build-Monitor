@@ -1,94 +1,94 @@
 export const id = 342;
 export const ids = [342, 343];
 export const modules = {
-  42668: (bb, cb, sb) => {
-    sb.d(cb, {
-      gamePackSource: () => ab
+  42416: (bb, ab, Ub) => {
+    Ub.d(ab, {
+      gamePackSource: () => Tb
     });
-    var kb = sb(4688),
-      Wb = sb(1474);
+    var Ab = Ub(4659),
+      Mb = Ub(1413);
 
-    function ab(bb) {
+    function Tb(bb) {
       return {
-        packKey: async cb => (await Wb.b.getGame(bb, cb, !0)).customTexturePackKey,
-        fetchPack: kb.e
+        packKey: async ab => (await Mb.b.getGame(bb, ab, !0)).customTexturePackKey,
+        fetchPack: Ab.e
       }
     }
   },
-  42664: (bb, cb, sb) => {
-    sb.r(cb), sb.d(cb, {
-      fetchGuestContext: () => Xb,
-      guestJoinTarget: () => Nb,
-      guestJoinWithPack: () => mb,
-      guestPackForGame: () => nb,
-      invalidateGuestTrafficCode: () => Cb
+  42410: (bb, ab, Ub) => {
+    Ub.r(ab), Ub.d(ab, {
+      fetchGuestContext: () => Pb,
+      guestJoinTarget: () => Db,
+      guestJoinWithPack: () => jb,
+      guestPackForGame: () => Xb,
+      invalidateGuestTrafficCode: () => Zb
     });
-    var kb = sb(1208),
-      Wb = sb(1474),
-      ab = sb(117),
-      Tb = sb(36112),
-      Ub = sb(1126),
-      Ib = sb(40373),
-      Hb = sb(42668),
-      fb = sb(40314);
+    var Ab = Ub(1142),
+      Mb = Ub(1413),
+      Tb = Ub(101),
+      Eb = Ub(35900),
+      Yb = Ub(1065),
+      Bb = Ub(40052),
+      eb = Ub(42416),
+      vb = Ub(40009);
 
-    function Mb() {
-      if (ab.featureFlags.useTurnstile) throw new Ib.TurnstilePageError
+    function Lb() {
+      if (Tb.featureFlags.useTurnstile) throw new Bb.TurnstilePageError
     }
 
-    function Xb() {
-      return (0, Ub.fetchAnonymousUserContext)().catch((bb => (console.warn("the guest context didn't load", bb), null)))
+    function Pb() {
+      return (0, Yb.fetchAnonymousUserContext)().catch((bb => (console.warn("the guest context didn't load", bb), null)))
     }
-    async function nb(bb, cb, sb, kb) {
+    async function Xb(bb, ab, Ub, Ab) {
       try {
-        const Wb = await sb;
-        if (null === Wb) return void console.warn(`the texture pack step for ${bb} has no guest context: the pack in play stays`);
-        await cb.packForGame(bb, (0, Hb.gamePackSource)(Wb), kb)
-      } catch (Wb) {
-        console.warn(`the texture pack step for ${bb} failed: the pack in play stays`, Wb)
+        const Mb = await Ub;
+        if (null === Mb) return void console.warn(`the texture pack step for ${bb} has no guest context: the pack in play stays`);
+        await ab.packForGame(bb, (0, eb.gamePackSource)(Mb), Ab)
+      } catch (Mb) {
+        console.warn(`the texture pack step for ${bb} failed: the pack in play stays`, Mb)
       }
     }
-    async function mb(bb, cb, sb, kb) {
-      Mb();
-      const Wb = Xb();
-      return await sb(((cb, sb) => nb(bb, cb, Wb, sb))), Nb(bb, cb, kb(), await Wb)
+    async function jb(bb, ab, Ub, Ab) {
+      Lb();
+      const Mb = Pb();
+      return await Ub(((ab, Ub) => Xb(bb, ab, Mb, Ub))), Db(bb, ab, Ab(), await Mb)
     }
-    let lb = null,
-      Qb = null;
-    async function eb() {
-      if ((null === lb || lb.hasExpired()) && (Qb ??= (0, Ub.fetchAnonymousUserContext)().then((bb => {
-          lb = bb
+    let Rb = null,
+      kb = null;
+    async function yb() {
+      if ((null === Rb || Rb.hasExpired()) && (kb ??= (0, Yb.fetchAnonymousUserContext)().then((bb => {
+          Rb = bb
         })).finally((() => {
-          Qb = null
-        })), await Qb), null === lb) throw new Error("no guest context to post as");
-      return lb.getMetricsCookies()
+          kb = null
+        })), await kb), null === Rb) throw new Error("no guest context to post as");
+      return Rb.getMetricsCookies()
     }
-    async function Cb() {
+    async function Zb() {
       var bb;
-      await (null === (bb = lb) || void 0 === bb ? void 0 : bb.invalidateTrafficCode())
+      await (null === (bb = Rb) || void 0 === bb ? void 0 : bb.invalidateTrafficCode())
     }
-    async function Nb(bb, cb, sb) {
-      let ab = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-      Mb();
-      const Ib = null !== ab && void 0 !== ab ? ab : await (0, Ub.fetchAnonymousUserContext)();
-      if (lb = Ib, Ib.isLoggedIn()) throw new Error("the shell's page joins as a guest only");
-      const Hb = await Wb.b.matchmakePlayer(Ib, cb, bb, (0, Tb.e)()),
-        Xb = performance.now();
-      if (!("gameServerHost" in Hb)) throw new Error(`matchmaking refused: ${Hb.failReason}`);
-      const nb = kb.clientSideServerUrls.getServerWebSocketUrlFromServerUrl(Hb.gameServerHost);
-      if (nb.isError()) throw new Error(`no socket URL for ${Hb.gameServerHost}: ${nb.asError().message}`);
-      const mb = {
-        endpoint: nb.getValue(),
-        gameNameWithVariation: Hb.gameNameWithVariation,
-        lobbyName: Hb.lobbyName
+    async function Db(bb, ab, Ub) {
+      let Tb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+      Lb();
+      const Bb = null !== Tb && void 0 !== Tb ? Tb : await (0, Yb.fetchAnonymousUserContext)();
+      if (Rb = Bb, Bb.isLoggedIn()) throw new Error("the shell's page joins as a guest only");
+      const eb = await Mb.b.matchmakePlayer(Bb, ab, bb, (0, Eb.e)()),
+        Pb = performance.now();
+      if (!("gameServerHost" in eb)) throw new Error(`matchmaking refused: ${eb.failReason}`);
+      const Xb = Ab.clientSideServerUrls.getServerWebSocketUrlFromServerUrl(eb.gameServerHost);
+      if (Xb.isError()) throw new Error(`no socket URL for ${eb.gameServerHost}: ${Xb.asError().message}`);
+      const jb = {
+        endpoint: Xb.getValue(),
+        gameNameWithVariation: eb.gameNameWithVariation,
+        lobbyName: eb.lobbyName
       };
       return {
         target: {
-          ...await (0, fb.e)(Ib, mb, sb, !1),
-          postCookies: eb
+          ...await (0, vb.e)(Bb, jb, Ub, !1),
+          postCookies: yb
         },
-        matchedAt: Xb,
-        freshMs: fb.d
+        matchedAt: Pb,
+        freshMs: vb.b
       }
     }
   }

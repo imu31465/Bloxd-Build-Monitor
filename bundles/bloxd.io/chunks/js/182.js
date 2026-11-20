@@ -1,25 +1,25 @@
 export const id = 182;
 export const ids = [182];
 export const modules = {
-  8776: (bb, cb) => {
-    cb.discordURLBuilder = function(bb) {
-      var cb;
-      const sb = (null === (cb = null === window || void 0 === window ? void 0 : window.location) || void 0 === cb ? void 0 : cb.hostname) || "localhost",
-        kb = bb.hostname.split("."),
-        Wb = !bb.hostname.includes("trycloudflare.com") && !bb.hostname.includes("discordsays.com") && kb.length > 2 ? `/${kb[0]}` : "";
-      return bb.pathname.startsWith("/.proxy") ? `${bb.protocol}//${sb}${Wb}${bb.pathname}${bb.search}` : `${bb.protocol}//${sb}/.proxy/colyseus${Wb}${bb.pathname}${bb.search}`
+  8752: (bb, ab) => {
+    ab.discordURLBuilder = function(bb) {
+      var ab;
+      const Ub = (null === (ab = null === window || void 0 === window ? void 0 : window.location) || void 0 === ab ? void 0 : ab.hostname) || "localhost",
+        Ab = bb.hostname.split("."),
+        Mb = !bb.hostname.includes("trycloudflare.com") && !bb.hostname.includes("discordsays.com") && Ab.length > 2 ? `/${Ab[0]}` : "";
+      return bb.pathname.startsWith("/.proxy") ? `${bb.protocol}//${Ub}${Mb}${bb.pathname}${bb.search}` : `${bb.protocol}//${Ub}/.proxy/colyseus${Mb}${bb.pathname}${bb.search}`
     }
   },
-  8766: (bb, cb, sb) => {
-    var kb, Wb, ab, Tb, Ub = sb(8686),
-      Ib = sb(8769),
-      Hb = sb(8742);
-    kb = new WeakMap, Wb = new WeakMap, ab = new WeakMap, Tb = new WeakMap, cb.Auth = class {
+  8747: (bb, ab, Ub) => {
+    var Ab, Mb, Tb, Eb, Yb = Ub(8665),
+      Bb = Ub(8749),
+      eb = Ub(8721);
+    Ab = new WeakMap, Mb = new WeakMap, Tb = new WeakMap, Eb = new WeakMap, ab.Auth = class {
       constructor(bb) {
         this.http = bb, this.settings = {
           path: "/auth",
           key: "colyseus-auth-token"
-        }, kb.set(this, !1), Wb.set(this, void 0), ab.set(this, void 0), Tb.set(this, Hb.createNanoEvents()), Ib.getItem(this.settings.key, (bb => this.token = bb))
+        }, Ab.set(this, !1), Mb.set(this, void 0), Tb.set(this, void 0), Eb.set(this, eb.createNanoEvents()), Bb.getItem(this.settings.key, (bb => this.token = bb))
       }
       set token(bb) {
         this.http.authToken = bb
@@ -28,8 +28,8 @@ export const modules = {
         return this.http.authToken
       }
       onChange(bb) {
-        const cb = Ub.__classPrivateFieldGet(this, Tb, "f").on("change", bb);
-        return Ub.__classPrivateFieldGet(this, kb, "f") || Ub.__classPrivateFieldSet(this, Wb, new Promise(((bb, cb) => {
+        const ab = Yb.__classPrivateFieldGet(this, Eb, "f").on("change", bb);
+        return Yb.__classPrivateFieldGet(this, Ab, "f") || Yb.__classPrivateFieldSet(this, Mb, new Promise(((bb, ab) => {
           this.getUserData().then((bb => {
             this.emitChange(Object.assign(Object.assign({}, bb), {
               token: this.token
@@ -42,49 +42,49 @@ export const modules = {
           })).finally((() => {
             bb()
           }))
-        })), "f"), Ub.__classPrivateFieldSet(this, kb, !0, "f"), cb
+        })), "f"), Yb.__classPrivateFieldSet(this, Ab, !0, "f"), ab
       }
       getUserData() {
-        return Ub.__awaiter(this, void 0, void 0, (function*() {
+        return Yb.__awaiter(this, void 0, void 0, (function*() {
           if (this.token) return (yield this.http.get(`${this.settings.path}/userdata`)).data;
           throw new Error("missing auth.token")
         }))
       }
-      registerWithEmailAndPassword(bb, cb, sb) {
-        return Ub.__awaiter(this, void 0, void 0, (function*() {
-          const kb = (yield this.http.post(`${this.settings.path}/register`, {
+      registerWithEmailAndPassword(bb, ab, Ub) {
+        return Yb.__awaiter(this, void 0, void 0, (function*() {
+          const Ab = (yield this.http.post(`${this.settings.path}/register`, {
             body: {
               email: bb,
-              password: cb,
-              options: sb
+              password: ab,
+              options: Ub
             }
           })).data;
-          return this.emitChange(kb), kb
+          return this.emitChange(Ab), Ab
         }))
       }
-      signInWithEmailAndPassword(bb, cb) {
-        return Ub.__awaiter(this, void 0, void 0, (function*() {
-          const sb = (yield this.http.post(`${this.settings.path}/login`, {
+      signInWithEmailAndPassword(bb, ab) {
+        return Yb.__awaiter(this, void 0, void 0, (function*() {
+          const Ub = (yield this.http.post(`${this.settings.path}/login`, {
             body: {
               email: bb,
-              password: cb
+              password: ab
             }
           })).data;
-          return this.emitChange(sb), sb
+          return this.emitChange(Ub), Ub
         }))
       }
       signInAnonymously(bb) {
-        return Ub.__awaiter(this, void 0, void 0, (function*() {
-          const cb = (yield this.http.post(`${this.settings.path}/anonymous`, {
+        return Yb.__awaiter(this, void 0, void 0, (function*() {
+          const ab = (yield this.http.post(`${this.settings.path}/anonymous`, {
             body: {
               options: bb
             }
           })).data;
-          return this.emitChange(cb), cb
+          return this.emitChange(ab), ab
         }))
       }
       sendPasswordResetEmail(bb) {
-        return Ub.__awaiter(this, void 0, void 0, (function*() {
+        return Yb.__awaiter(this, void 0, void 0, (function*() {
           return (yield this.http.post(`${this.settings.path}/forgot-password`, {
             body: {
               email: bb
@@ -93,29 +93,29 @@ export const modules = {
         }))
       }
       signInWithProvider(bb) {
-        return Ub.__awaiter(this, arguments, void 0, (function*(bb) {
-          let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          return new Promise(((sb, kb) => {
-            const Wb = cb.width || 480,
-              Tb = cb.height || 768,
-              Ib = this.token ? `?token=${this.token}` : "",
-              Hb = `Login with ${bb[0].toUpperCase()+bb.substring(1)}`,
-              fb = this.http.client.getHttpEndpoint(`${cb.prefix||`${this.settings.path}/provider`}/${bb}${Ib}`),
-              Mb = screen.width / 2 - Wb / 2,
-              Xb = screen.height / 2 - Tb / 2;
-            Ub.__classPrivateFieldSet(this, ab, window.open(fb, Hb, "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=" + Wb + ", height=" + Tb + ", top=" + Xb + ", left=" + Mb), "f");
-            const nb = bb => {
-                void 0 === bb.data.user && void 0 === bb.data.token || (clearInterval(mb), Ub.__classPrivateFieldGet(this, ab, "f").close(), Ub.__classPrivateFieldSet(this, ab, void 0, "f"), window.removeEventListener("message", nb), void 0 !== bb.data.error ? kb(bb.data.error) : (sb(bb.data), this.emitChange(bb.data)))
+        return Yb.__awaiter(this, arguments, void 0, (function*(bb) {
+          let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+          return new Promise(((Ub, Ab) => {
+            const Mb = ab.width || 480,
+              Eb = ab.height || 768,
+              Bb = this.token ? `?token=${this.token}` : "",
+              eb = `Login with ${bb[0].toUpperCase()+bb.substring(1)}`,
+              vb = this.http.client.getHttpEndpoint(`${ab.prefix||`${this.settings.path}/provider`}/${bb}${Bb}`),
+              Lb = screen.width / 2 - Mb / 2,
+              Pb = screen.height / 2 - Eb / 2;
+            Yb.__classPrivateFieldSet(this, Tb, window.open(vb, eb, "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=" + Mb + ", height=" + Eb + ", top=" + Pb + ", left=" + Lb), "f");
+            const Xb = bb => {
+                void 0 === bb.data.user && void 0 === bb.data.token || (clearInterval(jb), Yb.__classPrivateFieldGet(this, Tb, "f").close(), Yb.__classPrivateFieldSet(this, Tb, void 0, "f"), window.removeEventListener("message", Xb), void 0 !== bb.data.error ? Ab(bb.data.error) : (Ub(bb.data), this.emitChange(bb.data)))
               },
-              mb = setInterval((() => {
-                Ub.__classPrivateFieldGet(this, ab, "f") && !Ub.__classPrivateFieldGet(this, ab, "f").closed || (Ub.__classPrivateFieldSet(this, ab, void 0, "f"), kb("Gs"), window.removeEventListener("message", nb))
+              jb = setInterval((() => {
+                Yb.__classPrivateFieldGet(this, Tb, "f") && !Yb.__classPrivateFieldGet(this, Tb, "f").closed || (Yb.__classPrivateFieldSet(this, Tb, void 0, "f"), Ab("xU"), window.removeEventListener("message", Xb))
               }), 200);
-            window.addEventListener("message", nb)
+            window.addEventListener("message", Xb)
           }))
         }))
       }
       signOut() {
-        return Ub.__awaiter(this, void 0, void 0, (function*() {
+        return Yb.__awaiter(this, void 0, void 0, (function*() {
           this.emitChange({
             user: null,
             token: null
@@ -123,168 +123,168 @@ export const modules = {
         }))
       }
       emitChange(bb) {
-        void 0 !== bb.token && (this.token = bb.token, null === bb.token ? Ib.removeItem(this.settings.key) : Ib.setItem(this.settings.key, bb.token)), Ub.__classPrivateFieldGet(this, Tb, "f").emit("change", bb)
+        void 0 !== bb.token && (this.token = bb.token, null === bb.token ? Bb.removeItem(this.settings.key) : Bb.setItem(this.settings.key, bb.token)), Yb.__classPrivateFieldGet(this, Eb, "f").emit("change", bb)
       }
     }
   },
-  8683: (bb, cb, sb) => {
-    var kb, Wb = sb(8686),
-      ab = sb(8689),
-      Tb = sb(8695),
-      Ub = sb(8759),
-      Ib = sb(8766),
-      Hb = sb(8776);
-    class fb extends Error {
-      constructor(bb, cb) {
-        super(bb), this.code = cb, this.name = "MatchMakeError", Object.setPrototypeOf(this, fb.prototype)
+  8663: (bb, ab, Ub) => {
+    var Ab, Mb = Ub(8665),
+      Tb = Ub(8670),
+      Eb = Ub(8678),
+      Yb = Ub(8740),
+      Bb = Ub(8747),
+      eb = Ub(8752);
+    class vb extends Error {
+      constructor(bb, ab) {
+        super(bb), this.code = ab, this.name = "MatchMakeError", Object.setPrototypeOf(this, vb.prototype)
       }
     }
-    const Mb = "undefined" !== typeof window && "undefined" !== typeof(null === (kb = null === window || void 0 === window ? void 0 : window.location) || void 0 === kb ? void 0 : kb.hostname) ? `${window.location.protocol.replace("http","ws")}//${window.location.hostname}${window.location.port&&`:${window.location.port}`}` : "ws://127.0.0.1:2567";
-    class Xb {
+    const Lb = "undefined" !== typeof window && "undefined" !== typeof(null === (Ab = null === window || void 0 === window ? void 0 : window.location) || void 0 === Ab ? void 0 : Ab.hostname) ? `${window.location.protocol.replace("http","ws")}//${window.location.hostname}${window.location.port&&`:${window.location.port}`}` : "ws://127.0.0.1:2567";
+    class Pb {
       constructor() {
-        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Mb,
-          cb = arguments.length > 1 ? arguments[1] : void 0;
-        var sb, kb;
+        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Lb,
+          ab = arguments.length > 1 ? arguments[1] : void 0;
+        var Ub, Ab;
         if ("string" === typeof bb) {
-          const cb = bb.startsWith("/") ? new URL(bb, Mb) : new URL(bb),
-            sb = "https:" === cb.protocol || "wss:" === cb.protocol,
-            kb = Number(cb.port || (sb ? 443 : 80));
+          const ab = bb.startsWith("/") ? new URL(bb, Lb) : new URL(bb),
+            Ub = "https:" === ab.protocol || "wss:" === ab.protocol,
+            Ab = Number(ab.port || (Ub ? 443 : 80));
           this.settings = {
-            hostname: cb.hostname,
-            pathname: cb.pathname,
-            port: kb,
-            secure: sb,
-            searchParams: cb.searchParams.toString() || void 0
+            hostname: ab.hostname,
+            pathname: ab.pathname,
+            port: Ab,
+            secure: Ub,
+            searchParams: ab.searchParams.toString() || void 0
           }
         } else void 0 === bb.port && (bb.port = bb.secure ? 443 : 80), void 0 === bb.pathname && (bb.pathname = ""), this.settings = bb;
-        this.settings.pathname.endsWith("/") && (this.settings.pathname = this.settings.pathname.slice(0, -1)), this.http = new Ub.HTTP(this, (null === cb || void 0 === cb ? void 0 : cb.headers) || {}), this.auth = new Ib.Auth(this.http), this.urlBuilder = null === cb || void 0 === cb ? void 0 : cb.urlBuilder, !this.urlBuilder && "undefined" !== typeof window && (null === (kb = null === (sb = null === window || void 0 === window ? void 0 : window.location) || void 0 === sb ? void 0 : sb.hostname) || void 0 === kb ? void 0 : kb.includes("discordsays.com")) && (this.urlBuilder = Hb.discordURLBuilder, console.log("Colyseus SDK: Discord Embedded SDK detected. Using custom URL builder."))
+        this.settings.pathname.endsWith("/") && (this.settings.pathname = this.settings.pathname.slice(0, -1)), this.http = new Yb.HTTP(this, (null === ab || void 0 === ab ? void 0 : ab.headers) || {}), this.auth = new Bb.Auth(this.http), this.urlBuilder = null === ab || void 0 === ab ? void 0 : ab.urlBuilder, !this.urlBuilder && "undefined" !== typeof window && (null === (Ab = null === (Ub = null === window || void 0 === window ? void 0 : window.location) || void 0 === Ub ? void 0 : Ub.hostname) || void 0 === Ab ? void 0 : Ab.includes("discordsays.com")) && (this.urlBuilder = eb.discordURLBuilder, console.log("Colyseus SDK: Discord Embedded SDK detected. Using custom URL builder."))
       }
       joinOrCreate(bb) {
-        return Wb.__awaiter(this, arguments, void 0, (function*(bb) {
-          let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            sb = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("joinOrCreate", bb, cb, sb)
+        return Mb.__awaiter(this, arguments, void 0, (function*(bb) {
+          let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            Ub = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("joinOrCreate", bb, ab, Ub)
         }))
       }
       create(bb) {
-        return Wb.__awaiter(this, arguments, void 0, (function*(bb) {
-          let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            sb = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("create", bb, cb, sb)
+        return Mb.__awaiter(this, arguments, void 0, (function*(bb) {
+          let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            Ub = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("create", bb, ab, Ub)
         }))
       }
       join(bb) {
-        return Wb.__awaiter(this, arguments, void 0, (function*(bb) {
-          let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            sb = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("join", bb, cb, sb)
+        return Mb.__awaiter(this, arguments, void 0, (function*(bb) {
+          let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            Ub = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("join", bb, ab, Ub)
         }))
       }
       joinById(bb) {
-        return Wb.__awaiter(this, arguments, void 0, (function*(bb) {
-          let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            sb = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("joinById", bb, cb, sb)
+        return Mb.__awaiter(this, arguments, void 0, (function*(bb) {
+          let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            Ub = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("joinById", bb, ab, Ub)
         }))
       }
-      reconnect(bb, cb) {
-        return Wb.__awaiter(this, void 0, void 0, (function*() {
-          if ("string" === typeof bb && "string" === typeof cb) throw new Error("DEPRECATED: .reconnect() now only accepts 'reconnectionToken' as argument.\nYou can get this token from previously connected `room.reconnectionToken`");
-          const [sb, kb] = bb.split(":");
-          if (!sb || !kb) throw new Error("Invalid reconnection token format.\nThe format should be roomId:reconnectionToken");
-          return yield this.createMatchMakeRequest("reconnect", sb, {
-            reconnectionToken: kb
-          }, cb)
+      reconnect(bb, ab) {
+        return Mb.__awaiter(this, void 0, void 0, (function*() {
+          if ("string" === typeof bb && "string" === typeof ab) throw new Error("DEPRECATED: .reconnect() now only accepts 'reconnectionToken' as argument.\nYou can get this token from previously connected `room.reconnectionToken`");
+          const [Ub, Ab] = bb.split(":");
+          if (!Ub || !Ab) throw new Error("Invalid reconnection token format.\nThe format should be roomId:reconnectionToken");
+          return yield this.createMatchMakeRequest("reconnect", Ub, {
+            reconnectionToken: Ab
+          }, ab)
         }))
       }
-      consumeSeatReservation(bb, cb, sb) {
-        return Wb.__awaiter(this, void 0, void 0, (function*() {
-          const kb = this.createRoom(bb.room.name, cb);
-          kb.roomId = bb.room.roomId, kb.sessionId = bb.sessionId;
-          const Tb = {
-            sessionId: kb.sessionId
+      consumeSeatReservation(bb, ab, Ub) {
+        return Mb.__awaiter(this, void 0, void 0, (function*() {
+          const Ab = this.createRoom(bb.room.name, ab);
+          Ab.roomId = bb.room.roomId, Ab.sessionId = bb.sessionId;
+          const Eb = {
+            sessionId: Ab.sessionId
           };
-          bb.reconnectionToken && (Tb.reconnectionToken = bb.reconnectionToken);
-          const Ub = sb || kb;
-          return kb.connect(this.buildEndpoint(bb.room, Tb, bb.protocol), bb.devMode && (() => Wb.__awaiter(this, void 0, void 0, (function*() {
-            console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} Re-establishing connection with room id '${kb.roomId}'...`);
-            let sb = 0;
-            const ab = () => Wb.__awaiter(this, void 0, void 0, (function*() {
-              sb++;
+          bb.reconnectionToken && (Eb.reconnectionToken = bb.reconnectionToken);
+          const Yb = Ub || Ab;
+          return Ab.connect(this.buildEndpoint(bb.room, Eb, bb.protocol), bb.devMode && (() => Mb.__awaiter(this, void 0, void 0, (function*() {
+            console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} Re-establishing connection with room id '${Ab.roomId}'...`);
+            let Ub = 0;
+            const Tb = () => Mb.__awaiter(this, void 0, void 0, (function*() {
+              Ub++;
               try {
-                yield this.consumeSeatReservation(bb, cb, Ub), console.info(`[Colyseus devMode]: ${String.fromCodePoint(9989)} Successfully re-established connection with room '${kb.roomId}'`)
-              } catch (Wb) {
-                sb < 8 ? (console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} retrying... (${sb} out of 8)`), setTimeout(ab, 2e3)) : console.info(`[Colyseus devMode]: ${String.fromCodePoint(10060)} Failed to reconnect. Is your server running? Please check server logs.`)
+                yield this.consumeSeatReservation(bb, ab, Yb), console.info(`[Colyseus devMode]: ${String.fromCodePoint(9989)} Successfully re-established connection with room '${Ab.roomId}'`)
+              } catch (Mb) {
+                Ub < 8 ? (console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} retrying... (${Ub} out of 8)`), setTimeout(Tb, 2e3)) : console.info(`[Colyseus devMode]: ${String.fromCodePoint(10060)} Failed to reconnect. Is your server running? Please check server logs.`)
               }
             }));
-            setTimeout(ab, 2e3)
-          }))), Ub, bb, this.http.headers), new Promise(((bb, cb) => {
-            const sb = (bb, sb) => cb(new ab.ServerError(bb, sb));
-            Ub.onError.once(sb), Ub.onJoin.once((() => {
-              Ub.onError.remove(sb), setTimeout((() => {
+            setTimeout(Tb, 2e3)
+          }))), Yb, bb, this.http.headers), new Promise(((bb, ab) => {
+            const Ub = (bb, Ub) => ab(new Tb.ServerError(bb, Ub));
+            Yb.onError.once(Ub), Yb.onJoin.once((() => {
+              Yb.onError.remove(Ub), setTimeout((() => {
                 try {
                   const bb = [141, 56, 86, 101, 253, 220, 201, 166, 141, 79, 179, 74, 197, 208, 102, 129, 163, 98, 16, 23];
-                  bb && Ub.RV(128, new Uint8Array(bb))
+                  bb && Yb.Am(128, new Uint8Array(bb))
                 } catch {}
-              }), 3e3), bb(Ub)
+              }), 3e3), bb(Yb)
             }))
           }))
         }))
       }
-      createMatchMakeRequest(bb, cb) {
-        return Wb.__awaiter(this, arguments, void 0, (function*(bb, cb) {
-          let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-            kb = arguments.length > 3 ? arguments[3] : void 0,
-            Wb = arguments.length > 4 ? arguments[4] : void 0;
-          const ab = (yield this.http.post(`matchmake/${bb}/${cb}`, {
+      createMatchMakeRequest(bb, ab) {
+        return Mb.__awaiter(this, arguments, void 0, (function*(bb, ab) {
+          let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+            Ab = arguments.length > 3 ? arguments[3] : void 0,
+            Mb = arguments.length > 4 ? arguments[4] : void 0;
+          const Tb = (yield this.http.post(`matchmake/${bb}/${ab}`, {
             headers: {
               "X-Requested-With": "XMLHtttpRequest",
               Accept: "application/json",
               "Content-Type": "application/json"
             },
-            body: JSON.stringify(sb)
+            body: JSON.stringify(Ub)
           })).data;
-          if (ab.error) throw new fb(ab.error, ab.code);
-          return "reconnect" === bb && (ab.reconnectionToken = sb.reconnectionToken), yield this.consumeSeatReservation(ab, kb, Wb)
+          if (Tb.error) throw new vb(Tb.error, Tb.code);
+          return "reconnect" === bb && (Tb.reconnectionToken = Ub.reconnectionToken), yield this.consumeSeatReservation(Tb, Ab, Mb)
         }))
       }
-      createRoom(bb, cb) {
-        return new Tb.bX(bb, cb)
+      createRoom(bb, ab) {
+        return new Eb.IL(bb, ab)
       }
       buildEndpoint(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ws",
-          kb = this.settings.searchParams || "";
-        this.http.authToken && (cb._authToken = this.http.authToken);
-        for (const Tb in cb) cb.hasOwnProperty(Tb) && (kb += (kb ? "&" : "") + `${Tb}=${cb[Tb]}`);
-        "h3" === sb && (sb = "http");
-        let Wb = this.settings.secure ? `${sb}s://` : `${sb}://`;
-        bb.publicAddress ? Wb += `${bb.publicAddress}` : Wb += `${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}`;
-        const ab = `${Wb}/${bb.processId}/${bb.roomId}?${kb}`;
-        return this.urlBuilder ? this.urlBuilder(new URL(ab)) : ab
+        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ws",
+          Ab = this.settings.searchParams || "";
+        this.http.authToken && (ab._authToken = this.http.authToken);
+        for (const Eb in ab) ab.hasOwnProperty(Eb) && (Ab += (Ab ? "&" : "") + `${Eb}=${ab[Eb]}`);
+        "h3" === Ub && (Ub = "http");
+        let Mb = this.settings.secure ? `${Ub}s://` : `${Ub}://`;
+        bb.publicAddress ? Mb += `${bb.publicAddress}` : Mb += `${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}`;
+        const Tb = `${Mb}/${bb.processId}/${bb.roomId}?${Ab}`;
+        return this.urlBuilder ? this.urlBuilder(new URL(Tb)) : Tb
       }
       getHttpEndpoint() {
         let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-        const cb = bb.startsWith("/") ? bb : `/${bb}`;
-        let sb = `${this.settings.secure?"https":"http"}://${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}${cb}`;
-        return this.settings.searchParams && (sb += `?${this.settings.searchParams}`), this.urlBuilder ? this.urlBuilder(new URL(sb)) : sb
+        const ab = bb.startsWith("/") ? bb : `/${bb}`;
+        let Ub = `${this.settings.secure?"https":"http"}://${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}${ab}`;
+        return this.settings.searchParams && (Ub += `?${this.settings.searchParams}`), this.urlBuilder ? this.urlBuilder(new URL(Ub)) : Ub
       }
       getEndpointPort() {
         return 80 !== this.settings.port && 443 !== this.settings.port ? `:${this.settings.port}` : ""
       }
     }
-    Xb.VERSION = "0.16.22", cb.Client = Xb, cb.MatchMakeError = fb
+    Pb.VERSION = "0.16.22", ab.Client = Pb, ab.MatchMakeError = vb
   },
-  8699: (bb, cb, sb) => {
-    var kb = sb(8707),
-      Wb = sb(8719);
-    cb.Connection = class {
+  8682: (bb, ab, Ub) => {
+    var Ab = Ub(8687),
+      Mb = Ub(8697);
+    ab.Connection = class {
       constructor(bb) {
-        if (this.events = {}, "h3" === bb) this.transport = new kb.H3TransportTransport(this.events);
-        else this.transport = new Wb.WebSocketTransport(this.events)
+        if (this.events = {}, "h3" === bb) this.transport = new Ab.H3TransportTransport(this.events);
+        else this.transport = new Mb.WebSocketTransport(this.events)
       }
-      connect(bb, cb) {
-        this.transport.connect.call(this.transport, bb, cb)
+      connect(bb, ab) {
+        this.transport.connect.call(this.transport, bb, ab)
       }
       send(bb) {
         this.transport.send(bb)
@@ -292,62 +292,62 @@ export const modules = {
       sendUnreliable(bb) {
         this.transport.sendUnreliable(bb)
       }
-      close(bb, cb) {
-        this.transport.close(bb, cb)
+      close(bb, ab) {
+        this.transport.close(bb, ab)
       }
       get isOpen() {
         return this.transport.isOpen
       }
     }
   },
-  8759: (bb, cb, sb) => {
-    var kb = sb(8689);
+  8740: (bb, ab, Ub) => {
+    var Ab = Ub(8670);
 
-    function Wb(bb) {
-      var cb = Object.create(null);
-      return bb && Object.keys(bb).forEach((function(sb) {
-        if ("default" !== sb) {
-          var kb = Object.getOwnPropertyDescriptor(bb, sb);
-          Object.defineProperty(cb, sb, kb.get ? kb : {
+    function Mb(bb) {
+      var ab = Object.create(null);
+      return bb && Object.keys(bb).forEach((function(Ub) {
+        if ("default" !== Ub) {
+          var Ab = Object.getOwnPropertyDescriptor(bb, Ub);
+          Object.defineProperty(ab, Ub, Ab.get ? Ab : {
             enumerable: !0,
             get: function() {
-              return bb[sb]
+              return bb[Ub]
             }
           })
         }
-      })), cb.default = bb, Object.freeze(cb)
+      })), ab.default = bb, Object.freeze(ab)
     }
-    var ab = Wb(sb(8762));
-    cb.HTTP = class {
+    var Tb = Mb(Ub(8745));
+    ab.HTTP = class {
       constructor(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this.client = bb, this.headers = cb
+        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this.client = bb, this.headers = ab
       }
       get(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("get", bb, cb)
+        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("get", bb, ab)
       }
       post(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("post", bb, cb)
+        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("post", bb, ab)
       }
       del(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("del", bb, cb)
+        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("del", bb, ab)
       }
       put(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("put", bb, cb)
+        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("put", bb, ab)
       }
-      request(bb, cb) {
-        let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        return ab[bb](this.client.getHttpEndpoint(cb), this.getOptions(sb)).catch((bb => {
-          var cb;
-          if (bb.aborted) throw new kb.AbortError("Request aborted");
-          const sb = bb.statusCode,
-            Wb = (null === (cb = bb.data) || void 0 === cb ? void 0 : cb.error) || bb.statusMessage || bb.message;
-          if (!sb && !Wb) throw bb;
-          throw new kb.ServerError(sb, Wb)
+      request(bb, ab) {
+        let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        return Tb[bb](this.client.getHttpEndpoint(ab), this.getOptions(Ub)).catch((bb => {
+          var ab;
+          if (bb.aborted) throw new Ab.AbortError("Request aborted");
+          const Ub = bb.statusCode,
+            Mb = (null === (ab = bb.data) || void 0 === ab ? void 0 : ab.error) || bb.statusMessage || bb.message;
+          if (!Ub && !Mb) throw bb;
+          throw new Ab.ServerError(Ub, Mb)
         }))
       }
       getOptions(bb) {
@@ -355,123 +355,123 @@ export const modules = {
       }
     }
   },
-  8735: (bb, cb) => {
-    var sb, kb;
-    cb.Protocol = void 0, (sb = cb.Protocol || (cb.Protocol = {}))[sb.HANDSHAKE = 9] = "HANDSHAKE", sb[sb.JOIN_ROOM = 10] = "JOIN_ROOM", sb[sb.ERROR = 11] = "ERROR", sb[sb.LEAVE_ROOM = 12] = "LEAVE_ROOM", sb[sb.ROOM_DATA = 13] = "ROOM_DATA", sb[sb.ROOM_STATE = 14] = "ROOM_STATE", sb[sb.ROOM_STATE_PATCH = 15] = "ROOM_STATE_PATCH", sb[sb.ROOM_DATA_SCHEMA = 16] = "ROOM_DATA_SCHEMA", sb[sb.ROOM_DATA_BYTES = 17] = "ROOM_DATA_BYTES", cb.ErrorCode = void 0, (kb = cb.ErrorCode || (cb.ErrorCode = {}))[kb.MATCHMAKE_NO_HANDLER = 4210] = "MATCHMAKE_NO_HANDLER", kb[kb.MATCHMAKE_INVALID_CRITERIA = 4211] = "MATCHMAKE_INVALID_CRITERIA", kb[kb.MATCHMAKE_INVALID_ROOM_ID = 4212] = "MATCHMAKE_INVALID_ROOM_ID", kb[kb.MATCHMAKE_UNHANDLED = 4213] = "MATCHMAKE_UNHANDLED", kb[kb.MATCHMAKE_EXPIRED = 4214] = "MATCHMAKE_EXPIRED", kb[kb.AUTH_FAILED = 4215] = "AUTH_FAILED", kb[kb.APPLICATION_ERROR = 4216] = "APPLICATION_ERROR"
+  8706: (bb, ab) => {
+    var Ub, Ab;
+    ab.Protocol = void 0, (Ub = ab.Protocol || (ab.Protocol = {}))[Ub.HANDSHAKE = 9] = "HANDSHAKE", Ub[Ub.JOIN_ROOM = 10] = "JOIN_ROOM", Ub[Ub.ERROR = 11] = "ERROR", Ub[Ub.LEAVE_ROOM = 12] = "LEAVE_ROOM", Ub[Ub.ROOM_DATA = 13] = "ROOM_DATA", Ub[Ub.ROOM_STATE = 14] = "ROOM_STATE", Ub[Ub.ROOM_STATE_PATCH = 15] = "ROOM_STATE_PATCH", Ub[Ub.ROOM_DATA_SCHEMA = 16] = "ROOM_DATA_SCHEMA", Ub[Ub.ROOM_DATA_BYTES = 17] = "ROOM_DATA_BYTES", ab.ErrorCode = void 0, (Ab = ab.ErrorCode || (ab.ErrorCode = {}))[Ab.MATCHMAKE_NO_HANDLER = 4210] = "MATCHMAKE_NO_HANDLER", Ab[Ab.MATCHMAKE_INVALID_CRITERIA = 4211] = "MATCHMAKE_INVALID_CRITERIA", Ab[Ab.MATCHMAKE_INVALID_ROOM_ID = 4212] = "MATCHMAKE_INVALID_ROOM_ID", Ab[Ab.MATCHMAKE_UNHANDLED = 4213] = "MATCHMAKE_UNHANDLED", Ab[Ab.MATCHMAKE_EXPIRED = 4214] = "MATCHMAKE_EXPIRED", Ab[Ab.AUTH_FAILED = 4215] = "AUTH_FAILED", Ab[Ab.APPLICATION_ERROR = 4216] = "APPLICATION_ERROR"
   },
-  8695: (bb, cb, sb) => {
-    var kb = sb(8699),
-      Wb = sb(8735),
-      ab = sb(8740),
-      Tb = sb(8742),
-      Ub = sb(8746),
-      Ib = sb(8713),
-      Hb = sb(8752),
-      fb = sb(8689),
-      Mb = sb(8757);
-    class Xb {
-      constructor(bb, cb) {
-        this.onStateChange = Ub.createSignal(), this.onError = Ub.createSignal(), this.hN = Ub.createSignal(), this.onJoin = Ub.createSignal(), this.hasJoined = !1, this.onMessageHandlers = Tb.createNanoEvents(), this.roomId = null, this.name = bb, this.packr = new Mb.Packr, this.packr.encode(void 0), cb && (this.lC = new(ab.getSerializer("schema")), this.rootSchema = cb, this.lC.state = new cb), this.onError(((bb, cb) => {
-          var sb;
-          return null === (sb = console.warn) || void 0 === sb ? void 0 : sb.call(console, `colyseus.js - onError => (${bb}) ${cb}`)
-        })), this.hN((() => this.mC()))
+  8678: (bb, ab, Ub) => {
+    var Ab = Ub(8682),
+      Mb = Ub(8706),
+      Tb = Ub(8713),
+      Eb = Ub(8721),
+      Yb = Ub(8725),
+      Bb = Ub(8695),
+      eb = Ub(8727),
+      vb = Ub(8670),
+      Lb = Ub(8733);
+    class Pb {
+      constructor(bb, ab) {
+        this.onStateChange = Yb.createSignal(), this.onError = Yb.createSignal(), this.xZ = Yb.createSignal(), this.onJoin = Yb.createSignal(), this.hasJoined = !1, this.onMessageHandlers = Eb.createNanoEvents(), this.roomId = null, this.name = bb, this.packr = new Lb.Packr, this.packr.encode(void 0), ab && (this.Vk = new(Tb.getSerializer("schema")), this.rootSchema = ab, this.Vk.state = new ab), this.onError(((bb, ab) => {
+          var Ub;
+          return null === (Ub = console.warn) || void 0 === Ub ? void 0 : Ub.call(console, `colyseus.js - onError => (${bb}) ${ab}`)
+        })), this.xZ((() => this.Fk()))
       }
-      connect(bb, cb) {
-        let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this,
-          Wb = arguments.length > 3 ? arguments[3] : void 0,
-          ab = arguments.length > 4 ? arguments[4] : void 0;
-        const Tb = new kb.Connection(Wb.protocol);
-        if (sb.connection = Tb, Tb.events.onmessage = Xb.prototype.onMessageCallback.bind(sb), Tb.events.onclose = function(bb) {
-            var kb;
-            if (!sb.hasJoined) return null === (kb = console.warn) || void 0 === kb || kb.call(console, `Room connection was closed unexpectedly (${bb.code}): ${bb.reason}`), void sb.onError.invoke(bb.code, bb.reason);
-            bb.code === fb.CloseCode.DEVMODE_RESTART && cb ? cb() : (sb.hN.invoke(bb.code, bb.reason), sb.destroy())
-          }, Tb.events.onerror = function(bb) {
-            var cb;
-            null === (cb = console.warn) || void 0 === cb || cb.call(console, `Room, onError (${bb.code}): ${bb.reason}`), sb.onError.invoke(bb.code, bb.reason)
-          }, "h3" === Wb.protocol) {
-          const cb = new URL(bb);
-          Tb.connect(cb.origin, Wb)
-        } else Tb.connect(bb, ab)
+      connect(bb, ab) {
+        let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this,
+          Mb = arguments.length > 3 ? arguments[3] : void 0,
+          Tb = arguments.length > 4 ? arguments[4] : void 0;
+        const Eb = new Ab.Connection(Mb.protocol);
+        if (Ub.connection = Eb, Eb.events.onmessage = Pb.prototype.onMessageCallback.bind(Ub), Eb.events.onclose = function(bb) {
+            var Ab;
+            if (!Ub.hasJoined) return null === (Ab = console.warn) || void 0 === Ab || Ab.call(console, `Room connection was closed unexpectedly (${bb.code}): ${bb.reason}`), void Ub.onError.invoke(bb.code, bb.reason);
+            bb.code === vb.CloseCode.DEVMODE_RESTART && ab ? ab() : (Ub.xZ.invoke(bb.code, bb.reason), Ub.destroy())
+          }, Eb.events.onerror = function(bb) {
+            var ab;
+            null === (ab = console.warn) || void 0 === ab || ab.call(console, `Room, onError (${bb.code}): ${bb.reason}`), Ub.onError.invoke(bb.code, bb.reason)
+          }, "h3" === Mb.protocol) {
+          const ab = new URL(bb);
+          Eb.connect(ab.origin, Mb)
+        } else Eb.connect(bb, Tb)
       }
       leave() {
         let bb = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        return new Promise((cb => {
-          this.hN((bb => cb(bb))), this.connection ? bb ? (this.packr.buffer[0] = Wb.Protocol.LEAVE_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))) : this.connection.close() : this.hN.invoke(fb.CloseCode.CONSENTED)
+        return new Promise((ab => {
+          this.xZ((bb => ab(bb))), this.connection ? bb ? (this.packr.buffer[0] = Mb.Protocol.LEAVE_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))) : this.connection.close() : this.xZ.invoke(vb.CloseCode.CONSENTED)
         }))
       }
-      mN(bb, cb) {
-        return this.onMessageHandlers.on(this.getMessageHandlerKey(bb), cb)
+      ZZ(bb, ab) {
+        return this.onMessageHandlers.on(this.getMessageHandlerKey(bb), ab)
       }
-      send(bb, cb) {
-        const sb = {
+      send(bb, ab) {
+        const Ub = {
           offset: 1
         };
-        this.packr.buffer[0] = Wb.Protocol.ROOM_DATA, "string" === typeof bb ? Ib.encode.string(this.packr.buffer, bb, sb) : Ib.encode.number(this.packr.buffer, bb, sb), this.packr.position = 0;
-        const kb = void 0 !== cb ? this.packr.pack(cb, 2048 + sb.offset) : this.packr.buffer.subarray(0, sb.offset);
-        this.connection.send(kb)
+        this.packr.buffer[0] = Mb.Protocol.ROOM_DATA, "string" === typeof bb ? Bb.encode.string(this.packr.buffer, bb, Ub) : Bb.encode.number(this.packr.buffer, bb, Ub), this.packr.position = 0;
+        const Ab = void 0 !== ab ? this.packr.pack(ab, 2048 + Ub.offset) : this.packr.buffer.subarray(0, Ub.offset);
+        this.connection.send(Ab)
       }
-      sendUnreliable(bb, cb) {
-        const sb = {
+      sendUnreliable(bb, ab) {
+        const Ub = {
           offset: 1
         };
-        this.packr.buffer[0] = Wb.Protocol.ROOM_DATA, "string" === typeof bb ? Ib.encode.string(this.packr.buffer, bb, sb) : Ib.encode.number(this.packr.buffer, bb, sb), this.packr.position = 0;
-        const kb = void 0 !== cb ? this.packr.pack(cb, 2048 + sb.offset) : this.packr.buffer.subarray(0, sb.offset);
-        this.connection.sendUnreliable(kb)
+        this.packr.buffer[0] = Mb.Protocol.ROOM_DATA, "string" === typeof bb ? Bb.encode.string(this.packr.buffer, bb, Ub) : Bb.encode.number(this.packr.buffer, bb, Ub), this.packr.position = 0;
+        const Ab = void 0 !== ab ? this.packr.pack(ab, 2048 + Ub.offset) : this.packr.buffer.subarray(0, Ub.offset);
+        this.connection.sendUnreliable(Ab)
       }
-      RV(bb, cb) {
-        const sb = {
+      Am(bb, ab) {
+        const Ub = {
           offset: 1
         };
-        if (this.packr.buffer[0] = Wb.Protocol.ROOM_DATA_BYTES, "string" === typeof bb ? Ib.encode.string(this.packr.buffer, bb, sb) : Ib.encode.number(this.packr.buffer, bb, sb), cb.byteLength + sb.offset > this.packr.buffer.byteLength) {
-          const bb = new Uint8Array(sb.offset + cb.byteLength);
+        if (this.packr.buffer[0] = Mb.Protocol.ROOM_DATA_BYTES, "string" === typeof bb ? Bb.encode.string(this.packr.buffer, bb, Ub) : Bb.encode.number(this.packr.buffer, bb, Ub), ab.byteLength + Ub.offset > this.packr.buffer.byteLength) {
+          const bb = new Uint8Array(Ub.offset + ab.byteLength);
           bb.set(this.packr.buffer), this.packr.useBuffer(bb)
         }
-        this.packr.buffer.set(cb, sb.offset), this.connection.send(this.packr.buffer.subarray(0, sb.offset + cb.byteLength))
+        this.packr.buffer.set(ab, Ub.offset), this.connection.send(this.packr.buffer.subarray(0, Ub.offset + ab.byteLength))
       }
       get state() {
-        return this.lC.getState()
+        return this.Vk.getState()
       }
-      mC() {
-        this.onJoin.clear(), this.onStateChange.clear(), this.onError.clear(), this.hN.clear(), this.onMessageHandlers.events = {}, this.lC instanceof Hb.aY && (this.lC.Vm.root.callbacks = {})
+      Fk() {
+        this.onJoin.clear(), this.onStateChange.clear(), this.onError.clear(), this.xZ.clear(), this.onMessageHandlers.events = {}, this.Vk instanceof eb.ZN && (this.Vk.rX.root.callbacks = {})
       }
       onMessageCallback(bb) {
-        const cb = new Uint8Array(bb.data),
-          sb = {
+        const ab = new Uint8Array(bb.data),
+          Ub = {
             offset: 1
           },
-          kb = cb[0];
-        if (kb === Wb.Protocol.JOIN_ROOM) {
-          const bb = Ib.decode.utf8Read(cb, sb, cb[sb.offset++]);
-          if (this.serializerId = Ib.decode.utf8Read(cb, sb, cb[sb.offset++]), !this.lC) {
-            const bb = ab.getSerializer(this.serializerId);
-            this.lC = new bb
+          Ab = ab[0];
+        if (Ab === Mb.Protocol.JOIN_ROOM) {
+          const bb = Bb.decode.utf8Read(ab, Ub, ab[Ub.offset++]);
+          if (this.serializerId = Bb.decode.utf8Read(ab, Ub, ab[Ub.offset++]), !this.Vk) {
+            const bb = Tb.getSerializer(this.serializerId);
+            this.Vk = new bb
           }
-          cb.byteLength > sb.offset && this.lC.handshake && this.lC.handshake(cb, sb), this.reconnectionToken = `${this.roomId}:${bb}`, this.hasJoined = !0, this.onJoin.invoke(), this.packr.buffer[0] = Wb.Protocol.JOIN_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))
-        } else if (kb === Wb.Protocol.ERROR) {
-          const bb = Ib.decode.number(cb, sb),
-            kb = Ib.decode.string(cb, sb);
-          this.onError.invoke(bb, kb)
-        } else if (kb === Wb.Protocol.LEAVE_ROOM) this.leave();
-        else if (kb === Wb.Protocol.ROOM_STATE) this.lC.setState(cb, sb), this.onStateChange.invoke(this.lC.getState());
-        else if (kb === Wb.Protocol.ROOM_STATE_PATCH) this.lC.patch(cb, sb), this.onStateChange.invoke(this.lC.getState());
-        else if (kb === Wb.Protocol.ROOM_DATA) {
-          const bb = Ib.decode.stringCheck(cb, sb) ? Ib.decode.string(cb, sb) : Ib.decode.number(cb, sb),
-            kb = cb.byteLength > sb.offset ? Mb.unpack(cb, {
-              start: sb.offset
+          ab.byteLength > Ub.offset && this.Vk.handshake && this.Vk.handshake(ab, Ub), this.reconnectionToken = `${this.roomId}:${bb}`, this.hasJoined = !0, this.onJoin.invoke(), this.packr.buffer[0] = Mb.Protocol.JOIN_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))
+        } else if (Ab === Mb.Protocol.ERROR) {
+          const bb = Bb.decode.number(ab, Ub),
+            Ab = Bb.decode.string(ab, Ub);
+          this.onError.invoke(bb, Ab)
+        } else if (Ab === Mb.Protocol.LEAVE_ROOM) this.leave();
+        else if (Ab === Mb.Protocol.ROOM_STATE) this.Vk.setState(ab, Ub), this.onStateChange.invoke(this.Vk.getState());
+        else if (Ab === Mb.Protocol.ROOM_STATE_PATCH) this.Vk.patch(ab, Ub), this.onStateChange.invoke(this.Vk.getState());
+        else if (Ab === Mb.Protocol.ROOM_DATA) {
+          const bb = Bb.decode.stringCheck(ab, Ub) ? Bb.decode.string(ab, Ub) : Bb.decode.number(ab, Ub),
+            Ab = ab.byteLength > Ub.offset ? Lb.unpack(ab, {
+              start: Ub.offset
             }) : void 0;
-          this.dispatchMessage(bb, kb)
-        } else if (kb === Wb.Protocol.ROOM_DATA_BYTES) {
-          const bb = Ib.decode.stringCheck(cb, sb) ? Ib.decode.string(cb, sb) : Ib.decode.number(cb, sb);
-          this.dispatchMessage(bb, cb.subarray(sb.offset))
+          this.dispatchMessage(bb, Ab)
+        } else if (Ab === Mb.Protocol.ROOM_DATA_BYTES) {
+          const bb = Bb.decode.stringCheck(ab, Ub) ? Bb.decode.string(ab, Ub) : Bb.decode.number(ab, Ub);
+          this.dispatchMessage(bb, ab.subarray(Ub.offset))
         }
       }
-      dispatchMessage(bb, cb) {
-        var sb;
-        const kb = this.getMessageHandlerKey(bb);
-        this.onMessageHandlers.events[kb] ? this.onMessageHandlers.emit(kb, cb) : this.onMessageHandlers.events["*"] ? this.onMessageHandlers.emit("*", bb, cb) : null === (sb = console.warn) || void 0 === sb || sb.call(console, `colyseus.js: onMessage() not registered for type '${bb}'.`)
+      dispatchMessage(bb, ab) {
+        var Ub;
+        const Ab = this.getMessageHandlerKey(bb);
+        this.onMessageHandlers.events[Ab] ? this.onMessageHandlers.emit(Ab, ab) : this.onMessageHandlers.events["*"] ? this.onMessageHandlers.emit("*", bb, ab) : null === (Ub = console.warn) || void 0 === Ub || Ub.call(console, `colyseus.js: onMessage() not registered for type '${bb}'.`)
       }
       destroy() {
-        this.lC && this.lC.teardown()
+        this.Vk && this.Vk.teardown()
       }
       getMessageHandlerKey(bb) {
         switch (typeof bb) {
@@ -484,20 +484,20 @@ export const modules = {
         }
       }
     }
-    cb.bX = Xb
+    ab.IL = Pb
   },
-  8769: (bb, cb, sb) => {
-    var kb = sb(8686);
-    let Wb;
+  8749: (bb, ab, Ub) => {
+    var Ab = Ub(8665);
+    let Mb;
 
-    function ab() {
-      if (!Wb) try {
-        Wb = "undefined" !== typeof cc && cc.sys && cc.sys.localStorage ? cc.sys.localStorage : window.localStorage
+    function Tb() {
+      if (!Mb) try {
+        Mb = "undefined" !== typeof cc && cc.sys && cc.sys.localStorage ? cc.sys.localStorage : window.localStorage
       } catch (bb) {}
-      return Wb || "undefined" === typeof globalThis.indexedDB || (Wb = new Tb), Wb || (Wb = {
+      return Mb || "undefined" === typeof globalThis.indexedDB || (Mb = new Eb), Mb || (Mb = {
         cache: {},
-        setItem: function(bb, cb) {
-          this.cache[bb] = cb
+        setItem: function(bb, ab) {
+          this.cache[bb] = ab
         },
         getItem: function(bb) {
           this.cache[bb]
@@ -505,64 +505,64 @@ export const modules = {
         removeItem: function(bb) {
           delete this.cache[bb]
         }
-      }), Wb
+      }), Mb
     }
-    class Tb {
+    class Eb {
       constructor() {
         this.dbPromise = new Promise((bb => {
-          const cb = indexedDB.open("_colyseus_storage", 1);
-          cb.onupgradeneeded = () => cb.result.createObjectStore("store"), cb.onsuccess = () => bb(cb.result)
+          const ab = indexedDB.open("_colyseus_storage", 1);
+          ab.onupgradeneeded = () => ab.result.createObjectStore("store"), ab.onsuccess = () => bb(ab.result)
         }))
       }
-      tx(bb, cb) {
-        return kb.__awaiter(this, void 0, void 0, (function*() {
-          const sb = (yield this.dbPromise).transaction("store", bb).objectStore("store");
-          return cb(sb)
+      tx(bb, ab) {
+        return Ab.__awaiter(this, void 0, void 0, (function*() {
+          const Ub = (yield this.dbPromise).transaction("store", bb).objectStore("store");
+          return ab(Ub)
         }))
       }
-      setItem(bb, cb) {
-        return this.tx("readwrite", (sb => sb.put(cb, bb))).then()
+      setItem(bb, ab) {
+        return this.tx("readwrite", (Ub => Ub.put(ab, bb))).then()
       }
       getItem(bb) {
-        return kb.__awaiter(this, void 0, void 0, (function*() {
-          const cb = yield this.tx("readonly", (cb => cb.get(bb)));
+        return Ab.__awaiter(this, void 0, void 0, (function*() {
+          const ab = yield this.tx("readonly", (ab => ab.get(bb)));
           return new Promise((bb => {
-            cb.onsuccess = () => bb(cb.result)
+            ab.onsuccess = () => bb(ab.result)
           }))
         }))
       }
       removeItem(bb) {
-        return this.tx("readwrite", (cb => cb.delete(bb))).then()
+        return this.tx("readwrite", (ab => ab.delete(bb))).then()
       }
     }
-    cb.getItem = function(bb, cb) {
-      const sb = ab().getItem(bb);
-      "undefined" !== typeof Promise && sb instanceof Promise ? sb.then((bb => cb(bb))) : cb(sb)
-    }, cb.removeItem = function(bb) {
-      ab().removeItem(bb)
-    }, cb.setItem = function(bb, cb) {
-      ab().setItem(bb, cb)
+    ab.getItem = function(bb, ab) {
+      const Ub = Tb().getItem(bb);
+      "undefined" !== typeof Promise && Ub instanceof Promise ? Ub.then((bb => ab(bb))) : ab(Ub)
+    }, ab.removeItem = function(bb) {
+      Tb().removeItem(bb)
+    }, ab.setItem = function(bb, ab) {
+      Tb().setItem(bb, ab)
     }
   },
-  8742: (bb, cb) => {
-    cb.createNanoEvents = () => ({
+  8721: (bb, ab) => {
+    ab.createNanoEvents = () => ({
       emit(bb) {
-        let cb = this.events[bb] || [];
-        for (var sb = arguments.length, kb = new Array(sb > 1 ? sb - 1 : 0), Wb = 1; Wb < sb; Wb++) kb[Wb - 1] = arguments[Wb];
-        for (let ab = 0, Tb = cb.length; ab < Tb; ab++) cb[ab](...kb)
+        let ab = this.events[bb] || [];
+        for (var Ub = arguments.length, Ab = new Array(Ub > 1 ? Ub - 1 : 0), Mb = 1; Mb < Ub; Mb++) Ab[Mb - 1] = arguments[Mb];
+        for (let Tb = 0, Eb = ab.length; Tb < Eb; Tb++) ab[Tb](...Ab)
       },
       events: {},
-      on(bb, cb) {
-        var sb;
-        return (null === (sb = this.events[bb]) || void 0 === sb ? void 0 : sb.push(cb)) || (this.events[bb] = [cb]), () => {
-          var sb;
-          this.events[bb] = null === (sb = this.events[bb]) || void 0 === sb ? void 0 : sb.filter((bb => cb !== bb))
+      on(bb, ab) {
+        var Ub;
+        return (null === (Ub = this.events[bb]) || void 0 === Ub ? void 0 : Ub.push(ab)) || (this.events[bb] = [ab]), () => {
+          var Ub;
+          this.events[bb] = null === (Ub = this.events[bb]) || void 0 === Ub ? void 0 : Ub.filter((bb => ab !== bb))
         }
       }
     })
   },
-  8746: (bb, cb) => {
-    class sb {
+  8725: (bb, ab) => {
+    class Ub {
       constructor() {
         this.handlers = []
       }
@@ -570,82 +570,82 @@ export const modules = {
         return this.handlers.push(bb), this
       }
       invoke() {
-        for (var bb = arguments.length, cb = new Array(bb), sb = 0; sb < bb; sb++) cb[sb] = arguments[sb];
-        this.handlers.forEach((bb => bb.apply(this, cb)))
+        for (var bb = arguments.length, ab = new Array(bb), Ub = 0; Ub < bb; Ub++) ab[Ub] = arguments[Ub];
+        this.handlers.forEach((bb => bb.apply(this, ab)))
       }
       invokeAsync() {
-        for (var bb = arguments.length, cb = new Array(bb), sb = 0; sb < bb; sb++) cb[sb] = arguments[sb];
-        return Promise.all(this.handlers.map((bb => bb.apply(this, cb))))
+        for (var bb = arguments.length, ab = new Array(bb), Ub = 0; Ub < bb; Ub++) ab[Ub] = arguments[Ub];
+        return Promise.all(this.handlers.map((bb => bb.apply(this, ab))))
       }
       remove(bb) {
-        const cb = this.handlers.indexOf(bb);
-        this.handlers[cb] = this.handlers[this.handlers.length - 1], this.handlers.pop()
+        const ab = this.handlers.indexOf(bb);
+        this.handlers[ab] = this.handlers[this.handlers.length - 1], this.handlers.pop()
       }
       clear() {
         this.handlers = []
       }
     }
-    cb.EventEmitter = sb, cb.createSignal = function() {
-      const bb = new sb;
+    ab.EventEmitter = Ub, ab.createSignal = function() {
+      const bb = new Ub;
 
-      function cb(cb) {
-        return bb.register(cb, null === this)
+      function ab(ab) {
+        return bb.register(ab, null === this)
       }
-      return cb.once = cb => {
-        const sb = function() {
-          for (var kb = arguments.length, Wb = new Array(kb), ab = 0; ab < kb; ab++) Wb[ab] = arguments[ab];
-          cb.apply(this, Wb), bb.remove(sb)
+      return ab.once = ab => {
+        const Ub = function() {
+          for (var Ab = arguments.length, Mb = new Array(Ab), Tb = 0; Tb < Ab; Tb++) Mb[Tb] = arguments[Tb];
+          ab.apply(this, Mb), bb.remove(Ub)
         };
-        bb.register(sb)
-      }, cb.remove = cb => bb.remove(cb), cb.invoke = function() {
+        bb.register(Ub)
+      }, ab.remove = ab => bb.remove(ab), ab.invoke = function() {
         return bb.invoke(...arguments)
-      }, cb.invokeAsync = function() {
+      }, ab.invokeAsync = function() {
         return bb.invokeAsync(...arguments)
-      }, cb.clear = () => bb.clear(), cb
+      }, ab.clear = () => bb.clear(), ab
     }
   },
-  8689: (bb, cb) => {
-    var sb;
-    cb.CloseCode = void 0, (sb = cb.CloseCode || (cb.CloseCode = {}))[sb.CONSENTED = 4e3] = "CONSENTED", sb[sb.DEVMODE_RESTART = 4010] = "DEVMODE_RESTART";
-    class kb extends Error {
-      constructor(bb, cb) {
-        super(cb), this.name = "ServerError", this.code = bb
+  8670: (bb, ab) => {
+    var Ub;
+    ab.CloseCode = void 0, (Ub = ab.CloseCode || (ab.CloseCode = {}))[Ub.CONSENTED = 4e3] = "CONSENTED", Ub[Ub.DEVMODE_RESTART = 4010] = "DEVMODE_RESTART";
+    class Ab extends Error {
+      constructor(bb, ab) {
+        super(ab), this.name = "ServerError", this.code = bb
       }
     }
-    class Wb extends Error {
+    class Mb extends Error {
       constructor(bb) {
         super(bb), this.name = "AbortError"
       }
     }
-    cb.AbortError = Wb, cb.ServerError = kb
+    ab.AbortError = Mb, ab.ServerError = Ab
   },
-  8677: (bb, cb, sb) => {
-    sb(8681);
-    var kb = sb(8683),
-      Wb = sb(8735),
-      ab = sb(8695),
-      Tb = sb(8766),
-      Ub = sb(8689),
-      Ib = sb(8752),
-      Hb = sb(8785),
-      fb = sb(8740);
-    fb.registerSerializer("schema", Ib.aY), fb.registerSerializer("none", Hb.NoneSerializer), cb.Client = kb.Client, cb.MatchMakeError = kb.MatchMakeError, Object.defineProperty(cb, "ErrorCode", {
+  8650: (bb, ab, Ub) => {
+    Ub(8659);
+    var Ab = Ub(8663),
+      Mb = Ub(8706),
+      Tb = Ub(8678),
+      Eb = Ub(8747),
+      Yb = Ub(8670),
+      Bb = Ub(8727),
+      eb = Ub(8760),
+      vb = Ub(8713);
+    vb.registerSerializer("schema", Bb.ZN), vb.registerSerializer("none", eb.NoneSerializer), ab.Client = Ab.Client, ab.MatchMakeError = Ab.MatchMakeError, Object.defineProperty(ab, "ErrorCode", {
       enumerable: !0,
       get: function() {
-        return Wb.ErrorCode
+        return Mb.ErrorCode
       }
-    }), Object.defineProperty(cb, "Protocol", {
+    }), Object.defineProperty(ab, "Protocol", {
       enumerable: !0,
       get: function() {
-        return Wb.Protocol
+        return Mb.Protocol
       }
-    }), cb.bX = ab.bX, cb.Auth = Tb.Auth, cb.ServerError = Ub.ServerError, cb.aY = Ib.aY, cb.getStateCallbacks = Ib.getStateCallbacks, cb.registerSerializer = fb.registerSerializer
+    }), ab.IL = Tb.IL, ab.Auth = Eb.Auth, ab.ServerError = Yb.ServerError, ab.ZN = Bb.ZN, ab.getStateCallbacks = Bb.getStateCallbacks, ab.registerSerializer = vb.registerSerializer
   },
-  8681: () => {
+  8659: () => {
     ArrayBuffer.isView || (ArrayBuffer.isView = bb => null !== bb && "object" === typeof bb && bb.buffer instanceof ArrayBuffer), "undefined" === typeof globalThis && "undefined" !== typeof window && (window.globalThis = window), "undefined" === typeof FormData && (globalThis.FormData = class {})
   },
-  8785: (bb, cb) => {
-    cb.NoneSerializer = class {
+  8760: (bb, ab) => {
+    ab.NoneSerializer = class {
       setState(bb) {}
       getState() {
         return null
@@ -655,61 +655,61 @@ export const modules = {
       handshake(bb) {}
     }
   },
-  8752: (bb, cb, sb) => {
-    var kb = sb(8713);
-    cb.aY = class {
-      setState(bb, cb) {
-        this.Vm.decode(bb, cb)
+  8727: (bb, ab, Ub) => {
+    var Ab = Ub(8695);
+    ab.ZN = class {
+      setState(bb, ab) {
+        this.rX.decode(bb, ab)
       }
       getState() {
         return this.state
       }
-      patch(bb, cb) {
-        return this.Vm.decode(bb, cb)
+      patch(bb, ab) {
+        return this.rX.decode(bb, ab)
       }
       teardown() {
-        this.Vm.root.clearRefs()
+        this.rX.root.clearRefs()
       }
-      handshake(bb, cb) {
-        this.state ? (kb.Reflection.decode(bb, cb), this.Vm = new kb.Decoder(this.state)) : (this.Vm = kb.Reflection.decode(bb, cb), this.state = this.Vm.state)
+      handshake(bb, ab) {
+        this.state ? (Ab.Reflection.decode(bb, ab), this.rX = new Ab.Decoder(this.state)) : (this.rX = Ab.Reflection.decode(bb, ab), this.state = this.rX.state)
       }
-    }, cb.getStateCallbacks = function(bb) {
+    }, ab.getStateCallbacks = function(bb) {
       try {
-        return kb.getDecoderStateCallbacks(bb.lC.Vm)
-      } catch (cb) {
+        return Ab.getDecoderStateCallbacks(bb.Vk.rX)
+      } catch (ab) {
         return
       }
     }
   },
-  8740: (bb, cb) => {
-    const sb = {};
-    cb.getSerializer = function(bb) {
-      const cb = sb[bb];
-      if (!cb) throw new Error("missing serializer: " + bb);
-      return cb
-    }, cb.registerSerializer = function(bb, cb) {
-      sb[bb] = cb
+  8713: (bb, ab) => {
+    const Ub = {};
+    ab.getSerializer = function(bb) {
+      const ab = Ub[bb];
+      if (!ab) throw new Error("missing serializer: " + bb);
+      return ab
+    }, ab.registerSerializer = function(bb, ab) {
+      Ub[bb] = ab
     }
   },
-  8707: (bb, cb, sb) => {
-    var kb = sb(8686),
-      Wb = sb(8713);
-    cb.H3TransportTransport = class {
+  8687: (bb, ab, Ub) => {
+    var Ab = Ub(8665),
+      Mb = Ub(8695);
+    ab.H3TransportTransport = class {
       constructor(bb) {
         this.events = bb, this.isOpen = !1, this.lengthPrefixBuffer = new Uint8Array(9)
       }
       connect(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const sb = cb.fingerprint && {
+        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const Ub = ab.fingerprint && {
           serverCertificateHashes: [{
             algorithm: "sha-256",
-            value: new Uint8Array(cb.fingerprint).buffer
+            value: new Uint8Array(ab.fingerprint).buffer
           }]
         } || void 0;
-        this.wt = new WebTransport(bb, sb), this.wt.ready.then((bb => {
+        this.wt = new WebTransport(bb, Ub), this.wt.ready.then((bb => {
           console.log("WebTransport ready!", bb), this.isOpen = !0, this.unreliableReader = this.wt.datagrams.readable.getReader(), this.unreliableWriter = this.wt.datagrams.writable.getWriter();
           this.wt.incomingBidirectionalStreams.getReader().read().then((bb => {
-            this.reader = bb.value.readable.getReader(), this.writer = bb.value.writable.getWriter(), this.sendSeatReservation(cb.room.roomId, cb.sessionId, cb.reconnectionToken), this.readIncomingData(), this.readIncomingUnreliableData()
+            this.reader = bb.value.readable.getReader(), this.writer = bb.value.writable.getWriter(), this.sendSeatReservation(ab.room.roomId, ab.sessionId, ab.reconnectionToken), this.readIncomingData(), this.readIncomingUnreliableData()
           })).catch((bb => {
             console.error("failed to read incoming stream", bb), console.error("TODO: close the connection")
           }))
@@ -730,47 +730,47 @@ export const modules = {
         }))
       }
       send(bb) {
-        const cb = Wb.encode.number(this.lengthPrefixBuffer, bb.length, {
+        const ab = Mb.encode.number(this.lengthPrefixBuffer, bb.length, {
             offset: 0
           }),
-          sb = new Uint8Array(cb + bb.length);
-        sb.set(this.lengthPrefixBuffer.subarray(0, cb), 0), sb.set(bb, cb), this.writer.write(sb)
+          Ub = new Uint8Array(ab + bb.length);
+        Ub.set(this.lengthPrefixBuffer.subarray(0, ab), 0), Ub.set(bb, ab), this.writer.write(Ub)
       }
       sendUnreliable(bb) {
-        const cb = Wb.encode.number(this.lengthPrefixBuffer, bb.length, {
+        const ab = Mb.encode.number(this.lengthPrefixBuffer, bb.length, {
             offset: 0
           }),
-          sb = new Uint8Array(cb + bb.length);
-        sb.set(this.lengthPrefixBuffer.subarray(0, cb), 0), sb.set(bb, cb), this.unreliableWriter.write(sb)
+          Ub = new Uint8Array(ab + bb.length);
+        Ub.set(this.lengthPrefixBuffer.subarray(0, ab), 0), Ub.set(bb, ab), this.unreliableWriter.write(Ub)
       }
-      close(bb, cb) {
+      close(bb, ab) {
         try {
           this.wt.close({
             closeCode: bb,
-            reason: cb
+            reason: ab
           })
-        } catch (sb) {
-          console.error(sb)
+        } catch (Ub) {
+          console.error(Ub)
         }
       }
       readIncomingData() {
-        return kb.__awaiter(this, void 0, void 0, (function*() {
+        return Ab.__awaiter(this, void 0, void 0, (function*() {
           let bb;
           for (; this.isOpen;) {
             try {
               bb = yield this.reader.read();
-              const cb = bb.value,
-                sb = {
+              const ab = bb.value,
+                Ub = {
                   offset: 0
                 };
               do {
-                const bb = Wb.decode.number(cb, sb);
+                const bb = Mb.decode.number(ab, Ub);
                 this.events.onmessage({
-                  data: cb.subarray(sb.offset, sb.offset + bb)
-                }), sb.offset += bb
-              } while (sb.offset < cb.length)
-            } catch (cb) {
-              -1 === cb.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", cb);
+                  data: ab.subarray(Ub.offset, Ub.offset + bb)
+                }), Ub.offset += bb
+              } while (Ub.offset < ab.length)
+            } catch (ab) {
+              -1 === ab.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", ab);
               break
             }
             if (bb.done) break
@@ -778,45 +778,45 @@ export const modules = {
         }))
       }
       readIncomingUnreliableData() {
-        return kb.__awaiter(this, void 0, void 0, (function*() {
+        return Ab.__awaiter(this, void 0, void 0, (function*() {
           let bb;
           for (; this.isOpen;) {
             try {
               bb = yield this.unreliableReader.read();
-              const cb = bb.value,
-                sb = {
+              const ab = bb.value,
+                Ub = {
                   offset: 0
                 };
               do {
-                const bb = Wb.decode.number(cb, sb);
+                const bb = Mb.decode.number(ab, Ub);
                 this.events.onmessage({
-                  data: cb.subarray(sb.offset, sb.offset + bb)
-                }), sb.offset += bb
-              } while (sb.offset < cb.length)
-            } catch (cb) {
-              -1 === cb.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", cb);
+                  data: ab.subarray(Ub.offset, Ub.offset + bb)
+                }), Ub.offset += bb
+              } while (Ub.offset < ab.length)
+            } catch (ab) {
+              -1 === ab.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", ab);
               break
             }
             if (bb.done) break
           }
         }))
       }
-      sendSeatReservation(bb, cb, sb) {
-        const kb = {
+      sendSeatReservation(bb, ab, Ub) {
+        const Ab = {
             offset: 0
           },
-          ab = [];
-        Wb.encode.string(ab, bb, kb), Wb.encode.string(ab, cb, kb), sb && Wb.encode.string(ab, sb, kb), this.writer.write(new Uint8Array(ab).buffer)
+          Tb = [];
+        Mb.encode.string(Tb, bb, Ab), Mb.encode.string(Tb, ab, Ab), Ub && Mb.encode.string(Tb, Ub, Ab), this.writer.write(new Uint8Array(Tb).buffer)
       }
       _close() {
         this.isOpen = !1
       }
     }
   },
-  8719: (bb, cb, sb) => {
-    var kb = sb(8726);
-    const Wb = globalThis.WebSocket || kb;
-    cb.WebSocketTransport = class {
+  8697: (bb, ab, Ub) => {
+    var Ab = Ub(8701);
+    const Mb = globalThis.WebSocket || Ab;
+    ab.WebSocketTransport = class {
       constructor(bb) {
         this.events = bb
       }
@@ -826,330 +826,330 @@ export const modules = {
       sendUnreliable(bb) {
         console.warn("colyseus.js: The WebSocket transport does not support unreliable messages")
       }
-      connect(bb, cb) {
+      connect(bb, ab) {
         try {
-          this.ws = new Wb(bb, {
-            headers: cb,
+          this.ws = new Mb(bb, {
+            headers: ab,
             protocols: this.protocols
           })
-        } catch (sb) {
-          this.ws = new Wb(bb, this.protocols)
+        } catch (Ub) {
+          this.ws = new Mb(bb, this.protocols)
         }
         this.ws.binaryType = "arraybuffer", this.ws.onopen = this.events.onopen, this.ws.onmessage = this.events.onmessage, this.ws.onclose = this.events.onclose, this.ws.onerror = this.events.onerror
       }
-      close(bb, cb) {
-        this.ws.close(bb, cb)
+      close(bb, ab) {
+        this.ws.close(bb, ab)
       }
       get isOpen() {
-        return this.ws.readyState === Wb.OPEN
+        return this.ws.readyState === Mb.OPEN
       }
     }
   },
-  8726: bb => {
+  8701: bb => {
     bb.exports = function() {
       throw new Error("ws does not work in the browser. Browser clients must use the native WebSocket object")
     }
   },
-  8762: (bb, cb, sb) => {
-    function kb(bb, cb) {
-      cb.headers = bb.headers || {}, cb.statusMessage = bb.statusText, cb.statusCode = bb.status, cb.data = bb.response
+  8745: (bb, ab, Ub) => {
+    function Ab(bb, ab) {
+      ab.headers = bb.headers || {}, ab.statusMessage = bb.statusText, ab.statusCode = bb.status, ab.data = bb.response
     }
 
-    function Wb(bb, cb, sb) {
-      return new Promise((function(Wb, ab) {
-        sb = sb || {};
-        var Tb, Ub, Ib, Hb = new XMLHttpRequest,
-          fb = sb.body,
-          Mb = sb.headers || {};
-        for (Tb in sb.timeout && (Hb.timeout = sb.timeout), Hb.ontimeout = Hb.onerror = function(bb) {
-            bb.timeout = "timeout" == bb.type, ab(bb)
-          }, Hb.onabort = function(bb) {
-            bb.aborted = !0, ab(bb)
-          }, Hb.open(bb, cb.href || cb), Hb.onload = function() {
-            for (Ib = Hb.getAllResponseHeaders().trim().split(/[\r\n]+/), kb(Hb, Hb); Ub = Ib.shift();) Ub = Ub.split(": "), Hb.headers[Ub.shift().toLowerCase()] = Ub.join(": ");
-            if ((Ub = Hb.headers["content-type"]) && ~Ub.indexOf("application/json")) try {
-              Hb.data = JSON.parse(Hb.data, sb.reviver)
+    function Mb(bb, ab, Ub) {
+      return new Promise((function(Mb, Tb) {
+        Ub = Ub || {};
+        var Eb, Yb, Bb, eb = new XMLHttpRequest,
+          vb = Ub.body,
+          Lb = Ub.headers || {};
+        for (Eb in Ub.timeout && (eb.timeout = Ub.timeout), eb.ontimeout = eb.onerror = function(bb) {
+            bb.timeout = "timeout" == bb.type, Tb(bb)
+          }, eb.onabort = function(bb) {
+            bb.aborted = !0, Tb(bb)
+          }, eb.open(bb, ab.href || ab), eb.onload = function() {
+            for (Bb = eb.getAllResponseHeaders().trim().split(/[\r\n]+/), Ab(eb, eb); Yb = Bb.shift();) Yb = Yb.split(": "), eb.headers[Yb.shift().toLowerCase()] = Yb.join(": ");
+            if ((Yb = eb.headers["content-type"]) && ~Yb.indexOf("application/json")) try {
+              eb.data = JSON.parse(eb.data, Ub.reviver)
             } catch (bb) {
-              return kb(Hb, bb), ab(bb)
-            }(Hb.status >= 400 ? ab : Wb)(Hb)
-          }, typeof FormData < "u" && fb instanceof FormData || fb && "object" == typeof fb && (Mb["content-type"] = "application/json", fb = JSON.stringify(fb)), Hb.withCredentials = !!sb.withCredentials, Mb) Hb.setRequestHeader(Tb, Mb[Tb]);
-        Hb.send(fb), sb.signal && sb.signal.addEventListener("abort", (function() {
-          Hb.abort()
+              return Ab(eb, bb), Tb(bb)
+            }(eb.status >= 400 ? Tb : Mb)(eb)
+          }, typeof FormData < "u" && vb instanceof FormData || vb && "object" == typeof vb && (Lb["content-type"] = "application/json", vb = JSON.stringify(vb)), eb.withCredentials = !!Ub.withCredentials, Lb) eb.setRequestHeader(Eb, Lb[Eb]);
+        eb.send(vb), Ub.signal && Ub.signal.addEventListener("abort", (function() {
+          eb.abort()
         }))
       }))
     }
-    sb.r(cb), sb.d(cb, {
-      del: () => Ib,
-      get: () => ab,
-      patch: () => Ub,
-      post: () => Tb,
-      put: () => Hb,
-      send: () => Wb
+    Ub.r(ab), Ub.d(ab, {
+      del: () => Bb,
+      get: () => Tb,
+      patch: () => Yb,
+      post: () => Eb,
+      put: () => eb,
+      send: () => Mb
     });
-    var ab = Wb.bind(Wb, "GET"),
-      Tb = Wb.bind(Wb, "POST"),
-      Ub = Wb.bind(Wb, "PATCH"),
-      Ib = Wb.bind(Wb, "DELETE"),
-      Hb = Wb.bind(Wb, "PUT")
+    var Tb = Mb.bind(Mb, "GET"),
+      Eb = Mb.bind(Mb, "POST"),
+      Yb = Mb.bind(Mb, "PATCH"),
+      Bb = Mb.bind(Mb, "DELETE"),
+      eb = Mb.bind(Mb, "PUT")
   },
-  8757: (bb, cb, sb) => {
-    var kb, Wb, ab;
-    sb.r(cb), sb.d(cb, {
-      ALWAYS: () => Sc,
-      C1: () => Lb,
-      DECIMAL_FIT: () => vc,
-      DECIMAL_ROUND: () => Rc,
-      Decoder: () => Ic,
-      Encoder: () => rc,
-      FLOAT32_OPTIONS: () => nc,
-      NEVER: () => oc,
-      Packr: () => ic,
-      RESERVE_START_SPACE: () => jc,
-      RESET_BUFFER_MODE: () => xc,
-      REUSE_BUFFER_MODE: () => Fc,
-      Unpackr: () => Bb,
-      addExtension: () => zc,
-      clearSource: () => Tc,
-      decode: () => Xc,
-      decodeIter: () => pc,
-      encode: () => wc,
-      encodeIter: () => bs,
-      isNativeAccelerationEnabled: () => qb,
-      mapsAsObjects: () => ss,
-      pack: () => Ac,
-      roundFloat32: () => Nc,
-      unpack: () => fc,
-      unpackMultiple: () => Mc,
-      useRecords: () => cs
+  8733: (bb, ab, Ub) => {
+    var Ab, Mb, Tb;
+    Ub.r(ab), Ub.d(ab, {
+      ALWAYS: () => Ca,
+      C1: () => xb,
+      DECIMAL_FIT: () => Oa,
+      DECIMAL_ROUND: () => Va,
+      Decoder: () => Ba,
+      Encoder: () => sa,
+      FLOAT32_OPTIONS: () => Xa,
+      NEVER: () => ga,
+      Packr: () => Ga,
+      RESERVE_START_SPACE: () => na,
+      RESET_BUFFER_MODE: () => Ja,
+      REUSE_BUFFER_MODE: () => ca,
+      Unpackr: () => Wb,
+      addExtension: () => Ka,
+      clearSource: () => Ea,
+      decode: () => Pa,
+      decodeIter: () => Sa,
+      encode: () => wa,
+      encodeIter: () => bU,
+      isNativeAccelerationEnabled: () => ob,
+      mapsAsObjects: () => UU,
+      pack: () => ta,
+      roundFloat32: () => Da,
+      unpack: () => va,
+      unpackMultiple: () => La,
+      useRecords: () => aU
     });
     try {
-      kb = new TextDecoder
-    } catch (ks) {}
-    var Tb = 0;
-    const Ub = [];
-    var Ib, Hb, fb, Mb, Xb, nb = Ub,
-      mb = 0,
-      lb = {},
-      Qb = 0,
-      eb = 0,
-      Cb = [],
-      Nb = {
+      Ab = new TextDecoder
+    } catch (AU) {}
+    var Eb = 0;
+    const Yb = [];
+    var Bb, eb, vb, Lb, Pb, Xb = Yb,
+      jb = 0,
+      Rb = {},
+      kb = 0,
+      yb = 0,
+      Zb = [],
+      Db = {
         useRecords: !1,
         mapsAsObjects: !0
       };
-    class Vb {}
-    const Lb = new Vb;
-    Lb.name = "MessagePack 0xC1";
-    var ub, Yb, hb, Jb = !1,
-      gb = 2;
+    class zb {}
+    const xb = new zb;
+    xb.name = "MessagePack 0xC1";
+    var ib, fb, mb, pb = !1,
+      Nb = 2;
     try {
       new Function("")
-    } catch (ks) {
-      gb = 1 / 0
+    } catch (AU) {
+      Nb = 1 / 0
     }
-    class Bb {
+    class Wb {
       constructor(bb) {
         bb && (!1 === bb.useRecords && void 0 === bb.mapsAsObjects && (bb.mapsAsObjects = !0), bb.sequential && !1 !== bb.trusted && (bb.trusted = !0, bb.structures || 0 == bb.useRecords || (bb.structures = [], bb.maxSharedStructures || (bb.maxSharedStructures = 0))), bb.structures ? bb.structures.sharedLength = bb.structures.length : bb.getStructures && ((bb.structures = []).uninitialized = !0, bb.structures.sharedLength = 0), bb.int64AsNumber && (bb.int64AsType = "number")), Object.assign(this, bb)
       }
-      unpack(bb, cb) {
-        if (Wb) return ac((() => (Tc(), this ? this.unpack(bb, cb) : Bb.prototype.unpack.call(Nb, bb, cb))));
-        bb.buffer || bb.constructor !== ArrayBuffer || (bb = "undefined" !== typeof Buffer ? Buffer.from(bb) : new Uint8Array(bb)), "object" === typeof cb ? (ab = cb.end || bb.length, Tb = cb.start || 0) : (Tb = 0, ab = cb > -1 ? cb : bb.length), mb = 0, eb = 0, Hb = null, nb = Ub, fb = null, Wb = bb;
+      unpack(bb, ab) {
+        if (Mb) return Ta((() => (Ea(), this ? this.unpack(bb, ab) : Wb.prototype.unpack.call(Db, bb, ab))));
+        bb.buffer || bb.constructor !== ArrayBuffer || (bb = "undefined" !== typeof Buffer ? Buffer.from(bb) : new Uint8Array(bb)), "object" === typeof ab ? (Tb = ab.end || bb.length, Eb = ab.start || 0) : (Eb = 0, Tb = ab > -1 ? ab : bb.length), jb = 0, yb = 0, eb = null, Xb = Yb, vb = null, Mb = bb;
         try {
-          Xb = bb.dataView || (bb.dataView = new DataView(bb.buffer, bb.byteOffset, bb.byteLength))
-        } catch (ks) {
-          if (Wb = null, bb instanceof Uint8Array) throw ks;
+          Pb = bb.dataView || (bb.dataView = new DataView(bb.buffer, bb.byteOffset, bb.byteLength))
+        } catch (AU) {
+          if (Mb = null, bb instanceof Uint8Array) throw AU;
           throw new Error("Source must be a Uint8Array or Buffer but was a " + (bb && "object" == typeof bb ? bb.constructor.name : typeof bb))
         }
-        if (this instanceof Bb) {
-          if (lb = this, this.structures) return Ib = this.structures, tb(cb);
-          (!Ib || Ib.length > 0) && (Ib = [])
-        } else lb = Nb, (!Ib || Ib.length > 0) && (Ib = []);
-        return tb(cb)
+        if (this instanceof Wb) {
+          if (Rb = this, this.structures) return Bb = this.structures, Hb(ab);
+          (!Bb || Bb.length > 0) && (Bb = [])
+        } else Rb = Db, (!Bb || Bb.length > 0) && (Bb = []);
+        return Hb(ab)
       }
-      unpackMultiple(bb, cb) {
-        let sb, kb = 0;
+      unpackMultiple(bb, ab) {
+        let Ub, Ab = 0;
         try {
-          Jb = !0;
-          let Wb = bb.length,
-            ab = this ? this.unpack(bb, Wb) : Hc.unpack(bb, Wb);
-          if (!cb) {
-            for (sb = [ab]; Tb < Wb;) kb = Tb, sb.push(tb());
-            return sb
+          pb = !0;
+          let Mb = bb.length,
+            Tb = this ? this.unpack(bb, Mb) : ea.unpack(bb, Mb);
+          if (!ab) {
+            for (Ub = [Tb]; Eb < Mb;) Ab = Eb, Ub.push(Hb());
+            return Ub
           }
-          if (!1 === cb(ab, kb, Tb)) return;
-          for (; Tb < Wb;)
-            if (kb = Tb, !1 === cb(tb(), kb, Tb)) return
-        } catch (ks) {
-          throw ks.lastPosition = kb, ks.values = sb, ks
+          if (!1 === ab(Tb, Ab, Eb)) return;
+          for (; Eb < Mb;)
+            if (Ab = Eb, !1 === ab(Hb(), Ab, Eb)) return
+        } catch (AU) {
+          throw AU.lastPosition = Ab, AU.values = Ub, AU
         } finally {
-          Jb = !1, Tc()
+          pb = !1, Ea()
         }
       }
-      _mergeStructures(bb, cb) {
-        Yb && (bb = Yb.call(this, bb)), bb = bb || [], Object.isFrozen(bb) && (bb = bb.map((bb => bb.slice(0))));
-        for (let sb = 0, kb = bb.length; sb < kb; sb++) {
-          let cb = bb[sb];
-          cb && (cb.isShared = !0, sb >= 32 && (cb.highByte = sb - 32 >> 5))
+      _mergeStructures(bb, ab) {
+        fb && (bb = fb.call(this, bb)), bb = bb || [], Object.isFrozen(bb) && (bb = bb.map((bb => bb.slice(0))));
+        for (let Ub = 0, Ab = bb.length; Ub < Ab; Ub++) {
+          let ab = bb[Ub];
+          ab && (ab.isShared = !0, Ub >= 32 && (ab.highByte = Ub - 32 >> 5))
         }
         bb.sharedLength = bb.length;
-        for (let sb in cb || [])
-          if (sb >= 0) {
-            let kb = bb[sb],
-              Wb = cb[sb];
-            Wb && (kb && ((bb.restoreStructures || (bb.restoreStructures = []))[sb] = kb), bb[sb] = Wb)
+        for (let Ub in ab || [])
+          if (Ub >= 0) {
+            let Ab = bb[Ub],
+              Mb = ab[Ub];
+            Mb && (Ab && ((bb.restoreStructures || (bb.restoreStructures = []))[Ub] = Ab), bb[Ub] = Mb)
           } return this.structures = bb
       }
-      decode(bb, cb) {
-        return this.unpack(bb, cb)
+      decode(bb, ab) {
+        return this.unpack(bb, ab)
       }
     }
 
-    function tb(bb) {
+    function Hb(bb) {
       try {
-        if (!lb.trusted && !Jb) {
-          let bb = Ib.sharedLength || 0;
-          bb < Ib.length && (Ib.length = bb)
+        if (!Rb.trusted && !pb) {
+          let bb = Bb.sharedLength || 0;
+          bb < Bb.length && (Bb.length = bb)
         }
-        let cb;
-        if (lb.randomAccessStructure && Wb[Tb] < 64 && Wb[Tb] >= 32 && ub ? (cb = ub(Wb, Tb, ab, lb), Wb = null, bb && bb.lazy || !cb || (cb = cb.toJSON()), Tb = ab) : cb = Pb(), fb && (Tb = fb.postBundlePosition, fb = null), Jb && (Ib.restoreStructures = null), Tb == ab) Ib && Ib.restoreStructures && yb(), Ib = null, Wb = null, Mb && (Mb = null);
+        let ab;
+        if (Rb.randomAccessStructure && Mb[Eb] < 64 && Mb[Eb] >= 32 && ib ? (ab = ib(Mb, Eb, Tb, Rb), Mb = null, bb && bb.lazy || !ab || (ab = ab.toJSON()), Eb = Tb) : ab = db(), vb && (Eb = vb.postBundlePosition, vb = null), pb && (Bb.restoreStructures = null), Eb == Tb) Bb && Bb.restoreStructures && Ib(), Bb = null, Mb = null, Lb && (Lb = null);
         else {
-          if (Tb > ab) throw new Error("Unexpected end of MessagePack data");
-          if (!Jb) {
+          if (Eb > Tb) throw new Error("Unexpected end of MessagePack data");
+          if (!pb) {
             let bb;
             try {
-              bb = JSON.stringify(cb, ((bb, cb) => "bigint" === typeof cb ? `${cb}n` : cb)).slice(0, 100)
-            } catch (ks) {
-              bb = "(JSON view not available " + ks + ")"
+              bb = JSON.stringify(ab, ((bb, ab) => "bigint" === typeof ab ? `${ab}n` : ab)).slice(0, 100)
+            } catch (AU) {
+              bb = "(JSON view not available " + AU + ")"
             }
             throw new Error("Data read, but end of buffer not reached " + bb)
           }
         }
-        return cb
-      } catch (ks) {
-        throw Ib && Ib.restoreStructures && yb(), Tc(), (ks instanceof RangeError || ks.message.startsWith("Unexpected end of buffer") || Tb > ab) && (ks.incomplete = !0), ks
+        return ab
+      } catch (AU) {
+        throw Bb && Bb.restoreStructures && Ib(), Ea(), (AU instanceof RangeError || AU.message.startsWith("Unexpected end of buffer") || Eb > Tb) && (AU.incomplete = !0), AU
       }
     }
 
-    function yb() {
-      for (let bb in Ib.restoreStructures) Ib[bb] = Ib.restoreStructures[bb];
-      Ib.restoreStructures = null
+    function Ib() {
+      for (let bb in Bb.restoreStructures) Bb[bb] = Bb.restoreStructures[bb];
+      Bb.restoreStructures = null
     }
 
-    function Pb() {
-      let bb = Wb[Tb++];
+    function db() {
+      let bb = Mb[Eb++];
       if (bb < 160) {
         if (bb < 128) {
           if (bb < 64) return bb;
           {
-            let cb = Ib[63 & bb] || lb.getStructures && Ob()[63 & bb];
-            return cb ? (cb.read || (cb.read = Eb(cb, 63 & bb)), cb.read()) : bb
+            let ab = Bb[63 & bb] || Rb.getStructures && Qb()[63 & bb];
+            return ab ? (ab.read || (ab.read = hb(ab, 63 & bb)), ab.read()) : bb
           }
         }
         if (bb < 144) {
-          if (bb -= 128, lb.mapsAsObjects) {
-            let cb = {};
-            for (let sb = 0; sb < bb; sb++) {
-              let bb = jb();
-              "__proto__" === bb && (bb = "__proto_"), cb[bb] = Pb()
+          if (bb -= 128, Rb.mapsAsObjects) {
+            let ab = {};
+            for (let Ub = 0; Ub < bb; Ub++) {
+              let bb = nb();
+              "__proto__" === bb && (bb = "__proto_"), ab[bb] = db()
             }
-            return cb
+            return ab
           } {
-            let cb = new Map;
-            for (let sb = 0; sb < bb; sb++) cb.set(Pb(), Pb());
-            return cb
+            let ab = new Map;
+            for (let Ub = 0; Ub < bb; Ub++) ab.set(db(), db());
+            return ab
           }
         } {
           bb -= 144;
-          let cb = new Array(bb);
-          for (let sb = 0; sb < bb; sb++) cb[sb] = Pb();
-          return lb.freezeData ? Object.freeze(cb) : cb
+          let ab = new Array(bb);
+          for (let Ub = 0; Ub < bb; Ub++) ab[Ub] = db();
+          return Rb.freezeData ? Object.freeze(ab) : ab
         }
       }
       if (bb < 192) {
-        let cb = bb - 160;
-        if (eb >= Tb) return Hb.slice(Tb - Qb, (Tb += cb) - Qb);
-        if (0 == eb && ab < 140) {
-          let bb = cb < 16 ? Sb(cb) : ob(cb);
+        let ab = bb - 160;
+        if (yb >= Eb) return eb.slice(Eb - kb, (Eb += ab) - kb);
+        if (0 == yb && Tb < 140) {
+          let bb = ab < 16 ? Cb(ab) : gb(ab);
           if (null != bb) return bb
         }
-        return Gb(cb)
+        return qb(ab)
       } {
-        let cb;
+        let ab;
         switch (bb) {
           case 192:
             return null;
           case 193:
-            return fb ? (cb = Pb(), cb > 0 ? fb[1].slice(fb.position1, fb.position1 += cb) : fb[0].slice(fb.position0, fb.position0 -= cb)) : Lb;
+            return vb ? (ab = db(), ab > 0 ? vb[1].slice(vb.position1, vb.position1 += ab) : vb[0].slice(vb.position0, vb.position0 -= ab)) : xb;
           case 194:
             return !1;
           case 195:
             return !0;
           case 196:
-            if (cb = Wb[Tb++], void 0 === cb) throw new Error("Unexpected end of buffer");
-            return vb(cb);
+            if (ab = Mb[Eb++], void 0 === ab) throw new Error("Unexpected end of buffer");
+            return Ob(ab);
           case 197:
-            return cb = Xb.getUint16(Tb), Tb += 2, vb(cb);
+            return ab = Pb.getUint16(Eb), Eb += 2, Ob(ab);
           case 198:
-            return cb = Xb.getUint32(Tb), Tb += 4, vb(cb);
+            return ab = Pb.getUint32(Eb), Eb += 4, Ob(ab);
           case 199:
-            return Fb(Wb[Tb++]);
+            return cb(Mb[Eb++]);
           case 200:
-            return cb = Xb.getUint16(Tb), Tb += 2, Fb(cb);
+            return ab = Pb.getUint16(Eb), Eb += 2, cb(ab);
           case 201:
-            return cb = Xb.getUint32(Tb), Tb += 4, Fb(cb);
+            return ab = Pb.getUint32(Eb), Eb += 4, cb(ab);
           case 202:
-            if (cb = Xb.getFloat32(Tb), lb.useFloat32 > 2) {
-              let bb = Uc[(127 & Wb[Tb]) << 1 | Wb[Tb + 1] >> 7];
-              return Tb += 4, (bb * cb + (cb > 0 ? .5 : -.5) | 0) / bb
+            if (ab = Pb.getFloat32(Eb), Rb.useFloat32 > 2) {
+              let bb = Ya[(127 & Mb[Eb]) << 1 | Mb[Eb + 1] >> 7];
+              return Eb += 4, (bb * ab + (ab > 0 ? .5 : -.5) | 0) / bb
             }
-            return Tb += 4, cb;
+            return Eb += 4, ab;
           case 203:
-            return cb = Xb.getFloat64(Tb), Tb += 8, cb;
+            return ab = Pb.getFloat64(Eb), Eb += 8, ab;
           case 204:
-            return Wb[Tb++];
+            return Mb[Eb++];
           case 205:
-            return cb = Xb.getUint16(Tb), Tb += 2, cb;
+            return ab = Pb.getUint16(Eb), Eb += 2, ab;
           case 206:
-            return cb = Xb.getUint32(Tb), Tb += 4, cb;
+            return ab = Pb.getUint32(Eb), Eb += 4, ab;
           case 207:
-            return "number" === lb.int64AsType ? (cb = 4294967296 * Xb.getUint32(Tb), cb += Xb.getUint32(Tb + 4)) : "string" === lb.int64AsType ? cb = Xb.getBigUint64(Tb).toString() : "auto" === lb.int64AsType ? (cb = Xb.getBigUint64(Tb), cb <= BigInt(2) << BigInt(52) && (cb = Number(cb))) : cb = Xb.getBigUint64(Tb), Tb += 8, cb;
+            return "number" === Rb.int64AsType ? (ab = 4294967296 * Pb.getUint32(Eb), ab += Pb.getUint32(Eb + 4)) : "string" === Rb.int64AsType ? ab = Pb.getBigUint64(Eb).toString() : "auto" === Rb.int64AsType ? (ab = Pb.getBigUint64(Eb), ab <= BigInt(2) << BigInt(52) && (ab = Number(ab))) : ab = Pb.getBigUint64(Eb), Eb += 8, ab;
           case 208:
-            return Xb.getInt8(Tb++);
+            return Pb.getInt8(Eb++);
           case 209:
-            return cb = Xb.getInt16(Tb), Tb += 2, cb;
+            return ab = Pb.getInt16(Eb), Eb += 2, ab;
           case 210:
-            return cb = Xb.getInt32(Tb), Tb += 4, cb;
+            return ab = Pb.getInt32(Eb), Eb += 4, ab;
           case 211:
-            return "number" === lb.int64AsType ? (cb = 4294967296 * Xb.getInt32(Tb), cb += Xb.getUint32(Tb + 4)) : "string" === lb.int64AsType ? cb = Xb.getBigInt64(Tb).toString() : "auto" === lb.int64AsType ? (cb = Xb.getBigInt64(Tb), cb >= BigInt(-2) << BigInt(52) && cb <= BigInt(2) << BigInt(52) && (cb = Number(cb))) : cb = Xb.getBigInt64(Tb), Tb += 8, cb;
+            return "number" === Rb.int64AsType ? (ab = 4294967296 * Pb.getInt32(Eb), ab += Pb.getUint32(Eb + 4)) : "string" === Rb.int64AsType ? ab = Pb.getBigInt64(Eb).toString() : "auto" === Rb.int64AsType ? (ab = Pb.getBigInt64(Eb), ab >= BigInt(-2) << BigInt(52) && ab <= BigInt(2) << BigInt(52) && (ab = Number(ab))) : ab = Pb.getBigInt64(Eb), Eb += 8, ab;
           case 212:
-            if (cb = Wb[Tb++], 114 == cb) return bc(63 & Wb[Tb++]);
+            if (ab = Mb[Eb++], 114 == ab) return ba(63 & Mb[Eb++]);
             {
-              let bb = Cb[cb];
-              if (bb) return bb.read ? (Tb++, bb.read(Pb())) : bb.noBuffer ? (Tb++, bb()) : bb(Wb.subarray(Tb, ++Tb));
-              throw new Error("Unknown extension " + cb)
+              let bb = Zb[ab];
+              if (bb) return bb.read ? (Eb++, bb.read(db())) : bb.noBuffer ? (Eb++, bb()) : bb(Mb.subarray(Eb, ++Eb));
+              throw new Error("Unknown extension " + ab)
             }
           case 213:
-            return cb = Wb[Tb], 114 == cb ? (Tb++, bc(63 & Wb[Tb++], Wb[Tb++])) : Fb(2);
+            return ab = Mb[Eb], 114 == ab ? (Eb++, ba(63 & Mb[Eb++], Mb[Eb++])) : cb(2);
           case 214:
-            return Fb(4);
+            return cb(4);
           case 215:
-            return Fb(8);
+            return cb(8);
           case 216:
-            return Fb(16);
+            return cb(16);
           case 217:
-            return cb = Wb[Tb++], eb >= Tb ? Hb.slice(Tb - Qb, (Tb += cb) - Qb) : Kb(cb);
+            return ab = Mb[Eb++], yb >= Eb ? eb.slice(Eb - kb, (Eb += ab) - kb) : ub(ab);
           case 218:
-            return cb = Xb.getUint16(Tb), eb >= (Tb += 2) ? Hb.slice(Tb - Qb, (Tb += cb) - Qb) : Zb(cb);
+            return ab = Pb.getUint16(Eb), yb >= (Eb += 2) ? eb.slice(Eb - kb, (Eb += ab) - kb) : rb(ab);
           case 219:
-            return cb = Xb.getUint32(Tb), eb >= (Tb += 4) ? Hb.slice(Tb - Qb, (Tb += cb) - Qb) : zb(cb);
+            return ab = Pb.getUint32(Eb), yb >= (Eb += 4) ? eb.slice(Eb - kb, (Eb += ab) - kb) : Kb(ab);
           case 220:
-            return cb = Xb.getUint16(Tb), Tb += 2, Ab(cb);
+            return ab = Pb.getUint16(Eb), Eb += 2, tb(ab);
           case 221:
-            return cb = Xb.getUint32(Tb), Tb += 4, Ab(cb);
+            return ab = Pb.getUint32(Eb), Eb += 4, tb(ab);
           case 222:
-            return cb = Xb.getUint16(Tb), Tb += 2, wb(cb);
+            return ab = Pb.getUint16(Eb), Eb += 2, wb(ab);
           case 223:
-            return cb = Xb.getUint32(Tb), Tb += 4, wb(cb);
+            return ab = Pb.getUint32(Eb), Eb += 4, wb(ab);
           default:
             if (bb >= 224) return bb - 256;
             if (void 0 === bb) {
@@ -1160,1022 +1160,1022 @@ export const modules = {
         }
       }
     }
-    const Db = /^[a-zA-Z_$][a-zA-Z\d_$]*$/;
+    const Fb = /^[a-zA-Z_$][a-zA-Z\d_$]*$/;
 
-    function Eb(bb, cb) {
-      function sb() {
-        if (sb.count++ > gb) {
-          let sb = bb.read = new Function("r", "return function(){return " + (lb.freezeData ? "Object.freeze" : "") + "({" + bb.map((bb => "__proto__" === bb ? "__proto_:r()" : Db.test(bb) ? bb + ":r()" : "[" + JSON.stringify(bb) + "]:r()")).join(",") + "})}")(Pb);
-          return 0 === bb.highByte && (bb.read = ib(cb, bb.read)), sb()
+    function hb(bb, ab) {
+      function Ub() {
+        if (Ub.count++ > Nb) {
+          let Ub = bb.read = new Function("r", "return function(){return " + (Rb.freezeData ? "Object.freeze" : "") + "({" + bb.map((bb => "__proto__" === bb ? "__proto_:r()" : Fb.test(bb) ? bb + ":r()" : "[" + JSON.stringify(bb) + "]:r()")).join(",") + "})}")(db);
+          return 0 === bb.highByte && (bb.read = Gb(ab, bb.read)), Ub()
         }
-        let kb = {};
-        for (let cb = 0, sb = bb.length; cb < sb; cb++) {
-          let sb = bb[cb];
-          "__proto__" === sb && (sb = "__proto_"), kb[sb] = Pb()
+        let Ab = {};
+        for (let ab = 0, Ub = bb.length; ab < Ub; ab++) {
+          let Ub = bb[ab];
+          "__proto__" === Ub && (Ub = "__proto_"), Ab[Ub] = db()
         }
-        return lb.freezeData ? Object.freeze(kb) : kb
+        return Rb.freezeData ? Object.freeze(Ab) : Ab
       }
-      return sb.count = 0, 0 === bb.highByte ? ib(cb, sb) : sb
+      return Ub.count = 0, 0 === bb.highByte ? Gb(ab, Ub) : Ub
     }
-    const ib = (bb, cb) => function() {
-      let sb = Wb[Tb++];
-      if (0 === sb) return cb();
-      let kb = bb < 32 ? -(bb + (sb << 5)) : bb + (sb << 5),
-        ab = Ib[kb] || Ob()[kb];
-      if (!ab) throw new Error("Record id is not defined for " + kb);
-      return ab.read || (ab.read = Eb(ab, bb)), ab.read()
+    const Gb = (bb, ab) => function() {
+      let Ub = Mb[Eb++];
+      if (0 === Ub) return ab();
+      let Ab = bb < 32 ? -(bb + (Ub << 5)) : bb + (Ub << 5),
+        Tb = Bb[Ab] || Qb()[Ab];
+      if (!Tb) throw new Error("Record id is not defined for " + Ab);
+      return Tb.read || (Tb.read = hb(Tb, bb)), Tb.read()
     };
 
-    function Ob() {
-      let bb = ac((() => (Wb = null, lb.getStructures())));
-      return Ib = lb._mergeStructures(bb, Ib)
+    function Qb() {
+      let bb = Ta((() => (Mb = null, Rb.getStructures())));
+      return Bb = Rb._mergeStructures(bb, Bb)
     }
-    var Gb = db,
-      Kb = db,
-      Zb = db,
-      zb = db;
-    let qb = !1;
+    var qb = lb,
+      ub = lb,
+      rb = lb,
+      Kb = lb;
+    let ob = !1;
 
-    function db(bb) {
-      let cb;
-      if (bb < 16 && (cb = Sb(bb))) return cb;
-      if (bb > 64 && kb) return kb.decode(Wb.subarray(Tb, Tb += bb));
-      const sb = Tb + bb,
-        ab = [];
-      for (cb = ""; Tb < sb;) {
-        const bb = Wb[Tb++];
-        if (0 === (128 & bb)) ab.push(bb);
+    function lb(bb) {
+      let ab;
+      if (bb < 16 && (ab = Cb(bb))) return ab;
+      if (bb > 64 && Ab) return Ab.decode(Mb.subarray(Eb, Eb += bb));
+      const Ub = Eb + bb,
+        Tb = [];
+      for (ab = ""; Eb < Ub;) {
+        const bb = Mb[Eb++];
+        if (0 === (128 & bb)) Tb.push(bb);
         else if (192 === (224 & bb)) {
-          const cb = 63 & Wb[Tb++];
-          ab.push((31 & bb) << 6 | cb)
+          const ab = 63 & Mb[Eb++];
+          Tb.push((31 & bb) << 6 | ab)
         } else if (224 === (240 & bb)) {
-          const cb = 63 & Wb[Tb++],
-            sb = 63 & Wb[Tb++];
-          ab.push((31 & bb) << 12 | cb << 6 | sb)
+          const ab = 63 & Mb[Eb++],
+            Ub = 63 & Mb[Eb++];
+          Tb.push((31 & bb) << 12 | ab << 6 | Ub)
         } else if (240 === (248 & bb)) {
-          let cb = (7 & bb) << 18 | (63 & Wb[Tb++]) << 12 | (63 & Wb[Tb++]) << 6 | 63 & Wb[Tb++];
-          cb > 65535 && (cb -= 65536, ab.push(cb >>> 10 & 1023 | 55296), cb = 56320 | 1023 & cb), ab.push(cb)
-        } else ab.push(bb);
-        ab.length >= 4096 && (cb += rb.apply(String, ab), ab.length = 0)
+          let ab = (7 & bb) << 18 | (63 & Mb[Eb++]) << 12 | (63 & Mb[Eb++]) << 6 | 63 & Mb[Eb++];
+          ab > 65535 && (ab -= 65536, Tb.push(ab >>> 10 & 1023 | 55296), ab = 56320 | 1023 & ab), Tb.push(ab)
+        } else Tb.push(bb);
+        Tb.length >= 4096 && (ab += sb.apply(String, Tb), Tb.length = 0)
       }
-      return ab.length > 0 && (cb += rb.apply(String, ab)), cb
+      return Tb.length > 0 && (ab += sb.apply(String, Tb)), ab
     }
 
-    function Ab(bb) {
-      let cb = new Array(bb);
-      for (let sb = 0; sb < bb; sb++) cb[sb] = Pb();
-      return lb.freezeData ? Object.freeze(cb) : cb
+    function tb(bb) {
+      let ab = new Array(bb);
+      for (let Ub = 0; Ub < bb; Ub++) ab[Ub] = db();
+      return Rb.freezeData ? Object.freeze(ab) : ab
     }
 
     function wb(bb) {
-      if (lb.mapsAsObjects) {
-        let cb = {};
-        for (let sb = 0; sb < bb; sb++) {
-          let bb = jb();
-          "__proto__" === bb && (bb = "__proto_"), cb[bb] = Pb()
+      if (Rb.mapsAsObjects) {
+        let ab = {};
+        for (let Ub = 0; Ub < bb; Ub++) {
+          let bb = nb();
+          "__proto__" === bb && (bb = "__proto_"), ab[bb] = db()
         }
-        return cb
+        return ab
       } {
-        let cb = new Map;
-        for (let sb = 0; sb < bb; sb++) cb.set(Pb(), Pb());
-        return cb
+        let ab = new Map;
+        for (let Ub = 0; Ub < bb; Ub++) ab.set(db(), db());
+        return ab
       }
     }
-    var rb = String.fromCharCode;
+    var sb = String.fromCharCode;
 
-    function ob(bb) {
-      let cb = Tb,
-        sb = new Array(bb);
-      for (let kb = 0; kb < bb; kb++) {
-        const bb = Wb[Tb++];
-        if ((128 & bb) > 0) return void(Tb = cb);
-        sb[kb] = bb
+    function gb(bb) {
+      let ab = Eb,
+        Ub = new Array(bb);
+      for (let Ab = 0; Ab < bb; Ab++) {
+        const bb = Mb[Eb++];
+        if ((128 & bb) > 0) return void(Eb = ab);
+        Ub[Ab] = bb
       }
-      return rb.apply(String, sb)
+      return sb.apply(String, Ub)
     }
 
-    function Sb(bb) {
+    function Cb(bb) {
       if (bb < 4) {
         if (bb < 2) {
           if (0 === bb) return "";
           {
-            let bb = Wb[Tb++];
-            return (128 & bb) > 1 ? void(Tb -= 1) : rb(bb)
+            let bb = Mb[Eb++];
+            return (128 & bb) > 1 ? void(Eb -= 1) : sb(bb)
           }
         } {
-          let cb = Wb[Tb++],
-            sb = Wb[Tb++];
-          if ((128 & cb) > 0 || (128 & sb) > 0) return void(Tb -= 2);
-          if (bb < 3) return rb(cb, sb);
-          let kb = Wb[Tb++];
-          return (128 & kb) > 0 ? void(Tb -= 3) : rb(cb, sb, kb)
+          let ab = Mb[Eb++],
+            Ub = Mb[Eb++];
+          if ((128 & ab) > 0 || (128 & Ub) > 0) return void(Eb -= 2);
+          if (bb < 3) return sb(ab, Ub);
+          let Ab = Mb[Eb++];
+          return (128 & Ab) > 0 ? void(Eb -= 3) : sb(ab, Ub, Ab)
         }
       } {
-        let cb = Wb[Tb++],
-          sb = Wb[Tb++],
-          kb = Wb[Tb++],
-          ab = Wb[Tb++];
-        if ((128 & cb) > 0 || (128 & sb) > 0 || (128 & kb) > 0 || (128 & ab) > 0) return void(Tb -= 4);
+        let ab = Mb[Eb++],
+          Ub = Mb[Eb++],
+          Ab = Mb[Eb++],
+          Tb = Mb[Eb++];
+        if ((128 & ab) > 0 || (128 & Ub) > 0 || (128 & Ab) > 0 || (128 & Tb) > 0) return void(Eb -= 4);
         if (bb < 6) {
-          if (4 === bb) return rb(cb, sb, kb, ab);
+          if (4 === bb) return sb(ab, Ub, Ab, Tb);
           {
-            let bb = Wb[Tb++];
-            return (128 & bb) > 0 ? void(Tb -= 5) : rb(cb, sb, kb, ab, bb)
+            let bb = Mb[Eb++];
+            return (128 & bb) > 0 ? void(Eb -= 5) : sb(ab, Ub, Ab, Tb, bb)
           }
         }
         if (bb < 8) {
-          let Ub = Wb[Tb++],
-            Ib = Wb[Tb++];
-          if ((128 & Ub) > 0 || (128 & Ib) > 0) return void(Tb -= 6);
-          if (bb < 7) return rb(cb, sb, kb, ab, Ub, Ib);
-          let Hb = Wb[Tb++];
-          return (128 & Hb) > 0 ? void(Tb -= 7) : rb(cb, sb, kb, ab, Ub, Ib, Hb)
+          let Yb = Mb[Eb++],
+            Bb = Mb[Eb++];
+          if ((128 & Yb) > 0 || (128 & Bb) > 0) return void(Eb -= 6);
+          if (bb < 7) return sb(ab, Ub, Ab, Tb, Yb, Bb);
+          let eb = Mb[Eb++];
+          return (128 & eb) > 0 ? void(Eb -= 7) : sb(ab, Ub, Ab, Tb, Yb, Bb, eb)
         } {
-          let Ub = Wb[Tb++],
-            Ib = Wb[Tb++],
-            Hb = Wb[Tb++],
-            fb = Wb[Tb++];
-          if ((128 & Ub) > 0 || (128 & Ib) > 0 || (128 & Hb) > 0 || (128 & fb) > 0) return void(Tb -= 8);
+          let Yb = Mb[Eb++],
+            Bb = Mb[Eb++],
+            eb = Mb[Eb++],
+            vb = Mb[Eb++];
+          if ((128 & Yb) > 0 || (128 & Bb) > 0 || (128 & eb) > 0 || (128 & vb) > 0) return void(Eb -= 8);
           if (bb < 10) {
-            if (8 === bb) return rb(cb, sb, kb, ab, Ub, Ib, Hb, fb);
+            if (8 === bb) return sb(ab, Ub, Ab, Tb, Yb, Bb, eb, vb);
             {
-              let bb = Wb[Tb++];
-              return (128 & bb) > 0 ? void(Tb -= 9) : rb(cb, sb, kb, ab, Ub, Ib, Hb, fb, bb)
+              let bb = Mb[Eb++];
+              return (128 & bb) > 0 ? void(Eb -= 9) : sb(ab, Ub, Ab, Tb, Yb, Bb, eb, vb, bb)
             }
           }
           if (bb < 12) {
-            let Mb = Wb[Tb++],
-              Xb = Wb[Tb++];
-            if ((128 & Mb) > 0 || (128 & Xb) > 0) return void(Tb -= 10);
-            if (bb < 11) return rb(cb, sb, kb, ab, Ub, Ib, Hb, fb, Mb, Xb);
-            let nb = Wb[Tb++];
-            return (128 & nb) > 0 ? void(Tb -= 11) : rb(cb, sb, kb, ab, Ub, Ib, Hb, fb, Mb, Xb, nb)
+            let Lb = Mb[Eb++],
+              Pb = Mb[Eb++];
+            if ((128 & Lb) > 0 || (128 & Pb) > 0) return void(Eb -= 10);
+            if (bb < 11) return sb(ab, Ub, Ab, Tb, Yb, Bb, eb, vb, Lb, Pb);
+            let Xb = Mb[Eb++];
+            return (128 & Xb) > 0 ? void(Eb -= 11) : sb(ab, Ub, Ab, Tb, Yb, Bb, eb, vb, Lb, Pb, Xb)
           } {
-            let Mb = Wb[Tb++],
-              Xb = Wb[Tb++],
-              nb = Wb[Tb++],
-              mb = Wb[Tb++];
-            if ((128 & Mb) > 0 || (128 & Xb) > 0 || (128 & nb) > 0 || (128 & mb) > 0) return void(Tb -= 12);
+            let Lb = Mb[Eb++],
+              Pb = Mb[Eb++],
+              Xb = Mb[Eb++],
+              jb = Mb[Eb++];
+            if ((128 & Lb) > 0 || (128 & Pb) > 0 || (128 & Xb) > 0 || (128 & jb) > 0) return void(Eb -= 12);
             if (bb < 14) {
-              if (12 === bb) return rb(cb, sb, kb, ab, Ub, Ib, Hb, fb, Mb, Xb, nb, mb);
+              if (12 === bb) return sb(ab, Ub, Ab, Tb, Yb, Bb, eb, vb, Lb, Pb, Xb, jb);
               {
-                let bb = Wb[Tb++];
-                return (128 & bb) > 0 ? void(Tb -= 13) : rb(cb, sb, kb, ab, Ub, Ib, Hb, fb, Mb, Xb, nb, mb, bb)
+                let bb = Mb[Eb++];
+                return (128 & bb) > 0 ? void(Eb -= 13) : sb(ab, Ub, Ab, Tb, Yb, Bb, eb, vb, Lb, Pb, Xb, jb, bb)
               }
             } {
-              let lb = Wb[Tb++],
-                Qb = Wb[Tb++];
-              if ((128 & lb) > 0 || (128 & Qb) > 0) return void(Tb -= 14);
-              if (bb < 15) return rb(cb, sb, kb, ab, Ub, Ib, Hb, fb, Mb, Xb, nb, mb, lb, Qb);
-              let eb = Wb[Tb++];
-              return (128 & eb) > 0 ? void(Tb -= 15) : rb(cb, sb, kb, ab, Ub, Ib, Hb, fb, Mb, Xb, nb, mb, lb, Qb, eb)
+              let Rb = Mb[Eb++],
+                kb = Mb[Eb++];
+              if ((128 & Rb) > 0 || (128 & kb) > 0) return void(Eb -= 14);
+              if (bb < 15) return sb(ab, Ub, Ab, Tb, Yb, Bb, eb, vb, Lb, Pb, Xb, jb, Rb, kb);
+              let yb = Mb[Eb++];
+              return (128 & yb) > 0 ? void(Eb -= 15) : sb(ab, Ub, Ab, Tb, Yb, Bb, eb, vb, Lb, Pb, Xb, jb, Rb, kb, yb)
             }
           }
         }
       }
     }
 
-    function Rb() {
-      let bb, cb = Wb[Tb++];
-      if (cb < 192) bb = cb - 160;
-      else switch (cb) {
+    function Vb() {
+      let bb, ab = Mb[Eb++];
+      if (ab < 192) bb = ab - 160;
+      else switch (ab) {
         case 217:
-          bb = Wb[Tb++];
+          bb = Mb[Eb++];
           break;
         case 218:
-          bb = Xb.getUint16(Tb), Tb += 2;
+          bb = Pb.getUint16(Eb), Eb += 2;
           break;
         case 219:
-          bb = Xb.getUint32(Tb), Tb += 4;
+          bb = Pb.getUint32(Eb), Eb += 4;
           break;
         default:
           throw new Error("Expected string")
       }
-      return db(bb)
+      return lb(bb)
     }
 
-    function vb(bb) {
-      return lb.copyBuffers ? Uint8Array.prototype.slice.call(Wb, Tb, Tb += bb) : Wb.subarray(Tb, Tb += bb)
+    function Ob(bb) {
+      return Rb.copyBuffers ? Uint8Array.prototype.slice.call(Mb, Eb, Eb += bb) : Mb.subarray(Eb, Eb += bb)
     }
 
-    function Fb(bb) {
-      let cb = Wb[Tb++];
-      if (Cb[cb]) {
-        let sb;
-        return Cb[cb](Wb.subarray(Tb, sb = Tb += bb), (bb => {
-          Tb = bb;
+    function cb(bb) {
+      let ab = Mb[Eb++];
+      if (Zb[ab]) {
+        let Ub;
+        return Zb[ab](Mb.subarray(Eb, Ub = Eb += bb), (bb => {
+          Eb = bb;
           try {
-            return Pb()
+            return db()
           } finally {
-            Tb = sb
+            Eb = Ub
           }
         }))
       }
-      throw new Error("Unknown extension type " + cb)
+      throw new Error("Unknown extension type " + ab)
     }
-    var xb = new Array(4096);
+    var Jb = new Array(4096);
 
-    function jb() {
-      let bb = Wb[Tb++];
-      if (!(bb >= 160 && bb < 192)) return Tb--, pb(Pb());
-      if (bb -= 160, eb >= Tb) return Hb.slice(Tb - Qb, (Tb += bb) - Qb);
-      if (!(0 == eb && ab < 180)) return Gb(bb);
-      let cb, sb = 4095 & (bb << 5 ^ (bb > 1 ? Xb.getUint16(Tb) : bb > 0 ? Wb[Tb] : 0)),
-        kb = xb[sb],
-        Ub = Tb,
-        Ib = Tb + bb - 3,
-        fb = 0;
-      if (kb && kb.bytes == bb) {
-        for (; Ub < Ib;) {
-          if (cb = Xb.getUint32(Ub), cb != kb[fb++]) {
-            Ub = 1879048192;
+    function nb() {
+      let bb = Mb[Eb++];
+      if (!(bb >= 160 && bb < 192)) return Eb--, Sb(db());
+      if (bb -= 160, yb >= Eb) return eb.slice(Eb - kb, (Eb += bb) - kb);
+      if (!(0 == yb && Tb < 180)) return qb(bb);
+      let ab, Ub = 4095 & (bb << 5 ^ (bb > 1 ? Pb.getUint16(Eb) : bb > 0 ? Mb[Eb] : 0)),
+        Ab = Jb[Ub],
+        Yb = Eb,
+        Bb = Eb + bb - 3,
+        vb = 0;
+      if (Ab && Ab.bytes == bb) {
+        for (; Yb < Bb;) {
+          if (ab = Pb.getUint32(Yb), ab != Ab[vb++]) {
+            Yb = 1879048192;
             break
           }
-          Ub += 4
+          Yb += 4
         }
-        for (Ib += 3; Ub < Ib;)
-          if (cb = Wb[Ub++], cb != kb[fb++]) {
-            Ub = 1879048192;
+        for (Bb += 3; Yb < Bb;)
+          if (ab = Mb[Yb++], ab != Ab[vb++]) {
+            Yb = 1879048192;
             break
-          } if (Ub === Ib) return Tb = Ub, kb.string;
-        Ib -= 3, Ub = Tb
+          } if (Yb === Bb) return Eb = Yb, Ab.string;
+        Bb -= 3, Yb = Eb
       }
-      for (kb = [], xb[sb] = kb, kb.bytes = bb; Ub < Ib;) cb = Xb.getUint32(Ub), kb.push(cb), Ub += 4;
-      for (Ib += 3; Ub < Ib;) cb = Wb[Ub++], kb.push(cb);
-      let Mb = bb < 16 ? Sb(bb) : ob(bb);
-      return kb.string = null != Mb ? Mb : Gb(bb)
+      for (Ab = [], Jb[Ub] = Ab, Ab.bytes = bb; Yb < Bb;) ab = Pb.getUint32(Yb), Ab.push(ab), Yb += 4;
+      for (Bb += 3; Yb < Bb;) ab = Mb[Yb++], Ab.push(ab);
+      let Lb = bb < 16 ? Cb(bb) : gb(bb);
+      return Ab.string = null != Lb ? Lb : qb(bb)
     }
 
-    function pb(bb) {
+    function Sb(bb) {
       if ("string" === typeof bb) return bb;
       if ("number" === typeof bb || "boolean" === typeof bb || "bigint" === typeof bb) return bb.toString();
       if (null == bb) return bb + "";
-      if (lb.allowArraysInMapKeys && Array.isArray(bb) && bb.flat().every((bb => ["string", "number", "boolean", "bigint"].includes(typeof bb)))) return bb.flat().toString();
+      if (Rb.allowArraysInMapKeys && Array.isArray(bb) && bb.flat().every((bb => ["string", "number", "boolean", "bigint"].includes(typeof bb)))) return bb.flat().toString();
       throw new Error("Invalid property type for record: " + typeof bb)
     }
-    const bc = (bb, cb) => {
-      let sb = Pb().map(pb),
-        kb = bb;
-      void 0 !== cb && (bb = bb < 32 ? -((cb << 5) + bb) : (cb << 5) + bb, sb.highByte = cb);
-      let Wb = Ib[bb];
-      return Wb && (Wb.isShared || Jb) && ((Ib.restoreStructures || (Ib.restoreStructures = []))[bb] = Wb), Ib[bb] = sb, sb.read = Eb(sb, kb), sb.read()
+    const ba = (bb, ab) => {
+      let Ub = db().map(Sb),
+        Ab = bb;
+      void 0 !== ab && (bb = bb < 32 ? -((ab << 5) + bb) : (ab << 5) + bb, Ub.highByte = ab);
+      let Mb = Bb[bb];
+      return Mb && (Mb.isShared || pb) && ((Bb.restoreStructures || (Bb.restoreStructures = []))[bb] = Mb), Bb[bb] = Ub, Ub.read = hb(Ub, Ab), Ub.read()
     };
-    Cb[0] = () => {}, Cb[0].noBuffer = !0, Cb[66] = bb => {
-      let cb = bb.length,
-        sb = BigInt(128 & bb[0] ? bb[0] - 256 : bb[0]);
-      for (let kb = 1; kb < cb; kb++) sb <<= BigInt(8), sb += BigInt(bb[kb]);
-      return sb
+    Zb[0] = () => {}, Zb[0].noBuffer = !0, Zb[66] = bb => {
+      let ab = bb.length,
+        Ub = BigInt(128 & bb[0] ? bb[0] - 256 : bb[0]);
+      for (let Ab = 1; Ab < ab; Ab++) Ub <<= BigInt(8), Ub += BigInt(bb[Ab]);
+      return Ub
     };
-    let cc = {
+    let aa = {
       Error: Error,
       TypeError: TypeError,
       ReferenceError: ReferenceError
     };
-    Cb[101] = () => {
-      let bb = Pb();
-      return (cc[bb[0]] || Error)(bb[1], {
+    Zb[101] = () => {
+      let bb = db();
+      return (aa[bb[0]] || Error)(bb[1], {
         cause: bb[2]
       })
-    }, Cb[105] = bb => {
-      if (!1 === lb.structuredClone) throw new Error("Structured clone extension is disabled");
-      let cb = Xb.getUint32(Tb - 4);
-      Mb || (Mb = new Map);
-      let sb, kb = Wb[Tb];
-      sb = kb >= 144 && kb < 160 || 220 == kb || 221 == kb ? [] : {};
-      let ab = {
-        target: sb
+    }, Zb[105] = bb => {
+      if (!1 === Rb.structuredClone) throw new Error("Structured clone extension is disabled");
+      let ab = Pb.getUint32(Eb - 4);
+      Lb || (Lb = new Map);
+      let Ub, Ab = Mb[Eb];
+      Ub = Ab >= 144 && Ab < 160 || 220 == Ab || 221 == Ab ? [] : {};
+      let Tb = {
+        target: Ub
       };
-      Mb.set(cb, ab);
-      let Ub = Pb();
-      return ab.used ? Object.assign(sb, Ub) : (ab.target = Ub, Ub)
-    }, Cb[112] = bb => {
-      if (!1 === lb.structuredClone) throw new Error("Structured clone extension is disabled");
-      let cb = Xb.getUint32(Tb - 4),
-        sb = Mb.get(cb);
-      return sb.used = !0, sb.target
-    }, Cb[115] = () => new Set(Pb());
-    const sc = ["Int8", "Uint8", "Uint8Clamped", "Int16", "Uint16", "Int32", "Uint32", "Float32", "Float64", "BigInt64", "BigUint64"].map((bb => bb + "Array"));
-    let kc = "object" === typeof globalThis ? globalThis : window;
-    Cb[116] = bb => {
-      let cb = bb[0],
-        sb = sc[cb];
-      if (!sb) {
-        if (16 === cb) {
-          let cb = new ArrayBuffer(bb.length - 1);
-          return new Uint8Array(cb).set(bb.subarray(1)), cb
+      Lb.set(ab, Tb);
+      let Yb = db();
+      return Tb.used ? Object.assign(Ub, Yb) : (Tb.target = Yb, Yb)
+    }, Zb[112] = bb => {
+      if (!1 === Rb.structuredClone) throw new Error("Structured clone extension is disabled");
+      let ab = Pb.getUint32(Eb - 4),
+        Ub = Lb.get(ab);
+      return Ub.used = !0, Ub.target
+    }, Zb[115] = () => new Set(db());
+    const Ua = ["Int8", "Uint8", "Uint8Clamped", "Int16", "Uint16", "Int32", "Uint32", "Float32", "Float64", "BigInt64", "BigUint64"].map((bb => bb + "Array"));
+    let Aa = "object" === typeof globalThis ? globalThis : window;
+    Zb[116] = bb => {
+      let ab = bb[0],
+        Ub = Ua[ab];
+      if (!Ub) {
+        if (16 === ab) {
+          let ab = new ArrayBuffer(bb.length - 1);
+          return new Uint8Array(ab).set(bb.subarray(1)), ab
         }
-        throw new Error("Could not find typed array for code " + cb)
+        throw new Error("Could not find typed array for code " + ab)
       }
-      return new kc[sb](Uint8Array.prototype.slice.call(bb, 1).buffer)
-    }, Cb[120] = () => {
-      let bb = Pb();
+      return new Aa[Ub](Uint8Array.prototype.slice.call(bb, 1).buffer)
+    }, Zb[120] = () => {
+      let bb = db();
       return new RegExp(bb[0], bb[1])
     };
-    const Wc = [];
+    const Ma = [];
 
-    function ac(bb) {
-      hb && hb();
-      let cb = ab,
-        sb = Tb,
-        kb = mb,
-        Ub = Qb,
-        Cb = eb,
-        Nb = Hb,
-        Vb = nb,
-        Lb = Mb,
-        ub = fb,
-        Yb = new Uint8Array(Wb.slice(0, ab)),
-        gb = Ib,
-        Bb = Ib.slice(0, Ib.length),
-        tb = lb,
-        yb = Jb,
-        Pb = bb();
-      return ab = cb, Tb = sb, mb = kb, Qb = Ub, eb = Cb, Hb = Nb, nb = Vb, Mb = Lb, fb = ub, Wb = Yb, Jb = yb, (Ib = gb).splice(0, Ib.length, ...Bb), lb = tb, Xb = new DataView(Wb.buffer, Wb.byteOffset, Wb.byteLength), Pb
+    function Ta(bb) {
+      mb && mb();
+      let ab = Tb,
+        Ub = Eb,
+        Ab = jb,
+        Yb = kb,
+        Zb = yb,
+        Db = eb,
+        zb = Xb,
+        xb = Lb,
+        ib = vb,
+        fb = new Uint8Array(Mb.slice(0, Tb)),
+        Nb = Bb,
+        Wb = Bb.slice(0, Bb.length),
+        Hb = Rb,
+        Ib = pb,
+        db = bb();
+      return Tb = ab, Eb = Ub, jb = Ab, kb = Yb, yb = Zb, eb = Db, Xb = zb, Lb = xb, vb = ib, Mb = fb, pb = Ib, (Bb = Nb).splice(0, Bb.length, ...Wb), Rb = Hb, Pb = new DataView(Mb.buffer, Mb.byteOffset, Mb.byteLength), db
     }
 
-    function Tc() {
-      Wb = null, Mb = null, Ib = null
+    function Ea() {
+      Mb = null, Lb = null, Bb = null
     }
-    Cb[98] = bb => {
-      let cb = (bb[0] << 24) + (bb[1] << 16) + (bb[2] << 8) + bb[3],
-        sb = Tb;
-      return Tb += cb - bb.length, fb = Wc, (fb = [Rb(), Rb()]).position0 = 0, fb.position1 = 0, fb.postBundlePosition = Tb, Tb = sb, Pb()
-    }, Cb[255] = bb => 4 == bb.length ? new Date(1e3 * (16777216 * bb[0] + (bb[1] << 16) + (bb[2] << 8) + bb[3])) : 8 == bb.length ? new Date(((bb[0] << 22) + (bb[1] << 14) + (bb[2] << 6) + (bb[3] >> 2)) / 1e6 + 1e3 * (4294967296 * (3 & bb[3]) + 16777216 * bb[4] + (bb[5] << 16) + (bb[6] << 8) + bb[7])) : 12 == bb.length ? new Date(((bb[0] << 24) + (bb[1] << 16) + (bb[2] << 8) + bb[3]) / 1e6 + 1e3 * ((128 & bb[4] ? -281474976710656 : 0) + 1099511627776 * bb[6] + 4294967296 * bb[7] + 16777216 * bb[8] + (bb[9] << 16) + (bb[10] << 8) + bb[11])) : new Date("invalid");
-    const Uc = new Array(147);
-    for (let Ws = 0; Ws < 256; Ws++) Uc[Ws] = +("1e" + Math.floor(45.15 - .30103 * Ws));
-    const Ic = Bb;
-    var Hc = new Bb({
+    Zb[98] = bb => {
+      let ab = (bb[0] << 24) + (bb[1] << 16) + (bb[2] << 8) + bb[3],
+        Ub = Eb;
+      return Eb += ab - bb.length, vb = Ma, (vb = [Vb(), Vb()]).position0 = 0, vb.position1 = 0, vb.postBundlePosition = Eb, Eb = Ub, db()
+    }, Zb[255] = bb => 4 == bb.length ? new Date(1e3 * (16777216 * bb[0] + (bb[1] << 16) + (bb[2] << 8) + bb[3])) : 8 == bb.length ? new Date(((bb[0] << 22) + (bb[1] << 14) + (bb[2] << 6) + (bb[3] >> 2)) / 1e6 + 1e3 * (4294967296 * (3 & bb[3]) + 16777216 * bb[4] + (bb[5] << 16) + (bb[6] << 8) + bb[7])) : 12 == bb.length ? new Date(((bb[0] << 24) + (bb[1] << 16) + (bb[2] << 8) + bb[3]) / 1e6 + 1e3 * ((128 & bb[4] ? -281474976710656 : 0) + 1099511627776 * bb[6] + 4294967296 * bb[7] + 16777216 * bb[8] + (bb[9] << 16) + (bb[10] << 8) + bb[11])) : new Date("invalid");
+    const Ya = new Array(147);
+    for (let MU = 0; MU < 256; MU++) Ya[MU] = +("1e" + Math.floor(45.15 - .30103 * MU));
+    const Ba = Wb;
+    var ea = new Wb({
       useRecords: !1
     });
-    const fc = Hc.unpack,
-      Mc = Hc.unpackMultiple,
-      Xc = Hc.unpack,
-      nc = {
+    const va = ea.unpack,
+      La = ea.unpackMultiple,
+      Pa = ea.unpack,
+      Xa = {
         NEVER: 0,
         ALWAYS: 1,
         DECIMAL_ROUND: 3,
         DECIMAL_FIT: 4
       };
-    let mc, lc, Qc, ec = new Float32Array(1),
-      Cc = new Uint8Array(ec.buffer, 0, 4);
+    let ja, Ra, ka, ya = new Float32Array(1),
+      Za = new Uint8Array(ya.buffer, 0, 4);
 
-    function Nc(bb) {
-      ec[0] = bb;
-      let cb = Uc[(127 & Cc[3]) << 1 | Cc[2] >> 7];
-      return (cb * bb + (bb > 0 ? .5 : -.5) | 0) / cb
+    function Da(bb) {
+      ya[0] = bb;
+      let ab = Ya[(127 & Za[3]) << 1 | Za[2] >> 7];
+      return (ab * bb + (bb > 0 ? .5 : -.5) | 0) / ab
     }
     try {
-      mc = new TextEncoder
-    } catch (ks) {}
-    const Vc = "undefined" !== typeof Buffer,
-      Lc = Vc ? function(bb) {
+      ja = new TextEncoder
+    } catch (AU) {}
+    const za = "undefined" !== typeof Buffer,
+      xa = za ? function(bb) {
         return Buffer.allocUnsafeSlow(bb)
       } : Uint8Array,
-      uc = Vc ? Buffer : Uint8Array,
-      Yc = Vc ? 4294967296 : 2144337920;
-    let hc, Jc, gc, Bc, tc, yc = 0,
-      Pc = null;
-    const Dc = /[\u0080-\uFFFF]/,
-      Ec = Symbol("record-id");
-    class ic extends Bb {
+      ia = za ? Buffer : Uint8Array,
+      fa = za ? 4294967296 : 2144337920;
+    let ma, pa, Na, Wa, Ha, Ia = 0,
+      da = null;
+    const Fa = /[\u0080-\uFFFF]/,
+      ha = Symbol("record-id");
+    class Ga extends Wb {
       constructor(bb) {
-        let cb, sb, kb, Wb;
+        let ab, Ub, Ab, Mb;
         super(bb), this.offset = 0;
-        let ab = uc.prototype.utf8Write ? function(bb, cb) {
-            return hc.utf8Write(bb, cb, hc.byteLength - cb)
-          } : !(!mc || !mc.encodeInto) && function(bb, cb) {
-            return mc.encodeInto(bb, hc.subarray(cb)).written
+        let Tb = ia.prototype.utf8Write ? function(bb, ab) {
+            return ma.utf8Write(bb, ab, ma.byteLength - ab)
+          } : !(!ja || !ja.encodeInto) && function(bb, ab) {
+            return ja.encodeInto(bb, ma.subarray(ab)).written
           },
-          Tb = this;
+          Eb = this;
         bb || (bb = {});
-        let Ub = bb && bb.sequential,
-          Ib = bb.structures || bb.saveStructures,
-          Hb = bb.maxSharedStructures;
-        if (null == Hb && (Hb = Ib ? 32 : 0), Hb > 8160) throw new Error("Maximum maxSharedStructure is 8160");
+        let Yb = bb && bb.sequential,
+          Bb = bb.structures || bb.saveStructures,
+          eb = bb.maxSharedStructures;
+        if (null == eb && (eb = Bb ? 32 : 0), eb > 8160) throw new Error("Maximum maxSharedStructure is 8160");
         bb.structuredClone && void 0 == bb.moreTypes && (this.moreTypes = !0);
-        let fb = bb.maxOwnStructures;
-        null == fb && (fb = Ib ? 32 : 64), this.structures || 0 == bb.useRecords || (this.structures = []);
-        let Mb = Hb > 32 || fb + Hb > 64,
-          Xb = Hb + 64,
-          nb = Hb + fb + 64;
-        if (nb > 8256) throw new Error("Maximum maxSharedStructure + maxOwnStructure is 8192");
-        let mb = [],
-          lb = 0,
-          Qb = 0;
-        this.pack = this.encode = function(bb, ab) {
-          if (hc || (hc = new Lc(8192), gc = hc.dataView || (hc.dataView = new DataView(hc.buffer, 0, 8192)), yc = 0), Bc = hc.length - 10, Bc - yc < 2048 ? (hc = new Lc(hc.length), gc = hc.dataView || (hc.dataView = new DataView(hc.buffer, 0, hc.length)), Bc = hc.length - 10, yc = 0) : yc = yc + 7 & 2147483640, cb = yc, ab & jc && (yc += 255 & ab), Wb = Tb.structuredClone ? new Map : null, Tb.bundleStrings && "string" !== typeof bb ? (Pc = [], Pc.size = 1 / 0) : Pc = null, kb = Tb.structures, kb) {
-            kb.uninitialized && (kb = Tb._mergeStructures(Tb.getStructures()));
-            let bb = kb.sharedLength || 0;
-            if (bb > Hb) throw new Error("Shared structures is larger than maximum shared structures, try increasing maxSharedStructures to " + kb.sharedLength);
-            if (!kb.transitions) {
-              kb.transitions = Object.create(null);
-              for (let cb = 0; cb < bb; cb++) {
-                let bb = kb[cb];
+        let vb = bb.maxOwnStructures;
+        null == vb && (vb = Bb ? 32 : 64), this.structures || 0 == bb.useRecords || (this.structures = []);
+        let Lb = eb > 32 || vb + eb > 64,
+          Pb = eb + 64,
+          Xb = eb + vb + 64;
+        if (Xb > 8256) throw new Error("Maximum maxSharedStructure + maxOwnStructure is 8192");
+        let jb = [],
+          Rb = 0,
+          kb = 0;
+        this.pack = this.encode = function(bb, Tb) {
+          if (ma || (ma = new xa(8192), Na = ma.dataView || (ma.dataView = new DataView(ma.buffer, 0, 8192)), Ia = 0), Wa = ma.length - 10, Wa - Ia < 2048 ? (ma = new xa(ma.length), Na = ma.dataView || (ma.dataView = new DataView(ma.buffer, 0, ma.length)), Wa = ma.length - 10, Ia = 0) : Ia = Ia + 7 & 2147483640, ab = Ia, Tb & na && (Ia += 255 & Tb), Mb = Eb.structuredClone ? new Map : null, Eb.bundleStrings && "string" !== typeof bb ? (da = [], da.size = 1 / 0) : da = null, Ab = Eb.structures, Ab) {
+            Ab.uninitialized && (Ab = Eb._mergeStructures(Eb.getStructures()));
+            let bb = Ab.sharedLength || 0;
+            if (bb > eb) throw new Error("Shared structures is larger than maximum shared structures, try increasing maxSharedStructures to " + Ab.sharedLength);
+            if (!Ab.transitions) {
+              Ab.transitions = Object.create(null);
+              for (let ab = 0; ab < bb; ab++) {
+                let bb = Ab[ab];
                 if (!bb) continue;
-                let sb, Wb = kb.transitions;
-                for (let cb = 0, kb = bb.length; cb < kb; cb++) {
-                  let kb = bb[cb];
-                  sb = Wb[kb], sb || (sb = Wb[kb] = Object.create(null)), Wb = sb
+                let Ub, Mb = Ab.transitions;
+                for (let ab = 0, Ab = bb.length; ab < Ab; ab++) {
+                  let Ab = bb[ab];
+                  Ub = Mb[Ab], Ub || (Ub = Mb[Ab] = Object.create(null)), Mb = Ub
                 }
-                Wb[Ec] = cb + 64
+                Mb[ha] = ab + 64
               }
               this.lastNamedStructuresLength = bb
             }
-            Ub || (kb.nextId = bb + 64)
+            Yb || (Ab.nextId = bb + 64)
           }
-          let Ib;
-          sb && (sb = !1);
+          let Bb;
+          Ub && (Ub = !1);
           try {
-            Tb.randomAccessStructure && bb && bb.constructor && bb.constructor === Object ? Bb(bb) : Nb(bb);
-            let sb = Pc;
-            if (Pc && Zc(cb, Nb, 0), Wb && Wb.idsToInsert) {
-              let bb = Wb.idsToInsert.sort(((bb, cb) => bb.offset > cb.offset ? 1 : -1)),
-                kb = bb.length,
-                ab = -1;
-              for (; sb && kb > 0;) {
-                let Wb = bb[--kb].offset + cb;
-                Wb < sb.stringsPosition + cb && -1 === ab && (ab = 0), Wb > sb.position + cb ? ab >= 0 && (ab += 6) : (ab >= 0 && (gc.setUint32(sb.position + cb, gc.getUint32(sb.position + cb) + ab), ab = -1), sb = sb.previous, kb++)
+            Eb.randomAccessStructure && bb && bb.constructor && bb.constructor === Object ? Wb(bb) : Db(bb);
+            let Ub = da;
+            if (da && ra(ab, Db, 0), Mb && Mb.idsToInsert) {
+              let bb = Mb.idsToInsert.sort(((bb, ab) => bb.offset > ab.offset ? 1 : -1)),
+                Ab = bb.length,
+                Tb = -1;
+              for (; Ub && Ab > 0;) {
+                let Mb = bb[--Ab].offset + ab;
+                Mb < Ub.stringsPosition + ab && -1 === Tb && (Tb = 0), Mb > Ub.position + ab ? Tb >= 0 && (Tb += 6) : (Tb >= 0 && (Na.setUint32(Ub.position + ab, Na.getUint32(Ub.position + ab) + Tb), Tb = -1), Ub = Ub.previous, Ab++)
               }
-              ab >= 0 && sb && gc.setUint32(sb.position + cb, gc.getUint32(sb.position + cb) + ab), yc += 6 * bb.length, yc > Bc && hb(yc), Tb.offset = yc;
-              let Ub = function(bb, cb) {
-                let sb, kb = 6 * cb.length,
-                  Wb = bb.length - kb;
-                for (; sb = cb.pop();) {
-                  let cb = sb.offset,
-                    ab = sb.id;
-                  bb.copyWithin(cb + kb, cb, Wb), kb -= 6;
-                  let Tb = cb + kb;
-                  bb[Tb++] = 214, bb[Tb++] = 105, bb[Tb++] = ab >> 24, bb[Tb++] = ab >> 16 & 255, bb[Tb++] = ab >> 8 & 255, bb[Tb++] = 255 & ab, Wb = cb
+              Tb >= 0 && Ub && Na.setUint32(Ub.position + ab, Na.getUint32(Ub.position + ab) + Tb), Ia += 6 * bb.length, Ia > Wa && mb(Ia), Eb.offset = Ia;
+              let Yb = function(bb, ab) {
+                let Ub, Ab = 6 * ab.length,
+                  Mb = bb.length - Ab;
+                for (; Ub = ab.pop();) {
+                  let ab = Ub.offset,
+                    Tb = Ub.id;
+                  bb.copyWithin(ab + Ab, ab, Mb), Ab -= 6;
+                  let Eb = ab + Ab;
+                  bb[Eb++] = 214, bb[Eb++] = 105, bb[Eb++] = Tb >> 24, bb[Eb++] = Tb >> 16 & 255, bb[Eb++] = Tb >> 8 & 255, bb[Eb++] = 255 & Tb, Mb = ab
                 }
                 return bb
-              }(hc.subarray(cb, yc), bb);
-              return Wb = null, Ub
+              }(ma.subarray(ab, Ia), bb);
+              return Mb = null, Yb
             }
-            return Tb.offset = yc, ab & Fc ? (hc.start = cb, hc.end = yc, hc) : hc.subarray(cb, yc)
-          } catch (ks) {
-            throw Ib = ks, ks
+            return Eb.offset = Ia, Tb & ca ? (ma.start = ab, ma.end = Ia, ma) : ma.subarray(ab, Ia)
+          } catch (AU) {
+            throw Bb = AU, AU
           } finally {
-            if (kb && (eb(), sb && Tb.saveStructures)) {
-              let sb = kb.sharedLength || 0,
-                Wb = hc.subarray(cb, yc),
-                Ub = qc(kb, Tb);
-              if (!Ib) return !1 === Tb.saveStructures(Ub, Ub.isCompatible) ? Tb.pack(bb, ab) : (Tb.lastNamedStructuresLength = sb, hc.length > 1073741824 && (hc = null), Wb)
+            if (Ab && (yb(), Ub && Eb.saveStructures)) {
+              let Ub = Ab.sharedLength || 0,
+                Mb = ma.subarray(ab, Ia),
+                Yb = oa(Ab, Eb);
+              if (!Bb) return !1 === Eb.saveStructures(Yb, Yb.isCompatible) ? Eb.pack(bb, Tb) : (Eb.lastNamedStructuresLength = Ub, ma.length > 1073741824 && (ma = null), Mb)
             }
-            hc.length > 1073741824 && (hc = null), ab & xc && (yc = cb)
+            ma.length > 1073741824 && (ma = null), Tb & Ja && (Ia = ab)
           }
         };
-        const eb = () => {
-            Qb < 10 && Qb++;
-            let bb = kb.sharedLength || 0;
-            if (kb.length > bb && !Ub && (kb.length = bb), lb > 1e4) kb.transitions = null, Qb = 0, lb = 0, mb.length > 0 && (mb = []);
-            else if (mb.length > 0 && !Ub) {
-              for (let bb = 0, cb = mb.length; bb < cb; bb++) mb[bb][Ec] = 0;
-              mb = []
+        const yb = () => {
+            kb < 10 && kb++;
+            let bb = Ab.sharedLength || 0;
+            if (Ab.length > bb && !Yb && (Ab.length = bb), Rb > 1e4) Ab.transitions = null, kb = 0, Rb = 0, jb.length > 0 && (jb = []);
+            else if (jb.length > 0 && !Yb) {
+              for (let bb = 0, ab = jb.length; bb < ab; bb++) jb[bb][ha] = 0;
+              jb = []
             }
           },
-          Cb = bb => {
-            var cb = bb.length;
-            cb < 16 ? hc[yc++] = 144 | cb : cb < 65536 ? (hc[yc++] = 220, hc[yc++] = cb >> 8, hc[yc++] = 255 & cb) : (hc[yc++] = 221, gc.setUint32(yc, cb), yc += 4);
-            for (let sb = 0; sb < cb; sb++) Nb(bb[sb])
+          Zb = bb => {
+            var ab = bb.length;
+            ab < 16 ? ma[Ia++] = 144 | ab : ab < 65536 ? (ma[Ia++] = 220, ma[Ia++] = ab >> 8, ma[Ia++] = 255 & ab) : (ma[Ia++] = 221, Na.setUint32(Ia, ab), Ia += 4);
+            for (let Ub = 0; Ub < ab; Ub++) Db(bb[Ub])
           },
-          Nb = bb => {
-            yc > Bc && (hc = hb(yc));
-            var sb, kb = typeof bb;
-            if ("string" === kb) {
-              let kb, Wb = bb.length;
-              if (Pc && Wb >= 4 && Wb < 4096) {
-                if ((Pc.size += Wb) > 21760) {
-                  let bb, sb, kb = (Pc[0] ? 3 * Pc[0].length + Pc[1].length : 0) + 10;
-                  yc + kb > Bc && (hc = hb(yc + kb)), Pc.position ? (sb = Pc, hc[yc] = 200, yc += 3, hc[yc++] = 98, bb = yc - cb, yc += 4, Zc(cb, Nb, 0), gc.setUint16(bb + cb - 3, yc - cb - bb)) : (hc[yc++] = 214, hc[yc++] = 98, bb = yc - cb, yc += 4), Pc = ["", ""], Pc.previous = sb, Pc.size = 0, Pc.position = bb
+          Db = bb => {
+            Ia > Wa && (ma = mb(Ia));
+            var Ub, Ab = typeof bb;
+            if ("string" === Ab) {
+              let Ab, Mb = bb.length;
+              if (da && Mb >= 4 && Mb < 4096) {
+                if ((da.size += Mb) > 21760) {
+                  let bb, Ub, Ab = (da[0] ? 3 * da[0].length + da[1].length : 0) + 10;
+                  Ia + Ab > Wa && (ma = mb(Ia + Ab)), da.position ? (Ub = da, ma[Ia] = 200, Ia += 3, ma[Ia++] = 98, bb = Ia - ab, Ia += 4, ra(ab, Db, 0), Na.setUint16(bb + ab - 3, Ia - ab - bb)) : (ma[Ia++] = 214, ma[Ia++] = 98, bb = Ia - ab, Ia += 4), da = ["", ""], da.previous = Ub, da.size = 0, da.position = bb
                 }
-                let sb = Dc.test(bb);
-                return Pc[sb ? 0 : 1] += bb, hc[yc++] = 193, void Nb(sb ? -Wb : Wb)
+                let Ub = Fa.test(bb);
+                return da[Ub ? 0 : 1] += bb, ma[Ia++] = 193, void Db(Ub ? -Mb : Mb)
               }
-              kb = Wb < 32 ? 1 : Wb < 256 ? 2 : Wb < 65536 ? 3 : 5;
-              let Tb = 3 * Wb;
-              if (yc + Tb > Bc && (hc = hb(yc + Tb)), Wb < 64 || !ab) {
-                let cb, ab, Tb, Ub = yc + kb;
-                for (cb = 0; cb < Wb; cb++) ab = bb.charCodeAt(cb), ab < 128 ? hc[Ub++] = ab : ab < 2048 ? (hc[Ub++] = ab >> 6 | 192, hc[Ub++] = 63 & ab | 128) : 55296 === (64512 & ab) && 56320 === (64512 & (Tb = bb.charCodeAt(cb + 1))) ? (ab = 65536 + ((1023 & ab) << 10) + (1023 & Tb), cb++, hc[Ub++] = ab >> 18 | 240, hc[Ub++] = ab >> 12 & 63 | 128, hc[Ub++] = ab >> 6 & 63 | 128, hc[Ub++] = 63 & ab | 128) : (hc[Ub++] = ab >> 12 | 224, hc[Ub++] = ab >> 6 & 63 | 128, hc[Ub++] = 63 & ab | 128);
-                sb = Ub - yc - kb
-              } else sb = ab(bb, yc + kb);
-              sb < 32 ? hc[yc++] = 160 | sb : sb < 256 ? (kb < 2 && hc.copyWithin(yc + 2, yc + 1, yc + 1 + sb), hc[yc++] = 217, hc[yc++] = sb) : sb < 65536 ? (kb < 3 && hc.copyWithin(yc + 3, yc + 2, yc + 2 + sb), hc[yc++] = 218, hc[yc++] = sb >> 8, hc[yc++] = 255 & sb) : (kb < 5 && hc.copyWithin(yc + 5, yc + 3, yc + 3 + sb), hc[yc++] = 219, gc.setUint32(yc, sb), yc += 4), yc += sb
-            } else if ("number" === kb)
-              if (bb >>> 0 === bb) bb < 32 || bb < 128 && !1 === this.useRecords || bb < 64 && !this.randomAccessStructure ? hc[yc++] = bb : bb < 256 ? (hc[yc++] = 204, hc[yc++] = bb) : bb < 65536 ? (hc[yc++] = 205, hc[yc++] = bb >> 8, hc[yc++] = 255 & bb) : (hc[yc++] = 206, gc.setUint32(yc, bb), yc += 4);
-              else if ((bb | 0) === bb) bb >= -32 ? hc[yc++] = 256 + bb : bb >= -128 ? (hc[yc++] = 208, hc[yc++] = bb + 256) : bb >= -32768 ? (hc[yc++] = 209, gc.setInt16(yc, bb), yc += 2) : (hc[yc++] = 210, gc.setInt32(yc, bb), yc += 4);
+              Ab = Mb < 32 ? 1 : Mb < 256 ? 2 : Mb < 65536 ? 3 : 5;
+              let Eb = 3 * Mb;
+              if (Ia + Eb > Wa && (ma = mb(Ia + Eb)), Mb < 64 || !Tb) {
+                let ab, Tb, Eb, Yb = Ia + Ab;
+                for (ab = 0; ab < Mb; ab++) Tb = bb.charCodeAt(ab), Tb < 128 ? ma[Yb++] = Tb : Tb < 2048 ? (ma[Yb++] = Tb >> 6 | 192, ma[Yb++] = 63 & Tb | 128) : 55296 === (64512 & Tb) && 56320 === (64512 & (Eb = bb.charCodeAt(ab + 1))) ? (Tb = 65536 + ((1023 & Tb) << 10) + (1023 & Eb), ab++, ma[Yb++] = Tb >> 18 | 240, ma[Yb++] = Tb >> 12 & 63 | 128, ma[Yb++] = Tb >> 6 & 63 | 128, ma[Yb++] = 63 & Tb | 128) : (ma[Yb++] = Tb >> 12 | 224, ma[Yb++] = Tb >> 6 & 63 | 128, ma[Yb++] = 63 & Tb | 128);
+                Ub = Yb - Ia - Ab
+              } else Ub = Tb(bb, Ia + Ab);
+              Ub < 32 ? ma[Ia++] = 160 | Ub : Ub < 256 ? (Ab < 2 && ma.copyWithin(Ia + 2, Ia + 1, Ia + 1 + Ub), ma[Ia++] = 217, ma[Ia++] = Ub) : Ub < 65536 ? (Ab < 3 && ma.copyWithin(Ia + 3, Ia + 2, Ia + 2 + Ub), ma[Ia++] = 218, ma[Ia++] = Ub >> 8, ma[Ia++] = 255 & Ub) : (Ab < 5 && ma.copyWithin(Ia + 5, Ia + 3, Ia + 3 + Ub), ma[Ia++] = 219, Na.setUint32(Ia, Ub), Ia += 4), Ia += Ub
+            } else if ("number" === Ab)
+              if (bb >>> 0 === bb) bb < 32 || bb < 128 && !1 === this.useRecords || bb < 64 && !this.randomAccessStructure ? ma[Ia++] = bb : bb < 256 ? (ma[Ia++] = 204, ma[Ia++] = bb) : bb < 65536 ? (ma[Ia++] = 205, ma[Ia++] = bb >> 8, ma[Ia++] = 255 & bb) : (ma[Ia++] = 206, Na.setUint32(Ia, bb), Ia += 4);
+              else if ((bb | 0) === bb) bb >= -32 ? ma[Ia++] = 256 + bb : bb >= -128 ? (ma[Ia++] = 208, ma[Ia++] = bb + 256) : bb >= -32768 ? (ma[Ia++] = 209, Na.setInt16(Ia, bb), Ia += 2) : (ma[Ia++] = 210, Na.setInt32(Ia, bb), Ia += 4);
             else {
-              let cb;
-              if ((cb = this.useFloat32) > 0 && bb < 4294967296 && bb >= -2147483648) {
-                let sb;
-                if (hc[yc++] = 202, gc.setFloat32(yc, bb), cb < 4 || ((sb = bb * Uc[(127 & hc[yc]) << 1 | hc[yc + 1] >> 7]) | 0) === sb) return void(yc += 4);
-                yc--
+              let ab;
+              if ((ab = this.useFloat32) > 0 && bb < 4294967296 && bb >= -2147483648) {
+                let Ub;
+                if (ma[Ia++] = 202, Na.setFloat32(Ia, bb), ab < 4 || ((Ub = bb * Ya[(127 & ma[Ia]) << 1 | ma[Ia + 1] >> 7]) | 0) === Ub) return void(Ia += 4);
+                Ia--
               }
-              hc[yc++] = 203, gc.setFloat64(yc, bb), yc += 8
-            } else if ("object" === kb || "function" === kb)
+              ma[Ia++] = 203, Na.setFloat64(Ia, bb), Ia += 8
+            } else if ("object" === Ab || "function" === Ab)
               if (bb) {
-                if (Wb) {
-                  let sb = Wb.get(bb);
-                  if (sb) {
-                    if (!sb.id) {
-                      let bb = Wb.idsToInsert || (Wb.idsToInsert = []);
-                      sb.id = bb.push(sb)
+                if (Mb) {
+                  let Ub = Mb.get(bb);
+                  if (Ub) {
+                    if (!Ub.id) {
+                      let bb = Mb.idsToInsert || (Mb.idsToInsert = []);
+                      Ub.id = bb.push(Ub)
                     }
-                    return hc[yc++] = 214, hc[yc++] = 112, gc.setUint32(yc, sb.id), void(yc += 4)
+                    return ma[Ia++] = 214, ma[Ia++] = 112, Na.setUint32(Ia, Ub.id), void(Ia += 4)
                   }
-                  Wb.set(bb, {
-                    offset: yc - cb
+                  Mb.set(bb, {
+                    offset: Ia - ab
                   })
                 }
-                let ab = bb.constructor;
-                if (ab === Object) Yb(bb);
-                else if (ab === Array) Cb(bb);
-                else if (ab === Map)
-                  if (this.mapAsEmptyObject) hc[yc++] = 128;
+                let Tb = bb.constructor;
+                if (Tb === Object) fb(bb);
+                else if (Tb === Array) Zb(bb);
+                else if (Tb === Map)
+                  if (this.mapAsEmptyObject) ma[Ia++] = 128;
                   else {
-                    (sb = bb.size) < 16 ? hc[yc++] = 128 | sb : sb < 65536 ? (hc[yc++] = 222, hc[yc++] = sb >> 8, hc[yc++] = 255 & sb) : (hc[yc++] = 223, gc.setUint32(yc, sb), yc += 4);
-                    for (let [cb, sb] of bb) Nb(cb), Nb(sb)
+                    (Ub = bb.size) < 16 ? ma[Ia++] = 128 | Ub : Ub < 65536 ? (ma[Ia++] = 222, ma[Ia++] = Ub >> 8, ma[Ia++] = 255 & Ub) : (ma[Ia++] = 223, Na.setUint32(Ia, Ub), Ia += 4);
+                    for (let [ab, Ub] of bb) Db(ab), Db(Ub)
                   }
                 else {
-                  for (let cb = 0, sb = lc.length; cb < sb; cb++) {
-                    if (bb instanceof Qc[cb]) {
-                      let sb = lc[cb];
-                      if (sb.write) {
-                        sb.type && (hc[yc++] = 212, hc[yc++] = sb.type, hc[yc++] = 0);
-                        let cb = sb.write.call(this, bb);
-                        return void(cb === bb ? Array.isArray(bb) ? Cb(bb) : Yb(bb) : Nb(cb))
+                  for (let ab = 0, Ub = Ra.length; ab < Ub; ab++) {
+                    if (bb instanceof ka[ab]) {
+                      let Ub = Ra[ab];
+                      if (Ub.write) {
+                        Ub.type && (ma[Ia++] = 212, ma[Ia++] = Ub.type, ma[Ia++] = 0);
+                        let ab = Ub.write.call(this, bb);
+                        return void(ab === bb ? Array.isArray(bb) ? Zb(bb) : fb(bb) : Db(ab))
                       }
-                      let kb, Wb = hc,
-                        ab = gc,
-                        Tb = yc;
-                      hc = null;
+                      let Ab, Mb = ma,
+                        Tb = Na,
+                        Eb = Ia;
+                      ma = null;
                       try {
-                        kb = sb.pack.call(this, bb, (bb => (hc = Wb, Wb = null, yc += bb, yc > Bc && hb(yc), {
-                          target: hc,
-                          targetView: gc,
-                          position: yc - bb
-                        })), Nb)
+                        Ab = Ub.pack.call(this, bb, (bb => (ma = Mb, Mb = null, Ia += bb, Ia > Wa && mb(Ia), {
+                          target: ma,
+                          targetView: Na,
+                          position: Ia - bb
+                        })), Db)
                       } finally {
-                        Wb && (hc = Wb, gc = ab, yc = Tb, Bc = hc.length - 10)
+                        Mb && (ma = Mb, Na = Tb, Ia = Eb, Wa = ma.length - 10)
                       }
-                      return void(kb && (kb.length + yc > Bc && hb(kb.length + yc), yc = Kc(kb, hc, yc, sb.type)))
+                      return void(Ab && (Ab.length + Ia > Wa && mb(Ab.length + Ia), Ia = ua(Ab, ma, Ia, Ub.type)))
                     }
                   }
-                  if (Array.isArray(bb)) Cb(bb);
+                  if (Array.isArray(bb)) Zb(bb);
                   else {
                     if (bb.toJSON) {
-                      const cb = bb.toJSON();
-                      if (cb !== bb) return Nb(cb)
+                      const ab = bb.toJSON();
+                      if (ab !== bb) return Db(ab)
                     }
-                    if ("function" === kb) return Nb(this.writeFunction && this.writeFunction(bb));
-                    Yb(bb)
+                    if ("function" === Ab) return Db(this.writeFunction && this.writeFunction(bb));
+                    fb(bb)
                   }
                 }
-              } else hc[yc++] = 192;
-            else if ("boolean" === kb) hc[yc++] = bb ? 195 : 194;
-            else if ("bigint" === kb) {
-              if (bb < BigInt(1) << BigInt(63) && bb >= -(BigInt(1) << BigInt(63))) hc[yc++] = 211, gc.setBigInt64(yc, bb);
-              else if (bb < BigInt(1) << BigInt(64) && bb > 0) hc[yc++] = 207, gc.setBigUint64(yc, bb);
+              } else ma[Ia++] = 192;
+            else if ("boolean" === Ab) ma[Ia++] = bb ? 195 : 194;
+            else if ("bigint" === Ab) {
+              if (bb < BigInt(1) << BigInt(63) && bb >= -(BigInt(1) << BigInt(63))) ma[Ia++] = 211, Na.setBigInt64(Ia, bb);
+              else if (bb < BigInt(1) << BigInt(64) && bb > 0) ma[Ia++] = 207, Na.setBigUint64(Ia, bb);
               else {
                 if (!this.largeBigIntToFloat) {
-                  if (this.largeBigIntToString) return Nb(bb.toString());
+                  if (this.largeBigIntToString) return Db(bb.toString());
                   if (this.useBigIntExtension && bb < BigInt(2) ** BigInt(1023) && bb > -(BigInt(2) ** BigInt(1023))) {
-                    hc[yc++] = 199, yc++, hc[yc++] = 66;
-                    let cb, sb = [];
+                    ma[Ia++] = 199, Ia++, ma[Ia++] = 66;
+                    let ab, Ub = [];
                     do {
-                      let kb = bb & BigInt(255);
-                      cb = (kb & BigInt(128)) === (bb < BigInt(0) ? BigInt(128) : BigInt(0)), sb.push(kb), bb >>= BigInt(8)
-                    } while (bb !== BigInt(0) && bb !== BigInt(-1) || !cb);
-                    hc[yc - 2] = sb.length;
-                    for (let bb = sb.length; bb > 0;) hc[yc++] = Number(sb[--bb]);
+                      let Ab = bb & BigInt(255);
+                      ab = (Ab & BigInt(128)) === (bb < BigInt(0) ? BigInt(128) : BigInt(0)), Ub.push(Ab), bb >>= BigInt(8)
+                    } while (bb !== BigInt(0) && bb !== BigInt(-1) || !ab);
+                    ma[Ia - 2] = Ub.length;
+                    for (let bb = Ub.length; bb > 0;) ma[Ia++] = Number(Ub[--bb]);
                     return
                   }
                   throw new RangeError(bb + " was too large to fit in MessagePack 64-bit integer format, use useBigIntExtension, or set largeBigIntToFloat to convert to float-64, or set largeBigIntToString to convert to string")
                 }
-                hc[yc++] = 203, gc.setFloat64(yc, Number(bb))
+                ma[Ia++] = 203, Na.setFloat64(Ia, Number(bb))
               }
-              yc += 8
+              Ia += 8
             } else {
-              if ("undefined" !== kb) throw new Error("Unknown type: " + kb);
-              this.encodeUndefinedAsNil ? hc[yc++] = 192 : (hc[yc++] = 212, hc[yc++] = 0, hc[yc++] = 0)
+              if ("undefined" !== Ab) throw new Error("Unknown type: " + Ab);
+              this.encodeUndefinedAsNil ? ma[Ia++] = 192 : (ma[Ia++] = 212, ma[Ia++] = 0, ma[Ia++] = 0)
             }
           },
-          Vb = this.variableMapSize || this.coercibleKeyAsNumber || this.skipValues ? bb => {
-            let cb;
+          zb = this.variableMapSize || this.coercibleKeyAsNumber || this.skipValues ? bb => {
+            let ab;
             if (this.skipValues) {
-              cb = [];
-              for (let sb in bb) "function" === typeof bb.hasOwnProperty && !bb.hasOwnProperty(sb) || this.skipValues.includes(bb[sb]) || cb.push(sb)
-            } else cb = Object.keys(bb);
-            let sb, kb = cb.length;
-            if (kb < 16 ? hc[yc++] = 128 | kb : kb < 65536 ? (hc[yc++] = 222, hc[yc++] = kb >> 8, hc[yc++] = 255 & kb) : (hc[yc++] = 223, gc.setUint32(yc, kb), yc += 4), this.coercibleKeyAsNumber)
-              for (let Wb = 0; Wb < kb; Wb++) {
-                sb = cb[Wb];
-                let kb = Number(sb);
-                Nb(isNaN(kb) ? sb : kb), Nb(bb[sb])
+              ab = [];
+              for (let Ub in bb) "function" === typeof bb.hasOwnProperty && !bb.hasOwnProperty(Ub) || this.skipValues.includes(bb[Ub]) || ab.push(Ub)
+            } else ab = Object.keys(bb);
+            let Ub, Ab = ab.length;
+            if (Ab < 16 ? ma[Ia++] = 128 | Ab : Ab < 65536 ? (ma[Ia++] = 222, ma[Ia++] = Ab >> 8, ma[Ia++] = 255 & Ab) : (ma[Ia++] = 223, Na.setUint32(Ia, Ab), Ia += 4), this.coercibleKeyAsNumber)
+              for (let Mb = 0; Mb < Ab; Mb++) {
+                Ub = ab[Mb];
+                let Ab = Number(Ub);
+                Db(isNaN(Ab) ? Ub : Ab), Db(bb[Ub])
               } else
-                for (let Wb = 0; Wb < kb; Wb++) Nb(sb = cb[Wb]), Nb(bb[sb])
+                for (let Mb = 0; Mb < Ab; Mb++) Db(Ub = ab[Mb]), Db(bb[Ub])
           } : bb => {
-            hc[yc++] = 222;
-            let sb = yc - cb;
-            yc += 2;
-            let kb = 0;
-            for (let cb in bb)("function" !== typeof bb.hasOwnProperty || bb.hasOwnProperty(cb)) && (Nb(cb), Nb(bb[cb]), kb++);
-            if (kb > 65535) throw new Error('Object is too large to serialize with fast 16-bit map size, use the "variableMapSize" option to serialize this object');
-            hc[sb++ + cb] = kb >> 8, hc[sb + cb] = 255 & kb
+            ma[Ia++] = 222;
+            let Ub = Ia - ab;
+            Ia += 2;
+            let Ab = 0;
+            for (let ab in bb)("function" !== typeof bb.hasOwnProperty || bb.hasOwnProperty(ab)) && (Db(ab), Db(bb[ab]), Ab++);
+            if (Ab > 65535) throw new Error('Object is too large to serialize with fast 16-bit map size, use the "variableMapSize" option to serialize this object');
+            ma[Ub++ + ab] = Ab >> 8, ma[Ub + ab] = 255 & Ab
           },
-          Lb = !1 === this.useRecords ? Vb : bb.progressiveRecords && !Mb ? bb => {
-            let sb, Wb, ab = kb.transitions || (kb.transitions = Object.create(null)),
-              Tb = yc++ - cb;
-            for (let Ub in bb)
-              if ("function" !== typeof bb.hasOwnProperty || bb.hasOwnProperty(Ub)) {
-                if (sb = ab[Ub], sb) ab = sb;
+          xb = !1 === this.useRecords ? zb : bb.progressiveRecords && !Lb ? bb => {
+            let Ub, Mb, Tb = Ab.transitions || (Ab.transitions = Object.create(null)),
+              Eb = Ia++ - ab;
+            for (let Yb in bb)
+              if ("function" !== typeof bb.hasOwnProperty || bb.hasOwnProperty(Yb)) {
+                if (Ub = Tb[Yb], Ub) Tb = Ub;
                 else {
-                  let Ib = Object.keys(bb),
-                    Hb = ab;
-                  ab = kb.transitions;
-                  let fb = 0;
-                  for (let bb = 0, cb = Ib.length; bb < cb; bb++) {
-                    let cb = Ib[bb];
-                    sb = ab[cb], sb || (sb = ab[cb] = Object.create(null), fb++), ab = sb
+                  let Bb = Object.keys(bb),
+                    eb = Tb;
+                  Tb = Ab.transitions;
+                  let vb = 0;
+                  for (let bb = 0, ab = Bb.length; bb < ab; bb++) {
+                    let ab = Bb[bb];
+                    Ub = Tb[ab], Ub || (Ub = Tb[ab] = Object.create(null), vb++), Tb = Ub
                   }
-                  Tb + cb + 1 == yc ? (yc--, Jb(ab, Ib, fb)) : gb(ab, Ib, Tb, fb), Wb = !0, ab = Hb[Ub]
+                  Eb + ab + 1 == Ia ? (Ia--, pb(Tb, Bb, vb)) : Nb(Tb, Bb, Eb, vb), Mb = !0, Tb = eb[Yb]
                 }
-                Nb(bb[Ub])
-              } if (!Wb) {
-              let sb = ab[Ec];
-              sb ? hc[Tb + cb] = sb : gb(ab, Object.keys(bb), Tb, 0)
+                Db(bb[Yb])
+              } if (!Mb) {
+              let Ub = Tb[ha];
+              Ub ? ma[Eb + ab] = Ub : Nb(Tb, Object.keys(bb), Eb, 0)
             }
           } : bb => {
-            let cb, sb = kb.transitions || (kb.transitions = Object.create(null)),
-              Wb = 0;
-            for (let kb in bb)("function" !== typeof bb.hasOwnProperty || bb.hasOwnProperty(kb)) && (cb = sb[kb], cb || (cb = sb[kb] = Object.create(null), Wb++), sb = cb);
-            let ab = sb[Ec];
-            ab ? ab >= 96 && Mb ? (hc[yc++] = 96 + (31 & (ab -= 96)), hc[yc++] = ab >> 5) : hc[yc++] = ab : Jb(sb, sb.__keys__ || Object.keys(bb), Wb);
-            for (let kb in bb)("function" !== typeof bb.hasOwnProperty || bb.hasOwnProperty(kb)) && Nb(bb[kb])
+            let ab, Ub = Ab.transitions || (Ab.transitions = Object.create(null)),
+              Mb = 0;
+            for (let Ab in bb)("function" !== typeof bb.hasOwnProperty || bb.hasOwnProperty(Ab)) && (ab = Ub[Ab], ab || (ab = Ub[Ab] = Object.create(null), Mb++), Ub = ab);
+            let Tb = Ub[ha];
+            Tb ? Tb >= 96 && Lb ? (ma[Ia++] = 96 + (31 & (Tb -= 96)), ma[Ia++] = Tb >> 5) : ma[Ia++] = Tb : pb(Ub, Ub.__keys__ || Object.keys(bb), Mb);
+            for (let Ab in bb)("function" !== typeof bb.hasOwnProperty || bb.hasOwnProperty(Ab)) && Db(bb[Ab])
           },
-          ub = "function" == typeof this.useRecords && this.useRecords,
-          Yb = ub ? bb => {
-            ub(bb) ? Lb(bb) : Vb(bb)
-          } : Lb,
-          hb = bb => {
-            let sb;
+          ib = "function" == typeof this.useRecords && this.useRecords,
+          fb = ib ? bb => {
+            ib(bb) ? xb(bb) : zb(bb)
+          } : xb,
+          mb = bb => {
+            let Ub;
             if (bb > 16777216) {
-              if (bb - cb > Yc) throw new Error("Packed buffer would be larger than maximum buffer size");
-              sb = Math.min(Yc, 4096 * Math.round(Math.max((bb - cb) * (bb > 67108864 ? 1.25 : 2), 4194304) / 4096))
-            } else sb = 1 + (Math.max(bb - cb << 2, hc.length - 1) >> 12) << 12;
-            let kb = new Lc(sb);
-            return gc = kb.dataView || (kb.dataView = new DataView(kb.buffer, 0, sb)), bb = Math.min(bb, hc.length), hc.copy ? hc.copy(kb, 0, cb, bb) : kb.set(hc.slice(cb, bb)), yc -= cb, cb = 0, Bc = kb.length - 10, hc = kb
+              if (bb - ab > fa) throw new Error("Packed buffer would be larger than maximum buffer size");
+              Ub = Math.min(fa, 4096 * Math.round(Math.max((bb - ab) * (bb > 67108864 ? 1.25 : 2), 4194304) / 4096))
+            } else Ub = 1 + (Math.max(bb - ab << 2, ma.length - 1) >> 12) << 12;
+            let Ab = new xa(Ub);
+            return Na = Ab.dataView || (Ab.dataView = new DataView(Ab.buffer, 0, Ub)), bb = Math.min(bb, ma.length), ma.copy ? ma.copy(Ab, 0, ab, bb) : Ab.set(ma.slice(ab, bb)), Ia -= ab, ab = 0, Wa = Ab.length - 10, ma = Ab
           },
-          Jb = (bb, cb, Wb) => {
-            let ab = kb.nextId;
-            ab || (ab = 64), ab < Xb && this.shouldShareStructure && !this.shouldShareStructure(cb) ? (ab = kb.nextOwnId, ab < nb || (ab = Xb), kb.nextOwnId = ab + 1) : (ab >= nb && (ab = Xb), kb.nextId = ab + 1);
-            let Tb = cb.highByte = ab >= 96 && Mb ? ab - 96 >> 5 : -1;
-            bb[Ec] = ab, bb.__keys__ = cb, kb[ab - 64] = cb, ab < Xb ? (cb.isShared = !0, kb.sharedLength = ab - 63, sb = !0, Tb >= 0 ? (hc[yc++] = 96 + (31 & ab), hc[yc++] = Tb) : hc[yc++] = ab) : (Tb >= 0 ? (hc[yc++] = 213, hc[yc++] = 114, hc[yc++] = 96 + (31 & ab), hc[yc++] = Tb) : (hc[yc++] = 212, hc[yc++] = 114, hc[yc++] = ab), Wb && (lb += Qb * Wb), mb.length >= fb && (mb.shift()[Ec] = 0), mb.push(bb), Nb(cb))
+          pb = (bb, ab, Mb) => {
+            let Tb = Ab.nextId;
+            Tb || (Tb = 64), Tb < Pb && this.shouldShareStructure && !this.shouldShareStructure(ab) ? (Tb = Ab.nextOwnId, Tb < Xb || (Tb = Pb), Ab.nextOwnId = Tb + 1) : (Tb >= Xb && (Tb = Pb), Ab.nextId = Tb + 1);
+            let Eb = ab.highByte = Tb >= 96 && Lb ? Tb - 96 >> 5 : -1;
+            bb[ha] = Tb, bb.__keys__ = ab, Ab[Tb - 64] = ab, Tb < Pb ? (ab.isShared = !0, Ab.sharedLength = Tb - 63, Ub = !0, Eb >= 0 ? (ma[Ia++] = 96 + (31 & Tb), ma[Ia++] = Eb) : ma[Ia++] = Tb) : (Eb >= 0 ? (ma[Ia++] = 213, ma[Ia++] = 114, ma[Ia++] = 96 + (31 & Tb), ma[Ia++] = Eb) : (ma[Ia++] = 212, ma[Ia++] = 114, ma[Ia++] = Tb), Mb && (Rb += kb * Mb), jb.length >= vb && (jb.shift()[ha] = 0), jb.push(bb), Db(ab))
           },
-          gb = (bb, sb, kb, Wb) => {
-            let ab = hc,
-              Tb = yc,
-              Ub = Bc,
-              Ib = cb;
-            hc = Jc, yc = 0, cb = 0, hc || (Jc = hc = new Lc(8192)), Bc = hc.length - 10, Jb(bb, sb, Wb), Jc = hc;
-            let Hb = yc;
-            if (hc = ab, yc = Tb, Bc = Ub, cb = Ib, Hb > 1) {
-              let bb = yc + Hb - 1;
-              bb > Bc && hb(bb);
-              let sb = kb + cb;
-              hc.copyWithin(sb + Hb, sb + 1, yc), hc.set(Jc.slice(0, Hb), sb), yc = bb
-            } else hc[kb + cb] = Jc[0]
+          Nb = (bb, Ub, Ab, Mb) => {
+            let Tb = ma,
+              Eb = Ia,
+              Yb = Wa,
+              Bb = ab;
+            ma = pa, Ia = 0, ab = 0, ma || (pa = ma = new xa(8192)), Wa = ma.length - 10, pb(bb, Ub, Mb), pa = ma;
+            let eb = Ia;
+            if (ma = Tb, Ia = Eb, Wa = Yb, ab = Bb, eb > 1) {
+              let bb = Ia + eb - 1;
+              bb > Wa && mb(bb);
+              let Ub = Ab + ab;
+              ma.copyWithin(Ub + eb, Ub + 1, Ia), ma.set(pa.slice(0, eb), Ub), Ia = bb
+            } else ma[Ab + ab] = pa[0]
           },
-          Bb = bb => {
-            let Wb = tc(bb, hc, cb, yc, kb, hb, ((bb, cb, kb) => {
-              if (kb) return sb = !0;
-              yc = cb;
-              let Wb = hc;
-              return Nb(bb), eb(), Wb !== hc ? {
-                position: yc,
-                targetView: gc,
-                target: hc
-              } : yc
+          Wb = bb => {
+            let Mb = Ha(bb, ma, ab, Ia, Ab, mb, ((bb, ab, Ab) => {
+              if (Ab) return Ub = !0;
+              Ia = ab;
+              let Mb = ma;
+              return Db(bb), yb(), Mb !== ma ? {
+                position: Ia,
+                targetView: Na,
+                target: ma
+              } : Ia
             }), this);
-            if (0 === Wb) return Yb(bb);
-            yc = Wb
+            if (0 === Mb) return fb(bb);
+            Ia = Mb
           }
       }
       useBuffer(bb) {
-        hc = bb, gc = hc.dataView || (hc.dataView = new DataView(hc.buffer, hc.byteOffset, hc.byteLength)), yc = 0
+        ma = bb, Na = ma.dataView || (ma.dataView = new DataView(ma.buffer, ma.byteOffset, ma.byteLength)), Ia = 0
       }
       set position(bb) {
-        yc = bb
+        Ia = bb
       }
       get position() {
-        return yc
+        return Ia
       }
       set buffer(bb) {
-        hc = bb
+        ma = bb
       }
       get buffer() {
-        return hc
+        return ma
       }
       clearSharedData() {
         this.structures && (this.structures = []), this.typedStructs && (this.typedStructs = [])
       }
     }
 
-    function Oc(bb, cb, sb, kb) {
-      let Wb = bb.byteLength;
-      if (Wb + 1 < 256) {
+    function Qa(bb, ab, Ub, Ab) {
+      let Mb = bb.byteLength;
+      if (Mb + 1 < 256) {
         var {
-          target: ab,
-          position: Tb
-        } = sb(4 + Wb);
-        ab[Tb++] = 199, ab[Tb++] = Wb + 1
-      } else if (Wb + 1 < 65536) {
+          target: Tb,
+          position: Eb
+        } = Ub(4 + Mb);
+        Tb[Eb++] = 199, Tb[Eb++] = Mb + 1
+      } else if (Mb + 1 < 65536) {
         var {
-          target: ab,
-          position: Tb
-        } = sb(5 + Wb);
-        ab[Tb++] = 200, ab[Tb++] = Wb + 1 >> 8, ab[Tb++] = Wb + 1 & 255
+          target: Tb,
+          position: Eb
+        } = Ub(5 + Mb);
+        Tb[Eb++] = 200, Tb[Eb++] = Mb + 1 >> 8, Tb[Eb++] = Mb + 1 & 255
       } else {
         var {
-          target: ab,
-          position: Tb,
-          targetView: Ub
-        } = sb(7 + Wb);
-        ab[Tb++] = 201, Ub.setUint32(Tb, Wb + 1), Tb += 4
+          target: Tb,
+          position: Eb,
+          targetView: Yb
+        } = Ub(7 + Mb);
+        Tb[Eb++] = 201, Yb.setUint32(Eb, Mb + 1), Eb += 4
       }
-      ab[Tb++] = 116, ab[Tb++] = cb, bb.buffer || (bb = new Uint8Array(bb)), ab.set(new Uint8Array(bb.buffer, bb.byteOffset, bb.byteLength), Tb)
+      Tb[Eb++] = 116, Tb[Eb++] = ab, bb.buffer || (bb = new Uint8Array(bb)), Tb.set(new Uint8Array(bb.buffer, bb.byteOffset, bb.byteLength), Eb)
     }
 
-    function Gc(bb, cb) {
-      let sb = bb.byteLength;
-      var kb, Wb;
-      if (sb < 256) {
+    function qa(bb, ab) {
+      let Ub = bb.byteLength;
+      var Ab, Mb;
+      if (Ub < 256) {
         var {
-          target: kb,
-          position: Wb
-        } = cb(sb + 2);
-        kb[Wb++] = 196, kb[Wb++] = sb
-      } else if (sb < 65536) {
+          target: Ab,
+          position: Mb
+        } = ab(Ub + 2);
+        Ab[Mb++] = 196, Ab[Mb++] = Ub
+      } else if (Ub < 65536) {
         var {
-          target: kb,
-          position: Wb
-        } = cb(sb + 3);
-        kb[Wb++] = 197, kb[Wb++] = sb >> 8, kb[Wb++] = 255 & sb
+          target: Ab,
+          position: Mb
+        } = ab(Ub + 3);
+        Ab[Mb++] = 197, Ab[Mb++] = Ub >> 8, Ab[Mb++] = 255 & Ub
       } else {
         var {
-          target: kb,
-          position: Wb,
-          targetView: ab
-        } = cb(sb + 5);
-        kb[Wb++] = 198, ab.setUint32(Wb, sb), Wb += 4
+          target: Ab,
+          position: Mb,
+          targetView: Tb
+        } = ab(Ub + 5);
+        Ab[Mb++] = 198, Tb.setUint32(Mb, Ub), Mb += 4
       }
-      kb.set(bb, Wb)
+      Ab.set(bb, Mb)
     }
 
-    function Kc(bb, cb, sb, kb) {
-      let Wb = bb.length;
-      switch (Wb) {
+    function ua(bb, ab, Ub, Ab) {
+      let Mb = bb.length;
+      switch (Mb) {
         case 1:
-          cb[sb++] = 212;
+          ab[Ub++] = 212;
           break;
         case 2:
-          cb[sb++] = 213;
+          ab[Ub++] = 213;
           break;
         case 4:
-          cb[sb++] = 214;
+          ab[Ub++] = 214;
           break;
         case 8:
-          cb[sb++] = 215;
+          ab[Ub++] = 215;
           break;
         case 16:
-          cb[sb++] = 216;
+          ab[Ub++] = 216;
           break;
         default:
-          Wb < 256 ? (cb[sb++] = 199, cb[sb++] = Wb) : Wb < 65536 ? (cb[sb++] = 200, cb[sb++] = Wb >> 8, cb[sb++] = 255 & Wb) : (cb[sb++] = 201, cb[sb++] = Wb >> 24, cb[sb++] = Wb >> 16 & 255, cb[sb++] = Wb >> 8 & 255, cb[sb++] = 255 & Wb)
+          Mb < 256 ? (ab[Ub++] = 199, ab[Ub++] = Mb) : Mb < 65536 ? (ab[Ub++] = 200, ab[Ub++] = Mb >> 8, ab[Ub++] = 255 & Mb) : (ab[Ub++] = 201, ab[Ub++] = Mb >> 24, ab[Ub++] = Mb >> 16 & 255, ab[Ub++] = Mb >> 8 & 255, ab[Ub++] = 255 & Mb)
       }
-      return cb[sb++] = kb, cb.set(bb, sb), sb += Wb
+      return ab[Ub++] = Ab, ab.set(bb, Ub), Ub += Mb
     }
 
-    function Zc(bb, cb, sb) {
-      if (Pc.length > 0) {
-        gc.setUint32(Pc.position + bb, yc + sb - Pc.position - bb), Pc.stringsPosition = yc - bb;
-        let kb = Pc;
-        Pc = null, cb(kb[0]), cb(kb[1])
+    function ra(bb, ab, Ub) {
+      if (da.length > 0) {
+        Na.setUint32(da.position + bb, Ia + Ub - da.position - bb), da.stringsPosition = Ia - bb;
+        let Ab = da;
+        da = null, ab(Ab[0]), ab(Ab[1])
       }
     }
 
-    function zc(bb) {
+    function Ka(bb) {
       if (bb.Class) {
         if (!bb.pack && !bb.write) throw new Error("Extension has no pack or write function");
         if (bb.pack && !bb.type) throw new Error("Extension has no type (numeric code to identify the extension)");
-        Qc.unshift(bb.Class), lc.unshift(bb)
+        ka.unshift(bb.Class), Ra.unshift(bb)
       }! function(bb) {
-        bb.unpack ? Cb[bb.type] = bb.unpack : Cb[bb.type] = bb
+        bb.unpack ? Zb[bb.type] = bb.unpack : Zb[bb.type] = bb
       }(bb)
     }
 
-    function qc(bb, cb) {
+    function oa(bb, ab) {
       return bb.isCompatible = bb => {
-        let sb = !bb || (cb.lastNamedStructuresLength || 0) === bb.length;
-        return sb || cb._mergeStructures(bb), sb
+        let Ub = !bb || (ab.lastNamedStructuresLength || 0) === bb.length;
+        return Ub || ab._mergeStructures(bb), Ub
       }, bb
     }
-    Qc = [Date, Set, Error, RegExp, ArrayBuffer, Object.getPrototypeOf(Uint8Array.prototype).constructor, Vb], lc = [{
-      pack(bb, cb, sb) {
-        let kb = bb.getTime() / 1e3;
-        if ((this.useTimestamp32 || 0 === bb.getMilliseconds()) && kb >= 0 && kb < 4294967296) {
+    ka = [Date, Set, Error, RegExp, ArrayBuffer, Object.getPrototypeOf(Uint8Array.prototype).constructor, zb], Ra = [{
+      pack(bb, ab, Ub) {
+        let Ab = bb.getTime() / 1e3;
+        if ((this.useTimestamp32 || 0 === bb.getMilliseconds()) && Ab >= 0 && Ab < 4294967296) {
           let {
             target: bb,
-            targetView: sb,
-            position: Wb
-          } = cb(6);
-          bb[Wb++] = 214, bb[Wb++] = 255, sb.setUint32(Wb, kb)
-        } else if (kb > 0 && kb < 4294967296) {
+            targetView: Ub,
+            position: Mb
+          } = ab(6);
+          bb[Mb++] = 214, bb[Mb++] = 255, Ub.setUint32(Mb, Ab)
+        } else if (Ab > 0 && Ab < 4294967296) {
           let {
-            target: sb,
-            targetView: Wb,
-            position: ab
-          } = cb(10);
-          sb[ab++] = 215, sb[ab++] = 255, Wb.setUint32(ab, 4e6 * bb.getMilliseconds() + (kb / 1e3 / 4294967296 | 0)), Wb.setUint32(ab + 4, kb)
-        } else if (isNaN(kb)) {
-          if (this.onInvalidDate) return cb(0), sb(this.onInvalidDate());
+            target: Ub,
+            targetView: Mb,
+            position: Tb
+          } = ab(10);
+          Ub[Tb++] = 215, Ub[Tb++] = 255, Mb.setUint32(Tb, 4e6 * bb.getMilliseconds() + (Ab / 1e3 / 4294967296 | 0)), Mb.setUint32(Tb + 4, Ab)
+        } else if (isNaN(Ab)) {
+          if (this.onInvalidDate) return ab(0), Ub(this.onInvalidDate());
           let {
             target: bb,
-            targetView: kb,
-            position: Wb
-          } = cb(3);
-          bb[Wb++] = 212, bb[Wb++] = 255, bb[Wb++] = 255
+            targetView: Ab,
+            position: Mb
+          } = ab(3);
+          bb[Mb++] = 212, bb[Mb++] = 255, bb[Mb++] = 255
         } else {
           let {
-            target: sb,
-            targetView: Wb,
-            position: ab
-          } = cb(15);
-          sb[ab++] = 199, sb[ab++] = 12, sb[ab++] = 255, Wb.setUint32(ab, 1e6 * bb.getMilliseconds()), Wb.setBigInt64(ab + 4, BigInt(Math.floor(kb)))
+            target: Ub,
+            targetView: Mb,
+            position: Tb
+          } = ab(15);
+          Ub[Tb++] = 199, Ub[Tb++] = 12, Ub[Tb++] = 255, Mb.setUint32(Tb, 1e6 * bb.getMilliseconds()), Mb.setBigInt64(Tb + 4, BigInt(Math.floor(Ab)))
         }
       }
     }, {
-      pack(bb, cb, sb) {
-        if (this.setAsEmptyObject) return cb(0), sb({});
-        let kb = Array.from(bb),
+      pack(bb, ab, Ub) {
+        if (this.setAsEmptyObject) return ab(0), Ub({});
+        let Ab = Array.from(bb),
           {
-            target: Wb,
-            position: ab
-          } = cb(this.moreTypes ? 3 : 0);
-        this.moreTypes && (Wb[ab++] = 212, Wb[ab++] = 115, Wb[ab++] = 0), sb(kb)
+            target: Mb,
+            position: Tb
+          } = ab(this.moreTypes ? 3 : 0);
+        this.moreTypes && (Mb[Tb++] = 212, Mb[Tb++] = 115, Mb[Tb++] = 0), Ub(Ab)
       }
     }, {
-      pack(bb, cb, sb) {
+      pack(bb, ab, Ub) {
         let {
-          target: kb,
-          position: Wb
-        } = cb(this.moreTypes ? 3 : 0);
-        this.moreTypes && (kb[Wb++] = 212, kb[Wb++] = 101, kb[Wb++] = 0), sb([bb.name, bb.message, bb.cause])
+          target: Ab,
+          position: Mb
+        } = ab(this.moreTypes ? 3 : 0);
+        this.moreTypes && (Ab[Mb++] = 212, Ab[Mb++] = 101, Ab[Mb++] = 0), Ub([bb.name, bb.message, bb.cause])
       }
     }, {
-      pack(bb, cb, sb) {
+      pack(bb, ab, Ub) {
         let {
-          target: kb,
-          position: Wb
-        } = cb(this.moreTypes ? 3 : 0);
-        this.moreTypes && (kb[Wb++] = 212, kb[Wb++] = 120, kb[Wb++] = 0), sb([bb.source, bb.flags])
+          target: Ab,
+          position: Mb
+        } = ab(this.moreTypes ? 3 : 0);
+        this.moreTypes && (Ab[Mb++] = 212, Ab[Mb++] = 120, Ab[Mb++] = 0), Ub([bb.source, bb.flags])
       }
     }, {
-      pack(bb, cb) {
-        this.moreTypes ? Oc(bb, 16, cb) : Gc(Vc ? Buffer.from(bb) : new Uint8Array(bb), cb)
+      pack(bb, ab) {
+        this.moreTypes ? Qa(bb, 16, ab) : qa(za ? Buffer.from(bb) : new Uint8Array(bb), ab)
       }
     }, {
-      pack(bb, cb) {
-        let sb = bb.constructor;
-        sb !== uc && this.moreTypes ? Oc(bb, sc.indexOf(sb.name), cb) : Gc(bb, cb)
+      pack(bb, ab) {
+        let Ub = bb.constructor;
+        Ub !== ia && this.moreTypes ? Qa(bb, Ua.indexOf(Ub.name), ab) : qa(bb, ab)
       }
     }, {
-      pack(bb, cb) {
+      pack(bb, ab) {
         let {
-          target: sb,
-          position: kb
-        } = cb(1);
-        sb[kb] = 193
+          target: Ub,
+          position: Ab
+        } = ab(1);
+        Ub[Ab] = 193
       }
     }];
-    let dc = new ic({
+    let la = new Ga({
       useRecords: !1
     });
-    const Ac = dc.pack,
-      wc = dc.pack,
-      rc = ic,
+    const ta = la.pack,
+      wa = la.pack,
+      sa = Ga,
       {
-        NEVER: oc,
-        ALWAYS: Sc,
-        DECIMAL_ROUND: Rc,
-        DECIMAL_FIT: vc
-      } = nc,
-      Fc = 512,
-      xc = 1024,
-      jc = 2048;
-    const pc = function(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        NEVER: ga,
+        ALWAYS: Ca,
+        DECIMAL_ROUND: Va,
+        DECIMAL_FIT: Oa
+      } = Xa,
+      ca = 512,
+      Ja = 1024,
+      na = 2048;
+    const Sa = function(bb) {
+        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
         if (!bb || "object" !== typeof bb) throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a promise");
-        const sb = new Bb(cb);
-        let kb;
-        const Wb = bb => {
-          let cb;
-          kb && (bb = Buffer.concat([kb, bb]), kb = void 0);
+        const Ub = new Wb(ab);
+        let Ab;
+        const Mb = bb => {
+          let ab;
+          Ab && (bb = Buffer.concat([Ab, bb]), Ab = void 0);
           try {
-            cb = sb.unpackMultiple(bb)
-          } catch (Wb) {
-            if (!Wb.incomplete) throw Wb;
-            kb = bb.slice(Wb.lastPosition), cb = Wb.values
+            ab = Ub.unpackMultiple(bb)
+          } catch (Mb) {
+            if (!Mb.incomplete) throw Mb;
+            Ab = bb.slice(Mb.lastPosition), ab = Mb.values
           }
-          return cb
+          return ab
         };
         return "function" === typeof bb[Symbol.iterator] ? function*() {
-          for (const cb of bb) yield* Wb(cb)
+          for (const ab of bb) yield* Mb(ab)
         }() : "function" === typeof bb[Symbol.asyncIterator] ? async function*() {
-          for await (const cb of bb) yield* Wb(cb)
+          for await (const ab of bb) yield* Mb(ab)
         }(): void 0
       },
-      bs = function(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      bU = function(bb) {
+        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
         if (bb && "object" === typeof bb) {
-          if ("function" === typeof bb[Symbol.iterator]) return function*(bb, cb) {
-            const sb = new ic(cb);
-            for (const kb of bb) yield sb.pack(kb)
-          }(bb, cb);
-          if ("function" === typeof bb.then || "function" === typeof bb[Symbol.asyncIterator]) return async function*(bb, cb) {
-            const sb = new ic(cb);
-            for await (const kb of bb) yield sb.pack(kb)
-          }(bb, cb);
+          if ("function" === typeof bb[Symbol.iterator]) return function*(bb, ab) {
+            const Ub = new Ga(ab);
+            for (const Ab of bb) yield Ub.pack(Ab)
+          }(bb, ab);
+          if ("function" === typeof bb.then || "function" === typeof bb[Symbol.asyncIterator]) return async function*(bb, ab) {
+            const Ub = new Ga(ab);
+            for await (const Ab of bb) yield Ub.pack(Ab)
+          }(bb, ab);
           throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a Promise")
         }
         throw new Error("first argument must be an Iterable, Async Iterable, or a Promise for an Async Iterable")
       },
-      cs = !1,
-      ss = !0
+      aU = !1,
+      UU = !0
   },
-  8713: (bb, cb, sb) => {
-    sb.r(cb), sb.d(cb, {
-      $changes: () => lb,
-      $childType: () => Qb,
-      $decoder: () => fb,
-      $deleteByIndex: () => nb,
-      $encoder: () => Hb,
-      $filter: () => Mb,
-      $getByIndex: () => Xb,
-      $numFields: () => gb,
-      $refId: () => Ub,
-      $track: () => Ib,
-      $values: () => Lb,
-      ArraySchema: () => Wk,
-      Callbacks: () => aW,
-      ChangeTree: () => Ps,
-      CollectionSchema: () => Uk,
-      Decoder: () => xk,
-      Encoder: () => Sk,
-      FieldBuilder: () => fk,
-      MapSchema: () => Tk,
-      Metadata: () => Rc,
-      OPERATION: () => Wb,
-      Reflection: () => cW,
-      ReflectionField: () => pk,
-      ReflectionType: () => bW,
-      Root: () => Ek,
-      Schema: () => Pk,
-      SetSchema: () => Ik,
-      StateCallbackStrategy: () => WW,
-      StateView: () => Zk,
-      StreamSchema: () => Hk,
-      TypeContext: () => qc,
-      createPool: () => UW,
-      decode: () => Nc,
-      decodeKeyValueOperation: () => xs,
-      decodeSchemaOperation: () => Fs,
-      defineCustomTypes: () => Yc,
-      defineTypes: () => Bk,
-      deprecated: () => Jk,
-      dumpChanges: () => yk,
-      encode: () => cc,
-      encodeArray: () => zs,
-      encodeIndexedEntry: () => Ks,
-      encodeKeyValueOperation: () => Zs,
-      encodeMapEntry: () => Gs,
-      encodeSchemaOperation: () => Os,
-      hm: () => ek,
-      fullStateOnly: () => Lk,
-      getDecoderStateCallbacks: () => sW,
-      getEncodeDescriptor: () => bs,
-      getRawChangesCallback: () => kW,
-      isBuilder: () => Mk,
-      patchOnly: () => Vk,
-      registerType: () => uc,
-      schema: () => tk,
-      t: () => lk,
-      type: () => uk,
-      unreliable: () => Nk,
-      view: () => Ck
+  8695: (bb, ab, Ub) => {
+    Ub.r(ab), Ub.d(ab, {
+      $changes: () => Rb,
+      $childType: () => kb,
+      $decoder: () => vb,
+      $deleteByIndex: () => Xb,
+      $encoder: () => eb,
+      $filter: () => Lb,
+      $getByIndex: () => Pb,
+      $numFields: () => Nb,
+      $refId: () => Yb,
+      $track: () => Bb,
+      $values: () => xb,
+      ArraySchema: () => UA,
+      Callbacks: () => UM,
+      ChangeTree: () => IU,
+      CollectionSchema: () => TA,
+      Decoder: () => VA,
+      Encoder: () => wA,
+      FieldBuilder: () => BA,
+      MapSchema: () => MA,
+      Metadata: () => Va,
+      OPERATION: () => Mb,
+      Reflection: () => nA,
+      ReflectionField: () => cA,
+      ReflectionType: () => JA,
+      Root: () => dA,
+      Schema: () => HA,
+      SetSchema: () => EA,
+      StateCallbackStrategy: () => aM,
+      StateView: () => qA,
+      StreamSchema: () => YA,
+      TypeContext: () => oa,
+      createPool: () => MM,
+      decode: () => Da,
+      decodeKeyValueOperation: () => cU,
+      decodeSchemaOperation: () => OU,
+      defineCustomTypes: () => fa,
+      defineTypes: () => pA,
+      deprecated: () => fA,
+      dumpChanges: () => WA,
+      encode: () => aa,
+      encodeArray: () => rU,
+      encodeIndexedEntry: () => qU,
+      encodeKeyValueOperation: () => uU,
+      encodeMapEntry: () => QU,
+      encodeSchemaOperation: () => GU,
+      tX: () => RA,
+      fullStateOnly: () => DA,
+      getDecoderStateCallbacks: () => SA,
+      getEncodeDescriptor: () => bU,
+      getRawChangesCallback: () => bM,
+      isBuilder: () => eA,
+      patchOnly: () => ZA,
+      registerType: () => ia,
+      schema: () => NA,
+      t: () => XA,
+      type: () => zA,
+      unreliable: () => yA,
+      view: () => kA
     });
-    const kb = 255;
-    var Wb;
+    const Ab = 255;
+    var Mb;
 
-    function ab(bb) {
+    function Tb(bb) {
       Object.defineProperty(bb, Symbol.metadata, {
         value: void 0,
         writable: !0,
@@ -2184,262 +2184,262 @@ export const modules = {
       })
     }! function(bb) {
       bb[bb.ADD = 128] = "ADD", bb[bb.REPLACE = 0] = "REPLACE", bb[bb.DELETE = 64] = "DELETE", bb[bb.DELETE_AND_MOVE = 96] = "DELETE_AND_MOVE", bb[bb.MOVE_AND_ADD = 160] = "MOVE_AND_ADD", bb[bb.DELETE_AND_ADD = 192] = "DELETE_AND_ADD", bb[bb.CLEAR = 10] = "CLEAR", bb[bb.REVERSE = 15] = "REVERSE", bb[bb.MOVE = 32] = "MOVE", bb[bb.DELETE_BY_REFID = 33] = "DELETE_BY_REFID", bb[bb.ADD_BY_REFID = 129] = "ADD_BY_REFID"
-    }(Wb || (Wb = {})), Symbol.metadata ??= Symbol.for("Symbol.metadata");
-    const Tb = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof global ? global : "undefined" !== typeof self ? self : "undefined" !== typeof window ? window : {};
+    }(Mb || (Mb = {})), Symbol.metadata ??= Symbol.for("Symbol.metadata");
+    const Eb = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof global ? global : "undefined" !== typeof self ? self : "undefined" !== typeof window ? window : {};
     if ("function" === typeof Symbol && "function" !== typeof Symbol.for) {
       const bb = "colyseus.symbolRegistry",
-        cb = Tb[bb] || (Tb[bb] = Object.create(null));
+        ab = Eb[bb] || (Eb[bb] = Object.create(null));
       Symbol.for = function(bb) {
-        return cb[bb] || (cb[bb] = Symbol(bb))
+        return ab[bb] || (ab[bb] = Symbol(bb))
       }, Symbol.keyFor = function(bb) {
-        for (const sb in cb)
-          if (cb[sb] === bb) return sb
+        for (const Ub in ab)
+          if (ab[Ub] === bb) return Ub
       }
     }
-    const Ub = Symbol.for("$refId"),
-      Ib = "~track",
-      Hb = "~encoder",
-      fb = "~decoder",
-      Mb = "~filter",
-      Xb = "~getByIndex",
-      nb = "~deleteByIndex",
-      mb = "~resyncPrune",
-      lb = Symbol.for("$changes"),
-      Qb = Symbol.for("$childType"),
-      eb = Symbol.for("$proxyTarget"),
-      Cb = "~onEncodeEnd",
-      Nb = "~reset",
-      Vb = "~onDecodeEnd",
-      Lb = Symbol.for("$values"),
-      ub = "~builder",
-      Yb = "~descriptors",
-      hb = "~__encodeDescriptor",
-      Jb = "~encoders",
-      gb = "~__numFields",
-      Bb = "~__refTypeFieldIndexes",
-      tb = "~__viewFieldIndexes",
-      yb = "$__fieldIndexesByViewTag",
-      Pb = "~__unreliableFieldIndexes",
-      Db = "~__patchOnlyFieldIndexes",
-      Eb = "~__fullSyncSkipIndexes",
-      ib = "~__fullStateOnlyFieldIndexes",
-      Ob = "~__streamFieldIndexes",
-      Gb = "~__streamPriorities";
-    let Kb;
+    const Yb = Symbol.for("$refId"),
+      Bb = "~track",
+      eb = "~encoder",
+      vb = "~decoder",
+      Lb = "~filter",
+      Pb = "~getByIndex",
+      Xb = "~deleteByIndex",
+      jb = "~resyncPrune",
+      Rb = Symbol.for("$changes"),
+      kb = Symbol.for("$childType"),
+      yb = Symbol.for("$proxyTarget"),
+      Zb = "~onEncodeEnd",
+      Db = "~reset",
+      zb = "~onDecodeEnd",
+      xb = Symbol.for("$values"),
+      ib = "~builder",
+      fb = "~descriptors",
+      mb = "~__encodeDescriptor",
+      pb = "~encoders",
+      Nb = "~__numFields",
+      Wb = "~__refTypeFieldIndexes",
+      Hb = "~__viewFieldIndexes",
+      Ib = "$__fieldIndexesByViewTag",
+      db = "~__unreliableFieldIndexes",
+      Fb = "~__patchOnlyFieldIndexes",
+      hb = "~__fullSyncSkipIndexes",
+      Gb = "~__fullStateOnlyFieldIndexes",
+      Qb = "~__streamFieldIndexes",
+      qb = "~__streamPriorities";
+    let ub;
     try {
-      Kb = new TextEncoder
-    } catch (IW) {}
-    const Zb = new ArrayBuffer(8),
-      zb = new Int32Array(Zb),
-      qb = new Float32Array(Zb),
-      db = new Float64Array(Zb),
-      Ab = new BigInt64Array(Zb),
-      wb = "undefined" !== typeof Buffer && Buffer.byteLength ? Buffer.byteLength : function(bb, cb) {
-        for (var sb = 0, kb = 0, Wb = 0, ab = bb.length; Wb < ab; Wb++)(sb = bb.charCodeAt(Wb)) < 128 ? kb += 1 : sb < 2048 ? kb += 2 : sb < 55296 || sb >= 57344 ? kb += 3 : (Wb++, kb += 4);
-        return kb
+      ub = new TextEncoder
+    } catch (TM) {}
+    const rb = new ArrayBuffer(8),
+      Kb = new Int32Array(rb),
+      ob = new Float32Array(rb),
+      lb = new Float64Array(rb),
+      tb = new BigInt64Array(rb),
+      wb = "undefined" !== typeof Buffer && Buffer.byteLength ? Buffer.byteLength : function(bb, ab) {
+        for (var Ub = 0, Ab = 0, Mb = 0, Tb = bb.length; Mb < Tb; Mb++)(Ub = bb.charCodeAt(Mb)) < 128 ? Ab += 1 : Ub < 2048 ? Ab += 2 : Ub < 55296 || Ub >= 57344 ? Ab += 3 : (Mb++, Ab += 4);
+        return Ab
       };
 
-    function rb(bb, cb, sb) {
-      for (var kb = 0, Wb = 0, ab = cb.length; Wb < ab; Wb++)(kb = cb.charCodeAt(Wb)) < 128 ? bb[sb.offset++] = kb : kb < 2048 ? (bb[sb.offset] = 192 | kb >> 6, bb[sb.offset + 1] = 128 | 63 & kb, sb.offset += 2) : kb < 55296 || kb >= 57344 ? (bb[sb.offset] = 224 | kb >> 12, bb[sb.offset + 1] = 128 | kb >> 6 & 63, bb[sb.offset + 2] = 128 | 63 & kb, sb.offset += 3) : (Wb++, kb = 65536 + ((1023 & kb) << 10 | 1023 & cb.charCodeAt(Wb)), bb[sb.offset] = 240 | kb >> 18, bb[sb.offset + 1] = 128 | kb >> 12 & 63, bb[sb.offset + 2] = 128 | kb >> 6 & 63, bb[sb.offset + 3] = 128 | 63 & kb, sb.offset += 4)
+    function sb(bb, ab, Ub) {
+      for (var Ab = 0, Mb = 0, Tb = ab.length; Mb < Tb; Mb++)(Ab = ab.charCodeAt(Mb)) < 128 ? bb[Ub.offset++] = Ab : Ab < 2048 ? (bb[Ub.offset] = 192 | Ab >> 6, bb[Ub.offset + 1] = 128 | 63 & Ab, Ub.offset += 2) : Ab < 55296 || Ab >= 57344 ? (bb[Ub.offset] = 224 | Ab >> 12, bb[Ub.offset + 1] = 128 | Ab >> 6 & 63, bb[Ub.offset + 2] = 128 | 63 & Ab, Ub.offset += 3) : (Mb++, Ab = 65536 + ((1023 & Ab) << 10 | 1023 & ab.charCodeAt(Mb)), bb[Ub.offset] = 240 | Ab >> 18, bb[Ub.offset + 1] = 128 | Ab >> 12 & 63, bb[Ub.offset + 2] = 128 | Ab >> 6 & 63, bb[Ub.offset + 3] = 128 | 63 & Ab, Ub.offset += 4)
     }
 
-    function ob(bb, cb, sb) {
-      bb[sb.offset++] = 255 & cb
+    function gb(bb, ab, Ub) {
+      bb[Ub.offset++] = 255 & ab
     }
 
-    function Sb(bb, cb, sb) {
-      bb[sb.offset++] = 255 & cb, bb[sb.offset++] = cb >> 8 & 255
+    function Cb(bb, ab, Ub) {
+      bb[Ub.offset++] = 255 & ab, bb[Ub.offset++] = ab >> 8 & 255
     }
 
-    function Rb(bb, cb, sb) {
-      bb[sb.offset++] = 255 & cb, bb[sb.offset++] = cb >> 8 & 255
+    function Vb(bb, ab, Ub) {
+      bb[Ub.offset++] = 255 & ab, bb[Ub.offset++] = ab >> 8 & 255
     }
 
-    function vb(bb, cb, sb) {
-      bb[sb.offset++] = 255 & cb, bb[sb.offset++] = cb >> 8 & 255, bb[sb.offset++] = cb >> 16 & 255, bb[sb.offset++] = cb >> 24 & 255
+    function Ob(bb, ab, Ub) {
+      bb[Ub.offset++] = 255 & ab, bb[Ub.offset++] = ab >> 8 & 255, bb[Ub.offset++] = ab >> 16 & 255, bb[Ub.offset++] = ab >> 24 & 255
     }
 
-    function Fb(bb, cb, sb) {
-      const kb = cb >> 24,
-        Wb = cb >> 16,
-        ab = cb >> 8,
-        Tb = cb;
-      bb[sb.offset++] = 255 & Tb, bb[sb.offset++] = 255 & ab, bb[sb.offset++] = 255 & Wb, bb[sb.offset++] = 255 & kb
+    function cb(bb, ab, Ub) {
+      const Ab = ab >> 24,
+        Mb = ab >> 16,
+        Tb = ab >> 8,
+        Eb = ab;
+      bb[Ub.offset++] = 255 & Eb, bb[Ub.offset++] = 255 & Tb, bb[Ub.offset++] = 255 & Mb, bb[Ub.offset++] = 255 & Ab
     }
 
-    function xb(bb, cb, sb) {
-      const kb = Math.floor(cb / Math.pow(2, 32));
-      Fb(bb, cb >>> 0, sb), Fb(bb, kb, sb)
+    function Jb(bb, ab, Ub) {
+      const Ab = Math.floor(ab / Math.pow(2, 32));
+      cb(bb, ab >>> 0, Ub), cb(bb, Ab, Ub)
     }
 
-    function jb(bb, cb, sb) {
-      const kb = cb / Math.pow(2, 32) | 0;
-      Fb(bb, cb >>> 0, sb), Fb(bb, kb, sb)
+    function nb(bb, ab, Ub) {
+      const Ab = ab / Math.pow(2, 32) | 0;
+      cb(bb, ab >>> 0, Ub), cb(bb, Ab, Ub)
     }
 
-    function pb(bb, cb, sb) {
-      qb[0] = cb, vb(bb, zb[0], sb)
+    function Sb(bb, ab, Ub) {
+      ob[0] = ab, Ob(bb, Kb[0], Ub)
     }
 
-    function bc(bb, cb, sb) {
-      db[0] = cb, vb(bb, zb[0], sb), vb(bb, zb[1], sb)
+    function ba(bb, ab, Ub) {
+      lb[0] = ab, Ob(bb, Kb[0], Ub), Ob(bb, Kb[1], Ub)
     }
-    const cc = {
-        int8: ob,
-        uint8: function(bb, cb, sb) {
-          bb[sb.offset++] = 255 & cb
+    const aa = {
+        int8: gb,
+        uint8: function(bb, ab, Ub) {
+          bb[Ub.offset++] = 255 & ab
         },
-        int16: Sb,
-        uint16: Rb,
-        int32: vb,
-        uint32: Fb,
-        int64: xb,
-        uint64: jb,
-        bigint64: function(bb, cb, sb) {
-          Ab[0] = BigInt.asIntN(64, cb), vb(bb, zb[0], sb), vb(bb, zb[1], sb)
+        int16: Cb,
+        uint16: Vb,
+        int32: Ob,
+        uint32: cb,
+        int64: Jb,
+        uint64: nb,
+        bigint64: function(bb, ab, Ub) {
+          tb[0] = BigInt.asIntN(64, ab), Ob(bb, Kb[0], Ub), Ob(bb, Kb[1], Ub)
         },
-        biguint64: function(bb, cb, sb) {
-          Ab[0] = BigInt.asIntN(64, cb), vb(bb, zb[0], sb), vb(bb, zb[1], sb)
+        biguint64: function(bb, ab, Ub) {
+          tb[0] = BigInt.asIntN(64, ab), Ob(bb, Kb[0], Ub), Ob(bb, Kb[1], Ub)
         },
-        float32: pb,
-        float64: bc,
-        boolean: function(bb, cb, sb) {
-          bb[sb.offset++] = cb ? 1 : 0
+        float32: Sb,
+        float64: ba,
+        boolean: function(bb, ab, Ub) {
+          bb[Ub.offset++] = ab ? 1 : 0
         },
-        string: function(bb, cb, sb) {
-          cb || (cb = "");
-          let kb = wb(cb, "utf8"),
-            Wb = 0;
-          if (kb < 32) bb[sb.offset++] = 160 | kb, Wb = 1;
-          else if (kb < 256) bb[sb.offset++] = 217, bb[sb.offset++] = kb, Wb = 2;
-          else if (kb < 65536) bb[sb.offset++] = 218, Rb(bb, kb, sb), Wb = 3;
+        string: function(bb, ab, Ub) {
+          ab || (ab = "");
+          let Ab = wb(ab, "utf8"),
+            Mb = 0;
+          if (Ab < 32) bb[Ub.offset++] = 160 | Ab, Mb = 1;
+          else if (Ab < 256) bb[Ub.offset++] = 217, bb[Ub.offset++] = Ab, Mb = 2;
+          else if (Ab < 65536) bb[Ub.offset++] = 218, Vb(bb, Ab, Ub), Mb = 3;
           else {
-            if (!(kb < 4294967296)) throw new Error("String too long");
-            bb[sb.offset++] = 219, Fb(bb, kb, sb), Wb = 5
+            if (!(Ab < 4294967296)) throw new Error("String too long");
+            bb[Ub.offset++] = 219, cb(bb, Ab, Ub), Mb = 5
           }
-          return rb(bb, cb, sb), Wb + kb
+          return sb(bb, ab, Ub), Mb + Ab
         },
-        number: function bb(cb, sb, kb) {
-          return isNaN(sb) ? bb(cb, 0, kb) : isFinite(sb) ? sb !== (0 | sb) ? Math.abs(sb) <= 34028235e31 && (qb[0] = sb, Math.abs(Math.abs(qb[0]) - Math.abs(sb)) < 1e-4) ? (cb[kb.offset++] = 202, pb(cb, sb, kb), 5) : (cb[kb.offset++] = 203, bc(cb, sb, kb), 9) : sb >= 0 ? sb < 128 ? (cb[kb.offset++] = 255 & sb, 1) : sb < 256 ? (cb[kb.offset++] = 204, cb[kb.offset++] = 255 & sb, 2) : sb < 65536 ? (cb[kb.offset++] = 205, Rb(cb, sb, kb), 3) : sb < 4294967296 ? (cb[kb.offset++] = 206, Fb(cb, sb, kb), 5) : (cb[kb.offset++] = 207, jb(cb, sb, kb), 9) : sb >= -32 ? (cb[kb.offset++] = 224 | sb + 32, 1) : sb >= -128 ? (cb[kb.offset++] = 208, ob(cb, sb, kb), 2) : sb >= -32768 ? (cb[kb.offset++] = 209, Sb(cb, sb, kb), 3) : sb >= -2147483648 ? (cb[kb.offset++] = 210, vb(cb, sb, kb), 5) : (cb[kb.offset++] = 211, xb(cb, sb, kb), 9) : bb(cb, sb > 0 ? Number.MAX_SAFE_INTEGER : -Number.MAX_SAFE_INTEGER, kb)
+        number: function bb(ab, Ub, Ab) {
+          return isNaN(Ub) ? bb(ab, 0, Ab) : isFinite(Ub) ? Ub !== (0 | Ub) ? Math.abs(Ub) <= 34028235e31 && (ob[0] = Ub, Math.abs(Math.abs(ob[0]) - Math.abs(Ub)) < 1e-4) ? (ab[Ab.offset++] = 202, Sb(ab, Ub, Ab), 5) : (ab[Ab.offset++] = 203, ba(ab, Ub, Ab), 9) : Ub >= 0 ? Ub < 128 ? (ab[Ab.offset++] = 255 & Ub, 1) : Ub < 256 ? (ab[Ab.offset++] = 204, ab[Ab.offset++] = 255 & Ub, 2) : Ub < 65536 ? (ab[Ab.offset++] = 205, Vb(ab, Ub, Ab), 3) : Ub < 4294967296 ? (ab[Ab.offset++] = 206, cb(ab, Ub, Ab), 5) : (ab[Ab.offset++] = 207, nb(ab, Ub, Ab), 9) : Ub >= -32 ? (ab[Ab.offset++] = 224 | Ub + 32, 1) : Ub >= -128 ? (ab[Ab.offset++] = 208, gb(ab, Ub, Ab), 2) : Ub >= -32768 ? (ab[Ab.offset++] = 209, Cb(ab, Ub, Ab), 3) : Ub >= -2147483648 ? (ab[Ab.offset++] = 210, Ob(ab, Ub, Ab), 5) : (ab[Ab.offset++] = 211, Jb(ab, Ub, Ab), 9) : bb(ab, Ub > 0 ? Number.MAX_SAFE_INTEGER : -Number.MAX_SAFE_INTEGER, Ab)
         },
-        utf8Write: rb,
+        utf8Write: sb,
         utf8Length: wb
       },
-      sc = new ArrayBuffer(8),
-      kc = new Int32Array(sc),
-      Wc = new Float32Array(sc),
-      ac = new Float64Array(sc),
-      Tc = new BigUint64Array(sc),
-      Uc = new BigInt64Array(sc);
+      Ua = new ArrayBuffer(8),
+      Aa = new Int32Array(Ua),
+      Ma = new Float32Array(Ua),
+      Ta = new Float64Array(Ua),
+      Ea = new BigUint64Array(Ua),
+      Ya = new BigInt64Array(Ua);
 
-    function Ic(bb, cb, sb) {
-      sb > bb.length - cb.offset && (sb = bb.length - cb.offset);
-      for (var kb = "", Wb = 0, ab = cb.offset, Tb = cb.offset + sb; ab < Tb; ab++) {
-        var Ub = bb[ab];
-        if (0 !== (128 & Ub))
-          if (192 !== (224 & Ub))
-            if (224 !== (240 & Ub)) {
-              if (240 !== (248 & Ub)) {
-                console.error("decode.utf8Read(): Invalid byte " + Ub + " at offset " + ab + ". Skip to end of string: " + (cb.offset + sb));
+    function Ba(bb, ab, Ub) {
+      Ub > bb.length - ab.offset && (Ub = bb.length - ab.offset);
+      for (var Ab = "", Mb = 0, Tb = ab.offset, Eb = ab.offset + Ub; Tb < Eb; Tb++) {
+        var Yb = bb[Tb];
+        if (0 !== (128 & Yb))
+          if (192 !== (224 & Yb))
+            if (224 !== (240 & Yb)) {
+              if (240 !== (248 & Yb)) {
+                console.error("decode.utf8Read(): Invalid byte " + Yb + " at offset " + Tb + ". Skip to end of string: " + (ab.offset + Ub));
                 break
-              }(Wb = (7 & Ub) << 18 | (63 & bb[++ab]) << 12 | (63 & bb[++ab]) << 6 | 63 & bb[++ab]) >= 65536 ? (Wb -= 65536, kb += String.fromCharCode(55296 + (Wb >>> 10), 56320 + (1023 & Wb))) : kb += String.fromCharCode(Wb)
-            } else kb += String.fromCharCode((15 & Ub) << 12 | (63 & bb[++ab]) << 6 | 63 & bb[++ab]);
-        else kb += String.fromCharCode((31 & Ub) << 6 | 63 & bb[++ab]);
-        else kb += String.fromCharCode(Ub)
+              }(Mb = (7 & Yb) << 18 | (63 & bb[++Tb]) << 12 | (63 & bb[++Tb]) << 6 | 63 & bb[++Tb]) >= 65536 ? (Mb -= 65536, Ab += String.fromCharCode(55296 + (Mb >>> 10), 56320 + (1023 & Mb))) : Ab += String.fromCharCode(Mb)
+            } else Ab += String.fromCharCode((15 & Yb) << 12 | (63 & bb[++Tb]) << 6 | 63 & bb[++Tb]);
+        else Ab += String.fromCharCode((31 & Yb) << 6 | 63 & bb[++Tb]);
+        else Ab += String.fromCharCode(Yb)
       }
-      return cb.offset += sb, kb
+      return ab.offset += Ub, Ab
     }
 
-    function Hc(bb, cb) {
-      return fc(bb, cb) << 24 >> 24
+    function ea(bb, ab) {
+      return va(bb, ab) << 24 >> 24
     }
 
-    function fc(bb, cb) {
-      return bb[cb.offset++]
+    function va(bb, ab) {
+      return bb[ab.offset++]
     }
 
-    function Mc(bb, cb) {
-      return Xc(bb, cb) << 16 >> 16
+    function La(bb, ab) {
+      return Pa(bb, ab) << 16 >> 16
     }
 
-    function Xc(bb, cb) {
-      return bb[cb.offset++] | bb[cb.offset++] << 8
+    function Pa(bb, ab) {
+      return bb[ab.offset++] | bb[ab.offset++] << 8
     }
 
-    function nc(bb, cb) {
-      return bb[cb.offset++] | bb[cb.offset++] << 8 | bb[cb.offset++] << 16 | bb[cb.offset++] << 24
+    function Xa(bb, ab) {
+      return bb[ab.offset++] | bb[ab.offset++] << 8 | bb[ab.offset++] << 16 | bb[ab.offset++] << 24
     }
 
-    function mc(bb, cb) {
-      return nc(bb, cb) >>> 0
+    function ja(bb, ab) {
+      return Xa(bb, ab) >>> 0
     }
 
-    function lc(bb, cb) {
-      return kc[0] = nc(bb, cb), Wc[0]
+    function Ra(bb, ab) {
+      return Aa[0] = Xa(bb, ab), Ma[0]
     }
 
-    function Qc(bb, cb) {
-      return kc[0] = nc(bb, cb), kc[1] = nc(bb, cb), ac[0]
+    function ka(bb, ab) {
+      return Aa[0] = Xa(bb, ab), Aa[1] = Xa(bb, ab), Ta[0]
     }
 
-    function ec(bb, cb) {
-      const sb = mc(bb, cb);
-      return nc(bb, cb) * Math.pow(2, 32) + sb
+    function ya(bb, ab) {
+      const Ub = ja(bb, ab);
+      return Xa(bb, ab) * Math.pow(2, 32) + Ub
     }
 
-    function Cc(bb, cb) {
-      const sb = mc(bb, cb);
-      return mc(bb, cb) * Math.pow(2, 32) + sb
+    function Za(bb, ab) {
+      const Ub = ja(bb, ab);
+      return ja(bb, ab) * Math.pow(2, 32) + Ub
     }
-    const Nc = {
-        utf8Read: Ic,
-        int8: Hc,
-        uint8: fc,
-        int16: Mc,
-        uint16: Xc,
-        int32: nc,
-        uint32: mc,
-        float32: lc,
-        float64: Qc,
-        int64: ec,
-        uint64: Cc,
-        bigint64: function(bb, cb) {
-          return kc[0] = nc(bb, cb), kc[1] = nc(bb, cb), Uc[0]
+    const Da = {
+        utf8Read: Ba,
+        int8: ea,
+        uint8: va,
+        int16: La,
+        uint16: Pa,
+        int32: Xa,
+        uint32: ja,
+        float32: Ra,
+        float64: ka,
+        int64: ya,
+        uint64: Za,
+        bigint64: function(bb, ab) {
+          return Aa[0] = Xa(bb, ab), Aa[1] = Xa(bb, ab), Ya[0]
         },
-        biguint64: function(bb, cb) {
-          return kc[0] = nc(bb, cb), kc[1] = nc(bb, cb), Tc[0]
+        biguint64: function(bb, ab) {
+          return Aa[0] = Xa(bb, ab), Aa[1] = Xa(bb, ab), Ea[0]
         },
-        boolean: function(bb, cb) {
-          return fc(bb, cb) > 0
+        boolean: function(bb, ab) {
+          return va(bb, ab) > 0
         },
-        string: function(bb, cb) {
-          const sb = bb[cb.offset++];
-          let kb;
-          return sb < 192 ? kb = 31 & sb : 217 === sb ? kb = fc(bb, cb) : 218 === sb ? kb = Xc(bb, cb) : 219 === sb && (kb = mc(bb, cb)), Ic(bb, cb, kb)
+        string: function(bb, ab) {
+          const Ub = bb[ab.offset++];
+          let Ab;
+          return Ub < 192 ? Ab = 31 & Ub : 217 === Ub ? Ab = va(bb, ab) : 218 === Ub ? Ab = Pa(bb, ab) : 219 === Ub && (Ab = ja(bb, ab)), Ba(bb, ab, Ab)
         },
-        number: function(bb, cb) {
-          const sb = bb[cb.offset++];
-          return sb < 128 ? sb : 202 === sb ? lc(bb, cb) : 203 === sb ? Qc(bb, cb) : 204 === sb ? fc(bb, cb) : 205 === sb ? Xc(bb, cb) : 206 === sb ? mc(bb, cb) : 207 === sb ? Cc(bb, cb) : 208 === sb ? Hc(bb, cb) : 209 === sb ? Mc(bb, cb) : 210 === sb ? nc(bb, cb) : 211 === sb ? ec(bb, cb) : sb > 223 ? -1 * (255 - sb + 1) : void 0
+        number: function(bb, ab) {
+          const Ub = bb[ab.offset++];
+          return Ub < 128 ? Ub : 202 === Ub ? Ra(bb, ab) : 203 === Ub ? ka(bb, ab) : 204 === Ub ? va(bb, ab) : 205 === Ub ? Pa(bb, ab) : 206 === Ub ? ja(bb, ab) : 207 === Ub ? Za(bb, ab) : 208 === Ub ? ea(bb, ab) : 209 === Ub ? La(bb, ab) : 210 === Ub ? Xa(bb, ab) : 211 === Ub ? ya(bb, ab) : Ub > 223 ? -1 * (255 - Ub + 1) : void 0
         },
-        stringCheck: function(bb, cb) {
-          const sb = bb[cb.offset];
-          return sb < 192 && sb > 160 || 217 === sb || 218 === sb || 219 === sb
+        stringCheck: function(bb, ab) {
+          const Ub = bb[ab.offset];
+          return Ub < 192 && Ub > 160 || 217 === Ub || 218 === Ub || 219 === Ub
         }
       },
-      Vc = {},
-      Lc = new Map;
+      za = {},
+      xa = new Map;
 
-    function uc(bb, cb) {
-      cb.constructor && (Object.prototype.hasOwnProperty.call(cb, "constructor") && null == cb.constructor[Symbol.metadata] && ab(cb.constructor), Lc.set(cb.constructor, bb), Vc[bb] = cb), cb.encode && (cc[bb] = cb.encode), cb.decode && (Nc[bb] = cb.decode)
+    function ia(bb, ab) {
+      ab.constructor && (Object.prototype.hasOwnProperty.call(ab, "constructor") && null == ab.constructor[Symbol.metadata] && Tb(ab.constructor), xa.set(ab.constructor, bb), za[bb] = ab), ab.encode && (aa[bb] = ab.encode), ab.decode && (Da[bb] = ab.decode)
     }
 
-    function Yc(bb) {
-      for (const cb in bb) uc(cb, bb[cb]);
-      return bb => uk(bb)
+    function fa(bb) {
+      for (const ab in bb) ia(ab, bb[ab]);
+      return bb => zA(bb)
     }
-    const hc = "ArraySchema does not support streaming \u2014 positional ops (splice / unshift / reverse) shift subsequent indexes, so holding ADDs back for a later tick under `maxPerTick` would desync the decoder. Use `t.stream(X)` (stable monotonic positions) or `t.map(X).stream()` (stable keys) instead.";
+    const ma = "ArraySchema does not support streaming \u2014 positional ops (splice / unshift / reverse) shift subsequent indexes, so holding ADDs back for a later tick under `maxPerTick` would desync the decoder. Use `t.stream(X)` (stable monotonic positions) or `t.map(X).stream()` (stable keys) instead.";
 
-    function Jc() {
+    function pa() {
       return {
         pendingByView: new Map,
         sentByView: new Map,
@@ -2450,125 +2450,125 @@ export const modules = {
       }
     }
 
-    function gc(bb) {
-      return bb._stream ??= Jc()
+    function Na(bb) {
+      return bb._stream ??= pa()
     }
 
-    function Bc(bb, cb, sb) {
-      0 === cb.activeViews.size && gc(bb).broadcastPending.add(sb)
+    function Wa(bb, ab, Ub) {
+      0 === ab.activeViews.size && Na(bb).broadcastPending.add(Ub)
     }
 
-    function tc(bb, cb, sb, kb) {
-      const ab = bb._stream;
-      if (void 0 === ab) return !0;
-      let Tb = !1;
-      return ab.broadcastPending.delete(kb) ? Tb = !0 : ab.sentBroadcast.delete(kb) && ab.broadcastDeletes.add(kb), cb.forEachActiveView((bb => {
-        const cb = ab.pendingByView.get(bb.id);
-        if (cb?.has(kb)) return cb.delete(kb), void(Tb = !0);
-        const Ub = ab.sentByView.get(bb.id);
-        if (Ub?.has(kb)) {
-          Ub.delete(kb);
-          let cb = bb.changes.get(sb);
-          void 0 === cb && (cb = new Map, bb.changes.set(sb, cb)), cb.set(kb, Wb.DELETE)
+    function Ha(bb, ab, Ub, Ab) {
+      const Tb = bb._stream;
+      if (void 0 === Tb) return !0;
+      let Eb = !1;
+      return Tb.broadcastPending.delete(Ab) ? Eb = !0 : Tb.sentBroadcast.delete(Ab) && Tb.broadcastDeletes.add(Ab), ab.forEachActiveView((bb => {
+        const ab = Tb.pendingByView.get(bb.id);
+        if (ab?.has(Ab)) return ab.delete(Ab), void(Eb = !0);
+        const Yb = Tb.sentByView.get(bb.id);
+        if (Yb?.has(Ab)) {
+          Yb.delete(Ab);
+          let ab = bb.changes.get(Ub);
+          void 0 === ab && (ab = new Map, bb.changes.set(Ub, ab)), ab.set(Ab, Mb.DELETE)
         }
-      })), Tb
+      })), Eb
     }
 
-    function yc(bb, cb) {
-      const sb = bb._stream?.pendingByView;
-      if (void 0 === sb) return !1;
-      for (const [kb, Wb] of sb)
-        if (Wb.size > 0 && void 0 !== cb.activeViews.get(kb)?.deref()) return !0;
+    function Ia(bb, ab) {
+      const Ub = bb._stream?.pendingByView;
+      if (void 0 === Ub) return !1;
+      for (const [Ab, Mb] of Ub)
+        if (Mb.size > 0 && void 0 !== ab.activeViews.get(Ab)?.deref()) return !0;
       return !1
     }
 
-    function Pc(bb) {
-      const cb = bb._stream;
-      return void 0 !== cb && (cb.broadcastPending.size > 0 || cb.broadcastDeletes.size > 0)
+    function da(bb) {
+      const ab = bb._stream;
+      return void 0 !== ab && (ab.broadcastPending.size > 0 || ab.broadcastDeletes.size > 0)
     }
 
-    function Dc(bb, cb, sb) {
-      const kb = gc(bb);
-      let Wb = kb.pendingByView.get(cb);
-      void 0 === Wb && (Wb = new Set, kb.pendingByView.set(cb, Wb)), Wb.add(sb)
+    function Fa(bb, ab, Ub) {
+      const Ab = Na(bb);
+      let Mb = Ab.pendingByView.get(ab);
+      void 0 === Mb && (Mb = new Set, Ab.pendingByView.set(ab, Mb)), Mb.add(Ub)
     }
 
-    function Ec(bb, cb) {
-      const sb = bb._stream;
-      void 0 !== sb && (sb.pendingByView.delete(cb), sb.sentByView.delete(cb), sb.priorityByView?.delete(cb))
+    function ha(bb, ab) {
+      const Ub = bb._stream;
+      void 0 !== Ub && (Ub.pendingByView.delete(ab), Ub.sentByView.delete(ab), Ub.priorityByView?.delete(ab))
     }
-    const ic = {
+    const Ga = {
       8: "uint8",
       16: "uint16",
       32: "uint32"
     };
 
-    function Oc(bb) {
+    function Qa(bb) {
       if (null == bb || "object" !== typeof bb) throw new Error("t.quantized(): options object with { min, max } is required.");
       const {
-        min: cb,
-        max: sb
+        min: ab,
+        max: Ub
       } = bb;
-      if ("number" !== typeof cb || "number" !== typeof sb || !(sb > cb) || !Number.isFinite(cb) || !Number.isFinite(sb)) throw new Error(`t.quantized(): require finite min < max (got min=${cb}, max=${sb}).`);
-      const kb = bb.bits ?? 16;
-      if (8 !== kb && 16 !== kb && 32 !== kb) throw new Error(`t.quantized(): bits must be 8, 16 or 32 (got ${kb}).`);
-      const Wb = bb.mode ?? "clamp";
-      if ("clamp" !== Wb && "wrap" !== Wb) throw new Error(`t.quantized(): mode must be "clamp" or "wrap" (got ${JSON.stringify(Wb)}).`);
-      const ab = "wrap" === Wb,
-        Tb = Math.pow(2, kb);
+      if ("number" !== typeof ab || "number" !== typeof Ub || !(Ub > ab) || !Number.isFinite(ab) || !Number.isFinite(Ub)) throw new Error(`t.quantized(): require finite min < max (got min=${ab}, max=${Ub}).`);
+      const Ab = bb.bits ?? 16;
+      if (8 !== Ab && 16 !== Ab && 32 !== Ab) throw new Error(`t.quantized(): bits must be 8, 16 or 32 (got ${Ab}).`);
+      const Mb = bb.mode ?? "clamp";
+      if ("clamp" !== Mb && "wrap" !== Mb) throw new Error(`t.quantized(): mode must be "clamp" or "wrap" (got ${JSON.stringify(Mb)}).`);
+      const Tb = "wrap" === Mb,
+        Eb = Math.pow(2, Ab);
       return {
-        min: cb,
-        max: sb,
-        bits: kb,
-        wrap: ab,
-        wire: ic[kb],
-        range: sb - cb,
-        span: ab ? Tb : cb === -sb ? Tb - 2 : Tb - 1
+        min: ab,
+        max: Ub,
+        bits: Ab,
+        wrap: Tb,
+        wire: Ga[Ab],
+        range: Ub - ab,
+        span: Tb ? Eb : ab === -Ub ? Eb - 2 : Eb - 1
       }
     }
 
-    function Gc(bb) {
+    function qa(bb) {
       return null !== bb && "object" === typeof bb && void 0 !== bb.quantized
     }
 
-    function Kc(bb, cb) {
+    function ua(bb, ab) {
       if (bb.wrap) {
-        if (!Number.isFinite(cb)) return 0;
-        const sb = bb.range;
-        let kb = (cb - bb.min) % sb;
-        kb < 0 && (kb += sb);
-        const Wb = bb.span;
-        return Math.floor(kb / sb * Wb + .5) % Wb
+        if (!Number.isFinite(ab)) return 0;
+        const Ub = bb.range;
+        let Ab = (ab - bb.min) % Ub;
+        Ab < 0 && (Ab += Ub);
+        const Mb = bb.span;
+        return Math.floor(Ab / Ub * Mb + .5) % Mb
       }
-      if (cb !== cb) return 0;
-      const sb = cb < bb.min ? bb.min : cb > bb.max ? bb.max : cb;
-      return Math.floor((sb - bb.min) / bb.range * bb.span + .5)
+      if (ab !== ab) return 0;
+      const Ub = ab < bb.min ? bb.min : ab > bb.max ? bb.max : ab;
+      return Math.floor((Ub - bb.min) / bb.range * bb.span + .5)
     }
 
-    function Zc(bb, cb) {
-      return bb.min + cb / bb.span * bb.range
+    function ra(bb, ab) {
+      return bb.min + ab / bb.span * bb.range
     }
 
-    function zc(bb) {
-      const cb = cc[bb.wire];
-      return (sb, kb, Wb) => cb(sb, Kc(bb, kb), Wb)
+    function Ka(bb) {
+      const ab = aa[bb.wire];
+      return (Ub, Ab, Mb) => ab(Ub, ua(bb, Ab), Mb)
     }
-    class qc {
+    class oa {
       types = {};
       schemas = new Map;
       hasFilters = !1;
       static inheritedTypes = new WeakMap;
       static cachedContexts = new WeakMap;
       static register(bb) {
-        const cb = Object.getPrototypeOf(bb);
-        if (cb !== Pk) {
-          let sb = qc.inheritedTypes.get(cb);
-          sb || (sb = new Set, qc.inheritedTypes.set(cb, sb)), sb.add(bb)
+        const ab = Object.getPrototypeOf(bb);
+        if (ab !== HA) {
+          let Ub = oa.inheritedTypes.get(ab);
+          Ub || (Ub = new Set, oa.inheritedTypes.set(ab, Ub)), Ub.add(bb)
         }
       }
       static cache(bb) {
-        let cb = qc.cachedContexts.get(bb);
-        return cb || (cb = new qc(bb), qc.cachedContexts.set(bb, cb)), cb
+        let ab = oa.cachedContexts.get(bb);
+        return ab || (ab = new oa(bb), oa.cachedContexts.set(bb, ab)), ab
       }
       constructor(bb) {
         bb && this.discoverTypes(bb)
@@ -2580,30 +2580,30 @@ export const modules = {
         return this.types[bb]
       }
       add(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.schemas.size;
-        return !this.schemas.has(bb) && (this.types[cb] = bb, null == bb[Symbol.metadata] && Rc.initialize(bb), this.schemas.set(bb, cb), !0)
+        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.schemas.size;
+        return !this.schemas.has(bb) && (this.types[ab] = bb, null == bb[Symbol.metadata] && Va.initialize(bb), this.schemas.set(bb, ab), !0)
       }
       getTypeId(bb) {
         return this.schemas.get(bb)
       }
       discoverTypes(bb) {
         if (!this.add(bb)) return;
-        qc.inheritedTypes.get(bb)?.forEach((bb => {
+        oa.inheritedTypes.get(bb)?.forEach((bb => {
           this.discoverTypes(bb)
         }));
-        let cb = bb;
+        let ab = bb;
         for (;
-          (cb = Object.getPrototypeOf(cb)) && cb !== Pk && cb !== Function.prototype;) this.discoverTypes(cb);
-        const sb = bb[Symbol.metadata];
-        (sb[tb] || sb[Ob]) && (this.hasFilters = !0);
-        for (const kb in sb) {
-          const bb = sb[kb].type;
-          if ("string" !== typeof bb && !Gc(bb))
+          (ab = Object.getPrototypeOf(ab)) && ab !== HA && ab !== Function.prototype;) this.discoverTypes(ab);
+        const Ub = bb[Symbol.metadata];
+        (Ub[Hb] || Ub[Qb]) && (this.hasFilters = !0);
+        for (const Ab in Ub) {
+          const bb = Ub[Ab].type;
+          if ("string" !== typeof bb && !qa(bb))
             if ("function" === typeof bb) this.discoverTypes(bb);
             else {
-              const cb = Object.values(bb)[0];
-              if ("string" === typeof cb) continue;
-              this.discoverTypes(cb)
+              const ab = Object.values(bb)[0];
+              if ("string" === typeof ab) continue;
+              this.discoverTypes(ab)
             }
         }
       }
@@ -2612,233 +2612,233 @@ export const modules = {
       }
     }
 
-    function dc(bb) {
-      const cb = wc(bb);
-      return cb ? {
-        complexTypeKlass: Vc[cb],
-        childType: bb[cb]
+    function la(bb) {
+      const ab = wa(bb);
+      return ab ? {
+        complexTypeKlass: za[ab],
+        childType: bb[ab]
       } : {
         complexTypeKlass: !1,
         childType: bb
       }
     }
 
-    function Ac(bb, cb) {
-      const sb = rc(bb),
-        kb = wc(sb),
-        Wb = kb && wc(sb[kb]);
-      if (Wb) throw new Error(`${cb?`${cb}: `:""}@colyseus/schema: nested collections are not supported ("${kb}" of "${Wb}"). Collections can only hold primitive types or Schema classes, wrap the inner ${Wb} in a Schema class.`);
-      return sb
+    function ta(bb, ab) {
+      const Ub = sa(bb),
+        Ab = wa(Ub),
+        Mb = Ab && wa(Ub[Ab]);
+      if (Mb) throw new Error(`${ab?`${ab}: `:""}@colyseus/schema: nested collections are not supported ("${Ab}" of "${Mb}"). Collections can only hold primitive types or Schema classes, wrap the inner ${Mb} in a Schema class.`);
+      return Ub
     }
 
-    function wc(bb) {
-      return "object" === typeof bb && null !== bb ? Object.keys(bb).find((bb => void 0 !== Vc[bb])) : void 0
+    function wa(bb) {
+      return "object" === typeof bb && null !== bb ? Object.keys(bb).find((bb => void 0 !== za[bb])) : void 0
     }
 
-    function rc(bb) {
+    function sa(bb) {
       if ("object" !== typeof bb || null === bb) return bb;
       if (Array.isArray(bb)) return {
-        array: rc(bb[0])
+        array: sa(bb[0])
       };
-      const cb = function(bb) {
-        const cb = Object.keys(bb),
-          sb = cb.filter((bb => /\d+/.test(bb)));
-        if (sb.length > 0 && sb.length === cb.length / 2 && bb[bb[sb[0]]] == sb[0]) return "number";
-        if (cb.length > 0 && cb.every((cb => bb[cb] === cb))) return "string"
+      const ab = function(bb) {
+        const ab = Object.keys(bb),
+          Ub = ab.filter((bb => /\d+/.test(bb)));
+        if (Ub.length > 0 && Ub.length === ab.length / 2 && bb[bb[Ub[0]]] == Ub[0]) return "number";
+        if (ab.length > 0 && ab.every((ab => bb[ab] === ab))) return "string"
       }(bb);
-      if (cb) return cb;
-      if (Gc(bb)) return "string" === typeof bb.quantized.wire ? bb : {
-        quantized: Oc(bb.quantized)
+      if (ab) return ab;
+      if (qa(bb)) return "string" === typeof bb.quantized.wire ? bb : {
+        quantized: Qa(bb.quantized)
       };
-      if (void 0 !== bb.type) return rc(bb.type);
-      const sb = wc(bb);
-      return sb && (bb[sb] = rc(bb[sb])), bb
+      if (void 0 !== bb.type) return sa(bb.type);
+      const Ub = wa(bb);
+      return Ub && (bb[Ub] = sa(bb[Ub])), bb
     }
-    const oc = [Bb, Pb, Db, Eb, ib, Ob, Jb];
+    const ga = [Wb, db, Fb, hb, Gb, Qb, pb];
 
-    function Sc(bb, cb, sb) {
-      bb[cb] || Object.defineProperty(bb, cb, {
+    function Ca(bb, ab, Ub) {
+      bb[ab] || Object.defineProperty(bb, ab, {
         value: [],
         enumerable: !1,
         configurable: !0,
         writable: !0
-      }), bb[cb].push(sb)
+      }), bb[ab].push(Ub)
     }
-    const Rc = {
-        addField(bb, cb, sb, kb, Wb) {
-          if (cb >= 63) throw new Error(`Can't define field '${sb}'.\nSchema instances may only have up to 63 fields.`);
-          bb[cb] = Object.assign(bb[cb] || {}, {
-            type: kb,
-            index: cb,
-            name: sb
-          }), Object.defineProperty(bb, Yb, {
-            value: bb[Yb] || {},
+    const Va = {
+        addField(bb, ab, Ub, Ab, Mb) {
+          if (ab >= 63) throw new Error(`Can't define field '${Ub}'.\nSchema instances may only have up to 63 fields.`);
+          bb[ab] = Object.assign(bb[ab] || {}, {
+            type: Ab,
+            index: ab,
+            name: Ub
+          }), Object.defineProperty(bb, fb, {
+            value: bb[fb] || {},
             enumerable: !1,
             configurable: !0
-          }), bb[Yb][sb] = Wb || {
+          }), bb[fb][Ub] = Mb || {
             value: void 0,
             writable: !0,
             enumerable: !0,
             configurable: !0
-          }, Object.defineProperty(bb, gb, {
-            value: cb,
+          }, Object.defineProperty(bb, Nb, {
+            value: ab,
             enumerable: !1,
             configurable: !0
-          }), Object.defineProperty(bb, sb, {
-            value: cb,
+          }), Object.defineProperty(bb, Ub, {
+            value: ab,
             enumerable: !1,
             configurable: !0
-          }), "string" === typeof bb[cb].type || Gc(bb[cb].type) || (void 0 === bb[Bb] && Object.defineProperty(bb, Bb, {
+          }), "string" === typeof bb[ab].type || qa(bb[ab].type) || (void 0 === bb[Wb] && Object.defineProperty(bb, Wb, {
             value: [],
             enumerable: !1,
             configurable: !0
-          }), bb[Bb].push(cb));
-          const ab = bb[cb].type;
-          if (ab && "object" === typeof ab && void 0 !== ab.stream) {
-            if (void 0 !== ab.array) throw new Error(hc);
-            bb[cb].stream = !0, bb[Ob] || Object.defineProperty(bb, Ob, {
+          }), bb[Wb].push(ab));
+          const Tb = bb[ab].type;
+          if (Tb && "object" === typeof Tb && void 0 !== Tb.stream) {
+            if (void 0 !== Tb.array) throw new Error(ma);
+            bb[ab].stream = !0, bb[Qb] || Object.defineProperty(bb, Qb, {
               value: [],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), bb[Ob].includes(cb) || bb[Ob].push(cb);
-            const Wb = kb?.priority;
-            "function" === typeof Wb && Rc.setStreamPriority(bb, sb, Wb)
+            }), bb[Qb].includes(ab) || bb[Qb].push(ab);
+            const Mb = Ab?.priority;
+            "function" === typeof Mb && Va.setStreamPriority(bb, Ub, Mb)
           }
         },
-        setTag(bb, cb, sb) {
-          const kb = bb[cb];
-          if (bb[kb].tag = sb, bb[tb] || (Object.defineProperty(bb, tb, {
+        setTag(bb, ab, Ub) {
+          const Ab = bb[ab];
+          if (bb[Ab].tag = Ub, bb[Hb] || (Object.defineProperty(bb, Hb, {
               value: [],
               enumerable: !1,
               configurable: !0
-            }), Object.defineProperty(bb, yb, {
+            }), Object.defineProperty(bb, Ib, {
               value: {},
               enumerable: !1,
               configurable: !0
-            })), bb[tb].push(kb), sb < 0) bb[yb][sb] || (bb[yb][sb] = []), bb[yb][sb].push(kb);
+            })), bb[Hb].push(Ab), Ub < 0) bb[Ib][Ub] || (bb[Ib][Ub] = []), bb[Ib][Ub].push(Ab);
           else
-            for (let Wb = sb; Wb > 0; Wb &= Wb - 1) {
-              const cb = Wb & -Wb;
-              bb[yb][cb] || (bb[yb][cb] = []), bb[yb][cb].push(kb)
+            for (let Mb = Ub; Mb > 0; Mb &= Mb - 1) {
+              const ab = Mb & -Mb;
+              bb[Ib][ab] || (bb[Ib][ab] = []), bb[Ib][ab].push(Ab)
             }
         },
-        setUnreliable(bb, cb) {
-          const sb = bb[cb];
-          if ("string" !== typeof bb[sb].type) throw new Error(`@unreliable cannot be applied to ref-type field "${cb}". For ref-type fields, mark each primitive sub-field with @unreliable instead. See README "Limitations and best practices".`);
-          bb[sb].unreliable = !0, bb[Pb] || Object.defineProperty(bb, Pb, {
+        setUnreliable(bb, ab) {
+          const Ub = bb[ab];
+          if ("string" !== typeof bb[Ub].type) throw new Error(`@unreliable cannot be applied to ref-type field "${ab}". For ref-type fields, mark each primitive sub-field with @unreliable instead. See README "Limitations and best practices".`);
+          bb[Ub].unreliable = !0, bb[db] || Object.defineProperty(bb, db, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), bb[Pb].push(sb)
+          }), bb[db].push(Ub)
         },
-        setPatchOnly(bb, cb) {
-          const sb = bb[cb];
-          if (bb[sb].fullStateOnly) throw new Error(`field "${cb}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
-          bb[sb].patchOnly = !0, Sc(bb, Db, sb), Sc(bb, Eb, sb)
+        setPatchOnly(bb, ab) {
+          const Ub = bb[ab];
+          if (bb[Ub].fullStateOnly) throw new Error(`field "${ab}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
+          bb[Ub].patchOnly = !0, Ca(bb, Fb, Ub), Ca(bb, hb, Ub)
         },
-        setDeprecated(bb, cb) {
-          const sb = bb[cb];
-          bb[sb].deprecated = !0, Sc(bb, Eb, sb), Object.defineProperty(bb, sb, {
-            value: bb[sb],
+        setDeprecated(bb, ab) {
+          const Ub = bb[ab];
+          bb[Ub].deprecated = !0, Ca(bb, hb, Ub), Object.defineProperty(bb, Ub, {
+            value: bb[Ub],
             enumerable: !1,
             configurable: !0
           })
         },
-        setFullStateOnly(bb, cb) {
-          const sb = bb[cb];
-          if (bb[sb].patchOnly) throw new Error(`field "${cb}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
-          bb[sb].fullStateOnly = !0, Sc(bb, ib, sb)
+        setFullStateOnly(bb, ab) {
+          const Ub = bb[ab];
+          if (bb[Ub].patchOnly) throw new Error(`field "${ab}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
+          bb[Ub].fullStateOnly = !0, Ca(bb, Gb, Ub)
         },
-        setStream(bb, cb) {
-          const sb = bb[cb];
-          bb[sb].stream = !0, bb[Ob] || Object.defineProperty(bb, Ob, {
+        setStream(bb, ab) {
+          const Ub = bb[ab];
+          bb[Ub].stream = !0, bb[Qb] || Object.defineProperty(bb, Qb, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), bb[Ob].push(sb)
+          }), bb[Qb].push(Ub)
         },
-        setStreamPriority(bb, cb, sb) {
-          const kb = bb[cb];
-          bb[Gb] || Object.defineProperty(bb, Gb, {
+        setStreamPriority(bb, ab, Ub) {
+          const Ab = bb[ab];
+          bb[qb] || Object.defineProperty(bb, qb, {
             value: {},
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), bb[Gb][kb] = sb
+          }), bb[qb][Ab] = Ub
         },
-        getStreamPriority: (bb, cb) => bb?.[Gb]?.[cb],
-        defineField(bb, cb, sb, kb, Wb) {
-          const ab = Ac(Wb, `${bb.name}.${kb}`),
+        getStreamPriority: (bb, ab) => bb?.[qb]?.[ab],
+        defineField(bb, ab, Ub, Ab, Mb) {
+          const Tb = ta(Mb, `${bb.name}.${Ab}`),
             {
-              complexTypeKlass: Tb,
-              childType: Ub
-            } = dc(ab);
-          Rc.addField(cb, sb, kb, ab, hk(kb, sb, Ub, Tb)), cb[Yb][kb] && Object.defineProperty(bb.prototype, kb, cb[Yb][kb]), ("string" === typeof ab || Gc(ab)) && (cb[Jb] || Object.defineProperty(cb, Jb, {
+              complexTypeKlass: Eb,
+              childType: Yb
+            } = la(Tb);
+          Va.addField(ab, Ub, Ab, Tb, iA(Ab, Ub, Yb, Eb)), ab[fb][Ab] && Object.defineProperty(bb.prototype, Ab, ab[fb][Ab]), ("string" === typeof Tb || qa(Tb)) && (ab[pb] || Object.defineProperty(ab, pb, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), cb[Jb][sb] = "string" === typeof ab ? cc[ab] : zc(ab.quantized))
+          }), ab[pb][Ub] = "string" === typeof Tb ? aa[Tb] : Ka(Tb.quantized))
         },
-        setFields(bb, cb) {
-          const sb = bb.prototype.constructor;
-          qc.register(sb);
-          const kb = Object.getPrototypeOf(sb),
-            Wb = kb && kb[Symbol.metadata],
-            ab = Rc.initialize(sb);
-          sb[Ib] || (sb[Ib] = Pk[Ib]), sb[Hb] || (sb[Hb] = Pk[Hb]), sb[fb] || (sb[fb] = Pk[fb]), sb.prototype.toJSON || (sb.prototype.toJSON = Pk.prototype.toJSON);
-          let Tb = ab[gb] ?? (Wb && Wb[gb]) ?? -1;
-          Tb++, ab[Jb] || Object.defineProperty(ab, Jb, {
-            value: Wb?.[Jb] ? [...Wb[Jb]] : [],
+        setFields(bb, ab) {
+          const Ub = bb.prototype.constructor;
+          oa.register(Ub);
+          const Ab = Object.getPrototypeOf(Ub),
+            Mb = Ab && Ab[Symbol.metadata],
+            Tb = Va.initialize(Ub);
+          Ub[Bb] || (Ub[Bb] = HA[Bb]), Ub[eb] || (Ub[eb] = HA[eb]), Ub[vb] || (Ub[vb] = HA[vb]), Ub.prototype.toJSON || (Ub.prototype.toJSON = HA.prototype.toJSON);
+          let Eb = Tb[Nb] ?? (Mb && Mb[Nb]) ?? -1;
+          Eb++, Tb[pb] || Object.defineProperty(Tb, pb, {
+            value: Mb?.[pb] ? [...Mb[pb]] : [],
             enumerable: !1,
             configurable: !0,
             writable: !0
           });
-          for (const Ub in cb) {
-            if (void 0 !== ab[Ub]) throw new Error(`@colyseus/schema: Duplicate '${Ub}' definition on '${sb.name||"(anonymous)"}'.`);
-            Rc.defineField(sb, ab, Tb, Ub, cb[Ub]), Tb++
+          for (const Yb in ab) {
+            if (void 0 !== Tb[Yb]) throw new Error(`@colyseus/schema: Duplicate '${Yb}' definition on '${Ub.name||"(anonymous)"}'.`);
+            Va.defineField(Ub, Tb, Eb, Yb, ab[Yb]), Eb++
           }
           return bb
         },
-        isDeprecated: (bb, cb) => !0 === bb[cb].deprecated,
+        isDeprecated: (bb, ab) => !0 === bb[ab].deprecated,
         initialize(bb) {
-          const cb = Object.getPrototypeOf(bb),
-            sb = cb[Symbol.metadata];
-          let kb = bb[Symbol.metadata] ?? Object.create(null);
-          if (cb !== Pk && kb === sb && (kb = Object.create(null), sb)) {
-            Object.setPrototypeOf(kb, sb), Object.defineProperty(kb, gb, {
-              value: sb[gb],
+          const ab = Object.getPrototypeOf(bb),
+            Ub = ab[Symbol.metadata];
+          let Ab = bb[Symbol.metadata] ?? Object.create(null);
+          if (ab !== HA && Ab === Ub && (Ab = Object.create(null), Ub)) {
+            Object.setPrototypeOf(Ab, Ub), Object.defineProperty(Ab, Nb, {
+              value: Ub[Nb],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), void 0 !== sb[tb] && (Object.defineProperty(kb, tb, {
-              value: [...sb[tb]],
+            }), void 0 !== Ub[Hb] && (Object.defineProperty(Ab, Hb, {
+              value: [...Ub[Hb]],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), Object.defineProperty(kb, yb, {
+            }), Object.defineProperty(Ab, Ib, {
               value: {
-                ...sb[yb]
+                ...Ub[Ib]
               },
               enumerable: !1,
               configurable: !0,
               writable: !0
             }));
-            for (const bb of oc) {
-              const cb = sb[bb];
-              void 0 !== cb && Object.defineProperty(kb, bb, {
-                value: [...cb],
+            for (const bb of ga) {
+              const ab = Ub[bb];
+              void 0 !== ab && Object.defineProperty(Ab, bb, {
+                value: [...ab],
                 enumerable: !1,
                 configurable: !0,
                 writable: !0
               })
             }
-            Object.defineProperty(kb, Yb, {
+            Object.defineProperty(Ab, fb, {
               value: {
-                ...sb[Yb]
+                ...Ub[fb]
               },
               enumerable: !1,
               configurable: !0,
@@ -2846,69 +2846,69 @@ export const modules = {
             })
           }
           return Object.defineProperty(bb, Symbol.metadata, {
-            value: kb,
+            value: Ab,
             writable: !1,
             configurable: !0
-          }), kb
+          }), Ab
         },
-        isValidInstance: bb => bb.constructor[Symbol.metadata] && Object.prototype.hasOwnProperty.call(bb.constructor[Symbol.metadata], gb),
+        isValidInstance: bb => bb.constructor[Symbol.metadata] && Object.prototype.hasOwnProperty.call(bb.constructor[Symbol.metadata], Nb),
         getFields(bb) {
-          const cb = bb[Symbol.metadata],
-            sb = {};
-          for (let kb = 0; kb <= cb[gb]; kb++) sb[cb[kb].name] = cb[kb].type;
-          return sb
+          const ab = bb[Symbol.metadata],
+            Ub = {};
+          for (let Ab = 0; Ab <= ab[Nb]; Ab++) Ub[ab[Ab].name] = ab[Ab].type;
+          return Ub
         },
-        hasViewTagAtIndex: (bb, cb) => bb?.[tb]?.includes(cb),
-        hasUnreliableAtIndex: (bb, cb) => bb?.[Pb]?.includes(cb),
-        hasPatchOnlyAtIndex: (bb, cb) => bb?.[Db]?.includes(cb),
-        hasFullStateOnlyAtIndex: (bb, cb) => bb?.[ib]?.includes(cb),
-        hasStreamAtIndex: (bb, cb) => bb?.[Ob]?.includes(cb)
+        hasViewTagAtIndex: (bb, ab) => bb?.[Hb]?.includes(ab),
+        hasUnreliableAtIndex: (bb, ab) => bb?.[db]?.includes(ab),
+        hasPatchOnlyAtIndex: (bb, ab) => bb?.[Fb]?.includes(ab),
+        hasFullStateOnlyAtIndex: (bb, ab) => bb?.[Gb]?.includes(ab),
+        hasStreamAtIndex: (bb, ab) => bb?.[Qb]?.includes(ab)
       },
-      vc = (bb, cb, sb) => bb(cb, sb);
-    class Fc {
+      Oa = (bb, ab, Ub) => bb(ab, Ub);
+    class ca {
       dirtyLow = 0;
       dirtyHigh = 0;
       ops;
       constructor(bb) {
         this.ops = new Uint8Array(Math.max(bb + 1, 1))
       }
-      record(bb, cb) {
-        const sb = this.ops[bb];
-        0 === sb ? this.ops[bb] = cb : (sb === Wb.DELETE || sb === Wb.ADD && cb === Wb.DELETE_AND_ADD) && (this.ops[bb] = Wb.DELETE_AND_ADD), bb < 32 ? this.dirtyLow |= 1 << bb : this.dirtyHigh |= 1 << bb - 32
+      record(bb, ab) {
+        const Ub = this.ops[bb];
+        0 === Ub ? this.ops[bb] = ab : (Ub === Mb.DELETE || Ub === Mb.ADD && ab === Mb.DELETE_AND_ADD) && (this.ops[bb] = Mb.DELETE_AND_ADD), bb < 32 ? this.dirtyLow |= 1 << bb : this.dirtyHigh |= 1 << bb - 32
       }
-      recordDelete(bb, cb) {
-        this.ops[bb] = cb, bb < 32 ? this.dirtyLow |= 1 << bb : this.dirtyHigh |= 1 << bb - 32
+      recordDelete(bb, ab) {
+        this.ops[bb] = ab, bb < 32 ? this.dirtyLow |= 1 << bb : this.dirtyHigh |= 1 << bb - 32
       }
-      recordRaw(bb, cb) {
-        this.record(bb, cb)
+      recordRaw(bb, ab) {
+        this.record(bb, ab)
       }
       operationAt(bb) {
-        const cb = this.ops[bb];
-        return 0 === cb ? void 0 : cb
+        const ab = this.ops[bb];
+        return 0 === ab ? void 0 : ab
       }
-      setOperationAt(bb, cb) {
-        this.ops[bb] = cb
+      setOperationAt(bb, ab) {
+        this.ops[bb] = ab
       }
       forEach(bb) {
-        this.forEachWithCtx(bb, vc)
+        this.forEachWithCtx(bb, Oa)
       }
-      forEachWithCtx(bb, cb) {
-        let sb = this.dirtyLow,
-          kb = this.dirtyHigh;
-        const Wb = this.ops;
-        for (; 0 !== sb;) {
-          const kb = sb & -sb,
-            ab = 31 - Math.clz32(kb);
-          sb ^= kb, cb(bb, ab, Wb[ab])
+      forEachWithCtx(bb, ab) {
+        let Ub = this.dirtyLow,
+          Ab = this.dirtyHigh;
+        const Mb = this.ops;
+        for (; 0 !== Ub;) {
+          const Ab = Ub & -Ub,
+            Tb = 31 - Math.clz32(Ab);
+          Ub ^= Ab, ab(bb, Tb, Mb[Tb])
         }
-        for (; 0 !== kb;) {
-          const sb = kb & -kb,
-            ab = 31 - Math.clz32(sb) + 32;
-          kb ^= sb, cb(bb, ab, Wb[ab])
+        for (; 0 !== Ab;) {
+          const Ub = Ab & -Ab,
+            Tb = 31 - Math.clz32(Ub) + 32;
+          Ab ^= Ub, ab(bb, Tb, Mb[Tb])
         }
       }
       size() {
-        return jc(this.dirtyLow) + jc(this.dirtyHigh)
+        return na(this.dirtyLow) + na(this.dirtyHigh)
       }
       has() {
         return 0 !== (this.dirtyLow | this.dirtyHigh)
@@ -2917,359 +2917,359 @@ export const modules = {
         this.dirtyLow = 0, this.dirtyHigh = 0, this.ops.fill(0)
       }
     }
-    class xc {
-      sl = new Map;
+    class Ja {
+      yj = new Map;
       pureOps = [];
-      record(bb, cb) {
-        const sb = this.sl.get(bb);
-        void 0 === sb ? this.sl.set(bb, cb) : (sb === Wb.DELETE || sb === Wb.ADD && cb === Wb.DELETE_AND_ADD) && this.sl.set(bb, Wb.DELETE_AND_ADD)
+      record(bb, ab) {
+        const Ub = this.yj.get(bb);
+        void 0 === Ub ? this.yj.set(bb, ab) : (Ub === Mb.DELETE || Ub === Mb.ADD && ab === Mb.DELETE_AND_ADD) && this.yj.set(bb, Mb.DELETE_AND_ADD)
       }
-      recordDelete(bb, cb) {
-        this.sl.set(bb, cb)
+      recordDelete(bb, ab) {
+        this.yj.set(bb, ab)
       }
-      recordRaw(bb, cb) {
-        this.sl.set(bb, cb)
+      recordRaw(bb, ab) {
+        this.yj.set(bb, ab)
       }
       recordPure(bb) {
-        this.pureOps.push([this.sl.size, bb])
+        this.pureOps.push([this.yj.size, bb])
       }
       operationAt(bb) {
-        return this.sl.get(bb)
+        return this.yj.get(bb)
       }
-      setOperationAt(bb, cb) {
-        this.sl.has(bb) && this.sl.set(bb, cb)
+      setOperationAt(bb, ab) {
+        this.yj.has(bb) && this.yj.set(bb, ab)
       }
       forEach(bb) {
-        this.forEachWithCtx(bb, vc)
+        this.forEachWithCtx(bb, Oa)
       }
-      forEachWithCtx(bb, cb) {
-        const sb = this.pureOps;
-        if (sb.length > 0) {
-          let kb = 0,
-            Wb = 0;
-          for (const [ab, Tb] of this.sl) {
-            for (; kb < sb.length && sb[kb][0] <= Wb;) {
-              const Wb = sb[kb++][1];
-              cb(bb, -Wb, Wb)
+      forEachWithCtx(bb, ab) {
+        const Ub = this.pureOps;
+        if (Ub.length > 0) {
+          let Ab = 0,
+            Mb = 0;
+          for (const [Tb, Eb] of this.yj) {
+            for (; Ab < Ub.length && Ub[Ab][0] <= Mb;) {
+              const Mb = Ub[Ab++][1];
+              ab(bb, -Mb, Mb)
             }
-            cb(bb, ab, Tb), Wb++
+            ab(bb, Tb, Eb), Mb++
           }
-          for (; kb < sb.length;) {
-            const Wb = sb[kb++][1];
-            cb(bb, -Wb, Wb)
+          for (; Ab < Ub.length;) {
+            const Mb = Ub[Ab++][1];
+            ab(bb, -Mb, Mb)
           }
         } else
-          for (const [kb, Wb] of this.sl) cb(bb, kb, Wb)
+          for (const [Ab, Mb] of this.yj) ab(bb, Ab, Mb)
       }
       size() {
-        return this.sl.size + this.pureOps.length
+        return this.yj.size + this.pureOps.length
       }
       has() {
-        return this.sl.size > 0 || this.pureOps.length > 0
+        return this.yj.size > 0 || this.pureOps.length > 0
       }
       reset() {
-        this.sl.clear(), this.pureOps.length = 0
+        this.yj.clear(), this.pureOps.length = 0
       }
       shift(bb) {
-        const cb = new Map;
-        for (const [sb, kb] of this.sl) cb.set(sb + bb, kb);
-        this.sl = cb
+        const ab = new Map;
+        for (const [Ub, Ab] of this.yj) ab.set(Ub + bb, Ab);
+        this.yj = ab
       }
     }
 
-    function jc(bb) {
+    function na(bb) {
       return 16843009 * ((bb = (858993459 & (bb -= bb >>> 1 & 1431655765)) + (bb >>> 2 & 858993459)) + (bb >>> 4) & 252645135) >>> 24
     }
 
-    function pc(bb) {
+    function Sa(bb) {
       if (void 0 === bb) return 0;
-      let cb = 0;
-      for (let sb = 0, kb = bb.length; sb < kb; sb++) {
-        const kb = bb[sb];
-        kb < 32 && (cb |= 1 << kb)
+      let ab = 0;
+      for (let Ub = 0, Ab = bb.length; Ub < Ab; Ub++) {
+        const Ab = bb[Ub];
+        Ab < 32 && (ab |= 1 << Ab)
       }
-      return cb
+      return ab
     }
 
-    function bs(bb) {
-      const cb = bb.constructor;
-      if (Object.prototype.hasOwnProperty.call(cb, hb)) return cb[hb];
-      const sb = cb[Symbol.metadata],
-        kb = Rc.isValidInstance(bb),
-        Wb = (sb?.[tb]?.length ?? 0) > 0,
-        ab = function(bb) {
-          const cb = [],
-            sb = [],
-            kb = [],
-            Wb = [],
-            ab = bb?.[gb];
-          if (void 0 === ab) return {
-            names: cb,
-            types: sb,
-            tags: kb,
-            encoders: Wb
+    function bU(bb) {
+      const ab = bb.constructor;
+      if (Object.prototype.hasOwnProperty.call(ab, mb)) return ab[mb];
+      const Ub = ab[Symbol.metadata],
+        Ab = Va.isValidInstance(bb),
+        Mb = (Ub?.[Hb]?.length ?? 0) > 0,
+        Tb = function(bb) {
+          const ab = [],
+            Ub = [],
+            Ab = [],
+            Mb = [],
+            Tb = bb?.[Nb];
+          if (void 0 === Tb) return {
+            names: ab,
+            types: Ub,
+            tags: Ab,
+            encoders: Mb
           };
-          const Tb = bb[Jb];
-          for (let Ub = 0; Ub <= ab; Ub++) {
-            const ab = bb[Ub];
-            void 0 !== ab ? (cb[Ub] = ab.name, sb[Ub] = ab.type, kb[Ub] = ab.tag, Wb[Ub] = Tb?.[Ub]) : (cb[Ub] = void 0, sb[Ub] = void 0, kb[Ub] = void 0, Wb[Ub] = void 0)
+          const Eb = bb[pb];
+          for (let Yb = 0; Yb <= Tb; Yb++) {
+            const Tb = bb[Yb];
+            void 0 !== Tb ? (ab[Yb] = Tb.name, Ub[Yb] = Tb.type, Ab[Yb] = Tb.tag, Mb[Yb] = Eb?.[Yb]) : (ab[Yb] = void 0, Ub[Yb] = void 0, Ab[Yb] = void 0, Mb[Yb] = void 0)
           }
           return {
-            names: cb,
-            types: sb,
-            tags: kb,
-            encoders: Wb
+            names: ab,
+            types: Ub,
+            tags: Ab,
+            encoders: Mb
           }
-        }(sb),
-        Tb = kb && !Wb ? void 0 : cb[Mb],
-        Ub = {
-          encoder: cb[Hb],
-          filter: Tb,
-          metadata: sb,
-          isSchema: kb,
-          filterBitmask: kb ? pc(sb?.[tb]) : 0,
-          hasAnyFullStateOnly: (sb?.[ib]?.length ?? 0) > 0,
-          hasAnyUnreliable: (sb?.[Pb]?.length ?? 0) > 0,
-          hasAnyStream: (sb?.[Ob]?.length ?? 0) > 0,
-          hasAnyView: Wb,
-          fullStateOnlyBitmask: pc(sb?.[ib]),
-          unreliableBitmask: pc(sb?.[Pb]),
-          streamBitmask: pc(sb?.[Ob]),
-          names: ab.names,
-          types: ab.types,
-          tags: ab.tags,
-          encoders: ab.encoders
+        }(Ub),
+        Eb = Ab && !Mb ? void 0 : ab[Lb],
+        Yb = {
+          encoder: ab[eb],
+          filter: Eb,
+          metadata: Ub,
+          isSchema: Ab,
+          filterBitmask: Ab ? Sa(Ub?.[Hb]) : 0,
+          hasAnyFullStateOnly: (Ub?.[Gb]?.length ?? 0) > 0,
+          hasAnyUnreliable: (Ub?.[db]?.length ?? 0) > 0,
+          hasAnyStream: (Ub?.[Qb]?.length ?? 0) > 0,
+          hasAnyView: Mb,
+          fullStateOnlyBitmask: Sa(Ub?.[Gb]),
+          unreliableBitmask: Sa(Ub?.[db]),
+          streamBitmask: Sa(Ub?.[Qb]),
+          names: Tb.names,
+          types: Tb.types,
+          tags: Tb.tags,
+          encoders: Tb.encoders
         };
-      return Object.defineProperty(cb, hb, {
-        value: Ub,
+      return Object.defineProperty(ab, mb, {
+        value: Yb,
         enumerable: !1,
         writable: !0,
         configurable: !0
-      }), Ub
+      }), Yb
     }
 
-    function cs(bb, cb) {
-      if (void 0 !== bb.parentRef && cb(bb.parentRef, bb._parentIndex)) return !0;
-      for (let sb = bb.extraParents; void 0 !== sb; sb = sb.next)
-        if (cb(sb.ref, sb.index)) return !0;
+    function aU(bb, ab) {
+      if (void 0 !== bb.parentRef && ab(bb.parentRef, bb._parentIndex)) return !0;
+      for (let Ub = bb.extraParents; void 0 !== Ub; Ub = Ub.next)
+        if (ab(Ub.ref, Ub.index)) return !0;
       return !1
     }
-    const ss = (bb, cb) => {
-        bb.isFieldUnreliable(cb) ? bb.ensureUnreliableRecorder().record(cb, Wb.ADD) : bb.record(cb, Wb.ADD)
+    const UU = (bb, ab) => {
+        bb.isFieldUnreliable(ab) ? bb.ensureUnreliableRecorder().record(ab, Mb.ADD) : bb.record(ab, Mb.ADD)
       },
-      ks = (bb, cb) => bb(cb);
+      AU = (bb, ab) => bb(ab);
 
-    function Ws(bb, cb, sb) {
-      const kb = bb.refTarget;
-      if (void 0 !== kb[Qb]) {
+    function MU(bb, ab, Ub) {
+      const Ab = bb.refTarget;
+      if (void 0 !== Ab[kb]) {
         if (bb.isPatchOnly) return;
-        if (Array.isArray(kb.items)) {
-          const bb = kb.items;
-          for (let kb = 0, Wb = bb.length; kb < Wb; kb++) void 0 !== bb[kb] && sb(cb, kb)
-        } else if (void 0 !== kb.journal)
-          for (const [bb, Wb] of kb.journal.keyByIndex) kb.$items.has(Wb) && sb(cb, bb);
-        else if (void 0 !== kb.$items)
-          for (const bb of kb.$items.keys()) sb(cb, bb)
+        if (Array.isArray(Ab.items)) {
+          const bb = Ab.items;
+          for (let Ab = 0, Mb = bb.length; Ab < Mb; Ab++) void 0 !== bb[Ab] && Ub(ab, Ab)
+        } else if (void 0 !== Ab.journal)
+          for (const [bb, Mb] of Ab.journal.keyByIndex) Ab.$items.has(Mb) && Ub(ab, bb);
+        else if (void 0 !== Ab.$items)
+          for (const bb of Ab.$items.keys()) Ub(ab, bb)
       } else {
-        const Wb = bb.metadata;
-        if (!Wb) return;
-        const ab = Wb[gb] ?? -1,
-          Tb = Wb[Eb],
-          Ub = bb.encDescriptor.names;
-        for (let bb = 0; bb <= ab; bb++) {
-          const Wb = Ub[bb];
-          if (void 0 === Wb) continue;
-          if (Tb && Tb.includes(bb)) continue;
-          const ab = kb[Wb];
-          void 0 !== ab && null !== ab && sb(cb, bb)
+        const Mb = bb.metadata;
+        if (!Mb) return;
+        const Tb = Mb[Nb] ?? -1,
+          Eb = Mb[hb],
+          Yb = bb.encDescriptor.names;
+        for (let bb = 0; bb <= Tb; bb++) {
+          const Mb = Yb[bb];
+          if (void 0 === Mb) continue;
+          if (Eb && Eb.includes(bb)) continue;
+          const Tb = Ab[Mb];
+          void 0 !== Tb && null !== Tb && Ub(ab, bb)
         }
       }
     }
 
-    function as(bb, cb, sb, kb) {
-      ! function(bb, cb, sb) {
-        if (!cb) return;
-        const kb = cb[lb],
-          Wb = !kb._isSchema;
-        let ab;
-        Wb ? (cb = kb.parent, sb = kb.parentIndex, ab = cb?.[lb].metadata) : ab = kb.metadata;
-        const Tb = (ab?.[Db]?.includes(sb) ? hs : 0) | (ab?.[ib]?.includes(sb) ? gs : 0),
-          Ub = kb.flags & ys | Tb,
-          Ib = bb.flags;
-        bb.flags = Ib | Ub;
-        Ub & ~Ib & gs && (bb.reset(), bb.unreliableRecorder?.reset());
-        const Hb = bb.root?.types;
-        if (!Hb?.hasFilters) return;
-        const fb = ab?.[tb]?.includes(sb) ?? !1,
-          Mb = ab?.[Ob]?.includes(sb) ?? !1,
-          Xb = kb.isFiltered || fb || Mb;
-        if (bb.isFiltered = Xb, Mb && !Wb) {
+    function TU(bb, ab, Ub, Ab) {
+      ! function(bb, ab, Ub) {
+        if (!ab) return;
+        const Ab = ab[Rb],
+          Mb = !Ab._isSchema;
+        let Tb;
+        Mb ? (ab = Ab.parent, Ub = Ab.parentIndex, Tb = ab?.[Rb].metadata) : Tb = Ab.metadata;
+        const Eb = (Tb?.[Fb]?.includes(Ub) ? mU : 0) | (Tb?.[Gb]?.includes(Ub) ? pU : 0),
+          Yb = Ab.flags & HU | Eb,
+          Bb = bb.flags;
+        bb.flags = Bb | Yb;
+        Yb & ~Bb & pU && (bb.reset(), bb.unreliableRecorder?.reset());
+        const eb = bb.root?.types;
+        if (!eb?.hasFilters) return;
+        const vb = Tb?.[Hb]?.includes(Ub) ?? !1,
+          Lb = Tb?.[Qb]?.includes(Ub) ?? !1,
+          Pb = Ab.isFiltered || vb || Lb;
+        if (bb.isFiltered = Pb, Lb && !Mb) {
           bb.isStreamCollection = !0;
-          const cb = gc(bb.ref);
-          if (void 0 === cb.priority) {
-            const bb = Rc.getStreamPriority(ab, sb);
-            void 0 !== bb && (cb.priority = bb)
+          const ab = Na(bb.ref);
+          if (void 0 === ab.priority) {
+            const bb = Va.getStreamPriority(Tb, Ub);
+            void 0 !== bb && (ab.priority = bb)
           }
           bb.root?.registerStream(bb.ref)
         }
-        if (Xb) {
-          const cb = Us(bb);
-          bb.isVisibilitySharedWithParent = kb.isFiltered && cb && !Mb && (!fb || Wb && ab[sb].tag !== Qk)
+        if (Pb) {
+          const ab = YU(bb);
+          bb.isVisibilitySharedWithParent = Ab.isFiltered && ab && !Lb && (!vb || Mb && Tb[Ub].tag !== jA)
         }
-      }(bb, cb, sb), bb.isFullStateOnly || (bb.has() && bb.root?.enqueueChangeTree(bb), bb.unreliableRecorder?.has() && bb.root?.enqueueUnreliable(bb), bb.has() || bb.unreliableRecorder?.has() || bb.root?.enqueueChangeTree(bb))
+      }(bb, ab, Ub), bb.isFullStateOnly || (bb.has() && bb.root?.enqueueChangeTree(bb), bb.unreliableRecorder?.has() && bb.root?.enqueueUnreliable(bb), bb.has() || bb.unreliableRecorder?.has() || bb.root?.enqueueChangeTree(bb))
     }
 
-    function Ts(bb) {
-      const cb = bb.pendingFilterRefresh;
-      for (let sb = 0; sb < cb.length; sb++) {
-        const bb = cb[sb];
-        0 !== (bb.flags & ts) && Is(bb)
+    function EU(bb) {
+      const ab = bb.pendingFilterRefresh;
+      for (let Ub = 0; Ub < ab.length; Ub++) {
+        const bb = ab[Ub];
+        0 !== (bb.flags & WU) && BU(bb)
       }
-      cb.length = 0
+      ab.length = 0
     }
 
-    function Us(bb) {
-      return bb._isSchema || "string" !== typeof bb.refTarget[Qb]
+    function YU(bb) {
+      return bb._isSchema || "string" !== typeof bb.refTarget[kb]
     }
 
-    function Is(bb) {
-      bb.flags &= ~ts;
-      const cb = bb.root;
-      if (void 0 === cb || void 0 === bb.parentRef) return;
-      const sb = Us(bb);
-      let kb = ns(bb, bb.parentRef, bb._parentIndex, sb);
-      for (let ab = bb.extraParents; void 0 !== ab && kb !== Xs; ab = ab.next) kb |= ns(bb, ab.ref, ab.index, sb);
-      if (0 === kb) return;
-      bb.isVisibilitySharedWithParent = 0 !== (kb & Ms);
-      const Wb = 0 === (kb & fs);
-      Wb !== bb.isFiltered && (bb.isFiltered = Wb, Wb || bb.isFullStateOnly || (bb.forEachLiveWithCtx(bb, ss), bb.has() && cb.enqueueChangeTree(bb), bb.unreliableRecorder?.has() && cb.enqueueUnreliable(bb)), bb.forEachChildWithCtx(bb, ms))
+    function BU(bb) {
+      bb.flags &= ~WU;
+      const ab = bb.root;
+      if (void 0 === ab || void 0 === bb.parentRef) return;
+      const Ub = YU(bb);
+      let Ab = XU(bb, bb.parentRef, bb._parentIndex, Ub);
+      for (let Tb = bb.extraParents; void 0 !== Tb && Ab !== PU; Tb = Tb.next) Ab |= XU(bb, Tb.ref, Tb.index, Ub);
+      if (0 === Ab) return;
+      bb.isVisibilitySharedWithParent = 0 !== (Ab & LU);
+      const Mb = 0 === (Ab & vU);
+      Mb !== bb.isFiltered && (bb.isFiltered = Mb, Mb || bb.isFullStateOnly || (bb.forEachLiveWithCtx(bb, UU), bb.has() && ab.enqueueChangeTree(bb), bb.unreliableRecorder?.has() && ab.enqueueUnreliable(bb)), bb.forEachChildWithCtx(bb, jU))
     }
-    const Hs = 1,
-      fs = 2,
-      Ms = 4,
-      Xs = Hs | fs | Ms;
+    const eU = 1,
+      vU = 2,
+      LU = 4,
+      PU = eU | vU | LU;
 
-    function ns(bb, cb, sb, kb) {
-      const Wb = cb[lb];
-      if (Wb.root !== bb.root || ! function(bb, cb, sb) {
-          const kb = cb.refTarget;
-          if (cb.isArray) {
-            const cb = kb.items,
-              Wb = cb[sb];
-            if (void 0 !== Wb && Wb[lb] === bb) return !0;
-            for (let sb = 0, kb = cb.length; sb < kb; sb++) {
-              const kb = cb[sb];
-              if (void 0 !== kb && kb[lb] === bb) return !0
+    function XU(bb, ab, Ub, Ab) {
+      const Mb = ab[Rb];
+      if (Mb.root !== bb.root || ! function(bb, ab, Ub) {
+          const Ab = ab.refTarget;
+          if (ab.isArray) {
+            const ab = Ab.items,
+              Mb = ab[Ub];
+            if (void 0 !== Mb && Mb[Rb] === bb) return !0;
+            for (let Ub = 0, Ab = ab.length; Ub < Ab; Ub++) {
+              const Ab = ab[Ub];
+              if (void 0 !== Ab && Ab[Rb] === bb) return !0
             }
             return !1
           }
-          const Wb = cb.getValue(sb);
-          return void 0 !== Wb && Wb[lb] === bb
-        }(bb, Wb, sb)) return 0;
-      Wb.flags & ts && Is(Wb);
-      let ab = Hs;
-      if (Wb._isSchema) {
-        void 0 !== Wb.encDescriptor.tags[sb] || Wb.isFieldStream(sb) || (Wb.isFiltered ? kb && (ab |= Ms) : ab |= fs)
-      } else if (Wb.isFiltered) {
-        if (kb && !Wb.isStreamCollection) {
-          const bb = Wb.parent?.[lb];
-          (bb?._isSchema ? bb.encDescriptor.tags[Wb.parentIndex] : void 0) !== Qk && (ab |= Ms)
+          const Mb = ab.getValue(Ub);
+          return void 0 !== Mb && Mb[Rb] === bb
+        }(bb, Mb, Ub)) return 0;
+      Mb.flags & WU && BU(Mb);
+      let Tb = eU;
+      if (Mb._isSchema) {
+        void 0 !== Mb.encDescriptor.tags[Ub] || Mb.isFieldStream(Ub) || (Mb.isFiltered ? Ab && (Tb |= LU) : Tb |= vU)
+      } else if (Mb.isFiltered) {
+        if (Ab && !Mb.isStreamCollection) {
+          const bb = Mb.parent?.[Rb];
+          (bb?._isSchema ? bb.encDescriptor.tags[Mb.parentIndex] : void 0) !== jA && (Tb |= LU)
         }
-      } else ab |= fs;
-      return ab
+      } else Tb |= vU;
+      return Tb
     }
-    const ms = (bb, cb, sb) => {
-      Is(cb)
+    const jU = (bb, ab, Ub) => {
+      BU(ab)
     };
 
-    function ls(bb, cb, sb, kb) {
-      if (bb.addParent(cb, kb), !sb) return;
-      const Wb = sb.add(bb);
-      sb !== bb.root && (bb.root = sb, as(bb, cb, kb));
-      const ab = cb?.[lb];
-      if (void 0 !== ab && void 0 !== ab.subscribedViews && void 0 !== cb[Qb] && function(bb, cb, sb, kb) {
-          const Wb = bb.subscribedViews;
-          if (void 0 === Wb) return;
-          const ab = bb.isStreamCollection,
-            Tb = ab ? bb.ref : void 0,
-            Ub = ab ? void 0 : sb[lb];
-          for (let Ib = 0, Hb = Wb.length; Ib < Hb; Ib++) {
-            let bb = Wb[Ib];
+    function RU(bb, ab, Ub, Ab) {
+      if (bb.addParent(ab, Ab), !Ub) return;
+      const Mb = Ub.add(bb);
+      Ub !== bb.root && (bb.root = Ub, TU(bb, ab, Ab));
+      const Tb = ab?.[Rb];
+      if (void 0 !== Tb && void 0 !== Tb.subscribedViews && void 0 !== ab[kb] && function(bb, ab, Ub, Ab) {
+          const Mb = bb.subscribedViews;
+          if (void 0 === Mb) return;
+          const Tb = bb.isStreamCollection,
+            Eb = Tb ? bb.ref : void 0,
+            Yb = Tb ? void 0 : Ub[Rb];
+          for (let Bb = 0, eb = Mb.length; Bb < eb; Bb++) {
+            let bb = Mb[Bb];
             for (; 0 !== bb;) {
-              const sb = bb & -bb;
-              bb ^= sb;
-              const Hb = 32 * Ib + (31 - Math.clz32(sb)),
-                fb = kb.activeViews.get(Hb),
-                Mb = fb?.deref();
-              void 0 !== Mb ? ab ? Dc(Tb, Hb, cb) : void 0 !== Ub && Mb.markVisible(Ub) : Wb[Ib] &= ~sb
+              const Ub = bb & -bb;
+              bb ^= Ub;
+              const eb = 32 * Bb + (31 - Math.clz32(Ub)),
+                vb = Ab.activeViews.get(eb),
+                Lb = vb?.deref();
+              void 0 !== Lb ? Tb ? Fa(Eb, eb, ab) : void 0 !== Yb && Lb.markVisible(Yb) : Mb[Bb] &= ~Ub
             }
           }
-        }(ab, kb, bb.ref, sb), Wb) {
-        let cb = Ns[Vs];
-        void 0 === cb && (cb = {
+        }(Tb, Ab, bb.ref, Ub), Mb) {
+        let ab = DU[zU];
+        void 0 === ab && (ab = {
           parentRef: void 0,
           root: void 0
-        }, Ns[Vs] = cb), cb.parentRef = bb.ref, cb.root = sb, Vs++, es(bb, cb, Ls), Vs--
+        }, DU[zU] = ab), ab.parentRef = bb.ref, ab.root = Ub, zU++, yU(bb, ab, xU), zU--
       }
     }
 
-    function Qs(bb, cb, sb) {
-      bb(cb, sb)
+    function kU(bb, ab, Ub) {
+      bb(ab, Ub)
     }
 
-    function es(bb, cb, sb) {
-      const kb = bb.refTarget;
-      if (kb[Qb]) {
-        if ("string" !== typeof kb[Qb]) {
-          const bb = kb.items;
+    function yU(bb, ab, Ub) {
+      const Ab = bb.refTarget;
+      if (Ab[kb]) {
+        if ("string" !== typeof Ab[kb]) {
+          const bb = Ab.items;
           if (void 0 !== bb)
-            for (let kb = 0, Wb = bb.length; kb < Wb; kb++) {
-              const Wb = bb[kb];
-              Wb && sb(cb, Wb[lb], kb)
+            for (let Ab = 0, Mb = bb.length; Ab < Mb; Ab++) {
+              const Mb = bb[Ab];
+              Mb && Ub(ab, Mb[Rb], Ab)
             } else {
-              const bb = kb.$items,
-                Wb = kb._collectionIndexes;
-              for (const kb of bb.keys()) {
-                const ab = bb.get(kb);
-                ab && sb(cb, ab[lb], Wb?.[kb] ?? kb)
+              const bb = Ab.$items,
+                Mb = Ab._collectionIndexes;
+              for (const Ab of bb.keys()) {
+                const Tb = bb.get(Ab);
+                Tb && Ub(ab, Tb[Rb], Mb?.[Ab] ?? Ab)
               }
             }
         }
       } else {
-        const Wb = bb.metadata,
-          ab = Wb?.[Bb];
-        if (!ab) return;
-        const Tb = bb.encDescriptor.names;
-        for (let bb = 0, Ub = ab.length; bb < Ub; bb++) {
-          const Wb = ab[bb],
-            Ub = kb[Tb[Wb]];
-          Ub && sb(cb, Ub[lb], Wb)
+        const Mb = bb.metadata,
+          Tb = Mb?.[Wb];
+        if (!Tb) return;
+        const Eb = bb.encDescriptor.names;
+        for (let bb = 0, Yb = Tb.length; bb < Yb; bb++) {
+          const Mb = Tb[bb],
+            Yb = Ab[Eb[Mb]];
+          Yb && Ub(ab, Yb[Rb], Mb)
         }
       }
     }
 
-    function Cs(bb, cb, sb) {
-      cb.root !== bb ? cb.setRoot(bb) : bb.add(cb)
+    function ZU(bb, ab, Ub) {
+      ab.root !== bb ? ab.setRoot(bb) : bb.add(ab)
     }
-    const Ns = [];
-    let Vs = 0;
+    const DU = [];
+    let zU = 0;
 
-    function Ls(bb, cb, sb) {
-      if (cb.root === bb.root) return bb.root.add(cb), void bb.root.moveNextToParent(cb);
-      cb.setParent(bb.parentRef, bb.root, sb)
+    function xU(bb, ab, Ub) {
+      if (ab.root === bb.root) return bb.root.add(ab), void bb.root.moveNextToParent(ab);
+      ab.setParent(bb.parentRef, bb.root, Ub)
     }
 
-    function us(bb, cb, sb) {
-      const kb = (3 & sb) << 3;
-      return sb < 4 ? bb >>> kb & 255 : cb >>> kb & 255
+    function iU(bb, ab, Ub) {
+      const Ab = (3 & Ub) << 3;
+      return Ub < 4 ? bb >>> Ab & 255 : ab >>> Ab & 255
     }
-    const Ys = (bb, cb, sb) => bb(cb, sb);
-    const hs = 16,
-      gs = 32,
-      Bs = 128,
-      ts = 256,
-      ys = hs | gs;
-    class Ps {
+    const fU = (bb, ab, Ub) => bb(ab, Ub);
+    const mU = 16,
+      pU = 32,
+      NU = 128,
+      WU = 256,
+      HU = mU | pU;
+    class IU {
       ref;
       refTarget;
       get isArray() {
@@ -3324,16 +3324,16 @@ export const modules = {
         this.flags = bb ? 8 | this.flags : -9 & this.flags
       }
       get isPatchOnly() {
-        return 0 !== (this.flags & hs)
+        return 0 !== (this.flags & mU)
       }
       set isPatchOnly(bb) {
-        this.flags = bb ? this.flags | hs : this.flags & ~hs
+        this.flags = bb ? this.flags | mU : this.flags & ~mU
       }
       get isFullStateOnly() {
-        return 0 !== (this.flags & gs)
+        return 0 !== (this.flags & pU)
       }
       set isFullStateOnly(bb) {
-        this.flags = bb ? this.flags | gs : this.flags & ~gs
+        this.flags = bb ? this.flags | pU : this.flags & ~pU
       }
       get isStreamCollection() {
         return 0 !== (64 & this.flags)
@@ -3342,73 +3342,73 @@ export const modules = {
         this.flags = bb ? 64 | this.flags : -65 & this.flags
       }
       get needsRestage() {
-        return 0 !== (this.flags & Bs)
+        return 0 !== (this.flags & NU)
       }
       set needsRestage(bb) {
-        this.flags = bb ? this.flags | Bs : -129 & this.flags
+        this.flags = bb ? this.flags | NU : -129 & this.flags
       }
       get hasFilteredFields() {
         return this.isFiltered || this.encDescriptor.hasAnyView
       }
       ensureUnreliableRecorder() {
-        return void 0 === this.unreliableRecorder && (this.unreliableRecorder = this._isSchema ? new Fc(this.metadata?.[gb] ?? 0) : new xc), this.unreliableRecorder
+        return void 0 === this.unreliableRecorder && (this.unreliableRecorder = this._isSchema ? new ca(this.metadata?.[Nb] ?? 0) : new Ja), this.unreliableRecorder
       }
       isFieldUnreliable(bb) {
-        const cb = this.encDescriptor;
-        return !!cb.hasAnyUnreliable && (bb < 32 ? 0 !== (cb.unreliableBitmask & 1 << bb) : Rc.hasUnreliableAtIndex(this.metadata, bb))
+        const ab = this.encDescriptor;
+        return !!ab.hasAnyUnreliable && (bb < 32 ? 0 !== (ab.unreliableBitmask & 1 << bb) : Va.hasUnreliableAtIndex(this.metadata, bb))
       }
       isFieldFullStateOnly(bb) {
         if (this.isFullStateOnly) return !0;
-        const cb = this.encDescriptor;
-        return !!cb.hasAnyFullStateOnly && (bb < 32 ? 0 !== (cb.fullStateOnlyBitmask & 1 << bb) : Rc.hasFullStateOnlyAtIndex(this.metadata, bb))
+        const ab = this.encDescriptor;
+        return !!ab.hasAnyFullStateOnly && (bb < 32 ? 0 !== (ab.fullStateOnlyBitmask & 1 << bb) : Va.hasFullStateOnlyAtIndex(this.metadata, bb))
       }
       isFieldStream(bb) {
-        const cb = this.encDescriptor;
-        return !!cb.hasAnyStream && (bb < 32 ? 0 !== (cb.streamBitmask & 1 << bb) : Rc.hasStreamAtIndex(this.metadata, bb))
+        const ab = this.encDescriptor;
+        return !!ab.hasAnyStream && (bb < 32 ? 0 !== (ab.streamBitmask & 1 << bb) : Va.hasStreamAtIndex(this.metadata, bb))
       }
       constructor(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : bb;
-        this.ref = bb, this.refTarget = cb;
-        const sb = bs(bb);
-        this.encDescriptor = sb, this.metadata = sb.metadata;
-        const kb = sb.isSchema;
-        if (this._isSchema = kb, this.ops = void 0, this.collDirty = void 0, this.collPureOps = void 0, kb) {
-          const bb = this.metadata?.[gb] ?? 0;
+        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : bb;
+        this.ref = bb, this.refTarget = ab;
+        const Ub = bU(bb);
+        this.encDescriptor = Ub, this.metadata = Ub.metadata;
+        const Ab = Ub.isSchema;
+        if (this._isSchema = Ab, this.ops = void 0, this.collDirty = void 0, this.collPureOps = void 0, Ab) {
+          const bb = this.metadata?.[Nb] ?? 0;
           bb > 7 && (this.ops = new Uint8Array(bb + 1))
         } else this.collDirty = new Map
       }
       _opAt(bb) {
-        const cb = this.ops;
-        if (void 0 !== cb) return cb[bb];
-        const sb = (3 & bb) << 3;
-        return bb < 4 ? this.opsLow >>> sb & 255 : this.opsHigh >>> sb & 255
+        const ab = this.ops;
+        if (void 0 !== ab) return ab[bb];
+        const Ub = (3 & bb) << 3;
+        return bb < 4 ? this.opsLow >>> Ub & 255 : this.opsHigh >>> Ub & 255
       }
-      _opPut(bb, cb) {
-        const sb = this.ops;
-        if (void 0 !== sb) return void(sb[bb] = cb);
-        const kb = (3 & bb) << 3,
-          Wb = ~(255 << kb);
-        bb < 4 ? this.opsLow = this.opsLow & Wb | cb << kb : this.opsHigh = this.opsHigh & Wb | cb << kb
+      _opPut(bb, ab) {
+        const Ub = this.ops;
+        if (void 0 !== Ub) return void(Ub[bb] = ab);
+        const Ab = (3 & bb) << 3,
+          Mb = ~(255 << Ab);
+        bb < 4 ? this.opsLow = this.opsLow & Mb | ab << Ab : this.opsHigh = this.opsHigh & Mb | ab << Ab
       }
       _markDirty(bb) {
         bb < 32 ? this.dirtyLow |= 1 << bb : this.dirtyHigh |= 1 << bb - 32
       }
-      record(bb, cb) {
+      record(bb, ab) {
         if (this._isSchema) {
-          const sb = this._opAt(bb);
-          0 === sb ? this._opPut(bb, cb) : (sb === Wb.DELETE || sb === Wb.ADD && cb === Wb.DELETE_AND_ADD) && this._opPut(bb, Wb.DELETE_AND_ADD), this._markDirty(bb)
+          const Ub = this._opAt(bb);
+          0 === Ub ? this._opPut(bb, ab) : (Ub === Mb.DELETE || Ub === Mb.ADD && ab === Mb.DELETE_AND_ADD) && this._opPut(bb, Mb.DELETE_AND_ADD), this._markDirty(bb)
         } else {
-          const sb = this.collDirty,
-            kb = sb.get(bb);
-          let ab;
-          ab = void 0 === kb ? cb : kb === Wb.DELETE || kb === Wb.ADD && cb === Wb.DELETE_AND_ADD ? Wb.DELETE_AND_ADD : kb, sb.set(bb, ab)
+          const Ub = this.collDirty,
+            Ab = Ub.get(bb);
+          let Tb;
+          Tb = void 0 === Ab ? ab : Ab === Mb.DELETE || Ab === Mb.ADD && ab === Mb.DELETE_AND_ADD ? Mb.DELETE_AND_ADD : Ab, Ub.set(bb, Tb)
         }
       }
-      recordDelete(bb, cb) {
-        this._isSchema ? (this._opPut(bb, cb), this._markDirty(bb)) : this.collDirty.set(bb, cb)
+      recordDelete(bb, ab) {
+        this._isSchema ? (this._opPut(bb, ab), this._markDirty(bb)) : this.collDirty.set(bb, ab)
       }
-      recordRaw(bb, cb) {
-        this._isSchema ? (this._opPut(bb, cb), this._markDirty(bb)) : this.collDirty.set(bb, cb)
+      recordRaw(bb, ab) {
+        this._isSchema ? (this._opPut(bb, ab), this._markDirty(bb)) : this.collDirty.set(bb, ab)
       }
       recordPure(bb) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): pure operations are not supported");
@@ -3416,69 +3416,69 @@ export const modules = {
       }
       operationAt(bb) {
         if (this._isSchema) {
-          const cb = this._opAt(bb);
-          return 0 === cb ? void 0 : cb
+          const ab = this._opAt(bb);
+          return 0 === ab ? void 0 : ab
         }
         return this.collDirty.get(bb)
       }
-      setOperationAt(bb, cb) {
-        if (this._isSchema) this._opPut(bb, cb);
+      setOperationAt(bb, ab) {
+        if (this._isSchema) this._opPut(bb, ab);
         else {
-          const sb = this.collDirty;
-          sb.has(bb) && sb.set(bb, cb)
+          const Ub = this.collDirty;
+          Ub.has(bb) && Ub.set(bb, ab)
         }
       }
       forEach(bb) {
-        this.forEachWithCtx(bb, Ys)
+        this.forEachWithCtx(bb, fU)
       }
-      forEachWithCtx(bb, cb) {
+      forEachWithCtx(bb, ab) {
         if (this._isSchema) {
-          let sb = this.dirtyLow,
-            kb = this.dirtyHigh;
-          const Wb = this.ops;
-          if (void 0 !== Wb) {
-            for (; 0 !== sb;) {
-              const kb = sb & -sb,
-                ab = 31 - Math.clz32(kb);
-              sb ^= kb, cb(bb, ab, Wb[ab])
+          let Ub = this.dirtyLow,
+            Ab = this.dirtyHigh;
+          const Mb = this.ops;
+          if (void 0 !== Mb) {
+            for (; 0 !== Ub;) {
+              const Ab = Ub & -Ub,
+                Tb = 31 - Math.clz32(Ab);
+              Ub ^= Ab, ab(bb, Tb, Mb[Tb])
             }
-            for (; 0 !== kb;) {
-              const sb = kb & -kb,
-                ab = 31 - Math.clz32(sb) + 32;
-              kb ^= sb, cb(bb, ab, Wb[ab])
+            for (; 0 !== Ab;) {
+              const Ub = Ab & -Ab,
+                Tb = 31 - Math.clz32(Ub) + 32;
+              Ab ^= Ub, ab(bb, Tb, Mb[Tb])
             }
           } else {
-            const kb = this.opsLow,
-              Wb = this.opsHigh;
-            for (; 0 !== sb;) {
-              const ab = sb & -sb,
-                Tb = 31 - Math.clz32(ab);
-              sb ^= ab, cb(bb, Tb, us(kb, Wb, Tb))
+            const Ab = this.opsLow,
+              Mb = this.opsHigh;
+            for (; 0 !== Ub;) {
+              const Tb = Ub & -Ub,
+                Eb = 31 - Math.clz32(Tb);
+              Ub ^= Tb, ab(bb, Eb, iU(Ab, Mb, Eb))
             }
           }
           return
         }
-        const sb = this.collDirty,
-          kb = this.collPureOps;
-        if (void 0 !== kb && kb.length > 0) {
-          let Wb = 0,
-            ab = 0;
-          for (const [Tb, Ub] of sb) {
-            for (; Wb < kb.length && kb[Wb][0] <= ab;) {
-              const sb = kb[Wb++][1];
-              cb(bb, -sb, sb)
+        const Ub = this.collDirty,
+          Ab = this.collPureOps;
+        if (void 0 !== Ab && Ab.length > 0) {
+          let Mb = 0,
+            Tb = 0;
+          for (const [Eb, Yb] of Ub) {
+            for (; Mb < Ab.length && Ab[Mb][0] <= Tb;) {
+              const Ub = Ab[Mb++][1];
+              ab(bb, -Ub, Ub)
             }
-            cb(bb, Tb, Ub), ab++
+            ab(bb, Eb, Yb), Tb++
           }
-          for (; Wb < kb.length;) {
-            const sb = kb[Wb++][1];
-            cb(bb, -sb, sb)
+          for (; Mb < Ab.length;) {
+            const Ub = Ab[Mb++][1];
+            ab(bb, -Ub, Ub)
           }
         } else
-          for (const [Wb, ab] of sb) cb(bb, Wb, ab)
+          for (const [Mb, Tb] of Ub) ab(bb, Mb, Tb)
       }
       size() {
-        return this._isSchema ? jc(this.dirtyLow) + jc(this.dirtyHigh) : this.collDirty.size + (this.collPureOps?.length ?? 0)
+        return this._isSchema ? na(this.dirtyLow) + na(this.dirtyHigh) : this.collDirty.size + (this.collPureOps?.length ?? 0)
       }
       has() {
         return this._isSchema ? 0 !== (this.dirtyLow | this.dirtyHigh) : this.collDirty.size > 0 || void 0 !== this.collPureOps && this.collPureOps.length > 0
@@ -3491,78 +3491,78 @@ export const modules = {
         if (void 0 !== this.root) throw new Error(`@colyseus/schema: cannot recycle an attached ChangeTree (${this.ref?.constructor?.name}). Remove the instance from its parent collection before releasing it to a pool.`);
         this.reset(), this.unreliableRecorder?.reset(), this.flags = 132, this._fullSyncGen = 0, this.parentRef = void 0, this._parentIndex = void 0, this.extraParents = void 0, this.changesNode = void 0, this.unreliableChangesNode = void 0, this.paused = !1, this.visibleViews = void 0, this.tagViews = void 0, this.subscribedViews = void 0
       }
-      insertAt(bb, cb) {
+      insertAt(bb, ab) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): insertAt is not supported");
-        const sb = this.collDirty,
-          kb = new Map,
-          ab = !this.paused && !this.isFullStateOnly;
+        const Ub = this.collDirty,
+          Ab = new Map,
+          Tb = !this.paused && !this.isFullStateOnly;
         if (bb > 0)
-          for (const [Wb, Tb] of sb) Wb < bb && kb.set(Wb, Tb);
-        if (ab)
-          for (let Tb = 0; Tb < cb; Tb++) kb.set(bb + Tb, Wb.ADD);
-        for (const [Wb, Tb] of sb) Wb >= bb && kb.set(Wb + cb, Tb);
-        this.collDirty = kb, ab && this.root?.enqueueChangeTree(this)
+          for (const [Mb, Eb] of Ub) Mb < bb && Ab.set(Mb, Eb);
+        if (Tb)
+          for (let Eb = 0; Eb < ab; Eb++) Ab.set(bb + Eb, Mb.ADD);
+        for (const [Mb, Eb] of Ub) Mb >= bb && Ab.set(Mb + ab, Eb);
+        this.collDirty = Ab, Tb && this.root?.enqueueChangeTree(this)
       }
-      removeAt(bb, cb) {
+      removeAt(bb, ab) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): removeAt is not supported");
-        const sb = this.collDirty,
-          kb = bb + cb;
-        let Wb = !1;
-        for (const Tb of sb.keys())
-          if (Tb >= kb) {
-            Wb = !0;
+        const Ub = this.collDirty,
+          Ab = bb + ab;
+        let Mb = !1;
+        for (const Eb of Ub.keys())
+          if (Eb >= Ab) {
+            Mb = !0;
             break
-          } if (!Wb) {
-          for (let cb = bb; cb < kb; cb++) sb.delete(cb);
+          } if (!Mb) {
+          for (let ab = bb; ab < Ab; ab++) Ub.delete(ab);
           return
         }
-        const ab = new Map;
-        for (const [Tb, Ub] of sb) Tb < bb ? ab.set(Tb, Ub) : Tb >= kb && ab.set(Tb - cb, Ub);
-        this.collDirty = ab
+        const Tb = new Map;
+        for (const [Eb, Yb] of Ub) Eb < bb ? Tb.set(Eb, Yb) : Eb >= Ab && Tb.set(Eb - ab, Yb);
+        this.collDirty = Tb
       }
       unshift(bb) {
         this.insertAt(0, bb)
       }
       setRoot(bb) {
-        ! function(bb, cb) {
-          bb.root = cb;
-          const sb = cb.add(bb);
-          as(bb, bb.parent, bb.parentIndex), sb && es(bb, cb, Cs)
+        ! function(bb, ab) {
+          bb.root = ab;
+          const Ub = ab.add(bb);
+          TU(bb, bb.parent, bb.parentIndex), Ub && yU(bb, ab, ZU)
         }(this, bb)
       }
-      setParent(bb, cb, sb) {
-        ls(this, bb, cb, sb)
+      setParent(bb, ab, Ub) {
+        RU(this, bb, ab, Ub)
       }
       forEachChild(bb) {
-        es(this, bb, Qs)
+        yU(this, bb, kU)
       }
-      forEachChildWithCtx(bb, cb) {
-        es(this, bb, cb)
+      forEachChildWithCtx(bb, ab) {
+        yU(this, bb, ab)
       }
       forEachLive(bb) {
-        Ws(this, bb, ks)
+        MU(this, bb, AU)
       }
-      forEachLiveWithCtx(bb, cb) {
-        Ws(this, bb, cb)
+      forEachLiveWithCtx(bb, ab) {
+        MU(this, bb, ab)
       }
       operation(bb) {
         this.paused || this.isFullStateOnly || (this.recordPure(bb), this.root?.enqueueChangeTree(this))
       }
-      _routeAndRecord(bb, cb, sb) {
+      _routeAndRecord(bb, ab, Ub) {
         if (!this.paused && !this.isFieldFullStateOnly(bb)) {
           if (this.isFieldUnreliable(bb) && !this.isNew) {
-            const kb = this.ensureUnreliableRecorder();
-            return sb ? kb.recordRaw(bb, cb) : kb.record(bb, cb), void this.root?.enqueueUnreliable(this)
+            const Ab = this.ensureUnreliableRecorder();
+            return Ub ? Ab.recordRaw(bb, ab) : Ab.record(bb, ab), void this.root?.enqueueUnreliable(this)
           }
-          sb ? this.recordRaw(bb, cb) : this.record(bb, cb), this.root?.enqueueChangeTree(this)
+          Ub ? this.recordRaw(bb, ab) : this.record(bb, ab), this.root?.enqueueChangeTree(this)
         }
       }
       change(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Wb.ADD;
-        this._routeAndRecord(bb, cb, !1)
+        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Mb.ADD;
+        this._routeAndRecord(bb, ab, !1)
       }
-      indexedOperation(bb, cb) {
-        this._routeAndRecord(bb, cb, !0)
+      indexedOperation(bb, ab) {
+        this._routeAndRecord(bb, ab, !0)
       }
       getChange(bb) {
         return this.operationAt(bb)
@@ -3574,57 +3574,57 @@ export const modules = {
         this.paused = !1
       }
       untracked(bb) {
-        const cb = this.paused;
+        const ab = this.paused;
         this.paused = !0;
         try {
           return bb()
         } finally {
-          this.paused = cb
+          this.paused = ab
         }
       }
       markDirty(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Wb.ADD;
-        const sb = this.paused;
+        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Mb.ADD;
+        const Ub = this.paused;
         this.paused = !1;
         try {
-          this.change(bb, cb)
+          this.change(bb, ab)
         } finally {
-          this.paused = sb
+          this.paused = Ub
         }
       }
       getValue(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return this.refTarget[Xb](bb, cb)
+        let ab = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return this.refTarget[Pb](bb, ab)
       }
-      delete(bb, cb) {
+      delete(bb, ab) {
         if (void 0 === bb) {
           try {
             throw new Error(`@colyseus/schema ${this.ref.constructor.name}: trying to delete non-existing index '${bb}'`)
-          } catch (IW) {
-            console.warn(IW)
+          } catch (TM) {
+            console.warn(TM)
           }
           return
         }
         if (this.paused || this.isFieldFullStateOnly(bb)) return this.getValue(bb);
-        const sb = this.isFieldUnreliable(bb) && !this.isNew;
-        sb ? this.ensureUnreliableRecorder().recordDelete(bb, cb ?? Wb.DELETE) : this.recordDelete(bb, cb ?? Wb.DELETE);
-        const kb = this.getValue(bb);
-        return kb && kb[lb] && this.root?.remove(kb[lb]), sb ? this.root?.enqueueUnreliable(this) : this.root?.enqueueChangeTree(this), kb
+        const Ub = this.isFieldUnreliable(bb) && !this.isNew;
+        Ub ? this.ensureUnreliableRecorder().recordDelete(bb, ab ?? Mb.DELETE) : this.recordDelete(bb, ab ?? Mb.DELETE);
+        const Ab = this.getValue(bb);
+        return Ab && Ab[Rb] && this.root?.remove(Ab[Rb]), Ub ? this.root?.enqueueUnreliable(this) : this.root?.enqueueChangeTree(this), Ab
       }
       endEncode() {
-        this.reset(), this.changesNode = void 0, this._isSchema || this.refTarget[Cb]?.(), this.isNew = !1
+        this.reset(), this.changesNode = void 0, this._isSchema || this.refTarget[Zb]?.(), this.isNew = !1
       }
       endEncodeUnreliable() {
-        this.unreliableRecorder?.reset(), this.unreliableChangesNode = void 0, this._isSchema || this.refTarget[Cb]?.()
+        this.unreliableRecorder?.reset(), this.unreliableChangesNode = void 0, this._isSchema || this.refTarget[Zb]?.()
       }
       discard() {
-        this._isSchema || this.refTarget[Cb]?.(), this.reset(), this.unreliableRecorder?.reset()
+        this._isSchema || this.refTarget[Zb]?.(), this.reset(), this.unreliableRecorder?.reset()
       }
       discardAll() {
         const bb = bb => {
           if (bb < 0) return;
-          const cb = this.getValue(bb);
-          cb && cb[lb] && cb[lb].discardAll()
+          const ab = this.getValue(bb);
+          ab && ab[Rb] && ab[Rb].discardAll()
         };
         this.forEach(bb), this.unreliableRecorder?.forEach(bb), this.discard()
       }
@@ -3637,81 +3637,81 @@ export const modules = {
       get parentIndex() {
         return this._parentIndex
       }
-      addParent(bb, cb) {
-        ! function(bb, cb, sb) {
+      addParent(bb, ab) {
+        ! function(bb, ab, Ub) {
           if (bb.parentRef) {
-            if (bb.parentRef[lb] === cb[lb]) return void(bb._parentIndex = sb);
-            if (cs(bb, ((bb, sb) => bb[lb] === cb[lb]))) return void(bb._parentIndex = sb)
+            if (bb.parentRef[Rb] === ab[Rb]) return void(bb._parentIndex = Ub);
+            if (aU(bb, ((bb, Ub) => bb[Rb] === ab[Rb]))) return void(bb._parentIndex = Ub)
           }
-          void 0 === bb.parentRef ? (bb.parentRef = cb, bb._parentIndex = sb) : (bb.extraParents = {
+          void 0 === bb.parentRef ? (bb.parentRef = ab, bb._parentIndex = Ub) : (bb.extraParents = {
             ref: bb.parentRef,
             index: bb._parentIndex,
             next: bb.extraParents
-          }, bb.parentRef = cb, bb._parentIndex = sb)
-        }(this, bb, cb)
+          }, bb.parentRef = ab, bb._parentIndex = Ub)
+        }(this, bb, ab)
       }
-      setParentIndex(bb, cb) {
-        ! function(bb, cb, sb) {
+      setParentIndex(bb, ab) {
+        ! function(bb, ab, Ub) {
           if (void 0 !== bb.extraParents)
-            if (bb.parentRef[lb] !== cb[lb]) {
-              for (let kb = bb.extraParents; void 0 !== kb; kb = kb.next)
-                if (kb.ref[lb] === cb[lb]) return void(kb.index = sb)
-            } else bb._parentIndex = sb;
-          else bb._parentIndex = sb
-        }(this, bb, cb)
+            if (bb.parentRef[Rb] !== ab[Rb]) {
+              for (let Ab = bb.extraParents; void 0 !== Ab; Ab = Ab.next)
+                if (Ab.ref[Rb] === ab[Rb]) return void(Ab.index = Ub)
+            } else bb._parentIndex = Ub;
+          else bb._parentIndex = Ub
+        }(this, bb, ab)
       }
       removeParent() {
-        return function(bb, cb) {
-          if (bb.parentRef && bb.parentRef[lb] === cb[lb]) return bb.extraParents ? (bb.parentRef = bb.extraParents.ref, bb._parentIndex = bb.extraParents.index, bb.extraParents = bb.extraParents.next) : (bb.parentRef = void 0, bb._parentIndex = void 0), !0;
-          let sb = bb.extraParents,
-            kb = null;
-          for (; sb;) {
-            if (sb.ref[lb] === cb[lb]) return kb ? kb.next = sb.next : bb.extraParents = sb.next, !0;
-            kb = sb, sb = sb.next
+        return function(bb, ab) {
+          if (bb.parentRef && bb.parentRef[Rb] === ab[Rb]) return bb.extraParents ? (bb.parentRef = bb.extraParents.ref, bb._parentIndex = bb.extraParents.index, bb.extraParents = bb.extraParents.next) : (bb.parentRef = void 0, bb._parentIndex = void 0), !0;
+          let Ub = bb.extraParents,
+            Ab = null;
+          for (; Ub;) {
+            if (Ub.ref[Rb] === ab[Rb]) return Ab ? Ab.next = Ub.next : bb.extraParents = Ub.next, !0;
+            Ab = Ub, Ub = Ub.next
           }
           return void 0 === bb.parentRef
         }(this, arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.parent)
       }
       findParent(bb) {
-        return function(bb, cb) {
-          if (void 0 !== bb.parentRef && cb(bb.parentRef, bb._parentIndex)) return {
+        return function(bb, ab) {
+          if (void 0 !== bb.parentRef && ab(bb.parentRef, bb._parentIndex)) return {
             ref: bb.parentRef,
             index: bb._parentIndex
           };
-          for (let sb = bb.extraParents; void 0 !== sb; sb = sb.next)
-            if (cb(sb.ref, sb.index)) return {
-              ref: sb.ref,
-              index: sb.index
+          for (let Ub = bb.extraParents; void 0 !== Ub; Ub = Ub.next)
+            if (ab(Ub.ref, Ub.index)) return {
+              ref: Ub.ref,
+              index: Ub.index
             }
         }(this, bb)
       }
       hasParent(bb) {
-        return cs(this, bb)
+        return aU(this, bb)
       }
       indexInParent(bb) {
-        return function(bb, cb) {
-          if (bb.parentRef && bb.parentRef[lb] === cb[lb]) return bb._parentIndex;
-          for (let sb = bb.extraParents; void 0 !== sb; sb = sb.next)
-            if (sb.ref[lb] === cb[lb]) return sb.index
+        return function(bb, ab) {
+          if (bb.parentRef && bb.parentRef[Rb] === ab[Rb]) return bb._parentIndex;
+          for (let Ub = bb.extraParents; void 0 !== Ub; Ub = Ub.next)
+            if (Ub.ref[Rb] === ab[Rb]) return Ub.index
         }(this, bb)
       }
       getAllParents() {
         return function(bb) {
-          const cb = [];
-          bb.parentRef && cb.push({
+          const ab = [];
+          bb.parentRef && ab.push({
             ref: bb.parentRef,
             index: bb._parentIndex
           });
-          let sb = bb.extraParents;
-          for (; sb;) cb.push({
-            ref: sb.ref,
-            index: sb.index
-          }), sb = sb.next;
-          return cb
+          let Ub = bb.extraParents;
+          for (; Ub;) ab.push({
+            ref: Ub.ref,
+            index: Ub.index
+          }), Ub = Ub.next;
+          return ab
         }(this)
       }
     }
-    class Ds {
+    class dU {
       ref;
       root = void 0;
       parentRef = void 0;
@@ -3743,365 +3743,365 @@ export const modules = {
       }
       markDirty() {}
       forEachChild(bb) {
-        const cb = this.ref;
-        if (cb[Qb]) {
-          if ("string" !== typeof cb[Qb])
-            for (const [sb, kb] of cb.entries()) kb && bb(kb[lb], cb._collectionIndexes?.[sb] ?? sb);
+        const ab = this.ref;
+        if (ab[kb]) {
+          if ("string" !== typeof ab[kb])
+            for (const [Ub, Ab] of ab.entries()) Ab && bb(Ab[Rb], ab._collectionIndexes?.[Ub] ?? Ub);
           return
         }
-        const sb = cb.constructor,
-          kb = sb?.[Symbol.metadata];
-        if (!kb) return;
-        const Wb = kb[Bb] ?? [];
-        for (let ab = 0; ab < Wb.length; ab++) {
-          const sb = Wb[ab],
-            Tb = cb[kb[sb].name];
-          Tb && bb(Tb[lb], sb)
+        const Ub = ab.constructor,
+          Ab = Ub?.[Symbol.metadata];
+        if (!Ab) return;
+        const Mb = Ab[Wb] ?? [];
+        for (let Tb = 0; Tb < Mb.length; Tb++) {
+          const Ub = Mb[Tb],
+            Eb = ab[Ab[Ub].name];
+          Eb && bb(Eb[Rb], Ub)
         }
       }
-      forEachChildWithCtx(bb, cb) {
-        this.forEachChild(((sb, kb) => cb(bb, sb, kb)))
+      forEachChildWithCtx(bb, ab) {
+        this.forEachChild(((Ub, Ab) => ab(bb, Ub, Ab)))
       }
       forEachLive() {}
       forEachLiveWithCtx() {}
       forEach() {}
     }
 
-    function Es(bb) {
-      let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : bb;
-      var sb;
-      Object.defineProperty(bb, lb, {
-        value: (sb = cb, new Ds(sb)),
+    function FU(bb) {
+      let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : bb;
+      var Ub;
+      Object.defineProperty(bb, Rb, {
+        value: (Ub = ab, new dU(Ub)),
         enumerable: !1,
         writable: !0
       })
     }
 
-    function is(bb, cb, sb, kb, ab, Tb, Ib) {
-      void 0 !== Ib ? Ib(cb, kb, Tb) : "string" === typeof sb ? cc[sb]?.(cb, kb, Tb) : null != sb[Symbol.metadata] ? (cc.number(cb, kb[Ub], Tb), (ab & Wb.ADD) === Wb.ADD && bb.tryEncodeTypeId(cb, sb, kb.constructor, Tb)) : cc.number(cb, kb[Ub], Tb)
+    function hU(bb, ab, Ub, Ab, Tb, Eb, Bb) {
+      void 0 !== Bb ? Bb(ab, Ab, Eb) : "string" === typeof Ub ? aa[Ub]?.(ab, Ab, Eb) : null != Ub[Symbol.metadata] ? (aa.number(ab, Ab[Yb], Eb), (Tb & Mb.ADD) === Mb.ADD && bb.tryEncodeTypeId(ab, Ub, Ab.constructor, Eb)) : aa.number(ab, Ab[Yb], Eb)
     }
-    const Os = function(bb, cb, sb, kb, ab, Tb, Ub, Ib) {
-        if (cb[Tb.offset++] = 255 & (kb | ab), ab === Wb.DELETE) return;
-        const Hb = sb.encDescriptor,
-          fb = sb.ref,
-          Mb = fb[Lb][kb] ?? fb[Hb.names[kb]];
-        is(bb, cb, Hb.types[kb], Mb, ab, Tb, Hb.encoders[kb])
+    const GU = function(bb, ab, Ub, Ab, Tb, Eb, Yb, Bb) {
+        if (ab[Eb.offset++] = 255 & (Ab | Tb), Tb === Mb.DELETE) return;
+        const eb = Ub.encDescriptor,
+          vb = Ub.ref,
+          Lb = vb[xb][Ab] ?? vb[eb.names[Ab]];
+        hU(bb, ab, eb.types[Ab], Lb, Tb, Eb, eb.encoders[Ab])
       },
-      Gs = function(bb, cb, sb, kb, ab, Tb) {
-        if (cb[Tb.offset++] = 255 & ab, cc.number(cb, kb, Tb), ab === Wb.DELETE) return;
-        const Ub = sb.ref;
-        if ((ab & Wb.ADD) === Wb.ADD) {
-          const bb = Ub.$indexes.get(kb);
-          cc.string(cb, bb, Tb)
+      QU = function(bb, ab, Ub, Ab, Tb, Eb) {
+        if (ab[Eb.offset++] = 255 & Tb, aa.number(ab, Ab, Eb), Tb === Mb.DELETE) return;
+        const Yb = Ub.ref;
+        if ((Tb & Mb.ADD) === Mb.ADD) {
+          const bb = Yb.$indexes.get(Ab);
+          aa.string(ab, bb, Eb)
         }
-        is(bb, cb, Ub[Qb], Ub[Xb](kb), ab, Tb)
+        hU(bb, ab, Yb[kb], Yb[Pb](Ab), Tb, Eb)
       },
-      Ks = function(bb, cb, sb, kb, ab, Tb) {
-        if (cb[Tb.offset++] = 255 & ab, cc.number(cb, kb, Tb), ab === Wb.DELETE) return;
-        const Ub = sb.ref;
-        is(bb, cb, Ub[Qb], Ub[Xb](kb), ab, Tb)
+      qU = function(bb, ab, Ub, Ab, Tb, Eb) {
+        if (ab[Eb.offset++] = 255 & Tb, aa.number(ab, Ab, Eb), Tb === Mb.DELETE) return;
+        const Yb = Ub.ref;
+        hU(bb, ab, Yb[kb], Yb[Pb](Ab), Tb, Eb)
       },
-      Zs = function(bb, cb, sb, kb, ab, Tb) {
-        const Ub = sb.ref;
-        (ab & Wb.ADD) === Wb.ADD && "function" === typeof Ub.set ? Gs(bb, cb, sb, kb, ab, Tb) : Ks(bb, cb, sb, kb, ab, Tb)
+      uU = function(bb, ab, Ub, Ab, Tb, Eb) {
+        const Yb = Ub.ref;
+        (Tb & Mb.ADD) === Mb.ADD && "function" === typeof Yb.set ? QU(bb, ab, Ub, Ab, Tb, Eb) : qU(bb, ab, Ub, Ab, Tb, Eb)
       },
-      zs = function(bb, cb, sb, kb, ab, Tb, Ib, Hb) {
-        const fb = sb.refTarget,
-          Mb = fb[Qb],
-          nb = "string" !== typeof Mb;
-        let mb;
-        if (Hb && sb.isFiltered && nb) {
-          const bb = fb.tmpItems[kb];
+      rU = function(bb, ab, Ub, Ab, Tb, Eb, Bb, eb) {
+        const vb = Ub.refTarget,
+          Lb = vb[kb],
+          Xb = "string" !== typeof Lb;
+        let jb;
+        if (eb && Ub.isFiltered && Xb) {
+          const bb = vb.tmpItems[Ab];
           if (!bb) return;
-          if (mb = bb[Ub], ab === Wb.DELETE) ab = Wb.DELETE_BY_REFID;
-          else if ((ab & Wb.ADD) === Wb.ADD) ab = Wb.ADD_BY_REFID;
-          else if ((ab & Wb.MOVE) === Wb.MOVE) return
-        } else if (ab === Wb.DELETE && nb) {
-          const bb = fb.tmpItems[kb];
+          if (jb = bb[Yb], Tb === Mb.DELETE) Tb = Mb.DELETE_BY_REFID;
+          else if ((Tb & Mb.ADD) === Mb.ADD) Tb = Mb.ADD_BY_REFID;
+          else if ((Tb & Mb.MOVE) === Mb.MOVE) return
+        } else if (Tb === Mb.DELETE && Xb) {
+          const bb = vb.tmpItems[Ab];
           if (!bb) return;
-          mb = bb[Ub], ab = Wb.DELETE_BY_REFID
-        } else mb = kb;
-        if (cb[Tb.offset++] = 255 & ab, cc.number(cb, mb, Tb), ab === Wb.DELETE || ab === Wb.DELETE_BY_REFID) return;
-        is(bb, cb, Mb, fb[Xb](kb, Ib), ab, Tb)
+          jb = bb[Yb], Tb = Mb.DELETE_BY_REFID
+        } else jb = Ab;
+        if (ab[Eb.offset++] = 255 & Tb, aa.number(ab, jb, Eb), Tb === Mb.DELETE || Tb === Mb.DELETE_BY_REFID) return;
+        hU(bb, ab, Lb, vb[Pb](Ab, Bb), Tb, Eb)
       };
 
-    function qs(bb, cb, sb, kb, ab, Tb, Ib) {
-      const Hb = bb.resyncVisited;
-      let fb = Hb.get(bb.currentRefId);
-      if (void 0 === fb && Hb.set(bb.currentRefId, fb = new Set), fb.add(kb), void 0 !== ab && sb === Wb.ADD && ab !== Tb) {
-        const sb = ab[Ub];
-        void 0 !== sb && (bb.root.removeRef(sb), Ib?.push({
-          ref: cb,
+    function KU(bb, ab, Ub, Ab, Tb, Eb, Bb) {
+      const eb = bb.resyncVisited;
+      let vb = eb.get(bb.currentRefId);
+      if (void 0 === vb && eb.set(bb.currentRefId, vb = new Set), vb.add(Ab), void 0 !== Tb && Ub === Mb.ADD && Tb !== Eb) {
+        const Ub = Tb[Yb];
+        void 0 !== Ub && (bb.root.removeRef(Ub), Bb?.push({
+          ref: ab,
           refId: bb.currentRefId,
-          op: Wb.DELETE,
-          dynamicIndex: kb,
+          op: Mb.DELETE,
+          dynamicIndex: Ab,
           value: void 0,
-          previousValue: ab
+          previousValue: Tb
         }))
       }
     }
 
-    function ds(bb, cb, sb, kb) {
-      const Wb = cb[Ub];
-      if (void 0 === Wb || sb.has(Wb)) return;
-      sb.add(Wb);
-      const ab = cb.constructor[Symbol.metadata],
-        Tb = ab?.[Bb];
-      if (void 0 === Tb) return;
-      const Ib = ab[Db];
-      for (let Ub = 0; Ub < Tb.length; Ub++) {
-        const Wb = Tb[Ub];
-        if (void 0 !== Ib && Ib.includes(Wb)) continue;
-        const Hb = ab[Wb],
-          fb = cb[Hb.name];
-        fb && (Pk.is(Hb.type) ? ds(bb, fb, sb, kb) : As(bb, fb, sb, kb))
+    function oU(bb, ab, Ub, Ab) {
+      const Mb = ab[Yb];
+      if (void 0 === Mb || Ub.has(Mb)) return;
+      Ub.add(Mb);
+      const Tb = ab.constructor[Symbol.metadata],
+        Eb = Tb?.[Wb];
+      if (void 0 === Eb) return;
+      const Bb = Tb[Fb];
+      for (let Yb = 0; Yb < Eb.length; Yb++) {
+        const Mb = Eb[Yb];
+        if (void 0 !== Bb && Bb.includes(Mb)) continue;
+        const eb = Tb[Mb],
+          vb = ab[eb.name];
+        vb && (HA.is(eb.type) ? oU(bb, vb, Ub, Ab) : lU(bb, vb, Ub, Ab))
       }
     }
 
-    function As(bb, cb, sb, kb) {
-      const ab = cb[eb] ?? cb,
-        Tb = ab[Ub];
-      if (void 0 === Tb || sb.has(Tb)) return;
-      sb.add(Tb);
-      const Ib = bb.resyncVisited.get(Tb);
-      if (void 0 === Ib) return;
-      const Hb = bb.root;
-      ab[mb](Ib, ((bb, sb) => {
-        kb?.push({
-          ref: cb,
-          refId: Tb,
-          op: Wb.DELETE,
-          dynamicIndex: sb,
+    function lU(bb, ab, Ub, Ab) {
+      const Tb = ab[yb] ?? ab,
+        Eb = Tb[Yb];
+      if (void 0 === Eb || Ub.has(Eb)) return;
+      Ub.add(Eb);
+      const Bb = bb.resyncVisited.get(Eb);
+      if (void 0 === Bb) return;
+      const eb = bb.root;
+      Tb[jb](Bb, ((bb, Ub) => {
+        Ab?.push({
+          ref: ab,
+          refId: Eb,
+          op: Mb.DELETE,
+          dynamicIndex: Ub,
           value: void 0,
           previousValue: bb
         });
-        const ab = bb?.[Ub];
-        void 0 !== ab && Hb.removeRef(ab)
-      }), (cb => {
-        Pk.isSchema(cb) && ds(bb, cb, sb, kb)
+        const Tb = bb?.[Yb];
+        void 0 !== Tb && eb.removeRef(Tb)
+      }), (ab => {
+        HA.isSchema(ab) && oU(bb, ab, Ub, Ab)
       }))
     }
-    const ws = 1,
-      rs = 2,
-      os = 3,
-      Ss = 4,
-      Rs = 5;
+    const tU = 1,
+      wU = 2,
+      sU = 3,
+      gU = 4,
+      CU = 5;
 
-    function vs(bb, cb, sb, kb, ab, Tb, Ib, Hb, fb) {
-      const Mb = bb.root;
-      let Xb;
-      if ((cb & Wb.DELETE) === Wb.DELETE) {
-        const bb = ab?.[Ub];
-        void 0 !== bb && Mb.removeRef(bb), cb !== Wb.DELETE_AND_ADD && sb[nb](kb), Xb = void 0
+    function VU(bb, ab, Ub, Ab, Tb, Eb, Bb, eb, vb) {
+      const Lb = bb.root;
+      let Pb;
+      if ((ab & Mb.DELETE) === Mb.DELETE) {
+        const bb = Tb?.[Yb];
+        void 0 !== bb && Lb.removeRef(bb), ab !== Mb.DELETE_AND_ADD && Ub[Xb](Ab), Pb = void 0
       }
-      if (cb === Wb.DELETE);
-      else if ("string" === typeof Tb) Xb = Nc[Tb](Ib, Hb);
-      else if (Gc(Tb)) Xb = function(bb, cb, sb) {
-        return Zc(bb, (0, Nc[bb.wire])(cb, sb))
-      }(Tb.quantized, Ib, Hb);
-      else if (Pk.is(Tb)) {
-        const sb = Nc.number(Ib, Hb);
-        if (Xb = Mb.refs.get(sb), (cb & Wb.ADD) === Wb.ADD) {
-          const kb = bb.getInstanceType(Ib, Hb, Tb);
-          Xb || (Xb = bb.createInstanceOfType(kb)), Mb.addRef(sb, Xb, Xb !== ab || cb === Wb.DELETE_AND_ADD && Xb === ab)
+      if (ab === Mb.DELETE);
+      else if ("string" === typeof Eb) Pb = Da[Eb](Bb, eb);
+      else if (qa(Eb)) Pb = function(bb, ab, Ub) {
+        return ra(bb, (0, Da[bb.wire])(ab, Ub))
+      }(Eb.quantized, Bb, eb);
+      else if (HA.is(Eb)) {
+        const Ub = Da.number(Bb, eb);
+        if (Pb = Lb.refs.get(Ub), (ab & Mb.ADD) === Mb.ADD) {
+          const Ab = bb.getInstanceType(Bb, eb, Eb);
+          Pb || (Pb = bb.createInstanceOfType(Ab)), Lb.addRef(Ub, Pb, Pb !== Tb || ab === Mb.DELETE_AND_ADD && Pb === Tb)
         }
       } else {
-        const sb = (mb = Object.keys(Tb)[0], Vc[mb]),
-          kb = Nc.number(Ib, Hb);
-        null !== bb.resyncVisited && function(bb, cb) {
-          const sb = bb.resyncVisited;
-          sb.has(cb) || sb.set(cb, new Set)
-        }(bb, kb);
-        const nb = Mb.refs.has(kb) ? ab || Mb.refs.get(kb) : sb.constructor.initializeForDecoder();
-        if (Xb = nb.clone(!0), Xb[Qb] = Object.values(Tb)[0], ab) {
-          let bb = ab[Ub];
-          if (void 0 !== bb && kb !== bb) {
-            (cb & Wb.DELETE) !== Wb.DELETE && Mb.removeRef(bb);
-            const sb = ab.entries();
-            let kb;
+        const Ub = (jb = Object.keys(Eb)[0], za[jb]),
+          Ab = Da.number(Bb, eb);
+        null !== bb.resyncVisited && function(bb, ab) {
+          const Ub = bb.resyncVisited;
+          Ub.has(ab) || Ub.set(ab, new Set)
+        }(bb, Ab);
+        const Xb = Lb.refs.has(Ab) ? Tb || Lb.refs.get(Ab) : Ub.constructor.initializeForDecoder();
+        if (Pb = Xb.clone(!0), Pb[kb] = Object.values(Eb)[0], Tb) {
+          let bb = Tb[Yb];
+          if (void 0 !== bb && Ab !== bb) {
+            (ab & Mb.DELETE) !== Mb.DELETE && Lb.removeRef(bb);
+            const Ub = Tb.entries();
+            let Ab;
             for (;
-              (kb = sb.next()) && !kb.done;) {
-              const [cb, sb] = kb.value;
-              "object" === typeof sb && (bb = sb[Ub]), fb?.push({
-                ref: ab,
+              (Ab = Ub.next()) && !Ab.done;) {
+              const [ab, Ub] = Ab.value;
+              "object" === typeof Ub && (bb = Ub[Yb]), vb?.push({
+                ref: Tb,
                 refId: bb,
-                op: Wb.DELETE,
-                field: cb,
+                op: Mb.DELETE,
+                field: ab,
                 value: void 0,
-                previousValue: sb
+                previousValue: Ub
               })
             }
           }
         }
-        Mb.addRef(kb, Xb, nb !== ab || cb === Wb.DELETE_AND_ADD && nb === ab)
+        Lb.addRef(Ab, Pb, Xb !== Tb || ab === Mb.DELETE_AND_ADD && Xb === Tb)
       }
-      var mb;
-      return Xb
+      var jb;
+      return Pb
     }
-    const Fs = function(bb, cb, sb, kb, Wb) {
-        const ab = cb[sb.offset++],
-          Tb = kb.constructor[Symbol.metadata],
-          Ub = ab >> 6 << 6,
-          Ib = ab % (Ub || 255),
-          Hb = Tb[Ib];
-        if (void 0 === Hb) return console.warn("@colyseus/schema: field not defined at", {
-          index: Ib,
-          ref: kb.constructor.name,
-          metadata: Tb
+    const OU = function(bb, ab, Ub, Ab, Mb) {
+        const Tb = ab[Ub.offset++],
+          Eb = Ab.constructor[Symbol.metadata],
+          Yb = Tb >> 6 << 6,
+          Bb = Tb % (Yb || 255),
+          eb = Eb[Bb];
+        if (void 0 === eb) return console.warn("@colyseus/schema: field not defined at", {
+          index: Bb,
+          ref: Ab.constructor.name,
+          metadata: Eb
         }), -1;
-        const fb = !0 === Hb.deprecated,
-          Mb = fb ? void 0 : kb[Xb](Ib),
-          nb = vs(bb, Ub, kb, Ib, Mb, Hb.type, cb, sb, Wb);
-        fb || (null !== nb && void 0 !== nb && (kb[Hb.name] = nb), Mb !== nb && Wb?.push({
-          ref: kb,
+        const vb = !0 === eb.deprecated,
+          Lb = vb ? void 0 : Ab[Pb](Bb),
+          Xb = VU(bb, Yb, Ab, Bb, Lb, eb.type, ab, Ub, Mb);
+        vb || (null !== Xb && void 0 !== Xb && (Ab[eb.name] = Xb), Lb !== Xb && Mb?.push({
+          ref: Ab,
           refId: bb.currentRefId,
-          op: Ub,
-          field: Hb.name,
-          value: nb,
-          previousValue: Mb
+          op: Yb,
+          field: eb.name,
+          value: Xb,
+          previousValue: Lb
         }))
       },
-      xs = function(bb, cb, sb, kb, ab) {
-        const Tb = kb[eb] ?? kb,
-          Ub = cb[sb.offset++];
-        if (Ub === Wb.CLEAR) return bb.removeChildRefs(Tb, ab), void Tb.clear();
-        const Ib = Nc.number(cb, sb),
-          Hb = Tb[Qb],
-          fb = Tb.constructor.COLLECTION_KIND;
-        let Mb;
-        (Ub & Wb.ADD) === Wb.ADD ? fb === ws ? (Mb = Nc.string(cb, sb), Tb.setIndex(Ib, Mb)) : Mb = Ib : Mb = Tb.getIndex(Ib);
-        const nb = Tb[Xb](Ib),
-          mb = vs(bb, Ub, kb, Ib, nb, Hb, cb, sb, ab);
-        if (null !== bb.resyncVisited && qs(bb, kb, Ub, Mb, nb, mb, ab), null !== mb && void 0 !== mb) switch (fb) {
-          case ws:
-            Tb.$items.set(Mb, mb);
+      cU = function(bb, ab, Ub, Ab, Tb) {
+        const Eb = Ab[yb] ?? Ab,
+          Yb = ab[Ub.offset++];
+        if (Yb === Mb.CLEAR) return bb.removeChildRefs(Eb, Tb), void Eb.clear();
+        const Bb = Da.number(ab, Ub),
+          eb = Eb[kb],
+          vb = Eb.constructor.COLLECTION_KIND;
+        let Lb;
+        (Yb & Mb.ADD) === Mb.ADD ? vb === tU ? (Lb = Da.string(ab, Ub), Eb.setIndex(Bb, Lb)) : Lb = Bb : Lb = Eb.getIndex(Bb);
+        const Xb = Eb[Pb](Bb),
+          jb = VU(bb, Yb, Ab, Bb, Xb, eb, ab, Ub, Tb);
+        if (null !== bb.resyncVisited && KU(bb, Ab, Yb, Lb, Xb, jb, Tb), null !== jb && void 0 !== jb) switch (vb) {
+          case tU:
+            Eb.$items.set(Lb, jb);
             break;
-          case rs:
-            Tb.$setAt(Ib, mb, null !== bb.resyncVisited && Ub === Wb.ADD ? Wb.REPLACE : Ub);
+          case wU:
+            Eb.$setAt(Bb, jb, null !== bb.resyncVisited && Yb === Mb.ADD ? Mb.REPLACE : Yb);
             break;
-          case os:
-          case Ss:
-          case Rs:
-            Tb.$items.has(Ib) || (Tb.$items.set(Ib, mb), "number" === typeof Tb.$refId && Ib >= Tb.$refId && (Tb.$refId = Ib + 1));
+          case sU:
+          case gU:
+          case CU:
+            Eb.$items.has(Bb) || (Eb.$items.set(Bb, jb), "number" === typeof Eb.$refId && Bb >= Eb.$refId && (Eb.$refId = Bb + 1));
             break;
           default:
-            console.warn(`@colyseus/schema: missing COLLECTION_KIND on ${Tb.constructor?.name} \u2014 item at index ${Ib} was not stored.`)
+            console.warn(`@colyseus/schema: missing COLLECTION_KIND on ${Eb.constructor?.name} \u2014 item at index ${Bb} was not stored.`)
         }
-        nb !== mb && ab?.push({
-          ref: kb,
+        Xb !== jb && Tb?.push({
+          ref: Ab,
           refId: bb.currentRefId,
-          op: Ub,
-          dynamicIndex: Mb,
-          value: mb,
-          previousValue: nb
+          op: Yb,
+          dynamicIndex: Lb,
+          value: jb,
+          previousValue: Xb
         })
       },
-      ps = function(bb, cb, sb, kb, ab) {
-        const Tb = kb[eb] ?? kb;
-        let Ub, Ib = cb[sb.offset++];
-        if (Ib === Wb.CLEAR) return bb.removeChildRefs(Tb, ab), void Tb.clear();
-        if (Ib === Wb.REVERSE) return void Tb.items.reverse();
-        if (Ib === Wb.DELETE_BY_REFID) {
-          const Ib = Nc.number(cb, sb),
-            Hb = bb.root.refs.get(Ib);
-          if (void 0 === Hb) return;
-          if (bb.root.removeRef(Ib), Ub = Tb.findIndex((bb => bb === Hb)), -1 === Ub) return;
-          return Tb[nb](Ub), void ab?.push({
-            ref: kb,
+      JU = function(bb, ab, Ub, Ab, Tb) {
+        const Eb = Ab[yb] ?? Ab;
+        let Yb, Bb = ab[Ub.offset++];
+        if (Bb === Mb.CLEAR) return bb.removeChildRefs(Eb, Tb), void Eb.clear();
+        if (Bb === Mb.REVERSE) return void Eb.items.reverse();
+        if (Bb === Mb.DELETE_BY_REFID) {
+          const Bb = Da.number(ab, Ub),
+            eb = bb.root.refs.get(Bb);
+          if (void 0 === eb) return;
+          if (bb.root.removeRef(Bb), Yb = Eb.findIndex((bb => bb === eb)), -1 === Yb) return;
+          return Eb[Xb](Yb), void Tb?.push({
+            ref: Ab,
             refId: bb.currentRefId,
-            op: Wb.DELETE,
-            dynamicIndex: Ub,
+            op: Mb.DELETE,
+            dynamicIndex: Yb,
             value: void 0,
-            previousValue: Hb
+            previousValue: eb
           })
         }
-        if (Ib === Wb.ADD_BY_REFID) {
-          const kb = Nc.number(cb, sb),
-            Wb = bb.root.refs.get(kb);
-          Wb && (Ub = Tb.findIndex((bb => bb === Wb))), -1 !== Ub && void 0 !== Ub || (Ub = Tb.length)
-        } else Ub = Nc.number(cb, sb);
-        const Hb = Tb[Qb];
-        let fb = Ub;
-        const Mb = Tb.items[Ub],
-          Xb = vs(bb, Ib, kb, Ub, Mb, Hb, cb, sb, ab);
-        null !== bb.resyncVisited && qs(bb, kb, Ib, Ub, Mb, Xb, ab), null !== Xb && void 0 !== Xb && Xb !== Mb && Tb.$setAt(Ub, Xb, null !== bb.resyncVisited && Ib === Wb.ADD ? Wb.REPLACE : Ib), Mb !== Xb && ab?.push({
-          ref: kb,
+        if (Bb === Mb.ADD_BY_REFID) {
+          const Ab = Da.number(ab, Ub),
+            Mb = bb.root.refs.get(Ab);
+          Mb && (Yb = Eb.findIndex((bb => bb === Mb))), -1 !== Yb && void 0 !== Yb || (Yb = Eb.length)
+        } else Yb = Da.number(ab, Ub);
+        const eb = Eb[kb];
+        let vb = Yb;
+        const Lb = Eb.items[Yb],
+          Pb = VU(bb, Bb, Ab, Yb, Lb, eb, ab, Ub, Tb);
+        null !== bb.resyncVisited && KU(bb, Ab, Bb, Yb, Lb, Pb, Tb), null !== Pb && void 0 !== Pb && Pb !== Lb && Eb.$setAt(Yb, Pb, null !== bb.resyncVisited && Bb === Mb.ADD ? Mb.REPLACE : Bb), Lb !== Pb && Tb?.push({
+          ref: Ab,
           refId: bb.currentRefId,
-          op: Ib,
-          dynamicIndex: fb,
-          value: Xb,
-          previousValue: Mb
+          op: Bb,
+          dynamicIndex: vb,
+          value: Pb,
+          previousValue: Lb
         })
       };
-    class bk extends Error {}
+    class nU extends Error {}
 
-    function ck(bb, cb, sb, kb) {
-      if (!(bb instanceof cb)) throw new bk(`a '${cb.name}' was expected, but '${bb&&bb.constructor.name}' was provided in ${sb.constructor.name}#${kb}`)
+    function SU(bb, ab, Ub, Ab) {
+      if (!(bb instanceof ab)) throw new nU(`a '${ab.name}' was expected, but '${bb&&bb.constructor.name}' was provided in ${Ub.constructor.name}#${Ab}`)
     }
-    const sk = (bb, cb) => {
-        const sb = bb.toString(),
-          kb = cb.toString();
-        return sb < kb ? -1 : sb > kb ? 1 : 0
+    const bA = (bb, ab) => {
+        const Ub = bb.toString(),
+          Ab = ab.toString();
+        return Ub < Ab ? -1 : Ub > Ab ? 1 : 0
       },
-      kk = {
-        get: (bb, cb) => "symbol" === typeof cb || isNaN(cb) ? Reflect.get(bb, cb) : bb.items[cb],
-        set: (bb, cb, sb) => {
-          if ("symbol" !== typeof cb && !isNaN(cb)) {
-            if (void 0 === sb || null === sb) bb.$deleteAt(cb);
+      aA = {
+        get: (bb, ab) => "symbol" === typeof ab || isNaN(ab) ? Reflect.get(bb, ab) : bb.items[ab],
+        set: (bb, ab, Ub) => {
+          if ("symbol" !== typeof ab && !isNaN(ab)) {
+            if (void 0 === Ub || null === Ub) bb.$deleteAt(ab);
             else {
-              let kb;
-              if (sb[lb]) {
-                ck(sb, bb[Qb], bb, cb);
-                const ab = bb.items[cb];
-                bb.isMovingItems ? (kb = bb.$wireIndex(Number(cb)), void 0 !== ab ? sb[lb].isNew ? bb[lb].indexedOperation(kb, Wb.MOVE_AND_ADD) : (bb[lb].getChange(kb) & Wb.DELETE) === Wb.DELETE ? bb[lb].indexedOperation(kb, Wb.DELETE_AND_MOVE) : bb[lb].indexedOperation(kb, Wb.MOVE) : sb[lb].isNew && bb[lb].indexedOperation(kb, Wb.ADD), sb[lb].setParent(bb, bb[lb].root, kb)) : kb = bb.$changeAt(Number(cb), sb), void 0 !== ab && ab[lb].root?.remove(ab[lb])
-              } else kb = bb.$changeAt(Number(cb), sb);
-              bb.items[cb] = sb, void 0 !== kb && (bb.tmpItems[kb] = sb)
+              let Ab;
+              if (Ub[Rb]) {
+                SU(Ub, bb[kb], bb, ab);
+                const Tb = bb.items[ab];
+                bb.isMovingItems ? (Ab = bb.$wireIndex(Number(ab)), void 0 !== Tb ? Ub[Rb].isNew ? bb[Rb].indexedOperation(Ab, Mb.MOVE_AND_ADD) : (bb[Rb].getChange(Ab) & Mb.DELETE) === Mb.DELETE ? bb[Rb].indexedOperation(Ab, Mb.DELETE_AND_MOVE) : bb[Rb].indexedOperation(Ab, Mb.MOVE) : Ub[Rb].isNew && bb[Rb].indexedOperation(Ab, Mb.ADD), Ub[Rb].setParent(bb, bb[Rb].root, Ab)) : Ab = bb.$changeAt(Number(ab), Ub), void 0 !== Tb && Tb[Rb].root?.remove(Tb[Rb])
+              } else Ab = bb.$changeAt(Number(ab), Ub);
+              bb.items[ab] = Ub, void 0 !== Ab && (bb.tmpItems[Ab] = Ub)
             }
             return !0
           }
-          return Reflect.set(bb, cb, sb)
+          return Reflect.set(bb, ab, Ub)
         },
-        deleteProperty: (bb, cb) => ("number" === typeof cb ? bb.$deleteAt(cb) : delete bb[cb], !0),
-        has: (bb, cb) => "symbol" === typeof cb || isNaN(Number(cb)) ? Reflect.has(bb, cb) : Reflect.has(bb.items, cb)
+        deleteProperty: (bb, ab) => ("number" === typeof ab ? bb.$deleteAt(ab) : delete bb[ab], !0),
+        has: (bb, ab) => "symbol" === typeof ab || isNaN(Number(ab)) ? Reflect.has(bb, ab) : Reflect.has(bb.items, ab)
       };
-    class Wk {
-      [lb];
-      [Ub];
-      [eb];
-      [Qb];
+    class UA {
+      [Rb];
+      [Yb];
+      [yb];
+      [kb];
       items = [];
       tmpItems = [];
       deletedIndexes = [];
       isMovingItems = !1;
       _needsCompaction = !1;
-      static[Hb] = zs;
-      static[fb] = ps;
-      static COLLECTION_KIND = rs;
-      static[Mb](bb, cb, sb) {
-        if (!sb) return !0;
-        const kb = bb[eb] ?? bb;
-        return "string" === typeof kb[Qb] || sb.isChangeTreeVisible(kb.tmpItems[cb]?.[lb])
+      static[eb] = rU;
+      static[vb] = JU;
+      static COLLECTION_KIND = wU;
+      static[Lb](bb, ab, Ub) {
+        if (!Ub) return !0;
+        const Ab = bb[yb] ?? bb;
+        return "string" === typeof Ab[kb] || Ub.isChangeTreeVisible(Ab.tmpItems[ab]?.[Rb])
       }
       static is(bb) {
         return Array.isArray(bb) || void 0 !== bb.array
       }
       static from(bb) {
-        return new Wk(...Array.from(bb))
+        return new UA(...Array.from(bb))
       }
       constructor() {
-        this[Qb] = void 0, this[eb] = this;
-        const bb = new Proxy(this, kk);
-        return Object.defineProperty(this, lb, {
-          value: new Ps(bb, this),
+        this[kb] = void 0, this[yb] = this;
+        const bb = new Proxy(this, aA);
+        return Object.defineProperty(this, Rb, {
+          value: new IU(bb, this),
           enumerable: !1,
           writable: !0
         }), arguments.length > 0 && this.push(...arguments), bb
       }
       static initializeForDecoder() {
-        const bb = Object.create(Wk.prototype);
-        bb.items = [], bb.isMovingItems = !1, bb._needsCompaction = !1, bb[Qb] = void 0, bb[eb] = bb;
-        const cb = new Proxy(bb, kk);
-        return Es(bb, cb), cb
+        const bb = Object.create(UA.prototype);
+        bb.items = [], bb.isMovingItems = !1, bb._needsCompaction = !1, bb[kb] = void 0, bb[yb] = bb;
+        const ab = new Proxy(bb, aA);
+        return FU(bb, ab), ab
       }
       set length(bb) {
         0 === bb ? this.clear() : bb < this.items.length ? this.splice(bb, this.length - bb) : console.warn("ArraySchema: can't set .length to a higher value than its length.")
@@ -4110,234 +4110,234 @@ export const modules = {
         return this.items.length
       }
       pauseTracking() {
-        this[lb].pause()
+        this[Rb].pause()
       }
       resumeTracking() {
-        this[lb].resume()
+        this[Rb].resume()
       }
       untracked(bb) {
-        return this[lb].untracked(bb)
+        return this[Rb].untracked(bb)
       }
       get isTrackingPaused() {
-        return this[lb].paused
+        return this[Rb].paused
       }
       push() {
-        const bb = this[eb],
-          cb = bb.items,
-          sb = bb.tmpItems,
-          kb = bb[lb],
-          ab = bb[Qb];
-        let Tb = sb.length;
-        for (let Ub = 0, Ib = arguments.length; Ub < Ib; Ub++, Tb++) {
-          const Ib = Ub < 0 || arguments.length <= Ub ? void 0 : arguments[Ub];
-          if (void 0 === Ib || null === Ib) return;
-          "object" === typeof Ib && ab && ck(Ib, ab, bb, Ub), kb.indexedOperation(Tb, Wb.ADD), cb.push(Ib), sb.push(Ib), Ib[lb]?.setParent(this, kb.root, Tb)
+        const bb = this[yb],
+          ab = bb.items,
+          Ub = bb.tmpItems,
+          Ab = bb[Rb],
+          Tb = bb[kb];
+        let Eb = Ub.length;
+        for (let Yb = 0, Bb = arguments.length; Yb < Bb; Yb++, Eb++) {
+          const Bb = Yb < 0 || arguments.length <= Yb ? void 0 : arguments[Yb];
+          if (void 0 === Bb || null === Bb) return;
+          "object" === typeof Bb && Tb && SU(Bb, Tb, bb, Yb), Ab.indexedOperation(Eb, Mb.ADD), ab.push(Bb), Ub.push(Bb), Bb[Rb]?.setParent(this, Ab.root, Eb)
         }
-        return Tb
+        return Eb
       }
       pop() {
-        const bb = this[eb],
-          cb = bb.tmpItems,
-          sb = bb.deletedIndexes;
-        let kb = -1;
-        for (let ab = cb.length - 1; ab >= 0; ab--)
-          if (!0 !== sb[ab]) {
-            kb = ab;
+        const bb = this[yb],
+          ab = bb.tmpItems,
+          Ub = bb.deletedIndexes;
+        let Ab = -1;
+        for (let Tb = ab.length - 1; Tb >= 0; Tb--)
+          if (!0 !== Ub[Tb]) {
+            Ab = Tb;
             break
-          } if (kb < 0) return;
-        const Wb = bb.$isUnsentAdd(kb);
-        return bb[lb].delete(kb), Wb ? bb.$cancelAdd(kb) : sb[kb] = !0, bb.items.pop()
+          } if (Ab < 0) return;
+        const Mb = bb.$isUnsentAdd(Ab);
+        return bb[Rb].delete(Ab), Mb ? bb.$cancelAdd(Ab) : Ub[Ab] = !0, bb.items.pop()
       }
       at(bb) {
         return bb < 0 && (bb += this.length), this.items[bb]
       }
       $wireIndex(bb) {
-        const cb = this.deletedIndexes;
-        if (0 === cb.length) return bb;
-        const sb = this.tmpItems;
-        let kb = 0;
-        for (let Wb = 0; Wb < sb.length; Wb++)
-          if (!0 !== cb[Wb]) {
-            if (kb === bb) return Wb;
-            kb++
-          } return sb.length + (bb - kb)
+        const ab = this.deletedIndexes;
+        if (0 === ab.length) return bb;
+        const Ub = this.tmpItems;
+        let Ab = 0;
+        for (let Mb = 0; Mb < Ub.length; Mb++)
+          if (!0 !== ab[Mb]) {
+            if (Ab === bb) return Mb;
+            Ab++
+          } return Ub.length + (bb - Ab)
       }
       $isUnsentAdd(bb) {
-        const cb = this[lb];
-        return 0 === (576 & cb.flags) && !cb.paused && "string" !== typeof this[Qb] && cb.operationAt(bb) === Wb.ADD
+        const ab = this[Rb];
+        return 0 === (576 & ab.flags) && !ab.paused && "string" !== typeof this[kb] && ab.operationAt(bb) === Mb.ADD
       }
       $cancelAdd(bb) {
-        let cb = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        const sb = this[lb],
-          kb = this.tmpItems[bb];
-        this.tmpItems.splice(bb, 1), this.deletedIndexes.length > 0 && this.deletedIndexes.splice(bb, 1), sb.removeAt(bb, 1);
-        const Wb = kb?.[lb];
-        void 0 !== Wb && void 0 === Wb.root && Wb.removeParent(this), cb && this.$reindexChildren(bb)
+        let ab = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        const Ub = this[Rb],
+          Ab = this.tmpItems[bb];
+        this.tmpItems.splice(bb, 1), this.deletedIndexes.length > 0 && this.deletedIndexes.splice(bb, 1), Ub.removeAt(bb, 1);
+        const Mb = Ab?.[Rb];
+        void 0 !== Mb && void 0 === Mb.root && Mb.removeParent(this), ab && this.$reindexChildren(bb)
       }
-      $reindexChildren(bb, cb) {
-        if (!this[lb].hasFilteredFields) return;
-        if ("string" === typeof this[Qb]) return;
-        const sb = this.tmpItems,
-          kb = sb.length;
-        if (void 0 !== cb)
-          for (; bb < kb && sb[bb] === cb[bb];) bb++;
-        for (let Wb = bb; Wb < kb; Wb++) sb[Wb]?.[lb]?.setParentIndex(this, Wb)
+      $reindexChildren(bb, ab) {
+        if (!this[Rb].hasFilteredFields) return;
+        if ("string" === typeof this[kb]) return;
+        const Ub = this.tmpItems,
+          Ab = Ub.length;
+        if (void 0 !== ab)
+          for (; bb < Ab && Ub[bb] === ab[bb];) bb++;
+        for (let Mb = bb; Mb < Ab; Mb++) Ub[Mb]?.[Rb]?.setParentIndex(this, Mb)
       }
-      $changeAt(bb, cb) {
-        if (void 0 === cb || null === cb) return void console.error("ArraySchema items cannot be null nor undefined; Use `splice(index, 1)` instead.");
-        if (this.items[bb] === cb) return;
-        const sb = void 0 !== this.items[bb] ? "object" === typeof cb ? Wb.DELETE_AND_ADD : Wb.REPLACE : Wb.ADD,
-          kb = this.$wireIndex(bb),
-          ab = this[lb];
-        return ab.change(kb, sb), cb[lb]?.setParent(this, ab.root, kb), kb
+      $changeAt(bb, ab) {
+        if (void 0 === ab || null === ab) return void console.error("ArraySchema items cannot be null nor undefined; Use `splice(index, 1)` instead.");
+        if (this.items[bb] === ab) return;
+        const Ub = void 0 !== this.items[bb] ? "object" === typeof ab ? Mb.DELETE_AND_ADD : Mb.REPLACE : Mb.ADD,
+          Ab = this.$wireIndex(bb),
+          Tb = this[Rb];
+        return Tb.change(Ab, Ub), ab[Rb]?.setParent(this, Tb.root, Ab), Ab
       }
-      $deleteAt(bb, cb) {
-        this[lb].delete(this.$wireIndex(bb), cb)
+      $deleteAt(bb, ab) {
+        this[Rb].delete(this.$wireIndex(bb), ab)
       }
-      $setAt(bb, cb, sb) {
-        sb === Wb.ADD && void 0 !== this.items[bb] ? this.items.splice(bb, 0, cb) : sb === Wb.DELETE_AND_MOVE ? (this.items.splice(bb, 1), this.items[bb] = cb) : (bb > this.items.length && (this._needsCompaction = !0), this.items[bb] = cb)
+      $setAt(bb, ab, Ub) {
+        Ub === Mb.ADD && void 0 !== this.items[bb] ? this.items.splice(bb, 0, ab) : Ub === Mb.DELETE_AND_MOVE ? (this.items.splice(bb, 1), this.items[bb] = ab) : (bb > this.items.length && (this._needsCompaction = !0), this.items[bb] = ab)
       }
       clear() {
-        const bb = this[eb];
+        const bb = this[yb];
         if (0 === bb.items.length) return;
-        const cb = bb[lb];
-        cb.forEachChild(((bb, sb) => {
-          cb.root?.remove(bb)
-        })), cb.discard(), cb.operation(Wb.CLEAR), bb.items.length = 0, bb.tmpItems.length = 0
-      } [Nb]() {
-        const bb = this[eb] ?? this,
-          cb = bb[lb];
-        if (cb.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed ArraySchema (pooling not supported).");
-        const sb = bb.items;
-        for (let kb = 0; kb < sb.length; kb++) sb[kb]?.[Nb]?.();
-        bb.items.length = 0, bb.tmpItems.length = 0, bb.deletedIndexes.length = 0, cb.recycle(), bb[Ub] = void 0
+        const ab = bb[Rb];
+        ab.forEachChild(((bb, Ub) => {
+          ab.root?.remove(bb)
+        })), ab.discard(), ab.operation(Mb.CLEAR), bb.items.length = 0, bb.tmpItems.length = 0
+      } [Db]() {
+        const bb = this[yb] ?? this,
+          ab = bb[Rb];
+        if (ab.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed ArraySchema (pooling not supported).");
+        const Ub = bb.items;
+        for (let Ab = 0; Ab < Ub.length; Ab++) Ub[Ab]?.[Db]?.();
+        bb.items.length = 0, bb.tmpItems.length = 0, bb.deletedIndexes.length = 0, ab.recycle(), bb[Yb] = void 0
       }
       concat() {
-        return new Wk(...this.items.concat(...arguments))
+        return new UA(...this.items.concat(...arguments))
       }
       join(bb) {
         return this.items.join(bb)
       }
       reverse() {
-        const bb = this[eb],
-          cb = bb[lb];
-        if (cb.has() || bb.deletedIndexes.length > 0) {
-          const cb = bb.items.slice().reverse();
-          return this.clear(), this.push(...cb), this
+        const bb = this[yb],
+          ab = bb[Rb];
+        if (ab.has() || bb.deletedIndexes.length > 0) {
+          const ab = bb.items.slice().reverse();
+          return this.clear(), this.push(...ab), this
         }
-        return cb.operation(Wb.REVERSE), bb.items.reverse(), bb.tmpItems.reverse(), bb.$reindexChildren(0), this
+        return ab.operation(Mb.REVERSE), bb.items.reverse(), bb.tmpItems.reverse(), bb.$reindexChildren(0), this
       }
       shift() {
-        const bb = this[eb],
-          cb = bb.items;
-        if (0 === cb.length) return;
-        const sb = bb[lb],
-          kb = bb.deletedIndexes;
-        let ab = 0;
-        for (; !0 === kb[ab];) ab++;
-        const Tb = bb.$isUnsentAdd(ab);
-        return sb.delete(ab, Wb.DELETE), Tb ? bb.$cancelAdd(ab) : kb[ab] = !0, cb.shift()
+        const bb = this[yb],
+          ab = bb.items;
+        if (0 === ab.length) return;
+        const Ub = bb[Rb],
+          Ab = bb.deletedIndexes;
+        let Tb = 0;
+        for (; !0 === Ab[Tb];) Tb++;
+        const Eb = bb.$isUnsentAdd(Tb);
+        return Ub.delete(Tb, Mb.DELETE), Eb ? bb.$cancelAdd(Tb) : Ab[Tb] = !0, ab.shift()
       }
-      slice(bb, cb) {
-        const sb = new Wk;
-        return sb.push(...this.items.slice(bb, cb)), sb
+      slice(bb, ab) {
+        const Ub = new UA;
+        return Ub.push(...this.items.slice(bb, ab)), Ub
       }
       sort() {
-        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : sk;
-        const cb = this[eb];
-        cb.isMovingItems = !0;
-        const sb = cb[lb];
-        return cb.items.sort(bb).forEach(((bb, cb) => sb.change(cb, Wb.REPLACE))), cb.tmpItems.sort(bb), cb.$reindexChildren(0), cb.isMovingItems = !1, this
+        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : bA;
+        const ab = this[yb];
+        ab.isMovingItems = !0;
+        const Ub = ab[Rb];
+        return ab.items.sort(bb).forEach(((bb, ab) => Ub.change(ab, Mb.REPLACE))), ab.tmpItems.sort(bb), ab.$reindexChildren(0), ab.isMovingItems = !1, this
       }
-      splice(bb, cb) {
-        const sb = this[eb],
-          kb = sb[lb],
-          ab = sb.items,
-          Tb = sb.tmpItems,
-          Ub = sb.deletedIndexes,
-          Ib = ab.length,
-          Hb = Tb.length;
-        for (var fb = arguments.length, Mb = new Array(fb > 2 ? fb - 2 : 0), Xb = 2; Xb < fb; Xb++) Mb[Xb - 2] = arguments[Xb];
-        const nb = Mb.length,
-          mb = [];
-        for (let Wb = 0; Wb < Hb; Wb++) !0 !== Ub[Wb] && mb.push(Wb);
-        let Qb;
-        if (Ib > bb) {
-          void 0 === cb && (cb = Ib - bb);
-          for (let ab = bb; ab < bb + cb; ab++) {
-            const bb = mb[ab],
-              cb = sb.$isUnsentAdd(bb);
-            kb.delete(bb, Wb.DELETE), cb ? (Qb ??= []).push(bb) : Ub[bb] = !0
+      splice(bb, ab) {
+        const Ub = this[yb],
+          Ab = Ub[Rb],
+          Tb = Ub.items,
+          Eb = Ub.tmpItems,
+          Yb = Ub.deletedIndexes,
+          Bb = Tb.length,
+          eb = Eb.length;
+        for (var vb = arguments.length, Lb = new Array(vb > 2 ? vb - 2 : 0), Pb = 2; Pb < vb; Pb++) Lb[Pb - 2] = arguments[Pb];
+        const Xb = Lb.length,
+          jb = [];
+        for (let Mb = 0; Mb < eb; Mb++) !0 !== Yb[Mb] && jb.push(Mb);
+        let kb;
+        if (Bb > bb) {
+          void 0 === ab && (ab = Bb - bb);
+          for (let Tb = bb; Tb < bb + ab; Tb++) {
+            const bb = jb[Tb],
+              ab = Ub.$isUnsentAdd(bb);
+            Ab.delete(bb, Mb.DELETE), ab ? (kb ??= []).push(bb) : Yb[bb] = !0
           }
-        } else cb = 0;
-        if (nb > 0) {
-          const ab = mb[bb] ?? Ib,
-            Hb = Math.min(nb, cb);
-          for (let bb = 0; bb < Hb; bb++) {
-            const cb = ab + bb;
-            let sb;
-            const Ib = void 0 !== Qb ? Qb.indexOf(cb) : -1; - 1 !== Ib ? (Qb.splice(Ib, 1), sb = Wb.ADD) : sb = Ub[cb] ? Wb.DELETE_AND_ADD : Wb.ADD, kb.indexedOperation(cb, sb), Tb[cb] = Mb[bb], Ub[cb] = !1, Mb[bb][lb]?.setParent(this, kb.root, cb)
+        } else ab = 0;
+        if (Xb > 0) {
+          const Tb = jb[bb] ?? Bb,
+            eb = Math.min(Xb, ab);
+          for (let bb = 0; bb < eb; bb++) {
+            const ab = Tb + bb;
+            let Ub;
+            const Bb = void 0 !== kb ? kb.indexOf(ab) : -1; - 1 !== Bb ? (kb.splice(Bb, 1), Ub = Mb.ADD) : Ub = Yb[ab] ? Mb.DELETE_AND_ADD : Mb.ADD, Ab.indexedOperation(ab, Ub), Eb[ab] = Lb[bb], Yb[ab] = !1, Lb[bb][Rb]?.setParent(this, Ab.root, ab)
           }
-          const fb = nb - Hb;
-          if (fb > 0) {
-            const bb = ab + Hb;
-            kb.insertAt(bb, fb);
-            for (let cb = 0; cb < fb; cb++) Mb[Hb + cb][lb]?.setParent(this, kb.root, bb + cb);
-            Ub.length > 0 && Ub.splice(bb, 0, ...new Array(fb).fill(!1)), Tb.splice(bb, 0, ...Mb.slice(Hb)), sb.$reindexChildren(bb + fb)
+          const vb = Xb - eb;
+          if (vb > 0) {
+            const bb = Tb + eb;
+            Ab.insertAt(bb, vb);
+            for (let ab = 0; ab < vb; ab++) Lb[eb + ab][Rb]?.setParent(this, Ab.root, bb + ab);
+            Yb.length > 0 && Yb.splice(bb, 0, ...new Array(vb).fill(!1)), Eb.splice(bb, 0, ...Lb.slice(eb)), Ub.$reindexChildren(bb + vb)
           }
         }
-        if (void 0 !== Qb && Qb.length > 0) {
-          for (let bb = Qb.length - 1; bb >= 0; bb--) sb.$cancelAdd(Qb[bb], !1);
-          sb.$reindexChildren(Qb[0])
+        if (void 0 !== kb && kb.length > 0) {
+          for (let bb = kb.length - 1; bb >= 0; bb--) Ub.$cancelAdd(kb[bb], !1);
+          Ub.$reindexChildren(kb[0])
         }
-        return kb.root?.enqueueChangeTree(kb), ab.splice(bb, cb, ...Mb)
+        return Ab.root?.enqueueChangeTree(Ab), Tb.splice(bb, ab, ...Lb)
       }
       unshift() {
-        const bb = this[eb],
-          cb = bb[lb];
-        cb.unshift(arguments.length);
-        for (let kb = 0; kb < arguments.length; kb++)(kb < 0 || arguments.length <= kb ? void 0 : arguments[kb])?.[lb]?.setParent(this, cb.root, kb);
-        const sb = bb.deletedIndexes;
-        return sb.length > 0 && sb.unshift(...new Array(arguments.length).fill(!1)), bb.tmpItems.unshift(...arguments), bb.$reindexChildren(arguments.length), bb.items.unshift(...arguments)
+        const bb = this[yb],
+          ab = bb[Rb];
+        ab.unshift(arguments.length);
+        for (let Ab = 0; Ab < arguments.length; Ab++)(Ab < 0 || arguments.length <= Ab ? void 0 : arguments[Ab])?.[Rb]?.setParent(this, ab.root, Ab);
+        const Ub = bb.deletedIndexes;
+        return Ub.length > 0 && Ub.unshift(...new Array(arguments.length).fill(!1)), bb.tmpItems.unshift(...arguments), bb.$reindexChildren(arguments.length), bb.items.unshift(...arguments)
       }
-      indexOf(bb, cb) {
-        return this.items.indexOf(bb, cb)
+      indexOf(bb, ab) {
+        return this.items.indexOf(bb, ab)
       }
       lastIndexOf(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length - 1;
-        return this.items.lastIndexOf(bb, cb)
+        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length - 1;
+        return this.items.lastIndexOf(bb, ab)
       }
-      every(bb, cb) {
-        return this.items.every(bb, cb)
+      every(bb, ab) {
+        return this.items.every(bb, ab)
       }
-      some(bb, cb) {
-        return this.items.some(bb, cb)
+      some(bb, ab) {
+        return this.items.some(bb, ab)
       }
-      forEach(bb, cb) {
-        return this.items.forEach(bb, cb)
+      forEach(bb, ab) {
+        return this.items.forEach(bb, ab)
       }
-      map(bb, cb) {
-        return this.items.map(bb, cb)
+      map(bb, ab) {
+        return this.items.map(bb, ab)
       }
-      filter(bb, cb) {
-        return this.items.filter(bb, cb)
+      filter(bb, ab) {
+        return this.items.filter(bb, ab)
       }
-      reduce(bb, cb) {
+      reduce(bb, ab) {
         return this.items.reduce.apply(this.items, arguments)
       }
-      reduceRight(bb, cb) {
+      reduceRight(bb, ab) {
         return this.items.reduceRight.apply(this.items, arguments)
       }
-      find(bb, cb) {
-        return this.items.find(bb, cb)
+      find(bb, ab) {
+        return this.items.find(bb, ab)
       }
-      findIndex(bb, cb) {
-        return this.items.findIndex(bb, cb)
+      findIndex(bb, ab) {
+        return this.items.findIndex(bb, ab)
       }
-      fill(bb, cb, sb) {
+      fill(bb, ab, Ub) {
         throw new Error("ArraySchema#fill() not implemented")
       }
-      copyWithin(bb, cb, sb) {
+      copyWithin(bb, ab, Ub) {
         throw new Error("ArraySchema#copyWithin() not implemented")
       }
       toString() {
@@ -4349,7 +4349,7 @@ export const modules = {
         return this.items[Symbol.iterator]()
       }
       static get[Symbol.species]() {
-        return Wk
+        return UA
       } [Symbol.unscopables];
       entries() {
         return this.items.entries()
@@ -4360,10 +4360,10 @@ export const modules = {
       values() {
         return this.items.values()
       }
-      includes(bb, cb) {
-        return this.items.includes(bb, cb)
+      includes(bb, ab) {
+        return this.items.includes(bb, ab)
       }
-      flatMap(bb, cb) {
+      flatMap(bb, ab) {
         throw new Error("ArraySchema#flatMap() is not supported.")
       }
       flat(bb) {
@@ -4373,12 +4373,12 @@ export const modules = {
         return this.items.findLast.apply(this.items, arguments)
       }
       findLastIndex() {
-        for (var bb = arguments.length, cb = new Array(bb), sb = 0; sb < bb; sb++) cb[sb] = arguments[sb];
+        for (var bb = arguments.length, ab = new Array(bb), Ub = 0; Ub < bb; Ub++) ab[Ub] = arguments[Ub];
         return this.items.findLastIndex.apply(this.items, arguments)
       }
-      with(bb, cb) {
-        const sb = this.items.slice();
-        return bb < 0 && (bb += this.length), sb[bb] = cb, new Wk(...sb)
+      with(bb, ab) {
+        const Ub = this.items.slice();
+        return bb < 0 && (bb += this.length), Ub[bb] = ab, new UA(...Ub)
       }
       toReversed() {
         return this.items.slice().reverse()
@@ -4386,44 +4386,44 @@ export const modules = {
       toSorted(bb) {
         return this.items.slice().sort(bb)
       }
-      toSpliced(bb, cb) {
-        for (var sb = arguments.length, kb = new Array(sb > 2 ? sb - 2 : 0), Wb = 2; Wb < sb; Wb++) kb[Wb - 2] = arguments[Wb];
-        const ab = this.items.slice();
-        return ab.splice.apply(ab, arguments), ab
+      toSpliced(bb, ab) {
+        for (var Ub = arguments.length, Ab = new Array(Ub > 2 ? Ub - 2 : 0), Mb = 2; Mb < Ub; Mb++) Ab[Mb - 2] = arguments[Mb];
+        const Tb = this.items.slice();
+        return Tb.splice.apply(Tb, arguments), Tb
       }
       shuffle() {
         return this.move((bb => {
-          let cb = this.items.length;
-          for (; 0 != cb;) {
-            let bb = Math.floor(Math.random() * cb);
-            cb--, [this[cb], this[bb]] = [this[bb], this[cb]]
+          let ab = this.items.length;
+          for (; 0 != ab;) {
+            let bb = Math.floor(Math.random() * ab);
+            ab--, [this[ab], this[bb]] = [this[bb], this[ab]]
           }
         }))
       }
       move(bb) {
         return this.isMovingItems = !0, bb(this), this.isMovingItems = !1, this
+      } [Pb](bb) {
+        let ab = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const Ub = this[yb] ?? this;
+        return ab || Ub.deletedIndexes[bb] ? Ub.items[bb] : Ub.tmpItems[bb] || Ub.items[bb]
       } [Xb](bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const sb = this[eb] ?? this;
-        return cb || sb.deletedIndexes[bb] ? sb.items[bb] : sb.tmpItems[bb] || sb.items[bb]
-      } [nb](bb) {
-        const cb = this[eb] ?? this;
-        cb.items[bb] = void 0, cb._needsCompaction = !0
-      } [Cb]() {
+        const ab = this[yb] ?? this;
+        ab.items[bb] = void 0, ab._needsCompaction = !0
+      } [Zb]() {
         const bb = this.tmpItems;
         this.tmpItems = this.items.slice(), this.deletedIndexes.length > 0 && (this.$reindexChildren(0, bb), this.deletedIndexes.length = 0)
-      } [Vb]() {
-        const bb = this[eb] ?? this;
+      } [zb]() {
+        const bb = this[yb] ?? this;
         bb._needsCompaction && (bb._needsCompaction = !1, bb.items = bb.items.filter((bb => void 0 !== bb)))
-      } [mb](bb, cb, sb) {
-        const kb = this[eb] ?? this,
-          Wb = kb.items;
-        let ab = !1;
-        for (let Tb = 0; Tb < Wb.length; Tb++) {
-          const Ub = Wb[Tb];
-          bb.has(Tb) ? sb(Ub) : (ab = !0, cb(Ub, Tb), kb[nb](Tb))
+      } [jb](bb, ab, Ub) {
+        const Ab = this[yb] ?? this,
+          Mb = Ab.items;
+        let Tb = !1;
+        for (let Eb = 0; Eb < Mb.length; Eb++) {
+          const Yb = Mb[Eb];
+          bb.has(Eb) ? Ub(Yb) : (Tb = !0, ab(Yb, Eb), Ab[Xb](Eb))
         }
-        ab && kb[Vb]()
+        Tb && Ab[zb]()
       }
       toArray() {
         return this.items.slice(0)
@@ -4432,28 +4432,28 @@ export const modules = {
         return this.toArray().map((bb => "function" === typeof bb.toJSON ? bb.toJSON() : bb))
       }
       clone(bb) {
-        let cb;
-        return bb ? (cb = new Wk, cb.push(...this.items)) : cb = new Wk(...this.map((bb => bb[lb] ? bb.clone() : bb))), cb
+        let ab;
+        return bb ? (ab = new UA, ab.push(...this.items)) : ab = new UA(...this.map((bb => bb[Rb] ? bb.clone() : bb))), ab
       }
     }
-    uc("array", {
-      constructor: Wk
+    ia("array", {
+      constructor: UA
     });
-    class ak {
+    class AA {
       keyByIndex = new Map;
       indexByKey = Object.create(null);
       nextIndex = 0;
       snapshots;
       indexOf(bb) {
-        const cb = this.indexByKey[bb];
-        return void 0 === cb ? void 0 : cb
+        const ab = this.indexByKey[bb];
+        return void 0 === ab ? void 0 : ab
       }
       assign(bb) {
-        const cb = this.nextIndex++;
-        return this.indexByKey[bb] = cb, this.keyByIndex.set(cb, bb), cb
+        const ab = this.nextIndex++;
+        return this.indexByKey[bb] = ab, this.keyByIndex.set(ab, bb), ab
       }
-      snapshot(bb, cb) {
-        (this.snapshots ??= new Map).set(bb, cb)
+      snapshot(bb, ab) {
+        (this.snapshots ??= new Map).set(bb, ab)
       }
       forgetSnapshot(bb) {
         this.snapshots?.delete(bb)
@@ -4461,8 +4461,8 @@ export const modules = {
       snapshotAt(bb) {
         return this.snapshots?.get(bb)
       }
-      setIndex(bb, cb) {
-        this.keyByIndex.set(bb, cb), this.indexByKey[cb] = bb
+      setIndex(bb, ab) {
+        this.keyByIndex.set(bb, ab), this.indexByKey[ab] = bb
       }
       keyOf(bb) {
         return this.keyByIndex.get(bb)
@@ -4470,8 +4470,8 @@ export const modules = {
       cleanupAfterEncode() {
         if (void 0 !== this.snapshots) {
           for (const [bb] of this.snapshots) {
-            const cb = this.keyByIndex.get(bb);
-            void 0 !== cb && (delete this.indexByKey[cb], this.keyByIndex.delete(bb))
+            const ab = this.keyByIndex.get(bb);
+            void 0 !== ab && (delete this.indexByKey[ab], this.keyByIndex.delete(bb))
           }
           this.snapshots.clear()
         }
@@ -4480,25 +4480,25 @@ export const modules = {
         this.indexByKey = Object.create(null), this.keyByIndex.clear(), this.snapshots?.clear(), this.nextIndex = 0
       }
     }
-    class Tk {
-      [lb];
-      [Ub];
+    class MA {
+      [Rb];
+      [Yb];
       childType;
-      [Qb];
+      [kb];
       $items = new Map;
-      journal = new ak;
+      journal = new AA;
       _stream;
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
       set maxPerTick(bb) {
-        (this._stream ??= Jc()).maxPerTick = bb
+        (this._stream ??= pa()).maxPerTick = bb
       }
       get priority() {
         return this._stream?.priority
       }
       set priority(bb) {
-        (this._stream ??= Jc()).priority = bb
+        (this._stream ??= pa()).priority = bb
       }
       get $indexes() {
         return this.journal.keyByIndex
@@ -4506,30 +4506,30 @@ export const modules = {
       get _collectionIndexes() {
         return this.journal.indexByKey
       }
-      static[Hb] = Gs;
-      static[fb] = xs;
-      static COLLECTION_KIND = ws;
-      static[Mb](bb, cb, sb) {
-        if (!sb || "string" === typeof bb[Qb]) return !0;
-        const kb = bb[Xb](cb) ?? bb.journal.snapshotAt(cb);
-        return sb.isChangeTreeVisible(kb[lb])
+      static[eb] = QU;
+      static[vb] = cU;
+      static COLLECTION_KIND = tU;
+      static[Lb](bb, ab, Ub) {
+        if (!Ub || "string" === typeof bb[kb]) return !0;
+        const Ab = bb[Pb](ab) ?? bb.journal.snapshotAt(ab);
+        return Ub.isChangeTreeVisible(Ab[Rb])
       }
       static is(bb) {
         return void 0 !== bb.map
       }
       constructor(bb) {
-        if (Object.defineProperty(this, lb, {
-            value: new Ps(this),
+        if (Object.defineProperty(this, Rb, {
+            value: new IU(this),
             enumerable: !1,
             writable: !0
-          }), this[Qb] = void 0, bb)
-          if (bb instanceof Map || bb instanceof Tk) bb.forEach(((bb, cb) => this.set(cb, bb)));
+          }), this[kb] = void 0, bb)
+          if (bb instanceof Map || bb instanceof MA) bb.forEach(((bb, ab) => this.set(ab, bb)));
           else
-            for (const cb in bb) this.set(cb, bb[cb])
+            for (const ab in bb) this.set(ab, bb[ab])
       }
       static initializeForDecoder() {
-        const bb = Object.create(Tk.prototype);
-        return bb.$items = new Map, bb.journal = new ak, bb[Qb] = void 0, Es(bb), bb
+        const bb = Object.create(MA.prototype);
+        return bb.$items = new Map, bb.journal = new AA, bb[kb] = void 0, FU(bb), bb
       } [Symbol.iterator]() {
         return this.$items[Symbol.iterator]()
       }
@@ -4537,55 +4537,55 @@ export const modules = {
         return this.$items[Symbol.toStringTag]
       }
       static get[Symbol.species]() {
-        return Tk
+        return MA
       }
-      set(bb, cb) {
-        if (void 0 === cb || null === cb) throw new Error(`MapSchema#set('${bb}', ${cb}): trying to set ${cb} value on '${bb}'.`);
-        "object" === typeof cb && this[Qb] && ck(cb, this[Qb], this, bb), bb = bb.toString();
-        const sb = this[lb],
-          kb = void 0 !== cb[lb],
-          ab = this.journal;
-        let Tb, Ub = ab.indexOf(bb);
-        if (void 0 !== Ub) {
-          Tb = Wb.REPLACE;
-          const sb = this.$items.get(bb);
-          if (sb === cb) return;
-          kb && (Tb = Wb.DELETE_AND_ADD, void 0 !== sb && sb[lb].root?.remove(sb[lb])), void 0 !== ab.snapshotAt(Ub) && ab.forgetSnapshot(Ub)
-        } else Ub = ab.assign(bb), Tb = Wb.ADD;
-        return this.$items.set(bb, cb), Tb === Wb.ADD && sb.isStreamCollection ? void 0 !== sb.root && Bc(this, sb.root, Ub) : sb.change(Ub, Tb), kb && cb[lb].setParent(this, sb.root, Ub), this
+      set(bb, ab) {
+        if (void 0 === ab || null === ab) throw new Error(`MapSchema#set('${bb}', ${ab}): trying to set ${ab} value on '${bb}'.`);
+        "object" === typeof ab && this[kb] && SU(ab, this[kb], this, bb), bb = bb.toString();
+        const Ub = this[Rb],
+          Ab = void 0 !== ab[Rb],
+          Tb = this.journal;
+        let Eb, Yb = Tb.indexOf(bb);
+        if (void 0 !== Yb) {
+          Eb = Mb.REPLACE;
+          const Ub = this.$items.get(bb);
+          if (Ub === ab) return;
+          Ab && (Eb = Mb.DELETE_AND_ADD, void 0 !== Ub && Ub[Rb].root?.remove(Ub[Rb])), void 0 !== Tb.snapshotAt(Yb) && Tb.forgetSnapshot(Yb)
+        } else Yb = Tb.assign(bb), Eb = Mb.ADD;
+        return this.$items.set(bb, ab), Eb === Mb.ADD && Ub.isStreamCollection ? void 0 !== Ub.root && Wa(this, Ub.root, Yb) : Ub.change(Yb, Eb), Ab && ab[Rb].setParent(this, Ub.root, Yb), this
       }
       get(bb) {
         return this.$items.get(bb)
       }
-      getOrInsert(bb, cb) {
-        return this.$items.has(bb) ? this.$items.get(bb) : (this.set(bb, cb), cb)
+      getOrInsert(bb, ab) {
+        return this.$items.has(bb) ? this.$items.get(bb) : (this.set(bb, ab), ab)
       }
-      getOrInsertComputed(bb, cb) {
+      getOrInsertComputed(bb, ab) {
         if (this.$items.has(bb)) return this.$items.get(bb);
-        const sb = cb(bb);
-        return this.set(bb, sb), sb
+        const Ub = ab(bb);
+        return this.set(bb, Ub), Ub
       }
       delete(bb) {
         if (!this.$items.has(bb)) return !1;
-        const cb = this.journal.indexOf(bb),
-          sb = this.$items.get(bb),
-          kb = this[lb];
-        if (kb.isStreamCollection) {
-          const Wb = kb.root;
-          let ab = !1;
-          return void 0 !== Wb && (ab = tc(this, Wb, this[Ub], cb)), void 0 !== sb?.[lb] && Wb?.remove(sb[lb]), this.$items.delete(bb), ab || this.journal.snapshot(cb, sb), !0
+        const ab = this.journal.indexOf(bb),
+          Ub = this.$items.get(bb),
+          Ab = this[Rb];
+        if (Ab.isStreamCollection) {
+          const Mb = Ab.root;
+          let Tb = !1;
+          return void 0 !== Mb && (Tb = Ha(this, Mb, this[Yb], ab)), void 0 !== Ub?.[Rb] && Mb?.remove(Ub[Rb]), this.$items.delete(bb), Tb || this.journal.snapshot(ab, Ub), !0
         }
-        return this.journal.snapshot(cb, sb), kb.delete(cb), this.$items.delete(bb)
+        return this.journal.snapshot(ab, Ub), Ab.delete(ab), this.$items.delete(bb)
       }
       clear() {
-        const bb = this[lb];
-        bb.discard(), bb.forEachChild(((cb, sb) => {
-          bb.root?.remove(cb)
-        })), this.journal.reset(), this.$items.clear(), bb.operation(Wb.CLEAR)
-      } [Nb]() {
-        const bb = this[lb];
+        const bb = this[Rb];
+        bb.discard(), bb.forEachChild(((ab, Ub) => {
+          bb.root?.remove(ab)
+        })), this.journal.reset(), this.$items.clear(), bb.operation(Mb.CLEAR)
+      } [Db]() {
+        const bb = this[Rb];
         if (bb.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed MapSchema (pooling not supported).");
-        this.$items.forEach((bb => bb?.[Nb]?.())), this.$items.clear(), this.journal.reset(), bb.recycle(), this[Ub] = void 0
+        this.$items.forEach((bb => bb?.[Db]?.())), this.$items.clear(), this.journal.reset(), bb.recycle(), this[Yb] = void 0
       }
       has(bb) {
         return this.$items.has(bb)
@@ -4606,69 +4606,69 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[lb].pause()
+        this[Rb].pause()
       }
       resumeTracking() {
-        this[lb].resume()
+        this[Rb].resume()
       }
       untracked(bb) {
-        return this[lb].untracked(bb)
+        return this[Rb].untracked(bb)
       }
       get isTrackingPaused() {
-        return this[lb].paused
+        return this[Rb].paused
       }
-      setIndex(bb, cb) {
-        this.journal.setIndex(bb, cb)
+      setIndex(bb, ab) {
+        this.journal.setIndex(bb, ab)
       }
       getIndex(bb) {
         return this.journal.keyOf(bb)
+      } [Pb](bb) {
+        const ab = this.journal.keyOf(bb);
+        return void 0 !== ab ? this.$items.get(ab) : void 0
       } [Xb](bb) {
-        const cb = this.journal.keyOf(bb);
-        return void 0 !== cb ? this.$items.get(cb) : void 0
-      } [nb](bb) {
-        const cb = this.journal.keyOf(bb);
-        void 0 !== cb && (this.$items.delete(cb), this.journal.keyByIndex.delete(bb))
-      } [mb](bb, cb, sb) {
-        let kb = null;
-        if (this.$items.forEach(((Wb, ab) => {
-            bb.has(ab) ? sb(Wb) : ((kb ??= new Set).add(ab), cb(Wb, ab))
-          })), null !== kb) {
-          kb.forEach((bb => {
+        const ab = this.journal.keyOf(bb);
+        void 0 !== ab && (this.$items.delete(ab), this.journal.keyByIndex.delete(bb))
+      } [jb](bb, ab, Ub) {
+        let Ab = null;
+        if (this.$items.forEach(((Mb, Tb) => {
+            bb.has(Tb) ? Ub(Mb) : ((Ab ??= new Set).add(Tb), ab(Mb, Tb))
+          })), null !== Ab) {
+          Ab.forEach((bb => {
             this.$items.delete(bb), delete this.journal.indexByKey[bb]
           }));
           const bb = [];
-          this.journal.keyByIndex.forEach(((cb, sb) => {
-            kb.has(cb) && bb.push(sb)
+          this.journal.keyByIndex.forEach(((ab, Ub) => {
+            Ab.has(ab) && bb.push(Ub)
           }));
-          for (let cb = 0; cb < bb.length; cb++) this.journal.keyByIndex.delete(bb[cb])
+          for (let ab = 0; ab < bb.length; ab++) this.journal.keyByIndex.delete(bb[ab])
         }
-      } [Cb]() {
+      } [Zb]() {
         this.journal.cleanupAfterEncode()
       }
       _dropView(bb) {
-        Ec(this, bb)
+        ha(this, bb)
       }
       _unregister() {}
       toJSON() {
         return Object.fromEntries(Array.from(this, (bb => {
-          let [cb, sb] = bb;
-          return [cb, "function" === typeof sb.toJSON ? sb.toJSON() : sb]
+          let [ab, Ub] = bb;
+          return [ab, "function" === typeof Ub.toJSON ? Ub.toJSON() : Ub]
         })))
       }
       clone(bb) {
-        let cb;
-        return bb ? cb = Object.assign(new Tk, this) : (cb = new Tk, this.forEach(((bb, sb) => {
-          bb[lb] ? cb.set(sb, bb.clone()) : cb.set(sb, bb)
-        }))), cb
+        let ab;
+        return bb ? ab = Object.assign(new MA, this) : (ab = new MA, this.forEach(((bb, Ub) => {
+          bb[Rb] ? ab.set(Ub, bb.clone()) : ab.set(Ub, bb)
+        }))), ab
       }
     }
-    uc("map", {
-      constructor: Tk
+    ia("map", {
+      constructor: MA
     });
-    class Uk {
-      [lb];
-      [Ub];
-      [Qb];
+    class TA {
+      [Rb];
+      [Yb];
+      [kb];
       $items = new Map;
       deletedItems = {};
       $refId = 0;
@@ -4677,78 +4677,78 @@ export const modules = {
         return this._stream?.maxPerTick ?? 32
       }
       set maxPerTick(bb) {
-        (this._stream ??= Jc()).maxPerTick = bb
+        (this._stream ??= pa()).maxPerTick = bb
       }
       get priority() {
         return this._stream?.priority
       }
       set priority(bb) {
-        (this._stream ??= Jc()).priority = bb
+        (this._stream ??= pa()).priority = bb
       }
-      static[Hb] = Ks;
-      static[fb] = xs;
-      static COLLECTION_KIND = Ss;
-      static[Mb](bb, cb, sb) {
-        return !sb || "string" === typeof bb[Qb] || sb.isChangeTreeVisible((bb[Xb](cb) ?? bb.deletedItems[cb])[lb])
+      static[eb] = qU;
+      static[vb] = cU;
+      static COLLECTION_KIND = gU;
+      static[Lb](bb, ab, Ub) {
+        return !Ub || "string" === typeof bb[kb] || Ub.isChangeTreeVisible((bb[Pb](ab) ?? bb.deletedItems[ab])[Rb])
       }
       static is(bb) {
         return void 0 !== bb.collection
       }
       constructor(bb) {
-        Object.defineProperty(this, lb, {
-          value: new Ps(this),
+        Object.defineProperty(this, Rb, {
+          value: new IU(this),
           enumerable: !1,
           writable: !0
-        }), this[Qb] = void 0, bb && bb.forEach((bb => this.add(bb)))
+        }), this[kb] = void 0, bb && bb.forEach((bb => this.add(bb)))
       }
       static initializeForDecoder() {
-        const bb = Object.create(Uk.prototype);
-        return bb.$items = new Map, bb.deletedItems = {}, bb.$refId = 0, bb[Qb] = void 0, Es(bb), bb
+        const bb = Object.create(TA.prototype);
+        return bb.$items = new Map, bb.deletedItems = {}, bb.$refId = 0, bb[kb] = void 0, FU(bb), bb
       }
       add(bb) {
-        const cb = this.$refId++,
-          sb = this[lb];
-        return this.$items.set(cb, bb), sb.isStreamCollection ? void 0 !== sb.root && Bc(this, sb.root, cb) : sb.change(cb), void 0 !== bb[lb] && bb[lb].setParent(this, sb.root, cb), cb
+        const ab = this.$refId++,
+          Ub = this[Rb];
+        return this.$items.set(ab, bb), Ub.isStreamCollection ? void 0 !== Ub.root && Wa(this, Ub.root, ab) : Ub.change(ab), void 0 !== bb[Rb] && bb[Rb].setParent(this, Ub.root, ab), ab
       }
       at(bb) {
-        const cb = Array.from(this.$items.keys())[bb];
-        return this.$items.get(cb)
+        const ab = Array.from(this.$items.keys())[bb];
+        return this.$items.get(ab)
       }
       entries() {
         return this.$items.entries()
       }
       delete(bb) {
-        const cb = this.$items.entries();
-        let sb, kb;
+        const ab = this.$items.entries();
+        let Ub, Ab;
         for (;
-          (kb = cb.next()) && !kb.done;)
-          if (bb === kb.value[1]) {
-            sb = kb.value[0];
+          (Ab = ab.next()) && !Ab.done;)
+          if (bb === Ab.value[1]) {
+            Ub = Ab.value[0];
             break
-          } if (void 0 === sb) return !1;
-        const Wb = this[lb];
-        if (Wb.isStreamCollection) {
-          const bb = Wb.root,
-            cb = this.$items.get(sb);
-          return void 0 !== bb && tc(this, bb, this[Ub], sb), void 0 !== cb?.[lb] && bb?.remove(cb[lb]), this.deletedItems[sb] = cb, this.$items.delete(sb)
+          } if (void 0 === Ub) return !1;
+        const Mb = this[Rb];
+        if (Mb.isStreamCollection) {
+          const bb = Mb.root,
+            ab = this.$items.get(Ub);
+          return void 0 !== bb && Ha(this, bb, this[Yb], Ub), void 0 !== ab?.[Rb] && bb?.remove(ab[Rb]), this.deletedItems[Ub] = ab, this.$items.delete(Ub)
         }
-        return this.deletedItems[sb] = Wb.delete(sb), this.$items.delete(sb)
+        return this.deletedItems[Ub] = Mb.delete(Ub), this.$items.delete(Ub)
       }
       clear() {
-        const bb = this[lb];
-        bb.discard(), bb.forEachChild(((cb, sb) => {
-          bb.root?.remove(cb)
-        })), this.$items.clear(), bb.operation(Wb.CLEAR)
-      } [Nb]() {
-        const bb = this[lb];
+        const bb = this[Rb];
+        bb.discard(), bb.forEachChild(((ab, Ub) => {
+          bb.root?.remove(ab)
+        })), this.$items.clear(), bb.operation(Mb.CLEAR)
+      } [Db]() {
+        const bb = this[Rb];
         if (bb.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed CollectionSchema (pooling not supported).");
-        this.$items.forEach((bb => bb?.[Nb]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, bb.recycle(), this[Ub] = void 0
+        this.$items.forEach((bb => bb?.[Db]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, bb.recycle(), this[Yb] = void 0
       }
       has(bb) {
-        return Array.from(this.$items.values()).some((cb => cb === bb))
+        return Array.from(this.$items.values()).some((ab => ab === bb))
       }
       forEach(bb) {
-        this.$items.forEach(((cb, sb, kb) => bb(cb, sb, this)))
+        this.$items.forEach(((ab, Ub, Ab) => bb(ab, Ub, this)))
       }
       values() {
         return this.$items.values()
@@ -4757,37 +4757,37 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[lb].pause()
+        this[Rb].pause()
       }
       resumeTracking() {
-        this[lb].resume()
+        this[Rb].resume()
       }
       untracked(bb) {
-        return this[lb].untracked(bb)
+        return this[Rb].untracked(bb)
       }
       get isTrackingPaused() {
-        return this[lb].paused
+        return this[Rb].paused
       } [Symbol.iterator]() {
         return this.$items.values()
       }
-      setIndex(bb, cb) {}
+      setIndex(bb, ab) {}
       getIndex(bb) {
         return bb
-      } [Xb](bb) {
+      } [Pb](bb) {
         return this.$items.get(bb)
-      } [nb](bb) {
+      } [Xb](bb) {
         this.$items.delete(bb)
-      } [mb](bb, cb, sb) {
-        let kb = null;
-        if (this.$items.forEach(((Wb, ab) => {
-            bb.has(ab) ? sb(Wb) : ((kb ??= []).push(ab), cb(Wb, ab))
-          })), null !== kb)
-          for (let Wb = 0; Wb < kb.length; Wb++) this[nb](kb[Wb])
-      } [Cb]() {
+      } [jb](bb, ab, Ub) {
+        let Ab = null;
+        if (this.$items.forEach(((Mb, Tb) => {
+            bb.has(Tb) ? Ub(Mb) : ((Ab ??= []).push(Tb), ab(Mb, Tb))
+          })), null !== Ab)
+          for (let Mb = 0; Mb < Ab.length; Mb++) this[Xb](Ab[Mb])
+      } [Zb]() {
         for (const bb in this.deletedItems) delete this.deletedItems[bb]
       }
       _dropView(bb) {
-        Ec(this, bb)
+        ha(this, bb)
       }
       _unregister() {}
       toArray() {
@@ -4795,24 +4795,24 @@ export const modules = {
       }
       toJSON() {
         const bb = [];
-        return this.forEach(((cb, sb) => {
-          bb.push("function" === typeof cb.toJSON ? cb.toJSON() : cb)
+        return this.forEach(((ab, Ub) => {
+          bb.push("function" === typeof ab.toJSON ? ab.toJSON() : ab)
         })), bb
       }
       clone(bb) {
-        let cb;
-        return bb ? cb = Object.assign(new Uk, this) : (cb = new Uk, this.forEach((bb => {
-          bb[lb] ? cb.add(bb.clone()) : cb.add(bb)
-        }))), cb
+        let ab;
+        return bb ? ab = Object.assign(new TA, this) : (ab = new TA, this.forEach((bb => {
+          bb[Rb] ? ab.add(bb.clone()) : ab.add(bb)
+        }))), ab
       }
     }
-    uc("collection", {
-      constructor: Uk
+    ia("collection", {
+      constructor: TA
     });
-    class Ik {
-      [lb];
-      [Ub];
-      [Qb];
+    class EA {
+      [Rb];
+      [Yb];
+      [kb];
       $items = new Map;
       deletedItems = {};
       $refId = 0;
@@ -4821,80 +4821,80 @@ export const modules = {
         return this._stream?.maxPerTick ?? 32
       }
       set maxPerTick(bb) {
-        (this._stream ??= Jc()).maxPerTick = bb
+        (this._stream ??= pa()).maxPerTick = bb
       }
       get priority() {
         return this._stream?.priority
       }
       set priority(bb) {
-        (this._stream ??= Jc()).priority = bb
+        (this._stream ??= pa()).priority = bb
       }
-      static[Hb] = Ks;
-      static[fb] = xs;
-      static COLLECTION_KIND = os;
-      static[Mb](bb, cb, sb) {
-        return !sb || "string" === typeof bb[Qb] || sb.isVisible((bb[Xb](cb) ?? bb.deletedItems[cb])[lb])
+      static[eb] = qU;
+      static[vb] = cU;
+      static COLLECTION_KIND = sU;
+      static[Lb](bb, ab, Ub) {
+        return !Ub || "string" === typeof bb[kb] || Ub.isVisible((bb[Pb](ab) ?? bb.deletedItems[ab])[Rb])
       }
       static is(bb) {
         return void 0 !== bb.set
       }
       constructor(bb) {
-        Object.defineProperty(this, lb, {
-          value: new Ps(this),
+        Object.defineProperty(this, Rb, {
+          value: new IU(this),
           enumerable: !1,
           writable: !0
-        }), this[Qb] = void 0, bb && bb.forEach((bb => this.add(bb)))
+        }), this[kb] = void 0, bb && bb.forEach((bb => this.add(bb)))
       }
       static initializeForDecoder() {
-        const bb = Object.create(Ik.prototype);
-        return bb.$items = new Map, bb.deletedItems = {}, bb.$refId = 0, bb[Qb] = void 0, Es(bb), bb
+        const bb = Object.create(EA.prototype);
+        return bb.$items = new Map, bb.deletedItems = {}, bb.$refId = 0, bb[kb] = void 0, FU(bb), bb
       }
       add(bb) {
         if (this.has(bb)) return !1;
-        const cb = this.$refId++,
-          sb = this[lb];
-        return this.$items.set(cb, bb), sb.isStreamCollection ? void 0 !== sb.root && Bc(this, sb.root, cb) : sb.change(cb, Wb.ADD), void 0 !== bb[lb] && bb[lb].setParent(this, sb.root, cb), cb
+        const ab = this.$refId++,
+          Ub = this[Rb];
+        return this.$items.set(ab, bb), Ub.isStreamCollection ? void 0 !== Ub.root && Wa(this, Ub.root, ab) : Ub.change(ab, Mb.ADD), void 0 !== bb[Rb] && bb[Rb].setParent(this, Ub.root, ab), ab
       }
       entries() {
         return this.$items.entries()
       }
       delete(bb) {
-        const cb = this.$items.entries();
-        let sb, kb;
+        const ab = this.$items.entries();
+        let Ub, Ab;
         for (;
-          (kb = cb.next()) && !kb.done;)
-          if (bb === kb.value[1]) {
-            sb = kb.value[0];
+          (Ab = ab.next()) && !Ab.done;)
+          if (bb === Ab.value[1]) {
+            Ub = Ab.value[0];
             break
-          } if (void 0 === sb) return !1;
-        const Wb = this[lb];
-        if (Wb.isStreamCollection) {
-          const bb = Wb.root,
-            cb = this.$items.get(sb);
-          return void 0 !== bb && tc(this, bb, this[Ub], sb), void 0 !== cb?.[lb] && bb?.remove(cb[lb]), this.deletedItems[sb] = cb, this.$items.delete(sb)
+          } if (void 0 === Ub) return !1;
+        const Mb = this[Rb];
+        if (Mb.isStreamCollection) {
+          const bb = Mb.root,
+            ab = this.$items.get(Ub);
+          return void 0 !== bb && Ha(this, bb, this[Yb], Ub), void 0 !== ab?.[Rb] && bb?.remove(ab[Rb]), this.deletedItems[Ub] = ab, this.$items.delete(Ub)
         }
-        return this.deletedItems[sb] = Wb.delete(sb), this.$items.delete(sb)
+        return this.deletedItems[Ub] = Mb.delete(Ub), this.$items.delete(Ub)
       }
       clear() {
-        const bb = this[lb];
-        bb.discard(), this.$items.clear(), bb.operation(Wb.CLEAR)
-      } [Nb]() {
-        const bb = this[lb];
+        const bb = this[Rb];
+        bb.discard(), this.$items.clear(), bb.operation(Mb.CLEAR)
+      } [Db]() {
+        const bb = this[Rb];
         if (bb.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed SetSchema (pooling not supported).");
-        this.$items.forEach((bb => bb?.[Nb]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, bb.recycle(), this[Ub] = void 0
+        this.$items.forEach((bb => bb?.[Db]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, bb.recycle(), this[Yb] = void 0
       }
       has(bb) {
-        const cb = this.$items.values();
-        let sb, kb = !1;
+        const ab = this.$items.values();
+        let Ub, Ab = !1;
         for (;
-          (sb = cb.next()) && !sb.done;)
-          if (bb === sb.value) {
-            kb = !0;
+          (Ub = ab.next()) && !Ub.done;)
+          if (bb === Ub.value) {
+            Ab = !0;
             break
-          } return kb
+          } return Ab
       }
       forEach(bb) {
-        this.$items.forEach(((cb, sb, kb) => bb(cb, sb, this)))
+        this.$items.forEach(((ab, Ub, Ab) => bb(ab, Ub, this)))
       }
       values() {
         return this.$items.values()
@@ -4903,37 +4903,37 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[lb].pause()
+        this[Rb].pause()
       }
       resumeTracking() {
-        this[lb].resume()
+        this[Rb].resume()
       }
       untracked(bb) {
-        return this[lb].untracked(bb)
+        return this[Rb].untracked(bb)
       }
       get isTrackingPaused() {
-        return this[lb].paused
+        return this[Rb].paused
       } [Symbol.iterator]() {
         return this.$items.values()
       }
-      setIndex(bb, cb) {}
+      setIndex(bb, ab) {}
       getIndex(bb) {
         return bb
-      } [Xb](bb) {
+      } [Pb](bb) {
         return this.$items.get(bb)
-      } [nb](bb) {
+      } [Xb](bb) {
         this.$items.delete(bb)
-      } [mb](bb, cb, sb) {
-        let kb = null;
-        if (this.$items.forEach(((Wb, ab) => {
-            bb.has(ab) ? sb(Wb) : ((kb ??= []).push(ab), cb(Wb, ab))
-          })), null !== kb)
-          for (let Wb = 0; Wb < kb.length; Wb++) this[nb](kb[Wb])
-      } [Cb]() {
+      } [jb](bb, ab, Ub) {
+        let Ab = null;
+        if (this.$items.forEach(((Mb, Tb) => {
+            bb.has(Tb) ? Ub(Mb) : ((Ab ??= []).push(Tb), ab(Mb, Tb))
+          })), null !== Ab)
+          for (let Mb = 0; Mb < Ab.length; Mb++) this[Xb](Ab[Mb])
+      } [Zb]() {
         for (const bb in this.deletedItems) delete this.deletedItems[bb]
       }
       _dropView(bb) {
-        Ec(this, bb)
+        ha(this, bb)
       }
       _unregister() {}
       toArray() {
@@ -4941,24 +4941,24 @@ export const modules = {
       }
       toJSON() {
         const bb = [];
-        return this.forEach(((cb, sb) => {
-          bb.push("function" === typeof cb.toJSON ? cb.toJSON() : cb)
+        return this.forEach(((ab, Ub) => {
+          bb.push("function" === typeof ab.toJSON ? ab.toJSON() : ab)
         })), bb
       }
       clone(bb) {
-        let cb;
-        return bb ? cb = Object.assign(new Ik, this) : (cb = new Ik, this.forEach((bb => {
-          bb[lb] ? cb.add(bb.clone()) : cb.add(bb)
-        }))), cb
+        let ab;
+        return bb ? ab = Object.assign(new EA, this) : (ab = new EA, this.forEach((bb => {
+          bb[Rb] ? ab.add(bb.clone()) : ab.add(bb)
+        }))), ab
       }
     }
-    uc("set", {
-      constructor: Ik
+    ia("set", {
+      constructor: EA
     });
-    class Hk {
-      [lb];
-      [Ub];
-      [Qb];
+    class YA {
+      [Rb];
+      [Yb];
+      [kb];
       $items = new Map;
       $nextPosition = 0;
       _itemIndex = new Map;
@@ -4967,80 +4967,80 @@ export const modules = {
         return this._stream?.maxPerTick ?? 32
       }
       set maxPerTick(bb) {
-        (this._stream ??= Jc()).maxPerTick = bb
+        (this._stream ??= pa()).maxPerTick = bb
       }
       get priority() {
         return this._stream?.priority
       }
       set priority(bb) {
-        (this._stream ??= Jc()).priority = bb
+        (this._stream ??= pa()).priority = bb
       }
       static $isStream = !0;
-      static[Hb] = Ks;
-      static[fb] = xs;
-      static COLLECTION_KIND = Rs;
-      static[Mb](bb, cb, sb) {
-        if (!sb) return !0;
-        const kb = bb[Xb](cb);
-        return void 0 !== kb && sb.isVisible(kb[lb])
+      static[eb] = qU;
+      static[vb] = cU;
+      static COLLECTION_KIND = CU;
+      static[Lb](bb, ab, Ub) {
+        if (!Ub) return !0;
+        const Ab = bb[Pb](ab);
+        return void 0 !== Ab && Ub.isVisible(Ab[Rb])
       }
       static is(bb) {
         return bb && void 0 !== bb.stream
       }
       constructor() {
-        Object.defineProperty(this, lb, {
-          value: new Ps(this),
+        Object.defineProperty(this, Rb, {
+          value: new IU(this),
           enumerable: !1,
           writable: !0
-        }), this[Qb] = void 0
+        }), this[kb] = void 0
       }
       static initializeForDecoder() {
-        const bb = Object.create(Hk.prototype);
-        return bb.$items = new Map, bb.$nextPosition = 0, bb._itemIndex = new Map, bb[Qb] = void 0, Es(bb), bb
+        const bb = Object.create(YA.prototype);
+        return bb.$items = new Map, bb.$nextPosition = 0, bb._itemIndex = new Map, bb[kb] = void 0, FU(bb), bb
       }
       add(bb) {
         if (this._itemIndex.has(bb)) return -1;
-        const cb = this.$nextPosition++;
-        this.$items.set(cb, bb), this._itemIndex.set(bb, cb);
-        const sb = this[lb].root;
-        return void 0 !== bb[lb] && bb[lb].setParent(this, sb, cb), void 0 !== sb && Bc(this, sb, cb), cb
+        const ab = this.$nextPosition++;
+        this.$items.set(ab, bb), this._itemIndex.set(bb, ab);
+        const Ub = this[Rb].root;
+        return void 0 !== bb[Rb] && bb[Rb].setParent(this, Ub, ab), void 0 !== Ub && Wa(this, Ub, ab), ab
       }
       remove(bb) {
-        const cb = this._itemIndex.get(bb);
-        if (void 0 === cb) return !1;
-        this._itemIndex.delete(bb), this.$items.delete(cb);
-        const sb = this[lb].root;
-        return void 0 !== sb && (tc(this, sb, this[Ub], cb), void 0 !== bb[lb] && sb.remove(bb[lb])), !0
+        const ab = this._itemIndex.get(bb);
+        if (void 0 === ab) return !1;
+        this._itemIndex.delete(bb), this.$items.delete(ab);
+        const Ub = this[Rb].root;
+        return void 0 !== Ub && (Ha(this, Ub, this[Yb], ab), void 0 !== bb[Rb] && Ub.remove(bb[Rb])), !0
       }
       has(bb) {
         return this._itemIndex.has(bb)
       }
       clear() {
-        const bb = this[lb].root;
+        const bb = this[Rb].root;
         if (void 0 !== bb) {
-          ! function(bb, cb, sb) {
-            const kb = bb._stream;
-            if (void 0 !== kb) {
-              kb.broadcastPending.clear();
-              for (const bb of kb.sentBroadcast) kb.broadcastDeletes.add(bb);
-              kb.sentBroadcast.clear(), cb.forEachActiveView((bb => {
-                kb.pendingByView.get(bb.id)?.clear();
-                const cb = kb.sentByView.get(bb.id);
-                if (void 0 !== cb && cb.size > 0) {
-                  let kb = bb.changes.get(sb);
-                  void 0 === kb && (kb = new Map, bb.changes.set(sb, kb));
-                  for (const bb of cb) kb.set(bb, Wb.DELETE);
-                  cb.clear()
+          ! function(bb, ab, Ub) {
+            const Ab = bb._stream;
+            if (void 0 !== Ab) {
+              Ab.broadcastPending.clear();
+              for (const bb of Ab.sentBroadcast) Ab.broadcastDeletes.add(bb);
+              Ab.sentBroadcast.clear(), ab.forEachActiveView((bb => {
+                Ab.pendingByView.get(bb.id)?.clear();
+                const ab = Ab.sentByView.get(bb.id);
+                if (void 0 !== ab && ab.size > 0) {
+                  let Ab = bb.changes.get(Ub);
+                  void 0 === Ab && (Ab = new Map, bb.changes.set(Ub, Ab));
+                  for (const bb of ab) Ab.set(bb, Mb.DELETE);
+                  ab.clear()
                 }
               }))
             }
-          }(this, bb, this[Ub]);
-          for (const cb of this.$items.values()) void 0 !== cb[lb] && bb.remove(cb[lb])
+          }(this, bb, this[Yb]);
+          for (const ab of this.$items.values()) void 0 !== ab[Rb] && bb.remove(ab[Rb])
         }
         this.$items.clear(), this._itemIndex.clear()
       }
       forEach(bb) {
-        for (const [cb, sb] of this.$items) bb(sb, cb, this)
+        for (const [ab, Ub] of this.$items) bb(Ub, ab, this)
       }
       values() {
         return this.$items.values()
@@ -5056,43 +5056,43 @@ export const modules = {
       get length() {
         return this.$items.size
       }
-      setIndex(bb, cb) {}
+      setIndex(bb, ab) {}
       getIndex(bb) {
         return bb
-      } [Xb](bb) {
+      } [Pb](bb) {
         return this.$items.get(bb)
-      } [nb](bb) {
-        const cb = this.$items.get(bb);
-        void 0 !== cb && (this._itemIndex.delete(cb), this.$items.delete(bb))
-      } [mb]() {} [Cb]() {}
+      } [Xb](bb) {
+        const ab = this.$items.get(bb);
+        void 0 !== ab && (this._itemIndex.delete(ab), this.$items.delete(bb))
+      } [jb]() {} [Zb]() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
         const bb = [];
-        return this.forEach((cb => {
-          bb.push("function" === typeof cb?.toJSON ? cb.toJSON() : cb)
+        return this.forEach((ab => {
+          bb.push("function" === typeof ab?.toJSON ? ab.toJSON() : ab)
         })), bb
       }
       clone(bb) {
         if (bb) {
-          return Object.assign(new Hk, this)
+          return Object.assign(new YA, this)
         }
-        const cb = new Hk;
-        return cb.maxPerTick = this.maxPerTick, this.forEach((bb => {
-          cb.add("function" === typeof bb?.clone ? bb.clone() : bb)
-        })), cb
+        const ab = new YA;
+        return ab.maxPerTick = this.maxPerTick, this.forEach((bb => {
+          ab.add("function" === typeof bb?.clone ? bb.clone() : bb)
+        })), ab
       }
       _dropView(bb) {
-        Ec(this, bb)
+        ha(this, bb)
       }
       _unregister() {}
     }
-    uc("stream", {
-      constructor: Hk
+    ia("stream", {
+      constructor: YA
     });
-    class fk {
-      [ub] = !0;
+    class BA {
+      [ib] = !0;
       _type;
       _default = void 0;
       _hasDefault = !1;
@@ -5129,7 +5129,7 @@ export const modules = {
       }
       stream() {
         const bb = this._type;
-        if (bb && "object" === typeof bb && void 0 !== bb.array) throw new Error(hc);
+        if (bb && "object" === typeof bb && void 0 !== bb.array) throw new Error(ma);
         return this._stream = !0, this
       }
       priority(bb) {
@@ -5161,135 +5161,135 @@ export const modules = {
       }
     }
 
-    function Mk(bb) {
-      return null != bb && !0 === bb[ub]
+    function eA(bb) {
+      return null != bb && !0 === bb[ib]
     }
 
-    function Xk(bb) {
-      return () => new fk(bb)
+    function vA(bb) {
+      return () => new BA(bb)
     }
 
-    function nk(bb) {
-      if (Mk(bb)) {
-        const cb = bb._type;
-        throw new Error(`t.array/map/set/collection(): a t.* builder is not a valid element type \u2014 ${"string"===typeof cb?`use the type name instead: t.array("${cb}")`:'collections accept a Schema class or a primitive type name ("string", "number", \u2026)'}.`)
+    function LA(bb) {
+      if (eA(bb)) {
+        const ab = bb._type;
+        throw new Error(`t.array/map/set/collection(): a t.* builder is not a valid element type \u2014 ${"string"===typeof ab?`use the type name instead: t.array("${ab}")`:'collections accept a Schema class or a primitive type name ("string", "number", \u2026)'}.`)
       }
       return bb
     }
 
-    function mk(bb) {
-      return new fk({
-        quantized: Oc(bb)
+    function PA(bb) {
+      return new BA({
+        quantized: Qa(bb)
       })
     }
-    const lk = Object.freeze({
-        string: Xk("string"),
-        number: Xk("number"),
-        boolean: Xk("boolean"),
-        int8: Xk("int8"),
-        uint8: Xk("uint8"),
-        int16: Xk("int16"),
-        uint16: Xk("uint16"),
-        int32: Xk("int32"),
-        uint32: Xk("uint32"),
-        int64: Xk("int64"),
-        uint64: Xk("uint64"),
-        float32: Xk("float32"),
-        float64: Xk("float64"),
-        bigint64: Xk("bigint64"),
-        biguint64: Xk("biguint64"),
-        ref: bb => new fk(bb),
-        array: bb => new fk({
-          array: nk(bb)
+    const XA = Object.freeze({
+        string: vA("string"),
+        number: vA("number"),
+        boolean: vA("boolean"),
+        int8: vA("int8"),
+        uint8: vA("uint8"),
+        int16: vA("int16"),
+        uint16: vA("uint16"),
+        int32: vA("int32"),
+        uint32: vA("uint32"),
+        int64: vA("int64"),
+        uint64: vA("uint64"),
+        float32: vA("float32"),
+        float64: vA("float64"),
+        bigint64: vA("bigint64"),
+        biguint64: vA("biguint64"),
+        ref: bb => new BA(bb),
+        array: bb => new BA({
+          array: LA(bb)
         }),
-        map: bb => new fk({
-          map: nk(bb)
+        map: bb => new BA({
+          map: LA(bb)
         }),
-        set: bb => new fk({
-          set: nk(bb)
+        set: bb => new BA({
+          set: LA(bb)
         }),
-        collection: bb => new fk({
-          collection: nk(bb)
+        collection: bb => new BA({
+          collection: LA(bb)
         }),
         stream: bb => {
-          const cb = new fk({
-            stream: nk(bb)
+          const ab = new BA({
+            stream: LA(bb)
           });
-          return cb._stream = !0, cb
+          return ab._stream = !0, ab
         },
-        quantized: mk,
-        angle: bb => mk({
+        quantized: PA,
+        angle: bb => PA({
           min: 0,
           max: 2 * Math.PI,
           mode: "wrap",
           bits: bb?.bits ?? 16
         })
       }),
-      Qk = -1;
+      jA = -1;
 
-    function ek(bb) {
-      return qc.register(bb), bb
+    function RA(bb) {
+      return oa.register(bb), bb
     }
 
-    function Ck() {
-      let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Qk;
-      return function(cb, sb) {
-        const kb = Rc.initialize(cb.constructor);
-        Rc.setTag(kb, sb, bb)
+    function kA() {
+      let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : jA;
+      return function(ab, Ub) {
+        const Ab = Va.initialize(ab.constructor);
+        Va.setTag(Ab, Ub, bb)
       }
     }
 
-    function Nk(bb, cb) {
-      const sb = Rc.initialize(bb.constructor);
-      Rc.setUnreliable(sb, cb)
+    function yA(bb, ab) {
+      const Ub = Va.initialize(bb.constructor);
+      Va.setUnreliable(Ub, ab)
     }
 
-    function Vk(bb, cb) {
-      const sb = Rc.initialize(bb.constructor);
-      Rc.setPatchOnly(sb, cb)
+    function ZA(bb, ab) {
+      const Ub = Va.initialize(bb.constructor);
+      Va.setPatchOnly(Ub, ab)
     }
 
-    function Lk(bb, cb) {
-      const sb = Rc.initialize(bb.constructor);
-      Rc.setFullStateOnly(sb, cb)
+    function DA(bb, ab) {
+      const Ub = Va.initialize(bb.constructor);
+      Va.setFullStateOnly(Ub, ab)
     }
 
-    function uk(bb, cb) {
-      return function(sb, kb) {
-        const Wb = sb.constructor;
-        if (!bb) throw new Error(`${Wb.name}: @type() reference provided for "${kb}" is undefined. Make sure you don't have any circular dependencies.`);
-        bb = Ac(bb, `${Wb.name}.${kb}`), qc.register(Wb);
-        const ab = Object.getPrototypeOf(Wb)[Symbol.metadata],
-          Tb = Rc.initialize(Wb);
-        let Ub = Tb[kb];
-        if (void 0 !== Tb[Ub]) {
-          if (Tb[Ub].deprecated) return;
-          if (void 0 !== Tb[Ub].type) {
-            const bb = new Error(`@colyseus/schema: Duplicate '${kb}' definition on '${Wb.name}'.\nCheck @type() annotation`);
+    function zA(bb, ab) {
+      return function(Ub, Ab) {
+        const Mb = Ub.constructor;
+        if (!bb) throw new Error(`${Mb.name}: @type() reference provided for "${Ab}" is undefined. Make sure you don't have any circular dependencies.`);
+        bb = ta(bb, `${Mb.name}.${Ab}`), oa.register(Mb);
+        const Tb = Object.getPrototypeOf(Mb)[Symbol.metadata],
+          Eb = Va.initialize(Mb);
+        let Yb = Eb[Ab];
+        if (void 0 !== Eb[Yb]) {
+          if (Eb[Yb].deprecated) return;
+          if (void 0 !== Eb[Yb].type) {
+            const bb = new Error(`@colyseus/schema: Duplicate '${Ab}' definition on '${Mb.name}'.\nCheck @type() annotation`);
             throw new Error(`${bb.message} ${bb.stack.split("\n")[4].trim()}`)
           }
-        } else Ub = Tb[gb] ?? (ab && ab[gb]) ?? -1, Ub++;
-        if (cb && cb.manual) Rc.addField(Tb, Ub, kb, bb, {
+        } else Yb = Eb[Nb] ?? (Tb && Tb[Nb]) ?? -1, Yb++;
+        if (ab && ab.manual) Va.addField(Eb, Yb, Ab, bb, {
           enumerable: !0,
           configurable: !0,
           writable: !0
         });
         else {
           const {
-            complexTypeKlass: cb,
-            childType: sb
-          } = dc(bb);
-          Rc.addField(Tb, Ub, kb, bb, hk(kb, Ub, sb, cb))
+            complexTypeKlass: ab,
+            childType: Ub
+          } = la(bb);
+          Va.addField(Eb, Yb, Ab, bb, iA(Ab, Yb, Ub, ab))
         }
-        Tb[Yb][kb] && Object.defineProperty(sb, kb, Tb[Yb][kb]), ("string" === typeof bb || Gc(bb)) && (Tb[Jb] || Object.defineProperty(Tb, Jb, {
+        Eb[fb][Ab] && Object.defineProperty(Ub, Ab, Eb[fb][Ab]), ("string" === typeof bb || qa(bb)) && (Eb[pb] || Object.defineProperty(Eb, pb, {
           value: [],
           enumerable: !1,
           configurable: !0,
           writable: !0
-        }), Tb[Jb][Ub] = "string" === typeof bb ? cc[bb] : zc(bb.quantized))
+        }), Eb[pb][Yb] = "string" === typeof bb ? aa[bb] : Ka(bb.quantized))
       }
     }
-    const Yk = {
+    const xA = {
       number: "number",
       int8: "number",
       uint8: "number",
@@ -5307,431 +5307,431 @@ export const modules = {
       boolean: "boolean"
     };
 
-    function hk(bb, cb, sb, kb) {
-      let ab;
-      return ab = kb ? function(bb, cb, sb, kb) {
-        const ab = kb.constructor === Wk,
-          Tb = kb.constructor === Tk;
+    function iA(bb, ab, Ub, Ab) {
+      let Tb;
+      return Tb = Ab ? function(bb, ab, Ub, Ab) {
+        const Tb = Ab.constructor === UA,
+          Eb = Ab.constructor === MA;
         return function(bb) {
-          const kb = this[Lb],
-            Ub = kb[cb];
-          if (bb !== Ub) {
+          const Ab = this[xb],
+            Yb = Ab[ab];
+          if (bb !== Yb) {
             if (void 0 !== bb && null !== bb) {
-              if (!ab || bb instanceof Wk)
-                if (!Tb || bb instanceof Tk) bb[Qb] = sb;
+              if (!Tb || bb instanceof UA)
+                if (!Eb || bb instanceof MA) bb[kb] = Ub;
                 else {
-                  const cb = new Tk;
-                  if (cb[Qb] = sb, bb instanceof Map) bb.forEach(((bb, sb) => cb.set(sb, bb)));
+                  const ab = new MA;
+                  if (ab[kb] = Ub, bb instanceof Map) bb.forEach(((bb, Ub) => ab.set(Ub, bb)));
                   else
-                    for (const sb in bb) cb.set(sb, bb[sb]);
-                  bb = cb
+                    for (const Ub in bb) ab.set(Ub, bb[Ub]);
+                  bb = ab
                 }
               else {
-                const cb = new Wk;
-                cb[Qb] = sb, cb.push(...bb), bb = cb
+                const ab = new UA;
+                ab[kb] = Ub, ab.push(...bb), bb = ab
               }
-              const kb = this[lb],
-                Hb = this.constructor;
-              void 0 !== Ub && null !== Ub && Ub[lb] ? (kb.root?.remove(Ub[lb]), Hb[Ib](kb, cb, Wb.DELETE_AND_ADD)) : Hb[Ib](kb, cb, Wb.ADD), bb[lb]?.setParent(this, kb.root, cb)
-            } else void 0 !== Ub && null !== Ub && this[lb].delete(cb);
-            kb[cb] = bb
+              const Ab = this[Rb],
+                eb = this.constructor;
+              void 0 !== Yb && null !== Yb && Yb[Rb] ? (Ab.root?.remove(Yb[Rb]), eb[Bb](Ab, ab, Mb.DELETE_AND_ADD)) : eb[Bb](Ab, ab, Mb.ADD), bb[Rb]?.setParent(this, Ab.root, ab)
+            } else void 0 !== Yb && null !== Yb && this[Rb].delete(ab);
+            Ab[ab] = bb
           }
         }
-      }(0, cb, sb, kb) : "string" === typeof sb ? function(bb, cb, sb) {
-        const kb = Yk[sb],
-          ab = "string" === sb,
-          Tb = "boolean" === sb;
-        return function(sb) {
-          const Ub = this[Lb],
-            Hb = Ub[cb];
-          if (sb !== Hb) {
-            if (void 0 !== sb && null !== sb) {
-              if (!Tb && void 0 !== kb && typeof sb !== kb && (!ab || null !== sb)) {
-                const cb = sb && sb.constructor ? ` (${sb.constructor.name})` : "";
-                throw new bk(`a '${kb}' was expected, but '${JSON.stringify(sb)}'${cb} was provided in ${this.constructor.name}#${bb}`)
+      }(0, ab, Ub, Ab) : "string" === typeof Ub ? function(bb, ab, Ub) {
+        const Ab = xA[Ub],
+          Tb = "string" === Ub,
+          Eb = "boolean" === Ub;
+        return function(Ub) {
+          const Yb = this[xb],
+            eb = Yb[ab];
+          if (Ub !== eb) {
+            if (void 0 !== Ub && null !== Ub) {
+              if (!Eb && void 0 !== Ab && typeof Ub !== Ab && (!Tb || null !== Ub)) {
+                const ab = Ub && Ub.constructor ? ` (${Ub.constructor.name})` : "";
+                throw new nU(`a '${Ab}' was expected, but '${JSON.stringify(Ub)}'${ab} was provided in ${this.constructor.name}#${bb}`)
               }
-              this.constructor[Ib](this[lb], cb, Wb.ADD)
-            } else void 0 !== Hb && null !== Hb && this[lb].delete(cb);
-            Ub[cb] = sb
+              this.constructor[Bb](this[Rb], ab, Mb.ADD)
+            } else void 0 !== eb && null !== eb && this[Rb].delete(ab);
+            Yb[ab] = Ub
           }
         }
-      }(bb, cb, sb) : Gc(sb) ? function(bb, cb, sb) {
-        return function(kb) {
-          const ab = this[Lb],
-            Tb = ab[cb];
-          if (void 0 !== kb && null !== kb) {
-            if ("number" !== typeof kb) throw new bk(`a 'number' was expected, but '${JSON.stringify(kb)}' was provided in ${this.constructor.name}#${bb}`);
-            if ((kb = Zc(sb, Kc(sb, kb))) === Tb) return;
-            this.constructor[Ib](this[lb], cb, Wb.ADD)
+      }(bb, ab, Ub) : qa(Ub) ? function(bb, ab, Ub) {
+        return function(Ab) {
+          const Tb = this[xb],
+            Eb = Tb[ab];
+          if (void 0 !== Ab && null !== Ab) {
+            if ("number" !== typeof Ab) throw new nU(`a 'number' was expected, but '${JSON.stringify(Ab)}' was provided in ${this.constructor.name}#${bb}`);
+            if ((Ab = ra(Ub, ua(Ub, Ab))) === Eb) return;
+            this.constructor[Bb](this[Rb], ab, Mb.ADD)
           } else {
-            if (kb === Tb) return;
-            void 0 !== Tb && null !== Tb && this[lb].delete(cb)
+            if (Ab === Eb) return;
+            void 0 !== Eb && null !== Eb && this[Rb].delete(ab)
           }
-          ab[cb] = kb
+          Tb[ab] = Ab
         }
-      }(bb, cb, sb.quantized) : function(bb, cb, sb) {
-        return function(kb) {
-          const ab = this[Lb],
-            Tb = ab[cb];
-          if (kb !== Tb) {
-            if (void 0 !== kb && null !== kb) {
-              ck(kb, sb, this, bb);
-              const ab = this[lb],
-                Ub = this.constructor;
-              void 0 !== Tb && null !== Tb && Tb[lb] ? (ab.root?.remove(Tb[lb]), Ub[Ib](ab, cb, Wb.DELETE_AND_ADD)) : Ub[Ib](ab, cb, Wb.ADD), kb[lb]?.setParent(this, ab.root, cb)
-            } else void 0 !== Tb && null !== Tb && this[lb].delete(cb);
-            ab[cb] = kb
+      }(bb, ab, Ub.quantized) : function(bb, ab, Ub) {
+        return function(Ab) {
+          const Tb = this[xb],
+            Eb = Tb[ab];
+          if (Ab !== Eb) {
+            if (void 0 !== Ab && null !== Ab) {
+              SU(Ab, Ub, this, bb);
+              const Tb = this[Rb],
+                Yb = this.constructor;
+              void 0 !== Eb && null !== Eb && Eb[Rb] ? (Tb.root?.remove(Eb[Rb]), Yb[Bb](Tb, ab, Mb.DELETE_AND_ADD)) : Yb[Bb](Tb, ab, Mb.ADD), Ab[Rb]?.setParent(this, Tb.root, ab)
+            } else void 0 !== Eb && null !== Eb && this[Rb].delete(ab);
+            Tb[ab] = Ab
           }
         }
-      }(bb, cb, sb), {
+      }(bb, ab, Ub), {
         get: function() {
-          return this[Lb][cb]
+          return this[xb][ab]
         },
-        set: ab,
+        set: Tb,
         enumerable: !0,
         configurable: !0
       }
     }
 
-    function Jk() {
+    function fA() {
       let bb = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-      return function(cb, sb) {
-        const kb = Rc.initialize(cb.constructor);
-        Rc.setDeprecated(kb, sb), bb && (kb[Yb] ??= {}, kb[Yb][sb] = {
+      return function(ab, Ub) {
+        const Ab = Va.initialize(ab.constructor);
+        Va.setDeprecated(Ab, Ub), bb && (Ab[fb] ??= {}, Ab[fb][Ub] = {
           get: function() {
-            throw new Error(`${sb} is deprecated.`)
+            throw new Error(`${Ub} is deprecated.`)
           },
           set: function(bb) {},
           enumerable: !1,
           configurable: !0
-        }, Object.defineProperty(cb, sb, kb[Yb][sb]))
+        }, Object.defineProperty(ab, Ub, Ab[fb][Ub]))
       }
     }
-    let gk = !1;
+    let mA = !1;
 
-    function Bk(bb, cb, sb) {
-      gk || (gk = !0, console.warn("@colyseus/schema: defineTypes() is deprecated and will be removed in a future release. Use schema() with t.* field builders instead \u2192 https://docs.colyseus.io/state/schema"));
-      for (let kb in cb) uk(cb[kb], sb)(bb.prototype, kb);
+    function pA(bb, ab, Ub) {
+      mA || (mA = !0, console.warn("@colyseus/schema: defineTypes() is deprecated and will be removed in a future release. Use schema() with t.* field builders instead \u2192 https://docs.colyseus.io/state/schema"));
+      for (let Ab in ab) zA(ab[Ab], Ub)(bb.prototype, Ab);
       return bb
     }
 
-    function tk(bb, cb) {
-      let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Pk;
+    function NA(bb, ab) {
+      let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : HA;
       if (null == bb || "object" !== typeof bb) throw new Error(`schema(): first argument must be a fields object (got ${typeof bb}).`);
-      const kb = {},
-        Wb = {},
-        ab = {},
+      const Ab = {},
+        Mb = {},
         Tb = {},
-        Ub = (bb, cb) => {
-          if (cb.hasDefault)((bb, cb) => {
-            "function" === typeof cb ? Tb[bb] = cb : cb && "function" === typeof cb.clone ? Tb[bb] = () => cb.clone() : ab[bb] = cb
-          })(bb, cb.default);
-          else if (!cb.optional) {
-            const sb = function(bb) {
+        Eb = {},
+        Yb = (bb, ab) => {
+          if (ab.hasDefault)((bb, ab) => {
+            "function" === typeof ab ? Eb[bb] = ab : ab && "function" === typeof ab.clone ? Eb[bb] = () => ab.clone() : Tb[bb] = ab
+          })(bb, ab.default);
+          else if (!ab.optional) {
+            const Ub = function(bb) {
               if (bb && "object" === typeof bb) {
-                if (void 0 !== bb.array) return () => new Wk;
-                if (void 0 !== bb.map) return () => new Tk;
-                if (void 0 !== bb.set) return () => new Ik;
-                if (void 0 !== bb.collection) return () => new Uk;
-                if (void 0 !== bb.stream) return () => new Hk
-              } else if ("function" === typeof bb && Pk.is(bb) && (!bb.prototype.initialize || 0 === bb.prototype.initialize.length)) return () => new bb
-            }(cb.type);
-            sb && (Tb[bb] = sb)
+                if (void 0 !== bb.array) return () => new UA;
+                if (void 0 !== bb.map) return () => new MA;
+                if (void 0 !== bb.set) return () => new EA;
+                if (void 0 !== bb.collection) return () => new TA;
+                if (void 0 !== bb.stream) return () => new YA
+              } else if ("function" === typeof bb && HA.is(bb) && (!bb.prototype.initialize || 0 === bb.prototype.initialize.length)) return () => new bb
+            }(ab.type);
+            Ub && (Eb[bb] = Ub)
           }
         },
-        Ib = {},
-        Hb = [],
-        fb = [],
-        Mb = {},
+        Bb = {},
+        eb = [],
+        vb = [],
+        Lb = {},
+        Pb = [],
         Xb = [],
-        nb = [],
-        mb = {},
-        lb = [];
-      for (const Lb in bb) {
-        const sb = bb[Lb],
-          ab = `schema(${cb?`'${cb}'`:""}): field '${Lb}'`;
-        if (Mk(sb)) {
-          const bb = sb.toDefinition();
+        jb = {},
+        Rb = [];
+      for (const xb in bb) {
+        const Ub = bb[xb],
+          Tb = `schema(${ab?`'${ab}'`:""}): field '${xb}'`;
+        if (eA(Ub)) {
+          const bb = Ub.toDefinition();
           if (bb.noSync) {
-            if (void 0 !== bb.view || bb.unreliable || bb.patchOnly || bb.fullStateOnly || bb.stream) throw new Error(`${ab} uses .noSync() together with a sync-only modifier (.view/.unreliable/.patchOnly/.fullStateOnly/.stream). A local-only field cannot be synchronized.`);
-            Ub(Lb, bb);
+            if (void 0 !== bb.view || bb.unreliable || bb.patchOnly || bb.fullStateOnly || bb.stream) throw new Error(`${Tb} uses .noSync() together with a sync-only modifier (.view/.unreliable/.patchOnly/.fullStateOnly/.stream). A local-only field cannot be synchronized.`);
+            Yb(xb, bb);
             continue
           }
-          if (bb.patchOnly && bb.fullStateOnly) throw new Error(`${ab} uses .patchOnly() together with .fullStateOnly(). Those are the only two delivery channels, so the field would never reach a client \u2014 use .noSync() if that is intended.`);
-          const cb = Ac(bb.type, ab);
-          if ("function" === typeof cb && !Pk.is(cb)) throw new Error(`${ab} is a synced ref to non-Schema class '${cb.name||"(anonymous)"}' \u2014 use .noSync(), or Metadata.setFields().`);
-          kb[Lb] = cb, void 0 !== bb.view && (Ib[Lb] = bb.view), bb.unreliable && Hb.push(Lb), bb.patchOnly && fb.push(Lb), bb.deprecated && (Mb[Lb] = bb.deprecatedThrows), bb.fullStateOnly && Xb.push(Lb), bb.stream && nb.push(Lb), void 0 !== bb.streamPriority && (mb[Lb] = bb.streamPriority), bb.optional && lb.push(Lb), Ub(Lb, bb)
+          if (bb.patchOnly && bb.fullStateOnly) throw new Error(`${Tb} uses .patchOnly() together with .fullStateOnly(). Those are the only two delivery channels, so the field would never reach a client \u2014 use .noSync() if that is intended.`);
+          const ab = ta(bb.type, Tb);
+          if ("function" === typeof ab && !HA.is(ab)) throw new Error(`${Tb} is a synced ref to non-Schema class '${ab.name||"(anonymous)"}' \u2014 use .noSync(), or Metadata.setFields().`);
+          Ab[xb] = ab, void 0 !== bb.view && (Bb[xb] = bb.view), bb.unreliable && eb.push(xb), bb.patchOnly && vb.push(xb), bb.deprecated && (Lb[xb] = bb.deprecatedThrows), bb.fullStateOnly && Pb.push(xb), bb.stream && Xb.push(xb), void 0 !== bb.streamPriority && (jb[xb] = bb.streamPriority), bb.optional && Rb.push(xb), Yb(xb, bb)
         } else {
-          if ("function" !== typeof sb) throw new Error(`${ab} must be a t.* builder, Schema subclass, or method (got ${typeof sb}).`);
-          Pk.is(sb) ? (kb[Lb] = sb, sb.prototype.initialize && 0 !== sb.prototype.initialize.length || (Tb[Lb] = () => new sb)) : Wb[Lb] = sb
+          if ("function" !== typeof Ub) throw new Error(`${Tb} must be a t.* builder, Schema subclass, or method (got ${typeof Ub}).`);
+          HA.is(Ub) ? (Ab[xb] = Ub, Ub.prototype.initialize && 0 !== Ub.prototype.initialize.length || (Eb[xb] = () => new Ub)) : Mb[xb] = Ub
         }
       }
-      const Qb = bb => {
-          for (const cb in ab) bb[cb] = ab[cb];
-          for (const cb in Tb) bb[cb] = Tb[cb]()
+      const kb = bb => {
+          for (const ab in Tb) bb[ab] = Tb[ab];
+          for (const ab in Eb) bb[ab] = Eb[ab]()
         },
-        eb = () => {
+        yb = () => {
           const bb = {};
-          return Qb(bb), bb
+          return kb(bb), bb
         },
-        Cb = "function" === typeof Wb.initialize,
-        Nb = Wb.initialize ?? sb._initialize,
-        Vb = class extends sb {
+        Zb = "function" === typeof Mb.initialize,
+        Db = Mb.initialize ?? Ub._initialize,
+        zb = class extends Ub {
           constructor() {
-            for (var bb = arguments.length, cb = new Array(bb), sb = 0; sb < bb; sb++) cb[sb] = arguments[sb];
-            const Wb = cb[0];
-            void 0 === Wb ? (super(), Qb(this)) : super(Object.assign(eb(), Cb ? (bb => {
-              const cb = Object.keys(kb),
-                sb = {};
-              for (const kb in bb) cb.includes(kb) || (sb[kb] = bb[kb]);
-              return sb
-            })(Wb) : Wb)), Nb && new.target === Vb && Nb.apply(this, cb)
+            for (var bb = arguments.length, ab = new Array(bb), Ub = 0; Ub < bb; Ub++) ab[Ub] = arguments[Ub];
+            const Mb = ab[0];
+            void 0 === Mb ? (super(), kb(this)) : super(Object.assign(yb(), Zb ? (bb => {
+              const ab = Object.keys(Ab),
+                Ub = {};
+              for (const Ab in bb) ab.includes(Ab) || (Ub[Ab] = bb[Ab]);
+              return Ub
+            })(Mb) : Mb)), Db && new.target === zb && Db.apply(this, ab)
           }
         };
-      cb && Object.defineProperty(Vb, "name", {
-        value: cb
-      }), Rc.setFields(Vb, kb), Vb._getDefaultValues = eb, Vb._initialize = Nb, Object.assign(Vb.prototype, Wb);
-      for (const Lb in Ib) Ck(Ib[Lb])(Vb.prototype, Lb);
-      for (const Lb of Hb) Nk(Vb.prototype, Lb);
-      for (const Lb of fb) Vk(Vb.prototype, Lb);
-      for (const Lb in Mb) Jk(Mb[Lb])(Vb.prototype, Lb);
-      if (Xb.length > 0 || nb.length > 0) {
-        const bb = Vb[Symbol.metadata];
-        for (const cb of Xb) Rc.setFullStateOnly(bb, cb);
-        for (const cb of nb) Rc.setStream(bb, cb);
-        for (const cb in mb) Rc.setStreamPriority(bb, cb, mb[cb])
+      ab && Object.defineProperty(zb, "name", {
+        value: ab
+      }), Va.setFields(zb, Ab), zb._getDefaultValues = yb, zb._initialize = Db, Object.assign(zb.prototype, Mb);
+      for (const xb in Bb) kA(Bb[xb])(zb.prototype, xb);
+      for (const xb of eb) yA(zb.prototype, xb);
+      for (const xb of vb) ZA(zb.prototype, xb);
+      for (const xb in Lb) fA(Lb[xb])(zb.prototype, xb);
+      if (Pb.length > 0 || Xb.length > 0) {
+        const bb = zb[Symbol.metadata];
+        for (const ab of Pb) Va.setFullStateOnly(bb, ab);
+        for (const ab of Xb) Va.setStream(bb, ab);
+        for (const ab in jb) Va.setStreamPriority(bb, ab, jb[ab])
       }
-      if (lb.length > 0) {
-        const bb = Vb[Symbol.metadata];
-        for (const cb of lb) bb[bb[cb]].optional = !0
+      if (Rb.length > 0) {
+        const bb = zb[Symbol.metadata];
+        for (const ab of Rb) bb[bb[ab]].optional = !0
       }
-      return Vb.extend = (bb, cb) => tk(bb, cb, Vb), Vb
+      return zb.extend = (bb, ab) => NA(bb, ab, zb), zb
     }
 
-    function yk(bb) {
-      const cb = bb[lb].root,
-        sb = {
+    function WA(bb) {
+      const ab = bb[Rb].root,
+        Ub = {
           ops: {},
           refs: []
         };
-      let kb = cb.changes.next;
-      for (; kb;) {
-        const bb = kb.changeTree;
-        void 0 !== bb ? (sb.refs.push(`refId#${bb.ref[Ub]}`), bb.forEach(((bb, cb) => {
-          if (bb < 0 || !cb) return;
-          const kb = Wb[cb];
-          sb.ops[kb] || (sb.ops[kb] = 0), sb.ops[kb]++
-        })), kb = kb.next) : kb = kb.next
+      let Ab = ab.changes.next;
+      for (; Ab;) {
+        const bb = Ab.changeTree;
+        void 0 !== bb ? (Ub.refs.push(`refId#${bb.ref[Yb]}`), bb.forEach(((bb, ab) => {
+          if (bb < 0 || !ab) return;
+          const Ab = Mb[ab];
+          Ub.ops[Ab] || (Ub.ops[Ab] = 0), Ub.ops[Ab]++
+        })), Ab = Ab.next) : Ab = Ab.next
       }
-      return sb
+      return Ub
     }
-    class Pk {
-      static[Hb] = Os;
-      static[fb] = Fs;
-      [Ub];
-      [Lb];
+    class HA {
+      static[eb] = GU;
+      static[vb] = OU;
+      [Yb];
+      [xb];
       static initialize(bb) {
-        Object.defineProperty(bb, lb, {
-          value: new Ps(bb),
+        Object.defineProperty(bb, Rb, {
+          value: new IU(bb),
           enumerable: !1,
           writable: !0
-        }), bb[Lb] = []
+        }), bb[xb] = []
       }
       static initializeForDecoder() {
         const bb = Object.create(this.prototype);
-        return Es(bb), bb[Lb] = [], bb
+        return FU(bb), bb[xb] = [], bb
       }
       static reset(bb) {
-        const cb = bb?.[lb];
-        if (void 0 === cb || "function" !== typeof cb.recycle) throw new Error("@colyseus/schema: Schema.reset() requires a tracked (encoder-side) instance.");
-        if (void 0 !== cb.extraParents) throw new Error(`@colyseus/schema: cannot reset a shared instance (${bb.constructor.name}) with multiple parents.`);
-        bb[Nb]()
-      } [Nb]() {
+        const ab = bb?.[Rb];
+        if (void 0 === ab || "function" !== typeof ab.recycle) throw new Error("@colyseus/schema: Schema.reset() requires a tracked (encoder-side) instance.");
+        if (void 0 !== ab.extraParents) throw new Error(`@colyseus/schema: cannot reset a shared instance (${bb.constructor.name}) with multiple parents.`);
+        bb[Db]()
+      } [Db]() {
         const bb = this.constructor[Symbol.metadata],
-          cb = bb?.[Bb] ?? [],
-          sb = this[Lb];
-        for (let kb = 0; kb < cb.length; kb++) {
-          const bb = sb[cb[kb]];
-          bb?.[Nb]?.()
+          ab = bb?.[Wb] ?? [],
+          Ub = this[xb];
+        for (let Ab = 0; Ab < ab.length; Ab++) {
+          const bb = Ub[ab[Ab]];
+          bb?.[Db]?.()
         }
-        this[lb].recycle(), this[Ub] = void 0
+        this[Rb].recycle(), this[Yb] = void 0
       }
       static is(bb) {
-        const cb = bb[Symbol.metadata];
-        return "object" === typeof cb && null !== cb
+        const ab = bb[Symbol.metadata];
+        return "object" === typeof ab && null !== ab
       }
       static isSchema(bb) {
         return "function" === typeof bb?.assign
       }
-      static[Ib](bb, cb) {
-        let sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Wb.ADD;
-        bb.change(cb, sb)
+      static[Bb](bb, ab) {
+        let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Mb.ADD;
+        bb.change(ab, Ub)
       }
-      static[Mb](bb, cb, sb) {
-        const kb = bb.constructor[Symbol.metadata],
-          Wb = kb[cb]?.tag;
-        return void 0 === sb ? void 0 === Wb : void 0 === Wb || (Wb === Qk ? sb.isChangeTreeVisible(bb[lb]) : sb.hasTagOnTree(bb[lb], Wb))
+      static[Lb](bb, ab, Ub) {
+        const Ab = bb.constructor[Symbol.metadata],
+          Mb = Ab[ab]?.tag;
+        return void 0 === Ub ? void 0 === Mb : void 0 === Mb || (Mb === jA ? Ub.isChangeTreeVisible(bb[Rb]) : Ub.hasTagOnTree(bb[Rb], Mb))
       }
       constructor(bb) {
-        Pk.initialize(this), bb && Pk.assignProps(this, bb)
+        HA.initialize(this), bb && HA.assignProps(this, bb)
       }
       assign(bb) {
-        return Pk.assignProps(this, bb), this
+        return HA.assignProps(this, bb), this
       }
-      static assignProps(bb, cb) {
-        const sb = bb.constructor[Symbol.metadata];
-        if (sb && void 0 !== sb[gb])
-          for (let Wb = 0; Wb <= sb[gb]; Wb++) {
-            const kb = sb[Wb];
-            if (!kb) continue;
-            const ab = cb[kb.name];
-            void 0 !== ab && (bb[kb.name] = ab)
+      static assignProps(bb, ab) {
+        const Ub = bb.constructor[Symbol.metadata];
+        if (Ub && void 0 !== Ub[Nb])
+          for (let Mb = 0; Mb <= Ub[Nb]; Mb++) {
+            const Ab = Ub[Mb];
+            if (!Ab) continue;
+            const Tb = ab[Ab.name];
+            void 0 !== Tb && (bb[Ab.name] = Tb)
           }
-        const kb = Object.keys(cb);
-        for (let Wb = 0; Wb < kb.length; Wb++) {
-          const ab = kb[Wb];
-          sb && void 0 !== sb[ab] || (bb[ab] = cb[ab])
+        const Ab = Object.keys(ab);
+        for (let Mb = 0; Mb < Ab.length; Mb++) {
+          const Tb = Ab[Mb];
+          Ub && void 0 !== Ub[Tb] || (bb[Tb] = ab[Tb])
         }
       }
       restore(bb) {
-        const cb = this.constructor[Symbol.metadata];
-        for (const sb in cb) {
-          const kb = cb[sb],
-            Wb = kb.name,
-            ab = kb.type,
-            Tb = bb[Wb];
-          if (void 0 !== Tb && null !== Tb)
-            if ("string" === typeof ab) this[Wb] = Tb;
-            else if (Pk.is(ab)) {
-            const bb = new ab;
-            bb.restore(Tb), this[Wb] = bb
-          } else if ("object" === typeof ab) {
-            const bb = Object.keys(ab)[0],
-              cb = ab[bb];
+        const ab = this.constructor[Symbol.metadata];
+        for (const Ub in ab) {
+          const Ab = ab[Ub],
+            Mb = Ab.name,
+            Tb = Ab.type,
+            Eb = bb[Mb];
+          if (void 0 !== Eb && null !== Eb)
+            if ("string" === typeof Tb) this[Mb] = Eb;
+            else if (HA.is(Tb)) {
+            const bb = new Tb;
+            bb.restore(Eb), this[Mb] = bb
+          } else if ("object" === typeof Tb) {
+            const bb = Object.keys(Tb)[0],
+              ab = Tb[bb];
             if ("map" === bb) {
-              const bb = this[Wb];
-              for (const sb in Tb)
-                if (Pk.is(cb)) {
-                  const kb = new cb;
-                  kb.restore(Tb[sb]), bb.set(sb, kb)
-                } else bb.set(sb, Tb[sb])
+              const bb = this[Mb];
+              for (const Ub in Eb)
+                if (HA.is(ab)) {
+                  const Ab = new ab;
+                  Ab.restore(Eb[Ub]), bb.set(Ub, Ab)
+                } else bb.set(Ub, Eb[Ub])
             } else if ("array" === bb) {
-              const bb = this[Wb];
-              for (let sb = 0; sb < Tb.length; sb++)
-                if (Pk.is(cb)) {
-                  const kb = new cb;
-                  kb.restore(Tb[sb]), bb.push(kb)
-                } else bb.push(Tb[sb])
+              const bb = this[Mb];
+              for (let Ub = 0; Ub < Eb.length; Ub++)
+                if (HA.is(ab)) {
+                  const Ab = new ab;
+                  Ab.restore(Eb[Ub]), bb.push(Ab)
+                } else bb.push(Eb[Ub])
             }
           }
         }
         return this
       }
-      setDirty(bb, cb) {
-        const sb = this.constructor[Symbol.metadata];
-        this[lb].change(sb[sb[bb]].index, cb)
+      setDirty(bb, ab) {
+        const Ub = this.constructor[Symbol.metadata];
+        this[Rb].change(Ub[Ub[bb]].index, ab)
       }
       pauseTracking() {
-        this[lb].pause()
+        this[Rb].pause()
       }
       resumeTracking() {
-        this[lb].resume()
+        this[Rb].resume()
       }
       untracked(bb) {
-        return this[lb].untracked(bb)
+        return this[Rb].untracked(bb)
       }
       get isTrackingPaused() {
-        return this[lb].paused
+        return this[Rb].paused
       }
       clone() {
         const bb = Object.create(this.constructor.prototype);
-        Pk.initialize(bb);
-        const cb = this.constructor[Symbol.metadata];
-        for (const sb in cb) {
-          const kb = cb[sb].name;
-          "object" === typeof this[kb] && "function" === typeof this[kb]?.clone ? bb[kb] = this[kb].clone() : bb[kb] = this[kb]
+        HA.initialize(bb);
+        const ab = this.constructor[Symbol.metadata];
+        for (const Ub in ab) {
+          const Ab = ab[Ub].name;
+          "object" === typeof this[Ab] && "function" === typeof this[Ab]?.clone ? bb[Ab] = this[Ab].clone() : bb[Ab] = this[Ab]
         }
         return bb
       }
       toJSON() {
         const bb = {},
-          cb = this.constructor[Symbol.metadata];
-        for (const sb in cb) {
-          const kb = cb[sb],
-            Wb = kb.name;
-          kb.deprecated || null === this[Wb] || "undefined" === typeof this[Wb] || (bb[Wb] = "function" === typeof this[Wb].toJSON ? this[Wb].toJSON() : this[Wb])
+          ab = this.constructor[Symbol.metadata];
+        for (const Ub in ab) {
+          const Ab = ab[Ub],
+            Mb = Ab.name;
+          Ab.deprecated || null === this[Mb] || "undefined" === typeof this[Mb] || (bb[Mb] = "function" === typeof this[Mb].toJSON ? this[Mb].toJSON() : this[Mb])
         }
         return bb
       }
       discardAllChanges() {
-        this[lb].discardAll()
-      } [Xb](bb) {
+        this[Rb].discardAll()
+      } [Pb](bb) {
         return this[this.constructor[Symbol.metadata][bb].name]
-      } [nb](bb) {
+      } [Xb](bb) {
         this[this.constructor[Symbol.metadata][bb].name] = void 0
       }
       static debugRefIds(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          kb = arguments.length > 3 ? arguments[3] : void 0,
-          Wb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
-        const ab = cb ? ` - ${JSON.stringify(bb.toJSON())}` : "",
-          Tb = bb[lb],
-          Ib = bb[Ub],
-          Hb = kb ? kb.root.refCount[Ib] : Tb.refCount,
-          fb = Hb > 1 ? ` [\xd7${Hb}]` : "";
-        let Mb = `${function(bb){return new Array(bb).fill(0).map(((cb,sb)=>sb===bb-1?"\u2514\u2500 ":"   ")).join("")}(sb)}${Wb}${bb.constructor.name} (refId: ${Ib})${fb}${ab}\n`;
-        return Tb.forEachChild(((Wb, ab) => {
-          let Tb = ab;
-          "number" === typeof ab && bb.$indexes && (Tb = bb.$indexes.get(ab) ?? ab);
-          const Ub = void 0 !== bb.forEach && void 0 !== Tb ? `["${Tb}"]: ` : "";
-          Mb += this.debugRefIds(Wb.ref, cb, sb + 1, kb, Ub)
-        })), Mb
+        let ab = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          Ab = arguments.length > 3 ? arguments[3] : void 0,
+          Mb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
+        const Tb = ab ? ` - ${JSON.stringify(bb.toJSON())}` : "",
+          Eb = bb[Rb],
+          Bb = bb[Yb],
+          eb = Ab ? Ab.root.refCount[Bb] : Eb.refCount,
+          vb = eb > 1 ? ` [\xd7${eb}]` : "";
+        let Lb = `${function(bb){return new Array(bb).fill(0).map(((ab,Ub)=>Ub===bb-1?"\u2514\u2500 ":"   ")).join("")}(Ub)}${Mb}${bb.constructor.name} (refId: ${Bb})${vb}${Tb}\n`;
+        return Eb.forEachChild(((Mb, Tb) => {
+          let Eb = Tb;
+          "number" === typeof Tb && bb.$indexes && (Eb = bb.$indexes.get(Tb) ?? Tb);
+          const Yb = void 0 !== bb.forEach && void 0 !== Eb ? `["${Eb}"]: ` : "";
+          Lb += this.debugRefIds(Mb.ref, ab, Ub + 1, Ab, Yb)
+        })), Lb
       }
       static debugRefIdEncodingOrder(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "allChanges";
-        const sb = [],
-          kb = bb[lb];
-        if ("changes" === cb) {
-          let bb = kb.root.changes?.next;
-          for (; bb;) bb.changeTree && sb.push(bb.changeTree.ref[Ub]), bb = bb.next;
-          return sb
+        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "allChanges";
+        const Ub = [],
+          Ab = bb[Rb];
+        if ("changes" === ab) {
+          let bb = Ab.root.changes?.next;
+          for (; bb;) bb.changeTree && Ub.push(bb.changeTree.ref[Yb]), bb = bb.next;
+          return Ub
         }
-        const Wb = "allFilteredChanges" === cb,
-          ab = new Set,
-          Tb = bb => {
-            ab.has(bb) || (ab.add(bb), bb.isFiltered === Wb && sb.push(bb.ref[Ub]), bb.forEachChild(((bb, cb) => Tb(bb))))
+        const Mb = "allFilteredChanges" === ab,
+          Tb = new Set,
+          Eb = bb => {
+            Tb.has(bb) || (Tb.add(bb), bb.isFiltered === Mb && Ub.push(bb.ref[Yb]), bb.forEachChild(((bb, ab) => Eb(bb))))
           };
-        return Tb(kb), sb
+        return Eb(Ab), Ub
       }
       static debugRefIdsFromDecoder(bb) {
         return this.debugRefIds(bb.state, !1, 0, bb)
       }
       static debugChanges(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const sb = bb[lb],
-          kb = cb ? "allChanges" : "changes";
-        let ab = `${bb.constructor.name} (${bb[Ub]}) -> .${kb}:\n`;
-        return cb ? sb.forEachLive((bb => {
-          ab += `- [${bb}]: ADD (${JSON.stringify(sb.getValue(Number(bb),!0))})\n`
-        })) : sb.forEach(((bb, cb) => {
-          bb < 0 || !cb || (ab += `- [${bb}]: ${Wb[cb]} (${JSON.stringify(sb.getValue(Number(bb),!1))})\n`)
-        })), ab
+        let ab = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const Ub = bb[Rb],
+          Ab = ab ? "allChanges" : "changes";
+        let Tb = `${bb.constructor.name} (${bb[Yb]}) -> .${Ab}:\n`;
+        return ab ? Ub.forEachLive((bb => {
+          Tb += `- [${bb}]: ADD (${JSON.stringify(Ub.getValue(Number(bb),!0))})\n`
+        })) : Ub.forEach(((bb, ab) => {
+          bb < 0 || !ab || (Tb += `- [${bb}]: ${Mb[ab]} (${JSON.stringify(Ub.getValue(Number(bb),!1))})\n`)
+        })), Tb
       }
     }
-    ab(Pk);
-    const Dk = {
+    Tb(HA);
+    const IA = {
       value: 0,
       enumerable: !1,
       writable: !0
     };
-    class Ek {
+    class dA {
       types;
       nextUniqueId = 0;
       changeTrees = {};
       get refCount() {
         const bb = {};
-        for (const cb in this.changeTrees) bb[cb] = this.changeTrees[cb].refCount;
+        for (const ab in this.changeTrees) bb[ab] = this.changeTrees[ab].refCount;
         return bb
       }
       changes = {
@@ -5746,7 +5746,7 @@ export const modules = {
       };
       pendingFilterRefresh = [];
       enqueueFilterRefresh(bb) {
-        this.types.hasFilters && (bb.flags & ts || (bb.flags |= ts, this.pendingFilterRefresh.push(bb)))
+        this.types.hasFilters && (bb.flags & WU || (bb.flags |= WU, this.pendingFilterRefresh.push(bb)))
       }
       _nodePool = [];
       _nextViewId = 0;
@@ -5764,16 +5764,16 @@ export const modules = {
       }
       unregisterView(bb) {
         this.activeViews.delete(bb.id);
-        const cb = bb.id;
-        for (const sb of this.streamTrees) sb._dropView(cb)
+        const ab = bb.id;
+        for (const Ub of this.streamTrees) Ub._dropView(ab)
       }
       forEachActiveView(bb) {
-        for (const [cb, sb] of this.activeViews) {
-          const kb = sb.deref();
-          if (void 0 !== kb) bb(kb);
+        for (const [ab, Ub] of this.activeViews) {
+          const Ab = Ub.deref();
+          if (void 0 !== Ab) bb(Ab);
           else {
-            this.activeViews.delete(cb);
-            for (const bb of this.streamTrees) bb._dropView(cb)
+            this.activeViews.delete(ab);
+            for (const bb of this.streamTrees) bb._dropView(ab)
           }
         }
       }
@@ -5784,42 +5784,42 @@ export const modules = {
         this.streamTrees.delete(bb)
       }
       constructor(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        this.types = bb, this.nextUniqueId = cb
+        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        this.types = bb, this.nextUniqueId = ab
       }
       add(bb) {
-        const cb = bb.ref;
-        void 0 === cb[Ub] && (Dk.value = this.nextUniqueId++, Object.defineProperty(cb, Ub, Dk));
-        const sb = cb[Ub],
-          kb = void 0 === this.changeTrees[sb];
-        kb && (this.changeTrees[sb] = bb), bb.needsRestage && (bb.needsRestage = !1, bb.forEachLiveWithCtx(bb, ss));
-        const Wb = kb ? 0 : bb.refCount;
-        return bb.refCount = Wb + 1, Wb > 0 && this.enqueueFilterRefresh(bb), kb
+        const ab = bb.ref;
+        void 0 === ab[Yb] && (IA.value = this.nextUniqueId++, Object.defineProperty(ab, Yb, IA));
+        const Ub = ab[Yb],
+          Ab = void 0 === this.changeTrees[Ub];
+        Ab && (this.changeTrees[Ub] = bb), bb.needsRestage && (bb.needsRestage = !1, bb.forEachLiveWithCtx(bb, UU));
+        const Mb = Ab ? 0 : bb.refCount;
+        return bb.refCount = Mb + 1, Mb > 0 && this.enqueueFilterRefresh(bb), Ab
       }
       remove(bb) {
-        const cb = bb.refCount - 1;
-        if (cb <= 0) {
-          if (bb.root = void 0, delete this.changeTrees[bb.ref[Ub]], bb.isStreamCollection) {
-            const cb = bb.ref;
-            cb._unregister?.(), this.unregisterStream(cb)
+        const ab = bb.refCount - 1;
+        if (ab <= 0) {
+          if (bb.root = void 0, delete this.changeTrees[bb.ref[Yb]], bb.isStreamCollection) {
+            const ab = bb.ref;
+            ab._unregister?.(), this.unregisterStream(ab)
           }
-          this.removeFromQueue(bb), this.removeFromUnreliableQueue(bb), bb.refCount = 0, bb.needsRestage = !0, bb.forEachChild(((cb, sb) => {
-            cb.removeParent(bb.ref) && (void 0 === cb.parentRef || cb.refCount > 0 ? this.remove(cb) : this.moveNextToParent(cb))
+          this.removeFromQueue(bb), this.removeFromUnreliableQueue(bb), bb.refCount = 0, bb.needsRestage = !0, bb.forEachChild(((ab, Ub) => {
+            ab.removeParent(bb.ref) && (void 0 === ab.parentRef || ab.refCount > 0 ? this.remove(ab) : this.moveNextToParent(ab))
           }))
-        } else bb.refCount = cb, this.enqueueFilterRefresh(bb), this.recursivelyMoveNextToParent(bb);
-        return cb
+        } else bb.refCount = ab, this.enqueueFilterRefresh(bb), this.recursivelyMoveNextToParent(bb);
+        return ab
       }
       recursivelyMoveNextToParent(bb) {
-        this.moveNextToParent(bb), bb.forEachChild(((bb, cb) => this.recursivelyMoveNextToParent(bb)))
+        this.moveNextToParent(bb), bb.forEachChild(((bb, ab) => this.recursivelyMoveNextToParent(bb)))
       }
       moveNextToParent(bb) {
         bb.changesNode && this._moveNextToParentInList(this.changes, bb, bb.changesNode, "changesNode"), bb.unreliableChangesNode && this._moveNextToParentInList(this.unreliableChanges, bb, bb.unreliableChangesNode, "unreliableChangesNode")
       }
-      _moveNextToParentInList(bb, cb, sb, kb) {
-        const Wb = cb.parent;
-        if (!Wb || !Wb[lb]) return;
-        const ab = Wb[lb][kb];
-        ab && ab !== sb && (sb.position > ab.position || (sb.prev ? sb.prev.next = sb.next : bb.next = sb.next, sb.next ? sb.next.prev = sb.prev : bb.tail = sb.prev, sb.prev = bb.tail, sb.next = void 0, bb.tail.next = sb, bb.tail = sb, sb.position = bb.nextPosition++))
+      _moveNextToParentInList(bb, ab, Ub, Ab) {
+        const Mb = ab.parent;
+        if (!Mb || !Mb[Rb]) return;
+        const Tb = Mb[Rb][Ab];
+        Tb && Tb !== Ub && (Ub.position > Tb.position || (Ub.prev ? Ub.prev.next = Ub.next : bb.next = Ub.next, Ub.next ? Ub.next.prev = Ub.prev : bb.tail = Ub.prev, Ub.prev = bb.tail, Ub.next = void 0, bb.tail.next = Ub, bb.tail = Ub, Ub.position = bb.nextPosition++))
       }
       enqueueChangeTree(bb) {
         (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : bb.changesNode) || (bb.changesNode = this._appendToList(this.changes, bb))
@@ -5827,15 +5827,15 @@ export const modules = {
       enqueueUnreliable(bb) {
         (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : bb.unreliableChangesNode) || (bb.unreliableChangesNode = this._appendToList(this.unreliableChanges, bb))
       }
-      _appendToList(bb, cb) {
-        const sb = this._nodePool;
-        let kb;
-        return sb.length > 0 ? (kb = sb.pop(), kb.changeTree = cb, kb.next = void 0, kb.prev = void 0) : kb = {
-          changeTree: cb,
+      _appendToList(bb, ab) {
+        const Ub = this._nodePool;
+        let Ab;
+        return Ub.length > 0 ? (Ab = Ub.pop(), Ab.changeTree = ab, Ab.next = void 0, Ab.prev = void 0) : Ab = {
+          changeTree: ab,
           next: void 0,
           prev: void 0,
           position: 0
-        }, bb.next ? (kb.prev = bb.tail, bb.tail.next = kb, bb.tail = kb) : (bb.nextPosition = 0, bb.next = kb, bb.tail = kb), kb.position = bb.nextPosition++, kb
+        }, bb.next ? (Ab.prev = bb.tail, bb.tail.next = Ab, bb.tail = Ab) : (bb.nextPosition = 0, bb.next = Ab, bb.tail = Ab), Ab.position = bb.nextPosition++, Ab
       }
       releaseNode(bb) {
         bb.changeTree = void 0, bb.prev = void 0, bb.next = void 0, this._nodePool.push(bb)
@@ -5846,52 +5846,52 @@ export const modules = {
       removeFromUnreliableQueue(bb) {
         return this._removeNode(this.unreliableChanges, bb, bb.unreliableChangesNode, "unreliableChangesNode")
       }
-      _removeNode(bb, cb, sb, kb) {
-        return !(!sb || sb.changeTree !== cb) && (sb.prev ? sb.prev.next = sb.next : bb.next = sb.next, sb.next ? sb.next.prev = sb.prev : bb.tail = sb.prev, cb[kb] = void 0, this.releaseNode(sb), !0)
+      _removeNode(bb, ab, Ub, Ab) {
+        return !(!Ub || Ub.changeTree !== ab) && (Ub.prev ? Ub.prev.next = Ub.next : bb.next = Ub.next, Ub.next ? Ub.next.prev = Ub.prev : bb.tail = Ub.prev, ab[Ab] = void 0, this.releaseNode(Ub), !0)
       }
     }
 
-    function ik(bb, cb) {
-      if (-1 === cb || cb >= bb.length) return !1;
-      const sb = bb.length - 1;
-      for (let kb = cb; kb < sb; kb++) bb[kb] = bb[kb + 1];
-      return bb.length = sb, !0
+    function FA(bb, ab) {
+      if (-1 === ab || ab >= bb.length) return !1;
+      const Ub = bb.length - 1;
+      for (let Ab = ab; Ab < Ub; Ab++) bb[Ab] = bb[Ab + 1];
+      return bb.length = Ub, !0
     }
 
-    function Ok(bb, cb, sb) {
-      const kb = ~sb,
-        Wb = bb.changeTrees;
-      for (const ab in Wb) {
-        const bb = Wb[ab],
-          sb = bb.visibleViews;
-        void 0 !== sb && cb < sb.length && (sb[cb] &= kb);
-        const Tb = bb.subscribedViews;
-        void 0 !== Tb && cb < Tb.length && (Tb[cb] &= kb);
-        const Ub = bb.tagViews;
-        void 0 !== Ub && Ub.forEach((bb => {
-          cb < bb.length && (bb[cb] &= kb)
+    function hA(bb, ab, Ub) {
+      const Ab = ~Ub,
+        Mb = bb.changeTrees;
+      for (const Tb in Mb) {
+        const bb = Mb[Tb],
+          Ub = bb.visibleViews;
+        void 0 !== Ub && ab < Ub.length && (Ub[ab] &= Ab);
+        const Eb = bb.subscribedViews;
+        void 0 !== Eb && ab < Eb.length && (Eb[ab] &= Ab);
+        const Yb = bb.tagViews;
+        void 0 !== Yb && Yb.forEach((bb => {
+          ab < bb.length && (bb[ab] &= Ab)
         }))
       }
     }
-    const Gk = new FinalizationRegistry((bb => {
+    const GA = new FinalizationRegistry((bb => {
       let {
-        root: cb,
-        id: sb,
-        slot: kb,
-        bit: Wb
+        root: ab,
+        id: Ub,
+        slot: Ab,
+        bit: Mb
       } = bb;
-      Ok(cb, kb, Wb), cb.activeViews.delete(sb);
-      for (const ab of cb.streamTrees) ab._dropView(sb);
-      cb.releaseViewId(sb)
+      hA(ab, Ab, Mb), ab.activeViews.delete(Ub);
+      for (const Tb of ab.streamTrees) Tb._dropView(Ub);
+      ab.releaseViewId(Ub)
     }));
 
-    function Kk(bb) {
+    function QA(bb) {
       if (void 0 === bb) return "undefined";
       if (null === bb) return "null";
-      const cb = typeof bb;
-      return "string" === cb ? JSON.stringify(bb.length > 30 ? `${bb.slice(0,30)}\u2026` : bb) : "object" !== cb && "function" !== cb ? `${cb} ${String(bb)}` : Array.isArray(bb) ? `Array(${bb.length})` : bb.constructor?.name ?? "Object"
+      const ab = typeof bb;
+      return "string" === ab ? JSON.stringify(bb.length > 30 ? `${bb.slice(0,30)}\u2026` : bb) : "object" !== ab && "function" !== ab ? `${ab} ${String(bb)}` : Array.isArray(bb) ? `Array(${bb.length})` : bb.constructor?.name ?? "Object"
     }
-    class Zk {
+    class qA {
       iterable;
       items;
       id = -1;
@@ -5904,7 +5904,7 @@ export const modules = {
         this.iterable = bb, bb && (this.items = [])
       }
       _bindRoot(bb) {
-        void 0 === this._root && (this._root = bb, this.id = bb.acquireViewId(), this._slot = this.id >> 5, this._bit = 1 << (31 & this.id), bb.registerView(this), Gk.register(this, {
+        void 0 === this._root && (this._root = bb, this.id = bb.acquireViewId(), this._slot = this.id >> 5, this._bit = 1 << (31 & this.id), bb.registerView(this), GA.register(this, {
           root: bb,
           id: this.id,
           slot: this._slot,
@@ -5912,308 +5912,308 @@ export const modules = {
         }, this))
       }
       dispose() {
-        void 0 !== this._root && (this._root.unregisterView(this), Ok(this._root, this._slot, this._bit), this._root.releaseViewId(this.id), Gk.unregister(this), this._root = void 0, this.id = -1)
+        void 0 !== this._root && (this._root.unregisterView(this), hA(this._root, this._slot, this._bit), this._root.releaseViewId(this.id), GA.unregister(this), this._root = void 0, this.id = -1)
       }
       isVisible(bb) {
-        const cb = bb.visibleViews,
-          sb = this._slot;
-        return void 0 !== cb && sb < cb.length && 0 !== (cb[sb] & this._bit)
+        const ab = bb.visibleViews,
+          Ub = this._slot;
+        return void 0 !== ab && Ub < ab.length && 0 !== (ab[Ub] & this._bit)
       }
       markVisible(bb) {
-        const cb = this._slot;
-        let sb = bb.visibleViews;
-        for (void 0 === sb && (sb = bb.visibleViews = []); sb.length <= cb;) sb.push(0);
-        sb[cb] |= this._bit
+        const ab = this._slot;
+        let Ub = bb.visibleViews;
+        for (void 0 === Ub && (Ub = bb.visibleViews = []); Ub.length <= ab;) Ub.push(0);
+        Ub[ab] |= this._bit
       }
       unmarkVisible(bb) {
-        const cb = bb.visibleViews;
-        if (void 0 === cb) return;
-        const sb = this._slot;
-        sb < cb.length && (cb[sb] &= ~this._bit)
+        const ab = bb.visibleViews;
+        if (void 0 === ab) return;
+        const Ub = this._slot;
+        Ub < ab.length && (ab[Ub] &= ~this._bit)
       }
       isSubscribed(bb) {
-        const cb = bb.subscribedViews,
-          sb = this._slot;
-        return void 0 !== cb && sb < cb.length && 0 !== (cb[sb] & this._bit)
+        const ab = bb.subscribedViews,
+          Ub = this._slot;
+        return void 0 !== ab && Ub < ab.length && 0 !== (ab[Ub] & this._bit)
       }
       _setSubscribed(bb) {
-        const cb = this._slot;
-        let sb = bb.subscribedViews;
-        for (void 0 === sb && (sb = bb.subscribedViews = []); sb.length <= cb;) sb.push(0);
-        sb[cb] |= this._bit
+        const ab = this._slot;
+        let Ub = bb.subscribedViews;
+        for (void 0 === Ub && (Ub = bb.subscribedViews = []); Ub.length <= ab;) Ub.push(0);
+        Ub[ab] |= this._bit
       }
       _clearSubscribed(bb) {
-        const cb = bb.subscribedViews;
-        if (void 0 === cb) return;
-        const sb = this._slot;
-        sb < cb.length && (cb[sb] &= ~this._bit)
+        const ab = bb.subscribedViews;
+        if (void 0 === ab) return;
+        const Ub = this._slot;
+        Ub < ab.length && (ab[Ub] &= ~this._bit)
       }
-      hasTagOnTree(bb, cb) {
-        const sb = bb.tagViews;
-        if (void 0 === sb) return !1;
-        const kb = this._slot,
-          Wb = this._bit;
-        for (let ab = cb; 0 !== ab; ab &= ab - 1) {
-          const bb = sb.get(ab & -ab);
-          if (void 0 !== bb && kb < bb.length && 0 !== (bb[kb] & Wb)) return !0
+      hasTagOnTree(bb, ab) {
+        const Ub = bb.tagViews;
+        if (void 0 === Ub) return !1;
+        const Ab = this._slot,
+          Mb = this._bit;
+        for (let Tb = ab; 0 !== Tb; Tb &= Tb - 1) {
+          const bb = Ub.get(Tb & -Tb);
+          if (void 0 !== bb && Ab < bb.length && 0 !== (bb[Ab] & Mb)) return !0
         }
         return !1
       }
-      addTag(bb, cb) {
-        if (cb === Qk) return;
-        let sb = bb.tagViews;
-        void 0 === sb && (sb = bb.tagViews = new Map);
-        const kb = this._slot,
-          Wb = this._bit;
-        for (let ab = cb; ab > 0; ab &= ab - 1) {
-          const bb = ab & -ab;
-          let cb = sb.get(bb);
-          for (void 0 === cb && (cb = [], sb.set(bb, cb)); cb.length <= kb;) cb.push(0);
-          cb[kb] |= Wb
+      addTag(bb, ab) {
+        if (ab === jA) return;
+        let Ub = bb.tagViews;
+        void 0 === Ub && (Ub = bb.tagViews = new Map);
+        const Ab = this._slot,
+          Mb = this._bit;
+        for (let Tb = ab; Tb > 0; Tb &= Tb - 1) {
+          const bb = Tb & -Tb;
+          let ab = Ub.get(bb);
+          for (void 0 === ab && (ab = [], Ub.set(bb, ab)); ab.length <= Ab;) ab.push(0);
+          ab[Ab] |= Mb
         }
       }
-      removeTag(bb, cb) {
-        if (cb === Qk) return;
-        const sb = bb.tagViews;
-        if (void 0 === sb) return;
-        const kb = this._slot,
-          Wb = ~this._bit;
-        for (let ab = cb; ab > 0; ab &= ab - 1) {
-          const bb = sb.get(ab & -ab);
-          void 0 !== bb && kb < bb.length && (bb[kb] &= Wb)
+      removeTag(bb, ab) {
+        if (ab === jA) return;
+        const Ub = bb.tagViews;
+        if (void 0 === Ub) return;
+        const Ab = this._slot,
+          Mb = ~this._bit;
+        for (let Tb = ab; Tb > 0; Tb &= Tb - 1) {
+          const bb = Ub.get(Tb & -Tb);
+          void 0 !== bb && Ab < bb.length && (bb[Ab] &= Mb)
         }
       }
       removeAllTagsOnTree(bb) {
-        const cb = bb.tagViews;
-        if (void 0 === cb) return;
-        const sb = this._slot,
-          kb = ~this._bit;
-        cb.forEach((bb => {
-          sb < bb.length && (bb[sb] &= kb)
+        const ab = bb.tagViews;
+        if (void 0 === ab) return;
+        const Ub = this._slot,
+          Ab = ~this._bit;
+        ab.forEach((bb => {
+          Ub < bb.length && (bb[Ub] &= Ab)
         }))
       }
       add(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Qk,
-          sb = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        return this._add(bb, cb, sb, !1)
+        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : jA,
+          Ub = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        return this._add(bb, ab, Ub, !1)
       }
       _addImmediate(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Qk;
-        this._add(bb, cb, !0, !0)
+        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : jA;
+        this._add(bb, ab, !0, !0)
       }
-      _add(bb, cb, sb, kb) {
-        const ab = bb?.[lb];
-        if (!ab) return console.warn(`StateView#add(): expected a Schema instance or collection, received ${Kk(bb)}`), !1;
-        const Tb = ab.parent;
-        if (!Tb && 0 !== bb[Ub]) throw new Error(`Cannot add a detached instance to the StateView. Make sure to assign the "${ab.ref.constructor.name}" instance to the state before calling view.add()`);
-        void 0 === this._root && void 0 !== ab.root && this._bindRoot(ab.root);
-        const Ib = Tb?.[lb];
-        if (!kb && Ib?.isStreamCollection) return Dc(Tb, this.id, ab.parentIndex), !0;
-        const Hb = bb.constructor[Symbol.metadata],
-          fb = this.isVisible(ab);
-        if (!this.iterable || !sb || fb && -1 !== this.items.indexOf(bb) || this.items.push(bb), this.markVisible(ab), sb && Tb && this.addParentOf(ab, cb), !kb && ab.isStreamCollection) return !0;
-        if (cb === Qk && ab.isNew) return this._markSubtreeVisible(ab, cb), !1;
-        let Mb = this.changes.get(bb[Ub]);
-        void 0 === Mb && (Mb = new Map, this.changes.set(bb[Ub], Mb));
-        let Xb = !1;
-        const nb = ab.encDescriptor.tags;
-        if (ab.forEachChild(((bb, sb) => {
-            const kb = nb[sb];
-            if (void 0 !== kb) {
-              if (!(kb === Qk || cb !== Qk && 0 !== (kb & cb))) return
+      _add(bb, ab, Ub, Ab) {
+        const Tb = bb?.[Rb];
+        if (!Tb) return console.warn(`StateView#add(): expected a Schema instance or collection, received ${QA(bb)}`), !1;
+        const Eb = Tb.parent;
+        if (!Eb && 0 !== bb[Yb]) throw new Error(`Cannot add a detached instance to the StateView. Make sure to assign the "${Tb.ref.constructor.name}" instance to the state before calling view.add()`);
+        void 0 === this._root && void 0 !== Tb.root && this._bindRoot(Tb.root);
+        const Bb = Eb?.[Rb];
+        if (!Ab && Bb?.isStreamCollection) return Fa(Eb, this.id, Tb.parentIndex), !0;
+        const eb = bb.constructor[Symbol.metadata],
+          vb = this.isVisible(Tb);
+        if (!this.iterable || !Ub || vb && -1 !== this.items.indexOf(bb) || this.items.push(bb), this.markVisible(Tb), Ub && Eb && this.addParentOf(Tb, ab), !Ab && Tb.isStreamCollection) return !0;
+        if (ab === jA && Tb.isNew) return this._markSubtreeVisible(Tb, ab), !1;
+        let Lb = this.changes.get(bb[Yb]);
+        void 0 === Lb && (Lb = new Map, this.changes.set(bb[Yb], Lb));
+        let Pb = !1;
+        const Xb = Tb.encDescriptor.tags;
+        if (Tb.forEachChild(((bb, Ub) => {
+            const Ab = Xb[Ub];
+            if (void 0 !== Ab) {
+              if (!(Ab === jA || ab !== jA && 0 !== (Ab & ab))) return
             }
-            this.add(bb.ref, cb, !1) && (Xb = !0)
-          })), cb !== Qk) {
-          this.addTag(ab, cb);
-          const bb = Hb?.[yb];
+            this.add(bb.ref, ab, !1) && (Pb = !0)
+          })), ab !== jA) {
+          this.addTag(Tb, ab);
+          const bb = eb?.[Ib];
           if (void 0 !== bb)
-            for (let sb = cb; sb > 0; sb &= sb - 1) bb[sb & -sb]?.forEach((bb => {
-              ab.getChange(bb) !== Wb.DELETE && Mb.set(bb, Wb.ADD)
+            for (let Ub = ab; Ub > 0; Ub &= Ub - 1) bb[Ub & -Ub]?.forEach((bb => {
+              Tb.getChange(bb) !== Mb.DELETE && Lb.set(bb, Mb.ADD)
             }))
         }
-        if ((cb === Qk || !fb) && (!ab.isNew || Xb))
-          if (ab.isArray && "string" !== typeof ab.refTarget[Qb]) ab.refTarget.items.length > 0 && (Mb.set(-1, Wb.ADD), Xb = !0);
+        if ((ab === jA || !vb) && (!Tb.isNew || Pb))
+          if (Tb.isArray && "string" !== typeof Tb.refTarget[kb]) Tb.refTarget.items.length > 0 && (Lb.set(-1, Mb.ADD), Pb = !0);
           else {
-            const bb = ab.encDescriptor.tags;
-            ab.forEachLive((sb => {
-              const kb = bb[sb];
-              (void 0 === kb || kb === Qk || cb !== Qk && 0 !== (kb & cb)) && (Mb.set(sb, Wb.ADD), Xb = !0)
+            const bb = Tb.encDescriptor.tags;
+            Tb.forEachLive((Ub => {
+              const Ab = bb[Ub];
+              (void 0 === Ab || Ab === jA || ab !== jA && 0 !== (Ab & ab)) && (Lb.set(Ub, Mb.ADD), Pb = !0)
             }))
-          } return Xb
+          } return Pb
       }
-      _markSubtreeVisible(bb, cb) {
-        const sb = bb.encDescriptor.tags;
-        bb.forEachChild(((bb, kb) => {
-          const Wb = sb[kb];
-          if (void 0 !== Wb) {
-            if (!(Wb === Qk || cb !== Qk && 0 !== (Wb & cb))) return
+      _markSubtreeVisible(bb, ab) {
+        const Ub = bb.encDescriptor.tags;
+        bb.forEachChild(((bb, Ab) => {
+          const Mb = Ub[Ab];
+          if (void 0 !== Mb) {
+            if (!(Mb === jA || ab !== jA && 0 !== (Mb & ab))) return
           }
-          bb.isNew ? (this.markVisible(bb), this._markSubtreeVisible(bb, cb)) : this._add(bb.ref, cb, !1, !1)
+          bb.isNew ? (this.markVisible(bb), this._markSubtreeVisible(bb, ab)) : this._add(bb.ref, ab, !1, !1)
         }))
       }
-      addParentOf(bb, cb) {
-        const sb = bb.parent[lb],
-          kb = bb.parentIndex;
-        this.isVisible(sb) || this.markVisible(sb);
-        const ab = sb.parent?.[lb];
-        if (ab && this.addParentOf(sb, cb), sb.hasFilteredFields && sb.getChange(kb) !== Wb.DELETE) {
-          let ab = this.changes.get(sb.ref[Ub]);
-          void 0 === ab && (ab = new Map, this.changes.set(sb.ref[Ub], ab));
-          const Tb = sb.encDescriptor.tags[kb];
-          void 0 !== Tb && Tb !== Qk && 0 !== (Tb & cb) && this.addTag(sb, cb), ab.set(sb.isArray ? bb : kb, Wb.ADD)
+      addParentOf(bb, ab) {
+        const Ub = bb.parent[Rb],
+          Ab = bb.parentIndex;
+        this.isVisible(Ub) || this.markVisible(Ub);
+        const Tb = Ub.parent?.[Rb];
+        if (Tb && this.addParentOf(Ub, ab), Ub.hasFilteredFields && Ub.getChange(Ab) !== Mb.DELETE) {
+          let Tb = this.changes.get(Ub.ref[Yb]);
+          void 0 === Tb && (Tb = new Map, this.changes.set(Ub.ref[Yb], Tb));
+          const Eb = Ub.encDescriptor.tags[Ab];
+          void 0 !== Eb && Eb !== jA && 0 !== (Eb & ab) && this.addTag(Ub, ab), Tb.set(Ub.isArray ? bb : Ab, Mb.ADD)
         }
       }
       _touchAncestorsOf(bb) {
-        let cb = bb.parent?.[lb];
-        if (void 0 === cb) return;
-        const sb = [];
-        for (; void 0 !== cb;) {
-          if (cb.hasFilteredFields) {
-            const bb = cb.ref[Ub];
+        let ab = bb.parent?.[Rb];
+        if (void 0 === ab) return;
+        const Ub = [];
+        for (; void 0 !== ab;) {
+          if (ab.hasFilteredFields) {
+            const bb = ab.ref[Yb];
             if (this.changes.has(bb)) break;
-            sb.push(cb)
+            Ub.push(ab)
           }
-          cb = cb.parent?.[lb]
+          ab = ab.parent?.[Rb]
         }
-        for (let kb = sb.length - 1; kb >= 0; kb--) this.changes.set(sb[kb].ref[Ub], new Map)
+        for (let Ab = Ub.length - 1; Ab >= 0; Ab--) this.changes.set(Ub[Ab].ref[Yb], new Map)
       }
       remove(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Qk,
-          sb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const kb = bb?.[lb];
-        if (!kb) return console.warn(`StateView#remove(): expected a Schema instance or collection, received ${Kk(bb)}`), this;
-        const ab = kb.parent?.[lb];
-        if (ab?.isStreamCollection) return this.unmarkVisible(kb), this.iterable && !sb && ik(this.items, this.items.indexOf(bb)),
-          function(bb, cb, sb, kb, ab) {
-            const Tb = bb._stream;
-            if (void 0 === Tb) return !1;
-            const Ub = Tb.pendingByView.get(cb);
-            if (Ub?.has(kb)) return Ub.delete(kb), !1;
-            const Ib = Tb.sentByView.get(cb);
-            if (Ib?.has(kb)) {
-              Ib.delete(kb);
-              let bb = ab.get(sb);
-              return void 0 === bb && (bb = new Map, ab.set(sb, bb)), bb.set(kb, Wb.DELETE), !0
+        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : jA,
+          Ub = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const Ab = bb?.[Rb];
+        if (!Ab) return console.warn(`StateView#remove(): expected a Schema instance or collection, received ${QA(bb)}`), this;
+        const Tb = Ab.parent?.[Rb];
+        if (Tb?.isStreamCollection) return this.unmarkVisible(Ab), this.iterable && !Ub && FA(this.items, this.items.indexOf(bb)),
+          function(bb, ab, Ub, Ab, Tb) {
+            const Eb = bb._stream;
+            if (void 0 === Eb) return !1;
+            const Yb = Eb.pendingByView.get(ab);
+            if (Yb?.has(Ab)) return Yb.delete(Ab), !1;
+            const Bb = Eb.sentByView.get(ab);
+            if (Bb?.has(Ab)) {
+              Bb.delete(Ab);
+              let bb = Tb.get(Ub);
+              return void 0 === bb && (bb = new Map, Tb.set(Ub, bb)), bb.set(Ab, Mb.DELETE), !0
             }
-          }(kb.parent, this.id, kb.parent[Ub], kb.parentIndex, this.changes), this._recursiveDeleteVisibleChangeTree(kb), this;
-        if (kb.isStreamCollection) {
-          this.unmarkVisible(kb), this.iterable && !sb && ik(this.items, this.items.indexOf(bb));
-          const cb = kb.ref,
-            ab = cb._stream;
-          if (void 0 !== ab) {
-            ab.pendingByView.get(this.id)?.clear();
-            const bb = ab.sentByView.get(this.id);
+          }(Ab.parent, this.id, Ab.parent[Yb], Ab.parentIndex, this.changes), this._recursiveDeleteVisibleChangeTree(Ab), this;
+        if (Ab.isStreamCollection) {
+          this.unmarkVisible(Ab), this.iterable && !Ub && FA(this.items, this.items.indexOf(bb));
+          const ab = Ab.ref,
+            Tb = ab._stream;
+          if (void 0 !== Tb) {
+            Tb.pendingByView.get(this.id)?.clear();
+            const bb = Tb.sentByView.get(this.id);
             if (void 0 !== bb && bb.size > 0) {
-              const sb = cb[Ub];
-              let kb = this.changes.get(sb);
-              void 0 === kb && (kb = new Map, this.changes.set(sb, kb));
-              for (const cb of bb) kb.set(cb, Wb.DELETE);
+              const Ub = ab[Yb];
+              let Ab = this.changes.get(Ub);
+              void 0 === Ab && (Ab = new Map, this.changes.set(Ub, Ab));
+              for (const ab of bb) Ab.set(ab, Mb.DELETE);
               bb.clear()
             }
           }
           return this
         }
-        this.unmarkVisible(kb), this.iterable && !sb && ik(this.items, this.items.indexOf(bb));
-        const Tb = kb.ref,
-          Ib = Tb.constructor[Symbol.metadata],
-          Hb = Tb[Ub];
-        this._touchAncestorsOf(kb);
-        let fb = this.changes.get(Hb);
-        if (void 0 === fb && (fb = new Map, this.changes.set(Hb, fb)), cb === Qk) {
-          const bb = kb.parent;
-          if (bb && !Rc.isValidInstance(bb) && kb.isFiltered) {
-            const cb = ab.isArray ? kb : kb.parentIndex,
-              sb = bb[Ub];
-            let Tb = this.changes.get(sb);
-            void 0 === Tb ? (Tb = new Map, this.changes.set(sb, Tb)) : Tb.get(cb) === Wb.ADD && this._dropPendingEntries(kb), Tb.set(cb, Wb.DELETE), this._recursiveDeleteVisibleChangeTree(kb)
-          } else Ib?.[tb]?.forEach((bb => this._removeViewField(kb, fb, bb)))
+        this.unmarkVisible(Ab), this.iterable && !Ub && FA(this.items, this.items.indexOf(bb));
+        const Eb = Ab.ref,
+          Bb = Eb.constructor[Symbol.metadata],
+          eb = Eb[Yb];
+        this._touchAncestorsOf(Ab);
+        let vb = this.changes.get(eb);
+        if (void 0 === vb && (vb = new Map, this.changes.set(eb, vb)), ab === jA) {
+          const bb = Ab.parent;
+          if (bb && !Va.isValidInstance(bb) && Ab.isFiltered) {
+            const ab = Tb.isArray ? Ab : Ab.parentIndex,
+              Ub = bb[Yb];
+            let Eb = this.changes.get(Ub);
+            void 0 === Eb ? (Eb = new Map, this.changes.set(Ub, Eb)) : Eb.get(ab) === Mb.ADD && this._dropPendingEntries(Ab), Eb.set(ab, Mb.DELETE), this._recursiveDeleteVisibleChangeTree(Ab)
+          } else Bb?.[Hb]?.forEach((bb => this._removeViewField(Ab, vb, bb)))
         } else {
-          const bb = Ib?.[yb];
+          const bb = Bb?.[Ib];
           if (void 0 !== bb)
-            for (let sb = cb; sb > 0; sb &= sb - 1) bb[sb & -sb]?.forEach((bb => this._removeViewField(kb, fb, bb)))
+            for (let Ub = ab; Ub > 0; Ub &= Ub - 1) bb[Ub & -Ub]?.forEach((bb => this._removeViewField(Ab, vb, bb)))
         }
-        return void 0 === cb ? this.removeAllTagsOnTree(kb) : this.removeTag(kb, cb), this
+        return void 0 === ab ? this.removeAllTagsOnTree(Ab) : this.removeTag(Ab, ab), this
       }
       has(bb) {
-        return this.isVisible(bb[lb])
+        return this.isVisible(bb[Rb])
       }
       hasTag(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Qk;
-        return this.hasTagOnTree(bb[lb], cb)
+        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : jA;
+        return this.hasTagOnTree(bb[Rb], ab)
       }
-      subscribe(bb, cb) {
-        const sb = bb?.[lb];
-        if (!sb) return console.warn(`StateView#subscribe(): expected a Schema collection, received ${Kk(bb)}`), this;
-        if (void 0 === this._root && void 0 !== sb.root && this._bindRoot(sb.root), void 0 !== cb)
-          if (sb.isStreamCollection) {
-            const sb = gc(bb);
-            null === cb ? sb.priorityByView?.delete(this.id) : (sb.priorityByView ??= new Map).set(this.id, cb)
+      subscribe(bb, ab) {
+        const Ub = bb?.[Rb];
+        if (!Ub) return console.warn(`StateView#subscribe(): expected a Schema collection, received ${QA(bb)}`), this;
+        if (void 0 === this._root && void 0 !== Ub.root && this._bindRoot(Ub.root), void 0 !== ab)
+          if (Ub.isStreamCollection) {
+            const Ub = Na(bb);
+            null === ab ? Ub.priorityByView?.delete(this.id) : (Ub.priorityByView ??= new Map).set(this.id, ab)
           } else {
-            const cb = bb?.constructor?.name ?? "collection",
-              kb = sb.parent;
-            if (void 0 === kb) console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 this ${cb} is not attached to a state yet, so it cannot be identified as a stream. Subscribe after assigning it to the state.`);
+            const ab = bb?.constructor?.name ?? "collection",
+              Ab = Ub.parent;
+            if (void 0 === Ab) console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 this ${ab} is not attached to a state yet, so it cannot be identified as a stream. Subscribe after assigning it to the state.`);
             else {
-              const bb = kb?.constructor?.[Symbol.metadata]?.[sb.parentIndex]?.name,
-                Wb = bb ? `${kb.constructor.name}#${bb}` : cb;
-              console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 ${Wb} is a ${cb}, not a streaming collection. Declare the field with .stream() (e.g. t.map(X).stream()) or use t.stream(X) to enable priority batching.`)
+              const bb = Ab?.constructor?.[Symbol.metadata]?.[Ub.parentIndex]?.name,
+                Mb = bb ? `${Ab.constructor.name}#${bb}` : ab;
+              console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 ${Mb} is a ${ab}, not a streaming collection. Declare the field with .stream() (e.g. t.map(X).stream()) or use t.stream(X) to enable priority batching.`)
             }
-          } if (this.isSubscribed(sb)) return this;
-        const kb = void 0 !== sb.parent && !this.isVisible(sb);
-        if (kb ? (this.addParentOf(sb, Qk), this._add(bb, Qk, !1, !1)) : this.markVisible(sb), this._setSubscribed(sb), sb.isStreamCollection) {
-          const cb = bb;
-          sb.forEachChild(((bb, sb) => {
-            Dc(cb, this.id, sb)
+          } if (this.isSubscribed(Ub)) return this;
+        const Ab = void 0 !== Ub.parent && !this.isVisible(Ub);
+        if (Ab ? (this.addParentOf(Ub, jA), this._add(bb, jA, !1, !1)) : this.markVisible(Ub), this._setSubscribed(Ub), Ub.isStreamCollection) {
+          const ab = bb;
+          Ub.forEachChild(((bb, Ub) => {
+            Fa(ab, this.id, Ub)
           }))
-        } else kb || sb.forEachChild((bb => {
+        } else Ab || Ub.forEachChild((bb => {
           this.markVisible(bb)
         }));
         return this
       }
       unsubscribe(bb) {
-        const cb = bb?.[lb];
-        if (!cb) return console.warn(`StateView#unsubscribe(): expected a Schema collection, received ${Kk(bb)}`), this;
-        if (!this.isSubscribed(cb)) return this;
-        this._clearSubscribed(cb);
-        const sb = cb.ref[Ub];
-        if (cb.isStreamCollection) {
-          const cb = bb._stream;
-          if (void 0 !== cb) {
-            cb.pendingByView.get(this.id)?.clear();
-            const bb = cb.sentByView.get(this.id);
+        const ab = bb?.[Rb];
+        if (!ab) return console.warn(`StateView#unsubscribe(): expected a Schema collection, received ${QA(bb)}`), this;
+        if (!this.isSubscribed(ab)) return this;
+        this._clearSubscribed(ab);
+        const Ub = ab.ref[Yb];
+        if (ab.isStreamCollection) {
+          const ab = bb._stream;
+          if (void 0 !== ab) {
+            ab.pendingByView.get(this.id)?.clear();
+            const bb = ab.sentByView.get(this.id);
             if (void 0 !== bb && bb.size > 0) {
-              let cb = this.changes.get(sb);
-              void 0 === cb && (cb = new Map, this.changes.set(sb, cb));
-              for (const sb of bb) cb.set(sb, Wb.DELETE);
+              let ab = this.changes.get(Ub);
+              void 0 === ab && (ab = new Map, this.changes.set(Ub, ab));
+              for (const Ub of bb) ab.set(Ub, Mb.DELETE);
               bb.clear()
             }
           }
         } else {
-          const bb = cb.isArray;
-          let kb = this.changes.get(sb);
-          cb.forEachChild(((cb, ab) => {
-            void 0 === kb && (kb = new Map, this.changes.set(sb, kb)), kb.set(bb ? cb : ab, Wb.DELETE), this.unmarkVisible(cb)
+          const bb = ab.isArray;
+          let Ab = this.changes.get(Ub);
+          ab.forEachChild(((ab, Tb) => {
+            void 0 === Ab && (Ab = new Map, this.changes.set(Ub, Ab)), Ab.set(bb ? ab : Tb, Mb.DELETE), this.unmarkVisible(ab)
           }))
         }
-        return this.unmarkVisible(cb), this
+        return this.unmarkVisible(ab), this
       }
       clear() {
         if (!this.iterable) throw new Error("StateView#clear() is only available for iterable StateView's. Use StateView(iterable: true) constructor.");
-        for (let bb = 0, cb = this.items.length; bb < cb; bb++) this.remove(this.items[bb], Qk, !0);
+        for (let bb = 0, ab = this.items.length; bb < ab; bb++) this.remove(this.items[bb], jA, !0);
         this.items.length = 0
       }
       isChangeTreeVisible(bb) {
-        let cb = this.isVisible(bb);
-        if (!cb && bb.isVisibilitySharedWithParent)
-          if (this.isVisible(bb.parent[lb])) this.markVisible(bb), cb = !0;
+        let ab = this.isVisible(bb);
+        if (!ab && bb.isVisibilitySharedWithParent)
+          if (this.isVisible(bb.parent[Rb])) this.markVisible(bb), ab = !0;
           else
-            for (let sb = bb.extraParents; void 0 !== sb; sb = sb.next) {
-              const kb = sb.ref[lb];
-              if (kb.isFiltered && this.isVisible(kb)) {
-                this.markVisible(bb), cb = !0;
+            for (let Ub = bb.extraParents; void 0 !== Ub; Ub = Ub.next) {
+              const Ab = Ub.ref[Rb];
+              if (Ab.isFiltered && this.isVisible(Ab)) {
+                this.markVisible(bb), ab = !0;
                 break
               }
             }
-        return cb
+        return ab
       }
       _recursiveDeleteVisibleChangeTree(bb) {
         bb.forEachChild((bb => {
@@ -6221,64 +6221,64 @@ export const modules = {
         }))
       }
       _dropPendingEntries(bb) {
-        this.changes.delete(bb.ref[Ub]), bb.forEachChild((bb => this._dropPendingEntries(bb)))
+        this.changes.delete(bb.ref[Yb]), bb.forEachChild((bb => this._dropPendingEntries(bb)))
       }
-      _removeViewField(bb, cb, sb) {
-        const kb = cb.get(sb) === Wb.ADD;
-        cb.set(sb, Wb.DELETE);
-        const ab = bb.ref[bb.encDescriptor.names[sb]],
-          Tb = ab?.[lb];
-        Tb && (this.unmarkVisible(Tb), this._recursiveDeleteVisibleChangeTree(Tb), kb && this._dropPendingEntries(Tb))
+      _removeViewField(bb, ab, Ub) {
+        const Ab = ab.get(Ub) === Mb.ADD;
+        ab.set(Ub, Mb.DELETE);
+        const Tb = bb.ref[bb.encDescriptor.names[Ub]],
+          Eb = Tb?.[Rb];
+        Eb && (this.unmarkVisible(Eb), this._recursiveDeleteVisibleChangeTree(Eb), Ab && this._dropPendingEntries(Eb))
       }
     }
 
-    function zk(bb) {
-      bb.structSwitchEmitted || (bb.shouldEmitSwitch && (bb.buffer[bb.it.offset++] = 255, cc.number(bb.buffer, bb.ref[Ub], bb.it)), bb.structSwitchEmitted = !0)
+    function uA(bb) {
+      bb.structSwitchEmitted || (bb.shouldEmitSwitch && (bb.buffer[bb.it.offset++] = 255, aa.number(bb.buffer, bb.ref[Yb], bb.it)), bb.structSwitchEmitted = !0)
     }
 
-    function qk(bb, cb) {
-      wk(bb, cb, Wb.ADD)
+    function rA(bb, ab) {
+      lA(bb, ab, Mb.ADD)
     }
 
-    function dk(bb, cb) {
-      if (cb._fullSyncGen === bb.gen) return;
-      cb._fullSyncGen = bb.gen;
-      if (!bb.hasView || bb.view.isChangeTreeVisible(cb)) {
-        const sb = cb.encDescriptor;
-        bb.changeTree = cb, bb.ref = cb.ref, bb.encoder = sb.encoder, bb.filter = sb.filter, bb.metadata = sb.metadata, bb.treeIsFiltered = cb.isFiltered, bb.isSchema = sb.isSchema, bb.filterBitmask = sb.filterBitmask, bb.tags = sb.tags, bb.structSwitchEmitted = !1, bb.shouldEmitSwitch = bb.hasView || bb.it.offset > bb.initialOffset || cb !== bb.rootChangeTree, cb.isArray && cb.collDirty.size > 0 && (cb.flags |= 512), Ws(cb, bb, qk)
+    function KA(bb, ab) {
+      if (ab._fullSyncGen === bb.gen) return;
+      ab._fullSyncGen = bb.gen;
+      if (!bb.hasView || bb.view.isChangeTreeVisible(ab)) {
+        const Ub = ab.encDescriptor;
+        bb.changeTree = ab, bb.ref = ab.ref, bb.encoder = Ub.encoder, bb.filter = Ub.filter, bb.metadata = Ub.metadata, bb.treeIsFiltered = ab.isFiltered, bb.isSchema = Ub.isSchema, bb.filterBitmask = Ub.filterBitmask, bb.tags = Ub.tags, bb.structSwitchEmitted = !1, bb.shouldEmitSwitch = bb.hasView || bb.it.offset > bb.initialOffset || ab !== bb.rootChangeTree, ab.isArray && ab.collDirty.size > 0 && (ab.flags |= 512), MU(ab, bb, rA)
       }
-      es(cb, bb, Ak)
+      yU(ab, bb, oA)
     }
 
-    function Ak(bb, cb, sb) {
-      dk(bb, cb)
+    function oA(bb, ab, Ub) {
+      KA(bb, ab)
     }
 
-    function wk(bb, cb, sb) {
-      if (cb < 0) {
+    function lA(bb, ab, Ub) {
+      if (ab < 0) {
         if (bb.treeIsFiltered !== bb.emitFiltered) return;
-        return zk(bb), void(bb.buffer[bb.it.offset++] = 255 & Math.abs(cb))
+        return uA(bb), void(bb.buffer[bb.it.offset++] = 255 & Math.abs(ab))
       }
-      if ((bb.isSchema ? bb.treeIsFiltered || (cb < 32 ? 0 !== (bb.filterBitmask & 1 << cb) : void 0 !== bb.tags[cb]) : bb.treeIsFiltered) !== bb.emitFiltered) return;
-      const kb = bb.isEncodeAll ? Wb.ADD : sb;
-      void 0 !== kb && (void 0 === bb.filter || bb.filter(bb.ref, cb, bb.view)) && (zk(bb), bb.encoder(bb.self, bb.buffer, bb.changeTree, cb, kb, bb.it, bb.isEncodeAll, bb.hasView, bb.metadata))
+      if ((bb.isSchema ? bb.treeIsFiltered || (ab < 32 ? 0 !== (bb.filterBitmask & 1 << ab) : void 0 !== bb.tags[ab]) : bb.treeIsFiltered) !== bb.emitFiltered) return;
+      const Ab = bb.isEncodeAll ? Mb.ADD : Ub;
+      void 0 !== Ab && (void 0 === bb.filter || bb.filter(bb.ref, ab, bb.view)) && (uA(bb), bb.encoder(bb.self, bb.buffer, bb.changeTree, ab, Ab, bb.it, bb.isEncodeAll, bb.hasView, bb.metadata))
     }
 
-    function rk(bb, cb) {
-      const sb = new Uint8Array(bb.length + cb.length);
-      return sb.set(bb, 0), sb.set(cb, bb.length), sb
+    function tA(bb, ab) {
+      const Ub = new Uint8Array(bb.length + ab.length);
+      return Ub.set(bb, 0), Ub.set(ab, bb.length), Ub
     }
-    class Sk {
+    class wA {
       static BUFFER_SIZE = 16384;
-      sharedBuffer = new Uint8Array(Sk.BUFFER_SIZE);
+      sharedBuffer = new Uint8Array(wA.BUFFER_SIZE);
       context;
       state;
       root;
-      constructor(bb, cb) {
-        this.context = qc.cache(bb.constructor), this.root = cb ?? new Ek(this.context), this.setState(bb)
+      constructor(bb, ab) {
+        this.context = oa.cache(bb.constructor), this.root = ab ?? new dA(this.context), this.setState(bb)
       }
       setState(bb) {
-        this.state = bb, this.state[lb].setRoot(this.root)
+        this.state = bb, this.state[Rb].setRoot(this.root)
       }
       _encodeCtx = {
         self: void 0,
@@ -6309,268 +6309,268 @@ export const modules = {
         let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          cb = arguments.length > 1 ? arguments[1] : void 0,
-          sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
-          kb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : bb.offset;
-        return this._encodeChannel(bb, cb, sb, kb, !1)
+          ab = arguments.length > 1 ? arguments[1] : void 0,
+          Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
+          Ab = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : bb.offset;
+        return this._encodeChannel(bb, ab, Ub, Ab, !1)
       }
       encodeUnreliable() {
         let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          cb = arguments.length > 1 ? arguments[1] : void 0,
-          sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
-          kb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : bb.offset;
-        return this._encodeChannel(bb, cb, sb, kb, !0)
+          ab = arguments.length > 1 ? arguments[1] : void 0,
+          Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
+          Ab = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : bb.offset;
+        return this._encodeChannel(bb, ab, Ub, Ab, !0)
       }
-      _encodeChannel(bb, cb, sb, kb, Wb) {
-        this.root.pendingFilterRefresh.length > 0 && Ts(this.root);
-        const ab = void 0 !== cb,
-          Tb = this.state[lb],
-          Ub = this._encodeCtx;
-        Ub.self = this, Ub.buffer = sb, Ub.it = bb, Ub.view = cb, Ub.isEncodeAll = !1, Ub.hasView = ab, Ub.emitFiltered = ab;
-        let Ib = Wb ? this.root.unreliableChanges : this.root.changes;
-        for (; Ib = Ib.next;) {
-          const sb = Ib.changeTree;
-          if (ab && !cb.isChangeTreeVisible(sb)) continue;
-          const Hb = Wb ? sb.unreliableRecorder : sb;
-          if (!Hb || !Hb.has()) continue;
-          const fb = sb.encDescriptor;
-          Ub.changeTree = sb, Ub.ref = sb.ref, Ub.encoder = fb.encoder, Ub.filter = fb.filter, Ub.metadata = fb.metadata, Ub.treeIsFiltered = sb.isFiltered, Ub.isSchema = fb.isSchema, Ub.filterBitmask = fb.filterBitmask, Ub.tags = fb.tags, Ub.structSwitchEmitted = !1, Ub.isRootTree = sb === Tb, Ub.shouldEmitSwitch = ab || bb.offset > kb || !Ub.isRootTree, Hb.forEachWithCtx(Ub, wk)
+      _encodeChannel(bb, ab, Ub, Ab, Mb) {
+        this.root.pendingFilterRefresh.length > 0 && EU(this.root);
+        const Tb = void 0 !== ab,
+          Eb = this.state[Rb],
+          Yb = this._encodeCtx;
+        Yb.self = this, Yb.buffer = Ub, Yb.it = bb, Yb.view = ab, Yb.isEncodeAll = !1, Yb.hasView = Tb, Yb.emitFiltered = Tb;
+        let Bb = Mb ? this.root.unreliableChanges : this.root.changes;
+        for (; Bb = Bb.next;) {
+          const Ub = Bb.changeTree;
+          if (Tb && !ab.isChangeTreeVisible(Ub)) continue;
+          const eb = Mb ? Ub.unreliableRecorder : Ub;
+          if (!eb || !eb.has()) continue;
+          const vb = Ub.encDescriptor;
+          Yb.changeTree = Ub, Yb.ref = Ub.ref, Yb.encoder = vb.encoder, Yb.filter = vb.filter, Yb.metadata = vb.metadata, Yb.treeIsFiltered = Ub.isFiltered, Yb.isSchema = vb.isSchema, Yb.filterBitmask = vb.filterBitmask, Yb.tags = vb.tags, Yb.structSwitchEmitted = !1, Yb.isRootTree = Ub === Eb, Yb.shouldEmitSwitch = Tb || bb.offset > Ab || !Yb.isRootTree, eb.forEachWithCtx(Yb, lA)
         }
-        return Wb || ab || !this._isStreamBroadcastMode || this._emitStreamBroadcast(sb, bb), bb.offset > sb.byteLength ? (sb = this._resizeBuffer(sb, bb.offset), bb.offset = kb, this._encodeChannel(bb, cb, sb, kb, Wb)) : sb.subarray(0, bb.offset)
+        return Mb || Tb || !this._isStreamBroadcastMode || this._emitStreamBroadcast(Ub, bb), bb.offset > Ub.byteLength ? (Ub = this._resizeBuffer(Ub, bb.offset), bb.offset = Ab, this._encodeChannel(bb, ab, Ub, Ab, Mb)) : Ub.subarray(0, bb.offset)
       }
-      encodeFullSync(bb, cb, sb, kb) {
-        let Wb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : bb.offset;
-        this.root.pendingFilterRefresh.length > 0 && Ts(this.root);
-        const ab = void 0 !== kb,
-          Tb = this.state[lb],
-          Ub = this._encodeCtx;
-        return Ub.self = this, Ub.buffer = cb, Ub.it = bb, Ub.view = kb, Ub.isEncodeAll = !0, Ub.hasView = ab, Ub.emitFiltered = sb, Ub.gen = ++this._fullSyncGen, Ub.initialOffset = Wb, Ub.rootChangeTree = Tb, dk(Ub, Tb), bb.offset > cb.byteLength ? (cb = this._resizeBuffer(cb, bb.offset), bb.offset = Wb, this.encodeFullSync(bb, cb, sb, kb, Wb)) : cb.subarray(0, bb.offset)
+      encodeFullSync(bb, ab, Ub, Ab) {
+        let Mb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : bb.offset;
+        this.root.pendingFilterRefresh.length > 0 && EU(this.root);
+        const Tb = void 0 !== Ab,
+          Eb = this.state[Rb],
+          Yb = this._encodeCtx;
+        return Yb.self = this, Yb.buffer = ab, Yb.it = bb, Yb.view = Ab, Yb.isEncodeAll = !0, Yb.hasView = Tb, Yb.emitFiltered = Ub, Yb.gen = ++this._fullSyncGen, Yb.initialOffset = Mb, Yb.rootChangeTree = Eb, KA(Yb, Eb), bb.offset > ab.byteLength ? (ab = this._resizeBuffer(ab, bb.offset), bb.offset = Mb, this.encodeFullSync(bb, ab, Ub, Ab, Mb)) : ab.subarray(0, bb.offset)
       }
-      _resizeBuffer(bb, cb) {
-        const sb = Math.ceil(cb / Sk.BUFFER_SIZE) * Sk.BUFFER_SIZE,
-          kb = new Uint8Array(sb);
-        return kb.set(bb), bb === this.sharedBuffer && (this.sharedBuffer = kb), kb
+      _resizeBuffer(bb, ab) {
+        const Ub = Math.ceil(ab / wA.BUFFER_SIZE) * wA.BUFFER_SIZE,
+          Ab = new Uint8Array(Ub);
+        return Ab.set(bb), bb === this.sharedBuffer && (this.sharedBuffer = Ab), Ab
       }
       encodeAll() {
         let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.sharedBuffer;
-        return this.encodeFullSync(bb, cb, !1)
+          ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.sharedBuffer;
+        return this.encodeFullSync(bb, ab, !1)
       }
-      encodeAllView(bb, cb, sb) {
-        let kb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
-        const Wb = sb.offset;
-        return kb = this.encodeFullSync(sb, kb, !0, bb, Wb), rk(kb.subarray(0, cb), kb.subarray(Wb, sb.offset))
+      encodeAllView(bb, ab, Ub) {
+        let Ab = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
+        const Mb = Ub.offset;
+        return Ab = this.encodeFullSync(Ub, Ab, !0, bb, Mb), tA(Ab.subarray(0, ab), Ab.subarray(Mb, Ub.offset))
       }
-      ensureCapacity(bb, cb) {
-        if (cb + Sk.BUFFER_SIZE <= bb.byteLength) return bb;
-        const sb = Math.ceil((cb + Sk.BUFFER_SIZE) / Sk.BUFFER_SIZE) * Sk.BUFFER_SIZE,
-          kb = new Uint8Array(sb);
-        return kb.set(bb.subarray(0, cb)), bb === this.sharedBuffer && (this.sharedBuffer = kb), kb
+      ensureCapacity(bb, ab) {
+        if (ab + wA.BUFFER_SIZE <= bb.byteLength) return bb;
+        const Ub = Math.ceil((ab + wA.BUFFER_SIZE) / wA.BUFFER_SIZE) * wA.BUFFER_SIZE,
+          Ab = new Uint8Array(Ub);
+        return Ab.set(bb.subarray(0, ab)), bb === this.sharedBuffer && (this.sharedBuffer = Ab), Ab
       }
-      encodeView(bb, cb, sb) {
-        let kb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer,
-          ab = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
-        const Tb = sb.offset;
+      encodeView(bb, ab, Ub) {
+        let Ab = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer,
+          Tb = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
+        const Eb = Ub.offset;
         this._emitStreamPriority(bb);
-        for (const Ib of bb.changes.keys()) {
-          const cb = bb.changes.get(Ib),
-            ab = this.root.changeTrees[Ib];
-          if (void 0 === ab) {
-            bb.changes.delete(Ib);
+        for (const Bb of bb.changes.keys()) {
+          const ab = bb.changes.get(Bb),
+            Tb = this.root.changeTrees[Bb];
+          if (void 0 === Tb) {
+            bb.changes.delete(Bb);
             continue
           }
-          if (0 === cb.size) continue;
-          const Tb = ab.encDescriptor,
-            Hb = Tb.encoder,
-            fb = Tb.metadata,
-            Mb = ab.ref,
-            nb = ab.refTarget;
-          kb = this.ensureCapacity(kb, sb.offset), kb[sb.offset++] = 255, cc.number(kb, Mb[Ub], sb);
-          for (const [Ib, mb] of cb) {
-            let cb;
-            if (-1 === Ib) {
-              const bb = nb.tmpItems,
-                cb = nb.deletedIndexes;
-              for (let Tb = 0; Tb < bb.length; Tb++) void 0 !== bb[Tb] && !0 !== cb[Tb] && Hb(this, kb, ab, Tb, Wb.ADD, sb, !1, !0, fb);
+          if (0 === ab.size) continue;
+          const Eb = Tb.encDescriptor,
+            eb = Eb.encoder,
+            vb = Eb.metadata,
+            Lb = Tb.ref,
+            Xb = Tb.refTarget;
+          Ab = this.ensureCapacity(Ab, Ub.offset), Ab[Ub.offset++] = 255, aa.number(Ab, Lb[Yb], Ub);
+          for (const [Bb, jb] of ab) {
+            let ab;
+            if (-1 === Bb) {
+              const bb = Xb.tmpItems,
+                ab = Xb.deletedIndexes;
+              for (let Eb = 0; Eb < bb.length; Eb++) void 0 !== bb[Eb] && !0 !== ab[Eb] && eb(this, Ab, Tb, Eb, Mb.ADD, Ub, !1, !0, vb);
               continue
             }
-            if ("number" === typeof Ib) cb = Ib;
+            if ("number" === typeof Bb) ab = Bb;
             else {
-              const sb = Ib.indexInParent(Mb);
-              if (void 0 === sb) continue;
-              if (cb = sb, mb === Wb.ADD && ab.getChange(cb) === Wb.DELETE) {
-                bb.changes.delete(Ib.ref[Ub]);
+              const Ub = Bb.indexInParent(Lb);
+              if (void 0 === Ub) continue;
+              if (ab = Ub, jb === Mb.ADD && Tb.getChange(ab) === Mb.DELETE) {
+                bb.changes.delete(Bb.ref[Yb]);
                 continue
               }
             }
-            Hb(this, kb, ab, cb, void 0 !== nb[Xb](cb) && mb || Wb.DELETE, sb, !1, !0, fb)
+            eb(this, Ab, Tb, ab, void 0 !== Xb[Pb](ab) && jb || Mb.DELETE, Ub, !1, !0, vb)
           }
         }
-        return bb.changes.clear(), kb = this.encode(sb, bb, kb), ab ? rk(kb.subarray(0, cb), kb.subarray(Tb, sb.offset)) : kb.subarray(Tb, sb.offset)
+        return bb.changes.clear(), Ab = this.encode(Ub, bb, Ab), Tb ? tA(Ab.subarray(0, ab), Ab.subarray(Eb, Ub.offset)) : Ab.subarray(Eb, Ub.offset)
       }
-      encodeUnreliableView(bb, cb, sb) {
-        let kb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
-        const Wb = sb.offset;
-        return kb = this.encodeUnreliable(sb, bb, kb, Wb), rk(kb.subarray(0, cb), kb.subarray(Wb, sb.offset))
+      encodeUnreliableView(bb, ab, Ub) {
+        let Ab = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
+        const Mb = Ub.offset;
+        return Ab = this.encodeUnreliable(Ub, bb, Ab, Mb), tA(Ab.subarray(0, ab), Ab.subarray(Mb, Ub.offset))
       }
-      _emitStreamBroadcast(bb, cb) {
-        const sb = this.root.streamTrees;
-        for (const kb of sb) {
-          const sb = kb,
-            ab = sb[lb],
-            Tb = sb[Ub];
-          if (void 0 === Tb) continue;
-          const Ib = sb._stream,
-            Hb = Ib.broadcastDeletes,
-            fb = Ib.broadcastPending,
-            Mb = Ib.sentBroadcast,
-            nb = Hb.size > 0,
-            mb = fb.size > 0,
-            Qb = ab.encDescriptor,
-            eb = Qb.encoder,
-            Cb = Qb.metadata;
-          if (nb || mb) {
-            if (bb[cb.offset++] = 255, cc.number(bb, Tb, cb), nb) {
-              for (const sb of Hb) eb(this, bb, ab, sb, Wb.DELETE, cb, !1, !1, Cb);
-              Hb.clear()
+      _emitStreamBroadcast(bb, ab) {
+        const Ub = this.root.streamTrees;
+        for (const Ab of Ub) {
+          const Ub = Ab,
+            Tb = Ub[Rb],
+            Eb = Ub[Yb];
+          if (void 0 === Eb) continue;
+          const Bb = Ub._stream,
+            eb = Bb.broadcastDeletes,
+            vb = Bb.broadcastPending,
+            Lb = Bb.sentBroadcast,
+            Xb = eb.size > 0,
+            jb = vb.size > 0,
+            kb = Tb.encDescriptor,
+            yb = kb.encoder,
+            Zb = kb.metadata;
+          if (Xb || jb) {
+            if (bb[ab.offset++] = 255, aa.number(bb, Eb, ab), Xb) {
+              for (const Ub of eb) yb(this, bb, Tb, Ub, Mb.DELETE, ab, !1, !1, Zb);
+              eb.clear()
             }
-            const kb = Ib.maxPerTick,
-              mb = [];
-            let Qb = 0;
-            const Nb = [];
-            for (const Tb of fb) {
-              if (Qb >= kb) break;
-              const Ub = sb[Xb](Tb);
-              void 0 !== Ub ? (eb(this, bb, ab, Tb, Wb.ADD, cb, !1, !1, Cb), Mb.add(Tb), mb.push(Ub), Nb.push(Tb), Qb++) : Nb.push(Tb)
+            const Ab = Bb.maxPerTick,
+              jb = [];
+            let kb = 0;
+            const Db = [];
+            for (const Eb of vb) {
+              if (kb >= Ab) break;
+              const Yb = Ub[Pb](Eb);
+              void 0 !== Yb ? (yb(this, bb, Tb, Eb, Mb.ADD, ab, !1, !1, Zb), Lb.add(Eb), jb.push(Yb), Db.push(Eb), kb++) : Db.push(Eb)
             }
-            for (const bb of Nb) fb.delete(bb);
-            for (const sb of mb) {
-              const kb = sb[lb];
-              if (void 0 === kb) continue;
-              const ab = sb[Ub];
-              if (void 0 === ab) continue;
-              bb[cb.offset++] = 255, cc.number(bb, ab, cb);
-              const Tb = kb.encDescriptor,
-                Ib = Tb.encoder,
-                Hb = Tb.metadata;
-              kb.forEachLive((sb => {
-                Rc.hasUnreliableAtIndex(Hb, sb) || Ib(this, bb, kb, sb, Wb.ADD, cb, !1, !1, Hb)
+            for (const bb of Db) vb.delete(bb);
+            for (const Ub of jb) {
+              const Ab = Ub[Rb];
+              if (void 0 === Ab) continue;
+              const Tb = Ub[Yb];
+              if (void 0 === Tb) continue;
+              bb[ab.offset++] = 255, aa.number(bb, Tb, ab);
+              const Eb = Ab.encDescriptor,
+                Bb = Eb.encoder,
+                eb = Eb.metadata;
+              Ab.forEachLive((Ub => {
+                Va.hasUnreliableAtIndex(eb, Ub) || Bb(this, bb, Ab, Ub, Mb.ADD, ab, !1, !1, eb)
               }))
             }
           }
-          for (const kb of Mb) {
-            const Wb = sb[Xb](kb);
-            if (void 0 === Wb) continue;
-            const ab = Wb[lb];
-            if (void 0 === ab || !ab.has()) continue;
-            const Tb = Wb[Ub];
-            if (void 0 === Tb) continue;
-            bb[cb.offset++] = 255, cc.number(bb, Tb, cb);
-            const Ib = ab.encDescriptor,
-              Hb = Ib.encoder,
-              fb = Ib.metadata;
-            ab.forEach(((sb, kb) => {
-              sb < 0 || Rc.hasUnreliableAtIndex(fb, sb) || Hb(this, bb, ab, sb, kb, cb, !1, !1, fb)
+          for (const Ab of Lb) {
+            const Mb = Ub[Pb](Ab);
+            if (void 0 === Mb) continue;
+            const Tb = Mb[Rb];
+            if (void 0 === Tb || !Tb.has()) continue;
+            const Eb = Mb[Yb];
+            if (void 0 === Eb) continue;
+            bb[ab.offset++] = 255, aa.number(bb, Eb, ab);
+            const Bb = Tb.encDescriptor,
+              eb = Bb.encoder,
+              vb = Bb.metadata;
+            Tb.forEach(((Ub, Ab) => {
+              Ub < 0 || Va.hasUnreliableAtIndex(vb, Ub) || eb(this, bb, Tb, Ub, Ab, ab, !1, !1, vb)
             }))
           }
         }
       }
       _emitStreamPriority(bb) {
-        const cb = this.root.streamTrees;
-        if (0 === cb.size) return;
-        const sb = bb.id;
-        for (const kb of cb) {
-          const cb = kb,
-            ab = cb._stream,
-            Tb = ab.pendingByView.get(sb);
-          if (void 0 === Tb || 0 === Tb.size) continue;
-          const Ib = ab.priorityByView?.get(sb),
-            Hb = void 0 !== Ib,
-            fb = ab.priority,
-            Mb = ab.maxPerTick,
-            nb = [],
-            mb = [];
-          if (Hb || void 0 !== fb) {
-            const sb = [],
-              kb = [];
-            let Wb = 0;
-            for (const ab of Tb) {
-              const Tb = cb[Xb](ab);
-              if (void 0 === Tb) {
-                mb.push(ab);
+        const ab = this.root.streamTrees;
+        if (0 === ab.size) return;
+        const Ub = bb.id;
+        for (const Ab of ab) {
+          const ab = Ab,
+            Tb = ab._stream,
+            Eb = Tb.pendingByView.get(Ub);
+          if (void 0 === Eb || 0 === Eb.size) continue;
+          const Bb = Tb.priorityByView?.get(Ub),
+            eb = void 0 !== Bb,
+            vb = Tb.priority,
+            Lb = Tb.maxPerTick,
+            Xb = [],
+            jb = [];
+          if (eb || void 0 !== vb) {
+            const Ub = [],
+              Ab = [];
+            let Mb = 0;
+            for (const Tb of Eb) {
+              const Eb = ab[Pb](Tb);
+              if (void 0 === Eb) {
+                jb.push(Tb);
                 continue
               }
-              const Ub = Hb ? Ib(Tb) : fb(bb, Tb);
-              if (Wb < Mb) {
-                let bb = Wb++;
-                for (; bb > 0 && kb[bb - 1] < Ub;) kb[bb] = kb[bb - 1], sb[bb] = sb[bb - 1], bb--;
-                kb[bb] = Ub, sb[bb] = ab
-              } else if (Ub > kb[Mb - 1]) {
-                let bb = Mb - 1;
-                for (; bb > 0 && kb[bb - 1] < Ub;) kb[bb] = kb[bb - 1], sb[bb] = sb[bb - 1], bb--;
-                kb[bb] = Ub, sb[bb] = ab
+              const Yb = eb ? Bb(Eb) : vb(bb, Eb);
+              if (Mb < Lb) {
+                let bb = Mb++;
+                for (; bb > 0 && Ab[bb - 1] < Yb;) Ab[bb] = Ab[bb - 1], Ub[bb] = Ub[bb - 1], bb--;
+                Ab[bb] = Yb, Ub[bb] = Tb
+              } else if (Yb > Ab[Lb - 1]) {
+                let bb = Lb - 1;
+                for (; bb > 0 && Ab[bb - 1] < Yb;) Ab[bb] = Ab[bb - 1], Ub[bb] = Ub[bb - 1], bb--;
+                Ab[bb] = Yb, Ub[bb] = Tb
               }
             }
-            for (let bb = 0; bb < Wb; bb++) nb.push(sb[bb])
+            for (let bb = 0; bb < Mb; bb++) Xb.push(Ub[bb])
           } else
-            for (const bb of Tb) {
-              if (nb.length >= Mb) break;
-              nb.push(bb)
+            for (const bb of Eb) {
+              if (Xb.length >= Lb) break;
+              Xb.push(bb)
             }
-          for (const bb of mb) Tb.delete(bb);
-          const Qb = nb.length;
-          let eb = ab.sentByView.get(sb);
-          void 0 === eb && (eb = new Set, ab.sentByView.set(sb, eb));
-          for (let sb = 0; sb < Qb; sb++) {
-            const kb = nb[sb],
-              ab = cb[Xb](kb);
-            if (void 0 === ab) {
-              Tb.delete(kb);
+          for (const bb of jb) Eb.delete(bb);
+          const kb = Xb.length;
+          let yb = Tb.sentByView.get(Ub);
+          void 0 === yb && (yb = new Set, Tb.sentByView.set(Ub, yb));
+          for (let Ub = 0; Ub < kb; Ub++) {
+            const Ab = Xb[Ub],
+              Tb = ab[Pb](Ab);
+            if (void 0 === Tb) {
+              Eb.delete(Ab);
               continue
             }
-            bb._addImmediate(ab);
-            const Ib = ab[lb];
-            if (void 0 !== Ib) {
-              const cb = ab[Ub];
-              let sb = bb.changes.get(cb);
-              void 0 === sb && (sb = new Map, bb.changes.set(cb, sb));
-              const kb = Ib.metadata;
-              Ib.forEachLive((bb => {
-                Rc.hasUnreliableAtIndex(kb, bb) || sb.set(bb, Wb.ADD)
+            bb._addImmediate(Tb);
+            const Bb = Tb[Rb];
+            if (void 0 !== Bb) {
+              const ab = Tb[Yb];
+              let Ub = bb.changes.get(ab);
+              void 0 === Ub && (Ub = new Map, bb.changes.set(ab, Ub));
+              const Ab = Bb.metadata;
+              Bb.forEachLive((bb => {
+                Va.hasUnreliableAtIndex(Ab, bb) || Ub.set(bb, Mb.ADD)
               }))
             }
-            Tb.delete(kb), eb.add(kb)
+            Eb.delete(Ab), yb.add(Ab)
           }
         }
       }
       discardChanges() {
         const bb = this.root.changes;
-        let cb = bb.next;
-        const sb = this.root;
-        for (; cb;) {
-          const bb = cb.next;
-          cb.changeTree.endEncode(), sb.releaseNode(cb), cb = bb
+        let ab = bb.next;
+        const Ub = this.root;
+        for (; ab;) {
+          const bb = ab.next;
+          ab.changeTree.endEncode(), Ub.releaseNode(ab), ab = bb
         }
         bb.next = void 0, bb.tail = void 0
       }
       discardUnreliableChanges() {
         const bb = this.root.unreliableChanges;
-        let cb = bb.next;
-        const sb = this.root;
-        for (; cb;) {
-          const bb = cb.next;
-          cb.changeTree.endEncodeUnreliable(), sb.releaseNode(cb), cb = bb
+        let ab = bb.next;
+        const Ub = this.root;
+        for (; ab;) {
+          const bb = ab.next;
+          ab.changeTree.endEncodeUnreliable(), Ub.releaseNode(ab), ab = bb
         }
         bb.next = void 0, bb.tail = void 0
       }
-      tryEncodeTypeId(bb, cb, sb, kb) {
-        const Wb = this.context.getTypeId(cb),
-          ab = this.context.getTypeId(sb);
-        void 0 !== ab ? Wb !== ab && (bb[kb.offset++] = 213, cc.number(bb, ab, kb)) : console.warn(`@colyseus/schema WARNING: Class "${sb.name}" is not registered on TypeRegistry - Please either tag the class with @entity or define a @type() field.`)
+      tryEncodeTypeId(bb, ab, Ub, Ab) {
+        const Mb = this.context.getTypeId(ab),
+          Tb = this.context.getTypeId(Ub);
+        void 0 !== Tb ? Mb !== Tb && (bb[Ab.offset++] = 213, aa.number(bb, Tb, Ab)) : console.warn(`@colyseus/schema WARNING: Class "${Ub.name}" is not registered on TypeRegistry - Please either tag the class with @entity or define a @type() field.`)
       }
       get hasChanges() {
         return void 0 !== this.root.changes.next || this._hasStreamBacklog()
@@ -6581,26 +6581,26 @@ export const modules = {
       _hasStreamBacklog() {
         const bb = this.root;
         if (0 === bb.streamTrees.size) return !1;
-        const cb = 0 === bb.activeViews.size;
-        for (const sb of bb.streamTrees)
-          if (cb ? Pc(sb) : yc(sb, bb)) return !0;
+        const ab = 0 === bb.activeViews.size;
+        for (const Ub of bb.streamTrees)
+          if (ab ? da(Ub) : Ia(Ub, bb)) return !0;
         return !1
       }
       get hasUnreliableChanges() {
         return void 0 !== this.root.unreliableChanges.next
       }
     }
-    class Rk extends Error {
+    class sA extends Error {
       constructor(bb) {
         super(bb), this.name = "DecodingWarning"
       }
     }
-    const vk = {
+    const gA = {
       value: 0,
       enumerable: !1,
       writable: !0
     };
-    class Fk {
+    class CA {
       refs = new Map;
       refCount = {};
       deletedRefs = new Set;
@@ -6609,23 +6609,23 @@ export const modules = {
       getNextUniqueId() {
         return this.nextUniqueId++
       }
-      addRef(bb, cb) {
-        let sb = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        this.refs.set(bb, cb), void 0 === cb[Ub] ? (vk.value = bb, Object.defineProperty(cb, Ub, vk)) : cb[Ub] !== bb && (cb[Ub] = bb), sb && (this.refCount[bb] = (this.refCount[bb] || 0) + 1), this.deletedRefs.has(bb) && this.deletedRefs.delete(bb)
+      addRef(bb, ab) {
+        let Ub = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        this.refs.set(bb, ab), void 0 === ab[Yb] ? (gA.value = bb, Object.defineProperty(ab, Yb, gA)) : ab[Yb] !== bb && (ab[Yb] = bb), Ub && (this.refCount[bb] = (this.refCount[bb] || 0) + 1), this.deletedRefs.has(bb) && this.deletedRefs.delete(bb)
       }
       removeRef(bb) {
-        const cb = this.refCount[bb];
-        if (void 0 !== cb)
-          if (0 !== cb)(this.refCount[bb] = cb - 1) <= 0 && this.deletedRefs.add(bb);
+        const ab = this.refCount[bb];
+        if (void 0 !== ab)
+          if (0 !== ab)(this.refCount[bb] = ab - 1) <= 0 && this.deletedRefs.add(bb);
           else try {
-            const cb = this.refs.get(bb);
-            throw new Rk(`trying to remove refId '${bb}' with 0 refCount (${cb.constructor.name}: ${JSON.stringify(cb)})`)
-          } catch (IW) {
-            console.warn(IW)
+            const ab = this.refs.get(bb);
+            throw new sA(`trying to remove refId '${bb}' with 0 refCount (${ab.constructor.name}: ${JSON.stringify(ab)})`)
+          } catch (TM) {
+            console.warn(TM)
           } else try {
-            throw new Rk("trying to remove refId that doesn't exist: " + bb)
-          } catch (IW) {
-            console.warn(IW)
+            throw new sA("trying to remove refId that doesn't exist: " + bb)
+          } catch (TM) {
+            console.warn(TM)
           }
       }
       clearRefs() {
@@ -6634,1154 +6634,1154 @@ export const modules = {
       garbageCollectDeletedRefs() {
         this.deletedRefs.forEach((bb => {
           if (this.refCount[bb] > 0) return;
-          const cb = this.refs.get(bb),
-            sb = cb.constructor[Symbol.metadata];
-          if (null != sb)
-            for (const kb in sb) {
-              const bb = cb[sb[kb].name];
+          const ab = this.refs.get(bb),
+            Ub = ab.constructor[Symbol.metadata];
+          if (null != Ub)
+            for (const Ab in Ub) {
+              const bb = ab[Ub[Ab].name];
               if ("object" === typeof bb && bb) {
-                const cb = bb[Ub];
-                void 0 === cb || this.deletedRefs.has(cb) || this.removeRef(cb)
+                const ab = bb[Yb];
+                void 0 === ab || this.deletedRefs.has(ab) || this.removeRef(ab)
               }
-            } else "function" === typeof cb[Qb] && Array.from(cb.values()).forEach((bb => {
-              const cb = bb[Ub];
-              void 0 === cb || this.deletedRefs.has(cb) || this.removeRef(cb)
+            } else "function" === typeof ab[kb] && Array.from(ab.values()).forEach((bb => {
+              const ab = bb[Yb];
+              void 0 === ab || this.deletedRefs.has(ab) || this.removeRef(ab)
             }));
           this.refs.delete(bb), delete this.refCount[bb], delete this.callbacks[bb]
         })), this.deletedRefs.clear()
       }
-      addCallback(bb, cb, sb) {
+      addCallback(bb, ab, Ub) {
         if (void 0 === bb) {
-          const bb = "number" === typeof cb ? Wb[cb] : cb;
+          const bb = "number" === typeof ab ? Mb[ab] : ab;
           throw new Error(`Can't addCallback on '${bb}' (refId is undefined)`)
         }
-        return this.callbacks[bb] || (this.callbacks[bb] = {}), this.callbacks[bb][cb] || (this.callbacks[bb][cb] = []), this.callbacks[bb][cb].push(sb), () => this.removeCallback(bb, cb, sb)
+        return this.callbacks[bb] || (this.callbacks[bb] = {}), this.callbacks[bb][ab] || (this.callbacks[bb][ab] = []), this.callbacks[bb][ab].push(Ub), () => this.removeCallback(bb, ab, Ub)
       }
-      removeCallback(bb, cb, sb) {
-        const kb = this.callbacks?.[bb]?.[cb]?.indexOf(sb);
-        void 0 !== kb && -1 !== kb && ik(this.callbacks[bb][cb], kb)
+      removeCallback(bb, ab, Ub) {
+        const Ab = this.callbacks?.[bb]?.[ab]?.indexOf(Ub);
+        void 0 !== Ab && -1 !== Ab && FA(this.callbacks[bb][ab], Ab)
       }
     }
-    class xk {
+    class VA {
       context;
       state;
       root;
       currentRefId = 0;
-      TY;
+      zN;
       resyncVisited = null;
       resyncDamaged = !1;
-      constructor(bb, cb) {
-        this.setState(bb), this.context = cb || new qc(bb.constructor)
+      constructor(bb, ab) {
+        this.setState(bb), this.context = ab || new oa(bb.constructor)
       }
       setState(bb) {
-        this.state = bb, this.root = new Fk, this.root.addRef(0, bb)
+        this.state = bb, this.root = new CA, this.root.addRef(0, bb)
       }
       decode(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
             offset: 0
           },
-          sb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.state;
-        const Wb = void 0 !== this.TY ? [] : null,
-          ab = this.root,
-          Tb = bb.byteLength;
-        let Ub = sb.constructor[fb];
-        for (this.currentRefId = 0; cb.offset < Tb;) {
-          if (bb[cb.offset] == kb) {
-            cb.offset++, sb[Vb]?.();
-            const kb = Nc.number(bb, cb),
-              Wb = ab.refs.get(kb);
-            Wb ? (sb = Wb, Ub = sb.constructor[fb], this.currentRefId = kb) : (console.error(`"refId" not found: ${kb}`, {
-              previousRef: sb,
+          Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.state;
+        const Mb = void 0 !== this.zN ? [] : null,
+          Tb = this.root,
+          Eb = bb.byteLength;
+        let Yb = Ub.constructor[vb];
+        for (this.currentRefId = 0; ab.offset < Eb;) {
+          if (bb[ab.offset] == Ab) {
+            ab.offset++, Ub[zb]?.();
+            const Ab = Da.number(bb, ab),
+              Mb = Tb.refs.get(Ab);
+            Mb ? (Ub = Mb, Yb = Ub.constructor[vb], this.currentRefId = Ab) : (console.error(`"refId" not found: ${Ab}`, {
+              previousRef: Ub,
               previousRefId: this.currentRefId
-            }), console.warn("Please report this issue to the developers."), this.skipCurrentStructure(bb, cb, Tb));
+            }), console.warn("Please report this issue to the developers."), this.skipCurrentStructure(bb, ab, Eb));
             continue
-          } - 1 !== Ub(this, bb, cb, sb, Wb) || (console.warn("@colyseus/schema: definition mismatch"), this.skipCurrentStructure(bb, cb, Tb))
+          } - 1 !== Yb(this, bb, ab, Ub, Mb) || (console.warn("@colyseus/schema: definition mismatch"), this.skipCurrentStructure(bb, ab, Eb))
         }
-        return sb[Vb]?.(), null !== this.resyncVisited && function(bb, cb) {
-          bb.resyncDamaged ? console.warn("@colyseus/schema: resync sweep skipped \u2014 parts of the payload could not be decoded. Stale entries may persist until the next resync.") : ds(bb, bb.state, new Set, cb)
-        }(this, Wb), null !== Wb && this.TY?.(Wb), ab.garbageCollectDeletedRefs(), Wb
+        return Ub[zb]?.(), null !== this.resyncVisited && function(bb, ab) {
+          bb.resyncDamaged ? console.warn("@colyseus/schema: resync sweep skipped \u2014 parts of the payload could not be decoded. Stale entries may persist until the next resync.") : oU(bb, bb.state, new Set, ab)
+        }(this, Mb), null !== Mb && this.zN?.(Mb), Tb.garbageCollectDeletedRefs(), Mb
       }
       decodeResync(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
           offset: 0
         };
         this.resyncVisited = new Map, this.resyncDamaged = !1;
         try {
-          return this.decode(bb, cb)
+          return this.decode(bb, ab)
         } finally {
           this.resyncVisited = null
         }
       }
-      skipCurrentStructure(bb, cb, sb) {
+      skipCurrentStructure(bb, ab, Ub) {
         null !== this.resyncVisited && (this.resyncDamaged = !0);
-        const Wb = {
-          offset: cb.offset
+        const Mb = {
+          offset: ab.offset
         };
-        for (; cb.offset < sb && (bb[cb.offset] !== kb || (Wb.offset = cb.offset + 1, !this.root.refs.has(Nc.number(bb, Wb))));) cb.offset++
+        for (; ab.offset < Ub && (bb[ab.offset] !== Ab || (Mb.offset = ab.offset + 1, !this.root.refs.has(Da.number(bb, Mb))));) ab.offset++
       }
-      getInstanceType(bb, cb, sb) {
-        let kb;
-        if (213 === bb[cb.offset]) {
-          cb.offset++;
-          const sb = Nc.number(bb, cb);
-          kb = this.context.get(sb)
+      getInstanceType(bb, ab, Ub) {
+        let Ab;
+        if (213 === bb[ab.offset]) {
+          ab.offset++;
+          const Ub = Da.number(bb, ab);
+          Ab = this.context.get(Ub)
         }
-        return kb || sb
+        return Ab || Ub
       }
       createInstanceOfType(bb) {
         return bb.initializeForDecoder()
       }
-      removeChildRefs(bb, cb) {
-        const sb = "string" !== typeof bb[Qb],
-          kb = bb[Ub];
-        bb.forEach(((ab, Tb) => {
-          cb?.push({
+      removeChildRefs(bb, ab) {
+        const Ub = "string" !== typeof bb[kb],
+          Ab = bb[Yb];
+        bb.forEach(((Tb, Eb) => {
+          ab?.push({
             ref: bb,
-            refId: kb,
-            op: Wb.DELETE,
-            field: Tb,
+            refId: Ab,
+            op: Mb.DELETE,
+            field: Eb,
             value: void 0,
-            previousValue: ab
-          }), sb && this.root.removeRef(ab[Ub])
+            previousValue: Tb
+          }), Ub && this.root.removeRef(Tb[Yb])
         }))
       }
     }
-    const jk = tk({
-        min: lk.float64(),
-        max: lk.float64(),
-        bits: lk.uint8(),
-        mode: lk.uint8()
+    const OA = NA({
+        min: XA.float64(),
+        max: XA.float64(),
+        bits: XA.uint8(),
+        mode: XA.uint8()
       }, "QuantizedDescriptor"),
-      pk = tk({
-        name: lk.string(),
-        type: lk.string(),
-        referencedType: lk.number(),
-        childPrimitive: lk.string(),
-        quantized: lk.ref(jk).optional()
+      cA = NA({
+        name: XA.string(),
+        type: XA.string(),
+        referencedType: XA.number(),
+        childPrimitive: XA.string(),
+        quantized: XA.ref(OA).optional()
       }, "ReflectionField"),
-      bW = tk({
-        id: lk.number(),
-        extendsId: lk.number(),
-        fields: lk.array(pk)
+      JA = NA({
+        id: XA.number(),
+        extendsId: XA.number(),
+        fields: XA.array(cA)
       }, "ReflectionType"),
-      cW = tk({
-        types: lk.array(bW),
-        rootType: lk.number()
+      nA = NA({
+        types: XA.array(JA),
+        rootType: XA.number()
       }, "Reflection");
 
-    function sW(bb) {
-      const cb = bb.root,
-        sb = cb.callbacks,
-        kb = new WeakMap;
-      let ab;
+    function SA(bb) {
+      const ab = bb.root,
+        Ub = ab.callbacks,
+        Ab = new WeakMap;
+      let Tb;
 
-      function Tb(bb, sb) {
-        let Hb = sb.instance?.constructor[Symbol.metadata] || bb,
-          fb = sb.instance && "function" === typeof sb.instance.forEach || bb && !Pk.is(bb);
-        if (Hb && !fb) {
-          const bb = function(bb, Wb, Tb, Ib) {
-            return Ib && void 0 !== sb.instance[Wb] && !kb.has(ab) && Tb(sb.instance[Wb], void 0), cb.addCallback(bb[Ub], Wb, Tb)
+      function Eb(bb, Ub) {
+        let eb = Ub.instance?.constructor[Symbol.metadata] || bb,
+          vb = Ub.instance && "function" === typeof Ub.instance.forEach || bb && !HA.is(bb);
+        if (eb && !vb) {
+          const bb = function(bb, Mb, Eb, Bb) {
+            return Bb && void 0 !== Ub.instance[Mb] && !Ab.has(Tb) && Eb(Ub.instance[Mb], void 0), ab.addCallback(bb[Yb], Mb, Eb)
           };
           return new Proxy({
-            listen: function(cb, Wb) {
-              let Tb = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-              if (sb.instance) return bb(sb.instance, cb, Wb, Tb);
+            listen: function(ab, Mb) {
+              let Eb = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+              if (Ub.instance) return bb(Ub.instance, ab, Mb, Eb);
               {
-                let Ub = () => {};
-                return sb.onInstanceAvailable(((sb, Ib) => {
-                  Ub = bb(sb, cb, Wb, Tb && Ib && !kb.has(ab))
-                })), () => Ub()
+                let Yb = () => {};
+                return Ub.onInstanceAvailable(((Ub, Bb) => {
+                  Yb = bb(Ub, ab, Mb, Eb && Bb && !Ab.has(Tb))
+                })), () => Yb()
               }
             },
             onChange: function(bb) {
-              return cb.addCallback(sb.instance[Ub], Wb.REPLACE, bb)
+              return ab.addCallback(Ub.instance[Yb], Mb.REPLACE, bb)
             },
-            bindTo: function(bb, kb) {
-              return kb || (kb = Object.keys(Hb).map((bb => Hb[bb].name))), cb.addCallback(sb.instance[Ub], Wb.REPLACE, (() => {
-                kb.forEach((cb => bb[cb] = sb.instance[cb]))
+            bindTo: function(bb, Ab) {
+              return Ab || (Ab = Object.keys(eb).map((bb => eb[bb].name))), ab.addCallback(Ub.instance[Yb], Mb.REPLACE, (() => {
+                Ab.forEach((ab => bb[ab] = Ub.instance[ab]))
               }))
             }
           }, {
-            get(bb, cb) {
-              const kb = Hb[Hb[cb]];
-              if (kb) {
-                const bb = sb.instance?.[cb],
-                  Wb = kb => {
-                    const Wb = Ib(sb.instance).listen(cb, ((bb, cb) => {
-                      kb(bb, !1), Wb?.()
+            get(bb, ab) {
+              const Ab = eb[eb[ab]];
+              if (Ab) {
+                const bb = Ub.instance?.[ab],
+                  Mb = Ab => {
+                    const Mb = Bb(Ub.instance).listen(ab, ((bb, ab) => {
+                      Ab(bb, !1), Mb?.()
                     }), !1);
-                    void 0 !== bb?.[Ub] && kb(bb, !0)
+                    void 0 !== bb?.[Yb] && Ab(bb, !0)
                   };
-                return Tb(kb.type, {
-                  instance: void 0 !== bb?.[Ub] && bb,
-                  parentInstance: sb.instance,
-                  onInstanceAvailable: Wb
+                return Eb(Ab.type, {
+                  instance: void 0 !== bb?.[Yb] && bb,
+                  parentInstance: Ub.instance,
+                  onInstanceAvailable: Mb
                 })
               }
-              return bb[cb]
+              return bb[ab]
             },
-            has: (bb, cb) => void 0 !== Hb[cb],
-            set(bb, cb, sb) {
+            has: (bb, ab) => void 0 !== eb[ab],
+            set(bb, ab, Ub) {
               throw new Error("not allowed")
             },
-            deleteProperty(bb, cb) {
+            deleteProperty(bb, ab) {
               throw new Error("not allowed")
             }
           })
         } {
-          const bb = function(bb, sb, Tb) {
-              return Tb && bb.forEach(((bb, cb) => sb(bb, cb))), cb.addCallback(bb[Ub], Wb.ADD, ((bb, cb) => {
-                kb.set(sb, !0), ab = sb, sb(bb, cb), kb.delete(sb), ab = void 0
+          const bb = function(bb, Ub, Eb) {
+              return Eb && bb.forEach(((bb, ab) => Ub(bb, ab))), ab.addCallback(bb[Yb], Mb.ADD, ((bb, ab) => {
+                Ab.set(Ub, !0), Tb = Ub, Ub(bb, ab), Ab.delete(Ub), Tb = void 0
               }))
             },
-            Tb = function(bb, sb) {
-              return cb.addCallback(bb[Ub], Wb.DELETE, sb)
+            Eb = function(bb, Ub) {
+              return ab.addCallback(bb[Yb], Mb.DELETE, Ub)
             },
-            Ib = function(bb, sb) {
-              return cb.addCallback(bb[Ub], Wb.REPLACE, sb)
+            Bb = function(bb, Ub) {
+              return ab.addCallback(bb[Yb], Mb.REPLACE, Ub)
             };
           return new Proxy({
-            ZN: function(cb) {
-              let Wb = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-              if (sb.instance) return bb(sb.instance, cb, Wb && !kb.has(ab));
-              if (sb.onInstanceAvailable) {
-                let Tb = () => {};
-                return sb.onInstanceAvailable(((sb, Ub) => {
-                  Tb = bb(sb, cb, Wb && Ub && !kb.has(ab))
-                })), () => Tb()
+            uZ: function(ab) {
+              let Mb = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+              if (Ub.instance) return bb(Ub.instance, ab, Mb && !Ab.has(Tb));
+              if (Ub.onInstanceAvailable) {
+                let Eb = () => {};
+                return Ub.onInstanceAvailable(((Ub, Yb) => {
+                  Eb = bb(Ub, ab, Mb && Yb && !Ab.has(Tb))
+                })), () => Eb()
               }
             },
-            wL: function(bb) {
-              if (sb.instance) return Tb(sb.instance, bb);
-              if (sb.onInstanceAvailable) {
-                let cb = () => {};
-                return sb.onInstanceAvailable((sb => {
-                  cb = Tb(sb, bb)
-                })), () => cb()
+            kp: function(bb) {
+              if (Ub.instance) return Eb(Ub.instance, bb);
+              if (Ub.onInstanceAvailable) {
+                let ab = () => {};
+                return Ub.onInstanceAvailable((Ub => {
+                  ab = Eb(Ub, bb)
+                })), () => ab()
               }
             },
             onChange: function(bb) {
-              if (sb.instance) return Ib(sb.instance, bb);
-              if (sb.onInstanceAvailable) {
-                let cb = () => {};
-                return sb.onInstanceAvailable((sb => {
-                  cb = Ib(sb, bb)
-                })), () => cb()
+              if (Ub.instance) return Bb(Ub.instance, bb);
+              if (Ub.onInstanceAvailable) {
+                let ab = () => {};
+                return Ub.onInstanceAvailable((Ub => {
+                  ab = Bb(Ub, bb)
+                })), () => ab()
               }
             }
           }, {
-            get(bb, cb) {
-              if (!bb[cb]) throw new Error(`Can't access '${cb}' through callback proxy. access the instance directly.`);
-              return bb[cb]
+            get(bb, ab) {
+              if (!bb[ab]) throw new Error(`Can't access '${ab}' through callback proxy. access the instance directly.`);
+              return bb[ab]
             },
-            has: (bb, cb) => void 0 !== bb[cb],
-            set(bb, cb, sb) {
+            has: (bb, ab) => void 0 !== bb[ab],
+            set(bb, ab, Ub) {
               throw new Error("not allowed")
             },
-            deleteProperty(bb, cb) {
+            deleteProperty(bb, ab) {
               throw new Error("not allowed")
             }
           })
         }
       }
 
-      function Ib(bb) {
-        return Tb(void 0, {
+      function Bb(bb) {
+        return Eb(void 0, {
           instance: bb
         })
       }
-      return bb.TY = function(bb) {
-        const cb = new Set;
-        for (let kb = 0, ab = bb.length; kb < ab; kb++) {
-          const ab = bb[kb],
-            Tb = ab.refId,
-            Ib = ab.ref,
-            Hb = sb[Tb];
-          if (Hb) {
-            if ((ab.op & Wb.DELETE) === Wb.DELETE && Pk.isSchema(ab.previousValue)) {
-              const bb = sb[ab.previousValue[Ub]]?.[Wb.DELETE];
-              for (let cb = bb?.length - 1; cb >= 0; cb--) bb[cb]()
+      return bb.zN = function(bb) {
+        const ab = new Set;
+        for (let Ab = 0, Tb = bb.length; Ab < Tb; Ab++) {
+          const Tb = bb[Ab],
+            Eb = Tb.refId,
+            Bb = Tb.ref,
+            eb = Ub[Eb];
+          if (eb) {
+            if ((Tb.op & Mb.DELETE) === Mb.DELETE && HA.isSchema(Tb.previousValue)) {
+              const bb = Ub[Tb.previousValue[Yb]]?.[Mb.DELETE];
+              for (let ab = bb?.length - 1; ab >= 0; ab--) bb[ab]()
             }
-            if (Pk.isSchema(Ib)) {
-              if (!cb.has(Tb)) {
-                const bb = Hb?.[Wb.REPLACE];
-                for (let cb = bb?.length - 1; cb >= 0; cb--) bb[cb]()
+            if (HA.isSchema(Bb)) {
+              if (!ab.has(Eb)) {
+                const bb = eb?.[Mb.REPLACE];
+                for (let ab = bb?.length - 1; ab >= 0; ab--) bb[ab]()
               }
-              if (Hb.hasOwnProperty(ab.field)) {
-                const bb = Hb[ab.field];
-                for (let cb = bb?.length - 1; cb >= 0; cb--) bb[cb](ab.value, ab.previousValue)
+              if (eb.hasOwnProperty(Tb.field)) {
+                const bb = eb[Tb.field];
+                for (let ab = bb?.length - 1; ab >= 0; ab--) bb[ab](Tb.value, Tb.previousValue)
               }
             } else {
-              if ((ab.op & Wb.DELETE) === Wb.DELETE) {
-                if (void 0 !== ab.previousValue) {
-                  const bb = Hb[Wb.DELETE];
-                  for (let cb = bb?.length - 1; cb >= 0; cb--) bb[cb](ab.previousValue, ab.dynamicIndex ?? ab.field)
+              if ((Tb.op & Mb.DELETE) === Mb.DELETE) {
+                if (void 0 !== Tb.previousValue) {
+                  const bb = eb[Mb.DELETE];
+                  for (let ab = bb?.length - 1; ab >= 0; ab--) bb[ab](Tb.previousValue, Tb.dynamicIndex ?? Tb.field)
                 }
-                if ((ab.op & Wb.ADD) === Wb.ADD) {
-                  const bb = Hb[Wb.ADD];
-                  for (let cb = bb?.length - 1; cb >= 0; cb--) bb[cb](ab.value, ab.dynamicIndex ?? ab.field)
+                if ((Tb.op & Mb.ADD) === Mb.ADD) {
+                  const bb = eb[Mb.ADD];
+                  for (let ab = bb?.length - 1; ab >= 0; ab--) bb[ab](Tb.value, Tb.dynamicIndex ?? Tb.field)
                 }
-              } else if ((ab.op & Wb.ADD) === Wb.ADD && ab.previousValue !== ab.value) {
-                const bb = Hb[Wb.ADD];
-                for (let cb = bb?.length - 1; cb >= 0; cb--) bb[cb](ab.value, ab.dynamicIndex ?? ab.field)
+              } else if ((Tb.op & Mb.ADD) === Mb.ADD && Tb.previousValue !== Tb.value) {
+                const bb = eb[Mb.ADD];
+                for (let ab = bb?.length - 1; ab >= 0; ab--) bb[ab](Tb.value, Tb.dynamicIndex ?? Tb.field)
               }
-              if (ab.value !== ab.previousValue && (void 0 !== ab.value || void 0 !== ab.previousValue)) {
-                const bb = Hb[Wb.REPLACE];
-                for (let cb = bb?.length - 1; cb >= 0; cb--) bb[cb](ab.value, ab.dynamicIndex ?? ab.field)
+              if (Tb.value !== Tb.previousValue && (void 0 !== Tb.value || void 0 !== Tb.previousValue)) {
+                const bb = eb[Mb.REPLACE];
+                for (let ab = bb?.length - 1; ab >= 0; ab--) bb[ab](Tb.value, Tb.dynamicIndex ?? Tb.field)
               }
             }
-            cb.add(Tb)
+            ab.add(Eb)
           }
         }
-      }, Ib
+      }, Bb
     }
 
-    function kW(bb, cb) {
-      bb.TY = cb
+    function bM(bb, ab) {
+      bb.zN = ab
     }
-    cW.encode = function(bb) {
-      let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+    nA.encode = function(bb) {
+      let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
         offset: 0
       };
-      const sb = bb.context,
-        kb = new cW,
-        Wb = new Sk(kb),
-        ab = sb.schemas.get(bb.state.constructor);
-      ab > 0 && (kb.rootType = ab);
-      const Tb = new Set,
-        Ub = {},
-        Ib = bb => {
-          if (void 0 === bb.extendsId || Tb.has(bb.extendsId)) {
-            Tb.add(bb.id), kb.types.push(bb);
-            const cb = Ub[bb.id];
-            void 0 !== cb && (delete Ub[bb.id], cb.forEach((bb => Ib(bb))))
-          } else void 0 === Ub[bb.extendsId] && (Ub[bb.extendsId] = []), Ub[bb.extendsId].push(bb)
+      const Ub = bb.context,
+        Ab = new nA,
+        Mb = new wA(Ab),
+        Tb = Ub.schemas.get(bb.state.constructor);
+      Tb > 0 && (Ab.rootType = Tb);
+      const Eb = new Set,
+        Yb = {},
+        Bb = bb => {
+          if (void 0 === bb.extendsId || Eb.has(bb.extendsId)) {
+            Eb.add(bb.id), Ab.types.push(bb);
+            const ab = Yb[bb.id];
+            void 0 !== ab && (delete Yb[bb.id], ab.forEach((bb => Bb(bb))))
+          } else void 0 === Yb[bb.extendsId] && (Yb[bb.extendsId] = []), Yb[bb.extendsId].push(bb)
         };
-      sb.schemas.forEach(((bb, cb) => {
-        const kb = new bW;
-        kb.id = Number(bb);
-        const Wb = Object.getPrototypeOf(cb);
-        Wb !== Pk && (kb.extendsId = sb.schemas.get(Wb));
-        const ab = cb[Symbol.metadata];
-        if (ab !== Wb[Symbol.metadata]) {
-          const bb = ab[gb] ?? -1;
-          for (let cb = 0; cb <= bb; cb++) {
-            const bb = ab[cb];
+      Ub.schemas.forEach(((bb, ab) => {
+        const Ab = new JA;
+        Ab.id = Number(bb);
+        const Mb = Object.getPrototypeOf(ab);
+        Mb !== HA && (Ab.extendsId = Ub.schemas.get(Mb));
+        const Tb = ab[Symbol.metadata];
+        if (Tb !== Mb[Symbol.metadata]) {
+          const bb = Tb[Nb] ?? -1;
+          for (let ab = 0; ab <= bb; ab++) {
+            const bb = Tb[ab];
             if (void 0 === bb) continue;
-            const Wb = bb.name;
-            if (!Object.prototype.hasOwnProperty.call(ab, Wb)) continue;
-            const Tb = new pk;
-            let Ub;
-            if (Tb.name = Wb, "string" === typeof bb.type) Ub = bb.type;
-            else if (Gc(bb.type)) {
-              const cb = bb.type.quantized;
-              Ub = "quantized";
-              const sb = new jk;
-              sb.min = cb.min, sb.max = cb.max, sb.bits = cb.bits, sb.mode = cb.wrap ? 1 : 0, Tb.quantized = sb
+            const Mb = bb.name;
+            if (!Object.prototype.hasOwnProperty.call(Tb, Mb)) continue;
+            const Eb = new cA;
+            let Yb;
+            if (Eb.name = Mb, "string" === typeof bb.type) Yb = bb.type;
+            else if (qa(bb.type)) {
+              const ab = bb.type.quantized;
+              Yb = "quantized";
+              const Ub = new OA;
+              Ub.min = ab.min, Ub.max = ab.max, Ub.bits = ab.bits, Ub.mode = ab.wrap ? 1 : 0, Eb.quantized = Ub
             } else {
-              let cb;
-              Pk.is(bb.type) ? (Ub = "ref", cb = bb.type) : (Ub = Object.keys(bb.type)[0], "string" === typeof bb.type[Ub] ? Tb.childPrimitive = bb.type[Ub] : cb = bb.type[Ub]), Tb.referencedType = cb ? sb.getTypeId(cb) : -1
+              let ab;
+              HA.is(bb.type) ? (Yb = "ref", ab = bb.type) : (Yb = Object.keys(bb.type)[0], "string" === typeof bb.type[Yb] ? Eb.childPrimitive = bb.type[Yb] : ab = bb.type[Yb]), Eb.referencedType = ab ? Ub.getTypeId(ab) : -1
             }
-            Tb.type = Ub, kb.fields.push(Tb)
+            Eb.type = Yb, Ab.fields.push(Eb)
           }
         }
-        Ib(kb)
+        Bb(Ab)
       }));
-      for (const Hb in Ub) Ub[Hb].forEach((bb => kb.types.push(bb)));
-      return Wb.encodeAll(cb).slice(0, cb.offset)
-    }, cW.decode = function(bb, cb) {
-      const sb = new cW;
-      new xk(sb).decode(bb, cb);
-      const kb = new qc;
-      sb.types.forEach((bb => {
-        const cb = kb.get(bb.extendsId) ?? Pk,
-          sb = class extends cb {};
-        qc.register(sb), kb.add(sb, bb.id)
+      for (const eb in Yb) Yb[eb].forEach((bb => Ab.types.push(bb)));
+      return Mb.encodeAll(ab).slice(0, ab.offset)
+    }, nA.decode = function(bb, ab) {
+      const Ub = new nA;
+      new VA(Ub).decode(bb, ab);
+      const Ab = new oa;
+      Ub.types.forEach((bb => {
+        const ab = Ab.get(bb.extendsId) ?? HA,
+          Ub = class extends ab {};
+        oa.register(Ub), Ab.add(Ub, bb.id)
       }), {});
-      sb.types.forEach((bb => {
-        const cb = kb.get(bb.id),
-          Wb = Rc.initialize(cb),
-          ab = [];
-        let Tb = bb;
+      Ub.types.forEach((bb => {
+        const ab = Ab.get(bb.id),
+          Mb = Va.initialize(ab),
+          Tb = [];
+        let Eb = bb;
         do {
-          ab.push(Tb), Tb = sb.types.find((bb => bb.id === Tb.extendsId))
-        } while (Tb);
-        let Ub = 0;
-        ab.reverse().forEach((bb => {
-          ((bb, cb, sb) => {
-            cb.fields.forEach(((cb, Wb) => {
-              const ab = sb + Wb;
-              if (void 0 !== cb.quantized) {
-                const sb = cb.quantized;
-                Rc.addField(bb, ab, cb.name, {
-                  quantized: Oc({
-                    min: sb.min,
-                    max: sb.max,
-                    bits: sb.bits,
-                    mode: 1 === sb.mode ? "wrap" : "clamp"
+          Tb.push(Eb), Eb = Ub.types.find((bb => bb.id === Eb.extendsId))
+        } while (Eb);
+        let Yb = 0;
+        Tb.reverse().forEach((bb => {
+          ((bb, ab, Ub) => {
+            ab.fields.forEach(((ab, Mb) => {
+              const Tb = Ub + Mb;
+              if (void 0 !== ab.quantized) {
+                const Ub = ab.quantized;
+                Va.addField(bb, Tb, ab.name, {
+                  quantized: Qa({
+                    min: Ub.min,
+                    max: Ub.max,
+                    bits: Ub.bits,
+                    mode: 1 === Ub.mode ? "wrap" : "clamp"
                   })
                 })
-              } else if (void 0 !== cb.referencedType) {
-                const sb = cb.type,
-                  Wb = kb.get(cb.referencedType) ?? cb.childPrimitive;
-                "ref" === sb ? Rc.addField(bb, ab, cb.name, Wb) : Rc.addField(bb, ab, cb.name, {
-                  [sb]: Wb
+              } else if (void 0 !== ab.referencedType) {
+                const Ub = ab.type,
+                  Mb = Ab.get(ab.referencedType) ?? ab.childPrimitive;
+                "ref" === Ub ? Va.addField(bb, Tb, ab.name, Mb) : Va.addField(bb, Tb, ab.name, {
+                  [Ub]: Mb
                 })
-              } else Rc.addField(bb, ab, cb.name, cb.type)
+              } else Va.addField(bb, Tb, ab.name, ab.type)
             }))
-          })(Wb, bb, Ub), Ub += bb.fields.length
+          })(Mb, bb, Yb), Yb += bb.fields.length
         }))
       }));
-      const Wb = new(kb.get(sb.rootType || 0));
-      return new xk(Wb, kb)
-    }, cW.makeEncodable = function(bb) {
-      const cb = bb[Symbol.metadata];
-      if (!cb) return bb;
-      const sb = cb[gb];
-      if (void 0 === sb) return bb;
-      for (let kb = 0; kb <= sb; kb++) {
-        const sb = cb[kb];
-        sb && Rc.defineField(bb, cb, kb, sb.name, sb.type)
+      const Mb = new(Ab.get(Ub.rootType || 0));
+      return new VA(Mb, Ab)
+    }, nA.makeEncodable = function(bb) {
+      const ab = bb[Symbol.metadata];
+      if (!ab) return bb;
+      const Ub = ab[Nb];
+      if (void 0 === Ub) return bb;
+      for (let Ab = 0; Ab <= Ub; Ab++) {
+        const Ub = ab[Ab];
+        Ub && Va.defineField(bb, ab, Ab, Ub.name, Ub.type)
       }
-      return Object.prototype.hasOwnProperty.call(bb, hb) && delete bb[hb], bb
+      return Object.prototype.hasOwnProperty.call(bb, mb) && delete bb[mb], bb
     };
-    class WW {
-      Vm;
+    class aM {
+      rX;
       uniqueRefIds = new Set;
       isTriggering = !1;
       constructor(bb) {
-        this.Vm = bb, this.Vm.TY = this.TY.bind(this)
+        this.rX = bb, this.rX.zN = this.zN.bind(this)
       }
       get callbacks() {
-        return this.Vm.root.callbacks
+        return this.rX.root.callbacks
       }
       get state() {
-        return this.Vm.state
+        return this.rX.state
       }
-      addCallback(bb, cb, sb) {
-        return this.Vm.root.addCallback(bb, cb, sb)
+      addCallback(bb, ab, Ub) {
+        return this.rX.root.addCallback(bb, ab, Ub)
       }
-      addCallbackOrWaitCollectionAvailable(bb, cb, sb, kb) {
-        let ab = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          Tb = () => {};
-        const Ib = () => Tb(),
-          Hb = bb[cb];
-        if (Hb && void 0 !== Hb[Ub]) return ab = ab && !1 === this.isTriggering, sb === Wb.ADD && ab && Hb.forEach(((bb, cb) => {
-          kb(bb, cb)
-        })), this.addCallback(Hb[Ub], sb, kb);
+      addCallbackOrWaitCollectionAvailable(bb, ab, Ub, Ab) {
+        let Tb = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          Eb = () => {};
+        const Bb = () => Eb(),
+          eb = bb[ab];
+        if (eb && void 0 !== eb[Yb]) return Tb = Tb && !1 === this.isTriggering, Ub === Mb.ADD && Tb && eb.forEach(((bb, ab) => {
+          Ab(bb, ab)
+        })), this.addCallback(eb[Yb], Ub, Ab);
         {
-          let Wb;
-          return Wb = this.addCallback(bb[Ub], cb, ((bb, cb) => {
-            null !== bb && void 0 !== bb && (Wb(), Tb = this.addCallback(bb[Ub], sb, kb))
-          })), Tb = Wb, Ib
+          let Mb;
+          return Mb = this.addCallback(bb[Yb], ab, ((bb, ab) => {
+            null !== bb && void 0 !== bb && (Mb(), Eb = this.addCallback(bb[Yb], Ub, Ab))
+          })), Eb = Mb, Bb
         }
       }
       listen() {
         return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.listenInstance(this.state, arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], arguments.length <= 2 ? void 0 : arguments[2]) : this.listenInstance(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], arguments.length <= 2 ? void 0 : arguments[2], arguments.length <= 3 ? void 0 : arguments[3])
       }
-      listenInstance(bb, cb, sb) {
-        let kb = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        kb = kb && !1 === this.isTriggering;
-        const Wb = bb[cb];
-        return kb && null !== Wb && void 0 !== Wb && sb(Wb, void 0), this.addCallback(bb[Ub], cb, sb)
+      listenInstance(bb, ab, Ub) {
+        let Ab = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        Ab = Ab && !1 === this.isTriggering;
+        const Mb = bb[ab];
+        return Ab && null !== Mb && void 0 !== Mb && Ub(Mb, void 0), this.addCallback(bb[Yb], ab, Ub)
       }
       onChange() {
         if (2 === arguments.length && "string" !== typeof(arguments.length <= 0 ? void 0 : arguments[0])) {
           const bb = arguments.length <= 0 ? void 0 : arguments[0],
-            cb = arguments.length <= 1 ? void 0 : arguments[1];
-          return this.addCallback(bb[Ub], Wb.REPLACE, cb)
+            ab = arguments.length <= 1 ? void 0 : arguments[1];
+          return this.addCallback(bb[Yb], Mb.REPLACE, ab)
         }
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Wb.REPLACE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Wb.REPLACE, arguments.length <= 2 ? void 0 : arguments[2])
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Mb.REPLACE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Mb.REPLACE, arguments.length <= 2 ? void 0 : arguments[2])
       }
-      ZN() {
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Wb.ADD, arguments.length <= 1 ? void 0 : arguments[1], !1 !== (arguments.length <= 2 ? void 0 : arguments[2])) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Wb.ADD, arguments.length <= 2 ? void 0 : arguments[2], !1 !== (arguments.length <= 3 ? void 0 : arguments[3]))
+      uZ() {
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Mb.ADD, arguments.length <= 1 ? void 0 : arguments[1], !1 !== (arguments.length <= 2 ? void 0 : arguments[2])) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Mb.ADD, arguments.length <= 2 ? void 0 : arguments[2], !1 !== (arguments.length <= 3 ? void 0 : arguments[3]))
       }
-      wL() {
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Wb.DELETE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Wb.DELETE, arguments.length <= 2 ? void 0 : arguments[2])
+      kp() {
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Mb.DELETE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Mb.DELETE, arguments.length <= 2 ? void 0 : arguments[2])
       }
-      bindTo(bb, cb, sb) {
-        let kb = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        const ab = bb.constructor[Symbol.metadata];
-        sb || (sb = Object.keys(ab).filter((bb => !isNaN(Number(bb)))).map((bb => ab[bb].name)));
-        const Tb = () => {
-          for (const kb of sb) {
-            const sb = bb[kb];
-            void 0 !== sb && (cb[kb] = sb)
+      bindTo(bb, ab, Ub) {
+        let Ab = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        const Tb = bb.constructor[Symbol.metadata];
+        Ub || (Ub = Object.keys(Tb).filter((bb => !isNaN(Number(bb)))).map((bb => Tb[bb].name)));
+        const Eb = () => {
+          for (const Ab of Ub) {
+            const Ub = bb[Ab];
+            void 0 !== Ub && (ab[Ab] = Ub)
           }
         };
-        return kb && Tb(), this.addCallback(bb[Ub], Wb.REPLACE, Tb)
+        return Ab && Eb(), this.addCallback(bb[Yb], Mb.REPLACE, Eb)
       }
-      TY(bb) {
+      zN(bb) {
         this.uniqueRefIds.clear(), this.isTriggering = !0;
-        for (let cb = 0, sb = bb.length; cb < sb; cb++) {
-          const sb = bb[cb],
-            kb = sb.refId,
-            ab = sb.ref,
-            Tb = this.callbacks[kb];
-          if (Tb) {
-            if ((sb.op & Wb.DELETE) === Wb.DELETE && Pk.isSchema(sb.previousValue)) {
-              const bb = sb.previousValue[Ub],
-                cb = this.callbacks[bb]?.[Wb.DELETE];
-              if (cb)
-                for (let sb = cb.length - 1; sb >= 0; sb--) try {
-                  cb[sb]()
-                } catch (IW) {
-                  console.error(IW)
+        for (let ab = 0, Ub = bb.length; ab < Ub; ab++) {
+          const Ub = bb[ab],
+            Ab = Ub.refId,
+            Tb = Ub.ref,
+            Eb = this.callbacks[Ab];
+          if (Eb) {
+            if ((Ub.op & Mb.DELETE) === Mb.DELETE && HA.isSchema(Ub.previousValue)) {
+              const bb = Ub.previousValue[Yb],
+                ab = this.callbacks[bb]?.[Mb.DELETE];
+              if (ab)
+                for (let Ub = ab.length - 1; Ub >= 0; Ub--) try {
+                  ab[Ub]()
+                } catch (TM) {
+                  console.error(TM)
                 }
             }
-            if (Pk.isSchema(ab)) {
-              if (!this.uniqueRefIds.has(kb)) {
-                const bb = Tb[Wb.REPLACE];
+            if (HA.isSchema(Tb)) {
+              if (!this.uniqueRefIds.has(Ab)) {
+                const bb = Eb[Mb.REPLACE];
                 if (bb)
-                  for (let cb = bb.length - 1; cb >= 0; cb--) try {
-                    bb[cb]()
-                  } catch (IW) {
-                    console.error(IW)
+                  for (let ab = bb.length - 1; ab >= 0; ab--) try {
+                    bb[ab]()
+                  } catch (TM) {
+                    console.error(TM)
                   }
               }
-              const bb = Tb[sb.field];
+              const bb = Eb[Ub.field];
               if (bb)
-                for (let cb = bb.length - 1; cb >= 0; cb--) try {
-                  bb[cb](sb.value, sb.previousValue)
-                } catch (IW) {
-                  console.error(IW)
+                for (let ab = bb.length - 1; ab >= 0; ab--) try {
+                  bb[ab](Ub.value, Ub.previousValue)
+                } catch (TM) {
+                  console.error(TM)
                 }
             } else {
-              const bb = sb.dynamicIndex ?? sb.field;
-              if ((sb.op & Wb.DELETE) === Wb.DELETE) {
-                if (void 0 !== sb.previousValue) {
-                  const cb = Tb[Wb.DELETE];
-                  if (cb)
-                    for (let kb = cb.length - 1; kb >= 0; kb--) try {
-                      cb[kb](sb.previousValue, bb)
-                    } catch (IW) {
-                      console.error(IW)
+              const bb = Ub.dynamicIndex ?? Ub.field;
+              if ((Ub.op & Mb.DELETE) === Mb.DELETE) {
+                if (void 0 !== Ub.previousValue) {
+                  const ab = Eb[Mb.DELETE];
+                  if (ab)
+                    for (let Ab = ab.length - 1; Ab >= 0; Ab--) try {
+                      ab[Ab](Ub.previousValue, bb)
+                    } catch (TM) {
+                      console.error(TM)
                     }
                 }
-                if ((sb.op & Wb.ADD) === Wb.ADD) {
-                  const cb = Tb[Wb.ADD];
-                  if (cb)
-                    for (let kb = cb.length - 1; kb >= 0; kb--) try {
-                      cb[kb](sb.value, bb)
-                    } catch (IW) {
-                      console.error(IW)
+                if ((Ub.op & Mb.ADD) === Mb.ADD) {
+                  const ab = Eb[Mb.ADD];
+                  if (ab)
+                    for (let Ab = ab.length - 1; Ab >= 0; Ab--) try {
+                      ab[Ab](Ub.value, bb)
+                    } catch (TM) {
+                      console.error(TM)
                     }
                 }
-              } else if ((sb.op & Wb.ADD) === Wb.ADD && sb.previousValue !== sb.value) {
-                const cb = Tb[Wb.ADD];
-                if (cb)
-                  for (let kb = cb.length - 1; kb >= 0; kb--) try {
-                    cb[kb](sb.value, bb)
-                  } catch (IW) {
-                    console.error(IW)
+              } else if ((Ub.op & Mb.ADD) === Mb.ADD && Ub.previousValue !== Ub.value) {
+                const ab = Eb[Mb.ADD];
+                if (ab)
+                  for (let Ab = ab.length - 1; Ab >= 0; Ab--) try {
+                    ab[Ab](Ub.value, bb)
+                  } catch (TM) {
+                    console.error(TM)
                   }
               }
-              if (sb.value !== sb.previousValue) {
-                const cb = Tb[Wb.REPLACE];
-                if (cb)
-                  for (let kb = cb.length - 1; kb >= 0; kb--) try {
-                    cb[kb](bb, sb.value)
-                  } catch (IW) {
-                    console.error(IW)
+              if (Ub.value !== Ub.previousValue) {
+                const ab = Eb[Mb.REPLACE];
+                if (ab)
+                  for (let Ab = ab.length - 1; Ab >= 0; Ab--) try {
+                    ab[Ab](bb, Ub.value)
+                  } catch (TM) {
+                    console.error(TM)
                   }
               }
             }
-            this.uniqueRefIds.add(kb)
+            this.uniqueRefIds.add(Ab)
           }
         }
         this.isTriggering = !1
       }
     }
-    const aW = {
+    const UM = {
       get(bb) {
-        if (bb instanceof xk) return new WW(bb);
-        if ("Vm" in bb.lC) return new WW(bb.lC.Vm);
+        if (bb instanceof VA) return new aM(bb);
+        if ("rX" in bb.Vk) return new aM(bb.Vk.rX);
         throw new Error("Invalid room or decoder")
       },
       getLegacy(bb) {
-        if (bb instanceof xk) return sW(bb);
-        if ("Vm" in bb.lC) return sW(bb.lC.Vm);
+        if (bb instanceof VA) return SA(bb);
+        if ("rX" in bb.Vk) return SA(bb.Vk.rX);
         throw new Error("Invalid room or decoder")
       },
-      getRawChanges: (bb, cb) => kW(bb, cb)
+      getRawChanges: (bb, ab) => bM(bb, ab)
     };
-    class TW {
+    class AM {
       _free = [];
       _factory;
       _maxSize;
       constructor(bb) {
-        let cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this._factory = bb, this._maxSize = cb.maxSize ?? 1 / 0;
-        const sb = cb.preallocate ?? 0;
-        for (let kb = 0; kb < sb; kb++) this._free.push(bb())
+        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this._factory = bb, this._maxSize = ab.maxSize ?? 1 / 0;
+        const Ub = ab.preallocate ?? 0;
+        for (let Ab = 0; Ab < Ub; Ab++) this._free.push(bb())
       }
       acquire() {
         return this._free.length > 0 ? this._free.pop() : this._factory()
       }
       release(bb) {
-        Pk.reset(bb), this._free.length < this._maxSize && this._free.push(bb)
+        HA.reset(bb), this._free.length < this._maxSize && this._free.push(bb)
       }
       get size() {
         return this._free.length
       }
     }
 
-    function UW(bb) {
-      return new TW((() => new bb), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
+    function MM(bb) {
+      return new AM((() => new bb), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
     }
-    uc("map", {
-      constructor: Tk
-    }), uc("array", {
-      constructor: Wk
-    }), uc("set", {
-      constructor: Ik
-    }), uc("collection", {
-      constructor: Uk
+    ia("map", {
+      constructor: MA
+    }), ia("array", {
+      constructor: UA
+    }), ia("set", {
+      constructor: EA
+    }), ia("collection", {
+      constructor: TA
     })
   },
-  8686: (bb, cb, sb) => {
-    sb.r(cb), sb.d(cb, {
-      __addDisposableResource: () => Gb,
-      __assign: () => ab,
-      __asyncDelegator: () => Jb,
-      __asyncGenerator: () => hb,
-      __asyncValues: () => gb,
-      __await: () => Yb,
-      __awaiter: () => mb,
-      __classPrivateFieldGet: () => Eb,
-      __classPrivateFieldIn: () => Ob,
-      __classPrivateFieldSet: () => ib,
-      __createBinding: () => Qb,
-      __decorate: () => Ub,
-      __disposeResources: () => Zb,
-      __esDecorate: () => Hb,
-      __exportStar: () => eb,
-      __extends: () => Wb,
-      __generator: () => lb,
-      __importDefault: () => Db,
-      __importStar: () => Pb,
-      __makeTemplateObject: () => Bb,
-      __metadata: () => nb,
-      __param: () => Ib,
-      __propKey: () => Mb,
-      __read: () => Nb,
-      __rest: () => Tb,
-      __rewriteRelativeImportExtension: () => zb,
-      __runInitializers: () => fb,
-      __setFunctionName: () => Xb,
-      __spread: () => Vb,
-      __spreadArray: () => ub,
-      __spreadArrays: () => Lb,
-      __values: () => Cb,
-      default: () => qb
+  8665: (bb, ab, Ub) => {
+    Ub.r(ab), Ub.d(ab, {
+      __addDisposableResource: () => qb,
+      __assign: () => Tb,
+      __asyncDelegator: () => pb,
+      __asyncGenerator: () => mb,
+      __asyncValues: () => Nb,
+      __await: () => fb,
+      __awaiter: () => jb,
+      __classPrivateFieldGet: () => hb,
+      __classPrivateFieldIn: () => Qb,
+      __classPrivateFieldSet: () => Gb,
+      __createBinding: () => kb,
+      __decorate: () => Yb,
+      __disposeResources: () => rb,
+      __esDecorate: () => eb,
+      __exportStar: () => yb,
+      __extends: () => Mb,
+      __generator: () => Rb,
+      __importDefault: () => Fb,
+      __importStar: () => db,
+      __makeTemplateObject: () => Wb,
+      __metadata: () => Xb,
+      __param: () => Bb,
+      __propKey: () => Lb,
+      __read: () => Db,
+      __rest: () => Eb,
+      __rewriteRelativeImportExtension: () => Kb,
+      __runInitializers: () => vb,
+      __setFunctionName: () => Pb,
+      __spread: () => zb,
+      __spreadArray: () => ib,
+      __spreadArrays: () => xb,
+      __values: () => Zb,
+      default: () => ob
     });
-    var kb = function(bb, cb) {
-      return kb = Object.setPrototypeOf || {
+    var Ab = function(bb, ab) {
+      return Ab = Object.setPrototypeOf || {
         __proto__: []
       }
-      instanceof Array && function(bb, cb) {
-        bb.__proto__ = cb
-      } || function(bb, cb) {
-        for (var sb in cb) Object.prototype.hasOwnProperty.call(cb, sb) && (bb[sb] = cb[sb])
-      }, kb(bb, cb)
+      instanceof Array && function(bb, ab) {
+        bb.__proto__ = ab
+      } || function(bb, ab) {
+        for (var Ub in ab) Object.prototype.hasOwnProperty.call(ab, Ub) && (bb[Ub] = ab[Ub])
+      }, Ab(bb, ab)
     };
 
-    function Wb(bb, cb) {
-      if ("function" !== typeof cb && null !== cb) throw new TypeError("Class extends value " + String(cb) + " is not a constructor or null");
+    function Mb(bb, ab) {
+      if ("function" !== typeof ab && null !== ab) throw new TypeError("Class extends value " + String(ab) + " is not a constructor or null");
 
-      function sb() {
+      function Ub() {
         this.constructor = bb
       }
-      kb(bb, cb), bb.prototype = null === cb ? Object.create(cb) : (sb.prototype = cb.prototype, new sb)
+      Ab(bb, ab), bb.prototype = null === ab ? Object.create(ab) : (Ub.prototype = ab.prototype, new Ub)
     }
-    var ab = function() {
-      return ab = Object.assign || function(bb) {
-        for (var cb, sb = 1, kb = arguments.length; sb < kb; sb++)
-          for (var Wb in cb = arguments[sb]) Object.prototype.hasOwnProperty.call(cb, Wb) && (bb[Wb] = cb[Wb]);
+    var Tb = function() {
+      return Tb = Object.assign || function(bb) {
+        for (var ab, Ub = 1, Ab = arguments.length; Ub < Ab; Ub++)
+          for (var Mb in ab = arguments[Ub]) Object.prototype.hasOwnProperty.call(ab, Mb) && (bb[Mb] = ab[Mb]);
         return bb
-      }, ab.apply(this, arguments)
+      }, Tb.apply(this, arguments)
     };
 
-    function Tb(bb, cb) {
-      var sb = {};
-      for (var kb in bb) Object.prototype.hasOwnProperty.call(bb, kb) && cb.indexOf(kb) < 0 && (sb[kb] = bb[kb]);
+    function Eb(bb, ab) {
+      var Ub = {};
+      for (var Ab in bb) Object.prototype.hasOwnProperty.call(bb, Ab) && ab.indexOf(Ab) < 0 && (Ub[Ab] = bb[Ab]);
       if (null != bb && "function" === typeof Object.getOwnPropertySymbols) {
-        var Wb = 0;
-        for (kb = Object.getOwnPropertySymbols(bb); Wb < kb.length; Wb++) cb.indexOf(kb[Wb]) < 0 && Object.prototype.propertyIsEnumerable.call(bb, kb[Wb]) && (sb[kb[Wb]] = bb[kb[Wb]])
+        var Mb = 0;
+        for (Ab = Object.getOwnPropertySymbols(bb); Mb < Ab.length; Mb++) ab.indexOf(Ab[Mb]) < 0 && Object.prototype.propertyIsEnumerable.call(bb, Ab[Mb]) && (Ub[Ab[Mb]] = bb[Ab[Mb]])
       }
-      return sb
+      return Ub
     }
 
-    function Ub(bb, cb, sb, kb) {
-      var Wb, ab = arguments.length,
-        Tb = ab < 3 ? cb : null === kb ? kb = Object.getOwnPropertyDescriptor(cb, sb) : kb;
-      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) Tb = Reflect.decorate(bb, cb, sb, kb);
+    function Yb(bb, ab, Ub, Ab) {
+      var Mb, Tb = arguments.length,
+        Eb = Tb < 3 ? ab : null === Ab ? Ab = Object.getOwnPropertyDescriptor(ab, Ub) : Ab;
+      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) Eb = Reflect.decorate(bb, ab, Ub, Ab);
       else
-        for (var Ub = bb.length - 1; Ub >= 0; Ub--)(Wb = bb[Ub]) && (Tb = (ab < 3 ? Wb(Tb) : ab > 3 ? Wb(cb, sb, Tb) : Wb(cb, sb)) || Tb);
-      return ab > 3 && Tb && Object.defineProperty(cb, sb, Tb), Tb
+        for (var Yb = bb.length - 1; Yb >= 0; Yb--)(Mb = bb[Yb]) && (Eb = (Tb < 3 ? Mb(Eb) : Tb > 3 ? Mb(ab, Ub, Eb) : Mb(ab, Ub)) || Eb);
+      return Tb > 3 && Eb && Object.defineProperty(ab, Ub, Eb), Eb
     }
 
-    function Ib(bb, cb) {
-      return function(sb, kb) {
-        cb(sb, kb, bb)
+    function Bb(bb, ab) {
+      return function(Ub, Ab) {
+        ab(Ub, Ab, bb)
       }
     }
 
-    function Hb(bb, cb, sb, kb, Wb, ab) {
-      function Tb(bb) {
+    function eb(bb, ab, Ub, Ab, Mb, Tb) {
+      function Eb(bb) {
         if (void 0 !== bb && "function" !== typeof bb) throw new TypeError("Function expected");
         return bb
       }
-      for (var Ub, Ib = kb.kind, Hb = "getter" === Ib ? "get" : "setter" === Ib ? "set" : "value", fb = !cb && bb ? kb.static ? bb : bb.prototype : null, Mb = cb || (fb ? Object.getOwnPropertyDescriptor(fb, kb.name) : {}), Xb = !1, nb = sb.length - 1; nb >= 0; nb--) {
-        var mb = {};
-        for (var lb in kb) mb[lb] = "access" === lb ? {} : kb[lb];
-        for (var lb in kb.access) mb.access[lb] = kb.access[lb];
-        mb.addInitializer = function(bb) {
-          if (Xb) throw new TypeError("Cannot add initializers after decoration has completed");
-          ab.push(Tb(bb || null))
+      for (var Yb, Bb = Ab.kind, eb = "getter" === Bb ? "get" : "setter" === Bb ? "set" : "value", vb = !ab && bb ? Ab.static ? bb : bb.prototype : null, Lb = ab || (vb ? Object.getOwnPropertyDescriptor(vb, Ab.name) : {}), Pb = !1, Xb = Ub.length - 1; Xb >= 0; Xb--) {
+        var jb = {};
+        for (var Rb in Ab) jb[Rb] = "access" === Rb ? {} : Ab[Rb];
+        for (var Rb in Ab.access) jb.access[Rb] = Ab.access[Rb];
+        jb.addInitializer = function(bb) {
+          if (Pb) throw new TypeError("Cannot add initializers after decoration has completed");
+          Tb.push(Eb(bb || null))
         };
-        var Qb = (0, sb[nb])("accessor" === Ib ? {
-          get: Mb.get,
-          set: Mb.set
-        } : Mb[Hb], mb);
-        if ("accessor" === Ib) {
-          if (void 0 === Qb) continue;
-          if (null === Qb || "object" !== typeof Qb) throw new TypeError("Object expected");
-          (Ub = Tb(Qb.get)) && (Mb.get = Ub), (Ub = Tb(Qb.set)) && (Mb.set = Ub), (Ub = Tb(Qb.init)) && Wb.unshift(Ub)
-        } else(Ub = Tb(Qb)) && ("field" === Ib ? Wb.unshift(Ub) : Mb[Hb] = Ub)
+        var kb = (0, Ub[Xb])("accessor" === Bb ? {
+          get: Lb.get,
+          set: Lb.set
+        } : Lb[eb], jb);
+        if ("accessor" === Bb) {
+          if (void 0 === kb) continue;
+          if (null === kb || "object" !== typeof kb) throw new TypeError("Object expected");
+          (Yb = Eb(kb.get)) && (Lb.get = Yb), (Yb = Eb(kb.set)) && (Lb.set = Yb), (Yb = Eb(kb.init)) && Mb.unshift(Yb)
+        } else(Yb = Eb(kb)) && ("field" === Bb ? Mb.unshift(Yb) : Lb[eb] = Yb)
       }
-      fb && Object.defineProperty(fb, kb.name, Mb), Xb = !0
+      vb && Object.defineProperty(vb, Ab.name, Lb), Pb = !0
     }
 
-    function fb(bb, cb, sb) {
-      for (var kb = arguments.length > 2, Wb = 0; Wb < cb.length; Wb++) sb = kb ? cb[Wb].call(bb, sb) : cb[Wb].call(bb);
-      return kb ? sb : void 0
+    function vb(bb, ab, Ub) {
+      for (var Ab = arguments.length > 2, Mb = 0; Mb < ab.length; Mb++) Ub = Ab ? ab[Mb].call(bb, Ub) : ab[Mb].call(bb);
+      return Ab ? Ub : void 0
     }
 
-    function Mb(bb) {
+    function Lb(bb) {
       return "symbol" === typeof bb ? bb : "".concat(bb)
     }
 
-    function Xb(bb, cb, sb) {
-      return "symbol" === typeof cb && (cb = cb.description ? "[".concat(cb.description, "]") : ""), Object.defineProperty(bb, "name", {
+    function Pb(bb, ab, Ub) {
+      return "symbol" === typeof ab && (ab = ab.description ? "[".concat(ab.description, "]") : ""), Object.defineProperty(bb, "name", {
         configurable: !0,
-        value: sb ? "".concat(sb, " ", cb) : cb
+        value: Ub ? "".concat(Ub, " ", ab) : ab
       })
     }
 
-    function nb(bb, cb) {
-      if ("object" === typeof Reflect && "function" === typeof Reflect.metadata) return Reflect.metadata(bb, cb)
+    function Xb(bb, ab) {
+      if ("object" === typeof Reflect && "function" === typeof Reflect.metadata) return Reflect.metadata(bb, ab)
     }
 
-    function mb(bb, cb, sb, kb) {
-      return new(sb || (sb = Promise))((function(Wb, ab) {
-        function Tb(bb) {
+    function jb(bb, ab, Ub, Ab) {
+      return new(Ub || (Ub = Promise))((function(Mb, Tb) {
+        function Eb(bb) {
           try {
-            Ib(kb.next(bb))
-          } catch (cb) {
-            ab(cb)
+            Bb(Ab.next(bb))
+          } catch (ab) {
+            Tb(ab)
           }
         }
 
-        function Ub(bb) {
+        function Yb(bb) {
           try {
-            Ib(kb.throw(bb))
-          } catch (cb) {
-            ab(cb)
+            Bb(Ab.throw(bb))
+          } catch (ab) {
+            Tb(ab)
           }
         }
 
-        function Ib(bb) {
-          var cb;
-          bb.done ? Wb(bb.value) : (cb = bb.value, cb instanceof sb ? cb : new sb((function(bb) {
-            bb(cb)
-          }))).then(Tb, Ub)
+        function Bb(bb) {
+          var ab;
+          bb.done ? Mb(bb.value) : (ab = bb.value, ab instanceof Ub ? ab : new Ub((function(bb) {
+            bb(ab)
+          }))).then(Eb, Yb)
         }
-        Ib((kb = kb.apply(bb, cb || [])).next())
+        Bb((Ab = Ab.apply(bb, ab || [])).next())
       }))
     }
 
-    function lb(bb, cb) {
-      var sb, kb, Wb, ab = {
+    function Rb(bb, ab) {
+      var Ub, Ab, Mb, Tb = {
           label: 0,
           sent: function() {
-            if (1 & Wb[0]) throw Wb[1];
-            return Wb[1]
+            if (1 & Mb[0]) throw Mb[1];
+            return Mb[1]
           },
           trys: [],
           ops: []
         },
-        Tb = Object.create(("function" === typeof Iterator ? Iterator : Object).prototype);
-      return Tb.next = Ub(0), Tb.throw = Ub(1), Tb.return = Ub(2), "function" === typeof Symbol && (Tb[Symbol.iterator] = function() {
+        Eb = Object.create(("function" === typeof Iterator ? Iterator : Object).prototype);
+      return Eb.next = Yb(0), Eb.throw = Yb(1), Eb.return = Yb(2), "function" === typeof Symbol && (Eb[Symbol.iterator] = function() {
         return this
-      }), Tb;
+      }), Eb;
 
-      function Ub(Ub) {
-        return function(Ib) {
-          return function(Ub) {
-            if (sb) throw new TypeError("Generator is already executing.");
-            for (; Tb && (Tb = 0, Ub[0] && (ab = 0)), ab;) try {
-              if (sb = 1, kb && (Wb = 2 & Ub[0] ? kb.return : Ub[0] ? kb.throw || ((Wb = kb.return) && Wb.call(kb), 0) : kb.next) && !(Wb = Wb.call(kb, Ub[1])).done) return Wb;
-              switch (kb = 0, Wb && (Ub = [2 & Ub[0], Wb.value]), Ub[0]) {
+      function Yb(Yb) {
+        return function(Bb) {
+          return function(Yb) {
+            if (Ub) throw new TypeError("Generator is already executing.");
+            for (; Eb && (Eb = 0, Yb[0] && (Tb = 0)), Tb;) try {
+              if (Ub = 1, Ab && (Mb = 2 & Yb[0] ? Ab.return : Yb[0] ? Ab.throw || ((Mb = Ab.return) && Mb.call(Ab), 0) : Ab.next) && !(Mb = Mb.call(Ab, Yb[1])).done) return Mb;
+              switch (Ab = 0, Mb && (Yb = [2 & Yb[0], Mb.value]), Yb[0]) {
                 case 0:
                 case 1:
-                  Wb = Ub;
+                  Mb = Yb;
                   break;
                 case 4:
-                  return ab.label++, {
-                    value: Ub[1],
+                  return Tb.label++, {
+                    value: Yb[1],
                     done: !1
                   };
                 case 5:
-                  ab.label++, kb = Ub[1], Ub = [0];
+                  Tb.label++, Ab = Yb[1], Yb = [0];
                   continue;
                 case 7:
-                  Ub = ab.ops.pop(), ab.trys.pop();
+                  Yb = Tb.ops.pop(), Tb.trys.pop();
                   continue;
                 default:
-                  if (!(Wb = (Wb = ab.trys).length > 0 && Wb[Wb.length - 1]) && (6 === Ub[0] || 2 === Ub[0])) {
-                    ab = 0;
+                  if (!(Mb = (Mb = Tb.trys).length > 0 && Mb[Mb.length - 1]) && (6 === Yb[0] || 2 === Yb[0])) {
+                    Tb = 0;
                     continue
                   }
-                  if (3 === Ub[0] && (!Wb || Ub[1] > Wb[0] && Ub[1] < Wb[3])) {
-                    ab.label = Ub[1];
+                  if (3 === Yb[0] && (!Mb || Yb[1] > Mb[0] && Yb[1] < Mb[3])) {
+                    Tb.label = Yb[1];
                     break
                   }
-                  if (6 === Ub[0] && ab.label < Wb[1]) {
-                    ab.label = Wb[1], Wb = Ub;
+                  if (6 === Yb[0] && Tb.label < Mb[1]) {
+                    Tb.label = Mb[1], Mb = Yb;
                     break
                   }
-                  if (Wb && ab.label < Wb[2]) {
-                    ab.label = Wb[2], ab.ops.push(Ub);
+                  if (Mb && Tb.label < Mb[2]) {
+                    Tb.label = Mb[2], Tb.ops.push(Yb);
                     break
                   }
-                  Wb[2] && ab.ops.pop(), ab.trys.pop();
+                  Mb[2] && Tb.ops.pop(), Tb.trys.pop();
                   continue
               }
-              Ub = cb.call(bb, ab)
-            } catch (Ib) {
-              Ub = [6, Ib], kb = 0
+              Yb = ab.call(bb, Tb)
+            } catch (Bb) {
+              Yb = [6, Bb], Ab = 0
             } finally {
-              sb = Wb = 0
+              Ub = Mb = 0
             }
-            if (5 & Ub[0]) throw Ub[1];
+            if (5 & Yb[0]) throw Yb[1];
             return {
-              value: Ub[0] ? Ub[1] : void 0,
+              value: Yb[0] ? Yb[1] : void 0,
               done: !0
             }
-          }([Ub, Ib])
+          }([Yb, Bb])
         }
       }
     }
-    var Qb = Object.create ? function(bb, cb, sb, kb) {
-      void 0 === kb && (kb = sb);
-      var Wb = Object.getOwnPropertyDescriptor(cb, sb);
-      Wb && !("get" in Wb ? !cb.__esModule : Wb.writable || Wb.configurable) || (Wb = {
+    var kb = Object.create ? function(bb, ab, Ub, Ab) {
+      void 0 === Ab && (Ab = Ub);
+      var Mb = Object.getOwnPropertyDescriptor(ab, Ub);
+      Mb && !("get" in Mb ? !ab.__esModule : Mb.writable || Mb.configurable) || (Mb = {
         enumerable: !0,
         get: function() {
-          return cb[sb]
+          return ab[Ub]
         }
-      }), Object.defineProperty(bb, kb, Wb)
-    } : function(bb, cb, sb, kb) {
-      void 0 === kb && (kb = sb), bb[kb] = cb[sb]
+      }), Object.defineProperty(bb, Ab, Mb)
+    } : function(bb, ab, Ub, Ab) {
+      void 0 === Ab && (Ab = Ub), bb[Ab] = ab[Ub]
     };
 
-    function eb(bb, cb) {
-      for (var sb in bb) "default" === sb || Object.prototype.hasOwnProperty.call(cb, sb) || Qb(cb, bb, sb)
+    function yb(bb, ab) {
+      for (var Ub in bb) "default" === Ub || Object.prototype.hasOwnProperty.call(ab, Ub) || kb(ab, bb, Ub)
     }
 
-    function Cb(bb) {
-      var cb = "function" === typeof Symbol && Symbol.iterator,
-        sb = cb && bb[cb],
-        kb = 0;
-      if (sb) return sb.call(bb);
+    function Zb(bb) {
+      var ab = "function" === typeof Symbol && Symbol.iterator,
+        Ub = ab && bb[ab],
+        Ab = 0;
+      if (Ub) return Ub.call(bb);
       if (bb && "number" === typeof bb.length) return {
         next: function() {
-          return bb && kb >= bb.length && (bb = void 0), {
-            value: bb && bb[kb++],
+          return bb && Ab >= bb.length && (bb = void 0), {
+            value: bb && bb[Ab++],
             done: !bb
           }
         }
       };
-      throw new TypeError(cb ? "Object is not iterable." : "Symbol.iterator is not defined.")
+      throw new TypeError(ab ? "Object is not iterable." : "Symbol.iterator is not defined.")
     }
 
-    function Nb(bb, cb) {
-      var sb = "function" === typeof Symbol && bb[Symbol.iterator];
-      if (!sb) return bb;
-      var kb, Wb, ab = sb.call(bb),
-        Tb = [];
+    function Db(bb, ab) {
+      var Ub = "function" === typeof Symbol && bb[Symbol.iterator];
+      if (!Ub) return bb;
+      var Ab, Mb, Tb = Ub.call(bb),
+        Eb = [];
       try {
         for (;
-          (void 0 === cb || cb-- > 0) && !(kb = ab.next()).done;) Tb.push(kb.value)
-      } catch (Ub) {
-        Wb = {
-          error: Ub
+          (void 0 === ab || ab-- > 0) && !(Ab = Tb.next()).done;) Eb.push(Ab.value)
+      } catch (Yb) {
+        Mb = {
+          error: Yb
         }
       } finally {
         try {
-          kb && !kb.done && (sb = ab.return) && sb.call(ab)
+          Ab && !Ab.done && (Ub = Tb.return) && Ub.call(Tb)
         } finally {
-          if (Wb) throw Wb.error
+          if (Mb) throw Mb.error
         }
       }
-      return Tb
+      return Eb
     }
 
-    function Vb() {
-      for (var bb = [], cb = 0; cb < arguments.length; cb++) bb = bb.concat(Nb(arguments[cb]));
+    function zb() {
+      for (var bb = [], ab = 0; ab < arguments.length; ab++) bb = bb.concat(Db(arguments[ab]));
       return bb
     }
 
-    function Lb() {
-      for (var bb = 0, cb = 0, sb = arguments.length; cb < sb; cb++) bb += arguments[cb].length;
-      var kb = Array(bb),
-        Wb = 0;
-      for (cb = 0; cb < sb; cb++)
-        for (var ab = arguments[cb], Tb = 0, Ub = ab.length; Tb < Ub; Tb++, Wb++) kb[Wb] = ab[Tb];
-      return kb
+    function xb() {
+      for (var bb = 0, ab = 0, Ub = arguments.length; ab < Ub; ab++) bb += arguments[ab].length;
+      var Ab = Array(bb),
+        Mb = 0;
+      for (ab = 0; ab < Ub; ab++)
+        for (var Tb = arguments[ab], Eb = 0, Yb = Tb.length; Eb < Yb; Eb++, Mb++) Ab[Mb] = Tb[Eb];
+      return Ab
     }
 
-    function ub(bb, cb, sb) {
-      if (sb || 2 === arguments.length)
-        for (var kb, Wb = 0, ab = cb.length; Wb < ab; Wb++) !kb && Wb in cb || (kb || (kb = Array.prototype.slice.call(cb, 0, Wb)), kb[Wb] = cb[Wb]);
-      return bb.concat(kb || Array.prototype.slice.call(cb))
+    function ib(bb, ab, Ub) {
+      if (Ub || 2 === arguments.length)
+        for (var Ab, Mb = 0, Tb = ab.length; Mb < Tb; Mb++) !Ab && Mb in ab || (Ab || (Ab = Array.prototype.slice.call(ab, 0, Mb)), Ab[Mb] = ab[Mb]);
+      return bb.concat(Ab || Array.prototype.slice.call(ab))
     }
 
-    function Yb(bb) {
-      return this instanceof Yb ? (this.v = bb, this) : new Yb(bb)
+    function fb(bb) {
+      return this instanceof fb ? (this.v = bb, this) : new fb(bb)
     }
 
-    function hb(bb, cb, sb) {
+    function mb(bb, ab, Ub) {
       if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-      var kb, Wb = sb.apply(bb, cb || []),
-        ab = [];
-      return kb = Object.create(("function" === typeof AsyncIterator ? AsyncIterator : Object).prototype), Tb("next"), Tb("throw"), Tb("return", (function(bb) {
-        return function(cb) {
-          return Promise.resolve(cb).then(bb, Hb)
+      var Ab, Mb = Ub.apply(bb, ab || []),
+        Tb = [];
+      return Ab = Object.create(("function" === typeof AsyncIterator ? AsyncIterator : Object).prototype), Eb("next"), Eb("throw"), Eb("return", (function(bb) {
+        return function(ab) {
+          return Promise.resolve(ab).then(bb, eb)
         }
-      })), kb[Symbol.asyncIterator] = function() {
+      })), Ab[Symbol.asyncIterator] = function() {
         return this
-      }, kb;
+      }, Ab;
 
-      function Tb(bb, cb) {
-        Wb[bb] && (kb[bb] = function(cb) {
-          return new Promise((function(sb, kb) {
-            ab.push([bb, cb, sb, kb]) > 1 || Ub(bb, cb)
+      function Eb(bb, ab) {
+        Mb[bb] && (Ab[bb] = function(ab) {
+          return new Promise((function(Ub, Ab) {
+            Tb.push([bb, ab, Ub, Ab]) > 1 || Yb(bb, ab)
           }))
-        }, cb && (kb[bb] = cb(kb[bb])))
+        }, ab && (Ab[bb] = ab(Ab[bb])))
       }
 
-      function Ub(bb, cb) {
+      function Yb(bb, ab) {
         try {
-          (sb = Wb[bb](cb)).value instanceof Yb ? Promise.resolve(sb.value.v).then(Ib, Hb) : fb(ab[0][2], sb)
-        } catch (kb) {
-          fb(ab[0][3], kb)
+          (Ub = Mb[bb](ab)).value instanceof fb ? Promise.resolve(Ub.value.v).then(Bb, eb) : vb(Tb[0][2], Ub)
+        } catch (Ab) {
+          vb(Tb[0][3], Ab)
         }
-        var sb
+        var Ub
       }
 
-      function Ib(bb) {
-        Ub("next", bb)
+      function Bb(bb) {
+        Yb("next", bb)
       }
 
-      function Hb(bb) {
-        Ub("throw", bb)
+      function eb(bb) {
+        Yb("throw", bb)
       }
 
-      function fb(bb, cb) {
-        bb(cb), ab.shift(), ab.length && Ub(ab[0][0], ab[0][1])
+      function vb(bb, ab) {
+        bb(ab), Tb.shift(), Tb.length && Yb(Tb[0][0], Tb[0][1])
       }
     }
 
-    function Jb(bb) {
-      var cb, sb;
-      return cb = {}, kb("next"), kb("throw", (function(bb) {
+    function pb(bb) {
+      var ab, Ub;
+      return ab = {}, Ab("next"), Ab("throw", (function(bb) {
         throw bb
-      })), kb("return"), cb[Symbol.iterator] = function() {
+      })), Ab("return"), ab[Symbol.iterator] = function() {
         return this
-      }, cb;
+      }, ab;
 
-      function kb(kb, Wb) {
-        cb[kb] = bb[kb] ? function(cb) {
-          return (sb = !sb) ? {
-            value: Yb(bb[kb](cb)),
+      function Ab(Ab, Mb) {
+        ab[Ab] = bb[Ab] ? function(ab) {
+          return (Ub = !Ub) ? {
+            value: fb(bb[Ab](ab)),
             done: !1
-          } : Wb ? Wb(cb) : cb
-        } : Wb
+          } : Mb ? Mb(ab) : ab
+        } : Mb
       }
     }
 
-    function gb(bb) {
+    function Nb(bb) {
       if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-      var cb, sb = bb[Symbol.asyncIterator];
-      return sb ? sb.call(bb) : (bb = Cb(bb), cb = {}, kb("next"), kb("throw"), kb("return"), cb[Symbol.asyncIterator] = function() {
+      var ab, Ub = bb[Symbol.asyncIterator];
+      return Ub ? Ub.call(bb) : (bb = Zb(bb), ab = {}, Ab("next"), Ab("throw"), Ab("return"), ab[Symbol.asyncIterator] = function() {
         return this
-      }, cb);
+      }, ab);
 
-      function kb(sb) {
-        cb[sb] = bb[sb] && function(cb) {
-          return new Promise((function(kb, Wb) {
-            (function(bb, cb, sb, kb) {
-              Promise.resolve(kb).then((function(cb) {
+      function Ab(Ub) {
+        ab[Ub] = bb[Ub] && function(ab) {
+          return new Promise((function(Ab, Mb) {
+            (function(bb, ab, Ub, Ab) {
+              Promise.resolve(Ab).then((function(ab) {
                 bb({
-                  value: cb,
-                  done: sb
+                  value: ab,
+                  done: Ub
                 })
-              }), cb)
-            })(kb, Wb, (cb = bb[sb](cb)).done, cb.value)
+              }), ab)
+            })(Ab, Mb, (ab = bb[Ub](ab)).done, ab.value)
           }))
         }
       }
     }
 
-    function Bb(bb, cb) {
+    function Wb(bb, ab) {
       return Object.defineProperty ? Object.defineProperty(bb, "raw", {
-        value: cb
-      }) : bb.raw = cb, bb
+        value: ab
+      }) : bb.raw = ab, bb
     }
-    var tb = Object.create ? function(bb, cb) {
+    var Hb = Object.create ? function(bb, ab) {
         Object.defineProperty(bb, "default", {
           enumerable: !0,
-          value: cb
+          value: ab
         })
-      } : function(bb, cb) {
-        bb.default = cb
+      } : function(bb, ab) {
+        bb.default = ab
       },
-      yb = function(bb) {
-        return yb = Object.getOwnPropertyNames || function(bb) {
-          var cb = [];
-          for (var sb in bb) Object.prototype.hasOwnProperty.call(bb, sb) && (cb[cb.length] = sb);
-          return cb
-        }, yb(bb)
+      Ib = function(bb) {
+        return Ib = Object.getOwnPropertyNames || function(bb) {
+          var ab = [];
+          for (var Ub in bb) Object.prototype.hasOwnProperty.call(bb, Ub) && (ab[ab.length] = Ub);
+          return ab
+        }, Ib(bb)
       };
 
-    function Pb(bb) {
+    function db(bb) {
       if (bb && bb.__esModule) return bb;
-      var cb = {};
+      var ab = {};
       if (null != bb)
-        for (var sb = yb(bb), kb = 0; kb < sb.length; kb++) "default" !== sb[kb] && Qb(cb, bb, sb[kb]);
-      return tb(cb, bb), cb
+        for (var Ub = Ib(bb), Ab = 0; Ab < Ub.length; Ab++) "default" !== Ub[Ab] && kb(ab, bb, Ub[Ab]);
+      return Hb(ab, bb), ab
     }
 
-    function Db(bb) {
+    function Fb(bb) {
       return bb && bb.__esModule ? bb : {
         default: bb
       }
     }
 
-    function Eb(bb, cb, sb, kb) {
-      if ("a" === sb && !kb) throw new TypeError("Private accessor was defined without a getter");
-      if ("function" === typeof cb ? bb !== cb || !kb : !cb.has(bb)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
-      return "m" === sb ? kb : "a" === sb ? kb.call(bb) : kb ? kb.value : cb.get(bb)
+    function hb(bb, ab, Ub, Ab) {
+      if ("a" === Ub && !Ab) throw new TypeError("Private accessor was defined without a getter");
+      if ("function" === typeof ab ? bb !== ab || !Ab : !ab.has(bb)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+      return "m" === Ub ? Ab : "a" === Ub ? Ab.call(bb) : Ab ? Ab.value : ab.get(bb)
     }
 
-    function ib(bb, cb, sb, kb, Wb) {
-      if ("m" === kb) throw new TypeError("Private method is not writable");
-      if ("a" === kb && !Wb) throw new TypeError("Private accessor was defined without a setter");
-      if ("function" === typeof cb ? bb !== cb || !Wb : !cb.has(bb)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
-      return "a" === kb ? Wb.call(bb, sb) : Wb ? Wb.value = sb : cb.set(bb, sb), sb
+    function Gb(bb, ab, Ub, Ab, Mb) {
+      if ("m" === Ab) throw new TypeError("Private method is not writable");
+      if ("a" === Ab && !Mb) throw new TypeError("Private accessor was defined without a setter");
+      if ("function" === typeof ab ? bb !== ab || !Mb : !ab.has(bb)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+      return "a" === Ab ? Mb.call(bb, Ub) : Mb ? Mb.value = Ub : ab.set(bb, Ub), Ub
     }
 
-    function Ob(bb, cb) {
-      if (null === cb || "object" !== typeof cb && "function" !== typeof cb) throw new TypeError("Cannot use 'in' operator on non-object");
-      return "function" === typeof bb ? cb === bb : bb.has(cb)
+    function Qb(bb, ab) {
+      if (null === ab || "object" !== typeof ab && "function" !== typeof ab) throw new TypeError("Cannot use 'in' operator on non-object");
+      return "function" === typeof bb ? ab === bb : bb.has(ab)
     }
 
-    function Gb(bb, cb, sb) {
-      if (null !== cb && void 0 !== cb) {
-        if ("object" !== typeof cb && "function" !== typeof cb) throw new TypeError("Object expected.");
-        var kb, Wb;
-        if (sb) {
+    function qb(bb, ab, Ub) {
+      if (null !== ab && void 0 !== ab) {
+        if ("object" !== typeof ab && "function" !== typeof ab) throw new TypeError("Object expected.");
+        var Ab, Mb;
+        if (Ub) {
           if (!Symbol.asyncDispose) throw new TypeError("Symbol.asyncDispose is not defined.");
-          kb = cb[Symbol.asyncDispose]
+          Ab = ab[Symbol.asyncDispose]
         }
-        if (void 0 === kb) {
+        if (void 0 === Ab) {
           if (!Symbol.dispose) throw new TypeError("Symbol.dispose is not defined.");
-          kb = cb[Symbol.dispose], sb && (Wb = kb)
+          Ab = ab[Symbol.dispose], Ub && (Mb = Ab)
         }
-        if ("function" !== typeof kb) throw new TypeError("Object not disposable.");
-        Wb && (kb = function() {
+        if ("function" !== typeof Ab) throw new TypeError("Object not disposable.");
+        Mb && (Ab = function() {
           try {
-            Wb.call(this)
+            Mb.call(this)
           } catch (bb) {
             return Promise.reject(bb)
           }
         }), bb.stack.push({
-          value: cb,
-          dispose: kb,
-          async: sb
+          value: ab,
+          dispose: Ab,
+          async: Ub
         })
-      } else sb && bb.stack.push({
+      } else Ub && bb.stack.push({
         async: !0
       });
-      return cb
+      return ab
     }
-    var Kb = "function" === typeof SuppressedError ? SuppressedError : function(bb, cb, sb) {
-      var kb = new Error(sb);
-      return kb.name = "SuppressedError", kb.error = bb, kb.suppressed = cb, kb
+    var ub = "function" === typeof SuppressedError ? SuppressedError : function(bb, ab, Ub) {
+      var Ab = new Error(Ub);
+      return Ab.name = "SuppressedError", Ab.error = bb, Ab.suppressed = ab, Ab
     };
 
-    function Zb(bb) {
-      function cb(cb) {
-        bb.error = bb.hasError ? new Kb(cb, bb.error, "An error was suppressed during disposal.") : cb, bb.hasError = !0
+    function rb(bb) {
+      function ab(ab) {
+        bb.error = bb.hasError ? new ub(ab, bb.error, "An error was suppressed during disposal.") : ab, bb.hasError = !0
       }
-      var sb, kb = 0;
-      return function Wb() {
-        for (; sb = bb.stack.pop();) try {
-          if (!sb.async && 1 === kb) return kb = 0, bb.stack.push(sb), Promise.resolve().then(Wb);
-          if (sb.dispose) {
-            var ab = sb.dispose.call(sb.value);
-            if (sb.async) return kb |= 2, Promise.resolve(ab).then(Wb, (function(bb) {
-              return cb(bb), Wb()
+      var Ub, Ab = 0;
+      return function Mb() {
+        for (; Ub = bb.stack.pop();) try {
+          if (!Ub.async && 1 === Ab) return Ab = 0, bb.stack.push(Ub), Promise.resolve().then(Mb);
+          if (Ub.dispose) {
+            var Tb = Ub.dispose.call(Ub.value);
+            if (Ub.async) return Ab |= 2, Promise.resolve(Tb).then(Mb, (function(bb) {
+              return ab(bb), Mb()
             }))
-          } else kb |= 1
-        } catch (Tb) {
-          cb(Tb)
+          } else Ab |= 1
+        } catch (Eb) {
+          ab(Eb)
         }
-        if (1 === kb) return bb.hasError ? Promise.reject(bb.error) : Promise.resolve();
+        if (1 === Ab) return bb.hasError ? Promise.reject(bb.error) : Promise.resolve();
         if (bb.hasError) throw bb.error
       }()
     }
 
-    function zb(bb, cb) {
-      return "string" === typeof bb && /^\.\.?\//.test(bb) ? bb.replace(/\.(tsx)$|((?:\.d)?)((?:\.[^./]+?)?)\.([cm]?)ts$/i, (function(bb, sb, kb, Wb, ab) {
-        return sb ? cb ? ".jsx" : ".js" : !kb || Wb && ab ? kb + Wb + "." + ab.toLowerCase() + "js" : bb
+    function Kb(bb, ab) {
+      return "string" === typeof bb && /^\.\.?\//.test(bb) ? bb.replace(/\.(tsx)$|((?:\.d)?)((?:\.[^./]+?)?)\.([cm]?)ts$/i, (function(bb, Ub, Ab, Mb, Tb) {
+        return Ub ? ab ? ".jsx" : ".js" : !Ab || Mb && Tb ? Ab + Mb + "." + Tb.toLowerCase() + "js" : bb
       })) : bb
     }
-    const qb = {
-      __extends: Wb,
-      __assign: ab,
-      __rest: Tb,
-      __decorate: Ub,
-      __param: Ib,
-      __esDecorate: Hb,
-      __runInitializers: fb,
-      __propKey: Mb,
-      __setFunctionName: Xb,
-      __metadata: nb,
-      __awaiter: mb,
-      __generator: lb,
-      __createBinding: Qb,
-      __exportStar: eb,
-      __values: Cb,
-      __read: Nb,
-      __spread: Vb,
-      __spreadArrays: Lb,
-      __spreadArray: ub,
-      __await: Yb,
-      __asyncGenerator: hb,
-      __asyncDelegator: Jb,
-      __asyncValues: gb,
-      __makeTemplateObject: Bb,
-      __importStar: Pb,
-      __importDefault: Db,
-      __classPrivateFieldGet: Eb,
-      __classPrivateFieldSet: ib,
-      __classPrivateFieldIn: Ob,
-      __addDisposableResource: Gb,
-      __disposeResources: Zb,
-      __rewriteRelativeImportExtension: zb
+    const ob = {
+      __extends: Mb,
+      __assign: Tb,
+      __rest: Eb,
+      __decorate: Yb,
+      __param: Bb,
+      __esDecorate: eb,
+      __runInitializers: vb,
+      __propKey: Lb,
+      __setFunctionName: Pb,
+      __metadata: Xb,
+      __awaiter: jb,
+      __generator: Rb,
+      __createBinding: kb,
+      __exportStar: yb,
+      __values: Zb,
+      __read: Db,
+      __spread: zb,
+      __spreadArrays: xb,
+      __spreadArray: ib,
+      __await: fb,
+      __asyncGenerator: mb,
+      __asyncDelegator: pb,
+      __asyncValues: Nb,
+      __makeTemplateObject: Wb,
+      __importStar: db,
+      __importDefault: Fb,
+      __classPrivateFieldGet: hb,
+      __classPrivateFieldSet: Gb,
+      __classPrivateFieldIn: Qb,
+      __addDisposableResource: qb,
+      __disposeResources: rb,
+      __rewriteRelativeImportExtension: Kb
     }
   }
 };
